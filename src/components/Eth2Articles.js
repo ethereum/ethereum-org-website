@@ -34,7 +34,8 @@ const dannyArticles = [
   {
     title: "The State of Eth2, Jan 2021",
     description: "20 January 2021",
-    link: "https://blog.ethereum.org/2021/01/20/the-state-of-eth2-january-2021/",
+    link:
+      "https://blog.ethereum.org/2021/01/20/the-state-of-eth2-january-2021/",
   },
   {
     title: "Eth2 quick update no. 21",

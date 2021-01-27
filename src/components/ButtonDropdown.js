@@ -12,8 +12,11 @@ import { translateMessageId } from "../utils/translations"
 
 const Container = styled.div`
   position: relative;
+  display: flex;
+  flex-direction: column;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: 100%;
+    flex-direction: column-reverse;
   }
 `
 
@@ -35,6 +38,7 @@ const DropdownList = styled(motion.ul)`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: 100%;
     text-align: center;
+    position: initial;
   }
 `
 
@@ -59,7 +63,7 @@ const listVariants = {
 const Button = styled(ButtonSecondary)`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   min-width: 240px;
   margin-top: 0;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {

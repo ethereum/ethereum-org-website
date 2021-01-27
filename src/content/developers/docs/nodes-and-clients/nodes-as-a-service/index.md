@@ -65,7 +65,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
   - [Docs](https://docs.chainstack.com/)
   - Features
     - Free shared nodes
-    - Shared archive nodes 
+    - Shared archive nodes
     - GraphQL support
     - RPC and WSS endpoints
     - Dedicated full and archive nodes

@@ -15,8 +15,8 @@ const Description = styled.p`
 const ImageWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: ${(props) => (props.isRight ? `flex-end` : `center`)};
+  align-items: flex-end;
   background: ${(props) => props.theme.colors.cardGradient};
   box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
   min-height: 260px;
@@ -24,7 +24,7 @@ const ImageWrapper = styled.div`
 
 const Image = styled(Img)`
   width: 100%;
-  width: 100%;
+  height: 100%;
   min-width: 100px;
   min-height: 100px;
   max-width: 372px;
@@ -59,11 +59,12 @@ const ActionCard = ({
   description,
   children,
   className,
+  isRight,
 }) => {
   const isImageURL = typeof image === "string" && image.includes("http")
   return (
     <Card to={to} className={className} hideArrow={true}>
-      <ImageWrapper className="action-card-image-wrapper">
+      <ImageWrapper isRight={isRight} className="action-card-image-wrapper">
         {!isImageURL && <Image fixed={image} alt={alt} />}
         {isImageURL && (
           <img src={image} alt={alt} className="action-card-image" />

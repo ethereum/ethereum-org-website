@@ -91,9 +91,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -107,9 +105,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -132,9 +128,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -148,9 +142,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -173,9 +165,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -189,9 +179,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -307,9 +295,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -323,9 +309,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -348,9 +332,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -364,9 +346,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -389,9 +369,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -405,9 +383,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -523,9 +499,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -539,9 +513,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -564,9 +536,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -580,9 +550,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -712,9 +680,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -728,9 +694,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -753,9 +717,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -769,9 +731,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -887,9 +847,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -903,9 +861,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -928,9 +884,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -944,9 +898,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -969,9 +921,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -985,9 +935,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -1105,9 +1053,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -1121,9 +1067,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -1146,9 +1090,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -1162,9 +1104,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -1187,9 +1127,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -1203,9 +1141,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -1228,9 +1164,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -1244,9 +1178,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -1269,9 +1201,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -1285,9 +1215,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -1310,9 +1238,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -1326,9 +1252,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -1351,9 +1275,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -1367,9 +1289,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -1392,9 +1312,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -1408,9 +1326,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -1433,9 +1349,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -1449,9 +1363,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -1474,9 +1386,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -1490,9 +1400,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -1515,9 +1423,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -1531,9 +1437,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -1556,9 +1460,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -1572,9 +1474,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -1597,9 +1497,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -1613,9 +1511,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -1638,9 +1534,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -1654,9 +1548,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -1679,9 +1571,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -1695,9 +1585,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -1720,9 +1608,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -1736,9 +1622,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -1761,9 +1645,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -1777,9 +1659,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -1802,9 +1682,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -1818,9 +1696,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -1843,9 +1719,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -1859,9 +1733,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -1884,9 +1756,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -1900,9 +1770,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -1925,9 +1793,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -1941,9 +1807,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -1966,9 +1830,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -1982,9 +1844,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -2007,9 +1867,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -2023,9 +1881,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -2048,9 +1904,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -2064,9 +1918,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -2089,9 +1941,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -2105,9 +1955,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -2130,9 +1978,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -2146,9 +1992,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -2171,9 +2015,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -2187,9 +2029,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -2212,9 +2052,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -2228,9 +2066,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -2253,9 +2089,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -2269,9 +2103,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -2294,9 +2126,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -2310,9 +2140,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -2335,9 +2163,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -2351,9 +2177,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -2376,9 +2200,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -2392,9 +2214,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -2417,9 +2237,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -2433,9 +2251,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -2458,9 +2274,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -2474,9 +2288,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -2499,9 +2311,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -2515,9 +2325,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -2540,9 +2348,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -2556,9 +2362,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -2581,9 +2385,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -2597,9 +2399,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -2622,9 +2422,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -2638,9 +2436,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -2663,9 +2459,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -2679,9 +2473,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -2799,9 +2591,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -2815,9 +2605,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -2840,9 +2628,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -2856,9 +2642,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -2881,9 +2665,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -2897,9 +2679,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -2922,9 +2702,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -2938,9 +2716,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -2963,9 +2739,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -2979,9 +2753,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -3004,9 +2776,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -3020,9 +2790,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -3045,9 +2813,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -3061,9 +2827,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -3086,9 +2850,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -3102,9 +2864,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -3127,9 +2887,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -3143,9 +2901,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -3168,9 +2924,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -3184,9 +2938,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -3209,9 +2961,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -3225,9 +2975,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -3250,9 +2998,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -3266,9 +3012,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -3291,9 +3035,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -3307,9 +3049,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -3332,9 +3072,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -3348,9 +3086,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -3373,9 +3109,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -3389,9 +3123,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -3414,9 +3146,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -3430,9 +3160,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -3455,9 +3183,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -3471,9 +3197,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -3496,9 +3220,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -3512,9 +3234,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -3537,9 +3257,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -3553,9 +3271,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -3578,9 +3294,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -3594,9 +3308,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -3619,9 +3331,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -3635,9 +3345,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -3660,9 +3368,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -3676,9 +3382,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -3701,9 +3405,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -3717,9 +3419,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -3742,9 +3442,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -3758,9 +3456,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -3783,9 +3479,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -3799,9 +3493,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -3824,9 +3516,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -3840,9 +3530,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -3865,9 +3553,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -3881,9 +3567,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -3906,9 +3590,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -3922,9 +3604,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -3947,9 +3627,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -3963,9 +3641,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -3988,9 +3664,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -4004,9 +3678,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -4029,9 +3701,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -4045,9 +3715,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -4070,9 +3738,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -4086,9 +3752,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -4111,9 +3775,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -4127,9 +3789,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -4152,9 +3812,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -4168,9 +3826,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -4193,9 +3849,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -4209,9 +3863,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -4234,9 +3886,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -4250,9 +3900,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -4275,9 +3923,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -4291,9 +3937,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -4316,9 +3960,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -4332,9 +3974,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -4357,9 +3997,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -4373,9 +4011,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -4493,9 +4129,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -4509,9 +4143,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -4534,9 +4166,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -4550,9 +4180,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -4575,9 +4203,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -4591,9 +4217,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -4616,9 +4240,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -4632,9 +4254,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -4657,9 +4277,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -4673,9 +4291,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -4698,9 +4314,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -4714,9 +4328,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -4739,9 +4351,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -4755,9 +4365,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -4780,9 +4388,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -4796,9 +4402,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -4821,9 +4425,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -4837,9 +4439,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -4862,9 +4462,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -4878,9 +4476,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -4903,9 +4499,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -4919,9 +4513,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -4944,9 +4536,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -4960,9 +4550,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -4985,9 +4573,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -5001,9 +4587,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -5026,9 +4610,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -5042,9 +4624,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -5067,9 +4647,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -5083,9 +4661,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -5108,9 +4684,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -5124,9 +4698,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -5149,9 +4721,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -5165,9 +4735,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -5190,9 +4758,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -5206,9 +4772,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -5231,9 +4795,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -5247,9 +4809,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -5272,9 +4832,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -5288,9 +4846,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -5313,9 +4869,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -5329,9 +4883,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -5354,9 +4906,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -5370,9 +4920,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -5395,9 +4943,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -5411,9 +4957,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -5436,9 +4980,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -5452,9 +4994,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -5477,9 +5017,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -5493,9 +5031,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -5518,9 +5054,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -5534,9 +5068,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -5559,9 +5091,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -5575,9 +5105,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -5600,9 +5128,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -5616,9 +5142,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -5641,9 +5165,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -5657,9 +5179,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -5682,9 +5202,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -5698,9 +5216,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -5723,9 +5239,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -5739,9 +5253,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -5764,9 +5276,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -5780,9 +5290,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -5805,9 +5313,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -5821,9 +5327,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -5846,9 +5350,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -5862,9 +5364,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -5887,9 +5387,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -5903,9 +5401,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -5928,9 +5424,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -5944,9 +5438,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -5969,9 +5461,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -5985,9 +5475,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -6010,9 +5498,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -6026,9 +5512,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -6051,9 +5535,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -6067,9 +5549,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -6187,9 +5667,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -6203,9 +5681,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -6228,9 +5704,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -6244,9 +5718,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -6269,9 +5741,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -6285,9 +5755,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -6310,9 +5778,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -6326,9 +5792,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -6351,9 +5815,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -6367,9 +5829,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -6392,9 +5852,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -6408,9 +5866,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -6433,9 +5889,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -6449,9 +5903,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -6474,9 +5926,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -6490,9 +5940,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -6515,9 +5963,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -6531,9 +5977,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -6556,9 +6000,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -6572,9 +6014,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -6597,9 +6037,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -6613,9 +6051,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -6638,9 +6074,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -6654,9 +6088,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -6679,9 +6111,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -6695,9 +6125,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -6720,9 +6148,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -6736,9 +6162,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -6761,9 +6185,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -6777,9 +6199,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -6802,9 +6222,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -6818,9 +6236,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -6843,9 +6259,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -6859,9 +6273,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -6884,9 +6296,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -6900,9 +6310,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -6925,9 +6333,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -6941,9 +6347,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -6966,9 +6370,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -6982,9 +6384,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -7007,9 +6407,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -7023,9 +6421,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -7048,9 +6444,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -7064,9 +6458,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -7089,9 +6481,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -7105,9 +6495,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -7130,9 +6518,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -7146,9 +6532,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -7171,9 +6555,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -7187,9 +6569,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -7212,9 +6592,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -7228,9 +6606,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -7253,9 +6629,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -7269,9 +6643,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -7294,9 +6666,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -7310,9 +6680,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -7335,9 +6703,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -7351,9 +6717,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -7376,9 +6740,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -7392,9 +6754,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -7417,9 +6777,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -7433,9 +6791,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -7458,9 +6814,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -7474,9 +6828,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -7499,9 +6851,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -7515,9 +6865,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -7540,9 +6888,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -7556,9 +6902,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -7581,9 +6925,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -7597,9 +6939,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -7622,9 +6962,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -7638,9 +6976,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -7663,9 +6999,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -7679,9 +7013,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -7704,9 +7036,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -7720,9 +7050,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -7745,9 +7073,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -7761,9 +7087,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -7840,11 +7164,7 @@
       "cacheTimeout": null,
       "colorBackground": false,
       "colorValue": false,
-      "colors": [
-        "#299c46",
-        "rgba(237, 129, 40, 0.89)",
-        "#d44a3a"
-      ],
+      "colors": ["#299c46", "rgba(237, 129, 40, 0.89)", "#d44a3a"],
       "datasource": null,
       "fieldConfig": {
         "defaults": {
@@ -7915,9 +7235,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               }
             ]
@@ -8011,9 +7329,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               }
             ]
@@ -8041,9 +7357,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               }
             ]
@@ -8071,9 +7385,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               }
             ]
@@ -8197,11 +7509,7 @@
       "cacheTimeout": null,
       "colorBackground": false,
       "colorValue": false,
-      "colors": [
-        "#299c46",
-        "rgba(237, 129, 40, 0.89)",
-        "#d44a3a"
-      ],
+      "colors": ["#299c46", "rgba(237, 129, 40, 0.89)", "#d44a3a"],
       "datasource": null,
       "fieldConfig": {
         "defaults": {
@@ -8272,9 +7580,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               }
             ]
@@ -8359,9 +7665,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -8375,9 +7679,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -8400,9 +7702,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -8416,9 +7716,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -8441,9 +7739,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -8457,9 +7753,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -8482,9 +7776,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -8498,9 +7790,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -8563,11 +7853,7 @@
       "cacheTimeout": null,
       "colorBackground": false,
       "colorValue": false,
-      "colors": [
-        "#299c46",
-        "rgba(237, 129, 40, 0.89)",
-        "#d44a3a"
-      ],
+      "colors": ["#299c46", "rgba(237, 129, 40, 0.89)", "#d44a3a"],
       "datasource": null,
       "fieldConfig": {
         "defaults": {
@@ -8638,9 +7924,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               }
             ]
@@ -8673,11 +7957,7 @@
       "cacheTimeout": null,
       "colorBackground": false,
       "colorValue": false,
-      "colors": [
-        "#299c46",
-        "rgba(237, 129, 40, 0.89)",
-        "#d44a3a"
-      ],
+      "colors": ["#299c46", "rgba(237, 129, 40, 0.89)", "#d44a3a"],
       "datasource": null,
       "fieldConfig": {
         "defaults": {
@@ -8748,9 +8028,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               }
             ]
@@ -8783,11 +8061,7 @@
       "cacheTimeout": null,
       "colorBackground": false,
       "colorValue": false,
-      "colors": [
-        "#299c46",
-        "rgba(237, 129, 40, 0.89)",
-        "#d44a3a"
-      ],
+      "colors": ["#299c46", "rgba(237, 129, 40, 0.89)", "#d44a3a"],
       "datasource": null,
       "fieldConfig": {
         "defaults": {
@@ -8858,9 +8132,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               }
             ]
@@ -8893,11 +8165,7 @@
       "cacheTimeout": null,
       "colorBackground": false,
       "colorValue": false,
-      "colors": [
-        "#299c46",
-        "rgba(237, 129, 40, 0.89)",
-        "#d44a3a"
-      ],
+      "colors": ["#299c46", "rgba(237, 129, 40, 0.89)", "#d44a3a"],
       "datasource": null,
       "fieldConfig": {
         "defaults": {
@@ -8968,9 +8236,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               }
             ]
@@ -9003,11 +8269,7 @@
       "cacheTimeout": null,
       "colorBackground": false,
       "colorValue": false,
-      "colors": [
-        "#299c46",
-        "rgba(237, 129, 40, 0.89)",
-        "#d44a3a"
-      ],
+      "colors": ["#299c46", "rgba(237, 129, 40, 0.89)", "#d44a3a"],
       "datasource": null,
       "fieldConfig": {
         "defaults": {
@@ -9070,15 +8332,11 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$__interval"
-              ],
+              "params": ["$__interval"],
               "type": "time"
             },
             {
-              "params": [
-                "null"
-              ],
+              "params": ["null"],
               "type": "fill"
             }
           ],
@@ -9091,9 +8349,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -9184,9 +8440,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -9200,9 +8454,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -9225,9 +8477,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -9243,9 +8493,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -9268,9 +8516,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -9285,9 +8531,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -9310,9 +8554,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -9326,9 +8568,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -9351,9 +8591,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -9367,9 +8605,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -9392,9 +8628,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -9408,9 +8642,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -9433,9 +8665,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -9449,9 +8679,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -9474,9 +8702,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -9490,9 +8716,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -9515,9 +8739,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -9531,9 +8753,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -9556,9 +8776,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -9572,9 +8790,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -9597,9 +8813,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -9613,9 +8827,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -9636,15 +8848,11 @@
           "alias": "snapshot account read (p=$percentile)",
           "groupBy": [
             {
-              "params": [
-                "$__interval"
-              ],
+              "params": ["$__interval"],
               "type": "time"
             },
             {
-              "params": [
-                "null"
-              ],
+              "params": ["null"],
               "type": "fill"
             }
           ],
@@ -9656,9 +8864,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -9679,15 +8885,11 @@
           "alias": "snapshot storage read (p=$percentile)",
           "groupBy": [
             {
-              "params": [
-                "$__interval"
-              ],
+              "params": ["$__interval"],
               "type": "time"
             },
             {
-              "params": [
-                "null"
-              ],
+              "params": ["null"],
               "type": "fill"
             }
           ],
@@ -9699,9 +8901,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -9722,15 +8922,11 @@
           "alias": "snapshot commit (p=$percentile)",
           "groupBy": [
             {
-              "params": [
-                "$__interval"
-              ],
+              "params": ["$__interval"],
               "type": "time"
             },
             {
-              "params": [
-                "null"
-              ],
+              "params": ["null"],
               "type": "fill"
             }
           ],
@@ -9742,9 +8938,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -9861,9 +9055,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -9879,9 +9071,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -9904,9 +9094,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -9922,9 +9110,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -9947,9 +9133,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -9965,9 +9149,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -9990,9 +9172,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -10007,9 +9187,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -10032,9 +9210,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -10048,9 +9224,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -10073,9 +9247,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -10089,9 +9261,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -10114,9 +9284,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -10130,9 +9298,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -10155,9 +9321,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -10172,9 +9336,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -10197,9 +9359,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -10214,9 +9374,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -10239,9 +9397,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -10256,9 +9412,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -10281,9 +9435,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -10298,9 +9450,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -10323,9 +9473,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -10341,9 +9489,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -10460,9 +9606,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -10476,9 +9620,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -10501,9 +9643,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -10517,9 +9657,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -10542,9 +9680,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -10558,9 +9694,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -10583,9 +9717,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -10599,9 +9731,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -10624,9 +9754,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -10640,9 +9768,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -10665,9 +9791,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -10681,9 +9805,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -10800,9 +9922,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -10816,9 +9936,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -10841,9 +9959,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -10857,9 +9973,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -10882,9 +9996,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -10898,9 +10010,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -10923,9 +10033,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -10939,9 +10047,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -10964,9 +10070,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -10980,9 +10084,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -11005,9 +10107,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -11021,9 +10121,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -11046,9 +10144,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -11062,9 +10158,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -11087,9 +10181,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -11103,9 +10195,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -11128,9 +10218,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -11144,9 +10232,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -11169,9 +10255,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -11185,9 +10269,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -11210,9 +10292,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -11226,9 +10306,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -11251,9 +10329,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -11267,9 +10343,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -11292,9 +10366,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -11308,9 +10380,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -11333,9 +10403,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -11349,9 +10417,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -11374,9 +10440,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -11390,9 +10454,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -11415,9 +10477,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -11431,9 +10491,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -11550,9 +10608,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -11566,9 +10622,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -11591,9 +10645,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -11607,9 +10659,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -11726,9 +10776,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -11742,9 +10790,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -11767,9 +10813,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -11783,9 +10827,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -11808,9 +10850,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -11824,9 +10864,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -11943,9 +10981,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -11959,9 +10995,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -11984,9 +11018,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -12000,9 +11032,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -12025,9 +11055,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -12041,9 +11069,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -12169,15 +11195,11 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
-                "params": [
-                  "10s"
-                ],
+                "params": ["10s"],
                 "type": "non_negative_derivative"
               }
             ]
@@ -12205,15 +11227,11 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
-                "params": [
-                  "10s"
-                ],
+                "params": ["10s"],
                 "type": "non_negative_derivative"
               }
             ]
@@ -12335,9 +11353,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               }
             ]
@@ -12365,9 +11381,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               }
             ]
@@ -12480,9 +11494,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$__interval"
-              ],
+              "params": ["$__interval"],
               "type": "time"
             }
           ],
@@ -12496,9 +11508,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -12615,9 +11625,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -12631,9 +11639,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -12656,9 +11662,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -12672,9 +11676,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -12791,9 +11793,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -12807,9 +11807,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -12832,9 +11830,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -12848,9 +11844,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -12966,9 +11960,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -12982,9 +11974,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -13007,9 +11997,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -13023,9 +12011,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -13048,9 +12034,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -13064,9 +12048,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -13089,9 +12071,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -13105,9 +12085,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -13130,9 +12108,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -13146,9 +12122,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -13171,9 +12145,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -13187,9 +12159,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -13305,9 +12275,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -13321,9 +12289,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -13346,9 +12312,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -13362,9 +12326,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -13387,9 +12349,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -13403,9 +12363,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -13428,9 +12386,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -13444,9 +12400,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -13469,9 +12423,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -13485,9 +12437,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -13510,9 +12460,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -13526,9 +12474,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               },
               {
@@ -13644,9 +12590,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -13660,9 +12604,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -13685,9 +12627,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -13701,9 +12641,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -13832,9 +12770,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -13848,9 +12784,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -13966,9 +12900,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -13982,9 +12914,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -14100,9 +13030,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -14116,9 +13044,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -14141,9 +13067,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -14157,9 +13081,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -14182,9 +13104,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -14198,9 +13118,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -14223,9 +13141,7 @@
           "format": "time_series",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -14239,9 +13155,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -14371,9 +13285,7 @@
           "alias": "connection number",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -14385,9 +13297,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -14500,9 +13410,7 @@
           "alias": "duration(p$percentile)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -14514,9 +13422,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -14629,9 +13535,7 @@
           "alias": "Total capacity",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -14643,9 +13547,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -14666,9 +13568,7 @@
           "alias": "Connected capacity",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -14680,9 +13580,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -14795,9 +13693,7 @@
           "alias": "Total recharge",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -14809,9 +13705,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -14924,9 +13818,7 @@
           "alias": "Global factor",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -14938,9 +13830,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -15053,9 +13943,7 @@
           "alias": "Recent served time",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -15067,9 +13955,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -15090,9 +13976,7 @@
           "alias": "Recent estimated time",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -15104,9 +13988,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -15219,9 +14101,7 @@
           "alias": "serving time",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -15233,9 +14113,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -15256,9 +14134,7 @@
           "alias": "queued time",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -15270,9 +14146,7 @@
           "select": [
             [
               {
-                "params": [
-                  "value"
-                ],
+                "params": ["value"],
                 "type": "field"
               },
               {
@@ -15385,9 +14259,7 @@
           "alias": "kicked rate",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -15399,9 +14271,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -15422,9 +14292,7 @@
           "alias": "freezed rate",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -15436,9 +14304,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -15459,9 +14325,7 @@
           "alias": "rejected rate",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -15473,9 +14337,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -15496,9 +14358,7 @@
           "alias": "connected rate",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -15510,9 +14370,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -15533,9 +14391,7 @@
           "alias": "error rate",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -15547,9 +14403,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -15570,9 +14424,7 @@
           "alias": "disconnected rate",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -15584,9 +14436,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -15701,9 +14551,7 @@
           "alias": "packet ingress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -15715,9 +14563,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -15830,9 +14676,7 @@
           "alias": "header packet ingress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -15844,9 +14688,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -15867,9 +14709,7 @@
           "alias": "body packet ingress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -15881,9 +14721,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -15904,9 +14742,7 @@
           "alias": "code packet ingress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -15918,9 +14754,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -15941,9 +14775,7 @@
           "alias": "receipt packet ingress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -15955,9 +14787,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -15978,9 +14808,7 @@
           "alias": "trie proof packet ingress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -15992,9 +14820,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -16015,9 +14841,7 @@
           "alias": "helper trie packet ingress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -16029,9 +14853,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -16052,9 +14874,7 @@
           "alias": "txs packet ingress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -16066,9 +14886,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -16089,9 +14907,7 @@
           "alias": "tx status packet ingress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -16103,9 +14919,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -16218,9 +15032,7 @@
           "alias": "header packet egress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -16232,9 +15044,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -16255,9 +15065,7 @@
           "alias": "body packet egress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -16269,9 +15077,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -16292,9 +15098,7 @@
           "alias": "code packet egress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -16306,9 +15110,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -16329,9 +15131,7 @@
           "alias": "receipt packet egress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -16343,9 +15143,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -16366,9 +15164,7 @@
           "alias": "trie proof packet egress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -16380,9 +15176,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -16403,9 +15197,7 @@
           "alias": "helper trie packet egress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -16417,9 +15209,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -16440,9 +15230,7 @@
           "alias": "txs packet egress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -16454,9 +15242,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -16477,9 +15263,7 @@
           "alias": "tx status packet egress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -16491,9 +15275,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -16608,9 +15390,7 @@
           "alias": "packet egress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -16622,9 +15402,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -16739,9 +15517,7 @@
           "alias": "traffic ingress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -16753,9 +15529,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -16868,9 +15642,7 @@
           "alias": "header traffic ingress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -16882,9 +15654,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -16905,9 +15675,7 @@
           "alias": "body traffic ingress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -16919,9 +15687,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -16942,9 +15708,7 @@
           "alias": "code traffic ingress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -16956,9 +15720,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -16979,9 +15741,7 @@
           "alias": "receipt traffic ingress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -16993,9 +15753,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -17016,9 +15774,7 @@
           "alias": "trie proof traffic ingress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -17030,9 +15786,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -17053,9 +15807,7 @@
           "alias": "helper trie traffic ingress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -17067,9 +15819,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -17090,9 +15840,7 @@
           "alias": "txs traffic ingress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -17104,9 +15852,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -17127,9 +15873,7 @@
           "alias": "tx status traffic ingress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -17141,9 +15885,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -17256,9 +15998,7 @@
           "alias": "header traffic egress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -17270,9 +16010,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -17293,9 +16031,7 @@
           "alias": "body traffic egress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -17307,9 +16043,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -17330,9 +16064,7 @@
           "alias": "code traffic egress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -17344,9 +16076,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -17367,9 +16097,7 @@
           "alias": "receipt traffic egress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -17381,9 +16109,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -17404,9 +16130,7 @@
           "alias": "trie proof traffic egress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -17418,9 +16142,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -17441,9 +16163,7 @@
           "alias": "helper trie traffic egress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -17455,9 +16175,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -17478,9 +16196,7 @@
           "alias": "txs traffic egress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -17492,9 +16208,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -17515,9 +16229,7 @@
           "alias": "tx status traffic egress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -17529,9 +16241,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -17646,9 +16356,7 @@
           "alias": "traffic egress",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -17660,9 +16368,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -17775,9 +16481,7 @@
           "alias": "serve header(p=$percentile)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -17789,9 +16493,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -17812,9 +16514,7 @@
           "alias": "serve body(p=$percentile)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -17826,9 +16526,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -17849,9 +16547,7 @@
           "alias": "serve code(p=$percentile)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -17863,9 +16559,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -17886,9 +16580,7 @@
           "alias": "serve receipt(p=$percentile)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -17900,9 +16592,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -17923,9 +16613,7 @@
           "alias": "serve trie proof(p=$percentile)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -17937,9 +16625,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -17960,9 +16646,7 @@
           "alias": "serve helper trie(p=$percentile)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -17974,9 +16658,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -17997,9 +16679,7 @@
           "alias": "serve txs(p=$percentile)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -18011,9 +16691,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -18034,9 +16712,7 @@
           "alias": "serve tx status(p=$percentile)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -18048,9 +16724,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -18163,9 +16837,7 @@
           "alias": "Relative cost(mean)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -18177,9 +16849,7 @@
           "select": [
             [
               {
-                "params": [
-                  "mean"
-                ],
+                "params": ["mean"],
                 "type": "field"
               },
               {
@@ -18200,9 +16870,7 @@
           "alias": "Relative cost(p=$percentile)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -18214,9 +16882,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -18329,9 +16995,7 @@
           "alias": "Average serving time",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -18343,9 +17007,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -18366,9 +17028,7 @@
           "alias": "Average estimated time",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -18380,9 +17040,7 @@
           "select": [
             [
               {
-                "params": [
-                  "m1"
-                ],
+                "params": ["m1"],
                 "type": "field"
               },
               {
@@ -18495,9 +17153,7 @@
           "alias": "Served time(p=$percentile)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -18509,9 +17165,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -18532,9 +17186,7 @@
           "alias": "Estimated time(p=$percentile)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -18546,9 +17198,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -18569,9 +17219,7 @@
           "alias": "Served time(mean)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -18583,9 +17231,7 @@
           "select": [
             [
               {
-                "params": [
-                  "mean"
-                ],
+                "params": ["mean"],
                 "type": "field"
               },
               {
@@ -18606,9 +17252,7 @@
           "alias": "Estimated time(mean)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -18620,9 +17264,7 @@
           "select": [
             [
               {
-                "params": [
-                  "mean"
-                ],
+                "params": ["mean"],
                 "type": "field"
               },
               {
@@ -18719,9 +17361,7 @@
         "displayMode": "lcd",
         "orientation": "horizontal",
         "reduceOptions": {
-          "calcs": [
-            "mean"
-          ],
+          "calcs": ["mean"],
           "fields": "",
           "values": false
         },
@@ -18740,9 +17380,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               }
             ]
@@ -18766,9 +17404,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               }
             ]
@@ -18792,9 +17428,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               }
             ]
@@ -18818,9 +17452,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               }
             ]
@@ -18844,9 +17476,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               }
             ]
@@ -18870,9 +17500,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               }
             ]
@@ -18896,9 +17524,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               }
             ]
@@ -18922,9 +17548,7 @@
           "select": [
             [
               {
-                "params": [
-                  "count"
-                ],
+                "params": ["count"],
                 "type": "field"
               }
             ]
@@ -18997,9 +17621,7 @@
           "alias": "header(p=$percentile)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -19011,9 +17633,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -19034,9 +17654,7 @@
           "alias": "body(p=$percentile)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -19048,9 +17666,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -19071,9 +17687,7 @@
           "alias": "receipt(p=$percentile)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -19085,9 +17699,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -19108,9 +17720,7 @@
           "alias": "code(p=$percentile)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -19122,9 +17732,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -19145,9 +17753,7 @@
           "alias": "trie proof(p=$percentile)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -19159,9 +17765,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -19182,9 +17786,7 @@
           "alias": "helper trie(p=$percentile)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -19196,9 +17798,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -19219,9 +17819,7 @@
           "alias": "txs(p=$percentile)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -19233,9 +17831,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -19256,9 +17852,7 @@
           "alias": "txstatus(p=$percentile)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -19270,9 +17864,7 @@
           "select": [
             [
               {
-                "params": [
-                  "p$percentile"
-                ],
+                "params": ["p$percentile"],
                 "type": "field"
               },
               {
@@ -19385,9 +17977,7 @@
           "alias": "header(mean)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -19399,9 +17989,7 @@
           "select": [
             [
               {
-                "params": [
-                  "mean"
-                ],
+                "params": ["mean"],
                 "type": "field"
               },
               {
@@ -19422,9 +18010,7 @@
           "alias": "body(mean)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -19436,9 +18022,7 @@
           "select": [
             [
               {
-                "params": [
-                  "mean"
-                ],
+                "params": ["mean"],
                 "type": "field"
               },
               {
@@ -19459,9 +18043,7 @@
           "alias": "receipt(mean)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -19473,9 +18055,7 @@
           "select": [
             [
               {
-                "params": [
-                  "mean"
-                ],
+                "params": ["mean"],
                 "type": "field"
               },
               {
@@ -19496,9 +18076,7 @@
           "alias": "code(mean)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -19510,9 +18088,7 @@
           "select": [
             [
               {
-                "params": [
-                  "mean"
-                ],
+                "params": ["mean"],
                 "type": "field"
               },
               {
@@ -19533,9 +18109,7 @@
           "alias": "trie proof(mean)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -19547,9 +18121,7 @@
           "select": [
             [
               {
-                "params": [
-                  "mean"
-                ],
+                "params": ["mean"],
                 "type": "field"
               },
               {
@@ -19570,9 +18142,7 @@
           "alias": "helper trie(mean)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -19584,9 +18154,7 @@
           "select": [
             [
               {
-                "params": [
-                  "mean"
-                ],
+                "params": ["mean"],
                 "type": "field"
               },
               {
@@ -19607,9 +18175,7 @@
           "alias": "txs(mean)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -19621,9 +18187,7 @@
           "select": [
             [
               {
-                "params": [
-                  "mean"
-                ],
+                "params": ["mean"],
                 "type": "field"
               },
               {
@@ -19644,9 +18208,7 @@
           "alias": "txstatus(mean)",
           "groupBy": [
             {
-              "params": [
-                "$interval"
-              ],
+              "params": ["$interval"],
               "type": "time"
             }
           ],
@@ -19658,9 +18220,7 @@
           "select": [
             [
               {
-                "params": [
-                  "mean"
-                ],
+                "params": ["mean"],
                 "type": "field"
               },
               {

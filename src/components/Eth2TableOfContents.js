@@ -24,10 +24,7 @@ const OuterList = styled(motion.ul)`
   padding-left: 1rem;
 
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    border-left: 0;
-    padding-top: 1rem;
-    padding-left: 0rem;
-    text-align: left;
+    display: none;
   }
 `
 

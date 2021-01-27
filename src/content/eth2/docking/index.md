@@ -4,6 +4,7 @@ description: Learn about the docking - when mainnet Ethereum joins the Beacon Ch
 lang: en
 template: eth2
 sidebar: true
+image: ../../../assets/eth2/docking.png
 summaryPoints:
   [
     'Eventually the current Ethereum mainnet will "dock" with the rest of the Eth2 upgrades.',
