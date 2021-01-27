@@ -6,7 +6,6 @@ import axios from "axios"
 import Translation from "./Translation"
 import Tooltip from "./Tooltip"
 import Link from "./Link"
-import Emoji from "./Emoji"
 import Icon from "./Icon"
 
 const Value = styled.h3`
@@ -47,17 +46,8 @@ const Grid = styled.div`
   }
 `
 
-// const StyledEmoji = styled(Emoji)`
-//   margin: 0.5rem;
-//   &:hover {
-//     transition: transform 50s;
-//     transform: rotate(10turn);
-//   }
-// `
-
 const Box = styled.div`
   color: ${({ theme }) => theme.colors.text};
-  /* cursor: pointer; */
   height: 20rem;
   background: ${({ theme, color }) => theme.colors[color]};
   display: flex;
@@ -66,15 +56,6 @@ const Box = styled.div`
   align-items: flex-start;
   border: 1px solid ${({ theme }) => theme.colors.color};
   padding: 1.5rem;
-  /* &:hover {
-    background: ${(props) =>
-    props.isOpen
-      ? props.theme.colors[props.color]
-      : props.theme.colors.ednBackground};
-    transition: transform 0.5s;
-    transform: skewX(-5deg);
-    box-shadow: ${({ theme }) => theme.colors.tableBoxShadow};
-  } */
   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     border-left: 0px solid #000000;
     border-right: 0px solid #000000;
