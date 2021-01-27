@@ -15,7 +15,8 @@ const Container = styled.div`
 
 const HightlightContainer = styled.div`
   border-radius: 4px;
-  border: 1px solid ${(props) => props.theme.colors.border};
+  border: ${({ fromHomepage, theme }) =>
+    fromHomepage ? `none` : `1px solid ${theme.colors.border}`};
   width: 100%;
   max-height: ${({ isCollapsed }) =>
     isCollapsed
@@ -233,7 +234,12 @@ const getValidChildrenForCodeblock = (child) => {
   }
 }
 
-const Codeblock = ({ children, allowCollapse = true, codeLanguage }) => {
+const Codeblock = ({
+  children,
+  allowCollapse = true,
+  codeLanguage,
+  fromHomepage = false,
+}) => {
   const codeText = React.Children.map(children, (child) => {
     return getValidChildrenForCodeblock(child)
   }).join("")
@@ -252,7 +258,10 @@ const Codeblock = ({ children, allowCollapse = true, codeLanguage }) => {
   const theme = themeContext.isDark ? codeTheme.dark : codeTheme.light
   return (
     <Container>
-      <HightlightContainer isCollapsed={isCollapsed}>
+      <HightlightContainer
+        isCollapsed={isCollapsed}
+        fromHomepage={fromHomepage}
+      >
         <Highlight
           {...defaultProps}
           code={codeText}
@@ -281,37 +290,39 @@ const Codeblock = ({ children, allowCollapse = true, codeLanguage }) => {
                   </Line>
                 )
               })}
-              <TopBar>
-                {allowCollapse && totalLines - 1 > LINES_BEFORE_COLLAPSABLE && (
-                  <TopBarItem onClick={() => setIsCollapsed(!isCollapsed)}>
-                    {isCollapsed ? (
-                      <Translation id="show-all" />
-                    ) : (
-                      <Translation id="show-less" />
-                    )}
-                  </TopBarItem>
-                )}
-
-                {shouldShowCopyWidget && (
-                  <CopyToClipboard text={codeText}>
-                    {(isCopied) => (
-                      <TopBarItem>
-                        {!isCopied ? (
-                          <>
-                            <Emoji text=":clipboard:" size={1} />{" "}
-                            <Translation id="copy" />
-                          </>
+              {!fromHomepage && (
+                <TopBar className={className}>
+                  {allowCollapse &&
+                    totalLines - 1 > LINES_BEFORE_COLLAPSABLE && (
+                      <TopBarItem onClick={() => setIsCollapsed(!isCollapsed)}>
+                        {isCollapsed ? (
+                          <Translation id="show-all" />
                         ) : (
-                          <>
-                            <Emoji text=":white_check_mark:" size={1} />{" "}
-                            <Translation id="copied" />
-                          </>
+                          <Translation id="show-less" />
                         )}
                       </TopBarItem>
                     )}
-                  </CopyToClipboard>
-                )}
-              </TopBar>
+                  {shouldShowCopyWidget && (
+                    <CopyToClipboard text={codeText}>
+                      {(isCopied) => (
+                        <TopBarItem>
+                          {!isCopied ? (
+                            <>
+                              <Emoji text=":clipboard:" size={1} />{" "}
+                              <Translation id="copy" />
+                            </>
+                          ) : (
+                            <>
+                              <Emoji text=":white_check_mark:" size={1} />{" "}
+                              <Translation id="copied" />
+                            </>
+                          )}
+                        </TopBarItem>
+                      )}
+                    </CopyToClipboard>
+                  )}
+                </TopBar>
+              )}
             </StyledPre>
           )}
         </Highlight>

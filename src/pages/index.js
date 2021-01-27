@@ -783,6 +783,7 @@ contract SimpleDomainRegistry {
           <Codeblock
             codeLanguage={codeExamples[activeCode].codeLanguage}
             allowCollapse={false}
+            fromHomepage
           >
             {codeExamples[activeCode].code}
           </Codeblock>
