@@ -708,7 +708,7 @@ contract SimpleDomainRegistry {
               <ButtonLink to="/what-is-ethereum/">
                 <Translation id="page-index-what-is-ethereum-button" />
               </ButtonLink>
-              <StyledButtonLink isSecondary to="/what-is-eth/">
+              <StyledButtonLink isSecondary to="/eth/">
                 <Translation id="page-index-what-is-ethereum-secondary-button" />
               </StyledButtonLink>
             </ButtonRow>
