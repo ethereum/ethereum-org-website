@@ -384,7 +384,6 @@ const StatsBoxGrid = () => {
       description: (
         <Translation id="page-index-network-stats-eth-price-explainer" />
       ),
-      emoji: ":money_with_wings:",
       value: price,
     },
     {
@@ -392,7 +391,6 @@ const StatsBoxGrid = () => {
       description: (
         <Translation id="page-index-network-stats-tx-day-explainer" />
       ),
-      emoji: ":handshake:",
       value: txnCount,
     },
     {
@@ -402,7 +400,6 @@ const StatsBoxGrid = () => {
       description: (
         <Translation id="page-index-network-stats-value-defi-explainer" />
       ),
-      emoji: ":chart_with_upwards_trend:",
       value: tvl,
     },
     {
@@ -410,7 +407,6 @@ const StatsBoxGrid = () => {
       description: (
         <Translation id="page-index-network-stats-nodes-explainer" />
       ),
-      emoji: ":computer:",
       value: totalNodes,
     },
   ]

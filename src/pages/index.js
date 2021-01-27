@@ -42,7 +42,6 @@ const StyledContent = styled(Content)`
 const H1 = styled.h1`
   font-size: 40px;
   font-weight: 700;
-  margin-top: 1rem;
   margin-bottom: 0rem;
 `
 
@@ -59,6 +58,7 @@ const Header = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 1rem;
   margin-bottom: 2rem;
 `
 
@@ -646,17 +646,18 @@ contract SimpleDomainRegistry {
         alt={translateMessageId("page-index-hero-image-alt", intl)}
         loading="eager"
       />
-      <H1>
-        <Translation id="page-index-title" />
-      </H1>
-      <StyledContent>
-        <Header>
-          <Description>
-            <Translation id="page-index-description" />
-          </Description>
-          <Morpher />
-        </Header>
-      </StyledContent>
+      <Morpher />
+      <Header>
+        <H1>
+          <Translation id="page-index-title" />
+        </H1>
+        <Description>
+          <Translation id="page-index-description" />
+        </Description>
+        <ButtonLink isSecondary to="/what-is-ethereum">
+          <Translation id="page-index-title-button" />
+        </ButtonLink>
+      </Header>
       <StyledGrayContainer>
         <StyledContent>
           <IntroRow>
@@ -703,11 +704,14 @@ contract SimpleDomainRegistry {
             <Subtitle>
               <Translation id="page-index-what-is-ethereum-description" />
             </Subtitle>
-            <div>
+            <ButtonRow>
               <ButtonLink to="/what-is-ethereum/">
                 <Translation id="page-index-what-is-ethereum-button" />
               </ButtonLink>
-            </div>
+              <StyledButtonLink isSecondary to="/what-is-eth/">
+                <Translation id="page-index-what-is-ethereum-secondary-button" />
+              </StyledButtonLink>
+            </ButtonRow>
           </FeatureContent>
           <ImageContainer>
             <FeatureImage
