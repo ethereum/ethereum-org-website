@@ -9,7 +9,7 @@ import Link from "./Link"
 import Icon from "./Icon"
 
 const Value = styled.h3`
-  font-size: 64px;
+  font-size: min(4.4vw, 64px);
   font-weight: 600;
   margin-top: 0rem;
   margin-bottom: 1rem;
@@ -17,8 +17,8 @@ const Value = styled.h3`
   flex-wrap: wrap;
   text-overflow: ellipsis;
   width: 100%;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    font-size: 48px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+    font-size: max(8.8vw, 48px);
   }
 `
 
@@ -32,8 +32,7 @@ const Title = styled.p`
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   margin: 2rem;
   margin-bottom: 0rem;
   border-radius: 2px;
@@ -51,7 +50,7 @@ const Box = styled.div`
   height: 20rem;
   background: ${({ theme, color }) => theme.colors[color]};
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   border: 1px solid ${({ theme }) => theme.colors.color};
@@ -106,11 +105,11 @@ const GridItem = ({ item }) => {
   const { value, title, description } = item
   return (
     <Box>
-      <Value>{value}</Value>
       <div>
         <Title>{title}</Title>
         <p>{description}</p>
       </div>
+      <Value>{value}</Value>
     </Box>
   )
 }
@@ -137,13 +136,13 @@ const StatsBoxGrid = () => {
     apiUrl: "",
     hasError: false,
   })
-  const [nodes, setNodes] = useState({
-    total: 0,
-    percentChange: 0,
-    apiProvider: "",
-    apiUrl: "",
-    hasError: false,
-  })
+  // const [nodes, setNodes] = useState({
+  //   total: 0,
+  //   percentChange: 0,
+  //   apiProvider: "",
+  //   apiUrl: "",
+  //   hasError: false,
+  // })
   const [txns, setTxns] = useState({
     count: 0,
     apiProvider: "",
@@ -160,12 +159,12 @@ const StatsBoxGrid = () => {
         apiUrl: "https://coingecko.com",
         hasError: false,
       })
-      setNodes({
-        total: 8040,
-        apiProvider: "Etherscan",
-        apiUrl: "https://etherscan.io",
-        hasError: true,
-      })
+      // setNodes({
+      //   total: 8040,
+      //   apiProvider: "Etherscan",
+      //   apiUrl: "https://etherscan.io",
+      //   hasError: true,
+      // })
       setValueLocked({
         total: 23456789000,
         apiProvider: "DeFi Pulse",
@@ -202,28 +201,28 @@ const StatsBoxGrid = () => {
       fetchPrice()
 
       // Fetch Ethereum Node data - Etherscan.io (Serverless lambda function)
-      const fetchNodes = async () => {
-        try {
-          const response = await axios.get("/.netlify/functions/etherscan")
-          const { data } = response
-          let total = 0
-          for (const country of data) {
-            total += country.value
-          }
-          setNodes({
-            total,
-            apiProvider: "Etherscan",
-            apiUrl: "https://etherscan.io",
-            hasError: false,
-          })
-        } catch (error) {
-          console.error(error)
-          setNodes({
-            hasError: true,
-          })
-        }
-      }
-      fetchNodes()
+      // const fetchNodes = async () => {
+      //   try {
+      //     const response = await axios.get("/.netlify/functions/etherscan")
+      //     const { data } = response
+      //     let total = 0
+      //     for (const country of data) {
+      //       total += country.value
+      //     }
+      //     setNodes({
+      //       total,
+      //       apiProvider: "Etherscan",
+      //       apiUrl: "https://etherscan.io",
+      //       hasError: false,
+      //     })
+      //   } catch (error) {
+      //     console.error(error)
+      //     setNodes({
+      //       hasError: true,
+      //     })
+      //   }
+      // }
+      // fetchNodes()
 
       // Fetch Total Value Locked (TVL) in DeFi - DeFi Pulse (Serverless lambda function)
       const fetchTotalValueLocked = async () => {
@@ -288,6 +287,8 @@ const StatsBoxGrid = () => {
         {new Intl.NumberFormat(intl.locale, {
           style: "currency",
           currency: "USD",
+          minimumSignificantDigits: 3,
+          maximumSignificantDigits: 4,
         }).format(ethPrice.usd)}{" "}
         <Tooltip content={tooltipContent(ethPrice)}>
           <StyledIcon name="info" />
@@ -320,21 +321,21 @@ const StatsBoxGrid = () => {
   )
 
   // Node count loading handlers
-  const isLoadingNodes = !nodes.total
-  const totalNodes = nodes.hasError ? (
-    <ErrorMessage />
-  ) : isLoadingNodes ? (
-    <LoadingMessage />
-  ) : (
-    <StatRow>
-      <span>
-        {nodes.total.toLocaleString()}{" "}
-        <Tooltip content={tooltipContent(nodes)}>
-          <StyledIcon name="info" />
-        </Tooltip>
-      </span>
-    </StatRow>
-  )
+  // const isLoadingNodes = !nodes.total
+  // const totalNodes = nodes.hasError ? (
+  //   <ErrorMessage />
+  // ) : isLoadingNodes ? (
+  //   <LoadingMessage />
+  // ) : (
+  //   <StatRow>
+  //     <span>
+  //       {nodes.total.toLocaleString()}{" "}
+  //       <Tooltip content={tooltipContent(nodes)}>
+  //         <StyledIcon name="info" />
+  //       </Tooltip>
+  //     </span>
+  //   </StatRow>
+  // )
 
   // Transaction count loading handlers
   const isLoadingTxns = !txns.count
@@ -347,8 +348,8 @@ const StatsBoxGrid = () => {
       <span>
         {new Intl.NumberFormat(intl.locale, {
           notation: "compact",
-          minimumSignificantDigits: 2,
-          maximumSignificantDigits: 3,
+          minimumSignificantDigits: 3,
+          maximumSignificantDigits: 4,
         }).format(txns.count)}{" "}
         <Tooltip content={tooltipContent(txns)}>
           <StyledIcon name="info" />
@@ -383,13 +384,13 @@ const StatsBoxGrid = () => {
       ),
       value: tvl,
     },
-    {
-      title: <Translation id="page-index-network-stats-nodes-description" />,
-      description: (
-        <Translation id="page-index-network-stats-nodes-explainer" />
-      ),
-      value: totalNodes,
-    },
+    // {
+    //   title: <Translation id="page-index-network-stats-nodes-description" />,
+    //   description: (
+    //     <Translation id="page-index-network-stats-nodes-explainer" />
+    //   ),
+    //   value: totalNodes,
+    // },
   ]
 
   return (

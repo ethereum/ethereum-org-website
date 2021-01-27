@@ -166,7 +166,7 @@ const StyledCard = styled(ActionCard)`
   box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex: 1 1 30%;
-    min-width: 240px;
+    min-width: min(100%, 240px);
   }
 `
 const Tout = styled(ActionCard)`
@@ -680,18 +680,16 @@ contract SimpleDomainRegistry {
             </ImageContainer>
           </IntroRow>
           <StyledCardContainer>
-            {cards.map((card, idx) => {
-              return (
-                <StyledCard
-                  key={idx}
-                  title={card.title}
-                  description={card.description}
-                  to={card.to}
-                  image={card.image}
-                  alt={card.alt}
-                ></StyledCard>
-              )
-            })}
+            {cards.map((card, idx) => (
+              <StyledCard
+                key={idx}
+                title={card.title}
+                description={card.description}
+                to={card.to}
+                image={card.image}
+                alt={card.alt}
+              />
+            ))}
           </StyledCardContainer>
         </StyledContent>
       </StyledGrayContainer>
