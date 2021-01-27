@@ -4,7 +4,7 @@ import Link from "./Link"
 
 const NavLink = styled(Link)`
   text-decoration: none;
-  font-size: 14px;
+  font-size: 1rem;
   color: ${(props) => props.theme.colors.text};
   &:hover {
     color: ${(props) => props.theme.colors.primary};

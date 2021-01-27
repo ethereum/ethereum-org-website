@@ -13,7 +13,6 @@ import { translateMessageId } from "../utils/translations"
 import Morpher from "../components/Morpher"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
-import Link from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
 import ActionCard from "../components/ActionCard"
 import {
@@ -698,7 +697,7 @@ contract SimpleDomainRegistry {
         <Description>
           <Translation id="page-index-description" />
         </Description>
-        <ButtonLink isSecondary to="/what-is-ethereum">
+        <ButtonLink isSecondary to="/what-is-ethereum/">
           <Translation id="page-index-title-button" />
         </ButtonLink>
       </Header>
@@ -803,7 +802,7 @@ contract SimpleDomainRegistry {
                 <Translation id="page-index-internet-description" />
               </Subtitle>
               <ButtonRow>
-                <ButtonLink to="/dapps/">
+                <ButtonLink to="/dapps/?category=technology">
                   <Translation id="page-index-internet-button" />
                 </ButtonLink>
                 <StyledButtonLink isSecondary to="/wallets/">
@@ -886,7 +885,7 @@ contract SimpleDomainRegistry {
                 description={tout.description}
                 to={tout.to}
                 image={tout.image}
-              ></Tout>
+              />
             )
           })}
         </StyledCardContainer>

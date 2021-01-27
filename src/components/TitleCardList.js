@@ -23,7 +23,11 @@ const TableHeader = styled.div`
   justify-content: space-between;
 `
 
-const StyledIcon = styled(Icon)``
+const StyledIcon = styled(Icon)`
+  &:hover path {
+    fill: transparent;
+  }
+`
 
 const Item = styled.div`
   cursor: pointer;
