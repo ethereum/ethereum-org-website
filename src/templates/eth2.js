@@ -9,6 +9,7 @@ import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown from "../components/ButtonDropdown"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
+import Icon from "../components/Icon"
 import Contributors from "../components/Contributors"
 import DismissibleCard from "../components/DismissibleCard"
 import InfoBanner from "../components/InfoBanner"
@@ -61,6 +62,7 @@ const InfoColumn = styled.aside`
   height: calc(100vh - 80px);
   flex: 0 1 400px;
   margin-right: 4rem;
+  margin-left: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     display: none;
   }
@@ -220,7 +222,7 @@ const components = {
 }
 
 const Title = styled.h1`
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 700;
 `
 
@@ -277,7 +279,8 @@ const HeroContainer = styled.div`
   box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: flex-end;
-  max-height: 672px;
+  max-height: 608px;
+  min-height: 608px;
   width: 100%;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column-reverse;
@@ -287,7 +290,7 @@ const HeroContainer = styled.div`
 
 const Image = styled(Img)`
   flex: 1 1 100%;
-  max-width: 800px;
+  max-width: 816px;
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: 2rem;
@@ -299,6 +302,20 @@ const Image = styled(Img)`
     width: 100%;
     height: 100%;
     overflow: initial;
+  }
+`
+
+const MoreContent = styled(Link)`
+  width: 100%;
+  background: ${(props) => props.theme.colors.ednBackground};
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  &:hover {
+    background: ${(props) => props.theme.colors.background};
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    display: none;
   }
 `
 
@@ -315,6 +332,7 @@ const TitleCard = styled.div`
   justify-content: flex-start;
   border-radius: 2px;
   z-index: 10;
+  max-width: 640px;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     max-width: 100%;
     position: relative;
@@ -375,6 +393,9 @@ const Eth2Page = ({ data, data: { mdx } }) => {
         </TitleCard>
         <Image fluid={mdx.frontmatter.image.childImageSharp.fluid} />
       </HeroContainer>
+      <MoreContent to="#content">
+        <Icon name="chevronDown" />
+      </MoreContent>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
           title={mdx.frontmatter.title}
@@ -400,7 +421,7 @@ const Eth2Page = ({ data, data: { mdx } }) => {
             </p>
           </DismissibleCard>
         </InfoColumn>
-        <ContentContainer>
+        <ContentContainer id="content">
           {/* <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} /> */}
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
