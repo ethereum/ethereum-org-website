@@ -375,7 +375,7 @@ const StyledCardList = styled(TitleCardList)`
 
 const StyledCalloutBanner = styled(CalloutBanner)`
   margin: 8rem 0 4rem;
-  padding: 0rem 4rem;
+  padding: 2rem 4rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-bottom: 4rem;
     padding: 2rem;
