@@ -164,7 +164,7 @@ const StyledCard = styled(ActionCard)`
   background: ${(props) => props.theme.colors.background};
   box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex: 1 1 30%;
+    margin: 0;
     min-width: min(100%, 240px);
   }
 `
@@ -176,11 +176,10 @@ const Tout = styled(ActionCard)`
   background: ${(props) => props.theme.colors.background};
   box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex: 1 1 30%;
-    min-width: 240px;
+    margin: 0;
+    min-width: min(100%, 240px);
   }
 `
-
 const StyledCardContainer = styled(CardContainer)`
   display: flex;
   flex-wrap: wrap;
@@ -188,7 +187,10 @@ const StyledCardContainer = styled(CardContainer)`
   width: 100%;
   margin: 0rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: 1fr;
   }
 `
 
