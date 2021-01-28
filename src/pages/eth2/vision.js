@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
@@ -20,67 +19,7 @@ import {
   Content,
   Page,
   Divider,
-  Eth2Header,
-  Eth2HeaderGradient,
 } from "../../components/SharedStyledComponents"
-
-const HeroContainer = styled.div`
-  padding-left: 4rem;
-  padding-right: 2rem;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-top: 6rem;
-    padding-left: 2rem;
-    padding-bottom: 4rem;
-  }
-`
-
-const HeroCard = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-  border-radius: 2px;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    margin-right: -2rem;
-    margin-left: -2rem;
-    margin-top: -2rem;
-  }
-`
-
-const Hero = styled(Img)`
-  flex: 1 1 50%;
-  max-width: 500px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-top: 3rem;
-  margin-right: 3rem;
-  align-self: center;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-top: 0;
-    margin-right: 0;
-  }
-`
-
-const Title = styled.h1`
-  text-transform: uppercase;
-  font-size: 14px;
-  color: ${(props) => props.theme.colors.text300};
-`
-
-const Subtitle = styled.div`
-  font-size: 24px;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-  max-width: 480px;
-  margin-top: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 20px;
-  }
-`
 
 const StyledCardContainer = styled(CardContainer)`
   margin-top: 2rem;

@@ -200,12 +200,6 @@ const StyledCardContainer = styled(CardContainer)`
   }
 `
 
-const Image = styled(Img)`
-  max-height: 480px;
-  background-size: cover;
-  background: no-repeat 50px;
-`
-
 const IntroImage = styled(Img)`
   width: 100%;
   background-size: cover;
@@ -367,33 +361,6 @@ const StyledCalloutBanner = styled(CalloutBanner)`
     margin-bottom: 4rem;
     padding: 2rem;
   }
-`
-
-const ChangeContainer = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 33px; /* prevents jump when price loads*/
-`
-
-const Change = styled.div`
-  font-size: 24px;
-  line-height: 140%;
-  color: ${(props) =>
-    props.isNegativeChange
-      ? props.theme.colors.success
-      : props.theme.colors.fail300};
-`
-
-const ChangeTime = styled.span`
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 140%;
-  letter-spacing: 0.04em;
-  margin-left: 0.5rem;
-  text-transform: uppercase;
-  color: ${(props) => props.theme.colors.text300};
 `
 
 const HomePage = ({ data }) => {

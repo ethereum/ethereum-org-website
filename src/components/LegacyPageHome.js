@@ -37,15 +37,6 @@ const Header = styled.header`
   flex-direction: column;
 `
 
-const OldHeader = styled.header`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  max-width: 896px;
-  margin: 0 auto;
-`
-
 const Title = styled.div`
   display: flex;
   justify-content: space-between;

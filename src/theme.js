@@ -1,6 +1,5 @@
 import { createGlobalStyle } from "styled-components"
 import { mix } from "polished"
-import InfoBanner from "./components/InfoBanner"
 
 const white = "#fff"
 const black = "rgb(0,0,0)"
@@ -155,6 +154,7 @@ const lightColors = {
   ghostCardGhost: white600,
   secondaryButtonBackgroundActive: white700,
   primary: primaryLight,
+  primary950: primaryLight950,
   primary900: primaryLight900,
   primary800: primaryLight800,
   primary700: primaryLight700,
@@ -243,6 +243,7 @@ const darkColors = {
   ghostCardGhost: black50,
   secondaryButtonBackgroundActive: black300,
   primary: primaryDark,
+  primary950: primaryDark950,
   primary900: primaryDark900,
   primary800: primaryDark800,
   primary700: primaryDark700,
