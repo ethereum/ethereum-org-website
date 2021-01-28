@@ -325,6 +325,9 @@ const IntroLeftColumn = styled(LeftColumn)`
   width: 100%;
   margin: 0;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    padding: 2rem;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     padding: 0rem;
   }
 `
