@@ -110,6 +110,7 @@ So you get reimbursed for proving fraud.
 - [Optimism](https://optimism.io/)
 - [Offchain Labs Arbitrum Rollup](https://offchainlabs.com/)
 - [Fuel Network](https://fuel.sh/)
+- [Cartesi](https://cartesi.io)
 
 <!-- #### The Optimism virtual machine (OVM)
 
