@@ -7,6 +7,11 @@ sidebar: true
 
 # Contributing to ethereum.org 🦄 {#contributing-to-ethereumorg-}
 
+<InfoBanner shouldCenter emoji=":tada:">
+  Claim your POAP token! If you contributed to ethereum.org in 2020, there's a unique POAP waiting for you.{" "}
+  <a href="#poap">More on POAPs</a>
+</InfoBanner>
+
 ethereum.org is an open-source project. So if you want to help improve [our portal to Ethereum](/en/about/), here's how you can help out.
 
 ## Ways to contribute {#ways-to-contribute}
@@ -59,6 +64,19 @@ Decisions about individual PRs, design evolution and major upgrades are made by 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
 - [Discord server](https://discord.gg/CetY6Y4)
+
+## Claim your contributor POAP {#poap}
+
+If your contribution gets merged into ethereum.org, we'll mint you a unique contributors POAP. A Proof of Attendance Protocol (POAP) token is on-chain proof that you helped make the ecosystem a little more awesome.
+
+[More on POAPs](https://www.poap.xyz/)
+
+### How to claim
+
+1. Join our [Discord server](https://discord.gg/CetY6Y4).
+2. Paste a link to your contribution in the #poaps-🏆 channel.
+3. Wait for a member of our team to send you a link to your minted POAP.
+4. Claim your POAP!
 
 ## Contributors {#contributors}
 
