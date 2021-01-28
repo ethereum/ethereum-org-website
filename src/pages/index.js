@@ -47,6 +47,10 @@ const H1 = styled.h1`
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 0rem;
+  text-align: center;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    font-size: 32px;
+  }
 `
 
 const Page = styled.div`
@@ -214,6 +218,9 @@ const Subtitle = styled.div`
   margin-bottom: 2rem;
   font-size: 20px;
   line-height: 140%;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    font-size: 16px;
+  }
 `
 
 const EthereumIntroContainer = styled.div`
@@ -318,7 +325,7 @@ const IntroLeftColumn = styled(LeftColumn)`
   width: 100%;
   margin: 0;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding: 1rem;
+    padding: 0rem;
   }
 `
 
@@ -341,6 +348,9 @@ const StyledIcon = styled(Icon)`
 const StyledH2 = styled(H2)`
   margin-bottom: 0.5rem;
   font-family: serif;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    font-size: 24px;
+  }
 `
 
 const StyledCardList = styled(TitleCardList)`
