@@ -39,7 +39,7 @@ const Hero = styled(Img)`
 
 const StyledContent = styled(Content)`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding: 1rem 1rem;
+    padding: 1rem;
   }
 `
 
@@ -87,6 +87,12 @@ const StyledButtonLink = styled(ButtonLink)`
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     margin-top: 1rem;
     margin-left: 0rem;
+  }
+`
+
+const CodeExampleContent = styled(Content)`
+  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
+    padding: 1rem;
   }
 `
 
@@ -842,7 +848,7 @@ contract SimpleDomainRegistry {
             </ButtonRow>
           </LeftColumnContent>
         </FeatureContent>
-        <Content>
+        <CodeExampleContent>
           <StyledCardList
             content={codeExamples}
             limit={5}
@@ -851,7 +857,7 @@ contract SimpleDomainRegistry {
             icon="code"
             isCode
           />
-        </Content>
+        </CodeExampleContent>
       </DeveloperContainer>
       <StyledGrayContainer>
         <StyledContent>

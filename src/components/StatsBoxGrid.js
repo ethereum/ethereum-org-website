@@ -33,15 +33,16 @@ const Title = styled.p`
 const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-  margin: 2rem;
-  margin-bottom: 0rem;
+  margin: 2rem 2rem 0;
   border-radius: 2px;
   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 2rem 0rem;
-    margin-bottom: 0rem;
+    margin: 2rem 0 0;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
+    margin: 0;
   }
 `
 
