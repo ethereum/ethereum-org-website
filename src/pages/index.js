@@ -59,6 +59,7 @@ const Header = styled.header`
   align-items: center;
   margin-top: 1rem;
   margin-bottom: 2rem;
+  padding: 0 2rem;
 `
 
 const ButtonRow = styled.div`
