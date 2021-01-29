@@ -262,23 +262,15 @@ const StatsBoxGrid = () => {
       // Fetch Total Value Locked (TVL) in DeFi - DeFi Pulse (Serverless lambda function)
       const fetchTotalValueLocked = async () => {
         try {
-          const responseAll = await axios.get(
-            "/.netlify/functions/defipulse-all"
-          )
-          const responseOther = await axios.get(
-            "/.netlify/functions/defipulse-other"
-          )
-          const { data: dataAll } = responseAll
-          const { data: dataOther } = responseOther
-          // Subtract most recent value (in USD) locked in Lightning Network (index 0)
-          const tvlEthereum = dataAll.All.total - dataOther[0].tvlUSD
+          const response = await axios.get("/.netlify/functions/defipulse")
+          const ethereumTVL = response.data.ethereumTVL
           const value = new Intl.NumberFormat(intl.locale, {
             style: "currency",
             currency: "USD",
             notation: "compact",
             minimumSignificantDigits: 3,
             maximumSignificantDigits: 4,
-          }).format(tvlEthereum)
+          }).format(ethereumTVL)
 
           setValueLocked({
             ...valueLocked,
