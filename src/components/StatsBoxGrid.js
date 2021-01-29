@@ -102,8 +102,24 @@ const LoadingMessage = () => (
   </IndicatorSpan>
 )
 
-const GridItem = ({ item }) => {
-  const { value, title, description } = item
+const GridItem = ({ metric }) => {
+  const { title, description, state } = metric
+  const isLoading = !state.value
+  const value = state.hasError ? (
+    <ErrorMessage />
+  ) : isLoading ? (
+    <LoadingMessage />
+  ) : (
+    <StatRow>
+      <span>
+        {state.value}{" "}
+        <Tooltip content={tooltipContent(state)}>
+          <StyledIcon name="info" />
+        </Tooltip>
+      </span>
+    </StatRow>
+  )
+
   return (
     <Box>
       <div>
@@ -125,27 +141,27 @@ const tooltipContent = (metricState) => (
 const StatsBoxGrid = () => {
   const intl = useIntl()
   const [ethPrice, setEthPrice] = useState({
-    usd: 0,
-    apiProvider: "",
-    apiUrl: "",
+    value: 0,
+    apiProvider: "CoinGecko",
+    apiUrl: "https://www.coingecko.com/en/coins/ethereum",
     hasError: false,
   })
   const [valueLocked, setValueLocked] = useState({
-    total: 0,
-    apiProvider: "",
-    apiUrl: "",
+    value: 0,
+    apiProvider: "DeFi Pulse",
+    apiUrl: "https://defipulse.com",
+    hasError: false,
+  })
+  const [txs, setTxs] = useState({
+    value: 0,
+    apiProvider: "Coin Metrics",
+    apiUrl: "https://coinmetrics.io/",
     hasError: false,
   })
   const [nodes, setNodes] = useState({
-    total: 0,
-    apiProvider: "",
-    apiUrl: "",
-    hasError: false,
-  })
-  const [txns, setTxns] = useState({
-    count: 0,
-    apiProvider: "",
-    apiUrl: "",
+    value: 0,
+    apiProvider: "Etherscan",
+    apiUrl: "https://etherscan.io/nodetracker",
     hasError: false,
   })
 
@@ -153,27 +169,41 @@ const StatsBoxGrid = () => {
     // Skip APIs when not in production
     if (process.env.NODE_ENV !== "production") {
       setEthPrice({
-        usd: 1330,
-        apiProvider: "CoinGecko",
-        apiUrl: "https://coingecko.com",
-        hasError: false,
-      })
-      setNodes({
-        total: 8040,
-        apiProvider: "Etherscan",
-        apiUrl: "https://etherscan.io",
+        ...ethPrice,
+        value: new Intl.NumberFormat(intl.locale, {
+          style: "currency",
+          currency: "USD",
+          minimumSignificantDigits: 3,
+          maximumSignificantDigits: 4,
+        }).format(1330),
         hasError: false,
       })
       setValueLocked({
-        total: 23456789000,
-        apiProvider: "DeFi Pulse",
-        apiUrl: "https://defipulse.com",
+        ...valueLocked,
+        value: new Intl.NumberFormat(intl.locale, {
+          style: "currency",
+          currency: "USD",
+          notation: "compact",
+          minimumSignificantDigits: 3,
+          maximumSignificantDigits: 4,
+        }).format(23456789000),
         hasError: false,
       })
-      setTxns({
-        count: 1234567,
-        apiProvider: "Coin Metrics",
-        apiUrl: "https://coinmetrics.io",
+      setTxs({
+        ...txs,
+        value: new Intl.NumberFormat(intl.locale, {
+          notation: "compact",
+          minimumSignificantDigits: 3,
+          maximumSignificantDigits: 4,
+        }).format(1234567),
+        hasError: false,
+      })
+      setNodes({
+        ...nodes,
+        value: new Intl.NumberFormat(intl.locale, {
+          minimumSignificantDigits: 3,
+          maximumSignificantDigits: 4,
+        }).format(8040),
         hasError: false,
       })
     } else {
@@ -184,10 +214,15 @@ const StatsBoxGrid = () => {
             "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd&include_24hr_change=true"
           )
           const { usd } = response.data.ethereum
+          const value = new Intl.NumberFormat(intl.locale, {
+            style: "currency",
+            currency: "USD",
+            minimumSignificantDigits: 3,
+            maximumSignificantDigits: 4,
+          }).format(usd)
           setEthPrice({
-            usd,
-            apiProvider: "CoinGecko",
-            apiUrl: "https://coingecko.com",
+            ...ethPrice,
+            value,
             hasError: false,
           })
         } catch (error) {
@@ -205,10 +240,14 @@ const StatsBoxGrid = () => {
           const response = await axios.get("/.netlify/functions/etherscan")
           const { data } = response
           const total = data.result.TotalNodeCount
+          const value = new Intl.NumberFormat(intl.locale, {
+            minimumSignificantDigits: 3,
+            maximumSignificantDigits: 4,
+          }).format(total)
+
           setNodes({
-            total,
-            apiProvider: "Etherscan",
-            apiUrl: "https://etherscan.io",
+            ...nodes,
+            value,
             hasError: false,
           })
         } catch (error) {
@@ -233,10 +272,17 @@ const StatsBoxGrid = () => {
           const { data: dataOther } = responseOther
           // Subtract most recent value (in USD) locked in Lightning Network (index 0)
           const tvlEthereum = dataAll.All.total - dataOther[0].tvlUSD
+          const value = new Intl.NumberFormat(intl.locale, {
+            style: "currency",
+            currency: "USD",
+            notation: "compact",
+            minimumSignificantDigits: 3,
+            maximumSignificantDigits: 4,
+          }).format(tvlEthereum)
+
           setValueLocked({
-            total: tvlEthereum,
-            apiProvider: "DeFi Pulse",
-            apiUrl: "https://defipulse.com",
+            ...valueLocked,
+            value,
             hasError: false,
           })
         } catch (error) {
@@ -254,15 +300,20 @@ const StatsBoxGrid = () => {
           const response = await axios.get("/.netlify/functions/coinmetrics")
           const { series } = response.data.metricData
           const count = +series[series.length - 1].values[0]
-          setTxns({
-            count,
-            apiProvider: "Coin Metrics",
-            apiUrl: "https://coinmetrics.io",
+          const value = new Intl.NumberFormat(intl.locale, {
+            notation: "compact",
+            minimumSignificantDigits: 3,
+            maximumSignificantDigits: 4,
+          }).format(count)
+
+          setTxs({
+            ...txs,
+            value,
             hasError: false,
           })
         } catch (error) {
           console.error(error)
-          setTxns({
+          setTxs({
             hasError: true,
           })
         }
@@ -270,89 +321,6 @@ const StatsBoxGrid = () => {
       fetchTxnCount()
     }
   }, [])
-
-  // Price loading handlers
-  const isLoadingPrice = !ethPrice.usd
-  const price = ethPrice.hasError ? (
-    <ErrorMessage />
-  ) : isLoadingPrice ? (
-    <LoadingMessage />
-  ) : (
-    <StatRow>
-      <span>
-        {new Intl.NumberFormat(intl.locale, {
-          style: "currency",
-          currency: "USD",
-          minimumSignificantDigits: 3,
-          maximumSignificantDigits: 4,
-        }).format(ethPrice.usd)}{" "}
-        <Tooltip content={tooltipContent(ethPrice)}>
-          <StyledIcon name="info" />
-        </Tooltip>
-      </span>
-    </StatRow>
-  )
-
-  // TVL loading handlers
-  const isLoadingTVL = !valueLocked.total
-  const tvl = valueLocked.hasError ? (
-    <ErrorMessage />
-  ) : isLoadingTVL ? (
-    <LoadingMessage />
-  ) : (
-    <StatRow>
-      <span>
-        {new Intl.NumberFormat(intl.locale, {
-          style: "currency",
-          currency: "USD",
-          notation: "compact",
-          minimumSignificantDigits: 3,
-          maximumSignificantDigits: 4,
-        }).format(valueLocked.total)}{" "}
-        <Tooltip content={tooltipContent(valueLocked)}>
-          <StyledIcon name="info" />
-        </Tooltip>
-      </span>
-    </StatRow>
-  )
-
-  // Node count loading handlers
-  const isLoadingNodes = !nodes.total
-  const totalNodes = nodes.hasError ? (
-    <ErrorMessage />
-  ) : isLoadingNodes ? (
-    <LoadingMessage />
-  ) : (
-    <StatRow>
-      <span>
-        {nodes.total.toLocaleString()}{" "}
-        <Tooltip content={tooltipContent(nodes)}>
-          <StyledIcon name="info" />
-        </Tooltip>
-      </span>
-    </StatRow>
-  )
-
-  // Transaction count loading handlers
-  const isLoadingTxns = !txns.count
-  const txnCount = txns.hasError ? (
-    <ErrorMessage />
-  ) : isLoadingTxns ? (
-    <LoadingMessage />
-  ) : (
-    <StatRow>
-      <span>
-        {new Intl.NumberFormat(intl.locale, {
-          notation: "compact",
-          minimumSignificantDigits: 3,
-          maximumSignificantDigits: 4,
-        }).format(txns.count)}{" "}
-        <Tooltip content={tooltipContent(txns)}>
-          <StyledIcon name="info" />
-        </Tooltip>
-      </span>
-    </StatRow>
-  )
 
   const metrics = [
     {
@@ -362,14 +330,14 @@ const StatsBoxGrid = () => {
       description: (
         <Translation id="page-index-network-stats-eth-price-explainer" />
       ),
-      value: price,
+      state: ethPrice,
     },
     {
       title: <Translation id="page-index-network-stats-tx-day-description" />,
       description: (
         <Translation id="page-index-network-stats-tx-day-explainer" />
       ),
-      value: txnCount,
+      state: txs,
     },
     {
       title: (
@@ -378,21 +346,21 @@ const StatsBoxGrid = () => {
       description: (
         <Translation id="page-index-network-stats-value-defi-explainer" />
       ),
-      value: tvl,
+      state: valueLocked,
     },
     {
       title: <Translation id="page-index-network-stats-nodes-description" />,
       description: (
         <Translation id="page-index-network-stats-nodes-explainer" />
       ),
-      value: totalNodes,
+      state: nodes,
     },
   ]
 
   return (
     <Grid>
-      {metrics.map((item, idx) => {
-        return <GridItem key={idx} item={item} />
+      {metrics.map((metric, idx) => {
+        return <GridItem key={idx} metric={metric} />
       })}
     </Grid>
   )
