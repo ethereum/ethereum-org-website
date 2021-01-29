@@ -427,7 +427,7 @@ export const Mixins = {
     font-weight: 400;
   `,
   textLevel2: `
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 1.4;
     margin: 2rem 0;
     font-weight: 600;
