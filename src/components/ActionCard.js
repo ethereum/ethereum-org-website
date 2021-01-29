@@ -12,6 +12,10 @@ const Description = styled.p`
   opacity: 0.8;
 `
 
+const ChildrenContainer = styled.div`
+  margin-top: 2rem;
+`
+
 const ImageWrapper = styled.div`
   display: flex;
   flex-direction: row;
@@ -73,7 +77,7 @@ const ActionCard = ({
       <Content className="action-card-content">
         <h3>{title}</h3>
         <Description>{description}</Description>
-        {children}
+        {children && <ChildrenContainer>{children}</ChildrenContainer>}
       </Content>
     </Card>
   )
