@@ -132,18 +132,16 @@ const StatsBoxGrid = () => {
   })
   const [valueLocked, setValueLocked] = useState({
     total: 0,
-    percentChange: 0,
     apiProvider: "",
     apiUrl: "",
     hasError: false,
   })
-  // const [nodes, setNodes] = useState({
-  //   total: 0,
-  //   percentChange: 0,
-  //   apiProvider: "",
-  //   apiUrl: "",
-  //   hasError: false,
-  // })
+  const [nodes, setNodes] = useState({
+    total: 0,
+    apiProvider: "",
+    apiUrl: "",
+    hasError: false,
+  })
   const [txns, setTxns] = useState({
     count: 0,
     apiProvider: "",
@@ -202,28 +200,25 @@ const StatsBoxGrid = () => {
       fetchPrice()
 
       // Fetch Ethereum Node data - Etherscan.io (Serverless lambda function)
-      // const fetchNodes = async () => {
-      //   try {
-      //     const response = await axios.get("/.netlify/functions/etherscan")
-      //     const { data } = response
-      //     let total = 0
-      //     for (const country of data) {
-      //       total += country.value
-      //     }
-      //     setNodes({
-      //       total,
-      //       apiProvider: "Etherscan",
-      //       apiUrl: "https://etherscan.io",
-      //       hasError: false,
-      //     })
-      //   } catch (error) {
-      //     console.error(error)
-      //     setNodes({
-      //       hasError: true,
-      //     })
-      //   }
-      // }
-      // fetchNodes()
+      const fetchNodes = async () => {
+        try {
+          const response = await axios.get("/.netlify/functions/etherscan")
+          const { data } = response
+          const total = data.result.TotalNodeCount
+          setNodes({
+            total,
+            apiProvider: "Etherscan",
+            apiUrl: "https://etherscan.io",
+            hasError: false,
+          })
+        } catch (error) {
+          console.error(error)
+          setNodes({
+            hasError: true,
+          })
+        }
+      }
+      fetchNodes()
 
       // Fetch Total Value Locked (TVL) in DeFi - DeFi Pulse (Serverless lambda function)
       const fetchTotalValueLocked = async () => {
@@ -322,21 +317,21 @@ const StatsBoxGrid = () => {
   )
 
   // Node count loading handlers
-  // const isLoadingNodes = !nodes.total
-  // const totalNodes = nodes.hasError ? (
-  //   <ErrorMessage />
-  // ) : isLoadingNodes ? (
-  //   <LoadingMessage />
-  // ) : (
-  //   <StatRow>
-  //     <span>
-  //       {nodes.total.toLocaleString()}{" "}
-  //       <Tooltip content={tooltipContent(nodes)}>
-  //         <StyledIcon name="info" />
-  //       </Tooltip>
-  //     </span>
-  //   </StatRow>
-  // )
+  const isLoadingNodes = !nodes.total
+  const totalNodes = nodes.hasError ? (
+    <ErrorMessage />
+  ) : isLoadingNodes ? (
+    <LoadingMessage />
+  ) : (
+    <StatRow>
+      <span>
+        {nodes.total.toLocaleString()}{" "}
+        <Tooltip content={tooltipContent(nodes)}>
+          <StyledIcon name="info" />
+        </Tooltip>
+      </span>
+    </StatRow>
+  )
 
   // Transaction count loading handlers
   const isLoadingTxns = !txns.count
@@ -385,13 +380,13 @@ const StatsBoxGrid = () => {
       ),
       value: tvl,
     },
-    // {
-    //   title: <Translation id="page-index-network-stats-nodes-description" />,
-    //   description: (
-    //     <Translation id="page-index-network-stats-nodes-explainer" />
-    //   ),
-    //   value: totalNodes,
-    // },
+    {
+      title: <Translation id="page-index-network-stats-nodes-description" />,
+      description: (
+        <Translation id="page-index-network-stats-nodes-explainer" />
+      ),
+      value: totalNodes,
+    },
   ]
 
   return (
