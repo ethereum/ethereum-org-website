@@ -1,6 +1,6 @@
 const axios = require("axios")
 
-const handler = async (event) => {
+const handler = async () => {
   try {
     const response = await axios.get(
       "https://community-api.coinmetrics.io/v2/assets/eth/metricdata/?metrics=TxCnt"

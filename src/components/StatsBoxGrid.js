@@ -113,7 +113,7 @@ const GridItem = ({ metric }) => {
     <StatRow>
       <span>
         {state.value}{" "}
-        <Tooltip content={tooltipContent(state)}>
+        <Tooltip content={tooltipContent(metric)}>
           <StyledIcon name="info" />
         </Tooltip>
       </span>
@@ -131,10 +131,10 @@ const GridItem = ({ metric }) => {
   )
 }
 
-const tooltipContent = (metricState) => (
+const tooltipContent = (metric) => (
   <div>
     <Translation id="data-provided-by" />{" "}
-    <Link to={metricState.apiUrl}>{metricState.apiProvider}</Link>
+    <Link to={metric.apiUrl}>{metric.apiProvider}</Link>
   </div>
 )
 
@@ -142,68 +142,72 @@ const StatsBoxGrid = () => {
   const intl = useIntl()
   const [ethPrice, setEthPrice] = useState({
     value: 0,
-    apiProvider: "CoinGecko",
-    apiUrl: "https://www.coingecko.com/en/coins/ethereum",
     hasError: false,
   })
   const [valueLocked, setValueLocked] = useState({
     value: 0,
-    apiProvider: "DeFi Pulse",
-    apiUrl: "https://defipulse.com",
     hasError: false,
   })
   const [txs, setTxs] = useState({
     value: 0,
-    apiProvider: "Coin Metrics",
-    apiUrl: "https://coinmetrics.io/",
     hasError: false,
   })
   const [nodes, setNodes] = useState({
     value: 0,
-    apiProvider: "Etherscan",
-    apiUrl: "https://etherscan.io/nodetracker",
     hasError: false,
   })
+
+  const formatPrice = (price) => {
+    return new Intl.NumberFormat(intl.locale, {
+      style: "currency",
+      currency: "USD",
+      minimumSignificantDigits: 3,
+      maximumSignificantDigits: 4,
+    }).format(price)
+  }
+
+  const formatTVL = (tvl) => {
+    return new Intl.NumberFormat(intl.locale, {
+      style: "currency",
+      currency: "USD",
+      notation: "compact",
+      minimumSignificantDigits: 3,
+      maximumSignificantDigits: 4,
+    }).format(tvl)
+  }
+
+  const formatTxs = (txs) => {
+    return new Intl.NumberFormat(intl.locale, {
+      notation: "compact",
+      minimumSignificantDigits: 3,
+      maximumSignificantDigits: 4,
+    }).format(txs)
+  }
+
+  const formatNodes = (nodes) => {
+    return new Intl.NumberFormat(intl.locale, {
+      minimumSignificantDigits: 3,
+      maximumSignificantDigits: 4,
+    }).format(nodes)
+  }
 
   useEffect(() => {
     // Skip APIs when not in production
     if (process.env.NODE_ENV !== "production") {
       setEthPrice({
-        ...ethPrice,
-        value: new Intl.NumberFormat(intl.locale, {
-          style: "currency",
-          currency: "USD",
-          minimumSignificantDigits: 3,
-          maximumSignificantDigits: 4,
-        }).format(1330),
+        value: formatPrice(1330),
         hasError: false,
       })
       setValueLocked({
-        ...valueLocked,
-        value: new Intl.NumberFormat(intl.locale, {
-          style: "currency",
-          currency: "USD",
-          notation: "compact",
-          minimumSignificantDigits: 3,
-          maximumSignificantDigits: 4,
-        }).format(23456789000),
+        value: formatTVL(23456789000),
         hasError: false,
       })
       setTxs({
-        ...txs,
-        value: new Intl.NumberFormat(intl.locale, {
-          notation: "compact",
-          minimumSignificantDigits: 3,
-          maximumSignificantDigits: 4,
-        }).format(1234567),
+        value: formatTxs(1234567),
         hasError: false,
       })
       setNodes({
-        ...nodes,
-        value: new Intl.NumberFormat(intl.locale, {
-          minimumSignificantDigits: 3,
-          maximumSignificantDigits: 4,
-        }).format(8040),
+        value: formatNodes(8040),
         hasError: false,
       })
     } else {
@@ -214,14 +218,8 @@ const StatsBoxGrid = () => {
             "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd&include_24hr_change=true"
           )
           const { usd } = response.data.ethereum
-          const value = new Intl.NumberFormat(intl.locale, {
-            style: "currency",
-            currency: "USD",
-            minimumSignificantDigits: 3,
-            maximumSignificantDigits: 4,
-          }).format(usd)
+          const value = formatPrice(usd)
           setEthPrice({
-            ...ethPrice,
             value,
             hasError: false,
           })
@@ -240,13 +238,8 @@ const StatsBoxGrid = () => {
           const response = await axios.get("/.netlify/functions/etherscan")
           const { data } = response
           const total = data.result.TotalNodeCount
-          const value = new Intl.NumberFormat(intl.locale, {
-            minimumSignificantDigits: 3,
-            maximumSignificantDigits: 4,
-          }).format(total)
-
+          const value = formatNodes(total)
           setNodes({
-            ...nodes,
             value,
             hasError: false,
           })
@@ -264,16 +257,8 @@ const StatsBoxGrid = () => {
         try {
           const response = await axios.get("/.netlify/functions/defipulse")
           const ethereumTVL = response.data.ethereumTVL
-          const value = new Intl.NumberFormat(intl.locale, {
-            style: "currency",
-            currency: "USD",
-            notation: "compact",
-            minimumSignificantDigits: 3,
-            maximumSignificantDigits: 4,
-          }).format(ethereumTVL)
-
+          const value = formatTVL(ethereumTVL)
           setValueLocked({
-            ...valueLocked,
             value,
             hasError: false,
           })
@@ -292,14 +277,8 @@ const StatsBoxGrid = () => {
           const response = await axios.get("/.netlify/functions/coinmetrics")
           const { series } = response.data.metricData
           const count = +series[series.length - 1].values[0]
-          const value = new Intl.NumberFormat(intl.locale, {
-            notation: "compact",
-            minimumSignificantDigits: 3,
-            maximumSignificantDigits: 4,
-          }).format(count)
-
+          const value = formatTxs(count)
           setTxs({
-            ...txs,
             value,
             hasError: false,
           })
@@ -316,6 +295,8 @@ const StatsBoxGrid = () => {
 
   const metrics = [
     {
+      apiProvider: "CoinGecko",
+      apiUrl: "https://www.coingecko.com/en/coins/ethereum",
       title: (
         <Translation id="page-index-network-stats-eth-price-description" />
       ),
@@ -325,6 +306,8 @@ const StatsBoxGrid = () => {
       state: ethPrice,
     },
     {
+      apiProvider: "Coin Metrics",
+      apiUrl: "https://coinmetrics.io/",
       title: <Translation id="page-index-network-stats-tx-day-description" />,
       description: (
         <Translation id="page-index-network-stats-tx-day-explainer" />
@@ -332,6 +315,8 @@ const StatsBoxGrid = () => {
       state: txs,
     },
     {
+      apiProvider: "DeFi Pulse",
+      apiUrl: "https://defipulse.com",
       title: (
         <Translation id="page-index-network-stats-value-defi-description" />
       ),
@@ -341,6 +326,8 @@ const StatsBoxGrid = () => {
       state: valueLocked,
     },
     {
+      apiProvider: "Etherscan",
+      apiUrl: "https://etherscan.io/nodetracker",
       title: <Translation id="page-index-network-stats-nodes-description" />,
       description: (
         <Translation id="page-index-network-stats-nodes-explainer" />
