@@ -211,7 +211,6 @@ const StatsBoxGrid = () => {
         hasError: false,
       })
     } else {
-      // Fetch ETH Price - Coin Gecko
       const fetchPrice = async () => {
         try {
           const response = await axios.get(
@@ -232,7 +231,6 @@ const StatsBoxGrid = () => {
       }
       fetchPrice()
 
-      // Fetch Ethereum Node data - Etherscan.io (Serverless lambda function)
       const fetchNodes = async () => {
         try {
           const response = await axios.get("/.netlify/functions/etherscan")
@@ -252,7 +250,6 @@ const StatsBoxGrid = () => {
       }
       fetchNodes()
 
-      // Fetch Total Value Locked (TVL) in DeFi - DeFi Pulse (Serverless lambda function)
       const fetchTotalValueLocked = async () => {
         try {
           const response = await axios.get("/.netlify/functions/defipulse")
@@ -271,7 +268,6 @@ const StatsBoxGrid = () => {
       }
       fetchTotalValueLocked()
 
-      // Fetch Last 24hr Transaction Count - Coinmetrics.io (Serverless lambda function)
       const fetchTxnCount = async () => {
         try {
           const response = await axios.get("/.netlify/functions/coinmetrics")
