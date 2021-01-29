@@ -1,7 +1,6 @@
 import React, { useState, useContext } from "react"
 import styled, { ThemeContext } from "styled-components"
 import Highlight, { defaultProps } from "prism-react-renderer"
-
 import Translation from "../components/Translation"
 import CopyToClipboard from "./CopyToClipboard"
 import Emoji from "./Emoji"
@@ -10,7 +9,6 @@ const LINES_BEFORE_COLLAPSABLE = 8
 
 const Container = styled.div`
   position: relative;
-  margin-bottom: 1rem;
 `
 
 const HightlightContainer = styled.div`
@@ -23,6 +21,7 @@ const HightlightContainer = styled.div`
       ? `calc((1.2rem * ${LINES_BEFORE_COLLAPSABLE}) + 4.185rem)`
       : "fit-content"};
   overflow: scroll;
+  margin-bottom: ${(props) => (props.fromHomepage ? `0rem` : `1rem`)};
 `
 
 const StyledPre = styled.pre`
@@ -41,7 +40,6 @@ const LineNo = styled.span`
   padding-right: 2rem;
   user-select: none;
   opacity: 0.4;
-  color: ${(props) => props.theme.colors.text};
 `
 
 const LineContent = styled.span`
