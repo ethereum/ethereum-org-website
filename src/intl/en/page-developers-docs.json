@@ -28,6 +28,8 @@
   "docs-nav-java": "Java",
   "docs-nav-java-script-apis": "JavaScript APIs",
   "docs-nav-javascript": "Javascript",
+  "docs-nav-json-rpc": "JSON RPC",
+  "docs-nav-json-rpc-apis-reference": "JSON RPC API Reference",
   "docs-nav-mining": "Mining",
   "docs-nav-networks": "Networks",
   "docs-nav-nodes-and-clients": "Nodes and clients",
