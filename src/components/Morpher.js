@@ -4,8 +4,7 @@ import Link from "./Link"
 
 const NavLink = styled(Link)`
   text-decoration: none;
-  display: flex;
-  align-items: flex-end;
+  font-size: 1rem;
   color: ${(props) => props.theme.colors.text};
   &:hover {
     color: ${(props) => props.theme.colors.primary};
@@ -36,7 +35,6 @@ const Morpher = () => {
       "ইথেরিয়াম",
       "எதீரியம்",
       "ఇథిరియూమ్",
-      "Ethereum",
     ],
   })
 

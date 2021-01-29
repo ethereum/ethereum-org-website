@@ -1,8 +1,6 @@
 import React, { useState, useContext } from "react"
-import PropTypes from "prop-types"
 import styled, { ThemeContext } from "styled-components"
 import Highlight, { defaultProps } from "prism-react-renderer"
-
 import Translation from "../components/Translation"
 import CopyToClipboard from "./CopyToClipboard"
 import Emoji from "./Emoji"
@@ -11,23 +9,25 @@ const LINES_BEFORE_COLLAPSABLE = 8
 
 const Container = styled.div`
   position: relative;
-  margin-bottom: 1rem;
 `
 
 const HightlightContainer = styled.div`
   border-radius: 4px;
-  border: 1px solid ${(props) => props.theme.colors.border};
+  border: ${({ fromHomepage, theme }) =>
+    fromHomepage ? `none` : `1px solid ${theme.colors.border}`};
   width: 100%;
   max-height: ${({ isCollapsed }) =>
     isCollapsed
       ? `calc((1.2rem * ${LINES_BEFORE_COLLAPSABLE}) + 4.185rem)`
       : "fit-content"};
   overflow: scroll;
+  margin-bottom: ${(props) => (props.fromHomepage ? `0rem` : `1rem`)};
 `
 
 const StyledPre = styled.pre`
   padding-top: ${({ hasTopBar }) => (hasTopBar ? "2.75rem" : "1.5rem")};
   margin: 0;
+  padding-left: 1rem;
 `
 
 const Line = styled.div`
@@ -37,9 +37,9 @@ const Line = styled.div`
 const LineNo = styled.span`
   display: table-cell;
   text-align: right;
-  padding-right: 1em;
+  padding-right: 2rem;
   user-select: none;
-  opacity: 0.5;
+  opacity: 0.4;
 `
 
 const LineContent = styled.span`
@@ -234,14 +234,18 @@ const getValidChildrenForCodeblock = (child) => {
   }
 }
 
-const Codeblock = (props) => {
-  const codeText = React.Children.map(props.children, (child) => {
+const Codeblock = ({
+  children,
+  allowCollapse = true,
+  codeLanguage,
+  fromHomepage = false,
+}) => {
+  const codeText = React.Children.map(children, (child) => {
     return getValidChildrenForCodeblock(child)
   }).join("")
 
-  const [isCollapsed, setIsCollapsed] = useState(true)
-  const className =
-    props.children?.props?.className || props?.codeLanguage || ""
+  const [isCollapsed, setIsCollapsed] = useState(allowCollapse)
+  const className = children?.props?.className || codeLanguage || ""
   const matches = className.match(/language-(?<lang>.*)/)
   const language = matches?.groups?.lang || ""
 
@@ -254,7 +258,10 @@ const Codeblock = (props) => {
   const theme = themeContext.isDark ? codeTheme.dark : codeTheme.light
   return (
     <Container>
-      <HightlightContainer isCollapsed={isCollapsed}>
+      <HightlightContainer
+        isCollapsed={isCollapsed}
+        fromHomepage={fromHomepage}
+      >
         <Highlight
           {...defaultProps}
           code={codeText}
@@ -283,47 +290,45 @@ const Codeblock = (props) => {
                   </Line>
                 )
               })}
-              <TopBar>
-                {totalLines - 1 > LINES_BEFORE_COLLAPSABLE && (
-                  <TopBarItem onClick={() => setIsCollapsed(!isCollapsed)}>
-                    {isCollapsed ? (
-                      <Translation id="show-all" />
-                    ) : (
-                      <Translation id="show-less" />
-                    )}
-                  </TopBarItem>
-                )}
-
-                {shouldShowCopyWidget && (
-                  <CopyToClipboard text={codeText}>
-                    {(isCopied) => (
-                      <TopBarItem>
-                        {!isCopied ? (
-                          <>
-                            <Emoji text=":clipboard:" size={1} />{" "}
-                            <Translation id="copy" />
-                          </>
+              {!fromHomepage && (
+                <TopBar className={className}>
+                  {allowCollapse &&
+                    totalLines - 1 > LINES_BEFORE_COLLAPSABLE && (
+                      <TopBarItem onClick={() => setIsCollapsed(!isCollapsed)}>
+                        {isCollapsed ? (
+                          <Translation id="show-all" />
                         ) : (
-                          <>
-                            <Emoji text=":white_check_mark:" size={1} />{" "}
-                            <Translation id="copied" />
-                          </>
+                          <Translation id="show-less" />
                         )}
                       </TopBarItem>
                     )}
-                  </CopyToClipboard>
-                )}
-              </TopBar>
+                  {shouldShowCopyWidget && (
+                    <CopyToClipboard text={codeText}>
+                      {(isCopied) => (
+                        <TopBarItem>
+                          {!isCopied ? (
+                            <>
+                              <Emoji text=":clipboard:" size={1} />{" "}
+                              <Translation id="copy" />
+                            </>
+                          ) : (
+                            <>
+                              <Emoji text=":white_check_mark:" size={1} />{" "}
+                              <Translation id="copied" />
+                            </>
+                          )}
+                        </TopBarItem>
+                      )}
+                    </CopyToClipboard>
+                  )}
+                </TopBar>
+              )}
             </StyledPre>
           )}
         </Highlight>
       </HightlightContainer>
     </Container>
   )
-}
-
-Codeblock.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Codeblock

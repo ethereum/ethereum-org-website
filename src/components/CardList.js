@@ -11,7 +11,25 @@ const Table = styled.div`
   margin-bottom: 2rem;
 `
 
-const Item = styled(Link)`
+const Item = styled.div`
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  color: ${(props) => props.theme.colors.text} !important;
+  box-shadow: 0 1px 1px ${(props) => props.theme.colors.tableItemBoxShadow};
+  margin-bottom: 1px;
+  padding: 1rem;
+  width: 100%;
+  color: #000;
+  &:hover {
+    border-radius: 4px;
+    box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
+    background: ${(props) => props.theme.colors.tableBackgroundHover};
+  }
+`
+
+const ItemLink = styled(Link)`
   text-decoration: none;
   display: flex;
   justify-content: space-between;
@@ -56,13 +74,28 @@ const Image = styled(Img)`
   margin-top: 4px;
 `
 
-const CardList = ({ content, className }) => {
+const CardList = ({ content, className, clickHandler }) => {
   return (
     <Table className={className}>
       {content.map((listItem, idx) => {
         const { title, description, caption, link, image, alt, id } = listItem
-        return (
-          <Item key={id || idx} to={link}>
+        const isLink = !!link
+        return isLink ? (
+          <ItemLink key={id || idx} to={link}>
+            {image && <Image fixed={image} alt={alt} />}
+            <LeftContainer>
+              <ItemTitle>{title}</ItemTitle>
+
+              <ItemDesc>{description}</ItemDesc>
+            </LeftContainer>
+            {caption && (
+              <RightContainer>
+                <ItemDesc>{caption}</ItemDesc>
+              </RightContainer>
+            )}
+          </ItemLink>
+        ) : (
+          <Item key={idx} onClick={() => clickHandler(idx)}>
             {image && <Image fixed={image} alt={alt} />}
             <LeftContainer>
               <ItemTitle>{title}</ItemTitle>

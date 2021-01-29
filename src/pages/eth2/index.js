@@ -34,17 +34,6 @@ const Row = styled.div`
   }
 `
 
-const ButtonRow = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-`
-
 const H2 = styled.h2`
   font-size: 24px;
   font-style: normal;
