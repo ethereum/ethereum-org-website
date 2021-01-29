@@ -32,7 +32,7 @@ const Title = styled.p`
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  grid-template-columns: repeat(2, 1fr);
   margin: 2rem 2rem 0;
   border-radius: 2px;
   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
@@ -158,12 +158,12 @@ const StatsBoxGrid = () => {
         apiUrl: "https://coingecko.com",
         hasError: false,
       })
-      // setNodes({
-      //   total: 8040,
-      //   apiProvider: "Etherscan",
-      //   apiUrl: "https://etherscan.io",
-      //   hasError: true,
-      // })
+      setNodes({
+        total: 8040,
+        apiProvider: "Etherscan",
+        apiUrl: "https://etherscan.io",
+        hasError: false,
+      })
       setValueLocked({
         total: 23456789000,
         apiProvider: "DeFi Pulse",
