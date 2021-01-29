@@ -242,21 +242,6 @@ const VisionPage = ({ data, location }) => {
           <p>
             <Translation id="page-eth2-vision-security-desc-8" />
           </p>
-          <ul>
-            <li>
-              <Link to="/eth2/beacon-chain/">
-                <Translation id="page-eth2-beacon-chain-btn" />
-              </Link>
-            </li>
-            <li>
-              <Link to="/eth2/shard-chains/">
-                <Translation id="page-eth2-shard-lower" />
-              </Link>
-            </li>
-          </ul>
-          <p>
-            <Translation id="page-eth2-vision-security-desc-9" />
-          </p>
           <p>
             <Translation id="page-eth2-vision-security-desc-10" />{" "}
             <Link to="/developers/docs/nodes-and-clients/">

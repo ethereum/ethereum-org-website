@@ -13,6 +13,10 @@ const Description = styled.p`
   margin-bottom: 0rem;
 `
 
+const ChildrenContainer = styled.div`
+  margin-top: 2rem;
+`
+
 const ImageWrapper = styled.div`
   display: flex;
   flex-direction: row;
@@ -79,7 +83,7 @@ const ActionCard = ({
       <Content className="action-card-content">
         <Title>{title}</Title>
         <Description>{description}</Description>
-        {children}
+        {children && <ChildrenContainer>{children}</ChildrenContainer>}
       </Content>
     </Card>
   )

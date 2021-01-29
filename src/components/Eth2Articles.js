@@ -57,28 +57,28 @@ const dannyArticles = [
 // TODO move into /data/ directory
 const benArticles = [
   {
-    title: "What's New in Eth2 - 30 December 2020",
+    title: "What’s New in Eth2 – #60",
+    description: "15 January 2021",
+    link:
+      "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_210115",
+  },
+  {
+    title: "What's New in Eth2 - #59",
     description: "30 December 2020",
     link:
       "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_201230",
   },
   {
-    title: "What’s New in Eth2 - 12 December 2020",
+    title: "What’s New in Eth2 - #58",
     description: "12 December 2020",
     link:
       "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_201212",
   },
   {
-    title: "What's New in Eth2 #57",
+    title: "What's New in Eth2 – #57",
     description: "30 November 2020",
     link:
       "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_201130",
-  },
-  {
-    title: "What’s New in Eth2 #56",
-    description: "13 November 2020",
-    link:
-      "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_201113",
   },
 ]
 
