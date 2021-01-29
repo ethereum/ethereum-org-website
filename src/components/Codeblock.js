@@ -28,6 +28,7 @@ const HightlightContainer = styled.div`
 const StyledPre = styled.pre`
   padding-top: ${({ hasTopBar }) => (hasTopBar ? "2.75rem" : "1.5rem")};
   margin: 0;
+  padding-left: 1rem;
 `
 
 const Line = styled.div`
@@ -37,9 +38,10 @@ const Line = styled.div`
 const LineNo = styled.span`
   display: table-cell;
   text-align: right;
-  padding-right: 1em;
+  padding-right: 2rem;
   user-select: none;
-  opacity: 0.5;
+  opacity: 0.4;
+  color: ${(props) => props.theme.colors.text};
 `
 
 const LineContent = styled.span`
