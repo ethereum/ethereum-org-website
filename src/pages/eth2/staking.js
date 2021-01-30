@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
@@ -22,8 +21,6 @@ import {
   Content,
   Page,
   Divider,
-  Eth2Header,
-  Eth2HeaderGradient,
 } from "../../components/SharedStyledComponents"
 
 const StyledCallout = styled(CalloutBanner)`

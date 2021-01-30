@@ -221,9 +221,6 @@ const EthExchanges = () => {
           }
         }
       }
-      ambo: file(relativePath: { eq: "wallets/ambo.png" }) {
-        ...cardListImage
-      }
       argent: file(relativePath: { eq: "wallets/argent.png" }) {
         ...cardListImage
       }
@@ -258,6 +255,9 @@ const EthExchanges = () => {
         ...cardListImage
       }
       myetherwallet: file(relativePath: { eq: "wallets/myetherwallet.png" }) {
+        ...cardListImage
+      }
+      mycrypto: file(relativePath: { eq: "wallets/mycrypto.png" }) {
         ...cardListImage
       }
       rain: file(relativePath: { eq: "exchanges/rain.png" }) {
@@ -347,11 +347,6 @@ const EthExchanges = () => {
     wyre: {
       usaExceptions: ["CT", "HI", "NY", "NH", "TX", "VT", "VA"],
       wallets: {
-        Ambo: {
-          url: "https://www.ambo.io/	",
-          platform: "iOS",
-          image: data.ambo,
-        },
         Squarelink: {
           url: "https://squarelink.com/	",
           platform: "Web",
@@ -394,6 +389,11 @@ const EthExchanges = () => {
           url: "https://trustwallet.com/	",
           platform: "Mobile",
           image: data.trust,
+        },
+        MyCrypto: {
+          url: "https://app.mycrypto.com",
+          platform: "Web",
+          image: data.mycrypto,
         },
       },
     },

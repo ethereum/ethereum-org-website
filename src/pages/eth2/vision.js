@@ -1,12 +1,12 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
 import { translateMessageId } from "../../utils/translations"
 import Translation from "../../components/Translation"
 import Card from "../../components/Card"
+import ActionCard from "../../components/ActionCard"
 import Link from "../../components/Link"
 import Emoji from "../../components/Emoji"
 import Trilemma from "../../components/Trilemma"
@@ -19,67 +19,7 @@ import {
   Content,
   Page,
   Divider,
-  Eth2Header,
-  Eth2HeaderGradient,
 } from "../../components/SharedStyledComponents"
-
-const HeroContainer = styled.div`
-  padding-left: 4rem;
-  padding-right: 2rem;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-top: 6rem;
-    padding-left: 2rem;
-    padding-bottom: 4rem;
-  }
-`
-
-const HeroCard = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-  border-radius: 2px;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    margin-right: -2rem;
-    margin-left: -2rem;
-    margin-top: -2rem;
-  }
-`
-
-const Hero = styled(Img)`
-  flex: 1 1 50%;
-  max-width: 500px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-top: 3rem;
-  margin-right: 3rem;
-  align-self: center;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-top: 0;
-    margin-right: 0;
-  }
-`
-
-const Title = styled.h1`
-  text-transform: uppercase;
-  font-size: 14px;
-  color: ${(props) => props.theme.colors.text300};
-`
-
-const Subtitle = styled.div`
-  font-size: 24px;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-  max-width: 480px;
-  margin-top: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 20px;
-  }
-`
 
 const StyledCardContainer = styled(CardContainer)`
   margin-top: 2rem;
@@ -159,33 +99,6 @@ const paths = [
   },
 ]
 
-const upgrades = [
-  {
-    emoji: ":police_car_light:",
-    title: <Translation id="page-eth2-vision-beacon-chain" />,
-    description: <Translation id="page-eth2-vision-beacon-chain-desc" />,
-    url: "/eth2/beacon-chain/",
-    button: <Translation id="page-eth2-vision-beacon-chain-btn" />,
-    date: <Translation id="page-eth2-vision-beacon-chain-date" />,
-  },
-  {
-    emoji: ":chains:",
-    title: <Translation id="page-eth2-shard-title" />,
-    description: <Translation id="page-eth2-vision-shard-desc-4" />,
-    url: "/eth2/shard-chains/",
-    button: <Translation id="page-eth2-shard-button" />,
-    date: <Translation id="page-eth2-vision-shard-date" />,
-  },
-  {
-    emoji: ":ship:",
-    title: <Translation id="page-eth2-docking" />,
-    description: <Translation id="page-eth2-vision-docking-desc" />,
-    url: "/eth2/docking/",
-    button: <Translation id="page-eth2-docking-btn" />,
-    date: <Translation id="page-eth2-vision-docking-date" />,
-  },
-]
-
 const VisionPage = ({ data, location }) => {
   const intl = useIntl()
 
@@ -193,9 +106,33 @@ const VisionPage = ({ data, location }) => {
     title: translateMessageId("page-eth2-vision-title", intl),
     header: translateMessageId("page-eth2-vision-future", intl),
     subtitle: translateMessageId("page-eth2-vision-subtitle", intl),
-    image: data.eth.childImageSharp.fluid,
+    image: data.oldship.childImageSharp.fluid,
     alt: translateMessageId("page-eth-whats-eth-hero-alt", intl),
   }
+
+  const upgrades = [
+    {
+      image: data.beaconchain.childImageSharp.fixed,
+      title: <Translation id="page-eth2-beacon-chain-title" />,
+      description: <Translation id="page-eth2-beacon-chain-desc" />,
+      to: "/eth2/beacon-chain/",
+      date: <Translation id="page-eth2-beacon-chain-estimate" />,
+    },
+    {
+      image: data.shards.childImageSharp.fixed,
+      title: <Translation id="page-eth2-shard-title" />,
+      description: <Translation id="page-eth2-shard-desc" />,
+      to: "/eth2/shard-chains/",
+      date: <Translation id="page-eth2-shard-estimate" />,
+    },
+    {
+      image: data.thedocking.childImageSharp.fixed,
+      title: <Translation id="page-eth2-docking" />,
+      description: <Translation id="page-eth2-docking-desc" />,
+      to: "/eth2/docking/",
+      date: <Translation id="page-eth2-docking-estimate" />,
+    },
+  ]
 
   return (
     <Page>
@@ -305,21 +242,6 @@ const VisionPage = ({ data, location }) => {
           <p>
             <Translation id="page-eth2-vision-security-desc-8" />
           </p>
-          <ul>
-            <li>
-              <Link to="/eth2/beacon-chain/">
-                <Translation id="page-eth2-beacon-chain-btn" />
-              </Link>
-            </li>
-            <li>
-              <Link to="/eth2/shard-chains/">
-                <Translation id="page-eth2-shard-lower" />
-              </Link>
-            </li>
-          </ul>
-          <p>
-            <Translation id="page-eth2-vision-security-desc-9" />
-          </p>
           <p>
             <Translation id="page-eth2-vision-security-desc-10" />{" "}
             <Link to="/developers/docs/nodes-and-clients/">
@@ -367,15 +289,16 @@ const VisionPage = ({ data, location }) => {
         <StyledCardContainer>
           {upgrades.map((upgrade, idx) => {
             return (
-              <StyledCard
+              <ActionCard
+                isRight
                 key={idx}
-                emoji={upgrade.emoji}
+                image={upgrade.image}
                 title={upgrade.title}
                 description={upgrade.description}
+                to={upgrade.to}
               >
                 <h6>{upgrade.date}</h6>
-                <ButtonLink to={upgrade.url}>{upgrade.button}</ButtonLink>
-              </StyledCard>
+              </ActionCard>
             )
           })}
         </StyledCardContainer>
@@ -388,7 +311,7 @@ export default VisionPage
 
 export const query = graphql`
   query {
-    eth: file(relativePath: { eq: "eth2/eth2_eth.png" }) {
+    oldship: file(relativePath: { eq: "eth2/oldship.png" }) {
       childImageSharp {
         fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid
@@ -399,6 +322,34 @@ export const query = graphql`
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    docking: file(relativePath: { eq: "eth2/docking.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    beaconchain: file(relativePath: { eq: "eth2/core.png" }) {
+      childImageSharp {
+        fixed(width: 420) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    shards: file(relativePath: { eq: "eth2/newrings.png" }) {
+      childImageSharp {
+        fixed(width: 420) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    thedocking: file(relativePath: { eq: "eth2/docking.png" }) {
+      childImageSharp {
+        fixed(width: 420) {
+          ...GatsbyImageSharpFixed
         }
       }
     }

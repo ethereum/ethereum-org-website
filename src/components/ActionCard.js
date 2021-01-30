@@ -10,21 +10,31 @@ const Content = styled.div`
 
 const Description = styled.p`
   opacity: 0.8;
+  margin-bottom: 0rem;
+`
+
+const ChildrenContainer = styled.div`
+  margin-top: 2rem;
 `
 
 const ImageWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: ${(props) => (props.isRight ? `flex-end` : `center`)};
+  align-items: flex-end;
   background: ${(props) => props.theme.colors.cardGradient};
   box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
   min-height: 260px;
 `
 
+const Title = styled.h3`
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+`
+
 const Image = styled(Img)`
   width: 100%;
-  width: 100%;
+  height: 100%;
   min-width: 100px;
   min-height: 100px;
   max-width: 372px;
@@ -59,20 +69,21 @@ const ActionCard = ({
   description,
   children,
   className,
+  isRight,
 }) => {
   const isImageURL = typeof image === "string" && image.includes("http")
   return (
     <Card to={to} className={className} hideArrow={true}>
-      <ImageWrapper className="action-card-image-wrapper">
+      <ImageWrapper isRight={isRight} className="action-card-image-wrapper">
         {!isImageURL && <Image fixed={image} alt={alt} />}
         {isImageURL && (
           <img src={image} alt={alt} className="action-card-image" />
         )}
       </ImageWrapper>
       <Content className="action-card-content">
-        <h3>{title}</h3>
+        <Title>{title}</Title>
         <Description>{description}</Description>
-        {children}
+        {children && <ChildrenContainer>{children}</ChildrenContainer>}
       </Content>
     </Card>
   )

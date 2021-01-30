@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import Link from "./Link"
 import Translation from "./Translation"
-import { FakeLink, FakeLinkExternal } from "./SharedStyledComponents"
+import { FakeLinkExternal } from "./SharedStyledComponents"
 
 const Table = styled.div`
   display: grid;

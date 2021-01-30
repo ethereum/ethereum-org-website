@@ -157,6 +157,9 @@ export const H1 = styled.h1`
 `
 export const H2 = styled.h2`
   ${Mixins.textLevel2}
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    font-size: 1.5rem;
+  }
 `
 export const H3 = styled.h3`
   ${Mixins.textLevel3}
