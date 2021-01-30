@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
-import axios from "axios"
 
 import Translation from "./Translation"
 import Tooltip from "./Tooltip"
 import Link from "./Link"
 import Icon from "./Icon"
+
+import { getData } from "../utils/cache"
 
 const Value = styled.h3`
   font-size: min(4.4vw, 64px);
@@ -213,10 +214,10 @@ const StatsBoxGrid = () => {
     } else {
       const fetchPrice = async () => {
         try {
-          const response = await axios.get(
+          const data = await getData(
             "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd&include_24hr_change=true"
           )
-          const { usd } = response.data.ethereum
+          const { usd } = data.ethereum
           const value = formatPrice(usd)
           setEthPrice({
             value,
@@ -233,8 +234,7 @@ const StatsBoxGrid = () => {
 
       const fetchNodes = async () => {
         try {
-          const response = await axios.get("/.netlify/functions/etherscan")
-          const { data } = response
+          const data = await getData("/.netlify/functions/etherscan")
           const total = data.result.TotalNodeCount
           const value = formatNodes(total)
           setNodes({
@@ -252,8 +252,8 @@ const StatsBoxGrid = () => {
 
       const fetchTotalValueLocked = async () => {
         try {
-          const response = await axios.get("/.netlify/functions/defipulse")
-          const ethereumTVL = response.data.ethereumTVL
+          const data = await getData("/.netlify/functions/defipulse")
+          const ethereumTVL = data.ethereumTVL
           const value = formatTVL(ethereumTVL)
           setValueLocked({
             value,
@@ -270,8 +270,8 @@ const StatsBoxGrid = () => {
 
       const fetchTxnCount = async () => {
         try {
-          const response = await axios.get("/.netlify/functions/coinmetrics")
-          const { series } = response.data.metricData
+          const data = await getData("/.netlify/functions/coinmetrics")
+          const { series } = data.metricData
           const count = +series[series.length - 1].values[0]
           const value = formatTxs(count)
           setTxs({
