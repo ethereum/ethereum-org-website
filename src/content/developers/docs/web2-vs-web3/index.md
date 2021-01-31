@@ -24,7 +24,7 @@ Many Web3 developers have chosen to build dapps because of Ethereum's inherent d
 | Payment service may decide to not allow payments for certain types of work | Web3 payment apps require no personal data and can't prevent payments                                          |
 | Servers for gig-economy apps could go down and affect worker income        | Web3 servers can't go down – they use Ethereum, a decentralized network of 1000s of computers as their backend |
 
-This doesn't mean that all services need to be turned into a dapp. These examples are illustrative to show the main differences between web2 and web3 services.
+This doesn't mean that all services need to be turned into a dapp. These examples are illustrative of the main differences between web2 and web3 services.
 
 ## Web3 limitations {#web3-limitations}
 
