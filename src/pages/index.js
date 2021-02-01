@@ -27,6 +27,7 @@ import {
   getLangContentVersion,
   translateMessageId,
 } from "../utils/translations"
+import MetricChart from "../components/MetricChart"
 
 const Hero = styled(Img)`
   width: 100%;
@@ -918,6 +919,7 @@ contract SimpleDomainRegistry {
           </ButtonRow>
         </StyledCalloutBanner>
       </StyledContent>
+      <MetricChart />
     </Page>
   )
 }

@@ -45,6 +45,7 @@
     "prism-react-renderer": "^1.1.1",
     "prismjs": "^1.21.0",
     "react": "^16.13.1",
+    "react-charts": "^2.0.0-beta.7",
     "react-dom": "^16.13.1",
     "react-emoji-render": "^1.2.4",
     "react-helmet": "^6.1.0",
