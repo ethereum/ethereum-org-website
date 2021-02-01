@@ -43,21 +43,21 @@ const MetricChart = () => {
       }
     }
     fetchPriceHistory()
-    ;(async () => {
-      try {
-        const response = await axios.get("/.netlify/functions/defipulse")
-        const { data } = response // array of {timestamp, tvlUSD}
-        setValueLockedHistory({
-          values: data,
-          hasError: false,
-        })
-      } catch (error) {
-        console.error(error)
-        setValueLockedHistory({
-          hasError: true,
-        })
-      }
-    })()
+    // ;(async () => {
+    //   try {
+    //     const response = await axios.get("/.netlify/functions/defipulse")
+    //     const { data } = response // array of {timestamp, tvlUSD}
+    //     setValueLockedHistory({
+    //       values: data,
+    //       hasError: false,
+    //     })
+    //   } catch (error) {
+    //     console.error(error)
+    //     setValueLockedHistory({
+    //       hasError: true,
+    //     })
+    //   }
+    // })()
   }, [])
 
   const dataPrice = useMemo(() => {
@@ -79,22 +79,22 @@ const MetricChart = () => {
     ]
   }, [ethPriceHistory])
 
-  const dataValueLocked = useMemo(() => {
-    const iterable = valueLockedHistory?.values || []
-    const dataArray = []
-    for (const point of iterable) {
-      dataArray.push({
-        primary: point.timestamp,
-        secondary: point.tvlUSD,
-      })
-    }
-    return [
-      {
-        label: "Total Value Locked - Ethereum DeFi",
-        data: dataArray,
-      },
-    ]
-  }, [valueLockedHistory])
+  // const dataValueLocked = useMemo(() => {
+  //   const iterable = valueLockedHistory?.values || []
+  //   const dataArray = []
+  //   for (const point of iterable) {
+  //     dataArray.push({
+  //       primary: point.timestamp,
+  //       secondary: point.tvlUSD,
+  //     })
+  //   }
+  //   return [
+  //     {
+  //       label: "Total Value Locked - Ethereum DeFi",
+  //       data: dataArray,
+  //     },
+  //   ]
+  // }, [valueLockedHistory])
 
   const axesPrice = useMemo(
     () => [
@@ -108,17 +108,17 @@ const MetricChart = () => {
     []
   )
 
-  const axesValueLocked = useMemo(
-    () => [
-      {
-        primary: true,
-        type: "time",
-        position: "bottom",
-      },
-      { type: "linear", position: "left" },
-    ],
-    []
-  )
+  // const axesValueLocked = useMemo(
+  //   () => [
+  //     {
+  //       primary: true,
+  //       type: "time",
+  //       position: "bottom",
+  //     },
+  //     { type: "linear", position: "left" },
+  //   ],
+  //   []
+  // )
 
   return (
     <Container>
