@@ -2706,6 +2706,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "Siegrift",
+      "name": "Emanuel Tesař",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22679154?v=4",
+      "profile": "https://github.com/Siegrift",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
