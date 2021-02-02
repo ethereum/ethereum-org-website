@@ -68,7 +68,7 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Templates](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**scaffold-eth -** **_Hardhat + Create Eth App: everything you need to get started building decentralized applications powered by smart contracts._**
+**Scaffold-Eth -** **_Ethers.js + Hardhat + React components and hooks for web3: everything you need to get started building decentralized applications powered by smart contracts._**
 
 - [GitHub](https://github.com/austintgriffith/scaffold-eth)
 
