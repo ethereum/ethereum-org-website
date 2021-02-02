@@ -2,8 +2,8 @@ const axios = require("axios")
 
 const handler = async () => {
   try {
-    const dayToFetch = 30
-    const milliseconds = dayToFetch * 24 * 60 * 60 * 1000
+    const daysToFetch = 30
+    const milliseconds = daysToFetch * 24 * 60 * 60 * 1000
     const now = new Date()
     // startdate and enddate format: YYYY-MM-DD
     const to = now.toISOString().split("T")[0]
