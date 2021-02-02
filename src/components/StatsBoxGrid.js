@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
+import axios from "axios"
 
 import Translation from "./Translation"
 import Tooltip from "./Tooltip"
@@ -214,10 +215,10 @@ const StatsBoxGrid = () => {
     } else {
       const fetchPrice = async () => {
         try {
-          const data = await getData(
+          const response = await axios.get(
             "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd&include_24hr_change=true"
           )
-          const { usd } = data.ethereum
+          const { usd } = response.data.ethereum
           const value = formatPrice(usd)
           setEthPrice({
             value,
