@@ -19,7 +19,7 @@
   "page-local-environment-hardhat-logo-alt": "Hardhat logo",
   "page-local-environment-openZeppelin-desc": "Save hours of development time by compiling, upgrading, deploying, and interacting with smart contracts with our CLI.",
   "page-local-environment-openZeppelin-logo-alt": "OpenZeppelin logo",
-  "page-local-environment-scaffold-eth-desc": "Hardhat + Create Eth App: everything you need to get started building decentralized applications powered by smart contracts",
+  "page-local-environment-scaffold-eth-desc": "Ethers + Hardhat + React: everything you need to get started building decentralized applications powered by smart contracts",
   "page-local-environment-scaffold-eth-logo-alt": "scaffold-eth logo",
   "page-local-environment-setup-meta-desc": "Guide on how to choose your software stack for Ethereum development.",
   "page-local-environment-setup-meta-title": "Ethereum local development setup",
