@@ -36,7 +36,7 @@ Staking and becoming a validator is easier than [mining](/developers/docs/mining
 If you're interested in becoming a validator and helping secure the Beacon Chain, <a href="/eth2/staking/">learn more about staking</a>.
 </InfoBanner>
 
-This is also an important change for the second Eth2 upgade: [shard chains](/eth2/shard-chains/).
+This is also an important change for the second Eth2 upgrade: [shard chains](/eth2/shard-chains/).
 
 ### Setting up for shard chains {#setting-up-for-shard-chains}
 
