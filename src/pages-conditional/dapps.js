@@ -6,7 +6,6 @@ import { useIntl, navigate } from "gatsby-plugin-intl"
 import { translateMessageId } from "../utils/translations"
 import Translation from "../components/Translation"
 import Pill from "../components/Pill"
-import BoxGrid from "../components/BoxGrid"
 import Card from "../components/Card"
 import Callout from "../components/Callout"
 import CalloutBanner from "../components/CalloutBanner"
@@ -28,6 +27,8 @@ import {
   Page,
   CenterDivider,
   Divider,
+  CardContainer,
+  StyledCard,
 } from "../components/SharedStyledComponents"
 
 const MagiciansImage = styled(Img)`
@@ -194,13 +195,18 @@ const FullWidthContainer = styled(Page)`
   padding-top: 4rem;
 `
 
-const CardContainer = styled.div`
+const CategoriesCardContainer = styled.div`
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     grid-template-columns: 1fr;
   }
+`
+
+const FeaturesContainer = styled.div`
+  margin-top: 3rem;
+  margin-bottom: 5rem;
 `
 
 const CenteredCard = styled(Card)`
@@ -391,60 +397,52 @@ const DappsPage = ({ data, location }) => {
 
   const features = [
     {
+      emoji: ":bust_in_silhouette:",
       title: translateMessageId("page-dapps-features-1-title", intl),
       description: translateMessageId(
         "page-dapps-features-1-description",
         intl
       ),
-      emoji: ":bust_in_silhouette:",
     },
     {
+      emoji: ":megaphone:",
       title: translateMessageId("page-dapps-features-2-title", intl),
       description: translateMessageId(
         "page-dapps-features-2-description",
         intl
       ),
-      emoji: ":megaphone:",
     },
     {
+      emoji: ":money-mouth_face:",
       title: translateMessageId("page-dapps-features-3-title", intl),
       description: translateMessageId(
         "page-dapps-features-3-description",
         intl
       ),
-      emoji: ":money-mouth_face:",
     },
     {
+      emoji: ":electric_plug:",
       title: translateMessageId("page-dapps-features-4-title", intl),
       description: translateMessageId(
         "page-dapps-features-4-description",
         intl
       ),
-      emoji: ":electric_plug:",
     },
     {
+      emoji: ":detective:",
       title: translateMessageId("page-dapps-features-5-title", intl),
       description: translateMessageId(
         "page-dapps-features-5-description",
         intl
       ),
-      emoji: ":detective:",
     },
     {
+      emoji: ":key:",
       title: translateMessageId("page-dapps-features-6-title", intl),
       description: translateMessageId(
         "page-dapps-features-6-description",
         intl
       ),
-      emoji: ":key:",
-    },
-    {
-      title: translateMessageId("page-dapps-features-7-title", intl),
-      description: translateMessageId(
-        "page-dapps-features-7-description",
-        intl
-      ),
-      emoji: ":antenna_with_bars:",
     },
   ]
 
@@ -1467,7 +1465,7 @@ const DappsPage = ({ data, location }) => {
                 {categories[selectedCategory].benefitsTitle}
               </H2>
               <p>{categories[selectedCategory.benefitsDescription]}</p>
-              <CardContainer>
+              <CategoriesCardContainer>
                 {categories[selectedCategory].benefits.map((art, idx) => {
                   return (
                     <CenteredCard
@@ -1478,7 +1476,7 @@ const DappsPage = ({ data, location }) => {
                     />
                   )
                 })}
-              </CardContainer>
+              </CategoriesCardContainer>
             </About>
           )}
         </Content>
@@ -1521,7 +1519,21 @@ const DappsPage = ({ data, location }) => {
             <Translation id="page-dapps-magic-behind-dapps-link" />
           </Link>
         </Box>
-        <BoxGrid items={features} />
+        {/* Meow */}
+        <FeaturesContainer>
+          <CardContainer>
+            {features.map((card, idx) => {
+              return (
+                <StyledCard
+                  key={idx}
+                  emoji={card.emoji}
+                  title={card.title}
+                  description={card.description}
+                />
+              )
+            })}
+          </CardContainer>
+        </FeaturesContainer>
         <Row>
           <LeftColumn>
             <H2>
