@@ -10,7 +10,8 @@ import Layout from "./src/components/Layout"
 import Prism from "prism-react-renderer/prism"
 ;(typeof global !== "undefined" ? global : window).Prism = Prism
 
-// FormatJS Polyfill imports - Used for intl number formatting (ie. displaying price)
+// FormatJS Polyfill imports - Used for intl number formatting
+require("@formatjs/intl-locale/polyfill")
 require("@formatjs/intl-numberformat/polyfill")
 require("@formatjs/intl-numberformat/locale-data/en")
 
