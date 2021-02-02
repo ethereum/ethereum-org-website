@@ -303,8 +303,8 @@ const StatsBoxGrid = () => {
       state: ethPrice,
     },
     {
-      apiProvider: "Coin Metrics",
-      apiUrl: "https://coinmetrics.io/",
+      apiProvider: "Etherscan",
+      apiUrl: "https://etherscan.io/",
       title: <Translation id="page-index-network-stats-tx-day-description" />,
       description: (
         <Translation id="page-index-network-stats-tx-day-explainer" />
