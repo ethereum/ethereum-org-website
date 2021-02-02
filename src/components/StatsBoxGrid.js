@@ -269,11 +269,11 @@ const StatsBoxGrid = () => {
       }
       fetchTotalValueLocked()
 
-      const fetchTxnCount = async () => {
+      const fetchTxCount = async () => {
         try {
-          const data = await getData("/.netlify/functions/coinmetrics")
-          const { series } = data.metricData
-          const count = +series[series.length - 1].values[0]
+          const { result } = await getData("/.netlify/functions/txs")
+          // result: [{UTCDate: string, unixTimeStamp: string, transactionCount: number}, {...}]
+          const count = result[0].transactionCount
           const value = formatTxs(count)
           setTxs({
             value,
@@ -286,7 +286,7 @@ const StatsBoxGrid = () => {
           })
         }
       }
-      fetchTxnCount()
+      fetchTxCount()
     }
   }, [])
 
@@ -303,8 +303,8 @@ const StatsBoxGrid = () => {
       state: ethPrice,
     },
     {
-      apiProvider: "Coin Metrics",
-      apiUrl: "https://coinmetrics.io/",
+      apiProvider: "Etherscan",
+      apiUrl: "https://etherscan.io/",
       title: <Translation id="page-index-network-stats-tx-day-description" />,
       description: (
         <Translation id="page-index-network-stats-tx-day-explainer" />
