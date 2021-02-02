@@ -1519,7 +1519,6 @@ const DappsPage = ({ data, location }) => {
             <Translation id="page-dapps-magic-behind-dapps-link" />
           </Link>
         </Box>
-        {/* Meow */}
         <FeaturesContainer>
           <CardContainer>
             {features.map((card, idx) => {
