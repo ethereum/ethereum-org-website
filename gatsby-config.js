@@ -5,6 +5,15 @@ const supportedLanguages = translations.supportedLanguages
 const defaultLanguage = `en`
 const siteUrl = `https://ethereum.org`
 
+const context = process.env.CONTEXT
+console.log("***********************")
+console.log("***********************")
+console.log("***********************")
+console.log({ context })
+console.log("***********************")
+console.log("***********************")
+console.log("***********************")
+
 // Note: to run this application locally you need to:
 // 1. Create a .env file in the root directory (see .env.example)
 // 2. Create a Github personal access token with `read:user` scope
