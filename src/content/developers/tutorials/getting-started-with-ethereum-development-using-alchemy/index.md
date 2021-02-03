@@ -14,7 +14,7 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 ![Ethereum and Alchemy logos](./ethereum-alchemy.png)
 
-This is a beginners guide to getting started with Ethereum development. For this tutorial we'll be using [Alchemy](https://alchemyapi.io/), the leading blockchain developer platform powering millions of users from 70% of the top blockchain apps, including Maker, 0x, MyEtherWallet, Dharma, and Kyber. Alchemy will give us access to an API endpoint on he Ethereum chain so we can read and write transactions. 
+This is a beginners guide to getting started with Ethereum development. For this tutorial we'll be using [Alchemy](https://alchemyapi.io/), the leading blockchain developer platform powering millions of users from 70% of the top blockchain apps, including Maker, 0x, MyEtherWallet, Dharma, and Kyber. Alchemy will give us access to an API endpoint on the Ethereum chain so we can read and write transactions. 
 
 We’ll take you from signing up with Alchemy to writing your first web3 script! No blockchain development experience necessary!
 
