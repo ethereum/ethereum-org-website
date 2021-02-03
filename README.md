@@ -807,6 +807,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/neewy"><img src="https://avatars.githubusercontent.com/u/11841667?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nikolay Yushkevich</b></sub></a><br /><a href="#content-neewy" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/darkwater4213"><img src="https://avatars.githubusercontent.com/u/53630002?v=4?s=100" width="100px;" alt=""/><br /><sub><b>darkwater4213</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Adarkwater4213" title="Bug reports">🐛</a> <a href="#content-darkwater4213" title="Content">🖋</a></td>
     <td align="center"><a href="https://akashnimare.in"><img src="https://avatars.githubusercontent.com/u/2263909?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Akash Nimare</b></sub></a><br /><a href="#content-akashnimare" title="Content">🖋</a></td>
+    <td align="center"><a href="https://davemackey.net/"><img src="https://avatars.githubusercontent.com/u/8009774?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dave Mackey</b></sub></a><br /><a href="#content-davidshq" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/Siegrift"><img src="https://avatars.githubusercontent.com/u/22679154?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Emanuel Tesař</b></sub></a><br /><a href="#content-Siegrift" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/DeFiDude"><img src="https://avatars.githubusercontent.com/u/59237470?v=4?s=100" width="100px;" alt=""/><br /><sub><b>DeFiDude</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ADeFiDude" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 

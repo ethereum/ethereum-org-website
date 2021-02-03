@@ -2697,6 +2697,33 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "davidshq",
+      "name": "Dave Mackey",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8009774?v=4",
+      "profile": "https://davemackey.net/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "Siegrift",
+      "name": "Emanuel Tesař",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22679154?v=4",
+      "profile": "https://github.com/Siegrift",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "DeFiDude",
+      "name": "DeFiDude",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59237470?v=4",
+      "profile": "https://github.com/DeFiDude",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,

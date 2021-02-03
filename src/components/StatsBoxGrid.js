@@ -8,6 +8,8 @@ import Tooltip from "./Tooltip"
 import Link from "./Link"
 import Icon from "./Icon"
 
+import { getData } from "../utils/cache"
+
 const Value = styled.h3`
   font-size: min(4.4vw, 64px);
   font-weight: 600;
@@ -233,8 +235,7 @@ const StatsBoxGrid = () => {
 
       const fetchNodes = async () => {
         try {
-          const response = await axios.get("/.netlify/functions/etherscan")
-          const { data } = response
+          const data = await getData("/.netlify/functions/etherscan")
           const total = data.result.TotalNodeCount
           const value = formatNodes(total)
           setNodes({
@@ -252,8 +253,8 @@ const StatsBoxGrid = () => {
 
       const fetchTotalValueLocked = async () => {
         try {
-          const response = await axios.get("/.netlify/functions/defipulse")
-          const ethereumTVL = response.data.ethereumTVL
+          const data = await getData("/.netlify/functions/defipulse")
+          const ethereumTVL = data.ethereumTVL
           const value = formatTVL(ethereumTVL)
           setValueLocked({
             value,
@@ -268,11 +269,11 @@ const StatsBoxGrid = () => {
       }
       fetchTotalValueLocked()
 
-      const fetchTxnCount = async () => {
+      const fetchTxCount = async () => {
         try {
-          const response = await axios.get("/.netlify/functions/coinmetrics")
-          const { series } = response.data.metricData
-          const count = +series[series.length - 1].values[0]
+          const { result } = await getData("/.netlify/functions/txs")
+          // result: [{UTCDate: string, unixTimeStamp: string, transactionCount: number}, {...}]
+          const count = result[0].transactionCount
           const value = formatTxs(count)
           setTxs({
             value,
@@ -285,7 +286,7 @@ const StatsBoxGrid = () => {
           })
         }
       }
-      fetchTxnCount()
+      fetchTxCount()
     }
   }, [])
 
@@ -302,8 +303,8 @@ const StatsBoxGrid = () => {
       state: ethPrice,
     },
     {
-      apiProvider: "Coin Metrics",
-      apiUrl: "https://coinmetrics.io/",
+      apiProvider: "Etherscan",
+      apiUrl: "https://etherscan.io/",
       title: <Translation id="page-index-network-stats-tx-day-description" />,
       description: (
         <Translation id="page-index-network-stats-tx-day-explainer" />
