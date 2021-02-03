@@ -23,7 +23,7 @@ Like most blockchain developers when they first start, you might have done some 
 ### 1\. Alchemy does not store your private keys {#alchemy-does-not-store-your-private-keys}
 
 - This means that Alchemy cannot sign and send transactions on your behalf. The reason for this is security purposes. Alchemy will never ask you to share your private key, and you should never share your private key with a hosted node (or anyone for that matter).
-- You can read from the blockchain using Alchemy’s core API, but to write to it you’ll need to use something else to sign your transactions before sending them through Alchemy (this is the same for any other [node service](https://ethereum.org/en/developers/docs/nodes-and-clients/nodes-as-a-service/)). 
+- You can read from the blockchain using Alchemy’s core API, but to write to it you’ll need to use something else to sign your transactions before sending them through Alchemy (this is the same for any other [node service](/developers/docs/nodes-and-clients/nodes-as-a-service/)). 
 
 ### 2\. What is a “signer”? {#what-is-a-signer}
 
