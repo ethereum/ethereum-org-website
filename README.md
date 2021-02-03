@@ -812,6 +812,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/DeFiDude"><img src="https://avatars.githubusercontent.com/u/59237470?v=4?s=100" width="100px;" alt=""/><br /><sub><b>DeFiDude</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ADeFiDude" title="Bug reports">🐛</a></td>
     <td align="center"><a href="http://austingriffith.com"><img src="https://avatars.githubusercontent.com/u/2653167?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Austin Griffith</b></sub></a><br /><a href="#content-austintgriffith" title="Content">🖋</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://chasemanning.co.nz"><img src="https://avatars.githubusercontent.com/u/53957795?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Chase Manning</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Achase-manning" title="Bug reports">🐛</a> <a href="#content-chase-manning" title="Content">🖋</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->

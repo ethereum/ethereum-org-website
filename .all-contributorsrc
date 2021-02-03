@@ -2733,6 +2733,16 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "chase-manning",
+      "name": "Chase Manning",
+      "avatar_url": "https://avatars.githubusercontent.com/u/53957795?v=4",
+      "profile": "https://chasemanning.co.nz",
+      "contributions": [
+        "bug",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
