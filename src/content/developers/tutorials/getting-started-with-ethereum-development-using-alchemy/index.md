@@ -1,6 +1,6 @@
 ---
-title: Getting Started with Ethereum Development Using Alchemy
-description: "This is a beginners guide to getting started with Ethereum development using Alchemy, We’ll take you from signing up with Alchemy to making a command line request, to writing your first web3 script! No blockchain development experience necessary!"
+title: Getting Started with Ethereum Development
+description: "This is a beginners guide to getting started with Ethereum development. We’ll take you from spinning up an API endpoint, to making a command line request, to writing your first web3 script! No blockchain development experience necessary!"
 author: "Elan Halpern"
 tags:
   ["getting started", "javascript", "ethers.js", "nodes", "querying", "alchemy"]
@@ -14,7 +14,7 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 ![Ethereum and Alchemy logos](./ethereum-alchemy.png)
 
-This is a beginners guide to getting started with Ethereum development using [Alchemy](https://alchemyapi.io/), the leading blockchain developer platform powering millions of users from 70% of the top blockchain apps, including Maker, 0x, MyEtherWallet, Dharma, and Kyber.
+This is a beginners guide to getting started with Ethereum development. For this tutorial we'll be using [Alchemy](https://alchemyapi.io/), the leading blockchain developer platform powering millions of users from 70% of the top blockchain apps, including Maker, 0x, MyEtherWallet, Dharma, and Kyber. Alchemy will give us access to an API endpoint on the Ethereum chain so we can read and write transactions. 
 
 We’ll take you from signing up with Alchemy to writing your first web3 script! No blockchain development experience necessary!
 
@@ -24,7 +24,7 @@ Creating an account with Alchemy is easy, [sign up for free here](https://dashbo
 
 ## 2\. Create an Alchemy App {#create-an-alchemy-app}
 
-To use Alchemy’s products, you need an API key to authenticate your requests.
+To communicte with the Ethereum chain and to use Alchemy’s products, you need an API key to authenticate your requests.
 
 You can [create API keys from the dashboard](http://dashboard.alchemyapi.io/). To make a new key, navigate to “Create App” as shown below:
 
@@ -145,6 +145,6 @@ The latest block number is 11043912
 
 ‌**Woo! Congrats! You just wrote your first web3 script using Alchemy 🎉**
 
-‌Not sure what to do next? Try deploying your first smart contract and get your hands dirty with some solidity programming in our [_Hello World Smart_](https://docs.alchemyapi.io/tutorials/hello-world-smart-contract) _Contract Guide, or test your dashboard knowledge with the_ [_Dashboard Demo App_](https://docs.alchemyapi.io/tutorials/demo-app)_!_
+‌Not sure what to do next? Try deploying your first smart contract and get your hands dirty with some solidity programming in our [_Hello World Smart Contract Guide](https://docs.alchemyapi.io/tutorials/hello-world-smart-contract), or test your dashboard knowledge with the [_Dashboard Demo App_](https://docs.alchemyapi.io/tutorials/demo-app)!
 
 _[Sign up with Alchemy for free](https://dashboard.alchemyapi.io/signup/), check out our [documentation](https://docs.alchemyapi.io/), and for the latest news, follow us on [Twitter](https://twitter.com/AlchemyPlatform)_.
