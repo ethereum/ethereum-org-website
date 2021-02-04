@@ -816,6 +816,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://chasemanning.co.nz"><img src="https://avatars.githubusercontent.com/u/53957795?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Chase Manning</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Achase-manning" title="Bug reports">🐛</a> <a href="#content-chase-manning" title="Content">🖋</a></td>
     <td align="center"><a href="http://cartesi.io"><img src="https://avatars.githubusercontent.com/u/28073950?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Colin Steil</b></sub></a><br /><a href="#content-colinsteil" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/MonarthS"><img src="https://avatars.githubusercontent.com/u/40236229?v=4?s=100" width="100px;" alt=""/><br /><sub><b>MonarthS</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=MonarthS" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/adamdry"><img src="https://avatars.githubusercontent.com/u/7360709?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Adam Dry</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aadamdry" title="Bug reports">🐛</a> <a href="#content-adamdry" title="Content">🖋</a></td>
   </tr>
 </table>
 
