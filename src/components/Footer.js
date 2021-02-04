@@ -7,7 +7,6 @@ import { getLocaleTimestamp } from "../utils/time"
 import Translation from "./Translation"
 import Link from "./Link"
 import Icon from "./Icon"
-import { Mixins } from "../theme"
 
 const StyledFooter = styled.footer`
   padding-top: 3rem;
@@ -46,12 +45,16 @@ const LinkGrid = styled.div`
 const LinkSection = styled.div``
 
 const SectionHeader = styled.h3`
-  ${Mixins.textLevel8}
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 1.14em 0;
   font-weight: bold;
 `
 
 const List = styled.ul`
-  ${Mixins.textLevel8}
+  font-size: 0.875rem;
+  line-height: 1.6;
+  font-weight: 400;
   margin: 0;
   list-style-type: none;
   list-style-image: none;
