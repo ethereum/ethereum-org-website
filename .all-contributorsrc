@@ -2743,6 +2743,15 @@
         "bug",
         "content"
       ]
+    },
+    {
+      "login": "colinsteil",
+      "name": "Colin Steil",
+      "avatar_url": "https://avatars.githubusercontent.com/u/28073950?v=4",
+      "profile": "http://cartesi.io",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
