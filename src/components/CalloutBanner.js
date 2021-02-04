@@ -63,6 +63,11 @@ const Image = styled(Img)`
   }
 `
 
+const H2 = styled.h2`
+  margin: 0 0 1.5rem;
+  font-size: 1.625rem;
+`
+
 const CalloutBanner = ({
   image,
   maxImageWidth,
@@ -76,7 +81,7 @@ const CalloutBanner = ({
     <StyledCard className={className}>
       <Image fluid={image} alt={alt} maxImageWidth={maxImageWidth} />
       <Content>
-        <h2>{title}</h2>
+        <H2>{title}</H2>
         <Description>{description}</Description>
         {children}
       </Content>
