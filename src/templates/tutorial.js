@@ -26,7 +26,6 @@ import {
   Header2,
   Header3,
   Header4,
-  H5,
   ListItem,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
@@ -135,7 +134,6 @@ const components = {
   h2: H2,
   h3: H3,
   h4: H4,
-  h5: H5,
   p: Paragraph,
   li: ListItem,
   pre: Codeblock,
