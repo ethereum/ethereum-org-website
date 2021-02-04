@@ -93,6 +93,7 @@ const PageTitle = styled.h1`
   font-size: 32px;
   line-height: 140%;
   text-align: center;
+  margin: 0 0 1.625rem;
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     margin: 1rem;
   }

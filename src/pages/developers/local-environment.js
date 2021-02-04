@@ -43,6 +43,7 @@ const Slogan = styled.h1`
   font-size: 32px;
   line-height: 140%;
   text-align: center;
+  margin: 0 0 1.625rem;
 `
 
 // const Subtitle = styled.div`
@@ -94,6 +95,10 @@ const Hero = styled(Img)`
   max-width: 800px;
   background-size: cover;
   background-repeat: no-repeat;
+`
+
+const H2 = styled.h2`
+  margin: 0 0 1.625rem;
 `
 
 // const Header = styled.header`
@@ -403,9 +408,9 @@ const ChooseStackPage = ({ data }) => {
       <Content>
         <TwoColumnContent>
           <Column>
-            <h2>
+            <H2>
               <Translation id="page-local-environment-frameworks-title" />
-            </h2>
+            </H2>
             <p>
               <Translation id="page-local-environment-frameworks-desc" />
             </p>

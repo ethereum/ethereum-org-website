@@ -41,6 +41,7 @@ const H2 = styled.h2`
   line-height: 22px;
   letter-spacing: 0px;
   text-align: left;
+  margin: 0;
 `
 
 const CentreCard = styled(Card)`
