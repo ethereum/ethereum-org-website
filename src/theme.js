@@ -326,8 +326,8 @@ const theme = {
     s: "0.875rem", // 14px
     m: "1rem", // 16px
     r: "1.125rem", // 18px
-    l: "1.5rem", // 20px
-    xl: "2rem", // 24px
+    l: "1.5rem", // 24px
+    xl: "2rem", // 32px
   },
   breakpoints: {
     xs: "320px",
