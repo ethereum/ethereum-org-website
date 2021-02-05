@@ -383,6 +383,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
               onKeyDown={() => handleMenuToggle("search")}
               role="button"
               tabIndex="0"
+              aria-label={translateMessageId("aria-toggle-search-button", intl)}
             >
               <SearchIcon name="search" />
             </NavMobileButton>
@@ -392,6 +393,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
               onKeyDown={() => handleMenuToggle("menu")}
               role="button"
               tabIndex="0"
+              aria-label={translateMessageId("aria-toggle-menu-button", intl)}
             >
               <MenuIcon name="menu" />
             </NavMobileButton>

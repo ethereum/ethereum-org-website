@@ -92,7 +92,7 @@ const NavListItem = styled.li`
 const StyledNavLink = styled(NavLink)`
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
+  margin: 0;
 `
 
 const SectionTitle = styled.div`
@@ -105,7 +105,7 @@ const SectionItems = styled.ul`
 `
 
 const SectionItem = styled.li`
-  margin: 0;
+  margin-bottom: 1rem;
   list-style-type: none;
   list-style-image: none;
   opacity: 0.7;
@@ -244,15 +244,14 @@ const MobileNavMenu = ({
                   <SectionItems>
                     {section.items.map((item, idx) => {
                       return (
-                        <StyledNavLink
-                          to={item.to}
-                          isPartiallyActive={item.isPartiallyActive}
-                          key={idx}
-                        >
-                          <SectionItem onClick={() => toggleMenu()}>
+                        <SectionItem key={idx} onClick={() => toggleMenu()}>
+                          <StyledNavLink
+                            to={item.to}
+                            isPartiallyActive={item.isPartiallyActive}
+                          >
                             <Translation id={item.text} />
-                          </SectionItem>
-                        </StyledNavLink>
+                          </StyledNavLink>
+                        </SectionItem>
                       )
                     })}
                   </SectionItems>
