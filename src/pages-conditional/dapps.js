@@ -1521,16 +1521,14 @@ const DappsPage = ({ data, location }) => {
         </Box>
         <FeaturesContainer>
           <CardContainer>
-            {features.map((card, idx) => {
-              return (
-                <StyledCard
-                  key={idx}
-                  emoji={card.emoji}
-                  title={card.title}
-                  description={card.description}
-                />
-              )
-            })}
+            {features.map((card, idx) => (
+              <StyledCard
+                key={idx}
+                emoji={card.emoji}
+                title={card.title}
+                description={card.description}
+              />
+            ))}
           </CardContainer>
         </FeaturesContainer>
         <Row>
