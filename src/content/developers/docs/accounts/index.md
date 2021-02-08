@@ -45,7 +45,7 @@ Ethereum accounts have four fields:
 - `balance` – the number of Wei owned by this address. Wei is a denomination of ETH and there are 1e+18 Wei per ETH.
 - `codeHash` – All such code fragments are contained in the state database under their corresponding hashes for later retrieval. For contract accounts, this is the code that gets hashed and stored as the codeHash. For externally owned accounts, the codeHash field is the hash of the empty string.
 <!--this hash refers to the code of this account on the Ethereum virtual machine (EVM). This EVM code gets executed if the account gets a message call. It cannot be changed unlike the other account fields.  -->
-- `storageRoot` – Sometimes known as a storage hash. A 256-bit hash of the root node of a Merkle Patricia tree that encodes the storage contents of the account (a mapping between 256-bit integer values), encoded into the trie as a mapping from the Keccak 256-bit hash of the 256-bit integer keys to the RLP-encoded 256-bit integer values. This tree encodes the hash of the storage contents of this account, and is empty by default.
+- `storageRoot` – Sometimes known as a storage hash. A 256-bit hash of the root node of a Merkle Patricia tree that encodes the storage contents of the account (a mapping between 256-bit integer values), encoded into the tree as a mapping from the Keccak 256-bit hash of the 256-bit integer keys to the RLP-encoded 256-bit integer values. This tree encodes the hash of the storage contents of this account, and is empty by default.
 
 ![A diagram showing the make up of an account](./accounts.png)
 _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
