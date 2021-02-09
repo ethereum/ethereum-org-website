@@ -75,7 +75,7 @@ sidebarDepth: 1
 
 ### Інструменти {#tooling}
 
-- [Alethio](https://aleth.io/) _— платформа для аналізу даних Ethereum_
+- [Alethio](https://github.com/ethereum/aleth/) _— платформа для аналізу даних Ethereum_
 - [Treum](https://treum.io/) _забезпечує прозорість, можливості відстеження та реалізації ланцюгів поставок з використанням технології блокчейну_
 - [Truffle Suite](https://trufflesuite.com) _— набір для розробки блокчейну (Truffle, Ganache, Drizzle)_
 

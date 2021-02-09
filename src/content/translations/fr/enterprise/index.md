@@ -74,7 +74,7 @@ Les réseaux Ethereum publics et privés peuvent avoir besoin de fonctionnalité
 
 ### Outils {#tooling}
 
-- [Alethio](https://aleth.io/) _Plateforme d'analyse de données Ethereum_
+- [Alethio](https://github.com/ethereum/aleth/) _Plateforme d'analyse de données Ethereum_
 - [Treum](https://treum.io/) _apporte de la transparence, de la traçabilité et de la négociabilité aux chaînes logistiques, en utilisant la technologie blockchain_
 - [Truffle Suite](https://trufflesuite.com) _suite de développement blockchain (Truffle, Ganache, Drizzle)_
 

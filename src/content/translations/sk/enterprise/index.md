@@ -74,7 +74,7 @@ Verejné a súkromné ​​siete Etherea môžu potrebovať špecifické vlastn
 
 ### Nástroje {#tooling}
 
-- [Alethio](https://aleth.io/) _platforma na analýzu údajov Etherea_
+- [Alethio](https://github.com/ethereum/aleth/) _platforma na analýzu údajov Etherea_
 - [Treum](https://treum.io/) _prináša transparentnosť, sledovateľnosť a obchodovateľnosť pre dodávateľské reťazce pomocou technológie blockchain_
 - [Truffle Suite](https://trufflesuite.com) _balík vývojárskych nástrojov pre blockchain (Truffle, Ganache, Drizzle)_
 

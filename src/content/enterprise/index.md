@@ -36,7 +36,7 @@ Enterprises have been experimenting with blockchain technology since around 2016
 
 Another development which is shifting the focus toward public blockchains is [Layer 2](/developers/docs/layer-2-scaling/). Layer 2 is primarily a scalability technology category which makes high throughput applications possible on public chains. But Layer 2 solutions can also [address some of the other challenges that have driven enterprise developers to choose private chains in the past](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/).
 
-The Baseline Protocol is one key project which is defining a protocol that enables confidential and complex collaboration between enterprises without leaving any sensitive data on-chain. It has gained significant [momentum](https://www.oasis-open.org/news/pr/baseline-protocol-achieves-key-milestone-with-release-of-v0-1-implementation-for-enterprise-) throughout 2020.
+The Baseline Protocol is one key project which is defining a protocol that enables confidential and complex collaboration between enterprises without leaving any sensitive data on-chain. It has gained significant [momentum](https://www.oasis-open.org/2020/08/26/baseline-protocol-achieves-key-milestone-with-release-of-v0-1-implementation-for-enterprise/) throughout 2020.
 
 ## Enterprise developer resources {#enterprise-developer-resources}
 
@@ -66,7 +66,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 
 ### Tooling and libraries {#tooling-and-libraries}
 
-- [Alethio](https://aleth.io/) _Ethereum Data Analytics Platform_
+- [Aleth](https://github.com/ethereum/aleth) _Ethereum Data Analytics Platform_
 - [Epirus](https://www.web3labs.com/epirus) _a platform for developing, deploying and monitoring blockchain applications by Web3 Labs_
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _a toolkit for private transactions_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _a transaction signing application to be used with a web3 provider_
@@ -106,7 +106,7 @@ Examples of L2 solutions that are production ready or will be soon include:
   - [Skale](https://skale.network)
   - [POA Network](https://www.poa.network/)
 - Hybrid solutions that combine properties of multiple categories
-  - [Offchain Labs Arbitrum SCSC](https://https://offchainlabs.com/arbitrum.pdf)
+  - [Offchain Labs Arbitrum SCSC](https://offchainlabs.com/arbitrum.pdf)
   - [Celer](https://celer.network)
 
 ## Enterprise applications live on mainnet {#enterprise-live-on-mainnet}
@@ -122,7 +122,7 @@ Here are some of the enterprise applications that have been deployed to the publ
 ### Finance {#finance}
 
 - [Santander Bank](https://www.coindesk.com/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum) _bond issuance and settlement_
-- [Societe Generale](https://www.societegenerale.com/en/newsroom-first-financial-transaction-settled-with-a-digital-currency) _bond issuance_
+- [Societe Generale](https://www.societegenerale.com/en/news/newsroom/societe-generale-performs-first-financial-transaction-settled-central-bank-digital) _bond issuance_
 - [Cadence](https://www.forbes.com/sites/benjaminpirus/2019/10/09/fatburger-and-others-feed-30-million-into-ethereum-for-new-bond-offering/#513870be115b) _bond offering and tokenization for FAT Brands_
 - [Sila](https://silamoney.com/) _banking and ACH payments infrastructure-as-a-service_
 - [Tinlake](https://tinlake.centrifuge.io/) _receivables financing via tokenized real-world assets such as invoices, mortgages or streaming royalties_

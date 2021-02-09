@@ -75,7 +75,7 @@ sidebarDepth: 1
 
 ### 툴링 {#tooling}
 
-- [Alethio](https://aleth.io/) _이더리움 데이터 분석 플랫폼_
+- [Alethio](https://github.com/ethereum/aleth/) _이더리움 데이터 분석 플랫폼_
 - [Treum](https://treum.io/) _블록체인 기술을 사용하여 공급망에 투명성, 추적성, 거래성 제공_
 - [Truffle Suite](https://trufflesuite.com) _블록체인 개발 제품군(Truffle, Ganache, Drizzle)_
 

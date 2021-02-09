@@ -75,7 +75,7 @@ Viešiesiems ir privatiems Ethereum tinklams gali prireikti specifinių savybių
 
 ### Įrankinė {#tooling}
 
-- [Alethio](https://aleth.io/) _Ethereum duomenų analizės platforma_
+- [Alethio](https://github.com/ethereum/aleth/) _Ethereum duomenų analizės platforma_
 - [Treum](https://treum.io/) _naudojant blokų grandinės technologiją, tiekimo grandinėms suteikiamas skaidrumas, atsekamumas ir galimybė prekiauti _
 - [Truffle Suite](https://trufflesuite.com) _blokų grandinės kūrimo rinkinys (Truffle, Ganache, Drizzle)_
 
