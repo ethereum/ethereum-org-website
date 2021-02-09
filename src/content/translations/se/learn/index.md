@@ -20,7 +20,7 @@ Dessutom finns det många gemenskapsbyggda resurser som är värda att utforska:
 
 - [EthHub](https://docs.ethhub.io) _Omfattande kunskapsbas om allt som rör Ethereum_
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _En utbildningsresurs om Ethereum som riktar sig mot nybörjare_
-- [Ethereum.wiki](https://ethereum.wiki) _En gemenskapsbyggd wiki om Ethereums teknologi_
+- [Ethereum.wiki](https://eth.wiki) _En gemenskapsbyggd wiki om Ethereums teknologi_
 - [Kauri](https://kauri.io) _Tekniska artiklar och handledningar för Ethereum och närliggande projekt_
 - [Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Videor och presentationer om Ethereum_
 - [Week in Ethereum News](https://weekinethereumnews.com/) _Ett veckovis nyhetsbrev angående viktiga utvecklingar vad gäller ekosystemet_

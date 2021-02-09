@@ -20,7 +20,7 @@ Okrem informácií uvedených na tejto stránke existuje množstvo zaujímavých
 
 - [EthHub](https://docs.ethhub.io) _Rozsiahly zdroj informácií o Ethereu_
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _Vzdelávacia stránka o Ethereu pre začiatočníkov_
-- [Ethereum.wiki](https://ethereum.wiki) _Komunitou zostavovaná stránka typu Wikipédie o technológii Etherea _
+- [Ethereum.wiki](https://eth.wiki) _Komunitou zostavovaná stránka typu Wikipédie o technológii Etherea _
 - [Kauri](https://kauri.io) _Technické články a návody pre Ethereum a súvisiace projekty_
 - [Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Videá, prednášky a rozhovory o Ethereu_
 - [Week in Ethereum News](https://weekinethereumnews.com/) _Týždenný newsletter o kľúčových novinkách vo vývoji Etherea_

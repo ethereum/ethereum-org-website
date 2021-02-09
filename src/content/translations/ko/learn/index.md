@@ -21,7 +21,7 @@ sidebarDepth: 1
 
 - [EthHub](https://docs.ethhub.io) _이더리움에 대한 종합적인 기본 지식을 습득할 수 있는 사이트_
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _이더리움 입문자 교육용 참조 자료 제공_
-- [Ethereum.wiki](https://ethereum.wiki) _이더리움 기술에 대한 커뮤니티 기반 위키_
+- [Ethereum.wiki](https://eth.wiki) _이더리움 기술에 대한 커뮤니티 기반 위키_
 - [Kauri](https://kauri.io) _이더리움과 관련 프로젝트에 대한 기술적 자료와 튜토리얼 제공_
 - [Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _이더리움에 대한 영상 자료 제공_
 - [Week in Ethereum News](https://weekinethereumnews.com/) _이더리움 생태계의 주요 발전 사항을 전해주는 주간 뉴스레터 서비스 제공_

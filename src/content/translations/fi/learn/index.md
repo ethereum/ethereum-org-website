@@ -21,7 +21,7 @@ Tämän sivun lisäksi saatavilla on useita yhteisön luomia resursseja, jotka o
 
 - [EthHub](https://docs.ethhub.io) _Kattava tietämyskanta kaikista Ethereumin asioista_
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _Aloittelijoille suunnattu opettavainen resurssi Ethereumista_
-- [Ethereum.wiki](https://ethereum.wiki) _Yhteisön luoma wiki Ethereumin teknologiasta_
+- [Ethereum.wiki](https://eth.wiki) _Yhteisön luoma wiki Ethereumin teknologiasta_
 - [Kauri](https://kauri.io) _Teknillisiä artikkeleja ja oppaita Ethereumiin ja siihen liittyviin projekteihin_
 - [Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Videoita ja esityksiä Ethereumista_
 - [Week in Ethereum News](https://weekinethereumnews.com/) _Viikottainen uutiskirje, joka käsittelee ekosysteemin avainkehityksiä_

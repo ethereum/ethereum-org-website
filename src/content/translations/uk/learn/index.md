@@ -21,7 +21,7 @@ sidebarDepth: 1
 
 - [EthHub](https://docs.ethhub.io) _База знань з усіх питань, що стосуються Ethereum_
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _Навчальний ресурс з Ethereum, орієнтований на початківців_
-- [Ethereum.wiki](https://ethereum.wiki) _Створена спільнотою вікі-сторінка про технології Ethereum_
+- [Ethereum.wiki](https://eth.wiki) _Створена спільнотою вікі-сторінка про технології Ethereum_
 - [Kauri](https://kauri.io) _Технічні статті та навчальні посібники з Ethereum і пов'язані проекти_
 - [Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Відеоматеріали та дискусії про Ethereum_
 - [Щотижневі новини Ethereum](https://weekinethereumnews.com/) _Щотижневий інформаційний бюлетень, що висвітлює ключові події в екосистемі_

@@ -22,7 +22,7 @@ sidebar: true
 - [EthHub](https://docs.ethhub.io) _دانستنی‌های جامع پایه درباره اتریوم_
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/)
   _یک منبع آموزشی اتریوم برای مبتدیان_
-- [Ethereum.wiki](https://ethereum.wiki) _یک ویکی فناوری اتریوم ساخته شده توسط جامعه اتریوم_
+- [Ethereum.wiki](https://eth.wiki) _یک ویکی فناوری اتریوم ساخته شده توسط جامعه اتریوم_
 - [Kauri](https://kauri.io) _مقاله‌های آموزشی و فنی اتریوم و پروژه‌های مربوطه_
 - [Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g)
   _گفتگو‌ها و ویدیو‌ها درباره اتریوم_
