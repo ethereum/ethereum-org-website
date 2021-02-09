@@ -2781,6 +2781,16 @@
         "bug",
         "content"
       ]
+    },
+    {
+      "login": "okdonga",
+      "name": "Katie ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12257412?v=4",
+      "profile": "https://github.com/okdonga",
+      "contributions": [
+        "bug",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
