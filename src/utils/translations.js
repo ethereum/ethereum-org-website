@@ -1,3 +1,5 @@
+const { consoleError } = require("./log")
+
 const defaultStrings = require("../intl/en.json")
 const languageMetadata = require("../data/translations.json")
 
@@ -8,12 +10,12 @@ const supportedLanguages = Object.keys(languageMetadata)
 const getLangContentVersion = (lang) => {
   const metadata = languageMetadata[lang]
   if (!metadata) {
-    console.error(`No metadata found for language: ${lang}`)
+    consoleError(`No metadata found for language: ${lang}`)
     return
   }
   const version = metadata.version
   if (!version) {
-    console.error(`No version found for language: ${lang}`)
+    consoleError(`No version found for language: ${lang}`)
     return
   }
   return version
@@ -23,7 +25,7 @@ const getLangContentVersion = (lang) => {
 const getDefaultMessage = (key) => {
   const defaultMessage = defaultStrings[key]
   if (defaultMessage === undefined) {
-    console.error(
+    consoleError(
       `No key "${key}" in en.json. Cannot provide a default message.`
     )
   }
@@ -36,11 +38,11 @@ const isLangRightToLeft = (lang) => {
 
 const translateMessageId = (id, intl) => {
   if (!id) {
-    console.error(`No id provided for translation.`)
+    consoleError(`No id provided for translation.`)
     return ""
   }
   if (!intl || !intl.formatMessage) {
-    console.error(`Invalid/no intl provided for translation id ${id}`)
+    consoleError(`Invalid/no intl provided for translation id ${id}`)
     return ""
   }
   const translation = intl.formatMessage({
@@ -48,7 +50,7 @@ const translateMessageId = (id, intl) => {
     defaultMessage: getDefaultMessage(id),
   })
   if (translation === id) {
-    console.error(
+    consoleError(
       `Intl ID string "${id}" has no match. Default message of "" returned.`
     )
     return ""
