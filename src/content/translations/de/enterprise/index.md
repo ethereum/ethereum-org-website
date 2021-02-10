@@ -74,7 +74,7 @@ Folgende Projekte bieten Blockchain-Dienstleistungen für Enterprise-Grade-Syste
 
 ### Werkzeuge {#tooling}
 
-- [Alethio](https://github.com/ethereum/aleth/) _Ethereum Data Analytics Plattform_
+- [Alethio](https://aleth.io/) _Ethereum Data Analytics Plattform_
 - [Treum](https://treum.io/) _bringt Transparenz, Rückverfolgbarkeit und Handelbarkeit in Lieferketten mit Hilfe der Blockchain-Technologie_
 - [Truffle Suite](https://trufflesuite.com) _Blockchain Development Suite (Truffle, Ganache, Drizzle)_
 

@@ -66,7 +66,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 
 ### Tooling and libraries {#tooling-and-libraries}
 
-- [Aleth](https://github.com/ethereum/aleth) _Ethereum Data Analytics Platform_
+- [Alethio](https://aleth.io/) _Ethereum Data Analytics Platform_
 - [Epirus](https://www.web3labs.com/epirus) _a platform for developing, deploying and monitoring blockchain applications by Web3 Labs_
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _a toolkit for private transactions_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _a transaction signing application to be used with a web3 provider_

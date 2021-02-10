@@ -75,7 +75,7 @@ Veřejné a soukromé Ethereum sítě mohou v závislosti na tom, kdo je použí
 
 ### Nástroje {#tooling}
 
-- [Alethio](https://github.com/ethereum/aleth/) _Datově analytická platforma pro Ethereum_
+- [Alethio](https://aleth.io/) _Datově analytická platforma pro Ethereum_
 - [Treum](https://treum.io/) _pomocí technologie blockchainu přináší transparentnost, dohledatelnost a obchodovatelnost dodavatelským řetězcům_
 - [Truffle Suite](https://trufflesuite.com) _sada nástrojů pro blockchainový vývoj (Truffle, Ganache, Drizzle)_
 

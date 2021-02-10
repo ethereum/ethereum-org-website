@@ -76,7 +76,7 @@ Genel ve özel Ethereum ağları, ağ katılımcıları tarafından istenen öze
 
 ### İşleme {#tooling}
 
-- [Alethio](https://github.com/ethereum/aleth/) _Ethereum Veri Analizi Platformu_
+- [Alethio](https://aleth.io/) _Ethereum Veri Analizi Platformu_
 - [Treum](https://treum.io/) _blockchain teknolojisini kullanarak, zincirlere tedarikte şeffaflık, izlenebilirlik ve işlemlenebilirlik sağlamak_
 - [Truffle Suite](https://trufflesuite.com) _blockchain geliştirme paketi (Truffle, Ganache, Drizzle)_
 

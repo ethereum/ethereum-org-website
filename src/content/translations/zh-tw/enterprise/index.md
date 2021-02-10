@@ -75,7 +75,7 @@ sidebar: true
 
 ### 模組化 {#tooling}
 
-- [Alathio](https://github.com/ethereum/aleth/) _以太坊數據分析平台_
+- [Alathio](https://aleth.io/) _以太坊數據分析平台_
 - [Treum](https://treum.io/) _使用區塊鏈技術為供應鏈帶來透明度、可追溯性和可交易性_
 - [Truffle Suite](https://trufflesuite.com) _區塊鏈開發套件（Truffle、Ganache、Drizzle）_
 
