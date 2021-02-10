@@ -161,8 +161,9 @@ There are two types of channels right now:
 #### Use State channels {#use-state-channels}
 
 - [Connext](https://connext.network/)
-- [Raiden](https://raiden.network/)
+- [Kchannels](https://www.kchannels.io/)
 - [Perun](https://perun.network/)
+- [Raiden](https://raiden.network/)
 - [Statechannels.org](https://statechannels.org/)
 
 ## Plasma {#plasma}

@@ -100,8 +100,9 @@ Examples of L2 solutions that are production ready or will be soon include:
   - [LeapDAO](https://ipfs.leapdao.org/)
 - State channels
   - [Connext](https://connext.network/)
-  - [Raiden](https://raiden.network/)
+  - [Kchannels](https://www.kchannels.io/)
   - [Perun](https://perun.network)
+  - [Raiden](https://raiden.network/)
 - Sidechains
   - [Skale](https://skale.network)
   - [POA Network](https://www.poa.network/)
