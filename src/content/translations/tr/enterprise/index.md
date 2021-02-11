@@ -30,8 +30,7 @@ Daha ayrıntılı bilgi için, bazı ilgili makaleler:
 
 Ethereum şirketini dostane kılmak için bazı işbirlikçi çabalar farklı organizasyonlar tarafından bir araya getirildi:
 
--
-Enterprise Ethereum Alliance, dünya çapında işletmeler ve tüketiciler için uyum ve birlikte çalışabilirlik sağlayan açık, blok zinciri spesifikasyonları geliştirmek isteyen üye odaklı bir standartlar organizasyonudur. Küresel üye topluluğumuz, herkesin yararına açık, merkezi olmayan bir web oluşturmak için işbirliği yapan liderlerden, evlat edinicilerden, yenilikçilerden, geliştiricilerden ve işlerden oluşmaktadır.
+- Enterprise Ethereum Alliance, dünya çapında işletmeler ve tüketiciler için uyum ve birlikte çalışabilirlik sağlayan açık, blok zinciri spesifikasyonları geliştirmek isteyen üye odaklı bir standartlar organizasyonudur. Küresel üye topluluğumuz, herkesin yararına açık, merkezi olmayan bir web oluşturmak için işbirliği yapan liderlerden, evlat edinicilerden, yenilikçilerden, geliştiricilerden ve işlerden oluşmaktadır.
 
 - [Hyperledger Vakfı](https://hyperledger.org) _Hyperledger, sektörler arası blok zinciri teknolojilerini geliştirmek için yaratılan açık kaynaklı bir işbirliği çabasıdır. Finans, bankacılık, Nesnelerin İnterneti, tedarik zincirleri, üretim ve Teknoloji alanlarında liderler de dahil olmak üzere Linux Vakfı tarafından barındırılan küresel bir işbirliğidir._
 - [Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu)

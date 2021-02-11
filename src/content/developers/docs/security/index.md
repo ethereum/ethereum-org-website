@@ -35,7 +35,7 @@ At a minimum:
 - Solidity does not emit ANY compiler warnings
 - Your code is well-documented
 
-There is much more to be said for development process, but these items are a good place to start. For more items and detailed explanations, see the [process quality checklist provided by DeFiSafety](https://docs.defisafety.com/audit-process-documentation/process-quality-audit-process). [DefiSafety](https://defisafety.com/) is an unofficial public service publishing reviews of various large, public Ethereum dApps. Part of the DeFiSafety rating system includes how well the project adheres to this process quality checklist. By following these processes:
+There is much more to be said for development process, but these items are a good place to start. For more items and detailed explanations, see the [process quality checklist provided by DeFiSafety](https://docs.defisafety.com/review-process-documentation/process-quality-audit-process). [DefiSafety](https://defisafety.com/) is an unofficial public service publishing reviews of various large, public Ethereum dApps. Part of the DeFiSafety rating system includes how well the project adheres to this process quality checklist. By following these processes:
 
 - You will produce more secure code, via reproducible, automated tests
 - Auditors will be able to review your project more effectively
@@ -235,7 +235,7 @@ While there is no substitute for understanding Ethereum security basics and enga
 **MythX -** **_Security analysis API for Ethereum smart contracts._**
 
 - [mythx.io](https://mythx.io/)
-- [Documentation](https://docs.mythx.io/en/latest/)
+- [Documentation](https://docs.mythx.io/)
 
 **Mythril -** **_Security analysis tool for EVM bytecode._**
 

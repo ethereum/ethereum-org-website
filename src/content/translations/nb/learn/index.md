@@ -20,7 +20,7 @@ I tillegg til informasjonen på denne siden er det mange samfunnsutviklede ressu
 
 - [EthHub](https://docs.ethhub.io) _Omfattende kunnskapsbase for alle ting Ethereum_
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _En pedagogisk ressurs om Ethereum rettet mot nybegynnere_
-- [Ethereum.wiki](https://ethereum.wiki) _En samfunnsbygget wiki om Ethereums teknologi _
+- [Ethereum.wiki](https://eth.wiki) _En samfunnsbygget wiki om Ethereums teknologi _
 - [Kauri](https://kauri.io) _Tekniske artikler og opplæringsprogrammer for Ethereum og relaterte prosjekter _
 - [Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Videoer og samtaler om Ethereum _
 - [Week in Ethereum News](https://weekinethereumnews.com/) _ukentlig nyhetsbrev som dekker viktige utviklinger i økosystemet _

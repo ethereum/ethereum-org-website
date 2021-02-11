@@ -21,7 +21,7 @@ Be šiame puslapyje pateikiamos informacijos yra kitų bendruomenės sukurtų i�
 
 - [EthHub](https://docs.ethhub.io) _Išsami Ethereum žinių bazė_
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _Mokomasis išteklius apie Ethereum, skirtas pradedantiesiems_
-- [Ethereum.wiki](https://ethereum.wiki) _Bendruomenės sukurtas vikis apie Ethereum technologiją_
+- [Ethereum.wiki](https://eth.wiki) _Bendruomenės sukurtas vikis apie Ethereum technologiją_
 - [Kauri](https://kauri.io) _Techniniai straipsniai ir mokymo programos Ethereum ir susijusiems projektams_
 - [Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Vaizdo įrašai ir paskaitos apie Ethereum_
 - [Week in Ethereum News](https://weekinethereumnews.com/) _Savaitinis informacinis biuletenis, apimantis pagrindinius ekosistemos pokyčius_

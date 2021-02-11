@@ -21,7 +21,7 @@ Ngoài thông tin trên trang này, còn có nhiều tài nguyên do cộng đ�
 
 - [EthHub](https://docs.ethhub.io) _Cơ sở kiến thức toàn diện cho tất cả mọi thứ Ethereum_
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _Tài nguyên giáo dục về Ethereum nhằm vào người mới bắt đầu_
-- [Ethereum.wiki](https://ethereum.wiki) _Một wiki xây dựng cộng đồng về công nghệ Ethereum_
+- [Ethereum.wiki](https://eth.wiki) _Một wiki xây dựng cộng đồng về công nghệ Ethereum_
 - [Kauri](https://kauri.io) _Các bài viết và hướng dẫn kỹ thuật cho Ethereum và các dự án liên quan_
 - [Video trên YouTube về Nền tảng Ethereum](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _và thảo luận về Ethereum_
 - [Tin tức về Ethereum trong tuần](https://weekinethereumnews.com/) _Một bản tin hằng tuần bao gồm các phát triển quan trọng trong hệ sinh thái_

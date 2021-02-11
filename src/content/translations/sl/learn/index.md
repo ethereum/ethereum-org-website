@@ -18,7 +18,7 @@ Poleg informacij na tej strani je še veliko virov, ki jih je pripravila skupnos
 
 - [EthHub](https://docs.ethhub.io) _Celovita zbirka znanja o vsem, kar je povezano z Ethereumom_
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _Poučen vir za tiste, ki šele spoznavajo Ethereum_
-- [Ethereum.wiki](https://ethereum.wiki) _Zbirka znanja o tehnologiji Ethereum, ki jo ustvarja skupnost_
+- [Ethereum.wiki](https://eth.wiki) _Zbirka znanja o tehnologiji Ethereum, ki jo ustvarja skupnost_
 - [Kauri](https://kauri.io) _Tehnični članki in vodiči za Ethereum in sorodne projekte_
 - [Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Videoposnetki in predavanja o Ethereumu_
 - [Week in Ethereum News](https://weekinethereumnews.com/) _Tedenski novičnik, ki pokriva ključne dogodke v ekosistemu Ethereum_

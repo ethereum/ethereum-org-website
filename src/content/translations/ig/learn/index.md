@@ -18,7 +18,7 @@ Na mgbakwunye na ozi dị na peeji a, enwere ọtụtụ ihe enyere obodo aka kw
 
 - [EthHub](https://docs.ethhub.io) _Ihe omuma zuru oke dabere maka ihe niile Ethereum_
 - [Mpaghara0x](https://education.district0x.io/general-topics/understanding-ethereum/) _Ihe eji eme nkuzi banyere Ethereum ezubere maka ndị na ebido ebido_
-- [Ethereum.wiki](https://ethereum.wiki) _Obodo wiki wuru banyere teknụzụ Ethereum_
+- [Ethereum.wiki](https://eth.wiki) _Obodo wiki wuru banyere teknụzụ Ethereum_
 - [Kauri](https://kauri.io) _Ederede nka na ụzụ na nkuzi maka Ethereum na arụmaoru metụtara ya_
 - [Mmepe Ethereum na YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Vidio na okwu banyere Ethereum_
 - [Izu uka na Akụkọ uwa Ethereum ](https://weekinethereumnews.com/)_Akwụkwọ akụkọ uwa izu nke na-ekpuchi mmepe di mkpa gafere ihe di ndu n' ebe obibi_

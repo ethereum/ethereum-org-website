@@ -20,7 +20,7 @@ sidebar: true
 
 - [ EthHub ](https://docs.ethhub.io) _ Ethereum എല്ലാത്തിനും വേണ്ടിയുള്ള സമഗ്രമായ നോളഡ്ജ് ബേസ് _
 - [ District0x ](https://education.district0x.io/general-topics/understanding-ethereum/) തുടക്കക്കാരെ ലക്ഷ്യമാക്കി Ethereum നെക്കുറിച്ചുള്ള ഒരു വിദ്യാഭ്യാസ ഉറവിടം
-- [ Ethereum.wiki ](https://ethereum.wiki) _ Ethereum- ന്റെ സാങ്കേതികവിദ്യയെക്കുറിച്ച് കമ്മ്യൂണിറ്റി നിർമ്മിച്ച ഒരു വിക്കി _
+- [ Ethereum.wiki ](https://eth.wiki) _ Ethereum- ന്റെ സാങ്കേതികവിദ്യയെക്കുറിച്ച് കമ്മ്യൂണിറ്റി നിർമ്മിച്ച ഒരു വിക്കി _
 - [Kauri](https://kauri.io) _ Ethereum-നും അനുബന്ധ പ്രോജക്റ്റുകൾക്കുമായുള്ള സാങ്കേതിക ലേഖനങ്ങളും ട്യൂട്ടോറിയലുകളും _
 - [ Ethereum Foundation YouTube ](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _ വീഡിയോകളും Ethereum-നെ കുറിച്ചുള്ള സംസാരവും _
 - [ Ethereum വാർത്തയിലെ ആഴ്ച ](https://weekinethereumnews.com/) ആവാസവ്യവസ്ഥയിലുടനീളമുള്ള പ്രധാന സംഭവവികാസങ്ങൾ ഉൾക്കൊള്ളുന്ന പ്രതിവാര വാർത്താക്കുറിപ്പ്
