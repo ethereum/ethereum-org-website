@@ -75,7 +75,7 @@ sidebar: true
 
 ### টুলিং {#tooling}
 
-- [Alethio](https://aleth.io/) _ইথেরিয়াম ডেটা অ্যানালিটিক্স প্ল্যাটফর্ম_
+- [Alethio](https://explorer.aleth.io/) _ইথেরিয়াম ডেটা অ্যানালিটিক্স প্ল্যাটফর্ম_
 - [Treum](https://treum.io/) _ব্লকচেইন প্রযুক্তি ব্যবহার করে সাপ্লাই চেইনের ক্ষেত্রে স্বচ্ছতা, ট্রেসেবিলিটি এবং ব্যবসায়যোগ্যতা নিয়ে আসে_
 - [Truffle Suite](https://trufflesuite.com) _ব্লকচেইন ডেভেলপমেন্ট সুইট (Truffle, Ganache, Drizzle)_
 

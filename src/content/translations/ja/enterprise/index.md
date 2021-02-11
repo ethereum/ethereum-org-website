@@ -75,7 +75,7 @@ sidebarDepth: 1
 
 ### ツール {#tooling}
 
-- [Alethio](https://aleth.io/) _イーサリアムデータ分析プラットフォーム_
+- [Alethio](https://explorer.aleth.io/) _イーサリアムデータ分析プラットフォーム_
 - [Treum](https://treum.io/) _ブロックチェーン技術を利用して、サプライチェーンに透明性、トレーサビリティ、トレーダビリティをもたらします。_
 - [Truffle Suite](https://trufflesuite.com) _ブロックチェーン開発スイート (Truffle, Ganache, Drizzle)_
 

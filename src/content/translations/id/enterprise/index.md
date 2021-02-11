@@ -74,7 +74,7 @@ Jaringan Ethereum publik dan privat dapat memerlukan fitur spesifik yang perlu d
 
 ### Peralatan {#tooling}
 
-- [Alethio](https://aleth.io/) _Platform Analisis Data Ethereum_
+- [Alethio](https://explorer.aleth.io/) _Platform Analisis Data Ethereum_
 - [Treum](https://treum.io/) _membawa transparansi, kemampuan pelacakan, dan intergrasi supply chain menggunakan teknologi blockchain_
 - [Truffle Suite](https://trufflesuite.com) _blockchain development suite (Truffle, Ganache, Drizzle)_
 
