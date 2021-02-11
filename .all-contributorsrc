@@ -2791,6 +2791,15 @@
         "bug",
         "content"
       ]
+    },
+    {
+      "login": "comeToThinkOfEth",
+      "name": "comeToThinkOfEth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/78873209?v=4",
+      "profile": "https://github.com/comeToThinkOfEth",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
