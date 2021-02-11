@@ -468,7 +468,7 @@ const HomePage = ({ data }) => {
         "page-index-tout-community-description",
         intl
       ),
-      to: "/enterprise/",
+      to: "/community/",
     },
   ]
 
