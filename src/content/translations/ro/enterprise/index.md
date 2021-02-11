@@ -74,7 +74,7 @@ Rețelele publice și private Ethereum pot necesita funcționalități specifice
 
 ### Instrumente {#tooling}
 
-- [Alethio](https://aleth.io/) _Platformă pentru analiza datelor Ethereum_
+- [Alethio](https://explorer.aleth.io/) _Platformă pentru analiza datelor Ethereum_
 - [Treum](https://treum.io/) _Aduce transparență, trasabilitate și transferabilitate în lanțurile de aprovizionare, prin intermediul tehnologiei blockchain_
 - [Truffle Suite](https://trufflesuite.com) _Suită de dezvoltare blockchain (Truffle, Ganache, Drizzle)_
 

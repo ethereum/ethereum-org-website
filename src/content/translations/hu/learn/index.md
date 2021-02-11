@@ -21,7 +21,7 @@ Ezen az oldalon található információk mellett számos, közösség által k�
 
 - [EthHub](https://docs.ethhub.io) _Átfogó tudásbázis mindenről, ami Ethereum_
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _Egy oktató jellegű anyag Ethereumról kezdőknek_
-- [Ethereum.wiki](https://ethereum.wiki) _Egy közösség által épített wiki az Ethereum technológiájáról_
+- [Ethereum.wiki](https://eth.wiki) _Egy közösség által épített wiki az Ethereum technológiájáról_
 - [Kauri](https://kauri.io) _Technikai cikkek és útmutatók Ethereumról és kapcsolódó projektekről_
 - [Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Videók és beszélgetések Ethereumról_
 - [Week in Ethereum News](https://weekinethereumnews.com/) _Egy heti rendszerességű hírlevél, mely összefoglalja a legfontosabb fejlesztéseket az ökoszisztémán keresztül_

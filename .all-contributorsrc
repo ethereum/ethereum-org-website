@@ -2724,6 +2724,82 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "austintgriffith",
+      "name": "Austin Griffith",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2653167?v=4",
+      "profile": "http://austingriffith.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "chase-manning",
+      "name": "Chase Manning",
+      "avatar_url": "https://avatars.githubusercontent.com/u/53957795?v=4",
+      "profile": "https://chasemanning.co.nz",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "colinsteil",
+      "name": "Colin Steil",
+      "avatar_url": "https://avatars.githubusercontent.com/u/28073950?v=4",
+      "profile": "http://cartesi.io",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "MonarthS",
+      "name": "MonarthS",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40236229?v=4",
+      "profile": "https://github.com/MonarthS",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "adamdry",
+      "name": "Adam Dry",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7360709?v=4",
+      "profile": "https://github.com/adamdry",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "seishun",
+      "name": "Nikolai Vavilov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/988441?v=4",
+      "profile": "https://github.com/seishun",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "okdonga",
+      "name": "Katie ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12257412?v=4",
+      "profile": "https://github.com/okdonga",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "comeToThinkOfEth",
+      "name": "comeToThinkOfEth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/78873209?v=4",
+      "profile": "https://github.com/comeToThinkOfEth",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,

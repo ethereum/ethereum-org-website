@@ -17,7 +17,7 @@ As with any virtual machine, the EVM creates a level of abstraction between the 
 
 Under the hood, the EVM uses a set of opcode instructions to execute specific tasks. These (140 unique) opcodes allow the EVM to be Turing-complete, which means the EVM is able to compute just about anything, given enough resources.
 
-As a dapp developer, you don't need to know much about the EVM other than it exists and that reliably powers all applications on Ethereum without downtime.
+As a dapp developer, you don't need to know much about the EVM other than it exists and that it reliably powers all applications on Ethereum without downtime.
 
 ## Level 2: Smart Contracts {#smart-contracts}
 

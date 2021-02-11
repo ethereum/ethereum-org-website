@@ -20,7 +20,7 @@ Pe lângă informațiile din această pagină, există multe resurse generate de
 
 - [EthHub](https://docs.ethhub.io) _O bază de date cuprinzătoare, cu tot ce ține de Ethereum_
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _O resursă educațională despre Ethereum, pentru începători_
-- [Ethereum.wiki](https://ethereum.wiki) _Un wiki dezvoltat de comunitate despre tehnologia Ethereum_
+- [Ethereum.wiki](https://eth.wiki) _Un wiki dezvoltat de comunitate despre tehnologia Ethereum_
 - [Kauri](https://kauri.io) _Articole tehnice și tutoriale despre Ethereum și proiecte conexe_
 - [Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Videoclipuri și prezentări despre Ethereum_
 - [Week in Ethereum News](https://weekinethereumnews.com/) _Un newsletter săptămânal ce acoperă principalele evoluții din ecosistem_

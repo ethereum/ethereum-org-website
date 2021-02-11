@@ -30,7 +30,7 @@ As opposed to a centrally located server operated by a single company or organiz
 
 - [3Box](https://3box.io)
 - [3Box.js](https://github.com/3box/3box-js)
-- [3Box Plugins](https://docs.3box.io/build/plugins)
+- [3Box Plugins](https://docs.3box.io/learn/building-a-distributed-appstore-with-3box#5723)
 
 ## Further reading {#further-reading}
 

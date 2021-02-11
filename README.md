@@ -416,7 +416,7 @@ export const query = graphql`
 
   [![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=Claim%20Your%20POAP!%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat)](https://discord.gg/CetY6Y4)
 
-- 👆 To claim your Contributor POAP, join our Discord server and paste a link to your contribution in the #contributing channel
+- 👆 To claim your Contributor POAP, join our Discord server and paste a link to your contribution in the #poaps-🏆 channel
 
 - A member of our team will verify the request and DM you with a peronalized link to claim your own freshly minted POAP collectible!
 
@@ -810,6 +810,16 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://davemackey.net/"><img src="https://avatars.githubusercontent.com/u/8009774?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dave Mackey</b></sub></a><br /><a href="#content-davidshq" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/Siegrift"><img src="https://avatars.githubusercontent.com/u/22679154?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Emanuel Tesař</b></sub></a><br /><a href="#content-Siegrift" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/DeFiDude"><img src="https://avatars.githubusercontent.com/u/59237470?v=4?s=100" width="100px;" alt=""/><br /><sub><b>DeFiDude</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ADeFiDude" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="http://austingriffith.com"><img src="https://avatars.githubusercontent.com/u/2653167?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Austin Griffith</b></sub></a><br /><a href="#content-austintgriffith" title="Content">🖋</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://chasemanning.co.nz"><img src="https://avatars.githubusercontent.com/u/53957795?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Chase Manning</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Achase-manning" title="Bug reports">🐛</a> <a href="#content-chase-manning" title="Content">🖋</a></td>
+    <td align="center"><a href="http://cartesi.io"><img src="https://avatars.githubusercontent.com/u/28073950?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Colin Steil</b></sub></a><br /><a href="#content-colinsteil" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/MonarthS"><img src="https://avatars.githubusercontent.com/u/40236229?v=4?s=100" width="100px;" alt=""/><br /><sub><b>MonarthS</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=MonarthS" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/adamdry"><img src="https://avatars.githubusercontent.com/u/7360709?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Adam Dry</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aadamdry" title="Bug reports">🐛</a> <a href="#content-adamdry" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/seishun"><img src="https://avatars.githubusercontent.com/u/988441?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nikolai Vavilov</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aseishun" title="Bug reports">🐛</a> <a href="#content-seishun" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/okdonga"><img src="https://avatars.githubusercontent.com/u/12257412?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Katie </b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aokdonga" title="Bug reports">🐛</a> <a href="#content-okdonga" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/comeToThinkOfEth"><img src="https://avatars.githubusercontent.com/u/78873209?v=4?s=100" width="100px;" alt=""/><br /><sub><b>comeToThinkOfEth</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AcomeToThinkOfEth" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 

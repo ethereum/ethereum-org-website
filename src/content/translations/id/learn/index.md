@@ -20,7 +20,7 @@ Selain informasi yang tersedia di halaman ini, masih banyak lagi sumber informas
 
 - [EthHub](https://docs.ethhub.io) _Kumpulan pengetahuan dasar yang komprehensif tentang segala sesuatu yang terkait dengan Ethereum_
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _Sebuah sumber daya informasi tentang Ethereum untuk pemula_
-- [Ethereum.wiki](https://ethereum.wiki) _Sebuah wiki yang berisi informasi mengenai teknologi Ethereum_
+- [Ethereum.wiki](https://eth.wiki) _Sebuah wiki yang berisi informasi mengenai teknologi Ethereum_
 - [Kauri](https://kauri.io) _Artikel teknis dan tutorial untuk Ethereum dan proyek terkait_
 - [Kanal Youtube Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Video informasi dan seminar tentang Ethereum_
 - [Week in Ethereum News](https://weekinethereumnews.com/) _Sebuah newsletter yang memberitakan tentang perkembangan inti yang terjadi di ekosistem Ethereum_

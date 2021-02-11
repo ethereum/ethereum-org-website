@@ -110,6 +110,7 @@ So you get reimbursed for proving fraud.
 - [Optimism](https://optimism.io/)
 - [Offchain Labs Arbitrum Rollup](https://offchainlabs.com/)
 - [Fuel Network](https://fuel.sh/)
+- [Cartesi](https://cartesi.io)
 
 <!-- #### The Optimism virtual machine (OVM)
 
@@ -247,7 +248,7 @@ Combine the best parts of multiple layer 2 technologies, and may offer configura
 
 **Optimistic rollups**
 
-- [EthHub on optimistic rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic-rollups/)
+- [EthHub on optimistic rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 
 **Sidechains**

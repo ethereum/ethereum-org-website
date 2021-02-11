@@ -2,7 +2,7 @@
 // Kept here for easy formatting.
 
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.7.0;
+pragma solidity ^0.8.1;
 
 // This is a smart contract - a program that can be deployed to the Ethereum blockchain.
 contract SimpleToken {

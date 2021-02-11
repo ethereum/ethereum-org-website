@@ -75,7 +75,7 @@ A nyilvános és privát Ethereum hálózatoknak szűkségük lehet, hálózati 
 
 ### Eszközök {#tooling}
 
-- [Alethio](https://aleth.io/) _Ethereum Data Analytics Platform_
+- [Alethio](https://explorer.aleth.io/) _Ethereum Data Analytics Platform_
 - [Treum](https://treum.io/) _átláthatóságot, nyomon követhetőséget és kereskedési lehetőséget biztosít ellátási láncoknak blokklánc technológia használatával_
 - [Truffle Suite](https://trufflesuite.com) _blockchain development suite (Truffle, Ganache, Drizzle)_
 

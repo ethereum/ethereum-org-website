@@ -125,5 +125,5 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
 
 - [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/)
 - [Crypto.jobs](https://crypto.jobs/)
-- [Careers at ConsenSys](https://careers.labs.consensys.net/)
+- [Careers at ConsenSys](https://consensys.net/careers/)
 - [Blocktribe](https://blocktribe.com/)
