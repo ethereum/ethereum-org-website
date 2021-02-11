@@ -541,9 +541,9 @@ A [proof-of-stake](#proof-of-stake) chain that is coordinated by the [Beacon Cha
 
 <DocLink to="/eth2/shard-chains" title="Shard chains" />
 
-### Sidechain {#sidechain}
+### sidechain {#sidechain}
 
-A scaling solution that uses a separate chain with different, often faster, [consensus rules]{#consensus-rules}. A bridge is needed to connect these sidechains to [mainnet](#mainnet). [Rollups](#rollups) also use sidechains, but they operate in collaboration with [mainnet](#mainnet) instead.
+A scaling solution that uses a separate chain with different, often faster, [consensus rules](#consensus-rules). A bridge is needed to connect these sidechains to [mainnet](#mainnet). [Rollups](#rollups) also use sidechains, but they operate in collaboration with [mainnet](#mainnet) instead.
 
 <DocLink to="/developers/docs/layer-2-scaling/#sidechains" title="Sidechains" />
 
