@@ -209,10 +209,6 @@ const MobileNavMenu = ({
 }) => {
   const intl = useIntl()
 
-  const handleClose = () => {
-    toggleMenu()
-  }
-
   const isOpen = isMenuOpen || isSearchOpen
   return (
     <>
@@ -220,7 +216,7 @@ const MobileNavMenu = ({
         animate={isOpen ? "open" : "closed"}
         variants={mobileModalVariants}
         initial="closed"
-        onClick={handleClose}
+        onClick={toggleMenu}
       />
       <MenuContainer
         animate={isMenuOpen ? "open" : "closed"}
@@ -242,24 +238,22 @@ const MobileNavMenu = ({
                     <Translation id={section.text} />
                   </SectionTitle>
                   <SectionItems>
-                    {section.items.map((item, idx) => {
-                      return (
-                        <SectionItem key={idx} onClick={() => toggleMenu()}>
-                          <StyledNavLink
-                            to={item.to}
-                            isPartiallyActive={item.isPartiallyActive}
-                          >
-                            <Translation id={item.text} />
-                          </StyledNavLink>
-                        </SectionItem>
-                      )
-                    })}
+                    {section.items.map((item, idx) => (
+                      <SectionItem key={idx} onClick={toggleMenu}>
+                        <StyledNavLink
+                          to={item.to}
+                          isPartiallyActive={item.isPartiallyActive}
+                        >
+                          <Translation id={item.text} />
+                        </StyledNavLink>
+                      </SectionItem>
+                    ))}
                   </SectionItems>
                 </NavListItem>
               )
             }
             return (
-              <NavListItem onClick={() => toggleMenu()} key={idx}>
+              <NavListItem onClick={toggleMenu} key={idx}>
                 <NavLink
                   to={section.to}
                   isPartiallyActive={section.isPartiallyActive}
@@ -283,7 +277,7 @@ const MobileNavMenu = ({
               <Translation id={isDarkTheme ? "dark-mode" : "light-mode"} />
             </BottomItemText>
           </BottomItem>
-          <BottomItem onClick={() => toggleMenu()}>
+          <BottomItem onClick={toggleMenu}>
             <BottomLink to="/languages/">
               <MenuIcon name="language" />
               <BottomItemText>
@@ -292,7 +286,7 @@ const MobileNavMenu = ({
             </BottomLink>
           </BottomItem>
         </BottomMenu>
-        <CloseMenuIconContainer onClick={() => toggleMenu()}>
+        <CloseMenuIconContainer onClick={toggleMenu}>
           <Icon name="close" />
         </CloseMenuIconContainer>
       </MenuContainer>
@@ -307,7 +301,7 @@ const MobileNavMenu = ({
             <Icon name="close" />
           </CloseIconContainer>
         </SearchHeader>
-        <Search handleSearchSelect={handleClose} />
+        <Search handleSearchSelect={toggleMenu} />
         <BlankSearchState>
           <Emoji text=":sailboat:" size={3} />
           <Translation id="search-box-blank-state-text" />
