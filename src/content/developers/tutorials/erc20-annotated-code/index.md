@@ -1,6 +1,15 @@
-# ERC20 Contract Walk-Through
+---
+title: "ERC20 Contract Walk-Through"
+description: What is in the OpenWhisk ERC20 contract and why is it there?
+author: Ori Pomerantz
+lang: en
+sidebar: true
+tags: ["solidity", "erc20"]
+skill: beginner
+published: 2021-<month>-<day>
+---
 
-## Introduction
+## Introduction {#introduction}
 
 One of the most common uses for Ethereum is for a group to create a tradable token, in a sense their own currency. These currencies typically follow a standard, 
 [ERC20](https://eips.ethereum.org/EIPS/eip-20). This standard makes it possible to write tools, such as liquidity pools and wallets, that work with all ERC20
@@ -12,7 +21,7 @@ This is annotated source code. If you want to implement ERC20,
 [read this tutorial](https://forum.zeppelin.solutions/t/how-to-implement-erc20-supply-mechanisms/226).
 
 
-## The Interface
+## The Interface {#the-interface}
 
 The purpose of a standard like ERC20 is to have multiple currencies that interface with the same code. To achieve that, we create an 
 [interface](https://www.geeksforgeeks.org/solidity-basics-of-interface/). Any code that needs to interface with the currency contract
@@ -221,11 +230,11 @@ These events are emitted when the state of the ERC20 contract changes.
 ```
 
 
-## The Actual Contract
+## The Actual Contract {#the-actual-contract}
 
-This is an actual contract that implements the ERC20 standard, 
+This is the actual contract that implements the ERC20 standard, 
 [taken from here](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol). 
-It is not meant to be used as-is, but you can use it as a template for your own code. You can also 
+It is not meant to be used as-is, but you can 
 [inherit](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm) from it to extend it to something usable.
 
 ```solidity
@@ -236,7 +245,7 @@ pragma solidity >=0.6.0 <0.8.0;
 &nbsp;
 
 
-### Import Statements
+### Import Statements {#import-statements}
 
 In addition to the interface definitions above, the contract definition imports two other files:
 
@@ -281,7 +290,7 @@ import "../../math/SafeMath.sol";
  
 ```
  
-### Contract Definition
+### Contract Definition   {#contract-definition}
  
 This line specifies the inheritence, in this case from `IERC20` from above and `Context`, for OpenGSN.
 
@@ -300,7 +309,7 @@ This line attaches the `SafeMath` library to the `uint256` type. You can find th
 
 ```
 
-### Variable Definitions
+### Variable Definitions  {#variable-definitions}
 
 These definitions specify the contract's state variables. There variables are declared `private`, but
 that only means that other contracts on the blockchain can't read them. *There are no
@@ -360,10 +369,11 @@ currency you can select a different value. If dividing the currency doesn't make
     uint8 private _decimals;
 ```
 
-### Constructor
+### The Constructor  {#the-constructor}
 
-The constructor is called when the contract is first created. By convention, function 
-parameters are named `<something>_`. 
+The constructor is called when the contract is first created. 
+
+By convention, function parameters are named `<something>_`. 
 
 ```solidity
     /**
@@ -382,7 +392,7 @@ parameters are named `<something>_`.
     }
 ```
 
-### User Interface Functions
+### User Interface Functions  {#user-interface-functions}
 
 These functions help user interfaces know about your contract so they'll be able to display it properly.
 
@@ -431,7 +441,7 @@ In this case, `memory` is the best choice.
     }
 ```
 
-### Read Token Information
+### Read Token Information  {#read-token-information}
 
 These are functions that provide information about the token, either the total supply or an
 account's balance.
@@ -463,7 +473,7 @@ node anyway. *There are no secrets on the blockchain.*
 ```   
 
 
-### Transfer Tokens
+### Transfer Tokens   {#transfer-tokens}
 
 This is the function called to transfer tokens from the sender's account to a different one. Note
 that even though it returns a boolean value, that value is always **true**. If the transfer
@@ -498,7 +508,7 @@ return the original signer and not the contract that relayed the message.
     }
 ```
 
-### Allowance Functions
+### Allowance Functions    {#allowance-functions}
 
 These are the functions that implement the allowance functionality. The OpenWhisk implementation goes 
 beyond the basic standard to include some features that improve security.
@@ -668,7 +678,7 @@ the way normal addition does.
     }
 ```    
 
-### The Functions that Actually Modify Token Information
+### Functions that Modify Token Information  {#functions-that-modify-token-information}
 
 These are the four functions that do the actual work: `_transfer`, `_mint`, `_burn`, and `_approve`.
 
@@ -696,7 +706,7 @@ to transfer from somebody else's account).
 
 &nbsp;
 
-Nobody actually owns address zero in Ethereum (that is, nobody knows the private key whose matching public key
+Nobody actually owns address zero in Ethereum (that is, nobody knows a private key whose matching public key
 is transformed to the zero address). When people use that address, it is usually a software bug - so we 
 fail if the zero address is used as the sender or the recipient.
 
@@ -846,7 +856,7 @@ approval either by the owner or by a server that listens to these events.
 
 ```
 
-### Modify _decimals
+### Modify The Decimals Variable  {#modify-the-decimals-variable}
 
 This function modifies the `_decimals` variable which is used to tell user interfaces how to interpret the amount. 
 You should call it from the constructor. It would be dishonest to call it at any subsequent point, and applications
@@ -867,10 +877,10 @@ are not designed to handle it.
     }
 ```
 
-### Hooks
+### Hooks  {#hooks}
 
-This is the hook function to be called during transfers. It is empty here, if you need
-to do something you need to override it.
+This is the hook function to be called during transfers. It is empty here, buf if you need
+to do something you just override it.
 
 ```solidity
 
@@ -892,6 +902,6 @@ to do something you need to override it.
 }
 ```
 
-# Conclusion
+# Conclusion {#conclusion}
 
 By this point you should understand the OpenWhisk ERC20 code and why it is written like that. Hopefully this knowledge will help you develop your own contracts and applications.
