@@ -32,6 +32,12 @@ As opposed to a centrally located server operated by a single company or organiz
 - [3Box.js](https://github.com/3box/3box-js)
 - [3Box Plugins](https://docs.3box.io/learn/building-a-distributed-appstore-with-3box#5723)
 
+**Aleph.im -** **_Decentralized cloud project (database, file storage, computing and DID). A unique blend of offchain and onchain peer-to-peer technology. IPFS and multi-chain compatibility._**
+
+- [Aleph.im](https://aleph.im/)
+- [Documentation](https://aleph.im/#/developers)
+- [GitHub](https://github.com/aleph-im/)
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
