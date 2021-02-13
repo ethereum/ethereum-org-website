@@ -16,6 +16,9 @@
   # Directory with the serverless Lambda functions to deploy to AWS.
   functions = "public/lambda"
 
+  # Only build on changes to src/ OR changes to .js and .json files outside src/
+  ignore="git diff --quiet --exit-code HEAD^ HEAD ./src || if [[ $(git diff --name-only HEAD^ HEAD .) == *[.](js|json)* ]]; then exit 1; else exit 0; fi"
+
 # Production context: all deploys from the Production branch set in your site's
 # deploy contexts will inherit these settings.
 # [context.production]
