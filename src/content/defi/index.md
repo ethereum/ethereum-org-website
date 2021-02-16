@@ -2,6 +2,7 @@
 title: Decentralized finance
 description: An overview of defi on Ethereum
 lang: en
+template: use-cases
 sidebar: true
 sidebarDepth: 2
 ---
