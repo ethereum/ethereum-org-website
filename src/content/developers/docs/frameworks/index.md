@@ -51,11 +51,11 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [Documentation](https://embark.status.im/docs/)
 - [GitHub](https://github.com/embark-framework/embark)
 
-**Epirus -** **_A platform for developing, deploying and monitoring blockchain applications on the JVM_**
+**Web3j -** **_A platform for developing blockchain applications on the JVM_**
 
-- [Homepage](https://www.web3labs.com/epirus)
-- [Documentation](https://docs.epirus.io)
-- [GitHub](https://github.com/epirus-io/epirus-cli)
+- [Homepage](https://www.web3labs.com/web3j-sdk)
+- [Documentation](https://docs.web3j.io)
+- [GitHub](https://github.com/web3j/web3j)
 
 **OpenZeppelin SDK -** **_The Ultimate Smart Contract Toolkit: A suite of tools to help you develop, compile, upgrade, deploy and interact with smart contracts._**
 

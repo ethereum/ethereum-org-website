@@ -23,6 +23,11 @@ Do you have any questions? Or want to collaborate with our team and other transl
 
 Thank you for your participation in the ethereum.org Translation Program!
 
+<InfoBanner shouldCenter emoji=":information_source:">
+  If you're helping us with translations, you might find some useful information in our translations FAQ. 
+  {" "}<a href="/contributing/translation-program/translation-guide/">Translating ethereum.org FAQ</a>
+</InfoBanner>
+
 ## In-progress translations {#in-progress}
 
 <TranslationsInProgress />
