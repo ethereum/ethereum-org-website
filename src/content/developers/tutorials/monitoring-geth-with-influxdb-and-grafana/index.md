@@ -143,9 +143,9 @@ Grafana is now set up to read data from InfluxDB. Now you need to create a dashb
 
 ![](./grafana7.png)
 
-For a Geth monitoring dashboard, copy ID of [this dashboard](https://grafana.com/grafana/dashboards/13877/) and past it in the "Import page" in Grafana. After saving the dashboard, it should look like this:```
+For a Geth monitoring dashboard, copy the ID of [this dashboard](https://grafana.com/grafana/dashboards/13877/) and paste it in the "Import page" in Grafana. After saving the dashboard, it should look like this:
 
 ![](./grafana8.png)
 
-ou can modify your dashboards. Each panel can be edited, moved, removed or added. You can change your configurations. It's up to you! To learn more about how dashboards work, refer to [Grafana's documentation](https://grafana.com/docs/grafana/latest/dashboards/).
+You can modify your dashboards. Each panel can be edited, moved, removed or added. You can change your configurations. It's up to you! To learn more about how dashboards work, refer to [Grafana's documentation](https://grafana.com/docs/grafana/latest/dashboards/).
 You might also be interested in [Alerting](https://grafana.com/docs/grafana/latest/alerting/). This lets you set up alert notifications for when metrics reach certain values. Various communication channels are supported.
