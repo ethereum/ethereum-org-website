@@ -143,9 +143,7 @@ Grafana is now set up to read data from InfluxDB. Now you need to create a dashb
 
 ![](./grafana7.png)
 
-!!Add dashboard to grafana website for easier import?
-
-For a Geth monitoring dashboard, just copy [this JSON file](./gethdashboard.json) and insert it in the "Import page" in Grafana. After saving the dashboard, it should look like this:```
+For a Geth monitoring dashboard, copy ID of [this dashboard](https://grafana.com/grafana/dashboards/13877/) and past it in the "Import page" in Grafana. After saving the dashboard, it should look like this:```
 
 ![](./grafana8.png)
 
