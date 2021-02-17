@@ -9,8 +9,8 @@ image: ../../../assets/eth2/core.png
 sidebarDepth: 2
 summaryPoints:
   [
-    "A global, open alternative to the current financial system.",
-    "Probably the biggest use case for Ethereum right now.",
+    "A way to turn anything unique into an Ethereum-based asset.",
+    "NFTs are giving more power to content creators than ever before.",
     "Powered by smart contracts on the Ethereum blockchain.",
   ]
 ---
