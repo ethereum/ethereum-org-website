@@ -19,9 +19,7 @@ const NavContainer = styled.div`
   position: sticky;
   top: 0;
   z-index: 1000;
-  width: 100vw;
-  /* xl breakpoint (1440px) + 72px (2rem padding on each side) */
-  max-width: 1504px;
+  width: 100%;
 `
 
 const StyledNav = styled.nav`
