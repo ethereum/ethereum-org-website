@@ -5,8 +5,7 @@ lang: en
 template: use-cases
 sidebar: true
 sidebarDepth: 2
-image: ../../../assets/eth2/core.png
-sidebarDepth: 2
+image: ../../assets/use-cases/dao-2.png
 summaryPoints:
   [
     "Member-owned communities without centralized leadership.",

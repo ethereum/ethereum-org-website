@@ -4,7 +4,7 @@ description: An overview of defi on Ethereum
 lang: en
 template: use-cases
 sidebar: true
-image: ../../../assets/eth2/core.png
+image: ../../assets/use-cases/defi.png
 sidebarDepth: 2
 summaryPoints:
   [

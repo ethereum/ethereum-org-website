@@ -5,8 +5,7 @@ lang: en
 template: use-cases
 sidebar: true
 sidebarDepth: 2
-image: ../../../assets/eth2/core.png
-sidebarDepth: 2
+image: ../../assets/eth2/core.png
 summaryPoints:
   [
     "A way to turn anything unique into an Ethereum-based asset.",

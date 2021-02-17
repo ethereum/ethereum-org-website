@@ -367,7 +367,7 @@ const UseCasePage = ({ data, data: { mdx } }) => {
   const lastUpdatedDate = mdx.parent.fields
     ? mdx.parent.fields.gitLogLatestDate
     : mdx.parent.mtime
-
+  console.log(mdx.frontmatter.image)
   return (
     <Container>
       <HeroContainer>
@@ -387,7 +387,7 @@ const UseCasePage = ({ data, data: { mdx } }) => {
             {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
           </LastUpdated>
         </TitleCard>
-        <Image fluid={mdx.frontmatter.image} />
+        <Image fluid={mdx.frontmatter.image.childImageSharp.fluid} />
       </HeroContainer>
       <MoreContent to="#content">
         <Icon name="chevronDown" />
@@ -459,27 +459,6 @@ export const useCasePageQuery = graphql`
           fields {
             gitLogLatestDate
           }
-        }
-      }
-    }
-    beaconchain: file(relativePath: { eq: "eth2/core.png" }) {
-      childImageSharp {
-        fluid(maxHeight: 640) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    shards: file(relativePath: { eq: "eth2/newrings.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 420) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    thedocking: file(relativePath: { eq: "eth2/docking.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 420) {
-          ...GatsbyImageSharpFluid
         }
       }
     }
