@@ -288,22 +288,22 @@ const HeroContainer = styled.div`
   }
 `
 
-// const Image = styled(Img)`
-//   flex: 1 1 100%;
-//   max-width: 816px;
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   margin-left: 2rem;
-//   align-self: flex-end;
-//   right: 0;
-//   bottom: 0;
-//   background-size: cover;
-//   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-//     width: 100%;
-//     height: 100%;
-//     overflow: initial;
-//   }
-// `
+const Image = styled(Img)`
+  flex: 1 1 100%;
+  max-width: 816px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 2rem;
+  align-self: flex-end;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    width: 100%;
+    height: 100%;
+    overflow: initial;
+  }
+`
 
 const MoreContent = styled(Link)`
   width: 100%;
@@ -375,19 +375,19 @@ const UseCasePage = ({ data, data: { mdx } }) => {
           <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
           <MobileBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
           <Title>{mdx.frontmatter.title}</Title>
-          {/* <SummaryBox>
+          <SummaryBox>
             <ul>
               {mdx.frontmatter.summaryPoints.map((point, idx) => (
                 <SummaryPoint key={idx}>{point}</SummaryPoint>
               ))}
             </ul>
-          </SummaryBox> */}
+          </SummaryBox>
           <LastUpdated>
             <Translation id="page-last-updated" />:{" "}
             {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
           </LastUpdated>
         </TitleCard>
-        {/* <Image fluid={mdx.frontmatter.image.childImageSharp.fluid} /> */}
+        <Image fluid={mdx.frontmatter.image} />
       </HeroContainer>
       <MoreContent to="#content">
         <Icon name="chevronDown" />
@@ -442,6 +442,14 @@ export const useCasePageQuery = graphql`
         description
         sidebar
         sidebarDepth
+        summaryPoints
+        image {
+          childImageSharp {
+            fluid(maxHeight: 640) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
       body
       tableOfContents
@@ -451,6 +459,27 @@ export const useCasePageQuery = graphql`
           fields {
             gitLogLatestDate
           }
+        }
+      }
+    }
+    beaconchain: file(relativePath: { eq: "eth2/core.png" }) {
+      childImageSharp {
+        fluid(maxHeight: 640) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    shards: file(relativePath: { eq: "eth2/newrings.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 420) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    thedocking: file(relativePath: { eq: "eth2/docking.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 420) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

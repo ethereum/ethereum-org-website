@@ -1,13 +1,18 @@
 ---
-title: Decentralized finance
+title: Decentralized finance (defi)
 description: An overview of defi on Ethereum
 lang: en
 template: use-cases
 sidebar: true
+image: ../../../assets/eth2/core.png
 sidebarDepth: 2
+summaryPoints:
+  [
+    "A global, open alternative to the current financial system.",
+    "Probably the biggest use case for Ethereum right now.",
+    "Powered by smart contracts on the Ethereum blockchain.",
+  ]
 ---
-
-# Decentralized finance (Defi)
 
 Defi is probably the biggest Ethereum success story so far.
 
@@ -27,7 +32,19 @@ Defi currently replicates everything on offer with the traditional financial sys
 
 As a blockchain, Ethereum is designed for sending transactions in a secure and global way. Payments go directly from one account to another in a matter of minutes (usually).
 
-### Lend/borrow
+### Stablecoins
+
+There are tokens that exist on Ethereum that keep their value relatively consistent. The price of ETH can fluctuate which makes it hard to use like regular currency.
+
+Coins like Dai or USDC have a value that stays within a few cents of a dollar. This makes them perfect for earning or retail.
+
+[More on stablecoins](/stablecoins)
+
+### Decentralized exchanges
+
+todo
+
+### Decentralized lending/borrowing
 
 todo
 
@@ -48,19 +65,11 @@ So in a single transaction the following happens:
 
 If suddenly exchange B's supply dropped and the user wasn't able to buy enoughh to cover the original loan, the transaction would simply fail.
 
-### Insurance
+### Decentralized derivatives
 
 todo
 
-### Stablecoins
-
-There are tokens that exist on Ethereum that keep their value relatively consistent. The price of ETH can fluctuate which makes it hard to use like regular currency.
-
-Coins like Dai or USDC have a value that stays within a few cents of a dollar. This makes them perfect for earning or retail.
-
-[More on stablecoins](/stablecoins)
-
-### Token swaps
+### Decentralized asset management
 
 todo
 
@@ -85,6 +94,44 @@ Ethereum is the perfect foundation for defi for a number of reasons:
 - Tokens and cryptocurrency are built into Ethereum, a shared ledger – keeping track of tranactions and ownership is kinda its thing.
 - Ethereum allows complete financial freedom – none of these products ever take custody of your funds. You are always in control.
 
+You can think of defi in layers:
+
+1. The blockchain – Ethereum contains the transaction history and state of accounts.
+2. The assets – ETH and the other tokens (currencies).
+3. The protocols – a smart contract that provideds the functionality, for example the service that allows for decentralized lending of the assets.
+4. The applications – the products we use to manage and access the protocols.
+
+## Opportunities and risks
+
+At such an early stage in defi, there are both opportunities and risks. Make sure you're aware of both before diving in.
+
+### Opportunities
+
+- **Combination opportunities** – the system is open, new products are coming to market all the time that combine existing services to unlock new opportunities.
+- **Greater efficiency** – smart contracts remove the need for custodians and escrows reducing transaction time and cost without compromising security.
+- **More transparency** – everything is public, this makes auditing and understanding risks a lot easier. If something does go wrong, investigations are far simpler.
+- **More accessible** – defi allows you to use these markets without giving away your identity. These protocols are open to everyone an can't discriminate based on personal details.
+
+### Risks
+
+- **Smart contracts**
+  - they are the backbone of defi so if there a smart contract bug it poses a big risk to the protocol's users.
+  - At this early stage, you are at a disadvantage if you can't read the code and verify its safety yourself. Instead you must trust the protocol and any third party security audits.
+  - one smart contract bug can have a devastating effect within the ecosystem if other products rely on that smart contract. This is one of the downsides of Ethereum's combination oppportunities.
+- **Admin keys**
+  - oten teams will set up their smart contracts with admin keys. These keys allow them to upgrade the contract and shut it down in an emergency. If a malicious actor got these keys they could potentially drain funds from the contract.
+- **External data**
+  - a lot of defi relies on external data sources, provided by oracles. If an oracle's data is compromised...
+- **Scalability**
+  - demand raises tx fees which price some people out of defi
+-
+
+- a single smart contract bug can have a devastating effect within the ecosystem because it's so composable
+- external data: oracles introduce centralization
+- fiat on/off-ramps: for the most part, getting funds out of defi into the traditional financial system requires KYC and regulation
+- scalability: rises in transaction fees favour wealthy participants and price some people out of the ecosystem
+  - layer 2 solutions put atomicity and composability at risk
+
 ## How to defi
 
 Before you try out any defi products, remember that we are in the early stages of this financial revolution. Only spend what you can afford and do your research.
@@ -97,6 +144,10 @@ Defi relies on Ethereum to keep transactions secure. Ethereum security comes at 
     Using defi products right now is expensive. The network is in such high demand that gas is very expensive. The community is working on ways to improve the network's capacity, but don't be surprised if you see gas prices exceed your transaction value. 
     <a href="https://www.ethgasstation.info/">Check gas prices</a> [What's a normal amount?]
 </InfoBanner>
+
+### On/off-ramps
+
+Getting funds in or out of defi into the traditional financial system will require a ramp.
 
 ### The defi essentials
 

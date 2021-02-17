@@ -1,13 +1,19 @@
 ---
-title: Non-fungible tokens
+title: Non-fungible tokens (NFT)
 description: An overview of NFTs on Ethereum
 lang: en
 template: use-cases
 sidebar: true
 sidebarDepth: 2
+image: ../../../assets/eth2/core.png
+sidebarDepth: 2
+summaryPoints:
+  [
+    "A global, open alternative to the current financial system.",
+    "Probably the biggest use case for Ethereum right now.",
+    "Powered by smart contracts on the Ethereum blockchain.",
+  ]
 ---
-
-# Non-fungible tokens (NFTs)
 
 NFTs are currently taking the digital art and collectibles world by storm. Digital artists are seeing their lives change thanks to huge sales to a new crypto-audience. And celebrities are joining in as they spot a new opportunity to connect with fans.
 
