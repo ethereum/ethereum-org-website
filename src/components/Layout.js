@@ -55,7 +55,6 @@ const StyledBannerNotification = styled(BannerNotification)`
   text-align: center;
 `
 
-// TODO `Layout` renders twice on page load - why?
 const Layout = (props) => {
   const [isDarkTheme, setIsDarkTheme] = useState(false)
 
