@@ -77,7 +77,7 @@
         - id: docs-nav-backend-apis
           to: /developers/docs/apis/backend/
     - id: docs-nav-data-and-analytics
-      path: /developers/docs/data-and-analytics/
+      to: /developers/docs/data-and-analytics/
       items:
         - id: docs-nav-block-explorers
           to: /developers/docs/data-and-analytics/block-explorers/
