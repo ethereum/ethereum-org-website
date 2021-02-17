@@ -821,6 +821,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/okdonga"><img src="https://avatars.githubusercontent.com/u/12257412?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Katie </b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aokdonga" title="Bug reports">🐛</a> <a href="#content-okdonga" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/comeToThinkOfEth"><img src="https://avatars.githubusercontent.com/u/78873209?v=4?s=100" width="100px;" alt=""/><br /><sub><b>comeToThinkOfEth</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AcomeToThinkOfEth" title="Bug reports">🐛</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/catsnackattack"><img src="https://avatars.githubusercontent.com/u/36013218?v=4?s=100" width="100px;" alt=""/><br /><sub><b>catsnackattack</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Acatsnackattack" title="Bug reports">🐛</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
