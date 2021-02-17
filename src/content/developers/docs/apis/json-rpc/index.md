@@ -1,6 +1,6 @@
 ---
 title: JSON RPC APIs
-description:
+description: A stateless, light-weight remote procedure call (RPC) protocol
 lang: en
 sidebar: true
 ---
@@ -9,11 +9,11 @@ sidebar: true
 
 [JSON-RPC](http://www.jsonrpc.org/specification) is a stateless, light-weight remote procedure call (RPC) protocol. Primarily this specification defines several data structures and the rules around their processing. It is transport agnostic in that the concepts can be used within the same process, over sockets, over HTTP, or in many various message passing environments. It uses JSON ([RFC 4627](http://www.ietf.org/rfc/rfc4627.txt)) as data format.
 
-Geth 1.4 has experimental pub/sub support. See [this](https://github.com/ethereum/go-ethereum/wiki/RPC-PUB-SUB) page for more information.
+Geth 1.4 has experimental pub/sub support. [More information](https://github.com/ethereum/go-ethereum/wiki/RPC-PUB-SUB)
 
-Parity 1.6 has experimental pub/sub support See [this](https://github.com/paritytech/parity/wiki/JSONRPC-Eth-Pub-Sub-Module) for more information.
+Parity 1.6 has experimental pub/sub support. [More information](https://github.com/paritytech/parity/wiki/JSONRPC-Eth-Pub-Sub-Module)
 
-Hyperledger Besu 1.3 has pub/sub support. See [this](https://besu.hyperledger.org/en/stable/HowTo/Interact/APIs/RPC-PubSub/) for more information.
+Hyperledger Besu 1.3 has pub/sub support. [More information](https://besu.hyperledger.org/en/stable/HowTo/Interact/APIs/RPC-PubSub/)
 
 ## JavaScript API
 
@@ -124,11 +124,11 @@ Currently [cpp-ethereum](https://github.com/ethereum/cpp-ethereum),[go-ethereum]
 
 The following methods have an extra default block parameter:
 
-- [eth_getBalance](#eth_getbalance)
-- [eth_getCode](#eth_getcode)
-- [eth_getTransactionCount](#eth_gettransactioncount)
-- [eth_getStorageAt](#eth_getstorageat)
-- [eth_call](#eth_call)
+- [eth_getBalance](/developers/docs/apis/json-rpc/reference/#eth_getbalance)
+- [eth_getCode](/developers/docs/apis/json-rpc/reference/#eth_getcode)
+- [eth_getTransactionCount](/developers/docs/apis/json-rpc/reference/#eth_gettransactioncount)
+- [eth_getStorageAt](/developers/docs/apis/json-rpc/reference/#eth_getstorageat)
+- [eth_call](/developers/docs/apis/json-rpc/reference/#eth_call)
 
 When requests are made that act on the state of ethereum, the last default block parameter determines the height of the block.
 
