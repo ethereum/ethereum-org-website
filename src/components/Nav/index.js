@@ -279,7 +279,17 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
     },
     {
       text: "community",
-      to: "/community/",
+      ariaLabel: "community-menu",
+      items: [
+        {
+          text: "rollup-grants",
+          to: "/community/rollup-grants/",
+        },
+        {
+          text: "community",
+          to: "/community/",
+        },
+      ],
     },
   ]
   const ednLinks = [
