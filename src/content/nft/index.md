@@ -96,6 +96,13 @@ Owning the verifiably real thing will always have more value than not.
 
 ### Credentials
 
+## NFTs and Defi
+
+NFT-backed loans.
+Minting insurance cover as an NFT that's tradeable on secondary markets....
+
+[More on defi](/defi/)
+
 ## How to NFT
 
 ### Buy NFTs

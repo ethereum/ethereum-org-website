@@ -57,6 +57,8 @@ There are lots of tokens on Ethereum. Decentralized exchanges let you trade your
 
 Decentralized lending works without either party having to identify themselves. Instead the borrower must put up collateral that the lender will receive if their loan is not repaid. Loans can be peer-to-peer, so a borrower will borrow directly from a specific lender. Or loans can be pool-based where lenders provide liquidity to a pool that borrowers can borrow from.
 
+Some lenders even accept NFTs as collateral. [More on NFTs](/nfts/)
+
 A more experimental form of decentralized lending lets you borrow without collateral or providing any personal information...
 
 #### Flash loans
