@@ -9,6 +9,7 @@ import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown from "../components/ButtonDropdown"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
+import DocLink from "../components/DocLink"
 import Icon from "../components/Icon"
 import Contributors from "../components/Contributors"
 import DismissibleCard from "../components/DismissibleCard"
@@ -219,6 +220,7 @@ const components = {
   Eth2BeaconChainActions,
   Eth2ShardChainsList,
   Eth2DockingList,
+  DocLink,
 }
 
 const Title = styled.h1`
@@ -344,16 +346,20 @@ const TitleCard = styled.div`
 `
 
 const dropdownLinks = {
-  text: "page-use-cases-dropdown",
+  text: "Explore Ethereum",
   ariaLabel: "page-eth2-upgrades-aria-label",
   items: [
     {
-      text: "page-use-cases-defi",
+      text: "Defi",
       to: "/defi/",
     },
     {
-      text: "page-use-cases-nfts",
+      text: "NFTs",
       to: "/nft/",
+    },
+    {
+      text: "DAOs",
+      to: "/dao/",
     },
   ],
 }
