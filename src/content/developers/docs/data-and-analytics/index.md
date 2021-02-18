@@ -16,7 +16,7 @@ Leveraging existing data providers can expedite development, produce more accura
 
 You should understand the basic concept of [Block Explorers](/en/developers/docs/block-explorers/) in order to better understand using them in the data analytics context. In addition, familiarize yourself with the concept of an [index](/glossary/#index) to understand the benefits they add to a system design.
 
-In terms of architectural fundamentals, understanding what an [API](https://en.wikipedia.org/wiki/API) and [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) are, even in theory.
+In terms of architectural fundamentals, understanding what an [API](https://www.wikipedia.org/wiki/API) and [REST](https://www.wikipedia.org/wiki/Representational_state_transfer) are, even in theory.
 
 ## The Graph {#the-graph}
 
@@ -26,7 +26,7 @@ Using [GraphQL](https://graphql.org/), developers can query any of the curated o
 
 ## Block explorers {#block-explorers}
 
-Many [Block Explorers](/en/developers/docs/block-explorers#block-explorers) offer [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) [API](https://en.wikipedia.org/wiki/API) gateways that will provide developers visibility into real-time data on blocks, transactions, miners, accounts, and other on-chain activity.
+Many [Block Explorers](/en/developers/docs/block-explorers#block-explorers) offer [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API) gateways that will provide developers visibility into real-time data on blocks, transactions, miners, accounts, and other on-chain activity.
 
 Developers can then process and transform this data to give their users unique insights and interactions with the [blockchain](/glossary/#blockchain).
 
