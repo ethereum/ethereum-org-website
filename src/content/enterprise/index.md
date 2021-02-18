@@ -7,7 +7,7 @@ sidebar: true
 
 # Ethereum mainnet for enterprise {#ethereum-for-enterprise}
 
-appliclkjnkjnations help businesses:
+Blockchain applications help businesses:
 
 - Increase trust and reduce the cost of coordination between business parties
 - Improve business network accountability and operational efficiency

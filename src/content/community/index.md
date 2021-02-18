@@ -5,7 +5,7 @@ sidebar: true
 lang: en
 ---
 
-# Ereum Community {#ethereum-community}
+# Ethereum Community {#ethereum-community}
 
 **Learn how to get involved in the Ethereum Community**
 
