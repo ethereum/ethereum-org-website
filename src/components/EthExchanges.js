@@ -203,6 +203,7 @@ const EthExchanges = () => {
           country
           cryptocom
           gemini
+          itezcom
           kraken
           moonpay
           rain
@@ -249,6 +250,9 @@ const EthExchanges = () => {
         ...cardListImage
       }
       imtoken: file(relativePath: { eq: "wallets/imtoken.png" }) {
+        ...cardListImage
+      }
+      itezcom: file(relativePath: { eq: "exchanges/itezcom.png" }) {
         ...cardListImage
       }
       kraken: file(relativePath: { eq: "exchanges/kraken.png" }) {
@@ -322,6 +326,12 @@ const EthExchanges = () => {
       url: "https://crypto.com/exchange/",
       image: data.cryptocom,
       usaExceptions: ["NY"],
+    },
+    itezcom: {
+      name: "Itez",
+      url: "https://itez.com/",
+      image: data.itezcom,
+      usaExceptions: [],
     },
     kraken: {
       name: "Kraken",
