@@ -1,13 +1,13 @@
 ---
-title: Ethereum Rollup Community Grants
+title: Ethereum Optimistic Rollup Community Grants
 description: Grants to build a rollup ecosystem
 lang: en
 sidebar: true
 ---
 
-# Rollup Community Grants {#rollup-community-grants}
+# Optimistic Rollup Community Grants {#rollup-community-grants}
 
-_The Ethereum Foundation is sponsoring a wave of rollup community grants. Proposals are due **[date]**. Here are all the details you need._
+_The Ethereum Foundation is sponsoring a wave of optimistic rollup community grants. Proposals are due **[date]**. Here are all the details you need._
 
 <Divider />
 
@@ -23,6 +23,7 @@ The goal is to grow the rollup community and help to kickstart a flourishing eco
 
 Here some links to dive deeper:
 
+- Get started with our [L2 scaling docs](https://ethereum.org/en/developers/docs/layer-2-scaling/#rollups)
 - Learn the basics on [Ethhub](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/)
 - [An Incomplete Guide to Rollups](https://vitalik.ca/general/2021/01/05/rollup.html) by Vitalik.
 - [(Almost) Everything you need to know about Optimistic Rollup](https://research.paradigm.xyz/rollups) by Georgios Konstantopoulos.
@@ -32,7 +33,7 @@ Here some links to dive deeper:
 
 Anyone is free to participate (individuals and teams) in this grants round.
 
-If you want to submit something but need some inspiration, check out the [wishlist !insert link!]().
+If you want to submit something but need some inspiration, check out the [wishlist](https://ethereum.org/en/community/rollup-grants/#whishlist).
 
 Ideas and projects at any stage of development are welcome:
 
@@ -195,7 +196,7 @@ For technical questions about rollups, ideas or direction for proposals, and all
 
 ## Frequently asked questions {#faq}
 
-### Who can submit proposals for Rollup Community Grants? {#who-can-submit-proposals}
+### Who can submit proposals for Optimistic Rollup Community Grants? {#who-can-submit-proposals}
 
 Anybody!
 
@@ -219,7 +220,7 @@ Any stage of development!
 
 If you have an idea or project that benefits the rollup community, we want to hear about it! The goal is to support regular, consistent work that pushes forward the rollup ecosystem.
 
-Rollup Community Grants is an open call for proposals. Which means, it's expected that some ideas or projects won't be fully shipped before the deadline, but instead require ongoing efforts.
+Optimistic Rollup Community Grants is an open call for proposals. Which means, it's expected that some ideas or projects won't be fully shipped before the deadline, but instead require ongoing efforts.
 
 ### What if I miss the deadline? {#what-if-i-miss-deadline}
 
