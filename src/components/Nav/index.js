@@ -281,10 +281,10 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       text: "community",
       ariaLabel: "community-menu",
       items: [
-        {
+        /*{
           text: "rollup-grants",
           to: "/community/rollup-grants/",
-        },
+        },*/
         {
           text: "community",
           to: "/community/",
