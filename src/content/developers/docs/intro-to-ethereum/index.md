@@ -11,7 +11,7 @@ A blockchain is best described as a public database that is updated and shared a
 
 "Block" refers to the fact that data and state is stored in sequential batches or "blocks". If you send ETH to someone else, the transaction data needs to be added to a block for it to be successful.
 
-"Chain" refers to the fact that each block cryptographically references its parent. A block's data cannot be changed without changing all subsequent blocks, which would require the consensus of the entire network.
+"Chain" refers to the fact that each block cryptographically references its parent. A block's data cannot be changed without changing all preceding blocks, which would require the consensus of the entire network.
 
 Each new block and the chain as a whole must be agreed upon by every node in the network. This is so everyone has the same data. For this to work, blockchains need a consensus mechanism.
 
