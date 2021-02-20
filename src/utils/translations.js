@@ -1,9 +1,14 @@
-const { consoleError } = require("./log")
-
 const defaultStrings = require("../intl/en.json")
 const languageMetadata = require("../data/translations.json")
 
 const supportedLanguages = Object.keys(languageMetadata)
+
+const consoleError = (message) => {
+  const { NODE_ENV } = process.env
+  if (NODE_ENV === "development") {
+    console.error(message)
+  }
+}
 
 // Returns language's content version
 // Used for conditional rendering of content
