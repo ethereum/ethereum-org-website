@@ -92,11 +92,15 @@ Owning the verifiably real thing will always have more value than not.
 
 ### Boosting gaming potential
 
-NFTs are great for gaming.
+NFTs have seen a lot of interest from game developers. NFTs can provide records of ownership for in-game items, fuel in-game economies, and bring a host of benefits to the players.
 
-- Items are really owned by the players even if the game disappears
-- Items can be traded on NFT markets
-- They can drive in-game economies
+In a lot of regular games you can purchase items for you to use in your game. But if that item was an NFT you could recoup your money by selling it on when you're done with the game. You might even make a profit if that item becomes more desirable.
+
+For game developers – as issuers of the NFT – they could earn a royalty every time an item is re-sold in the open marketplace. This creates a more mutually-beneficial business model where both players and developers earn from the secondary NFT market.
+
+This also means that if a game is no longer maintained by the developers, the items you've collected remain yours under your control.
+
+Ultimately the items you grind for in-game can outlive the games themselves. Even if a game is no longer maintained, your items will always be under your control. This means in-game items become digital memorabilia and have a value outside of the game.
 
 Decentraland, a virtual reality game, lets you buy NFTs representing virtual parcels of land that you can use as you see fit.
 
@@ -106,6 +110,8 @@ Decentraland, a virtual reality game, lets you buy NFTs representing virtual par
 </InfoBanner>
 
 ### Physical items
+
+### Making Ethereum addresses easier to manage
 
 ## NFTs and Defi
 
