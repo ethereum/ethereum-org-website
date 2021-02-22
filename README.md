@@ -828,6 +828,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://stackoverflow.com/users/355191/tahir-alvi"><img src="https://avatars.githubusercontent.com/u/1356887?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tahir Alvi </b></sub></a><br /><a href="#ideas-tahiralvi" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/amirmehdi"><img src="https://avatars.githubusercontent.com/u/24705793?v=4?s=100" width="100px;" alt=""/><br /><sub><b>amirmehdi</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aamirmehdi" title="Bug reports">🐛</a> <a href="#content-amirmehdi" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/Dadybayo"><img src="https://avatars.githubusercontent.com/u/33674013?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dan Dadybaev</b></sub></a><br /><a href="#content-Dadybayo" title="Content">🖋</a></td>
+    <td align="center"><a href="https://www.pir8aye.net"><img src="https://avatars.githubusercontent.com/u/18469214?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Finley</b></sub></a><br /><a href="#ideas-finleyexp" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
