@@ -22,7 +22,9 @@ _If Andy Warhol had been born in the late 90s, he probably would have minted Cam
 
 NFTs are tokens that we can use to represent a record of ownership. They let us tokenise unique items like art, collectibles, even real estate. They can only have one owner at a time and they're protected by the Ethereum blockchain – no one can modify the record of ownership or copy/paste a new NFT into existence.
 
-NFT stands for non-fungible token. Fungibility refers to the ability to exchange similar assets without affecting the value. For example ETH is fungible because 1 ETH is exchangeable for another ETH – even though they're not identical, the value is. Non-fungible tokens have properties that make them unique – this means they're not interchangeable.
+NFT stands for non-fungible token. Non-fungible is an economic term that you could use to describe things like your furniture, a song file, or your computer. These things are not exchangeable for other items because they have unique properties.
+
+Fungibile items on the other hand can be exchanged as their value defines them rather than their unique properties. For example ETH is fungible because 1 ETH is exchangeable for another ETH.
 
 ### NFT examples
 
