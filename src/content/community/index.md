@@ -9,7 +9,7 @@ lang: en
 
 **Learn how to get involved in the Ethereum Community**
 
-The Ethereum community includes tens of thousands of developers, technologists, users, HODLers, and enthusiasts all over the world. There are many ways to get involved in the Ethereum community: you can attend an event, join a meetup group, contribute to a project, or participate in one of many online forums about Ethereum.
+The Ethereum community includes tens of thousands of developers, technologists, users, miners, HODLers, and enthusiasts all over the world. There are many ways to get involved in the Ethereum community: you can attend an event, join a meetup group, contribute to a project, or participate in one of many online forums about Ethereum.
 
 Want to contribute to Ethereum more directly? Check out [how to get involved](#how-can-i-get-involved) below for a list of ways that you can contribute based on your skills and professional background.
 
@@ -22,6 +22,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
   - [r/ethfinance](https://www.reddit.com/r/ethfinance/) - _the financial side of Ethereum, including DeFi_
   - [r/ethdev](https://www.reddit.com/r/ethdev/) - _focused on Ethereum development_
   - [r/ethtrader](https://www.reddit.com/r/ethtrader/) - _trends & market analysis_
+  - [r/EtherMining](https://www.reddit.com/r/EtherMining/) - _focused on securing the Ethereum Network (mining)_
   - [r/ethstaker](https://www.reddit.com/r/ethstaker/) - _welcome to all interested in staking on Ethereum_
   - [Fellowship of Ethereum Magicians](https://ethereum-magicians.org) - _community oriented around technical standards in Ethereum_
   - [Ethereum Stackexchange](https://ethereum.stackexchange.com) - _discussion and help for Ethereum developers_
