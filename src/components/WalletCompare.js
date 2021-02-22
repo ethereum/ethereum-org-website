@@ -221,6 +221,9 @@ const WalletCompare = ({ location }) => {
       enjin: file(relativePath: { eq: "wallets/enjin.png" }) {
         ...walletCardImage
       }
+      fortmatic: file(relativePath: { eq: "wallets/fortmatic.png" }) {
+        ...walletCardImage
+      }
       gnosis: file(relativePath: { eq: "wallets/gnosis.png" }) {
         ...walletCardImage
       }
