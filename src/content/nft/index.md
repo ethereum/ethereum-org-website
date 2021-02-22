@@ -111,7 +111,15 @@ Decentraland, a virtual reality game, lets you buy NFTs representing virtual par
 
 ### Physical items
 
-### Making Ethereum addresses easier to manage
+...
+
+### Making ethereum addresses more memorable
+
+One of the most useful NFTs developed so far is the Ethereum Name Service. This uses an NFT to provide your Ethereum address with an easier-to-remember name like `mywallet.eth`. This means you could ask someone to send you ETH via `mywallet.eth` rather than `0x123456789.....`.
+
+This works in a similar way to a website domain name which makes an IP address more memorable. And like domains, ENS names have value, usually based on length and relevance. With ENS you don't need a domain registry in order to facilitate the tranfer of ownership. Instead, ENS names can be traded on NFT marketplaces with ease.
+
+ENS names can also point to websites – not just wallets. For example, if you visit ethereum.eth in a web3 browser, it will open up a version of this website.
 
 ## NFTs and Defi
 
