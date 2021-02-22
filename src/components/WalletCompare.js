@@ -275,6 +275,9 @@ const WalletCompare = ({ location }) => {
       trust: file(relativePath: { eq: "wallets/trust.png" }) {
         ...walletCardImage
       }
+      unstoppable: file(relativePath: { eq: "wallets/unstoppable.png" }) {
+        ...walletCardImage
+      }
       zengo: file(relativePath: { eq: "wallets/zengo.png" }) {
         ...walletCardImage
       }

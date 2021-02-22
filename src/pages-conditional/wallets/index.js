@@ -710,6 +710,9 @@ export const query = graphql`
     trust: file(relativePath: { eq: "wallets/trust.png" }) {
       ...listImage
     }
+    unstoppable: file(relativePath: { eq: "wallets/unstoppable.png" }) {
+      ...listImage
+    }
     zengo: file(relativePath: { eq: "wallets/zengo.png" }) {
       ...listImage
     }
