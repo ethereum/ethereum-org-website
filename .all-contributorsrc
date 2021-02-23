@@ -2893,6 +2893,15 @@
         "bug",
         "content"
       ]
+    },
+    {
+      "login": "cj-technical",
+      "name": "C.J. Kozarski",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58790577?v=4",
+      "profile": "https://github.com/cj-technical",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
