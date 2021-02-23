@@ -2883,6 +2883,16 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "EthanSK",
+      "name": "Ethan Sarif-Kattan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13756744?v=4",
+      "profile": "https://www.etggames.com/",
+      "contributions": [
+        "bug",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
