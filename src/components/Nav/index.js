@@ -212,8 +212,16 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           to: "/eth/",
         },
         {
-          text: "guides-and-resources",
-          to: "/learn/",
+          text: "defi-page",
+          to: "/defi/",
+        },
+        {
+          text: "dao-page",
+          to: "/dao/",
+        },
+        {
+          text: "nft-page",
+          to: "/nft/",
         },
         {
           text: "history-of-ethereum",
@@ -234,6 +242,10 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         {
           text: "eips",
           to: "/eips/",
+        },
+        {
+          text: "guides-and-resources",
+          to: "/learn/",
         },
       ],
     },

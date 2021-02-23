@@ -155,7 +155,7 @@ Ethereum is the perfect foundation for defi for a number of reasons:
 
 - No one owns Ethereum or the smart contracts that live on it – this gives everyone an opportunity to use defi.
 - Defi products all speak the same language behind the scenes: Ethereum. This means many of the products can be used in tandem. You can lend tokens on one platform, and exchange the interest-bearing token in a different market on an entirely different application. This is like being able to cash your Starbucks loyalty points in at your bank.
-- Tokens and cryptocurrency are built into Ethereum, a shared ledger – keeping track of tranactions and ownership is kinda its thing.
+- Tokens and cryptocurrency are built into Ethereum, a shared ledger – keeping track of transactions and ownership is kinda Ethereum's thing.
 - Ethereum allows complete financial freedom – none of these products ever take custody of your funds. You are always in control.
 
 You can think of defi in layers:
@@ -234,3 +234,12 @@ todo – is it worth it with current gas prices?
 ### Earn some interest
 
 todo -->
+
+## Defi apps
+
+[Add links to defi apps categorised in the same way as the dapps page]
+
+## Futher reading
+
+- [Defi Pulse](https://defipulse.com/)
+  [Add links to other good defi resources]

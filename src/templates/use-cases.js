@@ -292,7 +292,7 @@ const HeroContainer = styled.div`
 
 const Image = styled(Img)`
   flex: 1 1 100%;
-  max-width: 816px;
+  max-width: 640px;
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: 2rem;
@@ -346,19 +346,19 @@ const TitleCard = styled.div`
 `
 
 const dropdownLinks = {
-  text: "Explore Ethereum",
+  text: "Ethereum use cases",
   ariaLabel: "page-eth2-upgrades-aria-label",
   items: [
     {
-      text: "Defi",
+      text: "Decentralized finance (defi)",
       to: "/defi/",
     },
     {
-      text: "NFTs",
+      text: "Non-fungible tokens (NFTs)",
       to: "/nft/",
     },
     {
-      text: "DAOs",
+      text: "Decentralized autonomous organizations (DAOs)",
       to: "/dao/",
     },
   ],
@@ -451,7 +451,7 @@ export const useCasePageQuery = graphql`
         summaryPoints
         image {
           childImageSharp {
-            fluid(maxHeight: 640) {
+            fluid(maxHeight: 420) {
               ...GatsbyImageSharpFluid
             }
           }

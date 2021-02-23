@@ -77,7 +77,7 @@ When they sell their content, funds go directly to them. If the new owner was to
 
 <InfoBanner emoji=":eyes:">
   <div>Explore, buy or create your own NFT art/collectibles...</div>
-  <ButtonLink to="/dapps/?category=collectibles">Explore NFT art</ButtonLink>
+  <ButtonLink to="/dapps?category=collectibles">Explore NFT art</ButtonLink>
 </InfoBanner>
 
 #### The copy/paste problem
@@ -106,7 +106,7 @@ Decentraland, a virtual reality game, lets you buy NFTs representing virtual par
 
 <InfoBanner emoji=":eyes:">
   <div>Check out Ethereum games, powered by NFTs...</div>
-  <ButtonLink to="/dapps/?category=gaming">Explore NFT games</ButtonLink>
+  <ButtonLink to="/dapps?category=gaming">Explore NFT games</ButtonLink>
 </InfoBanner>
 
 ### Physical items
@@ -163,3 +163,13 @@ Want to turn your content into a NFT?
 ### Build with NFTs
 
 NFTs are built using a consistent standard known as [ERC-721](/developers/docs/standards/tokens/erc-721/). Read more about it in our docs.
+
+## NFT apps
+
+[Add links to NFT apps categorised in the same way as the dapps page]
+
+## Futher reading
+
+[Add links to other good NFT resources]
+
+- [OpenSea: the NFT Bible](https://opensea.io/blog/guides/non-fungible-tokens/) – Devin Fizner, January 10 2020
