@@ -2865,6 +2865,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "nobd",
+      "name": "nobd",
+      "avatar_url": "https://avatars.githubusercontent.com/u/51967351?v=4",
+      "profile": "https://github.com/nobd",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
