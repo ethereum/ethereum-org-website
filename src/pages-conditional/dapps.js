@@ -367,7 +367,7 @@ const DappsPage = ({ data, location }) => {
     } else if (window && queryParamCategories && explore.current) {
       window.scrollTo({
         top: explore.current.offsetTop - 76,
-        behavior: "auto",
+        behavior: "smooth",
       })
     }
   }, [location.search])
