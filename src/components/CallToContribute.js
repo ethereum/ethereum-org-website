@@ -70,52 +70,50 @@ const Title = styled.h2`
   padding: 0.25rem;
 `
 
-const CallToContribute = ({ editPath }) => {
-  return (
-    <StyledCard>
-      <ImageColumn>
-        ░░░░░░░░░▄░░░░░░░░░░░░░░▄░░░░ ░░░░░░░░▌▒█░░░░░░░░░░░▄▀▒▌░░░
-        ░░░░░░░░▌▒▒█░░░░░░░░▄▀▒▒▒▐░░░ ░░░░░░░▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐░░░
-        ░░░░░▄▄▀▒░▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐░░░ ░░░▄▀▒▒▒░░░▒▒▒░░░▒▒▒▀██▀▒▌░░░
-        ░░▐▒▒▒▄▄▒▒▒▒░░░▒▒▒▒▒▒▒▀▄▒▒▌░░ ░░▌░░▌█▀▒▒▒▒▒▄▀█▄▒▒▒▒▒▒▒█▒▐░░
-        ░▐░░░▒▒▒▒▒▒▒▒▌██▀▒▒░░░▒▒▒▀▄▌░ ░▌░▒▄██▄▒▒▒▒▒▒▒▒▒░░░░░░▒▒▒▒▌░
-        ▀▒▀▐▄█▄█▌▄░▀▒▒░░░░░░░░░░▒▒▒▐░ ▐▒▒▐▀▐▀▒░▄▄▒▄▒▒▒▒▒▒░▒░▒░▒▒▒▒▌
-        ▐▒▒▒▀▀▄▄▒▒▒▄▒▒▒▒▒▒▒▒░▒░▒░▒▒▐░ ░▌▒▒▒▒▒▒▀▀▀▒▒▒▒▒▒░▒░▒░▒░▒▒▒▌░
-        ░▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▒▄▒▒▐░░ ░░▀▄▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▄▒▒▒▒▌░░
-        ░░░░▀▄▒▒▒▒▒▒▒▒▒▒▄▄▄▀▒▒▒▒▄▀░░░ ░░░░░░▀▄▄▄▄▄▄▀▀▀▒▒▒▒▒▄▄▀░░░░░
-        ░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▀▀░░░░░░░░
-      </ImageColumn>
-      <Column>
-        <Title>
-          <Translation id="page-calltocontribute-title" />
-        </Title>
-        <Description>
-          <Translation id="page-calltocontribute-desc-1" />
-        </Description>
-        <Description>
-          <Translation id="page-calltocontribute-desc-2" />
-        </Description>
-        <Description>
-          <Translation id="page-calltocontribute-desc-3" />{" "}
-          <Link to="https://www.notion.so/efdn/Writer-template-4b40d196cde7422ca6a2091de33550bd">
-            <Translation id="page-calltocontribute-link" />
-          </Link>
-        </Description>
-        <Description>
-          <Translation id="page-calltocontribute-desc-4" />{" "}
-          <Link to="https://discord.gg/CetY6Y4">
-            <Translation id="page-calltocontribute-link-2" />
-          </Link>{" "}
-        </Description>
-        <GithubButton to={editPath}>
-          <GithubIcon name="github" />{" "}
-          <span>
-            <Translation id="page-calltocontribute-span" />
-          </span>
-        </GithubButton>
-      </Column>
-    </StyledCard>
-  )
-}
+const CallToContribute = ({ editPath }) => (
+  <StyledCard>
+    <ImageColumn>
+      ░░░░░░░░░▄░░░░░░░░░░░░░░▄░░░░ ░░░░░░░░▌▒█░░░░░░░░░░░▄▀▒▌░░░
+      ░░░░░░░░▌▒▒█░░░░░░░░▄▀▒▒▒▐░░░ ░░░░░░░▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐░░░
+      ░░░░░▄▄▀▒░▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐░░░ ░░░▄▀▒▒▒░░░▒▒▒░░░▒▒▒▀██▀▒▌░░░
+      ░░▐▒▒▒▄▄▒▒▒▒░░░▒▒▒▒▒▒▒▀▄▒▒▌░░ ░░▌░░▌█▀▒▒▒▒▒▄▀█▄▒▒▒▒▒▒▒█▒▐░░
+      ░▐░░░▒▒▒▒▒▒▒▒▌██▀▒▒░░░▒▒▒▀▄▌░ ░▌░▒▄██▄▒▒▒▒▒▒▒▒▒░░░░░░▒▒▒▒▌░
+      ▀▒▀▐▄█▄█▌▄░▀▒▒░░░░░░░░░░▒▒▒▐░ ▐▒▒▐▀▐▀▒░▄▄▒▄▒▒▒▒▒▒░▒░▒░▒▒▒▒▌
+      ▐▒▒▒▀▀▄▄▒▒▒▄▒▒▒▒▒▒▒▒░▒░▒░▒▒▐░ ░▌▒▒▒▒▒▒▀▀▀▒▒▒▒▒▒░▒░▒░▒░▒▒▒▌░
+      ░▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▒▄▒▒▐░░ ░░▀▄▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▄▒▒▒▒▌░░
+      ░░░░▀▄▒▒▒▒▒▒▒▒▒▒▄▄▄▀▒▒▒▒▄▀░░░ ░░░░░░▀▄▄▄▄▄▄▀▀▀▒▒▒▒▒▄▄▀░░░░░
+      ░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▀▀░░░░░░░░
+    </ImageColumn>
+    <Column>
+      <Title>
+        <Translation id="page-calltocontribute-title" />
+      </Title>
+      <Description>
+        <Translation id="page-calltocontribute-desc-1" />
+      </Description>
+      <Description>
+        <Translation id="page-calltocontribute-desc-2" />
+      </Description>
+      <Description>
+        <Translation id="page-calltocontribute-desc-3" />{" "}
+        <Link to="https://www.notion.so/efdn/Writer-template-4b40d196cde7422ca6a2091de33550bd">
+          <Translation id="page-calltocontribute-link" />
+        </Link>
+      </Description>
+      <Description>
+        <Translation id="page-calltocontribute-desc-4" />{" "}
+        <Link to="https://discord.gg/CetY6Y4">
+          <Translation id="page-calltocontribute-link-2" />
+        </Link>{" "}
+      </Description>
+      <GithubButton to={editPath}>
+        <GithubIcon name="github" />{" "}
+        <span>
+          <Translation id="page-calltocontribute-span" />
+        </span>
+      </GithubButton>
+    </Column>
+  </StyledCard>
+)
 
 export default CallToContribute
