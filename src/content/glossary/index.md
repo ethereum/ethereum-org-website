@@ -321,6 +321,10 @@ The second development stage of Ethereum, launched in March 2016 at block 1,150,
 
 ## I {#section-i}
 
+### index {#index}
+
+A network structure meant to optimize the querying of information from across the [blockchain](#blockchain) by providing an efficient path to its storage source.
+
 ### Inter-exchange Client Address Protocol (ICAP) {#icap}
 
 An Ethereum address encoding that is partly compatible with the International Bank Account Number (IBAN) encoding, offering a versatile, checksummed, and interoperable encoding for Ethereum addresses. ICAP addresses use a new IBAN pseudo-country code- XE, standing for "eXtended Ethereum," as used in nonjurisdictional currencies (e.g., XBT, XRP, XCP).
