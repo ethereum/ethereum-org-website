@@ -834,6 +834,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/nobd"><img src="https://avatars.githubusercontent.com/u/51967351?v=4?s=100" width="100px;" alt=""/><br /><sub><b>nobd</b></sub></a><br /><a href="#content-nobd" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/AlexSSD7"><img src="https://avatars.githubusercontent.com/u/43043344?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alexander Sadovskyi</b></sub></a><br /><a href="#content-AlexSSD7" title="Content">🖋</a></td>
     <td align="center"><a href="https://www.etggames.com/"><img src="https://avatars.githubusercontent.com/u/13756744?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ethan Sarif-Kattan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AEthanSK" title="Bug reports">🐛</a> <a href="#content-EthanSK" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/cj-technical"><img src="https://avatars.githubusercontent.com/u/58790577?v=4?s=100" width="100px;" alt=""/><br /><sub><b>C.J. Kozarski</b></sub></a><br /><a href="#content-cj-technical" title="Content">🖋</a></td>
   </tr>
 </table>
 
