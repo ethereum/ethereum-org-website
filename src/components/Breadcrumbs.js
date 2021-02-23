@@ -78,21 +78,19 @@ const Breadcrumbs = ({ slug, startDepth = 0, className }) => {
 
   return (
     <List className={className}>
-      {crumbs.map((crumb, idx) => {
-        return (
-          <ListItem key={idx}>
-            <Crumb>
-              <CrumbLink
-                to={crumb.fullPath}
-                isPartiallyActive={slug === crumb.fullPath}
-              >
-                {crumb.text}
-              </CrumbLink>
-              {idx < crumbs.length - 1 && <Slash>/</Slash>}
-            </Crumb>
-          </ListItem>
-        )
-      })}
+      {crumbs.map((crumb, idx) => (
+        <ListItem key={idx}>
+          <Crumb>
+            <CrumbLink
+              to={crumb.fullPath}
+              isPartiallyActive={slug === crumb.fullPath}
+            >
+              {crumb.text}
+            </CrumbLink>
+            {idx < crumbs.length - 1 && <Slash>/</Slash>}
+          </Crumb>
+        </ListItem>
+      ))}
     </List>
   )
 }
