@@ -51,5 +51,6 @@ Need a more basic primer first? Check out [ethereum.org/learn](/en/learn/) or [e
 
 - [Delphi and Ethereum Name Service (ENS)](https://medium.com/@svanas/delphi-and-ethereum-name-service-ens-4443cd278af7)
 - [QuikNode, Ethereum and Delphi](https://medium.com/@svanas/quiknode-ethereum-and-delphi-f7bfc9671c23)
+- [Delphi and the Ethereum Dark Forest](https://svanas.medium.com/delphi-and-the-ethereum-dark-forest-5b430da3ad93)
 
 Looking for more resources? Check out [ethereum.org/developers](/en/developers/).
