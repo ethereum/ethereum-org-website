@@ -5,19 +5,19 @@ lang: en
 sidebar: true
 ---
 
-[JSON](http://json.org/) is a lightweight data-interchange format. It can represent numbers, strings, ordered sequences of values, and collections of name/value pairs.
+A remote procedure call, or RPC, is a method of retrieving or being notified of information from a given data source in an asynchronous manner. [JSON-RPC](http://www.jsonrpc.org/specification) is a stateless, light-weight RPC protocol, that defines several data structures and the rules around their processing. It is transport agnostic in that the concepts can be used within the same process, over sockets, over HTTP, or in many various message passing environments. It uses [JSON](http://json.org/) as data format.
 
-[JSON-RPC](http://www.jsonrpc.org/specification) is a stateless, light-weight remote procedure call (RPC) protocol. Primarily this specification defines several data structures and the rules around their processing. It is transport agnostic in that the concepts can be used within the same process, over sockets, over HTTP, or in many various message passing environments. It uses JSON ([RFC 4627](http://www.ietf.org/rfc/rfc4627.txt)) as data format.
+Publish / subscribe (pub/sub) is a method of using JSON-RPC notifications to subscribe to Ethereum events without needing to poll for them:
 
-Geth 1.4 has experimental pub/sub support. [More information](https://github.com/ethereum/go-ethereum/wiki/RPC-PUB-SUB)
+- [Geth v1.4](https://geth.ethereum.org/docs/rpc/pubsub)
 
-Parity 1.6 has experimental pub/sub support. [More information](https://github.com/paritytech/parity/wiki/JSONRPC-Eth-Pub-Sub-Module)
+- [Hyperledger Besu 1.3](https://besu.hyperledger.org/en/stable/HowTo/Interact/APIs/RPC-PubSub/)
 
-Hyperledger Besu 1.3 has pub/sub support. [More information](https://besu.hyperledger.org/en/stable/HowTo/Interact/APIs/RPC-PubSub/)
+_[Jump ahead to endpoints](/developers/docs/apis/json-rpc/reference)_
 
 ## JavaScript API
 
-To talk to an ethereum node from inside a JavaScript application use the [web3.js](https://github.com/ethereum/web3.js) library, which gives a convenient interface for the RPC methods.
+To talk to an Ethereum node from inside a JavaScript application use the [web3.js](https://github.com/ethereum/web3.js) library, which gives a convenient interface for the RPC methods.
 
 See the [JavaScript API](/developers/docs/apis/javascript) for more details.
 
@@ -130,7 +130,7 @@ The following methods have an extra default block parameter:
 - [eth_getStorageAt](/developers/docs/apis/json-rpc/reference/#eth_getstorageat)
 - [eth_call](/developers/docs/apis/json-rpc/reference/#eth_call)
 
-When requests are made that act on the state of ethereum, the last default block parameter determines the height of the block.
+When requests are made that act on the state of Ethereum, the last default block parameter determines the height of the block.
 
 The following options are possible for the defaultBlock parameter:
 

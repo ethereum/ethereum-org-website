@@ -5,7 +5,11 @@ lang: en
 sidebar: true
 ---
 
-## Gossip Methods
+A handful of core JSON-RPC endpoints require data from the Ethereum network, and fall neatly into three main categories: [Gossip](#gossip_methods), [State](#state_methods), and [History](#history_methods)
+
+_[Jump back to JSON-RPC overview](/developers/docs/apis/json-rpc)_
+
+## Gossip Methods {#gossip_methods}
 
 > These methods track the head of the chain. This is how transactions make their way around the network, find their way into blocks, and how clients find out about new blocks.
 
@@ -76,7 +80,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 
 <Divider />
 
-## State Methods
+## State Methods {#state_methods}
 
 > Methods that report the current state of all the data stored. The "state" is like one big shared piece of RAM, and includes account balances, contract data, and gas estimations.
 
@@ -331,7 +335,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_estimateGas","params":[{see 
 
 <Divider />
 
-## History Methods
+## History Methods {#history_methods}
 
 > Fetches historical records of every block back to genesis. This is like one large append-only file, and includes all block headers, block bodies, uncle blocks, and transaction receipts.
 
@@ -847,7 +851,7 @@ Result see [eth_getBlockByHash](#eth_getblockbyhash)
 
 <Divider />
 
-## Others
+## Others {#others}
 
 ### web3_clientVersion {#web3_clientversion}
 
@@ -1001,7 +1005,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":
 
 ### eth_protocolVersion {#eth_protocolversion}
 
-Returns the current ethereum protocol version.
+Returns the current Ethereum protocol version.
 
 **Parameters**
 
@@ -1009,7 +1013,7 @@ None
 
 **Returns**
 
-`String` - The current ethereum protocol version
+`String` - The current Ethereum protocol version
 
 **Example**
 
