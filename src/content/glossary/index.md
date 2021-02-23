@@ -395,7 +395,7 @@ An Ethereum client that does not store a local copy of the [blockchain](#blockch
 
 Short for "main network," this is the main public Ethereum [blockchain](#blockchain). Real ETH, real value, and real consequences. Also known as layer 1 when discussing [layer 2](#layer-2) scaling solutions. (Also, see [testnet](#testnet))
 
-### Merkle Patricia tree {#merkle-patricia-tree}
+### Merkle Patricia trie {#merkle-patricia-tree}
 
 A data structure used in Ethereum to efficiently store key-value pairs.
 
