@@ -262,7 +262,7 @@ The Eth2 top-level data includes the following:
 - [https://beaconcha.in/](https://beaconcha.in/)
 - [https://beaconscan.com/](https://beaconscan.com/)
 - [https://eth2stats.io/](https://eth2stats.io/medalla-testnet)
-- [https://ethscan.org/](https://ethscan.org/)
+- [https://ethscan.org/](https://ethscan.org/) (fork of beaconcha.in)
 
 ## Further reading {#further-reading}
 
