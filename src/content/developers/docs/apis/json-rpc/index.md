@@ -15,13 +15,13 @@ Publish / subscribe (pub/sub) is a method of using JSON-RPC notifications to sub
 
 _[Jump ahead to endpoints](/developers/docs/apis/json-rpc/reference)_
 
-## JavaScript API
+## JavaScript API {#javascript_api}
 
 To talk to an Ethereum node from inside a JavaScript application use the [web3.js](https://github.com/ethereum/web3.js) library, which gives a convenient interface for the RPC methods.
 
 See the [JavaScript API](/developers/docs/apis/javascript) for more details.
 
-## JSON-RPC Endpoint
+## JSON-RPC Endpoint {#json-rpc_endpoints}
 
 Default JSON-RPC endpoints:
 
@@ -33,7 +33,7 @@ Default JSON-RPC endpoints:
 | Parity           | http://localhost:8545 |
 | Hyperledger Besu | http://localhost:8545 |
 
-### Go
+### Go {#go}
 
 You can start the HTTP JSON-RPC with the `--rpc` flag:
 
@@ -55,7 +55,7 @@ geth --rpc --rpccorsdomain "http://localhost:3000"
 
 The JSON RPC can also be started from the [geth console](https://github.com/ethereum/go-ethereum/wiki/JavaScript-Console) using the `admin.startRPC(addr, port)` command.
 
-### C++
+### C++ {#cpp}
 
 You can start it by running `eth` application with `-j` option:
 
@@ -69,7 +69,7 @@ You can also specify JSON-RPC port (default is 8545):
 ./eth -j --json-rpc-port 8079
 ```
 
-### Python
+### Python {#python}
 
 In python the JSONRPC server is currently started by default and listens on `127.0.0.1:4000`
 
@@ -77,7 +77,7 @@ You can change the port and listen address by giving a config option.
 
 `pyethapp -c jsonrpc.listen_port=4002 -c jsonrpc.listen_host=127.0.0.2 run`
 
-### Java
+### Java {#java}
 
 Run a Besu node on mainnet with the HTTP JSON-RPC service enabled:
 
@@ -87,7 +87,7 @@ besu --rpc-http-enabled
 
 More details can be found in the [documentation](https://besu.hyperledger.org/en/stable/Reference/CLI/CLI-Syntax/#rpc-http-enabled).
 
-## JSON-RPC support
+## JSON-RPC support {#json-rpc_support}
 
 |                | cpp-ethereum | go-ethereum | py-ethereum |  parity  | hyperledger-besu |
 | -------------- | :----------: | :---------: | :---------: | :------: | :--------------: |
@@ -98,7 +98,7 @@ More details can be found in the [documentation](https://besu.hyperledger.org/en
 | IPC            |   &#x2713;   |  &#x2713;   |             | &#x2713; |                  |
 | WS             |              |  &#x2713;   |             | &#x2713; |     &#x2713;     |
 
-## HEX value encoding
+## HEX value encoding {#hex_value_encoding}
 
 At present there are two key datatypes that are passed over JSON: unformatted byte arrays and quantities. Both are passed with a hex encoding, however with different requirements to formatting:
 
@@ -120,7 +120,7 @@ When encoding **UNFORMATTED DATA** (byte arrays, account addresses, hashes, byte
 
 Currently [cpp-ethereum](https://github.com/ethereum/cpp-ethereum),[go-ethereum](https://github.com/ethereum/go-ethereum), and [parity](https://github.com/paritytech/parity) provide JSON-RPC communication over http and IPC (unix socket Linux and OSX/named pipes on Windows). Version 1.4 of go-ethereum, version 1.6 of Parity and version 1.3 of Hyperledger Besu onwards have websocket support.
 
-## The default block parameter
+## The default block parameter {#default_block_parameter}
 
 The following methods have an extra default block parameter:
 
@@ -139,7 +139,7 @@ The following options are possible for the defaultBlock parameter:
 - `String "latest"` - for the latest mined block
 - `String "pending"` - for the pending state/transactions
 
-## Curl Examples Explained
+## Curl Examples Explained {#curl_examples_explained}
 
 The curl options below might return a response where the node complains about the content type, this is because the --data option sets the content type to application/x-www-form-urlencoded . If your node does complain, manually set the header by placing -H "Content-Type: application/json" at the start of the call.
 
