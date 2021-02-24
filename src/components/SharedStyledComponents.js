@@ -446,7 +446,7 @@ export const dropdownIconContainerVariant = {
   closed: { rotate: -90, y: 0 },
 }
 
-// Common Language item card
+// Common styled item card for languages/about
 
 export const CardItem = styled(GatsbyLink)`
   text-decoration: none;
