@@ -3,6 +3,8 @@ import styled from "styled-components"
 import { Mixins } from "../theme"
 import Card from "./Card"
 import Link from "./Link"
+//Imported for LangItem
+import { Link as GatsbyLink } from "gatsby"
 
 export const Page = styled.div`
   display: flex;
@@ -443,3 +445,28 @@ export const dropdownIconContainerVariant = {
   },
   closed: { rotate: -90, y: 0 },
 }
+
+// Common Language item card
+
+export const CardItem = styled(GatsbyLink)`
+  text-decoration: none;
+  margin: 1rem 1rem 1rem 0;
+  padding: 1rem;
+  flex: 1 1 200px;
+  list-style: none;
+  border-radius: 2px;
+  width: 100%;
+  border: 1px solid ${(props) => props.theme.colors.lightBorder};
+  ${"" /* box-shadow: ${(props) => props.theme.colors.tableBoxShadow}; */}
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  color: ${(props) => props.theme.colors.text};
+
+  &:hover {
+    box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
+    border: 1px solid ${(props) => props.theme.colors.black300};
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    width: 100%;
+  }
+`

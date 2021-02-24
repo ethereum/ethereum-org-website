@@ -1,5 +1,4 @@
 import React from "react"
-import { Link as GatsbyLink } from "gatsby"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 
@@ -11,6 +10,7 @@ import { Mixins } from "../theme"
 
 import languageMetadata from "../data/translations"
 import { translateMessageId } from "../utils/translations"
+import { CardItem as LangItem } from "../components/SharedStyledComponents"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
@@ -24,28 +24,6 @@ const LangContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-`
-
-const LangItem = styled(GatsbyLink)`
-  text-decoration: none;
-  margin: 1rem 1rem 1rem 0;
-  padding: 1rem;
-  width: 240px;
-  list-style: none;
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.lightBorder};
-  /* box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); */
-  color: ${(props) => props.theme.colors.text};
-
-  &:hover {
-    box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
-    border: 1px solid ${(props) => props.theme.colors.black300};
-  }
-
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
-  }
 `
 
 const LangTitle = styled.div`

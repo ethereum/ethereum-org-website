@@ -9,34 +9,15 @@ import { FakeLinkExternal, H2, H3 } from "./SharedStyledComponents"
 
 import { translateMessageId } from "../utils/translations"
 
+//Import for Item / Card
+import { CardItem as Item } from "./SharedStyledComponents"
+
 const Section = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-top: 2rem;
   margin-bottom: 2rem;
   width: 100%;
-`
-
-const Item = styled(Link)`
-  text-decoration: none;
-  margin: 1rem 1rem 1rem 0;
-  padding: 1rem;
-  width: 240px;
-  list-style: none;
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.lightBorder};
-  /*   box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
- */ /* transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); */
-  color: ${(props) => props.theme.colors.text};
-
-  &:hover {
-    box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
-    border: 1px solid ${(props) => props.theme.colors.black300};
-  }
-
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
-  }
 `
 
 const ErrorMsg = styled.div`
