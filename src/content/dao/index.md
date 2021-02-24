@@ -21,42 +21,58 @@ Think of them like an internet-native business that's collectively owned and man
 
 There's no CEO who can authorise spending based on their own whims and no chance of a dodgy CFO manipulating the books. Everything is out in the open and the rules around spending are baked into the DAO via its code.
 
-### Examples
+## Why do we need DAOs?
+
+Starting an organisation with someone that involves funding and money requires a lot of trust in the people you're working with. But it’s hard to trust someone you’ve only ever interacted with on the internet. With DAOs you don’t need to trust anyone else in the group, just the DAO’s code, which is 100% transparent and verifiable by anyone.
+
+This opens up so many new opportunities for global collaboration and coordination.
+
+### Opportunity examples
 
 To help this make more sense, here's a few examples of how you could use a DAO:
 
-- A charity – you can accept membership and donations from anyone and the group can decide how they to spend donations.
+- A charity – you can accept membership and donations from anyone in the world and the group can decide how they to spend donations.
 - A freelancer network – you could create a network of contractors who pool their funds for office spaces and software subscriptions.
 - Ventures and grants – you could create a venture fund that pools investment capital and votes on ventures to back. Repaid money could later be redistributed amongst DAO-members.
 
-### Why do we need DAOs?
+## DAO membership
 
-- Starting an organisation with someone that involves funding requires a lot of trust. It's hard to trust someone you've only ever interacted with on the internet. With DAOs you don't need to trust the other individuals in the group, just the DAO's rules.
+### Token-based membership
 
----
+Usually fully permissionless, depending on the token used. Mostly these governance tokens can be traded for permissionlessly on a decentralized exchange. Others must be earned through providing liquidity or some other ‘proof of work’. Either way, simply holding the token grants access to voting.
 
-?DO WE NEED TO GO INTO THIS LEVEL OF DETAIL?
-governance-token based DAOs
+_Typically used to govern broad decentralized protocols and/or tokens themselves._
 
-- I have tokens that give me voting power and I can trade these on the open market
-  shares-based DAOs
-- I have a token that represents my share in the group funds. I can redeem my funds using the token.
+#### A famous example
 
----
+[MakerDAO](https://makerdao.com) – MakerDAO's token MKR is widely available on decentralized exchanges. So anyone can buy into having voting power on the Maker protocol's future.
+
+### Share-based membership
+
+Share-based DAOs are more permissioned, but still quite open. Any prospective members can submit a proposal to join the DAO, usually offering tribute of some value in the form of tokens or work. Shares represent direct voting power and ownership. Members can exit at anytime with their proportionate share of the treasury.
+
+_Typically used for more closer-knit, human-centric organizations like charities, worker collectives, and investment clubs. Can also govern protocols and tokens as well._
+
+#### A famous example
+
+[MolochDAO](http://molochdao.com/) – MolochDAO is focussed on funding Ethereum projects. They require a proposal for membership so the group can assess whether you have the necessary expertise and capital to make informed judgments about potential grantees. You can't just buy access to the DAO on the open market.
 
 ## How do DAOs work?
 
 The backbone of a DAO is its smart contract. The contract defines the rules of the organisation and holds the group's treasury. Once the contract is live on Ethereum, no one can change the rules except by a vote. If anyone tries to do something that's not covered by the rules and logic in the code, it will fail. And because the treasury is defined by the smart contract too that means no one can spend the money without the group's approval either. This means that DAOs don't need a central authority. Instead the group makes decisions collectively and payments are authorised automatically when votes pass.
 
-This is possible because smart contracts are basically untamperable when live on Ethereum. Code can't be tweaked without people noticing because everything is public.
+This is possible because smart contracts are tamper-proof once they go live on Ethereum. You can't just edit the code (the DAOs rules) without people noticing because everything is public.
+
+<DocLink to="/developers/docs/smart-contracts/" title="More on smart contracts" />
 
 ## Ethereum and DAOs
 
 Ethereum is the perfect foundation for DAOs for a number of reasons:
 
-- Smart contract code can't be modified once live, even by its owners. This allows the DAO to run by the rules it was programmed with.
+- Ethereum’s own consensus is distributed and established enough for organizations to trust the network.
+- Smart contract code can’t be modified once live, even by its owners. This allows the DAO to run by the rules it was programmed with.
 - Smart contracts can send/receive funds. Without this you'd need a trusted intermediary to manage group funds.
--
+- The Ethereum community has proven to be more collaborative than competitive, allowing for best practices and support systems to emerge quickly.
 
 ## Join / start a DAO
 
@@ -69,8 +85,12 @@ Ethereum is the perfect foundation for DAOs for a number of reasons:
 
 - [Summon a DAO with DAOHaus](https://app.daohaus.club/summon)
 - [Create an Aragon-powered DAO](https://aragon.org/product)
+- [Start a colony](https://colony.io/)
+- [Build a DAO with DAOstack](https://daostack.io/)
 
 ## Futher reading
 
-- [What's a DAO?](https://aragon.org/dao) – Aragon
--
+- [What's a DAO?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [House of DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
+- [What is a DAO and what is it for?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
+- [How to Start a DAO-Powered Digital Community](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
