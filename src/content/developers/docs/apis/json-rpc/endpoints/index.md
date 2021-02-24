@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-A handful of core JSON-RPC endpoints require data from the Ethereum network, and fall neatly into three main categories: [Gossip](#gossip_endpoints), [State](#state_endpoints), and [History](#history_endpoints)
+A handful of core JSON-RPC endpoints require data from the Ethereum network, and fall neatly into three main categories: [Gossip](#gossip_endpoints), [State](#state_endpoints), and [History](#history_endpoints). These are listed first, with [others](#others) below.
 
 _[Jump back to JSON-RPC overview](/developers/docs/apis/json-rpc)_
 
