@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useRef, useState, useEffect } from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
@@ -347,6 +347,7 @@ const GAMING = "gaming"
 const DappsPage = ({ data, location }) => {
   const intl = useIntl()
   const [selectedCategory, setCategory] = useState(FINANCE)
+  const explore = useRef(null)
 
   useEffect(() => {
     // Fetch category on load
@@ -361,6 +362,14 @@ const DappsPage = ({ data, location }) => {
         ? selectedCategory
         : FINANCE
     )
+    if (location.hash.length > 0 && location.hash[0] === "#") {
+      navigate(location.hash)
+    } else if (window && queryParamCategories && explore.current) {
+      window.scrollTo({
+        top: explore.current.offsetTop - 76,
+        behavior: "smooth",
+      })
+    }
   }, [location.search])
 
   const updatePath = (selectedCategory, isMobile) => {
@@ -1154,7 +1163,7 @@ const DappsPage = ({ data, location }) => {
           })}
         </StyledCardGrid>
       </Content>
-      <FullWidthContainer>
+      <FullWidthContainer ref={explore}>
         <H2 id="explore">
           <Translation id="page-dapps-explore-dapps-title" />
         </H2>
