@@ -1,33 +1,31 @@
 ---
-title: Ethereum Optimistic Rollup Community Grants
+title: Ethereum Rollup Community Grants
 description: Grants to build a rollup ecosystem
 lang: en
 sidebar: true
 ---
 
-# Optimistic Rollup Community Grants {#rollup-community-grants}
+# Rollup Community Grants {#rollup-community-grants}
 
-_The Ethereum Foundation is sponsoring a wave of optimistic rollup community grants. Proposals are due **[date]**. Here are all the details you need._
+_The Ethereum Foundation is sponsoring a wave of rollup community grants. Proposals are due April 16th 2021. Here are all the details you need._
 
 <Divider />
 
 Calling all those interested in building up the Ethereum rollup community!
 
-The Ethereum ecosystem is likely to be all-in on rollups as a scaling strategy for the near and mid-term future (see Vitalik’s rollup centric ethereum [roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698/50?u=haoyuathz)). A variety of optimistic and zk-rollups are already in production or will go live in the near future.
+The Ethereum ecosystem is likely to be all-in on rollups as a scaling strategy for the near and mid-term future (see Vitalik’s rollup centric ethereum [roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698/50?u=haoyuathz)). A variety of optimistic and zk-rollups are already in production or will go live in the near future.
 
-As gas prices are soaring the most promising near term solution to getting a scalable EVM like developer experience is optimistic rollups such as [Optimism](https://optimism.io/) and [Arbitrum](https://offchainlabs.com/). Therefore, while we are equally excited about the promise of other rollups, we want to focus this round on EVM optimistic rollup.
+As gas prices are soaring the most promising near term solution to getting a scalable EVM like developer experience is optimistic rollups. Therefore, in this round our [wishlist](https://ethereum.org/en/community/rollup-grants/#whishlist) emphasizes evm-optimistic rollups, however dont let this restrict your creativity we are accepting applications for all types of rollups.
 
-The goal is to grow the rollup community and help to kickstart a flourishing ecosystem. We want to make it easy for dapps to live on multiple EVM rollups and have user and developer experience for rollups on par with mainnet or better. Social recovery wallets could be made the default and it should be easy for users to move from one rollup to another even during prolonged periods of very high gas prices.
+The goal is to grow the rollup community and help to kickstart a flourishing ecosystem. We want to make it easy for dapps to live on multiple rollups and have user and developer experience for rollups on par with mainnet or better. Social recovery wallets could be made the default and it should be easy for users to move from one rollup to another even during prolonged periods of very high gas prices.
 
-## Wait, what are optimistic rollups? {#what-are-optimistic-rollups}
+## Wait, what are rollups? {#what-are-rollups}
 
 Here some links to dive deeper:
 
 - Get started with our [L2 scaling docs](https://ethereum.org/en/developers/docs/layer-2-scaling/#rollups)
 - Learn the basics on [Ethhub](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/)
 - [An Incomplete Guide to Rollups](https://vitalik.ca/general/2021/01/05/rollup.html) by Vitalik.
-- [(Almost) Everything you need to know about Optimistic Rollup](https://research.paradigm.xyz/rollups) by Georgios Konstantopoulos.
-- [How does Optimism's Rollup really work?](https://research.paradigm.xyz/optimism) by Georgios Konstantopoulos.
 
 ## Submit proposal {#submit-proposal}
 
@@ -46,7 +44,7 @@ Grants are decided on a case-by-case basis and you may enter more than one propo
 
 ### Deadline {#deadline}
 
-The deadline for proposals is any time the day of **[date]**. We will follow-up with you about your submission by email.
+The deadline for proposals is any time the day of April 16th 2021. We will follow-up with you about your submission by email.
 
 ### Requirements {#requirements}
 
@@ -144,7 +142,7 @@ title="Adoption">
    <p>For example:</p>
 
    <ul>
-    <li>Create a game that encourages people to try out optimistic rollups. Extra points if it involves a social recovery wallet or a wallet on multiple rollups.
+    <li>Create a game that encourages people to try out rollups. Extra points if it involves a social recovery wallet or a wallet on multiple rollups.
     </li>
     <li>Bridge assets between mainnet and multiple optimistic rollups.</li>
   </ul>
@@ -152,7 +150,7 @@ title="Adoption">
 
 <ExpandableCard
 contentPreview="
-The optimistic rollup space is very young, it is a good opportunity to establish standards."
+The rollup space is very young, it is a good opportunity to establish standards."
 title="Standards">
 
    <p>For example:</p>
@@ -188,7 +186,7 @@ A lot of the design space that has not yet been explored. Learn from what has be
 
 ## Next steps and support {#Next-steps-and-support}
 
-User this form [!!Insert link] to submit your proposal.
+User this form [!!Insert link!!] to submit your proposal.
 
 For any general support questions about your submission, please email rollupgrants@ethereum.org.
 
@@ -220,7 +218,7 @@ Any stage of development!
 
 If you have an idea or project that benefits the rollup community, we want to hear about it! The goal is to support regular, consistent work that pushes forward the rollup ecosystem.
 
-Optimistic Rollup Community Grants is an open call for proposals. Which means, it's expected that some ideas or projects won't be fully shipped before the deadline, but instead require ongoing efforts.
+Optmistic Rollup Community Grants is an open call for proposals. Which means, it's expected that some ideas or projects won't be fully shipped before the deadline, but instead require ongoing efforts.
 
 ### What if I miss the deadline? {#what-if-i-miss-deadline}
 
