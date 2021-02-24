@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
+import _ from "lodash"
 
 import ActionCard from "./ActionCard"
 import data from "../data/contributors.json"
@@ -35,11 +36,11 @@ const Contributors = () => {
   const [contributorsList, setContributorsList] = useState([])
 
   useEffect(() => {
-    const list = data.contributors.map((item) => {
-      item.randomNumber = Math.floor(Math.random() * data.contributors.length)
-      return item
-    })
-    list.sort((a, b) => a.randomNumber - b.randomNumber)
+    const list = _.shuffle(
+      data.contributors.map((item) => {
+        return item
+      })
+    )
     setContributorsList(list)
   }, [])
 
