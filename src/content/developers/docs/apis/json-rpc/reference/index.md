@@ -5,11 +5,11 @@ lang: en
 sidebar: true
 ---
 
-A handful of core JSON-RPC endpoints require data from the Ethereum network, and fall neatly into three main categories: [Gossip](#gossip_methods), [State](#state_methods), and [History](#history_methods)
+A handful of core JSON-RPC endpoints require data from the Ethereum network, and fall neatly into three main categories: [Gossip](#gossip_endpoints), [State](#state_endpoints), and [History](#history_endpoints)
 
 _[Jump back to JSON-RPC overview](/developers/docs/apis/json-rpc)_
 
-## Gossip Methods {#gossip_methods}
+## Gossip Endpoints {#gossip_endpoints}
 
 > These methods track the head of the chain. This is how transactions make their way around the network, find their way into blocks, and how clients find out about new blocks.
 
@@ -80,7 +80,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 
 <Divider />
 
-## State Methods {#state_methods}
+## State Endpoints {#state_methods}
 
 > Methods that report the current state of all the data stored. The "state" is like one big shared piece of RAM, and includes account balances, contract data, and gas estimations.
 
@@ -335,7 +335,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_estimateGas","params":[{see 
 
 <Divider />
 
-## History Methods {#history_methods}
+## History Endpoints {#history_endpoints}
 
 > Fetches historical records of every block back to genesis. This is like one large append-only file, and includes all block headers, block bodies, uncle blocks, and transaction receipts.
 
