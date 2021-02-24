@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-import { Link as GatsbyLink } from "gatsby"
 import styled from "styled-components"
 import axios from "axios"
 import { FakeLinkExternal } from "./SharedStyledComponents"
