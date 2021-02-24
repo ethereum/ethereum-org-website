@@ -1,5 +1,5 @@
 ---
-title: JSON RPC API Methods Reference
+title: JSON RPC API Endpoints
 description:
 lang: en
 sidebar: true
