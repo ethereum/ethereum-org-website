@@ -25,7 +25,7 @@ Publish / subscribe (pub/sub) is a method of using JSON-RPC notifications to sub
 
 ## JavaScript API {#javascript_api}
 
-To talk to an Ethereum node from inside a JavaScript application use the [web3.js](https://github.com/ethereum/web3.js) library, which gives a convenient interface for the RPC methods.
+To talk to an Ethereum node from inside a JavaScript application use the [web3.js](https://github.com/ChainSafe/web3.js) library, which gives a convenient interface for the RPC methods.
 
 See the [JavaScript API](/developers/docs/apis/javascript) for more details.
 
@@ -61,7 +61,7 @@ If accessing the RPC from a browser, CORS will need to be enabled with the appro
 geth --rpc --rpccorsdomain "http://localhost:3000"
 ```
 
-The JSON RPC can also be started from the [geth console](https://github.com/ethereum/go-ethereum/wiki/JavaScript-Console) using the `admin.startRPC(addr, port)` command.
+The JSON RPC can also be started from the [geth console](https://geth.ethereum.org/docs/interface/javascript-console) using the `admin.startRPC(addr, port)` command.
 
 ### C++ {#cpp}
 
@@ -126,17 +126,17 @@ When encoding **UNFORMATTED DATA** (byte arrays, account addresses, hashes, byte
 - WRONG: 0xf0f0f (must be even number of digits)
 - WRONG: 004200 (must be prefixed 0x)
 
-Currently [cpp-ethereum](https://github.com/ethereum/cpp-ethereum),[go-ethereum](https://github.com/ethereum/go-ethereum), and [parity](https://github.com/paritytech/parity) provide JSON-RPC communication over http and IPC (unix socket Linux and OSX/named pipes on Windows). Version 1.4 of go-ethereum, version 1.6 of Parity and version 1.3 of Hyperledger Besu onwards have websocket support.
+Currently [aleth](https://github.com/ethereum/aleth), [go-ethereum](https://github.com/ethereum/go-ethereum), and [parity](https://github.com/paritytech/parity) provide JSON-RPC communication over http and IPC (unix socket Linux and OSX/named pipes on Windows). Version 1.4 of go-ethereum, version 1.6 of Parity and version 1.3 of Hyperledger Besu onwards have websocket support.
 
 ## The default block parameter {#default_block_parameter}
 
 The following methods have an extra default block parameter:
 
-- [eth_getBalance](/developers/docs/apis/json-rpc/reference/#eth_getbalance)
-- [eth_getCode](/developers/docs/apis/json-rpc/reference/#eth_getcode)
-- [eth_getTransactionCount](/developers/docs/apis/json-rpc/reference/#eth_gettransactioncount)
-- [eth_getStorageAt](/developers/docs/apis/json-rpc/reference/#eth_getstorageat)
-- [eth_call](/developers/docs/apis/json-rpc/reference/#eth_call)
+- [eth_getBalance](/developers/docs/apis/json-rpc/endpoints/#eth_getbalance)
+- [eth_getCode](/developers/docs/apis/json-rpc/endpoints/#eth_getcode)
+- [eth_getTransactionCount](/developers/docs/apis/json-rpc/endpoints/#eth_gettransactioncount)
+- [eth_getStorageAt](/developers/docs/apis/json-rpc/endpoints/#eth_getstorageat)
+- [eth_call](/developers/docs/apis/json-rpc/endpoints/#eth_call)
 
 When requests are made that act on the state of Ethereum, the last default block parameter determines the height of the block.
 
