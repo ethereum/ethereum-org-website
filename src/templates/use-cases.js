@@ -12,14 +12,10 @@ import Card from "../components/Card"
 import DocLink from "../components/DocLink"
 import Icon from "../components/Icon"
 import Contributors from "../components/Contributors"
-import DismissibleCard from "../components/DismissibleCard"
 import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
 import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
-import Eth2BeaconChainActions from "../components/Eth2BeaconChainActions"
-import Eth2ShardChainsList from "../components/Eth2ShardChainsList"
-import Eth2DockingList from "../components/Eth2DockingList"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
@@ -217,9 +213,6 @@ const components = {
   TranslationsInProgress,
   Emoji,
   UpgradeStatus,
-  Eth2BeaconChainActions,
-  Eth2ShardChainsList,
-  Eth2DockingList,
   DocLink,
 }
 
@@ -413,15 +406,6 @@ const UseCasePage = ({ data, data: { mdx } }) => {
               maxDepth={mdx.frontmatter.sidebarDepth}
             />
           )}
-          <DismissibleCard storageKey="dismissed-eth2-psa">
-            <Emoji text=":cheering_megaphone:" size={5} />
-            <h2>
-              <Translation id="eth2-service-announcement" />
-            </h2>
-            <p>
-              <Translation id="eth2-no-action-needed" />
-            </p>
-          </DismissibleCard>
         </InfoColumn>
         <ContentContainer id="content">
           {/* <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} /> */}
