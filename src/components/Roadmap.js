@@ -9,7 +9,6 @@ import { FakeLinkExternal, H2, H3 } from "./SharedStyledComponents"
 
 import { translateMessageId } from "../utils/translations"
 
-//Import for Item / Card
 import { CardItem as Item } from "./SharedStyledComponents"
 
 const Section = styled.div`

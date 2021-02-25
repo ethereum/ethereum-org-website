@@ -3,12 +3,15 @@ import styled from "styled-components"
 import axios from "axios"
 import { FakeLinkExternal } from "./SharedStyledComponents"
 import Translation from "./Translation"
-import { CardItem as LangItem } from "./SharedStyledComponents"
+import { CardItem } from "./SharedStyledComponents"
 
 const LangContainer = styled.div`
   margin-bottom: 2rem;
   display: flex;
   flex-wrap: wrap;
+`
+const LangItem = styled(CardItem)`
+  flex: 1 1 200px;
 `
 
 const TranslationsInProgress = () => {
