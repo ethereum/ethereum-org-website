@@ -45,11 +45,8 @@ const HeroImg = styled(Img)`
 `
 
 const Header = styled.h2`
-  font-style: normal;
-  font-weight: normal;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 48px;
-  line-height: 120%;
   max-width: 100%;
   margin-bottom: 0rem;
   color: ${(props) => props.theme.colors.text00};
@@ -59,9 +56,10 @@ const Header = styled.h2`
 `
 
 const Title = styled.h1`
-  margin: 0 0 1.5rem;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: -2rem;
   color: ${(props) => props.theme.colors.text300};
 `
 

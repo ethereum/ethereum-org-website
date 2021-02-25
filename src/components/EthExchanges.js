@@ -144,14 +144,6 @@ const Intro = styled.p`
   text-align: center;
 `
 
-const Header = styled.h2`
-  font-weight: normal;
-  font-size: 2rem;
-  line-height: 140%;
-  text-align: center;
-  margin-bottom: 1rem;
-`
-
 const Disclaimer = styled.p`
   width: 100%;
   max-width: 876px;
@@ -521,9 +513,9 @@ const EthExchanges = () => {
 
   return (
     <Container>
-      <Header>
+      <h2>
         <Translation id="page-get-eth-exchanges-header" />
-      </Header>
+      </h2>
       <Intro>
         <Translation id="page-get-eth-exchanges-intro" />
       </Intro>

@@ -37,10 +37,12 @@ const Slogan = styled.p`
 `
 
 const Title = styled.h1`
-  margin: 0 0 1.5rem;
   font-size: 14px;
   line-height: 140%;
   letter-spacing: 0.04em;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  margin-top: 0;
   text-transform: uppercase;
   color: ${(props) => props.theme.colors.textTableOfContents};
 `

@@ -51,6 +51,10 @@ const ImageContainer = styled.div`
   justify-content: center;
 `
 
+const StyledButtonSecondary = styled(ButtonSecondary)`
+  margin-top: 0;
+`
+
 const StyledGhostCard = styled(GhostCard)`
   .ghost-card-base {
     display: flex;
@@ -105,6 +109,7 @@ const TwoColumnContent = styled.div`
 const H2 = styled.h2`
   font-size: 24px;
   font-style: normal;
+  margin-top: 0.5rem;
   font-weight: 700;
   line-height: 22px;
   letter-spacing: 0px;
@@ -243,6 +248,7 @@ const H3 = styled.h3`
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
   a {
     display: none;
   }
@@ -337,6 +343,7 @@ const StyledCallout = styled(Callout)`
 
 const StyledCardGrid = styled(CardGrid)`
   margin-bottom: 4rem;
+  margin-top: 4rem;
 `
 
 const FINANCE = "finance"
@@ -1097,9 +1104,9 @@ const DappsPage = ({ data, location }) => {
                   <Translation id="page-dapps-get-some-eth-description" />
                 </p>
               </div>
-              <ButtonSecondary>
+              <StyledButtonSecondary>
                 <Translation id="get-eth" />
-              </ButtonSecondary>
+              </StyledButtonSecondary>
             </StepBox>
             <StepBox to="/wallets/find-wallet/">
               <div>
@@ -1110,9 +1117,9 @@ const DappsPage = ({ data, location }) => {
                   <Translation id="page-dapps-set-up-a-wallet-description" />
                 </p>
               </div>
-              <ButtonSecondary>
+              <StyledButtonSecondary>
                 <Translation id="page-dapps-set-up-a-wallet-button" />
-              </ButtonSecondary>
+              </StyledButtonSecondary>
             </StepBox>
             <StepBox to="#explore">
               <div>
@@ -1155,9 +1162,9 @@ const DappsPage = ({ data, location }) => {
         </StyledCardGrid>
       </Content>
       <FullWidthContainer>
-        <H2 id="explore">
+        <h2 id="explore">
           <Translation id="page-dapps-explore-dapps-title" />
-        </H2>
+        </h2>
         <CenterText>
           <Translation id="page-dapps-explore-dapps-description" />
         </CenterText>
@@ -1460,12 +1467,12 @@ const DappsPage = ({ data, location }) => {
           <CenterDivider />
           {categories[selectedCategory].benefits && (
             <About>
-              <H2>
+              <h2>
                 <Translation id="page-dapps-magic-title-1" />{" "}
                 <Emoji size={"1rem"} text=":sparkles:" />{" "}
                 <Translation id="page-dapps-magic-title-2" />{" "}
                 {categories[selectedCategory].benefitsTitle}
-              </H2>
+              </h2>
               <p>{categories[selectedCategory.benefitsDescription]}</p>
               <CardContainer>
                 {categories[selectedCategory].benefits.map((art, idx) => {
@@ -1511,9 +1518,9 @@ const DappsPage = ({ data, location }) => {
           </StyledGhostCard>
         </ImageContainer>
         <Box>
-          <H2>
+          <h2>
             <Translation id="page-dapps-magic-behind-dapps-title" />
-          </H2>
+          </h2>
           <BoxText>
             <Translation id="page-dapps-magic-behind-dapps-description" />
           </BoxText>
@@ -1524,9 +1531,9 @@ const DappsPage = ({ data, location }) => {
         <BoxGrid items={features} />
         <Row>
           <LeftColumn>
-            <H2>
+            <h2>
               <Translation id="page-dapps-how-dapps-work-title" />
-            </H2>
+            </h2>
             <p>
               <Translation id="page-dapps-how-dapps-work-p1" />
             </p>

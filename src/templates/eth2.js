@@ -222,6 +222,7 @@ const components = {
 const Title = styled.h1`
   font-size: 40px;
   font-weight: 700;
+  margin-top: 0rem;
 `
 
 const SummaryPoint = styled.li`

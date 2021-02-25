@@ -48,6 +48,7 @@ const Description = styled.p`
   font-size: 20px;
   width: 90%;
   line-height: 140%;
+  margin-bottom: 2rem;
   color: ${(props) => props.theme.colors.text200};
 `
 
@@ -64,8 +65,7 @@ const Image = styled(Img)`
 `
 
 const H2 = styled.h2`
-  margin: 0 0 1.5rem;
-  font-size: 1.625rem;
+  margin-top: 0rem;
 `
 
 const CalloutBanner = ({

@@ -156,7 +156,7 @@ const CalloutCardContainer = styled(CardContainer)`
 `
 
 const H2 = styled.h2`
-  margin: 0;
+  /* margin: 0; */
 `
 
 const cards = [

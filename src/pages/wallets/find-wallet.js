@@ -13,18 +13,7 @@ import InfoBanner from "../../components/InfoBanner"
 import PageMetadata from "../../components/PageMetadata"
 import WalletCompare from "../../components/WalletCompare"
 import { Divider, Page } from "../../components/SharedStyledComponents"
-
-// TODO move to shared?
-const Title = styled.h1`
-  font-weight: normal;
-  font-size: 3rem;
-  line-height: 140%;
-  text-align: center;
-  color: ${(props) => props.theme.colors.text};
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 2rem;
-  }
-`
+import { BsTypeH1 } from "react-icons/bs"
 
 const Subtitle = styled.div`
   font-size: 20px;
@@ -116,9 +105,9 @@ const FindWalletPage = ({ location, data }) => {
         />
         <Header>
           <Breadcrumbs slug={location.pathname} />
-          <Title>
+          <h1>
             <Translation id="page-find-wallet-title" />
-          </Title>
+          </h1>
           <Subtitle>
             <Translation id="page-find-wallet-description" />
           </Subtitle>
