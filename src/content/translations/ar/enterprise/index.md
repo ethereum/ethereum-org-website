@@ -74,7 +74,7 @@ sidebar: true
 
 ### الأدوات {#tooling}
 
-- [Alethio](https://aleth.io/) _منصة لتحليل البيانات بواسطة إيثريوم_
+- [Alethio](https://explorer.aleth.io/) _منصة لتحليل البيانات بواسطة إيثريوم_
 - [Treum](https://treum.io/) _جلب الشفافية وقابلية التتبع وقابلية الإتجار لسلالس الإمداد، باستخدام تقنية سلسلة الكتل_
 - [Truffle Suite](https://trufflesuite.com) _مجموعة تطوير سلسلة الكتل (Truffle, Ganache, Drizzle)_
 

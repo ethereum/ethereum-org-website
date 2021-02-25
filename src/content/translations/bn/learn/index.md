@@ -20,7 +20,7 @@ sidebar: true
 
 - [EthHub](https://docs.ethhub.io) _ইথেরিয়াম সম্পর্কে বিস্তৃত জ্ঞানের ভান্ডার।_
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _ইথেরিয়াম সম্পর্কে একটি শিক্ষামূলক সম্পদ যা শিক্ষানবিশদের লক্ষ্যে প্রস্তুত করা হয়েছে_
-- [Ethereum.wiki](https://ethereum.wiki) _ইথেরিয়ামের প্রযুক্তি সম্পর্কে একটি সম্প্রদায়-নির্মিত উইকি।_
+- [Ethereum.wiki](https://eth.wiki) _ইথেরিয়ামের প্রযুক্তি সম্পর্কে একটি সম্প্রদায়-নির্মিত উইকি।_
 - [Kauri](https://kauri.io) _ইথেরিয়াম এবং সম্পর্কিত প্রকল্পগুলির জন্য প্রযুক্তিগত নিবন্ধ এবং টিউটোরিয়াল।_
 - [Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _ইথেরিয়াম সম্পর্কে ভিডিও এবং আলোচনা।_
 - [Week in Ethereum News](https://weekinethereumnews.com/) _ একটি সাপ্তাহিক নিউজলেটার যা ইকোসিস্টেম ব্যাপী প্রধান উন্নয়নগুলি সম্বন্ধে আলোচনা করে_

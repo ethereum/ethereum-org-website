@@ -11,7 +11,7 @@ sidebar: true
 
 Our principles inform the look and feel of the site and the content that's on it.
 
-You should read these before you [contribute to ethereum.org](/contributing/).
+You should read these before you [contribute to ethereum.org](/en/contributing/).
 
 ## What are design principles? {#ways-to-contribute}
 

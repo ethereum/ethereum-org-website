@@ -2743,6 +2743,174 @@
         "bug",
         "content"
       ]
+    },
+    {
+      "login": "colinsteil",
+      "name": "Colin Steil",
+      "avatar_url": "https://avatars.githubusercontent.com/u/28073950?v=4",
+      "profile": "http://cartesi.io",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "MonarthS",
+      "name": "MonarthS",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40236229?v=4",
+      "profile": "https://github.com/MonarthS",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "adamdry",
+      "name": "Adam Dry",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7360709?v=4",
+      "profile": "https://github.com/adamdry",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "seishun",
+      "name": "Nikolai Vavilov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/988441?v=4",
+      "profile": "https://github.com/seishun",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "okdonga",
+      "name": "Katie ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12257412?v=4",
+      "profile": "https://github.com/okdonga",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "comeToThinkOfEth",
+      "name": "comeToThinkOfEth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/78873209?v=4",
+      "profile": "https://github.com/comeToThinkOfEth",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "catsnackattack",
+      "name": "catsnackattack",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36013218?v=4",
+      "profile": "https://github.com/catsnackattack",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "maurycyp",
+      "name": "Maurycy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1296842?v=4",
+      "profile": "https://github.com/maurycyp",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "ipapandinas",
+      "name": "Igor Papandinas",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26460174?v=4",
+      "profile": "https://github.com/ipapandinas",
+      "contributions": [
+        "bug",
+        "code"
+      ]
+    },
+    {
+      "login": "tahiralvi",
+      "name": "Tahir Alvi ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1356887?v=4",
+      "profile": "https://stackoverflow.com/users/355191/tahir-alvi",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "amirmehdi",
+      "name": "amirmehdi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24705793?v=4",
+      "profile": "https://github.com/amirmehdi",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "Dadybayo",
+      "name": "Dan Dadybaev",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33674013?v=4",
+      "profile": "https://github.com/Dadybayo",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "finleyexp",
+      "name": "Finley",
+      "avatar_url": "https://avatars.githubusercontent.com/u/18469214?v=4",
+      "profile": "https://www.pir8aye.net",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "nobd",
+      "name": "nobd",
+      "avatar_url": "https://avatars.githubusercontent.com/u/51967351?v=4",
+      "profile": "https://github.com/nobd",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "AlexSSD7",
+      "name": "Alexander Sadovskyi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43043344?v=4",
+      "profile": "https://github.com/AlexSSD7",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "EthanSK",
+      "name": "Ethan Sarif-Kattan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13756744?v=4",
+      "profile": "https://www.etggames.com/",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "cj-technical",
+      "name": "C.J. Kozarski",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58790577?v=4",
+      "profile": "https://github.com/cj-technical",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "yakkomajuri",
+      "name": "Yakko Majuri",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38760734?v=4",
+      "profile": "http://yakko.tech",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,

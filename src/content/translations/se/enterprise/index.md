@@ -74,7 +74,7 @@ Offentliga och privata Ethereum-nätverk kan behöva specifika funktioner som kr
 
 ### Verktyg {#tooling}
 
-- [Alethio](https://aleth.io/) _Ethereum Data Analytics Platform_
+- [Alethio](https://explorer.aleth.io/) _Ethereum Data Analytics Platform_
 - [Treum](https://treum.io/) _ger transparens, spårbarhet och handelsförmåga till försörjningskedjor, med hjälp av blockchain-teknik_
 - [Truffle Suite](https://trufflesuite.com) _en utvecklingssvit för blockchain (Truffle, Ganache, Drizzle)_
 

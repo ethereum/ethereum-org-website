@@ -657,6 +657,9 @@ export const query = graphql`
     eql: file(relativePath: { eq: "wallets/eql.png" }) {
       ...listImage
     }
+    fortmatic: file(relativePath: { eq: "wallets/fortmatic.png" }) {
+      ...listImage
+    }
     gnosis: file(relativePath: { eq: "wallets/gnosis.png" }) {
       ...listImage
     }
@@ -712,6 +715,9 @@ export const query = graphql`
       ...listImage
     }
     trust: file(relativePath: { eq: "wallets/trust.png" }) {
+      ...listImage
+    }
+    unstoppable: file(relativePath: { eq: "wallets/unstoppable.png" }) {
       ...listImage
     }
     zengo: file(relativePath: { eq: "wallets/zengo.png" }) {

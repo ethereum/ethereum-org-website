@@ -31,7 +31,7 @@ This doesn't mean that all services need to be turned into a dapp. These example
 Web3 has some limitations right now:
 
 - Scalability – transactions are slower on web3 because they're decentralized. Changes to state, like a payment, need to be processed by a miner and propagated throughout the network.
-- UX – interacting with web3 applicactions can require extra steps, software, and education. This can be a hurdle to adoption.
+- UX – interacting with web3 applications can require extra steps, software, and education. This can be a hurdle to adoption.
 - Cost – most successful dapps put very small portions of their code on the blockchain as it's expensive.
 
 ## Centralization vs decentralization {#centralization-vs-decentralization}

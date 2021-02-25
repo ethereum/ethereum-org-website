@@ -321,6 +321,10 @@ The second development stage of Ethereum, launched in March 2016 at block 1,150,
 
 ## I {#section-i}
 
+### index {#index}
+
+A network structure meant to optimize the querying of information from across the [blockchain](#blockchain) by providing an efficient path to its storage source.
+
 ### Inter-exchange Client Address Protocol (ICAP) {#icap}
 
 An Ethereum address encoding that is partly compatible with the International Bank Account Number (IBAN) encoding, offering a versatile, checksummed, and interoperable encoding for Ethereum addresses. ICAP addresses use a new IBAN pseudo-country code- XE, standing for "eXtended Ethereum," as used in nonjurisdictional currencies (e.g., XBT, XRP, XCP).
@@ -395,7 +399,7 @@ An Ethereum client that does not store a local copy of the [blockchain](#blockch
 
 Short for "main network," this is the main public Ethereum [blockchain](#blockchain). Real ETH, real value, and real consequences. Also known as layer 1 when discussing [layer 2](#layer-2) scaling solutions. (Also, see [testnet](#testnet))
 
-### Merkle Patricia tree {#merkle-patricia-tree}
+### Merkle Patricia trie {#merkle-patricia-tree}
 
 A data structure used in Ethereum to efficiently store key-value pairs.
 
@@ -541,9 +545,9 @@ A [proof-of-stake](#proof-of-stake) chain that is coordinated by the [Beacon Cha
 
 <DocLink to="/eth2/shard-chains" title="Shard chains" />
 
-### Sidechain {#sidechain}
+### sidechain {#sidechain}
 
-A scaling solution that uses a separate chain with different, often faster, [consensus rules]{#consensus-rules}. A bridge is needed to connect these sidechains to [mainnet](#mainnet). [Rollups](#rollups) also use sidechains, but they operate in collaboration with [mainnet](#mainnet) instead.
+A scaling solution that uses a separate chain with different, often faster, [consensus rules](#consensus-rules). A bridge is needed to connect these sidechains to [mainnet](#mainnet). [Rollups](#rollups) also use sidechains, but they operate in collaboration with [mainnet](#mainnet) instead.
 
 <DocLink to="/developers/docs/layer-2-scaling/#sidechains" title="Sidechains" />
 

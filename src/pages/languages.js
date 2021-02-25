@@ -84,7 +84,7 @@ const LanguagesPage = () => {
           </p>
           <p>
             <Translation id="page-languages-interested" />{" "}
-            <Link to="/contributing/translation-program/">
+            <Link to="/en/contributing/translation-program/">
               <Translation id="page-languages-learn-more" />
             </Link>
             .
@@ -107,7 +107,7 @@ const LanguagesPage = () => {
           </h2>
           <p>
             <Translation id="page-languages-want-more-paragraph" />{" "}
-            <Link to="/contributing/translation-program/">
+            <Link to="/en/contributing/translation-program/">
               <Translation id="page-languages-want-more-link" />
             </Link>
             .

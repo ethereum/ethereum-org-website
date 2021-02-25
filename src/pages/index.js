@@ -471,7 +471,7 @@ const HomePage = ({ data }) => {
         "page-index-tout-community-description",
         intl
       ),
-      to: "/enterprise/",
+      to: "/community/",
     },
   ]
 
@@ -490,7 +490,7 @@ const HomePage = ({ data }) => {
       ),
       codeLanguage: "language-solidity",
       code: `// SPDX-License-Identifier: MIT
-pragma solidity ^0.7.0;
+pragma solidity ^0.8.1;
 
 // This is a smart contract - a program that can be deployed to the Ethereum blockchain.
 contract SimpleWallet {
@@ -504,7 +504,7 @@ contract SimpleWallet {
 
   // When this contract is deployed, set the deploying address as the owner of the contract.
     constructor() {
-        owner = msg.sender;
+        owner = payable(msg.sender);
     }
 
     // Send ETH from the function caller to the SimpleWallet contract
@@ -534,7 +534,7 @@ contract SimpleWallet {
       ),
       codeLanguage: "language-solidity",
       code: `// SPDX-License-Identifier: MIT
-pragma solidity ^0.7.0;
+pragma solidity ^0.8.1;
 
 // This is a smart contract - a program that can be deployed to the Ethereum blockchain.
 contract SimpleToken {
@@ -638,7 +638,7 @@ wallet.sendTransaction(tx);
       ),
       codeLanguage: "language-solidity",
       code: `// SPDX-License-Identifier: MIT
-pragma solidity ^0.7.0;
+pragma solidity ^0.8.1;
 
 // This is a smart contract - a program that can be deployed to the Ethereum blockchain.
 contract SimpleDomainRegistry {
@@ -674,7 +674,7 @@ contract SimpleDomainRegistry {
     // Withdraw funds from contract
     function withdraw() public {
         require(msg.sender == owner, "Only the contract owner can withdraw.");
-        msg.sender.transfer(address(this).balance);
+        payable(msg.sender).transfer(address(this).balance);
     }
 }
       `,
@@ -909,7 +909,7 @@ contract SimpleDomainRegistry {
           )}
         >
           <ButtonRow>
-            <ButtonLink to="/contributing/">
+            <ButtonLink to="/en/contributing/">
               <Translation id="page-index-contribution-banner-button" />
             </ButtonLink>
             <StyledButtonLink

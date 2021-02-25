@@ -221,6 +221,9 @@ const WalletCompare = ({ location }) => {
       enjin: file(relativePath: { eq: "wallets/enjin.png" }) {
         ...walletCardImage
       }
+      fortmatic: file(relativePath: { eq: "wallets/fortmatic.png" }) {
+        ...walletCardImage
+      }
       gnosis: file(relativePath: { eq: "wallets/gnosis.png" }) {
         ...walletCardImage
       }
@@ -273,6 +276,9 @@ const WalletCompare = ({ location }) => {
         ...walletCardImage
       }
       trust: file(relativePath: { eq: "wallets/trust.png" }) {
+        ...walletCardImage
+      }
+      unstoppable: file(relativePath: { eq: "wallets/unstoppable.png" }) {
         ...walletCardImage
       }
       zengo: file(relativePath: { eq: "wallets/zengo.png" }) {
@@ -493,7 +499,7 @@ const WalletCompare = ({ location }) => {
           <p>
             <em>
               <Translation id="page-find-wallet-not-endorsements" />{" "}
-              <Link to="/contributing/adding-products/">
+              <Link to="/en/contributing/adding-products/">
                 <Translation id="page-find-wallet-listing-policy" />
               </Link>
               <Translation id="page-find-wallet-add-wallet" />{" "}
