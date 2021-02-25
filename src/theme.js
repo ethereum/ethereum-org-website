@@ -420,7 +420,7 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 3rem;
     line-height: 1.4;
     margin: 2rem 0;
-    font-weight: 400;
+    font-weight: 700;
     @media (max-width: ${theme.breakpoints.m}) {
       font-size: 2.5rem;
     }
@@ -430,6 +430,7 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 2rem;
     line-height: 1.4;
     margin: 2rem 0;
+    margin-top: 3rem;
     font-weight: 600;
     @media (max-width: ${theme.breakpoints.m}) {
       font-size: 1.5rem;
@@ -439,7 +440,8 @@ export const GlobalStyle = createGlobalStyle`
   h3 {
     font-size: 1.5rem;
     line-height: 1.4;
-    margin: 1.5rem 0 2rem;
+    margin: 2rem 0;
+    margin-top: 2.5rem;
     font-weight: 600;
     @media (max-width: ${theme.breakpoints.m}) {
       font-size: 1.25rem;
@@ -449,17 +451,30 @@ export const GlobalStyle = createGlobalStyle`
   h4 {
     font-size: 1.25rem;
     line-height: 1.4;
-    font-weight: 400;
-    margin-top: 2rem;
+    font-weight: 500;
+    margin: 2rem 0;
+    @media (max-width: ${theme.breakpoints.m}) {
+      font-size: 1rem;
+    }
   }
   
   h5 {
     font-size: 1rem;
-    line-height: 1.6;
-    font-weight: 400;
-    margin-top: 2rem;
+    line-height: 1.4;
+    font-weight: 450;
+    margin: 2rem 0;
   }
+
+  h6 {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 2rem 0;
+  }
+  
 `
+// H6 basically only uses as labels as per design system
 
 // Old Mixins for referecne
 // export const Mixins = {
