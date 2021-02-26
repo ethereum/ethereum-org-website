@@ -356,18 +356,16 @@ const GetInvolvedPage = ({ data, location }) => {
           <Translation id="page-eth2-get-involved-how-desc" />
         </p>
         <StyledCardContainer>
-          {paths.map((path, idx) => {
-            return (
-              <StyledCard
-                key={idx}
-                emoji={path.emoji}
-                title={path.title}
-                description={path.description}
-              >
-                <ButtonLink to={path.url}>{path.button}</ButtonLink>
-              </StyledCard>
-            )
-          })}
+          {paths.map((path, idx) => (
+            <StyledCard
+              key={idx}
+              emoji={path.emoji}
+              title={path.title}
+              description={path.description}
+            >
+              <ButtonLink to={path.url}>{path.button}</ButtonLink>
+            </StyledCard>
+          ))}
         </StyledCardContainer>
         <TemporaryCallout
           image={data.rhino.childImageSharp.fluid}
@@ -400,20 +398,18 @@ const GetInvolvedPage = ({ data, location }) => {
           <Translation id="page-eth2-get-involved-run-clients-desc" />
         </p>
         <StyledCardGrid>
-          {clients.map((client, idx) => {
-            return (
-              <ProductCard
-                key={idx}
-                url={client.url}
-                background={client.background}
-                image={client.image}
-                name={client.name}
-                description={client.description}
-                alt={translateMessageId(client.alt, intl)}
-                gitHubRepo={client.gitHubRepo}
-              />
-            )
-          })}
+          {clients.map((client, idx) => (
+            <ProductCard
+              key={idx}
+              url={client.url}
+              background={client.background}
+              image={client.image}
+              name={client.name}
+              description={client.description}
+              alt={translateMessageId(client.alt, intl)}
+              gitHubRepo={client.gitHubRepo}
+            />
+          ))}
         </StyledCardGrid>
       </Content>
       <Staking>
