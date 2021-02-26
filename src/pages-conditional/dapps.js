@@ -339,6 +339,14 @@ const StyledCardGrid = styled(CardGrid)`
   margin-bottom: 4rem;
 `
 
+const MoreButtonContainer = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+`
+
 const FINANCE = "finance"
 const TECHNOLOGY = "technology"
 const COLLECTIBLES = "collectibles"
@@ -1479,6 +1487,27 @@ const DappsPage = ({ data, location }) => {
                   )
                 })}
               </CardContainer>
+              {selectedCategory === FINANCE && (
+                <MoreButtonContainer>
+                  <ButtonLink isSecondary to="/defi/">
+                    More on decentralized finance
+                  </ButtonLink>
+                </MoreButtonContainer>
+              )}
+              {selectedCategory === COLLECTIBLES && (
+                <MoreButtonContainer>
+                  <ButtonLink isSecondary to="/nft/">
+                    More on tokenised collectibles
+                  </ButtonLink>
+                </MoreButtonContainer>
+              )}
+              {selectedCategory === GAMING && (
+                <MoreButtonContainer>
+                  <ButtonLink isSecondary to="/nft/">
+                    More on tokenised in-game items
+                  </ButtonLink>
+                </MoreButtonContainer>
+              )}
             </About>
           )}
         </Content>

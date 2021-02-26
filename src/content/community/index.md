@@ -56,7 +56,7 @@ This is a non-exhaustive list built by our community. Know of an active meetup g
 
 ## Decentralized Autonomous Organizations (DAOs) {#decentralized-autonomous-organizations-daos}
 
-"DAOs" are Decentralized Autonomous Organizations. These groups leverage Ethereum technology to facilitate organization and collaboration. For instance, for controlling membership, voting on proposals, or managing pooled assets. While DAOs are still experimental, they offer opportunities for you to find groups that you identify with, find collaborators, and grow your impact on the Ethereum community.
+"DAOs" are Decentralized Autonomous Organizations. These groups leverage Ethereum technology to facilitate organization and collaboration. For instance, for controlling membership, voting on proposals, or managing pooled assets. While DAOs are still experimental, they offer opportunities for you to find groups that you identify with, find collaborators, and grow your impact on the Ethereum community. [More on DAOs](/dao/)
 
 - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _Legal engineering_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Art community_

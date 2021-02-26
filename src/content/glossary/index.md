@@ -120,7 +120,7 @@ A crosslink provides a summary of a shard's state. It's how [shard](#shard) chai
 
 A company or other organization that operates without hierarchical management. DAO may also refer to a contract named "The DAO" launched on April 30, 2016, which was then hacked in June 2016; this ultimately motivated a [hard fork](#hard-fork) (codenamed DAO) at block 1,192,000, which reversed the hacked DAO contract and caused Ethereum and Ethereum Classic to split into two competing systems.
 
-<DocLink to="/community/#decentralized-autonomous-organizations-daos" title="Decentralized Autonomous Organizations (DAOs)" />
+<DocLink to="/dao/" title="Decentralized Autonomous Organizations (DAOs)" />
 
 ### Dapp {#dapp}
 
@@ -138,11 +138,11 @@ A type of [dapp](#dapp) that lets you swap tokens with peers on the network. You
 
 See [non-fungible token (NFT)](#nft)
 
-### defi {#defi}
+### DeFi {#defi}
 
-Short for "decentralized finance," a broad category of [Dapps](#dapp) aiming to provide financial services backed by the blockchain, without any intermediaries, so anyone with an internet connection can participate.
+Short for "decentralized finance," a broad category of [dapps](#dapp) aiming to provide financial services backed by the blockchain, without any intermediaries, so anyone with an internet connection can participate.
 
-<DocLink to="/dapps/#explore" title="Defi dapps" />
+<DocLink to="/defi/" title="Decentralized Finance (DeFi)" />
 
 ### difficulty {#difficulty}
 
@@ -429,8 +429,9 @@ Referring to the Ethereum network, a peer-to-peer network that propagates transa
 
 ### non-fungible token (NFT) {#nft}
 
-Also known as a "deed," this is a token standard introduced by the ERC-721 proposal. NFTs can be tracked and traded, but each token is unique and distinct; they are not interchangeable like ERC-20 tokens. NFTs can represent ownership of digital or physical assets.
+Also known as a "deed," this is a token standard introduced by the ERC-721 proposal. NFTs can be tracked and traded, but each token is unique and distinct; they are not interchangeable like ETH and [ERC-20 tokens](#token-standard). NFTs can represent ownership of digital or physical assets.
 
+<DocLink to="/nft/" title="Non-Fungible Tokens (NFTs)" />
 <DocLink to="/developers/docs/standards/tokens/erc-721/" title="ERC-721 Non-Fungible Token Standard" />
 
 ### node {#node}

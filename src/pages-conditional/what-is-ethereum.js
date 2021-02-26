@@ -274,6 +274,33 @@ const WhatIsEthereumPage = ({ data }) => {
       description: <Translation id="page-what-is-ethereum-dapps-desc" />,
     },
   ]
+  const usecases = [
+    {
+      title: "Decentralized finance (DeFi)",
+      to: "/defi/",
+      alt: "",
+      image: data.eth.childImageSharp.fixed,
+      description:
+        "A more open financial system that gives you more control over your money and unlocks new possibilities.",
+    },
+    {
+      title: "Non-fungible tokens (NFTs)",
+      to: "/nft/",
+      alt: "",
+      image: data.dapps.childImageSharp.fixed,
+
+      description:
+        "A way to represent unique items as Ethereum assets that can be traded, used as proof of ownership, and create new opportunities for creators.",
+    },
+    {
+      title: "Decentralized autonomous organisations (DAOs)",
+      to: "/dao/",
+      alt: "",
+      image: data.dao.childImageSharp.fixed,
+      description:
+        "A new way to collaborate and set up online communities with shared goals and pooled funds.",
+    },
+  ]
   return (
     <Page>
       <PageMetadata
@@ -414,6 +441,32 @@ const WhatIsEthereumPage = ({ data }) => {
           })}
         </ActionCardContainer>
       </Content>
+      <Content>
+        <ActionIntro>
+          <h2>Learn about some Ethereum use cases</h2>
+          <Subtitle>
+            Ethereum has led to the creation of new technology that can improve
+            different areas of our lives.
+          </Subtitle>
+          <SubtitleTwo>
+            We're still in the early stages but there's lot to be excited about.
+          </SubtitleTwo>
+        </ActionIntro>
+        <ActionCardContainer>
+          {usecases.map((usecase, idx) => {
+            return (
+              <ActionCard
+                key={idx}
+                to={usecase.to}
+                alt={usecase.alt}
+                image={usecase.image}
+                title={usecase.title}
+                description={usecase.description}
+              />
+            )
+          })}
+        </ActionCardContainer>
+      </Content>
       <TwoColumnContent>
         <Column>
           <h2>
@@ -510,6 +563,9 @@ export const query = graphql`
       ...actionCardImage
     }
     eth: file(relativePath: { eq: "eth.png" }) {
+      ...actionCardImage
+    }
+    dao: file(relativePath: { eq: "use-cases/dao-2  .png" }) {
       ...actionCardImage
     }
     developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {

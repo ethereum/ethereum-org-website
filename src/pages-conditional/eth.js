@@ -44,6 +44,10 @@ const Title = styled.h1`
   color: ${(props) => props.theme.colors.textTableOfContents};
 `
 
+const StyledTwoColumnContent = styled(TwoColumnContent)`
+  align-items: flex-start;
+`
+
 const Subtitle = styled.div`
   font-size: 20px;
   line-height: 140%;
@@ -204,6 +208,29 @@ const benefits = [
   },
 ]
 
+const tokenLinks = [
+  {
+    caption: "",
+    title: "Stablecoins",
+    description: "More on the least volatile of Ethereum tokens.",
+  },
+  {
+    caption: "",
+    title: "Decentralized finance (DeFi)",
+    description: "The financial system for Ethereum tokens.",
+  },
+  {
+    caption: "",
+    title: "Non-fungible tokens (NFTs)",
+    description: "Tokens that represent ownership of items on Ethereum.",
+  },
+  {
+    caption: "",
+    title: "Decentralized autonomous organisations (DAOs)",
+    description: "Internet communities often goverened by token holders.",
+  },
+]
+
 const cardListContent = [
   {
     link: "https://docs.ethhub.io/ethereum-basics/monetary-policy/",
@@ -350,6 +377,12 @@ const WhatIsEthereumPage = (props) => {
             <p>
               <Translation id="page-eth-underpins-desc-2" />
             </p>
+            <CentralActionCard
+              to="/defi/"
+              title="More on DeFi"
+              description="DeFi is the decentralized financial system built on Ethereum. This overview explains what you can do."
+              image={data.ethereum.childImageSharp.fixed}
+            />
           </div>
           <TextDivider />
           <div>
@@ -431,7 +464,7 @@ const WhatIsEthereumPage = (props) => {
           <CardList content={cardListContent} />
         </RightColumn>
       </TwoColumnContent>
-      <TwoColumnContent id="tokens">
+      <StyledTwoColumnContent id="tokens">
         <LeftColumn>
           <h3>
             <Translation id="page-eth-not-only-crypto" />
@@ -442,17 +475,8 @@ const WhatIsEthereumPage = (props) => {
           <p>
             <Translation id="page-eth-not-only-crypto-desc-2" />
           </p>
-          <p id="tokens">
-            {" "}
-            <Translation id="page-eth-not-only-crypto-desc-3" />{" "}
-          </p>
-          <Link to="https://docs.ethhub.io/guides/a-straightforward-guide-erc20-tokens/">
-            <Translation id="page-eth-tokens-link" />
-          </Link>
-          <br />
-          <Link to="https://docs.ethhub.io/built-on-ethereum/erc-token-standards/erc721/#summary">
-            <Translation id="page-eth-non-fungible-tokens-link" />
-          </Link>
+          <h4>More on tokens and their uses</h4>
+          <CardList id="tokens" content={tokenLinks} />
         </LeftColumn>
         <RightColumn>
           <h3>
@@ -470,7 +494,7 @@ const WhatIsEthereumPage = (props) => {
             )
           })}
         </RightColumn>
-      </TwoColumnContent>
+      </StyledTwoColumnContent>
     </Page>
   )
 }
