@@ -169,6 +169,14 @@ TokenSets, a popular investment product, tokenises investment strategies and cal
 
 ### Fund your ideas {#crowdfunding}
 
+Ethereum is an ideal platform for crowdfunding for a number of reasons:
+
+- potential funders can come from anywhere – Ethereum and its tokens can be used by anybody, anywhere in the world.
+- it's transparent so fundraisers can prove how much money is raised and you can even trace how funds are being spent later down the line.
+- fundraisers can set up automatic refunds if, for example, there is a specific deadline and minimum amount that isn't met.
+
+#### Quadratic funding
+
 Ethereum is open source software. A lot of the work so far has been funded by the community and this has led to the growth of an interesting new fundraising model: quadratic funding. This method has the potential to improve the way we fund all types of public goods in the future.
 
 Quadratic funding makes sure that the projects that receive the most funding are those with the most unique demand. In other words, projects that stand to improve the lives of the most people. Here's how it works:
