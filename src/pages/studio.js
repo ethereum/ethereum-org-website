@@ -51,50 +51,48 @@ const Row = styled.div`
   align-items: center;
 `
 
-const StudioRedirectPage = () => {
-  return (
-    <StyledPage>
-      <Content>
-        <Emoji size={6} mb={"2rem"} text=":sunset_over_buildings:" />
-        <H1>We're sunsetting Studio</H1>
-        <p>
-          If you've created any projects that you'd like to save, you should
-          download them immediately. This version of Studio will be disabled
-          within a few weeks.
-        </p>
-        <p>
-          You can access any projects you've created from the project URL, e.g.{" "}
-          <pre>https://studio.ethereum.org/5fc7e8c326b4730012373621</pre>
-          You will no longer be able to access the Ethereum Studio homepage.
-        </p>
-        <InfoBannerContainer>
-          <InfoBanner mb={"2rem"}>
-            <Row>
-              <StyledIcon size={32} name="codeDownload" />
-              Look for the "download code" icon in Studio's file explorer to
-              download your project. This will export a ZIP for you.
-            </Row>
-          </InfoBanner>
-        </InfoBannerContainer>
-        <Divider />
-        <H2>What to use instead</H2>
-        <p>
-          We recommend using Remix as an alternative web IDE for your Solidity
-          development. Additionally, we encourage you to consider{" "}
-          <Link to="/developers/local-environment/">
-            setting up a local development environment
-          </Link>
-          . Check out our developer portal for tools, documentation, and more.
-        </p>
-        <ButtonLink mr={"1rem"} isSecondary to="https://remix.ethereum.org">
-          Use Remix
-        </ButtonLink>
-        <Link isSecondary to="/developers/">
-          Developer portal
+const StudioRedirectPage = () => (
+  <StyledPage>
+    <Content>
+      <Emoji size={6} mb={"2rem"} text=":sunset_over_buildings:" />
+      <H1>We're sunsetting Studio</H1>
+      <p>
+        If you've created any projects that you'd like to save, you should
+        download them immediately. This version of Studio will be disabled
+        within a few weeks.
+      </p>
+      <p>
+        You can access any projects you've created from the project URL, e.g.{" "}
+        <pre>https://studio.ethereum.org/5fc7e8c326b4730012373621</pre>
+        You will no longer be able to access the Ethereum Studio homepage.
+      </p>
+      <InfoBannerContainer>
+        <InfoBanner mb={"2rem"}>
+          <Row>
+            <StyledIcon size={32} name="codeDownload" />
+            Look for the "download code" icon in Studio's file explorer to
+            download your project. This will export a ZIP for you.
+          </Row>
+        </InfoBanner>
+      </InfoBannerContainer>
+      <Divider />
+      <H2>What to use instead</H2>
+      <p>
+        We recommend using Remix as an alternative web IDE for your Solidity
+        development. Additionally, we encourage you to consider{" "}
+        <Link to="/developers/local-environment/">
+          setting up a local development environment
         </Link>
-      </Content>
-    </StyledPage>
-  )
-}
+        . Check out our developer portal for tools, documentation, and more.
+      </p>
+      <ButtonLink mr={"1rem"} isSecondary to="https://remix.ethereum.org">
+        Use Remix
+      </ButtonLink>
+      <Link isSecondary to="/developers/">
+        Developer portal
+      </Link>
+    </Content>
+  </StyledPage>
+)
 
 export default StudioRedirectPage
