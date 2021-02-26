@@ -29,17 +29,15 @@ const HorizontalCard = ({
   children,
   className,
   emojiSize,
-}) => {
-  return (
-    <StyledCard className={className}>
-      <Emoji size={emojiSize} text={emoji} />
-      <Content>
-        <Title>{title}</Title>
-        <Description>{description}</Description>
-        {children}
-      </Content>
-    </StyledCard>
-  )
-}
+}) => (
+  <StyledCard className={className}>
+    <Emoji size={emojiSize} text={emoji} />
+    <Content>
+      <Title>{title}</Title>
+      <Description>{description}</Description>
+      {children}
+    </Content>
+  </StyledCard>
+)
 
 export default HorizontalCard
