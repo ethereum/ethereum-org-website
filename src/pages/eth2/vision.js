@@ -183,16 +183,14 @@ const VisionPage = ({ data, location }) => {
           <Translation id="page-eth2-vision-problems" />
         </CenterH2>
         <CardContainer>
-          {paths.map((path, idx) => {
-            return (
-              <CentreCard
-                key={idx}
-                emoji={path.emoji}
-                title={path.title}
-                description={path.description}
-              />
-            )
-          })}
+          {paths.map((path, idx) => (
+            <CentreCard
+              key={idx}
+              emoji={path.emoji}
+              title={path.title}
+              description={path.description}
+            />
+          ))}
         </CardContainer>
       </Content>
       <TrilemmaContent>
@@ -287,20 +285,18 @@ const VisionPage = ({ data, location }) => {
           <Translation id="page-eth2-vision-explore-upgrades" />
         </H2>
         <StyledCardContainer>
-          {upgrades.map((upgrade, idx) => {
-            return (
-              <ActionCard
-                isRight
-                key={idx}
-                image={upgrade.image}
-                title={upgrade.title}
-                description={upgrade.description}
-                to={upgrade.to}
-              >
-                <h6>{upgrade.date}</h6>
-              </ActionCard>
-            )
-          })}
+          {upgrades.map((upgrade, idx) => (
+            <ActionCard
+              isRight
+              key={idx}
+              image={upgrade.image}
+              title={upgrade.title}
+              description={upgrade.description}
+              to={upgrade.to}
+            >
+              <h6>{upgrade.date}</h6>
+            </ActionCard>
+          ))}
         </StyledCardContainer>
       </Content>
     </Page>
