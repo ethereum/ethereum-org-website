@@ -26,12 +26,12 @@ There's a booming crypto economy out there, where you can lend, borrow, long/sho
 
 One of the best ways to see the potential of DeFi is to understand the problems that exist today.
 
-- Some people aren't granted access to set up a bank account or use financial services
-- Financial services can block you from getting paid
-- The hidden charge of financial services is your personal data
-- Governments can close down markets at will
-- Money transfers can take days due to internal human processes
-- There's a premium to financial services because intermediray institutions need their cut
+- Some people aren't granted access to set up a bank account or use financial services.
+- Financial services can block you from getting paid.
+- The hidden charge of financial services is your personal data.
+- Governments and centralized institutions can close down markets at will.
+- Money transfers can take days due to internal human processes.
+- There's a premium to financial services because intermediray institutions need their cut.
 
 | DeFi                                                  | Traditional finance                                                                   |
 | ----------------------------------------------------- | ------------------------------------------------------------------------------------- |

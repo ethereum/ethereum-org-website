@@ -36,6 +36,7 @@ The NFT world is relatively new. In theory, the scope for NFTs is anything that 
 - [An essay](https://zora.co/0x517bab7661C315C63C6465EEd1b4248e6f7FE183/145).
 - [A digital collectible](https://www.larvalabs.com/cryptopunks/details/1).
 - [A domain name](https://app.ens.domains/name/ethereum.eth)
+- A ticket that gives you access to an event or a coupon – these items are often known as semi-fungible. They are fungible until they are redeemed, at which point they can't be traded for a non-redeemed version.
 
 ### ethereum.org examples
 
@@ -75,13 +76,13 @@ And if you create an NFT:
 - you can earn royalties every time it's sold.
 - you can sell it on any NFT market or peer-to-peer. You're not locked in to any platform and you don't need anyone to intermediate.
 
-## Fractional ownership
+### Fractional ownership
 
-[Add some info about fractional ownership]
+Of course not every single item has a single owner. Songs can have multiple writers, you might own your property with your partner, and you might want to sell a percentage of ownership in your film project to help get it off the ground.
 
-E.g. fractional ownership of the essay NFT entitles all owners to royalties once it's sold on...
+For this reason, NFTs also support multiple owners.
 
-## The power of NFTs
+## What are NFTs used for?
 
 ### Maximising earnings for creators
 
@@ -116,35 +117,35 @@ In a lot of regular games you can purchase items for you to use in your game. Bu
 
 For game developers – as issuers of the NFT – they could earn a royalty every time an item is re-sold in the open marketplace. This creates a more mutually-beneficial business model where both players and developers earn from the secondary NFT market.
 
-This also means that if a game is no longer maintained by the developers, the items you've collected remain yours under your control.
+This also means that if a game is no longer maintained by the developers, the items you've collected remain yours.
 
 Ultimately the items you grind for in-game can outlive the games themselves. Even if a game is no longer maintained, your items will always be under your control. This means in-game items become digital memorabilia and have a value outside of the game.
 
-Decentraland, a virtual reality game, lets you buy NFTs representing virtual parcels of land that you can use as you see fit.
+Decentraland, a virtual reality game, even lets you buy NFTs representing virtual parcels of land that you can use as you see fit.
 
 <InfoBanner emoji=":eyes:">
   <div>Check out Ethereum games, powered by NFTs...</div>
   <ButtonLink to="/dapps?category=gaming">Explore NFT games</ButtonLink>
 </InfoBanner>
 
-### Physical items
-
-...
-
 ### Making ethereum addresses more memorable
 
-One of the most useful NFTs developed so far is the Ethereum Name Service. This uses an NFT to provide your Ethereum address with an easier-to-remember name like `mywallet.eth`. This means you could ask someone to send you ETH via `mywallet.eth` rather than `0x123456789.....`.
+The Ethereum Name Service uses NFTs to provide your Ethereum address with an easier-to-remember name like `mywallet.eth`. This means you could ask someone to send you ETH via `mywallet.eth` rather than `0x123456789.....`.
 
 This works in a similar way to a website domain name which makes an IP address more memorable. And like domains, ENS names have value, usually based on length and relevance. With ENS you don't need a domain registry in order to facilitate the tranfer of ownership. Instead, ENS names can be traded on NFT marketplaces with ease.
 
-ENS names can also point to websites – not just wallets. For example, if you visit ethereum.eth in a web3 browser, it will open up a version of this website.
+### Physical items
+
+The tokenisation of physical items isn't yet as developed as their digital counterparts. However there have been plenty of projects that have explored the tokenisation of real estate, one-of-a-kind fashion items, and more.
+
+As NFTs are essentially deeds, one day you could buy a car or home using ETH and receive the deed as an NFT in return (in the same transaction). As things become increasingly high-tech, it's not hard to imagine a world where your Ethereum wallet becomes the key to your car or home as it would contain the cryptographic proof of ownership.
+
+With valuable assets like cars and property representable on Ethereum, there's the opportunity to use NFTs as collateral in decentralized loans. This is particularly helpful if you're not cash or crypto-rich but own physical items of value. [More on DeFi](/defi/)
 
 ## NFTs and Defi
 
 NFT-backed loans.
 Minting insurance cover as an NFT that's tradeable on secondary markets....
-
-[More on defi](/defi/)
 
 ## Ethereum and NFTs
 
@@ -178,9 +179,9 @@ Want to turn your content into a NFT?
 - Foundation
 - Other platforms... -->
 
-### Build with NFTs
+## Build with NFTs
 
-NFTs are built using a consistent standard known as [ERC-721](/developers/docs/standards/tokens/erc-721/). Read more about it in our docs.
+Most NFTs are built using a consistent standard known as [ERC-721](/developers/docs/standards/tokens/erc-721/). However there is a newer ERC-1155 standard which aims to make NFTs more efficient, especially in the realm of gaming.
 
 ## NFT apps
 
