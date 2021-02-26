@@ -148,19 +148,15 @@ const FileContributors = ({ gitCommits, className, editPath }) => {
           <Translation id="contributors-thanks" />
         </div>
         <ContributorList>
-          {uniqueContributors.map((contributor) => {
-            return (
-              <Contributor key={contributor.email}>
-                <Avatar src={contributor.avatarUrl} alt={contributor.name} />
-                {contributor.user && (
-                  <Link to={contributor.user.url}>
-                    @{contributor.user.login}
-                  </Link>
-                )}
-                {!contributor.user && <span>{contributor.name}</span>}
-              </Contributor>
-            )
-          })}
+          {uniqueContributors.map((contributor) => (
+            <Contributor key={contributor.email}>
+              <Avatar src={contributor.avatarUrl} alt={contributor.name} />
+              {contributor.user && (
+                <Link to={contributor.user.url}>@{contributor.user.login}</Link>
+              )}
+              {!contributor.user && <span>{contributor.name}</span>}
+            </Contributor>
+          ))}
         </ContributorList>
       </Modal>
       <Container>
