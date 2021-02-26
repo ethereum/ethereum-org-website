@@ -439,21 +439,19 @@ const ChooseStackPage = ({ data }) => {
           </Column>
         </TwoColumnContent>
         <CardGrid>
-          {frameworks.map((framework, idx) => {
-            return (
-              <ProductCard
-                key={idx}
-                url={framework.url}
-                background={framework.background}
-                image={framework.image}
-                name={framework.name}
-                gitHubRepo={framework.gitHubRepo}
-                alt={translateMessageId(framework.alt, intl)}
-              >
-                <Translation id={framework.description} />
-              </ProductCard>
-            )
-          })}
+          {frameworks.map((framework, idx) => (
+            <ProductCard
+              key={idx}
+              url={framework.url}
+              background={framework.background}
+              image={framework.image}
+              name={framework.name}
+              gitHubRepo={framework.gitHubRepo}
+              alt={translateMessageId(framework.alt, intl)}
+            >
+              <Translation id={framework.description} />
+            </ProductCard>
+          ))}
         </CardGrid>
       </Content>
       {/* <Content>
