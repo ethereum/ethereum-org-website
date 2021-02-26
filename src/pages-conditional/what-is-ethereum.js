@@ -317,16 +317,14 @@ const WhatIsEthereumPage = ({ data }) => {
           </p>
         </Intro>
         <CardContainer>
-          {cards.map((card, idx) => {
-            return (
-              <StyledCard
-                key={idx}
-                emoji={card.emoji}
-                title={card.title}
-                description={card.description}
-              />
-            )
-          })}
+          {cards.map((card, idx) => (
+            <StyledCard
+              key={idx}
+              emoji={card.emoji}
+              title={card.title}
+              description={card.description}
+            />
+          ))}
         </CardContainer>
       </StyledGrayContatiner>
       <BannerContainer>
@@ -400,18 +398,16 @@ const WhatIsEthereumPage = ({ data }) => {
           </SubtitleTwo>
         </ActionIntro>
         <ActionCardContainer>
-          {actions.map((action, idx) => {
-            return (
-              <ActionCard
-                key={idx}
-                to={action.to}
-                alt={action.alt}
-                image={action.image}
-                title={action.title}
-                description={action.description}
-              />
-            )
-          })}
+          {actions.map((action, idx) => (
+            <ActionCard
+              key={idx}
+              to={action.to}
+              alt={action.alt}
+              image={action.image}
+              title={action.title}
+              description={action.description}
+            />
+          ))}
         </ActionCardContainer>
       </Content>
       <TwoColumnContent>
