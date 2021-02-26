@@ -218,7 +218,7 @@ Any stage of development!
 
 If you have an idea or project that benefits the rollup community, we want to hear about it! The goal is to support regular, consistent work that pushes forward the rollup ecosystem.
 
-Optmistic Rollup Community Grants is an open call for proposals. Which means, it's expected that some ideas or projects won't be fully shipped before the deadline, but instead require ongoing efforts.
+The Rollup Community Grants is an open call for proposals. Which means, it's expected that some ideas or projects won't be fully shipped before the deadline, but instead require ongoing efforts.
 
 ### What if I miss the deadline? {#what-if-i-miss-deadline}
 
