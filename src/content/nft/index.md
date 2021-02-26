@@ -8,7 +8,7 @@ sidebarDepth: 2
 image: ../../assets/eth2/core.png
 summaryPoints:
   [
-    "A way to turn anything unique into an Ethereum-based asset.",
+    "A way to represent anything unique as an Ethereum-based asset.",
     "NFTs are giving more power to content creators than ever before.",
     "Powered by smart contracts on the Ethereum blockchain.",
   ]
@@ -28,16 +28,29 @@ Fungibile items on the other hand can be exchanged as their value defines them r
 
 ### NFT examples
 
-THe NFT world is relatively new. In theory, the scope for NFTs is anything that is unique that needs provable ownership. Here are some examples of NFTs that exist today, to help you get the idea:
+The NFT world is relatively new. In theory, the scope for NFTs is anything that is unique that needs provable ownership. Here are some examples of NFTs that exist today, to help you get the idea:
 
 - A unique digital artwork.
-- #23/#100 of a limited edition run of designer sneakers.
+- A unique shirt in a limited-run fashion line.
 - An in-game item.
-- An essay.
-- A digital collectible like a trading card.
-- A domain name...
+- [An essay](https://zora.co/0x517bab7661C315C63C6465EEd1b4248e6f7FE183/145).
+- [A digital collectible](https://www.larvalabs.com/cryptopunks/details/1).
+- [A domain name](https://app.ens.domains/name/ethereum.eth)
 
-This website is an NFT.
+### ethereum.org examples
+
+#### POAPs (Proof of attendance protocol)
+
+And if you contribute to ethereum.org, you can claim a POAP . These are NFTs that prove you participated in an event. [More on contributing](/contributing/#poap).
+
+![ethereum.org POAP](../../assets/use-cases/poap.png)
+
+#### ethereum.eth
+
+This website is accessible via the ethereum.eth ENS (Ethereum name service) name. With the content hosted on IPFS, a decentralized storage solution, this website is actually an NFT.
+
+- [ENS record](https://app.ens.domains/name/ethereum.eth)
+- [IPFS link](https://ethereum.eth.link/) – _the content hosted on IPFS is currently an older version of this site. So, ethereum.eth is an NFT of a historical version of this site!_
 
 ## How do NFTs work?
 
@@ -46,7 +59,6 @@ NFTs have some special properties:
 - each token is unique.
 - they're not interchangeable with another NFT. For example 1 ETH is exactly the same as another ETH. This isn't the case with NFTs.
 - each token has an owner and this information is easily verifiable.
-- you can't own a % of an NFT token in the same way you can own 0.0001 ETH.
 - they live on Ethereum, so are compatible with every single NFT market on Ethereum.
 
 In other words, if you own an NFT:
@@ -63,6 +75,12 @@ And if you create an NFT:
 - you can earn royalties every time it's sold.
 - you can sell it on any NFT market or peer-to-peer. You're not locked in to any platform and you don't need anyone to intermediate.
 
+## Fractional ownership
+
+[Add some info about fractional ownership]
+
+E.g. fractional ownership of the essay NFT entitles all owners to royalties once it's sold on...
+
 ## The power of NFTs
 
 ### Maximising earnings for creators
@@ -73,7 +91,7 @@ An artist publishing work on a social network makes money for the platform who s
 
 NFTs powers a new creator economy where creators don't hand ownership of their content over to the platforms they use to publicise it. Ownership is baked into the content itself.
 
-When they sell their content, funds go directly to them. If the new owner was to go on and re-sell the NFT, the original creator can even get a % because the creator address is part of the token's metadata – metadata which can't be modified.
+When they sell their content, funds go directly to them. If the new owner was to go on and re-sell the NFT, the original creator can even automatically receive royalties because the creator address is part of the token's metadata – metadata which can't be modified.
 
 <InfoBanner emoji=":eyes:">
   <div>Explore, buy or create your own NFT art/collectibles...</div>
@@ -172,4 +190,5 @@ NFTs are built using a consistent standard known as [ERC-721](/developers/docs/s
 
 [Add links to other good NFT resources]
 
+- [Crypto art data](https://cryptoart.io/data) – Richard Chen, updated automatically
 - [OpenSea: the NFT Bible](https://opensea.io/blog/guides/non-fungible-tokens/) – Devin Fizner, January 10 2020
