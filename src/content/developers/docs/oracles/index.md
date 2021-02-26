@@ -56,12 +56,12 @@ So the next step would be to have a network of these nodes making these calls to
 
 ### Oracles {#oracles}
 
-Chainlink is the way to get data already decentralized and on chain, and build your own modular oracle networks to get any customized data you're looking for. Chainlink has infrastructure in place to:
+Using Chainlink, you can reference decentralized data on-chain, that has already been pulled from the real world and aggregated. Sort of like a public commons, but for decentralized data. You can also build your own modular oracle networks to get any customized data you're looking for. In addition, you can do off-chain computation and send information to the real world as well. Chainlink has infrastructure in place to:
 
 - [Get crypto price feeds in your contract](https://chain.link/solutions/defi)
 - [Generate verifiable random numbers (useful for gaming)](https://chain.link/solutions/chainlink-vrf)
 - [Call external APIs](https://docs.chain.link/docs/request-and-receive-data) 
-– one novel use of this is [checking wBTC reserves](https://cointelegraph.com/news/1b-in-wrapped-bitcoin-now-being-audited-using-chainlink-s-proof-of-reserve)
+– one novel use of this is [Checking wBTC reserves](https://cointelegraph.com/news/1b-in-wrapped-bitcoin-now-being-audited-using-chainlink-s-proof-of-reserve)
 
 This is an example of how to get the latest ETH price in your smart contract using a Chainlink price feed:
 
