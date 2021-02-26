@@ -114,12 +114,11 @@ const Roadmap = () => {
             .slice(0, 6)
 
           const implemented = issues
-            .filter((issue) => {
-              return (
+            .filter(
+              (issue) =>
                 issue.state === "closed" &&
                 "allcontributors[bot]" !== issue.user.login
-              )
-            })
+            )
             .slice(0, 6)
           setIssues({
             planned,
