@@ -56,6 +56,8 @@ This website is accessible via the ethereum.eth ENS (Ethereum name service) name
 
 ## How do NFTs work?
 
+[TALK ABOUT RELATIONSHIP WITH IPFS SOMEWHERE]
+
 NFTs have some special properties:
 
 - each token is unique.
