@@ -219,6 +219,7 @@ const components = {
 const Title = styled.h1`
   font-size: 40px;
   font-weight: 700;
+  margin-top: 1rem;
 `
 
 const SummaryPoint = styled.li`
@@ -357,7 +358,7 @@ const dropdownLinks = {
   ],
 }
 
-const UseCasePage = ({ data, data: { mdx } }) => {
+const UseCasePage = ({ data: { mdx } }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(intl.locale)
   const tocItems = mdx.tableOfContents.items
@@ -366,13 +367,11 @@ const UseCasePage = ({ data, data: { mdx } }) => {
   const lastUpdatedDate = mdx.parent.fields
     ? mdx.parent.fields.gitLogLatestDate
     : mdx.parent.mtime
-  console.log(mdx.frontmatter.image)
   return (
     <Container>
       <HeroContainer>
         <TitleCard>
-          <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
-          <MobileBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
+          <Emoji size={4} text={mdx.frontmatter.emoji} />
           <Title>{mdx.frontmatter.title}</Title>
           <SummaryBox>
             <ul>
@@ -408,7 +407,6 @@ const UseCasePage = ({ data, data: { mdx } }) => {
           )}
         </InfoColumn>
         <ContentContainer id="content">
-          {/* <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} /> */}
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
@@ -431,6 +429,7 @@ export const useCasePageQuery = graphql`
         title
         description
         sidebar
+        emoji
         sidebarDepth
         summaryPoints
         image {

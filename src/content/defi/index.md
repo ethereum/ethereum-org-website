@@ -3,14 +3,15 @@ title: Decentralized finance (DeFi)
 description: An overview of DeFi on Ethereum
 lang: en
 template: use-cases
+emoji: ":money_with_wings:"
 sidebar: true
 image: ../../assets/use-cases/defi.png
 sidebarDepth: 2
 summaryPoints:
   [
     "A global, open alternative to the current financial system.",
-    "Probably the biggest use case for Ethereum right now.",
-    "Powered by smart contracts on the Ethereum blockchain.",
+    "Products that let you borrow, save, invest, trade, and more.",
+    "Based on open-source technology that anyone can program with.",
   ]
 ---
 
@@ -28,10 +29,12 @@ One of the best ways to see the potential of DeFi is to understand the problems 
 
 - Some people aren't granted access to set up a bank account or use financial services.
 - Financial services can block you from getting paid.
-- The hidden charge of financial services is your personal data.
+- A hidden charge of financial services is your personal data.
 - Governments and centralized institutions can close down markets at will.
 - Money transfers can take days due to internal human processes.
 - There's a premium to financial services because intermediray institutions need their cut.
+
+### A comparison
 
 | DeFi                                                  | Traditional finance                                                                   |
 | ----------------------------------------------------- | ------------------------------------------------------------------------------------- |
@@ -46,7 +49,7 @@ One of the best ways to see the potential of DeFi is to understand the problems 
 
 ## Programmable money
 
-This sounds odd... "why would I wan/t to program my money"? However, this is more just a default feature of tokens on Ethereum. Anyone can program logic into payments which can lead to the creation of automated features that you don't need an intermediary service or institution to do for you.
+This sounds odd... "why would I want to program my money"? However, this is more just a default feature of tokens on Ethereum. Anyone can program logic into payments which can lead to the creation of automated features that you don't need an intermediary service or institution to do for you.
 
 Standing orders, direct debits, payment routing – even payment streaming, can all be done automatically under your control and supervision.
 
@@ -95,7 +98,7 @@ There are many advantages to using a decentralized lender...
 
 Today, lending and borrowing money all revolves around the individuals involved. Banks need to know whether you're likely to repay a loan before lending.
 
-Decentralized lending works without either party having to identify themselves. Instead the borrower must put up collateral that the lender will automatically receive if their loan is not repaid. Some lenders even accept NFTs as collateral. NFTs are a deed to a unique asset, like a painting. [More on NFTs](/nfts/)
+Decentralized lending works without either party having to identify themselves. Instead the borrower must put up collateral that the lender will automatically receive if their loan is not repaid. Some lenders even accept NFTs as collateral. NFTs are a deed to a unique asset, like a painting. [More on NFTs](/nft/)
 
 This allows you to borrow money without credit checks or handing over private information.
 
@@ -111,7 +114,7 @@ If you need money but don't want to cash-in your ETH, borrowing can give you acc
 
 Flash loans are a more experimental form of decentralized lending that let you borrow without collateral or providing any personal information.
 
-Flash loans are not advised if you're not a technical expert but they hint at what might be possible to everyone in the future. With Ethereum you can take out huge loans without putting up any collateral whatsoever.
+Flash loans are not advised if you're not a technical expert but they hint at what might be possible to everyone in the future. They make it possible to take out huge loans without putting up any collateral whatsoever.
 
 It works on the premise that the loan is taken out and paid back within the same transaction. If it can't be paid back, the transaction reverts as if nothing ever happened.
 

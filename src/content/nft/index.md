@@ -3,6 +3,7 @@ title: Non-fungible tokens (NFT)
 description: An overview of NFTs on Ethereum
 lang: en
 template: use-cases
+emoji: ":frame_with_picture:"
 sidebar: true
 sidebarDepth: 2
 image: ../../assets/eth2/core.png

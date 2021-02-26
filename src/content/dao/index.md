@@ -1,15 +1,15 @@
 ---
-title: Decentralized autonomous organisations
+title: Decentralized autonomous organisations (DAOs)
 description: An overview of DAOs on Ethereum
 lang: en
 template: use-cases
+emoji: ":handshake:"
 sidebar: true
 sidebarDepth: 2
 image: ../../assets/use-cases/dao-2.png
 summaryPoints:
   [
     "Member-owned communities without centralized leadership.",
-    "Transparent organisations where everyone has a say.",
     "A safe way to collaborate with internet strangers.",
     "A safe place to commit funds to a specific cause.",
   ]
