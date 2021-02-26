@@ -186,18 +186,16 @@ const StakingPage = ({ data, location }) => {
             </Link>
           </p>
           <CardContainer>
-            {paths.map((path, idx) => {
-              return (
-                <StyledCard
-                  key={idx}
-                  emoji={path.emoji}
-                  title={path.title}
-                  description={path.description}
-                >
-                  {path.url && <Link to={path.url}>{path.link}</Link>}
-                </StyledCard>
-              )
-            })}
+            {paths.map((path, idx) => (
+              <StyledCard
+                key={idx}
+                emoji={path.emoji}
+                title={path.title}
+                description={path.description}
+              >
+                {path.url && <Link to={path.url}>{path.link}</Link>}
+              </StyledCard>
+            ))}
           </CardContainer>
         </Vision>
       </Content>
