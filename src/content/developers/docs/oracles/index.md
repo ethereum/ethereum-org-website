@@ -61,7 +61,7 @@ Using Chainlink, you can reference decentralized data on-chain, that has already
 - [Get crypto price feeds in your contract](https://chain.link/solutions/defi)
 - [Generate verifiable random numbers (useful for gaming)](https://chain.link/solutions/chainlink-vrf)
 - [Call external APIs](https://docs.chain.link/docs/request-and-receive-data) 
-– one novel use of this is [Checking wBTC reserves](https://cointelegraph.com/news/1b-in-wrapped-bitcoin-now-being-audited-using-chainlink-s-proof-of-reserve)
+– One novel use of this is [Checking wBTC reserves](https://cointelegraph.com/news/1b-in-wrapped-bitcoin-now-being-audited-using-chainlink-s-proof-of-reserve)
 
 This is an example of how to get the latest ETH price in your smart contract using a Chainlink price feed:
 
