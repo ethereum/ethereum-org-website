@@ -130,15 +130,13 @@ const NavDropdown = ({ section, hasSubNav }) => {
         variants={listVariants}
         initial="closed"
       >
-        {section.items.map((item, idx) => {
-          return (
-            <DropdownItem key={idx} onClick={() => setIsOpen(false)}>
-              <NavLink to={item.to} tabIndex="-1">
-                <Translation id={item.text} />
-              </NavLink>
-            </DropdownItem>
-          )
-        })}
+        {section.items.map((item, idx) => (
+          <DropdownItem key={idx} onClick={() => setIsOpen(false)}>
+            <NavLink to={item.to} tabIndex="-1">
+              <Translation id={item.text} />
+            </NavLink>
+          </DropdownItem>
+        ))}
       </DropdownList>
     </NavListItem>
   )
