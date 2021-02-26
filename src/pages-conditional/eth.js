@@ -271,16 +271,14 @@ const WhatIsEthereumPage = (props) => {
             </p>
           </Intro>
           <StyledCardContainer>
-            {benefits.map((benefits, idx) => {
-              return (
-                <StyledCard
-                  key={idx}
-                  emoji={benefits.emoji}
-                  title={benefits.title}
-                  description={benefits.description}
-                />
-              )
-            })}
+            {benefits.map((benefits, idx) => (
+              <StyledCard
+                key={idx}
+                emoji={benefits.emoji}
+                title={benefits.title}
+                description={benefits.description}
+              />
+            ))}
           </StyledCardContainer>
           <InfoBanner emoji=":wave:" shouldCenter={true}>
             <b>
@@ -458,17 +456,15 @@ const WhatIsEthereumPage = (props) => {
           <h3>
             <Translation id="page-eth-popular-tokens" />
           </h3>
-          {tokens.map((token, idx) => {
-            return (
-              <TokenCard
-                key={idx}
-                emoji={token.emoji}
-                title={token.title}
-                description={token.description}
-                size={5}
-              />
-            )
-          })}
+          {tokens.map((token, idx) => (
+            <TokenCard
+              key={idx}
+              emoji={token.emoji}
+              title={token.title}
+              description={token.description}
+              size={5}
+            />
+          ))}
         </RightColumn>
       </TwoColumnContent>
     </Page>
