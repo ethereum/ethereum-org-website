@@ -643,16 +643,14 @@ const StablecoinsPage = ({ data }) => {
         </TwoColumnContent>
         <TwoColumnContent>
           <LeftColumn>
-            {tokens.map((token, idx) => {
-              return (
-                <TokenCard
-                  key={idx}
-                  emoji={token.emoji}
-                  description={token.description}
-                  emojiSize={3}
-                />
-              )
-            })}
+            {tokens.map((token, idx) => (
+              <TokenCard
+                key={idx}
+                emoji={token.emoji}
+                description={token.description}
+                emojiSize={3}
+              />
+            ))}
           </LeftColumn>
           <StyledGhostCard>
             <Emoji svg size={3} text=":pizza:" />
@@ -844,20 +842,18 @@ const StablecoinsPage = ({ data }) => {
           </StyledRightColumn>
         </TwoColumnContent>
         <StyledCardGrid>
-          {dapps.map((dapp, idx) => {
-            return (
-              <DataProductCard
-                key={idx}
-                background={dapp.background}
-                url={dapp.url}
-                alt={dapp.alt}
-                image={dapp.image}
-                name={dapp.name}
-                data={dapp.data}
-                description={dapp.description}
-              />
-            )
-          })}
+          {dapps.map((dapp, idx) => (
+            <DataProductCard
+              key={idx}
+              background={dapp.background}
+              url={dapp.url}
+              alt={dapp.alt}
+              image={dapp.image}
+              name={dapp.name}
+              data={dapp.data}
+              description={dapp.description}
+            />
+          ))}
         </StyledCardGrid>
         <InfoBanner isWarning={true} shouldCenter={true}>
           <H2>
