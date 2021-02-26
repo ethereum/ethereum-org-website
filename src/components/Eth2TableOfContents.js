@@ -78,7 +78,7 @@ const TableOfContentsLink = ({ depth, item }) => {
 }
 
 const ItemsList = ({ items, depth, maxDepth }) =>
-  depth > maxDepth && !!items
+  depth <= maxDepth && !!items
     ? items.map((item, index) => (
         <ListItem key={index}>
           <div>
