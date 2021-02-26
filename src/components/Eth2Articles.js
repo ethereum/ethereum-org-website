@@ -82,7 +82,7 @@ const benArticles = [
   },
 ]
 
-const Eth2Articles = () => (
+const Eth2Articles = (
   <Container>
     <LeftColumn>
       <h4>Danny Ryan (Ethereum Foundation)</h4>
