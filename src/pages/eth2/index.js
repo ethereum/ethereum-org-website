@@ -311,16 +311,14 @@ const Eth2IndexPage = ({ data }) => {
             <Translation id="page-eth2-vision-desc" />
           </p>
           <CardContainer>
-            {paths.map((path, idx) => {
-              return (
-                <CentreCard
-                  key={idx}
-                  emoji={path.emoji}
-                  title={path.title}
-                  description={path.description}
-                />
-              )
-            })}
+            {paths.map((path, idx) => (
+              <CentreCard
+                key={idx}
+                emoji={path.emoji}
+                title={path.title}
+                description={path.description}
+              />
+            ))}
           </CardContainer>
         </Vision>
       </Content>
@@ -344,20 +342,18 @@ const Eth2IndexPage = ({ data }) => {
           <Translation id="page-eth2-the-upgrades-desc" />
         </p>
         <StyledCardContainer>
-          {upgrades.map((upgrade, idx) => {
-            return (
-              <ActionCard
-                isRight
-                key={idx}
-                image={upgrade.image}
-                title={upgrade.title}
-                description={upgrade.description}
-                to={upgrade.to}
-              >
-                <h6>{upgrade.date}</h6>
-              </ActionCard>
-            )
-          })}
+          {upgrades.map((upgrade, idx) => (
+            <ActionCard
+              isRight
+              key={idx}
+              image={upgrade.image}
+              title={upgrade.title}
+              description={upgrade.description}
+              to={upgrade.to}
+            >
+              <h6>{upgrade.date}</h6>
+            </ActionCard>
+          ))}
         </StyledCardContainer>
       </Content>
       <FullWidthContainer>
