@@ -93,7 +93,7 @@ Run a Besu node on mainnet with the HTTP JSON-RPC service enabled:
 besu --rpc-http-enabled
 ```
 
-More details can be found in the [documentation](https://besu.hyperledger.org/en/stable/Reference/CLI/CLI-Syntax/#rpc-http-enabled).
+Read the [Besu JSON-RPC documentation](https://besu.hyperledger.org/HowTo/Interact/APIs/Using-JSON-RPC-API/) for details about configuring the service (listening ip, port, cors, ...).
 
 ## JSON-RPC support {#json-rpc_support}
 
