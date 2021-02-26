@@ -238,13 +238,12 @@ const WalletsPage = ({ data }) => {
   }, [data, intl])
 
   const cryptoCurious = wallets
-    .filter((wallet) => {
-      return (
+    .filter(
+      (wallet) =>
         (wallet.has_card_deposits === "TRUE" ||
           wallet.has_explore_dapps === "TRUE") &&
         wallet.has_hardware !== "TRUE"
-      )
-    })
+    )
     .slice(0, 4)
 
   const cryptoConverted = wallets
