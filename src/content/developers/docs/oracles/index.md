@@ -14,7 +14,7 @@ Make sure you're familiar with [nodes](/developers/docs/nodes-and-clients/), [co
 
 ## What is an oracle {#what-is-an-oracle}
 
-An oracle is a bridge between the blockchain and the real world. They act as on-chain APIs you can query to get information into your smart contracts. This could be anything from price information to weather reports.
+An oracle is a bridge between the blockchain and the real world. They act as on-chain APIs you can query to get information into your smart contracts. This could be anything from price information to weather reports. Oracles are also bi-directional, and they can also be used to "send" data out to the real world. 
 
 ## Why are they needed? {#why-are-they-needed}
 
@@ -37,17 +37,35 @@ To understand how an oracle works, let's play through a scenario where your smar
 
 An oracle is only as secure as its data source(s). If a dapp uses Uniswap as an oracle for its ETH/DAI price feed, it is possible for an attacker to move the price on Uniswap in order to manipulate the dapp's understanding of the current price. An example of how to combat this is [a feed system](https://developer.makerdao.com/feeds/) like the one used by MakerDAO, which collates price data from a number of external price feeds instead of just relying on a single source.
 
+
+### Architecture {#architecture}
+
+The simplest architecture of Oracles follows a simple architecture, but there are more ways than this to trigger off-chain computation. 
+
+1. Emit a log with your smart contract event
+2. An off-chain service has subscribed (usually using something like the JSON-RPC `eth_subscribe` command) to these specific logs. 
+3. The off-chain service proceeds to do some tasks as defined by the log. 
+4. The off-chain service responds with the data requested in a secondary transaction. 
+
+This is how to get data in a 1 to 1 manner, however you will want to get your data in a decentralized manner, otherwise the design of your smart contract is centralized by nature of it's data.
+
+So the next step would be to have a network of these nodes making these calls to different APIs and sources, and aggregagted on-chain.
+
+[Chainlink Off-Chain Reporting](https://blog.chain.link/off-chain-reporting-live-on-mainnet/) (Chainlink OCR) has improved on this methodology by having the off-chain oracle network communicate with each other, cryptographically signed their responses, and send only 1 transaction on-chain having aggreagated their responses off-chain. This way, fewer gas is spent, but you still get the guarantee of decentralized data since every node has signed their part of the transaction, making it unchangeable by the node sending the transaction. If the node doesn't transact, the escalation policy kicks in, and the next node sends the transaction. 
 ## Usage {#usage}
 
-### Oracles as a service {#oracles-as-a-service}
+### Oracles {#oracles}
 
-Services like Chainlink offer oracles-as-a-service for you to use. They have the infrastructure in place for you to do things like:
+Chainlink is the way to get data already decentralized and on chain, and build your own modular oracle networks to get any customized data you're looking for. Chainlink has infrastructure in place to:
 
-- [get crypto price feeds in your contract](https://chain.link/solutions/defi)
-- [generate verifiable random numbers (useful for gaming)](https://chain.link/solutions/chainlink-vrf)
-- [call external APIs](https://docs.chain.link/docs/request-and-receive-data) – one novel use of this is [checking wBTC reserves](https://cointelegraph.com/news/1b-in-wrapped-bitcoin-now-being-audited-using-chainlink-s-proof-of-reserve)
+- [Get crypto price feeds in your contract](https://chain.link/solutions/defi)
+- [Generate verifiable random numbers (useful for gaming)](https://chain.link/solutions/chainlink-vrf)
+- [Call external APIs](https://docs.chain.link/docs/request-and-receive-data) 
+– one novel use of this is [checking wBTC reserves](https://cointelegraph.com/news/1b-in-wrapped-bitcoin-now-being-audited-using-chainlink-s-proof-of-reserve)
 
 This is an example of how to get the latest ETH price in your smart contract using a Chainlink price feed:
+
+## Chainlink Data Feeds {#chainlink-data-feeds}
 
 ```solidity
 pragma solidity ^0.6.7;
@@ -83,7 +101,147 @@ contract PriceConsumerV3 {
 }
 ```
 
+[You can test this in remix with this link](https://remix.ethereum.org/#version=soljson-v0.6.7+commit.b8d736ae.js&optimize=false&evmVersion=null&gist=0c5928a00094810d2ba01fd8d1083581)
+
 [View the docs](https://docs.chain.link/docs/get-the-latest-price)
+
+## Chainlink VRF {#chainlink-vrf}
+
+Chainlink VRF (Verifiable Random Function) is a provably-fair and verifiable source of randomness designed for smart contracts. Smart contract developers can use Chainlink VRF as a tamper-proof RNG to build reliable smart contracts for any applications which rely on unpredictable outcomes:
+
+- Blockchain games and NFTs
+- Random assignment of duties and resources (e.g. randomly assigning judges to cases)
+- Choosing a representative sample for consensus mechanisms
+
+Random numbers are difficult because blockchains are determanistic. 
+
+Working with Chainlink Oracles outside of data feeds follows the [request and recieve cycle](https://docs.chain.link/docs/architecture-request-model) of working with Chainlink. They use the LINK token to send oracle providers oracle gas for returning responses. The LINK token is specifically designed to work with oracles and are based on the upgraded ERC677 token, which is backwards compatible with the ERC20s. 
+The follow code, if deployed on the kovan testnet will retreive a cryptographically proven random number. To make the reqeust, fund the contract with some testnet LINK token that you can get from the [Kovan LINK Faucet](https://kovan.chain.link/).
+
+```javascript
+
+pragma solidity 0.6.6;
+
+import "@chainlink/contracts/src/v0.6/VRFConsumerBase.sol";
+
+contract RandomNumberConsumer is VRFConsumerBase {
+    
+    bytes32 internal keyHash;
+    uint256 internal fee;
+    
+    uint256 public randomResult;
+    
+    /**
+     * Constructor inherits VRFConsumerBase
+     * 
+     * Network: Kovan
+     * Chainlink VRF Coordinator address: 0xdD3782915140c8f3b190B5D67eAc6dc5760C46E9
+     * LINK token address:                0xa36085F69e2889c224210F603D836748e7dC0088
+     * Key Hash: 0x6c3699283bda56ad74f6b855546325b68d482e983852a7a82979cc4807b641f4
+     */
+    constructor() 
+        VRFConsumerBase(
+            0xdD3782915140c8f3b190B5D67eAc6dc5760C46E9, // VRF Coordinator
+            0xa36085F69e2889c224210F603D836748e7dC0088  // LINK Token
+        ) public
+    {
+        keyHash = 0x6c3699283bda56ad74f6b855546325b68d482e983852a7a82979cc4807b641f4;
+        fee = 0.1 * 10 ** 18; // 0.1 LINK (varies by network)
+    }
+    
+    /** 
+     * Requests randomness from a user-provided seed
+     */
+    function getRandomNumber(uint256 userProvidedSeed) public returns (bytes32 requestId) {
+        require(LINK.balanceOf(address(this)) >= fee, "Not enough LINK - fill contract with faucet");
+        return requestRandomness(keyHash, fee, userProvidedSeed);
+    }
+
+    /**
+     * Callback function used by VRF Coordinator
+     */
+    function fulfillRandomness(bytes32 requestId, uint256 randomness) internal override {
+        randomResult = randomness;
+    }
+}
+```
+
+## Chainlink API Call {#chainlink-api-call}
+
+[Chainlink API Calls](https://docs.chain.link/docs/make-a-http-get-request) are the easiest way to get data from the off-chain world in the traditional way the web works; API calls. Doing a single instance of this, is the smallest unit of a decentralized oracle network, and having only 1 oracle makes it centralized by nature. In order to keep it truly decentralized a smart contract platform would need to use numerous nodes, found in a [node listing service link market.link](https://market.link/).
+
+[You can deploy the following code in remix on the kovan network to test by using this link.](https://remix.ethereum.org/#version=soljson-v0.6.7+commit.b8d736ae.js&optimize=false&evmVersion=null&gist=8a173a65099261582a652ba18b7d96c1)
+
+This also follows the request and receive cycle of oracles, and needs the contract to be funded with Kovan LINK (the oracle gas) in order to work. 
+
+```javascript
+pragma solidity ^0.6.0;
+
+import "@chainlink/contracts/src/v0.6/ChainlinkClient.sol";
+
+contract APIConsumer is ChainlinkClient {
+  
+    uint256 public volume;
+    
+    address private oracle;
+    bytes32 private jobId;
+    uint256 private fee;
+    
+    /**
+     * Network: Kovan
+     * Oracle: 0x2f90A6D021db21e1B2A077c5a37B3C7E75D15b7e
+     * Job ID: 29fa9aa13bf1468788b7cc4a500a45b8
+     * Fee: 0.1 LINK
+     */
+    constructor() public {
+        setPublicChainlinkToken();
+        oracle = 0x2f90A6D021db21e1B2A077c5a37B3C7E75D15b7e;
+        jobId = "29fa9aa13bf1468788b7cc4a500a45b8";
+        fee = 0.1 * 10 ** 18; // 0.1 LINK
+    }
+    
+    /**
+     * Create a Chainlink request to retrieve API response, find the target
+     * data, then multiply by 1000000000000000000 (to remove decimal places from data).
+     */
+    function requestVolumeData() public returns (bytes32 requestId) 
+    {
+        Chainlink.Request memory request = buildChainlinkRequest(jobId, address(this), this.fulfill.selector);
+        
+        // Set the URL to perform the GET request on
+        request.add("get", "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH&tsyms=USD");
+        
+        // Set the path to find the desired data in the API response, where the response format is:
+        // {"RAW":
+        //   {"ETH":
+        //    {"USD":
+        //     {
+        //      "VOLUME24HOUR": xxx.xxx,
+        //     }
+        //    }
+        //   }
+        //  }
+        request.add("path", "RAW.ETH.USD.VOLUME24HOUR");
+        
+        // Multiply the result by 1000000000000000000 to remove decimals
+        int timesAmount = 10**18;
+        request.addInt("times", timesAmount);
+        
+        // Sends the request
+        return sendChainlinkRequestTo(oracle, request, fee);
+    }
+    
+    /**
+     * Receive the response in the form of uint256
+     */ 
+    function fulfill(bytes32 _requestId, uint256 _volume) public recordChainlinkFulfillment(_requestId)
+    {
+        volume = _volume;
+    }
+}
+```
+
+You learn more about the applications of chainlink by reading [the developers blog](https://blog.chain.link/tag/developers/).
 
 #### Oracle services {#other-services}
 
@@ -211,6 +369,7 @@ _We'd love more documentation on creating an oracle smart contract. If you can h
 
 ## Further reading {#further-reading}
 
+- [What is a Blockchain Oracle?](https://betterprogramming.pub/what-is-a-blockchain-oracle-f5ccab8dbd72) - _Patrick Collins_
 - [Decentralised Oracles: a comprehensive overview](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) –_Julien Thevenard_
 - [Implementing a Blockchain Oracle on Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) –_Pedro Costa_
 - [Oracles](https://docs.ethhub.io/built-on-ethereum/oracles/what-are-oracles/) –_EthHub_
