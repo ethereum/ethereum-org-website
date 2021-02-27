@@ -954,4 +954,17 @@ it to do something you just override it.
 
 # Conclusion {#conclusion}
 
-By this point you should understand the OpenWhisk ERC-20 code and why it is written like that. Hopefully this knowledge will help you develop your own contracts and applications.
+Now that you've seen how the OpenWhisk ERC-2o contract is written, and especially how it is 
+made more secure, go and write your own secure contracts and applications. For review,
+here are some of the most important ideas (in my opinion, yours is likely to vary):
+
+* *There are no secrets on the blockchain*. Any information that a smart contract can access 
+  is available to the whole world.
+* You can control the order of your own transactions, but not when other people's transaction
+  happen. This is the reason that changing an allowance can be dangerous, because it lets
+  the spender spend the sum of both allowances.
+* Values of type `uint256` wrap around. In other words, *0-1=2^256-1*. If that is not desired 
+  behavior, you have to check for it (or use the SafeMath library that does it for you). Note that this changed in
+  [Solidity 0.8.0](https://docs.soliditylang.org/en/breaking/080-breaking-changes.html).
+* It is do all state changes of a specific type in a specific place, because it makes auditing easier. 
+  This is the reason that we have `_transfer`, which is called by both `transfer` and `transferFrom`.
