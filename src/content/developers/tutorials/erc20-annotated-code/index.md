@@ -624,7 +624,7 @@ Second, it checks that this result is not negative. If it is negative the call r
     }
 ```
 
-#### OpenWhisk Safety Additions {#openwhisk-safety-addition} 
+#### OpenWhisk safety additions {#openwhisk-safety-additions} 
 
 It is dangerous to set a non-zero allowance to another non-zero value, 
 because you only control the order of your own transactions, not anybody else's. Imagine you
@@ -684,13 +684,6 @@ B:
      * - `spender` cannot be the zero address.
      */
     function increaseAllowance(address spender, uint256 addedValue) public virtual returns (bool) {
-```
-
-
-&nbsp;
-
-
-```solidity
         _approve(_msgSender(), spender, _allowances[_msgSender()][spender].add(addedValue));        
         return true;
     }
@@ -727,7 +720,7 @@ the way normal addition does.
 
 These are the four functions that do the actual work: `_transfer`, `_mint`, `_burn`, and `_approve`.
 
-#### The _transfer Function
+#### The \_transfer function  {#_transfer}
 ```solidity
     /**
      * @dev Moves tokens `amount` from `sender` to `recipient`.
@@ -753,16 +746,23 @@ to transfer from somebody else's account).
 
 &nbsp;
 
-Nobody actually owns address zero in Ethereum (that is, nobody knows a private key whose matching public key
-is transformed to the zero address). When people use that address, it is usually a software bug - so we 
-fail if the zero address is used as the sender or the recipient.
-
 ```solidity
         require(sender != address(0), "ERC20: transfer from the zero address");
         require(recipient != address(0), "ERC20: transfer to the zero address");
 ```
 
+Nobody actually owns address zero in Ethereum (that is, nobody knows a private key whose matching public key
+is transformed to the zero address). When people use that address, it is usually a software bug - so we 
+fail if the zero address is used as the sender or the recipient.
+
+
 &nbsp;
+
+```solidity
+        _beforeTokenTransfer(sender, recipient, amount);
+        
+```
+
 
 There are two ways to use this contract:
 
@@ -776,34 +776,32 @@ It is often useful to perform a function each time tokens change hands. However,
 possible to write it insecurely (see below), so it is best not to override it. The solution is `_beforeTokenTransfer`, a 
 [hook function](https://en.wikipedia.org/wiki/Hooking). You can override this function, and it will be called on each transfer.
 
-```solidity
-        _beforeTokenTransfer(sender, recipient, amount);
-        
-```
 
 &nbsp;
-
-These are the lines that actually do the transfer. Note that there is **nothing** between them, and that we subtract
-the transferred amount from the sender before adding it to the recipient. This is important because if there was a 
-call to a different contract in the middle, it could have been used to cheat this contract. This way the transfer
-is atomic, nothing can happen in the middle of it.
 
 ```solidity
         _balances[sender] = _balances[sender].sub(amount, "ERC20: transfer amount exceeds balance");
         _balances[recipient] = _balances[recipient].add(amount);
 ```
 
-&nbsp;
+These are the lines that actually do the transfer. Note that there is **nothing** between them, and that we subtract
+the transferred amount from the sender before adding it to the recipient. This is important because if there was a 
+call to a different contract in the middle, it could have been used to cheat this contract. This way the transfer
+is atomic, nothing can happen in the middle of it.
 
-Finally, emit a `Transfer` event. Events are not accessible to smart contracts, but code running outside the blockchain
-can listen for events and react to them. For example, a wallet can keep track of when the owner gets more tokens.
+
+&nbsp;
 
 ```solidity
         emit Transfer(sender, recipient, amount);
     }
 ```
 
-&nbsp;
+Finally, emit a `Transfer` event. Events are not accessible to smart contracts, but code running outside the blockchain
+can listen for events and react to them. For example, a wallet can keep track of when the owner gets more tokens.
+
+
+#### The \_mint and \_burn functions {#_mint-and-_burn}
 
 These two functions (`_mint` and `_burn`) modify the total supply of tokens. 
 They are internal and there is no function that calls them in this contract,
@@ -811,11 +809,13 @@ so they are only useful if you inherit from the contract and add your own
 logic to decide under what conditions to mint new tokens or burn existing
 ones.
 
+
 **NOTE:** every ERC-20 token has its own business logic that dictates
 token management. For example, a fixed supply contract might only call `_mint`
 in the constructor and never call `_burn`. A contract that sells tokens
 will call `_mint` when it is paid, and presumably call `_burn` at some point
 to avoid runaway inflation.
+
 
 ```solidity
     /** @dev Creates `amount` tokens and assigns them to `account`, increasing
@@ -830,18 +830,18 @@ to avoid runaway inflation.
     function _mint(address account, uint256 amount) internal virtual {
         require(account != address(0), "ERC20: mint to the zero address");
         _beforeTokenTransfer(address(0), account, amount);
-```
-
-&nbsp;
-
-Make sure to update `_totalSupply` when the total number of tokens changes.
-
-```solidity
         _totalSupply = _totalSupply.add(amount);
         _balances[account] = _balances[account].add(amount);
         emit Transfer(address(0), account, amount);
     }
+```    
+    
+Make sure to update `_totalSupply` when the total number of tokens changes.
 
+
+&nbsp;
+
+```
     /**
      * @dev Destroys `amount` tokens from `account`, reducing the
      * total supply.
@@ -864,7 +864,9 @@ Make sure to update `_totalSupply` when the total number of tokens changes.
     }
 ```
 
-&nbsp;
+The `_burn` function is almost identical to `_emit`, except it goes in the other direction.
+
+#### The \_approve function {#_approve}
 
 This is the function that actually specifies allowances. Note that it allows an owner to specify
 an allowance that is higher than the owner's current balance. This is OK because the balance is 
@@ -905,10 +907,6 @@ approval either by the owner or by a server that listens to these events.
 
 ### Modify The Decimals Variable  {#modify-the-decimals-variable}
 
-This function modifies the `_decimals` variable which is used to tell user interfaces how to interpret the amount. 
-You should call it from the constructor. It would be dishonest to call it at any subsequent point, and applications
-are not designed to handle it.
-
 ```solidity
 
 
@@ -924,10 +922,12 @@ are not designed to handle it.
     }
 ```
 
-### Hooks  {#hooks}
+This function modifies the `_decimals` variable which is used to tell user interfaces how to interpret the amount. 
+You should call it from the constructor. It would be dishonest to call it at any subsequent point, and applications
+are not designed to handle it.
 
-This is the hook function to be called during transfers. It is empty here, buf if you need
-it to do something you just override it.
+
+### Hooks  {#hooks}
 
 ```solidity
 
@@ -948,6 +948,9 @@ it to do something you just override it.
     function _beforeTokenTransfer(address from, address to, uint256 amount) internal virtual { }
 }
 ```
+
+This is the hook function to be called during transfers. It is empty here, buf if you need
+it to do something you just override it.
 
 # Conclusion {#conclusion}
 
