@@ -973,7 +973,7 @@ For review, here are some of the most important ideas in this contract (in my op
 * Values of type `uint256` wrap around. In other words, *0-1=2^256-1*. If that is not desired 
   behavior, you have to check for it (or use the SafeMath library that does it for you). Note that this changed in
   [Solidity 0.8.0](https://docs.soliditylang.org/en/breaking/080-breaking-changes.html).
-* It is do all state changes of a specific type in a specific place, because it makes auditing easier. 
+* Do all state changes of a specific type in a specific place, because it makes auditing easier. 
   This is the reason that we have, for example, `_approve`, which is called by `approve`, `transferFrom`,
   `increaseAllowance`, and `decreaseAllowance`
 * State changes should be atomic, without any other action in their middle (as you can see
@@ -983,5 +983,5 @@ For review, here are some of the most important ideas in this contract (in my op
   are operations between them, especially calls to a different contract.
   
 
-Now that you've seen how the OpenWhisk ERC-2o contract is written, and especially how it is 
+Now that you've seen how the OpenWhisk ERC-20 contract is written, and especially how it is 
 made more secure, go and write your own secure contracts and applications. 
