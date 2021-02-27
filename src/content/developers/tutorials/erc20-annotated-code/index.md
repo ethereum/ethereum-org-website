@@ -977,7 +977,7 @@ For review, here are some of the most important ideas in this contract (in my op
   This is the reason that we have, for example, `_approve`, which is called by `approve`, `transferFrom`,
   `increaseAllowance`, and `decreaseAllowance`
 * State changes should be atomic, without any other action in their middle (as you can see
-  in `_transfer`). This is because during the state change you have a forbidden situation. For example,
+  in `_transfer`). This is because during the state change you have an inconsistent state. For example,
   between the time you deduct from the balance of the sender and the time you add to the balance of the 
   recipient there are less token in existence than there should be. This could be potentially abused if there
   are operations between them, especially calls to a different contract.
