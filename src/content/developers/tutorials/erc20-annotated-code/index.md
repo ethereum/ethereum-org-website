@@ -40,28 +40,29 @@ interface itself does not define *how* to do anything. That is explained in the 
 
 &nbsp;
 
+```solidity
+// SPDX-License-Identifier: MIT
+```
 
 Solidity files are supposed to includes a license identifier. [You can see the list of licenses here](https://spdx.org/licenses/). If you need a different
 license, just explain it in the comments.
 
 
-```solidity
-// SPDX-License-Identifier: MIT
-```
 
 &nbsp;
-
-The Solidity language is still evolving quickly, and new versions may not be compatible with old code ([see here](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)). Therefore, it is a goood idea to specify not just a minimum version of the language, but also a maximum version, the latest with which you 
-tested the code.
 
 ```solidity
 pragma solidity >=0.6.0 <0.8.0;
 ```
 
+
+The Solidity language is still evolving quickly, and new versions may not be compatible with old code 
+([see here](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)). Therefore, it is a goood idea to specify not just a minimum 
+version of the language, but also a maximum version, the latest with which you tested the code.
+
+
 &nbsp;
 
-The `@dev` in the comment is part of the [NatSpec format](https://docs.soliditylang.org/en/develop/natspec-format.html), used to produce 
-documentation from the source code.
 
 ```solidity
 /**
@@ -69,15 +70,27 @@ documentation from the source code.
  */
 ```
 
+
+The `@dev` in the comment is part of the [NatSpec format](https://docs.soliditylang.org/en/develop/natspec-format.html), used to produce 
+documentation from the source code.
+
 &nbsp;
 
-By convention, interface names start with `I`.
 
 ```solidity
 interface IERC20 {
 ```
 
+By convention, interface names start with `I`.
+
 &nbsp;
+
+```solidity
+    /**
+     * @dev Returns the amount of tokens in existence.
+     */
+    function totalSupply() external view returns (uint256);
+```
 
 This function is `external`, meaning [it can only be called from outside the contract](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2).
 It returns the total supply of tokens in the contract. This value is returned using the most common type in Ethereum, unsigned 256 bits (256 bits is the 
@@ -91,17 +104,9 @@ code for your contract, nobody would take you seriously unless you publish the s
 be verified against the machine language code you provided. 
 For example, see [this contract](https://etherscan.io/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD#code).
 
-```solidity
-    /**
-     * @dev Returns the amount of tokens in existence.
-     */
-    function totalSupply() external view returns (uint256);
-```
+
 
 &nbsp;
-
-As the name says, this function returns the balance of an account. Ethereum accounts are identified in Solidity using the `address` type, which holds 160 bits.
-It is also `external` and `view`.
 
 ```solidity
     /**
@@ -110,9 +115,25 @@ It is also `external` and `view`.
     function balanceOf(address account) external view returns (uint256);
 ```
 
+
+As the name says, `balanceOf` returns the balance of an account. Ethereum accounts are identified in Solidity using the `address` type, which holds 160 bits.
+It is also `external` and `view`.
+
+
 &nbsp;
 
-This function transfers a tokens from the caller to a different address. This involves a change of state, so it isn't a `view`. 
+```solidity
+    /**
+     * @dev Moves `amount` tokens from the caller's account to `recipient`.
+     *
+     * Returns a boolean value indicating whether the operation succeeded.
+     *
+     * Emits a {Transfer} event.
+     */
+    function transfer(address recipient, uint256 amount) external returns (bool);
+```
+
+The `transfer` function transfers a tokens from the caller to a different address. This involves a change of state, so it isn't a `view`. 
 When a user calls this function it creates a transaction and costs gas. It also emits an event, `Transfer`, to inform everybody on 
 the blockchain of the event.
 
@@ -127,16 +148,7 @@ The function has two types of output for two different types of callers:
 
 The same type of output is created by the other functions that change the contract's state.
 
-```solidity
-    /**
-     * @dev Moves `amount` tokens from the caller's account to `recipient`.
-     *
-     * Returns a boolean value indicating whether the operation succeeded.
-     *
-     * Emits a {Transfer} event.
-     */
-    function transfer(address recipient, uint256 amount) external returns (bool);
-```
+
 
 &nbsp;
 
@@ -147,9 +159,6 @@ directly that contract wouldn't know it was paid. Instead, the buyer permits the
 seller contract to spend a certain amount, and the seller transfers that amount.
 This is done through a function the seller contract calls, so the seller contract
 can know if it was successful.
-
-This function lets anybody query to see what is the allowance that one
-address (`owner`) lets another address (`spender`) spend.
 
 ```solidity
     /**
@@ -162,14 +171,12 @@ address (`owner`) lets another address (`spender`) spend.
     function allowance(address owner, address spender) external view returns (uint256);
 ```
 
+The `allowance` function lets anybody query to see what is the allowance that one
+address (`owner`) lets another address (`spender`) spend.
+
+
+
 &nbsp;
-
-This function creates an allowance. Make sure to read the message about 
-how it can be abused. In Ethereum you control the order of your own transactions,
-but you cannot control the order in which other people's transactions will 
-be executed, unless you don't submit your own transaction until you see the
-other side's transaction had happened.
-
 
 ```solidity
     /**
@@ -189,9 +196,15 @@ other side's transaction had happened.
     function approve(address spender, uint256 amount) external returns (bool);
 ```
 
-&nbsp;
 
-Finally, this function is used by the spender to actually spend the allowance.
+The `approve` function creates an allowance. Make sure to read the message about 
+how it can be abused. In Ethereum you control the order of your own transactions,
+but you cannot control the order in which other people's transactions will 
+be executed, unless you don't submit your own transaction until you see the
+other side's transaction had happened.
+
+
+&nbsp;
 
 ```solidity
     /**
@@ -206,9 +219,12 @@ Finally, this function is used by the spender to actually spend the allowance.
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
 ```
 
+
+Finally, `transferFrom` is used by the spender to actually spend the allowance.
+
+
 &nbsp;
 
-These events are emitted when the state of the ERC-20 contract changes.
 
 ```solidity
 
@@ -226,9 +242,10 @@ These events are emitted when the state of the ERC-20 contract changes.
      */
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
-
-
 ```
+
+These events are emitted when the state of the ERC-20 contract changes.
+
 
 
 ## The Actual Contract {#the-actual-contract}
@@ -250,6 +267,14 @@ pragma solidity >=0.6.0 <0.8.0;
 
 In addition to the interface definitions above, the contract definition imports two other files:
 
+```solidity
+
+import "../../GSN/Context.sol";
+import "./IERC20.sol";
+import "../../math/SafeMath.sol";
+```
+
+
 -  `GSN/Context.sol` is the definitions required to use [OpenGSN](https://www.opengsn.org/), a system that allows users without ether
    to use the blockchain. Note that this is an old version, if you want to integrate with OpenGSN 
    [use this tutorial](https://docs.opengsn.org/tutorials/integration.html).
@@ -257,13 +282,12 @@ In addition to the interface definitions above, the contract definition imports 
    addition and subtraction without overflows. This is necessary because otherwise a person might somehow have one token, spend
    two tokens, and then have 2^256-1 tokens.
 
+
+&nbsp;
+
+This comment explains the purpose of the contract.
+
 ```solidity
-
-import "../../GSN/Context.sol";
-import "./IERC20.sol";
-import "../../math/SafeMath.sol";
-
-
 /**
  * @dev Implementation of the {IERC20} interface.
  *
@@ -293,22 +317,24 @@ import "../../math/SafeMath.sol";
  
 ### Contract Definition   {#contract-definition}
  
-This line specifies the inheritence, in this case from `IERC20` from above and `Context`, for OpenGSN.
-
 ```solidity
 contract ERC20 is Context, IERC20 {
 ```
 
-&nbsp;
+This line specifies the inheritence, in this case from `IERC20` from above and `Context`, for OpenGSN.
 
-This line attaches the `SafeMath` library to the `uint256` type. You can find this library
-[here](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/math/SafeMath.sol).
+
+&nbsp;
 
 ```solidity
 
     using SafeMath for uint256;
 
 ```
+
+This line attaches the `SafeMath` library to the `uint256` type. You can find this library
+[here](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/math/SafeMath.sol).
+
 
 ### Variable Definitions  {#variable-definitions}
 
@@ -321,32 +347,42 @@ The first two variables are [mappings](https://www.tutorialspoint.com/solidity/s
 meaning they behave roughly the same as [associative arrays](https://en.wikipedia.org/wiki/Associative_array),
 except that the keys are numeric values. In contrast to normal arrays, which have storage for all cells, 
 
-The first mapping, `_balances`, is addresses and their respective balances of this token. To access
-the balance, use this syntax: `_balances[<address>]`.
-
 ```solidity
     mapping (address => uint256) private _balances;
 ```
 
-&nbsp;
+The first mapping, `_balances`, is addresses and their respective balances of this token. To access
+the balance, use this syntax: `_balances[<address>]`.
 
-This variable, `_allowances`, stores the allowances explained earlier. The first index is the owner
-of the tokens, and the second is the contract with the allowance. To access the amount address A can
-spend from address B's account, use `_allowances[B][A]`.
+
+&nbsp;
 
 ```solidity
     mapping (address => mapping (address => uint256)) private _allowances;
 ```
 
-&nbsp;
+This variable, `_allowances`, stores the allowances explained earlier. The first index is the owner
+of the tokens, and the second is the contract with the allowance. To access the amount address A can
+spend from address B's account, use `_allowances[B][A]`.
 
-As the name suggests, this variable keeps track of the total supply of tokens.
+
+&nbsp;
 
 ```solidity
     uint256 private _totalSupply;
 ```
 
+As the name suggests, this variable keeps track of the total supply of tokens.
+
+
+
 &nbsp;
+
+```solidity
+    string private _name;
+    string private _symbol;
+    uint8 private _decimals;
+```
 
 These three variables are used to impprove readability. The first two are self-explanatory, but `_decimals`
 isn't. 
@@ -364,17 +400,8 @@ Applications need to know how to display the token balance. If a user has 3,141,
 token you can select a different value. If dividing the token doesn't make sense, you can use a 
 `_decimals` value of zero. If you want to use the same standard as ETH, use the value **18**.
 
-```solidity
-    string private _name;
-    string private _symbol;
-    uint8 private _decimals;
-```
 
 ### The Constructor  {#the-constructor}
-
-The constructor is called when the contract is first created. 
-
-By convention, function parameters are named `<something>_`. 
 
 ```solidity
     /**
@@ -393,20 +420,10 @@ By convention, function parameters are named `<something>_`.
     }
 ```
 
+The constructor is called when the contract is first created. By convention, function parameters are named `<something>_`. 
+
+
 ### User Interface Functions  {#user-interface-functions}
-
-These functions help user interfaces know about your contract so they'll be able to display it properly.
-
-The return type is `string memory`, meaning return a string that is stored in memory. Variables, such as
-strings, can be stored in three locations:
-
-|           | Lifetime      | Contract Access | Gas Cost |
-| --------- | ------------- | --------------- | -------- |
-| Memory    | Function call | Read/Write      | Tens or hundreds (higher for higher locations) |
-| Calldata  | Function call | Read Only       | Very low (paid by the caller, not the callee)  | 
-| Storage   | Until changed | Read/Write      | High (800 for read, 20k for write)             |
-
-In this case, `memory` is the best choice.
 
 ```solidity
     /**
@@ -442,12 +459,25 @@ In this case, `memory` is the best choice.
     }
 ```
 
+
+These functions, `name`, `symbol`, and `decimals` help user interfaces know about your contract so they'll be able to display it properly.
+
+The return type is `string memory`, meaning return a string that is stored in memory. Variables, such as
+strings, can be stored in three locations:
+
+|           | Lifetime      | Contract Access | Gas Cost |
+| --------- | ------------- | --------------- | -------- |
+| Memory    | Function call | Read/Write      | Tens or hundreds (higher for higher locations) |
+| Calldata  | Function call | Read Only       | Very low (paid by the caller, not the callee)  | 
+| Storage   | Until changed | Read/Write      | High (800 for read, 20k for write)             |
+
+In this case, `memory` is the best choice.
+
+
 ### Read Token Information  {#read-token-information}
 
 These are functions that provide information about the token, either the total supply or an
 account's balance.
-
-This functions returns the total supply of tokens. 
 
 ```solidity
     /**
@@ -458,11 +488,10 @@ This functions returns the total supply of tokens.
     }
 ```
 
-&nbsp;
+The `totalSupply` function returns the total supply of tokens. 
 
-Read an account's balance. Note that anybody is allowed to get anybody else's account 
-balance. There is no point attempting to hide information, because it is available on every
-node anyway. *There are no secrets on the blockchain.*
+
+&nbsp;
 
 ```solidity
     /**
@@ -473,12 +502,13 @@ node anyway. *There are no secrets on the blockchain.*
     }
 ```   
 
+Read an account's balance. Note that anybody is allowed to get anybody else's account 
+balance. There is no point in trying to hide this information, because it is available on every
+node anyway. *There are no secrets on the blockchain.*
+
 
 ### Transfer Tokens   {#transfer-tokens}
 
-This is the function called to transfer tokens from the sender's account to a different one. Note
-that even though it returns a boolean value, that value is always **true**. If the transfer
-fails the contract reverts the call.
 
 ```solidity
     /**
@@ -492,7 +522,18 @@ fails the contract reverts the call.
     function transfer(address recipient, uint256 amount) public virtual override returns (bool) {
 ```
 
+The `transfer` function is called to transfer tokens from the sender's account to a different one. Note
+that even though it returns a boolean value, that value is always **true**. If the transfer
+fails the contract reverts the call.
+
+
 &nbsp;
+
+```solidity
+        _transfer(_msgSender(), recipient, amount);
+        return true;
+    }
+```
 
 The `_transfer` function does the actual work. It is a private function that can only be called by
 other contract functions. By convention private functions are named `_<something>`, same as state
@@ -503,18 +544,14 @@ Normally in Solidity we use `msg.sender` for the message sender. However, that b
 need to use `_msgSender()`. It returns `msg.sender` for normal transactions, but for etherless ones
 return the original signer and not the contract that relayed the message.
 
-```solidity
-        _transfer(_msgSender(), recipient, amount);
-        return true;
-    }
-```
 
 ### Allowance Functions    {#allowance-functions}
 
-These are the functions that implement the allowance functionality. The OpenWhisk implementation goes 
-beyond the basic standard to include some features that improve security.
+These are the functions that implement the allowance functionality: `allowance`, `approve`, `transferFrom`,
+and `_approve`. Additionally, the OpenWhisk implementation goes beyond the basic standard to include some features that improve 
+security: `increaseAllowance`, and `decreaseAllowance`. 
 
-This function lets anybody query allowance information.
+#### The allowance function {#allowance}
 
 ```solidity
     /**
@@ -525,13 +562,10 @@ This function lets anybody query allowance information.
     }
 ```
 
-&nbsp; 
+The `allowance` function allows everybody to check any allowance.
 
-This function is called to create an allowance. It is similar to the `transfer` function above:
 
-- The function just calls an internal function (in this case, `_approve`) that does the real work.
-- The function either returns `true` (if successful) or reverts (if not).
-
+#### The approve function {#approve}
 
 ```solidity
     /**
@@ -547,7 +581,13 @@ This function is called to create an allowance. It is similar to the `transfer` 
     }
 ```
 
-&nbsp;
+This function is called to create an allowance. It is similar to the `transfer` function above:
+
+- The function just calls an internal function (in this case, `_approve`) that does the real work.
+- The function either returns `true` (if successful) or reverts (if not).
+
+
+#### The transferFrom function {#transferFrom}
 
 This is the function that a spender calls to spend an allowance. This requires two operations: transfer the amount
 being spent and reduce the allowance by that amount.
@@ -584,7 +624,7 @@ Second, it checks that this result is not negative. If it is negative the call r
     }
 ```
 
-&nbsp;
+#### OpenWhisk Safety Additions {#openwhisk-safety-addition} 
 
 It is dangerous to set a non-zero allowance to another non-zero value, 
 because you only control the order of your own transactions, not anybody else's. Imagine you
@@ -646,17 +686,21 @@ B:
     function increaseAllowance(address spender, uint256 addedValue) public virtual returns (bool) {
 ```
 
+
 &nbsp;
+
+
+```solidity
+        _approve(_msgSender(), spender, _allowances[_msgSender()][spender].add(addedValue));        
+        return true;
+    }
+````
 
 The `a.add(b)` function is a safe add. In the unlikely case that `a`+`b`>=`2^256` it does not wrap around
 the way normal addition does.
 
 
-
 ```solidity
-        _approve(_msgSender(), spender, _allowances[_msgSender()][spender].add(addedValue));
-        return true;
-    }
 
     /**
      * @dev Atomically decreases the allowance granted to `spender` by the caller.
@@ -683,10 +727,7 @@ the way normal addition does.
 
 These are the four functions that do the actual work: `_transfer`, `_mint`, `_burn`, and `_approve`.
 
-This function, `_transfer`, transfers tokens from one account to another. It is called by both
-`transfer` (for transfers from the sender's own account) and `transferFrom` (for using allowances
-to transfer from somebody else's account).
-
+#### The _transfer Function
 ```solidity
     /**
      * @dev Moves tokens `amount` from `sender` to `recipient`.
@@ -704,6 +745,11 @@ to transfer from somebody else's account).
      */
     function _transfer(address sender, address recipient, uint256 amount) internal virtual {
 ```
+
+This function, `_transfer`, transfers tokens from one account to another. It is called by both
+`transfer` (for transfers from the sender's own account) and `transferFrom` (for using allowances
+to transfer from somebody else's account).
+
 
 &nbsp;
 
