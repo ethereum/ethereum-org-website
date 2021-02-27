@@ -576,15 +576,24 @@ The `allowance` function allows everybody to check any allowance.
      * - `spender` cannot be the zero address.
      */
     function approve(address spender, uint256 amount) public virtual override returns (bool) {
-        _approve(_msgSender(), spender, amount);
-        return true;
-    }
 ```
 
 This function is called to create an allowance. It is similar to the `transfer` function above:
 
 - The function just calls an internal function (in this case, `_approve`) that does the real work.
 - The function either returns `true` (if successful) or reverts (if not).
+
+
+&nbsp;
+
+```solidity
+        _approve(_msgSender(), spender, amount);
+        return true;
+    }
+```
+
+We use internal functions to minimize the number of places where state changes happen. *Any* function that changes the
+state is a potential security risk that needs to be audited for security. This way we have less chances to get it wrong.
 
 
 #### The transferFrom function {#transferFrom}
@@ -954,9 +963,7 @@ it to do something you just override it.
 
 # Conclusion {#conclusion}
 
-Now that you've seen how the OpenWhisk ERC-2o contract is written, and especially how it is 
-made more secure, go and write your own secure contracts and applications. For review,
-here are some of the most important ideas (in my opinion, yours is likely to vary):
+For review, here are some of the most important ideas in this contract (in my opinion, yours is likely to vary):
 
 * *There are no secrets on the blockchain*. Any information that a smart contract can access 
   is available to the whole world.
@@ -967,4 +974,14 @@ here are some of the most important ideas (in my opinion, yours is likely to var
   behavior, you have to check for it (or use the SafeMath library that does it for you). Note that this changed in
   [Solidity 0.8.0](https://docs.soliditylang.org/en/breaking/080-breaking-changes.html).
 * It is do all state changes of a specific type in a specific place, because it makes auditing easier. 
-  This is the reason that we have `_transfer`, which is called by both `transfer` and `transferFrom`.
+  This is the reason that we have, for example, `_approve`, which is called by `approve`, `transferFrom`,
+  `increaseAllowance`, and `decreaseAllowance`
+* State changes should be atomic, without any other action in their middle (as you can see
+  in `_transfer`). This is because during the state change you have a forbidden situation. For example,
+  between the time you deduct from the balance of the sender and the time you add to the balance of the 
+  recipient there are less token in existence than there should be. This could be potentially abused if there
+  are operations between them, especially calls to a different contract.
+  
+
+Now that you've seen how the OpenWhisk ERC-2o contract is written, and especially how it is 
+made more secure, go and write your own secure contracts and applications. 
