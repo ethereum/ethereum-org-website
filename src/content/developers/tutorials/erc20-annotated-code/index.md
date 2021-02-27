@@ -13,7 +13,7 @@ published: 2021-<month>-<day>
 
 One of the most common uses for Ethereum is for a group to create a tradable token, in a sense their own currency. These tokens typically follow a standard, 
 [ERC-20](https://eips.ethereum.org/EIPS/eip-20). This standard makes it possible to write tools, such as liquidity pools and wallets, that work with all ERC-20
-currencies. In this article we will analyze the 
+tokens. In this article we will analyze the 
 [OpenWhisk Solidity ERC20 implenetation](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), as well as the
 [Interface definition](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
 
@@ -23,10 +23,11 @@ This is annotated source code. If you want to implement ERC-20,
 
 ## The Interface {#the-interface}
 
-The purpose of a standard like ERC-20 is to have multiple currencies that interface with the same code. To achieve that, we create an 
-[interface](https://www.geeksforgeeks.org/solidity-basics-of-interface/). Any code that needs to interface with the token contract
+The purpose of a standard like ERC-20 is to have multiple token types that are used from the same code. To achieve that, we create an 
+[interface](https://www.geeksforgeeks.org/solidity-basics-of-interface/). Any code that needs to use the token contract
 can use the same definitions in the interface and be compatible with all token contracts that use it, whether it is a wallet such as 
 MetaMask, a dapp such as etherscan.io, or a different contract such as liquidity pool.
+
 
 ![Illustration of the ERC-20 interface](erc20_interface.png)
 
@@ -249,7 +250,7 @@ pragma solidity >=0.6.0 <0.8.0;
 
 In addition to the interface definitions above, the contract definition imports two other files:
 
--  `GSN/Context.sol` is the definitions required to use [OpenGSN](https://www.opengsn.org/), a system that allows users without Ether
+-  `GSN/Context.sol` is the definitions required to use [OpenGSN](https://www.opengsn.org/), a system that allows users without ether
    to use the blockchain. Note that this is an old version, if you want to integrate with OpenGSN 
    [use this tutorial](https://docs.opengsn.org/tutorials/integration.html).
 -  [The SafeMath library](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/), which is used to make 
@@ -355,11 +356,11 @@ humans like being able to divide tokens. One reason people settled on gold for c
 it was hard to make change when somebody wanted to buy a duck's worth of cow.
 
 The solution is to keep track of integers, but count instead of the real token a fractional token that is
-nearly worthless. In the case of ETH, the fractional token is called wei, and 10^18 wei is equal to one
-Ether. At writing, 10,000,000,000,000 wei is approximately one US or Euro cent.
+nearly worthless. In the case of ether, the fractional token is called wei, and 10^18 wei is equal to one
+ETH. At writing, 10,000,000,000,000 wei is approximately one US or Euro cent.
 
 Applications need to know how to display the token balance. If a user has 3,141,000,000,000,000,000 wei, is that
-3.14 ETH? 31.41 ETH? 3,141 ETH? In the case of Ether it is defined 10^18 wei to the ETH, but for your
+3.14 ETH? 31.41 ETH? 3,141 ETH? In the case of ether it is defined 10^18 wei to the ETH, but for your
 token you can select a different value. If dividing the token doesn't make sense, you can use a 
 `_decimals` value of zero. If you want to use the same standard as ETH, use the value **18**.
 
@@ -880,7 +881,7 @@ are not designed to handle it.
 ### Hooks  {#hooks}
 
 This is the hook function to be called during transfers. It is empty here, buf if you need
-to do something you just override it.
+it to do something you just override it.
 
 ```solidity
 
