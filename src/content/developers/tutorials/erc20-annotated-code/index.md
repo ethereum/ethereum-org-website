@@ -1,6 +1,6 @@
 ---
-title: "ERC20 Contract Walk-Through"
-description: What is in the OpenWhisk ERC20 contract and why is it there?
+title: "ERC-20 Contract Walk-Through"
+description: What is in the OpenWhisk ERC-20 contract and why is it there?
 author: Ori Pomerantz
 lang: en
 sidebar: true
@@ -11,29 +11,29 @@ published: 2021-<month>-<day>
 
 ## Introduction {#introduction}
 
-One of the most common uses for Ethereum is for a group to create a tradable token, in a sense their own currency. These currencies typically follow a standard, 
-[ERC20](https://eips.ethereum.org/EIPS/eip-20). This standard makes it possible to write tools, such as liquidity pools and wallets, that work with all ERC20
+One of the most common uses for Ethereum is for a group to create a tradable token, in a sense their own currency. These tokens typically follow a standard, 
+[ERC-20](https://eips.ethereum.org/EIPS/eip-20). This standard makes it possible to write tools, such as liquidity pools and wallets, that work with all ERC-20
 currencies. In this article we will analyze the 
 [OpenWhisk Solidity ERC20 implenetation](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), as well as the
 [Interface definition](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
 
-This is annotated source code. If you want to implement ERC20, 
+This is annotated source code. If you want to implement ERC-20, 
 [read this tutorial](https://forum.zeppelin.solutions/t/how-to-implement-erc20-supply-mechanisms/226).
 
 
 ## The Interface {#the-interface}
 
-The purpose of a standard like ERC20 is to have multiple currencies that interface with the same code. To achieve that, we create an 
-[interface](https://www.geeksforgeeks.org/solidity-basics-of-interface/). Any code that needs to interface with the currency contract
-can use the same definitions in the interface and be compatible with all currency contracts that use it, whether it is a wallet such as 
+The purpose of a standard like ERC-20 is to have multiple currencies that interface with the same code. To achieve that, we create an 
+[interface](https://www.geeksforgeeks.org/solidity-basics-of-interface/). Any code that needs to interface with the token contract
+can use the same definitions in the interface and be compatible with all token contracts that use it, whether it is a wallet such as 
 MetaMask, a dapp such as etherscan.io, or a different contract such as liquidity pool.
 
-![Illustration of the ERC20 interface](erc20_interface.png)
+![Illustration of the ERC-20 interface](erc20_interface.png)
 
 If you are an experienced programmer, you probably remember seeing similar constructs in [Java](https://www.w3schools.com/java/java_interface.asp)
 or even in [C header files](https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html).
 
-This is a definition of the [ERC20 Interface](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)
+This is a definition of the [ERC-20 Interface](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)
 from OpenZeppelin. It is a translation of the [human readable standard](https://eips.ethereum.org/EIPS/eip-20) into Solidity code. Of course, the 
 interface itself does not define *how* to do anything. That is explained in the contract source code below.
 
@@ -80,7 +80,7 @@ interface IERC20 {
 
 This function is `external`, meaning [it can only be called from outside the contract](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2).
 It returns the total supply of tokens in the contract. This value is returned using the most common type in Ethereum, unsigned 256 bits (256 bits is the 
-native word size of the evm). This function is also a `view`, which means that it does not change the state, so it can be executed on a single node instead of having 
+native word size of the EVM). This function is also a `view`, which means that it does not change the state, so it can be executed on a single node instead of having 
 every node in the blockchain run it. This kind of function does not generate a transaction and does not cost [gas](https://ethereum.org/en/developers/docs/gas/).
 
 **Note:** In theory it might appear that a contract's creator could cheat by returning a smaller total supply than the real value, making each token appear
@@ -207,7 +207,7 @@ Finally, this function is used by the spender to actually spend the allowance.
 
 &nbsp;
 
-These events are emitted when the state of the ERC20 contract changes.
+These events are emitted when the state of the ERC-20 contract changes.
 
 ```solidity
 
@@ -232,7 +232,7 @@ These events are emitted when the state of the ERC20 contract changes.
 
 ## The Actual Contract {#the-actual-contract}
 
-This is the actual contract that implements the ERC20 standard, 
+This is the actual contract that implements the ERC-20 standard, 
 [taken from here](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol). 
 It is not meant to be used as-is, but you can 
 [inherit](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm) from it to extend it to something usable.
@@ -320,7 +320,7 @@ The first two variables are [mappings](https://www.tutorialspoint.com/solidity/s
 meaning they behave roughly the same as [associative arrays](https://en.wikipedia.org/wiki/Associative_array),
 except that the keys are numeric values. In contrast to normal arrays, which have storage for all cells, 
 
-The first mapping, `_balances`, is addresses and their respective balances of this currency. To access
+The first mapping, `_balances`, is addresses and their respective balances of this token. To access
 the balance, use this syntax: `_balances[<address>]`.
 
 ```solidity
@@ -351,17 +351,17 @@ These three variables are used to impprove readability. The first two are self-e
 isn't. 
 
 On one hand, ethereum does not have floating point or fractional variables. On the other hand,
-humans like being able to divide currency. One reason people settled on gold for currency was that 
+humans like being able to divide tokens. One reason people settled on gold for currency was that 
 it was hard to make change when somebody wanted to buy a duck's worth of cow.
 
-The solution is to keep track of integers, but count instead of the real currency a fractional currency that is
-nearly worthless. In the case of Ether, the fractional currency is called Wei, and 10^18 Wei is equal to one
-Ether. At writing, 10,000,000,000,000 Wei is approximately one US or Euro cent.
+The solution is to keep track of integers, but count instead of the real token a fractional token that is
+nearly worthless. In the case of ETH, the fractional token is called wei, and 10^18 wei is equal to one
+Ether. At writing, 10,000,000,000,000 wei is approximately one US or Euro cent.
 
-Applications need to know how to display the currency. If a user has 3,141,000,000,000,000,000 Wei, is that
-3.14 ETH? 31.41 ETH? 3,141 ETH? In the case of Ether it is defined 10^18 Wei to the ETH, but for your
-currency you can select a different value. If dividing the currency doesn't make sense, you can use a 
-`_decimals` value of zero. If you want to use the same standard as Ether, use the value **18**.
+Applications need to know how to display the token balance. If a user has 3,141,000,000,000,000,000 wei, is that
+3.14 ETH? 31.41 ETH? 3,141 ETH? In the case of Ether it is defined 10^18 wei to the ETH, but for your
+token you can select a different value. If dividing the token doesn't make sense, you can use a 
+`_decimals` value of zero. If you want to use the same standard as ETH, use the value **18**.
 
 ```solidity
     string private _name;
@@ -498,7 +498,7 @@ other contract functions. By convention private functions are named `_<something
 variables.
 
 Normally in Solidity we use `msg.sender` for the message sender. However, that breaks 
-[OpenGSN](http://opengsn.org/). If we ant to allow etherless transactions with our currency, we
+[OpenGSN](http://opengsn.org/). If we want to allow etherless transactions with our token, we
 need to use `_msgSender()`. It returns `msg.sender` for normal transactions, but for etherless ones
 return the original signer and not the contract that relayed the message.
 
@@ -722,10 +722,10 @@ There are two ways to use this contract:
 1. Use it as a template for your own code
 1. [Inherit from it](https://www.bitdegree.org/learn/solidity-inheritance), and override only those functions that you need to modify
 
-The second method is much better because the OpenWhisk ERC20 code has already been audited and shown to be secure. When you use inheritence
+The second method is much better because the OpenWhisk ERC-20 code has already been audited and shown to be secure. When you use inheritence
 it is clear what are the functions you modify, and to trust your contract people only need to audit those specific functions.
 
-It is often useful to perform a function each time currency changes hands. However,`_transfer` is a very important function and it is
+It is often useful to perform a function each time tokens change hands. However,`_transfer` is a very important function and it is
 possible to write it insecurely (see below), so it is best not to override it. The solution is `_beforeTokenTransfer`, a 
 [hook function](https://en.wikipedia.org/wiki/Hooking). You can override this function, and it will be called on each transfer.
 
@@ -764,7 +764,7 @@ so they are only useful if you inherit from the contract and add your own
 logic to decide under what conditions to mint new tokens or burn existing
 ones.
 
-**NOTE:** every ERC20 currency has its own business logic that dictates
+**NOTE:** every ERC-20 token has its own business logic that dictates
 token management. For example, a fixed supply contract might only call `_mint`
 in the constructor and never call `_burn`. A contract that sells tokens
 will call `_mint` when it is paid, and presumably call `_burn` at some point
@@ -904,4 +904,4 @@ to do something you just override it.
 
 # Conclusion {#conclusion}
 
-By this point you should understand the OpenWhisk ERC20 code and why it is written like that. Hopefully this knowledge will help you develop your own contracts and applications.
+By this point you should understand the OpenWhisk ERC-20 code and why it is written like that. Hopefully this knowledge will help you develop your own contracts and applications.
