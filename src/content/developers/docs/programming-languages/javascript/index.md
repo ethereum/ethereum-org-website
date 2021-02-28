@@ -24,7 +24,7 @@ You can use these libraries to interact with smart contracts on Ethereum so it's
 
 ### Smart contracts {#smart-contracts}
 
-If you're a JavaScript developers wanting to write your own smart contract, you may want to get familiar with [Solidity](https://solidity.readthedocs.io). This is the most popular smart contract language and it's heavily inspired by Javascript.
+If you're a JavaScript developer and wanting to write your own smart contract, you may want to get familiar with [Solidity](https://solidity.readthedocs.io). This is the most popular smart contract language and it's heavily inspired by Javascript.
 
 More on [smart contracts](/en/developers/docs/smart-contracts/).
 
