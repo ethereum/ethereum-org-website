@@ -565,7 +565,7 @@ export const query = graphql`
     eth: file(relativePath: { eq: "eth.png" }) {
       ...actionCardImage
     }
-    dao: file(relativePath: { eq: "use-cases/dao-2  .png" }) {
+    dao: file(relativePath: { eq: "use-cases/dao-2.png" }) {
       ...actionCardImage
     }
     developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
