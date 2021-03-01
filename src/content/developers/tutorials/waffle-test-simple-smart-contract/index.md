@@ -1,7 +1,7 @@
 ---
-title: Test "hello world" ethereum smart contract with Waffle library
+title: Testing simple smart contract with Waffle library
 description: Tutorial for beginners
-author: ethereum.org
+author: Ewa Kowalska
 tags: ["smart contracts", "solidity", "Waffle", "testing"]
 skill: beginner
 lang: en
@@ -17,7 +17,7 @@ published: 2021-26-02
 - You can create a new JavaScript or TypeScript project
 - You have some basic experience with tests in Javascript
 - You have used some package managers like yarn or npm
-- You possess very basic knowledge of ethereum smart contracts and Solidity
+- You possess very basic knowledge of smart contracts and Solidity
 
 # Getting started
 The tutorial demonstrates test setup and run using yarn, but there is no problem if you prefer npm - I will provide proper references to the official Waffle [documentation](https://ethereum-waffle.readthedocs.io/en/latest/index.html). 
@@ -158,3 +158,5 @@ The test, if passed, will assure us that the transaction was reverted indeed. Ho
 # Congratulations! 
 You've made your first big step towards testing smart contracts with Waffle! You might be interested in other Waffle tutorials:
 * [Testing ERC20 with Waffle](https://ethereum.org/en/developers/tutorials/testing-smart-contract-with-waffle/)
+* [Waffle: Dynamic mocking and testing contract calls](https://ethereum.org/en/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/#gatsby-focus-wrapper)
+* [Waffle say hello world tutorial with hardhat and ethers](https://ethereum.org/en/developers/tutorials/waffle-hello-world-with-buidler-tutorial/)
