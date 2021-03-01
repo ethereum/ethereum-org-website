@@ -20,9 +20,12 @@ published: 2021-26-02
 - You possess very basic knowledge of ethereum smart contracts and Solidity
 
 # Getting started
+The tutorial demonstrates test setup and run using yarn, but there is no problem if you prefer npm - I will provide proper references to the official Waffle [documentation](https://ethereum-waffle.readthedocs.io/en/latest/index.html). 
 ## Install Waffle
-[Add](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#installation) ethereum-waffle package to the dev dependencies of your project. You can choose either npm or yarn. The tutorial demonstrates test setup and run using yarn, but there is no problem if you prefer npm - I will provide proper references to the official Waffle [documentation](https://ethereum-waffle.readthedocs.io/en/latest/index.html). 
-
+[Add](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#installation) ethereum-waffle package to the dev dependencies of your project.
+```bash
+yarn add --dev ethereum-waffle
+```
 ## Example smart contract
 
 During the tutorial we'll work on a simple smart contract example - EtherSplitter. It does not much apart from allowing anyone to send some Wei and split it evenly between two predefined receivers.\
