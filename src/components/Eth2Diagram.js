@@ -26,12 +26,8 @@ const Eth1 = styled.div`
 `
 
 const H2 = styled.h2`
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: 0px;
-  text-align: left;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
 `
 
 const MobileInstruction = styled.div`
@@ -176,9 +172,9 @@ const ModalContent = ({ upgrade }) => {
   if (upgrade === MAINNET) {
     return (
       <>
-        <h2>
+        <H2>
           <Translation id="page-eth2-diagram-ethereum-mainnet" />
-        </h2>
+        </H2>
         <p>
           <Translation id="page-eth2-diagram-p" />
         </p>
@@ -191,9 +187,9 @@ const ModalContent = ({ upgrade }) => {
   if (upgrade === BEACON_CHAIN) {
     return (
       <>
-        <h2>
+        <H2>
           <Translation id="page-eth2-beacon-chain-title" />
-        </h2>
+        </H2>
         <p>
           <Translation id="page-eth2-diagram-p-2" />
         </p>
@@ -209,9 +205,9 @@ const ModalContent = ({ upgrade }) => {
   if (upgrade === SHARDS) {
     return (
       <>
-        <h2>
+        <H2>
           <Translation id="page-eth2-shard-title" />
-        </h2>
+        </H2>
         <p>
           <Translation id="page-eth2-diagram-p-4" />
         </p>
@@ -230,9 +226,9 @@ const ModalContent = ({ upgrade }) => {
   if (upgrade === DOCKING) {
     return (
       <>
-        <h2>
+        <H2>
           <Translation id="page-eth2-docking" />
-        </h2>
+        </H2>
         <p>
           <Translation id="page-eth2-diagram-p-6" />{" "}
           <Link to="/developers/docs/consensus-mechanisms/pos/">

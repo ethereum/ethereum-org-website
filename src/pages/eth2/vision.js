@@ -27,12 +27,7 @@ const StyledCardContainer = styled(CardContainer)`
 `
 
 const H2 = styled.h2`
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: 0px;
-  text-align: left;
+  margin-top: 0;
 `
 
 const CenterH2 = styled(H2)`

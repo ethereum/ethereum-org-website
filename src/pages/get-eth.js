@@ -255,9 +255,9 @@ const GetETHPage = ({ data }) => {
           loading="eager"
         />
         <Header>
-          <Title>
+          <h1>
             <Translation id="page-get-eth-where-to-buy-title" />
-          </Title>
+          </h1>
           <Subtitle>
             <Translation id="page-get-eth-where-to-buy-desc" />
           </Subtitle>
