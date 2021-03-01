@@ -201,35 +201,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   })
 
-  // Create English-only pages
-  // Necessary because placing these components within src/pages/
-  // (e.g. src/pages/eth.js ) would overwrite pages generated from markdown,
-  // including all translations (e.g. src/content/translations/de/eth/index.md)
-  const englishOnlyPages = [`eth`, `dapps`, `wallets/index`, `what-is-ethereum`]
-  englishOnlyPages.forEach((page) => {
-    const component = page
-    // Account for nested pages
-    if (page.includes("/index")) {
-      page = page.replace("/index", "")
-    }
-    createPage({
-      path: `/${defaultLanguage}/${page}/`,
-      component: path.resolve(`./src/pages-conditional/${component}.js`),
-      context: {
-        slug: `/${defaultLanguage}/${page}/`,
-        intl: {
-          language: defaultLanguage,
-          languages: supportedLanguages,
-          defaultLanguage,
-          messages: getMessages("./src/intl/", defaultLanguage),
-          routed: true,
-          originalPath: `/${defaultLanguage}/${page}/`,
-          redirect: false,
-        },
-      },
-    })
-  })
-
   // Create contentVersion v2.0 pages
   const contentV2Pages = [`eth`, `dapps`, `wallets/index`, `what-is-ethereum`]
   const contentV2Languages = supportedLanguages.filter(
