@@ -233,7 +233,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Create contentVersion v2.0 pages
   const contentV2Pages = [`eth`, `dapps`, `wallets/index`, `what-is-ethereum`]
   const contentV2Languages = supportedLanguages.filter(
-    (lang) => getLangContentVersion(lang) === 2.0
+    (lang) => getLangContentVersion(lang) >= 2.0
   )
   contentV2Pages.forEach((page) => {
     const component = page
