@@ -2930,6 +2930,16 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "ved08",
+      "name": "Vedvardhan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37742218?v=4",
+      "profile": "https://github.com/ved08",
+      "contributions": [
+        "content",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
