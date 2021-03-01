@@ -839,6 +839,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/adlerjohn"><img src="https://avatars.githubusercontent.com/u/3290375?v=4?s=100" width="100px;" alt=""/><br /><sub><b>John Adler</b></sub></a><br /><a href="#content-adlerjohn" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aadlerjohn" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/fubuloubu"><img src="https://avatars.githubusercontent.com/u/3859395?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Just some guy</b></sub></a><br /><a href="#content-fubuloubu" title="Content">🖋</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/ved08"><img src="https://avatars.githubusercontent.com/u/37742218?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vedvardhan</b></sub></a><br /><a href="#content-ved08" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aved08" title="Bug reports">🐛</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
