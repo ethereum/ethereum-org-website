@@ -23,11 +23,11 @@ _If Andy Warhol had been born in the late 90s, he probably would have minted Cam
 
 ## What's an NFT? {#what-are-nfts}
 
-NFTs are tokens that we can use to represent a record of ownership. They let us tokenise unique items like art, collectibles, even real estate. They can only have one owner at a time and they're protected by the Ethereum blockchain – no one can modify the record of ownership or copy/paste a new NFT into existence.
+NFTs are tokens that we can use to represent ownership of unique items. They let us tokenise things like art, collectibles, even real estate. They can only have one owner at a time and they're secured by the Ethereum blockchain – no one can modify the record of ownership or copy/paste a new NFT into existence.
 
-NFT stands for non-fungible token. Non-fungible is an economic term that you could use to describe things like your furniture, a song file, or your computer. These things are not exchangeable for other items because they have unique properties.
+NFT stands for non-fungible token. Non-fungible is an economic term that you could use to describe things like your furniture, a song file, or your computer. These things are not interchangeable for other items because they have unique properties.
 
-Fungibile items on the other hand can be exchanged as their value defines them rather than their unique properties. For example ETH is fungible because 1 ETH is exchangeable for another ETH.
+Fungibile items on the other hand can be exchanged as their value defines them rather than their unique properties. For example ETH or dollars are fungible because 1 ETH / $1 is exchangeable for another ETH / $.
 
 ### NFT examples {#nft-examples}
 
@@ -53,14 +53,11 @@ If you contribute to ethereum.org, you can claim a POAP NFT. These are collectib
 
 #### ethereum.eth {#ethereum-dot-eth}
 
-This website is accessible via the ethereum.eth ENS (Ethereum name service) name. With the content hosted on IPFS, a decentralized storage solution, this website is actually an NFT.
+This website has an alternative domain name powered by NFTs, **ethereum.eth**. Our `.org` address is centrally managed by a domain name service provider, whereas ethereum`.eth` is registered on Ethereum via the Ethereum Name Service (ENS). And its owned and managed by us. [Check our ENS record](https://app.ens.domains/name/ethereum.eth)
 
-- [ENS record](https://app.ens.domains/name/ethereum.eth)
-- [IPFS link](https://ethereum.eth.link/) – _the content hosted on IPFS is currently an older version of this site. So, ethereum.eth is an NFT of a historical version of this site!_
+[More on ENS](https://app.ens.domains)
 
 ## How do NFTs work? {#how-nfts-work}
-
-[TALK ABOUT RELATIONSHIP WITH IPFS SOMEWHERE]
 
 NFTs have some special properties:
 
@@ -73,7 +70,7 @@ In other words, if you own an NFT:
 
 - you can easily prove you own it.
 - no one can manipulate it in any way.
-- you can sell it on, and in some cases this will earn the original creator a % of resale royalties.
+- you can sell it, and in some cases this will earn the original creator resale royalties.
 
 And if you create an NFT:
 
@@ -148,7 +145,7 @@ The NFT world and the [decentralized finance (DeFi)](/defi/) world are starting 
 
 ### NFT-backed loans {#nft-backed-loans}
 
-There are DeFi applications that let you borrow money by using collateral. For example you collateralise 10 ETH so you can borrow 5000 DAI ([a stablecoin](/stablecoins/)). This guarantees that the lender gets paid back – if the borrower does't pay back the DAI, the collateral is sent to the lender. However not everyone has enough crypto for collateral.
+There are DeFi applications that let you borrow money by using collateral. For example you collateralise 10 ETH so you can borrow 5000 DAI ([a stablecoin](/stablecoins/)). This guarantees that the lender gets paid back – if the borrower does't pay back the DAI, the collateral is sent to the lender. However not everyone has enough crypto to use as collateral.
 
 Projects are beginning to explore using NFTs as collateral instead. Imagine you bought a rare CryptoPunk NFT back in the day – they can fetch $1000s at today's prices. By putting this up as collateral, you can access a loan with the same rule set. If you don't pay back the DAI, your CryptoPunk will be sent to the lender as collateral. This could eventually work with anything you tokenise as an NFT.
 
@@ -166,6 +163,8 @@ This is still experimental but you can learn more about fractional NFT ownership
 
 - [NIFTEX](https://landing.niftex.com/)
 - [NFTX](https://gallery.nftx.org/)
+
+[MAKE THIS MORE RELATABLE – OWN A PIECE OF A PICASSO]
 
 The first NFTs ever made, CryptoPunks can be pricey these days. These platforms allow you to own $PUNK which represents a share of a CryptoPunk NFT. And once you own $PUNK you become a shareholder in that NFT, meaning you should have a say in things like revenue sharing. It's very likely that one day soon owning a fraction of an NFT will enter you into a decentralised autonomous organisation (DAO) for managing that asset.
 
