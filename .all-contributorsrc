@@ -2921,6 +2921,15 @@
         "content",
         "bug"
       ]
+    },
+    {
+      "login": "fubuloubu",
+      "name": "Just some guy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3859395?v=4",
+      "profile": "https://github.com/fubuloubu",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
