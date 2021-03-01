@@ -6,7 +6,7 @@ template: use-cases
 emoji: ":frame_with_picture:"
 sidebar: true
 sidebarDepth: 2
-image: ../../assets/eth2/core.png
+image: ../../assets/infrastructure_transparent.png
 summaryPoints:
   [
     "A way to represent anything unique as an Ethereum-based asset.",
@@ -18,6 +18,8 @@ summaryPoints:
 NFTs are currently taking the digital art and collectibles world by storm. Digital artists are seeing their lives change thanks to huge sales to a new crypto-audience. And celebrities are joining in as they spot a new opportunity to connect with fans. But digital art is only one way to use NFTs. Really they can be used to represent ownership of any unique asset, like a deed for an item in the digital or physical realm.
 
 _If Andy Warhol had been born in the late 90s, he probably would have minted Campbell's Soup as an NFT. It's only a matter of time before Kanye puts a run of Yeezys on Ethereum. And one day owning your car might be managed with NFTs._
+
+<InfoBanner isWarning>NOTE: we don't currently explain the problems NFTs solve. On defi we talk about the problems with the tradfi system and on daos we talk about tthe difficulties of trusting strangers. The internet today isn't set up for ownership, but how can we easily explain this?</InfoBanner>
 
 ## What's an NFT?
 
@@ -41,9 +43,11 @@ The NFT world is relatively new. In theory, the scope for NFTs is anything that 
 
 ### ethereum.org examples
 
+We've used NFTs to give back to our contributors and store our website outside of centralized servers.
+
 #### POAPs (Proof of attendance protocol)
 
-And if you contribute to ethereum.org, you can claim a POAP . These are NFTs that prove you participated in an event. [More on contributing](/contributing/#poap).
+If you contribute to ethereum.org, you can claim a POAP NFT. These are collectibles that prove you participated in an event. Some crypto meetups have used POAPs as a form of ticket to their events. [More on contributing](/contributing/#poap).
 
 ![ethereum.org POAP](../../assets/use-cases/poap.png)
 
@@ -67,7 +71,6 @@ NFTs have some special properties:
 
 In other words, if you own an NFT:
 
-- only you own it.
 - you can easily prove you own it.
 - no one can manipulate it in any way.
 - you can sell it on, and in some cases this will earn the original creator a % of resale royalties.
@@ -78,12 +81,6 @@ And if you create an NFT:
 - you determine the scarcity.
 - you can earn royalties every time it's sold.
 - you can sell it on any NFT market or peer-to-peer. You're not locked in to any platform and you don't need anyone to intermediate.
-
-### Fractional ownership
-
-Of course not every single item has a single owner. Songs can have multiple writers, you might own your property with your partner, and you might want to sell a percentage of ownership in your film project to help get it off the ground.
-
-For this reason, NFTs also support multiple owners.
 
 ## What are NFTs used for?
 
@@ -97,7 +94,7 @@ NFTs powers a new creator economy where creators don't hand ownership of their c
 
 When they sell their content, funds go directly to them. If the new owner was to go on and re-sell the NFT, the original creator can even automatically receive royalties because the creator address is part of the token's metadata – metadata which can't be modified.
 
-<InfoBanner emoji=":eyes:">
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Explore, buy or create your own NFT art/collectibles...</div>
   <ButtonLink to="/dapps?category=collectibles">Explore NFT art</ButtonLink>
 </InfoBanner>
@@ -126,7 +123,7 @@ Ultimately the items you grind for in-game can outlive the games themselves. Eve
 
 Decentraland, a virtual reality game, even lets you buy NFTs representing virtual parcels of land that you can use as you see fit.
 
-<InfoBanner emoji=":eyes:">
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Check out Ethereum games, powered by NFTs...</div>
   <ButtonLink to="/dapps?category=gaming">Explore NFT games</ButtonLink>
 </InfoBanner>
@@ -145,10 +142,38 @@ As NFTs are essentially deeds, one day you could buy a car or home using ETH and
 
 With valuable assets like cars and property representable on Ethereum, there's the opportunity to use NFTs as collateral in decentralized loans. This is particularly helpful if you're not cash or crypto-rich but own physical items of value. [More on DeFi](/defi/)
 
-## NFTs and Defi
+## NFTs and DeFi
 
-NFT-backed loans.
-Minting insurance cover as an NFT that's tradeable on secondary markets....
+The NFT world and the [decentralized finance (DeFi)](/defi/) world are starting to collaborate in a number of interesting ways.
+
+### NFT-backed loans
+
+There are DeFi applications that let you borrow money by using collateral. For example you collateralise 10 ETH so you can borrow 5000 DAI ([a stablecoin](/stablecoins/)). This guarantees that the lender gets paid back – if the borrower does't pay back the DAI, the collateral is sent to the lender. However not everyone has enough crypto for collateral.
+
+Projects are beginning to explore using NFTs as collateral instead. Imagine you bought a rare CryptoPunk NFT back in the day – they can fetch $1000s at today's prices. By putting this up as collateral, you can access a loan with the same rule set. If you don't pay back the DAI, your CryptoPunk will be sent to the lender as collateral. This could eventually work with anything you tokenise as an NFT.
+
+And this isn't hard on Ethereum, because both worlds (NFT and DeFi) share the same infrastructure.
+
+### Fractional ownership
+
+NFT creators can also create "shares" for their NFT. This gives investors and fans the opportunity to own a part of an NFT without having to buy the whole thing. This adds even more oppportunities for NFT minters and collectors alike.
+
+- Fractionalised NFTs can be traded on [DEXs](/defi/#dex) like Uniswap, not just [NFT marketplaces](/dapps?category=collectibles). That means more buyers and sellers.
+- An NFT's overall price can be defined by the price of its fractions.
+- You have more of an opportunity to own and profit from items you care about. It's harder to be priced out of owning NFTs.
+
+This is still experimental but you can learn more about fractional NFT ownership at the following exchanges:
+
+- [NIFTEX](https://landing.niftex.com/)
+- [NFTX](https://gallery.nftx.org/)
+
+The first NFTs ever made, CryptoPunks can be pricey these days. These platforms allow you to own $PUNK which represents a share of a CryptoPunk NFT. And once you own $PUNK you become a shareholder in that NFT, meaning you should have a say in things like revenue sharing. It's very likely that one day soon owning a fraction of an NFT will enter you into a decentralised autonomous organisation (DAO) for managing that asset.
+
+These are Ethereum-powered organisations that allow strangers, like global shareholders of an asset, to coordinate securely without necessarily having to trust the other people. That's because not a single penny can be spent without group approval.
+
+As we mentioned, this is an emerging space. NFTs, DAOs, fractionalised tokens are all developing at different paces. But all their infrastructure exists and can work together easily because they all speak the same language: Ethereum. So watch this space.
+
+[More on DAOs](/dao/)
 
 ## Ethereum and NFTs
 
@@ -185,10 +210,6 @@ Want to turn your content into a NFT?
 ## Build with NFTs
 
 Most NFTs are built using a consistent standard known as [ERC-721](/developers/docs/standards/tokens/erc-721/). However there is a newer ERC-1155 standard which aims to make NFTs more efficient, especially in the realm of gaming.
-
-## NFT apps
-
-[Add links to NFT apps categorised in the same way as the dapps page]
 
 ## Futher reading
 

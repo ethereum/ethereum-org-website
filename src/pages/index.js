@@ -269,6 +269,26 @@ const FinanceContainer = styled.div`
   }
 `
 
+const NftContainer = styled.div`
+  background: ${(props) => props.theme.colors.homeBoxMint};
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 720px;
+  margin-top: -1px;
+  border-top: 1px solid ${(props) => props.theme.colors.text};
+  border-bottom: 1px solid ${(props) => props.theme.colors.text};
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column-reverse;
+    height: 100%;
+    height: 100%;
+    padding-top: 2rem;
+    padding-right: 0rem;
+    padding-bottom: 2rem;
+  }
+`
+
 const InternetContainer = styled.div`
   background: ${(props) => props.theme.colors.homeBoxPink};
   display: flex;
@@ -776,7 +796,7 @@ contract SimpleDomainRegistry {
                 <Translation id="page-index-defi-description" />
               </Subtitle>
               <div>
-                <ButtonLink to="/dapps/">
+                <ButtonLink to="/defi/">
                   <Translation id="page-index-defi-button" />
                 </ButtonLink>
               </div>
@@ -790,7 +810,32 @@ contract SimpleDomainRegistry {
           </ImageContainer>
         </Row>
       </FinanceContainer>
-
+      <NftContainer>
+        <Row>
+          <FeatureContent>
+            <LeftColumnContent>
+              <StyledH2>The internet of assets</StyledH2>
+              <Subtitle>
+                Ethereum isn't just for digital money. Anything you can own can
+                be represented, traded and put to use as non-fungible tokens
+                (NFTs). You can tokenise your art and get royalties
+                automatically every time it's re-sold. Or use a token, proving
+                you own your home, to take out a loan. The possibilities are
+                growing all the time.
+              </Subtitle>
+              <div>
+                <ButtonLink to="/nft/">More on NFTs</ButtonLink>
+              </div>
+            </LeftColumnContent>
+          </FeatureContent>
+          <ImageContainer>
+            <FeatureImage
+              fluid={data.infrastructure.childImageSharp.fluid}
+              alt={translateMessageId("page-index-defi-image-alt", intl)}
+            />
+          </ImageContainer>
+        </Row>
+      </NftContainer>
       <InternetContainer>
         <RowReverse>
           <FeatureContent>
@@ -997,6 +1042,15 @@ export const query = graphql`
       }
     }
     hackathon: file(relativePath: { eq: "hackathon_transparent.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1440) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    infrastructure: file(
+      relativePath: { eq: "infrastructure_transparent.png" }
+    ) {
       childImageSharp {
         fluid(maxWidth: 1440) {
           ...GatsbyImageSharpFluid

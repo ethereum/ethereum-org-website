@@ -289,9 +289,12 @@ todo – is it worth it with current gas prices?
 
 todo -->
 
-## DeFi apps
+<!-- ## DeFi apps
 
 [Add links to DeFi apps categorised in the same way as the dapps page]
+
+NOTE: DECIDED NOT TO DO THIS AS IT ADDS OVERHEAD OF UPDATING OUR APPS IN DIFFERENT PLACES!
+-->
 
 ## Futher reading
 

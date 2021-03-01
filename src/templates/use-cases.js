@@ -7,6 +7,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown from "../components/ButtonDropdown"
+import BannerNotification from "../components/BannerNotification"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import DocLink from "../components/DocLink"
@@ -259,6 +260,10 @@ const StyledButtonDropdown = styled(ButtonDropdown)`
   }
 `
 
+const StyledEmoji = styled(Emoji)`
+  margin-right: 1rem;
+`
+
 const MobileButtonDropdown = styled(StyledButtonDropdown)`
   margin-bottom: 0rem;
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
@@ -315,6 +320,12 @@ const MoreContent = styled(Link)`
   }
 `
 
+const StyledBannerNotification = styled(BannerNotification)`
+  justify-content: center;
+  width: 100%;
+  display: flex;
+`
+
 const TitleCard = styled.div`
   background: ${(props) => props.theme.colors.background};
   border: 1px solid ${(props) => props.theme.colors.border};
@@ -329,6 +340,7 @@ const TitleCard = styled.div`
   border-radius: 2px;
   z-index: 10;
   max-width: 640px;
+  margin-top: 3rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     max-width: 100%;
     position: relative;
@@ -369,6 +381,14 @@ const UseCasePage = ({ data: { mdx } }) => {
     : mdx.parent.mtime
   return (
     <Container>
+      <StyledBannerNotification shouldShow>
+        <StyledEmoji text=":pencil:" />
+        <div>
+          Uses of Ethereum are always developing and evolving. Add any info you
+          think will make things clearer or more up to date.{" "}
+          <Link to="/">Edit page</Link>
+        </div>
+      </StyledBannerNotification>
       <HeroContainer>
         <TitleCard>
           <Emoji size={4} text={mdx.frontmatter.emoji} />
@@ -434,7 +454,7 @@ export const useCasePageQuery = graphql`
         summaryPoints
         image {
           childImageSharp {
-            fluid(maxHeight: 420) {
+            fluid(maxHeight: 640) {
               ...GatsbyImageSharpFluid
             }
           }
