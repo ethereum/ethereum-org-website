@@ -40,18 +40,19 @@ An oracle is only as secure as its data source(s). If a dapp uses Uniswap as an 
 
 ### Architecture {#architecture}
 
-The simplest architecture of Oracles follows a simple architecture, but there are more ways than this to trigger off-chain computation. 
+This is an example of a simple Oracle architecture, but there are more ways than this to trigger off-chain computation. 
 
-1. Emit a log with your smart contract event
+1. Emit a log with your [smart contract event](/developers/docs/smart-contracts/anatomy/#events-and-logs)
 2. An off-chain service has subscribed (usually using something like the JSON-RPC `eth_subscribe` command) to these specific logs. 
 3. The off-chain service proceeds to do some tasks as defined by the log. 
 4. The off-chain service responds with the data requested in a secondary transaction. 
 
-This is how to get data in a 1 to 1 manner, however you will want to get your data in a decentralized manner, otherwise the design of your smart contract is centralized by nature of it's data.
+This is how to get data in a 1 to 1 manner, however you will want to decentralize how you collect your off-chain data.
 
-So the next step would be to have a network of these nodes making these calls to different APIs and sources, and aggregagted on-chain.
+So the next step would be to have a network of these nodes making these calls to different APIs and sources, and aggregagting on-chain.
 
-[Chainlink Off-Chain Reporting](https://blog.chain.link/off-chain-reporting-live-on-mainnet/) (Chainlink OCR) has improved on this methodology by having the off-chain oracle network communicate with each other, cryptographically signed their responses, and send only 1 transaction on-chain having aggreagated their responses off-chain. This way, fewer gas is spent, but you still get the guarantee of decentralized data since every node has signed their part of the transaction, making it unchangeable by the node sending the transaction. If the node doesn't transact, the escalation policy kicks in, and the next node sends the transaction. 
+[Chainlink Off-Chain Reporting](https://blog.chain.link/off-chain-reporting-live-on-mainnet/) (Chainlink OCR) has improved on this methodology by having the off-chain oracle network communicate with each other, cryptographically sign their responses, and send only 1 transaction on-chain having aggreagated their responses off-chain. This way, fewer gas is spent, but you still get the guarantee of decentralized data since every node has signed their part of the transaction, making it unchangeable by the node sending the transaction. If the node doesn't transact, the escalation policy kicks in, and the next node sends the transaction. 
+
 ## Usage {#usage}
 
 ### Oracles {#oracles}
@@ -107,16 +108,16 @@ contract PriceConsumerV3 {
 
 ## Chainlink VRF {#chainlink-vrf}
 
-Chainlink VRF (Verifiable Random Function) is a provably-fair and verifiable source of randomness designed for smart contracts. Smart contract developers can use Chainlink VRF as a tamper-proof RNG to build reliable smart contracts for any applications which rely on unpredictable outcomes:
+Chainlink VRF (Verifiable Random Function) is a provably-fair and verifiable source of randomness designed for smart contracts. Smart contract developers can use Chainlink VRF as a tamper-proof random number generation (RNG) to build reliable smart contracts for any applications which rely on unpredictable outcomes:
 
-- Blockchain games and NFTs
-- Random assignment of duties and resources (e.g. randomly assigning judges to cases)
-- Choosing a representative sample for consensus mechanisms
+- Blockchain games and NFTs.
+- Random assignment of duties and resources (e.g. randomly assigning judges to cases).
+- Choosing a representative sample for consensus mechanisms. 
 
-Random numbers are difficult because blockchains are determanistic. 
+Random numbers are difficult because blockchains are deterministic. 
 
-Working with Chainlink Oracles outside of data feeds follows the [request and recieve cycle](https://docs.chain.link/docs/architecture-request-model) of working with Chainlink. They use the LINK token to send oracle providers oracle gas for returning responses. The LINK token is specifically designed to work with oracles and are based on the upgraded ERC677 token, which is backwards compatible with the ERC20s. 
-The follow code, if deployed on the kovan testnet will retreive a cryptographically proven random number. To make the reqeust, fund the contract with some testnet LINK token that you can get from the [Kovan LINK Faucet](https://kovan.chain.link/).
+Working with Chainlink Oracles outside of data feeds follows the [request and recieve cycle](https://docs.chain.link/docs/architecture-request-model) of working with Chainlink. They use the LINK token to send oracle providers oracle gas for returning responses. The LINK token is specifically designed to work with oracles and are based on the upgraded ERC-677 token, which is backwards compatible with [ERC-20](/developers/docs/standards/tokens/erc-20/). 
+The following code, if deployed on the Kovan testnet will retreive a cryptographically proven random number. To make the request, fund the contract with some testnet LINK token that you can get from the [Kovan LINK Faucet](https://kovan.chain.link/).
 
 ```javascript
 
@@ -168,9 +169,9 @@ contract RandomNumberConsumer is VRFConsumerBase {
 
 ## Chainlink API Call {#chainlink-api-call}
 
-[Chainlink API Calls](https://docs.chain.link/docs/make-a-http-get-request) are the easiest way to get data from the off-chain world in the traditional way the web works; API calls. Doing a single instance of this, is the smallest unit of a decentralized oracle network, and having only 1 oracle makes it centralized by nature. In order to keep it truly decentralized a smart contract platform would need to use numerous nodes, found in a [node listing service link market.link](https://market.link/).
+[Chainlink API Calls](https://docs.chain.link/docs/make-a-http-get-request) are the easiest way to get data from the off-chain world in the traditional way the web works: API calls. Doing a single instance of this and having only 1 oracle makes it centralized by nature. In order to keep it truly decentralized a smart contract platform would need to use numerous nodes, found in an [external data market](https://market.link/).
 
-[You can deploy the following code in remix on the kovan network to test by using this link.](https://remix.ethereum.org/#version=soljson-v0.6.7+commit.b8d736ae.js&optimize=false&evmVersion=null&gist=8a173a65099261582a652ba18b7d96c1)
+[Deploy the following code in remix on the kovan network to test](https://remix.ethereum.org/#version=soljson-v0.6.7+commit.b8d736ae.js&optimize=false&evmVersion=null&gist=8a173a65099261582a652ba18b7d96c1)
 
 This also follows the request and receive cycle of oracles, and needs the contract to be funded with Kovan LINK (the oracle gas) in order to work. 
 
@@ -241,7 +242,7 @@ contract APIConsumer is ChainlinkClient {
 }
 ```
 
-You learn more about the applications of chainlink by reading [the developers blog](https://blog.chain.link/tag/developers/).
+You can learn more about the applications of chainlink by reading [the developers blog](https://blog.chain.link/tag/developers/).
 
 #### Oracle services {#other-services}
 
