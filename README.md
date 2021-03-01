@@ -836,6 +836,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://www.etggames.com/"><img src="https://avatars.githubusercontent.com/u/13756744?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ethan Sarif-Kattan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AEthanSK" title="Bug reports">🐛</a> <a href="#content-EthanSK" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/cj-technical"><img src="https://avatars.githubusercontent.com/u/58790577?v=4?s=100" width="100px;" alt=""/><br /><sub><b>C.J. Kozarski</b></sub></a><br /><a href="#content-cj-technical" title="Content">🖋</a></td>
     <td align="center"><a href="http://yakko.tech"><img src="https://avatars.githubusercontent.com/u/38760734?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Yakko Majuri</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=yakkomajuri" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/adlerjohn"><img src="https://avatars.githubusercontent.com/u/3290375?v=4?s=100" width="100px;" alt=""/><br /><sub><b>John Adler</b></sub></a><br /><a href="#content-adlerjohn" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aadlerjohn" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
