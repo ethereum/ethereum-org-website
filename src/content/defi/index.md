@@ -17,13 +17,13 @@ summaryPoints:
 
 _DeFi is an open and global financial system built for the internet age – an alternative to a system that's opaque, tightly controlled and held together by decades-old infrastructure and processes. It gives you control and visibility over your money. It's given many exposure to global markets while their currency at home has been failing. And it's largely owned by its users or maintained as a public good so no banker bonuses. It reimagines all of the financial services that aren't always accessibe and opens them up to anyone with an internet connection. So far tens of billions of dollars worth of crypto has flowed through DeFi applications and its growing every day._
 
-## What's DeFi?
+## What's DeFi? {#what-is-defi}
 
 DeFi is a collective term for financial products and services that are accessible to anyone who can use Ethereum – anyone with an internet connection. With DeFi, the markets are always open and there are no centralized authorities who can block payments or deny you access to anything. Services that were previously slow and at risk of human error are automatic and secure now that they're handled by code that anyone can inspect and scrutinize.
 
 There's a booming crypto economy out there, where you can lend, borrow, long/short, earn interest, and more. Crypto-savvy Argentinians have used DeFi to escape crippling inflation. Companies have started streaming their employees their wages in real time. Some folks have even taken out and paid off loans worth millions of dollars without the need for any personal identification.
 
-## DeFi vs traditional finance
+## DeFi vs traditional finance {#defi-vs-tradfi}
 
 One of the best ways to see the potential of DeFi is to understand the problems that exist today.
 
@@ -34,7 +34,7 @@ One of the best ways to see the potential of DeFi is to understand the problems 
 - Money transfers can take days due to internal human processes.
 - There's a premium to financial services because intermediray institutions need their cut.
 
-### A comparison
+### A comparison {#defi-comparison}
 
 | DeFi                                                  | Traditional finance                                                                   |
 | ----------------------------------------------------- | ------------------------------------------------------------------------------------- |
@@ -47,13 +47,13 @@ One of the best ways to see the potential of DeFi is to understand the problems 
 
 <ButtonLink to="/dapps/?category=finance">Explore DeFi apps</ButtonLink>
 
-## Programmable money
+## Programmable money {#programmable-money}
 
 This sounds odd... "why would I want to program my money"? However, this is more just a default feature of tokens on Ethereum. Anyone can program logic into payments which can lead to the creation of automated features that you don't need an intermediary service or institution to do for you.
 
 Standing orders, direct debits, payment routing – even payment streaming, can all be done automatically under your control and supervision.
 
-## What can you do with DeFi?
+## What can you do with DeFi? {#defi-use-cases}
 
 There's a decentralized alternative to most financial services. But Ethereum also creates opportunities for creating financial products that are completely new. This is an ever-growing list.
 
@@ -94,7 +94,7 @@ Borrowing money from decentralized providers comes in two main varieties.
 
 There are many advantages to using a decentralized lender...
 
-#### Borrowing with privacy
+#### Borrowing with privacy {#borrowing-privacy}
 
 Today, lending and borrowing money all revolves around the individuals involved. Banks need to know whether you're likely to repay a loan before lending.
 
@@ -102,11 +102,11 @@ Decentralized lending works without either party having to identify themselves. 
 
 This allows you to borrow money without credit checks or handing over private information.
 
-#### Access to global funds
+#### Access to global funds {#access-global-funds}
 
 When you use a decentralized lender you have access to funds deposited from all over the globe, not just the funds in the custody of your chosen bank or institution. This make loans more accessible and improves the interest rates.
 
-### Tax-efficiencies
+#### Tax-efficiencies {#tax-efficiencies}
 
 If you need money but don't want to cash-in your ETH, borrowing can give you access to the funds you need without having to sell your ETH and facing a taxable event. With Ethereum you can use ETH as collateral for a stablecoin loan. These are tokens that are much better for when you need cash as they don't fluctuate in value like ETH. [More on stablecoins](#stablecoins)
 
@@ -133,7 +133,7 @@ To be able to do the above example in the traditional finance world, you'd need 
 
 ### Start saving with crypto {#saving}
 
-#### Lending
+#### Lending {#lending}
 
 You can earn interest on your crypto by lending it. Here's an example:
 
@@ -142,7 +142,7 @@ You can earn interest on your crypto by lending it. Here's an example:
 - your aDai will increase based on the interest rates and you can see it grow in real-time in your wallet. Dependent on the APR, your wallet balance will read something like 100.1234 after a few days or even hours!
 - you can withdraw an amount of regular Dai that's equal to your aDai balance at any time.
 
-#### No-loss lotteries
+#### No-loss lotteries {#no-loss-lotteries}
 
 No-loss lotteries like PoolTogether are a fun and innovative new way to save money.
 
@@ -178,7 +178,7 @@ Ethereum is an ideal platform for crowdfunding for a number of reasons:
 - it's transparent so fundraisers can prove how much money is raised and you can even trace how funds are being spent later down the line.
 - fundraisers can set up automatic refunds if, for example, there is a specific deadline and minimum amount that isn't met.
 
-#### Quadratic funding
+#### Quadratic funding {#quadratic-funding}
 
 Ethereum is open source software. A lot of the work so far has been funded by the community and this has led to the growth of an interesting new fundraising model: quadratic funding. This method has the potential to improve the way we fund all types of public goods in the future.
 
@@ -191,7 +191,9 @@ Quadratic funding makes sure that the projects that receive the most funding are
 
 This means project A that received 100 donations of 1 dollar could end up with more funding than project B which received a single donation of 10,000 dollars (dependent on the size of the matching pool).
 
-## How does DeFi work?
+[More on quadratic funding](https://wtfisqf.com)
+
+## How does DeFi work? {#how-defi-works}
 
 Defi uses cryptocurrencies and smart contracts to provide services that don't need intermediaries. In today's financial world, financial institutions act as guarantors of transactions. This gives these institutions immense power – even the power to stop you making transactions because your money flows through them. Plus billions of people around the world can't even access a bank account.
 
@@ -203,7 +205,7 @@ Contracts are also public for anyone to inspect and audit. This means bad contra
 
 This does mean there's currently a need to trust the more technical members of the Ethereum community who can read code. This need will diminish over time as smart contracts become easier to read and other ways to prove trustworthiness of code is developed.
 
-## Ethereum and DeFi
+## Ethereum and DeFi {#ethereum-and-defi}
 
 Ethereum is the perfect foundation for DeFi for a number of reasons:
 
@@ -219,7 +221,7 @@ You can think of DeFi in layers:
 3. The protocols – a smart contract that provideds the functionality, for example the service that allows for decentralized lending of the assets.
 4. The applications – the products we use to manage and access the protocols.
 
-### Want to build DeFi?
+### Want to build DeFi? {#build-defi}
 
 DeFi is an open-source movement. The DeFi protocols and applications are all open for you to inspect, fork, and innovate on. Because of this layered stack (they all share the same base blockchain and assets), protocols can be mixed and matched to unlock unique combo opportunities.
 
@@ -296,7 +298,7 @@ todo -->
 NOTE: DECIDED NOT TO DO THIS AS IT ADDS OVERHEAD OF UPDATING OUR APPS IN DIFFERENT PLACES!
 -->
 
-## Futher reading
+## Further reading {#futher-reading}
 
 - [DeFi Pulse](https://defipulse.com/)
   [Add links to other good DeFi resources]

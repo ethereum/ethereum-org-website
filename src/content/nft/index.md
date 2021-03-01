@@ -21,7 +21,7 @@ _If Andy Warhol had been born in the late 90s, he probably would have minted Cam
 
 <InfoBanner isWarning>NOTE: we don't currently explain the problems NFTs solve. On defi we talk about the problems with the tradfi system and on daos we talk about tthe difficulties of trusting strangers. The internet today isn't set up for ownership, but how can we easily explain this?</InfoBanner>
 
-## What's an NFT?
+## What's an NFT? {#what-are-nfts}
 
 NFTs are tokens that we can use to represent a record of ownership. They let us tokenise unique items like art, collectibles, even real estate. They can only have one owner at a time and they're protected by the Ethereum blockchain – no one can modify the record of ownership or copy/paste a new NFT into existence.
 
@@ -29,7 +29,7 @@ NFT stands for non-fungible token. Non-fungible is an economic term that you cou
 
 Fungibile items on the other hand can be exchanged as their value defines them rather than their unique properties. For example ETH is fungible because 1 ETH is exchangeable for another ETH.
 
-### NFT examples
+### NFT examples {#nft-examples}
 
 The NFT world is relatively new. In theory, the scope for NFTs is anything that is unique that needs provable ownership. Here are some examples of NFTs that exist today, to help you get the idea:
 
@@ -41,24 +41,24 @@ The NFT world is relatively new. In theory, the scope for NFTs is anything that 
 - [A domain name](https://app.ens.domains/name/ethereum.eth)
 - A ticket that gives you access to an event or a coupon – these items are often known as semi-fungible. They are fungible until they are redeemed, at which point they can't be traded for a non-redeemed version.
 
-### ethereum.org examples
+### ethereum.org examples {#ethereum-org-examples}
 
 We've used NFTs to give back to our contributors and store our website outside of centralized servers.
 
-#### POAPs (Proof of attendance protocol)
+#### POAPs (Proof of attendance protocol) {#poaps}
 
 If you contribute to ethereum.org, you can claim a POAP NFT. These are collectibles that prove you participated in an event. Some crypto meetups have used POAPs as a form of ticket to their events. [More on contributing](/contributing/#poap).
 
 ![ethereum.org POAP](../../assets/use-cases/poap.png)
 
-#### ethereum.eth
+#### ethereum.eth {#ethereum-dot-eth}
 
 This website is accessible via the ethereum.eth ENS (Ethereum name service) name. With the content hosted on IPFS, a decentralized storage solution, this website is actually an NFT.
 
 - [ENS record](https://app.ens.domains/name/ethereum.eth)
 - [IPFS link](https://ethereum.eth.link/) – _the content hosted on IPFS is currently an older version of this site. So, ethereum.eth is an NFT of a historical version of this site!_
 
-## How do NFTs work?
+## How do NFTs work? {#how-nfts-work}
 
 [TALK ABOUT RELATIONSHIP WITH IPFS SOMEWHERE]
 
@@ -82,9 +82,9 @@ And if you create an NFT:
 - you can earn royalties every time it's sold.
 - you can sell it on any NFT market or peer-to-peer. You're not locked in to any platform and you don't need anyone to intermediate.
 
-## What are NFTs used for?
+## What are NFTs used for? {#nft-use-cases}
 
-### Maximising earnings for creators
+### Maximising earnings for creators {#nfts-for-creators}
 
 The biggest use of NFTs today is in the digital content realm. That's because that industry today is broken. Content creators see their profits and earning potential swallowed by platforms.
 
@@ -99,7 +99,7 @@ When they sell their content, funds go directly to them. If the new owner was to
   <ButtonLink to="/dapps?category=collectibles">Explore NFT art</ButtonLink>
 </InfoBanner>
 
-#### The copy/paste problem
+#### The copy/paste problem {#nfts-copy-paste}
 
 Naysayers often bring up the fact that NFTs "are dumb" usually alongside a picture of them screenshotting an NFT artwork. "Look, now I have that image for free!" they say smugly.
 
@@ -109,7 +109,7 @@ Ultimately owning the real thing is as valuable as the market makes it. The more
 
 Owning the verifiably real thing will always have more value than not.
 
-### Boosting gaming potential
+### Boosting gaming potential {#nft-gaming}
 
 NFTs have seen a lot of interest from game developers. NFTs can provide records of ownership for in-game items, fuel in-game economies, and bring a host of benefits to the players.
 
@@ -128,13 +128,13 @@ Decentraland, a virtual reality game, even lets you buy NFTs representing virtua
   <ButtonLink to="/dapps?category=gaming">Explore NFT games</ButtonLink>
 </InfoBanner>
 
-### Making ethereum addresses more memorable
+### Making ethereum addresses more memorable {#nft-domains}
 
 The Ethereum Name Service uses NFTs to provide your Ethereum address with an easier-to-remember name like `mywallet.eth`. This means you could ask someone to send you ETH via `mywallet.eth` rather than `0x123456789.....`.
 
 This works in a similar way to a website domain name which makes an IP address more memorable. And like domains, ENS names have value, usually based on length and relevance. With ENS you don't need a domain registry in order to facilitate the tranfer of ownership. Instead, ENS names can be traded on NFT marketplaces with ease.
 
-### Physical items
+### Physical items {#nft-physical-items}
 
 The tokenisation of physical items isn't yet as developed as their digital counterparts. However there have been plenty of projects that have explored the tokenisation of real estate, one-of-a-kind fashion items, and more.
 
@@ -142,11 +142,11 @@ As NFTs are essentially deeds, one day you could buy a car or home using ETH and
 
 With valuable assets like cars and property representable on Ethereum, there's the opportunity to use NFTs as collateral in decentralized loans. This is particularly helpful if you're not cash or crypto-rich but own physical items of value. [More on DeFi](/defi/)
 
-## NFTs and DeFi
+## NFTs and DeFi {#nfts-and-defi}
 
 The NFT world and the [decentralized finance (DeFi)](/defi/) world are starting to collaborate in a number of interesting ways.
 
-### NFT-backed loans
+### NFT-backed loans {#nft-backed-loans}
 
 There are DeFi applications that let you borrow money by using collateral. For example you collateralise 10 ETH so you can borrow 5000 DAI ([a stablecoin](/stablecoins/)). This guarantees that the lender gets paid back – if the borrower does't pay back the DAI, the collateral is sent to the lender. However not everyone has enough crypto for collateral.
 
@@ -154,7 +154,7 @@ Projects are beginning to explore using NFTs as collateral instead. Imagine you 
 
 And this isn't hard on Ethereum, because both worlds (NFT and DeFi) share the same infrastructure.
 
-### Fractional ownership
+### Fractional ownership {#fractional-ownership}
 
 NFT creators can also create "shares" for their NFT. This gives investors and fans the opportunity to own a part of an NFT without having to buy the whole thing. This adds even more oppportunities for NFT minters and collectors alike.
 
@@ -175,7 +175,7 @@ As we mentioned, this is an emerging space. NFTs, DAOs, fractionalised tokens ar
 
 [More on DAOs](/dao/)
 
-## Ethereum and NFTs
+## Ethereum and NFTs {#ethereum-and-nfts}
 
 Ethereum is the perfect foundation for NFTs for a number of reasons:
 
@@ -207,11 +207,11 @@ Want to turn your content into a NFT?
 - Foundation
 - Other platforms... -->
 
-## Build with NFTs
+## Build with NFTs {#build-with-nfts}
 
 Most NFTs are built using a consistent standard known as [ERC-721](/developers/docs/standards/tokens/erc-721/). However there is a newer ERC-1155 standard which aims to make NFTs more efficient, especially in the realm of gaming.
 
-## Futher reading
+## Further reading {#further-reading}
 
 [Add links to other good NFT resources]
 

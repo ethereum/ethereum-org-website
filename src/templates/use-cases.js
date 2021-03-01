@@ -24,6 +24,7 @@ import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
 import Roadmap from "../components/Roadmap"
 import Eth2TableOfContents from "../components/Eth2TableOfContents"
+import TableOfContents from "../components/TableOfContents"
 import Translation from "../components/Translation"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import SectionNav from "../components/SectionNav"
@@ -320,6 +321,11 @@ const MoreContent = styled(Link)`
   }
 `
 
+const MobileTableOfContents = styled(TableOfContents)`
+  position: relative;
+  z-index: 2;
+`
+
 const StyledBannerNotification = styled(BannerNotification)`
   justify-content: center;
   width: 100%;
@@ -400,10 +406,11 @@ const UseCasePage = ({ data: { mdx } }) => {
               ))}
             </ul>
           </SummaryBox>
-          <LastUpdated>
-            <Translation id="page-last-updated" />:{" "}
-            {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
-          </LastUpdated>
+          <MobileTableOfContents
+            items={tocItems}
+            maxDepth={mdx.frontmatter.sidebarDepth}
+            isMobile={true}
+          />
         </TitleCard>
         <Image fluid={mdx.frontmatter.image.childImageSharp.fluid} />
       </HeroContainer>
