@@ -337,10 +337,7 @@ const Footer = () => {
                     {section.links.map((link, linkIdx) => {
                       return (
                         <ListItem key={linkIdx}>
-                          <FooterLink
-                            to={link.to}
-                            isPartiallyActive={link.isPartiallyActive}
-                          >
+                          <FooterLink to={link.to} isPartiallyActive={false}>
                             <Translation id={link.text} />
                           </FooterLink>
                         </ListItem>
