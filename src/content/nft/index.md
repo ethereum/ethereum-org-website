@@ -27,7 +27,23 @@ NFTs are tokens that we can use to represent ownership of unique items. They let
 
 NFT stands for non-fungible token. Non-fungible is an economic term that you could use to describe things like your furniture, a song file, or your computer. These things are not interchangeable for other items because they have unique properties.
 
-Fungibile items on the other hand can be exchanged as their value defines them rather than their unique properties. For example ETH or dollars are fungible because 1 ETH / $1 is exchangeable for another ETH / $.
+Fungibile items on the other hand can be exchanged as their value defines them rather than their unique properties. For example ETH or dollars are fungible because 1 ETH / $1 USD is exchangeable for another ETH / $1 USD.
+
+## The internet of assets {#internet-of-assets}
+
+NFTs and Ethereum solve some of the problems that exist in the internet today. As everything becomes more digital, there's more of a need to replicate the properties of physical items online, like scarcity, uniqueness, and proof of ownership. Not to mention that digital items often only work in the context of their product. For example you can't sell a song you purchased on iTunes, or you can't exchange your Starbucks loyalty points for Amazon credit even if there's a market for it.
+
+Here's how an internet of NFTs looks against the internet most of us use today looks...
+
+### A comparison {#nft-comparison}
+
+| The NFT internet                                                                                                                                                                                            | The internet today                                                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| NFTs are digitally unique, no two NFTs are the same                                                                                                                                                         | A copy of a file, like an .mp3 or .jpg, is the same as the original                                                                                                        |
+| Every NFT must have an owner and this is of public record and easy for anyone to verify                                                                                                                     | Ownership records of digital items is stored on servers controlled by institutions – you must take their word for it                                                       |
+| Items can be used in surprising ways. For example you can use a digital artwork as collateral in a decentralised loan.                                                                                      |                                                                                                                                                                            |
+| NFTs are compatible with anything built using Ethereum. An NFT ticket for an event can be traded on every Ethereum marketplace, for an entirely different NFT. You could trade a piece of art for a ticket! | Companies with digital items must build their own infrastructure. For example an app that issues digital tickets for events would have to build their own ticket exchange. |
+| Content creators can sell their work anywhere and can access a global market                                                                                                                                | Creators rely on the infrastructure and distribution of the platforms they use. These are often subject to terms of use and geographical restrictions.                     |
 
 ### NFT examples {#nft-examples}
 
@@ -93,7 +109,7 @@ When they sell their content, funds go directly to them. If the new owner was to
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Explore, buy or create your own NFT art/collectibles...</div>
-  <ButtonLink to="/dapps?category=collectibles">Explore NFT art</ButtonLink>
+  <ButtonLink to="/dapps/?category=collectibles">Explore NFT art</ButtonLink>
 </InfoBanner>
 
 #### The copy/paste problem {#nfts-copy-paste}
@@ -122,7 +138,7 @@ Decentraland, a virtual reality game, even lets you buy NFTs representing virtua
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Check out Ethereum games, powered by NFTs...</div>
-  <ButtonLink to="/dapps?category=gaming">Explore NFT games</ButtonLink>
+  <ButtonLink to="/dapps/?category=gaming">Explore NFT games</ButtonLink>
 </InfoBanner>
 
 ### Making ethereum addresses more memorable {#nft-domains}
@@ -164,9 +180,7 @@ This is still experimental but you can learn more about fractional NFT ownership
 - [NIFTEX](https://landing.niftex.com/)
 - [NFTX](https://gallery.nftx.org/)
 
-[MAKE THIS MORE RELATABLE – OWN A PIECE OF A PICASSO]
-
-The first NFTs ever made, CryptoPunks can be pricey these days. These platforms allow you to own $PUNK which represents a share of a CryptoPunk NFT. And once you own $PUNK you become a shareholder in that NFT, meaning you should have a say in things like revenue sharing. It's very likely that one day soon owning a fraction of an NFT will enter you into a decentralised autonomous organisation (DAO) for managing that asset.
+In theory, this would unlock the possibility to do things like own a piece of a Picasso. You would become a shareholder in a Picasso NFT, meaning you would have a say in things like revenue sharing. It's very likely that one day soon owning a fraction of an NFT will enter you into a decentralised autonomous organisation (DAO) for managing that asset.
 
 These are Ethereum-powered organisations that allow strangers, like global shareholders of an asset, to coordinate securely without necessarily having to trust the other people. That's because not a single penny can be spent without group approval.
 

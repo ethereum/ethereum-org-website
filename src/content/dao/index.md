@@ -29,6 +29,16 @@ Starting an organisation with someone that involves funding and money requires a
 
 This opens up so many new opportunities for global collaboration and coordination.
 
+### A comparison {#dao-comparison}
+
+| DAO | A traditional company |
+| --- | --------------------- |
+|     |                       |
+|     |                       |
+|     |                       |
+|     |                       |
+|     |                       |
+
 ### DAO examples {#dao-examples}
 
 To help this make more sense, here's a few examples of how you could use a DAO:
