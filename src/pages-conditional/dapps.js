@@ -779,6 +779,52 @@ const DappsPage = ({ data, location }) => {
       image: data.pooltogether.childImageSharp.fluid,
       alt: translateMessageId("page-dapps-pooltogether-logo-alt", intl),
     },
+    {
+      title: "Index Coop",
+      description:
+        "A crypto index fund that gives your portfolio exposure to top DeFi tokens.",
+      link: "https://www.indexcoop.com/",
+      image: data.index.childImageSharp.fluid,
+      alt: "The Index Coop logo",
+    },
+  ]
+
+  const insurance = [
+    {
+      title: "Nexus Mutual",
+      description:
+        "Cover without the insurance company. Get protected against smart contract bugs and hacks.",
+      link: "https://nexusmutual.io/",
+      image: data.nexus.childImageSharp.fluid,
+      alt: "The Nexus Mutual logo",
+    },
+    {
+      title: "Etherisc",
+      description:
+        "A decentralized insurance template anyone can use to create their own insurance cover.",
+      link: "https://etherisc.com/",
+      image: data.etherisc.childImageSharp.fluid,
+      alt: "The Etherisc logo",
+    },
+  ]
+
+  const portfolios = [
+    {
+      title: "Zapper",
+      description:
+        "Track your portfolio and use a range of DeFi products from one interface.",
+      link: "https://zapper.fi/",
+      image: data.zapper.childImageSharp.fluid,
+      alt: "The Zapper logo",
+    },
+    {
+      title: "Zerion",
+      description:
+        "Manage your portfolio and simply evaluate every single DeFi asset on the market.",
+      link: "https://app.zerion.io/",
+      image: data.zerion.childImageSharp.fluid,
+      alt: "The Zerion logo",
+    },
   ]
 
   const computing = [
@@ -1266,6 +1312,14 @@ const DappsPage = ({ data, location }) => {
                   )}
                   content={lottery}
                 />
+              </RightColumn>
+            </TwoColumnContent>
+            <TwoColumnContent>
+              <LeftColumn>
+                <ProductList category="Insurance" content={insurance} />
+              </LeftColumn>
+              <RightColumn>
+                <ProductList category="Portfolios" content={portfolios} />
               </RightColumn>
             </TwoColumnContent>
             <StyledCalloutBanner
@@ -1770,6 +1824,21 @@ export const query = graphql`
       ...dappImage
     }
     asyncart: file(relativePath: { eq: "dapps/asyncart.png" }) {
+      ...dappImage
+    }
+    index: file(relativePath: { eq: "dapps/index-coop.png" }) {
+      ...dappImage
+    }
+    nexus: file(relativePath: { eq: "dapps/nexus.png" }) {
+      ...dappImage
+    }
+    etherisc: file(relativePath: { eq: "dapps/etherisc.png" }) {
+      ...dappImage
+    }
+    zapper: file(relativePath: { eq: "dapps/zapper.png" }) {
+      ...dappImage
+    }
+    zerion: file(relativePath: { eq: "dapps/zerion.png" }) {
       ...dappImage
     }
   }

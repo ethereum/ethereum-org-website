@@ -23,7 +23,7 @@ _If Andy Warhol had been born in the late 90s, he probably would have minted Cam
 
 ## What's an NFT? {#what-are-nfts}
 
-NFTs are tokens that we can use to represent ownership of unique items. They let us tokenise things like art, collectibles, even real estate. They can only have one owner at a time and they're secured by the Ethereum blockchain – no one can modify the record of ownership or copy/paste a new NFT into existence.
+NFTs are tokens that we can use to represent ownership of unique items. They let us tokenise things like art, collectibles, even real estate. They can only have one official owner at a time and they're secured by the Ethereum blockchain – no one can modify the record of ownership or copy/paste a new NFT into existence.
 
 NFT stands for non-fungible token. Non-fungible is an economic term that you could use to describe things like your furniture, a song file, or your computer. These things are not interchangeable for other items because they have unique properties.
 
@@ -59,7 +59,7 @@ The NFT world is relatively new. In theory, the scope for NFTs is anything that 
 
 ### ethereum.org examples {#ethereum-org-examples}
 
-We've used NFTs to give back to our contributors and store our website outside of centralized servers.
+We use NFTs to give back to our contributors and we've even got our own NFT domain name.
 
 #### POAPs (Proof of attendance protocol) {#poaps}
 
@@ -97,6 +97,16 @@ And if you create an NFT:
 
 ## What are NFTs used for? {#nft-use-cases}
 
+Here's more information of some of the better developed use-cases and visions for NFTs on Ethereum.
+
+- [Digital content](#nfts-for-creators)
+- [Gaming items](#nft-gaming)
+- [Domain names](#nft-domains)
+- [Physical items](#nft-physical-items)
+- [Investments and collateral](#nfts-and-defi)
+
+<Divider />
+
 ### Maximising earnings for creators {#nfts-for-creators}
 
 The biggest use of NFTs today is in the digital content realm. That's because that industry today is broken. Content creators see their profits and earning potential swallowed by platforms.
@@ -122,6 +132,8 @@ Ultimately owning the real thing is as valuable as the market makes it. The more
 
 Owning the verifiably real thing will always have more value than not.
 
+<Divider />
+
 ### Boosting gaming potential {#nft-gaming}
 
 NFTs have seen a lot of interest from game developers. NFTs can provide records of ownership for in-game items, fuel in-game economies, and bring a host of benefits to the players.
@@ -141,11 +153,21 @@ Decentraland, a virtual reality game, even lets you buy NFTs representing virtua
   <ButtonLink to="/dapps/?category=gaming">Explore NFT games</ButtonLink>
 </InfoBanner>
 
+<Divider />
+
 ### Making ethereum addresses more memorable {#nft-domains}
 
 The Ethereum Name Service uses NFTs to provide your Ethereum address with an easier-to-remember name like `mywallet.eth`. This means you could ask someone to send you ETH via `mywallet.eth` rather than `0x123456789.....`.
 
-This works in a similar way to a website domain name which makes an IP address more memorable. And like domains, ENS names have value, usually based on length and relevance. With ENS you don't need a domain registry in order to facilitate the tranfer of ownership. Instead, ENS names can be traded on NFT marketplaces with ease.
+This works in a similar way to a website domain name which makes an IP address more memorable. And like domains, ENS names have value, usually based on length and relevance. With ENS you don't need a domain registry in order to facilitate the tranfer of ownership. Instead, ENS names can be traded on NFT marketplaces.
+
+Your ENS name can:
+
+- receive cryptocurrency and other NFTs.
+- point to a decentralized website, like [ethereum.eth](https://ethereum.eth.link). [More on decentralizing your website](https://docs.ipfs.io/how-to/websites-on-ipfs/link-a-domain/#domain-name-service-dns)
+- store any arbitrary information, including profile information like email and twitter handles.
+
+<Divider />
 
 ### Physical items {#nft-physical-items}
 
@@ -155,11 +177,13 @@ As NFTs are essentially deeds, one day you could buy a car or home using ETH and
 
 With valuable assets like cars and property representable on Ethereum, there's the opportunity to use NFTs as collateral in decentralized loans. This is particularly helpful if you're not cash or crypto-rich but own physical items of value. [More on DeFi](/defi/)
 
-## NFTs and DeFi {#nfts-and-defi}
+<Divider />
 
-The NFT world and the [decentralized finance (DeFi)](/defi/) world are starting to collaborate in a number of interesting ways.
+### NFTs and DeFi {#nfts-and-defi}
 
-### NFT-backed loans {#nft-backed-loans}
+The NFT world and the [decentralized finance (DeFi)](/defi/) world are starting to work together in a number of interesting ways.
+
+#### NFT-backed loans {#nft-backed-loans}
 
 There are DeFi applications that let you borrow money by using collateral. For example you collateralise 10 ETH so you can borrow 5000 DAI ([a stablecoin](/stablecoins/)). This guarantees that the lender gets paid back – if the borrower does't pay back the DAI, the collateral is sent to the lender. However not everyone has enough crypto to use as collateral.
 
@@ -167,7 +191,7 @@ Projects are beginning to explore using NFTs as collateral instead. Imagine you 
 
 And this isn't hard on Ethereum, because both worlds (NFT and DeFi) share the same infrastructure.
 
-### Fractional ownership {#fractional-ownership}
+#### Fractional ownership {#fractional-ownership}
 
 NFT creators can also create "shares" for their NFT. This gives investors and fans the opportunity to own a part of an NFT without having to buy the whole thing. This adds even more oppportunities for NFT minters and collectors alike.
 
@@ -187,6 +211,8 @@ These are Ethereum-powered organisations that allow strangers, like global share
 As we mentioned, this is an emerging space. NFTs, DAOs, fractionalised tokens are all developing at different paces. But all their infrastructure exists and can work together easily because they all speak the same language: Ethereum. So watch this space.
 
 [More on DAOs](/dao/)
+
+<Divider />
 
 ## Ethereum and NFTs {#ethereum-and-nfts}
 

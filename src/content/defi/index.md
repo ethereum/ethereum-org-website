@@ -57,6 +57,11 @@ Ethereum builds on this. Like Bitcoin, the rules can't change on you and everyon
 
 This sounds odd... "why would I want to program my money"? However, this is more just a default feature of tokens on Ethereum. Anyone can program logic into payments giving you the control and security of Bitcoin mixed with the services provided by financial institutions. This lets you do things with cryptocurrencies that you can't do with Bitcoin like lending and borrowing, scheduled payments, invest in index funds and more.
 
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
+  <div>Explore our suggestions for DeFi applications try out if you're new to Ethereum.</div>
+  <ButtonLink to="/dapps/?category=finance">Explore DeFi apps</ButtonLink>
+</InfoBanner>
+
 ## What can you do with DeFi? {#defi-use-cases}
 
 There's a decentralized alternative to most financial services. But Ethereum also creates opportunities for creating financial products that are completely new. This is an ever-growing list.
@@ -73,28 +78,29 @@ There's a decentralized alternative to most financial services. But Ethereum als
 - [Buy insurance](#insurance)
 - [Manage your portfolio](#aggregators)
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
-  <div>Explore our suggestions for DeFi applications try out if you're new to Ethereum.</div>
-  <ButtonLink to="/dapps/?category=finance">Explore DeFi apps</ButtonLink>
-</InfoBanner>
+<Divider />
 
 ### Send money around the globe quickly {#send-money}
 
-As a blockchain, Ethereum is designed for sending transactions in a secure and global way. Like Bitcoin, Ethereum makes sending money around the world as easy as sending an email. Payments go directly from one account to another in a matter of minutes (usually). To send/receive payments you'll need a wallet.
+As a blockchain, Ethereum is designed for sending transactions in a secure and global way. Like Bitcoin, Ethereum makes sending money around the world as easy as sending an email. Payments go directly from one account to another in a matter of minutes (usually). To send/receive payments you'll need a [wallet](/wallets/).
 
-<DocLink to="/wallets/" title="More on wallets" />
+<ButtonLink to="/dapps/?category=finance">See payment dapps</ButtonLink>
 
 #### Stream money around the globe... {#stream-money}
 
 It's also possible to stream money over Ethereum. This would let you pay someone their salary by the second, giving them access to their money whenever they need it.
 
-### Access to stable currencies {#stablecoins}
+<Divider />
+
+### Access stable currencies {#stablecoins}
 
 Although a lot of cryptocurrencies are known for their volatility, the DeFi community has invested a lot of time in creating stability out of volatility with stablecoins. Their value stays pegged to an another asset, usually a popular currency like dollars.
 
 Coins like Dai or USDC have a value that stays within a few cents of a dollar. This makes them perfect for earning or retail. So far many people in Latin America have used stablecoins as a way of protecting their savings in a time of great uncertainty with their government-issued currencies.
 
-<DocLink to="/stablecoins/" title="More on stablecoins" />
+<ButtonLink to="/stablecoins/">More on stablecoins</ButtonLink>
+
+<Divider />
 
 ### Borrowing {#lending}
 
@@ -102,6 +108,8 @@ Borrowing money from decentralized providers comes in two main varieties.
 
 - peer-to-peer, meaning a borrower will borrow directly from a specific lender.
 - pool-based where lenders provide liquidity to a pool that borrowers can borrow from.
+
+<ButtonLink to="/dapps/?category=finance">See borrowing dapps</ButtonLink>
 
 There are many advantages to using a decentralized lender...
 
@@ -142,6 +150,10 @@ If exchange B's supply dropped suddenly and the user wasn't able to buy enoughh 
 
 To be able to do the above example in the traditional finance world, you'd need an enormous amount of money. These money-making strategies are only accessible to those with existing wealth. Flash loans is just the beginning in the democratization of capital where having money is not necessarily a prerequisite for making money.
 
+[More on flash loans](https://aave.com/flash-loans/)
+
+<Divider />
+
 ### Start saving with crypto {#saving}
 
 #### Lending {#lending}
@@ -152,6 +164,8 @@ You can earn interest on your crypto by lending it. Here's an example:
 - you receive 100 Aave Dai (aDai) which is a token that represents your loaned Dai.
 - your aDai will increase based on the interest rates and you can see it grow in real-time in your wallet. Dependent on the APR, your wallet balance will read something like 100.1234 after a few days or even hours!
 - you can withdraw an amount of regular Dai that's equal to your aDai balance at any time.
+
+<ButtonLink to="/dapps/?category=finance">See lending dapps</ButtonLink>
 
 #### No-loss lotteries {#no-loss-lotteries}
 
@@ -165,6 +179,10 @@ No-loss lotteries like PoolTogether are a fun and innovative new way to save mon
 
 The prize pool is generated by all the interest generated by lending the ticket deposits like in the lending example above.
 
+<ButtonLink isSecondary to="https://pooltogether.com">Try PoolTogether</ButtonLink>
+
+<Divider />
+
 ### Exchange tokens {#swaps}
 
 There are thousands of tokens on Ethereum. Decentralized exchanges let you trade your tokens while always having control of your assets. You can easily move your funds between different tokens when you need them. This is like using the currency exchange when visiting abroad. However the DeFi equivalent never closes, the markets are 24/7, 365 days a year and the technology guarantees there will always be someone to accept a trade.
@@ -172,6 +190,10 @@ There are thousands of tokens on Ethereum. Decentralized exchanges let you trade
 If you want to use the no-loss lottery, PoolTogether (described above) you'll need a token like Dai or USDC. These token exchanges allow you to swap your ETH for those tokens and back again when you're finished.
 
 When you use a centralized exchange you have to deposit your assets before the trade and trust them to look after them. While your assets are deposited, they're at risk as centralized exchanges are attractive targets for hackers. [@sam should this be in the advanced trading section now]
+
+<ButtonLink to="/dapps/?category=finance">See token exchanges</ButtonLink>
+
+<Divider />
 
 ### Advanced trading {#trading}
 
@@ -181,11 +203,19 @@ Sophisticated financial Products
 Messari is bloomberg terminal for defi
 Arbitrage opportunities
 
+<ButtonLink to="/dapps/?category=finance">See trading dapps</ButtonLink>
+
+<Divider />
+
 ### Grow your portfolio {#investing}
 
 There are fund management products on Ethereum that will try to grow your portfolio based on a strategy of your choice. This is automatic, open to everyone, and doesn't need a human manager taking a cut of your profits.
 
 A good example is the [DeFi Pulse Index fund](https://defipulse.com/blog/defi-pulse-index/). When you buy into this fund, it will buy the [top 10 DeFi tokens by market capitalisation](https://www.coingecko.com/en/defi). This diversifies your portfolio, giving you exposure to the biggest coins of the moment. If a different coin enters the top 10, the fund will automatially rebalance to feature the new top 10. You can withdraw from the fund whenever you like.
+
+<ButtonLink to="/dapps/?category=finance">See investment dapps</ButtonLink>
+
+<Divider />
 
 ### Fund your ideas {#crowdfunding}
 
@@ -194,6 +224,8 @@ Ethereum is an ideal platform for crowdfunding for a number of reasons:
 - potential funders can come from anywhere – Ethereum and its tokens can be used by anybody, anywhere in the world.
 - it's transparent so fundraisers can prove how much money is raised and you can even trace how funds are being spent later down the line.
 - fundraisers can set up automatic refunds if, for example, there is a specific deadline and minimum amount that isn't met.
+
+<ButtonLink to="/dapps/?category=finance">See crowdfunding dapps</ButtonLink>
 
 #### Quadratic funding {#quadratic-funding}
 
@@ -210,20 +242,25 @@ This means project A that received 100 donations of 1 dollar could end up with m
 
 [More on quadratic funding](https://wtfisqf.com)
 
+<Divider />
+
 ### Insurance {#insurance}
 
 Decentralized insurance aims to make insurance cheaper, faster to pay out, and more transparent. With more automation, cover is more affordable and pay-outs are a lot quicker. The data used to decide on your claim is completely transparent.
 
 Ethereum products, like any software, can suffer from bugs and hacks. So right now a lot of insurance products in the space focus on protecting their users against loss of funds. However there are projects starting to build out cover for everything life can throw at us. A good example of this is Etherisc's Crop cover which aims to [protect smallhold farmers in Kenya against droughts and flooding](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Decentralized insurance can provide cheaper cover for these farmers who were often priced out of traditional insurance.
 
-[Nexus Mutual]()
-[Opyn]()
-[Etherisc]()
-[Cover (YFI)]()
+<ButtonLink to="/dapps/?category=finance">See insurance dapps</ButtonLink>
+
+<Divider />
 
 ### Aggregators and portfolio managers {#aggregators}
 
 With so much going on, you'll need a way to keep track of all your investments, loans, and trades. There are a host of products that let you coordinate all your DeFi activity from one place. This is the beauty of DeFi's open architecture. Teams can build out interfaces where you can't just see your balances across products, you can use their features too. You might find this useful as you explore more of DeFi.
+
+<ButtonLink to="/dapps/?category=finance">See portfolio dapps</ButtonLink>
+
+<Divider />
 
 ## How does DeFi work? {#how-defi-works}
 
