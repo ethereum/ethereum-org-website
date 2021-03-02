@@ -15,13 +15,15 @@ summaryPoints:
   ]
 ---
 
-_DeFi is an open and global financial system built for the internet age – an alternative to a system that's opaque, tightly controlled and held together by decades-old infrastructure and processes. It gives you control and visibility over your money. It's given many exposure to global markets while their currency at home has been failing. And it's largely owned by its users or maintained as a public good. It reimagines all of the financial services that aren't always accessibe and opens them up to anyone with an internet connection. So far tens of billions of dollars worth of crypto has flowed through DeFi applications and it's growing every day._
+DeFi is an open and global financial system built for the internet age – an alternative to a system that's opaque, tightly controlled and held together by decades-old infrastructure and processes. It gives you control and visibility over your money. It's given many exposure to global markets while their currency at home has been failing. And it's largely owned by its users or maintained as a public good. It reimagines all of the financial services that aren't always accessibe and opens them up to anyone with an internet connection. So far tens of billions of dollars worth of crypto has flowed through DeFi applications and it's growing every day.
 
 ## What's DeFi? {#what-is-defi}
 
 DeFi is a collective term for financial products and services that are accessible to anyone who can use Ethereum – anyone with an internet connection. With DeFi, the markets are always open and there are no centralized authorities who can block payments or deny you access to anything. Services that were previously slow and at risk of human error are automatic and secure now that they're handled by code that anyone can inspect and scrutinize.
 
 There's a booming crypto economy out there, where you can lend, borrow, long/short, earn interest, and more. Crypto-savvy Argentinians have used DeFi to escape crippling inflation. Companies have started streaming their employees their wages in real time. Some folks have even taken out and paid off loans worth millions of dollars without the need for any personal identification.
+
+<iframe width="100%" height="315px" src="https://www.youtube.com/embed/H-O3r2YMWJ4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## DeFi vs traditional finance {#defi-vs-tradfi}
 
@@ -52,6 +54,8 @@ One of the best ways to see the potential of DeFi is to understand the problems 
 Bitcoin in many ways was the first DeFi application. This invention allowed you to really own and control value and send it anywhere around the world. It's a system that's open to anyone and no one has the authority to change the rules. It's not like traditional finance where govermments can print money and devalue your savings and companies can shut down certain markets. Bitcoin's rules like its scarcity and its openness are written into the technology and can't be changed.
 
 Ethereum builds on this. Like Bitcoin, the rules can't change on you and everyone has access. But it also makes this digital money programmable so you can go beyond storing and sending value.
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/qFBYB4W2tqU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Programmable money {#programmable-money}
 
@@ -369,7 +373,20 @@ NOTE: DECIDED NOT TO DO THIS AS IT ADDS OVERHEAD OF UPDATING OUR APPS IN DIFFERE
 
 ## Further reading {#futher-reading}
 
+### DeFi data
+
 - [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
-- [What is Decentralized Finance?](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) – _ETHHub – updated regularly_
-- [A beginner's guide to DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu – January 6, 2020_
+
+### DeFi articles
+
+- [What is Decentralized Finance?](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) – _ETHHub, updated regularly_
+- [A beginner's guide to DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, January 6 2020_
+
+### Videos
+
+- [Finematics - decentralized finance education](https://finematics.com/) – _Videos on DeFi_
+
+### Communities
+
+- [DeFi Pulse Discord server](https://discord.gg/Gx4TCTk)

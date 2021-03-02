@@ -17,9 +17,7 @@ summaryPoints:
 
 NFTs are currently taking the digital art and collectibles world by storm. Digital artists are seeing their lives change thanks to huge sales to a new crypto-audience. And celebrities are joining in as they spot a new opportunity to connect with fans. But digital art is only one way to use NFTs. Really they can be used to represent ownership of any unique asset, like a deed for an item in the digital or physical realm.
 
-_If Andy Warhol had been born in the late 90s, he probably would have minted Campbell's Soup as an NFT. It's only a matter of time before Kanye puts a run of Yeezys on Ethereum. And one day owning your car might be managed with NFTs._
-
-<InfoBanner isWarning>NOTE: we don't currently explain the problems NFTs solve. On defi we talk about the problems with the tradfi system and on daos we talk about tthe difficulties of trusting strangers. The internet today isn't set up for ownership, but how can we easily explain this?</InfoBanner>
+If Andy Warhol had been born in the late 90s, he probably would have minted Campbell's Soup as an NFT. It's only a matter of time before Kanye puts a run of Yeezys on Ethereum. And one day owning your car might be managed with NFTs.
 
 ## What's an NFT? {#what-are-nfts}
 
@@ -28,6 +26,8 @@ NFTs are tokens that we can use to represent ownership of unique items. They let
 NFT stands for non-fungible token. Non-fungible is an economic term that you could use to describe things like your furniture, a song file, or your computer. These things are not interchangeable for other items because they have unique properties.
 
 Fungibile items on the other hand can be exchanged as their value defines them rather than their unique properties. For example ETH or dollars are fungible because 1 ETH / $1 USD is exchangeable for another ETH / $1 USD.
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/Xdkkux6OxfM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## The internet of assets {#internet-of-assets}
 
@@ -224,6 +224,8 @@ Ethereum is the perfect foundation for NFTs for a number of reasons:
 - All Ethereum products share the same "backend". Put another way, all Ethereum products can easily understand each other – this makes NFTs portable across products. You can buy an NFT on one product and sell it on another easily. As a creator you can list your NFTs on multiple products at the same time – every product will have the most up-to-date ownership information.
 - Ethereum never goes down, meaning your tokens will always be available to sell.
 
+## The environmental impact of NFTs {#environmental-impact-nfts}
+
 <!-- ## How to NFT
 
 ### Buy NFTs
@@ -255,4 +257,5 @@ Most NFTs are built using a consistent standard known as [ERC-721](/developers/d
 [Add links to other good NFT resources]
 
 - [Crypto art data](https://cryptoart.io/data) – Richard Chen, updated automatically
-- [OpenSea: the NFT Bible](https://opensea.io/blog/guides/non-fungible-tokens/) – Devin Fizner, January 10 2020
+- [OpenSea: the NFT Bible](https://opensea.io/blog/guides/non-fungible-tokens/) – _Devin Fizner, January 10 2020_
+- [A beginner's guide to NFTs](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, January 2020_
