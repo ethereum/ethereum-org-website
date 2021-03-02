@@ -396,6 +396,7 @@ NOTE: DECIDED NOT TO DO THIS AS IT ADDS OVERHEAD OF UPDATING OUR APPS IN DIFFERE
 ### Videos
 
 - [Finematics - decentralized finance education](https://finematics.com/) – _Videos on DeFi_
+- [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) - _DeFi basics: Everything you need to know to get started in this occasionally baffling space._
 
 ### Communities
 
