@@ -236,6 +236,24 @@ Ethereum is the perfect foundation for NFTs for a number of reasons:
 
 ## The environmental impact of NFTs {#environmental-impact-nfts}
 
+Ethereum currently used proof-of-work to achieve consensus. It is a top priority of the community to transition to a proof-of-stake system, to increase decentralization, security and scalability, while reducing energy consumption requirements imposed from proof-of-work. Several layer 2 scaling solutions, such as rollups, are being developed and implemented which also aim to improve scalability while decreasing energy usage. EIP-2309 is a proposal also aiming to improve the efficiency of layer 1 NFT transactions.
+
+Before these scaling solutions are fully implemented, it is worth noting that NFT's specifically are not necessarily _directly_ causing any increased carbon emission. The proof-of-work consensus mechanism that currently underlies the entire Ethereum blockchain is being used whether NFTs are being minted or not. If NFTs were to disappear today, there is a strong chance that block space would remain in demand for other reasons, though even if demand for block space decreased it wouldn't drastically impact energy consumption. For sake of example, imagine the demand for transacting on Ethereum falls to where the blocks are now empty. Miners would still be incentivized to produce blocks for the reward, and the hashing power required to do so would persist despite an empty block. More realistically, other transactions would take the place of NFT transactions. So again, there remains a strong and a active push to advance layer 2 solutions, and finalize Ethereum's transition to a proof-of-stake system.
+
+All this being said, let's talk more about proof-of-work. Objectively there is a significant amount of energy that must be consumed in order to achieve the security that Ethereum offers.
+Based on this, many people are quick to subjectively argue that the carbon footprint from proof-of-work blockchains is a "waste of energy."
+
+Energy consumption is not fundamentally a "good" or "bad" thing, and very much depends on where the energy is coming from, and what it is being used for.
+It is not up to any given individual to decide what is a "good" or "bad" use of energy for someone else. This same principle is used throughout Ethereum, where nobody can tell you that your transaction is not important.
+For someone not using this technology, is it fair for them to dictate that this form of energy consumption is wasteful? What about those who's lives have been changed for the better as a result?
+
+Externalities, such as carbon emissions based on choice of energy source, have not necessarily been priced in to the current system, but doing so would further encourage the use of renewable energy sources.
+In this case, miners would migrate to lower cost alternatives. Since you can't transport energy effectively over great distances (energy lost in high voltage lines), this depreciates the capital cost of building renewable energy sources in more remote places. Someone looking to utilize renewable energy sources, such as solar farms, to run a mining rig could invest in a remote location where renewable energy sources are more accessible (ie: large open plots of land or at a waterfall). This energy would have otherwise been untapped, and "wasted" by not harnessing it. These investments in infrastructure open up the ability to serve a local community, and can be paid off much faster from the economic payoff received from mining.
+
+The other side of the coin: Keep in mind that alternatives are not necessarily carbon-neutral either, such as the footprint of printing, handling, shipping and guarding fiat currencies. Annual spectacles of Christmas lights consume large amounts of energy, not to mention commercial products filling landfills, and governments engaging in war, leading to substantial levels of pollution.
+
+Oh, and the same thing was said about the internet itself. Early measures of Google's search traffic led to incorrectly extrapolating that data to the future, forming incorrect conclusions about the unmanagable "waste of energy" that would follow.
+
 <!-- ## How to NFT
 
 ### Buy NFTs
