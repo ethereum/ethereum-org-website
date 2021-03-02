@@ -41,9 +41,10 @@ Here's how an internet of NFTs looks against the internet most of us use today l
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | NFTs are digitally unique, no two NFTs are the same                                                                                                                                                         | A copy of a file, like an .mp3 or .jpg, is the same as the original                                                                                                        |
 | Every NFT must have an owner and this is of public record and easy for anyone to verify                                                                                                                     | Ownership records of digital items is stored on servers controlled by institutions – you must take their word for it                                                       |
-| Items can be used in surprising ways. For example you can use a digital artwork as collateral in a decentralised loan.                                                                                      |                                                                                                                                                                            |
 | NFTs are compatible with anything built using Ethereum. An NFT ticket for an event can be traded on every Ethereum marketplace, for an entirely different NFT. You could trade a piece of art for a ticket! | Companies with digital items must build their own infrastructure. For example an app that issues digital tickets for events would have to build their own ticket exchange. |
 | Content creators can sell their work anywhere and can access a global market                                                                                                                                | Creators rely on the infrastructure and distribution of the platforms they use. These are often subject to terms of use and geographical restrictions.                     |
+| Creators can retain ownership rights over their own work, and claim resale royalties directly.                                                                                                              | Platforms, such as music services, retain the majority of profits from sales                                                                                               |
+| Items can be used in surprising ways. For example you can use digital artwork as collateral in a decentralised loan.                                                                                        |                                                                                                                                                                            |
 
 ### NFT examples {#nft-examples}
 
@@ -69,7 +70,7 @@ If you contribute to ethereum.org, you can claim a POAP NFT. These are collectib
 
 #### ethereum.eth {#ethereum-dot-eth}
 
-This website has an alternative domain name powered by NFTs, **ethereum.eth**. Our `.org` address is centrally managed by a domain name service provider, whereas ethereum`.eth` is registered on Ethereum via the Ethereum Name Service (ENS). And its owned and managed by us. [Check our ENS record](https://app.ens.domains/name/ethereum.eth)
+This website has an alternative domain name powered by NFTs, **ethereum.eth**. Our `.org` address is centrally managed by a domain name system (DNS) provider, whereas ethereum`.eth` is registered on Ethereum via the Ethereum Name Service (ENS). And its owned and managed by us. [Check our ENS record](https://app.ens.domains/name/ethereum.eth)
 
 [More on ENS](https://app.ens.domains)
 
@@ -77,23 +78,24 @@ This website has an alternative domain name powered by NFTs, **ethereum.eth**. O
 
 NFTs have some special properties:
 
-- each token is unique.
-- they're not interchangeable with another NFT. For example 1 ETH is exactly the same as another ETH. This isn't the case with NFTs.
-- each token has an owner and this information is easily verifiable.
-- they live on Ethereum, so are compatible with every single NFT market on Ethereum.
+- Each token minted has a unique identifier.
+- They're not directly interchangeable with other tokens 1:1. For example 1 ETH is exactly the same as another ETH. This isn't the case with NFTs.
+- Each token has an owner and this information is easily verifiable.
+- They live on Ethereum, and despite two NFTs not necessarily being interchangeable in value, they can easily be traded, bought and sold on any Ethereum-based NFT market.
 
-In other words, if you own an NFT:
+In other words, if you _own_ an NFT:
 
-- you can easily prove you own it.
-- no one can manipulate it in any way.
-- you can sell it, and in some cases this will earn the original creator resale royalties.
+- You can easily prove you own it.
+- No one can manipulate it in any way.
+- You can sell it, and in some cases this will earn the original creator resale royalties.
+- Or, you can hold it forever, resting comfortably knowing your asset is secured by your wallet on Ethereum.
 
-And if you create an NFT:
+And if you _create_ an NFT:
 
-- you can easily prove you're the creator.
-- you determine the scarcity.
-- you can earn royalties every time it's sold.
-- you can sell it on any NFT market or peer-to-peer. You're not locked in to any platform and you don't need anyone to intermediate.
+- You can easily prove you're the creator.
+- You determine the scarcity.
+- You can earn royalties every time it's sold.
+- You can sell it on any NFT market or peer-to-peer. You're not locked in to any platform and you don't need anyone to intermediate.
 
 ## What are NFTs used for? {#nft-use-cases}
 
@@ -113,7 +115,7 @@ The biggest use of NFTs today is in the digital content realm. That's because th
 
 An artist publishing work on a social network makes money for the platform who sell ads to the artists followers. They get exposure in return, but exposure doesn't pay the bills.
 
-NFTs powers a new creator economy where creators don't hand ownership of their content over to the platforms they use to publicise it. Ownership is baked into the content itself.
+NFTs power a new creator economy where creators don't hand ownership of their content over to the platforms they use to publicise it. Ownership is baked into the content itself.
 
 When they sell their content, funds go directly to them. If the new owner was to go on and re-sell the NFT, the original creator can even automatically receive royalties because the creator address is part of the token's metadata – metadata which can't be modified.
 
@@ -131,6 +133,14 @@ Well, yes. But does googling an image of Picasso's Guernica make you the proud n
 Ultimately owning the real thing is as valuable as the market makes it. The more a piece of content is screen-grabbed, shared, and generally used the more value it gains.
 
 Owning the verifiably real thing will always have more value than not.
+
+#### Scarcity {#scarcity}
+
+The creator of an NFT is ultimately who decides the scarcity of a given asset being minted. Just because all NFTs have unique identifiers, does not mean all token representations have the same scarcity.
+
+For example, consider a ticket to a sporting event. Just as the organizer of an event can chose how many tickets to sell, the creator of an NFT can decide how many replicas exist. Sometimes these are exact replicas, such as 5000 General Admission tickets. Sometimes several are minted that are very similar, but each slightly different, such as a ticket with an assigned seat. In another case, the creator may want to create an NFT where only one is minted as a special rare collectible.
+
+In all of these cases, each NFT would still have a unique identifier (like a bar code on a traditional "ticket"), with only one owner. The intended scarcity of the NFT matters, and is up to the creator. A creator may intend to make each NFT completely unique in order to create scarcity, or have reasons to produce several thousand replicas. Remember, this information is all public.
 
 <Divider />
 
@@ -155,7 +165,7 @@ Decentraland, a virtual reality game, even lets you buy NFTs representing virtua
 
 <Divider />
 
-### Making ethereum addresses more memorable {#nft-domains}
+### Making Ethereum addresses more memorable {#nft-domains}
 
 The Ethereum Name Service uses NFTs to provide your Ethereum address with an easier-to-remember name like `mywallet.eth`. This means you could ask someone to send you ETH via `mywallet.eth` rather than `0x123456789.....`.
 
@@ -163,9 +173,9 @@ This works in a similar way to a website domain name which makes an IP address m
 
 Your ENS name can:
 
-- receive cryptocurrency and other NFTs.
-- point to a decentralized website, like [ethereum.eth](https://ethereum.eth.link). [More on decentralizing your website](https://docs.ipfs.io/how-to/websites-on-ipfs/link-a-domain/#domain-name-service-dns)
-- store any arbitrary information, including profile information like email and twitter handles.
+- Receive cryptocurrency and other NFTs.
+- Point to a decentralized website, like [ethereum.eth](https://ethereum.eth.link). [More on decentralizing your website](https://docs.ipfs.io/how-to/websites-on-ipfs/link-a-domain/#domain-name-service-dns)
+- Store any arbitrary information, including profile information like email and twitter handles.
 
 <Divider />
 
