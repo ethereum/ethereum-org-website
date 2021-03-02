@@ -7,7 +7,6 @@ import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import Link from "../components/Link"
 import { Page, Content } from "../components/SharedStyledComponents"
-import { Mixins } from "../theme"
 
 import languageMetadata from "../data/translations"
 import { translateMessageId } from "../utils/translations"
@@ -49,7 +48,12 @@ const LangItem = styled(GatsbyLink)`
 `
 
 const LangTitle = styled.div`
-  ${Mixins.textLevel6}
+  font-size: 0.875rem;
+  line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  margin: 1.14em 0;
+  text-transform: uppercase;
 `
 
 const LanguagesPage = () => {
@@ -80,7 +84,7 @@ const LanguagesPage = () => {
           </p>
           <p>
             <Translation id="page-languages-interested" />{" "}
-            <Link to="/contributing/translation-program/">
+            <Link to="/en/contributing/translation-program/">
               <Translation id="page-languages-learn-more" />
             </Link>
             .
@@ -103,7 +107,7 @@ const LanguagesPage = () => {
           </h2>
           <p>
             <Translation id="page-languages-want-more-paragraph" />{" "}
-            <Link to="/contributing/translation-program/">
+            <Link to="/en/contributing/translation-program/">
               <Translation id="page-languages-want-more-link" />
             </Link>
             .

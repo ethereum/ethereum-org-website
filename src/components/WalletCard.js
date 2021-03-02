@@ -53,6 +53,7 @@ const Content = styled.div`
 
 const Title = styled.h3`
   margin-bottom: 0.75rem;
+  margin-top: 1rem;
 `
 
 const Description = styled.p`

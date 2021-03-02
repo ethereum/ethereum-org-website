@@ -20,7 +20,7 @@ Previous knowledge of programming languages, especially of JavaScript or Python,
 
 ## Solidity {#solidity}
 
-- Influenced by C++, Python and JavaScript.
+- Influenced by C++ and JavaScript.
 - Statically typed (the type of a variable is known at compile time).
 - Supports:
   - Inheritance (you can extend other contracts).

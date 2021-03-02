@@ -69,7 +69,7 @@ const ItemTitle = styled.div``
 const ItemDesc = styled.div`
   font-size: ${(props) => props.theme.fontSizes.s};
   margin-bottom: 0;
-  opacity: 0.6;
+  opacity: 0.7;
 `
 
 const LeftContainer = styled.div`
