@@ -450,7 +450,7 @@ export const CardItem = styled(Link)`
   text-decoration: none;
   margin: 1rem 1rem 1rem 0;
   padding: 1rem;
-  flex: 1 1 240px;
+  flex: 0 1 240px;
   list-style: none;
   border-radius: 2px;
   width: 100%;
@@ -461,9 +461,5 @@ export const CardItem = styled(Link)`
   &:hover {
     box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
     border: 1px solid ${(props) => props.theme.colors.black300};
-  }
-
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
   }
 `
