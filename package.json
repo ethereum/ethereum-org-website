@@ -45,7 +45,7 @@
     "netlify-lambda": "^1.6.3",
     "polished": "^3.6.5",
     "prism-react-renderer": "^1.1.1",
-    "prismjs": "^1.21.0",
+    "prismjs": "^1.23.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-emoji-render": "^1.2.4",
