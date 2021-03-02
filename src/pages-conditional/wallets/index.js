@@ -663,6 +663,9 @@ export const query = graphql`
     gnosis: file(relativePath: { eq: "wallets/gnosis.png" }) {
       ...listImage
     }
+    guarda: file(relativePath: { eq: "wallets/guarda.png" }) {
+      ...listImage
+    }
     hyperpay: file(relativePath: { eq: "wallets/hyperpay.png" }) {
       ...listImage
     }
