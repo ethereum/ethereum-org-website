@@ -31,13 +31,13 @@ This opens up so many new opportunities for global collaboration and coordinatio
 
 ### A comparison {#dao-comparison}
 
-| DAO | A traditional company |
-| --- | --------------------- |
-|     |                       |
-|     |                       |
-|     |                       |
-|     |                       |
-|     |                       |
+| DAO                                                                                                            | A traditional company                                                                                   |
+| -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| Usually flat, and fully democratized                                                                           | Usually hierarchical                                                                                    |
+| Voting required by members for any changes to be implemented                                                   | Depending on structure, changes can be demanded from a sole party, or voting may be offered             |
+| Votes tallied, and outcome implemented automatically without trusted intermediary                              | If voting allowed, votes are tallied internally, and outcome of voting measure must be handled manually |
+| Services offered are handled automatically in a decentralized manner (ie: distribution of philanthropic funds) | Requires human handling, or centrally controlled automation, prone to manipulation                      |
+| All activity is transparent and fully public                                                                   | Activity is typically private, and limited to the public                                                |
 
 ### DAO examples {#dao-examples}
 
