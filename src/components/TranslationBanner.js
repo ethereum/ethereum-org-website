@@ -104,6 +104,7 @@ const TranslationBanner = ({
   isPageRightToLeft,
   originalPagePath,
   shouldShow,
+  hasBaseTranslation,
 }) => {
   const [isOpen, setIsOpen] = useState(shouldShow)
 
@@ -112,12 +113,14 @@ const TranslationBanner = ({
   }, [originalPagePath, shouldShow])
 
   // If page isn't outdated, it hasn't been translated at all
-  const headerTextId = isPageOutdated
-    ? "translation-banner-title-update"
-    : "translation-banner-title-new"
-  const bodyTextId = isPageOutdated
-    ? "translation-banner-body-update"
-    : "translation-banner-body-new"
+  const headerTextId =
+    isPageOutdated || hasBaseTranslation
+      ? "translation-banner-title-update"
+      : "translation-banner-title-new"
+  const bodyTextId =
+    isPageOutdated || hasBaseTranslation
+      ? "translation-banner-body-update"
+      : "translation-banner-body-new" // You’re viewing this page in English because we haven’t translated it yet. Help us translate this content.
 
   return (
     <BannerContainer isOpen={isOpen}>

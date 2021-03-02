@@ -15,7 +15,7 @@ import SideNavMobile from "./SideNavMobile"
 import Translation from "./Translation"
 import TranslationBanner from "./TranslationBanner"
 
-import { isLangRightToLeft } from "../utils/translations"
+import { isLangRightToLeft, v2Languages } from "../utils/translations"
 
 const ContentContainer = styled.div`
   position: relative;
@@ -81,9 +81,10 @@ const Layout = (props) => {
   const theme = isDarkTheme ? darkTheme : lightTheme
 
   const isPageOutdated = !!props.pageContext.isOutdated
-  const isPageTranslated = intl.language !== intl.defaultLanguage
+  const isNonEnglishPage = intl.language !== intl.defaultLanguage
+  const isV2Language = v2Languages.includes(intl.language)
   const isPageRightToLeft = isLangRightToLeft(intl.language)
-  const shouldShowTranslationBanner = isPageOutdated || isPageTranslated
+  const shouldShowTranslationBanner = isPageOutdated || isNonEnglishPage
 
   const path = props.path
   const shouldShowSideNav = path.includes("/docs/")
@@ -103,6 +104,7 @@ const Layout = (props) => {
             isPageOutdated={isPageOutdated}
             isPageRightToLeft={isPageRightToLeft}
             originalPagePath={intl.originalPath}
+            hasBaseTranslation={isV2Language}
             shouldShow={shouldShowTranslationBanner}
           />
           <ContentContainer>
