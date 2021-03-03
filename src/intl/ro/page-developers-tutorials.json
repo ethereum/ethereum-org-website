@@ -1,0 +1,22 @@
+{
+  "comp-tutorial-metadata-minute-read": "minute de citit",
+  "page-tutorial-listing-policy-intro": "Înainte de a trimite un tutorial, te rugăm să citești politica noastră de listare.",
+  "comp-tutorial-metadata-tip-author": "Sfatul autorului",
+  "page-tutorial-listing-policy": "politica de listare a articolelor",
+  "page-tutorial-new-github": "Nou pe GitHub?",
+  "page-tutorial-new-github-desc": "Ridică o problemă – completează informațiile solicitate și lipește tutorialul.",
+  "page-tutorial-pull-request": "Creează o cerere de integrare",
+  "page-tutorial-pull-request-btn": "Creează cererea de integrare",
+  "page-tutorial-pull-request-desc-1": "Folosește",
+  "page-tutorial-pull-request-desc-2": "tutoriale/numele-tutorialului-tău.md",
+  "page-tutorial-pull-request-desc-3": "ca structură de denumire.",
+  "page-tutorial-raise-issue-btn": "Ridică problema",
+  "page-tutorial-read-time": "min",
+  "page-tutorial-submit-btn": "Trimite un tutorial",
+  "page-tutorial-submit-tutorial": "Pentru a trimite un tutorial, trebuie să folosești GitHub. Te invităm să creezi o problemă sau o cerere de integrare.",
+  "page-tutorial-subtitle": "Bine ai venit la lista de tutoriale a comunității.",
+  "page-tutorial-tags-error": "Niciun tutorial nu are toate aceste etichete",
+  "page-tutorial-title": "Tutoriale de dezvoltare Ethereum",
+  "page-tutorials-meta-description": "Navighează și filtrează tutorialele comunității Ethereum după subiect.",
+  "page-tutorials-meta-title": "Tutoriale de dezvoltare Ethereum"
+}
