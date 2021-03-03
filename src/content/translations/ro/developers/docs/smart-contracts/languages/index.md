@@ -208,7 +208,7 @@ Dacă ești nou în Ethereum și încă nu ai scris cod cu limbaje de contracte 
 **Yul+**
 
 - O extensie de nivel scăzut, extrem de eficientă pentru Yul.
-- Conceput inițial pentru un contract <a href=„en/developers/docs/layer-2-scaling/#rollups-and-sidechains">optimistic rollup</a>.
+- Conceput inițial pentru un contract <a href="en/developers/docs/layer-2-scaling/#rollups-and-sidechains">optimistic rollup</a>.
 - Yul + poate fi privit ca o propunere experimentală de upgrade la Yul, adăugând noi caracteristici.
 
 ### Linkuri importante {#important-links-2}
