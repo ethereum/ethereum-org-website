@@ -60,7 +60,7 @@ Cadrele sunt prevăzute cu numeroase funcționalități predefinite, cum ar fi:
 - [Documentație](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
 
-**Create Eth App - ** **\_creează aplicații bazate pe Ethereum cu o singură comandă. **_Vine cu o gamă largă de cadre UI și șabloane DeFi din care să alegi._\*\*</p>
+**Create Eth App - ** **_creează aplicații bazate pe Ethereum cu o singură comandă. Vine cu o gamă largă de cadre UI și șabloane DeFi din care să alegi._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Șabloane](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)

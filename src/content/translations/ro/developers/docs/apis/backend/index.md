@@ -41,7 +41,7 @@ Aceste biblioteci elimină o mare parte din complexitatea interacțiunii directe
 - [Documentație](https://infura.io/docs)
 - [GitHub](https://github.com/INFURA)
 
-\***\*Gateway Cloudflare pentru Ethereum.\*\***
+**Gateway Cloudflare pentru Ethereum.**
 
 - [cloudflare-eth.com](https://cloudflare-eth.com)
 
