@@ -260,7 +260,7 @@ Blockchains like Bitcoin and Ethereum are energy intensive right now because it 
 <!-- [Need: how do centralized systems do this and why is it worse?]
  -->
 
-#### NFTs and mining
+#### The work in minting an NFT
 
 When you mint an NFT, a few things have to happen:
 
@@ -273,11 +273,15 @@ These tasks are done by miners. And they let the rest of the network know about 
 
 [More on mining](/developers/docs/consensus-mechanisms/pow/)
 
+#### Making the NFT tamper-proof
+
 Mining difficulty comes from the fact that it takes a lot of computing power to create new blocks in the chain. Importantly, blocks are created consistently, not just when they're needed. They're created every 12 seconds or so.
 
 This is important for making Ethereum tamper-proof, one of the qualities that makes NFTs possible. The more blocks the more secure the chain. If your NFT was created in block #600 and a hacker were to try and change themselves to the creator of your NFT, it would immediately change the digital fingerprint of all subsequent blocks, #601, #602, #603, and so on. That means anyone running Ethereum software would immediately be able to tell and prevent it from happening.
 
 However this means that computing power needs to be used constantly. It also means that a block that contains 0 NFT transactions will still have roughly the same carbon footprint, because computing power will still be consumed to create it. Other non-NFT transactions will fill the blocks.
+
+#### Blockchains are energy intensive, right now
 
 So yes, there is a carbon footprint associated with creating blocks by mining – and this is a problem for chains like Bitcoin too – but it's not directly the fault of NFTs.
 
