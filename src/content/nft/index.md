@@ -283,7 +283,7 @@ So yes, there is a carbon footprint associated with creating blocks by mining â€
 
 A lot of mining is done using renewable energy sources or untapped energy in remote locations. And there is the argument that the industries that NFTs and cryptocurrencies are disrupting have huge carbon footprints too. Regardless, Ethereum is going through some upgrades to make using Ethereum (and by virtue, NFTs) more energy efficient. And that's always been the plan.
 
-## A greener future...
+### A greener future...
 
 For as long as Ethereum has been around, the energy-consumption of mining has been a huge focus area for developers and researchers. And the vision has always been to replace it as soon as possible.
 
@@ -291,19 +291,19 @@ For as long as Ethereum has been around, the energy-consumption of mining has be
 
 This vision is being delivered right now.
 
-### The end goal: Eth2
+#### The end goal: Eth2
 
 Ethereum is currently going through a series of upgrades, known as Eth2, that will replace mining with [staking](/staking/). This will remove computing power as a security mechanism, and reduce Ethereum's carbon footprint by several orders of magnitude. Stakers commit funds instead of computing power to secure the network. Importantly this improves the energy efficiency while preserving the decentralization and security. Many other blockchains out there might already use some form of staking, but they might be secured by a select few stakers, not the 1000s that Ethereum will have. The more decentralization, the more secure the system.
 
 [More on Eth2](/eth2/)
 
-### Rollups in the meantime...
+#### Rollups in the meantime...
 
 While we wait for Eth2, products are moving to a "layer 2" technology known as rollups. Working on top of Ethereum, this technology lets you "roll up" or batch many transactions into a single one that is submitted to the chain. By moving as many things off the chain and only submitting the truly important bits (the cryptographic proofs), demand for block space will decrease. This will in turn lower the amount of computing power needed to create new blocks.
 
 [More on rollups and layer 2 technology](/developers/docs/layer-2-scaling/)
 
-### A more efficient NFT standard...
+#### A more efficient NFT standard...
 
 Ethereum is open source software and new standards are being figured out and agreed on all the time. The Consecutive Transfer Extension Standard (EIP-2309) plans to make the creation of NFTs more efficient. Like rollups this reduces the amount of heavy lifting done on chain, allowing you to mint one billion NFTs in a single transaction.
 
