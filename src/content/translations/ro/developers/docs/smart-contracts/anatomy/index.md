@@ -1,17 +1,8 @@
 ---
 title: Anatomia contractelor inteligente
 description: O privire aprofundată asupra anatomiei unui contact inteligent – funcțiile, datele și variabilele.
-author: ro
-tags:
-  -
-  -
-  -
-lang:
-sidebar:
-skill:
-published:
-source:
-sourceUrl:
+lang: ro
+sidebar: true
 ---
 
 Orice date contractuale trebuie alocate unei locații: fie `stocare`, fie `memorie`. Este costisitor să modifici spațiul de stocare într-un contract inteligent, deci trebuie să te gândești unde ar trebui să existe datele tale.
