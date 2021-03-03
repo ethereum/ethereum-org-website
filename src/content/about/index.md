@@ -58,3 +58,9 @@ Make sure you read the principles if you'd like to [contribute to the site](/en/
 ## Roadmap {#roadmap}
 
 <Roadmap />
+
+## Open jobs {#open-jobs}
+
+- [Front-end web developer OG](/about/web-developer-og/)
+- [Front-end web developer](/about/web-developer/)
+- [Front-end web developer 2](/about/web-developer-2/)

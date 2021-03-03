@@ -3,7 +3,7 @@ title: Front-end Web Developer job at the Ethereum Foundation
 description: ethereum.org is hiring a full-time web developer
 lang: en
 sidebar: true
-template: jobalt
+template: job
 position: Front-end Developer
 compensation: "$75,000 - $95,000"
 location: Remote

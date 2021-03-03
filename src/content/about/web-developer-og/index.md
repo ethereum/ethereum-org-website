@@ -3,12 +3,6 @@ title: Front-end Web Developer job at the Ethereum Foundation
 description: ethereum.org is hiring a full-time web developer
 lang: en
 sidebar: true
-template: jobalt
-position: Front-end Developer
-compensation: "$75,000 - $95,000"
-location: Remote
-type: Full-time
-link: https://ethereum.bamboohr.com/jobs/view.php?id=32
 ---
 
 # Front-end Web Developer
@@ -54,8 +48,8 @@ The [Ethereum Foundation](/foundation/) is a global non-profit organization dedi
 - This is a full-time, remote position
 - Compensation will ultimately depend on your experience, skillset and the contract structure but you can expect $40-50 USD per hour, or $75,000-$95,000 annual salary.
 
-<!-- ## Apply
+## Apply
 
 <ButtonLink to="https://ethereum.bamboohr.com/jobs/view.php?id=32">
   Apply for this job
-</ButtonLink> -->
+</ButtonLink>
