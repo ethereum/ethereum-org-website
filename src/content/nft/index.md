@@ -281,7 +281,9 @@ However this means that computing power needs to be used constantly. It also mea
 
 So yes, there is a carbon footprint associated with creating blocks by mining – and this is a problem for chains like Bitcoin too – but it's not directly the fault of NFTs.
 
-A lot of mining is done using renewable energy sources or untapped energy in remote locations. And there is the argument that the industries that NFTs and cryptocurrencies are disrupting have huge carbon footprints too. Regardless, Ethereum is going through some upgrades to make using Ethereum (and by virtue, NFTs) more energy efficient. And that's always been the plan.
+A lot of mining is done using renewable energy sources or untapped energy in remote locations. And there is the argument that the industries that NFTs and cryptocurrencies are disrupting have huge carbon footprints too. But just because existing industries are bad, doesn't mean we shouldn't strive to be better.
+
+And we are. Ethereum is going through some upgrades to make using Ethereum (and by virtue, NFTs) more energy efficient. And that's always been the plan.
 
 ### A greener future...
 
