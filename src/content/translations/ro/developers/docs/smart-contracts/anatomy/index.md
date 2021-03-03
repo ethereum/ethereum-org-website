@@ -14,7 +14,7 @@ source:
 sourceUrl:
 ---
 
-<!--Content below provided by @EthereumOnArm-->[]()
+<!--Content below provided by @EthereumOnArm-->
 
 Orice date contractuale trebuie alocate unei locații: fie `stocare`, fie `memorie`. Este costisitor să modifici spațiul de stocare într-un contract inteligent, deci trebuie să te gândești unde ar trebui să existe datele tale.
 
