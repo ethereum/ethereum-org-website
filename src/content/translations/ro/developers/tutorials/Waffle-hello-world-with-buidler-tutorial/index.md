@@ -3,12 +3,14 @@ title: "Waffle spune „Salut, lume”; tutorial cu Hardhat și eteri"
 description: Realizează primul tău proiect Waffle cu hardhat și ethers.js
 author: "MiZiet"
 tags:
-  - "waffle"
-  - "contracte inteligente"
-  - "solidity"
-  - "testare"
-  - "hardhat"
-  - "ethers.js"
+  [
+    "waffle",
+    "contracte inteligente",
+    "solidity",
+    "testare",
+    "hardhat",
+    "ethers.js",
+  ]
 skill: de bază
 lang: ro
 sidebar: true

@@ -3,11 +3,13 @@ title: Implementarea primului tău contract inteligent
 description: O introducere în implementarea primului tău contract inteligent într-o rețea de testare Ethereum
 author: "jdourlens"
 tags:
-  - "contracte inteligente"
-  - "remix"
-  - "solidity"
-  - "noțiuni de bază"
-  - "implementarea"
+  [
+    "contracte inteligente",
+    "remix",
+    "solidity",
+    "noțiuni de bază",
+    "implementarea",
+  ]
 skill: începător
 lang: ro
 sidebar: true

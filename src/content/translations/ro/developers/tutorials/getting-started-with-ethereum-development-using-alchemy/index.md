@@ -3,12 +3,14 @@ title: Noțiuni de bază despre dezvoltarea Ethereum folosind Alchemy
 description: "Acesta este un ghid pentru începători pentru a începe dezvoltarea Ethereum folosind Alchemy. Începem de la înregistrarea la Alchemy, la a face o solicitare din linia de comandă, până la scrierea primul script web3! Nu este necesară o experiență de programator blockchain!"
 author: "Elan Halpern"
 tags:
-  - "noțiuni de bază"
-  - "javascript"
-  - "ethers.js"
-  - "noduri"
-  - "interogarea"
-  - "alchemy"
+  [
+    "noțiuni de bază",
+    "javascript",
+    "ethers.js",
+    "noduri",
+    "interogarea",
+    "alchemy",
+  ]
 skill: începător
 lang: ro
 sidebar: true

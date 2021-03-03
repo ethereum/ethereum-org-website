@@ -2,11 +2,7 @@
 title: Cum să implementăm o piață ERC-721
 description: Cum să pui articole tokenizate de vânzare pe un panou publicitar descentralizat
 author: "Alberto Cuesta Cañada"
-tags:
-  - "contracte inteligente"
-  - "erc-721"
-  - "solidity"
-  - "tokenuri"
+tags: ["contracte inteligente", "erc-721", "solidity", "tokenuri"]
 skill: intermediar
 lang: ro
 sidebar: true

@@ -3,12 +3,14 @@ title: Interacționează cu alte contracte din Solidity
 description: Cum se implementezi un contract inteligent dintr-un contract existent și să interacționezi cu acesta
 author: "jdourlens"
 tags:
-  - "contracte inteligente"
-  - "solidity"
-  - "remix"
-  - "fabrici"
-  - "implementare"
-  - "combinabilitate"
+  [
+    "contracte inteligente",
+    "solidity",
+    "remix",
+    "fabrici",
+    "implementare",
+    "combinabilitate",
+  ]
 skill: avansat
 lang: ro
 sidebar: true

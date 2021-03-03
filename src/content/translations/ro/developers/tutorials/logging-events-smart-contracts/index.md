@@ -2,11 +2,7 @@
 title: Înregistrarea datelor din contractele inteligente cu evenimente
 description: O introducere în evenimente de contracte inteligente și cum să le utilizezi pentru a înregistra date
 author: "jdourlens"
-tags:
-  - "contracte inteligente"
-  - "remix"
-  - "solidity"
-  - "evenimente"
+tags: ["contracte inteligente", "remix", "solidity", "evenimente"]
 skill: intermediar
 lang: ro
 sidebar: true

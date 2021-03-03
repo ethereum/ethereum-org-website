@@ -2,10 +2,7 @@
 title: Cum să transformi Raspberry Pi 4 într-un nod doar prin intermitentul cardului MicroSD
 description: Flash Raspberry PI 4, conectează un cablu ethernet, conectează discul SSD și pornește dispozitivul pentru a transforma Raspberry PI 4 într-un nod Ethereum 1.0 plin sau un nod Ethereum 2.0 (lanț Beacon/validator)
 author: "EthereumOnArm"
-tags:
-  - "clienți"
-  - "eth2"
-  - "noduri"
+tags: ["clienți", "eth2", "noduri"]
 lang: ro
 sidebar: true
 skill: intermediar

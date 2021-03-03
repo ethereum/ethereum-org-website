@@ -3,11 +3,7 @@ title: Înțelegerea contractului inteligent ERC-20
 description: O introducere în implementarea primului tău contract inteligent pe o rețea de testare Ethereum
 author: "jdourlens"
 tags:
-  - "contracte inteligente"
-  - "tokenuri"
-  - "solidity"
-  - "noțiuni de bază"
-  - "erc-20"
+  ["contracte inteligente", "tokenuri", "solidity", "noțiuni de bază", "erc-20"]
 skill: începător
 lang: ro
 sidebar: true

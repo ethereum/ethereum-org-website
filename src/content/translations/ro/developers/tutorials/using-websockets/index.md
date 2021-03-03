@@ -5,12 +5,14 @@ author: "Elan Halpern"
 lang: ro
 sidebar: true
 tags:
-  - "alchemy"
-  - "websockets"
-  - "interogarea"
-  - "noțiuni de bază"
-  - "abonament"
-  - "javascript"
+  [
+    "alchemy",
+    "websockets",
+    "interogarea",
+    "noțiuni de bază",
+    "abonament",
+    "javascript",
+  ]
 skill: începător
 source: Documentație Alchemy
 sourceUrl: https://docs.alchemyapi.io/guides/using-websockets

@@ -2,12 +2,7 @@
 title: "Waffle: Simularea dinamică și testarea apelurilor de contracte"
 description: Tutorial Waffle avansat de folosire a simulării dinamice și testarea apelurilor de contract
 author: "Daniel Izdebski"
-tags:
-  - "waffle"
-  - "contracte inteligente"
-  - "solidity"
-  - "testare"
-  - "simulare"
+tags: ["waffle", "contracte inteligente", "solidity", "testare", "simulare"]
 skill: intermediar
 lang: ro
 sidebar: true

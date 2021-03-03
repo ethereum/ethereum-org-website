@@ -3,11 +3,7 @@ title: Transferuri și aprobarea de tokenuri ERC-20 dintr-un contract inteligent
 description: Cum se utilizează un contract inteligent pentru a interacționa cu un token folosind limbajul Solidity
 author: "jdourlens"
 tags:
-  - "contracte inteligente"
-  - "tokenuri"
-  - "solidity"
-  - "noțiuni de bază"
-  - "erc-20"
+  ["contracte inteligente", "tokenuri", "solidity", "noțiuni de bază", "erc-20"]
 skill: intermediar
 lang: ro
 sidebar: true

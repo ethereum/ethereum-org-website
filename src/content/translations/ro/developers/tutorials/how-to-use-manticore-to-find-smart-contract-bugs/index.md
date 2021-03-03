@@ -5,11 +5,13 @@ author: Trailofbits
 lang: ro
 sidebar: true
 tags:
-  - "solidity"
-  - "contracte inteligente"
-  - "securitate"
-  - "testare"
-  - "verificare formală"
+  [
+    "solidity",
+    "contracte inteligente",
+    "securitate",
+    "testare",
+    "verificare formală",
+  ]
 skill: avansat
 published: 2020-01-13
 source: Construirea de contracte sigure

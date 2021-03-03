@@ -5,12 +5,14 @@ author: Markus Waas
 lang: ro
 sidebar: true
 tags:
-  - "solidity"
-  - "contracte inteligente"
-  - "interogarea"
-  - "the graph"
-  - "create-eth-app"
-  - "react"
+  [
+    "solidity",
+    "contracte inteligente",
+    "interogarea",
+    "the graph",
+    "create-eth-app",
+    "react",
+  ]
 skill: intermediar
 published: 2020-09-06
 source: soliditydeveloper.com

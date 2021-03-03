@@ -2,10 +2,7 @@
 title: Cum se execută un nod ușor cu Geth
 description: Cum se descarcă, se instalează și se execută Geth. Se acoperă syncmode-uri, consola JavaScript și multe altele
 author: "Brian Gu"
-tags:
-  - "clienți"
-  - "geth"
-  - "noduri"
+tags: ["clienți", "geth", "noduri"]
 skill: intermediar
 lang: ro
 sidebar: true
