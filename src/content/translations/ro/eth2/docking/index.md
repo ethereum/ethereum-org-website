@@ -4,7 +4,14 @@ description: Informații despre andocare - când rețeaua principală Ethereum s
 lang: ro
 template: eth2
 sidebar: true
-summaryPoints: '[ ''Eventual, actuala rețea principală Ethereum va "andoca" cu restul de upgrade Eth2.'', ''Andocarea va îmbina rețeaua principală "Eth1" cu Lanțul Beacon Eth2 și cu sistemul de fragmente.'', "Aceasta va marca sfârșitul Dovezii Muncii (PoW) pentru Ethereum și tranziția completă la Dovada Mizei (PoS).", ''S-ar putea să găsești acest lucru ca "Faza 1.5" pe foile de parcurs tehnice.'', ] ---'
+image: ../../../../../assets/eth2/docking.png
+summaryPoints:
+  [
+    'Eventual, actuala rețea principală Ethereum va "andoca" cu restul de upgrade Eth2.',
+    'Andocarea va îmbina rețeaua principală "Eth1" cu Lanțul Beacon Eth2 și cu sistemul de fragmente.',
+    "Aceasta va marca sfârșitul Dovezii Muncii (PoW) pentru Ethereum și tranziția completă la Dovada Mizei (PoS).",
+    'S-ar putea să găsești acest lucru ca "Faza 1.5" pe foile de parcurs tehnice.',
+  ]
 ---
 
 <UpgradeStatus date="~2021/22">

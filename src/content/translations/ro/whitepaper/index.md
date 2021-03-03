@@ -28,7 +28,7 @@ Iată o postare de pe blogul lui Vitalik Buterin, fondatorul Ethereum, despre [P
 
 ### Bitcoin ca un sistem de tranziție de stare {#bitcoin-as-a-state-transition-system}
 
-![Tranziția de stare Ethereum](./ethereum-state-transition.png)
+![Tranziția de stare Ethereum](../../../whitepaper/ethereum-state-transition.png)
 
 Din punct de vedere tehnic, registrul unei criptomonede precum Bitcoin poate fi considerat un sistem de tranziție de stare, acolo unde există o „stare” constând din starea de proprietate a tuturor bitcoin-urilor existente și o „funcție de tranziție de stare” care ia o stare și o tranzacție și generează o nouă stare care este rezultatul. Într-un sistem bancar standard, de exemplu, starea este un bilanț, o tranzacție este o cerere să muți $X de la A la B, iar funcția de tranziție a stării reduce valoarea valoarea contului lui A cu $X și crește valoarea contului lui B cu $X. Când contul lui A are mai puțin de $X, în primul rând, starea funcției de tranziție returnează o eroare. Prin urmare, se pot defini formal:
 
@@ -58,7 +58,7 @@ Prima jumătate a primului pas împiedică tranzacțiile să cheltuiască monede
 
 ### Minarea {#mining}
 
-![Blocuri Ethereum](./ethereum-blocks.png)
+![Blocuri Ethereum](../../../whitepaper/ethereum-blocks.png)
 
 Dacă am avea acces la un serviciu centralizat de încredere, implementarea acestui sistem ar fi banală; ar putea fi pur și simplu codificat exact cum am descris, utilizând discul dur al unui server centralizat pentru a ține evidența stării. Cu toate acestea, cu Bitcoin încercăm să construim un sistem valutar descentralizat, așa că va trebui să combinăm sistemul de tranziție de stare cu unul de consens, pentru a ne asigura că toată lumea este de acord cu ordinea tranzacțiilor. Procesul de consens descentralizat al Bitcoin necesită noduri în rețea pentru a încerca în mod continuu să producă pachete de tranzacții numite „blocuri”. Rețeaua este destinată să producă aproximativ un bloc la fiecare zece minute, fiecare bloc conținând un marcaj temporal, un nonce, o referință (adică hash) a blocului anterior și o listă a tuturor tranzacțiilor care au avut loc de la blocul anterior. În timp, acest lucru creează un „blockchain” persistent, în continuă creștere, care se actualizează constant pentru a reprezenta cea mai recentă stare a registrului Bitcoin.
 
@@ -88,7 +88,7 @@ Odată ce pasul (1) a avut loc, după câteva minute un miner va include tranzac
 
 ### Arbori Merkle {#merkle-trees}
 
-![SPV în Bitcoin](./spv-bitcoin.png)
+![SPV în Bitcoin](../../../whitepaper/spv-bitcoin.png)
 
 _Stânga: este suficient să se prezinte doar un număr mic de noduri într-un arbore Merkle pentru a da o dovadă a valabilității unei ramuri._
 
@@ -181,7 +181,7 @@ A se reține că alocația de gaz atribuită unei tranzacții sau contract se ap
 
 ### Funcția de tranziție a stării Ethereum {#ethereum-state-transition-function}
 
-![Tranziția stării eterului](./ether-state-transition.png)
+![Tranziția stării eterului](../../../whitepaper/ether-state-transition.png)
 
 Funcția de tranziție a stării Ethereum, `APPLY(S,TX) -> S'` poate fi definită după urmează:
 
@@ -224,7 +224,7 @@ Modelul formal de execuție al codului EVM este surprinzător de simplu. În tim
 
 ### Blockchain și minerit {#blockchain-and-mining}
 
-![Diagrama blocul aplicării Ethereum](./ethereum-apply-block-diagram.png)
+![Diagrama blocul aplicării Ethereum](../../../whitepaper/ethereum-apply-block-diagram.png)
 
 Blockchain-ul Ethereum este în multe feluri similar cu blockchain-ul Bitcoin, deși are unele diferențe. Principala diferență dintre Ethereum și Bitcoin în ceea ce privește arhitectura blockchain este că, spre deosebire de Bitcoin (care conține doar o copie a listei de tranzacții), blocurile Ethereum conțin o copie a listei de tranzacții și cea mai recentă stare. În afară de aceasta, alte două valori, numărul blocului și dificultatea, sunt, de asemenea, stocate în bloc. Algoritmul de validare a blocului de bază în Ethereum este după cum urmează:
 
@@ -426,7 +426,7 @@ Unități valutare 1,198X 1,458X 2,498X Cumpărători 83,5% 68,6% 40,0% Rezervă
 
 **Rata de creștere a aprovizionării pe termen lung (procente)**
 
-![Inflația Ethereum](./ethereum-inflation.png)
+![Inflația Ethereum](../../../whitepaper/ethereum-inflation.png)
 
 _În ciuda emiterii liniare a monedei, la fel ca în cazul Bitcoin în timp, rata de creștere a ofertei tinde totuși la zero_
 

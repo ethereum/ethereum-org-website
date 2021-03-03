@@ -4,7 +4,14 @@ description: Informații despre lanțul Beacon - primul upgrade major Eth2 la Et
 lang: ro
 template: eth2
 sidebar: true
-summaryPoints: '[ "Lanțul Beacon nu schimbă Ethereum-ul pe care îl folosim astăzi.", "Va coordona rețeaua.", "Introduce Dovada Mizei în ecosistemul Ethereum.", ''S-ar putea să cunoști aceasta ca "Faza 0" pe foile de parcurs tehnice.'', ] ---'
+image: ../../../../../assets/eth2/core.png
+summaryPoints:
+  [
+    "Lanțul Beacon nu schimbă Ethereum-ul pe care îl folosim astăzi.",
+    "Va coordona rețeaua.",
+    "Introduce Dovada Mizei în ecosistemul Ethereum.",
+    'S-ar putea să cunoști aceasta ca "Faza 0" pe foile de parcurs tehnice.',
+  ]
 ---
 
 <UpgradeStatus isShipped date="Shipped!">
