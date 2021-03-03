@@ -2940,6 +2940,15 @@
         "content",
         "bug"
       ]
+    },
+    {
+      "login": "vemuez",
+      "name": "Yussuf Elarif",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9627828?v=4",
+      "profile": "https://github.com/vemuez",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
