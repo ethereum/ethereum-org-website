@@ -311,6 +311,11 @@ The energy-cost of Ethereum will become the cost of running a home computer mult
 
 [@paul should we compare this to visa? This website estimates that 100,000 visa transactions costs 149 gwh: https://www.statista.com/statistics/881541/bitcoin-energy-consumption-transaction-comparison-visa/ – if we figure out how many ttransactions in a year that visa does, we can compare it to the total energy in PoS?]
 
+Mining: 24000000000 kwH
+Staking: 4000000 kwH
+
+4000000 / 24000000000 \* 100 = 0.01666666667% 1/10,000th of a percent of the energy consumption.
+
 Importantly this improves the energy efficiency while preserving the decentralization and security. Many other blockchains out there might already use some form of staking, but they might be secured by a select few stakers, not the 1000s that Ethereum will have. The more decentralization, the more secure the system.
 
 [More on Eth2](/eth2/)
