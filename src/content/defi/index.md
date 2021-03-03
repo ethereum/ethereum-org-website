@@ -15,7 +15,7 @@ summaryPoints:
   ]
 ---
 
-DeFi is an open and global financial system built for the internet age – an alternative to a system that's opaque, tightly controlled and held together by decades-old infrastructure and processes. It gives you control and visibility over your money. It has given many users exposure to global markets, and alternatives to their local currency or banking options. These "decentralized" services are largely owned by its users and maintained as a public good. It reimagines all of the financial services previously limited to those given permission to access, and opens them up to anyone with an internet connection. So far tens of billions of dollars worth of crypto has flowed through DeFi applications and it's growing every day.
+DeFi is an open and global financial system built for the internet age – an alternative to a system that's opaque, tightly controlled and held together by decades-old infrastructure and processes. It gives you control and visibility over your money. It has given many users exposure to global markets, and alternatives to their local currency or banking options. These "decentralized" services are largely owned and maintained by their users. DeFi reimagines all of the financial services previously limited to those with permission to access, and opens them up to anyone with an internet connection. So far tens of billions of dollars worth of crypto has flowed through DeFi applications and it's growing every day.
 
 ## What's DeFi? {#what-is-defi}
 
@@ -53,17 +53,11 @@ One of the best ways to see the potential of DeFi is to understand the problems 
 
 ## It started with Bitcoin... {#bitcoin}
 
-Bitcoin in many ways was the first DeFi application. This invention allowed you to really own and control value and send it anywhere around the world. It's a system that's open to anyone and no one has the authority to change the rules. It's not like traditional finance where govermments can print money and devalue your savings and companies can shut down certain markets. Bitcoin's rules like its scarcity and its openness are written into the technology and can't be changed.
+Bitcoin in many ways was the first DeFi application. Bitcoin lets you really own and control value and send it anywhere around the world. It does this by providing a way for a large number of people, who don't trust each other, to agree on a ledger of accounts, without the need for a trusted intermediary. Bitcoin is open to anyone and no one has the authority to change its rules. Bitcoin's rules, like its scarcity and its openness, are written into the technology. It's not like traditional finance where govermments can print money and devalue your savings and companies can shut down certain markets.
 
-Ethereum builds on this. Like Bitcoin, the rules can't change on you and everyone has access. But it also makes this digital money programmable so you can go beyond storing and sending value.
+Ethereum builds on this. Like Bitcoin, the rules can't change on you and everyone has access. But it also makes this digital money programmable, using [smart contracts](/glossary#smart-contract), so you can go beyond storing and sending value.
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/qFBYB4W2tqU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<!--
-On Janaury 9, 2009, Satoshi Nakamoto mined the genesis block of the Bitcoin blockchain. For the first time, the world had a solution to a problem that was previously unsolved: How do a large number of people, who don't trust each other, come to agree on a ledger of accounts, without the need for a trusted intermediary? Bitcoin solved this problem with what is known as "proof-of-work", removing the need for any trusted intermediaries [(Bitcoin Whitepaper)](https://bitcoin.org/bitcoin.pdf). The network quickly grew, and became more decentralized over time as thousands of nodes joined all over the globe. It never sleeps, and the rules never change. Bitcoin introduced a new decentralized way to conduct finance like never before.
-
-The Ethereum blockchain builds on the successes of Bitcoin with the use of [smart contracts](/glossary#smart-contract) which enables anyone to write and deploy applications directly on the blockchain. These applications can enable "programmable money" in new an exciting ways.
--->
 
 ## Programmable money {#programmable-money}
 
@@ -119,7 +113,7 @@ Coins like Dai or USDC have a value that stays within a few cents of a dollar. T
 Borrowing money from decentralized providers comes in two main varieties.
 
 - Peer-to-peer, meaning a borrower will borrow directly from a specific lender.
-- Pool-based where lenders provide liquidity to a pool that borrowers can borrow from.
+- Pool-based where lenders provide funds (liquidity) to a pool that borrowers can borrow from.
 
 <ButtonLink to="/dapps/?category=finance">See borrowing dapps</ButtonLink>
 
@@ -145,11 +139,11 @@ If you need money but don't want to cash-in your ETH, borrowing can give you acc
 
 Flash loans are a more experimental form of decentralized lending that let you borrow without collateral or providing any personal information.
 
-Flash loans are not advised if you're not a technical expert but they hint at what might be possible to everyone in the future. They make it possible to take out huge loans without putting up any collateral whatsoever.
+They're not widely accessible to non-technical folks right now but they hint at what might be possible to everyone in the future.
 
-It works on the premise that the loan is taken out and paid back within the same transaction. If it can't be paid back, the transaction reverts as if nothing ever happened.
+It works on the basis that the loan is taken out and paid back within the same transaction. If it can't be paid back, the transaction reverts as if nothing ever happened.
 
-The funds being utlized are often being held in liquidity pools. If they are not being used at a given moment, this creates an opportunity for someone to borrow these funds, conduct business with them, and repay them in-full quite literally at the same time they're borrowed.
+The funds that are often used are held in liquidity pools (big pools of funds used for borrowing). If they are not being used at a given moment, this creates an opportunity for someone to borrow these funds, conduct business with them, and repay them in-full quite literally at the same time they're borrowed.
 
 This means a lot of logic must be included in a very bespoke transaction. A simple example might be someone using a flash loan to borrow as much of an asset at one price so they can sell it on a different exchange where the price is higher.
 
@@ -160,7 +154,7 @@ So in a single transaction the following happens:
 - You pay back loan to exchange A
 - You keep the profit minus the transaction fee
 
-If exchange B's supply dropped suddenly and the user wasn't able to buy enoughh to cover the original loan, the transaction would simply fail.
+If exchange B's supply dropped suddenly and the user wasn't able to buy enough to cover the original loan, the transaction would simply fail.
 
 To be able to do the above example in the traditional finance world, you'd need an enormous amount of money. These money-making strategies are only accessible to those with existing wealth. Flash loans is just the beginning in the democratization of capital where having money is not necessarily a prerequisite for making money.
 
@@ -172,9 +166,9 @@ To be able to do the above example in the traditional finance world, you'd need 
 
 #### Lending {#lending}
 
-You can earn interest on your crypto by lending it. Here's an example:
+You can earn interest on your crypto by lending it and see your funds grow in real time. Right now interest rates are much higher than what you're likely to get at your local bank, if you're lucky enough to be able to access one. Here's an example:
 
-- You lend your 100 Dai, a stablecoin, to a product like Aave
+- You lend your 100 Dai, a [stablecoin](/stablecoins/), to a product like Aave.
 - You receive 100 Aave Dai (aDai) which is a token that represents your loaned Dai.
 - Your aDai will increase based on the interest rates and you can see it grow in real-time in your wallet. Dependent on the APR, your wallet balance will read something like 100.1234 after a few days or even hours!
 - You can withdraw an amount of regular Dai that's equal to your aDai balance at any time.
@@ -185,10 +179,10 @@ You can earn interest on your crypto by lending it. Here's an example:
 
 No-loss lotteries like PoolTogether are a fun and innovative new way to save money.
 
-- You buy 100 tickets using 100 Dai tokens
-- You receive 100 plDai representing your 100 tickets
-- If one of your tickets is picked as the winner, your plDai balance will increase by the amount of the prize pool
-- If you don't win, your 100 plDai is valid for next week's draw
+- You buy 100 tickets using 100 Dai tokens.
+- You receive 100 plDai representing your 100 tickets.
+- If one of your tickets is picked as the winner, your plDai balance will increase by the amount of the prize pool.
+- If you don't win, your 100 plDai rolls over to next week's draw.
 - You can withdraw an amount of regular Dai that's equal to your plDai balance at any time.
 
 The prize pool is generated by all the interest generated by lending the ticket deposits like in the lending example above.
@@ -199,11 +193,9 @@ The prize pool is generated by all the interest generated by lending the ticket 
 
 ### Exchange tokens {#swaps}
 
-There are thousands of tokens on Ethereum. Decentralized exchanges let you trade your tokens while always having control of your assets. You can easily move your funds between different tokens when you need them. This is like using the currency exchange when visiting abroad. However the DeFi equivalent never closes, the markets are 24/7, 365 days a year and the technology guarantees there will always be someone to accept a trade.
+There are thousands of tokens on Ethereum. Decentralized exchanges let you trade different tokens whenever you want, without you giving up control of your assets. This is like using the currency exchange when visiting a different country. However the DeFi equivalent never closes, the markets are 24/7, 365 days a year and the technology guarantees there will always be someone to accept a trade.
 
-If you want to use the no-loss lottery, PoolTogether (described above) you'll need a token like Dai or USDC. These token exchanges allow you to swap your ETH for those tokens and back again when you're finished.
-
-Uniswap is a leading example of a decentralized exchange, which offers a simple interface to exchange different ERC-20 tokens, such as USDC for AAVE. This application acts as an automatic market maker (AMM) that checks real-world markets (see [oracles](#ORACLES-LINK)) for the current exchange rate of different tokens, and maintains liquidity pools to ensure there is always a trade available. This allows anyone to easily swap between tokens at the current rate, while never giving up control of your funds.
+For example, if you want to use the no-loss lottery, PoolTogether (described above) you'll need a token like Dai or USDC. These token exchanges allow you to swap your ETH for those tokens and back again when you're finished.
 
 <ButtonLink to="/dapps/?category=finance">See token exchanges</ButtonLink>
 
@@ -211,11 +203,11 @@ Uniswap is a leading example of a decentralized exchange, which offers a simple 
 
 ### Advanced trading {#trading}
 
-There are more advanced options for traders who like a little more control. Platforms such as 1inch offer more advanced trading features, including limit orders. Dydx offers the ability to trade perpetual contracts, or trade using margin. More complex features are in the works, taking advtange of layer 2 scaling solutions.
-
-<ButtonLink to="/dapps/?category=finance">See trading dapps</ButtonLink>
+There are more advanced options for traders who like a little more control. Limit orders, perpetuals, margin trading and more are all possible. With Decentralized trading you get access to global liquidity, the market never closes, and you're always in control of your assets.
 
 When you use a centralized exchange you have to deposit your assets before the trade and trust them to look after them. While your assets are deposited, they're at risk as centralized exchanges are attractive targets for hackers.
+
+<ButtonLink to="/dapps/?category=finance">See trading dapps</ButtonLink>
 
 <Divider />
 
@@ -223,11 +215,9 @@ When you use a centralized exchange you have to deposit your assets before the t
 
 There are fund management products on Ethereum that will try to grow your portfolio based on a strategy of your choice. This is automatic, open to everyone, and doesn't need a human manager taking a cut of your profits.
 
-A good example is the [DeFi Pulse Index fund](https://defipulse.com/blog/defi-pulse-index/). When you buy into this fund, it will buy the [top 10 DeFi tokens by market capitalisation](https://www.coingecko.com/en/defi). This diversifies your portfolio, giving you exposure to the biggest coins of the moment. If a different coin enters the top 10, the fund will automatially rebalance to feature the new top 10. You can withdraw from the fund whenever you like.
+A good example is the [DeFi Pulse Index fund](https://defipulse.com/blog/defi-pulse-index/). DeFi Pulse Index (DPI) is a fund consisting of the top projects in DeFi, weighted according to standing, that rebalances automatically to ensure your portfolio always includes [the top tokens by market capitalisation](<(https://www.coingecko.com/en/defi)>). You never have to manage any of the details and you can withdraw from the fund whenever you like.
 
 <ButtonLink to="/dapps/?category=finance">See investment dapps</ButtonLink>
-
-DeFi Pulse Index (DPI) is a fund consisting of the top projects in DeFi, weighted according to standing, and rebalanced automatically. This enables someone to gain exposure to DeFi market activity, via a diversified set of the most popular DeFi tokens, without having to manually manage the details.
 
 <Divider />
 
@@ -286,7 +276,7 @@ A contract that's designed to hand out an allowance or pocket money could be pro
 
 Contracts are also public for anyone to inspect and audit. This means bad contracts will often come under community scrutiny pretty quickly. If a high-school-bully-come-hacker wanted to steal your allowance by hard coding their Ethereum account as the recipient, that would be available for anyone to see. There's nowhere for them to hide.
 
-This does mean there's currently a need to trust the more technical members of the Ethereum community who can read code. The open-source based community helps keep developers in check, but this need will diminish over time as smart contracts become easier to read and other ways to prove trustworthiness of code is developed.
+This does mean there's currently a need to trust the more technical members of the Ethereum community who can read code. The open-source based community helps keep developers in check, but this need will diminish over time as smart contracts become easier to read and other ways to prove trustworthiness of code are developed.
 
 ## Ethereum and DeFi {#ethereum-and-defi}
 
