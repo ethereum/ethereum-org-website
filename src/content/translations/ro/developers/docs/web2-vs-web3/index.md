@@ -36,8 +36,6 @@ Web3 are câteva limitări chiar acum:
 
 ## Centralizare vs. descentralizare {#centralization-vs-decentralization}
 
-<!--Content below provided by Brian Gu-->
-
 În tabelul de mai jos, enumerăm câteva dintre avantajele și dezavantajele generale ale rețelelor digitale centralizate și descentralizate.
 
 | Sisteme centralizate                                                                                                                                                                                                                                  | Sisteme descentralizate                                                                                                                                                                                                                                                             |

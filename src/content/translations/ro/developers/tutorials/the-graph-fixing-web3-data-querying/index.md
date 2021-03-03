@@ -94,7 +94,7 @@ Acum să analizăm o soluție mai bună.
 
 <!-- TODO gif embed not working: -->
 <!-- Need additional plugin? https://github.com/gatsbyjs/gatsby/issues/7317#issuecomment-412984851 -->
-<!-- !\[GraphQL example query GIF\](./graphql-query.gif) --><img src="https://cdn0.scrvt.com/b095ee27d37b3d7b6b150adba9ac6ec8/42226f4816a77656/bc5c8b270798/graphql-querygif.gif" width="100%" />
+<img src="https://cdn0.scrvt.com/b095ee27d37b3d7b6b150adba9ac6ec8/42226f4816a77656/bc5c8b270798/graphql-querygif.gif" width="100%" />
 
 Cele două imagini surprind destul de mult esența GraphQL. Cu interogarea din dreapta putem defini exact ce date vrem, astfel încât vom obține totul într-o singură cerere și nimic mai mult decât exact ceea ce avem nevoie. Un server GraphQL se ocupă de preluarea tuturor datelor necesare, astfel încât este incredibil de ușor de partea front-end a consumatorului. [Aceasta este o explicație frumoasă](https://www.apollographql.com/blog/graphql-explained-5844742f195e/) a modului în care serverul gestionează o interogare dacă ești interesat.
 

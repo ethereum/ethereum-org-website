@@ -14,8 +14,6 @@ source:
 sourceUrl:
 ---
 
-<!--Content below provided by @EthereumOnArm-->
-
 Orice date contractuale trebuie alocate unei locații: fie `stocare`, fie `memorie`. Este costisitor să modifici spațiul de stocare într-un contract inteligent, deci trebuie să te gândești unde ar trebui să existe datele tale.
 
 Un tip `address` poate conține o adresă Ethereum care echivalează cu 20 de byți sau 160 de biți. Acesta returnează în notație hexazecimală cu un 0x la început.

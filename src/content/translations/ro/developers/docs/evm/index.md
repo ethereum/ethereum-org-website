@@ -45,11 +45,6 @@ Crearea contractului are ca rezultat crearea unui nou cont de contract care con�
 
 EVM execută ca o [mașină stivă](https://en.wikipedia.org/wiki/Stack_machine) cu o adâncime de 1024 elemente. Fiecare element este un cuvânt de 256 de biți, care a fost ales pentru compatibilitate maximă cu schema de hash SHA-3-256.
 
-<!-- ![A diagram showing the make up of the stack](./evm-stack.png)
-_Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
-
-Removed as we should probably show memory and account storage too if showing stack-->
-
 În timpul executării, EVM menține o _memorie_ tranzitorie (ca o matrice de octeți cu adresare pe cuvinte), care nu persistă între tranzacții.
 
 Contractele, cu toate acestea, conțin un _spațiu de stocare_ Merkle Patricia trie (ca o matrice de cuvinte cu adresare pe cuvinte), asociat cu contul în cauză și o parte a stării globale.

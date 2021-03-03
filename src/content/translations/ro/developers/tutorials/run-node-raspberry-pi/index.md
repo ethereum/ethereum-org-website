@@ -11,8 +11,6 @@ source: r/ethereum
 sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_raspberry_pi_4_images_release/
 ---
 
-<!--Content below provided by @EthereumOnArm-->
-
 **TL;DR**: Flash Raspberry PI 4, conectează un cablu ethernet, conectează discul SSD și pornește dispozitivul pentru a transforma Raspberry PI 4 într-un nod Ethereum 1.0 sau un nod Ethereum 2.0 (lanț Beacon / validator)
 
 [Află mai multe despre Ethereum 2.0 (Eth2)](/en/eth2/)
