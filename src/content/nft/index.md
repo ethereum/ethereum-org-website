@@ -107,7 +107,7 @@ In all of these cases, each NFT would still have a unique identifier (like a bar
 
 ### Royalties {#royalties}
 
-Some NFTs will automatically pay out royalties to their creators when they're sold. This is still a developing concept but it's one of the most powerful. Original owners of [EulerBeats Originals](https://eulerbeats.com/) earn an 8% royalty every time the NFT is sold on. And some platforms, like [Zora](https://zora.co/), let creators set a "creator share" that will automatically pay out that share on resale.
+Some NFTs will automatically pay out royalties to their creators when they're sold. This is still a developing concept but it's one of the most powerful. Original owners of [EulerBeats Originals](https://eulerbeats.com/) earn an 8% royalty every time the NFT is sold on. And some platforms, like [Foundation](https://foundation.app) and [Zora](https://zora.co/), support royalties for their artists.
 
 This is completely automatic so creators can just sit back and earn royalties as their work is shared from person to person. At the moment, figuring out royalties is very manual and lacks accuracy meaning a lot of creators don't get paid what they deserve. If your NFT has a royalty programmed into it, you'll never miss out.
 
