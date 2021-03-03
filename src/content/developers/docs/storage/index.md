@@ -92,7 +92,7 @@ PoW based:
 - Ethereum
 
 PoS based:
-- ETH 2
+- [Eth2](/eth2/)
 - Filecoin
 - 0Chain
 
