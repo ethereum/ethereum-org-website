@@ -92,6 +92,7 @@ PoW based
 - Ethereum
 
 PoS based
+- ETH 2
 - Filecoin
 - 0Chain
 
