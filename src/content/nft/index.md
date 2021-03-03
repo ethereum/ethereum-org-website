@@ -97,6 +97,20 @@ And if you _create_ an NFT:
 - You can earn royalties every time it's sold.
 - You can sell it on any NFT market or peer-to-peer. You're not locked in to any platform and you don't need anyone to intermediate.
 
+### Scarcity {#scarcity}
+
+The creator of an NFT gets to decide the scarcity of their asset. Just because all NFTs have unique identifiers, does not mean all token representations have the same scarcity.
+
+For example, consider a ticket to a sporting event. Just as the organizer of an event can chose how many tickets to sell, the creator of an NFT can decide how many replicas exist. Sometimes these are exact replicas, such as 5000 General Admission tickets. Sometimes several are minted that are very similar, but each slightly different, such as a ticket with an assigned seat. In another case, the creator may want to create an NFT where only one is minted as a special rare collectible.
+
+In all of these cases, each NFT would still have a unique identifier (like a bar code on a traditional "ticket"), with only one owner. The intended scarcity of the NFT matters, and is up to the creator. A creator may intend to make each NFT completely unique in order to create scarcity, or have reasons to produce several thousand replicas. Remember, this information is all public.
+
+### Royalties {#royalties}
+
+Some NFTs will automatically pay out royalties to their creators when they're sold. This is still a developing concept but it's one of the most powerful. Original owners of [EulerBeats Originals](https://eulerbeats.com/) earn an 8% royalty every time the NFT is sold on. And some platforms, like [Zora](https://zora.co/), let creators set a "creator share" that will automatically pay out that share on resale.
+
+This is completely automatic so creators can just sit back and earn royalties as their work is shared from person to person. At the moment, figuring out royalties is very manual and lacks accuracy meaning a lot of creators don't get paid what they deserve. If your NFT has a royalty programmed into it, you'll never miss out.
+
 ## What are NFTs used for? {#nft-use-cases}
 
 Here's more information of some of the better developed use-cases and visions for NFTs on Ethereum.
@@ -133,14 +147,6 @@ Well, yes. But does googling an image of Picasso's Guernica make you the proud n
 Ultimately owning the real thing is as valuable as the market makes it. The more a piece of content is screen-grabbed, shared, and generally used the more value it gains.
 
 Owning the verifiably real thing will always have more value than not.
-
-#### Scarcity {#scarcity}
-
-The creator of an NFT gets to decide the scarcity of their asset. Just because all NFTs have unique identifiers, does not mean all token representations have the same scarcity.
-
-For example, consider a ticket to a sporting event. Just as the organizer of an event can chose how many tickets to sell, the creator of an NFT can decide how many replicas exist. Sometimes these are exact replicas, such as 5000 General Admission tickets. Sometimes several are minted that are very similar, but each slightly different, such as a ticket with an assigned seat. In another case, the creator may want to create an NFT where only one is minted as a special rare collectible.
-
-In all of these cases, each NFT would still have a unique identifier (like a bar code on a traditional "ticket"), with only one owner. The intended scarcity of the NFT matters, and is up to the creator. A creator may intend to make each NFT completely unique in order to create scarcity, or have reasons to produce several thousand replicas. Remember, this information is all public.
 
 <Divider />
 
