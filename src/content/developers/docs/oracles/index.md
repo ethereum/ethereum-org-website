@@ -14,7 +14,7 @@ Make sure you're familiar with [nodes](/developers/docs/nodes-and-clients/), [co
 
 ## What is an oracle {#what-is-an-oracle}
 
-An oracle is a bridge between the blockchain and the real world. They act as on-chain APIs you can query to get information into your smart contracts. This could be anything from price information to weather reports. Oracles are also bi-directional, and they can also be used to "send" data out to the real world. 
+An oracle is a bridge between the blockchain and the real world. They act as on-chain APIs you can query to get information into your smart contracts. This could be anything from price information to weather reports. Oracles can also be bi-directional, used to "send" data out to the real world. 
 
 ## Why are they needed? {#why-are-they-needed}
 
@@ -45,19 +45,18 @@ This is an example of a simple Oracle architecture, but there are more ways than
 1. Emit a log with your [smart contract event](/developers/docs/smart-contracts/anatomy/#events-and-logs)
 2. An off-chain service has subscribed (usually using something like the JSON-RPC `eth_subscribe` command) to these specific logs. 
 3. The off-chain service proceeds to do some tasks as defined by the log. 
-4. The off-chain service responds with the data requested in a secondary transaction. 
+4. The off-chain service responds with the data requested in a secondary transaction to the smart contract. 
 
-This is how to get data in a 1 to 1 manner, however you will want to decentralize how you collect your off-chain data.
+This is how to get data in a 1 to 1 manner, however to improve security you may want to decentralize how you collect your off-chain data.
 
-So the next step would be to have a network of these nodes making these calls to different APIs and sources, and aggregagting on-chain.
+The next step might be to have a network of these nodes making these calls to different APIs and sources, and aggregating the data on-chain.
 
-[Chainlink Off-Chain Reporting](https://blog.chain.link/off-chain-reporting-live-on-mainnet/) (Chainlink OCR) has improved on this methodology by having the off-chain oracle network communicate with each other, cryptographically sign their responses, and send only 1 transaction on-chain having aggreagated their responses off-chain. This way, fewer gas is spent, but you still get the guarantee of decentralized data since every node has signed their part of the transaction, making it unchangeable by the node sending the transaction. If the node doesn't transact, the escalation policy kicks in, and the next node sends the transaction. 
+[Chainlink Off-Chain Reporting](https://blog.chain.link/off-chain-reporting-live-on-mainnet/) (Chainlink OCR) has improved on this methodology by having the off-chain oracle network communicate with each other, cryptographically sign their responses, aggregate their responses off-chain, and send only 1 transaction on-chain with the result. This way, fewer gas is spent but you still get the guarantee of decentralized data since every node has signed their part of the transaction, making it unchangeable by the node sending the transaction. If the node doesn't transact, the escalation policy kicks in, and the next node sends the transaction. 
 
 ## Usage {#usage}
 
-### Oracles {#oracles}
 
-Using Chainlink, you can reference decentralized data on-chain, that has already been pulled from the real world and aggregated. Sort of like a public commons, but for decentralized data. You can also build your own modular oracle networks to get any customized data you're looking for. In addition, you can do off-chain computation and send information to the real world as well. Chainlink has infrastructure in place to:
+Using services like Chainlink, you can reference decentralized data on-chain, that has already been pulled from the real world and aggregated. Sort of like a public commons, but for decentralized data. You can also build your own modular oracle networks to get any customized data you're looking for. In addition, you can do off-chain computation and send information to the real world as well. Chainlink has infrastructure in place to:
 
 - [Get crypto price feeds in your contract](https://chain.link/solutions/defi)
 - [Generate verifiable random numbers (useful for gaming)](https://chain.link/solutions/chainlink-vrf)
@@ -66,7 +65,7 @@ Using Chainlink, you can reference decentralized data on-chain, that has already
 
 This is an example of how to get the latest ETH price in your smart contract using a Chainlink price feed:
 
-## Chainlink Data Feeds {#chainlink-data-feeds}
+### Chainlink Data Feeds {#chainlink-data-feeds}
 
 ```solidity
 pragma solidity ^0.6.7;
@@ -106,7 +105,7 @@ contract PriceConsumerV3 {
 
 [View the docs](https://docs.chain.link/docs/get-the-latest-price)
 
-## Chainlink VRF {#chainlink-vrf}
+### Chainlink VRF {#chainlink-vrf}
 
 Chainlink VRF (Verifiable Random Function) is a provably-fair and verifiable source of randomness designed for smart contracts. Smart contract developers can use Chainlink VRF as a tamper-proof random number generation (RNG) to build reliable smart contracts for any applications which rely on unpredictable outcomes:
 
@@ -167,7 +166,7 @@ contract RandomNumberConsumer is VRFConsumerBase {
 }
 ```
 
-## Chainlink API Call {#chainlink-api-call}
+### Chainlink API Call {#chainlink-api-call}
 
 [Chainlink API Calls](https://docs.chain.link/docs/make-a-http-get-request) are the easiest way to get data from the off-chain world in the traditional way the web works: API calls. Doing a single instance of this and having only 1 oracle makes it centralized by nature. In order to keep it truly decentralized a smart contract platform would need to use numerous nodes, found in an [external data market](https://market.link/).
 
@@ -244,7 +243,7 @@ contract APIConsumer is ChainlinkClient {
 
 You can learn more about the applications of chainlink by reading [the developers blog](https://blog.chain.link/tag/developers/).
 
-#### Oracle services {#other-services}
+## Oracle services {#other-services}
 
 - [Chainlink](https://chain.link/)
 - [Witnet](https://witnet.io/)
