@@ -10,30 +10,30 @@ incomplete: true
 
 As opposed to a centrally located server operated by a single company or organization, decentralized storage systems consist of a peer-to-peer network of user-operators who hold a portion of the overall data, creating a resilient system of file storage and sharing. These can be in a blockchain-based application, or any peer-to-peer based network. 
 
-Ethereum itself can be used as a decentralized storage system, and in fact it is when it comes to code storage in all the smart contracts, however for large amounts of data this isn't what the system is designed for. At the time of writing, the Ethereum chain is around 350GB, and every node on the network needs to be able to store all 350GB of data. If the chain were to expand to large amounts of data (say 5TBs) it wouldn't be feasible for all nodes to continue to run their nodes. Also, this can get incredibly expensive to deploy new data due to the size. 
+Ethereum itself can be used as a decentralized storage system, and in fact it is when it comes to code storage in all the smart contracts. When it comes to large amounts of data, however, that isn't what the system is designed for. At the time of writing, the Ethereum chain is around 350GB, and every node on the network needs to be able to store all 350GB of data. If the chain were to expand to large amounts of data (say 5TBs) it wouldn't be feasible for all nodes to continue to run. Also, this can get incredibly expensive to deploy new data due to the size. 
 
-Because of this, we need a different chain or methodology to storing large amounts of data in a decentralied manner. 
+Due to these constraints, we need a different chain or methodology to storing large amounts of data in a decentralized manner. 
 
-When looking at decentralized storage (dStorage), there are a few things a user must keep in mind.
+When looking at decentralized storage (dStorage) options, there are a few things a user must keep in mind.
 
-- Persistence mechanism / Incentive Structure
+- Persistence mechanism / incentive structure
 - Data retention enforcement
 - Decentrality 
 - Consensus 
 
-## Persistence mechanism / Incentive Structure
+## Persistence mechanism / incentive structure
 
 ### Blockchain Based
 
 In order for a piece of data to persist forever, their needs to be some type of persistance mechanism. For example, on Ethereum, the persistance mechanism is that the whole chain needs to be accounted for when running a node. New pieces of data are tacked onto the end of the chain, and it continues to grow. 
 
-This is the first type of persistence. Where it's **blockchain based** persistence.
+This is the first type of persistence: **blockchain based** persistence.
 
-The issue with this, is that again, the chain could get far too big to feasibly upkeep and store all the data. This is the intuition on the next type of persistance.
+The issue with this, is that again, the chain could get far too big to feasibly upkeep and store all the data.
 
-They must also have some type of incentive structure, the following chains are generally paid at mining time. When the data is added to the chain, the nodes are paid to add the data on. 
+The blockchain must also have some type of incentive structure. The following chains are generally paid at mining time - when the data is added to the chain, the nodes are paid to add the data on. 
 
-Tools with blockchain based persistence
+Platforms with blockchain based persistence:
 - Ethereum
 - [Arweave](https://www.arweave.org/)
 - [0Chain](https://0chain.net/)
@@ -44,7 +44,7 @@ Contract based persistence has the intuition that data cannot be stored forever,
 
 Often, instead of storing all the data in a chain, they instead store the hash of where the data is located on a chain. This way, the entire chain doesn't need to store all the data, just a hash of where it's located. 
 
-Tools with contract based persistence
+Platforms with contract based persistence:
 - [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
 - [Skynet](https://siasky.net/)
 - [Stroj](https://storj.io/)
@@ -63,7 +63,7 @@ In order to retain data, systems must have some sort of mechanism to make sure d
 
 One of the most popular ways to make sure data is retained, is to use some type of cryptographic challenge that is issued to the nodes to make sure they still have the data. A simple one is looking at Arweave's proof of access. They issue a challenge to the nodes to see if they have the data at both the most recent block and a random block in the past. If the node can't come up with the answer, they are penalized.
 
-Types of dStorage with a challenge mechanism
+Types of dStorage with a challenge mechanism:
 - 0Chain
 - Skynet
 - Arweave
@@ -72,9 +72,9 @@ Types of dStorage with a challenge mechanism
 
 ### Decentrality
 
-Their isn't a great decentrality measuring tools, but you'll want to use tools that don't have some form of KYC to prove they are actually decentralized.
+There isn't great tools to measure the level of decentralization of platforms but in general, you'll want to use tools that don't have some form of KYC to prove they are actually decentralized.
 
-Decentralized tools without KYC
+Decentralized tools without KYC:
 - 0Chain (implementing a non-KYC edition)
 - Skynet
 - Arweave
@@ -84,14 +84,14 @@ Decentralized tools without KYC
 
 ### Consensus
 
-These are the typical proof of work or proof of stake. Most of these tools have their own version of a consensus protocol, but they are based on either Proof of Work (PoW) or Proof of Stake (PoS).
+Most of these tools have their own version of a [consensus mechanism](/developers/docs/consensus-mechanisms/) but generally they are based on either [Proof of Work (PoW)](/developers/docs/consensus-mechanisms/pow/) or [Proof of Stake (PoS)](/developers/docs/consensus-mechanisms/pos/).
 
-PoW based
+PoW based:
 - Skynet
 - Arweave
 - Ethereum
 
-PoS based
+PoS based:
 - ETH 2
 - Filecoin
 - 0Chain
@@ -108,7 +108,7 @@ PoS based
 - [Skynet](https://siasky.net/)
 - [Documentation](https://siasky.net/docs/)
 
-**Filecoin -** **_Filecoin was created from the same team behind IPFS, they are an incentive layer on top of the IPFS ideals._**
+**Filecoin -** **_Filecoin was created from the same team behind IPFS. It is an incentive layer on top of the IPFS ideals._**
 - [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
 - [Documentation](https://docs.filecoin.io/)
 - [Github](https://github.com/filecoin-project)
