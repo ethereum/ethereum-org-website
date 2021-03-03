@@ -100,11 +100,10 @@ const SecondaryButtonLink = styled(ButtonLink)`
 `
 
 const TranslationBanner = ({
-  isPageOutdated,
+  shouldShow,
   isPageRightToLeft,
   originalPagePath,
-  shouldShow,
-  hasBaseTranslation,
+  isPageContentEnglish,
 }) => {
   const [isOpen, setIsOpen] = useState(shouldShow)
 
@@ -112,15 +111,13 @@ const TranslationBanner = ({
     setIsOpen(shouldShow)
   }, [originalPagePath, shouldShow])
 
-  // If page isn't outdated, it hasn't been translated at all
-  const headerTextId =
-    isPageOutdated || hasBaseTranslation
-      ? "translation-banner-title-update"
-      : "translation-banner-title-new"
-  const bodyTextId =
-    isPageOutdated || hasBaseTranslation
-      ? "translation-banner-body-update"
-      : "translation-banner-body-new" // You’re viewing this page in English because we haven’t translated it yet. Help us translate this content.
+  const headerTextId = isPageContentEnglish
+    ? "translation-banner-title-new"
+    : "translation-banner-title-update"
+
+  const bodyTextId = isPageContentEnglish
+    ? "translation-banner-body-new"
+    : "translation-banner-body-update"
 
   return (
     <BannerContainer isOpen={isOpen}>
@@ -145,7 +142,7 @@ const TranslationBanner = ({
                 <Translation id="translation-banner-button-translate-page" />
               </ButtonLink>
             </div>
-            {isPageOutdated && (
+            {!isPageContentEnglish && (
               <div>
                 <SecondaryButtonLink isSecondary to={`/en${originalPagePath}`}>
                   <Translation id="translation-banner-button-see-english" />

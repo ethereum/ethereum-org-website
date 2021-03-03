@@ -2,9 +2,6 @@ const defaultStrings = require("../intl/en.json")
 const languageMetadata = require("../data/translations.json")
 
 const supportedLanguages = Object.keys(languageMetadata)
-const v2Languages = supportedLanguages.filter(
-  (lang) => languageMetadata[lang].version >= 2
-)
 
 const consoleError = (message) => {
   const { NODE_ENV } = process.env
@@ -69,7 +66,6 @@ const translateMessageId = (id, intl) => {
 // Must export using ES5 to import in gatsby-node.js
 module.exports.languageMetadata = languageMetadata
 module.exports.supportedLanguages = supportedLanguages
-module.exports.v2Languages = v2Languages
 module.exports.getLangContentVersion = getLangContentVersion
 module.exports.getDefaultMessage = getDefaultMessage
 module.exports.isLangRightToLeft = isLangRightToLeft

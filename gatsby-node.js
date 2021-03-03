@@ -42,7 +42,7 @@ const getMessages = (path, language) => {
   }
 }
 
-const outdatedPages = [
+const outdatedMarkdownPages = [
   "/dapps/",
   "/enterprise/",
   "/eth/",
@@ -63,7 +63,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       const split = slug.split("/")
       split.splice(1, 1)
       const originalPath = split.join("/")
-      if (outdatedPages.includes(originalPath)) {
+      if (outdatedMarkdownPages.includes(originalPath)) {
         isOutdated = true
       }
     } else {
@@ -161,6 +161,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             context: {
               slug: langSlug,
               isOutdated: false,
+              isContentEnglish: true,
               relativePath: relativePath, // Use English path for template MDX query
               // Create `intl` object so `gatsby-plugin-intl` will skip
               // generating language variations for this page
@@ -224,7 +225,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             defaultLanguage,
             messages: getMessages("./src/intl/", lang),
             routed: true,
-            originalPath: `/${lang}/${page}/`,
+            originalPath: `/${page}/`,
             redirect: false,
           },
         },
@@ -250,13 +251,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         component: path.resolve(`./src/pages-conditional/${component}.js`),
         context: {
           slug: `/${lang}/${page}/`,
+          isContentEnglish: true,
           intl: {
             language: lang,
             languages: supportedLanguages,
             defaultLanguage,
             messages: getMessages("./src/intl/", lang),
             routed: true,
-            originalPath: `/${lang}/${page}/`,
+            originalPath: `/${page}/`,
             redirect: false,
           },
         },
