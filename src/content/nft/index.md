@@ -305,7 +305,13 @@ This vision is being delivered right now.
 
 #### The end goal: Eth2
 
-Ethereum is currently going through a series of upgrades, known as Eth2, that will replace mining with [staking](/staking/). This will remove computing power as a security mechanism, and reduce Ethereum's carbon footprint by several orders of magnitude. Stakers commit funds instead of computing power to secure the network. Importantly this improves the energy efficiency while preserving the decentralization and security. Many other blockchains out there might already use some form of staking, but they might be secured by a select few stakers, not the 1000s that Ethereum will have. The more decentralization, the more secure the system.
+Ethereum is currently going through a series of upgrades, known as Eth2, that will replace mining with [staking](/staking/). This will remove computing power as a security mechanism, and reduce Ethereum's carbon footprint by several orders of magnitude. Stakers commit funds instead of computing power to secure the network.
+
+The energy-cost of Ethereum will become the cost of running a home computer multiplied by the number of nodes in the network. If there are 10,000 nodes in the network and the cost of running a home computer is roughly 400kWh per year. That's 4gWh per year for the entire network. By comparison, [mining is estimated to consume ~24tWh](https://digiconomist.net/ethereum-energy-consumption).
+
+[@paul should we compare this to visa? This website estimates that 100,000 visa transactions costs 149 gwh: https://www.statista.com/statistics/881541/bitcoin-energy-consumption-transaction-comparison-visa/ – if we figure out how many ttransactions in a year that visa does, we can compare it to the total energy in PoS?]
+
+Importantly this improves the energy efficiency while preserving the decentralization and security. Many other blockchains out there might already use some form of staking, but they might be secured by a select few stakers, not the 1000s that Ethereum will have. The more decentralization, the more secure the system.
 
 [More on Eth2](/eth2/)
 
