@@ -39,11 +39,11 @@ Here's how an internet of NFTs looks against the internet most of us use today l
 
 | The NFT internet                                                                                                                                                                                            | The internet today                                                                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| NFTs are digitally unique, no two NFTs are the same                                                                                                                                                         | A copy of a file, like an .mp3 or .jpg, is the same as the original                                                                                                        |
-| Every NFT must have an owner and this is of public record and easy for anyone to verify                                                                                                                     | Ownership records of digital items is stored on servers controlled by institutions – you must take their word for it                                                       |
+| NFTs are digitally unique, no two NFTs are the same.                                                                                                                                                        | A copy of a file, like an .mp3 or .jpg, is the same as the original.                                                                                                       |
+| Every NFT must have an owner and this is of public record and easy for anyone to verify.                                                                                                                    | Ownership records of digital items are stored on servers controlled by institutions – you must take their word for it.                                                     |
 | NFTs are compatible with anything built using Ethereum. An NFT ticket for an event can be traded on every Ethereum marketplace, for an entirely different NFT. You could trade a piece of art for a ticket! | Companies with digital items must build their own infrastructure. For example an app that issues digital tickets for events would have to build their own ticket exchange. |
-| Content creators can sell their work anywhere and can access a global market                                                                                                                                | Creators rely on the infrastructure and distribution of the platforms they use. These are often subject to terms of use and geographical restrictions.                     |
-| Creators can retain ownership rights over their own work, and claim resale royalties directly.                                                                                                              | Platforms, such as music services, retain the majority of profits from sales                                                                                               |
+| Content creators can sell their work anywhere and can access a global market.                                                                                                                               | Creators rely on the infrastructure and distribution of the platforms they use. These are often subject to terms of use and geographical restrictions.                     |
+| Creators can retain ownership rights over their own work, and claim resale royalties directly.                                                                                                              | Platforms, such as music streaming services, retain the majority of profits from sales.                                                                                    |
 | Items can be used in surprising ways. For example you can use digital artwork as collateral in a decentralised loan.                                                                                        |                                                                                                                                                                            |
 
 ### NFT examples {#nft-examples}
@@ -136,7 +136,7 @@ Owning the verifiably real thing will always have more value than not.
 
 #### Scarcity {#scarcity}
 
-The creator of an NFT is ultimately who decides the scarcity of a given asset being minted. Just because all NFTs have unique identifiers, does not mean all token representations have the same scarcity.
+The creator of an NFT gets to decide the scarcity of their asset. Just because all NFTs have unique identifiers, does not mean all token representations have the same scarcity.
 
 For example, consider a ticket to a sporting event. Just as the organizer of an event can chose how many tickets to sell, the creator of an NFT can decide how many replicas exist. Sometimes these are exact replicas, such as 5000 General Admission tickets. Sometimes several are minted that are very similar, but each slightly different, such as a ticket with an assigned seat. In another case, the creator may want to create an NFT where only one is minted as a special rare collectible.
 
@@ -175,7 +175,7 @@ Your ENS name can:
 
 - Receive cryptocurrency and other NFTs.
 - Point to a decentralized website, like [ethereum.eth](https://ethereum.eth.link). [More on decentralizing your website](https://docs.ipfs.io/how-to/websites-on-ipfs/link-a-domain/#domain-name-service-dns)
-- Store any arbitrary information, including profile information like email and twitter handles.
+- Store any arbitrary information, including profile information like email addresses and Twitter handles.
 
 <Divider />
 
@@ -226,7 +226,7 @@ As we mentioned, this is an emerging space. NFTs, DAOs, fractionalised tokens ar
 
 ## Ethereum and NFTs {#ethereum-and-nfts}
 
-Ethereum is the perfect foundation for NFTs for a number of reasons:
+Ethereum makes it possible for NFTs to work for a number of reasons:
 
 - Transaction history and token metadata is publicly verifiable – it's simple to prove ownership history.
 - Once a transaction is confirmed, it's nearly impossible to manipulate that data to "steal" ownership.
@@ -236,7 +236,82 @@ Ethereum is the perfect foundation for NFTs for a number of reasons:
 
 ## The environmental impact of NFTs {#environmental-impact-nfts}
 
-Ethereum currently used proof-of-work to achieve consensus. It is a top priority of the community to transition to a proof-of-stake system, to increase decentralization, security and scalability, while reducing energy consumption requirements imposed from proof-of-work. Several layer 2 scaling solutions, such as rollups, are being developed and implemented which also aim to improve scalability while decreasing energy usage. EIP-2309 is a proposal also aiming to improve the efficiency of layer 1 NFT transactions.
+NFTs are growing in popularity which means they're also coming under increased scrutiny – especially over their carbon footprint.
+
+To clarify a few things:
+
+- By pressing the button to create or buy an NFT you are not directly releasing carbon into the atmosphere.
+- NFTs aren't directly increasing the carbon footprint of Ethereum.
+
+Here's where things are going to get a little technical, but bear with us...
+
+### Don't blame it on the NFTs
+
+The whole NFT ecosystem works because Ethereum is decentralized and tamper-proof.
+
+Decentralized meaning you and everyone else can verify you own something without trusting or granting custody to a centralized third party who can impose their own rules at will. It also means your NFT is portable across many different products and markets.
+
+Tamper-proof meaning no one can copy/paste your NFT or steal it.
+
+These qualities of Ethereum makes digitally owning unique items and monetising your content fairly possible.
+
+Blockchains like Bitcoin and Ethereum are energy intensive right now because it takes a lot of energy to preserve these qualities. If it was easy to rewrite Ethereum's history to steal NFTs or cryptocurrency, the system collapses.
+
+<!-- [Need: how do centralized systems do this and why is it worse?]
+ -->
+
+#### NFTs and mining
+
+When you mint an NFT, a few things have to happen:
+
+- it needs to be confirmed as an asset on the blockchain.
+- the owner's account balance must be updated to include that asset. This makes it possible for it to then be traded or verifiably "owned".
+- the transactions that confirm the above need to be added to a block and "immortalised" on the chain.
+- the block needs to be confirmed by everyone in the network as "correct". This consensus is what makes it possible for NFT creators to maximise their earnings – there are no intermediaries needed.
+
+These tasks are done by miners. And they let the rest of the network know about your NFT and who owns it. This means mining needs to be sufficiently difficult, otherwise anyone could just claim that they own the NFT you just minted and fraudulently transfer ownership. There are lots of incentives in place to make sure miners are acting honestly.
+
+[More on mining](/developers/docs/consensus-mechanisms/pow/)
+
+Mining difficulty comes from the fact that it takes a lot of computing power to create new blocks in the chain. Importantly, blocks are created consistently, not just when they're needed. They're created every 12 seconds or so.
+
+This is important for making Ethereum tamper-proof, one of the qualities that makes NFTs possible. The more blocks the more secure the chain. If your NFT was created in block #600 and a hacker were to try and change themselves to the creator of your NFT, it would immediately change the digital fingerprint of all subsequent blocks, #601, #602, #603, and so on. That means anyone running Ethereum software would immediately be able to tell and prevent it from happening.
+
+However this means that computing power needs to be used constantly. It also means that a block that contains 0 NFT transactions will still have roughly the same carbon footprint, because computing power will still be consumed to create it. Other non-NFT transactions will fill the blocks.
+
+So yes, there is a carbon footprint associated with creating blocks by mining – and this is a problem for chains like Bitcoin too – but it's not directly the fault of NFTs.
+
+A lot of mining is done using renewable energy sources or untapped energy in remote locations. And there is the argument that the industries that NFTs and cryptocurrencies are disrupting have huge carbon footprints too. Regardless, Ethereum is going through some upgrades to make using Ethereum (and by virtue, NFTs) more energy efficient. And that's always been the plan.
+
+## A greener future...
+
+For as long as Ethereum has been around, the energy-consumption of mining has been a huge focus area for developers and researchers. And the vision has always been to replace it as soon as possible.
+
+[More on Ethereum's vision](/eth2/vision/)
+
+This vision is being delivered right now.
+
+### The end goal: Eth2
+
+Ethereum is currently going through a series of upgrades, known as Eth2, that will replace mining with [staking](/staking/). This will remove computing power as a security mechanism, and reduce Ethereum's carbon footprint by several orders of magnitude. Stakers commit funds instead of computing power to secure the network. Importantly this improves the energy efficiency while preserving the decentralization and security. Many other blockchains out there might already use some form of staking, but they might be secured by a select few stakers, not the 1000s that Ethereum will have. The more decentralization, the more secure the system.
+
+[More on Eth2](/eth2/)
+
+### Rollups in the meantime...
+
+While we wait for Eth2, products are moving to a "layer 2" technology known as rollups. Working on top of Ethereum, this technology lets you "roll up" or batch many transactions into a single one that is submitted to the chain. By moving as many things off the chain and only submitting the truly important bits (the cryptographic proofs), demand for block space will decrease. This will in turn lower the amount of computing power needed to create new blocks.
+
+[More on rollups and layer 2 technology](/developers/docs/layer-2-scaling/)
+
+### A more efficient NFT standard...
+
+Ethereum is open source software and new standards are being figured out and agreed on all the time. The Consecutive Transfer Extension Standard (EIP-2309) plans to make the creation of NFTs more efficient. Like rollups this reduces the amount of heavy lifting done on chain, allowing you to mint one billion NFTs in a single transaction.
+
+[More on EIP-2309](https://eips.ethereum.org/EIPS/eip-2309)
+
+[to me this doesn't solve the problem if block space remains the same due to mining etc... should we include?]
+
+<!-- Ethereum currently used proof-of-work to achieve consensus. It is a top priority of the community to transition to a proof-of-stake system, to increase decentralization, security and scalability, while reducing energy consumption requirements imposed from proof-of-work. Several layer 2 scaling solutions, such as rollups, are being developed and implemented which also aim to improve scalability while decreasing energy usage. EIP-2309 is a proposal also aiming to improve the efficiency of layer 1 NFT transactions.
 
 Before these scaling solutions are fully implemented, it is worth noting that NFT's specifically are not necessarily _directly_ causing any increased carbon emission. The proof-of-work consensus mechanism that currently underlies the entire Ethereum blockchain is being used whether NFTs are being minted or not. If NFTs were to disappear today, there is a strong chance that block space would remain in demand for other reasons, though even if demand for block space decreased it wouldn't drastically impact energy consumption. For sake of example, imagine the demand for transacting on Ethereum falls to where the blocks are now empty. Miners would still be incentivized to produce blocks for the reward, and the hashing power required to do so would persist despite an empty block. More realistically, other transactions would take the place of NFT transactions. So again, there remains a strong and a active push to advance layer 2 solutions, and finalize Ethereum's transition to a proof-of-stake system.
 
@@ -252,7 +327,7 @@ In this case, miners would migrate to lower cost alternatives. Since you can't t
 
 The other side of the coin: Keep in mind that alternatives are not necessarily carbon-neutral either, such as the footprint of printing, handling, shipping and guarding fiat currencies. Annual spectacles of Christmas lights consume large amounts of energy, not to mention commercial products filling landfills, and governments engaging in war, leading to substantial levels of pollution.
 
-Oh, and the same thing was said about the internet itself. Early measures of Google's search traffic led to incorrectly extrapolating that data to the future, forming incorrect conclusions about the unmanagable "waste of energy" that would follow.
+Oh, and the same thing was said about the internet itself. Early measures of Google's search traffic led to incorrectly extrapolating that data to the future, forming incorrect conclusions about the unmanagable "waste of energy" that would follow. -->
 
 <!-- ## How to NFT
 
