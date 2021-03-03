@@ -133,7 +133,7 @@ const NavDropdown = ({ section, hasSubNav }) => {
         {section.items.map((item, idx) => {
           return (
             <DropdownItem key={idx} onClick={() => setIsOpen(false)}>
-              <NavLink to={item.to} tabIndex="-1">
+              <NavLink to={item.to} tabIndex="-1" isPartiallyActive={false}>
                 <Translation id={item.text} />
               </NavLink>
             </DropdownItem>
