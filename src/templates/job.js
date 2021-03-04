@@ -41,23 +41,15 @@ import Emoji from "../components/Emoji"
 
 const Page = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
   margin: 0 auto 4rem;
-  padding: 0rem 16rem;
 
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
+    padding-top: 4rem;
+  }
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding: 0rem 8rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    padding: 0rem 2rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    padding: 0rem 0rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.xs}) {
-    padding: 0rem;
+    flex-direction: column;
   }
 `
 
@@ -65,6 +57,8 @@ const InfoColumn = styled.aside`
   display: flex;
   flex-direction: column;
   position: sticky;
+  padding-top: 3rem;
+  border-right: 1px solid ${(props) => props.theme.colors.border};
   top: 6.25rem; /* account for navbar */
   height: calc(100vh - 80px);
   flex: 0 1 400px;
@@ -75,10 +69,27 @@ const InfoColumn = styled.aside`
   }
 `
 
-const MobileButton = styled.div`
+const StyledButtonLink = styled(ButtonLink)`
+  width: 100%;
+  margin-bottom: 1rem;
+`
+
+const InfoColumnRight = styled.aside`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  position: sticky;
+  padding-top: 3rem;
+  top: 6.25rem; /* account for navbar */
+  height: calc(100vh - 80px);
+  flex: 0 1 400px;
+  margin-right: 2rem;
+  margin-left: 4rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    display: none;
+  }
+`
+
+const MobileButton = styled.div`
   background: ${(props) => props.theme.colors.background};
   box-shadow: 0 -1px 0px ${(props) => props.theme.colors.border};
   width: 100%;
@@ -87,9 +98,38 @@ const MobileButton = styled.div`
   padding: 2rem;
   z-index: 99;
   margin-bottom: 0rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    justify-content: flex-end;
-  }
+`
+
+const KeyInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+`
+
+const StyledEmoji = styled(Emoji)`
+  margin-right: 1rem;
+`
+
+const ButtonRow = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+`
+
+const KeyItem = styled.div`
+  margin: 0.5rem;
+  margin-left: 0rem;
+  display: flex;
+  align-items: flex-start;
+  /* text-transform: uppercase; */
+`
+
+const KeyItemTitle = styled.h2`
+  font-size: 20px;
+  margin-bottom: 1rem;
+  margin-top: 0;
 `
 
 // Apply styles for classes within markdown here
@@ -98,7 +138,6 @@ const ContentContainer = styled.article`
   position: relative;
   padding: 2rem;
   padding-top: 0rem;
-  width: 100%;
 
   .featured {
     padding-left: 1rem;
@@ -291,9 +330,9 @@ const HeroContainer = styled.div`
   box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
-  height: 100%;
+  max-height: 608px;
+  min-height: 608px;
   width: 100%;
-  margin-bottom: 3rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column-reverse;
     max-height: 100%;
@@ -301,12 +340,12 @@ const HeroContainer = styled.div`
 `
 
 const Image = styled(Img)`
-  flex: 1 0 100%;
-  height: 420px;
-  width: 420px;
+  flex: 1 1 100%;
+  max-width: 816px;
   background-size: cover;
   background-repeat: no-repeat;
-  align-self: flex-end;
+  margin-left: 2rem;
+  align-self: center;
   right: 0;
   bottom: 0;
   background-size: cover;
@@ -314,28 +353,6 @@ const Image = styled(Img)`
     width: 100%;
     height: 100%;
     overflow: initial;
-  }
-`
-
-const StyledLink = styled(Link)`
-  margin: 0;
-  margin-right: 1.5rem;
-  font-size: 14px;
-  line-height: 140%;
-  letter-spacing: 0.04em;
-  font-weight: normal;
-  z-index: 1;
-  text-decoration: none;
-  color: ${(props) => props.theme.colors.textTableOfContents};
-  &:hover {
-    color: ${(props) => props.theme.colors.primary};
-  }
-  &.active {
-    color: ${(props) => props.theme.colors.primary};
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-top: 1rem;
-    margin-right: 0rem;
   }
 `
 
@@ -351,37 +368,6 @@ const MoreContent = styled(Link)`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     display: none;
   }
-`
-
-const StyledEmoji = styled(Emoji)`
-  margin-right: 1rem;
-`
-
-const KeyInfo = styled.div`
-  display: flex;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
-
-const ButtonRow = styled.div`
-  display: flex;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: 100%;
-    justify-content: space-between;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    flex-direction: column-reverse;
-  }
-`
-
-const KeyItem = styled.div`
-  margin-right: 1rem;
-  display: flex;
-  align-items: center;
-  text-transform: uppercase;
 `
 
 const TitleCard = styled.div`
@@ -408,13 +394,76 @@ const TitleCard = styled.div`
   }
 `
 
+const StyledLink = styled(Link)`
+  margin: 0;
+  margin-bottom: 1rem;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.04em;
+  font-weight: normal;
+  z-index: 1;
+  text-decoration: none;
+  color: ${(props) => props.theme.colors.textTableOfContents};
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+  }
+  &.active {
+    color: ${(props) => props.theme.colors.primary};
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin-top: 1rem;
+    margin-right: 0rem;
+  }
+`
+
+const dropdownLinks = {
+  text: "page-eth2-upgrades-guide",
+  ariaLabel: "page-eth2-upgrades-aria-label",
+  items: [
+    {
+      text: "page-eth2-upgrades-beacon-chain",
+      to: "/eth2/beacon-chain/",
+    },
+    {
+      text: "page-eth2-upgrades-shard-chains",
+      to: "/eth2/shard-chains/",
+    },
+    {
+      text: "page-eth2-upgrades-docking",
+      to: "/eth2/docking/",
+    },
+  ],
+}
+
 const JobPage = ({ data, data: { mdx } }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(intl.locale)
+  const tocItems = mdx.tableOfContents.items
+
+  // TODO some `gitLogLatestDate` are `null` - why?
+  const lastUpdatedDate = mdx.parent.fields
+    ? mdx.parent.fields.gitLogLatestDate
+    : mdx.parent.mtime
 
   return (
     <Container>
       <HeroContainer>
+        {/*<TitleCard>
+          <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
+          <MobileBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
+         <Title>{mdx.frontmatter.title}</Title>
+          <SummaryBox>
+            <ul>
+              {mdx.frontmatter.summaryPoints.map((point, idx) => (
+                <SummaryPoint key={idx}>{point}</SummaryPoint>
+              ))}
+            </ul>
+          </SummaryBox>
+          <LastUpdated>
+            <Translation id="page-last-updated" />:{" "}
+            {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
+          </LastUpdated>
+              </TitleCard> */}
         <Image fluid={data.hero.childImageSharp.fluid} />
       </HeroContainer>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
@@ -422,42 +471,49 @@ const JobPage = ({ data, data: { mdx } }) => {
           title={mdx.frontmatter.title}
           description={mdx.frontmatter.description}
         />
+        <InfoColumn>
+          <KeyInfo>
+            <KeyItemTitle>Job details</KeyItemTitle>
+            <KeyItem>
+              <StyledEmoji text=":computer:" />
+              {mdx.frontmatter.position}
+            </KeyItem>
+            <KeyItem>
+              <StyledEmoji text=":page_with_curl:" />
+              {mdx.frontmatter.type}
+            </KeyItem>
+            <KeyItem>
+              <StyledEmoji text=":globe_showing_americas:" />
+              {mdx.frontmatter.location}
+            </KeyItem>
+            <KeyItem>
+              <StyledEmoji text=":money_bag:" />
+              {mdx.frontmatter.compensation}
+            </KeyItem>
+          </KeyInfo>
+        </InfoColumn>
         <ContentContainer id="content">
+          {/* <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} /> */}
           <MDXProvider components={components}>
+            <h1>{mdx.frontmatter.title}</h1>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
         </ContentContainer>
+        <InfoColumnRight>
+          <ButtonRow>
+            <StyledButtonLink isSecondary to="/">
+              Back to jobs
+            </StyledButtonLink>
+            <StyledButtonLink to="/">Apply for job</StyledButtonLink>
+          </ButtonRow>
+        </InfoColumnRight>
       </Page>
-      <MobileButton>
-        <KeyInfo>
-          <KeyItem>
-            <StyledEmoji text=":computer:" />
-            {mdx.frontmatter.position}
-          </KeyItem>
-          <KeyItem>
-            <StyledEmoji text=":page_with_curl:" />
-            {mdx.frontmatter.type}
-          </KeyItem>
-          <KeyItem>
-            <StyledEmoji text=":globe_showing_americas:" />
-            {mdx.frontmatter.location}
-          </KeyItem>
-          <KeyItem>
-            <StyledEmoji text=":money_bag:" />
-            {mdx.frontmatter.compensation}
-          </KeyItem>
-        </KeyInfo>
-        <ButtonRow>
-          <StyledLink to="/about/#open-jobs"> Back to jobs</StyledLink>
-          <ButtonLink to={mdx.frontmatter.link}>Apply for job</ButtonLink>
-        </ButtonRow>
-      </MobileButton>
     </Container>
   )
 }
 
-export const JobPageQuery = graphql`
-  query JobPageQuery($relativePath: String) {
+export const JobQuery = graphql`
+  query JobQuery($relativePath: String) {
     mdx(fields: { relativePath: { eq: $relativePath } }) {
       fields {
         slug

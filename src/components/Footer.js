@@ -266,6 +266,10 @@ const Footer = () => {
           text: "about-us",
         },
         {
+          to: "/about/#open-jobs",
+          text: "Jobs",
+        },
+        {
           to: "/en/contributing/",
           text: "contributing",
         },
