@@ -9,6 +9,7 @@ compensation: "$75,000 - $95,000 or $40 - $50 per hour (USD)"
 location: Remote
 type: "Full-time or contract"
 link: https://ethereum.bamboohr.com/jobs/view.php?id=32
+image: ../../../assets/hackathon_transparent.png
 ---
 
 ## About us

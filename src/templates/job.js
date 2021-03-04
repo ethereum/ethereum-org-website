@@ -6,38 +6,18 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import ButtonLink from "../components/ButtonLink"
-import ButtonDropdown from "../components/ButtonDropdown"
-import Breadcrumbs from "../components/Breadcrumbs"
-import Card from "../components/Card"
-import Icon from "../components/Icon"
-import Contributors from "../components/Contributors"
-import DismissibleCard from "../components/DismissibleCard"
-import InfoBanner from "../components/InfoBanner"
-import UpgradeStatus from "../components/UpgradeStatus"
-import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
-import Eth2BeaconChainActions from "../components/Eth2BeaconChainActions"
-import Eth2ShardChainsList from "../components/Eth2ShardChainsList"
-import Eth2DockingList from "../components/Eth2DockingList"
-import Logo from "../components/Logo"
-import MeetupList from "../components/MeetupList"
+import Link from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
-import Pill from "../components/Pill"
-import RandomAppList from "../components/RandomAppList"
-import Roadmap from "../components/Roadmap"
-import Eth2TableOfContents from "../components/Eth2TableOfContents"
 import Translation from "../components/Translation"
-import TranslationsInProgress from "../components/TranslationsInProgress"
-import SectionNav from "../components/SectionNav"
-import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
+import Emoji from "../components/Emoji"
 import {
   Divider,
   Paragraph,
   Header1,
   Header4,
 } from "../components/SharedStyledComponents"
-import Emoji from "../components/Emoji"
 
 const Page = styled.div`
   display: flex;
@@ -187,14 +167,6 @@ const ContentContainer = styled.article`
   }
 `
 
-const LastUpdated = styled.p`
-  color: ${(props) => props.theme.colors.text200};
-  font-style: italic;
-  padding-top: 1rem;
-  margin-bottom: 0rem;
-  border-top: 1px solid ${(props) => props.theme.colors.border};
-`
-
 const Pre = styled.pre`
   max-width: 100%;
   overflow-x: scroll;
@@ -286,75 +258,9 @@ const components = {
   h4: Header4,
   p: Paragraph,
   pre: Pre,
-  table: MarkdownTable,
-  MeetupList,
-  RandomAppList,
-  Roadmap,
-  Logo,
   ButtonLink,
-  Contributors,
-  InfoBanner,
-  Card,
-  Divider,
-  SectionNav,
-  Pill,
-  TranslationsInProgress,
   Emoji,
-  UpgradeStatus,
-  Eth2BeaconChainActions,
-  Eth2ShardChainsList,
-  Eth2DockingList,
 }
-
-const Title = styled.h1`
-  font-size: 40px;
-  font-weight: 700;
-  margin-top: 0rem;
-`
-
-const SummaryPoint = styled.li`
-  font-size: 16px;
-  color: ${(props) => props.theme.colors.text300};
-  margin-bottom: 0rem;
-  line-height: auto;
-`
-
-const SummaryBox = styled.div`
-  /* border: 1px solid ${(props) => props.theme.colors.border};
-  padding: 1.5rem;
-  padding-bottom: 0rem;
-  border-radius: 4px; */
-`
-
-const DesktopBreadcrumbs = styled(Breadcrumbs)`
-  margin-top: 0.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
-const MobileBreadcrumbs = styled(Breadcrumbs)`
-  margin-top: 0.5rem;
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
-
-const StyledButtonDropdown = styled(ButtonDropdown)`
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: flex-end;
-  text-align: center;
-  @media (min-width: ${(props) => props.theme.breakpoints.s}) {
-    align-self: flex-end;
-  }
-`
-
-const MobileButtonDropdown = styled(StyledButtonDropdown)`
-  margin-bottom: 0rem;
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
 
 const Container = styled.div`
   position: relative;
@@ -390,44 +296,6 @@ const Image = styled(Img)`
   }
 `
 
-const MoreContent = styled(Link)`
-  width: 100%;
-  background: ${(props) => props.theme.colors.ednBackground};
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  &:hover {
-    background: ${(props) => props.theme.colors.background};
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
-
-const TitleCard = styled.div`
-  background: ${(props) => props.theme.colors.background};
-  border: 1px solid ${(props) => props.theme.colors.border};
-  box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
-  padding: 2rem;
-  display: flex;
-  position: absolute;
-  left: 6rem;
-  top: 6rem;
-  flex-direction: column;
-  justify-content: flex-start;
-  border-radius: 2px;
-  z-index: 10;
-  max-width: 640px;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    max-width: 100%;
-    position: relative;
-    left: 0rem;
-    top: 0rem;
-    background: ${(props) => props.theme.colors.ednBackground};
-    box-shadow: none;
-  }
-`
-
 const StyledLink = styled(Link)`
   margin: 0;
   margin-bottom: 1rem;
@@ -450,54 +318,14 @@ const StyledLink = styled(Link)`
   }
 `
 
-const dropdownLinks = {
-  text: "page-eth2-upgrades-guide",
-  ariaLabel: "page-eth2-upgrades-aria-label",
-  items: [
-    {
-      text: "page-eth2-upgrades-beacon-chain",
-      to: "/eth2/beacon-chain/",
-    },
-    {
-      text: "page-eth2-upgrades-shard-chains",
-      to: "/eth2/shard-chains/",
-    },
-    {
-      text: "page-eth2-upgrades-docking",
-      to: "/eth2/docking/",
-    },
-  ],
-}
-
 const JobPage = ({ data, data: { mdx } }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(intl.locale)
-  const tocItems = mdx.tableOfContents.items
-  // TODO some `gitLogLatestDate` are `null` - why?
-  const lastUpdatedDate = mdx.parent.fields
-    ? mdx.parent.fields.gitLogLatestDate
-    : mdx.parent.mtime
 
   return (
     <Container>
       <HeroContainer>
-        {/*<TitleCard>
-          <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
-          <MobileBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
-         <Title>{mdx.frontmatter.title}</Title>
-          <SummaryBox>
-            <ul>
-              {mdx.frontmatter.summaryPoints.map((point, idx) => (
-                <SummaryPoint key={idx}>{point}</SummaryPoint>
-              ))}
-            </ul>
-          </SummaryBox>
-          <LastUpdated>
-            <Translation id="page-last-updated" />:{" "}
-            {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
-          </LastUpdated>
-              </TitleCard> */}
-        <Image fluid={data.hero.childImageSharp.fluid} />
+        <Image fluid={mdx.frontmatter.image.childImageSharp.fluid} />
       </HeroContainer>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
@@ -526,7 +354,6 @@ const JobPage = ({ data, data: { mdx } }) => {
           </KeyInfo>
         </InfoColumn>
         <ContentContainer id="content">
-          {/* <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} /> */}
           <MDXProvider components={components}>
             <h1>{mdx.frontmatter.title}</h1>
             <KeyInfoMobile>
@@ -588,6 +415,13 @@ export const JobQuery = graphql`
         compensation
         type
         link
+        image {
+          childImageSharp {
+            fluid(maxHeight: 400) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
       body
       tableOfContents
@@ -597,13 +431,6 @@ export const JobQuery = graphql`
           fields {
             gitLogLatestDate
           }
-        }
-      }
-    }
-    hero: file(relativePath: { eq: "hackathon_transparent.png" }) {
-      childImageSharp {
-        fluid(maxHeight: 400) {
-          ...GatsbyImageSharpFluid
         }
       }
     }
