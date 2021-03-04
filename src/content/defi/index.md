@@ -65,7 +65,7 @@ Ethereum builds on this. Like Bitcoin, the rules can't change on you and everyon
 This sounds odd... "why would I want to program my money"? However, this is more just a default feature of tokens on Ethereum. Anyone can program logic into payments giving you the control and security of Bitcoin mixed with the services provided by financial institutions. This lets you do things with cryptocurrencies that you can't do with Bitcoin like lending and borrowing, scheduled payments, invest in index funds and more.
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
-  <div>Explore our suggestions for DeFi applications try out if you're new to Ethereum.</div>
+  <div>Explore our suggestions for DeFi applications to try out if you're new to Ethereum.</div>
   <ButtonLink to="/dapps/?category=finance">Explore DeFi apps</ButtonLink>
 </InfoBanner>
 
