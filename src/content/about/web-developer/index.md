@@ -5,18 +5,14 @@ lang: en
 sidebar: true
 template: job
 position: Front-end developer
-compensation: "$75,000 - $95,000 or $40 - $50 per hour (USD)"
+compensation: "$75,000 - $95,000 USD"
 location: Remote
-type: "Full-time or contract"
+type: "Full-time"
 link: https://ethereum.bamboohr.com/jobs/view.php?id=32
 image: ../../../assets/hackathon_transparent.png
 ---
 
-## About us
-
-The [Ethereum Foundation](/foundation/) is a global non-profit organization dedicated to supporting Ethereum and related technologies. Our mission is to do what is best for Ethereum’s long-term success. Our role is to allocate resources to critical projects, to be a valued voice within the Ethereum ecosystem, and to advocate for Ethereum to the outside world.
-
-## Your mission
+## Your role
 
 **Make ethereum.org (and the suite of Ethereum Foundation web applications) as performant, feature-rich and accessible as possible**. As a front-end developer, you'll create slick, fun and functional web applications visited by tens of millions of diverse Ethereum users each year. You'll collaborate with product, design and research teammates to shape the design and features of our products. You'll empower the next generation of Ethereum users and builders to change our world for the better.
 
@@ -49,10 +45,4 @@ The [Ethereum Foundation](/foundation/) is a global non-profit organization dedi
 ## Contract details
 
 - This is a full-time, remote position
-- Compensation will ultimately depend on your experience, skillset and the contract structure but you can expect $40-50 USD per hour, or $75,000-$95,000 annual salary.
-
-<!-- ## Apply
-
-<ButtonLink to="https://ethereum.bamboohr.com/jobs/view.php?id=32">
-  Apply for this job
-</ButtonLink> -->
+- Compensation will ultimately depend on your experience, skillset and the contract structure but you can expect the equivalent of $75,000-$95,000 USD annual salary.

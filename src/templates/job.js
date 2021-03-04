@@ -117,6 +117,7 @@ const KeyInfoMobile = styled(KeyInfo)`
 
 const StyledEmoji = styled(Emoji)`
   margin-right: 1rem;
+  flex-shrink: 0;
 `
 
 const ButtonRow = styled.div`
@@ -134,7 +135,6 @@ const KeyItem = styled.div`
   margin-left: 0rem;
   display: flex;
   align-items: flex-start;
-  /* text-transform: uppercase; */
 `
 
 const KeyItemTitle = styled.h2`
@@ -318,7 +318,7 @@ const StyledLink = styled(Link)`
   }
 `
 
-const JobPage = ({ data, data: { mdx } }) => {
+const JobPage = ({ data: { mdx } }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(intl.locale)
 
@@ -331,6 +331,7 @@ const JobPage = ({ data, data: { mdx } }) => {
         <PageMetadata
           title={mdx.frontmatter.title}
           description={mdx.frontmatter.description}
+          image={mdx.frontmatter.image.childImageSharp.fluid.src}
         />
         <InfoColumn>
           <KeyInfo>
@@ -380,7 +381,7 @@ const JobPage = ({ data, data: { mdx } }) => {
         </ContentContainer>
         <InfoColumnRight>
           <ButtonRow>
-            <StyledButtonLink isSecondary to="/">
+            <StyledButtonLink isSecondary to="/about/#open-jobs">
               Back to jobs
             </StyledButtonLink>
             <StyledButtonLink to={mdx.frontmatter.link}>
