@@ -77,6 +77,7 @@ All [Ethereum clients](/developers/docs/nodes-and-clients/#clients) include an E
 - [Jellopaper aka KEVM: Semantics of EVM in K](https://jellopaper.org/)
 - [The Beigepaper](https://github.com/chronaeon/beigepaper)
 - [Ethereum Virtual Machine Opcodes](https://www.ethervm.io/)
+- [A short introduction in Solidity's documentation](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
 
 ## Related Topics {#related-topics}
 
