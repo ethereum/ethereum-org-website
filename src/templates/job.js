@@ -46,7 +46,7 @@ const Page = styled.div`
   margin: 0 auto 4rem;
 
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-top: 4rem;
+    padding-top: 2rem;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
@@ -66,6 +66,11 @@ const InfoColumn = styled.aside`
   margin-left: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     display: none;
+  }
+  @media (max-width: 1200px) {
+    margin-right: 2rem;
+    margin-left: 2rem;
+    border: 0;
   }
 `
 
@@ -87,9 +92,16 @@ const InfoColumnRight = styled.aside`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     display: none;
   }
+  @media (max-width: 1200px) {
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
 `
 
 const MobileButton = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: ${(props) => props.theme.colors.background};
   box-shadow: 0 -1px 0px ${(props) => props.theme.colors.border};
   width: 100%;
@@ -98,6 +110,13 @@ const MobileButton = styled.div`
   padding: 2rem;
   z-index: 99;
   margin-bottom: 0rem;
+  padding-top: 1rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    justify-content: flex-end;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
+    display: none;
+  }
 `
 
 const KeyInfo = styled.div`
@@ -105,6 +124,15 @@ const KeyInfo = styled.div`
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
+`
+
+const KeyInfoMobile = styled(KeyInfo)`
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
+  padding: 1.5rem 0rem;
+  padding-top: 0rem;
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
+    display: none;
+  }
 `
 
 const StyledEmoji = styled(Emoji)`
@@ -116,6 +144,9 @@ const ButtonRow = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
+  @media (max-width: 1200px) {
+    padding: 0rem 2rem;
+  }
 `
 
 const KeyItem = styled.div`
@@ -149,6 +180,10 @@ const ContentContainer = styled.article`
     p {
       color: ${(props) => props.theme.colors.text200};
     }
+  }
+
+  @media (max-width: 1200px) {
+    padding: 0rem 1rem;
   }
 `
 
@@ -330,8 +365,7 @@ const HeroContainer = styled.div`
   box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
-  max-height: 608px;
-  min-height: 608px;
+  max-height: 400px;
   width: 100%;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column-reverse;
@@ -341,7 +375,7 @@ const HeroContainer = styled.div`
 
 const Image = styled(Img)`
   flex: 1 1 100%;
-  max-width: 816px;
+  max-width: 640px;
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: 2rem;
@@ -439,7 +473,6 @@ const JobPage = ({ data, data: { mdx } }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(intl.locale)
   const tocItems = mdx.tableOfContents.items
-
   // TODO some `gitLogLatestDate` are `null` - why?
   const lastUpdatedDate = mdx.parent.fields
     ? mdx.parent.fields.gitLogLatestDate
@@ -496,6 +529,25 @@ const JobPage = ({ data, data: { mdx } }) => {
           {/* <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} /> */}
           <MDXProvider components={components}>
             <h1>{mdx.frontmatter.title}</h1>
+            <KeyInfoMobile>
+              <KeyItemTitle>Job details</KeyItemTitle>
+              <KeyItem>
+                <StyledEmoji text=":computer:" />
+                {mdx.frontmatter.position}
+              </KeyItem>
+              <KeyItem>
+                <StyledEmoji text=":page_with_curl:" />
+                {mdx.frontmatter.type}
+              </KeyItem>
+              <KeyItem>
+                <StyledEmoji text=":globe_showing_americas:" />
+                {mdx.frontmatter.location}
+              </KeyItem>
+              <KeyItem>
+                <StyledEmoji text=":money_bag:" />
+                {mdx.frontmatter.compensation}
+              </KeyItem>
+            </KeyInfoMobile>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
         </ContentContainer>
@@ -504,10 +556,18 @@ const JobPage = ({ data, data: { mdx } }) => {
             <StyledButtonLink isSecondary to="/">
               Back to jobs
             </StyledButtonLink>
-            <StyledButtonLink to="/">Apply for job</StyledButtonLink>
+            <StyledButtonLink to={mdx.frontmatter.link}>
+              Apply for job
+            </StyledButtonLink>
           </ButtonRow>
         </InfoColumnRight>
       </Page>
+      <MobileButton>
+        <ButtonRow>
+          <StyledLink to="/about/#open-jobs"> Back to jobs</StyledLink>
+          <ButtonLink to={mdx.frontmatter.link}>Apply for job</ButtonLink>
+        </ButtonRow>
+      </MobileButton>
     </Container>
   )
 }

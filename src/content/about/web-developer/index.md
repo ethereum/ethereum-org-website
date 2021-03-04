@@ -1,10 +1,10 @@
 ---
-title: Front-end Web Developer
+title: Front-end web developer
 description: ethereum.org is hiring a full-time web developer
 lang: en
 sidebar: true
 template: job
-position: Front-end Developer
+position: Front-end developer
 compensation: "$75,000 - $95,000 or $40 - $50 per hour (USD)"
 location: Remote
 type: "Full-time or contract"
