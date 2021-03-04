@@ -25,10 +25,8 @@ import RandomAppList from "../components/RandomAppList"
 import Roadmap from "../components/Roadmap"
 import Eth2TableOfContents from "../components/Eth2TableOfContents"
 import TableOfContents from "../components/TableOfContents"
-import Translation from "../components/Translation"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import SectionNav from "../components/SectionNav"
-import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
 import {
   Divider,
@@ -293,14 +291,13 @@ const HeroContainer = styled.div`
 
 const Image = styled(Img)`
   flex: 1 1 100%;
-  max-width: 640px;
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: 2rem;
-  align-self: flex-end;
   right: 0;
   bottom: 0;
   background-size: cover;
+  max-width: ${(props) => (props.useCase === "dao" ? `572px` : `640px`)};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: 100%;
     height: 100%;
@@ -386,10 +383,13 @@ const UseCasePage = ({ data, pageContext }) => {
   const { relativePath } = pageContext
   const absoluteEditPath = `${editContentUrl}${relativePath}`
 
-  // TODO some `gitLogLatestDate` are `null` - why?
-  const lastUpdatedDate = mdx.parent.fields
-    ? mdx.parent.fields.gitLogLatestDate
-    : mdx.parent.mtime
+  let useCase = "defi"
+  if (pageContext.slug.includes("dao")) {
+    useCase = "dao"
+  }
+  if (pageContext.slug.includes("nft")) {
+    useCase = "nft"
+  }
   return (
     <Container>
       <StyledBannerNotification shouldShow>
@@ -417,7 +417,10 @@ const UseCasePage = ({ data, pageContext }) => {
             isMobile={true}
           />
         </TitleCard>
-        <Image fluid={mdx.frontmatter.image.childImageSharp.fluid} />
+        <Image
+          useCase={useCase}
+          fluid={mdx.frontmatter.image.childImageSharp.fluid}
+        />
       </HeroContainer>
       <MoreContent to="#content">
         <Icon name="chevronDown" />
