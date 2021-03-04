@@ -269,10 +269,10 @@ These qualities of Ethereum makes digitally owning unique items and getting a fa
 
 When you mint an NFT, a few things have to happen:
 
-- it needs to be confirmed as an asset on the blockchain.
-- the owner's account balance must be updated to include that asset. This makes it possible for it to then be traded or verifiably "owned".
-- the transactions that confirm the above need to be added to a block and "immortalised" on the chain.
-- the block needs to be confirmed by everyone in the network as "correct". This consensus is what makes it possible for NFT creators to maximise their earnings – there are no intermediaries needed.
+- It needs to be confirmed as an asset on the blockchain.
+- The owner's account balance must be updated to include that asset. This makes it possible for it to then be traded or verifiably "owned".
+- The transactions that confirm the above need to be added to a block and "immortalised" on the chain.
+- The block needs to be confirmed by everyone in the network as "correct". This consensus is what makes it possible for NFT creators to maximise their earnings – there are no intermediaries needed.
 
 These tasks are done by miners. And they let the rest of the network know about your NFT and who owns it. This means mining needs to be sufficiently difficult, otherwise anyone could just claim that they own the NFT you just minted and fraudulently transfer ownership. There are lots of incentives in place to make sure miners are acting honestly.
 
