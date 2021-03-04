@@ -252,7 +252,7 @@ To clarify a few things:
 
 To explain, things are going to get a little more technical, but bear with us...
 
-### Don't blame it on the NFTs
+### Don't blame it on the NFTs {#nft-qualities}
 
 The whole NFT ecosystem works because Ethereum is decentralized and secure.
 
@@ -265,7 +265,7 @@ These qualities of Ethereum makes digitally owning unique items and getting a fa
 <!-- [Need: how do centralized systems do this and why is it worse?]
  -->
 
-#### The work in minting your NFT
+#### The work in minting your NFT {#minting-nfts}
 
 When you mint an NFT, a few things have to happen:
 
@@ -278,7 +278,7 @@ These tasks are done by miners. And they let the rest of the network know about 
 
 [More on mining](/developers/docs/consensus-mechanisms/pow/)
 
-#### Securing your NFT with mining
+#### Securing your NFT with mining {#securing-nfts}
 
 Mining difficulty comes from the fact that it takes a lot of computing power to create new blocks in the chain. Importantly, blocks are created consistently, not just when they're needed. They're created every 12 seconds or so.
 
@@ -286,7 +286,7 @@ This is important for making Ethereum tamper-proof, one of the qualities that ma
 
 However this means that computing power needs to be used constantly. It also means that a block that contains 0 NFT transactions will still have roughly the same carbon footprint, because computing power will still be consumed to create it. Other non-NFT transactions will fill the blocks.
 
-#### Blockchains are energy intensive, right now
+#### Blockchains are energy intensive, right now {#blockchains-intensive}
 
 So yes, there is a carbon footprint associated with creating blocks by mining – and this is a problem for chains like Bitcoin too – but it's not directly the fault of NFTs.
 
@@ -294,7 +294,7 @@ A lot of mining is done using renewable energy sources or untapped energy in rem
 
 And we are. Ethereum is evolving to make using Ethereum (and by virtue, NFTs) more energy efficient. And that's always been the plan.
 
-### A greener future...
+### A greener future... {#a-greener-future}
 
 For as long as Ethereum has been around, the energy-consumption of mining has been a huge focus area for developers and researchers. And the vision has always been to replace it as soon as possible.
 
@@ -302,9 +302,9 @@ For as long as Ethereum has been around, the energy-consumption of mining has be
 
 This vision is being delivered right now.
 
-#### The end goal: Eth2
+#### A greener Ethereum: Eth2 {#eth2}
 
-Ethereum is currently going through a series of upgrades, known as Eth2, that will replace mining with [staking](/staking/). This will remove computing power as a security mechanism, and reduce Ethereum's carbon footprint by ~99.98%. Stakers commit funds instead of computing power to secure the network.
+Ethereum is currently going through a series of upgrades, known as Eth2, that will replace mining with [staking](/staking/). This will remove computing power as a security mechanism, and reduce Ethereum's carbon footprint by ~99.98%. In this world, stakers commit funds instead of computing power to secure the network.
 
 The energy-cost of Ethereum will become the cost of running a home computer multiplied by the number of nodes in the network. If there are 10,000 nodes in the network and the cost of running a home computer is roughly 400kWh per year. That's 4,000,000 kWh per year for the entire network. By comparison, that's 1.91% of the estimated yearly energy consumption of a huge company like Visa.
 
@@ -330,6 +330,8 @@ Staking is estimated at 10,000*400kwh = 4,000,000 kwh for the year.
 That's 1.91% of the energy consumed by visa transactions. Question: will this increase significantly if ethereum does the same number of transactions? -->
 
 Importantly this improves the energy efficiency while preserving Ethereum's decentralization and security. Many other blockchains out there might already use some form of staking, but they're secured by a select few stakers, not the thousands that Ethereum will have. The more decentralization, the more secure the system.
+
+Timelines can't be exact at this stage, but it's estimated that the transition from mining to staking will be complete some time in 2021/2022. This process is known as the docking or the merge. [More on the docking](/eth2/the-docking/).
 
 [More on Eth2](/eth2/)
 
