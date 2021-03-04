@@ -17,7 +17,7 @@ summaryPoints:
 
 NFTs are currently taking the digital art and collectibles world by storm. Digital artists are seeing their lives change thanks to huge sales to a new crypto-audience. And celebrities are joining in as they spot a new opportunity to connect with fans. But digital art is only one way to use NFTs. Really they can be used to represent ownership of any unique asset, like a deed for an item in the digital or physical realm.
 
-If Andy Warhol had been born in the late 90s, he probably would have minted Campbell's Soup as an NFT. It's only a matter of time before Kanye puts a run of Yeezys on Ethereum. And one day owning your car might be managed with NFTs.
+If Andy Warhol had been born in the late 90s, he probably would have minted Campbell's Soup as an NFT. It's only a matter of time before Kanye puts a run of Yeezys on Ethereum. And one day owning your car might be proved with an NFT.
 
 ## What's an NFT? {#what-are-nfts}
 
@@ -31,13 +31,13 @@ Fungibile items on the other hand can be exchanged as their value defines them r
 
 ## The internet of assets {#internet-of-assets}
 
-NFTs and Ethereum solve some of the problems that exist in the internet today. As everything becomes more digital, there's more of a need to replicate the properties of physical items online, like scarcity, uniqueness, and proof of ownership. Not to mention that digital items often only work in the context of their product. For example you can't sell a song you purchased on iTunes, or you can't exchange your Starbucks loyalty points for Amazon credit even if there's a market for it.
+NFTs and Ethereum solve some of the problems that exist in the internet today. As everything becomes more digital, there's a need to replicate the properties of physical items like scarcity, uniqueness, and proof of ownership. Not to mention that digital items often only work in the context of their product. For example you can't sell an mp3 you've purchased, or you can't exchange one company's loyalty points for another platform's credit even if there's a market for it.
 
-Here's how an internet of NFTs looks against the internet most of us use today looks...
+Here's how an internet of NFTs compared to the internet most of us use today looks...
 
 ### A comparison {#nft-comparison}
 
-| The NFT internet                                                                                                                                                                                            | The internet today                                                                                                                                                         |
+| An NFT internet                                                                                                                                                                                             | The internet today                                                                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | NFTs are digitally unique, no two NFTs are the same.                                                                                                                                                        | A copy of a file, like an .mp3 or .jpg, is the same as the original.                                                                                                       |
 | Every NFT must have an owner and this is of public record and easy for anyone to verify.                                                                                                                    | Ownership records of digital items are stored on servers controlled by institutions – you must take their word for it.                                                     |
@@ -81,7 +81,7 @@ NFTs have some special properties:
 - Each token minted has a unique identifier.
 - They're not directly interchangeable with other tokens 1:1. For example 1 ETH is exactly the same as another ETH. This isn't the case with NFTs.
 - Each token has an owner and this information is easily verifiable.
-- They live on Ethereum, and despite two NFTs not necessarily being interchangeable in value, they can easily be traded, bought and sold on any Ethereum-based NFT market.
+- They live on Ethereum and can be bought and sold on any Ethereum-based NFT market.
 
 In other words, if you _own_ an NFT:
 
@@ -99,11 +99,11 @@ And if you _create_ an NFT:
 
 ### Scarcity {#scarcity}
 
-The creator of an NFT gets to decide the scarcity of their asset. Just because all NFTs have unique identifiers, does not mean all token representations have the same scarcity.
+The creator of an NFT gets to decide the scarcity of their asset.
 
-For example, consider a ticket to a sporting event. Just as the organizer of an event can chose how many tickets to sell, the creator of an NFT can decide how many replicas exist. Sometimes these are exact replicas, such as 5000 General Admission tickets. Sometimes several are minted that are very similar, but each slightly different, such as a ticket with an assigned seat. In another case, the creator may want to create an NFT where only one is minted as a special rare collectible.
+For example, consider a ticket to a sporting event. Just as an organizer of an event can choose how many tickets to sell, the creator of an NFT can decide how many replicas exist. Sometimes these are exact replicas, such as 5000 General Admission tickets. Sometimes several are minted that are very similar, but each slightly different, such as a ticket with an assigned seat. In another case, the creator may want to create an NFT where only one is minted as a special rare collectible.
 
-In all of these cases, each NFT would still have a unique identifier (like a bar code on a traditional "ticket"), with only one owner. The intended scarcity of the NFT matters, and is up to the creator. A creator may intend to make each NFT completely unique in order to create scarcity, or have reasons to produce several thousand replicas. Remember, this information is all public.
+In these cases, each NFT would still have a unique identifier (like a bar code on a traditional "ticket"), with only one owner. The intended scarcity of the NFT matters, and is up to the creator. A creator may intend to make each NFT completely unique to create scarcity, or have reasons to produce several thousand replicas. Remember, this information is all public.
 
 ### Royalties {#royalties}
 
@@ -131,7 +131,7 @@ An artist publishing work on a social network makes money for the platform who s
 
 NFTs power a new creator economy where creators don't hand ownership of their content over to the platforms they use to publicise it. Ownership is baked into the content itself.
 
-When they sell their content, funds go directly to them. If the new owner was to go on and re-sell the NFT, the original creator can even automatically receive royalties because the creator address is part of the token's metadata – metadata which can't be modified.
+When they sell their content, funds go directly to them. If the new owner then sells the NFT, the original creator can even automatically receive royalties. This is guaranteed every time it's sold because the creator's address is part of the token's metadata – metadata which can't be modified.
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Explore, buy or create your own NFT art/collectibles...</div>
@@ -175,7 +175,7 @@ Decentraland, a virtual reality game, even lets you buy NFTs representing virtua
 
 The Ethereum Name Service uses NFTs to provide your Ethereum address with an easier-to-remember name like `mywallet.eth`. This means you could ask someone to send you ETH via `mywallet.eth` rather than `0x123456789.....`.
 
-This works in a similar way to a website domain name which makes an IP address more memorable. And like domains, ENS names have value, usually based on length and relevance. With ENS you don't need a domain registry in order to facilitate the tranfer of ownership. Instead, ENS names can be traded on NFT marketplaces.
+This works in a similar way to a website domain name which makes an IP address more memorable. And like domains, ENS names have value, usually based on length and relevance. With ENS you don't need a domain registry to facilitate the transfer of ownership. Instead, ENS names can be traded on NFT marketplaces.
 
 Your ENS name can:
 
@@ -187,11 +187,11 @@ Your ENS name can:
 
 ### Physical items {#nft-physical-items}
 
-The tokenisation of physical items isn't yet as developed as their digital counterparts. However there have been plenty of projects that have explored the tokenisation of real estate, one-of-a-kind fashion items, and more.
+The tokenisation of physical items isn't yet as developed as their digital counterparts. But there are plenty of projects exploring the tokenisation of real estate, one-of-a-kind fashion items, and more.
 
-As NFTs are essentially deeds, one day you could buy a car or home using ETH and receive the deed as an NFT in return (in the same transaction). As things become increasingly high-tech, it's not hard to imagine a world where your Ethereum wallet becomes the key to your car or home as it would contain the cryptographic proof of ownership.
+As NFTs are essentially deeds, one day you could buy a car or home using ETH and receive the deed as an NFT in return (in the same transaction). As things become increasingly high-tech, it's not hard to imagine a world where your Ethereum wallet becomes the key to your car or home – your door being unlocked by the cryptographic proof of ownership.
 
-With valuable assets like cars and property representable on Ethereum, there's the opportunity to use NFTs as collateral in decentralized loans. This is particularly helpful if you're not cash or crypto-rich but own physical items of value. [More on DeFi](/defi/)
+With valuable assets like cars and property representable on Ethereum, you can use NFTs as collateral in decentralized loans. This is particularly helpful if you're not cash or crypto-rich but own physical items of value. [More on DeFi](/defi/)
 
 <Divider />
 
@@ -248,9 +248,9 @@ To clarify a few things:
 
 - NFTs aren't directly increasing the carbon footprint of Ethereum.
 - The way Ethereum keeps your funds and assets secure is currently energy-intensive but it's about to improve.
-- Once improved, Ethereum's carbon footprint will 99.98% better, making it more energy efficient than many existing industries.
+- Once improved, Ethereum's carbon footprint will be 99.98% better, making it more energy efficient than many existing industries.
 
-To explain, things are going to get a little more technical, but bear with us...
+To explain things are going to get a little more technical, but bear with us...
 
 ### Don't blame it on the NFTs {#nft-qualities}
 
