@@ -61,4 +61,6 @@ Make sure you read the principles if you'd like to [contribute to the site](/en/
 
 ## Open jobs {#open-jobs}
 
+If there's not a role here for you, head over to [Discord](https://discord.gg/CetY6Y4) and let us know how you'd like to work with us.
+
 - [Front-end web developer](/about/web-developer/)
