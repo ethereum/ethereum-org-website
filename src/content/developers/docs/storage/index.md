@@ -51,7 +51,7 @@ Platforms with contract based persistence:
 
 ### Additional considerations
 
-As a bonus, IPFS doesn't really have a incentive structure for holding data, but it is a great tool in the community. If you'd like data to persist on IPFS, you have to reach out to a pinning service, which will "pin" your data for you. 
+As a bonus, IPFS doesn't really have an incentive structure for holding data, but it is a great tool in the community. If you'd like data to persist on IPFS, you have to reach out to a pinning service, which will "pin" your data for you. 
 
 - [IPFS](https://ipfs.io/)
 
@@ -61,7 +61,7 @@ In order to retain data, systems must have some sort of mechanism to make sure d
 
 ### Challenge mechanism
 
-One of the most popular ways to make sure data is retained, is to use some type of cryptographic challenge that is issued to the nodes to make sure they still have the data. A simple one is looking at Arweave's proof of access. They issue a challenge to the nodes to see if they have the data at both the most recent block and a random block in the past. If the node can't come up with the answer, they are penalized.
+One of the most popular ways to make sure data is retained, is to use some type of cryptographic challenge that is issued to the nodes to make sure they still have the data. A simple one is looking at Arweave's proof-of-access. They issue a challenge to the nodes to see if they have the data at both the most recent block and a random block in the past. If the node can't come up with the answer, they are penalized.
 
 Types of dStorage with a challenge mechanism:
 - 0Chain
@@ -72,7 +72,7 @@ Types of dStorage with a challenge mechanism:
 
 ### Decentrality
 
-There isn't great tools to measure the level of decentralization of platforms but in general, you'll want to use tools that don't have some form of KYC to prove they are actually decentralized.
+There aren't great tools to measure the level of decentralization of platforms, but in general you'll want to use tools that don't have some form of KYC to prove they are actually decentralized.
 
 Decentralized tools without KYC:
 - 0Chain (implementing a non-KYC edition)
@@ -84,7 +84,7 @@ Decentralized tools without KYC:
 
 ### Consensus
 
-Most of these tools have their own version of a [consensus mechanism](/developers/docs/consensus-mechanisms/) but generally they are based on either [Proof of Work (PoW)](/developers/docs/consensus-mechanisms/pow/) or [Proof of Stake (PoS)](/developers/docs/consensus-mechanisms/pos/).
+Most of these tools have their own version of a [consensus mechanism](/developers/docs/consensus-mechanisms/) but generally they are based on either [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/) or [proof-of-stake (PoS)](/developers/docs/consensus-mechanisms/pos/).
 
 PoW based:
 - Skynet
@@ -118,7 +118,7 @@ PoS based:
 - [Documentation](https://docs.arweave.org/info/)
 - [Arweave](https://github.com/ArweaveTeam/arweave)
 
-**0chain -** **_0Chain is a proof of stake dStorage platform with sharding and blobbers._**
+**0chain -** **_0Chain is a proof-of-stake dStorage platform with sharding and blobbers._**
 - [0Chain](https://0chain.net/)
 - [Documentation](https://0chain.net/page-documentation.html)
 - [Github](https://github.com/0chain)
