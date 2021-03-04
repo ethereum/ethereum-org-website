@@ -397,6 +397,7 @@ export const GlobalStyle = createGlobalStyle`
     list-style-type: none;
     list-style-image: none;
   }
+
   li {
     padding-left: .5em;
     margin-bottom: .5em;
@@ -414,6 +415,13 @@ export const GlobalStyle = createGlobalStyle`
       margin-left: -1em;
       position: absolute;
     }
+  }
+
+  /* YouTube embeds */
+  iframe {
+    display: block;
+    max-width: 560px;
+    margin: 32px 0;
   }
   `
 
