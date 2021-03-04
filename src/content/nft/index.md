@@ -296,9 +296,7 @@ And we are. Ethereum is evolving to make using Ethereum (and by virtue, NFTs) mo
 
 ### A greener future... {#a-greener-future}
 
-For as long as Ethereum has been around, the energy-consumption of mining has been a huge focus area for developers and researchers. And the vision has always been to replace it as soon as possible.
-
-[More on Ethereum's vision](/eth2/vision/)
+For as long as Ethereum has been around, the energy-consumption of mining has been a huge focus area for developers and researchers. And the vision has always been to replace it as soon as possible. [More on Ethereum's vision](/eth2/vision/)
 
 This vision is being delivered right now.
 
@@ -333,7 +331,7 @@ Importantly this improves the energy efficiency while preserving Ethereum's dece
 
 Timelines can't be exact at this stage, but it's estimated that the transition from mining to staking will be complete some time in 2021/2022. This process is known as the docking or the merge. [More on the docking](/eth2/the-docking/).
 
-[More on Eth2](/eth2/)
+<ButtonLink to="/eth2/">More on Eth2</ButtonLink>
 
 <!-- #### Rollups in the meantime...
 
