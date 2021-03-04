@@ -5,7 +5,7 @@ import axios from "axios"
 
 import Translation from "../components/Translation"
 import Link from "./Link"
-import { FakeLinkExternal, H2, H3 } from "./SharedStyledComponents"
+import { FakeLinkExternal } from "./SharedStyledComponents"
 
 import { translateMessageId } from "../utils/translations"
 
@@ -174,9 +174,9 @@ const Roadmap = () => {
       <p>
         <Translation id="page-about-p-4" />
       </p>
-      <H3>
+      <h3>
         <Translation id="page-about-h3" />
-      </H3>
+      </h3>
       <p>
         <Translation id="page-about-p-5" />{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website/labels/Status%3A%20In%20Progress">
@@ -185,9 +185,9 @@ const Roadmap = () => {
         .
       </p>
       <IssueSection issues={issues.inProgress} />
-      <H3>
+      <h3>
         <Translation id="page-about-h3-2" />
-      </H3>
+      </h3>
       <p>
         <Translation id="page-about-p-6" />{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aissue+is%3Aopen+label%3A%22Status%3A+Up+Next%22">
@@ -196,9 +196,9 @@ const Roadmap = () => {
         .
       </p>
       <IssueSection issues={issues.planned} />
-      <H3>
+      <h3>
         <Translation id="page-about-h3-1" />
-      </H3>
+      </h3>
       <p>
         <Translation id="page-about-p-7" />{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aissue+is%3Aclosed">
@@ -207,9 +207,9 @@ const Roadmap = () => {
         .
       </p>
       <IssueSection issues={issues.implemented} />
-      <H2>
+      <h2>
         <Translation id="page-about-h2" />
-      </H2>
+      </h2>
       <p>
         <Translation id="page-about-p-8" />
       </p>

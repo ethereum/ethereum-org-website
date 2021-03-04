@@ -40,6 +40,9 @@ const Title = styled.h1`
   font-size: 14px;
   line-height: 140%;
   letter-spacing: 0.04em;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  margin-top: 0;
   text-transform: uppercase;
   color: ${(props) => props.theme.colors.textTableOfContents};
 `
@@ -88,6 +91,14 @@ const Header = styled.header`
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     margin-top: 1.5rem;
   }
+`
+
+const H2 = styled.h2`
+  margin-top: 0;
+`
+
+const H4 = styled.h4`
+  font-weight: 600;
 `
 
 const StyledCardContainer = styled(CardContainer)`
@@ -294,17 +305,17 @@ const WhatIsEthereumPage = (props) => {
       </GrayContainer>
       <Content>
         <CentralColumn>
-          <h2>
+          <H2>
             <Translation id="page-eth-whats-unique" />
-          </h2>
+          </H2>
           <p>
             <Translation id="page-eth-whats-unique-desc" />
           </p>
           <EthVideo alt={translateMessageId("page-eth-video-alt", intl)} />
           <div>
-            <h4>
+            <H4>
               <Translation id="page-eth-fuels" />
-            </h4>
+            </H4>
             <p>
               <Translation id="page-eth-fuels-desc" />
             </p>
@@ -339,9 +350,9 @@ const WhatIsEthereumPage = (props) => {
           />
           <TextDivider />
           <div>
-            <h4>
+            <H4>
               <Translation id="page-eth-underpins" />
-            </h4>
+            </H4>
             <p>
               <Translation id="page-eth-underpins-desc" />
             </p>
@@ -351,9 +362,9 @@ const WhatIsEthereumPage = (props) => {
           </div>
           <TextDivider />
           <div>
-            <h4>
+            <H4>
               <Translation id="page-eth-uses" />
-            </h4>
+            </H4>
             <p>
               <Translation id="page-eth-uses-desc" />
             </p>

@@ -103,7 +103,7 @@ So you get reimbursed for proving fraud.
 | Pros                                                                                                             | Cons                                                                                                             |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | Anything you can do on Ethereum layer 1, you can do with Optimistic rollups as it's EVM and Solidity compatible. | Long wait times for on-chain transaction due to potential fraud challenges.                                      |
-| All transaction data is stored on the layer 1 chain, meaning it's secure and decentralized.                      | Potentially vulnerable to attacks if the value in an Optimistic rollup exceeds the amount in an operator's bond. |
+| All transaction data is stored on the layer 1 chain, meaning it's secure and decentralized.                      |  |
 
 #### Use Optimistic rollups {#use-optimistic-rollups}
 

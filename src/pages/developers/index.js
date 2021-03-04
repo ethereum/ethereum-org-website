@@ -76,6 +76,7 @@ const H1 = styled.h1`
   line-height: 110%;
   background: ${(props) => props.theme.colors.ednBackground};
   padding: 0.5rem;
+  margin-top: 0rem;
 `
 
 const Subtitle = styled.div`

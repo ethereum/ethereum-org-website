@@ -1,6 +1,5 @@
 import styled from "styled-components"
 
-import { Mixins } from "../theme"
 import Card from "./Card"
 import Link from "./Link"
 
@@ -150,27 +149,6 @@ export const FakeLinkExternal = styled.div`
   }
 `
 
-// Headers
-
-export const H1 = styled.h1`
-  ${Mixins.textLevel1}
-`
-export const H2 = styled.h2`
-  ${Mixins.textLevel2}
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    font-size: 1.5rem;
-  }
-`
-export const H3 = styled.h3`
-  ${Mixins.textLevel3}
-`
-export const H4 = styled.h4`
-  ${Mixins.textLevel4}
-`
-export const H5 = styled.h5`
-  ${Mixins.textLevel5}
-`
-
 export const CardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -282,12 +260,7 @@ export const Paragraph = styled.p`
 `
 
 export const Header1 = styled.h1`
-  ${Mixins.textLevel1}
-  font-weight: 700;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    font-size: 2.5rem;
-  }
+  font-weight: 700; // This overrides base h1 styling of 400
 
   /* Prevent nav overlap */
   &:before {
@@ -305,12 +278,11 @@ export const Header1 = styled.h1`
 `
 
 export const Header2 = styled.h2`
-  ${Mixins.textLevel2}
+  font-weight: 700; // This overrides base h2 styling of 600
 
   /* Needed to fix issues of header padding overlapping links */
   /* https://github.com/confluenza/confluenza/pull/17 */
   position: inherit !important;
-  font-weight: 700;
 
   /* Prevent nav overlap */
   &:before {
@@ -342,16 +314,9 @@ export const Header2 = styled.h2`
       fill: ${(props) => props.theme.colors.primary};
     }
   }
-
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    font-size: 1.25rem;
-  }
 `
 
 export const Header3 = styled.h3`
-  ${Mixins.textLevel3}
-  font-weight: 600;
-
   /* Needed to fix issues of header padding overlapping links */
   /* https://github.com/confluenza/confluenza/pull/17 */
   position: inherit !important;
@@ -389,8 +354,7 @@ export const Header3 = styled.h3`
 `
 
 export const Header4 = styled.h4`
-  ${Mixins.textLevel4}
-  font-weight: 600;
+  font-weight: 600; // This overrides base h2 styling of 400
 
   /* Needed to fix issues of header padding overlapping links */
   /* https://github.com/confluenza/confluenza/pull/17 */

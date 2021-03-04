@@ -20,6 +20,7 @@ import {
 } from "./SharedStyledComponents"
 
 import { translateMessageId } from "../utils/translations"
+import { BsTypeH3 } from "react-icons/bs"
 
 const Card = styled.div`
   border-radius: 2px;
@@ -57,8 +58,6 @@ const StyledTwoColumnContent = styled(TwoColumnContent)`
 `
 
 const Title = styled.h3`
-  font-size: 24px;
-  font-weight: 600;
   margin-top: 0rem;
   margin-bottom: 0rem;
 `
@@ -147,7 +146,6 @@ const InfoTitle = styled(StepboxTitle)`
   font-weight: 700;
   text-align: left;
   margin-top: 0rem;
-  margin-bottom: 1 rem;
 `
 // Todo create component
 const StepBoxContainer = styled.div`
@@ -189,6 +187,15 @@ const StepBoxRow = styled.div`
 
 const StyledRightColumn = styled(RightColumn)`
   width: 100%;
+`
+
+const H4 = styled.h4`
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 1rem;
 `
 
 const SWAP = "swap"
@@ -548,9 +555,9 @@ const StablecoinAccordion = () => {
                 </StepBox>
               </StepBoxContainer>
               <InfoBanner emoji=":light_bulb:">
-                <InfoTitle>
+                <H4>
                   <Translation id="page-stablecoins-accordion-swap-editors-tip" />
-                </InfoTitle>
+                </H4>
                 <p>
                   <Translation id="page-stablecoins-accordion-swap-editors-tip-copy" />
                 </p>

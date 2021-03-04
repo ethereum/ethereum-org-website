@@ -2902,6 +2902,62 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "yakkomajuri",
+      "name": "Yakko Majuri",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38760734?v=4",
+      "profile": "http://yakko.tech",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "adlerjohn",
+      "name": "John Adler",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3290375?v=4",
+      "profile": "https://github.com/adlerjohn",
+      "contributions": [
+        "content",
+        "bug"
+      ]
+    },
+    {
+      "login": "fubuloubu",
+      "name": "Just some guy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3859395?v=4",
+      "profile": "https://github.com/fubuloubu",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "ved08",
+      "name": "Vedvardhan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37742218?v=4",
+      "profile": "https://github.com/ved08",
+      "contributions": [
+        "content",
+        "bug"
+      ]
+    },
+    {
+      "login": "vemuez",
+      "name": "Yussuf Elarif",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9627828?v=4",
+      "profile": "https://github.com/vemuez",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "davidawad",
+      "name": "David Awad",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4019054?v=4",
+      "profile": "https://davidawad.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

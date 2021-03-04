@@ -27,6 +27,7 @@ const Label = styled.h2`
   font-size: 14px;
   margin-bottom: 1.5rem;
   font-weight: 400;
+  margin-top: 0;
 `
 
 const Date = styled.p`

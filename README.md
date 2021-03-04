@@ -835,6 +835,14 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/AlexSSD7"><img src="https://avatars.githubusercontent.com/u/43043344?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alexander Sadovskyi</b></sub></a><br /><a href="#content-AlexSSD7" title="Content">🖋</a></td>
     <td align="center"><a href="https://www.etggames.com/"><img src="https://avatars.githubusercontent.com/u/13756744?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ethan Sarif-Kattan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AEthanSK" title="Bug reports">🐛</a> <a href="#content-EthanSK" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/cj-technical"><img src="https://avatars.githubusercontent.com/u/58790577?v=4?s=100" width="100px;" alt=""/><br /><sub><b>C.J. Kozarski</b></sub></a><br /><a href="#content-cj-technical" title="Content">🖋</a></td>
+    <td align="center"><a href="http://yakko.tech"><img src="https://avatars.githubusercontent.com/u/38760734?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Yakko Majuri</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=yakkomajuri" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/adlerjohn"><img src="https://avatars.githubusercontent.com/u/3290375?v=4?s=100" width="100px;" alt=""/><br /><sub><b>John Adler</b></sub></a><br /><a href="#content-adlerjohn" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aadlerjohn" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/fubuloubu"><img src="https://avatars.githubusercontent.com/u/3859395?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Just some guy</b></sub></a><br /><a href="#content-fubuloubu" title="Content">🖋</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/ved08"><img src="https://avatars.githubusercontent.com/u/37742218?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vedvardhan</b></sub></a><br /><a href="#content-ved08" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aved08" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/vemuez"><img src="https://avatars.githubusercontent.com/u/9627828?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Yussuf Elarif</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Avemuez" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://davidawad.com"><img src="https://avatars.githubusercontent.com/u/4019054?v=4?s=100" width="100px;" alt=""/><br /><sub><b>David Awad</b></sub></a><br /><a href="#content-davidawad" title="Content">🖋</a></td>
   </tr>
 </table>
 

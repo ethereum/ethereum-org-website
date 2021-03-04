@@ -155,6 +155,10 @@ const CalloutCardContainer = styled(CardContainer)`
   margin-top: 4rem;
 `
 
+const H2 = styled.h2`
+  /* margin: 0; */
+`
+
 const cards = [
   {
     emoji: ":dollar:",
@@ -279,9 +283,9 @@ const WalletsPage = ({ data }) => {
       <PageHero content={heroContent} />
       <StyledGrayContainer>
         <Intro>
-          <h2>
+          <H2>
             <Translation id="page-wallets-whats-a-wallet" />
-          </h2>
+          </H2>
         </Intro>
         <IntroTwoColumnContent>
           <LeftColumn>
@@ -319,9 +323,9 @@ const WalletsPage = ({ data }) => {
       </StyledGrayContainer>
       <StyledTwoColumnContent>
         <LeftColumn>
-          <h2>
+          <H2>
             <Translation id="page-wallets-accounts-addresses" />
-          </h2>
+          </H2>
           <p>
             <Translation id="page-wallets-accounts-addresses-desc" />
           </p>
@@ -347,9 +351,9 @@ const WalletsPage = ({ data }) => {
           </p>
         </LeftColumn>
         <RightColumn>
-          <h2>
+          <H2>
             <Translation id="page-wallets-types" />
-          </h2>
+          </H2>
           <div>
             {types.map((type, idx) => (
               <WalletType
@@ -365,9 +369,9 @@ const WalletsPage = ({ data }) => {
       </StyledTwoColumnContent>
       <GradientContainer>
         <Content>
-          <h2>
+          <H2>
             <Translation id="page-wallets-get-wallet" />
-          </h2>
+          </H2>
           <p>
             <Translation id="page-wallets-get-wallet-desc" />
           </p>
@@ -406,9 +410,9 @@ const WalletsPage = ({ data }) => {
         <Content>
           <CentralColumn>
             <Divider />
-            <h2>
+            <H2>
               <Translation id="page-wallets-features-title" />
-            </h2>
+            </H2>
             <SubtitleThree>
               <Translation id="page-wallets-features-desc" />
             </SubtitleThree>
@@ -421,9 +425,9 @@ const WalletsPage = ({ data }) => {
       </GradientContainer>
       <TwoColumnContent>
         <LeftColumn>
-          <h2>
+          <H2>
             <Translation id="page-wallets-stay-safe" />
-          </h2>
+          </H2>
           <SubtitleTwo>
             <Translation id="page-wallets-stay-safe-desc" />
           </SubtitleTwo>
@@ -482,9 +486,9 @@ const WalletsPage = ({ data }) => {
           </div>
         </LeftColumn>
         <RightColumn>
-          <h2>
+          <H2>
             <Translation id="page-wallets-tips" />
-          </h2>
+          </H2>
           <SubtitleTwo>
             <Translation id="page-wallets-tips-community" />
           </SubtitleTwo>
@@ -493,9 +497,9 @@ const WalletsPage = ({ data }) => {
       </TwoColumnContent>
       <Content>
         <Divider />
-        <h2>
+        <H2>
           <Translation id="page-wallets-explore" />
-        </h2>
+        </H2>
         <CalloutCardContainer>
           <StyledCallout
             image={data.eth.childImageSharp.fixed}
@@ -652,6 +656,9 @@ export const query = graphql`
       ...listImage
     }
     gnosis: file(relativePath: { eq: "wallets/gnosis.png" }) {
+      ...listImage
+    }
+    guarda: file(relativePath: { eq: "wallets/guarda.png" }) {
       ...listImage
     }
     hyperpay: file(relativePath: { eq: "wallets/hyperpay.png" }) {

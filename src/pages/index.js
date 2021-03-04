@@ -20,7 +20,6 @@ import {
   CardContainer,
   Content,
   GrayContainer,
-  H2,
   LeftColumn,
 } from "../components/SharedStyledComponents"
 import {
@@ -46,7 +45,7 @@ const StyledContent = styled(Content)`
 const H1 = styled.h1`
   font-size: 40px;
   font-weight: 700;
-  margin-bottom: 0rem;
+  margin: 0;
   text-align: center;
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     font-size: 32px;
@@ -354,7 +353,11 @@ const StyledIcon = styled(Icon)`
   }
 `
 
-const StyledH2 = styled(H2)`
+const H2 = styled.h2`
+  margin: 0 0 1.5rem;
+`
+
+const StyledH2 = styled.h2`
   margin-bottom: 0.5rem;
   font-family: serif;
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
@@ -861,9 +864,9 @@ contract SimpleDomainRegistry {
       </DeveloperContainer>
       <StyledGrayContainer>
         <StyledContent>
-          <H2>
+          <h2>
             <Translation id="page-index-network-stats-title" />
-          </H2>
+          </h2>
           <Subtitle>
             <Translation id="page-index-network-stats-subtitle" />
           </Subtitle>
@@ -871,9 +874,9 @@ contract SimpleDomainRegistry {
         <StatsBoxGrid />
       </StyledGrayContainer>
       <StyledContent>
-        <H2>
+        <h2>
           <Translation id="page-index-touts-header" />
-        </H2>
+        </h2>
       </StyledContent>
       <StyledContent>
         <StyledCardContainer>

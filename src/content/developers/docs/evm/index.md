@@ -46,11 +46,6 @@ Contract creation results in the creation of a new contract account containing c
 
 The EVM executes as a [stack machine](https://en.wikipedia.org/wiki/Stack_machine) with a depth of 1024 items. Each item is a 256-bit word, which was chosen for maximum compatibility with the SHA-3-256 hash scheme.
 
-<!-- ![A diagram showing the make up of the stack](./evm-stack.png)
-_Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
-
-Removed as we should probably show memory and account storage too if showing stack-->
-
 During execution, the EVM maintains a transient _memory_ (as a word-addressed byte array), which does not persist between transactions.
 
 Contracts, however, do contain a Merkle Patricia _storage_ trie (as a word-addressable word array), associated with the account in question and part of the global state.

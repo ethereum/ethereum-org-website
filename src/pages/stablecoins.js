@@ -141,12 +141,7 @@ const DaiSubtitle = styled.p`
 `
 
 const H2 = styled.h2`
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: 0px;
-  text-align: left;
+  margin-top: 0rem;
 `
 
 const H3 = styled.h3`
@@ -154,6 +149,8 @@ const H3 = styled.h3`
   font-style: normal;
   font-weight: 700;
   text-align: left;
+  margin-top: 0;
+  margin-bottom: 1rem;
 `
 /* const OptionContainer = styled.div`
   display: flex;
@@ -185,6 +182,7 @@ const FullWidthContainer = styled(Page)`
 const DaiH2 = styled.h2`
   font-size: 32px;
   font-weight: 700;
+  margin-top: 0;
   margin-bottom: 0.5rem;
   a {
     display: none;
@@ -760,12 +758,12 @@ const StablecoinsPage = ({ data }) => {
               />
             </USDCBanner>
           </Row>
-          <H3>
+          <h3>
             <Translation id="page-stablecoins-top-coins" />
             <Tooltip content={tooltipContent}>
               <InfoIcon name="info" size="14" />
             </Tooltip>
-          </H3>
+          </h3>
           <p>
             <Translation id="page-stablecoins-top-coins-intro" />{" "}
             <Translation id="page-stablecoins-top-coins-intro-code" />
@@ -780,9 +778,9 @@ const StablecoinsPage = ({ data }) => {
         </TableContent>
       </StyledGradientContainer>
       <Content id="explore">
-        <H2>
+        <h2>
           <Translation id="page-stablecoins-get-stablecoins" />
-        </H2>
+        </h2>
       </Content>
       <FullWidthContainer>
         <StablecoinAccordion />
@@ -811,17 +809,17 @@ const StablecoinsPage = ({ data }) => {
             </ButtonLink>
           </div>
         </StyledCalloutBanner>
-        <H2>
+        <h2>
           <Translation id="page-stablecoins-save-stablecoins" />
-        </H2>
+        </h2>
         <TwoColumnContent>
           <LeftColumn>
             <p>
               <Translation id="page-stablecoins-save-stablecoins-body" />
             </p>
-            <H3>
+            <h3>
               <Translation id="page-stablecoins-interest-earning-dapps" />
-            </H3>
+            </h3>
             <p>
               <Translation id="page-stablecoins-saving" />
             </p>
@@ -856,9 +854,9 @@ const StablecoinsPage = ({ data }) => {
           ))}
         </StyledCardGrid>
         <InfoBanner isWarning={true} shouldCenter={true}>
-          <H2>
+          <H3>
             <Translation id="page-stablecoins-research-warning-title" />
-          </H2>
+          </H3>
           <Translation id="page-stablecoins-research-warning" />
         </InfoBanner>
       </Content>

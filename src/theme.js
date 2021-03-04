@@ -326,8 +326,8 @@ const theme = {
     s: "0.875rem", // 14px
     m: "1rem", // 16px
     r: "1.125rem", // 18px
-    l: "1.5rem", // 20px
-    xl: "2rem", // 24px
+    l: "1.5rem", // 24px
+    xl: "2rem", // 32px
   },
   breakpoints: {
     xs: "320px",
@@ -415,59 +415,117 @@ export const GlobalStyle = createGlobalStyle`
       position: absolute;
     }
   }
-  `
-
-// Mixins
-// TODO must be a better way...
-export const Mixins = {
-  textLevel1: `
+  
+  h1 {
     font-size: 3rem;
     line-height: 1.4;
     margin: 2rem 0;
-    font-weight: 400;
-  `,
-  textLevel2: `
+    font-weight: 700;
+    @media (max-width: ${theme.breakpoints.m}) {
+      font-size: 2.5rem;
+    }
+  }
+  
+  h2 {
     font-size: 2rem;
     line-height: 1.4;
     margin: 2rem 0;
+    margin-top: 3rem;
     font-weight: 600;
-  `,
-  textLevel3: `
+    @media (max-width: ${theme.breakpoints.m}) {
+      font-size: 1.5rem;
+    }
+  }
+  
+  h3 {
     font-size: 1.5rem;
     line-height: 1.4;
-    margin: 1.5rem 0 2rem;
+    margin: 2rem 0;
+    margin-top: 2.5rem;
     font-weight: 600;
-  `,
-  textLevel4: `
+    @media (max-width: ${theme.breakpoints.m}) {
+      font-size: 1.25rem;
+    }
+  }
+  
+  h4 {
     font-size: 1.25rem;
     line-height: 1.4;
-    font-weight: 400;
-    margin-top: 2rem;
-  `,
-  textLevel5: `
+    font-weight: 500;
+    margin: 2rem 0;
+    @media (max-width: ${theme.breakpoints.m}) {
+      font-size: 1rem;
+    }
+  }
+  
+  h5 {
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.4;
+    font-weight: 450;
+    margin: 2rem 0;
+  }
+
+  h6 {
+    font-size: 0.9rem;
+    line-height: 1.4;
     font-weight: 400;
-    margin-top: 2rem;
-  `,
-  textLevel6: `
-    font-size: .875rem;
-    line-height: 1.6;
-    font-weight: 400;
-    letter-spacing: 0.04em;
-    margin: 1.14em 0;
-    text-transform uppercase
-  `,
-  textLevel7: `
-    font-size: 1rem;
-    line-height: 1.6;
-    font-weight: 400;
-    margin: 2rem 0 1rem;
-  `,
-  textLevel8: `
-    font-size: .875rem;
-    line-height:1.6;
-    margin: 1.14em 0;
-    font-weight: 400;
-  `,
-}
+    text-transform: uppercase;
+    margin: 2rem 0;
+  }
+  
+`
+// H6 basically only uses as labels as per design system
+
+// Old Mixins for referecne
+// export const Mixins = {
+//   textLevel1: `
+//     font-size: 3rem;
+//     line-height: 1.4;
+//     margin: 2rem 0;
+//     font-weight: 400;
+//   `,
+//   textLevel2: `
+//     font-size: 2rem;
+//     line-height: 1.4;
+//     margin: 2rem 0;
+//     font-weight: 600;
+//   `,
+//   textLevel3: `
+//     font-size: 1.5rem;
+//     line-height: 1.4;
+//     margin: 1.5rem 0 2rem;
+//     font-weight: 600;
+//   `,
+//   textLevel4: `
+//     font-size: 1.25rem;
+//     line-height: 1.4;
+//     font-weight: 400;
+//     margin-top: 2rem;
+//   `,
+//   textLevel5: `
+//     font-size: 1rem;
+//     line-height: 1.6;
+//     font-weight: 400;
+//     margin-top: 2rem;
+//   `,
+//   textLevel6: `
+//     font-size: .875rem;
+//     line-height: 1.6;
+//     font-weight: 400;
+//     letter-spacing: 0.04em;
+//     margin: 1.14em 0;
+//     text-transform uppercase
+//   `,
+//   textLevel7: `
+//     font-size: 1rem;
+//     line-height: 1.6;
+//     font-weight: 400;
+//     margin: 2rem 0 1rem;
+//   `,
+//   textLevel8: `
+//     font-size: .875rem;
+//     line-height:1.6;
+//     margin: 1.14em 0;
+//     font-weight: 400;
+//   `,
+// }

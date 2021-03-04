@@ -20,7 +20,7 @@ Make sure you've read up on [accounts](/developers/docs/accounts/), [transaction
 
 ## A digital vending machine {#a-digital-vending-machine}
 
-Perhaps the best metaphor for a smart contract is a vending machine, as described by Nick Szabo. With the right inputs, a certain output is guaranteed.
+Perhaps the best metaphor for a smart contract is a vending machine, as described by [Nick Szabo](https://unenumerated.blogspot.com/). With the right inputs, a certain output is guaranteed.
 
 To get a snack from a vending machine:
 
