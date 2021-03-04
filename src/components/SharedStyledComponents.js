@@ -462,4 +462,7 @@ export const CardItem = styled(Link)`
     box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
     border: 1px solid ${(props) => props.theme.colors.black300};
   }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    flex: 1 1 240px;
+  }
 `
