@@ -329,7 +329,9 @@ That's 1.91% of the energy consumed by visa transactions. Question: will this in
 
 Importantly this improves the energy efficiency while preserving Ethereum's decentralization and security. Many other blockchains out there might already use some form of staking, but they're secured by a select few stakers, not the thousands that Ethereum will have. The more decentralization, the more secure the system.
 
-Timelines can't be exact at this stage, but it's estimated that the transition from mining to staking will be complete some time in 2021/2022. This process is known as the docking or the merge. [More on the docking](/eth2/the-docking/).
+#### Timelines {#timelines}
+
+The process has already started. [The Beacon Chain](/eth2/beacon-chain/), the first upgrade, shipped in December 2020. This provides the foundation for staking by allowing stakers to join the system. The next step is to merge the current chain, the one secured by miners, into the Beacon Chain where mining isn't needed. Timelines can't be exact at this stage, but it's estimated that this will happen some time in 2021/2022. This process is known as the docking or the merge. [More on the docking](/eth2/docking/).
 
 <ButtonLink to="/eth2/">More on Eth2</ButtonLink>
 
