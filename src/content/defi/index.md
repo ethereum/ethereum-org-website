@@ -40,14 +40,15 @@ One of the best ways to see the potential of DeFi is to understand the problems 
 
 ### A comparison {#defi-comparison}
 
-| DeFi                                                  | Traditional finance                                                                   |
-| ----------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| You hold your money                                   | Your money is held by companies                                                       |
-| You control where your money goes and hows it's spent | You have to trust companies not to mismanage your money, like lend to risky borrowers |
-| Transfers happen in minutes                           | Payments can take days due to manual processes                                        |
-| Pseudonymous                                          | Financial activity is tightly coupled with your identity                              |
-| Open to anyone                                        | You must apply to use financial services                                              |
-| Markets are always open                               | Markets close because employees need breaks                                           |
+| DeFi                                                                                          | Traditional finance                                                                                                            |
+| --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| You hold your money.                                                                          | Your money is held by companies.                                                                                               |
+| You control where your money goes and hows it's spent.                                        | You have to trust companies not to mismanage your money, like lend to risky borrowers.                                         |
+| Transfers happen in minutes.                                                                  | Payments can take days due to manual processes.                                                                                |
+| Pseudonymous.                                                                                 | Financial activity is tightly coupled with your identity.                                                                      |
+| Open to anyone.                                                                               | You must apply to use financial services.                                                                                      |
+| Markets are always open.                                                                      | Markets close because employees need breaks.                                                                                   |
+| Built on transparency – anyone can look at a product's data and inspect how the system works. | Financial institutions are closed books: you can't ask to see their loan history, a record of their managed assets, and so on. |
 
 <ButtonLink to="/dapps/?category=finance">Explore DeFi apps</ButtonLink>
 

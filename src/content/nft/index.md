@@ -246,27 +246,26 @@ NFTs are growing in popularity which means they're also coming under increased s
 
 To clarify a few things:
 
-- By pressing the button to create or buy an NFT you are not directly releasing carbon into the atmosphere.
 - NFTs aren't directly increasing the carbon footprint of Ethereum.
+- The way Ethereum keeps your funds and assets secure is currently energy-intensive but it's about to improve.
+- Once improved, Ethereum's carbon footprint will 99.98% better, making it more energy efficient than many existing industries.
 
-Here's where things are going to get a little technical, but bear with us...
+To explain, things are going to get a little more technical, but bear with us...
 
 ### Don't blame it on the NFTs
 
-The whole NFT ecosystem works because Ethereum is decentralized and tamper-proof.
+The whole NFT ecosystem works because Ethereum is decentralized and secure.
 
-Decentralized meaning you and everyone else can verify you own something without trusting or granting custody to a centralized third party who can impose their own rules at will. It also means your NFT is portable across many different products and markets.
+Decentralized meaning you and everyone else can verify you own something. All without trusting or granting custody to a third party who can impose their own rules at will. It also means your NFT is portable across many different products and markets.
 
-Tamper-proof meaning no one can copy/paste your NFT or steal it.
+Secure meaning no one can copy/paste your NFT or steal it.
 
-These qualities of Ethereum makes digitally owning unique items and monetising your content fairly possible.
-
-Blockchains like Bitcoin and Ethereum are energy intensive right now because it takes a lot of energy to preserve these qualities. If it was easy to rewrite Ethereum's history to steal NFTs or cryptocurrency, the system collapses.
+These qualities of Ethereum makes digitally owning unique items and getting a fair price for your content possible. But it comes at a cost. Blockchains like Bitcoin and Ethereum are energy intensive right now because it takes a lot of energy to preserve these qualities. If it was easy to rewrite Ethereum's history to steal NFTs or cryptocurrency, the system collapses.
 
 <!-- [Need: how do centralized systems do this and why is it worse?]
  -->
 
-#### The work in minting an NFT
+#### The work in minting your NFT
 
 When you mint an NFT, a few things have to happen:
 
@@ -279,11 +278,11 @@ These tasks are done by miners. And they let the rest of the network know about 
 
 [More on mining](/developers/docs/consensus-mechanisms/pow/)
 
-#### Making the NFT tamper-proof
+#### Securing your NFT with mining
 
 Mining difficulty comes from the fact that it takes a lot of computing power to create new blocks in the chain. Importantly, blocks are created consistently, not just when they're needed. They're created every 12 seconds or so.
 
-This is important for making Ethereum tamper-proof, one of the qualities that makes NFTs possible. The more blocks the more secure the chain. If your NFT was created in block #600 and a hacker were to try and change themselves to the creator of your NFT, it would immediately change the digital fingerprint of all subsequent blocks, #601, #602, #603, and so on. That means anyone running Ethereum software would immediately be able to tell and prevent it from happening.
+This is important for making Ethereum tamper-proof, one of the qualities that makes NFTs possible. The more blocks the more secure the chain. If your NFT was created in block #600 and a hacker were to try and change themselves to the creator of your NFT, it would immediately change the digital fingerprint of all subsequent blocks, #601, #602, #603, and so on. That means anyone running Ethereum software would immediately be able to detect and prevent it from happening.
 
 However this means that computing power needs to be used constantly. It also means that a block that contains 0 NFT transactions will still have roughly the same carbon footprint, because computing power will still be consumed to create it. Other non-NFT transactions will fill the blocks.
 
@@ -293,7 +292,7 @@ So yes, there is a carbon footprint associated with creating blocks by mining â€
 
 A lot of mining is done using renewable energy sources or untapped energy in remote locations. And there is the argument that the industries that NFTs and cryptocurrencies are disrupting have huge carbon footprints too. But just because existing industries are bad, doesn't mean we shouldn't strive to be better.
 
-And we are. Ethereum is going through some upgrades to make using Ethereum (and by virtue, NFTs) more energy efficient. And that's always been the plan.
+And we are. Ethereum is evolving to make using Ethereum (and by virtue, NFTs) more energy efficient. And that's always been the plan.
 
 ### A greener future...
 
@@ -305,22 +304,36 @@ This vision is being delivered right now.
 
 #### The end goal: Eth2
 
-Ethereum is currently going through a series of upgrades, known as Eth2, that will replace mining with [staking](/staking/). This will remove computing power as a security mechanism, and reduce Ethereum's carbon footprint by several orders of magnitude. Stakers commit funds instead of computing power to secure the network.
+Ethereum is currently going through a series of upgrades, known as Eth2, that will replace mining with [staking](/staking/). This will remove computing power as a security mechanism, and reduce Ethereum's carbon footprint by ~99.98%\*. Stakers commit funds instead of computing power to secure the network.
 
-The energy-cost of Ethereum will become the cost of running a home computer multiplied by the number of nodes in the network. If there are 10,000 nodes in the network and the cost of running a home computer is roughly 400kWh per year. That's 4gWh per year for the entire network. By comparison, [mining is estimated to consume ~24tWh](https://digiconomist.net/ethereum-energy-consumption).
+The energy-cost of Ethereum will become the cost of running a home computer multiplied by the number of nodes in the network. If there are 10,000 nodes in the network and the cost of running a home computer is roughly 400kWh per year. That's 4,000,000 kWh per year for the entire network. By comparison, that's 1.91% of the estimated yearly energy consumption of a huge company like Visa\*.
 
-[@paul should we compare this to visa? This website estimates that 100,000 visa transactions costs 149 gwh: https://www.statista.com/statistics/881541/bitcoin-energy-consumption-transaction-comparison-visa/ â€“ if we figure out how many ttransactions in a year that visa does, we can compare it to the total energy in PoS?]
+<!-- ----
+*SOURCES
+----
 
 Mining: 24000000000 kwH
 Staking: 4000000 kwH
 
 4000000 / 24000000000 \* 100 = 0.01666666667% 1/10,000th of a percent of the energy consumption.
 
-Importantly this improves the energy efficiency while preserving the decentralization and security. Many other blockchains out there might already use some form of staking, but they might be secured by a select few stakers, not the 1000s that Ethereum will have. The more decentralization, the more secure the system.
+//
+Visa transactions year-to-date 20 September 2020: 140839000000
+https://s1.q4cdn.com/050606653/files/doc_financials/2020/q4/Visa-Inc.-Q4-2020-Operational-Performance-Data.pdf
+
+If 100,000 visa transactions cost 149,000 kwh
+https://www.statista.com/statistics/881541/bitcoin-energy-consumption-transaction-comparison-visa/
+
+That's a total of 209,850,110 kwh for the year.
+Staking is estimated at 10,000*400kwh = 4,000,000 kwh for the year.
+
+That's 1.91% of the energy consumed by visa transactions. Question: will this increase significantly if ethereum does the same number of transactions? -->
+
+Importantly this improves the energy efficiency while preserving Ethereum's decentralization and security. Many other blockchains out there might already use some form of staking, but they're secured by a select few stakers, not the thousands that Ethereum will have. The more decentralization, the more secure the system.
 
 [More on Eth2](/eth2/)
 
-#### Rollups in the meantime...
+<!-- #### Rollups in the meantime...
 
 While we wait for Eth2, products are moving to a "layer 2" technology known as rollups. Working on top of Ethereum, this technology lets you "roll up" or batch many transactions into a single one that is submitted to the chain. By moving as many things off the chain and only submitting the truly important bits (the cryptographic proofs), demand for block space will decrease. This will in turn lower the amount of computing power needed to create new blocks.
 
@@ -332,7 +345,7 @@ Ethereum is open source software and new standards are being figured out and agr
 
 [More on EIP-2309](https://eips.ethereum.org/EIPS/eip-2309)
 
-[to me this doesn't solve the problem if block space remains the same due to mining etc... should we include?]
+[to me this doesn't solve the problem if block space remains the same due to mining etc... should we include?] -->
 
 <!-- Ethereum currently used proof-of-work to achieve consensus. It is a top priority of the community to transition to a proof-of-stake system, to increase decentralization, security and scalability, while reducing energy consumption requirements imposed from proof-of-work. Several layer 2 scaling solutions, such as rollups, are being developed and implemented which also aim to improve scalability while decreasing energy usage. EIP-2309 is a proposal also aiming to improve the efficiency of layer 1 NFT transactions.
 
@@ -376,7 +389,7 @@ Want to turn your content into a NFT?
 
 ## Build with NFTs {#build-with-nfts}
 
-Most NFTs are built using a consistent standard known as [ERC-721](/developers/docs/standards/tokens/erc-721/). However there is a newer ERC-1155 standard which aims to make NFTs more efficient, especially in the realm of gaming.
+Most NFTs are built using a consistent standard known as [ERC-721](/developers/docs/standards/tokens/erc-721/). However there are other standards that you might want to look into. The [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) standard allows for semi-fungible tokens which is particularly useful in the realm of gaming. And more recently, [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) has been proposed to make minting NFTs a lot more efficient. This standard lets you mint as many as you like in one transaction!
 
 ## Further reading {#further-reading}
 
