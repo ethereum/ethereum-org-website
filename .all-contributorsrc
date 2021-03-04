@@ -2940,6 +2940,24 @@
         "content",
         "bug"
       ]
+    },
+    {
+      "login": "vemuez",
+      "name": "Yussuf Elarif",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9627828?v=4",
+      "profile": "https://github.com/vemuez",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "davidawad",
+      "name": "David Awad",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4019054?v=4",
+      "profile": "https://davidawad.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

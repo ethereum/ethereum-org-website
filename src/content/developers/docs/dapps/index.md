@@ -17,7 +17,7 @@ A dapp has its backend code running on a decentralized peer-to-peer network. Con
 
 A dapp can have frontend code and user interfaces written in any language (just like an app) that can make calls to its backend. Furthermore, its frontend can be hosted on decentralized storage such as [IPFS](https://ipfs.io/).
 
-- **Decentralized** that makes them independent, and no one controls them.
+- **Decentralized** means they are independent, and no one can control them as a group.
 - **Deterministic** i.e., they perform the same function irrespective of the environment they are executed.
 - **Turing complete**, which means given the required resources, the dapp can perform any action.
 - **Isolated**, which means they are executed in a virtual environment known as Ethereum Virtual Machine so that if the smart contract happens to have a bug, it won’t hamper the normal functioning of the blockchain network.

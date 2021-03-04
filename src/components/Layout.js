@@ -80,10 +80,14 @@ const Layout = (props) => {
   const intl = props.pageContext.intl
   const theme = isDarkTheme ? darkTheme : lightTheme
 
-  const isPageOutdated = !!props.pageContext.isOutdated
-  const isPageTranslated = intl.language !== intl.defaultLanguage
+  const isPageLanguageEnglish = intl.language === intl.defaultLanguage
+  const isPageContentEnglish = !!props.pageContext.isContentEnglish
+  const isPageTranslationOutdated = !!props.pageContext.isOutdated
   const isPageRightToLeft = isLangRightToLeft(intl.language)
-  const shouldShowTranslationBanner = isPageOutdated || isPageTranslated
+
+  const shouldShowTranslationBanner =
+    isPageTranslationOutdated ||
+    (isPageContentEnglish && !isPageLanguageEnglish)
 
   const path = props.path
   const shouldShowSideNav = path.includes("/docs/")
@@ -100,10 +104,10 @@ const Layout = (props) => {
         <ThemeProvider theme={theme}>
           <GlobalStyle isDarkTheme={isDarkTheme} />
           <TranslationBanner
-            isPageOutdated={isPageOutdated}
+            shouldShow={shouldShowTranslationBanner}
+            isPageContentEnglish={isPageContentEnglish}
             isPageRightToLeft={isPageRightToLeft}
             originalPagePath={intl.originalPath}
-            shouldShow={shouldShowTranslationBanner}
           />
           <ContentContainer>
             <Nav

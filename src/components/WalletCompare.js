@@ -227,6 +227,9 @@ const WalletCompare = ({ location }) => {
       gnosis: file(relativePath: { eq: "wallets/gnosis.png" }) {
         ...walletCardImage
       }
+      guarda: file(relativePath: { eq: "wallets/guarda.png" }) {
+        ...walletCardImage
+      }
       hyperpay: file(relativePath: { eq: "wallets/hyperpay.png" }) {
         ...walletCardImage
       }
