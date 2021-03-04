@@ -263,6 +263,7 @@ const StyledButtonDropdown = styled(ButtonDropdown)`
 
 const StyledEmoji = styled(Emoji)`
   margin-right: 1rem;
+  flex-shrink: 0;
 `
 
 const MobileButtonDropdown = styled(StyledButtonDropdown)`
@@ -327,9 +328,8 @@ const MobileTableOfContents = styled(TableOfContents)`
 `
 
 const StyledBannerNotification = styled(BannerNotification)`
-  justify-content: center;
-  width: 100%;
   display: flex;
+  justify-content: center;
 `
 
 const TitleCard = styled.div`
@@ -376,10 +376,15 @@ const dropdownLinks = {
   ],
 }
 
-const UseCasePage = ({ data: { mdx } }) => {
+const UseCasePage = ({ data, pageContext }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(intl.locale)
+  const mdx = data.pageData
   const tocItems = mdx.tableOfContents.items
+
+  const { editContentUrl } = data.siteData.siteMetadata
+  const { relativePath } = pageContext
+  const absoluteEditPath = `${editContentUrl}${relativePath}`
 
   // TODO some `gitLogLatestDate` are `null` - why?
   const lastUpdatedDate = mdx.parent.fields
@@ -392,7 +397,7 @@ const UseCasePage = ({ data: { mdx } }) => {
         <div>
           Uses of Ethereum are always developing and evolving. Add any info you
           think will make things clearer or more up to date.{" "}
-          <Link to="/">Edit page</Link>
+          <Link to={absoluteEditPath}>Edit page</Link>
         </div>
       </StyledBannerNotification>
       <HeroContainer>
@@ -448,7 +453,12 @@ const UseCasePage = ({ data: { mdx } }) => {
 
 export const useCasePageQuery = graphql`
   query UseCasePageQuery($relativePath: String) {
-    mdx(fields: { relativePath: { eq: $relativePath } }) {
+    siteData: site {
+      siteMetadata {
+        editContentUrl
+      }
+    }
+    pageData: mdx(fields: { relativePath: { eq: $relativePath } }) {
       fields {
         slug
       }
