@@ -1,8 +1,8 @@
 ---
-title: Testing ERC20 tokens with Waffle
+title: Testing ERC-20 tokens with Waffle
 description: Learn how test Solidity smart contracts and use smart contract matchers with Waffle.
 author: Vladislav Starostenko
-tags: ["waffle", "smart contracts", "solidity", "testing"]
+tags: ["waffle", "smart contracts", "solidity", "testing", "erc-20"]
 skill: intermediate
 lang: en
 sidebar: true
