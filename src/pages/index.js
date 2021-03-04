@@ -383,12 +383,12 @@ const StyledH2 = styled(H2)`
 `
 
 const StyledCardList = styled(TitleCardList)`
-  margin-right: 4rem;
+  margin-left: 4rem;
   max-width: 624px;
   border: 1px solid ${(props) => props.theme.colors.text};
   box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-right: 0rem;
+    margin-left: 0rem;
     max-width: 100%;
   }
 `
@@ -812,6 +812,12 @@ contract SimpleDomainRegistry {
       </FinanceContainer>
       <NftContainer>
         <Row>
+          <ImageContainer>
+            <FeatureImage
+              fluid={data.infrastructure.childImageSharp.fluid}
+              alt={translateMessageId("page-index-defi-image-alt", intl)}
+            />
+          </ImageContainer>
           <FeatureContent>
             <LeftColumnContent>
               <StyledH2>The internet of assets</StyledH2>
@@ -819,8 +825,8 @@ contract SimpleDomainRegistry {
                 Ethereum isn't just for digital money. Anything you can own can
                 be represented, traded and put to use as non-fungible tokens
                 (NFTs). You can tokenise your art and get royalties
-                automatically every time it's re-sold. Or use a token, proving
-                you own your home, to take out a loan. The possibilities are
+                automatically every time it's re-sold. Or use a token for
+                something you own to take out a loan. The possibilities are
                 growing all the time.
               </Subtitle>
               <div>
@@ -828,16 +834,10 @@ contract SimpleDomainRegistry {
               </div>
             </LeftColumnContent>
           </FeatureContent>
-          <ImageContainer>
-            <FeatureImage
-              fluid={data.infrastructure.childImageSharp.fluid}
-              alt={translateMessageId("page-index-defi-image-alt", intl)}
-            />
-          </ImageContainer>
         </Row>
       </NftContainer>
       <InternetContainer>
-        <RowReverse>
+        <Row>
           <FeatureContent>
             <LeftColumnContent>
               <StyledH2>
@@ -862,22 +862,19 @@ contract SimpleDomainRegistry {
               alt={translateMessageId("page-index-internet-image-alt", intl)}
             />
           </ImageContainer>
-        </RowReverse>
+        </Row>
       </InternetContainer>
       <DeveloperContainer>
-        <CodeboxModal
-          isOpen={isModalOpen}
-          setIsOpen={setModalOpen}
-          title={codeExamples[activeCode].title}
-        >
-          <Codeblock
-            codeLanguage={codeExamples[activeCode].codeLanguage}
-            allowCollapse={false}
-            fromHomepage
-          >
-            {codeExamples[activeCode].code}
-          </Codeblock>
-        </CodeboxModal>
+        <CodeExampleContent>
+          <StyledCardList
+            content={codeExamples}
+            limit={5}
+            clickHandler={toggleCodeExample}
+            header="Code examples"
+            icon="code"
+            isCode
+          />
+        </CodeExampleContent>
         <FeatureContent>
           <LeftColumnContent>
             <StyledH2>
@@ -893,16 +890,19 @@ contract SimpleDomainRegistry {
             </ButtonRow>
           </LeftColumnContent>
         </FeatureContent>
-        <CodeExampleContent>
-          <StyledCardList
-            content={codeExamples}
-            limit={5}
-            clickHandler={toggleCodeExample}
-            header="Code examples"
-            icon="code"
-            isCode
-          />
-        </CodeExampleContent>
+        <CodeboxModal
+          isOpen={isModalOpen}
+          setIsOpen={setModalOpen}
+          title={codeExamples[activeCode].title}
+        >
+          <Codeblock
+            codeLanguage={codeExamples[activeCode].codeLanguage}
+            allowCollapse={false}
+            fromHomepage
+          >
+            {codeExamples[activeCode].code}
+          </Codeblock>
+        </CodeboxModal>
       </DeveloperContainer>
       <StyledGrayContainer>
         <StyledContent>
