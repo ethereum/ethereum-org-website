@@ -5,9 +5,11 @@ lang: en
 sidebar: true
 ---
 
-The JSON-RPC specification allows for an application programming interface (API), similar to REST or GraphQL, with endpoints served from an Ethereum node. Several [JavaScript](/developers/docs/apis/javascript/#available-libraries) and [backend](/developers/docs/apis/backend/#available-libraries) libraries exist that conform to this specification, enabling developers to utilize up-to-date on-chain data while building [web3](/developers/docs/web2-vs-web3/) enabled [Dapps](/glossary/#dapp).
+In order for a web app to interact with the Ethereum blockchain (i.e. read blockchain data and/or send transactions to the network), it must connect to an Ethereum node.
 
-A remote procedure call, or RPC, is a method of retrieving or being notified of information from a given data source in an asynchronous manner. [JSON-RPC](http://www.jsonrpc.org/specification) is a stateless, light-weight RPC protocol, that defines several data structures and the rules around their processing. It is transport agnostic in that the concepts can be used within the same process, over sockets, over HTTP, or in many various message passing environments. It uses [JSON](http://json.org/) as data format.
+For this purpose, every Ethereum client implements the [JSON-RPC specification](http://www.jsonrpc.org/specification), so there are a uniform set of [endpoints](/developers/docs/apis/json-rpc/endpoints/) that applications can rely on.
+
+Several [JavaScript](/developers/docs/apis/javascript/#available-libraries) and [backend](/developers/docs/apis/backend/#available-libraries) libraries exist that conform to this specification, enabling developers to utilize up-to-date on-chain data while building [web3](/developers/docs/web2-vs-web3/) enabled [Dapps](/glossary/#dapp). Since they conform to a specification that all Ethereum clients have natively implemented, this data can safely be accessed by any end-user from whatever node they choose.
 
 _[Jump ahead to endpoints](/developers/docs/apis/json-rpc/endpoints/)_
 
