@@ -36,25 +36,25 @@ One of the best ways to see the potential of DeFi is to understand the problems 
 - Governments and centralized institutions can close down markets at will.
 - Trading hours often limited to business hours of specific time zone.
 - Money transfers can take days due to internal human processes.
-- There's a premium to financial services because intermediray institutions need their cut.
+- There's a premium to financial services because intermediary institutions need their cut.
 
 ### A comparison {#defi-comparison}
 
-| DeFi                                                                                          | Traditional finance                                                                                                            |
-| --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| You hold your money.                                                                          | Your money is held by companies.                                                                                               |
-| You control where your money goes and hows it's spent.                                        | You have to trust companies not to mismanage your money, like lend to risky borrowers.                                         |
-| Transfers happen in minutes.                                                                  | Payments can take days due to manual processes.                                                                                |
-| Pseudonymous.                                                                                 | Financial activity is tightly coupled with your identity.                                                                      |
-| Open to anyone.                                                                               | You must apply to use financial services.                                                                                      |
-| Markets are always open.                                                                      | Markets close because employees need breaks.                                                                                   |
-| Built on transparency – anyone can look at a product's data and inspect how the system works. | Financial institutions are closed books: you can't ask to see their loan history, a record of their managed assets, and so on. |
+| DeFi                                                                                               | Traditional finance                                                                                                            |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| You hold your money.                                                                               | Your money is held by companies.                                                                                               |
+| You control where your money goes and how it's spent.                                              | You have to trust companies not to mismanage your money, like lend to risky borrowers.                                         |
+| Transfers of funds happen in minutes.                                                              | Payments can take days due to manual processes.                                                                                |
+| Transaction activity is pseudonymous.                                                              | Financial activity is tightly coupled with your identity.                                                                      |
+| DeFi is open to anyone.                                                                            | You must apply to use financial services.                                                                                      |
+| The markets are always open.                                                                       | Markets close because employees need breaks.                                                                                   |
+| It's built on transparency – anyone can look at a product's data and inspect how the system works. | Financial institutions are closed books: you can't ask to see their loan history, a record of their managed assets, and so on. |
 
 <ButtonLink to="/dapps/?category=finance">Explore DeFi apps</ButtonLink>
 
 ## It started with Bitcoin... {#bitcoin}
 
-Bitcoin in many ways was the first DeFi application. Bitcoin lets you really own and control value and send it anywhere around the world. It does this by providing a way for a large number of people, who don't trust each other, to agree on a ledger of accounts, without the need for a trusted intermediary. Bitcoin is open to anyone and no one has the authority to change its rules. Bitcoin's rules, like its scarcity and its openness, are written into the technology. It's not like traditional finance where governments can print money devalue your savings and companies can shut down markets.
+Bitcoin in many ways was the first DeFi application. Bitcoin lets you really own and control value and send it anywhere around the world. It does this by providing a way for a large number of people, who don't trust each other, to agree on a ledger of accounts without the need for a trusted intermediary. Bitcoin is open to anyone and no one has the authority to change its rules. Bitcoin's rules, like its scarcity and its openness, are written into the technology. It's not like traditional finance where governments can print money devalue your savings and companies can shut down markets.
 
 Ethereum builds on this. Like Bitcoin, the rules can't change on you and everyone has access. But it also makes this digital money programmable, using [smart contracts](/glossary#smart-contract), so you can go beyond storing and sending value.
 
@@ -89,13 +89,15 @@ There's a decentralized alternative to most financial services. But Ethereum als
 
 ### Send money around the globe quickly {#send-money}
 
-As a blockchain, Ethereum is designed for sending transactions in a secure and global way. Like Bitcoin, Ethereum makes sending money around the world as easy as sending an email. Payments go directly from one account to another in a matter of minutes (usually). To send/receive payments you'll need a [wallet](/wallets/).
+As a blockchain, Ethereum is designed for sending transactions in a secure and global way. Like Bitcoin, Ethereum makes sending money around the world as easy as sending an email. Just enter your recipient's [ENS name](/nft/#nft-domains) (like bob.eth) or their account address from your wallet and your payment will go directly to them in minutes (usually). To send or receive payments, you will need a [wallet](/wallets/).
 
 <ButtonLink to="/dapps/?category=finance">See payment dapps</ButtonLink>
 
 #### Stream money around the globe... {#stream-money}
 
-It's also possible to stream money over Ethereum. This would let you pay someone their salary by the second, giving them access to their money whenever they need it.
+You can also stream money over Ethereum. This lets you pay someone their salary by the second, giving them access to their money whenever they need it. Or rent something by the second like a storage locker or electric scooter.
+
+And if you don't want to send or stream [ETH](/eth/) because of how much its value can change, there are alternative currencies on Ethereum: stablecoins.
 
 <Divider />
 
@@ -103,7 +105,7 @@ It's also possible to stream money over Ethereum. This would let you pay someone
 
 Cryptocurrency volatility is a problem for lots of financial products and general spending. The DeFi community has solved this with stablecoins. Their value stays pegged to an another asset, usually a popular currency like dollars.
 
-Coins like Dai or USDC have a value that stays within a few cents of a dollar. This makes them perfect for earning or retail. So far many people in Latin America have used stablecoins as a way of protecting their savings in a time of great uncertainty with their government-issued currencies.
+Coins like Dai or USDC have a value that stays within a few cents of a dollar. This makes them perfect for earning or retail. Many people in Latin America have used stablecoins as a way of protecting their savings in a time of great uncertainty with their government-issued currencies.
 
 <ButtonLink to="/stablecoins/">More on stablecoins</ButtonLink>
 
@@ -134,7 +136,7 @@ When you use a decentralized lender you have access to funds deposited from all 
 
 #### Tax-efficiencies {#tax-efficiencies}
 
-Borrowing can give you access to the funds you need without having to sell your ETH and facing a taxable event. With Ethereum you can use ETH as collateral for a stablecoin loan. These are tokens that are much better for when you need cash as they don't fluctuate in value like ETH. [More on stablecoins](#stablecoins)
+Borrowing can give you access to the funds you need without needing to sell your ETH (a taxable event). Instead you can use ETH as collateral for a stablecoin loan. This gives you the cash-flow you need and lets you keep your ETH. Stablecoins are tokens that are much better for when you need cash as they don't fluctuate in value like ETH. [More on stablecoins](#stablecoins)
 
 #### Flash loans {#flash-loans}
 
@@ -167,11 +169,11 @@ To be able to do the above example in the traditional finance world, you'd need 
 
 #### Lending {#lending}
 
-You can earn interest on your crypto by lending it and see your funds grow in real time. Right now interest rates are much higher than what you're likely to get at your local bank, if you're lucky enough to be able to access one. Here's an example:
+You can earn interest on your crypto by lending it and see your funds grow in real time. Right now interest rates are much higher than what you're likely to get at your local bank (if you're lucky enough to be able to access one). Here's an example:
 
 - You lend your 100 Dai, a [stablecoin](/stablecoins/), to a product like Aave.
 - You receive 100 Aave Dai (aDai) which is a token that represents your loaned Dai.
-- Your aDai will increase based on the interest rates and you can see it grow in real-time in your wallet. Dependent on the APR, your wallet balance will read something like 100.1234 after a few days or even hours!
+- Your aDai will increase based on the interest rates and you can see your balance growing in your wallet. Dependent on the APR, your wallet balance will read something like 100.1234 after a few days or even hours!
 - You can withdraw an amount of regular Dai that's equal to your aDai balance at any time.
 
 <ButtonLink to="/dapps/?category=finance">See lending dapps</ButtonLink>
@@ -194,9 +196,9 @@ The prize pool is generated by all the interest generated by lending the ticket 
 
 ### Exchange tokens {#swaps}
 
-There are thousands of tokens on Ethereum. Decentralized exchanges let you trade different tokens whenever you want. You never give up control of your assets. This is like using a currency exchange when visiting a different country. But the DeFi version never closes. The markets are 24/7, 365 days a year and the technology guarantees there will always be someone to accept a trade.
+There are thousands of tokens on Ethereum. Decentralized exchanges (DEXs) let you trade different tokens whenever you want. You never give up control of your assets. This is like using a currency exchange when visiting a different country. But the DeFi version never closes. The markets are 24/7, 365 days a year and the technology guarantees there will always be someone to accept a trade.
 
-For example, if you want to use the no-loss lottery, PoolTogether (described above) you'll need a token like Dai or USDC. These token exchanges allow you to swap your ETH for those tokens and back again when you're finished.
+For example, if you want to use the no-loss lottery PoolTogether (described above), you'll need a token like Dai or USDC. These DEXss allow you to swap your ETH for those tokens and back again when you're finished.
 
 <ButtonLink to="/dapps/?category=finance">See token exchanges</ButtonLink>
 
@@ -253,7 +255,7 @@ This means Project A with its 100 donations of 1 dollar could end up with more f
 
 Decentralized insurance aims to make insurance cheaper, faster to pay out, and more transparent. With more automation, coverage is more affordable and pay-outs are a lot quicker. The data used to decide on your claim is completely transparent.
 
-Ethereum products, like any software, can suffer from bugs and exploits. So right now a lot of insurance products in the space focus on protecting their users against loss of funds. However there are projects starting to build out cover for everything life can throw at us. A good example of this is Etherisc's Crop cover which aims to [protect smallhold farmers in Kenya against droughts and flooding](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Decentralized insurance can provide cheaper cover for farmers who are often priced out of traditional insurance.
+Ethereum products, like any software, can suffer from bugs and exploits. So right now a lot of insurance products in the space focus on protecting their users against loss of funds. However there are projects starting to build out coverage for everything life can throw at us. A good example of this is Etherisc's Crop cover which aims to [protect smallhold farmers in Kenya against droughts and flooding](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Decentralized insurance can provide cheaper cover for farmers who are often priced out of traditional insurance.
 
 <ButtonLink to="/dapps/?category=finance">See insurance dapps</ButtonLink>
 
@@ -273,7 +275,7 @@ DeFi uses cryptocurrencies and smart contracts to provide services that don't ne
 
 In DeFi, a smart contract replaces the financial institution in the transaction. A smart contract is a type of Ethereum account that can hold funds and can send/refund them based on certain conditions. No one can alter that smart contract when it's live – it will always run as programmed.
 
-A contract that's designed to hand out an allowance or pocket money could be programmed to send money from Account A to Account B every Friday. And it will only ever do that as long as Account A has the required funds. No one can change the contract and add Account C as a recipient to steal funds. If a hacker wanted to steal your allowance by replacing Account B with their own account, that would be available for anyone to see.
+A contract that's designed to hand out an allowance or pocket money could be programmed to send money from Account A to Account B every Friday. And it will only ever do that as long as Account A has the required funds. No one can change the contract and add Account C as a recipient to steal funds.
 
 Contracts are also public for anyone to inspect and audit. This means bad contracts will often come under community scrutiny pretty quickly.
 
@@ -291,9 +293,9 @@ Ethereum is the perfect foundation for DeFi for a number of reasons:
 You can think of DeFi in layers:
 
 1. The blockchain – Ethereum contains the transaction history and state of accounts.
-2. The assets – ETH and the other tokens (currencies).
-3. The protocols – a smart contract that provideds the functionality, for example the service that allows for decentralized lending of the assets.
-4. The applications – the products we use to manage and access the protocols.
+2. The assets – [ETH](/eth/) and the other tokens (currencies).
+3. The protocols – [smart contracts](/glossary/#smart-contract) that provide the functionality, for example a service that allows for decentralized lending of assets.
+4. [The applications](/dapps/) – the products we use to manage and access the protocols.
 
 ## Build DeFi {#build-defi}
 
