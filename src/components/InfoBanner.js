@@ -50,7 +50,16 @@ const StyledEmoji = styled(Emoji)`
   }
 `
 
-const Content = styled.div``
+const Content = styled.div`
+  display: ${(props) => (props.shouldSpaceBetween ? `flex` : `block`)};
+  align-items: ${(props) => (props.shouldSpaceBetween ? `center` : `auto`)};
+  width: ${(props) => (props.shouldSpaceBetween ? `100%` : `auto`)};
+  justify-content: ${(props) =>
+    props.shouldSpaceBetween ? `space-between` : `auto`};
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    display: block;
+  }
+`
 
 const InfoBanner = ({
   children,
@@ -58,6 +67,7 @@ const InfoBanner = ({
   emoji,
   isWarning = false,
   shouldCenter = false,
+  shouldSpaceBetween = false,
   ...props
 }) => {
   const banner = (
@@ -68,7 +78,7 @@ const InfoBanner = ({
       {...props}
     >
       {emoji && <StyledEmoji text={emoji} size={2} />}
-      <Content>{children}</Content>
+      <Content shouldSpaceBetween={shouldSpaceBetween}>{children}</Content>
     </Banner>
   )
   return shouldCenter ? <Container>{banner}</Container> : banner

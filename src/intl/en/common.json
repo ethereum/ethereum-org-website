@@ -79,7 +79,7 @@
   "get-started": "Get started",
   "gitcoin-logo": "Gitcoin logo",
   "glossary": "Glossary",
-  "guides-and-resources": "Guides and resources",
+  "guides-and-resources": "Community guides and resources",
   "history": "History",
   "history-of-ethereum": "History of Ethereum",
   "home": "Home",
@@ -192,5 +192,8 @@
   "website-last-updated": "Website last updated",
   "what-is-ether": "What is ether (ETH)?",
   "what-is-ethereum": "What is Ethereum?",
-  "whitepaper": "Whitepaper"
+  "whitepaper": "Whitepaper",
+  "defi-page": "Decentralized finance (DeFi)",
+  "dao-page": "Decentralized autonomous organisations (DAOs)",
+  "nft-page": "Non-fungible tokens (NFTs)"
 }

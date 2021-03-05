@@ -53,5 +53,17 @@
   "page-what-is-ethereum-wallets": "Wallets",
   "page-what-is-ethereum-wallets-desc": "How you manage your ETH and your Ethereum account. You'll need a wallet to get started – we'll help you choose one.",
   "page-what-is-ethereum-welcome": "Welcome to Ethereum",
-  "page-what-is-ethereum-welcome-2": "We hope you stay."
+  "page-what-is-ethereum-welcome-2": "We hope you stay.",
+  "page-what-is-ethereum-defi-title": "Decentralized finance (DeFi)",
+  "page-what-is-ethereum-defi-description": "A more open financial system that gives you more control over your money and unlocks new possibilities.",
+  "page-what-is-ethereum-defi-alt": "An Eth logo made of lego bricks.",
+  "page-what-is-ethereum-nft-title": "Non-fungible tokens (NFTs)",
+  "page-what-is-ethereum-nft-description": "A way to represent unique items as Ethereum assets that can be traded, used as proof of ownership, and create new opportunities for creators.",
+  "page-what-is-ethereum-nft-alt": "An Eth logo being displayed via hologram.",
+  "page-what-is-ethereum-dao-title": "Decentralized autonomous organisations (DAOs)",
+  "page-what-is-ethereum-dao-description": "A new way to collaborate and set up online communities with shared goals and pooled funds.",
+  "page-what-is-ethereum-dao-alt": "A representation of a DAO voting on a proposal.",
+  "page-what-is-ethereum-use-cases-title": "Discover Ethereum use cases",
+  "page-what-is-ethereum-use-cases-subtitle": "Ethereum has led to the creation of new products and services that can improve different areas of our lives.",
+  "page-what-is-ethereum-use-cases-subtitle-two": "We're still in the early stages but there's lot to be excited about."
 }

@@ -465,27 +465,6 @@ export const eth2PageQuery = graphql`
         }
       }
     }
-    beaconchain: file(relativePath: { eq: "eth2/core.png" }) {
-      childImageSharp {
-        fluid(maxHeight: 640) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    shards: file(relativePath: { eq: "eth2/newrings.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 420) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    thedocking: file(relativePath: { eq: "eth2/docking.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 420) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
   }
 `
 
