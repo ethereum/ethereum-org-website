@@ -339,6 +339,8 @@ At such an early stage in DeFi, there are both opportunities and risks. Make sur
 
 <!-- ## How to DeFi
 
+TODO: Add back when it's affordable :)
+
 Before you try out any DeFi products, remember that we are in the early stages of this financial revolution. Only spend what you can afford and do your research.
 
 ### Transaction fees
@@ -367,13 +369,6 @@ todo – is it worth it with current gas prices?
 ### Earn some interest
 
 todo -->
-
-<!-- ## DeFi apps
-
-[Add links to DeFi apps categorised in the same way as the dapps page]
-
-NOTE: DECIDED NOT TO DO THIS AS IT ADDS OVERHEAD OF UPDATING OUR APPS IN DIFFERENT PLACES!
--->
 
 ## Further reading {#futher-reading}
 

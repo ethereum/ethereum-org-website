@@ -263,9 +263,6 @@ Secure meaning no one can copy/paste your NFT or steal it.
 
 These qualities of Ethereum makes digitally owning unique items and getting a fair price for your content possible. But it comes at a cost. Blockchains like Bitcoin and Ethereum are energy intensive right now because it takes a lot of energy to preserve these qualities. If it was easy to rewrite Ethereum's history to steal NFTs or cryptocurrency, the system collapses.
 
-<!-- [Need: how do centralized systems do this and why is it worse?]
- -->
-
 #### The work in minting your NFT {#minting-nfts}
 
 When you mint an NFT, a few things have to happen:
@@ -356,21 +353,6 @@ In this case, miners would migrate to lower cost alternatives. Since you can't t
 The other side of the coin: Keep in mind that alternatives are not necessarily carbon-neutral either, such as the footprint of printing, handling, shipping and guarding fiat currencies. Annual spectacles of Christmas lights consume large amounts of energy, not to mention commercial products filling landfills, and governments engaging in war, leading to substantial levels of pollution.
 
 Oh, and the same thing was said about the internet itself. Early measures of Google's search traffic led to incorrectly extrapolating that data to the future, forming incorrect conclusions about the unmanagable "waste of energy" that would follow. -->
-
-<!-- ## How to NFT
-
-### Buy NFTs
-
-- Foundation
-- OpenSea
-- Rarible
-
-Want to show off your collection, we recommend Rainbow wallet. They even support rich media NFTs.
-
-<>
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">🎶 hear your NFTs 🌈🔜✨🤫𝙥𝙡𝙪𝙨 3⃞🅳 <a href="https://t.co/IasBswM2fT">pic.twitter.com/IasBswM2fT</a></p>&mdash; Rainbow (@rainbowdotme) <a href="https://twitter.com/rainbowdotme/status/1361161839099445251?ref_src=twsrc%5Etfw">February 15, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</>
 
 ### Mint NFTs
 
