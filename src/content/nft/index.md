@@ -31,7 +31,7 @@ Fungibile items on the other hand can be exchanged as their value defines them r
 
 ## The internet of assets {#internet-of-assets}
 
-NFTs and Ethereum solve some of the problems that exist in the internet today. As everything becomes more digital, there's a need to replicate the properties of physical items like scarcity, uniqueness, and proof of ownership. Not to mention that digital items often only work in the context of their product. For example you can't sell an mp3 you've purchased, or you can't exchange one company's loyalty points for another platform's credit even if there's a market for it.
+NFTs and Ethereum solve some of the problems that exist in the internet today. As everything becomes more digital, there's a need to replicate the properties of physical items like scarcity, uniqueness, and proof of ownership. Not to mention that digital items often only work in the context of their product. For example you can't re-sell an iTunes mp3 you've purchased, or you can't exchange one company's loyalty points for another platform's credit even if there's a market for it.
 
 Here's how an internet of NFTs compared to the internet most of us use today looks...
 
@@ -109,7 +109,7 @@ In these cases, each NFT would still have a unique identifier (like a bar code o
 
 Some NFTs will automatically pay out royalties to their creators when they're sold. This is still a developing concept but it's one of the most powerful. Original owners of [EulerBeats Originals](https://eulerbeats.com/) earn an 8% royalty every time the NFT is sold on. And some platforms, like [Foundation](https://foundation.app) and [Zora](https://zora.co/), support royalties for their artists.
 
-This is completely automatic so creators can just sit back and earn royalties as their work is shared from person to person. At the moment, figuring out royalties is very manual and lacks accuracy meaning a lot of creators don't get paid what they deserve. If your NFT has a royalty programmed into it, you'll never miss out.
+This is completely automatic so creators can just sit back and earn royalties as their work is sold from person to person. At the moment, figuring out royalties is very manual and lacks accuracy – a lot of creators don't get paid what they deserve. If your NFT has a royalty programmed into it, you'll never miss out.
 
 ## What are NFTs used for? {#nft-use-cases}
 
@@ -154,7 +154,7 @@ Owning the verifiably real thing will always have more value than not.
 
 NFTs have seen a lot of interest from game developers. NFTs can provide records of ownership for in-game items, fuel in-game economies, and bring a host of benefits to the players.
 
-In a lot of regular games you can purchase items for you to use in your game. But if that item was an NFT you could recoup your money by selling it on when you're done with the game. You might even make a profit if that item becomes more desirable.
+In a lot of regular games you can buy items for you to use in your game. But if that item was an NFT you could recoup your money by selling it on when you're done with the game. You might even make a profit if that item becomes more desirable.
 
 For game developers – as issuers of the NFT – they could earn a royalty every time an item is re-sold in the open marketplace. This creates a more mutually-beneficial business model where both players and developers earn from the secondary NFT market.
 
@@ -175,7 +175,7 @@ Decentraland, a virtual reality game, even lets you buy NFTs representing virtua
 
 The Ethereum Name Service uses NFTs to provide your Ethereum address with an easier-to-remember name like `mywallet.eth`. This means you could ask someone to send you ETH via `mywallet.eth` rather than `0x123456789.....`.
 
-This works in a similar way to a website domain name which makes an IP address more memorable. And like domains, ENS names have value, usually based on length and relevance. With ENS you don't need a domain registry to facilitate the transfer of ownership. Instead, ENS names can be traded on NFT marketplaces.
+This works in a similar way to a website domain name which makes an IP address more memorable. And like domains, ENS names have value, usually based on length and relevance. With ENS you don't need a domain registry to facilitate the transfer of ownership. Instead, you can trade your ENS names on an NFT marketplace.
 
 Your ENS name can:
 
@@ -272,9 +272,9 @@ When you mint an NFT, a few things have to happen:
 - It needs to be confirmed as an asset on the blockchain.
 - The owner's account balance must be updated to include that asset. This makes it possible for it to then be traded or verifiably "owned".
 - The transactions that confirm the above need to be added to a block and "immortalised" on the chain.
-- The block needs to be confirmed by everyone in the network as "correct". This consensus is what makes it possible for NFT creators to maximise their earnings – there are no intermediaries needed.
+- The block needs to be confirmed by everyone in the network as "correct". This consensus removes the need for intermediaries because the network agrees that your NFT exists and belongs to you. And it's on chain so anyone can check it. This is one of the ways Ethereum helps NFT creators to maximise their earnings.
 
-These tasks are done by miners. And they let the rest of the network know about your NFT and who owns it. This means mining needs to be sufficiently difficult, otherwise anyone could just claim that they own the NFT you just minted and fraudulently transfer ownership. There are lots of incentives in place to make sure miners are acting honestly.
+All these tasks are done by miners. And they let the rest of the network know about your NFT and who owns it. This means mining needs to be sufficiently difficult, otherwise anyone could just claim that they own the NFT you just minted and fraudulently transfer ownership. There are lots of incentives in place to make sure miners are acting honestly.
 
 [More on mining](/developers/docs/consensus-mechanisms/pow/)
 
@@ -282,7 +282,7 @@ These tasks are done by miners. And they let the rest of the network know about 
 
 Mining difficulty comes from the fact that it takes a lot of computing power to create new blocks in the chain. Importantly, blocks are created consistently, not just when they're needed. They're created every 12 seconds or so.
 
-This is important for making Ethereum tamper-proof, one of the qualities that makes NFTs possible. The more blocks the more secure the chain. If your NFT was created in block #600 and a hacker were to try and change themselves to the creator of your NFT, it would immediately change the digital fingerprint of all subsequent blocks, #601, #602, #603, and so on. That means anyone running Ethereum software would immediately be able to detect and prevent it from happening.
+This is important for making Ethereum tamper-proof, one of the qualities that makes NFTs possible. The more blocks the more secure the chain. If your NFT was created in block #600 and a hacker were to try and steal your NFT by modifying its data, the digital fingerprint of all subsequent blocks would change. That means anyone running Ethereum software would immediately be able to detect and prevent it from happening.
 
 However this means that computing power needs to be used constantly. It also means that a block that contains 0 NFT transactions will still have roughly the same carbon footprint, because computing power will still be consumed to create it. Other non-NFT transactions will fill the blocks.
 
@@ -290,9 +290,11 @@ However this means that computing power needs to be used constantly. It also mea
 
 So yes, there is a carbon footprint associated with creating blocks by mining – and this is a problem for chains like Bitcoin too – but it's not directly the fault of NFTs.
 
-A lot of mining is done using renewable energy sources or untapped energy in remote locations. And there is the argument that the industries that NFTs and cryptocurrencies are disrupting have huge carbon footprints too. But just because existing industries are bad, doesn't mean we shouldn't strive to be better.
+A lot of mining uses renewable energy sources or untapped energy in remote locations. And there is the argument that the industries that NFTs and cryptocurrencies are disrupting have huge carbon footprints too. But just because existing industries are bad, doesn't mean we shouldn't strive to be better.
 
 And we are. Ethereum is evolving to make using Ethereum (and by virtue, NFTs) more energy efficient. And that's always been the plan.
+
+We're not here to defend the environmental footprint of mining, instead we want to explain how things are changing for the better.
 
 ### A greener future... {#a-greener-future}
 
