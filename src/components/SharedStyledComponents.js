@@ -464,5 +464,6 @@ export const CardItem = styled(Link)`
   }
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     flex: 1 1 240px;
+    margin: 1rem 0;
   }
 `
