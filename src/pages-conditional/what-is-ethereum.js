@@ -423,18 +423,16 @@ const WhatIsEthereumPage = ({ data }) => {
           </SubtitleTwo>
         </ActionIntro>
         <ActionCardContainer>
-          {actions.map((action, idx) => {
-            return (
-              <ActionCard
-                key={idx}
-                to={action.to}
-                alt={action.alt}
-                image={action.image}
-                title={action.title}
-                description={action.description}
-              />
-            )
-          })}
+          {actions.map((action, idx) => (
+            <ActionCard
+              key={idx}
+              to={action.to}
+              alt={action.alt}
+              image={action.image}
+              title={action.title}
+              description={action.description}
+            />
+          ))}
         </ActionCardContainer>
       </Content>
       <Content>
@@ -450,18 +448,17 @@ const WhatIsEthereumPage = ({ data }) => {
           </SubtitleTwo>
         </ActionIntro>
         <ActionCardContainer>
-          {usecases.map((usecase, idx) => {
-            return (
-              <ActionCard
-                key={idx}
-                to={usecase.to}
-                alt={usecase.alt}
-                image={usecase.image}
-                title={usecase.title}
-                description={usecase.description}
-              />
-            )
-          })}
+          {usecases.map((usecase, idx) => (
+            <ActionCard
+              key={idx}
+              to={usecase.to}
+              alt={usecase.alt}
+              image={usecase.image}
+              title={usecase.title}
+              description={usecase.description}
+              isBottom={false}
+            />
+          ))}
         </ActionCardContainer>
       </Content>
       <TwoColumnContent>
@@ -511,6 +508,15 @@ const WhatIsEthereumPage = ({ data }) => {
 
 export default WhatIsEthereumPage
 
+export const useCaseImage = graphql`
+  fragment useCaseImage on File {
+    childImageSharp {
+      fixed(height: 260) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`
 export const actionCardImage = graphql`
   fragment actionCardImage on File {
     childImageSharp {
@@ -563,13 +569,13 @@ export const query = graphql`
       ...actionCardImage
     }
     dao: file(relativePath: { eq: "use-cases/dao-2.png" }) {
-      ...actionCardImage
+      ...useCaseImage
     }
     defi: file(relativePath: { eq: "finance_transparent.png" }) {
-      ...actionCardImage
+      ...useCaseImage
     }
     nft: file(relativePath: { eq: "infrastructure_transparent.png" }) {
-      ...actionCardImage
+      ...useCaseImage
     }
     developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       ...calloutImage
