@@ -384,7 +384,7 @@ const WhatIsEthereumPage = (props) => {
                 "page-eth-whats-defi-description",
                 intl
               )}
-              image={data.ethereum.childImageSharp.fixed}
+              image={data.defi.childImageSharp.fixed}
             />
           </div>
           <TextDivider />
@@ -537,6 +537,13 @@ export const query = graphql`
       }
     }
     ethereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
+      childImageSharp {
+        fixed(width: 220) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    defi: file(relativePath: { eq: "finance_transparent.png" }) {
       childImageSharp {
         fixed(width: 220) {
           ...GatsbyImageSharpFixed
