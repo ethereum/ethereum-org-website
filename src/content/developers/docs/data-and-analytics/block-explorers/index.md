@@ -49,7 +49,7 @@ New blocks are added to Ethereum every ~12 seconds (this can fluctuate) so there
 - Hash – The cryptographic hash that represents the block header (the unique identifier of the block).
 - Parent hash – The hash of the block that came before the current block.
 - Sha3Uncles – The combined hash of all uncles for a given parent.
-- StateRoot – The root hash of Merkle tree which stores the entire state of the system.
+- StateRoot – The root hash of Merkle trie which stores the entire state of the system.
 - Nonce – A value used to demonstrate proof-of-work for a block by the miner.
 
 **Uncle blocks**
@@ -262,6 +262,7 @@ The Eth2 top-level data includes the following:
 - [https://beaconcha.in/](https://beaconcha.in/)
 - [https://beaconscan.com/](https://beaconscan.com/)
 - [https://eth2stats.io/](https://eth2stats.io/medalla-testnet)
+- [https://ethscan.org/](https://ethscan.org/) (fork of beaconcha.in)
 
 ## Further reading {#further-reading}
 

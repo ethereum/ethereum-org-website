@@ -38,6 +38,9 @@ const Title = styled.h1`
   font-size: 14px;
   line-height: 140%;
   letter-spacing: 0.04em;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  margin-top: 0;
   text-transform: uppercase;
   color: ${(props) => props.theme.colors.textTableOfContents};
 `
@@ -156,6 +159,7 @@ const BannerMessage = styled.h2`
   text-align: center;
   font-size: 48px;
   line-height: 140%;
+  margin-top: 0;
   color: ${(props) => props.theme.colors.text};
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     font-size: 32px;

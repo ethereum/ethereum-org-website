@@ -10,7 +10,6 @@ import ButtonLink from "../../components/ButtonLink"
 import ProductCard from "../../components/ProductCard"
 import InfoBanner from "../../components/InfoBanner"
 import CalloutBanner from "../../components/CalloutBanner"
-import { Mixins } from "../../theme"
 import {
   Content,
   CardGrid,
@@ -30,22 +29,22 @@ const Header = styled.header`
   padding: 0 2rem;
 `
 const H1 = styled.h1`
-  ${Mixins.textLevel2}
+  margin: 2rem 0 0;
   margin-top: 0;
   color: ${(props) => props.theme.colors.text};
   font-style: normal;
-  font-weight: normal;
   font-family: "SFMono-Regular", monospace;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 32px;
-  line-height: 140%;
+  font-size: 2rem;
+  line-height: 1.4;
   text-align: center;
-  margin-bottom: 0rem;
 `
 
 const Subtitle = styled.h2`
-  ${Mixins.textLevel4}
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 400;
   color: ${(props) => props.theme.colors.text300};
   max-width: 55ch;
   margin-bottom: 0.5rem;

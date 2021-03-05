@@ -1,0 +1,22 @@
+{
+  "comp-tutorial-metadata-minute-read": "minuto leído",
+  "page-tutorial-listing-policy-intro": "Antes de enviar un tutorial, lee nuestra política de publicaciones.",
+  "comp-tutorial-metadata-tip-author": "Autor del consejo",
+  "page-tutorial-listing-policy": "política de publicación de artículos",
+  "page-tutorial-new-github": "¿Nuevo en GitHub?",
+  "page-tutorial-new-github-desc": "Plantea un asunto: completa únicamente la información solicitada y pega tu tutorial.",
+  "page-tutorial-pull-request": "Crear una solicitud de extracción",
+  "page-tutorial-pull-request-btn": "Crear solicitud de extracción",
+  "page-tutorial-pull-request-desc-1": "Sigue la",
+  "page-tutorial-pull-request-desc-2": "tutorials/your-tutorial-name/index.md",
+  "page-tutorial-pull-request-desc-3": "estructura de nombres.",
+  "page-tutorial-raise-issue-btn": "Plantear asunto",
+  "page-tutorial-read-time": "mín",
+  "page-tutorial-submit-btn": "Enviar un tutorial",
+  "page-tutorial-submit-tutorial": "Para enviar un tutorial, deberás usar GitHub. Te invitamos a crear un asunto o una solicitud de extracción.",
+  "page-tutorial-subtitle": "Bienvenido a nuestra lista seleccionada de tutoriales de la comunidad.",
+  "page-tutorial-tags-error": "Ningún tutorial tiene todas estas etiquetas",
+  "page-tutorial-title": "Tutoriales de desarrollo de Ethereum",
+  "page-tutorials-meta-description": "Busca y explora en los tutoriales de la comunidad Ethereum por tema.",
+  "page-tutorials-meta-title": "Tutoriales de desarrollo de Ethereum"
+}

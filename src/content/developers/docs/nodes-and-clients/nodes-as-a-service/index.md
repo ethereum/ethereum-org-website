@@ -73,6 +73,17 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Bring your cloud
     - Pay-per-hour pricing
     - Direct 24/7 support
+- [**GetBlock**](https://getblock.io/)
+  - [Docs](https://getblock.io/docs/get-started/authentication-with-api-key/)
+  - Features
+    - Access to 40+ blockchain nodes
+    - 40K free daily requests
+    - Unlimited number of API keys
+    - High connection speed at 1GB/sec
+    - Trace+Archive
+    - Advanced analytics
+    - Automated updates
+    - Technical support
 - [**Infura**](https://infura.io/)
   - [Docs](https://infura.io/docs)
   - Features
