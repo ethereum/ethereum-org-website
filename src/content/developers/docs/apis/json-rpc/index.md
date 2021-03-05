@@ -1,15 +1,15 @@
 ---
-title: JSON RPC APIs
+title: JSON RPC API
 description: A stateless, light-weight remote procedure call (RPC) protocol
 lang: en
 sidebar: true
 ---
 
-A remote procedure call, or RPC, is a method of retrieving or being notified of information from a given data source in an asynchronous manner. [JSON-RPC](http://www.jsonrpc.org/specification) is a stateless, light-weight RPC protocol, that defines several data structures and the rules around their processing. It is transport agnostic in that the concepts can be used within the same process, over sockets, over HTTP, or in many various message passing environments. It uses [JSON](http://json.org/) as data format.
-
 The JSON-RPC specification allows for an application programming interface (API), similar to REST or GraphQL, with endpoints served from an Ethereum node. Several [JavaScript](/developers/docs/apis/javascript/#available-libraries) and [backend](/developers/docs/apis/backend/#available-libraries) libraries exist that conform to this specification, enabling developers to utilize up-to-date on-chain data while building [web3](/developers/docs/web2-vs-web3/) enabled [Dapps](/glossary/#dapp).
 
-_[Jump ahead to endpoints](/developers/docs/apis/json-rpc/reference)_
+A remote procedure call, or RPC, is a method of retrieving or being notified of information from a given data source in an asynchronous manner. [JSON-RPC](http://www.jsonrpc.org/specification) is a stateless, light-weight RPC protocol, that defines several data structures and the rules around their processing. It is transport agnostic in that the concepts can be used within the same process, over sockets, over HTTP, or in many various message passing environments. It uses [JSON](http://json.org/) as data format.
+
+_[Jump ahead to endpoints](/developers/docs/apis/json-rpc/endpoints/)_
 
 ## Prerequisites {#prerequisites}
 
