@@ -2967,6 +2967,16 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "adamgoth",
+      "name": "Adam Goth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5225766?v=4",
+      "profile": "http://www.adamgoth.com",
+      "contributions": [
+        "bug",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
