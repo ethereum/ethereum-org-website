@@ -781,49 +781,59 @@ const DappsPage = ({ data, location }) => {
     },
     {
       title: "Index Coop",
-      description:
-        "A crypto index fund that gives your portfolio exposure to top DeFi tokens.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-index-coop",
+        intl
+      ),
       link: "https://www.indexcoop.com/",
       image: data.index.childImageSharp.fluid,
-      alt: "The Index Coop logo",
+      alt: translateMessageId("page-dapps-index-coop-logo-alt", intl),
     },
   ]
 
   const insurance = [
     {
       title: "Nexus Mutual",
-      description:
-        "Cover without the insurance company. Get protected against smart contract bugs and hacks.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-nexus-mutual",
+        intl
+      ),
       link: "https://nexusmutual.io/",
       image: data.nexus.childImageSharp.fluid,
-      alt: "The Nexus Mutual logo",
+      alt: translateMessageId("page-dapps-nexus-mutual-logo-alt", intl),
     },
     {
       title: "Etherisc",
-      description:
-        "A decentralized insurance template anyone can use to create their own insurance cover.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-etherisc",
+        intl
+      ),
       link: "https://etherisc.com/",
       image: data.etherisc.childImageSharp.fluid,
-      alt: "The Etherisc logo",
+      alt: translateMessageId("page-dapps-etherisc-logo-alt", intl),
     },
   ]
 
   const portfolios = [
     {
       title: "Zapper",
-      description:
-        "Track your portfolio and use a range of DeFi products from one interface.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-zapper",
+        intl
+      ),
       link: "https://zapper.fi/",
       image: data.zapper.childImageSharp.fluid,
-      alt: "The Zapper logo",
+      alt: translateMessageId("page-dapps-zapper-logo-alt", intl),
     },
     {
       title: "Zerion",
-      description:
-        "Manage your portfolio and simply evaluate every single DeFi asset on the market.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-zerion",
+        intl
+      ),
       link: "https://app.zerion.io/",
       image: data.zerion.childImageSharp.fluid,
-      alt: "The Zerion logo",
+      alt: translateMessageId("page-dapps-zerion-logo-alt", intl),
     },
   ]
 
@@ -838,13 +848,16 @@ const DappsPage = ({ data, location }) => {
       image: data.golem.childImageSharp.fluid,
       alt: translateMessageId("page-dapps-golem-logo-alt", intl),
     },
-    /* {
+    {
       title: "radicle.xyz",
-      description:
-        "Secure peer-to-peer code collaboration without intermediaries.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-radicle",
+        intl
+      ),
       link: "https://radicle.xyz/",
       image: data.radicle.childImageSharp.fluid,
-    }, */
+      alt: translateMessageId("page-dapps-radicle-logo-alt", intl),
+    },
   ]
 
   const marketplaces = [
@@ -1316,10 +1329,22 @@ const DappsPage = ({ data, location }) => {
             </TwoColumnContent>
             <TwoColumnContent>
               <LeftColumn>
-                <ProductList category="Insurance" content={insurance} />
+                <ProductList
+                  category={translateMessageId(
+                    "page-dapps-category-insurance",
+                    intl
+                  )}
+                  content={insurance}
+                />
               </LeftColumn>
               <RightColumn>
-                <ProductList category="Portfolios" content={portfolios} />
+                <ProductList
+                  category={translateMessageId(
+                    "page-dapps-category-portfolios",
+                    intl
+                  )}
+                  content={portfolios}
+                />
               </RightColumn>
             </TwoColumnContent>
             <StyledCalloutBanner
@@ -1544,21 +1569,21 @@ const DappsPage = ({ data, location }) => {
               {selectedCategory === FINANCE && (
                 <MoreButtonContainer>
                   <ButtonLink isSecondary to="/defi/">
-                    More on decentralized finance
+                    <Translation id="page-dapps-more-on-defi-button" />
                   </ButtonLink>
                 </MoreButtonContainer>
               )}
               {selectedCategory === COLLECTIBLES && (
                 <MoreButtonContainer>
                   <ButtonLink isSecondary to="/nft/">
-                    More on tokenised collectibles
+                    <Translation id="page-dapps-more-on-nft-button" />
                   </ButtonLink>
                 </MoreButtonContainer>
               )}
               {selectedCategory === GAMING && (
                 <MoreButtonContainer>
                   <ButtonLink isSecondary to="/nft/">
-                    More on tokenised in-game items
+                    <Translation id="page-dapps-more-on-nft-gaming-button" />
                   </ButtonLink>
                 </MoreButtonContainer>
               )}

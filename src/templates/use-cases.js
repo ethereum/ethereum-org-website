@@ -27,6 +27,7 @@ import Roadmap from "../components/Roadmap"
 import Eth2TableOfContents from "../components/Eth2TableOfContents"
 import TableOfContents from "../components/TableOfContents"
 import TranslationsInProgress from "../components/TranslationsInProgress"
+import Translation from "../components/Translation"
 import SectionNav from "../components/SectionNav"
 import { isLangRightToLeft } from "../utils/translations"
 import {
@@ -356,25 +357,6 @@ const TitleCard = styled.div`
   }
 `
 
-const dropdownLinks = {
-  text: "Ethereum use cases",
-  ariaLabel: "page-eth2-upgrades-aria-label",
-  items: [
-    {
-      text: "Decentralized finance (defi)",
-      to: "/defi/",
-    },
-    {
-      text: "Non-fungible tokens (NFTs)",
-      to: "/nft/",
-    },
-    {
-      text: "Decentralized autonomous organizations (DAOs)",
-      to: "/dao/",
-    },
-  ],
-}
-
 const UseCasePage = ({ data, pageContext }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(intl.locale)
@@ -392,14 +374,35 @@ const UseCasePage = ({ data, pageContext }) => {
   if (pageContext.slug.includes("nft")) {
     useCase = "nft"
   }
+
+  const dropdownLinks = {
+    text: "template-usecase-dropdown",
+    ariaLabel: "template-usecase-dropdown-aria",
+    items: [
+      {
+        text: "template-usecase-dropdown-defi",
+        to: "/defi/",
+      },
+      {
+        text: "template-usecase-dropdown-nft",
+        to: "/nft/",
+      },
+      {
+        text: "template-usecase-dropdown-dao",
+        to: "/dao/",
+      },
+    ],
+  }
+
   return (
     <Container>
       <StyledBannerNotification shouldShow>
         <StyledEmoji text=":pencil:" />
         <div>
-          Uses of Ethereum are always developing and evolving. Add any info you
-          think will make things clearer or more up to date.{" "}
-          <Link to={absoluteEditPath}>Edit page</Link>
+          <Translation id="template-usecase-banner" />{" "}
+          <Link to={absoluteEditPath}>
+            <Translation id="template-usecase-edit-link" />
+          </Link>
         </div>
       </StyledBannerNotification>
       <HeroContainer>
@@ -422,6 +425,7 @@ const UseCasePage = ({ data, pageContext }) => {
         <Image
           useCase={useCase}
           fluid={mdx.frontmatter.image.childImageSharp.fluid}
+          alt={mdx.frontmatter.alt}
         />
       </HeroContainer>
       <MoreContent to="#content">
@@ -474,6 +478,7 @@ export const useCasePageQuery = graphql`
         emoji
         sidebarDepth
         summaryPoints
+        alt
         image {
           childImageSharp {
             fluid(maxHeight: 640) {

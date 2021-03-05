@@ -815,22 +815,21 @@ contract SimpleDomainRegistry {
           <ImageContainer>
             <FeatureImage
               fluid={data.infrastructure.childImageSharp.fluid}
-              alt={translateMessageId("page-index-defi-image-alt", intl)}
+              alt={translateMessageId("page-index-nft-alt", intl)}
             />
           </ImageContainer>
           <FeatureContent>
             <LeftColumnContent>
-              <StyledH2>The internet of assets</StyledH2>
+              <StyledH2>
+                <Translation id="page-index-nft" />
+              </StyledH2>
               <Subtitle>
-                Ethereum isn't just for digital money. Anything you can own can
-                be represented, traded and put to use as non-fungible tokens
-                (NFTs). You can tokenise your art and get royalties
-                automatically every time it's re-sold. Or use a token for
-                something you own to take out a loan. The possibilities are
-                growing all the time.
+                <Translation id="page-index-nft-description" />
               </Subtitle>
               <div>
-                <ButtonLink to="/nft/">More on NFTs</ButtonLink>
+                <ButtonLink to="/nft/">
+                  <Translation id="page-index-nft-button" />
+                </ButtonLink>
               </div>
             </LeftColumnContent>
           </FeatureContent>

@@ -68,5 +68,9 @@
   "page-index-tout-enterprise-image-alt": "Illustration of a futuristic computer/device.",
   "page-index-tout-community-title": "The Ethereum community",
   "page-index-tout-community-description": "Ethereum is all about community. It's made up of people from all different backgrounds and interests. See how you can join in.",
-  "page-index-tout-community-image-alt": "Illustration of a group of builders working together."
+  "page-index-tout-community-image-alt": "Illustration of a group of builders working together.",
+  "page-index-nft": "The internet of assets",
+  "page-index-nft-description": "Ethereum isn't just for digital money. Anything you can own can be represented, traded and put to use as non-fungible tokens (NFTs). You can tokenise your art and get royalties automatically every time it's re-sold. Or use a token for something you own to take out a loan. The possibilities are growing all the time.",
+  "page-index-nft-button": "More on NFTs",
+  "page-index-nft-alt": "An Eth logo being displayed via hologram."
 }

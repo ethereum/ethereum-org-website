@@ -7,6 +7,7 @@ emoji: ":frame_with_picture:"
 sidebar: true
 sidebarDepth: 2
 image: ../../assets/infrastructure_transparent.png
+alt: "An Eth logo being displayed via hologram."
 summaryPoints:
   [
     "A way to represent anything unique as an Ethereum-based asset.",

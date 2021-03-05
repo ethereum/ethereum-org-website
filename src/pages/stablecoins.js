@@ -816,7 +816,7 @@ const StablecoinsPage = ({ data }) => {
               <Translation id="page-stablecoins-explore-dapps" />
             </ButtonLink>
             <ButtonLinkRight isSecondary to="/defi/">
-              More on decentralized finance
+              <Translation id="page-stablecoins-more-defi-button" />
             </ButtonLinkRight>
           </div>
         </StyledCalloutBanner>

@@ -6,6 +6,7 @@ template: use-cases
 emoji: ":money_with_wings:"
 sidebar: true
 image: ../../assets/finance_transparent.png
+alt: "An Eth logo made of lego bricks."
 sidebarDepth: 2
 summaryPoints:
   [

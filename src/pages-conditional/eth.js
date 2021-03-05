@@ -211,23 +211,23 @@ const benefits = [
 const tokenLinks = [
   {
     caption: "",
-    title: "Stablecoins",
-    description: "More on the least volatile of Ethereum tokens.",
+    title: <Translation id="page-eth-tokens-stablecoins" />,
+    description: <Translation id="page-eth-tokens-stablecoins-description" />,
   },
   {
     caption: "",
-    title: "Decentralized finance (DeFi)",
-    description: "The financial system for Ethereum tokens.",
+    title: <Translation id="page-eth-tokens-defi" />,
+    description: <Translation id="page-eth-tokens-defi-description" />,
   },
   {
     caption: "",
-    title: "Non-fungible tokens (NFTs)",
-    description: "Tokens that represent ownership of items on Ethereum.",
+    title: <Translation id="page-eth-tokens-nft" />,
+    description: <Translation id="page-eth-tokens-nft-description" />,
   },
   {
     caption: "",
-    title: "Decentralized autonomous organisations (DAOs)",
-    description: "Internet communities often goverened by token holders.",
+    title: <Translation id="page-eth-tokens-dao" />,
+    description: <Translation id="page-eth-tokens-dao-description" />,
   },
 ]
 
@@ -280,7 +280,7 @@ const WhatIsEthereumPage = (props) => {
             </SubtitleTwo>
             <StyledEthPriceCard />
             <ButtonLink to="/get-eth/" title="where to buy eth">
-              Get ETH
+              <Translation id="page-eth-button-buy-eth" />
             </ButtonLink>
           </Header>
           <Hero
@@ -379,8 +379,11 @@ const WhatIsEthereumPage = (props) => {
             </p>
             <CentralActionCard
               to="/defi/"
-              title="More on DeFi"
-              description="DeFi is the decentralized financial system built on Ethereum. This overview explains what you can do."
+              title={translateMessageId("page-eth-whats-defi", intl)}
+              description={translateMessageId(
+                "page-eth-whats-defi-description",
+                intl
+              )}
               image={data.ethereum.childImageSharp.fixed}
             />
           </div>
@@ -475,7 +478,9 @@ const WhatIsEthereumPage = (props) => {
           <p>
             <Translation id="page-eth-not-only-crypto-desc-2" />
           </p>
-          <h4>More on tokens and their uses</h4>
+          <h4>
+            <Translation id="page-eth-more-on-tokens" />
+          </h4>
           <CardList id="tokens" content={tokenLinks} />
         </LeftColumn>
         <RightColumn>

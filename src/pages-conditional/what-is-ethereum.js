@@ -276,29 +276,25 @@ const WhatIsEthereumPage = ({ data }) => {
   ]
   const usecases = [
     {
-      title: "Decentralized finance (DeFi)",
+      title: <Translation id="page-what-is-ethereum-defi-title" />,
       to: "/defi/",
-      alt: "",
-      image: data.eth.childImageSharp.fixed,
-      description:
-        "A more open financial system that gives you more control over your money and unlocks new possibilities.",
+      alt: <Translation id="page-what-is-ethereum-defi-alt" />,
+      image: data.defi.childImageSharp.fixed,
+      description: <Translation id="page-what-is-ethereum-defi-description" />,
     },
     {
-      title: "Non-fungible tokens (NFTs)",
+      title: <Translation id="page-what-is-ethereum-nft-title" />,
       to: "/nft/",
-      alt: "",
-      image: data.dapps.childImageSharp.fixed,
-
-      description:
-        "A way to represent unique items as Ethereum assets that can be traded, used as proof of ownership, and create new opportunities for creators.",
+      alt: <Translation id="page-what-is-ethereum-nft-alt" />,
+      image: data.nft.childImageSharp.fixed,
+      description: <Translation id="page-what-is-ethereum-nft-description" />,
     },
     {
-      title: "Decentralized autonomous organisations (DAOs)",
+      title: <Translation id="page-what-is-ethereum-dao-title" />,
       to: "/dao/",
-      alt: "",
+      alt: <Translation id="page-what-is-ethereum-dao-alt" />,
       image: data.dao.childImageSharp.fixed,
-      description:
-        "A new way to collaborate and set up online communities with shared goals and pooled funds.",
+      description: <Translation id="page-what-is-ethereum-dao-description" />,
     },
   ]
   return (
@@ -443,13 +439,14 @@ const WhatIsEthereumPage = ({ data }) => {
       </Content>
       <Content>
         <ActionIntro>
-          <h2>Learn about some Ethereum use cases</h2>
+          <h2>
+            <Translation id="page-what-is-ethereum-use-cases-title" />
+          </h2>
           <Subtitle>
-            Ethereum has led to the creation of new technology that can improve
-            different areas of our lives.
+            <Translation id="page-what-is-ethereum-use-cases-subtitle" />
           </Subtitle>
           <SubtitleTwo>
-            We're still in the early stages but there's lot to be excited about.
+            <Translation id="page-what-is-ethereum-use-cases-subtitle-two" />
           </SubtitleTwo>
         </ActionIntro>
         <ActionCardContainer>
@@ -566,6 +563,12 @@ export const query = graphql`
       ...actionCardImage
     }
     dao: file(relativePath: { eq: "use-cases/dao-2.png" }) {
+      ...actionCardImage
+    }
+    defi: file(relativePath: { eq: "finance_transparent.png" }) {
+      ...actionCardImage
+    }
+    nft: file(relativePath: { eq: "infrastructure_transparent.png" }) {
       ...actionCardImage
     }
     developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
