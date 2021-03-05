@@ -2958,6 +2958,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "axic",
+      "name": "Alex Beregszaszi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20340?v=4",
+      "profile": "http://www.rtfs.hu",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
