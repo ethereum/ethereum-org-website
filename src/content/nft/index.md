@@ -305,15 +305,19 @@ This vision is being delivered right now.
 
 #### A greener Ethereum: Eth2 {#eth2}
 
-Ethereum is currently going through a series of upgrades, known as Eth2, that will replace mining with [staking](/staking/). This will remove computing power as a security mechanism, and reduce Ethereum's carbon footprint by ~99.98%[`*`](#source-1). In this world, stakers commit funds instead of computing power to secure the network.
+Ethereum is currently going through a series of upgrades, known as Eth2, that will replace mining with [staking](/staking/). This will remove computing power as a security mechanism, and reduce Ethereum's carbon footprint by ~99.98%<sup>[^1]</sup>. In this world, stakers commit funds instead of computing power to secure the network.
 
-The energy-cost of Ethereum will become the cost of running a home computer multiplied by the number of nodes in the network. If there are 10,000 nodes in the network and the cost of running a home computer is roughly 525kWh per year. That's 5,250,000kWh[`*`](#source-1) per year for the entire network.
+The energy-cost of Ethereum will become the cost of running a home computer multiplied by the number of nodes in the network. If there are 10,000 nodes in the network and the cost of running a home computer is roughly 525kWh per year. That's 5,250,000kWh<sup>[^1]</sup> per year for the entire network.
 
-We can use this to compare Eth2 to a global service like Visa. 100,000 Visa transactions uses 149kWh of energy[`**`](#source-2). In Eth2, that same number of transactions would cost 17.4kWh of energy or ~11% of the total energy[`***`](#source-3). That's without considering the many optimisations being worked on in parallel to Eth2, like [rollups](/glossary/#rollups). It could be as little as 0.1666666667kWh of energy for 100,000 transactions.
+We can use this to compare Eth2 to a global service like Visa. 100,000 Visa transactions uses 149kWh of energy<sup>[^2]</sup>. In Eth2, that same number of transactions would cost 17.4kWh of energy or ~11% of the total energy<sup>[^3]</sup>. That's without considering the many optimisations being worked on in parallel to Eth2, like [rollups](/glossary/#rollups). It could be as little as 0.1666666667kWh of energy for 100,000 transactions.
 
 Importantly this improves the energy efficiency while preserving Ethereum's decentralization and security. Many other blockchains out there might already use some form of staking, but they're secured by a select few stakers, not the thousands that Ethereum will have. The more decentralization, the more secure the system.
 
 [More on energy estimates](#footnotes-and-sources)
+
+_We’ve provided this basic comparison to baseline your understanding of Eth2 energy consumption against a familiar name. However, in practice, it’s not really correct to compare based on number of transactions. Ethereum’s energy output is time-based. If Ethereum did more or less transactions from one minute to the next, the energy output would stay the same._
+
+_It’s also important to remember that Ethereum does more than just financial transactions, it’s a platform for applications, so a fairer comparison might be to both companies like Visa, AWS and more!_
 
 #### Timelines {#timelines}
 
@@ -395,7 +399,7 @@ Most NFTs are built using a consistent standard known as [ERC-721](/developers/d
 
 This explains how we arrived at our energy estimates above. These estimates apply to the network as a whole and are not just reserved for the process of creating, buying, or selling NFTs.
 
-#### `*` 99.98% energy reduction from mining {#source-1}
+#### 1. 99.98% energy reduction from mining {#fn-1}
 
 The 99.98% reduction in energy consumption from a system secured by mining to a system secured by staking is calculated using the following data sources:
 
@@ -413,13 +417,13 @@ If there are 10,000 people running Ethereum (rounding up current numbers of 8000
 
 5,256,000kWh is 0.005256tWh. With 24tWh produced by mining, that's 0.0219% of the energy required or a decrease of 99.98%.
 
-#### `**` Visa energy consumption {#source-2}
+#### 2. Visa energy consumption {#fn-2}
 
 The cost of 100,000 Visa transactions is 149 kwH - [Bitcoin network average energy consumption per transaction compared to VISA network as of 2020, Statista](https://www.statista.com/statistics/881541/bitcoin-energy-consumption-transaction-comparison-visa/)
 
 Year-ending September 2020 they processed 140,839,000,000 transactions – [Visa financials report Q4 2020](https://s1.q4cdn.com/050606653/files/doc_financials/2020/q4/Visa-Inc.-Q4-2020-Operational-Performance-Data.pdf)
 
-#### `***` Eth2 energy usage for 100,000 transactions {#source-3}
+#### 3. Eth2 energy usage for 100,000 transactions {#fn-3}
 
 It's estimated that Eth2 will allow the network to process between 25,000 and 100,000 transactions per second, with [100,000 as the theoretical maximum right now](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698).
 
@@ -449,5 +453,5 @@ To put it another way, if Visa handled 140,839,000,000 transactions at a cost of
 Eth2 in a single year stands to consume 5,256,000 kWh. With a potential of 788,940,000,000 - 3,153,600,000,000 transactions processed in that time.
 
 <InfoBanner emoji=":evergreen_tree:">
-  If you think these stats are incorrect or can be made more accurate, please raise an issue or PR. These are estimates by the ethereum.org team made using publicly accessible information and the current Eth2 design. This doesn't represent an official promise from the Ethereum foundation. 
+  If you think these stats are incorrect or can be made more accurate, please raise an issue or PR. These are estimates by the ethereum.org team made using publicly accessible information and the current Eth2 design. This doesn't represent an official promise from the Ethereum Foundation. 
 </InfoBanner>
