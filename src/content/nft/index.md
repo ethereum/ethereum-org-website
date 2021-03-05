@@ -444,5 +444,5 @@ To put it another way, if Visa handled 140,839,000,000 transactions at a cost of
 Eth2 in a single year stands to consume 5,256,000 kWh. With a potential of 788,940,000,000 - 3,153,600,000,000 transactions processed in that time.
 
 <InfoBanner emoji=":evergreen_tree:">
-  If you think these stats are incorrect or can be made more accurate, please raise an issue or PR.
+  If you think these stats are incorrect or can be made more accurate, please raise an issue or PR. These are estimates by the ethereum.org team made using publicly accessible information and the current Eth2 design. This doesn't represent an official promise from the Ethereum foundation. 
 </InfoBanner>
