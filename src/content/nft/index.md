@@ -51,13 +51,13 @@ Here's how an internet of NFTs compared to the internet most of us use today loo
 
 The NFT world is relatively new. In theory, the scope for NFTs is anything that is unique that needs provable ownership. Here are some examples of NFTs that exist today, to help you get the idea:
 
-- A unique digital artwork.
-- A unique shirt in a limited-run fashion line.
-- An in-game item.
+- [A unique digital artwork](https://foundation.app/artworks).
+- [A unique sneaker in a limited-run fashion line](https://www.metagrail.co/auctions/91cf83fb-3477-4155-aae8-6dcb9b853397).
+- [An in-game item](https://market.decentraland.org/).
 - [An essay](https://zora.co/0x517bab7661C315C63C6465EEd1b4248e6f7FE183/145).
 - [A digital collectible](https://www.larvalabs.com/cryptopunks/details/1).
-- [A domain name](https://app.ens.domains/name/ethereum.eth)
-- A ticket that gives you access to an event or a coupon – these items are often known as semi-fungible. They are fungible until they are redeemed, at which point they can't be traded for a non-redeemed version.
+- [A domain name](https://app.ens.domains/name/ethereum.eth).
+- [A ticket that gives you access to an event or a coupon](https://www.yellowheart.io/).
 
 ### ethereum.org examples {#ethereum-org-examples}
 
