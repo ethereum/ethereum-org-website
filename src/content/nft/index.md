@@ -250,7 +250,7 @@ To clarify a few things:
 - The way Ethereum keeps your funds and assets secure is currently energy-intensive but it's about to improve.
 - Once improved, Ethereum's carbon footprint will be 99.98% better, making it more energy efficient than many existing industries.
 
-To explain things are going to get a little more technical, but bear with us...
+To explain further we're going to have to get a little more technical so bear with us...
 
 ### Don't blame it on the NFTs {#nft-qualities}
 
@@ -302,36 +302,19 @@ This vision is being delivered right now.
 
 #### A greener Ethereum: Eth2 {#eth2}
 
-Ethereum is currently going through a series of upgrades, known as Eth2, that will replace mining with [staking](/staking/). This will remove computing power as a security mechanism, and reduce Ethereum's carbon footprint by ~99.98%. In this world, stakers commit funds instead of computing power to secure the network.
+Ethereum is currently going through a series of upgrades, known as Eth2, that will replace mining with [staking](/staking/). This will remove computing power as a security mechanism, and reduce Ethereum's carbon footprint by ~99.98%[`*`](#source-1). In this world, stakers commit funds instead of computing power to secure the network.
 
-The energy-cost of Ethereum will become the cost of running a home computer multiplied by the number of nodes in the network. If there are 10,000 nodes in the network and the cost of running a home computer is roughly 400kWh per year. That's 4,000,000 kWh per year for the entire network. By comparison, that's 1.91% of the estimated yearly energy consumption of a huge company like Visa.
+The energy-cost of Ethereum will become the cost of running a home computer multiplied by the number of nodes in the network. If there are 10,000 nodes in the network and the cost of running a home computer is roughly 525kWh per year. That's 5,250,000kWh[`*`](#source-1) per year for the entire network.
 
-<!-- ----
-*SOURCES
-----
-
-Mining: 24000000000 kwH
-Staking: 4000000 kwH
-
-4000000 / 24000000000 \* 100 = 0.01666666667% 1/10,000th of a percent of the energy consumption.
-
-//
-Visa transactions year-to-date 20 September 2020: 140839000000
-https://s1.q4cdn.com/050606653/files/doc_financials/2020/q4/Visa-Inc.-Q4-2020-Operational-Performance-Data.pdf
-
-If 100,000 visa transactions cost 149,000 kwh
-https://www.statista.com/statistics/881541/bitcoin-energy-consumption-transaction-comparison-visa/
-
-That's a total of 209,850,110 kwh for the year.
-Staking is estimated at 10,000*400kwh = 4,000,000 kwh for the year.
-
-That's 1.91% of the energy consumed by visa transactions. Question: will this increase significantly if ethereum does the same number of transactions? -->
+We can use this to compare Eth2 to a global service like Visa. 100,000 Visa transactions uses 149kWh of energy[`**`](#source-2). In Eth2, that same number of transactions would cost 17.4kWh of energy or ~11% of the total energy[`***`](#source-3). That's without considering the many optimisations being worked on in parallel to Eth2, like [rollups](/glossary/#rollups). It could be as little as 0.1666666667kWh of energy for 100,000 transactions.
 
 Importantly this improves the energy efficiency while preserving Ethereum's decentralization and security. Many other blockchains out there might already use some form of staking, but they're secured by a select few stakers, not the thousands that Ethereum will have. The more decentralization, the more secure the system.
 
+[More on energy estimates](#footnotes-and-sources)
+
 #### Timelines {#timelines}
 
-The process has already started. [The Beacon Chain](/eth2/beacon-chain/), the first upgrade, shipped in December 2020. This provides the foundation for staking by allowing stakers to join the system. The next step is to merge the current chain, the one secured by miners, into the Beacon Chain where mining isn't needed. Timelines can't be exact at this stage, but it's estimated that this will happen some time in 2021/2022. This process is known as the docking or the merge. [More on the docking](/eth2/docking/).
+The process has already started. [The Beacon Chain](/eth2/beacon-chain/), the first upgrade, shipped in December 2020. This provides the foundation for staking by allowing stakers to join the system. The next step relevant to energy efficieny is to merge the current chain, the one secured by miners, into the Beacon Chain where mining isn't needed. Timelines can't be exact at this stage, but it's estimated that this will happen some time in 2021/2022. This process is known as the docking or the merge. [More on the docking](/eth2/docking/).
 
 <ButtonLink to="/eth2/">More on Eth2</ButtonLink>
 
@@ -395,8 +378,71 @@ Most NFTs are built using a consistent standard known as [ERC-721](/developers/d
 
 ## Further reading {#further-reading}
 
-[Add links to other good NFT resources]
-
 - [Crypto art data](https://cryptoart.io/data) – Richard Chen, updated automatically
 - [OpenSea: the NFT Bible](https://opensea.io/blog/guides/non-fungible-tokens/) – _Devin Fizner, January 10 2020_
 - [A beginner's guide to NFTs](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, January 2020_
+
+<Divider />
+
+### Footnotes and sources {#footnotes-and-sources}
+
+<!-- TODO: after shipping this can form the basis of an energy efficiency page. I suspect this could also live under learn and just do some general mythbusting and supply stats about eth2 energy usage-->
+
+This explains how we arrived at our energy estimates above. These estimates apply to the network as a whole and are not just reserved for the process of creating, buying, or selling NFTs.
+
+#### `*` 99.98% energy reduction from mining {#source-1}
+
+The 99.98% reduction in energy consumption from a system secured by mining to a system secured by staking is calculated using the following data sources:
+
+- 24 tWh of annualized electrical energy is consumed by mining Ethereum - [Digiconomist](https://digiconomist.net/ethereum-energy-consumption)
+
+- The average desktop computer, all that's needed to run Proof of Stake, uses 0.06kWh of energy per hour – [Silicon Valley power chart](https://www.siliconvalleypower.com/residents/save-energy/appliance-energy-use-chart) (Some estimates are a little higher at 0.15kWh)
+
+The calculation also assumes that the user running Ethereum never lets their computer sleep or switches off their monitor.
+
+Daily usage: `0.06kWh * 24 = 1.44 kWh` per day per person
+
+Annual usage: `1.44 kWh * 365 = 525.6 kWh` per year per person
+
+If there are 10,000 people running Ethereum (rounding up current numbers of 8000ish) the cost of running the entire network is `10,000 nodes * 525.6kWh = 5,256,000 kWh`.
+
+5,256,000kWh is 0.005256tWh. With 24tWh produced by mining, that's 0.0219% of the energy required or a decrease of 99.98%.
+
+#### `**` Visa energy consumption {#source-2}
+
+The cost of 100,000 Visa transactions is 149 kwH - [Bitcoin network average energy consumption per transaction compared to VISA network as of 2020, Statista](https://www.statista.com/statistics/881541/bitcoin-energy-consumption-transaction-comparison-visa/)
+
+Year-ending September 2020 they processed 140,839,000,000 transactions – [Visa financials report Q4 2020](https://s1.q4cdn.com/050606653/files/doc_financials/2020/q4/Visa-Inc.-Q4-2020-Operational-Performance-Data.pdf)
+
+#### `***` Eth2 energy usage for 100,000 transactions {#source-3}
+
+It's estimated that Eth2 will allow the network to process between 25,000 and 100,000 transactions per second, with [100,000 as the theoretical maximum right now](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698).
+
+[Vitalik Buterin on transactions per second potential on Eth2](https://twitter.com/VitalikButerin/status/1312905884549300224?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1312905886327664640%7Ctwgr%5E%7Ctwcon%5Es2_&ref_url=https%3A%2F%2Fwww.coinspeaker.com%2Fvitalik-buterin-ethereum-layer-2%2F)
+
+At the bear minimum, Eth2 will allow 64 times the amount of transactions as today which sits at around 15 transactions. That's the amount of shard chains (extra data and capacity) being introduced. [More on shard chains](/eth2/shard-chains/)
+
+That means we can estimate how long it will take to process 100,000 transactions so we can compare it to the Visa example above.
+
+- `15 * 64 = 960` transactions per second.
+- `100,000 / 960 = 104.2` seconds to process 100,000 transactions.
+
+In 104.2 seconds, the Ethereum network will use the following amount of energy:
+
+`1.44kWh daily usage * 10,000 network nodes = 14,400kWh` per day.
+
+There are 86,400 seconds in a day, so `14,400 / 86,400 = 0.1666666667kWh` per second.
+
+If we times that by the amount of time it takes to process 100,000 transaction: `0.1666666667 * 104.2 = 17.3666666701 kWh`.
+
+That is **11.6554809866%** of the energy consumed by the same amount of transactions on Visa.
+
+And remember, this is based on the minimum amount of transactions that Eth2 will be able to handle per second. If Eth2 reaches its potential of 100,000 transactions per second, 100,000 transactions would consume 0.1666666667kWh.
+
+To put it another way, if Visa handled 140,839,000,000 transactions at a cost of 149 kWh per 100,000 transactions that's 209,850,110 kWh energy consumed for the year.
+
+Eth2 in a single year stands to consume 5,256,000 kWh. With a potential of 788,940,000,000 - 3,153,600,000,000 transactions processed in that time.
+
+<InfoBanner emoji=":evergreen_tree:">
+  If you think these stats are incorrect or can be made more accurate, please raise an issue or PR.
+</InfoBanner>

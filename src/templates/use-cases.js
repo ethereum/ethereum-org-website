@@ -10,6 +10,7 @@ import ButtonDropdown from "../components/ButtonDropdown"
 import BannerNotification from "../components/BannerNotification"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
+import ExpandableCard from "../components/ExpandableCard"
 import DocLink from "../components/DocLink"
 import Icon from "../components/Icon"
 import Contributors from "../components/Contributors"
@@ -214,6 +215,7 @@ const components = {
   Emoji,
   UpgradeStatus,
   DocLink,
+  ExpandableCard,
 }
 
 const Title = styled.h1`
