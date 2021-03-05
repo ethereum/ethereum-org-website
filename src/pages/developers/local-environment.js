@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
-import _ from "lodash"
+import { shuffle } from "lodash"
 
 // import ActionCard from "../../components/ActionCard"
 // import Callout from "../../components/Callout"
@@ -350,7 +350,7 @@ const ChooseStackPage = ({ data }) => {
   const [frameworks, setFrameworks] = useState([])
 
   useEffect(() => {
-    const list = _.shuffle(
+    const list = shuffle(
       frameworksList.map((item) => {
         item.image = data[item.id].childImageSharp.fixed
         item.gitHubRepo = data[`${item.id}GitHub`].repository

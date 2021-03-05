@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
-import _ from "lodash"
+import { shuffle } from "lodash"
 
 import PageHero from "../../components/PageHero"
 import Translation from "../../components/Translation"
@@ -226,7 +226,7 @@ const WalletsPage = ({ data }) => {
   useEffect(() => {
     const nodes = data.allWallets.nodes
     // Add fields for CardList
-    const randomWallets = _.shuffle(
+    const randomWallets = shuffle(
       nodes.map((node) => {
         node.image = data[node.id].childImageSharp.fixed
         node.title = node.name

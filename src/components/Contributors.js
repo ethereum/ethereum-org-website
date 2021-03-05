@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
-import _ from "lodash"
+import { shuffle } from "lodash"
 
 import ActionCard from "./ActionCard"
 import data from "../data/contributors.json"
@@ -36,11 +36,7 @@ const Contributors = () => {
   const [contributorsList, setContributorsList] = useState([])
 
   useEffect(() => {
-    const list = _.shuffle(
-      data.contributors.map((item) => {
-        return item
-      })
-    )
+    const list = shuffle(data.contributors)
     setContributorsList(list)
   }, [])
 

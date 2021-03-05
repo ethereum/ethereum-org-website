@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { useIntl, navigate } from "gatsby-plugin-intl"
 import styled from "styled-components"
-import _ from "lodash"
+import { shuffle } from "lodash"
 
 import ButtonLink from "./ButtonLink"
 import Emoji from "./Emoji"
@@ -306,7 +306,7 @@ const WalletCompare = ({ location }) => {
       : []
 
     const nodes = data.allWallets.nodes
-    const wallets = _.shuffle(
+    const wallets = shuffle(
       nodes.map((node) => {
         node.image = data[node.id]
         node.alt = translateMessageId(
