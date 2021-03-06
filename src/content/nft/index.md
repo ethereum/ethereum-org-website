@@ -354,7 +354,7 @@ The other side of the coin: Keep in mind that alternatives are not necessarily c
 
 Oh, and the same thing was said about the internet itself. Early measures of Google's search traffic led to incorrectly extrapolating that data to the future, forming incorrect conclusions about the unmanagable "waste of energy" that would follow. -->
 
-### Mint NFTs
+### Mint NFTs {#mint-nfts}
 
 Want to turn your content into a NFT?
 
