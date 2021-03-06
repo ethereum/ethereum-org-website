@@ -47,6 +47,10 @@ const Title = styled.h1`
   color: ${(props) => props.theme.colors.textTableOfContents};
 `
 
+const StyledTwoColumnContent = styled(TwoColumnContent)`
+  align-items: flex-start;
+`
+
 const Subtitle = styled.div`
   font-size: 20px;
   line-height: 140%;
@@ -215,6 +219,29 @@ const benefits = [
   },
 ]
 
+const tokenLinks = [
+  {
+    caption: "",
+    title: <Translation id="page-eth-tokens-stablecoins" />,
+    description: <Translation id="page-eth-tokens-stablecoins-description" />,
+  },
+  {
+    caption: "",
+    title: <Translation id="page-eth-tokens-defi" />,
+    description: <Translation id="page-eth-tokens-defi-description" />,
+  },
+  {
+    caption: "",
+    title: <Translation id="page-eth-tokens-nft" />,
+    description: <Translation id="page-eth-tokens-nft-description" />,
+  },
+  {
+    caption: "",
+    title: <Translation id="page-eth-tokens-dao" />,
+    description: <Translation id="page-eth-tokens-dao-description" />,
+  },
+]
+
 const cardListContent = [
   {
     link: "https://docs.ethhub.io/ethereum-basics/monetary-policy/",
@@ -264,7 +291,7 @@ const WhatIsEthereumPage = (props) => {
             </SubtitleTwo>
             <StyledEthPriceCard />
             <ButtonLink to="/get-eth/" title="where to buy eth">
-              Get ETH
+              <Translation id="page-eth-button-buy-eth" />
             </ButtonLink>
           </Header>
           <Hero
@@ -361,6 +388,15 @@ const WhatIsEthereumPage = (props) => {
             <p>
               <Translation id="page-eth-underpins-desc-2" />
             </p>
+            <CentralActionCard
+              to="/defi/"
+              title={translateMessageId("page-eth-whats-defi", intl)}
+              description={translateMessageId(
+                "page-eth-whats-defi-description",
+                intl
+              )}
+              image={data.defi.childImageSharp.fixed}
+            />
           </div>
           <TextDivider />
           <div>
@@ -442,7 +478,7 @@ const WhatIsEthereumPage = (props) => {
           <CardList content={cardListContent} />
         </RightColumn>
       </TwoColumnContent>
-      <TwoColumnContent id="tokens">
+      <StyledTwoColumnContent id="tokens">
         <LeftColumn>
           <h3>
             <Translation id="page-eth-not-only-crypto" />
@@ -453,17 +489,10 @@ const WhatIsEthereumPage = (props) => {
           <p>
             <Translation id="page-eth-not-only-crypto-desc-2" />
           </p>
-          <p id="tokens">
-            {" "}
-            <Translation id="page-eth-not-only-crypto-desc-3" />{" "}
-          </p>
-          <Link to="https://docs.ethhub.io/guides/a-straightforward-guide-erc20-tokens/">
-            <Translation id="page-eth-tokens-link" />
-          </Link>
-          <br />
-          <Link to="https://docs.ethhub.io/built-on-ethereum/erc-token-standards/erc721/#summary">
-            <Translation id="page-eth-non-fungible-tokens-link" />
-          </Link>
+          <h4>
+            <Translation id="page-eth-more-on-tokens" />
+          </h4>
+          <CardList id="tokens" content={tokenLinks} />
         </LeftColumn>
         <RightColumn>
           <h3>
@@ -481,7 +510,7 @@ const WhatIsEthereumPage = (props) => {
             )
           })}
         </RightColumn>
-      </TwoColumnContent>
+      </StyledTwoColumnContent>
     </Page>
   )
 }
@@ -519,6 +548,13 @@ export const query = graphql`
       }
     }
     ethereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
+      childImageSharp {
+        fixed(width: 220) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    defi: file(relativePath: { eq: "finance_transparent.png" }) {
       childImageSharp {
         fixed(width: 220) {
           ...GatsbyImageSharpFixed

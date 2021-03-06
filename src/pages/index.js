@@ -268,6 +268,26 @@ const FinanceContainer = styled.div`
   }
 `
 
+const NftContainer = styled.div`
+  background: ${(props) => props.theme.colors.homeBoxMint};
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 720px;
+  margin-top: -1px;
+  border-top: 1px solid ${(props) => props.theme.colors.text};
+  border-bottom: 1px solid ${(props) => props.theme.colors.text};
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column-reverse;
+    height: 100%;
+    height: 100%;
+    padding-top: 2rem;
+    padding-right: 0rem;
+    padding-bottom: 2rem;
+  }
+`
+
 const InternetContainer = styled.div`
   background: ${(props) => props.theme.colors.homeBoxPink};
   display: flex;
@@ -366,12 +386,12 @@ const StyledH2 = styled.h2`
 `
 
 const StyledCardList = styled(TitleCardList)`
-  margin-right: 4rem;
+  margin-left: 4rem;
   max-width: 624px;
   border: 1px solid ${(props) => props.theme.colors.text};
   box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-right: 0rem;
+    margin-left: 0rem;
     max-width: 100%;
   }
 `
@@ -779,7 +799,7 @@ contract SimpleDomainRegistry {
                 <Translation id="page-index-defi-description" />
               </Subtitle>
               <div>
-                <ButtonLink to="/dapps/">
+                <ButtonLink to="/defi/">
                   <Translation id="page-index-defi-button" />
                 </ButtonLink>
               </div>
@@ -793,9 +813,33 @@ contract SimpleDomainRegistry {
           </ImageContainer>
         </Row>
       </FinanceContainer>
-
+      <NftContainer>
+        <Row>
+          <ImageContainer>
+            <FeatureImage
+              fluid={data.infrastructure.childImageSharp.fluid}
+              alt={translateMessageId("page-index-nft-alt", intl)}
+            />
+          </ImageContainer>
+          <FeatureContent>
+            <LeftColumnContent>
+              <StyledH2>
+                <Translation id="page-index-nft" />
+              </StyledH2>
+              <Subtitle>
+                <Translation id="page-index-nft-description" />
+              </Subtitle>
+              <div>
+                <ButtonLink to="/nft/">
+                  <Translation id="page-index-nft-button" />
+                </ButtonLink>
+              </div>
+            </LeftColumnContent>
+          </FeatureContent>
+        </Row>
+      </NftContainer>
       <InternetContainer>
-        <RowReverse>
+        <Row>
           <FeatureContent>
             <LeftColumnContent>
               <StyledH2>
@@ -820,22 +864,19 @@ contract SimpleDomainRegistry {
               alt={translateMessageId("page-index-internet-image-alt", intl)}
             />
           </ImageContainer>
-        </RowReverse>
+        </Row>
       </InternetContainer>
       <DeveloperContainer>
-        <CodeboxModal
-          isOpen={isModalOpen}
-          setIsOpen={setModalOpen}
-          title={codeExamples[activeCode].title}
-        >
-          <Codeblock
-            codeLanguage={codeExamples[activeCode].codeLanguage}
-            allowCollapse={false}
-            fromHomepage
-          >
-            {codeExamples[activeCode].code}
-          </Codeblock>
-        </CodeboxModal>
+        <CodeExampleContent>
+          <StyledCardList
+            content={codeExamples}
+            limit={5}
+            clickHandler={toggleCodeExample}
+            header="Code examples"
+            icon="code"
+            isCode
+          />
+        </CodeExampleContent>
         <FeatureContent>
           <LeftColumnContent>
             <StyledH2>
@@ -851,16 +892,19 @@ contract SimpleDomainRegistry {
             </ButtonRow>
           </LeftColumnContent>
         </FeatureContent>
-        <CodeExampleContent>
-          <StyledCardList
-            content={codeExamples}
-            limit={5}
-            clickHandler={toggleCodeExample}
-            header="Code examples"
-            icon="code"
-            isCode
-          />
-        </CodeExampleContent>
+        <CodeboxModal
+          isOpen={isModalOpen}
+          setIsOpen={setModalOpen}
+          title={codeExamples[activeCode].title}
+        >
+          <Codeblock
+            codeLanguage={codeExamples[activeCode].codeLanguage}
+            allowCollapse={false}
+            fromHomepage
+          >
+            {codeExamples[activeCode].code}
+          </Codeblock>
+        </CodeboxModal>
       </DeveloperContainer>
       <StyledGrayContainer>
         <StyledContent>
@@ -1000,6 +1044,15 @@ export const query = graphql`
       }
     }
     hackathon: file(relativePath: { eq: "hackathon_transparent.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1440) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    infrastructure: file(
+      relativePath: { eq: "infrastructure_transparent.png" }
+    ) {
       childImageSharp {
         fluid(maxWidth: 1440) {
           ...GatsbyImageSharpFluid

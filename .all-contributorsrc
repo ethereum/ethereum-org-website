@@ -2958,6 +2958,34 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "axic",
+      "name": "Alex Beregszaszi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20340?v=4",
+      "profile": "http://www.rtfs.hu",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "adamgoth",
+      "name": "Adam Goth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5225766?v=4",
+      "profile": "http://www.adamgoth.com",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "Anuragtech02",
+      "name": "Anurag Pal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55744578?v=4",
+      "profile": "https://github.com/Anuragtech02",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,

@@ -158,7 +158,7 @@ The Byzantium fork:
 - Reduced block [mining](/developers/docs/consensus-mechanisms/pow/mining/) rewards from 5 to 3 ETH.
 - Delayed the [difficulty bomb](/glossary/#difficulty-bomb) by a year.
 - Added ability to make non-state-changing calls to other contracts.
-- Added certain cryptography methodss to allow for [layer 2 scaling]((/developers/docs/layer-2-scaling/).
+- Added certain cryptography methods to allow for [layer 2 scaling](/developers/docs/layer-2-scaling/).
 
 [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 

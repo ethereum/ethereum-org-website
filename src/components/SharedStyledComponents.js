@@ -407,3 +407,27 @@ export const dropdownIconContainerVariant = {
   },
   closed: { rotate: -90, y: 0 },
 }
+
+// Common styled item card for languages/about
+
+export const CardItem = styled(Link)`
+  text-decoration: none;
+  margin: 1rem 1rem 1rem 0;
+  padding: 1rem;
+  flex: 0 1 240px;
+  list-style: none;
+  border-radius: 2px;
+  width: 100%;
+  border: 1px solid ${(props) => props.theme.colors.lightBorder};
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  color: ${(props) => props.theme.colors.text};
+
+  &:hover {
+    box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
+    border: 1px solid ${(props) => props.theme.colors.black300};
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    flex: 1 1 240px;
+    margin: 1rem 0;
+  }
+`
