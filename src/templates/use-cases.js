@@ -305,6 +305,8 @@ const Image = styled(Img)`
     width: 100%;
     height: 100%;
     overflow: initial;
+    align-self: center;
+    margin: 0;
   }
 `
 
