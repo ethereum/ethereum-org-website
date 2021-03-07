@@ -330,6 +330,9 @@ const MobileTableOfContents = styled(TableOfContents)`
 const StyledBannerNotification = styled(BannerNotification)`
   display: flex;
   justify-content: center;
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+    display: none;
+  }
 `
 
 const TitleCard = styled.div`
