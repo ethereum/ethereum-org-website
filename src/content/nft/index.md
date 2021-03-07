@@ -312,9 +312,9 @@ Importantly this improves the energy efficiency while preserving Ethereum's dece
 
 [More on energy estimates](#footnotes-and-sources)
 
-_We’ve provided this basic comparison to baseline your understanding of Eth2 energy consumption against a familiar name. However, in practice, it’s not really correct to compare based on number of transactions. Ethereum’s energy output is time-based. If Ethereum did more or less transactions from one minute to the next, the energy output would stay the same._
+_We’ve provided the basic comparison to Visa to baseline your understanding of Eth2 energy consumption against a familiar name. However, in practice, it’s not really correct to compare based on number of transactions. Ethereum’s energy output is time-based. If Ethereum did more or less transactions from one minute to the next, the energy output would stay the same._
 
-_It’s also important to remember that Ethereum does more than just financial transactions, it’s a platform for applications, so a fairer comparison might be to both companies like Visa, AWS and more!_
+_It’s also important to remember that Ethereum does more than just financial transactions, it’s a platform for applications, so a fairer comparison might be to many companies/industries including Visa, AWS and more!_
 
 #### Timelines {#timelines}
 
@@ -352,7 +352,7 @@ In this case, miners would migrate to lower cost alternatives. Since you can't t
 
 The other side of the coin: Keep in mind that alternatives are not necessarily carbon-neutral either, such as the footprint of printing, handling, shipping and guarding fiat currencies. Annual spectacles of Christmas lights consume large amounts of energy, not to mention commercial products filling landfills, and governments engaging in war, leading to substantial levels of pollution.
 
-Oh, and the same thing was said about the internet itself. Early measures of Google's search traffic led to incorrectly extrapolating that data to the future, forming incorrect conclusions about the unmanagable "waste of energy" that would follow. -->
+Oh, and the same thing was said about the internet itself. Early measures of Google's search traffic led to incorrectly extrapolating that data to the future, forming incorrect conclusions about the unmanagable "waste of energy" that would follow.
 
 ### Mint NFTs
 
