@@ -18,7 +18,7 @@ Deploying a contract also costs ETH, so you should be familiar with [gas and fee
 
 Finally, you'll need to compile your contract before deploying it, so make sure you've read about [compiling smart contracts](/developers/docs/smart-contracts/compiling/).
 
-## How to deploy a smart contract
+## How to deploy a smart contract {#how-to-deploy-a-smart-contract}
 
 This means you'll need to pay a transaction fee so make sure you have some ETH.
 
@@ -58,6 +58,6 @@ Once deployed, your contract will have an Ethereum address like other [accounts]
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
-## Related topics
+## Related topics {#related-topics}
 
 - [Development frameworks](/en/developers/docs/frameworks/)
