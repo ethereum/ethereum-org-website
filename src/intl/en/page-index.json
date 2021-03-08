@@ -26,8 +26,8 @@
   "page-index-what-is-ethereum-secondary-button": "More on digital money",
   "page-index-what-is-ethereum-image-alt": "Illustration of a person peering into a bazaar, meant to represent Ethereum.",
   "page-index-defi": "A fairer financial system",
-  "page-index-defi-description": "Today, billions of people can’t open bank accounts, others have their payments blocked. Ethereum's decentralized finance (defi) system never sleeps or discriminates. With just an internet connection, you can send, receive, borrow, earn interest, and even stream funds anywhere in the world.",
-  "page-index-defi-button": "Explore defi",
+  "page-index-defi-description": "Today, billions of people can’t open bank accounts, others have their payments blocked. Ethereum's decentralized finance (DeFi) system never sleeps or discriminates. With just an internet connection, you can send, receive, borrow, earn interest, and even stream funds anywhere in the world.",
+  "page-index-defi-button": "Explore DeFi",
   "page-index-defi-image-alt": "Illustration of hands offering an ETH symbol.",
   "page-index-internet": "An open internet",
   "page-index-internet-description": "Today, we gain access to 'free' internet services by giving up control of our personal data. Ethereum services are open by default – you just need a wallet. These are free and easy to set up, controlled by you, and work without any personal info.",
@@ -51,8 +51,8 @@
   "page-index-network-stats-eth-price-explainer": "The latest price for 1 ether. You can buy as little as 0.000000000000000001 – you don't need to buy 1 whole ETH.",
   "page-index-network-stats-tx-day-description": "Transactions today",
   "page-index-network-stats-tx-day-explainer": "The number of transactions succesfully processed on the network in the last 24 hours.",
-  "page-index-network-stats-value-defi-description": "Value locked in Defi (USD)",
-  "page-index-network-stats-value-defi-explainer": "The amount of money in decentralized finance (defi) applications, the Ethereum digital economy.",
+  "page-index-network-stats-value-defi-description": "Value locked in DeFi (USD)",
+  "page-index-network-stats-value-defi-explainer": "The amount of money in decentralized finance (DeFi) applications, the Ethereum digital economy.",
   "page-index-network-stats-nodes-description": "Nodes",
   "page-index-network-stats-nodes-explainer": "Ethereum is run by thousands of volunteers around the globe, known as nodes.",
   "page-index-touts-header": "Explore ethereum.org",
@@ -68,5 +68,9 @@
   "page-index-tout-enterprise-image-alt": "Illustration of a futuristic computer/device.",
   "page-index-tout-community-title": "The Ethereum community",
   "page-index-tout-community-description": "Ethereum is all about community. It's made up of people from all different backgrounds and interests. See how you can join in.",
-  "page-index-tout-community-image-alt": "Illustration of a group of builders working together."
+  "page-index-tout-community-image-alt": "Illustration of a group of builders working together.",
+  "page-index-nft": "The internet of assets",
+  "page-index-nft-description": "Ethereum isn't just for digital money. Anything you can own can be represented, traded and put to use as non-fungible tokens (NFTs). You can tokenise your art and get royalties automatically every time it's re-sold. Or use a token for something you own to take out a loan. The possibilities are growing all the time.",
+  "page-index-nft-button": "More on NFTs",
+  "page-index-nft-alt": "An Eth logo being displayed via hologram."
 }

@@ -81,5 +81,17 @@
   "page-eth-where-to-buy": "Where to get ETH",
   "page-eth-where-to-buy-desc": "You can get ETH from an exchange or a wallet but different countries have different policies. Check to see the services that will let you buy ETH.",
   "page-eth-yours": "It's really yours",
-  "page-eth-yours-desc": "ETH lets you be your own bank. You can control your own funds with your wallet as proof of ownership – no third parties necessary."
+  "page-eth-yours-desc": "ETH lets you be your own bank. You can control your own funds with your wallet as proof of ownership – no third parties necessary.",
+  "page-eth-more-on-tokens": "More on tokens and their uses",
+  "page-eth-button-buy-eth": "Get ETH",
+  "page-eth-tokens-stablecoins": "Stablecoins",
+  "page-eth-tokens-defi": "Decentralized finance (DeFi)",
+  "page-eth-tokens-nft": "Non-fungible tokens (NFTs)",
+  "page-eth-tokens-dao": "Decentralized autonomous organisations (DAOs)",
+  "page-eth-tokens-stablecoins-description": "More on the least volatile of Ethereum tokens.",
+  "page-eth-tokens-defi-description": "The financial system for Ethereum tokens.",
+  "page-eth-tokens-nft-description": "Tokens that represent ownership of items on Ethereum.",
+  "page-eth-tokens-dao-description": "Internet communities often goverened by token holders.",
+  "page-eth-whats-defi": "More on DeFi",
+  "page-eth-whats-defi-description": "DeFi is the decentralized financial system built on Ethereum. This overview explains what you can do."
 }

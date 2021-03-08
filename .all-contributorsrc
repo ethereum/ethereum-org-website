@@ -2958,6 +2958,52 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "axic",
+      "name": "Alex Beregszaszi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20340?v=4",
+      "profile": "http://www.rtfs.hu",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "adamgoth",
+      "name": "Adam Goth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5225766?v=4",
+      "profile": "http://www.adamgoth.com",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "Anuragtech02",
+      "name": "Anurag Pal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55744578?v=4",
+      "profile": "https://github.com/Anuragtech02",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Vishal19111999",
+      "name": "Vishal Pratap Singh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29145212?v=4",
+      "profile": "https://www.codechef.com/users/chaos_",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "qbzzt",
+      "name": "qbzzt",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12722969?v=4",
+      "profile": "https://github.com/qbzzt",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

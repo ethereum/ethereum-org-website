@@ -278,6 +278,29 @@ const WhatIsEthereumPage = ({ data }) => {
       description: <Translation id="page-what-is-ethereum-dapps-desc" />,
     },
   ]
+  const usecases = [
+    {
+      title: <Translation id="page-what-is-ethereum-defi-title" />,
+      to: "/defi/",
+      alt: translateMessageId("page-what-is-ethereum-defi-alt", intl),
+      image: data.defi.childImageSharp.fixed,
+      description: <Translation id="page-what-is-ethereum-defi-description" />,
+    },
+    {
+      title: <Translation id="page-what-is-ethereum-nft-title" />,
+      to: "/nft/",
+      alt: translateMessageId("page-what-is-ethereum-nft-alt", intl),
+      image: data.nft.childImageSharp.fixed,
+      description: <Translation id="page-what-is-ethereum-nft-description" />,
+    },
+    {
+      title: <Translation id="page-what-is-ethereum-dao-title" />,
+      to: "/dao/",
+      alt: translateMessageId("page-what-is-ethereum-dao-alt", intl),
+      image: data.dao.childImageSharp.fixed,
+      description: <Translation id="page-what-is-ethereum-dao-description" />,
+    },
+  ]
   return (
     <Page>
       <PageMetadata
@@ -414,6 +437,32 @@ const WhatIsEthereumPage = ({ data }) => {
           ))}
         </ActionCardContainer>
       </Content>
+      <Content>
+        <ActionIntro>
+          <h2>
+            <Translation id="page-what-is-ethereum-use-cases-title" />
+          </h2>
+          <Subtitle>
+            <Translation id="page-what-is-ethereum-use-cases-subtitle" />
+          </Subtitle>
+          <SubtitleTwo>
+            <Translation id="page-what-is-ethereum-use-cases-subtitle-two" />
+          </SubtitleTwo>
+        </ActionIntro>
+        <ActionCardContainer>
+          {usecases.map((usecase, idx) => (
+            <ActionCard
+              key={idx}
+              to={usecase.to}
+              alt={usecase.alt}
+              image={usecase.image}
+              title={usecase.title}
+              description={usecase.description}
+              isBottom={false}
+            />
+          ))}
+        </ActionCardContainer>
+      </Content>
       <TwoColumnContent>
         <Column>
           <h2>
@@ -461,6 +510,15 @@ const WhatIsEthereumPage = ({ data }) => {
 
 export default WhatIsEthereumPage
 
+export const useCaseImage = graphql`
+  fragment useCaseImage on File {
+    childImageSharp {
+      fixed(height: 260) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`
 export const actionCardImage = graphql`
   fragment actionCardImage on File {
     childImageSharp {
@@ -511,6 +569,15 @@ export const query = graphql`
     }
     eth: file(relativePath: { eq: "eth.png" }) {
       ...actionCardImage
+    }
+    dao: file(relativePath: { eq: "use-cases/dao-2.png" }) {
+      ...useCaseImage
+    }
+    defi: file(relativePath: { eq: "finance_transparent.png" }) {
+      ...useCaseImage
+    }
+    nft: file(relativePath: { eq: "infrastructure_transparent.png" }) {
+      ...useCaseImage
     }
     developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       ...calloutImage

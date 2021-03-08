@@ -346,6 +346,14 @@ const StyledCardGrid = styled(CardGrid)`
   margin-top: 4rem;
 `
 
+const MoreButtonContainer = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+`
+
 const FINANCE = "finance"
 const TECHNOLOGY = "technology"
 const COLLECTIBLES = "collectibles"
@@ -787,6 +795,62 @@ const DappsPage = ({ data, location }) => {
       image: data.pooltogether.childImageSharp.fluid,
       alt: translateMessageId("page-dapps-pooltogether-logo-alt", intl),
     },
+    {
+      title: "Index Coop",
+      description: translateMessageId(
+        "page-dapps-dapp-description-index-coop",
+        intl
+      ),
+      link: "https://www.indexcoop.com/",
+      image: data.index.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-index-coop-logo-alt", intl),
+    },
+  ]
+
+  const insurance = [
+    {
+      title: "Nexus Mutual",
+      description: translateMessageId(
+        "page-dapps-dapp-description-nexus-mutual",
+        intl
+      ),
+      link: "https://nexusmutual.io/",
+      image: data.nexus.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-nexus-mutual-logo-alt", intl),
+    },
+    {
+      title: "Etherisc",
+      description: translateMessageId(
+        "page-dapps-dapp-description-etherisc",
+        intl
+      ),
+      link: "https://etherisc.com/",
+      image: data.etherisc.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-etherisc-logo-alt", intl),
+    },
+  ]
+
+  const portfolios = [
+    {
+      title: "Zapper",
+      description: translateMessageId(
+        "page-dapps-dapp-description-zapper",
+        intl
+      ),
+      link: "https://zapper.fi/",
+      image: data.zapper.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-zapper-logo-alt", intl),
+    },
+    {
+      title: "Zerion",
+      description: translateMessageId(
+        "page-dapps-dapp-description-zerion",
+        intl
+      ),
+      link: "https://app.zerion.io/",
+      image: data.zerion.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-zerion-logo-alt", intl),
+    },
   ]
 
   const computing = [
@@ -800,13 +864,16 @@ const DappsPage = ({ data, location }) => {
       image: data.golem.childImageSharp.fluid,
       alt: translateMessageId("page-dapps-golem-logo-alt", intl),
     },
-    /* {
+    {
       title: "radicle.xyz",
-      description:
-        "Secure peer-to-peer code collaboration without intermediaries.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-radicle",
+        intl
+      ),
       link: "https://radicle.xyz/",
       image: data.radicle.childImageSharp.fluid,
-    }, */
+      alt: translateMessageId("page-dapps-radicle-logo-alt", intl),
+    },
   ]
 
   const marketplaces = [
@@ -1274,6 +1341,26 @@ const DappsPage = ({ data, location }) => {
                 />
               </RightColumn>
             </TwoColumnContent>
+            <TwoColumnContent>
+              <LeftColumn>
+                <ProductList
+                  category={translateMessageId(
+                    "page-dapps-category-insurance",
+                    intl
+                  )}
+                  content={insurance}
+                />
+              </LeftColumn>
+              <RightColumn>
+                <ProductList
+                  category={translateMessageId(
+                    "page-dapps-category-portfolios",
+                    intl
+                  )}
+                  content={portfolios}
+                />
+              </RightColumn>
+            </TwoColumnContent>
             <StyledCalloutBanner
               title={translateMessageId(
                 "page-dapps-wallet-callout-title",
@@ -1491,6 +1578,27 @@ const DappsPage = ({ data, location }) => {
                   />
                 ))}
               </CardContainer>
+              {selectedCategory === FINANCE && (
+                <MoreButtonContainer>
+                  <ButtonLink isSecondary to="/defi/">
+                    <Translation id="page-dapps-more-on-defi-button" />
+                  </ButtonLink>
+                </MoreButtonContainer>
+              )}
+              {selectedCategory === COLLECTIBLES && (
+                <MoreButtonContainer>
+                  <ButtonLink isSecondary to="/nft/">
+                    <Translation id="page-dapps-more-on-nft-button" />
+                  </ButtonLink>
+                </MoreButtonContainer>
+              )}
+              {selectedCategory === GAMING && (
+                <MoreButtonContainer>
+                  <ButtonLink isSecondary to="/nft/">
+                    <Translation id="page-dapps-more-on-nft-gaming-button" />
+                  </ButtonLink>
+                </MoreButtonContainer>
+              )}
             </About>
           )}
         </Content>
@@ -1753,6 +1861,21 @@ export const query = graphql`
       ...dappImage
     }
     asyncart: file(relativePath: { eq: "dapps/asyncart.png" }) {
+      ...dappImage
+    }
+    index: file(relativePath: { eq: "dapps/index-coop.png" }) {
+      ...dappImage
+    }
+    nexus: file(relativePath: { eq: "dapps/nexus.png" }) {
+      ...dappImage
+    }
+    etherisc: file(relativePath: { eq: "dapps/etherisc.png" }) {
+      ...dappImage
+    }
+    zapper: file(relativePath: { eq: "dapps/zapper.png" }) {
+      ...dappImage
+    }
+    zerion: file(relativePath: { eq: "dapps/zerion.png" }) {
       ...dappImage
     }
   }
