@@ -343,17 +343,14 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           {/* Desktop */}
           <InnerContent>
             <LeftItems>
-              {linkSections.map((section, idx) => {
-                if (section.items) {
-                  return (
-                    <NavDropdown
-                      section={section}
-                      key={idx}
-                      hasSubNav={shouldShowSubNav}
-                    />
-                  )
-                }
-                return (
+              {linkSections.map((section, idx) =>
+                section.items ? (
+                  <NavDropdown
+                    section={section}
+                    key={idx}
+                    hasSubNav={shouldShowSubNav}
+                  />
+                ) : (
                   <NavListItem key={idx}>
                     <NavLink
                       to={section.to}
@@ -363,7 +360,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
                     </NavLink>
                   </NavListItem>
                 )
-              })}
+              )}
             </LeftItems>
             <RightItems>
               <Search />
@@ -413,17 +410,15 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
 
       {shouldShowSubNav && (
         <SubNav>
-          {ednLinks.map((link, idx) => {
-            return (
-              <NavLink
-                key={idx}
-                to={link.to}
-                isPartiallyActive={link.isPartiallyActive}
-              >
-                <Translation id={link.text} />
-              </NavLink>
-            )
-          })}
+          {ednLinks.map((link, idx) => (
+            <NavLink
+              key={idx}
+              to={link.to}
+              isPartiallyActive={link.isPartiallyActive}
+            >
+              <Translation id={link.text} />
+            </NavLink>
+          ))}
         </SubNav>
       )}
     </NavContainer>

@@ -200,25 +200,23 @@ const LegacyPageHome = () => {
         </Header>
         <Divider />
         <SectionContainer>
-          {sections.map((section, idx) => {
-            return (
-              <Section key={idx}>
-                <Img
-                  fixed={section.img.src.childImageSharp.fixed}
-                  alt={translateMessageId(section.img.alt, intl)}
-                />
-                <h2>
-                  <Translation id={section.title} />
-                </h2>
-                <p>
-                  <Translation id={section.desc} />
-                </p>
-                <Link to={section.link.to}>
-                  <Translation id={section.link.text} />
-                </Link>
-              </Section>
-            )
-          })}
+          {sections.map((section, idx) => (
+            <Section key={idx}>
+              <Img
+                fixed={section.img.src.childImageSharp.fixed}
+                alt={translateMessageId(section.img.alt, intl)}
+              />
+              <h2>
+                <Translation id={section.title} />
+              </h2>
+              <p>
+                <Translation id={section.desc} />
+              </p>
+              <Link to={section.link.to}>
+                <Translation id={section.link.text} />
+              </Link>
+            </Section>
+          ))}
         </SectionContainer>
       </Content>
     </Page>

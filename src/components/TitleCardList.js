@@ -129,55 +129,53 @@ const TitleCardList = ({
   header,
   icon,
   isCode,
-}) => {
-  return (
-    <Table isCode={isCode} className={className}>
-      <TableHeader>
-        {icon && <StyledIcon name={icon} />}
-        {header}
-        {isCode && (
-          <CodeBoxHeader>
-            <Red />
-            <Yellow />
-            <Green />
-          </CodeBoxHeader>
-        )}
-      </TableHeader>
-      {content.map((listItem, idx) => {
-        const { title, description, caption, link, image, alt, id } = listItem
-        const isLink = !!link
-        return isLink ? (
-          <ItemLink key={id || idx} to={link}>
-            {image && <Image fixed={image} alt={alt} />}
-            <LeftContainer>
-              <ItemTitle>{title}</ItemTitle>
+}) => (
+  <Table isCode={isCode} className={className}>
+    <TableHeader>
+      {icon && <StyledIcon name={icon} />}
+      {header}
+      {isCode && (
+        <CodeBoxHeader>
+          <Red />
+          <Yellow />
+          <Green />
+        </CodeBoxHeader>
+      )}
+    </TableHeader>
+    {content.map((listItem, idx) => {
+      const { title, description, caption, link, image, alt, id } = listItem
+      const isLink = !!link
+      return isLink ? (
+        <ItemLink key={id || idx} to={link}>
+          {image && <Image fixed={image} alt={alt} />}
+          <LeftContainer>
+            <ItemTitle>{title}</ItemTitle>
 
-              <ItemDesc>{description}</ItemDesc>
-            </LeftContainer>
-            {caption && (
-              <RightContainer>
-                <ItemDesc>{caption}</ItemDesc>
-              </RightContainer>
-            )}
-          </ItemLink>
-        ) : (
-          <Item key={idx} onClick={() => clickHandler(idx)}>
-            {image && <Image fixed={image} alt={alt} />}
-            <LeftContainer>
-              <ItemTitle>{title}</ItemTitle>
+            <ItemDesc>{description}</ItemDesc>
+          </LeftContainer>
+          {caption && (
+            <RightContainer>
+              <ItemDesc>{caption}</ItemDesc>
+            </RightContainer>
+          )}
+        </ItemLink>
+      ) : (
+        <Item key={idx} onClick={() => clickHandler(idx)}>
+          {image && <Image fixed={image} alt={alt} />}
+          <LeftContainer>
+            <ItemTitle>{title}</ItemTitle>
 
-              <ItemDesc>{description}</ItemDesc>
-            </LeftContainer>
-            {caption && (
-              <RightContainer>
-                <ItemDesc>{caption}</ItemDesc>
-              </RightContainer>
-            )}
-          </Item>
-        )
-      })}
-    </Table>
-  )
-}
+            <ItemDesc>{description}</ItemDesc>
+          </LeftContainer>
+          {caption && (
+            <RightContainer>
+              <ItemDesc>{caption}</ItemDesc>
+            </RightContainer>
+          )}
+        </Item>
+      )
+    })}
+  </Table>
+)
 
 export default TitleCardList

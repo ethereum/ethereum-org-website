@@ -131,15 +131,13 @@ const ButtonDropdown = ({ list, className }) => {
         variants={listVariants}
         initial="closed"
       >
-        {list.items.map((item, idx) => {
-          return (
-            <DropdownItem key={idx} onClick={() => setIsOpen(false)}>
-              <NavLink to={item.to} tabIndex="-1">
-                <Translation id={item.text} />
-              </NavLink>
-            </DropdownItem>
-          )
-        })}
+        {list.items.map((item, idx) => (
+          <DropdownItem key={idx} onClick={() => setIsOpen(false)}>
+            <NavLink to={item.to} tabIndex="-1">
+              <Translation id={item.text} />
+            </NavLink>
+          </DropdownItem>
+        ))}
       </DropdownList>
     </Container>
   )

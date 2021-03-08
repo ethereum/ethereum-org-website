@@ -224,35 +224,29 @@ const MobileNavMenu = ({
         initial="closed"
       >
         <MenuItems>
-          {linkSections.map((section, idx) => {
-            if (section.items) {
-              return (
-                <NavListItem
-                  key={idx}
-                  aria-label={`Select ${translateMessageId(
-                    section.text,
-                    intl
-                  )}`}
-                >
-                  <SectionTitle>
-                    <Translation id={section.text} />
-                  </SectionTitle>
-                  <SectionItems>
-                    {section.items.map((item, idx) => (
-                      <SectionItem key={idx} onClick={toggleMenu}>
-                        <StyledNavLink
-                          to={item.to}
-                          isPartiallyActive={item.isPartiallyActive}
-                        >
-                          <Translation id={item.text} />
-                        </StyledNavLink>
-                      </SectionItem>
-                    ))}
-                  </SectionItems>
-                </NavListItem>
-              )
-            }
-            return (
+          {linkSections.map((section, idx) =>
+            section.items ? (
+              <NavListItem
+                key={idx}
+                aria-label={`Select ${translateMessageId(section.text, intl)}`}
+              >
+                <SectionTitle>
+                  <Translation id={section.text} />
+                </SectionTitle>
+                <SectionItems>
+                  {section.items.map((item, idx) => (
+                    <SectionItem key={idx} onClick={toggleMenu}>
+                      <StyledNavLink
+                        to={item.to}
+                        isPartiallyActive={item.isPartiallyActive}
+                      >
+                        <Translation id={item.text} />
+                      </StyledNavLink>
+                    </SectionItem>
+                  ))}
+                </SectionItems>
+              </NavListItem>
+            ) : (
               <NavListItem onClick={toggleMenu} key={idx}>
                 <NavLink
                   to={section.to}
@@ -262,7 +256,7 @@ const MobileNavMenu = ({
                 </NavLink>
               </NavListItem>
             )
-          })}
+          )}
         </MenuItems>
         <BottomMenu>
           <BottomItem onClick={() => toggleMenu("search")}>

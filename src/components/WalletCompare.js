@@ -448,27 +448,23 @@ const WalletCompare = ({ location }) => {
           )}
           <TagsContainer>
             <TagContainer>
-              {selectedFeatures.map((feature) => {
-                return (
-                  <Tag
-                    name={feature.title}
-                    key={feature.id}
-                    onSelect={handleSelect}
-                    value={feature.id}
-                  />
-                )
-              })}
-              {remainingFeatures.map((feature) => {
-                return (
-                  <Tag
-                    name={feature.title}
-                    key={feature.id}
-                    onSelect={handleSelect}
-                    value={feature.id}
-                    isActive={false}
-                  />
-                )
-              })}
+              {selectedFeatures.map((feature) => (
+                <Tag
+                  name={feature.title}
+                  key={feature.id}
+                  onSelect={handleSelect}
+                  value={feature.id}
+                />
+              ))}
+              {remainingFeatures.map((feature) => (
+                <Tag
+                  name={feature.title}
+                  key={feature.id}
+                  onSelect={handleSelect}
+                  value={feature.id}
+                  isActive={false}
+                />
+              ))}
             </TagContainer>
             {hasSelectedFeatures && (
               <ClearLink onClick={clearFilters}>
@@ -493,9 +489,9 @@ const WalletCompare = ({ location }) => {
         )}
         <ResultsContainer>
           <ResultsGrid>
-            {filteredWallets.map((wallet) => {
-              return <WalletCard wallet={wallet} key={wallet.id} />
-            })}
+            {filteredWallets.map((wallet) => (
+              <WalletCard wallet={wallet} key={wallet.id} />
+            ))}
           </ResultsGrid>
         </ResultsContainer>
         <Disclaimer>

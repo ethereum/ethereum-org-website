@@ -18,17 +18,15 @@ const Description = styled.p`
 
 const TopContent = styled.div``
 
-const Card = ({ emoji, title, description, children, className }) => {
-  return (
-    <StyledCard className={className}>
-      <TopContent>
-        {emoji && <Emoji size={3} text={emoji} />}
-        <h3>{title}</h3>
-        <Description>{description}</Description>
-      </TopContent>
-      {children}
-    </StyledCard>
-  )
-}
+const Card = ({ emoji, title, description, children, className }) => (
+  <StyledCard className={className}>
+    <TopContent>
+      {emoji && <Emoji size={3} text={emoji} />}
+      <h3>{title}</h3>
+      <Description>{description}</Description>
+    </TopContent>
+    {children}
+  </StyledCard>
+)
 
 export default Card

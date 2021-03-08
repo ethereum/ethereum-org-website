@@ -42,16 +42,14 @@ const Contributors = () => {
 
   return (
     <Container>
-      {contributorsList.map((contributor, idx) => {
-        return (
-          <ContributorCard
-            key={idx}
-            image={contributor.avatar_url}
-            to={contributor.profile}
-            title={contributor.name}
-          />
-        )
-      })}
+      {contributorsList.map((contributor, idx) => (
+        <ContributorCard
+          key={idx}
+          image={contributor.avatar_url}
+          to={contributor.profile}
+          title={contributor.name}
+        />
+      ))}
     </Container>
   )
 }

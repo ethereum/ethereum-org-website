@@ -344,16 +344,14 @@ const WhatIsEthereumPage = ({ data }) => {
           </p>
         </Intro>
         <CardContainer>
-          {cards.map((card, idx) => {
-            return (
-              <StyledCard
-                key={idx}
-                emoji={card.emoji}
-                title={card.title}
-                description={card.description}
-              />
-            )
-          })}
+          {cards.map((card, idx) => (
+            <StyledCard
+              key={idx}
+              emoji={card.emoji}
+              title={card.title}
+              description={card.description}
+            />
+          ))}
         </CardContainer>
       </StyledGrayContatiner>
       <BannerContainer>

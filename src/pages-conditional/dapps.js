@@ -1220,21 +1220,19 @@ const DappsPage = ({ data, location }) => {
           <Translation id="page-dapps-editors-choice-description" />
         </p>
         <StyledCardGrid>
-          {editorChoices.map((choice, idx) => {
-            return (
-              <ProductCard
-                key={idx}
-                background={choice.background}
-                description={choice.description}
-                url={choice.url}
-                alt={choice.alt}
-                image={choice.image}
-                name={choice.name}
-              >
-                <Pill color={choice.pillColor}>{choice.type}</Pill>
-              </ProductCard>
-            )
-          })}
+          {editorChoices.map((choice, idx) => (
+            <ProductCard
+              key={idx}
+              background={choice.background}
+              description={choice.description}
+              url={choice.url}
+              alt={choice.alt}
+              image={choice.image}
+              name={choice.name}
+            >
+              <Pill color={choice.pillColor}>{choice.type}</Pill>
+            </ProductCard>
+          ))}
         </StyledCardGrid>
       </Content>
       <FullWidthContainer ref={explore}>
@@ -1571,16 +1569,14 @@ const DappsPage = ({ data, location }) => {
               </h2>
               <p>{categories[selectedCategory.benefitsDescription]}</p>
               <CardContainer>
-                {categories[selectedCategory].benefits.map((art, idx) => {
-                  return (
-                    <CenteredCard
-                      key={idx}
-                      emoji={art.emoji}
-                      title={art.title}
-                      description={art.description}
-                    />
-                  )
-                })}
+                {categories[selectedCategory].benefits.map((art, idx) => (
+                  <CenteredCard
+                    key={idx}
+                    emoji={art.emoji}
+                    title={art.title}
+                    description={art.description}
+                  />
+                ))}
               </CardContainer>
               {selectedCategory === FINANCE && (
                 <MoreButtonContainer>

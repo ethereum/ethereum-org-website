@@ -45,19 +45,15 @@ const Secondary = styled(StyledButton)`
   }
 `
 
-const ButtonLink = ({ to, isSecondary, children, className, ...props }) => {
-  if (isSecondary) {
-    return (
-      <Secondary to={to} hideArrow={true} className={className} {...props}>
-        {children}
-      </Secondary>
-    )
-  }
-  return (
+const ButtonLink = ({ to, isSecondary, children, className, ...props }) =>
+  isSecondary ? (
+    <Secondary to={to} hideArrow={true} className={className} {...props}>
+      {children}
+    </Secondary>
+  ) : (
     <Primary to={to} hideArrow={true} className={className} {...props}>
       {children}
     </Primary>
   )
-}
 
 export default ButtonLink

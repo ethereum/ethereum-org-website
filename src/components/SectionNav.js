@@ -31,18 +31,16 @@ const TopContent = styled.div`
   align-items: flex-start;
 `
 
-const SectionNav = ({ children }) => {
-  return (
-    <Card>
-      <TopContent>
-        <Emoji text=":point_right:" mb={`1em`} />
-        <Title>
-          <Translation id="in-this-section" />
-        </Title>
-      </TopContent>
-      {children}
-    </Card>
-  )
-}
+const SectionNav = ({ children }) => (
+  <Card>
+    <TopContent>
+      <Emoji text=":point_right:" mb={`1em`} />
+      <Title>
+        <Translation id="in-this-section" />
+      </Title>
+    </TopContent>
+    {children}
+  </Card>
+)
 
 export default SectionNav

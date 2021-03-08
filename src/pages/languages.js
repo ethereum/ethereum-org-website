@@ -71,14 +71,12 @@ const LanguagesPage = () => {
             <Translation id="page-languages-translations-available" />:
           </h2>
           <LangContainer>
-            {translationsCompleted.map((lang) => {
-              return (
-                <LangItem to={lang.path} key={lang["name"]}>
-                  <LangTitle>{lang["name"]}</LangTitle>
-                  <h4>{lang.language}</h4>
-                </LangItem>
-              )
-            })}
+            {translationsCompleted.map((lang) => (
+              <LangItem to={lang.path} key={lang["name"]}>
+                <LangTitle>{lang["name"]}</LangTitle>
+                <h4>{lang.language}</h4>
+              </LangItem>
+            ))}
           </LangContainer>
           <h2>
             <Translation id="page-languages-want-more-header" />

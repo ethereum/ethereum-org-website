@@ -312,25 +312,21 @@ const LeftContainer = styled.div`
 `
 // TODO create generalized CardList / TableCard
 // TODO prop if ordered list or unordered
-const MeetupList = () => {
-  return (
-    <Table>
-      {meetups.map((meetup, idx) => {
-        return (
-          <Item key={idx} to={meetup.link}>
-            <LeftContainer>
-              <ItemNumber>{idx + 1}</ItemNumber>
-              <ItemTitle>{meetup.title}</ItemTitle>
-            </LeftContainer>
-            <RightContainer>
-              <Emoji text={meetup.emoji} size={1} mr={`0.5em`} />
-              <ItemDesc>{meetup.location}</ItemDesc>
-            </RightContainer>
-          </Item>
-        )
-      })}
-    </Table>
-  )
-}
+const MeetupList = () => (
+  <Table>
+    {meetups.map((meetup, idx) => (
+      <Item key={idx} to={meetup.link}>
+        <LeftContainer>
+          <ItemNumber>{idx + 1}</ItemNumber>
+          <ItemTitle>{meetup.title}</ItemTitle>
+        </LeftContainer>
+        <RightContainer>
+          <Emoji text={meetup.emoji} size={1} mr={`0.5em`} />
+          <ItemDesc>{meetup.location}</ItemDesc>
+        </RightContainer>
+      </Item>
+    ))}
+  </Table>
+)
 
 export default MeetupList

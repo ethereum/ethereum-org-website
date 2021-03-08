@@ -243,13 +243,12 @@ const WalletsPage = ({ data }) => {
   }, [data, intl])
 
   const cryptoCurious = wallets
-    .filter((wallet) => {
-      return (
+    .filter(
+      (wallet) =>
         (wallet.has_card_deposits === "TRUE" ||
           wallet.has_explore_dapps === "TRUE") &&
         wallet.has_hardware !== "TRUE"
-      )
-    })
+    )
     .slice(0, 4)
 
   const cryptoConverted = wallets
@@ -312,16 +311,14 @@ const WalletsPage = ({ data }) => {
         </IntroTwoColumnContent>
         <Content>
           <CardContainer>
-            {cards.map((card, idx) => {
-              return (
-                <StyledCard
-                  key={idx}
-                  emoji={card.emoji}
-                  title={card.title}
-                  description={card.description}
-                />
-              )
-            })}
+            {cards.map((card, idx) => (
+              <StyledCard
+                key={idx}
+                emoji={card.emoji}
+                title={card.title}
+                description={card.description}
+              />
+            ))}
           </CardContainer>
         </Content>
       </StyledGrayContainer>
@@ -359,17 +356,15 @@ const WalletsPage = ({ data }) => {
             <Translation id="page-wallets-types" />
           </H2>
           <div>
-            {types.map((type, idx) => {
-              return (
-                <WalletType
-                  key={idx}
-                  emoji={type.emoji}
-                  title={type.title}
-                  description={type.description}
-                  size={2.5}
-                />
-              )
-            })}
+            {types.map((type, idx) => (
+              <WalletType
+                key={idx}
+                emoji={type.emoji}
+                title={type.title}
+                description={type.description}
+                size={2.5}
+              />
+            ))}
           </div>
         </RightColumn>
       </StyledTwoColumnContent>
