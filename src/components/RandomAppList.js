@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react"
+import { shuffle } from "lodash"
+
 import Link from "./Link"
 import Translation from "./Translation"
 
@@ -49,11 +51,7 @@ const RandomAppList = () => {
   const [randomAppList, setRandomAppList] = useState([])
 
   useEffect(() => {
-    const list = appList.map((item) => {
-      item.randomNumber = Math.floor(Math.random() * appList.length)
-      return item
-    })
-    list.sort((a, b) => a.randomNumber - b.randomNumber)
+    const list = shuffle(appList)
     setRandomAppList(list)
   }, [])
 

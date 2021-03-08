@@ -3,6 +3,8 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
+import { shuffle } from "lodash"
+
 import PageHero from "../../components/PageHero"
 import Translation from "../../components/Translation"
 import Callout from "../../components/Callout"
@@ -224,8 +226,8 @@ const WalletsPage = ({ data }) => {
   useEffect(() => {
     const nodes = data.allWallets.nodes
     // Add fields for CardList
-    const randomWallets = nodes
-      .map((node) => {
+    const randomWallets = shuffle(
+      nodes.map((node) => {
         node.image = data[node.id].childImageSharp.fixed
         node.title = node.name
         node.description = translateMessageId(
@@ -233,10 +235,9 @@ const WalletsPage = ({ data }) => {
           intl
         )
         node.link = node.url
-        node.randomNumber = Math.floor(Math.random() * nodes.length)
         return node
       })
-      .sort((a, b) => a.randomNumber - b.randomNumber)
+    )
 
     setWallets(randomWallets)
   }, [data, intl])
