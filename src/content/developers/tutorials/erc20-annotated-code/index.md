@@ -1,10 +1,10 @@
 ---
 title: "ERC-20 Contract Walk-Through"
-description: What is in the OpenWhisk ERC-20 contract and why is it there?
+description: What is in the OpenZeppelin ERC-20 contract and why is it there?
 author: Ori Pomerantz
 lang: en
 sidebar: true
-tags: ["solidity", "erc20"]
+tags: ["solidity", "erc-20"]
 skill: beginner
 published: 2021-<month>-<day>
 ---
@@ -12,18 +12,18 @@ published: 2021-<month>-<day>
 ## Introduction {#introduction}
 
 One of the most common uses for Ethereum is for a group to create a tradable token, in a sense their own currency. These tokens typically follow a standard, 
-[ERC-20](https://eips.ethereum.org/EIPS/eip-20). This standard makes it possible to write tools, such as liquidity pools and wallets, that work with all ERC-20
+[ERC-20](/developers/docs/standards/tokens/erc-20/). This standard makes it possible to write tools, such as liquidity pools and wallets, that work with all ERC-20
 tokens. In this article we will analyze the 
-[OpenWhisk Solidity ERC20 implenetation](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), as well as the
-[Interface definition](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
+[OpenZeppelin Solidity ERC20 implementation](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), as well as the
+[interface definition](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
 
 This is annotated source code. If you want to implement ERC-20, 
-[read this tutorial](https://forum.zeppelin.solutions/t/how-to-implement-erc20-supply-mechanisms/226).
+[read this tutorial](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
 
 
 ## The Interface {#the-interface}
 
-The purpose of a standard like ERC-20 is to have multiple token types that are used from the same code. To achieve that, we create an 
+The purpose of a standard like ERC-20 is to allow many tokens implementations that are interoperable across applications, like wallets and decentralized exchanges. To achieve that, we create an 
 [interface](https://www.geeksforgeeks.org/solidity-basics-of-interface/). Any code that needs to use the token contract
 can use the same definitions in the interface and be compatible with all token contracts that use it, whether it is a wallet such as 
 MetaMask, a dapp such as etherscan.io, or a different contract such as liquidity pool.
@@ -548,7 +548,7 @@ return the original signer and not the contract that relayed the message.
 ### Allowance Functions    {#allowance-functions}
 
 These are the functions that implement the allowance functionality: `allowance`, `approve`, `transferFrom`,
-and `_approve`. Additionally, the OpenWhisk implementation goes beyond the basic standard to include some features that improve 
+and `_approve`. Additionally, the OpenZeppelin implementation goes beyond the basic standard to include some features that improve 
 security: `increaseAllowance`, and `decreaseAllowance`. 
 
 #### The allowance function {#allowance}
@@ -633,7 +633,7 @@ Second, it checks that this result is not negative. If it is negative the call r
     }
 ```
 
-#### OpenWhisk safety additions {#openwhisk-safety-additions} 
+#### OpenZeppelin safety additions {#openzeppelin-safety-additions} 
 
 It is dangerous to set a non-zero allowance to another non-zero value, 
 because you only control the order of your own transactions, not anybody else's. Imagine you
@@ -778,7 +778,7 @@ There are two ways to use this contract:
 1. Use it as a template for your own code
 1. [Inherit from it](https://www.bitdegree.org/learn/solidity-inheritance), and override only those functions that you need to modify
 
-The second method is much better because the OpenWhisk ERC-20 code has already been audited and shown to be secure. When you use inheritence
+The second method is much better because the OpenZeppelin ERC-20 code has already been audited and shown to be secure. When you use inheritance
 it is clear what are the functions you modify, and to trust your contract people only need to audit those specific functions.
 
 It is often useful to perform a function each time tokens change hands. However,`_transfer` is a very important function and it is
@@ -983,5 +983,5 @@ For review, here are some of the most important ideas in this contract (in my op
   are operations between them, especially calls to a different contract.
   
 
-Now that you've seen how the OpenWhisk ERC-20 contract is written, and especially how it is 
+Now that you've seen how the OpenZeppelin ERC-20 contract is written, and especially how it is 
 made more secure, go and write your own secure contracts and applications. 
