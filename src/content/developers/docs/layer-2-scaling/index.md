@@ -215,6 +215,7 @@ A sidechain is a separate blockchain which runs in parallel to mainnet and opera
 
 - [Skale](https://skale.network/)
 - [POA Network](https://www.poa.network/)
+- [Luniverse](https://luniverse.io/product/)
 
 ## Hybrid solutions {#hybrid-solutions}
 
