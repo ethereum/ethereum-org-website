@@ -851,6 +851,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/qbzzt"><img src="https://avatars.githubusercontent.com/u/12722969?v=4?s=100" width="100px;" alt=""/><br /><sub><b>qbzzt</b></sub></a><br /><a href="#content-qbzzt" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/ekowalsk"><img src="https://avatars.githubusercontent.com/u/30404388?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ewa Kowalska</b></sub></a><br /><a href="#content-ekowalsk" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/Aheesh"><img src="https://avatars.githubusercontent.com/u/8059227?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aheesh</b></sub></a><br /><a href="#content-Aheesh" title="Content">🖋</a></td>
   </tr>
 </table>
 
