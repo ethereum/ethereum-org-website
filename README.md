@@ -846,6 +846,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://www.rtfs.hu"><img src="https://avatars.githubusercontent.com/u/20340?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alex Beregszaszi</b></sub></a><br /><a href="#content-axic" title="Content">🖋</a></td>
     <td align="center"><a href="http://www.adamgoth.com"><img src="https://avatars.githubusercontent.com/u/5225766?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Adam Goth</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aadamgoth" title="Bug reports">🐛</a> <a href="#content-adamgoth" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/Anuragtech02"><img src="https://avatars.githubusercontent.com/u/55744578?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anurag Pal</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Anuragtech02" title="Code">💻</a></td>
+    <td align="center"><a href="https://www.codechef.com/users/chaos_"><img src="https://avatars.githubusercontent.com/u/29145212?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vishal Pratap Singh</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Vishal19111999" title="Code">💻</a></td>
   </tr>
 </table>
 
