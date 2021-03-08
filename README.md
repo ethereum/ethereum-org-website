@@ -848,6 +848,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/Anuragtech02"><img src="https://avatars.githubusercontent.com/u/55744578?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anurag Pal</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Anuragtech02" title="Code">💻</a></td>
     <td align="center"><a href="https://www.codechef.com/users/chaos_"><img src="https://avatars.githubusercontent.com/u/29145212?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vishal Pratap Singh</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Vishal19111999" title="Code">💻</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/qbzzt"><img src="https://avatars.githubusercontent.com/u/12722969?v=4?s=100" width="100px;" alt=""/><br /><sub><b>qbzzt</b></sub></a><br /><a href="#content-qbzzt" title="Content">🖋</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
