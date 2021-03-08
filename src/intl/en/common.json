@@ -5,6 +5,8 @@
   "about-ethereum-org": "About ethereum.org",
   "about-us": "About us",
   "alt-eth-blocks": "Illustration of blocks being organized like an ETH symbol",
+  "aria-toggle-search-button": "Toggle search button",
+  "aria-toggle-menu-button": "Toggle menu button",
   "back-to-top": "Back to top",
   "banner-page-incomplete": "This page is incomplete and we'd love your help. Edit this page and add anything that you think might be useful to others.",
   "banner-staking-1": "Staking has arrived! If you're looking to stake your ETH",
@@ -77,7 +79,7 @@
   "get-started": "Get started",
   "gitcoin-logo": "Gitcoin logo",
   "glossary": "Glossary",
-  "guides-and-resources": "Guides and resources",
+  "guides-and-resources": "Community guides and resources",
   "history": "History",
   "history-of-ethereum": "History of Ethereum",
   "home": "Home",
@@ -190,5 +192,8 @@
   "website-last-updated": "Website last updated",
   "what-is-ether": "What is ether (ETH)?",
   "what-is-ethereum": "What is Ethereum?",
-  "whitepaper": "Whitepaper"
+  "whitepaper": "Whitepaper",
+  "defi-page": "Decentralized finance (DeFi)",
+  "dao-page": "Decentralized autonomous organisations (DAOs)",
+  "nft-page": "Non-fungible tokens (NFTs)"
 }

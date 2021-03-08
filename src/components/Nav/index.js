@@ -19,9 +19,7 @@ const NavContainer = styled.div`
   position: sticky;
   top: 0;
   z-index: 1000;
-  width: 100vw;
-  /* xl breakpoint (1440px) + 72px (2rem padding on each side) */
-  max-width: 1504px;
+  width: 100%;
 `
 
 const StyledNav = styled.nav`
@@ -212,8 +210,16 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           to: "/eth/",
         },
         {
-          text: "guides-and-resources",
-          to: "/learn/",
+          text: "defi-page",
+          to: "/defi/",
+        },
+        {
+          text: "dao-page",
+          to: "/dao/",
+        },
+        {
+          text: "nft-page",
+          to: "/nft/",
         },
         {
           text: "history-of-ethereum",
@@ -234,6 +240,10 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         {
           text: "eips",
           to: "/eips/",
+        },
+        {
+          text: "guides-and-resources",
+          to: "/learn/",
         },
       ],
     },
@@ -383,6 +393,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
               onKeyDown={() => handleMenuToggle("search")}
               role="button"
               tabIndex="0"
+              aria-label={translateMessageId("aria-toggle-search-button", intl)}
             >
               <SearchIcon name="search" />
             </NavMobileButton>
@@ -392,6 +403,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
               onKeyDown={() => handleMenuToggle("menu")}
               role="button"
               tabIndex="0"
+              aria-label={translateMessageId("aria-toggle-menu-button", intl)}
             >
               <MenuIcon name="menu" />
             </NavMobileButton>

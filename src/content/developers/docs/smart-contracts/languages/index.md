@@ -20,7 +20,7 @@ Previous knowledge of programming languages, especially of JavaScript or Python,
 
 ## Solidity {#solidity}
 
-- Influenced by C++, Python and JavaScript.
+- Influenced by C++ and JavaScript.
 - Statically typed (the type of a variable is known at compile time).
 - Supports:
   - Inheritance (you can extend other contracts).
@@ -202,8 +202,8 @@ If you're new to Ethereum and haven't done any coding with smart contract langua
 **Yul**
 
 - Intermediate language for Ethereum.
-- Supports the [EVM](en/developers/docs/evm) and [eWASM](https://github.com/ewasm), an Ethereum flavored WebAssembly, and is designed to be a usable common denominator of both platforms.
-- Good target for high-level optimisation stages that can benefit both EVM and eWASM platforms equally.
+- Supports the [EVM](en/developers/docs/evm) and [Ewasm](https://github.com/ewasm), an Ethereum flavored WebAssembly, and is designed to be a usable common denominator of both platforms.
+- Good target for high-level optimisation stages that can benefit both EVM and Ewasm platforms equally.
 
 **Yul+**
 

@@ -5,9 +5,11 @@ import axios from "axios"
 
 import Translation from "../components/Translation"
 import Link from "./Link"
-import { FakeLinkExternal, H2, H3 } from "./SharedStyledComponents"
+import { FakeLinkExternal } from "./SharedStyledComponents"
 
 import { translateMessageId } from "../utils/translations"
+
+import { CardItem as Item } from "./SharedStyledComponents"
 
 const Section = styled.div`
   display: flex;
@@ -15,28 +17,6 @@ const Section = styled.div`
   margin-top: 2rem;
   margin-bottom: 2rem;
   width: 100%;
-`
-
-const Item = styled(Link)`
-  text-decoration: none;
-  margin: 1rem 1rem 1rem 0;
-  padding: 1rem;
-  width: 240px;
-  list-style: none;
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.lightBorder};
-  /*   box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
- */ /* transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); */
-  color: ${(props) => props.theme.colors.text};
-
-  &:hover {
-    box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
-    border: 1px solid ${(props) => props.theme.colors.black300};
-  }
-
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
-  }
 `
 
 const ErrorMsg = styled.div`
@@ -175,9 +155,9 @@ const Roadmap = () => {
       <p>
         <Translation id="page-about-p-4" />
       </p>
-      <H3>
+      <h3>
         <Translation id="page-about-h3" />
-      </H3>
+      </h3>
       <p>
         <Translation id="page-about-p-5" />{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website/labels/Status%3A%20In%20Progress">
@@ -186,9 +166,9 @@ const Roadmap = () => {
         .
       </p>
       <IssueSection issues={issues.inProgress} />
-      <H3>
+      <h3>
         <Translation id="page-about-h3-2" />
-      </H3>
+      </h3>
       <p>
         <Translation id="page-about-p-6" />{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aissue+is%3Aopen+label%3A%22Status%3A+Up+Next%22">
@@ -197,9 +177,9 @@ const Roadmap = () => {
         .
       </p>
       <IssueSection issues={issues.planned} />
-      <H3>
+      <h3>
         <Translation id="page-about-h3-1" />
-      </H3>
+      </h3>
       <p>
         <Translation id="page-about-p-7" />{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aissue+is%3Aclosed">
@@ -208,9 +188,9 @@ const Roadmap = () => {
         .
       </p>
       <IssueSection issues={issues.implemented} />
-      <H2>
+      <h2>
         <Translation id="page-about-h2" />
-      </H2>
+      </h2>
       <p>
         <Translation id="page-about-p-8" />
       </p>

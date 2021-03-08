@@ -144,14 +144,6 @@ const Intro = styled.p`
   text-align: center;
 `
 
-const Header = styled.h2`
-  font-weight: normal;
-  font-size: 2rem;
-  line-height: 140%;
-  text-align: center;
-  margin-bottom: 1rem;
-`
-
 const Disclaimer = styled.p`
   width: 100%;
   max-width: 876px;
@@ -203,6 +195,7 @@ const EthExchanges = () => {
           country
           cryptocom
           gemini
+          itezcom
           kraken
           moonpay
           rain
@@ -249,6 +242,9 @@ const EthExchanges = () => {
         ...cardListImage
       }
       imtoken: file(relativePath: { eq: "wallets/imtoken.png" }) {
+        ...cardListImage
+      }
+      itezcom: file(relativePath: { eq: "exchanges/itezcom.png" }) {
         ...cardListImage
       }
       kraken: file(relativePath: { eq: "exchanges/kraken.png" }) {
@@ -322,6 +318,12 @@ const EthExchanges = () => {
       url: "https://crypto.com/exchange/",
       image: data.cryptocom,
       usaExceptions: ["NY"],
+    },
+    itezcom: {
+      name: "Itez",
+      url: "https://itez.com/",
+      image: data.itezcom,
+      usaExceptions: [],
     },
     kraken: {
       name: "Kraken",
@@ -521,9 +523,9 @@ const EthExchanges = () => {
 
   return (
     <Container>
-      <Header>
+      <h2>
         <Translation id="page-get-eth-exchanges-header" />
-      </Header>
+      </h2>
       <Intro>
         <Translation id="page-get-eth-exchanges-intro" />
       </Intro>

@@ -42,7 +42,7 @@ const getMessages = (path, language) => {
   }
 }
 
-const outdatedPages = [
+const outdatedMarkdownPages = [
   "/dapps/",
   "/enterprise/",
   "/eth/",
@@ -63,7 +63,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       const split = slug.split("/")
       split.splice(1, 1)
       const originalPath = split.join("/")
-      if (outdatedPages.includes(originalPath)) {
+      if (outdatedMarkdownPages.includes(originalPath)) {
         isOutdated = true
       }
     } else {
@@ -161,6 +161,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             context: {
               slug: langSlug,
               isOutdated: false,
+              isContentEnglish: true,
               relativePath: relativePath, // Use English path for template MDX query
               // Create `intl` object so `gatsby-plugin-intl` will skip
               // generating language variations for this page
@@ -201,32 +202,34 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   })
 
-  // Create English-only pages
-  // Necessary because placing these components within src/pages/
-  // (e.g. src/pages/eth.js ) would overwrite pages generated from markdown,
-  // including all translations (e.g. src/content/translations/de/eth/index.md)
-  const englishOnlyPages = [`eth`, `dapps`, `wallets/index`, `what-is-ethereum`]
-  englishOnlyPages.forEach((page) => {
+  // Create contentVersion v2.0 pages
+  const contentV2Pages = [`eth`, `dapps`, `wallets/index`, `what-is-ethereum`]
+  const contentV2Languages = supportedLanguages.filter(
+    (lang) => getLangContentVersion(lang) >= 2.0
+  )
+  contentV2Pages.forEach((page) => {
     const component = page
     // Account for nested pages
     if (page.includes("/index")) {
       page = page.replace("/index", "")
     }
-    createPage({
-      path: `/${defaultLanguage}/${page}/`,
-      component: path.resolve(`./src/pages-conditional/${component}.js`),
-      context: {
-        slug: `/${defaultLanguage}/${page}/`,
-        intl: {
-          language: defaultLanguage,
-          languages: supportedLanguages,
-          defaultLanguage,
-          messages: getMessages("./src/intl/", defaultLanguage),
-          routed: true,
-          originalPath: `/${defaultLanguage}/${page}/`,
-          redirect: false,
+    contentV2Languages.forEach((lang) => {
+      createPage({
+        path: `/${lang}/${page}/`,
+        component: path.resolve(`./src/pages-conditional/${component}.js`),
+        context: {
+          slug: `/${lang}/${page}/`,
+          intl: {
+            language: lang,
+            languages: supportedLanguages,
+            defaultLanguage,
+            messages: getMessages("./src/intl/", lang),
+            routed: true,
+            originalPath: `/${page}/`,
+            redirect: false,
+          },
         },
-      },
+      })
     })
   })
 
@@ -248,13 +251,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         component: path.resolve(`./src/pages-conditional/${component}.js`),
         context: {
           slug: `/${lang}/${page}/`,
+          isContentEnglish: true,
           intl: {
             language: lang,
             languages: supportedLanguages,
             defaultLanguage,
             messages: getMessages("./src/intl/", lang),
             routed: true,
-            originalPath: `/${lang}/${page}/`,
+            originalPath: `/${page}/`,
             redirect: false,
           },
         },

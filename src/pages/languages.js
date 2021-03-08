@@ -1,5 +1,4 @@
 import React from "react"
-import { Link as GatsbyLink } from "gatsby"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 
@@ -7,10 +6,10 @@ import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import Link from "../components/Link"
 import { Page, Content } from "../components/SharedStyledComponents"
-import { Mixins } from "../theme"
 
 import languageMetadata from "../data/translations"
 import { translateMessageId } from "../utils/translations"
+import { CardItem as LangItem } from "../components/SharedStyledComponents"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
@@ -26,30 +25,13 @@ const LangContainer = styled.div`
   width: 100%;
 `
 
-const LangItem = styled(GatsbyLink)`
-  text-decoration: none;
-  margin: 1rem 1rem 1rem 0;
-  padding: 1rem;
-  width: 240px;
-  list-style: none;
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.lightBorder};
-  /* box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); */
-  color: ${(props) => props.theme.colors.text};
-
-  &:hover {
-    box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
-    border: 1px solid ${(props) => props.theme.colors.black300};
-  }
-
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
-  }
-`
-
 const LangTitle = styled.div`
-  ${Mixins.textLevel6}
+  font-size: 0.875rem;
+  line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  margin: 1.14em 0;
+  text-transform: uppercase;
 `
 
 const LanguagesPage = () => {
@@ -80,7 +62,7 @@ const LanguagesPage = () => {
           </p>
           <p>
             <Translation id="page-languages-interested" />{" "}
-            <Link to="/contributing/translation-program/">
+            <Link to="/en/contributing/translation-program/">
               <Translation id="page-languages-learn-more" />
             </Link>
             .
@@ -103,7 +85,7 @@ const LanguagesPage = () => {
           </h2>
           <p>
             <Translation id="page-languages-want-more-paragraph" />{" "}
-            <Link to="/contributing/translation-program/">
+            <Link to="/en/contributing/translation-program/">
               <Translation id="page-languages-want-more-link" />
             </Link>
             .

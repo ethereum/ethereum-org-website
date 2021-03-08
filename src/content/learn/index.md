@@ -1,12 +1,12 @@
 ---
-title: Learn about Ethereum
+title: Community guides and resources
 description: A set of technical and non-technical articles, guides, and resources to learn about Ethereum.
 lang: en
 sidebar: true
 sidebarDepth: 2
 ---
 
-# Learn about Ethereum {#learn-about-ethereum}
+# Community guides and resources {#learn-about-ethereum}
 
 **Welcome to ethereum.org/learn, a set of resources to help you learn more about Ethereum.** This page includes technical **and** non-technical articles, guides, and resources. If you’re totally new to Ethereum, [we suggest you start here](/en/what-is-ethereum/).
 

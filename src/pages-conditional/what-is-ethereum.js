@@ -38,6 +38,9 @@ const Title = styled.h1`
   font-size: 14px;
   line-height: 140%;
   letter-spacing: 0.04em;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  margin-top: 0;
   text-transform: uppercase;
   color: ${(props) => props.theme.colors.textTableOfContents};
 `
@@ -156,6 +159,7 @@ const BannerMessage = styled.h2`
   text-align: center;
   font-size: 48px;
   line-height: 140%;
+  margin-top: 0;
   color: ${(props) => props.theme.colors.text};
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     font-size: 32px;
@@ -272,6 +276,29 @@ const WhatIsEthereumPage = ({ data }) => {
       alt: translateMessageId("page-what-is-ethereum-dapps-img-alt", intl),
       image: data.dapps.childImageSharp.fixed,
       description: <Translation id="page-what-is-ethereum-dapps-desc" />,
+    },
+  ]
+  const usecases = [
+    {
+      title: <Translation id="page-what-is-ethereum-defi-title" />,
+      to: "/defi/",
+      alt: translateMessageId("page-what-is-ethereum-defi-alt", intl),
+      image: data.defi.childImageSharp.fixed,
+      description: <Translation id="page-what-is-ethereum-defi-description" />,
+    },
+    {
+      title: <Translation id="page-what-is-ethereum-nft-title" />,
+      to: "/nft/",
+      alt: translateMessageId("page-what-is-ethereum-nft-alt", intl),
+      image: data.nft.childImageSharp.fixed,
+      description: <Translation id="page-what-is-ethereum-nft-description" />,
+    },
+    {
+      title: <Translation id="page-what-is-ethereum-dao-title" />,
+      to: "/dao/",
+      alt: translateMessageId("page-what-is-ethereum-dao-alt", intl),
+      image: data.dao.childImageSharp.fixed,
+      description: <Translation id="page-what-is-ethereum-dao-description" />,
     },
   ]
   return (
@@ -400,18 +427,42 @@ const WhatIsEthereumPage = ({ data }) => {
           </SubtitleTwo>
         </ActionIntro>
         <ActionCardContainer>
-          {actions.map((action, idx) => {
-            return (
-              <ActionCard
-                key={idx}
-                to={action.to}
-                alt={action.alt}
-                image={action.image}
-                title={action.title}
-                description={action.description}
-              />
-            )
-          })}
+          {actions.map((action, idx) => (
+            <ActionCard
+              key={idx}
+              to={action.to}
+              alt={action.alt}
+              image={action.image}
+              title={action.title}
+              description={action.description}
+            />
+          ))}
+        </ActionCardContainer>
+      </Content>
+      <Content>
+        <ActionIntro>
+          <h2>
+            <Translation id="page-what-is-ethereum-use-cases-title" />
+          </h2>
+          <Subtitle>
+            <Translation id="page-what-is-ethereum-use-cases-subtitle" />
+          </Subtitle>
+          <SubtitleTwo>
+            <Translation id="page-what-is-ethereum-use-cases-subtitle-two" />
+          </SubtitleTwo>
+        </ActionIntro>
+        <ActionCardContainer>
+          {usecases.map((usecase, idx) => (
+            <ActionCard
+              key={idx}
+              to={usecase.to}
+              alt={usecase.alt}
+              image={usecase.image}
+              title={usecase.title}
+              description={usecase.description}
+              isBottom={false}
+            />
+          ))}
         </ActionCardContainer>
       </Content>
       <TwoColumnContent>
@@ -461,6 +512,15 @@ const WhatIsEthereumPage = ({ data }) => {
 
 export default WhatIsEthereumPage
 
+export const useCaseImage = graphql`
+  fragment useCaseImage on File {
+    childImageSharp {
+      fixed(height: 260) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`
 export const actionCardImage = graphql`
   fragment actionCardImage on File {
     childImageSharp {
@@ -511,6 +571,15 @@ export const query = graphql`
     }
     eth: file(relativePath: { eq: "eth.png" }) {
       ...actionCardImage
+    }
+    dao: file(relativePath: { eq: "use-cases/dao-2.png" }) {
+      ...useCaseImage
+    }
+    defi: file(relativePath: { eq: "finance_transparent.png" }) {
+      ...useCaseImage
+    }
+    nft: file(relativePath: { eq: "infrastructure_transparent.png" }) {
+      ...useCaseImage
     }
     developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       ...calloutImage
