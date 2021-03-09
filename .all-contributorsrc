@@ -3068,6 +3068,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "glebodic",
+      "name": "Gwenael Le Bodic",
+      "avatar_url": "https://avatars.githubusercontent.com/u/18246298?v=4",
+      "profile": "https://github.com/glebodic",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
