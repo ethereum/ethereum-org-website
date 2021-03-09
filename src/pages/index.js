@@ -320,7 +320,7 @@ const DeveloperContainer = styled.div`
   border-top: 1px solid ${(props) => props.theme.colors.text};
   border-bottom: 1px solid ${(props) => props.theme.colors.text};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     height: 100%;
   }
 `
