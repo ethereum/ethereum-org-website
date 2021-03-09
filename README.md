@@ -859,6 +859,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/stuz5000"><img src="https://avatars.githubusercontent.com/u/7799980?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Stuart Reynolds</b></sub></a><br /><a href="#ideas-stuz5000" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/glebodic"><img src="https://avatars.githubusercontent.com/u/18246298?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gwenael Le Bodic</b></sub></a><br /><a href="#content-glebodic" title="Content">🖋</a></td>
   </tr>
 </table>
 
