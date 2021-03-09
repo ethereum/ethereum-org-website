@@ -57,7 +57,7 @@ const StyledBannerNotification = styled(BannerNotification)`
 
 const Layout = (props) => {
   const [isDarkTheme, setIsDarkTheme] = useState(false)
-
+  const [shouldShowSideNav, setShouldShowSideNav] = useState(false)
   // set isDarkTheme based on browser/app user preferences
   useEffect(() => {
     if (localStorage && localStorage.getItem("dark-theme") !== null) {
@@ -66,6 +66,10 @@ const Layout = (props) => {
       setIsDarkTheme(window.matchMedia("(prefers-color-scheme: dark)").matches)
     }
   }, [])
+
+  useEffect(() => {
+    setShouldShowSideNav(props.path.includes("/docs/"))
+  }, [props.path])
 
   const handleThemeChange = () => {
     setIsDarkTheme(!isDarkTheme)
@@ -90,7 +94,6 @@ const Layout = (props) => {
     (isPageContentEnglish && !isPageLanguageEnglish)
 
   const path = props.path
-  const shouldShowSideNav = path.includes("/docs/")
   const shouldShowBanner =
     path.includes("/eth2/") && !path.includes("/eth2/deposit-contract/")
 
