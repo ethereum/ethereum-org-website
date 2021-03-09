@@ -855,6 +855,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/tophersjones"><img src="https://avatars.githubusercontent.com/u/33736287?v=4?s=100" width="100px;" alt=""/><br /><sub><b>tophersjones</b></sub></a><br /><a href="#content-tophersjones" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/andrw"><img src="https://avatars.githubusercontent.com/u/994064?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andrew Yang</b></sub></a><br /><a href="#content-andrw" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/BokilaLin"><img src="https://avatars.githubusercontent.com/u/12237944?v=4?s=100" width="100px;" alt=""/><br /><sub><b>$hoot->Pairs</b></sub></a><br /><a href="#content-BokilaLin" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/NilsKaden"><img src="https://avatars.githubusercontent.com/u/34445522?v=4?s=100" width="100px;" alt=""/><br /><sub><b>NilsKaden</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=NilsKaden" title="Code">💻</a></td>
   </tr>
 </table>
 

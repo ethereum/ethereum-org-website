@@ -3050,6 +3050,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "NilsKaden",
+      "name": "NilsKaden",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34445522?v=4",
+      "profile": "https://github.com/NilsKaden",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
