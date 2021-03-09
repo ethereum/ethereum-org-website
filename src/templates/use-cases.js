@@ -307,6 +307,8 @@ const Image = styled(Img)`
     width: 100%;
     height: 100%;
     overflow: initial;
+    align-self: center;
+    margin: 0;
   }
 `
 
@@ -332,6 +334,9 @@ const MobileTableOfContents = styled(TableOfContents)`
 const StyledBannerNotification = styled(BannerNotification)`
   display: flex;
   justify-content: center;
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+    display: none;
+  }
 `
 
 const TitleCard = styled.div`
