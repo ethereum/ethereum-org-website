@@ -331,26 +331,25 @@ const Footer = () => {
             </SocialIcons>
           </FooterTop>
           <LinkGrid>
-            {linkSections.map((section, idx) => {
-              return (
-                <LinkSection key={idx}>
-                  <SectionHeader>
-                    <Translation id={section.title} />
-                  </SectionHeader>
-                  <List>
-                    {section.links.map((link, linkIdx) => {
-                      return (
-                        <ListItem key={linkIdx}>
-                          <FooterLink to={link.to} isPartiallyActive={false}>
-                            <Translation id={link.text} />
-                          </FooterLink>
-                        </ListItem>
-                      )
-                    })}
-                  </List>
-                </LinkSection>
-              )
-            })}
+            {linkSections.map((section, idx) => (
+              <LinkSection key={idx}>
+                <SectionHeader>
+                  <Translation id={section.title} />
+                </SectionHeader>
+                <List>
+                  {section.links.map((link, linkIdx) => (
+                    <ListItem key={linkIdx}>
+                      <FooterLink
+                        to={link.to}
+                        isPartiallyActive={false}
+                      >
+                        <Translation id={link.text} />
+                      </FooterLink>
+                    </ListItem>
+                  ))}
+                </List>
+              </LinkSection>
+            ))}
           </LinkGrid>
         </StyledFooter>
       )}

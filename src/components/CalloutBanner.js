@@ -76,17 +76,15 @@ const CalloutBanner = ({
   alt,
   children,
   className,
-}) => {
-  return (
-    <StyledCard className={className}>
-      <Image fluid={image} alt={alt} maxImageWidth={maxImageWidth} />
-      <Content>
-        <H2>{title}</H2>
-        <Description>{description}</Description>
-        {children}
-      </Content>
-    </StyledCard>
-  )
-}
+}) => (
+  <StyledCard className={className}>
+    <Image fluid={image} alt={alt} maxImageWidth={maxImageWidth} />
+    <Content>
+      <H2>{title}</H2>
+      <Description>{description}</Description>
+      {children}
+    </Content>
+  </StyledCard>
+)
 
 export default CalloutBanner

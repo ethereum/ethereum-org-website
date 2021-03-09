@@ -9,18 +9,16 @@ const StyledPage = styled(Page)`
 `
 
 // TODO is there a way to translate this page?
-const NotFoundPage = () => {
-  return (
-    <StyledPage>
-      <Content>
-        <h1>Resource not found.</h1>
-        <p>
-          Try using search to find what you're looking for or{" "}
-          <Link to="/en/">return home</Link>.
-        </p>
-      </Content>
-    </StyledPage>
-  )
-}
+const NotFoundPage = () => (
+  <StyledPage>
+    <Content>
+      <h1>Resource not found.</h1>
+      <p>
+        Try using search to find what you're looking for or{" "}
+        <Link to="/en/">return home</Link>.
+      </p>
+    </Content>
+  </StyledPage>
+)
 
 export default NotFoundPage

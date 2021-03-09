@@ -172,21 +172,19 @@ const LearningToolsPage = ({ data }) => {
           <Translation id="page-learning-tools-sandbox-desc" />
         </p>
         <StyledCardGrid>
-          {sandboxes.map((sandbox, idx) => {
-            return (
-              <ProductCard
-                key={idx}
-                background={sandbox.background}
-                url={sandbox.url}
-                alt={translateMessageId(sandbox.alt, intl)}
-                image={sandbox.image}
-                name={sandbox.name}
-                subjects={sandbox.subjects}
-              >
-                <Translation id={sandbox.description} />
-              </ProductCard>
-            )
-          })}
+          {sandboxes.map((sandbox, idx) => (
+            <ProductCard
+              key={idx}
+              background={sandbox.background}
+              url={sandbox.url}
+              alt={translateMessageId(sandbox.alt, intl)}
+              image={sandbox.image}
+              name={sandbox.name}
+              subjects={sandbox.subjects}
+            >
+              <Translation id={sandbox.description} />
+            </ProductCard>
+          ))}
         </StyledCardGrid>
         <InfoBanner emoji=":point_up:" shouldCenter={true}>
           <Translation id="page-learning-tools-remix-description-2" />
@@ -200,21 +198,19 @@ const LearningToolsPage = ({ data }) => {
           <Translation id="page-learning-tools-game-tutorials-desc" />
         </p>
         <StyledCardGrid>
-          {games.map((game, idx) => {
-            return (
-              <ProductCard
-                key={idx}
-                background={game.background}
-                url={game.url}
-                alt={translateMessageId(game.alt, intl)}
-                image={game.image}
-                name={game.name}
-                subjects={game.subjects}
-              >
-                <Translation id={game.description} />
-              </ProductCard>
-            )
-          })}
+          {games.map((game, idx) => (
+            <ProductCard
+              key={idx}
+              background={game.background}
+              url={game.url}
+              alt={translateMessageId(game.alt, intl)}
+              image={game.image}
+              name={game.name}
+              subjects={game.subjects}
+            >
+              <Translation id={game.description} />
+            </ProductCard>
+          ))}
         </StyledCardGrid>
       </StackContainer>
       <StackContainer>
@@ -225,21 +221,19 @@ const LearningToolsPage = ({ data }) => {
           <Translation id="page-learning-tools-bootcamps-desc" />
         </p>
         <StyledCardGrid>
-          {bootcamps.map((bootcamp, idx) => {
-            return (
-              <ProductCard
-                key={idx}
-                url={bootcamp.url}
-                background={bootcamp.background}
-                alt={translateMessageId(bootcamp.alt, intl)}
-                image={bootcamp.image}
-                name={bootcamp.name}
-                subjects={bootcamp.subjects}
-              >
-                <Translation id={bootcamp.description} />
-              </ProductCard>
-            )
-          })}
+          {bootcamps.map((bootcamp, idx) => (
+            <ProductCard
+              key={idx}
+              url={bootcamp.url}
+              background={bootcamp.background}
+              alt={translateMessageId(bootcamp.alt, intl)}
+              image={bootcamp.image}
+              name={bootcamp.name}
+              subjects={bootcamp.subjects}
+            >
+              <Translation id={bootcamp.description} />
+            </ProductCard>
+          ))}
         </StyledCardGrid>
       </StackContainer>
       <Content>

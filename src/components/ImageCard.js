@@ -21,15 +21,13 @@ const Description = styled.p`
   opacity: 0.8;
 `
 
-const ImageCard = ({ image, title, description, children, className }) => {
-  return (
-    <StyledCard className={className}>
-      <Image fluid={image} />
-      <h3>{title}</h3>
-      <Description>{description}</Description>
-      {children}
-    </StyledCard>
-  )
-}
+const ImageCard = ({ image, title, description, children, className }) => (
+  <StyledCard className={className}>
+    <Image fluid={image} />
+    <h3>{title}</h3>
+    <Description>{description}</Description>
+    {children}
+  </StyledCard>
+)
 
 export default ImageCard

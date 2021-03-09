@@ -13,7 +13,6 @@ sourceUrl: https://docs.alchemyapi.io/tutorials/sending-transactions-using-web3-
 
 This is a beginner friendly guide to sending Ethereum transactions using web3. There are three main steps in order to send a transaction to the ethereum blockchain: create, sign, and broadcast. We’ll go through all three, hopefully answering any questions you might have! In this tutorial, we'll be using [Alchemy](https://www.alchemyapi.io/) to send our transactions to the Ethereum chain. You can [create a free Alchemy account here](https://dashboard.alchemyapi.io/signup/).
 
-
 **NOTE:** This guide is for singing your transactions on the _backend_ for your app, if you want to integrate signing your transactions on the frontend, check out integrating [Web3 with a browser provider](https://docs.alchemyapi.io/documentation/alchemy-web3#with-a-browser-provider).
 
 ## The Basics {#the-basics}
@@ -23,7 +22,7 @@ Like most blockchain developers when they first start, you might have done some 
 ### 1\. Alchemy does not store your private keys {#alchemy-does-not-store-your-private-keys}
 
 - This means that Alchemy cannot sign and send transactions on your behalf. The reason for this is security purposes. Alchemy will never ask you to share your private key, and you should never share your private key with a hosted node (or anyone for that matter).
-- You can read from the blockchain using Alchemy’s core API, but to write to it you’ll need to use something else to sign your transactions before sending them through Alchemy (this is the same for any other [node service](/developers/docs/nodes-and-clients/nodes-as-a-service/)). 
+- You can read from the blockchain using Alchemy’s core API, but to write to it you’ll need to use something else to sign your transactions before sending them through Alchemy (this is the same for any other [node service](/developers/docs/nodes-and-clients/nodes-as-a-service/)).
 
 ### 2\. What is a “signer”? {#what-is-a-signer}
 
@@ -55,7 +54,7 @@ This is what we will be using in this tutorial.
 - Web3.js is a wrapper library around the standard JSON-RPC calls that is quite common to use in Ethereum development.
 - There are many web3 libraries for different languages. In this tutorial we’ll be using [Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3) which is written in JavaScript. You can check out other options [here](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries).
 
-Okay, now that we have a few of these questions out of the way, let’s move on to the tutorial. Feel free to ask questions anytime in the Alchemy [discord](https://discord.gg/sqYmQ7fB)!
+Okay, now that we have a few of these questions out of the way, let’s move on to the tutorial. Feel free to ask questions anytime in the Alchemy [discord](https://discord.gg/gWuC7zB)!
 
 **NOTE:** This guide requires an Alchemy account, an Ethereum address or Metamask wallet, NodeJs, and npm installed. If not, follow these steps:
 
@@ -118,23 +117,24 @@ Create a `sendTx.js` file, which is where we will configure and send our example
 
 Be sure to replace the address on **line 6** with your own public address.
 
-Now, before we jump into running this code, let's talk about some of the components here. 
+Now, before we jump into running this code, let's talk about some of the components here.
 
-* `nonce` : The nonce specification is used to keep track of the number of transactions sent from your address. We need this for security purposes and to prevent [replay attacks](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce). To get the number of transactions sent from your address we use [getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount).
-* `transaction`: The transaction object has a few aspects we need to specify
+- `nonce` : The nonce specification is used to keep track of the number of transactions sent from your address. We need this for security purposes and to prevent [replay attacks](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce). To get the number of transactions sent from your address we use [getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount).
+- `transaction`: The transaction object has a few aspects we need to specify
   - `to`: This is the address we want to send ETH to. In this case, we are sending ETH back to the [Rinkeby faucet](https://faucet.rinkeby.io/) we initially requested from.
   - `value`: This is the amount we wish to send, specified in wei where 10^18 wei = 1 ETH
   - `gas`: There are many ways to determine the right amount of gas to include with your transaction. Alchemy even has a [gas price webhook](https://docs.alchemyapi.io/guides/alchemy-notify#address-activity-1) to notify you when the gas price falls within a certain threshold. For mainnet transactions, it's good practice to check a gas estimator like [ETH Gas Station](https://ethgasstation.info/) to determine the right amount of gas to include. 21000 is the minimum amount of gas an operation on Ethereum will use, so to ensure our transaction will be executed we put 30000 here.
   - `nonce`: see above nonce definition. Nonce starts counting from zero.
-  - [OPTIONAL] data: Used for sending additional information with your transfer, or calling a smart contract, not required for balance transfers, check out the note below. 
-* `signedTx`: To sign our transaction object we will use the `signTransaction` method with our `PRIVATE_KEY`
-* `sendSignedTransaction`: Once we have a signed transaction, we can send it off to be included in a subsequent block by using `sendSignedTransaction`
+  - [OPTIONAL] data: Used for sending additional information with your transfer, or calling a smart contract, not required for balance transfers, check out the note below.
+- `signedTx`: To sign our transaction object we will use the `signTransaction` method with our `PRIVATE_KEY`
+- `sendSignedTransaction`: Once we have a signed transaction, we can send it off to be included in a subsequent block by using `sendSignedTransaction`
 
 **A Note on data**
 There are a two main types of transactions that can be sent in Ethereum.
-* Balance transfer: Send eth from one address to another. No data field required, however, if you'd like to send additional information alongside your transaction, you can include that information in HEX format in this field. 
-  - For example, let's say we wanted to write the hash of an IPFS document to the ethereum chain in order to give it an immutable timestamp. Our data field should then look like data: web3.utils.toHex(‘IPFS hash‘). And now anyone can query the chain and see when that document was added. 
-* Smart contact transaction: Execute some smart contract code on the chain. In this case, the data field should contain the smart function you wish to execute, alongside any parameters. 
+
+- Balance transfer: Send eth from one address to another. No data field required, however, if you'd like to send additional information alongside your transaction, you can include that information in HEX format in this field.
+  - For example, let's say we wanted to write the hash of an IPFS document to the ethereum chain in order to give it an immutable timestamp. Our data field should then look like data: web3.utils.toHex(‘IPFS hash‘). And now anyone can query the chain and see when that document was added.
+- Smart contact transaction: Execute some smart contract code on the chain. In this case, the data field should contain the smart function you wish to execute, alongside any parameters.
   - For a practical example, check out Step 8 in this [Hello World Tutorial](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#step-8-create-the-transaction).
 
 ### 8\. Run the code using `node sendTx.js` {#run-the-code-using-node-sendtx-js}

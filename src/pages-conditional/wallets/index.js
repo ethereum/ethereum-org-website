@@ -3,6 +3,8 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
+import { shuffle } from "lodash"
+
 import PageHero from "../../components/PageHero"
 import Translation from "../../components/Translation"
 import Callout from "../../components/Callout"
@@ -224,8 +226,8 @@ const WalletsPage = ({ data }) => {
   useEffect(() => {
     const nodes = data.allWallets.nodes
     // Add fields for CardList
-    const randomWallets = nodes
-      .map((node) => {
+    const randomWallets = shuffle(
+      nodes.map((node) => {
         node.image = data[node.id].childImageSharp.fixed
         node.title = node.name
         node.description = translateMessageId(
@@ -233,22 +235,20 @@ const WalletsPage = ({ data }) => {
           intl
         )
         node.link = node.url
-        node.randomNumber = Math.floor(Math.random() * nodes.length)
         return node
       })
-      .sort((a, b) => a.randomNumber - b.randomNumber)
+    )
 
     setWallets(randomWallets)
   }, [data, intl])
 
   const cryptoCurious = wallets
-    .filter((wallet) => {
-      return (
+    .filter(
+      (wallet) =>
         (wallet.has_card_deposits === "TRUE" ||
           wallet.has_explore_dapps === "TRUE") &&
         wallet.has_hardware !== "TRUE"
-      )
-    })
+    )
     .slice(0, 4)
 
   const cryptoConverted = wallets
@@ -311,16 +311,14 @@ const WalletsPage = ({ data }) => {
         </IntroTwoColumnContent>
         <Content>
           <CardContainer>
-            {cards.map((card, idx) => {
-              return (
-                <StyledCard
-                  key={idx}
-                  emoji={card.emoji}
-                  title={card.title}
-                  description={card.description}
-                />
-              )
-            })}
+            {cards.map((card, idx) => (
+              <StyledCard
+                key={idx}
+                emoji={card.emoji}
+                title={card.title}
+                description={card.description}
+              />
+            ))}
           </CardContainer>
         </Content>
       </StyledGrayContainer>
@@ -358,17 +356,15 @@ const WalletsPage = ({ data }) => {
             <Translation id="page-wallets-types" />
           </H2>
           <div>
-            {types.map((type, idx) => {
-              return (
-                <WalletType
-                  key={idx}
-                  emoji={type.emoji}
-                  title={type.title}
-                  description={type.description}
-                  size={2.5}
-                />
-              )
-            })}
+            {types.map((type, idx) => (
+              <WalletType
+                key={idx}
+                emoji={type.emoji}
+                title={type.title}
+                description={type.description}
+                size={2.5}
+              />
+            ))}
           </div>
         </RightColumn>
       </StyledTwoColumnContent>

@@ -180,7 +180,7 @@ A plasma chain is a separate blockchain that is anchored to the main Ethereum ch
 ### Use Plasma {#use-plasma}
 
 - [OMG Network](https://omg.network/)
-- [Matic Network](https://matic.network/)
+- [Polygon](https://polygon.technology/)[previously Matic Network](https://matic.network/)
 - [Gluon](https://gluon.network/)
 - [Gazelle](https://gzle.io/)
 - [LeapDAO](https://ipfs.leapdao.org/)

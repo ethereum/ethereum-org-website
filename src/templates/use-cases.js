@@ -296,15 +296,19 @@ const Image = styled(Img)`
   flex: 1 1 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  margin-left: 2rem;
   right: 0;
   bottom: 0;
   background-size: cover;
   max-width: ${(props) => (props.useCase === "dao" ? `572px` : `640px`)};
+  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
+    margin-left: 2rem;
+  }
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: 100%;
     height: 100%;
     overflow: initial;
+    align-self: center;
+    margin: 0;
   }
 `
 
@@ -330,6 +334,9 @@ const MobileTableOfContents = styled(TableOfContents)`
 const StyledBannerNotification = styled(BannerNotification)`
   display: flex;
   justify-content: center;
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+    display: none;
+  }
 `
 
 const TitleCard = styled.div`

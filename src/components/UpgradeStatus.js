@@ -42,16 +42,14 @@ const Content = styled.p`
   margin-bottom: 0rem;
 `
 
-const UpgradeStatus = ({ date, children, isShipped = false }) => {
-  return (
-    <Container isShipped={isShipped}>
-      <Label>
-        <Translation id="eth2-what-shipping" />
-      </Label>
-      <Date>{date}</Date>
-      <Content>{children}</Content>
-    </Container>
-  )
-}
+const UpgradeStatus = ({ date, children, isShipped = false }) => (
+  <Container isShipped={isShipped}>
+    <Label>
+      <Translation id="eth2-what-shipping" />
+    </Label>
+    <Date>{date}</Date>
+    <Content>{children}</Content>
+  </Container>
+)
 
 export default UpgradeStatus

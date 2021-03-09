@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { useIntl, navigate } from "gatsby-plugin-intl"
 import styled from "styled-components"
+import { shuffle } from "lodash"
 
 import ButtonLink from "./ButtonLink"
 import Emoji from "./Emoji"
@@ -305,8 +306,8 @@ const WalletCompare = ({ location }) => {
       : []
 
     const nodes = data.allWallets.nodes
-    const wallets = nodes
-      .map((node) => {
+    const wallets = shuffle(
+      nodes.map((node) => {
         node.image = data[node.id]
         node.alt = translateMessageId(
           `page-find-wallet-${node.id}-logo-alt`,
@@ -316,10 +317,9 @@ const WalletCompare = ({ location }) => {
           `page-find-wallet-description-${node.id}`,
           intl
         )
-        node.randomNumber = Math.floor(Math.random() * nodes.length)
         return node
       })
-      .sort((a, b) => a.randomNumber - b.randomNumber)
+    )
     setState({ selectedFeatureIds, wallets })
   }, [data, intl, location.search])
 
@@ -448,27 +448,23 @@ const WalletCompare = ({ location }) => {
           )}
           <TagsContainer>
             <TagContainer>
-              {selectedFeatures.map((feature) => {
-                return (
-                  <Tag
-                    name={feature.title}
-                    key={feature.id}
-                    onSelect={handleSelect}
-                    value={feature.id}
-                  />
-                )
-              })}
-              {remainingFeatures.map((feature) => {
-                return (
-                  <Tag
-                    name={feature.title}
-                    key={feature.id}
-                    onSelect={handleSelect}
-                    value={feature.id}
-                    isActive={false}
-                  />
-                )
-              })}
+              {selectedFeatures.map((feature) => (
+                <Tag
+                  name={feature.title}
+                  key={feature.id}
+                  onSelect={handleSelect}
+                  value={feature.id}
+                />
+              ))}
+              {remainingFeatures.map((feature) => (
+                <Tag
+                  name={feature.title}
+                  key={feature.id}
+                  onSelect={handleSelect}
+                  value={feature.id}
+                  isActive={false}
+                />
+              ))}
             </TagContainer>
             {hasSelectedFeatures && (
               <ClearLink onClick={clearFilters}>
@@ -493,9 +489,9 @@ const WalletCompare = ({ location }) => {
         )}
         <ResultsContainer>
           <ResultsGrid>
-            {filteredWallets.map((wallet) => {
-              return <WalletCard wallet={wallet} key={wallet.id} />
-            })}
+            {filteredWallets.map((wallet) => (
+              <WalletCard wallet={wallet} key={wallet.id} />
+            ))}
           </ResultsGrid>
         </ResultsContainer>
         <Disclaimer>
