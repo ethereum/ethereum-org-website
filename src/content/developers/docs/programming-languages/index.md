@@ -8,7 +8,7 @@ sidebar: true
 A common misconception is that developers must write smart contracts in order to build on Ethereum. This is false.
 One of the beauties of the Ethereum network and community is that you're able to [participate](/community/) in just about any programming language.
 
-Ethereum and it's community embraces open source. You can find community projects - client implementations, APIs, development frameworks, testing tools - in a wide variety of languages.
+Ethereum and its community embrace open source. You can find community projects - client implementations, APIs, development frameworks, testing tools - in a wide variety of languages.
 
 <!-- Often certain languages have an certain advantage depending on the use case -->
 
