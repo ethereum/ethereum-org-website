@@ -109,51 +109,49 @@ const StyledImage = styled.img`
 `
 
 // TODO generalize this component - currently tailored for stablecoin market caps
-const SimpleTable = ({ columns, content, hasError }) => {
-  return (
-    <Table>
-      <Header>
-        {columns.map((column, idx) => (
-          <HeaderCell key={idx}>{column}</HeaderCell>
-        ))}
-      </Header>
-      {hasError && (
-        <Row>
+const SimpleTable = ({ columns, content, hasError }) => (
+  <Table>
+    <Header>
+      {columns.map((column, idx) => (
+        <HeaderCell key={idx}>{column}</HeaderCell>
+      ))}
+    </Header>
+    {hasError && (
+      <Row>
+        <Cell>
+          <Translation id="page-stablecoins-table-error" />
+        </Cell>
+      </Row>
+    )}
+    {!hasError && content.length === 0 && (
+      <Row>
+        <Cell>
+          <Translation id="page-stablecoins-table-loading" />
+        </Cell>
+      </Row>
+    )}
+    {content.map((row, idx) => {
+      const { name, marketCap, image, type, url } = row
+      const rowContent = (
+        <>
           <Cell>
-            <Translation id="page-stablecoins-table-error" />
+            {image && <StyledImage src={image} alt="" />}
+            {name}
           </Cell>
-        </Row>
-      )}
-      {!hasError && content.length === 0 && (
-        <Row>
-          <Cell>
-            <Translation id="page-stablecoins-table-loading" />
-          </Cell>
-        </Row>
-      )}
-      {content.map((row, idx) => {
-        const { name, marketCap, image, type, url } = row
-        const rowContent = (
-          <>
-            <Cell>
-              {image && <StyledImage src={image} alt="" />}
-              {name}
-            </Cell>
-            <Cell>{marketCap}</Cell>
-            <Cell>{type}</Cell>
-          </>
-        )
+          <Cell>{marketCap}</Cell>
+          <Cell>{type}</Cell>
+        </>
+      )
 
-        return url ? (
-          <LinkRow key={idx} to={url}>
-            {rowContent}
-          </LinkRow>
-        ) : (
-          <Row key={idx}>{rowContent}</Row>
-        )
-      })}
-    </Table>
-  )
-}
+      return url ? (
+        <LinkRow key={idx} to={url}>
+          {rowContent}
+        </LinkRow>
+      ) : (
+        <Row key={idx}>{rowContent}</Row>
+      )
+    })}
+  </Table>
+)
 
 export default SimpleTable

@@ -24,7 +24,7 @@
     "language": "Ελληνικά"
   },
   "es": {
-    "version": 1.1,
+    "version": 2.0,
     "language": "Español"
   },
   "fa": {
@@ -38,6 +38,10 @@
   "fr": {
     "version": 1.1,
     "language": "Français"
+  },
+  "hi": {
+    "version": 2.0,
+    "language": "हिन्दी"
   },
   "hu": {
     "version": 1.1,
@@ -92,7 +96,7 @@
     "language": "Português"
   },
   "ro": {
-    "version": 1.1,
+    "version": 2.2,
     "language": "Română"
   },
   "ru": {

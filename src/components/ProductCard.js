@@ -121,39 +121,37 @@ const ProductCard = ({
   children,
   gitHubRepo,
   subjects,
-}) => {
-  return (
-    <Card>
-      <ImageWrapper background={background}>
-        <Image fixed={image} alt={alt} />
-      </ImageWrapper>
-      <Content className="hover">
-        <div>
-          {gitHubRepo && <GitStars gitHubRepo={gitHubRepo} />}
-          <Title gitHidden={!gitHubRepo}>{name}</Title>
-          <Description>{description}</Description>
-        </div>
-        {children && <Children>{children}</Children>}
-      </Content>
-      <SubjectContainer>
-        {subjects &&
-          subjects.map((subject, idx) => (
-            <SubjectPill key={idx} subject={subject}>
-              {subject}
-            </SubjectPill>
-          ))}
-        {gitHubRepo &&
-          gitHubRepo.languages.nodes.map(({ name }, idx) => (
-            <SubjectPill key={idx} subject={name}>
-              {name.toUpperCase()}
-            </SubjectPill>
-          ))}
-      </SubjectContainer>
-      <StyledButtonLink to={url} hideArrow={true}>
-        Open {name}
-      </StyledButtonLink>
-    </Card>
-  )
-}
+}) => (
+  <Card>
+    <ImageWrapper background={background}>
+      <Image fixed={image} alt={alt} />
+    </ImageWrapper>
+    <Content className="hover">
+      <div>
+        {gitHubRepo && <GitStars gitHubRepo={gitHubRepo} />}
+        <Title gitHidden={!gitHubRepo}>{name}</Title>
+        <Description>{description}</Description>
+      </div>
+      {children && <Children>{children}</Children>}
+    </Content>
+    <SubjectContainer>
+      {subjects &&
+        subjects.map((subject, idx) => (
+          <SubjectPill key={idx} subject={subject}>
+            {subject}
+          </SubjectPill>
+        ))}
+      {gitHubRepo &&
+        gitHubRepo.languages.nodes.map(({ name }, idx) => (
+          <SubjectPill key={idx} subject={name}>
+            {name.toUpperCase()}
+          </SubjectPill>
+        ))}
+    </SubjectContainer>
+    <StyledButtonLink to={url} hideArrow={true}>
+      Open {name}
+    </StyledButtonLink>
+  </Card>
+)
 
 export default ProductCard

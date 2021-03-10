@@ -48,18 +48,16 @@ const EmojiCell = styled.div`
   align-items: center;
 `
 
-const DocLink = ({ to, title, className }) => {
-  return (
-    <Container to={to} className={className}>
-      <EmojiCell>
-        <Emoji size={1} text=":page_with_curl:" mr={`1rem`} />
-      </EmojiCell>
-      <TextCell>
-        <Title>{title}</Title>
-      </TextCell>
-      <Arrow name="arrowRight" color={(props) => props.theme.colors.text} />
-    </Container>
-  )
-}
+const DocLink = ({ to, title, className }) => (
+  <Container to={to} className={className}>
+    <EmojiCell>
+      <Emoji size={1} text=":page_with_curl:" mr={`1rem`} />
+    </EmojiCell>
+    <TextCell>
+      <Title>{title}</Title>
+    </TextCell>
+    <Arrow name="arrowRight" color={(props) => props.theme.colors.text} />
+  </Container>
+)
 
 export default DocLink

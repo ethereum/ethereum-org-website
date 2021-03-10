@@ -51,6 +51,10 @@ const ImageContainer = styled.div`
   justify-content: center;
 `
 
+const StyledButtonSecondary = styled(ButtonSecondary)`
+  margin-top: 0;
+`
+
 const StyledGhostCard = styled(GhostCard)`
   .ghost-card-base {
     display: flex;
@@ -105,6 +109,7 @@ const TwoColumnContent = styled.div`
 const H2 = styled.h2`
   font-size: 24px;
   font-style: normal;
+  margin-top: 0.5rem;
   font-weight: 700;
   line-height: 22px;
   letter-spacing: 0px;
@@ -243,6 +248,7 @@ const H3 = styled.h3`
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
   a {
     display: none;
   }
@@ -337,6 +343,15 @@ const StyledCallout = styled(Callout)`
 
 const StyledCardGrid = styled(CardGrid)`
   margin-bottom: 4rem;
+  margin-top: 4rem;
+`
+
+const MoreButtonContainer = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
 `
 
 const FINANCE = "finance"
@@ -780,6 +795,62 @@ const DappsPage = ({ data, location }) => {
       image: data.pooltogether.childImageSharp.fluid,
       alt: translateMessageId("page-dapps-pooltogether-logo-alt", intl),
     },
+    {
+      title: "Index Coop",
+      description: translateMessageId(
+        "page-dapps-dapp-description-index-coop",
+        intl
+      ),
+      link: "https://www.indexcoop.com/",
+      image: data.index.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-index-coop-logo-alt", intl),
+    },
+  ]
+
+  const insurance = [
+    {
+      title: "Nexus Mutual",
+      description: translateMessageId(
+        "page-dapps-dapp-description-nexus-mutual",
+        intl
+      ),
+      link: "https://nexusmutual.io/",
+      image: data.nexus.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-nexus-mutual-logo-alt", intl),
+    },
+    {
+      title: "Etherisc",
+      description: translateMessageId(
+        "page-dapps-dapp-description-etherisc",
+        intl
+      ),
+      link: "https://etherisc.com/",
+      image: data.etherisc.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-etherisc-logo-alt", intl),
+    },
+  ]
+
+  const portfolios = [
+    {
+      title: "Zapper",
+      description: translateMessageId(
+        "page-dapps-dapp-description-zapper",
+        intl
+      ),
+      link: "https://zapper.fi/",
+      image: data.zapper.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-zapper-logo-alt", intl),
+    },
+    {
+      title: "Zerion",
+      description: translateMessageId(
+        "page-dapps-dapp-description-zerion",
+        intl
+      ),
+      link: "https://app.zerion.io/",
+      image: data.zerion.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-zerion-logo-alt", intl),
+    },
   ]
 
   const computing = [
@@ -793,13 +864,16 @@ const DappsPage = ({ data, location }) => {
       image: data.golem.childImageSharp.fluid,
       alt: translateMessageId("page-dapps-golem-logo-alt", intl),
     },
-    /* {
+    {
       title: "radicle.xyz",
-      description:
-        "Secure peer-to-peer code collaboration without intermediaries.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-radicle",
+        intl
+      ),
       link: "https://radicle.xyz/",
       image: data.radicle.childImageSharp.fluid,
-    }, */
+      alt: translateMessageId("page-dapps-radicle-logo-alt", intl),
+    },
   ]
 
   const marketplaces = [
@@ -1106,9 +1180,9 @@ const DappsPage = ({ data, location }) => {
                   <Translation id="page-dapps-get-some-eth-description" />
                 </p>
               </div>
-              <ButtonSecondary>
+              <StyledButtonSecondary>
                 <Translation id="get-eth" />
-              </ButtonSecondary>
+              </StyledButtonSecondary>
             </StepBox>
             <StepBox to="/wallets/find-wallet/">
               <div>
@@ -1119,9 +1193,9 @@ const DappsPage = ({ data, location }) => {
                   <Translation id="page-dapps-set-up-a-wallet-description" />
                 </p>
               </div>
-              <ButtonSecondary>
+              <StyledButtonSecondary>
                 <Translation id="page-dapps-set-up-a-wallet-button" />
-              </ButtonSecondary>
+              </StyledButtonSecondary>
             </StepBox>
             <StepBox to="#explore">
               <div>
@@ -1146,27 +1220,25 @@ const DappsPage = ({ data, location }) => {
           <Translation id="page-dapps-editors-choice-description" />
         </p>
         <StyledCardGrid>
-          {editorChoices.map((choice, idx) => {
-            return (
-              <ProductCard
-                key={idx}
-                background={choice.background}
-                description={choice.description}
-                url={choice.url}
-                alt={choice.alt}
-                image={choice.image}
-                name={choice.name}
-              >
-                <Pill color={choice.pillColor}>{choice.type}</Pill>
-              </ProductCard>
-            )
-          })}
+          {editorChoices.map((choice, idx) => (
+            <ProductCard
+              key={idx}
+              background={choice.background}
+              description={choice.description}
+              url={choice.url}
+              alt={choice.alt}
+              image={choice.image}
+              name={choice.name}
+            >
+              <Pill color={choice.pillColor}>{choice.type}</Pill>
+            </ProductCard>
+          ))}
         </StyledCardGrid>
       </Content>
       <FullWidthContainer ref={explore}>
-        <H2 id="explore">
+        <h2 id="explore">
           <Translation id="page-dapps-explore-dapps-title" />
-        </H2>
+        </h2>
         <CenterText>
           <Translation id="page-dapps-explore-dapps-description" />
         </CenterText>
@@ -1266,6 +1338,26 @@ const DappsPage = ({ data, location }) => {
                     intl
                   )}
                   content={lottery}
+                />
+              </RightColumn>
+            </TwoColumnContent>
+            <TwoColumnContent>
+              <LeftColumn>
+                <ProductList
+                  category={translateMessageId(
+                    "page-dapps-category-insurance",
+                    intl
+                  )}
+                  content={insurance}
+                />
+              </LeftColumn>
+              <RightColumn>
+                <ProductList
+                  category={translateMessageId(
+                    "page-dapps-category-portfolios",
+                    intl
+                  )}
+                  content={portfolios}
                 />
               </RightColumn>
             </TwoColumnContent>
@@ -1469,25 +1561,44 @@ const DappsPage = ({ data, location }) => {
           <CenterDivider />
           {categories[selectedCategory].benefits && (
             <About>
-              <H2>
+              <h2>
                 <Translation id="page-dapps-magic-title-1" />{" "}
                 <Emoji size={"1rem"} text=":sparkles:" />{" "}
                 <Translation id="page-dapps-magic-title-2" />{" "}
                 {categories[selectedCategory].benefitsTitle}
-              </H2>
+              </h2>
               <p>{categories[selectedCategory.benefitsDescription]}</p>
               <CardContainer>
-                {categories[selectedCategory].benefits.map((art, idx) => {
-                  return (
-                    <CenteredCard
-                      key={idx}
-                      emoji={art.emoji}
-                      title={art.title}
-                      description={art.description}
-                    />
-                  )
-                })}
+                {categories[selectedCategory].benefits.map((art, idx) => (
+                  <CenteredCard
+                    key={idx}
+                    emoji={art.emoji}
+                    title={art.title}
+                    description={art.description}
+                  />
+                ))}
               </CardContainer>
+              {selectedCategory === FINANCE && (
+                <MoreButtonContainer>
+                  <ButtonLink isSecondary to="/defi/">
+                    <Translation id="page-dapps-more-on-defi-button" />
+                  </ButtonLink>
+                </MoreButtonContainer>
+              )}
+              {selectedCategory === COLLECTIBLES && (
+                <MoreButtonContainer>
+                  <ButtonLink isSecondary to="/nft/">
+                    <Translation id="page-dapps-more-on-nft-button" />
+                  </ButtonLink>
+                </MoreButtonContainer>
+              )}
+              {selectedCategory === GAMING && (
+                <MoreButtonContainer>
+                  <ButtonLink isSecondary to="/nft/">
+                    <Translation id="page-dapps-more-on-nft-gaming-button" />
+                  </ButtonLink>
+                </MoreButtonContainer>
+              )}
             </About>
           )}
         </Content>
@@ -1520,9 +1631,9 @@ const DappsPage = ({ data, location }) => {
           </StyledGhostCard>
         </ImageContainer>
         <Box>
-          <H2>
+          <h2>
             <Translation id="page-dapps-magic-behind-dapps-title" />
-          </H2>
+          </h2>
           <BoxText>
             <Translation id="page-dapps-magic-behind-dapps-description" />
           </BoxText>
@@ -1533,9 +1644,9 @@ const DappsPage = ({ data, location }) => {
         <BoxGrid items={features} />
         <Row>
           <LeftColumn>
-            <H2>
+            <h2>
               <Translation id="page-dapps-how-dapps-work-title" />
-            </H2>
+            </h2>
             <p>
               <Translation id="page-dapps-how-dapps-work-p1" />
             </p>
@@ -1750,6 +1861,21 @@ export const query = graphql`
       ...dappImage
     }
     asyncart: file(relativePath: { eq: "dapps/asyncart.png" }) {
+      ...dappImage
+    }
+    index: file(relativePath: { eq: "dapps/index-coop.png" }) {
+      ...dappImage
+    }
+    nexus: file(relativePath: { eq: "dapps/nexus.png" }) {
+      ...dappImage
+    }
+    etherisc: file(relativePath: { eq: "dapps/etherisc.png" }) {
+      ...dappImage
+    }
+    zapper: file(relativePath: { eq: "dapps/zapper.png" }) {
+      ...dappImage
+    }
+    zerion: file(relativePath: { eq: "dapps/zerion.png" }) {
       ...dappImage
     }
   }

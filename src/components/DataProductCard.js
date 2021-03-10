@@ -100,36 +100,31 @@ const DataProductCard = ({
   name,
   description,
   data,
-}) => {
-  return (
-    <Card hideArrow={true} to={url}>
-      <ImageWrapper background={background}>
-        <Image fixed={image} alt={`${name} logo`} />
-      </ImageWrapper>
-      <Content>
-        <div>
-          <Title>{name}</Title>
-          {description && <Description>{description}</Description>}
-        </div>
-        {data && (
-          <Data>
-            {data.map((data, idx) => {
-              const { logo, coin, apy } = data
-              return (
-                <DataRow key={idx}>
-                  <Box>
-                    {logo && <Logo fixed={logo} />}
-                    {coin}
-                  </Box>
-                  <div>{apy}% APY</div>
-                </DataRow>
-              )
-            })}
-          </Data>
-        )}
-      </Content>
-    </Card>
-  )
-}
+}) => (
+  <Card hideArrow={true} to={url}>
+    <ImageWrapper background={background}>
+      <Image fixed={image} alt={`${name} logo`} />
+    </ImageWrapper>
+    <Content>
+      <div>
+        <Title>{name}</Title>
+        {description && <Description>{description}</Description>}
+      </div>
+      {data && (
+        <Data>
+          {data.map(({ logo, coin, apy }, idx) => (
+            <DataRow key={idx}>
+              <Box>
+                {logo && <Logo fixed={logo} />}
+                {coin}
+              </Box>
+              <div>{apy}% APY</div>
+            </DataRow>
+          ))}
+        </Data>
+      )}
+    </Content>
+  </Card>
+)
 
 export default DataProductCard

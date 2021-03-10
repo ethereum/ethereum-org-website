@@ -25,6 +25,8 @@ Watch Austin walk you through blockchains:
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/zcX7OJ-L8XQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+If you want to see how blockchain hashes data, and then the previous block references all the past blocks, be sure to check out [this demo](https://andersbrownworth.com/blockchain/blockchain). It makes understanding the hashing of blocks really simple.
+
 ## What is Ethereum? {#what-is-ethereum}
 
 In the Ethereum universe, there is a single, canonical computer (called the Ethereum Virtual Machine, or EVM) whose state everyone on the Ethereum network agrees on. Everyone who participates in the Ethereum network (every Ethereum node) keeps a copy of the state of this computer. Additionally, any participant can broadcast a request for this computer to perform arbitrary computation. Whenever such a request is broadcast, other participants on the network verify, validate, and carry out (“execute”) the computation. This causes a state change in the EVM, which is committed and propagated throughout the entire network.

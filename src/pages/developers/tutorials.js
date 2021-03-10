@@ -93,6 +93,7 @@ const PageTitle = styled.h1`
   font-size: 32px;
   line-height: 140%;
   text-align: center;
+  margin: 0 0 1.625rem;
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     margin: 1rem;
   }
@@ -368,29 +369,26 @@ const TutorialsPage = ({ data }) => {
             </p>
           </ResultsContainer>
         )}
-        {state.filteredTutorials.map((tutorial) => {
-          return (
-            <TutorialCard key={tutorial.to} to={tutorial.to}>
-              <TitleContainer>
-                <Title>{tutorial.title}</Title>
-                <Pill isSecondary={true}>{tutorial.skill}</Pill>
-              </TitleContainer>
-              <Author>
-                <Emoji text=":writing_hand:" size={1} mr={`0.5em`} />
-                {tutorial.author} •
-                <Emoji text=":calendar:" size={1} ml={`0.5em`} mr={`0.5em`} />
-                {getLocaleTimestamp(intl.locale, tutorial.published)} •
-                <Emoji text=":stopwatch:" size={1} ml={`0.5em`} mr={`0.5em`} />
-                {tutorial.timeToRead}{" "}
-                <Translation id="page-tutorial-read-time" />
-              </Author>
-              <About>{tutorial.description}</About>
-              <PillContainer>
-                <TutorialTags tags={tutorial.tags} />
-              </PillContainer>
-            </TutorialCard>
-          )
-        })}
+        {state.filteredTutorials.map((tutorial) => (
+          <TutorialCard key={tutorial.to} to={tutorial.to}>
+            <TitleContainer>
+              <Title>{tutorial.title}</Title>
+              <Pill isSecondary={true}>{tutorial.skill}</Pill>
+            </TitleContainer>
+            <Author>
+              <Emoji text=":writing_hand:" size={1} mr={`0.5em`} />
+              {tutorial.author} •
+              <Emoji text=":calendar:" size={1} ml={`0.5em`} mr={`0.5em`} />
+              {getLocaleTimestamp(intl.locale, tutorial.published)} •
+              <Emoji text=":stopwatch:" size={1} ml={`0.5em`} mr={`0.5em`} />
+              {tutorial.timeToRead} <Translation id="page-tutorial-read-time" />
+            </Author>
+            <About>{tutorial.description}</About>
+            <PillContainer>
+              <TutorialTags tags={tutorial.tags} />
+            </PillContainer>
+          </TutorialCard>
+        ))}
       </TutorialContainer>
     </StyledPage>
   )

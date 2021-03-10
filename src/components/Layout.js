@@ -57,7 +57,7 @@ const StyledBannerNotification = styled(BannerNotification)`
 
 const Layout = (props) => {
   const [isDarkTheme, setIsDarkTheme] = useState(false)
-
+  const [shouldShowSideNav, setShouldShowSideNav] = useState(false)
   // set isDarkTheme based on browser/app user preferences
   useEffect(() => {
     if (localStorage && localStorage.getItem("dark-theme") !== null) {
@@ -66,6 +66,10 @@ const Layout = (props) => {
       setIsDarkTheme(window.matchMedia("(prefers-color-scheme: dark)").matches)
     }
   }, [])
+
+  useEffect(() => {
+    setShouldShowSideNav(props.path.includes("/docs/"))
+  }, [props.path])
 
   const handleThemeChange = () => {
     setIsDarkTheme(!isDarkTheme)
@@ -80,13 +84,16 @@ const Layout = (props) => {
   const intl = props.pageContext.intl
   const theme = isDarkTheme ? darkTheme : lightTheme
 
-  const isPageOutdated = !!props.pageContext.isOutdated
-  const isPageTranslated = intl.language !== intl.defaultLanguage
+  const isPageLanguageEnglish = intl.language === intl.defaultLanguage
+  const isPageContentEnglish = !!props.pageContext.isContentEnglish
+  const isPageTranslationOutdated = !!props.pageContext.isOutdated
   const isPageRightToLeft = isLangRightToLeft(intl.language)
-  const shouldShowTranslationBanner = isPageOutdated || isPageTranslated
+
+  const shouldShowTranslationBanner =
+    isPageTranslationOutdated ||
+    (isPageContentEnglish && !isPageLanguageEnglish)
 
   const path = props.path
-  const shouldShowSideNav = path.includes("/docs/")
   const shouldShowBanner =
     path.includes("/eth2/") && !path.includes("/eth2/deposit-contract/")
 
@@ -100,10 +107,10 @@ const Layout = (props) => {
         <ThemeProvider theme={theme}>
           <GlobalStyle isDarkTheme={isDarkTheme} />
           <TranslationBanner
-            isPageOutdated={isPageOutdated}
+            shouldShow={shouldShowTranslationBanner}
+            isPageContentEnglish={isPageContentEnglish}
             isPageRightToLeft={isPageRightToLeft}
             originalPagePath={intl.originalPath}
-            shouldShow={shouldShowTranslationBanner}
           />
           <ContentContainer>
             <Nav

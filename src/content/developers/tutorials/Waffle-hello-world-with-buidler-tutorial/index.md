@@ -10,7 +10,7 @@ sidebar: true
 published: 2020-10-16
 ---
 
-### In this [Waffle](https://ethereum-waffle.readthedocs.io) tutorial, we will learn how to set up a simple "Hello world" smart contract project, using [hardhat](https://hardhat.org/) and [ethers.js](https://docs.ethers.io/v5/). Then we will learn how to add a new functionality to our smart contract and how to test it with Waffle.
+In this [Waffle](https://ethereum-waffle.readthedocs.io) tutorial, we will learn how to set up a simple "Hello world" smart contract project, using [hardhat](https://hardhat.org/) and [ethers.js](https://docs.ethers.io/v5/). Then we will learn how to add a new functionality to our smart contract and how to test it with Waffle.
 
 Let's start with creating new project:
 
@@ -75,7 +75,7 @@ MyWaffleProject
 └── package.json
 ```
 
-### Now let's talk about some of these files:
+### Now let's talk about some of these files: {#now-lets-talk}
 
 - Greeter.sol - our smart contract writen in solidity;
 
@@ -122,7 +122,7 @@ describe("Greeter", function () {
 })
 ```
 
-### Next step consists of compiling our contract and running tests:
+### Next step consists of compiling our contract and running tests: {#compiling-and-testing}
 
 Waffle tests use Mocha (a test framework) with Chai (an assertion library). All you have to do is run `npx hardhat test` and wait for the following message to appear.
 
@@ -130,7 +130,7 @@ Waffle tests use Mocha (a test framework) with Chai (an assertion library). All 
 ✓ Should return the new greeting once it's changed
 ```
 
-### Everything looks great so far, let's add some more complexity to our project :)
+### Everything looks great so far, let's add some more complexity to our project :) {#adding-complexity}
 
 Imagine a situation where someone adds an empty string as a greeting. It wouldn't be a warm greeting, right?  
 Let's make sure that doesn't happen:
@@ -191,7 +191,7 @@ Let's run tests again:
 
 Congrats! You made it :)
 
-### Conclusion
+### Conclusion {#conclusion}
 
 We made a simple project with Waffle, Hardhat and ethers.js. We learned how to set up a project, add a test and implement new functionality.
 

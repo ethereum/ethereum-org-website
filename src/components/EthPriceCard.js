@@ -6,7 +6,6 @@ import Translation from "../components/Translation"
 import Icon from "./Icon"
 import Link from "./Link"
 import Tooltip from "./Tooltip"
-import { Mixins } from "../theme"
 
 const InfoIcon = styled(Icon)`
   margin-left: 0.5rem;
@@ -44,7 +43,8 @@ const Title = styled.h4`
 `
 
 const Price = styled.div`
-  ${Mixins.textLevel1}
+  line-height: 1.4;
+  font-weight: 400;
   margin: ${(props) => (props.hasError ? `1rem 0` : 0)};
   font-size: ${(props) => (props.hasError ? props.theme.fontSizes.m : `3rem`)};
   color: ${(props) =>

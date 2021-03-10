@@ -63,15 +63,13 @@ const ModalCloseIcon = styled(Icon)`
   cursor: pointer;
 `
 
-const Overlay = ({ isActive }) => {
-  return (
-    <StyledOverlay
-      initial={false}
-      animate={{ opacity: isActive ? 1 : 0, zIndex: isActive ? 1001 : -1 }}
-      transition={{ duration: 0.2 }}
-    />
-  )
-}
+const Overlay = ({ isActive }) => (
+  <StyledOverlay
+    initial={false}
+    animate={{ opacity: isActive ? 1 : 0, zIndex: isActive ? 1001 : -1 }}
+    transition={{ duration: 0.2 }}
+  />
+)
 
 const Modal = ({ children, className, isOpen, setIsOpen }) => {
   const ref = useRef()

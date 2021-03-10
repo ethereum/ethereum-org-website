@@ -100,10 +100,10 @@ So you get reimbursed for proving fraud.
 
 #### Pros and cons {#optimistic-pros-and-cons}
 
-| Pros                                                                                                             | Cons                                                                                                             |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Anything you can do on Ethereum layer 1, you can do with Optimistic rollups as it's EVM and Solidity compatible. | Long wait times for on-chain transaction due to potential fraud challenges.                                      |
-| All transaction data is stored on the layer 1 chain, meaning it's secure and decentralized.                      | Potentially vulnerable to attacks if the value in an Optimistic rollup exceeds the amount in an operator's bond. |
+| Pros                                                                                                             | Cons                                                                        |
+| ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| Anything you can do on Ethereum layer 1, you can do with Optimistic rollups as it's EVM and Solidity compatible. | Long wait times for on-chain transaction due to potential fraud challenges. |
+| All transaction data is stored on the layer 1 chain, meaning it's secure and decentralized.                      |                                                                             |
 
 #### Use Optimistic rollups {#use-optimistic-rollups}
 
@@ -180,7 +180,7 @@ A plasma chain is a separate blockchain that is anchored to the main Ethereum ch
 ### Use Plasma {#use-plasma}
 
 - [OMG Network](https://omg.network/)
-- [Matic Network](https://matic.network/)
+- [Polygon](https://polygon.technology/)[previously Matic Network](https://matic.network/)
 - [Gluon](https://gluon.network/)
 - [Gazelle](https://gzle.io/)
 - [LeapDAO](https://ipfs.leapdao.org/)

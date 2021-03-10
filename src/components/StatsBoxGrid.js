@@ -335,9 +335,9 @@ const StatsBoxGrid = () => {
 
   return (
     <Grid>
-      {metrics.map((metric, idx) => {
-        return <GridItem key={idx} metric={metric} />
-      })}
+      {metrics.map((metric, idx) => (
+        <GridItem key={idx} metric={metric} />
+      ))}
     </Grid>
   )
 }

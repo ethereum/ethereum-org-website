@@ -48,6 +48,7 @@ const Description = styled.p`
   font-size: 20px;
   width: 90%;
   line-height: 140%;
+  margin-bottom: 2rem;
   color: ${(props) => props.theme.colors.text200};
 `
 
@@ -63,6 +64,10 @@ const Image = styled(Img)`
   }
 `
 
+const H2 = styled.h2`
+  margin-top: 0rem;
+`
+
 const CalloutBanner = ({
   image,
   maxImageWidth,
@@ -71,17 +76,15 @@ const CalloutBanner = ({
   alt,
   children,
   className,
-}) => {
-  return (
-    <StyledCard className={className}>
-      <Image fluid={image} alt={alt} maxImageWidth={maxImageWidth} />
-      <Content>
-        <h2>{title}</h2>
-        <Description>{description}</Description>
-        {children}
-      </Content>
-    </StyledCard>
-  )
-}
+}) => (
+  <StyledCard className={className}>
+    <Image fluid={image} alt={alt} maxImageWidth={maxImageWidth} />
+    <Content>
+      <H2>{title}</H2>
+      <Description>{description}</Description>
+      {children}
+    </Content>
+  </StyledCard>
+)
 
 export default CalloutBanner
