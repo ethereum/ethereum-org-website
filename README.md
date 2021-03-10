@@ -860,6 +860,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/stuz5000"><img src="https://avatars.githubusercontent.com/u/7799980?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Stuart Reynolds</b></sub></a><br /><a href="#ideas-stuz5000" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/glebodic"><img src="https://avatars.githubusercontent.com/u/18246298?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gwenael Le Bodic</b></sub></a><br /><a href="#content-glebodic" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/whoanuragverma"><img src="https://avatars.githubusercontent.com/u/55322425?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anurag Verma</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Awhoanuragverma" title="Bug reports">🐛</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=whoanuragverma" title="Code">💻</a></td>
   </tr>
 </table>
 
