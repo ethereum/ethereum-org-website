@@ -3087,6 +3087,15 @@
         "bug",
         "code"
       ]
+    },
+    {
+      "login": "citizen-stig",
+      "name": "Nikolai Golub",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3115300?v=4",
+      "profile": "http://golub.pro/",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
