@@ -3077,6 +3077,16 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "whoanuragverma",
+      "name": "Anurag Verma",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55322425?v=4",
+      "profile": "https://github.com/whoanuragverma",
+      "contributions": [
+        "bug",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
