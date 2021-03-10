@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
+import { shuffle } from "lodash"
 
 // import ActionCard from "../../components/ActionCard"
 // import Callout from "../../components/Callout"
@@ -43,6 +44,7 @@ const Slogan = styled.h1`
   font-size: 32px;
   line-height: 140%;
   text-align: center;
+  margin: 0 0 1.625rem;
 `
 
 // const Subtitle = styled.div`
@@ -94,6 +96,10 @@ const Hero = styled(Img)`
   max-width: 800px;
   background-size: cover;
   background-repeat: no-repeat;
+`
+
+const H2 = styled.h2`
+  margin: 0 0 1.625rem;
 `
 
 // const Header = styled.header`
@@ -344,13 +350,13 @@ const ChooseStackPage = ({ data }) => {
   const [frameworks, setFrameworks] = useState([])
 
   useEffect(() => {
-    const list = frameworksList.map((item) => {
-      item.image = data[item.id].childImageSharp.fixed
-      item.gitHubRepo = data[`${item.id}GitHub`].repository
-      item.randomNumber = Math.floor(Math.random() * frameworksList.length)
-      return item
-    })
-    list.sort((a, b) => a.randomNumber - b.randomNumber)
+    const list = shuffle(
+      frameworksList.map((item) => {
+        item.image = data[item.id].childImageSharp.fixed
+        item.gitHubRepo = data[`${item.id}GitHub`].repository
+        return item
+      })
+    )
     setFrameworks(list)
   }, [data])
 
@@ -403,9 +409,9 @@ const ChooseStackPage = ({ data }) => {
       <Content>
         <TwoColumnContent>
           <Column>
-            <h2>
+            <H2>
               <Translation id="page-local-environment-frameworks-title" />
-            </h2>
+            </H2>
             <p>
               <Translation id="page-local-environment-frameworks-desc" />
             </p>
@@ -439,21 +445,19 @@ const ChooseStackPage = ({ data }) => {
           </Column>
         </TwoColumnContent>
         <CardGrid>
-          {frameworks.map((framework, idx) => {
-            return (
-              <ProductCard
-                key={idx}
-                url={framework.url}
-                background={framework.background}
-                image={framework.image}
-                name={framework.name}
-                gitHubRepo={framework.gitHubRepo}
-                alt={translateMessageId(framework.alt, intl)}
-              >
-                <Translation id={framework.description} />
-              </ProductCard>
-            )
-          })}
+          {frameworks.map((framework, idx) => (
+            <ProductCard
+              key={idx}
+              url={framework.url}
+              background={framework.background}
+              image={framework.image}
+              name={framework.name}
+              gitHubRepo={framework.gitHubRepo}
+              alt={translateMessageId(framework.alt, intl)}
+            >
+              <Translation id={framework.description} />
+            </ProductCard>
+          ))}
         </CardGrid>
       </Content>
       {/* <Content>

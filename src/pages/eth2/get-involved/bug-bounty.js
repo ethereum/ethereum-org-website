@@ -225,6 +225,11 @@ const BugBountiesPage = ({ data, location }) => {
         ? data.tekuSmallLight.childImageSharp.fixed
         : data.tekuSmallDark.childImageSharp.fixed,
     },
+    {
+      title: "Nimbus",
+      link: "https://our.status.im/tag/nimbus/",
+      image: data.nimbusSmall.childImageSharp.fixed,
+    },
   ]
 
   const tekuImage = isDarkTheme
@@ -310,6 +315,7 @@ const BugBountiesPage = ({ data, location }) => {
         <Client fixed={data.prysm.childImageSharp.fixed} />
         <Client fixed={lighthouseImage} />
         <Client fixed={tekuImage} />
+        <Client fixed={data.nimbus.childImageSharp.fixed} />
       </ClientRow>
       <StyledGrayContainer id="rules">
         <Content>
@@ -588,6 +594,12 @@ export const query = graphql`
       ...ClientLogosSmall
     }
     tekuSmallLight: file(relativePath: { eq: "eth2/teku-light.png" }) {
+      ...ClientLogosSmall
+    }
+    nimbus: file(relativePath: { eq: "eth2/nimbus-cloud.png" }) {
+      ...ClientLogos
+    }
+    nimbusSmall: file(relativePath: { eq: "eth2/nimbus-cloud.png" }) {
       ...ClientLogosSmall
     }
   }

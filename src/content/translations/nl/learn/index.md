@@ -18,7 +18,7 @@ Naast de informatie op deze pagina zijn er bronnen uit de community die het verk
 
 - [EthHub](https://docs.ethhub.io) _Uitgebreide knowledge base voor alles over Ethereum_
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _Een educatieve bron over Ethereum, gericht op beginners_
-- [Ethereum.wiki](https://ethereum.wiki) _Een door de community samengestelde wiki over de technologie van Ethereum_
+- [Ethereum.wiki](https://eth.wiki) _Een door de community samengestelde wiki over de technologie van Ethereum_
 - [Kauri](https://kauri.io) _Technische artikelen en tutorials voor Ethereum en gerelateerde projecten_
 - [Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Video's and presentaties over Ethereum_
 - [Week in Ethereum News](https://weekinethereumnews.com/) _Een wekelijkse nieuwsbrief over belangrijke ontwikkelingen in het ecosysteem_

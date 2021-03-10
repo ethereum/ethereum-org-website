@@ -6,26 +6,24 @@ const Container = styled.div`
   margin-bottom: 4rem;
 `
 
-const Eth2DockingList = () => {
-  const reads = [
-    {
-      title: "Ethereum 1.x",
-      description: "EthHub",
-      link: "https://docs.ethhub.io/ethereum-roadmap/ethereum-1.x/",
-    },
-    {
-      title: "The 1.x Files: The Stateless Ethereum Tech Tree",
-      description: "Ethereum Foundation",
-      link:
-        "https://blog.ethereum.org/2020/01/28/eth1x-files-the-stateless-ethereum-tech-tree/",
-    },
-  ]
+const reads = [
+  {
+    title: "Ethereum 1.x",
+    description: "EthHub",
+    link: "https://docs.ethhub.io/ethereum-roadmap/ethereum-1.x/",
+  },
+  {
+    title: "The 1.x Files: The Stateless Ethereum Tech Tree",
+    description: "Ethereum Foundation",
+    link:
+      "https://blog.ethereum.org/2020/01/28/eth1x-files-the-stateless-ethereum-tech-tree/",
+  },
+]
 
-  return (
-    <Container>
-      <CardList content={reads} />
-    </Container>
-  )
-}
+const Eth2DockingList = () => (
+  <Container>
+    <CardList content={reads} />
+  </Container>
+)
 
 export default Eth2DockingList

@@ -41,19 +41,17 @@ const Content = styled.div`
   height: 100%;
 `
 
-const Callout = ({ image, alt, title, description, children, className }) => {
-  return (
-    <StyledCard className={className}>
-      <Image fixed={image} alt={alt} />
-      <Content>
-        <div>
-          <h3>{title}</h3>
-          <Description>{description}</Description>
-        </div>
-        {children}
-      </Content>
-    </StyledCard>
-  )
-}
+const Callout = ({ image, alt, title, description, children, className }) => (
+  <StyledCard className={className}>
+    <Image fixed={image} alt={alt} />
+    <Content>
+      <div>
+        <h3>{title}</h3>
+        <Description>{description}</Description>
+      </div>
+      {children}
+    </Content>
+  </StyledCard>
+)
 
 export default Callout

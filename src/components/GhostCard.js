@@ -30,13 +30,11 @@ const Ghost = styled(BaseCard)`
   background-color: ${(props) => props.theme.colors.ghostCardGhost};
 `
 
-const GhostCard = ({ children, className }) => {
-  return (
-    <Container className={className}>
-      <Ghost />
-      <Card className="ghost-card-base">{children}</Card>
-    </Container>
-  )
-}
+const GhostCard = ({ children, className }) => (
+  <Container className={className}>
+    <Ghost />
+    <Card className="ghost-card-base">{children}</Card>
+  </Container>
+)
 
 export default GhostCard

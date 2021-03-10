@@ -42,6 +42,11 @@ const H2 = styled.h2`
   font-weight: 700;
   line-height: 22px;
   letter-spacing: 0px;
+  margin-top: 0.5rem;
+`
+
+const H3 = styled.h3`
+  margin-top: 0rem;
 `
 
 const Column = styled.div`
@@ -176,9 +181,9 @@ const StakingPage = ({ data, location }) => {
       <Content>
         <Vision>
           <Breadcrumbs slug={location.pathname} startDepth={1} />
-          <H2>
+          <h2>
             <Translation id="page-eth2-just-staking" />
-          </H2>
+          </h2>
           <p>
             <Translation id="page-eth2-staking-description" />{" "}
             <Link to="/eth2/beacon-chain/">
@@ -186,27 +191,25 @@ const StakingPage = ({ data, location }) => {
             </Link>
           </p>
           <CardContainer>
-            {paths.map((path, idx) => {
-              return (
-                <StyledCard
-                  key={idx}
-                  emoji={path.emoji}
-                  title={path.title}
-                  description={path.description}
-                >
-                  {path.url && <Link to={path.url}>{path.link}</Link>}
-                </StyledCard>
-              )
-            })}
+            {paths.map((path, idx) => (
+              <StyledCard
+                key={idx}
+                emoji={path.emoji}
+                title={path.title}
+                description={path.description}
+              >
+                {path.url && <Link to={path.url}>{path.link}</Link>}
+              </StyledCard>
+            ))}
           </CardContainer>
         </Vision>
       </Content>
       <Divider id="stake" />
       <Content>
         <StakeContainer>
-          <H2>
+          <h2>
             <Translation id="page-eth2-staking-how-to-stake" />
-          </H2>
+          </h2>
           <p>
             <Translation id="page-eth2-staking-how-to-stake-desc" />{" "}
           </p>
@@ -266,9 +269,9 @@ const StakingPage = ({ data, location }) => {
           )}
           {!isSoloStaking && (
             <GhostCard>
-              <h3>
+              <H3>
                 <Translation id="page-eth2-staking-pool" />
-              </h3>
+              </H3>
               <p>
                 <Translation id="page-eth2-staking-pool-desc" />
               </p>

@@ -77,29 +77,16 @@ const TableOfContentsLink = ({ depth, item }) => {
   )
 }
 
-const ItemsList = ({ items, depth, maxDepth }) => {
-  if (depth > maxDepth || !items) {
-    return null
-  }
-  return items.map((item, index) => {
-    if (item.items) {
-      return (
+const ItemsList = ({ items, depth, maxDepth }) =>
+  depth <= maxDepth && !!items
+    ? items.map((item, index) => (
         <ListItem key={index}>
           <div>
             <TableOfContentsLink depth={depth} item={item} />
           </div>
         </ListItem>
-      )
-    }
-    return (
-      <ListItem key={index}>
-        <div>
-          <TableOfContentsLink depth={depth} item={item} />
-        </div>
-      </ListItem>
-    )
-  })
-}
+      ))
+    : null
 
 const Eth2TableOfContents = ({ items, maxDepth, className }) => {
   if (!items) {

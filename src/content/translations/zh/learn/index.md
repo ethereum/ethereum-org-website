@@ -20,7 +20,7 @@ sidebar: true
 
 - [EthHub](https://docs.ethhub.io) _全面的以太坊知识库_
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _面向以太坊初学者的学习资源_
-- [Ethereum.wiki](https://ethereum.wiki) _以太坊社区成员编纂的技术百科_
+- [Ethereum.wiki](https://eth.wiki) _以太坊社区成员编纂的技术百科_
 - [Kauri](https://kauri.io) _以太坊技术文章、教程、相关项目_
 - [以太坊基金会 YouTube 频道](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _与以太坊相关的视频、演讲_
 - [以太坊周报](https://weekinethereumnews.com/) _包含过去一周以太坊生态中各个方面的重要进展_

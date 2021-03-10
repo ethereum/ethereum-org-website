@@ -29,7 +29,7 @@ This process may take anywhere from hours to days, and requires a few hundred GB
 
 ## Mainnet and Testnet {#mainnet-and-testnet}
 
-By default, Geth runs a mainnet node. You can run `geth --testnet` to run a Ropsten testnet full node. You can run a node on Rinkeby by swapping `testnet` for `rinkeby`.
+By default, Geth runs a mainnet node. You can run `geth --ropsten` to run a Ropsten testnet full node. You can run a node on Rinkeby by swapping `ropsten` for `rinkeby`.
 
 [Learn more about different networks](/developers/docs/networks/).
 
@@ -61,13 +61,13 @@ For a great explanation of the differences between the three syncmodes, see this
 We’ll run a light testnet node to familiarize ourselves with how to manage and interact with a node. To do so, simply run
 
 ```bash
-$ geth --testnet --syncmode "light"
+$ geth --ropsten --syncmode "light"
 ```
 
 Wait a few seconds, and hopefully you should get output that looks something like:
 
 ```bash
-$ geth --testnet --syncmode "light"
+$ geth --ropsten --syncmode "light"
 INFO [11-18|14:04:47] Maximum peer count                       ETH=0 LES=100 total=25
 INFO [11-18|14:04:47] Starting peer-to-peer node               instance=Geth/v1.8.11-stable/darwin-amd64/go1.10.3
 INFO [11-18|14:04:47] Allocated cache and file handles         database=/Users/bgu/Library/Ethereum/testnet/geth/lightchaindata cache=768 handles=128
@@ -162,6 +162,12 @@ eth.getBalance('0x85d918c2B7F172d033D190152AEc58709Fb6D048')
 
 ## Stopping and restarting your node {#stopping-and-restarting-your-node}
 
-You can stop your node at any time. If you want to restart the node, Geth will take a few seconds or minutes to re-synchronize (downloading the blocks and/or block headers from where it left off when the node last stopped running). If any of the above instructions aren’t working, the first thing you should do is try restarting your node.
+You can stop your node at any time by pressing `CTRL+C`. If you want to restart the node, Geth will take a few seconds or minutes to re-synchronize (downloading the blocks and/or block headers from where it left off when the node last stopped running). If any of the above instructions aren’t working, the first thing you should do is try restarting your node.
+
+```bash
+$ geth --ropsten --syncmode "light"
+```
+
+Replace 'ropsten' with other testnet names as needed, or use 'mainnet'.
 
 If you are interested in running an Ethereum full node, it is generally best to do so from a dedicated machine with good network connectivity, rather than from a personal computer. Here is a guide to running a node with AWS (this is a little outdated and the referenced AMIs are no longer recent or available, so you might have to do some Googling): [How to run a node on AWS](https://medium.com/mercuryprotocol/how-to-run-an-ethereum-node-on-aws-a8774ed3acf6)

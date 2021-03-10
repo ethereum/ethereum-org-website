@@ -21,7 +21,7 @@ sidebarDepth: 1
 
 - [EthHub](https://docs.ethhub.io) _イーサリアムのあらゆることを包括的に取り扱う知識ハブ_
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _初心者向けのイーサリアムに関する教育リソース_
-- [Ethereum.wiki](https://ethereum.wiki) _イーサリアムの技術に関するコミュニティ型 Wiki_
+- [Ethereum.wiki](https://eth.wiki) _イーサリアムの技術に関するコミュニティ型 Wiki_
 - [Kauri](https://kauri.io) _イーサリアムと関連プロジェクトに関する技術記事とチュートリアル_
 - [Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _イーサリアムに関するビデオとプレゼンテーション_
 - [Week in Ethereum News](https://weekinethereumnews.com/) _エコシステム全体の開発を取り扱うウィークリーニュースレター_

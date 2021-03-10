@@ -20,7 +20,7 @@ Bu sayfadaki bilgilere ek olarak, araştırılmaya değer birçok topluluk taraf
 
 - [EthHub](https://docs.ethhub.io) _Her şey için kapsamlı bilgi tabanı Ethereum_
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _Yeni başlayanlar için hedeflenen Ethereum hakkında bir eğitim kaynağı_
-- [Ethereum.wiki](https://ethereum.wiki) _Ethereum’un teknolojisi hakkında topluluk tarafından oluşturulmuş bir wiki_
+- [Ethereum.wiki](https://eth.wiki) _Ethereum’un teknolojisi hakkında topluluk tarafından oluşturulmuş bir wiki_
 - [Kauri](https://kauri.io)_Ethereum ve ilgili projeler için teknik makaleler ve öğretici bilgiler_
 - [Ethereum Foundation YouTube kanalı ](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Videolar ve Ethereum hakkında konuşuyor_
 - [Haftalık Ethereum hakkında yeni haberler](https://weekinethereumnews.com/) _ Ekosistemdeki önemli gelişmeleri içeren haftalık bir bülten_

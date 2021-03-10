@@ -33,7 +33,6 @@ import {
   Header2,
   Header3,
   Header4,
-  H5,
   ListItem,
   CardContainer,
 } from "../components/SharedStyledComponents"
@@ -104,7 +103,6 @@ const components = {
   h2: Header2,
   h3: Header3,
   h4: Header4,
-  h5: H5,
   p: Paragraph,
   li: ListItem,
   pre: Pre,

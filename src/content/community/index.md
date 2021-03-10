@@ -9,7 +9,7 @@ lang: en
 
 **Learn how to get involved in the Ethereum Community**
 
-The Ethereum community includes tens of thousands of developers, technologists, users, HODLers, and enthusiasts all over the world. There are many ways to get involved in the Ethereum community: you can attend an event, join a meetup group, contribute to a project, or participate in one of many online forums about Ethereum.
+The Ethereum community includes tens of thousands of developers, technologists, users, miners, HODLers, and enthusiasts all over the world. There are many ways to get involved in the Ethereum community: you can attend an event, join a meetup group, contribute to a project, or participate in one of many online forums about Ethereum.
 
 Want to contribute to Ethereum more directly? Check out [how to get involved](#how-can-i-get-involved) below for a list of ways that you can contribute based on your skills and professional background.
 
@@ -22,6 +22,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
   - [r/ethfinance](https://www.reddit.com/r/ethfinance/) - _the financial side of Ethereum, including DeFi_
   - [r/ethdev](https://www.reddit.com/r/ethdev/) - _focused on Ethereum development_
   - [r/ethtrader](https://www.reddit.com/r/ethtrader/) - _trends & market analysis_
+  - [r/EtherMining](https://www.reddit.com/r/EtherMining/) - _focused on securing the Ethereum Network (mining)_
   - [r/ethstaker](https://www.reddit.com/r/ethstaker/) - _welcome to all interested in staking on Ethereum_
   - [Fellowship of Ethereum Magicians](https://ethereum-magicians.org) - _community oriented around technical standards in Ethereum_
   - [Ethereum Stackexchange](https://ethereum.stackexchange.com) - _discussion and help for Ethereum developers_
@@ -39,8 +40,9 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 
 **Every month, there are major Ethereum events around the world.** Consider attending one near you to meet more people in the community, learn about employment opportunities, and develop new skills.
 
-- [MarketMake DeFi hackathon](https://marketmake.ethglobal.co/) – Virtual ETHGlobal hackathon (Jan 15 - Feb 7)
-- [EtherPunk](https://etherpunk.devfolio.co/) - Global online Ethereum hackathon (Jan 22 - Feb 21)
+- [Gitcoin Grants Funding Round](https://gitcoin.co/grants/) - Democratic public goods funding for the 21st century (Mar 10 - Mar 25)
+- [NFT Hack](https://nft.ethglobal.co/) – Virtual ETHGlobal hackathon (Mar 19 - Mar 21)
+- [Chainlink Hackathon Spring 2021](https://chain.link/hackathon) – Virtual Chainlink hackathon (Mar 15 - Apr 11)
 
 _Have an event to add to this list? [Add it](https://github.com/ethereum/ethereum-org-website#how-can-i-contribute)!_
 
@@ -56,7 +58,7 @@ This is a non-exhaustive list built by our community. Know of an active meetup g
 
 ## Decentralized Autonomous Organizations (DAOs) {#decentralized-autonomous-organizations-daos}
 
-"DAOs" are Decentralized Autonomous Organizations. These groups leverage Ethereum technology to facilitate organization and collaboration. For instance, for controlling membership, voting on proposals, or managing pooled assets. While DAOs are still experimental, they offer opportunities for you to find groups that you identify with, find collaborators, and grow your impact on the Ethereum community.
+"DAOs" are Decentralized Autonomous Organizations. These groups leverage Ethereum technology to facilitate organization and collaboration. For instance, for controlling membership, voting on proposals, or managing pooled assets. While DAOs are still experimental, they offer opportunities for you to find groups that you identify with, find collaborators, and grow your impact on the Ethereum community. [More on DAOs](/dao/)
 
 - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _Legal engineering_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Art community_
@@ -65,10 +67,11 @@ This is a non-exhaustive list built by our community. Know of an active meetup g
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _MMORPG Game Mechanics for Real Life_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _Digiphysical Apparel Brands_
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Community focused on funding Ethereum development_
-- [ΜΓΔ](https://daohaus.club/dao/v1/0x1b3d7efb93ec432b0d1d56880c23303979b379e9) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _Women-led projects_
-- [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Web3 devs_
+- [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _Women-led projects_
+- [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Collective of Web3 builders_
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - Promote the DAO concept in non-tech field and help people create value through DAO.
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - Freelancer Web3 development collective working as a DAO
+- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Community governance of DAOhaus_
 
 ## How can I get involved? {#how-can-i-get-involved}
 
@@ -125,5 +128,5 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
 
 - [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/)
 - [Crypto.jobs](https://crypto.jobs/)
-- [Careers at ConsenSys](https://careers.labs.consensys.net/)
+- [Careers at ConsenSys](https://consensys.net/careers/)
 - [Blocktribe](https://blocktribe.com/)

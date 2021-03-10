@@ -103,7 +103,7 @@ So you get reimbursed for proving fraud.
 | Pros                                                                                                             | Cons                                                                                                             |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | Anything you can do on Ethereum layer 1, you can do with Optimistic rollups as it's EVM and Solidity compatible. | Long wait times for on-chain transaction due to potential fraud challenges.                                      |
-| All transaction data is stored on the layer 1 chain, meaning it's secure and decentralized.                      | Potentially vulnerable to attacks if the value in an Optimistic rollup exceeds the amount in an operator's bond. |
+| All transaction data is stored on the layer 1 chain, meaning it's secure and decentralized.                      |  |
 
 #### Use Optimistic rollups {#use-optimistic-rollups}
 
@@ -161,8 +161,9 @@ There are two types of channels right now:
 #### Use State channels {#use-state-channels}
 
 - [Connext](https://connext.network/)
-- [Raiden](https://raiden.network/)
+- [Kchannels](https://www.kchannels.io/)
 - [Perun](https://perun.network/)
+- [Raiden](https://raiden.network/)
 - [Statechannels.org](https://statechannels.org/)
 
 ## Plasma {#plasma}
@@ -179,7 +180,7 @@ A plasma chain is a separate blockchain that is anchored to the main Ethereum ch
 ### Use Plasma {#use-plasma}
 
 - [OMG Network](https://omg.network/)
-- [Matic Network](https://matic.network/)
+- [Polygon](https://polygon.technology/)[previously Matic Network](https://matic.network/)
 - [Gluon](https://gluon.network/)
 - [Gazelle](https://gzle.io/)
 - [LeapDAO](https://ipfs.leapdao.org/)
@@ -227,7 +228,7 @@ Combine the best parts of multiple layer 2 technologies, and may offer configura
 ## Further reading {#further-reading}
 
 - [Validium And The Layer 2 Two-By-Two — Issue No. 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
-- [Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework](https://medium.com/matter-labs/evaluating-ethereum-layer 2-scaling-solutions-a-comparison-framework-b6b2f410f955)
+- [Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
 - [Adding Hybrid PoS-Rollup Sidechain to Celer’s Coherent Layer-2 Platform on Ethereum](https://medium.com/celer-network/adding-hybrid-pos-rollup-sidechain-to-celers-coherent-layer-2-platform-d1d3067fe593)
 - [Zero-Knowledge Blockchain Scalability](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 
@@ -248,7 +249,7 @@ Combine the best parts of multiple layer 2 technologies, and may offer configura
 
 **Optimistic rollups**
 
-- [EthHub on optimistic rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic-rollups/)
+- [EthHub on optimistic rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 
 **Sidechains**

@@ -76,6 +76,7 @@ const H1 = styled.h1`
   line-height: 110%;
   background: ${(props) => props.theme.colors.ednBackground};
   padding: 0.5rem;
+  margin-top: 0rem;
 `
 
 const Subtitle = styled.div`
@@ -263,18 +264,16 @@ const DevelopersPage = ({ data }) => {
           <Translation id="page-developers-get-started" />
         </MonoSubtitle>
         <StyledCardContainer>
-          {paths.map((path, idx) => {
-            return (
-              <StyledCard
-                key={idx}
-                emoji={path.emoji}
-                title={path.title}
-                description={path.description}
-              >
-                <ButtonLink to={path.url}>{path.button}</ButtonLink>
-              </StyledCard>
-            )
-          })}
+          {paths.map((path, idx) => (
+            <StyledCard
+              key={idx}
+              emoji={path.emoji}
+              title={path.title}
+              description={path.description}
+            >
+              <ButtonLink to={path.url}>{path.button}</ButtonLink>
+            </StyledCard>
+          ))}
         </StyledCardContainer>
         <TwoColumnContent>
           <IntroColumn>

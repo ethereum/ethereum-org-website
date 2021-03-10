@@ -11,12 +11,10 @@ const TableContainer = styled.div`
   }
 `
 
-const MarkdownTable = ({ children }) => {
-  return (
-    <TableContainer>
-      <table>{children}</table>
-    </TableContainer>
-  )
-}
+const MarkdownTable = ({ children }) => (
+  <TableContainer>
+    <table>{children}</table>
+  </TableContainer>
+)
 
 export default MarkdownTable

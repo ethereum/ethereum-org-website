@@ -19,7 +19,10 @@ const supportedLanguages = Object.keys(languageMetadata)
 for (const lang of supportedLanguages) {
   try {
     const currentTranslation = lang
-    const pathToProjectSrc = __dirname.split("/").slice(0, -1).join("/")
+    const pathToProjectSrc = __dirname
+      .split(process.platform === "win32" ? "\\" : "/")
+      .slice(0, -1)
+      .join("/")
     const pathToTranslations = path.join(
       pathToProjectSrc,
       "intl",

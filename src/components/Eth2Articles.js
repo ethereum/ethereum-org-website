@@ -82,19 +82,17 @@ const benArticles = [
   },
 ]
 
-const Eth2Articles = () => {
-  return (
-    <Container>
-      <LeftColumn>
-        <h4>Danny Ryan (Ethereum Foundation)</h4>
-        <CardList content={dannyArticles} />
-      </LeftColumn>
-      <RightColumn>
-        <h4>Ben Edgington (PegaSys, ConsenSys)</h4>
-        <CardList content={benArticles} />
-      </RightColumn>
-    </Container>
-  )
-}
+const Eth2Articles = () => (
+  <Container>
+    <LeftColumn>
+      <h4>Danny Ryan (Ethereum Foundation)</h4>
+      <CardList content={dannyArticles} />
+    </LeftColumn>
+    <RightColumn>
+      <h4>Ben Edgington (PegaSys, ConsenSys)</h4>
+      <CardList content={benArticles} />
+    </RightColumn>
+  </Container>
+)
 
 export default Eth2Articles

@@ -210,7 +210,7 @@ const GetETHPage = ({ data }) => {
     },
     {
       title: "Loopring",
-      link: "https://loopring.io/trade/ETH-USDT",
+      link: "https://exchange.loopring.io/",
       image: data.loopring.childImageSharp.fixed,
     },
     {
@@ -255,9 +255,9 @@ const GetETHPage = ({ data }) => {
           loading="eager"
         />
         <Header>
-          <Title>
+          <h1>
             <Translation id="page-get-eth-where-to-buy-title" />
-          </Title>
+          </h1>
           <Subtitle>
             <Translation id="page-get-eth-where-to-buy-desc" />
           </Subtitle>

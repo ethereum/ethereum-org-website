@@ -23,8 +23,6 @@ import { isLangRightToLeft } from "../utils/translations"
 import {
   Divider,
   Paragraph,
-  H4,
-  H5,
   Header1,
   Header2,
   Header3,
@@ -127,7 +125,7 @@ const H3 = styled(Header3)`
   }
 `
 
-const StyledH4 = styled(H4)`
+const StyledH4 = styled.h4`
   /* Anchor tag styles */
   a {
     position: relative;
@@ -161,7 +159,6 @@ const components = {
   h2: H2,
   h3: H3,
   h4: StyledH4,
-  h5: H5,
   p: Paragraph,
   li: ListItem,
   pre: Codeblock,

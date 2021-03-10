@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-## What is a smart contract?
+## What is a smart contract? {#what-is-a-smart-contract}
 
 A "smart contract" is simply a program that runs on the Ethereum blockchain. It's a collection of code (its functions) and data (its state) that resides at a specific address on the Ethereum blockchain.
 
@@ -20,7 +20,7 @@ Make sure you've read up on [accounts](/developers/docs/accounts/), [transaction
 
 ## A digital vending machine {#a-digital-vending-machine}
 
-Perhaps the best metaphor for a smart contract is a vending machine, as described by Nick Szabo. With the right inputs, a certain output is guaranteed.
+Perhaps the best metaphor for a smart contract is a vending machine, as described by [Nick Szabo](https://unenumerated.blogspot.com/). With the right inputs, a certain output is guaranteed.
 
 To get a snack from a vending machine:
 
@@ -30,7 +30,7 @@ money + snack selection = snack dispensed
 
 This logic is programmed into the vending machine.
 
-A smart contract, like a vending machine, has logic programmed into it. Here's a simple example of this vending machine might look like as a smart contract:
+A smart contract, like a vending machine, has logic programmed into it. Here's a simple example of how this vending machine might look like as a smart contract:
 
 ```solidity
 pragma solidity 0.6.11;
@@ -65,11 +65,11 @@ contract VendingMachine {
 }
 ```
 
-Like a vending machine removes the need for a vendor employee, smart contracts can replace intermediaries in many industries.
+Like how a vending machine removes the need for a vendor employee, smart contracts can replace intermediaries in many industries.
 
 ## Permissionless {#permissionless}
 
-Anyone can write a smart contract and deploy it to the network. You just need to learn how to code in a [smart contract language](/en/developers/docs/smart-contracts/languages/) and have enough ETH to deploy your contract. Deploying a smart contract is technically a transaction, so you need to pay your [Gas](/en/developers/docs/gas/) in the same way that you need to pay gas for a simple ETH transfer. Gas costs for contract deployment are far higher however.
+Anyone can write a smart contract and deploy it to the network. You just need to learn how to code in a [smart contract language](/en/developers/docs/smart-contracts/languages/), and have enough ETH to deploy your contract. Deploying a smart contract is technically a transaction, so you need to pay your [Gas](/en/developers/docs/gas/) in the same way that you need to pay gas for a simple ETH transfer. Gas costs for contract deployment are far higher, however.
 
 Ethereum has developer-friendly languages for writing smart contracts:
 
@@ -88,7 +88,7 @@ Learn more about [smart contract composability](/developers/docs/smart-contracts
 
 ## Limitations {#limitations}
 
-Smart contracts alone cannot get information about "real-world" events because they can't send HTTP requests. This is by design as relying on external information could jeopardise consensus, which is important for security and decentralization.
+Smart contracts alone cannot get information about "real-world" events because they can't send HTTP requests. This is by design. Relying on external information could jeopardise consensus, which is important for security and decentralization.
 
 There are ways to get around this using [oracles](/en/developers/docs/oracles/).
 

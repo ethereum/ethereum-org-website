@@ -1,12 +1,12 @@
 ---
-title: Learn about Ethereum
+title: Community guides and resources
 description: A set of technical and non-technical articles, guides, and resources to learn about Ethereum.
 lang: en
 sidebar: true
 sidebarDepth: 2
 ---
 
-# Learn about Ethereum {#learn-about-ethereum}
+# Community guides and resources {#learn-about-ethereum}
 
 **Welcome to ethereum.org/learn, a set of resources to help you learn more about Ethereum.** This page includes technical **and** non-technical articles, guides, and resources. If you’re totally new to Ethereum, [we suggest you start here](/en/what-is-ethereum/).
 
@@ -14,19 +14,19 @@ Here are some excellent starting points:
 
 - [Decentralizing Everything](https://www.youtube.com/watch?v=WSN5BaCzsbo&feature=youtu.be) _Sep 18, 2017 - Vitalik Buterin (Video)_
 - [Why Decentralization Matters](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e) _Feb 18, 2018 - Chris Dixon_
-- [The Year in Ethereum 2019](https://medium.com/@jjmstark/the-year-in-ethereum-2019-242012e4276d) _Jan 22, 2020 - Josh Stark & Evan Van Ness_
+- [The Year in Ethereum 2020](https://jjmstark.medium.com/the-year-in-ethereum-2020-98123e5f160dd) _Jan 20, 2021 - Josh Stark and Evan Van Ness_
 - [Ethereum is game-changing technology, literally](https://medium.com/@virgilgr/ethereum-is-game-changing-technology-literally-d67e01a01cf8) _Mar 29, 2019 - Virgil Griffith_
 
 In addition to the information on this page, there are many community-built resources worth exploring:
 
 - [EthHub](https://docs.ethhub.io) _Comprehensive knowledge base for all things Ethereum_
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _An educational resource about Ethereum targeted at beginners_
-- [Ethereum.wiki](https://ethereum.wiki) _A community-built wiki about Ethereum’s technology_
+- [Ethereum.wiki](https://eth.wiki) _A community-built wiki about Ethereum’s technology_
 - [Kauri](https://kauri.io) _Technical articles and tutorials for Ethereum and related projects_
 - [Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Videos and talks about Ethereum_
 - [Week in Ethereum News](https://weekinethereumnews.com/) _A weekly newsletter covering key developments across the ecosystem_
-- [What’s new in ETH 2.0](https://notes.ethereum.org/c/Sk8Zs--CQ) _A regular newsletter about ETH 2.0 development_
-- [ethresear.ch forum](https://ethresear.ch/) _Deeper technical discussions on Ethereum for ETH 2.0 and beyond_
+- [What’s new in ETH 2.0](https://eth2.news) _A regular newsletter about Eth2 development_
+- [ethresear.ch forum](https://ethresear.ch/) _Deeper technical discussions on Ethereum for Eth2 and beyond_
 - [ETHGlobal](https://ethglobal.co) _An Ethereum hackathon series - attend one near you!_
 
 ## How Ethereum works {#how-ethereum-works}

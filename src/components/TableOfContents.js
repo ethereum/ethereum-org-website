@@ -231,31 +231,22 @@ const ItemsList = ({ items, depth, maxDepth }) => {
   if (depth > maxDepth || !items) {
     return null
   }
-  return items.map((item, index) => {
-    if (item.items) {
-      return (
-        <ListItem key={index}>
-          <div>
-            <TableOfContentsLink depth={depth} item={item} />
-            <InnerList key={item.title}>
-              <ItemsList
-                items={item.items}
-                depth={depth + 1}
-                maxDepth={maxDepth}
-              />
-            </InnerList>
-          </div>
-        </ListItem>
-      )
-    }
-    return (
-      <ListItem key={index}>
-        <div>
-          <TableOfContentsLink depth={depth} item={item} />
-        </div>
-      </ListItem>
-    )
-  })
+  return items.map((item, index) => (
+    <ListItem key={index}>
+      <div>
+        <TableOfContentsLink depth={depth} item={item} />
+        {item.items && (
+          <InnerList key={item.title}>
+            <ItemsList
+              items={item.items}
+              depth={depth + 1}
+              maxDepth={maxDepth}
+            />
+          </InnerList>
+        )}
+      </div>
+    </ListItem>
+  ))
 }
 
 const TableOfContentsMobile = ({ items, maxDepth, className }) => {
