@@ -6,20 +6,23 @@ lang: en
 
 # Ethereum Grants {#ethereum-grants}
 
-**Find the right grant program for your project**
+The programs listed below offer a variety of funding grants for projects working to promote the success and growth of the Ethereum ecosystem. Use this as a guide to find and apply for funds to help make your next Ethereum project a success.
 
-This page listed the active grant programs throughout the Ethereum ecosystem:
+### Broader Ecosystem {#broader-ecosystem}
 
-- [EF Ecosystem Support Program](https://esp.ethereum.foundation)
-- [clr.fund](https://clr.fund/)
-- [Consensys](https://consensys.net/grants/)
-- [Gitcoin](https://gitcoin.co/grants)
-- [KERNEL (teams)](https://gitcoin.typeform.com/to/wgZn4U)
-- [KERNEL (individuals)](https://gitcoin.typeform.com/to/xBx2lL)
-- [Maker](https://grants.makerdao.com/)
-- [MetaCartel](https://www.metacartel.org/)
-- [Moloch DAO](https://www.molochdao.com/)
+- [EF Ecosystem Support Program](https://esp.ethereum.foundation) - _Rollups, community and education, tooling and testing, infrastructure, interoperability, standards and research, wallets, and more_
+- [Consensys](https://consensys.net/grants/) - _Infrastructure L1 and L2, education & technical knowledge, usability and dev tooling, social impact, security, and more_
+- [MetaCartel](https://www.metacartel.org/) - _Dapp development_
+- [Moloch DAO](https://www.molochdao.com/) - _Privacy, layer 2 scaling, client security, and more_
 - [Open Grants](https://opengrants.com/explore)
+
+### Project Oriented {#project-oriented}
+
+- [Maker](https://grants.makerdao.com/) - _Risk, governance, core development, ecosystem, tools, MarerDAO community, security_
 - [TheGraph](https://airtable.com/shreX09LazIhsg0bU)
-- [UNICEF CryptoFund](https://cryptofund.unicef.io/about)
 - [Uniswap](https://airtable.com/shrEXXxXB1humz7VS)
+
+### Quadratic Funding {#quadratic-funding}
+
+- [Gitcoin](https://gitcoin.co/grants)
+- [clr.fund](https://clr.fund/)
