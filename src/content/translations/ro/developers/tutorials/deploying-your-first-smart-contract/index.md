@@ -27,7 +27,7 @@ Nu-ți face griji, deoarece este primul nostru contract inteligent, îl vom impl
 
 Primul pas este să vizitezi [Remix](https://remix.ethereum.org/) și să creezi un fișier nou. În partea din stânga de sus a interfeței Remix, adaugă un nou fișier și introdu numele fișierului dorit.
 
-![Adăugarea unui fișier nou în interfața Remix](./remix.png)
+![Adăugarea unui fișier nou în interfața Remix](../../../../../developers/tutorials/deploying-your-first-smart-contract/remix.png)
 
 În noul fișier, vom lipi următorul cod.
 
@@ -69,34 +69,34 @@ După ce am scris primul nostru contract inteligent, îl implementăm în blockc
 
 Mai întâi vom [compila contractul](/developers/docs/smart-contracts/compiling/) făcând clic pe pictograma compilare din partea stângă:
 
-![Pictograma de compilare din bara de instrumente Remix](./remix-compile-button.png)
+![Pictograma de compilare din bara de instrumente Remix](../../../../../developers/tutorials/deploying-your-first-smart-contract/remix-compile-button.png)
 
 Apoi facem clic pe butonul compilare:
 
-![Butonul de compilare din compilatorul Remix solidity](./remix-compile.png)
+![Butonul de compilare din compilatorul Remix solidity](../../../../../developers/tutorials/deploying-your-first-smart-contract/remix-compile.png)
 
 Poți alege opțiunea „Compilare automată”, astfel încât contractul să fie întotdeauna compilat când salvezi conținutul pe editorul de text.
 
 Apoi navighează la „deploy” și rulează ecranul de tranzacții:
 
-![Pictograma de implementare din bara de instrumente Remix](./remix-deploy.png)
+![Pictograma de implementare din bara de instrumente Remix](../../../../../developers/tutorials/deploying-your-first-smart-contract/remix-deploy.png)
 
 Odată ce te afli în ecranul de tranzacții „implementare și executare”, verifică din nou dacă numele contractului tău apare și fă clic pe „Deploy”. După cum poți vedea în partea de sus a paginii, mediul actual este „JavaScript VM”, ceea ce înseamnă că vom implementa și interacționa cu contractul nostru inteligent pe un blockchain de test local pentru a putea testa mai rapid și fără taxe.
 
-![Butonul de implementare din compilatorul Remix solidity](./remix-deploy.png)
+![Butonul de implementare din compilatorul Remix solidity](../../../../../developers/tutorials/deploying-your-first-smart-contract/remix-deploy.png)
 
 După ce ai făcut clic pe butonul „Deploy”, vei vedea contractul tău în partea de jos. Fă clic pe săgeata din stânga pentru a o extinde, astfel încât să vedem conținutul contractului nostru. Aceasta este variabila `counter`, funcția noastră `increment()` și getter-ul `getCounter()`.
 
 Dacă faci clic pe butonul `count` sau `getCount`, acesta va prelua conținutul variabilei `count` a contractului și o va afișa. Deoarece nu am apelat încă funcția `increment`, ar trebui să afișeze 0.
 
-![Butonul funcție din compilatorul Remix solidity](./remix-function-button.png)
+![Butonul funcție din compilatorul Remix solidity](../../../../../developers/tutorials/deploying-your-first-smart-contract/remix-function-button.png)
 
 Să apelăm acum funcția `increment` făcând clic pe buton. Vei vedea jurnalele tranzacțiilor efectuate care apar în partea de jos a ferestrei. Vei vedea că jurnalele sunt diferite atunci când apeși butonul pentru a prelua datele în loc de butonul `increment`. Acest lucru se datorează faptului că citirea datelor pe blockchain nu are nevoie de tranzacții (scriere) sau taxe. Deoarece doar modificarea stării blockchain-ului necesită efectuarea unei tranzacții:
 
-![Un jurnal al tranzacțiilor](./transaction-log.png)
+![Un jurnal al tranzacțiilor](../../../../../developers/tutorials/deploying-your-first-smart-contract/transaction-log.png)
 
 După apăsarea butonului de incrementare, care va genera o tranzacție pentru a apela funcția noastră `increment()`, dacă facem clic din nou pe butoanele count sau getCount, vom citi noua stare actualizată a contractului nostru inteligent, cu variabila count mai mare de 0.
 
-![Starea nouă actualizată a contractului inteligent](./updated-state.png)
+![Starea nouă actualizată a contractului inteligent](../../../../../developers/tutorials/deploying-your-first-smart-contract/updated-state.png)
 
 În tutorialul următor, vom acoperi [cum poți adăuga evenimente la contractele tale inteligente](/developers/tutorials/logging-events-smart-contracts/). Înregistrarea evenimentelor este o modalitate convenabilă de a depana contractul inteligent și de a înțelege ce se întâmplă în timp ce apelezi o funcție.

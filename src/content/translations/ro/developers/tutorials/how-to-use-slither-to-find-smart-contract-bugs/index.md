@@ -106,7 +106,7 @@ function safeAdd(uint a, uint b) pure internal returns(uint){
 
 AST-ul corespunzător este indicat în:
 
-![AST](./ast.png)
+![AST](../../../../../developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/ast.png)
 
 Slither utilizează AST-ul exportat de solc.
 
@@ -135,7 +135,7 @@ print(f'Expresia {expression} are o adunare: {visitor.result()}')
 
 Cea de-a doua reprezentare a codurilor este graficul fluxului de control (CFG). După cum sugerează și numele, este o reprezentare pe bază de grafic care expune toate căile de execuție. Fiecare nod conține una sau mai multe instrucțiuni. Marginile din grafic reprezintă operațiunile fluxului de control (dacă/atunci/altfel, buclă etc.). CFG-ul exemplului nostru anterior este:
 
-![CFG](./cfg.png)
+![CFG](../../../../../developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/cfg.png)
 
 CFG este reprezentarea pe baza căreia sunt construite cele mai multe analize.
 
@@ -239,7 +239,3 @@ Un obiect `Function` sau un obiect `Modifier` are:
 - `variables_written (list(Variable))`: Lista variabilelor scrise
 - `state_variables_read (list(StateVariable))`: Lista variabilelor de stare citite (subset de variabile`read)
 - `state_variables_written (list(StateVariable))`: Lista variabilelor de stare scrise (subset de variabile`scris)
-
-### Exemplu: Imprimare de informații de bază {#example-print-basic-information}
-
-[print_basic_information.py](./exemple/print_basic_information.py) arată cum să tipărești informații de bază despre un proiect.

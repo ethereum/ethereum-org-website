@@ -56,6 +56,6 @@ Observă că:
 
 Dacă implementăm acum contractul și apelăm funcția increment, vom vedea că Remix îl va afișa automat când faci clic pe noua tranzacție din interiorul unei matrice numite „logs".
 
-![Captură ecran Remix](./remix-screenshot.png)
+![Captură ecran Remix](../../../../../developers/tutorials/logging-events-smart-contracts/remix-screenshot.png)
 
 Jurnalele sunt foarte utile pentru depanarea contractelor inteligente, dar sunt, de asemenea, importante atunci când construiești aplicații utilizate de diferite persoane și faci mai ușoară analiza pentru a urmări și a înțelege modul în care este utilizat contractul inteligent. Jurnalele generate de tranzacții sunt afișate în exploratoarele de bloc populare și, de asemenea, le poți utiliza, de exemplu, pentru a crea scripturi off-chain pentru a asculta evenimente specifice și de a lua măsuri atunci când acestea apar.

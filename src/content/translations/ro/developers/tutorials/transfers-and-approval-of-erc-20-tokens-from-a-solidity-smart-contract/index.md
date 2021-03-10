@@ -169,7 +169,7 @@ function buy() payable public {
 
 În cazul în care cumpărarea are succes, ar trebui să vedem două evenimente în tranzacție: `Transfer`-ul de token și evenimentul `Bought`.
 
-![Două evenimente în tranzacție: „Transfer” și „Bought”](./transfer-and-bought-events.png)
+![Două evenimente în tranzacție: „Transfer” și „Bought”](../../../../../developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/transfer-and-bought-events.png)
 
 ## Funcția de vânzare {#the-sell-function}
 
@@ -188,7 +188,7 @@ function sell(uint256 amount) public {
 
 Dacă totul merge bine ar trebui să ai 2 evenimente (un `„Transfer”` și un `„Sold”`) în tranzacție și soldul tokenului și al Ethereum actualizate.
 
-![Două evenimente în tranzacție: „Transfer” și „Sold”](./transfer-and-bought-events.png)
+![Două evenimente în tranzacție: „Transfer” și „Sold”](../../../../../developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/transfer-and-bought-events.png)
 
 <Divider />
 
