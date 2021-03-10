@@ -228,6 +228,10 @@ const Footer = () => {
           text: "ef-blog",
         },
         {
+          to: "https://esp.ethereum.foundation",
+          text: "esp",
+        },
+        {
           to: "/community/grants",
           text: "grant-programs",
         },
