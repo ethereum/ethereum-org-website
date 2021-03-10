@@ -19,7 +19,7 @@ Analogia unui „registru distribuit” este adesea folosită pentru a descrie u
 
 În timp ce Ethereum are propria criptomonedă nativă (Ether) care urmează aproape exact aceleași reguli intuitive, permite, de asemenea, o funcție mult mai puternică: [contracte inteligente](/en/developers/docs/smart-contracts/). Pentru această caracteristică mai complexă, este necesară o analogie mai sofisticată. În loc de un registru distribuit, Ethereum este o [mașină de stare](https://en.wikipedia.org/wiki/Finite-state_machine) distribuită. Starea Ethereum este o structură mare de date care deține nu numai toate conturile și soldurile, ci și o _mașină de stare_, care se poate schimba din bloc în bloc în conformitate cu un set predefinit de reguli și care poate executa aleatoriu codul mașinii. Regulile specifice de schimbare a stării de la bloc la bloc sunt definite de EVM.
 
-![O diagramă care prezintă alcătuirea EVM](./evm.png) _Diagramă adaptată după [Ethereum EVM ilustrat](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![O diagramă care prezintă alcătuirea EVM](../../../../../developers/docs/evm/evm.png) _Diagramă adaptată după [Ethereum EVM ilustrat](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Funcția de tranziție a stării Ethereum {#the-ethereum-state-transition-function}
 
@@ -51,7 +51,7 @@ Contractele, cu toate acestea, conțin un _spațiu de stocare_ Merkle Patricia t
 
 Bytecode-ul compilat al contractului inteligent se execută ca un număr de [opcoduri](https://www.ethervm.io/) EVM, care efectuează operațiuni de stivă standard cum ar fi `XOR`, `AND`, `ADD`, `SUB` etc. EVM implementează, de asemenea, o serie de operațiuni de stivă specifice blockchain, cum ar fi `ADDRESS`, `BALANCE`, `SHA3`, `BLOCKHASH` etc.
 
-![O diagramă care arată unde este necesar gaz pentru operațiunile EVM](../gas/gas.png) _Diagrame adaptate din[ Ethereum EVM ilustrat](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![O diagramă care arată unde este necesar gaz pentru operațiunile EVM](../../../../../developers/docs/gas/gas.png) _Diagrame adaptate din[ Ethereum EVM ilustrat](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 <!-- TODO add full list from  https://eth.wiki/concepts/evm/implementations -->
 

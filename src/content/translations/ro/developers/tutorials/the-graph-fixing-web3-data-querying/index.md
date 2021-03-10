@@ -74,7 +74,7 @@ GameContract.events.BetPlaced({
 
 Acum, acest lucru este încă destul de bun pentru exemplul nostru simplu. Dar să presupunem că vrem să afișăm numai câte pariuri a pierdut/câștigat doar jucătorul actual. Ei bine, nu avem noroc, ar fi bine să implementezi un nou contract care stochează valorile respective și să le afișeze. Și acum să ne imaginăm un contract inteligent și o aplicație dapp mult mai complicate, lucrurile pot deveni repede foarte confuze.
 
-![Nu faci interogări pur și simplu](./one-does-not-simply-query.jpg)
+![Nu faci interogări pur și simplu](../../../../../developers/tutorials/the-graph-fixing-web3-data-querying/one-does-not-simply-query.jpg)
 
 Putem vedea de ce acest lucru nu este optim:
 
@@ -82,7 +82,7 @@ Putem vedea de ce acest lucru nu este optim:
 - Costuri suplimentare de gaz pentru stocarea acestor valori.
 - Necesită un alt apel pentru a prelua datele pentru un nod Ethereum.
 
-![Asta nu e suficient de bine](./not-good-enough.jpg)
+![Asta nu e suficient de bine](../../../../../developers/tutorials/the-graph-fixing-web3-data-querying/not-good-enough.jpg)
 
 Acum să analizăm o soluție mai bună.
 
@@ -90,7 +90,7 @@ Acum să analizăm o soluție mai bună.
 
 În primul rând, să vorbim despre GraphQL, inițial proiectat și implementat de Facebook. Este posibil să fii familiarizat cu modelul tradițional API Rest. Acum imaginează-ți că ai putea scrie o interogare pentru exact datele pe care le-ai dorit:
 
-![GraphQL API față de REST API](./graphql.jpg)
+![GraphQL API față de REST API](../../../../../developers/tutorials/the-graph-fixing-web3-data-querying/graphql.jpg)
 
 <!-- TODO gif embed not working: -->
 <!-- Need additional plugin? https://github.com/gatsbyjs/gatsby/issues/7317#issuecomment-412984851 -->
@@ -104,7 +104,7 @@ Acum, cu aceste cunoștințe, să sărim în cele din urmă în spațiul blockch
 
 Un blockchain este o bază de date descentralizată, dar spre deosebire de ceea ce se întâmplă de obicei, nu avem un limbaj de interogare pentru această bază de date. Soluțiile pentru obținerea datelor sunt dureroase sau complet imposibile. „The Graph” este un protocol descentralizat pentru indexarea și interogarea datelor blockchain. Și s-ar putea să fi ghicit, se utilizează GraphQL ca limbaj de interogare.
 
-![The Graph](./thegraph.png)
+![The Graph](../../../../../developers/tutorials/the-graph-fixing-web3-data-querying/thegraph.png)
 
 Exemplele sunt cele mai bune ca să înțelegem ceva, așa că hai să folosim „The Graph” pentru exemplul nostru „GameContract”
 
@@ -290,7 +290,7 @@ React.useEffect(() => {
 }, [loading, error, data])
 ```
 
-![Magic](./magic.jpg)
+![Magic](../../../../../developers/tutorials/the-graph-fixing-web3-data-querying/magic.jpg)
 
 Dar ne lipsește o ultimă piesă din puzzle și acesta este serverul. Îl poți rula singur sau poți utiliza serviciul găzduit.
 
@@ -300,7 +300,7 @@ Dar ne lipsește o ultimă piesă din puzzle și acesta este serverul. Îl poți
 
 Cel mai simplu mod de a utiliza serviciul găzduit. Urmează instrucțiunile [aici](https://thegraph.com/docs/deploy-a-subgraph) pentru a implementa un subgraph. Pentru multe proiecte, poți găsi de fapt, „subgraph”-uri deja realizate în explorer la https://thegraph.com/explorer/.
 
-![Exploratorul - The Graph](./thegraph-explorer.png)
+![Exploratorul - The Graph](../../../../../developers/tutorials/the-graph-fixing-web3-data-querying/thegraph-explorer.png)
 
 ### Rularea propriului tău nod {#running-your-own-node}
 
