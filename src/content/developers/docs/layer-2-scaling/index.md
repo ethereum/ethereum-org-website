@@ -59,11 +59,11 @@ There are two types of rollups with different security models:
 
 ### Zero knowledge rollups {#zk-rollups}
 
-Zero knowledge rollups, also known as ZK-Rollups, bundle or "roll up" hundreds of transaction executions off-chain and generates a cryptographic proof, known as a SNARK (succinct non-interactive argument of knowledge). This is known as a validity proof and is posted on layer 1 (along with all transaction data).
+Zero knowledge rollups, also known as ZK rollups, bundle or "roll up" hundreds of transaction executions off-chain and generates a cryptographic proof, known as a SNARK (succinct non-interactive argument of knowledge). This is known as a validity proof and is posted on layer 1 (along with all transaction data).
 
-With the transaction data and validity proof, the zk-rollup contract can verify that all transactions were included and executed correctly.
+With the transaction data and validity proof, the ZK rollup contract can verify that all transactions were included and executed correctly.
 
-With a ZK rollup, validating a block is quicker and cheaper because less data is included. You don't need all the transaction data to verify the transaction, just the proof.
+With a ZK rollup, there are no delays when moving funds from layer 2 to layer 1 because a validity proof accepted by the ZK rollup contract has already verified the funds.
 
 The sidechain where ZK rollups happen can be optimised to reduce transaction size further. For instance, an account is represented by an index rather than an address, which reduces a transaction from 32 bytes to just 4 bytes. Transactions are also written to Ethereum as calldata, reducing gas.
 
