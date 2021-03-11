@@ -1,138 +1,172 @@
 {
   "en": {
     "version": 2.4,
-    "language": "English"
+    "language": "English",
+    "hasTutorials": true
   },
   "ar": {
     "version": 1.1,
-    "language": "العربية"
+    "language": "العربية",
+    "hasTutorials": false
   },
   "bn": {
     "version": 1.1,
-    "language": "বাংলা"
+    "language": "বাংলা",
+    "hasTutorials": false
   },
   "cs": {
     "version": 1.1,
-    "language": "čeština"
+    "language": "čeština",
+    "hasTutorials": false
   },
   "de": {
     "version": 1.1,
-    "language": "Deutsch"
+    "language": "Deutsch",
+    "hasTutorials": false
   },
   "el": {
     "version": 1.0,
-    "language": "Ελληνικά"
+    "language": "Ελληνικά",
+    "hasTutorials": false
   },
   "es": {
     "version": 2.0,
-    "language": "Español"
+    "language": "Español",
+    "hasTutorials": false
   },
   "fa": {
     "version": 1.0,
-    "language": "فارسی"
+    "language": "فارسی",
+    "hasTutorials": false
   },
   "fi": {
     "version": 1.1,
-    "language": "Suomi"
+    "language": "Suomi",
+    "hasTutorials": false
   },
   "fr": {
     "version": 1.1,
-    "language": "Français"
+    "language": "Français",
+    "hasTutorials": false
   },
   "hi": {
     "version": 2.0,
-    "language": "हिन्दी"
+    "language": "हिन्दी",
+    "hasTutorials": false
   },
   "hu": {
     "version": 1.1,
-    "language": "Magyar"
+    "language": "Magyar",
+    "hasTutorials": false
   },
   "id": {
     "version": 1.1,
-    "language": "Bahasa Indonesia"
+    "language": "Bahasa Indonesia",
+    "hasTutorials": false
   },
   "ig": {
     "version": 1.0,
-    "language": "Ibo"
+    "language": "Ibo",
+    "hasTutorials": false
   },
   "it": {
     "version": 1.1,
-    "language": "Italiano"
+    "language": "Italiano",
+    "hasTutorials": false
   },
   "ja": {
     "version": 1.1,
-    "language": "日本語"
+    "language": "日本語",
+    "hasTutorials": false
   },
   "ko": {
     "version": 1.1,
-    "language": "한국어"
+    "language": "한국어",
+    "hasTutorials": false
   },
   "lt": {
     "version": 1.1,
-    "language": "Lietuvis"
+    "language": "Lietuvis",
+    "hasTutorials": false
   },
   "ml": {
     "version": 1.1,
-    "language": "മലയാളം"
+    "language": "മലയാളം",
+    "hasTutorials": false
   },
   "nl": {
     "version": 1.0,
-    "language": "Nederlands"
+    "language": "Nederlands",
+    "hasTutorials": false
   },
   "nb": {
     "version": 1.1,
-    "language": "norsk"
+    "language": "norsk",
+    "hasTutorials": false
   },
   "pl": {
     "version": 1.0,
-    "language": "Polski"
+    "language": "Polski",
+    "hasTutorials": false
   },
   "pt": {
     "version": 1.0,
-    "language": "Português"
+    "language": "Português",
+    "hasTutorials": false
   },
   "pt-br": {
     "version": 1.1,
-    "language": "Português"
+    "language": "Português",
+    "hasTutorials": false
   },
   "ro": {
     "version": 2.2,
-    "language": "Română"
+    "language": "Română",
+    "hasTutorials": true
   },
   "ru": {
     "version": 1.0,
-    "language": "Pусский"
+    "language": "Pусский",
+    "hasTutorials": false
   },
   "se": {
     "version": 1.1,
-    "language": "Svenska"
+    "language": "Svenska",
+    "hasTutorials": false
   },
   "sk": {
     "version": 1.1,
-    "language": "Slovenský"
+    "language": "Slovenský",
+    "hasTutorials": false
   },
   "sl": {
     "version": 1.0,
-    "language": "Slovenija"
+    "language": "Slovenija",
+    "hasTutorials": false
   },
   "tr": {
     "version": 1.1,
-    "language": "Türkçe"
+    "language": "Türkçe",
+    "hasTutorials": false
   },
   "uk": {
     "version": 1.1,
-    "language": "Українська"
+    "language": "Українська",
+    "hasTutorials": false
   },
   "vi": {
     "version": 1.1,
-    "language": "Tiếng Việt"
+    "language": "Tiếng Việt",
+    "hasTutorials": false
   },
   "zh": {
     "version": 1.1,
-    "language": "简体中文"
+    "language": "简体中文",
+    "hasTutorials": false
   },
   "zh-tw": {
     "version": 1.1,
-    "language": "繁體中文"
+    "language": "繁體中文",
+    "hasTutorials": false
   }
 }

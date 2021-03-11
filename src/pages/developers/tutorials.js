@@ -17,6 +17,7 @@ import Emoji from "../../components/Emoji"
 import { Page, ButtonSecondary } from "../../components/SharedStyledComponents"
 
 import { getLocaleTimestamp, INVALID_DATETIME } from "../../utils/time"
+import { hasTutorials } from "../../utils/translations"
 
 const SubSlogan = styled.p`
   font-size: 20px;
@@ -201,7 +202,11 @@ const TutorialsPage = ({ data, pageContext }) => {
   console.log({ pageContext })
   // Filter tutorials by language and map to object
   const allTutorials = data.allTutorials.nodes
-    .filter((tutorial) => tutorial.frontmatter.lang === pageContext.language)
+    .filter((tutorial) =>
+      hasTutorials(pageContext.language)
+        ? tutorial.frontmatter.lang === pageContext.language
+        : tutorial.frontmatter.lang === "en"
+    )
     .map((tutorial) => ({
       to:
         tutorial.fields.slug.substr(0, 3) === "/en"
