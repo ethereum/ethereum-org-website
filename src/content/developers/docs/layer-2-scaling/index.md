@@ -36,13 +36,15 @@ A specific Layer 2 instance may be open and shared by many applications, or may 
 
 ## Rollups {#rollups}
 
-Rollups are solutions that bundle or "roll up" sidechain transactions into a single transaction and generate a cryptographic proof, known as a SNARK (succinct non-interactive argument of knowledge). Only this proof is submitted to the main chain.
+Rollups are solutions that perform transaction _execution_ outside layer 1, but post transaction _data_ on layer 1. As transaction _data_ is on layer 1, this allows rollups to be secured by layer 1. Inheriting the security properties of the main Ethereum chain (layer 1), while performing execution outside of layer 1, is a defining characteristic of rollups.
 
-_Sidechains are Ethereum-compatible, independent blockchains._
+The 3 simplified properties of rollups are:
 
-In other words, rollups mean that all state and execution is handled in sidechains – signature verification, contract execution, etc. The main Ethereum chain (layer 1) only stores transaction data.
+1. transaction _execution_ outside layer 1
+2. transaction _data_ is on layer 1
+3. a rollup smart contract in layer 1 that can enforce correct transaction execution by using the transaction data on layer 1
 
-Rollup solutions require relayers who have staked a bond in the rollup contract. This incentivises them to relay rollups accurately.
+Rollups require operators to stake a bond in the rollup contract. This incentivises operators to verify and execute transactions correctly.
 
 **Useful for:**
 
