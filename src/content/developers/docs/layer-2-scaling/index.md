@@ -38,7 +38,7 @@ A specific Layer 2 instance may be open and shared by many applications, or may 
 
 Rollups are solutions that perform transaction _execution_ outside layer 1, but post transaction _data_ on layer 1. As transaction _data_ is on layer 1, this allows rollups to be secured by layer 1. Inheriting the security properties of the main Ethereum chain (layer 1), while performing execution outside of layer 1, is a defining characteristic of rollups.
 
-The 3 simplified properties of rollups are:
+Three simplified properties of rollups are:
 
 1. transaction _execution_ outside layer 1
 2. transaction _data_ is on layer 1
