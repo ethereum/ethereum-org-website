@@ -189,8 +189,10 @@ const ModalTitle = styled.h2`
 const TutorialsPage = ({ data }) => {
   const intl = useIntl()
 
-  const allTutorials = data.allTutorials.nodes.map((tutorial) => {
-    return {
+  // Filter tutorials by language and map to object
+  const allTutorials = data.allTutorials.nodes
+    .filter((tutorial) => tutorial.frontmatter.lang === intl.locale)
+    .map((tutorial) => ({
       to:
         tutorial.fields.slug.substr(0, 3) === "/en"
           ? tutorial.fields.slug.substr(3)
@@ -202,9 +204,14 @@ const TutorialsPage = ({ data }) => {
       skill: tutorial.frontmatter.skill,
       timeToRead: tutorial.timeToRead,
       published: tutorial.frontmatter.published,
-    }
-  })
-  const allTags = data.allTags.group
+    }))
+
+  // Tally all subject tag counts
+  const tagsConcatenated = []
+  for (const tutorial of allTutorials) {
+    tagsConcatenated.push(...tutorial.tags)
+  }
+  const allTags = tagsConcatenated.map((tag) => ({ name: tag, totalCount: 1 }))
   const sanitizedAllTags = Array.from(
     allTags.reduce(
       (m, { name, totalCount }) =>
@@ -412,14 +419,9 @@ export const query = graphql`
           author
           skill
           published
+          lang
         }
         timeToRead
-      }
-    }
-    allTags: allMdx {
-      group(field: frontmatter___tags) {
-        name: fieldValue
-        totalCount
       }
     }
   }
