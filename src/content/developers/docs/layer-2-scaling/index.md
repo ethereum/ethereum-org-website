@@ -36,13 +36,15 @@ A specific Layer 2 instance may be open and shared by many applications, or may 
 
 ## Rollups {#rollups}
 
-Rollups are solutions that bundle or "roll up" sidechain transactions into a single transaction and generate a cryptographic proof, known as a SNARK (succinct non-interactive argument of knowledge). Only this proof is submitted to the main chain.
+Rollups are solutions that perform transaction _execution_ outside layer 1, but post transaction _data_ on layer 1. As transaction _data_ is on layer 1, this allows rollups to be secured by layer 1. Inheriting the security properties of the main Ethereum chain (layer 1), while performing execution outside of layer 1, is a defining characteristic of rollups.
 
-_Sidechains are Ethereum-compatible, independent blockchains._
+Three simplified properties of rollups are:
 
-In other words, rollups mean that all state and execution is handled in sidechains – signature verification, contract execution, etc. The main Ethereum chain (layer 1) only stores transaction data.
+1. transaction _execution_ outside layer 1
+2. transaction _data_ is on layer 1
+3. a rollup smart contract in layer 1 that can enforce correct transaction execution by using the transaction data on layer 1
 
-Rollup solutions require relayers who have staked a bond in the rollup contract. This incentivises them to relay rollups accurately.
+Rollups require operators to stake a bond in the rollup contract. This incentivises operators to verify and execute transactions correctly.
 
 **Useful for:**
 
@@ -57,7 +59,9 @@ There are two types of rollups with different security models:
 
 ### Zero knowledge rollups {#zk-rollups}
 
-Zero knowledge rollups, also known as ZK-Rollups, bundle hundreds of transfers off-chain into a single transaction via a smart contract. From the data submitted, the smart contract can verify all of the transfers that are included. This is known as a validity proof.
+Zero knowledge rollups, also known as ZK-Rollups, bundle or "roll up" hundreds of transaction executions off-chain and generates a cryptographic proof, known as a SNARK (succinct non-interactive argument of knowledge). This is known as a validity proof and is posted on layer 1 (along with all transaction data).
+
+With the transaction data and validity proof, the zk-rollup contract can verify that all transactions were included and executed correctly.
 
 With a ZK rollup, validating a block is quicker and cheaper because less data is included. You don't need all the transaction data to verify the transaction, just the proof.
 
