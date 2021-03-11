@@ -41,7 +41,7 @@ Rollups are solutions that perform transaction _execution_ outside layer 1, but 
 Three simplified properties of rollups are:
 
 1. transaction _execution_ outside layer 1
-2. transaction _data_ is on layer 1
+2. data or proof of transactions is on layer 1
 3. a rollup smart contract in layer 1 that can enforce correct transaction execution by using the transaction data on layer 1
 
 Rollups require operators to stake a bond in the rollup contract. This incentivises operators to verify and execute transactions correctly.
@@ -59,9 +59,9 @@ There are two types of rollups with different security models:
 
 ### Zero knowledge rollups {#zk-rollups}
 
-Zero knowledge rollups, also known as ZK rollups, bundle or "roll up" hundreds of transaction executions off-chain and generates a cryptographic proof, known as a SNARK (succinct non-interactive argument of knowledge). This is known as a validity proof and is posted on layer 1 (along with all transaction data).
+Zero knowledge rollups, also known as ZK rollups, bundle or "roll up" hundreds of transfers off-chain and generates a cryptographic proof, known as a SNARK (succinct non-interactive argument of knowledge). This is known as a validity proof and is posted on layer 1.
 
-With the transaction data and validity proof, the ZK rollup contract can verify that all transactions were included and executed correctly.
+The ZK rollup contract maintains the state of all transfers on layer 2, and this state can only be updated with a validity proof. This means that ZK rollups only need the validity proof, instead of all transaction data.  With a ZK rollup, validating a block is quicker and cheaper because less data is included.
 
 With a ZK rollup, there are no delays when moving funds from layer 2 to layer 1 because a validity proof accepted by the ZK rollup contract has already verified the funds.
 
