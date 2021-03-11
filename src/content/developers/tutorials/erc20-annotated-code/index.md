@@ -470,7 +470,7 @@ strings, can be stored in three locations:
 |           | Lifetime      | Contract Access | Gas Cost |
 | --------- | ------------- | --------------- | -------- |
 | Memory    | Function call | Read/Write      | Tens or hundreds (higher for higher locations) |
-| Calldata  | Function call | Read Only       | Irrelevant, can only be used for input to the contract | 
+| Calldata  | Function call | Read Only       | Can't be used as a return type, only a function parameter type | 
 | Storage   | Until changed | Read/Write      | High (800 for read, 20k for write)             |
 
 In this case, `memory` is the best choice.
