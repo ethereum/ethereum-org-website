@@ -3096,6 +3096,16 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "intelliot",
+      "name": "Elliot Lee",
+      "avatar_url": "https://avatars.githubusercontent.com/u/81505?v=4",
+      "profile": "https://twitter.com/intelliot",
+      "contributions": [
+        "content",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
