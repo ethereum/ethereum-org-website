@@ -16,7 +16,7 @@ import TutorialTags from "../../components/TutorialTags"
 import Emoji from "../../components/Emoji"
 import { Page, ButtonSecondary } from "../../components/SharedStyledComponents"
 
-import { getLocaleTimestamp } from "../../utils/time"
+import { getLocaleTimestamp, INVALID_DATETIME } from "../../utils/time"
 
 const SubSlogan = styled.p`
   font-size: 20px;
@@ -186,12 +186,22 @@ const ModalTitle = styled.h2`
   margin-bottom: 1rem;
 `
 
-const TutorialsPage = ({ data }) => {
-  const intl = useIntl()
+const published = (locale, published) => {
+  const localeTimestamp = getLocaleTimestamp(locale, published)
+  return localeTimestamp !== INVALID_DATETIME ? (
+    <span>
+      <Emoji text=":calendar:" size={1} ml={`0.5em`} mr={`0.5em`} />{" "}
+      {localeTimestamp} •
+    </span>
+  ) : null
+}
 
+const TutorialsPage = ({ data, pageContext }) => {
+  const intl = useIntl()
+  console.log({ pageContext })
   // Filter tutorials by language and map to object
   const allTutorials = data.allTutorials.nodes
-    .filter((tutorial) => tutorial.frontmatter.lang === intl.locale)
+    .filter((tutorial) => tutorial.frontmatter.lang === pageContext.language)
     .map((tutorial) => ({
       to:
         tutorial.fields.slug.substr(0, 3) === "/en"
@@ -376,26 +386,28 @@ const TutorialsPage = ({ data }) => {
             </p>
           </ResultsContainer>
         )}
-        {state.filteredTutorials.map((tutorial) => (
-          <TutorialCard key={tutorial.to} to={tutorial.to}>
-            <TitleContainer>
-              <Title>{tutorial.title}</Title>
-              <Pill isSecondary={true}>{tutorial.skill}</Pill>
-            </TitleContainer>
-            <Author>
-              <Emoji text=":writing_hand:" size={1} mr={`0.5em`} />
-              {tutorial.author} •
-              <Emoji text=":calendar:" size={1} ml={`0.5em`} mr={`0.5em`} />
-              {getLocaleTimestamp(intl.locale, tutorial.published)} •
-              <Emoji text=":stopwatch:" size={1} ml={`0.5em`} mr={`0.5em`} />
-              {tutorial.timeToRead} <Translation id="page-tutorial-read-time" />
-            </Author>
-            <About>{tutorial.description}</About>
-            <PillContainer>
-              <TutorialTags tags={tutorial.tags} />
-            </PillContainer>
-          </TutorialCard>
-        ))}
+        {state.filteredTutorials.map((tutorial) => {
+          console.log(tutorial.published)
+          return (
+            <TutorialCard key={tutorial.to} to={tutorial.to}>
+              <TitleContainer>
+                <Title>{tutorial.title}</Title>
+                <Pill isSecondary={true}>{tutorial.skill}</Pill>
+              </TitleContainer>
+              <Author>
+                <Emoji text=":writing_hand:" size={1} mr={`0.5em`} />
+                {tutorial.author} •{published(intl.locale, tutorial.published)}
+                <Emoji text=":stopwatch:" size={1} ml={`0.5em`} mr={`0.5em`} />
+                {tutorial.timeToRead}{" "}
+                <Translation id="page-tutorial-read-time" />
+              </Author>
+              <About>{tutorial.description}</About>
+              <PillContainer>
+                <TutorialTags tags={tutorial.tags} />
+              </PillContainer>
+            </TutorialCard>
+          )
+        })}
       </TutorialContainer>
     </StyledPage>
   )
