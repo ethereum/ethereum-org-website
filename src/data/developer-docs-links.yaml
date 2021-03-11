@@ -78,8 +78,6 @@
           to: /developers/docs/apis/backend/
         - id: docs-nav-json-rpc
           to: /developers/docs/apis/json-rpc/
-        - id: docs-nav-json-rpc-apis-reference
-          to: /developers/docs/apis/json-rpc/endpoints
     - id: docs-nav-data-and-analytics
       path: /developers/docs/data-and-analytics/
       items:
