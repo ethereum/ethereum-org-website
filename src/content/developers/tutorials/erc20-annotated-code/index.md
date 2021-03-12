@@ -6,7 +6,7 @@ lang: en
 sidebar: true
 tags: ["solidity", "erc-20"]
 skill: beginner
-published: 2021-02-11
+published: 2021-3-9
 ---
 
 ## Introduction {#introduction}
@@ -316,7 +316,8 @@ at every block. By convention, state variables are named `_<something>`.
 
 The first two variables are [mappings](https://www.tutorialspoint.com/solidity/solidity_mappings.htm),
 meaning they behave roughly the same as [associative arrays](https://en.wikipedia.org/wiki/Associative_array),
-except that the keys are numeric values. In contrast to normal arrays, which have storage for all cells,
+except that the keys are numeric values. Storage is only allocated for entries that have values different
+from the default (zero).
 
 ```solidity
     mapping (address => uint256) private _balances;
@@ -429,11 +430,11 @@ These functions, `name`, `symbol`, and `decimals` help user interfaces know abou
 The return type is `string memory`, meaning return a string that is stored in memory. Variables, such as
 strings, can be stored in three locations:
 
-|          | Lifetime      | Contract Access | Gas Cost                                       |
-| -------- | ------------- | --------------- | ---------------------------------------------- |
-| Memory   | Function call | Read/Write      | Tens or hundreds (higher for higher locations) |
-| Calldata | Function call | Read Only       | Very low (paid by the caller, not the callee)  |
-| Storage  | Until changed | Read/Write      | High (800 for read, 20k for write)             |
+|          | Lifetime      | Contract Access | Gas Cost                                                       |
+| -------- | ------------- | --------------- | -------------------------------------------------------------- |
+| Memory   | Function call | Read/Write      | Tens or hundreds (higher for higher locations)                 |
+| Calldata | Function call | Read Only       | Can't be used as a return type, only a function parameter type |
+| Storage  | Until changed | Read/Write      | High (800 for read, 20k for write)                             |
 
 In this case, `memory` is the best choice.
 
@@ -579,6 +580,8 @@ being spent and reduce the allowance by that amount.
 
 The `a.sub(b, "message")` function call does two things. First, it calculates `a-b`, which is the new allowance.
 Second, it checks that this result is not negative. If it is negative the call reverts with the provided message.
+Note that when a call reverts any processing done previously during that call is ignored so we don't need to
+undo the `_transfer`.
 
 ```solidity
         _approve(sender, _msgSender(), _allowances[sender][_msgSender()].sub(amount,
@@ -592,7 +595,7 @@ Second, it checks that this result is not negative. If it is negative the call r
 It is dangerous to set a non-zero allowance to another non-zero value,
 because you only control the order of your own transactions, not anybody else's. Imagine you
 have two users, Alice who is naive and Bill who is dishonest. Alice wants some service from
-Bill, which she things costs five tokens - so she gives Bill an allowance of five tokens.
+Bill, which she thinks costs five tokens - so she gives Bill an allowance of five tokens.
 
 Then something changes and Bill's price rises to ten tokens. Alice, who still wants the service,
 sends a transaction that sets Bill's allowance to ten. The moment Bill sees this new transaction
@@ -764,7 +767,7 @@ so they are only useful if you inherit from the contract and add your own
 logic to decide under what conditions to mint new tokens or burn existing
 ones.
 
-**NOTE:** every ERC-20 token has its own business logic that dictates
+**NOTE:** Every ERC-20 token has its own business logic that dictates
 token management. For example, a fixed supply contract might only call `_mint`
 in the constructor and never call `_burn`. A contract that sells tokens
 will call `_mint` when it is paid, and presumably call `_burn` at some point

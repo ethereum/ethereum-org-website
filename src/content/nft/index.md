@@ -26,7 +26,7 @@ NFTs are tokens that we can use to represent ownership of unique items. They let
 
 NFT stands for non-fungible token. Non-fungible is an economic term that you could use to describe things like your furniture, a song file, or your computer. These things are not interchangeable for other items because they have unique properties.
 
-Fungibile items on the other hand can be exchanged as their value defines them rather than their unique properties. For example ETH or dollars are fungible because 1 ETH / $1 USD is exchangeable for another ETH / $1 USD.
+Fungible items, on the other hand, can be exchanged because their value defines them rather than their unique properties. For example, ETH or dollars are fungible because 1 ETH / $1 USD is exchangeable for another 1 ETH / $1 USD.
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/Xdkkux6OxfM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -45,7 +45,7 @@ Here's how an internet of NFTs compared to the internet most of us use today loo
 | NFTs are compatible with anything built using Ethereum. An NFT ticket for an event can be traded on every Ethereum marketplace, for an entirely different NFT. You could trade a piece of art for a ticket! | Companies with digital items must build their own infrastructure. For example an app that issues digital tickets for events would have to build their own ticket exchange. |
 | Content creators can sell their work anywhere and can access a global market.                                                                                                                               | Creators rely on the infrastructure and distribution of the platforms they use. These are often subject to terms of use and geographical restrictions.                     |
 | Creators can retain ownership rights over their own work, and claim resale royalties directly.                                                                                                              | Platforms, such as music streaming services, retain the majority of profits from sales.                                                                                    |
-| Items can be used in surprising ways. For example you can use digital artwork as collateral in a decentralised loan.                                                                                        |                                                                                                                                                                            |
+| Items can be used in surprising ways. For example, you can use digital artwork as collateral in a decentralised loan.                                                                                       |                                                                                                                                                                            |
 
 ### NFT examples {#nft-examples}
 
@@ -210,7 +210,7 @@ And this isn't hard on Ethereum, because both worlds (NFT and DeFi) share the sa
 
 #### Fractional ownership {#fractional-ownership}
 
-NFT creators can also create "shares" for their NFT. This gives investors and fans the opportunity to own a part of an NFT without having to buy the whole thing. This adds even more oppportunities for NFT minters and collectors alike.
+NFT creators can also create "shares" for their NFT. This gives investors and fans the opportunity to own a part of an NFT without having to buy the whole thing. This adds even more opportunities for NFT minters and collectors alike.
 
 - Fractionalised NFTs can be traded on [DEXs](/defi/#dex) like Uniswap, not just [NFT marketplaces](/dapps?category=collectibles). That means more buyers and sellers.
 - An NFT's overall price can be defined by the price of its fractions.
@@ -318,7 +318,7 @@ _It’s also important to remember that Ethereum does more than just financial t
 
 #### Timelines {#timelines}
 
-The process has already started. [The Beacon Chain](/eth2/beacon-chain/), the first upgrade, shipped in December 2020. This provides the foundation for staking by allowing stakers to join the system. The next step relevant to energy efficieny is to merge the current chain, the one secured by miners, into the Beacon Chain where mining isn't needed. Timelines can't be exact at this stage, but it's estimated that this will happen some time in 2021/2022. This process is known as the docking or the merge. [More on the docking](/eth2/docking/).
+The process has already started. [The Beacon Chain](/eth2/beacon-chain/), the first upgrade, shipped in December 2020. This provides the foundation for staking by allowing stakers to join the system. The next step relevant to energy efficiency is to merge the current chain, the one secured by miners, into the Beacon Chain where mining isn't needed. Timelines can't be exact at this stage, but it's estimated that this will happen some time in 2021/2022. This process is known as the docking or the merge. [More on the docking](/eth2/docking/).
 
 <ButtonLink to="/eth2/">More on Eth2</ButtonLink>
 
@@ -352,7 +352,7 @@ In this case, miners would migrate to lower cost alternatives. Since you can't t
 
 The other side of the coin: Keep in mind that alternatives are not necessarily carbon-neutral either, such as the footprint of printing, handling, shipping and guarding fiat currencies. Annual spectacles of Christmas lights consume large amounts of energy, not to mention commercial products filling landfills, and governments engaging in war, leading to substantial levels of pollution.
 
-Oh, and the same thing was said about the internet itself. Early measures of Google's search traffic led to incorrectly extrapolating that data to the future, forming incorrect conclusions about the unmanagable "waste of energy" that would follow.
+Oh, and the same thing was said about the internet itself. Early measures of Google's search traffic led to incorrectly extrapolating that data to the future, forming incorrect conclusions about the unmanageable "waste of energy" that would follow.
 
 ### Mint NFTs {#mint-nfts}
 
