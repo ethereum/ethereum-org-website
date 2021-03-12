@@ -31,7 +31,7 @@ const OuterList = styled(motion.ul)`
   list-style-type: none;
   list-style-image: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 3rem;
   border-left: 1px solid ${(props) => props.theme.colors.dropdownBorder};
   font-size: ${(props) => props.theme.fontSizes.s};
   line-height: 1.6;
