@@ -38,6 +38,7 @@
     "gatsby-source-graphql": "^2.13.0",
     "gatsby-transformer-csv": "^2.9.0",
     "gatsby-transformer-gitinfo": "^1.1.0",
+    "gatsby-transformer-sharp": "^2.11.0",
     "lodash": "^4.17.21",
     "luxon": "^1.24.1",
     "netlify-lambda": "^1.6.3",
