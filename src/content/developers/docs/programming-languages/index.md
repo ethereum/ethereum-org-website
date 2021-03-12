@@ -24,4 +24,10 @@ Select your language of choice to find projects, resources, and virtual communit
 - [Ethereum for .NET developers](/en/developers/docs/programming-languages/dot-net/)
 - [Ethereum for Delphi developers](/en/developers/docs/programming-languages/delphi/)
 
-Don't see your language here? Request a new page by [opening an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
+### What if my language is not supported {#other-lang}
+
+If you want to link to resources or point to a virtual community for an additional programming language you can request a new page by [opening an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
+
+If you just want to write code to interface with the blockchain using a currently unsupported language
+you can use the [JSON-RPC interface](/developers/docs/apis/json-rpc/endpoints/) to connect to the Ethereum network. Any programming 
+language that can use TCP/IP can use this interface.

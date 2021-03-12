@@ -20,7 +20,7 @@ Poți vizualiza în timp real rețeaua Ethereum uitându-te la această [hartă 
 
 Multe [implementări ale clienților Ethereum](/developers/docs/nodes-and-clients/#clients) există într-o varietate de limbaje. Ceea ce au în comun aceste implementări ale clienților este că toate respectă o specificație formală. Această specificație dictează modul în care funcționează rețeaua Ethereum și blockchain-ul.
 
-![Client Eth1x](./client-diagram.png) Diagramă simplificată a caracteristicilor clientului Ethereum.
+![Client Eth1x](../../../../../developers/docs/nodes-and-clients/client-diagram.png) Diagramă simplificată a caracteristicilor clientului Ethereum.
 
 ## Tipuri de noduri {#node-types}
 
@@ -58,7 +58,7 @@ Rularea propriul nod îți permite să utilizezi Ethereum într-un mod cu adevă
 - Nu va trebui să-ți dezvălui adresele și soldurile către noduri aleatorii. Totul poate fi verificat cu propriul client.
 - Aplicația ta dapp poate fi mai sigură și mai privată dacă folosești propriul nod. [Metamask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) și alte portofele pot fi ușor direcționate către propriul nod local.
 
-![Cum să accesezi Ethereum prin intermediul aplicației și nodurilor](./nodes.png)
+![Cum să accesezi Ethereum prin intermediul aplicației și nodurilor](../../../../../developers/docs/nodes-and-clients/nodes.png)
 
 ### Beneficiile rețelei {#network-benefits}
 
@@ -197,9 +197,9 @@ O modalitate ușoară de a rula propriul nod este utilizarea casetelor „plug a
 | Nethermind   | Minimum 200 GB             | Minimum 3 TB                  |
 | Besu         | Minimum 750 GB             | Minimum 4 TB                  |
 
-![O diagramă care arată că numărul de GB necesari la o sincronizare completă este în creștere](./full-sync.png)
+![O diagramă care arată că numărul de GB necesari la o sincronizare completă este în creștere](../../../../../developers/docs/nodes-and-clients/full-sync.png)
 
-![O diagramă care arată că numărul de GB necesari la o sincronizare arhivă este în creștere](./archive-sync.png)
+![O diagramă care arată că numărul de GB necesari la o sincronizare arhivă este în creștere](../../../../../developers/docs/nodes-and-clients/archive-sync.png)
 
 Aceste diagrame arată cum cerințele de stocare sunt mereu în schimbare. Pentru cele mai recente date ale Geth și Parity, consultă [datele de sincronizare completă](https://etherscan.io/chartsync/chaindefault) și [arhivarea datelor de sincronizare](https://etherscan.io/chartsync/chainarchive).
 

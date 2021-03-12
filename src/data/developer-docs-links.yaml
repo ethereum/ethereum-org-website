@@ -76,6 +76,8 @@
           to: /developers/docs/apis/javascript/
         - id: docs-nav-backend-apis
           to: /developers/docs/apis/backend/
+        - id: docs-nav-json-rpc
+          to: /developers/docs/apis/json-rpc/
     - id: docs-nav-data-and-analytics
       to: /developers/docs/data-and-analytics/
       items:
