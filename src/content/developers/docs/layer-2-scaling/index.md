@@ -61,7 +61,7 @@ There are two types of rollups with different security models:
 
 Zero knowledge rollups, also known as ZK rollups, bundle or "roll up" hundreds of transfers off-chain and generates a cryptographic proof, known as a SNARK (succinct non-interactive argument of knowledge). This is known as a validity proof and is posted on layer 1.
 
-The ZK rollup contract maintains the state of all transfers on layer 2, and this state can only be updated with a validity proof. This means that ZK rollups only need the validity proof, instead of all transaction data.  With a ZK rollup, validating a block is quicker and cheaper because less data is included.
+The ZK rollup contract maintains the state of all transfers on layer 2, and this state can only be updated with a validity proof. This means that ZK rollups only need the validity proof, instead of all transaction data. With a ZK rollup, validating a block is quicker and cheaper because less data is included.
 
 With a ZK rollup, there are no delays when moving funds from layer 2 to layer 1 because a validity proof accepted by the ZK rollup contract has already verified the funds.
 
@@ -104,10 +104,10 @@ So you get reimbursed for proving fraud.
 
 #### Pros and cons {#optimistic-pros-and-cons}
 
-| Pros                                                                                                             | Cons                                                                                                             |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Anything you can do on Ethereum layer 1, you can do with Optimistic rollups as it's EVM and Solidity compatible. | Long wait times for on-chain transaction due to potential fraud challenges.                                      |
-| All transaction data is stored on the layer 1 chain, meaning it's secure and decentralized.                      |  |
+| Pros                                                                                                             | Cons                                                                        |
+| ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| Anything you can do on Ethereum layer 1, you can do with Optimistic rollups as it's EVM and Solidity compatible. | Long wait times for on-chain transaction due to potential fraud challenges. |
+| All transaction data is stored on the layer 1 chain, meaning it's secure and decentralized.                      |                                                                             |
 
 #### Use Optimistic rollups {#use-optimistic-rollups}
 
