@@ -3106,6 +3106,16 @@
         "content",
         "bug"
       ]
+    },
+    {
+      "login": "v-gar",
+      "name": "Viktor Garske",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11472697?v=4",
+      "profile": "https://www.v-gar.de/",
+      "contributions": [
+        "bug",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
