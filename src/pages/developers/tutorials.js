@@ -199,7 +199,6 @@ const published = (locale, published) => {
 
 const TutorialsPage = ({ data, pageContext }) => {
   const intl = useIntl()
-  console.log({ pageContext })
   // Filter tutorials by language and map to object
   const allTutorials = data.allTutorials.nodes
     .filter((tutorial) =>
@@ -392,7 +391,6 @@ const TutorialsPage = ({ data, pageContext }) => {
           </ResultsContainer>
         )}
         {state.filteredTutorials.map((tutorial) => {
-          console.log(tutorial.published)
           return (
             <TutorialCard key={tutorial.to} to={tutorial.to}>
               <TitleContainer>
