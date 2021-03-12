@@ -319,6 +319,7 @@ meaning they behave roughly the same as [associative arrays](https://en.wikipedi
 except that the keys are numeric values. Storage is only allocated for entries that have values different
 from the default (zero).
 
+
 ```solidity
     mapping (address => uint256) private _balances;
 ```
@@ -579,8 +580,7 @@ being spent and reduce the allowance by that amount.
 &nbsp;
 
 The `a.sub(b, "message")` function call does two things. First, it calculates `a-b`, which is the new allowance.
-Second, it checks that this result is not negative. If it is negative the call reverts with the provided message.
-Note that when a call reverts any processing done previously during that call is ignored so we don't need to
+Second, it checks that this result is not negative. If it is negative the call reverts with the provided message. Note that when a call reverts any processing done previously during that call is ignored so we don't need to
 undo the `_transfer`.
 
 ```solidity
@@ -768,6 +768,7 @@ logic to decide under what conditions to mint new tokens or burn existing
 ones.
 
 **NOTE:** Every ERC-20 token has its own business logic that dictates
+
 token management. For example, a fixed supply contract might only call `_mint`
 in the constructor and never call `_burn`. A contract that sells tokens
 will call `_mint` when it is paid, and presumably call `_burn` at some point
