@@ -9,7 +9,8 @@ const hasTutorials = (lang) => {
     consoleError(`No metadata found for language: ${lang}`)
     return
   }
-  return metadata.hasTutorials
+  // Tutorials are included in v2.2: https://crowdin.com/project/ethereumfoundation/settings#files
+  return metadata.version >= 2.2
 }
 
 const consoleError = (message) => {
