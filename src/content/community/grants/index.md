@@ -10,7 +10,7 @@ The programs listed below offer a variety of funding grants for projects working
 
 ### Broad Ethereum Ecosystem {#broad-ethereum-ecosystem}
 
-These programs support the broad Ethereum ecosystem by offering grants to a wide scope of projects. These include solutions for scalability, community building, security, privacy and more.
+These programs support the broad Ethereum ecosystem by offering grants to a wide scope of projects. These include solutions for scalability, community building, security, privacy and more. These grants are not specific to any one Ethereum platform, and are a good place to start if you're unsure.
 
 - [EF Ecosystem Support Program](https://esp.ethereum.foundation) - _Rollups, community and education, tooling and testing, infrastructure, interoperability, standards and research, wallets, and more_
 - [MetaCartel](https://www.metacartel.org/grants/) - _Dapp development, new DAOs creation_  
