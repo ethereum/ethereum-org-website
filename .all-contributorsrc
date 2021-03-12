@@ -3077,6 +3077,45 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "whoanuragverma",
+      "name": "Anurag Verma",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55322425?v=4",
+      "profile": "https://github.com/whoanuragverma",
+      "contributions": [
+        "bug",
+        "code"
+      ]
+    },
+    {
+      "login": "citizen-stig",
+      "name": "Nikolai Golub",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3115300?v=4",
+      "profile": "http://golub.pro/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "intelliot",
+      "name": "Elliot Lee",
+      "avatar_url": "https://avatars.githubusercontent.com/u/81505?v=4",
+      "profile": "https://twitter.com/intelliot",
+      "contributions": [
+        "content",
+        "bug"
+      ]
+    },
+    {
+      "login": "v-gar",
+      "name": "Viktor Garske",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11472697?v=4",
+      "profile": "https://www.v-gar.de/",
+      "contributions": [
+        "bug",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

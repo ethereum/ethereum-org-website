@@ -28,8 +28,8 @@ Certain EIPs relate to application-level standards (e.g. a standard smart-contra
 
 ### Token standards {#token-standards}
 
-- [ERC-20 - A standard interface for tokens](/developers/docs/standards/tokens/erc-20/)
-- [ERC-721 - A standard interface for non-fungible tokens](/developers/docs/standards/tokens/erc-721/)
+- [ERC-20](/developers/docs/standards/tokens/erc-20/) - A standard interface for fungible (interchangeable) tokens, like voting tokens, staking tokens or virtual currencies.
+- [ERC-721](/developers/docs/standards/tokens/erc-721/) - A standard interface for non-fungible tokens, like a deed for artwork or a song.
 
 Learn more about [token standards](/developers/docs/standards/tokens/).
 

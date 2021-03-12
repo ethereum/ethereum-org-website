@@ -40,8 +40,9 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 
 **Every month, there are major Ethereum events around the world.** Consider attending one near you to meet more people in the community, learn about employment opportunities, and develop new skills.
 
-- [MarketMake DeFi hackathon](https://marketmake.ethglobal.co/) – Virtual ETHGlobal hackathon (Jan 15 - Feb 7)
-- [EtherPunk](https://etherpunk.devfolio.co/) - Global online Ethereum hackathon (Jan 22 - Feb 21)
+- [Gitcoin Grants Funding Round](https://gitcoin.co/grants/) - Democratic public goods funding for the 21st century (Mar 10 - Mar 25)
+- [NFT Hack](https://nft.ethglobal.co/) – Virtual ETHGlobal hackathon (Mar 19 - Mar 21)
+- [Chainlink Hackathon Spring 2021](https://chain.link/hackathon) – Virtual Chainlink hackathon (Mar 15 - Apr 11)
 
 _Have an event to add to this list? [Add it](https://github.com/ethereum/ethereum-org-website#how-can-i-contribute)!_
 

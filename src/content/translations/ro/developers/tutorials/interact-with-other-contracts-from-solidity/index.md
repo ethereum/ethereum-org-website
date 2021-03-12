@@ -176,6 +176,6 @@ contract CounterFactory {
 
 După compilare, în secțiunea Remix Deploy vei selecta fabrica ce va fi implementată:
 
-![Selectarea fabricii care va fi implementată în Remix](./counterfactory-deploy.png)
+![Selectarea fabricii care va fi implementată în Remix](../../../../../developers/tutorials/interact-with-other-contracts-from-solidity/counterfactory-deploy.png)
 
 După aceea, poți să te joci cu fabrica de contract și să verifici cum se modifică valorile. Dacă dorești să apelezi contractul inteligent de la o adresă diferență va trebui să modifici adresa din „Selectare cont” din Remix.

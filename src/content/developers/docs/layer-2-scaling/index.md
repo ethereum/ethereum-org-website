@@ -36,13 +36,15 @@ A specific Layer 2 instance may be open and shared by many applications, or may 
 
 ## Rollups {#rollups}
 
-Rollups are solutions that bundle or "roll up" sidechain transactions into a single transaction and generate a cryptographic proof, known as a SNARK (succinct non-interactive argument of knowledge). Only this proof is submitted to the main chain.
+Rollups are solutions that perform transaction _execution_ outside layer 1, but post transaction _data_ on layer 1. As transaction _data_ is on layer 1, this allows rollups to be secured by layer 1. Inheriting the security properties of the main Ethereum chain (layer 1), while performing execution outside of layer 1, is a defining characteristic of rollups.
 
-_Sidechains are Ethereum-compatible, independent blockchains._
+Three simplified properties of rollups are:
 
-In other words, rollups mean that all state and execution is handled in sidechains – signature verification, contract execution, etc. The main Ethereum chain (layer 1) only stores transaction data.
+1. transaction _execution_ outside layer 1
+2. data or proof of transactions is on layer 1
+3. a rollup smart contract in layer 1 that can enforce correct transaction execution by using the transaction data on layer 1
 
-Rollup solutions require relayers who have staked a bond in the rollup contract. This incentivises them to relay rollups accurately.
+Rollups require operators to stake a bond in the rollup contract. This incentivises operators to verify and execute transactions correctly.
 
 **Useful for:**
 
@@ -57,9 +59,11 @@ There are two types of rollups with different security models:
 
 ### Zero knowledge rollups {#zk-rollups}
 
-Zero knowledge rollups, also known as ZK-Rollups, bundle hundreds of transfers off-chain into a single transaction via a smart contract. From the data submitted, the smart contract can verify all of the transfers that are included. This is known as a validity proof.
+Zero knowledge rollups, also known as ZK rollups, bundle or "roll up" hundreds of transfers off-chain and generates a cryptographic proof, known as a SNARK (succinct non-interactive argument of knowledge). This is known as a validity proof and is posted on layer 1.
 
-With a ZK rollup, validating a block is quicker and cheaper because less data is included. You don't need all the transaction data to verify the transaction, just the proof.
+The ZK rollup contract maintains the state of all transfers on layer 2, and this state can only be updated with a validity proof. This means that ZK rollups only need the validity proof, instead of all transaction data. With a ZK rollup, validating a block is quicker and cheaper because less data is included.
+
+With a ZK rollup, there are no delays when moving funds from layer 2 to layer 1 because a validity proof accepted by the ZK rollup contract has already verified the funds.
 
 The sidechain where ZK rollups happen can be optimised to reduce transaction size further. For instance, an account is represented by an index rather than an address, which reduces a transaction from 32 bytes to just 4 bytes. Transactions are also written to Ethereum as calldata, reducing gas.
 
@@ -228,7 +232,7 @@ Combine the best parts of multiple layer 2 technologies, and may offer configura
 ## Further reading {#further-reading}
 
 - [Validium And The Layer 2 Two-By-Two — Issue No. 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
-- [Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework](https://medium.com/matter-labs/evaluating-ethereum-layer 2-scaling-solutions-a-comparison-framework-b6b2f410f955)
+- [Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
 - [Adding Hybrid PoS-Rollup Sidechain to Celer’s Coherent Layer-2 Platform on Ethereum](https://medium.com/celer-network/adding-hybrid-pos-rollup-sidechain-to-celers-coherent-layer-2-platform-d1d3067fe593)
 - [Zero-Knowledge Blockchain Scalability](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 
