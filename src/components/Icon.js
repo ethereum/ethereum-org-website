@@ -14,6 +14,7 @@ import {
   MdMenu,
   MdSearch,
   MdWbSunny,
+  MdFlip,
 } from "react-icons/md"
 import { BsQuestionSquareFill } from "react-icons/bs"
 import { IoCodeDownload } from "react-icons/io5"
@@ -38,6 +39,7 @@ const Icon = ({ name, size, className }) => (
     {name === "glossary" && <BsQuestionSquareFill />}
     {name === "codeDownload" && <IoCodeDownload />}
     {name === "code" && <IoCodeOutline />}
+    {name === "flip" && <MdFlip />}
   </IconContext.Provider>
 )
 

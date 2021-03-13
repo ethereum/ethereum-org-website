@@ -2,50 +2,14 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { motion } from "framer-motion"
-
-import Link from "./Link"
-
-const ImageWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background: ${({ background }) => background};
-  box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
-  min-height: 200px;
-`
-
-const Image = styled(Img)`
-  width: 100%;
-  align-self: center;
-  max-width: 372px;
-  max-height: 257px;
-  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
-    max-width: 311px;
-  }
-`
-
-const Content = styled.div`
-  padding: 1.5rem;
-  text-align: left;
-  height: 100%;
-`
-
-const Title = styled.h3`
-  margin-bottom: 0.75rem;
-  margin-top: 1rem;
-`
-
-const Description = styled.p`
-  opacity: 0.8;
-  font-size: ${({ theme }) => theme.fontSizes.s};
-  margin-bottom: 0.5rem;
-  line-height: 140%;
-`
+import Emoji from "./Emoji"
+import Icon from "./Icon"
+import Translation from "./Translation"
+import ButtonLink from "./ButtonLink"
 
 const Container = styled.div`
-  /* TODO: Fix dimensions */
-  height: 460px;
+  /* TODO: dynamic height? */
+  height: 500px;
   perspective: 1000px;
 `
 
@@ -65,15 +29,10 @@ const CardFace = styled(motion.div)`
   backface-visibility: hidden;
   height: 100%;
   width: 100%;
-
   color: ${({ theme }) => theme.colors.text};
   box-shadow: 0px 14px 66px rgba(0, 0, 0, 0.07),
     0px 10px 17px rgba(0, 0, 0, 0.03), 0px 4px 7px rgba(0, 0, 0, 0.05);
   background: ${({ theme }) => theme.colors.searchBackground};
-  &:hover {
-    /* box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15); */
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
-  }
 `
 
 const CardFront = styled(CardFace)`
@@ -87,11 +46,68 @@ const CardFront = styled(CardFace)`
   text-decoration: none;
 `
 
-const CardBack = styled(CardFace)``
+const CardBack = styled(CardFace)`
+  &:hover path {
+    fill: ${({ theme }) => theme.colors.primary};
+  }
+`
+
+const ImageWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: ${({ background }) => background};
+  box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
+  min-height: 200px;
+  position: relative;
+  &:hover path {
+    fill: ${({ theme }) => theme.colors.primary};
+  }
+`
+
+const Image = styled(Img)`
+  width: 100%;
+  align-self: center;
+  max-width: 372px;
+  max-height: 257px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
+    max-width: 311px;
+  }
+`
+
+const FlipIcon = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+`
+
+const Content = styled.div`
+  padding: 1.5rem;
+  text-align: left;
+  height: 100%;
+  position: relative;
+`
+
+const Title = styled.h3`
+  margin-bottom: 0.75rem;
+  margin-top: 1rem;
+`
+
+const Description = styled.p`
+  opacity: 0.8;
+  font-size: ${({ theme }) => theme.fontSizes.s};
+  margin-bottom: 0.5rem;
+  line-height: 140%;
+`
+
+const StyledButtonLink = styled(ButtonLink)`
+  margin: 1rem;
+`
 
 const WalletCard = ({ wallet }) => {
   const [isCardFlipped, setIsCardFlipped] = useState(false)
-
   const duration = 0.3
   const flipVariants = {
     shown: {
@@ -101,106 +117,118 @@ const WalletCard = ({ wallet }) => {
       },
     },
     frontFlipped: {
-      rotateY: 180,
+      rotateY: -180,
       transition: {
         duration,
       },
     },
     backFlipped: {
-      rotateY: -180,
+      rotateY: 180,
       transition: {
         duration,
       },
     },
   }
 
+  const getFeatureStatus = (feature) =>
+    feature === "TRUE" ? (
+      <Emoji size="0.75rem" text="❌" />
+    ) : (
+      <Emoji size="0.75rem" text="✅" />
+    )
+
   return (
-    <Container onClick={() => setIsCardFlipped(!isCardFlipped)}>
+    <Container>
       <Card>
         <CardFront
-          wallet={wallet}
           variants={flipVariants}
           animate={isCardFlipped ? "frontFlipped" : "shown"}
         >
-          <ImageWrapper background={wallet.brand_color}>
+          <ImageWrapper
+            background={wallet.brand_color}
+            onClick={() => setIsCardFlipped(!isCardFlipped)}
+          >
             <Image
               fixed={wallet.image.childImageSharp.fixed}
               alt={wallet.alt}
             />
+            <FlipIcon>
+              <Icon name="flip" size="1.5rem" />
+            </FlipIcon>
           </ImageWrapper>
           <Content>
             <Title>{wallet.name}</Title>
             <Description>{wallet.description}</Description>
           </Content>
+          <StyledButtonLink to={wallet.url} hideArrow={true}>
+            <Translation id="more" />
+          </StyledButtonLink>
         </CardFront>
         <CardBack
-          wallet={wallet}
           variants={flipVariants}
-          initial={{ rotateY: -180 }}
+          initial={{ rotateY: 180 }}
           animate={isCardFlipped ? "shown" : "backFlipped"}
+          onClick={() => setIsCardFlipped(!isCardFlipped)}
         >
           <Content>
-            <Title>Wallet Facts</Title>
+            <FlipIcon>
+              <Icon name="flip" size="1.5rem" />
+            </FlipIcon>
+            <Title>{wallet.name}</Title>
+            <p>
+              {wallet.has_desktop === "TRUE" && (
+                <Emoji size="1rem" text=":desktop_computer:" mr="0.5rem" />
+              )}
+              {wallet.has_mobile === "TRUE" && (
+                <Emoji size="1rem" text=":mobile_phone:" mr="0.5rem" />
+              )}
+              {wallet.has_web === "TRUE" && (
+                <Emoji size="1rem" text=":globe_with_meridians:" mr="0.5rem" />
+              )}
+              {wallet.has_hardware === "TRUE" && (
+                <Emoji size="1rem" text=":minidisc:" mr="0.5rem" />
+              )}
+            </p>
             <table>
               <tr>
+                {/* TODO: intl extraction */}
                 <td>Bank Withdrawals:</td>
-                <td>{wallet.has_bank_withdrawals === "TRUE" ? "✅" : "❌"}</td>
+                <td>{getFeatureStatus(wallet.has_bank_withdrawals)}</td>
               </tr>
               <tr>
                 <td>Card Deposits:</td>
-                <td>{wallet.has_card_deposits === "TRUE" ? "✅" : "❌"}</td>
+                <td>{getFeatureStatus(wallet.has_card_deposits)}</td>
               </tr>
               <tr>
                 <td>DeFi Integrations:</td>
-                <td>{wallet.has_defi_integrations === "TRUE" ? "✅" : "❌"}</td>
+                <td>{getFeatureStatus(wallet.has_defi_integrations)}</td>
               </tr>
-              {/* <tr>desktop: {wallet.has_desktop === "TRUE" ? "✅" : "❌"}</tr> */}
               <tr>
                 <td>DEX Integrations:</td>
-                <td>{wallet.has_dex_integrations === "TRUE" ? "✅" : "❌"}</td>
+                <td>{getFeatureStatus(wallet.has_dex_integrations)}</td>
               </tr>
               <tr>
                 <td>Explore Dapps:</td>
-                <td>{wallet.has_explore_dapps === "TRUE" ? "✅" : "❌"}</td>
+                <td>{getFeatureStatus(wallet.has_explore_dapps)}</td>
               </tr>
-              {/* <tr>
-                <td>Hardware:</td>
-                <td>{wallet.has_hardware === "TRUE" ? "✅" : "❌"}</td>
-              </tr> */}
               <tr>
                 <td>High Volume Purchases:</td>
-                <td>
-                  {wallet.has_high_volume_purchases === "TRUE" ? "✅" : "❌"}
-                </td>
+                <td>{getFeatureStatus(wallet.has_high_volume_purchases)}</td>
               </tr>
               <tr>
-                <td>Limits Protection:</td>
-                <td>{wallet.has_limits_protection === "TRUE" ? "✅" : "❌"}</td>
+                <td>Limit Orders:</td>
+                <td>{getFeatureStatus(wallet.has_limits_protection)}</td>
               </tr>
-              {/* <tr>mobile: {wallet.has_mobile === "TRUE" ? "✅" : "❌"}</tr> */}
               <tr>
                 <td>MultiSig:</td>
-                <td>{wallet.has_multisig === "TRUE" ? "✅" : "❌"}</td>
+                <td>{getFeatureStatus(wallet.has_multisig)}</td>
               </tr>
-              {/* <tr>web: {wallet.has_web === "TRUE" ? "✅" : "❌"}</tr> */}
             </table>
           </Content>
         </CardBack>
       </Card>
     </Container>
   )
-  //     {/* <Card to={wallet.url} hideArrow={true}> */}
-  //     <CardDiv>
-  //       <ImageWrapper background={wallet.brand_color}>
-  //         <Image fixed={wallet.image.childImageSharp.fixed} alt={wallet.alt} />
-  //       </ImageWrapper>
-  //       <Content>
-  //         <Title>{wallet.name}</Title>
-  //         <Description>{wallet.description}</Description>
-  //       </Content>
-  //     </CardDiv>
-  //     {/* </Card> */}
-  // )
 }
 
 export default WalletCard
