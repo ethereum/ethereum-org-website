@@ -47,6 +47,9 @@ const CardFront = styled(CardFace)`
 `
 
 const CardBack = styled(CardFace)`
+  &:hover {
+    cursor: pointer;
+  }
   &:hover path {
     fill: ${({ theme }) => theme.colors.primary};
   }
@@ -61,6 +64,9 @@ const ImageWrapper = styled.div`
   box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
   min-height: 200px;
   position: relative;
+  &:hover {
+    cursor: pointer;
+  }
   &:hover path {
     fill: ${({ theme }) => theme.colors.primary};
   }
