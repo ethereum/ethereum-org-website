@@ -302,7 +302,7 @@ This vision is being delivered right now.
 
 #### A greener Ethereum: Eth2 {#eth2}
 
-Ethereum is currently going through a series of upgrades, known as Eth2, that will replace mining with [staking](/staking/). This will remove computing power as a security mechanism, and reduce Ethereum's carbon footprint by ~99.98%<sup>[^1]</sup>. In this world, stakers commit funds instead of computing power to secure the network.
+Ethereum is currently going through a series of upgrades, known as Eth2, that will replace mining with [staking](/eth2/staking/). This will remove computing power as a security mechanism, and reduce Ethereum's carbon footprint by ~99.98%<sup>[^1]</sup>. In this world, stakers commit funds instead of computing power to secure the network.
 
 The energy-cost of Ethereum will become the cost of running a home computer multiplied by the number of nodes in the network. If there are 10,000 nodes in the network and the cost of running a home computer is roughly 525kWh per year. That's 5,250,000kWh<sup>[^1]</sup> per year for the entire network.
 
