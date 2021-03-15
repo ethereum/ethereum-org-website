@@ -1,35 +1,27 @@
 ---
-title: JSON RPC
-description: A stateless, light-weight remote procedure call (RPC) protocol
+title: JSON RPC API
+description: A stateless, light-weight remote procedure call (RPC) protocol for Ethereum clients.
 lang: en
 sidebar: true
 ---
 
-In order for a web app to interact with the Ethereum blockchain (i.e. read blockchain data and/or send transactions to the network), it must connect to an Ethereum node.
+In order for a software application to interact with the Ethereum blockchain (by reading blockchain data and/or sending transactions to the network), it must connect to an Ethereum node.
 
-For this purpose, every Ethereum client implements the [JSON-RPC specification](http://www.jsonrpc.org/specification), so there are a uniform set of [methods](/developers/docs/apis/json-rpc/#json-rpc-methods) that applications can rely on.
+For this purpose, every Ethereum client implements a [JSON-RPC specification](http://www.jsonrpc.org/specification), so there are a uniform set of [methods](/developers/docs/apis/json-rpc/#json-rpc-methods) that applications can rely on.
 
 ## Prerequisites {#prerequisites}
 
-Beyond being familiar with how API endpoints can be used to fetch JSON data, it might be helpful to understand the [Ethereum stack](/developers/docs/ethereum-stack/) and [Ethereum clients](/developers/docs/nodes-and-clients/).
+You should be familiar with how JSON RPC API endpoints can be used to fetch data. It will also be helpful to understand the [Ethereum stack](/developers/docs/ethereum-stack/) and [Ethereum clients](/developers/docs/nodes-and-clients/).
 
-## Publish / Subscribe {#pub-sub}
+## Convenience Libraries {#convenience-libraries}
 
-Publish / subscribe (pub/sub) is a method of using JSON-RPC notifications to subscribe to Ethereum events without needing to poll for them:
-
-- [Geth v1.4](https://geth.ethereum.org/docs/rpc/pubsub)
-
-- [Hyperledger Besu 1.3](https://besu.hyperledger.org/en/stable/HowTo/Interact/APIs/RPC-PubSub/)
-
-## JavaScript API {#javascript-api}
-
-Several [JavaScript](/developers/docs/apis/javascript/#available-libraries) and [backend](/developers/docs/apis/backend/#available-libraries) libraries exist that conform to this specification, enabling developers to utilize up-to-date on-chain data while building [web3](/developers/docs/web2-vs-web3/) enabled [Dapps](/glossary/#dapp). Since they conform to a specification that all Ethereum clients have natively implemented, this data can safely be accessed by any end-user from whatever node they choose.
+While you may choose to interact directly with Ethereum clients via this JSON RPC API, there are often easier options for dapp developers. Many [JavaScript](/developers/docs/apis/javascript/#available-libraries) and [backend](/developers/docs/apis/backend/#available-libraries) API libraries exist to provide wrappers on top of the JSON RPC API. With these libraries, developers can write intuitive, one-line methods in the programming language of their choice to initialize JSON RPC requests (under the hood) that interact with Ethereum.
 
 ## JSON-RPC Endpoint {#json-rpc-endpoint}
 
 Ethereum clients each may utilize different programming languages when implementing the JSON-RPC specification. See individual client documentation for further details related to specific programming languages.
 
-## JSON-RPC support {#json-rpc-support}
+## JSON-RPC Support {#json-rpc-support}
 
 |                | cpp-ethereum | go-ethereum | py-ethereum |  parity  | hyperledger-besu |
 | -------------- | :----------: | :---------: | :---------: | :------: | :--------------: |
@@ -39,6 +31,16 @@ Ethereum clients each may utilize different programming languages when implement
 | HTTP           |   &#x2713;   |  &#x2713;   |  &#x2713;   | &#x2713; |     &#x2713;     |
 | IPC            |   &#x2713;   |  &#x2713;   |             | &#x2713; |                  |
 | WS             |              |  &#x2713;   |             | &#x2713; |     &#x2713;     |
+
+[View full list of Ethereum clients](/developers/docs/nodes-and-clients/#clients). We recommend checking the documentation of each client for the latest API support information.
+
+## Publish / Subscribe {#pub-sub}
+
+Publish / subscribe (pub/sub) is a method of using JSON-RPC notifications to subscribe to Ethereum events without needing to poll for them:
+
+- [Geth v1.4](https://geth.ethereum.org/docs/rpc/pubsub)
+
+- [Hyperledger Besu 1.3](https://besu.hyperledger.org/en/stable/HowTo/Interact/APIs/RPC-PubSub/)
 
 ## HEX value encoding {#hex-value-encoding}
 
@@ -126,7 +128,7 @@ A handful of core JSON-RPC methods require data from the Ethereum network, and f
 - [eth_getUncleByBlockHashAndIndex](#eth_getunclebyblockhashandindex)
 - [eth_getUncleByBlockNumberAndIndex](#eth_getunclebyblocknumberandindex)
 
-## JSON-RPC Methods {#json-rpc-methods}
+## JSON-RPC API Methods {#json-rpc-methods}
 
 ### web3_clientVersion {#web3_clientversion}
 
