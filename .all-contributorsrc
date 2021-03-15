@@ -3116,6 +3116,15 @@
         "bug",
         "content"
       ]
+    },
+    {
+      "login": "grmkris",
+      "name": "Kristjan Grm",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15545195?v=4",
+      "profile": "http://grmkris.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
