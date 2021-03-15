@@ -1,5 +1,5 @@
 ---
-title: JSON RPC API
+title: JSON-RPC API
 description: A stateless, light-weight remote procedure call (RPC) protocol for Ethereum clients.
 lang: en
 sidebar: true
@@ -11,11 +11,11 @@ For this purpose, every Ethereum client implements a [JSON-RPC specification](ht
 
 ## Prerequisites {#prerequisites}
 
-You should be familiar with how JSON RPC API endpoints can be used to fetch data. It will also be helpful to understand the [Ethereum stack](/developers/docs/ethereum-stack/) and [Ethereum clients](/developers/docs/nodes-and-clients/).
+You should be familiar with how JSON-RPC API endpoints can be used to fetch data. It will also be helpful to understand the [Ethereum stack](/developers/docs/ethereum-stack/) and [Ethereum clients](/developers/docs/nodes-and-clients/).
 
 ## Convenience Libraries {#convenience-libraries}
 
-While you may choose to interact directly with Ethereum clients via this JSON RPC API, there are often easier options for dapp developers. Many [JavaScript](/developers/docs/apis/javascript/#available-libraries) and [backend](/developers/docs/apis/backend/#available-libraries) API libraries exist to provide wrappers on top of the JSON RPC API. With these libraries, developers can write intuitive, one-line methods in the programming language of their choice to initialize JSON RPC requests (under the hood) that interact with Ethereum.
+While you may choose to interact directly with Ethereum clients via this JSON-RPC API, there are often easier options for dapp developers. Many [JavaScript](/developers/docs/apis/javascript/#available-libraries) and [backend](/developers/docs/apis/backend/#available-libraries) API libraries exist to provide wrappers on top of the JSON-RPC API. With these libraries, developers can write intuitive, one-line methods in the programming language of their choice to initialize JSON-RPC requests (under the hood) that interact with Ethereum.
 
 ## JSON-RPC Endpoint {#json-rpc-endpoint}
 
