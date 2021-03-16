@@ -9,7 +9,7 @@ const Aside = styled.aside`
   padding: 0rem;
   text-align: right;
   margin-bottom: 2rem;
-  overflow: scroll;
+  overflow-y: auto;
 `
 
 const OuterList = styled(motion.ul)`
