@@ -1,5 +1,5 @@
 
-# How to Write & Deploy an NFT
+# How to Write & Deploy an NFT (Part 1/3 of NFT tutorial series)
 
 This tutorial is Part 1 of a series on NFTs that will take you step by step on how to write and deploy a Non Fungible Token (ERC721 token) smart contract using Ethereum and Inter Planetary File System (IPFS). In Part II, we will describe how to mint an NFT using our smart contract, and in Part III, we will explain how to view your freshly minted NFT on Metamask!
 ##
