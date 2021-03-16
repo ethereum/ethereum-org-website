@@ -24,7 +24,7 @@ sidebar: true
 - [Kauri](https://kauri.io) _ Ethereum-നും അനുബന്ധ പ്രോജക്റ്റുകൾക്കുമായുള്ള സാങ്കേതിക ലേഖനങ്ങളും ട്യൂട്ടോറിയലുകളും _
 - [ Ethereum Foundation YouTube ](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _ വീഡിയോകളും Ethereum-നെ കുറിച്ചുള്ള സംസാരവും _
 - [ Ethereum വാർത്തയിലെ ആഴ്ച ](https://weekinethereumnews.com/) ആവാസവ്യവസ്ഥയിലുടനീളമുള്ള പ്രധാന സംഭവവികാസങ്ങൾ ഉൾക്കൊള്ളുന്ന പ്രതിവാര വാർത്താക്കുറിപ്പ്
-- [ ETH 2.0- ൽ പുതിയതെന്താണ് ](https://notes.ethereum.org/c/Sk8Zs--CQ) ETH 2.0 വികസനത്തെക്കുറിച്ചുള്ള ഒരു പതിവ് വാർത്താക്കുറിപ്പ്
+- [ ETH 2.0- ൽ പുതിയതെന്താണ് ](https://eth2.news) ETH 2.0 വികസനത്തെക്കുറിച്ചുള്ള ഒരു പതിവ് വാർത്താക്കുറിപ്പ്
 - [ ethresear.ch ഫോറം ](https://ethresear.ch/) _ ETH 2.0 നും അതിനുമുകളിലുള്ള Ethereum നെക്കുറിച്ചും ആഴത്തിലുള്ള സാങ്കേതിക ചർച്ചകൾ _
 - [ ETHGlobal ](https://ethglobal.co) _ ഒരു Ethereum hackathon series - നിങ്ങളുടെ അടുത്തുള്ള ഒരെണ്ണത്തിൽ പങ്കെടുക്കുക! _
 

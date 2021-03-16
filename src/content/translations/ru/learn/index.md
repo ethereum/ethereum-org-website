@@ -22,7 +22,7 @@ sidebar: true
 - [Kauri](https://kauri.io) _Технические статьи и руководства по Ethereum и связанным с ним проектам_
 - [YouTube Ethereum Foundation](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Видео и выступления о Ethereum_
 - [Week in Ethereum News](https://weekinethereumnews.com/) _Еженедельный бюллетень, охватывающий ключевые события в экосистеме_
-- [What’s new in ETH 2.0](https://notes.ethereum.org/c/Sk8Zs--CQ) _Периодический информационный бюллетень о разработке ETH 2.0_
+- [What’s new in ETH 2.0](https://eth2.news) _Периодический информационный бюллетень о разработке ETH 2.0_
 - [ETHGlobal](https://ethglobal.co) _Перечень хакатонов по Ethereum – посетите один из них рядом с вами!_
 
 ## Основы Ethereum {#ethereum-basics}

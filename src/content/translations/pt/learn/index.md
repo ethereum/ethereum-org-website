@@ -23,7 +23,7 @@ Além das informações nesta página, há muitos recursos construídos pela com
 - [Kauri](https://kauri.io) _Artigos técnicos e tutoriais para Ethereum e projetos relacionados_
 - [Youtube da Fundação Ethereum](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Vídeos e palestras sobre o Ethereum_
 - [Semanário de Notícias sobre o Ethereum](https://weekinethereumnews.com/) _Newsletter semanal sobre desenvolvimentos fundamentais em todo o ecossistema_
-- [O que há de novo no ETH 2.0](https://notes.ethereum.org/c/Sk8Zs--CQ) _Newsletter regular sobre o desenvolvimento em ETH 2.0_
+- [O que há de novo no ETH 2.0](https://eth2.news) _Newsletter regular sobre o desenvolvimento em ETH 2.0_
 - [ethresear.ch forum](https://ethresear.ch/) _Disussões mais profundas sobre Ethereum para ETH 2.0 e além_
 - [ETHGlobal](https://ethglobal.co) _Uma série de hackathons do Ethereum - participe num perto de si!_
 
