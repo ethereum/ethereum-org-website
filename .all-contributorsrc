@@ -3143,6 +3143,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "RonSherfey",
+      "name": "Ronnie Sherfey",
+      "avatar_url": "https://avatars.githubusercontent.com/u/77251516?v=4",
+      "profile": "http://reggienoble.eth",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
