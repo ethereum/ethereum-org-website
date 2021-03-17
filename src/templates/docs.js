@@ -51,7 +51,6 @@ const ContentContainer = styled.div`
 
 const DesktopTableOfContents = styled(TableOfContents)`
   padding-top: ${(props) => (props.isPageIncomplete ? `5rem` : `3rem`)};
-  margin-right: auto;
 `
 
 // Apply styles for classes within markdown here
