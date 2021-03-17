@@ -232,25 +232,7 @@ const SummaryPoint = styled.li`
   line-height: auto;
 `
 
-const SummaryBox = styled.div`
-  /* border: 1px solid ${(props) => props.theme.colors.border};
-  padding: 1.5rem;
-  padding-bottom: 0rem;
-  border-radius: 4px; */
-`
-
-const DesktopBreadcrumbs = styled(Breadcrumbs)`
-  margin-top: 0.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
-const MobileBreadcrumbs = styled(Breadcrumbs)`
-  margin-top: 0.5rem;
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
+const SummaryBox = styled.div``
 
 const StyledButtonDropdown = styled(ButtonDropdown)`
   margin-bottom: 2rem;
