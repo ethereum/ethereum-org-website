@@ -299,17 +299,17 @@ const Image = styled(Img)`
   right: 0;
   bottom: 0;
   background-size: cover;
-  max-width: ${(props) => (props.useCase === "dao" ? `572px` : `640px`)};
+  max-width: ${({ useCase }) =>
+    useCase === `dao` ? `572px` : useCase === `defi` ? `80%` : `640px`};
   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     width: 100%;
     height: 100%;
+    max-height: 340px;
+    max-width: ${({ useCase }) =>
+      useCase === "defi" ? "100%" : "min(405px, 98%)"};
     overflow: initial;
     align-self: center;
     margin: 0;
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    transform: scale(0.8);
-    margin: -1rem 0;
   }
 `
 
