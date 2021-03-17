@@ -35,7 +35,7 @@ Both account types have the ability to:
 
 - Creating an account has a cost because you're using network storage
 - Can only send transactions in response to receiving a transaction
-- Transactions from an external account to a contract account can trigger code which can execute many different actions, such as transfering tokens or even creating a new contract
+- Transactions from an external account to a contract account can trigger code which can execute many different actions, such as transferring tokens or even creating a new contract
 
 ## An account examined {#an-account-examined}
 
@@ -85,7 +85,7 @@ Repeat passphrase:
 
 It is possible to derive new public keys from your private key but you cannot derive a private key from public keys. This means it's vital to keep a private key safe and, as the name suggests, **PRIVATE**.
 
-You need a private key to sign messages and transactions which outputs a signature. Others can then take the signature to derive your public key, proving the author of the message. In your application, you can use a javascript library to send transactions to the network.
+You need a private key to sign messages and transactions which output a signature. Others can then take the signature to derive your public key, proving the author of the message. In your application, you can use a javascript library to send transactions to the network.
 
 <!-- **WEB3JS example**
 
@@ -122,7 +122,7 @@ TODO: add a contract address example-->
 
 Most users will want to interact with their account via a wallet. Note that an account is not a wallet. A wallet is the keypair associated with a user-owned account, which allow a user to make transactions from or manage the account
 
-For dapp development, you'll want access to dummy accounts with test ETH so you can experiment. When you create a local chain, you'll get test accounts wth fake ETH which you can then import using MetaMask and use on your dapp's frontend. -->
+For dapp development, you'll want access to dummy accounts with test ETH so you can experiment. When you create a local chain, you'll get test accounts with fake ETH which you can then import using MetaMask and use on your dapp's frontend. -->
 
 ## A note on wallets {#a-note-on-wallets}
 

@@ -300,15 +300,16 @@ const Image = styled(Img)`
   bottom: 0;
   background-size: cover;
   max-width: ${(props) => (props.useCase === "dao" ? `572px` : `640px`)};
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-left: 2rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     width: 100%;
     height: 100%;
     overflow: initial;
     align-self: center;
     margin: 0;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    transform: scale(0.8);
+    margin: -1rem 0;
   }
 `
 
@@ -361,6 +362,7 @@ const TitleCard = styled.div`
     top: 0rem;
     background: ${(props) => props.theme.colors.ednBackground};
     box-shadow: none;
+    margin-top: 0;
   }
 `
 

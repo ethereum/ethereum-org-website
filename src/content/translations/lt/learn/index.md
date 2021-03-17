@@ -25,7 +25,7 @@ Be šiame puslapyje pateikiamos informacijos yra kitų bendruomenės sukurtų i�
 - [Kauri](https://kauri.io) _Techniniai straipsniai ir mokymo programos Ethereum ir susijusiems projektams_
 - [Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Vaizdo įrašai ir paskaitos apie Ethereum_
 - [Week in Ethereum News](https://weekinethereumnews.com/) _Savaitinis informacinis biuletenis, apimantis pagrindinius ekosistemos pokyčius_
-- [What’s new in ETH 2.0](https://notes.ethereum.org/c/Sk8Zs--CQ) _Reguliarusis informacinis biuletenis apie ETH 2.0 vystymą_
+- [What’s new in ETH 2.0](https://eth2.news) _Reguliarusis informacinis biuletenis apie ETH 2.0 vystymą_
 - [ethresear.ch forum](https://ethresear.ch/) _Gilesnės techninės diskusijos apie Ethereum, skirtą ETH 2.0 ir vėlesnėms versijoms_
 - [ETHGlobal](https://ethglobal.co) _Ethereum hakatonai – apsilankyk viename iš jų netoli savo namų!_
 

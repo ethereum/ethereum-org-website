@@ -84,7 +84,7 @@ In the most simplistic terms, functions can get information or set information i
 There are two types of function calls:
 
 - `internal` – these don't create an EVM call
-  - Intenal functions and state variables can only be accessed internally (i.e. from within the current contract or contracts deriving from it)
+  - Internal functions and state variables can only be accessed internally (i.e. from within the current contract or contracts deriving from it)
 - `external` – these do create an EVM call
   - External functions are part of the contract interface, which means they can be called from other contracts and via transactions. An external function `f` cannot be called internally (i.e. `f()` does not work, but `this.f()` works).
 

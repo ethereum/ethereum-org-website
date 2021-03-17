@@ -24,7 +24,7 @@ sidebar: true
 - [Kauri](https://kauri.io) _المقالات الفنية والدروس الخاصة بإيثريوم والمشاريع ذات الصلة_
 - [ Ethereum Foundation YouTub](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g)_مقاطع فيديو ونقاشات حول إيثريوم _
 - [Week in Ethereum News ](https://weekinethereumnews.com/)_نشرة إخبارية أسبوعية تغطي التطورات الرئيسية في النظام البيئي لإيثريوم_
-- [ما الجديد في ETH 2.0](https://notes.ethereum.org/c/Sk8Zs--CQ)_ نشرة إخبارية منتظمة حول تطور ETH 2.0_
+- [ما الجديد في ETH 2.0](https://eth2.news)_ نشرة إخبارية منتظمة حول تطور ETH 2.0_
 - [ethresear.ch forum](https://ethresear.ch/) _نقاشات فنية أعمق عن إيثريوم لـ ETH 2.0 وما بعده_
 - [ ETHGlobal](https://ethglobal.co)_ سلسلة مسابقات " هاكثون" خاصه بإيثريوم - شارك بالقريب منك_
 

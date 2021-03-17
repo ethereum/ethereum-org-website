@@ -3096,6 +3096,53 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "intelliot",
+      "name": "Elliot Lee",
+      "avatar_url": "https://avatars.githubusercontent.com/u/81505?v=4",
+      "profile": "https://twitter.com/intelliot",
+      "contributions": [
+        "content",
+        "bug"
+      ]
+    },
+    {
+      "login": "v-gar",
+      "name": "Viktor Garske",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11472697?v=4",
+      "profile": "https://www.v-gar.de/",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "grmkris",
+      "name": "Kristjan Grm",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15545195?v=4",
+      "profile": "http://grmkris.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "macladson",
+      "name": "Mac L",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58379419?v=4",
+      "profile": "https://github.com/macladson",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "BruceMacD",
+      "name": "Bruce MacDonald",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5853428?v=4",
+      "profile": "http://bruce-macdonald.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
