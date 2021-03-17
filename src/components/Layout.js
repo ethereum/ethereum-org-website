@@ -6,13 +6,10 @@ import styled from "styled-components"
 import "../styles/layout.css"
 import { lightTheme, darkTheme, GlobalStyle } from "../theme"
 
-import BannerNotification from "./BannerNotification"
 import Footer from "./Footer"
-import Link from "./Link"
 import Nav from "./Nav"
 import SideNav from "./SideNav"
 import SideNavMobile from "./SideNavMobile"
-import Translation from "./Translation"
 import TranslationBanner from "./TranslationBanner"
 
 import { isLangRightToLeft } from "../utils/translations"
@@ -49,10 +46,6 @@ const Main = styled.main`
   overflow: visible;
   width: 100%;
   flex-grow: 1;
-`
-
-const StyledBannerNotification = styled(BannerNotification)`
-  text-align: center;
 `
 
 const Layout = (props) => {
@@ -94,8 +87,6 @@ const Layout = (props) => {
     (isPageContentEnglish && !isPageLanguageEnglish)
 
   const path = props.path
-  const shouldShowBanner =
-    path.includes("/eth2/") && !path.includes("/eth2/deposit-contract/")
 
   return (
     <IntlProvider
@@ -122,15 +113,6 @@ const Layout = (props) => {
             <MainContainer>
               {shouldShowSideNav && <SideNav path={path} />}
               <MainContent>
-                {shouldShowBanner && (
-                  <StyledBannerNotification shouldShow={shouldShowBanner}>
-                    <Translation id="banner-staking-1" />,{" "}
-                    <Link to="/eth2/deposit-contract/">
-                      <Translation id="banner-staking-2" />
-                    </Link>
-                    .
-                  </StyledBannerNotification>
-                )}
                 <Main>{props.children}</Main>
               </MainContent>
             </MainContainer>

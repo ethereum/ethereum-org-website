@@ -24,7 +24,7 @@ sidebar: true
 - [Kauri](https://kauri.io) _以太坊技术文章、教程、相关项目_
 - [以太坊基金会 YouTube 频道](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _与以太坊相关的视频、演讲_
 - [以太坊周报](https://weekinethereumnews.com/) _包含过去一周以太坊生态中各个方面的重要进展_
-- [ETH 2.0 最新进度](https://notes.ethereum.org/c/Sk8Zs--CQ) _ETH 2.0 开发进度的定期通报_
+- [ETH 2.0 最新进度](https://eth2.news) _ETH 2.0 开发进度的定期通报_
 - [ethresearch 论坛](https://ethresear.ch/) _以太坊上关于 ETH2.0 和后续版本更深入的技术讨论_
 - [ETHGlobal](https://ethglobal.co) _以太坊黑客马拉松活动——赶快参与您周边的黑客松吧！_
 

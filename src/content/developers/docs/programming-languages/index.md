@@ -8,7 +8,7 @@ sidebar: true
 A common misconception is that developers must write smart contracts in order to build on Ethereum. This is false.
 One of the beauties of the Ethereum network and community is that you're able to [participate](/community/) in just about any programming language.
 
-Ethereum and it's community embraces open source. You can find community projects - client implementations, APIs, development frameworks, testing tools - in a wide variety of languages.
+Ethereum and its community embrace open source. You can find community projects - client implementations, APIs, development frameworks, testing tools - in a wide variety of languages.
 
 <!-- Often certain languages have an certain advantage depending on the use case -->
 
@@ -24,4 +24,10 @@ Select your language of choice to find projects, resources, and virtual communit
 - [Ethereum for .NET developers](/en/developers/docs/programming-languages/dot-net/)
 - [Ethereum for Delphi developers](/en/developers/docs/programming-languages/delphi/)
 
-Don't see your language here? Request a new page by [opening an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
+### What if my language is not supported {#other-lang}
+
+If you want to link to resources or point to a virtual community for an additional programming language you can request a new page by [opening an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
+
+If you just want to write code to interface with the blockchain using a currently unsupported language
+you can use the [JSON-RPC interface](/developers/docs/apis/json-rpc/) to connect to the Ethereum network. Any programming 
+language that can use TCP/IP can use this interface.

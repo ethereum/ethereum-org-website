@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "2.18.0",
+  "version": "2.19.1",
   "description": "Website of ethereum.org",
   "main": "index.js",
   "repository": "git@github.com:ethereum/ethereum-org-website.git",
@@ -75,7 +75,7 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "generate-heading-ids": "node src/scripts/generate-heading-ids.js",
     "merge-translations": "node src/scripts/merge-translations.js",
-    "start": "yarn merge-translations && gatsby develop",
+    "start": "yarn merge-translations && yarn copy-contributors && gatsby develop",
     "start:static": "gatsby build && gatsby serve",
     "serve": "gatsby serve",
     "test": "jest"

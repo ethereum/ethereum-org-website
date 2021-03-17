@@ -19,7 +19,7 @@ Pentru a te ajuta să înțelegi mai bine această pagină, îți recomandăm s�
 
 O tranzacție Ethereum se referă la o acțiune inițiată de un cont deținut din exterior, cu alte cuvinte un cont gestionat de o persoană, nu de un contract. De exemplu, dacă Bob trimite lui Alice 1 ETH, contul lui Bob, trebuie debitat, iar cel al lui Alice trebuie creditat. Această acțiune care schimbă starea, are loc în cadrul unei tranzacții.
 
-![Diagramă care arată o tranzacție care cauzează modificarea stării](./tx.png) _Diagrama adaptată din [EVM Ethereum ilustrată](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagramă care arată o tranzacție care cauzează modificarea stării](../../../../../developers/docs/nodes-and-clients/tx.png) _Diagrama adaptată din [EVM Ethereum ilustrată](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Tranzacțiile, care schimbă starea EVM, trebuie difuzate către întreaga rețea. Orice nod poate difuza o cerere, pentru ca o tranzacție să fie executată pe EVM; după aceasta, un miner va executa tranzacția și va propaga modificarea stării rezultate către restul rețelei.
 
@@ -123,7 +123,7 @@ Minerul care procesează tranzacția va primi ** + 0,0042 ETH**
 
 Gazul este necesar și pentru orice interacțiune cu contractul inteligent.
 
-![Diagramă care arată modul în care este rambursat gazul neutilizat](./gas-tx.png) _Diagramă adaptată din [EVM Ethereum ilustrat ](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagramă care arată modul în care este rambursat gazul neutilizat](../../../../../developers/docs/nodes-and-clients/gas-tx.png) _Diagramă adaptată din [EVM Ethereum ilustrat ](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Orice gaz neutilizat într-o tranzacție este rambursat în contul utilizatorului.
 

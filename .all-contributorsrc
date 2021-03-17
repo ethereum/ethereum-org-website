@@ -3059,6 +3059,90 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "stuz5000",
+      "name": "Stuart Reynolds",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7799980?v=4",
+      "profile": "https://github.com/stuz5000",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "glebodic",
+      "name": "Gwenael Le Bodic",
+      "avatar_url": "https://avatars.githubusercontent.com/u/18246298?v=4",
+      "profile": "https://github.com/glebodic",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "whoanuragverma",
+      "name": "Anurag Verma",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55322425?v=4",
+      "profile": "https://github.com/whoanuragverma",
+      "contributions": [
+        "bug",
+        "code"
+      ]
+    },
+    {
+      "login": "citizen-stig",
+      "name": "Nikolai Golub",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3115300?v=4",
+      "profile": "http://golub.pro/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "intelliot",
+      "name": "Elliot Lee",
+      "avatar_url": "https://avatars.githubusercontent.com/u/81505?v=4",
+      "profile": "https://twitter.com/intelliot",
+      "contributions": [
+        "content",
+        "bug"
+      ]
+    },
+    {
+      "login": "v-gar",
+      "name": "Viktor Garske",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11472697?v=4",
+      "profile": "https://www.v-gar.de/",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "grmkris",
+      "name": "Kristjan Grm",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15545195?v=4",
+      "profile": "http://grmkris.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "macladson",
+      "name": "Mac L",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58379419?v=4",
+      "profile": "https://github.com/macladson",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "BruceMacD",
+      "name": "Bruce MacDonald",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5853428?v=4",
+      "profile": "http://bruce-macdonald.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

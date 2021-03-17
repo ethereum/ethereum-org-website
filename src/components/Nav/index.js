@@ -289,7 +289,17 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
     },
     {
       text: "community",
-      to: "/community/",
+      ariaLabel: "community-menu",
+      items: [
+        {
+          text: "ethereum-community",
+          to: "/community/",
+        },
+        {
+          text: "grants",
+          to: "/community/grants/",
+        },
+      ],
     },
   ]
   const ednLinks = [

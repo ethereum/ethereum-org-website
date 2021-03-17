@@ -3,6 +3,16 @@ const languageMetadata = require("../data/translations.json")
 
 const supportedLanguages = Object.keys(languageMetadata)
 
+const hasTutorials = (lang) => {
+  const metadata = languageMetadata[lang]
+  if (!metadata) {
+    consoleError(`No metadata found for language: ${lang}`)
+    return
+  }
+  // Tutorials are included in v2.2: https://crowdin.com/project/ethereumfoundation/settings#files
+  return metadata.version >= 2.2
+}
+
 const consoleError = (message) => {
   const { NODE_ENV } = process.env
   if (NODE_ENV === "development") {
@@ -66,6 +76,7 @@ const translateMessageId = (id, intl) => {
 // Must export using ES5 to import in gatsby-node.js
 module.exports.languageMetadata = languageMetadata
 module.exports.supportedLanguages = supportedLanguages
+module.exports.hasTutorials = hasTutorials
 module.exports.getLangContentVersion = getLangContentVersion
 module.exports.getDefaultMessage = getDefaultMessage
 module.exports.isLangRightToLeft = isLangRightToLeft

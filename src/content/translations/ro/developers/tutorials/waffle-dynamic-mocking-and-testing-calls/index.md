@@ -219,7 +219,7 @@ Să descompunem acest test în părți:
 
 Suntem gata să dăm drumul fiarei:
 
-![Un test care trece](test-one.png)
+![Un test care trece](../../../../../developers/tutorials/waffle-dynamic-mocking-and-testing-calls/test-one.png)
 
 Deci, testul funcționează, dar... mai este loc pentru îmbunătățiri. Funcția `balanceOf()` va returna întotdeauna 99999. Putem îmbunătăți acest lucru prin specificarea unui portofel pentru care funcția ar trebui să returneze ceva - la del ca un contract real:
 
@@ -245,7 +245,7 @@ it("returnează true dacă portofelul are cel puțin 1000001 tokenuri", async ()
 
 Rulează testele...
 
-![Două teste care trec](test-two.png)
+![Două teste care trec](../../../../../developers/tutorials/waffle-dynamic-mocking-and-testing-calls/test-two.png)
 
 ...și iată! Contractul nostru pare să funcționeze conform scopului :)
 
@@ -275,7 +275,7 @@ it("contractul nostru este verificat dacă a apelat balanceOf cu un anumit porto
 
 Să verificăm dacă testele sunt corecte:
 
-![Trei teste care trec](test-three.png)
+![Trei teste care trec](../../../../../developers/tutorials/waffle-dynamic-mocking-and-testing-calls/test-three.png)
 
 Super, toate testele sunt verzi.
 

@@ -6,7 +6,7 @@ tags: ["smart contracts", "solidity", "Waffle", "testing"]
 skill: beginner
 lang: en
 sidebar: true
-published: 2021-26-02
+published: 2021-02-26
 ---
 
 ## In this tutorial you'll learn how to
