@@ -866,6 +866,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://www.v-gar.de/"><img src="https://avatars.githubusercontent.com/u/11472697?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Viktor Garske</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Av-gar" title="Bug reports">🐛</a> <a href="#content-v-gar" title="Content">🖋</a></td>
     <td align="center"><a href="http://grmkris.com"><img src="https://avatars.githubusercontent.com/u/15545195?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kristjan Grm</b></sub></a><br /><a href="#content-grmkris" title="Content">🖋</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/macladson"><img src="https://avatars.githubusercontent.com/u/58379419?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mac L</b></sub></a><br /><a href="#content-macladson" title="Content">🖋</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
