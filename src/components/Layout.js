@@ -22,7 +22,8 @@ const ContentContainer = styled.div`
   flex-flow: column;
 
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    max-width: ${(props) => props.theme.variables.maxPageWidth};
+    max-width: ${({ theme, fullWidth }) =>
+      fullWidth ? `100%` : theme.variables.maxPageWidth};
   }
 `
 
@@ -103,7 +104,7 @@ const Layout = (props) => {
             isPageRightToLeft={isPageRightToLeft}
             originalPagePath={intl.originalPath}
           />
-          <ContentContainer>
+          <ContentContainer fullWidth={shouldShowSideNav}>
             <Nav
               handleThemeChange={handleThemeChange}
               isDarkTheme={isDarkTheme}

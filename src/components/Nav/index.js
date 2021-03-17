@@ -32,12 +32,19 @@ const StyledNav = styled.nav`
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* TODO use theme variable */
 `
 
+const SubNavRow = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: ${(props) => props.theme.colors.ednBackground};
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
+`
+
 const SubNav = styled.nav`
+  width: min(${({ theme }) => theme.variables.maxPageWidth}, 100%);
   padding: 1rem 2rem;
   box-sizing: border-box;
   display: flex;
-  background: ${(props) => props.theme.colors.ednBackground};
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
   /* TODO sort out mobile */
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     display: none;
@@ -419,17 +426,19 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       </StyledNav>
 
       {shouldShowSubNav && (
-        <SubNav>
-          {ednLinks.map((link, idx) => (
-            <NavLink
-              key={idx}
-              to={link.to}
-              isPartiallyActive={link.isPartiallyActive}
-            >
-              <Translation id={link.text} />
-            </NavLink>
-          ))}
-        </SubNav>
+        <SubNavRow>
+          <SubNav>
+            {ednLinks.map((link, idx) => (
+              <NavLink
+                key={idx}
+                to={link.to}
+                isPartiallyActive={link.isPartiallyActive}
+              >
+                <Translation id={link.text} />
+              </NavLink>
+            ))}
+          </SubNav>
+        </SubNavRow>
       )}
     </NavContainer>
   )

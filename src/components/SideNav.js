@@ -20,6 +20,7 @@ const Nav = styled.nav`
   height: calc(100vh - 80px); /* TODO take footer into account for height? */
   width: calc((100% - 1448px) / 2 + 298px);
   min-width: 298px;
+  max-width: 370px;
   overflow-y: auto;
   transition: all 0.2s ease-in-out;
   transition: transform 0.2s ease;

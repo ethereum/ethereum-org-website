@@ -8,10 +8,17 @@ import Translation from "./Translation"
 import Link from "./Link"
 import Icon from "./Icon"
 
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`
+
 const StyledFooter = styled.footer`
   padding-top: 3rem;
   padding-bottom: 4rem;
   padding: 1rem 2rem;
+  width: min(${({ theme }) => theme.variables.maxPageWidth}, 100%);
 `
 
 const FooterTop = styled.div`
@@ -315,44 +322,46 @@ const Footer = () => {
         }
       `}
       render={(data) => (
-        <StyledFooter>
-          <FooterTop>
-            <LastUpdated>
-              <Translation id="website-last-updated" />:{" "}
-              {getLocaleTimestamp(
-                intl.locale,
-                data.allSiteBuildMetadata.edges[0].node.buildTime
-              )}
-            </LastUpdated>
-            <SocialIcons>
-              {socialLinks.map((link, idx) => {
-                return (
-                  <Link to={link.to} hideArrow={true} key={idx}>
-                    <SocialIcon name={link.icon} size="36" />
-                  </Link>
-                )
-              })}
-            </SocialIcons>
-          </FooterTop>
-          <LinkGrid>
-            {linkSections.map((section, idx) => (
-              <LinkSection key={idx}>
-                <SectionHeader>
-                  <Translation id={section.title} />
-                </SectionHeader>
-                <List>
-                  {section.links.map((link, linkIdx) => (
-                    <ListItem key={linkIdx}>
-                      <FooterLink to={link.to} isPartiallyActive={false}>
-                        <Translation id={link.text} />
-                      </FooterLink>
-                    </ListItem>
-                  ))}
-                </List>
-              </LinkSection>
-            ))}
-          </LinkGrid>
-        </StyledFooter>
+        <Container>
+          <StyledFooter>
+            <FooterTop>
+              <LastUpdated>
+                <Translation id="website-last-updated" />:{" "}
+                {getLocaleTimestamp(
+                  intl.locale,
+                  data.allSiteBuildMetadata.edges[0].node.buildTime
+                )}
+              </LastUpdated>
+              <SocialIcons>
+                {socialLinks.map((link, idx) => {
+                  return (
+                    <Link to={link.to} hideArrow={true} key={idx}>
+                      <SocialIcon name={link.icon} size="36" />
+                    </Link>
+                  )
+                })}
+              </SocialIcons>
+            </FooterTop>
+            <LinkGrid>
+              {linkSections.map((section, idx) => (
+                <LinkSection key={idx}>
+                  <SectionHeader>
+                    <Translation id={section.title} />
+                  </SectionHeader>
+                  <List>
+                    {section.links.map((link, linkIdx) => (
+                      <ListItem key={linkIdx}>
+                        <FooterLink to={link.to} isPartiallyActive={false}>
+                          <Translation id={link.text} />
+                        </FooterLink>
+                      </ListItem>
+                    ))}
+                  </List>
+                </LinkSection>
+              ))}
+            </LinkGrid>
+          </StyledFooter>
+        </Container>
       )}
     />
   )
