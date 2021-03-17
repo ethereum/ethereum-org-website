@@ -24,7 +24,7 @@ Selain informasi yang tersedia di halaman ini, masih banyak lagi sumber informas
 - [Kauri](https://kauri.io) _Artikel teknis dan tutorial untuk Ethereum dan proyek terkait_
 - [Kanal Youtube Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Video informasi dan seminar tentang Ethereum_
 - [Week in Ethereum News](https://weekinethereumnews.com/) _Sebuah newsletter yang memberitakan tentang perkembangan inti yang terjadi di ekosistem Ethereum_
-- [What’s new in ETH 2.0](https://notes.ethereum.org/c/Sk8Zs--CQ) _Sebuah newsletter yang memberitakan tentang perkembangan ETH 2.0_
+- [What’s new in ETH 2.0](https://eth2.news) _Sebuah newsletter yang memberitakan tentang perkembangan ETH 2.0_
 - [ethresear.ch forum](https://ethresear.ch/) _Diskusi teknis yang lebih dalam mengenai Ethereum untuk ETH 2.0 dan rencana di masa depan_
 - [ETHGlobal](https://ethglobal.co) _Hackathon bertema Ethereum yang diadakan di berbagai kota di seluruh dunia - kunjungi yang paling dekat dengan kotamu!_
 

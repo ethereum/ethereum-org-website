@@ -22,7 +22,7 @@ Na mgbakwunye na ozi dị na peeji a, enwere ọtụtụ ihe enyere obodo aka kw
 - [Kauri](https://kauri.io) _Ederede nka na ụzụ na nkuzi maka Ethereum na arụmaoru metụtara ya_
 - [Mmepe Ethereum na YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Vidio na okwu banyere Ethereum_
 - [Izu uka na Akụkọ uwa Ethereum ](https://weekinethereumnews.com/)_Akwụkwọ akụkọ uwa izu nke na-ekpuchi mmepe di mkpa gafere ihe di ndu n' ebe obibi_
-- [Kedu ihe dị ọhụrụ na ETH 2.0](https://notes.ethereum.org/c/Sk8Zs--CQ) _Akwụkwọ akụkọ uwa mgbe niile gbasara mmepe ETH 2.0_
+- [Kedu ihe dị ọhụrụ na ETH 2.0](https://eth2.news) _Akwụkwọ akụkọ uwa mgbe niile gbasara mmepe ETH 2.0_
 - [ETHGlobal](https://ethglobal.co) _Usoro Ethereum hackathon -gaa otu nke dị gị nso!_
 
   ## Ethereum kachasi mkpa {#ethereum-basics}

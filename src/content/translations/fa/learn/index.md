@@ -28,7 +28,7 @@ sidebar: true
   _گفتگو‌ها و ویدیو‌ها درباره اتریوم_
 - [Week in Ethereum News](https://weekinethereumnews.com/)
   _یک خبرنامه هفتگی درباره توسعه‌های اکوسیستم_
-- [What’s new in ETH 2.0](https://notes.ethereum.org/c/Sk8Zs--CQ)
+- [What’s new in ETH 2.0](https://eth2.news)
   _یک خبرنامه درباره توسعه ETH 2.0_
 - [ethresear.ch forum](https://ethresear.ch/)
   _مباحث فنی عمیق‌تر در اتریوم برای ETH 2.0 و ماورای آن_
