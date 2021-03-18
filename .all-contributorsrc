@@ -3125,6 +3125,61 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "macladson",
+      "name": "Mac L",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58379419?v=4",
+      "profile": "https://github.com/macladson",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "BruceMacD",
+      "name": "Bruce MacDonald",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5853428?v=4",
+      "profile": "http://bruce-macdonald.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "RonSherfey",
+      "name": "Ronnie Sherfey",
+      "avatar_url": "https://avatars.githubusercontent.com/u/77251516?v=4",
+      "profile": "http://reggienoble.eth",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "a1irahman",
+      "name": "Ali Rahman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46408722?v=4",
+      "profile": "https://github.com/a1irahman",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "erikvdp",
+      "name": "Erik Vandeputte",
+      "avatar_url": "https://avatars.githubusercontent.com/u/203481?v=4",
+      "profile": "https://github.com/erikvdp",
+      "contributions": [
+        "content",
+        "bug"
+      ]
+    },
+    {
+      "login": "tmlee",
+      "name": "TM Lee",
+      "avatar_url": "https://avatars.githubusercontent.com/u/110264?v=4",
+      "profile": "https://www.coingecko.com",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,

@@ -25,7 +25,7 @@ Ngoài thông tin trên trang này, còn có nhiều tài nguyên do cộng đ�
 - [Kauri](https://kauri.io) _Các bài viết và hướng dẫn kỹ thuật cho Ethereum và các dự án liên quan_
 - [Video trên YouTube về Nền tảng Ethereum](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _và thảo luận về Ethereum_
 - [Tin tức về Ethereum trong tuần](https://weekinethereumnews.com/) _Một bản tin hằng tuần bao gồm các phát triển quan trọng trong hệ sinh thái_
-- [Những tính năng mới trong ETH 2.0](https://notes.ethereum.org/c/Sk8Zs--CQ) _Bản tin định kỳ xuyên về sự phát triển ETH 2.0_
+- [Những tính năng mới trong ETH 2.0](https://eth2.news) _Bản tin định kỳ xuyên về sự phát triển ETH 2.0_
 - [Diễn đàn ethresear.ch](https://ethresear.ch/) _Thảo luận kỹ thuật sâu hơn về Ethereum cho ETH 2.0 và hơn thế nữa_
 - [ETHGlobal](https://ethglobal.co) _Một loạt hackathon Ethereum - tham dự một nơi gần bạn!_
 

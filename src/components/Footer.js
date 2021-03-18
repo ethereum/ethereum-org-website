@@ -271,7 +271,7 @@ const Footer = () => {
         },
         {
           to: "/about/#open-jobs",
-          text: "Jobs",
+          text: "jobs",
         },
         {
           to: "/en/contributing/",

@@ -25,7 +25,7 @@ sidebarDepth: 1
 - [Kauri](https://kauri.io) _イーサリアムと関連プロジェクトに関する技術記事とチュートリアル_
 - [Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _イーサリアムに関するビデオとプレゼンテーション_
 - [Week in Ethereum News](https://weekinethereumnews.com/) _エコシステム全体の開発を取り扱うウィークリーニュースレター_
-- [What’s new in ETH 2.0](https://notes.ethereum.org/c/Sk8Zs--CQ) _ETH 2.0 の開発状況に関する定期ニュースレター_
+- [What’s new in ETH 2.0](https://eth2.news) _ETH 2.0 の開発状況に関する定期ニュースレター_
 - [ethresear.ch forum](https://ethresear.ch/) _ETH 2.0 以降の Ethereum に関する深い技術的なディスカッション_
 - [ETHGlobal](https://ethglobal.co) _イーサリアムハッカソン - 近くで開催されるハッカソンに出場してみては?!_
 
