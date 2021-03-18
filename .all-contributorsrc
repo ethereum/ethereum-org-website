@@ -3161,6 +3161,16 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "erikvdp",
+      "name": "Erik Vandeputte",
+      "avatar_url": "https://avatars.githubusercontent.com/u/203481?v=4",
+      "profile": "https://github.com/erikvdp",
+      "contributions": [
+        "content",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
