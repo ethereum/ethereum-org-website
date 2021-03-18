@@ -870,6 +870,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/macladson"><img src="https://avatars.githubusercontent.com/u/58379419?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mac L</b></sub></a><br /><a href="#content-macladson" title="Content">🖋</a></td>
     <td align="center"><a href="http://bruce-macdonald.com"><img src="https://avatars.githubusercontent.com/u/5853428?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Bruce MacDonald</b></sub></a><br /><a href="#content-BruceMacD" title="Content">🖋</a></td>
     <td align="center"><a href="http://reggienoble.eth"><img src="https://avatars.githubusercontent.com/u/77251516?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ronnie Sherfey</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=RonSherfey" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/a1irahman"><img src="https://avatars.githubusercontent.com/u/46408722?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ali Rahman</b></sub></a><br /><a href="#content-a1irahman" title="Content">🖋</a></td>
   </tr>
 </table>
 
