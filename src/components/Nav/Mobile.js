@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 import { motion } from "framer-motion"
 
+import NakedButton from "../NakedButton"
 import Translation from "../Translation"
 import Icon from "../Icon"
 import Link from "../Link"
@@ -10,6 +11,25 @@ import Search from "../Search"
 import Emoji from "../Emoji"
 import { NavLink } from "../../components/SharedStyledComponents"
 import { translateMessageId } from "../../utils/translations"
+
+const Container = styled.div`
+  display: none;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    display: flex;
+  }
+`
+
+const MenuIcon = styled(Icon)`
+  fill: ${(props) => props.theme.colors.text};
+`
+
+const MenuButton = styled(NakedButton)`
+  margin-left: 1rem;
+`
+
+const SearchIcon = styled(MenuIcon)`
+  margin-right: 1rem;
+`
 
 const MobileModal = styled(motion.div)`
   position: fixed;
@@ -179,10 +199,6 @@ const BottomItemText = styled.div`
   }
 `
 
-const MenuIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.text};
-`
-
 const BlankSearchState = styled.div`
   color: ${(props) => props.theme.colors.text};
   background: ${(props) => props.theme.colors.searchBackgroundEmpty};
@@ -211,7 +227,19 @@ const MobileNavMenu = ({
 
   const isOpen = isMenuOpen || isSearchOpen
   return (
-    <>
+    <Container>
+      <MenuButton
+        onClick={() => toggleMenu("search")}
+        aria-label={translateMessageId("aria-toggle-search-button", intl)}
+      >
+        <SearchIcon name="search" />
+      </MenuButton>
+      <MenuButton
+        onClick={() => toggleMenu("menu")}
+        aria-label={translateMessageId("aria-toggle-menu-button", intl)}
+      >
+        <MenuIcon name="menu" />
+      </MenuButton>
       <MobileModal
         animate={isOpen ? "open" : "closed"}
         variants={mobileModalVariants}
@@ -219,6 +247,7 @@ const MobileNavMenu = ({
         onClick={toggleMenu}
       />
       <MenuContainer
+        aria-hidden={isMenuOpen ? false : true}
         animate={isMenuOpen ? "open" : "closed"}
         variants={mobileMenuVariants}
         initial="closed"
@@ -301,7 +330,7 @@ const MobileNavMenu = ({
           <Translation id="search-box-blank-state-text" />
         </BlankSearchState>
       </SearchContainer>
-    </>
+    </Container>
   )
 }
 

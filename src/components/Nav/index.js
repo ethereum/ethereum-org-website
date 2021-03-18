@@ -54,9 +54,6 @@ const NavContent = styled.div`
     justify-content: space-between;
   }
 `
-const NavMobileButton = styled(NakedButton)`
-  margin-left: 1rem;
-`
 
 const InnerContent = styled.div`
   display: flex;
@@ -129,26 +126,6 @@ const ThemeToggle = styled(NakedButton)`
 
 const NavIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.text};
-`
-
-const MenuIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.text};
-  display: none;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: block;
-    cursor: pointer;
-  }
-`
-
-const MobileIcons = styled.div`
-  display: none;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: flex;
-  }
-`
-
-const SearchIcon = styled(MenuIcon)`
-  margin-right: 1rem;
 `
 
 // TODO display page title on mobile
@@ -393,24 +370,8 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
             toggleTheme={handleThemeChange}
             linkSections={mobileLinkSections}
           />
-          <MobileIcons>
-            <NavMobileButton
-              onClick={() => handleMenuToggle("search")}
-              aria-label={translateMessageId("aria-toggle-search-button", intl)}
-            >
-              <SearchIcon name="search" />
-            </NavMobileButton>
-
-            <NavMobileButton
-              onClick={() => handleMenuToggle("menu")}
-              aria-label={translateMessageId("aria-toggle-menu-button", intl)}
-            >
-              <MenuIcon name="menu" />
-            </NavMobileButton>
-          </MobileIcons>
         </NavContent>
       </StyledNav>
-
       {shouldShowSubNav && (
         <SubNav>
           {ednLinks.map((link, idx) => (
