@@ -3171,6 +3171,15 @@
         "content",
         "bug"
       ]
+    },
+    {
+      "login": "tmlee",
+      "name": "TM Lee",
+      "avatar_url": "https://avatars.githubusercontent.com/u/110264?v=4",
+      "profile": "https://www.coingecko.com",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
