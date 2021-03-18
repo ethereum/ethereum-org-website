@@ -95,7 +95,7 @@ There are many efforts underway to make Ethereum more “scalable” by improvin
 
 ### Plasma {#plasma}
 
-- [Understanding Plasma, Part 1: The Basics](https://www.theblockcrypto.com/2019/02/07/understanding-plasma-part-1-the-basics/) _Feb 7, 2019 - Daniel Goldman_
+- [Understanding Plasma, Part 1: The Basics](https://www.theblockcrypto.com/post/10793/understanding-plasma-part-1-the-basics) _Feb 7, 2019 - Daniel Goldman_
 - [Understanding Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) _District0x_
 - [Learn Plasma - A learning resource for the Plasma framework](https://www.learnplasma.org/en/)
 
