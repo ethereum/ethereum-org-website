@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useMemo } from "react"
 import axios from "axios"
 import styled from "styled-components"
 import Img from "gatsby-image"
@@ -284,31 +284,36 @@ const StablecoinsPage = ({ data }) => {
   const ALGORITHMIC = translateMessageId("page-stablecoins-algorithmic", intl)
 
   // TODO confirm type & url
-  const stablecoins = {
-    USDT: { type: FIAT, url: "https://tether.to/" },
-    USDC: { type: FIAT, url: "https://www.coinbase.com/usdc" },
-    DAI: { type: CRYPTO, url: "https://oasis.app/dai" },
-    BUSD: { type: FIAT, url: "https://www.binance.com/en/busd" },
-    PAX: { type: FIAT, url: "https://www.paxos.com/pax/" },
-    TUSD: { type: FIAT, url: "https://www.trusttoken.com/trueusd" },
-    HUSD: { type: FIAT, url: "https://www.huobi.com/en-us/usd-deposit/" },
-    SUSD: { type: CRYPTO, url: "https://www.synthetix.io/" },
-    EURS: { type: FIAT, url: "https://eurs.stasis.net/" },
-    USDK: { type: FIAT, url: "https://www.oklink.com/usdk" },
-    MUSD: { type: CRYPTO, url: "https://mstable.org/" },
-    USDX: { type: CRYPTO, url: "https://usdx.cash/usdx-stablecoin" },
-    GUSD: { type: FIAT, url: "https://gemini.com/dollar" },
-    SAI: { type: CRYPTO, url: "https://makerdao.com/en/whitepaper/sai/" },
-    DUSD: { type: CRYPTO, url: "https://dusd.finance/" },
-    PAXG: { type: ASSET, url: "https://www.paxos.com/paxgold/" },
-    AMPL: { type: ALGORITHMIC, url: "https://www.ampleforth.org/" },
-  }
+  const stablecoins = useMemo(
+    () => ({
+      USDT: { type: FIAT, url: "https://tether.to/" },
+      USDC: { type: FIAT, url: "https://www.coinbase.com/usdc" },
+      DAI: { type: CRYPTO, url: "https://oasis.app/dai" },
+      BUSD: { type: FIAT, url: "https://www.binance.com/en/busd" },
+      PAX: { type: FIAT, url: "https://www.paxos.com/pax/" },
+      TUSD: { type: FIAT, url: "https://www.trusttoken.com/trueusd" },
+      HUSD: { type: FIAT, url: "https://www.huobi.com/en-us/usd-deposit/" },
+      SUSD: { type: CRYPTO, url: "https://www.synthetix.io/" },
+      EURS: { type: FIAT, url: "https://eurs.stasis.net/" },
+      USDK: { type: FIAT, url: "https://www.oklink.com/usdk" },
+      MUSD: { type: CRYPTO, url: "https://mstable.org/" },
+      USDX: { type: CRYPTO, url: "https://usdx.cash/usdx-stablecoin" },
+      GUSD: { type: FIAT, url: "https://gemini.com/dollar" },
+      SAI: { type: CRYPTO, url: "https://makerdao.com/en/whitepaper/sai/" },
+      DUSD: { type: CRYPTO, url: "https://dusd.finance/" },
+      PAXG: { type: ASSET, url: "https://www.paxos.com/paxgold/" },
+      AMPL: { type: ALGORITHMIC, url: "https://www.ampleforth.org/" },
+    }),
+    [ALGORITHMIC, ASSET, CRYPTO, FIAT]
+  )
 
   useEffect(() => {
     // Currently no option to filter by stablecoins, so fetching the top tokens by market cap
     ;(async () => {
       try {
-        const data = await getData("/.netlify/functions/coingecko")
+        const data = await getData(
+          "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false"
+        )
         const markets = data
           .filter((token) =>
             Object.keys(stablecoins).includes(token.symbol.toUpperCase())
