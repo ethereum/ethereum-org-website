@@ -21,7 +21,6 @@ import StablecoinBoxGrid from "../components/StablecoinBoxGrid"
 import Tooltip from "../components/Tooltip"
 import Translation from "../components/Translation"
 import PageHero from "../components/PageHero"
-import { translateMessageId } from "../utils/translations"
 import {
   CardGrid,
   Divider,
@@ -29,6 +28,8 @@ import {
   Page,
   GradientContainer,
 } from "../components/SharedStyledComponents"
+import { translateMessageId } from "../utils/translations"
+import { getData } from "../utils/cache"
 
 const StyledContent = styled(Content)`
   margin-bottom: -2rem;
@@ -305,44 +306,40 @@ const StablecoinsPage = ({ data }) => {
 
   useEffect(() => {
     // Currently no option to filter by stablecoins, so fetching the top tokens by market cap
-    axios
-      .get(
-        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false"
-      )
-      .then((response) => {
-        if (response.data && response.data.length > 0) {
-          const markets = response.data
-            .filter((token) =>
-              Object.keys(stablecoins).includes(token.symbol.toUpperCase())
-            )
-            .slice(0, 10)
-            .map((token) => {
-              return {
-                name: token.name,
-                marketCap: new Intl.NumberFormat("en-US", {
-                  style: "currency",
-                  currency: "USD",
-                  minimumFractionDigits: 0,
-                  maximumFractionDigits: 0,
-                }).format(token.market_cap),
-                image: token.image,
-                type: stablecoins[token.symbol.toUpperCase()].type,
-                url: stablecoins[token.symbol.toUpperCase()].url,
-              }
-            })
-          setState({
-            markets: markets,
-            marketsHasError: false,
+    ;(async () => {
+      try {
+        const data = await getData("/.netlify/functions/coingecko")
+        const markets = data
+          .filter((token) =>
+            Object.keys(stablecoins).includes(token.symbol.toUpperCase())
+          )
+          .slice(0, 10)
+          .map((token) => {
+            return {
+              name: token.name,
+              marketCap: new Intl.NumberFormat("en-US", {
+                style: "currency",
+                currency: "USD",
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0,
+              }).format(token.market_cap),
+              image: token.image,
+              type: stablecoins[token.symbol.toUpperCase()].type,
+              url: stablecoins[token.symbol.toUpperCase()].url,
+            }
           })
-        }
-      })
-      .catch((error) => {
+        setState({
+          markets: markets,
+          marketsHasError: false,
+        })
+      } catch (error) {
         console.error(error)
         setState({
           markets: [],
           marketsHasError: true,
         })
-      })
+      }
+    })()
   }, [stablecoins])
 
   const features = [
