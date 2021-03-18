@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useMemo } from "react"
-import axios from "axios"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
@@ -283,7 +282,6 @@ const StablecoinsPage = ({ data }) => {
   )
   const ALGORITHMIC = translateMessageId("page-stablecoins-algorithmic", intl)
 
-  // TODO confirm type & url
   const stablecoins = useMemo(
     () => ({
       USDT: { type: FIAT, url: "https://tether.to/" },
@@ -308,9 +306,9 @@ const StablecoinsPage = ({ data }) => {
   )
 
   useEffect(() => {
-    // Currently no option to filter by stablecoins, so fetching the top tokens by market cap
     ;(async () => {
       try {
+        // No option to filter by stablecoins, so fetching the top tokens by market cap
         const data = await getData(
           "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false"
         )
