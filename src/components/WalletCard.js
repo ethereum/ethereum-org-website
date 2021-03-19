@@ -215,9 +215,9 @@ const WalletCard = ({ wallet }) => {
 
   const getFeatureStatus = (feature) =>
     feature === "TRUE" ? (
-      <Emoji size="0.75rem" text="✅" />
+      <Emoji size="0.75rem" text="✅" aria-label="Yes" />
     ) : (
-      <Emoji size="0.75rem" text="❌" />
+      <Emoji size="0.75rem" text="❌" aria-label="No" />
     )
 
   return (
