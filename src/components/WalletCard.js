@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { motion } from "framer-motion"
@@ -8,6 +9,7 @@ import Icon from "./Icon"
 import Translation from "./Translation"
 import ButtonLink from "./ButtonLink"
 import { ButtonSecondary } from "./SharedStyledComponents"
+import { translateMessageId } from "../utils/translations"
 
 const Container = styled.div`
   /* TODO: dynamic height? */
@@ -180,14 +182,9 @@ const BackHeaderRow = styled.div`
   align-items: center;
 `
 
-const WalletInfo = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-`
-
 const WalletCard = ({ wallet }) => {
   const [isCardFlipped, setIsCardFlipped] = useState(false)
+  const intl = useIntl()
   const duration = 0.3
   const flipVariants = {
     shown: {
@@ -212,9 +209,17 @@ const WalletCard = ({ wallet }) => {
 
   const getFeatureStatus = (feature) =>
     feature === "TRUE" ? (
-      <Emoji size="0.75rem" text="✅" aria-label="Yes" />
+      <Emoji
+        size="0.75rem"
+        text="✅"
+        aria-label={translateMessageId("page-find-wallet-card-yes", intl)}
+      />
     ) : (
-      <Emoji size="0.75rem" text="❌" aria-label="No" />
+      <Emoji
+        size="0.75rem"
+        text="❌"
+        aria-label={translateMessageId("page-find-wallet-card-no", intl)}
+      />
     )
 
   return (
@@ -237,10 +242,22 @@ const WalletCard = ({ wallet }) => {
           </Wrapper>
           <Content>
             <TypeContainer>
+              {wallet.has_hardware === "TRUE" && (
+                <TypePill>
+                  <Emoji size="1rem" text=":minidisc:" mr="0.25rem" />
+                  <Translation id="page-find-wallet-card-hardware" />
+                </TypePill>
+              )}
               {wallet.has_mobile === "TRUE" && (
                 <TypePill>
-                  <Emoji size="1rem" text=":mobile_phone:" mr="0.25rem" />{" "}
-                  Mobile
+                  <Emoji size="1rem" text=":mobile_phone:" mr="0.25rem" />
+                  <Translation id="page-find-wallet-card-mobile" />
+                </TypePill>
+              )}
+              {wallet.has_desktop === "TRUE" && (
+                <TypePill>
+                  <Emoji size="1rem" text=":desktop_computer:" mr="0.25rem" />
+                  <Translation id="page-find-wallet-card-desktop" />
                 </TypePill>
               )}
               {wallet.has_web === "TRUE" && (
@@ -249,19 +266,8 @@ const WalletCard = ({ wallet }) => {
                     size="1rem"
                     text=":globe_with_meridians:"
                     mr="0.25rem"
-                  />{" "}
-                  Web
-                </TypePill>
-              )}
-              {wallet.has_hardware === "TRUE" && (
-                <TypePill>
-                  <Emoji size="1rem" text=":minidisc:" mr="0.25rem" /> Hardware
-                </TypePill>
-              )}
-              {wallet.has_desktop === "TRUE" && (
-                <TypePill>
-                  <Emoji size="1rem" text=":desktop_computer:" mr="0.25rem" />{" "}
-                  Desktop
+                  />
+                  <Translation id="page-find-wallet-card-web" />
                 </TypePill>
               )}
             </TypeContainer>
@@ -271,11 +277,12 @@ const WalletCard = ({ wallet }) => {
             onClick={() => setIsCardFlipped(!isCardFlipped)}
           >
             <FlipIcon>
-              More info <StyledIcon name="flip" ml="1rem" size="1.25rem" />
+              <Translation id="page-find-wallet-card-more-info" />
+              <StyledIcon name="flip" ml="1rem" size="1.25rem" />
             </FlipIcon>
           </StyledButtonSecondary>
           <StyledButtonLink to={wallet.url} hideArrow={true}>
-            Go
+            <Translation id="page-find-wallet-card-go" />
           </StyledButtonLink>
         </CardFront>
         <CardBack
@@ -297,33 +304,40 @@ const WalletCard = ({ wallet }) => {
               </BackHeaderRow>
               <Icon name="flip" ml="1rem" size="1.5rem" />
             </FlipTitle>
-            <FeaturesHeader>Features</FeaturesHeader>
-            {/* TODO: intl extraction */}
+            <FeaturesHeader>
+              <Translation id="page-find-wallet-card-features" />
+            </FeaturesHeader>
             <FeatureRow>
-              Withdraw to bank {getFeatureStatus(wallet.has_bank_withdrawals)}
+              <Translation id="page-find-wallet-card-has-bank-withdraws" />
+              {getFeatureStatus(wallet.has_bank_withdrawals)}
             </FeatureRow>
             <FeatureRow>
-              Buy ETH with card {getFeatureStatus(wallet.has_card_deposits)}
+              <Translation id="page-find-wallet-card-has-card-deposits" />
+              {getFeatureStatus(wallet.has_card_deposits)}
             </FeatureRow>
             <FeatureRow>
-              Access to DeFi {getFeatureStatus(wallet.has_defi_integrations)}
+              <Translation id="page-find-wallet-card-has-defi-integration" />
+              {getFeatureStatus(wallet.has_defi_integrations)}
             </FeatureRow>
             <FeatureRow>
-              Explore dapps {getFeatureStatus(wallet.has_explore_dapps)}
+              <Translation id="page-find-wallet-card-has-explore-dapps" />
+              {getFeatureStatus(wallet.has_explore_dapps)}
             </FeatureRow>
             <FeatureRow>
-              Swap tokens {getFeatureStatus(wallet.has_dex_integrations)}
+              <Translation id="page-find-wallet-card-has-dex-integrations" />
+              {getFeatureStatus(wallet.has_dex_integrations)}
             </FeatureRow>
             <FeatureRow>
-              Buy in high volume{" "}
+              <Translation id="page-find-wallet-card-has-high-volume-purchases" />
               {getFeatureStatus(wallet.has_high_volume_purchases)}
             </FeatureRow>
             <FeatureRow>
-              Transaction limits{" "}
+              <Translation id="page-find-wallet-card-has-limits-protection" />
               {getFeatureStatus(wallet.has_limits_protection)}
             </FeatureRow>
             <FeatureRow>
-              Multi-sig protection {getFeatureStatus(wallet.has_multisig)}
+              <Translation id="page-find-wallet-card-has-multisig" />
+              {getFeatureStatus(wallet.has_multisig)}
             </FeatureRow>
           </BackContent>
         </CardBack>
