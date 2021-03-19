@@ -125,7 +125,7 @@ const TypeContainer = styled.div`
 `
 
 const Content = styled.div`
-  padding: 1.5rem;
+  padding: 1rem;
   text-align: left;
   height: 100%;
   position: relative;
