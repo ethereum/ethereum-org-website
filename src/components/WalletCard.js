@@ -87,13 +87,6 @@ const ImageWrapper = styled.div`
 
 const Image = styled(Img)`
   width: 100%;
-  /*   width: 80px;
-  height: 80px;
-  align-self: center;
-  margin-right: 2rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
-    max-width: 311px;
-  } */
 `
 
 const FlipIcon = styled.div`
@@ -129,6 +122,10 @@ const Content = styled.div`
   text-align: left;
   height: 100%;
   position: relative;
+`
+
+const BackContent = styled(Content)`
+  padding: 1.5rem;
 `
 
 const Title = styled.h3`
@@ -287,7 +284,7 @@ const WalletCard = ({ wallet }) => {
           animate={isCardFlipped ? "shown" : "backFlipped"}
           onClick={() => setIsCardFlipped(!isCardFlipped)}
         >
-          <Content>
+          <BackContent>
             <FlipTitle>
               <BackHeaderRow>
                 <ImageWrapper background={wallet.brand_color}>
@@ -328,7 +325,7 @@ const WalletCard = ({ wallet }) => {
             <FeatureRow>
               Multi-sig protection {getFeatureStatus(wallet.has_multisig)}
             </FeatureRow>
-          </Content>
+          </BackContent>
         </CardBack>
       </Card>
     </Container>
