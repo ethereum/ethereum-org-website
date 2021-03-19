@@ -19,6 +19,9 @@
   # Only build on changes to src/ OR changes to .js and .json files outside src/
   ignore="git diff --quiet --exit-code dev ./src || if [[ $(git diff --name-only dev .) == *[.](js|json)* ]]; then exit 1; else exit 0; fi"
 
+[build.environment]
+  NODE_VERSION = "12.21.0"
+
 # Production context: all deploys from the Production branch set in your site's
 # deploy contexts will inherit these settings.
 # [context.production]
