@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react"
-import axios from "axios"
+import React, { useEffect, useState, useMemo } from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
@@ -21,7 +20,6 @@ import StablecoinBoxGrid from "../components/StablecoinBoxGrid"
 import Tooltip from "../components/Tooltip"
 import Translation from "../components/Translation"
 import PageHero from "../components/PageHero"
-import { translateMessageId } from "../utils/translations"
 import {
   CardGrid,
   Divider,
@@ -29,6 +27,8 @@ import {
   Page,
   GradientContainer,
 } from "../components/SharedStyledComponents"
+import { translateMessageId } from "../utils/translations"
+import { getData } from "../utils/cache"
 
 const StyledContent = styled(Content)`
   margin-bottom: -2rem;
@@ -282,67 +282,67 @@ const StablecoinsPage = ({ data }) => {
   )
   const ALGORITHMIC = translateMessageId("page-stablecoins-algorithmic", intl)
 
-  // TODO confirm type & url
-  const stablecoins = {
-    USDT: { type: FIAT, url: "https://tether.to/" },
-    USDC: { type: FIAT, url: "https://www.coinbase.com/usdc" },
-    DAI: { type: CRYPTO, url: "https://oasis.app/dai" },
-    BUSD: { type: FIAT, url: "https://www.binance.com/en/busd" },
-    PAX: { type: FIAT, url: "https://www.paxos.com/pax/" },
-    TUSD: { type: FIAT, url: "https://www.trusttoken.com/trueusd" },
-    HUSD: { type: FIAT, url: "https://www.huobi.com/en-us/usd-deposit/" },
-    SUSD: { type: CRYPTO, url: "https://www.synthetix.io/" },
-    EURS: { type: FIAT, url: "https://eurs.stasis.net/" },
-    USDK: { type: FIAT, url: "https://www.oklink.com/usdk" },
-    MUSD: { type: CRYPTO, url: "https://mstable.org/" },
-    USDX: { type: CRYPTO, url: "https://usdx.cash/usdx-stablecoin" },
-    GUSD: { type: FIAT, url: "https://gemini.com/dollar" },
-    SAI: { type: CRYPTO, url: "https://makerdao.com/en/whitepaper/sai/" },
-    DUSD: { type: CRYPTO, url: "https://dusd.finance/" },
-    PAXG: { type: ASSET, url: "https://www.paxos.com/paxgold/" },
-    AMPL: { type: ALGORITHMIC, url: "https://www.ampleforth.org/" },
-  }
+  const stablecoins = useMemo(
+    () => ({
+      USDT: { type: FIAT, url: "https://tether.to/" },
+      USDC: { type: FIAT, url: "https://www.coinbase.com/usdc" },
+      DAI: { type: CRYPTO, url: "https://oasis.app/dai" },
+      BUSD: { type: FIAT, url: "https://www.binance.com/en/busd" },
+      PAX: { type: FIAT, url: "https://www.paxos.com/pax/" },
+      TUSD: { type: FIAT, url: "https://www.trusttoken.com/trueusd" },
+      HUSD: { type: FIAT, url: "https://www.huobi.com/en-us/usd-deposit/" },
+      SUSD: { type: CRYPTO, url: "https://www.synthetix.io/" },
+      EURS: { type: FIAT, url: "https://eurs.stasis.net/" },
+      USDK: { type: FIAT, url: "https://www.oklink.com/usdk" },
+      MUSD: { type: CRYPTO, url: "https://mstable.org/" },
+      USDX: { type: CRYPTO, url: "https://usdx.cash/usdx-stablecoin" },
+      GUSD: { type: FIAT, url: "https://gemini.com/dollar" },
+      SAI: { type: CRYPTO, url: "https://makerdao.com/en/whitepaper/sai/" },
+      DUSD: { type: CRYPTO, url: "https://dusd.finance/" },
+      PAXG: { type: ASSET, url: "https://www.paxos.com/paxgold/" },
+      AMPL: { type: ALGORITHMIC, url: "https://www.ampleforth.org/" },
+    }),
+    [ALGORITHMIC, ASSET, CRYPTO, FIAT]
+  )
 
   useEffect(() => {
-    // Currently no option to filter by stablecoins, so fetching the top tokens by market cap
-    axios
-      .get(
-        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false"
-      )
-      .then((response) => {
-        if (response.data && response.data.length > 0) {
-          const markets = response.data
-            .filter((token) =>
-              Object.keys(stablecoins).includes(token.symbol.toUpperCase())
-            )
-            .slice(0, 10)
-            .map((token) => {
-              return {
-                name: token.name,
-                marketCap: new Intl.NumberFormat("en-US", {
-                  style: "currency",
-                  currency: "USD",
-                  minimumFractionDigits: 0,
-                  maximumFractionDigits: 0,
-                }).format(token.market_cap),
-                image: token.image,
-                type: stablecoins[token.symbol.toUpperCase()].type,
-                url: stablecoins[token.symbol.toUpperCase()].url,
-              }
-            })
-          setState({
-            markets: markets,
-            marketsHasError: false,
+    ;(async () => {
+      try {
+        // No option to filter by stablecoins, so fetching the top tokens by market cap
+        const data = await getData(
+          "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false"
+        )
+        const markets = data
+          .filter((token) =>
+            Object.keys(stablecoins).includes(token.symbol.toUpperCase())
+          )
+          .slice(0, 10)
+          .map((token) => {
+            return {
+              name: token.name,
+              marketCap: new Intl.NumberFormat("en-US", {
+                style: "currency",
+                currency: "USD",
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0,
+              }).format(token.market_cap),
+              image: token.image,
+              type: stablecoins[token.symbol.toUpperCase()].type,
+              url: stablecoins[token.symbol.toUpperCase()].url,
+            }
           })
-        }
-      })
-      .catch((error) => {
+        setState({
+          markets: markets,
+          marketsHasError: false,
+        })
+      } catch (error) {
         console.error(error)
         setState({
           markets: [],
           marketsHasError: true,
         })
-      })
+      }
+    })()
   }, [stablecoins])
 
   const features = [

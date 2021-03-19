@@ -213,6 +213,9 @@ const WalletCompare = ({ location }) => {
       coinbase: file(relativePath: { eq: "wallets/coinbase.png" }) {
         ...walletCardImage
       }
+      coinomi: file(relativePath: { eq: "wallets/coinomi.png" }) {
+        ...walletCardImage
+      }
       dcent: file(relativePath: { eq: "wallets/dcent.png" }) {
         ...walletCardImage
       }
@@ -238,6 +241,9 @@ const WalletCompare = ({ location }) => {
         ...walletCardImage
       }
       ledger: file(relativePath: { eq: "wallets/ledger.png" }) {
+        ...walletCardImage
+      }
+      linen: file(relativePath: { eq: "wallets/linen.png" }) {
         ...walletCardImage
       }
       mathwallet: file(relativePath: { eq: "wallets/mathwallet.png" }) {

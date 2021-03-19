@@ -7,6 +7,7 @@ import { cloneDeep } from "lodash"
 
 import NavDropdown from "./Dropdown"
 import MobileNavMenu from "./Mobile"
+import NakedButton from "../NakedButton"
 import Link from "../Link"
 import Icon from "../Icon"
 import Search from "../Search"
@@ -53,8 +54,7 @@ const NavContent = styled.div`
     justify-content: space-between;
   }
 `
-const NavMobileButton = styled.span`
-  outline: none;
+const NavMobileButton = styled(NakedButton)`
   margin-left: 1rem;
 `
 
@@ -121,8 +121,7 @@ const Span = styled.span`
   padding-left: 0.5rem;
 `
 
-const ThemeToggle = styled.span`
-  cursor: pointer;
+const ThemeToggle = styled(NakedButton)`
   margin-left: 1rem;
   display: flex;
   align-items: center;
@@ -289,7 +288,17 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
     },
     {
       text: "community",
-      to: "/community/",
+      ariaLabel: "community-menu",
+      items: [
+        {
+          text: "ethereum-community",
+          to: "/community/",
+        },
+        {
+          text: "grants",
+          to: "/community/grants/",
+        },
+      ],
     },
   ]
   const ednLinks = [
@@ -387,9 +396,6 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           <MobileIcons>
             <NavMobileButton
               onClick={() => handleMenuToggle("search")}
-              onKeyDown={() => handleMenuToggle("search")}
-              role="button"
-              tabIndex="0"
               aria-label={translateMessageId("aria-toggle-search-button", intl)}
             >
               <SearchIcon name="search" />
@@ -397,9 +403,6 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
 
             <NavMobileButton
               onClick={() => handleMenuToggle("menu")}
-              onKeyDown={() => handleMenuToggle("menu")}
-              role="button"
-              tabIndex="0"
               aria-label={translateMessageId("aria-toggle-menu-button", intl)}
             >
               <MenuIcon name="menu" />

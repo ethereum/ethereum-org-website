@@ -17,7 +17,7 @@ Blocurile sunt un subiect foarte prietenos pentru începători. Dar pentru a te 
 
 Pentru a ne asigura că toți participanții din rețeaua Ethereum mențin o stare sincronizată și convin asupra istoricului precis al tranzacțiilor pe care le grupăm în blocuri. Aceasta înseamnă că zeci (sau sute) de tranzacții sunt comise, convenite și sincronizate simultan.
 
-![O diagramă care arată tranzacția într-un bloc care provoacă modificări de stare](./tx-block.png) _Diagramă adaptată din [Ethereum EVM ilustrat](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![O diagramă care arată tranzacția într-un bloc care provoacă modificări de stare](../../../../../developers/docs/blocks/tx-block.png) _Diagramă adaptată din [Ethereum EVM ilustrat](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Crescând perioada dintre comiteri, acordăm tuturor participanților la rețea suficient timp pentru a ajunge la consens: chiar dacă solicitările de tranzacții apar de zeci de ori pe secundă, blocurile Ethereum sunt executate aproximativ o dată la cincisprezece secunde.
 

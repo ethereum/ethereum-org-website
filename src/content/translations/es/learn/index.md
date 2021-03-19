@@ -25,7 +25,7 @@ Además de la información en esta página, hay muchos recursos creados por la c
 - [Kauri](https://kauri.io) _Artículos técnicos y tutoriales para Ethereum y proyectos relacionados_
 - [YouTube de Ethereum Foundation](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Charlas y vídeos sobre Ethereum_
 - [Week in Ethereum News](https://weekinethereumnews.com/) _Un boletín semanal que cubre los desarrollos clave en todo el ecosistema_
-- [What’s new in ETH 2.0](https://notes.ethereum.org/c/Sk8Zs--CQ) _Un boletín regular sobre el desarrollo de ETH 2.0_
+- [What’s new in ETH 2.0](https://eth2.news) _Un boletín regular sobre el desarrollo de ETH 2.0_
 - [ethresear.ch forum](https://ethresear.ch/) _Discusiones más técnicas sobre Ethereum para ETH 2.0 y versiones más recientes._
 - [ETHGlobal](https://ethglobal.co) _Una serie de hackatones de Ethereum: ¡participa en el más cercano!_
 

@@ -24,7 +24,7 @@ Bu sayfadaki bilgilere ek olarak, araştırılmaya değer birçok topluluk taraf
 - [Kauri](https://kauri.io)_Ethereum ve ilgili projeler için teknik makaleler ve öğretici bilgiler_
 - [Ethereum Foundation YouTube kanalı ](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Videolar ve Ethereum hakkında konuşuyor_
 - [Haftalık Ethereum hakkında yeni haberler](https://weekinethereumnews.com/) _ Ekosistemdeki önemli gelişmeleri içeren haftalık bir bülten_
-- [ETH 2.0'daki yenilikler](https://notes.ethereum.org/c/Sk8Zs--CQ) _ETH 2.0 gelişimi hakkında bir bülten_
+- [ETH 2.0'daki yenilikler](https://eth2.news) _ETH 2.0 gelişimi hakkında bir bülten_
 - [ethresear.ch forum](https://ethresear.ch/) _ETH 2.0 ve sonrası için Ethereum hakkında daha derin teknik tartışmalar_
 - [ETHGlobal](https://ethglobal.co) _Bir Ethereum hackathon serisi - yakınınızdaki birine katılın!_
 

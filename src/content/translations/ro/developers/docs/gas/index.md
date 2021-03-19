@@ -18,7 +18,7 @@ Gazul este unitatea care măsoară cantitatea de efort de calcul necesar pentru 
 
 Deoarece fiecare tranzacție Ethereum necesită resurse de calcul pentru executare, fiecare tranzacție necesită o taxă. Gazul se referă la taxa necesară pentru a efectua cu succes o tranzacție pe Ethereum.
 
-![O diagramă care arată unde este nevoie de gaz în operațiunile EVM](./gas.png) _Diagramă adaptată după [Ethereum EVM ilustrat](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![O diagramă care arată unde este nevoie de gaz în operațiunile EVM](../../../../../developers/docs/gas/gas.png) _Diagramă adaptată după [Ethereum EVM ilustrat](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 În esență, taxele pe gaz sunt plătite în moneda nativă a Ethereum, eterul (ETH). Prețurile gazului sunt indicate în Gwei, care este o denominație a ETH - fiecare Gwei este egal cu 0,000000001 ETH (10<sup>-9</sup> ETH). De exemplu, în loc să spui că gazul tău costă 0,000000001 eter, poți spune că el costă 1 Gwei.
 
@@ -30,7 +30,7 @@ Pe scurt, taxele pe gaz contribuie la menținerea securității rețelei Ethereu
 
 Deși o tranzacție include o limită, orice gaz neutilizat într-o tranzacție este returnat utilizatorului.
 
-![Diagrama care arată modul în care este rambursat gazul neutilizat](../transactions/gas-tx.png) _Diagramă adaptată după [Ethereum EVM ilustrat](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagrama care arată modul în care este rambursat gazul neutilizat](../../../../../developers/docs/transactions/gas-tx.png) _Diagramă adaptată după [Ethereum EVM ilustrat](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Referințe suplimentare {#further-reading}
 

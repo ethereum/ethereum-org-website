@@ -19,7 +19,7 @@ source: Mediu
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
 ---
 
-![Logouri Ethereum și Alchemy](./ethereum-alchemy.png)
+![Logouri Ethereum și Alchemy](../../../../../developers/tutorials/getting-started-with-ethereum-development-using-alchemy/ethereum-alchemy.png)
 
 Acesta este un ghid pentru începători pentru a demara cu dezvoltarea Ethereum folosind [Alchemy](https://alchemyapi.io/), cea mai importantă platformă de programator blockchain alimentând milioane de utilizatori din 70% din aplicațiile blockchain de top, inclusiv Maker, 0x, MyEtherWallet, Dharma și Kyber.
 
@@ -37,15 +37,15 @@ Poți [crea chei API din tabloul de bord](http://dashboard.alchemyapi.io/). Pent
 
 Mulțumiri speciale site-ului [_ShapeShift_](https://shapeshift.com/) _pentru că ne permite să arătăm tabloul de bord!_
 
-![Tabloul de bord Alchemy](./alchemy-dashboard.png)
+![Tabloul de bord Alchemy](../../../../../developers/tutorials/getting-started-with-ethereum-development-using-alchemy/alchemy-dashboard.png)
 
 Completează detaliile sub „Creare aplicație” pentru a obține noua cheie. De easemenea, aici poți să vezi aplicațiile pe care le-ai făcut anterior și cele făcute de echipa ta. Trage cheile existente făcând clic pe „Vizualizare cheie” pentru orice aplicație.
 
-![Creează aplicații cu captura de ecran Alchemy](./create-app.png)
+![Creează aplicații cu captura de ecran Alchemy](../../../../../developers/tutorials/getting-started-with-ethereum-development-using-alchemy/create-app.png)
 
 Poți trage, de asemenea, cheile API existente prin trecerea peste „Apps” și selectând una. Poți „Vizualiza cheia” aici, precum și „Edita aplicația” pentru a lista în alb anumite domenii, pentru a vedea mai multe instrumente pentru programatori și pentru a vizualiza analizele.
 
-![Gif care arată unui utilizator să tragă cheile API](./pull-api-keys.gif)
+![Gif care arată unui utilizator să tragă cheile API](../../../../../developers/tutorials/getting-started-with-ethereum-development-using-alchemy/pull-api-keys.gif)
 
 ## 3\. Efectuarea unei solicitări din linia de comandă {#make-a-request-from-the-command-line}
 

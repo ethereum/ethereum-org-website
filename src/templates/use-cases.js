@@ -232,25 +232,7 @@ const SummaryPoint = styled.li`
   line-height: auto;
 `
 
-const SummaryBox = styled.div`
-  /* border: 1px solid ${(props) => props.theme.colors.border};
-  padding: 1.5rem;
-  padding-bottom: 0rem;
-  border-radius: 4px; */
-`
-
-const DesktopBreadcrumbs = styled(Breadcrumbs)`
-  margin-top: 0.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
-const MobileBreadcrumbs = styled(Breadcrumbs)`
-  margin-top: 0.5rem;
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
+const SummaryBox = styled.div``
 
 const StyledButtonDropdown = styled(ButtonDropdown)`
   margin-bottom: 2rem;
@@ -299,13 +281,14 @@ const Image = styled(Img)`
   right: 0;
   bottom: 0;
   background-size: cover;
-  max-width: ${(props) => (props.useCase === "dao" ? `572px` : `640px`)};
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-left: 2rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  max-width: ${({ useCase }) =>
+    useCase === `dao` ? `572px` : useCase === `defi` ? `80%` : `640px`};
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     width: 100%;
     height: 100%;
+    max-height: 340px;
+    max-width: ${({ useCase }) =>
+      useCase === "defi" ? "100%" : "min(405px, 98%)"};
     overflow: initial;
     align-self: center;
     margin: 0;
@@ -361,6 +344,7 @@ const TitleCard = styled.div`
     top: 0rem;
     background: ${(props) => props.theme.colors.ednBackground};
     box-shadow: none;
+    margin-top: 0;
   }
 `
 

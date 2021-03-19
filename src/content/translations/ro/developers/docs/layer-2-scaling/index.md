@@ -90,7 +90,7 @@ Deoarece calculul este partea lentă și costisitoare a utilizării Ethereum, ro
 
 Rollup-urile Optimistic nu calculează de fapt tranzacția, deci trebuie să existe un mecanism care să asigure că tranzacțiile sunt legitime și nu frauduloase. Aici intervin dovezile de fraudă. Dacă cineva observă o tranzacție frauduloasă, rollup-ul va executa o dovadă de fraudă și va rula calculul tranzacției, utilizând datele de stare disponibile. Aceasta înseamnă că este posibil să ai timpi de așteptare mai lungi pentru confirmarea tranzacției decât un rollup-ZK, deoarece ar putea fi contestat.
 
-![Diagramă care arată ce se întâmplă atunci când are loc o tranzacție frauduloasă într-un rollup Optimist pe Ethereum](./optimistic-rollups.png)
+![Diagramă care arată ce se întâmplă atunci când are loc o tranzacție frauduloasă într-un rollup Optimist pe Ethereum](../../../../../developers/docs/layer-2-scaling/optimistic-rollups.png)
 
 Gazul de care ai nevoie pentru a calcula dovada fraudelor este chiar rambursat. Ben Jones, de la Optimism, descrie sistemul de legături în loc:
 

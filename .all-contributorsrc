@@ -3077,6 +3077,109 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "whoanuragverma",
+      "name": "Anurag Verma",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55322425?v=4",
+      "profile": "https://github.com/whoanuragverma",
+      "contributions": [
+        "bug",
+        "code"
+      ]
+    },
+    {
+      "login": "citizen-stig",
+      "name": "Nikolai Golub",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3115300?v=4",
+      "profile": "http://golub.pro/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "intelliot",
+      "name": "Elliot Lee",
+      "avatar_url": "https://avatars.githubusercontent.com/u/81505?v=4",
+      "profile": "https://twitter.com/intelliot",
+      "contributions": [
+        "content",
+        "bug"
+      ]
+    },
+    {
+      "login": "v-gar",
+      "name": "Viktor Garske",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11472697?v=4",
+      "profile": "https://www.v-gar.de/",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "grmkris",
+      "name": "Kristjan Grm",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15545195?v=4",
+      "profile": "http://grmkris.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "macladson",
+      "name": "Mac L",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58379419?v=4",
+      "profile": "https://github.com/macladson",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "BruceMacD",
+      "name": "Bruce MacDonald",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5853428?v=4",
+      "profile": "http://bruce-macdonald.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "RonSherfey",
+      "name": "Ronnie Sherfey",
+      "avatar_url": "https://avatars.githubusercontent.com/u/77251516?v=4",
+      "profile": "http://reggienoble.eth",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "a1irahman",
+      "name": "Ali Rahman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46408722?v=4",
+      "profile": "https://github.com/a1irahman",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "erikvdp",
+      "name": "Erik Vandeputte",
+      "avatar_url": "https://avatars.githubusercontent.com/u/203481?v=4",
+      "profile": "https://github.com/erikvdp",
+      "contributions": [
+        "content",
+        "bug"
+      ]
+    },
+    {
+      "login": "tmlee",
+      "name": "TM Lee",
+      "avatar_url": "https://avatars.githubusercontent.com/u/110264?v=4",
+      "profile": "https://www.coingecko.com",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
