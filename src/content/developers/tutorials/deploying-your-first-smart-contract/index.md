@@ -20,12 +20,13 @@ Don’t worry, as it’s our fist smart contract, we’ll deploy it on a [local 
 
 First step is to [visit Remix](https://remix.ethereum.org/) and create a new file. On the upper left part of the Remix interface add a new file and enter the file name you want.
 
-![Adding a new file in the Remix interface](./remix.png)
+![Adding a new file in the Remix interface](https://user-images.githubusercontent.com/26312935/111880824-09eac000-8984-11eb-981c-39f334ceb744.png)
 
 In the new file, we’ll paste the following code.
 
 ```solidity
-pragma solidity 0.5.17;
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.5.17;
 
 contract Counter {
 
