@@ -15,7 +15,7 @@
   "page-tutorial-submit-btn": "Submit a tutorial",
   "page-tutorial-submit-tutorial": "To submit a tutorial, you'll need to use GitHub. We welcome you to create an issue or a pull request.",
   "page-tutorial-subtitle": "Welcome to our curated list of community tutorials.",
-  "page-tutorial-tags-error": "No tutorials has all of these tags",
+  "page-tutorial-tags-error": "There are no tutorials with all your chosen tags yet",
   "page-tutorial-title": "Ethereum Development Tutorials",
   "page-tutorials-meta-description": "Browse and filter vetted Ethereum community tutorials by topic.",
   "page-tutorials-meta-title": "Ethereum Development Tutorials"

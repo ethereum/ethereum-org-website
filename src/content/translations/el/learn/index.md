@@ -22,7 +22,7 @@ sidebar: true
 - [Kauri](https://kauri.io) _Τεχνικά άρθρα και σεμινάρια για το Ethereum και σχετικά projects_
 - [Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Βίντεο και συνομιλίες για το Ethereum_
 - [Week in Ethereum News](https://weekinethereumnews.com/) _Ένα εβδομαδιαίο ενημερωτικό δελτίο που καλύπτει τις βασικές εξελίξεις σε ολόκληρο το οικοσύστημα_
-- [What’s new in ETH 2.0](https://notes.ethereum.org/c/Sk8Zs--CQ) _Ένα τακτικό ενημερωτικό δελτίο για την ανάπτυξη του ETH 2.0_
+- [What’s new in ETH 2.0](https://eth2.news) _Ένα τακτικό ενημερωτικό δελτίο για την ανάπτυξη του ETH 2.0_
 - [ETHGlobal](https://ethglobal.co) _Μία σειρά Ethereum hackathon - παρακολουθήστε ένα κοντά σας!_
 
 ## Τα βασικά του Ethereum {#ethereum-basics}

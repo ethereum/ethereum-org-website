@@ -87,7 +87,7 @@ event Transfer(address indexed from, address indexed to, uint256 value);
 
 This event is emitted when the amount of tokens (value) is sent from the `from` address to the `to` address.
 
-In the case of minting new tokens, the transfer is usually `from` the 0x00..0000 address while in the case of buning tokens the transfer is `to` 0x00..0000.
+In the case of minting new tokens, the transfer is usually `from` the 0x00..0000 address while in the case of burning tokens the transfer is `to` 0x00..0000.
 
 ```solidity
 event Approval(address indexed owner, address indexed spender, uint256 value);

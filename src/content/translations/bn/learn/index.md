@@ -24,7 +24,7 @@ sidebar: true
 - [Kauri](https://kauri.io) _ইথেরিয়াম এবং সম্পর্কিত প্রকল্পগুলির জন্য প্রযুক্তিগত নিবন্ধ এবং টিউটোরিয়াল।_
 - [Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _ইথেরিয়াম সম্পর্কে ভিডিও এবং আলোচনা।_
 - [Week in Ethereum News](https://weekinethereumnews.com/) _ একটি সাপ্তাহিক নিউজলেটার যা ইকোসিস্টেম ব্যাপী প্রধান উন্নয়নগুলি সম্বন্ধে আলোচনা করে_
-- [What’s new in ETH 2.0](https://notes.ethereum.org/c/Sk8Zs--CQ)_ ETH 2.0 ডেভেলপমেন্ট সম্পর্কে একটি নিয়মিত নিউজলেটার_
+- [What’s new in ETH 2.0](https://eth2.news)_ ETH 2.0 ডেভেলপমেন্ট সম্পর্কে একটি নিয়মিত নিউজলেটার_
 - [ethresear.ch forum](https://ethresear.ch/) _ETH 2.0 এবং এর বাইরেও ইথেরিয়ামের উপর গভীর প্রযুক্তিগত আলোচনা_
 - [ETHGlobal](https://ethglobal.co) _একটি ইথেরিয়াম হ্যাকাথন সিরিজ - আপনার কাছের সিরিজে উপস্থিত থাকুন!_
 

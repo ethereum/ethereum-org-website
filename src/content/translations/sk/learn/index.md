@@ -24,7 +24,7 @@ Okrem informácií uvedených na tejto stránke existuje množstvo zaujímavých
 - [Kauri](https://kauri.io) _Technické články a návody pre Ethereum a súvisiace projekty_
 - [Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Videá, prednášky a rozhovory o Ethereu_
 - [Week in Ethereum News](https://weekinethereumnews.com/) _Týždenný newsletter o kľúčových novinkách vo vývoji Etherea_
-- [What’s new in ETH 2.0](https://notes.ethereum.org/c/Sk8Zs--CQ) _Pravidelný newsletter o vývoji Etherea 2.0_
+- [What’s new in ETH 2.0](https://eth2.news) _Pravidelný newsletter o vývoji Etherea 2.0_
 - [ethresear.ch forum](https://ethresear.ch/) _Hlbšie technické diskusie o Ethereu pre ETH 2.0 a ďalšie roky_
 - [ETHGlobal](https://ethglobal.co) _Séria hackathonov Etherea - zúčastnite sa jedného vo vašom okolí!_
 

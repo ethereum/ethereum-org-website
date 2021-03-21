@@ -232,6 +232,10 @@ const Footer = () => {
           text: "esp",
         },
         {
+          to: "/community/grants",
+          text: "grant-programs",
+        },
+        {
           to: "/assets/",
           text: "ethereum-brand-assets",
         },
@@ -267,7 +271,7 @@ const Footer = () => {
         },
         {
           to: "/about/#open-jobs",
-          text: "Jobs",
+          text: "jobs",
         },
         {
           to: "/en/contributing/",
@@ -339,10 +343,7 @@ const Footer = () => {
                 <List>
                   {section.links.map((link, linkIdx) => (
                     <ListItem key={linkIdx}>
-                      <FooterLink
-                        to={link.to}
-                        isPartiallyActive={false}
-                      >
+                      <FooterLink to={link.to} isPartiallyActive={false}>
                         <Translation id={link.text} />
                       </FooterLink>
                     </ListItem>

@@ -35,16 +35,15 @@ Both account types have the ability to:
 
 - Creating an account has a cost because you're using network storage
 - Can only send transactions in response to receiving a transaction
-- Transactions from an external account to a contract account can trigger code which can execute many different actions, such as transfering tokens or even creating a new contract
+- Transactions from an external account to a contract account can trigger code which can execute many different actions, such as transferring tokens or even creating a new contract
 
 ## An account examined {#an-account-examined}
 
 Ethereum accounts have four fields:
 
 - `nonce` – a counter that indicates the number of transactions sent from the account. This ensures transactions are only processed once. In a contract account, this number represents the number of contracts created by the account
-- `balance` – the number of Wei owned by this address. Wei is a denomination of ETH and there are 1e+18 Wei per ETH.
-- `codeHash` – All such code fragments are contained in the state database under their corresponding hashes for later retrieval. For contract accounts, this is the code that gets hashed and stored as the codeHash. For externally owned accounts, the codeHash field is the hash of the empty string.
-<!--this hash refers to the code of this account on the Ethereum virtual machine (EVM). This EVM code gets executed if the account gets a message call. It cannot be changed unlike the other account fields.  -->
+- `balance` – the number of wei owned by this address. Wei is a denomination of ETH and there are 1e+18 wei per ETH.
+- `codeHash` – this hash refers to the _code_ of an account on the Ethereum virtual machine (EVM). Contract accounts have code fragments programmed in that can perform different operations. This EVM code gets executed if the account gets a message call. It cannot be changed unlike the other account fields. All such code fragments are contained in the state database under their corresponding hashes for later retrieval. This hash value is known as a codeHash. For externally owned accounts, the codeHash field is the hash of an empty string.
 - `storageRoot` – Sometimes known as a storage hash. A 256-bit hash of the root node of a Merkle Patricia trie that encodes the storage contents of the account (a mapping between 256-bit integer values), encoded into the trie as a mapping from the Keccak 256-bit hash of the 256-bit integer keys to the RLP-encoded 256-bit integer values. This trie encodes the hash of the storage contents of this account, and is empty by default.
 
 ![A diagram showing the make up of an account](./accounts.png)
@@ -86,7 +85,7 @@ Repeat passphrase:
 
 It is possible to derive new public keys from your private key but you cannot derive a private key from public keys. This means it's vital to keep a private key safe and, as the name suggests, **PRIVATE**.
 
-You need a private key to sign messages and transactions which outputs a signature. Others can then take the signature to derive your public key, proving the author of the message. In your application, you can use a javascript library to send transactions to the network.
+You need a private key to sign messages and transactions which output a signature. Others can then take the signature to derive your public key, proving the author of the message. In your application, you can use a javascript library to send transactions to the network.
 
 <!-- **WEB3JS example**
 
@@ -123,7 +122,7 @@ TODO: add a contract address example-->
 
 Most users will want to interact with their account via a wallet. Note that an account is not a wallet. A wallet is the keypair associated with a user-owned account, which allow a user to make transactions from or manage the account
 
-For dapp development, you'll want access to dummy accounts with test ETH so you can experiment. When you create a local chain, you'll get test accounts wth fake ETH which you can then import using MetaMask and use on your dapp's frontend. -->
+For dapp development, you'll want access to dummy accounts with test ETH so you can experiment. When you create a local chain, you'll get test accounts with fake ETH which you can then import using MetaMask and use on your dapp's frontend. -->
 
 ## A note on wallets {#a-note-on-wallets}
 

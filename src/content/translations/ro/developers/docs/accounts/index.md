@@ -47,7 +47,7 @@ Conturile Ethereum au patru câmpuri:
 <!--this hash refers to the code of this account on the Ethereum virtual machine (EVM). This EVM code gets executed if the account gets a message call. It cannot be changed unlike the other account fields.  -->
 - `storageRoot` – Uneori cunoscut sub numele de hash de stocare. Un hash de 256 biți al nodului rădăcină al unui arbore Merkle Patricia, care codează conținutul stocării contului (o mapare între valori întregi de 256 biți). Acesta schimbă formatul hash al cheilor de codificare din trie de la Keccat la RLP (Recursive Length Prefix), ambele 256 biți valori întregi. Acest arbore codifică hash-ul conținutului stocării acestui cont și este gol în mod implicit.
 
-![O diagramă care arată structura unui cont](./accounts.png) _Diagramă adaptată din [Ethereum EVM ilustrat](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![O diagramă care arată structura unui cont](../../../../../developers/docs/accounts/accounts.png) _Diagramă adaptată din [Ethereum EVM ilustrat](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Conturi deținute extern și perechi de chei {#externally-owned-accounts-and-key-pairs}
 

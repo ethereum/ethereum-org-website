@@ -47,7 +47,7 @@ $ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 Pentru început, deschide un WebSocket folosind adresa URL WebSocket a aplicației tale. Poți găsi adresa URL a aplicației tale WebSocket deschizând pagina aplicației în [tabloul de bord](https://dashboard.alchemyapi.io/) și făcând clic pe „View Key” (Vizualizare cheie). Reține că URL-ul aplicației pentru WebSockets este diferit de URL-ul său pentru cererile HTTP, dar ambele pot fi găsite dacă facem clic pe „View Key”(Vizualizare cheie).
 
-![Unde să găsești URL-ul WebSocket în panoul tău Alchimy](./use-websockets.gif)
+![Unde să găsești URL-ul WebSocket în panoul tău Alchimy](../../../../../developers/tutorials/using-websockets/use-websockets.gif)
 
 Oricare dintre API-urile enumerate în [Alchemy API de referință](https://docs.alchemyapi.io/documentation/alchemy-api-reference/) poate fi folosit prin intermediul WebSocket. Pentru aceasta, folosește aceleași elemente care ar fi trimise prin metoda de cereri POST suportată de HTTP, dar trimite-le prin WebSocket.
 

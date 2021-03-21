@@ -15,12 +15,12 @@ One of the many Ethereum development standards focus on token interfaces. These 
 - [Ethereum development standards](/developers/docs/standards/)
 - [Smart contracts](/developers/docs/smart-contracts/)
 
-## Token Standards {#token-standards}
+## Token standards {#token-standards}
 
 Here are some of the most popular token standards on Ethereum:
 
-- [ERC20 - A standard interface for tokens](/developers/docs/standards/tokens/erc-20/)
-- [ERC721 - A standard interface for non-fungible tokens](/developers/docs/standards/tokens/erc-721/)
+- [ERC-20](/developers/docs/standards/tokens/erc-20/) - A standard interface for fungible (interchangeable) tokens, like voting tokens, staking tokens or virtual currencies.
+- [ERC-721](/developers/docs/standards/tokens/erc-721/) - A standard interface for non-fungible tokens, like a deed for artwork or a song.
 
 ## Further reading {#further-reading}
 
