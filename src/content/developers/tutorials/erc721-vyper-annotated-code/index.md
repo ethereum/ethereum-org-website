@@ -20,7 +20,8 @@ In this article we will analyze [Ryuya Nakamura's ERC-721 contract](https://gith
 This contract is written in [Vyper](https://vyper.readthedocs.io/en/latest/index.html), a Python-like contract language designed to make 
 it harder to write insecure code than it is in Solidity.
 
-## The Contract
+## The Contract  {#contract}
+
 
 ```python
 # @dev Implementation of ERC-721 non-fungible token standard.
@@ -46,17 +47,12 @@ blockchain, but also when sending the blockchain a transaction.
 
 The first line imports the interface, and the second specifies that we are implementing it here.
 
-
+### The ERC721Receiver Interface {#receiver-interface}
 
 ```python
 # Interface for the contract called by safeTransferFrom()
 interface ERC721Receiver:
     def onERC721Received(
-            _operator: address,
-            _from: address,
-            _tokenId: uint256,
-            _data: Bytes[1024]
-        ) -> bytes32: view
 ```
 
 ERC-721 supports two types of transfer:
@@ -65,11 +61,44 @@ ERC-721 supports two types of transfer:
   for the transfer on the sender. This means that you can transfer to an invalid address, in which case
   the NFT is lost for good.
 * `safeTransferFrom`, which checks if the NFT is sent to a contract. If so, the ERC-721 contract asks
-  the receiving contract if it wants to receive the NFT. To answer such requests a receiving contract
-  has to implement `ERC721Receiver`.
+  the receiving contract if it wants to receive the NFT. 
+  
+To answer `safeTransferFrom` requests a receiving contract has to implement `ERC721Receiver`.
 
 ```python
+            _operator: address,
+            _from: address,
+```
 
+The `_from` address is the current owner of the token. The `_operator` address is the one that
+requested the transfer (those two may not be the same, because of allowances).
+
+```python
+            _tokenId: uint256,
+```
+
+ERC-721 token IDs are 256 bits. Typically they are created by hashing a description of whatever
+the token represents.
+
+```python
+            _data: Bytes[1024]
+```
+
+The request can have up to 1024 bytes of user data.
+
+```python
+        ) -> bytes32: view
+```
+
+To prevent cases in which a contract accidentally accepts a transfer the return value is not a boolean,
+but 256 bits with a specific value.
+
+This function is a `view`, which means it can read the state of the blockchain, but not modify it.
+
+### Events {#events}
+
+
+```python
 # @dev Emits when ownership of any NFT changes by any mechanism. This event emits when NFTs are
 #      created (`from` == 0) and destroyed (`to` == 0). Exception: during contract creation, any
 #      number of NFTs may be created and assigned without emitting Transfer. At the time of any
@@ -81,7 +110,12 @@ event Transfer:
     sender: indexed(address)
     receiver: indexed(address)
     tokenId: indexed(uint256)
+```
 
+This is similar to the ERC-20 Transfer event, except that we report a `tokenId` instead of an amount.
+Nobody owns address zero, so by convention we use it to report creation and destruction of tokens.
+
+```python
 # @dev This emits when the approved address for an NFT is changed or reaffirmed. The zero
 #      address indicates there is no approved address. When a Transfer event emits, this also
 #      indicates that the approved address for that NFT (if any) is reset to none.
@@ -92,7 +126,16 @@ event Approval:
     owner: indexed(address)
     approved: indexed(address)
     tokenId: indexed(uint256)
+```
 
+An ERC-721 approval is similar to an ERC-20 allowance. A specific address is allowed to transfer a specific 
+token. This gives a mechanism for contracts to respond when they accept a token. Contracts cannot 
+listen for events, so if you just transfer the token to them they don't "know" about it. This way the
+owner first submits an approval and then sends a request to the contract: "I approved transferring X to
+you, please do ...".
+
+
+```python
 # @dev This emits when an operator is enabled or disabled for an owner. The operator can manage
 #      all NFTs of the owner.
 # @param _owner Owner of NFT.
@@ -103,6 +146,9 @@ event ApprovalForAll:
     owner: indexed(address)
     operator: indexed(address)
     approved: bool
+```
+
+It is sometimes useful 
 
 
 # @dev Mapping from NFT ID to the address that owns it.
