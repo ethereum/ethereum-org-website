@@ -151,7 +151,7 @@ const BackToTop = styled.div`
   }
 `
 
-// Passing components to MDXProvider allows use across all .md/.mdx files
+// Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
   a: Link,
@@ -207,10 +207,10 @@ const DocsPage = ({ data, pageContext }) => {
           <H1 id="top">{mdx.frontmatter.title}</H1>
           <Contributors gitCommits={gitCommits} editPath={absoluteEditPath} />
           <TableOfContents
-            items={tocItems}
-            maxDepth={mdx.frontmatter.sidebarDepth}
             editPath={absoluteEditPath}
+            items={tocItems}
             isMobile={true}
+            maxDepth={mdx.frontmatter.sidebarDepth}
           />
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
@@ -225,10 +225,10 @@ const DocsPage = ({ data, pageContext }) => {
         </Content>
         {mdx.frontmatter.sidebar && tocItems && (
           <DesktopTableOfContents
-            items={tocItems}
-            maxDepth={mdx.frontmatter.sidebarDepth}
             editPath={absoluteEditPath}
+            items={tocItems}
             isPageIncomplete={isPageIncomplete}
+            maxDepth={mdx.frontmatter.sidebarDepth}
           />
         )}
       </ContentContainer>
