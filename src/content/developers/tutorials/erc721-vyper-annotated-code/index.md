@@ -169,20 +169,33 @@ idToApprovals: HashMap[uint256, address]
 ```
 
 User and contract identities in Ethereum are represented by 160 bit addresses. These two variables map
-from token IDs to
+from token IDs to their owners and those approved to transfer them (at a maximum of one for each). In Ethereum
+uninitialized data is always zero, so if there is no owner or approved transferor the value in for that token
+is zero.
 
 
+```python
 # @dev Mapping from owner address to count of his tokens.
 ownerToNFTokenCount: HashMap[address, uint256]
 ```
+
+This variable holds the count of tokens for each owner.
+
+```python
+# @dev Mapping from owner address to mapping of operator addresses.
+ownerToOperators: HashMap[address, HashMap[address, bool]]
+```
+
+An account may have more than a single operator. A simple `HashMap` is insufficient to
+keep track of them, because each key leads to a single value. Instead, you can use 
+`HashMap[address, bool]`. By default the value for each address is `false`, which means it
+is not an operator. You can modify it aa needed.
+
 
 
 
 
 ```python
-
-# @dev Mapping from owner address to mapping of operator addresses.
-ownerToOperators: HashMap[address, HashMap[address, bool]]
 
 # @dev Address of minter, who can mint a token
 minter: address
@@ -197,6 +210,9 @@ ERC165_INTERFACE_ID: constant(bytes32) = 0x0000000000000000000000000000000000000
 ERC721_INTERFACE_ID: constant(bytes32) = 0x0000000000000000000000000000000000000000000000000000000080ac58cd
 
 ```
+
+
+### Functions {#functions}
 
 In Python, and in Vyper, you can also create a comment by specifying a multi-line string (which starts and ends
 with `"""`), and not using it in any way. These comments can also include 
