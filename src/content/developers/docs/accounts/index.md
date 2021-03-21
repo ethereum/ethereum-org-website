@@ -128,6 +128,14 @@ For dapp development, you'll want access to dummy accounts with test ETH so you 
 
 An account is not a wallet. A wallet is the keypair associated with a user-owned account, which allow a user to make transactions from or manage the account.
 
+## A visual demo {#a-visual-demo} 
+
+Watch Austin walk you through hash functions, and key pairs. 
+
+<iframe width="100%" height="315" src="https://www.youtube.com/watch?v=QJ010l-pBpE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="100%" height="315" src="https://www.youtube.com/watch?v=9LtBDy67Tho" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
