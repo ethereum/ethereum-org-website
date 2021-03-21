@@ -166,9 +166,20 @@ idToOwner: HashMap[uint256, address]
 
 # @dev Mapping from NFT ID to approved address.
 idToApprovals: HashMap[uint256, address]
+```
+
+User and contract identities in Ethereum are represented by 160 bit addresses. These two variables map
+from token IDs to
+
 
 # @dev Mapping from owner address to count of his tokens.
 ownerToNFTokenCount: HashMap[address, uint256]
+```
+
+
+
+
+```python
 
 # @dev Mapping from owner address to mapping of operator addresses.
 ownerToOperators: HashMap[address, HashMap[address, bool]]
