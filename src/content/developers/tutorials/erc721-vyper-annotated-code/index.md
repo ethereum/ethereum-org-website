@@ -154,6 +154,8 @@ I haven't contacted it for six months, and if so distributes my assets to my hei
 can't do anything without being called by a transaction). In ERC-20 we can just give a high allowance to an inheritence contract,
 but that doesn't work for ERC-721 because the tokens are not fungible. This is the equivalent.
 
+The `approved` value tells us whether the event is for an approval, or the withdrawal of an approval.
+
 
 ### State Variables {#state-vars}
 
@@ -188,8 +190,8 @@ ownerToOperators: HashMap[address, HashMap[address, bool]]
 
 An account may have more than a single operator. A simple `HashMap` is insufficient to
 keep track of them, because each key leads to a single value. Instead, you can use 
-`HashMap[address, bool]`. By default the value for each address is `false`, which means it
-is not an operator. You can modify it aa needed.
+`HashMap[address, bool]` as the value. By default the value for each address is `False`, which means it
+is not an operator. You can set values to `True` as needed.
 
 
 
