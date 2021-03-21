@@ -123,6 +123,10 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
 
 - There are many marketing and communications positions in the Ethereum ecosystem!
 
+## Ethereum Grants {#ethereum-grants}
+
+[View open Ethereum grants](/grants/)
+
 ## Ethereum Jobs {#ethereum-jobs}
 
 **Want to find a job working in Ethereum?**
