@@ -873,6 +873,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/a1irahman"><img src="https://avatars.githubusercontent.com/u/46408722?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ali Rahman</b></sub></a><br /><a href="#content-a1irahman" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/erikvdp"><img src="https://avatars.githubusercontent.com/u/203481?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Erik Vandeputte</b></sub></a><br /><a href="#content-erikvdp" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aerikvdp" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://www.coingecko.com"><img src="https://avatars.githubusercontent.com/u/110264?v=4?s=100" width="100px;" alt=""/><br /><sub><b>TM Lee</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Atmlee" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/mic0des"><img src="https://avatars.githubusercontent.com/u/4992682?v=4?s=100" width="100px;" alt=""/><br /><sub><b>mic0des</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=mic0des" title="Code">💻</a></td>
   </tr>
 </table>
 
