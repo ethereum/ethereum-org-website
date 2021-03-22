@@ -3189,6 +3189,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "Hakeemmidan",
+      "name": "Hakeem Almidan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/27740273?v=4",
+      "profile": "http://hakeem-almidan.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
