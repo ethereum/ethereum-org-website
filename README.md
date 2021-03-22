@@ -878,6 +878,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="http://hakeem-almidan.com"><img src="https://avatars.githubusercontent.com/u/27740273?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hakeem Almidan</b></sub></a><br /><a href="#content-Hakeemmidan" title="Content">🖋</a></td>
     <td align="center"><a href="https://julien-rioux.web.app/"><img src="https://avatars.githubusercontent.com/u/26312935?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Julien Rioux</b></sub></a><br /><a href="#content-JulienRioux" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/kraxx"><img src="https://avatars.githubusercontent.com/u/24942820?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Justin Chow</b></sub></a><br /><a href="#content-kraxx" title="Content">🖋</a></td>
   </tr>
 </table>
 
