@@ -25,7 +25,7 @@ When looking at decentralized storage (dStorage) options, there are a few things
 
 ### Blockchain Based {#blockchain-based}
 
-In order for a piece of data to persist forever, their needs to be some type of persistance mechanism. For example, on Ethereum, the persistance mechanism is that the whole chain needs to be accounted for when running a node. New pieces of data are tacked onto the end of the chain, and it continues to grow.
+In order for a piece of data to persist forever, there needs to be some type of persistance mechanism. For example, on Ethereum, the persistance mechanism is that the whole chain needs to be accounted for when running a node. New pieces of data are tacked onto the end of the chain, and it continues to grow.
 
 This is the first type of persistence: **blockchain based** persistence.
 
