@@ -10,7 +10,7 @@ summaryPoints:
     "Die Beacon Chain selbst ändert nichts an der heutigen Verwendung von Ethereum.",
     "Ihre Aufgabe wird die Koordination des Eth2-Netzwerks sein.",
     "Sie führt Proof-of-Stake ins Ethereum-System ein.",
-    "In den verschiedenen technischen Entwicklungsstufen ist darunter die "Phase 0" gemeint.",
+    'In den verschiedenen technischen Entwicklungsstufen ist darunter die "Phase 0" gemeint.',
   ]
 ---
 
