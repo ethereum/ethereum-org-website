@@ -194,14 +194,17 @@ keep track of them, because each key leads to a single value. Instead, you can u
 is not an operator. You can set values to `True` as needed.
 
 
+```python
+# @dev Address of minter, who can mint a token
+minter: address
+```
 
+New tokens have to be created somehow. In this contract there is a single entity that is allowed to do so, the 
+`minter`. This is likely to be sufficient for a game, for example. For other purposes, it might be necessary
+to create a more complicated business logic.
 
 
 ```python
-
-# @dev Address of minter, who can mint a token
-minter: address
-
 # @dev Mapping of interface id to bool about whether or not it's supported
 supportedInterfaces: HashMap[bytes32, bool]
 
@@ -210,8 +213,10 @@ ERC165_INTERFACE_ID: constant(bytes32) = 0x0000000000000000000000000000000000000
 
 # @dev ERC165 interface ID of ERC721
 ERC721_INTERFACE_ID: constant(bytes32) = 0x0000000000000000000000000000000000000000000000000000000080ac58cd
-
 ```
+
+[ERC-165](https://eips.ethereum.org/EIPS/eip-165) specifies a mechanism for a contract to disclose how applications
+can communicate with it, to which ERCs it conforms. In this case, the contract conforms to ERC-165 and ERC-721.
 
 
 ### Functions {#functions}
@@ -219,6 +224,9 @@ ERC721_INTERFACE_ID: constant(bytes32) = 0x0000000000000000000000000000000000000
 In Python, and in Vyper, you can also create a comment by specifying a multi-line string (which starts and ends
 with `"""`), and not using it in any way. These comments can also include 
 [NatSpec](https://vyper.readthedocs.io/en/latest/natspec.html).
+
+
+#### Constructor
 
 ```python
 @external
@@ -229,8 +237,16 @@ def __init__():
     self.supportedInterfaces[ERC165_INTERFACE_ID] = True
     self.supportedInterfaces[ERC721_INTERFACE_ID] = True
     self.minter = msg.sender
+```    
+
+In Vyper, as in Python, the constructor function is called `__init__`. Notice that to access
+state variables you use `self.<variable name>` (again, same as in Python).
 
 
+#### View Functions
+
+
+```python
 @view
 @external
 def supportsInterface(_interfaceID: bytes32) -> bool:
