@@ -132,9 +132,9 @@ An account is not a wallet. A wallet is the keypair associated with a user-owned
 
 Watch Austin walk you through hash functions, and key pairs. 
 
-<iframe width="100%" height="315" src="https://www.youtube.com/watch?v=QJ010l-pBpE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="youtube.com/embed/QJ010l-pBpE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<iframe width="100%" height="315" src="https://www.youtube.com/watch?v=9LtBDy67Tho" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="youtube.com/embed/9LtBDy67Tho" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Further reading {#further-reading}
 
