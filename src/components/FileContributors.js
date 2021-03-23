@@ -1,6 +1,7 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
+import axios from "axios"
 
 import ButtonLink from "./ButtonLink"
 import Icon from "./Icon"
@@ -112,13 +113,38 @@ const Contributor = styled.li`
   margin-bottom: 0;
 `
 
-const FileContributors = ({ gitCommits, className, editPath }) => {
+const FileContributors = ({ relativePath, className, editPath }) => {
   const [isModalOpen, setModalOpen] = useState(false)
+  const [commits, setCommits] = useState([])
+
   const intl = useIntl()
 
-  const commits = gitCommits.map((commit) => {
-    return commit.node
-  })
+  useEffect(() => {
+    ;(async () => {
+      try {
+        const response = await axios.get(
+          `https://api.github.com/repos/ethereum/ethereum-org-website/commits?path=${relativePath}`
+        )
+        const gitCommits = response.data.map(({ commit, author }) => ({
+          author: {
+            name: commit.author.name,
+            email: commit.author.email,
+            date: commit.author.date,
+            avatarUrl: author.avatar_url,
+            user: {
+              url: author.html_url,
+              login: author.login,
+            },
+          },
+        }))
+        setCommits(gitCommits)
+      } catch (error) {
+        console.error(error)
+      }
+    })()
+  }, [relativePath])
+
+  // Do not render component if data fetch fails / no commits to show
   if (commits.length < 1) {
     return null
   }
@@ -170,7 +196,7 @@ const FileContributors = ({ gitCommits, className, editPath }) => {
               </Link>
             )}
             {!lastContributor.user && <span>{lastContributor.name}</span>},{" "}
-            {getLocaleTimestamp(intl.locale, lastCommit.committedDate)}
+            {getLocaleTimestamp(intl.locale, lastCommit.author.date)}
           </Info>
         </LeftContent>
         <ButtonContainer>
