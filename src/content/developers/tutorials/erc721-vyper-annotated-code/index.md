@@ -4,7 +4,7 @@ description: Ryuya Nakamura's ERC-721 contract and how it works
 author: Ori Pomerantz
 lang: en
 sidebar: true
-tags: ["vyper", "erc-721"]
+tags: ["vyper", "erc-721", "python"]
 skill: beginner
 published: 2021-04-01
 ---
@@ -245,17 +245,37 @@ state variables you use `self.<variable name>` (again, same as in Python).
 
 #### View Functions
 
+These are functions that do not modify the state of the block chain, and therefore can be executed for
+free (if they are called externally, if they are called by a contract they still have to be executed on
+every node and therefore cost gas). 
 
 ```python
 @view
 @external
+```
+
+These keywords prior to a function definition that start with an at sign (`@`) are called _decorations_. They
+specify the circumstances in which a function can be called.
+
+. `@view` specifies that this function is a view.
+. `@external` specifies that this particular function is 
+
+```python
 def supportsInterface(_interfaceID: bytes32) -> bool:
+```
+
+
+
+```python
     """
     @dev Interface identification is specified in ERC-165.
     @param _interfaceID Id of the interface
     """
     return self.supportedInterfaces[_interfaceID]
+```
 
+
+```python
 
 ### VIEW FUNCTIONS ###
 
