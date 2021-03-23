@@ -8,13 +8,10 @@ const Banner = styled.div`
   color: ${(props) => props.theme.colors.background};
   padding: 1rem 2rem;
   border-bottom: 1px solid ${(props) => props.theme.colors.primary};
+  text-align: center;
 
   a {
     color: ${(props) => props.theme.colors.background} !important;
-  }
-
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    max-width: ${(props) => props.theme.variables.maxPageWidth};
   }
 `
 
