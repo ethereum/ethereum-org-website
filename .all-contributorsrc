@@ -3225,6 +3225,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "rabbitXIII",
+      "name": "Rohit Gopal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1820619?v=4",
+      "profile": "https://github.com/rabbitXIII",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
