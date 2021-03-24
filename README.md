@@ -881,6 +881,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/kraxx"><img src="https://avatars.githubusercontent.com/u/24942820?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Justin Chow</b></sub></a><br /><a href="#content-kraxx" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/0xGabi"><img src="https://avatars.githubusercontent.com/u/9082013?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gabi</b></sub></a><br /><a href="#content-0xGabi" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/rabbitXIII"><img src="https://avatars.githubusercontent.com/u/1820619?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rohit Gopal</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ArabbitXIII" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://jordanoverbye.com"><img src="https://avatars.githubusercontent.com/u/6265154?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jordan Overbye</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ajordanoverbye" title="Bug reports">🐛</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=jordanoverbye" title="Code">💻</a></td>
   </tr>
 </table>
 

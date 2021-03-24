@@ -3234,6 +3234,16 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "jordanoverbye",
+      "name": "Jordan Overbye",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6265154?v=4",
+      "profile": "https://jordanoverbye.com",
+      "contributions": [
+        "bug",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
