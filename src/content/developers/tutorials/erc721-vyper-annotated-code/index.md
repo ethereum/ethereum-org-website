@@ -221,12 +221,8 @@ can communicate with it, to which ERCs it conforms. In this case, the contract c
 
 ### Functions {#functions}
 
-In Python, and in Vyper, you can also create a comment by specifying a multi-line string (which starts and ends
-with `"""`), and not using it in any way. These comments can also include 
-[NatSpec](https://vyper.readthedocs.io/en/latest/natspec.html).
 
-
-#### Constructor
+#### Constructor {#constructor}
 
 ```python
 @external
@@ -234,6 +230,13 @@ def __init__():
     """
     @dev Contract constructor.
     """
+```
+
+In Python, and in Vyper, you can also create a comment by specifying a multi-line string (which starts and ends
+with `"""`), and not using it in any way. These comments can also include 
+[NatSpec](https://vyper.readthedocs.io/en/latest/natspec.html).
+
+```python
     self.supportedInterfaces[ERC165_INTERFACE_ID] = True
     self.supportedInterfaces[ERC721_INTERFACE_ID] = True
     self.minter = msg.sender
@@ -243,7 +246,7 @@ In Vyper, as in Python, the constructor function is called `__init__`. Notice th
 state variables you use `self.<variable name>` (again, same as in Python).
 
 
-#### View Functions
+#### View Functions {#views}
 
 These are functions that do not modify the state of the block chain, and therefore can be executed for
 free (if they are called externally, if they are called by a contract they still have to be executed on
@@ -257,14 +260,18 @@ every node and therefore cost gas).
 These keywords prior to a function definition that start with an at sign (`@`) are called _decorations_. They
 specify the circumstances in which a function can be called.
 
-. `@view` specifies that this function is a view.
-. `@external` specifies that this particular function is 
+* `@view` specifies that this function is a view.
+* `@external` specifies that this particular function is 
 
 ```python
 def supportsInterface(_interfaceID: bytes32) -> bool:
 ```
 
-
+In contrast to Python, Vyper is a [static typed language](https://en.wikipedia.org/wiki/Type_system#Static_type_checking). 
+You can't declare a variable, or a function parameter, without identifying the [data 
+type](https://vyper.readthedocs.io/en/latest/types.html). In this case the input parameter is `bytes32`, a 256 bit value
+(256 bits is the native word size of the [Ethereum Virtual Machine](/developers/docs/evm/)). The output is a boolean
+value. By convention, the names of function parameters start with an underscore (`_`).
 
 ```python
     """
@@ -274,11 +281,15 @@ def supportsInterface(_interfaceID: bytes32) -> bool:
     return self.supportedInterfaces[_interfaceID]
 ```
 
+Return the value from the `self.supportedInterfaces` HashMap, which is set in the constructor (`__init__`).
 
 ```python
-
 ### VIEW FUNCTIONS ###
+```
 
+These are the view functions that make information about the tokens available to users and other contracts.
+
+```python
 @view
 @external
 def balanceOf(_owner: address) -> uint256:
@@ -288,8 +299,13 @@ def balanceOf(_owner: address) -> uint256:
     @param _owner Address for whom to query the balance.
     """
     assert _owner != ZERO_ADDRESS
-    return self.ownerToNFTokenCount[_owner]
+```
 
+This line [asserts](https://vyper.readthedocs.io/en/latest/statements.html#assert) that `_owner` is not
+zero. If it is, there is an error and the operation is reverted.
+
+```python
+    return self.ownerToNFTokenCount[_owner]
 
 @view
 @external
@@ -303,8 +319,13 @@ def ownerOf(_tokenId: uint256) -> address:
     # Throws if `_tokenId` is not a valid NFT
     assert owner != ZERO_ADDRESS
     return owner
+```
 
+In the Ethereum Virtual Machine (evm) any storage that does not have a value stored in it is zero. 
+If there is no token at `_tokenId` then the value of `self.idToOwner[_tokenId]` is zero. In that
+case the function reverts.
 
+```python
 @view
 @external
 def getApproved(_tokenId: uint256) -> address:
@@ -316,8 +337,12 @@ def getApproved(_tokenId: uint256) -> address:
     # Throws if `_tokenId` is not a valid NFT
     assert self.idToOwner[_tokenId] != ZERO_ADDRESS
     return self.idToApprovals[_tokenId]
+```
 
+Note that `getApproved` can return zero. If the token is valid it returns `self.idToApprovals[_tokenId]`. 
+But if there is no approver that value is zero. 
 
+```python
 @view
 @external
 def isApprovedForAll(_owner: address, _operator: address) -> bool:
@@ -327,7 +352,17 @@ def isApprovedForAll(_owner: address, _operator: address) -> bool:
     @param _operator The address that acts on behalf of the owner.
     """
     return (self.ownerToOperators[_owner])[_operator]
+```
 
+This function checks if `_operator` is allowed to manage all of `_owner`'s tokens in this contract.
+Because there can be multiple operators, this is a two level HashMap.
+
+
+#### Transfer Helper Functions {#transfer-helpers}
+
+These functions implement operations that help when transferring or managing tokens. 
+
+```python
 
 ### TRANSFER FUNCTION HELPERS ###
 
