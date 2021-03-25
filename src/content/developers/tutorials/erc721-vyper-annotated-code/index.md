@@ -368,6 +368,12 @@ These functions implement operations that help when transferring or managing tok
 
 @view
 @internal
+```
+
+This decoration, `@internal`, means that the function is only accessible from other functions within the
+same contract. By convention, these function names also start with an underscore (`_`).
+
+```python
 def _isApprovedOrOwner(_spender: address, _tokenId: uint256) -> bool:
     """
     @dev Returns whether the given spender can transfer a given token ID
@@ -381,8 +387,17 @@ def _isApprovedOrOwner(_spender: address, _tokenId: uint256) -> bool:
     spenderIsApproved: bool = _spender == self.idToApprovals[_tokenId]
     spenderIsApprovedForAll: bool = (self.ownerToOperators[owner])[_spender]
     return (spenderIsOwner or spenderIsApproved) or spenderIsApprovedForAll
+```
 
+There are three ways in which an address can be allowed to transfer a token:
 
+1. The address is the owner of the token
+2. The address is approved to spend that token
+3. The address is an operator for the owner of the token
+
+This function is a view because it doesn't change the state.
+
+```python
 @internal
 def _addTokenTo(_to: address, _tokenId: uint256):
     """
@@ -409,8 +424,11 @@ def _removeTokenFrom(_from: address, _tokenId: uint256):
     self.idToOwner[_tokenId] = ZERO_ADDRESS
     # Change count tracking
     self.ownerToNFTokenCount[_from] -= 1
+```
 
+Note that the when there's a problem with a change we revert the call. 
 
+```python
 @internal
 def _clearApproval(_owner: address, _tokenId: uint256):
     """
@@ -422,8 +440,14 @@ def _clearApproval(_owner: address, _tokenId: uint256):
     if self.idToApprovals[_tokenId] != ZERO_ADDRESS:
         # Reset approvals
         self.idToApprovals[_tokenId] = ZERO_ADDRESS
+```
+
+Only change the value if necessary. State variables live in storage. Writing to storage is
+one of the most expensive operations the evm (Ethereum Virtual Machine) does (in terms of
+[gas](/developers/docs/gas/)).
 
 
+```python
 @internal
 def _transferFrom(_from: address, _to: address, _tokenId: uint256, _sender: address):
     """
@@ -434,6 +458,12 @@ def _transferFrom(_from: address, _to: address, _tokenId: uint256, _sender: addr
          Throws if `_from` is not the current owner.
          Throws if `_tokenId` is not a valid NFT.
     """
+```
+
+We have this internal function because there are two ways to transfer tokens (regular and safe), but 
+we want only a single location in the code where we do it to make auditing easier.
+
+```python
     # Check requirements
     assert self._isApprovedOrOwner(_sender, _tokenId)
     # Throws if `_to` is the zero address
@@ -446,7 +476,14 @@ def _transferFrom(_from: address, _to: address, _tokenId: uint256, _sender: addr
     self._addTokenTo(_to, _tokenId)
     # Log the transfer
     log Transfer(_from, _to, _tokenId)
+```
 
+To emit an event in Yyper you use a `log` statement ([see here for more details](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)).
+
+
+#### Transfer Functions {#transfer-funs}
+
+```python
 
 ### TRANSFER FUNCTIONS ###
 
@@ -465,8 +502,12 @@ def transferFrom(_from: address, _to: address, _tokenId: uint256):
     @param _tokenId The NFT to transfer.
     """
     self._transferFrom(_from, _to, _tokenId, msg.sender)
+```
 
+This function lets you transfer to an arbitrary address. Note that unless the address is a user, or a contract that
+knows how to transfer tokens, any token you transfer will be stuck with that address and useless.
 
+```python
 @external
 def safeTransferFrom(
         _from: address,
@@ -490,12 +531,35 @@ def safeTransferFrom(
     @param _data Additional data with no specified format, sent in call to `_to`.
     """
     self._transferFrom(_from, _to, _tokenId, msg.sender)
+```
+
+It is OK to do the transfer first because if there's a problem we are going to revert anyway, 
+so everything done in the call will be cancelled.
+
+```python
     if _to.is_contract: # check if `_to` is a contract address
+```
+
+First check to see if the address is a contract (if it has code). If not, assume it is a user
+address and the user will be able to use the token or transfer it. Note that you can lose
+tokens, even with `safeTransferFrom` if you transfer them to an address for which nobody knows
+the private key.
+
+```python
         returnValue: bytes32 = ERC721Receiver(_to).onERC721Received(msg.sender, _from, _tokenId, _data)
+```
+
+Call the target contract to see if it can receive ERC-721 tokens.
+
+```python
         # Throws if transfer destination is a contract which does not implement 'onERC721Received'
         assert returnValue == method_id("onERC721Received(address,address,uint256,bytes)", output_type=bytes32)
+```
 
+If the destination is a contract, but one that doesn't accept ERC-721 tokens (or that decided not to accept this
+particular transfer), revert.
 
+```python
 @external
 def approve(_approved: address, _tokenId: uint256):
     """
@@ -511,10 +575,20 @@ def approve(_approved: address, _tokenId: uint256):
     assert owner != ZERO_ADDRESS
     # Throws if `_approved` is the current owner
     assert _approved != owner
+```
+
+By convention if you want not to have an approver you appoint the zero address, not yourself.
+
+```python
     # Check requirements
     senderIsOwner: bool = self.idToOwner[_tokenId] == msg.sender
     senderIsApprovedForAll: bool = (self.ownerToOperators[owner])[msg.sender]
     assert (senderIsOwner or senderIsApprovedForAll)
+```
+
+To set an approval you can either be the owner, or an operator authorized by the owner.
+
+```python
     # Set the approval
     self.idToApprovals[_tokenId] = _approved
     log Approval(owner, _approved, _tokenId)
@@ -534,12 +608,21 @@ def setApprovalForAll(_operator: address, _approved: bool):
     assert _operator != msg.sender
     self.ownerToOperators[msg.sender][_operator] = _approved
     log ApprovalForAll(msg.sender, _operator, _approved)
+```
 
 
+#### Mint New Tokens and Destroy Existing Ones {#mint-burn}
+
+```python
 ### MINT & BURN FUNCTIONS ###
 
 @external
 def mint(_to: address, _tokenId: uint256) -> bool:
+```
+
+This function always returns `True`, because if the the operation fails it is reverted.
+
+```python
     """
     @dev Function to mint tokens
          Throws if `msg.sender` is not the minter.
@@ -551,13 +634,25 @@ def mint(_to: address, _tokenId: uint256) -> bool:
     """
     # Throws if `msg.sender` is not the minter
     assert msg.sender == self.minter
+```
+
+Only the minter (the account that created the ERC-721 contract) can mint new tokens. Note 
+that this can be a problem in the future if we want to change the minter's identity. In
+a production contract you would probably want a function that allows the minter to transfer
+minter priviliges to somebody else.
+
+```python
     # Throws if `_to` is zero address
     assert _to != ZERO_ADDRESS
     # Add NFT. Throws if `_tokenId` is owned by someone
     self._addTokenTo(_to, _tokenId)
     log Transfer(ZERO_ADDRESS, _to, _tokenId)
     return True
+```
 
+
+
+```python
 
 @external
 def burn(_tokenId: uint256):
@@ -578,17 +673,18 @@ def burn(_tokenId: uint256):
     log Transfer(owner, ZERO_ADDRESS, _tokenId)
 ```    
 
+Anybody who is allowed to transfer a token is allowed to burn it. While a burn appears equivalent to
+transfer to the zero address, the zero address does not actually receives the token. This allows us to
+free up all the storage that was used for the token, which can reduce the gas cost of the transaction.
 
 
-As in Solidity, all of these `@<whatever>` in comments are part of the 
-[NatSpec format](https://docs.soliditylang.org/en/develop/natspec-format.html), used to produce 
-documentation from the source code.
+
 
 # Conclusion {#conclusion}
 
 For review, here are some of the most important ideas in this contract (in my opinion, yours is likely to vary):
 
-
+Now go and implement secure Vyper contracts.
 
 Now that you've seen how the OpenZeppelin ERC-20 contract is written, and especially how it is
 made more secure, go and write your own secure contracts and applications.
