@@ -97,6 +97,9 @@ This function is a `view`, which means it can read the state of the blockchain, 
 
 ### Events {#events}
 
+[Events](https://media.consensys.net/technical-introduction-to-events-and-logs-in-ethereum-a074d65dd61e) 
+are emitted to inform users and servers outside of the blockchain of events. Note that the content of events
+is not available to contracts on the blockchain.
 
 ```python
 # @dev Emits when ownership of any NFT changes by any mechanism. This event emits when NFTs are
@@ -134,6 +137,10 @@ listen for events, so if you just transfer the token to them they don't "know" a
 owner first submits an approval and then sends a request to the contract: "I approved transferring X to
 you, please do ...".
 
+This is a design choice to make the ERC-721 standard similar to the ERC-20 standard. Because
+ERC-721 tokens not fungible, a contract can identify it got a specific token (which was previously owned
+by a different account) by looking at the token's ownership.
+
 
 ```python
 # @dev This emits when an operator is enabled or disabled for an owner. The operator can manage
@@ -148,7 +155,7 @@ event ApprovalForAll:
     approved: bool
 ```
 
-It is sometimes useful to have an operator that can manage all of an account's tokens of a specific type (those that are managed by
+It is sometimes useful to have an *operator* that can manage all of an account's tokens of a specific type (those that are managed by
 a specific contract), similar to a power of attorney. For example, I might want to give such a power to a contract that checks if
 I haven't contacted it for six months, and if so distributes my assets to my heirs (if one of them asks for it, contracts
 can't do anything without being called by a transaction). In ERC-20 we can just give a high allowance to an inheritence contract,
@@ -172,7 +179,7 @@ idToApprovals: HashMap[uint256, address]
 
 User and contract identities in Ethereum are represented by 160 bit addresses. These two variables map
 from token IDs to their owners and those approved to transfer them (at a maximum of one for each). In Ethereum
-uninitialized data is always zero, so if there is no owner or approved transferor the value in for that token
+uninitialized data is always zero, so if there is no owner or approved transferor the value for that token
 is zero.
 
 
@@ -181,7 +188,10 @@ is zero.
 ownerToNFTokenCount: HashMap[address, uint256]
 ```
 
-This variable holds the count of tokens for each owner.
+This variable holds the count of tokens for each owner. There is no mapping from owners to tokens, so
+the only way to identify the tokens that a specific owner owns (not on the blockchain, but in a user 
+interface or server) is to look back in the blockchain's event history and see the appropriate `Transfer` 
+events. We can use this variable to know when we have all the NFTs and don't need to look even further in time.
 
 ```python
 # @dev Mapping from owner address to mapping of operator addresses.
@@ -221,12 +231,18 @@ can communicate with it, to which ERCs it conforms. In this case, the contract c
 
 ### Functions {#functions}
 
+The are the functions that actually implement the ERC-721 functionality.
 
 #### Constructor {#constructor}
 
 ```python
 @external
 def __init__():
+```
+
+In Vyper, as in Python, the constructor function is called `__init__`. 
+
+```python
     """
     @dev Contract constructor.
     """
@@ -242,8 +258,7 @@ with `"""`), and not using it in any way. These comments can also include
     self.minter = msg.sender
 ```    
 
-In Vyper, as in Python, the constructor function is called `__init__`. Notice that to access
-state variables you use `self.<variable name>` (again, same as in Python).
+To access state variables you use `self.<variable name>` (again, same as in Python).
 
 
 #### View Functions {#views}
@@ -261,7 +276,7 @@ These keywords prior to a function definition that start with an at sign (`@`) a
 specify the circumstances in which a function can be called.
 
 * `@view` specifies that this function is a view.
-* `@external` specifies that this particular function is 
+* `@external` specifies that this particular function can be called from transactions and other contracts.
 
 ```python
 def supportsInterface(_interfaceID: bytes32) -> bool:
@@ -339,8 +354,8 @@ def getApproved(_tokenId: uint256) -> address:
     return self.idToApprovals[_tokenId]
 ```
 
-Note that `getApproved` can return zero. If the token is valid it returns `self.idToApprovals[_tokenId]`. 
-But if there is no approver that value is zero. 
+Note that `getApproved` *can* return zero. If the token is valid it returns `self.idToApprovals[_tokenId]`. 
+If there is no approver that value is zero.
 
 ```python
 @view
@@ -360,7 +375,7 @@ Because there can be multiple operators, this is a two level HashMap.
 
 #### Transfer Helper Functions {#transfer-helpers}
 
-These functions implement operations that help when transferring or managing tokens. 
+These functions implement operations that are part of transferring or managing tokens. 
 
 ```python
 
@@ -395,7 +410,9 @@ There are three ways in which an address can be allowed to transfer a token:
 2. The address is approved to spend that token
 3. The address is an operator for the owner of the token
 
-This function is a view because it doesn't change the state.
+This function can be a view because it doesn't change the state. To reduce operating costs, any
+function that *can* be a view *should* be a view.
+
 
 ```python
 @internal
@@ -426,7 +443,7 @@ def _removeTokenFrom(_from: address, _tokenId: uint256):
     self.ownerToNFTokenCount[_from] -= 1
 ```
 
-Note that the when there's a problem with a change we revert the call. 
+When there's a problem with a transfer we revert the call. 
 
 ```python
 @internal
@@ -444,7 +461,8 @@ def _clearApproval(_owner: address, _tokenId: uint256):
 
 Only change the value if necessary. State variables live in storage. Writing to storage is
 one of the most expensive operations the evm (Ethereum Virtual Machine) does (in terms of
-[gas](/developers/docs/gas/)).
+[gas](/developers/docs/gas/)). Therefore, it is a good idea to minimize it, even writing the
+existing value has a high cost.
 
 
 ```python
@@ -478,7 +496,7 @@ we want only a single location in the code where we do it to make auditing easie
     log Transfer(_from, _to, _tokenId)
 ```
 
-To emit an event in Yyper you use a `log` statement ([see here for more details](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)).
+To emit an event in Vyper you use a `log` statement ([see here for more details](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)).
 
 
 #### Transfer Functions {#transfer-funs}
@@ -504,8 +522,8 @@ def transferFrom(_from: address, _to: address, _tokenId: uint256):
     self._transferFrom(_from, _to, _tokenId, msg.sender)
 ```
 
-This function lets you transfer to an arbitrary address. Note that unless the address is a user, or a contract that
-knows how to transfer tokens, any token you transfer will be stuck with that address and useless.
+This function lets you transfer to an arbitrary address. Unless the address is a user, or a contract that
+knows how to transfer tokens, any token you transfer will be stuck in that address and useless.
 
 ```python
 @external
@@ -541,9 +559,9 @@ so everything done in the call will be cancelled.
 ```
 
 First check to see if the address is a contract (if it has code). If not, assume it is a user
-address and the user will be able to use the token or transfer it. Note that you can lose
-tokens, even with `safeTransferFrom` if you transfer them to an address for which nobody knows
-the private key.
+address and the user will be able to use the token or transfer it. But don't let it lull you
+into a false sense of security. You can lose tokens, even with `safeTransferFrom`, if you transfer 
+them to an address for which nobody knows the private key.
 
 ```python
         returnValue: bytes32 = ERC721Receiver(_to).onERC721Received(msg.sender, _from, _tokenId, _data)
@@ -613,6 +631,10 @@ def setApprovalForAll(_operator: address, _approved: bool):
 
 #### Mint New Tokens and Destroy Existing Ones {#mint-burn}
 
+The account that created the contract is the `minter`, the super user that is authorized to mint 
+new NFTs. However, even it is not allowed to burn existing tokens. Only the owner, or an entity
+authorized by the owner, can do that.
+
 ```python
 ### MINT & BURN FUNCTIONS ###
 
@@ -636,8 +658,8 @@ This function always returns `True`, because if the the operation fails it is re
     assert msg.sender == self.minter
 ```
 
-Only the minter (the account that created the ERC-721 contract) can mint new tokens. Note 
-that this can be a problem in the future if we want to change the minter's identity. In
+Only the minter (the account that created the ERC-721 contract) can mint new tokens. This can be a 
+problem in the future if we want to change the minter's identity. In
 a production contract you would probably want a function that allows the minter to transfer
 minter priviliges to somebody else.
 
@@ -650,7 +672,7 @@ minter priviliges to somebody else.
     return True
 ```
 
-
+By convention, the minting of new tokens counts as a transfer from address zero.
 
 ```python
 
@@ -678,13 +700,18 @@ transfer to the zero address, the zero address does not actually receives the to
 free up all the storage that was used for the token, which can reduce the gas cost of the transaction.
 
 
+# Using this Contract {#using-contract}
+
+In contrast to Solidty, Vyper does not have inheritence. This is a deliberate design choice to make the 
+code clearer and therefore easier to secure. So to create your own Vyper ERC-721 contract you take this
+contract and modify it to accept the business logic you want.
 
 
 # Conclusion {#conclusion}
 
+
 For review, here are some of the most important ideas in this contract (in my opinion, yours is likely to vary):
 
-Now go and implement secure Vyper contracts.
+* 
 
-Now that you've seen how the OpenZeppelin ERC-20 contract is written, and especially how it is
-made more secure, go and write your own secure contracts and applications.
+Now go and implement secure Vyper contracts.
