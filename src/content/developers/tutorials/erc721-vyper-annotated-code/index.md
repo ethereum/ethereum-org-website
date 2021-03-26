@@ -703,8 +703,9 @@ free up all the storage that was used for the token, which can reduce the gas co
 # Using this Contract {#using-contract}
 
 In contrast to Solidty, Vyper does not have inheritence. This is a deliberate design choice to make the 
-code clearer and therefore easier to secure. So to create your own Vyper ERC-721 contract you take this
-contract and modify it to accept the business logic you want.
+code clearer and therefore easier to secure. So to create your own Vyper ERC-721 contract you take [this
+contract](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy) and modify it 
+to implement the business logic you want.
 
 
 # Conclusion {#conclusion}
@@ -712,6 +713,13 @@ contract and modify it to accept the business logic you want.
 
 For review, here are some of the most important ideas in this contract (in my opinion, yours is likely to vary):
 
-* 
+* To receive ERC-721 tokens with a safe transfer, contracts have to implement the `ERC721Receiver` interface.
+* Even if you use safe transfer, tokens can still get stuck if you send them to an address whose private key
+  is unknown.
+* When there is a problem with an operation it is a good idea to `revert` the call, rather than just return
+  a failure value.
+* ERC-721 tokens exist when they have an owner.
+* There are three ways to be authorized to transfer an NFT. You can be the owner, be approved for a specific token,
+  or be a\
 
 Now go and implement secure Vyper contracts.
