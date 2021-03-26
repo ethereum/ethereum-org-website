@@ -3244,6 +3244,16 @@
         "bug",
         "code"
       ]
+    },
+    {
+      "login": "Pilafonta",
+      "name": "Peter LaFontaine",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4194866?v=4",
+      "profile": "https://github.com/Pilafonta",
+      "contributions": [
+        "bug",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
