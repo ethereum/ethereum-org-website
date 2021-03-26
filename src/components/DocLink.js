@@ -5,6 +5,8 @@ import Link from "./Link"
 import Emoji from "./Emoji"
 
 const Container = styled(Link)`
+  position: relative;
+  z-index: 1;
   text-decoration: none;
   display: flex;
   flex-direction: row;

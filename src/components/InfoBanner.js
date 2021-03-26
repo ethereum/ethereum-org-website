@@ -9,6 +9,8 @@ const Container = styled.div`
 `
 
 const Banner = styled.div`
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   padding: 1.5rem;
