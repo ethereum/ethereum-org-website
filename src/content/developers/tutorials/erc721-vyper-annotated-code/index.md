@@ -12,8 +12,9 @@ published: 2021-04-01
 ## Introduction {#introduction}
 
 The [ERC-721](/developers/docs/standards/tokens/erc-721/) standard is used to hold the ownership of Non-Fungible Tokens (NFT). 
-[ERC-20](/developers/docs/standards/tokens/erc-20/) tokens behave as a commodity, there is no difference between individual tokens. 
-In contrast to that, ERC-721 tokens are designed for assets that are similar but not identical, such as [cat cartoons](https://www.cryptokitties.co/)
+[ERC-20](/developers/docs/standards/tokens/erc-20/) tokens behave as a commodity, because there is no difference between individual tokens. 
+In contrast to that, ERC-721 tokens are designed for assets that are similar but not identical, such as different [cat 
+cartoons](https://www.cryptokitties.co/)
 or titles to different pieces of real estate.
 
 In this article we will analyze [Ryuya Nakamura's ERC-721 contract](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy). 
@@ -43,7 +44,8 @@ implements: ERC721
 The ERC-721 interface is built into the Vyper language. 
 [You can see the code definition here](https://github.com/vyperlang/vyper/blob/master/vyper/interfaces/ERC721.py).
 The interface definition is written in Python, rather than Vyper, because interfaces are used not only within the 
-blockchain, but also when sending the blockchain a transaction.
+blockchain, but also when sending the blockchain a transaction from an external client, which may be written in
+Python.
 
 The first line imports the interface, and the second specifies that we are implementing it here.
 
@@ -60,8 +62,8 @@ ERC-721 supports two types of transfer:
 * `transferFrom`, which lets the sender specify any destination address and places the responsibility 
   for the transfer on the sender. This means that you can transfer to an invalid address, in which case
   the NFT is lost for good.
-* `safeTransferFrom`, which checks if the NFT is sent to a contract. If so, the ERC-721 contract asks
-  the receiving contract if it wants to receive the NFT. 
+* `safeTransferFrom`, which checks if the destination address is a contract. If so, the ERC-721 contract 
+  asks the receiving contract if it wants to receive the NFT. 
   
 To answer `safeTransferFrom` requests a receiving contract has to implement `ERC721Receiver`.
 
@@ -134,12 +136,12 @@ event Approval:
 An ERC-721 approval is similar to an ERC-20 allowance. A specific address is allowed to transfer a specific 
 token. This gives a mechanism for contracts to respond when they accept a token. Contracts cannot 
 listen for events, so if you just transfer the token to them they don't "know" about it. This way the
-owner first submits an approval and then sends a request to the contract: "I approved transferring X to
-you, please do ...".
+owner first submits an approval and then sends a request to the contract: "I approved for you to transfer token
+X, please do ...".
 
 This is a design choice to make the ERC-721 standard similar to the ERC-20 standard. Because
-ERC-721 tokens not fungible, a contract can identify it got a specific token (which was previously owned
-by a different account) by looking at the token's ownership.
+ERC-721 tokens not fungible, a contract can also identify that it got a specific token by 
+looking at the token's ownership.
 
 
 ```python
@@ -167,7 +169,7 @@ The `approved` value tells us whether the event is for an approval, or the withd
 ### State Variables {#state-vars}
 
 These variables contain the current state of the tokens: which ones are available and who owns them. Most of these
-are `HashMap`s, [mappings between two types](https://vyper.readthedocs.io/en/latest/types.html#mappings).
+are `HashMap` objects, [unidirectional mappings that between two types](https://vyper.readthedocs.io/en/latest/types.html#mappings).
 
 ```python
 # @dev Mapping from NFT ID to the address that owns it.
@@ -189,9 +191,12 @@ ownerToNFTokenCount: HashMap[address, uint256]
 ```
 
 This variable holds the count of tokens for each owner. There is no mapping from owners to tokens, so
-the only way to identify the tokens that a specific owner owns (not on the blockchain, but in a user 
-interface or server) is to look back in the blockchain's event history and see the appropriate `Transfer` 
-events. We can use this variable to know when we have all the NFTs and don't need to look even further in time.
+the only way to identify the tokens that a specific owner owns is to look back in the blockchain's event history 
+and see the appropriate `Transfer`  events. We can use this variable to know when we have all the NFTs and don't 
+need to look even further in time.
+
+Note that this algorithm only works for user interfaces and external servers. Code running on the blockchain
+itself cannot read past events.
 
 ```python
 # @dev Mapping from owner address to mapping of operator addresses.
@@ -231,7 +236,7 @@ can communicate with it, to which ERCs it conforms. In this case, the contract c
 
 ### Functions {#functions}
 
-The are the functions that actually implement the ERC-721 functionality.
+The are the functions that actually implement ERC-721.
 
 #### Constructor {#constructor}
 
@@ -276,7 +281,7 @@ These keywords prior to a function definition that start with an at sign (`@`) a
 specify the circumstances in which a function can be called.
 
 * `@view` specifies that this function is a view.
-* `@external` specifies that this particular function can be called from transactions and other contracts.
+* `@external` specifies that this particular function can be called by transactions and by other contracts.
 
 ```python
 def supportsInterface(_interfaceID: bytes32) -> bool:
@@ -410,7 +415,7 @@ There are three ways in which an address can be allowed to transfer a token:
 2. The address is approved to spend that token
 3. The address is an operator for the owner of the token
 
-This function can be a view because it doesn't change the state. To reduce operating costs, any
+The function above can be a view because it doesn't change the state. To reduce operating costs, any
 function that *can* be a view *should* be a view.
 
 
@@ -720,6 +725,7 @@ For review, here are some of the most important ideas in this contract (in my op
   a failure value.
 * ERC-721 tokens exist when they have an owner.
 * There are three ways to be authorized to transfer an NFT. You can be the owner, be approved for a specific token,
-  or be a\
+  or be an operator for all of the owner's tokens.
+* Past events are visible only outside the blockchain. Code running inside the blockchain cannot view them.
 
 Now go and implement secure Vyper contracts.
