@@ -305,7 +305,7 @@ This line specifies the inheritence, in this case from `IERC20` from above and `
 ```
 
 This line attaches the `SafeMath` library to the `uint256` type. You can find this library
-[here](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/math/SafeMath.sol).
+[here](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol).
 
 ### Variable Definitions {#variable-definitions}
 
