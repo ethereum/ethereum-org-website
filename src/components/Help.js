@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
+import axios from "axios"
+
 import Emoji from "./Emoji"
 import ButtonLink from "./ButtonLink"
 import Icon from "./Icon"
-import { graphql } from "gatsby"
 import Pill from "./Pill"
-import axios from "axios"
+import { trackCustomEvent } from "../utils/matomo"
 
 const StyledCard = styled.div`
   display: flex;
@@ -14,12 +15,10 @@ const StyledCard = styled.div`
   background: ${({ theme }) => theme.colors.background};
   border-radius: 4px;
   border: 1px solid ${({ theme }) => theme.colors.lightBorder};
-  width: calc(${({ theme }) => theme.breakpoints.m} - 4rem);
   overflow: hidden;
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     flex-direction: column-reverse;
     border: none;
-    width: 100%;
   }
 `
 
@@ -35,7 +34,7 @@ const Avatar = styled.div`
   height: 32px;
   width: 32px;
   background: ${(props) => props.theme.colors.searchBorder};
-  border: 0.5px solid ${(props) => props.theme.colors.primary};
+  border: 0.5px solid ${(props) => props.theme.colors.background};
   margin-left: -1rem;
   background: url(${({ url }) => url}) no-repeat center;
   background-size: contain;
@@ -71,10 +70,7 @@ const DiscordDescription = styled.p`
 `
 
 const ContentContainer = styled.div`
-  padding: 1rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    padding: 1rem 0;
-  }
+  padding-bottom: 1rem;
 `
 
 const TopContent = styled.div`
@@ -98,6 +94,12 @@ const StyledIcon = styled(Icon)`
   margin-left: 0.5rem;
 `
 
+const ButtonContainer = styled.div`
+  @media (min-width: ${({ theme }) => theme.breakpoints.m}) {
+    padding: 0 1rem;
+  }
+`
+
 const StyledButtonLink = styled(ButtonLink)`
   display: flex;
   align-items: center;
@@ -113,6 +115,7 @@ const DiscordStats = styled.div`
   justify-content: space-between;
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     border-radius: 8px;
+    flex-direction: column;
   }
 `
 
@@ -131,7 +134,6 @@ const TitleRow = styled(Row)`
   margin-bottom: 1rem;
 `
 
-// TODO: Pull "mentor" role from Discord (Permissions?)
 const mentors = [
   {
     username: "taekikz",
@@ -202,6 +204,15 @@ const Help = ({ className }) => {
       }
     })()
   }, [])
+
+  const trackClick = () => {
+    trackCustomEvent({
+      eventCategory: `Enter Ethereum`,
+      eventAction: `Clicked`,
+      eventName: window.location.pathname,
+    })
+  }
+
   return (
     <StyledCard className={className}>
       <>
@@ -224,7 +235,7 @@ const Help = ({ className }) => {
           <TitleRow>
             <Content>
               <strong>Need some help?</strong> Join the Enter Ethereum Discord
-              for support.{" "}
+              for support.
             </Content>
             <StyledPill>
               NEW{" "}
@@ -251,24 +262,14 @@ const Help = ({ className }) => {
             <Description>Friendly vibes</Description>
           </Row>
         </TopContent>
-        <StyledButtonLink to="https://discord.gg/5PzSpyKTVM">
-          Enter Ethereum <StyledIcon size={20} name="discord" />
-        </StyledButtonLink>
+        <ButtonContainer onClick={trackClick}>
+          <StyledButtonLink to="https://discord.gg/5PzSpyKTVM">
+            Enter Ethereum <StyledIcon size={20} name="discord" />
+          </StyledButtonLink>
+        </ButtonContainer>
       </ContentContainer>
     </StyledCard>
   )
 }
 
 export default Help
-
-export const query = graphql`
-  query {
-    hero: file(relativePath: { eq: "what-is-ethereum.png" }) {
-      childImageSharp {
-        fixed(width: 32) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-  }
-`
