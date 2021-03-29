@@ -884,6 +884,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://jordanoverbye.com"><img src="https://avatars.githubusercontent.com/u/6265154?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jordan Overbye</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ajordanoverbye" title="Bug reports">🐛</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=jordanoverbye" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Pilafonta"><img src="https://avatars.githubusercontent.com/u/4194866?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Peter LaFontaine</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3APilafonta" title="Bug reports">🐛</a> <a href="#content-Pilafonta" title="Content">🖋</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="http://joshjwelsh.com"><img src="https://avatars.githubusercontent.com/u/60113598?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joshua Welsh</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ajoshjwelsh" title="Bug reports">🐛</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
