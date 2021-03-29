@@ -39,7 +39,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 
 ## Community support
 
-<Help isMobile />
+<Help />
 
 ## Upcoming events {#upcoming-events}
 
