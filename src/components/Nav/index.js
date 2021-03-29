@@ -12,8 +12,8 @@ import Link from "../Link"
 import Icon from "../Icon"
 import Search from "../Search"
 import Translation from "../Translation"
-import { NavLink } from "../../components/SharedStyledComponents"
-
+import { NavLink } from "../SharedStyledComponents"
+import Help from "../Help"
 import { translateMessageId } from "../../utils/translations"
 
 const NavContainer = styled.div`
@@ -128,10 +128,35 @@ const NavIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.text};
 `
 
+const HelpMenu = ({ children, isOpen }) => {
+  const Indicator = styled.div`
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background: ${(props) => props.theme.colors.success400};
+    vertical-align: top;
+    margin-left: 0.25rem;
+  `
+  const Container = styled.div`
+    display: flex;
+    white-space: nowrap;
+    margin: 0 1rem;
+    position: relative;
+    cursor: pointer;
+  `
+  return (
+    <Container>
+      {children}
+      <Indicator />
+    </Container>
+  )
+}
+
 // TODO display page title on mobile
 const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const [isHelpOpen, setIsHelpOpen] = useState(false)
 
   const data = useStaticQuery(graphql`
     query {
@@ -301,6 +326,10 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       to: "/developers/local-environment/",
     },
   ]
+  const StyledHelp = styled(Help)`
+    position: absolute;
+  `
+
   let mobileLinkSections = cloneDeep(linkSections)
 
   const handleMenuToggle = (item) => {
@@ -314,6 +343,10 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
     }
   }
 
+  const handleHelpToggle = () => {
+    setIsHelpOpen(!isHelpOpen)
+    console.log({ isHelpOpen })
+  }
   const shouldShowSubNav = path.includes("/developers/")
 
   return (
@@ -349,6 +382,8 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
               )}
             </LeftItems>
             <RightItems>
+              <HelpMenu onClick={handleHelpToggle}>Live Help</HelpMenu>
+              {isHelpOpen && <StyledHelp />}
               <Search />
               <ThemeToggle onClick={handleThemeChange}>
                 <NavIcon name={isDarkTheme ? "darkTheme" : "lightTheme"} />
