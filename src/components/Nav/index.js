@@ -112,8 +112,6 @@ const HomeLogo = styled(Img)`
   }
 `
 
-// Todo: opacity -> nudge on hover?
-
 const Span = styled.span`
   padding-left: 0.5rem;
 `
@@ -128,29 +126,12 @@ const NavIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.text};
 `
 
-const HelpMenu = ({ children, isOpen }) => {
-  const Indicator = styled.div`
-    height: 8px;
-    width: 8px;
-    border-radius: 50%;
-    background: ${(props) => props.theme.colors.success400};
-    vertical-align: top;
-    margin-left: 0.25rem;
-  `
-  const Container = styled.div`
-    display: flex;
-    white-space: nowrap;
-    margin: 0 1rem;
-    position: relative;
-    cursor: pointer;
-  `
-  return (
-    <Container>
-      {children}
-      <Indicator />
-    </Container>
-  )
-}
+const StyledHelp = styled(Help)`
+  max-width: 320px;
+  .help-pill {
+    display: none;
+  }
+`
 
 // TODO display page title on mobile
 const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
@@ -302,6 +283,11 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         },
       ],
     },
+    {
+      text: "live-help",
+      ariaLabel: "live-help-menu",
+      component: <StyledHelp />,
+    },
   ]
   const ednLinks = [
     {
@@ -326,11 +312,11 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       to: "/developers/local-environment/",
     },
   ]
-  const StyledHelp = styled(Help)`
-    position: absolute;
-  `
 
-  let mobileLinkSections = cloneDeep(linkSections)
+  let mobileLinkSections = cloneDeep(
+    linkSections.slice(0, linkSections.length - 1) // filter live help
+  )
+  console.log(mobileLinkSections)
 
   const handleMenuToggle = (item) => {
     if (item === "menu") {
@@ -363,7 +349,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           <InnerContent>
             <LeftItems>
               {linkSections.map((section, idx) =>
-                section.items ? (
+                section.items || section.component ? (
                   <NavDropdown
                     section={section}
                     key={idx}
@@ -382,8 +368,6 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
               )}
             </LeftItems>
             <RightItems>
-              <HelpMenu onClick={handleHelpToggle}>Live Help</HelpMenu>
-              {isHelpOpen && <StyledHelp />}
               <Search />
               <ThemeToggle onClick={handleThemeChange}>
                 <NavIcon name={isDarkTheme ? "darkTheme" : "lightTheme"} />

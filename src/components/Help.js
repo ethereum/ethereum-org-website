@@ -20,6 +20,10 @@ const StyledCard = styled.div`
     flex-direction: column-reverse;
     border: none;
   }
+  color: ${({ theme }) => theme.colors.text};
+  &:hover {
+    color: ${({ theme }) => theme.colors.text};
+  }
 `
 
 const AvatarContainer = styled.div`
@@ -41,14 +45,15 @@ const Avatar = styled.div`
   overflow: hidden;
 `
 
-const Content = styled.p`
+const Content = styled.div`
   margin-bottom: 0;
-  flex: 1;
 `
 
 const Row = styled.div`
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  white-space: normal; /* override dropdown style */
   margin-bottom: 0.5rem;
 `
 
@@ -131,6 +136,7 @@ const StyledPill = styled(Pill)`
 
 const TitleRow = styled(Row)`
   align-items: flex-start;
+  justify-content: space-between;
   margin-bottom: 1rem;
 `
 
@@ -237,7 +243,7 @@ const Help = ({ className }) => {
               <strong>Need some help?</strong> Join the Enter Ethereum Discord
               for support.
             </Content>
-            <StyledPill>
+            <StyledPill className="help-pill">
               NEW{" "}
               <Emoji
                 size={2}
