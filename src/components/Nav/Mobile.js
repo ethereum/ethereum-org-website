@@ -3,13 +3,15 @@ import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 import { motion } from "framer-motion"
 
-import NakedButton from "../NakedButton"
-import Translation from "../Translation"
+import Emoji from "../Emoji"
+import Help from "../Help"
 import Icon from "../Icon"
 import Link from "../Link"
+import NakedButton from "../NakedButton"
+import Pill from "../Pill"
 import Search from "../Search"
-import Emoji from "../Emoji"
-import { NavLink } from "../../components/SharedStyledComponents"
+import Translation from "../Translation"
+import { NavLink } from "../SharedStyledComponents"
 import { translateMessageId } from "../../utils/translations"
 
 const Container = styled.div`
@@ -27,7 +29,7 @@ const MenuButton = styled(NakedButton)`
   margin-left: 1rem;
 `
 
-const SearchIcon = styled(MenuIcon)`
+const OtherIcon = styled(MenuIcon)`
   margin-right: 1rem;
 `
 
@@ -215,9 +217,28 @@ const BlankSearchState = styled.div`
   border-radius: 100%;
 `
 
+const StyledHelp = styled(Help)`
+  .help-pill {
+    display: none;
+  }
+`
+
+const StyledPill = styled(Pill)`
+  background: ${({ theme }) => theme.colors.primary100};
+  display: flex;
+  color: ${({ theme }) => theme.colors.black300};
+  align-items: center;
+  margin-left: 1rem;
+`
+
+const TextContainer = styled.div`
+  display: flex;
+`
+
 const MobileNavMenu = ({
   isMenuOpen,
   isSearchOpen,
+  isHelpOpen,
   isDarkTheme,
   toggleMenu,
   toggleTheme,
@@ -225,14 +246,17 @@ const MobileNavMenu = ({
 }) => {
   const intl = useIntl()
 
-  const isOpen = isMenuOpen || isSearchOpen
+  const isOpen = isMenuOpen || isSearchOpen || isHelpOpen
   return (
     <Container>
+      <MenuButton onClick={() => toggleMenu("help")} aria-label="Help icon">
+        <OtherIcon name="help" />
+      </MenuButton>
       <MenuButton
         onClick={() => toggleMenu("search")}
         aria-label={translateMessageId("aria-toggle-search-button", intl)}
       >
-        <SearchIcon name="search" />
+        <OtherIcon name="search" />
       </MenuButton>
       <MenuButton
         onClick={() => toggleMenu("menu")}
@@ -329,6 +353,24 @@ const MobileNavMenu = ({
           <Emoji text=":sailboat:" size={3} />
           <Translation id="search-box-blank-state-text" />
         </BlankSearchState>
+      </SearchContainer>
+      <SearchContainer
+        animate={isHelpOpen ? "open" : "closed"}
+        variants={mobileMenuVariants}
+        initial="closed"
+      >
+        <SearchHeader>
+          <TextContainer>
+            Help{" "}
+            <StyledPill className="help-pill">
+              NEW <Emoji size={2} ml="0.5rem" text=":sparkles:" />
+            </StyledPill>
+          </TextContainer>
+          <CloseIconContainer onClick={() => toggleMenu("help")}>
+            <Icon name="close" />
+          </CloseIconContainer>
+        </SearchHeader>
+        <StyledHelp />
       </SearchContainer>
     </Container>
   )

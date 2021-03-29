@@ -316,23 +316,20 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
   let mobileLinkSections = cloneDeep(
     linkSections.slice(0, linkSections.length - 1) // filter live help
   )
-  console.log(mobileLinkSections)
-
   const handleMenuToggle = (item) => {
     if (item === "menu") {
       setIsMenuOpen(!isMenuOpen)
     } else if (item === "search") {
       setIsSearchOpen(!isSearchOpen)
+    } else if (item === "help") {
+      setIsHelpOpen(!isHelpOpen)
     } else {
       setIsMenuOpen(false)
       setIsSearchOpen(false)
+      setIsHelpOpen(false)
     }
   }
 
-  const handleHelpToggle = () => {
-    setIsHelpOpen(!isHelpOpen)
-    console.log({ isHelpOpen })
-  }
   const shouldShowSubNav = path.includes("/developers/")
 
   return (
@@ -384,6 +381,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           <MobileNavMenu
             isMenuOpen={isMenuOpen}
             isSearchOpen={isSearchOpen}
+            isHelpOpen={isHelpOpen}
             isDarkTheme={isDarkTheme}
             toggleMenu={handleMenuToggle}
             toggleTheme={handleThemeChange}

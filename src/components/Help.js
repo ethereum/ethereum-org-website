@@ -128,7 +128,7 @@ const StyledPill = styled(Pill)`
   background: ${({ theme }) => theme.colors.primary100};
   display: flex;
   color: ${({ theme }) => theme.colors.black300};
-  vertical-align: middle;
+  align-items: center;
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     display: none;
   }
