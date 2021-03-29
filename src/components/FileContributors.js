@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
-import axios from "axios"
+import { useQuery, gql } from "@apollo/client"
 
 import ButtonLink from "./ButtonLink"
 import Icon from "./Icon"
@@ -113,41 +113,50 @@ const Contributor = styled.li`
   margin-bottom: 0;
 `
 
+const COMMIT_HISTORY = gql`
+  query CommitHistory($relativePath: String) {
+    repository(name: "ethereum-org-website", owner: "ethereum") {
+      ref(qualifiedName: "master") {
+        target {
+          ... on Commit {
+            id
+            history(path: $relativePath) {
+              edges {
+                node {
+                  author {
+                    name
+                    email
+                    avatarUrl(size: 100)
+                    user {
+                      login
+                      url
+                    }
+                  }
+                  committedDate
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
+
 const FileContributors = ({ relativePath, className, editPath }) => {
   const [isModalOpen, setModalOpen] = useState(false)
-  const [commits, setCommits] = useState([])
-
   const intl = useIntl()
 
-  useEffect(() => {
-    ;(async () => {
-      try {
-        const response = await axios.get(
-          `https://api.github.com/repos/ethereum/ethereum-org-website/commits?path=${relativePath}`
-        )
-        const gitCommits = response.data.map(({ commit, author }) => ({
-          author: {
-            name: commit.author.name,
-            email: commit.author.email,
-            date: commit.author.date,
-            avatarUrl: author.avatar_url,
-            user: {
-              url: author.html_url,
-              login: author.login,
-            },
-          },
-        }))
-        setCommits(gitCommits)
-      } catch (error) {
-        console.error(error)
-      }
-    })()
-  }, [relativePath])
+  const { loading, error, data } = useQuery(COMMIT_HISTORY, {
+    variables: { relativePath },
+  })
 
-  // Do not render component if data fetch fails / no commits to show
-  if (commits.length < 1) {
-    return null
-  }
+  if (loading || error) return null
+
+  const commits = data.repository?.ref?.target?.history?.edges?.map(
+    (commit) => commit.node
+  )
+
   const lastCommit = commits[0]
   const lastContributor = lastCommit.author
   const uniqueContributors = commits.reduce(
@@ -196,7 +205,7 @@ const FileContributors = ({ relativePath, className, editPath }) => {
               </Link>
             )}
             {!lastContributor.user && <span>{lastContributor.name}</span>},{" "}
-            {getLocaleTimestamp(intl.locale, lastCommit.author.date)}
+            {getLocaleTimestamp(intl.locale, lastCommit.committedDate)}
           </Info>
         </LeftContent>
         <ButtonContainer>

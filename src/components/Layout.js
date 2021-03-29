@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react"
+import { ApolloProvider } from "@apollo/client"
+import client from "../apollo"
 import { ThemeProvider } from "styled-components"
 import { IntlProvider, IntlContextProvider } from "gatsby-plugin-intl"
 import styled from "styled-components"
@@ -89,38 +91,40 @@ const Layout = (props) => {
   const path = props.path
 
   return (
-    <IntlProvider
-      locale={intl.language}
-      defaultLocale={intl.defaultLanguage}
-      messages={intl.messages}
-    >
-      <IntlContextProvider value={intl}>
-        <ThemeProvider theme={theme}>
-          <GlobalStyle isDarkTheme={isDarkTheme} />
-          <TranslationBanner
-            shouldShow={shouldShowTranslationBanner}
-            isPageContentEnglish={isPageContentEnglish}
-            isPageRightToLeft={isPageRightToLeft}
-            originalPagePath={intl.originalPath}
-          />
-          <ContentContainer>
-            <Nav
-              handleThemeChange={handleThemeChange}
-              isDarkTheme={isDarkTheme}
-              path={path}
+    <ApolloProvider client={client}>
+      <IntlProvider
+        locale={intl.language}
+        defaultLocale={intl.defaultLanguage}
+        messages={intl.messages}
+      >
+        <IntlContextProvider value={intl}>
+          <ThemeProvider theme={theme}>
+            <GlobalStyle isDarkTheme={isDarkTheme} />
+            <TranslationBanner
+              shouldShow={shouldShowTranslationBanner}
+              isPageContentEnglish={isPageContentEnglish}
+              isPageRightToLeft={isPageRightToLeft}
+              originalPagePath={intl.originalPath}
             />
-            {shouldShowSideNav && <SideNavMobile path={path} />}
-            <MainContainer>
-              {shouldShowSideNav && <SideNav path={path} />}
-              <MainContent>
-                <Main>{props.children}</Main>
-              </MainContent>
-            </MainContainer>
-            <Footer />
-          </ContentContainer>
-        </ThemeProvider>
-      </IntlContextProvider>
-    </IntlProvider>
+            <ContentContainer>
+              <Nav
+                handleThemeChange={handleThemeChange}
+                isDarkTheme={isDarkTheme}
+                path={path}
+              />
+              {shouldShowSideNav && <SideNavMobile path={path} />}
+              <MainContainer>
+                {shouldShowSideNav && <SideNav path={path} />}
+                <MainContent>
+                  <Main>{props.children}</Main>
+                </MainContent>
+              </MainContainer>
+              <Footer />
+            </ContentContainer>
+          </ThemeProvider>
+        </IntlContextProvider>
+      </IntlProvider>
+    </ApolloProvider>
   )
 }
 
