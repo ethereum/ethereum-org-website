@@ -12,8 +12,8 @@ import Link from "../Link"
 import Icon from "../Icon"
 import Search from "../Search"
 import Translation from "../Translation"
-import { NavLink } from "../../components/SharedStyledComponents"
-
+import { NavLink } from "../SharedStyledComponents"
+import Help from "../Help"
 import { translateMessageId } from "../../utils/translations"
 
 const NavContainer = styled.div`
@@ -112,8 +112,6 @@ const HomeLogo = styled(Img)`
   }
 `
 
-// Todo: opacity -> nudge on hover?
-
 const Span = styled.span`
   padding-left: 0.5rem;
 `
@@ -128,10 +126,18 @@ const NavIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.text};
 `
 
+const StyledHelp = styled(Help)`
+  max-width: 320px;
+  .help-pill {
+    display: none;
+  }
+`
+
 // TODO display page title on mobile
 const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const [isHelpOpen, setIsHelpOpen] = useState(false)
 
   const data = useStaticQuery(graphql`
     query {
@@ -277,6 +283,11 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         },
       ],
     },
+    {
+      text: "live-help",
+      ariaLabel: "live-help-menu",
+      component: <StyledHelp />,
+    },
   ]
   const ednLinks = [
     {
@@ -301,16 +312,21 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       to: "/developers/local-environment/",
     },
   ]
-  let mobileLinkSections = cloneDeep(linkSections)
 
+  let mobileLinkSections = cloneDeep(
+    linkSections.slice(0, linkSections.length - 1) // filter live help
+  )
   const handleMenuToggle = (item) => {
     if (item === "menu") {
       setIsMenuOpen(!isMenuOpen)
     } else if (item === "search") {
       setIsSearchOpen(!isSearchOpen)
+    } else if (item === "help") {
+      setIsHelpOpen(!isHelpOpen)
     } else {
       setIsMenuOpen(false)
       setIsSearchOpen(false)
+      setIsHelpOpen(false)
     }
   }
 
@@ -330,7 +346,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           <InnerContent>
             <LeftItems>
               {linkSections.map((section, idx) =>
-                section.items ? (
+                section.items || section.component ? (
                   <NavDropdown
                     section={section}
                     key={idx}
@@ -365,6 +381,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           <MobileNavMenu
             isMenuOpen={isMenuOpen}
             isSearchOpen={isSearchOpen}
+            isHelpOpen={isHelpOpen}
             isDarkTheme={isDarkTheme}
             toggleMenu={handleMenuToggle}
             toggleTheme={handleThemeChange}
