@@ -1,49 +1,50 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import Emoji from "./Emoji"
-import Card from "./Card"
 import ButtonLink from "./ButtonLink"
 import Icon from "./Icon"
-import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import Pill from "./Pill"
+import axios from "axios"
 
 const StyledCard = styled.div`
   display: flex;
-  flex-direction: ${(props) => (props.isMobile ? `column-reverse` : `column`)};
+  flex-direction: column;
   justify-content: space-between;
-  background: ${(props) => props.theme.colors.background};
+  background: ${({ theme }) => theme.colors.background};
   border-radius: 4px;
-  border: ${(props) =>
-    props.isMobile
-      ? `0px`
-      : `1px solid ${(props) => props.theme.colors.lightBorder}`};
-  width: ${(props) => (props.isMobile ? `100%` : `320px`)};
+  border: 1px solid ${({ theme }) => theme.colors.lightBorder};
+  width: calc(${({ theme }) => theme.breakpoints.m} - 4rem);
+  overflow: hidden;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    flex-direction: column-reverse;
+    border: none;
+    width: 100%;
+  }
+`
+
+const AvatarContainer = styled.div`
+  display: flex;
+  > :first-child {
+    margin-left: 0;
+  }
 `
 
 const Avatar = styled.div`
-  border-radius: 64px;
+  border-radius: 50%;
   height: 32px;
   width: 32px;
   background: ${(props) => props.theme.colors.searchBorder};
   border: 0.5px solid ${(props) => props.theme.colors.primary};
   margin-left: -1rem;
+  background: url(${({ url }) => url}) no-repeat center;
+  background-size: contain;
+  overflow: hidden;
 `
 
 const Content = styled.p`
   margin-bottom: 0;
-`
-
-const FirstAvatar = styled.div`
-  border-radius: 64px;
-  height: 32px;
-  width: 32px;
-  background: ${(props) => props.theme.colors.searchBorder};
-  border: 0.5px solid ${(props) => props.theme.colors.primary};
-`
-
-const AvatarContainer = styled.div`
-  display: flex;
+  flex: 1;
 `
 
 const Row = styled.div`
@@ -69,15 +70,26 @@ const DiscordDescription = styled.p`
   margin-bottom: 0;
 `
 
+const ContentContainer = styled.div`
+  padding: 1rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    padding: 1rem 0;
+  }
+`
+
 const TopContent = styled.div`
-  margin: ${(props) => (props.isMobile ? `0rem` : `1rem`)};
+  margin: 1rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    margin: 0;
+    margin-bottom: 1.5rem;
+  }
   margin-bottom: 1.5rem;
 `
 
 const Online = styled.div`
   height: 8px;
   width: 8px;
-  border-radius: 64px;
+  border-radius: 50%;
   background: ${(props) => props.theme.colors.success400};
 `
 
@@ -90,9 +102,6 @@ const StyledButtonLink = styled(ButtonLink)`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
-  margin-left: ${(props) => (props.isMobile ? `0rem` : `1rem`)};
-  margin-right: ${(props) => (props.isMobile ? `0rem` : `1rem`)};
 `
 
 const DiscordStats = styled.div`
@@ -102,17 +111,19 @@ const DiscordStats = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-radius: ${(props) => (props.isMobile ? `8px` : `3px 3px 0px 0px`)};
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    border-radius: 8px;
+  }
 `
 
 const StyledPill = styled(Pill)`
-  background: ${(props) => props.theme.colors.beta};
+  background: ${({ theme }) => theme.colors.primary100};
   display: flex;
-  color: ${(props) => props.theme.colors.text};
-`
-
-const StyledEmoji = styled(Emoji)`
-  margin-left: 0.25rem;
+  color: ${({ theme }) => theme.colors.black300};
+  vertical-align: middle;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    display: none;
+  }
 `
 
 const TitleRow = styled(Row)`
@@ -120,38 +131,112 @@ const TitleRow = styled(Row)`
   margin-bottom: 1rem;
 `
 
-const Help = ({ data, className, isMobile }) => {
+// TODO: Pull "mentor" role from Discord (Permissions?)
+const mentors = [
+  {
+    username: "taekikz",
+    avatar_url:
+      "https://cdn.discordapp.com/widget-avatars/h0TgJhUDc55mfAqHse16OJDouoEK-kT7ymtekdpy1G0/juSyzONMqWVbP71ufIDWslyKSJTiofQkRXLoHmX0oG5jwayaV4kWg2d1MF0l7T5EuIYegQZbsyd10xpEmREkgS9zSXo8-8vLJtdAolEAUVNWnQ1F7ROD01SDVh1XHerKByN8f9wv4sgOBA",
+  },
+  {
+    username: "Sundeep Charan Ramkumar",
+    avatar_url:
+      "https://cdn.discordapp.com/widget-avatars/1rnO2M7ZN_5p8VIJpzpeBeUluKuh7JJ8cuOXRlt0s8M/dwg7A4Gv5m3KIomwXwcJq7Hig3a81ELB_pcoeDYIX0NR7UjWcBp8EpvNQCetHTTANVAthIHXfha4_nJEyEOKE9hW5GTDSOmTF2mKlim45DouaeLsQKXQpEH2dm2QxymvKjD31akrol9Ceg",
+  },
+  {
+    username: "James Young | Collab.Land",
+    avatar_url:
+      "https://cdn.discordapp.com/widget-avatars/d_nJKKzBW2esc8ZabWGV5MskiAcEDwsFMnAjCniXSvY/P65p7NEwloRvVdHlsJKWZROUx79PbMWc0WNNglcPbkLuOLcglac2m8O2ILfSjd-m7ZWIYB1q7mi1D_907V3svdXzjUGmhGF0ZsH6HIzZYcLgr2tBbgcDnFrROCLOUwTT22jf3ekpTUbHHg",
+  },
+  {
+    username: "OdLny",
+    avatar_url:
+      "https://cdn.discordapp.com/widget-avatars/ggA5gq6eus9NHcn9SY-95WfHsE_AVEGJbjyPEm0ef5k/a5d-DP4VbxMPNi7YVfx1fUs5Sf7isAkshy_OLxK_RqCcrSw1jcxgbN8w9wsW35wERJICfm9_Aqb9lArOn31aeLfTwnjBerFoyuJDMkwH8C7U_bjHxgum8JDLEPgYfpNhqS1IKc9HugZJaw",
+  },
+  {
+    username: "solangegueiros",
+    avatar_url:
+      "https://cdn.discordapp.com/widget-avatars/D1iv9sqHTZl0SKOCxiShdUqRi3wUkT-9vv1lcFg4e_o/zmXhSAiVfVEftw456ipXH1j7LyzcbPN_EAasrZ03f0O8DVCAOygLiCsoan21ZAa5M4lJPYIT5p-YviQVrNnlH5dk1a_U-N_ku7dYEbQffyb4vIXxc4E1EjRcA_JH92mLjQVaSeTRtmdNqw",
+  },
+  {
+    username: "austingriffith",
+    avatar_url:
+      "https://cdn.discordapp.com/widget-avatars/fT6zHmg2LM4rfDh-oB2RqccsYYlFyGqtUdjd8rn1MRQ/dobjHIToD-ZSROaTJqR9qA3LSuOXeJbx_iMrO0m7MjXUokZmN_U-mw0LMqxMaJqhpQIM4yg-10Qb83jDuNxpOEIEggksAm-hXuWQ2G6roxSNG_wr_KkZ4e_cRyt96n8MVfaYt-TbjJmy0g",
+  },
+  {
+    username: "Joseph53",
+    avatar_url:
+      "https://cdn.discordapp.com/widget-avatars/Rx5GhtYBLCVSo4Iz9ecthirFM82UYZ--FW-l6MXWbbE/tn6WzS6X6N0LaGMB1-xiz-vxDL2_DBVKWCrndbZ_vzGqQSE5K2uY6IYjTByOvnX00pCl6HsJicO7f0ti-iweWfbsbqP0IjxBlTbLBOr-GHbpvzw0_1h1Ce2v0nCV94pwKjn6iZfduPPUZQ",
+  },
+  {
+    username: "Roberto | dOrg",
+    avatar_url:
+      "https://cdn.discordapp.com/widget-avatars/UJ84u0GoYdUGQ2FLwXBdS3RaSURla47gQZIJZNoukQw/hBlRs3ViWrutn8NvTzBczNXz6ucaKPLnmjX2xIqpdSYSSqNDmW3Y9R_36VsqCqJMXyAvnG4HSrGluhVyPxa4r_eFPYgRTQo2Nb7tzIIquFvpmUBso4bf5iQv9ILSf0VQ3-Y3ndjMcQzrifPv",
+  },
+]
+
+const Help = ({ className }) => {
+  const [onlineCount, setOnlineCount] = useState(0)
+  const [onlineMentors, setOnlineMentors] = useState([])
+  useEffect(() => {
+    ;(async () => {
+      try {
+        const response = await axios.get(
+          "https://discord.com/api/guilds/809505658248101948/widget.json"
+        )
+        setOnlineCount(response.data.presence_count)
+        const mentorAvatars = mentors.map((mentor) => mentor.avatar_url)
+        const onlineMentors = response.data.members.filter(
+          (user) =>
+            (user.status === "online" || user.status === "idle") &&
+            mentorAvatars.includes(user.avatar_url)
+        )
+        const remaining = 5 - onlineMentors.length
+        if (remaining > 0) {
+          const pushItem = response.data.members.splice(0, remaining)
+          onlineMentors.push(...pushItem)
+        }
+        setOnlineMentors(onlineMentors)
+      } catch (error) {
+        console.error(error)
+      }
+    })()
+  }, [])
   return (
-    <StyledCard className={className} isMobile={isMobile}>
+    <StyledCard className={className}>
       <>
         <DiscordStats>
           <AvatarContainer>
-            <FirstAvatar />
-            <Avatar />
-            <Avatar />
-            <Avatar />
-            <Avatar />
+            {onlineMentors.map(({ avatar_url }, idx) => (
+              <Avatar url={avatar_url} key={idx} />
+            ))}
           </AvatarContainer>
           <StyledRow>
             <Online />
             <DiscordDescription>
-              <strong>34</strong> mentors online
+              <strong>{onlineCount}</strong> folks online
             </DiscordDescription>
           </StyledRow>
         </DiscordStats>
       </>
-      <div>
-        <TopContent isMobile={isMobile}>
+      <ContentContainer>
+        <TopContent>
           <TitleRow>
             <Content>
-              <strong>Need some help?</strong> Join the Enter Ethereum discord
+              <strong>Need some help?</strong> Join the Enter Ethereum Discord
               for support.{" "}
             </Content>
-            {!isMobile && (
-              <StyledPill>
-                NEW <StyledEmoji size={2} text=":sparkles:" />
-              </StyledPill>
-            )}
+            <StyledPill>
+              NEW{" "}
+              <Emoji
+                size={2}
+                mt="0.125rem"
+                mr="0"
+                mb="-0.325rem"
+                ml="0.5rem"
+                text=":sparkles:"
+              />
+            </StyledPill>
           </TitleRow>
           <Row>
             <Emoji size={2} text=":earth_globe_asia-australia:" />
@@ -166,10 +251,10 @@ const Help = ({ data, className, isMobile }) => {
             <Description>Friendly vibes</Description>
           </Row>
         </TopContent>
-        <StyledButtonLink isMobile={isMobile} to="#">
+        <StyledButtonLink to="https://discord.gg/5PzSpyKTVM">
           Enter Ethereum <StyledIcon size={20} name="discord" />
         </StyledButtonLink>
-      </div>
+      </ContentContainer>
     </StyledCard>
   )
 }
