@@ -270,7 +270,7 @@ const Help = ({ className }) => {
         </TopContent>
         <ButtonContainer onClick={trackClick}>
           <StyledButtonLink to="https://discord.gg/5PzSpyKTVM">
-            Enter Ethereum <StyledIcon size={20} name="discord" />
+            Enter Ethereum <StyledIcon size={`20`} name="discord" />
           </StyledButtonLink>
         </ButtonContainer>
       </ContentContainer>

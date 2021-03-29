@@ -195,6 +195,7 @@ const BottomItemText = styled.div`
   letter-spacing: 0.04em;
   margin-top: 0.5rem;
   text-transform: uppercase;
+  text-align: center;
   opacity: 0.7;
   &:hover {
     opacity: 1;
@@ -331,6 +332,10 @@ const MobileNavMenu = ({
                 <Translation id="languages" />
               </BottomItemText>
             </BottomLink>
+          </BottomItem>
+          <BottomItem onClick={() => toggleMenu("help")}>
+            <MenuIcon name="help" />
+            <BottomItemText>Help</BottomItemText>
           </BottomItem>
         </BottomMenu>
         <CloseMenuIconContainer onClick={toggleMenu}>
