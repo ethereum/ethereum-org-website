@@ -104,6 +104,15 @@ const NavLink = styled(Link)`
   }
 `
 
+const Online = styled.div`
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: ${(props) => props.theme.colors.success400};
+  align-self: flex-start;
+  margin-left: 0.125rem;
+`
+
 const NavDropdown = ({ section, hasSubNav }) => {
   const [isOpen, setIsOpen] = useState(false)
   const intl = useIntl()
@@ -128,7 +137,11 @@ const NavDropdown = ({ section, hasSubNav }) => {
         tabIndex="0"
       >
         <Translation id={section.text} />
-        <StyledIcon isOpen={isOpen} name="chevronDown" />
+        {section.component ? (
+          <Online />
+        ) : (
+          <StyledIcon isOpen={isOpen} name="chevronDown" />
+        )}
       </DropdownTitle>
 
       {section.items ? (
