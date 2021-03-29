@@ -32,9 +32,14 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
   - [Ethereum Cat Herders](https://discord.gg/tzYmDmF) - _community oriented around offering project management support to Ethereum development_
   - [Ethereum Hackers](https://ethglobal.co/discord) - _Discord chat run by [ETHGlobal](https://www.ethglobal.co/): an online community for Ethereum hackers all over the world_
   - [CryptoDevs Discord](https://discord.gg/5W5tVb3) - _Ethereum development focused Discord community_
+  - [EthStaker Discord](https://discord.gg/NvCxbCu) - _Support for the [Beacon Chain](/eth2/beacon-chain/) staking community_
 - Twitter
   - The Ethereum community is very active on Twitter - not sure where to start?
     - [List of influential Ethereum twitter accounts](https://hive.one/ethereum/)
+
+## Community support
+
+<Help />
 
 ## Upcoming events {#upcoming-events}
 
