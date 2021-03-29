@@ -257,7 +257,7 @@ const Help = ({ className }) => {
           </TitleRow>
           <Row>
             <Emoji size={2} text=":earth_globe_asia-australia:" />
-            <Description>Multi-lingual support</Description>
+            <Description>Multilingual support</Description>
           </Row>
           <Row>
             <Emoji size={2} text=":mage:" />
