@@ -5,6 +5,7 @@ const GITHUB_TOKEN_READ_ONLY =
   process.env.CONTEXT === "production"
     ? process.env.GITHUB_TOKEN_READ_ONLY_PROD
     : process.env.CONTEXT === "deploy-preview"
+    ? process.env.GITHUB_TOKEN_READ_ONLY_STAGING
     : process.env.GITHUB_TOKEN_READ_ONLY_DEV
 
 const client = new ApolloClient({
