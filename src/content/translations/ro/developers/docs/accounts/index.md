@@ -9,14 +9,14 @@ Un cont Ethereum este o entitate cu un sold de eter (ETH) care poate trimite tra
 
 ## Condiții prealabile {#prerequisites}
 
-Conturile sunt un subiect foarte potrivit pentru începători. Dar pentru a înțelege mai bine această pagină, îți recomandăm să citești mai întâi [introducerea în Ethereum](/en/developers/docs/intro-to-ethereum/).
+Conturile sunt un subiect foarte potrivit pentru începători. Dar pentru a înțelege mai bine această pagină, îți recomandăm să citești mai întâi [introducerea în Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Tipuri de conturi {#types-of-account}
 
 Ethereum are două tipuri de conturi:
 
 - Deținute extern – controlate de oricine are o cheie privată
-- Contractuale – contracte inteligente implementate în rețea, controlate prin cod. Informații despre [contractele inteligente](/en/developers/docs/smart-contracts/)
+- Contractuale – contracte inteligente implementate în rețea, controlate prin cod. Informații despre [contractele inteligente](/developers/docs/smart-contracts/)
 
 Ambele tipuri de conturi au capacitatea de a:
 
@@ -134,5 +134,5 @@ _Cunoști o resursă comunitară care te-a ajutat? Editează această pagină ș
 
 ## Subiecte corelate {#related-topics}
 
-- [Contracte inteligente](/en/developers/docs/smart-contracts/)
-- [Tranzacții](/en/developers/docs/transactions/)
+- [Contracte inteligente](/developers/docs/smart-contracts/)
+- [Tranzacții](/developers/docs/transactions/)

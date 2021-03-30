@@ -19,7 +19,7 @@ sidebar: true
 
 **ডটনেটের সাথে ইথেরিয়ামকে যুক্ত করার প্রথম পদক্ষেপ নিন**
 
-একদম প্রথম থেকে শুরু করতে চান ? এখানে দেখুন[ethereum.org/learn](/bn/learn/)অথবা[ethereum.org/developers](/en/developers/)।
+একদম প্রথম থেকে শুরু করতে চান ? এখানে দেখুন[ethereum.org/learn](/bn/learn/)অথবা[ethereum.org/developers](/developers/)।
 
 - [ব্লকচেইনের ব্যাখ্যা](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [স্মার্ট কন্ট্রাক্ট কী বুঝা](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)

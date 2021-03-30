@@ -49,7 +49,7 @@ Pojasnila o Ethereumu in tehnologiji veriženja blokov na splošno na visoki rav
 
 Preprosto povedano je "pametna pogodba" samo delček kode, ki se izvaja v Ethereumu. Imenujemo jo "pogodba", ker lahko koda, se izvaja v Ethereumu, nadzoruje stvari, ki imajo vrednost, kot so ETH in druga digitalna sredstva.
 
-- Ali se želite naučiti, kako programirati pametne pogodbe v Ethereumu? [ethereum.org/sl/developers](/en/developers/)
+- Ali se želite naučiti, kako programirati pametne pogodbe v Ethereumu? [ethereum.org/sl/developers](/developers/)
 
 ## Dokaz dela in rudarjenje {#proof-of-work-and-mining}
 

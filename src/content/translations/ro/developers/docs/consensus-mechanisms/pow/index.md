@@ -10,7 +10,7 @@ Ethereum, la fel ca Bitcoin, folosește în prezent un protocol de consens numit
 
 ## Condiții prealabile {#prerequisites}
 
-Pentru a înțelege mai bine această pagină, îți recomandăm să citești mai întâi despre [tranzacții](/en/developers/docs/transactions/) și [blocuri](/en/developers/docs/blocks/).
+Pentru a înțelege mai bine această pagină, îți recomandăm să citești mai întâi despre [tranzacții](/developers/docs/transactions/) și [blocuri](/developers/docs/blocks/).
 
 ## Ce este dovada muncii (PoW)? {#what-is-pow}
 

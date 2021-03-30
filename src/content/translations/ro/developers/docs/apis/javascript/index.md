@@ -284,8 +284,8 @@ _Cunoști o resursă comunitară care te-a ajutat? Editează această pagină ș
 
 ## Subiecte corelate {#related-topics}
 
-- [Noduri și clienți](/en/developers/docs/nodes-and-clients/)
-- [Cadre de dezvoltare](/en/developers/docs/frameworks/)
+- [Noduri și clienți](/developers/docs/nodes-and-clients/)
+- [Cadre de dezvoltare](/developers/docs/frameworks/)
 
 ## Tutoriale corelate {#related-tutorials}
 

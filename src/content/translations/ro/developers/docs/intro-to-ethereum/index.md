@@ -15,7 +15,7 @@ Un blockchain este cel mai bine descris ca o bază de date publică, actualizat�
 
 Fiecare nou bloc și lanțul ca un ansamblu, trebuie să fie agreate de fiecare nod din rețea. Aceasta pentru că toată lumea are aceleași date. Pentru ca acest lucru să funcționeze, blockchain-urile au nevoie de un mecanism de consens.
 
-Ethereum utilizează în prezent dovada muncii ca mecanism de consens. Aceasta înseamnă că oricine dorește să adauge noi blocuri în lanț trebuie să rezolve un puzzle dificil la care ai nevoie de multă putere de calcul pentru a lucra. Rezolvarea puzzle-ului „dovedește” că ai cheltuit resursele de calcul. Acest lucru este cunoscut sub numele de [minerit](/en/developers/docs/consensus-mechanisms/pow/mining/). Mineritul poate fi încercare și eroare, dar adăugarea cu succes a unui bloc este recompensată în Eth. Pe de altă parte, trimiterea blocurilor frauduloase nu este o opțiune atractivă, având în vedere resursele pe care le-ai cheltuit pentru producerea blocului.
+Ethereum utilizează în prezent dovada muncii ca mecanism de consens. Aceasta înseamnă că oricine dorește să adauge noi blocuri în lanț trebuie să rezolve un puzzle dificil la care ai nevoie de multă putere de calcul pentru a lucra. Rezolvarea puzzle-ului „dovedește” că ai cheltuit resursele de calcul. Acest lucru este cunoscut sub numele de [minerit](/developers/docs/consensus-mechanisms/pow/mining/). Mineritul poate fi încercare și eroare, dar adăugarea cu succes a unui bloc este recompensată în Eth. Pe de altă parte, trimiterea blocurilor frauduloase nu este o opțiune atractivă, având în vedere resursele pe care le-ai cheltuit pentru producerea blocului.
 
 Blocurile noi sunt transmise către nodurile din rețea, controlate și verificate, actualizând starea pentru toată lumea.
 
@@ -97,7 +97,7 @@ Volumul tranzacțiilor este foarte mare, astfel încât tranzacțiile sunt „an
 
 Un fragment reutilizabil de cod (un program) pe care un programator îl publică în memoria EVM. Oricine poate solicita executarea codului de contract inteligent făcând o cerere de tranzacție. Deoarece programatorii pot scrie aplicații executabile arbitrare în EVM (jocuri, piețe, instrumente financiare etc.) prin publicarea de contracte inteligente, acestea sunt adesea numite și [dapps sau Aplicații descentralizate](/developers/docs/dapps/).
 
-[Mai multe despre contractele inteligente](/en/developers/docs/smart-contracts/)
+[Mai multe despre contractele inteligente](/developers/docs/smart-contracts/)
 
 ## Referințe suplimentare {#further-reading}
 

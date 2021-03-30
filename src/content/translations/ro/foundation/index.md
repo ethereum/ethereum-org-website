@@ -9,9 +9,9 @@ lang: ro
 
 <Logo/>
 
-[Fundația Ethereum](http://ethereum.foundation/) (EF) este o organizație non-profit dedicată sprijinirii [Ethereum](/en/what-is-ethereum/) și tehnologiilor conexe.
+[Fundația Ethereum](http://ethereum.foundation/) (EF) este o organizație non-profit dedicată sprijinirii [Ethereum](/what-is-ethereum/) și tehnologiilor conexe.
 
-EF nu este o companie sau nici chiar o organizație non-profit tradițională. Rolul ei nu este să controleze sau să conducă Ethereum și nici nu este singura organizație care finanțează dezvoltarea critică a tehnologiilor legate de Ethereum. EF este o parte a unui [ecosistem](/en/community/) mult mai mare.
+EF nu este o companie sau nici chiar o organizație non-profit tradițională. Rolul ei nu este să controleze sau să conducă Ethereum și nici nu este singura organizație care finanțează dezvoltarea critică a tehnologiilor legate de Ethereum. EF este o parte a unui [ecosistem](/community/) mult mai mare.
 
 ## Inițiative ale Fundației Ethereum {#ethereum-foundation-initiatives}
 

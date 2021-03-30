@@ -7,13 +7,13 @@ sidebar: true
 
 JavaScript is among the most popular languages in the Ethereum ecosystem. In fact, there's a [team](https://github.com/ethereumjs) dedicated to bringing as much of Ethereum to JavaScript as possible.
 
-There are opportunities to write JavaScript (or something close) at [all levels of the stack](/en/developers/docs/ethereum-stack/).
+There are opportunities to write JavaScript (or something close) at [all levels of the stack](/developers/docs/ethereum-stack/).
 
 ## Interact with Ethereum {#interact-with-ethereum}
 
 ### JavaScript API libraries {#javascript-api-libraries}
 
-If you'd like to write JavaScript to query the blockchain, send transactions and more, the most convenient way to do this is using a [JavaScript API library](/en/developers/docs/apis/javascript/). These APIs allow developers to easily interact with the [nodes in the Ethereum network](/en/developers/docs/nodes-and-clients/).
+If you'd like to write JavaScript to query the blockchain, send transactions and more, the most convenient way to do this is using a [JavaScript API library](/developers/docs/apis/javascript/). These APIs allow developers to easily interact with the [nodes in the Ethereum network](/developers/docs/nodes-and-clients/).
 
 You can use these libraries to interact with smart contracts on Ethereum so it's possible to build a dapp where you just use JavaScript to interact with pre-existing contracts.
 
@@ -26,13 +26,13 @@ You can use these libraries to interact with smart contracts on Ethereum so it's
 
 If you're a JavaScript developer and wanting to write your own smart contract, you may want to get familiar with [Solidity](https://solidity.readthedocs.io). This is the most popular smart contract language and it's heavily inspired by JavaScript.
 
-More on [smart contracts](/en/developers/docs/smart-contracts/).
+More on [smart contracts](/developers/docs/smart-contracts/).
 
 ## Understand the protocol {#understand-the-protocol}
 
 ### The Ethereum virtual machine {#the-ethereum-virtual-machine}
 
-There is a Javascript implementation of [Ethereum's virtual machine](/en/developers/docs/evm/). It supports the latest fork rules. Fork rules refer to changes made to the EVM as a result of planned upgrades.
+There is a Javascript implementation of [Ethereum's virtual machine](/developers/docs/evm/). It supports the latest fork rules. Fork rules refer to changes made to the EVM as a result of planned upgrades.
 
 It's split out into various JavaScript packages that you can check out to better understand:
 
