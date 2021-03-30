@@ -3263,6 +3263,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "robertdosa",
+      "name": "Robert Dosa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57013905?v=4",
+      "profile": "https://github.com/robertdosa",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
