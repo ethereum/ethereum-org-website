@@ -67,19 +67,35 @@ const GlyphButton = styled.svg`
   width: 1.5rem;
   height: 2.5rem;
   position: relative;
-  stroke: ${({ theme }) => theme.colors.text};
   stroke-width: 2px;
   z-index: 100;
+  & > path {
+    stroke: ${(props) => props.theme.colors.text};
+    fill: none;
+  }
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+    & > path {
+      stroke: ${(props) => props.theme.colors.primary};
+    }
+  }
 `
 
+const hamburgerSvg =
+  "M 2 13 l 10 0 l 0 0 l 10 0 M 4 19 l 8 0 M 12 19 l 8 0 M 2 25 l 10 0 l 0 0 l 10 0"
+const glyphSvg =
+  "M 2 19 l 10 -14 l 0 0 l 10 14 M 2 19 l 10 7 M 12 26 l 10 -7 M 2 22 l 10 15 l 0 0 l 10 -15"
+const closeSvg =
+  "M 2 13 l 0 -3 l 20 0 l 0 3 M 7 14 l 10 10 M 7 24 l 10 -10 M 2 25 l 0 3 l 20 0 l 0 -3"
+
 const glyphPathVariants = {
-  hamburger: {
-    d: "M 2 13 l 10 0 l 10 0 M 4 19 l 8  0 l 8  0 M 2 25 l 10 0 l 10 0",
+  closed: {
+    d: hamburgerSvg,
     transition: { duration: 0.4 },
   },
-  glyph: {
-    d: "M 2 19 l 10 -14 l 10 14 M 2 19 l 10 7 l 10 -7 M 2 22 l 10 15 l 10 -15",
-    transition: { duration: 0.8 },
+  open: {
+    d: [hamburgerSvg, glyphSvg, glyphSvg, glyphSvg, closeSvg],
+    transition: { duration: 1.2 },
   },
 }
 
@@ -256,10 +272,8 @@ const MobileNavMenu = ({
         <GlyphButton viewBox="0 0 24 40">
           <motion.path
             variants={glyphPathVariants}
-            animate={isOpen ? "glyph" : "hamburger"}
-            d={glyphPathVariants.hamburger.d}
-            stroke={isDarkTheme ? "white" : "black"}
-            fill="none"
+            initial={false}
+            animate={isOpen ? "open" : "closed"}
           />
         </GlyphButton>
       </MenuButton>
@@ -270,7 +284,7 @@ const MobileNavMenu = ({
         onClick={toggleMenu}
       />
       <MenuContainer
-        aria-hidden={isMenuOpen ? false : true}
+        aria-hidden={!isMenuOpen}
         animate={isMenuOpen ? "open" : "closed"}
         variants={mobileMenuVariants}
         initial="closed"
