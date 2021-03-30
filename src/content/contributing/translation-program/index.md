@@ -34,6 +34,6 @@ Thank you for your participation in the ethereum.org Translation Program!
 
 ## Eth2 Launchpad Translations {#eth2-launchpad}
 
-Note: there's a separate initiative to help translate the [Eth2 Launchpad](https://launchpad.ethereum.org/en/), which allows anyone to set up an Ethereum validator and help secure the Ethereum network.
+Our translation community is also working on the [Eth2 Launchpad](https://launchpad.ethereum.org/en/). This allows anyone to set up an Ethereum validator and help secure the Ethereum network.
 
-If you're interested you can also [join the Eth2 Launchpad translation project on Crowdin](https://crowdin.com/project/launchpad-translation).
+If you're interested, [join the Eth2 Launchpad translation project on Crowdin](https://crowdin.com/project/launchpad-translation).
