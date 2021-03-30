@@ -3272,6 +3272,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "SatoshiMiracle",
+      "name": "SatoshiMiracle",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72975337?v=4",
+      "profile": "https://github.com/SatoshiMiracle",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
