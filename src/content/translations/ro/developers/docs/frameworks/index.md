@@ -19,7 +19,7 @@ Cadrele sunt prevăzute cu numeroase funcționalități predefinite, cum ar fi:
 
 ## Condiții prealabile {#prerequisites}
 
-Înainte de a intra în cadre, îți recomandăm să citești mai întâi introducerea noastră despre aplicații [dapp](/en/developers/docs/dapps/) și [stiva Ethereum](/en/developers/docs/ethereum-stack/).
+Înainte de a intra în cadre, îți recomandăm să citești mai întâi introducerea noastră despre aplicații [dapp](/developers/docs/dapps/) și [stiva Ethereum](/developers/docs/ethereum-stack/).
 
 ## Cadre disponibile {#available-frameworks}
 
@@ -72,7 +72,7 @@ Cadrele sunt prevăzute cu numeroase funcționalități predefinite, cum ar fi:
 **The Graph -** **_protocol de indexare pentru interogarea eficientă a datelor blockchain_**
 
 - [Site web](https://thegraph.com/)
-- [Tutorial](/en/developers/tutorials/the-graph-fixing-web3-data-querying/)
+- [Tutorial](/developers/tutorials/the-graph-fixing-web3-data-querying/)
 
 **Alchemy -** **_platforma de dezvoltare Ethereum._**
 

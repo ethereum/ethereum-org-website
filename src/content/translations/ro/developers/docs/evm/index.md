@@ -17,7 +17,7 @@ Unele familiarități de bază cu terminologia comună în informatică, cum ar 
 
 Analogia unui „registru distribuit” este adesea folosită pentru a descrie un blockchain precum Bitcoin, care permite o monedă descentralizată folosind instrumente fundamentale de criptografie. O criptomonedă se comportă ca o monedă „normală” din cauza regulilor care guvernează ceea ce se poate și nu se poate face pentru a modifica registrul. De exemplu, o adresă Bitcoin nu poate cheltui mai mult Bitcoin decât a primit anterior. Aceste reguli stau la baza tuturor tranzacțiilor pe Bitcoin și pe multe alte blockchain-uri.
 
-În timp ce Ethereum are propria criptomonedă nativă (Ether) care urmează aproape exact aceleași reguli intuitive, permite, de asemenea, o funcție mult mai puternică: [contracte inteligente](/en/developers/docs/smart-contracts/). Pentru această caracteristică mai complexă, este necesară o analogie mai sofisticată. În loc de un registru distribuit, Ethereum este o [mașină de stare](https://en.wikipedia.org/wiki/Finite-state_machine) distribuită. Starea Ethereum este o structură mare de date care deține nu numai toate conturile și soldurile, ci și o _mașină de stare_, care se poate schimba din bloc în bloc în conformitate cu un set predefinit de reguli și care poate executa aleatoriu codul mașinii. Regulile specifice de schimbare a stării de la bloc la bloc sunt definite de EVM.
+În timp ce Ethereum are propria criptomonedă nativă (Ether) care urmează aproape exact aceleași reguli intuitive, permite, de asemenea, o funcție mult mai puternică: [contracte inteligente](/developers/docs/smart-contracts/). Pentru această caracteristică mai complexă, este necesară o analogie mai sofisticată. În loc de un registru distribuit, Ethereum este o [mașină de stare](https://en.wikipedia.org/wiki/Finite-state_machine) distribuită. Starea Ethereum este o structură mare de date care deține nu numai toate conturile și soldurile, ci și o _mașină de stare_, care se poate schimba din bloc în bloc în conformitate cu un set predefinit de reguli și care poate executa aleatoriu codul mașinii. Regulile specifice de schimbare a stării de la bloc la bloc sunt definite de EVM.
 
 ![O diagramă care prezintă alcătuirea EVM](../../../../../developers/docs/evm/evm.png) _Diagramă adaptată după [Ethereum EVM ilustrat](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
@@ -77,4 +77,4 @@ Toți [clienții Ethereum](/developers/docs/nodes-and-clients/#clients) includ o
 
 ## Subiecte corelate {#related-topics}
 
-- [Gaz](/en/developers/docs/gas/)
+- [Gaz](/developers/docs/gas/)

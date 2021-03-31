@@ -10,9 +10,9 @@ incomplete: true
 
 Comunitatea Ethereum a adoptat multe standarde care ajută la menținerea proiectelor (cum ar fi [clienți Ethereum](/developers/docs/nodes-and-clients/) și portofele) interoperabile între implementări și asigură menținerea compatibilității între contractele inteligente și aplicațiile dapp.
 
-De obicei, standardele sunt introduse ca [Propuneri de îmbunătățire Ethereum](/en/eips/) (EIP), care sunt discutate de membrii comunității prin intermediul unui [proces standard](https://eips.ethereum.org/EIPS/eip-1).
+De obicei, standardele sunt introduse ca [Propuneri de îmbunătățire Ethereum](/eips/) (EIP), care sunt discutate de membrii comunității prin intermediul unui [proces standard](https://eips.ethereum.org/EIPS/eip-1).
 
-- [Introducere în EIP-uri](/en/eips/)
+- [Introducere în EIP-uri](/eips/)
 - [Listă de EIP-uri](https://eips.ethereum.org/)
 - [Depozit github de EIP-uri](https://github.com/ethereum/EIPs)
 - [Forum de discuții EIP](https://ethereum-magicians.org/c/eips)

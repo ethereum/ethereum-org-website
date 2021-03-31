@@ -8,7 +8,7 @@ sidebarDepth: 2
 
 # Community guides and resources {#learn-about-ethereum}
 
-**Welcome to ethereum.org/learn, a set of resources to help you learn more about Ethereum.** This page includes technical **and** non-technical articles, guides, and resources. If you’re totally new to Ethereum, [we suggest you start here](/en/what-is-ethereum/).
+**Welcome to ethereum.org/learn, a set of resources to help you learn more about Ethereum.** This page includes technical **and** non-technical articles, guides, and resources. If you’re totally new to Ethereum, [we suggest you start here](/what-is-ethereum/).
 
 Here are some excellent starting points:
 
@@ -37,13 +37,13 @@ High-level explanations of Ethereum and blockchain technology generally.
 - [A Gentle Introduction to Ethereum](https://bitsonblocks.net/2016/10/02/gentle-introduction-ethereum/) _Oct 2, 2016 - Antony Lewis_
 - [Introduction to Blockchain through Cryptoeconomics - Part 1](https://medium.com/blockchain-at-berkeley/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) _Jan 26, 2018 - Zubin Koticha_
 - [Introduction to Blockchain through Cryptoeconomics - Part 2](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-1252f6a6c012) _July 19, 2018 - Zubin Koticha_
-- [Ethereum's original Whitepaper](/en/whitepaper/)
+- [Ethereum's original Whitepaper](/whitepaper/)
 
 ## Smart Contracts {#smart-contracts}
 
 A “smart contract” is simply a piece of code that is running on Ethereum. It’s called a “contract” because code that runs on Ethereum can control valuable things like ETH or other digital assets.
 
-- Want to learn how to program on Ethereum with smart contracts? [ethereum.org/developers](/en/developers/)
+- Want to learn how to program on Ethereum with smart contracts? [ethereum.org/developers](/developers/)
 - [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _Nov 12, 2018 - Andreas M. Antonopoulos, Gavin Wood_
 - [What are Smart Contracts/Decentralized Applications?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) _Updated often - Ethhub_
 
@@ -103,7 +103,7 @@ There are many efforts underway to make Ethereum more “scalable” by improvin
 
 Eth2 (also known as “Serenity”) refers to the next major upgrade of the core Ethereum protocol. It combines several improvements to Ethereum’s core protocol, or “Layer 1”.
 
-[Learn everything you need to know about Eth2](/en/eth2/).
+[Learn everything you need to know about Eth2](/eth2/).
 
 ## ETH 1.x {#eth-1x}
 

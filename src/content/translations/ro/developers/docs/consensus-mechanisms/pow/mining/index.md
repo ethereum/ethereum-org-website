@@ -8,7 +8,7 @@ incomplete: true
 
 ## Condiții prealabile {#prerequisites}
 
-Pentru a înțelege mai bine această pagină, îți recomandăm să citești mai întâi despre [tranzacții](/en/developers/docs/transactions/), [blocuri](/en/developers/docs/blocks/) și [dovada muncii (PoW)](/developers/docs/consensus-mechanisms/pow/).
+Pentru a înțelege mai bine această pagină, îți recomandăm să citești mai întâi despre [tranzacții](/developers/docs/transactions/), [blocuri](/developers/docs/blocks/) și [dovada muncii (PoW)](/developers/docs/consensus-mechanisms/pow/).
 
 ## Ce este mineritul Ethereum? {#what-is-ethereum-mining}
 
@@ -24,10 +24,10 @@ Ethereum, la fel ca Bitcoin, utilizează în prezent un mecanism de consens [dov
 
 ## Cum sunt minate tranzacțiile Ethereum {#how-ethereum-transactions-are-mined}
 
-1. Un utilizator scrie și semnează o cerere de [tranzacție](/en/developers/docs/transactions/) cu cheia privată a unui [cont](/en/developers/docs/accounts/).
-2. Utilizatorul transmite cererea de tranzacție către întreaga rețea Ethereum de la un anumit [nod](/en/developers/docs/nodes-and-clients/).
+1. Un utilizator scrie și semnează o cerere de [tranzacție](/developers/docs/transactions/) cu cheia privată a unui [cont](/developers/docs/accounts/).
+2. Utilizatorul transmite cererea de tranzacție către întreaga rețea Ethereum de la un anumit [nod](/developers/docs/nodes-and-clients/).
 3. După primirea noii cereri de tranzacție, fiecare nod din rețeaua Ethereum adaugă cererea în mempool-ul local, o listă a tuturor cererilor de tranzacție despre care a auzit și care nu au fost încă angajate în blockchain într-un bloc.
-4. La un moment dat, un nod minier agregă câteva zeci sau sute de cereri de tranzacții într-un potențial [bloc](/en/developers/docs/blocks/), într-un mod care maximizează [>comisioanele de tranzacție](/en/developers/docs/gas/) pe care le câștigă, rămânând totuși sub limita de gaz a blocului. Nodul minier atunci:
+4. La un moment dat, un nod minier agregă câteva zeci sau sute de cereri de tranzacții într-un potențial [bloc](/developers/docs/blocks/), într-un mod care maximizează [>comisioanele de tranzacție](/developers/docs/gas/) pe care le câștigă, rămânând totuși sub limita de gaz a blocului. Nodul minier atunci:
    1. Verifică validitatea fiecărei cereri de tranzacție (adică nimeni nu încearcă să transfere eter dintr-un cont pentru care nu au produs o semnătură, cererea nu este malformată etc.) și apoi execută codul cererii, modificând starea copiei locale a EVM. Minerul acordă taxa de tranzacție pentru fiecare astfel de cerere de tranzacție propriului lor cont.
    2. Începe procesul de producere a „certificatului de legitimitate” al dovezii muncii (PoW) pentru blocul potențial, odată ce toate cererile de tranzacție din bloc au fost verificate și executate pe copia EVM locală.
 5. În cele din urmă, un miner va finaliza producerea unui certificat pentru un bloc care include solicitarea noastră specifică de tranzacție. Minerul transmite apoi blocul completat, care include certificatul și o sumă de control a noului stat EVM revendicat.

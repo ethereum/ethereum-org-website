@@ -83,7 +83,7 @@ The Ethereum community includes people of many different backgrounds and skillse
 
 **Developers**
 
-- Learn about and try Ethereum at [ethereum.org/developers/](/en/developers/)
+- Learn about and try Ethereum at [ethereum.org/developers/](/developers/)
 - [Find a bounty on Gitcoin](https://gitcoin.co/), work on a small or large technical issue, earn crypto!
 - Attend an [ETHGlobal](http://ethglobal.co/) hackathon near you!
 - Check out [projects related to your area of expertise or programming language of choice](/developers/docs/programming-languages/)
@@ -111,7 +111,7 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
   - There are many open-source community calls, and having notetakers is a huge help. If you’re interested, join the Ethereum Cat Herders chat [here](https://gitter.im/ethereum-cat-herders/meeting-notes-and-summaries), and introduce yourself!
 - **Translate Ethereum content into your native language**
   - ethereum.org maintains a translation program that translates the website, and other resources, into many different languages
-  - Find out how to get involved [here](/en/languages/#ethereum-org-translation-program)
+  - Find out how to get involved [here](/languages/#ethereum-org-translation-program)
 
 **Financial professional or accountant**
 

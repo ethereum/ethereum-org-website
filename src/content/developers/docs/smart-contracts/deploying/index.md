@@ -60,4 +60,4 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related topics {#related-topics}
 
-- [Development frameworks](/en/developers/docs/frameworks/)
+- [Development frameworks](/developers/docs/frameworks/)

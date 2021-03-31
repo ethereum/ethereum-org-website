@@ -10,7 +10,7 @@ Pentru ca Ethereum să funcționeze în mod descentralizat, are nevoie de o reț
 
 ## Condiții prealabile {#prerequisites}
 
-Ar trebui să înțelegi conceptul unei rețele descentralizate înainte de a continua și de a rula propria instanță de client Ethereum. Aruncă o privire la [ introducerea în Ethereum](/en/developers/docs/intro-to-ethereum/).
+Ar trebui să înțelegi conceptul unei rețele descentralizate înainte de a continua și de a rula propria instanță de client Ethereum. Aruncă o privire la [ introducerea în Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Ce sunt nodurile și clienții? {#what-are-nodes-and-clients}
 
@@ -64,7 +64,7 @@ Rularea propriul nod îți permite să utilizezi Ethereum într-un mod cu adevă
 
 Un set divers de noduri este important pentru sănătatea, securitatea și rezistența operațională a Ethereum.
 
-- Acestea oferă acces la datele blockchain pentru clienții ușori care depind de aceasta. În perioadele de vârf de utilizare, trebuie să existe suficiente noduri complete pentru a ajuta la sincronizarea nodurilor ușoare. Nodurile ușoare nu stochează întregul blockchain, ci verifică datele prin [rădăcinile stării din anteturile de blocuri](/en/developers/docs/blocks/#block-anatomy). Ele pot solicita mai multe informații de la blocuri dacă au nevoie de ele.
+- Acestea oferă acces la datele blockchain pentru clienții ușori care depind de aceasta. În perioadele de vârf de utilizare, trebuie să existe suficiente noduri complete pentru a ajuta la sincronizarea nodurilor ușoare. Nodurile ușoare nu stochează întregul blockchain, ci verifică datele prin [rădăcinile stării din anteturile de blocuri](/developers/docs/blocks/#block-anatomy). Ele pot solicita mai multe informații de la blocuri dacă au nevoie de ele.
 - Nodurile complete aplică regulile de consens pentru dovada muncii, deci nu pot fi păcălite să accepte blocuri care nu le urmează. Acest lucru oferă o securitate suplimentară în rețea, deoarece dacă toate nodurile ar fi noduri ușoare, care nu fac verificarea completă, minerii ar putea ataca rețeaua și de exemplu, ar putea crea blocuri cu recompense mai mari.
 
 Dacă rulezi un nod complet, întreaga rețea Ethereum beneficiază de acesta.
@@ -112,7 +112,7 @@ Acest tabel sintetizează diferiți clienți. Se lucrează în mod activ la toat
 | [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java     | Linux, Windows, macOS | Rețea principală, Rinkeby, Ropsten și Görli          | Rapid, Complet             | Arhivă, Curățat  |
 | [Trinity](https://trinity.ethereum.org/)                     | Python   | Linux, macOS          | Rețea principală, Görli, Ropsten și altele           | Complet, Beam, Rapid/Antet | Arhivă           |
 
-Pentru mai multe informații despre rețelele acceptate, citește [rețelele Ethereum](/en/developers/docs/networks/).
+Pentru mai multe informații despre rețelele acceptate, citește [rețelele Ethereum](/developers/docs/networks/).
 
 ### Avantajele diferitelor implementări {#advantages-of-different-implementations}
 
@@ -205,7 +205,7 @@ Aceste diagrame arată cum cerințele de stocare sunt mereu în schimbare. Pentr
 
 ### Ethereum pe un computer cu o singură placă (SBC) {#ethereum-on-a-single-board-computer}
 
-Cel mai convenabil și mai ieftin mod de a rula nodul Ethereum este de a utiliza un computer cu o singură placă bazată pe arhitectură ARM precum Raspberry Pi. [Ethereum pe ARM](https://twitter.com/EthereumOnARM) oferă imagini cu clienții Geth, Parity, Nethermind și Besu. Iată un tutorial simplu despre [cum să construiești și să configurezi un client ARM](/en/developers/tutorials/run-node-raspberry-pi/).
+Cel mai convenabil și mai ieftin mod de a rula nodul Ethereum este de a utiliza un computer cu o singură placă bazată pe arhitectură ARM precum Raspberry Pi. [Ethereum pe ARM](https://twitter.com/EthereumOnARM) oferă imagini cu clienții Geth, Parity, Nethermind și Besu. Iată un tutorial simplu despre [cum să construiești și să configurezi un client ARM](/developers/tutorials/run-node-raspberry-pi/).
 
 Dispozitive mici, accesibile și eficiente ca acestea sunt ideale pentru rularea unui nod acasă.
 
@@ -227,8 +227,8 @@ Există o mulțime de instrucțiuni și informații despre clienții Ethereum pe
 
 ## Subiecte corelate {#related-topics}
 
-- [Blocuri](/en/developers/docs/blocks/)
-- [Rețele](/en/developers/docs/networks/)
+- [Blocuri](/developers/docs/blocks/)
+- [Rețele](/developers/docs/networks/)
 
 ## Tutoriale corelate {#related-tutorials}
 
