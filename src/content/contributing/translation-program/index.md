@@ -31,3 +31,9 @@ Thank you for your participation in the ethereum.org Translation Program!
 ## In-progress translations {#in-progress}
 
 <TranslationsInProgress />
+
+## Eth2 Launchpad Translations {#eth2-launchpad}
+
+Our translation community is also working on the [Eth2 Launchpad](https://launchpad.ethereum.org/en/). This allows anyone to set up an Ethereum validator and help secure the Ethereum network.
+
+If you're interested, [join the Eth2 Launchpad translation project on Crowdin](https://crowdin.com/project/launchpad-translation).
