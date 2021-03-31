@@ -13,13 +13,13 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 **TL;DR**: Flash Raspberry PI 4, conectează un cablu ethernet, conectează discul SSD și pornește dispozitivul pentru a transforma Raspberry PI 4 într-un nod Ethereum 1.0 sau un nod Ethereum 2.0 (lanț Beacon / validator)
 
-[Află mai multe despre Ethereum 2.0 (Eth2)](/en/eth2/)
+[Află mai multe despre Ethereum 2.0 (Eth2)](/eth2/)
 
-Mai întâi câteva noțiuni de bază. După cum știi, am întâmpinat unele probleme de memorie [[1]](/en/developers/tutorials/run-node-raspberry-pi/#references) cu imaginea Raspberry PI 4 ca sistem de operare, Raspbian este încă pe 32 de biți [[2]](/en/developers/tutorials/run-node-raspberry-pi/#references) (cel puțin cu aplicația „userland”). Chiar dacă preferăm să rămânem cu sistemul de operare oficial am ajuns la concluzia că, pentru a rezolva aceste probleme, trebuie să migrăm la un sistem de operare nativ de 64 de biți
+Mai întâi câteva noțiuni de bază. După cum știi, am întâmpinat unele probleme de memorie [[1]](/developers/tutorials/run-node-raspberry-pi/#references) cu imaginea Raspberry PI 4 ca sistem de operare, Raspbian este încă pe 32 de biți [[2]](/developers/tutorials/run-node-raspberry-pi/#references) (cel puțin cu aplicația „userland”). Chiar dacă preferăm să rămânem cu sistemul de operare oficial am ajuns la concluzia că, pentru a rezolva aceste probleme, trebuie să migrăm la un sistem de operare nativ de 64 de biți
 
 În plus, [Clienții Eth 2.0](/eth2/get-infered/#eth2-clients) nu suportă aplicațiile 32 de biți binare, astfel încât utilizarea Raspbian ar exclude Raspberry Pi 4 de la rularea unui nod Eth 2.0 (și posibilitatea de a miza).
 
-Deci, după mai multe teste, acum eliberăm 2 imagini diferite bazate pe Ubuntu 20.04 pe 64 biți [[3]](/en/developers/tutorials/run-node-raspberry-pi/#references): edițiile Eth 1.0 și Eth 2.0.
+Deci, după mai multe teste, acum eliberăm 2 imagini diferite bazate pe Ubuntu 20.04 pe 64 biți [[3]](/developers/tutorials/run-node-raspberry-pi/#references): edițiile Eth 1.0 și Eth 2.0.
 
 Practic, ambele sunt aceeași imagine și includ aceleași caracteristici ale imaginilor bazate pe Raspbian. Dar acestea sunt configurate pentru a rula software-ul Eth 1.0 sau Eth 2.0 în mod implicit.
 
@@ -29,7 +29,7 @@ Practic, ambele sunt aceeași imagine și includ aceleași caracteristici ale im
 
 - Bazat pe Ubuntu 20.04 pe 64 biți
 - Partiționează și formatează automat discul USB
-- Adaugă memorie swap (modulul de kernel ZRAM + un fișier swap) bazat pe proiectul Armbian [[7]](/en/developers/tutorials/run-node-raspberry-pi/#references)
+- Adaugă memorie swap (modulul de kernel ZRAM + un fișier swap) bazat pe proiectul Armbian [[7]](/developers/tutorials/run-node-raspberry-pi/#references)
 - Schimbă numele gazdei cu ceva de genul „ethnode-e2a3e6fe” bazat pe hash MAC
 - Rulează software-ul ca serviciu de sistem și începe să sincronizeze Blockchain
 - Include un depozit APT pentru instalarea și actualizarea software-ului Ethereum
@@ -41,23 +41,23 @@ Ambele imagini includ aceleași pachete, singura diferență dintre ele este că
 
 ### Clienții Ethereum 1.0 {#ethereum-10-clients}
 
-- Geth [[8]](/en/developers/tutorials/run-node-rasp berry-pi/#references): 1.9.13 (oficial compilat binar)
-- Parity [[9]](/en/developers/tutorials/run-node-raspberry-pi/#references): 2.7.2 (compilat încrucișat)
-- Nethermind [[10]](/en/developers/tutorials/run-node-raspberry-pi/#references): 1.8.28 (compilat încrucișat)
-- Hyperledger Besu [[11]](/en/developers/tutorials/run-node-raspberry-pi/#references): 1.4.4 (compilat)
+- Geth [[8]](/developers/tutorials/run-node-rasp berry-pi/#references): 1.9.13 (oficial compilat binar)
+- Parity [[9]](/developers/tutorials/run-node-raspberry-pi/#references): 2.7.2 (compilat încrucișat)
+- Nethermind [[10]](/developers/tutorials/run-node-raspberry-pi/#references): 1.8.28 (compilat încrucișat)
+- Hyperledger Besu [[11]](/developers/tutorials/run-node-raspberry-pi/#references): 1.4.4 (compilat)
 
 ### Clienții Ethereum 2.0 {#ethereum-20-clients}
 
-- Prysm [[12]](/en/developers/tutorials/run-node-raspberry-pi/#references): 1.0.0-alpha6 (oficial compilat binar)
-- Lighthouse [[13]](/en/developers/tutorials/run-node-raspberry-pi/#references): 0.1.1 (compilat)
+- Prysm [[12]](/developers/tutorials/run-node-raspberry-pi/#references): 1.0.0-alpha6 (oficial compilat binar)
+- Lighthouse [[13]](/developers/tutorials/run-node-raspberry-pi/#references): 0.1.1 (compilat)
 
 ### Cadrul Ethereum {#ethereum-framework}
 
-- Swarm [[14]](/en/developers/tutorials/run-node-raspberry-pi/#references): 0.5.7 (oficial compilat binar)
-- Raiden Network [[15]](/en/developers/tutorials/run-node-raspberry-pi/#references): 0.200.0~rc1 (oficial compilat binar)
-- IPFS [[16]](/en/developers/tutorials/run-node-raspberry-pi/#references): 0.5.0 (oficial compilat binar)
-- Statusd [[17]](/en/developers/tutorials/run-node-raspberry-pi/#references): 0.52.3 (compilat)
-- Vipnode [[18]](/en/developers/tutorials/run-node-raspberry-pi/#references): 2.3.3 (oficial compilat binar)
+- Swarm [[14]](/developers/tutorials/run-node-raspberry-pi/#references): 0.5.7 (oficial compilat binar)
+- Raiden Network [[15]](/developers/tutorials/run-node-raspberry-pi/#references): 0.200.0~rc1 (oficial compilat binar)
+- IPFS [[16]](/developers/tutorials/run-node-raspberry-pi/#references): 0.5.0 (oficial compilat binar)
+- Statusd [[17]](/developers/tutorials/run-node-raspberry-pi/#references): 0.52.3 (compilat)
+- Vipnode [[18]](/developers/tutorials/run-node-raspberry-pi/#references): 2.3.3 (oficial compilat binar)
 
 ## Ghid de instalare și utilizare {#installation-guide-and-usage}
 
@@ -68,7 +68,7 @@ Ambele imagini includ aceleași pachete, singura diferență dintre ele este că
 - Disc SSD USB 3.0 (vezi secțiunea de stocare)
 - Alimentare electrică
 - Cablu Ethernet
-- 30303 Port forwarding (Eth 1.0) și 13000 port forwarding (Eth 2.0) [[4]](/en/developers/tutorials/run-node-raspberry-pi/#references)
+- 30303 Port forwarding (Eth 1.0) și 13000 port forwarding (Eth 2.0) [[4]](/developers/tutorials/run-node-raspberry-pi/#references)
 - O cutie cu disipator termic și ventilator (opțional, dar foarte recomandat)
 - Tastatură USB, monitor și cablu HDMI (micro-HDMI) (opțional)
 
@@ -152,11 +152,11 @@ sudo tail -f /var/log/syslog
 
 Acum trebuie să aștepți sincronizarea blockchain-ului. În cazul Eth 1.0 acest lucru va dura câteva zile, în funcție de mai mulți factori, dar te poți aștepta de la 5 la 7 zile aproximativ.
 
-Dacă rulezi rețeaua de testare Ethnet Topaz te poți aștepta la o perioadă de 1 - 2 zile de sincronizare a lanțului Beacon. Amintește-ți că va trebui să configurezi validatorul mai târziu pentru a începe procesul de mizare. [Cum se execută validatorul Eth 2.0](/en/developers/tutorials/run-node-raspberry-pi/#validator)
+Dacă rulezi rețeaua de testare Ethnet Topaz te poți aștepta la o perioadă de 1 - 2 zile de sincronizare a lanțului Beacon. Amintește-ți că va trebui să configurezi validatorul mai târziu pentru a începe procesul de mizare. [Cum se execută validatorul Eth 2.0](/developers/tutorials/run-node-raspberry-pi/#validator)
 
 ## Monitorizare tablouri de bord {#monitoring-dashboards}
 
-Pentru această primă versiune, am inclus 3 tablouri de bord de monitorizare bazate pe Prometheus [[5]](/en/developers/tutorials/run-node-raspberry-pi/#references) / Grafana [[6]](/en/developers/tutorials/run-node-raspberry-pi/#references) pentru a monitoriza nodul și datele clientului (Geth și Besu). Poate fi accesat prin browserul web:
+Pentru această primă versiune, am inclus 3 tablouri de bord de monitorizare bazate pe Prometheus [[5]](/developers/tutorials/run-node-raspberry-pi/#references) / Grafana [[6]](/developers/tutorials/run-node-raspberry-pi/#references) pentru a monitoriza nodul și datele clientului (Geth și Besu). Poate fi accesat prin browserul web:
 
 ```bash
 URL: http://your_raspberrypi_IP: 3000

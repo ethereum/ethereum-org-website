@@ -19,6 +19,7 @@ import {
 import { BsQuestionSquareFill } from "react-icons/bs"
 import { IoCodeDownload } from "react-icons/io5"
 import { IoCodeOutline } from "react-icons/io5"
+import { MdLiveHelp } from "react-icons/md"
 
 const Icon = ({ name, size, className }) => (
   <IconContext.Provider value={{ size: size, className: className }}>
@@ -40,6 +41,7 @@ const Icon = ({ name, size, className }) => (
     {name === "codeDownload" && <IoCodeDownload />}
     {name === "code" && <IoCodeOutline />}
     {name === "flip" && <MdFlip />}
+    {name === "help" && <MdLiveHelp />}
   </IconContext.Provider>
 )
 

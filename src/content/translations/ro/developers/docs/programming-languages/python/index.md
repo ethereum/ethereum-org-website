@@ -14,7 +14,7 @@ Folosește Ethereum pentru a crea aplicații descentralizate („dapp”) care v
 
 **Fă primii tăi pași în integrarea Python cu Ethereum**
 
-Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/en/learn/) sau [ethereum.org/developers](/en/developers/).
+Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/learn/) sau [ethereum.org/developers](/developers/).
 
 - [Blockchain-ul explicat](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Ce sunt contractele inteligente](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -54,7 +54,7 @@ Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/en/learn/) 
 - [Vyper](https://github.com/ethereum/vyper/) - _limbaj Python pentru contracte inteligente în EVM_
 - [Web3.py](https://github.com/ethereum/web3.py) - _bibliotecă Python pentru interacțiuni cu Ethereum_
 
-Cauți mai multe resurse? Accesează [ethereum.org/developers.](/en/developers/)
+Cauți mai multe resurse? Accesează [ethereum.org/developers.](/developers/)
 
 ## Colaboratori ai comunității Python {#python-community-contributors}
 

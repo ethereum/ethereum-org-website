@@ -10,6 +10,7 @@ import ButtonLink from "../components/ButtonLink"
 import CallToContribute from "../components/CallToContribute"
 import Card from "../components/Card"
 import Codeblock from "../components/Codeblock"
+import FeedbackCard from "../components/FeedbackCard"
 import FileContributors from "../components/FileContributors"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
@@ -151,7 +152,7 @@ const BackToTop = styled.div`
   }
 `
 
-// Passing components to MDXProvider allows use across all .md/.mdx files
+// Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
   a: Link,
@@ -207,10 +208,10 @@ const DocsPage = ({ data, pageContext }) => {
           <H1 id="top">{mdx.frontmatter.title}</H1>
           <Contributors gitCommits={gitCommits} editPath={absoluteEditPath} />
           <TableOfContents
-            items={tocItems}
-            maxDepth={mdx.frontmatter.sidebarDepth}
             editPath={absoluteEditPath}
+            items={tocItems}
             isMobile={true}
+            maxDepth={mdx.frontmatter.sidebarDepth}
           />
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
@@ -221,14 +222,15 @@ const DocsPage = ({ data, pageContext }) => {
               <Translation id="back-to-top" /> ↑
             </a>
           </BackToTop>
+          <FeedbackCard />
           <DocsNav relativePath={relativePath}></DocsNav>
         </Content>
         {mdx.frontmatter.sidebar && tocItems && (
           <DesktopTableOfContents
-            items={tocItems}
-            maxDepth={mdx.frontmatter.sidebarDepth}
             editPath={absoluteEditPath}
+            items={tocItems}
             isPageIncomplete={isPageIncomplete}
+            maxDepth={mdx.frontmatter.sidebarDepth}
           />
         )}
       </ContentContainer>

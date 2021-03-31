@@ -11,7 +11,7 @@ Rețelele sunt diferite medii Ethereum pe care le poți accesa pentru dezvoltare
 
 ## Condiții prealabile {#prerequisites}
 
-Ar trebui să înțelegi elementele de bază ale Ethereum înainte de a citi despre diferite alte rețele, deoarece rețelele de testare îți vor oferi o versiune ieftină și sigură a Ethereum cu care să te joci. Încearcă [introducerea noastră la Ethereum](/en/developers/docs/intro-to-ethereum/).
+Ar trebui să înțelegi elementele de bază ale Ethereum înainte de a citi despre diferite alte rețele, deoarece rețelele de testare îți vor oferi o versiune ieftină și sigură a Ethereum cu care să te joci. Încearcă [introducerea noastră la Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Rețele publice {#public-networks}
 

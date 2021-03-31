@@ -25,7 +25,8 @@ First step is to [visit Remix](https://remix.ethereum.org/) and create a new fil
 In the new file, we’ll paste the following code.
 
 ```solidity
-pragma solidity 0.5.17;
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.5.17;
 
 contract Counter {
 

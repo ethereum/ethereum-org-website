@@ -207,9 +207,6 @@ const WalletCompare = ({ location }) => {
       argent: file(relativePath: { eq: "wallets/argent.png" }) {
         ...walletCardImage
       }
-      authereum: file(relativePath: { eq: "wallets/authereum.png" }) {
-        ...walletCardImage
-      }
       coinbase: file(relativePath: { eq: "wallets/coinbase.png" }) {
         ...walletCardImage
       }
@@ -372,13 +369,10 @@ const WalletCompare = ({ location }) => {
     } else {
       selectedFeatureIds.push(featureId)
 
-      const feature = walletFeatures.filter(
-        (feature) => feature.id === featureId
-      )[0].title
       trackCustomEvent({
         eventCategory: `Wallet feature`,
         eventAction: `Selected`,
-        eventName: feature,
+        eventName: featureId,
       })
     }
     setState({ selectedFeatureIds, wallets: state.wallets })

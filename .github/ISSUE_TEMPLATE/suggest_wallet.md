@@ -68,6 +68,6 @@ If it does complete the following information which we need to accurately list t
 
 <!-- Please provide a hi-res SVG or transparent PNG -->
 
-**Brand color**
+**Background colour for brand logo**
 
 <!-- Please provide a hex code for the brand color. This will be added to the background of the wallet card. -->

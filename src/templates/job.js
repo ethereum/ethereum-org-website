@@ -248,7 +248,7 @@ const H3 = styled.h3`
   }
 `
 
-// Passing components to MDXProvider allows use across all .md/.mdx files
+// Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
   a: Link,

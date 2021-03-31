@@ -45,6 +45,12 @@ const DropdownList = styled(motion.ul)`
   padding-bottom: 0.5rem;
 `
 
+const ComponentDropdown = styled(DropdownList)`
+  padding: 0;
+  border: none;
+  background: none;
+`
+
 const listVariants = {
   open: {
     opacity: 1,
@@ -98,6 +104,15 @@ const NavLink = styled(Link)`
   }
 `
 
+const Online = styled.div`
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: ${(props) => props.theme.colors.success400};
+  align-self: flex-start;
+  margin-left: 0.125rem;
+`
+
 const NavDropdown = ({ section, hasSubNav }) => {
   const [isOpen, setIsOpen] = useState(false)
   const intl = useIntl()
@@ -122,22 +137,38 @@ const NavDropdown = ({ section, hasSubNav }) => {
         tabIndex="0"
       >
         <Translation id={section.text} />
-        <StyledIcon isOpen={isOpen} name="chevronDown" />
+        {section.component ? (
+          <Online />
+        ) : (
+          <StyledIcon isOpen={isOpen} name="chevronDown" />
+        )}
       </DropdownTitle>
-      <DropdownList
-        hasSubNav={hasSubNav}
-        animate={isOpen ? "open" : "closed"}
-        variants={listVariants}
-        initial="closed"
-      >
-        {section.items.map((item, idx) => (
-          <DropdownItem key={idx} onClick={() => setIsOpen(false)}>
-            <NavLink to={item.to} tabIndex="-1" isPartiallyActive={false}>
-              <Translation id={item.text} />
-            </NavLink>
-          </DropdownItem>
-        ))}
-      </DropdownList>
+
+      {section.items ? (
+        <DropdownList
+          hasSubNav={hasSubNav}
+          animate={isOpen ? "open" : "closed"}
+          variants={listVariants}
+          initial="closed"
+        >
+          {section.items.map((item, idx) => (
+            <DropdownItem key={idx} onClick={() => setIsOpen(false)}>
+              <NavLink to={item.to} tabIndex="-1" isPartiallyActive={false}>
+                <Translation id={item.text} />
+              </NavLink>
+            </DropdownItem>
+          ))}
+        </DropdownList>
+      ) : (
+        <ComponentDropdown
+          hasSubNav={hasSubNav}
+          animate={isOpen ? "open" : "closed"}
+          variants={listVariants}
+          initial="closed"
+        >
+          {section.component}
+        </ComponentDropdown>
+      )}
     </NavListItem>
   )
 }

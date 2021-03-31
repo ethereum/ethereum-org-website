@@ -9,13 +9,13 @@ sidebar: true
 
 A blockchain is best described as a public database that is updated and shared across many computers in a network.
 
-"Block" refers to the fact that data and state is stored in sequential batches or "blocks". If you send ETH to someone else, the transaction data needs to be added to a block for it to be successful.
+"Block" refers to the fact that data and state are stored in sequential batches or "blocks". If you send ETH to someone else, the transaction data needs to be added to a block for it to be successful.
 
 "Chain" refers to the fact that each block cryptographically references its parent. A block's data cannot be changed without changing all subsequent blocks, which would require the consensus of the entire network.
 
 Each new block and the chain as a whole must be agreed upon by every node in the network. This is so everyone has the same data. For this to work, blockchains need a consensus mechanism.
 
-Ethereum currently uses a proof-of-work consensus mechanism. This means that anyone who wants to add new blocks to the chain must solve a difficult puzzle that you need a lot of computing power to work on. Solving the puzzle "proves" that you have spent the computational resources. Doing this is known as [mining](/en/developers/docs/consensus-mechanisms/pow/mining/). Mining can be trial and error but adding a block successfully is rewarded in ETH. On the other hand, submitting fraudulent blocks is not an attractive option considering the resources you've spent on producing the block.
+Ethereum currently uses a proof-of-work consensus mechanism. This means that anyone who wants to add new blocks to the chain must solve a difficult puzzle that you need a lot of computing power to work on. Solving the puzzle "proves" that you have spent the computational resources. Doing this is known as [mining](/developers/docs/consensus-mechanisms/pow/mining/). Mining can be trial and error but adding a block successfully is rewarded in ETH. On the other hand, submitting fraudulent blocks is not an attractive option considering the resources you've spent on producing the block.
 
 New blocks are broadcast to the nodes in the network, checked and verified, updating the state for everyone.
 
@@ -41,13 +41,13 @@ The purpose of Ether, the cryptocurrency, is to allow for the existence of a mar
 
 Any participant who broadcasts a transaction request must also offer some amount of ether to the network, as a bounty to be awarded to whoever eventually does the work of verifying the transaction, executing it, committing it to the blockchain, and broadcasting it to the network.
 
-The amount of ether paid is a function of the length of the computation. This also prevents malicious participants from intentionally clogging the network by requesting execution of infinite loops or resource-intense scripts, as these actors will be continually charged.
+The amount of ether paid is a function of the length of the computation. This also prevents malicious participants from intentionally clogging the network by requesting the execution of infinite loops or resource-intensive scripts, as these actors will be continually charged.
 
 ## What are dapps? {#what-are-dapps}
 
 In practice, participants don’t write new code every time they want to request a computation on the EVM. Rather, application developers upload programs (reusable snippets of code) into EVM storage, and then users make requests for the execution of these code snippets with varying parameters. We call the programs uploaded to and executed by the network smart contracts.
 
-At a very basic level, you can think of a smart contract like a sort of vending machine: a script which, when called with certain parameters, performs some actions or computation if certain conditions are satisfied. For example, a simple vendor smart contract could create and assign ownership of a digital asset if the caller sends ether to a specific recipient.
+At a very basic level, you can think of a smart contract like a sort of vending machine: a script that, when called with certain parameters, performs some actions or computation if certain conditions are satisfied. For example, a simple vendor smart contract could create and assign ownership of a digital asset if the caller sends ether to a specific recipient.
 
 Any developer can create a smart contract and make it public to the network, using the blockchain as its data layer, for a fee paid to the network. Any user can then call the smart contract to execute its code, again for a fee paid to the network.
 
@@ -71,7 +71,7 @@ The Ethereum Virtual Machine is the global virtual computer whose state every pa
 
 ### Nodes {#nodes}
 
-The real-life machines which are storing the EVM state. Nodes communicate with each other to propagate information about the EVM state and new state changes. Any user can also request execution of code by broadcasting code execution request from a node. The Ethereum network itself is the aggregate of all Ethereum nodes and their communications.
+The real-life machines which are storing the EVM state. Nodes communicate with each other to propagate information about the EVM state and new state changes. Any user can also request the execution of code by broadcasting a code execution request from a node. The Ethereum network itself is the aggregate of all Ethereum nodes and their communications.
 
 [More on nodes](/developers/docs/nodes-and-clients/)
 
@@ -83,7 +83,7 @@ Where ether is stored. Users can initialize accounts, deposit ether into the acc
 
 ### Transactions {#transactions}
 
-A “transaction request” is the formal term for a request for code execution on the EVM, and a “transaction” is a fulfilled transaction request and the associated change in the EVM state. Any user can broadcast a transaction request to the network from a node. For the transaction request to actually affect the agreed-upon EVM state, it must be validated, executed, and “committed to the network” by some other node. Execution of any code causes a state change in the EVM; upon commitment, this state change is broadcast to all nodes in the network. Some examples of transactions:
+A “transaction request” is the formal term for a request for code execution on the EVM, and a “transaction” is a fulfilled transaction request and the associated change in the EVM state. Any user can broadcast a transaction request to the network from a node. For the transaction request to affect the agreed-upon EVM state, it must be validated, executed, and “committed to the network” by some other node. Execution of any code causes a state change in the EVM; upon commitment, this state change is broadcast to all nodes in the network. Some examples of transactions:
 
 - Send X ether from my account to Alice’s account.
 - Publish some smart contract code into EVM memory.
@@ -101,7 +101,7 @@ The volume of transactions is very high, so transactions are “committed” in 
 
 A reusable snippet of code (a program) which a developer publishes into EVM memory. Anyone can request that the smart contract code be executed by making a transaction request. Because developers can write arbitrary executable applications into the EVM (games, marketplaces, financial instruments, etc.) by publishing smart contracts, these are often also called [dapps, or Decentralized Apps](/developers/docs/dapps/).
 
-[More on smart contracts](/en/developers/docs/smart-contracts/)
+[More on smart contracts](/developers/docs/smart-contracts/)
 
 ## Further reading {#further-reading}
 

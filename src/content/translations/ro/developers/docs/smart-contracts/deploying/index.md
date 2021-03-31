@@ -60,4 +60,4 @@ _Cunoști o resursă comunitară care te-a ajutat? Editează această pagină ș
 
 ## Subiecte corelate
 
-- [Cadrele de dezvoltare](/en/developers/docs/frameworks/)
+- [Cadrele de dezvoltare](/developers/docs/frameworks/)

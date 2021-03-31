@@ -8,7 +8,7 @@ incomplete: true
 
 ## Prerequisites {#prerequisites}
 
-To better understand this page, we recommend you first read up on [transactions](/en/developers/docs/transactions/), [blocks](/en/developers/docs/blocks/) and [Proof of Work](/developers/docs/consensus-mechanisms/pow/).
+To better understand this page, we recommend you first read up on [transactions](/developers/docs/transactions/), [blocks](/developers/docs/blocks/) and [Proof of Work](/developers/docs/consensus-mechanisms/pow/).
 
 ## What is Ethereum mining? {#what-is-ethereum-mining}
 
@@ -28,10 +28,10 @@ In decentralized systems like Ethereum, we need to ensure that everyone agrees o
 
 ## How Ethereum transactions are mined {#how-ethereum-transactions-are-mined}
 
-1. A user writes and signs a [transaction](/en/developers/docs/transactions/) request with the private key of some [account](/en/developers/docs/accounts/).
-2. The user broadcasts the transaction request to the entire Ethereum network from some [node](/en/developers/docs/nodes-and-clients/).
+1. A user writes and signs a [transaction](/developers/docs/transactions/) request with the private key of some [account](/developers/docs/accounts/).
+2. The user broadcasts the transaction request to the entire Ethereum network from some [node](/developers/docs/nodes-and-clients/).
 3. Upon hearing about the new transaction request, each node in the Ethereum network adds the request to their local mempool, a list of all transaction requests they’ve heard about that have not yet been committed to the blockchain in a block.
-4. At some point, a mining node aggregates several dozen or hundred transaction requests into a potential [block](/en/developers/docs/blocks/), in a way that maximizes the [transaction fees](/en/developers/docs/gas/) they earn while still staying under the block gas limit. The mining node then:
+4. At some point, a mining node aggregates several dozen or hundred transaction requests into a potential [block](/developers/docs/blocks/), in a way that maximizes the [transaction fees](/developers/docs/gas/) they earn while still staying under the block gas limit. The mining node then:
    1. Verifies the validity of each transaction request (i.e. no one is trying to transfer ether out of an account they haven’t produced a signature for, the request is not malformed, etc.), and then executes the code of the request, altering the state of their local copy of the EVM. The miner awards the transaction fee for each such transaction request to their own account.
    2. Begins the process of producing the Proof-of-Work “certificate of legitimacy” for the potential block, once all transaction requests in the block have been verified and executed on the local EVM copy.
 5. Eventually, a miner will finish producing a certificate for a block which includes our specific transaction request. The miner then broadcasts the completed block, which includes the certificate and a checksum of the claimed new EVM state.

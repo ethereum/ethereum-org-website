@@ -3,18 +3,17 @@ title: Data and analytics
 description: How to get on-chain analytics and data for use in your dapps
 lang: en
 sidebar: true
-
 ---
 
 ## Introduction {#Introduction}
 
-As utilization of the network continues to grow, an increasing amount of valuable information will exist in the on-chain data. As the volume of data rapidly increases, calculating and aggregating this information to report upon or drive a dApp can become a time and process heavy endeavor. 
+As utilization of the network continues to grow, an increasing amount of valuable information will exist in the on-chain data. As the volume of data rapidly increases, calculating and aggregating this information to report upon or drive a dApp can become a time and process heavy endeavor.
 
-Leveraging existing data providers can expedite development, produce more accurate results, and reduce on going maintenance efforts. This will enable a team to concentrate on the core functionality their project is trying to provide. 
+Leveraging existing data providers can expedite development, produce more accurate results, and reduce on going maintenance efforts. This will enable a team to concentrate on the core functionality their project is trying to provide.
 
 ## Prerequisites {#prerequisites}
 
-You should understand the basic concept of [Block Explorers](/developers/docs/block-explorers/) in order to better understand using them in the data analytics context. In addition, familiarize yourself with the concept of an [index](/glossary/#index) to understand the benefits they add to a system design.
+You should understand the basic concept of [Block Explorers](/developers/docs/data-and-analytics/block-explorers/) in order to better understand using them in the data analytics context. In addition, familiarize yourself with the concept of an [index](/glossary/#index) to understand the benefits they add to a system design.
 
 In terms of architectural fundamentals, understanding what an [API](https://www.wikipedia.org/wiki/API) and [REST](https://www.wikipedia.org/wiki/Representational_state_transfer) are, even in theory.
 
@@ -26,7 +25,7 @@ Using [GraphQL](https://graphql.org/), developers can query any of the curated o
 
 ## Block explorers {#block-explorers}
 
-Many [Block Explorers](/developers/docs/block-explorers#block-explorers) offer [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API) gateways that will provide developers visibility into real-time data on blocks, transactions, miners, accounts, and other on-chain activity.
+Many [Block Explorers](/developers/docs/data-and-analytics/block-explorers/) offer [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API) gateways that will provide developers visibility into real-time data on blocks, transactions, miners, accounts, and other on-chain activity.
 
 Developers can then process and transform this data to give their users unique insights and interactions with the [blockchain](/glossary/#blockchain).
 
@@ -34,6 +33,4 @@ Developers can then process and transform this data to give their users unique i
 
 - [Graph Network Overview](https://thegraph.com/docs/network#overview)
 - [Graph Query Playground](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
-- [API code examples on EtherScan](https://etherscan.io/apis#contracts)   
- 
-
+- [API code examples on EtherScan](https://etherscan.io/apis#contracts)

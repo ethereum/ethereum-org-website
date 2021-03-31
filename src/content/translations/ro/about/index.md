@@ -30,7 +30,7 @@ Avem câteva principii esențiale care ne ajută să facem acest lucru.
 
 Vrem ca utilizatorii noștri să fie interesați și să li se răspundă la întrebări. Așadar, portalul nostru trebuie să combine informații, „momente magice” și linkuri către resursele geniale ale comunității care există acolo. Scopul conținutului nostru este de a fi un „portal de socializare organizațională” și nu un substitut pentru resursele extinse care există deja. Suntem dornici să sprijinim și să ne integrăm cu resursele construite de comunitate, oferindu-le mai multă vizibilitate și făcându-le mai vizibile.
 
-[Comunitatea Ethereum](/en/community/) este esența acestui lucru: trebuie nu doar să servim comunitatea, ci să lucrăm cu ea și să-i încorporăm feedbackul. Site-ul nu este doar pentru comunitatea pe care o avem acum, ci pentru comunitatea în care sperăm să creștem. Trebuie să reamintim că suntem o comunitate globală, alcătuită din oameni din multe limbi, regiuni și culturi.
+[Comunitatea Ethereum](/community/) este esența acestui lucru: trebuie nu doar să servim comunitatea, ci să lucrăm cu ea și să-i încorporăm feedbackul. Site-ul nu este doar pentru comunitatea pe care o avem acum, ci pentru comunitatea în care sperăm să creștem. Trebuie să reamintim că suntem o comunitate globală, alcătuită din oameni din multe limbi, regiuni și culturi.
 
 ### 2. ethereum.org evoluează întotdeauna 🛠 {#core-principles-2}
 

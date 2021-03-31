@@ -16,13 +16,13 @@ Ethereum and its community embrace open source. You can find community projects 
 
 Select your language of choice to find projects, resources, and virtual communities:
 
-- [Ethereum for Java developers](/en/developers/docs/programming-languages/java/)
-- [Ethereum for Python developers](/en/developers/docs/programming-languages/python/)
-- [Ethereum for JavaScript developers](/en/developers/docs/programming-languages/javascript/)
-- [Ethereum for Go developers](/en/developers/docs/programming-languages/golang/)
-- [Ethereum for Rust developers](/en/developers/docs/programming-languages/rust/)
-- [Ethereum for .NET developers](/en/developers/docs/programming-languages/dot-net/)
-- [Ethereum for Delphi developers](/en/developers/docs/programming-languages/delphi/)
+- [Ethereum for Java developers](/developers/docs/programming-languages/java/)
+- [Ethereum for Python developers](/developers/docs/programming-languages/python/)
+- [Ethereum for JavaScript developers](/developers/docs/programming-languages/javascript/)
+- [Ethereum for Go developers](/developers/docs/programming-languages/golang/)
+- [Ethereum for Rust developers](/developers/docs/programming-languages/rust/)
+- [Ethereum for .NET developers](/developers/docs/programming-languages/dot-net/)
+- [Ethereum for Delphi developers](/developers/docs/programming-languages/delphi/)
 
 ### What if my language is not supported {#other-lang}
 

@@ -13,7 +13,7 @@ Transactions are cryptographically signed instructions from accounts. An account
 
 ## Prerequisites {#prerequisites}
 
-To help you better understand this page, we recommend you first read [Accounts](/en/developers/docs/accounts/) and our [introduction to Ethereum](/en/developers/docs/intro-to-ethereum/).
+To help you better understand this page, we recommend you first read [Accounts](/developers/docs/accounts/) and our [introduction to Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## What's a transaction? {#whats-a-transaction}
 
@@ -35,7 +35,7 @@ A submitted transaction includes the following information:
 - `gasLimit` – the maximum amount of gas units that can be consumed by the transaction. Units of gas represent computational steps
 - `gasPrice` – the fee the sender pays per unit of gas
 
-Gas is a reference to the computation required to process the transaction by a miner. Users have to pay a fee for this computation. The `gasLimit` and `gasPrice` determine the maximum transaction fee paid to the miner. [More on Gas](/en/developers/docs/gas/).
+Gas is a reference to the computation required to process the transaction by a miner. Users have to pay a fee for this computation. The `gasLimit` and `gasPrice` determine the maximum transaction fee paid to the miner. [More on Gas](/developers/docs/gas/).
 
 The transaction object will look a little like this:
 
@@ -298,7 +298,7 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related topics {#related-topics}
 
-- [Accounts](/en/developers/docs/accounts/)
-- [Ethereum virtual machine (EVM)](/en/developers/docs/evm/)
-- [Gas](/en/developers/docs/gas/)
-- [Mining](/en/developers/docs/consensus-mechanisms/pow/mining/)
+- [Accounts](/developers/docs/accounts/)
+- [Ethereum virtual machine (EVM)](/developers/docs/evm/)
+- [Gas](/developers/docs/gas/)
+- [Mining](/developers/docs/consensus-mechanisms/pow/mining/)

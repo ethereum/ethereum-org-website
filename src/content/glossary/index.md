@@ -373,7 +373,7 @@ A JSON-encoded file that contains a single (randomly generated) [private key](#p
 
 ### layer 2 {#layer-2}
 
-An area of development focussed on layering improvements on top of the Ethereum protocol. These improvements are related to [transaction](#transaction) speeds, cheaper [transaction fees](#transaction-fee), and transaction privacy.
+An area of development focused on layering improvements on top of the Ethereum protocol. These improvements are related to [transaction](#transaction) speeds, cheaper [transaction fees](#transaction-fee), and transaction privacy.
 
 <DocLink to="/developers/docs/layer-2-scaling/" title="Layer 2" />
 

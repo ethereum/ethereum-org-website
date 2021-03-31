@@ -500,7 +500,7 @@ const ChooseStackPage = ({ data }) => {
           smart contract to build a dapp, but if you want to create new
           functionality, you’ll need to write your own.
         </p>
-        <Link to="/en/developers/docs/smart-contracts/languages/">
+        <Link to="/developers/docs/smart-contracts/languages/">
           More on smart contract languages
         </Link>
         <CardGrid>
@@ -524,7 +524,7 @@ const ChooseStackPage = ({ data }) => {
           You need to write your smart contracts and code somewhere. Most
           established IDEs have plugins for Solidity / Vyper syntax support.{" "}
         </p>
-        <Link to="/en/developers/docs/ides/">More on IDEs</Link>
+        <Link to="/developers/docs/ides/">More on IDEs</Link>
         <CardGrid>
           {ides.map((ide, idx) => {
             return (
@@ -548,7 +548,7 @@ const ChooseStackPage = ({ data }) => {
           Ethereum developer frameworks come with smart contract testing out of
           the box
         </p>
-        <Link to="/en/developers/docs/ides/">More on IDEs</Link>
+        <Link to="/developers/docs/ides/">More on IDEs</Link>
         <CardGrid>
           {testinglibraries.map((library, idx) => {
             return (
@@ -567,7 +567,7 @@ const ChooseStackPage = ({ data }) => {
       <StackContainer>
         <Subtitle>Frontend JavaScript libraries</Subtitle>
         <p>Description</p>
-        <Link to="/en/developers/docs/apis/javascript/">
+        <Link to="/developers/docs/apis/javascript/">
           More on Javascript libraries
         </Link>
         <CardGrid>

@@ -9,14 +9,14 @@ An Ethereum account is an entity with an ether (ETH) balance that can send trans
 
 ## Prerequisites {#prerequisites}
 
-Accounts are a very beginner-friendly topic. But to help you better understand this page, we recommend you first read through our [introduction to Ethereum](/en/developers/docs/intro-to-ethereum/).
+Accounts are a very beginner-friendly topic. But to help you better understand this page, we recommend you first read through our [introduction to Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Account types {#types-of-account}
 
 Ethereum has two account types:
 
 - Externally-owned – controlled by anyone with the private keys
-- Contract – a smart contract deployed to the network, controlled by code. Learn about [smart contracts](/en/developers/docs/smart-contracts/)
+- Contract – a smart contract deployed to the network, controlled by code. Learn about [smart contracts](/developers/docs/smart-contracts/)
 
 Both account types have the ability to:
 
@@ -128,11 +128,19 @@ For dapp development, you'll want access to dummy accounts with test ETH so you 
 
 An account is not a wallet. A wallet is the keypair associated with a user-owned account, which allow a user to make transactions from or manage the account.
 
+## A visual demo {#a-visual-demo}
+
+Watch Austin walk you through hash functions, and key pairs.
+
+<iframe width="100%" height="315" src="youtube.com/embed/QJ010l-pBpE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="100%" height="315" src="youtube.com/embed/9LtBDy67Tho" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related topics {#related-topics}
 
-- [Smart contracts](/en/developers/docs/smart-contracts/)
-- [Transactions](/en/developers/docs/transactions/)
+- [Smart contracts](/developers/docs/smart-contracts/)
+- [Transactions](/developers/docs/transactions/)

@@ -51,7 +51,7 @@ Learn how to use [Web3J](https://github.com/web3j/web3j) and Hyperledger Besu, t
 - [Eventeum (Event Listener)](https://github.com/ConsenSys/eventeum)
 - [Mahuta (IPFS Dev Tools)](https://github.com/ConsenSys/mahuta)
 
-Looking for more resources? Check out [ethereum.org/developers.](/en/developers/)
+Looking for more resources? Check out [ethereum.org/developers.](/developers/)
 
 ## Java Community Contributors {#java-community-contributors}
 
