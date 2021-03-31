@@ -38,6 +38,12 @@ Most established IDEs have built plugins to enhance the Ethereum development exp
 - [GitHub](https://github.com/atom)
 - [Ethereum packages](https://atom.io/packages/search?utf8=%E2%9C%93&q=keyword%3Aethereum&commit=Search)
 
+**JetBrains IDEs (IntelliJ IDEA, etc.) -** **_Essential tools for software developers and teams_**
+
+- [JetBrains](https://www.jetbrains.com/)
+- [GitHub](https://github.com/JetBrains)
+- [IntelliJ Solidity](https://github.com/intellij-solidity/intellij-solidity/)
+
 ## Plugins and Extensions {#plugins-extensions}
 
 - [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Ethereum Solidity Language for Visual Studio Code
