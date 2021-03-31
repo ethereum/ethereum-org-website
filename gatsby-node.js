@@ -272,8 +272,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage, deletePage } = actions
 
+// Actually we might be able to fix this in the onCreatePage hook... if content version is <2, for most pages (I think anything other than /developers/index.js we should set page.context.isContentEnglish to true.
+
   const isTranslated = page.context.language !== defaultLanguage
   const hasNoContext = page.context.isOutdated === undefined
+  const langVersion = getLangContentVersion(page.context.language)
+  console.log(langVersion)
+
   if (isTranslated && hasNoContext) {
     let isOutdated = false
     if (page.component.includes("src/pages/index.js")) {
@@ -285,6 +290,7 @@ exports.onCreatePage = ({ page, actions }) => {
       context: {
         ...page.context,
         isOutdated,
+        isContentEnglish: langVersion < 2
       },
     })
   }
