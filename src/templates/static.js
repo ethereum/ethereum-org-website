@@ -131,7 +131,6 @@ const StaticPage = ({ data: { siteData, mdx }, pageContext }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(intl.locale)
 
-  console.log({ mdx })
 
   const lastUpdatedDate = mdx.parent.fields
     ? mdx.parent.fields.gitLogLatestDate
