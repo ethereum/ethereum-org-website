@@ -893,6 +893,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://joshjwelsh.com"><img src="https://avatars.githubusercontent.com/u/60113598?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joshua Welsh</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ajoshjwelsh" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/robertdosa"><img src="https://avatars.githubusercontent.com/u/57013905?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Robert Dosa</b></sub></a><br /><a href="#content-robertdosa" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/SatoshiMiracle"><img src="https://avatars.githubusercontent.com/u/72975337?v=4?s=100" width="100px;" alt=""/><br /><sub><b>SatoshiMiracle</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ASatoshiMiracle" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/jhhb"><img src="https://avatars.githubusercontent.com/u/12632889?v=4?s=100" width="100px;" alt=""/><br /><sub><b>James Boyle</b></sub></a><br /><a href="#ideas-jhhb" title="Ideas, Planning, & Feedback">🤔</a> <a href="#content-jhhb" title="Content">🖋</a></td>
   </tr>
 </table>
 
