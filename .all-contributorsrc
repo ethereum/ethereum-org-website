@@ -3281,6 +3281,16 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "jhhb",
+      "name": "James Boyle",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12632889?v=4",
+      "profile": "https://github.com/jhhb",
+      "contributions": [
+        "ideas",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
