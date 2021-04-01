@@ -12,7 +12,6 @@ import { ButtonSecondary } from "./SharedStyledComponents"
 import { translateMessageId } from "../utils/translations"
 
 const Container = styled.div`
-  /* TODO: dynamic height? */
   min-height: 400px;
   perspective: 1000px;
 `
@@ -182,30 +181,32 @@ const BackHeaderRow = styled.div`
   align-items: center;
 `
 
+// Framer animations
+const duration = 0.3
+const flipVariants = {
+  shown: {
+    rotateY: 0,
+    transition: {
+      duration,
+    },
+  },
+  frontFlipped: {
+    rotateY: -180,
+    transition: {
+      duration,
+    },
+  },
+  backFlipped: {
+    rotateY: 180,
+    transition: {
+      duration,
+    },
+  },
+}
+
 const WalletCard = ({ wallet }) => {
   const [isCardFlipped, setIsCardFlipped] = useState(false)
   const intl = useIntl()
-  const duration = 0.3
-  const flipVariants = {
-    shown: {
-      rotateY: 0,
-      transition: {
-        duration,
-      },
-    },
-    frontFlipped: {
-      rotateY: -180,
-      transition: {
-        duration,
-      },
-    },
-    backFlipped: {
-      rotateY: 180,
-      transition: {
-        duration,
-      },
-    },
-  }
 
   const getFeatureStatus = (feature) =>
     feature === "TRUE" ? (
@@ -221,6 +222,38 @@ const WalletCard = ({ wallet }) => {
         aria-label={translateMessageId("page-find-wallet-card-no", intl)}
       />
     )
+
+  const rows = [
+    {
+      id: "page-find-wallet-card-has-bank-withdraws",
+      field: "has_bank_withdrawals",
+    },
+    {
+      id: "page-find-wallet-card-has-card-deposits",
+      field: "has_card_deposits",
+    },
+    {
+      id: "page-find-wallet-card-has-defi-integration",
+      field: "has_defi_integrations",
+    },
+    {
+      id: "page-find-wallet-card-has-explore-dapps",
+      field: "has_explore_dapps",
+    },
+    {
+      id: "page-find-wallet-card-has-dex-integrations",
+      field: "has_dex_integrations",
+    },
+    {
+      id: "page-find-wallet-card-has-high-volume-purchases",
+      field: "has_high_volume_purchases",
+    },
+    {
+      id: "page-find-wallet-card-has-limits-protection",
+      field: "has_limits_protection",
+    },
+    { id: "page-find-wallet-card-has-multisig", field: "has_multisig" },
+  ]
 
   return (
     <Container>
@@ -307,38 +340,14 @@ const WalletCard = ({ wallet }) => {
             <FeaturesHeader>
               <Translation id="page-find-wallet-card-features" />
             </FeaturesHeader>
-            <FeatureRow>
-              <Translation id="page-find-wallet-card-has-bank-withdraws" />
-              {getFeatureStatus(wallet.has_bank_withdrawals)}
-            </FeatureRow>
-            <FeatureRow>
-              <Translation id="page-find-wallet-card-has-card-deposits" />
-              {getFeatureStatus(wallet.has_card_deposits)}
-            </FeatureRow>
-            <FeatureRow>
-              <Translation id="page-find-wallet-card-has-defi-integration" />
-              {getFeatureStatus(wallet.has_defi_integrations)}
-            </FeatureRow>
-            <FeatureRow>
-              <Translation id="page-find-wallet-card-has-explore-dapps" />
-              {getFeatureStatus(wallet.has_explore_dapps)}
-            </FeatureRow>
-            <FeatureRow>
-              <Translation id="page-find-wallet-card-has-dex-integrations" />
-              {getFeatureStatus(wallet.has_dex_integrations)}
-            </FeatureRow>
-            <FeatureRow>
-              <Translation id="page-find-wallet-card-has-high-volume-purchases" />
-              {getFeatureStatus(wallet.has_high_volume_purchases)}
-            </FeatureRow>
-            <FeatureRow>
-              <Translation id="page-find-wallet-card-has-limits-protection" />
-              {getFeatureStatus(wallet.has_limits_protection)}
-            </FeatureRow>
-            <FeatureRow>
-              <Translation id="page-find-wallet-card-has-multisig" />
-              {getFeatureStatus(wallet.has_multisig)}
-            </FeatureRow>
+            {rows.map((row) => {
+              return (
+                <FeatureRow key={row.id}>
+                  <Translation id={row.id} />
+                  {getFeatureStatus(wallet[row.field])}
+                </FeatureRow>
+              )
+            })}
           </BackContent>
         </CardBack>
       </Card>
