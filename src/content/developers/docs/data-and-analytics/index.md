@@ -3,14 +3,13 @@ title: Data and analytics
 description: How to get on-chain analytics and data for use in your dapps
 lang: en
 sidebar: true
-
 ---
 
 ## Introduction {#Introduction}
 
-As utilization of the network continues to grow, an increasing amount of valuable information will exist in the on-chain data. As the volume of data rapidly increases, calculating and aggregating this information to report upon or drive a dApp can become a time and process heavy endeavor. 
+As utilization of the network continues to grow, an increasing amount of valuable information will exist in the on-chain data. As the volume of data rapidly increases, calculating and aggregating this information to report upon or drive a dApp can become a time and process heavy endeavor.
 
-Leveraging existing data providers can expedite development, produce more accurate results, and reduce on going maintenance efforts. This will enable a team to concentrate on the core functionality their project is trying to provide. 
+Leveraging existing data providers can expedite development, produce more accurate results, and reduce on going maintenance efforts. This will enable a team to concentrate on the core functionality their project is trying to provide.
 
 ## Prerequisites {#prerequisites}
 
@@ -34,6 +33,4 @@ Developers can then process and transform this data to give their users unique i
 
 - [Graph Network Overview](https://thegraph.com/docs/network#overview)
 - [Graph Query Playground](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
-- [API code examples on EtherScan](https://etherscan.io/apis#contracts)   
- 
-
+- [API code examples on EtherScan](https://etherscan.io/apis#contracts)

@@ -319,7 +319,6 @@ meaning they behave roughly the same as [associative arrays](https://en.wikipedi
 except that the keys are numeric values. Storage is only allocated for entries that have values different
 from the default (zero).
 
-
 ```solidity
     mapping (address => uint256) private _balances;
 ```
