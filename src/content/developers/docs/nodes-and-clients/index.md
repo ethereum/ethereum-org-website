@@ -6,19 +6,19 @@ sidebar: true
 sidebarDepth: 2
 ---
 
-For Ethereum to work in a decentralized way it needs a distributed network of nodes that can verify blocks and transaction data. You need an application, known as a client, on your device to "run" a node.
+Ethereum is a distributed network of computers running software (known as nodes) that can verify blocks and transaction data. You need an application, known as a client, on your computer to "run" a node.
 
 ## Prerequisites {#prerequisites}
 
-You should understand the concept of a decentralized network before diving deeper and running your own instance of an Ethereum client. Take a look at our [introduction to Ethereum](/developers/docs/intro-to-ethereum/).
+You should understand the concept of a peer-to-peer network and the [basics of the EVM](/developers/docs/evm/) before diving deeper and running your own instance of an Ethereum client. Take a look at our [introduction to Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## What are nodes and clients? {#what-are-nodes-and-clients}
 
-"Node" refers to a piece of software known as a client. A client is an implementation of Ethereum that verifies all transactions in each block, keeping the network secure and the data accurate.
+"Node" refers to a running piece of client software. A client is an implementation of Ethereum that verifies all transactions in each block, keeping the network secure and the data accurate.
 
 You can see a real-time view of the Ethereum network by looking at this [map of nodes](https://etherscan.io/nodetracker).
 
-Many [implementations of Ethereum clients](/developers/docs/nodes-and-clients/#clients) exist in a variety of languages. What these client implementations have in common is they all follow a formal specification. This specification dictates how the Ethereum network and blockchain functions.
+Many [Ethereum clients](/developers/docs/nodes-and-clients/#clients) exist, in a variety of programming languages such as Go, Rust, JavaScript, Python, .NET and Java. What these implementations have in common is they all follow a formal specification (originally the [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf)). This specification dictates how the Ethereum network and blockchain functions.
 
 ![Eth1x client](./client-diagram.png)
 Simplified diagram of what Ethereum client features.
