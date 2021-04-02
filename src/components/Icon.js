@@ -15,11 +15,10 @@ import {
   MdSearch,
   MdWbSunny,
   MdFlip,
+  MdLiveHelp,
 } from "react-icons/md"
 import { BsQuestionSquareFill } from "react-icons/bs"
-import { IoCodeDownload } from "react-icons/io5"
-import { IoCodeOutline } from "react-icons/io5"
-import { MdLiveHelp } from "react-icons/md"
+import { IoCodeOutline, IoCodeDownload } from "react-icons/io5"
 
 const Icon = ({ name, size, className }) => (
   <IconContext.Provider value={{ size: size, className: className }}>
