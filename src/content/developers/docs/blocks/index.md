@@ -9,7 +9,7 @@ Blocks are batches of transactions with a hash of the previous block in the chai
 
 ## Prerequisites {#prerequisites}
 
-Blocks are a very beginner-friendly topic. But to help you better understand this page, we recommend you first read [Accounts](/en/developers/docs/accounts/), [Transactions](/en/developers/docs/transactions/), and our [introduction to Ethereum](/en/developers/docs/intro-to-ethereum/).
+Blocks are a very beginner-friendly topic. But to help you better understand this page, we recommend you first read [Accounts](/developers/docs/accounts/), [Transactions](/developers/docs/transactions/), and our [introduction to Ethereum](/developers/docs/intro-to-ethereum/).
 
 <!--The content below was provided by Brian Gu with exception of "what's in a block"-->
 
@@ -40,7 +40,7 @@ Proof of work means the following:
 - Other miners who hear about a new block with a valid certificate of legitimacy must\* accept the new block as the canonical next block on the blockchain.
 - The exact amount of time needed for any given miner to produce this certificate is a random variable with high variance. This ensures that it is unlikely* that two miners produce validations for a proposed next block simultaneously; when a miner produces and propagates a certified new block, they can be almost certain that the block will be accepted by the network as the canonical next block on the blockchain, without conflict* (though there is a protocol for dealing with conflicts as well in the case that two chains of certified blocks are produced almost simultaneously).
 
-[More on mining](/en/developers/docs/consensus-mechanisms/pow/mining/)
+[More on mining](/developers/docs/consensus-mechanisms/pow/mining/)
 
 ## What's in a block? {#block-anatomy}
 
@@ -63,6 +63,6 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related topics {#related-topics}
 
-- [Mining](/en/developers/docs/consensus-mechanisms/pow/mining/)
-- [Transactions](/en/developers/docs/transactions/)
-- [Gas](/en/developers/docs/gas/)
+- [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
+- [Transactions](/developers/docs/transactions/)
+- [Gas](/developers/docs/gas/)

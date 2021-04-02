@@ -14,7 +14,7 @@ Use Ethereum to create decentralized applications (or "dapps") that utilize the 
 
 **Take your first steps to integrating Rust with Ethereum**
 
-Need a more basic primer first? Check out [ethereum.org/learn](/en/learn/) or [ethereum.org/developers](/en/developers/).
+Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethereum.org/developers](/developers/).
 
 - [Blockchain Explained](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Understanding Smart Contracts](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -25,7 +25,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/en/learn/) or [e
 
 - [Choosing an Ethereum Client](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [The Rust Ethereum Client](https://openethereum.github.io/)
-- [Sending Transaction to Ethereum Using Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [Sending Transaction to Ethereum Using Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [An Introduction to Smart Contracts with Parity Ethereum Client](https://wiki.parity.io/Smart-Contracts)
 - [Setting up your Oasis SDK dev environment](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
 - [A step-by-step tutorial on how to write contracts in rust Wasm for Kovan](https://github.com/paritytech/pwasm-tutorial)
@@ -57,7 +57,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/en/learn/) or [e
 - [rust-web3](https://github.com/tomusdrw/rust-web3) - _Rust implementation of Web3.js library_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Wavelet smart contract in Rust_
 
-Looking for more resources? Check out [ethereum.org/developers.](/en/developers/)
+Looking for more resources? Check out [ethereum.org/developers.](/developers/)
 
 ## Rust Community Contributors {#rust-community-contributors}
 

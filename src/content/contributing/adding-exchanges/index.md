@@ -11,7 +11,7 @@ Anyone is free to suggest new exchanges on ethereum.org.
 
 We currently list them on:
 
-- [ethereum.org/get-eth](/en/get-eth/)
+- [ethereum.org/get-eth](/get-eth/)
 
 This page allows a user to input where they live and see what exchanges they can use. This helps surface any geographical restrictions early.
 
@@ -26,7 +26,7 @@ Because of this context, we need some specific information when you suggest an e
 - Proof that the exchange is a legitimate trading company
 - Any additional information you might have – this might be information about the company like years of operation, financial backing etc.
 
-We need this info so that we can accurately [help users find an exchange they can use](/en/get-eth/#country-picker).
+We need this info so that we can accurately [help users find an exchange they can use](/get-eth/#country-picker).
 
 And so that ethereum.org can be more confident that the exchange is a legitimate and safe service.
 

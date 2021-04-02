@@ -24,6 +24,7 @@ import TranslationsInProgress from "../components/TranslationsInProgress"
 import SectionNav from "../components/SectionNav"
 import DocLink from "../components/DocLink"
 import GhostCard from "../components/GhostCard"
+import Help from "../components/Help"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
 import {
@@ -95,7 +96,7 @@ const HR = styled.hr`
   background: ${(props) => props.theme.colors.border};
 `
 
-// Passing components to MDXProvider allows use across all .md/.mdx files
+// Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
   a: Link,
@@ -125,17 +126,21 @@ const components = {
   ExpandableCard,
   CardContainer,
   GhostCard,
+  Help,
 }
 
-const StaticPage = ({ data: { mdx } }) => {
+const StaticPage = ({ data: { siteData, mdx }, pageContext }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(intl.locale)
-  const tocItems = mdx.tableOfContents.items
 
-  // TODO some `gitLogLatestDate` are `null` - why?
   const lastUpdatedDate = mdx.parent.fields
     ? mdx.parent.fields.gitLogLatestDate
     : mdx.parent.mtime
+
+  const tocItems = mdx.tableOfContents.items
+  const { editContentUrl } = siteData.siteMetadata
+  const { relativePath } = pageContext
+  const absoluteEditPath = `${editContentUrl}${relativePath}`
 
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
@@ -150,9 +155,10 @@ const StaticPage = ({ data: { mdx } }) => {
           {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
         </LastUpdated>
         <MobileTableOfContents
+          editPath={absoluteEditPath}
           items={tocItems}
-          maxDepth={mdx.frontmatter.sidebarDepth}
           isMobile={true}
+          maxDepth={mdx.frontmatter.sidebarDepth}
         />
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
@@ -160,6 +166,7 @@ const StaticPage = ({ data: { mdx } }) => {
       </ContentContainer>
       {mdx.frontmatter.sidebar && tocItems && (
         <TableOfContents
+          editPath={absoluteEditPath}
           items={tocItems}
           maxDepth={mdx.frontmatter.sidebarDepth}
         />
@@ -170,7 +177,12 @@ const StaticPage = ({ data: { mdx } }) => {
 
 export const staticPageQuery = graphql`
   query StaticPageQuery($relativePath: String) {
-    mdx(fields: { relativePath: { eq: $relativePath } }) {
+    siteData: site {
+      siteMetadata {
+        editContentUrl
+      }
+    }
+    mdx: mdx(fields: { relativePath: { eq: $relativePath } }) {
       fields {
         slug
       }

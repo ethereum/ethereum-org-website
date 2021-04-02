@@ -16,7 +16,7 @@ Dezvoltă aplicații descentralizate pe Ethereum și interacționează cu contra
 
 **Fă primii pași în integrarea .NET cu Ethereum**
 
-Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/en/learn/) sau [ethereum.org/developers](/en/developers/).
+Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/learn/) sau [ethereum.org/developers](/developers/).
 
 - [Blockchain-ul explicat](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Ce sunt contractele inteligente](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -73,7 +73,7 @@ Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/en/learn/) 
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _funcții utilitare pentru lucrul cu baze de cod Ethereum_
 - [TestChains](https://github.com/Nethereum/TestChains) - _Devchain-uri .NET preconfigurate pentru viteze mari de răspuns (PoA)_
 
-Cauți mai multe resurse? Accesează [ethereum.org/developers](/en/developers/).
+Cauți mai multe resurse? Accesează [ethereum.org/developers](/developers/).
 
 ## Colaboratori ai comunității .NET {#dot-net-community-contributors}
 

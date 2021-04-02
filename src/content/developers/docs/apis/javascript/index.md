@@ -284,8 +284,8 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related topics {#related-topics}
 
-- [Nodes and clients](/en/developers/docs/nodes-and-clients/)
-- [Development frameworks](/en/developers/docs/frameworks/)
+- [Nodes and clients](/developers/docs/nodes-and-clients/)
+- [Development frameworks](/developers/docs/frameworks/)
 
 ## Related tutorials {#related-tutorials}
 

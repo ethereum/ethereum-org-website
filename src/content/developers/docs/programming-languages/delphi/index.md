@@ -20,7 +20,7 @@ Build decentralized applications on top of Ethereum and interact with smart cont
 
 **Take your first steps to integrating Delphi with Ethereum**
 
-Need a more basic primer first? Check out [ethereum.org/learn](/en/learn/) or [ethereum.org/developers](/en/developers/).
+Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethereum.org/developers](/developers/).
 
 - [Blockchain Explained](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Understanding Smart Contracts](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -53,4 +53,4 @@ Need a more basic primer first? Check out [ethereum.org/learn](/en/learn/) or [e
 - [QuikNode, Ethereum and Delphi](https://medium.com/@svanas/quiknode-ethereum-and-delphi-f7bfc9671c23)
 - [Delphi and the Ethereum Dark Forest](https://svanas.medium.com/delphi-and-the-ethereum-dark-forest-5b430da3ad93)
 
-Looking for more resources? Check out [ethereum.org/developers](/en/developers/).
+Looking for more resources? Check out [ethereum.org/developers](/developers/).

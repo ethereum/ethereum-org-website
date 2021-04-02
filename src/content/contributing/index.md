@@ -12,7 +12,7 @@ sidebar: true
   <a href="#poap">More on POAPs</a>
 </InfoBanner>
 
-ethereum.org is an open-source project. So if you want to help improve [our portal to Ethereum](/en/about/), here's how you can help out.
+ethereum.org is an open-source project. So if you want to help improve [our portal to Ethereum](/about/), here's how you can help out.
 
 ## Ways to contribute {#ways-to-contribute}
 
@@ -27,13 +27,13 @@ ethereum.org is an open-source project. So if you want to help improve [our port
 - [Add developer tools ](/en/contributing/adding-developer-tools/)
   _– Add a developer tool to a relevant page_
 - [Add an exchange](/en/contributing/adding-exchanges/)
-  _– Add an exchange to our [exchange finder](/en/get-eth/#country-picker)_
+  _– Add an exchange to our [exchange finder](/get-eth/#country-picker)_
 - [Improve our research](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c)
   _– Let us know your feedback on our research or contribute your own_
 - [Request a feature](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=)
   _– Let us know about any ideas you have for a new feature or design_
 - [Add a glossary term](/en/contributing/adding-glossary-terms)
-  _– Help us continue to expand the Ethereum [glossary](/en/glossary/)_
+  _– Help us continue to expand the Ethereum [glossary](/glossary/)_
 - [Create/edit content ](/en/contributing/#how-to-update-content)
   _– Suggest new pages or makes tweaks to what's here already_
 

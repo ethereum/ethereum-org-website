@@ -305,7 +305,7 @@ This line specifies the inheritence, in this case from `IERC20` from above and `
 ```
 
 This line attaches the `SafeMath` library to the `uint256` type. You can find this library
-[here](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/math/SafeMath.sol).
+[here](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol).
 
 ### Variable Definitions {#variable-definitions}
 
@@ -318,7 +318,6 @@ The first two variables are [mappings](https://www.tutorialspoint.com/solidity/s
 meaning they behave roughly the same as [associative arrays](https://en.wikipedia.org/wiki/Associative_array),
 except that the keys are numeric values. Storage is only allocated for entries that have values different
 from the default (zero).
-
 
 ```solidity
     mapping (address => uint256) private _balances;

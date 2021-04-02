@@ -626,9 +626,6 @@ export const query = graphql`
     atomic: file(relativePath: { eq: "wallets/atomic.png" }) {
       ...listImage
     }
-    authereum: file(relativePath: { eq: "wallets/authereum.png" }) {
-      ...listImage
-    }
     bitski: file(relativePath: { eq: "wallets/bitski.png" }) {
       ...listImage
     }
