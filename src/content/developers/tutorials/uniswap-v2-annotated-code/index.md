@@ -158,13 +158,14 @@ deposits or withdraws tokens.
 Here is a simple example. Note that for the sake of simplicity the table only has has three digits after the decimal point, so the
 numbers are not accurate.
 
-| Event                                                    |  reserve0     |   reserve1       | reserve0 * reserve1     | last trade exchange rate |
-| -------------------------------------------------------- | ------------- | ---------------- | ----------------------- | -----------------------  |
-| Initial setup                                            |       1,000   |        1,000     | 1,000,000               |                          |
-| Trader A deposits 50 token0 and gets 47.619  token1 back |       1,050   |          952.381 | 1,000,000               | 0.952                    |
-| Trader B deposits 10 token0 and gets  8.984  token1 back |       1,060   |          943.396 | 1,000,000               | 0.898                    |
-| Trader C deposits 40 token0 and gets 34.305  token1 back |       1,100   |          909.090 | 1,000,000               | 0.858                    |
-| Trader D deposits 100 token1 and gets 109.01 token0 back |       990.990 |         1009.090 | 1,000,000               | 0.917                    |
+| Event                                                    |  reserve0       |   reserve1       | reserve0 * reserve1     | last trade exchange rate |
+| -------------------------------------------------------- |       --------: |      ----------: |       ----------------: | -----------------------  |
+| Initial setup                                            |     1,000.000   |        1,000.000 | 1,000,000               |                          |
+| Trader A deposits 50 token0 and gets 47.619  token1 back |     1,050.000   |          952.381 | 1,000,000               | 0.952                    |
+| Trader B deposits 10 token0 and gets  8.984  token1 back |     1,060.000   |          943.396 | 1,000,000               | 0.898                    |
+| Trader C deposits 40 token0 and gets 34.305  token1 back |     1,100.000   |          909.090 | 1,000,000               | 0.858                    |
+| Trader D deposits 100 token1 and gets 109.01 token0 back |       990.990   |        1,009.090 | 1,000,000               | 0.917                    |
+| Trader E deposits 10 token0 and gets 10.079 token1 back  |      1,000.990   |          999.010 | 1,000,000              | 1.008                    |
 
 As you can see, the as traders provide more of token0, the relative value of token1 increases, and vice versa, implementing supply and demand.
 
