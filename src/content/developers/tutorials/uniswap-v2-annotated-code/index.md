@@ -97,7 +97,7 @@ for the fraction. So `1.0` is represented as `2^112`, `1.5` is represented as `2
 ```    
 
 To avoid cases of division by zero, there is a minimum number of liquidity tokens that always
-exist (but are owned by account zero). That number is **MINIMUM_LIQUIDITY**.
+exist (but are owned by account zero). That number is **MINIMUM_LIQUIDITY**, a thousand.
 
     
 ```solidity    
@@ -144,7 +144,7 @@ storage value can include all three of them (112+112+32=256).
     uint public price1CumulativeLast;
 ```
 
-**GOON**
+These variables hold the cumulative costs for each token (each in term of the other).
 
 ```solidity
     uint public kLast; // reserve0 * reserve1, as of immediately after the most recent liquidity event
@@ -158,28 +158,58 @@ deposits or withdraws tokens.
 Here is a simple example. Note that for the sake of simplicity the table only has has three digits after the decimal point, so the
 numbers are not accurate.
 
-| Event                                                    |  reserve0       |   reserve1       | reserve0 * reserve1     | last trade exchange rate |
+| Event                                                |  reserve0       |   reserve1       | reserve0 * reserve1     | last trade exchange rate (token1 / token0) |
 | -------------------------------------------------------- |       --------: |      ----------: |       ----------------: | -----------------------  |
 | Initial setup                                            |     1,000.000   |        1,000.000 | 1,000,000               |                          |
 | Trader A deposits 50 token0 and gets 47.619  token1 back |     1,050.000   |          952.381 | 1,000,000               | 0.952                    |
 | Trader B deposits 10 token0 and gets  8.984  token1 back |     1,060.000   |          943.396 | 1,000,000               | 0.898                    |
 | Trader C deposits 40 token0 and gets 34.305  token1 back |     1,100.000   |          909.090 | 1,000,000               | 0.858                    |
 | Trader D deposits 100 token1 and gets 109.01 token0 back |       990.990   |        1,009.090 | 1,000,000               | 0.917                    |
-| Trader E deposits 10 token0 and gets 10.079 token1 back  |      1,000.990   |          999.010 | 1,000,000              | 1.008                    |
+| Trader E deposits 10 token0 and gets 10.079 token1 back  |     1,000.990   |          999.010 | 1,000,000               | 1.008                    |
 
-As you can see, the as traders provide more of token0, the relative value of token1 increases, and vice versa, implementing supply and demand.
+As you can see, as traders provide more of token0, the relative value of token1 increases, and vice versa, implementing supply and demand.
 
 
 ```solidity
-
     uint private unlocked = 1;
+```
+
+There is a class of security vulnerabilities that are based on 
+[reentrancy abuse](https://medium.com/coinmonks/ethernaut-lvl-10-re-entrancy-walkthrough-how-to-abuse-execution-ordering-and-reproduce-the-dao-7ec88b912c14).
+Uniswap needs to transfer arbitrary ERC-20 tokens, which means calling ERC-20 contracts that may attempt to abuse the Uniswap market that calls them. 
+By having an `unlocked` variable as part of the contract, we can prevent functions from being called while they are running (within the same 
+transaction).
+
+```solidity
     modifier lock() {
+```
+
+This function is a [modifier](https://docs.soliditylang.org/en/v0.8.3/contracts.html#function-modifiers), a function that wraps around a 
+normal function to change its behavior is some way.
+
+```solidity
         require(unlocked == 1, 'UniswapV2: LOCKED');
         unlocked = 0;
+```
+
+If `unlocked` is equal to one, set it to zero. If it is already zero revert the call, make it fail.
+
+```solidity
         _;
+```
+
+In a modifier `_;` is the original function call (with all the parameters). Here it means that the function call only happens if 
+`unlocked` was one when it was called, and while it is running the value of `unlocked` is zero.
+
+```solidity
         unlocked = 1;
     }
+```
 
+After the main function returns, release the lock.
+
+
+```solidity
     function getReserves() public view returns (uint112 _reserve0, uint112 _reserve1, uint32 _blockTimestampLast) {
         _reserve0 = reserve0;
         _reserve1 = reserve1;
