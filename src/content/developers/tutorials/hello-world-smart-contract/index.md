@@ -211,7 +211,7 @@ Then, create a `.env` file in the root directory of our project, and add your Me
 *   Follow [these instructions](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) to export your private key
 *   See below to get HTTP Alchemy API URL
 
-![get alchemy api key](./get-alchemy-api-key.png)
+![get alchemy api key](./get-alchemy-api-key.gif)
 
 Copy Alchemy API URL
 
