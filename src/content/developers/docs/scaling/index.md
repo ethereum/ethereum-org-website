@@ -16,7 +16,7 @@ The scalability of a blockchain is measured in transactions per second. On the E
 
 Sharding is the process of splitting a database horizontally to spread the load. In an Ethereum context, sharding will reduce network congestion and increase transactions per second by creating new chains, known as “shards”.
 
-Learn more about [sharding](/eth2/shard-chains/).
+Learn more about [Sharding](/eth2/shard-chains/).
 
 ## Off-Chain Scaling {#off-chain-scaling}
 
@@ -24,7 +24,7 @@ Learn more about [sharding](/eth2/shard-chains/).
 
 Rollups are solutions that perform transaction execution outside layer 1, but post transaction data on layer 1. As transaction data is on layer 1, this allows rollups to be secured by layer 1.
 
-Learn more about [rollups](/developers/docs/layer-2-scaling/).
+Learn more about [Rollups](/developers/docs/layer-2-scaling/).
 
 ### State channels {#state-channels}
 
@@ -48,7 +48,7 @@ Learn more about [Validium](/developers/docs/layer-2-scaling/).
 
 A sidechain is a separate blockchain which runs in parallel to mainnet and operates independently. It has its own consensus algorithm ([Proof of Authority](https://en.wikipedia.org/wiki/Proof_of_authority), [Delegated proof-of-stake](https://en.bitcoinwiki.org/wiki/DPoS), [Byzantine fault tolerance](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained), and so on). It is connected to the main chain by a two-way bridge.
 
-Learn more about [sidechains](/developers/docs/layer-2-scaling/).
+Learn more about [Sidechains](/developers/docs/layer-2-scaling/).
 
 ## Further reading {#further-reading}
 
