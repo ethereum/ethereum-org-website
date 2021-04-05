@@ -42,6 +42,8 @@ Learn more about [Plasma](/developers/docs/layer-2-scaling/).
 
 Uses validity proofs like [ZK-rollups](/developers/docs/layer-2-scaling/) but data is not stored on the main layer 1 Ethereum chain. This can lead to 10k transactions per second per validium chain and multiple chains can be run in parallel.
 
+Learn more about [Validium](/developers/docs/layer-2-scaling/).
+
 ### Sidechains {#sidechains}
 
 A sidechain is a separate blockchain which runs in parallel to mainnet and operates independently. It has its own consensus algorithm ([Proof of Authority](https://en.wikipedia.org/wiki/Proof_of_authority), [Delegated proof-of-stake](https://en.bitcoinwiki.org/wiki/DPoS), [Byzantine fault tolerance](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained), and so on). It is connected to the main chain by a two-way bridge.
