@@ -215,13 +215,41 @@ After the main function returns, release the lock.
         _reserve1 = reserve1;
         _blockTimestampLast = blockTimestampLast;
     }
+```
 
+This function provides callers with the current state of the exchange. Notice that Solidity functions [can return multiple
+values](https://docs.soliditylang.org/en/v0.8.3/contracts.html#returning-multiple-values).
+
+```solidity
     function _safeTransfer(address token, address to, uint value) private {
         (bool success, bytes memory data) = token.call(abi.encodeWithSelector(SELECTOR, to, value));
+```
+
+This internal function transfers an amount of ERC20 tokens from the exchange to somebody else. `SELECTOR` specifies
+the function was are calling is `transfer(address,uint)` (see defintion above). 
+
+To avoid having to import an interface for the token function, we "manually" create the call using one of the 
+[ABI functions](https://docs.soliditylang.org/en/v0.8.3/units-and-global-variables.html#abi-encoding-and-decoding-functions).
+
+```solidity
         require(success && (data.length == 0 || abi.decode(data, (bool))), 'UniswapV2: TRANSFER_FAILED');
     }
+```
 
+There are two ways in which this call can fail:
+
+1. Revert. If a call to an external contract reverts than the boolean return value is `false`
+2. End normally but report a failure. In that case the return value buffer has a non-zero length, and when decoded as a boolean value it is `false`
+
+If either of these conditions happen, revert.
+
+```solidity
     event Mint(address indexed sender, uint amount0, uint amount1);
+```
+
+GOON
+
+```solidity
     event Burn(address indexed sender, uint amount0, uint amount1, address indexed to);
     event Swap(
         address indexed sender,
@@ -232,7 +260,9 @@ After the main function returns, release the lock.
         address indexed to
     );
     event Sync(uint112 reserve0, uint112 reserve1);
+```
 
+```solidity
     constructor() public {
         factory = msg.sender;
     }
