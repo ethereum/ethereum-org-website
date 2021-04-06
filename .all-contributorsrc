@@ -3301,6 +3301,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "elmorg",
+      "name": "Evan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1218452?v=4",
+      "profile": "http://you-rhythmic.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
