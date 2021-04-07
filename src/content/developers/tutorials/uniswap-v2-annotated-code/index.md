@@ -272,34 +272,77 @@ the tokens (`to`), which may not be the same as the sender.
     );
 ```
 
-This event is emitted when GOON
+This event is emitted when a trader swaps one token for the other. Again, the sender and the destination may not be the same.
+Each token may be either sent to the exchange, or received from it.
 
 ```solidity
     event Sync(uint112 reserve0, uint112 reserve1);
 ```
 
+Finally, `Sync` is emitted every time tokens are added or withdrawn, regardless of the reason, to provide the latest reserve information.
+
+
+#### Setup Functions {#pair-setup}
+
+These functions are supposed to be called once when the new pair exchange is set up.
+
 ```solidity
     constructor() public {
         factory = msg.sender;
     }
+```
 
+The constructor makes sure we'll keep track of the address of the factory that created the pair. This
+information is required for `initialize` and for the factory fee (if one exists)
+
+```solidity
     // called once by the factory at time of deployment
     function initialize(address _token0, address _token1) external {
         require(msg.sender == factory, 'UniswapV2: FORBIDDEN'); // sufficient check
         token0 = _token0;
         token1 = _token1;
     }
+```
 
+This function allows the factory (and only the factory) to specify the two ERC-20 tokens that this pair will exchange.
+
+
+#### Update Functions {#pair-update}
+
+```solidity
     // update reserves and, on the first call per block, price accumulators
     function _update(uint balance0, uint balance1, uint112 _reserve0, uint112 _reserve1) private {
+```    
+
+This function is called every time tokens are deposited or withdrawn.
+
+```solidity
         require(balance0 <= uint112(-1) && balance1 <= uint112(-1), 'UniswapV2: OVERFLOW');
+```
+
+If the update makes either balance higher than 2^111 (so it would be interpreted as a negative number) refuse
+to do it to prevent overflows. With a normal token that can be subdivided into 10^18 units, this means the
+exchange can hold up to about 2.5*10^15 tokens. So far that has not been a problem.
+
+```solidity
         uint32 blockTimestamp = uint32(block.timestamp % 2**32);
         uint32 timeElapsed = blockTimestamp - blockTimestampLast; // overflow is desired
-        if (timeElapsed > 0 && _reserve0 != 0 && _reserve1 != 0) {
+        if (timeElapsed > 0 && _reserve0 != 0 && _reserve1 != 0) {        
+```
+
+If the time elapsed is not zero, it means we are the first exchange transaction on this block. In that case,
+we need to update the cost accumulators.
+
+```solidity
             // * never overflows, and + overflow is desired
             price0CumulativeLast += uint(UQ112x112.encode(_reserve1).uqdiv(_reserve0)) * timeElapsed;
             price1CumulativeLast += uint(UQ112x112.encode(_reserve0).uqdiv(_reserve1)) * timeElapsed;
         }
+```
+
+The price of a token is always 
+
+```solidity
         reserve0 = uint112(balance0);
         reserve1 = uint112(balance1);
         blockTimestampLast = blockTimestamp;
