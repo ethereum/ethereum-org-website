@@ -322,7 +322,7 @@ This function is called every time tokens are deposited or withdrawn.
 
 If the update makes either balance higher than 2^111 (so it would be interpreted as a negative number) refuse
 to do it to prevent overflows. With a normal token that can be subdivided into 10^18 units, this means the
-exchange can hold up to about 2.5*10^15 tokens. So far that has not been a problem.
+exchange can hold up to about 2.5\*10^15 tokens. So far that has not been a problem.
 
 ```solidity
         uint32 blockTimestamp = uint32(block.timestamp % 2**32);
