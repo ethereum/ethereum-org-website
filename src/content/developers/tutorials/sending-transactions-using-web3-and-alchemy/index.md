@@ -115,8 +115,6 @@ Great, now that we have our sensitive data protected in a .env file, let’s sta
 
 Create a `sendTx.js` file, which is where we will configure and send our example transaction, and add the following lines of code to it:
 
-Be sure to replace the address on **line 6** with your own public address.
-
 ```
 async function main() {
     require('dotenv').config();
@@ -148,6 +146,8 @@ async function main() {
 
 main();
 ```
+
+Be sure to replace the address on **line 6** with your own public address.
 
 Now, before we jump into running this code, let's talk about some of the components here.
 
