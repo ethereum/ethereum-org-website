@@ -92,6 +92,8 @@ A lot of calculations in the pool contract require fractions. However, fractions
 The solution that Uniswap found is to use 224 bit values, with 112 bits for the integer part, and 112 bits 
 for the fraction. So `1.0` is represented as `2^112`, `1.5` is represented as `2^112 + 2^111`, etc.
 
+#### Variables {#pair-vars}
+
 ```solidity
     uint public constant MINIMUM_LIQUIDITY = 10**3;
 ```    
@@ -144,7 +146,8 @@ storage value can include all three of them (112+112+32=256).
     uint public price1CumulativeLast;
 ```
 
-These variables hold the cumulative costs for each token (each in term of the other).
+These variables hold the cumulative costs for each token (each in term of the other). They can be used to calculate
+the average exchange rate over a period of time.
 
 ```solidity
     uint public kLast; // reserve0 * reserve1, as of immediately after the most recent liquidity event
@@ -158,7 +161,7 @@ deposits or withdraws tokens.
 Here is a simple example. Note that for the sake of simplicity the table only has has three digits after the decimal point, so the
 numbers are not accurate.
 
-| Event                                                |  reserve0       |   reserve1       | reserve0 * reserve1     | last trade exchange rate (token1 / token0) |
+| Event                                                    |  reserve0  | reserve1 | reserve0 * reserve1 | Trade exchange rate (token1 / token0) |
 | -------------------------------------------------------- |       --------: |      ----------: |       ----------------: | -----------------------  |
 | Initial setup                                            |     1,000.000   |        1,000.000 | 1,000,000               |                          |
 | Trader A deposits 50 token0 and gets 47.619  token1 back |     1,050.000   |          952.381 | 1,000,000               | 0.952                    |
@@ -169,6 +172,7 @@ numbers are not accurate.
 
 As you can see, as traders provide more of token0, the relative value of token1 increases, and vice versa, implementing supply and demand.
 
+#### Lock   {#pair-lock}
 
 ```solidity
     uint private unlocked = 1;
@@ -209,6 +213,8 @@ In a modifier `_;` is the original function call (with all the parameters). Here
 After the main function returns, release the lock.
 
 
+#### Misc. functions {#pair-misc}
+
 ```solidity
     function getReserves() public view returns (uint112 _reserve0, uint112 _reserve1, uint32 _blockTimestampLast) {
         _reserve0 = reserve0;
@@ -243,14 +249,19 @@ There are two ways in which this call can fail:
 
 If either of these conditions happen, revert.
 
+#### {#pair-events}
+
 ```solidity
     event Mint(address indexed sender, uint amount0, uint amount1);
+    event Burn(address indexed sender, uint amount0, uint amount1, address indexed to);
 ```
 
-GOON
+These two events are emitted when a liquidity provider either deposits liquidity (`Mint`) or withdraws it (`Burn`). In
+either case, the amounts of token0 and token1 that are deposited or withdrawn are part of the event, as well as the identity
+of the account that called us (`sender`). In the case of a withdrawal, the event also includes the target that received
+the tokens (`to`), which may not be the same as the sender.
 
 ```solidity
-    event Burn(address indexed sender, uint amount0, uint amount1, address indexed to);
     event Swap(
         address indexed sender,
         uint amount0In,
@@ -259,6 +270,11 @@ GOON
         uint amount1Out,
         address indexed to
     );
+```
+
+This event is emitted when GOON
+
+```solidity
     event Sync(uint112 reserve0, uint112 reserve1);
 ```
 
