@@ -161,7 +161,7 @@ deposits or withdraws tokens.
 Here is a simple example. Note that for the sake of simplicity the table only has has three digits after the decimal point, so the
 numbers are not accurate.
 
-| Event                                                    |  reserve0  | reserve1 | reserve0 * reserve1 | Trade exchange rate (token1 / token0) |
+| Event                                                    |  reserve0  | reserve1 | reserve0 * reserve1 | Average exchange rate (token1 / token0) |
 | -------------------------------------------------------- |       --------: |      ----------: |       ----------------: | -----------------------  |
 | Initial setup                                            |     1,000.000   |        1,000.000 | 1,000,000               |                          |
 | Trader A deposits 50 token0 and gets 47.619  token1 back |     1,050.000   |          952.381 | 1,000,000               | 0.952                    |
@@ -321,8 +321,8 @@ This function is called every time tokens are deposited or withdrawn.
 ```
 
 If the update makes either balance higher than 2^111 (so it would be interpreted as a negative number) refuse
-to do it to prevent overflows. With a normal token that can be subdivided into 10^18 units, this means the
-exchange can hold up to about 2.5\*10^15 tokens. So far that has not been a problem.
+to do it to prevent overflows. With a normal token that can be subdivided into 10^18 units, this means each
+exchange is limited to about 2.5\*10^15 of each tokens. So far that has not been a problem.
 
 ```solidity
         uint32 blockTimestamp = uint32(block.timestamp % 2**32);
@@ -331,7 +331,7 @@ exchange can hold up to about 2.5\*10^15 tokens. So far that has not been a prob
 ```
 
 If the time elapsed is not zero, it means we are the first exchange transaction on this block. In that case,
-we need to update the cost accumulators.
+we need to update the cost accumulators. 
 
 ```solidity
             // * never overflows, and + overflow is desired
@@ -340,7 +340,25 @@ we need to update the cost accumulators.
         }
 ```
 
-The price of a token is always 
+Each cost accumulator is updated with the latest cost (<reserve of the other token>/<reserve of this token>) times the elapsed time
+in seconds. To get an average price you read the cumulative price is two points in time, and divide by the time difference
+between them. For example, assume this sequence of events:
+
+
+| Event                                                    |  reserve0       | reserve1         | timestamp | Marginal exchange rate (reserve1 / reserve0) | price0CumulativeLast |
+| -------------------------------------------------------- |       --------: |      ----------: | --------- | ---------------- | ---: |
+| Initial setup                                            |     1,000.000   |        1,000.000 | 1,000,000 | 1     |  0 |
+| Trader A deposits 50 token0 and gets 47.619  token1 back |     1,050.000   |          952.381 | 1,000,020 | 0.907 | 20 |
+| Trader B deposits 10 token0 and gets  8.984  token1 back |     1,060.000   |          943.396 | 1,000,030 | 0.890 | 20+10\*0.907 = 29.07 | 
+| Trader C deposits 40 token0 and gets 34.305  token1 back |     1,100.000   |          909.090 | 1,000,100 | 0.826 | 29.07+70\*0.890 = 91.37 |
+| Trader D deposits 100 token1 and gets 109.01 token0 back |       990.990   |        1,009.090 | 1,000,110 | 1.018 | 91.37+10\*0.826 = 99.63 |
+| Trader E deposits 10 token0 and gets 10.079 token1 back  |     1,000.990   |          999.010 | 1,000,150 | 0.998 | 99.63+40\*1.1018 = 143.702 |
+
+Lets say we want to calculate the average price of token0 between the timestamps 1,000,030 and 1,000,150. The difference in the value of
+`price0Culumative` is 143.702-29.07=114.632. However, this is the average across two minutes (120 seconds). So the average price is
+114.632/120 = 0.955.
+
+This price calculation is the reason we need to know the old reserve size.
 
 ```solidity
         reserve0 = uint112(balance0);
