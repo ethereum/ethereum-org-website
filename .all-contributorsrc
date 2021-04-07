@@ -3328,6 +3328,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "slightlyfloating",
+      "name": "slightlyfloating",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56945047?v=4",
+      "profile": "https://github.com/slightlyfloating",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
