@@ -56,7 +56,7 @@ Connect to ropsten testnet
 window.provider = new InfuraProvider("ropsten");
 ```
 
-## Sending Procedures
+## Sending Procedures {#procedure}
 ### 1. Connect to net(mainnet, testnet)
 ### 2. Create wallet
 ```
@@ -90,6 +90,25 @@ walletSigner.sendTransaction(tx).then((transaction) =>
 			alert('Send finished!');
 		});
 ```
+
+## How to use it
+```
+let private_key = "41559d28e936dc92104ff30691519693fc753ffbee6251a611b9aa1878f12a4d";
+let send_token_amount = '1';
+let to_address = '0x4c10D2734Fb76D3236E522509181CC3Ba8DE0e80';
+let send_address = '0xda27a282B5B6c5229699891CfA6b900A716539E6';
+let gas_limit = '0x100000';
+let wallet = new ethers.Wallet(private_key);
+let walletSigner = wallet.connect(window.ethersProvider);
+let contract_address="";
+window.ethersProvider = new ethers.providers.InfuraProvider("ropsten");
+
+send_token(contract_address, send_token_amount, to_address, send_address, private_key);
+```
+### Result(Success)
+![image](https://user-images.githubusercontent.com/63450340/113803937-7f35fd80-9798-11eb-960c-b2ae90baf84f.png)
+
+
 ## send_token()
 ```
 function send_token(contract_address, send_token_amount, to_address, send_account, private_key)
