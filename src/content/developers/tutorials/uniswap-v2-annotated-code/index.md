@@ -346,19 +346,19 @@ between them. For example, assume this sequence of events:
 
 
 | Event                                                    |  reserve0       | reserve1         | timestamp | Marginal exchange rate (reserve1 / reserve0) | price0CumulativeLast |
-| -------------------------------------------------------- |       --------: |      ----------: | --------- | ---------------- | ---: |
-| Initial setup                                            |     1,000.000   |        1,000.000 | 1,000,000 | 1     |  0 |
-| Trader A deposits 50 token0 and gets 47.619  token1 back |     1,050.000   |          952.381 | 1,000,020 | 0.907 | 20 |
-| Trader B deposits 10 token0 and gets  8.984  token1 back |     1,060.000   |          943.396 | 1,000,030 | 0.890 | 20+10\*0.907 = 29.07 | 
-| Trader C deposits 40 token0 and gets 34.305  token1 back |     1,100.000   |          909.090 | 1,000,100 | 0.826 | 29.07+70\*0.890 = 91.37 |
-| Trader D deposits 100 token1 and gets 109.01 token0 back |       990.990   |        1,009.090 | 1,000,110 | 1.018 | 91.37+10\*0.826 = 99.63 |
-| Trader E deposits 10 token0 and gets 10.079 token1 back  |     1,000.990   |          999.010 | 1,000,150 | 0.998 | 99.63+40\*1.1018 = 143.702 |
+| -------------------------------------------------------- |       --------: |      ----------: | --------- | ----: | ---: |
+| Initial setup                                            |     1,000.000   |        1,000.000 | 5,000 | 1.000 |  0 |
+| Trader A deposits 50 token0 and gets 47.619  token1 back |     1,050.000   |          952.381 | 5,020 | 0.907 | 20 |
+| Trader B deposits 10 token0 and gets  8.984  token1 back |     1,060.000   |          943.396 | 5,030 | 0.890 | 20+10\*0.907 = 29.07 | 
+| Trader C deposits 40 token0 and gets 34.305  token1 back |     1,100.000   |          909.090 | 5,100 | 0.826 | 29.07+70\*0.890 = 91.37 |
+| Trader D deposits 100 token1 and gets 109.01 token0 back |       990.990   |        1,009.090 | 5,110 | 1.018 | 91.37+10\*0.826 = 99.63 |
+| Trader E deposits 10 token0 and gets 10.079 token1 back  |     1,000.990   |          999.010 | 5,150 | 0.998 | 99.63+40\*1.1018 = 143.702 |
 
-Lets say we want to calculate the average price of token0 between the timestamps 1,000,030 and 1,000,150. The difference in the value of
+Lets say we want to calculate the average price of **Token0** between the timestamps 5,030 and 5,150. The difference in the value of
 `price0Culumative` is 143.702-29.07=114.632. However, this is the average across two minutes (120 seconds). So the average price is
 114.632/120 = 0.955.
 
-This price calculation is the reason we need to know the old reserve size.
+This price calculation is the reason we need to know the old reserve sizes.
 
 ```solidity
         reserve0 = uint112(balance0);
@@ -366,7 +366,12 @@ This price calculation is the reason we need to know the old reserve size.
         blockTimestampLast = blockTimestamp;
         emit Sync(reserve0, reserve1);
     }
+```
 
+Finally, update the global variables and emit a `Sync` event.
+
+
+```solidity
     // if fee is on, mint liquidity equivalent to 1/6th of the growth in sqrt(k)
     function _mintFee(uint112 _reserve0, uint112 _reserve1) private returns (bool feeOn) {
         address feeTo = IUniswapV2Factory(factory).feeTo();
