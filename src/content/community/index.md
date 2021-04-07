@@ -37,10 +37,6 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
   - The Ethereum community is very active on Twitter - not sure where to start?
     - [List of influential Ethereum twitter accounts](https://hive.one/ethereum/)
 
-## Community support {#community-support}
-
-<Help />
-
 ## Upcoming events {#upcoming-events}
 
 **Every month, there are major Ethereum events around the world.** Consider attending one near you to meet more people in the community, learn about employment opportunities, and develop new skills.

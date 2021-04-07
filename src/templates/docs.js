@@ -181,8 +181,8 @@ const Contributors = styled(FileContributors)`
 `
 
 const DocsPage = ({ data, pageContext }) => {
-  const intl = useIntl()
-  const isRightToLeft = isLangRightToLeft(intl.locale)
+  const { locale } = useIntl()
+  const isRightToLeft = isLangRightToLeft(locale)
 
   const mdx = data.pageData
   const tocItems = mdx.tableOfContents.items
@@ -222,7 +222,7 @@ const DocsPage = ({ data, pageContext }) => {
               <Translation id="back-to-top" /> ↑
             </a>
           </BackToTop>
-          <FeedbackCard />
+          {locale === "en" && <FeedbackCard />}
           <DocsNav relativePath={relativePath}></DocsNav>
         </Content>
         {mdx.frontmatter.sidebar && tocItems && (
