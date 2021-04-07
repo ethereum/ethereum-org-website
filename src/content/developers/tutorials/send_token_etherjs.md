@@ -46,7 +46,7 @@ ES3(UMD) in the Browser
 ## Notice {#notice}
 signTransaction(tx) is removed because sendTransaction() does it internally.
 
-## Set Provider (Infura)
+## Set Provider (Infura) {#set-provider}
 Connect to mainnet
 ```
 window.provider = new InfuraProvider();
@@ -57,20 +57,20 @@ window.provider = new InfuraProvider("ropsten");
 ```
 
 ## Sending Procedures {#procedure}
-### 1. Connect to net(mainnet, testnet)
-### 2. Create wallet
+### 1. Connect to net(mainnet, testnet) {#connect-to-net}
+### 2. Create wallet {#create-wallet}
 ```
 let wallet = new ethers.Wallet(private_key);
 ```
-### 3. Connect Wallet to net
+### 3. Connect Wallet to net {#connect-wallet-to-net}
 ```
 let walletSigner = wallet.connect(window.ethersProvider);
 ```
-### 4. Get current gas price
+### 4. Get current gas price {#get-gas}
 ```
 window.ethersProvider.getGasPrice(); // gasPrice
 ```
-### 5. Define Transaction
+### 5. Define Transaction {#define-transaction}
 ```
 const tx = 
 {
@@ -82,7 +82,7 @@ const tx =
 	gasPrice : gasPrice
 }
 ```
-### 6. Transfer
+### 6. Transfer {#transfer}
 ```
 walletSigner.sendTransaction(tx).then((transaction) => 
 		{
@@ -91,7 +91,7 @@ walletSigner.sendTransaction(tx).then((transaction) =>
 		});
 ```
 
-## How to use it
+## How to use it {#how-to-use}
 ```
 let private_key = "41559d28e936dc92104ff30691519693fc753ffbee6251a611b9aa1878f12a4d";
 let send_token_amount = '1';
@@ -105,11 +105,11 @@ window.ethersProvider = new ethers.providers.InfuraProvider("ropsten");
 
 send_token(contract_address, send_token_amount, to_address, send_address, private_key);
 ```
-### Result(Success)
+### Result(Success) {#result}
 ![image](https://user-images.githubusercontent.com/63450340/113803937-7f35fd80-9798-11eb-960c-b2ae90baf84f.png)
 
 
-## send_token()
+## send_token() {#send_token_method}
 ```
 function send_token(contract_address, send_token_amount, to_address, send_account, private_key)
 {
