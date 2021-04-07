@@ -898,6 +898,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://you-rhythmic.com"><img src="https://avatars.githubusercontent.com/u/1218452?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Evan</b></sub></a><br /><a href="#content-elmorg" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/ETHorHIL"><img src="https://avatars.githubusercontent.com/u/24531309?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ETHorHIL</b></sub></a><br /><a href="#content-ETHorHIL" title="Content">🖋</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="http://www.linkedin.com/in/shashvat-shah-565399122"><img src="https://avatars.githubusercontent.com/u/24702409?v=4?s=100" width="100px;" alt=""/><br /><sub><b>shashvatshah9</b></sub></a><br /><a href="#content-shashvatshah9" title="Content">🖋</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
