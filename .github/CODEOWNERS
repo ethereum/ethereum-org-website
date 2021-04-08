@@ -1,0 +1,11 @@
+# This file defines the code owners of the repository
+# Code owners are automatically requested for review when someone opens a PR that modifies code that they own
+# Each line is a file pattern followed by one or more owners. Learn more here:
+# https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/about-code-owners
+
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence,
+*       @samajammin @ryancreatescopy @jjmstark @GeorgeTrotter @wackerow
+
+# Owners of specific files
+/src/data/eth2-bounty-hunters.csv @lsankar4033 @djrtwo @JustinDrake

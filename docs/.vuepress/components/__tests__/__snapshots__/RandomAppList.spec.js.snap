@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`RandomAppList render randon app list 1`] = `
-<randomlist-stub
-  comp="[object Object]"
-  items="[object Object],[object Object],[object Object],[object Object]"
-  n="4"
-/>
-`;

@@ -1,0 +1,22 @@
+{
+  "comp-tutorial-metadata-minute-read": "percnyi olvasás",
+  "page-tutorial-listing-policy-intro": "Mielőtt beküldesz egy útmutatót, kérjük olvasd el a listázási szabályzatunkat.",
+  "comp-tutorial-metadata-tip-author": "Szerző jutalmazása",
+  "page-tutorial-listing-policy": "cikk listázási szabályzat",
+  "page-tutorial-new-github": "Még új vagy a GitHubon?",
+  "page-tutorial-new-github-desc": " Hiba jelentése – csak töltsd ki a szükséges információkat és másold be az útmutatódat.",
+  "page-tutorial-pull-request": "Pull Request létrehozása",
+  "page-tutorial-pull-request-btn": "Pull request készítése",
+  "page-tutorial-pull-request-desc-1": "Kérjük kövesd a",
+  "page-tutorial-pull-request-desc-2": "tutorials/your-tutorial-name/index.md",
+  "page-tutorial-pull-request-desc-3": "elnevezési struktúrát.",
+  "page-tutorial-raise-issue-btn": "Ticket feladása",
+  "page-tutorial-read-time": "perc",
+  "page-tutorial-submit-btn": "Útmutató küldése",
+  "page-tutorial-submit-tutorial": "Útmutató küldéséhez GitHub használata szükséges. Szívesen vesszük a ticketeidet vagy pull request-jeidet.",
+  "page-tutorial-subtitle": "Üdvözlünk a válogatott közösségi útmutatók listájánál.",
+  "page-tutorial-tags-error": "Egyik útmutató sem tartalmazza ezeket a tageket",
+  "page-tutorial-title": "Ethereum Fejlesztői Útmutatók",
+  "page-tutorials-meta-description": "Böngéssz és szűrj rá ellenőrzött Ethereum közösségi útmutatókra témakör szerint.",
+  "page-tutorials-meta-title": "Ethereum Fejlesztői Útmutatók"
+}

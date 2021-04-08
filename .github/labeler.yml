@@ -1,0 +1,31 @@
+"Status: Review Needed":
+  - src/**/*
+
+"Type: Documentation":
+  - README.md
+
+"Type: Tooling":
+  - .github/**/*
+  - src/scripts/*
+  - netlify.toml
+
+"Type: Dependencies":
+  - package.json
+  - yarn.lock
+
+"Type: Internal":
+  - gatsby-browser.js
+  - gatsby-config.js
+  - gatsby-node.js
+  - gatsby-ssr.js
+  - .all-contributorsrc
+
+"Type: Translation":
+  - src/content/translations/**/*
+  - src/intl/*
+  - src/utils/translations.js
+
+"Type: Content":
+  - src/pages/*
+  - src/pages-conditional/*
+  - src/content/**/*

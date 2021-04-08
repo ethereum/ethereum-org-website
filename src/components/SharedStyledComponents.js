@@ -1,0 +1,435 @@
+import styled from "styled-components"
+import { margin } from "styled-system"
+
+import Card from "./Card"
+import Link from "./Link"
+
+export const Page = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  margin: 0 auto;
+`
+
+export const Divider = styled.div`
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+  width: 10%;
+  height: 0.25rem;
+  background-color: ${(props) => props.theme.colors.homeDivider};
+`
+
+export const CenterDivider = styled.div`
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+  height: 0.25rem;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  background-color: ${(props) => props.theme.colors.homeDivider};
+`
+
+export const Content = styled.div`
+  padding: 1rem 2rem;
+  width: 100%;
+`
+
+export const TwoColumnContent = styled(Content)`
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
+  }
+`
+
+export const LeftColumn = styled.div`
+  flex: 0 0 50%;
+  max-width: 75%;
+  margin-right: 4rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    max-width: 100%;
+    margin-right: 0;
+  }
+`
+
+export const RightColumn = styled(LeftColumn)`
+  margin-right: 0;
+  flex: 0 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-top: 3rem;
+  }
+`
+
+export const Intro = styled.div`
+  max-width: 608px;
+  margin-bottom: 4rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin-bottom: 3rem;
+  }
+`
+
+export const GrayContainer = styled.div`
+  width: 100%;
+  padding: 4rem 0rem;
+  margin-top: 2rem;
+  background: ${(props) => props.theme.colors.grayBackground};
+  box-shadow: inset 0px 1px 0px
+    ${(props) => props.theme.colors.tableItemBoxShadow};
+`
+
+export const GradientContainer = styled.div`
+  width: 100%;
+  padding: 4rem 0rem;
+  margin-top: 2rem;
+  background: ${(props) => props.theme.colors.cardGradient};
+  box-shadow: inset 0px 1px 0px
+    ${(props) => props.theme.colors.tableItemBoxShadow};
+`
+
+export const SloganGradient = styled.div`
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 140%;
+  max-width: 720px;
+  margin-top: 1rem;
+  background-clip: text;
+  background-image: ${(props) => props.theme.colors.eth2Gradient};
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    font-size: 40px;
+  }
+`
+
+export const NavLink = styled(Link)`
+  text-decoration: none;
+  margin-right: 2rem;
+  color: ${(props) => props.theme.colors.text};
+  svg {
+    fill: ${(props) => props.theme.colors.text200};
+  }
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+    svg {
+      fill: ${(props) => props.theme.colors.primary};
+    }
+  }
+  &.active {
+    font-weight: bold;
+  }
+`
+
+export const FakeLink = styled.div`
+  color: ${(props) => props.theme.colors.primary};
+  cursor: pointer;
+`
+
+// Avoid DOM error for nested links
+export const FakeLinkExternal = styled.div`
+  color: ${(props) => props.theme.colors.primary};
+  &:after {
+    margin-left: 0.125em;
+    margin-right: 0.3em;
+    display: inline;
+    content: "↗";
+    transition: all 0.1s ease-in-out;
+    font-style: normal;
+  }
+  &:hover {
+    &:after {
+      transform: translate(0.15em, -0.2em);
+    }
+  }
+`
+
+export const CardContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1rem;
+  margin-right: -1rem;
+`
+
+export const CardGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: 2rem;
+`
+
+export const StyledCard = styled(Card)`
+  margin: 1rem;
+  padding: 1.5rem;
+  flex: 1 0 30%;
+  min-width: 280px;
+  max-width: 31%;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    max-width: 46%;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    max-width: 100%;
+  }
+`
+
+export const StyledCardMaxWidth = styled(StyledCard)`
+  max-width: 420px;
+`
+
+// Buttons
+
+const Button = styled.button`
+  text-decoration: none;
+  display: inline-block;
+  white-space: nowrap;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25em;
+  text-align: center;
+  cursor: pointer;
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  ${margin}
+`
+
+export const ButtonPrimary = styled(Button)`
+  background-color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.buttonColor};
+  border: 1px solid transparent;
+
+  &:hover {
+    background-color: ${(props) => props.theme.colors.primaryHover};
+  }
+  &:active {
+    background-color: ${(props) => props.theme.colors.primaryActive};
+  }
+`
+
+export const ButtonSecondary = styled(Button)`
+  color: ${(props) => props.theme.colors.text};
+  border: 1px solid ${(props) => props.theme.colors.text};
+  background-color: transparent;
+
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+    border: 1px solid ${(props) => props.theme.colors.primary};
+    box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
+  }
+  &:active {
+    background-color: ${(props) =>
+      props.theme.colors.secondaryButtonBackgroundActive};
+  }
+`
+
+export const Eth2Header = styled.h2`
+  font-style: normal;
+  font-weight: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 120%;
+  max-width: 640px; // TODO refactor to remove this
+  margin-bottom: 0rem;
+  color: ${(props) => props.theme.colors.text00};
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    font-size: 40px;
+  }
+`
+
+export const Eth2HeaderGradient = styled.span`
+  background-clip: text;
+  background-image: ${(props) => props.theme.colors.eth2Gradient};
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    /* Avoid cutoff on mobile */
+    display: inline-block;
+  }
+`
+
+// MDX components
+
+export const Paragraph = styled.p`
+  font-size: 1rem;
+  margin: 2rem 0 1rem;
+  color: ${(props) => props.theme.colors.text300};
+`
+
+export const Header1 = styled.h1`
+  font-weight: 700; // This overrides base h1 styling of 400
+
+  /* Prevent nav overlap */
+  &:before {
+    content: "";
+    display: block;
+    height: 140px;
+    margin-top: -140px;
+    visibility: hidden;
+  }
+
+  /* Hide anchor link */
+  a {
+    display: none;
+  }
+`
+
+export const Header2 = styled.h2`
+  font-weight: 700; // This overrides base h2 styling of 600
+
+  /* Needed to fix issues of header padding overlapping links */
+  /* https://github.com/confluenza/confluenza/pull/17 */
+  position: inherit !important;
+
+  /* Prevent nav overlap */
+  &:before {
+    content: "";
+    display: block;
+    height: 120px;
+    margin-top: -120px;
+    visibility: hidden;
+  }
+
+  /* Anchor tag styles */
+  /* Selected specifically for mdx rendered side icon link */
+  a.header-anchor {
+    position: relative;
+    display: none;
+    margin-left: -1.5em;
+    padding-right: 0.5rem;
+    font-size: 1rem;
+    vertical-align: middle;
+    &:hover {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+    }
+  }
+
+  &:hover {
+    a.header-anchor {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+    }
+  }
+`
+
+export const Header3 = styled.h3`
+  /* Needed to fix issues of header padding overlapping links */
+  /* https://github.com/confluenza/confluenza/pull/17 */
+  position: inherit !important;
+
+  /* Prevent nav overlap */
+  &:before {
+    content: "";
+    display: block;
+    height: 120px;
+    margin-top: -120px;
+    visibility: hidden;
+  }
+
+  /* Anchor tag styles */
+  /* Selected specifically for mdx rendered side icon link */
+  a.header-anchor {
+    position: relative;
+    display: none;
+    margin-left: -1.5em;
+    padding-right: 0.5rem;
+    font-size: 1rem;
+    vertical-align: middle;
+    &:hover {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+    }
+  }
+
+  &:hover {
+    a.header-anchor {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+    }
+  }
+`
+
+export const Header4 = styled.h4`
+  font-weight: 600; // This overrides base h2 styling of 400
+
+  /* Needed to fix issues of header padding overlapping links */
+  /* https://github.com/confluenza/confluenza/pull/17 */
+  position: inherit !important;
+
+  /* Prevent nav overlap */
+  &:before {
+    content: "";
+    display: block;
+    height: 120px;
+    margin-top: -120px;
+    visibility: hidden;
+  }
+
+  /* Anchor tag styles */
+  a {
+    position: relative;
+    display: none;
+    margin-left: -1.5em;
+    padding-right: 0.5rem;
+    font-size: 1rem;
+    vertical-align: middle;
+    &:hover {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+    }
+  }
+
+  &:hover {
+    a {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+    }
+  }
+`
+
+export const ListItem = styled.li`
+  color: ${(props) => props.theme.colors.text300};
+`
+
+// Variants (for `framer-motion`)
+
+export const dropdownIconContainerVariant = {
+  open: {
+    rotate: 0,
+    y: 3,
+    transition: {
+      duration: 0.4,
+    },
+  },
+  closed: { rotate: -90, y: 0 },
+}
+
+// Common styled item card for languages/about
+
+export const CardItem = styled(Link)`
+  text-decoration: none;
+  margin: 1rem 1rem 1rem 0;
+  padding: 1rem;
+  flex: 0 1 240px;
+  list-style: none;
+  border-radius: 2px;
+  width: 100%;
+  border: 1px solid ${(props) => props.theme.colors.lightBorder};
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  color: ${(props) => props.theme.colors.text};
+
+  &:hover {
+    box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
+    border: 1px solid ${(props) => props.theme.colors.black300};
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    flex: 1 1 240px;
+    margin: 1rem 0;
+  }
+`
