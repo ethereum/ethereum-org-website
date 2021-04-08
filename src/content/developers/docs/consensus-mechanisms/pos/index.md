@@ -37,9 +37,9 @@ If you attest to malicious blocks, you lose your stake.
 
 ### The beacon chain {#the-beacon-chain}
 
-When Ethereum replaces proof-of-work with proof-of-stake, there will be the added complexity of [shard chains](/eth2/shard-chains/). These are separate blockchains that will need validators to process transactions and create new blocks. The plan is to have 64 shard chains and they all need a shared understanding of the state of the network. So extra coordination is needed and this will be done by [the beacon chain](/eth2/beacon-chain/).
+When Ethereum replaces proof-of-work with proof-of-stake, there will be the added complexity of [shard chains](/eth2/shard-chains/). These are separate blockchains that will need validators to process transactions and create new blocks. The plan is to have 64 shard chains, with each having a shared understanding of the state of the network. As a result, extra coordination is necessary and will be done by [the beacon chain](/eth2/beacon-chain/).
 
-The beacon chain receives state information from shards and makes it available for other shards so that the network can stay in sync. From registering their stake deposits to issuing their rewards and penalties, the beacon chain will also manage the validators.
+The beacon chain receives state information from shards and makes it available for other shards, allowing the network to stay in sync. The beacon chain will also manage the validators from registering their stake deposits to issuing their rewards and penalties.
 
 Here's how that process works.
 
@@ -49,7 +49,7 @@ When you submit a transaction on a shard, a validator will be responsible for ad
 
 #### Attestation {#attestation}
 
-If a validator isn't chosen to propose a new shard block, they'll have to attest to another validator's proposal and confirm that everything looks as it should. It's the attestation that is recorded in the beacon chain, rather than the transaction itself.
+If a validator isn't chosen to propose a new shard block, they'll have to attest to another validator's proposal and confirm that everything looks as it should. It's the attestation that is recorded in the beacon chain rather than the transaction itself.
 
 At least 128 validators are required to attest to each shard block – this is known as a "committee."
 
@@ -73,7 +73,7 @@ As Vlad Zamfir put it, this is like a miner participating in a 51% attack, causi
 
 The threat of a [51% attack](https://www.investopedia.com/terms/1/51-attack.asp) still exists in proof-of-stake, but it's even more risky for the attackers. To do so, you'd need to control 51% of the staked ETH. Not only is this a lot of money, but it would probably cause ETH's value to drop. There's very little incentive to destroy the value of a currency you have a majority stake in. There are stronger incentives to keep the network secure and healthy.
 
-Stake slashings, ejections, and other penalties, coordinated by the beacon chain, will exist to prevent other acts of bad behaviour. Validators will also be responsible for flagging these incidents.
+Stake slashings, ejections, and other penalties, coordinated by the beacon chain, will exist to prevent other acts of bad behavior. Validators will also be responsible for flagging these incidents.
 
 ## Pros and cons {#pros-and-cons}
 
