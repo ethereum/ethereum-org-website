@@ -27,7 +27,7 @@ Proof-of-stake comes with a number of improvements to the proof-of-work system:
 
 ## Proof-of-stake, staking, and validators {#pos-staking-validators}
 
-Proof-of-stake is the underlying mechanism that activates validators upon receipt of enough stake. For Ethereum, users will need to stake 32 ETH to become a validator. Validators are chosen at random to create blocks and are responsible for checking and confirming blocks they don't create. A user's stake is also used as a way to incentivise good validator behaviour. For example, a user can lose a portion of their stake for things like going offline (failing to validate) or their entire stake for deliberate collusion.
+Proof-of-stake is the underlying mechanism that activates validators upon receipt of enough stake. For Ethereum, users will need to stake 32 ETH to become a validator. Validators are chosen at random to create blocks and are responsible for checking and confirming blocks they don't create. A user's stake is also used as a way to incentivise good validator behavior. For example, a user can lose a portion of their stake for things like going offline (failing to validate) or their entire stake for deliberate collusion.
 
 ## How does Ethereum's proof-of-stake work? {#how-does-pos-work}
 
@@ -53,7 +53,7 @@ If a validator isn't chosen to propose a new shard block, they'll have to attest
 
 At least 128 validators are required to attest to each shard block – this is known as a "committee."
 
-The committee has a time-frame in which to propose and validate a shard block. This is known as a "slot." Only one valid block is created per slot. There are 32 slots in an "epoch." After each epoch, the committee is disbanded and reformed with different, random participants. This helps keep shards safe from committees of bad actors.
+The committee has a time-frame in which to propose and validate a shard block. This is known as a "slot." Only 1 valid block is created per slot, and there are 32 slots in an "epoch." After each epoch, the committee is disbanded and reformed with different, random participants. This helps keep shards safe from committees of bad actors.
 
 #### Crosslinks {#rewards-and-penalties}
 
