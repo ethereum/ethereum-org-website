@@ -353,7 +353,6 @@ const ChooseStackPage = ({ data }) => {
     const list = shuffle(
       frameworksList.map((item) => {
         item.image = data[item.id].childImageSharp.fixed
-        item.gitHubRepo = data[`${item.id}GitHub`].repository
         return item
       })
     )
@@ -452,7 +451,6 @@ const ChooseStackPage = ({ data }) => {
               background={framework.background}
               image={framework.image}
               name={framework.name}
-              gitHubRepo={framework.gitHubRepo}
               alt={translateMessageId(framework.alt, intl)}
             >
               <Translation id={framework.description} />
@@ -600,18 +598,6 @@ export const devtoolImage = graphql`
   }
 `
 
-export const repoInfo = graphql`
-  fragment repoInfo on GitHub_Repository {
-    stargazerCount
-    languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
-      nodes {
-        name
-      }
-    }
-    url
-  }
-`
-
 export const query = graphql`
   query {
     hero: file(relativePath: { eq: "developers-eth-blocks.png" }) {
@@ -631,76 +617,31 @@ export const query = graphql`
     waffle: file(relativePath: { eq: "dev-tools/waffle.png" }) {
       ...devtoolImage
     }
-    waffleGitHub: github {
-      repository(owner: "EthWorks", name: "waffle") {
-        ...repoInfo
-      }
-    }
     hardhat: file(relativePath: { eq: "dev-tools/hardhat.png" }) {
       ...devtoolImage
-    }
-    hardhatGitHub: github {
-      repository(owner: "nomiclabs", name: "hardhat") {
-        ...repoInfo
-      }
     }
     truffle: file(relativePath: { eq: "dev-tools/truffle.png" }) {
       ...devtoolImage
     }
-    truffleGitHub: github {
-      repository(owner: "trufflesuite", name: "truffle") {
-        ...repoInfo
-      }
-    }
     embark: file(relativePath: { eq: "dev-tools/embark.png" }) {
       ...devtoolImage
-    }
-    embarkGitHub: github {
-      repository(owner: "embarklabs", name: "embark") {
-        ...repoInfo
-      }
     }
     brownie: file(relativePath: { eq: "assets/eth-diamond-black.png" }) {
       ...devtoolImage
     }
-    brownieGitHub: github {
-      repository(owner: "eth-brownie", name: "brownie") {
-        ...repoInfo
-      }
-    }
     epirus: file(relativePath: { eq: "dev-tools/epirus.png" }) {
       ...devtoolImage
-    }
-    epirusGitHub: github {
-      repository(owner: "web3labs", name: "epirus-free") {
-        ...repoInfo
-      }
     }
     createethapp: file(relativePath: { eq: "assets/eth-diamond-black.png" }) {
       ...devtoolImage
     }
-    createethappGitHub: github {
-      repository(owner: "PaulRBerg", name: "create-eth-app") {
-        ...repoInfo
-      }
-    }
     scaffoldeth: file(relativePath: { eq: "dev-tools/scaffoldeth.png" }) {
       ...devtoolImage
-    }
-    scaffoldethGitHub: github {
-      repository(owner: "austintgriffith", name: "scaffold-eth") {
-        ...repoInfo
-      }
     }
     soliditytemplate: file(
       relativePath: { eq: "assets/eth-diamond-black.png" }
     ) {
       ...devtoolImage
-    }
-    soliditytemplateGitHub: github {
-      repository(owner: "PaulRBerg", name: "solidity-template") {
-        ...repoInfo
-      }
     }
     ganache: file(relativePath: { eq: "dev-tools/ganache.png" }) {
       ...devtoolImage
