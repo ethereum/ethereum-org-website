@@ -47,9 +47,6 @@ Uniswap v2 is divided into two components, a core and a periphery. This division
 which hold the assets in the market and therefore *have* to be secure, to be simpler and easier to audit. 
 All the extra functionality required by traders can then be provided by periphery contracts. 
 
-GOON
-
-
 ## The Core Contracts {#core-contracts}
 
 These are the secure contracts which hold the liquidity. 
@@ -582,6 +579,11 @@ we know how much liquidity to burn, and we can make sure that it gets burned.
         amount0 = liquidity.mul(balance0) / _totalSupply; // using balances ensures pro-rata distribution
         amount1 = liquidity.mul(balance1) / _totalSupply; // using balances ensures pro-rata distribution
         require(amount0 > 0 && amount1 > 0, 'UniswapV2: INSUFFICIENT_LIQUIDITY_BURNED');
+```
+
+The liquidity provider receives equal value of both tokens. This way we don't change the exchange rate.
+
+```solidity
         _burn(address(this), liquidity);
         _safeTransfer(_token0, to, amount0);
         _safeTransfer(_token1, to, amount1);
@@ -605,7 +607,6 @@ The rest of the `burn` function is the mirror image of the `mint` function above
 This function is also supposed to be called from [a periphery 
 contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol#L224). 
 
-GOON
 
 ```solidity
         require(amount0Out > 0 || amount1Out > 0, 'UniswapV2: INSUFFICIENT_OUTPUT_AMOUNT');
@@ -615,14 +616,19 @@ GOON
         uint balance0;
         uint balance1;
         { // scope for _token{0,1}, avoids stack too deep errors
-        address _token0 = token0;
-        address _token1 = token1;
-        require(to != _token0 && to != _token1, 'UniswapV2: INVALID_TO');
-        if (amount0Out > 0) _safeTransfer(_token0, to, amount0Out); // optimistically transfer tokens
-        if (amount1Out > 0) _safeTransfer(_token1, to, amount1Out); // optimistically transfer tokens
-        if (data.length > 0) IUniswapV2Callee(to).uniswapV2Call(msg.sender, amount0Out, amount1Out, data);
-        balance0 = IERC20(_token0).balanceOf(address(this));
-        balance1 = IERC20(_token1).balanceOf(address(this));
+            address _token0 = token0;
+            address _token1 = token1;
+```
+
+Thid way the variables are only available in a limited scope, and the same memory can be later
+
+```solidity
+            require(to != _token0 && to != _token1, 'UniswapV2: INVALID_TO');
+            if (amount0Out > 0) _safeTransfer(_token0, to, amount0Out); // optimistically transfer tokens
+            if (amount1Out > 0) _safeTransfer(_token1, to, amount1Out); // optimistically transfer tokens
+            if (data.length > 0) IUniswapV2Callee(to).uniswapV2Call(msg.sender, amount0Out, amount1Out, data);
+            balance0 = IERC20(_token0).balanceOf(address(this));
+            balance1 = IERC20(_token1).balanceOf(address(this));
         }
         uint amount0In = balance0 > _reserve0 - amount0Out ? balance0 - (_reserve0 - amount0Out) : 0;
         uint amount1In = balance1 > _reserve1 - amount1Out ? balance1 - (_reserve1 - amount1Out) : 0;
