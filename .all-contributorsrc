@@ -3346,6 +3346,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "qe",
+      "name": "Alex Ismodes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59273057?v=4",
+      "profile": "http://qe.github.io",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
