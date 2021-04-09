@@ -14,7 +14,7 @@ Folosește Ethereum pentru a crea aplicații descentralizate (sau „dapp”). A
 
 **Fă primii tăi pași în integrarea Go cu Ethereum**
 
-Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/en/learn/) sau [ethereum.org/developers](/en/developers/).
+Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/learn/) sau [ethereum.org/developers](/developers/).
 
 - [Blockchain-ul explicat](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Ce sunt contractele inteligente](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -66,7 +66,7 @@ Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/en/learn/) 
 - [Multi Geth](https://github.com/multi-geth/multi-geth) - _Suport pentru mai multe tipuri de rețele Ethereum_
 - [Geth Light Client](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _Implementarea Geth a sub-protocolului Light Ethereum_
 
-Cauți mai multe resurse? Accesează [ethereum.org/developers.](/en/developers/)
+Cauți mai multe resurse? Accesează [ethereum.org/developers.](/developers/)
 
 ## Colaboratori ai comunității Go {#go-community-contributors}
 

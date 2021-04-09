@@ -9,7 +9,7 @@ Blocurile sunt loturi de tranzacții cu un hash din blocul anterior din lanț. A
 
 ## Condiții prealabile {#prerequisites}
 
-Blocurile sunt un subiect foarte prietenos pentru începători. Dar pentru a te ajuta să înțelegi mai bine această pagină, îți recomandăm să citești mai întâi despre [Conturi](/en/developers/docs/accounts/), [Tranzacții](/en/developers/docs/transactions/) și [introducere în Ethereum](/en/developers/docs/intro-to-ethereum/).
+Blocurile sunt un subiect foarte prietenos pentru începători. Dar pentru a te ajuta să înțelegi mai bine această pagină, îți recomandăm să citești mai întâi despre [Conturi](/developers/docs/accounts/), [Tranzacții](/developers/docs/transactions/) și [introducere în Ethereum](/developers/docs/intro-to-ethereum/).
 
 <!--The content below was provided by Brian Gu with exception of "what's in a block"-->
 
@@ -37,7 +37,7 @@ Dovada muncii înseamnă următoarele:
 - Alți mineri care aud despre un bloc nou cu un certificat valid de legitimitate trebuie să accepte noul bloc ca următorul bloc canonic din blockchain.
 - Timpul exact necesar pentru ca fiecare miner să producă acest certificat este o variabilă aleatorie cu varianță mare. Acest lucru asigură improbabilitatea* ca doi mineri să producă simultan validări pentru blocul următor propus; atunci când un miner produce și propagă un bloc nou certificat, pot fi aproape siguri că blocul va fi acceptat de rețea ca următorul bloc canonic pe blockchain, fără conflicte* (deși există un protocol pentru tratarea conflictelor în cazul în care două lanțuri de blocuri certificate sunt produse aproape simultan).
 
-[Mai multe despre minerit](/en/developers/docs/consensus-mechanisms/pow/mining/)
+[Mai multe despre minerit](/developers/docs/consensus-mechanisms/pow/mining/)
 
 ## Ce este într-un bloc? {#block-anatomy}
 
@@ -60,6 +60,6 @@ _Cunoști o resursă comunitară care te-a ajutat? Editează această pagină ș
 
 ## Subiecte corelate {#related-topics}
 
-- [Minarea](/en/developers/docs/consensus-mechanisms/pow/mining/)
-- [Tranzacții](/en/developers/docs/transactions/)
-- [Gaz](/en/developers/docs/gas/)
+- [Minarea](/developers/docs/consensus-mechanisms/pow/mining/)
+- [Tranzacții](/developers/docs/transactions/)
+- [Gaz](/developers/docs/gas/)

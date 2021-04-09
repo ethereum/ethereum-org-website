@@ -14,7 +14,7 @@ Folosește Ethereum pentru a crea aplicații descentralizate („dapp”) care v
 
 **Fă primii tăi pași în integrarea Java cu Ethereum**
 
-Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/en/learn/) sau [ethereum.org/developers](/en/developers/)
+Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/learn/) sau [ethereum.org/developers](/developers/)
 
 - [Blockchain-ul explicat](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Ce sunt contractele inteligente](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -51,7 +51,7 @@ Află cum să utilizezi [Web3J](https://github.com/web3j/web3j) și Hyperledger 
 - [Eventeum (monitorizare de evenimente)](https://github.com/ConsenSys/eventeum)
 - [Mahuta (instrumente de dezvoltare IPFS)](https://github.com/ConsenSys/mahuta)
 
-Cauți mai multe resurse? Accesează [ethereum.org/developers.](/en/developers/)
+Cauți mai multe resurse? Accesează [ethereum.org/developers.](/developers/)
 
 ## Colaboratori ai comunității Java {#java-community-contributors}
 

@@ -7,13 +7,13 @@ sidebar: true
 
 JavaScript este printre cele mai populare limbaje din ecosistemul Ethereum. De fapt, există o [echipă](https://github.com/ethereumjs) dedicată pentru a aduce cât mai mult de Ethereum la JavaScript posibil.
 
-Există oportunități de a scrie JavaScript (sau ceva aproape) la [toate nivelurile de stivă](/en/developers/docs/ethereum-stack/).
+Există oportunități de a scrie JavaScript (sau ceva aproape) la [toate nivelurile de stivă](/developers/docs/ethereum-stack/).
 
 ## Interacționează cu Ethereum {#interact-with-ethereum}
 
 ### Biblioteci API JavaScript {#javascript-api-libraries}
 
-Dacă dorești să scrii JavaScript pentru a interoga blockchain-ul, a trimite tranzacții și multe altele, cel mai convenabil mod de a face acest lucru este utilizând o [bibliotecă API JavaScript](/en/developers/docs/apis/javascript/). Aceste API-uri permit programatorilor să interacționeze cu ușurință cu [nodurile din rețeaua Ethereum](/en/developers/docs/nodes-and-clients/).
+Dacă dorești să scrii JavaScript pentru a interoga blockchain-ul, a trimite tranzacții și multe altele, cel mai convenabil mod de a face acest lucru este utilizând o [bibliotecă API JavaScript](/developers/docs/apis/javascript/). Aceste API-uri permit programatorilor să interacționeze cu ușurință cu [nodurile din rețeaua Ethereum](/developers/docs/nodes-and-clients/).
 
 Poți utiliza aceste biblioteci pentru a interacționa cu contracte inteligente pe Ethereum, încât să poți construi o aplicație dapp când utilizezi doar JavaScript pentru a interacționa cu contractele pre-existente.
 
@@ -26,13 +26,13 @@ Poți utiliza aceste biblioteci pentru a interacționa cu contracte inteligente 
 
 Dacă ești un programator JavaScript care dorește să scrie propriul său contract inteligent, poate dorești să te familiarizezi cu [Solidity](https://solidity.readthedocs.io). Acesta este cel mai popular limbaj de contracte inteligente și este puternic inspirat de JavaScript.
 
-Mai multe despre [contractele inteligente](/en/developers/docs/smart-contracts/).
+Mai multe despre [contractele inteligente](/developers/docs/smart-contracts/).
 
 ## Înțelege protocolul {#understand-the-protocol}
 
 ### Mașină virtuală Ethereum {#the-ethereum-virtual-machine}
 
-Există o implementare JavaScript a [mașinii virtuale Ethereum](/en/developers/docs/evm/). Acesta acceptă cele mai recente reguli furculiță. Regulile furculiță se referă la modificările aduse EVM ca urmare a upgrade-urilor planificate.
+Există o implementare JavaScript a [mașinii virtuale Ethereum](/developers/docs/evm/). Acesta acceptă cele mai recente reguli furculiță. Regulile furculiță se referă la modificările aduse EVM ca urmare a upgrade-urilor planificate.
 
 Este împărțit în mai multe pachete JavaScript pe care le poți verifica pentru a le înțelege mai bine:
 

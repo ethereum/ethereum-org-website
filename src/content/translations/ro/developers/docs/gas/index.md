@@ -10,7 +10,7 @@ Gazul este esențial pentru rețeaua Ethereum. Este combustibilul care îi permi
 
 ## Condiții prealabile {#prerequisites}
 
-Pentru a înțelege mai bine această pagină, îți recomandăm să citești mai întâi despre [tranzacții](/en/developers/docs/transactions/) și [EVM](/en/developers/docs/evm/).
+Pentru a înțelege mai bine această pagină, îți recomandăm să citești mai întâi despre [tranzacții](/developers/docs/transactions/) și [EVM](/developers/docs/evm/).
 
 ## Ce este gazul? {#what-is-gas}
 
@@ -45,4 +45,4 @@ Deși o tranzacție include o limită, orice gaz neutilizat într-o tranzacție 
 
 ## Subiecte corelate {#related-topics}
 
-- [Minarea](/en/developers/docs/consensus-mechanisms/pow/mining/)
+- [Minarea](/developers/docs/consensus-mechanisms/pow/mining/)

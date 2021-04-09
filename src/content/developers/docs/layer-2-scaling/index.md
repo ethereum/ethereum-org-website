@@ -88,7 +88,7 @@ Optimistic rollups use a side chain that sits in parallel to the main Ethereum c
 
 With Optimistic rollups transactions are written to the main Ethereum chain as calldata, optimising them further by reducing the gas cost.
 
-As computation is the slow, expensive part of using Ethereum, Optimistic rollups can offer up to 10-100x improvements in scalability dependent on the transaction. This number will increase even more with the introduction of the Eth2 upgrade: [shard chains](/en/eth2/shard-chains). This is because there will be more data available in the event that a transaction is disputed.
+As computation is the slow, expensive part of using Ethereum, Optimistic rollups can offer up to 10-100x improvements in scalability dependent on the transaction. This number will increase even more with the introduction of the Eth2 upgrade: [shard chains](/eth2/shard-chains). This is because there will be more data available in the event that a transaction is disputed.
 
 #### Disputing transactions {#disputing-transactions}
 
@@ -118,7 +118,7 @@ So you get reimbursed for proving fraud.
 
 <!-- #### The Optimism virtual machine (OVM)
 
-What makes Optimistic rollups particularly exciting is that the chain works the same as the main Ethereum chain because it's based on [the EVM](/en/developers/docs/evm/). It doesn't use Ethereum, it is Ethereum. This means if you want to use Optimistic rollups, it's just a matter of deploying it to the OVM. It looks, feels, and acts just like the Ethereum main chain–you write contracts in Solidity, and interact with the chain via the Web3 API.
+What makes Optimistic rollups particularly exciting is that the chain works the same as the main Ethereum chain because it's based on [the EVM](/developers/docs/evm/). It doesn't use Ethereum, it is Ethereum. This means if you want to use Optimistic rollups, it's just a matter of deploying it to the OVM. It looks, feels, and acts just like the Ethereum main chain–you write contracts in Solidity, and interact with the chain via the Web3 API.
 
 The OVM also has a bunch of features that allow for a really seamless experience moving code from the EVM. In fact you can move Solidity contracts onto a cheaper and faster solution with just a few lines of code.
 

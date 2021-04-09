@@ -37,16 +37,10 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
   - The Ethereum community is very active on Twitter - not sure where to start?
     - [List of influential Ethereum twitter accounts](https://hive.one/ethereum/)
 
-## Community support
-
-<Help />
-
 ## Upcoming events {#upcoming-events}
 
 **Every month, there are major Ethereum events around the world.** Consider attending one near you to meet more people in the community, learn about employment opportunities, and develop new skills.
 
-- [Gitcoin Grants Funding Round](https://gitcoin.co/grants/) - Democratic public goods funding for the 21st century (Mar 10 - Mar 25)
-- [NFT Hack](https://nft.ethglobal.co/) – Virtual ETHGlobal hackathon (Mar 19 - Mar 21)
 - [Chainlink Hackathon Spring 2021](https://chain.link/hackathon) – Virtual Chainlink hackathon (Mar 15 - Apr 11)
 - [Scaling Ethereum](https://scaling.ethglobal.co/) – Hackathon dedicated to ETH2 and L2 on Ethereum (Apr 16 - May 14)
 
@@ -66,7 +60,7 @@ This is a non-exhaustive list built by our community. Know of an active meetup g
 
 "DAOs" are Decentralized Autonomous Organizations. These groups leverage Ethereum technology to facilitate organization and collaboration. For instance, for controlling membership, voting on proposals, or managing pooled assets. While DAOs are still experimental, they offer opportunities for you to find groups that you identify with, find collaborators, and grow your impact on the Ethereum community. [More on DAOs](/dao/)
 
-- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _Legal engineering_
+- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _Legal engineering_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Art community_
 - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _DAO incubator_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Venture for pre-seed crypto projects_
@@ -85,7 +79,7 @@ The Ethereum community includes people of many different backgrounds and skillse
 
 **Developers**
 
-- Learn about and try Ethereum at [ethereum.org/developers/](/en/developers/)
+- Learn about and try Ethereum at [ethereum.org/developers/](/developers/)
 - [Find a bounty on Gitcoin](https://gitcoin.co/), work on a small or large technical issue, earn crypto!
 - Attend an [ETHGlobal](http://ethglobal.co/) hackathon near you!
 - Check out [projects related to your area of expertise or programming language of choice](/developers/docs/programming-languages/)
@@ -113,7 +107,7 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
   - There are many open-source community calls, and having notetakers is a huge help. If you’re interested, join the Ethereum Cat Herders chat [here](https://gitter.im/ethereum-cat-herders/meeting-notes-and-summaries), and introduce yourself!
 - **Translate Ethereum content into your native language**
   - ethereum.org maintains a translation program that translates the website, and other resources, into many different languages
-  - Find out how to get involved [here](/en/languages/#ethereum-org-translation-program)
+  - Find out how to get involved [here](/languages/#ethereum-org-translation-program)
 
 **Financial professional or accountant**
 
@@ -127,6 +121,10 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
 **Marketing**
 
 - There are many marketing and communications positions in the Ethereum ecosystem!
+
+## Ethereum Grants {#ethereum-grants}
+
+[View open Ethereum grants](/grants/)
 
 ## Ethereum Jobs {#ethereum-jobs}
 

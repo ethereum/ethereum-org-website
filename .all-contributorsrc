@@ -1423,7 +1423,7 @@
       "login": "ahmeteminkocal",
       "name": "Ahmet Emin Koçal",
       "avatar_url": "https://avatars2.githubusercontent.com/u/10382507?v=4",
-      "profile": "https://www.emin.tech",
+      "profile": "https://www.exorditech.com.tr",
       "contributions": [
         "translation"
       ]
@@ -2827,7 +2827,8 @@
       "profile": "https://github.com/ipapandinas",
       "contributions": [
         "bug",
-        "code"
+        "code",
+        "content"
       ]
     },
     {
@@ -3260,6 +3261,79 @@
       "name": "Joshua Welsh",
       "avatar_url": "https://avatars.githubusercontent.com/u/60113598?v=4",
       "profile": "http://joshjwelsh.com",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "robertdosa",
+      "name": "Robert Dosa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57013905?v=4",
+      "profile": "https://github.com/robertdosa",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "SatoshiMiracle",
+      "name": "SatoshiMiracle",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72975337?v=4",
+      "profile": "https://github.com/SatoshiMiracle",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "jhhb",
+      "name": "James Boyle",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12632889?v=4",
+      "profile": "https://github.com/jhhb",
+      "contributions": [
+        "ideas",
+        "content"
+      ]
+    },
+    {
+      "login": "kziechmann",
+      "name": "Kevin Ziechmann",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42778833?v=4",
+      "profile": "http://www.kevinziechmann.com",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "elmorg",
+      "name": "Evan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1218452?v=4",
+      "profile": "http://you-rhythmic.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "ETHorHIL",
+      "name": "ETHorHIL",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24531309?v=4",
+      "profile": "https://github.com/ETHorHIL",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "shashvatshah9",
+      "name": "shashvatshah9",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24702409?v=4",
+      "profile": "http://www.linkedin.com/in/shashvat-shah-565399122",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "slightlyfloating",
+      "name": "slightlyfloating",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56945047?v=4",
+      "profile": "https://github.com/slightlyfloating",
       "contributions": [
         "bug"
       ]

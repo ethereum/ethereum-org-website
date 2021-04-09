@@ -43,7 +43,7 @@ These include Improvements for
 
 Plus many more.
 
-[More on Ethereum1.x](/en/learn/#eth-1x)
+[More on Ethereum1.x](/learn/#eth-1x)
 
 These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 

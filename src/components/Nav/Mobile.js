@@ -4,11 +4,9 @@ import { useIntl } from "gatsby-plugin-intl"
 import { motion } from "framer-motion"
 
 import Emoji from "../Emoji"
-import Help from "../Help"
 import Icon from "../Icon"
 import Link from "../Link"
 import NakedButton from "../NakedButton"
-import Pill from "../Pill"
 import Search from "../Search"
 import Translation from "../Translation"
 import { NavLink } from "../SharedStyledComponents"
@@ -218,24 +216,6 @@ const BlankSearchState = styled.div`
   border-radius: 100%;
 `
 
-const StyledHelp = styled(Help)`
-  .help-pill {
-    display: none;
-  }
-`
-
-const StyledPill = styled(Pill)`
-  background: ${({ theme }) => theme.colors.primary100};
-  display: flex;
-  color: ${({ theme }) => theme.colors.black300};
-  align-items: center;
-  margin-left: 1rem;
-`
-
-const TextContainer = styled.div`
-  display: flex;
-`
-
 const MobileNavMenu = ({
   isMenuOpen,
   isSearchOpen,
@@ -250,9 +230,6 @@ const MobileNavMenu = ({
   const isOpen = isMenuOpen || isSearchOpen || isHelpOpen
   return (
     <Container>
-      <MenuButton onClick={() => toggleMenu("help")} aria-label="Help icon">
-        <OtherIcon name="help" />
-      </MenuButton>
       <MenuButton
         onClick={() => toggleMenu("search")}
         aria-label={translateMessageId("aria-toggle-search-button", intl)}
@@ -333,10 +310,6 @@ const MobileNavMenu = ({
               </BottomItemText>
             </BottomLink>
           </BottomItem>
-          <BottomItem onClick={() => toggleMenu("help")}>
-            <MenuIcon name="help" />
-            <BottomItemText>Help</BottomItemText>
-          </BottomItem>
         </BottomMenu>
         <CloseMenuIconContainer onClick={toggleMenu}>
           <Icon name="close" />
@@ -358,24 +331,6 @@ const MobileNavMenu = ({
           <Emoji text=":sailboat:" size={3} />
           <Translation id="search-box-blank-state-text" />
         </BlankSearchState>
-      </SearchContainer>
-      <SearchContainer
-        animate={isHelpOpen ? "open" : "closed"}
-        variants={mobileMenuVariants}
-        initial="closed"
-      >
-        <SearchHeader>
-          <TextContainer>
-            Help{" "}
-            <StyledPill className="help-pill">
-              NEW <Emoji size={2} ml="0.5rem" text=":sparkles:" />
-            </StyledPill>
-          </TextContainer>
-          <CloseIconContainer onClick={() => toggleMenu("help")}>
-            <Icon name="close" />
-          </CloseIconContainer>
-        </SearchHeader>
-        <StyledHelp />
       </SearchContainer>
     </Container>
   )

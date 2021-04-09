@@ -9,7 +9,7 @@ sidebar: true
 
 Un „contract inteligent” este un program care rulează pe blockchain-ul Ethereum. Este o colecție de cod (funcțiile sale) și date (starea sa) care se află la o anumită adresă din blockchain-ul Ethereum.
 
-Contractele inteligente sunt un tip de [cont Ethereum](/en/developers/docs/accounts/). Aceasta înseamnă că au un sold și pot trimite tranzacții prin rețea. Cu toate acestea, ele nu sunt controlate de un utilizator, ci sunt implementate în rețea și funcționează conform programării. Conturile de utilizator pot apoi interacționa cu un contract inteligent prin trimiterea de tranzacții care execută o funcție definită în contractul inteligent. Contractele inteligente pot defini reguli, cum ar fi un contract regulat, și le pot aplica automat prin intermediul codului.
+Contractele inteligente sunt un tip de [cont Ethereum](/developers/docs/accounts/). Aceasta înseamnă că au un sold și pot trimite tranzacții prin rețea. Cu toate acestea, ele nu sunt controlate de un utilizator, ci sunt implementate în rețea și funcționează conform programării. Conturile de utilizator pot apoi interacționa cu un contract inteligent prin trimiterea de tranzacții care execută o funcție definită în contractul inteligent. Contractele inteligente pot defini reguli, cum ar fi un contract regulat, și le pot aplica automat prin intermediul codului.
 
 ## Condiții prealabile {#prerequisites}
 
@@ -69,16 +69,16 @@ Asemenea unui distributor automat, care elimină necesitatea unui angajat al vâ
 
 ## Fără permisiune {#permissionless}
 
-Oricine poate scrie un contract inteligent și îl poate implementa în rețea. Trebuie doar să înveți să programezi într-un [limbaj de contract inteligent](/en/developers/docs/smart-contracts/languages/) și să ai suficient ETH pentru a implementa contractul. Implementarea unui contract inteligent este din punct de vedere tehnic o tranzacție, astfel încât trebuie să plătești [Gas](/en/developers/docs/gas/) în același mod în care trebuie să plătești gaz pentru un simplu transfer ETH. Cu toate acestea, costul de gaz pentru implementarea contractelor este mult mai ridicat.
+Oricine poate scrie un contract inteligent și îl poate implementa în rețea. Trebuie doar să înveți să programezi într-un [limbaj de contract inteligent](/developers/docs/smart-contracts/languages/) și să ai suficient ETH pentru a implementa contractul. Implementarea unui contract inteligent este din punct de vedere tehnic o tranzacție, astfel încât trebuie să plătești [Gas](/developers/docs/gas/) în același mod în care trebuie să plătești gaz pentru un simplu transfer ETH. Cu toate acestea, costul de gaz pentru implementarea contractelor este mult mai ridicat.
 
 Ethereum are limbaje prietenoase-programator pentru scrierea contractelor inteligente:
 
 - Solidity
 - Vyper
 
-[Mai multe despre limbaje](/en/developers/docs/smart-contracts/languages/)
+[Mai multe despre limbaje](/developers/docs/smart-contracts/languages/)
 
-Cu toate acestea, ele trebuie să fie compilate înainte de a putea fi implementate, astfel încât mașina virtuală Ethereum să poată interpreta și stoca aceste contracte. [Mai multe despre compilare](/en/developers/docs/smart-contracts/compiling/)
+Cu toate acestea, ele trebuie să fie compilate înainte de a putea fi implementate, astfel încât mașina virtuală Ethereum să poată interpreta și stoca aceste contracte. [Mai multe despre compilare](/developers/docs/smart-contracts/compiling/)
 
 ## Combinabilitatea {#composability}
 
@@ -90,7 +90,7 @@ Află mai multe informații despre [combinabilitatea contractului inteligent](/d
 
 Contractele inteligente singure nu pot obține informații despre evenimentele din „lumea reală”, deoarece nu pot trimite cereri HTTP. Acest lucru este prin design, deoarece bazarea pe informații externe ar putea periclita consensul, care este important pentru securitate și descentralizare.
 
-Există modalități de a evita acest lucru folosind [oracole](/en/developers/docs/oracles/).
+Există modalități de a evita acest lucru folosind [oracole](/developers/docs/oracles/).
 
 ## Resurse pentru contractele inteligente {#smart-contract-resources}
 

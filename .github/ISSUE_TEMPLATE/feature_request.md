@@ -21,3 +21,7 @@ assignees: ""
 **Additional context**
 
 <!-- Add any other context or screenshots about the feature request here. -->
+
+**Want to contribute?**
+
+We love contributions from the Ethereum community! Please comment on an issue if you're interested in helping out with a PR.

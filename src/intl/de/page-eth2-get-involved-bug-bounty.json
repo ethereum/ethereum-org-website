@@ -3,7 +3,7 @@
   "page-eth2-bug-bounty-annotations": "Es könnte hilfreich sein, die folgenden Anmerkungen zu prüfen:",
   "page-eth2-bug-bounty-client-bugs": "Eth2-Client-Bugs",
   "page-eth2-bug-bounty-client-bugs-desc": "Die Clients werden die Beacon Chain ausführen, sobald das Upgrade freigegeben wurde. Clients müssen der in der Spezifikation festgelegten Logik folgen und vor möglichen Angriffen sicher sein. Die Fehler, die wir finden wollen, beziehen sich auf die Implementierung des Protokolls.",
-  "page-eth2-bug-bounty-client-bugs-desc-2": "Nur Prysm-, Lighthouse- und Teku-Bugs sind derzeit für diese Belohnung berechtigt. Weitere Clients werden hinzugefügt, sobald sie Überprüfungen abschließen und für die Produktion bereit sind.",
+  "page-eth2-bug-bounty-client-bugs-desc-2": "Nur Lighthouse-, Nimbus-, Teku-, und Prysm-Bugs sind derzeit für diese Belohnung berechtigt. Weitere Clients werden hinzugefügt, sobald sie Überprüfungen abschließen und für die Produktion bereit sind.",
   "page-eth2-bug-bounty-clients": "In den Belohnungen aufgeführte Clients",
   "page-eth2-bug-bounty-clients-type-1": "Probleme mit der Nichteinhaltung der Spezifikation.",
   "page-eth2-bug-bounty-clients-type-2": "unerwartete Abstürze oder Denial of Service (DOS)-Schwachstellen.",
