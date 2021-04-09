@@ -37,7 +37,6 @@
     "gatsby-remark-copy-linked-files": "^3.0.0",
     "gatsby-remark-images": "^4.0.0",
     "gatsby-source-filesystem": "^3.0.0",
-    "gatsby-source-graphql": "^3.0.0",
     "gatsby-transformer-csv": "^3.0.0",
     "gatsby-transformer-gitinfo": "^1.1.0",
     "gatsby-transformer-remark": "^3.0.0",
