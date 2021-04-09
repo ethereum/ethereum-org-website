@@ -522,11 +522,12 @@ equal value in both. If they don't, we give them liquidity tokens based on the l
 
 Whether it is the initial deposit or a subsequent one, the number of liquidity tokens we provide is equal to the square
 root of the change in `reserve0*reserve1` and the value of the liquidity token doesn't change (unless we get a deposit that doesn't have equal values of both
-types, in which case the "fine" gets distributed). Here is an example (again, both tokens have the same value):
+types, in which case the "fine" gets distributed). Here is another example with two tokens that have the same value, with three good deposits and one bad one
+(deposit of only one token type, so it doesn't produce any liquidity tokens).
 
 | Event                     | reserve0      | reserve1        | reserve0 * reserve1 | Pool value (reserve0 + reserve1) | Liquidity tokens minted for this deposit | Total liquidity tokens | value of each liquidity token |
 | ------------------------- | ------------: | --------------: | ------------------: | --------------------------:  | -------:     | ------: | -------------: |
-| Initial setup             |         8.000 |           8.000 | 64                  | 16.000                       | 8 (sqrt(64)) | 8       | 2.000       |
+| Initial setup             |         8.000 |           8.000 | 64                  | 16.000                       | 8            | 8       | 2.000       |
 | Deposit four of each type |        12.000 |          12.000 | 144                 | 24.000                       | 4            | 12      | 2.000      |
 | Deposit two of each type  |        14.000 |          14.000 | 196                 | 28.000                       | 2            | 14      | 2.000      |
 | Unequal value deposit     |        18.000 |          14.000 | 252                 | 32.000                       | 0            | 14      | ~2.286 |
