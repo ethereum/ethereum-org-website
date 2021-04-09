@@ -41,13 +41,13 @@ const MobileModal = styled(motion.div)`
 `
 
 const mobileModalVariants = {
-  open: { display: "block" },
-  closed: { display: "none" },
+  open: { display: "block", opacity: 1 },
+  closed: { display: "none", opacity: 0 },
 }
 
 const MenuContainer = styled(motion.div)`
   background: ${(props) => props.theme.colors.background};
-  z-index: 100;
+  z-index: 99;
   position: fixed;
   left: 0;
   top: 0;
@@ -60,6 +60,43 @@ const MenuContainer = styled(motion.div)`
 const mobileMenuVariants = {
   closed: { x: `-100%`, transition: { duration: 0.2 } },
   open: { x: 0, transition: { duration: 0.8 } },
+}
+
+const GlyphButton = styled.svg`
+  margin: 0 0.125rem;
+  width: 1.5rem;
+  height: 2.5rem;
+  position: relative;
+  stroke-width: 2px;
+  z-index: 100;
+  & > path {
+    stroke: ${(props) => props.theme.colors.text};
+    fill: none;
+  }
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+    & > path {
+      stroke: ${(props) => props.theme.colors.primary};
+    }
+  }
+`
+
+const hamburgerSvg =
+  "M 2 13 l 10 0 l 0 0 l 10 0 M 4 19 l 8 0 M 12 19 l 8 0 M 2 25 l 10 0 l 0 0 l 10 0"
+const glyphSvg =
+  "M 2 19 l 10 -14 l 0 0 l 10 14 M 2 19 l 10 7 M 12 26 l 10 -7 M 2 22 l 10 15 l 0 0 l 10 -15"
+const closeSvg =
+  "M 2 13 l 0 -3 l 20 0 l 0 3 M 7 14 l 10 10 M 7 24 l 10 -10 M 2 25 l 0 3 l 20 0 l 0 -3"
+
+const glyphPathVariants = {
+  closed: {
+    d: hamburgerSvg,
+    transition: { duration: 0.4 },
+  },
+  open: {
+    d: [hamburgerSvg, glyphSvg, glyphSvg, glyphSvg, closeSvg],
+    transition: { duration: 1.2 },
+  },
 }
 
 const SearchContainer = styled(MenuContainer)`
@@ -86,12 +123,6 @@ const CloseIconContainer = styled.span`
   & > svg {
     fill: ${(props) => props.theme.colors.text};
   }
-`
-
-const CloseMenuIconContainer = styled(CloseIconContainer)`
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
 `
 
 const MenuItems = styled.ul`
@@ -240,7 +271,13 @@ const MobileNavMenu = ({
         onClick={() => toggleMenu("menu")}
         aria-label={translateMessageId("aria-toggle-menu-button", intl)}
       >
-        <MenuIcon name="menu" />
+        <GlyphButton viewBox="0 0 24 40">
+          <motion.path
+            variants={glyphPathVariants}
+            initial={false}
+            animate={isOpen ? "open" : "closed"}
+          />
+        </GlyphButton>
       </MenuButton>
       <MobileModal
         animate={isOpen ? "open" : "closed"}
@@ -249,7 +286,7 @@ const MobileNavMenu = ({
         onClick={toggleMenu}
       />
       <MenuContainer
-        aria-hidden={isMenuOpen ? false : true}
+        aria-hidden={!isMenuOpen}
         animate={isMenuOpen ? "open" : "closed"}
         variants={mobileMenuVariants}
         initial="closed"
@@ -311,9 +348,6 @@ const MobileNavMenu = ({
             </BottomLink>
           </BottomItem>
         </BottomMenu>
-        <CloseMenuIconContainer onClick={toggleMenu}>
-          <Icon name="close" />
-        </CloseMenuIconContainer>
       </MenuContainer>
       <SearchContainer
         animate={isSearchOpen ? "open" : "closed"}
