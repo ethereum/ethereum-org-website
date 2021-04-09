@@ -3337,6 +3337,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "Luis-Mx",
+      "name": "Luis Miranda",
+      "avatar_url": "https://avatars.githubusercontent.com/u/30961?v=4",
+      "profile": "https://github.com/Luis-Mx",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
