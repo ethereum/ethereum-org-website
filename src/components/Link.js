@@ -50,13 +50,6 @@ const ExplicitLangInternalLink = styled(GatsbyLink)`
   &.active {
     color: ${(props) => props.theme.colors.primary};
   }
-  &:hover {
-    svg {
-      fill: ${(props) => props.theme.colors.primary};
-      transition: transform 0.1s;
-      transform: scale(1.2);
-    }
-  }
 `
 
 const GlossaryIcon = styled(Icon)`
