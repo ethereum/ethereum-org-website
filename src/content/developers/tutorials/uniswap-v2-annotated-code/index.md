@@ -47,6 +47,7 @@ Uniswap v2 is divided into two components, a core and a periphery. This division
 which hold the assets in the market and therefore *have* to be secure, to be simpler and easier to audit. 
 All the extra functionality required by traders can then be provided by periphery contracts. 
 
+GOON
 
 
 ## The Core Contracts {#core-contracts}
@@ -459,7 +460,10 @@ This code gets that refund when possible.
 ```
 
 This function is called when a liquidity provider adds liquidity to the pool. It mints additional liquidity
-tokens as a reward.
+tokens as a reward. It should be called from [a periphery 
+contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol#L61)
+that calls it after adding the liquidity in the same transaction (so nobody else would be able to submit a 
+transaction that claims the new liquidity before the legitimate owner).
 
 ```solidity
         (uint112 _reserve0, uint112 _reserve1,) = getReserves(); // gas savings
@@ -537,21 +541,42 @@ types, in which case the "fine" gets distributed). Here is another example with 
         }
         require(liquidity > 0, 'UniswapV2: INSUFFICIENT_LIQUIDITY_MINTED');
         _mint(to, liquidity);
+```
 
-        _update(balance0, balance1, _reserve0, _reserve1);
+Use the `UniswapV2ERC20.\_mint` function to actually create the additional liquidity tokens and give them to the correct account.
+
+```solidity
+
+        _update(balance0, balance1, _reserve0, _reserve1);        
         if (feeOn) kLast = uint(reserve0).mul(reserve1); // reserve0 and reserve1 are up-to-date
         emit Mint(msg.sender, amount0, amount1);
     }
+```
 
+Update the state variables (`reserve0`, `reserve1`, and if needed `kLast`) and emit the appropriate event.
+
+```solidity
     // this low-level function should be called from a contract which performs important safety checks
     function burn(address to) external lock returns (uint amount0, uint amount1) {
+```
+
+This function is called when liquidity is withdrawn and the appropriate liquidity tokens need to be burned. 
+Is should also be called [from a periphery 
+account](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol#L103).
+
+```solidity
         (uint112 _reserve0, uint112 _reserve1,) = getReserves(); // gas savings
         address _token0 = token0;                                // gas savings
         address _token1 = token1;                                // gas savings
         uint balance0 = IERC20(_token0).balanceOf(address(this));
         uint balance1 = IERC20(_token1).balanceOf(address(this));
         uint liquidity = balanceOf[address(this)];
+```
 
+The periphery contract transfers the liquidity to be burned to this contract before the call. That way
+we know how much liquidity to burn, and we can make sure that it gets burned.
+
+```solidity
         bool feeOn = _mintFee(_reserve0, _reserve1);
         uint _totalSupply = totalSupply; // gas savings, must be defined here since totalSupply can update in _mintFee
         amount0 = liquidity.mul(balance0) / _totalSupply; // using balances ensures pro-rata distribution
@@ -568,8 +593,21 @@ types, in which case the "fine" gets distributed). Here is another example with 
         emit Burn(msg.sender, amount0, amount1, to);
     }
 
+```
+
+The rest of the `burn` function is the mirror image of the `mint` function above.
+
+```solidity
     // this low-level function should be called from a contract which performs important safety checks
     function swap(uint amount0Out, uint amount1Out, address to, bytes calldata data) external lock {
+```
+
+This function is also supposed to be called from [a periphery 
+contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol#L224). 
+
+GOON
+
+```solidity
         require(amount0Out > 0 || amount1Out > 0, 'UniswapV2: INSUFFICIENT_OUTPUT_AMOUNT');
         (uint112 _reserve0, uint112 _reserve1,) = getReserves(); // gas savings
         require(amount0Out < _reserve0 && amount1Out < _reserve1, 'UniswapV2: INSUFFICIENT_LIQUIDITY');
