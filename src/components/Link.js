@@ -46,6 +46,12 @@ const InternalLink = styled(IntlLink)`
   }
 `
 
+const ExplicitLangInternalLink = styled(GatsbyLink)`
+  &.active {
+    color: ${(props) => props.theme.colors.primary};
+  }
+`
+
 const GlossaryIcon = styled(Icon)`
   margin: 0 0.25rem 0 0.35rem;
   fill: ${(props) => props.theme.colors.primary400};
@@ -132,14 +138,14 @@ const Link = ({
   const langPath = to.split("/")[1]
   if (Object.keys(languageMetadata).includes(langPath)) {
     return (
-      <GatsbyLink
+      <ExplicitLangInternalLink
         className={className}
         to={to}
         activeClassName="active"
         partiallyActive={isPartiallyActive}
       >
         {children}
-      </GatsbyLink>
+      </ExplicitLangInternalLink>
     )
   }
 
