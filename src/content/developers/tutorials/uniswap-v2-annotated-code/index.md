@@ -506,9 +506,9 @@ of **Token0**. A trader can use the fact the pool thinks that **Token0** is more
 
 
 | Event                                                         | reserve0  | reserve1    | reserve0 * reserve1     | Value of the pool (reserve0 + reserve1) |
-| ------------------------------------------------------------- | --------: | ----------: |       ----------------: | -----------------------  |
-| Initial setup                                                 |         8 |          32 | 1024                    | 40                       |
-| Trader deposits 8 **Token0** tokens, gets back 16 **Token1**  |        16 |          16 | 1024                    | 32                       |
+| ------------------------------------------------------------- | --------: | ----------: |       ----------------: | ----------------------: |
+| Initial setup                                                 |         8 |          32 | 1024                    | 40                      |
+| Trader deposits 8 **Token0** tokens, gets back 16 **Token1**  |        16 |          16 | 1024                    | 32                      |
 
 As you can see, the trader earned an extra 8 tokens, which come from a reduction in the value of the pool, hurting the depositor that owns it.
 
@@ -517,7 +517,20 @@ As you can see, the trader earned an extra 8 tokens, which come from a reduction
             liquidity = Math.min(amount0.mul(_totalSupply) / _reserve0, amount1.mul(_totalSupply) / _reserve1);
 ```        
 
-With every subsequent deposit 
+With every subsequent deposit we already know the exchange rate between the two assets, and we expect liquidity providers to provide
+equal value in both. If they don't, we give them liquidity tokens based on the lesser value they provided as a punishment.
+
+Whether it is the initial deposit or a subsequent one, the number of liquidity tokens we provide is equal to the square
+root of the change in `reserve0*reserve1` and the value of the liquidity token doesn't change (unless we get a deposit that doesn't have equal values of both
+types, in which case the "fine" gets distributed). Here is an example (again, both tokens have the same value):
+
+| Event                     | reserve0      | reserve1        | reserve0 * reserve1 | Pool value (reserve0 + reserve1) | Liquidity tokens minted for this deposit | Total liquidity tokens | value of each liquidity token |
+| ------------------------- | ------------: | --------------: | ------------------: | --------------------------:  | -------:     | ------: | -------------: |
+| Initial setup             |         8.000 |           8.000 | 64                  | 16.000                       | 8 (sqrt(64)) | 8       | 2.000       |
+| Deposit four of each type |        12.000 |          12.000 | 144                 | 24.000                       | 4            | 12      | 2.000      |
+| Deposit two of each type  |        14.000 |          14.000 | 196                 | 28.000                       | 2            | 14      | 2.000      |
+| Unequal value deposit     |        18.000 |          14.000 | 252                 | 32.000                       | 0            | 14      | ~2.286 |
+| After arbitrage           |       ~15.874 |         ~15.874 | 252                 | ~31.748                      | 0            | 14      | ~2.267 |
 
 ```solidity
         }
