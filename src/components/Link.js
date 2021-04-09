@@ -47,9 +47,6 @@ const InternalLink = styled(IntlLink)`
 `
 
 const ExplicitLangInternalLink = styled(GatsbyLink)`
-  .is-glossary {
-    white-space: nowrap;
-  }
   &.active {
     color: ${(props) => props.theme.colors.primary};
   }
