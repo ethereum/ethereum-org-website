@@ -77,6 +77,12 @@ These are all the interfaces that the contract needs to know about, either becau
 
 ```solidity
 contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
+```
+
+This contract inherits from `UniswapV2ERC20`, which provides all the ERC-20 functions for the liquidity token that
+liquidity providers receive.
+
+```solidity
     using SafeMath  for uint;
 ```
 
@@ -158,8 +164,8 @@ the two reserves constant during trades. `kLast` is this value. It changes when 
 deposits or withdraws tokens.
 
 
-Here is a simple example. Note that for the sake of simplicity the table only has has three digits after the decimal point, so the
-numbers are not accurate.
+Here is a simple example. Note that for the sake of simplicity the table only has has three digits after the decimal point, and we ignore the
+0.3% trading fee so the numbers are not accurate.
 
 | Event                                                    |  reserve0  | reserve1 | reserve0 * reserve1 | Average exchange rate (token1 / token0) |
 | -------------------------------------------------------- |       --------: |      ----------: |       ----------------: | -----------------------  |
@@ -307,7 +313,7 @@ information is required for `initialize` and for the factory fee (if one exists)
 This function allows the factory (and only the factory) to specify the two ERC-20 tokens that this pair will exchange.
 
 
-#### Update Functions {#pair-update}
+#### Internal Update Functions {#pair-update-internal}
 
 ```solidity
     // update reserves and, on the first call per block, price accumulators
@@ -374,40 +380,146 @@ Finally, update the global variables and emit a `Sync` event.
 ```solidity
     // if fee is on, mint liquidity equivalent to 1/6th of the growth in sqrt(k)
     function _mintFee(uint112 _reserve0, uint112 _reserve1) private returns (bool feeOn) {
+```
+
+In Uniswap 2.0 traders pay a 0.30% fee to use the market. Most of that fee (0.25% of the trade) 
+always goes to the liquidity providers. The remaining 0.05% can go either to the liquidity
+providers or to an address specified by the factory as a protocol fee, which pays Unisoft for
+their development effort.
+
+To reduce calculations (and therefore gas costs), this fee is only calculated when liquidity
+is added or removed from the pool, rather than at each transaction.
+
+```solidity
         address feeTo = IUniswapV2Factory(factory).feeTo();
         feeOn = feeTo != address(0);
+```
+
+Read the fee destination of the factory. If it is zero then there is no protocol fee and no 
+need to calculate it that fee.
+
+```solidity
         uint _kLast = kLast; // gas savings
+```
+
+The `kLast` state variable is located in storage, so it will have a value between different calls to the contract.
+Access to storage is a lot more expensive than access to the volatile memory that is released when the function
+call to the contract ends, so we use an internal variable to save on gas.
+
+```solidity
         if (feeOn) {
             if (_kLast != 0) {
+```
+
+The liquidity providers get their cut simply by the appreciation of their liquidity tokens. But the protocol
+fee requires new liquidity tokens to be minted and provided to the `feeTo` address.
+
+```solidity
                 uint rootK = Math.sqrt(uint(_reserve0).mul(_reserve1));
                 uint rootKLast = Math.sqrt(_kLast);
                 if (rootK > rootKLast) {
+```
+
+If there is new liquidity on which to collect a protocol fee.
+
+```solidity
                     uint numerator = totalSupply.mul(rootK.sub(rootKLast));
                     uint denominator = rootK.mul(5).add(rootKLast);
                     uint liquidity = numerator / denominator;
+```
+
+This complicated calculation of fees is explained in [the whitepaper](https://uniswap.org/whitepaper.pdf) on page 5. We know 
+that between the time `kLast` was calculated and the present no liquidity was added or removed (because we run this
+calculation every time liquidity is added or removed, before it actually changes), so any change in `reserve0 * reserve1` has to 
+come from transaction fees (without them we'd keep `reserve0 * reserve1` constant).
+
+```solidity
                     if (liquidity > 0) _mint(feeTo, liquidity);
                 }
             }
+```
+
+Use the `UniswapV2ERC20.\_mint` function to actually create the additional liquidity tokens and assign them to `feeTo`.
+
+```solidity
         } else if (_kLast != 0) {
             kLast = 0;
         }
     }
+```
 
+If there is no fee set `kLast` to zero (if it isn't that already). When this contract was written there
+was a [gas refund feature](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3298.md) that encouraged 
+contracts to reduce the overall size of the Ethereum state by zeroing out storage they did not need.
+This code gets that refund when possible.
+
+```solidity
     // this low-level function should be called from a contract which performs important safety checks
     function mint(address to) external lock returns (uint liquidity) {
+```
+
+This function is called when a liquidity provider adds liquidity to the pool. It mints additional liquidity
+tokens as a reward.
+
+```solidity
         (uint112 _reserve0, uint112 _reserve1,) = getReserves(); // gas savings
+```
+
+This is the way to read the results of a Solidity function that returns multiple values. We discard the last
+returned values, the block timestamp, because we don't need it.
+
+```solidity
         uint balance0 = IERC20(token0).balanceOf(address(this));
         uint balance1 = IERC20(token1).balanceOf(address(this));
         uint amount0 = balance0.sub(_reserve0);
         uint amount1 = balance1.sub(_reserve1);
+```
 
+Get the current balances and see how much was added of each token type.
+
+```solidity
         bool feeOn = _mintFee(_reserve0, _reserve1);
+```
+
+Calculate the protocol fees to collect, if any, and mint liquidity tokens accordingly. Because the parameters 
+to `_mintFee` are the old reserve values, the fee is calculated accuratedly based only on pool changes due to
+fees.
+
+```solidity
         uint _totalSupply = totalSupply; // gas savings, must be defined here since totalSupply can update in _mintFee
         if (_totalSupply == 0) {
             liquidity = Math.sqrt(amount0.mul(amount1)).sub(MINIMUM_LIQUIDITY);
            _mint(address(0), MINIMUM_LIQUIDITY); // permanently lock the first MINIMUM_LIQUIDITY tokens
-        } else {
+```
+
+If this is the first deposit, create `MINIMUM_LIQUIDITY` tokens and send them to address zero to lock them. They can
+never to redeemed, which means the pool will never be emptied completely (this saves us from division by zero in
+some places). The value of `MINIMUM_LIQUIDITY` is a thousand, which considering most ERC-20 are subdivided into units
+of 10^-18 tokens, as ETH is divided into wei, is roughly 10^-15 to the value of a single token. Not a high cost.
+
+In the time of the first deposit we don't know the relative value of the two tokens, so we just multiply the amounts
+and take a square root, assuming that the deposit provides us with equal value in both tokens. It is in
+the depositor's interest to provide equal value, to avoid losing value to arbitrage.
+
+Let's say that the value of the two tokens is identical, but our depositor deposited four times as many of **Token1** as
+of **Token0**. A trader can use the fact the pool thinks that **Token0** is more valuable to extract value.
+
+
+| Event                                                         | reserve0  | reserve1    | reserve0 * reserve1     | Value of the pool (reserve0 + reserve1) |
+| ------------------------------------------------------------- | --------: | ----------: |       ----------------: | -----------------------  |
+| Initial setup                                                 |         8 |          32 | 1024                    | 40                       |
+| Trader deposits 8 **Token0** tokens, gets back 16 **Token1**  |        16 |          16 | 1024                    | 32                       |
+
+As you can see, the trader earned an extra 8 tokens, which come from a reduction in the value of the pool, hurting the depositor that owns it.
+
+```solidity           
+        } else {        
             liquidity = Math.min(amount0.mul(_totalSupply) / _reserve0, amount1.mul(_totalSupply) / _reserve1);
+```        
+
+With every subsequent deposit 
+
+```solidity
         }
         require(liquidity > 0, 'UniswapV2: INSUFFICIENT_LIQUIDITY_MINTED');
         _mint(to, liquidity);
