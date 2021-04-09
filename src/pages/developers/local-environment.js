@@ -274,6 +274,7 @@ const frameworksList = [
   {
     id: "waffle",
     url: "https://getwaffle.io/",
+    githubUrl: "https://github.com/EthWorks/waffle",
     background: "#fff",
     name: "Waffle",
     description: "page-local-environment-waffle-desc",
@@ -282,6 +283,7 @@ const frameworksList = [
   {
     id: "hardhat",
     url: "https://hardhat.org/",
+    githubUrl: "https://github.com/nomiclabs/hardhat",
     background: "#2A2C32",
     name: "Hardhat",
     description: "page-local-environment-hardhat-desc",
@@ -290,6 +292,7 @@ const frameworksList = [
   {
     id: "truffle",
     url: "https://www.trufflesuite.com/",
+    githubUrl: "https://github.com/trufflesuite/truffle",
     background: "#31272A",
     name: "Truffle",
     description: "page-local-environment-truffle-desc",
@@ -298,6 +301,7 @@ const frameworksList = [
   {
     id: "embark",
     url: "https://framework.embarklabs.io/",
+    githubUrl: "https://github.com/embarklabs/embark",
     background: "#1B3E5F",
     name: "Embark",
     description: "page-local-environment-embark-desc",
@@ -306,6 +310,7 @@ const frameworksList = [
   {
     id: "brownie",
     url: "https://github.com/eth-brownie/brownie",
+    githubUrl: "https://github.com/eth-brownie/brownie",
     background: "#fff",
     name: "Brownie",
     description: "page-local-environment-brownie-desc",
@@ -314,6 +319,7 @@ const frameworksList = [
   {
     id: "epirus",
     url: "https://www.web3labs.com/epirus",
+    githubUrl: "https://github.com/web3labs/epirus-free",
     background: "#fff",
     name: "Epirus",
     description: "page-local-environment-epirus-desc",
@@ -322,6 +328,7 @@ const frameworksList = [
   {
     id: "createethapp",
     url: "https://github.com/PaulRBerg/create-eth-app",
+    githubUrl: "https://github.com/PaulRBerg/create-eth-app",
     background: "#fff",
     name: "Create Eth App",
     description: "page-local-environment-eth-app-desc",
@@ -330,6 +337,7 @@ const frameworksList = [
   {
     id: "scaffoldeth",
     url: "https://github.com/austintgriffith/scaffold-eth",
+    githubUrl: "https://github.com/austintgriffith/scaffold-eth",
     background: "#fff",
     name: "scaffold-eth",
     description: "page-local-environment-scaffold-eth-desc",
@@ -338,6 +346,7 @@ const frameworksList = [
   {
     id: "soliditytemplate",
     url: "https://github.com/paulrberg/solidity-template",
+    githubUrl: "https://github.com/paulrberg/solidity-template",
     background: "#fff",
     name: "Solidity template",
     description: "page-local-environment-solidity-template-desc",
@@ -451,6 +460,8 @@ const ChooseStackPage = ({ data }) => {
               background={framework.background}
               image={framework.image}
               name={framework.name}
+              githubUrl={framework.githubUrl}
+              repoLangCount={2}
               alt={translateMessageId(framework.alt, intl)}
             >
               <Translation id={framework.description} />

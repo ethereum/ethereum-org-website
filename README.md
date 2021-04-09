@@ -71,7 +71,7 @@ $ yarn
 
 4. Add personal GitHub API token (free)
 
-This is required to run the project locally, as we use the GitHub API to fetch repository data for many projects.
+We recommend setting this up when running the project locally, as we use the GitHub API to fetch repository data for many projects & files.
 
 > - [Follow these instructions](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) to create a personal GitHub API token
 >   - When selecting scopes in step 7, leave everything unchecked (the data we fetch doesn't require any [scope](https://docs.github.com/en/developers/apps/scopes-for-oauth-apps#available-scopes))
@@ -80,7 +80,7 @@ This is required to run the project locally, as we use the GitHub API to fetch r
 
 ```
 // .env Example:
-GITHUB_TOKEN_READ_ONLY_DEV=48f84de812090000demo00000000697cf6e6a059
+GATSBY_GITHUB_TOKEN_READ_ONLY=48f84de812090000demo00000000697cf6e6a059
 ```
 
 ### Make awesome changes!
