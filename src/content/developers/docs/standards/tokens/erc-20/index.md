@@ -156,5 +156,3 @@ print("Addr Balance:", addr_balance)
 ## Related topics {#related-topics}
 
 - [ERC-721](/developers/docs/standards/tokens/erc-721/)
-- [ERC-777](/developers/docs/standards/tokens/erc-777/)
-- [ERC-1155](/developers/docs/standards/tokens/erc-1155/)
