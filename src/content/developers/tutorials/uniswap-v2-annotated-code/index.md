@@ -253,7 +253,7 @@ There are two ways in which this call can fail:
 
 If either of these conditions happen, revert.
 
-#### {#pair-events}
+#### Events {#pair-events}
 
 ```solidity
     event Mint(address indexed sender, uint amount0, uint amount1);
@@ -620,16 +620,37 @@ contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/
             address _token1 = token1;
 ```
 
-Thid way the variables are only available in a limited scope, and the same memory can be later
+This way the variables declared here are only available in a limited scope, and the same memory can later be used for other
+variables. This is important, because using memory in an EVM program has a gas cost (see 
+[the yellow paper, the formal Ethereum specifications](https://ethereum.github.io/yellowpaper/paper.pdf), p. 26, equation
+298). 
 
 ```solidity
             require(to != _token0 && to != _token1, 'UniswapV2: INVALID_TO');
             if (amount0Out > 0) _safeTransfer(_token0, to, amount0Out); // optimistically transfer tokens
             if (amount1Out > 0) _safeTransfer(_token1, to, amount1Out); // optimistically transfer tokens
+```
+
+This transfer is optimistic, because we transfer before we are sure all the conditions are met. This is OK in Ethereum
+because if the conditions aren't met later in the call we revert out of it and any changes it created.
+
+```solidity
             if (data.length > 0) IUniswapV2Callee(to).uniswapV2Call(msg.sender, amount0Out, amount1Out, data);
+```
+
+Inform the receiver about the swap if requested.
+
+```solidity
             balance0 = IERC20(_token0).balanceOf(address(this));
             balance1 = IERC20(_token1).balanceOf(address(this));
         }
+```
+
+Get the current balances. This is relevant because the periphery contract sends us the tokens before calling
+us for the swap. This makes it easy for the contract to check that it is not being cheated, a check that
+*has* to happen in the core contract.
+
+```solidity
         uint amount0In = balance0 > _reserve0 - amount0Out ? balance0 - (_reserve0 - amount0Out) : 0;
         uint amount1In = balance1 > _reserve1 - amount1Out ? balance1 - (_reserve1 - amount1Out) : 0;
         require(amount0In > 0 || amount1In > 0, 'UniswapV2: INSUFFICIENT_INPUT_AMOUNT');
@@ -642,7 +663,12 @@ Thid way the variables are only available in a limited scope, and the same memor
         _update(balance0, balance1, _reserve0, _reserve1);
         emit Swap(msg.sender, amount0In, amount1In, amount0Out, amount1Out, to);
     }
+```
 
+Update `reserve0` and `reserve1`, and if necessary the price accumulators and the timestamp and emit an event.
+
+
+```solidity
     // force balances to match reserves
     function skim(address to) external lock {
         address _token0 = token0; // gas savings
@@ -650,13 +676,20 @@ Thid way the variables are only available in a limited scope, and the same memor
         _safeTransfer(_token0, to, IERC20(_token0).balanceOf(address(this)).sub(reserve0));
         _safeTransfer(_token1, to, IERC20(_token1).balanceOf(address(this)).sub(reserve1));
     }
+```
 
+This function is used as a safeguard in case the balances and reserves are out of sync.
+
+```solidity
     // force reserves to match balances
     function sync() external lock {
         _update(IERC20(token0).balanceOf(address(this)), IERC20(token1).balanceOf(address(this)), reserve0, reserve1);
     }
 }
 ```
+
+This function is the normal update, used to update the reserves.
+
 
 ### UniswapV2Factory.sol  {#UniswapV2Factory}
 ### UniswapV2ERC20.sol    {#UniswapV2ERC20}
