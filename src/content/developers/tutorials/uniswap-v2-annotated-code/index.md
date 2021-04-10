@@ -706,7 +706,14 @@ import './UniswapV2Pair.sol';
 contract UniswapV2Factory is IUniswapV2Factory {
     address public feeTo;
     address public feeToSetter;
+```
 
+These state variables are necessary to implement the protocol fee (see [the whitepaper](https://uniswap.org/whitepaper.pdf), p. 5). 
+The `feeTo` address accumulates the ERC-20 tokens of the protocol fee, and `feeToSetter` is the address allowed to change `feeTo` to 
+a different address.
+
+
+```solidity
     mapping(address => mapping(address => address)) public getPair;
     address[] public allPairs;
 
