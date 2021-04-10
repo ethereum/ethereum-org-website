@@ -264,5 +264,3 @@ recent_births = [get_event_data(ck_extra_events_abi[1], log)["args"] for log in 
 ## Related topics {#related-topics}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/)
-- [ERC-777](/developers/docs/standards/tokens/erc-777/)
-- [ERC-1155](/developers/docs/standards/tokens/erc-1155/)
