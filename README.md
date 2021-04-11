@@ -905,6 +905,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://qe.github.io"><img src="https://avatars.githubusercontent.com/u/59273057?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alex Ismodes</b></sub></a><br /><a href="#content-qe" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/minimalsm"><img src="https://avatars.githubusercontent.com/u/62268199?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joshua</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aminimalsm" title="Bug reports">🐛</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=minimalsm" title="Code">💻</a></td>
     <td align="center"><a href="https://seskit.com/"><img src="https://avatars.githubusercontent.com/u/49895756?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ensar Yusuf Yılmaz</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aensaryusuf" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/leogtzr"><img src="https://avatars.githubusercontent.com/u/1211969?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Leo Gutiérrez Ramírez</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aleogtzr" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
