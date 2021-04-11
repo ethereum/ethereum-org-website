@@ -3365,6 +3365,15 @@
         "bug",
         "code"
       ]
+    },
+    {
+      "login": "ensaryusuf",
+      "name": "Ensar Yusuf Yılmaz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/49895756?v=4",
+      "profile": "https://seskit.com/",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
