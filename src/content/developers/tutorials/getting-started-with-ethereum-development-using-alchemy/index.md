@@ -106,7 +106,8 @@ Now to get our hands dirty with a little web3 programming we’ll write a simple
 1.  **If you haven’t already, in your terminal create a new project directory and cd into it:**
 
 ```
-mkdir web3-examplecd web3-example
+mkdir web3-example
+cd web3-example
 ```
 
 **2\. Install the Alchemy web3 (or any web3) dependency into your project if you have not already:**
@@ -122,7 +123,7 @@ npm install @alch/alchemy-web3
 ```js
 async function main() {
   const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
-  const web3 = createAlchemyWeb3("https://eth-   mainnet.alchemyapi.io/v2/demo")
+  const web3 = createAlchemyWeb3("https://eth-mainnet.alchemyapi.io/v2/demo")
   const blockNumber = await web3.eth.getBlockNumber()
   console.log("The latest block number is " + blockNumber)
 }
