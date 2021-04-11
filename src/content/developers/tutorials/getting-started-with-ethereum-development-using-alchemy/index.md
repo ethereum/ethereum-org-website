@@ -106,7 +106,8 @@ Now to get our hands dirty with a little web3 programming we’ll write a simple
 1.  **If you haven’t already, in your terminal create a new project directory and cd into it:**
 
 ```
-mkdir web3-examplecd web3-example
+mkdir web3-example
+cd web3-example
 ```
 
 **2\. Install the Alchemy web3 (or any web3) dependency into your project if you have not already:**
