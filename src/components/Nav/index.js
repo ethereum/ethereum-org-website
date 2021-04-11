@@ -274,6 +274,10 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         },
       ],
     },
+    {
+      text: "Help",
+      to: "/help/",
+    },
   ]
   const ednLinks = [
     {
