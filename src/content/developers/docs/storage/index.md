@@ -49,7 +49,7 @@ Platforms with contract based persistence:
 
 - [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
 - [Skynet](https://siasky.net/)
-- [Stroj](https://storj.io/)
+- [Storj](https://storj.io/)
 
 ### Additional considerations {#additional-considertion}
 
