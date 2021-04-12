@@ -850,18 +850,79 @@ address.
 ERC-20 liquidity token. It is similar to the [OpenWhisk ERC-20 contract](/developers/tutorials/erc20-annotated-code), so
 I will only explain the parts that are different. 
 
+GOON GOON GOON
+
+```solidity
+    bytes32 public DOMAIN_SEPARATOR;
+    // keccak256("Permit(address owner,address spender,uint256 value,uint256 nonce,uint256 deadline)");
+    bytes32 public constant PERMIT_TYPEHASH = 0x6e71edae12b1b97f4d1f60370fef10105fa2faae0126114a169c64845d6126c9;
+    mapping(address => uint) public nonces;
+
+
+    constructor() public {
+        uint chainId;
+        assembly {
+            chainId := chainid
+        }
+        DOMAIN_SEPARATOR = keccak256(
+            abi.encode(
+                keccak256('EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)'),
+                keccak256(bytes(name)),
+                keccak256(bytes('1')),
+                chainId,
+                address(this)
+            )
+        );
+    }
+    
+    
+    function permit(address owner, address spender, uint value, uint deadline, uint8 v, bytes32 r, bytes32 s) external {
+        require(deadline >= block.timestamp, 'UniswapV2: EXPIRED');
+        bytes32 digest = keccak256(
+            abi.encodePacked(
+                '\x19\x01',
+                DOMAIN_SEPARATOR,
+                keccak256(abi.encode(PERMIT_TYPEHASH, owner, spender, value, nonces[owner]++, deadline))
+            )
+        );
+        address recoveredAddress = ecrecover(digest, v, r, s);
+        require(recoveredAddress != address(0) && recoveredAddress == owner, 'UniswapV2: INVALID_SIGNATURE');
+        _approve(owner, spender, value);
+    }
+    
+```
+
 
 ## The Periphery Contracts {#periphery-contracts}
 
-### UniswapV2Migrator.sol  {#UniswapV2Migrator}
+The periphery contracts are the API (application program interface) for Uniswap. They are available for external calls, either from 
+other contracts or decentralized applications. You could call the core contracts directly, but that's more complicated and you
+might lose value if you make a mistake. The core contracts only contain tests to make sure they aren't cheated, not sanity checks 
+for anybody else.
+
+
 ### UniswapV2Router01.sol  {#UniswapV2Router01}
+
+[This contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) 
+has problems, and [should no longer be used](https://uniswap.org/docs/v2/smart-contracts/router01/). Luckily,
+the periphery contracts are stateless and don't hold any assets, so it is easy to deprecate it and suggest
+people use the replacement, `UniswapV2Router02`, instead.
+
+
 ### UniswapV2Router02.sol  {#UniswapV2Router02} 
+
+In most cases you would use Uniswap through [this contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol). 
+
+
+
+### UniswapV2Migrator.sol  {#UniswapV2Migrator}
 
 
 ## The Libraries {#libraries}
 
 The [SafeMath library](https://docs.openzeppelin.com/contracts/2.x/api/math) is well documented, so there's no need
-to document it here.
+to document it here. 
+
 
 
 ### Math {#Math}
