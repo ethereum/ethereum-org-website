@@ -352,7 +352,7 @@ As the name suggests, this variable keeps track of the total supply of tokens.
     uint8 private _decimals;
 ```
 
-These three variables are used to impprove readability. The first two are self-explanatory, but `_decimals`
+These three variables are used to improve readability. The first two are self-explanatory, but `_decimals`
 isn't.
 
 On one hand, ethereum does not have floating point or fractional variables. On the other hand,
