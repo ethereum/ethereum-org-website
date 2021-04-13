@@ -269,6 +269,9 @@
 [[redirects]]
   from = "/*/build"
   to = "/:splat/developers/learning-tools/"
+[[redirects]]
+  from = "/*/eth2/the-docking"
+  to = "/:splat/eth2/the-docking/"
 
 # A redirect rule with all the supported properties
 # [[redirects]]
