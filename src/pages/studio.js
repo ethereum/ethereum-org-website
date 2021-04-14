@@ -39,7 +39,7 @@ const StudioRedirectPage = () => (
       <Emoji size={6} mb={"2rem"} text=":sunset_over_buildings:" />
       <H1>We've sunset Studio</H1>
       <p>
-        Ethereum Studio is no longer actively maintained. We'd like to thank the
+        Ethereum Studio is no longer actively maintained. We'd like to thank the{" "}
         <Link to="https://superblocks.com/">Superblocks</Link>
         team and the many open source contributors who generously helped support
         this project.
