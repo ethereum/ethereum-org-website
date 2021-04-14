@@ -7,10 +7,10 @@ sidebar: true
 image: ../../../../../assets/eth2/docking.png
 summaryPoints:
   [
-    `L'attuale rete principale Ethereum sarà alla fine agganciata" con il resto degli aggiornamenti Eth2.`,
+    "L'attuale rete principale Ethereum sarà alla fine agganciata con il resto degli aggiornamenti Eth2.",
     'Il docking fonderà la rete principale "Eth1" con la beacon chain Eth2 e il sistema di sharding.',
-    `Questo segnerà la fine del proof of work per Ethereum e completerà la transizione al proof of stake.`,
-    `Questa fase viene detta anche "Fase 1.5" nelle roadmap tecniche.`,
+    "Questo segnerà la fine del proof of work per Ethereum e completerà la transizione al proof of stake.",
+    'Questa fase viene detta anche "Fase 1.5" nelle roadmap tecniche.',
   ]
 ---
 

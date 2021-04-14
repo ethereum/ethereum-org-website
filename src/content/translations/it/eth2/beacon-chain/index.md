@@ -1,6 +1,6 @@
 ---
 title: La beacon chain
-description: 'Scopri la beacon chain: il primo grande aggiornamento a Eth2 in Ethereum.'
+description: Scopri la beacon chain - il primo grande aggiornamento a Eth2 in Ethereum.
 lang: it
 template: eth2
 sidebar: true
@@ -9,8 +9,8 @@ summaryPoints:
   [
     "La beacon chain non modifica nulla della rete Ethereum che usiamo oggi.",
     "Coordinerà la rete.",
-    "Introduce la proof of stake nell''ecosistema Ethereum.",
-    "Potreste averne sentito parlare come "Fase 0" nelle roadmap tecniche.",
+    "Introduce la proof of stake nell'ecosistema Ethereum.",
+    'Potreste averne sentito parlare come "Fase 0" nelle roadmap tecniche.',
   ]
 ---
 
