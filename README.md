@@ -909,6 +909,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/abdulmalik97"><img src="https://avatars.githubusercontent.com/u/9363303?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Abdul Malik</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aabdulmalik97" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://twitter.com/JayBWelsh"><img src="https://avatars.githubusercontent.com/u/14224459?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jay Welsh</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AJayWelsh" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
