@@ -38,7 +38,7 @@ The Berlin upgrade optimized gas cost for certain EVM actions, and increases sup
 - [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [Read the Ethereum Cat Herder's explainer](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
-<ExpandableCard title="Muir Glacier EIPs" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Berlin EIPs" contentPreview="Official improvements included in this upgrade.">
 
 - [EIP-2565](https://eips.ethereum.org/EIPS/eip-2565) – _lowers ModExp gas cost_
 - [EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) – _enables easier support for multiple transaction types_
