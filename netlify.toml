@@ -271,7 +271,7 @@
   to = "/:splat/developers/learning-tools/"
 [[redirects]]
   from = "/*/eth2/the-docking"
-  to = "/:splat/eth2/the-docking/"
+  to = "/:splat/eth2/docking/"
 
 # A redirect rule with all the supported properties
 # [[redirects]]
