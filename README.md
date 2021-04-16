@@ -912,6 +912,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://twitter.com/JayBWelsh"><img src="https://avatars.githubusercontent.com/u/14224459?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jay Welsh</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AJayWelsh" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/linkastic"><img src="https://avatars.githubusercontent.com/u/7030395?v=4?s=100" width="100px;" alt=""/><br /><sub><b>linkastic</b></sub></a><br /><a href="#content-linkastic" title="Content">🖋</a></td>
     <td align="center"><a href="http://groftware.tech"><img src="https://avatars.githubusercontent.com/u/11567740?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Chan Jing Hong</b></sub></a><br /><a href="#content-cjinghong" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/ozora-ogino"><img src="https://avatars.githubusercontent.com/u/63685461?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ozora Ogino</b></sub></a><br /><a href="#content-ozora-ogino" title="Content">🖋</a></td>
   </tr>
 </table>
 
