@@ -904,6 +904,14 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/Luis-Mx"><img src="https://avatars.githubusercontent.com/u/30961?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Luis Miranda</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ALuis-Mx" title="Bug reports">🐛</a></td>
     <td align="center"><a href="http://qe.github.io"><img src="https://avatars.githubusercontent.com/u/59273057?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alex Ismodes</b></sub></a><br /><a href="#content-qe" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/minimalsm"><img src="https://avatars.githubusercontent.com/u/62268199?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joshua</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aminimalsm" title="Bug reports">🐛</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=minimalsm" title="Code">💻</a></td>
+    <td align="center"><a href="https://seskit.com/"><img src="https://avatars.githubusercontent.com/u/49895756?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ensar Yusuf Yılmaz</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aensaryusuf" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/leogtzr"><img src="https://avatars.githubusercontent.com/u/1211969?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Leo Gutiérrez Ramírez</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aleogtzr" title="Bug reports">🐛</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/abdulmalik97"><img src="https://avatars.githubusercontent.com/u/9363303?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Abdul Malik</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aabdulmalik97" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://twitter.com/JayBWelsh"><img src="https://avatars.githubusercontent.com/u/14224459?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jay Welsh</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AJayWelsh" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/linkastic"><img src="https://avatars.githubusercontent.com/u/7030395?v=4?s=100" width="100px;" alt=""/><br /><sub><b>linkastic</b></sub></a><br /><a href="#content-linkastic" title="Content">🖋</a></td>
+    <td align="center"><a href="http://groftware.tech"><img src="https://avatars.githubusercontent.com/u/11567740?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Chan Jing Hong</b></sub></a><br /><a href="#content-cjinghong" title="Content">🖋</a></td>
   </tr>
 </table>
 

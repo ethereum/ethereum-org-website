@@ -3365,6 +3365,60 @@
         "bug",
         "code"
       ]
+    },
+    {
+      "login": "ensaryusuf",
+      "name": "Ensar Yusuf Yılmaz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/49895756?v=4",
+      "profile": "https://seskit.com/",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "leogtzr",
+      "name": "Leo Gutiérrez Ramírez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1211969?v=4",
+      "profile": "https://github.com/leogtzr",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "abdulmalik97",
+      "name": "Abdul Malik",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9363303?v=4",
+      "profile": "https://github.com/abdulmalik97",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "JayWelsh",
+      "name": "Jay Welsh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14224459?v=4",
+      "profile": "https://twitter.com/JayBWelsh",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "linkastic",
+      "name": "linkastic",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7030395?v=4",
+      "profile": "https://github.com/linkastic",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "cjinghong",
+      "name": "Chan Jing Hong",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11567740?v=4",
+      "profile": "http://groftware.tech",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

@@ -22,6 +22,33 @@ These rule changes may create a temporary split in the network. New blocks could
 
 <Divider />
 
+## 2021 {#2021}
+
+### Berlin {#berlin}
+
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Apr-15-2021 10:07:03 AM +UTC</code><br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/12244000">12,244,000</a><br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH price: $2454 USD<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210415093618/https://ethereum.org/">ethereum.org on waybackmachine</a>
+
+#### Summary {#berlin-summary}
+
+The Berlin upgrade optimized gas cost for certain EVM actions, and increases support for multiple transaction types.
+
+- [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
+- [Read the Ethereum Cat Herder's explainer](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
+
+<ExpandableCard title="Berlin EIPs" contentPreview="Official improvements included in this upgrade.">
+
+- [EIP-2565](https://eips.ethereum.org/EIPS/eip-2565) – _lowers ModExp gas cost_
+- [EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) – _enables easier support for multiple transaction types_
+- [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929) – _gas cost increases for state access opcodes_
+- [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) – _adds optional access lists_
+
+</ExpandableCard>
+
+<Divider />
+
 ## 2020 {#2020}
 
 ### Beacon Chain genesis {#beacon-chain-genesis}
