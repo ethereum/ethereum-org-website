@@ -47,6 +47,11 @@ Uniswap v2 is divided into two components, a core and a periphery. This division
 which hold the assets in the market and therefore *have* to be secure, to be simpler and easier to audit. 
 All the extra functionality required by traders can then be provided by periphery contracts. 
 
+
+## Data and Control Flows {#flows}
+
+GOON
+
 ## The Core Contracts {#core-contracts}
 
 These are the secure contracts which hold the liquidity. 
@@ -927,7 +932,10 @@ import './interfaces/IERC20.sol';
 import './interfaces/IWETH.sol';
 ```
 
-Most of these we either encountered before, or are fairly obvious. The one exception is `IWETH.sol`. This is 
+Most of these we either encountered before, or are fairly obvious. The one exception is `IWETH.sol`. Uniswap v2 allows exchanges for
+any pair of ERC-20 tokens, but ether (ETH) itself isn't an ERC-20 token. It predates the standard and is transfered by unique mechanisms. To
+enable the use of ETH in contracts that apply to ERC-20 tokens people came up with the [wrapped ether (WETH)](https://weth.io/) contract. You 
+send this contract ETH, and it gives you an equivalent amount of WETH. Or you can redeem WETH, and get ETH back.
 
 
 ```solidity
@@ -936,20 +944,47 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
 
     address public immutable override factory;
     address public immutable override WETH;
+```
 
+The router needs to know what factory to use, and for transactions that require WETH what WETH contract to use. These values are 
+[immutable](https://docs.soliditylang.org/en/v0.8.3/contracts.html#constant-and-immutable-state-variables), meaning they can
+only be set in the constructor. This gives users the confidence that nobody would be able to change them to point to less honest
+contracts.
+
+
+```solidity
     modifier ensure(uint deadline) {
         require(deadline >= block.timestamp, 'UniswapV2Router: EXPIRED');
         _;
     }
+```
 
+An account can give another account permissions for a limited length of time. This modifier makes sure that permission
+is still valid.
+
+```solidity
     constructor(address _factory, address _WETH) public {
         factory = _factory;
         WETH = _WETH;
     }
+```
 
+The constructor just sets the immutable state variables.
+
+```solidity
     receive() external payable {
         assert(msg.sender == WETH); // only accept ETH via fallback from the WETH contract
     }
+```
+
+This function is called when we redeem tokens from the WETH contract back into ETH. Only the WETH contract we use is authorized 
+to do that.
+
+#### Add Liquidity {#add-liquidity}
+
+These functions add tokens to the pair exchange, which increases the liquidity pool.
+
+```solidity
 
     // **** ADD LIQUIDITY ****
     function _addLiquidity(
@@ -960,11 +995,26 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         uint amountAMin,
         uint amountBMin
     ) internal virtual returns (uint amountA, uint amountB) {
+```
+
+This function contains the processing that is common to all the liquidity adding functions. 
+
+```solidity
         // create the pair if it doesn't exist yet
         if (IUniswapV2Factory(factory).getPair(tokenA, tokenB) == address(0)) {
             IUniswapV2Factory(factory).createPair(tokenA, tokenB);
         }
+```
+
+If there is no exchange for this pair yet, create it.
+
+```solidity
         (uint reserveA, uint reserveB) = UniswapV2Library.getReserves(factory, tokenA, tokenB);
+```
+
+Get the current reserves in the pair.
+
+```solidity
         if (reserveA == 0 && reserveB == 0) {
             (amountA, amountB) = (amountADesired, amountBDesired);
         } else {
