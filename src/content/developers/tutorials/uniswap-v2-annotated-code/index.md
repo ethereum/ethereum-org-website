@@ -959,8 +959,7 @@ contracts.
     }
 ```
 
-An account can give another account permissions for a limited length of time. This modifier makes sure that permission
-is still valid.
+This modifier makes sure that time limited transactions ("do X before time Y if you can") don't happen after their time limit.
 
 ```solidity
     constructor(address _factory, address _WETH) public {
@@ -988,16 +987,40 @@ These functions add tokens to the pair exchange, which increases the liquidity p
 
     // **** ADD LIQUIDITY ****
     function _addLiquidity(
+```
+
+This function is used to calculate the amount of A and B tokens that should be deposited into the
+pair exchange.
+
+```solidity
         address tokenA,
         address tokenB,
+```        
+
+These are the addresses of the ERC-20 token contracts.
+
+```solidity
         uint amountADesired,
         uint amountBDesired,
+```
+
+These are the amounts the liquidity provider wants to deposit. They are also the maximum amounts of A and
+B to be deposited.
+
+```solidity
         uint amountAMin,
         uint amountBMin
+```
+
+These are the minimum acceptable amounts to deposit. If the transaction cannot take place with
+these amounts, revert out of it.
+
+```solidity
     ) internal virtual returns (uint amountA, uint amountB) {
 ```
 
-This function contains the processing that is common to all the liquidity adding functions. 
+The function returns the amounts the liquidity provider should deposit to have a ratio equal to the current
+ratio between reserves.
 
 ```solidity
         // create the pair if it doesn't exist yet
@@ -1006,7 +1029,7 @@ This function contains the processing that is common to all the liquidity adding
         }
 ```
 
-If there is no exchange for this pair yet, create it.
+If there is no exchange for this token pair yet, create it.
 
 ```solidity
         (uint reserveA, uint reserveB) = UniswapV2Library.getReserves(factory, tokenA, tokenB);
@@ -1016,20 +1039,48 @@ Get the current reserves in the pair.
 
 ```solidity
         if (reserveA == 0 && reserveB == 0) {
-            (amountA, amountB) = (amountADesired, amountBDesired);
+            (amountA, amountB) = (amountADesired, amountBDesired);            
+```        
+
+If the current reserves are empty then it's simple - the amounts to be deposited should be exactly
+the same as those the liquidity provider wants to provide.
+            
+```solidity            
         } else {
             uint amountBOptimal = UniswapV2Library.quote(amountADesired, reserveA, reserveB);
+```
+
+If we need to see what amounts will be, we get the optimal amount using 
+[this function](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol#L35).
+We want the same ratio as the current reserves.
+
+```solidity
             if (amountBOptimal <= amountBDesired) {
                 require(amountBOptimal >= amountBMin, 'UniswapV2Router: INSUFFICIENT_B_AMOUNT');
                 (amountA, amountB) = (amountADesired, amountBOptimal);
+```
+
+If `amountBOptimal` is smaller than the amount the liquidity provider wants to deposit it means that token B is more
+valuable currently than the liquidity depositor thinks, so a smaller amount is required. 
+
+```solidity
             } else {
                 uint amountAOptimal = UniswapV2Library.quote(amountBDesired, reserveB, reserveA);
                 assert(amountAOptimal <= amountADesired);
                 require(amountAOptimal >= amountAMin, 'UniswapV2Router: INSUFFICIENT_A_AMOUNT');
                 (amountA, amountB) = (amountAOptimal, amountBDesired);
+```
+
+If the optimal B amount is more than the desired B amount it means B tokens are less valuable currently than the
+liquidity depositor thinks, so a higher amount is required. However, the desired amount is a maximum, so we cannot
+do that. Instead we calculate the optimal number of A tokens for the desired amount of B tokens.
+
             }
         }
     }
+```
+
+```solidity
     function addLiquidity(
         address tokenA,
         address tokenB,
