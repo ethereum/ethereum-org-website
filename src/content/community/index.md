@@ -41,7 +41,6 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 
 **Every month, there are major Ethereum events around the world.** Consider attending one near you to meet more people in the community, learn about employment opportunities, and develop new skills.
 
-- [Chainlink Hackathon Spring 2021](https://chain.link/hackathon) – Virtual Chainlink hackathon (Mar 15 - Apr 11)
 - [Scaling Ethereum](https://scaling.ethglobal.co/) – Hackathon dedicated to ETH2 and L2 on Ethereum (Apr 16 - May 14)
 
 _Have an event to add to this list? [Add it](https://github.com/ethereum/ethereum-org-website#how-can-i-contribute)!_
