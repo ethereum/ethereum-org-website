@@ -1140,7 +1140,9 @@ Transfer the correct amounts of tokens from the user into the pair exchange.
     }
 ```    
 
-And in return give the `to` address tokens for partial ownership of the pool.
+In return give the `to` address tokens for partial ownership of the pool. The 
+`mint` function of the core contract sees how many extra tokens it has (compared
+to what it had the last time liquidity changed) and 
     
 ```solidity    
     function addLiquidityETH(
@@ -1705,11 +1707,29 @@ library TransferHelper {
     ) internal {
         // bytes4(keccak256(bytes('approve(address,uint256)')));
         (bool success, bytes memory data) = token.call(abi.encodeWithSelector(0x095ea7b3, to, value));
+        
+```
+
+We can call a different contract in one of two ways:
+
+. Use an interface definition to create a function call
+. Use the [application binary interface (ABI)](https://docs.soliditylang.org/en/v0.8.3/abi-spec.html) ourselves to 
+   create the call. This is what the author of the code decided to do it.
+
+```solidity                
         require(
             success && (data.length == 0 || abi.decode(data, (bool))),
             'TransferHelper::safeApprove: approve failed'
         );
     }
+```
+
+For the sake of backwards compatibility with token that were created prior to the ERC-20 standard, an ERC-20 call
+can fail either by reverting (in which case `success` is `false`) or by being successful and returning a `false`
+value (in which case there is output data, and if you decode it as a boolean you get `false`).
+
+```solidity
+
 
     function safeTransfer(
         address token,
@@ -1723,19 +1743,26 @@ library TransferHelper {
             'TransferHelper::safeTransfer: transfer failed'
         );
     }
-
+   
+    
     function safeTransferFrom(
         address token,
         address from,
         address to,
         uint256 value
+```
+
+This function implements [ERC-20's transferFrom functionality](https://eips.ethereum.org/EIPS/eip-20#transferfrom),
+which allows an account to spend out the allowance provided by a different account. 
+
+```solidity        
     ) internal {
         // bytes4(keccak256(bytes('transferFrom(address,address,uint256)')));
         (bool success, bytes memory data) = token.call(abi.encodeWithSelector(0x23b872dd, from, to, value));
         require(
             success && (data.length == 0 || abi.decode(data, (bool))),
             'TransferHelper::transferFrom: transferFrom failed'
-        );
+        );        
     }
 
     function safeTransferETH(address to, uint256 value) internal {
