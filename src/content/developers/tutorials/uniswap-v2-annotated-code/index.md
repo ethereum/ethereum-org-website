@@ -1689,7 +1689,7 @@ if we know the parameters it uses.
 ### Transfer Helper {#transfer-helper}
 
 [This library](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol) adds sanity checks around
-ERC-20 transfers to avoid certain pitfalls. 
+ERC-20 and Ethereum transfers to avoid certain pitfalls. 
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0-or-later
