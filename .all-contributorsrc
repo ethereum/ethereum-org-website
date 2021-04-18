@@ -3437,6 +3437,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "CameronHonis",
+      "name": "Cameron Honis",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66322224?v=4",
+      "profile": "https://github.com/CameronHonis",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
