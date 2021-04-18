@@ -501,7 +501,7 @@ fees.
 If this is the first deposit, create `MINIMUM_LIQUIDITY` tokens and send them to address zero to lock them. They can
 never to redeemed, which means the pool will never be emptied completely (this saves us from division by zero in
 some places). The value of `MINIMUM_LIQUIDITY` is a thousand, which considering most ERC-20 are subdivided into units
-of 10^-18 tokens, as ETH is divided into wei, is roughly 10^-15 to the value of a single token. Not a high cost.
+of 10^-18'th of a token, as ETH is divided into wei, is roughly 10^-15 to the value of a single token. Not a high cost.
 
 In the time of the first deposit we don't know the relative value of the two tokens, so we just multiply the amounts
 and take a square root, assuming that the deposit provides us with equal value in both tokens. It is in
@@ -1075,10 +1075,29 @@ If the optimal B amount is more than the desired B amount it means B tokens are 
 liquidity depositor thinks, so a higher amount is required. However, the desired amount is a maximum, so we cannot
 do that. Instead we calculate the optimal number of A tokens for the desired amount of B tokens.
 
+Putting it all together we get this graph. Assume you're trying to deposit a thousand A tokens (blue line) and a
+thousand B tokens (red line). The x axis is the exchange rate, A/B. If x=1, they are equal in value and you deposit
+a thousand of each. If x=2, A is twice the value of B (you get two B tokens for each A token) so you deposit a thousand
+B tokens, but only 500 A tokens. If x=0.5, the situation is reversed.
+
+
+![Graph](liquidityProviderDeposit.png "Tokens to deposit at different exchange rates")
+
+
+
+```solidity
             }
         }
     }
 ```
+
+
+You could deposit liquidity directly into the core contract (using 
+[UniswapV2Pair::mint](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol#L110)), but the core contract 
+only checks that it is not getting cheated itself, so you run the risk of losing value if the exchange rate changes between the time
+you submit your transaction and the time it is executed. If you use the periphery contract, it figures the amount you should deposits
+and deposits it immediately, so the exchange rate doesn't change and you don't lose anything.
+
 
 ```solidity
     function addLiquidity(
