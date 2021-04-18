@@ -1078,7 +1078,7 @@ do that. Instead we calculate the optimal number of A tokens for the desired amo
 Putting it all together we get this graph. Assume you're trying to deposit a thousand A tokens (blue line) and a
 thousand B tokens (red line). The x axis is the exchange rate, A/B. If x=1, they are equal in value and you deposit
 a thousand of each. If x=2, A is twice the value of B (you get two B tokens for each A token) so you deposit a thousand
-B tokens, but only 500 A tokens. If x=0.5, the situation is reversed.
+B tokens, but only 500 A tokens. If x=0.5, the situation is reversed, a thousand A tokens and five hundred B tokens.
 
 
 ![Graph](liquidityProviderDeposit.png "Tokens to deposit at different exchange rates")
@@ -1109,13 +1109,40 @@ and deposits it immediately, so the exchange rate doesn't change and you don't l
         uint amountBMin,
         address to,
         uint deadline
+```
+
+This function can be called by a transaction to deposit liquidity. Most parameters are the same as in `_addLiquidity` above, with
+two exceptions:
+
+. `to` is the address that gets the new liquidity tokens minted to show the liquidity provider's portion of the pool
+. `deadline` is a time limit on the transaction
+
+
+```solidity
     ) external virtual override ensure(deadline) returns (uint amountA, uint amountB, uint liquidity) {
         (amountA, amountB) = _addLiquidity(tokenA, tokenB, amountADesired, amountBDesired, amountAMin, amountBMin);
         address pair = UniswapV2Library.pairFor(factory, tokenA, tokenB);
+```
+
+We calculate the amounts to actually deposit and then find the address of the liquidity pool. To save gas we don't do this by
+asking the factory, but using the library function `pairFor` (see below in libraries)
+
+```solidity
         TransferHelper.safeTransferFrom(tokenA, msg.sender, pair, amountA);
         TransferHelper.safeTransferFrom(tokenB, msg.sender, pair, amountB);
+```
+
+Transfer the correct amounts of tokens from the user into the pair exchange.
+
+
+```solidity
         liquidity = IUniswapV2Pair(pair).mint(to);
     }
+```    
+
+And in return give the `to` address tokens for partial ownership of the pool.
+    
+```solidity    
     function addLiquidityETH(
         address token,
         uint amountTokenDesired,
@@ -1554,6 +1581,169 @@ library UQ112x112 {
         z = x / uint224(y);
     }
 }
+```
+
+
+### UniswapV2Library
+
+This library is used only by the periphery contracts
+
+```solidity
+pragma solidity >=0.5.0;
+
+import '@uniswap/v2-core/contracts/interfaces/IUniswapV2Pair.sol';
+
+import "./SafeMath.sol";
+
+library UniswapV2Library {
+    using SafeMath for uint;
+
+    // returns sorted token addresses, used to handle return values from pairs sorted in this order
+    function sortTokens(address tokenA, address tokenB) internal pure returns (address token0, address token1) {
+        require(tokenA != tokenB, 'UniswapV2Library: IDENTICAL_ADDRESSES');
+        (token0, token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
+        require(token0 != address(0), 'UniswapV2Library: ZERO_ADDRESS');
+    }
+```
+
+Sort the two tokens by address, so we'll be able to get the address of the pair exchange for them. This is
+necessary because otherwise we'd have two possibilities, one for the parameters A,B and another for the
+parameters B,A, leading to two exchanges instead of one.
+
+```solidity
+    // calculates the CREATE2 address for a pair without making any external calls
+    function pairFor(address factory, address tokenA, address tokenB) internal pure returns (address pair) {
+        (address token0, address token1) = sortTokens(tokenA, tokenB);
+        pair = address(uint(keccak256(abi.encodePacked(
+                hex'ff',
+                factory,
+                keccak256(abi.encodePacked(token0, token1)),
+                hex'96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f' // init code hash
+            ))));
+    }
+```
+
+This function calculates the address of the pair exchange for the two tokens. This contract is created using 
+[the CREATE2 opcode](https://eips.ethereum.org/EIPS/eip-1014), so we can calculate the address using the same algorithm
+if we know the parameters it uses.
+
+```solidity
+    // fetches and sorts the reserves for a pair
+    function getReserves(address factory, address tokenA, address tokenB) internal view returns (uint reserveA, uint reserveB) {
+        (address token0,) = sortTokens(tokenA, tokenB);
+        (uint reserve0, uint reserve1,) = IUniswapV2Pair(pairFor(factory, tokenA, tokenB)).getReserves();
+        (reserveA, reserveB) = tokenA == token0 ? (reserve0, reserve1) : (reserve1, reserve0);
+    }
+
+    // given some amount of an asset and pair reserves, returns an equivalent amount of the other asset
+    function quote(uint amountA, uint reserveA, uint reserveB) internal pure returns (uint amountB) {
+        require(amountA > 0, 'UniswapV2Library: INSUFFICIENT_AMOUNT');
+        require(reserveA > 0 && reserveB > 0, 'UniswapV2Library: INSUFFICIENT_LIQUIDITY');
+        amountB = amountA.mul(reserveB) / reserveA;
+    }
+
+    // given an input amount of an asset and pair reserves, returns the maximum output amount of the other asset
+    function getAmountOut(uint amountIn, uint reserveIn, uint reserveOut) internal pure returns (uint amountOut) {
+        require(amountIn > 0, 'UniswapV2Library: INSUFFICIENT_INPUT_AMOUNT');
+        require(reserveIn > 0 && reserveOut > 0, 'UniswapV2Library: INSUFFICIENT_LIQUIDITY');
+        uint amountInWithFee = amountIn.mul(997);
+        uint numerator = amountInWithFee.mul(reserveOut);
+        uint denominator = reserveIn.mul(1000).add(amountInWithFee);
+        amountOut = numerator / denominator;
+    }
+
+    // given an output amount of an asset and pair reserves, returns a required input amount of the other asset
+    function getAmountIn(uint amountOut, uint reserveIn, uint reserveOut) internal pure returns (uint amountIn) {
+        require(amountOut > 0, 'UniswapV2Library: INSUFFICIENT_OUTPUT_AMOUNT');
+        require(reserveIn > 0 && reserveOut > 0, 'UniswapV2Library: INSUFFICIENT_LIQUIDITY');
+        uint numerator = reserveIn.mul(amountOut).mul(1000);
+        uint denominator = reserveOut.sub(amountOut).mul(997);
+        amountIn = (numerator / denominator).add(1);
+    }
+
+    // performs chained getAmountOut calculations on any number of pairs
+    function getAmountsOut(address factory, uint amountIn, address[] memory path) internal view returns (uint[] memory amounts) {
+        require(path.length >= 2, 'UniswapV2Library: INVALID_PATH');
+        amounts = new uint[](path.length);
+        amounts[0] = amountIn;
+        for (uint i; i < path.length - 1; i++) {
+            (uint reserveIn, uint reserveOut) = getReserves(factory, path[i], path[i + 1]);
+            amounts[i + 1] = getAmountOut(amounts[i], reserveIn, reserveOut);
+        }
+    }
+
+    // performs chained getAmountIn calculations on any number of pairs
+    function getAmountsIn(address factory, uint amountOut, address[] memory path) internal view returns (uint[] memory amounts) {
+        require(path.length >= 2, 'UniswapV2Library: INVALID_PATH');
+        amounts = new uint[](path.length);
+        amounts[amounts.length - 1] = amountOut;
+        for (uint i = path.length - 1; i > 0; i--) {
+            (uint reserveIn, uint reserveOut) = getReserves(factory, path[i - 1], path[i]);
+            amounts[i - 1] = getAmountIn(amounts[i], reserveIn, reserveOut);
+        }
+    }
+}
+```
+
+
+### Transfer Helper {#transfer-helper}
+
+[This library](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol) adds sanity checks around
+ERC-20 transfers to avoid certain pitfalls. 
+
+```solidity
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+pragma solidity >=0.6.0;
+
+// helper methods for interacting with ERC20 tokens and sending ETH that do not consistently return true/false
+library TransferHelper {
+    function safeApprove(
+        address token,
+        address to,
+        uint256 value
+    ) internal {
+        // bytes4(keccak256(bytes('approve(address,uint256)')));
+        (bool success, bytes memory data) = token.call(abi.encodeWithSelector(0x095ea7b3, to, value));
+        require(
+            success && (data.length == 0 || abi.decode(data, (bool))),
+            'TransferHelper::safeApprove: approve failed'
+        );
+    }
+
+    function safeTransfer(
+        address token,
+        address to,
+        uint256 value
+    ) internal {
+        // bytes4(keccak256(bytes('transfer(address,uint256)')));
+        (bool success, bytes memory data) = token.call(abi.encodeWithSelector(0xa9059cbb, to, value));
+        require(
+            success && (data.length == 0 || abi.decode(data, (bool))),
+            'TransferHelper::safeTransfer: transfer failed'
+        );
+    }
+
+    function safeTransferFrom(
+        address token,
+        address from,
+        address to,
+        uint256 value
+    ) internal {
+        // bytes4(keccak256(bytes('transferFrom(address,address,uint256)')));
+        (bool success, bytes memory data) = token.call(abi.encodeWithSelector(0x23b872dd, from, to, value));
+        require(
+            success && (data.length == 0 || abi.decode(data, (bool))),
+            'TransferHelper::transferFrom: transferFrom failed'
+        );
+    }
+
+    function safeTransferETH(address to, uint256 value) internal {
+        (bool success, ) = to.call{value: value}(new bytes(0));
+        require(success, 'TransferHelper::safeTransferETH: ETH transfer failed');
+    }
+}
+
 ```
 
 
