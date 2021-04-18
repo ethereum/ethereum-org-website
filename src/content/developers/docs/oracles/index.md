@@ -113,7 +113,7 @@ Chainlink VRF (Verifiable Random Function) is a provably-fair and verifiable sou
 
 Random numbers are difficult because blockchains are deterministic.
 
-Working with Chainlink Oracles outside of data feeds follows the [request and recieve cycle](https://docs.chain.link/docs/architecture-request-model) of working with Chainlink. They use the LINK token to send oracle providers oracle gas for returning responses. The LINK token is specifically designed to work with oracles and are based on the upgraded ERC-677 token, which is backwards compatible with [ERC-20](/developers/docs/standards/tokens/erc-20/).
+Working with Chainlink Oracles outside of data feeds follows the [request and receive cycle](https://docs.chain.link/docs/architecture-request-model) of working with Chainlink. They use the LINK token to send oracle providers oracle gas for returning responses. The LINK token is specifically designed to work with oracles and are based on the upgraded ERC-677 token, which is backwards compatible with [ERC-20](/developers/docs/standards/tokens/erc-20/).
 The following code, if deployed on the Kovan testnet will retreive a cryptographically proven random number. To make the request, fund the contract with some testnet LINK token that you can get from the [Kovan LINK Faucet](https://kovan.chain.link/).
 
 ```javascript
