@@ -979,6 +979,7 @@ The constructor just sets the immutable state variables.
 This function is called when we redeem tokens from the WETH contract back into ETH. Only the WETH contract we use is authorized 
 to do that.
 
+
 #### Add Liquidity {#add-liquidity}
 
 These functions add tokens to the pair exchange, which increases the liquidity pool.
@@ -1142,12 +1143,19 @@ Transfer the correct amounts of tokens from the user into the pair exchange.
 
 In return give the `to` address tokens for partial ownership of the pool. The 
 `mint` function of the core contract sees how many extra tokens it has (compared
-to what it had the last time liquidity changed) and 
+to what it had the last time liquidity changed) and mints liquidity accordingly.
     
 ```solidity    
     function addLiquidityETH(
         address token,
         uint amountTokenDesired,
+```
+
+When a liquidity provider wants to provide liquidity to a Token/ETH pair exchange, there are a few differences. The 
+contract handles wrapping the ETH for the liquidity provider. There is no need to specify how many ETH the user wants 
+to deposit, because the user just sends them with the transaction (the amount is available in `msg.value`).
+
+```solidity
         uint amountTokenMin,
         uint amountETHMin,
         address to,
@@ -1165,11 +1173,29 @@ to what it had the last time liquidity changed) and
         TransferHelper.safeTransferFrom(token, msg.sender, pair, amountToken);
         IWETH(WETH).deposit{value: amountETH}();
         assert(IWETH(WETH).transfer(pair, amountETH));
+```        
+
+To deposit the ETH the contract first wraps it into WETH and then transfers the WETH into the pair. Notice that
+the transfer is wrapped in an `assert`. This means that if the transfer fails this contract call also fails, and
+therefore the wrapping doesn't really happen.
+        
+```solidity        
         liquidity = IUniswapV2Pair(pair).mint(to);
         // refund dust eth, if any
         if (msg.value > amountETH) TransferHelper.safeTransferETH(msg.sender, msg.value - amountETH);
     }
+```
 
+The user has already sent us the ETH, so if there is any extra left over (because the other token is less valuable 
+than the user thought), we need to issue a refund.
+
+
+#### Add Liquidity {#add-liquidity}
+
+
+The functions remove liquidity and pay back to the liquidity provider. 
+
+```solidity
     // **** REMOVE LIQUIDITY ****
     function removeLiquidity(
         address tokenA,
@@ -1180,14 +1206,44 @@ to what it had the last time liquidity changed) and
         address to,
         uint deadline
     ) public virtual override ensure(deadline) returns (uint amountA, uint amountB) {
+```
+
+The simplest case of removing liquidity. There is a minimum amount of each token the liquidity provider agrees to
+accept, and it must happen before the deadline.
+
+```solidity
         address pair = UniswapV2Library.pairFor(factory, tokenA, tokenB);
         IUniswapV2Pair(pair).transferFrom(msg.sender, pair, liquidity); // send liquidity to pair
         (uint amount0, uint amount1) = IUniswapV2Pair(pair).burn(to);
+```
+
+The core contract's `burn` function handles paying the user back the tokens.
+
+```solidity
         (address token0,) = UniswapV2Library.sortTokens(tokenA, tokenB);
+```
+
+When a function returns multiple values, but we are only interested in some of them, this is how we
+only get those values. It is somewhat cheaper in gas terms than reading a value and never using it.
+
+```solidity
         (amountA, amountB) = tokenA == token0 ? (amount0, amount1) : (amount1, amount0);
+```
+
+Translate the amounts from the way the core contract returns them (lower address token first) to the
+way the user expects them (corresponding to `tokenA` and `tokenB`).
+
+```solidity
         require(amountA >= amountAMin, 'UniswapV2Router: INSUFFICIENT_A_AMOUNT');
         require(amountB >= amountBMin, 'UniswapV2Router: INSUFFICIENT_B_AMOUNT');
     }
+```
+
+It is OK to do the transfer first and then verify it is legitimate, because if it isn't we'll revert
+out of all the state changes.
+
+
+```solidity
     function removeLiquidityETH(
         address token,
         uint liquidity,
@@ -1209,6 +1265,13 @@ to what it had the last time liquidity changed) and
         IWETH(WETH).withdraw(amountETH);
         TransferHelper.safeTransferETH(to, amountETH);
     }
+```
+
+Remove liquidity for ETH is almost the same, except that we receive the WETH tokens and then redeem them
+for ETH to give back to the liquidity provider.
+
+    
+```solidity    
     function removeLiquidityWithPermit(
         address tokenA,
         address tokenB,
@@ -1224,6 +1287,9 @@ to what it had the last time liquidity changed) and
         IUniswapV2Pair(pair).permit(msg.sender, address(this), value, deadline, v, r, s);
         (amountA, amountB) = removeLiquidity(tokenA, tokenB, liquidity, amountAMin, amountBMin, to, deadline);
     }
+    
+    
+    
     function removeLiquidityETHWithPermit(
         address token,
         uint liquidity,
@@ -1238,6 +1304,8 @@ to what it had the last time liquidity changed) and
         IUniswapV2Pair(pair).permit(msg.sender, address(this), value, deadline, v, r, s);
         (amountToken, amountETH) = removeLiquidityETH(token, liquidity, amountTokenMin, amountETHMin, to, deadline);
     }
+
+
 
     // **** REMOVE LIQUIDITY (supporting fee-on-transfer tokens) ****
     function removeLiquidityETHSupportingFeeOnTransferTokens(
@@ -1261,6 +1329,10 @@ to what it had the last time liquidity changed) and
         IWETH(WETH).withdraw(amountETH);
         TransferHelper.safeTransferETH(to, amountETH);
     }
+    
+    
+    
+    
     function removeLiquidityETHWithPermitSupportingFeeOnTransferTokens(
         address token,
         uint liquidity,
