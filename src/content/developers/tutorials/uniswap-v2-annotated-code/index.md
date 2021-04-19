@@ -853,9 +853,16 @@ address.
 
 [This contract](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implements the
 ERC-20 liquidity token. It is similar to the [OpenWhisk ERC-20 contract](/developers/tutorials/erc20-annotated-code), so
-I will only explain the parts that are different. 
+I will only explain the part that is different, the `permit` functionality.
 
-GOON GOON GOON
+Transactions on Ethereum cost money. As I'm writing this [a Uniswap transaction costs over $50](https://etherscan.io/gastracker).
+One solution to avoid this problem is meta-transactions, 
+
+https://uniswap.org/docs/v2/smart-contract-integration/supporting-meta-transactions/
+
+GOON
+
+
 
 ```solidity
     bytes32 public DOMAIN_SEPARATOR;
@@ -879,8 +886,9 @@ GOON GOON GOON
             )
         );
     }
-    
-    
+```
+
+```solidit
     function permit(address owner, address spender, uint value, uint deadline, uint8 v, bytes32 r, bytes32 s) external {
         require(deadline >= block.timestamp, 'UniswapV2: EXPIRED');
         bytes32 digest = keccak256(
