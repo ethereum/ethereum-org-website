@@ -54,7 +54,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 
 ### Products and services {#products-and-services}
 
-- [Alchemy](https://alchemyapi.io/) _provides API services and tools for bulding and monitoring applications on Ethereum_
+- [Alchemy](https://alchemyapi.io/) _provides API services and tools for building and monitoring applications on Ethereum_
 - [Blockapps](https://blockapps.net/) _implementation of the Enterprise Ethereum protocol, tooling and APIs that form the STRATO platform_
 - [ConsenSys](https://consensys.net/) _provides a range of products and tools for building on Ethereum, as well as consulting and custom development services_
 - [Envision Blockchain](https://envisionblockchain.com/) _provides enterprise focused consulting and development services specializing in Ethereum mainnet_
