@@ -203,7 +203,7 @@ If you're new to Ethereum and haven't done any coding with smart contract langua
 **Yul**
 
 - Intermediate language for Ethereum.
-- Supports the [EVM](en/developers/docs/evm) and [Ewasm](https://github.com/ewasm), an Ethereum flavored WebAssembly, and is designed to be a usable common denominator of both platforms.
+- Supports the [EVM](developers/docs/evm) and [Ewasm](https://github.com/ewasm), an Ethereum flavored WebAssembly, and is designed to be a usable common denominator of both platforms.
 - Good target for high-level optimisation stages that can benefit both EVM and Ewasm platforms equally.
 
 **Yul+**
