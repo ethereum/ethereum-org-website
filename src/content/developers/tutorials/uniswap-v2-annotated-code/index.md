@@ -1295,9 +1295,11 @@ for ETH to give back to the liquidity provider.
         IUniswapV2Pair(pair).permit(msg.sender, address(this), value, deadline, v, r, s);
         (amountA, amountB) = removeLiquidity(tokenA, tokenB, liquidity, amountAMin, amountBMin, to, deadline);
     }
+```
+
+GOON
     
-    
-    
+```solidity    
     function removeLiquidityETHWithPermit(
         address token,
         uint liquidity,
@@ -1312,7 +1314,7 @@ for ETH to give back to the liquidity provider.
         IUniswapV2Pair(pair).permit(msg.sender, address(this), value, deadline, v, r, s);
         (amountToken, amountETH) = removeLiquidityETH(token, liquidity, amountTokenMin, amountETHMin, to, deadline);
     }
-
+```
 
 
     // **** REMOVE LIQUIDITY (supporting fee-on-transfer tokens) ****
@@ -1357,11 +1359,40 @@ for ETH to give back to the liquidity provider.
             token, liquidity, amountTokenMin, amountETHMin, to, deadline
         );
     }
-
+```    
+    
+```solidity
     // **** SWAP ****
     // requires the initial amount to have already been sent to the first pair
     function _swap(uint[] memory amounts, address[] memory path, address _to) internal virtual {
+```
+
+This function performs internal processing that is required for the functions that are exposed
+to traders.
+
+```solidity
         for (uint i; i < path.length - 1; i++) {
+```
+
+As I'm writing this there are [388,160 ERC-20 tokens](https://etherscan.io/tokens). If there was a 
+market for each token pair, it would be over a 150 billion pair exchanges. The entire chain, at
+the moment, [only has 0.1% that number of accounts](https://etherscan.io/chart/address). Instead, the swap 
+functions support the concept of a path. A trader can exchange A for B, B for C, and C for D, even if 
+there is no A-D market.
+
+The prices on these markets tend to be synchronized, because when they are out of sync it creates an
+opportunity for arbitrage. Imagine, for example, three tokens, A, B, and C, that are valued approximately
+equally. There are three pair exchanges, one for each pair.
+
+
+| Event | A-B Exchange | B-C Exchange | A-C Exchange |
+|       |   A | B      |   B    |  C  |   A  | C     |
+| ----- | ------------ | ------------ | ------------ |
+
+
+
+
+```solidity
             (address input, address output) = (path[i], path[i + 1]);
             (address token0,) = UniswapV2Library.sortTokens(input, output);
             uint amountOut = amounts[i + 1];
@@ -1372,10 +1403,23 @@ for ETH to give back to the liquidity provider.
             );
         }
     }
+```
+
+```solidity
     function swapExactTokensForTokens(
+```
+
+This function is used by traders to swap one token for another.
+
+```solidity
         uint amountIn,
         uint amountOutMin,
         address[] calldata path,
+```
+
+This parameter contains the addresses of the ERC-20 contracts.
+
+```solidity
         address to,
         uint deadline
     ) external virtual override ensure(deadline) returns (uint[] memory amounts) {
@@ -1386,6 +1430,9 @@ for ETH to give back to the liquidity provider.
         );
         _swap(amounts, path, to);
     }
+```
+
+```solidity
     function swapTokensForExactTokens(
         uint amountOut,
         uint amountInMax,
