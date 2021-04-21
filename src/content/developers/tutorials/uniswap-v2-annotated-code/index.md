@@ -1384,32 +1384,22 @@ The prices on these markets tend to be synchronized, because when they are out o
 opportunity for arbitrage. Imagine, for example, three tokens, A, B, and C. There are three pair 
 exchanges, one for each pair.
 
-| ------------------------ | ---------------------  | ------------------------ |
-| A-B Exchange             | B-C Exchange           | A-C Exchange             |
-| A:1000 B:1050 A/B=1.05   | B:1000 C:1050 B/C=1.05 | A:1050 C:1000 C/A=1.05   |
-| ------------------------ | ---------------------  | ------------------------ |
+1. The initial situation
+2. A trader sells 24.695 A tokens and gets 25.305 B tokens.
+3. The trader sells 24.695 B tokens for 25.305 C tokens, keeping approximately
+   0.61 B tokens as profit.
+4. Then the trader sells 24.695 C tokens for 25.305 A tokens, keeping approximately 0.61 
+   C tokens as profit. The trader also has 0.61 extra A tokens (the 25.305 the trader
+   ends up with, minus the original investment of 24.695). 
 
-A trader realizes that if you sell A for B and B for C, you can get for each A 1.1025 C tokens.
-Then, if you sell that 1.1025 C for A on the A-C exchange, you get 1.157625 A tokens. Over
-15% profit at zero risk.
 
-Of course, it isn't quite that simple because every transaction changes the exchange rate. 
-But the trader can still profit. First, sell 24.695 A tokens and get 25.305 B tokens.
+| Step | A-B Exchange                 | B-C Exchange                | A-C Exchange                |
+| ---- | ---------------------------- | --------------------------  | --------------------------- |
+|   1  | A:1000 B:1050 A/B=1.05       | B:1000 C:1050 B/C=1.05      | A:1050 C:1000 C/A=1.05      |
+|   2  | A:1024.695 B:1024.695 A/B=1  | B:1000 C:1050 B/C=1.05      | A:1050 C:1000 C/A=1.05      |
+|   3  | A:1024.695 B:1024.695 A/B=1  | B:1024.695 C:1024.695 B/C=1 | A:1050 C:1000 C/A=1.05      |
+|   4  | A:1024.695 B:1024.695 A/B=1  | B:1024.695 C:1024.695 B/C=1 | A:1024.695 C:1024.695 C/A=1 |
 
-| ---------------------------- | ---------------------  | ---------------------- |
-| A:1024.695 B:1024.695 A/B=1  | B:1000 C:1050 B/C=1.05 | A:1050 C:1000 C/A=1.05 |
-| ---------------------------- | ---------------------  | ---------------------- |
-
-Then the trader sells 24.695 B tokens for 25.305 C tokens, keeping approximately
-0.61 B tokens as profit.
-
-| ---------------------------- | --------------------------  | --------------------------- |
-| A:1024.695 B:1024.695 A/B=1  | B:1024.695 C:1024.695 B/C=1 | A:1024.695 C:1024.695 C/A=1 |
-| ---------------------------- | --------------------------  | --------------------------- |
-
-Then the trader sells 24.695 C tokens for 25.305 A tokens, keeping approximately
-0.61 C tokens as profit. The trader also has 0.61 extra A tokens (the 25.305 the trader
-ends up with, minus the original investment of 24.695). 
 
 
 ```solidity
