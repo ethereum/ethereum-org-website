@@ -442,7 +442,7 @@ come from transaction fees (without them we'd keep `reserve0 * reserve1` constan
             }
 ```
 
-Use the `UniswapV2ERC20.\_mint` function to actually create the additional liquidity tokens and assign them to `feeTo`.
+Use the `UniswapV2ERC20._mint` function to actually create the additional liquidity tokens and assign them to `feeTo`.
 
 ```solidity
         } else if (_kLast != 0) {
@@ -660,9 +660,9 @@ us for the swap. This makes it easy for the contract to check that it is not bei
         uint amount1In = balance1 > _reserve1 - amount1Out ? balance1 - (_reserve1 - amount1Out) : 0;
         require(amount0In > 0 || amount1In > 0, 'UniswapV2: INSUFFICIENT_INPUT_AMOUNT');
         { // scope for reserve{0,1}Adjusted, avoids stack too deep errors
-        uint balance0Adjusted = balance0.mul(1000).sub(amount0In.mul(3));
-        uint balance1Adjusted = balance1.mul(1000).sub(amount1In.mul(3));
-        require(balance0Adjusted.mul(balance1Adjusted) >= uint(_reserve0).mul(_reserve1).mul(1000**2), 'UniswapV2: K');
+            uint balance0Adjusted = balance0.mul(1000).sub(amount0In.mul(3));
+            uint balance1Adjusted = balance1.mul(1000).sub(amount1In.mul(3));
+            require(balance0Adjusted.mul(balance1Adjusted) >= uint(_reserve0).mul(_reserve1).mul(1000**2), 'UniswapV2: K');
         }
 
         _update(balance0, balance1, _reserve0, _reserve1);
@@ -1314,8 +1314,6 @@ GOON
         IUniswapV2Pair(pair).permit(msg.sender, address(this), value, deadline, v, r, s);
         (amountToken, amountETH) = removeLiquidityETH(token, liquidity, amountTokenMin, amountETHMin, to, deadline);
     }
-```
-
 
     // **** REMOVE LIQUIDITY (supporting fee-on-transfer tokens) ****
     function removeLiquidityETHSupportingFeeOnTransferTokens(
@@ -1360,6 +1358,8 @@ GOON
         );
     }
 ```    
+
+#### Trade {#trade}
     
 ```solidity
     // **** SWAP ****
@@ -1381,32 +1381,69 @@ functions support the concept of a path. A trader can exchange A for B, B for C,
 there is no A-D market.
 
 The prices on these markets tend to be synchronized, because when they are out of sync it creates an
-opportunity for arbitrage. Imagine, for example, three tokens, A, B, and C, that are valued approximately
-equally. There are three pair exchanges, one for each pair.
+opportunity for arbitrage. Imagine, for example, three tokens, A, B, and C. There are three pair 
+exchanges, one for each pair.
 
+| ------------------------ | ---------------------  | ------------------------ |
+| A-B Exchange             | B-C Exchange           | A-C Exchange             |
+| A:1000 B:1050 A/B=1.05   | B:1000 C:1050 B/C=1.05 | A:1050 C:1000 C/A=1.05   |
+| ------------------------ | ---------------------  | ------------------------ |
 
-| A-B Exchange             | B-C Exchange          | A-C Exchange             |
-| ------------------------ | --------------------- | ------------------------ |
-| A:1000 B:1050 A/B=1.05   | B:1000 C:1050 B/C=1.05| A:1050 C:1000 A/C=~0.952 |
+A trader realizes that if you sell A for B and B for C, you can get for each A 1.1025 C tokens.
+Then, if you sell that 1.1025 C for A on the A-C exchange, you get 1.157625 A tokens. Over
+15% profit at zero risk.
 
-Blah Blah Blah
+Of course, it isn't quite that simple because every transaction changes the exchange rate. 
+But the trader can still profit. First, sell 24.695 A tokens and get 25.305 B tokens.
 
-| A:1000 B:1050 A/B=1.05   | B:1000 C:1050 B/C=1.05| A:1050 C:1000 A/C=~0.952 |
+| ---------------------------- | ---------------------  | ---------------------- |
+| A:1024.695 B:1024.695 A/B=1  | B:1000 C:1050 B/C=1.05 | A:1050 C:1000 C/A=1.05 |
+| ---------------------------- | ---------------------  | ---------------------- |
 
+Then the trader sells 24.695 B tokens for 25.305 C tokens, keeping approximately
+0.61 B tokens as profit.
+
+| ---------------------------- | --------------------------  | --------------------------- |
+| A:1024.695 B:1024.695 A/B=1  | B:1024.695 C:1024.695 B/C=1 | A:1024.695 C:1024.695 C/A=1 |
+| ---------------------------- | --------------------------  | --------------------------- |
+
+Then the trader sells 24.695 C tokens for 25.305 A tokens, keeping approximately
+0.61 C tokens as profit. The trader also has 0.61 extra A tokens (the 25.305 the trader
+ends up with, minus the original investment of 24.695). 
 
 
 ```solidity
             (address input, address output) = (path[i], path[i + 1]);
             (address token0,) = UniswapV2Library.sortTokens(input, output);
             uint amountOut = amounts[i + 1];
+```
+
+Get the pair we are currently handling, sort it (for use with the pair) and get the expected output amount.
+
+```solidity
             (uint amount0Out, uint amount1Out) = input == token0 ? (uint(0), amountOut) : (amountOut, uint(0));
+```
+
+Get the expected out amounts, sorted the way the pair exchange expects them to be.
+
+```solidity
             address to = i < path.length - 2 ? UniswapV2Library.pairFor(factory, output, path[i + 2]) : _to;
+```
+
+Is this the last exchange? If so, send the tokens received for the trade to the destination. If not, send it to the 
+next pair exchange.
+
+```solidity
+
             IUniswapV2Pair(UniswapV2Library.pairFor(factory, input, output)).swap(
                 amount0Out, amount1Out, to, new bytes(0)
-            );
+            );               
         }
     }
 ```
+Actually call the pair exchange to swap the tokens. We don't need a callback to be told about the exchange, so 
+we don't send any bytes in that field.
+
 
 ```solidity
     function swapExactTokensForTokens(
