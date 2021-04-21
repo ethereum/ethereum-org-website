@@ -1385,10 +1385,9 @@ opportunity for arbitrage. Imagine, for example, three tokens, A, B, and C, that
 equally. There are three pair exchanges, one for each pair.
 
 
-| Event | A-B Exchange | B-C Exchange | A-C Exchange |
-|       |   A | B      |   B    |  C  |   A  | C     |
-| ----- | ------------ | ------------ | ------------ |
-
+| Event          | A-B Exchange       | B-C Exchange    | A-C Exchange    |
+| -------------- | ------------------ | --------------- | --------------- |
+| Initial        | A: 1000 B: 1050    | B: 1000 C: 1050 | A: 1000 C: 1000 |
 
 
 
