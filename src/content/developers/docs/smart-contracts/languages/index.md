@@ -203,13 +203,13 @@ If you're new to Ethereum and haven't done any coding with smart contract langua
 **Yul**
 
 - Intermediate language for Ethereum.
-- Supports the [EVM](developers/docs/evm) and [Ewasm](https://github.com/ewasm), an Ethereum flavored WebAssembly, and is designed to be a usable common denominator of both platforms.
+- Supports the [EVM](/developers/docs/evm) and [Ewasm](https://github.com/ewasm), an Ethereum flavored WebAssembly, and is designed to be a usable common denominator of both platforms.
 - Good target for high-level optimisation stages that can benefit both EVM and Ewasm platforms equally.
 
 **Yul+**
 
 - A low-level, highly efficient extension to Yul.
-- Initially designed for an [optimistic rollup](en/developers/docs/layer-2-scaling/#rollups-and-sidechains) contract.
+- Initially designed for an [optimistic rollup](/developers/docs/layer-2-scaling/#rollups-and-sidechains) contract.
 - Yul+ can be looked at as an experimental upgrade proposal to Yul, adding new features to it.
 
 ### Important links {#important-links-2}
@@ -253,7 +253,7 @@ Here are a few things to consider if you haven't tried any of the languages yet:
 
 ### What is great about Solidity? {#solidity-advantages}
 
-- If you are a beginner, there are many tutorials and learning tools out there. See more about that in the [Learn by Coding](https://ethereum.org/en/developers/learning-tools/) section.
+- If you are a beginner, there are many tutorials and learning tools out there. See more about that in the [Learn by Coding](/developers/learning-tools/) section.
 - Good developer tooling available.
 - Solidity has a big developer community, which means you'll most likely find answers to your questions quite quickly.
 
