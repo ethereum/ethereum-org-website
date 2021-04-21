@@ -1594,6 +1594,8 @@ the trader back the resulting ETH.
 
 GOON
 
+https://github.com/Uniswap/uniswap-interface/issues/835
+
 ```solidity 
     // **** SWAP (supporting fee-on-transfer tokens) ****
     // requires the initial amount to have already been sent to the first pair
