@@ -918,6 +918,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="http://nurdtechie98.github.io"><img src="https://avatars.githubusercontent.com/u/21201278?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Chirag Shetty</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Anurdtechie98" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="http://mikebian.co/"><img src="https://avatars.githubusercontent.com/u/150855?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Michael Bianco</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ailoveitaly" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
