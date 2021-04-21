@@ -3455,6 +3455,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "iloveitaly",
+      "name": "Michael Bianco",
+      "avatar_url": "https://avatars.githubusercontent.com/u/150855?v=4",
+      "profile": "http://mikebian.co/",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
