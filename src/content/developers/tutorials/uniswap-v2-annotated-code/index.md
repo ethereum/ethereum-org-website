@@ -1439,7 +1439,7 @@ we don't send any bytes in that field.
     function swapExactTokensForTokens(
 ```
 
-This function is used by traders to swap one token for another.
+This function is used directly by traders to swap one token for another.
 
 ```solidity
         uint amountIn,
@@ -1447,20 +1447,44 @@ This function is used by traders to swap one token for another.
         address[] calldata path,
 ```
 
-This parameter contains the addresses of the ERC-20 contracts.
+This parameter contains the addresses of the ERC-20 contracts. As explained above, this is an array because you might
+need to go through several pair exchanges to get from the asset you have to the asset you want.
+
+A function parameter in solidity can be stored either in `memory` or the `calldata`. If the function is an entry point
+to the contract, called directly from a user (using a transaction) or a different contract, then the parameter's value
+can be taken directly from the call data. If the function is called internally, as `_swap` above, then the parameters
+have to be stored in `memory`. From the perspective of the called contract `calldata` is read only.
+
+With scalar types such as `uint` or `address` the compiler handles the choice of storage for us, but with arrays, which
+are longer and more expensive, we specify the type of storage to be used.
 
 ```solidity
         address to,
         uint deadline
     ) external virtual override ensure(deadline) returns (uint[] memory amounts) {
+```
+
+Return values are always returned in memory.
+
+```solidity
         amounts = UniswapV2Library.getAmountsOut(factory, amountIn, path);
         require(amounts[amounts.length - 1] >= amountOutMin, 'UniswapV2Router: INSUFFICIENT_OUTPUT_AMOUNT');
+```
+
+Calculate the amount to be purchased in each swap. It the result is less than the minimum the trader is willing to accept,
+revert out of the transaction.
+
+```solidity        
         TransferHelper.safeTransferFrom(
             path[0], msg.sender, UniswapV2Library.pairFor(factory, path[0], path[1]), amounts[0]
         );
         _swap(amounts, path, to);
     }
 ```
+
+Finally, transfer the initial ERC-20 token to the account for the first pair exchange and call `_swap`. This is all happening
+in the same transaction, so the pair exchange knows that any unexpected tokens are part of this transfer.
+
 
 ```solidity
     function swapTokensForExactTokens(
@@ -1477,6 +1501,17 @@ This parameter contains the addresses of the ERC-20 contracts.
         );
         _swap(amounts, path, to);
     }
+```    
+    
+The previous function, `swapTokensForTokens`, allows a trader to specify an exact number of input tokens he is willing to
+give and the minimum number of output tokens he is willing to receive in return. This function does the reverse swap, it
+lets a trader specify the number of output tokens he wants, and the maximum number of input tokens he is willing to pay for
+them.
+
+In both cases, the trader has to give this peripheral contract first an allowance to allow it to transfer them.
+
+    
+```solidity    
     function swapExactETHForTokens(uint amountOutMin, address[] calldata path, address to, uint deadline)
         external
         virtual
@@ -1492,6 +1527,8 @@ This parameter contains the addresses of the ERC-20 contracts.
         assert(IWETH(WETH).transfer(UniswapV2Library.pairFor(factory, path[0], path[1]), amounts[0]));
         _swap(amounts, path, to);
     }
+    
+    
     function swapTokensForExactETH(uint amountOut, uint amountInMax, address[] calldata path, address to, uint deadline)
         external
         virtual
@@ -1509,6 +1546,9 @@ This parameter contains the addresses of the ERC-20 contracts.
         IWETH(WETH).withdraw(amounts[amounts.length - 1]);
         TransferHelper.safeTransferETH(to, amounts[amounts.length - 1]);
     }
+    
+    
+    
     function swapExactTokensForETH(uint amountIn, uint amountOutMin, address[] calldata path, address to, uint deadline)
         external
         virtual
@@ -1526,6 +1566,8 @@ This parameter contains the addresses of the ERC-20 contracts.
         IWETH(WETH).withdraw(amounts[amounts.length - 1]);
         TransferHelper.safeTransferETH(to, amounts[amounts.length - 1]);
     }
+    
+    
     function swapETHForExactTokens(uint amountOut, address[] calldata path, address to, uint deadline)
         external
         virtual
@@ -1543,7 +1585,16 @@ This parameter contains the addresses of the ERC-20 contracts.
         // refund dust eth, if any
         if (msg.value > amounts[0]) TransferHelper.safeTransferETH(msg.sender, msg.value - amounts[0]);
     }
+```
 
+These four variants all involve trading between ETH and tokens. The only difference is that we either receive ETH
+from the trader and use it to mint WETH, or we receive WETH from the last exchange in the path and burn it, sending
+the trader back the resulting ETH.
+
+
+GOON
+
+```solidity 
     // **** SWAP (supporting fee-on-transfer tokens) ****
     // requires the initial amount to have already been sent to the first pair
     function _swapSupportingFeeOnTransferTokens(address[] memory path, address _to) internal virtual {
@@ -1678,6 +1729,7 @@ This parameter contains the addresses of the ERC-20 contracts.
 
 ### UniswapV2Migrator.sol  {#UniswapV2Migrator}
 
+This contract was used to migrate exchanges from the old v1 to v2. Now that they have been migrated, it is no longer relevant.
 
 ## The Libraries {#libraries}
 
@@ -1688,7 +1740,7 @@ to document it here.
 
 ### Math {#Math}
 
-This library contains some math functions that are not normally needed in Solidity code.
+This library contains some math functions that are not normally needed in Solidity code, so they aren't part of the language.
 
 ```solidity
 pragma solidity =0.5.16;
@@ -1719,6 +1771,9 @@ library Math {
 
 ### Fixed Point Fractions (UQ112x112)    {#FixedPoint}
 
+This library handles fractions, which are normally not part of Ethereum arithmetic. It does this by encoding the number _x_
+as _x*2^112_. This lets us use the original addition and subtraction opcodes without a change.
+
 ```solidity
 pragma solidity =0.5.16;
 
@@ -1729,18 +1784,30 @@ pragma solidity =0.5.16;
 
 library UQ112x112 {
     uint224 constant Q112 = 2**112;
+```
 
+`Q112` is the encoding for one.
+
+```solidity
     // encode a uint112 as a UQ112x112
     function encode(uint112 y) internal pure returns (uint224 z) {
         z = uint224(y) * Q112; // never overflows
     }
+```    
 
+Because y is `uint112`, the most if can be is 2^113-1. That number can still be encoded as a `UQ112x112`.
+
+```solidity
     // divide a UQ112x112 by a uint112, returning a UQ112x112
     function uqdiv(uint224 x, uint112 y) internal pure returns (uint224 z) {
         z = x / uint224(y);
     }
 }
 ```
+
+If we divide two `UQ112x112` values, the result is no longer multiplied by 2^112. So instead we
+take an integer for the denominator. We would have to us a similar trick to do multiplication, but we don't
+need to do multiplication of `UQ112x112` values.
 
 
 ### UniswapV2Library
@@ -1784,7 +1851,7 @@ parameters B,A, leading to two exchanges instead of one.
 
 This function calculates the address of the pair exchange for the two tokens. This contract is created using 
 [the CREATE2 opcode](https://eips.ethereum.org/EIPS/eip-1014), so we can calculate the address using the same algorithm
-if we know the parameters it uses.
+if we know the parameters it uses. This is a lot cheaper than asking the factory, and 
 
 ```solidity
     // fetches and sorts the reserves for a pair
