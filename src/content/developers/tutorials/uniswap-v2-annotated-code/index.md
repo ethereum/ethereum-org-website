@@ -38,7 +38,7 @@ including their share of the rewards.
 ### Why v2? Why not v3? {#why-v2}
 
 As I'm writing this, [Uniswap v3](https://uniswap.org/whitepaper-v3.pdf) is almost ready. However, it is an upgrade
-that is much more complicated than the original. It is easier to first learn v2, which is simpler, and then go to v3.
+that is much more complicated than the original. It is easier to first learn v2 and then go to v3.
 
 
 ### Core Contracts vs Periphery Contracts  {#contract-types}
