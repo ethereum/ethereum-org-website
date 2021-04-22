@@ -79,4 +79,4 @@ src/intl/*.json
 
 # IDE
 .idea/
-.viscode/
+.vscode/
