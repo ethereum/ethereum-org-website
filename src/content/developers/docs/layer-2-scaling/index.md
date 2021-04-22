@@ -69,17 +69,17 @@ The sidechain where ZK rollups happen can be optimised to reduce transaction siz
 
 #### Pros and cons {#zk-pros-and-cons}
 
-| Pros                                                                                                               | Cons                                                                                                                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| No delay as proofs are already considered valid when submitted to the main chain.                                  | Limited to simple transfers, not compatible with the EVM.                                                                                                                                                         |
-| Less vulnerable to the economic attacks that [Optimistic rollups](#optimistic-pros-and-cons) can be vulnerable to. | Validity proofs are intense to compute – not worth it for applications with little on-chain activity.                                                                                                             |
-|                                                                                                                    | Slower subjective [finality](/glossary/#finality) time (10-30 min to generate a ZK proof) (but faster to full finality because there is no dispute time delay like in [Optimistic rollups](#optimistic-rollups)). |
+| Pros                                                                                                              | Cons                                                                                                  |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Faster finality time since the state is instantly verified once the proofs are sent to the main chain.            | Some don't have EVM support.                                                                          |
+| Not vulnerable to the economic attacks that [Optimistic rollups](#optimistic-pros-and-cons) can be vulnerable to. | Validity proofs are intense to compute – not worth it for applications with little on-chain activity. |
+| Secure and decentralized, since the data that is needed to recover the state is stored on the layer 1 chain.      |                                                                                                       |
 
 #### Use ZK rollups {#use-zk-rollups}
 
 - [Loopring](https://loopring.org/#/)
 - [Starkware](https://starkware.co/)
-- [Matter Labs zkSync](https://matter-labs.io/)
+- [Matter Labs zkSync](https://zksync.io/)
 - [Aztec 2.0](https://aztec.network/)
 
 ### Optimistic rollups {#optimistic-rollups}
