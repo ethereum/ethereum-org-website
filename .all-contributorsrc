@@ -3473,6 +3473,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "StanislavBreadless",
+      "name": "Stanislav Bezkorovainyi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/52464764?v=4",
+      "profile": "https://github.com/StanislavBreadless",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
