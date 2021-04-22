@@ -69,6 +69,7 @@ const Link = ({
   hideArrow = false,
   className,
   isPartiallyActive = true,
+  ariaLabel,
 }) => {
   // markdown pages pass `href`, not `to`
   to = to || href
@@ -83,7 +84,7 @@ const Link = ({
   // See https://github.com/gatsbyjs/gatsby/issues/21909
   if (isHash) {
     return (
-      <a className={className} href={to}>
+      <a className={className} href={to} aria-label={ariaLabel}>
         {children}
       </a>
     )
@@ -98,6 +99,7 @@ const Link = ({
         href={to}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label={ariaLabel}
       >
         {children}
       </a>
@@ -118,6 +120,7 @@ const Link = ({
         target="_blank"
         rel="noopener noreferrer"
         onClick={() => trackCustomEvent(eventOptions)}
+        aria-label={ariaLabel}
       >
         {children}
       </a>
@@ -128,6 +131,7 @@ const Link = ({
         target="_blank"
         rel="noopener noreferrer"
         onClick={() => trackCustomEvent(eventOptions)}
+        aria-label={ariaLabel}
       >
         {children}
       </ExternalLink>
