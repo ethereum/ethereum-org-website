@@ -5,7 +5,7 @@ author: "Sumi Mudgil"
 tags: ["NFTs", "ERC-721", "Alchemy", "Metamask", "non fungible tokens", "Solidity"]
 skill: beginner
 lang: en
-sidebar: true
+sidebar: false
 published: 2021-4-22
 ---
 Congrats! You’ve made it to the shortest and simplest part of our NFT tutorial series — how to view your freshly minted NFT on a virtual wallet. We’ll be using Metamask for this example since it is what we used in the previous two parts.
