@@ -1,5 +1,5 @@
 ---
-title: "Vyper ERC-721 Contract Walk-Through"
+title: "Vyper ERC-721 Contract Walkthrough"
 description: Ryuya Nakamura's ERC-721 contract and how it works
 author: Ori Pomerantz
 lang: en
@@ -179,7 +179,7 @@ idToOwner: HashMap[uint256, address]
 idToApprovals: HashMap[uint256, address]
 ```
 
-User and contract identities in Ethereum are represented by 160 bit addresses. These two variables map
+User and contract identities in Ethereum are represented by 160-bit addresses. These two variables map
 from token IDs to their owners and those approved to transfer them (at a maximum of one for each). In Ethereum
 uninitialized data is always zero, so if there is no owner or approved transferor the value for that token
 is zero.
@@ -192,7 +192,7 @@ ownerToNFTokenCount: HashMap[address, uint256]
 
 This variable holds the count of tokens for each owner. There is no mapping from owners to tokens, so
 the only way to identify the tokens that a specific owner owns is to look back in the blockchain's event history 
-and see the appropriate `Transfer`  events. We can use this variable to know when we have all the NFTs and don't 
+and see the appropriate `Transfer` events. We can use this variable to know when we have all the NFTs and don't 
 need to look even further in time.
 
 Note that this algorithm only works for user interfaces and external servers. Code running on the blockchain
@@ -289,7 +289,7 @@ def supportsInterface(_interfaceID: bytes32) -> bool:
 
 In contrast to Python, Vyper is a [static typed language](https://en.wikipedia.org/wiki/Type_system#Static_type_checking). 
 You can't declare a variable, or a function parameter, without identifying the [data 
-type](https://vyper.readthedocs.io/en/latest/types.html). In this case the input parameter is `bytes32`, a 256 bit value
+type](https://vyper.readthedocs.io/en/latest/types.html). In this case the input parameter is `bytes32`, a 256-bit value
 (256 bits is the native word size of the [Ethereum Virtual Machine](/developers/docs/evm/)). The output is a boolean
 value. By convention, the names of function parameters start with an underscore (`_`).
 
@@ -465,7 +465,7 @@ def _clearApproval(_owner: address, _tokenId: uint256):
 ```
 
 Only change the value if necessary. State variables live in storage. Writing to storage is
-one of the most expensive operations the evm (Ethereum Virtual Machine) does (in terms of
+one of the most expensive operations the EVM (Ethereum Virtual Machine) does (in terms of
 [gas](/developers/docs/gas/)). Therefore, it is a good idea to minimize it, even writing the
 existing value has a high cost.
 
@@ -716,7 +716,7 @@ to implement the business logic you want.
 # Conclusion {#conclusion}
 
 
-For review, here are some of the most important ideas in this contract (in my opinion, yours is likely to vary):
+For review, here are some of the most important ideas in this contract:
 
 * To receive ERC-721 tokens with a safe transfer, contracts have to implement the `ERC721Receiver` interface.
 * Even if you use safe transfer, tokens can still get stuck if you send them to an address whose private key
