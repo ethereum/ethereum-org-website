@@ -1,21 +1,25 @@
+---
+title: How to Mint an NFT (Part 2/3 of NFT Tutorial Series)
+description: This tutorial describes how to mint an NFT on the Ethereum blockchain using our smart contract and Web3. You should have already completed [Part 1: How to Write & Deploy an NFT](/developers/tutorials/how-to-write-and-deploy-an-nft), prior to starting Part 2 below. In [Part 3, we will explain how to view your freshly minted NFT on Metamask](/developers/tutorials/how-to-view-nft-in-metamask/)!
+author: "Sumi Mudgil"
+tags: ["NFTs", "ERC-721", "Alchemy", "Solidity", "smart contracts"]
+skill: beginner
+lang: en
+sidebar: false
+published: 2021-04-22
+---
 
-# How to Mint an NFT (Part 2/3 of NFT Tutorial Series)
-
-This tutorial describes how to mint an NFT on the Ethereum blockchain using our smart contract and Web3. You should have already completed Part 1: How to Write & Deploy an NFT, prior to starting Part 2 below. In Part 3, we will explain how to view your freshly minted NFT on Metamask!
-
-##
-
-[Beeple](https://www.wsj.com/articles/beeple-nft-fetches-record-breaking-69-million-in-christies-sale-11615477732): $69 Million
+[Beeple](https://www.nytimes.com/2021/03/11/arts/design/nft-auction-christies-beeple.html): $69 Million
 [3LAU](https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=5f72ef64643b): $11 Million
 [Grimes](https://www.theguardian.com/music/2021/mar/02/grimes-sells-digital-art-collection-non-fungible-tokens): $6 Million
 
 All of them minted their NFT’s using Alchemy’s powerful API. In this tutorial, we’ll teach you how to the same in <10 minutes.
 
-“Minting a NFT” is the act of publishing a unique instance of your ERC721 token on the blockchain. Using our smart contract from Part 1 of this NFT tutorial series, let’s flex our web3 skills and mint a NFT. At the end of this tutorial, you’ll be able to mint as many NFTs as your heart (and wallet) desires!
+“Minting a NFT” is the act of publishing a unique instance of your ERC-721 token on the blockchain. Using our smart contract from Part 1 of this NFT tutorial series, let’s flex our web3 skills and mint a NFT. At the end of this tutorial, you’ll be able to mint as many NFTs as your heart (and wallet) desires!
 
 Let’s get started! 🪄
 
-## Step 1: Install web3
+## Step 1: Install web3 {#install-web3}
 
 If you followed the first tutorial on creating your NFT smart contract, you already have experience using Ethers.js. Web3 is similar to Ethers, as it is a library used to make creating requests to the Ethereum blockchain easier. In this tutorial we’ll be using [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3), which is an enhanced web3 library that offers automatic retries and robust WebSocket support.
 
@@ -23,7 +27,7 @@ In your project home directory run:
 
     npm install @alch/alchemy-web3
 
-## Step 2: Create a mint-nft.js file
+## Step 2: Create a mint-nft.js file {#create-mintnftjs}
 
 Inside your scripts directory, create an mint-nft.js file and add the following lines of code:
 
@@ -32,7 +36,7 @@ Inside your scripts directory, create an mint-nft.js file and add the following 
     const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
     const web3 = createAlchemyWeb3(API_URL);
 
-## Step 3: Grab your contract ABI
+## Step 3: Grab your contract ABI {#contract-abi}
 
 Our contract ABI (Application Binary Interface) is the interface to interact with our smart contract. You can learn more about Contract ABIs [here](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is). Hardhat automatically generates an ABI for us and saves it in the MyNFT.json file. In order to use this we’ll need to parse out the contents by adding the following lines of code to our mint-nft.js file:
 
@@ -46,7 +50,7 @@ To run mint-nft.jsand see your ABI printed to the console navigate to your termi
 
     node scripts/mint-nft.js
 
-## Step 4: Configure the metadata for your NFT using IPFS
+## Step 4: Configure the metadata for your NFT using IPFS {#config-meta}
 
 If you remember from our tutorial in Part 1, our mintNFT smart contract function takes in a tokenURI parameter that should resolve to a JSON document describing the NFT's metadata— which is really what brings the NFT to life, allowing it to have configurable properties, such as a name, description, image, and other attributes.
 > *Interplanetary File System (IPFS) is a decentralized protocol and peer-to-peer network for storing and sharing data in a distributed file system.*
@@ -88,7 +92,7 @@ Once you’re done editing the json file, save it and upload it to Pinata, follo
 
 ![How to upload your nft-metadata.json to Pinata](https://cdn-images-1.medium.com/max/2000/0*eFbjFolSc50YMBmO.gif)
 
-## Step 5: Create an instance of your contract
+## Step 5: Create an instance of your contract {#instance-contract}
 
 Now, to interact with our contract, we need to create an instance of it in our code. To do so we’ll need our contract address which we can get from the deployment or [Etherscan](https://ropsten.etherscan.io/) by looking up the address you used to deploy the contract.
 
@@ -102,7 +106,7 @@ Next we will use the web3 [contract method](https://web3js.readthedocs.io/en/v1.
 
     const nftContract = new web3.eth.Contract(contract.abi, contractAddress);
 
-## Step 6: Update the .env file
+## Step 6: Update the .env file {#update-env}
 
 Now, in order to create and send transactions to the Ethereum chain, we’ll use your public ethereum account address to get the account nonce (will explain below).
 
@@ -112,13 +116,13 @@ Add your public key to your .env file —if you completed part 1 of the tutorial
     PRIVATE_KEY = "your-private-account-address"
     PUBLIC_KEY = "your-public-account-address"
 
-## Step 7: Create your transaction
+## Step 7: Create your transaction {#create-txn}
 
 First, let’s define a function called mintNFT(tokenData) and create our transaction by doing the following:
 
-1. Grab your PRIVATE_KEY* *and* *PUBLIC_KEY from the .env file.
+1. Grab your PRIVATE_KEY *and* PUBLIC_KEY from the .env file.
 
-1. Next, we’ll need to figure out the account nonce. The nonce specification is used to keep track of the number of transactions sent from your address— which we need for security purposes and to prevent [replay attacks](https://docs.alchemyapi.io/alchemy/resources/blockchain-glossary#account-nonce). To get the number of transactions sent from your address, we use [getTransactionCount](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount).
+1. Next, we’ll need to figure out the account nonce. The nonce specification is used to keep track of the number of transactions sent from your address— which we need for security purposes and to prevent [replay attacks](/glossary/#nonce). To get the number of transactions sent from your address, we use [getTransactionCount](/developers/docs/apis/json-rpc/#eth_gettransactioncount).
 
 1. Finally we’ll set up our transaction with the following info:
 
@@ -134,6 +138,7 @@ First, let’s define a function called mintNFT(tokenData) and create our transa
 
 Your mint-nft.js file should look like this now:
 
+ ```js
     require('dotenv').config();
     const API_URL = process.env.API_URL;
     const PUBLIC_KEY = process.env.PUBLIC_KEY;
@@ -158,13 +163,15 @@ Your mint-nft.js file should look like this now:
         'data': nftContract.methods.mintNFT(PUBLIC_KEY, tokenURI).encodeABI()
       };
     }​
+ ```
 
-## Step 8: Sign the transaction
+## Step 8: Sign the transaction {#sign-txn}
 
 Now that we’ve created our transaction, we need to sign it in order to send it off. Here is where we’ll use our private key.
 
 web3.eth.sendSignedTransaction will give us the transaction hash, which we can use to make sure our transaction was mined and didn't get dropped by the network. You'll notice in the transaction signing section, we've added some error checking so we know if our transaction successfully went through.
 
+ ```js
     require('dotenv').config();
     const API_URL = process.env.API_URL;
     const PUBLIC_KEY = process.env.PUBLIC_KEY;
@@ -203,8 +210,9 @@ web3.eth.sendSignedTransaction will give us the transaction hash, which we can u
         console.log(" Promise failed:", err);
       });
     }
+```
 
-## Step 9: Call mintNFT and run node contract-interact.js
+## Step 9: Call mintNFT and run node contract-interact.js {#call-mintnft-fn}
 
 Remember the metadata.json you uploaded to Pinata? Get its hashcode from Pinata and pass the following into a call to mintNFT [https://gateway.pinata.cloud/ipfs/<metadata-hash-code>](https://gateway.pinata.cloud/ipfs/<hash-code>)
 
@@ -217,6 +225,7 @@ Here’s how to get the hashcode:
 
 Altogether, your code should look something like this:
 
+ ```js
     require('dotenv').config();
     const API_URL = process.env.API_URL;
     const PUBLIC_KEY = process.env.PUBLIC_KEY;
@@ -257,6 +266,7 @@ Altogether, your code should look something like this:
     }
 
     mintNFT("https://gateway.pinata.cloud/ipfs/QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
+ ```
 
 Now, run node scripts/mint-nft.js to deploy your NFT. After a couple of seconds, you should see a response like this in your terminal:
 
@@ -268,8 +278,8 @@ Next, visit your [Alchemy mempool](https://dashboard.alchemyapi.io/mempool) to s
 
 ![View your NFT transaction hash on Etherscan](https://cdn-images-1.medium.com/max/5200/0*Q7IfLIhtVnNtAJn-.png)*View your NFT transaction hash on Etherscan*
 
-And that’s it! You’ve now deployed AND minted with a NFT on the Ethereum blockchain 🤑
+And that’s it! You’ve now deployed AND minted with a NFT on the Ethereum blockchain <Emoji text=":money_mouth_face:" size={1} />
 
 Using the mint-nft.js you can mint as many NFT's as your heart (and wallet) desires! Just be sure to pass in a new tokenURI describing the NFT's metadata (otherwise, you'll just end up making a bunch of identical ones with different IDs).
 
-Presumably, you’d like to be able to show off your NFT in your wallet — so be sure to check out Part 3: How to View Your NFT in Your Wallet!
+Presumably, you’d like to be able to show off your NFT in your wallet — so be sure to check out [Part 3: How to View Your NFT in Your Wallet](/developers/tutorials/how-to-view-nft-in-metamask/)!
