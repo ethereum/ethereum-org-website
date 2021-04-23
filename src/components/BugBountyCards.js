@@ -236,7 +236,7 @@ const BugBountyCards = () => (
       <Text>
         <ul>
           <li>
-            <Translation id="page-eth2-bug-bountycard-li-6" />
+            <Translation id="page-eth2-bug-bountycard-li-8" />
           </li>
         </ul>
       </Text>
