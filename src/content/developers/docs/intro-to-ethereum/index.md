@@ -43,7 +43,7 @@ Any participant who broadcasts a transaction request must also offer some amount
 
 The amount of ether paid is a function of the length of the computation. This also prevents malicious participants from intentionally clogging the network by requesting the execution of infinite loops or resource-intensive scripts, as these actors will be continually charged.
 
-## What are smart contracts? {#what-are-smart-conracts}
+## What are smart contracts? {#what-are-smart-contracts}
 
 In practice, participants don’t write new code every time they want to request a computation on the EVM. Rather, application developers upload programs (reusable snippets of code) into EVM storage, and then users make requests for the execution of these code snippets with varying parameters. We call the programs uploaded to and executed by the network smart contracts.
 
