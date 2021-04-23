@@ -27,7 +27,7 @@ like:
 
 ## Prerequisites {#prerequisites}
 
-Before diving into frameworks, we recommend you first read through our introduction to [dapps](/en/developers/docs/dapps/) and the [Ethereum stack](/en/developers/docs/ethereum-stack/).
+Before diving into frameworks, we recommend you first read through our introduction to [dapps](/developers/docs/dapps/) and the [Ethereum stack](/developers/docs/ethereum-stack/).
 
 ## Available frameworks {#available-frameworks}
 
@@ -75,7 +75,7 @@ Before diving into frameworks, we recommend you first read through our introduct
 **The Graph -** **_The Graph for querying blockchain data efficiently_**
 
 - [Website](https://thegraph.com/)
-- [Tutorial](/en/developers/tutorials/the-graph-fixing-web3-data-querying/)
+- [Tutorial](/developers/tutorials/the-graph-fixing-web3-data-querying/)
 
 **Alchemy -** **_Ethereum Development Platform._**
 

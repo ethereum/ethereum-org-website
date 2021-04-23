@@ -14,6 +14,7 @@ const mergeObjects = (target, newObject) => {
 }
 
 const supportedLanguages = Object.keys(languageMetadata)
+
 // Iterate over each supported language and generate /intl/${lang}.json
 // by merging all /intl/${lang}/${page}.json files
 for (const lang of supportedLanguages) {
@@ -34,7 +35,7 @@ for (const lang of supportedLanguages) {
     fs.readdirSync(pathToTranslations).forEach((file) => {
       const pathToFile = `${pathToTranslations}/${file}`
       const json = fs.readFileSync(pathToFile, "utf-8")
-      console.log(`Merging: ${pathToFile}`)
+      // console.log(`Merging: ${pathToFile}`)
       const obj = JSON.parse(json)
       mergeObjects(result, obj)
     })
@@ -45,7 +46,7 @@ for (const lang of supportedLanguages) {
       outputFilename,
       JSON.stringify(result, null, 2).concat("\n")
     )
-    console.log(`Merged translations saved: ${outputFilename}`)
+    // console.log(`Merged translations saved: ${outputFilename}`)
   } catch (e) {
     console.error(e)
   }

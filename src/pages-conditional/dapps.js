@@ -389,7 +389,7 @@ const DappsPage = ({ data, location }) => {
 
   const updatePath = (selectedCategory, isMobile) => {
     // Update URL path with new filter query params
-    let newPath = `/dapps/?category=${selectedCategory ?? FINANCE}`
+    let newPath = `/dapps/?category=${selectedCategory || FINANCE}`
     // If "mobile" option at bottom of the page...
     if (isMobile) {
       // Add #explore and refresh

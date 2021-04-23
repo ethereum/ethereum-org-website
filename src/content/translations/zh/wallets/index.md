@@ -14,7 +14,7 @@ lang: zh
 
 ## 以太坊钱包是什么，以及我该选择哪个去使用？ {#what-is-an-ethereum-wallet-and-which-one-should-i-use}
 
-利用以太坊钱包可以轻松地持有或发送 [ETH](/zh/eth/)，以及与[在以太坊上构建的应用程序](/en/dapps/)交互。
+利用以太坊钱包可以轻松地持有或发送 [ETH](/zh/eth/)，以及与[在以太坊上构建的应用程序](/dapps/)交互。
 
 想要安装一个以太坊钱包？
 

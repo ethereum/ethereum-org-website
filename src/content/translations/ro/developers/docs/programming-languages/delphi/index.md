@@ -20,7 +20,7 @@ Construiește aplicații descentralizate pe platforma Ethereum și interacțione
 
 **Fă primii pași în integrarea Rust cu Ethereum**
 
-Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/en/learn/) sau [ethereum.org/developers](/en/developers/).
+Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/learn/) sau [ethereum.org/developers](/developers/).
 
 - [Blockchain-ul explicat](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Ce sunt contractele inteligente](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -52,4 +52,4 @@ Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/en/learn/) 
 - [Delphi și Ethereum Name Service (ENS)](https://medium.com/@svanas/delphi-and-ethereum-name-service-ens-4443cd278af7)
 - [QuikNode, Ethereum și Delphi](https://medium.com/@svanas/quiknode-ethereum-and-delphi-f7bfc9671c23)
 
-Cauți mai multe resurse? Accesează [ethereum.org/developers.](/en/developers/).
+Cauți mai multe resurse? Accesează [ethereum.org/developers.](/developers/).

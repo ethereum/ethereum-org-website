@@ -13,7 +13,7 @@ Tranzacțiile sunt instrucțiuni semnate criptografic din conturi. Un cont va in
 
 ## Condiții prealabile {#prerequisites}
 
-Pentru a te ajuta să înțelegi mai bine această pagină, îți recomandăm să citești mai întâi [Conturi](/en/developers/docs/accounts/) și [introducerea noastră în Ethereum](/en/developers/docs/intro-to-ethereum/).
+Pentru a te ajuta să înțelegi mai bine această pagină, îți recomandăm să citești mai întâi [Conturi](/developers/docs/accounts/) și [introducerea noastră în Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Ce este o tranzacție? {#whats-a-transaction}
 
@@ -34,7 +34,7 @@ O tranzacție trimisă include următoarele informații:
 - `gasLimit` – cantitatea maximă de unități de gaz care pot fi consumate de tranzacție. Unitățile de gaz reprezintă pași de calcul
 - `gasPrice` – taxa pe care expeditorul o plătește pe unitatea de gaz
 
-Gazul este o referință la calculul necesar procesării tranzacției de către un miner. Utilizatorii trebuie să plătească o taxă pentru acest calcul. `gasLimit` și `gasPrice` determină taxa maximă de tranzacție plătită minerului. [Mai multe despre gaz](/en/developers/docs/gas/).
+Gazul este o referință la calculul necesar procesării tranzacției de către un miner. Utilizatorii trebuie să plătească o taxă pentru acest calcul. `gasLimit` și `gasPrice` determină taxa maximă de tranzacție plătită minerului. [Mai multe despre gaz](/developers/docs/gas/).
 
 Obiectul tranzacției va arăta astfel:
 
@@ -293,7 +293,7 @@ _Cunoști o resursă comunitară care te-a ajutat? Editează această pagină ș
 
 ## Subiecte corelate {#related-topics}
 
-- [Conturi](/en/developers/docs/accounts/)
-- [Mașină virtuală Ethereum (EVM)](/en/developers/docs/evm/)
-- [Gaz](/en/developers/docs/gas/)
-- [Minarea](/en/developers/docs/consensus-mechanisms/pow/mining/)
+- [Conturi](/developers/docs/accounts/)
+- [Mașină virtuală Ethereum (EVM)](/developers/docs/evm/)
+- [Gaz](/developers/docs/gas/)
+- [Minarea](/developers/docs/consensus-mechanisms/pow/mining/)

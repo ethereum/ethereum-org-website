@@ -7,12 +7,12 @@ import { cloneDeep } from "lodash"
 
 import NavDropdown from "./Dropdown"
 import MobileNavMenu from "./Mobile"
+import NakedButton from "../NakedButton"
 import Link from "../Link"
 import Icon from "../Icon"
 import Search from "../Search"
 import Translation from "../Translation"
-import { NavLink } from "../../components/SharedStyledComponents"
-
+import { NavLink } from "../SharedStyledComponents"
 import { translateMessageId } from "../../utils/translations"
 
 const NavContainer = styled.div`
@@ -52,10 +52,6 @@ const NavContent = styled.div`
     align-items: center;
     justify-content: space-between;
   }
-`
-const NavMobileButton = styled.span`
-  outline: none;
-  margin-left: 1rem;
 `
 
 const InnerContent = styled.div`
@@ -115,14 +111,11 @@ const HomeLogo = styled(Img)`
   }
 `
 
-// Todo: opacity -> nudge on hover?
-
 const Span = styled.span`
   padding-left: 0.5rem;
 `
 
-const ThemeToggle = styled.span`
-  cursor: pointer;
+const ThemeToggle = styled(NakedButton)`
   margin-left: 1rem;
   display: flex;
   align-items: center;
@@ -130,26 +123,6 @@ const ThemeToggle = styled.span`
 
 const NavIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.text};
-`
-
-const MenuIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.text};
-  display: none;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: block;
-    cursor: pointer;
-  }
-`
-
-const MobileIcons = styled.div`
-  display: none;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: flex;
-  }
-`
-
-const SearchIcon = styled(MenuIcon)`
-  margin-right: 1rem;
 `
 
 // TODO display page title on mobile
@@ -325,8 +298,8 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       to: "/developers/local-environment/",
     },
   ]
-  let mobileLinkSections = cloneDeep(linkSections)
 
+  let mobileLinkSections = cloneDeep(linkSections)
   const handleMenuToggle = (item) => {
     if (item === "menu") {
       setIsMenuOpen(!isMenuOpen)
@@ -354,7 +327,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           <InnerContent>
             <LeftItems>
               {linkSections.map((section, idx) =>
-                section.items ? (
+                section.items || section.component ? (
                   <NavDropdown
                     section={section}
                     key={idx}
@@ -394,30 +367,8 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
             toggleTheme={handleThemeChange}
             linkSections={mobileLinkSections}
           />
-          <MobileIcons>
-            <NavMobileButton
-              onClick={() => handleMenuToggle("search")}
-              onKeyDown={() => handleMenuToggle("search")}
-              role="button"
-              tabIndex="0"
-              aria-label={translateMessageId("aria-toggle-search-button", intl)}
-            >
-              <SearchIcon name="search" />
-            </NavMobileButton>
-
-            <NavMobileButton
-              onClick={() => handleMenuToggle("menu")}
-              onKeyDown={() => handleMenuToggle("menu")}
-              role="button"
-              tabIndex="0"
-              aria-label={translateMessageId("aria-toggle-menu-button", intl)}
-            >
-              <MenuIcon name="menu" />
-            </NavMobileButton>
-          </MobileIcons>
         </NavContent>
       </StyledNav>
-
       {shouldShowSubNav && (
         <SubNav>
           {ednLinks.map((link, idx) => (

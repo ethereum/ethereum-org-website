@@ -3,7 +3,7 @@
   "page-eth2-bug-bounty-annotations": "Podría ser de ayuda revisar las siguientes anotaciones:",
   "page-eth2-bug-bounty-client-bugs": "Errores de cliente Eth2",
   "page-eth2-bug-bounty-client-bugs-desc": "Los clientes ejecutarán la cadena de baliza una vez que la actualización se haya implementado. Los clientes necesitarán seguir la lógica configurada en la especificación y estarán protegidos frente a ataques potenciales. Los errores que queremos encontrar están relacionados con la implementación del protocolo.",
-  "page-eth2-bug-bounty-client-bugs-desc-2": "Únicamente los errores Prysm, Lighthouse y Teku son aptos para esta recompensa. Se añadirán más clientes en cuanto completen las auditorías y la producción esté lista.",
+  "page-eth2-bug-bounty-client-bugs-desc-2": "Únicamente los errores Lighthouse, Nimbus, Teku y Prysm son aptos para esta recompensa. Se añadirán más clientes en cuanto completen las auditorías y la producción esté lista.",
   "page-eth2-bug-bounty-clients": "Clientes destacados en las recompensas",
   "page-eth2-bug-bounty-clients-type-1": "problemas de incumplimiento de especificaciones.",
   "page-eth2-bug-bounty-clients-type-2": "errores inesperados o vulnerabilidades de denegación de servicio (DOS).",

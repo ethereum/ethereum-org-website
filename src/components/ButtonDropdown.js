@@ -65,7 +65,6 @@ const Button = styled(ButtonSecondary)`
   align-items: center;
   justify-content: space-around;
   min-width: 240px;
-  margin-top: 0;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: 100%;
     justify-content: center;

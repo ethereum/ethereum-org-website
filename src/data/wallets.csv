@@ -1,30 +1,31 @@
 id,name,url,brand_color,has_mobile,has_desktop,has_web,has_hardware,has_card_deposits,has_explore_dapps,has_defi_integrations,has_bank_withdrawals,has_limits_protection,has_high_volume_purchases,has_multisig,has_dex_integrations
-trust,Trust,https://trustwallet.com/,#3375BB,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE
+trust,Trust,https://trustwallet.com/,#FFF,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE
 argent,Argent,https://www.argent.xyz/,#FF875B,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE
-dharma,Dharma,https://www.dharma.io/,#B4A9CE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE
-imtoken,imToken,https://token.im/,,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
-authereum,Authereum,https://authereum.com/,#00172B,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE
-portis,Portis,https://www.portis.io/,#fff,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
-metamask,MetaMask,https://metamask.io/,,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
-gnosis,Gnosis Safe,https://gnosis-safe.io/,#fff,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE
-torus,Torus,https://toruswallet.io/,,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,,,,TRUE,,FALSE
-coinbase,Coinbase Wallet,https://wallet.coinbase.com/,#fff,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
-ledger,Ledger,https://www.ledger.com/,,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
-trezor,Trezor,https://trezor.io/,#fff,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
-monolith,Monolith,https://monolith.xyz/,#e5189e,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE
-mycrypto,MyCrypto,https://www.mycrypto.com/,#fff,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE
-rainbow,Rainbow,https://rainbow.me/,,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
-myetherwallet,MyEtherWallet,https://www.myetherwallet.com/,,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
-alpha,AlphaWallet,https://alphawallet.com/,#fff,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
-enjin,Enjin,https://enjin.io/wallet,#2a2b56,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,,,TRUE,,,TRUE
+dharma,Dharma,https://www.dharma.io/,#FFF,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE
+imtoken,imToken,https://token.im/,#FFF,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
+portis,Portis,https://www.portis.io/,#FFF,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+metamask,MetaMask,https://metamask.io/,#FFF,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+gnosis,Gnosis Safe,https://gnosis-safe.io/,#FFF,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE
+torus,Torus,https://toruswallet.io/,#FFF,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+coinbase,Coinbase Wallet,https://wallet.coinbase.com/,#FFF,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+ledger,Ledger,https://www.ledger.com/,#FFF,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+trezor,Trezor,https://trezor.io/,#FFF,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+monolith,Monolith,https://monolith.xyz/,#E5189E,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE
+mycrypto,MyCrypto,https://www.mycrypto.com/,#FFF,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE
+rainbow,Rainbow,https://rainbow.me/,#FFF,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
+myetherwallet,MyEtherWallet,https://www.myetherwallet.com/,#FFF,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
+alpha,AlphaWallet,https://alphawallet.com/,#FFF,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
+enjin,Enjin,https://enjin.io/wallet,#2A2B56,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE
 status,Status,http://status.im/,#4360DF,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 zengo,ZenGo,https://zengo.com/,#35C4BA,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
 pillar,Pillar,https://pillarproject.io/,#00FF24,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE
-tokenpocket,TokenPocket,https://www.tokenpocket.pro/en/,#2761e7,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+tokenpocket,TokenPocket,https://www.tokenpocket.pro/en/,#2761E7,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
 multis,Multis,https://multis.co/,#166efc,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
-mathwallet,MathWallet,https://mathwallet.org/en-us/,#ffffff,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
+mathwallet,MathWallet,https://mathwallet.org/en-us/,#FFF,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
 hyperpay,HyperPay,https://hyperpay.tech/download,#161823,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE
-dcent,D'CENT,https://dcentwallet.com/,ffffff,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
-fortmatic,Fortmatic Wallet,https://fortmatic.com/,,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
-unstoppable,Unstoppable,https://unstoppable.money/,#FFBE43,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
-guarda,Guarda Wallet,https://guarda.com/,,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE																			
+dcent,D'CENT,https://dcentwallet.com/,#FFF,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+fortmatic,Fortmatic,https://fortmatic.com/,#FFF,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+unstoppable,Unstoppable,https://unstoppable.money/,#000,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
+guarda,Guarda Wallet,https://guarda.com/,#FFF,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE
+linen,Linen,https://linen.app/,#FFF,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE
+coinomi,Coinomi,https://www.coinomi.com/en/,#11b8ef,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE

@@ -85,8 +85,8 @@ const ClearLink = styled.button`
 export const walletCardImage = graphql`
   fragment walletCardImage on File {
     childImageSharp {
-      fixed(width: 80) {
-        ...GatsbyImageSharpFixed
+      fluid(maxWidth: 64) {
+        ...GatsbyImageSharpFluid
       }
     }
   }
@@ -207,10 +207,10 @@ const WalletCompare = ({ location }) => {
       argent: file(relativePath: { eq: "wallets/argent.png" }) {
         ...walletCardImage
       }
-      authereum: file(relativePath: { eq: "wallets/authereum.png" }) {
+      coinbase: file(relativePath: { eq: "wallets/coinbase.png" }) {
         ...walletCardImage
       }
-      coinbase: file(relativePath: { eq: "wallets/coinbase.png" }) {
+      coinomi: file(relativePath: { eq: "wallets/coinomi.png" }) {
         ...walletCardImage
       }
       dcent: file(relativePath: { eq: "wallets/dcent.png" }) {
@@ -238,6 +238,9 @@ const WalletCompare = ({ location }) => {
         ...walletCardImage
       }
       ledger: file(relativePath: { eq: "wallets/ledger.png" }) {
+        ...walletCardImage
+      }
+      linen: file(relativePath: { eq: "wallets/linen.png" }) {
         ...walletCardImage
       }
       mathwallet: file(relativePath: { eq: "wallets/mathwallet.png" }) {
@@ -366,13 +369,10 @@ const WalletCompare = ({ location }) => {
     } else {
       selectedFeatureIds.push(featureId)
 
-      const feature = walletFeatures.filter(
-        (feature) => feature.id === featureId
-      )[0].title
       trackCustomEvent({
         eventCategory: `Wallet feature`,
         eventAction: `Selected`,
-        eventName: feature,
+        eventName: featureId,
       })
     }
     setState({ selectedFeatureIds, wallets: state.wallets })

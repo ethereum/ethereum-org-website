@@ -14,7 +14,7 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 I guess you are as excited as us to [deploy](/developers/docs/smart-contracts/deploying/) and interact with your first [smart contract](/developers/docs/smart-contracts/) on the Ethereum blockchain.
 
-Don’t worry, as it’s our fist smart contract, we’ll deploy it on a [local test network](/developers/docs/networks/) so it does not cost anything for you to deploy and play as much as you’d like with it.
+Don’t worry, as it’s our first smart contract, we’ll deploy it on a [local test network](/developers/docs/networks/) so it does not cost anything for you to deploy and play as much as you’d like with it.
 
 ## Writing our contract {#writing-our-contract}
 
@@ -25,7 +25,8 @@ First step is to [visit Remix](https://remix.ethereum.org/) and create a new fil
 In the new file, we’ll paste the following code.
 
 ```solidity
-pragma solidity 0.5.17;
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.5.17;
 
 contract Counter {
 

@@ -10,13 +10,13 @@ Block explorers are your portal to Ethereum's data. You can use them to see real
 
 ## Prerequisites {#prerequisites}
 
-You should understand the basic concepts of Ethereum so you can make sense of the data that a block explorer gives you. Start with [an intro to Ethereum](/en/developers/docs/intro-to-ethereum/).
+You should understand the basic concepts of Ethereum so you can make sense of the data that a block explorer gives you. Start with [an intro to Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Services {#services}
 
 - [Etherscan](https://etherscan.io/) –_Also available in Chinese, Korean, Russian, and Japanese_
 - [Etherchain](https://www.etherchain.org/)
-- [Ethplorer](https://ethplorer.io/)
+- [Ethplorer](https://ethplorer.io/) –_Also available in Chinese, Spanish and Russian_
 - [Blockchair](https://blockchair.com/ethereum) –_Also available in Spanish, French, Italian, Dutch, Portuguese, Russian, Chinese, and Farsi_
 - [Blockscout](https://blockscout.com/)
 - [OKLink](https://www.oklink.com/eth)

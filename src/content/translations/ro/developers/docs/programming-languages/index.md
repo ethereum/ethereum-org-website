@@ -15,12 +15,12 @@ Ethereum și comunitatea sa îmbrățișează open source. Poți găsi proiecte 
 
 Selectează limbajul preferat pentru a găsi proiecte, resurse și comunități virtuale:
 
-- [Ethereum pentru programatori Java](/en/developers/docs/programming-languages/java/)
-- [Ethereum pentru programatori Python](/en/developers/docs/programming-languages/python/)
-- [Ethereum pentru programatori JavaScript](/en/developers/docs/programming-languages/javascript/)
-- [Ethereum pentru programatori Go](/en/developers/docs/programming-languages/golang/)
-- [Ethereum pentru programatori Rust](/en/developers/docs/programming-languages/rust/)
-- [Ethereum pentru programatori .NET](/en/developers/docs/programming-languages/dot-net/)
-- [Ethereum pentru programatori Delphi](/en/developers/docs/programming-languages/delphi/)
+- [Ethereum pentru programatori Java](/developers/docs/programming-languages/java/)
+- [Ethereum pentru programatori Python](/developers/docs/programming-languages/python/)
+- [Ethereum pentru programatori JavaScript](/developers/docs/programming-languages/javascript/)
+- [Ethereum pentru programatori Go](/developers/docs/programming-languages/golang/)
+- [Ethereum pentru programatori Rust](/developers/docs/programming-languages/rust/)
+- [Ethereum pentru programatori .NET](/developers/docs/programming-languages/dot-net/)
+- [Ethereum pentru programatori Delphi](/developers/docs/programming-languages/delphi/)
 
 Nu vezi aici limbajul preferat? Solicită o pagină nouă de [deschidere a unei probleme](https://github.com/ethereum/ethereum-org-website/issues/new/choose)

@@ -5,7 +5,7 @@ lang: ro
 sidebar: true
 ---
 
-O aplicație descentralizată (dapp) este o aplicație construită pe o rețea descentralizată care combină un [contract inteligent](/en/developers/docs/smart-contracts/) și o interfață front-end cu utilizatorul. Notă, în Ethereum, contractele inteligente sunt accesibile și transparente – ca API-uri deschise – astfel încât aplicația ta dapp poate include un contract inteligent scris de altcineva.
+O aplicație descentralizată (dapp) este o aplicație construită pe o rețea descentralizată care combină un [contract inteligent](/developers/docs/smart-contracts/) și o interfață front-end cu utilizatorul. Notă, în Ethereum, contractele inteligente sunt accesibile și transparente – ca API-uri deschise – astfel încât aplicația ta dapp poate include un contract inteligent scris de altcineva.
 
 ## Condiții prealabile {#prerequisites}
 
@@ -24,7 +24,7 @@ O aplicație dapp poate avea cod front-end și interfețe de utilizator scrise �
 
 ### Despre contractele inteligente {#on-smart-contracts}
 
-Pentru a introduce aplicațiile dapp, avem nevoie să introducem contractele inteligente – un back-end al aplicației dapp, în lipsa unui termen mai bun. Pentru o prezentare detaliată, accesează secțiunea noastră despre [contracte inteligente](/en/developers/docs/smart-contracts/).
+Pentru a introduce aplicațiile dapp, avem nevoie să introducem contractele inteligente – un back-end al aplicației dapp, în lipsa unui termen mai bun. Pentru o prezentare detaliată, accesează secțiunea noastră despre [contracte inteligente](/developers/docs/smart-contracts/).
 
 Un contract inteligent este un cod care trăiește pe blockchain-ul Ethereum și funcționează exact așa cum a fost programat. Odată ce sunt implementate în rețea, nu le poți schimba. Aplicațiile dapp pot fi descentralizate, pentru că sunt controlate de logica scrisă în contract, nu de un individ sau o companie. Acest lucru înseamnă, de asemenea, că trebuie să concepi cu foarte mare atenție contractele și să le testezi în detaliu.
 
@@ -87,5 +87,5 @@ _Cunoști o resursă comunitară care te-a ajutat? Editează această pagină ș
 
 ## Subiecte corelate {#related-topics}
 
-- [Introducere în stiva Ethereum](/en/developers/docs/ethereum-stack/)
-- [Cadrele de dezvoltare](/en/developers/docs/frameworks/)
+- [Introducere în stiva Ethereum](/developers/docs/ethereum-stack/)
+- [Cadrele de dezvoltare](/developers/docs/frameworks/)

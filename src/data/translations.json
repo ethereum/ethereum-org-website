@@ -16,11 +16,11 @@
     "language": "čeština"
   },
   "de": {
-    "version": 1.1,
+    "version": 2.0,
     "language": "Deutsch"
   },
   "el": {
-    "version": 1.0,
+    "version": 2.0,
     "language": "Ελληνικά"
   },
   "es": {
@@ -43,8 +43,12 @@
     "version": 2.0,
     "language": "हिन्दी"
   },
+  "hr": {
+    "version": 2.0,
+    "language": "Hrvatski"
+  },
   "hu": {
-    "version": 1.1,
+    "version": 2.0,
     "language": "Magyar"
   },
   "id": {
@@ -56,7 +60,7 @@
     "language": "Ibo"
   },
   "it": {
-    "version": 1.1,
+    "version": 2.0,
     "language": "Italiano"
   },
   "ja": {

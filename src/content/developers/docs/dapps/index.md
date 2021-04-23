@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-A decentralized application (dapp) is an application built on a decentralized network that combines a [smart contract](/en/developers/docs/smart-contracts/) and a frontend user interface. Note, in Ethereum smart-contracts are accessible and transparent – like open APIs – so your dapp can even include a smart contract that someone else has written.
+A decentralized application (dapp) is an application built on a decentralized network that combines a [smart contract](/developers/docs/smart-contracts/) and a frontend user interface. Note, in Ethereum smart-contracts are accessible and transparent – like open APIs – so your dapp can even include a smart contract that someone else has written.
 
 ## Prerequisites {#prerequisites}
 
@@ -24,7 +24,7 @@ A dapp can have frontend code and user interfaces written in any language (just 
 
 ### On smart contracts {#on-smart-contracts}
 
-To introduce dapps, we need to introduce smart contracts – a dapp's backend for lack of a better term. For a detailed overview head to our section on [smart contracts](/en/developers/docs/smart-contracts/).
+To introduce dapps, we need to introduce smart contracts – a dapp's backend for lack of a better term. For a detailed overview head to our section on [smart contracts](/developers/docs/smart-contracts/).
 
 A smart contract is code that lives on the Ethereum blockchain and runs exactly as programmed. Once they are deployed on the network you can't change them. Dapps can be decentralized because they are controlled by the logic written into the contract, not an individual or company. This also means you need to design your contracts very carefully and test them thoroughly.
 
@@ -47,7 +47,7 @@ A smart contract is code that lives on the Ethereum blockchain and runs exactly 
 
 - **Maintenance** – dapps can be harder to maintain because code and data published to the blockchain is harder to modify. It’s hard for developers to make updates to their dapps (or the underlying data stored by a dapp) once they are deployed - even if bugs or security risks are identified in an old version.
 - **Performance overhead** – there is a huge performance overhead, and scaling is really hard. To achieve the level of security, integrity, transparency, and reliability that Ethereum aspires to, every node runs and stores every transaction. On top of this, proof-of-work takes time as well. A back-of-the-envelope calculation puts the overhead at something like 1,000,000x that of standard computation currently.
-- **Network congestion** – at least in the current model, if one dapp is using too many computational resources, the entire network gets backed up. Currently, the network is only able to process about 10 transactions per second; if transactions are being sent in faster than this, the pool of unconfirmed transactions can quickly balloon.
+- **Network congestion** – at least in the current model, if one dapp is using too many computational resources, the entire network gets backed up. Currently, the network is only able to process about 10-15 transactions per second; if transactions are being sent in faster than this, the pool of unconfirmed transactions can quickly balloon.
 - **User experience** – it may be harder to engineer user-friendly experiences: The average end user might find it too difficult to set up a tool stack necessary to interact with the blockchain in a truly secure fashion.
 - **Centralization** – User-friendly and developer-friendly solutions built on top of the base layer of Ethereum might end up looking like centralized services anyways: for example, such services may store keys or other sensitive information server-side, serve a frontend using a centralized server, or run important business logic on a centralized server before writing to the blockchain. This eliminates many (if not all) of the advantages of blockchain over the traditional model.
 
@@ -90,5 +90,5 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related Topics {#related-topics}
 
-- [Introduction to the Ethereum stack](/en/developers/docs/ethereum-stack/)
-- [Development frameworks](/en/developers/docs/frameworks/)
+- [Introduction to the Ethereum stack](/developers/docs/ethereum-stack/)
+- [Development frameworks](/developers/docs/frameworks/)

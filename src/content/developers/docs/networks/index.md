@@ -11,7 +11,7 @@ Networks are different Ethereum environments you can access for development, tes
 
 ## Prerequisites {#prerequisites}
 
-You should understand the basics of Ethereum before reading up on the different networks as the test networks will give you a cheap, safe version of Ethereum to play around with. Try our [introduction to Ethereum](/en/developers/docs/intro-to-ethereum/).
+You should understand the basics of Ethereum before reading up on the different networks as the test networks will give you a cheap, safe version of Ethereum to play around with. Try our [introduction to Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Public networks {#public-networks}
 

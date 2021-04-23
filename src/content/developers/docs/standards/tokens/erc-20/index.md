@@ -20,7 +20,7 @@ Tokens can represent virtually anything in Ethereum:
 - and more...
 
 Such a powerful feature of Ethereum must be handled by a robust standard, right? That's exactly
-where the ERC-20 plays its role! This standards allows developers to build token applications that are interoperable with other products and services.
+where the ERC-20 plays its role! This standard allows developers to build token applications that are interoperable with other products and services.
 
 **What is ERC-20?**
 
@@ -152,9 +152,3 @@ print("Addr Balance:", addr_balance)
 - [OpenZeppelin - Tokens](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
 - [OpenZeppelin - ERC-20 Implementation](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [ConsenSys - ERC-20 Implementation](https://github.com/ConsenSys/Tokens/blob/master/contracts/eip20/EIP20.sol)
-
-## Related topics {#related-topics}
-
-- [ERC-721](/developers/docs/standards/tokens/erc-721/)
-- [ERC-777](/developers/docs/standards/tokens/erc-777/)
-- [ERC-1155](/developers/docs/standards/tokens/erc-1155/)

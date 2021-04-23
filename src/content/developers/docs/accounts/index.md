@@ -9,14 +9,14 @@ An Ethereum account is an entity with an ether (ETH) balance that can send trans
 
 ## Prerequisites {#prerequisites}
 
-Accounts are a very beginner-friendly topic. But to help you better understand this page, we recommend you first read through our [introduction to Ethereum](/en/developers/docs/intro-to-ethereum/).
+Accounts are a very beginner-friendly topic. But to help you better understand this page, we recommend you first read through our [introduction to Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Account types {#types-of-account}
 
 Ethereum has two account types:
 
 - Externally-owned – controlled by anyone with the private keys
-- Contract – a smart contract deployed to the network, controlled by code. Learn about [smart contracts](/en/developers/docs/smart-contracts/)
+- Contract – a smart contract deployed to the network, controlled by code. Learn about [smart contracts](/developers/docs/smart-contracts/)
 
 Both account types have the ability to:
 
@@ -35,7 +35,7 @@ Both account types have the ability to:
 
 - Creating an account has a cost because you're using network storage
 - Can only send transactions in response to receiving a transaction
-- Transactions from an external account to a contract account can trigger code which can execute many different actions, such as transfering tokens or even creating a new contract
+- Transactions from an external account to a contract account can trigger code which can execute many different actions, such as transferring tokens or even creating a new contract
 
 ## An account examined {#an-account-examined}
 
@@ -85,7 +85,7 @@ Repeat passphrase:
 
 It is possible to derive new public keys from your private key but you cannot derive a private key from public keys. This means it's vital to keep a private key safe and, as the name suggests, **PRIVATE**.
 
-You need a private key to sign messages and transactions which outputs a signature. Others can then take the signature to derive your public key, proving the author of the message. In your application, you can use a javascript library to send transactions to the network.
+You need a private key to sign messages and transactions which output a signature. Others can then take the signature to derive your public key, proving the author of the message. In your application, you can use a javascript library to send transactions to the network.
 
 <!-- **WEB3JS example**
 
@@ -122,11 +122,19 @@ TODO: add a contract address example-->
 
 Most users will want to interact with their account via a wallet. Note that an account is not a wallet. A wallet is the keypair associated with a user-owned account, which allow a user to make transactions from or manage the account
 
-For dapp development, you'll want access to dummy accounts with test ETH so you can experiment. When you create a local chain, you'll get test accounts wth fake ETH which you can then import using MetaMask and use on your dapp's frontend. -->
+For dapp development, you'll want access to dummy accounts with test ETH so you can experiment. When you create a local chain, you'll get test accounts with fake ETH which you can then import using MetaMask and use on your dapp's frontend. -->
 
 ## A note on wallets {#a-note-on-wallets}
 
 An account is not a wallet. A wallet is the keypair associated with a user-owned account, which allow a user to make transactions from or manage the account.
+
+## A visual demo {#a-visual-demo}
+
+Watch Austin walk you through hash functions, and key pairs.
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/QJ010l-pBpE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/9LtBDy67Tho" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Further reading {#further-reading}
 
@@ -134,5 +142,5 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related topics {#related-topics}
 
-- [Smart contracts](/en/developers/docs/smart-contracts/)
-- [Transactions](/en/developers/docs/transactions/)
+- [Smart contracts](/developers/docs/smart-contracts/)
+- [Transactions](/developers/docs/transactions/)

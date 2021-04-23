@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { margin } from "styled-system"
 
 import Card from "./Card"
 import Link from "./Link"
@@ -186,7 +187,6 @@ const Button = styled.button`
   text-decoration: none;
   display: inline-block;
   white-space: nowrap;
-  margin-top: 0.5rem;
   padding: 0.5rem 0.75rem;
   font-size: 1rem;
   border-radius: 0.25em;
@@ -196,6 +196,7 @@ const Button = styled.button`
     opacity: 0.4;
     cursor: not-allowed;
   }
+  ${margin}
 `
 
 export const ButtonPrimary = styled(Button)`
@@ -212,13 +213,14 @@ export const ButtonPrimary = styled(Button)`
 `
 
 export const ButtonSecondary = styled(Button)`
-  background-color: transparent;
   color: ${(props) => props.theme.colors.text};
   border: 1px solid ${(props) => props.theme.colors.text};
+  background-color: transparent;
 
   &:hover {
     color: ${(props) => props.theme.colors.primary};
     border: 1px solid ${(props) => props.theme.colors.primary};
+    box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
   }
   &:active {
     background-color: ${(props) =>

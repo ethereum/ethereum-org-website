@@ -626,9 +626,6 @@ export const query = graphql`
     atomic: file(relativePath: { eq: "wallets/atomic.png" }) {
       ...listImage
     }
-    authereum: file(relativePath: { eq: "wallets/authereum.png" }) {
-      ...listImage
-    }
     bitski: file(relativePath: { eq: "wallets/bitski.png" }) {
       ...listImage
     }
@@ -636,6 +633,9 @@ export const query = graphql`
       ...listImage
     }
     coinbase: file(relativePath: { eq: "wallets/coinbase.png" }) {
+      ...listImage
+    }
+    coinomi: file(relativePath: { eq: "wallets/coinomi.png" }) {
       ...listImage
     }
     dcent: file(relativePath: { eq: "wallets/dcent.png" }) {
@@ -669,6 +669,9 @@ export const query = graphql`
       ...listImage
     }
     ledger: file(relativePath: { eq: "wallets/ledger.png" }) {
+      ...listImage
+    }
+    linen: file(relativePath: { eq: "wallets/linen.png" }) {
       ...listImage
     }
     lumi: file(relativePath: { eq: "wallets/lumi.png" }) {

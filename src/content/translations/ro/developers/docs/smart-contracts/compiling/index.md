@@ -40,7 +40,7 @@ Compilatorul va produce, de asemenea, **Interfața Binară de Aplicație (ABI)**
 
 ABI este un fișier JSON care descrie contractul implementat și funcțiile sale de contract inteligent. Acest lucru ajută la reducerea decalajului dintre web2 și web3
 
-O [bibliotecă client JavaScript](/en/developers/docs/apis/javascript/) va citi **ABI**-ul pentru a putea apela pe contractul tău inteligent din interfața aplicației tale web.
+O [bibliotecă client JavaScript](/developers/docs/apis/javascript/) va citi **ABI**-ul pentru a putea apela pe contractul tău inteligent din interfața aplicației tale web.
 
 Mai jos este ABI-ul pentru contractul de token ERC-20. Un ERC-20 este un token pe care îl poți tranzacționa pe Ethereum.
 
@@ -275,5 +275,5 @@ Mai jos este ABI-ul pentru contractul de token ERC-20. Un ERC-20 este un token p
 
 ## Subiecte corelate {#related-topics}
 
-- [Biblioteci client JavaScript](/en/developers/docs/apis/javascript/)
-- [Mașină virtuală Ethereum](/en/developers/docs/ethereum-virtual-machine/)
+- [Biblioteci client JavaScript](/developers/docs/apis/javascript/)
+- [Mașină virtuală Ethereum](/developers/docs/ethereum-virtual-machine/)

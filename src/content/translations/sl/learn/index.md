@@ -22,7 +22,7 @@ Poleg informacij na tej strani je še veliko virov, ki jih je pripravila skupnos
 - [Kauri](https://kauri.io) _Tehnični članki in vodiči za Ethereum in sorodne projekte_
 - [Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Videoposnetki in predavanja o Ethereumu_
 - [Week in Ethereum News](https://weekinethereumnews.com/) _Tedenski novičnik, ki pokriva ključne dogodke v ekosistemu Ethereum_
-- [What’s new in ETH 2.0](https://notes.ethereum.org/c/Sk8Zs--CQ) _Reden novičnik o razvoju ETH 2.0_
+- [What’s new in ETH 2.0](https://eth2.news) _Reden novičnik o razvoju ETH 2.0_
 - [ETHGlobal](https://ethglobal.co) _Serija hackathonov za Ethereum – udeležite se kakšnega v bližini!_
 
 ## Osnove Ethereuma {#ethereum-basics}
@@ -49,7 +49,7 @@ Pojasnila o Ethereumu in tehnologiji veriženja blokov na splošno na visoki rav
 
 Preprosto povedano je "pametna pogodba" samo delček kode, ki se izvaja v Ethereumu. Imenujemo jo "pogodba", ker lahko koda, se izvaja v Ethereumu, nadzoruje stvari, ki imajo vrednost, kot so ETH in druga digitalna sredstva.
 
-- Ali se želite naučiti, kako programirati pametne pogodbe v Ethereumu? [ethereum.org/sl/developers](/en/developers/)
+- Ali se želite naučiti, kako programirati pametne pogodbe v Ethereumu? [ethereum.org/sl/developers](/developers/)
 
 ## Dokaz dela in rudarjenje {#proof-of-work-and-mining}
 

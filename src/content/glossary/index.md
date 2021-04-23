@@ -373,7 +373,7 @@ A JSON-encoded file that contains a single (randomly generated) [private key](#p
 
 ### layer 2 {#layer-2}
 
-An area of development focussed on layering improvements on top of the Ethereum protocol. These improvements are related to [transaction](#transaction) speeds, cheaper [transaction fees](#transaction-fee), and transaction privacy.
+An area of development focused on layering improvements on top of the Ethereum protocol. These improvements are related to [transaction](#transaction) speeds, cheaper [transaction fees](#transaction-fee), and transaction privacy.
 
 <DocLink to="/developers/docs/layer-2-scaling/" title="Layer 2" />
 
@@ -532,7 +532,7 @@ A type of [layer 2](#layer-2) scaling solution that batches multiple transaction
 
 ### Serenity {#serenity}
 
-The fourth and final development stage of Ethereum.
+The fourth and final development stage of Ethereum, otherwise known as Ethereum 2.0.
 
 <DocLink to="/eth2/" title="Ethereum 2.0 (Eth2)" />
 
