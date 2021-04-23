@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { AnimatePresence, motion } from "framer-motion"
+import { motion } from "framer-motion"
 import { FakeLink } from "./SharedStyledComponents"
 import Translation from "../components/Translation"
 
@@ -72,14 +72,12 @@ const ExpandableCard = ({ children, contentPreview, title }) => {
   }
   const childVariants = {
     collapsed: {
-      /* display: "none", */
       opacity: 0,
       transition: {
         duration: 0.1,
       },
     },
     expanded: {
-      /* display: "inline", */
       opacity: 1,
       transition: {
         duration: 0.4,
