@@ -1,6 +1,6 @@
 ---
 title: How to View Your NFT in Your Wallet (Part 3/3 of NFT Tutorial Series)
-description: This tutorial idescribes how to view an existing an NFT on your virtual Ethereum wallet (Metamask)! If you’d like to learn how to mint your own NFT on Ethereum, you should check out Part 1 on How to Write & Deploy an NFT smart contract!
+description: This tutorial idescribes how to view an existing an NFT on your virtual Ethereum wallet (Metamask)! If you’d like to learn how to mint your own NFT on Ethereum, you should check out [Part 1 on How to Write & Deploy an NFT smart contract](/developers/tutorials/how-to-write-and-deploy-an-nft)!
 author: "Sumi Mudgil"
 tags: ["NFTs", "ERC-721", "Alchemy", "Metamask", "non fungible tokens", "Solidity"]
 skill: beginner
