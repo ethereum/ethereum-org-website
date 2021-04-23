@@ -14,6 +14,7 @@ import PageHero from "../../components/PageHero"
 import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
+import BannerNotification from "../../components/BannerNotification"
 import {
   CardContainer,
   Content,
@@ -76,6 +77,16 @@ const StyledBreadcrumbs = styled(Breadcrumbs)`
   justify-content: center;
 `
 
+const StyledBannerNotification = styled(BannerNotification)`
+  display: flex;
+  justify-content: center;
+`
+
+const StyledEmoji = styled(Emoji)`
+  margin-right: 1rem;
+  flex-shrink: 0;
+`
+
 const paths = [
   {
     emoji: ":vertical_traffic_light:",
@@ -135,6 +146,16 @@ const VisionPage = ({ data, location }) => {
         title={translateMessageId("page-eth2-vision-meta-title", intl)}
         description={translateMessageId("page-eth2-vision-meta-desc", intl)}
       />
+      <StyledBannerNotification shouldShow>
+        <StyledEmoji text=":megaphone:" />
+        <div>
+          <b>Latest:</b> Eth2 researchers are working on ways to accelerate the
+          merge. It will probably happen earlier than expected. More soon.{" "}
+          <Link to="https://blog.ethereum.org/category/research-and-development/">
+            Follow updates
+          </Link>
+        </div>
+      </StyledBannerNotification>
       <PageHero content={heroContent} />
       <Divider />
       <Content>
