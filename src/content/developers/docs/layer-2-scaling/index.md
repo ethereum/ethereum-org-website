@@ -30,9 +30,9 @@ You should have a good understanding of all the foundational topics. Implementin
 - [Sidechains](#sidechains)
 - [Hybrid solutions](#hybrid-solutions)
 
-Most layer 2 solutions are centered around a server or cluster of servers, each of which may be referred to as a node, validator, operator, sequencer, block producer, or similar term. Depending on the implementation, these layer 2 nodes may be run by the businesses or entities that use them, or by a 3rd party operator, or by a large group of individuals (similar to mainnet). Generally speaking, transactions are submitted to these layer 2 nodes instead of being submitted directly to layer 1 ([mainnet](/glossary/#mainnet)); the layer 2 instance then batches them into groups before anchoring them to layer 1, after which they are secured by layer 1 and cannot be altered. The details of how this is done vary significantly between different layer 2 technologies and implementations.
+Most layer 2 solutions are centered around a server or cluster of servers, each of which may be referred to as a node, validator, operator, sequencer, block producer, or similar term. Depending on the implementation, these layer 2 nodes may be run by the invividuals, businesses or entities that use them, or by a 3rd party operator, or by a large group of individuals (similar to mainnet). Generally speaking, transactions are submitted to these layer 2 nodes instead of being submitted directly to layer 1 ([mainnet](/glossary/#mainnet)). For some solutions the layer 2 instance then batches them into groups before anchoring them to layer 1, after which they are secured by layer 1 and cannot be altered. The details of how this is done vary significantly between different layer 2 technologies and implementations.
 
-A specific Layer 2 instance may be open and shared by many applications, or may be deployed by one company and dedicated to supporting only their application.
+A specific Layer 2 instance may be open and shared by many applications, or may be deployed by one project and dedicated to supporting only their application.
 
 ## Rollups {#rollups}
 
@@ -71,9 +71,9 @@ The sidechain where ZK rollups happen can be optimised to reduce transaction siz
 
 | Pros                                                                                                              | Cons                                                                                                  |
 | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| Faster finality time since the state is instantly verified once the proofs are sent to the main chain.            | Some don't have EVM support.                                                                          |
+| Faster finality time since the state is instantly verified once the proofs are sent to the main chain.            | Some don't have EVM support.                                                                      |
 | Not vulnerable to the economic attacks that [Optimistic rollups](#optimistic-pros-and-cons) can be vulnerable to. | Validity proofs are intense to compute – not worth it for applications with little on-chain activity. |
-| Secure and decentralized, since the data that is needed to recover the state is stored on the layer 1 chain.      |                                                                                                       |
+| Secure and decentralized, since the data that is needed to recover the state is stored on the layer 1 chain.      | Operator can influence transaction ordering                                                                                                  |
 
 #### Use ZK rollups {#use-zk-rollups}
 
@@ -107,7 +107,7 @@ So you get reimbursed for proving fraud.
 | Pros                                                                                                             | Cons                                                                        |
 | ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | Anything you can do on Ethereum layer 1, you can do with Optimistic rollups as it's EVM and Solidity compatible. | Long wait times for on-chain transaction due to potential fraud challenges. |
-| All transaction data is stored on the layer 1 chain, meaning it's secure and decentralized.                      |                                                                             |
+| All transaction data is stored on the layer 1 chain, meaning it's secure and decentralized.                      |         Operator can influence transaction ordering                                                                                                  |                                                                    |
 
 #### Use Optimistic rollups {#use-optimistic-rollups}
 
@@ -172,6 +172,7 @@ There are two types of channels right now:
 
 ## Plasma {#plasma}
 
+
 A plasma chain is a separate blockchain that is anchored to the main Ethereum chain, and uses fraud proofs (like [Optimistic rollups](#optimistic-rollups)) to arbitrate disputes.
 
 | Pros                                                                                                                  | Cons                                                                                                                                                                        |
@@ -208,6 +209,9 @@ Uses validity proofs like [ZK-rollups](#zk-rollups) but data is not stored on th
 ## Sidechains {#sidechains}
 
 A sidechain is a separate blockchain which runs in parallel to mainnet and operates independently. It has its own consensus algorithm ([Proof of Authority](https://en.wikipedia.org/wiki/Proof_of_authority), [Delegated proof-of-stake](https://en.bitcoinwiki.org/wiki/DPoS), [Byzantine fault tolerance](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained), and so on). It is connected to the main chain by a two-way bridge.
+
+What makes sidechains particularly exciting is that the chain works the same as the main Ethereum chain because it's based on [the EVM](/developers/docs/evm/). It doesn't use Ethereum, it is Ethereum. This means if you want to use sidechains, it's just a matter of deploying it to sidechains. It looks, feels, and acts just like the Ethereum main chain–you write contracts in Solidity, and interact with the chain via the Web3 API.
+
 
 | Pros                                             | Cons                                                                                           |
 | ------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
@@ -250,7 +254,7 @@ Combine the best parts of multiple layer 2 technologies, and may offer configura
 
 **ZK rollups**
 
-- [EthHub on zk-rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
+- [EthHub on zk-rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)\
 
 **Optimistic rollups**
 
