@@ -411,7 +411,7 @@ It's estimated that Eth2 will allow the network to process between 25,000 and 10
 
 [Vitalik Buterin on transactions per second potential on Eth2](https://twitter.com/VitalikButerin/status/1312905884549300224?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1312905886327664640%7Ctwgr%5E%7Ctwcon%5Es2_&ref_url=https%3A%2F%2Fwww.coinspeaker.com%2Fvitalik-buterin-ethereum-layer-2%2F)
 
-At the bear minimum, Eth2 will allow 64 times the amount of transactions as today which sits at around 15 transactions. That's the amount of shard chains (extra data and capacity) being introduced. [More on shard chains](/eth2/shard-chains/)
+At the bare minimum, Eth2 will allow 64 times the amount of transactions as today which sits at around 15 transactions. That's the amount of shard chains (extra data and capacity) being introduced. [More on shard chains](/eth2/shard-chains/)
 
 That means we can estimate how long it will take to process 100,000 transactions so we can compare it to the Visa example above.
 

@@ -3,7 +3,7 @@
   "page-eth2-bug-bounty-annotations": "Ar putea fi util să verifici următoarele adnotări:",
   "page-eth2-bug-bounty-client-bugs": "Erori client Eth2",
   "page-eth2-bug-bounty-client-bugs-desc": "Clienții vor rula lanțul Beacon după implementarea upgrade-ului. Clienții vor trebui să urmeze logica stabilită în specificații și să fie protejați împotriva atacurilor potențiale. Erorile pe care vrem să le găsim sunt legate de implementarea protocolului.",
-  "page-eth2-bug-bounty-client-bugs-desc-2": "Doar erorile Prysm, Lighthouse și Teku sunt eligibile în prezent pentru această recompensă. Mai mulți clienți vor fi adăugați pe măsură ce finalizează auditul și devin gata de producție.",
+  "page-eth2-bug-bounty-client-bugs-desc-2": "Doar erorile Lighthouse, Nimbus, Teku și Prysm sunt eligibile în prezent pentru această recompensă. Mai mulți clienți vor fi adăugați pe măsură ce finalizează auditul și devin gata de producție.",
   "page-eth2-bug-bounty-clients": "Clienți incluși în recompense",
   "page-eth2-bug-bounty-clients-type-1": "probleme de neconformitate cu specificațiile.",
   "page-eth2-bug-bounty-clients-type-2": "blocări neașteptate sau vulnerabilități de refuz al serviciului (DOS).",

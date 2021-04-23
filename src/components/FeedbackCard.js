@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import { ButtonSecondary } from "./SharedStyledComponents"
-import Help from "../components/Help"
 import { trackCustomEvent } from "../utils/matomo"
 
 const Card = styled.div`
@@ -34,10 +33,6 @@ const Title = styled.h3`
   margin-bottom: 0.5rem;
 `
 
-const StyledHelp = styled(Help)`
-  margin-top: 1.5rem;
-`
-
 const Question = styled.div`
   margin-right: 1rem;
 `
@@ -49,9 +44,9 @@ const ButtonContainer = styled.div`
 `
 
 const FeedbackCard = () => {
-  const [isHelpful, setIsHelpful] = useState()
+  const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
 
-  const title = isHelpful
+  const title = feedbackSubmitted
     ? "Thanks for your feedback!"
     : "Did this page help answer your question?"
 
@@ -61,15 +56,14 @@ const FeedbackCard = () => {
       eventAction: `Clicked`,
       eventName: isHelpful,
     })
-    setIsHelpful(isHelpful)
+    setFeedbackSubmitted(true)
   }
   return (
     <Card>
       <Content>
-        <Question>
-          <Title>{title}</Title>
-        </Question>
-        {isHelpful !== true && (
+        <Question></Question>
+        <Title>{title}</Title>
+        {!feedbackSubmitted && (
           <ButtonContainer>
             <ButtonSecondary onClick={() => handleClick(true)}>
               Yes
@@ -80,7 +74,6 @@ const FeedbackCard = () => {
           </ButtonContainer>
         )}
       </Content>
-      {isHelpful === false && <StyledHelp />}
     </Card>
   )
 }

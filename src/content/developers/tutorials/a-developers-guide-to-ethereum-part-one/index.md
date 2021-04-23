@@ -70,10 +70,10 @@ Once Web3.py is properly configured, you can begin to interact with the blockcha
 
 ```python
 # read block data:
-w3.eth.getBlock('latest')
+w3.eth.get_block('latest')
 
 # send a transaction:
-w3.eth.sendTransaction({'from': ..., 'to': ..., 'value': ...})
+w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 ```
 
 ## Installation {#installation}
@@ -206,7 +206,7 @@ If you run this command, you should see a list of ten strings that begin with `0
 As mentioned, the tester provider has preloaded each of these accounts with some test ether. Let’s find out how much is in the first account:
 
 ```python
-In [7]: w3.eth.getBalance(w3.eth.accounts[0])
+In [7]: w3.eth.get_balance(w3.eth.accounts[0])
 Out[7]: 1000000000000000000000000
 ```
 
@@ -224,7 +224,7 @@ One million test ether — still not too shabby.
 Let’s take a peek at the state of this simulated blockchain:
 
 ```python
-In [9]: w3.eth.getBlock('latest')
+In [9]: w3.eth.get_block('latest')
 Out[9]: AttributeDict({
    'number': 0,
    'hash': HexBytes('0x9469878...'),
@@ -245,7 +245,7 @@ A lot of information gets returned about a block, but just a couple things to po
 We’re stuck at block zero until there’s a transaction to mine, so let’s give it one. Send a few test ether from one account to another:
 
 ```python
-In [10]: tx_hash = w3.eth.sendTransaction({
+In [10]: tx_hash = w3.eth.send_transaction({
    'from': w3.eth.accounts[0],
    'to': w3.eth.accounts[1],
    'value': w3.toWei(3, 'ether')
@@ -255,16 +255,16 @@ In [10]: tx_hash = w3.eth.sendTransaction({
 This is typically the point where you’d wait for several seconds for your transaction to get mined into a new block. The full process goes something like this:
 
 1. Submit a transaction and hold on to the transaction hash. Until it gets mined, the transaction is “pending.”
-   `tx_hash = w3.eth.sendTransaction({ … })`
+   `tx_hash = w3.eth.send_transaction({ … })`
 2. Wait for the transaction to be mined:
-   `w3.eth.waitForTransactionReceipt(tx_hash)`
+   `w3.eth.wait_for_transaction_receipt(tx_hash)`
 3. Continue application logic. To view the successful transaction:
-   `w3.eth.getTransaction(tx_hash)`
+   `w3.eth.get_transaction(tx_hash)`
 
 Our simulated environment will add the transaction in a new block instantly, so we can immediately view the transaction:
 
 ```python
-In [11]: w3.eth.getTransaction(tx_hash)
+In [11]: w3.eth.get_transaction(tx_hash)
 Out[11]: AttributeDict({
    'hash': HexBytes('0x15e9fb95dc39...'),
    'blockNumber': 1,
@@ -276,15 +276,15 @@ Out[11]: AttributeDict({
 })
 ```
 
-You’ll see some familiar details here: the `from`, `to`, and `value` fields should match the inputs of our `sendTransaction` call. The other reassuring bit is that this transaction was included as the first transaction (`'transactionIndex': 0`) within block number 1.
+You’ll see some familiar details here: the `from`, `to`, and `value` fields should match the inputs of our `send_transaction` call. The other reassuring bit is that this transaction was included as the first transaction (`'transactionIndex': 0`) within block number 1.
 
 We can also easily verify the success of this transaction by checking the balances of the two accounts involved. Three ether should have moved from one to another.
 
 ```python
-In [12]: w3.eth.getBalance(w3.eth.accounts[0])
+In [12]: w3.eth.get_balance(w3.eth.accounts[0])
 Out[12]: 999996999999999999979000
 
-In [13]: w3.eth.getBalance(w3.eth.accounts[1])
+In [13]: w3.eth.get_balance(w3.eth.accounts[1])
 Out[13]: 1000003000000000000000000
 ```
 

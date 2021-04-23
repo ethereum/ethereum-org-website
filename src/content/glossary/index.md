@@ -532,7 +532,7 @@ A type of [layer 2](#layer-2) scaling solution that batches multiple transaction
 
 ### Serenity {#serenity}
 
-The fourth and final development stage of Ethereum.
+The fourth and final development stage of Ethereum, otherwise known as Ethereum 2.0.
 
 <DocLink to="/eth2/" title="Ethereum 2.0 (Eth2)" />
 
