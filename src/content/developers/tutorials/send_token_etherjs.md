@@ -7,13 +7,11 @@ skill: beginner
 lang: en
 sidebar: true
 published: 2021-04-06
-source:
-sourceUrl: 
 ---
 
 
 
-## send Token Using ethers.js(5.0) {#send-token}
+## Send Token Using ethers.js(5.0) {#send-token}
 
 ### In This Tutorial You'll Learn How To {#you-learn-about}
 * Include ethers.js
@@ -36,7 +34,7 @@ ES3(UMD) in the Browser
 <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"
         type="application/javascript"></script>
 ```
-### Parameter {#param}
+### Parameters {#param}
 1. contract_address - Token contract address(contract address is needed when the token you want to transfer is not ether)
 2. send_token_amount - The amount you want to send to the receiver
 3. to_address - The receiver's address
@@ -57,7 +55,7 @@ window.provider = new InfuraProvider("ropsten");
 ```
 
 ## Sending Procedures {#procedure}
-### 1. Connect to net(mainnet, testnet) {#connect-to-net}
+### 1. Connect to network(mainnet, testnet) {#connect-to-network}
 ### 2. Create wallet {#create-wallet}
 ```
 let wallet = new ethers.Wallet(private_key);
@@ -105,11 +103,11 @@ window.ethersProvider = new ethers.providers.InfuraProvider("ropsten");
 
 send_token(contract_address, send_token_amount, to_address, send_address, private_key);
 ```
-### Result(Success) {#result}
+### Success! {#success}
 ![image](https://user-images.githubusercontent.com/63450340/113803937-7f35fd80-9798-11eb-960c-b2ae90baf84f.png)
 
 
-## send_token() {#send_token_method}
+## send_token() {#send-token-method}
 ```
 function send_token(contract_address, send_token_amount, to_address, send_account, private_key)
 {
