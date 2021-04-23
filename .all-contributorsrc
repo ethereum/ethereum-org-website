@@ -3482,6 +3482,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "rootulp",
+      "name": "Rootul Patel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3699047?v=4",
+      "profile": "https://rootulp.com",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
