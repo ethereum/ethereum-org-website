@@ -23,7 +23,7 @@ Proof-of-stake comes with a number of improvements to the proof-of-work system:
 - better energy efficiency – you don't need to use lots of energy mining blocks
 - lower barriers to entry, reduced hardware requirements – you don't need elite hardware to stand a chance of creating new blocks
 - stronger immunity to centralization – proof-of-stake should lead to more nodes in the network
-- stronger support for shard chains – a key upgrade in scaling the Ethereum network
+- stronger support for [shard chains](/eth2/shard-chains/) – a key upgrade in scaling the Ethereum network
 
 ## Proof-of-stake, staking, and validators {#pos-staking-validators}
 

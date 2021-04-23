@@ -3419,6 +3419,78 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "ozora-ogino",
+      "name": "Ozora Ogino",
+      "avatar_url": "https://avatars.githubusercontent.com/u/63685461?v=4",
+      "profile": "https://github.com/ozora-ogino",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "eltociear",
+      "name": "Ikko Ashimine",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22633385?v=4",
+      "profile": "https://bandism.net/",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "CameronHonis",
+      "name": "Cameron Honis",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66322224?v=4",
+      "profile": "https://github.com/CameronHonis",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "nurdtechie98",
+      "name": "Chirag Shetty",
+      "avatar_url": "https://avatars.githubusercontent.com/u/21201278?v=4",
+      "profile": "http://nurdtechie98.github.io",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "iloveitaly",
+      "name": "Michael Bianco",
+      "avatar_url": "https://avatars.githubusercontent.com/u/150855?v=4",
+      "profile": "http://mikebian.co/",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "Robiquet",
+      "name": "Tom Robiquet",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4950844?v=4",
+      "profile": "https://github.com/Robiquet",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "StanislavBreadless",
+      "name": "Stanislav Bezkorovainyi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/52464764?v=4",
+      "profile": "https://github.com/StanislavBreadless",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "rootulp",
+      "name": "Rootul Patel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3699047?v=4",
+      "profile": "https://rootulp.com",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
