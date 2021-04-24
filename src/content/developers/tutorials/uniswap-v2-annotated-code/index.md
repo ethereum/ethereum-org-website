@@ -1938,8 +1938,8 @@ library TransferHelper {
 
 We can call a different contract in one of two ways:
 
-. Use an interface definition to create a function call
-. Use the [application binary interface (ABI)](https://docs.soliditylang.org/en/v0.8.3/abi-spec.html) ourselves to 
+- Use an interface definition to create a function call
+- Use the [application binary interface (ABI)](https://docs.soliditylang.org/en/v0.8.3/abi-spec.html) "manually" to 
    create the call. This is what the author of the code decided to do it.
 
 ```solidity                
