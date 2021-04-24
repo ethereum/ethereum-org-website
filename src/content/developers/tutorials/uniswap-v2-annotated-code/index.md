@@ -1679,7 +1679,11 @@ https://github.com/Uniswap/uniswap-interface/issues/835
         IWETH(WETH).withdraw(amountOut);
         TransferHelper.safeTransferETH(to, amountOut);
     }
+```
 
+The remaining functions on the contract are just proxies that call the [UniswapV2Library functions](#uniswapV2library).
+
+```solidity
     // **** LIBRARY FUNCTIONS ****
     function quote(uint amountA, uint reserveA, uint reserveB) public pure virtual override returns (uint amountB) {
         return UniswapV2Library.quote(amountA, reserveA, reserveB);
@@ -1759,12 +1763,30 @@ library Math {
         if (y > 3) {
             z = y;
             uint x = y / 2 + 1;
+```
+
+Start with x as an estimate that is higher than the square root (that is the reason we need to treat 1-3 as special cases).
+
+```solidity            
             while (x < z) {
                 z = x;
                 x = (y / x + x) / 2;
+```
+
+Get a closer estimate, the average of the previous estimate and the number whose square root we're trying to find divided by
+the previous estimate. Repeat until the new estimate isn't lower than the existing one. For more details,
+[see here](https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method).
+
+```solidity
             }
         } else if (y != 0) {
             z = 1;
+```
+
+We should never need the square root of zero. The square roots of one, two, and three are roughly one (we use
+integers, so we ignore the fraction).
+
+```solidity
         }
     }
 }
@@ -1808,11 +1830,11 @@ Because y is `uint112`, the most if can be is 2^113-1. That number can still be 
 ```
 
 If we divide two `UQ112x112` values, the result is no longer multiplied by 2^112. So instead we
-take an integer for the denominator. We would have to us a similar trick to do multiplication, but we don't
-need to do multiplication of `UQ112x112` values.
+take an integer for the denominator. We would have needed to use a similar trick to do multiplication, but we 
+don't need to do multiplication of `UQ112x112` values.
 
 
-### UniswapV2Library
+### UniswapV2Library   {#uniswapV2library}
 
 This library is used only by the periphery contracts
 
@@ -1862,24 +1884,46 @@ if we know the parameters it uses. This is a lot cheaper than asking the factory
         (uint reserve0, uint reserve1,) = IUniswapV2Pair(pairFor(factory, tokenA, tokenB)).getReserves();
         (reserveA, reserveB) = tokenA == token0 ? (reserve0, reserve1) : (reserve1, reserve0);
     }
+```
 
+This function returns the reserves of the two tokens that the pair exchange has. Note that it can receive the tokens in either
+order, and sorts them for internal use.
+
+```solidity
     // given some amount of an asset and pair reserves, returns an equivalent amount of the other asset
     function quote(uint amountA, uint reserveA, uint reserveB) internal pure returns (uint amountB) {
         require(amountA > 0, 'UniswapV2Library: INSUFFICIENT_AMOUNT');
         require(reserveA > 0 && reserveB > 0, 'UniswapV2Library: INSUFFICIENT_LIQUIDITY');
         amountB = amountA.mul(reserveB) / reserveA;
     }
+```
 
+This function gives you the amount of token B you'll get in return for token A if there is no fee involved. This calculation
+takes into account that the transfer changes the exchange rate.
+
+```solidity
     // given an input amount of an asset and pair reserves, returns the maximum output amount of the other asset
     function getAmountOut(uint amountIn, uint reserveIn, uint reserveOut) internal pure returns (uint amountOut) {
+```
+
+The `quote` function above works great if there is no fee to use the pair exchange. However, if there is a 0.3%
+exchange fee the amount you actually get is lower. This function calculates the amount after the exchange fee.
+
+```solidity
+    
         require(amountIn > 0, 'UniswapV2Library: INSUFFICIENT_INPUT_AMOUNT');
         require(reserveIn > 0 && reserveOut > 0, 'UniswapV2Library: INSUFFICIENT_LIQUIDITY');
         uint amountInWithFee = amountIn.mul(997);
         uint numerator = amountInWithFee.mul(reserveOut);
-        uint denominator = reserveIn.mul(1000).add(amountInWithFee);
+        uint denominator = reserveIn.mul(1000).add(amountInWithFee);        
         amountOut = numerator / denominator;
     }
+```
 
+Solidity does not handle fractions natively, so we can't just multiply the amount out by 0.997. Instead, we multiply
+the numerator by 997 and the denominator by 1000, achieving the same effect.
+
+```solidity
     // given an output amount of an asset and pair reserves, returns a required input amount of the other asset
     function getAmountIn(uint amountOut, uint reserveIn, uint reserveOut) internal pure returns (uint amountIn) {
         require(amountOut > 0, 'UniswapV2Library: INSUFFICIENT_OUTPUT_AMOUNT');
@@ -1888,7 +1932,12 @@ if we know the parameters it uses. This is a lot cheaper than asking the factory
         uint denominator = reserveOut.sub(amountOut).mul(997);
         amountIn = (numerator / denominator).add(1);
     }
+```
 
+This function does roughtly the same thing, but it gets the output amount and provides the input. 
+
+```solidity
+   
     // performs chained getAmountOut calculations on any number of pairs
     function getAmountsOut(address factory, uint amountIn, address[] memory path) internal view returns (uint[] memory amounts) {
         require(path.length >= 2, 'UniswapV2Library: INVALID_PATH');
@@ -1913,11 +1962,12 @@ if we know the parameters it uses. This is a lot cheaper than asking the factory
 }
 ```
 
+These two functions handle identifying the values when it is necessary to go through several pair exchanges.
 
 ### Transfer Helper {#transfer-helper}
 
-[This library](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol) adds sanity checks around
-ERC-20 and Ethereum transfers to avoid certain pitfalls. 
+[This library](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol) adds success checks 
+around ERC-20 and Ethereum transfers to treat a revert and a `false` value return the same way.
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0-or-later
@@ -1969,19 +2019,18 @@ value (in which case there is output data, and if you decode it as a boolean you
             'TransferHelper::safeTransfer: transfer failed'
         );
     }
-   
+```
+
+This function implements [ERC-20's transfer functionality](https://eips.ethereum.org/EIPS/eip-20#transfer),
+which allows an account to spend out the allowance provided by a different account. 
+
+```solidity    
     
     function safeTransferFrom(
         address token,
         address from,
         address to,
         uint256 value
-```
-
-This function implements [ERC-20's transferFrom functionality](https://eips.ethereum.org/EIPS/eip-20#transferfrom),
-which allows an account to spend out the allowance provided by a different account. 
-
-```solidity        
     ) internal {
         // bytes4(keccak256(bytes('transferFrom(address,address,uint256)')));
         (bool success, bytes memory data) = token.call(abi.encodeWithSelector(0x23b872dd, from, to, value));
@@ -1990,14 +2039,21 @@ which allows an account to spend out the allowance provided by a different accou
             'TransferHelper::transferFrom: transferFrom failed'
         );        
     }
+```
+
+This function implements [ERC-20's transferFrom functionality](https://eips.ethereum.org/EIPS/eip-20#transferfrom),
+which allows an account to spend out the allowance provided by a different account. 
+
+```solidity        
 
     function safeTransferETH(address to, uint256 value) internal {
         (bool success, ) = to.call{value: value}(new bytes(0));
         require(success, 'TransferHelper::safeTransferETH: ETH transfer failed');
     }
 }
-
 ```
 
+This function transfers Ether to an account. Any call to a different contract can attempt to send Ether. Because we 
+don't need to actually call any function, we don't send any data with the call. 
 
 ## Conclusion {#Conclusion}
