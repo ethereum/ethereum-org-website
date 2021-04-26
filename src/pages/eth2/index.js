@@ -269,18 +269,18 @@ const Eth2IndexPage = ({ data }) => {
       date: <Translation id="page-eth2-beacon-chain-estimate" />,
     },
     {
-      image: data.shards.childImageSharp.fixed,
-      title: <Translation id="page-eth2-shard-title" />,
-      description: <Translation id="page-eth2-shard-desc" />,
-      to: "/eth2/shard-chains/",
-      date: <Translation id="page-eth2-shard-estimate" />,
-    },
-    {
       image: data.themerge.childImageSharp.fixed,
       title: <Translation id="page-eth2-docking" />,
       description: <Translation id="page-eth2-docking-desc" />,
       to: "/eth2/merge/",
       date: <Translation id="page-eth2-docking-estimate" />,
+    },
+    {
+      image: data.shards.childImageSharp.fixed,
+      title: <Translation id="page-eth2-shard-title" />,
+      description: <Translation id="page-eth2-shard-desc" />,
+      to: "/eth2/shard-chains/",
+      date: <Translation id="page-eth2-shard-estimate" />,
     },
   ]
 
