@@ -132,10 +132,10 @@ const VisionPage = ({ data, location }) => {
       date: <Translation id="page-eth2-shard-estimate" />,
     },
     {
-      image: data.thedocking.childImageSharp.fixed,
+      image: data.themerge.childImageSharp.fixed,
       title: <Translation id="page-eth2-docking" />,
       description: <Translation id="page-eth2-docking-desc" />,
-      to: "/eth2/docking/",
+      to: "/eth2/merge/",
       date: <Translation id="page-eth2-docking-estimate" />,
     },
   ]
@@ -337,7 +337,7 @@ export const query = graphql`
         }
       }
     }
-    docking: file(relativePath: { eq: "eth2/docking.png" }) {
+    merge: file(relativePath: { eq: "eth2/merge.png" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
@@ -358,7 +358,7 @@ export const query = graphql`
         }
       }
     }
-    thedocking: file(relativePath: { eq: "eth2/docking.png" }) {
+    themerge: file(relativePath: { eq: "eth2/merge.png" }) {
       childImageSharp {
         fixed(width: 420) {
           ...GatsbyImageSharpFixed

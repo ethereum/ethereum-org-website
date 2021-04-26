@@ -367,7 +367,7 @@ const dropdownLinks = {
     },
     {
       text: "page-eth2-upgrades-docking",
-      to: "/eth2/docking/",
+      to: "/eth2/merge/",
     },
   ],
 }

@@ -54,7 +54,7 @@ Shard Chains können nur dann sicher ins Ethereum-Netzwerk eingeführt werden, w
 
 ### Mainnet und die Beacon Chain {#mainnet-and-beacon-chain}
 
-Zu Beginn wird die Beacon Chain parallel und als separate Blockchain zum heutigen Ethereum-Mainnet existieren. Letztlich werden jedoch beide verbunden sein. Der Plan ist, das Mainnet an das Proof-of-Stake-System "anzudocken", welches von der Beacon Chain kontrolliert und koordiniert wird.<ButtonLink to="/eth2/docking/">Das Andocken</ButtonLink>
+Zu Beginn wird die Beacon Chain parallel und als separate Blockchain zum heutigen Ethereum-Mainnet existieren. Letztlich werden jedoch beide verbunden sein. Der Plan ist, das Mainnet an das Proof-of-Stake-System "anzudocken", welches von der Beacon Chain kontrolliert und koordiniert wird.<ButtonLink to="/eth2/merge/">Das Andocken</ButtonLink>
 
 <Divider />
 

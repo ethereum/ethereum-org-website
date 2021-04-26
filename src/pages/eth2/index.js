@@ -245,7 +245,7 @@ const Eth2IndexPage = ({ data }) => {
     title: translateMessageId("page-eth2-upgrades", intl),
     header: translateMessageId("page-eth2-upgrading", intl),
     subtitle: translateMessageId("page-eth2-upgrade-desc", intl),
-    image: data.docking.childImageSharp.fluid,
+    image: data.merge.childImageSharp.fluid,
     alt: translateMessageId("page-dapps-doge-img-alt", intl),
     buttons: [
       {
@@ -276,10 +276,10 @@ const Eth2IndexPage = ({ data }) => {
       date: <Translation id="page-eth2-shard-estimate" />,
     },
     {
-      image: data.thedocking.childImageSharp.fixed,
+      image: data.themerge.childImageSharp.fixed,
       title: <Translation id="page-eth2-docking" />,
       description: <Translation id="page-eth2-docking-desc" />,
-      to: "/eth2/docking/",
+      to: "/eth2/merge/",
       date: <Translation id="page-eth2-docking-estimate" />,
     },
   ]
@@ -467,7 +467,7 @@ const Eth2IndexPage = ({ data }) => {
               <p>
                 <Translation id="page-eth2-shard-date" />
               </p>
-              <Link to="/eth2/docking/">
+              <Link to="/eth2/merge/">
                 <Translation id="page-eth2-docking" />
               </Link>
               <p>
@@ -523,7 +523,7 @@ const Eth2IndexPage = ({ data }) => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/eth2/docking/">
+                  <Link to="/eth2/merge/">
                     <Translation id="page-eth2-just-docking" />
                   </Link>
                 </li>
@@ -550,7 +550,7 @@ const Eth2IndexPage = ({ data }) => {
               </p>
               <p>
                 <Translation id="page-eth2-question-4-answer-2" />{" "}
-                <Link to="/eth2/docking/">
+                <Link to="/eth2/merge/">
                   <Translation id="page-eth2-just-docking" />
                 </Link>
               </p>
@@ -605,7 +605,7 @@ const Eth2IndexPage = ({ data }) => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/eth2/docking/">
+                  <Link to="/eth2/merge/">
                     <Translation id="page-eth2-just-docking" />
                   </Link>
                 </li>
@@ -825,7 +825,7 @@ export const query = graphql`
         }
       }
     }
-    docking: file(relativePath: { eq: "eth2/docking.png" }) {
+    merge: file(relativePath: { eq: "eth2/merge.png" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
@@ -846,7 +846,7 @@ export const query = graphql`
         }
       }
     }
-    thedocking: file(relativePath: { eq: "eth2/docking.png" }) {
+    themerge: file(relativePath: { eq: "eth2/merge.png" }) {
       childImageSharp {
         fixed(width: 420) {
           ...GatsbyImageSharpFixed

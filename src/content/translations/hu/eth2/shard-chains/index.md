@@ -88,7 +88,7 @@ A beacon chain tartalmazza a shardok biztonságához és szinkronizáltságához
 
 ### A shardok és a dokkolás {#shards-and-docking}
 
-Az Ethereum főhálózat a ma ismert formában fog létezni a shardok bevezetése után is. Azonban egy ponton a főhálózatnak is egy sharddá kell válnia, hogy a letétbe helyezési átmenet megtörténjen. Később kiderül majd, hogy a főhálózat lesz-e végül az egyedüli "okos" shard, ami kódlefutást fog végezni - de így vagy úgy, ezt a döntést meg kell majd hozni a shardolás 2-es fázisában.<ButtonLink to="/eth2/docking/">A dokkolás</ButtonLink>
+Az Ethereum főhálózat a ma ismert formában fog létezni a shardok bevezetése után is. Azonban egy ponton a főhálózatnak is egy sharddá kell válnia, hogy a letétbe helyezési átmenet megtörténjen. Később kiderül majd, hogy a főhálózat lesz-e végül az egyedüli "okos" shard, ami kódlefutást fog végezni - de így vagy úgy, ezt a döntést meg kell majd hozni a shardolás 2-es fázisában.<ButtonLink to="/eth2/merge/">A dokkolás</ButtonLink>
 
 <Divider />
 

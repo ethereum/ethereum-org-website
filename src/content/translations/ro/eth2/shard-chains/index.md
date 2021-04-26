@@ -88,7 +88,7 @@ Lanțul Beacon conține toată logica pentru păstrarea fragmentelor în siguran
 
 ### Fragmentele și andocarea {#shards-and-docking}
 
-Rețeaua principală Ethereum va exista așa cum există astăzi chiar și după introducerea fragmentelor. Cu toate acestea, la un moment dat, rețeaua principală va trebui să devină un fragment, astfel încât să poată face tranziția la mizare. Rămâne de văzut dacă rețeaua principală va exista ca singurul fragment „inteligent” care poate gestiona executarea de cod - dar în orice caz, în faza 2 a fragmentării, va trebui să se ia o decizie cu privire la aceasta.<ButtonLink to="/eth2/docking/">Andocarea</ButtonLink>
+Rețeaua principală Ethereum va exista așa cum există astăzi chiar și după introducerea fragmentelor. Cu toate acestea, la un moment dat, rețeaua principală va trebui să devină un fragment, astfel încât să poată face tranziția la mizare. Rămâne de văzut dacă rețeaua principală va exista ca singurul fragment „inteligent” care poate gestiona executarea de cod - dar în orice caz, în faza 2 a fragmentării, va trebui să se ia o decizie cu privire la aceasta.<ButtonLink to="/eth2/merge/">Andocarea</ButtonLink>
 
 <Divider />
 

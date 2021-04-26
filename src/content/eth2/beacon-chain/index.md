@@ -58,7 +58,7 @@ Shard chains can only safely enter the Ethereum ecosystem with a proof-of-stake 
 
 The Beacon Chain, at first, will exist separately to the Ethereum mainnet we use today. But eventually they will be connected. The plan is to “dock” mainnet into the proof-of-stake system that's controlled and coordinated by the Beacon Chain.
 
-<ButtonLink to="/eth2/docking/">The docking</ButtonLink>
+<ButtonLink to="/eth2/merge/">The merge</ButtonLink>
 
 <Divider />
 

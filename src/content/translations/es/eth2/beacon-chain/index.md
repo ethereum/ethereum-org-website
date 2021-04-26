@@ -54,7 +54,7 @@ Las cadenas de fragmentos solo pueden ingresar en el ecosistema Ethereum de mane
 
 ### La red principal y la Cadena de Baliza {#mainnet-and-beacon-chain}
 
-La Cadena de Baliza, en principio, existirá aparte de la red principal de Ethereum que usamos hoy en día. Pero, en última instancia, estarán conectadas. El método es "acoplar" la red principal en el sistema de prueba de participación, que estará controlado y coordinado por la Cadena de Baliza.<ButtonLink to="/eth2/docking/">Acoplamiento</ButtonLink>
+La Cadena de Baliza, en principio, existirá aparte de la red principal de Ethereum que usamos hoy en día. Pero, en última instancia, estarán conectadas. El método es "acoplar" la red principal en el sistema de prueba de participación, que estará controlado y coordinado por la Cadena de Baliza.<ButtonLink to="/eth2/merge/">Acoplamiento</ButtonLink>
 
 <Divider />
 

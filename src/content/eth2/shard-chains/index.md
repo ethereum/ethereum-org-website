@@ -90,11 +90,11 @@ The beacon chain contains all the logic for keeping shards secure and synced up.
 
 <ButtonLink to="/eth2/beacon-chain/">The Beacon Chain</ButtonLink>
 
-### Shards and the docking {#shards-and-docking}
+### Shards and the merge {#shards-and-docking}
 
 The Ethereum mainnet will exist as it does today even after the introduction of shards. However at some point, mainnet will need to become a shard so that it can transition to staking. It remains to be seen whether mainnet will exist as the only “smart” shard that can handle code execution – but either way, a decision will have to be made on phase 2 of sharding.
 
-<ButtonLink to="/eth2/docking/">The docking</ButtonLink>
+<ButtonLink to="/eth2/merge/">The merge</ButtonLink>
 
 <Divider />
 
