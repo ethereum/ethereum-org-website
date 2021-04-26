@@ -855,10 +855,13 @@ address.
 ERC-20 liquidity token. It is similar to the [OpenWhisk ERC-20 contract](/developers/tutorials/erc20-annotated-code), so
 I will only explain the part that is different, the `permit` functionality.
 
-Transactions on Ethereum cost money. As I'm writing this [a Uniswap transaction costs over $50](https://etherscan.io/gastracker).
-One solution to avoid this problem is meta-transactions, 
+Transactions on Ethereum cost money. As I'm writing this [an ERC-20 transfer costs about 
+$7](https://etherscan.io/gastracker). If you have ERC-20 tokens but not Ether, you can't send transactions, so you can't
+do anything with them.
 
-https://uniswap.org/docs/v2/smart-contract-integration/supporting-meta-transactions/
+One solution to avoid this problem is [meta-transactions](https://uniswap.org/docs/v2/smart-contract-integration/supporting-meta-transactions/)
+
+
 
 GOON
 
