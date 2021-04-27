@@ -3491,6 +3491,42 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "ZackDeRose",
+      "name": "Zachary DeRose",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3788405?v=4",
+      "profile": "https://zackderose.dev",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "ArshanKhanifar",
+      "name": "Arshan Khanifar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10492324?v=4",
+      "profile": "https://github.com/ArshanKhanifar",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "schnerd",
+      "name": "David Schnurr",
+      "avatar_url": "https://avatars.githubusercontent.com/u/875591?v=4",
+      "profile": "http://dschnurr.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "keleffew",
+      "name": "Kevin Leffew",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33433528?v=4",
+      "profile": "https://twitter.com/kleffew94",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

@@ -83,6 +83,7 @@
   "page-eth2-bug-bountycard-li-5": "Geringe Auswirkung, hohe Wahrscheinlichkeit",
   "page-eth2-bug-bountycard-li-6": "Hohe Auswirkung, mittlere Wahrscheinlichkeit",
   "page-eth2-bug-bountycard-li-7": "Mittlere Auswirkung, hohe Wahrscheinlichkeit",
+  "page-eth2-bug-bountycard-li-8": "Hohe Auswirkung, hohe Wahrscheinlichkeit",
   "page-eth2-bug-bountycard-low": "Gering",
   "page-eth2-bug-bountycard-low-risk": "Bug mit geringem Risiko melden",
   "page-eth2-bug-bountycard-medium-risk": "Bug mit mittlerem Risiko melden",

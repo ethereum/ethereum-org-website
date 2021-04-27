@@ -109,6 +109,10 @@ PoS based:
 - [Documentation](https://docs.ipfs.io/)
 - [GitHub](https://github.com/ipfs/ipfs)
 
+**Storj DCS -** **_Secure, private, and S3-compatible decentralized cloud object storage for developers._**
+- [Storj](https://storj.io/)
+- [Documentation](https://docs.storj.io/)
+
 **Skynet -** **_Skynet is a decentralized PoW chain dedicated to a decentralized web._**
 
 - [Skynet](https://siasky.net/)

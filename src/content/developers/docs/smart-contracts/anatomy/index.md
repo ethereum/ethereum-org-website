@@ -374,8 +374,8 @@ contract Token {
         // Only the contract owner can call this function
         require(msg.sender == owner, "You are not the owner.");
 
-        // Ensures a maximum amount of tokens
-        require(amount < 1e60, "Maximum issuance succeeded");
+        // Enforces a maximum amount of tokens
+        require(amount < 1e60, "Maximum issuance exceeded");
 
         // Increases the balance of `receiver` by `amount`
         balances[receiver] += amount;
