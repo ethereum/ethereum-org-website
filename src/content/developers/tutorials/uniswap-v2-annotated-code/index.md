@@ -1245,7 +1245,7 @@ The user has already sent us the ETH, so if there is any extra left over (becaus
 than the user thought), we need to issue a refund.
 
 
-#### Add Liquidity {#add-liquidity}
+#### Remove Liquidity {#remove-liquidity}
 
 
 The functions remove liquidity and pay back to the liquidity provider. 
@@ -1342,11 +1342,8 @@ for ETH to give back to the liquidity provider.
         IUniswapV2Pair(pair).permit(msg.sender, address(this), value, deadline, v, r, s);
         (amountA, amountB) = removeLiquidity(tokenA, tokenB, liquidity, amountAMin, amountBMin, to, deadline);
     }
-```
 
-GOON
-    
-```solidity    
+
     function removeLiquidityETHWithPermit(
         address token,
         uint liquidity,
@@ -1361,6 +1358,12 @@ GOON
         IUniswapV2Pair(pair).permit(msg.sender, address(this), value, deadline, v, r, s);
         (amountToken, amountETH) = removeLiquidityETH(token, liquidity, amountTokenMin, amountETHMin, to, deadline);
     }
+```
+
+These functions relay meta-transactions to allow users without Ether to withdraw from the pool, using [the permit 
+mechanism](#UniswapV2ERC20).
+
+```solidity    
 
     // **** REMOVE LIQUIDITY (supporting fee-on-transfer tokens) ****
     function removeLiquidityETHSupportingFeeOnTransferTokens(
@@ -1405,6 +1408,10 @@ GOON
         );
     }
 ```    
+
+These functions are used for tokens that have transfer or storage fees 
+([see here](https://github.com/Uniswap/uniswap-interface/issues/835)).
+
 
 #### Trade {#trade}
     
@@ -1637,7 +1644,6 @@ In both cases, the trader has to give this peripheral contract first an allowanc
 These four variants all involve trading between ETH and tokens. The only difference is that we either receive ETH
 from the trader and use it to mint WETH, or we receive WETH from the last exchange in the path and burn it, sending
 the trader back the resulting ETH.
-
 
 GOON
 
