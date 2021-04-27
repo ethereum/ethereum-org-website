@@ -922,6 +922,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/Robiquet"><img src="https://avatars.githubusercontent.com/u/4950844?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tom Robiquet</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Robiquet" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/StanislavBreadless"><img src="https://avatars.githubusercontent.com/u/52464764?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Stanislav Bezkorovainyi</b></sub></a><br /><a href="#content-StanislavBreadless" title="Content">🖋</a></td>
     <td align="center"><a href="https://rootulp.com"><img src="https://avatars.githubusercontent.com/u/3699047?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rootul Patel</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Arootulp" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://zackderose.dev"><img src="https://avatars.githubusercontent.com/u/3788405?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Zachary DeRose</b></sub></a><br /><a href="#content-ZackDeRose" title="Content">🖋</a></td>
   </tr>
 </table>
 
