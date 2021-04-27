@@ -1390,10 +1390,12 @@ mechanism](#UniswapV2ERC20).
     
 ```
 
-This function is used for tokens that have transfer or storage fees to solve
-([this issue](https://github.com/Uniswap/uniswap-interface/issues/835)). When a token has
+This function can be used for tokens that have transfer or storage fees. When a token has
 such fees we cannot rely on the `removeLiquidity` function to tell us how much of the
-token we withdraw, so we need to withdraw first and then get the balance.
+token we withdraw, so we need to withdraw first and then get the balance. 
+
+Note: I'm not sure why this function exists, because Uniswap v. 2 liquidity tokens do not
+have such fees.
 
 ```solidity
     
@@ -1651,14 +1653,17 @@ These four variants all involve trading between ETH and tokens. The only differe
 from the trader and use it to mint WETH, or we receive WETH from the last exchange in the path and burn it, sending
 the trader back the resulting ETH.
 
-GOON
-
-https://github.com/Uniswap/uniswap-interface/issues/835
 
 ```solidity 
     // **** SWAP (supporting fee-on-transfer tokens) ****
     // requires the initial amount to have already been sent to the first pair
     function _swapSupportingFeeOnTransferTokens(address[] memory path, address _to) internal virtual {
+```
+
+This is the internal function to swap tokens that have transfer or storage fees to solve
+([this issue](https://github.com/Uniswap/uniswap-interface/issues/835)). 
+
+```solidity
         for (uint i; i < path.length - 1; i++) {
             (address input, address output) = (path[i], path[i + 1]);
             (address token0,) = UniswapV2Library.sortTokens(input, output);
@@ -1670,12 +1675,23 @@ https://github.com/Uniswap/uniswap-interface/issues/835
             (uint reserveInput, uint reserveOutput) = input == token0 ? (reserve0, reserve1) : (reserve1, reserve0);
             amountInput = IERC20(input).balanceOf(address(pair)).sub(reserveInput);
             amountOutput = UniswapV2Library.getAmountOut(amountInput, reserveInput, reserveOutput);
+```
+
+Because of the transfer fees we cannot rely on the `removeLiquidity` function to tell us how much of the
+token we withdraw, so we need to withdraw first and then get the balance. 
+
+GOON
+
+```solidity
             }
             (uint amount0Out, uint amount1Out) = input == token0 ? (uint(0), amountOutput) : (amountOutput, uint(0));
             address to = i < path.length - 2 ? UniswapV2Library.pairFor(factory, output, path[i + 2]) : _to;
             pair.swap(amount0Out, amount1Out, to, new bytes(0));
         }
     }
+
+
+
     function swapExactTokensForTokensSupportingFeeOnTransferTokens(
         uint amountIn,
         uint amountOutMin,
@@ -1693,6 +1709,8 @@ https://github.com/Uniswap/uniswap-interface/issues/835
             'UniswapV2Router: INSUFFICIENT_OUTPUT_AMOUNT'
         );
     }
+
+
     function swapExactETHForTokensSupportingFeeOnTransferTokens(
         uint amountOutMin,
         address[] calldata path,
@@ -1716,6 +1734,8 @@ https://github.com/Uniswap/uniswap-interface/issues/835
             'UniswapV2Router: INSUFFICIENT_OUTPUT_AMOUNT'
         );
     }
+
+
     function swapExactTokensForETHSupportingFeeOnTransferTokens(
         uint amountIn,
         uint amountOutMin,
@@ -1740,7 +1760,10 @@ https://github.com/Uniswap/uniswap-interface/issues/835
     }
 ```
 
-The remaining functions on the contract are just proxies that call the [UniswapV2Library functions](#uniswapV2library).
+
+
+
+
 
 ```solidity
     // **** LIBRARY FUNCTIONS ****
@@ -1789,6 +1812,8 @@ The remaining functions on the contract are just proxies that call the [UniswapV
     }
 }
 ```
+
+These functions are just proxies that call the [UniswapV2Library functions](#uniswapV2library).
 
 
 
