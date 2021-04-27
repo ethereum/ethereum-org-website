@@ -2,7 +2,6 @@
 title: "Uniswap-v2 Contract Walk-Through"
 description: How does the Uniswap-v2 contract work? Why is it written that way?
 author: Ori Pomerantz
-lang: en
 sidebar: true
 tags: ["solidity", "uniswap"]
 skill: intermediate
@@ -44,7 +43,7 @@ that is much more complicated than the original. It is easier to first learn v2 
 ### Core Contracts vs Periphery Contracts  {#contract-types}
 
 Uniswap v2 is divided into two components, a core and a periphery. This division allows the core contracts,
-which hold the assets in the market and therefore *have* to be secure, to be simpler and easier to audit. 
+which hold the liquidity assets and therefore *have* to be secure, to be simpler and easier to audit. 
 All the extra functionality required by traders can then be provided by periphery contracts. 
 
 
@@ -621,6 +620,12 @@ contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/
         uint balance0;
         uint balance1;
         { // scope for _token{0,1}, avoids stack too deep errors
+```
+
+Local variables can be stored either in memory or, if there aren't too many of them, directly on the stack.
+If we can limit the number so we'll use the stack we use less gas.
+
+```solidity
             address _token0 = token0;
             address _token1 = token1;
 ```
@@ -1392,10 +1397,7 @@ mechanism](#UniswapV2ERC20).
 
 This function can be used for tokens that have transfer or storage fees. When a token has
 such fees we cannot rely on the `removeLiquidity` function to tell us how much of the
-token we withdraw, so we need to withdraw first and then get the balance. 
-
-Note: I'm not sure why this function exists, because Uniswap v. 2 liquidity tokens do not
-have such fees.
+token we get back, so we need to withdraw first and then get the balance. 
 
 ```solidity
     
@@ -1418,7 +1420,7 @@ have such fees.
     }
 ```    
 
-The final function combined storage fees with meta-transactions.
+The final function combines storage fees with meta-transactions.
 
 
 #### Trade {#trade}
@@ -1677,10 +1679,14 @@ This is the internal function to swap tokens that have transfer or storage fees 
             amountOutput = UniswapV2Library.getAmountOut(amountInput, reserveInput, reserveOutput);
 ```
 
-Because of the transfer fees we cannot rely on the `removeLiquidity` function to tell us how much of the
-token we withdraw, so we need to withdraw first and then get the balance. 
+Because of the transfer fees we cannot rely on the `getAmountsOut` function to tell us how much we get out of
+each transfer (the way we do before calling the original `_swap`). Instead we have to transfer first and then see how
+many tokens we got back.
 
-GOON
+Note: In theory we could just use this function instead of `_swap`, but in certain cases (for example, if the transfer
+ends up beign reverted because there isn't enough at the end to meet the required minimum) that would end up costing more
+gas. Transfer fee tokens are pretty rare, so while we need to accommodate them there's no need to all swaps to assume they
+go through at least one of them.
 
 ```solidity
             }
@@ -1689,7 +1695,6 @@ GOON
             pair.swap(amount0Out, amount1Out, to, new bytes(0));
         }
     }
-
 
 
     function swapExactTokensForTokensSupportingFeeOnTransferTokens(
@@ -1760,10 +1765,7 @@ GOON
     }
 ```
 
-
-
-
-
+These are the same variants used for normal tokens, but they call `_swapSupportingFeeOnTransferTokens` instead.
 
 ```solidity
     // **** LIBRARY FUNCTIONS ****
