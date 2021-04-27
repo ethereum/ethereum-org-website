@@ -3509,6 +3509,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "schnerd",
+      "name": "David Schnurr",
+      "avatar_url": "https://avatars.githubusercontent.com/u/875591?v=4",
+      "profile": "http://dschnurr.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
