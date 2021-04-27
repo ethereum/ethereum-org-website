@@ -927,6 +927,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="http://dschnurr.com"><img src="https://avatars.githubusercontent.com/u/875591?v=4?s=100" width="100px;" alt=""/><br /><sub><b>David Schnurr</b></sub></a><br /><a href="#content-schnerd" title="Content">🖋</a></td>
+    <td align="center"><a href="https://twitter.com/kleffew94"><img src="https://avatars.githubusercontent.com/u/33433528?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kevin Leffew</b></sub></a><br /><a href="#content-keleffew" title="Content">🖋</a></td>
   </tr>
 </table>
 
