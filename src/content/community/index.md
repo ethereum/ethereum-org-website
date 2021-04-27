@@ -123,7 +123,7 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
 
 ## Ethereum Grants {#ethereum-grants}
 
-[View open Ethereum grants](/grants/)
+[View open Ethereum grants](/community/grants/)
 
 ## Ethereum Jobs {#ethereum-jobs}
 
