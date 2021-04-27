@@ -3491,6 +3491,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "ZackDeRose",
+      "name": "Zachary DeRose",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3788405?v=4",
+      "profile": "https://zackderose.dev",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
