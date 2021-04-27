@@ -1388,7 +1388,14 @@ mechanism](#UniswapV2ERC20).
         TransferHelper.safeTransferETH(to, amountETH);
     }
     
-    
+```
+
+This function is used for tokens that have transfer or storage fees to solve
+([this issue](https://github.com/Uniswap/uniswap-interface/issues/835)). When a token has
+such fees we cannot rely on the `removeLiquidity` function to tell us how much of the
+token we withdraw, so we need to withdraw first and then get the balance.
+
+```solidity
     
     
     function removeLiquidityETHWithPermitSupportingFeeOnTransferTokens(
@@ -1409,8 +1416,7 @@ mechanism](#UniswapV2ERC20).
     }
 ```    
 
-These functions are used for tokens that have transfer or storage fees 
-([see here](https://github.com/Uniswap/uniswap-interface/issues/835)).
+The final function combined storage fees with meta-transactions.
 
 
 #### Trade {#trade}
