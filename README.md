@@ -925,6 +925,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://zackderose.dev"><img src="https://avatars.githubusercontent.com/u/3788405?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Zachary DeRose</b></sub></a><br /><a href="#content-ZackDeRose" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/ArshanKhanifar"><img src="https://avatars.githubusercontent.com/u/10492324?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Arshan Khanifar</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AArshanKhanifar" title="Bug reports">🐛</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="http://dschnurr.com"><img src="https://avatars.githubusercontent.com/u/875591?v=4?s=100" width="100px;" alt=""/><br /><sub><b>David Schnurr</b></sub></a><br /><a href="#content-schnerd" title="Content">🖋</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
