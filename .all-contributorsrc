@@ -3500,6 +3500,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "ArshanKhanifar",
+      "name": "Arshan Khanifar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10492324?v=4",
+      "profile": "https://github.com/ArshanKhanifar",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
