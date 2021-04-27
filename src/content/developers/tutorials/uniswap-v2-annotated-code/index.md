@@ -876,10 +876,10 @@ one we support here is `Permit` with these parameters.
     mapping(address => uint) public nonces;
 ```
 
-It is not feasible for a recipient to fake a digit signature. However, it is trivial to send the same transaction twice
+It is not feasible for a recipient to fake a digital signature. However, it is trivial to send the same transaction twice
 (this is a form of [replay attack](https://en.wikipedia.org/wiki/Replay_attack)). To prevent this, we use 
-a [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce). If the nonce of a new `Permit` is not higher than the last
-nonce used, we assume it is invalid.
+a [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce). If the nonce of a new `Permit` is not one more than the last one
+used, we assume it is invalid.
 
 ```solidity
     constructor() public {
@@ -910,7 +910,18 @@ Calculate the [domain separator](https://eips.ethereum.org/EIPS/eip-712#rational
 
 ```solidity
     function permit(address owner, address spender, uint value, uint deadline, uint8 v, bytes32 r, bytes32 s) external {
+```
+
+This is the function that implements the permissions. It receives as parameters the relevant fields, and the three scalar values
+for [the signature](https://yos.io/2018/11/16/ethereum-signatures/) (v, r, and s).
+
+```solidity
         require(deadline >= block.timestamp, 'UniswapV2: EXPIRED');
+```
+
+Don't accept transactions after the deadline.
+
+```solidity
         bytes32 digest = keccak256(
             abi.encodePacked(
                 '\x19\x01',
@@ -918,13 +929,29 @@ Calculate the [domain separator](https://eips.ethereum.org/EIPS/eip-712#rational
                 keccak256(abi.encode(PERMIT_TYPEHASH, owner, spender, value, nonces[owner]++, deadline))
             )
         );
+```
+
+`abi.encodePacked(...)` is the message we expect to get. We know what the nonce should be, so there is no need for us to
+get it as a paramete
+
+The Ethereum signature algorithm expects to get 256 bits to sign, so we use the `keccak256` hash function.
+
+
+```solidity
         address recoveredAddress = ecrecover(digest, v, r, s);
+```
+
+From  the digest and the signature we can get the address that signed it using 
+[ecrecover](https://coders-errand.com/ecrecover-signature-verification-ethereum/).
+
+```solidity
         require(recoveredAddress != address(0) && recoveredAddress == owner, 'UniswapV2: INVALID_SIGNATURE');
         _approve(owner, spender, value);
     }
     
 ```
 
+If everything is OK, treat this as [an ERC-20 approve](https://eips.ethereum.org/EIPS/eip-20#approve).
 
 ## The Periphery Contracts {#periphery-contracts}
 
