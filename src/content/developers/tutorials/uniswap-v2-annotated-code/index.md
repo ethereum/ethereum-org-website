@@ -855,30 +855,45 @@ address.
 ERC-20 liquidity token. It is similar to the [OpenWhisk ERC-20 contract](/developers/tutorials/erc20-annotated-code), so
 I will only explain the part that is different, the `permit` functionality.
 
-Transactions on Ethereum cost money. As I'm writing this [an ERC-20 transfer costs about 
-$7](https://etherscan.io/gastracker). If you have ERC-20 tokens but not Ether, you can't send transactions, so you can't
-do anything with them.
+Transactions on Ethereum cost Ether (ETH), which is equivalent to real money. If you have ERC-20 tokens but not ETH, you can't send 
+transactions, so you can't do anything with them.
 
-One solution to avoid this problem is [meta-transactions](https://uniswap.org/docs/v2/smart-contract-integration/supporting-meta-transactions/)
-
-
-
-GOON
-
+One solution to avoid this problem is [meta-transactions](https://uniswap.org/docs/v2/smart-contract-integration/supporting-meta-transactions/).
+The owner of the tokens signs a transaction that allows somebody else to withdraw tokens off chain and sends it using the Internet to
+the recipient. The recipient, which does have ETH, then submits the permit on behalf of the owner.
 
 
 ```solidity
     bytes32 public DOMAIN_SEPARATOR;
     // keccak256("Permit(address owner,address spender,uint256 value,uint256 nonce,uint256 deadline)");
     bytes32 public constant PERMIT_TYPEHASH = 0x6e71edae12b1b97f4d1f60370fef10105fa2faae0126114a169c64845d6126c9;
+```
+
+This hash is the [identifier for the transaction type](https://eips.ethereum.org/EIPS/eip-712#rationale-for-typehash). The only 
+one we support here is `Permit` with these parameters.
+
+```solidity
     mapping(address => uint) public nonces;
+```
 
+It is not feasible for a recipient to fake a digit signature. However, it is trivial to send the same transaction twice
+(this is a form of [replay attack](https://en.wikipedia.org/wiki/Replay_attack)). To prevent this, we use 
+a [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce). If the nonce of a new `Permit` is not higher than the last
+nonce used, we assume it is invalid.
 
+```solidity
     constructor() public {
         uint chainId;
         assembly {
             chainId := chainid
         }
+```
+
+This is the code to retrieve the [chain identifier](https://chainid.network/). It uses an EVM assembly dialect called
+[Yul](https://docs.soliditylang.org/en/v0.8.4/yul.html). Note that in the current version of Yul you have to use `chainid()`,
+not `chainid`.
+
+```solidity
         DOMAIN_SEPARATOR = keccak256(
             abi.encode(
                 keccak256('EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)'),
@@ -891,7 +906,9 @@ GOON
     }
 ```
 
-```solidit
+Calculate the [domain separator](https://eips.ethereum.org/EIPS/eip-712#rationale-for-domainseparator) for EIP-712.
+
+```solidity
     function permit(address owner, address spender, uint value, uint deadline, uint8 v, bytes32 r, bytes32 s) external {
         require(deadline >= block.timestamp, 'UniswapV2: EXPIRED');
         bytes32 digest = keccak256(
