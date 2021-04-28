@@ -49,7 +49,50 @@ All the extra functionality required by traders can then be provided by peripher
 
 ## Data and Control Flows {#flows}
 
+This is the flow of data and control that happens when you perform the three main actions of Uniswap:
+
+1. Swap between different tokens
+2. Add liquidity to the market and get rewarded with pair exchange ERC-20 liquidity tokens
+3. Burn ERC-20 liquidity tokens and get back the ERC-20 tokens that the pair exchange allows traders to exchange
+
+### Swap (#swap-flow}
+
+This is most common flow, used by traders
+
+1. The trader calls one of the peripheral contract's many swap functions (which one depends on whether ETH is involved 
+   or not, whether the trader specifies the amount of tokens to deposit or the amount of tokens to get back, etc). 
+   Every swap function accepts a `path`, an array of exchanges to go through.
+   
+#### In the peripheral contract (UniswapV2Router02.sol)
+   
+2. The swap function identifies the amounts that need to be traded on each exchange along the path.
+3. The swap function calls `_swap` with the path, the amounts, and the final destination.
+4. `_swap` iterates over the path. For every exchange along the way it sends the input token and then calls the exchange's `swap` function.
+   In most cases the destination address for the tokens is the next pair exchange in the path. In the final exchange it is the address
+   provided by the trader.
+
+#### In the core contract (UniswapV2Pair.sol)
+
+6. Verify that the core contract is not being cheated and can maintain sufficient liquidity after the swap.
+7. See how many extra tokens we have in addition to the known reserves. That amount is the number of input tokens we received to exchange.
+8. Send the output tokens to the destination.
+9. Call `_update` to update the reserve amounts
+
 GOON
+
+#### Back in the peripheral contract (UniswapV2Router02.sol)
+
+9. f
+10. 
+
+### Add Liquidity {#swap-add-liquidity}
+
+GOON
+
+### Remove Liquidity {#swap-remove-liquidity}
+
+GOON
+
 
 ## The Core Contracts {#core-contracts}
 
@@ -317,6 +360,8 @@ This function allows the factory (and only the factory) to specify the two ERC-2
 
 #### Internal Update Functions {#pair-update-internal}
 
+##### \_update {#pair-internal-update}
+
 ```solidity
     // update reserves and, on the first call per block, price accumulators
     function _update(uint balance0, uint balance1, uint112 _reserve0, uint112 _reserve1) private {
@@ -378,6 +423,7 @@ This price calculation is the reason we need to know the old reserve sizes.
 
 Finally, update the global variables and emit a `Sync` event.
 
+##### \_mintFee {#pair-internal-mintFee}
 
 ```solidity
     // if fee is on, mint liquidity equivalent to 1/6th of the growth in sqrt(k)
@@ -454,6 +500,11 @@ If there is no fee set `kLast` to zero (if it isn't that already). When this con
 was a [gas refund feature](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3298.md) that encouraged 
 contracts to reduce the overall size of the Ethereum state by zeroing out storage they did not need.
 This code gets that refund when possible.
+
+
+#### Externally Accessible Functions {#pair-external}
+
+##### mint {#pair-mint}
 
 ```solidity
     // this low-level function should be called from a contract which performs important safety checks
@@ -544,7 +595,7 @@ types, in which case the "fine" gets distributed). Here is another example with 
         _mint(to, liquidity);
 ```
 
-Use the `UniswapV2ERC20.\_mint` function to actually create the additional liquidity tokens and give them to the correct account.
+Use the `UniswapV2ERC20._mint` function to actually create the additional liquidity tokens and give them to the correct account.
 
 ```solidity
 
@@ -555,6 +606,8 @@ Use the `UniswapV2ERC20.\_mint` function to actually create the additional liqui
 ```
 
 Update the state variables (`reserve0`, `reserve1`, and if needed `kLast`) and emit the appropriate event.
+
+##### burn {#pair-burn}
 
 ```solidity
     // this low-level function should be called from a contract which performs important safety checks
@@ -602,6 +655,8 @@ The liquidity provider receives equal value of both tokens. This way we don't ch
 ```
 
 The rest of the `burn` function is the mirror image of the `mint` function above.
+
+##### swap {#pair-swap}
 
 ```solidity
     // this low-level function should be called from a contract which performs important safety checks
@@ -677,6 +732,7 @@ us for the swap. This makes it easy for the contract to check that it is not bei
 
 Update `reserve0` and `reserve1`, and if necessary the price accumulators and the timestamp and emit an event.
 
+##### skim {#pair-skim}
 
 ```solidity
     // force balances to match reserves
