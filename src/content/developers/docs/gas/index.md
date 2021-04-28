@@ -36,9 +36,11 @@ Although a transaction includes a limit, any gas not used in a transaction is re
 ![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
 _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## Why are gas fees so high? {#Why-are-gas-fees-so-high}
+## Why can gas fees get so high? {#Why-can-gas-fees-get-so-high}
 
-High Gas fees are due to the popularity of Ethereum. As every operation on the Etheruem blockcahin uses gas, including computation, checking the balance of an account and transaction fees, these all contribute to the high gas levels we experience. Gas cost alone does not actually determine how much we have to pay for a particular transaction. To calculate the transaction fee we have to multiply the gas cost by gas price. (Which is measured in GWEI)
+High gas fees are due to the popularity of Ethereum. To perform any operation on Ethereum requires consuming gas. This includes calculations, storing or manipulating data, or transferring tokens, each consuming different amounts of "gas" units. As dapp functionality grows more complex, the number of operations a smart contract performs grows too, and all contribute to high amounts of gas that must be paid for.
+
+Gas is paid for with small amounts of ether (denominated in gwei, or (10<sup>-9</sup> ETH)). This value represents the amount of ether being paid per "unit of gas", not for the entire transaction. Since gas is capped within a block, under the current system, this means that users must out-bid one another to be included in the next block if demand exceeds capacity. Gas cost alone does not actually determine how much we have to pay for a particular transaction. To calculate the transaction fee we have to multiply the gas cost by gas price. (Which is measured in gwei)
 
 This video about gas fees explains fully why fees are so expensive:
 
@@ -48,13 +50,24 @@ This video about gas fees explains fully why fees are so expensive:
 
 With the new network upgrades of Ethereum 2.0 (also known as Eth2 or Serenity). This should ultimately address some of the gas fee issues, which will in turn enable the platform to process thousands of transactions per second and scale globally.
 
-The new proof of stake model should reduce high power consumption and reliance on specialist hardware. The new PoS (Proof of stake) system will be introduced on what’s called the Beacon Chain, this chain will allow the decentralized Ethereum network to come to agreement and keep the network secure, but avoid high energy use by requiring a financial commitment. 
+Layer 2 scaling is a primary initiative to greatly improve gas, user experience and scalability, our page on layer 2 scaling and rollups can be found here:
+-[Layer 2 scaling](https://ethereum.org/en/developers/docs/layer-2-scaling/)
 
-Anyone with atleast 32 ETH will be able to stake them and become a validator responsible for processing transactions, adding new block to the block chain and storing data. Users who have less than 32 ETH will be able to join staking pools.
+The new proof-of-stake model should reduce high power consumption and reliance on specialized hardware. The new PoS system was introduced on the Beacon Chain. This chain will allow the decentralized Ethereum network to come to agreement and keep the network secure, but avoid high energy use by requiring a financial commitment. 
 
-## Strategies to reduce gas costs {Strategies-to-reduce-gas-costs}
+Anyone with at least 32 ETH is able to stake them and become a validator responsible for processing transactions, adding new block to the block chain and storing data. Users who have less than 32 ETH will be able to join staking pools.
 
-If you are looking to reduce gas costs for your ETH you are able to set the price of your own gas fees. The gas price you set is how much you are willing to pay per unit of gas. However if you set the amount of gas too low you will not be able to send your ETH as you will run out of gas, you would then have to resubmit your transaction costing you more in gas fees. You can do this from some wallet providers when sending ETH.
+## What is Gas limit? {What-is-gas-limit}
+Gas limit refers to the maximum amount of gas you are willing to spend on a transaction. A higher gas limit means more computational work must be done to excecute the [smart contract](https://ethereum.org/en/developers/docs/smart-contracts/). A standard ETH transfer requires a gas limit of 21,000 units of gas.
+
+If you specify too little gas this can be risky as if the gas runs out before your transaction is complete, since you have lost that gas everything reverts.
+
+## What is Gas price? {What-is-gas-price}
+Gas price refers to the amount of Ether you are willing to pay for every unit of gas, and this is usually measured in 'gwei'.
+
+## Strategies for you to reduce gas costs {Strategies-for-you-to-reduce-gas-costs}
+
+If you are looking to reduce gas costs for your ETH you are able to set the price of your own gas fees and choose the priority level of your transaction. Miners will 'work on' and execute transactions that offer a higher gas price, as they get to keep the fees that you pay and will be less inclined to execute transactions with lower gas fees set. The gas price you set is how much you are willing to pay per unit of gas. However if you set the amount of gas too low you will not be able to send your ETH as you will run out of gas, you would then have to resubmit your transaction costing you more in gas fees. You can do this from some wallet providers when sending ETH.
 
 If you want to monitor gas prices so you are able to send your ETH for less you can use many different tools such as:
 - [Etherscan](https://etherscan.io/gastracker)
