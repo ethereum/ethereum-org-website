@@ -40,15 +40,15 @@ _Note: more EIPs may be added to the upgrade over the coming weeks, and the EIPs
 
 </ExpandableCard>
 
-<Divider />
+---
 
-### (_In Progress_) Altair (#altair)
+### (_In Progress_) Altair {#altair}
 
 The Altair upgrade is the first scheduled upgrade for the [Beacon Chain](/eth2/beacon-chain). It is expected to go live in 2021. It will add support for "sync commitees", which can enable light clients, and will bring inactivity and slashing penalties up to their full values.
 
 - [Read the Altair upgrade specification](https://github.com/ethereum/eth2.0-specs/tree/dev/specs/altair)
 
-<Divider />
+---
 
 ### Berlin {#berlin}
 
