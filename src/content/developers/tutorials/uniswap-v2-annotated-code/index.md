@@ -17,13 +17,13 @@ this way.
 
 ### What Does Uniswap Do? {#what-does-uniswap-do}
 
-Basically, there are two types of users: *liquidity providers* and *traders*. 
+Basically, there are two types of users: liquidity providers and traders. 
 
-The liquidity providers provide the pool with the two tokens that can be exchanged (we'll call them
+The *liquidity providers* provide the pool with the two tokens that can be exchanged (we'll call them
 **Token0** and **Token1**). In return, they receive a third token that represents partial ownership of
-the pool.
+the pool called a *liquidity token*.
 
-Trades send one type of token to the pool and receive the other (for example, send **Token0** and receive
+*Traders* send one type of token to the pool and receive the other (for example, send **Token0** and receive
 **Token1**) out of the pool provided by the liquidity providers. The exchange rate is determined by the 
 relative number of **Token0**s and **Token1**s that the pool has. In addition, the pool takes a small 
 percent as a reward for the liquidity pool.
