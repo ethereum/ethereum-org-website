@@ -36,7 +36,7 @@ The London upgrade is scheduled to go live on Ethereum in July 2021. It will int
 - [EIP-3198](https://eips.ethereum.org/EIPS/eip-3198) – _returns the `BASEFEE` from a block_
 - [EIP-3238](https://eips.ethereum.org/EIPS/eip-3238) – _delays the Ice Age_
 
-_Note: more EIPs may be added to the upgrade over the comming weeks, and the EIPs above may still be modified prior to the upgrade being deployed._
+_Note: more EIPs may be added to the upgrade over the coming weeks, and the EIPs above may still be modified prior to the upgrade being deployed._
 
 </ExpandableCard>
 
@@ -44,7 +44,7 @@ _Note: more EIPs may be added to the upgrade over the comming weeks, and the EIP
 
 ### (_In Progress_) Altair (#altair)
 
-The Altair upgrade is the first scheduled upgrade for the Beacon Chain. It is expected to go live in 2021. It will add support for "sync commitees", which can enable light clients, and will bring inactivity and slashing penalties up to their full values.
+The Altair upgrade is the first scheduled upgrade for the [Beacon Chain](/eth2/beacon-chain). It is expected to go live in 2021. It will add support for "sync commitees", which can enable light clients, and will bring inactivity and slashing penalties up to their full values.
 
 - [Read the Altair upgrade specification](https://github.com/ethereum/eth2.0-specs/tree/dev/specs/altair)
 
