@@ -57,17 +57,19 @@ This is the flow of data and control that happens when you perform the three mai
 
 ### Swap (#swap-flow}
 
-This is most common flow, used by traders
+This is most common flow, used by traders:
 
-1. The trader calls one of the peripheral contract's many swap functions (which one depends on whether ETH is involved 
+#### Caller
+
+1. Provide the peripheral account with an allowance in the amount to be swapped.
+2. Call one of the peripheral contract's many swap functions (which one depends on whether ETH is involved 
    or not, whether the trader specifies the amount of tokens to deposit or the amount of tokens to get back, etc). 
    Every swap function accepts a `path`, an array of exchanges to go through.
    
 #### In the peripheral contract (UniswapV2Router02.sol)
    
-2. The swap function identifies the amounts that need to be traded on each exchange along the path.
-3. The swap function calls `_swap` with the path, the amounts, and the final destination.
-4. `_swap` iterates over the path. For every exchange along the way it sends the input token and then calls the exchange's `swap` function.
+3. Identify the amounts that need to be traded on each exchange along the path.
+5. Iterates over the path. For every exchange along the way it sends the input token and then calls the exchange's `swap` function.
    In most cases the destination address for the tokens is the next pair exchange in the path. In the final exchange it is the address
    provided by the trader.
 
@@ -78,20 +80,52 @@ This is most common flow, used by traders
 8. Send the output tokens to the destination.
 9. Call `_update` to update the reserve amounts
 
-GOON
-
 #### Back in the peripheral contract (UniswapV2Router02.sol)
 
-9. f
-10. 
+10. Perform any necessary cleanup (for example, burn WETH tokens to get back ETH to send the trader)
 
-### Add Liquidity {#swap-add-liquidity}
 
-GOON
 
-### Remove Liquidity {#swap-remove-liquidity}
+### Add Liquidity {#add-liquidity-flow}
 
-GOON
+#### Caller
+
+1. Provide the peripheral account with an allowance in the amounts to be added to the liquidity pool.
+2. Call one of the periphery contract's addLiquidity functions.
+   
+#### In the peripheral contract (UniswapV2Router02.sol)
+
+3. Verify the deadline hasn't passed
+4. Create a new pair exchange if necessary
+5. If there is an existing pair exchange, calculate the amount of tokens to add. This is supposed to be identical value for
+   both tokens, so the same ratio of new tokens to existing tokens.
+6. Check if the amounts are acceptable (callers can specify a minimum amount beyond which they'd rather not add liquidity)
+7. Call the core contract.   
+
+#### In the core contract (UniswapV2Pair.sol)
+
+8. Mint liquidity tokens and send them to the caller
+9. Call `_update` to update the reserve amounts
+
+### Remove Liquidity {#remove-liquidity-flow}
+
+#### Caller
+
+1. Provide the peripheral account with an allowance of liquidity tokens to be burned in exchange for the underlying tokens.
+2. Call one of the periphery contract's addLiquidity functions.
+   
+#### In the peripheral contract (UniswapV2Router02.sol)
+
+3. Verify the deadline hasn't passed
+4. Send the liquidity tokens to the pair exchange
+
+#### In the core contract (UniswapV2Pair.sol)
+
+5. Send the destination address the underlying tokens in proportion to the burned tokens. For example if
+   there are 1000 A tokens in the pool, 500 B tokens, and 90 liquidity tokens, and we receive 9 tokens
+   to burn, we're burning 10% of the liquidity tokens so we send back the user 100 A tokens and 50 B tokens.
+6. Burn the liquidity tokens
+7. Call `_update` to update the reserve amounts
 
 
 ## The Core Contracts {#core-contracts}
@@ -504,6 +538,10 @@ This code gets that refund when possible.
 
 #### Externally Accessible Functions {#pair-external}
 
+Note that while any transaction or contract *can* call these functions, they are designed to be called from
+the periphery contract. If you call them directly you won't be able to cheat the pair exchange, but you might
+lose value through a mistake.
+
 ##### mint {#pair-mint}
 
 ```solidity
@@ -538,7 +576,7 @@ Get the current balances and see how much was added of each token type.
 ```
 
 Calculate the protocol fees to collect, if any, and mint liquidity tokens accordingly. Because the parameters 
-to `_mintFee` are the old reserve values, the fee is calculated accuratedly based only on pool changes due to
+to `_mintFee` are the old reserve values, the fee is calculated accurately based only on pool changes due to
 fees.
 
 ```solidity
