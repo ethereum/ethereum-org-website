@@ -43,7 +43,7 @@ that is much more complicated than the original. It is easier to first learn v2 
 ### Core Contracts vs Periphery Contracts  {#contract-types}
 
 Uniswap v2 is divided into two components, a core and a periphery. This division allows the core contracts,
-which hold the liquidity assets and therefore *have* to be secure, to be simpler and easier to audit. 
+which hold the assets and therefore *have* to be secure, to be simpler and easier to audit. 
 All the extra functionality required by traders can then be provided by periphery contracts. 
 
 
@@ -69,16 +69,16 @@ This is most common flow, used by traders:
 #### In the peripheral contract (UniswapV2Router02.sol)
    
 3. Identify the amounts that need to be traded on each exchange along the path.
-5. Iterates over the path. For every exchange along the way it sends the input token and then calls the exchange's `swap` function.
+4. Iterates over the path. For every exchange along the way it sends the input token and then calls the exchange's `swap` function.
    In most cases the destination address for the tokens is the next pair exchange in the path. In the final exchange it is the address
    provided by the trader.
 
 #### In the core contract (UniswapV2Pair.sol)
 
-6. Verify that the core contract is not being cheated and can maintain sufficient liquidity after the swap.
-7. See how many extra tokens we have in addition to the known reserves. That amount is the number of input tokens we received to exchange.
-8. Send the output tokens to the destination.
-9. Call `_update` to update the reserve amounts
+5. Verify that the core contract is not being cheated and can maintain sufficient liquidity after the swap.
+6. See how many extra tokens we have in addition to the known reserves. That amount is the number of input tokens we received to exchange.
+7. Send the output tokens to the destination.
+8. Call `_update` to update the reserve amounts
 
 #### Back in the peripheral contract (UniswapV2Router02.sol)
 
@@ -95,17 +95,17 @@ This is most common flow, used by traders:
    
 #### In the peripheral contract (UniswapV2Router02.sol)
 
-3. Verify the deadline hasn't passed
-4. Create a new pair exchange if necessary
-5. If there is an existing pair exchange, calculate the amount of tokens to add. This is supposed to be identical value for
+3. Create a new pair exchange if necessary
+4. If there is an existing pair exchange, calculate the amount of tokens to add. This is supposed to be identical value for
    both tokens, so the same ratio of new tokens to existing tokens.
-6. Check if the amounts are acceptable (callers can specify a minimum amount beyond which they'd rather not add liquidity)
-7. Call the core contract.   
+5. Check if the amounts are acceptable (callers can specify a minimum amount beyond which they'd rather not add liquidity)
+6. Call the core contract.   
 
 #### In the core contract (UniswapV2Pair.sol)
 
-8. Mint liquidity tokens and send them to the caller
-9. Call `_update` to update the reserve amounts
+7. Mint liquidity tokens and send them to the caller
+8. Call `_update` to update the reserve amounts
+
 
 ### Remove Liquidity {#remove-liquidity-flow}
 
@@ -116,16 +116,15 @@ This is most common flow, used by traders:
    
 #### In the peripheral contract (UniswapV2Router02.sol)
 
-3. Verify the deadline hasn't passed
-4. Send the liquidity tokens to the pair exchange
+3. Send the liquidity tokens to the pair exchange
 
 #### In the core contract (UniswapV2Pair.sol)
 
-5. Send the destination address the underlying tokens in proportion to the burned tokens. For example if
+4. Send the destination address the underlying tokens in proportion to the burned tokens. For example if
    there are 1000 A tokens in the pool, 500 B tokens, and 90 liquidity tokens, and we receive 9 tokens
    to burn, we're burning 10% of the liquidity tokens so we send back the user 100 A tokens and 50 B tokens.
-6. Burn the liquidity tokens
-7. Call `_update` to update the reserve amounts
+5. Burn the liquidity tokens
+6. Call `_update` to update the reserve amounts
 
 
 ## The Core Contracts {#core-contracts}
@@ -135,7 +134,7 @@ These are the secure contracts which hold the liquidity.
 
 ### UniswapV2Pair.sol   {#UniswapV2Pair}
 
-[This contract](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol) implements an
+[This contract](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol) implements the
 actual pool that exchanges tokens. It is the core Uniswap functionality.
 
 
@@ -158,8 +157,7 @@ These are all the interfaces that the contract needs to know about, either becau
 contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
 ```
 
-This contract inherits from `UniswapV2ERC20`, which provides all the ERC-20 functions for the liquidity token that
-liquidity providers receive.
+This contract inherits from `UniswapV2ERC20`, which provides the the ERC-20 functions for the liquidity tokens.
 
 ```solidity
     using SafeMath  for uint;
@@ -175,7 +173,10 @@ but is instead `2^256-1`.
 
 A lot of calculations in the pool contract require fractions. However, fractions are not supported by the EVM.
 The solution that Uniswap found is to use 224 bit values, with 112 bits for the integer part, and 112 bits 
-for the fraction. So `1.0` is represented as `2^112`, `1.5` is represented as `2^112 + 2^111`, etc.
+for the fraction. So `1.0` is represented as `2^112`, `1.5` is represented as `2^112 + 2^111`, etc. 
+
+More details about this library are available [later in the document](#FixedPoint).
+
 
 #### Variables {#pair-vars}
 
@@ -214,17 +215,14 @@ by this pool.
     uint112 private reserve1;           // uses single storage slot, accessible via getReserves
 ```
 
-The reserves the pool has for each token type.
+The reserves the pool has for each token type. We assume that the two represent the same amount of value,
+and therefore each token0 is worth reserve1/reserve0 token1's.
 
 ```solidity
     uint32  private blockTimestampLast; // uses single storage slot, accessible via getReserves
 ```
 
 The timestamp for the last block in which an exchange occured, used to track exchange rates across time.
-
-One of the biggest gas expenses of Ethereum contracts is storage, which persists from one call of the contract
-to the next. Each storage cell is 256 bits long. These three variables are allocated in such a way a single
-storage value can include all three of them (112+112+32=256).
     
 ```solidity
     uint public price0CumulativeLast;
@@ -233,6 +231,10 @@ storage value can include all three of them (112+112+32=256).
 
 These variables hold the cumulative costs for each token (each in term of the other). They can be used to calculate
 the average exchange rate over a period of time.
+
+One of the biggest gas expenses of Ethereum contracts is storage, which persists from one call of the contract
+to the next. Each storage cell is 256 bits long. So there variable, and `kLast` below are allocated in such 
+a way a single storage value can include all three of them (112+112+32=256).
 
 ```solidity
     uint public kLast; // reserve0 * reserve1, as of immediately after the most recent liquidity event
@@ -255,7 +257,7 @@ Here is a simple example. Note that for the sake of simplicity the table only ha
 | Trader D deposits 100 token1 and gets 109.01 token0 back |       990.990   |        1,009.090 | 1,000,000               | 0.917                    |
 | Trader E deposits 10 token0 and gets 10.079 token1 back  |     1,000.990   |          999.010 | 1,000,000               | 1.008                    |
 
-As you can see, as traders provide more of token0, the relative value of token1 increases, and vice versa, implementing supply and demand.
+As traders provide more of token0, the relative value of token1 increases, and vice versa, based on supply and demand.
 
 #### Lock   {#pair-lock}
 
@@ -317,7 +319,7 @@ values](https://docs.soliditylang.org/en/v0.8.3/contracts.html#returning-multipl
 ```
 
 This internal function transfers an amount of ERC20 tokens from the exchange to somebody else. `SELECTOR` specifies
-the function was are calling is `transfer(address,uint)` (see defintion above). 
+that the function we are calling is `transfer(address,uint)` (see defintion above). 
 
 To avoid having to import an interface for the token function, we "manually" create the call using one of the 
 [ABI functions](https://docs.soliditylang.org/en/v0.8.3/units-and-global-variables.html#abi-encoding-and-decoding-functions).
@@ -327,7 +329,7 @@ To avoid having to import an interface for the token function, we "manually" cre
     }
 ```
 
-There are two ways in which this call can fail:
+There are two ways in which an ERC-20 transfer call can report failure:
 
 1. Revert. If a call to an external contract reverts than the boolean return value is `false`
 2. End normally but report a failure. In that case the return value buffer has a non-zero length, and when decoded as a boolean value it is `false`
@@ -364,7 +366,8 @@ Each token may be either sent to the exchange, or received from it.
     event Sync(uint112 reserve0, uint112 reserve1);
 ```
 
-Finally, `Sync` is emitted every time tokens are added or withdrawn, regardless of the reason, to provide the latest reserve information.
+Finally, `Sync` is emitted every time tokens are added or withdrawn, regardless of the reason, to provide the latest reserve information
+(and therefore the exchange rate).
 
 
 #### Setup Functions {#pair-setup}
@@ -442,7 +445,7 @@ between them. For example, assume this sequence of events:
 | Trader E deposits 10 token0 and gets 10.079 token1 back  |     1,000.990   |          999.010 | 5,150 | 0.998 | 99.63+40\*1.1018 = 143.702 |
 
 Lets say we want to calculate the average price of **Token0** between the timestamps 5,030 and 5,150. The difference in the value of
-`price0Culumative` is 143.702-29.07=114.632. However, this is the average across two minutes (120 seconds). So the average price is
+`price0Culumative` is 143.702-29.07=114.632. This is the average across two minutes (120 seconds). So the average price is
 114.632/120 = 0.955.
 
 This price calculation is the reason we need to know the old reserve sizes.
@@ -502,7 +505,8 @@ fee requires new liquidity tokens to be minted and provided to the `feeTo` addre
                 if (rootK > rootKLast) {
 ```
 
-If there is new liquidity on which to collect a protocol fee.
+If there is new liquidity on which to collect a protocol fee. You can see the square root function
+[later in this article](#Math)
 
 ```solidity
                     uint numerator = totalSupply.mul(rootK.sub(rootKLast));
