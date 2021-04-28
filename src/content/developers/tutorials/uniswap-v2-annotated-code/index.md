@@ -2237,3 +2237,5 @@ This function transfers Ether to an account. Any call to a different contract ca
 don't need to actually call any function, we don't send any data with the call. 
 
 ## Conclusion {#Conclusion}
+
+GOON
