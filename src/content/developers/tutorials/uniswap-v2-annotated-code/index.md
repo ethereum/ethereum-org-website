@@ -780,8 +780,8 @@ can transfer tokens to the exchange without calling either `mint` or `swap`.
 
 In that case there are are two solutions:
 
-. `sync`, update the reserves to the current balances
-. `skim`, withdraw the extra amount. Note that any account is allowed to call `skim` because we don't know who 
+- `sync`, update the reserves to the current balances
+- `skim`, withdraw the extra amount. Note that any account is allowed to call `skim` because we don't know who 
   depoisted the tokens. This information is emitted in an event, but events are not accessible from the blockchain.
 
 
@@ -1146,8 +1146,6 @@ to do that.
 
 #### Add Liquidity {#add-liquidity}
 
-GOON
-
 These functions add tokens to the pair exchange, which increases the liquidity pool.
 
 ```solidity
@@ -1180,7 +1178,29 @@ B to be deposited.
 ```
 
 These are the minimum acceptable amounts to deposit. If the transaction cannot take place with
-these amounts, revert out of it.
+these amounts or more, revert out of it. If you don't want this feature, just specify zero.
+
+Liquidity providers specify a minimum, typically, because they want to limit the transaction to
+an exchange rate that is close to the current one. If the exchange rate fluctuates too much it 
+might mean news that change the underlying values, and they want to decide manually what to do.
+
+For example, imagine a case where the exchange rate is one to one and the liquidity provider 
+specifies these values:
+
+| Parameter        | Value |
+| ---------------- | ----: |
+| amountADesired   | 1000  |
+| amountBDesired   | 1000  |
+| amountAMin       |  900  |
+| amountBMin       |  800  |
+
+As long as the exchange rate stays between 0.9 and 1.111, the transaction can take place. If the
+exchange rate gets out of that range, the transaction gets cancelled.
+
+The reason for this precaution is that transactions are not immediate, you submit them and the
+
+
+GOON
 
 ```solidity
     ) internal virtual returns (uint amountA, uint amountB) {
