@@ -61,12 +61,12 @@ This is most common flow, used by traders:
 
 #### Caller
 
-1. Provide the peripheral account with an allowance in the amount to be swapped.
-2. Call one of the peripheral contract's many swap functions (which one depends on whether ETH is involved 
+1. Provide the periphery account with an allowance in the amount to be swapped.
+2. Call one of the periphery contract's many swap functions (which one depends on whether ETH is involved 
    or not, whether the trader specifies the amount of tokens to deposit or the amount of tokens to get back, etc). 
    Every swap function accepts a `path`, an array of exchanges to go through.
    
-#### In the peripheral contract (UniswapV2Router02.sol)
+#### In the periphery contract (UniswapV2Router02.sol)
    
 3. Identify the amounts that need to be traded on each exchange along the path.
 4. Iterates over the path. For every exchange along the way it sends the input token and then calls the exchange's `swap` function.
@@ -80,7 +80,7 @@ This is most common flow, used by traders:
 7. Send the output tokens to the destination.
 8. Call `_update` to update the reserve amounts
 
-#### Back in the peripheral contract (UniswapV2Router02.sol)
+#### Back in the periphery contract (UniswapV2Router02.sol)
 
 10. Perform any necessary cleanup (for example, burn WETH tokens to get back ETH to send the trader)
 
@@ -90,15 +90,15 @@ This is most common flow, used by traders:
 
 #### Caller
 
-1. Provide the peripheral account with an allowance in the amounts to be added to the liquidity pool.
+1. Provide the periphery account with an allowance in the amounts to be added to the liquidity pool.
 2. Call one of the periphery contract's addLiquidity functions.
    
-#### In the peripheral contract (UniswapV2Router02.sol)
+#### In the periphery contract (UniswapV2Router02.sol)
 
 3. Create a new pair exchange if necessary
 4. If there is an existing pair exchange, calculate the amount of tokens to add. This is supposed to be identical value for
    both tokens, so the same ratio of new tokens to existing tokens.
-5. Check if the amounts are acceptable (callers can specify a minimum amount beyond which they'd rather not add liquidity)
+5. Check if the amounts are acceptable (callers can specify a minimum amount below which they'd rather not add liquidity)
 6. Call the core contract.   
 
 #### In the core contract (UniswapV2Pair.sol)
@@ -111,10 +111,10 @@ This is most common flow, used by traders:
 
 #### Caller
 
-1. Provide the peripheral account with an allowance of liquidity tokens to be burned in exchange for the underlying tokens.
+1. Provide the periphery account with an allowance of liquidity tokens to be burned in exchange for the underlying tokens.
 2. Call one of the periphery contract's addLiquidity functions.
    
-#### In the peripheral contract (UniswapV2Router02.sol)
+#### In the periphery contract (UniswapV2Router02.sol)
 
 3. Send the liquidity tokens to the pair exchange
 
@@ -554,8 +554,7 @@ lose value through a mistake.
 ```
 
 This function is called when a liquidity provider adds liquidity to the pool. It mints additional liquidity
-tokens as a reward. It should be called from [a periphery 
-contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol#L61)
+tokens as a reward. It should be called from [a periphery contract](#UniswapV2Router02)
 that calls it after adding the liquidity in the same transaction (so nobody else would be able to submit a 
 transaction that claims the new liquidity before the legitimate owner).
 
@@ -593,14 +592,15 @@ fees.
 If this is the first deposit, create `MINIMUM_LIQUIDITY` tokens and send them to address zero to lock them. They can
 never to redeemed, which means the pool will never be emptied completely (this saves us from division by zero in
 some places). The value of `MINIMUM_LIQUIDITY` is a thousand, which considering most ERC-20 are subdivided into units
-of 10^-18'th of a token, as ETH is divided into wei, is roughly 10^-15 to the value of a single token. Not a high cost.
+of 10^-18'th of a token, as ETH is divided into wei, is 10^-15 to the value of a single token. Not a high cost.
 
 In the time of the first deposit we don't know the relative value of the two tokens, so we just multiply the amounts
-and take a square root, assuming that the deposit provides us with equal value in both tokens. It is in
-the depositor's interest to provide equal value, to avoid losing value to arbitrage.
+and take a square root, assuming that the deposit provides us with equal value in both tokens. 
 
+We can trust this because it is in the depositor's interest to provide equal value, to avoid losing value to arbitrage.
 Let's say that the value of the two tokens is identical, but our depositor deposited four times as many of **Token1** as
-of **Token0**. A trader can use the fact the pool thinks that **Token0** is more valuable to extract value.
+of **Token0**. A trader can use the fact the pair exchange thinks that **Token0** is more valuable to extract value
+out of it.
 
 
 | Event                                                         | reserve0  | reserve1    | reserve0 * reserve1     | Value of the pool (reserve0 + reserve1) |
@@ -657,8 +657,7 @@ Update the state variables (`reserve0`, `reserve1`, and if needed `kLast`) and e
 ```
 
 This function is called when liquidity is withdrawn and the appropriate liquidity tokens need to be burned. 
-Is should also be called [from a periphery 
-account](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol#L103).
+Is should also be called [from a periphery account](#UniswapV2Router02).
 
 ```solidity
         (uint112 _reserve0, uint112 _reserve1,) = getReserves(); // gas savings
@@ -669,7 +668,7 @@ account](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/U
         uint liquidity = balanceOf[address(this)];
 ```
 
-The periphery contract transfers the liquidity to be burned to this contract before the call. That way
+The periphery contract transfered the liquidity to be burned to this contract before the call. That way
 we know how much liquidity to burn, and we can make sure that it gets burned.
 
 ```solidity
@@ -705,8 +704,7 @@ The rest of the `burn` function is the mirror image of the `mint` function above
     function swap(uint amount0Out, uint amount1Out, address to, bytes calldata data) external lock {
 ```
 
-This function is also supposed to be called from [a periphery 
-contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol#L224). 
+This function is also supposed to be called from [a periphery contract](#UniswapV2Router02). 
 
 
 ```solidity
@@ -720,19 +718,13 @@ contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/
 ```
 
 Local variables can be stored either in memory or, if there aren't too many of them, directly on the stack.
-If we can limit the number so we'll use the stack we use less gas.
+If we can limit the number so we'll use the stack we use less gas. For more details see 
+[the yellow paper, the formal Ethereum specifications](https://ethereum.github.io/yellowpaper/paper.pdf), p. 26, equation
+298.
 
 ```solidity
             address _token0 = token0;
             address _token1 = token1;
-```
-
-This way the variables declared here are only available in a limited scope, and the same memory can later be used for other
-variables. This is important, because using memory in an EVM program has a gas cost (see 
-[the yellow paper, the formal Ethereum specifications](https://ethereum.github.io/yellowpaper/paper.pdf), p. 26, equation
-298). 
-
-```solidity
             require(to != _token0 && to != _token1, 'UniswapV2: INVALID_TO');
             if (amount0Out > 0) _safeTransfer(_token0, to, amount0Out); // optimistically transfer tokens
             if (amount1Out > 0) _safeTransfer(_token1, to, amount1Out); // optimistically transfer tokens
@@ -753,9 +745,9 @@ Inform the receiver about the swap if requested.
         }
 ```
 
-Get the current balances. This is relevant because the periphery contract sends us the tokens before calling
-us for the swap. This makes it easy for the contract to check that it is not being cheated, a check that
-*has* to happen in the core contract.
+Get the current balances. The periphery contract sends us the tokens before calling us for the swap. This makes it easy for 
+the contract to check that it is not being cheated, a check that *has* to happen in the core contract (because we can be
+called by other entities than our periphery contract).
 
 ```solidity
         uint amount0In = balance0 > _reserve0 - amount0Out ? balance0 - (_reserve0 - amount0Out) : 0;
@@ -765,6 +757,12 @@ us for the swap. This makes it easy for the contract to check that it is not bei
             uint balance0Adjusted = balance0.mul(1000).sub(amount0In.mul(3));
             uint balance1Adjusted = balance1.mul(1000).sub(amount1In.mul(3));
             require(balance0Adjusted.mul(balance1Adjusted) >= uint(_reserve0).mul(_reserve1).mul(1000**2), 'UniswapV2: K');
+```
+
+This is a sanity check to make sure we don't lose from the swap. There is no circumnstance in which a swap should reduce
+`reserve0*reserve1`.
+
+```solidity
         }
 
         _update(balance0, balance1, _reserve0, _reserve1);
@@ -774,7 +772,18 @@ us for the swap. This makes it easy for the contract to check that it is not bei
 
 Update `reserve0` and `reserve1`, and if necessary the price accumulators and the timestamp and emit an event.
 
-##### skim {#pair-skim}
+##### Sync or Skip {#pair-skim}
+
+It is possible for the real balances to get out of sync with the reserves that the pair exchange thinks it has.
+There is no way to withdraw tokens without the contract's consent, but deposits are a different matter. An account
+can transfer tokens to the exchange without calling either `mint` or `swap`.
+
+In that case there are are two solutions:
+
+. `sync`, update the reserves to the current balances
+. `skim`, withdraw the extra amount. Note that any account is allowed to call `skim` because we don't know who 
+  depoisted the tokens. This information is emitted in an event, but events are not accessible from the blockchain.
+
 
 ```solidity
     // force balances to match reserves
@@ -784,11 +793,9 @@ Update `reserve0` and `reserve1`, and if necessary the price accumulators and th
         _safeTransfer(_token0, to, IERC20(_token0).balanceOf(address(this)).sub(reserve0));
         _safeTransfer(_token1, to, IERC20(_token1).balanceOf(address(this)).sub(reserve1));
     }
-```
 
-This function is used as a safeguard in case the balances and reserves are out of sync.
 
-```solidity
+
     // force reserves to match balances
     function sync() external lock {
         _update(IERC20(token0).balanceOf(address(this)), IERC20(token1).balanceOf(address(this)), reserve0, reserve1);
@@ -796,7 +803,6 @@ This function is used as a safeguard in case the balances and reserves are out o
 }
 ```
 
-This function is the normal update, used to update the reserves.
 
 
 ### UniswapV2Factory.sol  {#UniswapV2Factory}
@@ -1670,7 +1676,7 @@ give and the minimum number of output tokens he is willing to receive in return.
 lets a trader specify the number of output tokens he wants, and the maximum number of input tokens he is willing to pay for
 them.
 
-In both cases, the trader has to give this peripheral contract first an allowance to allow it to transfer them.
+In both cases, the trader has to give this periphery contract first an allowance to allow it to transfer them.
 
     
 ```solidity    
