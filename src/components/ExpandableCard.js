@@ -56,7 +56,7 @@ const ButtonContainer = styled.div`
 
 const ExpandableCard = ({ children, contentPreview, title }) => {
   const [isVisible, setIsVisible] = useState(false)
-  const variants = {
+  const expandCollapse = {
     collapsed: {
       height: 0,
       transition: {
@@ -70,7 +70,15 @@ const ExpandableCard = ({ children, contentPreview, title }) => {
       },
     },
   }
-  const childVariants = {
+  const showHide = {
+    collapsed: {
+      display: "none",
+    },
+    expanded: {
+      display: "inline-block",
+    },
+  }
+  const fadeInOut = {
     collapsed: {
       opacity: 0,
       transition: {
@@ -105,15 +113,23 @@ const ExpandableCard = ({ children, contentPreview, title }) => {
         </ButtonContainer>
       </Content>
       <motion.div
-        variants={variants}
+        variants={expandCollapse}
         animate={isVisible ? "expanded" : "collapsed"}
+        initial={false}
       >
-        <Text
-          variants={childVariants}
+        <motion.div
+          variants={showHide}
           animate={isVisible ? "expanded" : "collapsed"}
+          initial={false}
         >
-          {children}
-        </Text>
+          <Text
+            variants={fadeInOut}
+            animate={isVisible ? "expanded" : "collapsed"}
+            initial={false}
+          >
+            {children}
+          </Text>
+        </motion.div>
       </motion.div>
     </Card>
   )
