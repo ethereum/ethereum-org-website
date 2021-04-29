@@ -661,7 +661,7 @@ A security model for certain [layer 2](#layer-2) solutions where, to increase sp
 
 ### Validium {#validium}
 
-A [layer 2](#layer-2) solution that uses [validity proofs](#validity-proof) to improve transaction throughput. Unlike [Zero-knowlege rollups](#zk-rollup), Validium data isn't stored on layer 1 [mainnet](#mainnet).
+A [layer 2](#layer-2) solution that uses [validity proofs](#validity-proof) to improve transaction throughput. Unlike [Zero-knowledge rollups](#zk-rollup), Validium data isn't stored on layer 1 [mainnet](#mainnet).
 
 <DocLink to="/developers/docs/layer-2-scaling/#validium" title="Validium" />
 
