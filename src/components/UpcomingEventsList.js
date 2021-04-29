@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import Link from "../components/Link"
-import events from "../data/community/events.json"
+import events from "../data/community-events.json"
 
 const UpcomingEventsList = () => {
   const [orderedUpcomingEvents, setOrderedUpcomingEvents] = useState()
