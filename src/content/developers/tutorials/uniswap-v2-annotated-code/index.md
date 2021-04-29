@@ -233,29 +233,29 @@ These variables hold the cumulative costs for each token (each in term of the ot
 the average exchange rate over a period of time.
 
 One of the biggest gas expenses of Ethereum contracts is storage, which persists from one call of the contract
-to the next. Each storage cell is 256 bits long. So there variable, and `kLast` below are allocated in such 
+to the next. Each storage cell is 256 bits long. So there variable, and `kLast` below, are allocated in such 
 a way a single storage value can include all three of them (112+112+32=256).
 
 ```solidity
     uint public kLast; // reserve0 * reserve1, as of immediately after the most recent liquidity event
 ```
 
-The way the pool decides on the exchange rate between token0 and token1 is to keep the multiple of 
+The way the pair exchange decides on the exchange rate between token0 and token1 is to keep the multiple of 
 the two reserves constant during trades. `kLast` is this value. It changes when a liquidity provider
-deposits or withdraws tokens.
+deposits or withdraws tokens, and it increases slightly because of the 0.3% market fee.
 
 
 Here is a simple example. Note that for the sake of simplicity the table only has has three digits after the decimal point, and we ignore the
 0.3% trading fee so the numbers are not accurate.
 
-| Event                                                    |  reserve0  | reserve1 | reserve0 * reserve1 | Average exchange rate (token1 / token0) |
-| -------------------------------------------------------- |       --------: |      ----------: |       ----------------: | -----------------------  |
-| Initial setup                                            |     1,000.000   |        1,000.000 | 1,000,000               |                          |
-| Trader A deposits 50 token0 and gets 47.619  token1 back |     1,050.000   |          952.381 | 1,000,000               | 0.952                    |
-| Trader B deposits 10 token0 and gets  8.984  token1 back |     1,060.000   |          943.396 | 1,000,000               | 0.898                    |
-| Trader C deposits 40 token0 and gets 34.305  token1 back |     1,100.000   |          909.090 | 1,000,000               | 0.858                    |
-| Trader D deposits 100 token1 and gets 109.01 token0 back |       990.990   |        1,009.090 | 1,000,000               | 0.917                    |
-| Trader E deposits 10 token0 and gets 10.079 token1 back  |     1,000.990   |          999.010 | 1,000,000               | 1.008                    |
+| Event                                       |  reserve0       | reserve1         | reserve0 * reserve1     | Average exchange rate (token1 / token0) |
+| ------------------------------------------- |       --------: |      ----------: |       ----------------: | -----------------------  |
+| Initial setup                               |     1,000.000   |        1,000.000 | 1,000,000               |                          |
+| Trader A swaps 50 token0 for 47.619 token1  |     1,050.000   |          952.381 | 1,000,000               | 0.952                    |
+| Trader B swaps 10 token0 for 8.984  token1  |     1,060.000   |          943.396 | 1,000,000               | 0.898                    |
+| Trader C swaps 40 token0 for 34.305  token1 |     1,100.000   |          909.090 | 1,000,000               | 0.858                    |
+| Trader D swaps 100 token1 for 109.01 token0 |       990.990   |        1,009.090 | 1,000,000               | 0.917                    |
+| Trader E swaps 10 token0 for 10.079 token1  |     1,000.990   |          999.010 | 1,000,000               | 1.008                    |
 
 As traders provide more of token0, the relative value of token1 increases, and vice versa, based on supply and demand.
 
