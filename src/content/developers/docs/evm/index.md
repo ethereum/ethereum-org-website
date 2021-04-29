@@ -34,7 +34,7 @@ Given an old valid state `(S)` and a new set of valid transactions `(T)`, the Et
 
 ### State {#state}
 
-In the context of Ethereum, the state is an enormous data structure called a [modified Merkle Patricia Trie](https://eth.wiki/en/fundamentals/patricia-tree), which keeps all [accounts](/developers/docs/accounts/) linked by hashes and reducible to a single root hash stored on the blockchain.
+In the context of Ethereum, the state is an enormous data structure called a [modified Merkle Patricia Tree](https://eth.wiki/en/fundamentals/patricia-tree), which keeps all [accounts](/developers/docs/accounts/) linked by hashes and reducible to a single root hash stored on the blockchain.
 
 ### Transactions {#transactions}
 
