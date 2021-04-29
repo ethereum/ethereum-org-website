@@ -620,7 +620,7 @@ Short for "test network," a network used to simulate the behavior of the main Et
 
 ### token standard {#token-standard}
 
-Introduced by ERC-20 proposal, this provides a standardized [smart contract](#smart-contract) structure for fungible tokens. Tokens from the same contract can be tracked, traded, and are interchangable, unlike [NFTs](#nft).
+Introduced by ERC-20 proposal, this provides a standardized [smart contract](#smart-contract) structure for fungible tokens. Tokens from the same contract can be tracked, traded, and are interchangeable, unlike [NFTs](#nft).
 
 <DocLink to="/developers/docs/standards/tokens/erc-20/" title="ERC-20 Token Standard" />
 

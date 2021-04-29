@@ -202,7 +202,7 @@ The NFT world and the [decentralized finance (DeFi)](/defi/) world are starting 
 
 #### NFT-backed loans {#nft-backed-loans}
 
-There are DeFi applications that let you borrow money by using collateral. For example you collateralise 10 ETH so you can borrow 5000 DAI ([a stablecoin](/stablecoins/)). This guarantees that the lender gets paid back – if the borrower does't pay back the DAI, the collateral is sent to the lender. However not everyone has enough crypto to use as collateral.
+There are DeFi applications that let you borrow money by using collateral. For example you collateralise 10 ETH so you can borrow 5000 DAI ([a stablecoin](/stablecoins/)). This guarantees that the lender gets paid back – if the borrower doesn't pay back the DAI, the collateral is sent to the lender. However not everyone has enough crypto to use as collateral.
 
 Projects are beginning to explore using NFTs as collateral instead. Imagine you bought a rare CryptoPunk NFT back in the day – they can fetch $1000s at today's prices. By putting this up as collateral, you can access a loan with the same rule set. If you don't pay back the DAI, your CryptoPunk will be sent to the lender as collateral. This could eventually work with anything you tokenise as an NFT.
 
