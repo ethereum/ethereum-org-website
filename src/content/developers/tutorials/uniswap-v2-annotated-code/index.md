@@ -823,7 +823,7 @@ contract UniswapV2Factory is IUniswapV2Factory {
 ```
 
 These state variables are necessary to implement the protocol fee (see [the whitepaper](https://uniswap.org/whitepaper.pdf), p. 5). 
-The `feeTo` address accumulates the ERC-20 tokens of the protocol fee, and `feeToSetter` is the address allowed to change `feeTo` to 
+The `feeTo` address accumulates the liquidity tokens for the protocol fee, and `feeToSetter` is the address allowed to change `feeTo` to 
 a different address.
 
 
@@ -849,7 +849,8 @@ Note: The reason you cannot iterate over all the keys of a mapping is that contr
 storage is *expensive*, so the less of it we use the better, and the less often we change
 it the better. You can create [mappings that support 
 iteration](https://github.com/ethereum/dapp-bin/blob/master/library/iterable_mapping.sol),
-but they require extra storage for a list of keys. In most applications you do not need.
+but they require extra storage for a list of keys. In most applications you do not need
+that.
 
 
 
@@ -911,7 +912,7 @@ one for the same pair.
 To create a new contract we need the code that creates it (both the constructor function and code that writes 
 to memory the EVM bytecode of the actual contract). Normally in Solidity we just use 
 `addr = new <name of contract>(<constructor parameters>)` and the compiler takes care of everything for us, but to
-has a deterministic contract address we need to use [the CREATE2 opcode](https://eips.ethereum.org/EIPS/eip-1014).
+have a deterministic contract address we need to use [the CREATE2 opcode](https://eips.ethereum.org/EIPS/eip-1014).
 When this code was written that opcode was not yet supported by Solidity, so it was necessary to manually get the 
 code. This is no longer an issue, because 
 [Solidity now supports CREATE2](https://docs.soliditylang.org/en/v0.8.3/control-structures.html#salted-contract-creations-create2).
@@ -965,9 +966,8 @@ ERC-20 liquidity token. It is similar to the [OpenWhisk ERC-20 contract](/develo
 I will only explain the part that is different, the `permit` functionality.
 
 Transactions on Ethereum cost Ether (ETH), which is equivalent to real money. If you have ERC-20 tokens but not ETH, you can't send 
-transactions, so you can't do anything with them.
-
-One solution to avoid this problem is [meta-transactions](https://uniswap.org/docs/v2/smart-contract-integration/supporting-meta-transactions/).
+transactions, so you can't do anything with them. One solution to avoid this problem is 
+[meta-transactions](https://uniswap.org/docs/v2/smart-contract-integration/supporting-meta-transactions/).
 The owner of the tokens signs a transaction that allows somebody else to withdraw tokens off chain and sends it using the Internet to
 the recipient. The recipient, which does have ETH, then submits the permit on behalf of the owner.
 
@@ -1067,7 +1067,7 @@ If everything is OK, treat this as [an ERC-20 approve](https://eips.ethereum.org
 The periphery contracts are the API (application program interface) for Uniswap. They are available for external calls, either from 
 other contracts or decentralized applications. You could call the core contracts directly, but that's more complicated and you
 might lose value if you make a mistake. The core contracts only contain tests to make sure they aren't cheated, not sanity checks 
-for anybody else.
+for anybody else. Those are in the periphery so they can be updated as needed.
 
 
 ### UniswapV2Router01.sol  {#UniswapV2Router01}
@@ -1081,7 +1081,7 @@ people use the replacement, `UniswapV2Router02`, instead.
 ### UniswapV2Router02.sol  {#UniswapV2Router02} 
 
 In most cases you would use Uniswap through [this contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol). 
-You are see how to use it [here](https://uniswap.org/docs/v2/smart-contracts/router02/).
+You can see how to use it [here](https://uniswap.org/docs/v2/smart-contracts/router02/).
 
 ```solidity
 pragma solidity =0.6.6;
@@ -1099,7 +1099,7 @@ import './interfaces/IWETH.sol';
 Most of these we either encountered before, or are fairly obvious. The one exception is `IWETH.sol`. Uniswap v2 allows exchanges for
 any pair of ERC-20 tokens, but ether (ETH) itself isn't an ERC-20 token. It predates the standard and is transfered by unique mechanisms. To
 enable the use of ETH in contracts that apply to ERC-20 tokens people came up with the [wrapped ether (WETH)](https://weth.io/) contract. You 
-send this contract ETH, and it gives you an equivalent amount of WETH. Or you can redeem WETH, and get ETH back.
+send this contract ETH, and it mints you an equivalent amount of WETH. Or you can burn WETH, and get ETH back.
 
 
 ```solidity
@@ -1145,6 +1145,8 @@ to do that.
 
 
 #### Add Liquidity {#add-liquidity}
+
+GOON
 
 These functions add tokens to the pair exchange, which increases the liquidity pool.
 
