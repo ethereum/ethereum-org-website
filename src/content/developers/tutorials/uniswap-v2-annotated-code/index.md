@@ -1194,13 +1194,13 @@ specifies these values:
 | amountAMin       |  900  |
 | amountBMin       |  800  |
 
-As long as the exchange rate stays between 0.9 and 1.111, the transaction can take place. If the
+As long as the exchange rate stays between 0.9 and 1.25, the transaction takes place. If the
 exchange rate gets out of that range, the transaction gets cancelled.
 
-The reason for this precaution is that transactions are not immediate, you submit them and the
-
-
-GOON
+The reason for this precaution is that transactions are not immediate, you submit them and eventually
+a miner is going to include them in a block (unless your gas price is very low, in which case you'll
+need to submit another transaction with the same nonce and a higher gas price to overwrite it). You
+cannot control what happens during the interval between submission and inclusion.
 
 ```solidity
     ) internal virtual returns (uint amountA, uint amountB) {
@@ -1229,7 +1229,7 @@ Get the current reserves in the pair.
             (amountA, amountB) = (amountADesired, amountBDesired);            
 ```        
 
-If the current reserves are empty then it's simple - the amounts to be deposited should be exactly
+If the current reserves are empty then this is a new pair exchange. The amounts to be deposited should be exactly
 the same as those the liquidity provider wants to provide.
             
 ```solidity            
@@ -1282,7 +1282,7 @@ B tokens, but only 500 A tokens. If x=0.5, the situation is reversed, a thousand
 You could deposit liquidity directly into the core contract (using 
 [UniswapV2Pair::mint](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol#L110)), but the core contract 
 only checks that it is not getting cheated itself, so you run the risk of losing value if the exchange rate changes between the time
-you submit your transaction and the time it is executed. If you use the periphery contract, it figures the amount you should deposits
+you submit your transaction and the time it is executed. If you use the periphery contract, it figures the amount you should deposit
 and deposits it immediately, so the exchange rate doesn't change and you don't lose anything.
 
 
@@ -1327,7 +1327,7 @@ Transfer the correct amounts of tokens from the user into the pair exchange.
     }
 ```    
 
-In return give the `to` address tokens for partial ownership of the pool. The 
+In return give the `to` address liquidity tokens for partial ownership of the pool. The 
 `mint` function of the core contract sees how many extra tokens it has (compared
 to what it had the last time liquidity changed) and mints liquidity accordingly.
     
@@ -1379,7 +1379,7 @@ than the user thought), we need to issue a refund.
 #### Remove Liquidity {#remove-liquidity}
 
 
-The functions remove liquidity and pay back to the liquidity provider. 
+The functions to remove liquidity and pay back the liquidity provider. 
 
 ```solidity
     // **** REMOVE LIQUIDITY ****
@@ -1565,10 +1565,10 @@ to traders.
 ```
 
 As I'm writing this there are [388,160 ERC-20 tokens](https://etherscan.io/tokens). If there was a 
-market for each token pair, it would be over a 150 billion pair exchanges. The entire chain, at
+pair exchange for each token pair, it would be over a 150 billion pair exchanges. The entire chain, at
 the moment, [only has 0.1% that number of accounts](https://etherscan.io/chart/address). Instead, the swap 
-functions support the concept of a path. A trader can exchange A for B, B for C, and C for D, even if 
-there is no A-D market.
+functions support the concept of a path. A trader can exchange A for B, B for C, and C for D, so there is
+no need for a direct A-D pair exchange.
 
 The prices on these markets tend to be synchronized, because when they are out of sync it creates an
 opportunity for arbitrage. Imagine, for example, three tokens, A, B, and C. There are three pair 
@@ -1621,6 +1621,7 @@ next pair exchange.
         }
     }
 ```
+
 Actually call the pair exchange to swap the tokens. We don't need a callback to be told about the exchange, so 
 we don't send any bytes in that field.
 
@@ -1641,7 +1642,7 @@ This parameter contains the addresses of the ERC-20 contracts. As explained abov
 need to go through several pair exchanges to get from the asset you have to the asset you want.
 
 A function parameter in solidity can be stored either in `memory` or the `calldata`. If the function is an entry point
-to the contract, called directly from a user (using a transaction) or a different contract, then the parameter's value
+to the contract, called directly from a user (using a transaction) or from a different contract, then the parameter's value
 can be taken directly from the call data. If the function is called internally, as `_swap` above, then the parameters
 have to be stored in `memory`. From the perspective of the called contract `calldata` is read only.
 
@@ -2270,4 +2271,8 @@ don't need to actually call any function, we don't send any data with the call.
 
 ## Conclusion {#Conclusion}
 
-GOON
+This is a long article of about 50 pages. If you made it here, congratulations. Hopefully now you understand the considerations
+in writing a real-life application (as opoosed to short sample programs) and are better able to write contracts for your own
+use cases. 
+
+Now go and write something useful and amaze us.
