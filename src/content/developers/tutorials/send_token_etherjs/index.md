@@ -41,11 +41,11 @@ ES3(UMD) in the Browser
         type="application/javascript"></script>
 ```
 ### Parameters {#param}
-1. contract_address - Token contract address(contract address is needed when the token you want to transfer is not ether)
-2. send_token_amount - The amount you want to send to the receiver
-3. to_address - The receiver's address
-4. send_account - The sender's address
-5. private_key - Private key of the sender to sign the transaction and actually transfer the tokens
+1. **contract_address** : Token contract address(contract address is needed when the token you want to transfer is not ether)
+2. **send_token_amount** : The amount you want to send to the receiver
+3. **to_address** : The receiver's address
+4. **send_account** : The sender's address
+5. **private_key** : Private key of the sender to sign the transaction and actually transfer the tokens
 
 ## Notice {#notice}
 signTransaction(tx) is removed because sendTransaction() does it internally.
@@ -78,7 +78,7 @@ window.ethersProvider.getGasPrice(); // gasPrice
 ### 5. Define Transaction {#define-transaction}
 These variables defined below are dependent on send_token()
 
-#### params {#transaction-params}
+### Transaction parameters {#transaction-params}
 1. **send_account** : address of the token sender
 2. **to_address** : address of the token receiver
 3. **send_token_amount** : the amount of tokens to send
