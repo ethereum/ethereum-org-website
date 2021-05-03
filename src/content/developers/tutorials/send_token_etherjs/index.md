@@ -23,12 +23,12 @@ To get started, we must first import the ethers.js library into our javascript
 1. Include ethers.js(5.0)
 
 **Installing** {#install-ethersjs}
-```
+```shell
 /home/ricmoo> npm install --save ethers
 ```
 
 ES6 in the Browser
-```
+```html
 <script type="module">
     import { ethers } from "https://cdn.ethers.io/lib/ethers-5.0.esm.min.js";
     // Your code here...
@@ -36,7 +36,7 @@ ES6 in the Browser
 ```
 
 ES3(UMD) in the Browser
-```
+```html
 <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"
         type="application/javascript"></script>
 ```
@@ -56,23 +56,23 @@ signTransaction(tx) is removed because sendTransaction() does it internally.
 ### 1. Connect to network(mainnet, testnet) {#connect-to-network}
 #### Set Provider (Infura) {#set-provider}
 Connect to mainnet
-```
+```javascript
 window.provider = new InfuraProvider();
 ```
 Connect to ropsten testnet
-```
+```javascript
 window.provider = new InfuraProvider("ropsten");
 ```
 ### 2. Create wallet {#create-wallet}
-```
+```javascript
 let wallet = new ethers.Wallet(private_key);
 ```
 ### 3. Connect Wallet to net {#connect-wallet-to-net}
-```
+```javascript
 let walletSigner = wallet.connect(window.ethersProvider);
 ```
 ### 4. Get current gas price {#get-gas}
-```
+```javascript
 window.ethersProvider.getGasPrice(); // gasPrice
 ```
 ### 5. Define Transaction {#define-transaction}
@@ -86,7 +86,7 @@ These variables defined below are dependent on send_token()
 5. **gas_price** : gas price
 
 see below for how to use
-```
+```javascript
 const tx = 
 {
 	from : send_account,
@@ -98,7 +98,7 @@ const tx =
 }
 ```
 ### 6. Transfer {#transfer}
-```
+```javascript
 walletSigner.sendTransaction(tx).then((transaction) => 
 		{
 			console.dir(transaction);
@@ -107,7 +107,7 @@ walletSigner.sendTransaction(tx).then((transaction) =>
 ```
 
 ## How to use it {#how-to-use}
-```
+```javascript
 let private_key = "41559d28e936dc92104ff30691519693fc753ffbee6251a611b9aa1878f12a4d";
 let send_token_amount = '1';
 let to_address = '0x4c10D2734Fb76D3236E522509181CC3Ba8DE0e80';
@@ -125,7 +125,7 @@ send_token(contract_address, send_token_amount, to_address, send_address, privat
 
 
 ## send_token() {#send-token-method}
-```
+```javascript
 function send_token(contract_address, send_token_amount, to_address, send_account, private_key)
 {
 	let wallet = new ethers.Wallet(private_key);
