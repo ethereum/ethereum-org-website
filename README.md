@@ -930,6 +930,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://twitter.com/kleffew94"><img src="https://avatars.githubusercontent.com/u/33433528?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kevin Leffew</b></sub></a><br /><a href="#content-keleffew" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/pgrimaud"><img src="https://avatars.githubusercontent.com/u/1866496?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pierre Grimaud</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Apgrimaud" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/jclancy93"><img src="https://avatars.githubusercontent.com/u/7850202?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jack Clancy</b></sub></a><br /><a href="#content-jclancy93" title="Content">🖋</a></td>
+    <td align="center"><a href="http://www.justinspradlin.com"><img src="https://avatars.githubusercontent.com/u/25503?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Justin Spradlin</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Asprad" title="Bug reports">🐛</a> <a href="#content-sprad" title="Content">🖋</a></td>
   </tr>
 </table>
 
