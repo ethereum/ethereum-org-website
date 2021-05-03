@@ -14,12 +14,18 @@ published: 2021-04-06
 ## Send Token Using ethers.js(5.0) {#send-token}
 
 ### In This Tutorial You'll Learn How To {#you-learn-about}
-* Include ethers.js
+* Import ethers.js
 * Transfer token
 * Set gas price according to the network traffic situation
 
-### Prerequisite {#prerequisite}
+### To-Get-Started {#to-get-started}
+To get started, we must first import the ethers.js library into our javascript 
 1. Include ethers.js(5.0)
+
+**Installing** {#install-ethersjs}
+```
+/home/ricmoo> npm install --save ethers
+```
 
 ES6 in the Browser
 ```
@@ -44,7 +50,11 @@ ES3(UMD) in the Browser
 ## Notice {#notice}
 signTransaction(tx) is removed because sendTransaction() does it internally.
 
-## Set Provider (Infura) {#set-provider}
+
+
+## Sending Procedures {#procedure}
+### 1. Connect to network(mainnet, testnet) {#connect-to-network}
+#### Set Provider (Infura) {#set-provider}
 Connect to mainnet
 ```
 window.provider = new InfuraProvider();
@@ -53,9 +63,6 @@ Connect to ropsten testnet
 ```
 window.provider = new InfuraProvider("ropsten");
 ```
-
-## Sending Procedures {#procedure}
-### 1. Connect to network(mainnet, testnet) {#connect-to-network}
 ### 2. Create wallet {#create-wallet}
 ```
 let wallet = new ethers.Wallet(private_key);
@@ -69,6 +76,16 @@ let walletSigner = wallet.connect(window.ethersProvider);
 window.ethersProvider.getGasPrice(); // gasPrice
 ```
 ### 5. Define Transaction {#define-transaction}
+These variables defined below are dependent on send_token()
+
+#### params {#transaction-params}
+1. **send_account** : address of the token sender
+2. **to_address** : address of the token receiver
+3. **send_token_amount** : the amount of tokens to send
+4. **gas_limit** : gas limit
+5. **gas_price** : gas price
+
+see below for how to use
 ```
 const tx = 
 {
@@ -77,7 +94,7 @@ const tx =
 	value : ethers.utils.parseEther(send_token_amount),
 	nonce : window.ethersProvider.getTransactionCount(send_account, 'latest'),
 	gasLimit : ethers.utils.hexlify(gas_limit), // 100000
-	gasPrice : gasPrice
+	gasPrice : gas_price
 }
 ```
 ### 6. Transfer {#transfer}
@@ -104,7 +121,7 @@ window.ethersProvider = new ethers.providers.InfuraProvider("ropsten");
 send_token(contract_address, send_token_amount, to_address, send_address, private_key);
 ```
 ### Success! {#success}
-![image](https://user-images.githubusercontent.com/63450340/113803937-7f35fd80-9798-11eb-960c-b2ae90baf84f.png)
+![image of transaction done successfully](https://user-images.githubusercontent.com/63450340/113803937-7f35fd80-9798-11eb-960c-b2ae90baf84f.png)
 
 
 ## send_token() {#send-token-method}
@@ -116,8 +133,8 @@ function send_token(contract_address, send_token_amount, to_address, send_accoun
 
 	window.ethersProvider.getGasPrice().then((currentGasPrice) => 
 	{
-		let gasPrice = ethers.utils.hexlify(parseInt(currentGasPrice));
-		console.log(`gasPrice: ${ gasPrice }`);
+		let gas_price = ethers.utils.hexlify(parseInt(currentGasPrice));
+		console.log(`gas_price: ${ gas_price }`);
 
 		if(contract_address)// general token send
 		{
@@ -143,7 +160,7 @@ function send_token(contract_address, send_token_amount, to_address, send_accoun
 				value : ethers.utils.parseEther(send_token_amount),
 				nonce : window.ethersProvider.getTransactionCount(send_account, 'latest'),
 				gasLimit : ethers.utils.hexlify(gas_limit), // 100000
-				gasPrice : gasPrice
+				gasPrice : gas_price
 			}
 			console.dir(tx);
 			try{
