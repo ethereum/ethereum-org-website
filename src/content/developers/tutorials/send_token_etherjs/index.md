@@ -121,7 +121,7 @@ window.ethersProvider = new ethers.providers.InfuraProvider("ropsten");
 send_token(contract_address, send_token_amount, to_address, send_address, private_key);
 ```
 ### Success! {#success}
-![image of transaction done successfully](https://user-images.githubusercontent.com/63450340/113803937-7f35fd80-9798-11eb-960c-b2ae90baf84f.png)
+![image of transaction done successfully](./113803937-7f35fd80-9798-11eb-960c-b2ae90baf84f.png)
 
 
 ## send_token() {#send-token-method}
