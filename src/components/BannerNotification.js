@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const Banner = styled.div`
-  display: ${(props) => (props.shouldShow ? `block` : `none`)};
+  display: ${(props) => (props.shouldShow ? `flex` : `none`)};
   width: 100%;
   background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.background};
