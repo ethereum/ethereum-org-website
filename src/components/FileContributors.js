@@ -158,6 +158,7 @@ const FileContributors = ({ relativePath, className, editPath }) => {
   )
 
   const lastCommit = commits[0]
+  if (typeof lastCommit === "undefined") return null
   const lastContributor = lastCommit.author
   const uniqueContributors = commits.reduce(
     (res, cur) => {
