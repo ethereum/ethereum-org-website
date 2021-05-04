@@ -8,13 +8,19 @@ incomplete: true
 
 ## Scaling Overview {#scaling-overview}
 
-The scalability of a blockchain is measured in transactions per second. On the Ethereum blockchain network congestion leads to slower transactions and nonviable gas prices. Increasing the network capacity (transactions per second) is fundamental to the meaningful and mass adoption of Ethereum. Conceptually scaling can be categorised as either on-chain scaling or off-chain scaling.
+As the number of people using Ethereum has grown, the blockchain in its native form has reached certain capacity limitations. This has driven up the cost of using the network, creating the need for "scaling solutions." There are multiple solutions being researched, tested and implemented that take different approaches to achieving similar goals.
+
+The main goal of scalability is to increase transactions per second (TPS), without sacrificing decentralization or security (more on [Eth2 vision](/eth2/vision/)). On the layer 1 Ethereum blockchain, high demand leads to slower transactions and nonviable gas prices. Increasing the network capacity in terms of TPS is fundamental to the meaningful and mass adoption of Ethereum. 
+
+While TPS is important, it is essential that scaling solutions enabling high transaction throughout remain decentralized and secure. Keeping the barrier to entry low for node operators is critical in preventing a progression towards centralized and insecure computing power.
+
+Conceptually scaling can be categorised as either on-chain scaling or off-chain scaling.
 
 ## On-Chain Scaling {#on-chain-scaling}
 
-### Sharding
+### Sharding {#sharding}
 
-Sharding is the process of splitting a database horizontally to spread the load. In an Ethereum context, sharding will reduce network congestion and increase transactions per second by creating new chains, known as “shards”.
+Sharding is the process of splitting a database horizontally to spread the load. In an Ethereum context, sharding will reduce network congestion and increase transactions per second by creating new chains, known as “shards”. This will also lighten the load for each validator who will no longer be required to process the entirety of all transactions across the network.
 
 Learn more about [Sharding](/eth2/shard-chains/).
 
@@ -22,7 +28,7 @@ Learn more about [Sharding](/eth2/shard-chains/).
 
 ### Rollups {#rollups}
 
-Rollups are solutions that perform transaction execution outside layer 1, but post transaction data on layer 1. As transaction data is on layer 1, this allows rollups to be secured by layer 1.
+Rollups are solutions that perform transaction execution outside layer 1, but post transaction data on layer 1. As transaction data is included in layer 1 blocks, this allows rollups to be secured by native Ethereum security.
 
 Learn more about [Rollups](/developers/docs/layer-2-scaling/).
 
