@@ -40,7 +40,7 @@ This is also an important change for another Eth2 upgrade: [shard chains](/eth2/
 
 ### Setting up for shard chains {#setting-up-for-shard-chains}
 
-Shard chains will be an Eth2 upgrade that follows the merging of mainnet with the Beacon Chain. These "shards" will increase the capacity of the network and improve transaction speed by extending the network to 64 blockchains. The Beacon Chain is an important first step in introducing shard chains, because they require staking to work securely.
+After mainnet merges with the Beacon Chain, the next upgrade will introduce shard chains to the proof-of-stake network. These "shards" will increase the capacity of the network and improve transaction speed by extending the network to 64 blockchains. The Beacon Chain is an important first step in introducing shard chains, because they require staking to work securely.
 
 Eventually the Beacon Chain will also be responsible for randomly assigning stakers to validate shard chains. This is key to making it difficult for stakers to collude and take over a shard. Well, it means they have [less than a 1 in a trillion chance](https://medium.com/@chihchengliang/minimum-committee-size-explained-67047111fa20).
 

@@ -15,12 +15,12 @@ summaryPoints:
 ---
 
 <UpgradeStatus date="~2021/22">
-    This upgrade is currently planned to follow the London upgrade, which is coming in the summer of 2021. It represents the disabling of proof-of-work mining, and upgrades the Ethereum you know and love today to a network secured by staked ether. An exciting step in realizing the <a href="/eth2/vision/">Eth2 vision</a> – more scalability, security, and sustainability.
+  This upgrade represents the official switch to proof-of-stake consensus. This eliminates the need for energy-intensive mining, and instead secures the network using staked ether. A truly exciting step in realizing the <a href="/eth2/vision/">Eth2 vision</a> – more scalability, security, and sustainability.
 </UpgradeStatus>
 
 ## What is the merge? {#what-is-the-docking}
 
-It's important to remember that initially, the other Eth2 upgrades are being shipped separately from [mainnet](/glossary/#mainnet) - the chain we use today. Ethereum mainnet continues to be secured by [proof-of-work](/developers/docs/consensus-mechanisms/pow/), even while [the Beacon Chain](/eth2/beacon-chain/) runs in parallel using [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). The merge is when these two systems finally come together.
+It's important to remember that initially, the [Beacon Chain](/eth2/beacon-chain/) shipped separately from [mainnet](/glossary/#mainnet) - the chain we use today. Ethereum mainnet continues to be secured by [proof-of-work](/developers/docs/consensus-mechanisms/pow/), even while the Beacon Chain runs in parallel using [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). The merge is when these two systems finally come together.
 
 Imagine Ethereum is a space ship that isn’t quite ready for an interstellar voyage. With the Beacon Chain the community has built a new engine and a hardened hull. When it’s time, the current ship will dock with this new system, merging into one ship, ready to put in some serious lightyears and take on the universe.
 
@@ -49,7 +49,7 @@ These improvements all have a place in Eth2 so it’s likely that their progress
 ## After the merge {#after-the-merge}
 
 This will signal the end of proof-of-work for Ethereum and start the era of a more sustainable, eco-friendly Ethereum. 
-!!!!!!! At this point Ethereum will have the scale, security and sustainability outlined in its [Eth2 vision](/eth2/vision/).
+At this point Ethereum will be one step closer to achiving the full scale, security and sustainability outlined in its [Eth2 vision](/eth2/vision/).
 
 ## Relationship between upgrades {#relationship-between-upgrades}
 
@@ -65,6 +65,6 @@ Once the merge happens, stakers will be assigned to validate the Ethereum mainne
 
 Originally, plans were made to implement shard chains prior to the incorporation of the Ethereum mainnet as a primary means of scaling. As research and development of layer 2 scaling solutions have boomed, the priority of core Ethereum devs shifted to expediting the switch a fully proof-of-stake driven mainnet. This means that the remaining shard chains will not be complete prior to switching mainnet to proof-of-stake.
 
-Currently the plan remains for shard chains to be rolled out after mainnet has merged. This will be an ongoing assessment from the community as to the need for potentially multiple rounds of shard chains to allow for endless scalability.
+This will be an ongoing assessment from the community as to the need for potentially multiple rounds of shard chains to allow for endless scalability.
 
 <ButtonLink to="/eth2/shard-chains/">Shard chains</ButtonLink>
