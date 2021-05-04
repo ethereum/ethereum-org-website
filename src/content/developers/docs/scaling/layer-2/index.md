@@ -1,6 +1,6 @@
 ---
 title: Layer 2 scaling
-description: An introduction to the different scaling options currently being developed by the Ethereum community.
+description: An introduction to the different layer 2 scaling solutions currently being developed by the Ethereum community.
 lang: en
 sidebar: true
 incomplete: true
@@ -25,10 +25,6 @@ You should have a good understanding of all the foundational topics. Implementin
   - [ZK rollups](#zk-rollups)
   - [Optimistic rollups](#optimistic-rollups)
 - [State channels](#channels)
-- [Plasma](#plasma)
-- [Validium](#validium)
-- [Sidechains](#sidechains)
-- [Hybrid solutions](#hybrid-solutions)
 
 Most layer 2 solutions are centered around a server or cluster of servers, each of which may be referred to as a node, validator, operator, sequencer, block producer, or similar term. Depending on the implementation, these layer 2 nodes may be run by the businesses or entities that use them, or by a 3rd party operator, or by a large group of individuals (similar to mainnet). Generally speaking, transactions are submitted to these layer 2 nodes instead of being submitted directly to layer 1 ([mainnet](/glossary/#mainnet)); the layer 2 instance then batches them into groups before anchoring them to layer 1, after which they are secured by layer 1 and cannot be altered. The details of how this is done vary significantly between different layer 2 technologies and implementations.
 
@@ -170,70 +166,10 @@ There are two types of channels right now:
 - [Raiden](https://raiden.network/)
 - [Statechannels.org](https://statechannels.org/)
 
-## Plasma {#plasma}
-
-A plasma chain is a separate blockchain that is anchored to the main Ethereum chain, and uses fraud proofs (like [Optimistic rollups](#optimistic-rollups)) to arbitrate disputes.
-
-| Pros                                                                                                                  | Cons                                                                                                                                                                        |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| High throughput, low cost per transaction.                                                                            | Does not support general computation. Only basic token transfers, swaps, and a few other transaction types are supported via predicate logic.                               |
-| Good for transactions between arbitrary users (no overhead per user pair if both are established on the plasma chain) | Need to periodically watch the network (liveness requirement) or delegate this responsibility to someone else to ensure the security of your funds.                         |
-|                                                                                                                       | Relies on one or more operators to store data and serve it upon request.                                                                                                    |
-|                                                                                                                       | Withdrawals are delayed by several days to allow for challenges. For fungible assets this can be mitigated by liquidity providers, but there is an associated capital cost. |
-
-### Use Plasma {#use-plasma}
-
-- [OMG Network](https://omg.network/)
-- [Polygon](https://polygon.technology/)[previously Matic Network](https://matic.network/)
-- [Gluon](https://gluon.network/)
-- [Gazelle](https://gzle.io/)
-- [LeapDAO](https://ipfs.leapdao.org/)
-
-## Validium {#validium}
-
-Uses validity proofs like [ZK-rollups](#zk-rollups) but data is not stored on the main layer 1 Ethereum chain. This can lead to 10k transactions per second per validium chain and multiple chains can be run in parallel.
-
-| Pros                                                                                                      | Cons                                                                                                                                     |
-| --------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| No withdrawal delay (no latency to on-chain/cross-chain tx); consequent greater capital efficiency.       | Limited support for general computation/smart contracts; specialized languages required.                                                 |
-| Not vulnerable to certain economic attacks faced by fraud-proof based systems in high-value applications. | High computational power required to generate ZK proofs; not cost effective for low throughput applications.                             |
-|                                                                                                           | Slower subjective finality time (10-30 min to generate a ZK proof) (but faster to full finality because there is no dispute time delay). |
-
-### Use Validium {#use-validium}
-
-- [Starkware](https://starkware.co/)
-- [Matter Labs zkPorter](https://matter-labs.io/)
-- [Loopring](https://loopring.org/#/)
-
-## Sidechains {#sidechains}
-
-A sidechain is a separate blockchain which runs in parallel to mainnet and operates independently. It has its own consensus algorithm ([Proof of Authority](https://en.wikipedia.org/wiki/Proof_of_authority), [Delegated proof-of-stake](https://en.bitcoinwiki.org/wiki/DPoS), [Byzantine fault tolerance](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained), and so on). It is connected to the main chain by a two-way bridge.
-
-| Pros                                             | Cons                                                                                           |
-| ------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
-| Established technology.                          | Less decentralized .                                                                           |
-| Supports general computation, EVM compatibility. | Uses a separate consensus mechanism. Not secured by layer 1 (so technically it’s not layer 2). |
-|                                                  | A quorum of sidechain validators can commit fraud.                                             |
-
-### Use Sidechains {#use-sidechains}
-
-- [Skale](https://skale.network/)
-- [POA Network](https://www.poa.network/)
-
-## Hybrid solutions {#hybrid-solutions}
-
-Combine the best parts of multiple layer 2 technologies, and may offer configurable tradeoffs.
-
-### Use Hybrid solutions {#use-hybrid-solutions}
-
-- [Offchain Labs Arbitrum SCSC](https://offchainlabs.com/arbitrum.pdf)
-- [Celer](https://www.celer.network/)
-
 ## Further reading {#further-reading}
 
 - [Up-to-date analytics on Layer 2 scaling solutions for Ethereum](https://www.l2beat.com/)
 - [An Incomplete Guide to Rollups](https://vitalik.ca/general/2021/01/05/rollup.html)
-- [Validium And The Layer 2 Two-By-Two — Issue No. 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
 - [Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
 - [Zero-Knowledge Blockchain Scalability](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 
@@ -258,9 +194,3 @@ Combine the best parts of multiple layer 2 technologies, and may offer configura
 - [EthHub on optimistic rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [How does Optimism's Rollup really work?](https://research.paradigm.xyz/optimism)
-
-**Sidechains**
-
-- [EthHub on sidechains](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/sidechains/)
-- [Scaling Ethereum Dapps through Sidechains](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _Feb 8, 2018 - Georgios Konstantopoulos_
-- [Adding Hybrid PoS-Rollup Sidechain to Celer’s Coherent Layer-2 Platform on Ethereum](https://medium.com/celer-network/adding-hybrid-pos-rollup-sidechain-to-celers-coherent-layer-2-platform-d1d3067fe593)
