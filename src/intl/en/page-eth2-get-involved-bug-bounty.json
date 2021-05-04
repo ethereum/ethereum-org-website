@@ -8,7 +8,7 @@
   "page-eth2-bug-bounty-clients-type-1": "spec non-compliance issues.",
   "page-eth2-bug-bounty-clients-type-2": "unexpected crashes or denial of service (DOS) vulnerabilities.",
   "page-eth2-bug-bounty-clients-type-3": "any issues causing irreparable consensus splits from the rest of the network.",
-  "page-eth2-bug-bounty-docking": "docking",
+  "page-eth2-bug-bounty-docking": "merge",
   "page-eth2-bug-bounty-email-us": "Email us:",
   "page-eth2-bug-bounty-help-links": "Helpful links",
   "page-eth2-bug-bounty-hunting": "Bug hunting rules",
