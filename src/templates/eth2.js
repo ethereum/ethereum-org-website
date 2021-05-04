@@ -362,12 +362,12 @@ const dropdownLinks = {
       to: "/eth2/beacon-chain/",
     },
     {
-      text: "page-eth2-upgrades-shard-chains",
-      to: "/eth2/shard-chains/",
-    },
-    {
       text: "page-eth2-upgrades-docking",
       to: "/eth2/merge/",
+    },
+    {
+      text: "page-eth2-upgrades-shard-chains",
+      to: "/eth2/shard-chains/",
     },
   ],
 }

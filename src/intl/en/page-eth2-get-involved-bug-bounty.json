@@ -26,7 +26,7 @@
   "page-eth2-bug-bounty-meta-description": "An overview of the Eth2 bug hunting program: how to get involved and reward information.",
   "page-eth2-bug-bounty-meta-title": "Eth2 bug hunting bounty program",
   "page-eth2-bug-bounty-not-included": "Not included",
-  "page-eth2-bug-bounty-not-included-desc": "The shard chain and docking upgrades are still in active development and so are not yet included as part of this bounty program.",
+  "page-eth2-bug-bounty-not-included-desc": "The merge and shard chain upgrades are still in active development and so are not yet included as part of this bounty program.",
   "page-eth2-bug-bounty-owasp": "View OWASP method",
   "page-eth2-bug-bounty-points": "The EF will also award points based on:",
   "page-eth2-bug-bounty-points-error": "Error loading data... please refresh.",

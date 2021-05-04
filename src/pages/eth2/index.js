@@ -461,12 +461,6 @@ const Eth2IndexPage = ({ data }) => {
               <p>
                 <Translation id="page-eth2-beacon-chain-date" />
               </p>
-              <Link to="/eth2/shard-chains/">
-                <Translation id="page-eth2-shard-title" />
-              </Link>
-              <p>
-                <Translation id="page-eth2-shard-date" />
-              </p>
               <Link to="/eth2/merge/">
                 <Translation id="page-eth2-docking" />
               </Link>
@@ -475,6 +469,12 @@ const Eth2IndexPage = ({ data }) => {
                 <Link to="/glossary/#mainnet">
                   <Translation id="page-eth2-docking-mainnet" />
                 </Link>
+              </p>
+              <Link to="/eth2/shard-chains/">
+                <Translation id="page-eth2-shard-title" />
+              </Link>
+              <p>
+                <Translation id="page-eth2-shard-date" />
               </p>
             </ExpandableCard>
             <ExpandableCard
@@ -518,13 +518,13 @@ const Eth2IndexPage = ({ data }) => {
               </p>
               <ul>
                 <li>
-                  <Link to="/eth2/shard-chains/">
-                    <Translation id="page-eth2-shard-lower" />
+                  <Link to="/eth2/merge/">
+                    <Translation id="page-eth2-just-docking" />
                   </Link>
                 </li>
                 <li>
-                  <Link to="/eth2/merge/">
-                    <Translation id="page-eth2-just-docking" />
+                  <Link to="/eth2/shard-chains/">
+                    <Translation id="page-eth2-shard-lower" />
                   </Link>
                 </li>
               </ul>
@@ -600,13 +600,13 @@ const Eth2IndexPage = ({ data }) => {
               </p>
               <ul>
                 <li>
-                  <Link to="/eth2/shard-chains/">
-                    <Translation id="page-eth2-shard-lower" />
+                  <Link to="/eth2/merge/">
+                    <Translation id="page-eth2-just-docking" />
                   </Link>
                 </li>
                 <li>
-                  <Link to="/eth2/merge/">
-                    <Translation id="page-eth2-just-docking" />
+                  <Link to="/eth2/shard-chains/">
+                    <Translation id="page-eth2-shard-lower" />
                   </Link>
                 </li>
               </ul>
