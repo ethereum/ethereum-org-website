@@ -122,4 +122,7 @@
     - id: docs-nav-oracles
       to: /developers/docs/oracles/
     - id: docs-nav-scaling
-      to: /developers/docs/layer-2-scaling/
+      to: /developers/docs/scaling/
+      items:
+        - id: docs-nav-layer-2-scaling
+          to: /developers/docs/layer-2-scaling/
