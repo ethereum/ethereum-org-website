@@ -365,27 +365,6 @@ const GetInvolvedPage = ({ data, location }) => {
             </StyledCard>
           ))}
         </StyledCardContainer>
-        <TemporaryCallout
-          image={data.rhino.childImageSharp.fluid}
-          alt={translateMessageId("eth2-rhino-img-alt", intl)}
-          title={translateMessageId("page-eth2-get-involved-grants", intl)}
-          description={translateMessageId(
-            "page-eth2-get-involved-grants-desc",
-            intl
-          )}
-        >
-          <div>
-            <ButtonLink to="/eth2/get-involved/staking-community-grants/">
-              <Translation id="page-eth2-get-involved-more" />
-            </ButtonLink>
-          </div>
-          <Status>
-            <On />
-            <Title>
-              <Translation id="page-eth2-get-involved-date" />
-            </Title>
-          </Status>
-        </TemporaryCallout>
       </Content>
       <Divider id="clients" />
       <Content>
