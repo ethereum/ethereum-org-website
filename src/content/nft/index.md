@@ -77,6 +77,19 @@ This website has an alternative domain name powered by NFTs, **ethereum.eth**. O
 
 ## How do NFTs work? {#how-nfts-work}
 
+Thinking about this from a very high level, there are many blockchains that support NFTs but you will find majority under the Ethereum blockchain. There is a difference between NFT tokens and Ethereum tokens in that NFT tokens have extra information stored in them. This extra information is what really makes an NFT an NFT! NFTs are unique crypto tokens that are maganed on a blockchain and the blockchain acts as the decentralized ledger that tracks the ownership and transaction history of each NFT. An NFT is created, or in the proper terms "minted" from digital objects that represent many things. For example, an NFT can consist of items such as:
+
+- GIFs
+- Collectibles
+- Music
+- Videos
+
+One thing to keep in mind is that an NFT can only have one owner at a time. The way this is managed is through the uniqueID and metadata that no other token can replicate. NFTs are created through smart contracts that veryify ownership and manage transferability of the NFTs. When someone creates, or mints an NFT they are writing code to create the underlying smart contract code that manages the NFTs qualities, which are then added to the blockchain where the NFT is being managed. Minting NFT tokens is very similar to how metal coins are minted and pushed into the economy. The minting process, from a high level, has the following steps that it goes through:
+
+- Creating a new block
+- Validating information
+- Recording information into the blockchain
+
 NFTs have some special properties:
 
 - Each token minted has a unique identifier.
