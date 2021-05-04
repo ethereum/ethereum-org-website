@@ -10,7 +10,6 @@ import ActionCard from "../../components/ActionCard"
 import CalloutBanner from "../../components/CalloutBanner"
 import Emoji from "../../components/Emoji"
 import Eth2Articles from "../../components/Eth2Articles"
-import Eth2Diagram from "../../components/Eth2Diagram"
 import ExpandableCard from "../../components/ExpandableCard"
 import GhostCard from "../../components/GhostCard"
 import InfoBanner from "../../components/InfoBanner"
@@ -190,13 +189,6 @@ const RightColumn = styled.div`
   }
 `
 
-const FullWidthContainer = styled(Page)`
-  background: ${(props) => props.theme.colors.ednBackground};
-  padding: 2rem;
-  overflow-x: scroll;
-  margin-bottom: 2rem;
-`
-
 const Faq = styled.div`
   display: flex;
   margin-top: 4rem;
@@ -374,9 +366,7 @@ const Eth2IndexPage = ({ data }) => {
           ))}
         </StyledCardContainer>
       </Content>
-      <FullWidthContainer>
-        <Eth2Diagram />
-      </FullWidthContainer>
+      {/* TODO: Upgrade existing Eth2Diagram with new plan, then reinstate here */}
       <Content>
         <ContributeCard>
           <div>
