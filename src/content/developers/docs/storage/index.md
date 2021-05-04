@@ -49,7 +49,7 @@ Platforms with contract based persistence:
 
 - [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
 - [Skynet](https://siasky.net/)
-- [Stroj](https://storj.io/)
+- [Storj](https://storj.io/)
 
 ### Additional considerations {#additional-considertion}
 
@@ -108,6 +108,10 @@ PoS based:
 - [ipfs.io](https://ipfs.io/)
 - [Documentation](https://docs.ipfs.io/)
 - [GitHub](https://github.com/ipfs/ipfs)
+
+**Storj DCS -** **_Secure, private, and S3-compatible decentralized cloud object storage for developers._**
+- [Storj](https://storj.io/)
+- [Documentation](https://docs.storj.io/)
 
 **Skynet -** **_Skynet is a decentralized PoW chain dedicated to a decentralized web._**
 

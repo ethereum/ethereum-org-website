@@ -532,7 +532,7 @@ A type of [layer 2](#layer-2) scaling solution that batches multiple transaction
 
 ### Serenity {#serenity}
 
-The fourth and final development stage of Ethereum.
+The fourth and final development stage of Ethereum, otherwise known as Ethereum 2.0.
 
 <DocLink to="/eth2/" title="Ethereum 2.0 (Eth2)" />
 
@@ -620,7 +620,7 @@ Short for "test network," a network used to simulate the behavior of the main Et
 
 ### token standard {#token-standard}
 
-Introduced by ERC-20 proposal, this provides a standardized [smart contract](#smart-contract) structure for fungible tokens. Tokens from the same contract can be tracked, traded, and are interchangable, unlike [NFTs](#nft).
+Introduced by ERC-20 proposal, this provides a standardized [smart contract](#smart-contract) structure for fungible tokens. Tokens from the same contract can be tracked, traded, and are interchangeable, unlike [NFTs](#nft).
 
 <DocLink to="/developers/docs/standards/tokens/erc-20/" title="ERC-20 Token Standard" />
 
@@ -661,7 +661,7 @@ A security model for certain [layer 2](#layer-2) solutions where, to increase sp
 
 ### Validium {#validium}
 
-A [layer 2](#layer-2) solution that uses [validity proofs](#validity-proof) to improve transaction throughput. Unlike [Zero-knowlege rollups](#zk-rollup), Validium data isn't stored on layer 1 [mainnet](#mainnet).
+A [layer 2](#layer-2) solution that uses [validity proofs](#validity-proof) to improve transaction throughput. Unlike [Zero-knowledge rollups](#zk-rollup), Validium data isn't stored on layer 1 [mainnet](#mainnet).
 
 <DocLink to="/developers/docs/layer-2-scaling/#validium" title="Validium" />
 

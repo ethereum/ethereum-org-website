@@ -24,7 +24,6 @@ import TranslationsInProgress from "../components/TranslationsInProgress"
 import SectionNav from "../components/SectionNav"
 import DocLink from "../components/DocLink"
 import GhostCard from "../components/GhostCard"
-import Help from "../components/Help"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
 import {
@@ -38,6 +37,7 @@ import {
   CardContainer,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
+import UpcomingEventsList from "../components/UpcomingEventsList"
 
 const Page = styled.div`
   display: flex;
@@ -126,7 +126,7 @@ const components = {
   ExpandableCard,
   CardContainer,
   GhostCard,
-  Help,
+  UpcomingEventsList,
 }
 
 const StaticPage = ({ data: { siteData, mdx }, pageContext }) => {

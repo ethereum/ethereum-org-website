@@ -274,6 +274,8 @@ exports.onCreatePage = ({ page, actions }) => {
 
   const isTranslated = page.context.language !== defaultLanguage
   const hasNoContext = page.context.isOutdated === undefined
+  const langVersion = getLangContentVersion(page.context.language)
+
   if (isTranslated && hasNoContext) {
     let isOutdated = false
     if (page.component.includes("src/pages/index.js")) {
@@ -285,6 +287,8 @@ exports.onCreatePage = ({ page, actions }) => {
       context: {
         ...page.context,
         isOutdated,
+        //display TranslationBanner for translation-component pages that are still in English
+        isContentEnglish: langVersion < 2 && !page.component.includes('/developers/index.js')
       },
     })
   }

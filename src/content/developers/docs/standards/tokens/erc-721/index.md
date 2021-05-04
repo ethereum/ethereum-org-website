@@ -242,7 +242,7 @@ recent_births = [get_event_data(ck_extra_events_abi[1], log)["args"] for log in 
 
 ## Popular NFTs {#popular-nfts}
 
-- [Etherscan NFT Tracker](https://etherscan.io/tokens-nft) list the top NFT on Ethereum by tranfers volume.
+- [Etherscan NFT Tracker](https://etherscan.io/tokens-nft) list the top NFT on Ethereum by transfers volume.
 - [CryptoKitties](https://www.cryptokitties.co/) is a game centered around breedable, collectible, and oh-so-adorable
   creatures we call CryptoKitties.
 - [Sorare](https://sorare.com/) is a global fantasy football game where you can collect limited editions collectibles,
@@ -260,9 +260,3 @@ recent_births = [get_event_data(ck_extra_events_abi[1], log)["args"] for log in 
 - [EIP-721: ERC-721 Non-Fungible Token Standard](https://eips.ethereum.org/EIPS/eip-721)
 - [OpenZeppelin - ERC-721 Docs](https://docs.openzeppelin.com/contracts/3.x/erc721)
 - [OpenZeppelin - ERC-721 Implementation](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
-
-## Related topics {#related-topics}
-
-- [ERC-20](/developers/docs/standards/tokens/erc-20/)
-- [ERC-777](/developers/docs/standards/tokens/erc-777/)
-- [ERC-1155](/developers/docs/standards/tokens/erc-1155/)

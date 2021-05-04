@@ -181,14 +181,13 @@ const Contributors = styled(FileContributors)`
 `
 
 const DocsPage = ({ data, pageContext }) => {
-  const intl = useIntl()
-  const isRightToLeft = isLangRightToLeft(intl.locale)
+  const { locale } = useIntl()
+  const isRightToLeft = isLangRightToLeft(locale)
 
   const mdx = data.pageData
   const tocItems = mdx.tableOfContents.items
   const isPageIncomplete = mdx.frontmatter.incomplete
 
-  const gitCommits = data.gitData.repository.ref.target.history.edges
   const { editContentUrl } = data.siteData.siteMetadata
   const { relativePath } = pageContext
   const absoluteEditPath = `${editContentUrl}${relativePath}`
@@ -206,7 +205,10 @@ const DocsPage = ({ data, pageContext }) => {
       <ContentContainer>
         <Content>
           <H1 id="top">{mdx.frontmatter.title}</H1>
-          <Contributors gitCommits={gitCommits} editPath={absoluteEditPath} />
+          <Contributors
+            relativePath={relativePath}
+            editPath={absoluteEditPath}
+          />
           <TableOfContents
             editPath={absoluteEditPath}
             items={tocItems}
@@ -222,7 +224,7 @@ const DocsPage = ({ data, pageContext }) => {
               <Translation id="back-to-top" /> ↑
             </a>
           </BackToTop>
-          <FeedbackCard />
+          {locale === "en" && <FeedbackCard />}
           <DocsNav relativePath={relativePath}></DocsNav>
         </Content>
         {mdx.frontmatter.sidebar && tocItems && (
@@ -258,34 +260,6 @@ export const query = graphql`
       }
       body
       tableOfContents
-    }
-    gitData: github {
-      repository(name: "ethereum-org-website", owner: "ethereum") {
-        ref(qualifiedName: "master") {
-          target {
-            ... on GitHub_Commit {
-              history(path: $relativePath) {
-                edges {
-                  node {
-                    message
-                    commitUrl
-                    author {
-                      name
-                      email
-                      avatarUrl(size: 100)
-                      user {
-                        url
-                        login
-                      }
-                    }
-                    committedDate
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
     }
   }
 `

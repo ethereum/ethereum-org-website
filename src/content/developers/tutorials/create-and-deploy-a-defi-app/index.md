@@ -471,6 +471,6 @@ _output of withdrawMyTokenFromTokenFarm.js_
 
 [Ganache | Truffle Suite](https://www.trufflesuite.com/ganache)
 
-[What is DeFi? A Begginer's Guide (2021 Updated) (99bitcoins.com)](https://99bitcoins.com/what-is-defi/)
+[What is DeFi? A Beginner's Guide (2021 Updated) (99bitcoins.com)](https://99bitcoins.com/what-is-defi/)
 
 [DeFi - The Decentralized Finance Leaderboard at DeFi Pulse](https://defipulse.com/)
