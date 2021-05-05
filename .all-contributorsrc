@@ -3574,6 +3574,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "vasumanhas000",
+      "name": "Vasu Manhas",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55337644?v=4",
+      "profile": "https://www.linkedin.com/in/vasu-manhas/",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
