@@ -100,7 +100,7 @@ These variables defined below are dependent on `send_token()`
 4. **`gas_limit`**: gas limit
 5. **`gas_price`**: gas price
 
-[see below for how to use] (#how-to-use)
+[ee below for how to use] (#how-to-use)
 
 ```javascript
 const tx = 
