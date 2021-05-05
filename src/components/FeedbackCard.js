@@ -11,9 +11,7 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 2rem;
-  }
+  margin-top: 2rem;
 `
 
 const Content = styled.div`
