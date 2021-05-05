@@ -318,7 +318,7 @@ _It’s also important to remember that Ethereum does more than just financial t
 
 #### Timelines {#timelines}
 
-The process has already started. [The Beacon Chain](/eth2/beacon-chain/), the first upgrade, shipped in December 2020. This provides the foundation for staking by allowing stakers to join the system. The next step relevant to energy efficiency is to merge the current chain, the one secured by miners, into the Beacon Chain where mining isn't needed. Timelines can't be exact at this stage, but it's estimated that this will happen some time in 2021/2022. This process is known as the docking or the merge. [More on the docking](/eth2/docking/).
+The process has already started. [The Beacon Chain](/eth2/beacon-chain/), the first upgrade, shipped in December 2020. This provides the foundation for staking by allowing stakers to join the system. The next step relevant to energy efficiency is to merge the current chain, the one secured by miners, into the Beacon Chain where mining isn't needed. Timelines can't be exact at this stage, but it's estimated that this will happen some time in 2021/2022. This process is known as the merge (formerly referred to as the docking). [More on the merge](/eth2/merge/).
 
 <ButtonLink to="/eth2/">More on Eth2</ButtonLink>
 

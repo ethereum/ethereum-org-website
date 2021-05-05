@@ -54,7 +54,7 @@ Le shard chain potranno entrare in modo sicuro nell'ecosistema Ethereum solo qua
 
 ### La rete principale e la beacon chain {#mainnet-and-beacon-chain}
 
-La beacon chain, all'inizio, esisterà separatamente rispetto alla rete principale Ethereum che usiamo oggi. Alle fine però le due realtà verranno collegate. L'intenzione è di "agganciare" (docking) la rete principale al sistema proof of stake che è controllato e coordinato dalla beacon chain.<ButtonLink to="/eth2/docking/">Il docking</ButtonLink>
+La beacon chain, all'inizio, esisterà separatamente rispetto alla rete principale Ethereum che usiamo oggi. Alle fine però le due realtà verranno collegate. L'intenzione è di "agganciare" (docking) la rete principale al sistema proof of stake che è controllato e coordinato dalla beacon chain.<ButtonLink to="/eth2/merge/">Il docking</ButtonLink>
 
 <Divider />
 
