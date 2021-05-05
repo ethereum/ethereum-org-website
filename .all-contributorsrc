@@ -3565,6 +3565,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "lemonase",
+      "name": "James Dixon",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11729404?v=4",
+      "profile": "https://jamesdixon.dev",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
