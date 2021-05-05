@@ -63,7 +63,7 @@ Once the merge happens, stakers will be assigned to validate the Ethereum mainne
 
 ### The merge and shard chains {#docking-and-shard-chains}
 
-Originally, plans were made to implement shard chains prior to the incorporation of the Ethereum mainnet as a primary means of scaling. As research and development of layer 2 scaling solutions have boomed, the priority of core Ethereum devs shifted to expediting the switch a fully proof-of-stake driven mainnet. This means that the remaining shard chains will not be complete prior to switching mainnet to proof-of-stake.
+Originally, plans were made to implement shard chains as a primary means of scaling before implementing the merge. As research and development of [layer 2 scaling solutions](/developers/docs/layer-2-scaling/) have boomed, Ethereum core developers have shifted to prioritize the switch to a fully proof-of-stake driven mainnet. This means that the remaining shard chains will not be complete when Ethereum mainnet switches to proof-of-stake.
 
 This will be an ongoing assessment from the community as to the need for potentially multiple rounds of shard chains to allow for endless scalability.
 

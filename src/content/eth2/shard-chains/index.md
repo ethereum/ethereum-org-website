@@ -15,7 +15,7 @@ summaryPoints:
 ---
 
 <UpgradeStatus date="~2022">
-    Shard chains should ship sometime in 2022, depending on how quickly work progresses after <a href="/en/eth2/merge/">the merge</a> is completed. These shards will give Ethereum more capacity to store and access data, but they won’t be used for executing code. The details of that are still being figured out.
+    Shard chains should ship sometime in 2022, depending on how quickly work progresses after <a href="/eth2/merge/">the merge</a>. These shards will give Ethereum more capacity to store and access data, but they won’t be used for executing code. The details of that are still being figured out.
 </UpgradeStatus>
 
 ## What is sharding? {#what-is-sharding}
