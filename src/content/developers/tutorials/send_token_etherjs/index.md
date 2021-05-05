@@ -20,9 +20,9 @@ published: 2021-04-06
 
 ### To-Get-Started {#to-get-started}
 To get started, we must first import the ethers.js library into our javascript 
-1. Include ethers.js(5.0)
+Include ethers.js(5.0)
 
-**Installing** {#install-ethersjs}
+### Installing {#install-ethersjs}
 ```shell
 /home/ricmoo> npm install --save ethers
 ```
@@ -40,52 +40,53 @@ ES3(UMD) in the Browser
 <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"
         type="application/javascript"></script>
 ```
+
 ### Parameters {#param}
-1. **contract_address** : Token contract address(contract address is needed when the token you want to transfer is not ether)
-2. **send_token_amount** : The amount you want to send to the receiver
-3. **to_address** : The receiver's address
-4. **send_account** : The sender's address
-5. **private_key** : Private key of the sender to sign the transaction and actually transfer the tokens
+1. **`contract_address`**: Token contract address (contract address is needed when the token you want to transfer is not ether)
+2. **`send_token_amount`**: The amount you want to send to the receiver
+3. **`to_address`**: The receiver's address
+4. **`send_account`**: The sender's address
+5. **`private_key`**: Private key of the sender to sign the transaction and actually transfer the tokens
 
 ## Notice {#notice}
-signTransaction(tx) is removed because sendTransaction() does it internally.
-
-
+`signTransaction(tx)` is removed because `sendTransaction()` does it internally.
 
 ## Sending Procedures {#procedure}
-### 1. Connect to network(mainnet, testnet) {#connect-to-network}
+
+### 1. Connect to network (testnet) {#connect-to-network}
+
 #### Set Provider (Infura) {#set-provider}
-Connect to mainnet
-```javascript
-window.provider = new InfuraProvider();
-```
-Connect to ropsten testnet
+Connect to Ropsten testnet
 ```javascript
 window.provider = new InfuraProvider("ropsten");
 ```
+
 ### 2. Create wallet {#create-wallet}
 ```javascript
 let wallet = new ethers.Wallet(private_key);
 ```
+
 ### 3. Connect Wallet to net {#connect-wallet-to-net}
 ```javascript
 let walletSigner = wallet.connect(window.ethersProvider);
 ```
+
 ### 4. Get current gas price {#get-gas}
 ```javascript
 window.ethersProvider.getGasPrice(); // gasPrice
 ```
+
 ### 5. Define Transaction {#define-transaction}
-These variables defined below are dependent on send_token()
+These variables defined below are dependent on `send_token()`
 
 ### Transaction parameters {#transaction-params}
-1. **send_account** : address of the token sender
-2. **to_address** : address of the token receiver
-3. **send_token_amount** : the amount of tokens to send
-4. **gas_limit** : gas limit
-5. **gas_price** : gas price
+1. **`send_account`**: address of the token sender
+2. **`to_address`**: address of the token receiver
+3. **`send_token_amount`**: the amount of tokens to send
+4. **`gas_limit`**: gas limit
+5. **`gas_price`**: gas price
 
-see below for how to use
+[see below for how to use](#how-to-use)
 ```javascript
 const tx = 
 {
@@ -97,6 +98,7 @@ const tx =
 	gasPrice : gas_price
 }
 ```
+
 ### 6. Transfer {#transfer}
 ```javascript
 walletSigner.sendTransaction(tx).then((transaction) => 
@@ -120,9 +122,9 @@ window.ethersProvider = new ethers.providers.InfuraProvider("ropsten");
 
 send_token(contract_address, send_token_amount, to_address, send_address, private_key);
 ```
-### Success! {#success}
-![image of transaction done successfully](./113803937-7f35fd80-9798-11eb-960c-b2ae90baf84f.png)
 
+### Success! {#success}
+![image of transaction done successfully](./successful-transaction.png)
 
 ## send_token() {#send-token-method}
 ```javascript
