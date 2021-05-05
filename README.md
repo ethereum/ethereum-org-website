@@ -934,6 +934,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/thelostone-mc"><img src="https://avatars.githubusercontent.com/u/5358146?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aditya Anand M C</b></sub></a><br /><a href="#content-thelostone-mc" title="Content">🖋</a></td>
     <td align="center"><a href="https://jamesdixon.dev"><img src="https://avatars.githubusercontent.com/u/11729404?v=4?s=100" width="100px;" alt=""/><br /><sub><b>James Dixon</b></sub></a><br /><a href="#content-lemonase" title="Content">🖋</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://www.linkedin.com/in/vasu-manhas/"><img src="https://avatars.githubusercontent.com/u/55337644?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vasu Manhas</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Avasumanhas000" title="Bug reports">🐛</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
