@@ -326,7 +326,7 @@ The process has already started. [The Beacon Chain](/eth2/beacon-chain/), the fi
 
 While we wait for Eth2, products are moving to a "layer 2" technology known as rollups. Working on top of Ethereum, this technology lets you "roll up" or batch many transactions into a single one that is submitted to the chain. By moving as many things off the chain and only submitting the truly important bits (the cryptographic proofs), demand for block space will decrease. This will in turn lower the amount of computing power needed to create new blocks.
 
-[More on rollups and layer 2 technology](/developers/docs/layer-2-scaling/)
+[More on rollups and layer 2 technology](/developers/docs/scaling/layer-2/)
 
 #### A more efficient NFT standard...
 

@@ -257,7 +257,7 @@ A change in protocol causing the creation of an alternative chain, or a temporal
 
 A security model for certain [layer 2](#layer-2) solutions where, to increase speed, transactions are [rolled up](#rollups) into batches and submitted to Ethereum in a single transaction. They are assumed valid but can be challenged if fraud is suspected. A fraud proof will then run the transaction to see if fraud took place. This method increases the amount of transactions possible while maintaining security. Some [rollups](#rollups) use [validity proofs](#validity-proof).
 
-<DocLink to="/developers/docs/layer-2-scaling/#optimistic-rollups" title="Optimistic rollups" />
+<DocLink to="/developers/docs/scaling/layer-2/#optimistic-rollups" title="Optimistic rollups" />
 
 ### frontier {#frontier}
 
@@ -375,7 +375,7 @@ A JSON-encoded file that contains a single (randomly generated) [private key](#p
 
 An area of development focused on layering improvements on top of the Ethereum protocol. These improvements are related to [transaction](#transaction) speeds, cheaper [transaction fees](#transaction-fee), and transaction privacy.
 
-<DocLink to="/developers/docs/layer-2-scaling/" title="Layer 2" />
+<DocLink to="/developers/docs/scaling/layer-2/" title="Layer 2" />
 
 ### LevelDB {#level-db}
 
@@ -462,7 +462,7 @@ When a [miner](#miner) finds a valid [block](#block), another miner may have pub
 
 A [rollup](#rollups) of transactions that use [fraud proofs](#fraud-proof) to offer increased [layer 2](#layer-2) transaction throughput while using the security provided by [mainnet](#mainnet) (layer 1). Unlike [Plasma](#plasma), a similar layer 2 solution, Optimistic rollups can handle more complex transaction types – anything possible in the [EVM](#evm). They do have latency issues compared to [Zero-knowledge rollups](#zk-rollups) because a transaction can be challenged via the fraud proof.
 
-<DocLink to="/developers/docs/layer-2-scaling/#optimistic-rollups" title="Optimistic Rollups" />
+<DocLink to="/developers/docs/scaling/layer-2/#optimistic-rollups" title="Optimistic Rollups" />
 
 <Divider />
 
@@ -474,9 +474,9 @@ One of the most prominent interoperable implementations of the Ethereum client s
 
 ### Plasma {#plasma}
 
-A [layer 2](#layer-2) scaling solution that uses [fraud proofs](#fraud-proof), like [Optimistic rollups](#optimistic-rollups). Plasma is limited to simple transactions like basic token transfers and swaps.
+An off-chain scaling solution that uses [fraud proofs](#fraud-proof), like [Optimistic rollups](#optimistic-rollups). Plasma is limited to simple transactions like basic token transfers and swaps.
 
-<DocLink to="/developers/docs/layer-2-scaling/#Plasma" title="Plasma" />
+<DocLink to="/developers/docs/scaling/plasma" title="Plasma" />
 
 ### private key (secret key) {#private-key}
 
@@ -524,7 +524,7 @@ An encoding standard designed by the Ethereum developers to encode and serialize
 
 A type of [layer 2](#layer-2) scaling solution that batches multiple transactions and submits them to [the Ethereum main chain](#mainnet) in a single transaction. This allows for reductions in [gas](#gas) costs and increases in [transaction](#transaction) throughput. There are Optimistic and Zero-knowledge rollups which use different security methods to offer these scalability gains.
 
-<DocLink to="/developers/docs/layer-2-scaling/#rollups" title="Rollups" />
+<DocLink to="/developers/docs/scaling/layer-2/" title="Rollups" />
 
 <Divider />
 
@@ -550,7 +550,7 @@ A [proof-of-stake](#proof-of-stake) chain that is coordinated by the [Beacon Cha
 
 A scaling solution that uses a separate chain with different, often faster, [consensus rules](#consensus-rules). A bridge is needed to connect these sidechains to [mainnet](#mainnet). [Rollups](#rollups) also use sidechains, but they operate in collaboration with [mainnet](#mainnet) instead.
 
-<DocLink to="/developers/docs/layer-2-scaling/#sidechains" title="Sidechains" />
+<DocLink to="/developers/docs/scaling/sidechains/" title="Sidechains" />
 
 ### singleton {#singleton}
 
@@ -598,7 +598,7 @@ Depositing a quantity of [ether](#ether) (your stake) to become a validator and 
 
 A [layer 2](#layer-2) solution where a channel is set up between participants, where they can transact freely and cheaply. Only a [transaction](#transaction) to set up the channel and close the channel is sent to [mainnet](#mainnet). This allows for very high transaction throughput, but does rely on knowing number of participants up front and locking up of funds.
 
-<DocLink to="/developers/docs/layer-2-scaling/#state-channels" title="State channels" />
+<DocLink to="/developers/docs/scaling/channels/#state-channels" title="State channels" />
 
 ### szabo {#szabo}
 
@@ -657,13 +657,13 @@ A [node](#node) in a [proof-of-stake](#proof-of-stake) system responsible for st
 
 A security model for certain [layer 2](#layer-2) solutions where, to increase speed, transactions are [rolled up](/#rollups) into batches and submitted to Ethereum in a single transaction. The transaction computation is done off-chain and then supplied to the main chain with a proof of their validity. This method increases the amount of transactions possible while maintaining security. Some [rollups](#rollups) use [fraud proofs](#fraud-proof).
 
-<DocLink to="/developers/docs/layer-2-scaling/#zk-rollups" title="Zero-knowledge rollups" />
+<DocLink to="/developers/docs/scaling/layer-2/#zk-rollups" title="Zero-knowledge rollups" />
 
 ### Validium {#validium}
 
-A [layer 2](#layer-2) solution that uses [validity proofs](#validity-proof) to improve transaction throughput. Unlike [Zero-knowledge rollups](#zk-rollup), Validium data isn't stored on layer 1 [mainnet](#mainnet).
+An off-chain solution that uses [validity proofs](#validity-proof) to improve transaction throughput. Unlike [Zero-knowledge rollups](#zk-rollup), Validium data isn't stored on layer 1 [mainnet](#mainnet).
 
-<DocLink to="/developers/docs/layer-2-scaling/#validium" title="Validium" />
+<DocLink to="/developers/docs/scaling/validium/" title="Validium" />
 
 ### Vyper {#vyper}
 
@@ -703,7 +703,7 @@ A special Ethereum address, composed entirely of zeros, that is specified as the
 
 A [rollup](#rollups) of transactions that use [validity proofs](#validity-proof) to offer increased [layer 2](#layer-2) transaction throughput while using the security provided by [mainnet](#mainnet) (layer 1). Although they can't handle complex transaction types, like [Optimistic rollups](#optimistic-rollups), they don't have latency issues because transactions are provably valid when submitted.
 
-<DocLink to="/developers/docs/layer-2-scaling/#zk-rollups" title="Zero-knowledge Rollups" />
+<DocLink to="/developers/docs/scaling/layer-2/#zk-rollups" title="Zero-knowledge Rollups" />
 
 <Divider />
 

@@ -48,7 +48,7 @@ When the first shard chains are shipped they will just provide extra data to the
 
 Rollups are a "layer 2" technology that exists today. They allow dapps to bundle or “roll up” transactions into a single transaction off-chain, generate a cryptographic proof and then submit it to the chain. This reduces the data needed for a transaction. Combine this with all the extra data availability provided by shards and you get 100,000 transactions per second.
 
-[More on rollups](/developers/docs/layer-2-scaling/)
+[More on rollups](/developers/docs/scaling/layer-2/)
 
 ## Shard chains version 2: code execution {#code-execution}
 

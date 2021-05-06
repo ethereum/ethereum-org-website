@@ -148,7 +148,7 @@ The Istanbul fork:
 
 - Optimised the [gas](/glossary/#gas) cost of certain actions in the [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Improved denial-of-service attack resilience.
-- Made [Layer 2 scaling](/developers/docs/layer-2-scaling/) solutions based on SNARKs and STARKs more performant.
+- Made [Layer 2 scaling](/developers/docs/scaling/layer-2/) solutions based on SNARKs and STARKs more performant.
 - Enabled Ethereum and Zcash to interoperate.
 - Allowed contracts to introduce more creative functions.
 
@@ -160,7 +160,7 @@ The Istanbul fork:
 - [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _cheaper cryptography to improve [gas](/glossary/#gas) costs._
 - [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _protects Ethereum against replay attacks by adding `CHAINID` [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine)._
 - [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _optimising opcode gas prices based on consumption._
-- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _reduces the cost of CallData to allow more data in blocks – good for [Layer 2 scaling](/developers/docs/layer-2-scaling/)._
+- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _reduces the cost of CallData to allow more data in blocks – good for [Layer 2 scaling](/developers/docs/scaling/layer-2/)._
 - [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) – _other opcode gas price alterations._
 
 </ExpandableCard>
@@ -211,7 +211,7 @@ The Byzantium fork:
 - Reduced block [mining](/developers/docs/consensus-mechanisms/pow/mining/) rewards from 5 to 3 ETH.
 - Delayed the [difficulty bomb](/glossary/#difficulty-bomb) by a year.
 - Added ability to make non-state-changing calls to other contracts.
-- Added certain cryptography methods to allow for [layer 2 scaling](/developers/docs/layer-2-scaling/).
+- Added certain cryptography methods to allow for [layer 2 scaling](/developers/docs/scaling/layer-2/).
 
 [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
@@ -219,8 +219,8 @@ The Byzantium fork:
 
 - [EIP-140](https://eips.ethereum.org/EIPS/eip-140) – _adds `REVERT` opcode._
 - [EIP-658](https://eips.ethereum.org/EIPS/eip-658) – _status field added to transaction receipts to indicate success or failure._
-- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _adds elliptic curve and scalar multiplication to allow for [ZK-Snarks](/developers/docs/layer-2-scaling/#rollups)._
-- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _adds elliptic curve and scalar multiplication to allow for [ZK-Snarks](/developers/docs/layer-2-scaling/#rollups)._
+- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _adds elliptic curve and scalar multiplication to allow for [ZK-Snarks](/developers/docs/scaling/layer-2/#zk-rollups)._
+- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _adds elliptic curve and scalar multiplication to allow for [ZK-Snarks](/developers/docs/scaling/layer-2/#zk-rollups)._
 - [EIP-198](https://eips.ethereum.org/EIPS/eip-198) – _enables RSA signature verification._
 - [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _adds support for variable length return values._
 - [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _adds `STATICCALL` opcode, allowing non-state-changing calls to other contracts._

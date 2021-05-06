@@ -209,7 +209,7 @@ If you're new to Ethereum and haven't done any coding with smart contract langua
 **Yul+**
 
 - A low-level, highly efficient extension to Yul.
-- Initially designed for an [optimistic rollup](/developers/docs/layer-2-scaling/#rollups-and-sidechains) contract.
+- Initially designed for an [optimistic rollup](/developers/docs/scaling/layer-2/#optimistic-rollups) contract.
 - Yul+ can be looked at as an experimental upgrade proposal to Yul, adding new features to it.
 
 ### Important links {#important-links-2}
