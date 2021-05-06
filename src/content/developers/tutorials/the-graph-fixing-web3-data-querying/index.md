@@ -299,7 +299,7 @@ But we're missing one last piece of the puzzle and that's the server. You can ei
 
 ### Graph Explorer: The hosted service {#graph-explorer-the-hosted-service}
 
-The easiest way is to use the hosted service. Follow the instructions [here](https://thegraph.com/docs/deploy-a-subgraph) to deploy a subgraph. For many projects you can actually find exisiting subgraphs in the explorer at https://thegraph.com/explorer/.
+The easiest way is to use the hosted service. Follow the instructions [here](https://thegraph.com/docs/deploy-a-subgraph) to deploy a subgraph. For many projects you can actually find existing subgraphs in the explorer at https://thegraph.com/explorer/.
 
 ![The Graph-Explorer](./thegraph-explorer.png)
 

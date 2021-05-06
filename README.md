@@ -912,7 +912,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://twitter.com/JayBWelsh"><img src="https://avatars.githubusercontent.com/u/14224459?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jay Welsh</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AJayWelsh" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/linkastic"><img src="https://avatars.githubusercontent.com/u/7030395?v=4?s=100" width="100px;" alt=""/><br /><sub><b>linkastic</b></sub></a><br /><a href="#content-linkastic" title="Content">🖋</a></td>
     <td align="center"><a href="http://groftware.tech"><img src="https://avatars.githubusercontent.com/u/11567740?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Chan Jing Hong</b></sub></a><br /><a href="#content-cjinghong" title="Content">🖋</a></td>
-    <td align="center"><a href="https://github.com/ozora-ogino"><img src="https://avatars.githubusercontent.com/u/63685461?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ozora Ogino</b></sub></a><br /><a href="#content-ozora-ogino" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/ozora-ogino"><img src="https://avatars.githubusercontent.com/u/63685461?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ozora Ogino</b></sub></a><br /><a href="#content-ozora-ogino" title="Content">🖋</a> <a href="#translation-ozora-ogino" title="Translation">🌍</a></td>
     <td align="center"><a href="https://bandism.net/"><img src="https://avatars.githubusercontent.com/u/22633385?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ikko Ashimine</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aeltociear" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/CameronHonis"><img src="https://avatars.githubusercontent.com/u/66322224?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Cameron Honis</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ACameronHonis" title="Bug reports">🐛</a></td>
   </tr>
@@ -928,6 +928,15 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="http://dschnurr.com"><img src="https://avatars.githubusercontent.com/u/875591?v=4?s=100" width="100px;" alt=""/><br /><sub><b>David Schnurr</b></sub></a><br /><a href="#content-schnerd" title="Content">🖋</a></td>
     <td align="center"><a href="https://twitter.com/kleffew94"><img src="https://avatars.githubusercontent.com/u/33433528?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kevin Leffew</b></sub></a><br /><a href="#content-keleffew" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/pgrimaud"><img src="https://avatars.githubusercontent.com/u/1866496?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pierre Grimaud</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Apgrimaud" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/jclancy93"><img src="https://avatars.githubusercontent.com/u/7850202?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jack Clancy</b></sub></a><br /><a href="#content-jclancy93" title="Content">🖋</a></td>
+    <td align="center"><a href="http://www.justinspradlin.com"><img src="https://avatars.githubusercontent.com/u/25503?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Justin Spradlin</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Asprad" title="Bug reports">🐛</a> <a href="#content-sprad" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/thelostone-mc"><img src="https://avatars.githubusercontent.com/u/5358146?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aditya Anand M C</b></sub></a><br /><a href="#content-thelostone-mc" title="Content">🖋</a></td>
+    <td align="center"><a href="https://jamesdixon.dev"><img src="https://avatars.githubusercontent.com/u/11729404?v=4?s=100" width="100px;" alt=""/><br /><sub><b>James Dixon</b></sub></a><br /><a href="#content-lemonase" title="Content">🖋</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://www.linkedin.com/in/vasu-manhas/"><img src="https://avatars.githubusercontent.com/u/55337644?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vasu Manhas</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Avasumanhas000" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="http://www.jpaulet.com"><img src="https://avatars.githubusercontent.com/u/6894329?v=4?s=100" width="100px;" alt=""/><br /><sub><b>jp_aulet</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=jpaulet" title="Code">💻</a></td>
   </tr>
 </table>
 

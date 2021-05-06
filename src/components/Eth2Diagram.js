@@ -166,7 +166,7 @@ const Intro = styled.div`
 const MAINNET = "mainnet"
 const BEACON_CHAIN = "beacon chain"
 const SHARDS = "shards"
-const DOCKING = "docking"
+const MERGE = "merge"
 
 const ModalContent = ({ upgrade }) => {
   if (upgrade === MAINNET) {
@@ -223,7 +223,7 @@ const ModalContent = ({ upgrade }) => {
       </>
     )
   }
-  if (upgrade === DOCKING) {
+  if (upgrade === MERGE) {
     return (
       <>
         <H2>
@@ -241,7 +241,7 @@ const ModalContent = ({ upgrade }) => {
             <Translation id="page-eth2-diagram-validators" />
           </Link>
         </p>
-        <ButtonLink to="/eth2/docking/">
+        <ButtonLink to="/eth2/merge/">
           <Translation id="page-eth2-docking-btn" />
         </ButtonLink>
       </>
@@ -306,8 +306,8 @@ const Eth2Diagram = () => {
             </Eth1>
           </PrePhase2>
           <Phase2
-            isAboveOverlay={modalState === DOCKING}
-            onClick={() => handleClick(DOCKING)}
+            isAboveOverlay={modalState === MERGE}
+            onClick={() => handleClick(MERGE)}
           >
             <Translation id="page-eth2-beacon-chain-title" />
             <ShardBox>

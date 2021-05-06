@@ -24,6 +24,32 @@ These rule changes may create a temporary split in the network. New blocks could
 
 ## 2021 {#2021}
 
+### (_In Progress_) London {#london}
+
+The London upgrade is scheduled to go live on Ethereum in July 2021. It will introduce [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), which reforms the transaction fee market, along with changes to how gas refunds are handled and the [Ice Age](https://ethereum.org/en/glossary/#ice-age) schedule.
+
+- [Read the London upgrade specification](https://github.com/ethereum/eth1.0-specs/blob/master/network-upgrades/mainnet-upgrades/london.md)
+
+<ExpandableCard title="London EIPs" contentPreview="Improvements included in this upgrade.">
+
+- [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) – _improves the transaction fee market_
+- [EIP-3198](https://eips.ethereum.org/EIPS/eip-3198) – _returns the `BASEFEE` from a block_
+- [EIP-3238](https://eips.ethereum.org/EIPS/eip-3238) – _delays the Ice Age_
+
+_Note: more EIPs may be added to the upgrade over the coming weeks, and the EIPs above may still be modified prior to the upgrade being deployed._
+
+</ExpandableCard>
+
+---
+
+### (_In Progress_) Altair {#altair}
+
+The Altair upgrade is the first scheduled upgrade for the [Beacon Chain](/eth2/beacon-chain). It is expected to go live in 2021. It will add support for "sync commitees", which can enable light clients, and will bring inactivity and slashing penalties up to their full values.
+
+- [Read the Altair upgrade specification](https://github.com/ethereum/eth2.0-specs/tree/dev/specs/altair)
+
+---
+
 ### Berlin {#berlin}
 
 <Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Apr-15-2021 10:07:03 AM +UTC</code><br />
@@ -268,7 +294,7 @@ The Tangerine Whistle fork was the first response to the denial of service (DoS)
 
 #### Summary {#dao-fork-summary}
 
-The DAO fork was in response to the [2016 DAO attack](https://www.coindesk.com/understanding-dao-hack-journalists) where an insecure [DAO](/glossary/#dao) contract was drained of over 3.6 million ETH in a hack. The fork moved the funds from the faulty contract to a [new contract](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) with a single funtion: withdraw. Anyone who lost funds could withdraw 1 ETH for every 100 DAO tokens in their wallets.
+The DAO fork was in response to the [2016 DAO attack](https://www.coindesk.com/understanding-dao-hack-journalists) where an insecure [DAO](/glossary/#dao) contract was drained of over 3.6 million ETH in a hack. The fork moved the funds from the faulty contract to a [new contract](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) with a single function: withdraw. Anyone who lost funds could withdraw 1 ETH for every 100 DAO tokens in their wallets.
 
 This course of action was voted on by the Ethereum community. Any ETH holder was able to vote via a transaction on [a voting platform](http://v1.carbonvote.com/). The decision to fork reached over 85% of the votes.
 

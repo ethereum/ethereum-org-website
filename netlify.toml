@@ -271,7 +271,13 @@
   to = "/:splat/developers/learning-tools/"
 [[redirects]]
   from = "/*/eth2/the-docking"
-  to = "/:splat/eth2/docking/"
+  to = "/:splat/eth2/merge/"
+[[redirects]]
+  from = "/*/eth2/the-merge"
+  to = "/:splat/eth2/merge/"
+[[redirects]]
+  from = "/*/eth2/docking"
+  to = "/:splat/eth2/merge/"
 
 # A redirect rule with all the supported properties
 # [[redirects]]

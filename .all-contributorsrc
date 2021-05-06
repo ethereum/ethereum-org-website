@@ -3426,7 +3426,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/63685461?v=4",
       "profile": "https://github.com/ozora-ogino",
       "contributions": [
-        "content"
+        "content",
+        "translation"
       ]
     },
     {
@@ -3526,6 +3527,70 @@
       "profile": "https://twitter.com/kleffew94",
       "contributions": [
         "content"
+      ]
+    },
+    {
+      "login": "pgrimaud",
+      "name": "Pierre Grimaud",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1866496?v=4",
+      "profile": "https://github.com/pgrimaud",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "jclancy93",
+      "name": "Jack Clancy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7850202?v=4",
+      "profile": "https://github.com/jclancy93",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "sprad",
+      "name": "Justin Spradlin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25503?v=4",
+      "profile": "http://www.justinspradlin.com",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "thelostone-mc",
+      "name": "Aditya Anand M C",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5358146?v=4",
+      "profile": "https://github.com/thelostone-mc",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "lemonase",
+      "name": "James Dixon",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11729404?v=4",
+      "profile": "https://jamesdixon.dev",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "vasumanhas000",
+      "name": "Vasu Manhas",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55337644?v=4",
+      "profile": "https://www.linkedin.com/in/vasu-manhas/",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "jpaulet",
+      "name": "jp_aulet",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6894329?v=4",
+      "profile": "http://www.jpaulet.com",
+      "contributions": [
+        "code"
       ]
     }
   ],

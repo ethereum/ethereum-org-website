@@ -54,7 +54,7 @@ Lanci djelića mogu sigurno ući u Ethereumov ekosustav samo ako je uspostavljen
 
 ### Glavna mreža i Beacon Chain {#mainnet-and-beacon-chain}
 
-Beacon Chain će u početku postojati odvojeno od glavne mreže Ethereum mreže kojom se koristimo danas. Ali će na kraju će biti povezani. Plan je spojiti glavnu mrežu u sustav Proof of Stake koji kontrolira i koordinira Beacon Chain.<ButtonLink to="/eth2/docking/">Spajanje</ButtonLink>
+Beacon Chain će u početku postojati odvojeno od glavne mreže Ethereum mreže kojom se koristimo danas. Ali će na kraju će biti povezani. Plan je spojiti glavnu mrežu u sustav Proof of Stake koji kontrolira i koordinira Beacon Chain.<ButtonLink to="/eth2/merge/">Spajanje</ButtonLink>
 
 <Divider />
 
