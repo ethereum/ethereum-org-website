@@ -1,13 +1,13 @@
 ---
-title: Layer 2 scaling
-description: An introduction to the different layer 2 scaling solutions currently being developed by the Ethereum community.
+title: Layer 2 Rollups
+description: An introduction to the different layer 2 rollup scaling solutions currently being developed by the Ethereum community.
 lang: en
 sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---
 
-Layer 2 is a collective term for solutions designed to help scale your application by handling transactions off the main Ethereum chain (layer 1). Transaction speed suffers when the network is busy which can make the user experience poor for certain types of dapps. And as the network gets busier, gas prices increase as transaction senders aim to outbid each other. This can make using Ethereum very expensive.
+Layer 2 is a collective term for solutions designed to help scale your application by handling transactions off the Ethereum mainnet (layer 1), while taking advantage of the robust decentralized security model of mainnet. Transaction speed suffers when the network is busy which can make the user experience poor for certain types of dapps. And as the network gets busier, gas prices increase as transaction senders aim to outbid each other. This can make using Ethereum very expensive.
 
 ## Prerequisites {#prerequisites}
 
@@ -18,17 +18,6 @@ You should have a good understanding of all the foundational topics. Implementin
 - Some use-cases, like blockchain games, make no sense with current transaction times
 - It can be unnecessarily expensive to use blockchain applications
 - Any updates to scalability should not be at the expense of decentralization of security – layer 2 builds on top of Ethereum.
-
-## Types of Layer 2 solution {#types}
-
-- [Rollups](#rollups)
-  - [ZK rollups](#zk-rollups)
-  - [Optimistic rollups](#optimistic-rollups)
-- [State channels](#channels)
-
-Most layer 2 solutions are centered around a server or cluster of servers, each of which may be referred to as a node, validator, operator, sequencer, block producer, or similar term. Depending on the implementation, these layer 2 nodes may be run by the businesses or entities that use them, or by a 3rd party operator, or by a large group of individuals (similar to mainnet). Generally speaking, transactions are submitted to these layer 2 nodes instead of being submitted directly to layer 1 ([mainnet](/glossary/#mainnet)); the layer 2 instance then batches them into groups before anchoring them to layer 1, after which they are secured by layer 1 and cannot be altered. The details of how this is done vary significantly between different layer 2 technologies and implementations.
-
-A specific Layer 2 instance may be open and shared by many applications, or may be deployed by one company and dedicated to supporting only their application.
 
 ## Rollups {#rollups}
 
@@ -120,69 +109,19 @@ The OVM also has a bunch of features that allow for a really seamless experience
 
 [Check out the OVM documentation](http://docs.optimism.io/) -->
 
-## Channels {#channels}
+## Hybrid solutions {#hybrid-solutions}
 
-Channels allow participants to transact `x` number of times off-chain while only submitting two transaction to the network on chain. This allows for extremely high transaction throughput
+Combine the best parts of multiple layer 2 technologies, and may offer configurable trade-offs.
 
-**Useful for**:
+### Use Hybrid solutions {#use-hybrid-solutions}
 
-- lots of state updates
-- when number of participants is known upfront
-- when participants are always available
-
-Participants must lock a portion of Ethereum's state, like an ETH deposit, into a multisig contract. A multisig contract is a type of contract that requires the signatures (and thus agreement) of multiple private keys to execute.
-
-Locking the state in this way is the first transaction and opens up the channel. The participants can then transact quickly and freely off-chain. When the interaction is finished, a final on-chain transaction is submitted, unlocking the state.
-
-### State channels {#state-channels}
-
-State channel tic tac toe:
-
-1. Create a multisig smart contract “Judge” on the Ethereum main-chain that understands the rules of tic-tac-toe, and can identify Alice and Bob as the two players in our game. This contract holds the 1ETH prize.
-
-2. Then, Alice and Bob begin playing the game, opening the state channel. Each moves creates an off-chain transaction containing a “nonce”, which simply means that we can always tell later in what order the moves happened.
-
-3. When there's a winner, they close the channel by submitting the final state (e.g. a list of transactions) to the Judge contract, paying only a single transaction fee. The Judge ensures that this “final state” is signed by both parties, and waits a period of time to ensure that no one can legitimately challenge the result, and then pays out the 1ETH award to Alice.
-
-There are two types of channels right now:
-
-- State channels – as described above
-- Payment channels – Simplified state channels that only deal with payments. They allow off-chain transfers between two participants, as long as the net sum of their transfers does not exceed the deposited tokens.
-
-#### Pros and cons {#channels-pros-and-cons}
-
-| Pros                                                                            | Cons                                                                                                                                                |
-| ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Instant withdrawal/settling on mainnet (if both parties to a channel cooperate) | Time and cost to set up and settle a channel - not so good for occasional one-off transactions between arbitrary users.                             |
-| Extremely high throughput is possible                                           | Need to periodically watch the network (liveness requirement) or delegate this responsibility to someone else to ensure the security of your funds. |
-| Lowest cost per transaction - good for streaming micropayments                  | Have to lockup funds in open payment channels                                                                                                       |
-|                                                                                 | Don't support open participation                                                                                                                    |
-
-#### Use State channels {#use-state-channels}
-
-- [Connext](https://connext.network/)
-- [Kchannels](https://www.kchannels.io/)
-- [Perun](https://perun.network/)
-- [Raiden](https://raiden.network/)
-- [Statechannels.org](https://statechannels.org/)
+- [Offchain Labs Arbitrum SCSC](https://offchainlabs.com/arbitrum.pdf)
+- [Celer](https://www.celer.network/)
 
 ## Further reading {#further-reading}
 
-- [Up-to-date analytics on Layer 2 scaling solutions for Ethereum](https://www.l2beat.com/)
 - [An Incomplete Guide to Rollups](https://vitalik.ca/general/2021/01/05/rollup.html)
-- [Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
 - [Zero-Knowledge Blockchain Scalability](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
-
-**State channels**
-
-- [EthHub on state channels](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/state-channels/)
-- [Making Sense of Ethereum’s Layer 2 Scaling Solutions: State Channels, Plasma, and Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, Feb 12 2018_
-- [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _Nov 6, 2015 - Jeff Coleman_
-- [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
-
-**Payment channels**
-
-- [EthHub on payment channels](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/payment-channels/)
 
 **ZK rollups**
 
@@ -194,3 +133,7 @@ There are two types of channels right now:
 - [EthHub on optimistic rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [How does Optimism's Rollup really work?](https://research.paradigm.xyz/optimism)
+
+**Hybrid solutions**
+
+- [Adding Hybrid PoS-Rollup Sidechain to Celer’s Coherent Layer-2 Platform on Ethereum](https://medium.com/celer-network/adding-hybrid-pos-rollup-sidechain-to-celers-coherent-layer-2-platform-d1d3067fe593)
