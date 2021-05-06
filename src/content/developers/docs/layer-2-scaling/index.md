@@ -204,6 +204,7 @@ Uses validity proofs like [ZK-rollups](#zk-rollups) but data is not stored on th
 - [Starkware](https://starkware.co/)
 - [Matter Labs zkPorter](https://matter-labs.io/)
 - [Loopring](https://loopring.org/#/)
+- [zkTube](https://paytube.io/#/)
 
 ## Sidechains {#sidechains}
 
