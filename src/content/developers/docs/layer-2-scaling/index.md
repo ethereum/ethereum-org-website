@@ -81,6 +81,7 @@ The sidechain where ZK rollups happen can be optimised to reduce transaction siz
 - [Starkware](https://starkware.co/)
 - [Matter Labs zkSync](https://zksync.io/)
 - [Aztec 2.0](https://aztec.network/)
+- [zktube](https://paytube.io/)
 
 ### Optimistic rollups {#optimistic-rollups}
 
@@ -204,7 +205,7 @@ Uses validity proofs like [ZK-rollups](#zk-rollups) but data is not stored on th
 - [Starkware](https://starkware.co/)
 - [Matter Labs zkPorter](https://matter-labs.io/)
 - [Loopring](https://loopring.org/#/)
-
+- [zktube](https://paytube.io/)
 ## Sidechains {#sidechains}
 
 A sidechain is a separate blockchain which runs in parallel to mainnet and operates independently. It has its own consensus algorithm ([Proof of Authority](https://en.wikipedia.org/wiki/Proof_of_authority), [Delegated proof-of-stake](https://en.bitcoinwiki.org/wiki/DPoS), [Byzantine fault tolerance](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained), and so on). It is connected to the main chain by a two-way bridge.
