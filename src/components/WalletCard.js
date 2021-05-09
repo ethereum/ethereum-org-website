@@ -36,7 +36,6 @@ const StyledIcon = styled(Icon)`
 const CardFace = styled(motion.div)`
   position: absolute;
   backface-visibility: hidden;
-  height: 100%;
   width: 100%;
   color: ${({ theme }) => theme.colors.text};
   box-shadow: 0px 14px 66px rgba(0, 0, 0, 0.07),
@@ -46,8 +45,8 @@ const CardFace = styled(motion.div)`
 
 const CardFront = styled(CardFace)`
   display: flex;
-  height: 100%;
   width: 100%;
+  min-height: 400px;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 4px;
@@ -166,8 +165,7 @@ const FeatureRow = styled.div`
 `
 
 const StyledButtonSecondary = styled(ButtonSecondary)`
-  margin: 1rem;
-  margin-bottom: 0rem;
+  margin: auto 1rem 0 1rem;
 `
 
 const HeaderRow = styled.div`
