@@ -311,7 +311,7 @@ const WalletCard = ({ wallet }) => {
           >
             <FlipIcon>
               <Translation id="page-find-wallet-card-more-info" />
-              <StyledIcon name="flip" ml="1rem" size="1.25rem" />
+              <StyledIcon name="flip" ml="1rem" size="20px" />
             </FlipIcon>
           </StyledButtonSecondary>
           <StyledButtonLink to={wallet.url} hideArrow={true}>
@@ -335,7 +335,7 @@ const WalletCard = ({ wallet }) => {
                 </ImageWrapper>
                 <Title>{wallet.name}</Title>
               </BackHeaderRow>
-              <Icon name="flip" ml="1rem" size="1.5rem" />
+              <Icon name="flip" ml="1rem" size="24px" />
             </FlipTitle>
             <FeaturesHeader>
               <Translation id="page-find-wallet-card-features" />
