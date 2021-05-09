@@ -279,6 +279,11 @@
   from = "/*/eth2/docking"
   to = "/:splat/eth2/merge/"
 
+# Jobs
+[[redirects]]
+  from = "/*/about/web-developer"
+  to = "/:splat/community/#ethereum-jobs"
+
 # A redirect rule with all the supported properties
 # [[redirects]]
 #   from = "/old-path"

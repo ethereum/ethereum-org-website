@@ -61,6 +61,6 @@ Make sure you read the principles if you'd like to [contribute to the site](/en/
 
 ## Open jobs {#open-jobs}
 
-Although this website is open-source and anyone can work on it, we do have a team dedicated to ethereum.org and other Ethereum Foundation web projects. If there's not a role here for you, head over to [Discord](https://discord.gg/CetY6Y4) and let us know how you'd like to work with us.
+Although this website is open-source and anyone can work on it, we do have a team dedicated to ethereum.org and other Ethereum Foundation web projects.
 
-- [Front-end web developer](/about/web-developer/)
+We'll post any job openings here. If you don't see a role here for you, head over to [Discord](https://discord.gg/CetY6Y4) and let us know how you'd like to work with us!
