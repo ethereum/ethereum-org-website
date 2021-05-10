@@ -1831,7 +1831,7 @@ params: [
 
 **Returns**
 
-`Boolean` - returns `true` if submitting went through succesfully and `false` otherwise.
+`Boolean` - returns `true` if submitting went through successfully and `false` otherwise.
 
 **Example**
 
