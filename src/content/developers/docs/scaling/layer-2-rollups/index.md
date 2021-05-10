@@ -11,25 +11,25 @@ Layer 2 is a collective term for solutions designed to help scale your applicati
 
 ## Prerequisites {#prerequisites}
 
-You should have a good understanding of all the foundational topics. Implementing layer 2 solutions are advanced as the technology is less battle-tested.
+You should have a good understanding of all the foundational topics and a high-level understanding of [Ethereum scaling](/developers/docs/scaling/). Implementing layer 2 solutions are advanced - the technology is quickly evolving and, as a result, is less battle-tested.
 
 ## Why is layer 2 needed? {#why-is-layer-2-needed}
 
 - Some use-cases, like blockchain games, make no sense with current transaction times
 - It can be unnecessarily expensive to use blockchain applications
-- Any updates to scalability should not be at the expense of decentralization of security – layer 2 builds on top of Ethereum.
+- Any updates to scalability should not be at the expense of decentralization or security – layer 2 builds on top of Ethereum.
 
 ## Rollups {#rollups}
 
-Rollups are solutions that perform transaction _execution_ outside layer 1, but post transaction _data_ on layer 1. As transaction _data_ is on layer 1, this allows rollups to be secured by layer 1. Inheriting the security properties of the main Ethereum chain (layer 1), while performing execution outside of layer 1, is a defining characteristic of rollups.
+Rollups are solutions that perform transaction _execution_ outside the main Ethereum chain (layer 1), but post transaction _data_ on layer 1. As transaction _data_ is on layer 1, this allows rollups to be secured by layer 1. Inheriting the security properties of layer 1, while performing execution outside of layer 1, is a defining characteristic of rollups.
 
 Three simplified properties of rollups are:
 
 1. transaction _execution_ outside layer 1
 2. data or proof of transactions is on layer 1
-3. a rollup smart contract in layer 1 that can enforce correct transaction execution by using the transaction data on layer 1
+3. a rollup smart contract in layer 1 that can enforce correct transaction execution on layer 2 by using the transaction data on layer 1
 
-Rollups require operators to stake a bond in the rollup contract. This incentivises operators to verify and execute transactions correctly.
+Rollups require "operators" to stake a bond in the rollup contract. This incentivises operators to verify and execute transactions correctly.
 
 **Useful for:**
 
@@ -39,14 +39,14 @@ Rollups require operators to stake a bond in the rollup contract. This incentivi
 
 There are two types of rollups with different security models:
 
-- Zero knowledge: runs computation off-chain and submits a [**validity proof**](/glossary/#validity-proof) to the chain
-- Optimistic: assumes transactions are valid by default and only runs computation, via a [**fraud proof**](/glossary/#fraud-proof), in the event of a challenge
+- **Zero knowledge rollups**: runs computation off-chain and submits a [**validity proof**](/glossary/#validity-proof) to the chain
+- **Optimistic rollups**: assumes transactions are valid by default and only runs computation, via a [**fraud proof**](/glossary/#fraud-proof), in the event of a challenge
 
 ### Zero knowledge rollups {#zk-rollups}
 
 Zero knowledge rollups, also known as ZK rollups, bundle or "roll up" hundreds of transfers off-chain and generates a cryptographic proof, known as a SNARK (succinct non-interactive argument of knowledge). This is known as a validity proof and is posted on layer 1.
 
-The ZK rollup contract maintains the state of all transfers on layer 2, and this state can only be updated with a validity proof. This means that ZK rollups only need the validity proof, instead of all transaction data. With a ZK rollup, validating a block is quicker and cheaper because less data is included.
+The ZK rollup smart contract maintains the state of all transfers on layer 2, and this state can only be updated with a validity proof. This means that ZK rollups only need the validity proof, instead of all transaction data. With a ZK rollup, validating a block is quicker and cheaper because less data is included.
 
 With a ZK rollup, there are no delays when moving funds from layer 2 to layer 1 because a validity proof accepted by the ZK rollup contract has already verified the funds.
 
@@ -62,6 +62,8 @@ The sidechain where ZK rollups happen can be optimised to reduce transaction siz
 
 #### Use ZK rollups {#use-zk-rollups}
 
+Multiple implementations of ZK rollups exist that you can integrate into your dapps:
+
 - [Loopring](https://loopring.org/#/)
 - [Starkware](https://starkware.co/)
 - [Matter Labs zkSync](https://zksync.io/)
@@ -69,7 +71,7 @@ The sidechain where ZK rollups happen can be optimised to reduce transaction siz
 
 ### Optimistic rollups {#optimistic-rollups}
 
-Optimistic rollups use a side chain that sits in parallel to the main Ethereum chain. They can offer improvements in scalability because they don't do any computation by default. Instead, after a transaction they propose the new state to mainnet. Or "notarise" the transaction.
+Optimistic rollups use a sidechain that sits in parallel to the main Ethereum chain. They can offer improvements in scalability because they don't do any computation by default. Instead, after a transaction they propose the new state to mainnet. Or "notarise" the transaction.
 
 With Optimistic rollups transactions are written to the main Ethereum chain as calldata, optimising them further by reducing the gas cost.
 

@@ -9,7 +9,7 @@ sidebar: true
 
 As the number of people using Ethereum has grown, the blockchain has reached certain capacity limitations. This has driven up the cost of using the network, creating the need for "scaling solutions." There are multiple solutions being researched, tested and implemented that take different approaches to achieve similar goals.
 
-The main goal of scalability is to increase transaction speed (faster finality), and transaction throughput (high transactions per second), without sacrificing decentralization or security (more on [Eth2 vision](/eth2/vision/)). On the layer 1 Ethereum blockchain, high demand leads to slower transactions and nonviable gas prices. Increasing the network capacity in terms of speed and throughput is fundamental to the meaningful and mass adoption of Ethereum. 
+The main goal of scalability is to increase transaction speed (faster finality), and transaction throughput (high transactions per second), without sacrificing decentralization or security (more on [Eth2 vision](/eth2/vision/)). On the layer 1 Ethereum blockchain, high demand leads to slower transactions and nonviable gas prices. Increasing the network capacity in terms of speed and throughput is fundamental to the meaningful and mass adoption of Ethereum.
 
 While speed and throughput are important, it is essential that scaling solutions enabling these goals remain decentralized and secure. Keeping the barrier to entry low for node operators is critical in preventing a progression towards centralized and insecure computing power.
 
@@ -31,7 +31,7 @@ Learn more about [sharding](/eth2/shard-chains/).
 
 ## Off-Chain Scaling {#off-chain-scaling}
 
-Off-chain solutions are implemented separately from layer 1 mainnet - they require no changes to the existing Ethereum protocol. Some solutions, known as "layer 2" solutions, derive their security directly from layer 1 Ethereum consensus, such as [rollups](/docs/scaling/layer-2/) or [state channels](/docs/scaling/channels/). Other solutions involve the creation of new chains in various forms that derive their security separately from mainnet, such as [sidechains](#sidechains) or [plasma](#plasma) chains. These solutions communicate with mainnet, but derive their security differently to obtain a variety of goals.
+Off-chain solutions are implemented separately from layer 1 mainnet - they require no changes to the existing Ethereum protocol. Some solutions, known as "layer 2" solutions, derive their security directly from layer 1 Ethereum consensus, such as [rollups](/docs/scaling/layer-2-rollups/) or [state channels](/docs/scaling/channels/). Other solutions involve the creation of new chains in various forms that derive their security separately from mainnet, such as [sidechains](#sidechains) or [plasma](#plasma) chains. These solutions communicate with mainnet, but derive their security differently to obtain a variety of goals.
 
 ### Layer 2 Scaling {#layer-2-scaling}
 
@@ -45,10 +45,10 @@ A specific layer 2 instance may be open and shared by many applications, or may 
 
 Rollups perform transaction execution outside layer 1 and then the data is posted to layer 1 where consensus is reached. As transaction data is included in layer 1 blocks, this allows rollups to be secured by native Ethereum security.
 
-- [ZK rollups](/developers/docs/scaling/layer-2/#zk-rollups)
-- [Optimistic rollups](/developers/docs/scaling/layer-2/#optimistic-rollups)
+- [ZK rollups](/developers/docs/scaling/layer-2-rollups/#zk-rollups)
+- [Optimistic rollups](/developers/docs/scaling/layer-2-rollups/#optimistic-rollups)
 
-Learn more about [rollups](/developers/docs/scaling/layer-2/).
+Learn more about [rollups](/developers/docs/scaling/layer-2-rollups/).
 
 #### Channels {#channels}
 
@@ -64,7 +64,7 @@ Learn more about [Sidechains](/developers/docs/scaling/sidechains/).
 
 ### Plasma {#plasma}
 
-A plasma chain is a separate blockchain that is anchored to the main Ethereum chain, and uses fraud proofs (like [Optimistic rollups](/developers/docs/scaling/layer-2/#optimistic-rollups)) to arbitrate disputes.
+A plasma chain is a separate blockchain that is anchored to the main Ethereum chain, and uses fraud proofs (like [Optimistic rollups](/developers/docs/scaling/layer-2-rollups/#optimistic-rollups)) to arbitrate disputes.
 
 Learn more about [Plasma](/developers/docs/scaling/plasma/).
 

@@ -257,7 +257,7 @@ A change in protocol causing the creation of an alternative chain, or a temporal
 
 A security model for certain [layer 2](#layer-2) solutions where, to increase speed, transactions are [rolled up](#rollups) into batches and submitted to Ethereum in a single transaction. They are assumed valid but can be challenged if fraud is suspected. A fraud proof will then run the transaction to see if fraud took place. This method increases the amount of transactions possible while maintaining security. Some [rollups](#rollups) use [validity proofs](#validity-proof).
 
-<DocLink to="/developers/docs/scaling/layer-2/#optimistic-rollups" title="Optimistic rollups" />
+<DocLink to="/developers/docs/scaling/layer-2-rollups/#optimistic-rollups" title="Optimistic rollups" />
 
 ### frontier {#frontier}
 
@@ -375,7 +375,7 @@ A JSON-encoded file that contains a single (randomly generated) [private key](#p
 
 An area of development focused on layering improvements on top of the Ethereum protocol. These improvements are related to [transaction](#transaction) speeds, cheaper [transaction fees](#transaction-fee), and transaction privacy.
 
-<DocLink to="/developers/docs/scaling/layer-2/" title="Layer 2" />
+<DocLink to="/developers/docs/scaling/layer-2-rollups/" title="Layer 2" />
 
 ### LevelDB {#level-db}
 
@@ -462,7 +462,7 @@ When a [miner](#miner) finds a valid [block](#block), another miner may have pub
 
 A [rollup](#rollups) of transactions that use [fraud proofs](#fraud-proof) to offer increased [layer 2](#layer-2) transaction throughput while using the security provided by [mainnet](#mainnet) (layer 1). Unlike [Plasma](#plasma), a similar layer 2 solution, Optimistic rollups can handle more complex transaction types – anything possible in the [EVM](#evm). They do have latency issues compared to [Zero-knowledge rollups](#zk-rollups) because a transaction can be challenged via the fraud proof.
 
-<DocLink to="/developers/docs/scaling/layer-2/#optimistic-rollups" title="Optimistic Rollups" />
+<DocLink to="/developers/docs/scaling/layer-2-rollups/#optimistic-rollups" title="Optimistic Rollups" />
 
 <Divider />
 
@@ -524,7 +524,7 @@ An encoding standard designed by the Ethereum developers to encode and serialize
 
 A type of [layer 2](#layer-2) scaling solution that batches multiple transactions and submits them to [the Ethereum main chain](#mainnet) in a single transaction. This allows for reductions in [gas](#gas) costs and increases in [transaction](#transaction) throughput. There are Optimistic and Zero-knowledge rollups which use different security methods to offer these scalability gains.
 
-<DocLink to="/developers/docs/scaling/layer-2/" title="Rollups" />
+<DocLink to="/developers/docs/scaling/layer-2-rollups/" title="Rollups" />
 
 <Divider />
 
@@ -657,7 +657,7 @@ A [node](#node) in a [proof-of-stake](#proof-of-stake) system responsible for st
 
 A security model for certain [layer 2](#layer-2) solutions where, to increase speed, transactions are [rolled up](/#rollups) into batches and submitted to Ethereum in a single transaction. The transaction computation is done off-chain and then supplied to the main chain with a proof of their validity. This method increases the amount of transactions possible while maintaining security. Some [rollups](#rollups) use [fraud proofs](#fraud-proof).
 
-<DocLink to="/developers/docs/scaling/layer-2/#zk-rollups" title="Zero-knowledge rollups" />
+<DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups" title="Zero-knowledge rollups" />
 
 ### Validium {#validium}
 
@@ -703,7 +703,7 @@ A special Ethereum address, composed entirely of zeros, that is specified as the
 
 A [rollup](#rollups) of transactions that use [validity proofs](#validity-proof) to offer increased [layer 2](#layer-2) transaction throughput while using the security provided by [mainnet](#mainnet) (layer 1). Although they can't handle complex transaction types, like [Optimistic rollups](#optimistic-rollups), they don't have latency issues because transactions are provably valid when submitted.
 
-<DocLink to="/developers/docs/scaling/layer-2/#zk-rollups" title="Zero-knowledge Rollups" />
+<DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups" title="Zero-knowledge Rollups" />
 
 <Divider />
 
