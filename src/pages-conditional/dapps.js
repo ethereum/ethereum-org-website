@@ -851,6 +851,16 @@ const DappsPage = ({ data, location }) => {
       image: data.zerion.childImageSharp.fluid,
       alt: translateMessageId("page-dapps-zerion-logo-alt", intl),
     },
+    {
+      title: "Rotki",
+      description: translateMessageId(
+        "page-dapps-dapp-description-rotki",
+        intl
+      ),
+      link: "https://rotki.com/",
+      image: data.rotki.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-rotki-logo-alt", intl),
+    },
   ]
 
   const computing = [
@@ -1876,6 +1886,9 @@ export const query = graphql`
       ...dappImage
     }
     zerion: file(relativePath: { eq: "dapps/zerion.png" }) {
+      ...dappImage
+    }
+    rotki: file(relativePath: { eq: "dapps/rotki.png" }) {
       ...dappImage
     }
   }
