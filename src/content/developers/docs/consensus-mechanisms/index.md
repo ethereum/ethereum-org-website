@@ -70,7 +70,7 @@ More on [proof-of-stake (PoS)](/developers/docs/consensus-mechanisms/pos/)
 
 ## Further Reading {#further-reading}
 
-<!-- TODO -->
+_Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related Topics {#related-topics}
 
