@@ -8,7 +8,7 @@ incomplete: true
 
 Ethereum, like Bitcoin, currently uses a consensus protocol called [Proof-of-work (PoW)](https://en.wikipedia.org/wiki/Proof_of_work). This allows the nodes of the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain, and prevents certain kinds of economic attacks.
 
-Over the next few years, proof-of-work will be phased out in favour of [proof of stake](/developers/docs/consensus-mechanisms/pos). This will also phase out mining from Ethereum. For more details on timing, check the progress of the [Eth2 docking upgrade](/eth2/docking/).
+Over the next few years, proof-of-work will be phased out in favour of [proof of stake](/developers/docs/consensus-mechanisms/pos). This will also phase out mining from Ethereum. For more details on timing, check the progress of the [Eth2 merge upgrade](/eth2/merge/).
 
 ## Prerequisites {#prerequisites}
 
@@ -82,7 +82,7 @@ Remember, this timing doesn't include the wait times for having a transaction pi
 
 At a high level, proof-of-stake has the same end goal as proof-of-work: to help the decentralized network reach consensus, securely. But it has some differences in process and personnel:
 
-- PoS switches out the importance of computational power for staked ETH
+- PoS switches out the importance of computational power for staked ETH.
 - PoS replaces miners with validators. Validators stake their ETH to activate the ability to create new blocks.
 - Validators don't compete to create blocks, instead they are chosen at random by an algorithm.
 - Finality is clearer: at certain checkpoints, if 2/3 validators agree on the state of the block it is considered final. Validators must bet their entire stake on this, so if they try to collude down the line, they'll lose their entire stake.
