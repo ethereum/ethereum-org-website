@@ -7,11 +7,11 @@ incomplete: true
 sidebarDepth: 3
 ---
 
-State channels allow participants to transact `x` number of times off-chain while only submitting two transaction to the network on chain. This allows for extremely high transaction throughput.
+State channels allow participants to transact `x` number of times off-chain while only submitting two on-chain transactions to the Ethereum network. This allows for extremely high transaction throughput.
 
 ## Prerequisites {#prerequisites}
 
-You should have a good understanding of all the foundational topics. Implementing scaling solutions is advanced as the technology is less battle-tested, and continues to be researched and developed.
+You should have a good understanding of all the foundational topics and a high-level understanding of [Ethereum scaling](/developers/docs/scaling/). Implementing scaling solutions such as channels is an advanced topic as the technology is less battle-tested, and continues to be researched and developed.
 
 ## Channels {#channels}
 
@@ -29,7 +29,7 @@ There are two types of channels right now: state channels and payment channels.
 
 ## State channels {#state-channels}
 
-State channel tic tac toe:
+State channel are perhaps best explained through an example, such as a game of tic tac toe:
 
 1. Create a multisig smart contract “Judge” on the Ethereum main-chain that understands the rules of tic-tac-toe, and can identify Alice and Bob as the two players in our game. This contract holds the 1ETH prize.
 
@@ -39,7 +39,7 @@ State channel tic tac toe:
 
 ## Payment channels {#payment-channels}
 
-Simplified state channels that only deal with payments (i.e. state that represents balances). They allow off-chain transfers between two participants, as long as the net sum of their transfers does not exceed the deposited tokens.
+Simplified state channels that only deal with payments (e.g. ETH transfers). They allow off-chain transfers between two participants, as long as the net sum of their transfers does not exceed the deposited tokens.
 
 ## Pros and cons {#channels-pros-and-cons}
 
@@ -51,6 +51,8 @@ Simplified state channels that only deal with payments (i.e. state that represen
 |                                                                                 | Don't support open participation                                                                                                                    |
 
 ## Use state channels {#use-state-channels}
+
+Multiple projects provide implementations of state channels that you can integrate into your dapps:
 
 - [Connext](https://connext.network/)
 - [Kchannels](https://www.kchannels.io/)

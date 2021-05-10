@@ -11,7 +11,7 @@ Layer 2 is a collective term for solutions designed to help scale your applicati
 
 ## Prerequisites {#prerequisites}
 
-You should have a good understanding of all the foundational topics and a high-level understanding of [Ethereum scaling](/developers/docs/scaling/). Implementing layer 2 solutions are advanced - the technology is quickly evolving and, as a result, is less battle-tested.
+You should have a good understanding of all the foundational topics and a high-level understanding of [Ethereum scaling](/developers/docs/scaling/). Implementing scaling solutions such as rollups is an advanced topic as the technology is less battle-tested, and continues to be researched and developed.
 
 ## Why is layer 2 needed? {#why-is-layer-2-needed}
 
@@ -133,3 +133,5 @@ Hybrid solutions exist that combine the best parts of multiple layer 2 technolog
 **Hybrid solutions**
 
 - [Adding Hybrid PoS-Rollup Sidechain to Celer’s Coherent Layer-2 Platform on Ethereum](https://medium.com/celer-network/adding-hybrid-pos-rollup-sidechain-to-celers-coherent-layer-2-platform-d1d3067fe593)
+
+_Know of a community resource that helped you? Edit this page and add it!_

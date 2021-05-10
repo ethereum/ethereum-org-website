@@ -11,7 +11,7 @@ Uses validity proofs like [ZK-rollups](#zk-rollups) but data is not stored on th
 
 ## Prerequisites {#prerequisites}
 
-You should have a good understanding of all the foundational topics. Scaling solutions such as Validium are not yet thoroughly battle-tested.
+You should have a good understanding of all the foundational topics and a high-level understanding of [Ethereum scaling](/developers/docs/scaling/). Implementing scaling solutions such as Validium is an advanced topic as the technology is less battle-tested, and continues to be researched and developed.
 
 ## Pros and cons {#pros-and-cons}
 
@@ -22,6 +22,8 @@ You should have a good understanding of all the foundational topics. Scaling sol
 |                                                                                                           | Slower subjective finality time (10-30 min to generate a ZK proof) (but faster to full finality because there is no dispute time delay). |
 
 ### Use Validium {#use-validium}
+
+Multiple projects provide implementations of Validium that you can integrate into your dapps:
 
 - [Starkware](https://starkware.co/)
 - [Matter Labs zkPorter](https://matter-labs.io/)

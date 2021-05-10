@@ -11,7 +11,7 @@ A plasma chain is a separate blockchain that is anchored to the main Ethereum ch
 
 ## Prerequisites {#prerequisites}
 
-You should have a good understanding of all the foundational topics. Scaling solutions such as Plasma are not yet thoroughly battle-tested.
+You should have a good understanding of all the foundational topics and a high-level understanding of [Ethereum scaling](/developers/docs/scaling/). Implementing scaling solutions such as Plasma is an advanced topic as the technology is less battle-tested, and continues to be researched and developed.
 
 ## Pros and cons {#pros-and-cons}
 
@@ -23,6 +23,8 @@ You should have a good understanding of all the foundational topics. Scaling sol
 |                                                                                                                       | Withdrawals are delayed by several days to allow for challenges. For fungible assets this can be mitigated by liquidity providers, but there is an associated capital cost. |
 
 ### Use Plasma {#use-plasma}
+
+Multiple projects provide implementations of Plasma that you can integrate into your dapps:
 
 - [OMG Network](https://omg.network/)
 - [Polygon](https://polygon.technology/)[previously Matic Network](https://matic.network/)

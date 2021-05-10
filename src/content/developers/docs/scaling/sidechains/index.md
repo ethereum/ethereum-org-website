@@ -11,8 +11,7 @@ A sidechain is a separate blockchain which runs in parallel to mainnet and opera
 
 ## Prerequisites {#prerequisites}
 
-You should have a good understanding of all the foundational topics. Implementing scaling solutions such as sidechains is advanced as the technology is less battle-tested, and continues to be researched and developed.
-
+You should have a good understanding of all the foundational topics and a high-level understanding of [Ethereum scaling](/developers/docs/scaling/). Implementing scaling solutions such as sidechains is an advanced topic as the technology is less battle-tested, and continues to be researched and developed.
 
 ## Pros and cons {#pros-and-cons}
 
