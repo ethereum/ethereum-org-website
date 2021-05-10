@@ -127,7 +127,7 @@
         - id: docs-nav-scaling-layer-2
           to: /developers/docs/scaling/layer-2-rollups/
         - id: docs-nav-scaling-channels
-          to: /developers/docs/scaling/channels/
+          to: /developers/docs/scaling/state-channels/
         - id: docs-nav-scaling-sidechains
           to: /developers/docs/scaling/sidechains/
         - id: docs-nav-scaling-plasma

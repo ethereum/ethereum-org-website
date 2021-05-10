@@ -1,5 +1,5 @@
 ---
-title: Channels
+title: State Channels
 description: An introduction to state channels and payment channels as a scaling solution currently utilized by the Ethereum community.
 lang: en
 sidebar: true
@@ -7,7 +7,7 @@ incomplete: true
 sidebarDepth: 3
 ---
 
-Channels allow participants to transact `x` number of times off-chain while only submitting two transaction to the network on chain. This allows for extremely high transaction throughput.
+State channels allow participants to transact `x` number of times off-chain while only submitting two transaction to the network on chain. This allows for extremely high transaction throughput.
 
 ## Prerequisites {#prerequisites}
 
@@ -39,7 +39,7 @@ State channel tic tac toe:
 
 ## Payment channels {#payment-channels}
 
-Simplified state channels that only deal with payments. They allow off-chain transfers between two participants, as long as the net sum of their transfers does not exceed the deposited tokens.
+Simplified state channels that only deal with payments (i.e. state that represents balances). They allow off-chain transfers between two participants, as long as the net sum of their transfers does not exceed the deposited tokens.
 
 ## Pros and cons {#channels-pros-and-cons}
 

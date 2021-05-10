@@ -598,7 +598,7 @@ Depositing a quantity of [ether](#ether) (your stake) to become a validator and 
 
 A [layer 2](#layer-2) solution where a channel is set up between participants, where they can transact freely and cheaply. Only a [transaction](#transaction) to set up the channel and close the channel is sent to [mainnet](#mainnet). This allows for very high transaction throughput, but does rely on knowing number of participants up front and locking up of funds.
 
-<DocLink to="/developers/docs/scaling/channels/#state-channels" title="State channels" />
+<DocLink to="/developers/docs/scaling/state-channels/#state-channels" title="State channels" />
 
 ### szabo {#szabo}
 

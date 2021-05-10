@@ -31,7 +31,7 @@ Learn more about [sharding](/eth2/shard-chains/).
 
 ## Off-Chain Scaling {#off-chain-scaling}
 
-Off-chain solutions are implemented separately from layer 1 mainnet - they require no changes to the existing Ethereum protocol. Some solutions, known as "layer 2" solutions, derive their security directly from layer 1 Ethereum consensus, such as [rollups](/docs/scaling/layer-2-rollups/) or [state channels](/docs/scaling/channels/). Other solutions involve the creation of new chains in various forms that derive their security separately from mainnet, such as [sidechains](#sidechains) or [plasma](#plasma) chains. These solutions communicate with mainnet, but derive their security differently to obtain a variety of goals.
+Off-chain solutions are implemented separately from layer 1 mainnet - they require no changes to the existing Ethereum protocol. Some solutions, known as "layer 2" solutions, derive their security directly from layer 1 Ethereum consensus, such as [rollups](/docs/scaling/layer-2-rollups/) or [state channels](/docs/scaling/state-channels/). Other solutions involve the creation of new chains in various forms that derive their security separately from mainnet, such as [sidechains](#sidechains) or [plasma](#plasma) chains. These solutions communicate with mainnet, but derive their security differently to obtain a variety of goals.
 
 ### Layer 2 Scaling {#layer-2-scaling}
 
@@ -50,11 +50,11 @@ Rollups perform transaction execution outside layer 1 and then the data is poste
 
 Learn more about [rollups](/developers/docs/scaling/layer-2-rollups/).
 
-#### Channels {#channels}
+#### State Channels {#channels}
 
-Channels utilize multisig contracts to enable participants to transact quickly and freely off-chain, then settle finality with mainnet. This minimizing network congestion, fees and delays. The two types of channels are currently state channels, and payment channels.
+State channels utilize multisig contracts to enable participants to transact quickly and freely off-chain, then settle finality with mainnet. This minimizing network congestion, fees and delays. The two types of channels are currently state channels, and payment channels.
 
-Learn more about [channels](/developers/docs/scaling/channels/).
+Learn more about [state channels](/developers/docs/scaling/state-channels/).
 
 ### Sidechains {#sidechains}
 
