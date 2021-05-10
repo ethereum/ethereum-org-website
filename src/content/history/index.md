@@ -1,5 +1,5 @@
 ---
-title: History of Ethereum
+title: History and Forks of Ethereum
 description: A history of the Ethereum blockchain including major milestones, releases, and forks.
 lang: en
 sidebar: true
