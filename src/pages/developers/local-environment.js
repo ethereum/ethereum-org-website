@@ -274,6 +274,7 @@ const frameworksList = [
   {
     id: "waffle",
     url: "https://getwaffle.io/",
+    githubUrl: "https://github.com/EthWorks/waffle",
     background: "#fff",
     name: "Waffle",
     description: "page-local-environment-waffle-desc",
@@ -282,6 +283,7 @@ const frameworksList = [
   {
     id: "hardhat",
     url: "https://hardhat.org/",
+    githubUrl: "https://github.com/nomiclabs/hardhat",
     background: "#2A2C32",
     name: "Hardhat",
     description: "page-local-environment-hardhat-desc",
@@ -290,6 +292,7 @@ const frameworksList = [
   {
     id: "truffle",
     url: "https://www.trufflesuite.com/",
+    githubUrl: "https://github.com/trufflesuite/truffle",
     background: "#31272A",
     name: "Truffle",
     description: "page-local-environment-truffle-desc",
@@ -298,6 +301,7 @@ const frameworksList = [
   {
     id: "embark",
     url: "https://framework.embarklabs.io/",
+    githubUrl: "https://github.com/embarklabs/embark",
     background: "#1B3E5F",
     name: "Embark",
     description: "page-local-environment-embark-desc",
@@ -306,6 +310,7 @@ const frameworksList = [
   {
     id: "brownie",
     url: "https://github.com/eth-brownie/brownie",
+    githubUrl: "https://github.com/eth-brownie/brownie",
     background: "#fff",
     name: "Brownie",
     description: "page-local-environment-brownie-desc",
@@ -314,6 +319,7 @@ const frameworksList = [
   {
     id: "epirus",
     url: "https://www.web3labs.com/epirus",
+    githubUrl: "https://github.com/web3labs/epirus-free",
     background: "#fff",
     name: "Epirus",
     description: "page-local-environment-epirus-desc",
@@ -322,6 +328,7 @@ const frameworksList = [
   {
     id: "createethapp",
     url: "https://github.com/PaulRBerg/create-eth-app",
+    githubUrl: "https://github.com/PaulRBerg/create-eth-app",
     background: "#fff",
     name: "Create Eth App",
     description: "page-local-environment-eth-app-desc",
@@ -330,6 +337,7 @@ const frameworksList = [
   {
     id: "scaffoldeth",
     url: "https://github.com/austintgriffith/scaffold-eth",
+    githubUrl: "https://github.com/austintgriffith/scaffold-eth",
     background: "#fff",
     name: "scaffold-eth",
     description: "page-local-environment-scaffold-eth-desc",
@@ -338,6 +346,7 @@ const frameworksList = [
   {
     id: "soliditytemplate",
     url: "https://github.com/paulrberg/solidity-template",
+    githubUrl: "https://github.com/paulrberg/solidity-template",
     background: "#fff",
     name: "Solidity template",
     description: "page-local-environment-solidity-template-desc",
@@ -353,7 +362,6 @@ const ChooseStackPage = ({ data }) => {
     const list = shuffle(
       frameworksList.map((item) => {
         item.image = data[item.id].childImageSharp.fixed
-        item.gitHubRepo = data[`${item.id}GitHub`].repository
         return item
       })
     )
@@ -452,7 +460,8 @@ const ChooseStackPage = ({ data }) => {
               background={framework.background}
               image={framework.image}
               name={framework.name}
-              gitHubRepo={framework.gitHubRepo}
+              githubUrl={framework.githubUrl}
+              repoLangCount={2}
               alt={translateMessageId(framework.alt, intl)}
             >
               <Translation id={framework.description} />
@@ -600,18 +609,6 @@ export const devtoolImage = graphql`
   }
 `
 
-export const repoInfo = graphql`
-  fragment repoInfo on GitHub_Repository {
-    stargazerCount
-    languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
-      nodes {
-        name
-      }
-    }
-    url
-  }
-`
-
 export const query = graphql`
   query {
     hero: file(relativePath: { eq: "developers-eth-blocks.png" }) {
@@ -631,76 +628,31 @@ export const query = graphql`
     waffle: file(relativePath: { eq: "dev-tools/waffle.png" }) {
       ...devtoolImage
     }
-    waffleGitHub: github {
-      repository(owner: "EthWorks", name: "waffle") {
-        ...repoInfo
-      }
-    }
     hardhat: file(relativePath: { eq: "dev-tools/hardhat.png" }) {
       ...devtoolImage
-    }
-    hardhatGitHub: github {
-      repository(owner: "nomiclabs", name: "hardhat") {
-        ...repoInfo
-      }
     }
     truffle: file(relativePath: { eq: "dev-tools/truffle.png" }) {
       ...devtoolImage
     }
-    truffleGitHub: github {
-      repository(owner: "trufflesuite", name: "truffle") {
-        ...repoInfo
-      }
-    }
     embark: file(relativePath: { eq: "dev-tools/embark.png" }) {
       ...devtoolImage
-    }
-    embarkGitHub: github {
-      repository(owner: "embarklabs", name: "embark") {
-        ...repoInfo
-      }
     }
     brownie: file(relativePath: { eq: "assets/eth-diamond-black.png" }) {
       ...devtoolImage
     }
-    brownieGitHub: github {
-      repository(owner: "eth-brownie", name: "brownie") {
-        ...repoInfo
-      }
-    }
     epirus: file(relativePath: { eq: "dev-tools/epirus.png" }) {
       ...devtoolImage
-    }
-    epirusGitHub: github {
-      repository(owner: "web3labs", name: "epirus-free") {
-        ...repoInfo
-      }
     }
     createethapp: file(relativePath: { eq: "assets/eth-diamond-black.png" }) {
       ...devtoolImage
     }
-    createethappGitHub: github {
-      repository(owner: "PaulRBerg", name: "create-eth-app") {
-        ...repoInfo
-      }
-    }
     scaffoldeth: file(relativePath: { eq: "dev-tools/scaffoldeth.png" }) {
       ...devtoolImage
-    }
-    scaffoldethGitHub: github {
-      repository(owner: "austintgriffith", name: "scaffold-eth") {
-        ...repoInfo
-      }
     }
     soliditytemplate: file(
       relativePath: { eq: "assets/eth-diamond-black.png" }
     ) {
       ...devtoolImage
-    }
-    soliditytemplateGitHub: github {
-      repository(owner: "PaulRBerg", name: "solidity-template") {
-        ...repoInfo
-      }
     }
     ganache: file(relativePath: { eq: "dev-tools/ganache.png" }) {
       ...devtoolImage

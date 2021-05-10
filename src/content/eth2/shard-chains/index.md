@@ -10,12 +10,12 @@ summaryPoints:
     "Sharding is a multi-phase upgrade to improve Ethereum’s scalability and capacity.",
     "Shard chains spread the network's load across 64 new chains.",
     "They make it easier to run a node by keeping hardware requirements low.",
-    'Technical roadmaps include work on shard chains in "Phase 1" and potentially "Phase 2".',
+    'This upgrade is planned to follow the merge of mainnet with the Beacon Chain.',
   ]
 ---
 
-<UpgradeStatus date="~2021">
-    Shard chains should ship sometime in 2021, depending on how quickly work progresses after <a href="/en/eth2/beacon-chain/">the Beacon Chain</a> is launched. These shards will give Ethereum more capacity to store and access data, but they won’t be used for executing code. The details of that are still being figured out.
+<UpgradeStatus date="~2022">
+    Shard chains should ship sometime in 2022, depending on how quickly work progresses after <a href="/eth2/merge/">the merge</a>. These shards will give Ethereum more capacity to store and access data, but they won’t be used for executing code. The details of that are still being figured out.
 </UpgradeStatus>
 
 ## What is sharding? {#what-is-sharding}
@@ -48,7 +48,11 @@ When the first shard chains are shipped they will just provide extra data to the
 
 Rollups are a "layer 2" technology that exists today. They allow dapps to bundle or “roll up” transactions into a single transaction off-chain, generate a cryptographic proof and then submit it to the chain. This reduces the data needed for a transaction. Combine this with all the extra data availability provided by shards and you get 100,000 transactions per second.
 
-[More on rollups](/developers/docs/layer-2-scaling/)
+<InfoBanner isWarning={false}>
+  Given recent progress in layer 2 scaling solution research and development, this has prompted the prioritization of the merge upgrade ahead of shard chains. These will be the focus following mainnet transition to proof of stake.
+
+  [More on rollups](/developers/docs/scaling/layer-2-rollups/)
+</InfoBanner>
 
 ## Shard chains version 2: code execution {#code-execution}
 
@@ -86,15 +90,17 @@ The Eth2 upgrades are all somewhat interrelated. So let’s recap how the shard 
 
 ### Shards and the beacon chain {#shards-and-beacon-chain}
 
-The beacon chain contains all the logic for keeping shards secure and synced up. The beacon chain will coordinate the stakers in the network, assigning them to shards they need to work on. And it will also facilitate communication between shards by receiving and storing shard transaction data that is accessible by other shards. This will give shards a snapshot of Ethereum’s state to keep everything up-to-date.
+The Beacon Chain contains all the logic for keeping shards secure and synced up. The Beacon Chain will coordinate the stakers in the network, assigning them to shards they need to work on. And it will also facilitate communication between shards by receiving and storing shard transaction data that is accessible by other shards. This will give shards a snapshot of Ethereum’s state to keep everything up-to-date.
 
 <ButtonLink to="/eth2/beacon-chain/">The Beacon Chain</ButtonLink>
 
-### Shards and the docking {#shards-and-docking}
+### Shards and the merge {#shards-and-docking}
 
-The Ethereum mainnet will exist as it does today even after the introduction of shards. However at some point, mainnet will need to become a shard so that it can transition to staking. It remains to be seen whether mainnet will exist as the only “smart” shard that can handle code execution – but either way, a decision will have to be made on phase 2 of sharding.
+By the time additional shards are added, Ethereum mainnet will already be secured by the Beacon Chain using proof of stake. This enables a fertile mainnet to build shard chains off of, powered by layer 2 solutions that supercharge the scalability. 
 
-<ButtonLink to="/eth2/docking/">The docking</ButtonLink>
+It remains to be seen whether mainnet will exist as the only “smart” shard that can handle code execution – but either way, the decision to expand shards can be revisted as needed.
+
+<ButtonLink to="/eth2/merge/">The merge</ButtonLink>
 
 <Divider />
 

@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-A great aspect about Ethereum is that smart contracts can be programmed using relatively developer-friendly languages. If you're experienced with Python or JavaScript, you can find a language with familiar syntax.
+A great aspect about Ethereum is that smart contracts can be programmed using relatively developer-friendly languages. If you're experienced with Python or any [curly-bracket language](https://en.wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), you can find a language with familiar syntax.
 
 The two most active and maintained languages are:
 
@@ -14,13 +14,16 @@ The two most active and maintained languages are:
 
 More experienced developers also might want to use Yul, an intermediate language for the [Ethereum Virtual Machine](/developers/docs/evm/), or Yul+, an extension to Yul.
 
+If you're curious and like to help test new languages that are still under heavy development you can experiment with Fe, an emerging smart contract language which is currently still in its infancy.
+
 ## Prerequisites {#prerequisites}
 
 Previous knowledge of programming languages, especially of JavaScript or Python, can help you make sense of differences in smart contract languages. We also recommend you understand smart contracts as a concept before digging too deep into the language comparisons. [Intro to smart contracts](/developers/docs/smart-contracts/).
 
 ## Solidity {#solidity}
 
-- Influenced by C++ and JavaScript.
+- Object-oriented, high-level language for implementing smart contracts.
+- Curly-bracket language that has been most profoundly influenced by C++.
 - Statically typed (the type of a variable is known at compile time).
 - Supports:
   - Inheritance (you can extend other contracts).
@@ -33,9 +36,10 @@ Previous knowledge of programming languages, especially of JavaScript or Python,
 - [Solidity Language Portal](https://soliditylang.org/)
 - [Solidity by Example](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/)
+- [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/) bridged to [Solidity Matrix Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im)
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 - [Solidity Blog](https://blog.soliditylang.org/)
+- [Solidity Twitter](https://twitter.com/solidity_lang)
 
 ### Example contract {#example-contract}
 
@@ -202,13 +206,13 @@ If you're new to Ethereum and haven't done any coding with smart contract langua
 **Yul**
 
 - Intermediate language for Ethereum.
-- Supports the [EVM](en/developers/docs/evm) and [Ewasm](https://github.com/ewasm), an Ethereum flavored WebAssembly, and is designed to be a usable common denominator of both platforms.
+- Supports the [EVM](/developers/docs/evm) and [Ewasm](https://github.com/ewasm), an Ethereum flavored WebAssembly, and is designed to be a usable common denominator of both platforms.
 - Good target for high-level optimisation stages that can benefit both EVM and Ewasm platforms equally.
 
 **Yul+**
 
 - A low-level, highly efficient extension to Yul.
-- Initially designed for an [optimistic rollup](en/developers/docs/layer-2-scaling/#rollups-and-sidechains) contract.
+- Initially designed for an [optimistic rollup](/developers/docs/scaling/layer-2-rollups/#optimistic-rollups) contract.
 - Yul+ can be looked at as an experimental upgrade proposal to Yul, adding new features to it.
 
 ### Important links {#important-links-2}
@@ -244,6 +248,44 @@ be stored in the input.yul file.
 
 If you are already well experienced with smart contracts, a full ERC20 implementation in Yul can be found [here](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
 
+## Fe {#fe}
+
+- Statically typed language for the Ethereum Virtual Machine (EVM).
+- Inspired by Python and Rust.
+- Aims to be easy to learn -- even for developers who are new to the Ethereum ecosystem.
+- Fe development is still in its early stages, the language had its alpha release in January 2021.
+
+### Important links {#important-links-3}
+
+- [GitHub](https://github.com/ethereum/fe)
+- [Fe Announcement](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
+- [Fe 2021 Roadmap](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
+- [Fe Discord Chat](https://discord.com/invite/ywpkAXFjZH)
+- [Fe Twitter](https://twitter.com/official_fe)
+
+### Example contract {#example-contract-3}
+
+The following is a simple contract implemented in Fe.
+
+```
+type BookMsg = bytes[100]
+
+contract GuestBook:
+    pub guest_book: map<address, BookMsg>
+
+    event Signed:
+        book_msg: BookMsg
+
+    pub def sign(book_msg: BookMsg):
+        self.guest_book[msg.sender] = book_msg
+
+        emit Signed(book_msg=book_msg)
+
+    pub def get_msg(addr: address) -> BookMsg:
+        return self.guest_book[addr].to_mem()
+
+```
+
 ## How to choose {#how-to-choose}
 
 As with any other programming language, it's mostly about choosing the right tool for the right job as well as personal preferences.
@@ -252,7 +294,7 @@ Here are a few things to consider if you haven't tried any of the languages yet:
 
 ### What is great about Solidity? {#solidity-advantages}
 
-- If you are a beginner, there are many tutorials and learning tools out there. See more about that in the [Learn by Coding](https://ethereum.org/en/developers/learning-tools/) section.
+- If you are a beginner, there are many tutorials and learning tools out there. See more about that in the [Learn by Coding](/developers/learning-tools/) section.
 - Good developer tooling available.
 - Solidity has a big developer community, which means you'll most likely find answers to your questions quite quickly.
 

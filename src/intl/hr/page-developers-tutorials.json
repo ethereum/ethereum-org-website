@@ -1,0 +1,22 @@
+{
+  "comp-tutorial-metadata-minute-read": "minuta čitanja",
+  "page-tutorial-listing-policy-intro": "Prije nego što pošaljete vodič, pročitajte pravila o objavi.",
+  "comp-tutorial-metadata-tip-author": "Napojnica za autora",
+  "page-tutorial-listing-policy": "pravila objave članaka",
+  "page-tutorial-new-github": "Novi ste na GitHubu?",
+  "page-tutorial-new-github-desc": "Pokrenite zahtjev za rješavanje problema – samo ispunite tražene podatke i zalijepite svoj vodič.",
+  "page-tutorial-pull-request": "Stvorite zahtjev za povlačenjem",
+  "page-tutorial-pull-request-btn": "Stvorite zahtjev za povlačenjem",
+  "page-tutorial-pull-request-desc-1": "Slijedite",
+  "page-tutorial-pull-request-desc-2": "tutorials/your-tutorial-name/index.md",
+  "page-tutorial-pull-request-desc-3": "strukturu imenovanja.",
+  "page-tutorial-raise-issue-btn": "Pokrenite zahtjev za rješavanje problema",
+  "page-tutorial-read-time": "min",
+  "page-tutorial-submit-btn": "Pošaljite vodič",
+  "page-tutorial-submit-tutorial": "Da biste poslali vodič, morate koristiti GitHub. Pozivamo vas da stvorite zahtjev za rješavanje ili zahtjev za povlačenje.",
+  "page-tutorial-subtitle": "Dobrodošli na odabrani popis vodiča za zajednicu.",
+  "page-tutorial-tags-error": "Nijedan vodič nema sve ove oznake",
+  "page-tutorial-title": "Vodiči za Ethereumov razvoj",
+  "page-tutorials-meta-description": "Pregledajte i filtrirajte provjerene vodiče za zajednicu Ethereum po temama.",
+  "page-tutorials-meta-title": "Vodiči za Ethereumov razvoj"
+}

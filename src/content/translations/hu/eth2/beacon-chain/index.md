@@ -54,7 +54,7 @@ A shard láncokat csak a proof-of-stake konszenzus mechnanizmussal lehet biztons
 
 ### Főhálózat és a Beacon Chain {#mainnet-and-beacon-chain}
 
-A Beacon Chain eleinte különállóan fog létezni az Ethereum főhálózattól, melyet ma is használunk. De végül össze lesznek kapcsolva. A terv a főhálózat “dokkolása” a proof-of-stake rendszerhez, melyet a Beacon Chain vezérel és koordinál.<ButtonLink to="/eth2/docking/">A dokkolás</ButtonLink>
+A Beacon Chain eleinte különállóan fog létezni az Ethereum főhálózattól, melyet ma is használunk. De végül össze lesznek kapcsolva. A terv a főhálózat “dokkolása” a proof-of-stake rendszerhez, melyet a Beacon Chain vezérel és koordinál.<ButtonLink to="/eth2/merge/">A dokkolás</ButtonLink>
 
 <Divider />
 
