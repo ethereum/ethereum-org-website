@@ -85,7 +85,7 @@ Examples of L2 solutions that are production ready or will be soon include:
   - [Optimism](https://optimism.io/)
   - [Offchain Labs Arbitrum Rollup](https://offchainlabs.com/)
   - [Fuel Network](https://fuel.sh)
-- ZK rollups (data on chain, ZK validity proofs)
+- ZK-rollups (data on chain, ZK validity proofs)
   - [Loopring](https://loopring.org)
   - [Starkware](https://starkware.co)
   - [Matter Labs zkSync](https://matter-labs.io/)

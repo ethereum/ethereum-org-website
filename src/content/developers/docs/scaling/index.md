@@ -45,7 +45,7 @@ A specific layer 2 instance may be open and shared by many applications, or may 
 
 Rollups perform transaction execution outside layer 1 and then the data is posted to layer 1 where consensus is reached. As transaction data is included in layer 1 blocks, this allows rollups to be secured by native Ethereum security.
 
-- [ZK rollups](/developers/docs/scaling/layer-2-rollups/#zk-rollups)
+- [ZK-rollups](/developers/docs/scaling/layer-2-rollups/#zk-rollups)
 - [Optimistic rollups](/developers/docs/scaling/layer-2-rollups/#optimistic-rollups)
 
 Learn more about [rollups](/developers/docs/scaling/layer-2-rollups/).

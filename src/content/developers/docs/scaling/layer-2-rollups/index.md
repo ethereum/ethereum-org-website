@@ -44,13 +44,13 @@ There are two types of rollups with different security models:
 
 ### Zero knowledge rollups {#zk-rollups}
 
-Zero knowledge rollups, also known as ZK rollups, bundle or "roll up" hundreds of transfers off-chain and generates a cryptographic proof, known as a SNARK (succinct non-interactive argument of knowledge). This is known as a validity proof and is posted on layer 1.
+Zero knowledge rollups, also known as ZK-rollups, bundle or "roll up" hundreds of transfers off-chain and generates a cryptographic proof, known as a SNARK (succinct non-interactive argument of knowledge). This is known as a validity proof and is posted on layer 1.
 
-The ZK rollup smart contract maintains the state of all transfers on layer 2, and this state can only be updated with a validity proof. This means that ZK rollups only need the validity proof, instead of all transaction data. With a ZK rollup, validating a block is quicker and cheaper because less data is included.
+The ZK-rollup smart contract maintains the state of all transfers on layer 2, and this state can only be updated with a validity proof. This means that ZK-rollups only need the validity proof, instead of all transaction data. With a ZK-rollup, validating a block is quicker and cheaper because less data is included.
 
-With a ZK rollup, there are no delays when moving funds from layer 2 to layer 1 because a validity proof accepted by the ZK rollup contract has already verified the funds.
+With a ZK-rollup, there are no delays when moving funds from layer 2 to layer 1 because a validity proof accepted by the ZK-rollup contract has already verified the funds.
 
-The sidechain where ZK rollups happen can be optimised to reduce transaction size further. For instance, an account is represented by an index rather than an address, which reduces a transaction from 32 bytes to just 4 bytes. Transactions are also written to Ethereum as calldata, reducing gas.
+The sidechain where ZK-rollups happen can be optimised to reduce transaction size further. For instance, an account is represented by an index rather than an address, which reduces a transaction from 32 bytes to just 4 bytes. Transactions are also written to Ethereum as calldata, reducing gas.
 
 #### Pros and cons {#zk-pros-and-cons}
 
@@ -60,9 +60,9 @@ The sidechain where ZK rollups happen can be optimised to reduce transaction siz
 | Not vulnerable to the economic attacks that [Optimistic rollups](#optimistic-pros-and-cons) can be vulnerable to. | Validity proofs are intense to compute – not worth it for applications with little on-chain activity. |
 | Secure and decentralized, since the data that is needed to recover the state is stored on the layer 1 chain.      |                                                                                                       |
 
-#### Use ZK rollups {#use-zk-rollups}
+#### Use ZK-rollups {#use-zk-rollups}
 
-Multiple implementations of ZK rollups exist that you can integrate into your dapps:
+Multiple implementations of ZK-rollups exist that you can integrate into your dapps:
 
 - [Loopring](https://loopring.org/#/)
 - [Starkware](https://starkware.co/)
@@ -119,7 +119,7 @@ Hybrid solutions exist that combine the best parts of multiple layer 2 technolog
 - [An Incomplete Guide to Rollups](https://vitalik.ca/general/2021/01/05/rollup.html)
 - [Zero-Knowledge Blockchain Scalability](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 
-**ZK rollups**
+**ZK-rollups**
 
 - [EthHub on zk-rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
 
