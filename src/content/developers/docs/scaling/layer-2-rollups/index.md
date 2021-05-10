@@ -87,7 +87,7 @@ The gas you need to run the computation of the fraud proof is even reimbursed. B
 
 "_anyone who might be able to take an action that you would have to prove fraudulent to secure your funds requires that you post a bond. You basically take some ETH and lock it up and you say "Hey, I promise to tell the truth"... If I don't tell the truth and fraud is proven, this money will be slashed. Not only does some of this money get slashed but some of it will pay for the gas that people spent doing the fraud proof_"
 
-So you get reimbursed for proving fraud.
+So you can see the incentives: particpants get penalized for conducting fraud and reimbursed for proving fraud.
 
 #### Pros and cons {#optimistic-pros-and-cons}
 
@@ -98,22 +98,16 @@ So you get reimbursed for proving fraud.
 
 #### Use Optimistic rollups {#use-optimistic-rollups}
 
+Multiple implementations of Optimistic rollups exist that you can integrate into your dapps:
+
 - [Optimism](https://optimism.io/)
 - [Offchain Labs Arbitrum Rollup](https://offchainlabs.com/)
 - [Fuel Network](https://fuel.sh/)
 - [Cartesi](https://cartesi.io)
 
-<!-- #### The Optimism virtual machine (OVM)
-
-What makes Optimistic rollups particularly exciting is that the chain works the same as the main Ethereum chain because it's based on [the EVM](/developers/docs/evm/). It doesn't use Ethereum, it is Ethereum. This means if you want to use Optimistic rollups, it's just a matter of deploying it to the OVM. It looks, feels, and acts just like the Ethereum main chain–you write contracts in Solidity, and interact with the chain via the Web3 API.
-
-The OVM also has a bunch of features that allow for a really seamless experience moving code from the EVM. In fact you can move Solidity contracts onto a cheaper and faster solution with just a few lines of code.
-
-[Check out the OVM documentation](http://docs.optimism.io/) -->
-
 ## Hybrid solutions {#hybrid-solutions}
 
-Combine the best parts of multiple layer 2 technologies, and may offer configurable trade-offs.
+Hybrid solutions exist that combine the best parts of multiple layer 2 technologies, and may offer configurable trade-offs.
 
 ### Use Hybrid solutions {#use-hybrid-solutions}
 
