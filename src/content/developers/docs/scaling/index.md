@@ -3,12 +3,11 @@ title: Scaling
 description: An introduction to the different scaling options currently being developed by the Ethereum community.
 lang: en
 sidebar: true
-incomplete: true
 ---
 
 ## Scaling Overview {#scaling-overview}
 
-As the number of people using Ethereum has grown, the blockchain in its native form has reached certain capacity limitations. This has driven up the cost of using the network, creating the need for "scaling solutions." There are multiple solutions being researched, tested and implemented that take different approaches to achieving similar goals.
+As the number of people using Ethereum has grown, the blockchain has reached certain capacity limitations. This has driven up the cost of using the network, creating the need for "scaling solutions." There are multiple solutions being researched, tested and implemented that take different approaches to achieve similar goals.
 
 The main goal of scalability is to increase transaction speed (faster finality), and transaction throughput (high transactions per second), without sacrificing decentralization or security (more on [Eth2 vision](/eth2/vision/)). On the layer 1 Ethereum blockchain, high demand leads to slower transactions and nonviable gas prices. Increasing the network capacity in terms of speed and throughput is fundamental to the meaningful and mass adoption of Ethereum. 
 
@@ -22,7 +21,7 @@ You should have a good understanding of all the foundational topics. Implementin
 
 ## On-Chain Scaling {#on-chain-scaling}
 
-This method of scaling requires changes to the existing layer 1 [mainnet](/glossary/#mainnet). Sharding is currently the main focus for this method of scaling.
+This method of scaling requires changes to the Ethereum protocol (layer 1 [mainnet](/glossary/#mainnet)). Sharding is currently the main focus for this method of scaling.
 
 ### Sharding {#sharding}
 
@@ -32,7 +31,7 @@ Learn more about [sharding](/eth2/shard-chains/).
 
 ## Off-Chain Scaling {#off-chain-scaling}
 
-Off-chain solutions are designed separate from layer 1 mainnet. Some solutions, known as "layer 2" solutions, derive their security directly from layer 1 Ethereum consensus, such as rollups or channels. Other solutions involve the creation of new chains in various forms that derive their security separately from mainnet, such as [sidechains](#sidechains) or [plasma](#plasma) chains. These solutions communicate with mainnet, but derive their security differently to obtain a variety of goals.
+Off-chain solutions are implemented separately from layer 1 mainnet - they require no changes to the existing Ethereum protocol. Some solutions, known as "layer 2" solutions, derive their security directly from layer 1 Ethereum consensus, such as [rollups](/docs/scaling/layer-2/) or [state channels](/docs/scaling/channels/). Other solutions involve the creation of new chains in various forms that derive their security separately from mainnet, such as [sidechains](#sidechains) or [plasma](#plasma) chains. These solutions communicate with mainnet, but derive their security differently to obtain a variety of goals.
 
 ### Layer 2 Scaling {#layer-2-scaling}
 
