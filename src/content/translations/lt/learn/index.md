@@ -86,7 +86,7 @@ Dedame dideles pastangas didindami Ethereum spartą ir bendrą sandorių našum�
 
 1 lygmuo reiškia pagrindinio Ethereum protokolo tobulinimą. Pirminis projektas, skirtas patobulinti pagrindinį Ethereum protokolą, yra [ETH 2.0](./#eth-2-0).
 
-2 lygmuo reiškia technologijas, kurios papildo pagrindinį Ethereum protokolą, užtikrindamos didesnį pralaidumą nesumažinant saugumo Taip pat esama negrandininių (off-chain) technologijų, tokių kaip šoninės grandinės (side chains), kurios užtikrina didesnį panaudojimo mastą, suteikdamos atitinkamai mažiau saugumo.
+2 lygmuo reiškia technologijas, kurios papildo pagrindinį Ethereum protokolą, užtikrindamos didesnį pralaidumą nesumažinant saugumo Taip pat esama negrandininių (off-chain) technologijų, tokių kaip šoninės grandinės (sidechains), kurios užtikrina didesnį panaudojimo mastą, suteikdamos atitinkamai mažiau saugumo.
 
 - [Making Sense of Layer 2](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _2018 m. vasario 12 d. - Josh Stark_
 - [The Case for Ethereum Scalability](https://medium.com/connext/the-case-for-ethereum-scalability-d2a8035f880f) _2019 m. sausio 18 d. - Hunter Hillman, Steven McKie ir Eric Olszewski_

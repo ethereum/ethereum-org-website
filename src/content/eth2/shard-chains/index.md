@@ -51,7 +51,7 @@ Rollups are a "layer 2" technology that exists today. They allow dapps to bundle
 <InfoBanner isWarning={false}>
   Given recent progress in layer 2 scaling solution research and development, this has prompted the prioritization of the merge upgrade ahead of shard chains. These will be the focus following mainnet transition to proof of stake.
 
-  [More on rollups](/developers/docs/layer-2-scaling/)
+  [More on rollups](/developers/docs/scaling/layer-2-rollups/)
 </InfoBanner>
 
 ## Shard chains version 2: code execution {#code-execution}
