@@ -38,7 +38,7 @@ _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/d
 
 ## Why can gas fees get so high? {#Why-can-gas-fees-get-so-high}
 
-High gas fees are due to the popularity of Ethereum. To perform any operation on Ethereum requires consuming gas. This includes calculations, storing or manipulating data, or transferring tokens, each consuming different amounts of "gas" units. As dapp functionality grows more complex, the number of operations a smart contract performs grows too, and all contribute to high amounts of gas that must be paid for.
+High gas fees are due to the popularity of Ethereum. Performing any operation on Ethereum requires consuming gas. This includes calculations, storing or manipulating data, or transferring tokens, each consuming different amounts of "gas" units. As dapp functionality grows more complex, the number of operations a smart contract performs grows too, and all contribute to high amounts of gas that must be paid for.
 
 Gas is paid for with small amounts of ether (denominated in gwei, or (10<sup>-9</sup> ETH)). This value represents the amount of ether being paid per "unit of gas", not for the entire transaction. Since gas is capped within a block, under the current system, this means that users must out-bid one another to be included in the next block if demand exceeds capacity. Gas cost alone does not actually determine how much we have to pay for a particular transaction. To calculate the transaction fee we have to multiply the gas cost by gas price, which is measured in gwei.
 
@@ -51,16 +51,16 @@ https://www.youtube.com/embed/Yh8cHUB-KoU
 With the new network upgrades of Ethereum 2.0 (also known as Eth2 or Serenity). This should ultimately address some of the gas fee issues, which will in turn enable the platform to process thousands of transactions per second and scale globally.
 
 Layer 2 scaling is a primary initiative to greatly improve gas, user experience and scalability, our page on layer 2 scaling and rollups can be found here:
--[Layer 2 scaling](https://ethereum.org/en/developers/docs/layer-2-scaling/)
+-[Layer 2 scaling](/developers/docs/layer-2-scaling/)
 
 The new proof-of-stake model should reduce high power consumption and reliance on specialized hardware. The new PoS system was introduced on the Beacon Chain. This chain will allow the decentralized Ethereum network to come to agreement and keep the network secure, but avoid high energy use by requiring a financial commitment. 
 
-Anyone with at least 32 ETH is able to stake them and become a validator responsible for processing transactions, adding new block to the block chain and storing data. Users who have less than 32 ETH will be able to join staking pools.
+Anyone with at least 32 ETH is able to stake them and become a validator responsible for processing transactions, proposing new blocks to add to the blockchain and storing data. Users who have less than 32 ETH are able to join staking pools.
 
 ## What is Gas limit? {What-is-gas-limit}
-Gas limit refers to the maximum amount of gas you are willing to consume on a transaction. A higher gas limit means more computational work can be done to execute the [smart contract](https://ethereum.org/en/developers/docs/smart-contracts/). A standard ETH transfer requires a gas limit of 21,000 units of gas.
+Gas limit refers to the maximum amount of gas you are willing to consume on a transaction. A higher gas limit means more computational work can be done while interacting with [smart contracts](/developers/docs/smart-contracts/). A standard ETH transfer requires a gas limit of 21,000 units of gas.
 
-For example if you put a gas limit of 50,000 for a simple ETH transfer, the EVM would consume 21,000, and you would get back the remaining 29,000. However, if you specift too little gas sat for example, a gas limit of 20,000 for a simple ETH transfer, the EVM will consume your 20,000 gas units to fulfill the txn, but it will not complete. The EVM then reverts any changes, but since 20k gas units worth of work has already been done by the miner, that gas is consumed.
+For example if you put a gas limit of 50,000 for a simple ETH transfer, the EVM would consume 21,000, and you would get back the remaining 29,000. However, if you specify too little gas say for example, a gas limit of 20,000 for a simple ETH transfer, the EVM will consume your 20,000 gas units attempting to fulfill the txn, but it will not complete. The EVM then reverts any changes, but since 20k gas units worth of work has already been done by the miner, that gas is consumed.
 
 ## What is Gas price? {What-is-gas-price}
 Gas price refers to the amount of Ether you are willing to pay for every unit of gas, and this is usually measured in 'gwei'.
