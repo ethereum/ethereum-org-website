@@ -62,7 +62,7 @@
   "page-eth2-bug-bounty-type-4": "calculation or parameter inconsistencies.",
   "page-eth2-bug-bounty-types": "Types of bug",
   "page-eth2-bug-bounty-validity": "Valid bugs",
-  "page-eth2-bug-bounty-validity-desc": "This bug bounty program is focused on finding bugs in the core Eth2 Beacon Chain specification and the Prysm, Lighthouse, and Teku client implementations.",
+  "page-eth2-bug-bounty-validity-desc": "This bug bounty program is focused on finding bugs in the core Eth2 Beacon Chain specification and the Lighthouse, Nimbus, Teku, and Prysm client implementations.",
   "page-eth2-bug-bountycard-critical": "Critical",
   "page-eth2-bug-bountycard-critical-risk": "Submit critical risk bug",
   "page-eth2-bug-bountycard-h2": "Medium",
