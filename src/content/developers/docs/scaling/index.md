@@ -31,7 +31,7 @@ Learn more about [sharding](/eth2/shard-chains/).
 
 ## Off-Chain Scaling {#off-chain-scaling}
 
-Off-chain solutions are implemented separately from layer 1 mainnet - they require no changes to the existing Ethereum protocol. Some solutions, known as "layer 2" solutions, derive their security directly from layer 1 Ethereum consensus, such as [rollups](/docs/scaling/layer-2-rollups/) or [state channels](/docs/scaling/state-channels/). Other solutions involve the creation of new chains in various forms that derive their security separately from mainnet, such as [sidechains](#sidechains) or [plasma](#plasma) chains. These solutions communicate with mainnet, but derive their security differently to obtain a variety of goals.
+Off-chain solutions are implemented separately from layer 1 mainnet - they require no changes to the existing Ethereum protocol. Some solutions, known as "layer 2" solutions, derive their security directly from layer 1 Ethereum consensus, such as [rollups](/developers/docs/scaling/layer-2-rollups/) or [state channels](/docs/scaling/state-channels/). Other solutions involve the creation of new chains in various forms that derive their security separately from mainnet, such as [sidechains](#sidechains) or [plasma](#plasma) chains. These solutions communicate with mainnet, but derive their security differently to obtain a variety of goals.
 
 ### Layer 2 Scaling {#layer-2-scaling}
 
