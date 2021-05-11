@@ -3436,7 +3436,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/22633385?v=4",
       "profile": "https://bandism.net/",
       "contributions": [
-        "bug"
+        "bug",
+        "content"
       ]
     },
     {
@@ -3591,6 +3592,24 @@
       "profile": "http://www.jpaulet.com",
       "contributions": [
         "code"
+      ]
+    },
+    {
+      "login": "manojmsrit",
+      "name": "manojmsrit",
+      "avatar_url": "https://avatars.githubusercontent.com/u/49993125?v=4",
+      "profile": "https://github.com/manojmsrit",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "PowerStream3604",
+      "name": "David Kim",
+      "avatar_url": "https://avatars.githubusercontent.com/u/63450340?v=4",
+      "profile": "https://github.com/PowerStream3604",
+      "contributions": [
+        "content"
       ]
     }
   ],
