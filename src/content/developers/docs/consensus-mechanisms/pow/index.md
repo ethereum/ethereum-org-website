@@ -56,7 +56,7 @@ To consistently create malicious, yet valid, blocks, you'd need over 51% of the 
 
 PoW is also responsible for issuing new currency into the system and incentivising miners to do the work.
 
-Miners who successfully create a block are rewarded in 2 freshly minted ETH and all the transaction fees within the block. A miner may also get 1.75ETH for an uncle block. This is a valid block, created simultaneously to the succcessful block, by another miner. This usually happens due to network latency.
+Miners who successfully create a block are rewarded in 2 freshly minted ETH and all the transaction fees within the block. A miner may also get 1.75ETH for an uncle block. This is a valid block, created simultaneously to the successful block, by another miner. This usually happens due to network latency.
 
 ## Finality {#finality}
 
