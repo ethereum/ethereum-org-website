@@ -85,5 +85,6 @@ _Note the explanation in the video uses the term "Layer 2" to refer to all off-c
 
 - [Up-to-date analytics on Layer 2 scaling solutions for Ethereum](https://www.l2beat.com/)
 - [Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
+- [An Incomplete Guide to Rollups](https://vitalik.ca/general/2021/01/05/rollup.html)
 
 _Know of a community resource that helped you? Edit this page and add it!_
