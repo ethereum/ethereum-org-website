@@ -282,7 +282,7 @@
 # Jobs
 [[redirects]]
   from = "/*/about/web-developer"
-  to = "/:splat/community/#ethereum-jobs"
+  to = "/:splat/about/#open-jobs"
 
 # A redirect rule with all the supported properties
 # [[redirects]]
