@@ -25,14 +25,10 @@ The Ethereum Foundation (EF) is a global non-profit organization dedicated to su
 - **You're positive, enthusiastic, welcoming, patient, and full of good vibes.** You love to talk about Ethereum and are always ready to answer any question.
 - **You're knowledgeable about Ethereum and its ecosystem.** You understand the technology well enough to answer questions off-hand and are familiar with the larger projects, unresolved technical problems, the broad strokes of Ethereum's roadmap and vision.
 - **You have an ownership mentality.** When you take on a task, you get it done. You proactively troubleshoot problems blocking your path, and the problems blocking the paths of others.
-- **You're organized.** You have strong habits for tracking multiple accountabilities simultaneously. You know how to scope a project, foresee difficulties and translate an idea into reality.
+- **You're organized.** You have strong habits that let you track multiple accountabilities simultaneously. You know how to scope a project, foresee difficulties and translate an idea into reality.
 - **You enjoy teaching as much as you enjoy learning**. You love to help - you get a sense of satisfaction out of seeing other people get excited about Ethereum. You're also always ready to learn - if you don't know an answer, you know how to find an answer.
 - **You're comfortable pitching in to get the job done.** We're a small team, sometimes you may have to do work outside of your "core responsibilities."
 - **You hold Ethereum's values.** You're passionate about open source collaboration, decentralization, and truly want to see Ethereum succeed - not for your professional or financial benefit, but because you believe it's good for the world.
-
-## Your role {#your-role}
-
-**Make ethereum.org (and the suite of Ethereum Foundation web applications) as performant, feature-rich and accessible as possible**. As a front-end developer, you'll create slick, fun and functional web applications visited by tens of millions of diverse Ethereum users each year. You'll collaborate with product, design and research teammates to shape the design and features of our products. You'll empower the next generation of Ethereum users and builders to change our world for the better.
 
 ## Core responsibilities {#core-responsibilities}
 
@@ -54,12 +50,11 @@ The Ethereum Foundation (EF) is a global non-profit organization dedicated to su
 - Track record of building communities: you ran a Discord, you were a moderator on Reddit, you ran a Meetup, managed an open source project etc.
 - You're passionate about the the crypto/blockchain/Ethereum space and have a readiness to learn, understand, and explain new technologies
 - Strong social media skills: Twitter, Discord, Telegram, Github, Crowdin, Reddit, Slack & Zapier integrations, etc.
-- Experience managing projects with internal and external stakeholders
 - Excellent English writing and communication skills, with strong interpersonal skills and attention to detail
 - Experience in an agile work environment as well as remote/asynchronous work
-- Experience on collaborative teams, balancing & soliciting input from multiple stakeholders
+- Experience on collaborative teams, balancing & soliciting input from multiple internal and external stakeholders
 
 ## Contract details {#contract-details}
 
 - This is a full-time, remote position.
-- Compensation will ultimately depend on your experience, skillset, location and the contract structure but you can expect $25-$40 per hour, or $50,000-$80,000 annual salary.
+- Compensation will ultimately depend on your experience, skillset, location and the contract structure but you can expect $25-$40 USD per hour, or $50,000-$80,000 USD annual salary.
