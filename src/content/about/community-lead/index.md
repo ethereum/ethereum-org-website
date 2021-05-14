@@ -8,7 +8,7 @@ position: Community & ecosystem lead
 compensation: "$50,000 - $80,000 USD"
 location: Remote
 type: "Full-time"
-link: https://ethereum.bamboohr.com/jobs/
+link: https://ethereum.bamboohr.com/jobs/view.php?id=37
 image: ../../../assets/enterprise-eth.png
 ---
 
