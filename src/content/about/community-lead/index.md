@@ -18,7 +18,7 @@ The Ethereum Foundation (EF) is a global non-profit organization dedicated to su
 
 ## Your mission {#your-mission}
 
-**Tap into Ethereum's rich open-source community to support ethereum.org and the suite of Ethereum Foundation web applications.** As our Community & Ecosystem Lead, you'll engage our wide network of contributors and stakeholders to help us build powerful, fun and functional web applications visited by tens of millions of diverse Ethereum users each year. You'll collaborate with product, design and research teammates to shape the design and features of our products. You'll empower the next generation of Ethereum users and builders to change our world for the better.
+**Tap into Ethereum's rich open-source community to support [ethereum.org](/) and the suite of Ethereum Foundation web applications.** As our Community & Ecosystem Lead, you'll engage our wide network of contributors and stakeholders to help us build powerful, fun and functional web applications visited by tens of millions of diverse Ethereum users each year. You'll collaborate with product, design and research teammates to shape the design and features of our products. You'll empower the next generation of Ethereum users and builders to change our world for the better.
 
 ## About you {#about-you}
 
@@ -33,17 +33,17 @@ The Ethereum Foundation (EF) is a global non-profit organization dedicated to su
 ## Core responsibilities {#core-responsibilities}
 
 - **Inspire contribution in our open source community across multiple platforms & projects.**
-    - Whether it's the [ethereum.org](http://ethereum.org) Github repo, our Crowdin translation program, or just answering common questions for the curious, we rely on our community to drive our success.
+    - Whether it's the [ethereum.org](/) Github repo, our Crowdin translation program, or just answering common questions for the curious, we rely on our community to drive our success.
     - We want you to take our community to new heights; engage with them on Discord channels, respond to Github issues, coordinate contests, events, recognition campaigns; expand participation and impact.
 - **Work with Ethereum's wider community to facilitate collaboration.**
-    - [Ethereum.org](http://ethereum.org) is an important part of the Ethereum ecosystem. You'll work with partners and stakeholders to maximize our impact wherever possible.
+    - [Ethereum.org](/) is an important part of the Ethereum ecosystem. You'll work with partners and stakeholders to maximize our impact wherever possible.
     - Are there killer explainer videos we could be using on our website? Are there eager open source developers looking for a way to get their hands dirty? We'll look to you to manage these relationships and execute on opportunities to empower others.
 - **Set and execute on growth metrics for community engagement.**
     - The importance of a community can never be boiled down to just numbers. Nevertheless, an analytic attitude towards our performance will help us understand and improve our results.
     - We'll look to you to help establish what milestones we should strive for and to hold yourself accountable to achieving them.
 - **Surface insights and distill community feedback to improve our web applications.**
     - You should have a product mindset and always be looking for opportunities to improve our content & UX. You're excited to take an active voice in driving our product roadmap.
-    - Have you answered the same question ten times this week? Are people reading [ethereum.org](http://ethereum.org) content but still coming out confused? What changes should we be making to address these issues? You should derive these insights proactively.
+    - Have you answered the same question ten times this week? Are people reading [ethereum.org](/) content but still coming out confused? What changes should we be making to address these issues? You should derive these insights proactively.
 
 ## Required skills and experience {#required-skills-and-experience}
 
