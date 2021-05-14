@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 
@@ -34,15 +34,38 @@ const LangTitle = styled.div`
   text-transform: uppercase;
 `
 
+const StyledInput = styled.input`
+  border: 1px solid ${(props) => props.theme.colors.searchBorder};
+  color: ${(props) => props.theme.colors.text};
+  background: ${(props) => props.theme.colors.searchBackground};
+  padding: 0.5rem;
+  padding-right: 2rem;
+  border-radius: 0.25em;
+  width: 20%;
+  max-width: 30em;
+  min-width: 10em;
+  &:focus {
+    outline: ${(props) => props.theme.colors.primary} auto 1px;
+  }
+`
+
 const LanguagesPage = () => {
   const intl = useIntl()
-
+  const [keyword, setKeyword] = useState("")
+  const searchString = translateMessageId("search", intl)
   let translationsCompleted = []
   for (const lang in languageMetadata) {
     const langMetadata = languageMetadata[lang]
     langMetadata["path"] = `/${lang}/`
     langMetadata["name"] = translateMessageId(`language-${lang}`, intl)
-    translationsCompleted.push(languageMetadata[lang])
+    const nativeLangTitle = langMetadata["language"]
+    const englishLangTitle = langMetadata["name"]
+    if (
+      englishLangTitle.toLowerCase().includes(keyword.toLowerCase()) ||
+      nativeLangTitle.toLowerCase().includes(keyword.toLowerCase())
+    ) {
+      translationsCompleted.push(languageMetadata[lang])
+    }
   }
   translationsCompleted.sort((a, b) => a["name"].localeCompare(b["name"]))
 
@@ -70,6 +93,11 @@ const LanguagesPage = () => {
           <h2>
             <Translation id="page-languages-translations-available" />:
           </h2>
+          <StyledInput
+            value={keyword}
+            placeholder={searchString}
+            onChange={(e) => setKeyword(e.target.value)}
+          />
           <LangContainer>
             {translationsCompleted.map((lang) => (
               <LangItem to={lang.path} key={lang["name"]}>
