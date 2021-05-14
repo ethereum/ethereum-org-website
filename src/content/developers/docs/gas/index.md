@@ -50,8 +50,7 @@ https://www.youtube.com/embed/Yh8cHUB-KoU
 
 With the new network upgrades of Ethereum 2.0 (also known as Eth2 or Serenity). This should ultimately address some of the gas fee issues, which will in turn enable the platform to process thousands of transactions per second and scale globally.
 
-Layer 2 scaling is a primary initiative to greatly improve gas, user experience and scalability, our page on layer 2 scaling and rollups can be found here:
--[Layer 2 scaling](/developers/docs/layer-2-scaling/)
+Layer 2 scaling is a primary initiative to greatly improve gas costs, user experience and scalability. [More on layer 2 scaling](/developers/docs/scaling/layer-2-rollups/).
 
 The new proof-of-stake model should reduce high power consumption and reliance on specialized hardware. The new PoS system was introduced on the Beacon Chain. This chain will allow the decentralized Ethereum network to come to agreement and keep the network secure, but avoid high energy use by requiring a financial commitment. 
 
