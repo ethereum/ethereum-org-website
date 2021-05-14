@@ -150,7 +150,7 @@ A network-wide setting that controls how much computation is required to produce
 
 ### difficulty bomb {#difficulty-bomb}
 
-Planned exponential increase in [proof-of-work](#pow) [difficulty](#difficulty) setting designed to motivate the transition to [proof-of-stake](#pos), reducing the changes of a [fork](#hard-fork)
+Planned exponential increase in [proof-of-work](#pow) [difficulty](#difficulty) setting designed to motivate the transition to [proof-of-stake](#pos), reducing the chances of a [fork](#hard-fork)
 
 ### digital signature {#digital-signatures}
 
