@@ -147,6 +147,7 @@ There are other blockchain-based projects out there doing different things (or t
 - [Scuttlebot](https://scuttlebot.io/): Logging
 - [YaCy](https://yacy.net): Search
 - [Ethereum Naming Service](https://ens.domains/): Name registration
+- [Hyperledger](https://www.hyperledger.org/): Distributed ledger framework with Ethereum interoperability
 
 ## More reading
 
