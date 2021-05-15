@@ -156,6 +156,7 @@ There are other blockchain-based projects out there doing different things (or t
 - Get the minutiae of how core [Ethereum development community](https://www.ethereumcatherders.com/) works, socially.
 - Read the [Ethereum whitepaper](/whitepaper/).
 - Check out this Nobel-Prize winning (centralized award, ironic, yes) economist's ideas about [common resource governance](https://en.wikipedia.org/wiki/Elinor_Ostrom#Design_principles_for_Common_Pool_Resource_(CPR)_institution).
+- The [decentralized web](https://blockchainhub.net/web3-decentralized-web/) from a historical and technical perspective.
 
 <!--  undeveloped / unedited / non-researched ideas
 - Does Ethereum.org own Ethereum?
