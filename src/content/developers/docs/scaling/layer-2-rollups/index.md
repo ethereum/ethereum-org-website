@@ -105,6 +105,7 @@ Multiple implementations of Optimistic rollups exist that you can integrate into
 - [Offchain Labs Arbitrum Rollup](https://offchainlabs.com/)
 - [Fuel Network](https://fuel.sh/)
 - [Cartesi](https://cartesi.io)
+- [OMGX](https://omgx.network)
 
 ## Hybrid solutions {#hybrid-solutions}
 
