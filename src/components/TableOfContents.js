@@ -147,6 +147,16 @@ const GithubIcon = styled(Icon)`
   margin-right: 0.5rem;
 `
 
+const ZenModeContainer = styled.div`
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+`
+
+const ZenModeText = styled.span`
+  margin-right: 0.7rem;
+`
+
 // Mobile styles
 
 const AsideMobile = styled.aside`
@@ -322,6 +332,10 @@ const TableOfContents = ({
   return (
     <Aside className={className}>
       <OuterList>
+        <ZenModeContainer>
+          <ZenModeText>Zen Mode:</ZenModeText>
+          <Icon name="zenModeOff" size="2rem" />
+        </ZenModeContainer>
         {shouldShowEditButtom && (
           <ButtonContainer>
             <ButtonLink to={editPath} isSecondary={true} mt={0}>

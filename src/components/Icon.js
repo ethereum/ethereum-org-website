@@ -17,7 +17,7 @@ import {
   MdFlip,
   MdLiveHelp,
 } from "react-icons/md"
-import { BsQuestionSquareFill } from "react-icons/bs"
+import { BsQuestionSquareFill, BsToggleOff, BsToggleOn } from "react-icons/bs"
 import { IoCodeOutline, IoCodeDownload } from "react-icons/io5"
 
 const Icon = ({ name, size, className }) => (
@@ -31,6 +31,8 @@ const Icon = ({ name, size, className }) => (
     {name === "info" && <MdInfoOutline />}
     {name === "language" && <MdLanguage />}
     {name === "lightTheme" && <MdWbSunny />}
+    {name === "zenModeOff" && <BsToggleOff />}
+    {name === "zenModeOn" && <BsToggleOn />}
     {name === "menu" && <MdMenu />}
     {name === "twitter" && <FaTwitter />}
     {name === "search" && <MdSearch />}
