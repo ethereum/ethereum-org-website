@@ -23,12 +23,14 @@ _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/d
 
 In essence, gas fees are paid in Ethereum's native currency, ether (ETH). Gas prices are denoted in Gwei, which itself is a denomination of ETH - each Gwei is equal to 0.000000001 ETH (10<sup>-9</sup> ETH). For example, instead of saying that your gas costs 0.000000001 Ether, you can say your gas costs 1 Gwei.
 
-Let's say Alice has to pay Bob 1ETH. <br>
-In the transaction the gas limit is 21000 units and the gas price is 200 GWei <br>
+Let's say Alice has to pay Bob 1ETH.
+In the transaction the gas limit is 21000 units and the gas price is 200 GWei. 
+
 Total fee will be: Gas units * Gas price per unit 
-i.e 21000 * 200 = 4,200,000 Gwei or 0.0042 ETH <br>
-Now, when Alex sends money 1.0042 ETH will be deducted from his account. <br>
-Bob will be credited 1.0000 ETH. <br>
+i.e 21000 * 200 = 4,200,000 Gwei or 0.0042 ETH
+
+Now, when Alex sends money 1.0042 ETH will be deducted from his account.
+Bob will be credited 1.0000 ETH.
 Miner gets 0.0042 ETH <br>
 
 This video offers a concise overview of gas and why it exists:
