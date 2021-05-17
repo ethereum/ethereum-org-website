@@ -28,6 +28,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
   - [Ethereum Stackexchange](https://ethereum.stackexchange.com) - _discussion and help for Ethereum developers_
   - [Ethereum Research](https://ethresear.ch) - _the most influential messageboard for cryptoeconomic research_
 - Chat rooms
+  - [Eth R&D Discord server](https://discord.gg/qGpsxSA)
   - [Ethereum Gitter](https://gitter.im/ethereum/home) - _chat room for the Ethereum github repo_
   - [Ethereum Cat Herders](https://discord.gg/tzYmDmF) - _community oriented around offering project management support to Ethereum development_
   - [Ethereum Hackers](https://ethglobal.co/discord) - _Discord chat run by [ETHGlobal](https://www.ethglobal.co/): an online community for Ethereum hackers all over the world_

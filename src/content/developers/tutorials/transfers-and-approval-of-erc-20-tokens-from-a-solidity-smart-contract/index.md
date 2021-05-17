@@ -172,7 +172,7 @@ In the case where the buy is successful we should see two events in the transact
 
 ## The sell function {#the-sell-function}
 
-The function responsible for the sell will first require the user to have approved the amount by calling the approve function beforehand. Then when the sell function is called, we’ll check if the transfer from the caller address to the contract address was succesful and then send the Ethers back to the caller address.
+The function responsible for the sell will first require the user to have approved the amount by calling the approve function beforehand. Then when the sell function is called, we’ll check if the transfer from the caller address to the contract address was successful and then send the Ethers back to the caller address.
 
 ```solidity
 function sell(uint256 amount) public {

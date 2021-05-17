@@ -37,6 +37,7 @@ High-level explanations of Ethereum and blockchain technology generally.
 - [A Gentle Introduction to Ethereum](https://bitsonblocks.net/2016/10/02/gentle-introduction-ethereum/) _Oct 2, 2016 - Antony Lewis_
 - [Introduction to Blockchain through Cryptoeconomics - Part 1](https://medium.com/blockchain-at-berkeley/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) _Jan 26, 2018 - Zubin Koticha_
 - [Introduction to Blockchain through Cryptoeconomics - Part 2](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-1252f6a6c012) _July 19, 2018 - Zubin Koticha_
+- [Understanding Ethereum](https://allan-gulley.medium.com/understanding-ethereum-819c2096b613?sk=c89f3aa5a4fd8b5fa0dae3042a3fa011) _Apr 27, 2021 - Allan Gulley_
 - [Ethereum's original Whitepaper](/whitepaper/)
 
 ## Smart Contracts {#smart-contracts}
@@ -78,7 +79,7 @@ There are many efforts underway to make Ethereum more “scalable” by improvin
 
 “Layer 2” refers to technologies that are built “on top” of the base Ethereum protocol, enabling greater scalability without compromising on security. There are also “off-chain” technologies like side-chains, which enable greater scalability by making a different set of security tradeoffs.
 
-[More on Layer 2](/developers/docs/layer-2-scaling/)
+[More on Layer 2](/developers/docs/scaling/layer-2-rollups/)
 
 ## Eth2 {#eth-2-0}
 

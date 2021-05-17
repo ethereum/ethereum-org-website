@@ -9,7 +9,7 @@ summaryPoints:
   [
     'Eventually the current Ethereum mainnet will "merge" with the beacon chain proof-of-stake system.',
     "This will mark the end of proof-of-work for Ethereum, and the full transition to proof-of-stake.",
-    "This is planned to preceed the roll out of shard chains.",
+    "This is planned to precede the roll out of shard chains.",
     'We formerly referred to this as "the docking."',
   ]
 ---

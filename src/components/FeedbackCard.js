@@ -31,10 +31,6 @@ const Title = styled.h3`
   margin-bottom: 0.5rem;
 `
 
-const Question = styled.div`
-  margin-right: 1rem;
-`
-
 const ButtonContainer = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-top: 1rem;
@@ -59,7 +55,6 @@ const FeedbackCard = () => {
   return (
     <Card>
       <Content>
-        <Question></Question>
         <Title>{title}</Title>
         {!feedbackSubmitted && (
           <ButtonContainer>

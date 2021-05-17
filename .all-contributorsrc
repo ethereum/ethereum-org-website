@@ -3436,7 +3436,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/22633385?v=4",
       "profile": "https://bandism.net/",
       "contributions": [
-        "bug"
+        "bug",
+        "content"
       ]
     },
     {
@@ -3591,6 +3592,51 @@
       "profile": "http://www.jpaulet.com",
       "contributions": [
         "code"
+      ]
+    },
+    {
+      "login": "manojmsrit",
+      "name": "manojmsrit",
+      "avatar_url": "https://avatars.githubusercontent.com/u/49993125?v=4",
+      "profile": "https://github.com/manojmsrit",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "PowerStream3604",
+      "name": "David Kim",
+      "avatar_url": "https://avatars.githubusercontent.com/u/63450340?v=4",
+      "profile": "https://github.com/PowerStream3604",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "bhavishy6",
+      "name": "Bhavish Yalamanchi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1428107?v=4",
+      "profile": "https://github.com/bhavishy6",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "awg0013-PR",
+      "name": "awg0013-PR",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73718997?v=4",
+      "profile": "https://github.com/awg0013-PR",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "DevAranCarter",
+      "name": "Devin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68774530?v=4",
+      "profile": "https://github.com/DevAranCarter",
+      "contributions": [
+        "content"
       ]
     }
   ],
