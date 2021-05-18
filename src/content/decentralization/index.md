@@ -133,6 +133,7 @@ Blockchains like Etherereum's aren't the most efficient places for storing data.
 - [IPFS](https://ipfs.io/)
 - [Filecoin](https://filecoin.io/) (based in part on IPFS)
 - [Storj](https://storj.io/)
+- [Swarm](https://swarm.ethereum.org/) (also for encrypted messaging)
 
 ### File sharing {#filesharing}
 
