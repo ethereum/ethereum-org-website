@@ -31,7 +31,7 @@ Learn more about [sharding](/eth2/shard-chains/).
 
 ## Off-Chain Scaling {#off-chain-scaling}
 
-Off-chain solutions are implemented separately from layer 1 mainnet - they require no changes to the existing Ethereum protocol. Some solutions, known as "layer 2" solutions, derive their security directly from layer 1 Ethereum consensus, such as [rollups](/docs/scaling/layer-2-rollups/) or [state channels](/docs/scaling/state-channels/). Other solutions involve the creation of new chains in various forms that derive their security separately from mainnet, such as [sidechains](#sidechains) or [plasma](#plasma) chains. These solutions communicate with mainnet, but derive their security differently to obtain a variety of goals.
+Off-chain solutions are implemented separately from layer 1 mainnet - they require no changes to the existing Ethereum protocol. Some solutions, known as "layer 2" solutions, derive their security directly from layer 1 Ethereum consensus, such as [rollups](/developers/docs/scaling/layer-2-rollups/) or [state channels](/developers/docs/scaling/state-channels/). Other solutions involve the creation of new chains in various forms that derive their security separately from mainnet, such as [sidechains](#sidechains) or [plasma](#plasma) chains. These solutions communicate with mainnet, but derive their security differently to obtain a variety of goals.
 
 ### Layer 2 Scaling {#layer-2-scaling}
 
@@ -85,5 +85,6 @@ _Note the explanation in the video uses the term "Layer 2" to refer to all off-c
 
 - [Up-to-date analytics on Layer 2 scaling solutions for Ethereum](https://www.l2beat.com/)
 - [Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
+- [An Incomplete Guide to Rollups](https://vitalik.ca/general/2021/01/05/rollup.html)
 
 _Know of a community resource that helped you? Edit this page and add it!_

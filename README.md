@@ -939,6 +939,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://www.jpaulet.com"><img src="https://avatars.githubusercontent.com/u/6894329?v=4?s=100" width="100px;" alt=""/><br /><sub><b>jp_aulet</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=jpaulet" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/manojmsrit"><img src="https://avatars.githubusercontent.com/u/49993125?v=4?s=100" width="100px;" alt=""/><br /><sub><b>manojmsrit</b></sub></a><br /><a href="#ideas-manojmsrit" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/PowerStream3604"><img src="https://avatars.githubusercontent.com/u/63450340?v=4?s=100" width="100px;" alt=""/><br /><sub><b>David Kim</b></sub></a><br /><a href="#content-PowerStream3604" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/bhavishy6"><img src="https://avatars.githubusercontent.com/u/1428107?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Bhavish Yalamanchi</b></sub></a><br /><a href="#content-bhavishy6" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/awg0013-PR"><img src="https://avatars.githubusercontent.com/u/73718997?v=4?s=100" width="100px;" alt=""/><br /><sub><b>awg0013-PR</b></sub></a><br /><a href="#content-awg0013-PR" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/DevAranCarter"><img src="https://avatars.githubusercontent.com/u/68774530?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Devin</b></sub></a><br /><a href="#content-DevAranCarter" title="Content">🖋</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/Dave2022"><img src="https://avatars.githubusercontent.com/u/82191676?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dave</b></sub></a><br /><a href="#ideas-Dave2022" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
