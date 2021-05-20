@@ -945,6 +945,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/Dave2022"><img src="https://avatars.githubusercontent.com/u/82191676?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dave</b></sub></a><br /><a href="#ideas-Dave2022" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://skyle.net"><img src="https://avatars.githubusercontent.com/u/1500888?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rafael Matias</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Askylenet" title="Bug reports">🐛</a> <a href="#content-skylenet" title="Content">🖋</a></td>
   </tr>
 </table>
 
