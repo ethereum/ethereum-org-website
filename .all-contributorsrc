@@ -3702,6 +3702,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "zjpetersen",
+      "name": "zjpetersen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12157308?v=4",
+      "profile": "https://github.com/zjpetersen",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
