@@ -253,7 +253,7 @@ ethers.utils.formatEther(balance)
 
 **Ethers.js -** **_Implementare completă de portofel Ethereum și utilitare, în JavaScript și TypeScript._**
 
-- [Documentație](https://docs.ethers.io/ethers.js/html/)
+- [Documentație](https://docs.ethers.io/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
 **The Graph -** **_Un protocol de indexare a datelor Ethereum și IPFS și interogarea acestora folosind GraphQL._**
