@@ -3647,6 +3647,16 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "skylenet",
+      "name": "Rafael Matias",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1500888?v=4",
+      "profile": "https://skyle.net",
+      "contributions": [
+        "bug",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
