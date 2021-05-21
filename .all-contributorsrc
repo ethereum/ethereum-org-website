@@ -3657,6 +3657,15 @@
         "bug",
         "content"
       ]
+    },
+    {
+      "login": "cglagovich",
+      "name": "Colman Glagovich",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20099419?v=4",
+      "profile": "https://github.com/cglagovich",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
