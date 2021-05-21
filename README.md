@@ -950,6 +950,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/endorphin"><img src="https://avatars.githubusercontent.com/u/10931642?v=4?s=100" width="100px;" alt=""/><br /><sub><b>endorphin</b></sub></a><br /><a href="#content-endorphin" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/nebali"><img src="https://avatars.githubusercontent.com/u/43342338?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nebali</b></sub></a><br /><a href="#content-nebali" title="Content">🖋</a></td>
     <td align="center"><a href="https://theshubhagrwl.vercel.app/"><img src="https://avatars.githubusercontent.com/u/37265683?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Shubh Agrawal</b></sub></a><br /><a href="#content-theshubhagrwl" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/cth0604"><img src="https://avatars.githubusercontent.com/u/57742558?v=4?s=100" width="100px;" alt=""/><br /><sub><b>cth0604</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=cth0604" title="Code">💻</a></td>
   </tr>
 </table>
 
