@@ -44,7 +44,7 @@ sidebar: true
 
 ** Ethers.js - ** ** _ ജാവാസ്ക്രിപ്റ്റിലും ടൈപ്പ്സ്ക്രിപ്റ്റിലും Ethereum Wallet നടപ്പിലാക്കലും യൂട്ടിലിറ്റികളും പൂർത്തിയാക്കുക. _ **
 
-- [പ്രമാണീകരണം](https://docs.ethers.io/ethers.js/html/)
+- [പ്രമാണീകരണം](https://docs.ethers.io/)
 - [Github](https://github.com/ethers-io/ethers.js/)
 
 ** ethereumjs-vm - ** ** _ ജാവാസ്ക്രിപ്റ്റിൽ നടപ്പിലാക്കിയ Ethereum VM _ **
