@@ -40,7 +40,7 @@ const Form = styled.form`
   margin: 0;
   position: relative;
   border-radius: 0.25em;
-  width: 20%;
+  width: clamp(min(400px, 100%), 50%, 600px);
 `
 
 const StyledInput = styled.input`
