@@ -23,6 +23,16 @@ _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/d
 
 In essence, gas fees are paid in Ethereum's native currency, ether (ETH). Gas prices are denoted in Gwei, which itself is a denomination of ETH - each Gwei is equal to 0.000000001 ETH (10<sup>-9</sup> ETH). For example, instead of saying that your gas costs 0.000000001 Ether, you can say your gas costs 1 Gwei.
 
+Let's say Alice has to pay Bob 1ETH.
+In the transaction the gas limit is 21000 units and the gas price is 200 GWei. 
+
+Total fee will be: Gas units * Gas price per unit 
+i.e 21000 * 200 = 4,200,000 Gwei or 0.0042 ETH
+
+Now, when Alex sends money 1.0042 ETH will be deducted from his account.
+Bob will be credited 1.0000 ETH.
+Miner gets 0.0042 ETH.
+
 This video offers a concise overview of gas and why it exists:
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/AJvzNICwcwc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -52,16 +62,18 @@ With the new network upgrades of Ethereum 2.0 (also known as Eth2 or Serenity). 
 
 Layer 2 scaling is a primary initiative to greatly improve gas costs, user experience and scalability. [More on layer 2 scaling](/developers/docs/scaling/layer-2-rollups/).
 
-The new proof-of-stake model should reduce high power consumption and reliance on specialized hardware. The new PoS system was introduced on the Beacon Chain. This chain will allow the decentralized Ethereum network to come to agreement and keep the network secure, but avoid high energy use by requiring a financial commitment. 
+The new proof-of-stake model should reduce high power consumption and reliance on specialized hardware. The new PoS system was introduced on the Beacon Chain. This chain will allow the decentralized Ethereum network to come to agreement and keep the network secure, but avoid high energy use by requiring a financial commitment.
 
 Anyone with at least 32 ETH is able to stake them and become a validator responsible for processing transactions, proposing new blocks to add to the blockchain and storing data. Users who have less than 32 ETH are able to join staking pools.
 
 ## What is Gas limit? {#what-is-gas-limit}
+
 Gas limit refers to the maximum amount of gas you are willing to consume on a transaction. A higher gas limit means more computational work can be done while interacting with [smart contracts](/developers/docs/smart-contracts/). A standard ETH transfer requires a gas limit of 21,000 units of gas.
 
 For example if you put a gas limit of 50,000 for a simple ETH transfer, the EVM would consume 21,000, and you would get back the remaining 29,000. However, if you specify too little gas say for example, a gas limit of 20,000 for a simple ETH transfer, the EVM will consume your 20,000 gas units attempting to fulfill the txn, but it will not complete. The EVM then reverts any changes, but since 20k gas units worth of work has already been done by the miner, that gas is consumed.
 
 ## What is Gas price? {#what-is-gas-price}
+
 Gas price refers to the amount of Ether you are willing to pay for every unit of gas, and this is usually measured in 'gwei'.
 
 ## Strategies for you to reduce gas costs {#strategies-for-you-to-reduce-gas-costs}
@@ -69,9 +81,9 @@ Gas price refers to the amount of Ether you are willing to pay for every unit of
 If you are looking to reduce gas costs for your ETH you are able to set the price of your own gas fees and choose the priority level of your transaction. Miners will 'work on' and execute transactions that offer a higher gas price, as they get to keep the fees that you pay and will be less inclined to execute transactions with lower gas fees set. The gas price you set is how much you are willing to pay per unit of gas. However if you set the amount of gas too low you will not be able to send your ETH as you will run out of gas, you would then have to resubmit your transaction costing you more in gas fees. You can do this from some wallet providers when sending ETH.
 
 If you want to monitor gas prices so you are able to send your ETH for less you can use many different tools such as:
+
 - [Etherscan](https://etherscan.io/gastracker)
 - [GasNow](https://www.gasnow.org)
-
 
 ## Further Reading {#further-reading}
 
