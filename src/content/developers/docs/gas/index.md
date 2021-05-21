@@ -46,7 +46,7 @@ Although a transaction includes a limit, any gas not used in a transaction is re
 ![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
 _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## Why can gas fees get so high? {#Why-can-gas-fees-get-so-high}
+## Why can gas fees get so high? {#why-can-gas-fees-get-so-high}
 
 High gas fees are due to the popularity of Ethereum. Performing any operation on Ethereum requires consuming gas. This includes calculations, storing or manipulating data, or transferring tokens, each consuming different amounts of "gas" units. As dapp functionality grows more complex, the number of operations a smart contract performs grows too, and all contribute to high amounts of gas that must be paid for.
 
@@ -56,7 +56,7 @@ This video about gas fees explains fully why fees are so expensive:
 
 https://www.youtube.com/embed/Yh8cHUB-KoU
 
-## Initiatives to reduce gas costs {#Initiatives-to-reduce-gas-costs}
+## Initiatives to reduce gas costs {#initiatives-to-reduce-gas-costs}
 
 With the new network upgrades of Ethereum 2.0 (also known as Eth2 or Serenity). This should ultimately address some of the gas fee issues, which will in turn enable the platform to process thousands of transactions per second and scale globally.
 
@@ -66,17 +66,17 @@ The new proof-of-stake model should reduce high power consumption and reliance o
 
 Anyone with at least 32 ETH is able to stake them and become a validator responsible for processing transactions, proposing new blocks to add to the blockchain and storing data. Users who have less than 32 ETH are able to join staking pools.
 
-## What is Gas limit? {What-is-gas-limit}
+## What is Gas limit? {#what-is-gas-limit}
 
 Gas limit refers to the maximum amount of gas you are willing to consume on a transaction. A higher gas limit means more computational work can be done while interacting with [smart contracts](/developers/docs/smart-contracts/). A standard ETH transfer requires a gas limit of 21,000 units of gas.
 
 For example if you put a gas limit of 50,000 for a simple ETH transfer, the EVM would consume 21,000, and you would get back the remaining 29,000. However, if you specify too little gas say for example, a gas limit of 20,000 for a simple ETH transfer, the EVM will consume your 20,000 gas units attempting to fulfill the txn, but it will not complete. The EVM then reverts any changes, but since 20k gas units worth of work has already been done by the miner, that gas is consumed.
 
-## What is Gas price? {What-is-gas-price}
+## What is Gas price? {#what-is-gas-price}
 
 Gas price refers to the amount of Ether you are willing to pay for every unit of gas, and this is usually measured in 'gwei'.
 
-## Strategies for you to reduce gas costs {Strategies-for-you-to-reduce-gas-costs}
+## Strategies for you to reduce gas costs {#strategies-for-you-to-reduce-gas-costs}
 
 If you are looking to reduce gas costs for your ETH you are able to set the price of your own gas fees and choose the priority level of your transaction. Miners will 'work on' and execute transactions that offer a higher gas price, as they get to keep the fees that you pay and will be less inclined to execute transactions with lower gas fees set. The gas price you set is how much you are willing to pay per unit of gas. However if you set the amount of gas too low you will not be able to send your ETH as you will run out of gas, you would then have to resubmit your transaction costing you more in gas fees. You can do this from some wallet providers when sending ETH.
 
