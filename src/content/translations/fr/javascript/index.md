@@ -44,7 +44,7 @@ Besoin d’une approche plus élémentaire&nbsp;? Jetez un oeil à [ethereum.org
 
 **Ethers.js -** **_Complete Ethereum wallet implementation and utilities in JavaScript and TypeScript._**
 
-- [Documentation](https://docs.ethers.io/ethers.js/html/)
+- [Documentation](https://docs.ethers.io/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
 **ethereumjs-vm -** **_The Ethereum VM implemented in JavaScript_**

@@ -110,7 +110,7 @@ function update_name(string value) public {
 
 ### View functions {#view-functions}
 
-These functions promise not to modify the state of the contract's data. Command examples are "getter" functions – you might use this to receive a user's balance for example.
+These functions promise not to modify the state of the contract's data. Common examples are "getter" functions – you might use this to receive a user's balance for example.
 
 ```solidity
 // Solidity example

@@ -45,7 +45,7 @@ Norėtumėte pradėti nuo ko nors paprastesnio? Apsilankykite [ethereum.org/lear
 
 **Ethers.js –** **_visiškas Ethereum piniginės įdiegimas ir parankinės priemonės, skirtos JavaScript ir TypeScript._**
 
-- [Dokumentacija](https://docs.ethers.io/ethers.js/html/)
+- [Dokumentacija](https://docs.ethers.io/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
 **ethereumjs-vm -** **_Ethereum VM įdiegta JavaScript_**

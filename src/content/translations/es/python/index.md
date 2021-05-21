@@ -1,6 +1,6 @@
 ---
 title: Ethereum para desarrolladores de Python
-description: Aprende cómo desarrollar para Etherium mediante proyectos y herramientas basados en Python
+description: Aprende cómo desarrollar para Ethereum mediante proyectos y herramientas basados en Python
 lang: es
 sidebar: true
 sidebarDepth: 1
@@ -8,7 +8,7 @@ sidebarDepth: 1
 
 # Ethereum para desarrolladores de Python {#ethereum-for-python-devs}
 
-<div class="featured">Aprende cómo desarrollar para Etherium mediante proyectos y herramientas basados en Python</div>
+<div class="featured">Aprende cómo desarrollar para Ethereum mediante proyectos y herramientas basados en Python</div>
 
 Usa Ethereum para crear aplicaciones descentralizadas (o "dapps") mediante los beneficios de las criptomonedas y la tecnología de blockchain. Estas dapps pueden ser fiables, lo que significa que, una vez implementadas en Ethereum, siempre se ejecutan tal y como se programaron. Pueden controlar los activos digitales para crear nuevos tipos de aplicaciones financieras. Estas aplicaciones pueden ser descentralizadas, lo que significa que ninguna entidad o persona las controla y, por lo tanto, son prácticamente imposibles de censurar.
 
