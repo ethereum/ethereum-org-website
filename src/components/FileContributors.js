@@ -13,7 +13,8 @@ import { getLocaleTimestamp } from "../utils/time"
 
 const loadingStyles = css`
   font-size: 0;
-  background: linear-gradient(-90deg, #efefef 0%, #fcfcfc 50%, #efefef 100%);
+  background: ${({ theme }) =>
+    `linear-gradient(-90deg, ${theme.colors.lightBorder} 0%, ${theme.colors.searchBackgroundEmpty} 50%, ${theme.colors.lightBorder} 100%)`};
   background-size: 400% 400%;
   animation: pulse 1.2s ease-in-out infinite;
 
