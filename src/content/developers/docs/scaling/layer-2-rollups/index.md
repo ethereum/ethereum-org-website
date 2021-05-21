@@ -69,7 +69,7 @@ Multiple implementations of ZK-rollups exist that you can integrate into your da
 - [Matter Labs zkSync](https://zksync.io/)
 - [Aztec 2.0](https://aztec.network/)
 - [Hermez network](https://hermez.io/)
-- [zkTube](https://paytube.io/)
+- [zkTube](https://zktube.io/)
 
 ### Optimistic rollups {#optimistic-rollups}
 
