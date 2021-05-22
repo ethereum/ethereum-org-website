@@ -242,7 +242,7 @@ recent_births = [get_event_data(ck_extra_events_abi[1], log)["args"] for log in 
 
 ## Popular NFTs {#popular-nfts}
 
-- [Etherscan NFT Tracker](https://etherscan.io/tokens-nft) list the top NFT on Ethereum by tranfers volume.
+- [Etherscan NFT Tracker](https://etherscan.io/tokens-nft) list the top NFT on Ethereum by transfers volume.
 - [CryptoKitties](https://www.cryptokitties.co/) is a game centered around breedable, collectible, and oh-so-adorable
   creatures we call CryptoKitties.
 - [Sorare](https://sorare.com/) is a global fantasy football game where you can collect limited editions collectibles,

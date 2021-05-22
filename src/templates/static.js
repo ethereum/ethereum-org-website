@@ -37,6 +37,7 @@ import {
   CardContainer,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
+import UpcomingEventsList from "../components/UpcomingEventsList"
 
 const Page = styled.div`
   display: flex;
@@ -125,6 +126,7 @@ const components = {
   ExpandableCard,
   CardContainer,
   GhostCard,
+  UpcomingEventsList,
 }
 
 const StaticPage = ({ data: { siteData, mdx }, pageContext }) => {

@@ -11,9 +11,7 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 2rem;
-  }
+  margin-top: 2rem;
 `
 
 const Content = styled.div`
@@ -31,10 +29,6 @@ const Title = styled.h3`
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 0.5rem;
-`
-
-const Question = styled.div`
-  margin-right: 1rem;
 `
 
 const ButtonContainer = styled.div`
@@ -61,7 +55,6 @@ const FeedbackCard = () => {
   return (
     <Card>
       <Content>
-        <Question></Question>
         <Title>{title}</Title>
         {!feedbackSubmitted && (
           <ButtonContainer>

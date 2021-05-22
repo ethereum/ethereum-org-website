@@ -54,7 +54,7 @@ Lanțurile de fragmente nu pot intra în siguranță în ecosistemul Ethereum, d
 
 ### Rețeaua principală și lanțul Beacon {#mainnet-and-beacon-chain}
 
-La început, lanțul Beacon va exista separat de rețeaua principală Ethereum care este folosită astăzi. Dar în cele din urmă vor fi conectate. Planul este de a „andoca” rețeaua principală în sistemul de dovadă a mizei (PoS) controlat și coordonat de lanțul Beacon.<ButtonLink to="/eth2/docking/">Planul este de a „andoca” rețeaua principală în sistemul de dovadă a mizei (PoS) controlat și coordonat de lanțul Beacon.</ButtonLink>
+La început, lanțul Beacon va exista separat de rețeaua principală Ethereum care este folosită astăzi. Dar în cele din urmă vor fi conectate. Planul este de a „andoca” rețeaua principală în sistemul de dovadă a mizei (PoS) controlat și coordonat de lanțul Beacon.<ButtonLink to="/eth2/merge/">Planul este de a „andoca” rețeaua principală în sistemul de dovadă a mizei (PoS) controlat și coordonat de lanțul Beacon.</ButtonLink>
 
 <Divider />
 

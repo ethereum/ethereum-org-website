@@ -8,7 +8,7 @@ incomplete: true
 
 Ethereum, like Bitcoin, currently uses a consensus protocol called [Proof-of-work (PoW)](https://en.wikipedia.org/wiki/Proof_of_work). This allows the nodes of the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain, and prevents certain kinds of economic attacks.
 
-Over the next few years, proof-of-work will be phased out in favour of [proof of stake](/developers/docs/consensus-mechanisms/pos). This will also phase out mining from Ethereum. For more details on timing, check the progress of the [Eth2 docking upgrade](/eth2/docking/).
+Over the next few years, proof-of-work will be phased out in favour of [proof of stake](/developers/docs/consensus-mechanisms/pos). This will also phase out mining from Ethereum. For more details on timing, check the progress of the [Eth2 merge upgrade](/eth2/merge/).
 
 ## Prerequisites {#prerequisites}
 
@@ -56,7 +56,7 @@ To consistently create malicious, yet valid, blocks, you'd need over 51% of the 
 
 PoW is also responsible for issuing new currency into the system and incentivising miners to do the work.
 
-Miners who successfully create a block are rewarded in 2 freshly minted ETH and all the transaction fees within the block. A miner may also get 1.75ETH for an uncle block. This is a valid block, created simultaneously to the succcessful block, by another miner. This usually happens due to network latency.
+Miners who successfully create a block are rewarded in 2 freshly minted ETH and all the transaction fees within the block. A miner may also get 1.75ETH for an uncle block. This is a valid block, created simultaneously to the successful block, by another miner. This usually happens due to network latency.
 
 ## Finality {#finality}
 
@@ -75,14 +75,14 @@ Remember, this timing doesn't include the wait times for having a transaction pi
 | Pros                                                                                                                                                                                                               | Cons                                                                                                                                         |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | PoW is neutral. You don't need ETH to get started and block rewards allow you to go from 0ETH to a positive balance. With [proof of stake](/developers/docs/consensus-mechanisms/pos/) you need ETH to start with. | PoW uses up so much energy that it's bad for the environment.                                                                                |
-| PoW is a tried and tested consensus mechanism that has kept Bitcoin and Ethereum secure and decentralized for many years.                                                                                          | If you want to mine, you need such specialist equipment that it's a big investment to start.                                                 |
+| PoW is a tried and tested consensus mechanism that has kept Bitcoin and Ethereum secure and decentralized for many years.                                                                                          | If you want to mine, you need such specialized equipment that it's a big investment to start.                                                 |
 | Compared to proof-of-stake it's relatively easy to implement.                                                                                                                                                      | Due to increasing computation needed, mining pools could potentially dominate the mining game, leading to centralization and security risks. |
 
 ## Compared to proof of stake {#compared-to-pos}
 
 At a high level, proof-of-stake has the same end goal as proof-of-work: to help the decentralized network reach consensus, securely. But it has some differences in process and personnel:
 
-- PoS switches out the importance of computational power for staked ETH
+- PoS switches out the importance of computational power for staked ETH.
 - PoS replaces miners with validators. Validators stake their ETH to activate the ability to create new blocks.
 - Validators don't compete to create blocks, instead they are chosen at random by an algorithm.
 - Finality is clearer: at certain checkpoints, if 2/3 validators agree on the state of the block it is considered final. Validators must bet their entire stake on this, so if they try to collude down the line, they'll lose their entire stake.

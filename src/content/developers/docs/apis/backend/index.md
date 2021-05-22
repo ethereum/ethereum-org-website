@@ -13,7 +13,7 @@ If you want to use a specific programming language to connect with an Ethereum n
 
 ## Prerequisites {#prerequisites}
 
-It might be helpful to understand the [Ethereum stack](/developers/docs/ethereum-stack/) and [Ethereum clients](/docs/nodes-and-clients/).
+It might be helpful to understand the [Ethereum stack](/developers/docs/ethereum-stack/) and [Ethereum clients](/developers/docs/nodes-and-clients/).
 
 ## Why use a library? {#why-use-a-library}
 

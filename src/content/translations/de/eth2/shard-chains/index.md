@@ -88,7 +88,7 @@ Die Beacon Chain enthält die komplette Logik, um Shards sicher und synchron zu 
 
 ### Shards und das Andocken {#shards-and-docking}
 
-Auch nach der Einführung von Shards wird das heutige Ethereum-Mainnet weiterhin existieren. An einem gewissen Punkt wird das Mainnet allerdings ein Shard werden müssen, damit der Übergang von Proof-of-Work zu Proof-of-Stake – und damit zum Staking – möglich wird. Es muss sich noch herausstellen, ob das Mainnet der einzige sogenannte "smarte" Shard sein wird, der Code ausführen kann. So oder so wird eine Entscheidung darüber in Phase 2 des Sharding fallen.<ButtonLink to="/eth2/docking/">Das Andocken</ButtonLink>
+Auch nach der Einführung von Shards wird das heutige Ethereum-Mainnet weiterhin existieren. An einem gewissen Punkt wird das Mainnet allerdings ein Shard werden müssen, damit der Übergang von Proof-of-Work zu Proof-of-Stake – und damit zum Staking – möglich wird. Es muss sich noch herausstellen, ob das Mainnet der einzige sogenannte "smarte" Shard sein wird, der Code ausführen kann. So oder so wird eine Entscheidung darüber in Phase 2 des Sharding fallen.<ButtonLink to="/eth2/merge/">Das Andocken</ButtonLink>
 
 <Divider />
 

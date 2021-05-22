@@ -44,7 +44,7 @@ Potrebujete ďalšie základné informácie o Ethereu? Pozrite si [ethereum.org/
 
 **Ethers.js -** **_kompletná implementácia peňaženky Ethereum a pomôcky vytvorené v jazykoch JavaScript a TypeScript_**
 
-- [Dokumentácia](https://docs.ethers.io/ethers.js/html/)
+- [Dokumentácia](https://docs.ethers.io/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
 **ethereumjs-vm -** **_implementácia virtuálneho počítača Ethereum v JavaScripte_**

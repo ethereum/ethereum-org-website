@@ -13,11 +13,11 @@ A blockchain is best described as a public database that is updated and shared a
 
 "Chain" refers to the fact that each block cryptographically references its parent. A block's data cannot be changed without changing all subsequent blocks, which would require the consensus of the entire network.
 
-Each new block and the chain as a whole must be agreed upon by every node in the network. This is so everyone has the same data. For this to work, blockchains need a consensus mechanism.
+Each new block and the chain as a whole must be agreed upon by every computer in the network. These computers are known as "nodes". This is so everyone has the same data. To accomplish this distributed agreement, blockchains need a consensus mechanism.
 
-Ethereum currently uses a proof-of-work consensus mechanism. This means that anyone who wants to add new blocks to the chain must solve a difficult puzzle that you need a lot of computing power to work on. Solving the puzzle "proves" that you have spent the computational resources. Doing this is known as [mining](/developers/docs/consensus-mechanisms/pow/mining/). Mining can be trial and error but adding a block successfully is rewarded in ETH. On the other hand, submitting fraudulent blocks is not an attractive option considering the resources you've spent on producing the block.
+Ethereum currently uses a [proof-of-work](/developers/docs/consensus-mechanisms/pow/) consensus mechanism. This means that anyone who wants to add new blocks to the chain must solve a difficult puzzle that requires a lot of computing power. Solving the puzzle "proves" that you have spent the computational resources. Doing this is known as [mining](/developers/docs/consensus-mechanisms/pow/mining/). Mining is typically brute force trial and error but adding a block successfully is rewarded in ETH.
 
-New blocks are broadcast to the nodes in the network, checked and verified, updating the state for everyone.
+New blocks are broadcasted to the nodes in the network, checked and verified, thus updating the state of the blockchain for everyone.
 
 So to summarise, when you send ETH to someone, the transaction must be mined and included in a new block. The updated state is then shared with the entire network. More on the details below.
 
@@ -106,6 +106,8 @@ A reusable snippet of code (a program) which a developer publishes into EVM memo
 ## Further reading {#further-reading}
 
 - [Ethereum Whitepaper](/whitepaper/)
+
+_Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related tutorials {#related-tutorials}
 

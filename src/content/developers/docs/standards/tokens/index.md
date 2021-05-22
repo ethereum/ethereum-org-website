@@ -30,5 +30,5 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 - [Token integration checklist](/developers/tutorials/token-integration-checklist/) _– A checklist of things to consider when interacting with tokens._
 - [Understand the ERC20 token smart contract](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– An introduction to deploying your first smart contract on an Ethereum test network._
-- [Transfers and approval of ERC20 tokens from a Solidity smart contract](/developers/tutorials/transfers-and-approval-of-erc20-tokens-from-a-solidity-smart-contract/) _– How to use a smart contract to interact with a token using the Solidity language._
+- [Transfers and approval of ERC20 tokens from a Solidity smart contract](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– How to use a smart contract to interact with a token using the Solidity language._
 - [Implementing an ERC721 market [a how-to guide]](/developers/tutorials/how-to-implement-an-erc721-market/) _– How to put tokenized items for sale on a decentralized classifieds board._

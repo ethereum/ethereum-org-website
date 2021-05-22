@@ -28,6 +28,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
   - [Ethereum Stackexchange](https://ethereum.stackexchange.com) - _discussion and help for Ethereum developers_
   - [Ethereum Research](https://ethresear.ch) - _the most influential messageboard for cryptoeconomic research_
 - Chat rooms
+  - [Eth R&D Discord server](https://discord.gg/qGpsxSA)
   - [Ethereum Gitter](https://gitter.im/ethereum/home) - _chat room for the Ethereum github repo_
   - [Ethereum Cat Herders](https://discord.gg/tzYmDmF) - _community oriented around offering project management support to Ethereum development_
   - [Ethereum Hackers](https://ethglobal.co/discord) - _Discord chat run by [ETHGlobal](https://www.ethglobal.co/): an online community for Ethereum hackers all over the world_
@@ -41,7 +42,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 
 **Every month, there are major Ethereum events around the world.** Consider attending one near you to meet more people in the community, learn about employment opportunities, and develop new skills.
 
-- [Scaling Ethereum](https://scaling.ethglobal.co/) – Hackathon dedicated to ETH2 and L2 on Ethereum (Apr 16 - May 14)
+<UpcomingEventsList/>
 
 _Have an event to add to this list? [Add it](https://github.com/ethereum/ethereum-org-website#how-can-i-contribute)!_
 
@@ -123,7 +124,7 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
 
 ## Ethereum Grants {#ethereum-grants}
 
-[View open Ethereum grants](/grants/)
+[View open Ethereum grants](/community/grants/)
 
 ## Ethereum Jobs {#ethereum-jobs}
 
