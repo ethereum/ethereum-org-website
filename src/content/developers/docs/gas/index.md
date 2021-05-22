@@ -74,7 +74,30 @@ For example if you put a gas limit of 50,000 for a simple ETH transfer, the EVM 
 
 ## What is Gas price? {#what-is-gas-price}
 
-Gas price refers to the amount of Ether you are willing to pay for every unit of gas, and this is usually measured in 'gwei'.
+Gas price refers to the amount of Ether you are willing to pay for every unit of gas, and this is usually measured in 'gwei'. Prior to
+[the London update](history/#london), you specify in the transaction how much you are willing to pay per gas, and you pay exactly that amount. This is
+known as first price auction. Different transactions in the same block can have very different gas prices.
+
+Starting with the London update, every block has a base fee, the minimum per gas price for inclusion in this block. The base fee is calculated by a formula
+that compares the size of the previous block (the amount of gas used for all the transactions) with a target size. If the block size is higher than the target, there
+is more demand for inclusion in the blockchain than supply, so the base fee is increased. If the block size is lower than the target then there is more supply 
+of block space than demand, so the base fee is decreased. This base fee is "burned", removed from circulation.
+
+Starting with the London update transactions can either specify a gas price using the old mechanism, or specify two other parameters:
+
+.  Maximum Fee per Gas: The maximum gas price the transaction can be charged.
+.  Maximum Priority Fee per Gas (a.k.a. Tip): The maximum priority fee the transaction signer is willing to pay the miner per gas to be included.
+   If the base fee plus this amount is less than the maximum fee per gas, this is the priority fee. Otherwise, the priority fee is the maximum
+   fee minus the base fee.
+
+Transactions can only be included in a block if their maximum fee per gas is equal to the base fee or more. Out of that pool of transactions miners (or, when
+ETH2 becomes the main network, validators) are expected to choose those that will pay them the highest priority fees. 
+
+This mechanism is more complicated than the simple gas price auction, but it has the advantage of making gas fees more predictable and uniforms.
+
+If you are interested you can read the exact specifications 
+[in the EIP (Ethereum Improvement Proposal)](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md).
+
 
 ## Strategies for you to reduce gas costs {#strategies-for-you-to-reduce-gas-costs}
 
