@@ -97,14 +97,18 @@ For example, imagine a block with a base fee of 100 gwei. The pool of available 
 | ID     | Maximum Fee per Gas  | Maximum Priority Fee per Gas | Actual Priority Fee | Actual Gas Price |Remarks |
 | ------ | ------------------:  | ---------------------------: | ------------------: | ---------------: |------- |
 | A      | 90 gwei              | 90 gwei                      | N/A                 | N/A              | This transaction is not going in the block |
-| B      | 200 gwei             |  5 gwei                      | 5 gwei              | 105 gwei         | The maximum priority fee |
-| C      | 120 gwei             | 30 gwei                      | 20 gwei             | 120 gwei         | The priority fee is the maximum fee minus the base fee |
+| B      | 200 gwei             |  5 gwei                      | 5 gwei              | 105 gwei         | The priority fee is the maximum priority fee |
+| C      | 120 gwei             | 30 gwei                      | 20 gwei             | 120 gwei         | The priority fee is the maximum (total) fee minus the base fee |
 | D      | gas price = 200 gwei | gas price = 200 gwei         | 100 gwei            | 200 gwei         | Transactions that specify gas price are charged the full amount |
 
 Miners and validators are expected to choose the transactions that will pay them the highest priority fees. 
 
 This mechanism is more complicated than the simple gas price auction, but it has the advantage of making gas fees more predictable, as well as making ETH more 
-valuable by removing some of it from circulation. If you are interested you can read the exact specifications 
+valuable by removing some of it from circulation. The maximum fee per gas functions as a [second price auction](https://oko.uk/blog/first-price-vs-second-price-auctions),
+which is more efficient than the previous mechanism that is a first price auction. Users can submit transactions with a much higher maximum fee per gas, corresponding
+to how much they need the transaction to happen, without having to worry that they will be overcharged.
+
+If you are interested you can read the exact specifications 
 [in the EIP (Ethereum Improvement Proposal)](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md).
 
 
