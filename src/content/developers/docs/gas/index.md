@@ -85,8 +85,8 @@ of block space than demand, so the base fee is decreased. This base fee is "burn
 
 Starting with the London update transactions can either specify a gas price using the old mechanism, or specify two other parameters:
 
-.  Maximum Fee per Gas: The maximum gas price the transaction can be charged.
-.  Maximum Priority Fee per Gas (a.k.a. Tip): The maximum priority fee the transaction signer is willing to pay the miner per gas to be included.
+-  Maximum Fee per Gas: The maximum gas price the transaction can be charged.
+-  Maximum Priority Fee per Gas (a.k.a. Tip): The maximum priority fee the transaction signer is willing to pay the miner per gas to be included.
    If the base fee plus this amount is less than the maximum fee per gas, this is the priority fee. Otherwise, the priority fee is the maximum
    fee minus the base fee.
 
