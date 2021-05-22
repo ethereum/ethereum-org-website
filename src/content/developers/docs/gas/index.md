@@ -75,27 +75,36 @@ For example if you put a gas limit of 50,000 for a simple ETH transfer, the EVM 
 ## What is Gas price? {#what-is-gas-price}
 
 Gas price refers to the amount of Ether you are willing to pay for every unit of gas, and this is usually measured in 'gwei'. Prior to
-[the London update](history/#london), you specify in the transaction how much you are willing to pay per gas, and you pay exactly that amount. This is
-known as first price auction. Different transactions in the same block can have very different gas prices.
+[the London update](history/#london), you specify in the transaction how much you are willing to pay per gas, and you pay exactly that amount. 
+Different transactions in the same block can have very different gas prices.
+
+### The London Update {#gas-price-london-update}
 
 Starting with the London update, every block has a base fee, the minimum per gas price for inclusion in this block. The base fee is calculated by a formula
 that compares the size of the previous block (the amount of gas used for all the transactions) with a target size. If the block size is higher than the target, there
-is more demand for inclusion in the blockchain than supply, so the base fee is increased. If the block size is lower than the target then there is more supply 
+is more demand for inclusion in the blockchain than supply so the base fee, is increased. If the block size is lower than the target then there is more supply 
 of block space than demand, so the base fee is decreased. This base fee is "burned", removed from circulation.
 
-Starting with the London update transactions can either specify a gas price using the old mechanism, or specify two other parameters:
+Transactions can either specify a gas price using the old mechanism, or specify two other parameters:
 
 -  Maximum Fee per Gas: The maximum gas price the transaction can be charged.
 -  Maximum Priority Fee per Gas (a.k.a. Tip): The maximum priority fee the transaction signer is willing to pay the miner per gas to be included.
    If the base fee plus this amount is less than the maximum fee per gas, this is the priority fee. Otherwise, the priority fee is the maximum
    fee minus the base fee.
 
-Transactions can only be included in a block if their maximum fee per gas is equal to the base fee or more. Out of that pool of transactions miners (or, when
-ETH2 becomes the main network, validators) are expected to choose those that will pay them the highest priority fees. 
+For example, imagine a block with a base fee of 100 gwei. The pool of available transactions contains these transactions:
 
-This mechanism is more complicated than the simple gas price auction, but it has the advantage of making gas fees more predictable and uniforms.
+| ID     | Maximum Fee per Gas  | Maximum Priority Fee per Gas | Actual Priority Fee | Actual Gas Price |Remarks |
+| ------ | ------------------:  | ---------------------------: | ------------------: | ---------------: |------- |
+| A      | 90 gwei              | 90 gwei                      | N/A                 | N/A              | This transaction is not going in the block |
+| B      | 200 gwei             |  5 gwei                      | 5 gwei              | 105 gwei         | The maximum priority fee |
+| C      | 120 gwei             | 30 gwei                      | 20 gwei             | 120 gwei         | The priority fee is the maximum fee minus the base fee |
+| D      | gas price = 200 gwei | gas price = 200 gwei         | 100 gwei            | 200 gwei         | Transactions that specify gas price are charged the full amount |
 
-If you are interested you can read the exact specifications 
+Miners and validators are expected to choose the transactions that will pay them the highest priority fees. 
+
+This mechanism is more complicated than the simple gas price auction, but it has the advantage of making gas fees more predictable, as well as making ETH more 
+valuable by removing some of it from circulation. If you are interested you can read the exact specifications 
 [in the EIP (Ethereum Improvement Proposal)](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md).
 
 
