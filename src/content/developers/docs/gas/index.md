@@ -29,7 +29,7 @@ In the transaction the gas limit is 21000 units and the gas price is 200 GWei.
 Total fee will be: Gas units * Gas price per unit 
 i.e 21000 * 200 = 4,200,000 Gwei or 0.0042 ETH
 
-Now, when Alex sends money 1.0042 ETH will be deducted from his account.
+Now, when Alice sends money 1.0042 ETH will be deducted from his account.
 Bob will be credited 1.0000 ETH.
 Miner gets 0.0042 ETH.
 
