@@ -102,7 +102,7 @@ const Info = styled.div`
 
 const SkeletonInfo = styled(Info)`
   ${loadingStyles}
-  height: 2rem;
+  height: 40px;
   flex: 1;
   border-radius: 3px;
 `
@@ -117,8 +117,15 @@ const SkeletonButtonContainer = styled(ButtonContainer)`
   ${loadingStyles}
   width: 145px;
   border-radius: 3px;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-top: 1rem;
+    justify-content: center;
+    width: calc(50% - 2rem);
+  }
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    height: 2rem;
+    height: 40px;
+    width: 50%;
+    margin-top: 1rem;
   }
 `
 
@@ -136,6 +143,12 @@ const ContributorsButton = styled(ButtonSecondary)`
     justify-content: center;
     width: 50%;
   }
+
+  ${({ loading }) =>
+    loading &&
+    `
+    visibility: hidden;
+  `}
 `
 
 const GithubButton = styled(ButtonLink)`
@@ -286,7 +299,10 @@ const FileContributors = ({ relativePath, className, editPath }) => {
           </Info>
         </LeftContent>
         <ButtonContainer>
-          <ContributorsButton onClick={() => setModalOpen(true)}>
+          <ContributorsButton
+            onClick={() => setModalOpen(true)}
+            loading={loading}
+          >
             <Translation id="see-contributors" />
           </ContributorsButton>
           {editPath && (
