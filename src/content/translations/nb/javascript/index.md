@@ -44,7 +44,7 @@ Trenger du en mer grunnleggende informasjon først? Sjekk ut [ethereum.org/learn
 
 **Ethers.js -** **_Komplett Ethereum wallet implementering og verktøyer i JavaScript og TypeScript._**
 
-- [Dokumentasjon](https://docs.ethers.io/ethers.js/html/)
+- [Dokumentasjon](https://docs.ethers.io/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
 **ethereumjs-vm -** **_Ethereum VM implementert i JavaScript_**

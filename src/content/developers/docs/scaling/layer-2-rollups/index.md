@@ -69,6 +69,7 @@ Multiple implementations of ZK-rollups exist that you can integrate into your da
 - [Matter Labs zkSync](https://zksync.io/)
 - [Aztec 2.0](https://aztec.network/)
 - [Hermez network](https://hermez.io/)
+- [zkTube](https://zktube.io/)
 
 ### Optimistic rollups {#optimistic-rollups}
 
@@ -105,6 +106,7 @@ Multiple implementations of Optimistic rollups exist that you can integrate into
 - [Offchain Labs Arbitrum Rollup](https://offchainlabs.com/)
 - [Fuel Network](https://fuel.sh/)
 - [Cartesi](https://cartesi.io)
+- [OMGX](https://omgx.network)
 
 ## Hybrid solutions {#hybrid-solutions}
 

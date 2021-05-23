@@ -3629,6 +3629,106 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "DevAranCarter",
+      "name": "Devin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68774530?v=4",
+      "profile": "https://github.com/DevAranCarter",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "Dave2022",
+      "name": "Dave",
+      "avatar_url": "https://avatars.githubusercontent.com/u/82191676?v=4",
+      "profile": "https://github.com/Dave2022",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "skylenet",
+      "name": "Rafael Matias",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1500888?v=4",
+      "profile": "https://skyle.net",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "cglagovich",
+      "name": "Colman Glagovich",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20099419?v=4",
+      "profile": "https://github.com/cglagovich",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "endorphin",
+      "name": "endorphin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10931642?v=4",
+      "profile": "https://github.com/endorphin",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "nebali",
+      "name": "Nebali",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43342338?v=4",
+      "profile": "https://github.com/nebali",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "theshubhagrwl",
+      "name": "Shubh Agrawal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37265683?v=4",
+      "profile": "https://theshubhagrwl.vercel.app/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "cth0604",
+      "name": "cth0604",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57742558?v=4",
+      "profile": "https://github.com/cth0604",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "zjpetersen",
+      "name": "zjpetersen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12157308?v=4",
+      "profile": "https://github.com/zjpetersen",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "frankie224",
+      "name": "frankie224",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84561472?v=4",
+      "profile": "https://github.com/frankie224",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "Pondorasti",
+      "name": "Alexandru Turcanu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32957606?v=4",
+      "profile": "https://alexandru.so",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

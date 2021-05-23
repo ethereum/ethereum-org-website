@@ -282,6 +282,11 @@
   from = "/*/developers/docs/layer-2-scaling"
   to = "/:splat/developers/docs/scaling/layer-2-rollups"
 
+# Jobs
+[[redirects]]
+  from = "/*/about/web-developer"
+  to = "/:splat/about/#open-jobs"
+
 # A redirect rule with all the supported properties
 # [[redirects]]
 #   from = "/old-path"

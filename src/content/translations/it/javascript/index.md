@@ -45,7 +45,7 @@ Ti servono prima le nozioni di base? Dai un'occhiata a [ethereum.org/learn](/it/
 
 **Ethers.js -** **_Implementazione completa del portafoglio di Ethereum e utilità in JavaScript e TypeScript_**
 
-- [Documentazione](https://docs.ethers.io/ethers.js/html/)
+- [Documentazione](https://docs.ethers.io/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
 **ethereumjs-vm -** **_La VM di Ethereum implementata in JavaScript_**
