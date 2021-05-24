@@ -44,9 +44,6 @@ The Baseline Protocol is one key project which is defining a protocol that enabl
 
 Some collaborative efforts to make Ethereum enterprise friendly have been made by different organizations:
 
-- [Enterprise Ethereum Alliance (EEA)](https://entethalliance.org/)
-  The EEA enables organizations to adopt and use Ethereum technology in their daily business operations. It empowers the Ethereum ecosystem to develop new business opportunities, drive industry adoption, and learn and collaborate with one another.
-  The EEA’s mainnet working group is a focal point for representatives from businesses who are interested in building on the public Ethereum mainnet, as well as members of the Ethereum community who would like to support them.
 - [Ethereum OASIS Open Project](https://github.com/ethereum-oasis/oasis-open-project)
   The Ethereum OASIS Open Project is an OASIS Open Project that exists to provide a neutral forum for diverse stakeholders to create high-quality specifications that facilitate Ethereum’s longevity, interoperability, and ease of integration. The project intends to develop clear, open standards, high-quality documentation, and shared test suites that facilitate new features and enhancements to the Ethereum protocol.
 - [Baseline Project](https://www.baseline-protocol.org/)
