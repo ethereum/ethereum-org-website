@@ -28,7 +28,9 @@ In addition to the information on this page, there are many community-built reso
 - [What’s new in ETH 2.0](https://eth2.news) _A regular newsletter about Eth2 development_
 - [ethresear.ch forum](https://ethresear.ch/) _Deeper technical discussions on Ethereum for Eth2 and beyond_
 - [ETHGlobal](https://ethglobal.co) _An Ethereum hackathon series - attend one near you!_
-- [CryptoZombies](https://cryptozombies.io/) _The famous CryptoZombies.io is a free teaching platform to teach existing developers or complete newcomers the ins and out of programming for the Blockchain_
+
+**Aspiring Ethereum developer?**
+Check out our developer portal. We've got documentation, tutorials, and other resources for learning how to build Ethereum products. [View developer portal](/developers/learning-tools/)
 
 ## How Ethereum works {#how-ethereum-works}
 
