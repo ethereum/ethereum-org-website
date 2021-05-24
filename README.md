@@ -83,6 +83,16 @@ We recommend setting this up when running the project locally, as we use the Git
 GATSBY_GITHUB_TOKEN_READ_ONLY=48f84de812090000demo00000000697cf6e6a059
 ```
 
+6. Add DeFiPulse API token (free)
+
+> - [Follow this guide](https://docs.defipulse.com/quick-start-guide) to create an account and get your DeFiPulse API token
+> - Copy & paste your DeFiPulse API token in `.env`
+
+```
+// .env Example:
+DEFI_PULSE_API_KEY=4953aaf7966dad9c129397e197a0630ed0594f66962dd5fb058972b250da
+```
+
 ### Make awesome changes!
 
 1. Create new branch for your changes
