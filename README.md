@@ -961,6 +961,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/arunlodhi"><img src="https://avatars.githubusercontent.com/u/5833803?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Arun Lodhi</b></sub></a><br /><a href="#content-arunlodhi" title="Content">🖋</a></td>
     <td align="center"><a href="https://unegma.com"><img src="https://avatars.githubusercontent.com/u/3952393?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tim</b></sub></a><br /><a href="#content-timhc22" title="Content">🖋</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/vitaliyhayda"><img src="https://avatars.githubusercontent.com/u/7917231?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vitaliy Hayda</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Avitaliyhayda" title="Bug reports">🐛</a> <a href="#content-vitaliyhayda" title="Content">🖋</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
