@@ -3786,6 +3786,16 @@
         "bug",
         "content"
       ]
+    },
+    {
+      "login": "Lisanaaa",
+      "name": "Keqi Huang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/28261876?v=4",
+      "profile": "https://www.linkedin.com/in/keqi-huang/",
+      "contributions": [
+        "bug",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
