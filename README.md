@@ -88,7 +88,7 @@ GATSBY_GITHUB_TOKEN_READ_ONLY=48f84de812090000demo00000000697cf6e6a059
 > - [Create an account](https://etherscan.io/) on Etherscan
 > - Navigate to your Account Settings page
 > - In the sidebar, click on 'API-KEYs' and add a new token
-> - Copy & paste your Etherscan Api-Key Token into `.env`
+> - Copy & paste your Api-Key Token from Etherscan into `.env`
 
 ```
 // .env Example:
@@ -98,7 +98,7 @@ ETHERSCAN_API_KEY=K6NUTARFJZJCIXHF1F1E1YGJZ8RQ29BE4U
 6. Add DeFiPulse API token (free)
 
 > - [Follow this guide](https://docs.defipulse.com/quick-start-guide) to create an account and get your DeFiPulse API token
-> - Copy & paste your DeFiPulse API token into `.env`
+> - Copy & paste your Active API Key from DeFiPulse into `.env`
 
 ```
 // .env Example:
