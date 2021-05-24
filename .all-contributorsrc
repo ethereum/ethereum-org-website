@@ -3729,6 +3729,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "brettsmentek",
+      "name": "Brett",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9037105?v=4",
+      "profile": "https://brett.sh",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
