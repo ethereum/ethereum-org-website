@@ -959,6 +959,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://brett.sh"><img src="https://avatars.githubusercontent.com/u/9037105?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Brett</b></sub></a><br /><a href="#content-brettsmentek" title="Content">🖋</a></td>
     <td align="center"><a href="http://joao-monteiro.com"><img src="https://avatars.githubusercontent.com/u/6885917?v=4?s=100" width="100px;" alt=""/><br /><sub><b>João Monteiro</b></sub></a><br /><a href="#content-blackblather" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ablackblather" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/arunlodhi"><img src="https://avatars.githubusercontent.com/u/5833803?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Arun Lodhi</b></sub></a><br /><a href="#content-arunlodhi" title="Content">🖋</a></td>
+    <td align="center"><a href="https://unegma.com"><img src="https://avatars.githubusercontent.com/u/3952393?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tim</b></sub></a><br /><a href="#content-timhc22" title="Content">🖋</a></td>
   </tr>
 </table>
 
