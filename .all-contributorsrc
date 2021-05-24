@@ -3766,6 +3766,16 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "vitaliyhayda",
+      "name": "Vitaliy Hayda",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7917231?v=4",
+      "profile": "https://github.com/vitaliyhayda",
+      "contributions": [
+        "bug",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
