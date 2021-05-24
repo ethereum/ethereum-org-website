@@ -136,13 +136,17 @@ const Footer = () => {
           text: "get-eth",
         },
         {
+          to: `/dapps/`,
+          text: "decentralized-applications-dapps",
+        },
+        {
+          to: `/stablecoins/`,
+          text: "page-stablecoins-title",
+        },
+        {
           to: `/eth2/staking/`,
           text: "page-eth2-get-involved-stake-eth",
         },
-        {
-          to: "/enterprise/",
-          text: "enterprise",
-        },        
       ],
     },
     {
@@ -153,16 +157,32 @@ const Footer = () => {
           text: "what-is-ethereum",
         },
         {
-          to: `/glossary/`,
-          text: "ethereum-glossary",
-        },        
+          to: `/eth/`,
+          text: "what-is-ether",
+        },
         {
-          to: "/eips/",
-          text: "eips",
+          to: `/learn/`,
+          text: "guides-and-resources",
+        },
+        {
+          to: "/history/",
+          text: "history-of-ethereum",
         },
         {
           to: "/whitepaper/",
           text: "ethereum-whitepaper",
+        },
+        {
+          text: "ethereum-2-0",
+          to: "/eth2/",
+        },
+        {
+          to: `/glossary/`,
+          text: "ethereum-glossary",
+        },
+        {
+          to: "/eips/",
+          text: "eips",
         },
       ],
     },
@@ -170,8 +190,17 @@ const Footer = () => {
       title: "developers",
       links: [
         {
+          to: `/developers/`,
+          text: "get-started",
+          isPartiallyActive: false,
+        },
+        {
           to: `/developers/docs/`,
           text: "documentation",
+        },
+        {
+          to: `/developers/tutorials/`,
+          text: "tutorials",
         },
         {
           to: `/developers/learning-tools/`,
@@ -182,9 +211,9 @@ const Footer = () => {
           text: "set-up-local-env",
         },
         {
-          to: "https://devcon.org/",
-          text: "devcon",
-        },        
+          to: `/developers/`,
+          text: "developer-resources",
+        },
       ],
     },
     {
@@ -195,8 +224,16 @@ const Footer = () => {
           text: "ethereum-community",
         },
         {
-          to: "https://ethereum.foundation/",
+          to: "/foundation/",
           text: "ethereum-foundation",
+        },
+        {
+          to: "https://blog.ethereum.org/",
+          text: "ef-blog",
+        },
+        {
+          to: "https://esp.ethereum.foundation",
+          text: "esp",
         },
         {
           to: "/community/grants",
@@ -205,6 +242,27 @@ const Footer = () => {
         {
           to: "/assets/",
           text: "ethereum-brand-assets",
+        },
+        {
+          to: "https://devcon.org/",
+          text: "devcon",
+        },
+      ],
+    },
+    {
+      title: "enterprise",
+      links: [
+        {
+          to: "/enterprise/",
+          text: "mainnet-ethereum",
+        },
+        {
+          to: "/enterprise/private-ethereum/",
+          text: "private-ethereum",
+        },
+        {
+          to: "/enterprise/",
+          text: "enterprise",
         },
       ],
     },
@@ -224,8 +282,20 @@ const Footer = () => {
           text: "contributing",
         },
         {
-          to: "/en/legal/",
-          text: "legal",
+          to: "/languages/",
+          text: "language-support",
+        },
+        {
+          to: "/en/privacy-policy/",
+          text: "privacy-policy",
+        },
+        {
+          to: "/en/terms-of-use/",
+          text: "terms-of-use",
+        },
+        {
+          to: "/en/cookie-policy/",
+          text: "cookie-policy",
         },
         {
           to: "mailto:press@ethereum.org",
