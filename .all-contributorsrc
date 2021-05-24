@@ -3737,7 +3737,7 @@
       "profile": "https://brett.sh",
       "contributions": [
         "content"
-    ]
+      ]
     },
     {
       "login": "blackblather",
@@ -3747,6 +3747,15 @@
       "contributions": [
         "content",
         "bug"
+      ]
+    },
+    {
+      "login": "arunlodhi",
+      "name": "Arun Lodhi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5833803?v=4",
+      "profile": "https://github.com/arunlodhi",
+      "contributions": [
+        "content"
       ]
     }
   ],
