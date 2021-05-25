@@ -52,7 +52,7 @@ Learn more about [rollups](/developers/docs/scaling/layer-2-rollups/).
 
 #### State Channels {#channels}
 
-State channels utilize multisig contracts to enable participants to transact quickly and freely off-chain, then settle finality with mainnet. This minimizies network congestion, fees, and delays. The two types of channels are currently state channels and payment channels.
+State channels utilize multisig contracts to enable participants to transact quickly and freely off-chain, then settle finality with mainnet. This minimizes network congestion, fees, and delays. The two types of channels are currently state channels and payment channels.
 
 Learn more about [state channels](/developers/docs/scaling/state-channels/).
 
