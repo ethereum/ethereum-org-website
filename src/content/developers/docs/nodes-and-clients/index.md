@@ -42,7 +42,7 @@ If you want to [run your own node](/developers/docs/nodes-and-clients/run-a-node
 
 ### Archive node {#archive-node}
 
-- Stores everything kept in the full node and builds an archive of historical states. Needed if you want to query something like an account balance at block #4,000,000.
+- Stores everything kept in the full node and builds an archive of historical states. Needed if you want to query something like an account balance at block #4,000,000 or simply and realiablely [test your own transactions set without mining them using OpenEthereum](https://openethereum.github.io/JSONRPC-trace-module#trace_callmany).
 - These data represent units of terabytes which makes archive nodes less attractive for average users but can be handy for services like block explorers, wallet vendors, and chain analytics.
 
 Syncing clients in any mode other than archive will result in pruned blockchain data. This means, there is no archive of all historical state but the full node is able to build them on demand.
@@ -55,6 +55,8 @@ Running a node allows you to trustlessly and privately use Ethereum while suppor
 
 Running your own node enables you to use Ethereum in a truly private, self-sufficient and trustless manner. You don't need to trust the network because you can verify the data yourself with your client. "Don't trust, verify" is a popular blockchain mantra.
 
+- You can run the programs using your node on the same computer. This allows you to connect to your node using IPC or possibly through rewriting the node to load your program as a plugin bringing low latency which is a requirement when you to replace your transactions as fast as possible (aka frontrunning).
+- You can program your own custom RPC endpoints.
 - Your node verifies all the transactions and blocks against consensus rules by itself. This means you don’t have to rely on any other nodes in the network or fully trust them.
 - You won't have to leak your addresses and balances to random nodes. Everything can be checked with your own client.
 - Your dapp can be more secure and private if you use your own node. [Metamask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) and some other wallets can be easily pointed to your own local node.
@@ -110,6 +112,7 @@ This table summarises the different clients. All of them are actively worked on 
 | Client                                                       | Language | Operating systems     | Networks                                   | Sync strategies         | State pruning   |
 | ------------------------------------------------------------ | -------- | --------------------- | ------------------------------------------ | ----------------------- | --------------- |
 | [Geth](https://geth.ethereum.org/)                           | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Fast, Full              | Archive, Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon)                           | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Fast, Full              | Archive, Pruned |
 | [OpenEthereum](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, macOS | Mainnet, Kovan, Ropsten, and more          | Warp, Full              | Archive, Pruned |
 | [Nethermind](http://nethermind.io/)                          | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, and more | Fast, Full              | Archive, Pruned |
 | [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, and Görli       | Fast, Full              | Archive, Pruned |
@@ -124,6 +127,10 @@ Each client has unique use cases and advantages, so you should choose one based 
 #### Go Ethereum {#geth}
 
 Go Ethereum (Geth for short) is one of the original implementations of the Ethereum protocol. Currently, it is the most widespread client with the biggest user base and variety of tooling for users and developers. It is written in Go, fully open source and licensed under the GNU LGPL v3.
+
+#### Erigon {#erigon}
+
+Previously known as Turbo‐Geth. It is a fork of Go Ethereum oriented toward speed and disk‐space efficiency. It is fully compatible with Go Ethereum except for the on‐disk blockchain/database layout.
 
 #### OpenEthereum {#openethereum}
 
@@ -160,7 +167,7 @@ Hyperledger Besu is an enterprise-grade Ethereum client for public and permissio
 
 You define the type of sync when you get set up, like so:
 
-**Setting up light sync in [GETH](https://geth.ethereum.org/)**
+**Setting up light sync in [GETH](https://geth.ethereum.org/) or [ERIGON](https://github.com/ledgerwatch/erigon)**
 
 `geth --syncmode "light"`
 
