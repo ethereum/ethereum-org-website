@@ -59,7 +59,7 @@ ETH/USD Price Feed result
 Chainlink Price Feeds provide a hyper-reliable mechanism for getting high-quality price data into Solidity smart contracts so you can build new DeFi derivatives around real-world asset data. Moreover, Chainlink’s oracle framework provides the flexibility to quickly and easily fetch secure data around stocks, cryptocurrencies, stablecoins, indexes, and many other asset types, giving smart contract developers a robust data infrastructure to power the next wave of DeFi innovation.
 
 
-If you’re a developer and want to quickly get your application connected to Chainlink Price Reference Data, visit the <a href="https://docs.chain.link/">developer documentation and join the technical discussion in <a href="https://discordapp.com/invite/aSK4zew">Discord</a>.
+If you’re a developer and want to quickly get your application connected to Chainlink Price Reference Data, visit the <a href="https://docs.chain.link/">developer documentation</a> and join the technical discussion in <a href="https://discordapp.com/invite/aSK4zew">Discord</a>.
 
 
  
