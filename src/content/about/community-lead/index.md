@@ -60,4 +60,6 @@ Ethereum.org is led by a team within the Ethereum Foundation. [Learn more about 
 ## Contract details:
 
 - This is a full-time, remote position.
-- Compensation will ultimately depend on your experience, skillset, location and the contract structure but you can expect $25-$40 USD per hour, or $50,000-$80,000 USD annual salary.
+- Compensation will ultimately depend on your experience, skillset, location and the contract structure but you can expect $35-$45 USD per hour, or $70,000-$85,000 USD annual salary.
+
+To apply to this position, please include a brief (less than one page) cover letter explaining your qualifications and how you would like to improve the Ethereum community, along with a resume or CV.
