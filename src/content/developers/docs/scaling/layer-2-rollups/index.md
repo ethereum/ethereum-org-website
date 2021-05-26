@@ -50,7 +50,7 @@ The ZK-rollup smart contract maintains the state of all transfers on layer 2, an
 
 With a ZK-rollup, there are no delays when moving funds from layer 2 to layer 1 because a validity proof accepted by the ZK-rollup contract has already verified the funds.
 
-The sidechain where ZK-rollups happen can be optimised to reduce transaction size further. For instance, an account is represented by an index rather than an address, which reduces a transaction from 32 bytes to just 4 bytes. Transactions are also written to Ethereum as calldata, reducing gas.
+Being on layer 2, ZK-rollups can be optimised to reduce transaction size further. For instance, an account is represented by an index rather than an address, which reduces a transaction from 32 bytes to just 4 bytes. Transactions are also written to Ethereum as `calldata`, reducing gas.
 
 #### Pros and cons {#zk-pros-and-cons}
 
@@ -73,11 +73,11 @@ Multiple implementations of ZK-rollups exist that you can integrate into your da
 
 ### Optimistic rollups {#optimistic-rollups}
 
-Optimistic rollups use a sidechain that sits in parallel to the main Ethereum chain. They can offer improvements in scalability because they don't do any computation by default. Instead, after a transaction they propose the new state to mainnet. Or "notarise" the transaction.
+Optimistic rollups sit in parallel to the main Ethereum chain on layer 2. They can offer improvements in scalability because they don't do any computation by default. Instead, after a transaction they propose the new state to mainnet, or "notarise" the transaction.
 
-With Optimistic rollups transactions are written to the main Ethereum chain as calldata, optimising them further by reducing the gas cost.
+With Optimistic rollups, transactions are written to the main Ethereum chain as `calldata`, optimising them further by reducing the gas cost.
 
-As computation is the slow, expensive part of using Ethereum, Optimistic rollups can offer up to 10-100x improvements in scalability dependent on the transaction. This number will increase even more with the introduction of the Eth2 upgrade: [shard chains](/eth2/shard-chains). This is because there will be more data available in the event that a transaction is disputed.
+As computation is the slow, expensive part of using Ethereum, Optimistic rollups can offer up to 10-100x improvements in scalability dependent on the transaction. This number will increase even more with the introduction of [shard chains](/eth2/shard-chains). This is because there will be more data available in the event that a transaction is disputed.
 
 #### Disputing transactions {#disputing-transactions}
 
