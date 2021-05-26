@@ -29,27 +29,27 @@ sidebar: true
 ** സോളിഡിറ്റി - ** ** _ ജാവാസ്ക്രിപ്റ്റിൽ നിന്ന് പ്രചോദനം ഉൾക്കൊണ്ട Ethereum- ലെ ഏറ്റവും ജനപ്രിയ ഭാഷ. _ **
 
 - [പ്രമാണീകരണം](https://solidity.readthedocs.io)
-- [GitHub](https://github.com/ethereum/solidity/)
+- [Github](https://github.com/ethereum/solidity/)
 - [സോളിഡിറ്റി ജിറ്റർ ചാറ്റ്റൂം](https://gitter.im/ethereum/solidity/)
 
 ** ട്രഫിൾ - ** ** _ നോഡ് ഉപയോഗിച്ച് നിർമ്മിച്ച ഒരു വികസന അന്തരീക്ഷവും പരീക്ഷണ ചട്ടക്കൂടും. _ **
 
 - [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
+- [Github](https://github.com/trufflesuite/truffle)
 
 ** Web3.js - ** ** _ Ethereum ജാവാസ്ക്രിപ്റ്റ് API. _ **
 
 - [പ്രമാണീകരണം](https://web3js.readthedocs.io/en/1.0/)
-- [GitHub](https://github.com/ethereum/web3.js/)
+- [Github](https://github.com/ethereum/web3.js/)
 
 ** Ethers.js - ** ** _ ജാവാസ്ക്രിപ്റ്റിലും ടൈപ്പ്സ്ക്രിപ്റ്റിലും Ethereum Wallet നടപ്പിലാക്കലും യൂട്ടിലിറ്റികളും പൂർത്തിയാക്കുക. _ **
 
 - [പ്രമാണീകരണം](https://docs.ethers.io/)
-- [GitHub](https://github.com/ethers-io/ethers.js/)
+- [Github](https://github.com/ethers-io/ethers.js/)
 
 ** ethereumjs-vm - ** ** _ ജാവാസ്ക്രിപ്റ്റിൽ നടപ്പിലാക്കിയ Ethereum VM _ **
 
-- [GitHub](https://github.com/ethereumjs/ethereumjs-vm)
+- [Github](https://github.com/ethereumjs/ethereumjs-vm)
 
 കൂടുതൽ ഉറവിടങ്ങൾക്കായി തിരയുകയാണോ? [ ethereum.org/developers. ](/ml/developers/) പരിശോധിക്കുക
 
