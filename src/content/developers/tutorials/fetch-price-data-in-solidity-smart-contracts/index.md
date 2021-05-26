@@ -1,9 +1,5 @@
 # Fetch Price Data in Solidity Smart Contracts
 
-<p align="center">
-  <img src="./images/banner.png" />
-</p>
-
 DeFi applications and their underlying smart contracts need <a href="https://blog.chain.link/fetch-current-crypto-price-data-solidity/">reliable access to the current price of cryptocurrencies</a> and other off-chain asset data for enabling new on-chain markets while also providing end-to-end security guarantees to users. To securely get the current price of Ethereum, Bitcoin, or other cryptocurrencies in Solidity, one could either:
 
 <ul>
