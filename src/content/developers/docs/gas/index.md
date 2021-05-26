@@ -50,7 +50,7 @@ _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/d
 
 High gas fees are due to the popularity of Ethereum. Performing any operation on Ethereum requires consuming gas. This includes calculations, storing or manipulating data, or transferring tokens, each consuming different amounts of "gas" units. As dapp functionality grows more complex, the number of operations a smart contract performs grows too, and all contribute to high amounts of gas that must be paid for.
 
-Gas is paid for with small amounts of ether (denominated in gwei, or (10<sup>-9</sup> ETH)). This value represents the amount of ether being paid per "unit of gas", not for the entire transaction. Since gas is capped within a block, under the current system, this means that users must out-bid one another to be included in the next block if demand exceeds capacity. Gas cost alone does not actually determine how much we have to pay for a particular transaction. To calculate the transaction fee we have to multiply the gas cost by gas price, which is measured in gwei.
+Gas is paid for with small amounts of ether (denominated in gwei, or (10<sup>-9</sup> ETH)). This value represents the amount of ether being paid per "unit of gas", not for the entire transaction. Since gas is capped within a block, under the current system, this means that users must out-bid one another to be included in the next block if demand exceeds capacity. Gas cost alone does not actually determine how much we have to pay for a particular transaction. To calculate the transaction fee we have to multiply the gas limit by gas price, which is measured in gwei.
 
 This video about gas fees explains fully why fees are so expensive:
 
