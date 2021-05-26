@@ -87,6 +87,12 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [Documentation](http://docs.nethereum.com/en/latest/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
+**Tatum -** **_Blockchain development platform._**
+- [Tatum.io](https://www.tatum.io)
+- [API documentation](https://tatum.io/apidoc)
+- [Guides](http://docs.tatum.io)
+- [Telegram](https://t.me/tatumio)
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
