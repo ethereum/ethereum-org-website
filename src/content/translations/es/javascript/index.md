@@ -45,7 +45,7 @@ Usa Ethereum para crear aplicaciones descentralizadas (o "dapps") mediante los b
 
 **Ethers.js:** **_completa implementación de la cartera de Ethereum y utilidades en JavaScript y TypeScript._**
 
-- [Documentación](https://docs.ethers.io/ethers.js/html/)
+- [Documentación](https://docs.ethers.io/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
 **ethereumjs-vm: ** **_la máquina virtual de Ethereum implementada en JavaScript_**

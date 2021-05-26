@@ -45,7 +45,7 @@ Szűkséged van egy még kezdetlegesebb alapozóra? Tekintsd meg a [ethereum.org
 
 **Ethers.js -** **_Teljes Ethereum tárca implementáció és segédprogramok JavaScript-ben és TypeScript-ben._**
 
-- [Dokumentáció](https://docs.ethers.io/ethers.js/html/)
+- [Dokumentáció](https://docs.ethers.io/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
 **ethereumjs-vm -** **_Az Ethereum VM JavaScript-ben implementálva_**

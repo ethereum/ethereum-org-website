@@ -44,7 +44,7 @@ Behöver du en mer grundläggande introduktion först? Kolla in [ethereum.org/se
 
 **Ethers.js -** **_Fullständig Ethereum-plånboksimplementering och verktyg i JavaScript och TypeScript_**
 
-- [Dokumentation](https://docs.ethers.io/ethers.js/html/)
+- [Dokumentation](https://docs.ethers.io/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
 **ethereumjs-vm -** **_Ethereum VM implementerad i JavaScript_**

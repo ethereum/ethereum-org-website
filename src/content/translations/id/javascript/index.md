@@ -44,7 +44,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/id/learn/) 
 
 **Ethers.js -** **_Implementasi wallet Ethereum secara lengkap dengan JavaScript and TypeScript._**
 
-- [Dokumentasi](https://docs.ethers.io/ethers.js/html/)
+- [Dokumentasi](https://docs.ethers.io/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
 **ethereumjs-vm -** **_Implementasi Ethereum Virtual Machine (EVM) di JavaScript_**
