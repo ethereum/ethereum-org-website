@@ -1,5 +1,9 @@
 # Fetch Price Data in Solidity Smart Contracts
 
+<p align="center">
+  <img src="./images/banner.png" />
+</p>
+
 DeFi applications and their underlying smart contracts need reliable access to the current price of cryptocurrencies and other off-chain asset data for enabling new on-chain markets while also providing end-to-end security guarantees to users. To securely get the current price of Ethereum, Bitcoin, or other cryptocurrencies in Solidity, one could either:
 
 -Fetch price data using Chainlink Price Feeds  
@@ -39,9 +43,11 @@ Now we are ready to deploy and test our contract. Compile the contract in Remix,
 
 Once deployed, we simply need to execute the “getLatestPrice” function. The result should be that the function returns the latest price from the ETH/USD Aggregator contract, which can then be used on-chain in our smart contract. Take note that we didn’t need to send any LINK for the request, and we didn’t even use any ETH either since the transaction is a pure read of the data in the on-chain ETH-USD Aggregator contract.
 
+<p align="center">
+  <img src="./images/eth-usd.png" />
+</p>
+ETH/USD Price Feed result
 
-<ETH/USD Price Feed result>
-<ALT: ETH/USD Price Feed result>
 ## Summary
 Chainlink Price Feeds provide a hyper-reliable mechanism for getting high-quality price data into Solidity smart contracts so you can build new DeFi derivatives around real-world asset data. Moreover, Chainlink’s oracle framework provides the flexibility to quickly and easily fetch secure data around stocks, cryptocurrencies, stablecoins, indexes, and many other asset types, giving smart contract developers a robust data infrastructure to power the next wave of DeFi innovation.
 
