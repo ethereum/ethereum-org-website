@@ -1713,7 +1713,11 @@
       "profile": "https://github.com/ryancreatescopy",
       "contributions": [
         "doc",
-        "code"
+        "code",
+        "design",
+        "bug",
+        "ideas",
+        "review"
       ]
     },
     {
@@ -3802,6 +3806,15 @@
       "name": "davidplutus",
       "avatar_url": "https://avatars.githubusercontent.com/u/63456936?v=4",
       "profile": "https://github.com/DavidPlutus",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "Karthickmerk",
+      "name": "Karthickmerk",
+      "avatar_url": "https://avatars.githubusercontent.com/u/53270101?v=4",
+      "profile": "https://github.com/Karthickmerk",
       "contributions": [
         "ideas"
       ]
