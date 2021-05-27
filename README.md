@@ -5,7 +5,7 @@
 
 <h1 align="center" style="margin-top: 1em; margin-bottom: 3em;">
   <p><a href="https://ethereum.org"><img alt="ethereum logo" src="./eth-transparent.png" alt="ethereum.org" width="125"></a></p>
-  <p>👋 Welcome to ethereum.org!</p>
+  <p> <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px"> Welcome to ethereum.org!</p>
 </h1>
 
 This is the repo for the [ethereum.org](https://ethereum.org) website, a resource for the Ethereum community. The purpose of the site is to _“Be the best portal to Ethereum for our growing global community"_ - read more about what this means [here](https://ethereum.org/en/about/).
