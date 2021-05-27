@@ -966,6 +966,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://linkedin.com/in/ayushman17/"><img src="https://avatars.githubusercontent.com/u/53474591?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ayushman Singh Chauhan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aayushman17" title="Bug reports">🐛</a> <a href="#content-ayushman17" title="Content">🖋</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/keqi-huang/"><img src="https://avatars.githubusercontent.com/u/28261876?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Keqi Huang</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ALisanaaa" title="Bug reports">🐛</a> <a href="#content-Lisanaaa" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/DavidPlutus"><img src="https://avatars.githubusercontent.com/u/63456936?v=4?s=100" width="100px;" alt=""/><br /><sub><b>davidplutus</b></sub></a><br /><a href="#ideas-davidplutus" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/Karthickmerk"><img src="https://avatars.githubusercontent.com/u/53270101?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Karthickmerk</b></sub></a><br /><a href="#ideas-Karthickmerk" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
