@@ -137,9 +137,9 @@ const AssetsPage = ({ data }) => {
             artistUrl="https://viktorhachmang.nl"
           />
           <AssetDownload
-            title={translateMessageId("page-assets-doge", intl)}
+            title="Sharding"
             alt={translateMessageId("page-assets-doge", intl)}
-            image={data.doge.childImageSharp}
+            image={data.newRings.childImageSharp}
             artistName="Viktor Hachmang"
             artistUrl="https://viktorhachmang.nl"
           />
@@ -561,6 +561,9 @@ export const query = graphql`
       ...heroImage
     }
     oldShip: file(relativePath: { eq: "eth2/oldship.png" }) {
+      ...assetItem
+    }
+    newRings: file(relativePath: { eq: "eth2/newrings.png" }) {
       ...assetItem
     }
     efLogo: file(relativePath: { eq: "ef-logo.png" }) {
