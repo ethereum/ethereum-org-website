@@ -234,6 +234,24 @@ const AssetsPage = ({ data }) => {
           />
         </Row>
 
+        <Row>
+          <AssetDownload
+            title="Beacon Chain"
+            alt="Beacon Chain"
+            image={data.beaconChain.childImageSharp}
+            artistName="Viktor Hachmang"
+            artistUrl="http://viktorhachmang.nl/"
+          />
+          <AssetDownload
+            title="Beacon Chain"
+            alt="Beacon Chain"
+            image={data.beaconChain.childImageSharp}
+            artistName="Viktor Hachmang"
+            artistUrl="http://viktorhachmang.nl/"
+            shouldHide={true}
+          />
+        </Row>
+
         <H2 id="historical">
           <Translation id="page-assets-historical-artwork" />
         </H2>
@@ -604,6 +622,9 @@ export const query = graphql`
       ...assetItem
     }
     finance: file(relativePath: { eq: "finance_transparent.png" }) {
+      ...assetItem
+    }
+    beaconChain: file(relativePath: { eq: "eth2/core.png" }) {
       ...assetItem
     }
     efLogo: file(relativePath: { eq: "ef-logo.png" }) {
