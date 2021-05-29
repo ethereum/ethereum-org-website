@@ -172,15 +172,15 @@ const AssetsPage = ({ data }) => {
 
         <Row>
           <AssetDownload
-            title="Impact"
-            alt="Impact"
+            title={translateMessageId("page-assets-impact", intl)}
+            alt={translateMessageId("page-assets-impact", intl)}
             image={data.impact.childImageSharp}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
-            title="Future"
-            alt="Future"
+            title={translateMessageId("page-assets-future", intl)}
+            alt={translateMessageId("page-assets-future", intl)}
             image={data.future.childImageSharp}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
@@ -189,15 +189,15 @@ const AssetsPage = ({ data }) => {
 
         <Row>
           <AssetDownload
-            title="Finance"
-            alt="Finance"
+            title={translateMessageId("page-assets-finance", intl)}
+            alt={translateMessageId("page-assets-finance", intl)}
             image={data.finance.childImageSharp}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
-            title="Infrastructure"
-            alt="Infrastructure"
+            title={translateMessageId("page-assets-infrastructure", intl)}
+            alt={translateMessageId("page-assets-infrastructure", intl)}
             image={data.infrastructure.childImageSharp}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
@@ -223,15 +223,15 @@ const AssetsPage = ({ data }) => {
 
         <Row>
           <AssetDownload
-            title="Oldship"
-            alt="Oldship"
+            title={translateMessageId("page-assets-oldship", intl)}
+            alt={translateMessageId("page-assets-oldship", intl)}
             image={data.oldShip.childImageSharp}
             artistName="Viktor Hachmang"
             artistUrl="https://viktorhachmang.nl"
           />
           <AssetDownload
-            title="Docking"
-            alt="Docking"
+            title={translateMessageId("page-assets-docking", intl)}
+            alt={translateMessageId("page-assets-docking", intl)}
             image={data.merge.childImageSharp}
             artistName="Viktor Hachmang"
             artistUrl="https://viktorhachmang.nl"
@@ -240,15 +240,15 @@ const AssetsPage = ({ data }) => {
 
         <Row>
           <AssetDownload
-            title="Beacon Chain"
-            alt="Beacon Chain"
+            title={translateMessageId("page-assets-beacon-chain", intl)}
+            alt={translateMessageId("page-assets-beacon-chain", intl)}
             image={data.beaconChain.childImageSharp}
             artistName="Viktor Hachmang"
             artistUrl="http://viktorhachmang.nl/"
           />
           <AssetDownload
-            title="Sharding"
-            alt="Sharding"
+            title={translateMessageId("page-assets-sharding", intl)}
+            alt={translateMessageId("page-assets-sharding", intl)}
             image={data.newRings.childImageSharp}
             artistName="Viktor Hachmang"
             artistUrl="https://viktorhachmang.nl"
@@ -257,15 +257,15 @@ const AssetsPage = ({ data }) => {
 
         <Row>
           <AssetDownload
-            title="DeFi"
-            alt="DeFi"
+            title={translateMessageId("page-assets-defi", intl)}
+            alt={translateMessageId("page-assets-defi", intl)}
             image={data.defi.childImageSharp}
             artistName="Patrick Atkins"
             artistUrl="https://www.patrickatkins.co.uk/"
           />
           <AssetDownload
-            title="DAO"
-            alt="DAO"
+            title={translateMessageId("page-assets-dao", intl)}
+            alt={translateMessageId("page-assets-dao", intl)}
             image={data.dao.childImageSharp}
             artistName="Patrick Atkins"
             artistUrl="https://www.patrickatkins.co.uk/"

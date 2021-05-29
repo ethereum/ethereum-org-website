@@ -32,5 +32,15 @@
   "page-assets-meta-title": "Ethereum brand assets",
   "page-assets-page-assets-solid-background": "Solid background",
   "page-assets-page-assets-transparent-background": "Transparent background",
-  "page-assets-robot": "Robot wallet"
+  "page-assets-robot": "Robot wallet",
+  "page-assets-impact": "Impact",
+  "page-assets-future": "Future",
+  "page-assets-finance": "Finance",
+  "page-assets-infrastructure": "Infrastructure",
+  "page-assets-oldship": "Oldship",
+  "page-assets-docking": "Docking",
+  "page-assets-beacon-chain": "Beacon Chain",
+  "page-assets-sharding": "Sharding",
+  "page-assets-defi": "DeFi",
+  "page-assets-dao": "DAO"
 }
