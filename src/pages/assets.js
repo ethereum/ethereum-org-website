@@ -130,6 +130,30 @@ const AssetsPage = ({ data }) => {
 
         <Row>
           <AssetDownload
+            title="Oldship"
+            alt="Oldship"
+            image={data.oldShip.childImageSharp}
+            artistName="Viktor Hachmang"
+            artistUrl="https://viktorhachmang.nl"
+          />
+          <AssetDownload
+            title={translateMessageId("page-assets-doge", intl)}
+            alt={translateMessageId("page-assets-doge", intl)}
+            image={data.doge.childImageSharp}
+            artistName="Viktor Hachmang"
+            artistUrl="https://viktorhachmang.nl"
+          />
+          <AssetDownload
+            title={translateMessageId("page-assets-doge", intl)}
+            alt={translateMessageId("page-assets-doge", intl)}
+            image={data.doge.childImageSharp}
+            artistName="Viktor Hachmang"
+            artistUrl="https://viktorhachmang.nl"
+          />
+        </Row>
+
+        <Row>
+          <AssetDownload
             title={translateMessageId("page-assets-doge", intl)}
             alt={translateMessageId("page-assets-doge", intl)}
             image={data.doge.childImageSharp}
@@ -535,6 +559,9 @@ export const query = graphql`
     }
     oldHeroDark: file(relativePath: { eq: "assets/hero-dark.png" }) {
       ...heroImage
+    }
+    oldShip: file(relativePath: { eq: "eth2/oldship.png" }) {
+      ...assetItem
     }
     efLogo: file(relativePath: { eq: "ef-logo.png" }) {
       ...assetItem
