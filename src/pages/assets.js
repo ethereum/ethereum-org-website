@@ -209,9 +209,9 @@ const AssetsPage = ({ data }) => {
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
-            title={translateMessageId("page-assets-enterprise", intl)}
-            alt={translateMessageId("page-assets-enterprise", intl)}
-            image={data.enterprise.childImageSharp}
+            title="Finance"
+            alt="Finance"
+            image={data.finance.childImageSharp}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
