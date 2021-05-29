@@ -202,9 +202,9 @@ const AssetsPage = ({ data }) => {
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
-            title={translateMessageId("page-assets-blocks", intl)}
-            alt={translateMessageId("page-assets-blocks", intl)}
-            image={data.developers.childImageSharp}
+            title="Future"
+            alt="Future"
+            image={data.future.childImageSharp}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
@@ -600,10 +600,10 @@ export const query = graphql`
     ) {
       ...assetItem
     }
-    future: file(relativePath: { eq: "eth2/merge.png" }) {
+    future: file(relativePath: { eq: "future_transparent.png" }) {
       ...assetItem
     }
-    finance: file(relativePath: { eq: "eth2/merge.png" }) {
+    finance: file(relativePath: { eq: "finance_transparent.png" }) {
       ...assetItem
     }
     efLogo: file(relativePath: { eq: "ef-logo.png" }) {
