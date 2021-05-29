@@ -585,10 +585,10 @@ export const query = graphql`
     hero: file(relativePath: { eq: "home/hero.png" }) {
       ...heroImage
     }
-    developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
+    doge: file(relativePath: { eq: "doge-computer.png" }) {
       ...assetItem
     }
-    doge: file(relativePath: { eq: "doge-computer.png" }) {
+    developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       ...assetItem
     }
     enterprise: file(relativePath: { eq: "enterprise-eth.png" }) {
@@ -597,10 +597,42 @@ export const query = graphql`
     wallet: file(relativePath: { eq: "wallet.png" }) {
       ...assetItem
     }
-    eth: file(relativePath: { eq: "eth.png" }) {
+    impact: file(relativePath: { eq: "impact_transparent.png" }) {
+      ...assetItem
+    }
+    future: file(relativePath: { eq: "future_transparent.png" }) {
+      ...assetItem
+    }
+    finance: file(relativePath: { eq: "finance_transparent.png" }) {
+      ...assetItem
+    }
+    infrastructure: file(
+      relativePath: { eq: "infrastructure_transparent.png" }
+    ) {
       ...assetItem
     }
     whatIsEthereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
+      ...assetItem
+    }
+    eth: file(relativePath: { eq: "eth.png" }) {
+      ...assetItem
+    }
+    oldShip: file(relativePath: { eq: "eth2/oldship.png" }) {
+      ...assetItem
+    }
+    merge: file(relativePath: { eq: "eth2/merge.png" }) {
+      ...assetItem
+    }
+    beaconChain: file(relativePath: { eq: "eth2/core.png" }) {
+      ...assetItem
+    }
+    newRings: file(relativePath: { eq: "eth2/newrings.png" }) {
+      ...assetItem
+    }
+    defi: file(relativePath: { eq: "use-cases/defi.png" }) {
+      ...assetItem
+    }
+    dao: file(relativePath: { eq: "use-cases/dao-2.png" }) {
       ...assetItem
     }
     ethGifCat: file(relativePath: { eq: "eth-gif-cat.png" }) {
@@ -620,38 +652,6 @@ export const query = graphql`
     }
     oldHeroDark: file(relativePath: { eq: "assets/hero-dark.png" }) {
       ...heroImage
-    }
-    oldShip: file(relativePath: { eq: "eth2/oldship.png" }) {
-      ...assetItem
-    }
-    newRings: file(relativePath: { eq: "eth2/newrings.png" }) {
-      ...assetItem
-    }
-    merge: file(relativePath: { eq: "eth2/merge.png" }) {
-      ...assetItem
-    }
-    impact: file(relativePath: { eq: "impact_transparent.png" }) {
-      ...assetItem
-    }
-    infrastructure: file(
-      relativePath: { eq: "infrastructure_transparent.png" }
-    ) {
-      ...assetItem
-    }
-    future: file(relativePath: { eq: "future_transparent.png" }) {
-      ...assetItem
-    }
-    finance: file(relativePath: { eq: "finance_transparent.png" }) {
-      ...assetItem
-    }
-    beaconChain: file(relativePath: { eq: "eth2/core.png" }) {
-      ...assetItem
-    }
-    defi: file(relativePath: { eq: "use-cases/defi.png" }) {
-      ...assetItem
-    }
-    dao: file(relativePath: { eq: "use-cases/dao-2.png" }) {
-      ...assetItem
     }
     efLogo: file(relativePath: { eq: "ef-logo.png" }) {
       ...assetItem
