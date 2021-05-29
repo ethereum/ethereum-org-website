@@ -130,30 +130,6 @@ const AssetsPage = ({ data }) => {
 
         <Row>
           <AssetDownload
-            title="Oldship"
-            alt="Oldship"
-            image={data.oldShip.childImageSharp}
-            artistName="Viktor Hachmang"
-            artistUrl="https://viktorhachmang.nl"
-          />
-          <AssetDownload
-            title="Docking"
-            alt="Docking"
-            image={data.docking.childImageSharp}
-            artistName="Viktor Hachmang"
-            artistUrl="https://viktorhachmang.nl"
-          />
-          <AssetDownload
-            title="Sharding"
-            alt="Sharding"
-            image={data.newRings.childImageSharp}
-            artistName="Viktor Hachmang"
-            artistUrl="https://viktorhachmang.nl"
-          />
-        </Row>
-
-        <Row>
-          <AssetDownload
             title={translateMessageId("page-assets-doge", intl)}
             alt={translateMessageId("page-assets-doge", intl)}
             image={data.doge.childImageSharp}
@@ -185,11 +161,12 @@ const AssetsPage = ({ data }) => {
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
-            title="Infrastructure"
-            alt="Infrastructure"
-            image={data.infrastructure.childImageSharp}
+            title={translateMessageId("page-assets-robot", intl)}
+            alt={translateMessageId("page-assets-robot", intl)}
+            image={data.wallet.childImageSharp}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
+            shouldHide={true}
           />
         </Row>
 
@@ -208,10 +185,20 @@ const AssetsPage = ({ data }) => {
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
+        </Row>
+
+        <Row>
           <AssetDownload
             title="Finance"
             alt="Finance"
             image={data.finance.childImageSharp}
+            artistName="William Tempest"
+            artistUrl="https://cargocollective.com/willtempest"
+          />
+          <AssetDownload
+            title="Infrastructure"
+            alt="Infrastructure"
+            image={data.infrastructure.childImageSharp}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
@@ -236,6 +223,23 @@ const AssetsPage = ({ data }) => {
 
         <Row>
           <AssetDownload
+            title="Oldship"
+            alt="Oldship"
+            image={data.oldShip.childImageSharp}
+            artistName="Viktor Hachmang"
+            artistUrl="https://viktorhachmang.nl"
+          />
+          <AssetDownload
+            title="Docking"
+            alt="Docking"
+            image={data.merge.childImageSharp}
+            artistName="Viktor Hachmang"
+            artistUrl="https://viktorhachmang.nl"
+          />
+        </Row>
+
+        <Row>
+          <AssetDownload
             title="Beacon Chain"
             alt="Beacon Chain"
             image={data.beaconChain.childImageSharp}
@@ -243,12 +247,11 @@ const AssetsPage = ({ data }) => {
             artistUrl="http://viktorhachmang.nl/"
           />
           <AssetDownload
-            title="Beacon Chain"
-            alt="Beacon Chain"
-            image={data.beaconChain.childImageSharp}
+            title="Sharding"
+            alt="Sharding"
+            image={data.newRings.childImageSharp}
             artistName="Viktor Hachmang"
-            artistUrl="http://viktorhachmang.nl/"
-            shouldHide={true}
+            artistUrl="https://viktorhachmang.nl"
           />
         </Row>
 
@@ -607,7 +610,7 @@ export const query = graphql`
     newRings: file(relativePath: { eq: "eth2/newrings.png" }) {
       ...assetItem
     }
-    docking: file(relativePath: { eq: "eth2/merge.png" }) {
+    merge: file(relativePath: { eq: "eth2/merge.png" }) {
       ...assetItem
     }
     impact: file(relativePath: { eq: "impact_transparent.png" }) {
