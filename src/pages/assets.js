@@ -185,12 +185,35 @@ const AssetsPage = ({ data }) => {
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
-            title={translateMessageId("page-assets-robot", intl)}
-            alt={translateMessageId("page-assets-robot", intl)}
-            image={data.wallet.childImageSharp}
+            title="Infrastructure"
+            alt="Infrastructure"
+            image={data.infrastructure.childImageSharp}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
-            shouldHide={true}
+          />
+        </Row>
+
+        <Row>
+          <AssetDownload
+            title={translateMessageId("page-assets-doge", intl)}
+            alt={translateMessageId("page-assets-doge", intl)}
+            image={data.doge.childImageSharp}
+            artistName="William Tempest"
+            artistUrl="https://cargocollective.com/willtempest"
+          />
+          <AssetDownload
+            title={translateMessageId("page-assets-blocks", intl)}
+            alt={translateMessageId("page-assets-blocks", intl)}
+            image={data.developers.childImageSharp}
+            artistName="William Tempest"
+            artistUrl="https://cargocollective.com/willtempest"
+          />
+          <AssetDownload
+            title={translateMessageId("page-assets-enterprise", intl)}
+            alt={translateMessageId("page-assets-enterprise", intl)}
+            image={data.enterprise.childImageSharp}
+            artistName="William Tempest"
+            artistUrl="https://cargocollective.com/willtempest"
           />
         </Row>
 
@@ -567,6 +590,20 @@ export const query = graphql`
       ...assetItem
     }
     docking: file(relativePath: { eq: "eth2/merge.png" }) {
+      ...assetItem
+    }
+    impact: file(relativePath: { eq: "impact_transparent.png" }) {
+      ...assetItem
+    }
+    infrastructure: file(
+      relativePath: { eq: "infrastructure_transparent.png" }
+    ) {
+      ...assetItem
+    }
+    future: file(relativePath: { eq: "eth2/merge.png" }) {
+      ...assetItem
+    }
+    finance: file(relativePath: { eq: "eth2/merge.png" }) {
       ...assetItem
     }
     efLogo: file(relativePath: { eq: "ef-logo.png" }) {
