@@ -195,9 +195,9 @@ const AssetsPage = ({ data }) => {
 
         <Row>
           <AssetDownload
-            title={translateMessageId("page-assets-doge", intl)}
-            alt={translateMessageId("page-assets-doge", intl)}
-            image={data.doge.childImageSharp}
+            title="Impact"
+            alt="Impact"
+            image={data.impact.childImageSharp}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
