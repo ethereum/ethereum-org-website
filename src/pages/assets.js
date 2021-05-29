@@ -255,6 +255,23 @@ const AssetsPage = ({ data }) => {
           />
         </Row>
 
+        <Row>
+          <AssetDownload
+            title="DeFi"
+            alt="DeFi"
+            image={data.defi.childImageSharp}
+            artistName="Patrick Atkins"
+            artistUrl="https://www.patrickatkins.co.uk/"
+          />
+          <AssetDownload
+            title="Sharding"
+            alt="Sharding"
+            image={data.newRings.childImageSharp}
+            artistName="Viktor Hachmang"
+            artistUrl="https://viktorhachmang.nl"
+          />
+        </Row>
+
         <H2 id="historical">
           <Translation id="page-assets-historical-artwork" />
         </H2>
@@ -628,6 +645,9 @@ export const query = graphql`
       ...assetItem
     }
     beaconChain: file(relativePath: { eq: "eth2/core.png" }) {
+      ...assetItem
+    }
+    defi: file(relativePath: { eq: "use-cases/defi.png" }) {
       ...assetItem
     }
     efLogo: file(relativePath: { eq: "ef-logo.png" }) {
