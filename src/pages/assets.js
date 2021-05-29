@@ -264,11 +264,11 @@ const AssetsPage = ({ data }) => {
             artistUrl="https://www.patrickatkins.co.uk/"
           />
           <AssetDownload
-            title="Sharding"
-            alt="Sharding"
-            image={data.newRings.childImageSharp}
-            artistName="Viktor Hachmang"
-            artistUrl="https://viktorhachmang.nl"
+            title="DAO"
+            alt="DAO"
+            image={data.dao.childImageSharp}
+            artistName="Patrick Atkins"
+            artistUrl="https://www.patrickatkins.co.uk/"
           />
         </Row>
 
@@ -648,6 +648,9 @@ export const query = graphql`
       ...assetItem
     }
     defi: file(relativePath: { eq: "use-cases/defi.png" }) {
+      ...assetItem
+    }
+    dao: file(relativePath: { eq: "use-cases/dao-2.png" }) {
       ...assetItem
     }
     efLogo: file(relativePath: { eq: "ef-logo.png" }) {
