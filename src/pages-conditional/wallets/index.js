@@ -728,5 +728,8 @@ export const query = graphql`
     tokenpocket: file(relativePath: { eq: "wallets/tokenpocket.png" }) {
       ...listImage
     }
+    walleth: file(relativePath: { eq: "wallets/walleth.png" }) {
+      ...listImage
+    }
   }
 `
