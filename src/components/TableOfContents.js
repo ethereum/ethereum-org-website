@@ -1,9 +1,10 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import { motion } from "framer-motion"
 import { useIntl } from "gatsby-plugin-intl"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
+import { ZenModeContext } from "./Layout"
 import ButtonLink from "./ButtonLink"
 import Icon from "./Icon"
 import Translation from "./Translation"
@@ -314,7 +315,7 @@ const TableOfContents = ({
   editPath,
   isMobile = false,
 }) => {
-  const [isZenMode, setIsZenMode] = useState(false)
+  const { isZenMode, setIsZenMode } = useContext(ZenModeContext)
   const intl = useIntl()
   if (!items) {
     return null

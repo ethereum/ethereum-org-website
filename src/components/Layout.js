@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, createContext } from "react"
 import { ThemeProvider } from "styled-components"
 import { IntlProvider, IntlContextProvider } from "gatsby-plugin-intl"
 import styled from "styled-components"
@@ -48,9 +48,13 @@ const Main = styled.main`
   flex-grow: 1;
 `
 
+export const ZenModeContext = createContext(null)
+
 const Layout = (props) => {
   const [isDarkTheme, setIsDarkTheme] = useState(false)
+  const [isZenMode, setIsZenMode] = useState(false)
   const [shouldShowSideNav, setShouldShowSideNav] = useState(false)
+
   // set isDarkTheme based on browser/app user preferences
   useEffect(() => {
     if (localStorage && localStorage.getItem("dark-theme") !== null) {
@@ -61,7 +65,13 @@ const Layout = (props) => {
   }, [])
 
   useEffect(() => {
-    setShouldShowSideNav(props.path.includes("/docs/"))
+    if (props.path.includes("/docs/")) {
+      setShouldShowSideNav(true)
+
+      if (localStorage && localStorage.getItem("zen-mode") !== null) {
+        setIsZenMode(localStorage.getItem("zen-mode") === "true")
+      }
+    }
   }, [props.path])
 
   const handleThemeChange = () => {
@@ -103,17 +113,24 @@ const Layout = (props) => {
             isPageRightToLeft={isPageRightToLeft}
             originalPagePath={intl.originalPath}
           />
-          <ContentContainer>
-            <Nav
-              handleThemeChange={handleThemeChange}
-              isDarkTheme={isDarkTheme}
-              path={path}
-            />
+          <ContentContainer
+            shouldShowSideNav={shouldShowSideNav}
+            isZenMode={isZenMode}
+          >
+            {!isZenMode && (
+              <Nav
+                handleThemeChange={handleThemeChange}
+                isDarkTheme={isDarkTheme}
+                path={path}
+              />
+            )}
             {shouldShowSideNav && <SideNavMobile path={path} />}
             <MainContainer>
-              {shouldShowSideNav && <SideNav path={path} />}
+              {!isZenMode && shouldShowSideNav && <SideNav path={path} />}
               <MainContent>
-                <Main>{props.children}</Main>
+                <ZenModeContext.Provider value={{ isZenMode, setIsZenMode }}>
+                  <Main>{props.children}</Main>
+                </ZenModeContext.Provider>
               </MainContent>
             </MainContainer>
             <Footer />
