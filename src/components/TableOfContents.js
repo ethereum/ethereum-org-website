@@ -153,6 +153,10 @@ const ZenModeContainer = styled.div`
   align-items: center;
 `
 
+const ZenModeToggleContainer = styled.span`
+  cursor: pointer;
+`
+
 const ZenModeText = styled.span`
   margin-right: 0.7rem;
 `
@@ -310,6 +314,7 @@ const TableOfContents = ({
   editPath,
   isMobile = false,
 }) => {
+  const [isZenMode, setIsZenMode] = useState(false)
   const intl = useIntl()
   if (!items) {
     return null
@@ -327,14 +332,16 @@ const TableOfContents = ({
       />
     )
   }
-
   const shouldShowEditButtom = editPath && intl.locale === "en"
+
   return (
     <Aside className={className}>
       <OuterList>
         <ZenModeContainer>
           <ZenModeText>Zen Mode:</ZenModeText>
-          <Icon name="zenModeOff" size="2rem" />
+          <ZenModeToggleContainer onClick={() => setIsZenMode(!isZenMode)}>
+            <Icon name={isZenMode ? "zenModeOn" : "zenModeOff"} size="2rem" />
+          </ZenModeToggleContainer>
         </ZenModeContainer>
         {shouldShowEditButtom && (
           <ButtonContainer>
