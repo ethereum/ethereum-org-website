@@ -13,4 +13,4 @@ There are at least two currently maintained libraries for Dart to use the JSON R
 1. [Ethereum 5.0.0 from darticulate.com](https://pub.dev/packages/ethereum)
 
 As well as additional libraries that allow you manipulate specifically Ethereum addresses, or that let you retrieve prices of various crypto
-currencies. [You can see the full list here](https://pub.dev/dart/packages?q=ethereum)
+currencies. [You can see the full list here](https://pub.dev/dart/packages?q=ethereum).
