@@ -154,6 +154,47 @@ const AssetsPage = ({ data }) => {
 
         <Row>
           <AssetDownload
+            title={translateMessageId("page-assets-infrastructure", intl)}
+            alt={translateMessageId("page-assets-infrastructure", intl)}
+            image={data.infrastructure.childImageSharp}
+            artistName="William Tempest"
+            artistUrl="https://cargocollective.com/willtempest"
+          />
+          <AssetDownload
+            title={translateMessageId("page-assets-finance", intl)}
+            alt={translateMessageId("page-assets-finance", intl)}
+            image={data.finance.childImageSharp}
+            artistName="William Tempest"
+            artistUrl="https://cargocollective.com/willtempest"
+          />
+          <AssetDownload
+            title={translateMessageId("page-assets-impact", intl)}
+            alt={translateMessageId("page-assets-impact", intl)}
+            image={data.impact.childImageSharp}
+            artistName="William Tempest"
+            artistUrl="https://cargocollective.com/willtempest"
+          />
+        </Row>
+
+        <Row>
+          <AssetDownload
+            title={translateMessageId("page-assets-future", intl)}
+            alt={translateMessageId("page-assets-future", intl)}
+            image={data.future.childImageSharp}
+            artistName="William Tempest"
+            artistUrl="https://cargocollective.com/willtempest"
+          />
+          <AssetDownload
+            title={translateMessageId("page-assets-hackathon", intl)}
+            alt={translateMessageId("page-assets-hackathon", intl)}
+            image={data.hackathon.childImageSharp}
+            artistName="William Tempest"
+            artistUrl="https://cargocollective.com/willtempest"
+          />
+        </Row>
+
+        <Row>
+          <AssetDownload
             title={translateMessageId("page-assets-robot", intl)}
             alt={translateMessageId("page-assets-robot", intl)}
             image={data.wallet.childImageSharp}
@@ -167,47 +208,6 @@ const AssetsPage = ({ data }) => {
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
             shouldHide={true}
-          />
-        </Row>
-
-        <Row>
-          <AssetDownload
-            title={translateMessageId("page-assets-hackathon", intl)}
-            alt={translateMessageId("page-assets-hackathon", intl)}
-            image={data.hackathon.childImageSharp}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
-          />
-          <AssetDownload
-            title={translateMessageId("page-assets-impact", intl)}
-            alt={translateMessageId("page-assets-impact", intl)}
-            image={data.impact.childImageSharp}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
-          />
-          <AssetDownload
-            title={translateMessageId("page-assets-future", intl)}
-            alt={translateMessageId("page-assets-future", intl)}
-            image={data.future.childImageSharp}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
-          />
-        </Row>
-
-        <Row>
-          <AssetDownload
-            title={translateMessageId("page-assets-finance", intl)}
-            alt={translateMessageId("page-assets-finance", intl)}
-            image={data.finance.childImageSharp}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
-          />
-          <AssetDownload
-            title={translateMessageId("page-assets-infrastructure", intl)}
-            alt={translateMessageId("page-assets-infrastructure", intl)}
-            image={data.infrastructure.childImageSharp}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
           />
         </Row>
 
