@@ -223,15 +223,15 @@ const AssetsPage = ({ data }) => {
 
         <Row>
           <AssetDownload
-            title={translateMessageId("page-assets-oldship", intl)}
-            alt={translateMessageId("page-assets-oldship", intl)}
+            title={translateMessageId("page-assets-mainnet", intl)}
+            alt={translateMessageId("page-assets-mainnet", intl)}
             image={data.oldShip.childImageSharp}
             artistName="Viktor Hachmang"
             artistUrl="https://viktorhachmang.nl"
           />
           <AssetDownload
-            title={translateMessageId("page-assets-docking", intl)}
-            alt={translateMessageId("page-assets-docking", intl)}
+            title={translateMessageId("page-assets-merge", intl)}
+            alt={translateMessageId("page-assets-merge", intl)}
             image={data.merge.childImageSharp}
             artistName="Viktor Hachmang"
             artistUrl="https://viktorhachmang.nl"
