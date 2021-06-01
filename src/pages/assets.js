@@ -172,6 +172,13 @@ const AssetsPage = ({ data }) => {
 
         <Row>
           <AssetDownload
+            title={translateMessageId("page-assets-hackathon", intl)}
+            alt={translateMessageId("page-assets-hackathon", intl)}
+            image={data.hackathon.childImageSharp}
+            artistName="William Tempest"
+            artistUrl="https://cargocollective.com/willtempest"
+          />
+          <AssetDownload
             title={translateMessageId("page-assets-impact", intl)}
             alt={translateMessageId("page-assets-impact", intl)}
             image={data.impact.childImageSharp}
@@ -595,6 +602,9 @@ export const query = graphql`
       ...assetItem
     }
     wallet: file(relativePath: { eq: "wallet.png" }) {
+      ...assetItem
+    }
+    hackathon: file(relativePath: { eq: "hackathon_transparent.png" }) {
       ...assetItem
     }
     impact: file(relativePath: { eq: "impact_transparent.png" }) {
