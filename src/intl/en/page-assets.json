@@ -38,9 +38,10 @@
   "page-assets-infrastructure": "Infrastructure",
   "page-assets-meta-desc": "Explore and download Ethereum and ethereum.org brand assets, illustrations and media.",
   "page-assets-meta-title": "Ethereum brand assets",
-  "page-assets-oldship": "Oldship",
+  "page-assets-mainnet": "Mainnet",
   "page-assets-page-assets-solid-background": "Solid background",
   "page-assets-page-assets-transparent-background": "Transparent background",
   "page-assets-robot": "Robot wallet",
-  "page-assets-sharding": "Sharding"
+  "page-assets-sharding": "Sharding",
+  "page-assets-hackathon": "Hackathon"
 }
