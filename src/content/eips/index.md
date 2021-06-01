@@ -30,9 +30,11 @@ EIP editors are tasked with reviewing EIPs for technical soundness, correct spel
 - Alex Beregszaszi (EWASM/Ethereum Foundation)
 - Greg Colvin (Community)
 - Casey Detrio (EWASM/Ethereum Foundation)
+- Matt Garnett (Quilt)
 - Hudson James (Ethereum Foundation)
 - Nick Johnson (ENS)
 - Nick Savers (Community)
+- Micah Zoltu (Community)
 
 ## Learn more {#learn-more}
 
