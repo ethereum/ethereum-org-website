@@ -990,6 +990,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/DavidPlutus"><img src="https://avatars.githubusercontent.com/u/63456936?v=4?s=100" width="100px;" alt=""/><br /><sub><b>davidplutus</b></sub></a><br /><a href="#ideas-davidplutus" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/Karthickmerk"><img src="https://avatars.githubusercontent.com/u/53270101?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Karthickmerk</b></sub></a><br /><a href="#ideas-Karthickmerk" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/hueyhe"><img src="https://avatars.githubusercontent.com/u/13460383?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sihong</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=hueyhe" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/AmirAliM"><img src="https://avatars.githubusercontent.com/u/8203572?v=4?s=100" width="100px;" alt=""/><br /><sub><b>AmirAliM</b></sub></a><br /><a href="#content-AmirAliM" title="Content">🖋</a></td>
   </tr>
 </table>
 
