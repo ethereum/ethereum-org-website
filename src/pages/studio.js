@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 
 import Link from "../components/Link"
-import Icon from "../components/Icon"
 import Emoji from "../components/Emoji"
 import ButtonLink from "../components/ButtonLink"
 import { Page, Content, Divider } from "../components/SharedStyledComponents"

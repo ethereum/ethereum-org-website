@@ -6,14 +6,11 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import ButtonLink from "../components/ButtonLink"
-import MarkdownTable from "../components/MarkdownTable"
 import Link from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
-import Translation from "../components/Translation"
 import { isLangRightToLeft } from "../utils/translations"
 import Emoji from "../components/Emoji"
 import {
-  Divider,
   Paragraph,
   Header1,
   Header4,

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import styled, { css } from "styled-components"
 import { useQuery, gql } from "@apollo/client"
