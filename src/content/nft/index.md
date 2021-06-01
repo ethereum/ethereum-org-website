@@ -77,22 +77,30 @@ This website has an alternative domain name powered by NFTs, **ethereum.eth**. O
 
 ## How do NFTs work? {#how-nfts-work}
 
-Thinking about this from a very high level, there are many blockchains that support NFTs but you will find majority under the Ethereum blockchain. There is a difference between NFT tokens and Ethereum tokens in that NFT tokens have extra information stored in them. This extra information is what really makes an NFT an NFT! NFTs are unique crypto tokens that are maganed on a blockchain and the blockchain acts as the decentralized ledger that tracks the ownership and transaction history of each NFT. An NFT is created, or in the proper terms "minted" from digital objects that represent many things. For example, an NFT can consist of items such as:
+Thinking about this from a very high level, there are many blockchains that support NFTs but you will find majority under the Ethereum blockchain. There is a difference between NFT's and Ethereum tokens (ERC-20 or ETH) in that NFT's have extra information stored in them. This extra information is what really makes an NFT an NFT! NFT's are unique crypto tokens that are managed on a blockchain and the blockchain acts as the decentralized ledger that tracks the ownership and transaction history of each NFT. An NFT is created, or in the proper terms "minted" from digital objects that represent many things. For example, an NFT can consist of items such as:
 
-- GIFs
-- Collectibles
-- Music
-- Videos
+- Digital Art:
+  - GIFs
+  - Collectibles
+  - Music
+  - Videos
+- Real World Items:
+  - Deed to a car
+  - Ticket to a real world event
+  - Tokenized invoices for many uses
+  - Legal documents
+  - Signatures
+- Lots and lots more options to get creative with!
 
-One thing to keep in mind is that an NFT can only have one owner at a time. The way this is managed is through the uniqueID and metadata that no other token can replicate. NFTs are created through smart contracts that veryify ownership and manage transferability of the NFTs. When someone creates, or mints an NFT they are writing code to create the underlying smart contract code that manages the NFTs qualities, which are then added to the blockchain where the NFT is being managed. Minting NFT tokens is very similar to how metal coins are minted and pushed into the economy. The minting process, from a high level, has the following steps that it goes through:
+One thing to keep in mind is that an NFT can only have one owner at a time. The way this is managed is through the uniqueID and metadata that no other token can replicate. NFTs are minted through smart contracts that verify ownership and manage transferability of the NFT's. When someone creates, or mints an NFT they are executing code stored in smart contracts that conform to different standards, such as ERC-721. This in turn is then added to the blockchain where the NFT is being managed. The minting process, from a high level, has the following steps that it goes through:
 
 - Creating a new block
 - Validating information
 - Recording information into the blockchain
 
-NFTs have some special properties:
+NFT's have some special properties:
 
-- Each token minted has a unique identifier.
+- Each token minted has a unique identifier that is directly linked to one Ethereum address.
 - They're not directly interchangeable with other tokens 1:1. For example 1 ETH is exactly the same as another ETH. This isn't the case with NFTs.
 - Each token has an owner and this information is easily verifiable.
 - They live on Ethereum and can be bought and sold on any Ethereum-based NFT market.
@@ -100,6 +108,7 @@ NFTs have some special properties:
 In other words, if you _own_ an NFT:
 
 - You can easily prove you own it.
+  - Proving you own an NFT is very similar to proving you have ETH in your account
 - No one can manipulate it in any way.
 - You can sell it, and in some cases this will earn the original creator resale royalties.
 - Or, you can hold it forever, resting comfortably knowing your asset is secured by your wallet on Ethereum.
