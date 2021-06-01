@@ -83,7 +83,7 @@ Different transactions in the same block can have very different gas prices.
 Starting with the London update, every block has a base fee, the minimum per gas price for inclusion in this block. The base fee is calculated by a formula
 that compares the size of the previous block (the amount of gas used for all the transactions) with a target size. If the block size is higher than the target, there
 is more demand for inclusion in the blockchain than supply so the base fee, is increased. If the block size is lower than the target then there is more supply 
-of block space than demand, so the base fee is decreased. This base fee is "burned", removed from circulation.
+of block space than demand, so the base fee is decreased. This base fee is "burned", removing it from circulation.
 
 Transactions can either specify a gas price using the old mechanism, or specify two other parameters:
 
@@ -92,14 +92,17 @@ Transactions can either specify a gas price using the old mechanism, or specify 
    If the base fee plus this amount is less than the maximum fee per gas, this is the priority fee. Otherwise, the priority fee is the maximum
    fee minus the base fee.
 
-For example, imagine a block with a base fee of 100 gwei. The pool of available transactions contains these transactions:
+For example, imagine a block with a base fee of 100 gwei. The pool of available transactions contains the transactions
+in the table below. Transactions A-C are type 2, so they include both a maximum fee per gas and a maximum priority fee per gas. 
+Transaction D is an older transaction type (either 0, without an access list, or 1, which does have an access list), so it only specifies
+a gas price. That gas price is used for both maximum fee per gas and maximum priority fee per gas.
 
 | ID     | Maximum Fee per Gas  | Maximum Priority Fee per Gas | Actual Priority Fee | Actual Gas Price |Remarks |
 | ------ | ------------------:  | ---------------------------: | ------------------: | ---------------: |------- |
 | A      | 90 gwei              | 90 gwei                      | N/A                 | N/A              | This transaction is not going in the block |
 | B      | 200 gwei             |  5 gwei                      | 5 gwei              | 105 gwei         | The priority fee is the maximum priority fee |
 | C      | 120 gwei             | 30 gwei                      | 20 gwei             | 120 gwei         | The priority fee is the maximum (total) fee minus the base fee |
-| D      | gas price = 200 gwei | gas price = 200 gwei         | 100 gwei            | 200 gwei         | Transactions that specify gas price are charged the full amount |
+| D      | 200 gwei             | 200 gwei                     | 100 gwei            | 200 gwei         | Transactions that specify gas price are charged the full amount |
 
 Miners and validators are expected to choose the transactions that will pay them the highest priority fees. 
 
@@ -108,8 +111,8 @@ valuable by removing some of it from circulation. The maximum fee per gas functi
 which is more efficient than the previous mechanism that is a first price auction. Users can submit transactions with a much higher maximum fee per gas, corresponding
 to how much they need the transaction to happen, without having to worry that they will be overcharged.
 
-If you are interested you can read the exact specifications 
-[in the EIP (Ethereum Improvement Proposal)](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md).
+If you are interested you can read the exact 
+[EIP-1559 specifications](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md).
 
 
 ## Strategies for you to reduce gas costs {#strategies-for-you-to-reduce-gas-costs}
