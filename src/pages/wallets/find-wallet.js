@@ -13,7 +13,6 @@ import InfoBanner from "../../components/InfoBanner"
 import PageMetadata from "../../components/PageMetadata"
 import WalletCompare from "../../components/WalletCompare"
 import { Divider, Page } from "../../components/SharedStyledComponents"
-import { BsTypeH1 } from "react-icons/bs"
 
 const Subtitle = styled.div`
   font-size: 20px;

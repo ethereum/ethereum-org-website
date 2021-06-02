@@ -1713,7 +1713,12 @@
       "profile": "https://github.com/ryancreatescopy",
       "contributions": [
         "doc",
-        "code"
+        "code",
+        "design",
+        "bug",
+        "ideas",
+        "review",
+        "content"
       ]
     },
     {
@@ -3804,6 +3809,60 @@
       "profile": "https://github.com/DavidPlutus",
       "contributions": [
         "ideas"
+      ]
+    },
+    {
+      "login": "Karthickmerk",
+      "name": "Karthickmerk",
+      "avatar_url": "https://avatars.githubusercontent.com/u/53270101?v=4",
+      "profile": "https://github.com/Karthickmerk",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "hueyhe",
+      "name": "Sihong",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13460383?v=4",
+      "profile": "https://github.com/hueyhe",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "AmirAliM",
+      "name": "AmirAliM",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8203572?v=4",
+      "profile": "https://github.com/AmirAliM",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "Rub3cula",
+      "name": "Rub3cula",
+      "avatar_url": "https://avatars.githubusercontent.com/u/63545006?v=4",
+      "profile": "https://github.com/Rub3cula",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "pawurb",
+      "name": "Paweł Urbanek",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1131944?v=4",
+      "profile": "https://pawelurbanek.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "adi44",
+      "name": "Aditya Dhir",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31381639?v=4",
+      "profile": "https://github.com/adi44",
+      "contributions": [
+        "bug"
       ]
     }
   ],

@@ -97,7 +97,8 @@ const Roadmap = () => {
             .filter(
               (issue) =>
                 issue.state === "closed" &&
-                "allcontributors[bot]" !== issue.user.login
+                "allcontributors[bot]" !== issue.user.login &&
+                !!issue.pull_request
             )
             .slice(0, 6)
           setIssues({

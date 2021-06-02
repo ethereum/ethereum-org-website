@@ -33,7 +33,7 @@ Both account types have the ability to:
 
 **Contract**
 
-- Creating an account has a cost because you're using network storage
+- Creating a contract has a cost because you're using network storage
 - Can only send transactions in response to receiving a transaction
 - Transactions from an external account to a contract account can trigger code which can execute many different actions, such as transferring tokens or even creating a new contract
 
@@ -67,7 +67,7 @@ Example:
 
 `fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd036415f`
 
-The public key is generated from the private key using the [Elliptic Curve Digital Signature Algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). You get a public address for your account by taking the last 20 bytes of the SHA3 hash of the private key and adding `0x` to the beginning.
+The public key is generated from the private key using the [Elliptic Curve Digital Signature Algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). You get a public address for your account by taking the last 20 bytes of the Keccak-256 hash of the public key and adding `0x` to the beginning.
 
 Here's an example of creating an account in the console using GETH's `personal_newAccount`
 

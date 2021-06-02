@@ -76,11 +76,33 @@ We recommend setting this up when running the project locally, as we use the Git
 > - [Follow these instructions](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) to create a personal GitHub API token
 >   - When selecting scopes in step 7, leave everything unchecked (the data we fetch doesn't require any [scope](https://docs.github.com/en/developers/apps/scopes-for-oauth-apps#available-scopes))
 > - In local repo root directory: Make a copy of `.env.example` and name it `.env`
-> - Copy & paste your new GitHub API token in `.env`
+> - Copy & paste your new GitHub API token into `.env`
 
 ```
 // .env Example:
 GATSBY_GITHUB_TOKEN_READ_ONLY=48f84de812090000demo00000000697cf6e6a059
+```
+
+5. Add Etherscan API token (free)
+
+> - [Create an account](https://etherscan.io/) on Etherscan
+> - Navigate to your Account Settings page
+> - In the sidebar, click on 'API-KEYs' and add a new token
+> - Copy & paste your Api-Key Token from Etherscan into `.env`
+
+```
+// .env Example:
+ETHERSCAN_API_KEY=K6NUTARFJZJCIXHF1F1E1YGJZ8RQ29BE4U
+```
+
+6. Add DeFiPulse API token (free)
+
+> - [Follow this guide](https://docs.defipulse.com/quick-start-guide) to create an account and get your DeFiPulse API token
+> - Copy & paste your Active API Key from DeFiPulse into `.env`
+
+```
+// .env Example:
+DEFI_PULSE_API_KEY=4953aaf7966dad9c129397e197a0630ed0594f66962dd5fb058972b250da
 ```
 
 ### Make awesome changes!
@@ -675,7 +697,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/shad-k"><img src="https://avatars1.githubusercontent.com/u/23720732?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Shadab Khan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=shad-k" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/ryancreatescopy"><img src="https://avatars2.githubusercontent.com/u/40891631?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ryancreatescopy</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ryancreatescopy" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=ryancreatescopy" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/ryancreatescopy"><img src="https://avatars2.githubusercontent.com/u/40891631?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ryancreatescopy</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ryancreatescopy" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=ryancreatescopy" title="Code">💻</a> <a href="#design-ryancreatescopy" title="Design">🎨</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aryancreatescopy" title="Bug reports">🐛</a> <a href="#ideas-ryancreatescopy" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/ethereum/ethereum-org-website/pulls?q=is%3Apr+reviewed-by%3Aryancreatescopy" title="Reviewed Pull Requests">👀</a> <a href="#content-ryancreatescopy" title="Content">🖋</a></td>
     <td align="center"><a href="http://jutt.ca"><img src="https://avatars3.githubusercontent.com/u/7143583?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hammad Jutt</b></sub></a><br /><a href="#content-hammadj" title="Content">🖋</a></td>
     <td align="center"><a href="https://becaz.org"><img src="https://avatars2.githubusercontent.com/u/58934348?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Becaz</b></sub></a><br /><a href="#ideas-becaz" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/caosbad"><img src="https://avatars2.githubusercontent.com/u/10805199?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Caos</b></sub></a><br /><a href="#content-caosbad" title="Content">🖋</a></td>
@@ -966,6 +988,14 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://linkedin.com/in/ayushman17/"><img src="https://avatars.githubusercontent.com/u/53474591?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ayushman Singh Chauhan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aayushman17" title="Bug reports">🐛</a> <a href="#content-ayushman17" title="Content">🖋</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/keqi-huang/"><img src="https://avatars.githubusercontent.com/u/28261876?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Keqi Huang</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ALisanaaa" title="Bug reports">🐛</a> <a href="#content-Lisanaaa" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/DavidPlutus"><img src="https://avatars.githubusercontent.com/u/63456936?v=4?s=100" width="100px;" alt=""/><br /><sub><b>davidplutus</b></sub></a><br /><a href="#ideas-davidplutus" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/Karthickmerk"><img src="https://avatars.githubusercontent.com/u/53270101?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Karthickmerk</b></sub></a><br /><a href="#ideas-Karthickmerk" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/hueyhe"><img src="https://avatars.githubusercontent.com/u/13460383?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sihong</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=hueyhe" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/AmirAliM"><img src="https://avatars.githubusercontent.com/u/8203572?v=4?s=100" width="100px;" alt=""/><br /><sub><b>AmirAliM</b></sub></a><br /><a href="#content-AmirAliM" title="Content">🖋</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/Rub3cula"><img src="https://avatars.githubusercontent.com/u/63545006?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rub3cula</b></sub></a><br /><a href="#content-Rub3cula" title="Content">🖋</a></td>
+    <td align="center"><a href="https://pawelurbanek.com"><img src="https://avatars.githubusercontent.com/u/1131944?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Paweł Urbanek</b></sub></a><br /><a href="#content-pawurb" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/adi44"><img src="https://avatars.githubusercontent.com/u/31381639?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aditya Dhir</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aadi44" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
