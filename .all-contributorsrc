@@ -3846,6 +3846,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "pawurb",
+      "name": "Paweł Urbanek",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1131944?v=4",
+      "profile": "https://pawelurbanek.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
