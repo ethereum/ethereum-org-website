@@ -15,7 +15,9 @@ A blockchain is best described as a public database that is updated and shared a
 
 Each new block and the chain as a whole must be agreed upon by every computer in the network. These computers are known as "nodes". This is so everyone has the same data. To accomplish this distributed agreement, blockchains need a consensus mechanism.
 
-Ethereum currently uses a [proof-of-work](/developers/docs/consensus-mechanisms/pow/) consensus mechanism. This means that anyone who wants to add new blocks to the chain must solve a difficult puzzle that requires a lot of computing power. Solving the puzzle "proves" that you have spent the computational resources. Doing this is known as [mining](/developers/docs/consensus-mechanisms/pow/mining/). Mining is typically brute force trial and error but adding a block successfully is rewarded in ETH.
+Ethereum currently uses a [proof-of-work](/developers/docs/consensus-mechanisms/pow/) consensus mechanism. This means that anyone who wants to add new blocks to the chain must solve a difficult puzzle that requires a lot of computing power. Solving the puzzle "proves" that you have spent the computational resources. Doing this is known as [mining](/developers/docs/consensus-mechanisms/pow/mining/).
+
+Mining is typically brute force trial and error but adding a block successfully is rewarded in ETH. Moreover, submitting fraudulent blocks is not an attractive option considering the resources you've spent on producing the block. Having this financial/computational barrier also deters [Sybil attacks](https://en.wikipedia.org/wiki/Sybil_attack), where a single user pretends to be multiple users to gain control of the network, from happening on the blockchain.
 
 New blocks are broadcasted to the nodes in the network, checked and verified, thus updating the state of the blockchain for everyone.
 
