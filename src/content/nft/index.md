@@ -108,7 +108,15 @@ NFT's have some special properties:
 In other words, if you _own_ an NFT:
 
 - You can easily prove you own it.
-  - Proving you own an NFT is very similar to proving you have ETH in your account
+  - Proving you own an NFT is very similar to proving you have ETH in your account.
+  - For example, lets say you pay for an NFT. What you are getting is the right to transfer your token to your digital wallet.
+  - The token proves that your copy of the digital file is the original.
+  - Your private crypto key is proof of ownership of the original.
+  - The content creator's public crypto key serves as a certificate of authenticity for that particular digital artifact.
+    - This public and private key pair is what primarily determines the value of any NFT token.
+  - Another way to think about proving you own the NFT is by signing messages to prove you own the private key behind the address.
+    - As mentioned above, your private key is proof of ownership of the original. Now this in turn tells us that the NFT is controlled by private keys behind that address.
+    - A signed message is a great way to prove that you own your private keys without revealing them to anybody. It is beneficial for everyone as a recipient can control that a transaction actually comes from the correct source, and it protects the sender’s private keys and can be used as proof for a transaction and in our case proof of the ownership of those private keys thus proving you own the NFT as well!
 - No one can manipulate it in any way.
 - You can sell it, and in some cases this will earn the original creator resale royalties.
 - Or, you can hold it forever, resting comfortably knowing your asset is secured by your wallet on Ethereum.
