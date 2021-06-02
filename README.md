@@ -992,6 +992,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/hueyhe"><img src="https://avatars.githubusercontent.com/u/13460383?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sihong</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=hueyhe" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/AmirAliM"><img src="https://avatars.githubusercontent.com/u/8203572?v=4?s=100" width="100px;" alt=""/><br /><sub><b>AmirAliM</b></sub></a><br /><a href="#content-AmirAliM" title="Content">🖋</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/Rub3cula"><img src="https://avatars.githubusercontent.com/u/63545006?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rub3cula</b></sub></a><br /><a href="#content-Rub3cula" title="Content">🖋</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
