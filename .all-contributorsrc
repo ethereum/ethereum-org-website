@@ -3855,6 +3855,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "adi44",
+      "name": "Aditya Dhir",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31381639?v=4",
+      "profile": "https://github.com/adi44",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
