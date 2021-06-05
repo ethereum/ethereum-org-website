@@ -167,7 +167,7 @@ Changing greeting from 'Hello, world!' to ''
 Let's implement this functionality into our smart contract:
 
 ```solidity
-require(bytes(_greeting).length > 0, "Greeting message is empty");
+require(bytes(_greeting).length > 0, "Greeting should not be empty");
 ```
 
 Now, our setGreeting function looks like this:
