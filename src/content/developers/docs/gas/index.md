@@ -26,8 +26,8 @@ In essence, gas fees are paid in Ethereum's native currency, ether (ETH). Gas pr
 Let's say Alice has to pay Bob 1ETH.
 In the transaction the gas limit is 21000 units and the gas price is 200 GWei. 
 
-Total fee will be: Gas units * Gas price per unit 
-i.e 21000 * 200 = 4,200,000 Gwei or 0.0042 ETH
+Total fee will be: `Gas units * Gas price per unit`
+i.e `21000 * 200 = 4,200,000` Gwei or 0.0042 ETH
 
 Now, when Alice sends the money, 1.0042 ETH will be deducted from Alice's account.
 Bob will be credited 1.0000 ETH.
