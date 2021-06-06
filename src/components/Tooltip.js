@@ -5,6 +5,7 @@ const Container = styled.div`
   position: relative;
   display: inline-flex;
   user-select: none;
+  cursor: pointer;
 `
 
 const Content = styled.div`
@@ -59,10 +60,7 @@ const Tooltip = ({ content, children }) => {
   return (
     <>
       {isVisible && <ModalReturn onClick={() => setIsVisible(false)} />}
-      <Container
-        onMouseEnter={() => setIsVisible(true)}
-        onClick={() => setIsVisible(!isVisible)}
-      >
+      <Container title="more info" onClick={() => setIsVisible(!isVisible)}>
         {children}
         {isVisible && (
           <Content>
