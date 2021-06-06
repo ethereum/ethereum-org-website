@@ -108,7 +108,7 @@ With the signature hash, the transaction can be cryptographically proven that it
 
 As mentioned, transactions cost [gas](/developers/docs/gas/) to execute. Simple transfer transactions require 21000 units of Gas.
 
-So for Bob to send Alice 1ETH at a `gasPrice` of 200 Gwei, he'll need to pay the following fee:
+So for Bob to send Alice 1ETH at a `gasPrice` of 200 Gwei, Bob will need to pay the following fee:
 
 ```
 200*21000 = 4,200,000 GWEI
