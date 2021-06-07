@@ -18,7 +18,7 @@ If you don't already have an understanding of what nodes and clients are, check 
 
 Node service providers run distributed node clients behind the scenes for you, so you don't have to.
 
-These services typically provide an API key that you can use to write to and read from the blockchain. They often include access to [Ethereum testnets](/developers/docs/networks/#testnets) in addition to the mainnet.
+These services typically provide an API key that you can use to write to and read from the blockchain. They often include access to [Ethereum testnets](/developers/docs/networks/#testnets) in addition to mainnet.
 
 Some services offer you your own dedicated node that they manage for you, while others use load balancers to distribute activity across nodes.
 
