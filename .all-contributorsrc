@@ -3864,6 +3864,25 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "ammarhusain",
+      "name": "Ammar Husain",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4248914?v=4",
+      "profile": "http://ammarhusain.github.io",
+      "contributions": [
+        "content",
+        "bug"
+      ]
+    },
+    {
+      "login": "miiiguel",
+      "name": "miiiguel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29905526?v=4",
+      "profile": "https://github.com/miiiguel",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
