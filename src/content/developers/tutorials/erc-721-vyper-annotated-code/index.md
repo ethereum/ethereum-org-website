@@ -160,7 +160,7 @@ event ApprovalForAll:
 It is sometimes useful to have an *operator* that can manage all of an account's tokens of a specific type (those that are managed by
 a specific contract), similar to a power of attorney. For example, I might want to give such a power to a contract that checks if
 I haven't contacted it for six months, and if so distributes my assets to my heirs (if one of them asks for it, contracts
-can't do anything without being called by a transaction). In ERC-20 we can just give a high allowance to an inheritence contract,
+can't do anything without being called by a transaction). In ERC-20 we can just give a high allowance to an inheritance contract,
 but that doesn't work for ERC-721 because the tokens are not fungible. This is the equivalent.
 
 The `approved` value tells us whether the event is for an approval, or the withdrawal of an approval.
