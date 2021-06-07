@@ -48,7 +48,7 @@ _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/d
 
 ## What is gas limit? {#what-is-gas-limit}
 
-Gas limit refers to the maximum amount of gas you are willing to consume on a transaction. A higher gas limit means more computational work can be done while interacting with [smart contracts](/developers/docs/smart-contracts/). A standard ETH transfer requires a gas limit of 21,000 units of gas.
+Gas limit refers to the maximum amount of gas you are willing to consume on a transaction. More complicated transactions, involving [smart contracts](/developers/docs/smart-contracts/), require more computational work so they require a higher gas limit than a simple payment. A standard ETH transfer requires a gas limit of 21,000 units of gas. 
 
 For example if you put a gas limit of 50,000 for a simple ETH transfer, the EVM would consume 21,000, and you would get back the remaining 29,000. However, if you specify too little gas say for example, a gas limit of 20,000 for a simple ETH transfer, the EVM will consume your 20,000 gas units attempting to fulfill the txn, but it will not complete. The EVM then reverts any changes, but since 20k gas units worth of work has already been done by the miner, that gas is consumed.
 
@@ -58,7 +58,7 @@ Gas price refers to the amount of ether you are willing to pay for every unit of
 
 ## Why can gas fees get so high? {#why-can-gas-fees-get-so-high}
 
-High gas fees are due to the popularity of Ethereum. Performing any operation on Ethereum requires consuming gas, and gas space is limited per block. This includes calculations, storing or manipulating data, or transferring tokens, each consuming different amounts of "gas" units. As dapp functionality grows more complex, the number of operations a smart contract performs grows too, meaning each transaction takes up more space of a limited size block. This means that users must out-bid one another to be included in the next block if demand exceeds capacity by offering a higher gas price than other transactions.
+High gas fees are due to the popularity of Ethereum. Performing any operation on Ethereum requires consuming gas, and gas space is limited per block. This includes calculations, storing or manipulating data, or transferring tokens, each consuming different amounts of "gas" units. As dapp functionality grows more complex, the number of operations a smart contract performs grows too, meaning each transaction takes up more space of a limited size block. If there's too much demand, users must offer a higher gas price to try and out-bid other users' transactions. A higher price can make it more likely that your transaction will get into the next block.
 
 Gas price alone does not actually determine how much we have to pay for a particular transaction. To calculate the transaction fee we have to multiply the gas used by gas price, which is measured in gwei.
 
