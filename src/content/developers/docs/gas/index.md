@@ -12,7 +12,7 @@ Gas is essential to the Ethereum network. It is the fuel that allows it to opera
 
 To better understand this page, we recommend you first read up on [transactions](/developers/docs/transactions/) and the [EVM](/developers/docs/evm/).
 
-## What is Gas? {#what-is-gas}
+## What is gas? {#what-is-gas}
 
 Gas refers to the unit that measures the amount of computational effort required to execute specific operations on the Ethereum network.
 
@@ -21,13 +21,13 @@ Since each Ethereum transaction requires computational resources to execute, eac
 ![A diagram showing where gas is needed in EVM operations](./gas.png)
 _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-In essence, gas fees are paid in Ethereum's native currency, ether (ETH). Gas prices are denoted in Gwei, which itself is a denomination of ETH - each Gwei is equal to 0.000000001 ETH (10<sup>-9</sup> ETH). For example, instead of saying that your gas costs 0.000000001 Ether, you can say your gas costs 1 Gwei.
+In essence, gas fees are paid in Ethereum's native currency, ether (ETH). Gas prices are denoted in gwei, which itself is a denomination of ETH - each gwei is equal to 0.000000001 ETH (10<sup>-9</sup> ETH). For example, instead of saying that your gas costs 0.000000001 ether, you can say your gas costs 1 gwei.
 
 Let's say Alice has to pay Bob 1ETH.
-In the transaction the gas limit is 21000 units and the gas price is 200 GWei. 
+In the transaction the gas limit is 21,000 units and the gas price is 200 gwei. 
 
-Total fee will be: Gas units * Gas price per unit 
-i.e 21000 * 200 = 4,200,000 Gwei or 0.0042 ETH
+Total fee will be: `Gas units (limit) * Gas price per unit` 
+i.e `21,000 * 200 = 4,200,000 gwei or 0.0042 ETH`
 
 Now, when Alice sends the money, 1.0042 ETH will be deducted from Alice's account.
 Bob will be credited 1.0000 ETH.
@@ -46,13 +46,23 @@ Although a transaction includes a limit, any gas not used in a transaction is re
 ![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
 _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
+## What is gas limit? {#what-is-gas-limit}
+
+Gas limit refers to the maximum amount of gas you are willing to consume on a transaction. More complicated transactions, involving [smart contracts](/developers/docs/smart-contracts/), require more computational work so they require a higher gas limit than a simple payment. A standard ETH transfer requires a gas limit of 21,000 units of gas. 
+
+For example if you put a gas limit of 50,000 for a simple ETH transfer, the EVM would consume 21,000, and you would get back the remaining 29,000. However, if you specify too little gas say for example, a gas limit of 20,000 for a simple ETH transfer, the EVM will consume your 20,000 gas units attempting to fulfill the txn, but it will not complete. The EVM then reverts any changes, but since 20k gas units worth of work has already been done by the miner, that gas is consumed.
+
+## What is gas price? {#what-is-gas-price}
+
+Gas price refers to the amount of ether you are willing to pay for every unit of gas, and this is usually measured in 'gwei'.
+
 ## Why can gas fees get so high? {#why-can-gas-fees-get-so-high}
 
-High gas fees are due to the popularity of Ethereum. Performing any operation on Ethereum requires consuming gas. This includes calculations, storing or manipulating data, or transferring tokens, each consuming different amounts of "gas" units. As dapp functionality grows more complex, the number of operations a smart contract performs grows too, and all contribute to high amounts of gas that must be paid for.
+High gas fees are due to the popularity of Ethereum. Performing any operation on Ethereum requires consuming gas, and gas space is limited per block. This includes calculations, storing or manipulating data, or transferring tokens, each consuming different amounts of "gas" units. As dapp functionality grows more complex, the number of operations a smart contract performs grows too, meaning each transaction takes up more space of a limited size block. If there's too much demand, users must offer a higher gas price to try and out-bid other users' transactions. A higher price can make it more likely that your transaction will get into the next block.
 
-Gas is paid for with small amounts of ether (denominated in gwei, or (10<sup>-9</sup> ETH)). This value represents the amount of ether being paid per "unit of gas", not for the entire transaction. Since gas is capped within a block, under the current system, this means that users must out-bid one another to be included in the next block if demand exceeds capacity. Gas cost alone does not actually determine how much we have to pay for a particular transaction. To calculate the transaction fee we have to multiply the gas cost by gas price, which is measured in gwei.
+Gas price alone does not actually determine how much we have to pay for a particular transaction. To calculate the transaction fee we have to multiply the gas used by gas price, which is measured in gwei.
 
-This video about gas fees explains fully why fees are so expensive:
+This video about gas fees explains fully why fees can be so expensive:
 
 https://www.youtube.com/embed/Yh8cHUB-KoU
 
@@ -65,16 +75,6 @@ Layer 2 scaling is a primary initiative to greatly improve gas costs, user exper
 The new proof-of-stake model should reduce high power consumption and reliance on specialized hardware. The new PoS system was introduced on the Beacon Chain. This chain will allow the decentralized Ethereum network to come to agreement and keep the network secure, but avoid high energy use by requiring a financial commitment.
 
 Anyone with at least 32 ETH is able to stake them and become a validator responsible for processing transactions, proposing new blocks to add to the blockchain and storing data. Users who have less than 32 ETH are able to join staking pools.
-
-## What is Gas limit? {#what-is-gas-limit}
-
-Gas limit refers to the maximum amount of gas you are willing to consume on a transaction. A higher gas limit means more computational work can be done while interacting with [smart contracts](/developers/docs/smart-contracts/). A standard ETH transfer requires a gas limit of 21,000 units of gas.
-
-For example if you put a gas limit of 50,000 for a simple ETH transfer, the EVM would consume 21,000, and you would get back the remaining 29,000. However, if you specify too little gas say for example, a gas limit of 20,000 for a simple ETH transfer, the EVM will consume your 20,000 gas units attempting to fulfill the txn, but it will not complete. The EVM then reverts any changes, but since 20k gas units worth of work has already been done by the miner, that gas is consumed.
-
-## What is Gas price? {#what-is-gas-price}
-
-Gas price refers to the amount of Ether you are willing to pay for every unit of gas, and this is usually measured in 'gwei'.
 
 ## Strategies for you to reduce gas costs {#strategies-for-you-to-reduce-gas-costs}
 
