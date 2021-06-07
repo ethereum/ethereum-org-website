@@ -58,8 +58,8 @@ const Roadmap = () => {
   })
 
   const checkifMerge= async (url)=>{
-    let resp = await axios.get(url+"merge")
-    if(resp.status===203){
+    let resp = await axios.get(url+"/merge")
+    if(resp.status==203){
       
       return true
       
@@ -110,7 +110,7 @@ const Roadmap = () => {
               (issue) =>
                 (issue.state === "closed" &&
                 "allcontributors[bot]" !== issue.user.login &&
-                !!issue.pull_request && checkifMerge(issue.pull_request.toString())===true)
+                !!issue.pull_request && checkifMerge(issue.pull_request)===true)
                 
             )
             .slice(0, 6)
