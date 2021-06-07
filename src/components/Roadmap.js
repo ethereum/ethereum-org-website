@@ -58,7 +58,7 @@ const Roadmap = () => {
   })
 
   const checkifMerge= async (url)=>{
-    let resp = await axios.get(url+"/merge")
+    let resp = await axios.get(url+"merge")
     if(resp.status===203){
       
       return true
