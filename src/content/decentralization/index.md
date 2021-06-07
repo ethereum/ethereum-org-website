@@ -189,7 +189,7 @@ Let's look at a couple of examples.
 
 ### Example 1: United States Dollar coins {#usd-on-ethereum}
 
-For example, USDC is a United-States-Dollar-value cryptocurrency trading on multiple networks. It is tied to a national currency, which in turn is managed by a central bank. Further, the cryptocurrency itself is managed by a (Bermuda-based) company. This is relatively centralized. 
+For example, USDC is a United-States-Dollar-value cryptocurrency. It is "backed by fully reserved assets" (a phrase assumedly meant to communicate that it is fully backed by reserve assets). It is controlled in a relatively centralized way: via a permissioned consortium founded by two big corporations. 
 
 DAI is another dollar-value coin. DAI gets created when people deposit crypto assets in a program (a smart contract). That smart contract was developed by a group called [MakerDAO](https://makerdao.com/en/). People who hold the MKR asset get to vote on how the program behaves. It is far more decentralized than USDC.
 
