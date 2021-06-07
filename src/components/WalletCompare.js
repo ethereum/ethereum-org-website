@@ -270,6 +270,9 @@ const WalletCompare = ({ location }) => {
       rainbow: file(relativePath: { eq: "wallets/rainbow.png" }) {
         ...walletCardImage
       }
+      samsung: file(relativePath: { eq: "wallets/samsung.png" }) {
+        ...walletCardImage
+      }
       squarelink: file(relativePath: { eq: "wallets/squarelink.png" }) {
         ...walletCardImage
       }
