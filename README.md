@@ -996,6 +996,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/Rub3cula"><img src="https://avatars.githubusercontent.com/u/63545006?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rub3cula</b></sub></a><br /><a href="#content-Rub3cula" title="Content">🖋</a></td>
     <td align="center"><a href="https://pawelurbanek.com"><img src="https://avatars.githubusercontent.com/u/1131944?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Paweł Urbanek</b></sub></a><br /><a href="#content-pawurb" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/adi44"><img src="https://avatars.githubusercontent.com/u/31381639?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aditya Dhir</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aadi44" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="http://ammarhusain.github.io"><img src="https://avatars.githubusercontent.com/u/4248914?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ammar Husain</b></sub></a><br /><a href="#content-ammarhusain" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aammarhusain" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
