@@ -107,6 +107,7 @@ Multiple implementations of Optimistic rollups exist that you can integrate into
 - [Fuel Network](https://fuel.sh/)
 - [Cartesi](https://cartesi.io)
 - [OMGX](https://omgx.network)
+- [Tokamak Network](https://tokamak.network/)
 
 ## Hybrid solutions {#hybrid-solutions}
 
