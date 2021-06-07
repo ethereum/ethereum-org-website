@@ -79,7 +79,8 @@ Executable binaries for stable mainnet client implementations can be downloaded 
 - [Geth](https://geth.ethereum.org/downloads/),
 - [OpenEthereum,](https://github.com/openethereum/openethereum/releases),
 - [Nethermind](https://downloads.nethermind.io/),
-- [Besu](https://pegasys.tech/solutions/hyperledger-besu/).
+- [Besu](https://pegasys.tech/solutions/hyperledger-besu/),
+- [Erigon](https://github.com/ledgerwatch/erigon).
 
 ### Starting the client {#starting-the-client}
 
