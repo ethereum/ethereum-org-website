@@ -57,16 +57,9 @@ const Roadmap = () => {
     implemented: blankIssues,
   })
 
-  const checkifMerge= async (url)=>{
-    let resp = await axios.get(url+"/merge")
-    if(resp.status==204){
-      
-      return true
-      
-    }
-    else{
-      return false
-    }
+  const isMerged=async(url)=>{
+    const resp= await axios.get(url+"merge")
+    return resp.status===204
   }
 
   // TODO update to pull PRs & issues separately
@@ -108,11 +101,13 @@ const Roadmap = () => {
           const implemented = issues
             .filter(
               (issue) =>
-                (issue.state === "closed" &&
+                issue.state === "closed" &&
                 "allcontributors[bot]" !== issue.user.login &&
-                !!issue.pull_request && checkifMerge(issue.pull_request)===true)
+                !!issue.pull_request && isMerged(issue.pull_request)
+                
                 
             )
+            
             .slice(0, 6)
           setIssues({
             planned,
