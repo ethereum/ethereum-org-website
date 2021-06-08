@@ -1474,7 +1474,8 @@
       "profile": "https://github.com/evertonfraga",
       "contributions": [
         "ideas",
-        "bug"
+        "bug",
+        "content"
       ]
     },
     {
@@ -3863,6 +3864,52 @@
       "profile": "https://github.com/adi44",
       "contributions": [
         "bug"
+      ]
+    },
+    {
+      "login": "ammarhusain",
+      "name": "Ammar Husain",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4248914?v=4",
+      "profile": "http://ammarhusain.github.io",
+      "contributions": [
+        "content",
+        "bug"
+      ]
+    },
+    {
+      "login": "miiiguel",
+      "name": "miiiguel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29905526?v=4",
+      "profile": "https://github.com/miiiguel",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "Uttam-Singhh",
+      "name": "Uttam Singh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/63050765?v=4",
+      "profile": "https://uttam-singhh.github.io/Portfolio/",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "MysticRyuujin",
+      "name": "Chase Wright",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8877131?v=4",
+      "profile": "https://www.chasewright.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "TheBicPen",
+      "name": "Bic",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23622288?v=4",
+      "profile": "https://github.com/TheBicPen",
+      "contributions": [
+        "content"
       ]
     }
   ],
