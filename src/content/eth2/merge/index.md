@@ -49,7 +49,7 @@ These improvements all have a place in Eth2 so it’s likely that their progress
 ## After the merge {#after-the-merge}
 
 This will signal the end of proof-of-work for Ethereum and start the era of a more sustainable, eco-friendly Ethereum. 
-At this point Ethereum will be one step closer to achiving the full scale, security and sustainability outlined in its [Eth2 vision](/eth2/vision/).
+At this point Ethereum will be one step closer to achieving the full scale, security and sustainability outlined in its [Eth2 vision](/eth2/vision/).
 
 ## Relationship between upgrades {#relationship-between-upgrades}
 
