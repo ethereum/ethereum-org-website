@@ -58,9 +58,9 @@ const Roadmap = () => {
   })
 
   const isMerged=async(url)=>{
-    const resp= await axios.get(url+"/merge")
-    
-return (resp.status===204)
+    const resp= await axios.get(url)
+    const data = await resp.data
+return ( data.merged===true)
   }
 
   // TODO update to pull PRs & issues separately
