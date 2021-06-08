@@ -999,6 +999,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://ammarhusain.github.io"><img src="https://avatars.githubusercontent.com/u/4248914?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ammar Husain</b></sub></a><br /><a href="#content-ammarhusain" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aammarhusain" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/miiiguel"><img src="https://avatars.githubusercontent.com/u/29905526?v=4?s=100" width="100px;" alt=""/><br /><sub><b>miiiguel</b></sub></a><br /><a href="#content-miiiguel" title="Content">🖋</a></td>
     <td align="center"><a href="https://uttam-singhh.github.io/Portfolio/"><img src="https://avatars.githubusercontent.com/u/63050765?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Uttam Singh</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AUttam-Singhh" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://www.chasewright.com"><img src="https://avatars.githubusercontent.com/u/8877131?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Chase Wright</b></sub></a><br /><a href="#content-MysticRyuujin" title="Content">🖋</a></td>
   </tr>
 </table>
 
