@@ -94,7 +94,6 @@ export const walletCardImage = graphql`
 
 const ResultsContainer = styled.div`
   margin-top: 0rem;
-  text-align: center;
 `
 
 const ResultsGrid = styled.div`
