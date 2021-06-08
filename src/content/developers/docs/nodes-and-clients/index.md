@@ -114,6 +114,8 @@ This table summarises the different clients. All of them are actively worked on 
 | [Nethermind](http://nethermind.io/)                          | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, and more | Fast, Full              | Archive, Pruned |
 | [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, and Görli       | Fast, Full              | Archive, Pruned |
 | [Trinity](https://trinity.ethereum.org/)                     | Python   | Linux, macOS          | Mainnet, Görli, Ropsten, and more          | Full, Beam, Fast/Header | Archive         |
+| [Erigon](https://github.com/ledgerwatch/erigon)              | Go / Multi | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Full                  | Archive, Pruned |
+
 
 For more on supported networks, read up on [Ethereum networks](/developers/docs/networks/).
 
@@ -148,6 +150,10 @@ Nethermind also has [detailed documentation](https://docs.nethermind.io), strong
 #### Besu {#besu}
 
 Hyperledger Besu is an enterprise-grade Ethereum client for public and permissioned networks. It runs all of the Ethereum mainnet features, from tracing to GraphQL, has extensive monitoring and is supported by ConsenSys, both in open community channels and through commercial SLAs for enterprises. It is written in Java and is Apache 2.0 licensed.
+
+#### Erigon (#erigon)
+
+Erigon is a completely re-architected implementation of Ethereum, currently written in Go but with implementations in other languages planned. Erigon's goal is to provide a faster, more modular, and more optimized implementation of Ethereum. It can perform a full archive node sync using less than 2TB of disk space, in under 3 days.
 
 ### Sync modes {#sync-modes}
 
@@ -199,6 +205,9 @@ Depending on which software and sync mode are you going to use, hundreds of GBs 
 | OpenEthereum | 280GB+                | 6TB+                     |
 | Nethermind   | 200GB+                | 5TB+                     |
 | Besu         | 750GB+                | 5TB+                     |
+| Erigon       | N/A                   | 1TB+                     |
+
+* Note: Erigon does not Fast Sync, but Full Pruning is possible (~500GB)
 
 ![A chart showing that GB needed for a full sync is trending up](./full-sync.png)
 
