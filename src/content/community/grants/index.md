@@ -30,6 +30,7 @@ These projects have created their own grants for projects aimed at developing an
   Grants ranging from 5K - 50K Dai.
 - [TheGraph](https://airtable.com/shreX09LazIhsg0bU) _The Graph ecosystem_
 - [Uniswap](https://airtable.com/shrEXXxXB1humz7VS) _Uniswap community_
+- [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) _Balancer Ecosystem Fund_
 
 ### Quadratic Funding {#quadratic-funding}
 
