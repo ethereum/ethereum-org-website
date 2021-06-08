@@ -27,7 +27,7 @@ Let's say Alice has to pay Bob 1ETH.
 In the transaction the gas limit is 21,000 units and the gas price is 200 gwei. 
 
 Total fee will be: `Gas units (limit) * Gas price per unit` 
-i.e `21,000 * 200 = 4,200,000 gwei or 0.0042 ETH`
+i.e `21,000 * 200 = 4,200,000 gwei` or 0.0042 ETH
 
 Now, when Alice sends the money, 1.0042 ETH will be deducted from Alice's account.
 Bob will be credited 1.0000 ETH.
