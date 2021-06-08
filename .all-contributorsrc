@@ -3883,6 +3883,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "Uttam-Singhh",
+      "name": "Uttam Singh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/63050765?v=4",
+      "profile": "https://uttam-singhh.github.io/Portfolio/",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
