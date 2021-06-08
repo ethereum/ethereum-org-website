@@ -153,7 +153,7 @@ Hyperledger Besu is an enterprise-grade Ethereum client for public and permissio
 
 #### Erigon (#erigon)
 
-Erigon is a completely re-architected implimentation of Ethereum, currently written in Go with multiple implimentations in other languages planned. It's goal is to provide a faster, more modular, and heavily optimized implimentation of Ethereum. It's capable of performing a Full Archive Node sync using less than 2TB of disk space, in under 3 days.
+Erigon is a completely re-architected implementation of Ethereum, currently written in Go but with implementations in other languages planned. Erigon's goal is to provide a faster, more modular, and more optimized implementation of Ethereum. It can perform a full archive node sync using less than 2TB of disk space, in under 3 days.
 
 ### Sync modes {#sync-modes}
 
