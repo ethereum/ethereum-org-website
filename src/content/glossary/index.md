@@ -28,6 +28,11 @@ An object containing an [address](#address), balance, [nonce](#nonce), and optio
 
 Most generally, this represents an [EOA](#eoa) or [contract](#contract-accouint) that can receive (destination address) or send (source address) [transactions](#transaction) on the blockchain. More specifically, it is the rightmost 160 bits of a [Keccak hash](#keccak-256) of an [ECDSA](#ecdsa) [public key](#public-key).
 
+### application binary interface (ABI) {#abi}
+
+The standard way to interact with [contracts](#contract-account) in the Ethereum ecosystem,
+both from outside the blockchain and for contract-to-contract interaction.
+
 ### assert {#assert}
 
 In [Solidity](#solidity), `assert(false)` compiles to `0xfe`, an invalid opcode, which uses up all remaining [gas](#gas) and reverts all changes. When an `assert()` statement fails, something very wrong and unexpected is happening, and you will need to fix your code. You should use `assert()` to avoid conditions that should never, ever occur.
