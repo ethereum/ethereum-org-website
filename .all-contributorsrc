@@ -3921,6 +3921,15 @@
         "content",
         "bug"
       ]
+    },
+    {
+      "login": "vbarda",
+      "name": "Vadym Barda",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19161700?v=4",
+      "profile": "http://www.kensho.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
