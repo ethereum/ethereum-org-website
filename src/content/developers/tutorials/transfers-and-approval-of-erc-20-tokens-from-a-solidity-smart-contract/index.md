@@ -142,7 +142,7 @@ contract DEX {
 }
 ```
 
-So we know have our DEX and it has all the token reserve available. The contract has two functions:
+So we now have our DEX and it has all the token reserve available. The contract has two functions:
 
 - `buy`: The user can send ether and get tokens in exchange
 - `sell`: The user can decide to send tokens to get ether back
