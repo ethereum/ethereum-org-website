@@ -31,7 +31,9 @@ Most generally, this represents an [EOA](#eoa) or [contract](#contract-accouint)
 ### application binary interface (ABI) {#abi}
 
 The standard way to interact with [contracts](#contract-account) in the Ethereum ecosystem,
-both from outside the blockchain and for contract-to-contract interaction.
+both from outside the blockchain and for contract-to-contract interactions.
+
+<DocLink to="/developers/docs/smart-contracts/compiling/#web-applications" title="ABI" />
 
 ### assert {#assert}
 
