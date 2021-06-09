@@ -3911,6 +3911,16 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "lopeselio",
+      "name": "devELIOper",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43913734?v=4",
+      "profile": "https://develioper.vercel.app",
+      "contributions": [
+        "content",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
