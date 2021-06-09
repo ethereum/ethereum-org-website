@@ -1004,6 +1004,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/TheBicPen"><img src="https://avatars.githubusercontent.com/u/23622288?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Bic</b></sub></a><br /><a href="#content-TheBicPen" title="Content">🖋</a></td>
     <td align="center"><a href="https://develioper.vercel.app"><img src="https://avatars.githubusercontent.com/u/43913734?v=4?s=100" width="100px;" alt=""/><br /><sub><b>devELIOper</b></sub></a><br /><a href="#content-lopeselio" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Alopeselio" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="http://www.kensho.com"><img src="https://avatars.githubusercontent.com/u/19161700?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vadym Barda</b></sub></a><br /><a href="#content-vbarda" title="Content">🖋</a></td>
   </tr>
 </table>
 
