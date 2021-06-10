@@ -104,7 +104,7 @@ return ( data.merged===true)
               (issue) =>
                 issue.state === "closed" &&
                 "allcontributors[bot]" !== issue.user.login &&
-                !!issue.pull_request && isMerged(issue.pull_request.url)
+                 !!isMerged(issue.pull_request.url)
                 
                 
             )
