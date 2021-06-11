@@ -106,7 +106,7 @@ return ( data.merged===true)
                 "allcontributors[bot]" !== issue.user.login
                  }
               if(!!issue.pull_request.url){
-                return(!!isMerged(issue.pull_request.url))
+                return(isMerged(issue.pull_request.url))
               }
                 
                 
