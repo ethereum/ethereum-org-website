@@ -3939,6 +3939,16 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "pheeque",
+      "name": "pheeque",
+      "avatar_url": "https://avatars.githubusercontent.com/u/988061?v=4",
+      "profile": "https://github.com/pheeque",
+      "contributions": [
+        "bug",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
