@@ -169,7 +169,7 @@ A short string of data a user produces for a document using a [private key](#pri
 
 ### elliptic curve digital signature algorithm (ECDSA) {#ecdsa}
 
-A cryptographic algorithm used by Ethereum to ensure that funds can only be spent by their owners. It's the method of preference for public and private key creation. Relevant for account address generation and transaction verification.
+A cryptographic algorithm used by Ethereum to ensure that funds can only be spent by their owners. It's the preferred method for creating public and private keys. Relevant for account [address](#address) generation and [transaction](#transaction) verification.
 
 ### epoch {#epoch}
 
