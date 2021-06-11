@@ -102,9 +102,12 @@ return ( data.merged===true)
           const implemented = issues
             .filter(
               (issue) =>
-                issue.state === "closed" &&
-                "allcontributors[bot]" !== issue.user.login &&
-                 !!isMerged(issue.pull_request.url)
+              {issue.state === "closed" &&
+                "allcontributors[bot]" !== issue.user.login
+                 }
+              if(!!issue.pull_request.url){
+                return(!!isMerged(issue.pull_request.url))
+              }
                 
                 
             )
