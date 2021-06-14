@@ -43,8 +43,6 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 
 **Every month, there are major Ethereum events around the world.** Consider attending one near you to meet more people in the community, learn about employment opportunities, and develop new skills.
 
-- [ETHOdyssey](https://ethodyssey.devfolio.co/) - Global Online Ethereum Hackathon (July 2 - Aug 1)  
-
 <UpcomingEventsList/>
 
 _Have an event to add to this list? [Add it](https://github.com/ethereum/ethereum-org-website#how-can-i-contribute)!_
