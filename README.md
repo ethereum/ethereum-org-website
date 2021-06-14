@@ -1010,6 +1010,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/jmusighi"><img src="https://avatars.githubusercontent.com/u/495607?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jeremy Musighi</b></sub></a><br /><a href="#content-jmusighi" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/tbollinger"><img src="https://avatars.githubusercontent.com/u/10273688?v=4?s=100" width="100px;" alt=""/><br /><sub><b>tbollinger</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Atbollinger" title="Bug reports">🐛</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://ryangrunest.com/"><img src="https://avatars.githubusercontent.com/u/37844814?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ryan Grunest</b></sub></a><br /><a href="#content-ryangrunest" title="Content">🖋</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
