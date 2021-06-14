@@ -3958,6 +3958,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "tbollinger",
+      "name": "tbollinger",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10273688?v=4",
+      "profile": "https://github.com/tbollinger",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
