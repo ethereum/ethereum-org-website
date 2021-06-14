@@ -3967,6 +3967,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "ryangrunest",
+      "name": "Ryan Grunest",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37844814?v=4",
+      "profile": "https://ryangrunest.com/",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
