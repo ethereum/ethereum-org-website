@@ -1053,8 +1053,6 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_estimateGas","params":[{see 
 
 <Divider />
 
-<Divider />
-
 ### eth_getBlockByHash {#eth_getblockbyhash}
 
 Returns information about a block by hash.
