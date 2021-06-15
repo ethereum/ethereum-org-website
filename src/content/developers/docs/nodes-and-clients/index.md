@@ -197,7 +197,7 @@ Before installing any client, please ensure your computer has enough resources t
 - Fast SSD with at least 500 GB free space
 - 25+ MBit/s bandwidth
 
-Depending on which software and sync mode are you going to use, hundreds of GBs of disk space is need. Approximate numbers and growth can be found below.
+The sync mode you choose will affect space requirements but we've estimated the disk space you'll need for each client below.
 
 | Client       | Disk size (fast sync) | Disk size (full archive) |
 | ------------ | --------------------- | ------------------------ |
