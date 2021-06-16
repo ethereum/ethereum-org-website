@@ -92,6 +92,8 @@
     - id: docs-nav-programming-languages
       to: /developers/docs/programming-languages/
       items:
+        - id: docs-nav-dart
+          to: /developers/docs/programming-languages/dart/
         - id: docs-nav-delphi
           to: /developers/docs/programming-languages/delphi/
         - id: docs-nav-dot-net
