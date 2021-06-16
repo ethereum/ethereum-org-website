@@ -44,6 +44,19 @@ Read more about the [benefits of running your own node](/developers/docs/nodes-a
 
 Here is a list of some of the most popular Ethereum node providers, feel free to add any that are missing! Each node service offers different benefits and features in addition to free or paid tiers, you should investigate which ones best suit your needs prior to making a decision.
 
+- [**Moralis**](https://moralis.io/)
+  - [Docs](https://docs.moralis.io/)
+  - Features
+    - Free shared nodes
+    - Free shared archive nodes
+    - Privacy focused (no logs policy) 
+    - Cross chain support
+    - Scale as you go
+    - Dashboard
+    - Unique Ethereum SDK
+    - Unique API endpoints
+    - Direct, technical support
+
 - [**Alchemy**](https://alchemyapi.io/)
   - [Docs](https://docs.alchemyapi.io/)
   - Features
