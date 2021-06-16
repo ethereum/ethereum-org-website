@@ -876,7 +876,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://www.codechef.com/users/chaos_"><img src="https://avatars.githubusercontent.com/u/29145212?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vishal Pratap Singh</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Vishal19111999" title="Code">💻</a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://github.com/qbzzt"><img src="https://avatars.githubusercontent.com/u/12722969?v=4?s=100" width="100px;" alt=""/><br /><sub><b>qbzzt</b></sub></a><br /><a href="#content-qbzzt" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/qbzzt"><img src="https://avatars.githubusercontent.com/u/12722969?v=4?s=100" width="100px;" alt=""/><br /><sub><b>qbzzt</b></sub></a><br /><a href="#content-qbzzt" title="Content">🖋</a> <a href="#ideas-qbzzt" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/ekowalsk"><img src="https://avatars.githubusercontent.com/u/30404388?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ewa Kowalska</b></sub></a><br /><a href="#content-ekowalsk" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/Aheesh"><img src="https://avatars.githubusercontent.com/u/8059227?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aheesh</b></sub></a><br /><a href="#content-Aheesh" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/tophersjones"><img src="https://avatars.githubusercontent.com/u/33736287?v=4?s=100" width="100px;" alt=""/><br /><sub><b>tophersjones</b></sub></a><br /><a href="#content-tophersjones" title="Content">🖋</a></td>
