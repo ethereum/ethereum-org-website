@@ -70,5 +70,5 @@ Looking for more resources? Check out [ethereum.org/developers.](/developers/)
 
 ## Other Aggregated Lists {#other-aggregated-lists}
 
-The Vyper wiki has an [inceredible list of resources for Vyper](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources)  
+The Vyper wiki has an [incredible list of resources for Vyper](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources)  
 For a compiled source of Python related tools, check out [py-eth.com](http://py-eth.com/).
