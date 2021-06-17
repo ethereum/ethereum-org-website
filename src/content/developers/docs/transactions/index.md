@@ -140,7 +140,7 @@ Once the transaction has been submitted the following happens:
    - You may end up waiting at this stage if the network is busy and miners aren't able to keep up. Miners will always prioritise transactions with higher `GASPRICE` because they get to keep the fees.
 4. Your transaction is assigned a block confirmation number. This number signifies the first block your transaction was included in. Note:
   - The block confirmation number provides a baseline to estimate the number of blocks created since your transaction's block. The higher the number, the greater the certainty that the transaction was processed and recognised by the network. 
-  -Recent blocks may be re-organised. This gives the impression that the transaction was reversed. The transaction is still valid but may be included in a different block.
+  - Recent blocks may be re-organised. This gives the impression that the transaction was reversed. The transaction is still valid but may be included in a different block.
   - The probability of a re-organisation diminishes with every subsequent block mined, i.e. the larger the block confirmation number, the more immutable the transaction is. So, for higher value transactions, more block confirmations may be desired.
    
 <!-- **State change**
