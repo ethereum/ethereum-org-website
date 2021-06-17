@@ -192,7 +192,12 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract FarmToken is ERC20 {
     using Address for address;
-    using SafeMath for uint256;
+    using SafeMath for uint256; /* This is not required for Solidity ^0.8.0
+                                   
+                                   Everyone who wanted to write a SafeMath function for exponentiation probably noticed that it is rather expensive to do that because the EVM does not provide overflow signalling. Essentially you have to implement your own exp routine without using the exp opcode for the general case.
+                                   
+                                   More info here: https://blog.soliditylang.org/2020/12/16/solidity-v0.8.0-release-announcement/
+                                */
     using SafeERC20 for IERC20;
 
     IERC20 public token;
