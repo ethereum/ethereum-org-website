@@ -329,6 +329,7 @@ const StatsBoxGrid = () => {
         try {
           const { result } = await getData("/.netlify/functions/txs")
           // result: [{UTCDate: string, unixTimeStamp: string, transactionCount: number}, {...}]
+          console.log(result)
           const count = result[0].transactionCount
           const value = formatTxs(count)
           setTxs({
@@ -433,7 +434,7 @@ const StatsBoxGrid = () => {
   }
 
   const types = [0, 1]
-  const defaultTypes = ["30D", "ALL"]
+  const defaultTypes = ["30d", "ALL"]
 
   const coingeckoTypes = ["30", "max"]
 
@@ -563,12 +564,7 @@ const StatsBoxGrid = () => {
           </AreaChart>
         </ResponsiveContainer>
       ),
-      buttonContainer: (
-        <div>
-          <button>30d</button>
-          <button>ALL</button>
-        </div>
-      ),
+      buttonContainer: <ToggleGroupPrice />,
       state: txs,
     },
     {
