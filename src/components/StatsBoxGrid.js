@@ -3,24 +3,13 @@ import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 import axios from "axios"
 
-import {
-  AreaChart,
-  ResponsiveContainer,
-  LineChart,
-  Line,
-  CartesianGrid,
-  Area,
-  XAxis,
-  YAxis,
-} from "recharts"
+import { AreaChart, ResponsiveContainer, Area } from "recharts"
 import Translation from "./Translation"
 import Tooltip from "./Tooltip"
 import Link from "./Link"
 import Icon from "./Icon"
 
 import { getData } from "../utils/cache"
-import { range } from "lodash"
-import { act } from "react-test-renderer"
 
 const Value = styled.h3`
   font-size: min(4.4vw, 64px);
@@ -125,13 +114,13 @@ const Lines = styled.div`
   bottom: 0;
   width: 101%;
   height: 200px;
-  z-index: -1;
+  z-index: 0;
 `
 
 const ButtonContainer = styled.div`
   position: absolute;
-  right: 10px;
-  bottom: 10px;
+  right: 20px;
+  bottom: 20px;
   font-family: "SFMono-Regular", monospace;
   // background: ${({ theme, color }) => theme.colors[color]};
 `
@@ -140,8 +129,8 @@ const Button = styled.button`
   background: ${(props) => props.theme.colors.background};
   font-family: "SFMono-Regular", monospace;
   color: ${({ theme }) => theme.colors.text};
-  padding: 5px 15px;
-  border-radius: 5px;
+  padding: 0px 10px;
+  border-radius: 1px;
   border: 1px solid ${({ theme, color }) => theme.colors[color]};
   outline: none;
   // text-transform: uppercase;
@@ -149,9 +138,9 @@ const Button = styled.button`
   cursor: pointer;
   // box-shadow: 0px 2px 2px lightgray;
   // transition: ease background-color 250ms;
-  &:hover {
-    background-color: blue;
-  }
+  // &:hover {
+  //   background-color: blue;
+  // }
   &:disabled {
     cursor: default;
     opacity: 0.7;
@@ -159,10 +148,11 @@ const Button = styled.button`
 `
 
 const ButtonToggle = styled(Button)`
-  opacity: 0.7;
+  // opacity: 0.7;
   ${({ active }) =>
     active &&
     `
+    background-color: #C0B9DD;
     opacity: 1; 
   `}
 `
@@ -364,119 +354,138 @@ const StatsBoxGrid = () => {
       "-" +
       (today.getDate() - 1),
     oneMonthAgo =
-      today.getFullYear() + "-" + today.getMonth() + "-" + today.getDate()
+      today.getFullYear() + "-" + today.getMonth() + "-" + (today.getDate() - 1)
   const start = "2019-10-30"
 
-  // let url =
-  //   "https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=30&interval=hour"
-
-  // const url1 =
-  //   "https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=" +
-  //   oneMonthAgo +
-  //   "&enddate=" +
-  //   date +
-  //   "&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5"
-
-  // const url1 =
-  //   "https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=2019-10-30&enddate=2021-06-14&clienttype=geth&syncmode=default&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5"
-
-  // const url2 =
-  //   "https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key={{DeFi_Pulse_Key}}&period=1y&length=hours"
-
-  const [App, setApp] = useState(null)
+  const [coingecko, setCoingecko] = useState(null)
   useEffect(() => {
     coinGeckoData("30")
   }, [])
 
   function coinGeckoData(mode) {
-    let url = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
-    axios.get(url).then((response) => {
-      setApp(response.data)
+    let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
+    axios.get(coingeckoUrl).then((response) => {
+      setCoingecko(response.data)
     })
   }
 
-  const [App1, setApp1] = useState(null)
+  const [etherscan, setEtherscan] = useState(null)
   useEffect(() => {
     etherscanData(oneMonthAgo)
   }, [])
 
-  let type
   function etherscanData(mode1) {
-    let url1 = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
-    axios.get(url1).then((response) => {
-      setApp1(response.data)
+    let etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
+    axios.get(etherscanUrl).then((response) => {
+      setEtherscan(response.data)
     })
   }
 
-  const [App2, setApp2] = useState(null)
+  const [defipulse, setDefipulse] = useState(null)
   useEffect(() => {
     defipalseData("1m")
   }, [])
 
   function defipalseData(mode2) {
-    let url2 = `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=d68cfcfe749887913f720b22df372feb1b0f69e06e3e0c76eb25c592065a&period=${mode2}&length=days`
-    axios.get(url2).then((response) => {
-      setApp2(response.data)
+    let defipalseUrl = `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=0a4ad4845de41bc329200656dce1a109419b41cf8e94202e4dbf850471a6&period=${mode2}&length=days`
+    axios.get(defipalseUrl).then((response) => {
+      setDefipulse(response.data)
     })
   }
 
-  // console.log(App2)
-
-  // let [data, setData] = useState(null)
-  let data = []
-  let data2 = []
-  let data1 = []
-
-  if (App) {
-    for (const i in App.prices) {
-      data.push({
+  let pricesData = []
+  if (coingecko) {
+    for (const i in coingecko.prices) {
+      pricesData.push({
         name: "Page A",
-        uv: App.prices[i][1],
+        uv: coingecko.prices[i][1],
         pv: i,
         amt: 2400,
       })
     }
   }
 
-  if (App1) {
-    for (const i in App1.result) {
-      data1.push({
+  let nodesData = []
+  if (etherscan) {
+    for (const i in etherscan.result) {
+      nodesData.push({
         name: "Page A",
-        uv: App1.result[i]["TotalNodeCount"],
-        pv: App1.result[i]["UTCDate"],
+        uv: etherscan.result[i]["TotalNodeCount"],
+        pv: etherscan.result[i]["UTCDate"],
         amt: 2400,
       })
     }
   }
 
-  if (App2) {
-    console.log(Object.keys(App2).length)
-    for (let i = 1; i <= Object.keys(App2).length; i++) {
+  let valueLockedData = []
+  if (defipulse) {
+    for (let i = 1; i <= Object.keys(defipulse).length; i++) {
       if (i != "error") {
-        data2.push({
+        valueLockedData.push({
           name: " Page A",
-          uv: App2[Object.keys(App2).length - i]["tvlUSD"] / 1000000000,
-          pv: Object.keys(App2).length - i,
+          uv:
+            defipulse[Object.keys(defipulse).length - i]["tvlUSD"] / 1000000000,
+          pv: Object.keys(defipulse).length - i,
           amt: 2400,
         })
       }
     }
   }
 
-  const types = ["0", "1"]
-  const coingeckoTypes = ["30", "max"]
-  const defaultTypes = ["30d", "All"]
+  const types = [0, 1]
+  const defaultTypes = ["30D", "ALL"]
 
-  function ToggleGroup() {
-    const [active, setActive] = useState(types[0])
+  const coingeckoTypes = ["30", "max"]
+
+  const [priceActive, setPriceActive] = useState(types[0])
+  function ToggleGroupPrice() {
     return (
       <div>
         {types.map((type) => (
           <ButtonToggle
-            active={active === type}
+            active={priceActive === type}
             onClick={() => {
               coinGeckoData(coingeckoTypes[type])
-              setActive(type)
+              setPriceActive(type)
+            }}
+          >
+            {defaultTypes[type]}
+          </ButtonToggle>
+        ))}
+      </div>
+    )
+  }
+
+  const defipulseTypes = ["1m", "all"]
+  const [valueLockedActive, setValueLockedActive] = useState(types[0])
+  function ToggleGroupValueLocked() {
+    return (
+      <div>
+        {types.map((type) => (
+          <ButtonToggle
+            active={valueLockedActive === type}
+            onClick={() => {
+              defipalseData(defipulseTypes[type])
+              setValueLockedActive(type)
+            }}
+          >
+            {defaultTypes[type]}
+          </ButtonToggle>
+        ))}
+      </div>
+    )
+  }
+  const etherscanTypes = [oneMonthAgo, start]
+  const [nodesActive, setNodesActive] = useState(types[0])
+  function ToggleGroupNodes() {
+    return (
+      <div>
+        {types.map((type) => (
+          <ButtonToggle
+            active={nodesActive === type}
+            onClick={() => {
+              etherscanData(etherscanTypes[type])
+              setNodesActive(type)
             }}
           >
             {defaultTypes[type]}
@@ -498,11 +507,11 @@ const StatsBoxGrid = () => {
       ),
       line: (
         <ResponsiveContainer>
-          <AreaChart height={200} data={data}>
+          <AreaChart height={200} data={pricesData}>
             <defs>
               <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
-                <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
+                <stop offset="100%" stopColor="#8884d8" stopOpacity={0} />
               </linearGradient>
               <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
@@ -520,13 +529,7 @@ const StatsBoxGrid = () => {
           </AreaChart>
         </ResponsiveContainer>
       ),
-      buttonContainer: (
-        // <div>
-        //   <button onClick={() => coinGeckoData("30")}>30d</button>
-        //   <button onClick={() => coinGeckoData("max")}>ALL</button>
-        // </div>
-        <ToggleGroup />
-      ),
+      buttonContainer: <ToggleGroupPrice />,
       state: ethPrice,
     },
     {
@@ -538,7 +541,7 @@ const StatsBoxGrid = () => {
       ),
       line: (
         <ResponsiveContainer>
-          <AreaChart height={200} data={data}>
+          <AreaChart height={200} data={pricesData}>
             <defs>
               <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -579,7 +582,7 @@ const StatsBoxGrid = () => {
       ),
       line: (
         <ResponsiveContainer>
-          <AreaChart data={data2}>
+          <AreaChart data={valueLockedData}>
             <defs>
               <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -601,12 +604,7 @@ const StatsBoxGrid = () => {
           </AreaChart>
         </ResponsiveContainer>
       ),
-      buttonContainer: (
-        <div>
-          <button onClick={() => defipalseData("1m")}>30d</button>
-          <button onClick={() => defipalseData("all")}>ALL</button>
-        </div>
-      ),
+      buttonContainer: <ToggleGroupValueLocked />,
       state: valueLocked,
     },
     {
@@ -618,7 +616,7 @@ const StatsBoxGrid = () => {
       ),
       line: (
         <ResponsiveContainer>
-          <AreaChart height={200} data={data1}>
+          <AreaChart height={200} data={nodesData}>
             <defs>
               <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -640,12 +638,7 @@ const StatsBoxGrid = () => {
           </AreaChart>
         </ResponsiveContainer>
       ),
-      buttonContainer: (
-        <div>
-          <button onClick={() => etherscanData(oneMonthAgo)}>30d</button>
-          <button onClick={() => etherscanData(start)}>ALL</button>
-        </div>
-      ),
+      buttonContainer: <ToggleGroupNodes />,
       state: nodes,
     },
   ]
