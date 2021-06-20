@@ -376,12 +376,12 @@ const StatsBoxGrid = () => {
   }, [])
 
   function etherscanData(mode1) {
-    let etherscanUrl = null
-    if (process.env.NODE_ENV !== "production") {
-      etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
-    } else {
-      etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=${process.env.ETHERSCAN_API_KEY}`
-    }
+    let etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
+    // if (process.env.NODE_ENV !== "production") {
+    //   etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
+    // } else {
+    //   etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=${process.env.ETHERSCAN_API_KEY}`
+    // }
     axios.get(etherscanUrl).then((response) => {
       setEtherscan(response.data)
     })
@@ -393,12 +393,12 @@ const StatsBoxGrid = () => {
   }, [])
 
   function defipalseData(mode2) {
-    let defipalseUrl = null
-    if (process.env.NODE_ENV !== "production") {
-      defipalseUrl = `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=0a4ad4845de41bc329200656dce1a109419b41cf8e94202e4dbf850471a6&period=${mode2}&length=days`
-    } else {
-      defipalseUrl = `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=${process.env.DEFI_PULSE_API_KEY}&period=${mode2}&length=days`
-    }
+    let defipalseUrl = `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=0a4ad4845de41bc329200656dce1a109419b41cf8e94202e4dbf850471a6&period=${mode2}&length=days`
+    // if (process.env.NODE_ENV !== "production") {
+    //   defipalseUrl = `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=0a4ad4845de41bc329200656dce1a109419b41cf8e94202e4dbf850471a6&period=${mode2}&length=days`
+    // } else {
+    //   defipalseUrl = `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=${process.env.DEFI_PULSE_API_KEY}&period=${mode2}&length=days`
+    // }
     axios.get(defipalseUrl).then((response) => {
       setDefipulse(response.data)
     })
