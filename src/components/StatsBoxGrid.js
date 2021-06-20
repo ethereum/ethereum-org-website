@@ -108,11 +108,11 @@ const LoadingMessage = () => (
 )
 
 const Lines = styled.div`
-  position: relative;
+  position: absolute;
   margin-left: -5px;
   left: 0;
   bottom: 0;
-  width: 101%;
+  width: 101.5%;
   height: 200px;
   z-index: 0;
 `
@@ -133,11 +133,7 @@ const Button = styled.button`
   border-radius: 1px;
   border: 1px solid ${({ theme, color }) => theme.colors[color]};
   outline: none;
-  // text-transform: uppercase;
-  // margin: 10px 0px;
   cursor: pointer;
-  // box-shadow: 0px 2px 2px lightgray;
-  // transition: ease background-color 250ms;
   // &:hover {
   //   background-color: blue;
   // }
@@ -377,11 +373,6 @@ const StatsBoxGrid = () => {
 
   function etherscanData(mode1) {
     let etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
-    // if (process.env.NODE_ENV !== "production") {
-    //   etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
-    // } else {
-    //   etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=${process.env.ETHERSCAN_API_KEY}`
-    // }
     axios.get(etherscanUrl).then((response) => {
       setEtherscan(response.data)
     })
@@ -394,11 +385,6 @@ const StatsBoxGrid = () => {
 
   function defipalseData(mode2) {
     let defipalseUrl = `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=0a4ad4845de41bc329200656dce1a109419b41cf8e94202e4dbf850471a6&period=${mode2}&length=days`
-    // if (process.env.NODE_ENV !== "production") {
-    //   defipalseUrl = `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=0a4ad4845de41bc329200656dce1a109419b41cf8e94202e4dbf850471a6&period=${mode2}&length=days`
-    // } else {
-    //   defipalseUrl = `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=${process.env.DEFI_PULSE_API_KEY}&period=${mode2}&length=days`
-    // }
     axios.get(defipalseUrl).then((response) => {
       setDefipulse(response.data)
     })
