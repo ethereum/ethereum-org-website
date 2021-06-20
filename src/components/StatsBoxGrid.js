@@ -114,7 +114,7 @@ const Lines = styled.div`
   bottom: 0;
   width: 101.5%;
   height: 200px;
-  z-index: 3;
+  z-index: 0;
 `
 
 const ButtonContainer = styled.div`
