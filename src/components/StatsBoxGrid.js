@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 import axios from "axios"
 
-import { AreaChart, ResponsiveContainer, Area } from "recharts"
+import { AreaChart, ResponsiveContainer, Area, XAxis, YAxis } from "recharts"
 import Translation from "./Translation"
 import Tooltip from "./Tooltip"
 import Link from "./Link"
@@ -532,6 +532,8 @@ const StatsBoxGrid = () => {
               fill="url(#colorUv)"
               fillOpacity="0.2"
             />
+            <XAxis dataKey="uv" />
+            <YAxis />
           </AreaChart>
         </ResponsiveContainer>
       ),
