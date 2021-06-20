@@ -109,12 +109,11 @@ const LoadingMessage = () => (
 
 const Lines = styled.div`
   position: absolute;
-  margin-left: -5px;
-  left: 0;
-  bottom: 0;
-  width: 101.5%;
+  margin-left: -28px;
+  width: 48%;
   height: 200px;
-  z-index: 0;
+  // z-index: 0;
+  transition: 3s ease-in-out;
 `
 
 const ButtonContainer = styled.div`
@@ -122,14 +121,16 @@ const ButtonContainer = styled.div`
   right: 20px;
   bottom: 20px;
   font-family: "SFMono-Regular", monospace;
+  z-index: 1;
   // background: ${({ theme, color }) => theme.colors[color]};
 `
 
 const Button = styled.button`
   background: ${(props) => props.theme.colors.background};
   font-family: "SFMono-Regular", monospace;
+  font-size: 20px;
   color: ${({ theme }) => theme.colors.text};
-  padding: 0px 10px;
+  padding: 2px 15px;
   border-radius: 1px;
   border: 1px solid ${({ theme, color }) => theme.colors[color]};
   outline: none;
@@ -172,16 +173,19 @@ const GridItem = ({ metric }) => {
   )
 
   return (
-    <Box>
-      <div>
-        <Title>{title}</Title>
-        <p>{description}</p>
-        <Lines>{line}</Lines>
-        <ButtonContainer>{buttonContainer}</ButtonContainer>
-      </div>
+    <div>
+      <Box>
+        <div>
+          <Title>{title}</Title>
+          <p>{description}</p>
+          <ButtonContainer>{buttonContainer}</ButtonContainer>
+        </div>
 
-      <Value>{value}</Value>
-    </Box>
+        <Value>{value}</Value>
+      </Box>
+
+      <Lines>{line}</Lines>
+    </div>
   )
 }
 
