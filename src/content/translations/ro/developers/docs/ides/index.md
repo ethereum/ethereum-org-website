@@ -38,6 +38,10 @@ Majoritatea IDE-urilor consacrate au construit plug-inuri pentru a îmbunătăț
 - [GitHub](https://github.com/atom)
 - [Pachete Ethereum](https://atom.io/packages/search?utf8=%E2%9C%93&q=keyword%3Aethereum&commit=Search)
 
+**Remix Desktop -** **_Experimentați IDE Remix pe computerul dvs. local_**
+
+- [GitHub](https://github.com/ethereum/remix-desktop)
+
 ## Referințe suplimentare {#further-reading}
 
 _Cunoști o resursă comunitară care te-a ajutat? Editează această pagină și adaug-o!_
