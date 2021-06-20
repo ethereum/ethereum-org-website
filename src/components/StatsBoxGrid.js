@@ -527,9 +527,9 @@ const StatsBoxGrid = () => {
             <Area
               type="monotone"
               dataKey="uv"
-              stroke="#8884d8"
+              stroke="yellow"
               fillOpacity={0.3}
-              fill="url(#colorUv)"
+              fill="red"
               fillOpacity="0.2"
             />
           </AreaChart>
