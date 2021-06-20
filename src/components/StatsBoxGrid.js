@@ -383,17 +383,17 @@ const StatsBoxGrid = () => {
     })
   }
 
-  const [defipulse, setDefipulse] = useState(null)
-  useEffect(() => {
-    defipalseData("1m")
-  }, [])
+  // const [defipulse, setDefipulse] = useState(null)
+  // useEffect(() => {
+  //   defipalseData("1m")
+  // }, [])
 
-  function defipalseData(mode2) {
-    let defipalseUrl = `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=9ea611a770bebe40246e9c3042d6e90a83a641a2748cbf4aec964cb7c41b&period=${mode2}&length=days`
-    axios.get(defipalseUrl).then((response) => {
-      setDefipulse(response.data)
-    })
-  }
+  // function defipalseData(mode2) {
+  //   let defipalseUrl = `ttps://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=9ea611a770bebe40246e9c3042d6e90a83a641a2748cbf4aec964cb7c41b&period=${mode2}&length=days`
+  //   axios.get(defipalseUrl).then((response) => {
+  //     setDefipulse(response.data)
+  //   })
+  // }
 
   let pricesData = []
   if (coingecko) {
@@ -419,20 +419,20 @@ const StatsBoxGrid = () => {
     }
   }
 
-  let valueLockedData = []
-  if (defipulse) {
-    for (let i = 1; i <= Object.keys(defipulse).length; i++) {
-      if (i != "error") {
-        valueLockedData.push({
-          name: " Page A",
-          uv:
-            defipulse[Object.keys(defipulse).length - i]["tvlUSD"] / 1000000000,
-          pv: Object.keys(defipulse).length - i,
-          amt: 2400,
-        })
-      }
-    }
-  }
+  // let valueLockedData = []
+  // if (defipulse) {
+  //   for (let i = 1; i <= Object.keys(defipulse).length; i++) {
+  //     if (i != "error") {
+  //       valueLockedData.push({
+  //         name: " Page A",
+  //         uv:
+  //           defipulse[Object.keys(defipulse).length - i]["tvlUSD"] / 1000000000,
+  //         pv: Object.keys(defipulse).length - i,
+  //         amt: 2400,
+  //       })
+  //     }
+  //   }
+  // }
 
   const types = [0, 1]
   const defaultTypes = ["30d", "ALL"]
@@ -458,25 +458,25 @@ const StatsBoxGrid = () => {
     )
   }
 
-  const defipulseTypes = ["1m", "all"]
-  const [valueLockedActive, setValueLockedActive] = useState(types[0])
-  function ToggleGroupValueLocked() {
-    return (
-      <div>
-        {types.map((type) => (
-          <ButtonToggle
-            active={valueLockedActive === type}
-            onClick={() => {
-              defipalseData(defipulseTypes[type])
-              setValueLockedActive(type)
-            }}
-          >
-            {defaultTypes[type]}
-          </ButtonToggle>
-        ))}
-      </div>
-    )
-  }
+  // const defipulseTypes = ["1m", "all"]
+  // const [valueLockedActive, setValueLockedActive] = useState(types[0])
+  // function ToggleGroupValueLocked() {
+  //   return (
+  //     <div>
+  //       {types.map((type) => (
+  //         <ButtonToggle
+  //           active={valueLockedActive === type}
+  //           onClick={() => {
+  //             defipalseData(defipulseTypes[type])
+  //             setValueLockedActive(type)
+  //           }}
+  //         >
+  //           {defaultTypes[type]}
+  //         </ButtonToggle>
+  //       ))}
+  //     </div>
+  //   )
+  // }
   const etherscanTypes = [oneMonthAgo, start]
   const [nodesActive, setNodesActive] = useState(types[0])
   function ToggleGroupNodes() {
@@ -499,7 +499,7 @@ const StatsBoxGrid = () => {
 
   console.log(pricesData)
   console.log(nodesData)
-  console.log(valueLockedData)
+  // console.log(valueLockedData)
 
   const metrics = [
     {
@@ -583,7 +583,7 @@ const StatsBoxGrid = () => {
       ),
       line: (
         <ResponsiveContainer>
-          <AreaChart data={valueLockedData}>
+          <AreaChart data={pricesData}>
             <defs>
               <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -605,7 +605,7 @@ const StatsBoxGrid = () => {
           </AreaChart>
         </ResponsiveContainer>
       ),
-      buttonContainer: <ToggleGroupValueLocked />,
+      buttonContainer: <ToggleGroupPrice />,
       state: valueLocked,
     },
     {
