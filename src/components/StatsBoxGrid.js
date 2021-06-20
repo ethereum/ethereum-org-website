@@ -109,11 +109,12 @@ const LoadingMessage = () => (
 
 const Lines = styled.div`
   position: absolute;
-  margin-left: -28px;
-  width: 48%;
+  margin-left: -5px;
+  left: 0;
+  bottom: 0;
+  width: 101.5%;
   height: 200px;
-  // z-index: 0;
-  transition: 3s ease-in-out;
+  z-index: 0;
 `
 
 const ButtonContainer = styled.div`
@@ -121,7 +122,6 @@ const ButtonContainer = styled.div`
   right: 20px;
   bottom: 20px;
   font-family: "SFMono-Regular", monospace;
-  z-index: 1;
   // background: ${({ theme, color }) => theme.colors[color]};
 `
 
@@ -134,7 +134,11 @@ const Button = styled.button`
   border-radius: 1px;
   border: 1px solid ${({ theme, color }) => theme.colors[color]};
   outline: none;
+  // text-transform: uppercase;
+  // margin: 10px 0px;
   cursor: pointer;
+  // box-shadow: 0px 2px 2px lightgray;
+  // transition: ease background-color 250ms;
   // &:hover {
   //   background-color: blue;
   // }
@@ -173,19 +177,16 @@ const GridItem = ({ metric }) => {
   )
 
   return (
-    <div>
-      <Box>
-        <div>
-          <Title>{title}</Title>
-          <p>{description}</p>
-          <ButtonContainer>{buttonContainer}</ButtonContainer>
-        </div>
+    <Box>
+      <div>
+        <Title>{title}</Title>
+        <p>{description}</p>
+        <Lines>{line}</Lines>
+        <ButtonContainer>{buttonContainer}</ButtonContainer>
+      </div>
 
-        <Value>{value}</Value>
-      </Box>
-
-      <Lines>{line}</Lines>
-    </div>
+      <Value>{value}</Value>
+    </Box>
   )
 }
 
@@ -388,7 +389,7 @@ const StatsBoxGrid = () => {
   }, [])
 
   function defipalseData(mode2) {
-    let defipalseUrl = `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=0a4ad4845de41bc329200656dce1a109419b41cf8e94202e4dbf850471a6&period=${mode2}&length=days`
+    let defipalseUrl = `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=9ea611a770bebe40246e9c3042d6e90a83a641a2748cbf4aec964cb7c41b&period=${mode2}&length=days`
     axios.get(defipalseUrl).then((response) => {
       setDefipulse(response.data)
     })
@@ -495,6 +496,10 @@ const StatsBoxGrid = () => {
       </div>
     )
   }
+
+  console.log(pricesData)
+  console.log(nodesData)
+  console.log(valueLockedData)
 
   const metrics = [
     {
