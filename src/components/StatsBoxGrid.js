@@ -532,7 +532,7 @@ const StatsBoxGrid = () => {
               fill="url(#colorUv)"
               fillOpacity="0.2"
             />
-            <XAxis dataKey="uv" />
+            <XAxis />
             <YAxis />
           </AreaChart>
         </ResponsiveContainer>
