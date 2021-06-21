@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 import axios from "axios"
 
-import { AreaChart, ResponsiveContainer, Area, XAxis, YAxis } from "recharts"
+import { AreaChart, ResponsiveContainer, Area, LineChart, Line } from "recharts"
 import Translation from "./Translation"
 import Tooltip from "./Tooltip"
 import Link from "./Link"
@@ -374,11 +374,11 @@ const StatsBoxGrid = () => {
   //   defipalseData("1m")
   // }, [])
 
-  // useEffect(() => {
-  //   coinGeckoData("30")
-  //   etherscanData(oneMonthAgo)
-  //   defipalseData("1m")
-  // }, [])
+  useEffect(() => {
+    coinGeckoData("30")
+    etherscanData(oneMonthAgo)
+    defipalseData("1m")
+  }, [])
 
   function coinGeckoData(mode) {
     let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
@@ -538,8 +538,6 @@ const StatsBoxGrid = () => {
               fill="url(#colorUv)"
               fillOpacity="0.2"
             />
-            <XAxis xAxisId="0" />
-            <YAxis />
           </AreaChart>
         </ResponsiveContainer>
       ),
@@ -555,26 +553,9 @@ const StatsBoxGrid = () => {
       ),
       line: (
         <ResponsiveContainer>
-          <AreaChart height={200} data={pricesData}>
-            <defs>
-              <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
-                <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-              </linearGradient>
-              <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-                <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
-              </linearGradient>
-            </defs>
-            <Area
-              type="monotone"
-              dataKey="uv"
-              stroke="#8884d8"
-              fillOpacity={0.3}
-              fill="url(#colorUv)"
-              fillOpacity="0.2"
-            />
-          </AreaChart>
+          <LineChart data={pricesData}>
+            <Line type="monotone" dataKey="uv" stroke="#8884d8" />
+          </LineChart>
         </ResponsiveContainer>
       ),
       buttonContainer: <ToggleGroupPrice />,
