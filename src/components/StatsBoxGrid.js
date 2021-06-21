@@ -374,11 +374,11 @@ const StatsBoxGrid = () => {
   //   defipalseData("1m")
   // }, [])
 
-  useEffect(() => {
-    coinGeckoData("30")
-    etherscanData(oneMonthAgo)
-    defipalseData("1m")
-  }, [])
+  // useEffect(() => {
+  //   coinGeckoData("30")
+  //   etherscanData(oneMonthAgo)
+  //   defipalseData("1m")
+  // }, [])
 
   function coinGeckoData(mode) {
     let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
@@ -538,7 +538,7 @@ const StatsBoxGrid = () => {
               fill="url(#colorUv)"
               fillOpacity="0.2"
             />
-            <XAxis xAxisId="0" dataKey="uv" />
+            <XAxis xAxisId="0" />
             <YAxis />
           </AreaChart>
         </ResponsiveContainer>
