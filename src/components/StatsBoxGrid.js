@@ -428,7 +428,7 @@ const StatsBoxGrid = () => {
   let valueLockedData = []
   if (defipulse) {
     for (let i = 1; i <= Object.keys(defipulse).length; i++) {
-      if (i != "error") {
+      try {
         valueLockedData.push({
           name: " Page A",
           uv:
@@ -436,7 +436,7 @@ const StatsBoxGrid = () => {
           pv: Object.keys(defipulse).length - i,
           amt: 2400,
         })
-      }
+      } catch {}
     }
   }
 
@@ -552,11 +552,9 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-tx-day-explainer" />
       ),
       line: (
-        <ResponsiveContainer>
-          <LineChart data={pricesData}>
-            <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-          </LineChart>
-        </ResponsiveContainer>
+        <LineChart width={600} height={300} data={pricesData}>
+          <Line type="monotone" dataKey="uv" stroke="#8884d8" />
+        </LineChart>
       ),
       buttonContainer: <ToggleGroupPrice />,
       state: txs,
