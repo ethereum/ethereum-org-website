@@ -3999,6 +3999,15 @@
         "translation",
         "content"
       ]
+    },
+    {
+      "login": "filipmartinsson",
+      "name": "Filip Martinsson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10158281?v=4",
+      "profile": "https://www.stockholmblockchain.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
