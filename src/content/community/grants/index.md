@@ -26,8 +26,7 @@ These programs support the broad Ethereum ecosystem by offering grants to a wide
 
 These projects have created their own grants for projects aimed at developing and experimenting with their own technology.
 
-<!-- This grants program seems to be down - [Maker](https://grants.makerdao.com/) - _Risk, governance, core development, ecosystem, tools, MakerDAO community, security_  
-  Grants ranging from 5K - 50K Dai. -->
+- [MakerDAO](https://community-development.makerdao.com/en/programs/development-grants/) – _[MakerDAO](https://makerdao.com/en/) development_
 - [TheGraph](https://airtable.com/shreX09LazIhsg0bU) – _[The Graph](https://thegraph.com/) ecosystem_
 - [Uniswap](https://airtable.com/shrEXXxXB1humz7VS) – _[Uniswap](https://uniswap.org/) community_
 - [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) – _[Balancer](https://balancer.fi/) Ecosystem Fund_
