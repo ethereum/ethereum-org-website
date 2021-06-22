@@ -26,7 +26,7 @@ Brauchst du zuerst einen grundsätzlichen Einstieg? Schaue dir [ethereum.org/lea
 
 ## Einstiegsinformationen {#beginner-articles}
 
-- [Eine Einführung in Smart Contracts mit Vyper](https://kauri.io/article/af913a853eaf4db88627b3ff9572b770/v1/an-introduction-to-smart-contracts-with-vyper)
+- [Eine Einführung in Smart Contracts mit Vyper](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [Wie entwickelt man einen Ethereum-Vertrag mit Python Flask?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Einführung in Web3.py · Ethereum für Python-Entwickler](https://www.dappuniversity.com/articles/web3-py-intro)
 - [Wie man eine Smart Contract-Funktion mit Python und web3.py aufruft](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)

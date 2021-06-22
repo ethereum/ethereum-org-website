@@ -26,7 +26,7 @@ sidebar: true
 
 ## শিক্ষানবিসদের জন্য প্রবন্ধ {#beginner-articles}
 
-- [ভাইপারের সঙ্গে স্মার্ট কন্ট্র্যাক্টের সূচনা](https://kauri.io/article/af913a853eaf4db88627b3ff9572b770/v1/an-introduction-to-smart-contracts-with-vyper)
+- [ভাইপারের সঙ্গে স্মার্ট কন্ট্র্যাক্টের সূচনা](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [পাইথন ফ্লাস্ক ব্যবহার করে কীভাবে ইথেরিয়াম কন্ট্র্যাক্ট ডেভেলপ করা যায়?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Web3.py এর সূচনা - পাইথন ডেভেলপারদের জন্য ইথেরিয়াম](https://www.dappuniversity.com/articles/web3-py-intro)
 - [পাইথন ও web3.py ব্যবহার করে কীভাবে একটি স্মার্ট কন্ট্র্যাক্ট ফাংশনকে কল করা যায়](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)

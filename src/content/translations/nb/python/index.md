@@ -26,7 +26,7 @@ Trenger du en mer grunnleggende primer først? Sjekk ut [ethereum.org/learn](/le
 
 ## Nybegynner artikler {#beginner-articles}
 
-- [En introduksjon til Smart Kontrakter med Vyper](https://kauri.io/article/af913a853eaf4db88627b3ff9572b770/v1/an-introduction-to-smart-contracts-with-vyper)
+- [En introduksjon til Smart Kontrakter med Vyper](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [Hvordan utvikle Ethereum-kontrakt ved hjelp av Python Flask?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Introduksjon til Web3.py · Ethereum for Python Utviklere](https://www.dappuniversity.com/articles/web3-py-intro)
 - [Slik kaller du en Smart Kontrakt-funksjon ved hjelp av Python og web3.py](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)

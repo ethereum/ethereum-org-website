@@ -27,7 +27,7 @@ sidebarDepth: 1
 
 ## Статті для початківців {#beginner-articles}
 
-- [Введення до смарт-контрактів із використанням Vyper](https://kauri.io/article/af913a853eaf4db88627b3ff9572b770/v1/an-introduction-to-smart-contracts-with-vyper)
+- [Введення до смарт-контрактів із використанням Vyper](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [Як розробити контракт Ethereum з використанням Python Flask?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Введення до Web3.py · Ethereum для розробників на Python](https://www.dappuniversity.com/articles/web3-py-intro)
 - [Як викликати функцію смарт-контракту з використанням Python та web3.py](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)

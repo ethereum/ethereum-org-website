@@ -26,7 +26,7 @@ sidebar: true
 
 ## തുടക്കക്കാരന്റെ ലേഖനങ്ങൾ {#beginner-articles}
 
-- [വൈപ്പറുമായുള്ള സ്മാർട്ട് കരാറുകള്‍ക്കായി ഒരു ആമുഖം](https://kauri.io/article/af913a853eaf4db88627b3ff9572b770/v1/an-introduction-to-smart-contracts-with-vyper)
+- [വൈപ്പറുമായുള്ള സ്മാർട്ട് കരാറുകള്‍ക്കായി ഒരു ആമുഖം](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [പൈത്തൺ ഫ്ലാസ്ക് ഉപയോഗിച്ച് Ethereum കരാർ എങ്ങനെ വികസിപ്പിക്കാം?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Web3.py-ക്കുള്ള ആമുഖം പൈത്തൺ ഡവലപ്പർമാർക്കുള്ള Ethereum](https://www.dappuniversity.com/articles/web3-py-intro)
 - [പൈത്തൺ, web3.py എന്നിവ ഉപയോഗിച്ച് ഒരു സ്മാർട്ട് കരാർ ഫംഗ്ഷനെ എങ്ങനെ വിളിക്കാം](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
