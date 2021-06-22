@@ -27,7 +27,7 @@ Ti servono prima le nozioni di base? Dai un'occhiata a [ethereum.org/learn](/it/
 
 ## Articoli per principianti {#beginner-articles}
 
-- [Introduzione agli Smart Contract con Vyper (in inglese)](https://kauri.io/article/af913a853eaf4db88627b3ff9572b770/v1/an-introduction-to-smart-contracts-with-vyper)
+- [Introduzione agli Smart Contract con Vyper (in inglese)](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [Come sviluppare un contratto Ethereum usando Python Flask (in inglese)](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Introduzione a Web3.py · Ethereum per sviluppatori Python (in inglese)](https://www.dappuniversity.com/articles/web3-py-intro)
 - [Come chiamare la funzione di uno Smart Contract usando Python e web3.py (in inglese)](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)

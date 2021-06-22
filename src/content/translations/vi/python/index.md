@@ -27,7 +27,7 @@ Cần một hướng dẫn cơ bản hơn? Tham khảo [ethereum.org/learn](/vi/
 
 ## Bài viết cho người mới bắt đầu {#beginner-articles}
 
-- [Giới thiệu về Hợp đồng thông minh với Vyper](https://kauri.io/article/af913a853eaf4db88627b3ff9572b770/v1/an-introduction-to-smart-contracts-with-vyper)
+- [Giới thiệu về Hợp đồng thông minh với Vyper](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [Phát triển hợp đồng Ethereum bằng Python Flask như thế nào?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Giới thiệu về Web3.py · Ethereum dành cho nhà phát triển Python](https://www.dappuniversity.com/articles/web3-py-intro)
 - [Cách gọi chức năng Hợp đồng thông minh bằng Python và web3.py](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)

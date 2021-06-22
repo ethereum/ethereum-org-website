@@ -1014,6 +1014,13 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://ryangrunest.com/"><img src="https://avatars.githubusercontent.com/u/37844814?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ryan Grunest</b></sub></a><br /><a href="#content-ryangrunest" title="Content">🖋</a></td>
     <td align="center"><a href="http://aniketraj.me"><img src="https://avatars.githubusercontent.com/u/32848400?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aniket Raj</b></sub></a><br /><a href="#content-aniket-spidey" title="Content">🖋</a></td>
     <td align="center"><a href="http://linkedin.com/in/kamilzarzycki/"><img src="https://avatars.githubusercontent.com/u/26347436?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kamil Zarzycki</b></sub></a><br /><a href="#translation-Ryeore" title="Translation">🌍</a> <a href="#content-Ryeore" title="Content">🖋</a></td>
+    <td align="center"><a href="https://www.stockholmblockchain.com"><img src="https://avatars.githubusercontent.com/u/10158281?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Filip Martinsson</b></sub></a><br /><a href="#content-filipmartinsson" title="Content">🖋</a></td>
+    <td align="center"><a href="https://www.zeroservices.eu"><img src="https://avatars.githubusercontent.com/u/78486441?v=4?s=100" width="100px;" alt=""/><br /><sub><b>zeroservices</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Azeroservices" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/lukassim"><img src="https://avatars.githubusercontent.com/u/37338979?v=4?s=100" width="100px;" alt=""/><br /><sub><b>LukaK</b></sub></a><br /><a href="#content-lukassim" title="Content">🖋</a> <a href="#ideas-lukassim" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="http://lukeingalls.com"><img src="https://avatars.githubusercontent.com/u/45518011?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Luke Ingalls</b></sub></a><br /><a href="#content-lukeingalls" title="Content">🖋</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/cstradtman"><img src="https://avatars.githubusercontent.com/u/17035843?v=4?s=100" width="100px;" alt=""/><br /><sub><b>cstradtman</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Acstradtman" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 

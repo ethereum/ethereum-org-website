@@ -3999,6 +3999,52 @@
         "translation",
         "content"
       ]
+    },
+    {
+      "login": "filipmartinsson",
+      "name": "Filip Martinsson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10158281?v=4",
+      "profile": "https://www.stockholmblockchain.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "zeroservices",
+      "name": "zeroservices",
+      "avatar_url": "https://avatars.githubusercontent.com/u/78486441?v=4",
+      "profile": "https://www.zeroservices.eu",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "lukassim",
+      "name": "LukaK",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37338979?v=4",
+      "profile": "https://github.com/lukassim",
+      "contributions": [
+        "content",
+        "ideas"
+      ]
+    },
+    {
+      "login": "lukeingalls",
+      "name": "Luke Ingalls",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45518011?v=4",
+      "profile": "http://lukeingalls.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "cstradtman",
+      "name": "cstradtman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17035843?v=4",
+      "profile": "https://github.com/cstradtman",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
