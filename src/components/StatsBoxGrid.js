@@ -251,9 +251,9 @@ const StatsBoxGrid = () => {
   }
 
   useEffect(() => {
-    // coinGeckoData("30")
-    // etherscanData(oneMonthAgo)
-    // defipalseData("1m")
+    coinGeckoData("30")
+    etherscanData(oneMonthAgo)
+    defipalseData("1m")
 
     // Skip APIs when not in production
     if (process.env.NODE_ENV !== "production") {
@@ -297,6 +297,7 @@ const StatsBoxGrid = () => {
       const fetchNodes = async () => {
         try {
           const data = await getData("/.netlify/functions/etherscan")
+          console.log(data)
           const total = data.result.TotalNodeCount
           const value = formatNodes(total)
           setNodes({
@@ -315,6 +316,7 @@ const StatsBoxGrid = () => {
       const fetchTotalValueLocked = async () => {
         try {
           const data = await getData("/.netlify/functions/defipulse")
+          console.log(data)
           const ethereumTVL = data.ethereumTVL
           const value = formatTVL(ethereumTVL)
           setValueLocked({
@@ -370,9 +372,9 @@ const StatsBoxGrid = () => {
   // }, [])
 
   const [coingecko, setCoingecko] = useState(null)
-  useEffect(() => {
-    coinGeckoData("30")
-  }, [])
+  // useEffect(() => {
+  //   coinGeckoData("30")
+  // }, [])
 
   function coinGeckoData(mode) {
     let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
@@ -382,9 +384,9 @@ const StatsBoxGrid = () => {
   }
 
   const [etherscan, setEtherscan] = useState(null)
-  useEffect(() => {
-    etherscanData(oneMonthAgo)
-  }, [])
+  // useEffect(() => {
+  //   etherscanData(oneMonthAgo)
+  // }, [])
 
   function etherscanData(mode1) {
     let etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
@@ -394,9 +396,9 @@ const StatsBoxGrid = () => {
   }
 
   const [defipulse, setDefipulse] = useState(null)
-  useEffect(() => {
-    defipalseData("1m")
-  }, [])
+  // useEffect(() => {
+  //   defipalseData("1m")
+  // }, [])
 
   function defipalseData(mode2) {
     let defipalseUrl = `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=9ea611a770bebe40246e9c3042d6e90a83a641a2748cbf4aec964cb7c41b&period=${mode2}&length=days`
