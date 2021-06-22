@@ -64,7 +64,7 @@ Gas price alone does not actually determine how much we have to pay for a partic
 
 This video about gas fees explains fully why fees can be so expensive:
 
-https://www.youtube.com/embed/Yh8cHUB-KoU
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/Yh8cHUB-KoU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Initiatives to reduce gas costs {#initiatives-to-reduce-gas-costs}
 

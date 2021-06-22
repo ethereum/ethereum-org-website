@@ -28,6 +28,20 @@ Thank you for your participation in the ethereum.org Translation Program!
   {" "}<a href="/en/contributing/translation-program/translation-guide/">Translating ethereum.org FAQ</a>
 </InfoBanner>
 
+## Resources {#resources}
+
+**Tools**
+
+- [Microsoft Language Portal](https://www.microsoft.com/en-us/language)
+  _– Useful for finding and checking the standard translations of technical terms_
+- [Linguee](https://www.linguee.com/)
+  _– Search engine for translations and dictionary that enables searching by word or phrase_
+
+**Communities**
+
+- [Chinese translator group](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)
+  _– Notion page for easier coordination between Chinese translators_
+
 ## In-progress translations {#in-progress}
 
 <TranslationsInProgress />

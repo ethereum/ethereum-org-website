@@ -26,7 +26,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/id/learn/) 
 
 ## Artikel Tingkat Dasar {#beginner-articles}
 
-- [Mengenal Smart Contract dengan Vyper](https://kauri.io/article/af913a853eaf4db88627b3ff9572b770/v1/an-introduction-to-smart-contracts-with-vyper)
+- [Mengenal Smart Contract dengan Vyper](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [Bagaimana cara menulis smart contract di Ethereum dengan Python Flask?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Perkenalan mengenai Web3.py · Ethereum untuk developer Python](https://www.dappuniversity.com/articles/web3-py-intro)
 - [Bagaimana cara memanggil function Smart Contract dengan Python dan Web3.py](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
