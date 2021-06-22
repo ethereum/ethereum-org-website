@@ -37,7 +37,6 @@ Platforms with blockchain based persistence:
 
 - Ethereum
 - [Arweave](https://www.arweave.org/)
-- [0Chain](https://0chain.net/)
 
 ### Contract Based {#contract-based}
 
@@ -50,6 +49,7 @@ Platforms with contract based persistence:
 - [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
 - [Skynet](https://siasky.net/)
 - [Storj](https://storj.io/)
+- [0Chain](https://0chain.net/)
 
 ### Additional considerations {#additional-considertion}
 
