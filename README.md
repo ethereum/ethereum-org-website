@@ -1019,6 +1019,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/lukassim"><img src="https://avatars.githubusercontent.com/u/37338979?v=4?s=100" width="100px;" alt=""/><br /><sub><b>LukaK</b></sub></a><br /><a href="#content-lukassim" title="Content">🖋</a> <a href="#ideas-lukassim" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="http://lukeingalls.com"><img src="https://avatars.githubusercontent.com/u/45518011?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Luke Ingalls</b></sub></a><br /><a href="#content-lukeingalls" title="Content">🖋</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/cstradtman"><img src="https://avatars.githubusercontent.com/u/17035843?v=4?s=100" width="100px;" alt=""/><br /><sub><b>cstradtman</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Acstradtman" title="Bug reports">🐛</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
