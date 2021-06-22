@@ -4027,6 +4027,15 @@
         "content",
         "ideas"
       ]
+    },
+    {
+      "login": "lukeingalls",
+      "name": "Luke Ingalls",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45518011?v=4",
+      "profile": "http://lukeingalls.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
