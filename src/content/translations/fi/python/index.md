@@ -27,7 +27,7 @@ Tarvitsetko perusteellisempaa aloitusta? Katso [ethereum.org/fi/learn](/learn/) 
 
 ## Aloittelijan artikkelit {#beginner-articles}
 
-- [Johdanto älysopimuksiin Vyperillä](https://kauri.io/article/af913a853eaf4db88627b3ff9572b770/v1/an-introduction-to-smart-contracts-with-vyper)
+- [Johdanto älysopimuksiin Vyperillä](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [Miten voin kehittää Ethereum-sopimuksen käyttäen Python Flaskia?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Johdanto Web3.py:hyn · Ethereum Python-kehittäjille](https://www.dappuniversity.com/articles/web3-py-intro)
 - [Miten voin kutsua älysopimusfunktiota käyttäen Pythonia ja web3.py:tä](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)

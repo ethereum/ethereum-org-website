@@ -27,7 +27,7 @@ sidebarDepth: 1
 
 ## 初級記事 {#beginner-articles}
 
-- [Vyper を使ったスマートコントラクト入門](https://kauri.io/article/af913a853eaf4db88627b3ff9572b770/v1/an-introduction-to-smart-contracts-with-vyper)
+- [Vyper を使ったスマートコントラクト入門](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [Python の Flask を使ってイーサリアムコントラクトを開発するには？](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Web3.py 入門 - Python 開発者のためのイーサリアム](https://www.dappuniversity.com/articles/web3-py-intro)
 - [Python と web3.py を使ったスマートコントラクト関数の呼び出し方](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)

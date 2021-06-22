@@ -27,7 +27,7 @@ Usa Ethereum para crear aplicaciones descentralizadas (o "dapps") mediante los b
 
 ## Artículos para principiantes {#beginner-articles}
 
-- [Una introducción a los contratos inteligentes con Vyper](https://kauri.io/article/af913a853eaf4db88627b3ff9572b770/v1/an-introduction-to-smart-contracts-with-vyper)
+- [Una introducción a los contratos inteligentes con Vyper](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [¿Cómo desarrollar un contrato de Ethereum mediante Python Flask?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Introducción a Web3.py · Ethereum para desarrolladores de Python](https://www.dappuniversity.com/articles/web3-py-intro)
 - [Cómo llamar a una función de contrato inteligente mediante Python y web3.py](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
