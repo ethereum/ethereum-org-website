@@ -4008,6 +4008,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "zeroservices",
+      "name": "zeroservices",
+      "avatar_url": "https://avatars.githubusercontent.com/u/78486441?v=4",
+      "profile": "https://www.zeroservices.eu",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
