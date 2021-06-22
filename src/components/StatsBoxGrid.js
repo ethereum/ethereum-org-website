@@ -337,6 +337,7 @@ const StatsBoxGrid = () => {
           const { result } = await getData("/.netlify/functions/txs")
           // result: [{UTCDate: string, unixTimeStamp: string, transactionCount: number}, {...}]
           console.log(result)
+
           const count = result[0].transactionCount
           const value = formatTxs(count)
           setTxs({
