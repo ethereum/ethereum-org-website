@@ -27,7 +27,7 @@
 # [context.production]
 #   publish = "project/output/"
 #   command = "make publish"
-#   environment = { ACCESS_TOKEN = "super secret", NODE_VERSION = "12.21.0" }
+#   environment = { ACCESS_TOKEN = "super secret", NODE_VERSION = "8.0.1" }
 
 # Deploy Preview context: all deploys generated from a pull/merge request will
 # inherit these settings.

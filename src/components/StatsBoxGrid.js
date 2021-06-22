@@ -397,15 +397,20 @@ const StatsBoxGrid = () => {
   }
 
   const [defipulse, setDefipulse] = useState(null)
-  // useEffect(() => {
-  //   defipalseData("1m")
-  // }, [])
+  useEffect(() => {
+    defipalseData("1m")
+  }, [])
 
   function defipalseData(mode2) {
-    let defipalseUrl = `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=9ea611a770bebe40246e9c3042d6e90a83a641a2748cbf4aec964cb7c41b&period=${mode2}&length=days`
-    axios.get(defipalseUrl).then((response) => {
-      setDefipulse(response.data)
-    })
+    try {
+      let defipalseUrl = `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=9ea611a770bebe40246e9c3042d6e90a83a641a2748cbf4aec964cb7c41b&period=${mode2}&length=days`
+      axios.get(defipalseUrl).then((response) => {
+        setDefipulse(response.data)
+      })
+    } catch (error) {
+      console.error(error)
+      return { statusCode: 500, body: JSON.stringify({ msg: error.message }) }
+    }
   }
 
   let pricesData = []
