@@ -353,6 +353,7 @@ const StatsBoxGrid = () => {
       }
       fetchTxCount()
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   var today = new Date(),
