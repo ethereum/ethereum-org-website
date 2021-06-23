@@ -178,12 +178,13 @@ const GridItem = ({ metric }) => {
 
   return (
     <Box>
-      <div>
+      {/* <div>
         <Title>{title}</Title>
         <p>{description}</p>
-        <Lines>{line}</Lines>
+
         <ButtonContainer>{buttonContainer}</ButtonContainer>
-      </div>
+      </div> */}
+      <Lines>{line}</Lines>
 
       {/* <Value>{value}</Value> */}
     </Box>
