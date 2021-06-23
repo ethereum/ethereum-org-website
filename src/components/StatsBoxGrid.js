@@ -60,7 +60,7 @@ const Box = styled.div`
   align-items: flex-start;
   border: 1px solid ${({ theme }) => theme.colors.color};
   padding: 1.5rem;
-  z-index: 1;
+  z-index: 2;
   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     border-left: 0px solid #000000;
     border-right: 0px solid #000000;
@@ -378,11 +378,15 @@ const StatsBoxGrid = () => {
   //   coinGeckoData("30")
   // }, [])
 
-  function coinGeckoData(mode) {
-    let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
-    axios.get(coingeckoUrl).then((response) => {
-      setCoingecko(response.data)
-    })
+  const coinGeckoData = async (mode) => {
+    try {
+      let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
+      axios.get(coingeckoUrl).then((response) => {
+        setCoingecko(response.data)
+      })
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   const [etherscan, setEtherscan] = useState(null)
@@ -390,11 +394,15 @@ const StatsBoxGrid = () => {
   //   etherscanData(oneMonthAgo)
   // }, [])
 
-  function etherscanData(mode1) {
-    let etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
-    axios.get(etherscanUrl).then((response) => {
-      setEtherscan(response.data)
-    })
+  const etherscanData = async (mode1) => {
+    try {
+      let etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
+      axios.get(etherscanUrl).then((response) => {
+        setEtherscan(response.data)
+      })
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   const [defipulse, setDefipulse] = useState(null)
@@ -402,7 +410,7 @@ const StatsBoxGrid = () => {
     defipalseData("1m")
   }, [])
 
-  function defipalseData(mode2) {
+  const defipalseData = async (mode2) => {
     try {
       let defipalseUrl = `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=9ea611a770bebe40246e9c3042d6e90a83a641a2748cbf4aec964cb7c41b&period=${mode2}&length=days`
       axios.get(defipalseUrl).then((response) => {
@@ -468,6 +476,67 @@ const StatsBoxGrid = () => {
             onClick={() => {
               coinGeckoData(coingeckoTypes[type])
               setPriceActive(type)
+            }}
+          >
+            {defaultTypes[type]}
+          </ButtonToggle>
+        ))}
+      </div>
+    )
+  }
+  const transactionsData = [
+    {
+      name: "Page A",
+      uv: 4000,
+      pv: 2400,
+      amt: 2400,
+    },
+    {
+      name: "Page B",
+      uv: 3000,
+      pv: 1398,
+      amt: 2210,
+    },
+    {
+      name: "Page C",
+      uv: 2000,
+      pv: 9800,
+      amt: 2290,
+    },
+    {
+      name: "Page D",
+      uv: 2780,
+      pv: 3908,
+      amt: 2000,
+    },
+    {
+      name: "Page E",
+      uv: 1890,
+      pv: 4800,
+      amt: 2181,
+    },
+    {
+      name: "Page F",
+      uv: 2390,
+      pv: 3800,
+      amt: 2500,
+    },
+    {
+      name: "Page G",
+      uv: 3490,
+      pv: 4300,
+      amt: 2100,
+    },
+  ]
+  const [transactionsActive, setTransactionsActive] = useState(types[0])
+  function ToggleGroupTransactions() {
+    return (
+      <div>
+        {types.map((type) => (
+          <ButtonToggle
+            active={transactionsActive === type}
+            onClick={() => {
+              setTransactionsActive(type)
             }}
           >
             {defaultTypes[type]}
@@ -566,7 +635,7 @@ const StatsBoxGrid = () => {
       ),
       line: (
         <ResponsiveContainer>
-          <AreaChart height={200} data={pricesData}>
+          <AreaChart height={200} data={transactionsData}>
             <defs>
               <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -588,7 +657,7 @@ const StatsBoxGrid = () => {
           </AreaChart>
         </ResponsiveContainer>
       ),
-      buttonContainer: <ToggleGroupPrice />,
+      buttonContainer: <ToggleGroupTransactions />,
       state: txs,
     },
     {
