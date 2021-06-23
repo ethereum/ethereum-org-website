@@ -185,7 +185,7 @@ const GridItem = ({ metric }) => {
         <ButtonContainer>{buttonContainer}</ButtonContainer>
       </div>
 
-      <Value>{value}</Value>
+      {/* <Value>{value}</Value> */}
     </Box>
   )
 }
@@ -653,7 +653,7 @@ const StatsBoxGrid = () => {
       ),
       line: (
         <ResponsiveContainer>
-          <AreaChart height={200} data={transactionsData}>
+          <AreaChart height={200} data={pricesData}>
             <defs>
               <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -675,7 +675,7 @@ const StatsBoxGrid = () => {
           </AreaChart>
         </ResponsiveContainer>
       ),
-      buttonContainer: <ToggleGroupTransactions />,
+      buttonContainer: <ToggleGroupPrice />,
       state: ethPrice,
     },
     {
@@ -757,7 +757,7 @@ const StatsBoxGrid = () => {
       ),
       line: (
         <ResponsiveContainer>
-          <AreaChart height={200} data={transactionsData}>
+          <AreaChart height={200} data={nodesData}>
             <defs>
               <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -779,7 +779,7 @@ const StatsBoxGrid = () => {
           </AreaChart>
         </ResponsiveContainer>
       ),
-      buttonContainer: <ToggleGroupTransactions />,
+      buttonContainer: <ToggleGroupNodes />,
       state: nodes,
     },
   ]
