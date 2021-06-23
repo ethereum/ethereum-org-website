@@ -253,7 +253,7 @@ const StatsBoxGrid = () => {
   useEffect(() => {
     coinGeckoData("30")
     etherscanData(oneMonthAgo)
-    defipalseData("1m")
+    // defipalseData("1m")
 
     // Skip APIs when not in production
     if (process.env.NODE_ENV !== "production") {
@@ -337,6 +337,11 @@ const StatsBoxGrid = () => {
           const { result } = await getData("/.netlify/functions/txs")
           // result: [{UTCDate: string, unixTimeStamp: string, transactionCount: number}, {...}]
           console.log(result)
+          const data = []
+          for (let i in result) {
+            data.push(i.transactionCount)
+          }
+          console.log(data)
 
           const count = result[0].transactionCount
           const value = formatTxs(count)
@@ -437,37 +442,37 @@ const StatsBoxGrid = () => {
       })
   }
 
-  const [defipulse, setDefipulse] = useState(null)
-  useEffect(() => {
-    defipalseData("1m")
-  }, [])
+  // const [defipulse, setDefipulse] = useState(null)
+  // useEffect(() => {
+  //   defipalseData("1m")
+  // }, [])
 
-  const defipalseData = async (mode2) => {
-    let defipalseUrl = `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=9ea611a770bebe40246e9c3042d6e90a83a641a2748cbf4aec964cb7c41b&period=${mode2}&length=days`
-    axios
-      .get(defipalseUrl)
-      .then((response) => {
-        setDefipulse(response.data)
-      })
-      .catch(function (error) {
-        if (error.response) {
-          // The request was made and the server responded with a status code
-          // that falls out of the range of 2xx
-          console.log(error.response.data)
-          console.log(error.response.status)
-          console.log(error.response.headers)
-        } else if (error.request) {
-          // The request was made but no response was received
-          // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
-          // http.ClientRequest in node.js
-          console.log(error.request)
-        } else {
-          // Something happened in setting up the request that triggered an Error
-          console.log("Error", error.message)
-        }
-        console.log(error.config)
-      })
-  }
+  // const defipalseData = async (mode2) => {
+  //   let defipalseUrl = `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=9ea611a770bebe40246e9c3042d6e90a83a641a2748cbf4aec964cb7c41b&period=${mode2}&length=days`
+  //   axios
+  //     .get(defipalseUrl)
+  //     .then((response) => {
+  //       setDefipulse(response.data)
+  //     })
+  //     .catch(function (error) {
+  //       if (error.response) {
+  //         // The request was made and the server responded with a status code
+  //         // that falls out of the range of 2xx
+  //         console.log(error.response.data)
+  //         console.log(error.response.status)
+  //         console.log(error.response.headers)
+  //       } else if (error.request) {
+  //         // The request was made but no response was received
+  //         // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+  //         // http.ClientRequest in node.js
+  //         console.log(error.request)
+  //       } else {
+  //         // Something happened in setting up the request that triggered an Error
+  //         console.log("Error", error.message)
+  //       }
+  //       console.log(error.config)
+  //     })
+  // }
 
   let pricesData = []
   if (coingecko) {
@@ -493,20 +498,20 @@ const StatsBoxGrid = () => {
     }
   }
 
-  let valueLockedData = []
-  if (defipulse) {
-    for (let i = 1; i <= Object.keys(defipulse).length; i++) {
-      try {
-        valueLockedData.push({
-          name: " Page A",
-          uv:
-            defipulse[Object.keys(defipulse).length - i]["tvlUSD"] / 1000000000,
-          pv: Object.keys(defipulse).length - i,
-          amt: 2400,
-        })
-      } catch {}
-    }
-  }
+  // let valueLockedData = []
+  // if (defipulse) {
+  //   for (let i = 1; i <= Object.keys(defipulse).length; i++) {
+  //     try {
+  //       valueLockedData.push({
+  //         name: " Page A",
+  //         uv:
+  //           defipulse[Object.keys(defipulse).length - i]["tvlUSD"] / 1000000000,
+  //         pv: Object.keys(defipulse).length - i,
+  //         amt: 2400,
+  //       })
+  //     } catch {}
+  //   }
+  // }
 
   const types = [0, 1]
   const defaultTypes = ["30d", "ALL"]
@@ -593,25 +598,25 @@ const StatsBoxGrid = () => {
     )
   }
 
-  const defipulseTypes = ["1m", "all"]
-  const [valueLockedActive, setValueLockedActive] = useState(types[0])
-  function ToggleGroupValueLocked() {
-    return (
-      <div>
-        {types.map((type) => (
-          <ButtonToggle
-            active={valueLockedActive === type}
-            onClick={() => {
-              defipalseData(defipulseTypes[type])
-              setValueLockedActive(type)
-            }}
-          >
-            {defaultTypes[type]}
-          </ButtonToggle>
-        ))}
-      </div>
-    )
-  }
+  // const defipulseTypes = ["1m", "all"]
+  // const [valueLockedActive, setValueLockedActive] = useState(types[0])
+  // function ToggleGroupValueLocked() {
+  //   return (
+  //     <div>
+  //       {types.map((type) => (
+  //         <ButtonToggle
+  //           active={valueLockedActive === type}
+  //           onClick={() => {
+  //             defipalseData(defipulseTypes[type])
+  //             setValueLockedActive(type)
+  //           }}
+  //         >
+  //           {defaultTypes[type]}
+  //         </ButtonToggle>
+  //       ))}
+  //     </div>
+  //   )
+  // }
   const etherscanTypes = [oneMonthAgo, start]
   const [nodesActive, setNodesActive] = useState(types[0])
   function ToggleGroupNodes() {
@@ -634,7 +639,7 @@ const StatsBoxGrid = () => {
 
   console.log(pricesData)
   console.log(nodesData)
-  console.log(valueLockedData)
+  // console.log(valueLockedData)
 
   const metrics = [
     {
@@ -682,7 +687,7 @@ const StatsBoxGrid = () => {
       ),
       line: (
         <ResponsiveContainer>
-          <AreaChart height={200} data={transactionsData}>
+          <AreaChart height={200} data={data}>
             <defs>
               <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -718,7 +723,7 @@ const StatsBoxGrid = () => {
       ),
       line: (
         <ResponsiveContainer>
-          <AreaChart data={valueLockedData}>
+          <AreaChart data={transactionsData}>
             <defs>
               <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -740,7 +745,7 @@ const StatsBoxGrid = () => {
           </AreaChart>
         </ResponsiveContainer>
       ),
-      buttonContainer: <ToggleGroupValueLocked />,
+      buttonContainer: <ToggleGroupTransactions />,
       state: valueLocked,
     },
     {
