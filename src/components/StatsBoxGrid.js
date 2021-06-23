@@ -379,14 +379,30 @@ const StatsBoxGrid = () => {
   // }, [])
 
   const coinGeckoData = async (mode) => {
-    try {
-      let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
-      axios.get(coingeckoUrl).then((response) => {
+    let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
+    axios
+      .get(coingeckoUrl)
+      .then((response) => {
         setCoingecko(response.data)
       })
-    } catch (error) {
-      console.log(error)
-    }
+      .catch(function (error) {
+        if (error.response) {
+          // The request was made and the server responded with a status code
+          // that falls out of the range of 2xx
+          console.log(error.response.data)
+          console.log(error.response.status)
+          console.log(error.response.headers)
+        } else if (error.request) {
+          // The request was made but no response was received
+          // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+          // http.ClientRequest in node.js
+          console.log(error.request)
+        } else {
+          // Something happened in setting up the request that triggered an Error
+          console.log("Error", error.message)
+        }
+        console.log(error.config)
+      })
   }
 
   const [etherscan, setEtherscan] = useState(null)
@@ -395,14 +411,30 @@ const StatsBoxGrid = () => {
   // }, [])
 
   const etherscanData = async (mode1) => {
-    try {
-      let etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
-      axios.get(etherscanUrl).then((response) => {
+    let etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
+    axios
+      .get(etherscanUrl)
+      .then((response) => {
         setEtherscan(response.data)
       })
-    } catch (error) {
-      console.log(error)
-    }
+      .catch(function (error) {
+        if (error.response) {
+          // The request was made and the server responded with a status code
+          // that falls out of the range of 2xx
+          console.log(error.response.data)
+          console.log(error.response.status)
+          console.log(error.response.headers)
+        } else if (error.request) {
+          // The request was made but no response was received
+          // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+          // http.ClientRequest in node.js
+          console.log(error.request)
+        } else {
+          // Something happened in setting up the request that triggered an Error
+          console.log("Error", error.message)
+        }
+        console.log(error.config)
+      })
   }
 
   const [defipulse, setDefipulse] = useState(null)
@@ -411,15 +443,30 @@ const StatsBoxGrid = () => {
   }, [])
 
   const defipalseData = async (mode2) => {
-    try {
-      let defipalseUrl = `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=9ea611a770bebe40246e9c3042d6e90a83a641a2748cbf4aec964cb7c41b&period=${mode2}&length=days`
-      axios.get(defipalseUrl).then((response) => {
+    let defipalseUrl = `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=9ea611a770bebe40246e9c3042d6e90a83a641a2748cbf4aec964cb7c41b&period=${mode2}&length=days`
+    axios
+      .get(defipalseUrl)
+      .then((response) => {
         setDefipulse(response.data)
       })
-    } catch (error) {
-      console.error(error)
-      return { statusCode: 500, body: JSON.stringify({ msg: error.message }) }
-    }
+      .catch(function (error) {
+        if (error.response) {
+          // The request was made and the server responded with a status code
+          // that falls out of the range of 2xx
+          console.log(error.response.data)
+          console.log(error.response.status)
+          console.log(error.response.headers)
+        } else if (error.request) {
+          // The request was made but no response was received
+          // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+          // http.ClientRequest in node.js
+          console.log(error.request)
+        } else {
+          // Something happened in setting up the request that triggered an Error
+          console.log("Error", error.message)
+        }
+        console.log(error.config)
+      })
   }
 
   let pricesData = []
