@@ -245,6 +245,10 @@ A service carried out via [smart contract](#smart-contract) that dispenses funds
 
 <DocLink to="/developers/docs/networks/#testnet-faucets" title="Testnet Faucets" />
 
+### fear, uncertainty, doubt (FUD) {#fud}
+
+Used to refer to negative, misleading, or false information relating to a cryptocurrency, token, or the wider industry.
+
 ### finality {#finality}
 
 Finality is the guarantee that a set of transactions before a given time will not change and can't be reverted.
