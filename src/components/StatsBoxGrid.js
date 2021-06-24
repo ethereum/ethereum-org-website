@@ -3,7 +3,15 @@ import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 import axios from "axios"
 
-import { AreaChart, ResponsiveContainer, Area, LineChart, Line } from "recharts"
+import {
+  AreaChart,
+  ResponsiveContainer,
+  Area,
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+} from "recharts"
 import Translation from "./Translation"
 import Tooltip from "./Tooltip"
 import Link from "./Link"
@@ -12,9 +20,6 @@ import Icon from "./Icon"
 import { getData } from "../utils/cache"
 
 const Value = styled.h3`
-  position: absolute;
-  bottom: 0;
-  // left: 0;
   font-size: min(4.4vw, 64px);
   font-weight: 600;
   margin-top: 0rem;
@@ -22,7 +27,7 @@ const Value = styled.h3`
   color: ${({ theme }) => theme.colors.text};
   flex-wrap: wrap;
   text-overflow: ellipsis;
-  // width: 100%;
+  width: 100%;
   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     font-size: max(8.8vw, 48px);
   }
@@ -56,7 +61,6 @@ const Box = styled.div`
   position: relative;
   color: ${({ theme }) => theme.colors.text};
   height: 20rem;
-  // width: inherit;
   background: ${({ theme, color }) => theme.colors[color]};
   display: flex;
   flex-direction: column;
@@ -112,12 +116,15 @@ const LoadingMessage = () => (
 )
 
 const Lines = styled.div`
-  position: absolute;
+  // position: absolute;
   margin-left: -5px;
   left: 0;
   bottom: 0;
   width: 101.5%;
+  width: 100%;
+
   height: 200px;
+  // z-index: 0;
 `
 
 const ButtonContainer = styled.div`
@@ -125,6 +132,7 @@ const ButtonContainer = styled.div`
   right: 20px;
   bottom: 20px;
   font-family: "SFMono-Regular", monospace;
+  // background: ${({ theme, color }) => theme.colors[color]};
 `
 
 const Button = styled.button`
@@ -137,6 +145,7 @@ const Button = styled.button`
   border: 1px solid ${({ theme, color }) => theme.colors[color]};
   outline: none;
   // text-transform: uppercase;
+  // margin: 10px 0px;
   cursor: pointer;
   // box-shadow: 0px 2px 2px lightgray;
   // transition: ease background-color 250ms;
@@ -150,6 +159,7 @@ const Button = styled.button`
 `
 
 const ButtonToggle = styled(Button)`
+  // opacity: 0.7;
   ${({ active }) =>
     active &&
     `
@@ -336,11 +346,6 @@ const StatsBoxGrid = () => {
           const { result } = await getData("/.netlify/functions/txs")
           // result: [{UTCDate: string, unixTimeStamp: string, transactionCount: number}, {...}]
           console.log(result)
-          const data = []
-          for (let i in result) {
-            data.push(i.transactionCount)
-          }
-          console.log(data)
 
           const count = result[0].transactionCount
           const value = formatTxs(count)
@@ -355,7 +360,7 @@ const StatsBoxGrid = () => {
           })
         }
       }
-      fetchTxCount()
+      // fetchTxCount()
     }
   }, [])
 
@@ -524,7 +529,7 @@ const StatsBoxGrid = () => {
           <ButtonToggle
             active={priceActive === type}
             onClick={() => {
-              coinGeckoData(coingeckoTypes[type])
+              // coinGeckoData(coingeckoTypes[type])
               setPriceActive(type)
             }}
           >
@@ -624,7 +629,7 @@ const StatsBoxGrid = () => {
           <ButtonToggle
             active={nodesActive === type}
             onClick={() => {
-              etherscanData(etherscanTypes[type])
+              // etherscanData(etherscanTypes[type])
               setNodesActive(type)
             }}
           >
@@ -635,8 +640,8 @@ const StatsBoxGrid = () => {
     )
   }
 
-  console.log(pricesData)
-  console.log(nodesData)
+  // console.log(pricesData)
+  // console.log(nodesData)
   // console.log(valueLockedData)
 
   const metrics = [
@@ -650,30 +655,30 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-eth-price-explainer" />
       ),
       line: (
-        <ResponsiveContainer>
-          <AreaChart height={200} data={pricesData}>
-            <defs>
-              <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
-                <stop offset="100%" stopColor="#8884d8" stopOpacity={0} />
-              </linearGradient>
-              <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-                <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
-              </linearGradient>
-            </defs>
-            <Area
-              type="monotone"
-              dataKey="uv"
-              stroke="#8884d8"
-              fillOpacity={0.3}
-              fill="url(#colorUv)"
-              fillOpacity="0.2"
-            />
-          </AreaChart>
-        </ResponsiveContainer>
+        <AreaChart width={700} height={200} data={transactionsData}>
+          <defs>
+            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
+              <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
+            </linearGradient>
+            <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
+              <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+            </linearGradient>
+          </defs>
+          <Area
+            type="monotone"
+            dataKey="uv"
+            stroke="#8884d8"
+            fillOpacity={0.3}
+            fill="url(#colorUv)"
+            fillOpacity="0.2"
+          />
+          <XAxis />
+          <YAxis />
+        </AreaChart>
       ),
-      buttonContainer: <ToggleGroupPrice />,
+      buttonContainer: <ToggleGroupTransactions />,
       state: ethPrice,
     },
     {
@@ -684,77 +689,7 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-tx-day-explainer" />
       ),
       line: (
-        <ResponsiveContainer>
-          <AreaChart height={200} data={transactionsData}>
-            <defs>
-              <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
-                <stop offset="100%" stopColor="#8884d8" stopOpacity={0} />
-              </linearGradient>
-              <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-                <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
-              </linearGradient>
-            </defs>
-            <Area
-              type="monotone"
-              dataKey="uv"
-              stroke="#8884d8"
-              fillOpacity={0.3}
-              fill="url(#colorUv)"
-              fillOpacity="0.2"
-            />
-          </AreaChart>
-        </ResponsiveContainer>
-      ),
-      buttonContainer: <ToggleGroupTransactions />,
-      state: txs,
-    },
-    {
-      apiProvider: "DeFi Pulse",
-      apiUrl: "https://defipulse.com",
-      title: (
-        <Translation id="page-index-network-stats-value-defi-description" />
-      ),
-      description: (
-        <Translation id="page-index-network-stats-value-defi-explainer" />
-      ),
-      line: (
-        <ResponsiveContainer>
-          <AreaChart data={transactionsData}>
-            <defs>
-              <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
-                <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-              </linearGradient>
-              <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-                <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
-              </linearGradient>
-            </defs>
-            <Area
-              type="monotone"
-              dataKey="uv"
-              stroke="#8884d8"
-              fillOpacity={0.3}
-              fill="url(#colorUv)"
-              fillOpacity="0.2"
-            />
-          </AreaChart>
-        </ResponsiveContainer>
-      ),
-      buttonContainer: <ToggleGroupTransactions />,
-      state: valueLocked,
-    },
-    {
-      apiProvider: "Etherscan",
-      apiUrl: "https://etherscan.io/nodetracker",
-      title: <Translation id="page-index-network-stats-nodes-description" />,
-      description: (
-        <Translation id="page-index-network-stats-nodes-explainer" />
-      ),
-      line: (
-        <AreaChart width={600} height={200} data={nodesData}>
+        <AreaChart width={600} height={250} data={transactionsData}>
           <defs>
             <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
               <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -775,7 +710,73 @@ const StatsBoxGrid = () => {
           />
         </AreaChart>
       ),
-      buttonContainer: <ToggleGroupNodes />,
+      buttonContainer: <ToggleGroupTransactions />,
+      state: txs,
+    },
+    {
+      apiProvider: "DeFi Pulse",
+      apiUrl: "https://defipulse.com",
+      title: (
+        <Translation id="page-index-network-stats-value-defi-description" />
+      ),
+      description: (
+        <Translation id="page-index-network-stats-value-defi-explainer" />
+      ),
+      line: (
+        <AreaChart width={600} height={250} data={transactionsData}>
+          <defs>
+            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
+              <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
+            </linearGradient>
+            <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
+              <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+            </linearGradient>
+          </defs>
+          <Area
+            type="monotone"
+            dataKey="uv"
+            stroke="#8884d8"
+            fillOpacity={0.3}
+            fill="url(#colorUv)"
+            fillOpacity="0.2"
+          />
+        </AreaChart>
+      ),
+      buttonContainer: <ToggleGroupTransactions />,
+      state: valueLocked,
+    },
+    {
+      apiProvider: "Etherscan",
+      apiUrl: "https://etherscan.io/nodetracker",
+      title: <Translation id="page-index-network-stats-nodes-description" />,
+      description: (
+        <Translation id="page-index-network-stats-nodes-explainer" />
+      ),
+      line: (
+        <AreaChart width={600} height={250} data={transactionsData}>
+          <defs>
+            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
+              <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
+            </linearGradient>
+            <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
+              <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+            </linearGradient>
+          </defs>
+          <Area
+            type="monotone"
+            dataKey="uv"
+            stroke="#8884d8"
+            fillOpacity={0.3}
+            fill="url(#colorUv)"
+            fillOpacity="0.2"
+          />
+        </AreaChart>
+      ),
+      buttonContainer: <ToggleGroupTransactions />,
       state: nodes,
     },
   ]
