@@ -60,7 +60,7 @@ const Grid = styled.div`
 `
 
 const Box = styled.div`
-  position: relative;
+  // position: relative;
   color: ${({ theme }) => theme.colors.text};
   height: 20rem;
   background: ${({ theme, color }) => theme.colors[color]};
