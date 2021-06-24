@@ -3,7 +3,15 @@ import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 import axios from "axios"
 
-import { AreaChart, ResponsiveContainer, Area, LineChart, Line } from "recharts"
+import {
+  AreaChart,
+  ResponsiveContainer,
+  Area,
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+} from "recharts"
 import Translation from "./Translation"
 import Tooltip from "./Tooltip"
 import Link from "./Link"
@@ -649,7 +657,7 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-eth-price-explainer" />
       ),
       line: (
-        <AreaChart width={700} height={250} data={transactionsData}>
+        <AreaChart width={700} height={200} data={transactionsData}>
           <defs>
             <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
               <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -668,6 +676,8 @@ const StatsBoxGrid = () => {
             fill="url(#colorUv)"
             fillOpacity="0.2"
           />
+          <XAxis />
+          <YAxis />
         </AreaChart>
       ),
       // buttonContainer: <ToggleGroupTransactions />,
