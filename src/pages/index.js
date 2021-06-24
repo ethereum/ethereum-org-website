@@ -4,6 +4,8 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
 
+import { AreaChart, ResponsiveContainer, Area, LineChart, Line } from "recharts"
+
 import ActionCard from "../components/ActionCard"
 import ButtonLink from "../components/ButtonLink"
 import Icon from "../components/Icon"
