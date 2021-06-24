@@ -160,21 +160,21 @@ const ButtonToggle = styled(Button)`
 
 const GridItem = ({ metric }) => {
   const { title, description, line, buttonContainer, state } = metric
-  const isLoading = !state.value
-  const value = state.hasError ? (
-    <ErrorMessage />
-  ) : isLoading ? (
-    <LoadingMessage />
-  ) : (
-    <StatRow>
-      <span>
-        {state.value}{" "}
-        <Tooltip content={tooltipContent(metric)}>
-          <StyledIcon name="info" />
-        </Tooltip>
-      </span>
-    </StatRow>
-  )
+  // const isLoading = !state.value
+  // const value = state.hasError ? (
+  //   <ErrorMessage />
+  // ) : isLoading ? (
+  //   <LoadingMessage />
+  // ) : (
+  //   <StatRow>
+  //     <span>
+  //       {state.value}{" "}
+  //       <Tooltip content={tooltipContent(metric)}>
+  //         <StyledIcon name="info" />
+  //       </Tooltip>
+  //     </span>
+  //   </StatRow>
+  // )
 
   return (
     <Box>
@@ -674,7 +674,7 @@ const StatsBoxGrid = () => {
         </AreaChart>
       ),
       // buttonContainer: <ToggleGroupTransactions />,
-      state: ethPrice,
+      // state: ethPrice,
     },
     {
       apiProvider: "Etherscan",
@@ -706,7 +706,7 @@ const StatsBoxGrid = () => {
         </AreaChart>
       ),
       // buttonContainer: <ToggleGroupTransactions />,
-      state: txs,
+      // state: txs,
     },
     {
       apiProvider: "DeFi Pulse",
@@ -740,7 +740,7 @@ const StatsBoxGrid = () => {
         </AreaChart>
       ),
       // buttonContainer: <ToggleGroupTransactions />,
-      state: valueLocked,
+      // state: valueLocked,
     },
     {
       apiProvider: "Etherscan",
@@ -774,7 +774,7 @@ const StatsBoxGrid = () => {
         </ResponsiveContainer>
       ),
       // buttonContainer: <ToggleGroupTransactions />,
-      state: nodes,
+      // state: nodes,
     },
   ]
 
