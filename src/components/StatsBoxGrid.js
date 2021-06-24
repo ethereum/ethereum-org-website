@@ -3,15 +3,7 @@ import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 import axios from "axios"
 
-import {
-  AreaChart,
-  ResponsiveContainer,
-  Area,
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-} from "recharts"
+import { AreaChart, ResponsiveContainer, Area, LineChart, Line } from "recharts"
 import Translation from "./Translation"
 import Tooltip from "./Tooltip"
 import Link from "./Link"
@@ -20,6 +12,9 @@ import Icon from "./Icon"
 import { getData } from "../utils/cache"
 
 const Value = styled.h3`
+  position: absolute;
+  bottom: 0;
+  // left: 0;
   font-size: min(4.4vw, 64px);
   font-weight: 600;
   margin-top: 0rem;
@@ -27,7 +22,7 @@ const Value = styled.h3`
   color: ${({ theme }) => theme.colors.text};
   flex-wrap: wrap;
   text-overflow: ellipsis;
-  width: 100%;
+  // width: 100%;
   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     font-size: max(8.8vw, 48px);
   }
@@ -58,9 +53,10 @@ const Grid = styled.div`
 `
 
 const Box = styled.div`
-  // position: relative;
+  position: relative;
   color: ${({ theme }) => theme.colors.text};
   height: 20rem;
+  // width: inherit;
   background: ${({ theme, color }) => theme.colors[color]};
   display: flex;
   flex-direction: column;
@@ -116,15 +112,12 @@ const LoadingMessage = () => (
 )
 
 const Lines = styled.div`
-  // position: absolute;
+  position: absolute;
   margin-left: -5px;
   left: 0;
   bottom: 0;
   width: 101.5%;
-  width: 100%;
-
   height: 200px;
-  // z-index: 0;
 `
 
 const ButtonContainer = styled.div`
@@ -132,7 +125,6 @@ const ButtonContainer = styled.div`
   right: 20px;
   bottom: 20px;
   font-family: "SFMono-Regular", monospace;
-  // background: ${({ theme, color }) => theme.colors[color]};
 `
 
 const Button = styled.button`
@@ -145,7 +137,6 @@ const Button = styled.button`
   border: 1px solid ${({ theme, color }) => theme.colors[color]};
   outline: none;
   // text-transform: uppercase;
-  // margin: 10px 0px;
   cursor: pointer;
   // box-shadow: 0px 2px 2px lightgray;
   // transition: ease background-color 250ms;
@@ -159,7 +150,6 @@ const Button = styled.button`
 `
 
 const ButtonToggle = styled(Button)`
-  // opacity: 0.7;
   ${({ active }) =>
     active &&
     `
@@ -170,32 +160,31 @@ const ButtonToggle = styled(Button)`
 
 const GridItem = ({ metric }) => {
   const { title, description, line, buttonContainer, state } = metric
-  // const isLoading = !state.value
-  // const value = state.hasError ? (
-  //   <ErrorMessage />
-  // ) : isLoading ? (
-  //   <LoadingMessage />
-  // ) : (
-  //   <StatRow>
-  //     <span>
-  //       {state.value}{" "}
-  //       <Tooltip content={tooltipContent(metric)}>
-  //         <StyledIcon name="info" />
-  //       </Tooltip>
-  //     </span>
-  //   </StatRow>
-  // )
+  const isLoading = !state.value
+  const value = state.hasError ? (
+    <ErrorMessage />
+  ) : isLoading ? (
+    <LoadingMessage />
+  ) : (
+    <StatRow>
+      <span>
+        {state.value}{" "}
+        <Tooltip content={tooltipContent(metric)}>
+          <StyledIcon name="info" />
+        </Tooltip>
+      </span>
+    </StatRow>
+  )
 
   return (
     <Box>
       <div>
         <Title>{title}</Title>
         <p>{description}</p>
-
-        {/* <ButtonContainer>{buttonContainer}</ButtonContainer> */}
       </div>
       <Lines>{line}</Lines>
-      {/* <Value>{value}</Value> */}
+      <ButtonContainer>{buttonContainer}</ButtonContainer>
+      <Value>{value}</Value>
     </Box>
   )
 }
@@ -261,8 +250,8 @@ const StatsBoxGrid = () => {
   }
 
   useEffect(() => {
-    // coinGeckoData("30")
-    // etherscanData(oneMonthAgo)
+    coinGeckoData("30")
+    etherscanData(oneMonthAgo)
     // defipalseData("1m")
 
     // Skip APIs when not in production
@@ -302,7 +291,7 @@ const StatsBoxGrid = () => {
           })
         }
       }
-      // fetchPrice()
+      fetchPrice()
 
       const fetchNodes = async () => {
         try {
@@ -321,7 +310,7 @@ const StatsBoxGrid = () => {
           })
         }
       }
-      // fetchNodes()
+      fetchNodes()
 
       const fetchTotalValueLocked = async () => {
         try {
@@ -340,13 +329,18 @@ const StatsBoxGrid = () => {
           })
         }
       }
-      // fetchTotalValueLocked()
+      fetchTotalValueLocked()
 
       const fetchTxCount = async () => {
         try {
           const { result } = await getData("/.netlify/functions/txs")
           // result: [{UTCDate: string, unixTimeStamp: string, transactionCount: number}, {...}]
           console.log(result)
+          const data = []
+          for (let i in result) {
+            data.push(i.transactionCount)
+          }
+          console.log(data)
 
           const count = result[0].transactionCount
           const value = formatTxs(count)
@@ -361,21 +355,20 @@ const StatsBoxGrid = () => {
           })
         }
       }
-      // fetchTxCount()
+      fetchTxCount()
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  // var today = new Date(),
-  //   date =
-  //     today.getFullYear() +
-  //     "-" +
-  //     (today.getMonth() + 1) +
-  //     "-" +
-  //     (today.getDate() - 1),
-  //   oneMonthAgo =
-  //     today.getFullYear() + "-" + today.getMonth() + "-" + (today.getDate() - 1)
-  // const start = "2019-10-30"
+  var today = new Date(),
+    date =
+      today.getFullYear() +
+      "-" +
+      (today.getMonth() + 1) +
+      "-" +
+      (today.getDate() - 1),
+    oneMonthAgo =
+      today.getFullYear() + "-" + today.getMonth() + "-" + (today.getDate() - 1)
+  const start = "2019-10-30"
 
   // useEffect(() => {
   //   coinGeckoData("30")
@@ -383,69 +376,69 @@ const StatsBoxGrid = () => {
   //   defipalseData("1m")
   // }, [])
 
-  // const [coingecko, setCoingecko] = useState(null)
+  const [coingecko, setCoingecko] = useState(null)
   // useEffect(() => {
   //   coinGeckoData("30")
   // }, [])
 
-  // const coinGeckoData = async (mode) => {
-  //   let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
-  //   axios
-  //     .get(coingeckoUrl)
-  //     .then((response) => {
-  //       setCoingecko(response.data)
-  //     })
-  //     .catch(function (error) {
-  //       if (error.response) {
-  //         // The request was made and the server responded with a status code
-  //         // that falls out of the range of 2xx
-  //         console.log(error.response.data)
-  //         console.log(error.response.status)
-  //         console.log(error.response.headers)
-  //       } else if (error.request) {
-  //         // The request was made but no response was received
-  //         // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
-  //         // http.ClientRequest in node.js
-  //         console.log(error.request)
-  //       } else {
-  //         // Something happened in setting up the request that triggered an Error
-  //         console.log("Error", error.message)
-  //       }
-  //       console.log(error.config)
-  //     })
-  // }
+  const coinGeckoData = async (mode) => {
+    let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
+    axios
+      .get(coingeckoUrl)
+      .then((response) => {
+        setCoingecko(response.data)
+      })
+      .catch(function (error) {
+        if (error.response) {
+          // The request was made and the server responded with a status code
+          // that falls out of the range of 2xx
+          console.log(error.response.data)
+          console.log(error.response.status)
+          console.log(error.response.headers)
+        } else if (error.request) {
+          // The request was made but no response was received
+          // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+          // http.ClientRequest in node.js
+          console.log(error.request)
+        } else {
+          // Something happened in setting up the request that triggered an Error
+          console.log("Error", error.message)
+        }
+        console.log(error.config)
+      })
+  }
 
-  // const [etherscan, setEtherscan] = useState(null)
+  const [etherscan, setEtherscan] = useState(null)
   // useEffect(() => {
   //   etherscanData(oneMonthAgo)
   // }, [])
 
-  // const etherscanData = async (mode1) => {
-  //   let etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
-  //   axios
-  //     .get(etherscanUrl)
-  //     .then((response) => {
-  //       setEtherscan(response.data)
-  //     })
-  //     .catch(function (error) {
-  //       if (error.response) {
-  //         // The request was made and the server responded with a status code
-  //         // that falls out of the range of 2xx
-  //         console.log(error.response.data)
-  //         console.log(error.response.status)
-  //         console.log(error.response.headers)
-  //       } else if (error.request) {
-  //         // The request was made but no response was received
-  //         // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
-  //         // http.ClientRequest in node.js
-  //         console.log(error.request)
-  //       } else {
-  //         // Something happened in setting up the request that triggered an Error
-  //         console.log("Error", error.message)
-  //       }
-  //       console.log(error.config)
-  //     })
-  // }
+  const etherscanData = async (mode1) => {
+    let etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
+    axios
+      .get(etherscanUrl)
+      .then((response) => {
+        setEtherscan(response.data)
+      })
+      .catch(function (error) {
+        if (error.response) {
+          // The request was made and the server responded with a status code
+          // that falls out of the range of 2xx
+          console.log(error.response.data)
+          console.log(error.response.status)
+          console.log(error.response.headers)
+        } else if (error.request) {
+          // The request was made but no response was received
+          // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+          // http.ClientRequest in node.js
+          console.log(error.request)
+        } else {
+          // Something happened in setting up the request that triggered an Error
+          console.log("Error", error.message)
+        }
+        console.log(error.config)
+      })
+  }
 
   // const [defipulse, setDefipulse] = useState(null)
   // useEffect(() => {
@@ -479,29 +472,29 @@ const StatsBoxGrid = () => {
   //     })
   // }
 
-  // let pricesData = []
-  // if (coingecko) {
-  //   for (const i in coingecko.prices) {
-  //     pricesData.push({
-  //       name: "Page A",
-  //       uv: coingecko.prices[i][1],
-  //       pv: i,
-  //       amt: 2400,
-  //     })
-  //   }
-  // }
+  let pricesData = []
+  if (coingecko) {
+    for (const i in coingecko.prices) {
+      pricesData.push({
+        name: "Page A",
+        uv: coingecko.prices[i][1],
+        pv: i,
+        amt: 2400,
+      })
+    }
+  }
 
-  // let nodesData = []
-  // if (etherscan) {
-  //   for (const i in etherscan.result) {
-  //     nodesData.push({
-  //       name: "Page A",
-  //       uv: etherscan.result[i]["TotalNodeCount"],
-  //       pv: etherscan.result[i]["UTCDate"],
-  //       amt: 2400,
-  //     })
-  //   }
-  // }
+  let nodesData = []
+  if (etherscan) {
+    for (const i in etherscan.result) {
+      nodesData.push({
+        name: "Page A",
+        uv: etherscan.result[i]["TotalNodeCount"],
+        pv: etherscan.result[i]["UTCDate"],
+        amt: 2400,
+      })
+    }
+  }
 
   // let valueLockedData = []
   // if (defipulse) {
@@ -521,26 +514,26 @@ const StatsBoxGrid = () => {
   const types = [0, 1]
   const defaultTypes = ["30d", "ALL"]
 
-  // const coingeckoTypes = ["30", "max"]
+  const coingeckoTypes = ["30", "max"]
 
-  // const [priceActive, setPriceActive] = useState(types[0])
-  // function ToggleGroupPrice() {
-  //   return (
-  //     <div>
-  //       {types.map((type) => (
-  //         <ButtonToggle
-  //           active={priceActive === type}
-  //           onClick={() => {
-  //             // coinGeckoData(coingeckoTypes[type])
-  //             setPriceActive(type)
-  //           }}
-  //         >
-  //           {defaultTypes[type]}
-  //         </ButtonToggle>
-  //       ))}
-  //     </div>
-  //   )
-  // }
+  const [priceActive, setPriceActive] = useState(types[0])
+  function ToggleGroupPrice() {
+    return (
+      <div>
+        {types.map((type) => (
+          <ButtonToggle
+            active={priceActive === type}
+            onClick={() => {
+              coinGeckoData(coingeckoTypes[type])
+              setPriceActive(type)
+            }}
+          >
+            {defaultTypes[type]}
+          </ButtonToggle>
+        ))}
+      </div>
+    )
+  }
   const transactionsData = [
     {
       name: "Page A",
@@ -585,23 +578,23 @@ const StatsBoxGrid = () => {
       amt: 2100,
     },
   ]
-  // const [transactionsActive, setTransactionsActive] = useState(types[0])
-  // function ToggleGroupTransactions() {
-  //   return (
-  //     <div>
-  //       {types.map((type) => (
-  //         <ButtonToggle
-  //           active={transactionsActive === type}
-  //           onClick={() => {
-  //             setTransactionsActive(type)
-  //           }}
-  //         >
-  //           {defaultTypes[type]}
-  //         </ButtonToggle>
-  //       ))}
-  //     </div>
-  //   )
-  // }
+  const [transactionsActive, setTransactionsActive] = useState(types[0])
+  function ToggleGroupTransactions() {
+    return (
+      <div>
+        {types.map((type) => (
+          <ButtonToggle
+            active={transactionsActive === type}
+            onClick={() => {
+              setTransactionsActive(type)
+            }}
+          >
+            {defaultTypes[type]}
+          </ButtonToggle>
+        ))}
+      </div>
+    )
+  }
 
   // const defipulseTypes = ["1m", "all"]
   // const [valueLockedActive, setValueLockedActive] = useState(types[0])
@@ -622,28 +615,28 @@ const StatsBoxGrid = () => {
   //     </div>
   //   )
   // }
-  // const etherscanTypes = [oneMonthAgo, start]
-  // const [nodesActive, setNodesActive] = useState(types[0])
-  // function ToggleGroupNodes() {
-  //   return (
-  //     <div>
-  //       {types.map((type) => (
-  //         <ButtonToggle
-  //           active={nodesActive === type}
-  //           onClick={() => {
-  //             // etherscanData(etherscanTypes[type])
-  //             setNodesActive(type)
-  //           }}
-  //         >
-  //           {defaultTypes[type]}
-  //         </ButtonToggle>
-  //       ))}
-  //     </div>
-  //   )
-  // }
+  const etherscanTypes = [oneMonthAgo, start]
+  const [nodesActive, setNodesActive] = useState(types[0])
+  function ToggleGroupNodes() {
+    return (
+      <div>
+        {types.map((type) => (
+          <ButtonToggle
+            active={nodesActive === type}
+            onClick={() => {
+              etherscanData(etherscanTypes[type])
+              setNodesActive(type)
+            }}
+          >
+            {defaultTypes[type]}
+          </ButtonToggle>
+        ))}
+      </div>
+    )
+  }
 
-  // console.log(pricesData)
-  // console.log(nodesData)
+  console.log(pricesData)
+  console.log(nodesData)
   // console.log(valueLockedData)
 
   const metrics = [
@@ -657,31 +650,31 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-eth-price-explainer" />
       ),
       line: (
-        <AreaChart width={700} height={200} data={transactionsData}>
-          <defs>
-            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
-              <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-            </linearGradient>
-            <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
-            </linearGradient>
-          </defs>
-          <Area
-            type="monotone"
-            dataKey="uv"
-            stroke="#8884d8"
-            fillOpacity={0.3}
-            fill="url(#colorUv)"
-            fillOpacity="0.2"
-          />
-          <XAxis />
-          <YAxis />
-        </AreaChart>
+        <ResponsiveContainer>
+          <AreaChart height={200} data={pricesData}>
+            <defs>
+              <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
+                <stop offset="100%" stopColor="#8884d8" stopOpacity={0} />
+              </linearGradient>
+              <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+              </linearGradient>
+            </defs>
+            <Area
+              type="monotone"
+              dataKey="uv"
+              stroke="#8884d8"
+              fillOpacity={0.3}
+              fill="url(#colorUv)"
+              fillOpacity="0.2"
+            />
+          </AreaChart>
+        </ResponsiveContainer>
       ),
-      // buttonContainer: <ToggleGroupTransactions />,
-      // state: ethPrice,
+      buttonContainer: <ToggleGroupPrice />,
+      state: ethPrice,
     },
     {
       apiProvider: "Etherscan",
@@ -691,29 +684,31 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-tx-day-explainer" />
       ),
       line: (
-        <AreaChart width={600} height={250} data={transactionsData}>
-          <defs>
-            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
-              <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-            </linearGradient>
-            <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
-            </linearGradient>
-          </defs>
-          <Area
-            type="monotone"
-            dataKey="uv"
-            stroke="#8884d8"
-            fillOpacity={0.3}
-            fill="url(#colorUv)"
-            fillOpacity="0.2"
-          />
-        </AreaChart>
+        <ResponsiveContainer>
+          <AreaChart height={200} data={transactionsData}>
+            <defs>
+              <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
+                <stop offset="100%" stopColor="#8884d8" stopOpacity={0} />
+              </linearGradient>
+              <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+              </linearGradient>
+            </defs>
+            <Area
+              type="monotone"
+              dataKey="uv"
+              stroke="#8884d8"
+              fillOpacity={0.3}
+              fill="url(#colorUv)"
+              fillOpacity="0.2"
+            />
+          </AreaChart>
+        </ResponsiveContainer>
       ),
-      // buttonContainer: <ToggleGroupTransactions />,
-      // state: txs,
+      buttonContainer: <ToggleGroupTransactions />,
+      state: txs,
     },
     {
       apiProvider: "DeFi Pulse",
@@ -725,29 +720,31 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-value-defi-explainer" />
       ),
       line: (
-        <AreaChart width={600} height={250} data={transactionsData}>
-          <defs>
-            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
-              <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-            </linearGradient>
-            <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
-            </linearGradient>
-          </defs>
-          <Area
-            type="monotone"
-            dataKey="uv"
-            stroke="#8884d8"
-            fillOpacity={0.3}
-            fill="url(#colorUv)"
-            fillOpacity="0.2"
-          />
-        </AreaChart>
+        <ResponsiveContainer>
+          <AreaChart data={transactionsData}>
+            <defs>
+              <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
+                <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
+              </linearGradient>
+              <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+              </linearGradient>
+            </defs>
+            <Area
+              type="monotone"
+              dataKey="uv"
+              stroke="#8884d8"
+              fillOpacity={0.3}
+              fill="url(#colorUv)"
+              fillOpacity="0.2"
+            />
+          </AreaChart>
+        </ResponsiveContainer>
       ),
-      // buttonContainer: <ToggleGroupTransactions />,
-      // state: valueLocked,
+      buttonContainer: <ToggleGroupTransactions />,
+      state: valueLocked,
     },
     {
       apiProvider: "Etherscan",
@@ -757,7 +754,7 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-nodes-explainer" />
       ),
       line: (
-        <AreaChart width={600} height={250} data={transactionsData}>
+        <AreaChart width={600} height={200} data={nodesData}>
           <defs>
             <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
               <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -778,8 +775,8 @@ const StatsBoxGrid = () => {
           />
         </AreaChart>
       ),
-      // buttonContainer: <ToggleGroupTransactions />,
-      // state: nodes,
+      buttonContainer: <ToggleGroupNodes />,
+      state: nodes,
     },
   ]
 
