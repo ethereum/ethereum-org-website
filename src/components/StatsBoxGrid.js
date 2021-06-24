@@ -20,7 +20,7 @@ import Icon from "./Icon"
 import { getData } from "../utils/cache"
 
 const Value = styled.h3`
-  position: absolute;
+  // position: absolute;
   bottom: 0;
   font-size: min(4.4vw, 64px);
   font-weight: 600;
@@ -29,7 +29,7 @@ const Value = styled.h3`
   color: ${({ theme }) => theme.colors.text};
   flex-wrap: wrap;
   text-overflow: ellipsis;
-  width: 100%;
+  // width: 100%;
   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     font-size: max(8.8vw, 48px);
   }
@@ -172,21 +172,21 @@ const ButtonToggle = styled(Button)`
 
 const GridItem = ({ metric }) => {
   const { title, description, line, buttonContainer, state } = metric
-  const isLoading = !state.value
-  const value = state.hasError ? (
-    <ErrorMessage />
-  ) : isLoading ? (
-    <LoadingMessage />
-  ) : (
-    <StatRow>
-      <span>
-        {state.value}{" "}
-        <Tooltip content={tooltipContent(metric)}>
-          <StyledIcon name="info" />
-        </Tooltip>
-      </span>
-    </StatRow>
-  )
+  // const isLoading = !state.value
+  // const value = state.hasError ? (
+  //   <ErrorMessage />
+  // ) : isLoading ? (
+  //   <LoadingMessage />
+  // ) : (
+  //   <StatRow>
+  //     <span>
+  //       {state.value}{" "}
+  //       <Tooltip content={tooltipContent(metric)}>
+  //         <StyledIcon name="info" />
+  //       </Tooltip>
+  //     </span>
+  //   </StatRow>
+  // )
 
   return (
     <Box>
@@ -195,8 +195,8 @@ const GridItem = ({ metric }) => {
         <p>{description}</p>
       </div>
       <Lines>{line}</Lines>
-      <ButtonContainer>{buttonContainer}</ButtonContainer>
-      <Value>{value}</Value>
+      {/* <ButtonContainer>{buttonContainer}</ButtonContainer> */}
+      {/* <Value>{value}</Value> */}
     </Box>
   )
 }
@@ -303,7 +303,7 @@ const StatsBoxGrid = () => {
           })
         }
       }
-      fetchPrice()
+      // fetchPrice()
 
       const fetchNodes = async () => {
         try {
@@ -322,7 +322,7 @@ const StatsBoxGrid = () => {
           })
         }
       }
-      fetchNodes()
+      // fetchNodes()
 
       const fetchTotalValueLocked = async () => {
         try {
@@ -341,7 +341,7 @@ const StatsBoxGrid = () => {
           })
         }
       }
-      fetchTotalValueLocked()
+      // fetchTotalValueLocked()
 
       const fetchTxCount = async () => {
         try {
@@ -362,7 +362,7 @@ const StatsBoxGrid = () => {
           })
         }
       }
-      fetchTxCount()
+      // fetchTxCount()
     }
   }, [])
 
