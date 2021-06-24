@@ -294,7 +294,7 @@ const StatsBoxGrid = () => {
           })
         }
       }
-      fetchPrice()
+      // fetchPrice()
 
       const fetchNodes = async () => {
         try {
@@ -313,7 +313,7 @@ const StatsBoxGrid = () => {
           })
         }
       }
-      fetchNodes()
+      // fetchNodes()
 
       const fetchTotalValueLocked = async () => {
         try {
@@ -332,18 +332,13 @@ const StatsBoxGrid = () => {
           })
         }
       }
-      fetchTotalValueLocked()
+      // fetchTotalValueLocked()
 
       const fetchTxCount = async () => {
         try {
           const { result } = await getData("/.netlify/functions/txs")
           // result: [{UTCDate: string, unixTimeStamp: string, transactionCount: number}, {...}]
           console.log(result)
-          const data = []
-          for (let i in result) {
-            data.push(i.transactionCount)
-          }
-          console.log(data)
 
           const count = result[0].transactionCount
           const value = formatTxs(count)
@@ -358,7 +353,7 @@ const StatsBoxGrid = () => {
           })
         }
       }
-      fetchTxCount()
+      // fetchTxCount()
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
