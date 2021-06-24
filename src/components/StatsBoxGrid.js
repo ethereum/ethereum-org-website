@@ -123,8 +123,6 @@ const Lines = styled.div`
   // left: 0;
   // bottom: 0;
   width: 101.5%;
-  width: 300px;
-  //
   height: 200px;
   // z-index: 0;
 `
@@ -657,31 +655,29 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-eth-price-explainer" />
       ),
       line: (
-        <ResponsiveContainer>
-          <AreaChart width={700} height={200} data={transactionsData}>
-            <defs>
-              <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
-                <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-              </linearGradient>
-              <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-                <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
-              </linearGradient>
-            </defs>
-            <Area
-              type="monotone"
-              dataKey="uv"
-              stroke="#8884d8"
-              fillOpacity={0.3}
-              fill="url(#colorUv)"
-              fillOpacity="0.2"
-            />
-          </AreaChart>
-        </ResponsiveContainer>
+        <AreaChart width={700} height={200} data={transactionsData}>
+          <defs>
+            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
+              <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
+            </linearGradient>
+            <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
+              <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+            </linearGradient>
+          </defs>
+          <Area
+            type="monotone"
+            dataKey="uv"
+            stroke="#8884d8"
+            fillOpacity={0.3}
+            fill="url(#colorUv)"
+            fillOpacity="0.2"
+          />
+        </AreaChart>
       ),
-      buttonContainer: <ToggleGroupTransactions />,
-      state: ethPrice,
+      // buttonContainer: <ToggleGroupTransactions />,
+      // state: ethPrice,
     },
     {
       apiProvider: "Etherscan",
@@ -714,8 +710,8 @@ const StatsBoxGrid = () => {
           </AreaChart>
         </ResponsiveContainer>
       ),
-      buttonContainer: <ToggleGroupTransactions />,
-      state: txs,
+      // buttonContainer: <ToggleGroupTransactions />,
+      // state: txs,
     },
     {
       apiProvider: "DeFi Pulse",
@@ -750,8 +746,8 @@ const StatsBoxGrid = () => {
           </AreaChart>
         </ResponsiveContainer>
       ),
-      buttonContainer: <ToggleGroupTransactions />,
-      state: valueLocked,
+      // buttonContainer: <ToggleGroupTransactions />,
+      // state: valueLocked,
     },
     {
       apiProvider: "Etherscan",
@@ -782,8 +778,8 @@ const StatsBoxGrid = () => {
           />
         </AreaChart>
       ),
-      buttonContainer: <ToggleGroupTransactions />,
-      state: nodes,
+      // buttonContainer: <ToggleGroupTransactions />,
+      // state: nodes,
     },
   ]
 
