@@ -118,13 +118,13 @@ const LoadingMessage = () => (
 )
 
 const Lines = styled.div`
-  // position: absolute;
+  position: absolute;
   margin-left: -5px;
-  left: 0;
-  bottom: 0;
+  // left: 0;
+  // bottom: 0;
   width: 101.5%;
-  width: 100%;
-
+  width: 300px;
+  //
   height: 200px;
   // z-index: 0;
 `
