@@ -702,6 +702,8 @@ const StatsBoxGrid = () => {
             fill="url(#colorUv)"
             fillOpacity="0.2"
           />
+          <XAxis />
+          <YAxis />
         </AreaChart>
       ),
       // buttonContainer: <ToggleGroupTransactions />,
