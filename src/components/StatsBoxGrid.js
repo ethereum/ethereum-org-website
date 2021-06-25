@@ -189,7 +189,9 @@ const GridItem = ({ metric }) => {
         <Title>{title}</Title>
         <p>{description}</p>
       </div>
-      <Lines>{line}</Lines>
+      <Lines>
+        <ResponsiveContainer>{line}</ResponsiveContainer>
+      </Lines>
       {/* <ButtonContainer>{buttonContainer}</ButtonContainer> */}
       {/* <Value>{value}</Value> */}
     </Box>
@@ -652,28 +654,30 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-eth-price-explainer" />
       ),
       line: (
-        <AreaChart width={600} height={200} data={transactionsData}>
-          <defs>
-            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
-              <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-            </linearGradient>
-            <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
-            </linearGradient>
-          </defs>
-          <Area
-            type="monotone"
-            dataKey="uv"
-            stroke="#8884d8"
-            fillOpacity={0.3}
-            fill="url(#colorUv)"
-            fillOpacity="0.2"
-          />
-          <XAxis axisLine={false} tick={false} />
-          <YAxis axisLine={false} tick={false} />
-        </AreaChart>
+        <ResponsiveContainer width="100%" height={320}>
+          <AreaChart width={600} height={200} data={transactionsData}>
+            <defs>
+              <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
+                <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
+              </linearGradient>
+              <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+              </linearGradient>
+            </defs>
+            <Area
+              type="monotone"
+              dataKey="uv"
+              stroke="#8884d8"
+              fillOpacity={0.3}
+              fill="url(#colorUv)"
+              fillOpacity="0.2"
+            />
+            <XAxis axisLine={false} tick={false} />
+            <YAxis axisLine={false} tick={false} />
+          </AreaChart>
+        </ResponsiveContainer>
       ),
       // buttonContainer: <ToggleGroupTransactions />,
       // state: ethPrice,
@@ -686,28 +690,30 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-tx-day-explainer" />
       ),
       line: (
-        <AreaChart width={600} height={250} data={transactionsData}>
-          <defs>
-            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
-              <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-            </linearGradient>
-            <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
-            </linearGradient>
-          </defs>
-          <Area
-            type="monotone"
-            dataKey="uv"
-            stroke="#8884d8"
-            fillOpacity={0.3}
-            fill="url(#colorUv)"
-            fillOpacity="0.2"
-          />
-          <XAxis axisLine={false} tick={false} />
-          <YAxis axisLine={false} tick={false} />
-        </AreaChart>
+        <ResponsiveContainer width="95%" height={320}>
+          <AreaChart width={600} height={250} data={transactionsData}>
+            <defs>
+              <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
+                <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
+              </linearGradient>
+              <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+              </linearGradient>
+            </defs>
+            <Area
+              type="monotone"
+              dataKey="uv"
+              stroke="#8884d8"
+              fillOpacity={0.3}
+              fill="url(#colorUv)"
+              fillOpacity="0.2"
+            />
+            <XAxis axisLine={false} tick={false} />
+            <YAxis axisLine={false} tick={false} />
+          </AreaChart>
+        </ResponsiveContainer>
       ),
       // buttonContainer: <ToggleGroupTransactions />,
       // state: txs,
@@ -722,28 +728,30 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-value-defi-explainer" />
       ),
       line: (
-        <AreaChart width={600} height={250} data={transactionsData}>
-          <defs>
-            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
-              <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-            </linearGradient>
-            <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
-            </linearGradient>
-          </defs>
-          <Area
-            type="monotone"
-            dataKey="uv"
-            stroke="#8884d8"
-            fillOpacity={0.3}
-            fill="url(#colorUv)"
-            fillOpacity="0.2"
-          />
-          <XAxis axisLine={false} tick={false} />
-          <YAxis axisLine={false} tick={false} />
-        </AreaChart>
+        <ResponsiveContainer width="95%" height={320}>
+          <AreaChart width={600} height={250} data={transactionsData}>
+            <defs>
+              <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
+                <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
+              </linearGradient>
+              <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+              </linearGradient>
+            </defs>
+            <Area
+              type="monotone"
+              dataKey="uv"
+              stroke="#8884d8"
+              fillOpacity={0.3}
+              fill="url(#colorUv)"
+              fillOpacity="0.2"
+            />
+            <XAxis axisLine={false} tick={false} />
+            <YAxis axisLine={false} tick={false} />
+          </AreaChart>
+        </ResponsiveContainer>
       ),
       // buttonContainer: <ToggleGroupTransactions />,
       // state: valueLocked,
@@ -756,28 +764,30 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-nodes-explainer" />
       ),
       line: (
-        <AreaChart width={600} height={250} data={transactionsData}>
-          <defs>
-            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
-              <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-            </linearGradient>
-            <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
-            </linearGradient>
-          </defs>
-          <Area
-            type="monotone"
-            dataKey="uv"
-            stroke="#8884d8"
-            fillOpacity={0.3}
-            fill="url(#colorUv)"
-            fillOpacity="0.2"
-          />
-          <XAxis axisLine={false} tick={false} />
-          <YAxis axisLine={false} tick={false} />
-        </AreaChart>
+        <ResponsiveContainer width="95%" height={320}>
+          <AreaChart width={600} height={250} data={transactionsData}>
+            <defs>
+              <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
+                <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
+              </linearGradient>
+              <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+              </linearGradient>
+            </defs>
+            <Area
+              type="monotone"
+              dataKey="uv"
+              stroke="#8884d8"
+              fillOpacity={0.3}
+              fill="url(#colorUv)"
+              fillOpacity="0.2"
+            />
+            <XAxis axisLine={false} tick={false} />
+            <YAxis axisLine={false} tick={false} />
+          </AreaChart>
+        </ResponsiveContainer>
       ),
       // buttonContainer: <ToggleGroupTransactions />,
       // state: nodes,
