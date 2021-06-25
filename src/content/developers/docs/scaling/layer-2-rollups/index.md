@@ -89,7 +89,7 @@ The gas you need to run the computation of the fraud proof is even reimbursed. B
 
 "_anyone who might be able to take an action that you would have to prove fraudulent to secure your funds requires that you post a bond. You basically take some ETH and lock it up and you say "Hey, I promise to tell the truth"... If I don't tell the truth and fraud is proven, this money will be slashed. Not only does some of this money get slashed but some of it will pay for the gas that people spent doing the fraud proof_"
 
-So you can see the incentives: particpants get penalized for conducting fraud and reimbursed for proving fraud.
+So you can see the incentives: participants get penalized for conducting fraud and reimbursed for proving fraud.
 
 #### Pros and cons {#optimistic-pros-and-cons}
 
