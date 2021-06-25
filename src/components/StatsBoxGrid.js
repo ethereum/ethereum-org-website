@@ -20,8 +20,6 @@ import Icon from "./Icon"
 import { getData } from "../utils/cache"
 
 const Value = styled.h3`
-  // position: absolute;
-  // bottom: 0;
   font-size: min(4.4vw, 64px);
   font-weight: 600;
   margin-top: 0rem;
@@ -29,7 +27,6 @@ const Value = styled.h3`
   color: ${({ theme }) => theme.colors.text};
   flex-wrap: wrap;
   text-overflow: ellipsis;
-  // width: 100%;
   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     font-size: max(8.8vw, 48px);
   }
@@ -60,7 +57,6 @@ const Grid = styled.div`
 `
 
 const Box = styled.div`
-  // position: relative;
   color: ${({ theme }) => theme.colors.text};
   height: 20rem;
   background: ${({ theme, color }) => theme.colors[color]};
@@ -70,7 +66,6 @@ const Box = styled.div`
   align-items: flex-start;
   border: 1px solid ${({ theme }) => theme.colors.color};
   padding: 1.5rem;
-  // z-index: 2;
   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     border-left: 0px solid #000000;
     border-right: 0px solid #000000;
@@ -364,16 +359,16 @@ const StatsBoxGrid = () => {
     }
   }, [])
 
-  var today = new Date(),
-    date =
-      today.getFullYear() +
-      "-" +
-      (today.getMonth() + 1) +
-      "-" +
-      (today.getDate() - 1),
-    oneMonthAgo =
-      today.getFullYear() + "-" + today.getMonth() + "-" + (today.getDate() - 1)
-  const start = "2019-10-30"
+  // var today = new Date(),
+  //   date =
+  //     today.getFullYear() +
+  //     "-" +
+  //     (today.getMonth() + 1) +
+  //     "-" +
+  //     (today.getDate() - 1),
+  //   oneMonthAgo =
+  //     today.getFullYear() + "-" + today.getMonth() + "-" + (today.getDate() - 1)
+  // const start = "2019-10-30"
 
   // useEffect(() => {
   //   coinGeckoData("30")
@@ -381,7 +376,7 @@ const StatsBoxGrid = () => {
   //   defipalseData("1m")
   // }, [])
 
-  const [coingecko, setCoingecko] = useState(null)
+  // const [coingecko, setCoingecko] = useState(null)
   // useEffect(() => {
   //   coinGeckoData("30")
   // }, [])
@@ -687,28 +682,26 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-tx-day-explainer" />
       ),
       line: (
-        <ResponsiveContainer>
-          <AreaChart width={600} height={250} data={transactionsData}>
-            <defs>
-              <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
-                <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-              </linearGradient>
-              <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-                <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
-              </linearGradient>
-            </defs>
-            <Area
-              type="monotone"
-              dataKey="uv"
-              stroke="#8884d8"
-              fillOpacity={0.3}
-              fill="url(#colorUv)"
-              fillOpacity="0.2"
-            />
-          </AreaChart>
-        </ResponsiveContainer>
+        <AreaChart width={600} height={250} data={transactionsData}>
+          <defs>
+            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
+              <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
+            </linearGradient>
+            <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
+              <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+            </linearGradient>
+          </defs>
+          <Area
+            type="monotone"
+            dataKey="uv"
+            stroke="#8884d8"
+            fillOpacity={0.3}
+            fill="url(#colorUv)"
+            fillOpacity="0.2"
+          />
+        </AreaChart>
       ),
       // buttonContainer: <ToggleGroupTransactions />,
       // state: txs,
@@ -723,28 +716,26 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-value-defi-explainer" />
       ),
       line: (
-        <ResponsiveContainer>
-          <AreaChart width={600} height={250} data={transactionsData}>
-            <defs>
-              <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
-                <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-              </linearGradient>
-              <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-                <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
-              </linearGradient>
-            </defs>
-            <Area
-              type="monotone"
-              dataKey="uv"
-              stroke="#8884d8"
-              fillOpacity={0.3}
-              fill="url(#colorUv)"
-              fillOpacity="0.2"
-            />
-          </AreaChart>
-        </ResponsiveContainer>
+        <AreaChart width={600} height={250} data={transactionsData}>
+          <defs>
+            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
+              <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
+            </linearGradient>
+            <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
+              <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+            </linearGradient>
+          </defs>
+          <Area
+            type="monotone"
+            dataKey="uv"
+            stroke="#8884d8"
+            fillOpacity={0.3}
+            fill="url(#colorUv)"
+            fillOpacity="0.2"
+          />
+        </AreaChart>
       ),
       // buttonContainer: <ToggleGroupTransactions />,
       // state: valueLocked,
