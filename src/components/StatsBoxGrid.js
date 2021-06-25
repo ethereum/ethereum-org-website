@@ -122,7 +122,7 @@ const Lines = styled.div`
   margin-left: -5px;
   // left: 0;
   // bottom: 0;
-  width: 600px;
+  width: 100%;
   height: 200px;
   // z-index: 0;
 `
@@ -260,8 +260,8 @@ const StatsBoxGrid = () => {
   }
 
   useEffect(() => {
-    coinGeckoData("30")
-    etherscanData(oneMonthAgo)
+    // coinGeckoData("30")
+    // etherscanData(oneMonthAgo)
     // defipalseData("1m")
 
     // Skip APIs when not in production
@@ -386,64 +386,64 @@ const StatsBoxGrid = () => {
   //   coinGeckoData("30")
   // }, [])
 
-  const coinGeckoData = async (mode) => {
-    let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
-    axios
-      .get(coingeckoUrl)
-      .then((response) => {
-        setCoingecko(response.data)
-      })
-      .catch(function (error) {
-        if (error.response) {
-          // The request was made and the server responded with a status code
-          // that falls out of the range of 2xx
-          console.log(error.response.data)
-          console.log(error.response.status)
-          console.log(error.response.headers)
-        } else if (error.request) {
-          // The request was made but no response was received
-          // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
-          // http.ClientRequest in node.js
-          console.log(error.request)
-        } else {
-          // Something happened in setting up the request that triggered an Error
-          console.log("Error", error.message)
-        }
-        console.log(error.config)
-      })
-  }
+  // const coinGeckoData = async (mode) => {
+  //   let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
+  //   axios
+  //     .get(coingeckoUrl)
+  //     .then((response) => {
+  //       setCoingecko(response.data)
+  //     })
+  //     .catch(function (error) {
+  //       if (error.response) {
+  //         // The request was made and the server responded with a status code
+  //         // that falls out of the range of 2xx
+  //         console.log(error.response.data)
+  //         console.log(error.response.status)
+  //         console.log(error.response.headers)
+  //       } else if (error.request) {
+  //         // The request was made but no response was received
+  //         // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+  //         // http.ClientRequest in node.js
+  //         console.log(error.request)
+  //       } else {
+  //         // Something happened in setting up the request that triggered an Error
+  //         console.log("Error", error.message)
+  //       }
+  //       console.log(error.config)
+  //     })
+  // }
 
-  const [etherscan, setEtherscan] = useState(null)
+  // const [etherscan, setEtherscan] = useState(null)
   // useEffect(() => {
   //   etherscanData(oneMonthAgo)
   // }, [])
 
-  const etherscanData = async (mode1) => {
-    let etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
-    axios
-      .get(etherscanUrl)
-      .then((response) => {
-        setEtherscan(response.data)
-      })
-      .catch(function (error) {
-        if (error.response) {
-          // The request was made and the server responded with a status code
-          // that falls out of the range of 2xx
-          console.log(error.response.data)
-          console.log(error.response.status)
-          console.log(error.response.headers)
-        } else if (error.request) {
-          // The request was made but no response was received
-          // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
-          // http.ClientRequest in node.js
-          console.log(error.request)
-        } else {
-          // Something happened in setting up the request that triggered an Error
-          console.log("Error", error.message)
-        }
-        console.log(error.config)
-      })
-  }
+  // const etherscanData = async (mode1) => {
+  //   let etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
+  //   axios
+  //     .get(etherscanUrl)
+  //     .then((response) => {
+  //       setEtherscan(response.data)
+  //     })
+  //     .catch(function (error) {
+  //       if (error.response) {
+  //         // The request was made and the server responded with a status code
+  //         // that falls out of the range of 2xx
+  //         console.log(error.response.data)
+  //         console.log(error.response.status)
+  //         console.log(error.response.headers)
+  //       } else if (error.request) {
+  //         // The request was made but no response was received
+  //         // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+  //         // http.ClientRequest in node.js
+  //         console.log(error.request)
+  //       } else {
+  //         // Something happened in setting up the request that triggered an Error
+  //         console.log("Error", error.message)
+  //       }
+  //       console.log(error.config)
+  //     })
+  // }
 
   // const [defipulse, setDefipulse] = useState(null)
   // useEffect(() => {
@@ -477,29 +477,29 @@ const StatsBoxGrid = () => {
   //     })
   // }
 
-  let pricesData = []
-  if (coingecko) {
-    for (const i in coingecko.prices) {
-      pricesData.push({
-        name: "Page A",
-        uv: coingecko.prices[i][1],
-        pv: i,
-        amt: 2400,
-      })
-    }
-  }
+  // let pricesData = []
+  // if (coingecko) {
+  //   for (const i in coingecko.prices) {
+  //     pricesData.push({
+  //       name: "Page A",
+  //       uv: coingecko.prices[i][1],
+  //       pv: i,
+  //       amt: 2400,
+  //     })
+  //   }
+  // }
 
-  let nodesData = []
-  if (etherscan) {
-    for (const i in etherscan.result) {
-      nodesData.push({
-        name: "Page A",
-        uv: etherscan.result[i]["TotalNodeCount"],
-        pv: etherscan.result[i]["UTCDate"],
-        amt: 2400,
-      })
-    }
-  }
+  // let nodesData = []
+  // if (etherscan) {
+  //   for (const i in etherscan.result) {
+  //     nodesData.push({
+  //       name: "Page A",
+  //       uv: etherscan.result[i]["TotalNodeCount"],
+  //       pv: etherscan.result[i]["UTCDate"],
+  //       amt: 2400,
+  //     })
+  //   }
+  // }
 
   // let valueLockedData = []
   // if (defipulse) {
@@ -519,26 +519,26 @@ const StatsBoxGrid = () => {
   const types = [0, 1]
   const defaultTypes = ["30d", "ALL"]
 
-  const coingeckoTypes = ["30", "max"]
+  // const coingeckoTypes = ["30", "max"]
 
-  const [priceActive, setPriceActive] = useState(types[0])
-  function ToggleGroupPrice() {
-    return (
-      <div>
-        {types.map((type) => (
-          <ButtonToggle
-            active={priceActive === type}
-            onClick={() => {
-              // coinGeckoData(coingeckoTypes[type])
-              setPriceActive(type)
-            }}
-          >
-            {defaultTypes[type]}
-          </ButtonToggle>
-        ))}
-      </div>
-    )
-  }
+  // const [priceActive, setPriceActive] = useState(types[0])
+  // function ToggleGroupPrice() {
+  //   return (
+  //     <div>
+  //       {types.map((type) => (
+  //         <ButtonToggle
+  //           active={priceActive === type}
+  //           onClick={() => {
+  //             // coinGeckoData(coingeckoTypes[type])
+  //             setPriceActive(type)
+  //           }}
+  //         >
+  //           {defaultTypes[type]}
+  //         </ButtonToggle>
+  //       ))}
+  //     </div>
+  //   )
+  // }
   const transactionsData = [
     {
       name: "Page A",
@@ -620,25 +620,25 @@ const StatsBoxGrid = () => {
   //     </div>
   //   )
   // }
-  const etherscanTypes = [oneMonthAgo, start]
-  const [nodesActive, setNodesActive] = useState(types[0])
-  function ToggleGroupNodes() {
-    return (
-      <div>
-        {types.map((type) => (
-          <ButtonToggle
-            active={nodesActive === type}
-            onClick={() => {
-              // etherscanData(etherscanTypes[type])
-              setNodesActive(type)
-            }}
-          >
-            {defaultTypes[type]}
-          </ButtonToggle>
-        ))}
-      </div>
-    )
-  }
+  // const etherscanTypes = [oneMonthAgo, start]
+  // const [nodesActive, setNodesActive] = useState(types[0])
+  // function ToggleGroupNodes() {
+  //   return (
+  //     <div>
+  //       {types.map((type) => (
+  //         <ButtonToggle
+  //           active={nodesActive === type}
+  //           onClick={() => {
+  //             // etherscanData(etherscanTypes[type])
+  //             setNodesActive(type)
+  //           }}
+  //         >
+  //           {defaultTypes[type]}
+  //         </ButtonToggle>
+  //       ))}
+  //     </div>
+  //   )
+  // }
 
   // console.log(pricesData)
   // console.log(nodesData)
@@ -655,7 +655,7 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-eth-price-explainer" />
       ),
       line: (
-        <AreaChart width={700} height={200} data={transactionsData}>
+        <AreaChart width={600} height={200} data={transactionsData}>
           <defs>
             <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
               <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
