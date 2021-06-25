@@ -57,6 +57,7 @@ const Grid = styled.div`
 `
 
 const Box = styled.div`
+  position: relative;
   color: ${({ theme }) => theme.colors.text};
   height: 20rem;
   background: ${({ theme, color }) => theme.colors[color]};
@@ -114,8 +115,8 @@ const LoadingMessage = () => (
 )
 
 const Lines = styled.div`
-  // position: relative;
-  margin-left: -5px;
+  position: absolute;
+  // margin-left: -40px;
   left: 0;
   bottom: 0;
   width: 100%;
