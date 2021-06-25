@@ -113,10 +113,11 @@ const LoadingMessage = () => (
 )
 
 const Lines = styled.div`
-  // position: relative;
+  // position: absolute;
   margin-left: -5px;
-  // left: 0;
-  // bottom: 0;
+  left: 0;
+  bottom: 0;
+  width: 101.5%;
   width: 100%;
   height: 200px;
   // z-index: 0;
@@ -578,23 +579,23 @@ const StatsBoxGrid = () => {
       amt: 2100,
     },
   ]
-  const [transactionsActive, setTransactionsActive] = useState(types[0])
-  function ToggleGroupTransactions() {
-    return (
-      <div>
-        {types.map((type) => (
-          <ButtonToggle
-            active={transactionsActive === type}
-            onClick={() => {
-              setTransactionsActive(type)
-            }}
-          >
-            {defaultTypes[type]}
-          </ButtonToggle>
-        ))}
-      </div>
-    )
-  }
+  // const [transactionsActive, setTransactionsActive] = useState(types[0])
+  // function ToggleGroupTransactions() {
+  //   return (
+  //     <div>
+  //       {types.map((type) => (
+  //         <ButtonToggle
+  //           active={transactionsActive === type}
+  //           onClick={() => {
+  //             setTransactionsActive(type)
+  //           }}
+  //         >
+  //           {defaultTypes[type]}
+  //         </ButtonToggle>
+  //       ))}
+  //     </div>
+  //   )
+  // }
 
   // const defipulseTypes = ["1m", "all"]
   // const [valueLockedActive, setValueLockedActive] = useState(types[0])
@@ -701,6 +702,8 @@ const StatsBoxGrid = () => {
             fill="url(#colorUv)"
             fillOpacity="0.2"
           />
+          <XAxis />
+          <YAxis />
         </AreaChart>
       ),
       // buttonContainer: <ToggleGroupTransactions />,
