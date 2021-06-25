@@ -764,7 +764,11 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-nodes-explainer" />
       ),
       line: (
-        <ResponsiveContainer width="95%" height={320}>
+        <ResponsiveContainer
+          width="95%"
+          height={320}
+          className={ResponsiveContainer}
+        >
           <AreaChart width={600} height={250} data={transactionsData}>
             <defs>
               <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
