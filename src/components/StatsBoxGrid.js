@@ -189,9 +189,7 @@ const GridItem = ({ metric }) => {
         <Title>{title}</Title>
         <p>{description}</p>
       </div>
-      <Lines>
-        <ResponsiveContainer>{line}</ResponsiveContainer>
-      </Lines>
+      <Lines>{line}</Lines>
       {/* <ButtonContainer>{buttonContainer}</ButtonContainer> */}
       {/* <Value>{value}</Value> */}
     </Box>
@@ -655,7 +653,7 @@ const StatsBoxGrid = () => {
       ),
       line: (
         <ResponsiveContainer width="100%" height={320}>
-          <AreaChart width={600} height={200} data={transactionsData}>
+          <AreaChart data={transactionsData}>
             <defs>
               <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -690,8 +688,8 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-tx-day-explainer" />
       ),
       line: (
-        <ResponsiveContainer width="95%" height={320}>
-          <AreaChart width={600} height={250} data={transactionsData}>
+        <ResponsiveContainer width="100%" height={320}>
+          <AreaChart data={transactionsData}>
             <defs>
               <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -728,8 +726,8 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-value-defi-explainer" />
       ),
       line: (
-        <ResponsiveContainer width="95%" height={320}>
-          <AreaChart width={600} height={250} data={transactionsData}>
+        <ResponsiveContainer width="100%" height={320}>
+          <AreaChart data={transactionsData}>
             <defs>
               <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -764,12 +762,8 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-nodes-explainer" />
       ),
       line: (
-        <ResponsiveContainer
-          width="95%"
-          height={320}
-          className={ResponsiveContainer}
-        >
-          <AreaChart width={600} height={250} data={transactionsData}>
+        <ResponsiveContainer width="100%" height={320}>
+          <AreaChart data={transactionsData}>
             <defs>
               <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
