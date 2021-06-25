@@ -21,7 +21,7 @@ import { getData } from "../utils/cache"
 
 const Value = styled.h3`
   // position: absolute;
-  bottom: 0;
+  // bottom: 0;
   font-size: min(4.4vw, 64px);
   font-weight: 600;
   margin-top: 0rem;
@@ -60,7 +60,7 @@ const Grid = styled.div`
 `
 
 const Box = styled.div`
-  position: relative;
+  // position: relative;
   color: ${({ theme }) => theme.colors.text};
   height: 20rem;
   background: ${({ theme, color }) => theme.colors[color]};
@@ -118,7 +118,7 @@ const LoadingMessage = () => (
 )
 
 const Lines = styled.div`
-  position: relative;
+  // position: relative;
   margin-left: -5px;
   // left: 0;
   // bottom: 0;
