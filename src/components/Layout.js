@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext } from "react"
+import React, { useState, useEffect } from "react"
 import { ThemeProvider } from "styled-components"
 import { IntlProvider, IntlContextProvider } from "gatsby-plugin-intl"
 import styled from "styled-components"
@@ -11,6 +11,8 @@ import Nav from "./Nav"
 import SideNav from "./SideNav"
 import SideNavMobile from "./SideNavMobile"
 import TranslationBanner from "./TranslationBanner"
+
+import { ZenModeContext } from "../contexts/ZenModeContext"
 
 import { isLangRightToLeft } from "../utils/translations"
 
@@ -47,8 +49,6 @@ const Main = styled.main`
   width: 100%;
   flex-grow: 1;
 `
-
-export const ZenModeContext = createContext(null)
 
 const Layout = (props) => {
   const [isDarkTheme, setIsDarkTheme] = useState(false)

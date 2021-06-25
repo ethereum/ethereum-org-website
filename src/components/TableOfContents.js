@@ -4,11 +4,12 @@ import { useIntl } from "gatsby-plugin-intl"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-import { ZenModeContext } from "./Layout"
 import ButtonLink from "./ButtonLink"
 import Icon from "./Icon"
 import Translation from "./Translation"
 import { dropdownIconContainerVariant } from "./SharedStyledComponents"
+
+import { ZenModeContext } from "../contexts/ZenModeContext"
 
 const customIdRegEx = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/
 
