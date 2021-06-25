@@ -66,6 +66,7 @@ const Box = styled.div`
   align-items: flex-start;
   border: 1px solid ${({ theme }) => theme.colors.color};
   padding: 1.5rem;
+  // width: 100%;
   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     border-left: 0px solid #000000;
     border-right: 0px solid #000000;
@@ -113,7 +114,7 @@ const LoadingMessage = () => (
 )
 
 const Lines = styled.div`
-  // position: absolute;
+  // position: relative;
   margin-left: -5px;
   left: 0;
   bottom: 0;
