@@ -189,7 +189,7 @@ const GridItem = ({ metric }) => {
         <Title>{title}</Title>
         <p>{description}</p>
       </div>
-      <Lines>{line}</Lines>
+      {line}
       {/* <ButtonContainer>{buttonContainer}</ButtonContainer> */}
       {/* <Value>{value}</Value> */}
     </Box>
