@@ -122,7 +122,9 @@ const Lines = styled.div`
   bottom: 0;
   width: 100%;
   height: 200px;
-  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   // z-index: 0;
 `
 
@@ -191,7 +193,7 @@ const GridItem = ({ metric }) => {
         <Title>{title}</Title>
         <p>{description}</p>
       </div>
-      {line}
+      <Lines>{line}</Lines>
       {/* <ButtonContainer>{buttonContainer}</ButtonContainer> */}
       {/* <Value>{value}</Value> */}
     </Box>
@@ -642,29 +644,6 @@ const StatsBoxGrid = () => {
   // console.log(pricesData)
   // console.log(nodesData)
   // console.log(valueLockedData)
-  const [forceLoading, setForceLoading] = useState(null)
-
-  useEffect(() => {
-    let resizeThrottleTimeout
-    let skip = false
-    const resizeCb = () => {
-      if (skip) {
-        return
-      }
-
-      setForceLoading(true)
-      skip = true
-      resizeThrottleTimeout = setTimeout(() => {
-        setForceLoading(false)
-        skip = false
-      }, 100)
-    }
-    window.addEventListener("resize", resizeCb)
-
-    return () => {
-      clearTimeout(resizeThrottleTimeout)
-    }
-  }, [setForceLoading])
 
   const metrics = [
     {
@@ -677,7 +656,7 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-eth-price-explainer" />
       ),
       line: (
-        <ResponsiveContainer width={500} height={300} aspect={3}>
+        <ResponsiveContainer width="99%" height={300} aspect={3}>
           <AreaChart data={transactionsData}>
             <defs>
               <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
@@ -713,7 +692,7 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-tx-day-explainer" />
       ),
       line: (
-        <ResponsiveContainer width={500} height={300} aspect={3}>
+        <ResponsiveContainer width="99%" height={300} aspect={3}>
           <AreaChart data={transactionsData}>
             <defs>
               <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
@@ -751,7 +730,7 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-value-defi-explainer" />
       ),
       line: (
-        <ResponsiveContainer width={500} height={300} aspect={3}>
+        <ResponsiveContainer width="99%" height={300} aspect={3}>
           <AreaChart data={transactionsData}>
             <defs>
               <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
@@ -787,7 +766,7 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-nodes-explainer" />
       ),
       line: (
-        <ResponsiveContainer width={500} height={300} aspect={3}>
+        <ResponsiveContainer width="99%" height={300} aspect={3}>
           <AreaChart data={transactionsData}>
             <defs>
               <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
