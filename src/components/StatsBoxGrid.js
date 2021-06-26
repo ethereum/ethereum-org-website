@@ -67,7 +67,7 @@ const Box = styled.div`
   align-items: flex-start;
   border: 1px solid ${({ theme }) => theme.colors.color};
   padding: 1.5rem;
-  width: 100%;
+  width: 1fr;
   height: 1fr;
   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     border-left: 0px solid #000000;
@@ -122,6 +122,7 @@ const Lines = styled.div`
   bottom: 0;
   width: 100%;
   height: 200px;
+  display: block;
   // z-index: 0;
 `
 
@@ -653,7 +654,7 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-eth-price-explainer" />
       ),
       line: (
-        <ResponsiveContainer width={600} height={320}>
+        <ResponsiveContainer width={"99%"} height={320}>
           <AreaChart width={600} height={300} data={transactionsData}>
             <defs>
               <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
@@ -689,7 +690,7 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-tx-day-explainer" />
       ),
       line: (
-        <ResponsiveContainer width={600} height={320}>
+        <ResponsiveContainer width={"99%"} height={320}>
           <AreaChart width={600} height={300} data={transactionsData}>
             <defs>
               <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
@@ -727,7 +728,7 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-value-defi-explainer" />
       ),
       line: (
-        <ResponsiveContainer width={600} height={320}>
+        <ResponsiveContainer width={"99%"} height={320}>
           <AreaChart width={600} height={300} data={transactionsData}>
             <defs>
               <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
@@ -763,7 +764,7 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-nodes-explainer" />
       ),
       line: (
-        <ResponsiveContainer width={600} height={320}>
+        <ResponsiveContainer width={"99%"} height={320}>
           <AreaChart width={600} height={300} data={transactionsData}>
             <defs>
               <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
