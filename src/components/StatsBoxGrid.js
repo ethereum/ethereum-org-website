@@ -429,7 +429,7 @@ const StatsBoxGrid = () => {
       })
   }
 
-  const [etherscan, setEtherscan] = useState(null)
+  const [etherscan, setEtherscan] = useState([])
   useEffect(() => {
     etherscanData(oneMonthAgo)
   }, [])
@@ -567,67 +567,67 @@ const StatsBoxGrid = () => {
       </div>
     )
   }
-  const transactionsData = [
-    {
-      name: "Page A",
-      uv: 4000,
-      pv: 2400,
-      amt: 2400,
-    },
-    {
-      name: "Page B",
-      uv: 3000,
-      pv: 1398,
-      amt: 2210,
-    },
-    {
-      name: "Page C",
-      uv: 2000,
-      pv: 9800,
-      amt: 2290,
-    },
-    {
-      name: "Page D",
-      uv: 2780,
-      pv: 3908,
-      amt: 2000,
-    },
-    {
-      name: "Page E",
-      uv: 1890,
-      pv: 4800,
-      amt: 2181,
-    },
-    {
-      name: "Page F",
-      uv: 2390,
-      pv: 3800,
-      amt: 2500,
-    },
-    {
-      name: "Page G",
-      uv: 3490,
-      pv: 4300,
-      amt: 2100,
-    },
-  ]
-  const [transactionsActive, setTransactionsActive] = useState(types[0])
-  function ToggleGroupTransactions() {
-    return (
-      <div>
-        {types.map((type) => (
-          <ButtonToggle
-            active={transactionsActive === type}
-            onClick={() => {
-              setTransactionsActive(type)
-            }}
-          >
-            {defaultTypes[type]}
-          </ButtonToggle>
-        ))}
-      </div>
-    )
-  }
+  // const transactionsData = [
+  //   {
+  //     name: "Page A",
+  //     uv: 4000,
+  //     pv: 2400,
+  //     amt: 2400,
+  //   },
+  //   {
+  //     name: "Page B",
+  //     uv: 3000,
+  //     pv: 1398,
+  //     amt: 2210,
+  //   },
+  //   {
+  //     name: "Page C",
+  //     uv: 2000,
+  //     pv: 9800,
+  //     amt: 2290,
+  //   },
+  //   {
+  //     name: "Page D",
+  //     uv: 2780,
+  //     pv: 3908,
+  //     amt: 2000,
+  //   },
+  //   {
+  //     name: "Page E",
+  //     uv: 1890,
+  //     pv: 4800,
+  //     amt: 2181,
+  //   },
+  //   {
+  //     name: "Page F",
+  //     uv: 2390,
+  //     pv: 3800,
+  //     amt: 2500,
+  //   },
+  //   {
+  //     name: "Page G",
+  //     uv: 3490,
+  //     pv: 4300,
+  //     amt: 2100,
+  //   },
+  // ]
+  // const [transactionsActive, setTransactionsActive] = useState(types[0])
+  // function ToggleGroupTransactions() {
+  //   return (
+  //     <div>
+  //       {types.map((type) => (
+  //         <ButtonToggle
+  //           active={transactionsActive === type}
+  //           onClick={() => {
+  //             setTransactionsActive(type)
+  //           }}
+  //         >
+  //           {defaultTypes[type]}
+  //         </ButtonToggle>
+  //       ))}
+  //     </div>
+  //   )
+  // }
 
   // const defipulseTypes = ["1m", "all"]
   // const [valueLockedActive, setValueLockedActive] = useState(types[0])
@@ -717,7 +717,7 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-tx-day-explainer" />
       ),
       line: (
-        <AreaChart width={700} height={300} data={transactionsData}>
+        <AreaChart width={700} height={200} data={coingecko}>
           <defs>
             <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
               <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -740,7 +740,7 @@ const StatsBoxGrid = () => {
           {/* <YAxis axisLine={false} tick={false} /> */}
         </AreaChart>
       ),
-      buttonContainer: <ToggleGroupTransactions />,
+      buttonContainer: <ToggleGroupPrice />,
       state: txs,
     },
     {
@@ -753,7 +753,7 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-value-defi-explainer" />
       ),
       line: (
-        <AreaChart width={700} height={300} data={transactionsData}>
+        <AreaChart width={700} height={200} data={coingecko}>
           <defs>
             <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
               <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -776,7 +776,7 @@ const StatsBoxGrid = () => {
           {/* <YAxis axisLine={false} tick={false} /> */}
         </AreaChart>
       ),
-      buttonContainer: <ToggleGroupTransactions />,
+      buttonContainer: <ToggleGroupPrice />,
       state: valueLocked,
     },
     {
