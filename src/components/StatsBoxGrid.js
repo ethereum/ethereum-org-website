@@ -392,12 +392,22 @@ const StatsBoxGrid = () => {
     coinGeckoData("30")
   }, [])
 
+  let pricesData = []
   const coinGeckoData = async (mode) => {
     let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
     axios
       .get(coingeckoUrl)
       .then((response) => {
-        setCoingecko(response.data)
+        for (const i in response.data.prices) {
+          pricesData.push({
+            name: "Page A",
+            uv: response.data.prices[i][1],
+            pv: i,
+            amt: 2400,
+          })
+        }
+
+        setCoingecko(pricesData)
       })
       .catch(function (error) {
         if (error.response) {
@@ -424,12 +434,23 @@ const StatsBoxGrid = () => {
     etherscanData(oneMonthAgo)
   }, [])
 
+  let nodesData = []
+
   const etherscanData = async (mode1) => {
     let etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
     axios
       .get(etherscanUrl)
       .then((response) => {
-        setEtherscan(response.data)
+        for (const i in response.data.result) {
+          nodesData.push({
+            name: "Page A",
+            uv: response.data.result[i]["TotalNodeCount"],
+            pv: response.data.result[i]["UTCDate"],
+            amt: 2400,
+          })
+        }
+        console.log(nodesData)
+        setEtherscan(nodesData)
       })
       .catch(function (error) {
         if (error.response) {
@@ -450,6 +471,7 @@ const StatsBoxGrid = () => {
         console.log(error.config)
       })
   }
+  console.log(etherscan)
 
   // const [defipulse, setDefipulse] = useState(null)
   // useEffect(() => {
@@ -483,29 +505,29 @@ const StatsBoxGrid = () => {
   //     })
   // }
 
-  let pricesData = []
-  if (coingecko) {
-    for (const i in coingecko.prices) {
-      pricesData.push({
-        name: "Page A",
-        uv: coingecko.prices[i][1],
-        pv: i,
-        amt: 2400,
-      })
-    }
-  }
+  // let pricesData = []
+  // if (coingecko) {
+  //   for (const i in coingecko.prices) {
+  //     pricesData.push({
+  //       name: "Page A",
+  //       uv: coingecko.prices[i][1],
+  //       pv: i,
+  //       amt: 2400,
+  //     })
+  //   }
+  // }
 
-  let nodesData = []
-  if (etherscan) {
-    for (const i in etherscan.result) {
-      nodesData.push({
-        name: "Page A",
-        uv: etherscan.result[i]["TotalNodeCount"],
-        pv: etherscan.result[i]["UTCDate"],
-        amt: 2400,
-      })
-    }
-  }
+  // let nodesData = []
+  // if (etherscan) {
+  //   for (const i in etherscan.result) {
+  //     nodesData.push({
+  //       name: "Page A",
+  //       uv: etherscan.result[i]["TotalNodeCount"],
+  //       pv: etherscan.result[i]["UTCDate"],
+  //       amt: 2400,
+  //     })
+  //   }
+  // }
 
   // let valueLockedData = []
   // if (defipulse) {
@@ -661,7 +683,7 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-eth-price-explainer" />
       ),
       line: (
-        <AreaChart width={700} height={200} data={pricesData}>
+        <AreaChart width={700} height={200} data={coingecko}>
           <defs>
             <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
               <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -680,6 +702,8 @@ const StatsBoxGrid = () => {
             fill="url(#colorUv)"
             fillOpacity="0.2"
           />
+          <XAxis axisLine={false} tick={false} />
+          {/* <YAxis axisLine={false} tick={false} /> */}
         </AreaChart>
       ),
       buttonContainer: <ToggleGroupPrice />,
@@ -712,6 +736,8 @@ const StatsBoxGrid = () => {
             fill="url(#colorUv)"
             fillOpacity="0.2"
           />
+          <XAxis axisLine={false} tick={false} />
+          {/* <YAxis axisLine={false} tick={false} /> */}
         </AreaChart>
       ),
       buttonContainer: <ToggleGroupTransactions />,
@@ -746,6 +772,8 @@ const StatsBoxGrid = () => {
             fill="url(#colorUv)"
             fillOpacity="0.2"
           />
+          <XAxis axisLine={false} tick={false} />
+          {/* <YAxis axisLine={false} tick={false} /> */}
         </AreaChart>
       ),
       buttonContainer: <ToggleGroupTransactions />,
@@ -759,7 +787,7 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-nodes-explainer" />
       ),
       line: (
-        <AreaChart width={700} height={300} data={nodesData}>
+        <AreaChart width={700} height={300} data={etherscan}>
           <defs>
             <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
               <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -778,6 +806,8 @@ const StatsBoxGrid = () => {
             fill="url(#colorUv)"
             fillOpacity="0.2"
           />
+          <XAxis axisLine={false} tick={false} />
+          {/* <YAxis axisLine={false} tick={false} /> */}
         </AreaChart>
       ),
       buttonContainer: <ToggleGroupNodes />,
