@@ -705,8 +705,6 @@ const StatsBoxGrid = () => {
             fill="url(#colorUv)"
             fillOpacity="0.2"
           />
-          <XAxis axisLine={false} tick={false} />
-          <YAxis axisLine={false} tick={false} />
         </AreaChart>
       ),
       buttonContainer: <ToggleGroupTransactions />,
@@ -741,8 +739,6 @@ const StatsBoxGrid = () => {
             fill="url(#colorUv)"
             fillOpacity="0.2"
           />
-          <XAxis axisLine={false} tick={false} />
-          <YAxis axisLine={false} tick={false} />
         </AreaChart>
       ),
       buttonContainer: <ToggleGroupTransactions />,
@@ -775,8 +771,6 @@ const StatsBoxGrid = () => {
             fill="url(#colorUv)"
             fillOpacity="0.2"
           />
-          <XAxis axisLine={false} tick={false} />
-          <YAxis axisLine={false} tick={false} />
         </AreaChart>
       ),
       buttonContainer: <ToggleGroupTransactions />,
