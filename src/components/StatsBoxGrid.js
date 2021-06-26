@@ -392,7 +392,20 @@ const StatsBoxGrid = () => {
     coinGeckoData("30")
   }, [])
 
-  let pricesData = []
+  let pricesData = [
+    {
+      name: "Page A",
+      uv: 4000,
+      pv: 2400,
+      amt: 2400,
+    },
+    {
+      name: "Page B",
+      uv: 3000,
+      pv: 1398,
+      amt: 2210,
+    },
+  ]
   const coinGeckoData = async (mode) => {
     let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
     axios
@@ -434,7 +447,20 @@ const StatsBoxGrid = () => {
     etherscanData(oneMonthAgo)
   }, [])
 
-  let nodesData = []
+  let nodesData = [
+    {
+      name: "Page A",
+      uv: 4000,
+      pv: 2400,
+      amt: 2400,
+    },
+    {
+      name: "Page B",
+      uv: 3000,
+      pv: 1398,
+      amt: 2210,
+    },
+  ]
 
   const etherscanData = async (mode1) => {
     let etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
@@ -702,7 +728,7 @@ const StatsBoxGrid = () => {
             fill="url(#colorUv)"
             fillOpacity="0.2"
           />
-          <XAxis axisLine={false} tick={false} />
+          <XAxis dataKey="uv" axisLine={false} tick={false} />
           {/* <YAxis axisLine={false} tick={false} /> */}
         </AreaChart>
       ),
@@ -736,7 +762,7 @@ const StatsBoxGrid = () => {
             fill="url(#colorUv)"
             fillOpacity="0.2"
           />
-          <XAxis axisLine={false} tick={false} />
+          <XAxis dataKey="uv" axisLine={false} tick={false} />
           {/* <YAxis axisLine={false} tick={false} /> */}
         </AreaChart>
       ),
@@ -772,7 +798,7 @@ const StatsBoxGrid = () => {
             fill="url(#colorUv)"
             fillOpacity="0.2"
           />
-          <XAxis axisLine={false} tick={false} />
+          <XAxis dataKey="uv" axisLine={false} tick={false} />
           {/* <YAxis axisLine={false} tick={false} /> */}
         </AreaChart>
       ),
@@ -806,7 +832,7 @@ const StatsBoxGrid = () => {
             fill="url(#colorUv)"
             fillOpacity="0.2"
           />
-          <XAxis axisLine={false} tick={false} />
+          <XAxis dataKey="uv" axisLine={false} tick={false} />
           {/* <YAxis axisLine={false} tick={false} /> */}
         </AreaChart>
       ),
