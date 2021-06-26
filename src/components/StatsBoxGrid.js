@@ -258,8 +258,11 @@ const StatsBoxGrid = () => {
     }).format(nodes)
   }
 
+  const [coingecko, setCoingecko] = useState(null)
+  const [etherscan, setEtherscan] = useState(null)
+
   useEffect(() => {
-    coinGeckoData("30")
+    // coinGeckoData("30")
     // etherscanData(oneMonthAgo)
     // defipalseData("1m")
 
@@ -281,6 +284,9 @@ const StatsBoxGrid = () => {
         value: formatNodes(8040),
         hasError: false,
       })
+
+      coinGeckoData("30")
+      etherscanData(oneMonthAgo)
     } else {
       const fetchPrice = async () => {
         try {
@@ -359,6 +365,9 @@ const StatsBoxGrid = () => {
       }
       fetchTxCount()
     }
+
+    coinGeckoData("30")
+    etherscanData(oneMonthAgo)
   }, [])
 
   var today = new Date(),
@@ -378,7 +387,7 @@ const StatsBoxGrid = () => {
   //   defipalseData("1m")
   // }, [])
 
-  const [coingecko, setCoingecko] = useState(null)
+  // const [coingecko, setCoingecko] = useState(null)
   // useEffect(() => {
   //   coinGeckoData("30")
   // }, [])
@@ -415,32 +424,32 @@ const StatsBoxGrid = () => {
   //   etherscanData(oneMonthAgo)
   // }, [])
 
-  // const etherscanData = async (mode1) => {
-  //   let etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
-  //   axios
-  //     .get(etherscanUrl)
-  //     .then((response) => {
-  //       setEtherscan(response.data)
-  //     })
-  //     .catch(function (error) {
-  //       if (error.response) {
-  //         // The request was made and the server responded with a status code
-  //         // that falls out of the range of 2xx
-  //         console.log(error.response.data)
-  //         console.log(error.response.status)
-  //         console.log(error.response.headers)
-  //       } else if (error.request) {
-  //         // The request was made but no response was received
-  //         // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
-  //         // http.ClientRequest in node.js
-  //         console.log(error.request)
-  //       } else {
-  //         // Something happened in setting up the request that triggered an Error
-  //         console.log("Error", error.message)
-  //       }
-  //       console.log(error.config)
-  //     })
-  // }
+  const etherscanData = async (mode1) => {
+    let etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
+    axios
+      .get(etherscanUrl)
+      .then((response) => {
+        setEtherscan(response.data)
+      })
+      .catch(function (error) {
+        if (error.response) {
+          // The request was made and the server responded with a status code
+          // that falls out of the range of 2xx
+          console.log(error.response.data)
+          console.log(error.response.status)
+          console.log(error.response.headers)
+        } else if (error.request) {
+          // The request was made but no response was received
+          // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+          // http.ClientRequest in node.js
+          console.log(error.request)
+        } else {
+          // Something happened in setting up the request that triggered an Error
+          console.log("Error", error.message)
+        }
+        console.log(error.config)
+      })
+  }
 
   // const [defipulse, setDefipulse] = useState(null)
   // useEffect(() => {
@@ -486,17 +495,17 @@ const StatsBoxGrid = () => {
     }
   }
 
-  // let nodesData = []
-  // if (etherscan) {
-  //   for (const i in etherscan.result) {
-  //     nodesData.push({
-  //       name: "Page A",
-  //       uv: etherscan.result[i]["TotalNodeCount"],
-  //       pv: etherscan.result[i]["UTCDate"],
-  //       amt: 2400,
-  //     })
-  //   }
-  // }
+  let nodesData = []
+  if (etherscan) {
+    for (const i in etherscan.result) {
+      nodesData.push({
+        name: "Page A",
+        uv: etherscan.result[i]["TotalNodeCount"],
+        pv: etherscan.result[i]["UTCDate"],
+        amt: 2400,
+      })
+    }
+  }
 
   // let valueLockedData = []
   // if (defipulse) {
@@ -617,25 +626,25 @@ const StatsBoxGrid = () => {
   //     </div>
   //   )
   // }
-  // const etherscanTypes = [oneMonthAgo, start]
-  // const [nodesActive, setNodesActive] = useState(types[0])
-  // function ToggleGroupNodes() {
-  //   return (
-  //     <div>
-  //       {types.map((type) => (
-  //         <ButtonToggle
-  //           active={nodesActive === type}
-  //           onClick={() => {
-  //             // etherscanData(etherscanTypes[type])
-  //             setNodesActive(type)
-  //           }}
-  //         >
-  //           {defaultTypes[type]}
-  //         </ButtonToggle>
-  //       ))}
-  //     </div>
-  //   )
-  // }
+  const etherscanTypes = [oneMonthAgo, start]
+  const [nodesActive, setNodesActive] = useState(types[0])
+  function ToggleGroupNodes() {
+    return (
+      <div>
+        {types.map((type) => (
+          <ButtonToggle
+            active={nodesActive === type}
+            onClick={() => {
+              // etherscanData(etherscanTypes[type])
+              setNodesActive(type)
+            }}
+          >
+            {defaultTypes[type]}
+          </ButtonToggle>
+        ))}
+      </div>
+    )
+  }
 
   // console.log(pricesData)
   // console.log(nodesData)
@@ -671,8 +680,6 @@ const StatsBoxGrid = () => {
             fill="url(#colorUv)"
             fillOpacity="0.2"
           />
-          <XAxis axisLine={false} tick={false} />
-          <YAxis axisLine={false} tick={false} />
         </AreaChart>
       ),
       buttonContainer: <ToggleGroupPrice />,
