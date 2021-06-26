@@ -642,6 +642,29 @@ const StatsBoxGrid = () => {
   // console.log(pricesData)
   // console.log(nodesData)
   // console.log(valueLockedData)
+  const [forceLoading, setForceLoading] = useState(null)
+
+  useEffect(() => {
+    let resizeThrottleTimeout
+    let skip = false
+    const resizeCb = () => {
+      if (skip) {
+        return
+      }
+
+      setForceLoading(true)
+      skip = true
+      resizeThrottleTimeout = setTimeout(() => {
+        setForceLoading(false)
+        skip = false
+      }, 100)
+    }
+    window.addEventListener("resize", resizeCb)
+
+    return () => {
+      clearTimeout(resizeThrottleTimeout)
+    }
+  }, [setForceLoading])
 
   const metrics = [
     {
