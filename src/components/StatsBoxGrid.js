@@ -189,9 +189,9 @@ const GridItem = ({ metric }) => {
       <div>
         <Title>{title}</Title>
         <p>{description}</p>
+        <Lines>{line}</Lines>
       </div>
 
-      <Lines>{line}</Lines>
       <ButtonContainer>{buttonContainer}</ButtonContainer>
       <Value>{value}</Value>
     </Box>
@@ -258,8 +258,8 @@ const StatsBoxGrid = () => {
     }).format(nodes)
   }
 
-  const [coingecko, setCoingecko] = useState(null)
-  const [etherscan, setEtherscan] = useState(null)
+  // const [coingecko, setCoingecko] = useState(null)
+  // const [etherscan, setEtherscan] = useState(null)
 
   useEffect(() => {
     // coinGeckoData("30")
@@ -366,8 +366,8 @@ const StatsBoxGrid = () => {
       fetchTxCount()
     }
 
-    coinGeckoData("30")
-    etherscanData(oneMonthAgo)
+    // coinGeckoData("30")
+    // etherscanData(oneMonthAgo)
   }, [])
 
   var today = new Date(),
@@ -387,10 +387,10 @@ const StatsBoxGrid = () => {
   //   defipalseData("1m")
   // }, [])
 
-  // const [coingecko, setCoingecko] = useState(null)
-  // useEffect(() => {
-  //   coinGeckoData("30")
-  // }, [])
+  const [coingecko, setCoingecko] = useState(null)
+  useEffect(() => {
+    coinGeckoData("30")
+  }, [])
 
   const coinGeckoData = async (mode) => {
     let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
@@ -419,10 +419,10 @@ const StatsBoxGrid = () => {
       })
   }
 
-  // const [etherscan, setEtherscan] = useState(null)
-  // useEffect(() => {
-  //   etherscanData(oneMonthAgo)
-  // }, [])
+  const [etherscan, setEtherscan] = useState(null)
+  useEffect(() => {
+    etherscanData(oneMonthAgo)
+  }, [])
 
   const etherscanData = async (mode1) => {
     let etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
@@ -635,7 +635,7 @@ const StatsBoxGrid = () => {
           <ButtonToggle
             active={nodesActive === type}
             onClick={() => {
-              // etherscanData(etherscanTypes[type])
+              etherscanData(etherscanTypes[type])
               setNodesActive(type)
             }}
           >
@@ -778,7 +778,6 @@ const StatsBoxGrid = () => {
             fill="url(#colorUv)"
             fillOpacity="0.2"
           />
-          <XAxis axisLine={false} tick={false} />
         </AreaChart>
       ),
       buttonContainer: <ToggleGroupNodes />,
