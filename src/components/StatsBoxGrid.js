@@ -20,8 +20,8 @@ import Icon from "./Icon"
 import { getData } from "../utils/cache"
 
 const Value = styled.h3`
-  position: absolute;
-  bottom: 8%;
+  // position: absolute;
+  // bottom: 8%;
   font-size: min(4.4vw, 64px);
   font-weight: 600;
   margin-top: 0rem;
@@ -191,7 +191,7 @@ const GridItem = ({ metric }) => {
         <p>{description}</p>
       </div>
       <Lines>{line}</Lines>
-      {/* <ButtonContainer>{buttonContainer}</ButtonContainer> */}
+      <ButtonContainer>{buttonContainer}</ButtonContainer>
       <Value>{value}</Value>
     </Box>
   )
@@ -514,8 +514,8 @@ const StatsBoxGrid = () => {
   //   }
   // }
 
-  // const types = [0, 1]
-  // const defaultTypes = ["30d", "ALL"]
+  const types = [0, 1]
+  const defaultTypes = ["30d", "ALL"]
 
   // const coingeckoTypes = ["30", "max"]
 
@@ -581,23 +581,23 @@ const StatsBoxGrid = () => {
       amt: 2100,
     },
   ]
-  // const [transactionsActive, setTransactionsActive] = useState(types[0])
-  // function ToggleGroupTransactions() {
-  //   return (
-  //     <div>
-  //       {types.map((type) => (
-  //         <ButtonToggle
-  //           active={transactionsActive === type}
-  //           onClick={() => {
-  //             setTransactionsActive(type)
-  //           }}
-  //         >
-  //           {defaultTypes[type]}
-  //         </ButtonToggle>
-  //       ))}
-  //     </div>
-  //   )
-  // }
+  const [transactionsActive, setTransactionsActive] = useState(types[0])
+  function ToggleGroupTransactions() {
+    return (
+      <div>
+        {types.map((type) => (
+          <ButtonToggle
+            active={transactionsActive === type}
+            onClick={() => {
+              setTransactionsActive(type)
+            }}
+          >
+            {defaultTypes[type]}
+          </ButtonToggle>
+        ))}
+      </div>
+    )
+  }
 
   // const defipulseTypes = ["1m", "all"]
   // const [valueLockedActive, setValueLockedActive] = useState(types[0])
@@ -642,8 +642,6 @@ const StatsBoxGrid = () => {
   // console.log(nodesData)
   // console.log(valueLockedData)
 
-  const fr = "1fr"
-
   const metrics = [
     {
       apiProvider: "CoinGecko",
@@ -678,7 +676,7 @@ const StatsBoxGrid = () => {
           <YAxis axisLine={false} tick={false} />
         </AreaChart>
       ),
-      // buttonContainer: <ToggleGroupTransactions />,
+      buttonContainer: <ToggleGroupTransactions />,
       state: ethPrice,
     },
     {
@@ -712,7 +710,7 @@ const StatsBoxGrid = () => {
           <YAxis axisLine={false} tick={false} />
         </AreaChart>
       ),
-      // buttonContainer: <ToggleGroupTransactions />,
+      buttonContainer: <ToggleGroupTransactions />,
       state: txs,
     },
     {
@@ -748,7 +746,7 @@ const StatsBoxGrid = () => {
           <YAxis axisLine={false} tick={false} />
         </AreaChart>
       ),
-      // buttonContainer: <ToggleGroupTransactions />,
+      buttonContainer: <ToggleGroupTransactions />,
       state: valueLocked,
     },
     {
@@ -782,7 +780,7 @@ const StatsBoxGrid = () => {
           <YAxis axisLine={false} tick={false} />
         </AreaChart>
       ),
-      // buttonContainer: <ToggleGroupTransactions />,
+      buttonContainer: <ToggleGroupTransactions />,
       state: nodes,
     },
   ]
