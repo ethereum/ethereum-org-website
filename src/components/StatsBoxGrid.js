@@ -285,8 +285,8 @@ const StatsBoxGrid = () => {
         hasError: false,
       })
 
-      coinGeckoData("30")
-      etherscanData(oneMonthAgo)
+      // coinGeckoData("30")
+      // etherscanData(oneMonthAgo)
     } else {
       const fetchPrice = async () => {
         try {
@@ -381,12 +381,11 @@ const StatsBoxGrid = () => {
       today.getFullYear() + "-" + today.getMonth() + "-" + (today.getDate() - 1)
   const start = "2019-10-30"
 
-  // useEffect(() => {
-  //   coinGeckoData("30")
-  //   etherscanData(oneMonthAgo)
-  //   defipalseData("1m")
-  // }, [])
-
+  useEffect(() => {
+    coinGeckoData("30")
+    etherscanData(oneMonthAgo)
+    // defipalseData("1m")
+  }, [])
   const [coingecko, setCoingecko] = useState([
     {
       name: "Page A",
@@ -401,25 +400,13 @@ const StatsBoxGrid = () => {
       amt: 2210,
     },
   ])
-  useEffect(() => {
-    coinGeckoData("30")
-  }, [])
-
-  let pricesData = [
-    {
-      name: "Page A",
-      uv: 4000,
-      pv: 2400,
-      amt: 2400,
-    },
-    {
-      name: "Page B",
-      uv: 3000,
-      pv: 1398,
-      amt: 2210,
-    },
-  ]
   const coinGeckoData = async (mode) => {
+    // useEffect(() => {
+    //   coinGeckoData("30")
+    // }, [])
+
+    let pricesData = []
+
     let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
     axios
       .get(coingeckoUrl)
@@ -454,7 +441,6 @@ const StatsBoxGrid = () => {
         console.log(error.config)
       })
   }
-
   const [etherscan, setEtherscan] = useState([
     {
       name: "Page A",
@@ -469,26 +455,12 @@ const StatsBoxGrid = () => {
       amt: 2210,
     },
   ])
-  useEffect(() => {
-    etherscanData(oneMonthAgo)
-  }, [])
-
-  let nodesData = [
-    {
-      name: "Page A",
-      uv: 4000,
-      pv: 2400,
-      amt: 2400,
-    },
-    {
-      name: "Page B",
-      uv: 3000,
-      pv: 1398,
-      amt: 2210,
-    },
-  ]
+  // useEffect(() => {
+  //   etherscanData(oneMonthAgo)
+  // }, [])
 
   const etherscanData = async (mode1) => {
+    let nodesData = []
     let etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
     axios
       .get(etherscanUrl)
