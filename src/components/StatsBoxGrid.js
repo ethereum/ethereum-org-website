@@ -759,7 +759,7 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-nodes-explainer" />
       ),
       line: (
-        <AreaChart width={700} height={300} data={transactionsData}>
+        <AreaChart width={700} height={300} data={nodesData}>
           <defs>
             <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
               <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -778,9 +778,10 @@ const StatsBoxGrid = () => {
             fill="url(#colorUv)"
             fillOpacity="0.2"
           />
+          <XAxis axisLine={false} tick={false} />
         </AreaChart>
       ),
-      buttonContainer: <ToggleGroupTransactions />,
+      buttonContainer: <ToggleGroupNodes />,
       state: nodes,
     },
   ]
