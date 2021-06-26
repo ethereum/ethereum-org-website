@@ -387,7 +387,7 @@ const StatsBoxGrid = () => {
   //   defipalseData("1m")
   // }, [])
 
-  const [coingecko, setCoingecko] = useState(null)
+  const [coingecko, setCoingecko] = useState([])
   useEffect(() => {
     coinGeckoData("30")
   }, [])
@@ -442,7 +442,20 @@ const StatsBoxGrid = () => {
       })
   }
 
-  const [etherscan, setEtherscan] = useState([])
+  const [etherscan, setEtherscan] = useState([
+    {
+      name: "Page A",
+      uv: 4000,
+      pv: 2400,
+      amt: 2400,
+    },
+    {
+      name: "Page B",
+      uv: 3000,
+      pv: 1398,
+      amt: 2210,
+    },
+  ])
   useEffect(() => {
     etherscanData(oneMonthAgo)
   }, [])
@@ -727,6 +740,7 @@ const StatsBoxGrid = () => {
             fillOpacity={0.3}
             fill="url(#colorUv)"
             fillOpacity="0.2"
+            connectNulls={true}
           />
           <XAxis dataKey="uv" axisLine={false} tick={false} />
           {/* <YAxis axisLine={false} tick={false} /> */}
@@ -761,6 +775,7 @@ const StatsBoxGrid = () => {
             fillOpacity={0.3}
             fill="url(#colorUv)"
             fillOpacity="0.2"
+            connectNulls={true}
           />
           <XAxis dataKey="uv" axisLine={false} tick={false} />
           {/* <YAxis axisLine={false} tick={false} /> */}
@@ -797,6 +812,7 @@ const StatsBoxGrid = () => {
             fillOpacity={0.3}
             fill="url(#colorUv)"
             fillOpacity="0.2"
+            connectNulls={true}
           />
           <XAxis dataKey="uv" axisLine={false} tick={false} />
           {/* <YAxis axisLine={false} tick={false} /> */}
@@ -831,6 +847,7 @@ const StatsBoxGrid = () => {
             fillOpacity={0.3}
             fill="url(#colorUv)"
             fillOpacity="0.2"
+            connectNulls={true}
           />
           <XAxis dataKey="uv" axisLine={false} tick={false} />
           {/* <YAxis axisLine={false} tick={false} /> */}
