@@ -186,7 +186,7 @@ const GridItem = ({ metric }) => {
   //   </StatRow>
   // )
   // console.log(!(line.value.length > 0), "line")
-  console.log(line.value, "line")
+  console.log(line.value.length, "line")
   const isLoading1 = !(line.value.length > 2)
   const chart = line.hasError ? (
     <ErrorMessage />
@@ -469,7 +469,7 @@ const StatsBoxGrid = () => {
         })
       }
     }
-    fetchPrice()
+    // fetchPrice()
 
     const fetchNodes = async () => {
       try {
@@ -487,7 +487,7 @@ const StatsBoxGrid = () => {
         })
       }
     }
-    fetchNodes()
+    // fetchNodes()
 
     const fetchTotalValueLocked = async () => {
       try {
@@ -505,7 +505,7 @@ const StatsBoxGrid = () => {
         })
       }
     }
-    fetchTotalValueLocked()
+    // fetchTotalValueLocked()
 
     const fetchTxCount = async () => {
       try {
@@ -526,7 +526,7 @@ const StatsBoxGrid = () => {
         })
       }
     }
-    fetchTxCount()
+    // fetchTxCount()
 
     // etherscanData(oneMonthAgo)
   }, [])
@@ -884,7 +884,7 @@ const StatsBoxGrid = () => {
   //   )
   // }
 
-  console.log(coingecko.value)
+  // console.log(coingecko.value)
   // console.log(nodesData)
   // console.log(valueLockedData)
 
