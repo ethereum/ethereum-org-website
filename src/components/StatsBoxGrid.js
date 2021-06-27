@@ -183,11 +183,10 @@ const GridItem = ({ metric }) => {
       </span>
     </StatRow>
   )
-  let isLoading1 = false
+  let isLoading1 = true
+  console.log(line.value)
   if (line.value) {
     isLoading1 = !(line.value.length > 0)
-  } else {
-    isLoading1 = true
   }
   const chart = line.hasError ? (
     <ErrorMessage />
@@ -349,7 +348,7 @@ const StatsBoxGrid = () => {
           },
         ]
 
-        let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
+        let coingeckoUrl = `ttps://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
         await axios
           .get(coingeckoUrl)
           .then((response) => {
@@ -489,7 +488,7 @@ const StatsBoxGrid = () => {
         ]
 
         let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
-        axios
+        await axios
           .get(coingeckoUrl)
           .then((response) => {
             console.log(response.data)
