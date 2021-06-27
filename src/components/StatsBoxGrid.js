@@ -405,7 +405,20 @@ const StatsBoxGrid = () => {
     //   coinGeckoData("30")
     // }, [])
 
-    let pricesData = []
+    let pricesData = [
+      {
+        name: "Page A",
+        uv: 4000,
+        pv: 2400,
+        amt: 2400,
+      },
+      {
+        name: "Page B",
+        uv: 3000,
+        pv: 1398,
+        amt: 2210,
+      },
+    ]
 
     let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
     axios
@@ -460,7 +473,20 @@ const StatsBoxGrid = () => {
   // }, [])
 
   const etherscanData = async (mode1) => {
-    let nodesData = []
+    let nodesData = [
+      {
+        name: "Page A",
+        uv: 4000,
+        pv: 2400,
+        amt: 2400,
+      },
+      {
+        name: "Page B",
+        uv: 3000,
+        pv: 1398,
+        amt: 2210,
+      },
+    ]
     let etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
     axios
       .get(etherscanUrl)
