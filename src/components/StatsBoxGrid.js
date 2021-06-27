@@ -714,29 +714,29 @@ const StatsBoxGrid = () => {
   //   }
   // }
 
-  const types = [0, 1]
-  const defaultTypes = ["30d", "ALL"]
+  // const types = [0, 1]
+  // const defaultTypes = ["30d", "ALL"]
 
-  const coingeckoTypes = ["30", "max"]
+  // const coingeckoTypes = ["30", "max"]
 
-  const [priceActive, setPriceActive] = useState(types[0])
-  function ToggleGroupPrice() {
-    return (
-      <div>
-        {types.map((type) => (
-          <ButtonToggle
-            active={priceActive === type}
-            onClick={() => {
-              // coinGeckoData(coingeckoTypes[type])
-              setPriceActive(type)
-            }}
-          >
-            {defaultTypes[type]}
-          </ButtonToggle>
-        ))}
-      </div>
-    )
-  }
+  // const [priceActive, setPriceActive] = useState(types[0])
+  // function ToggleGroupPrice() {
+  //   return (
+  //     <div>
+  //       {types.map((type) => (
+  //         <ButtonToggle
+  //           active={priceActive === type}
+  //           onClick={() => {
+  //             // coinGeckoData(coingeckoTypes[type])
+  //             setPriceActive(type)
+  //           }}
+  //         >
+  //           {defaultTypes[type]}
+  //         </ButtonToggle>
+  //       ))}
+  //     </div>
+  //   )
+  // }
   // const transactionsData = [
   //   {
   //     name: "Page A",
@@ -876,7 +876,7 @@ const StatsBoxGrid = () => {
           <XAxis dataKey="name" />
         </AreaChart>
       ),
-      buttonContainer: <ToggleGroupPrice />,
+      // buttonContainer: <ToggleGroupPrice />,
       // state: ethPrice,
     },
     {
@@ -910,7 +910,7 @@ const StatsBoxGrid = () => {
           <XAxis dataKey="name" />
         </AreaChart>
       ),
-      buttonContainer: <ToggleGroupPrice />,
+      // buttonContainer: <ToggleGroupPrice />,
       // state: txs,
     },
     {
@@ -946,7 +946,7 @@ const StatsBoxGrid = () => {
           <XAxis dataKey="name" />
         </AreaChart>
       ),
-      buttonContainer: <ToggleGroupPrice />,
+      // buttonContainer: <ToggleGroupPrice />,
       // state: valueLocked,
     },
     {
@@ -980,7 +980,7 @@ const StatsBoxGrid = () => {
           <XAxis dataKey="name" />
         </AreaChart>
       ),
-      buttonContainer: <ToggleGroupPrice />,
+      // buttonContainer: <ToggleGroupPrice />,
       // state: nodes,
     },
   ]
