@@ -183,8 +183,12 @@ const GridItem = ({ metric }) => {
       </span>
     </StatRow>
   )
-  console.log(line.value.length > 0)
-  const isLoading1 = !(line.value.length > 0)
+  let isLoading1 = false
+  if (line.value) {
+    isLoading1 = !(line.value.length > 0)
+  } else {
+    isLoading1 = true
+  }
   const chart = line.hasError ? (
     <ErrorMessage />
   ) : isLoading1 ? (
@@ -213,7 +217,6 @@ const GridItem = ({ metric }) => {
       <XAxis dataKey="name" />
     </AreaChart>
   )
-  console.log(chart)
 
   return (
     <Box>
@@ -255,7 +258,20 @@ const StatsBoxGrid = () => {
     hasError: false,
   })
   const [coingecko, setCoingecko] = useState({
-    value: [],
+    value: [
+      {
+        name: "Page A",
+        uv: 4000,
+        pv: 2400,
+        amt: 2400,
+      },
+      {
+        name: "Page B",
+        uv: 3000,
+        pv: 1398,
+        amt: 2210,
+      },
+    ],
     hasError: false,
   })
 
@@ -292,20 +308,7 @@ const StatsBoxGrid = () => {
       maximumSignificantDigits: 4,
     }).format(nodes)
   }
-  // const [coingecko, setCoingecko] = useState([
-  //   {
-  //     name: "Page A",
-  //     uv: 4000,
-  //     pv: 2400,
-  //     amt: 2400,
-  //   },
-  //   {
-  //     name: "Page B",
-  //     uv: 3000,
-  //     pv: 1398,
-  //     amt: 2210,
-  //   },
-  // ])
+
   useEffect(() => {
     // coinGeckoData("30")
     // etherscanData(oneMonthAgo)
@@ -486,7 +489,7 @@ const StatsBoxGrid = () => {
         ]
 
         let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
-        await axios
+        axios
           .get(coingeckoUrl)
           .then((response) => {
             console.log(response.data)
@@ -505,6 +508,9 @@ const StatsBoxGrid = () => {
             })
           })
           .catch(function (error) {
+            setCoingecko({
+              hasError: true,
+            })
             if (error.response) {
               // The request was made and the server responded with a status code
               // that falls out of the range of 2xx
@@ -520,9 +526,7 @@ const StatsBoxGrid = () => {
               // Something happened in setting up the request that triggered an Error
               console.log("Error", error.message)
             }
-            setCoingecko({
-              hasError: true,
-            })
+
             console.log(error.config)
           })
       }
