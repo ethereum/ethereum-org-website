@@ -57,6 +57,6 @@
   "page-eth2-staking-upgrades-title": "Proof-of-stake and Eth2 upgrades",
   "page-eth2-staking-validators": "More validators, more security",
   "page-eth2-staking-validators-desc": "In a blockchain like Ethereum it is possible to censor and reorder transactions to suit you if you control a majority of the network. But, to control a majority of the network, you need a majority of validators, and for this you’d need to control a majority of the ETH in the system – that’s a lot! This amount of ETH grows every time a new validator enters the system, bolstering the security of the network. Proof-of-work, the security model proof-of-stake will replace, requires the validators (miners) to have specialist hardware and lots of physical space – entering the system as a miner is difficult so security against majority attacks doesn't increase as much. Proof-of-stake doesn't have these requirements, which should grow the network (and its resistance to majority attacks) to sizes that aren't possible with proof of work.",
-  "page-eth2-staking-withdrawals": "Withdrawals won't be live right away",
-  "page-eth2-staking-withdrawals-desc": "You won't be able to withdraw your stake until future upgrades are deployed. Withdraws will be available in a miner upgrade following the merge of mainnet with the Beacon Chain."
+  "page-eth2-staking-withdrawals": "Withdraws won't be live right away",
+  "page-eth2-staking-withdrawals-desc": "You won't be able to withdraw your stake until future upgrades are deployed. Withdraws will be available in a minor upgrade following the merge of mainnet with the Beacon Chain."
 }
