@@ -753,8 +753,6 @@ const StatsBoxGrid = () => {
             fillOpacity="0.2"
             connectNulls={true}
           />
-          <XAxis type="category" dataKey="uv" axisLine={false} tick={false} />
-          {/* <YAxis axisLine={false} tick={false} /> */}
         </AreaChart>
       ),
       buttonContainer: <ToggleGroupPrice />,
@@ -788,8 +786,6 @@ const StatsBoxGrid = () => {
             fillOpacity="0.2"
             connectNulls={true}
           />
-          <XAxis type="category" dataKey="uv" axisLine={false} tick={false} />
-          {/* <YAxis axisLine={false} tick={false} /> */}
         </AreaChart>
       ),
       buttonContainer: <ToggleGroupPrice />,
@@ -825,8 +821,6 @@ const StatsBoxGrid = () => {
             fillOpacity="0.2"
             connectNulls={true}
           />
-          <XAxis type="category" dataKey="uv" axisLine={false} tick={false} />
-          {/* <YAxis axisLine={false} tick={false} /> */}
         </AreaChart>
       ),
       buttonContainer: <ToggleGroupPrice />,
@@ -860,8 +854,6 @@ const StatsBoxGrid = () => {
             fillOpacity="0.2"
             connectNulls={true}
           />
-          <XAxis type="category" dataKey="uv" axisLine={false} tick={false} />
-          {/* <YAxis axisLine={false} tick={false} /> */}
         </AreaChart>
       ),
       buttonContainer: <ToggleGroupNodes />,
