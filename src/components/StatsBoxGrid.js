@@ -753,7 +753,7 @@ const StatsBoxGrid = () => {
             fillOpacity="0.2"
             connectNulls={true}
           />
-          <XAxis dataKey="uv" axisLine={false} tick={false} />
+          <XAxis type="category" dataKey="uv" axisLine={false} tick={false} />
           {/* <YAxis axisLine={false} tick={false} /> */}
         </AreaChart>
       ),
@@ -788,7 +788,7 @@ const StatsBoxGrid = () => {
             fillOpacity="0.2"
             connectNulls={true}
           />
-          <XAxis dataKey="uv" axisLine={false} tick={false} />
+          <XAxis type="category" dataKey="uv" axisLine={false} tick={false} />
           {/* <YAxis axisLine={false} tick={false} /> */}
         </AreaChart>
       ),
@@ -825,7 +825,7 @@ const StatsBoxGrid = () => {
             fillOpacity="0.2"
             connectNulls={true}
           />
-          <XAxis dataKey="uv" axisLine={false} tick={false} />
+          <XAxis type="category" dataKey="uv" axisLine={false} tick={false} />
           {/* <YAxis axisLine={false} tick={false} /> */}
         </AreaChart>
       ),
@@ -860,7 +860,7 @@ const StatsBoxGrid = () => {
             fillOpacity="0.2"
             connectNulls={true}
           />
-          <XAxis dataKey="uv" axisLine={false} tick={false} />
+          <XAxis type="category" dataKey="uv" axisLine={false} tick={false} />
           {/* <YAxis axisLine={false} tick={false} /> */}
         </AreaChart>
       ),
