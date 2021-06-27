@@ -421,7 +421,7 @@ const StatsBoxGrid = () => {
     ]
 
     let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
-    axios
+    await axios
       .get(coingeckoUrl)
       .then((response) => {
         for (const i in response.data.prices) {
@@ -454,6 +454,8 @@ const StatsBoxGrid = () => {
         console.log(error.config)
       })
   }
+
+  console.log(coingecko)
   const [etherscan, setEtherscan] = useState([
     {
       name: "Page A",
@@ -488,7 +490,7 @@ const StatsBoxGrid = () => {
       },
     ]
     let etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
-    axios
+    await axios
       .get(etherscanUrl)
       .then((response) => {
         for (const i in response.data.result) {
