@@ -186,14 +186,28 @@ const GridItem = ({ metric }) => {
   //   </StatRow>
   // )
   // console.log(!(line.value.length > 0), "line")
-  console.log(line.value.length, "line")
-  const isLoading1 = !(line.value.length > 2)
+  console.log(line.value, "line")
+  const isLoading1 = !(line.value.length != [])
+  console.log(isLoading1)
+  let priceData = []
+
+  if (!isLoading1) {
+    for (const i in line.value.prices) {
+      priceData.push({
+        name: "Page A",
+        uv: line.value.prices[i][1],
+        pv: i,
+        amt: 2400,
+      })
+    }
+  }
+  console.log(priceData)
   const chart = line.hasError ? (
     <ErrorMessage />
   ) : isLoading1 ? (
     <LoadingMessage />
   ) : (
-    <AreaChart width={700} height={200} data={line.value}>
+    <AreaChart width={700} height={200} data={priceData}>
       <defs>
         <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
           <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -320,36 +334,36 @@ const StatsBoxGrid = () => {
       })
 
       const coinGeckoData = async (mode) => {
-        let priceData = [
-          {
-            name: "Page A",
-            uv: 4000,
-            pv: 2400,
-            amt: 2400,
-          },
-          {
-            name: "Page B",
-            uv: 3000,
-            pv: 1398,
-            amt: 2210,
-          },
-        ]
+        // let priceData = [
+        //   {
+        //     name: "Page A",
+        //     uv: 4000,
+        //     pv: 2400,
+        //     amt: 2400,
+        //   },
+        //   {
+        //     name: "Page B",
+        //     uv: 3000,
+        //     pv: 1398,
+        //     amt: 2210,
+        //   },
+        // ]
 
         let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
         try {
           const response = await axios.get(coingeckoUrl)
           console.log(response.data)
-          for (const i in response.data.prices) {
-            priceData.push({
-              name: "Page A",
-              uv: response.data.prices[i][1],
-              pv: i,
-              amt: 2400,
-            })
-          }
+          // for (const i in response.data.prices) {
+          //   priceData.push({
+          //     name: "Page A",
+          //     uv: response.data.prices[i][1],
+          //     pv: i,
+          //     amt: 2400,
+          //   })
+          // }
 
           setCoingecko({
-            value: priceData,
+            value: response.data,
             hasError: false,
           })
         } catch (error) {
@@ -385,149 +399,149 @@ const StatsBoxGrid = () => {
       // coinGeckoData("30")
       // etherscanData(oneMonthAgo)
     } else {
-      const coinGeckoData = async (mode) => {
-        let priceData = [
-          {
-            name: "Page A",
-            uv: 4000,
-            pv: 2400,
-            amt: 2400,
-          },
-          {
-            name: "Page B",
-            uv: 3000,
-            pv: 1398,
-            amt: 2210,
-          },
-        ]
+      // const coinGeckoData = async (mode) => {
+      //   let priceData = [
+      //     {
+      //       name: "Page A",
+      //       uv: 4000,
+      //       pv: 2400,
+      //       amt: 2400,
+      //     },
+      //     {
+      //       name: "Page B",
+      //       uv: 3000,
+      //       pv: 1398,
+      //       amt: 2210,
+      //     },
+      //   ]
 
-        let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
+      //   let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
+      //   try {
+      //     const response = await axios.get(coingeckoUrl)
+      //     console.log(response.data)
+      //     for (const i in response.data.prices) {
+      //       priceData.push({
+      //         name: "Page A",
+      //         uv: response.data.prices[i][1],
+      //         pv: i,
+      //         amt: 2400,
+      //       })
+      //     }
+
+      //     setCoingecko({
+      //       value: priceData,
+      //       hasError: false,
+      //     })
+      //   } catch (error) {
+      //     console.error(error)
+      //     setCoingecko({
+      //       hasError: true,
+      //     })
+      //   }
+
+      // .catch(function (error) {
+      //   setCoingecko({
+      //     hasError: true,
+      //   })
+      //   if (error.response) {
+      //     // The request was made and the server responded with a status code
+      //     // that falls out of the range of 2xx
+      //     console.error(error.response.data)
+      //     console.error(error.response.status)
+      //     console.error(error.response.headers)
+      //   } else if (error.request) {
+      //     // The request was made but no response was received
+      //     // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+      //     // http.ClientRequest in node.js
+      //     console.error(error.request)
+      //   } else {
+      //     // Something happened in setting up the request that triggered an Error
+      //     console.error("Error", error.message)
+      //   }
+
+      //   console.error(error.config)
+      // })
+      // }
+      // coinGeckoData("30")
+
+      console.log(coingecko)
+      const fetchPrice = async () => {
         try {
-          const response = await axios.get(coingeckoUrl)
-          console.log(response.data)
-          for (const i in response.data.prices) {
-            priceData.push({
-              name: "Page A",
-              uv: response.data.prices[i][1],
-              pv: i,
-              amt: 2400,
-            })
-          }
-
-          setCoingecko({
-            value: priceData,
+          const response = await axios.get(
+            "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd&include_24hr_change=true"
+          )
+          const { usd } = response.data.ethereum
+          const value = formatPrice(usd)
+          setEthPrice({
+            value,
             hasError: false,
           })
         } catch (error) {
           console.error(error)
-          setCoingecko({
+          setEthPrice({
             hasError: true,
           })
         }
-
-        // .catch(function (error) {
-        //   setCoingecko({
-        //     hasError: true,
-        //   })
-        //   if (error.response) {
-        //     // The request was made and the server responded with a status code
-        //     // that falls out of the range of 2xx
-        //     console.error(error.response.data)
-        //     console.error(error.response.status)
-        //     console.error(error.response.headers)
-        //   } else if (error.request) {
-        //     // The request was made but no response was received
-        //     // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
-        //     // http.ClientRequest in node.js
-        //     console.error(error.request)
-        //   } else {
-        //     // Something happened in setting up the request that triggered an Error
-        //     console.error("Error", error.message)
-        //   }
-
-        //   console.error(error.config)
-        // })
       }
-      coinGeckoData("30")
-    }
-    console.log(coingecko)
-    const fetchPrice = async () => {
-      try {
-        const response = await axios.get(
-          "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd&include_24hr_change=true"
-        )
-        const { usd } = response.data.ethereum
-        const value = formatPrice(usd)
-        setEthPrice({
-          value,
-          hasError: false,
-        })
-      } catch (error) {
-        console.error(error)
-        setEthPrice({
-          hasError: true,
-        })
+      // fetchPrice()
+
+      const fetchNodes = async () => {
+        try {
+          const data = await getData("/.netlify/functions/etherscan")
+          const total = data.result.TotalNodeCount
+          const value = formatNodes(total)
+          setNodes({
+            value,
+            hasError: false,
+          })
+        } catch (error) {
+          console.error(error)
+          setNodes({
+            hasError: true,
+          })
+        }
       }
-    }
-    // fetchPrice()
+      // fetchNodes()
 
-    const fetchNodes = async () => {
-      try {
-        const data = await getData("/.netlify/functions/etherscan")
-        const total = data.result.TotalNodeCount
-        const value = formatNodes(total)
-        setNodes({
-          value,
-          hasError: false,
-        })
-      } catch (error) {
-        console.error(error)
-        setNodes({
-          hasError: true,
-        })
+      const fetchTotalValueLocked = async () => {
+        try {
+          const data = await getData("/.netlify/functions/defipulse")
+          const ethereumTVL = data.ethereumTVL
+          const value = formatTVL(ethereumTVL)
+          setValueLocked({
+            value,
+            hasError: false,
+          })
+        } catch (error) {
+          console.error(error)
+          setValueLocked({
+            hasError: true,
+          })
+        }
       }
-    }
-    // fetchNodes()
+      // fetchTotalValueLocked()
 
-    const fetchTotalValueLocked = async () => {
-      try {
-        const data = await getData("/.netlify/functions/defipulse")
-        const ethereumTVL = data.ethereumTVL
-        const value = formatTVL(ethereumTVL)
-        setValueLocked({
-          value,
-          hasError: false,
-        })
-      } catch (error) {
-        console.error(error)
-        setValueLocked({
-          hasError: true,
-        })
+      const fetchTxCount = async () => {
+        try {
+          const { result } = await getData("/.netlify/functions/txs")
+          // result: [{UTCDate: string, unixTimeStamp: string, transactionCount: number}, {...}]
+          console.log(result)
+
+          const count = result[0].transactionCount
+          const value = formatTxs(count)
+          setTxs({
+            value,
+            hasError: false,
+          })
+        } catch (error) {
+          console.error(error)
+          setTxs({
+            hasError: true,
+          })
+        }
       }
+      // fetchTxCount()
     }
-    // fetchTotalValueLocked()
-
-    const fetchTxCount = async () => {
-      try {
-        const { result } = await getData("/.netlify/functions/txs")
-        // result: [{UTCDate: string, unixTimeStamp: string, transactionCount: number}, {...}]
-        console.log(result)
-
-        const count = result[0].transactionCount
-        const value = formatTxs(count)
-        setTxs({
-          value,
-          hasError: false,
-        })
-      } catch (error) {
-        console.error(error)
-        setTxs({
-          hasError: true,
-        })
-      }
-    }
-    // fetchTxCount()
-
     // etherscanData(oneMonthAgo)
   }, [])
 
