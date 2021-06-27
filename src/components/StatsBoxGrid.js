@@ -205,15 +205,17 @@ const GridItem = ({ metric }) => {
           <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
         </linearGradient>
       </defs>
-      <Area
-        type="monotone"
-        dataKey="uv"
-        stroke="#8884d8"
-        fillOpacity={0.3}
-        fill="url(#colorUv)"
-        fillOpacity="0.2"
-        connectNulls={true}
-      />
+      {line.value.length > 0 && (
+        <Area
+          type="monotone"
+          dataKey="uv"
+          stroke="#8884d8"
+          fillOpacity={0.3}
+          fill="url(#colorUv)"
+          fillOpacity="0.2"
+          connectNulls={true}
+        />
+      )}
       <XAxis dataKey="name" />
     </AreaChart>
   )
@@ -335,7 +337,7 @@ const StatsBoxGrid = () => {
           },
         ]
 
-        let coingeckoUrl = `ttps://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
+        let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
         try {
           const response = await axios.get(coingeckoUrl)
           console.log(response.data)
@@ -407,6 +409,7 @@ const StatsBoxGrid = () => {
         } catch (error) {
           console.error(error)
           setCoingecko({
+            value: [],
             hasError: true,
           })
         }
