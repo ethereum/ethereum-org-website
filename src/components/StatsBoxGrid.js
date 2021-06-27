@@ -186,28 +186,15 @@ const GridItem = ({ metric }) => {
   //   </StatRow>
   // )
   // console.log(!(line.value.length > 0), "line")
-  // console.log(line.value, "line")
-  const isLoading1 = !(line.value.length != [])
+  console.log(line.value, "line")
+  const isLoading1 = !(line.value.length > 0)
   console.log(isLoading1)
-  let priceData = []
-
-  if (!isLoading1) {
-    for (const i in line.value.prices) {
-      priceData.push({
-        name: "Page A",
-        uv: line.value.prices[i][1],
-        pv: i,
-        amt: 2400,
-      })
-    }
-  }
-  console.log(priceData)
   const chart = line.hasError ? (
     <ErrorMessage />
   ) : isLoading1 ? (
     <LoadingMessage />
   ) : (
-    <AreaChart width={700} height={200} data={priceData}>
+    <AreaChart width={700} height={200} data={line.value}>
       <defs>
         <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
           <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -230,15 +217,15 @@ const GridItem = ({ metric }) => {
       <XAxis dataKey="name" />
     </AreaChart>
   )
+  console.log(line.value, "line")
 
   return (
     <Box>
       <div>
         <Title>{title}</Title>
         <p>{description}</p>
-        <Lines>{chart}</Lines>
       </div>
-
+      <Lines>{chart}</Lines>
       {/* <ButtonContainer>{buttonContainer}</ButtonContainer> */}
       {/* <Value>{value}</Value> */}
     </Box>
@@ -308,7 +295,6 @@ const StatsBoxGrid = () => {
       maximumSignificantDigits: 4,
     }).format(nodes)
   }
-
   useEffect(() => {
     // coinGeckoData("30")
     // etherscanData(oneMonthAgo)
@@ -334,41 +320,45 @@ const StatsBoxGrid = () => {
       })
 
       const coinGeckoData = async (mode) => {
-        // let priceData = [
-        //   {
-        //     name: "Page A",
-        //     uv: 4000,
-        //     pv: 2400,
-        //     amt: 2400,
-        //   },
-        //   {
-        //     name: "Page B",
-        //     uv: 3000,
-        //     pv: 1398,
-        //     amt: 2210,
-        //   },
-        // ]
+        let priceData = [
+          {
+            name: "Page A",
+            uv: 4000,
+            pv: 2400,
+            amt: 2400,
+          },
+          {
+            name: "Page B",
+            uv: 3000,
+            pv: 1398,
+            amt: 2210,
+          },
+        ]
 
-        let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
+        let coingeckoUrl = `ttps://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
         try {
           const response = await axios.get(coingeckoUrl)
-          // console.log(response.data)
-          // for (const i in response.data.prices) {
-          //   priceData.push({
-          //     name: "Page A",
-          //     uv: response.data.prices[i][1],
-          //     pv: i,
-          //     amt: 2400,
-          //   })
-          // }
+          console.log(response.data)
+          for (const i in response.data.prices) {
+            priceData.push({
+              name: "Page A",
+              uv: response.data.prices[i][1],
+              pv: i,
+              amt: 2400,
+            })
+          }
 
+          const value = priceData
+          console.log(value)
           setCoingecko({
-            value: response.data,
+            value,
             hasError: false,
           })
+          // console.log(coingecko.value, value)
         } catch (error) {
           console.error(error)
           setCoingecko({
+            value: [],
             hasError: true,
           })
         }
@@ -379,38 +369,41 @@ const StatsBoxGrid = () => {
       // etherscanData(oneMonthAgo)
     } else {
       const coinGeckoData = async (mode) => {
-        //   let priceData = [
-        //     {
-        //       name: "Page A",
-        //       uv: 4000,
-        //       pv: 2400,
-        //       amt: 2400,
-        //     },
-        //     {
-        //       name: "Page B",
-        //       uv: 3000,
-        //       pv: 1398,
-        //       amt: 2210,
-        //     },
-        //   ]
+        let priceData = [
+          {
+            name: "Page A",
+            uv: 4000,
+            pv: 2400,
+            amt: 2400,
+          },
+          {
+            name: "Page B",
+            uv: 3000,
+            pv: 1398,
+            amt: 2210,
+          },
+        ]
 
         let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
         try {
           const response = await axios.get(coingeckoUrl)
-          // console.log(response.data)
-          // for (const i in response.data.prices) {
-          //   priceData.push({
-          //     name: "Page A",
-          //     uv: response.data.prices[i][1],
-          //     pv: i,
-          //     amt: 2400,
-          //   })
-          // }
+          console.log(response.data)
+          for (const i in response.data.prices) {
+            priceData.push({
+              name: "Page A",
+              uv: response.data.prices[i][1],
+              pv: i,
+              amt: 2400,
+            })
+          }
 
+          const value = priceData
+          console.log(value)
           setCoingecko({
-            value: response.data,
+            value,
             hasError: false,
           })
+          // console.log(coingecko.value, value)
         } catch (error) {
           console.error(error)
           setCoingecko({
