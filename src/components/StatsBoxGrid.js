@@ -168,6 +168,8 @@ const ButtonToggle = styled(Button)`
 
 const GridItem = ({ metric }) => {
   const { title, description, state, line, buttonContainer } = metric
+  // console.log(!state.value, "state")
+  console.log(state.value, "state")
   const isLoading = !state.value
   const value = state.hasError ? (
     <ErrorMessage />
@@ -183,11 +185,9 @@ const GridItem = ({ metric }) => {
       </span>
     </StatRow>
   )
-  let isLoading1 = true
-  console.log(line.value)
-  if (line.value) {
-    isLoading1 = !(line.value.length > 0)
-  }
+  // console.log(!(line.value.length > 0), "line")
+  console.log(line.value, "line")
+  const isLoading1 = !(line.value.length > 0)
   const chart = line.hasError ? (
     <ErrorMessage />
   ) : isLoading1 ? (
@@ -257,20 +257,7 @@ const StatsBoxGrid = () => {
     hasError: false,
   })
   const [coingecko, setCoingecko] = useState({
-    value: [
-      {
-        name: "Page A",
-        uv: 4000,
-        pv: 2400,
-        amt: 2400,
-      },
-      {
-        name: "Page B",
-        uv: 3000,
-        pv: 1398,
-        amt: 2210,
-      },
-    ],
+    value: [],
     hasError: false,
   })
 
@@ -348,7 +335,7 @@ const StatsBoxGrid = () => {
           },
         ]
 
-        let coingeckoUrl = `ttps://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
+        let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
         await axios
           .get(coingeckoUrl)
           .then((response) => {
