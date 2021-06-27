@@ -370,211 +370,163 @@ const StatsBoxGrid = () => {
     // etherscanData(oneMonthAgo)
   }, [])
 
-  var today = new Date(),
-    date =
-      today.getFullYear() +
-      "-" +
-      (today.getMonth() + 1) +
-      "-" +
-      (today.getDate() - 1),
-    oneMonthAgo =
-      today.getFullYear() + "-" + today.getMonth() + "-" + (today.getDate() - 1)
-  const start = "2019-10-30"
+  // var today = new Date(),
+  //   date =
+  //     today.getFullYear() +
+  //     "-" +
+  //     (today.getMonth() + 1) +
+  //     "-" +
+  //     (today.getDate() - 1),
+  //   oneMonthAgo =
+  //     today.getFullYear() + "-" + today.getMonth() + "-" + (today.getDate() - 1)
+  // const start = "2019-10-30"
 
-  useEffect(() => {
-    coinGeckoData("30")
-    etherscanData(oneMonthAgo)
-    // defipalseData("1m")
-  }, [])
-  const [coingecko, setCoingecko] = useState([
-    {
-      name: "Page A",
-      uv: 4000,
-      pv: 2400,
-      amt: 2400,
-    },
-    {
-      name: "Page B",
-      uv: 3000,
-      pv: 1398,
-      amt: 2210,
-    },
-  ])
-  const coinGeckoData = async (mode) => {
-    // useEffect(() => {
-    //   coinGeckoData("30")
-    // }, [])
-
-    let pricesData = [
-      {
-        name: "Page A",
-        uv: 4000,
-        pv: 2400,
-        amt: 2400,
-      },
-      {
-        name: "Page B",
-        uv: 3000,
-        pv: 1398,
-        amt: 2210,
-      },
-    ]
-
-    try {
-      const result = await axios.get(
-        `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
-      )
-      // result: [{UTCDate: string, unixTimeStamp: string, transactionCount: number}, {...}]
-      console.log(result)
-      for (const i in result.data.prices) {
-        pricesData.push({
-          name: "Page A",
-          uv: result.data.prices[i][1],
-          pv: i,
-          amt: 2400,
-        })
-      }
-      setCoingecko(pricesData)
-      // const count = result[0].transactionCount
-      // const value = formatTxs(count)
-      // setTxs({
-      //   value,
-      //   hasError: false,
-      // })
-    } catch (error) {
-      console.error(error)
-    }
-
-    // let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
-    // await axios
-    //   .get(coingeckoUrl)
-    //   .then((response) => {
-    //     console.log(response.data)
-    //     for (const i in response.data.prices) {
-    //       pricesData.push({
-    //         name: "Page A",
-    //         uv: response.data.prices[i][1],
-    //         pv: i,
-    //         amt: 2400,
-    //       })
-    //     }
-
-    //     setCoingecko(pricesData)
-    //   })
-    //   .catch(function (error) {
-    //     if (error.response) {
-    //       // The request was made and the server responded with a status code
-    //       // that falls out of the range of 2xx
-    //       console.log(error.response.data)
-    //       console.log(error.response.status)
-    //       console.log(error.response.headers)
-    //     } else if (error.request) {
-    //       // The request was made but no response was received
-    //       // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
-    //       // http.ClientRequest in node.js
-    //       console.log(error.request)
-    //     } else {
-    //       // Something happened in setting up the request that triggered an Error
-    //       console.log("Error", error.message)
-    //     }
-    //     console.log(error.config)
-    //   })
-  }
-
-  console.log(coingecko)
-  const [etherscan, setEtherscan] = useState([
-    {
-      name: "Page A",
-      uv: 4000,
-      pv: 2400,
-      amt: 2400,
-    },
-    {
-      name: "Page B",
-      uv: 3000,
-      pv: 1398,
-      amt: 2210,
-    },
-  ])
   // useEffect(() => {
+  //   coinGeckoData("30")
   //   etherscanData(oneMonthAgo)
+  //   // defipalseData("1m")
   // }, [])
 
-  const etherscanData = async (mode1) => {
-    let nodesData = [
-      {
-        name: "Page A",
-        uv: 4000,
-        pv: 2400,
-        amt: 2400,
-      },
-      {
-        name: "Page B",
-        uv: 3000,
-        pv: 1398,
-        amt: 2210,
-      },
-    ]
+  // const [coingecko, setCoingecko] = useState([
+  //   {
+  //     name: "Page A",
+  //     uv: 4000,
+  //     pv: 2400,
+  //     amt: 2400,
+  //   },
+  //   {
+  //     name: "Page B",
+  //     uv: 3000,
+  //     pv: 1398,
+  //     amt: 2210,
+  //   },
+  // ])
+  // const coinGeckoData = async (mode) => {
+  //   // useEffect(() => {
+  //   //   coinGeckoData("30")
+  //   // }, [])
 
-    try {
-      const result = await axios.get(
-        `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
-      )
-      // result: [{UTCDate: string, unixTimeStamp: string, transactionCount: number}, {...}]
-      console.log(result)
-      for (const i in result.data.result) {
-        nodesData.push({
-          name: "Page A",
-          uv: result.data.result[i]["TotalNodeCount"],
-          pv: result.data.result[i]["UTCDate"],
-          amt: 2400,
-        })
-      }
-      setEtherscan(nodesData)
-      // const count = result[0].transactionCount
-      // const value = formatTxs(count)
-      // setTxs({
-      //   value,
-      //   hasError: false,
-      // })
-    } catch (error) {
-      console.error(error)
-    }
-    // let etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
-    // await axios
-    //   .get(etherscanUrl)
-    //   .then((response) => {
-    //     for (const i in response.data.result) {
-    //       nodesData.push({
-    //         name: "Page A",
-    //         uv: response.data.result[i]["TotalNodeCount"],
-    //         pv: response.data.result[i]["UTCDate"],
-    //         amt: 2400,
-    //       })
-    //     }
-    //     console.log(nodesData)
-    //     setEtherscan(nodesData)
-    //   })
-    //   .catch(function (error) {
-    //     if (error.response) {
-    //       // The request was made and the server responded with a status code
-    //       // that falls out of the range of 2xx
-    //       console.log(error.response.data)
-    //       console.log(error.response.status)
-    //       console.log(error.response.headers)
-    //     } else if (error.request) {
-    //       // The request was made but no response was received
-    //       // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
-    //       // http.ClientRequest in node.js
-    //       console.log(error.request)
-    //     } else {
-    //       // Something happened in setting up the request that triggered an Error
-    //       console.log("Error", error.message)
-    //     }
-    //     console.log(error.config)
-    //   })
-  }
-  console.log(etherscan)
+  //   let pricesData = [
+  //     {
+  //       name: "Page A",
+  //       uv: 4000,
+  //       pv: 2400,
+  //       amt: 2400,
+  //     },
+  //     {
+  //       name: "Page B",
+  //       uv: 3000,
+  //       pv: 1398,
+  //       amt: 2210,
+  //     },
+  //   ]
+
+  //   let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
+  //   await axios
+  //     .get(coingeckoUrl)
+  //     .then((response) => {
+  //       console.log(response.data)
+  //       for (const i in response.data.prices) {
+  //         pricesData.push({
+  //           name: "Page A",
+  //           uv: response.data.prices[i][1],
+  //           pv: i,
+  //           amt: 2400,
+  //         })
+  //       }
+
+  //       setCoingecko(pricesData)
+  //     })
+  //     .catch(function (error) {
+  //       if (error.response) {
+  //         // The request was made and the server responded with a status code
+  //         // that falls out of the range of 2xx
+  //         console.log(error.response.data)
+  //         console.log(error.response.status)
+  //         console.log(error.response.headers)
+  //       } else if (error.request) {
+  //         // The request was made but no response was received
+  //         // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+  //         // http.ClientRequest in node.js
+  //         console.log(error.request)
+  //       } else {
+  //         // Something happened in setting up the request that triggered an Error
+  //         console.log("Error", error.message)
+  //       }
+  //       console.log(error.config)
+  //     })
+  // }
+
+  // console.log(coingecko)
+  // const [etherscan, setEtherscan] = useState([
+  //   {
+  //     name: "Page A",
+  //     uv: 4000,
+  //     pv: 2400,
+  //     amt: 2400,
+  //   },
+  //   {
+  //     name: "Page B",
+  //     uv: 3000,
+  //     pv: 1398,
+  //     amt: 2210,
+  //   },
+  // ])
+  // // useEffect(() => {
+  // //   etherscanData(oneMonthAgo)
+  // // }, [])
+
+  // const etherscanData = async (mode1) => {
+  //   let nodesData = [
+  //     {
+  //       name: "Page A",
+  //       uv: 4000,
+  //       pv: 2400,
+  //       amt: 2400,
+  //     },
+  //     {
+  //       name: "Page B",
+  //       uv: 3000,
+  //       pv: 1398,
+  //       amt: 2210,
+  //     },
+  //   ]
+
+  //   let etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
+  //   await axios
+  //     .get(etherscanUrl)
+  //     .then((response) => {
+  //       for (const i in response.data.result) {
+  //         nodesData.push({
+  //           name: "Page A",
+  //           uv: response.data.result[i]["TotalNodeCount"],
+  //           pv: response.data.result[i]["UTCDate"],
+  //           amt: 2400,
+  //         })
+  //       }
+  //       console.log(nodesData)
+  //       setEtherscan(nodesData)
+  //     })
+  //     .catch(function (error) {
+  //       if (error.response) {
+  //         // The request was made and the server responded with a status code
+  //         // that falls out of the range of 2xx
+  //         console.log(error.response.data)
+  //         console.log(error.response.status)
+  //         console.log(error.response.headers)
+  //       } else if (error.request) {
+  //         // The request was made but no response was received
+  //         // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+  //         // http.ClientRequest in node.js
+  //         console.log(error.request)
+  //       } else {
+  //         // Something happened in setting up the request that triggered an Error
+  //         console.log("Error", error.message)
+  //       }
+  //       console.log(error.config)
+  //     })
+  // }
+  // console.log(etherscan)
 
   // const [defipulse, setDefipulse] = useState(null)
   // useEffect(() => {
@@ -650,79 +602,18 @@ const StatsBoxGrid = () => {
   const types = [0, 1]
   const defaultTypes = ["30d", "ALL"]
 
-  const coingeckoTypes = ["30", "max"]
+  // const coingeckoTypes = ["30", "max"]
 
-  const [priceActive, setPriceActive] = useState(types[0])
-  function ToggleGroupPrice() {
-    return (
-      <div>
-        {types.map((type) => (
-          <ButtonToggle
-            active={priceActive === type}
-            onClick={() => {
-              coinGeckoData(coingeckoTypes[type])
-              setPriceActive(type)
-            }}
-          >
-            {defaultTypes[type]}
-          </ButtonToggle>
-        ))}
-      </div>
-    )
-  }
-  // const transactionsData = [
-  //   {
-  //     name: "Page A",
-  //     uv: 4000,
-  //     pv: 2400,
-  //     amt: 2400,
-  //   },
-  //   {
-  //     name: "Page B",
-  //     uv: 3000,
-  //     pv: 1398,
-  //     amt: 2210,
-  //   },
-  //   {
-  //     name: "Page C",
-  //     uv: 2000,
-  //     pv: 9800,
-  //     amt: 2290,
-  //   },
-  //   {
-  //     name: "Page D",
-  //     uv: 2780,
-  //     pv: 3908,
-  //     amt: 2000,
-  //   },
-  //   {
-  //     name: "Page E",
-  //     uv: 1890,
-  //     pv: 4800,
-  //     amt: 2181,
-  //   },
-  //   {
-  //     name: "Page F",
-  //     uv: 2390,
-  //     pv: 3800,
-  //     amt: 2500,
-  //   },
-  //   {
-  //     name: "Page G",
-  //     uv: 3490,
-  //     pv: 4300,
-  //     amt: 2100,
-  //   },
-  // ]
-  // const [transactionsActive, setTransactionsActive] = useState(types[0])
-  // function ToggleGroupTransactions() {
+  // const [priceActive, setPriceActive] = useState(types[0])
+  // function ToggleGroupPrice() {
   //   return (
   //     <div>
   //       {types.map((type) => (
   //         <ButtonToggle
-  //           active={transactionsActive === type}
+  //           active={priceActive === type}
   //           onClick={() => {
-  //             setTransactionsActive(type)
+  //             coinGeckoData(coingeckoTypes[type])
+  //             setPriceActive(type)
   //           }}
   //         >
   //           {defaultTypes[type]}
@@ -731,6 +622,67 @@ const StatsBoxGrid = () => {
   //     </div>
   //   )
   // }
+  const transactionsData = [
+    {
+      name: "Page A",
+      uv: 4000,
+      pv: 2400,
+      amt: 2400,
+    },
+    {
+      name: "Page B",
+      uv: 3000,
+      pv: 1398,
+      amt: 2210,
+    },
+    {
+      name: "Page C",
+      uv: 2000,
+      pv: 9800,
+      amt: 2290,
+    },
+    {
+      name: "Page D",
+      uv: 2780,
+      pv: 3908,
+      amt: 2000,
+    },
+    {
+      name: "Page E",
+      uv: 1890,
+      pv: 4800,
+      amt: 2181,
+    },
+    {
+      name: "Page F",
+      uv: 2390,
+      pv: 3800,
+      amt: 2500,
+    },
+    {
+      name: "Page G",
+      uv: 3490,
+      pv: 4300,
+      amt: 2100,
+    },
+  ]
+  const [transactionsActive, setTransactionsActive] = useState(types[0])
+  function ToggleGroupTransactions() {
+    return (
+      <div>
+        {types.map((type) => (
+          <ButtonToggle
+            active={transactionsActive === type}
+            onClick={() => {
+              setTransactionsActive(type)
+            }}
+          >
+            {defaultTypes[type]}
+          </ButtonToggle>
+        ))}
+      </div>
+    )
+  }
 
   // const defipulseTypes = ["1m", "all"]
   // const [valueLockedActive, setValueLockedActive] = useState(types[0])
@@ -751,25 +703,25 @@ const StatsBoxGrid = () => {
   //     </div>
   //   )
   // }
-  const etherscanTypes = [oneMonthAgo, start]
-  const [nodesActive, setNodesActive] = useState(types[0])
-  function ToggleGroupNodes() {
-    return (
-      <div>
-        {types.map((type) => (
-          <ButtonToggle
-            active={nodesActive === type}
-            onClick={() => {
-              etherscanData(etherscanTypes[type])
-              setNodesActive(type)
-            }}
-          >
-            {defaultTypes[type]}
-          </ButtonToggle>
-        ))}
-      </div>
-    )
-  }
+  // const etherscanTypes = [oneMonthAgo, start]
+  // const [nodesActive, setNodesActive] = useState(types[0])
+  // function ToggleGroupNodes() {
+  //   return (
+  //     <div>
+  //       {types.map((type) => (
+  //         <ButtonToggle
+  //           active={nodesActive === type}
+  //           onClick={() => {
+  //             etherscanData(etherscanTypes[type])
+  //             setNodesActive(type)
+  //           }}
+  //         >
+  //           {defaultTypes[type]}
+  //         </ButtonToggle>
+  //       ))}
+  //     </div>
+  //   )
+  // }
 
   // console.log(pricesData)
   // console.log(nodesData)
@@ -786,7 +738,7 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-eth-price-explainer" />
       ),
       line: (
-        <AreaChart width={700} height={200} data={coingecko}>
+        <AreaChart width={700} height={200} data={transactionsData}>
           <defs>
             <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
               <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -809,7 +761,7 @@ const StatsBoxGrid = () => {
           <XAxis dataKey="name" />
         </AreaChart>
       ),
-      buttonContainer: <ToggleGroupPrice />,
+      buttonContainer: <ToggleGroupTransactions />,
       state: ethPrice,
     },
     {
@@ -820,7 +772,7 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-tx-day-explainer" />
       ),
       line: (
-        <AreaChart width={700} height={200} data={coingecko}>
+        <AreaChart width={700} height={200} data={transactionsData}>
           <defs>
             <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
               <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -843,7 +795,7 @@ const StatsBoxGrid = () => {
           <XAxis dataKey="name" />
         </AreaChart>
       ),
-      buttonContainer: <ToggleGroupPrice />,
+      buttonContainer: <ToggleGroupTransactions />,
       state: txs,
     },
     {
@@ -856,7 +808,7 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-value-defi-explainer" />
       ),
       line: (
-        <AreaChart width={700} height={200} data={coingecko}>
+        <AreaChart width={700} height={200} data={transactionsData}>
           <defs>
             <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
               <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -879,7 +831,7 @@ const StatsBoxGrid = () => {
           <XAxis dataKey="name" />
         </AreaChart>
       ),
-      buttonContainer: <ToggleGroupPrice />,
+      buttonContainer: <ToggleGroupTransactions />,
       state: valueLocked,
     },
     {
@@ -890,7 +842,7 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-nodes-explainer" />
       ),
       line: (
-        <AreaChart width={700} height={200} data={etherscan}>
+        <AreaChart width={700} height={200} data={transactionsData}>
           <defs>
             <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
               <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -911,10 +863,9 @@ const StatsBoxGrid = () => {
             connectNulls={true}
           />
           <XAxis dataKey="name" />
-          {/* <YAxis axisLine={false} tick={false} /> */}
         </AreaChart>
       ),
-      buttonContainer: <ToggleGroupNodes />,
+      buttonContainer: <ToggleGroupTransactions />,
       state: nodes,
     },
   ]
