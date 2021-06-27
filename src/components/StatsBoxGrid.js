@@ -854,6 +854,8 @@ const StatsBoxGrid = () => {
             fillOpacity="0.2"
             connectNulls={true}
           />
+          <XAxis axisLine={false} tick={false} />
+          {/* <YAxis axisLine={false} tick={false} /> */}
         </AreaChart>
       ),
       buttonContainer: <ToggleGroupNodes />,
