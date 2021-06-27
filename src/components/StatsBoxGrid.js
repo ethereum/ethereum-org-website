@@ -183,7 +183,8 @@ const GridItem = ({ metric }) => {
       </span>
     </StatRow>
   )
-  const isLoading1 = !line.value
+  console.log(line.value.length > 0)
+  const isLoading1 = !(line.value.length > 0)
   const chart = line.hasError ? (
     <ErrorMessage />
   ) : isLoading1 ? (
@@ -212,7 +213,7 @@ const GridItem = ({ metric }) => {
       <XAxis dataKey="name" />
     </AreaChart>
   )
-  // console.log(line.props.data.length)
+  console.log(chart)
 
   return (
     <Box>
