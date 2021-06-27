@@ -753,6 +753,7 @@ const StatsBoxGrid = () => {
             fillOpacity="0.2"
             connectNulls={true}
           />
+          <XAxis dataKey="name" />
         </AreaChart>
       ),
       buttonContainer: <ToggleGroupPrice />,
@@ -786,6 +787,7 @@ const StatsBoxGrid = () => {
             fillOpacity="0.2"
             connectNulls={true}
           />
+          <XAxis dataKey="name" />
         </AreaChart>
       ),
       buttonContainer: <ToggleGroupPrice />,
@@ -821,6 +823,7 @@ const StatsBoxGrid = () => {
             fillOpacity="0.2"
             connectNulls={true}
           />
+          <XAxis dataKey="name" />
         </AreaChart>
       ),
       buttonContainer: <ToggleGroupPrice />,
@@ -834,7 +837,7 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-nodes-explainer" />
       ),
       line: (
-        <AreaChart width={700} height={300} data={etherscan}>
+        <AreaChart width={700} height={200} data={etherscan}>
           <defs>
             <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
               <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -854,7 +857,7 @@ const StatsBoxGrid = () => {
             fillOpacity="0.2"
             connectNulls={true}
           />
-          <XAxis axisLine={false} tick={false} />
+          <XAxis dataKey="name" />
           {/* <YAxis axisLine={false} tick={false} /> */}
         </AreaChart>
       ),
