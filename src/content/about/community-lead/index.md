@@ -25,8 +25,8 @@ Ethereum.org is led by a team within the Ethereum Foundation. [Learn more about 
 ## Core responsibilities:
 
 - **Inspire contribution in our open source community across multiple platforms and projects.**
-  - Whether it's the ethereum.org [Github repo](https://github.com/ethereum/ethereum-org-website), our [Crowdin translation program](https://crowdin.com/project/ethereumfoundation), or just answering common questions for the curious, we rely on our community to drive our success.
-  - We want you to take our community to new heights; engage with them on Discord channels, respond to Github issues, coordinate contests, events, recognition campaigns; expand participation and impact.
+  - Whether it's the ethereum.org [GitHub repo](https://github.com/ethereum/ethereum-org-website), our [Crowdin translation program](https://crowdin.com/project/ethereumfoundation), or just answering common questions for the curious, we rely on our community to drive our success.
+  - We want you to take our community to new heights; engage with them on Discord channels, respond to GitHub issues, coordinate contests, events, recognition campaigns; expand participation and impact.
 - **Work with Ethereum's wider community to facilitate collaboration.**
   - Ethereum.org is an important part of the Ethereum ecosystem. You'll work with partners and stakeholders to maximize our impact wherever possible.
   - Are there killer explainer videos we could be using on our website? Are there eager open source developers looking for a way to get their hands dirty? We'll look to you to manage these relationships and execute on opportunities to empower others.
@@ -51,7 +51,7 @@ Ethereum.org is led by a team within the Ethereum Foundation. [Learn more about 
 
 - Track record of building communities: you ran a Discord, you were a moderator on Reddit, you ran a Meetup, managed an open source project etc.
 - You're passionate about the the crypto/blockchain/Ethereum space and have a readiness to learn, understand, and explain new technologies
-- Strong social media skills: Twitter, Discord, Telegram, Github, Reddit. Familiarity with Crowdin, Slack and Zapier integrations are a plus but not necessary
+- Strong social media skills: Twitter, Discord, Telegram, GitHub, Reddit. Familiarity with Crowdin, Slack and Zapier integrations are a plus but not necessary
 - Excellent English writing and communication skills, with strong interpersonal skills and attention to detail
 - Experience in an agile work environment as well as remote/asynchronous work
 - Experience on collaborative teams, balancing and soliciting input from multiple internal and external stakeholders
