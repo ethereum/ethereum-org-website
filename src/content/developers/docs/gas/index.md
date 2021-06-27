@@ -41,6 +41,8 @@ This video offers a concise overview of gas and why it exists:
 
 In short, gas fees help keep the Ethereum network secure. By requiring a fee for every computation executed on the network, we prevent actors from spamming the network. In order to prevent accidental or hostile infinite loops or other computational wastage in code, each transaction is required to set a limit to how many computational steps of code execution it can use. The fundamental unit of computation is "gas".
 
+Gas also exists to incentivize participants in the Ethereum network. It works as a great incentive for miners to verify transaction requests and add them to the blockchain.
+
 Although a transaction includes a limit, any gas not used in a transaction is returned to the user.
 
 ![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
@@ -54,7 +56,13 @@ For example if you put a gas limit of 50,000 for a simple ETH transfer, the EVM 
 
 ## What is gas price? {#what-is-gas-price}
 
-Gas price refers to the amount of ether you are willing to pay for every unit of gas, and this is usually measured in 'gwei'.
+Gas price refers to the amount of ether you are willing to pay for every unit of gas, and this is usually measured in 'gwei'. 
+
+A bit of trivia: 'Gwei' is also called nanoether (or nano). This is because it's the ninth power of the fractional ETH. 
+
+The word 'gwei' itself means 'giga-wei', and it is equal to 1,000,000 wei. Wei itself (derived from the Chinese word for 'power') is the smallest unit of ETH. Wei is also the ninth power of the fractional gwei, which means it's the 18th power of the fractional ETH.
+
+While paying gas fees, you'll speak almost exclusively in gwei. 
 
 ## Why can gas fees get so high? {#why-can-gas-fees-get-so-high}
 
@@ -91,6 +99,7 @@ If you want to monitor gas prices so you are able to send your ETH for less you 
 - [Ethereum Gas Explained](https://defiprime.com/gas)
 - [Is Ethereum more expensive to use as price rises?](https://docs.ethhub.io/questions-about-ethereum/is-ethereum-more-expensive-to-use-as-price-rises/)
 - [Reducing the gas consumption of your Smart Contracts](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
+- [Proof of Stake versus Proof of Work](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 
 ## Related Tools {#related-tools}
 
@@ -98,6 +107,7 @@ If you want to monitor gas prices so you are able to send your ETH for less you 
 - [Etherscan Gas Tracker](https://etherscan.io/gastracker) _Transaction gas price estimator_
 - [Bloxy Gas Analytics](https://stat.bloxy.info/superset/dashboard/gas/?standalone=true) _Ethereum network gas stats_
 - [Blocknative's Gas Platform](https://www.blocknative.com/gas) _Gas estimation API powered by Blocknative's global mempool data platform_
+- [Gas Now](https://www.gasnow.org) _A tool for forecasting the price of gas on the Ethereum network_
 
 ## Related Topics {#related-topics}
 
