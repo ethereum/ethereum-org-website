@@ -168,32 +168,62 @@ const ButtonToggle = styled(Button)`
 
 const GridItem = ({ metric }) => {
   const { title, description, state, line, buttonContainer } = metric
-  // const isLoading = !state.value
-  // const value = state.hasError ? (
-  //   <ErrorMessage />
-  // ) : isLoading ? (
-  //   <LoadingMessage />
-  // ) : (
-  //   <StatRow>
-  //     <span>
-  //       {state.value}{" "}
-  //       <Tooltip content={tooltipContent(metric)}>
-  //         <StyledIcon name="info" />
-  //       </Tooltip>
-  //     </span>
-  //   </StatRow>
-  // )
+  const isLoading = !state.value
+  const value = state.hasError ? (
+    <ErrorMessage />
+  ) : isLoading ? (
+    <LoadingMessage />
+  ) : (
+    <StatRow>
+      <span>
+        {state.value}{" "}
+        <Tooltip content={tooltipContent(metric)}>
+          <StyledIcon name="info" />
+        </Tooltip>
+      </span>
+    </StatRow>
+  )
+  const isLoading1 = !line.value
+  const chart = line.hasError ? (
+    <ErrorMessage />
+  ) : isLoading1 ? (
+    <LoadingMessage />
+  ) : (
+    <AreaChart width={700} height={200} data={line.value}>
+      <defs>
+        <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
+          <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
+        </linearGradient>
+        <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
+          <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+        </linearGradient>
+      </defs>
+      <Area
+        type="monotone"
+        dataKey="uv"
+        stroke="#8884d8"
+        fillOpacity={0.3}
+        fill="url(#colorUv)"
+        fillOpacity="0.2"
+        connectNulls={true}
+      />
+      <XAxis dataKey="name" />
+    </AreaChart>
+  )
+  // console.log(line.props.data.length)
 
   return (
     <Box>
       <div>
         <Title>{title}</Title>
         <p>{description}</p>
-        <Lines>{line}</Lines>
+        <Lines>{chart}</Lines>
       </div>
 
       <ButtonContainer>{buttonContainer}</ButtonContainer>
-      {/* <Value>{value}</Value> */}
+      <Value>{value}</Value>
     </Box>
   )
 }
@@ -221,6 +251,10 @@ const StatsBoxGrid = () => {
   })
   const [nodes, setNodes] = useState({
     value: 0,
+    hasError: false,
+  })
+  const [coingecko, setCoingecko] = useState({
+    value: [],
     hasError: false,
   })
 
@@ -257,20 +291,20 @@ const StatsBoxGrid = () => {
       maximumSignificantDigits: 4,
     }).format(nodes)
   }
-  const [coingecko, setCoingecko] = useState([
-    {
-      name: "Page A",
-      uv: 4000,
-      pv: 2400,
-      amt: 2400,
-    },
-    {
-      name: "Page B",
-      uv: 3000,
-      pv: 1398,
-      amt: 2210,
-    },
-  ])
+  // const [coingecko, setCoingecko] = useState([
+  //   {
+  //     name: "Page A",
+  //     uv: 4000,
+  //     pv: 2400,
+  //     amt: 2400,
+  //   },
+  //   {
+  //     name: "Page B",
+  //     uv: 3000,
+  //     pv: 1398,
+  //     amt: 2210,
+  //   },
+  // ])
   useEffect(() => {
     // coinGeckoData("30")
     // etherscanData(oneMonthAgo)
@@ -325,7 +359,10 @@ const StatsBoxGrid = () => {
               })
             }
 
-            setCoingecko(pricesData)
+            setCoingecko({
+              value: pricesData,
+              hasError: false,
+            })
           })
           .catch(function (error) {
             if (error.response) {
@@ -343,6 +380,9 @@ const StatsBoxGrid = () => {
               // Something happened in setting up the request that triggered an Error
               console.log("Error", error.message)
             }
+            setCoingecko({
+              hasError: true,
+            })
             console.log(error.config)
           })
       }
@@ -458,7 +498,10 @@ const StatsBoxGrid = () => {
               })
             }
 
-            setCoingecko(pricesData)
+            setCoingecko({
+              value: pricesData,
+              hasError: false,
+            })
           })
           .catch(function (error) {
             if (error.response) {
@@ -476,11 +519,15 @@ const StatsBoxGrid = () => {
               // Something happened in setting up the request that triggered an Error
               console.log("Error", error.message)
             }
+            setCoingecko({
+              hasError: true,
+            })
             console.log(error.config)
           })
       }
       coinGeckoData("30")
     }
+    console.log(coingecko)
 
     // etherscanData(oneMonthAgo)
   }, [])
@@ -838,7 +885,7 @@ const StatsBoxGrid = () => {
   //   )
   // }
 
-  // console.log(pricesData)
+  console.log(coingecko.value)
   // console.log(nodesData)
   // console.log(valueLockedData)
 
@@ -852,32 +899,9 @@ const StatsBoxGrid = () => {
       description: (
         <Translation id="page-index-network-stats-eth-price-explainer" />
       ),
-      line: (
-        <AreaChart width={700} height={200} data={coingecko}>
-          <defs>
-            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
-              <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-            </linearGradient>
-            <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
-            </linearGradient>
-          </defs>
-          <Area
-            type="monotone"
-            dataKey="uv"
-            stroke="#8884d8"
-            fillOpacity={0.3}
-            fill="url(#colorUv)"
-            fillOpacity="0.2"
-            connectNulls={true}
-          />
-          <XAxis dataKey="name" />
-        </AreaChart>
-      ),
+      line: coingecko,
       // buttonContainer: <ToggleGroupPrice />,
-      // state: ethPrice,
+      state: ethPrice,
     },
     {
       apiProvider: "Etherscan",
@@ -886,32 +910,9 @@ const StatsBoxGrid = () => {
       description: (
         <Translation id="page-index-network-stats-tx-day-explainer" />
       ),
-      line: (
-        <AreaChart width={700} height={200} data={coingecko}>
-          <defs>
-            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
-              <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-            </linearGradient>
-            <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
-            </linearGradient>
-          </defs>
-          <Area
-            type="monotone"
-            dataKey="uv"
-            stroke="#8884d8"
-            fillOpacity={0.3}
-            fill="url(#colorUv)"
-            fillOpacity="0.2"
-            connectNulls={true}
-          />
-          <XAxis dataKey="name" />
-        </AreaChart>
-      ),
+      line: coingecko,
       // buttonContainer: <ToggleGroupPrice />,
-      // state: txs,
+      state: txs,
     },
     {
       apiProvider: "DeFi Pulse",
@@ -922,32 +923,9 @@ const StatsBoxGrid = () => {
       description: (
         <Translation id="page-index-network-stats-value-defi-explainer" />
       ),
-      line: (
-        <AreaChart width={700} height={200} data={coingecko}>
-          <defs>
-            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
-              <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-            </linearGradient>
-            <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
-            </linearGradient>
-          </defs>
-          <Area
-            type="monotone"
-            dataKey="uv"
-            stroke="#8884d8"
-            fillOpacity={0.3}
-            fill="url(#colorUv)"
-            fillOpacity="0.2"
-            connectNulls={true}
-          />
-          <XAxis dataKey="name" />
-        </AreaChart>
-      ),
+      line: coingecko,
       // buttonContainer: <ToggleGroupPrice />,
-      // state: valueLocked,
+      state: valueLocked,
     },
     {
       apiProvider: "Etherscan",
@@ -956,32 +934,9 @@ const StatsBoxGrid = () => {
       description: (
         <Translation id="page-index-network-stats-nodes-explainer" />
       ),
-      line: (
-        <AreaChart width={700} height={200} data={coingecko}>
-          <defs>
-            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
-              <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-            </linearGradient>
-            <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
-            </linearGradient>
-          </defs>
-          <Area
-            type="monotone"
-            dataKey="uv"
-            stroke="#8884d8"
-            fillOpacity={0.3}
-            fill="url(#colorUv)"
-            fillOpacity="0.2"
-            connectNulls={true}
-          />
-          <XAxis dataKey="name" />
-        </AreaChart>
-      ),
+      line: coingecko,
       // buttonContainer: <ToggleGroupPrice />,
-      // state: nodes,
+      state: nodes,
     },
   ]
 
