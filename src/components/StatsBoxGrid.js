@@ -420,39 +420,65 @@ const StatsBoxGrid = () => {
       },
     ]
 
-    let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
-    await axios
-      .get(coingeckoUrl)
-      .then((response) => {
-        for (const i in response.data.prices) {
-          pricesData.push({
-            name: "Page A",
-            uv: response.data.prices[i][1],
-            pv: i,
-            amt: 2400,
-          })
-        }
+    try {
+      const result = await axios.get(
+        `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
+      )
+      // result: [{UTCDate: string, unixTimeStamp: string, transactionCount: number}, {...}]
+      console.log(result)
+      for (const i in result.data.prices) {
+        pricesData.push({
+          name: "Page A",
+          uv: result.data.prices[i][1],
+          pv: i,
+          amt: 2400,
+        })
+      }
+      setCoingecko(pricesData)
+      // const count = result[0].transactionCount
+      // const value = formatTxs(count)
+      // setTxs({
+      //   value,
+      //   hasError: false,
+      // })
+    } catch (error) {
+      console.error(error)
+    }
 
-        setCoingecko(pricesData)
-      })
-      .catch(function (error) {
-        if (error.response) {
-          // The request was made and the server responded with a status code
-          // that falls out of the range of 2xx
-          console.log(error.response.data)
-          console.log(error.response.status)
-          console.log(error.response.headers)
-        } else if (error.request) {
-          // The request was made but no response was received
-          // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
-          // http.ClientRequest in node.js
-          console.log(error.request)
-        } else {
-          // Something happened in setting up the request that triggered an Error
-          console.log("Error", error.message)
-        }
-        console.log(error.config)
-      })
+    // let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
+    // await axios
+    //   .get(coingeckoUrl)
+    //   .then((response) => {
+    //     console.log(response.data)
+    //     for (const i in response.data.prices) {
+    //       pricesData.push({
+    //         name: "Page A",
+    //         uv: response.data.prices[i][1],
+    //         pv: i,
+    //         amt: 2400,
+    //       })
+    //     }
+
+    //     setCoingecko(pricesData)
+    //   })
+    //   .catch(function (error) {
+    //     if (error.response) {
+    //       // The request was made and the server responded with a status code
+    //       // that falls out of the range of 2xx
+    //       console.log(error.response.data)
+    //       console.log(error.response.status)
+    //       console.log(error.response.headers)
+    //     } else if (error.request) {
+    //       // The request was made but no response was received
+    //       // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+    //       // http.ClientRequest in node.js
+    //       console.log(error.request)
+    //     } else {
+    //       // Something happened in setting up the request that triggered an Error
+    //       console.log("Error", error.message)
+    //     }
+    //     console.log(error.config)
+    //   })
   }
 
   console.log(coingecko)
@@ -489,39 +515,64 @@ const StatsBoxGrid = () => {
         amt: 2210,
       },
     ]
-    let etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
-    await axios
-      .get(etherscanUrl)
-      .then((response) => {
-        for (const i in response.data.result) {
-          nodesData.push({
-            name: "Page A",
-            uv: response.data.result[i]["TotalNodeCount"],
-            pv: response.data.result[i]["UTCDate"],
-            amt: 2400,
-          })
-        }
-        console.log(nodesData)
-        setEtherscan(nodesData)
-      })
-      .catch(function (error) {
-        if (error.response) {
-          // The request was made and the server responded with a status code
-          // that falls out of the range of 2xx
-          console.log(error.response.data)
-          console.log(error.response.status)
-          console.log(error.response.headers)
-        } else if (error.request) {
-          // The request was made but no response was received
-          // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
-          // http.ClientRequest in node.js
-          console.log(error.request)
-        } else {
-          // Something happened in setting up the request that triggered an Error
-          console.log("Error", error.message)
-        }
-        console.log(error.config)
-      })
+
+    try {
+      const result = await axios.get(
+        `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
+      )
+      // result: [{UTCDate: string, unixTimeStamp: string, transactionCount: number}, {...}]
+      console.log(result)
+      for (const i in result.data.result) {
+        nodesData.push({
+          name: "Page A",
+          uv: result.data.result[i]["TotalNodeCount"],
+          pv: result.data.result[i]["UTCDate"],
+          amt: 2400,
+        })
+      }
+      setEtherscan(nodesData)
+      // const count = result[0].transactionCount
+      // const value = formatTxs(count)
+      // setTxs({
+      //   value,
+      //   hasError: false,
+      // })
+    } catch (error) {
+      console.error(error)
+    }
+    // let etherscanUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
+    // await axios
+    //   .get(etherscanUrl)
+    //   .then((response) => {
+    //     for (const i in response.data.result) {
+    //       nodesData.push({
+    //         name: "Page A",
+    //         uv: response.data.result[i]["TotalNodeCount"],
+    //         pv: response.data.result[i]["UTCDate"],
+    //         amt: 2400,
+    //       })
+    //     }
+    //     console.log(nodesData)
+    //     setEtherscan(nodesData)
+    //   })
+    //   .catch(function (error) {
+    //     if (error.response) {
+    //       // The request was made and the server responded with a status code
+    //       // that falls out of the range of 2xx
+    //       console.log(error.response.data)
+    //       console.log(error.response.status)
+    //       console.log(error.response.headers)
+    //     } else if (error.request) {
+    //       // The request was made but no response was received
+    //       // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+    //       // http.ClientRequest in node.js
+    //       console.log(error.request)
+    //     } else {
+    //       // Something happened in setting up the request that triggered an Error
+    //       console.log("Error", error.message)
+    //     }
+    //     console.log(error.config)
+    //   })
   }
   console.log(etherscan)
 
