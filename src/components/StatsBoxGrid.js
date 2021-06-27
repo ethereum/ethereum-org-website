@@ -186,7 +186,7 @@ const GridItem = ({ metric }) => {
   //   </StatRow>
   // )
   // console.log(!(line.value.length > 0), "line")
-  console.log(line.value, "line")
+  // console.log(line.value, "line")
   const isLoading1 = !(line.value.length != [])
   console.log(isLoading1)
   let priceData = []
@@ -352,7 +352,7 @@ const StatsBoxGrid = () => {
         let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
         try {
           const response = await axios.get(coingeckoUrl)
-          console.log(response.data)
+          // console.log(response.data)
           // for (const i in response.data.prices) {
           //   priceData.push({
           //     name: "Page A",
@@ -372,99 +372,54 @@ const StatsBoxGrid = () => {
             hasError: true,
           })
         }
-        // .catch(function (error) {
-        //   if (error.response) {
-        //     // The request was made and the server responded with a status code
-        //     // that falls out of the range of 2xx
-        //     console.log(error.response.data)
-        //     console.log(error.response.status)
-        //     console.log(error.response.headers)
-        //   } else if (error.request) {
-        //     // The request was made but no response was received
-        //     // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
-        //     // http.ClientRequest in node.js
-        //     console.log(error.request)
-        //   } else {
-        //     // Something happened in setting up the request that triggered an Error
-        //     console.log("Error", error.message)
-        //   }
-        //   setCoingecko({
-        //     hasError: true,
-        //   })
-        //   console.log(error.config)
-        // })
       }
       coinGeckoData("30")
 
       // coinGeckoData("30")
       // etherscanData(oneMonthAgo)
     } else {
-      // const coinGeckoData = async (mode) => {
-      //   let priceData = [
-      //     {
-      //       name: "Page A",
-      //       uv: 4000,
-      //       pv: 2400,
-      //       amt: 2400,
-      //     },
-      //     {
-      //       name: "Page B",
-      //       uv: 3000,
-      //       pv: 1398,
-      //       amt: 2210,
-      //     },
-      //   ]
+      const coinGeckoData = async (mode) => {
+        //   let priceData = [
+        //     {
+        //       name: "Page A",
+        //       uv: 4000,
+        //       pv: 2400,
+        //       amt: 2400,
+        //     },
+        //     {
+        //       name: "Page B",
+        //       uv: 3000,
+        //       pv: 1398,
+        //       amt: 2210,
+        //     },
+        //   ]
 
-      //   let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
-      //   try {
-      //     const response = await axios.get(coingeckoUrl)
-      //     console.log(response.data)
-      //     for (const i in response.data.prices) {
-      //       priceData.push({
-      //         name: "Page A",
-      //         uv: response.data.prices[i][1],
-      //         pv: i,
-      //         amt: 2400,
-      //       })
-      //     }
+        let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
+        try {
+          const response = await axios.get(coingeckoUrl)
+          // console.log(response.data)
+          // for (const i in response.data.prices) {
+          //   priceData.push({
+          //     name: "Page A",
+          //     uv: response.data.prices[i][1],
+          //     pv: i,
+          //     amt: 2400,
+          //   })
+          // }
 
-      //     setCoingecko({
-      //       value: priceData,
-      //       hasError: false,
-      //     })
-      //   } catch (error) {
-      //     console.error(error)
-      //     setCoingecko({
-      //       hasError: true,
-      //     })
-      //   }
+          setCoingecko({
+            value: response.data,
+            hasError: false,
+          })
+        } catch (error) {
+          console.error(error)
+          setCoingecko({
+            hasError: true,
+          })
+        }
+      }
+      coinGeckoData("30")
 
-      // .catch(function (error) {
-      //   setCoingecko({
-      //     hasError: true,
-      //   })
-      //   if (error.response) {
-      //     // The request was made and the server responded with a status code
-      //     // that falls out of the range of 2xx
-      //     console.error(error.response.data)
-      //     console.error(error.response.status)
-      //     console.error(error.response.headers)
-      //   } else if (error.request) {
-      //     // The request was made but no response was received
-      //     // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
-      //     // http.ClientRequest in node.js
-      //     console.error(error.request)
-      //   } else {
-      //     // Something happened in setting up the request that triggered an Error
-      //     console.error("Error", error.message)
-      //   }
-
-      //   console.error(error.config)
-      // })
-      // }
-      // coinGeckoData("30")
-
-      console.log(coingecko)
       const fetchPrice = async () => {
         try {
           const response = await axios.get(
@@ -483,7 +438,7 @@ const StatsBoxGrid = () => {
           })
         }
       }
-      // fetchPrice()
+      // fetchPrice(30)
 
       const fetchNodes = async () => {
         try {
