@@ -169,25 +169,25 @@ const ButtonToggle = styled(Button)`
 const GridItem = ({ metric }) => {
   const { title, description, state, line, buttonContainer } = metric
   // console.log(!state.value, "state")
-  console.log(state.value, "state")
-  const isLoading = !state.value
-  const value = state.hasError ? (
-    <ErrorMessage />
-  ) : isLoading ? (
-    <LoadingMessage />
-  ) : (
-    <StatRow>
-      <span>
-        {state.value}{" "}
-        <Tooltip content={tooltipContent(metric)}>
-          <StyledIcon name="info" />
-        </Tooltip>
-      </span>
-    </StatRow>
-  )
+  // console.log(state.value, "state")
+  // const isLoading = !state.value
+  // const value = state.hasError ? (
+  //   <ErrorMessage />
+  // ) : isLoading ? (
+  //   <LoadingMessage />
+  // ) : (
+  //   <StatRow>
+  //     <span>
+  //       {state.value}{" "}
+  //       <Tooltip content={tooltipContent(metric)}>
+  //         <StyledIcon name="info" />
+  //       </Tooltip>
+  //     </span>
+  //   </StatRow>
+  // )
   // console.log(!(line.value.length > 0), "line")
   console.log(line.value, "line")
-  const isLoading1 = !(line.value.length > 0)
+  const isLoading1 = !(line.value.length > 2)
   const chart = line.hasError ? (
     <ErrorMessage />
   ) : isLoading1 ? (
@@ -225,8 +225,8 @@ const GridItem = ({ metric }) => {
         <Lines>{chart}</Lines>
       </div>
 
-      <ButtonContainer>{buttonContainer}</ButtonContainer>
-      <Value>{value}</Value>
+      {/* <ButtonContainer>{buttonContainer}</ButtonContainer> */}
+      {/* <Value>{value}</Value> */}
     </Box>
   )
 }
@@ -320,7 +320,7 @@ const StatsBoxGrid = () => {
       })
 
       const coinGeckoData = async (mode) => {
-        let pricesData = [
+        let priceData = [
           {
             name: "Page A",
             uv: 4000,
@@ -340,7 +340,7 @@ const StatsBoxGrid = () => {
           const response = await axios.get(coingeckoUrl)
           console.log(response.data)
           for (const i in response.data.prices) {
-            pricesData.push({
+            priceData.push({
               name: "Page A",
               uv: response.data.prices[i][1],
               pv: i,
@@ -349,7 +349,7 @@ const StatsBoxGrid = () => {
           }
 
           setCoingecko({
-            value: pricesData,
+            value: priceData,
             hasError: false,
           })
         } catch (error) {
@@ -385,85 +385,8 @@ const StatsBoxGrid = () => {
       // coinGeckoData("30")
       // etherscanData(oneMonthAgo)
     } else {
-      const fetchPrice = async () => {
-        try {
-          const response = await axios.get(
-            "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd&include_24hr_change=true"
-          )
-          const { usd } = response.data.ethereum
-          const value = formatPrice(usd)
-          setEthPrice({
-            value,
-            hasError: false,
-          })
-        } catch (error) {
-          console.error(error)
-          setEthPrice({
-            hasError: true,
-          })
-        }
-      }
-      fetchPrice()
-
-      const fetchNodes = async () => {
-        try {
-          const data = await getData("/.netlify/functions/etherscan")
-          const total = data.result.TotalNodeCount
-          const value = formatNodes(total)
-          setNodes({
-            value,
-            hasError: false,
-          })
-        } catch (error) {
-          console.error(error)
-          setNodes({
-            hasError: true,
-          })
-        }
-      }
-      fetchNodes()
-
-      const fetchTotalValueLocked = async () => {
-        try {
-          const data = await getData("/.netlify/functions/defipulse")
-          const ethereumTVL = data.ethereumTVL
-          const value = formatTVL(ethereumTVL)
-          setValueLocked({
-            value,
-            hasError: false,
-          })
-        } catch (error) {
-          console.error(error)
-          setValueLocked({
-            hasError: true,
-          })
-        }
-      }
-      fetchTotalValueLocked()
-
-      const fetchTxCount = async () => {
-        try {
-          const { result } = await getData("/.netlify/functions/txs")
-          // result: [{UTCDate: string, unixTimeStamp: string, transactionCount: number}, {...}]
-          console.log(result)
-
-          const count = result[0].transactionCount
-          const value = formatTxs(count)
-          setTxs({
-            value,
-            hasError: false,
-          })
-        } catch (error) {
-          console.error(error)
-          setTxs({
-            hasError: true,
-          })
-        }
-      }
-      fetchTxCount()
-
       const coinGeckoData = async (mode) => {
-        let pricesData = [
+        let priceData = [
           {
             name: "Page A",
             uv: 4000,
@@ -483,7 +406,7 @@ const StatsBoxGrid = () => {
           const response = await axios.get(coingeckoUrl)
           console.log(response.data)
           for (const i in response.data.prices) {
-            pricesData.push({
+            priceData.push({
               name: "Page A",
               uv: response.data.prices[i][1],
               pv: i,
@@ -492,7 +415,7 @@ const StatsBoxGrid = () => {
           }
 
           setCoingecko({
-            value: pricesData,
+            value: priceData,
             hasError: false,
           })
         } catch (error) {
@@ -528,6 +451,82 @@ const StatsBoxGrid = () => {
       coinGeckoData("30")
     }
     console.log(coingecko)
+    const fetchPrice = async () => {
+      try {
+        const response = await axios.get(
+          "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd&include_24hr_change=true"
+        )
+        const { usd } = response.data.ethereum
+        const value = formatPrice(usd)
+        setEthPrice({
+          value,
+          hasError: false,
+        })
+      } catch (error) {
+        console.error(error)
+        setEthPrice({
+          hasError: true,
+        })
+      }
+    }
+    fetchPrice()
+
+    const fetchNodes = async () => {
+      try {
+        const data = await getData("/.netlify/functions/etherscan")
+        const total = data.result.TotalNodeCount
+        const value = formatNodes(total)
+        setNodes({
+          value,
+          hasError: false,
+        })
+      } catch (error) {
+        console.error(error)
+        setNodes({
+          hasError: true,
+        })
+      }
+    }
+    fetchNodes()
+
+    const fetchTotalValueLocked = async () => {
+      try {
+        const data = await getData("/.netlify/functions/defipulse")
+        const ethereumTVL = data.ethereumTVL
+        const value = formatTVL(ethereumTVL)
+        setValueLocked({
+          value,
+          hasError: false,
+        })
+      } catch (error) {
+        console.error(error)
+        setValueLocked({
+          hasError: true,
+        })
+      }
+    }
+    fetchTotalValueLocked()
+
+    const fetchTxCount = async () => {
+      try {
+        const { result } = await getData("/.netlify/functions/txs")
+        // result: [{UTCDate: string, unixTimeStamp: string, transactionCount: number}, {...}]
+        console.log(result)
+
+        const count = result[0].transactionCount
+        const value = formatTxs(count)
+        setTxs({
+          value,
+          hasError: false,
+        })
+      } catch (error) {
+        console.error(error)
+        setTxs({
+          hasError: true,
+        })
+      }
+    }
+    fetchTxCount()
 
     // etherscanData(oneMonthAgo)
   }, [])
@@ -901,7 +900,7 @@ const StatsBoxGrid = () => {
       ),
       line: coingecko,
       // buttonContainer: <ToggleGroupPrice />,
-      state: ethPrice,
+      // state: ethPrice,
     },
     {
       apiProvider: "Etherscan",
@@ -912,7 +911,7 @@ const StatsBoxGrid = () => {
       ),
       line: coingecko,
       // buttonContainer: <ToggleGroupPrice />,
-      state: txs,
+      // state: txs,
     },
     {
       apiProvider: "DeFi Pulse",
@@ -925,7 +924,7 @@ const StatsBoxGrid = () => {
       ),
       line: coingecko,
       // buttonContainer: <ToggleGroupPrice />,
-      state: valueLocked,
+      // state: valueLocked,
     },
     {
       apiProvider: "Etherscan",
@@ -936,7 +935,7 @@ const StatsBoxGrid = () => {
       ),
       line: coingecko,
       // buttonContainer: <ToggleGroupPrice />,
-      state: nodes,
+      // state: nodes,
     },
   ]
 
