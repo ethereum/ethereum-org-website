@@ -203,17 +203,8 @@ const GridItem = ({ metric }) => {
           <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
         </linearGradient>
       </defs>
-      {line.value.length > 0 && (
-        <Area
-          type="monotone"
-          dataKey="uv"
-          stroke="#8884d8"
-          fillOpacity={0.3}
-          fill="url(#colorUv)"
-          fillOpacity="0.2"
-          connectNulls={true}
-        />
-      )}
+
+      <XAxis dataKey="pv" />
     </AreaChart>
   )
   console.log(line.value, "line")
