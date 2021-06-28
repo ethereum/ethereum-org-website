@@ -192,19 +192,7 @@ const GridItem = ({ metric }) => {
   ) : isLoading1 ? (
     <LoadingMessage />
   ) : (
-    <AreaChart width={700} height={200} data={line.value}>
-      <Area
-        type="monotone"
-        dataKey="uv"
-        stroke="#8884d8"
-        fillOpacity={0.3}
-        fill="red"
-        fillOpacity="0.2"
-        connectNulls={true}
-      />
-
-      <XAxis dataKey="pv" />
-    </AreaChart>
+    <div></div>
   )
   console.log(line.value, "line")
 
