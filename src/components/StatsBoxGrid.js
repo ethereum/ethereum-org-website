@@ -184,7 +184,7 @@ const GridItem = ({ metric }) => {
     </StatRow>
   )
   // console.log(!(line.value.length > 0), "line")
-  console.log(line.value, "line")
+  console.log(line, "line")
   const isLoading1 = !(line.value.length > 0)
   console.log(isLoading1)
   const chart = line.hasError ? (
@@ -203,15 +203,17 @@ const GridItem = ({ metric }) => {
           <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
         </linearGradient>
       </defs>
-      <Area
-        type="monotone"
-        dataKey="uv"
-        stroke="#8884d8"
-        fillOpacity={0.3}
-        fill="url(#colorUv)"
-        fillOpacity="0.2"
-        connectNulls={true}
-      />
+      {line.value.length > 0 && (
+        <Area
+          type="monotone"
+          dataKey="uv"
+          stroke="#8884d8"
+          fillOpacity={0.3}
+          fill="url(#colorUv)"
+          fillOpacity="0.2"
+          connectNulls={true}
+        />
+      )}
       {line.value.length > 0 && <XAxis dataKey="name" />}
     </AreaChart>
   )
@@ -224,7 +226,7 @@ const GridItem = ({ metric }) => {
         <p>{description}</p>
       </div>
       <Lines>{chart}</Lines>
-      {/* <ButtonContainer>{buttonContainer}</ButtonContainer> */}
+      <ButtonContainer>{buttonContainer}</ButtonContainer>
       <Value>{value}</Value>
     </Box>
   )
@@ -317,100 +319,101 @@ const StatsBoxGrid = () => {
         hasError: false,
       })
 
-      const coinGeckoData = async (mode) => {
-        let priceData = [
-          {
-            name: "Page A",
-            uv: 4000,
-            pv: 2400,
-            amt: 2400,
-          },
-          {
-            name: "Page B",
-            uv: 3000,
-            pv: 1398,
-            amt: 2210,
-          },
-        ]
+      // const coinGeckoData = async (mode) => {
+      //   let priceData = [
+      //     {
+      //       name: "Page A",
+      //       uv: 4000,
+      //       pv: 2400,
+      //       amt: 2400,
+      //     },
+      //     {
+      //       name: "Page B",
+      //       uv: 3000,
+      //       pv: 1398,
+      //       amt: 2210,
+      //     },
+      //   ]
 
-        let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
-        try {
-          const response = await axios.get(coingeckoUrl)
-          console.log(response.data)
-          for (const i in response.data.prices) {
-            priceData.push({
-              name: "Page A",
-              uv: response.data.prices[i][1],
-              pv: i,
-              amt: 2400,
-            })
-          }
+      //   let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
+      //   try {
+      //     const response = await axios.get(coingeckoUrl)
+      //     console.log(response.data)
+      //     for (const i in response.data.prices) {
+      //       priceData.push({
+      //         name: "Page A",
+      //         uv: response.data.prices[i][1],
+      //         pv: i,
+      //         amt: 2400,
+      //       })
+      //     }
 
-          const value = priceData
-          console.log(value)
-          setCoingecko({
-            value,
-            hasError: false,
-          })
-          // console.log(coingecko.value, value)
-        } catch (error) {
-          console.error(error)
-          setCoingecko({
-            value: [],
-            hasError: true,
-          })
-        }
-      }
-      coinGeckoData("30")
+      //     const value = priceData
+      //     console.log(value)
+      //     setCoingecko({
+      //       value,
+      //       hasError: false,
+      //     })
+      //     // console.log(coingecko.value, value)
+      //   } catch (error) {
+      //     console.error(error)
+      //     setCoingecko({
+      //       value: [],
+      //       hasError: true,
+      //     })
+      //   }
+      //   console.log(coingecko)
+      // }
+      // coinGeckoData("30")
 
       // coinGeckoData("30")
       // etherscanData(oneMonthAgo)
     } else {
-      const coinGeckoData = async (mode) => {
-        let priceData = [
-          {
-            name: "Page A",
-            uv: 4000,
-            pv: 2400,
-            amt: 2400,
-          },
-          {
-            name: "Page B",
-            uv: 3000,
-            pv: 1398,
-            amt: 2210,
-          },
-        ]
+      // const coinGeckoData = async (mode) => {
+      //   let priceData = [
+      //     {
+      //       name: "Page A",
+      //       uv: 4000,
+      //       pv: 2400,
+      //       amt: 2400,
+      //     },
+      //     {
+      //       name: "Page B",
+      //       uv: 3000,
+      //       pv: 1398,
+      //       amt: 2210,
+      //     },
+      //   ]
 
-        let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
-        try {
-          const response = await axios.get(coingeckoUrl)
-          console.log(response.data)
-          for (const i in response.data.prices) {
-            priceData.push({
-              name: "Page A",
-              uv: response.data.prices[i][1],
-              pv: i,
-              amt: 2400,
-            })
-          }
+      //   let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
+      //   try {
+      //     const response = await axios.get(coingeckoUrl)
+      //     console.log(response.data)
+      //     for (const i in response.data.prices) {
+      //       priceData.push({
+      //         name: "Page A",
+      //         uv: response.data.prices[i][1],
+      //         pv: i,
+      //         amt: 2400,
+      //       })
+      //     }
 
-          const value = priceData
-          console.log(value)
-          setCoingecko({
-            value,
-            hasError: false,
-          })
-          // console.log(coingecko.value, value)
-        } catch (error) {
-          console.error(error)
-          setCoingecko({
-            value: [],
-            hasError: true,
-          })
-        }
-      }
-      coinGeckoData("30")
+      //     const value = priceData
+      //     console.log(value)
+      //     setCoingecko({
+      //       value,
+      //       hasError: false,
+      //     })
+      //     // console.log(coingecko.value, value)
+      //   } catch (error) {
+      //     console.error(error)
+      //     setCoingecko({
+      //       value: [],
+      //       hasError: true,
+      //     })
+      //   }
+      // }
+      // coinGeckoData("30")
 
       const fetchPrice = async () => {
         try {
@@ -501,12 +504,57 @@ const StatsBoxGrid = () => {
   //   oneMonthAgo =
   //     today.getFullYear() + "-" + today.getMonth() + "-" + (today.getDate() - 1)
   // const start = "2019-10-30"
+  useEffect(() => {
+    const coinGeckoData = async (mode) => {
+      let priceData = [
+        {
+          name: "Page A",
+          uv: 4000,
+          pv: 2400,
+          amt: 2400,
+        },
+        {
+          name: "Page B",
+          uv: 3000,
+          pv: 1398,
+          amt: 2210,
+        },
+      ]
 
-  // useEffect(() => {
-  //   coinGeckoData("30")
-  //   etherscanData(oneMonthAgo)
-  //   // defipalseData("1m")
-  // }, [])
+      let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
+      try {
+        const response = await axios.get(coingeckoUrl)
+        console.log(response.data)
+        for (const i in response.data.prices) {
+          priceData.push({
+            name: "Page A",
+            uv: response.data.prices[i][1],
+            pv: i,
+            amt: 2400,
+          })
+        }
+
+        const value = priceData
+        console.log(value)
+        setCoingecko({
+          value,
+          hasError: false,
+        })
+        // console.log(coingecko.value, value)
+      } catch (error) {
+        console.error(error)
+        setCoingecko({
+          value: [],
+          hasError: true,
+        })
+      }
+    }
+
+    coinGeckoData("30")
+    // console.log(coingecko)
+    // etherscanData(oneMonthAgo)
+    // defipalseData("1m")
+  }, [])
 
   // const [coingecko, setCoingecko] = useState([
   //   {
@@ -720,29 +768,29 @@ const StatsBoxGrid = () => {
   //   }
   // }
 
-  // const types = [0, 1]
-  // const defaultTypes = ["30d", "ALL"]
+  const types = [0, 1]
+  const defaultTypes = ["30d", "ALL"]
 
-  // const coingeckoTypes = ["30", "max"]
+  const coingeckoTypes = ["30", "max"]
 
-  // const [priceActive, setPriceActive] = useState(types[0])
-  // function ToggleGroupPrice() {
-  //   return (
-  //     <div>
-  //       {types.map((type) => (
-  //         <ButtonToggle
-  //           active={priceActive === type}
-  //           onClick={() => {
-  //             // coinGeckoData(coingeckoTypes[type])
-  //             setPriceActive(type)
-  //           }}
-  //         >
-  //           {defaultTypes[type]}
-  //         </ButtonToggle>
-  //       ))}
-  //     </div>
-  //   )
-  // }
+  const [priceActive, setPriceActive] = useState(types[0])
+  function ToggleGroupPrice() {
+    return (
+      <div>
+        {types.map((type) => (
+          <ButtonToggle
+            active={priceActive === type}
+            onClick={() => {
+              // coinGeckoData(coingeckoTypes[type])
+              setPriceActive(type)
+            }}
+          >
+            {defaultTypes[type]}
+          </ButtonToggle>
+        ))}
+      </div>
+    )
+  }
   // const transactionsData = [
   //   {
   //     name: "Page A",
@@ -859,7 +907,7 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-eth-price-explainer" />
       ),
       line: coingecko,
-      // buttonContainer: <ToggleGroupPrice />,
+      buttonContainer: <ToggleGroupPrice />,
       state: ethPrice,
     },
     {
@@ -870,7 +918,7 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-tx-day-explainer" />
       ),
       line: coingecko,
-      // buttonContainer: <ToggleGroupPrice />,
+      buttonContainer: <ToggleGroupPrice />,
       state: txs,
     },
     {
@@ -883,7 +931,7 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-value-defi-explainer" />
       ),
       line: coingecko,
-      // buttonContainer: <ToggleGroupPrice />,
+      buttonContainer: <ToggleGroupPrice />,
       state: valueLocked,
     },
     {
@@ -894,7 +942,7 @@ const StatsBoxGrid = () => {
         <Translation id="page-index-network-stats-nodes-explainer" />
       ),
       line: coingecko,
-      // buttonContainer: <ToggleGroupPrice />,
+      buttonContainer: <ToggleGroupPrice />,
       state: nodes,
     },
   ]
