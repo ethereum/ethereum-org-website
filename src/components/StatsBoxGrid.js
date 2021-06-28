@@ -214,7 +214,6 @@ const GridItem = ({ metric }) => {
           connectNulls={true}
         />
       )}
-      {line.value.length > 0 && <XAxis dataKey="pv" />}
     </AreaChart>
   )
   console.log(line.value, "line")
