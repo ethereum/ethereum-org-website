@@ -4063,6 +4063,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "arcz",
+      "name": "Artur Cygan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4679721?v=4",
+      "profile": "https://arturcygan.com/",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
