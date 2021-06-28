@@ -175,7 +175,7 @@ For further details check the tutorial on [running Geth light node](/developers/
 
 `besu --sync-mode=FULL`
 
-Like any other configuration, it can be defined with the startup flag or in the config file. Another example is [Nethermind](https://docs.nethermind.io/nethermind/) which prompts you to choose config during first initialization and creates config.
+Like any other configuration, it can be defined with the startup flag or in the config file. Another example is [Nethermind](https://docs.nethermind.io/nethermind/) which prompts you to choose sync mode during first initialization and creates config. 
 
 ## Hardware {#hardware}
 
