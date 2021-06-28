@@ -183,42 +183,43 @@ const GridItem = ({ metric }) => {
       </span>
     </StatRow>
   )
+
   console.log(line.current.value)
-  const isLoading1 = !(line.current.value.length > 0)
+  let isLoading1 = true
+  if (line.current.value != undefined) {
+    isLoading1 = !(line.current.value.length > 0)
+  }
+
   // const isLoading1 = true
   const chart = line.hasError ? (
     <ErrorMessage />
   ) : isLoading1 ? (
     <LoadingMessage />
   ) : (
-    <div>
-      {line.current.value.length > 0 && (
-        <AreaChart width={700} height={200} data={line.current.value}>
-          <defs>
-            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
-              <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-            </linearGradient>
-            <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
-            </linearGradient>
-          </defs>
+    <AreaChart width={700} height={200} data={line.current.value}>
+      <defs>
+        <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
+          <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
+        </linearGradient>
+        <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
+          <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+        </linearGradient>
+      </defs>
 
-          <Area
-            type="monotone"
-            dataKey="uv"
-            stroke="#8884d8"
-            fillOpacity={0.3}
-            fill="url(#colorUv)"
-            fillOpacity="0.2"
-            connectNulls={true}
-          />
+      <Area
+        type="monotone"
+        dataKey="uv"
+        stroke="#8884d8"
+        fillOpacity={0.3}
+        fill="url(#colorUv)"
+        fillOpacity="0.2"
+        connectNulls={true}
+      />
 
-          <XAxis dataKey="pv" />
-        </AreaChart>
-      )}
-    </div>
+      <XAxis dataKey="pv" />
+    </AreaChart>
   )
 
   return (
@@ -276,6 +277,8 @@ const StatsBoxGrid = () => {
     hasError: false,
   })
 
+  const [defaultRender, setDefaultRender] = useState([])
+
   const formatPrice = (price) => {
     return new Intl.NumberFormat(intl.locale, {
       style: "currency",
@@ -310,9 +313,9 @@ const StatsBoxGrid = () => {
     }).format(nodes)
   }
   useEffect(() => {
-    // coinGeckoData("30")
-    // etherscanData(oneMonthAgo)
-    // defipalseData("1m")
+    coinGeckoData("30")
+    etherscanNodesData(oneMonthAgo)
+    defipulseData("1m")
 
     // Skip APIs when not in production
     if (process.env.NODE_ENV !== "production") {
@@ -415,6 +418,7 @@ const StatsBoxGrid = () => {
             valueAll,
             hasError: false,
           }
+          setDefaultRender(valueAll)
         } catch (error) {
           console.error(error)
           setTxs({
@@ -440,16 +444,11 @@ const StatsBoxGrid = () => {
     oneMonthAgo =
       today.getFullYear() + "-" + today.getMonth() + "-" + (today.getDate() - 1)
   const start = "2019-10-30"
-  useEffect(() => {
-    coinGeckoData("30")
-  }, [])
-
-  useEffect(() => {
-    etherscanNodesData(oneMonthAgo)
-  }, [])
-  useEffect(() => {
-    defipulseData("1m")
-  }, [])
+  // useEffect(() => {
+  //   coinGeckoData("30")
+  //   etherscanNodesData(oneMonthAgo)
+  //   defipulseData("1m")
+  // }, [])
 
   const coinGeckoData = async (mode) => {
     let priceData = []
@@ -471,6 +470,7 @@ const StatsBoxGrid = () => {
         value,
         hasError: false,
       }
+      setDefaultRender(value)
       // console.log(coingecko.value, value)
     } catch (error) {
       console.error(error)
@@ -501,6 +501,7 @@ const StatsBoxGrid = () => {
         value,
         hasError: false,
       }
+      setDefaultRender(value)
       // console.log(coingecko.value, value)
     } catch (error) {
       console.error(error)
@@ -514,22 +515,32 @@ const StatsBoxGrid = () => {
   const defipulseData = async (mode2) => {
     let valuelockedData = []
 
-    let defipulseUrl = `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=9ea611a770bebe40246e9c3042d6e90a83a641a2748cbf4aec964cb7c41b&period=${mode2}&length=days`
+    let defipulseUrl = `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=9ea611a770bebe40246e9c3042d6e90a83a641a2748cbf4aec964cb7c41&period=${mode2}&length=days`
     try {
       const response = await axios.get(defipulseUrl)
-      for (let i = 1; i <= response.data.length; i++) {
-        valuelockedData.push({
-          name: " Page A",
-          uv: response.data[response.data.length - i]["tvlUSD"] / 1000000000,
-          pv: response.data.length - i,
-          amt: 2400,
-        })
-      }
-
-      const value = valuelockedData
-      defipulse.current = {
-        value,
-        hasError: false,
+      console.log(response)
+      if (response.data) {
+        for (let i = 1; i <= response.data.length; i++) {
+          valuelockedData.push({
+            name: " Page A",
+            uv: response.data[response.data.length - i]["tvlUSD"] / 1000000000,
+            pv: response.data.length - i,
+            amt: 2400,
+          })
+        }
+        const value = valuelockedData
+        defipulse.current = {
+          value,
+          hasError: false,
+        }
+        setDefaultRender(value)
+      } else {
+        const value = valuelockedData
+        defipulse.current = {
+          value: [],
+          hasError: true,
+        }
+        setDefaultRender(value)
       }
     } catch (error) {
       console.error(error)
