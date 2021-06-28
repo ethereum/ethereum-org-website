@@ -54,6 +54,7 @@
     "react-icons": "^4.1.0",
     "react-instantsearch-dom": "^6.6.0",
     "react-select": "^4.3.0",
+    "recharts": "^2.0.9",
     "styled-components": "^5.1.1",
     "styled-system": "^5.1.5"
   },
