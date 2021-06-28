@@ -191,12 +191,17 @@ const GridItem = ({ metric }) => {
   }
 
   // const isLoading1 = true
-  const chart = line.hasError ? (
+  const chart = line.current.hasError ? (
     <ErrorMessage />
   ) : isLoading1 ? (
     <LoadingMessage />
   ) : (
-    <AreaChart width={700} height={200} data={line.current.value}>
+    <AreaChart
+      width={720}
+      height={200}
+      data={line.current.value}
+      margin={{ left: -5 }}
+    >
       <defs>
         <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
           <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -218,7 +223,7 @@ const GridItem = ({ metric }) => {
         connectNulls={true}
       />
 
-      <XAxis dataKey="pv" />
+      <XAxis dataKey="pv" axisLine={false} tick={false} />
     </AreaChart>
   )
 
@@ -428,6 +433,7 @@ const StatsBoxGrid = () => {
             value: [],
             hasError: true,
           }
+          setDefaultRender([])
         }
       }
       fetchTxCount()
@@ -478,6 +484,7 @@ const StatsBoxGrid = () => {
         value: [],
         hasError: true,
       }
+      setDefaultRender([])
     }
   }
 
@@ -509,13 +516,14 @@ const StatsBoxGrid = () => {
         value: [],
         hasError: true,
       }
+      setDefaultRender([])
     }
   }
 
   const defipulseData = async (mode2) => {
     let valuelockedData = []
 
-    let defipulseUrl = `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=9ea611a770bebe40246e9c3042d6e90a83a641a2748cbf4aec964cb7c41&period=${mode2}&length=days`
+    let defipulseUrl = `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=ac8a88c787d9db8dfe0951199ae76fd73538d6bee9fef57c7911cc280364&period=${mode2}&length=days`
     try {
       const response = await axios.get(defipulseUrl)
       console.log(response)
@@ -548,6 +556,7 @@ const StatsBoxGrid = () => {
         value: [],
         hasError: true,
       }
+      setDefaultRender([])
     }
   }
 
