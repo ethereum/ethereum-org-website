@@ -168,23 +168,21 @@ const ButtonToggle = styled(Button)`
 
 const GridItem = ({ metric }) => {
   const { title, description, state, line, buttonContainer } = metric
-  // console.log(!state.value, "state")
-  // console.log(state.value, "state")
-  // const isLoading = !state.value
-  // const value = state.hasError ? (
-  //   <ErrorMessage />
-  // ) : isLoading ? (
-  //   <LoadingMessage />
-  // ) : (
-  //   <StatRow>
-  //     <span>
-  //       {state.value}{" "}
-  //       <Tooltip content={tooltipContent(metric)}>
-  //         <StyledIcon name="info" />
-  //       </Tooltip>
-  //     </span>
-  //   </StatRow>
-  // )
+  const isLoading = !state.value
+  const value = state.hasError ? (
+    <ErrorMessage />
+  ) : isLoading ? (
+    <LoadingMessage />
+  ) : (
+    <StatRow>
+      <span>
+        {state.value}{" "}
+        <Tooltip content={tooltipContent(metric)}>
+          <StyledIcon name="info" />
+        </Tooltip>
+      </span>
+    </StatRow>
+  )
   // console.log(!(line.value.length > 0), "line")
   console.log(line.value, "line")
   const isLoading1 = !(line.value.length > 0)
@@ -205,18 +203,16 @@ const GridItem = ({ metric }) => {
           <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
         </linearGradient>
       </defs>
-      {line.value.length > 0 && (
-        <Area
-          type="monotone"
-          dataKey="uv"
-          stroke="#8884d8"
-          fillOpacity={0.3}
-          fill="url(#colorUv)"
-          fillOpacity="0.2"
-          connectNulls={true}
-        />
-      )}
-      <XAxis dataKey="name" />
+      <Area
+        type="monotone"
+        dataKey="uv"
+        stroke="#8884d8"
+        fillOpacity={0.3}
+        fill="url(#colorUv)"
+        fillOpacity="0.2"
+        connectNulls={true}
+      />
+      {line.value.length > 0 && <XAxis dataKey="name" />}
     </AreaChart>
   )
   console.log(line.value, "line")
@@ -229,7 +225,7 @@ const GridItem = ({ metric }) => {
       </div>
       <Lines>{chart}</Lines>
       {/* <ButtonContainer>{buttonContainer}</ButtonContainer> */}
-      {/* <Value>{value}</Value> */}
+      <Value>{value}</Value>
     </Box>
   )
 }
@@ -434,7 +430,7 @@ const StatsBoxGrid = () => {
           })
         }
       }
-      // fetchPrice(30)
+      fetchPrice()
 
       const fetchNodes = async () => {
         try {
@@ -452,7 +448,7 @@ const StatsBoxGrid = () => {
           })
         }
       }
-      // fetchNodes()
+      fetchNodes()
 
       const fetchTotalValueLocked = async () => {
         try {
@@ -470,7 +466,7 @@ const StatsBoxGrid = () => {
           })
         }
       }
-      // fetchTotalValueLocked()
+      fetchTotalValueLocked()
 
       const fetchTxCount = async () => {
         try {
@@ -491,9 +487,8 @@ const StatsBoxGrid = () => {
           })
         }
       }
-      // fetchTxCount()
+      fetchTxCount()
     }
-    // etherscanData(oneMonthAgo)
   }, [])
 
   // var today = new Date(),
@@ -865,7 +860,7 @@ const StatsBoxGrid = () => {
       ),
       line: coingecko,
       // buttonContainer: <ToggleGroupPrice />,
-      // state: ethPrice,
+      state: ethPrice,
     },
     {
       apiProvider: "Etherscan",
@@ -876,7 +871,7 @@ const StatsBoxGrid = () => {
       ),
       line: coingecko,
       // buttonContainer: <ToggleGroupPrice />,
-      // state: txs,
+      state: txs,
     },
     {
       apiProvider: "DeFi Pulse",
@@ -889,7 +884,7 @@ const StatsBoxGrid = () => {
       ),
       line: coingecko,
       // buttonContainer: <ToggleGroupPrice />,
-      // state: valueLocked,
+      state: valueLocked,
     },
     {
       apiProvider: "Etherscan",
@@ -900,7 +895,7 @@ const StatsBoxGrid = () => {
       ),
       line: coingecko,
       // buttonContainer: <ToggleGroupPrice />,
-      // state: nodes,
+      state: nodes,
     },
   ]
 
