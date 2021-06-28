@@ -113,7 +113,6 @@ This table summarises the different clients. All of them are actively worked on 
 | [OpenEthereum](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, macOS | Mainnet, Kovan, Ropsten, and more          | Warp, Full              | Archive, Pruned |
 | [Nethermind](http://nethermind.io/)                          | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, and more | Fast, Full              | Archive, Pruned |
 | [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, and Görli       | Fast, Full              | Archive, Pruned |
-| [Trinity](https://trinity.ethereum.org/)                     | Python   | Linux, macOS          | Mainnet, Görli, Ropsten, and more          | Full, Beam, Fast/Header | Archive         |
 | [Erigon](https://github.com/ledgerwatch/erigon)              | Go / Multi | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Full                  | Archive, Pruned |
 
 
@@ -169,10 +168,6 @@ You define the type of sync when you get set up, like so:
 **Setting up light sync in [GETH](https://geth.ethereum.org/)**
 
 `geth --syncmode "light"`
-
-**Setting up header sync in Trinity**
-
-`trinity --sync-from-checkpoint eth://block/byhash/0xa65877df954e1ff2012473efee8287252eee956c0d395a5791f1103a950a1e21?score=15,835,269,727,022,672,760,774`
 
 ## Hardware {#hardware}
 
