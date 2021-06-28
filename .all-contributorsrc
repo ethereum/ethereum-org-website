@@ -4072,6 +4072,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "rorychristianmurray",
+      "name": "Rory",
+      "avatar_url": "https://avatars.githubusercontent.com/u/21082125?v=4",
+      "profile": "http://rorymurray.io",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
