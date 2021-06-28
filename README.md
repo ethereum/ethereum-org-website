@@ -1024,6 +1024,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://www.gsthina.me"><img src="https://avatars.githubusercontent.com/u/8844334?v=4?s=100" width="100px;" alt=""/><br /><sub><b>G Surendar Thina</b></sub></a><br /><a href="#content-gsthina" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/scotato"><img src="https://avatars.githubusercontent.com/u/5290015?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Scott Dodge</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ascotato" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://arturcygan.com/"><img src="https://avatars.githubusercontent.com/u/4679721?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Artur Cygan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aarcz" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="http://rorymurray.io"><img src="https://avatars.githubusercontent.com/u/21082125?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rory</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Arorychristianmurray" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
