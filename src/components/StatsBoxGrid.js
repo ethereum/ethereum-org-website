@@ -193,16 +193,17 @@ const GridItem = ({ metric }) => {
     <LoadingMessage />
   ) : (
     <AreaChart width={700} height={200} data={line.value}>
-      <defs>
-        <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
-          <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-        </linearGradient>
-        <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-          <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
-        </linearGradient>
-      </defs>
+      <Area
+        type="monotone"
+        dataKey="uv"
+        stroke="#8884d8"
+        fillOpacity={0.3}
+        fill="red"
+        fillOpacity="0.2"
+        connectNulls={true}
+      />
+
+      <XAxis dataKey="pv" />
     </AreaChart>
   )
   console.log(line.value, "line")
