@@ -184,24 +184,19 @@ const GridItem = ({ metric }) => {
     </StatRow>
   )
 
-  console.log(line.current.value)
+  // console.log(line.current.value)
   let isLoading1 = true
-  if (line.current.value != undefined) {
-    isLoading1 = !(line.current.value.length > 0)
+  if (line.value != undefined) {
+    isLoading1 = !(line.value.length > 0)
   }
 
   // const isLoading1 = true
-  const chart = line.current.hasError ? (
+  const chart = line.hasError ? (
     <ErrorMessage />
   ) : isLoading1 ? (
     <LoadingMessage />
   ) : (
-    <AreaChart
-      width={720}
-      height={200}
-      data={line.current.value}
-      margin={{ left: -5 }}
-    >
+    <AreaChart width={720} height={200} data={line.value} margin={{ left: -5 }}>
       <defs>
         <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
           <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -273,7 +268,7 @@ const StatsBoxGrid = () => {
     value: [],
     hasError: false,
   })
-  const etherscanTransactions = useRef({
+  const [etherscanTransactions, setetherscanTransactions] = useState({
     value: [],
     hasError: false,
   })
@@ -419,10 +414,10 @@ const StatsBoxGrid = () => {
             hasError: false,
           })
           const valueAll = transactionsData
-          etherscanTransactions.current = {
+          setetherscanTransactions({
             valueAll,
             hasError: false,
-          }
+          })
           setDefaultRender(valueAll)
         } catch (error) {
           console.error(error)
