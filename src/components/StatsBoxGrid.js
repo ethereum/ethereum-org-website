@@ -318,9 +318,9 @@ const StatsBoxGrid = () => {
     }).format(nodes)
   }
   useEffect(() => {
-    coinGeckoData("30")
-    etherscanNodesData(oneMonthAgo)
-    defipulseData("1m")
+    // coinGeckoData("30")
+    // etherscanNodesData(oneMonthAgo)
+    // defipulseData("1m")
 
     // Skip APIs when not in production
     if (process.env.NODE_ENV !== "production") {
