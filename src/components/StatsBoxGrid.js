@@ -491,7 +491,7 @@ const StatsBoxGrid = () => {
   const etherscanNodesData = async (mode1) => {
     let nodesData = []
 
-    let etherscanNodesUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=2JD9ZCGGPST7VHY8FHW3NZKI1D34VQR4I5`
+    let etherscanNodesUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=N94JWP2M9229I9UAP48EXSAH9RPW4874CG`
     try {
       const response = await axios.get(etherscanNodesUrl)
       for (const i in response.data.result) {
@@ -569,13 +569,14 @@ const StatsBoxGrid = () => {
   function ToggleGroupPrice() {
     return (
       <div>
-        {types.map((type) => (
+        {types.map((type, idx) => (
           <ButtonToggle
             active={priceActive === type}
             onClick={() => {
               coinGeckoData(coingeckoTypes[type])
               setPriceActive(type)
             }}
+            key={idx}
           >
             {defaultTypes[type]}
           </ButtonToggle>
@@ -588,13 +589,14 @@ const StatsBoxGrid = () => {
   function ToggleGroupValueLocked() {
     return (
       <div>
-        {types.map((type) => (
+        {types.map((type, idx) => (
           <ButtonToggle
             active={valueLockedActive === type}
             onClick={() => {
               defipulseData(defipulseTypes[type])
               setValueLockedActive(type)
             }}
+            key={idx}
           >
             {defaultTypes[type]}
           </ButtonToggle>
@@ -607,13 +609,14 @@ const StatsBoxGrid = () => {
   function ToggleGroupNodes() {
     return (
       <div>
-        {types.map((type) => (
+        {types.map((type, idx) => (
           <ButtonToggle
             active={nodesActive === type}
             onClick={() => {
               etherscanNodesData(etherscanTypes[type])
               setNodesActive(type)
             }}
+            key={idx}
           >
             {defaultTypes[type]}
           </ButtonToggle>
@@ -625,12 +628,13 @@ const StatsBoxGrid = () => {
   function ToggleGroupTransactions() {
     return (
       <div>
-        {types.map((type) => (
+        {types.map((type, idx) => (
           <ButtonToggle
             active={transactionsActive === type}
             onClick={() => {
               setTransactionsActive(type)
             }}
+            key={idx}
           >
             {defaultTypes[type]}
           </ButtonToggle>
