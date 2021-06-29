@@ -653,8 +653,8 @@ const StatsBoxGrid = () => {
       description: (
         <Translation id="page-index-network-stats-eth-price-explainer" />
       ),
-      line: coingecko,
-      buttonContainer: <ToggleGroupPrice />,
+      line: etherscanTransactions,
+      buttonContainer: <ToggleGroupTransactions />,
       state: ethPrice,
     },
     {
@@ -677,8 +677,8 @@ const StatsBoxGrid = () => {
       description: (
         <Translation id="page-index-network-stats-value-defi-explainer" />
       ),
-      line: defipulse,
-      buttonContainer: <ToggleGroupValueLocked />,
+      line: etherscanTransactions,
+      buttonContainer: <ToggleGroupTransactions />,
       state: valueLocked,
     },
     {
@@ -688,8 +688,8 @@ const StatsBoxGrid = () => {
       description: (
         <Translation id="page-index-network-stats-nodes-explainer" />
       ),
-      line: etherscanNodes,
-      buttonContainer: <ToggleGroupNodes />,
+      line: etherscanTransactions,
+      buttonContainer: <ToggleGroupTransactions />,
       state: nodes,
     },
   ]
