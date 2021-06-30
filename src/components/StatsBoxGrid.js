@@ -186,17 +186,22 @@ const GridItem = ({ metric }) => {
 
   // console.log(line.current.value)
   let isLoading1 = true
-  if (line.value != undefined) {
-    isLoading1 = !(line.value.length > 0)
+  if (line.current.value !== undefined) {
+    isLoading1 = !(line.current.value.length > 0)
   }
 
   // const isLoading1 = true
-  const chart = line.hasError ? (
+  const chart = line.current.hasError ? (
     <ErrorMessage />
   ) : isLoading1 ? (
     <LoadingMessage />
   ) : (
-    <AreaChart width={720} height={200} data={line.value} margin={{ left: -5 }}>
+    <AreaChart
+      width={720}
+      height={200}
+      data={line.current.value}
+      margin={{ left: -5 }}
+    >
       <defs>
         <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
           <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
@@ -268,7 +273,7 @@ const StatsBoxGrid = () => {
     value: [],
     hasError: false,
   })
-  const [etherscanTransactions, setetherscanTransactions] = useState({
+  const etherscanTransactions = useRef({
     value: [],
     hasError: false,
   })
@@ -393,13 +398,13 @@ const StatsBoxGrid = () => {
       fetchTotalValueLocked()
 
       const fetchTxCount = async () => {
-        let transactionsData = []
+        // let transactionsData = []
         try {
           const { result } = await getData("/.netlify/functions/txs")
           // result: [{UTCDate: string, unixTimeStamp: string, transactionCount: number}, {...}]
           console.log(result)
           for (const i in result) {
-            transactionsData.push({
+            etherscanTransactions.current.value.push({
               name: "Page A",
               uv: result[i]["transactionCount"],
               pv: result[i]["UTCDate"],
@@ -413,12 +418,12 @@ const StatsBoxGrid = () => {
             value,
             hasError: false,
           })
-          const valueAll = transactionsData
-          setetherscanTransactions({
-            valueAll,
-            hasError: false,
-          })
-          setDefaultRender(valueAll)
+          // const valueAll = transactionsData
+          // setetherscanTransactions({
+          //   valueAll,
+          //   hasError: false,
+          // })
+          setDefaultRender(value)
         } catch (error) {
           console.error(error)
           setTxs({
