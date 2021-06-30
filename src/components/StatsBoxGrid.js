@@ -184,9 +184,9 @@ const GridItem = ({ metric }) => {
     </StatRow>
   )
 
-  // console.log(line.current.value)
+  console.log(line)
   let isLoading1 = true
-  if (line.current !== undefined) {
+  if (line !== undefined) {
     isLoading1 = !(line.current.value.length > 0)
   }
 
