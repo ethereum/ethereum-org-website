@@ -186,7 +186,7 @@ const GridItem = ({ metric }) => {
 
   // console.log(line.current.value)
   let isLoading1 = true
-  if (line.current.value !== undefined) {
+  if (line.current !== undefined) {
     isLoading1 = !(line.current.value.length > 0)
   }
 
