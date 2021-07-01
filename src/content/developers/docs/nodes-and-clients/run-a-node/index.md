@@ -33,7 +33,7 @@ To simplify let's think about running a node on both a local physical machine an
 
 - Cloud
   - Providers offer high server uptime, static public IP addresses
-  - Getting dedicated or virtual server can be more comfortable then building your own
+  - Getting dedicated or virtual server can be more comfortable than building your own
   - Trade off is trusting a third party - server provider
   - Because of required storage size for full node, price of a rented server might get high
 - Own hardware
