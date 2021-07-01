@@ -1026,6 +1026,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://arturcygan.com/"><img src="https://avatars.githubusercontent.com/u/4679721?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Artur Cygan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aarcz" title="Bug reports">🐛</a></td>
     <td align="center"><a href="http://rorymurray.io"><img src="https://avatars.githubusercontent.com/u/21082125?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rory</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Arorychristianmurray" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/cnnrmnn"><img src="https://avatars.githubusercontent.com/u/34930543?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Connor Mann</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Acnnrmnn" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://ph4ni.github.io"><img src="https://avatars.githubusercontent.com/u/29685411?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Phanindra</b></sub></a><br /><a href="#content-ph4ni" title="Content">🖋</a></td>
   </tr>
 </table>
 
