@@ -1414,15 +1414,13 @@ The issuance model will be as follows:
 - 0.26x the total amount sold will be allocated to miners per year
   forever after that point.
 
-Group At launch After 1 year After 5 years
-
----
-
-Currency units 1.198X 1.458X 2.498X
-Purchasers 83.5% 68.6% 40.0%
-Reserve spent pre-sale 8.26% 6.79% 3.96%
-Reserve used post-sale 8.26% 6.79% 3.96%
-Miners 0% 17.8% 52.0%
+| Group | At launch | After 1 year | After 5 years|
+|-------|-----------|--------------|--------------|
+| Currency units | 1.198X | 1.458X | 2.498X |
+| Purchasers | 83.5% | 68.6% | 40.0% |
+| Reserve spent pre-sale | 8.26% | 6.79% | 3.96% |
+| Reserve used post-sale | 8.26% | 6.79% | 3.96% |
+| Miners | 0% | 17.8% | 52.0% |
 
 **Long-Term Supply Growth Rate (percent)**
 
