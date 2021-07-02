@@ -306,6 +306,11 @@ exports.createSchemaCustomization = ({ actions }) => {
       incomplete: Boolean
       template: String
       summaryPoints: [String!]!
+      position: String
+      compensation: String
+      location: String
+      type: String
+      link: String
     }
     type Eth2BountyHuntersCsv implements Node {
       username: String,
