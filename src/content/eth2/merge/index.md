@@ -48,8 +48,11 @@ These improvements all have a place in Eth2 so it’s likely that their progress
 
 ## After the merge {#after-the-merge}
 
-This will signal the end of proof-of-work for Ethereum and start the era of a more sustainable, eco-friendly Ethereum. 
-At this point Ethereum will be one step closer to achieving the full scale, security and sustainability outlined in its [Eth2 vision](/eth2/vision/).
+This will signal the end of proof-of-work for Ethereum and start the era of a more sustainable, eco-friendly Ethereum. At this point Ethereum will be one step closer to achieving the full scale, security and sustainability outlined in its [Eth2 vision](/eth2/vision/).
+
+It is important to note that an implementation goal of the merge is simplicity in order to expedite the transition from proof-of-work to proof-of-stake. Developers are focusing their efforts on this transition, and minimizing additional features that could delay this goal. 
+
+**This means a few features, such as the ability to withdraw staked ETH, will have to wait a little longer after the merge is complete.** Plans include a post-merge "cleanup" upgrade to address these features, which is expected to happen very soon after the merge is completed.
 
 ## Relationship between upgrades {#relationship-between-upgrades}
 
@@ -60,6 +63,12 @@ The Eth2 upgrades are all somewhat interrelated. So let’s recap how the merge 
 Once the merge happens, stakers will be assigned to validate the Ethereum mainnet. [Mining](/developers/docs/consensus-mechanisms/pow/mining/) will no longer be required so miners will likely invest their earnings into staking in the new proof-of-stake system.
 
 <ButtonLink to="/eth2/beacon-chain/">The Beacon Chain</ButtonLink>
+
+### The merge and the post-merge cleanup {#merge-and-post-merge-cleanup}
+
+Immediately after the merge, some features such as withdrawing staked ETH, will not yet be supported. These are planned for a separate upgrade to follow shortly after the merge.
+
+Stay up-to-date with the [EF Research and Development Blog](https://blog.ethereum.org/category/research-and-development/). For those curious, learn more about [What Happens After the Merge](https://youtu.be/7ggwLccuN5s?t=101), presented by Vitalik at the April 2021 ETHGlobal event. 
 
 ### The merge and shard chains {#docking-and-shard-chains}
 
