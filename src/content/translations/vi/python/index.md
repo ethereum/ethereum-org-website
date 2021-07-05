@@ -41,8 +41,8 @@ Cần một hướng dẫn cơ bản hơn? Tham khảo [ethereum.org/learn](/vi/
 
 ## Các mẫu sử dụng nâng cao {#advanced-use-patterns}
 
-- [Biên dịch, triển khai và gọi hợp đồng thông minh Ethereum bằng Python](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [Phân tích Hợp đồng thông minh Solidity với Slither](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
+- [Biên dịch, triển khai và gọi hợp đồng thông minh Ethereum bằng Python](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
+- [Phân tích Hợp đồng thông minh Solidity với Slither](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 
 ## Các dự án và công cụ Python {#python-projects-and-tools}
 

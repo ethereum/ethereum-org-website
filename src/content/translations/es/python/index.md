@@ -41,8 +41,8 @@ Usa Ethereum para crear aplicaciones descentralizadas (o "dapps") mediante los b
 
 ## Patrones de uso avanzado {#advanced-use-patterns}
 
-- [Compilar, desplegar y llamar a contratos inteligentes de Ethereum mediante Python](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [Analizar contratos inteligentes de Solifity con Slither](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
+- [Compilar, desplegar y llamar a contratos inteligentes de Ethereum mediante Python](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
+- [Analizar contratos inteligentes de Solifity con Slither](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 
 ## Proyectos y herramientas de Python {#python-projects-and-tools}
 

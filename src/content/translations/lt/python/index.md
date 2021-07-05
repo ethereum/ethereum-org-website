@@ -41,8 +41,8 @@ Norėtumėte pradėti nuo ko nors paprastesnio? Apsilankykite [ethereum.org/lear
 
 ## Pažangaus naudojimo modeliai {#advanced-use-patterns}
 
-- [Ethereum išmaniųjų sutarčių sudarymas, vykdymas ir pavadinimo suteikimas naudojant Python](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [Analizuoti Solidity išmaniąsias sutartis su Slither](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
+- [Ethereum išmaniųjų sutarčių sudarymas, vykdymas ir pavadinimo suteikimas naudojant Python](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
+- [Analizuoti Solidity išmaniąsias sutartis su Slither](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 
 ## Python projektai ir įrankiai {#python-projects-and-tools}
 

@@ -40,8 +40,8 @@ sidebar: true
 
 ## 高级使用模式 {#advanced-use-patterns}
 
-- [使用 Python 编译、部署和调用 Ethereum 智能合约](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [使用 Slither 分析 Solidity 智能合约](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
+- [使用 Python 编译、部署和调用 Ethereum 智能合约](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
+- [使用 Slither 分析 Solidity 智能合约](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 
 ## Python 项目和工具 {#python-projects-and-tools}
 
