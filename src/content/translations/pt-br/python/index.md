@@ -41,8 +41,8 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 
 ## Padrões de uso avançado {#advanced-use-patterns}
 
-- [Compilando, implantando e chamando Smart Contracts Ethereum utilizando Python](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [Analisando Smart Contracts em Solidity usando Slither](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
+- [Compilando, implantando e chamando Smart Contracts Ethereum utilizando Python](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
+- [Analisando Smart Contracts em Solidity usando Slither](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 
 ## Projetos e Ferramentas em Python {#python-projects-and-tools}
 

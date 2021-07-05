@@ -41,8 +41,8 @@ Potřebujete nejdříve úplně základní informace? Podívejte se na [ethereum
 
 ## Pokročilé používání {#advanced-use-patterns}
 
-- [Kompilace, nasazování a volání chytrých kontraktů pro Ethereum pomocí Pythonu](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [Analýza chytrých kontraktů v Solidity se Slitherem](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
+- [Kompilace, nasazování a volání chytrých kontraktů pro Ethereum pomocí Pythonu](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
+- [Analýza chytrých kontraktů v Solidity se Slitherem](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 
 ## Projekty a nástroje v Pythonu {#python-projects-and-tools}
 
