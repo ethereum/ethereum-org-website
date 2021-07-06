@@ -48,7 +48,7 @@ Cuando se envían las primeras cadenas de fragmentos, solo proporcionarán datos
 
 Las acumulaciones o "rollups" son una tecnología de "capa 2" que existe en la actualidad. Permiten que las dapps agrupen o “acumulen” transacciones en una única transacción fuera de la cadena, generen una prueba criptográfica y luego la envíen a la cadena. Esto reduce los datos necesarios para una transacción. Combina esto con toda la disponibilidad de datos adicional proporcionada por los fragmentos y obtén 100.000 transacciones por segundo.
 
-[Más sobre las acumulaciones](/developers/docs/layer-2-scaling/)
+[Más sobre las acumulaciones](/developers/docs/scaling/layer-2-rollups/#rollups)
 
 ## Cadenas de fragmentos versión 2: ejecución de código {#code-execution}
 

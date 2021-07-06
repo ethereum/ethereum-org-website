@@ -48,7 +48,7 @@ Când vor fi livrate primele lanțuri de fragmente, acestea vor furniza doar dat
 
 Rollup-urile sunt o tehnologie de „nivel 2” care există astăzi. Acestea permit aplicațiilor descentralizate (dapps) să grupeze („roll up”) tranzacții într-o singură tranzacție în afara lanțului, să genereze o dovadă criptografică și apoi să o trimită lanțului. Acest lucru reduce datele necesare executării unei tranzacții. Combină acest lucru cu disponibilitatea tuturor datelor suplimentare oferită de fragmente și obții 100.000 de tranzacții pe secundă.
 
-[Mai multe despre rollup-uri](/developers/docs/layer-2-scaling/)
+[Mai multe despre rollup-uri](/developers/docs/scaling/layer-2-rollups/#rollups-and-sidechains)
 
 ## Lanțuri de fragmente versiunea 2: executarea codului {#code-execution}
 

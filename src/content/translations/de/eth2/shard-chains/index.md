@@ -48,7 +48,7 @@ Wenn die ersten Shard Chains implementiert sein werden, werden diese zunächst e
 
 Rollups sind eine "Layer 2"-Technologie, die heute bereits existiert. Sie erlauben dApps, Transaktionen zu bündeln oder sie mittels "Roll up" in eine einzelne Transaktions-Off-Chain zu vereinen, einen kryptographischen Beweis zu erstellen und diesen dann zur Chain zu senden. Dies reduziert die Datenmenge, die für eine Transaktion benötigt wird. Kombiniert mit der zusäzlichen Datenverfügbarkeit durch die Shards erhält man 100.000 Transaktionen pro Sekunde.
 
-[Mehr zu Rollups](/developers/docs/layer-2-scaling/)
+[Mehr zu Rollups](/developers/docs/scaling/layer-2-rollups/#rollups)
 
 ## Shard Chains Version 2: Codeausführung {#code-execution}
 
