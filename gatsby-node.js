@@ -288,7 +288,8 @@ exports.onCreatePage = ({ page, actions }) => {
         ...page.context,
         isOutdated,
         //display TranslationBanner for translation-component pages that are still in English
-        isContentEnglish: langVersion < 2 && !page.component.includes('/developers/index.js')
+        isContentEnglish:
+          langVersion < 2 && !page.component.includes("/developers/index.js"),
       },
     })
   }
@@ -306,11 +307,6 @@ exports.createSchemaCustomization = ({ actions }) => {
       incomplete: Boolean
       template: String
       summaryPoints: [String!]!
-      position: String
-      compensation: String
-      location: String
-      type: String
-      link: String
     }
     type Eth2BountyHuntersCsv implements Node {
       username: String,
