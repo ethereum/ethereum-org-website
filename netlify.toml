@@ -293,6 +293,9 @@
 [[redirects]]
   from = "/*/about/web-developer"
   to = "/:splat/about/#open-jobs"
+[[redirects]]
+  from = "/*/about/community-lead"
+  to = "/:splat/about/#open-jobs"
 
 # A redirect rule with all the supported properties
 # [[redirects]]
