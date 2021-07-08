@@ -81,9 +81,7 @@ Different transactions in the same block can have very different gas prices.
 ### The London Update {#gas-price-london-update}
 
 Starting with the London update, every block has a base fee, the minimum per gas price for inclusion in this block. The base fee is calculated by a formula
-that compares the size of the previous block (the amount of gas used for all the transactions) with a target size. If the block size is higher than the target, there
-is more demand for inclusion in the blockchain than supply so the base fee, is increased. If the block size is lower than the target then there is more supply 
-of block space than demand, so the base fee is decreased. This base fee is "burned", removing it from circulation.
+that compares the size of the previous block (the amount of gas used for all the transactions) with a target size. This upgrade will double the allowable block size, while targeting blocks to be 50% full. If the block size is higher than the target, there is more demand for inclusion in the blockchain than targetted supply, so the base fee in the subsequent block is increased. If the block size is lower than the target then there is less demand for block space than targetted supply, so the base fee is subsequently decreased. The amount the base fee is adjusted by is proportional to how far from the target the block size is. This base fee is "burned", removing it from circulation. 
 
 Transactions can either specify a gas price using the old mechanism, or specify two other parameters:
 
@@ -114,6 +112,7 @@ to how much they need the transaction to happen, without having to worry that th
 If you are interested you can read the exact 
 [EIP-1559 specifications](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md).
 
+Continue down the rabbit hole with these [EIP-1559 Resources](https://hackmd.io/@timbeiko/1559-resources).
 
 ## Strategies for you to reduce gas costs {#strategies-for-you-to-reduce-gas-costs}
 
