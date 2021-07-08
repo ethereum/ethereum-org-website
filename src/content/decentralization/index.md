@@ -15,13 +15,23 @@ summaryPoints:
 
 ## What's decentralization? {#what-is-decentralization}
 
-Decentralization is a way to create systems in which no individual or group can unilaterally make major decisions, especially not when it hurts the other participants. You can use this principle to build things in the fields of finance, architecture, art, communications, government, and — you guessed it — computer science.
+Decentralized systems are everywhere. They're in nature, finance, architecture, art, communications, government, and — you guessed it — computer science. 
 
-In basic terms: Nobody is in charge, but things still work. Rules without rulers.
+Decentralization is basically when no individual or group can unilaterally make major decisions, especially not when it hurts the other participants. In basic terms: Nobody is in charge, but things still work. Rules without rulers.
 
-For example, no one person controls the Ethereum network. It works based on the rules set out in the code/protocol which no single person has the authority to change. In contrast, Amazon Web Services could decide to stop providing server space to any of its clients upon suspected violation of any of a number of terms in its draconian and mutable user-agreement contract.
+If it sounds familiar, it should. Apart from the fact that there are tons of examples, decentralization-centralization is a spectrum. Most systems have some aspect of both.
 
-In any case, here are some of the characteristics that decentralized systems might have:
+### Basic example of decentralization {#decentralization-example}
+
+The Ethereum network is largely decentralized. That is, it's built and implemented to succeed without centralized control or central points of failure. 
+
+Ethereum operation is based on rules set out in the protocol (rules that no single person or organization has the authority to change). Computing power comes from a network of individuals and groups running the software on their own computers.
+
+Compare this to any centralized service (Amazon, Google, or Facebook, for example). You should see the difference immediately. The company in control of the service can make decisions about who gets to use it, how much things should cost, where the hardware is located, how to perform processes, and so on.
+
+### Common aspects of decentralized systems {#elements-of-decentralization}
+
+There are many ways to define decentralization. If you're trying to determine how decentralized something is, look for the following attributes:
 
 - **Resistant to censorship**: Reduced ability to unilaterally control what gets published.
 - **High security**: Open systems are built to resist inevitable bad actors.
@@ -32,7 +42,7 @@ In any case, here are some of the characteristics that decentralized systems mig
 - **Deterministic**: The rules produce the same outcome given the same input.
 - **Public records**: A history of how the system has operated is held by multiple participants.
 
-Decentralization is a question of degrees. For a short and sweet explanation, check out this 2-minute video by [Andreas Antonopoulos](https://www.youtube.com/watch?v=NG4u55e3SYo). His RIPCORD analogy is a good rule of thumb for judging how open and decentralized a blockchain project really is. 
+For a short and sweet explanation, check out this 2-minute video by [Andreas Antonopoulos](https://www.youtube.com/watch?v=NG4u55e3SYo). His RIPCORD analogy is a good rule of thumb for judging how open and decentralized a blockchain project really is. 
 
 ## Why is decentralization important? {#why-decentralize}
 
@@ -105,7 +115,7 @@ You can find decentralized systems everywhere from ant colonies to blockchain pr
 
 Peer-to-peer systems are a classic internet example. Because users double as servers (providing computer power while using the services) these protocols are decentralized by default. Examples include BitTorrent and Skype. In fact, much of the underlying technology of the internet is based on [end-to-end networking](https://en.wikipedia.org/wiki/End-to-end_principle), an idea strongly related to peer-to-peer networks.
 
-You could say that it still works this way, but that some of the "ends" have become extremely powerful and popular. In other words, rather than talking directly with the devices of our friends, family members, and random internet people (something that is completely possible through direct peer-to-peer or highly decentralized architectures), we all talk to social media servers.
+It's still an end-to-end system in many respects. However, some of the "ends" have become extremely powerful and popular. In other words, rather than talking directly with the devices of our friends, family members, and random internet people (something that is completely possible through direct peer-to-peer or highly decentralized architectures), we all talk to social media servers.
 
 ## Decentralization in Ethereum {#ethereum-decentralized}
 
@@ -153,6 +163,8 @@ Conversely, most of the pro-Ethereum arguments come directly from the fact that 
 
 It basically comes down to whether controlling your money is worth your attention — whether obtaining a higher degree of freedom is worth learning something new. In the end, it's up to you to decide. 
 
+### A system under active development {#progress-ethereum}
+
 However, know that there are a lot of smart people who are dedicating themselves to making this technology easier for you to use. There is less need for confirmation, problem-solving, and configuration every day. If a decentralized system is simply too technical for you right now, check it out again soon. It's getting simpler every day, from a user's perspective.
 
 It also bears mentioning that you can be one of those smart people working on Ethereum. Perhaps the biggest pro-Ethereum argument out there is that your contributions matter. 
@@ -161,14 +173,22 @@ If you use a smart contract or transact on Ethereum, you're doing something to s
 
 ### Basic Ethereum safety {#safety-ethereum}
 
-Non-technical? Don't worry. The decentralized financial systems of the future will probably be easier to use than centralized finance is today. In the meantime, please take some basic steps to keep your funds safe when you're starting out on Ethereum:
+For now, if you learn about anything, learn about safety and security. It's imperative that you take some basic steps to keep your funds safe when you're starting out on Ethereum:
 
 - [Learn about how wallets work](https://ethereum.org/en/wallets/)
 - Confirm (before interacting with a smart contract) that your wallet or exchange account can interact with smart contracts
 - Triple-check destination addresses, even if you're sending things to yourself or to exchanges
 - Send small test transactions before sending big amounts
 - Understand the difference between pseudonymous and private (most blockchains are public, pseudonymous records)
-- Above all else, do not share private keys or mnemonic phrases with others. Not even if they're trying to help. 
+- Above all else, **back up and do not share** private keys or mnemonic phrases (long strings of random words) with others.
+
+The final part is the most important. To reiterate, your mnemonic is usually a 12-to-24-word phrase. These random word phrases represent the master keys to your funds and are **for your eyes only**. These should **only** ever be typed **directly into your wallet**, nowhere else. 
+
+If you lose your phrase, you lose access. Conversely, anyone who has it has access. It's as simple as that.
+
+Don't, **don't** share your secret passphrases. Not with customer service, not with friends, not with financial advisors, not with airport security, not with business partners, not with anyone. 
+
+There are secure ways to accomplish shared access or delegated management, such as using a multi-signature wallet or a smart contract. Just don't share your mnemonic passphrase.
 
 ## Decentralized systems can be more efficient {#efficiency-in-decentralization}
 
@@ -218,16 +238,20 @@ Let's look at a couple of examples.
 
 ### Example 1: United States Dollar coins {#usd-on-ethereum}
 
-For example, USDC is a United-States-Dollar-value cryptocurrency. It is "backed by fully reserved assets" (a phrase assumedly meant to communicate that it is fully backed by reserve assets). It is controlled in a relatively centralized way: via a permissioned consortium founded by two big corporations.
+We'll start with stablecoins. Stablecoins are digital assets designed to match the value of a (low-volatility) national currency.
 
-DAI is another dollar-value coin. DAI gets created when people deposit crypto assets in a program (a smart contract). That smart contract was developed by a group called [MakerDAO](https://makerdao.com/en/). People who hold the MKR asset get to vote on how the program behaves. It is far more decentralized than USDC.
+For example, USDC is a United-States-Dollar-value cryptocurrency. At the time of writing, its website claims that it is "backed by fully reserved assets" (a phrase assumedly meant to communicate that it is fully backed by reserve assets). It is controlled in a relatively centralized way: via a permissioned consortium founded by two big corporations.
 
-These two currencies seem similar at first glance. However, both the architectures behind them and the implications of using them are super different.
+DAI is another dollar-value coin. You create it by first depositing crypto assets with an automated program (a smart contract). After the deposit goes through, you can borrow DAI against your collateral.
 
-- USDC has some ties to centralized institutions. As such, those institutions offer convenience perks that might appeal to inexperienced cryptocurrency users.
-- DAI would be a good option for those who value decentralization and diversity in the cryptocurrency community, as DAI can be created by depositing a variety of different assets.
+DAI was/is developed by a group called [MakerDAO](https://makerdao.com/en/). For governance, people who hold the MKR asset get to vote on how the program behaves, fees for borrowing against various deposited assets, and so on. Overall, it's far more decentralized than USDC.
 
-Both use cases are valid. So, the question really isn't which idea is better; it's which dollar coin is better for each use/user.
+If you're interested in a bit deeper of a dive into stablecoin decentralization, check out the [interesting relationship between USDC and DAI](https://forum.makerdao.com/t/onboarding-usdc-as-collateral-to-mitigate-liquidity-risk/1570). Yet another example of how centralization is a spectrum — not an absolute.
+
+To sum up:
+
+- USDC has ties to centralized institutions. It has perks and risks associated with doing business with or trusting those institutions.
+- DAI is more about decentralization and diversity. You can create it by borrowing against a variety of different assets (many of which are highly decentralized).
 
 ### Example 2: Currency exchanges {#exchanges}
 
@@ -239,9 +263,9 @@ There are centralized and decentralized crypto exchanges. Here's a table of how 
 | You must trust the smart contract to execute correctly.                                      | You must trust the exchange to hold your assets, execute your trades, secure your personal information, maintain adequate depth for withdrawals, and operate disinterestedly. |
 | Users publicly provide paired liquidity. A smart contract uses the liquidity to fill orders. | Market makers enter into private deals with the exchange. The exchange executes orders.                                                                                       |
 | Trading fees go to a development fund and liquidity provider payments.                       | Trading fees go to.... business stuff?                                                                                                                                        |
-| Transaction fees depend on Ethereum network conditions.                                      | Transactions don't actually happen, so there are no transaction fees.                                                                                                         |
+| Transaction fees depend on Ethereum network conditions.                                      | Trading transactions happen internally, not on the blockchain.                                                                                                         |
 | Participants can help [make decisions](https://gov.uniswap.org) about the exchange.          | Decisions are made by corporate executives and shareholders.                                                                                                                  |
-| You can trade any Ethereum-based assets (including assets pegged to Bitcoin, USD, etc.)      | You can trade in any asset the exchange decides to provide liquidity for.                                                                                                     |
+| You can trade any Ethereum-based assets (including assets pegged to Bitcoin, USD, etc.)      | You can trade in any asset the exchange decides and is able to provide liquidity for.                                                                                                     |
 
 ## The history of decentralization {#history-of-decentralization}
 
@@ -291,39 +315,5 @@ If you're sensing a pattern here, you're right: Defi is finance that follows dec
 - Follow up with a major source for this article: [this blog post by a co-founder of Ethereum](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274)
 - Get the minutiae of how core [Ethereum development community](https://www.ethereumcatherders.com/) works, socially.
 - Read the [Ethereum whitepaper](/whitepaper/).
-- Check out this Nobel-Prize winning (centralized award, ironic, yes) economist's ideas about [common resource governance](<https://en.wikipedia.org/wiki/Elinor_Ostrom#Design_principles_for_Common_Pool_Resource_(CPR)_institution>).
+- Check out this Nobel-Prize winning economist's ideas about [common resource governance](<https://en.wikipedia.org/wiki/Elinor_Ostrom#Design_principles_for_Common_Pool_Resource_(CPR)_institution>).
 - The [decentralized web](https://blockchainhub.net/web3-decentralized-web/) from a historical and technical perspective.
-
-<!--
-
-## Exploring the decentralized web {#decentralized-web}
-
-There's a lot out there beyond Ethereum. Some systems might complement, serve, or empower this project, while others might declare (bombastically, usually) to be in competition. Hopefully, everyone succeeds.
-
-Please note that decentralization is not a monolithic concept. There are different types and varying degrees of it. Overall, some of these projects are not as decentralized as others in certain respects.
-### Storage (desto, maybe?) {#storage}
-
-Blockchains like Etherereum's aren't the most efficient places for storing data. Luckily, there are various open protocols/paid services that provide decentralized, verifiable locations for your stuff:
-
-- [IPFS](https://ipfs.io/)
-- [Filecoin](https://filecoin.io/) (based in part on IPFS)
-- [Storj](https://storj.io/)
-- [Swarm](https://swarm.ethereum.org/) (also for encrypted messaging)
-
-### File sharing {#filesharing}
-
-- [BitTorrent](https://www.bittorrent.org/introduction.html). No, it's not just for music pirates.
-
-### Other blockchains {#blockchains}
-
-There are other blockchain-based projects out there doing different things (or the same things, but with different marketing approaches). If decentralization is a priority for you, please remember that "blockchain" does not equal "decentralized". A blockchain with a central point of failure (i.e. a single governing authority that can make unilateral decisions) would have many of the same risks as a centralized system.
-
-### Other decentralized projects {#decentralized-projects}
-
-- [Scuttlebot](https://scuttlebot.io/): Logging
-- [YaCy](https://yacy.net): Search
-- [Ethereum Naming Service](https://ens.domains/): Name registration
-- [IPNS](https://docs.ipfs.io/concepts/ipns/): Name registration
-- [Hyperledger](https://www.hyperledger.org/): Distributed ledger framework with Ethereum interoperability
-
--->
