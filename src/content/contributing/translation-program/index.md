@@ -8,15 +8,15 @@ sidebar: true
 # Translation Program {#translation-program}
 
 <div style="text-align:center;">
-<video id="world2ethereum" alt="world2ethereum video" width="500 px" height="500 px" src="https://blog.ethereum.org/img//2020/06/world2ethereum_white_small_%20(1).mp4" playsinline="" autoplay="" loop=""></video>
+<video id="world2ethereum" alt="world2ethereum video" width="400 px" height="400 px" src="https://blog.ethereum.org/img//2020/06/world2ethereum_white_small_%20(1).mp4" playsinline="" autoplay="" loop=""></video>
 </div>
 
 The Translation Program is a collaborative effort to translate ethereum.org into different languages in order to make the website more accessible to billions of non-English speakers around the world.
 
 Our progress so far:
-**1,400 +** translators
-**35** languages live on site
-**1.4 million** words translated this year
+- **1,400 +** translators
+- **35** languages live on site
+- **1.4 million** words translated this year
 
 If you want to get involved and help us grow the global Ethereum community by translating the website into your language, follow the steps below!
 
