@@ -246,6 +246,7 @@ You can learn more about the applications of chainlink by reading [the developer
 - [Chainlink](https://chain.link/)
 - [Witnet](https://witnet.io/)
 - [Provable](https://provable.xyz/)
+- [Paralink](https://paralink.network/)
 
 ### Build an oracle smart contract {#build-an-oracle-smart-contract}
 
