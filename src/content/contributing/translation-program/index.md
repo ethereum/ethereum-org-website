@@ -16,13 +16,13 @@ The Translation Program is a collaborative effort to translate ethereum.org into
 Our progress so far:
 - **1,400 +** translators
 - **35** languages live on site
-- **1.4 million** words translated this year
+- **1.4 million** words translated in 2020
 
 If you want to get involved and help us grow the global Ethereum community by translating the website into your language, follow the steps below!
 
 <InfoBanner shouldCenter emoji=":tada:">
   Claim your POAP token! If you translated ethereum.org in 2020 or 2021, there's a unique POAP waiting for you.{" "}
-  <a href="#poap">More on POAPs</a>
+  <a href="https://ethereum.org/en/contributing/#poap">More on POAPs</a>
 </InfoBanner>
 
 ## How to join {#how-to-join}
@@ -43,6 +43,20 @@ Thank you for your participation in the ethereum.org Translation Program!
   If you're helping us with translations, you might find some useful information in our translations FAQ. 
   {" "}<a href="/en/contributing/translation-program/translation-guide/">Translating ethereum.org FAQ</a>
 </InfoBanner>
+
+## Resources {#resources}
+
+**Tools**
+
+- [Microsoft Language Portal](https://www.microsoft.com/en-us/language)
+  _– Useful for finding and checking the standard translations of technical terms_
+- [Linguee](https://www.linguee.com/)
+  _– Search engine for translations and dictionary that enables searching by word or phrase_
+
+**Communities**
+
+- [Chinese translator group](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)
+  _– Notion page for easier coordination between Chinese translators_
 
 ## Eth2 Launchpad Translations {#eth2-launchpad}
 
