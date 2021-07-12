@@ -122,7 +122,7 @@ $ yarn start
 - Open this directory in your favorite text editor / IDE, and see your changes live by visiting `localhost:8000` from your browser
 - Pro Tip: Explore scripts within `package.json` for more build options
 
-3. Commit and prepare for pull request (PR). In your PR commit message, reference the issue it resolves (see [how to link a commit message to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
+3. Commit and prepare for pull request (PR). In your PR commit message, reference the issue it resolves (see [how to link a commit message to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)).
 
 ```
 $ git commit -m "brief description of changes [Fixes #1234]"
