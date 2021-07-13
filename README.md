@@ -440,7 +440,7 @@ export const query = graphql`
 
 - 👆 To claim your Contributor POAP, join our Discord server and paste a link to your contribution in the #poaps-🏆 channel
 
-- A member of our team will verify the request and DM you with a peronalized link to claim your own freshly minted POAP collectible!
+- A member of our team will verify the request and DM you with a personalized link to claim your own freshly minted POAP collectible!
 
 - To help with verification we request GitHub contributors connect their GitHub account with their Discord account (Discord > Settings > Connections > GitHub). Crowdin contributors will be verified directly through Crowdin by our team.
 
