@@ -56,7 +56,8 @@ Plan je uvijek bio dodati dodatnu funkcionalnost djelićima, kako bi postali sli
 
 ### Trebaju li djelići izvršenje koda? {#do-shards-need-code-execution}
 
-Vitalik Buterin, u podcastu Bankless, predstavio je 3 potencijalne opcije o kojima vrijedi razgovarati. <iframe width="100%" height="315" src="/developers/docs/scaling/#layer-2-scaling" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Vitalik Buterin, u podcastu Bankless, predstavio je 3 potencijalne opcije o kojima vrijedi razgovarati. <iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+
 
 #### 1. Nije potrebno izvršenje stanja {#state-execution-not-needed}
 
