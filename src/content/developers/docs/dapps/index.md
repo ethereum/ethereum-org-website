@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-A decentralized application (dapp) is an application built on a decentralized network that combines a [smart contract](/developers/docs/smart-contracts/) and a frontend user interface. Note, in Ethereum smart-contracts are accessible and transparent – like open APIs – so your dapp can even include a smart contract that someone else has written.
+A decentralized application (dapp) is an application built on a decentralized network that combines a [smart contract](/developers/docs/smart-contracts/) and a frontend user interface. Note: in Ethereum, smart-contracts are accessible and transparent – like open APIs – so your dapp can even include a smart contract that someone else has written.
 
 ## Prerequisites {#prerequisites}
 
@@ -74,7 +74,7 @@ Tokens must be generated in order to prove the value nodes that contribute to th
 - [rimble.consensys.design](https://rimble.consensys.design)
 - [GitHub](https://github.com/ConsenSys/rimble-ui)
 
-**One Click Dapp** **_- FOSS tool for generating dapp frontends from an ABI._**
+**One Click Dapp** **_- FOSS tool for generating dapp frontends from an [ABI](/developers/docs/apis/javascript/#interact-with-smart-contract-functions)._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/One-Click-Dapp/one-click-dApp)

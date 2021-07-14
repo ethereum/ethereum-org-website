@@ -109,3 +109,4 @@ There are ways to get around this using [oracles](/developers/docs/oracles/).
 
 - [Smart Contracts: The Blockchain Technology That Will Replace Lawyers](https://blockgeeks.com/guides/smart-contracts/) _– Blockgeeks_
 - [Best Practices for Smart Contract Development](https://yos.io/2019/11/10/smart-contract-development-best-practices/) _– Nov 10, 2019 - Yos Riady_
+- [Clean contracts - a guide on smart contract patterns & practices](https://www.wslyvh.com/clean-contracts/) _– Jul 30, 2020 - wslyvh_

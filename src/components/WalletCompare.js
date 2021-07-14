@@ -94,7 +94,6 @@ export const walletCardImage = graphql`
 
 const ResultsContainer = styled.div`
   margin-top: 0rem;
-  text-align: center;
 `
 
 const ResultsGrid = styled.div`
@@ -270,6 +269,9 @@ const WalletCompare = ({ location }) => {
       rainbow: file(relativePath: { eq: "wallets/rainbow.png" }) {
         ...walletCardImage
       }
+      samsung: file(relativePath: { eq: "wallets/samsung.png" }) {
+        ...walletCardImage
+      }
       squarelink: file(relativePath: { eq: "wallets/squarelink.png" }) {
         ...walletCardImage
       }
@@ -289,6 +291,9 @@ const WalletCompare = ({ location }) => {
         ...walletCardImage
       }
       zengo: file(relativePath: { eq: "wallets/zengo.png" }) {
+        ...walletCardImage
+      }
+      walleth: file(relativePath: { eq: "wallets/walleth.png" }) {
         ...walletCardImage
       }
       tokenpocket: file(relativePath: { eq: "wallets/tokenpocket.png" }) {

@@ -28,6 +28,9 @@ const StyledPre = styled.pre`
   padding-top: ${({ hasTopBar }) => (hasTopBar ? "2.75rem" : "1.5rem")};
   margin: 0;
   padding-left: 1rem;
+  overflow: visible;
+  min-width: 100%;
+  width: fit-content;
 `
 
 const Line = styled.div`

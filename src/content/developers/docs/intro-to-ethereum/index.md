@@ -7,7 +7,7 @@ sidebar: true
 
 ## What is a blockchain? {#what-is-a-blockchain}
 
-A blockchain is best described as a public database that is updated and shared across many computers in a network.
+A blockchain is a public database that is updated and shared across many computers in a network.
 
 "Block" refers to the fact that data and state are stored in sequential batches or "blocks". If you send ETH to someone else, the transaction data needs to be added to a block for it to be successful.
 

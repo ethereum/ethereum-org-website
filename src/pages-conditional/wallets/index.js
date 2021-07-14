@@ -704,6 +704,9 @@ export const query = graphql`
     rainbow: file(relativePath: { eq: "wallets/rainbow.png" }) {
       ...listImage
     }
+    samsung: file(relativePath: { eq: "wallets/samsung.png" }) {
+      ...listImage
+    }
     squarelink: file(relativePath: { eq: "wallets/squarelink.png" }) {
       ...listImage
     }
@@ -726,6 +729,9 @@ export const query = graphql`
       ...listImage
     }
     tokenpocket: file(relativePath: { eq: "wallets/tokenpocket.png" }) {
+      ...listImage
+    }
+    walleth: file(relativePath: { eq: "wallets/walleth.png" }) {
       ...listImage
     }
   }

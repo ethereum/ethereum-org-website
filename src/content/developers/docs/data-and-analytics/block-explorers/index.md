@@ -16,7 +16,7 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 
 - [Etherscan](https://etherscan.io/) –_Also available in Chinese, Korean, Russian, and Japanese_
 - [Etherchain](https://www.etherchain.org/)
-- [Ethplorer](https://ethplorer.io/) –_Also available in Chinese, Spanish and Russian_
+- [Ethplorer](https://ethplorer.io/) –_Also available in Chinese, Spanish, French, Turkish and Russian_
 - [Blockchair](https://blockchair.com/ethereum) –_Also available in Spanish, French, Italian, Dutch, Portuguese, Russian, Chinese, and Farsi_
 - [Blockscout](https://blockscout.com/)
 - [OKLink](https://www.oklink.com/eth)

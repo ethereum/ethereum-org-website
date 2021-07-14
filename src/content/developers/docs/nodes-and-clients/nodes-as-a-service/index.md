@@ -18,7 +18,7 @@ If you don't already have an understanding of what nodes and clients are, check 
 
 Node service providers run distributed node clients behind the scenes for you, so you don't have to.
 
-These services typically provide an API key that you can use to write to and read from the blockchain. They often including access to [Ethereum testnets](/developers/docs/networks/#testnets) in addition to the mainnet.
+These services typically provide an API key that you can use to write to and read from the blockchain. They often include access to [Ethereum testnets](/developers/docs/networks/#testnets) in addition to mainnet.
 
 Some services offer you your own dedicated node that they manage for you, while others use load balancers to distribute activity across nodes.
 
@@ -92,6 +92,18 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Paid archival data
     - Direct Support
     - Dashboard
+- [**Moralis**](https://moralis.io/)
+  - [Docs](https://docs.moralis.io/)
+  - Features
+    - Free shared nodes
+    - Free shared archive nodes
+    - Privacy focused (no logs policy)
+    - Cross chain support
+    - Scale as you go
+    - Dashboard
+    - Unique Ethereum SDK
+    - Unique API endpoints
+    - Direct, technical support
 - [**QuikNode**](https://www.quiknode.io/)
   - Features
     - 7 day free trial
@@ -115,5 +127,5 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
 
 ## Related tutorials {#related-tutorials}
 
-- [Getting started with Ethereum development using Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
-- [Guide to sending transactions using web3 and Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
+- [Getting started with Ethereum development using Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
+- [Guide to sending transactions using web3 and Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
