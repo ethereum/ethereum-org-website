@@ -35,7 +35,7 @@ The London upgrade is scheduled to go live on Ethereum in August 2021. It will i
 - [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) – _improves the transaction fee market_
 - [EIP-3198](https://eips.ethereum.org/EIPS/eip-3198) – _returns the `BASEFEE` from a block_
 - [EIP-3529](https://eips.ethereum.org/EIPS/eip-3529) - _reduces gas refunds for EVM operations_
-- [EIP-3540](https://eips.ethereum.org/EIPS/eip-3529) - _prevents deploying contracts starting with `0xEF`_
+- [EIP-3541](https://eips.ethereum.org/EIPS/eip-3541) - _prevents deploying contracts starting with `0xEF`_
 - [EIP-3554](https://eips.ethereum.org/EIPS/eip-3238) – _delays the Ice Age_
 
 </ExpandableCard>
