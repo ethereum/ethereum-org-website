@@ -116,6 +116,14 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
   - Features
     - Free tier option
     - Scale as you go
+- [**Heveloon**](https://www.heveloon.co.uk/)
+  - Features
+    - Free tier option
+    - Scale as you go
+    - Dashboard
+    - Unique API endpoints
+    - Direct support
+    - AWS Based
 
 ## Further reading {#further-reading}
 
