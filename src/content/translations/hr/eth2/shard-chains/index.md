@@ -48,7 +48,7 @@ Kada se isporuče prvi lanci djelića, oni će samo pružiti dodatne podatke mre
 
 Rollup je tehnologija „sloja 2” koja postoji danas. Omogućuju aplikacijama dapp da grupiraju ili skupe transakcije u jednu transakciju izvan lanca, generiraju kriptografski dokaz i zatim ga predaju lancu. To smanjuje podatke potrebne za transakciju. Kombinirajući to s dodatnom dostupnošću podataka koju pružaju djelić dobivate 100 000 transakcija u sekundi.
 
-[Više o tehnologiji rollup](/developers/docs/layer-2-scaling/)
+[Više o tehnologiji rollup](/developers/docs/scaling/layer-2-rollups/#rollups)
 
 ## Lanci djelića, verzija 2: izvršavanje koda {#code-execution}
 
@@ -56,7 +56,8 @@ Plan je uvijek bio dodati dodatnu funkcionalnost djelićima, kako bi postali sli
 
 ### Trebaju li djelići izvršenje koda? {#do-shards-need-code-execution}
 
-Vitalik Buterin, u podcastu Bankless, predstavio je 3 potencijalne opcije o kojima vrijedi razgovarati. <iframe width="100%" height="315" src="/developers/docs/layer-2-scaling/" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Vitalik Buterin, u podcastu Bankless, predstavio je 3 potencijalne opcije o kojima vrijedi razgovarati. <iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+
 
 #### 1. Nije potrebno izvršenje stanja {#state-execution-not-needed}
 

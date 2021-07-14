@@ -72,7 +72,7 @@ Stay up-to-date with the [EF Research and Development Blog](https://blog.ethereu
 
 ### The merge and shard chains {#docking-and-shard-chains}
 
-Originally, the plan was to work on shard chains before the merge – to address scalability. However, with the boom of [layer 2 scaling solutions](/developers/docs/layer-2-scaling/), the priority has shifted to swapping proof-of-work to proof-of-stake via the merge.
+Originally, the plan was to work on shard chains before the merge – to address scalability. However, with the boom of [layer 2 scaling solutions](/developers/docs/scaling/#layer-2-scaling), the priority has shifted to swapping proof-of-work to proof-of-stake via the merge.
 
 This will be an ongoing assessment from the community as to the need for potentially multiple rounds of shard chains to allow for endless scalability.
 

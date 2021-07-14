@@ -48,7 +48,7 @@ Le prime shard chain disponibili forniranno solo dati aggiuntivi in rete. Non ge
 
 I rollup sono una tecnologia di secondo livello che esiste già oggi. Permettono alle dapp di raggruppare o "eseguire il roll up" delle transazioni in una sola transazione off-chain, generare una prova crittografica e inviarla alla catena. In questo modo, i dati necessari per una transazione vengono ridotti. Combinando questo aspetto con le informazioni extra rese disponibili dalle shard, s ottengono 100.000 transazioni al secondo.
 
-[Maggiori informazioni sui rollup](/developers/docs/layer-2-scaling/)
+[Maggiori informazioni sui rollup](/developers/docs/scaling/layer-2-rollups/#rollups)
 
 ## Shard chain versione 2: esecuzione di codice {#code-execution}
 
