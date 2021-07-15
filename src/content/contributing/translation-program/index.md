@@ -7,7 +7,19 @@ sidebar: true
 
 # Translation Program {#translation-program}
 
-Interested in translating? Get involved! We're seeking volunteers to join 450+ community members who are working to translate the website into 30+ languages.
+The Translation Program is a collaborative effort to translate ethereum.org into different languages in order to make the website more accessible to billions of non-English speakers around the world.
+
+Our progress so far:
+- **1,400 +** translators
+- **35** languages live on site
+- **1.4 million** words translated in 2020
+
+If you want to get involved and help us grow the global Ethereum community by translating the website into your language, follow the steps below!
+
+<InfoBanner shouldCenter emoji=":tada:">
+  Claim your POAP token! If you translated ethereum.org in 2020 or 2021, there's a unique POAP waiting for you.{" "}
+  <a href="https://ethereum.org/en/contributing/#poap">More on POAPs</a>
+</InfoBanner>
 
 ## How to join {#how-to-join}
 
@@ -42,12 +54,12 @@ Thank you for your participation in the ethereum.org Translation Program!
 - [Chinese translator group](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)
   _– Notion page for easier coordination between Chinese translators_
 
+## Eth2 Launchpad Translations {#eth2-launchpad}
+
+Our translation community is also working on the [Eth2 Launchpad](https://launchpad.ethereum.org/en/). This allows anyone to set up an Ethereum validator and help secure the Ethereum network. The Launchpad is currently live in 15 languages.
+
+If you're interested, [join the Eth2 Launchpad translation project on Crowdin](https://crowdin.com/project/launchpad-translation). You can [create an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose) on GitHub to request the addition of a new language, if your language is not available in Crowdin.
+
 ## In-progress translations {#in-progress}
 
 <TranslationsInProgress />
-
-## Eth2 Launchpad Translations {#eth2-launchpad}
-
-Our translation community is also working on the [Eth2 Launchpad](https://launchpad.ethereum.org/en/). This allows anyone to set up an Ethereum validator and help secure the Ethereum network.
-
-If you're interested, [join the Eth2 Launchpad translation project on Crowdin](https://crowdin.com/project/launchpad-translation).
