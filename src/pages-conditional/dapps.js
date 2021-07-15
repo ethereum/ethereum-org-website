@@ -1028,6 +1028,13 @@ const DappsPage = ({ data, location }) => {
       image: data.cryptopunks.childImageSharp.fluid,
       alt: translateMessageId("page-dapps-cryptopunks-logo-alt", intl),
     },
+    {
+      title: "POAP - Proof of Attendance Protocol",
+      description: translateMessageId("page-dapps-dapp-description-poap", intl),
+      link: "https://poap.xyz",
+      image: data.poap.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-poap-logo-alt", intl),
+    },
   ]
 
   const worlds = [
@@ -1889,6 +1896,9 @@ export const query = graphql`
       ...dappImage
     }
     rotki: file(relativePath: { eq: "dapps/rotki.png" }) {
+      ...dappImage
+    }
+    poap: file(relativePath: { eq: "dapps/poap.png" }) {
       ...dappImage
     }
   }

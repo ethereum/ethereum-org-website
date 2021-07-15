@@ -48,7 +48,7 @@ Amikor a shard láncokat először bevezetik csak extra adatot fognak biztosíta
 
 A rollupok egy "layer 2" technológia részei, melyek ma is léteznek. Lehetővé teszik a dappok számára, hogy off-chain módon több tranzakciók összekötegeljenek vagy "feltekerjenek (roll-up)" egy tranzakcióba, majd egy kriptográfiai bizonyítékot generálnak, ezután pedig továbbítják azt a láncra. Ez csökkenti egy adott tranzakció számára szükséges adatot. Ha ezt kombináljuk az extra adat elérhetőséggel, amit a shardok biztosítanak, akkor 100,000 tranzakció is lehetséges egy másodperc alatt.
 
-[Bővebben a rollupokról](/developers/docs/layer-2-scaling/)
+[Bővebben a rollupokról](/developers/docs/scaling/layer-2-rollups/#rollups)
 
 ## Shard láncok verzió 2: kódfuttatás {#code-execution}
 

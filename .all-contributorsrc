@@ -3999,6 +3999,143 @@
         "translation",
         "content"
       ]
+    },
+    {
+      "login": "filipmartinsson",
+      "name": "Filip Martinsson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10158281?v=4",
+      "profile": "https://www.stockholmblockchain.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "zeroservices",
+      "name": "zeroservices",
+      "avatar_url": "https://avatars.githubusercontent.com/u/78486441?v=4",
+      "profile": "https://www.zeroservices.eu",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "lukassim",
+      "name": "LukaK",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37338979?v=4",
+      "profile": "https://github.com/lukassim",
+      "contributions": [
+        "content",
+        "ideas"
+      ]
+    },
+    {
+      "login": "lukeingalls",
+      "name": "Luke Ingalls",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45518011?v=4",
+      "profile": "http://lukeingalls.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "cstradtman",
+      "name": "cstradtman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17035843?v=4",
+      "profile": "https://github.com/cstradtman",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "gsthina",
+      "name": "G Surendar Thina",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8844334?v=4",
+      "profile": "http://www.gsthina.me",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "scotato",
+      "name": "Scott Dodge",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5290015?v=4",
+      "profile": "https://github.com/scotato",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "arcz",
+      "name": "Artur Cygan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4679721?v=4",
+      "profile": "https://arturcygan.com/",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "rorychristianmurray",
+      "name": "Rory",
+      "avatar_url": "https://avatars.githubusercontent.com/u/21082125?v=4",
+      "profile": "http://rorymurray.io",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "cnnrmnn",
+      "name": "Connor Mann",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34930543?v=4",
+      "profile": "https://github.com/cnnrmnn",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "ph4ni",
+      "name": "Phanindra",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29685411?v=4",
+      "profile": "https://ph4ni.github.io",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "kwsorensen",
+      "name": "kwsorensen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29787085?v=4",
+      "profile": "https://github.com/kwsorensen",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "FuriKuri",
+      "name": "Theo Pack",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1391889?v=4",
+      "profile": "https://furikuri.net/",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "kirati-su",
+      "name": "kirati-su",
+      "avatar_url": "https://avatars.githubusercontent.com/u/85088317?v=4",
+      "profile": "https://github.com/kirati-su",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "mapachurro",
+      "name": "oliver renwick",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7252642?v=4",
+      "profile": "http://www.oliverrenwick.com",
+      "contributions": [
+        "ideas",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,

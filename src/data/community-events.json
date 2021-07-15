@@ -8,6 +8,22 @@
     "endDate": "2021-04-21"
   },
   {
+    "title": "Ethereum Community Conference 4 (EthCC) - Paris",
+    "to": "https://ethcc.io/",
+    "sponsor": null,
+    "description": "The largest annual European Ethereum event focused on technology and community. Three intense days of conferences, networking and learning.",
+    "startDate": "2021-07-20",
+    "endDate": "2021-07-22"
+  },
+  {
+    "title": "EthCC Week - Paris",
+    "to": "https://ethccweek.fr/",
+    "sponsor": null,
+    "description": "Along with the flagship events of EthCC, multiple side events, meetups, panels and parties will take place on the same week in Paris.",
+    "startDate": "2021-07-19",
+    "endDate": "2021-07-25"
+  },
+  {
     "title": "ETHOdyssey",
     "to": "https://ethodyssey.devfolio.co/",
     "sponsor": null,

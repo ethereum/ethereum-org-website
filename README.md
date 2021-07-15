@@ -122,7 +122,7 @@ $ yarn start
 - Open this directory in your favorite text editor / IDE, and see your changes live by visiting `localhost:8000` from your browser
 - Pro Tip: Explore scripts within `package.json` for more build options
 
-3. Commit and prepare for pull request (PR). In your PR commit message, reference the issue it resolves (see [how to link a commit message to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
+3. Commit and prepare for pull request (PR). In your PR commit message, reference the issue it resolves (see [how to link a commit message to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)).
 
 ```
 $ git commit -m "brief description of changes [Fixes #1234]"
@@ -440,7 +440,7 @@ export const query = graphql`
 
 - 👆 To claim your Contributor POAP, join our Discord server and paste a link to your contribution in the #poaps-🏆 channel
 
-- A member of our team will verify the request and DM you with a peronalized link to claim your own freshly minted POAP collectible!
+- A member of our team will verify the request and DM you with a personalized link to claim your own freshly minted POAP collectible!
 
 - To help with verification we request GitHub contributors connect their GitHub account with their Discord account (Discord > Settings > Connections > GitHub). Crowdin contributors will be verified directly through Crowdin by our team.
 
@@ -1014,6 +1014,25 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://ryangrunest.com/"><img src="https://avatars.githubusercontent.com/u/37844814?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ryan Grunest</b></sub></a><br /><a href="#content-ryangrunest" title="Content">🖋</a></td>
     <td align="center"><a href="http://aniketraj.me"><img src="https://avatars.githubusercontent.com/u/32848400?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aniket Raj</b></sub></a><br /><a href="#content-aniket-spidey" title="Content">🖋</a></td>
     <td align="center"><a href="http://linkedin.com/in/kamilzarzycki/"><img src="https://avatars.githubusercontent.com/u/26347436?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kamil Zarzycki</b></sub></a><br /><a href="#translation-Ryeore" title="Translation">🌍</a> <a href="#content-Ryeore" title="Content">🖋</a></td>
+    <td align="center"><a href="https://www.stockholmblockchain.com"><img src="https://avatars.githubusercontent.com/u/10158281?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Filip Martinsson</b></sub></a><br /><a href="#content-filipmartinsson" title="Content">🖋</a></td>
+    <td align="center"><a href="https://www.zeroservices.eu"><img src="https://avatars.githubusercontent.com/u/78486441?v=4?s=100" width="100px;" alt=""/><br /><sub><b>zeroservices</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Azeroservices" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/lukassim"><img src="https://avatars.githubusercontent.com/u/37338979?v=4?s=100" width="100px;" alt=""/><br /><sub><b>LukaK</b></sub></a><br /><a href="#content-lukassim" title="Content">🖋</a> <a href="#ideas-lukassim" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="http://lukeingalls.com"><img src="https://avatars.githubusercontent.com/u/45518011?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Luke Ingalls</b></sub></a><br /><a href="#content-lukeingalls" title="Content">🖋</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/cstradtman"><img src="https://avatars.githubusercontent.com/u/17035843?v=4?s=100" width="100px;" alt=""/><br /><sub><b>cstradtman</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Acstradtman" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="http://www.gsthina.me"><img src="https://avatars.githubusercontent.com/u/8844334?v=4?s=100" width="100px;" alt=""/><br /><sub><b>G Surendar Thina</b></sub></a><br /><a href="#content-gsthina" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/scotato"><img src="https://avatars.githubusercontent.com/u/5290015?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Scott Dodge</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ascotato" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://arturcygan.com/"><img src="https://avatars.githubusercontent.com/u/4679721?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Artur Cygan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aarcz" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="http://rorymurray.io"><img src="https://avatars.githubusercontent.com/u/21082125?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rory</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Arorychristianmurray" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/cnnrmnn"><img src="https://avatars.githubusercontent.com/u/34930543?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Connor Mann</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Acnnrmnn" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://ph4ni.github.io"><img src="https://avatars.githubusercontent.com/u/29685411?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Phanindra</b></sub></a><br /><a href="#content-ph4ni" title="Content">🖋</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/kwsorensen"><img src="https://avatars.githubusercontent.com/u/29787085?v=4?s=100" width="100px;" alt=""/><br /><sub><b>kwsorensen</b></sub></a><br /><a href="#content-kwsorensen" title="Content">🖋</a></td>
+    <td align="center"><a href="https://furikuri.net/"><img src="https://avatars.githubusercontent.com/u/1391889?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Theo Pack</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AFuriKuri" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/kirati-su"><img src="https://avatars.githubusercontent.com/u/85088317?v=4?s=100" width="100px;" alt=""/><br /><sub><b>kirati-su</b></sub></a><br /><a href="#ideas-kirati-su" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="http://www.oliverrenwick.com"><img src="https://avatars.githubusercontent.com/u/7252642?v=4?s=100" width="100px;" alt=""/><br /><sub><b>oliver renwick</b></sub></a><br /><a href="#ideas-mapachurro" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Amapachurro" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
