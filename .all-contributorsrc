@@ -4126,6 +4126,16 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "mapachurro",
+      "name": "oliver renwick",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7252642?v=4",
+      "profile": "http://www.oliverrenwick.com",
+      "contributions": [
+        "ideas",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
