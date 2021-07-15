@@ -77,7 +77,7 @@ Then navigate to the deploy and run transactions screen:
 
 Once you are on the "deploy and run" transactions screen, double check that your contract name appears and click on Deploy. As you can see on the top of the page, the current environment is “Javascript VM” that means that we’ll deploy and interact with our smart contract on a local test blockchain to be able to test faster and without any fees.
 
-![The deploy button in the Remix solidity compiler](./remix-deploy.png)
+![The deploy button in the Remix solidity compiler](./remix-deploy-button.png)
 
 Once you've clicked the “Deploy” button, you’ll see your contract appear on the bottom. Click the arrow on the left to expand it so we’ll see the content of our contract. This is our variable `counter`, our `increment()` function and the getter `getCounter()`.
 

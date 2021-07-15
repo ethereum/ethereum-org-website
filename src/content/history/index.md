@@ -26,7 +26,7 @@ These rule changes may create a temporary split in the network. New blocks could
 
 ### (_In Progress_) London {#london}
 
-The London upgrade is scheduled to go live on Ethereum in July 2021. It will introduce [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), which reforms the transaction fee market, along with changes to how gas refunds are handled and the [Ice Age](https://ethereum.org/en/glossary/#ice-age) schedule.
+The London upgrade is scheduled to go live on Ethereum in August 2021, on block [12,965,000](https://etherscan.io/block/countdown/12965000). It will introduce [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), which reforms the transaction fee market, along with changes to how gas refunds are handled and the [Ice Age](https://ethereum.org/en/glossary/#ice-age) schedule.
 
 - [Read the London upgrade specification](https://github.com/ethereum/eth1.0-specs/blob/master/network-upgrades/mainnet-upgrades/london.md)
 
@@ -34,9 +34,9 @@ The London upgrade is scheduled to go live on Ethereum in July 2021. It will int
 
 - [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) – _improves the transaction fee market_
 - [EIP-3198](https://eips.ethereum.org/EIPS/eip-3198) – _returns the `BASEFEE` from a block_
-- [EIP-3238](https://eips.ethereum.org/EIPS/eip-3238) – _delays the Ice Age_
-
-_Note: more EIPs may be added to the upgrade over the coming weeks, and the EIPs above may still be modified prior to the upgrade being deployed._
+- [EIP-3529](https://eips.ethereum.org/EIPS/eip-3529) - _reduces gas refunds for EVM operations_
+- [EIP-3541](https://eips.ethereum.org/EIPS/eip-3541) - _prevents deploying contracts starting with `0xEF`_
+- [EIP-3554](https://eips.ethereum.org/EIPS/eip-3554) – _delays the Ice Age_
 
 </ExpandableCard>
 
@@ -44,7 +44,7 @@ _Note: more EIPs may be added to the upgrade over the coming weeks, and the EIPs
 
 ### (_In Progress_) Altair {#altair}
 
-The Altair upgrade is the first scheduled upgrade for the [Beacon Chain](/eth2/beacon-chain). It is expected to go live in 2021. It will add support for "sync commitees", which can enable light clients, and will bring inactivity and slashing penalties up to their full values.
+The Altair upgrade is the first scheduled upgrade for the [Beacon Chain](/eth2/beacon-chain). It is expected to go live in 2021. It will add support for "sync committees", which can enable light clients, and will bring inactivity and slashing penalties up to their full values.
 
 - [Read the Altair upgrade specification](https://github.com/ethereum/eth2.0-specs/tree/dev/specs/altair)
 
