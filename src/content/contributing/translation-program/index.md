@@ -7,10 +7,6 @@ sidebar: true
 
 # Translation Program {#translation-program}
 
-<div style="text-align:center;">
-<video id="world2ethereum" alt="world2ethereum video" width="400 px" height="400 px" src="https://blog.ethereum.org/img//2020/06/world2ethereum_white_small_%20(1).mp4" playsinline="" autoplay="" loop=""></video>
-</div>
-
 The Translation Program is a collaborative effort to translate ethereum.org into different languages in order to make the website more accessible to billions of non-English speakers around the world.
 
 Our progress so far:
