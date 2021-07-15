@@ -55,7 +55,7 @@ For example if you put a gas limit of 50,000 for a simple ETH transfer, the EVM 
 ## What is gas price? {#what-is-gas-price}
 
 Gas price refers to the amount of Ether you are willing to pay for every unit of gas, and this is usually measured in 'gwei'. Prior to
-[the London update](history/#london), you specify in the transaction how much you are willing to pay per gas, and you pay exactly that amount.
+[the London update](/history/#london), you specify in the transaction how much you are willing to pay per gas, and you pay exactly that amount.
 Different transactions in the same block can have very different gas prices.
 
 ### The London update {#gas-price-london-update}
