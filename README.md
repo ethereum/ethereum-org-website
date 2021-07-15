@@ -1031,6 +1031,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/kwsorensen"><img src="https://avatars.githubusercontent.com/u/29787085?v=4?s=100" width="100px;" alt=""/><br /><sub><b>kwsorensen</b></sub></a><br /><a href="#content-kwsorensen" title="Content">🖋</a></td>
     <td align="center"><a href="https://furikuri.net/"><img src="https://avatars.githubusercontent.com/u/1391889?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Theo Pack</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AFuriKuri" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/kirati-su"><img src="https://avatars.githubusercontent.com/u/85088317?v=4?s=100" width="100px;" alt=""/><br /><sub><b>kirati-su</b></sub></a><br /><a href="#ideas-kirati-su" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
