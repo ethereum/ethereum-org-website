@@ -1,6 +1,6 @@
 ---
 title: Shard chain
-description: 'Scopri le shard chain: partizioni della rete che assicurano a Ethereum più capacità di transazione e maggior facilità di esecuzione.'
+description: "Scopri le shard chain: partizioni della rete che assicurano a Ethereum più capacità di transazione e maggior facilità di esecuzione."
 lang: it
 template: eth2
 sidebar: true
