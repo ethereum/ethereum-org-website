@@ -4108,6 +4108,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "FuriKuri",
+      "name": "Theo Pack",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1391889?v=4",
+      "profile": "https://furikuri.net/",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
