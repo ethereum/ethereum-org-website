@@ -107,14 +107,13 @@ The Ethereum community maintains multiple open-source clients, developed by diff
 
 This table summarizes the different clients. All of them are actively worked on and pass [client tests](https://github.com/ethereum/tests).
 
-| Client                                                       | Language | Operating systems     | Networks                                   | Sync strategies         | State pruning   |
-| ------------------------------------------------------------ | -------- | --------------------- | ------------------------------------------ | ----------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)                           | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Fast, Full, Snap              | Archive, Pruned |
-| [OpenEthereum](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, macOS | Mainnet, Kovan, Ropsten, and more          | Warp, Full              | Archive, Pruned |
-| [Nethermind](http://nethermind.io/)                          | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, and more | Fast, Full              | Archive, Pruned |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, and Görli       | Fast, Full              | Archive, Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon)              | Go / Multi | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Full                  | Archive, Pruned |
-
+| Client                                                       | Language   | Operating systems     | Networks                                   | Sync strategies  | State pruning   |
+| ------------------------------------------------------------ | ---------- | --------------------- | ------------------------------------------ | ---------------- | --------------- |
+| [Geth](https://geth.ethereum.org/)                           | Go         | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Fast, Full, Snap | Archive, Pruned |
+| [OpenEthereum](https://github.com/openethereum/openethereum) | Rust       | Linux, Windows, macOS | Mainnet, Kovan, Ropsten, and more          | Warp, Full       | Archive, Pruned |
+| [Nethermind](http://nethermind.io/)                          | C#, .NET   | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, and more | Fast, Full       | Archive, Pruned |
+| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java       | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, and Görli       | Fast, Full       | Archive, Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon)              | Go / Multi | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Full             | Archive, Pruned |
 
 For more on supported networks, read up on [Ethereum networks](/developers/docs/networks/).
 
@@ -169,13 +168,13 @@ You define the type of sync when you get set up, like so:
 
 `geth --syncmode "light"`
 
-For further details check the tutorial on [running Geth light node](/developers/tutorials/run-light-node-geth/). 
+For further details check the tutorial on [running Geth light node](/developers/tutorials/run-light-node-geth/).
 
 **Setting up full sync with archive in [Besu](https://besu.hyperledger.org/)**
 
 `besu --sync-mode=FULL`
 
-Like any other configuration, it can be defined with the startup flag or in the config file. Another example is [Nethermind](https://docs.nethermind.io/nethermind/) which prompts you to choose sync mode during first initialization and creates config. 
+Like any other configuration, it can be defined with the startup flag or in the config file. Another example is [Nethermind](https://docs.nethermind.io/nethermind/) which prompts you to choose sync mode during first initialization and creates config.
 
 ## Hardware {#hardware}
 
@@ -210,7 +209,7 @@ The sync mode you choose will affect space requirements but we've estimated the 
 | Besu         | 750GB+                | 5TB+                     |
 | Erigon       | N/A                   | 1TB+                     |
 
-* Note: Erigon does not Fast Sync, but Full Pruning is possible (~500GB)
+- Note: Erigon does not Fast Sync, but Full Pruning is possible (~500GB)
 
 ![A chart showing that GB needed for a full sync is trending up](./full-sync.png)
 
