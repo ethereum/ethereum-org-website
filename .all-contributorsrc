@@ -4099,6 +4099,33 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "kwsorensen",
+      "name": "kwsorensen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29787085?v=4",
+      "profile": "https://github.com/kwsorensen",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "FuriKuri",
+      "name": "Theo Pack",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1391889?v=4",
+      "profile": "https://furikuri.net/",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "kirati-su",
+      "name": "kirati-su",
+      "avatar_url": "https://avatars.githubusercontent.com/u/85088317?v=4",
+      "profile": "https://github.com/kirati-su",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,

@@ -8,7 +8,7 @@ const Container = styled.div`
 
 const Eth2ShardChainsList = () => {
   const reads = [
-    { 
+    {
       title: "Why sharding is great: demystifying the technical properties",
       description: "Vitalik Buterin",
       link: "https://vitalik.ca/general/2021/04/07/sharding.html",
