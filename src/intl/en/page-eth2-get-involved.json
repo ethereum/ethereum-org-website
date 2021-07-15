@@ -27,6 +27,8 @@
   "page-eth2-get-involved-more": "More info",
   "page-eth2-get-involved-run-clients": "Run beacon chain clients",
   "page-eth2-get-involved-run-clients-desc": "Key to Ethereum's long term security is a strong distribution of clients. A client is software that runs the blockchain, checking transactions and the creation of new blocks. Each client has its own features, so choose one based on what you're comfortable with.",
+  "page-eth2-get-involved-run-clients-production": "Production-ready Eth2 clients",
+  "page-eth2-get-involved-run-clients-experimental": "Experimental Eth2 clients",
   "page-eth2-get-involved-stake": "Stake your ETH",
   "page-eth2-get-involved-stake-desc": "You can now stake your ETH to help secure the beacon chain.",
   "page-eth2-get-involved-stake-eth": "Stake ETH",
