@@ -17,7 +17,7 @@ In contrast to that, ERC-721 tokens are designed for assets that are similar but
 cartoons](https://www.cryptokitties.co/)
 or titles to different pieces of real estate.
 
-In this article we will analyze [Ryuya Nakamura's ERC-721 contract](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy).
+In this article we will analyze [Ryuya Nakamura's ERC-721 contract](https://github.com/vyperlang/vyper/blob/master/vyper/builtin_interfaces/ERC721.py).
 This contract is written in [Vyper](https://vyper.readthedocs.io/en/latest/index.html), a Python-like contract language designed to make
 it harder to write insecure code than it is in Solidity.
 
@@ -138,7 +138,7 @@ owner first submits an approval and then sends a request to the contract: "I app
 X, please do ...".
 
 This is a design choice to make the ERC-721 standard similar to the ERC-20 standard. Because
-ERC-721 tokens not fungible, a contract can also identify that it got a specific token by
+ERC-721 tokens are not fungible, a contract can also identify that it got a specific token by
 looking at the token's ownership.
 
 ```python
@@ -165,7 +165,7 @@ The `approved` value tells us whether the event is for an approval, or the withd
 ### State Variables {#state-vars}
 
 These variables contain the current state of the tokens: which ones are available and who owns them. Most of these
-are `HashMap` objects, [unidirectional mappings that between two types](https://vyper.readthedocs.io/en/latest/types.html#mappings).
+are `HashMap` objects, [unidirectional mappings that exist between two types](https://vyper.readthedocs.io/en/latest/types.html#mappings).
 
 ```python
 # @dev Mapping from NFT ID to the address that owns it.
@@ -176,7 +176,7 @@ idToApprovals: HashMap[uint256, address]
 ```
 
 User and contract identities in Ethereum are represented by 160-bit addresses. These two variables map
-from token IDs to their owners and those approved to transfer them (at a maximum of one for each). In Ethereum
+from token IDs to their owners and those approved to transfer them (at a maximum of one for each). In Ethereum,
 uninitialized data is always zero, so if there is no owner or approved transferor the value for that token
 is zero.
 
@@ -259,9 +259,9 @@ To access state variables you use `self.<variable name>` (again, same as in Pyth
 
 #### View Functions {#views}
 
-These are functions that do not modify the state of the block chain, and therefore can be executed for
-free (if they are called externally, if they are called by a contract they still have to be executed on
-every node and therefore cost gas).
+These are functions that do not modify the state of the blockchain, and therefore can be executed for
+free if they are called externally. If the view functions are called by a contract they still have to be executed on
+every node and therefore cost gas.
 
 ```python
 @view
