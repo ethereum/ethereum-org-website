@@ -12,7 +12,7 @@ The Translation Program is a collaborative effort to translate ethereum.org into
 Our progress so far:
 - **1,400 +** translators
 - **35** languages live on site
-- **1.4 million** words translated in 2020
+- **1.4 million** words translated in 2021
 
 If you want to get involved and help us grow the global Ethereum community by translating the website into your language, follow the steps below!
 
