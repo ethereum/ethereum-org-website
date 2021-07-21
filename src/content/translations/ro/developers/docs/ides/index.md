@@ -40,6 +40,7 @@ Majoritatea IDE-urilor consacrate au construit plug-inuri pentru a îmbunătăț
 
 **Remix Desktop -** **_Experimentați IDE Remix pe computerul dvs. local_**
 
+- [Descarca](https://github.com/ethereum/remix-desktop/releases)
 - [GitHub](https://github.com/ethereum/remix-desktop)
 
 ## Referințe suplimentare {#further-reading}

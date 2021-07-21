@@ -46,6 +46,7 @@ Most established IDEs have built plugins to enhance the Ethereum development exp
 
 **Remix Desktop -** **_Experience Remix IDE on your local machine_**
 
+- [Download](https://github.com/ethereum/remix-desktop/releases)
 - [GitHub](https://github.com/ethereum/remix-desktop)
 
 ## Plugins and Extensions {#plugins-extensions}
