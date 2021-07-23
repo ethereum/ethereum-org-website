@@ -32,3 +32,4 @@ coinomi,Coinomi,https://www.coinomi.com/en/,#11b8ef,TRUE,TRUE,FALSE,FALSE,TRUE,T
 walleth,WallETH,https://walleth.org,#FFF,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 samsung,Samsung Blockchain Wallet,https://www.samsung.com/global/galaxy/apps/samsung-blockchain/,#FFF,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 bitcoindotcom,Bitcoin.com Wallet,https://wallet.bitcoin.com/,#FFF,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+safepal,SafePal,https://safepal.io/,#3F37FF,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
