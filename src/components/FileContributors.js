@@ -241,6 +241,9 @@ const FileContributors = ({ relativePath, className, editPath }) => {
   const uniqueContributors =
     commits?.reduce(
       (res, cur) => {
+        if (cur.author.user === null) {
+          return res
+        }
         for (const contributor of res) {
           const hasAuthorInfo = !!contributor.user && !!cur.author.user
           if (
