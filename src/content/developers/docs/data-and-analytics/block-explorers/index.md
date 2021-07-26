@@ -245,7 +245,7 @@ The Eth2 top-level data includes the following:
 
 ## Block explorers {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) – a block explorer you can use to fetch data for Ethereum mainnet, Ropsten Testnet, Kovan Testnet, Rinkeby Testnet, and Goerli Testnet.
+- [Etherscan](https://etherscan.io/) – a block explorer you can use to fetch data for Ethereum Mainnet, Ropsten Testnet, Kovan Testnet, Rinkeby Testnet, and Goerli Testnet.
 - [Blockscout](https://blockscout.com/) – focusses on the following networks:
   - xDai – a clever combination of MakerDAO's DAI stablecoin and POA's sidechain and tokenbridge technology.
   - POA – A sidechain and autonomous network secured by a group of trusted validators. All validators on the network are United States notaries, and their information is publicly available.
@@ -253,8 +253,8 @@ The Eth2 top-level data includes the following:
   - ARTIS – an Ethereum compliant blockchain.
   - [LUKSO L14](https://blockscout.com/lukso/l14) – L14 functions as the first test-network, to allow the LUKSO community to build and test on a common infrastructure.
   - qDai.
-- [Etherchain](https://www.etherchain.org/) – a block explorer for the Ethereum mainnet.
-- [Ethplorer](https://ethplorer.io/) – a block explorer with a focus on tokens for the Ethereum mainnet and the Kovan testnet.
+- [Etherchain](https://www.etherchain.org/) – a block explorer for the Ethereum Mainnet.
+- [Ethplorer](https://ethplorer.io/) – a block explorer with a focus on tokens for the Ethereum Mainnet and the Kovan testnet.
 - [Blockchair](https://blockchair.com/ethereum) - the most private Ethereum explorer. Also for sorting and filtering (mempool) data.
 
 ## Eth2 block explorers {#eth2-block-explorers}

@@ -56,7 +56,7 @@ Rollups are a "layer 2" technology that exists today. They allow dapps to bundle
 
 ## Shard chains version 2: code execution {#code-execution}
 
-The plan was always to add extra functionality to shards, to make them more like the [Ethereum mainnet](/glossary/#mainnet) today. This would allow them to store and execute smart contracts and handle accounts. But considering the transactions per second boost that version 1 shards provide, does this still need to happen? This is still being debated in the community and it seems like there are a few options.
+The plan was always to add extra functionality to shards, to make them more like the [Ethereum Mainnet](/glossary/#mainnet) today. This would allow them to store and execute smart contracts and handle accounts. But considering the transactions per second boost that version 1 shards provide, does this still need to happen? This is still being debated in the community and it seems like there are a few options.
 
 ### Do shards need code execution? {#do-shards-need-code-execution}
 
@@ -96,7 +96,7 @@ The Beacon Chain contains all the logic for keeping shards secure and synced up.
 
 ### Shards and the merge {#shards-and-docking}
 
-By the time additional shards are added, Ethereum mainnet will already be secured by the Beacon Chain using proof of stake. This enables a fertile mainnet to build shard chains off of, powered by layer 2 solutions that supercharge the scalability. 
+By the time additional shards are added, Ethereum Mainnet will already be secured by the Beacon Chain using proof of stake. This enables a fertile mainnet to build shard chains off of, powered by layer 2 solutions that supercharge the scalability. 
 
 It remains to be seen whether mainnet will exist as the only “smart” shard that can handle code execution – but either way, the decision to expand shards can be revisted as needed.
 

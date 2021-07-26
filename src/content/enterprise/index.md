@@ -1,11 +1,11 @@
 ---
-title: Enterprise on Ethereum mainnet
+title: Enterprise on Ethereum Mainnet
 description: Guides, articles, and tools about enterprise applications on the public Ethereum blockchain
 lang: en
 sidebar: true
 ---
 
-# Ethereum mainnet for enterprise {#ethereum-for-enterprise}
+# Ethereum Mainnet for enterprise {#ethereum-for-enterprise}
 
 Blockchain applications help businesses:
 
@@ -18,19 +18,19 @@ Enterprise blockchain applications can be built on the public permissionless Eth
 
 ## Public vs private Ethereum {#private-vs-public}
 
-There is only one public Ethereum mainnet. Applications that are built on the mainnet are able to interoperate, similarly to how applications built on the Internet can connect to each other, leveraging the full potential of decentralized blockchain.
+There is only one public Ethereum Mainnet. Applications that are built on the mainnet are able to interoperate, similarly to how applications built on the Internet can connect to each other, leveraging the full potential of decentralized blockchain.
 
 Many businesses and consortia have deployed private, permissioned blockchains for specific applications based on Ethereum technology.
 
 ### Key differences {#key-differences}
 
-- Blockchain Security/Immutability - A blockchain’s resistance to tampering is determined by its consensus algorithm. Ethereum mainnet is secured by the interaction of thousands of independent nodes run by individuals and miners throughout the world. Private chains typically have a small number of nodes which are controlled by one or a few organizations; those nodes can be tightly controlled, but only a few must be compromised in order to rewrite the chain or commit fraudulent transactions.
-- Performance - Because private Enterprise Ethereum chains may use high performance nodes with special hardware requirements and different consensus algorithms such as Proof of Authority, they may achieve higher transaction throughput on the base layer (Layer 1). On Ethereum mainnet, high throughput can be achieved with the use of [Layer 2 scaling solutions](/developers/docs/scaling/layer-2-rollups/).
-- Cost - The cost to operate a private chain is primarily reflected in labor to set up and manage the chain, and the servers to run it. While there is no cost to connect to Ethereum mainnet, there is a gas cost for every transaction which must be paid for in Ether. Transaction relayers (aka Gas Stations) are being developed in order to eliminate the need for end users and even enterprises to directly use Ether in their transactions. Some [analyses](https://github.com/EYBlockchain/fundamental-cost-of-ownership/blob/master/EY%20Total%20Cost%20of%20Ownership%20for%20Blockchain%20Solutions.pdf) have shown that the total cost to operate an application may be lower on mainnet than running a private chain.
-- Node Permissioning - Only authorized nodes can join private chains. Anybody can set up a node on Ethereum mainnet.
+- Blockchain Security/Immutability - A blockchain’s resistance to tampering is determined by its consensus algorithm. Ethereum Mainnet is secured by the interaction of thousands of independent nodes run by individuals and miners throughout the world. Private chains typically have a small number of nodes which are controlled by one or a few organizations; those nodes can be tightly controlled, but only a few must be compromised in order to rewrite the chain or commit fraudulent transactions.
+- Performance - Because private Enterprise Ethereum chains may use high performance nodes with special hardware requirements and different consensus algorithms such as Proof of Authority, they may achieve higher transaction throughput on the base layer (Layer 1). On Ethereum Mainnet, high throughput can be achieved with the use of [Layer 2 scaling solutions](/developers/docs/scaling/layer-2-rollups/).
+- Cost - The cost to operate a private chain is primarily reflected in labor to set up and manage the chain, and the servers to run it. While there is no cost to connect to Ethereum Mainnet, there is a gas cost for every transaction which must be paid for in Ether. Transaction relayers (aka Gas Stations) are being developed in order to eliminate the need for end users and even enterprises to directly use Ether in their transactions. Some [analyses](https://github.com/EYBlockchain/fundamental-cost-of-ownership/blob/master/EY%20Total%20Cost%20of%20Ownership%20for%20Blockchain%20Solutions.pdf) have shown that the total cost to operate an application may be lower on mainnet than running a private chain.
+- Node Permissioning - Only authorized nodes can join private chains. Anybody can set up a node on Ethereum Mainnet.
 - Privacy - Access to data written to private chains can be controlled by restricting access to the network, and on a more fine grained basis with access controls and private transactions. All data written to mainnet Layer 1 is viewable by anyone, so sensitive information should be stored and transmitted off-chain, or else encrypted. Design patterns that facilitate this are emerging (e.g. Baseline, Aztec), as well as Layer 2 solutions that can keep data compartmentalized and off of Layer 1.
 
-### Why build on Ethereum mainnet {#why-build-on-ethereum-mainnet}
+### Why build on Ethereum Mainnet {#why-build-on-ethereum-mainnet}
 
 Enterprises have been experimenting with blockchain technology since around 2016, when the Hyperledger, Quorum, and Corda projects were launched. The focus was largely on private permissioned enterprise blockchains, but starting in 2019 there has been a shift in thinking about public vs private blockchains for business applications. A [survey](https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/blockchain/ey-public-blockchain-opportunity-snapshot.pdf) conducted by Forrester revealed that “Survey respondents ... see this potential, with 75% stating that they’re likely to leverage public blockchains in the future, and nearly one-third saying they’re very likely”. EY’s Paul Brody has [talked](https://www.youtube.com/watch?v=-ycu5vGDdZw&feature=youtu.be&t=3668) about the benefits of building on public blockchain, which (depending on the application) may include stronger security/immutability, transparency, lower total cost of ownership, and the ability to interoperate with all of the other applications that are also on the mainnet (network effects). Sharing a common frame of reference among businesses avoids the unnecessary creation of numerous isolated silos which cannot communicate and share or synchronize information with each other.
 
@@ -46,18 +46,18 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 
 - [Enterprise Ethereum Alliance (EEA)](https://entethalliance.org/)
   The EEA enables organizations to adopt and use Ethereum technology in their daily business operations. It empowers the Ethereum ecosystem to develop new business opportunities, drive industry adoption, and learn and collaborate with one another.
-  The EEA’s mainnet working group is a focal point for representatives from businesses who are interested in building on the public Ethereum mainnet, as well as members of the Ethereum community who would like to support them.
+  The EEA’s mainnet working group is a focal point for representatives from businesses who are interested in building on the public Ethereum Mainnet, as well as members of the Ethereum community who would like to support them.
 - [Ethereum OASIS Open Project](https://github.com/ethereum-oasis/oasis-open-project)
   The Ethereum OASIS Open Project is an OASIS Open Project that exists to provide a neutral forum for diverse stakeholders to create high-quality specifications that facilitate Ethereum’s longevity, interoperability, and ease of integration. The project intends to develop clear, open standards, high-quality documentation, and shared test suites that facilitate new features and enhancements to the Ethereum protocol.
 - [Baseline Project](https://www.baseline-protocol.org/)
-  The Baseline Protocol is an open source initiative that combines advances in cryptography, messaging, and blockchain to deliver secure and private business processes at low cost via the public Ethereum mainnet. The protocol enables confidential and complex collaboration between enterprises without leaving any sensitive data on-chain. The Baseline project is a sub-project of the Ethereum OASIS Open Project, and is coordinated by the Baseline Technical Steering Committee.
+  The Baseline Protocol is an open source initiative that combines advances in cryptography, messaging, and blockchain to deliver secure and private business processes at low cost via the public Ethereum Mainnet. The protocol enables confidential and complex collaboration between enterprises without leaving any sensitive data on-chain. The Baseline project is a sub-project of the Ethereum OASIS Open Project, and is coordinated by the Baseline Technical Steering Committee.
 
 ### Products and services {#products-and-services}
 
 - [Alchemy](https://alchemyapi.io/) _provides API services and tools for building and monitoring applications on Ethereum_
 - [Blockapps](https://blockapps.net/) _implementation of the Enterprise Ethereum protocol, tooling and APIs that form the STRATO platform_
 - [ConsenSys](https://consensys.net/) _provides a range of products and tools for building on Ethereum, as well as consulting and custom development services_
-- [Envision Blockchain](https://envisionblockchain.com/) _provides enterprise focused consulting and development services specializing in Ethereum mainnet_
+- [Envision Blockchain](https://envisionblockchain.com/) _provides enterprise focused consulting and development services specializing in Ethereum Mainnet_
 - [EY OpsChain](https://blockchain.ey.com/products/procurement) _provides a procurement workflow by issuing RFQ’s, contracts, purchase orders, and invoices across your network of trusted business partners_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _an enterprise focused open-source Ethereum client developed under the Apache 2.0 license and written in Java_
 - [Infura](https://infura.io/) _scalable API access to the Ethereum and IPFS networks_
@@ -112,7 +112,7 @@ Examples of L2 solutions that are production ready or will be soon include:
 
 ## Enterprise applications live on mainnet {#enterprise-live-on-mainnet}
 
-Here are some of the enterprise applications that have been deployed to the public Ethereum mainnet
+Here are some of the enterprise applications that have been deployed to the public Ethereum Mainnet
 
 ### Payments {#payments}
 
@@ -141,7 +141,7 @@ Here are some of the enterprise applications that have been deployed to the publ
 ### Supply chain {#supply-chain}
 
 - [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _bill of lading and document transfer provider_
-- [Morpheus.network](https://morpheus.network/) _supply chain automation platform which implements a hybrid of private chains with notarized data on the Ethereum mainnet, and is in use by companies such as Canadian food, oil & gas distributor Federated Co-op Ltd. and Argentinian pet food provider Vitalcan_
+- [Morpheus.network](https://morpheus.network/) _supply chain automation platform which implements a hybrid of private chains with notarized data on the Ethereum Mainnet, and is in use by companies such as Canadian food, oil & gas distributor Federated Co-op Ltd. and Argentinian pet food provider Vitalcan_
 - [Minespider](https://www.minespider.com/) _supply chain tracking_
 - [ShipChain](https://shipchain.io) _public sidechain of Ethereum and enterprise system for supply chain visibility and trust, especially for multimodal logistics_
 - [Follow Our Fibre](https://www.followourfibre.com) _viscose supply chain traceability_
@@ -151,7 +151,7 @@ Here are some of the enterprise applications that have been deployed to the publ
 ### Credentials and certifications {#credentials}
 
 - [Utah Counties](http://www.utahcounty.gov/Dept/ClerkAud/DigitalCertCopy.html) _issuing digital marriage certificates on Ethereum_
-- [Two Italian high schools](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain) _digital diplomas issued on Ethereum mainnet_
+- [Two Italian high schools](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain) _digital diplomas issued on Ethereum Mainnet_
 - [University of St. Gallen](https://cointelegraph.com/news/swiss-university-fights-fake-diplomas-with-blockchain-technology) _pilot project to verify degrees by a Swiss university_
 - [Malta](https://cointelegraph.com/news/malta-to-store-education-certificates-on-a-blockchain) _all educational certificates recorded on mainnet by [Hyland](https://www.learningmachine.com/)_
 - [Pohang University of Science and Technology](https://www.theblockcrypto.com/linked/55176/south-korean-university-issues-blockchain-stored-diplomas-amid-the-spread-of-the-coronavirus) _South Korean university issues blockchain-stored diplomas to its new graduates_

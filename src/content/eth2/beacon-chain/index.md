@@ -20,7 +20,7 @@ summaryPoints:
 
 ## What does the Beacon Chain do? {#what-does-the-beacon-chain-do}
 
-The Beacon Chain will conduct or coordinate the expanded network of [shards](/eth2/shard-chains/) and [stakers](/eth2/staking/). But it won't be like the [Ethereum mainnet](/glossary/#mainnet) of today. It can't handle accounts or smart contracts.
+The Beacon Chain will conduct or coordinate the expanded network of [shards](/eth2/shard-chains/) and [stakers](/eth2/staking/). But it won't be like the [Ethereum Mainnet](/glossary/#mainnet) of today. It can't handle accounts or smart contracts.
 
 The Beacon Chain’s role will change over time but it’s a foundational component for [the secure, sustainable and scalable Ethereum we’re working towards](/eth2/vision/).
 
@@ -50,7 +50,7 @@ The Eth2 upgrades are all somewhat interrelated. So let’s recap how the Beacon
 
 ### Mainnet and the Beacon Chain {#mainnet-and-beacon-chain}
 
-The Beacon Chain, at first, will exist separately to the Ethereum mainnet we use today. But eventually they will be connected. The plan is to "merge" mainnet into the proof-of-stake system that's controlled and coordinated by the Beacon Chain.
+The Beacon Chain, at first, will exist separately to the Ethereum Mainnet we use today. But eventually they will be connected. The plan is to "merge" mainnet into the proof-of-stake system that's controlled and coordinated by the Beacon Chain.
 
 <ButtonLink to="/eth2/merge/">The merge</ButtonLink>
 

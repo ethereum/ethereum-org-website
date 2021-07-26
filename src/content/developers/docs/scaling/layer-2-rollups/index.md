@@ -7,7 +7,7 @@ incomplete: true
 sidebarDepth: 3
 ---
 
-Layer 2 is a collective term for solutions designed to help scale your application by handling transactions off the Ethereum mainnet (layer 1), while taking advantage of the robust decentralized security model of mainnet. Transaction speed suffers when the network is busy which can make the user experience poor for certain types of dapps. And as the network gets busier, gas prices increase as transaction senders aim to outbid each other. This can make using Ethereum very expensive.
+Layer 2 is a collective term for solutions designed to help scale your application by handling transactions off the Ethereum Mainnet (layer 1), while taking advantage of the robust decentralized security model of mainnet. Transaction speed suffers when the network is busy which can make the user experience poor for certain types of dapps. And as the network gets busier, gas prices increase as transaction senders aim to outbid each other. This can make using Ethereum very expensive.
 
 ## Prerequisites {#prerequisites}
 

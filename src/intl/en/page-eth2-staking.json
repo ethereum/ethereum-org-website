@@ -52,7 +52,7 @@
   "page-eth2-staking-upgrades-li": "Proof-of-stake is managed by the Beacon Chain.",
   "page-eth2-staking-upgrades-li-2": "Ethereum will have a proof-of-stake Beacon Chain and a proof-of-work mainnet for the forseeable future. Mainnet is the Ethereum we've been using for years.",
   "page-eth2-staking-upgrades-li-3": "During this time, stakers will be adding new blocks to the Beacon Chain but not processing mainnet transactions.",
-  "page-eth2-staking-upgrades-li-4": "Ethereum will fully transition to a proof-of-stake system once the Ethereum mainnet merges with the Beacon Chain.",
+  "page-eth2-staking-upgrades-li-4": "Ethereum will fully transition to a proof-of-stake system once the Ethereum Mainnet merges with the Beacon Chain.",
   "page-eth2-staking-upgrades-li-5": "A miner upgrade will follow to enable withdraw of staked funds.",
   "page-eth2-staking-upgrades-title": "Proof-of-stake and Eth2 upgrades",
   "page-eth2-staking-validators": "More validators, more security",
