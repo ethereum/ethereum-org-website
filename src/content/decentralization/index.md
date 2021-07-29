@@ -33,7 +33,7 @@ Compare this to any centralized service (Amazon, Google, or Facebook, for exampl
 
 There are many ways to define decentralization. If you're trying to determine how decentralized something is, look for the following attributes:
 
-- **Resistant to censorship**: Reduced ability to unilaterally control what gets published.
+- **Resistant to censorship**: Not able to unilaterally control what gets published.
 - **High security**: Open systems are built to resist inevitable bad actors.
 - **Permissionless participation**: Very basic criteria for participation, often outside of the control of the system (i.e. access to an internet connection).
 - **Pseudonymity or anonymity**: Participants in the system can usually interact without exposing their identities.
@@ -196,7 +196,7 @@ Decentralized systems eliminate the need to trust third-party intermediaries. Th
 
 ### Less to pay for {#operational-efficiency}
 
-In short, decentralization cuts out the intermediary. When you (or the merchant selling you something, if you believe that merchants altruistically assume the costs of payment processing) pay a centralized credit card company a percentage of every purchase, you are paying for:
+Decentralization cuts out the intermediary. When you pay a centralized credit card company a percentage of every purchase, you are paying for:
 
 - The trusted position of the processor as a third party
 - The point-of-sale infrastructure
@@ -240,7 +240,7 @@ Let's look at a couple of examples.
 
 We'll start with stablecoins. Stablecoins are digital assets designed to match the value of a (low-volatility) national currency.
 
-For example, USDC is a United-States-Dollar-value cryptocurrency. At the time of writing, its website claims that it is "backed by fully reserved assets" (a phrase assumedly meant to communicate that it is fully backed by reserve assets). It is controlled in a relatively centralized way: via a permissioned consortium founded by two big corporations.
+For example, USDC is a United-States-Dollar-value cryptocurrency. At the time of writing, the USDC website states it to be "backed by fully reserved assets". It is controlled in a relatively centralized way: via a permissioned consortium founded by two big corporations.
 
 DAI is another dollar-value coin. You create it by first depositing crypto assets with an automated program (a smart contract). After the deposit goes through, you can borrow DAI against your collateral.
 
@@ -264,7 +264,7 @@ There are centralized and decentralized crypto exchanges. Here's a table of how 
 | Users publicly provide paired liquidity. A smart contract uses the liquidity to fill orders. | Market makers enter into private deals with the exchange. The exchange executes orders.                                                                                       |
 | Trading fees go to a development fund and liquidity provider payments.                       | Trading fees go to.... business stuff?                                                                                                                                        |
 | Transaction fees depend on Ethereum network conditions.                                      | Trading transactions happen internally, not on the blockchain.                                                                                                         |
-| Participants can help [make decisions](https://gov.uniswap.org) about the exchange.          | Decisions are made by corporate executives and shareholders.                                                                                                                  |
+| Participants can help [make decisions](https://gov.uniswap.org) about the exchange.          | Corporate executives and shareholders make decisions.                                                                                                                  |
 | You can trade any Ethereum-based assets (including assets pegged to Bitcoin, USD, etc.)      | You can trade in any asset the exchange decides and is able to provide liquidity for.                                                                                                     |
 
 ## The history of decentralization {#history-of-decentralization}
