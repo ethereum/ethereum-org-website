@@ -65,7 +65,7 @@ Decentralized systems reduce or eliminate many of the risks inherent in centrali
 
 ## Trust and consequences {#trust-in-decentralization}
 
-We put a huge amount of trust in centralized institutions — banks, for example. However, as [history has repeatedly shown](https://en.wikipedia.org/wiki/List_of_banking_crises), our confidence is not always well-placed.
+We put a huge amount of trust in centralized financial institutions. However, as [history has repeatedly shown](https://en.wikipedia.org/wiki/List_of_banking_crises), our confidence is not always well-placed.
 
 ### What's going on behind the scenes? {#opacity}
 
