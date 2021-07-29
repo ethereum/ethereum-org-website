@@ -28,7 +28,7 @@ Avant de plonger dans les frameworks, nous vous recommandons de commencer par li
 - [trufflesuite.com](https://www.trufflesuite.com/)
 - [GitHub](https://github.com/trufflesuite/truffle)
 
-**Embark - \*\***_Environnement de développement, infrastructure de test et autres outils intégrés à Ethereum, IPFS et Whisper_\*\*
+**Embark -** **_Environnement de développement, infrastructure de test et autres outils intégrés à Ethereum, IPFS et Whisper_**
 
 - [Documentation](https://embark.status.im/docs/)
 - [GitHub](https://github.com/embark-framework/embark)
@@ -49,7 +49,7 @@ Avant de plonger dans les frameworks, nous vous recommandons de commencer par li
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
-**OpenZeppelin SDK - \*\***_La suite d'outils par excellence pour vous aider à développer, compiler, mettre à niveau, déployer et interagir avec des contrats intelligents._\*\*
+**OpenZeppelin SDK -** **_La suite d'outils par excellence pour vous aider à développer, compiler, mettre à niveau, déployer et interagir avec des contrats intelligents._**
 
 - [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)

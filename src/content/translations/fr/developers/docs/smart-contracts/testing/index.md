@@ -22,7 +22,7 @@ incomplete: true
 - [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
 - [Chat DappHub](https://dapphub.chat/)
 
-**Whiteblock Genesis - \*\***_Plateforme de test et sandbox de développement de bout en bout pour la blockchain_\*\*
+**Whiteblock Genesis -** **_Plateforme de test et sandbox de développement de bout en bout pour la blockchain_**
 
 - [Whiteblock.io](https://whiteblock.io)
 - [Documentation](https://docs.whiteblock.io)
@@ -33,7 +33,7 @@ incomplete: true
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-test-environment)
 - [Documentation](https://docs.openzeppelin.com/test-environment/)
 
-**OpenZeppelin Test Helpers -** \*\*\_Bibliothèque d'assertions pour tester contrats intelligents Ethereum. Assurez vous que vos contrat se comporte comme prévu.</p>
+**OpenZeppelin Test Helpers -** **_Bibliothèque d'assertions pour tester contrats intelligents Ethereum. Assurez vous que vos contrat se comporte comme prévu._**
 
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-test-helpers)
 - [Documentation](https://docs.openzeppelin.com/test-helpers)

@@ -66,10 +66,10 @@ var web3 = new Web3(
 
 Une fois la configuration effectuée, vous pourrez interroger la blockchain pour :
 
-- les numéros de blocs ;
-- le carburant estimé ;
-- les événements du contract intelligent ;
-- l'ID du réseau ;
+- les numéros de blocs
+- le carburant estimé
+- les événements du contract intelligent
+- l'ID du réseau
 - et plus encore...
 
 <!--- #### Try it

@@ -5,7 +5,7 @@ lang: fr
 sidebar: true
 ---
 
-L’instanciation physique de l’EVM ne peut pas être décrite aussi facilement qu'on pointerait du doigt un nuage ou une vague, mais elle existe \_\_ en tant qu'entité unique gérée par des milliers d'ordinateurs connectés exécutant un client Ethereum.
+L’instanciation physique de l’EVM ne peut pas être décrite aussi facilement qu'on pointerait du doigt un nuage ou une vague, mais elle _existe_ en tant qu'entité unique gérée par des milliers d'ordinateurs connectés exécutant un client Ethereum.
 
 Le protocole Ethereum existe uniquement dans le but de maintenir le fonctionnement continu, interrompu et immuable de cette machine d'état. C'est dans cet environnement que prennent vie tous les comptes et contrats intelligents Ethereum. À n'importe quel bloc de la chaîne, Ethereum a un seul et unique état dit "canonique" (conforme), et l'EVM est ce qui définit les règles pour le calcul d'un nouvel état valide de bloc en bloc.
 

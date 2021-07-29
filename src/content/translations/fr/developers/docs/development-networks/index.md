@@ -1,6 +1,6 @@
 ---
 title: Réseaux de développement
-description: "Présentation des réseaux de développement et des outils disponibles pour \nconstruire des applications Ethereum."
+description: "Présentation des réseaux de développement et des outils disponibles pour construire des applications Ethereum."
 lang: fr
 sidebar: true
 ---

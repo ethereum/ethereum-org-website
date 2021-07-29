@@ -33,8 +33,8 @@ Une fois qu'un bloc est assemblé (miné) par un mineur sur le réseau, il est p
 
 Preuve de travail signifie ceci :
 
-- Les nœuds miniers requièrent une quantité d'énergie, un délai et une puissance de calcul variables mais substantiels pour produire un "certificat de légitimité" pour tout bloc qu’ils proposent au réseau. Cela aide à protéger ce dernier contre les attaques de spam/déni de service, entre autres\*, puisque les certificats sont coûteux à produire.
-- Les autres mineurs qui entendent parler d'un nouveau bloc avec un certificat de légitimité valide doivent\* accepter le nouveau bloc en tant que bloc conforme suivant sur la blockchain.
+- Les nœuds miniers requièrent une quantité d'énergie, un délai et une puissance de calcul variables mais substantiels pour produire un "certificat de légitimité" pour tout bloc qu’ils proposent au réseau. Cela aide à protéger ce dernier contre les attaques de spam/déni de service, entre autres, puisque les certificats sont coûteux à produire.
+- Les autres mineurs qui entendent parler d'un nouveau bloc avec un certificat de légitimité valide doivent accepter le nouveau bloc en tant que bloc conforme suivant sur la blockchain.
 - Le délai exact nécessaire à chaque mineur pour produire ce certificat est une variable aléatoire avec d'importants écarts. Cela garantit qu'il est peu probable* que deux mineurs produisent simultanément des validations pour un bloc proposé en même temps. Lorsqu'un mineur produit et propage un nouveau bloc certifié, il peut être presque certain qu'il sera accepté par le réseau comme le bloc conforme suivant sur la blockchain, sans conflit* (bien qu'il existe également un protocole pour traiter les conflits dans le cas où deux blockchains certifiés sont produites presque simultanément).
 
 [En savoir plus sur le minage](/en/developers/docs/consensus-mechanisms/pow/mining/)

@@ -94,7 +94,7 @@ La fourche Istanbul a :
 - [EIP-152](https://eips.ethereum.org/EIPS/eip-152) - Permet à Ethereum de travailler avec des monnaies préservant la confidentialité, comme Zcash. - Cryptographie moins onéreuse pour améliorer les coûts de carburant.
 - [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) - Protège Ethereum contre les attaques par rejeu en ajoutant le code d'opération ([opcode]) "CHAINID" (/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) - Optimisation du prix du carburant des codes d'opération en fonction de la consommation
-- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – Réduit le coût des données d'appel pour permettre un plus grand nombre de données dans les blocs. Utile pour l'[évolutivité de la couche 2](/developers/docs/layer-2-scaling/).\_
+- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – Réduit le coût des données d'appel pour permettre un plus grand nombre de données dans les blocs. Utile pour l'[évolutivité de la couche 2](/developers/docs/layer-2-scaling/).
 - [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) - Autres altérations du prix du carburant des codes d'opération.
 
 </ExpandableCard>
@@ -139,21 +139,21 @@ La fourche Byzantium a :
 - réduit les récompenses pour le [minage des blocs](/developers/docs/consensus-mechanisms/pow/mining/) de 5 à 3 ETH ;
 - retardé la [bombe de difficulté](/glossary/#difficulty-bomb) d'un an ;
 - ajouté la possibilité d'effectuer des appels sans changement d'état vers d'autres contrats ;
-- ajouté certaines méthodes de cryptographie pour permettre la \[l'évolutivité de la couche 2\]((/developers/docs/layer-2-scaling/).
+- ajouté certaines méthodes de cryptographie pour permettre la [l'évolutivité de la couche 2](/developers/docs/layer-2-scaling/).
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
 <ExpandableCard title="EIP Byzantium" contentPreview="Official improvements included in this fork.">
 
-- [EIP-140](https://eips.ethereum.org/EIPS/eip-140) - Ajoute le code d'opération "REVERT".
-- [EIP-658](https://eips.ethereum. rg/EIPS/eip-658) - Champ de statut ajouté aux reçus de transaction pour indiquer le succès ou l'échec.
-- [EIP-196](https://eips.ethereum. rg/EIPS/eip-196) - Ajoute la courbe elliptique et la multiplication scalaire pour permettre les [SNARK ZK](/developers/docs/layer-2-scaling/#rollups).\_
-- [EIP-197](https://eips.ethereum. rg/EIPS/eip-197) - Ajoute la courbe elliptique et la multiplication scalaire pour permettre les [SNARK ZK](/developers/docs/layer-2-scaling/#rollups).\_
-- [EIP-198](https://eips. thereum.org/EIPS/eip-198) - Active la vérification de la signature RSA.
-- [EIP-211](https://eips.ethereum.org/EIPS/eip-211) - Ajoute la prise en charge des valeurs de retour de longueur variable.
-- [EIP-214](https://eips.ethereum.org/EIPS/eip-214) - Ajoute le code d'opération "STATICCALL" permettant de ne pas modifier l'état des appels vers d'autres contrats.
-- [EIP-100](https://eips.ethereum.org/EIPS/eip-100) - Modifie la formule d'ajustement de difficulté.
-- [EIP-649](https://eips. thereum.org/EIPS/eip-649) - Retarde la [bombe de difficulté](/glossary/#difficulty-bomb) de 1 an et réduit la récompense des blocs de 5 à 3 ETH.
+- [EIP-140](https://eips.ethereum.org/EIPS/eip-140) - _Ajoute le code d'opération "REVERT"._
+- [EIP-658](https://eips.ethereum.org/EIPS/eip-658) - _Champ de statut ajouté aux reçus de transaction pour indiquer le succès ou l'échec._
+- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) - _Ajoute la courbe elliptique et la multiplication scalaire pour permettre les [SNARK ZK](/developers/docs/layer-2-scaling/#rollups)._
+- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) - _Ajoute la courbe elliptique et la multiplication scalaire pour permettre les [SNARK ZK](/developers/docs/layer-2-scaling/#rollups)._
+- [EIP-198](https://eips.ethereum.org/EIPS/eip-198) - _Active la vérification de la signature RSA._
+- [EIP-211](https://eips.ethereum.org/EIPS/eip-211) - _Ajoute la prise en charge des valeurs de retour de longueur variable._
+- [EIP-214](https://eips.ethereum.org/EIPS/eip-214) - _Ajoute le code d'opération "STATICCALL" permettant de ne pas modifier l'état des appels vers d'autres contrats._
+- [EIP-100](https://eips.ethereum.org/EIPS/eip-100) - _Modifie la formule d'ajustement de difficulté._
+- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) - _Retarde la [bombe de difficulté](/glossary/#difficulty-bomb) de 1 an et réduit la récompense des blocs de 5 à 3 ETH._
 
 </ExpandableCard>
 
