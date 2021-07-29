@@ -27,7 +27,9 @@ Pour préserver l'historique des transactions, les blocs sont strictement ordonn
 
 Une fois qu'un bloc est assemblé (miné) par un mineur sur le réseau, il est propagé au reste du réseau. Tous les nœuds ajoutent ce bloc à la fin de leur blockchain, et le minage continue. Le processus exact d'assemblage de blocs (minage) et le processus d'engagement/de consensus sont actuellement spécifiés par le protocole "Preuve-de-Travail" d'Ethereum.
 
-### Démonstration visuelle {#a-visual-demo} <iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+### Démonstration visuelle {#a-visual-demo}
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
 
 ## Protocole de "preuve de travail" {#proof-of-work-protocol}
 

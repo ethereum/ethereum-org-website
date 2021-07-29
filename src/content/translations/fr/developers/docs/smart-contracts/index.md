@@ -5,7 +5,7 @@ lang: fr
 sidebar: true
 ---
 
-## Qu'est-ce qu'un contrat intelligent ?
+## Qu'est-ce qu'un contrat intelligent? {#what-is-a-smart-contract}
 
 Un "contrat intelligent" est simplement un programme exécuté sur la blockchain d'Ethereum. C'est un ensemble de code (ses fonctions) et de données (son état) qui réside à une adresse spécifique sur la blockchain Ethereum.
 

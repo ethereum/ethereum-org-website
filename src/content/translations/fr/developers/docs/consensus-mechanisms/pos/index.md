@@ -69,7 +69,7 @@ Pour ce faire, en preuve d'enjeu, le protocole de finalisation Casper amène les
 
 Comme l'a dit Vlad Zamfir, c'est comme si un mineur participait à une attaque de 51 %, causant la combustion immédiate de son matériel minier.
 
-## Preuve d'enjeu et sécurité
+## Preuve d'enjeu et sécurité {#pos-and-security}
 
 La menace d'une [attaque de 51 %](https://www.investopedia.com/terms/1/51-attack.asp) est toujours présente en preuve d'enjeu, mais elle est encore plus risquée pour les attaquants. Pour ce faire, vous devez contrôler 51% de l'ETH mis en jeu. C'est non seulement beaucoup d'argent, mais cela provoquerait probablement aussi une baisse de la valeur de l'ETH. Il existe très peu d'intérêt à détruire la valeur d'une monnaie dans laquelle vous avez une participation majoritaire. Il existe beaucoup plus d'intérêt à maintenir la sécurité et la bonne marche du réseau.
 

@@ -21,7 +21,7 @@ Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/en
 - [Write your First Smart Contract](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Learn How to Compile and Deploy Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Travailler avec des clients Ethereum
+## Travailler avec des clients Ethereum {#working-with-ethereum-clients}
 
 Apprenez à utiliser [Web3J](https://github.com/web3j/web3j) et Hyperledger Besu, deux des principaux clients Ethereum Java.
 

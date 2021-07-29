@@ -18,7 +18,7 @@ Le déploiement d'un contrat coûte également des ethers, nous vous recommandon
 
 Enfin, comme vous devrez compiler votre contrat avant de le déployer, assurez-vous d'avoir lu la page sur la [compilation des contrats intelligents](/developers/docs/smart-contracts/compiling/).
 
-## Comment déployer un contrat intelligent
+## Comment déployer un contrat intelligent {#how-to-deploy-a-smart-contract}
 
 Vous devrez payer des frais de transaction, donc assurez-vous de disposer de quelques ethers.
 
@@ -58,6 +58,6 @@ Une fois déployé, votre contrat aura une adresse Ethereum comme les autres [co
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
-## Sujets connexes
+## Sujets connexes {#related-topics}
 
 - [Frameworks de développement](/en/developers/docs/frameworks/)
