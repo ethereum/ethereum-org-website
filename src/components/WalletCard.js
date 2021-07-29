@@ -139,7 +139,7 @@ const Description = styled.p`
   margin-bottom: 0.5rem;
   line-height: 140%;
   max-height: 100px;
-  overflow-y: auto;
+  overflow-y: hidden;
 `
 
 const StyledButtonLink = styled(ButtonLink)`
