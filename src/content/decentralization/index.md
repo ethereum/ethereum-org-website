@@ -19,7 +19,7 @@ Decentralized systems are everywhere. They're in nature, finance, architecture, 
 
 In a decentralized system no individual or group makes decisions unilaterally. In basic terms: nobody is in charge, but things still work. Rules without rulers.
 
-If it sounds familiar, it should. Apart from the fact that there are tons of examples, decentralization-centralization is a spectrum. Most systems have some aspect of both.
+If this sounds familiar, it should. Apart from the fact that there are tons of examples, decentralization-to-centralization is a spectrum. Many systems have some aspect of both.
 
 ### Basic example of decentralization {#decentralization-example}
 
