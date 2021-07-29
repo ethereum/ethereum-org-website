@@ -17,7 +17,7 @@ summaryPoints:
 
 Decentralized systems are everywhere. They're in nature, finance, architecture, art, communications, government, and — you guessed it — computer science. 
 
-Decentralization is basically when no individual or group can unilaterally make major decisions, especially not when it hurts the other participants. In basic terms: Nobody is in charge, but things still work. Rules without rulers.
+In a decentralized system no individual or group makes decisions unilaterally. In basic terms: nobody is in charge, but things still work. Rules without rulers.
 
 If it sounds familiar, it should. Apart from the fact that there are tons of examples, decentralization-centralization is a spectrum. Most systems have some aspect of both.
 
