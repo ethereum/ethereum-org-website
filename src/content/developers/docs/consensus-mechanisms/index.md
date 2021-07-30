@@ -40,13 +40,13 @@ A consensus mechanism in a cryptoeconomic system also helps prevent certain kind
 <!-- Why do different consensus protocols exist? -->
 <!-- What are the tradeoffs of each? -->
 
-### proof-of-work {#proof-of-work}
+### Proof of work {#proof-of-work}
 
 Ethereum, like Bitcoin, currently uses a proof-of-work (PoW) consensus protocol.
 
 #### Block creation {#pow-block-creation}
 
-Proof-of-work is done by [miners](/developers/docs/consensus-mechanisms/pow/mining/), who compete to create new blocks full of processed transactions. The winner shares the new block with the rest of the network and earns some freshly minted ETH. The race is won by whoever's computer can solve a math puzzle fastest – this produces the cryptographic link between the current block and the block that went before. Solving this puzzle is the work in "proof-of-work".
+Proof of work is done by [miners](/developers/docs/consensus-mechanisms/pow/mining/), who compete to create new blocks full of processed transactions. The winner shares the new block with the rest of the network and earns some freshly minted ETH. The race is won by whosever computer can solve a math puzzle fastest – this produces the cryptographic link between the current block and the block that went before. Solving this puzzle is the work in "proof-of-work".
 
 #### Security {#pow-security}
 
@@ -54,37 +54,40 @@ The network is kept secure by the fact that you'd need 51% of the network's comp
 
 More on [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/)
 
-### proof-of-stake {#proof-of-stake}
+### Proof of stake {#proof-of-stake}
 
 Ethereum has plans to upgrade to a [proof-of-stake (PoS)](/developers/docs/consensus-mechanisms/pos/) consensus protocol.
 
 #### Block creation {#pos-block-creation}
 
-Proof-of-stake is done by validators who have staked ETH to participate in the system. A validator is chosen at random to create new blocks, share them with the network and earn rewards. Instead of needing to do intense computational work, you simply need to have staked your ETH in the network. This is what incentivises healthy network behaviour.
+Proof of stake is done by validators who have staked ETH to participate in the system. A validator is chosen at random to create new blocks, share them with the network and earn rewards. Instead of needing to do intense computational work, you simply need to have staked your ETH in the network. This is what incentivises healthy network behaviour.
 
 #### Security {#pos-security}
 
 A proof-of-stake system is kept secure by the fact that you'd need 51% of the total staked ETH to defraud the chain. And that your stake is slashed for malicious behaviour.
 
-More on [proof-of-stake (PoS)](/developers/docs/consensus-mechanisms/pos/)
+More on [proof of stake](/developers/docs/consensus-mechanisms/pos/)
 
 ### Sybil Resistance & Chain Selection
 
-Now technically, both proof-of-work (PoW) and proof-of-stake (PoS) are not consensus protocols by themselves, but they are often referred to as such for simplicity. PoW and PoS are actually sybil resistance mechanisms and block author selectors, they are a way to decide who is the author of the latest block. It's this mechanism combined with at least a Chain selection rule that makes up a true consensus mechanism.
+Now technically, both proof-of-work (PoW) and proof-of-stake (PoS) are not consensus protocols by themselves, but they are often referred to as such for simplicity. PoW and PoS are actually Sybil resistance mechanisms and block author selectors, they are a way to decide who is the author of the latest block. It's this mechanism combined with at least a chain selection rule that makes up a true consensus mechanism.
 
-Sybil resistance is a measure of how a protocol fairs against a [sybil attack](https://en.wikipedia.org/wiki/Sybil_attack). Sybil attacks are when one user or group pretends to be many users. Resistance to this type of attack is essential for a decentralized blockchain, and enables miners and validators to be rewarded equally based on resources put in. PoW and PoS protect against this by making users expend a lot of engergy or put up a lot of collateral, making it really hard for one to pretend to be many.  
+**Sybil resistance** is a measure of how a protocol fairs against a [Sybil attack](https://en.wikipedia.org/wiki/Sybil_attack). Sybil attacks are when one user or group pretends to be many users. Resistance to this type of attack is essential for a decentralized blockchain, and enables miners and validators to be rewarded equally based on resources put in. PoW and PoS protect against this by making users expend a lot of energy or put up a lot of collateral respectively, making it really hard for one to pretend to be many.
 
-A chain selection rule is used to decide which chain is the "correct" chain. Ethereum and Bitcoin currently use the "longest chain" rule, which means that whichever blockchain is the longest will be the one the rest of the nodes work around. 
+A **chain selection rule** is used to decide which chain is the "correct" chain. Ethereum and Bitcoin currently use the "longest chain" rule, which means that whichever blockchain is the longest will be the one the rest of the nodes accept as valid and work with.
 
-The combination of PoW and longest chain rule is known as "Nakamoto Consensus".
+The combination of PoW and longest chain rule is known as "Nakamoto Consensus."
+
 Eth2 is set to use the consensus mechanism called [Casper the Friendly Finality Gadget](https://arxiv.org/abs/1710.09437), which is proof-of-stake based.
 
 ## Further Reading {#further-reading}
+
+- [What is Nakamoto Consensus? Complete Beginner’s Guide](https://blockonomi.com/nakamoto-consensus/)
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related Topics {#related-topics}
 
-- [proof-of-work](/developers/docs/consensus-mechanisms/pow/)
+- [Proof of work](/developers/docs/consensus-mechanisms/pow/)
 - [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
-- [proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
+- [Proof of stake](/developers/docs/consensus-mechanisms/pos/)
