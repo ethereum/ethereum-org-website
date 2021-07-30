@@ -4145,6 +4145,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "esale",
+      "name": "esale",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36928404?v=4",
+      "profile": "https://github.com/esale",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
