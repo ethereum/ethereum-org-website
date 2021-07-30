@@ -29,9 +29,9 @@ On-chain data can help us understand Ethereum, the network, and as an economy fo
 
 ### Transactions {#transactions}
 
-A user’s journey on Ethereum starts with initializing a user-controlled account or an entity with an ETH balance. There are two account types - user-controlled or a smart contract (see [ethereum.org](https://ethereum.org/en/developers/docs/accounts/)).
+A user’s journey on Ethereum starts with initializing a user-controlled account or an entity with an ETH balance. There are two account types - user-controlled or a smart contract (see [ethereum.org](/developers/docs/accounts/)).
 
-Any account can be viewed on a block explorer like [Etherscan](https://etherscan.io/). Block explorers are a portal to Ethereum’s data. They display, in real-time, data on blocks, transactions, miners, accounts and other on-chain activity (see [here](https://ethereum.org/en/developers/docs/data-and-analytics/block-explorers/#top)).
+Any account can be viewed on a block explorer like [Etherscan](https://etherscan.io/). Block explorers are a portal to Ethereum’s data. They display, in real-time, data on blocks, transactions, miners, accounts and other on-chain activity (see [here](/developers/docs/data-and-analytics/block-explorers/)).
 
 However, a user may wish to query the data directly to reconcile the information provided by external block explorers. [Dune Analytics](https://duneanalytics.com/) provides this capability to anyone with some knowledge of SQL.
 
@@ -85,7 +85,7 @@ You can find dashboard [here](https://duneanalytics.com/paulapivat/Learn-Ethereu
 
 ### Breaking Down Transactions {#breaking_down_transactions}
 
-A submitted transaction includes several pieces of information including ([source](https://ethereum.org/en/developers/docs/transactions/)):
+A submitted transaction includes several pieces of information including ([source](/developers/docs/transactions/)):
 
 - **Recipient**: The receiving address (queried as "to")
 - **Signature**: While a sender's private keys signs a transaction, what we can query with SQL is a sender's public address ("from").
@@ -113,11 +113,11 @@ ORDER BY block_time DESC
 
 ### Blocks {#blocks}
 
-Each transaction will change the state of the Ethereum virtual machine ([EVM](https://ethereum.org/en/developers/docs/evm/)) ([source](https://ethereum.org/en/developers/docs/transactions/)). Transactions are broadcasted to the network to be verified and included in a block. Each transaction is associated with a block number. To see the data, we could query a specific block number: 12396854 (the most recent block among Ethereum Foundation transactions as of this writing, 11/5/21).
+Each transaction will change the state of the Ethereum virtual machine ([EVM](/developers/docs/evm/)) ([source](/developers/docs/transactions/)). Transactions are broadcasted to the network to be verified and included in a block. Each transaction is associated with a block number. To see the data, we could query a specific block number: 12396854 (the most recent block among Ethereum Foundation transactions as of this writing, 11/5/21).
 
 Moreover, when we query the next two blocks, we can see that each block contains the hash of the previous block (i.e., parent hash), illustrating how the blockchain is formed.
 
-Each block contains a reference to it parent block. This is shown below between the `hash` and `parent_hash` columns ([source](https://ethereum.org/en/developers/docs/blocks/)):
+Each block contains a reference to it parent block. This is shown below between the `hash` and `parent_hash` columns ([source](/developers/docs/blocks/)):
 
 ![parent_hash](./parent_hash.png)
 
@@ -159,7 +159,7 @@ Here's the SQL output on Dune:
 
 ![list_of_txn](./list_of_txn.png)
 
-This single block being added to the chain changes the state of the Ethereum virtual machine ([EVM](https://ethereum.org/en/developers/docs/evm/)). Dozens sometimes, hundreds of transactions are verified at once. In this specific case, 222 transactions were included.
+This single block being added to the chain changes the state of the Ethereum virtual machine ([EVM](/developers/docs/evm/)). Dozens sometimes, hundreds of transactions are verified at once. In this specific case, 222 transactions were included.
 
 To see how many were actually successful, we would add another filter to count successful transactions:
 
@@ -178,7 +178,7 @@ For block 12396854, out of 222 total transactions, 204 were successfully verifie
 
 ![successful_txn](./successful_txn.png)
 
-Transactions requests occur dozens of times per second, but blocks are committed approximately once every 15 seconds ([source](https://ethereum.org/en/developers/docs/blocks/)).
+Transactions requests occur dozens of times per second, but blocks are committed approximately once every 15 seconds ([source](/developers/docs/blocks/)).
 
 To see that there is one block produced approximately every 15 seconds, we could take the number of seconds in a day (86400) divided by 15 to get an _estimate_ average number of blocks per day (~ 5760).
 
@@ -221,7 +221,7 @@ The average number of blocks produced per day since 2016 is slightly above that 
 
 ### Gas {#gas}
 
-Blocks are bounded in size. Each block has a gas limit which is collectively set by miners and the network to prevent arbitrarily large block size to be less of a strain on full node in terms of disk space and speed requirements ([source](https://ethereum.org/en/developers/docs/blocks/)).
+Blocks are bounded in size. Each block has a gas limit which is collectively set by miners and the network to prevent arbitrarily large block size to be less of a strain on full node in terms of disk space and speed requirements ([source](/developers/docs/blocks/)).
 
 One way to conceptualize block gas limit is to think of it as the **supply** of available block space in which to batch transactions. The block gas limit can be queried and visualized from 2016 to present day:
 
