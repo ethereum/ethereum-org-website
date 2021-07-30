@@ -6,7 +6,7 @@ import { useState, useEffect } from "react"
  * @param {*} rootMargin
  * @returns id of the element currently in viewport
  */
-export const useActiveHash = (itemIds, rootMargin = undefined) => {
+export const useActiveHash = (itemIds, rootMargin = `0% 0% -80% 0%`) => {
   const [activeHash, setActiveHash] = useState(``)
 
   useEffect(() => {
@@ -18,7 +18,7 @@ export const useActiveHash = (itemIds, rootMargin = undefined) => {
           }
         })
       },
-      { rootMargin: rootMargin || `0% 0% -80% 0%` }
+      { rootMargin: rootMargin}
     )
 
     itemIds?.forEach((id) => {
