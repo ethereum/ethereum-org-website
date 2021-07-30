@@ -4209,6 +4209,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "graemeblackwood",
+      "name": "Graeme Blackwood",
+      "avatar_url": "https://avatars.githubusercontent.com/u/646863?v=4",
+      "profile": "http://blackwood.london",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
