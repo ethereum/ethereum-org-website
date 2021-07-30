@@ -42,15 +42,35 @@ This video offers a concise overview of gas and why it exists:
 
 ### Base Fees {#base-fees}
 
-Every block has a base fee which acts as a reserve price. To be eligible for inclusion in a block the offered price per gas must at least equal the base fee. The base fee is calculated independently of the current block and instead is determined by the blocks before it - making transaction fees more predictable for users.
-
-This makes it economically unviable for block size to remain
+Every block has a base fee which acts as a reserve price. To be eligible for inclusion in a block the offered price per gas must at least equal the base fee. The base fee is calculated independently of the current block and is instead determined by the blocks before it - making transaction fees more predictable for users.
 
 ### Block Size
 
 EIP-1559 introduced variable-size blocks to Ethereum. Each block has a target size of 12.5 million gas but the size of blocks will increase or decrease in accordance with network demands, up until the block limit of 25 milion gas (2x block target size). An equilibrium block size of 12.5 million on average is achieved through the process of _tâtonnement_. This means if the block sizes is greater than the target block size, the base fee will increase . Similarly, if the block is less than the target block size the base fee will decrease. [More on blocks](/developers/docs/blocks/).
 
+### More on Base Fees {#more-base-fees}
+
+The base fee will increase by a maximum of 12.5% per block if the target block size is exceeded. This exponential growth makes it economically non-viable for block size to remain high indefinitely.
+
+| Block Number | Included Gas | Fee Increase |   Base Fee |
+| ------------ | -----------: | -----------: | ---------: |
+| 1            |        12.5M |           0% |   100 gwei |
+| 2            |          25M |           0% |   100 gwei |
+| 3            |          25M |        12.5% | 112.5 gwei |
+| 4            |          25M |        12.5% | 126.5 gwei |
+| 5            |          25M |        12.5% | 142.4 gwei |
+| 6            |          25M |        12.5% | 160.2 gwei |
+| 7            |          25M |        12.5% | 180.2 gwei |
+| 8            |          25M |        12.5% | 202.8 gwei |
+
+Relative to the pre-London gas auction market, this transaction-fee-mechanism change causes fee prediction for to be more reliable. Following the table above - to create a transaction on block number 9, a wallet will let the user know with certainty that the **maximum base fee** to be added to the next block is `current base fee * 112.5%` or `202.8 gwei * 112.5% = 256.8 gwei`.
+
 ### FeeCap {#feecap}
+
+## Implications of the London Upgrade on Fees
+
+- less sudden spikes in price
+- better user experience when transacting on the network
 
 ## Why do gas fees exist? {#why-do-gas-fees-exist}
 
