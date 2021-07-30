@@ -1045,6 +1045,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/NishantChandla"><img src="https://avatars.githubusercontent.com/u/55653617?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nishant Chandla</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=NishantChandla" title="Code">💻</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ANishantChandla" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/PaulApivat"><img src="https://avatars.githubusercontent.com/u/4058461?v=4?s=100" width="100px;" alt=""/><br /><sub><b>@paulapivat</b></sub></a><br /><a href="#content-PaulApivat" title="Content">🖋</a></td>
     <td align="center"><a href="http://blackwood.london"><img src="https://avatars.githubusercontent.com/u/646863?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Graeme Blackwood</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Agraemeblackwood" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/il3ven"><img src="https://avatars.githubusercontent.com/u/4337699?v=4?s=100" width="100px;" alt=""/><br /><sub><b>il3ven</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=il3ven" title="Code">💻</a></td>
   </tr>
 </table>
 
