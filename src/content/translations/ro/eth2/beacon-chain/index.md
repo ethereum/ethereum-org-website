@@ -48,13 +48,17 @@ Lanțurile de fragmente (shard) vor fi al doilea upgrade Eth2. Vor crește capac
 
 Toate upgrade-urile Eth2 sunt oarecum interdependente. Deci, să recapitulăm modul în care lanțul Beacon afectează celelalte upgrade-uri.
 
-### Fragmentele și lanțul Beacon {#shards-and-beacon-chain}
-
-Lanțurile de fragmente nu pot intra în siguranță în ecosistemul Ethereum, decât cu un mecanism de consens în vigoare, Dovada Mizei (PoS). Lanțul Beacon va introduce mizarea, pregătind astfel terenul pentru ca upgrade-ul lanțului de fragmente să urmeze.<ButtonLink to="/eth2/shard-chains/">Lanțuri de fragmente</ButtonLink>
-
 ### Rețeaua principală și lanțul Beacon {#mainnet-and-beacon-chain}
 
-La început, lanțul Beacon va exista separat de rețeaua principală Ethereum care este folosită astăzi. Dar în cele din urmă vor fi conectate. Planul este de a „andoca” rețeaua principală în sistemul de dovadă a mizei (PoS) controlat și coordonat de lanțul Beacon.<ButtonLink to="/eth2/merge/">Planul este de a „andoca” rețeaua principală în sistemul de dovadă a mizei (PoS) controlat și coordonat de lanțul Beacon.</ButtonLink>
+La început, lanțul Beacon va exista separat de rețeaua principală Ethereum care este folosită astăzi. Dar în cele din urmă vor fi conectate. Planul este de a „andoca” rețeaua principală în sistemul de dovadă a mizei (PoS) controlat și coordonat de lanțul Beacon.
+
+<ButtonLink to="/eth2/merge/">Combinarea</ButtonLink>
+
+### Fragmentele și lanțul Beacon {#shards-and-beacon-chain}
+
+Lanțurile de fragmente nu pot intra în siguranță în ecosistemul Ethereum, decât cu un mecanism de consens în vigoare, Dovada Mizei (PoS). Lanțul Beacon va introduce mizarea, pregătind astfel terenul pentru ca upgrade-ul lanțului de fragmente să urmeze.
+
+<ButtonLink to="/eth2/shard-chains/">Lanțuri de fragmente</ButtonLink>
 
 <Divider />
 
