@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus isShipped date="Shipped!">
+<UpgradeStatus isShipped date="Изпратено!">
     Сигналната верига беше пусната на 1 декември по обяд UTC. За да научите повече, <a href="https://beaconscan.com/">вижте данните</a>. Ако желаете да помогнете при валидирането на веригата, може да <a href="/eth2/staking/">заложите своя ETH</a>.
 </UpgradeStatus>
 
