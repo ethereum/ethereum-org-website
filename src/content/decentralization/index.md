@@ -15,7 +15,7 @@ summaryPoints:
 
 ## What's decentralization? {#what-is-decentralization}
 
-Decentralized systems are everywhere. They're in nature, finance, architecture, art, communications, government, and — you guessed it — computer science. 
+Decentralized systems are everywhere. They're in nature, finance, architecture, art, communications, government, and — you guessed it — computer science.
 
 In a decentralized system no individual or group makes decisions unilaterally. In basic terms: nobody is in charge, but things still work. Rules without rulers.
 
@@ -25,11 +25,11 @@ If this sounds familiar, it should. Apart from the fact that there are tons of e
 
 Decentralization exists on a spectrum. There are also different types of decentralization.
 
-The Ethereum network is one example. It's built to succeed without centralized control or central points of failure. 
+The Ethereum network is one example. It's built to succeed without centralized control or central points of failure.
 
 Ethereum operates according to rules set out in the protocol (rules that no single person or organization has the authority to change). A widespread, diverse collective of individuals and groups run the software on their own computers, powering the network. Anyone can participate.
 
-Compare this to a centralized cloud service — you should see the difference immediately. The service provider decides who gets to use the service, dictates prices, and chooses where the hardware is located. 
+Compare this to a centralized cloud service — you should see the difference immediately. The service provider decides who gets to use the service, dictates prices, and chooses where the hardware is located.
 
 ### Common aspects of decentralized systems {#elements-of-decentralization}
 
@@ -90,9 +90,9 @@ In Ethereum, these opaque intermediaries do not exist. Instead, you need to trus
 
 ### The role of trust on Ethereum {#trust-ethereum}
 
-Let's look at an example. Say you want to send people some ETH. 
+Let's look at an example. Say you want to send people some ETH.
 
-You need to trust that the network operators will continue to run their machines. You need to trust that the software will continue working. Finally, if the recipients are sending you something in exchange, you need to trust that they will fulfill their promise. You *don't* need to trust anyone to send the money. The network takes care of that provably and predictably.
+You need to trust that the network operators will continue to run their machines. You need to trust that the software will continue working. Finally, if the recipients are sending you something in exchange, you need to trust that they will fulfill their promise. You _don't_ need to trust anyone to send the money. The network takes care of that provably and predictably.
 
 That's just a simple example. Ethereum does much, much more than sending money from one person to another.
 
@@ -104,13 +104,13 @@ It's trustless not because we don't trust it — but because we don't have to. Y
 
 In this trustless system, you can choose who and what to trust based on logic. In other words, you can unequivocally prove that a process is trustworthy.
 
-Can your centralized bank make the same claim to trustworthiness? Let's say you wanted to prove that your bank had enough money to cover a withdrawal. You would need to obtain something that Ethereum provides by default: a full, open record of every transaction ever executed. 
+Can your centralized bank make the same claim to trustworthiness? Let's say you wanted to prove that your bank had enough money to cover a withdrawal. You would need to obtain something that Ethereum provides by default: a full, open record of every transaction ever executed.
 
 ## Decentralization is everywhere {#decentralized-world}
 
-Decentralization is nothing new. You can find it everywhere from ant colonies to blockchain projects. 
+Decentralization is nothing new. You can find it everywhere from ant colonies to blockchain projects.
 
-Peer-to-peer systems are a classic internet example. In P2P, users double as servers, both providing and using resources. These protocols are decentralized — there's nobody in between controlling. 
+Peer-to-peer systems are a classic internet example. In P2P, users double as servers, both providing and using resources. These protocols are decentralized — there's nobody in between controlling.
 
 Examples of P2P protocols include BitTorrent and Skype. Additionally, many basic internet functions happen within a decentralized framework called [end-to-end networking](https://en.wikipedia.org/wiki/End-to-end_principle).
 
@@ -140,7 +140,7 @@ Decentralization has a number of pros and cons, but they're mostly dependent on 
 
 You'll notice that most of the cons of Ethereum come from it being a new technology, not from it being decentralized. New technologies are hard to use for one simple reason: You don't know how to use them yet.
 
-Conversely, most of the pro-Ethereum arguments come directly from the fact that the network is decentralized. Your traditional financial institutions are unlikely to offer these benefits. In some cases, they simply can't. 
+Conversely, most of the pro-Ethereum arguments come directly from the fact that the network is decentralized. Your traditional financial institutions are unlikely to offer these benefits. In some cases, they simply can't.
 
 ### Pros {#pros-of-ethereum}
 
@@ -160,13 +160,13 @@ Conversely, most of the pro-Ethereum arguments come directly from the fact that 
 - It is your responsibility to identify and comply with applicable laws.
 - It can be difficult to know which contracts, information sources, and apps you should trust.
 
-It basically comes down to whether controlling your money is worth your attention — whether obtaining a higher degree of freedom is worth learning something new. In the end, it's up to you to decide. 
+It basically comes down to whether controlling your money is worth your attention — whether obtaining a higher degree of freedom is worth learning something new. In the end, it's up to you to decide.
 
 ### A system under active development {#progress-ethereum}
 
 However, know that there are a lot of smart people who are dedicating themselves to making this technology easier for you to use. There is less need for confirmation, problem-solving, and configuration every day. If a decentralized system is simply too technical for you right now, check it out again soon. It's getting simpler every day, from a user's perspective.
 
-It also bears mentioning that you can be one of those smart people working on Ethereum. Perhaps the biggest pro-Ethereum argument out there is that your contributions matter. 
+It also bears mentioning that you can be one of those smart people working on Ethereum. Perhaps the biggest pro-Ethereum argument out there is that your contributions matter.
 
 If you use a smart contract or transact on Ethereum, you're doing something to support the entire network. If you give feedback to a developer, asking for new features or reporting issues, that's even better. You can even contribute directly by documenting, translating, coding, or starting your own project.
 
@@ -181,17 +181,17 @@ For now, if you learn about anything, learn about safety and security. It's impe
 - Understand the difference between pseudonymous and private (most blockchains are public, pseudonymous records)
 - Above all else, **back up and do not share** private keys or mnemonic phrases (long strings of random words) with others.
 
-The final part is the most important. To reiterate, your mnemonic is usually a 12-to-24-word phrase. These random word phrases represent the master keys to your funds and are **for your eyes only**. These should **only** ever be typed **directly into your wallet**, nowhere else. 
+The final part is the most important. To reiterate, your mnemonic is usually a 12-to-24-word phrase. These random word phrases represent the master keys to your funds and are **for your eyes only**. These should **only** ever be typed **directly into your wallet**, nowhere else.
 
 If you lose your phrase, you lose access. Conversely, anyone who has it has access. It's as simple as that.
 
-Don't, **don't** share your secret passphrases. Not with customer service, not with friends, not with financial advisors, not with airport security, not with business partners, not with anyone. 
+Don't, **don't** share your secret passphrases. Not with customer service, not with friends, not with financial advisors, not with airport security, not with business partners, not with anyone.
 
 There are secure ways to accomplish shared access or delegated management, such as using a multi-signature wallet or a smart contract. Just don't share your mnemonic passphrase.
 
 ## Decentralized systems can be more efficient {#efficiency-in-decentralization}
 
-Decentralized systems eliminate the need to trust third-party intermediaries. They return some control over your decisions. As a direct result of these two things, they can lower overhead. 
+Decentralized systems eliminate the need to trust third-party intermediaries. They return some control over your decisions. As a direct result of these two things, they can lower overhead.
 
 ### Less to pay for {#operational-efficiency}
 
@@ -239,9 +239,9 @@ Let's look at a couple of examples.
 
 We'll start with stablecoins. Stablecoins are digital assets designed to match the value of a (low-volatility) national currency.
 
-For example, USDC is a United-States-Dollar-value cryptocurrency. At the time of writing, the USDC website states it to be "backed by fully reserved assets". It is controlled in a relatively centralized way: via a permissioned consortium founded by two big corporations.
+For example, USDC is a United-States-Dollar-value cryptocurrency. At the time of writing, the USDC website states it to be "backed by fully reserved assets." It is controlled in a relatively centralized way: via a permissioned consortium founded by two big corporations.
 
-DAI is another dollar-value coin. You create it by first depositing crypto assets with an automated program (a smart contract). After the deposit goes through, you can borrow DAI against your collateral.
+DAI is another US-dollar-value coin. You create it by first depositing crypto assets with an automated program (a smart contract). After the deposit goes through, you can borrow DAI against your collateral.
 
 DAI was/is developed by a group called [MakerDAO](https://makerdao.com/en/). For governance, people who hold the MKR asset get to vote on how the program behaves, fees for borrowing against various deposited assets, and so on. Overall, it's far more decentralized than USDC.
 
@@ -250,27 +250,27 @@ If you're interested in a deeper dive into stablecoin decentralization, check ou
 To sum up:
 
 - USDC has ties to centralized institutions. It has perks and risks associated with doing business with or trusting those institutions.
-- DAI comes from a decentralized project. DAI currency is backed with crypto assets rather than fiat.
+- DAI comes from a decentralized project. DAI currency is backed with crypto assets rather than fiat, and comes with its own risks and benefits.
 
 ### Example 2: Currency exchanges {#exchanges}
 
 There are centralized and decentralized crypto exchanges. Here's a table of how Uniswap, a decentralized exchange, compares to Coinbase, a centralized one.
 
-| Uniswap                                                                                      | Coinbase                                                                                                                                                                      |
-| -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| You send an asset to a contract. The contract executes your trade and returns another asset. | You deposit your assets with the exchange. You can then trade and withdraw once your deposit clears.                                                                                       |
-| You must trust the smart contract to execute correctly.                                      | You must trust the exchange to hold your assets, execute your trades, secure your personal information, maintain adequate depth for withdrawals, and operate disinterestedly. |
-| Users publicly provide paired liquidity.  | Market makers enter into private deals with the exchange. Traders deposit on the exchange.                                                                                       |
-| Trading fees go to a development fund and liquidity provider payments.                       | Trading fees go to the company.                                                                                                                                        |
-| Transaction fees depend on Ethereum network conditions.                                      | Trading transactions happen internally, not on the blockchain.                                                                                                         |
-| Participants can help [make decisions](https://gov.uniswap.org) about the exchange.          | Corporate executives and shareholders make decisions.                                                                                                                  |
-| You can trade any Ethereum-based assets that have liquidity (including "wrapped" assets pegged to Bitcoin, USD, etc.)      | You can trade any asset the exchange lists.                                                                                                     |
+| Uniswap                                                                                                               | Coinbase                                                                                                                                                                      |
+| --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| You send an asset to a contract. The contract executes your trade and returns another asset.                          | You deposit your assets with the exchange. You can then trade and withdraw once your deposit clears.                                                                          |
+| You must trust the smart contract to execute correctly.                                                               | You must trust the exchange to hold your assets, execute your trades, secure your personal information, maintain adequate depth for withdrawals, and operate disinterestedly. |
+| Users publicly provide paired liquidity.                                                                              | Market makers enter into private deals with the exchange. Traders deposit on the exchange.                                                                                    |
+| Trading fees go to a development fund and liquidity provider payments.                                                | Trading fees go to the company.                                                                                                                                               |
+| Transaction fees depend on Ethereum network conditions.                                                               | Trading transactions happen internally, not on the blockchain.                                                                                                                |
+| Participants can help [make decisions](https://gov.uniswap.org) about the exchange.                                   | Corporate executives and shareholders make decisions.                                                                                                                         |
+| You can trade any Ethereum-based assets that have liquidity (including "wrapped" assets pegged to Bitcoin, USD, etc.) | You can trade any asset the exchange lists.                                                                                                                                   |
 
 ## The history the decentralized web {#history-of-decentralization}
 
-In the early days of computer networking, things were relatively centralized. Computers were too expensive for most people. Institutions (and departments within institutions) ran their own services. The services were often proprietary and incapable of smooth intercommunication. 
+In the early days of computer networking, things were relatively centralized. Computers were too expensive for most people. Institutions (and departments within institutions) ran their own services. The services were often proprietary and incapable of smooth intercommunication.
 
-Then came a collaboration between a Department of Defense lab and an Ivy League university. This resulted in the transmission control and internet protocols (TCP/IP), which were followed by several other core internet standards. These standards led to massive decentralization in communications. 
+Then came a collaboration between a Department of Defense lab and an Ivy League university. This resulted in the transmission control and internet protocols (TCP/IP), which were followed by several other core internet standards. These standards led to massive decentralization in communications.
 
 Federated councils of institutions eventually progressed to nebulous networks of individual programmers and service providers. We now have a system where an astounding number of people have the hardware resources to develop, operate, and access services using basic, universal protocols.
 
