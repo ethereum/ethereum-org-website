@@ -4200,6 +4200,15 @@
         "code",
         "bug"
       ]
+    },
+    {
+      "login": "PaulApivat",
+      "name": "@paulapivat",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4058461?v=4",
+      "profile": "https://github.com/PaulApivat",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
