@@ -47,7 +47,6 @@ Starting with [the London update](/history/#london), every block has a base fee,
 Calculating the total fee works as follows: `Gas units (limit) * (Base fee per unit + Tip per unit)`
 
 Let’s say Jordan has to pay Taylor 1 ETH. In the transaction the gas limit is 21,000 units and the base fee is 100 gwei. Jordan includes a tip of 10 gwei.
-
 Using the formula above we can calculate this as `21,000 * (100 + 10) = 2,310,000 gwei` or 0.0023 ETH.
 
 ## Base Fees {#base-fees}
@@ -85,7 +84,7 @@ To execute a transaction on the network users are able to specify a maximum limi
 
 ## The London update {#gas-price-london-update}
 
-This mechanism is more complicated than the simple gas price auction, but it has the advantage of making gas fees more predictable, as well as making ETH more
+The post-London transaction fee mechanism is more complicated than the simple gas price auction, but it has the advantage of making gas fees more predictable, as well as making ETH more
 valuable by removing some of it from circulation. The base fee functions as a [second price auction](https://oko.uk/blog/first-price-vs-second-price-auctions),
 which is more efficient than the previous mechanism that is a first price auction. Users can submit transactions with a much higher tip, corresponding
 to how much they need the transaction to happen, without having to worry that they will be overcharged.
