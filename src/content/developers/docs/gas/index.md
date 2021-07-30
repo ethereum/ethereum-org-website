@@ -24,21 +24,31 @@ In essence, gas fees are paid in Ethereum's native currency, ether (ETH). Gas pr
 
 ## Prior to the London update {#pre-london}
 
-Let's say Alice has to pay Bob 1ETH.
+The way transaction fees on the Ethereum network are calculated changed during the London upgrade. Here is a recap of how things used to work:
+
+Let's say Alice had to pay Bob 1ETH.
 In the transaction the gas limit is 21,000 units and the gas price is 200 gwei.
 
-Total fee will be: `Gas units (limit) * Gas price per unit`
+Total fee would have been: `Gas units (limit) * Gas price per unit`
 i.e `21,000 * 200 = 4,200,000 gwei` or 0.0042 ETH
 
-Now, when Alice sends the money, 1.0042 ETH will be deducted from Alice's account.
-Bob will be credited 1.0000 ETH.
-Miner gets 0.0042 ETH.
+Now, when Alice sent the money, 1.0042 ETH will be deducted from Alice's account.
+Bob would be credited 1.0000 ETH.
+Miner got 0.0042 ETH.
 
 This video offers a concise overview of gas and why it exists:
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/AJvzNICwcwc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## After the London update {#post-london}
+## After to the London update {#post-london}
+
+Starting with the London update, every block has a base fee, the minimum per gas price for inclusion in this block, and a tip.
+
+Calculating the total fee works as follows: `Gas units (limit) * (Base fee per unit + Tip per unit)`
+
+Let’s say Jordan has to pay Taylor 1 ETH. In the transaction the gas limit is 21,000 units and the base fee is 100 gwei. Jordan includes a tip of 10 gwei.
+
+Using the formula above we can calculate this as `21,000 * (100 + 10) = 2,310,000 gwei` or 0.0023 ETH.
 
 ### Base Fees {#base-fees}
 
@@ -63,7 +73,9 @@ The base fee will increase by a maximum of 12.5% per block if the target block s
 | 7            |          25M |        12.5% | 180.2 gwei |
 | 8            |          25M |        12.5% | 202.8 gwei |
 
-Relative to the pre-London gas auction market, this transaction-fee-mechanism change causes fee prediction for to be more reliable. Following the table above - to create a transaction on block number 9, a wallet will let the user know with certainty that the **maximum base fee** to be added to the next block is `current base fee * 112.5%` or `202.8 gwei * 112.5% = 256.8 gwei`.
+Relative to the pre-London gas auction market, this transaction-fee-mechanism change causes fee prediction to be more reliable. Following the table above - to create a transaction on block number 9, a wallet will let the user know with certainty that the **maximum base fee** to be added to the next block is `current base fee * 112.5%` or `202.8 gwei * 112.5% = 256.8 gwei`.
+
+## Tips {#tips}
 
 ### FeeCap {#feecap}
 
