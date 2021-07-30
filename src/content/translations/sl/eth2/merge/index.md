@@ -56,8 +56,12 @@ Nadgradnje Eth2 so vse delno medsebojno povezane. Povzemimo torej, kako spojitev
 
 ### Spojitev in oddajniška veriga {#docking-and-beacon-chain}
 
-Ko pride do spojitve, bo zastavljavcem dodeljeno potrjevanje glavnega omrežja Ethereum. Povsem enako kot pri razdeljenih verigah. [Rudarjenje](/developers/docs/consensus-mechanisms/pow/mining/) ne bo več potrebno, tako da bodo rudarji verjetno vložili svoje zaslužke v zastavljanje v novem sistemu z dokazom o deležu.<ButtonLink to="/eth2/beacon-chain/">Oddajniška veriga</ButtonLink>
+Ko pride do spojitve, bo zastavljavcem dodeljeno potrjevanje glavnega omrežja Ethereum. Povsem enako kot pri razdeljenih verigah. [Rudarjenje](/developers/docs/consensus-mechanisms/pow/mining/) ne bo več potrebno, tako da bodo rudarji verjetno vložili svoje zaslužke v zastavljanje v novem sistemu z dokazom o deležu.
+
+<ButtonLink to="/eth2/beacon-chain/">Oddajniška veriga</ButtonLink>
 
 ### Spojitev in razdrobljene verige {#docking-and-shard-chains}
 
-Ker bo glavno omrežje postalo drobec, je uspešna izvedba razdrobljenih verig ključna za to nadgradnjo. Prehod bo verjetno igral pomembno vlogo za lažje odločanje skupnosti glede uvedbe druge nadgradnje razdrobljenih verig. S to nadgradnjo bodo drugi drobci videti kot glavno omrežje: lahko bodo obdelovali transakcije in pametne pogodbe, ne pa samo zagotavljali podatke.<ButtonLink to="/eth2/shard-chains/">Razdrobljene verige</ButtonLink>
+Ker bo glavno omrežje postalo drobec, je uspešna izvedba razdrobljenih verig ključna za to nadgradnjo. Prehod bo verjetno igral pomembno vlogo za lažje odločanje skupnosti glede uvedbe druge nadgradnje razdrobljenih verig. S to nadgradnjo bodo drugi drobci videti kot glavno omrežje: lahko bodo obdelovali transakcije in pametne pogodbe, ne pa samo zagotavljali podatke.
+
+<ButtonLink to="/eth2/shard-chains/">Razdrobljene verige</ButtonLink>

@@ -56,7 +56,9 @@ Plan, her zaman parçalara ekstra işlevsellik eklemek, onları bugün daha çok
 
 ### Parçaların kod çalıştırmaya ihtiyacı var mı? {#do-shards-need-code-execution}
 
-Vitalik Buterin, Bankless podcast ile konuşurken tartışmaya değer 3 potansiyel seçenek sundu. <iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Vitalik Buterin, Bankless podcast ile konuşurken tartışmaya değer 3 potansiyel seçenek sundu.
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
 
 #### 1. İşlem yürütmenin gerek olmadığı durum {#state-execution-not-needed}
 
@@ -84,11 +86,15 @@ Eth2 yükseltmelerinin tamamı bir biçimde ilişkilidir. O halde, parça zincir
 
 ### Parçalar (shards) ve işaret (beacon) zinciri {#shards-and-beacon-chain}
 
-İşaret zinciri, parçaları güvende tutmak ve senkronize etmek için tüm mantığı içerir. İşaret zinciri , ağdaki staker'ları koordine ederek onları üzerinde çalışmaları gereken parçalara atayacaktır. Ayrıca, diğer parçalar(shard) tarafından erişilebilen parça(shard)işlem verilerini alarak ve depolayarak parçalar (shard) arasındaki iletişimi kolaylaştıracaktır. Bu, her şeyi güncel tutmak için parçalara Ethereum'un durumunun bir anlık görüntüsünü verecektir. <ButtonLink to="/eth2/beacon-chain/">İşaret (Beacon) Zinciri</ButtonLink>
+İşaret zinciri, parçaları güvende tutmak ve senkronize etmek için tüm mantığı içerir. İşaret zinciri , ağdaki staker'ları koordine ederek onları üzerinde çalışmaları gereken parçalara atayacaktır. Ayrıca, diğer parçalar(shard) tarafından erişilebilen parça(shard)işlem verilerini alarak ve depolayarak parçalar (shard) arasındaki iletişimi kolaylaştıracaktır. Bu, her şeyi güncel tutmak için parçalara Ethereum'un durumunun bir anlık görüntüsünü verecektir.
+
+<ButtonLink to="/eth2/beacon-chain/">İşaret (Beacon) Zinciri</ButtonLink>
 
 ### Parçalar (Shard) ve kenetlenme {#shards-and-docking}
 
-Ethereum ana ağı, parçaların(Shards) piyasaya sürülmesinden sonra bile bugün olduğu gibi var olacak. Ancak bir noktada, ana ağın stake etmeye geçebilmesi için bir parça (shard) haline gelmesi gerekecektir. Ana ağın, kod yürütmeyi idare edebilen tek "akıllı" parça olarak var olup olmayacağı görülecektir - ancak her iki durumda da, parçalamanın 2. aşamasında olacağıdır<ButtonLink to="/eth2/docking/">Kenetleme</ButtonLink>
+Ethereum ana ağı, parçaların(Shards) piyasaya sürülmesinden sonra bile bugün olduğu gibi var olacak. Ancak bir noktada, ana ağın stake etmeye geçebilmesi için bir parça (shard) haline gelmesi gerekecektir. Ana ağın, kod yürütmeyi idare edebilen tek "akıllı" parça olarak var olup olmayacağı görülecektir - ancak her iki durumda da, parçalamanın 2. aşamasında olacağıdır.
+
+<ButtonLink to="/eth2/docking/">Kenetleme</ButtonLink>
 
 <Divider />
 

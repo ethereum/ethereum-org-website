@@ -56,7 +56,9 @@ Le plan a toujours été d'ajouter des fonctionnalités supplémentaires aux fra
 
 ### Les fragments doivent-ils être exécutés ? {#do-shards-need-code-execution}
 
-Vitalik Buterin, en parlant au Bankless podcast, a présenté 3 options potentielles qui valent la peine d'être discutées. <iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Vitalik Buterin, en parlant au Bankless podcast, a présenté 3 options potentielles qui valent la peine d'être discutées.
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
 
 #### 1. Exécution d'état non requise {#state-execution-not-needed}
 
@@ -84,11 +86,15 @@ Les mises à niveau de l'Eth2 sont en quelque sorte liées. Récapitulons donc c
 
 ### Fragments et chaîne phare {#shards-and-beacon-chain}
 
-La chaîne phare contient toute la logique permettant de sécuriser et de synchroniser les fragments de façon sécuritaire. La chaîne phare coordonnera les validateurs du réseau, les assignant aux fragments sur lesquels ils doivent travailler. De plus, elle facilitera la communication entre les fragments en recevant et en stockant des données sur les transactions qui sont accessibles par d'autres fragments. Cela donnera aux fragments un aperçu de l'état d'Ethereum pour garder tout à jour.<ButtonLink to="/eth2/beacon-chain/">La chaîne phare</ButtonLink>
+La chaîne phare contient toute la logique permettant de sécuriser et de synchroniser les fragments de façon sécuritaire. La chaîne phare coordonnera les validateurs du réseau, les assignant aux fragments sur lesquels ils doivent travailler. De plus, elle facilitera la communication entre les fragments en recevant et en stockant des données sur les transactions qui sont accessibles par d'autres fragments. Cela donnera aux fragments un aperçu de l'état d'Ethereum pour garder tout à jour.
+
+<ButtonLink to="/eth2/beacon-chain/">La chaîne phare</ButtonLink>
 
 ### Fragments et arrimage {#shards-and-docking}
 
-Le réseau principal d'Ethereum continuera d'exister comme il le fait aujourd'hui même après l'introduction des fragments. Cependant, à un moment donné, le mainnet devra devenir un fragment pour qu'il puisse passer à la mise en jeu. Reste à savoir si le réseau principal existera en tant que seul fragment "intelligent" capable de gérer l'exécution de code – mais autrement, une décision devra être prise au sujet de la phase 2 de la fragmentation.<ButtonLink to="/eth2/docking/">L'arrimage</ButtonLink>
+Le réseau principal d'Ethereum continuera d'exister comme il le fait aujourd'hui même après l'introduction des fragments. Cependant, à un moment donné, le mainnet devra devenir un fragment pour qu'il puisse passer à la mise en jeu. Reste à savoir si le réseau principal existera en tant que seul fragment "intelligent" capable de gérer l'exécution de code – mais autrement, une décision devra être prise au sujet de la phase 2 de la fragmentation.
+
+<ButtonLink to="/eth2/docking/">L'arrimage</ButtonLink>
 
 <Divider />
 

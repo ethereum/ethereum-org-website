@@ -56,8 +56,12 @@ These improvements all have a place in Eth2 so it’s likely that their progress
 
 ### Η ενσωμάτωση και η κύρια αλυσίδα {#docking-and-beacon-chain}
 
-Μόλις συμβεί η ενσωμάτωση, οι stakers θα αφοσιωθούν στην επικύρωση του κεντρικού δικτύου του Ethereum. Ακριβώς όπως και με τις shard chains. [Η εξόρυξη](/developers/docs/consensus-mechanisms/pow/mining/) δεν θα απαιτείται πλέον και έτσι οι εξορύκτες πιθανότατα να επενδύσουν τα κέρδη τους στο νέο σύστημα proof-of-stake.<ButtonLink to="/eth2/beacon-chain/">Το Beacon Chain</ButtonLink>
+Μόλις συμβεί η ενσωμάτωση, οι stakers θα αφοσιωθούν στην επικύρωση του κεντρικού δικτύου του Ethereum. Ακριβώς όπως και με τις shard chains. [Η εξόρυξη](/developers/docs/consensus-mechanisms/pow/mining/) δεν θα απαιτείται πλέον και έτσι οι εξορύκτες πιθανότατα να επενδύσουν τα κέρδη τους στο νέο σύστημα proof-of-stake.
+
+<ButtonLink to="/eth2/beacon-chain/">Το Beacon Chain</ButtonLink>
 
 ### Η ενσωμάτωση και οι shard chains {#docking-and-shard-chains}
 
-Με το κεντρικό δίκτυο να γίνεται ένα shard, η επιτυχής εφαρμογή των shard chains είναι κρίσιμη για αυτή την αναβάθμιση. Είναι πιθανό η μετάβαση να διαδραματίσει σημαντικό ρόλο βοηθώντας την κοινότητα να αποφασίσει αν θα ξεκινήσει μια δεύτερη αναβάθμιση για το sharding. Αυτή η αναβάθμιση θα κάνει τα άλλα shards όπως το mainnet: θα είναι σε θέση να χειριστεί συναλλαγές και Smart Contract και όχι μόνο να παρέχει περισσότερα δεδομένα.<ButtonLink to="/eth2/shard-chains/">Shard chains</ButtonLink>
+Με το κεντρικό δίκτυο να γίνεται ένα shard, η επιτυχής εφαρμογή των shard chains είναι κρίσιμη για αυτή την αναβάθμιση. Είναι πιθανό η μετάβαση να διαδραματίσει σημαντικό ρόλο βοηθώντας την κοινότητα να αποφασίσει αν θα ξεκινήσει μια δεύτερη αναβάθμιση για το sharding. Αυτή η αναβάθμιση θα κάνει τα άλλα shards όπως το mainnet: θα είναι σε θέση να χειριστεί συναλλαγές και Smart Contract και όχι μόνο να παρέχει περισσότερα δεδομένα.
+
+<ButtonLink to="/eth2/shard-chains/">Shard chains</ButtonLink>

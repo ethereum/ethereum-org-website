@@ -56,7 +56,9 @@ El plan siempre fue añadir funcionalidad adicional a los fragmentos, para que s
 
 ### ¿Los fragmentos necesitan ejecución de código? {#do-shards-need-code-execution}
 
-Vitalik Buterin, al hablar en el podcast Bankless, presentó 3 opciones potenciales que vale la pena discutir. <iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Vitalik Buterin, al hablar en el podcast Bankless, presentó 3 opciones potenciales que vale la pena discutir.
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
 
 #### 1. No necesitar ejecución del estado {#state-execution-not-needed}
 
@@ -84,11 +86,15 @@ Las actualizaciones de Eth2 están de algún modo interrelacionadas. Así que re
 
 ### Los fragmentos y la Cadena de Baliza {#shards-and-beacon-chain}
 
-La Cadena de Baliza contiene toda la lógica para mantener los fragmentos seguros y sincronizados. La Cadena de Baliza coordinará a los participantes en la red y les asignará a los fragmentos en los que tienen que trabajar. Y también facilitará la comunicación entre fragmentos al recibir y almacenar datos de transacción de fragmentación accesibles por otros fragmentos. Esto dará a los fragmentos una instantánea del estado de Ethereum para mantener todo actualizado.<ButtonLink to="/eth2/beacon-chain/">La Cadena de Baliza</ButtonLink>
+La Cadena de Baliza contiene toda la lógica para mantener los fragmentos seguros y sincronizados. La Cadena de Baliza coordinará a los participantes en la red y les asignará a los fragmentos en los que tienen que trabajar. Y también facilitará la comunicación entre fragmentos al recibir y almacenar datos de transacción de fragmentación accesibles por otros fragmentos. Esto dará a los fragmentos una instantánea del estado de Ethereum para mantener todo actualizado.
+
+<ButtonLink to="/eth2/beacon-chain/">La Cadena de Baliza</ButtonLink>
 
 ### Los fragmentos y el acoplamiento {#shards-and-docking}
 
-La red principal de Ethereum existirá como lo hace hoy, incluso después de la introducción de fragmentos. Sin embargo, en algún momento, la red principal tendrá que convertirse en un fragmento para poder pasar a la apuesta. Queda por ver si la red principal existirá como el único fragmento “inteligente” que puede manejar la ejecución del código, pero, de cualquier manera, habrá que tomar una decisión sobre la fase 2 de fragmentación.<ButtonLink to="/eth2/merge/">El acoplamiento</ButtonLink>
+La red principal de Ethereum existirá como lo hace hoy, incluso después de la introducción de fragmentos. Sin embargo, en algún momento, la red principal tendrá que convertirse en un fragmento para poder pasar a la apuesta. Queda por ver si la red principal existirá como el único fragmento “inteligente” que puede manejar la ejecución del código, pero, de cualquier manera, habrá que tomar una decisión sobre la fase 2 de fragmentación.
+
+<ButtonLink to="/eth2/merge/">El acoplamiento</ButtonLink>
 
 <Divider />
 

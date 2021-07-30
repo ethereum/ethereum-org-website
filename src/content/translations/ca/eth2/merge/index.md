@@ -56,8 +56,12 @@ D'alguna manera les millores de Eth2 estan interrelacionades. Per tant, anem a v
 
 ### L'acoblament i la Cadena de Balisa {#docking-and-beacon-chain}
 
-Un cop succeeix l'acoblament, s'assignaran els participants per validar la xarxa principal d'Ethereum. Igual que amb les cadenes de fragments. [La mineria](/developers/docs/consensus-mechanisms/pow/mining/) ja no farà falta, per tant, el miners probablement invertiran els seus guanys en participacions en el nou sistema de prova de participació.<ButtonLink to="/eth2/beacon-chain/">La Cadena de Balisa</ButtonLink>
+Un cop succeeix l'acoblament, s'assignaran els participants per validar la xarxa principal d'Ethereum. Igual que amb les cadenes de fragments. [La mineria](/developers/docs/consensus-mechanisms/pow/mining/) ja no farà falta, per tant, el miners probablement invertiran els seus guanys en participacions en el nou sistema de prova de participació.
+
+<ButtonLink to="/eth2/beacon-chain/">La Cadena de Balisa</ButtonLink>
 
 ### L'acoblament i les cadenes de fragments {#docking-and-shard-chains}
 
-Amb la xarxa principal esdevenint un fragment, la implementació exitosa de les cadenes de fragments resulta crítica per aquesta actualització. És probable que la transició jugui un important paper a l'hora d'ajudar la comunitat a decidir si desenvolupar una segona actualització per tal de fragmentar. Aquesta actualització transformarà els altres fragments en xarxa principal: seran capaços de fer transaccions i contractes intel·ligents i no tan sols proveir més dades.<ButtonLink to="/eth2/shard-chains/">Cadenes de fragments</ButtonLink>
+Amb la xarxa principal esdevenint un fragment, la implementació exitosa de les cadenes de fragments resulta crítica per aquesta actualització. És probable que la transició jugui un important paper a l'hora d'ajudar la comunitat a decidir si desenvolupar una segona actualització per tal de fragmentar. Aquesta actualització transformarà els altres fragments en xarxa principal: seran capaços de fer transaccions i contractes intel·ligents i no tan sols proveir més dades.
+
+<ButtonLink to="/eth2/shard-chains/">Cadenes de fragments</ButtonLink>

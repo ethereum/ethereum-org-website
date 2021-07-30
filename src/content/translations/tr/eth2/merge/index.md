@@ -56,8 +56,12 @@ Eth2 yükseltmelerinin tümü bir şekilde birbiriyle ilişkilidir. Dolayısıyl
 
 ### Kenetlenme ve İşaret (Beacon) Zinciri {#docking-and-beacon-chain}
 
-Kenetlenme gerçekleştiğinde, staker'ler Ethereum ana ağını doğrulamak için atanacaktır. Aynı shard zincirlerinde olduğu gibi. [Madencilik](/developers/docs/consensus-mechanisms/pow/mining/) artık gerekli olmayacak, bu nedenle madenciler muhtemelen kazançlarını yeni pay ispatı sistemindeki paydaşlığa yatıracaklardır.<ButtonLink to="/eth2/beacon-chain/">İşaret (Beacon) Zinciri</ButtonLink>
+Kenetlenme gerçekleştiğinde, staker'ler Ethereum ana ağını doğrulamak için atanacaktır. Aynı shard zincirlerinde olduğu gibi. [Madencilik](/developers/docs/consensus-mechanisms/pow/mining/) artık gerekli olmayacak, bu nedenle madenciler muhtemelen kazançlarını yeni pay ispatı sistemindeki paydaşlığa yatıracaklardır.
+
+<ButtonLink to="/eth2/beacon-chain/">İşaret (Beacon) Zinciri</ButtonLink>
 
 ### Kenetleme ve shard zincirleri {#docking-and-shard-chains}
 
-Ana ağın bir shard haline gelmesiyle birlikte, shard zincirlerinin başarılı bir şekilde uygulanması bu yükseltme için çok önemlidir. Geçiş topluluğun ikinci bir sharding sürümüne geçip geçmemeye karar vermesine yardımcı olmada önemli rol oynayabilir. Bu yükseltme, diğer shard'ları ana ağ gibi yapacaktır: yalnızca fazla veri sağlamakla kalmayacaklar işlemleri ve akıllı sözleşmeleri idare edebileceklerdir.<ButtonLink to="/eth2/shard-chains/">Shard zincirleri</ButtonLink>
+Ana ağın bir shard haline gelmesiyle birlikte, shard zincirlerinin başarılı bir şekilde uygulanması bu yükseltme için çok önemlidir. Geçiş topluluğun ikinci bir sharding sürümüne geçip geçmemeye karar vermesine yardımcı olmada önemli rol oynayabilir. Bu yükseltme, diğer shard'ları ana ağ gibi yapacaktır: yalnızca fazla veri sağlamakla kalmayacaklar işlemleri ve akıllı sözleşmeleri idare edebileceklerdir.
+
+<ButtonLink to="/eth2/shard-chains/">Shard zincirleri</ButtonLink>

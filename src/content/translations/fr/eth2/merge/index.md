@@ -56,8 +56,12 @@ Les mises à niveau de l'Eth2 sont en quelque sorte liées. Récapitulons donc l
 
 ### Arrimage et chaîne phare {#docking-and-beacon-chain}
 
-Une fois l'arrimage effectué, les validateurs seront affectés à la validation du Mainnet Ethereum. Tout comme avec les chaînes de fragments. [Miner](/developers/docs/consensus-mechanisms/pow/mining/) ne sera plus nécessaire, de sorte que les mineurs investiront probablement leurs gains dans la mise en jeu dans le nouveau système de preuve d'enjeu.<ButtonLink to="/eth2/beacon-chain/">La chaîne phare</ButtonLink>
+Une fois l'arrimage effectué, les validateurs seront affectés à la validation du Mainnet Ethereum. Tout comme avec les chaînes de fragments. [Miner](/developers/docs/consensus-mechanisms/pow/mining/) ne sera plus nécessaire, de sorte que les mineurs investiront probablement leurs gains dans la mise en jeu dans le nouveau système de preuve d'enjeu.
+
+<ButtonLink to="/eth2/beacon-chain/">La chaîne phare</ButtonLink>
 
 ### Arrimage et chaînes de fragments {#docking-and-shard-chains}
 
-Le réseau principal étant appelé à devenir un fragment, l'implémentation réussie des chaînes de fragments est essentielle pour cette mise à niveau. Il est probable que la transition jouera un rôle important en aidant la communauté à décider si elle doit déployer une deuxième mise à niveau vers la fragmentation. Cette mise à niveau rendra les autres fragments identiques au réseau principal : ils seront en mesure de gérer les transactions et les contrats intelligents et pas seulement de fournir plus de données.<ButtonLink to="/eth2/shard-chains/">Chaines de fragments</ButtonLink>
+Le réseau principal étant appelé à devenir un fragment, l'implémentation réussie des chaînes de fragments est essentielle pour cette mise à niveau. Il est probable que la transition jouera un rôle important en aidant la communauté à décider si elle doit déployer une deuxième mise à niveau vers la fragmentation. Cette mise à niveau rendra les autres fragments identiques au réseau principal : ils seront en mesure de gérer les transactions et les contrats intelligents et pas seulement de fournir plus de données.
+
+<ButtonLink to="/eth2/shard-chains/">Chaines de fragments</ButtonLink>

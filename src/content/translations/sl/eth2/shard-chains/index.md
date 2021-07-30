@@ -56,7 +56,9 @@ Skupne vrednosti so tehnologija na »2. plasti«, ki že obstaja. Decentralizira
 
 ### Ali drobci potrebujejo možnost izvajanja kode? {#do-shards-need-code-execution}
 
-Vitalik Buterin je v pogovoru za poddajo Bankless predstavil 3 morebitne možnosti, o katerih je vredno razpravljati. <iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Vitalik Buterin je v pogovoru za poddajo Bankless predstavil 3 morebitne možnosti, o katerih je vredno razpravljati.
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
 
 #### 1. Izvajanje stanj ni potrebno {#state-execution-not-needed}
 
@@ -84,11 +86,15 @@ Nadgradnje Eth2 so vse delno medsebojno povezane. Ponovimo torej, kako razdroblj
 
 ### Drobci in oddajniška veriga {#shards-and-beacon-chain}
 
-Oddajniška veriga vsebuje vso logiko za zagotavljanje varnosti in sinhronizacije drobcev. Oddajniška veriga bo usklajevala zastavljavce v omrežju in jim dodeljevala drobce, na katerih morajo delati. Prav tako bo lajšala komunikacijo med drobci s prejemanjem in shranjevanjem podatkov o transakcijah v drobcu, ki bodo dostopni drugim drobcem. To bo drobcem zagotovilo posnetek stanja Ethereuma, tako da bo vse vedno posodobljeno.<ButtonLink to="/eth2/beacon-chain/">Oddajniška veriga</ButtonLink>
+Oddajniška veriga vsebuje vso logiko za zagotavljanje varnosti in sinhronizacije drobcev. Oddajniška veriga bo usklajevala zastavljavce v omrežju in jim dodeljevala drobce, na katerih morajo delati. Prav tako bo lajšala komunikacijo med drobci s prejemanjem in shranjevanjem podatkov o transakcijah v drobcu, ki bodo dostopni drugim drobcem. To bo drobcem zagotovilo posnetek stanja Ethereuma, tako da bo vse vedno posodobljeno.
+
+<ButtonLink to="/eth2/beacon-chain/">Oddajniška veriga</ButtonLink>
 
 ### Drobci in spojitev {#shards-and-docking}
 
-Glavno omrežje Ethereum bo tudi po uvedbi drobcev obstajalo v enaki obliki kot danes. Vendar bo moralo glavno omrežje na neki točki postati drobec, da bo lahko prešlo na zastavljanje. Ali bo glavno omrežje obstajalo kot edini »pameten« drobec, ki lahko obdeluje izvajanje kode, bomo še videli – kakorkoli že, odločitev bo sprejeta ob 2. fazi razdrobitve.<ButtonLink to="/eth2/docking/">Spojitev</ButtonLink>
+Glavno omrežje Ethereum bo tudi po uvedbi drobcev obstajalo v enaki obliki kot danes. Vendar bo moralo glavno omrežje na neki točki postati drobec, da bo lahko prešlo na zastavljanje. Ali bo glavno omrežje obstajalo kot edini »pameten« drobec, ki lahko obdeluje izvajanje kode, bomo še videli – kakorkoli že, odločitev bo sprejeta ob 2. fazi razdrobitve.
+
+<ButtonLink to="/eth2/docking/">Spojitev</ButtonLink>
 
 <Divider />
 
