@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus isShipped date="Shipped!">
+<UpgradeStatus isShipped date="Dostavljeno!">
     Beacon Chain poslan je 1. prosinca u podne (UTC). Za više informacija <a href="https://beaconscan.com/">proučite podatke</a>. Ako želite pomoći u validaciji lanca, možete <a href="/eth2/staking/"> uložiti svoj ETH </a>.
 </UpgradeStatus>
 

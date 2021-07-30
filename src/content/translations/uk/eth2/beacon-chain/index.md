@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus isShipped date="Shipped!">
+<UpgradeStatus isShipped date="Відправлено!">
     Оновлення Beacon Chain запущено 1 грудня о 12:00 UTC. Щоб дізнатися більше, перейдіть на <a href="https://beaconscan.com/">цю сторінку</a>. Якщо ви хочете допомогти підтвердити ланцюг, то можете <a href="/eth2/staking/">отримати частку ETH</a>.
 </UpgradeStatus>
 

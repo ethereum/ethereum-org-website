@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus isShipped date="Shipped!">
+<UpgradeStatus isShipped date="Spedito!">
     La beacon chain è stata resa disponibile il primo dicembre a mezzogiorno (UTC). Per saperne di più, <a href="https://beaconscan.com/">esplora i dati</a>. Se vuoi contribuire a convalidare la catena, puoi <a href="/eth2/staking/">fare staking con i tuoi ETH</a>.
 </UpgradeStatus>
 

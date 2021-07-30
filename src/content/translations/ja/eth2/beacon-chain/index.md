@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus isShipped date="Shipped!">
+<UpgradeStatus isShipped date="発送しました！">
     ビーコンチェーンは12月1日正午UTCにリリースされました。 詳細については、 <a href="https://beaconscan.com/">データ</a> を参照してください。 このビーコンチェーンの正当性は、 <a href="/eth2/staking/">ETHを投資</a>することで援助できます。
 </UpgradeStatus>
 

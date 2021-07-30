@@ -13,7 +13,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus isShipped date="Shipped!">
+<UpgradeStatus isShipped date="Sevk edildi!">
     İşaret (Beacon) Zinciri 1 Aralık saat 12:00'de (UTC) başlatılmıştır. Daha fazla bilgi için, bk. <a href="https://beaconscan.com/">verileri keşfet</a>. Zincirin doğrulanmasını isterseniz, <a href="/eth2/staking/">ETH'nizi stake edebilirsiniz</a>.
 </UpgradeStatus>
 

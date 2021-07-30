@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus isShipped date="Shipped!">
+<UpgradeStatus isShipped date="लादा गया!">
     बीकन चेन को 1 दिसंबर को दोपहर UTC पर शिप किया जाता है। अधिक जानने के लिए, <a href="https://beaconscan.com/"> डेटा का अन्वेषण करें </a>। यदि आप चेन को मान्य करने में मदद चाहते हैं, तो आप <a href="/eth2/staking/"> अपने ETH को स्टेक</a> कर सकते हैं।
 </UpgradeStatus>
 

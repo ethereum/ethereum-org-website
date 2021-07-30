@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus isShipped date="Shipped!">
+<UpgradeStatus isShipped date="Odpremljeno!">
     Oddajniška veriga je začela delovati 1. decembra ob 12.00 UTC. Če želite več informacij, <a href="https://beaconscan.com/">raziščite podatke</a>. Če želite pomagati potrjevati verigo, lahko <a href="/eth2/staking/">zastavite svoj ETH</a>.
 </UpgradeStatus>
 

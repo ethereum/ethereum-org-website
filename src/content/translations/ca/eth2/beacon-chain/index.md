@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus isShipped date="Shipped!">
+<UpgradeStatus isShipped date="Enviat!">
     La Cadena de Balisa es va posar en marxa l'1 de desembre al migdia (UTC). Per saber-ne més <a href="https://beaconscan.com/">explora les dades</a>. Si vols ajudar a validar la cadena, pots <a href="/eth2/staking/">"apostar" els teus ETH</a>.
 </UpgradeStatus>
 
