@@ -48,7 +48,7 @@ In the table below, we list some of the broad-strokes advantages and disadvantag
 | Central authority can censor data, potentially cutting off parts of the network from interacting with the rest of the network.                                                                                         | Censorship is much harder, as information has many ways to propagate across the network.                                                                                                                                         |
 | Participation in the network is controlled by the central authority.                                                                                                                                                   | Anyone can participate in the network; there are no “gatekeepers.” Ideally, the cost of participation is very low.                                                                                                               |
 
-Note that these are general patterns that may not hold true in every network. Furthermore, in reality the degree to which a network is centralized/decentralized lies on a spectrum; no network is entirely centralized or entirely decentralized.
+Note that these are general patterns that may not hold true in every network. Furthermore, in reality the degree to which a network is centralized/decentralized lies on a spectrum; no network is entirely centralized or entirely decentralized. [More on decentralization](/decentralization/)
 
 ## Further reading {#further-reading}
 
