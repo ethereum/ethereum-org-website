@@ -28,7 +28,7 @@ Cet article de blog de Vitalik Buterin, le fondateur d'Ethereum, raconte l'[orig
 
 ### Bitcoin en tant que système de transition d'état {#bitcoin-as-a-state-transition-system}
 
-![Transition d'état Ethereum](./ethereum-state-transition.png)
+![Transition d'état Ethereum](../../../whitepaper/ethereum-state-transition.png)
 
 D'un point de vue technique, le registre d'une cryptomonnaie telle que le Bitcoin peut être considéré comme un système de transition d'état dans lequel il existe un "état", représentant le statut de propriété de tous les bitcoins existants, et une "fonction de transition d'état", qui associe un état et une transaction, et en fait résulter un nouvel état. Par exemple, dans un système bancaire classique, l'état est un bilan, une transaction est une demande de déplacer X $ de A vers B, et la fonction de transition d'état diminue la valeur du compte A de X $ et augmente la valeur du compte B de X $. Si le compte A a moins de X $ au départ, la fonction de transition d'état renvoie une erreur. On peut donc formellement définir :
 
@@ -58,7 +58,7 @@ La première moitié de la première étape empêche les émetteurs de transacti
 
 ### Minage {#mining}
 
-![Blocs Ethereum](./ethereum-blocks.png)
+![Blocs Ethereum](../../../whitepaper/ethereum-blocks.png)
 
 Si nous avions accès à un service centralisé digne de confiance, il serait trivial d'implémenter ce système : il pourrait être codé exactement comme décrit plus haut, en utilisant le disque dur d'un serveur centralisé pour garder une trace de l'état. Avec Bitcoin, nous essayons toutefois de construire un système monétaire décentralisé et avons donc besoin de combiner le système de transition d'état avec un système de consensus afin de garantir que tout le monde est d'accord sur l'ordre des transactions. Le processus de consensus décentralisé de Bitcoin exige que les nœuds du réseau tentent en continu de produire des paquets de transactions appelés "blocs". Le réseau est destiné à créer un bloc toutes les dix minutes environ, chaque bloc contenant un horodatage, un nonce, une référence au bloc précédent (hachage ou hash) et une liste de toutes les transactions qui ont eu lieu depuis le bloc précédent. Au fil du temps, cela crée une "blockchain" continuelle, croissant sans cesse, qui se met perpétuellement à jour pour représenter l'état le plus récent du registre Bitcoin.
 
@@ -88,7 +88,7 @@ Une fois l'étape (1) réalisée, un mineur inclura la transaction dans un bloc 
 
 ### Arbres de Merkle {#merkle-trees}
 
-![SPV chez Bitcoin](./spv-bitcoin.png)
+![SPV chez Bitcoin](../../../whitepaper/spv-bitcoin.png)
 
 _À gauche : Il suffit de ne présenter qu'un petit nombre de nœuds dans un arbre de Merkle pour donner la preuve de la validité d'une branche._
 
@@ -181,7 +181,7 @@ Notez que l'allocation de carburant assignée par une transaction ou un contrat 
 
 ### Fonction de transition d'état Ethereum {#ethereum-state-transition-function}
 
-![Transition d'état ETH](./ether-state-transition.png)
+![Transition d'état ETH](../../../whitepaper/ether-state-transition.png)
 
 La fonction de transition d'état Ethereum `APPLY(S,TX) -> S'` peut être définie comme suit :
 
@@ -224,7 +224,7 @@ Le modèle d'exécution officiel du code EVM est étonnamment simple. Lorsque la
 
 ### Blockchain et minage {#blockchain-and-mining}
 
-![Diagramme des blocs APPLY Ethereum](./ethereum-apply-block-diagram.png)
+![Diagramme des blocs APPLY Ethereum](../../../whitepaper/ethereum-apply-block-diagram.png)
 
 À bien des égards, la blockchain Ethereum est similaire à celle de Bitcoin, bien qu'elle présente certaines différences. Concernant l'architecture de la blockchain, la principale différence entre Ethereum et Bitcoin est que, contrairement à Bitcoin (qui ne contient qu'une copie de la liste des transactions), les blocs Ethereum contiennent à la fois une copie de la liste des transactions et de l'état le plus récent. De plus, deux autres valeurs sont aussi stockés dans le bloc : le numéro de bloc et la difficulté. Dans Ethereum, l’algorithme de base de validation d'un bloc est le suivant :
 
@@ -426,7 +426,7 @@ Unités monétaires 1,198 X 1,458 X 2,498 X Acheteurs 83,5 % 68,6 % 40,0 %
 
 **Taux de croissance de l'offre à long terme (en pourcentage)**
 
-![Inflation Ethereum](./ethereum-inflation.png)
+![Inflation Ethereum](../../../whitepaper/ethereum-inflation.png)
 
 _Malgré l'émission linéaire de monnaie, tout comme pour le Bitcoin, le taux de croissance de l'offre tend néanmoins vers zéro au fil du temps._
 
