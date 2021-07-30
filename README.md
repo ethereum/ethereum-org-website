@@ -1040,6 +1040,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/n4rsil"><img src="https://avatars.githubusercontent.com/u/85314714?v=4?s=100" width="100px;" alt=""/><br /><sub><b>n4rsil</b></sub></a><br /><a href="#content-n4rsil" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/jkbishbish"><img src="https://avatars.githubusercontent.com/u/40157941?v=4?s=100" width="100px;" alt=""/><br /><sub><b>John Bishop</b></sub></a><br /><a href="#content-jkbishbish" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/robriks"><img src="https://avatars.githubusercontent.com/u/80549215?v=4?s=100" width="100px;" alt=""/><br /><sub><b>robriks</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Arobriks" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
