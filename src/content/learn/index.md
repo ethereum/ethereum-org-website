@@ -65,6 +65,12 @@ The Ethereum network is made up of many nodes, each of which runs compatible cli
 
 You can [learn how to run a node of your own](/developers/docs/nodes-and-clients/#running-your-own-node) or find a [comprehensive list of all Ethereum clients](/developers/docs/nodes-and-clients/#clients) within our developer documentation.
 
+## Decentralization {#decentralization}
+
+A fundamental goal of the Ethereum network is to encourage and maintain decentralization whenever possible. This is embodied in the [Eth2 vision](/eth2/vision/), and allows for the network to resist attacks and censorship, remaining secure and accessible to anyone. But what is decentralization anyway?
+
+Read more about [decentralization](/decentralization/).
+
 ## Enterprise Ethereum {#enterprise-ethereum}
 
 Enterprise Ethereum refers to private, consortium, and hybrid implementations of the Ethereum codebase for business applications. Companies across the globe are already using Enterprise Ethereum to streamline financial markets, manage supply chains, and create new business models.
