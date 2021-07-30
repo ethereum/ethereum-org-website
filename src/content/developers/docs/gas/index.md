@@ -3,7 +3,6 @@ title: Gas and fees
 description:
 lang: en
 sidebar: true
-incomplete: true
 ---
 
 Gas is essential to the Ethereum network. It is the fuel that allows it to operate, in the same way that a car needs gasoline to run.
@@ -23,6 +22,8 @@ _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/d
 
 In essence, gas fees are paid in Ethereum's native currency, ether (ETH). Gas prices are denoted in gwei, which itself is a denomination of ETH - each gwei is equal to 0.000000001 ETH (10<sup>-9</sup> ETH). For example, instead of saying that your gas costs 0.000000001 ether, you can say your gas costs 1 gwei.
 
+## Prior to the London update {#pre-london}
+
 Let's say Alice has to pay Bob 1ETH.
 In the transaction the gas limit is 21,000 units and the gas price is 200 gwei.
 
@@ -36,6 +37,20 @@ Miner gets 0.0042 ETH.
 This video offers a concise overview of gas and why it exists:
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/AJvzNICwcwc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## After the London update {#post-london}
+
+### Base Fees {#base-fees}
+
+Every block has a base fee which acts as a reserve price. To be eligible for inclusion in a block the offered price per gas must at least equal the base fee. The base fee is calculated independently of the current block and instead is determined by the blocks before it - making transaction fees more predictable for users.
+
+This makes it economically unviable for block size to remain
+
+### Block Size
+
+EIP-1559 introduced variable-size blocks to Ethereum. Each block has a target size of 12.5 million gas but the size of blocks will increase or decrease in accordance with network demands, up until the block limit of 25 milion gas (2x block target size). An equilibrium block size of 12.5 million on average is achieved through the process of _tâtonnement_. This means if the block sizes is greater than the target block size, the base fee will increase . Similarly, if the block is less than the target block size the base fee will decrease. [More on blocks](/developers/docs/blocks/).
+
+### FeeCap {#feecap}
 
 ## Why do gas fees exist? {#why-do-gas-fees-exist}
 
