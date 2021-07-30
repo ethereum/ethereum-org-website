@@ -48,13 +48,17 @@ Sčasoma bo oddajniška veriga odgovorna tudi za naključno dodeljevanje zastavl
 
 Nadgradnje Eth2 so vse delno medsebojno povezane. Povzemimo torej, kako oddajniška veriga vpliva na druge nadgradnje.
 
-### Drobci in oddajniška veriga {#shards-and-beacon-chain}
-
-Razdrobljene verige lahko v ekosistem Ethereum varno vstopijo samo, ko je vključen mehanizem za doseganje soglasja z dokazom o deležu. Oddajniška veriga bo uvedla zastavljanje in tlakovala pot za nadgradnjo razdrobljenih verig, ki prihaja.<ButtonLink to="/eth2/shard-chains/">Razdrobljene verige</ButtonLink>
-
 ### Glavno omrežje in oddajniška veriga {#mainnet-and-beacon-chain}
 
-Oddajniška veriga bo najprej obstajala ločeno od glavnega omrežja Ethereum, ki ga uporabljamo danes. Vendar bosta sčasoma povezana. Načrt je »spojiti« glavno omrežje s sistemom dokaza o deležu, ki ga nadzoruje in usklajuje oddajniška veriga.<ButtonLink to="/eth2/docking/">Spojitev</ButtonLink>
+Oddajniška veriga bo najprej obstajala ločeno od glavnega omrežja Ethereum, ki ga uporabljamo danes. Vendar bosta sčasoma povezana. Načrt je »spojiti« glavno omrežje s sistemom dokaza o deležu, ki ga nadzoruje in usklajuje oddajniška veriga.
+
+<ButtonLink to="/eth2/merge/">Spojitev</ButtonLink>
+
+### Drobci in oddajniška veriga {#shards-and-beacon-chain}
+
+Razdrobljene verige lahko v ekosistem Ethereum varno vstopijo samo, ko je vključen mehanizem za doseganje soglasja z dokazom o deležu. Oddajniška veriga bo uvedla zastavljanje in tlakovala pot za nadgradnjo razdrobljenih verig, ki prihaja.
+
+<ButtonLink to="/eth2/shard-chains/">Razdrobljene verige</ButtonLink>
 
 <Divider />
 

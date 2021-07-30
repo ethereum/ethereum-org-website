@@ -48,13 +48,17 @@ Au final, la chaîne phare sera également responsable de l'assignation aléatoi
 
 Les mises à niveau d'Eth2 sont en quelque sorte liées. Récapitulons donc comment la chaîne phare affecte les autres mises à niveau.
 
-### Chaîne phare et chaîne de fragments {#shards-and-beacon-chain}
-
-Les chaînes fragment ne peuvent pénétrer en toute sécurité dans l'écosystème Ethereum que s'il existe un mécanisme de consensus sur la preuve d'enjeu. La chaîne phare introduira la mise en jeu, ouvrant la voie à la mise à niveau suivante : la chaîne de fragments.<ButtonLink to="/eth2/shard-chains/">Chaînes fragment</ButtonLink>
-
 ### Mainnet et chaîne phare {#mainnet-and-beacon-chain}
 
-La chaîne phare, dans un premier temps, existera séparément du réseau principal Ethereum que nous utilisons aujourd'hui. Mais elles finiront par être connectées. Le but est "d'arrimer" le réseau principal au système de preuve d'enjeu qui est contrôlé et coordonné par la chaîne phare.<ButtonLink to="/eth2/docking/">L'arrimage</ButtonLink>
+La chaîne phare, dans un premier temps, existera séparément du réseau principal Ethereum que nous utilisons aujourd'hui. Mais elles finiront par être connectées. Le but est "d'arrimer" le réseau principal au système de preuve d'enjeu qui est contrôlé et coordonné par la chaîne phare.
+
+<ButtonLink to="/eth2/merge/">L'arrimage</ButtonLink>
+
+### Chaîne phare et chaîne de fragments {#shards-and-beacon-chain}
+
+Les chaînes fragment ne peuvent pénétrer en toute sécurité dans l'écosystème Ethereum que s'il existe un mécanisme de consensus sur la preuve d'enjeu. La chaîne phare introduira la mise en jeu, ouvrant la voie à la mise à niveau suivante : la chaîne de fragments.
+
+<ButtonLink to="/eth2/shard-chains/">Chaînes fragment</ButtonLink>
 
 <Divider />
 

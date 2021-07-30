@@ -48,13 +48,17 @@ Amb el temps, la Cadena de Balisa també serà l'encarregada d'assignar als apos
 
 D'alguna manera, les millores d'Eth2 estan interrelacionades. Recapitulem com la Cadena de Balisa afecta altres millores.
 
-### Fragments i la Cadena de Balisa {#shards-and-beacon-chain}
-
-Les cadenes de fragments només poden entrar de forma segura a l'ecosistema Ethereum si existeix un mecanisme de consens de prova de participació. La Cadena de Balisa introduirà l'aposta i aplanarà el camí a la futura introducció de la cadena de fragments.<ButtonLink to="/eth2/shard-chains/">Cadenes de fragments</ButtonLink>
-
 ### La xarxa principal i la Cadena de Balisa {#mainnet-and-beacon-chain}
 
-Inicialment, la Cadena de Balisa estarà separada de la xarxa principal d'Ethereum que fem servir actualment. Però, en última instància, estaran connectades. El mètode és "acoblar" la xarxa principal en el sistema de prova de participació, que estarà controlat i coordinat per la Cadena de Balisa.<ButtonLink to="/eth2/docking/">L'acoblament</ButtonLink>
+Inicialment, la Cadena de Balisa estarà separada de la xarxa principal d'Ethereum que fem servir actualment. Però, en última instància, estaran connectades. El mètode és "acoblar" la xarxa principal en el sistema de prova de participació, que estarà controlat i coordinat per la Cadena de Balisa.
+
+<ButtonLink to="/eth2/merge/">L'acoblament</ButtonLink>
+
+### Fragments i la Cadena de Balisa {#shards-and-beacon-chain}
+
+Les cadenes de fragments només poden entrar de forma segura a l'ecosistema Ethereum si existeix un mecanisme de consens de prova de participació. La Cadena de Balisa introduirà l'aposta i aplanarà el camí a la futura introducció de la cadena de fragments.
+
+<ButtonLink to="/eth2/shard-chains/">Cadenes de fragments</ButtonLink>
 
 <Divider />
 

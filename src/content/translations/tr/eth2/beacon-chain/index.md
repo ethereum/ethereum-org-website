@@ -47,13 +47,17 @@ Sonuç olarak İşaret (Beacon) Zinciri shard zincirlerini doğrulamak üzere ra
 
 Eth2 yükseltmelerinin tamamı bir şekilde ilişkilidir. İşaret (Beacon) Zincirinin diğer yükseltmeleri nasıl etkilediğini özetleyelim.
 
-### Shard'lar ve İşaret (Beacon) Zinciri {#shards-and-beacon-chain}
-
-Shard zincirleri Ethereum ekosistemine yalnızca pay ispatı uzlaşmasıyla güvenli bir şekilde girebilir. İşaret (Beacon) Zinciri izlenmesi gereken shard zinciri yükseltmesi için imkan tanıyarak paydaşlık sunar.<ButtonLink to="/eth2/shard-chains/">Shard zincirleri</ButtonLink>
-
 ### Ana ağ ve İşaret (Beacon) Zinciri {#mainnet-and-beacon-chain}
 
-Öncelikle İşaret (Beacon) Zinciri bugün kullandığımız Ethereum ana ağından ayrı olarak bulunacaktır. Ancak sonuç olarak bağlanacaklardır. Plan, İşaret (Beacon) Zinciri tarafından kontrol ve koordine edilen pay ispatı sistemine ana ağı "kenetlemektir".<ButtonLink to="/eth2/docking/">Kenetleme</ButtonLink>
+Öncelikle İşaret (Beacon) Zinciri bugün kullandığımız Ethereum ana ağından ayrı olarak bulunacaktır. Ancak sonuç olarak bağlanacaklardır. Plan, İşaret (Beacon) Zinciri tarafından kontrol ve koordine edilen pay ispatı sistemine ana ağı "kenetlemektir".
+
+<ButtonLink to="/eth2/merge/">Kenetleme</ButtonLink>
+
+### Shard'lar ve İşaret (Beacon) Zinciri {#shards-and-beacon-chain}
+
+Shard zincirleri Ethereum ekosistemine yalnızca pay ispatı uzlaşmasıyla güvenli bir şekilde girebilir. İşaret (Beacon) Zinciri izlenmesi gereken shard zinciri yükseltmesi için imkan tanıyarak paydaşlık sunar.
+
+<ButtonLink to="/eth2/shard-chains/">Shard zincirleri</ButtonLink>
 
 <Divider />
 
