@@ -74,15 +74,16 @@ Now technically, both proof-of-work (PoW) and proof-of-stake (PoS) are not conse
 
 **Sybil resistance** is a measure of how a protocol fairs against a [Sybil attack](https://en.wikipedia.org/wiki/Sybil_attack). Sybil attacks are when one user or group pretends to be many users. Resistance to this type of attack is essential for a decentralized blockchain, and enables miners and validators to be rewarded equally based on resources put in. PoW and PoS protect against this by making users expend a lot of energy or put up a lot of collateral respectively, making it really hard for one to pretend to be many.
 
-A **chain selection rule** is used to decide which chain is the "correct" chain. Ethereum and Bitcoin currently use the "longest chain" rule, which means that whichever blockchain is the longest will be the one the rest of the nodes accept as valid and work with.
+A **chain selection rule** is used to decide which chain is the "correct" chain. Ethereum and Bitcoin currently use the "longest chain" rule, which means that whichever blockchain is the longest will be the one the rest of the nodes accept as valid and work with. This is determined by the chains total cumulative PoW difficulty.
 
 The combination of PoW and longest chain rule is known as "Nakamoto Consensus."
 
-Eth2 is set to use the consensus mechanism called [Casper the Friendly Finality Gadget](https://arxiv.org/abs/1710.09437), which is proof-of-stake based.
+Eth2 (the [beacon chain](/eth2/beacon-chain/)) uses a consensus mechanism called [Casper the Friendly Finality Gadget](https://arxiv.org/abs/1710.09437), which is PoS based.
 
 ## Further Reading {#further-reading}
 
 - [What is Nakamoto Consensus? Complete Beginner’s Guide](https://blockonomi.com/nakamoto-consensus/)
+- [On the Security and Performance of Proof of Work Blockchains](https://eprint.iacr.org/2016/555.pdf)
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
