@@ -56,7 +56,9 @@ Der Plan war es immer, den Shards eine extra Funktionalität hinzuzufügen, um s
 
 ### Benötigen Shards Codeausführung? {#do-shards-need-code-execution}
 
-Vitalik Buterin hat im Gespräch mit dem Bankless-Podcast 3 mögliche Optionen vorgestellt, die diskutiert werden sollten. <iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Vitalik Buterin hat im Gespräch mit dem Bankless-Podcast 3 mögliche Optionen vorgestellt, die diskutiert werden sollten.
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
 
 #### 1. Statusausführung nicht notwendig {#state-execution-not-needed}
 
@@ -84,11 +86,15 @@ Die Eth2-Upgrades stehen alle miteinander in Verbindung. Im Folgenden wollen wir
 
 ### Shards und die Beacon Chain {#shards-and-beacon-chain}
 
-Die Beacon Chain enthält die komplette Logik, um Shards sicher und synchron zu halten. Die Beacon Chain wird die Staker im Netzwerk koordinieren und sie den Shards zuweisen, an denen sie arbeiten müssen. Sie wird außerdem die Kommunikation zwischen den einzelnen Shards sicherstellen, indem sie Transaktionsdaten einzelner Shards empfängt und abspeichert, auf die andere Shards wiederum zugreifen können. Jeder Shard hat dadurch Zugriff auf den Status von Ethereum und kann diesen laufend aktualisieren.<ButtonLink to="/eth2/beacon-chain/">Die Beacon Chain</ButtonLink>
+Die Beacon Chain enthält die komplette Logik, um Shards sicher und synchron zu halten. Die Beacon Chain wird die Staker im Netzwerk koordinieren und sie den Shards zuweisen, an denen sie arbeiten müssen. Sie wird außerdem die Kommunikation zwischen den einzelnen Shards sicherstellen, indem sie Transaktionsdaten einzelner Shards empfängt und abspeichert, auf die andere Shards wiederum zugreifen können. Jeder Shard hat dadurch Zugriff auf den Status von Ethereum und kann diesen laufend aktualisieren.
+
+<ButtonLink to="/eth2/beacon-chain/">Die Beacon Chain</ButtonLink>
 
 ### Shards und das Andocken {#shards-and-docking}
 
-Auch nach der Einführung von Shards wird das heutige Ethereum-Mainnet weiterhin existieren. An einem gewissen Punkt wird das Mainnet allerdings ein Shard werden müssen, damit der Übergang von Proof-of-Work zu Proof-of-Stake – und damit zum Staking – möglich wird. Es muss sich noch herausstellen, ob das Mainnet der einzige sogenannte "smarte" Shard sein wird, der Code ausführen kann. So oder so wird eine Entscheidung darüber in Phase 2 des Sharding fallen.<ButtonLink to="/eth2/merge/">Das Andocken</ButtonLink>
+Auch nach der Einführung von Shards wird das heutige Ethereum-Mainnet weiterhin existieren. An einem gewissen Punkt wird das Mainnet allerdings ein Shard werden müssen, damit der Übergang von Proof-of-Work zu Proof-of-Stake – und damit zum Staking – möglich wird. Es muss sich noch herausstellen, ob das Mainnet der einzige sogenannte "smarte" Shard sein wird, der Code ausführen kann. So oder so wird eine Entscheidung darüber in Phase 2 des Sharding fallen.
+
+<ButtonLink to="/eth2/merge/">Das Andocken</ButtonLink>
 
 <Divider />
 

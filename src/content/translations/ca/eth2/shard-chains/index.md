@@ -56,7 +56,9 @@ L'objectiu sempre ha estat afegir funcionalitats extra als fragments, perquè s'
 
 ### Necessiten els fragments execució de codi? {#do-shards-need-code-execution}
 
-Vitalik Buterin, al podcast de Bankless, va presentar 3 opcions potencials que mereixen ésser tractades. <iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Vitalik Buterin, al podcast de Bankless, va presentar 3 opcions potencials que mereixen ésser tractades.
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
 
 #### 1. No necessitar una execució d'estat {#state-execution-not-needed}
 
@@ -84,11 +86,15 @@ D'alguna manera, les millores d'Eth2 estan interrelacionades. Per tant, anem a v
 
 ### Fragments i la Cadena de Balisa {#shards-and-beacon-chain}
 
-La Cadena de Balisa conté la lògica per mantenir els fragments segurs i sincronitzats. La Cadena de Balisa coordinarà els participants a la xarxa, i els assignarà als fragments que necessiten per continuar treballant. I també facilitarà la comunicació entre fragments mitjançant la recepció i l'emmagatzematge de les dades de transacció de fragments accessibles mitjançant altres fragments. Això donarà als fragments una instantània de l'estat d'Ethereum per mantenir-ho tot actualitzat.<ButtonLink to="/eth2/beacon-chain/">La Cadena de Balisa</ButtonLink>
+La Cadena de Balisa conté la lògica per mantenir els fragments segurs i sincronitzats. La Cadena de Balisa coordinarà els participants a la xarxa, i els assignarà als fragments que necessiten per continuar treballant. I també facilitarà la comunicació entre fragments mitjançant la recepció i l'emmagatzematge de les dades de transacció de fragments accessibles mitjançant altres fragments. Això donarà als fragments una instantània de l'estat d'Ethereum per mantenir-ho tot actualitzat.
+
+<ButtonLink to="/eth2/beacon-chain/">La Cadena de Balisa</ButtonLink>
 
 ### Fragments i acoblament {#shards-and-docking}
 
-La xarxa principal d'Ethereum existirà igual que avui en dia inclús després de la introducció dels fragments. Però en algun moment, la xarxa principal necessitarà transformar-se en un fragment per tal de poder passar a ser una aposta. Falta veure si la xarxa principal romandrà com a únic fragment "intel·ligent" que pugui gestionar execució de codi - però sigui com sigui, s'haurà de prendre una decisió a la fase 2 de fragmentació.<ButtonLink to="/eth2/docking/">L'acoblament</ButtonLink>
+La xarxa principal d'Ethereum existirà igual que avui en dia inclús després de la introducció dels fragments. Però en algun moment, la xarxa principal necessitarà transformar-se en un fragment per tal de poder passar a ser una aposta. Falta veure si la xarxa principal romandrà com a únic fragment "intel·ligent" que pugui gestionar execució de codi - però sigui com sigui, s'haurà de prendre una decisió a la fase 2 de fragmentació.
+
+<ButtonLink to="/eth2/docking/">L'acoblament</ButtonLink>
 
 <Divider />
 

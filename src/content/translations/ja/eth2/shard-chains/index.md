@@ -56,7 +56,9 @@ summaryPoints:
 
 ### シャードにおけるコード実行の必要性 {#do-shards-need-code-execution}
 
-Vitalik Buterin が Bankless (ポッドキャストの番組) にて議論すべき 3 つの潜在的な選択肢を紹介しました。 <iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Vitalik Buterin が Bankless (ポッドキャストの番組) にて議論すべき 3 つの潜在的な選択肢を紹介しました。
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
 
 #### 1. 状態の実行は必要ない {#state-execution-not-needed}
 
@@ -84,11 +86,15 @@ Eth2 のアップグレードのうち、いくつかは相互関係にありま
 
 ### シャードとビーコンチェーン {#shards-and-beacon-chain}
 
-ビーコンチェーンにはシャードを安全に保ち、同期するためのすべてのロジックが含まれています。 ビーコンチェーンはネットワーク内のステーカーを調整し、作業に必要なシャードに割り当てます。 また、他のシャードからアクセス可能なシャードトランザクションデータを受信および保存することによりシャード間の通信を容易にします。 これにより、シャードにはすべてを最新の状態に保つための Ethereum のスナップショットが与えられます。<ButtonLink to="/eth2/beacon-chain/">ビーコンチェーン</ButtonLink>
+ビーコンチェーンにはシャードを安全に保ち、同期するためのすべてのロジックが含まれています。 ビーコンチェーンはネットワーク内のステーカーを調整し、作業に必要なシャードに割り当てます。 また、他のシャードからアクセス可能なシャードトランザクションデータを受信および保存することによりシャード間の通信を容易にします。 これにより、シャードにはすべてを最新の状態に保つための Ethereum のスナップショットが与えられます。
+
+<ButtonLink to="/eth2/beacon-chain/">ビーコンチェーン</ButtonLink>
 
 ### シャードとドッキング {#shards-and-docking}
 
-イーサリウムメインネットは、シャードの導入後も現在のように存在することになるでしょう。 しかし、いつかは、メインネットはステークへ移行するためにシャードになる必要があります。 メインネットがコードの実行を処理できる唯一の”スマートな”シャードとなるかは定かではないが、どちらにせよ、これはシャーディングのフェーズ 2 には決定されます。<ButtonLink to="/eth2/docking/">ドッキング</ButtonLink>
+イーサリウムメインネットは、シャードの導入後も現在のように存在することになるでしょう。 しかし、いつかは、メインネットはステークへ移行するためにシャードになる必要があります。 メインネットがコードの実行を処理できる唯一の”スマートな”シャードとなるかは定かではないが、どちらにせよ、これはシャーディングのフェーズ 2 には決定されます。
+
+<ButtonLink to="/eth2/docking/">ドッキング</ButtonLink>
 
 <Divider />
 

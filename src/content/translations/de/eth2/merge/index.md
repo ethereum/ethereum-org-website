@@ -56,8 +56,12 @@ Die Eth2-Upgrades stehen allesamt in Verbindung zueinander. Zusammenfassend steh
 
 ### Andocken und die Beacon Chain {#docking-and-beacon-chain}
 
-Sobald das Andocken erfolgt, werden Staker zugewiesen, um das Ethereum-Mainnet zu validieren. Genau wie bei den Shard Chains. [Mining](/developers/docs/consensus-mechanisms/pow/mining/) wird nicht mehr erforderlich sein, sodass die Miner aller Voraussicht nach ihre verdienten Ether ins Staking im Rahmen des Proof-of-Stake-Systems einbringen werden.<ButtonLink to="/eth2/beacon-chain/">Die Beacon Chain</ButtonLink>
+Sobald das Andocken erfolgt, werden Staker zugewiesen, um das Ethereum-Mainnet zu validieren. Genau wie bei den Shard Chains. [Mining](/developers/docs/consensus-mechanisms/pow/mining/) wird nicht mehr erforderlich sein, sodass die Miner aller Voraussicht nach ihre verdienten Ether ins Staking im Rahmen des Proof-of-Stake-Systems einbringen werden.
+
+<ButtonLink to="/eth2/beacon-chain/">Die Beacon Chain</ButtonLink>
 
 ### Andocken und Shard Chains {#docking-and-shard-chains}
 
-Da das Mainnet zu einem Shard werden wird, ist die erfolgreiche Implemetierung der Shard Chains für dieses Upgrade von entscheidender Bedeutung. Dieser Übergang wird vermutlich Stein des Anstoßes dafür sein, ob sich die Community dafür entscheidet, ob bzgl. des Sharding ein zweites Upgrade nötig ist. Solch ein Upgrade würde dann weitere Shards wie das Mainnet erstellen. Diese würden nicht nur weitere Daten liefern, sondern auch Transaktionen und Smart Contracts bearbeiten.<ButtonLink to="/eth2/shard-chains/">Shard Chains</ButtonLink>
+Da das Mainnet zu einem Shard werden wird, ist die erfolgreiche Implemetierung der Shard Chains für dieses Upgrade von entscheidender Bedeutung. Dieser Übergang wird vermutlich Stein des Anstoßes dafür sein, ob sich die Community dafür entscheidet, ob bzgl. des Sharding ein zweites Upgrade nötig ist. Solch ein Upgrade würde dann weitere Shards wie das Mainnet erstellen. Diese würden nicht nur weitere Daten liefern, sondern auch Transaktionen und Smart Contracts bearbeiten.
+
+<ButtonLink to="/eth2/shard-chains/">Shard Chains</ButtonLink>
