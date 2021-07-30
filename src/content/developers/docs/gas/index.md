@@ -52,43 +52,42 @@ Using the formula above we can calculate this as `21,000 * (100 + 10) = 2,310,00
 
 ### Base Fees {#base-fees}
 
-Every block has a base fee which acts as a reserve price. To be eligible for inclusion in a block the offered price per gas must at least equal the base fee. The base fee is calculated independently of the current block and is instead determined by the blocks before it - making transaction fees more predictable for users.
+Every block has a base fee which acts as a reserve price. To be eligible for inclusion in a block the offered price per gas must at least equal the base fee. The base fee is calculated independently of the current block and is instead determined by the blocks before it - making transaction fees more predictable for users. When the block is mined this base fee is "burned", removing it from circulation.
 
 ### Block Size
 
-EIP-1559 introduced variable-size blocks to Ethereum. Each block has a target size of 12.5 million gas but the size of blocks will increase or decrease in accordance with network demands, up until the block limit of 25 milion gas (2x block target size). An equilibrium block size of 12.5 million on average is achieved through the process of _tâtonnement_. This means if the block sizes is greater than the target block size, the base fee will increase . Similarly, if the block is less than the target block size the base fee will decrease. [More on blocks](/developers/docs/blocks/).
+EIP-1559 introduced variable-size blocks to Ethereum. Each block has a target size of 12.5 million gas but the size of blocks will increase or decrease in accordance with network demands, up until the block limit of 25 milion gas (2x block target size). An equilibrium block size of 12.5 million on average is achieved through the process of _tâtonnement_. This means if the block sizes is greater than the target block size, the base fee will increase . Similarly, if the block is less than the target block size the base fee will decrease. The amount the base fee is adjusted by is proportional to how far from the target the block size is. [More on blocks](/developers/docs/blocks/).
 
-### More on Base Fees {#more-base-fees}
+### Base Fees Continued {#base-fees-continued}
 
-The base fee will increase by a maximum of 12.5% per block if the target block size is exceeded. This exponential growth makes it economically non-viable for block size to remain high indefinitely.
+The base fee is calculated by a formula that compares the size of the previous block (the amount of gas used for all the transactions) with the target size. The base fee will increase by a maximum of 12.5% per block if the target block size is exceeded. This exponential growth makes it economically non-viable for block size to remain high indefinitely.
 
-| Block Number | Included Gas | Fee Increase |   Base Fee |
-| ------------ | -----------: | -----------: | ---------: |
-| 1            |        12.5M |           0% |   100 gwei |
-| 2            |          25M |           0% |   100 gwei |
-| 3            |          25M |        12.5% | 112.5 gwei |
-| 4            |          25M |        12.5% | 126.5 gwei |
-| 5            |          25M |        12.5% | 142.4 gwei |
-| 6            |          25M |        12.5% | 160.2 gwei |
-| 7            |          25M |        12.5% | 180.2 gwei |
-| 8            |          25M |        12.5% | 202.8 gwei |
+| Block Number | Included Gas | Fee Increase | Current Base Fee |
+| ------------ | -----------: | -----------: | ---------------: |
+| 1            |        12.5M |           0% |         100 gwei |
+| 2            |          25M |           0% |         100 gwei |
+| 3            |          25M |        12.5% |       112.5 gwei |
+| 4            |          25M |        12.5% |       126.5 gwei |
+| 5            |          25M |        12.5% |       142.4 gwei |
+| 6            |          25M |        12.5% |       160.2 gwei |
+| 7            |          25M |        12.5% |       180.2 gwei |
+| 8            |          25M |        12.5% |       202.8 gwei |
 
 Relative to the pre-London gas auction market, this transaction-fee-mechanism change causes fee prediction to be more reliable. Following the table above - to create a transaction on block number 9, a wallet will let the user know with certainty that the **maximum base fee** to be added to the next block is `current base fee * 112.5%` or `202.8 gwei * 112.5% = 256.8 gwei`.
 
 ## Tips {#tips}
 
-### FeeCap {#feecap}
+As the base fee (which in the previous transaction fee mechanism would have gone to the miner) is burned, a tip is used to incentivise miners to include a transaction in the block they are mining. Without tips, it would be economically viable for miners to mine empty blocks, as they would receive the same block reward. Under normal conditions a small tip provides miners a minimal incentive to include a transaction and high tips can provide incentive for special treatment.
 
-## Implications of the London Upgrade on Fees
+### Fee Cap {#feecap}
 
-- less sudden spikes in price
-- better user experience when transacting on the network
+To execute a transaction on the network users are able to specify a maximum limit they are willing to pay for their transaction to be executed. This optional parameter is known as a `fee cap`. In order for a transaction to be executed the fee cap must exceed the sum of the base fee and the tip.
 
 ## Why do gas fees exist? {#why-do-gas-fees-exist}
 
 In short, gas fees help keep the Ethereum network secure. By requiring a fee for every computation executed on the network, we prevent actors from spamming the network. In order to prevent accidental or hostile infinite loops or other computational wastage in code, each transaction is required to set a limit to how many computational steps of code execution it can use. The fundamental unit of computation is "gas".
 
-Although a transaction includes a limit, any gas not used in a transaction is returned to the user.
+Although a transaction includes a limit, any gas not used in a transaction is returned to the user (i.e `fee cap - (base fee + tip)` is returned).
 
 ![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
 _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
