@@ -30,5 +30,13 @@
     "description": "Global Online Ethereum Hackathon",
     "startDate": "2021-07-02",
     "endDate": "2021-08-01"
+  },
+  {
+    "title": "HackFS",
+    "to": "https://fs.ethglobal.com/",
+    "sponsor": null,
+    "description": "A global virtual hackathon to build the foundation for the decentralized web.",
+    "startDate": "2021-07-30",
+    "endDate": "2021-08-20"
   }
 ]

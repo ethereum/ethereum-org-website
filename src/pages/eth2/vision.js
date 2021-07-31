@@ -232,7 +232,10 @@ const VisionPage = ({ data, location }) => {
             </Link>{" "}
           </p>
           <p>
-            <Translation id="page-eth2-vision-scalability-desc-4" />
+            <Translation id="page-eth2-vision-scalability-desc-4" />{" "}
+            <Link to="/decentralization/">
+              <Translation id="page-eth2-vision-scalability-decentralization" />
+            </Link>{" "}
           </p>
           <h3>
             <Translation id="page-eth2-vision-security" />{" "}

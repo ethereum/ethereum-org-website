@@ -4136,6 +4136,97 @@
         "ideas",
         "bug"
       ]
+    },
+    {
+      "login": "Patil2099",
+      "name": "Pankaj Patil",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35653876?v=4",
+      "profile": "https://pplife.home.blog",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "esale",
+      "name": "esale",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36928404?v=4",
+      "profile": "https://github.com/esale",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "RaynHarr",
+      "name": "RaynHarr",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39592448?v=4",
+      "profile": "https://github.com/RaynHarr",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "n4rsil",
+      "name": "n4rsil",
+      "avatar_url": "https://avatars.githubusercontent.com/u/85314714?v=4",
+      "profile": "https://github.com/n4rsil",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "jkbishbish",
+      "name": "John Bishop",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40157941?v=4",
+      "profile": "https://github.com/jkbishbish",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "robriks",
+      "name": "robriks",
+      "avatar_url": "https://avatars.githubusercontent.com/u/80549215?v=4",
+      "profile": "https://github.com/robriks",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "NishantChandla",
+      "name": "Nishant Chandla",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55653617?v=4",
+      "profile": "https://github.com/NishantChandla",
+      "contributions": [
+        "code",
+        "bug"
+      ]
+    },
+    {
+      "login": "PaulApivat",
+      "name": "@paulapivat",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4058461?v=4",
+      "profile": "https://github.com/PaulApivat",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "graemeblackwood",
+      "name": "Graeme Blackwood",
+      "avatar_url": "https://avatars.githubusercontent.com/u/646863?v=4",
+      "profile": "http://blackwood.london",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "il3ven",
+      "name": "il3ven",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4337699?v=4",
+      "profile": "https://github.com/il3ven",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,

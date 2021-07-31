@@ -5,7 +5,7 @@ lang: ro
 sidebar: true
 ---
 
-## Ce este un contract inteligent?
+## Ce este un contract inteligent? {#what-is-a-smart-contract}
 
 Un „contract inteligent” este un program care rulează pe blockchain-ul Ethereum. Este o colecție de cod (funcțiile sale) și date (starea sa) care se află la o anumită adresă din blockchain-ul Ethereum.
 

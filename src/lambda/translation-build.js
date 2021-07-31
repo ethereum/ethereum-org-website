@@ -5,7 +5,7 @@
 // exports.handler = async function (event, context) {
 //   try {
 //     const baseURL =
-//       "https://api.crowdin.com/api/project/ethereumfoundation/export"
+//       "https://api.crowdin.com/api/project/ethereum-org/export"
 //     const { CROWDIN_API_KEY } = process.env
 
 //     const resp = await axios.get(`${baseURL}?key=${CROWDIN_API_KEY}&json`)

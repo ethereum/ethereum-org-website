@@ -10,9 +10,10 @@ sidebar: true
 The Translation Program is a collaborative effort to translate ethereum.org into different languages in order to make the website more accessible to billions of non-English speakers around the world.
 
 Our progress so far:
+
 - **1,400 +** translators
 - **35** languages live on site
-- **1.4 million** words translated in 2020
+- **1.4 million** words translated in 2021
 
 If you want to get involved and help us grow the global Ethereum community by translating the website into your language, follow the steps below!
 
@@ -23,11 +24,11 @@ If you want to get involved and help us grow the global Ethereum community by tr
 
 ## How to join {#how-to-join}
 
-1. **[Join our project on Crowdin](https://crowdin.com/project/ethereumfoundation/invite)**  
+1. **[Join our project on Crowdin](https://crowdin.com/project/ethereum-org/invite)**  
    _You will need to create a Crowdin account if you don't already have one. Here's [documentation on how to use Crowdin](https://support.crowdin.com/online-editor/)_
 
 2. **Find the language you want to translate and select a document. If translation progress is below 100%, please contribute! Don't see your language listed? [Open an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose)**  
-   _A note on content versions: we use version management within Crowdin to avoid translation delays for added content. When you check out a language, for example, [Filipino](https://crowdin.com/project/ethereumfoundation/fil#) you'll see folders for each site version ("v2.0", "v2.1", etc.)._
+   _A note on content versions: we use version management within Crowdin to avoid translation delays for added content. When you check out a language, for example, [Filipino](https://crowdin.com/project/ethereum-org/fil#) you'll see folders for each site version ("v2.0", "v2.1", etc.)._
    _We encourage you to translate the lowest version first and work your way up to higher versions (v.2.0 → v.2.1 → v.2.2 → ⋯) as lower versions will be updated on the site first_
 3. **Once you've completed the translation (i.e. all files for a content version display 100%), our professional translation service will review (and potentially edit) the content. Once the review is complete (i.e. review progress is 100%), we will add it to the website.**
 
