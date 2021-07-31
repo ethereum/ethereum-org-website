@@ -119,3 +119,23 @@ Critical views of Ethereum and Cryptocurrencies.
 - [The Challenges of Building Ethereum Infrastructure](https://medium.com/@lopp/the-challenges-of-building-ethereum-infrastructure-87e443e47a4b) _Jan 8, 2018 - Jameson Lopp_
 - [Parsimonious Answers to Difficult Questions](https://www.youtube.com/watch?v=GOkSg0BuSdw&feature=youtu.be) _(Video) March 10, 2019 - Rick Dudley_
 - [There’s no good reason to trust blockchain technology](https://www.wired.com/story/theres-no-good-reason-to-trust-blockchain-technology/) _Feb 6, 2019 - Bruce Schneier_
+
+## Books and podcasts {#books-and-podcasts}
+
+Books on Ethereum and Cryptocurrencies:
+
+- [Out of the Ether: The Amazing Story of Ethereum and the $55 Million Heist that Almost Destroyed It All](https://www.amazon.com/Out-Ether-Amazing-Ethereum-Destroyed/dp/1119602939) _September 29, 2020 - Matthew Leising_
+- [The Infinite Machine: How an Army of Crypto-hackers Is Building the Next Internet with Ethereum](https://www.amazon.com/Infinite-Machine-Crypto-hackers-Building-Internet/dp/0062886142) _July 14, 2020 - Camila Russo_
+- [The Age of Cryptocurrency: How Bitcoin and the Blockchain Are Challenging the Global Economic Order](https://www.amazon.com/Age-Cryptocurrency-Blockchain-Challenging-Economic/dp/1250081556) _January 12, 2016 - Paul Vigna, Michael J. Casey_
+- [The Truth Machine: The Blockchain and the Future of Everything](https://www.amazon.com/Truth-Machine-Blockchain-Future-Everything/dp/1250114578) _February 27, 2018 - Paul Vigna, Michael J. Casey_
+- [Digital Gold: Bitcoin and the Inside Story of the Misfits and Millionaires Trying to Reinvent Money](https://www.amazon.com/Digital-Gold-Bitcoin-Millionaires-Reinvent/dp/006236250X) _May 24, 2021 - Nathaniel Popper_
+- [Kings of Crypto: One Startup's Quest to Take Cryptocurrency Out of Silicon Valley and Onto Wall Street](https://www.amazon.com/Kings-Crypto-Startups-Cryptocurrency-Silicon/dp/1647820189) _December 15, 2020 - Jeff John Roberts_
+
+Podcasts addressing Ethereum and Cryptocurrencies:
+
+- [Into the Ether](https://podcast.ethhub.io/) _A podcast focusing on all things Ethereum and DeFi_
+- [Bankless](http://podcast.banklesshq.com/) _A guide to Crypto finance_
+- [Uncommon Core](https://uncommoncore.co/podcast/) _Explores the transformative nature of trust-minimized currency and financial services_
+- [Zero Knowledge](https://www.zeroknowledge.fm/) _Goes deep into the tech that will power the emerging decentralised web and the community building this_
+- [Epicenter](https://epicenter.tv/) _Explores the technical, economic, and social implications of the Crypto industry_
+- [Unchained](https://unchainedpodcast.com/) _dives deep into the people building the decentralized internet, the details of this technology that could underpin our future, and some of the thorniest topics in crypto, such as regulation, security and privacy_
