@@ -48,6 +48,7 @@
     "prism-react-renderer": "^1.1.1",
     "prismjs": "^1.24.0",
     "react": "17.0.2",
+    "react-countdown": "^2.3.2",
     "react-dom": "17.0.2",
     "react-emoji-render": "^1.2.4",
     "react-helmet": "^6.1.0",
