@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus isShipped date="Shipped!">
+<UpgradeStatus isShipped date="Dostavljeno!">
     Beacon Chain poslan je 1. prosinca u podne (UTC). Za više informacija <a href="https://beaconscan.com/">proučite podatke</a>. Ako želite pomoći u validaciji lanca, možete <a href="/eth2/staking/"> uložiti svoj ETH </a>.
 </UpgradeStatus>
 
@@ -48,13 +48,17 @@ Na kraju će i Beacon Chain biti odgovoran za nasumično dodjeljivanje učesnika
 
 Sve nadogradnje Eth2 donekle su međusobno povezane. Dakle, ponovimo ukratko kako Beacon Chain utječe na ostale nadogradnje.
 
-### Djelići i Beacon Chain {#shards-and-beacon-chain}
-
-Lanci djelića mogu sigurno ući u Ethereumov ekosustav samo ako je uspostavljen mehanizam konsenzusa Proof of Stake. Beacon Chain predstavit će ulaganje, radeći put za nadogradnju lanca djelića.<ButtonLink to="/eth2/shard-chains/">Lanci djelića</ButtonLink>
-
 ### Glavna mreža i Beacon Chain {#mainnet-and-beacon-chain}
 
-Beacon Chain će u početku postojati odvojeno od glavne mreže Ethereum mreže kojom se koristimo danas. Ali će na kraju će biti povezani. Plan je spojiti glavnu mrežu u sustav Proof of Stake koji kontrolira i koordinira Beacon Chain.<ButtonLink to="/eth2/merge/">Spajanje</ButtonLink>
+Beacon Chain će u početku postojati odvojeno od glavne mreže Ethereum mreže kojom se koristimo danas. Ali će na kraju će biti povezani. Plan je spojiti glavnu mrežu u sustav Proof of Stake koji kontrolira i koordinira Beacon Chain.
+
+<ButtonLink to="/eth2/merge/">Spajanje</ButtonLink>
+
+### Djelići i Beacon Chain {#shards-and-beacon-chain}
+
+Lanci djelića mogu sigurno ući u Ethereumov ekosustav samo ako je uspostavljen mehanizam konsenzusa Proof of Stake. Beacon Chain predstavit će ulaganje, radeći put za nadogradnju lanca djelića.
+
+<ButtonLink to="/eth2/shard-chains/">Lanci djelića</ButtonLink>
 
 <Divider />
 

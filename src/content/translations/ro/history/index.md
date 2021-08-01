@@ -140,7 +140,7 @@ Furculița Byzantium:
 - A redus recompensele [miniere](/developers/docs/consensus-mechanisms/pow/mining/) pe bloc de la 5 la 3 ETH.
 - A amânat [bomba de dificultate](/glossary/#difficulty-bomb) cu un an.
 - A adăugat capacitatea de a efectua apeluri către alte contracte care nu modifică starea.
-- A adăugat anumite metode de criptografie pentru a permite \[scalarea layer-ului 2\]((/developers/docs/scaling/layer-2-rollups/).
+- A adăugat anumite metode de criptografie pentru a permite [scalarea layer-ului 2](/developers/docs/scaling/layer-2-rollups/).
 
 [Citește anunțul Fundației Ethereum](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
