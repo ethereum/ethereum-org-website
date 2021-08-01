@@ -7,7 +7,7 @@ incomplete: true
 sidebarDepth: 3
 ---
 
-Layer 2 is a collective term for solutions designed to help scale your application by handling transactions off the Ethereum Mainnet (layer 1), while taking advantage of the robust decentralized security model of mainnet. Transaction speed suffers when the network is busy which can make the user experience poor for certain types of dapps. And as the network gets busier, gas prices increase as transaction senders aim to outbid each other. This can make using Ethereum very expensive.
+Layer 2 is a collective term for solutions designed to help scale your application by handling transactions off the Ethereum Mainnet (layer 1), while taking advantage of the robust decentralized security model of Mainnet. Transaction speed suffers when the network is busy which can make the user experience poor for certain types of dapps. And as the network gets busier, gas prices increase as transaction senders aim to outbid each other. This can make using Ethereum very expensive.
 
 ## Prerequisites {#prerequisites}
 
@@ -73,7 +73,7 @@ Multiple implementations of ZK-rollups exist that you can integrate into your da
 
 ### Optimistic rollups {#optimistic-rollups}
 
-Optimistic rollups sit in parallel to the main Ethereum chain on layer 2. They can offer improvements in scalability because they don't do any computation by default. Instead, after a transaction they propose the new state to mainnet, or "notarise" the transaction.
+Optimistic rollups sit in parallel to the main Ethereum chain on layer 2. They can offer improvements in scalability because they don't do any computation by default. Instead, after a transaction they propose the new state to Mainnet, or "notarise" the transaction.
 
 With Optimistic rollups, transactions are written to the main Ethereum chain as `calldata`, optimising them further by reducing the gas cost.
 

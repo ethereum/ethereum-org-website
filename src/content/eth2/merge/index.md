@@ -1,6 +1,6 @@
 ---
 title: The merge
-description: Learn about the merge - when mainnet Ethereum joins the Beacon Chain coordinated proof-of-stake system.
+description: Learn about the merge - when Mainnet Ethereum joins the Beacon Chain coordinated proof-of-stake system.
 lang: en
 template: eth2
 sidebar: true
@@ -20,19 +20,19 @@ summaryPoints:
 
 ## What is the merge? {#what-is-the-docking}
 
-It's important to remember that initially, the [Beacon Chain](/eth2/beacon-chain/) shipped separately from [mainnet](/glossary/#mainnet) - the chain we use today. Ethereum Mainnet continues to be secured by [proof-of-work](/developers/docs/consensus-mechanisms/pow/), even while the Beacon Chain runs in parallel using [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). The merge is when these two systems finally come together.
+It's important to remember that initially, the [Beacon Chain](/eth2/beacon-chain/) shipped separately from [Mainnet](/glossary/#mainnet) - the chain we use today. Ethereum Mainnet continues to be secured by [proof-of-work](/developers/docs/consensus-mechanisms/pow/), even while the Beacon Chain runs in parallel using [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). The merge is when these two systems finally come together.
 
 Imagine Ethereum is a space ship that isn’t quite ready for an interstellar voyage. With the Beacon Chain the community has built a new engine and a hardened hull. When it’s time, the current ship will dock with this new system, merging into one ship, ready to put in some serious lightyears and take on the universe.
 
-## Merging with mainnet {#docking-mainnet}
+## Merging with Mainnet {#docking-mainnet}
 
 When ready, Ethereum Mainnet will "merge" with the Beacon Chain, becoming its own shard which uses proof-of-stake instead of [proof-of-work](/developers/docs/consensus-mechanisms/pow/).
 
 Mainnet will bring the ability to run smart contracts into the proof-of-stake system, plus the full history and current state of Ethereum, to ensure that the transition is smooth for all ETH holders and users.
 
-<!-- ### Improving mainnet
+<!-- ### Improving Mainnet
 
-Before mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
+Before Mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
 
 These include Improvements for
 

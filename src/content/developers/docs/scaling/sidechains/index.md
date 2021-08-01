@@ -7,7 +7,7 @@ incomplete: true
 sidebarDepth: 3
 ---
 
-A sidechain is a separate blockchain which runs in parallel to Ethereum Mainnet and operates independently. It has its own [consensus algorithm](/developers/docs/consensus-mechanisms/) (e.g. [Proof of Authority](https://en.wikipedia.org/wiki/Proof_of_authority), [Delegated proof-of-stake](https://en.bitcoinwiki.org/wiki/DPoS), [Byzantine fault tolerance](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained)). It is connected to mainnet by a two-way bridge.
+A sidechain is a separate blockchain which runs in parallel to Ethereum Mainnet and operates independently. It has its own [consensus algorithm](/developers/docs/consensus-mechanisms/) (e.g. [Proof of Authority](https://en.wikipedia.org/wiki/Proof_of_authority), [Delegated proof-of-stake](https://en.bitcoinwiki.org/wiki/DPoS), [Byzantine fault tolerance](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained)). It is connected to Mainnet by a two-way bridge.
 
 ## Prerequisites {#prerequisites}
 

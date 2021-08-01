@@ -115,8 +115,8 @@ There's a lot of data that you can access about an account. This is why it's oft
 
 Smart contract accounts have all the data that a user account will have, but some block explorers will even display some code information too. Examples include:
 
-- Contract creator – The address that deployed the contract to mainnet.
-- Creation transaction – The transaction that included the deployment to mainnet.
+- Contract creator – The address that deployed the contract to Mainnet.
+- Creation transaction – The transaction that included the deployment to Mainnet.
 - Source code – The solidity or vyper code of the smart contract.
 - Contract ABI – The Application Binary Interface of the contract – the calls the contract makes and the data received.
 - Contract creation code – The compiled bytecode of the smart contract – created when you compile a smart contract written in Solidity or Vyper, etc.
@@ -133,7 +133,7 @@ Token are a type of contract so they'll have similar data to a smart contract. B
 - Holders – The number of addresses that hold the token.
 - Transfers – The number of times the token has been transferred between accounts.
 - Transaction history – A history of all the transactions including the token.
-- Contract address – The address of the token that was deployed to mainnet.
+- Contract address – The address of the token that was deployed to Mainnet.
 - Decimals – ERC-20 tokens are divisible and have decimal places.
 
 ### Network {#network}

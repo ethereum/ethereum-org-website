@@ -17,7 +17,7 @@ Pourquoi les entreprises devraient s'intéresser à Ethereum ?
 - La réductions de coûts relatifs à la confiance et la coordination entre sociétés
 - L'amélioration de la transparence des réseaux d'entreprise et de l'efficacité opérationnelle
 - Pérenniser la compétitivité de votre entreprise
-- La compatibilité avec le "mainnet" : la chaine publique, ou des réseaux privés autorisés
+- La compatibilité avec le "Mainnet" : la chaine publique, ou des réseaux privés autorisés
 
 Pour plus des informations plus détaillées, voici des articles apparentés :
 

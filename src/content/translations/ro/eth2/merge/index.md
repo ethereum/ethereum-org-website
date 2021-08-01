@@ -30,9 +30,9 @@ Când va fi gata, rețeaua principală Ethereum va „andoca” cu lanțul Beaco
 
 Rețeaua principală va aduce posibilitatea de a rula contracte inteligente în sistemul de Dovadă a Mizei (PoS), plus istoricul complet și starea actuală a Ethereum, pentru a asigura tranziția lină pentru toți deținătorii și utilizatorii de ETH.
 
-<!-- ### Improving mainnet
+<!-- ### Improving Mainnet
 
-Before mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
+Before Mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
 
 These include Improvements for
 

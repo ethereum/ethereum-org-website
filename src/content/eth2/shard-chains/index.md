@@ -10,7 +10,7 @@ summaryPoints:
     "Sharding is a multi-phase upgrade to improve Ethereum’s scalability and capacity.",
     "Shard chains spread the network's load across 64 new chains.",
     "They make it easier to run a node by keeping hardware requirements low.",
-    'This upgrade is planned to follow the merge of mainnet with the Beacon Chain.',
+    'This upgrade is planned to follow the merge of Mainnet with the Beacon Chain.',
   ]
 ---
 

@@ -30,9 +30,9 @@ summaryPoints:
 
 Το Κεντρικό δίκτυο θα φέρει τη δυνατότητα να διαχειρίζεται Smart Contract με το σύστημα proof-of-stake, συν το πλήρες ιστορικό και την τρέχουσα κατάσταση του Ethereum, για να διασφαλιστεί ότι η μετάβαση θα είναι ομαλή για όλους τους κατόχους και τους χρήστες του ETH.
 
-<!-- ### Improving mainnet
+<!-- ### Improving Mainnet
 
-Before mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
+Before Mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
 
 These include Improvements for
 
@@ -60,4 +60,4 @@ These improvements all have a place in Eth2 so it’s likely that their progress
 
 ### Η ενσωμάτωση και οι shard chains {#docking-and-shard-chains}
 
-Με το κεντρικό δίκτυο να γίνεται ένα shard, η επιτυχής εφαρμογή των shard chains είναι κρίσιμη για αυτή την αναβάθμιση. Είναι πιθανό η μετάβαση να διαδραματίσει σημαντικό ρόλο βοηθώντας την κοινότητα να αποφασίσει αν θα ξεκινήσει μια δεύτερη αναβάθμιση για το sharding. Αυτή η αναβάθμιση θα κάνει τα άλλα shards όπως το mainnet: θα είναι σε θέση να χειριστεί συναλλαγές και Smart Contract και όχι μόνο να παρέχει περισσότερα δεδομένα.<ButtonLink to="/eth2/shard-chains/">Shard chains</ButtonLink>
+Με το κεντρικό δίκτυο να γίνεται ένα shard, η επιτυχής εφαρμογή των shard chains είναι κρίσιμη για αυτή την αναβάθμιση. Είναι πιθανό η μετάβαση να διαδραματίσει σημαντικό ρόλο βοηθώντας την κοινότητα να αποφασίσει αν θα ξεκινήσει μια δεύτερη αναβάθμιση για το sharding. Αυτή η αναβάθμιση θα κάνει τα άλλα shards όπως το Mainnet: θα είναι σε θέση να χειριστεί συναλλαγές και Smart Contract και όχι μόνο να παρέχει περισσότερα δεδομένα.<ButtonLink to="/eth2/shard-chains/">Shard chains</ButtonLink>
