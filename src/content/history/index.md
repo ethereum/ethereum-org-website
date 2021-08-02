@@ -29,6 +29,7 @@ These rule changes may create a temporary split in the network. New blocks could
 The London upgrade is scheduled to go live on Ethereum in August 2021, on block [12,965,000](https://etherscan.io/block/countdown/12965000). It will introduce [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), which reforms the transaction fee market, along with changes to how gas refunds are handled and the [Ice Age](https://ethereum.org/en/glossary/#ice-age) schedule.
 
 - [Read the London upgrade specification](https://github.com/ethereum/eth1.0-specs/blob/master/network-upgrades/mainnet-upgrades/london.md)
+- [Read the London Mainnet announcement](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 
 <ExpandableCard title="London EIPs" contentPreview="Improvements included in this upgrade.">
 
