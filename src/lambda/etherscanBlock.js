@@ -10,7 +10,10 @@ const handler = async () => {
     }
 
     const { data } = response
-    return { statusCode: 200, body: JSON.stringify(data) }
+    return {
+      statusCode: 200,
+      body: JSON.stringify(data.result.EstimateTimeInSec || 0),
+    }
   } catch (error) {
     console.error(error)
     return { statusCode: 500, body: JSON.stringify({ msg: error.message }) }

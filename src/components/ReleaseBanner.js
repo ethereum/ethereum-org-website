@@ -9,7 +9,7 @@ import Emoji from "./Emoji"
 import Translation from "./Translation"
 
 // Utils
-import { getFreshData } from "../utils/cache"
+import { getData } from "../utils/cache"
 
 const StyledEmoji = styled(Emoji)`
   margin-right: 1rem;
@@ -38,8 +38,9 @@ const ReleaseBanner = () => {
     } else {
       const fetchBlockInfo = async () => {
         try {
-          const data = await getFreshData("/.netlify/functions/etherscanBlock")
-          setTimeLeft(data.result.EstimateTimeInSec)
+          const data = await getData("/.netlify/functions/etherscanBlock")
+          setTimeLeft(data)
+          setLoading(false)
         } catch (error) {
           // console.error(error)
           // setNodes({
@@ -49,7 +50,6 @@ const ReleaseBanner = () => {
       }
       fetchBlockInfo()
     }
-    setLoading(false)
   }, [])
 
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
