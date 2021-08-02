@@ -48,6 +48,7 @@
     "prism-react-renderer": "^1.1.1",
     "prismjs": "^1.24.0",
     "react": "17.0.2",
+    "react-countdown": "^2.3.2",
     "react-dom": "17.0.2",
     "react-emoji-render": "^1.2.4",
     "react-helmet": "^6.1.0",
@@ -77,6 +78,7 @@
     "generate-heading-ids": "node src/scripts/generate-heading-ids.js",
     "merge-translations": "node src/scripts/merge-translations.js",
     "start": "yarn merge-translations && yarn copy-contributors && gatsby develop",
+    "start:lambda": "netlify-lambda serve src/lambda",
     "start:static": "gatsby build && gatsby serve",
     "serve": "gatsby serve",
     "test": "jest"
