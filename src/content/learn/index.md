@@ -130,6 +130,7 @@ Books on Ethereum and Cryptocurrencies:
 - [The Truth Machine: The Blockchain and the Future of Everything](https://www.amazon.com/Truth-Machine-Blockchain-Future-Everything/dp/1250114578) _February 27, 2018 - Paul Vigna, Michael J. Casey_
 - [Digital Gold: Bitcoin and the Inside Story of the Misfits and Millionaires Trying to Reinvent Money](https://www.amazon.com/Digital-Gold-Bitcoin-Millionaires-Reinvent/dp/006236250X) _May 24, 2021 - Nathaniel Popper_
 - [Kings of Crypto: One Startup's Quest to Take Cryptocurrency Out of Silicon Valley and Onto Wall Street](https://www.amazon.com/Kings-Crypto-Startups-Cryptocurrency-Silicon/dp/1647820189) _December 15, 2020 - Jeff John Roberts_
+- [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) _December 23, 2018 – Andreas M. Antonopoulos, Gavin Wood Ph.D. _
 
 Podcasts addressing Ethereum and Cryptocurrencies:
 
