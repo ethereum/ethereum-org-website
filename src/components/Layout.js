@@ -114,7 +114,7 @@ const Layout = (props) => {
                 path={path}
               />
               {shouldShowSideNav && <SideNavMobile path={path} />}
-              <ReleaseBanner />
+              <ReleaseBanner storageKey={"london-release-banner"} />
               <MainContainer>
                 {shouldShowSideNav && <SideNav path={path} />}
                 <MainContent>
