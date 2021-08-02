@@ -124,12 +124,12 @@ Critical views of Ethereum and Cryptocurrencies.
 
 Books on Ethereum and Cryptocurrencies:
 
-- [Out of the Ether: The Amazing Story of Ethereum and the $55 Million Heist that Almost Destroyed It All](https://www.amazon.com/Out-Ether-Amazing-Ethereum-Destroyed/dp/1119602939) _September 29, 2020 - Matthew Leising_
-- [The Infinite Machine: How an Army of Crypto-hackers Is Building the Next Internet with Ethereum](https://www.amazon.com/Infinite-Machine-Crypto-hackers-Building-Internet/dp/0062886142) _July 14, 2020 - Camila Russo_
-- [The Age of Cryptocurrency: How Bitcoin and the Blockchain Are Challenging the Global Economic Order](https://www.amazon.com/Age-Cryptocurrency-Blockchain-Challenging-Economic/dp/1250081556) _January 12, 2016 - Paul Vigna, Michael J. Casey_
-- [The Truth Machine: The Blockchain and the Future of Everything](https://www.amazon.com/Truth-Machine-Blockchain-Future-Everything/dp/1250114578) _February 27, 2018 - Paul Vigna, Michael J. Casey_
-- [Digital Gold: Bitcoin and the Inside Story of the Misfits and Millionaires Trying to Reinvent Money](https://www.amazon.com/Digital-Gold-Bitcoin-Millionaires-Reinvent/dp/006236250X) _May 24, 2021 - Nathaniel Popper_
-- [Kings of Crypto: One Startup's Quest to Take Cryptocurrency Out of Silicon Valley and Onto Wall Street](https://www.amazon.com/Kings-Crypto-Startups-Cryptocurrency-Silicon/dp/1647820189) _December 15, 2020 - Jeff John Roberts_
+- [Out of the Ether: The Amazing Story of Ethereum and the $55 Million Heist that Almost Destroyed It All](https://www.goodreads.com/book/show/55360267-out-of-the-ether) _September 29, 2020 - Matthew Leising_
+- [The Infinite Machine: How an Army of Crypto-hackers Is Building the Next Internet with Ethereum](https://www.goodreads.com/en/book/show/50175330-the-infinite-machine) _July 14, 2020 - Camila Russo_
+- [The Age of Cryptocurrency: How Bitcoin and the Blockchain Are Challenging the Global Economic Order](https://www.goodreads.com/en/book/show/22174460-the-age-of-cryptocurrency) _January 12, 2016 - Paul Vigna, Michael J. Casey_
+- [The Truth Machine: The Blockchain and the Future of Everything](https://www.goodreads.com/en/book/show/34964890-the-truth-machine) _February 27, 2018 - Paul Vigna, Michael J. Casey_
+- [Digital Gold: Bitcoin and the Inside Story of the Misfits and Millionaires Trying to Reinvent Money](https://www.goodreads.com/book/show/23546676-digital-gold) _May 24, 2021 - Nathaniel Popper_
+- [Kings of Crypto: One Startup's Quest to Take Cryptocurrency Out of Silicon Valley and Onto Wall Street](https://www.goodreads.com/en/book/show/56274031-kings-of-crypto) _December 15, 2020 - Jeff John Roberts_
 - [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) _December 23, 2018 – Andreas M. Antonopoulos, Gavin Wood Ph.D. _
 
 Podcasts addressing Ethereum and Cryptocurrencies:
