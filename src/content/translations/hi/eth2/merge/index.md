@@ -31,9 +31,9 @@ summaryPoints:
 
 मेननेट स्टेक-के-प्रमाण सिस्टम में स्मार्ट अनुबंध चलाने की क्षमता के साथ ही इथेरियम का पूरा इतिहास और वर्तमान स्थिति लाएगा, जिससे कि यह सुनिश्चित किया जा सके कि संक्रमण सभी ETH धारकों और उपयोगकर्ताओं के लिए सहज होता हो।
 
-<!-- ### Improving mainnet
+<!-- ### Improving Mainnet
 
-Before mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
+Before Mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
 
 These include Improvements for
 

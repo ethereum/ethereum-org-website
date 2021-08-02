@@ -115,8 +115,8 @@ There's a lot of data that you can access about an account. This is why it's oft
 
 Smart contract accounts have all the data that a user account will have, but some block explorers will even display some code information too. Examples include:
 
-- Contract creator – The address that deployed the contract to mainnet.
-- Creation transaction – The transaction that included the deployment to mainnet.
+- Contract creator – The address that deployed the contract to Mainnet.
+- Creation transaction – The transaction that included the deployment to Mainnet.
 - Source code – The solidity or vyper code of the smart contract.
 - Contract ABI – The Application Binary Interface of the contract – the calls the contract makes and the data received.
 - Contract creation code – The compiled bytecode of the smart contract – created when you compile a smart contract written in Solidity or Vyper, etc.
@@ -133,7 +133,7 @@ Token are a type of contract so they'll have similar data to a smart contract. B
 - Holders – The number of addresses that hold the token.
 - Transfers – The number of times the token has been transferred between accounts.
 - Transaction history – A history of all the transactions including the token.
-- Contract address – The address of the token that was deployed to mainnet.
+- Contract address – The address of the token that was deployed to Mainnet.
 - Decimals – ERC-20 tokens are divisible and have decimal places.
 
 ### Network {#network}
@@ -245,7 +245,7 @@ The Eth2 top-level data includes the following:
 
 ## Block explorers {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) – a block explorer you can use to fetch data for Ethereum mainnet, Ropsten Testnet, Kovan Testnet, Rinkeby Testnet, and Goerli Testnet.
+- [Etherscan](https://etherscan.io/) – a block explorer you can use to fetch data for Ethereum Mainnet, Ropsten Testnet, Kovan Testnet, Rinkeby Testnet, and Goerli Testnet.
 - [Blockscout](https://blockscout.com/) – focusses on the following networks:
   - xDai – a clever combination of MakerDAO's DAI stablecoin and POA's sidechain and tokenbridge technology.
   - POA – A sidechain and autonomous network secured by a group of trusted validators. All validators on the network are United States notaries, and their information is publicly available.
@@ -253,8 +253,8 @@ The Eth2 top-level data includes the following:
   - ARTIS – an Ethereum compliant blockchain.
   - [LUKSO L14](https://blockscout.com/lukso/l14) – L14 functions as the first test-network, to allow the LUKSO community to build and test on a common infrastructure.
   - qDai.
-- [Etherchain](https://www.etherchain.org/) – a block explorer for the Ethereum mainnet.
-- [Ethplorer](https://ethplorer.io/) – a block explorer with a focus on tokens for the Ethereum mainnet and the Kovan testnet.
+- [Etherchain](https://www.etherchain.org/) – a block explorer for the Ethereum Mainnet.
+- [Ethplorer](https://ethplorer.io/) – a block explorer with a focus on tokens for the Ethereum Mainnet and the Kovan testnet.
 - [Blockchair](https://blockchair.com/ethereum) - the most private Ethereum explorer. Also for sorting and filtering (mempool) data.
 
 ## Eth2 block explorers {#eth2-block-explorers}

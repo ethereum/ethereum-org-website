@@ -30,9 +30,9 @@ Kad bude spremna, glavna mreža Ethereum spojit će se s nadogradnjom Beacon Cha
 
 Glavna mreža omogućit će pokretanje pametnih ugovora u sustav Proof of Stake, i cijelu povijest i trenutačno stanje mreže Ethereum, kako bi se osigurao prijelaz bez problema za sve vlasnike i korisnike ETH-a.
 
-<!-- ### Improving mainnet
+<!-- ### Improving Mainnet
 
-Before mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
+Before Mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
 
 These include Improvements for
 

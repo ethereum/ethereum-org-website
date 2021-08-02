@@ -268,7 +268,7 @@ Ethers
     value: utils.parseEther(1.0017071732629267),
 
     // The chain ID; 0 indicates replay-attack vulnerable
-    // (eg. 1 = Homestead mainnet, 3 = Ropsten testnet)
+    // (eg. 1 = Homestead Mainnet, 3 = Ropsten testnet)
     chainId: 1,
 
     // The signature of the transaction (TestRPC may fail to include these)

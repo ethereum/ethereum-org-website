@@ -45,7 +45,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 - [cloudflare-eth.com](https://cloudflare-eth.com)
 
-**Nodesmith -** **_JSON-RPC API access to Ethereum mainnet and testnets._**
+**Nodesmith -** **_JSON-RPC API access to Ethereum Mainnet and testnets._**
 
 - [nodesmith.io](https://nodesmith.io/network/ethereum/)
 - [Documentation](https://nodesmith.io/docs/#/ethereum/apiRef)
