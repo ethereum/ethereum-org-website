@@ -49,7 +49,7 @@ If you want to get involved and help us grow the global Ethereum community by tr
 
    You can also use the buttons on top to search for specific strings, filter them by status or change the view.
    
-   _2 – Editor area_
+   **_2 – Editor area_**
    
    The main translation area – source text is displayed on top, with additional context and screenshots, if available.
    To suggest a new translation, enter your translation in the ‘’Enter translation here’’ field and click Save.
