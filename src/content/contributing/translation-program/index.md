@@ -12,8 +12,8 @@ The Translation Program is a collaborative effort to translate ethereum.org into
 Our progress so far:
 
 - **1,400 +** translators
-- **35** languages live on site
-- **1.4 million** words translated in 2021
+- **36** languages live on site
+- **1.5 million** words translated in 2021
 
 If you want to get involved and help us grow the global Ethereum community by translating the website into your language, follow the steps below!
 
@@ -25,49 +25,48 @@ If you want to get involved and help us grow the global Ethereum community by tr
 ## How to translate {#how-to-translate}
 
 1. **[Join our project on Crowdin](https://crowdin.com/project/ethereum-org/invite)**  
-   _You will need to Log in to your Crowdin account or Sign up if you don’t already have one. All that is required to sign up is an e-mail account and password._
+   You will need to Log in to your Crowdin account or Sign up if you don’t already have one. All that is required to sign up is an e-mail account and password.
 
 2. **Open the language you want to translate and find a document to work on**  
-   _The website content is divided into a number of documents and language versions. You can check the progress of each document on the right – if translation progress is below 100%, please contribute!_
+   The website content is divided into a number of documents and language versions. You can check the progress of each document on the right – if translation progress is below 100%, please contribute!
 
-   _Don't see your language listed? [Open an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose)_
+   Don't see your language listed? [Open an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
 
    ![Translated and untranslated files on Crowdin](./crowdin-files.png)
 
-   _A note on content versions: we use version management within Crowdin to avoid translation delays for added content. When you check out a language, for example, [Filipino](https://crowdin.com/project/ethereum-org/fil#) you'll see folders for each site version ("v2.0", "v2.1", etc.)._
-   _We encourage you to translate the lowest version first and work your way up to higher versions (v.2.0 → v.2.1 → v.2.2 → ⋯) as lower versions will be updated on the site first_
+   A note on content versions: we use version management within Crowdin to avoid translation delays for added content. When you check out a language, for example, [Filipino](https://crowdin.com/project/ethereum-org/fil#) you'll see folders for each site version ("v2.0", "v2.1", etc.).
+   We encourage you to translate the lowest version first and work your way up to higher versions (v.2.0 → v.2.1 → v.2.2 → ⋯) as lower versions will be updated on the site first.
 
 3. **Translate**  
-   _After selecting the file you want to translate, it will open in the online editor. If you have never used Crowdin before, you can use this quick guide to go over the basics._
+   After selecting the file you want to translate, it will open in the online editor. If you have never used Crowdin before, you can use this quick guide to go over the basics.
 
    ![Crowdin online editor](./online-editor.png)
 
-   **1 – Left sidebar**
-   -  _Untranslated ![Untranslated icon](./untranslated.png) – Text that has not been worked on yet. These are the strings that you should be translating._
-   -  _Translated ![Translated icon](./translated.png) – Text that has already been translated, but not yet reviewed. You are welcome to suggest alternate translations, or vote on existing ones using the ‘’+’’ and ‘’-‘‘ buttons in the editor._
-   -  _Approved ![Approved icon](./approved.png) – Text that has already been reviewed and is currently live on the website._
+   _1 – Left sidebar_
+   -  Untranslated (red) – Text that has not been worked on yet. These are the strings that you should be translating.
+   -  Translated (green) – Text that has already been translated, but not yet reviewed. You are welcome to suggest alternate translations, or vote on existing ones using the ‘’+’’ and ‘’-‘‘ buttons in the editor.
+   -  Approved (check mark) – Text that has already been reviewed and is currently live on the website.
 
    You can also use the buttons on top to search for specific strings, filter them by status or change the view.
    
-   **2 – Editor area**
+   _2 – Editor area_
    
-   _The main translation area – source text is displayed on top, with additional context and screenshots, if available._ 
-
-   _To suggest a new translation, enter your translation in the ‘’Enter translation here’’ field and click Save._
+   The main translation area – source text is displayed on top, with additional context and screenshots, if available.
+   To suggest a new translation, enter your translation in the ‘’Enter translation here’’ field and click Save.
     
-   _You can also find existing translations of the string and translations into other languages in this section, as well as translation memory matches and machine translation suggestions._
+   You can also find existing translations of the string and translations into other languages in this section, as well as translation memory matches and machine translation suggestions.
 
-   **3 – Right sidebar**
+   _3 – Right sidebar_
    
-   _This is where you can find comments, translation memory entries and glossary entries. The default view shows the comments and allows translators to communicate, raise issues or report incorrect translations._ 
+   This is where you can find comments, translation memory entries and glossary entries. The default view shows the comments and allows translators to communicate, raise issues or report incorrect translations.
 
-   _By using the buttons on top, you can also switch to the Translation Memory, where you can search for existing translations, or to the Glossary, which contains descriptions and standard translations of key terms._
+   By using the buttons on top, you can also switch to the Translation Memory, where you can search for existing translations, or to the Glossary, which contains descriptions and standard translations of key terms.
 
-   _Want to learn more? Feel free to check out the [documentation on using the Crowdin online editor](https://support.crowdin.com/online-editor/)_
+   Want to learn more? Feel free to check out the [documentation on using the Crowdin online editor](https://support.crowdin.com/online-editor/)
 
 4. **Review process**  
 
-   _Once you've completed the translation (i.e. all files for a content version display 100%), our professional translation service will review (and potentially edit) the content. Once the review is complete (i.e. review progress is 100%), we will add it to the website._
+   Once you've completed the translation (i.e. all files for a content version display 100%), our professional translation service will review (and potentially edit) the content. Once the review is complete (i.e. review progress is 100%), we will add it to the website.
 
 Do you have any questions? Or want to collaborate with our team and other translators? Please post in the #translations channel of our [ethereum.org Discord server](https://discord.gg/6WX7E97)
 
@@ -89,7 +88,7 @@ Thank you for your participation in the ethereum.org Translation Program!
 - [Linguee](https://www.linguee.com/)
   _– Search engine for translations and dictionary that enables searching by word or phrase_
 - [Proz term search](https://www.proz.com/search/)
-  _– Database of translation dictionaries and glossaries for technical and other specialized terms_
+  _– Database of translation dictionaries and glossaries for specialized terms_
 - [Eurotermbank](https://www.eurotermbank.com/)
   _– Collections of European terminology in 42 languages_
 
