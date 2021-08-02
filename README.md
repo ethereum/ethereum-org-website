@@ -566,7 +566,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://www.samajammin.com/"><img src="https://avatars1.githubusercontent.com/u/8097623?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sam Richards</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=samajammin" title="Code">💻</a> <a href="#content-samajammin" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=samajammin" title="Documentation">📖</a> <a href="#projectManagement-samajammin" title="Project Management">📆</a></td>
     <td align="center"><a href="http://antodp.xyz"><img src="https://avatars3.githubusercontent.com/u/20992089?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Antonio Della Porta</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=antodp" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Abhimanyu121"><img src="https://avatars0.githubusercontent.com/u/16034874?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Abhimanyu Shekhawat</b></sub></a><br /><a href="#content-Abhimanyu121" title="Content">🖋</a></td>
-    <td align="center"><a href="http://phor.net"><img src="https://avatars0.githubusercontent.com/u/382183?v=4?s=100" width="100px;" alt=""/><br /><sub><b>William Entriken</b></sub></a><br /><a href="#content-fulldecent" title="Content">🖋</a></td>
+    <td align="center"><a href="http://phor.net"><img src="https://avatars0.githubusercontent.com/u/382183?v=4?s=100" width="100px;" alt=""/><br /><sub><b>William Entriken</b></sub></a><br /><a href="#content-fulldecent" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=fulldecent" title="Documentation">📖</a></td>
     <td align="center"><a href="http://sangphilkim.me"><img src="https://avatars1.githubusercontent.com/u/13456532?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sangphil Kim</b></sub></a><br /><a href="#translation-sangphilkim" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/tstt"><img src="https://avatars2.githubusercontent.com/u/16997688?v=4?s=100" width="100px;" alt=""/><br /><sub><b>peijie</b></sub></a><br /><a href="#translation-tstt" title="Translation">🌍</a></td>
   </tr>
@@ -1046,6 +1046,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/PaulApivat"><img src="https://avatars.githubusercontent.com/u/4058461?v=4?s=100" width="100px;" alt=""/><br /><sub><b>@paulapivat</b></sub></a><br /><a href="#content-PaulApivat" title="Content">🖋</a></td>
     <td align="center"><a href="http://blackwood.london"><img src="https://avatars.githubusercontent.com/u/646863?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Graeme Blackwood</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Agraemeblackwood" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/il3ven"><img src="https://avatars.githubusercontent.com/u/4337699?v=4?s=100" width="100px;" alt=""/><br /><sub><b>il3ven</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=il3ven" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/hbriese"><img src="https://avatars.githubusercontent.com/u/14974903?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hayden Briese</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ahbriese" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 

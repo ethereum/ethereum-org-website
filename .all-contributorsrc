@@ -772,7 +772,8 @@
       "avatar_url": "https://avatars0.githubusercontent.com/u/382183?v=4",
       "profile": "http://phor.net",
       "contributions": [
-        "content"
+        "content",
+        "doc"
       ]
     },
     {
@@ -4226,6 +4227,15 @@
       "profile": "https://github.com/il3ven",
       "contributions": [
         "code"
+      ]
+    },
+    {
+      "login": "hbriese",
+      "name": "Hayden Briese",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14974903?v=4",
+      "profile": "https://github.com/hbriese",
+      "contributions": [
+        "bug"
       ]
     }
   ],

@@ -195,7 +195,7 @@ sudo systemctl start lighthouse && sudo systemctl enable lighthouse
 
 ## Changing parameters {#changing-parameters}
 
-Clients’ config files are located in the /etc/ethereum/ directory. You can edit these files and restart the systemd service in order for the changes to take effect. The only exception is Nethermind which, additionally, has a mainnet config file located here:
+Clients’ config files are located in the /etc/ethereum/ directory. You can edit these files and restart the systemd service in order for the changes to take effect. The only exception is Nethermind which, additionally, has a Mainnet config file located here:
 
 ```bash
 /etc/nethermind/configs/mainnet.cfg

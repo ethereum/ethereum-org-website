@@ -30,9 +30,9 @@ Quando sarà pronta, la rete principale Ethereum sarà "agganciata" (docking) da
 
 La rete principale aggiungerà la capacità di eseguire smart contract nel sistema di proof of stake, oltre a tutta la storia e allo stato corrente di Ethereum, per consentire consentendo una transizione senza intoppi per gli utenti e i possessori di ETH.
 
-<!-- ### Improving mainnet
+<!-- ### Improving Mainnet
 
-Before mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
+Before Mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
 
 These include Improvements for
 

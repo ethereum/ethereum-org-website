@@ -30,9 +30,9 @@ Amikor minden készen áll, az Ethereum főhálózat "bedokkol" a Beacon Chainne
 
 A főhálózat lehetővé teszi majd az okosszerződések futtatását a proof-of-stake rendszeren, valamint magával hozza a jelenlegi Ethereum állapotot és történetet, ezzel biztosítva, hogy az összes ETH tulajdonos és felhasználó számára elakadásmentes legyen az átállás.
 
-<!-- ### Improving mainnet
+<!-- ### Improving Mainnet
 
-Before mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
+Before Mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
 
 These include Improvements for
 
