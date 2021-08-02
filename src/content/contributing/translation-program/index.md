@@ -42,7 +42,7 @@ If you want to get involved and help us grow the global Ethereum community by tr
 
    ![Crowdin online editor](./online-editor.png)
 
-   _1 – Left sidebar_
+   **_1 – Left sidebar_**
    -  Untranslated (red) – text that has not been worked on yet. These are the strings that you should be translating.
    -  Translated (green) – text that has already been translated, but not yet reviewed. You are welcome to suggest alternate translations, or vote on existing ones using the ‘’+’’ and ‘’-‘‘ buttons in the editor.
    -  Approved (check mark) – text that has already been reviewed and is currently live on the website.
