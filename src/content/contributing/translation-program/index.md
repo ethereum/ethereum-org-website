@@ -11,7 +11,7 @@ The Translation Program is a collaborative effort to translate ethereum.org into
 
 Our progress so far:
 
-- **1,400 +** translators
+- **1,800 +** translators
 - **36** languages live on site
 - **1.5 million** words translated in 2021
 
@@ -25,7 +25,7 @@ If you want to get involved and help us grow the global Ethereum community by tr
 ## How to translate {#how-to-translate}
 
 1. **[Join our project on Crowdin](https://crowdin.com/project/ethereum-org/invite)**  
-   You will need to Log in to your Crowdin account or Sign up if you don’t already have one. All that is required to sign up is an e-mail account and password.
+   You will need to log in to your Crowdin account or sign up if you don’t already have one. All that is required to sign up is an e-mail account and password.
 
 2. **Open the language you want to translate and find a document to work on**  
    The website content is divided into a number of documents and language versions. You can check the progress of each document on the right – if translation progress is below 100%, please contribute!
@@ -43,9 +43,9 @@ If you want to get involved and help us grow the global Ethereum community by tr
    ![Crowdin online editor](./online-editor.png)
 
    _1 – Left sidebar_
-   -  Untranslated (red) – Text that has not been worked on yet. These are the strings that you should be translating.
-   -  Translated (green) – Text that has already been translated, but not yet reviewed. You are welcome to suggest alternate translations, or vote on existing ones using the ‘’+’’ and ‘’-‘‘ buttons in the editor.
-   -  Approved (check mark) – Text that has already been reviewed and is currently live on the website.
+   -  Untranslated (red) – text that has not been worked on yet. These are the strings that you should be translating.
+   -  Translated (green) – text that has already been translated, but not yet reviewed. You are welcome to suggest alternate translations, or vote on existing ones using the ‘’+’’ and ‘’-‘‘ buttons in the editor.
+   -  Approved (check mark) – text that has already been reviewed and is currently live on the website.
 
    You can also use the buttons on top to search for specific strings, filter them by status or change the view.
    
@@ -65,12 +65,11 @@ If you want to get involved and help us grow the global Ethereum community by tr
    Want to learn more? Feel free to check out the [documentation on using the Crowdin online editor](https://support.crowdin.com/online-editor/)
 
 4. **Review process**  
-
    Once you've completed the translation (i.e. all files for a content version display 100%), our professional translation service will review (and potentially edit) the content. Once the review is complete (i.e. review progress is 100%), we will add it to the website.
 
 Do you have any questions? Or want to collaborate with our team and other translators? Please post in the #translations channel of our [ethereum.org Discord server](https://discord.gg/6WX7E97)
 
-  You can also reach out to us at translations@ethereum.org.
+  You can also reach out to us at translations@ethereum.org
 
 Thank you for your participation in the ethereum.org Translation Program!
 
@@ -84,13 +83,13 @@ Thank you for your participation in the ethereum.org Translation Program!
 **Tools**
 
 - [Microsoft Language Portal](https://www.microsoft.com/en-us/language)
-  _– Useful for finding and checking the standard translations of technical terms_
+  _– useful for finding and checking the standard translations of technical terms_
 - [Linguee](https://www.linguee.com/)
-  _– Search engine for translations and dictionary that enables searching by word or phrase_
+  _– search engine for translations and dictionary that enables searching by word or phrase_
 - [Proz term search](https://www.proz.com/search/)
-  _– Database of translation dictionaries and glossaries for specialized terms_
+  _– database of translation dictionaries and glossaries for specialized terms_
 - [Eurotermbank](https://www.eurotermbank.com/)
-  _– Collections of European terminology in 42 languages_
+  _– collections of European terminology in 42 languages_
 
 **Communities**
 
