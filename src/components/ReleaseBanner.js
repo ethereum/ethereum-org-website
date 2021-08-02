@@ -42,10 +42,9 @@ const ReleaseBanner = () => {
           setTimeLeft(data)
           setLoading(false)
         } catch (error) {
-          // console.error(error)
-          // setNodes({
-          //   hasError: true,
-          // })
+          // will console log if an error, but wont set loading to false so that banner
+          // doesnt show up
+          console.error(error)
         }
       }
       fetchBlockInfo()
