@@ -56,7 +56,7 @@ If you want to get involved and help us grow the global Ethereum community by tr
     
    You can also find existing translations of the string and translations into other languages in this section, as well as translation memory matches and machine translation suggestions.
 
-   _3 – Right sidebar_
+   **_3 – Right sidebar_**
    
    This is where you can find comments, translation memory entries and glossary entries. The default view shows the comments and allows translators to communicate, raise issues or report incorrect translations.
 
