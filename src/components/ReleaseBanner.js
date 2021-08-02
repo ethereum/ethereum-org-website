@@ -6,6 +6,7 @@ import styled from "styled-components"
 // Components
 import BannerNotification from "./BannerNotification"
 import Emoji from "./Emoji"
+import Link from "./Link"
 import Translation from "./Translation"
 
 // Utils
@@ -35,6 +36,7 @@ const ReleaseBanner = () => {
     // Skip APIs when not in production
     if (process.env.NODE_ENV !== "production") {
       setTimeLeft("324737.2")
+      setLoading(false)
     } else {
       const fetchBlockInfo = async () => {
         try {
@@ -58,9 +60,9 @@ const ReleaseBanner = () => {
           <StyledEmoji size={2} text=":tada:" />
           <Translation id="london-upgrade-banner-released" />
           <Span>
-            <a href="/history/#london">
+            <Link to="/history/#london">
               <Translation id="learn-more" />
-            </a>
+            </Link>
           </Span>
         </StyledBannerNotification>
       )
@@ -74,9 +76,9 @@ const ReleaseBanner = () => {
             {zeroPad(seconds, 2)}!
           </Span>
           <Span>
-            <a href="/history/#london">
+            <Link to="/history/#london">
               <Translation id="learn-more" />
-            </a>
+            </Link>
           </Span>
         </StyledBannerNotification>
       )
