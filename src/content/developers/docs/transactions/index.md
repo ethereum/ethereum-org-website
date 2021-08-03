@@ -33,7 +33,6 @@ A submitted transaction includes the following information:
 - `value` – amount of ETH to transfer from sender to recipient (in WEI, a denomination of ETH)
 - `data` – optional field to include arbitrary data
 - `gasLimit` – the maximum amount of gas units that can be consumed by the transaction. Units of gas represent computational steps
-- `gasPrice` – the fee the sender pays per unit of gas
 - `maxPriorityFeePerGas` - the maximum amount of gas to be included as a tip to the miner
 - `maxFeePerGas` - the maximum amount of gas willing to be paid for the transaction (inclusive of `baseFeePerGas` and `maxPriorityFeePerGas`)
 
