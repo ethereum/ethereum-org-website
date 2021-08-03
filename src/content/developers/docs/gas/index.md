@@ -55,7 +55,7 @@ Every block has a base fee which acts as a reserve price. To be eligible for inc
 
 ## Block Size {#block-size}
 
-EIP-1559 introduced variable-size blocks to Ethereum. Each block has a target size of 12.5 million gas but the size of blocks will increase or decrease in accordance with network demands, up until the block limit of 25 milion gas (2x block target size). An equilibrium block size of 12.5 million on average is achieved through the process of _tâtonnement_. This means if the block sizes is greater than the target block size, the base fee will increase . Similarly, if the block is less than the target block size the base fee will decrease. The amount the base fee is adjusted by is proportional to how far from the target the block size is. [More on blocks](/developers/docs/blocks/).
+EIP-1559 introduced variable-size blocks to Ethereum. Each block has a target size of 12.5 million gas but the size of blocks will increase or decrease in accordance with network demands, up until the block limit of 25 milion gas (2x block target size). An equilibrium block size of 12.5 million on average is achieved through the process of _tâtonnement_. This means if the block size is greater than the target block size, the base fee will increase. Similarly, if the block size is less than the target block size the base fee will decrease. The amount the base fee is adjusted by is proportional to how far from the target the block size is. [More on blocks](/developers/docs/blocks/).
 
 ## Base Fees Continued {#base-fees-continued}
 
@@ -89,6 +89,10 @@ valuable by removing some of it from circulation. The base fee functions as a [s
 which is more efficient than the previous mechanism that is a first price auction. Users can submit transactions with a much higher tip, corresponding
 to how much they need the transaction to happen, without having to worry that they will be overcharged.
 
+This video explains EIP-1559 and the benefits it brings:
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/MGemhK9t44Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 If you are interested you can read the exact
 [EIP-1559 specifications](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md).
 
@@ -96,7 +100,7 @@ Continue down the rabbit hole with these [EIP-1559 Resources](https://hackmd.io/
 
 ## Why do gas fees exist? {#why-do-gas-fees-exist}
 
-In short, gas fees help keep the Ethereum network secure. By requiring a fee for every computation executed on the network, we prevent actors from spamming the network. In order to prevent accidental or hostile infinite loops or other computational wastage in code, each transaction is required to set a limit to how many computational steps of code execution it can use. The fundamental unit of computation is "gas".
+In short, gas fees help keep the Ethereum network secure. By requiring a fee for every computation executed on the network, we prevent bad actors from spamming the network. In order to prevent accidental or hostile infinite loops or other computational wastage in code, each transaction is required to set a limit to how many computational steps of code execution it can use. The fundamental unit of computation is "gas".
 
 Although a transaction includes a limit, any gas not used in a transaction is returned to the user (i.e `fee cap - (base fee + tip)` is returned).
 
@@ -113,11 +117,7 @@ For example if you put a gas limit of 50,000 for a simple ETH transfer, the EVM 
 
 High gas fees are due to the popularity of Ethereum. Performing any operation on Ethereum requires consuming gas, and gas space is limited per block. This includes calculations, storing or manipulating data, or transferring tokens, each consuming different amounts of "gas" units. As dapp functionality grows more complex, the number of operations a smart contract performs grows too, meaning each transaction takes up more space of a limited size block. If there's too much demand, users must offer a higher tip amount to try and out-bid other users' transactions. A higher tip can make it more likely that your transaction will get into the next block.
 
-Gas price alone does not actually determine how much we have to pay for a particular transaction. To calculate the transaction fee we have to multiply the gas used by gas price, which is measured in gwei.
-
-This video about gas fees explains fully why fees can be so expensive:
-
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/Yh8cHUB-KoU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Gas price alone does not actually determine how much we have to pay for a particular transaction. To calculate the transaction fee we have to multiply the gas used by the transaction fee, which is measured in gwei.
 
 ## Initiatives to reduce gas costs {#initiatives-to-reduce-gas-costs}
 
@@ -131,7 +131,7 @@ Anyone with at least 32 ETH is able to stake them and become a validator respons
 
 ## Strategies for you to reduce gas costs {#strategies-for-you-to-reduce-gas-costs}
 
-If you are looking to reduce gas costs for your ETH you are able to set the price of your own gas fees and choose the priority level of your transaction. Miners will 'work on' and execute transactions that offer a higher gas price, as they get to keep the fees that you pay and will be less inclined to execute transactions with lower gas fees set. The gas price you set is how much you are willing to pay per unit of gas. However if you set the amount of gas too low you will not be able to send your ETH as you will run out of gas, you would then have to resubmit your transaction costing you more in gas fees. You can do this from some wallet providers when sending ETH.
+If you are looking to reduce gas costs for your ETH you are able to set a tip to indicate the priority level of your transaction. Miners will 'work on' and execute transactions that offer a higher tip per gas, as they get to keep the tips that you pay and will be less inclined to execute transactions with lower tips set.
 
 If you want to monitor gas prices so you are able to send your ETH for less you can use many different tools such as:
 
@@ -140,7 +140,6 @@ If you want to monitor gas prices so you are able to send your ETH for less you 
 
 ## Further Reading {#further-reading}
 
-- [Understanding Ethereum Gas, Blocks and the Fee Market](https://medium.com/@eric.conner/understanding-ethereum-gas-blocks-and-the-fee-market-d5e268bf0a0e)
 - [Ethereum Gas Explained](https://defiprime.com/gas)
 - [Is Ethereum more expensive to use as price rises?](https://docs.ethhub.io/questions-about-ethereum/is-ethereum-more-expensive-to-use-as-price-rises/)
 - [Reducing the gas consumption of your Smart Contracts](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
