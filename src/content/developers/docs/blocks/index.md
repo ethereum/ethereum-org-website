@@ -57,7 +57,7 @@ Proof of work means the following:
 
 ## Block size {#block-size}
 
-A final important note is that, as of the London Upgrade, blocks themselves are no longer bounded in size. Each block has a target size of 12.5 million gas but the size of blocks will increase or decrease in accordance with network demands, up until the block limit of 25 milion gas (2x target block size). The total amount of gas expended by all transactions in the block must be less than the block gas limit. This is important because it ensures that blocks can’t be arbitrarily large. If blocks could be arbitrarily large, then less performant full nodes would gradually stop being able to keep up with the network due to space and speed requirements.
+A final important note is that, as of with [the London update](/history/#london), blocks themselves are no longer bounded in size. Each block has a target size of 15 million gas but the size of blocks will increase or decrease in accordance with network demands, up until the block limit of 30 milion gas (2x target block size). The total amount of gas expended by all transactions in the block must be less than the block gas limit. This is important because it ensures that blocks can’t be arbitrarily large. If blocks could be arbitrarily large, then less performant full nodes would gradually stop being able to keep up with the network due to space and speed requirements.
 
 ## Further reading {#further-reading}
 
