@@ -22,7 +22,7 @@ _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/d
 
 Gas fees are paid in Ethereum's native currency, ether (ETH). Gas prices are denoted in gwei, which itself is a denomination of ETH - each gwei is equal to 0.000000001 ETH (10<sup>-9</sup> ETH). For example, instead of saying that your gas costs 0.000000001 ether, you can say your gas costs 1 gwei.
 
-## Prior to the London update {#pre-london}
+## Prior to the London upgrade {#pre-london}
 
 The way transaction fees on the Ethereum network are calculated changed during the London network upgrade. Here is a recap of how things used to work:
 
