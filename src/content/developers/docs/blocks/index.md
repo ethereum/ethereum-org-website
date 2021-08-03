@@ -46,6 +46,8 @@ Proof of work means the following:
 
 - Timestamp – the time when the block was mined.
 - Block number – the length of the blockchain in blocks.
+- Base Fee Per Gas - the fee per gas required for a transaction to be included in the block.
+- Burnt Fees - the amount of ETH from base fees burnt by the block.
 - Difficulty – the effort required to mine the block.
 - mixHash – a unique identifier for that block.
 - A parent hash – the unique identifier for the block that came before (this is how blocks are linked in a chain).
@@ -55,7 +57,7 @@ Proof of work means the following:
 
 ## Block size {#block-size}
 
-A final important note is that blocks themselves are bounded in size. Each block has a block gas limit which is set by the network and the miners collectively: the total amount of gas expended by all transactions in the block must be less than the block gas limit. This is important because it ensures that blocks can’t be arbitrarily large. If blocks could be arbitrarily large, then less performant full nodes would gradually stop being able to keep up with the network due to space and speed requirements. The block gas limit at block 0 was initialized to 5,000; any miner who mines a new block can alter the gas limit by up to about 0.1% in either direction from the parent block gas limit. The gas limit as of April 2021 currently hovers around 15,000,000.
+A final important note is that, as of the London Upgrade, blocks themselves are no longer bounded in size. Each block has a target size of 12.5 million gas but the size of blocks will increase or decrease in accordance with network demands, up until the block limit of 25 milion gas (2x target block size). The total amount of gas expended by all transactions in the block must be less than the block gas limit. This is important because it ensures that blocks can’t be arbitrarily large. If blocks could be arbitrarily large, then less performant full nodes would gradually stop being able to keep up with the network due to space and speed requirements.
 
 ## Further reading {#further-reading}
 

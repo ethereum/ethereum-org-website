@@ -55,7 +55,7 @@ Every block has a base fee which acts as a reserve price. To be eligible for inc
 
 ## Block Size {#block-size}
 
-EIP-1559 introduced variable-size blocks to Ethereum. Each block has a target size of 12.5 million gas but the size of blocks will increase or decrease in accordance with network demands, up until the block limit of 25 milion gas (2x block target size). An equilibrium block size of 12.5 million on average is achieved through the process of _tâtonnement_. This means if the block size is greater than the target block size, the base fee will increase. Similarly, if the block size is less than the target block size the base fee will decrease. The amount the base fee is adjusted by is proportional to how far from the target the block size is. [More on blocks](/developers/docs/blocks/).
+EIP-1559 introduced variable-size blocks to Ethereum. Each block has a target size of 12.5 million gas but the size of blocks will increase or decrease in accordance with network demands, up until the block limit of 25 milion gas (2x target block size). An equilibrium block size of 12.5 million on average is achieved through the process of _tâtonnement_. This means if the block size is greater than the target block size, the base fee will increase. Similarly, if the block size is less than the target block size the base fee will decrease. The amount the base fee is adjusted by is proportional to how far from the target the block size is. [More on blocks](/developers/docs/blocks/).
 
 ## Base Fees Continued {#base-fees-continued}
 
