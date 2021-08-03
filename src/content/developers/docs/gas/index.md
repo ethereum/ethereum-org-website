@@ -34,7 +34,7 @@ i.e `21,000 * 200 = 4,200,000 gwei` or 0.0042 ETH
 
 Now, when Alice sent the money, 1.0042 ETH will be deducted from Alice's account.
 Bob would be credited 1.0000 ETH.
-Miner got 0.0042 ETH.
+Miner would receive 0.0042 ETH.
 
 This video offers a concise overview of gas and why it exists:
 
