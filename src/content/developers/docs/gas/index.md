@@ -40,7 +40,7 @@ This video offers a concise overview of gas and why it exists:
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/AJvzNICwcwc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## After to the London update {#post-london}
+## After to the London upgrade {#post-london}
 
 Starting with [the London update](/history/#london), every block has a base fee, the minimum per gas price for inclusion in this block. Optionally, users can set a priority fee (tip).
 
