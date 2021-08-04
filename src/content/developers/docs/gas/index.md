@@ -44,7 +44,7 @@ This video offers a concise overview of gas and why it exists:
 
 Starting with [the London network upgrade](/history/#london), every block has a base fee - the minimum per gas price for inclusion in this block. Optionally, users can set a priority fee (tip).
 
-Calculating the total fee works as follows: `Gas units (limit) * (Base fee + Tip)`
+Calculating the total transaction fee works as follows: `Gas units (limit) * (Base fee + Tip)`
 
 Let’s say Jordan has to pay Taylor 1 ETH. In the transaction the gas limit is 21,000 units and the base fee is 100 gwei. Jordan includes a tip of 10 gwei.
 Using the formula above we can calculate this as `21,000 * (100 + 10) = 2,310,000 gwei` or 0.0023 ETH.
