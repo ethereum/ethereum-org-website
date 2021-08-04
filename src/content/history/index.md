@@ -24,30 +24,38 @@ These rule changes may create a temporary split in the network. New blocks could
 
 ## 2021 {#2021}
 
-### (_In Progress_) London {#london}
-
-The London upgrade is scheduled to go live on Ethereum in August 2021, on block [12,965,000](https://etherscan.io/block/countdown/12965000). It will introduce [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), which reforms the transaction fee market, along with changes to how gas refunds are handled and the [Ice Age](https://ethereum.org/en/glossary/#ice-age) schedule.
-
-- [Read the London upgrade specification](https://github.com/ethereum/eth1.0-specs/blob/master/network-upgrades/mainnet-upgrades/london.md)
-- [Read the London Mainnet announcement](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
-
-<ExpandableCard title="London EIPs" contentPreview="Improvements included in this upgrade.">
-
-- [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) – _improves the transaction fee market_
-- [EIP-3198](https://eips.ethereum.org/EIPS/eip-3198) – _returns the `BASEFEE` from a block_
-- [EIP-3529](https://eips.ethereum.org/EIPS/eip-3529) - _reduces gas refunds for EVM operations_
-- [EIP-3541](https://eips.ethereum.org/EIPS/eip-3541) - _prevents deploying contracts starting with `0xEF`_
-- [EIP-3554](https://eips.ethereum.org/EIPS/eip-3554) – _delays the Ice Age_
-
-</ExpandableCard>
-
----
-
 ### (_In Progress_) Altair {#altair}
 
 The Altair upgrade is the first scheduled upgrade for the [Beacon Chain](/eth2/beacon-chain). It is expected to go live in 2021. It will add support for "sync committees", which can enable light clients, and will bring inactivity and slashing penalties up to their full values.
 
 - [Read the Altair upgrade specification](https://github.com/ethereum/eth2.0-specs/tree/dev/specs/altair)
+
+---
+
+### London {#london}
+
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Aug-05-2021 12:11:34 PM +UTC</code><br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/12965000">12,965,000</a><br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH price: $2710 USD<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210804044709/https://ethereum.org/">ethereum.org on waybackmachine</a>
+
+#### Summary {#london-summary}
+
+The London upgrade introduced [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), which reformed the transaction fee market, along with changes to how gas refunds are handled and the [Ice Age](https://ethereum.org/en/glossary/#ice-age) schedule.
+
+- [Are you a dApp developer? Be sure to upgrade your libraries and tooling.](https://github.com/ethereum/eth1.0-specs/blob/master/network-upgrades/ecosystem-readiness.md)
+- [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
+- [Read the Ethereum Cat Herder's explainer](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
+
+<ExpandableCard title="London EIPs" contentPreview="Official improvements included in this upgrade.">
+
+- [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) – _improves the transaction fee market_
+- [EIP-3198](https://eips.ethereum.org/EIPS/eip-3198) – _returns the `BASEFEE` from a block_
+- [EIP-3529](https://eips.ethereum.org/EIPS/eip-3529) - _reduces gas refunds for EVM operations_
+- [EIP-3541](https://eips.ethereum.org/EIPS/eip-3541) - _prevents deploying contracts starting with `0xEF`_
+- [EIP-3554](https://eips.ethereum.org/EIPS/eip-3554) – _delays the Ice Age until December 2021_
+
+</ExpandableCard>
 
 ---
 
