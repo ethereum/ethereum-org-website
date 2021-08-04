@@ -76,7 +76,9 @@ Relative to the pre-London gas auction market, this transaction-fee-mechanism ch
 
 ## Tips {#tips}
 
-As the base fee (which in the previous transaction fee mechanism would have gone to the miner) is burned, a priority fee (tip) is used to incentivise miners to include a transaction in the block they are mining. Without tips, it would be economically viable for miners to mine empty blocks, as they would receive the same block reward. Under normal conditions a small tip provides miners a minimal incentive to include a transaction and high tips can provide incentive for special treatment.
+Before the London Upgrade, miners would receive the total gas fee from any transaction included in a block.
+
+With the new base fee getting burned, the London Upgrade introduced a priority fee (tip) to incentivize miners to include a transaction in the block. Without tips, miners would find it economically viable to mine empty blocks, as they would receive the same block reward. Under normal conditions, a small tip provides miners a minimal incentive to include a transaction. For transactions that need to get preferentially executed ahead of other transactions in the same block, a higher tip will be necessary to attempt to outbid competing transactions.
 
 ## Max Fee {#maxfee}
 
