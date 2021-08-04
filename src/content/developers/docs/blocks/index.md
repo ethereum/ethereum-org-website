@@ -44,16 +44,16 @@ Proof of work means the following:
 
 ## What's in a block? {#block-anatomy}
 
-- Timestamp – the time when the block was mined.
-- Block number – the length of the blockchain in blocks.
-- Base Fee Per Gas - the fee per gas required for a transaction to be included in the block.
-- Burnt Fees - the amount of ETH from base fees burnt by the block.
-- Difficulty – the effort required to mine the block.
+- timestamp – the time when the block was mined.
+- blockNumber – the length of the blockchain in blocks.
+- baseFeePerGas - the fee per gas required for a transaction to be included in the block.
+- burntFees - the amount of ETH from base fees burnt by the block.
+- difficulty – the effort required to mine the block.
 - mixHash – a unique identifier for that block.
-- A parent hash – the unique identifier for the block that came before (this is how blocks are linked in a chain).
-- Transactions list – the transactions included in the block.
-- State root – the entire state of the system: account balances, contract storage, contract code and account nonces are inside.
-- Nonce – a hash that, when combined with the mixHash, proves that the block has gone through [proof of work](/developers/docs/consensus-mechanisms/pow/).
+- parentHash – the unique identifier for the block that came before (this is how blocks are linked in a chain).
+- transactions – the transactions included in the block.
+- stateRoot – the entire state of the system: account balances, contract storage, contract code and account nonces are inside.
+- nonce – a hash that, when combined with the mixHash, proves that the block has gone through [proof of work](/developers/docs/consensus-mechanisms/pow/).
 
 ## Block size {#block-size}
 
