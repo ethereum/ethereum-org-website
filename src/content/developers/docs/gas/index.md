@@ -47,7 +47,13 @@ Starting with [the London network upgrade](/history/#london), every block has a 
 Calculating the total transaction fee works as follows: `Gas units (limit) * (Base fee + Tip)`
 
 Let’s say Jordan has to pay Taylor 1 ETH. In the transaction the gas limit is 21,000 units and the base fee is 100 gwei. Jordan includes a tip of 10 gwei.
+
 Using the formula above we can calculate this as `21,000 * (100 + 10) = 2,310,000 gwei` or 0.0023 ETH.
+
+When Jordan sends the money, 1.0023 ETH will be deducted from Jordan's account.
+Taylor will be credited 1.0000 ETH.
+Miner receives the tip of 0.000195 ETH.
+Base fee of 0.001953 ETH is burned.
 
 ## Block Size {#block-size}
 
