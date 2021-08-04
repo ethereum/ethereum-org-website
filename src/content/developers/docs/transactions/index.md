@@ -112,10 +112,10 @@ With the signature hash, the transaction can be cryptographically proven that it
 
 As mentioned, transactions cost [gas](/developers/docs/gas/) to execute. Simple transfer transactions require 21000 units of Gas.
 
-So for Bob to send Alice 1 ETH at a `baseFeePerGas` of 200 gwei and `maxPriorityFeePerGas` of 1 gwei, Bob will need to pay the following fee:
+So for Bob to send Alice 1 ETH at a `baseFeePerGas` of 190 gwei and `maxPriorityFeePerGas` of 10 gwei, Bob will need to pay the following fee:
 
 ```
-(200 + 1) * 21000 = 4,221,100 gwei
+(190 + 10) * 21000 = 4,200,000 gwei
 --or--
 0.0042 ETH
 ```
@@ -124,7 +124,9 @@ Bob's account will be debited **-1.0042 ETH**
 
 Alice's account will be credited **+1.0 ETH**
 
-The base fee will be burned **-0.0042**
+The base fee will be burned **-0.003735 ETH**
+
+Miner keeps the tip **+0.000197**
 
 Gas is required for any smart contract interaction too.
 
