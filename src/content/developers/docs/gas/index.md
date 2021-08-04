@@ -40,9 +40,9 @@ This video offers a concise overview of gas and why it exists:
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/AJvzNICwcwc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## After to the London upgrade {#post-london}
+## After the London Upgrade {#post-london}
 
-Starting with [the London network upgrade](/history/#london), every block has a base fee - the minimum price per unit of gas for inclusion in this block. Optionally, users can set a priority fee (tip).
+Starting with [the London network upgrade](/history/#london), every block has a base fee, the minimum price per unit of gas for inclusion in this block, calculated by the network protocol based on network demand. Optionally, users can also set a priority fee (tip).
 
 Calculating the total transaction fee works as follows: `Gas units (limit) * (Base fee + Tip)`
 
