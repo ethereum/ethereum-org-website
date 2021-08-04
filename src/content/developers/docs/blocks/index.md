@@ -47,7 +47,6 @@ Proof of work means the following:
 - `timestamp` – the time when the block was mined.
 - `blockNumber` – the length of the blockchain in blocks.
 - `baseFeePerGas` - the fee per gas required for a transaction to be included in the block.
-- `burntFees` - the amount of ETH from base fees burnt by the block.
 - `difficulty` – the effort required to mine the block.
 - `mixHash` – a unique identifier for that block.
 - `parentHash` – the unique identifier for the block that came before (this is how blocks are linked in a chain).
