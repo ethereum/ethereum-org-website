@@ -90,7 +90,7 @@ With the new base fee getting burned, the London Upgrade introduced a priority f
 
 ## Max Fee {#maxfee}
 
-To execute a transaction on the network users are able to specify a maximum limit they are willing to pay for their transaction to be executed. This optional parameter is known as the `maxFeePerGas`. In order for a transaction to be executed the max fee must exceed the sum of the base fee and the tip.
+To execute a transaction on the network users are able to specify a maximum limit they are willing to pay for their transaction to be executed. This optional parameter is known as the `maxFeePerGas`. In order for a transaction to be executed the max fee must exceed the sum of the base fee and the tip. The transaction sender is refunded the difference between the max fee and the sum of the base fee and tip.
 
 ## EIP-1559 {#eip-1559}
 
