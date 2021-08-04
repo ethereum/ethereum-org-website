@@ -42,7 +42,9 @@ This video offers a concise overview of gas and why it exists:
 
 ## After the London Upgrade {#post-london}
 
-Starting with [the London network upgrade](/history/#london), every block has a base fee, the minimum price per unit of gas for inclusion in this block, calculated by the network protocol based on network demand. Optionally, users can also set a priority fee (tip).
+[The London Upgrade](/history/#london) aims to make transacting on Ethereum more predictable for users by overhauling Ethereum's transaction-fee-mechanism. The high-level benefits introduced by this change include better transaction fee estimation, generally quicker transaction inclusion, and reducing the ETH rate of inflation by burning a percentage of transaction fees.
+
+Starting with the London network upgrade, every block has a base fee, the minimum price per unit of gas for inclusion in this block, calculated by the network protocol based on network demand. Optionally, users can also set a priority fee (tip).
 
 Calculating the total transaction fee works as follows: `Gas units (limit) * (Base fee + Tip)`
 
