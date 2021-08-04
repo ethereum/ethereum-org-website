@@ -49,15 +49,15 @@ Calculating the total transaction fee works as follows: `Gas units (limit) * (Ba
 Let’s say Jordan has to pay Taylor 1 ETH. In the transaction the gas limit is 21,000 units and the base fee is 100 gwei. Jordan includes a tip of 10 gwei.
 Using the formula above we can calculate this as `21,000 * (100 + 10) = 2,310,000 gwei` or 0.0023 ETH.
 
+## Block Size {#block-size}
+
+Before the London Upgrade, Ethereum had fixed-sized blocks. In times of high network demand, these blocks operated at total capacity. As a result, users often had to wait for high demand to reduce to get included in a block, which led to a poor user experience.
+
+The London Upgrade introduced variable-size blocks to Ethereum. Each block has a target size of 15 million gas but, the size of blocks will increase or decrease in accordance with network demand, up until the block limit of 30 million gas (2x the target block size). The protocol achieves an equilibrium block size of 15 million on average through the process of _tâtonnement_. This means if the block size is greater than the target block size, the protocol will increase the base fee for the following block. Similarly, the protocol will decrease the base fee if the block size is less than the target block size. The amount the base fee is adjusted by is proportional to how far from the current block size is from the target. [More on blocks](/developers/docs/blocks/).
+
 ## Base Fees {#base-fees}
 
 Every block has a base fee which acts as a reserve price. To be eligible for inclusion in a block the offered price per gas must at least equal the base fee. The base fee is calculated independently of the current block and is instead determined by the blocks before it - making transaction fees more predictable for users. When the block is mined this base fee is "burned", removing it from circulation.
-
-## Block Size {#block-size}
-
-EIP-1559 introduced variable-size blocks to Ethereum. Each block has a target size of 15 million gas but the size of blocks will increase or decrease in accordance with network demand, up until the block limit of 30 million gas (2x the target block size). The protocol achieves an equilibrium block size of 15 million on average through the process of _tâtonnement_. This means if a block size is greater than the target block size, the protocol will increase the base fee for the following block. Similarly, if a block size is less than the target block size, the protocol will decrease the base fee. The amount the base fee is adjusted by is proportional to how far from the target the block size is. [More on blocks](/developers/docs/blocks/).
-
-## Base Fees Continued {#base-fees-continued}
 
 The base fee is calculated by a formula that compares the size of the previous block (the amount of gas used for all the transactions) with the target size. The base fee will increase by a maximum of 12.5% per block if the target block size is exceeded. This exponential growth makes it economically non-viable for block size to remain high indefinitely.
 
