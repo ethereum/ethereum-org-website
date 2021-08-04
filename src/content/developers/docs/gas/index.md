@@ -82,10 +82,9 @@ As the base fee (which in the previous transaction fee mechanism would have gone
 
 To execute a transaction on the network users are able to specify a maximum limit they are willing to pay for their transaction to be executed. This optional parameter is known as the `maxFeePerGas`. In order for a transaction to be executed the max fee must exceed the sum of the base fee and the tip.
 
-## The London update {#gas-price-london-update}
+## EIP-1559 {#eip-1559}
 
-The post-London transaction fee mechanism is more complicated than the simple gas price auction, but it has the advantage of making gas fees more predictable, as well as making ETH more
-valuable by removing some of it from circulation. The base fee functions as a [second price auction](https://oko.uk/blog/first-price-vs-second-price-auctions),
+The implementation of [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) in the London Upgrade makes the transaction fee mechanism more complicated than the simple gas price auction, but it has the advantage of making gas fees more predictable, as well as making ETH more valuable by removing some of it from circulation. The base fee functions as a [second price auction](https://oko.uk/blog/first-price-vs-second-price-auctions),
 which is more efficient than the previous mechanism that is a first price auction. Users can submit transactions with a much higher tip, corresponding
 to how much they need the transaction to happen, without having to worry that they will be overcharged.
 
