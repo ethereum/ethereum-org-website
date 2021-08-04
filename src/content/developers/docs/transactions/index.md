@@ -126,7 +126,7 @@ Alice's account will be credited **+1.0 ETH**
 
 The base fee will be burned **-0.003735 ETH**
 
-Miner keeps the tip **+0.000197**
+Miner keeps the tip **+0.000197 ETH**
 
 Gas is required for any smart contract interaction too.
 
