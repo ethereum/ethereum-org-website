@@ -42,9 +42,9 @@ This video offers a concise overview of gas and why it exists:
 
 ## After the London Upgrade {#post-london}
 
-[The London Upgrade](/history/#london) aims to make transacting on Ethereum more predictable for users by overhauling Ethereum's transaction-fee-mechanism. The high-level benefits introduced by this change include better transaction fee estimation, generally quicker transaction inclusion, and reducing the ETH rate of inflation by burning a percentage of transaction fees.
+[The London Upgrade](/history/#london) aims to make transacting on Ethereum more predictable for users by overhauling Ethereum's transaction-fee-mechanism. The high-level benefits introduced by this change include better transaction fee estimation, generally quicker transaction inclusion, and offsetting the ETH issuance by burning a percentage of transaction fees.
 
-Starting with the London network upgrade, every block has a base fee, the minimum price per unit of gas for inclusion in this block, calculated by the network protocol based on network demand. Optionally, users can also set a priority fee (tip).
+Starting with the London network upgrade, every block has a base fee, the minimum price per unit of gas for inclusion in this block, calculated by the network based on demand for block space. As the base fee of the transaction fee is burnt, users are also expected to set a tip (priority fee) in their transactions. The tip compensates miners for executing and propagating user transactions in blocks and is expected to be set automatically by most wallets.
 
 Calculating the total transaction fee works as follows: `Gas units (limit) * (Base fee + Tip)`
 
@@ -57,13 +57,15 @@ Taylor will be credited 1.0000 ETH.
 Miner receives the tip of 0.000195 ETH.
 Base fee of 0.001953 ETH is burned.
 
+Additionally, Jordan can also set a max fee (`maxFeePerGas`) for the transaction. The difference between the max fee and the actual fee is refunded to Jordan, i.e. `refund = max fee - (base fee + priority fee)`. Jordan can set a maximum amount to pay for the transaction to execute and not worry about are overpaying "beyond" the base fee when the transaction is executed.
+
 ### Block Size {#block-size}
 
 Before the London Upgrade, Ethereum had fixed-sized blocks. In times of high network demand, these blocks operated at total capacity. As a result, users often had to wait for high demand to reduce to get included in a block, which led to a poor user experience.
 
 The London Upgrade introduced variable-size blocks to Ethereum. Each block has a target size of 15 million gas but, the size of blocks will increase or decrease in accordance with network demand, up until the block limit of 30 million gas (2x the target block size). The protocol achieves an equilibrium block size of 15 million on average through the process of _tâtonnement_. This means if the block size is greater than the target block size, the protocol will increase the base fee for the following block. Similarly, the protocol will decrease the base fee if the block size is less than the target block size. The amount the base fee is adjusted by is proportional to how far from the current block size is from the target. [More on blocks](/developers/docs/blocks/).
 
-### Base Fees {#base-fees}
+### Base Fee {#base-fee}
 
 Every block has a base fee which acts as a reserve price. To be eligible for inclusion in a block the offered price per gas must at least equal the base fee. The base fee is calculated independently of the current block and is instead determined by the blocks before it - making transaction fees more predictable for users. When the block is mined this base fee is "burned", removing it from circulation.
 
@@ -82,7 +84,17 @@ The base fee is calculated by a formula that compares the size of the previous b
 
 Relative to the pre-London gas auction market, this transaction-fee-mechanism change causes fee prediction to be more reliable. Following the table above - to create a transaction on block number 9, a wallet will let the user know with certainty that the **maximum base fee** to be added to the next block is `current base fee * 112.5%` or `202.8 gwei * 112.5% = 256.8 gwei`.
 
-### Tips {#tips}
+It's also important to note it is unlikely we will see extended spikes of full blocks because of the speed at which the base fee increases proceeding a full block.
+
+| Block Number | Included Gas | Fee Increase | Current Base Fee |
+| ------------ | -----------: | -----------: | ---------------: |
+| 30           |          30M |        12.5% |      2705.6 gwei |
+| ...          |          ... |        12.5% |              ... |
+| 50           |          30M |        12.5% |     28531.3 gwei |
+| ...          |          ... |        12.5% |              ... |
+| 100          |          30M |        12.5% | 10302608.57 gwei |
+
+### Priority Fee (Tips) {#priority-fee}
 
 Before the London Upgrade, miners would receive the total gas fee from any transaction included in a block.
 
@@ -94,9 +106,7 @@ To execute a transaction on the network users are able to specify a maximum limi
 
 ## EIP-1559 {#eip-1559}
 
-The implementation of [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) in the London Upgrade makes the transaction fee mechanism more complicated than the simple gas price auction, but it has the advantage of making gas fees more predictable, as well as making ETH more valuable by removing some of it from circulation. The base fee functions as a [second price auction](https://oko.uk/blog/first-price-vs-second-price-auctions),
-which is more efficient than the previous mechanism that is a first price auction. Users can submit transactions with a much higher tip, corresponding
-to how much they need the transaction to happen, without having to worry that they will be overcharged.
+The implementation of [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) in the London Upgrade makes the transaction fee mechanism more complex than the current gas price auction, but it has the advantage of making gas fees more predictable, resulting in a more efficient transaction fee market. Users can submit transactions with a `maxFeePerGas` corresponding to how much they are willing to pay for the transaction to be executing, knowing that they will not pay more than the market price for gas (`baseFeePerGas`), and get any extra, minus their tip, refunded.
 
 This video explains EIP-1559 and the benefits it brings:
 

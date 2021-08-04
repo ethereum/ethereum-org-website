@@ -46,7 +46,7 @@ Proof of work means the following:
 
 - `timestamp` – the time when the block was mined.
 - `blockNumber` – the length of the blockchain in blocks.
-- `baseFeePerGas` - the fee per gas required for a transaction to be included in the block.
+- `baseFeePerGas` - the minimum fee per gas required for a transaction to be included in the block.
 - `difficulty` – the effort required to mine the block.
 - `mixHash` – a unique identifier for that block.
 - `parentHash` – the unique identifier for the block that came before (this is how blocks are linked in a chain).
@@ -56,7 +56,7 @@ Proof of work means the following:
 
 ## Block size {#block-size}
 
-A final important note is that, as of with [the London update](/history/#london), blocks themselves are no longer bounded in size. Each block has a target size of 15 million gas but the size of blocks will increase or decrease in accordance with network demands, up until the block limit of 30 milion gas (2x target block size). The total amount of gas expended by all transactions in the block must be less than the block gas limit. This is important because it ensures that blocks can’t be arbitrarily large. If blocks could be arbitrarily large, then less performant full nodes would gradually stop being able to keep up with the network due to space and speed requirements.
+A final important note is that blocks themselves are bounded in size. Each block has a target size of 15 million gas but the size of blocks will increase or decrease in accordance with network demands, up until the block limit of 30 milion gas (2x target block size). The total amount of gas expended by all transactions in the block must be less than the block gas limit. This is important because it ensures that blocks can’t be arbitrarily large. If blocks could be arbitrarily large, then less performant full nodes would gradually stop being able to keep up with the network due to space and speed requirements.
 
 ## Further reading {#further-reading}
 
