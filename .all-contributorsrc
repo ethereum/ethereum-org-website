@@ -4246,6 +4246,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "asanso",
+      "name": "Antonio Sanso",
+      "avatar_url": "https://avatars.githubusercontent.com/u/494825?v=4",
+      "profile": "https://blog.intothesymmetry.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
