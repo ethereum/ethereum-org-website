@@ -1050,6 +1050,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/hbriese"><img src="https://avatars.githubusercontent.com/u/14974903?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hayden Briese</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ahbriese" title="Bug reports">🐛</a></td>
     <td align="center"><a href="http://trevorfrench.com"><img src="https://avatars.githubusercontent.com/u/42419234?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Trevor French</b></sub></a><br /><a href="#content-TrevorFrench" title="Content">🖋</a></td>
+    <td align="center"><a href="https://blog.intothesymmetry.com"><img src="https://avatars.githubusercontent.com/u/494825?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Antonio Sanso</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=asanso" title="Documentation">📖</a></td>
   </tr>
 </table>
 
