@@ -17,7 +17,7 @@ In contrast to that, ERC-721 tokens are designed for assets that are similar but
 cartoons](https://www.cryptokitties.co/)
 or titles to different pieces of real estate.
 
-In this article we will analyze [Ryuya Nakamura's ERC-721 contract](https://github.com/vyperlang/vyper/blob/master/vyper/builtin_interfaces/ERC721.py).
+In this article we will analyze [Ryuya Nakamura's ERC-721 contract](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy).
 This contract is written in [Vyper](https://vyper.readthedocs.io/en/latest/index.html), a Python-like contract language designed to make
 it harder to write insecure code than it is in Solidity.
 
