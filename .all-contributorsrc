@@ -4255,6 +4255,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "siddharths00",
+      "name": "Siddharth S",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45630336?v=4",
+      "profile": "https://github.com/siddharths00",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
