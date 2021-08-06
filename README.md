@@ -1054,6 +1054,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/siddharths00"><img src="https://avatars.githubusercontent.com/u/45630336?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Siddharth S</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=siddharths00" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Asiddharths00" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/jbgwu"><img src="https://avatars.githubusercontent.com/u/60628515?v=4?s=100" width="100px;" alt=""/><br /><sub><b>jbgwu</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=jbgwu" title="Documentation">📖</a></td>
     <td align="center"><a href="https://ethos.dev"><img src="https://avatars.githubusercontent.com/u/79124435?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ethosdev</b></sub></a><br /><a href="#content-ethosdev" title="Content">🖋</a></td>
+    <td align="center"><a href="http://josephschiarizzi.com"><img src="https://avatars.githubusercontent.com/u/9449596?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joseph Schiarizzi</b></sub></a><br /><a href="#content-jschiarizzi" title="Content">🖋</a></td>
   </tr>
 </table>
 
