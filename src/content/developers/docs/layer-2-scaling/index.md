@@ -30,7 +30,7 @@ You should have a good understanding of all the foundational topics. Implementin
 - [Sidechains](#sidechains)
 - [Hybrid solutions](#hybrid-solutions)
 
-Most layer 2 solutions are centered around a server or cluster of servers, each of which may be referred to as a node, validator, operator, sequencer, block producer, or similar term. Depending on the implementation, these layer 2 nodes may be run by the invividuals, businesses or entities that use them, or by a 3rd party operator, or by a large group of individuals (similar to mainnet). Generally speaking, transactions are submitted to these layer 2 nodes instead of being submitted directly to layer 1 ([mainnet](/glossary/#mainnet)). For some solutions the layer 2 instance then batches them into groups before anchoring them to layer 1, after which they are secured by layer 1 and cannot be altered. The details of how this is done vary significantly between different layer 2 technologies and implementations.
+Most layer 2 solutions are centered around a server or cluster of servers, each of which may be referred to as a node, validator, operator, sequencer, block producer, or similar term. Depending on the implementation, these layer 2 nodes may be run by the individuals, businesses or entities that use them, or by a 3rd party operator, or by a large group of individuals (similar to mainnet). Generally speaking, transactions are submitted to these layer 2 nodes instead of being submitted directly to layer 1 ([mainnet](/glossary/#mainnet)). For some solutions the layer 2 instance then batches them into groups before anchoring them to layer 1, after which they are secured by layer 1 and cannot be altered. The details of how this is done vary significantly between different layer 2 technologies and implementations.
 
 A specific Layer 2 instance may be open and shared by many applications, or may be deployed by one project and dedicated to supporting only their application.
 
@@ -172,7 +172,6 @@ There are two types of channels right now:
 
 ## Plasma {#plasma}
 
-
 A plasma chain is a separate blockchain that is anchored to the main Ethereum chain, and uses fraud proofs (like [Optimistic rollups](#optimistic-rollups)) to arbitrate disputes.
 
 | Pros                                                                                                                  | Cons                                                                                                                                                                        |
@@ -254,7 +253,7 @@ Combine the best parts of multiple layer 2 technologies, and may offer configura
 
 **ZK rollups**
 
-- [EthHub on zk-rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)\
+- [EthHub on zk-rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
 
 **Optimistic rollups**
 
