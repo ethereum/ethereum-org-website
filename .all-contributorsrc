@@ -4283,6 +4283,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "jschiarizzi",
+      "name": "Joseph Schiarizzi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9449596?v=4",
+      "profile": "http://josephschiarizzi.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
