@@ -39,7 +39,7 @@ summaryPoints:
 <br />
 
 <InfoBanner isWarning={true}>
-  Αρχικά, θα χρειαστεί να εκτελέσετε ένα mainnet client ταυτόχρονα με το Eth2 client. <a href="https://launchpad.ethereum.org" target="_blank">Η πλατφόρμα εκκίνησης</a> θα σας καθοδηγήσει σχετικά με τις απαιτήσεις και τη διαδικασία υλικού. Εναλλακτικά μπορείτε να χρησιμοποιήσετε ένα <a href="/en/developers/docs/apis/backend/#available-libraries">backend API</a>.
+  Αρχικά, θα χρειαστεί να εκτελέσετε ένα Mainnet client ταυτόχρονα με το Eth2 client. <a href="https://launchpad.ethereum.org" target="_blank">Η πλατφόρμα εκκίνησης</a> θα σας καθοδηγήσει σχετικά με τις απαιτήσεις και τη διαδικασία υλικού. Εναλλακτικά μπορείτε να χρησιμοποιήσετε ένα <a href="/en/developers/docs/apis/backend/#available-libraries">backend API</a>.
 </InfoBanner>
 
 ## Shard chains έκδοση 1: διαθεσιμότητα δεδομένων {#data-availability}
@@ -56,7 +56,9 @@ summaryPoints:
 
 ### Τα shards χρειάζονται την εκτέλεση κώδικα; {#do-shards-need-code-execution}
 
-Ο Vitalik Buterin, όταν μίλησε στο Bankless, παρουσίασε 3 πιθανές επιλογές που αξίζει να συζητήσουμε. <iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Ο Vitalik Buterin, όταν μίλησε στο Bankless, παρουσίασε 3 πιθανές επιλογές που αξίζει να συζητήσουμε.
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
 
 #### 1. Δεν απαιτείται κεντρική εκτέλεση {#state-execution-not-needed}
 
@@ -84,11 +86,15 @@ summaryPoints:
 
 ### Τα Shards και η Beacon Chain {#shards-and-beacon-chain}
 
-Η beacon chain περιέχει όλη τη λογική για τη διατήρηση των shards ασφαλών και συγχρονισμένων. Η beacon chain θα συντονίσει τα stakers στο δίκτυο, αναθέτοντας τους τα shards που χρειάζονται για να εργαστούν. Θα διευκολύνει επίσης την επικοινωνία μεταξύ των shards με τη λήψη και αποθήκευση των δεδομένων συναλλαγών που είναι προσβάσιμα από άλλα shards. Αυτό θα δώσει στα shards ένα στιγμιότυπο της κατάστασης του Ethereum για να κρατήσει τα πάντα ενημερωμένα.<ButtonLink to="/eth2/beacon-chain/">Η Beacon Chain</ButtonLink>
+Η beacon chain περιέχει όλη τη λογική για τη διατήρηση των shards ασφαλών και συγχρονισμένων. Η beacon chain θα συντονίσει τα stakers στο δίκτυο, αναθέτοντας τους τα shards που χρειάζονται για να εργαστούν. Θα διευκολύνει επίσης την επικοινωνία μεταξύ των shards με τη λήψη και αποθήκευση των δεδομένων συναλλαγών που είναι προσβάσιμα από άλλα shards. Αυτό θα δώσει στα shards ένα στιγμιότυπο της κατάστασης του Ethereum για να κρατήσει τα πάντα ενημερωμένα.
+
+<ButtonLink to="/eth2/beacon-chain/">Η Beacon Chain</ButtonLink>
 
 ### Τα Shards και η ενσωμάτωση {#shards-and-docking}
 
-Το κεντρικό δίκτυο του Ethereum θα υπάρχει όπως και σήμερα ακόμη και μετά την εισαγωγή των shards. Ωστόσο, σε κάποιο σημείο, το κεντρικό δίκτυο θα πρέπει να μετατραπεί σε ένα shard για να μπορέσει να μεταβεί στο staking. Μένει να δούμε αν το κεντρικό δίκτυο θα υπάρχει ως το μόνο "έξυπνο" shard που μπορεί να χειριστεί την εκτέλεση κώδικα - αλλά έτσι ή αλλιώς, θα ληφθεί σχετική απόφαση με την εφαρμογή της δεύτερης φάση του sharding.<ButtonLink to="/eth2/merge/">Η ενσωμάτωση</ButtonLink>
+Το κεντρικό δίκτυο του Ethereum θα υπάρχει όπως και σήμερα ακόμη και μετά την εισαγωγή των shards. Ωστόσο, σε κάποιο σημείο, το κεντρικό δίκτυο θα πρέπει να μετατραπεί σε ένα shard για να μπορέσει να μεταβεί στο staking. Μένει να δούμε αν το κεντρικό δίκτυο θα υπάρχει ως το μόνο "έξυπνο" shard που μπορεί να χειριστεί την εκτέλεση κώδικα - αλλά έτσι ή αλλιώς, θα ληφθεί σχετική απόφαση με την εφαρμογή της δεύτερης φάση του sharding.
+
+<ButtonLink to="/eth2/merge/">Η ενσωμάτωση</ButtonLink>
 
 <Divider />
 

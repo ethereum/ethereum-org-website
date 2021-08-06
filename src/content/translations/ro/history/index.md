@@ -44,7 +44,7 @@ Aceste modificări de regulă pot crea o divizare temporară în rețea. Blocuri
 
 #### Rezumat {#deposit-contract-summary}
 
-Contractul de depozit de miză a introdus [miza](/glossary/#staking) în ecosistemul Ethereum. Deși este un contract [mainnet](/glossary/#mainnet) (rețea principală), acesta a avut un impact direct asupra cronologiei lansării [lanțului Beacon](/eth2/beacon-chain/), un important [upgrade Eth2](/eth2/).
+Contractul de depozit de miză a introdus [miza](/glossary/#staking) în ecosistemul Ethereum. Deși este un contract [Mainnet](/glossary/#mainnet) (rețea principală), acesta a avut un impact direct asupra cronologiei lansării [lanțului Beacon](/eth2/beacon-chain/), un important [upgrade Eth2](/eth2/).
 
 [Citește anunțul Fundației Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
@@ -140,7 +140,7 @@ Furculița Byzantium:
 - A redus recompensele [miniere](/developers/docs/consensus-mechanisms/pow/mining/) pe bloc de la 5 la 3 ETH.
 - A amânat [bomba de dificultate](/glossary/#difficulty-bomb) cu un an.
 - A adăugat capacitatea de a efectua apeluri către alte contracte care nu modifică starea.
-- A adăugat anumite metode de criptografie pentru a permite \[scalarea layer-ului 2\]((/developers/docs/scaling/layer-2-rollups/).
+- A adăugat anumite metode de criptografie pentru a permite [scalarea layer-ului 2](/developers/docs/scaling/layer-2-rollups/).
 
 [Citește anunțul Fundației Ethereum](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 

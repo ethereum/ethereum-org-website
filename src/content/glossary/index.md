@@ -51,7 +51,7 @@ A validator vote for a [Beacon Chain](#beacon-chain) or [shard](#shard) [block](
 
 ### Beacon Chain {#beacon-chain}
 
-An Eth2 upgrade that will become the coordinator for the Ethereum network. It introduces [proof-of-stake](#proof-of-stake) and [validators](#validator) to Ethereum. It will eventually be merged with [mainnet](#mainnet).
+An Eth2 upgrade that will become the coordinator for the Ethereum network. It introduces [proof-of-stake](#proof-of-stake) and [validators](#validator) to Ethereum. It will eventually be merged with [Mainnet](#mainnet).
 
 <DocLink to="/eth2/beacon-chain/" title="Beacon Chain" />
 
@@ -402,7 +402,7 @@ An Ethereum client that does not store a local copy of the [blockchain](#blockch
 
 ## M {#section-m}
 
-### mainnet {#mainnet}
+### Mainnet {#mainnet}
 
 Short for "main network," this is the main public Ethereum [blockchain](#blockchain). Real ETH, real value, and real consequences. Also known as layer 1 when discussing [layer 2](#layer-2) scaling solutions. (Also, see [testnet](#testnet))
 
@@ -467,7 +467,7 @@ When a [miner](#miner) finds a valid [block](#block), another miner may have pub
 
 ### Optimistic rollup {#optimistic-rollup}
 
-A [rollup](#rollups) of transactions that use [fraud proofs](#fraud-proof) to offer increased [layer 2](#layer-2) transaction throughput while using the security provided by [mainnet](#mainnet) (layer 1). Unlike [Plasma](#plasma), a similar layer 2 solution, Optimistic rollups can handle more complex transaction types – anything possible in the [EVM](#evm). They do have latency issues compared to [Zero-knowledge rollups](#zk-rollups) because a transaction can be challenged via the fraud proof.
+A [rollup](#rollups) of transactions that use [fraud proofs](#fraud-proof) to offer increased [layer 2](#layer-2) transaction throughput while using the security provided by [Mainnet](#mainnet) (layer 1). Unlike [Plasma](#plasma), a similar layer 2 solution, Optimistic rollups can handle more complex transaction types – anything possible in the [EVM](#evm). They do have latency issues compared to [Zero-knowledge rollups](#zk-rollups) because a transaction can be challenged via the fraud proof.
 
 <DocLink to="/developers/docs/scaling/layer-2-rollups/#optimistic-rollups" title="Optimistic Rollups" />
 
@@ -555,7 +555,7 @@ A [proof-of-stake](#proof-of-stake) chain that is coordinated by the [Beacon Cha
 
 ### sidechain {#sidechain}
 
-A scaling solution that uses a separate chain with different, often faster, [consensus rules](#consensus-rules). A bridge is needed to connect these sidechains to [mainnet](#mainnet). [Rollups](#rollups) also use sidechains, but they operate in collaboration with [mainnet](#mainnet) instead.
+A scaling solution that uses a separate chain with different, often faster, [consensus rules](#consensus-rules). A bridge is needed to connect these sidechains to [Mainnet](#mainnet). [Rollups](#rollups) also use sidechains, but they operate in collaboration with [Mainnet](#mainnet) instead.
 
 <DocLink to="/developers/docs/scaling/sidechains/" title="Sidechains" />
 
@@ -603,7 +603,7 @@ Depositing a quantity of [ether](#ether) (your stake) to become a validator and 
 
 ### state channels {#state-channels}
 
-A [layer 2](#layer-2) solution where a channel is set up between participants, where they can transact freely and cheaply. Only a [transaction](#transaction) to set up the channel and close the channel is sent to [mainnet](#mainnet). This allows for very high transaction throughput, but does rely on knowing number of participants up front and locking up of funds.
+A [layer 2](#layer-2) solution where a channel is set up between participants, where they can transact freely and cheaply. Only a [transaction](#transaction) to set up the channel and close the channel is sent to [Mainnet](#mainnet). This allows for very high transaction throughput, but does rely on knowing number of participants up front and locking up of funds.
 
 <DocLink to="/developers/docs/scaling/state-channels/#state-channels" title="State channels" />
 
@@ -621,7 +621,7 @@ A [hard fork](#hard-fork) of the Ethereum blockchain, which occurred at block 2,
 
 ### testnet {#testnet}
 
-Short for "test network," a network used to simulate the behavior of the main Ethereum network (see [mainnet](#mainnet)).
+Short for "test network," a network used to simulate the behavior of the main Ethereum network (see [Mainnet](#mainnet)).
 
 <DocLink to="/developers/docs/networks/#testnets" title="Testnets" />
 
@@ -668,7 +668,7 @@ A security model for certain [layer 2](#layer-2) solutions where, to increase sp
 
 ### Validium {#validium}
 
-An off-chain solution that uses [validity proofs](#validity-proof) to improve transaction throughput. Unlike [Zero-knowledge rollups](#zk-rollup), Validium data isn't stored on layer 1 [mainnet](#mainnet).
+An off-chain solution that uses [validity proofs](#validity-proof) to improve transaction throughput. Unlike [Zero-knowledge rollups](#zk-rollup), Validium data isn't stored on layer 1 [Mainnet](#mainnet).
 
 <DocLink to="/developers/docs/scaling/validium/" title="Validium" />
 
@@ -708,7 +708,7 @@ A special Ethereum address, composed entirely of zeros, that is specified as the
 
 ### Zero-knowledge rollup {#zk-rollup}
 
-A [rollup](#rollups) of transactions that use [validity proofs](#validity-proof) to offer increased [layer 2](#layer-2) transaction throughput while using the security provided by [mainnet](#mainnet) (layer 1). Although they can't handle complex transaction types, like [Optimistic rollups](#optimistic-rollups), they don't have latency issues because transactions are provably valid when submitted.
+A [rollup](#rollups) of transactions that use [validity proofs](#validity-proof) to offer increased [layer 2](#layer-2) transaction throughput while using the security provided by [Mainnet](#mainnet) (layer 1). Although they can't handle complex transaction types, like [Optimistic rollups](#optimistic-rollups), they don't have latency issues because transactions are provably valid when submitted.
 
 <DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups" title="Zero-knowledge Rollups" />
 

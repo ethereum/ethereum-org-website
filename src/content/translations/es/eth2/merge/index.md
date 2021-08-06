@@ -30,9 +30,9 @@ Cuando esté lista, la red principal de Ethereum se "acoplará" a la Cadena de B
 
 La red principal aportará la capacidad de ejecutar contratos inteligentes en el sistema de prueba de participación, además del historial completo y el estado actual de Ethereum, para garantizar que la transición sea fluida para todos los titulares y usuarios de ETH.
 
-<!-- ### Improving mainnet
+<!-- ### Improving Mainnet
 
-Before mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
+Before Mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
 
 These include Improvements for
 
@@ -56,8 +56,12 @@ Las actualizaciones de Eth2 están de algún modo interrelacionadas. Así que re
 
 ### El acoplamiento y la Cadena de Baliza {#docking-and-beacon-chain}
 
-Una vez que se produzca el acoplamiento, se asignarán participantes para validar la red principal de Ethereum. Al igual que con las cadenas de fragmentos. [La minería](/developers/docs/consensus-mechanisms/pow/mining/) ya no será necesaria, por lo que es probable que los mineros inviertan sus ganancias en participar en el nuevo sistema de prueba de participación.<ButtonLink to="/eth2/beacon-chain/">La Cadena de Baliza</ButtonLink>
+Una vez que se produzca el acoplamiento, se asignarán participantes para validar la red principal de Ethereum. Al igual que con las cadenas de fragmentos. [La minería](/developers/docs/consensus-mechanisms/pow/mining/) ya no será necesaria, por lo que es probable que los mineros inviertan sus ganancias en participar en el nuevo sistema de prueba de participación.
+
+<ButtonLink to="/eth2/beacon-chain/">La Cadena de Baliza</ButtonLink>
 
 ### Acoplamiento y cadenas de fragmentos {#docking-and-shard-chains}
 
-Con la red principal convirtiéndose en un fragmento, la implementación exitosa de las cadenas de fragmentos es fundamental para esta actualización. Es probable que la transición desempeñe un papel importante para ayudar a la comunidad a decidir si implementa una segunda actualización a la fragmentación. Esta actualización hará que los otros fragmentos sean como la red principal: podrán manejar transacciones y contratos inteligentes y no solo proporcionar más datos.<ButtonLink to="/eth2/shard-chains/">Cadenas de fragmentos</ButtonLink>
+Con la red principal convirtiéndose en un fragmento, la implementación exitosa de las cadenas de fragmentos es fundamental para esta actualización. Es probable que la transición desempeñe un papel importante para ayudar a la comunidad a decidir si implementa una segunda actualización a la fragmentación. Esta actualización hará que los otros fragmentos sean como la red principal: podrán manejar transacciones y contratos inteligentes y no solo proporcionar más datos.
+
+<ButtonLink to="/eth2/shard-chains/">Cadenas de fragmentos</ButtonLink>

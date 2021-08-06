@@ -21,13 +21,13 @@ Public networks are accessible to anyone in the world with an internet connectio
 
 Mainnet is the primary public Ethereum production blockchain, where actual-value transactions occur on the distributed ledger.
 
-When people and exchanges discuss ETH prices, they're talking about mainnet ETH.
+When people and exchanges discuss ETH prices, they're talking about Mainnet ETH.
 
 ### Testnets {#testnets}
 
-In addition to mainnet, there are public testnets. These are networks used by protocol developers or smart contract developers to test both protocol upgrades as well as potential smart contracts in a production-like environment before deployment to mainnet. Think of this as an analog to production versus staging servers.
+In addition to Mainnet, there are public testnets. These are networks used by protocol developers or smart contract developers to test both protocol upgrades as well as potential smart contracts in a production-like environment before deployment to Mainnet. Think of this as an analog to production versus staging servers.
 
-It’s generally important to test any contract code you write on a testnet before deploying to the mainnet. If you're building a dapp that integrates with existing smart contracts, most projects have copies deployed to testnests that you can interact with.
+It’s generally important to test any contract code you write on a testnet before deploying to the Mainnet. If you're building a dapp that integrates with existing smart contracts, most projects have copies deployed to testnests that you can interact with.
 
 Most testnets use a proof-of-authority consensus mechanism. This means a small number of nodes are chosen to validate transactions and create new blocks – staking their identity in the process. It's hard to incentivise mining on a proof-of-work testnet which can leave it vulnerable.
 
@@ -58,7 +58,7 @@ ETH on testnets has no real value; therefore, there are no markets for testnet E
 
 ## Private networks {#private-networks}
 
-An Ethereum network is a private network if its nodes are not connected to a public network (i.e. mainnet or a testnet). In this context, private only means reserved or isolated, rather than protected or secure.
+An Ethereum network is a private network if its nodes are not connected to a public network (i.e. Mainnet or a testnet). In this context, private only means reserved or isolated, rather than protected or secure.
 
 ### Development networks {#development-networks}
 

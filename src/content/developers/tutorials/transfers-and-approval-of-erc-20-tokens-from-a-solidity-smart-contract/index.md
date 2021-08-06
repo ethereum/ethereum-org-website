@@ -187,7 +187,7 @@ function sell(uint256 amount) public {
 
 If everything works you should see 2 events (a `Transfer` and `Sold`) in the transaction and your token balance and Ethereum balance updated.
 
-![Two events in the transaction: Transfer and Sold](./transfer-and-bought-events.png)
+![Two events in the transaction: Transfer and Sold](./transfer-and-sold-events.png)
 
 <Divider />
 
