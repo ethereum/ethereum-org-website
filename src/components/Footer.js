@@ -161,10 +161,6 @@ const Footer = () => {
           text: "what-is-ether",
         },
         {
-          to: `/decentralization/`,
-          text: "what-is-decentralization",
-        },
-        {
           to: `/learn/`,
           text: "guides-and-resources",
         },
