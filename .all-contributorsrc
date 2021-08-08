@@ -4246,6 +4246,52 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "asanso",
+      "name": "Antonio Sanso",
+      "avatar_url": "https://avatars.githubusercontent.com/u/494825?v=4",
+      "profile": "https://blog.intothesymmetry.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "siddharths00",
+      "name": "Siddharth S",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45630336?v=4",
+      "profile": "https://github.com/siddharths00",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
+    },
+    {
+      "login": "jbgwu",
+      "name": "jbgwu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/60628515?v=4",
+      "profile": "https://github.com/jbgwu",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "ethosdev",
+      "name": "ethosdev",
+      "avatar_url": "https://avatars.githubusercontent.com/u/79124435?v=4",
+      "profile": "https://ethos.dev",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "jschiarizzi",
+      "name": "Joseph Schiarizzi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9449596?v=4",
+      "profile": "http://josephschiarizzi.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
