@@ -2,7 +2,15 @@
 title: Hello World Smart Contract for Beginners
 description: Introductory tutorial on writing and deploying a simple smart contract on Ethereum.
 author: "elanh"
-tags: ["solidity", "hardhat", "alchemy", "smart contracts", "getting started", "deploying"]
+tags:
+  [
+    "solidity",
+    "hardhat",
+    "alchemy",
+    "smart contracts",
+    "getting started",
+    "deploying",
+  ]
 skill: beginner
 lang: en
 sidebar: true
@@ -27,11 +35,11 @@ Once you’ve created an Alchemy account, you can generate an API key by creatin
 
 ![Hello world create app](./hello-world-create-app.png)
 
-1. Name your app “Hello World”, offer a short description, select “Staging” for the Environment (used for your app bookkeeping), and choose “Ropsten” for your network.
+2. Name your app “Hello World”, offer a short description, select “Staging” for the Environment (used for your app bookkeeping), and choose “Ropsten” for your network.
 
 ![create app view hello world](./create-app-view-hello-world.png)
 
-1. Click “Create app” and that’s it! Your app should appear in the table below.
+3. Click “Create app” and that’s it! Your app should appear in the table below.
 
 ## Step 3: Create an Ethereum account (address) {#step-3}
 
@@ -47,14 +55,14 @@ In order to deploy our smart contract to the test network, we’ll need some fak
 
 ## Step 5: Check your Balance {#step-5}
 
-To double check our balance is there, let’s make an [eth_getBalance](/developers/docs/apis/json-rpc/#eth_getbalance) request using [Alchemy’s composer tool](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). This will return the amount of ETH in our wallet. After you input your Metamask account address and click “Send Request”, you should see a response like this:
+To double check our balance is there, let’s make an [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) request using [Alchemy’s composer tool](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). This will return the amount of ETH in our wallet. After you input your Metamask account address and click “Send Request”, you should see a response like this:
 
-```
-{"jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000"}
+```json
+{ "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
 ```
 
 > **NOTE:** This result is in wei not ETH. Wei is used as the smallest denomination of ether. The conversion from wei to ETH is: 1 eth = 10<sup>18</sup> wei. So if we convert 0x2B5E3AF16B1880000 to decimal we get 5\*10¹⁸ which equals 5 ETH.
-> 
+>
 > Phew! Our fake money is all there <Emoji text=":money_mouth_face:" size={1} />.
 
 ## Step 6: Initialize our project {#step-6}
@@ -62,7 +70,7 @@ To double check our balance is there, let’s make an [eth_getBalance](/develope
 First, we’ll need to create a folder for our project. Navigate to your command line and type:
 
 ```
-mkdir hello-world  
+mkdir hello-world
 cd hello-world
 ```
 
@@ -75,26 +83,26 @@ npm init
 It doesn’t really matter how you answer the installation questions, here is how we did it for reference:
 
 ```
-package name: (hello-world)  
-version: (1.0.0)  
-description: hello world smart contract  
-entry point: (index.js)  
-test command:  
-git repository:  
-keywords:  
-author:  
+package name: (hello-world)
+version: (1.0.0)
+description: hello world smart contract
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author:
 license: (ISC)About to write to /Users/.../.../.../hello-world/package.json:
 
-{ 
-  "name": "hello-world",  
-  "version": "1.0.0",  
-  "description": "hello world smart contract",  
-  "main": "index.js",  
-  "scripts": {  
-     "test": "echo \\"Error: no test specified\\" && exit 1"  
-  },  
-  "author": "",  
-  "license": "ISC"  
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "hello world smart contract",
+  "main": "index.js",
+  "scripts": {
+     "test": "echo \\"Error: no test specified\\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }
 ```
 
@@ -117,26 +125,26 @@ Check out this page for more details on [installation instructions](https://hard
 Inside our project folder run:
 
 ```
-npx hardhat 
+npx hardhat
 ```
 
 You should then see a welcome message and option to select what you want to do. Select “create an empty hardhat.config.js”:
 
 ```
-888    888                      888 888               888  
-888    888                      888 888               888  
-888    888                      888 888               888  
-8888888888  8888b.  888d888 .d88888 88888b.   8888b.  888888  
-888    888     "88b 888P"  d88" 888 888 "88b     "88b 888  
-888    888 .d888888 888    888  888 888  888 .d888888 888  
-888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.  
+888    888                      888 888               888
+888    888                      888 888               888
+888    888                      888 888               888
+8888888888  8888b.  888d888 .d88888 88888b.   8888b.  888888
+888    888     "88b 888P"  d88" 888 888 "88b     "88b 888
+888    888 .d888888 888    888  888 888  888 .d888888 888
+888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
 888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
 
-👷 Welcome to Hardhat v2.0.11 👷‍? 
+👷 Welcome to Hardhat v2.0.11 👷‍?
 
-What do you want to do? …  
-Create a sample project  
-❯ Create an empty hardhat.config.js  
+What do you want to do? …
+Create a sample project
+❯ Create an empty hardhat.config.js
 Quit
 ```
 
@@ -147,12 +155,12 @@ This will generate a `hardhat.config.js` file for us which is where we’ll spec
 To keep our project organized we’ll create two new folders. Navigate to the root directory of your project in your command line and type:
 
 ```
-mkdir contracts  
+mkdir contracts
 mkdir scripts
 ```
 
-*   `contracts/` is where we’ll keep our hello world smart contract code file
-*   `scripts/` is where we’ll keep scripts to deploy and interact with our contract
+- `contracts/` is where we’ll keep our hello world smart contract code file
+- `scripts/` is where we’ll keep scripts to deploy and interact with our contract
 
 ## Step 10: Write our contract {#step-10}
 
@@ -179,7 +187,7 @@ contract HelloWorld {
    // Similar to many class-based object-oriented languages, a constructor is a special function that is only executed upon contract creation.
    // Constructors are used to initialize the contract's data. Learn more:https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
    constructor(string memory initMessage) {
-   
+
       // Accepts a string argument `initMessage` and sets the value into the contract's `message` storage variable).
       message = initMessage;
    }
@@ -208,8 +216,9 @@ npm install dotenv --save
 ```
 
 Then, create a `.env` file in the root directory of our project, and add your Metamask private key and HTTP Alchemy API URL to it.
-*   Follow [these instructions](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) to export your private key
-*   See below to get HTTP Alchemy API URL
+
+- Follow [these instructions](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) to export your private key
+- See below to get HTTP Alchemy API URL
 
 ![get alchemy api key](./get-alchemy-api-key.gif)
 
@@ -218,7 +227,7 @@ Copy Alchemy API URL
 Your `.env` should look like this:
 
 ```
-API_URL = "https://eth-ropsten.alchemyapi.io/v2/your-api-key"  
+API_URL = "https://eth-ropsten.alchemyapi.io/v2/your-api-key"
 PRIVATE_KEY = "your-metamask-private-key"
 ```
 
@@ -226,7 +235,7 @@ To actually connect these to our code, we’ll reference these variables in our 
 
 ## Step 12: Install Ethers.js {step-12}
 
-Ethers.js is a library that makes it easier to interact and make requests to Ethreum by wrapping [standard JSON-RPC methods](/developers/docs/apis/json-rpc/) with more user friendly methods.
+Ethers.js is a library that makes it easier to interact and make requests to Ethereum by wrapping [standard JSON-RPC methods](/developers/docs/apis/json-rpc/) with more user friendly methods.
 
 Hardhat makes it super easy to integrate [Plugins](https://hardhat.org/plugins/) for additional tooling and extended functionality. We’ll be taking advantage of the [Ethers plugin](https://hardhat.org/plugins/nomiclabs-hardhat-ethers.html) for contract deployment ([Ethers.js](https://github.com/ethers-io/ethers.js/) has some super clean contract deployment methods).
 
@@ -249,21 +258,21 @@ Update your `hardhat.config.js` to look like this:
 * @type import('hardhat/config').HardhatUserConfig
 */
 
-require('dotenv').config();  
+require('dotenv').config();
 
 require("@nomiclabs/hardhat-ethers");
 const { API_URL, PRIVATE_KEY } = process.env;
 
-module.exports = {  
-   solidity: "0.7.3",  
-   defaultNetwork: "ropsten",  
-   networks: {  
-      hardhat: {},  
-      ropsten: {  
-         url: API_URL,  
-         accounts: [`0x${PRIVATE_KEY}`]  
-      }  
-   },  
+module.exports = {
+   solidity: "0.7.3",
+   defaultNetwork: "ropsten",
+   networks: {
+      hardhat: {},
+      ropsten: {
+         url: API_URL,
+         accounts: [`0x${PRIVATE_KEY}`]
+      }
+   },
 }
 ```
 
@@ -286,18 +295,18 @@ Now that our contract is written and our configuration file is good to go, it’
 Navigate to the `scripts/` folder and create a new file called `deploy.js` , adding the following contents to it:
 
 ```
-async function main() {  
-   const HelloWorld = await ethers.getContractFactory("HelloWorld");  
-     
-   // Start deployment, returning a promise that resolves to a contract object  
-   const hello_world = await HelloWorld.deploy("Hello World!"); 
-   console.log("Contract deployed to address:", hello_world.address);}  
-  
-main()  
-  .then(() => process.exit(0))  
-  .catch(error => {  
-    console.error(error);  
-    process.exit(1);  
+async function main() {
+   const HelloWorld = await ethers.getContractFactory("HelloWorld");
+
+   // Start deployment, returning a promise that resolves to a contract object
+   const hello_world = await HelloWorld.deploy("Hello World!");
+   console.log("Contract deployed to address:", hello_world.address);}
+
+main()
+  .then(() => process.exit(0))
+  .catch(error => {
+    console.error(error);
+    process.exit(1);
   });
 ```
 
@@ -342,7 +351,7 @@ Congrats! You just deployed a smart contract to the Ethereum chain 🎉
 To understand what’s going on under the hood, let’s navigate to the Explorer tab in our [Alchemy dashboard](https://dashboard.alchemyapi.io/explorer). If you have multiple Alchemy apps make sure to filter by app and select “Hello World”.
 ![hello world explorer](./hello-world-explorer.png)
 
-Here you’ll see a handful of JSON-RPC calls that Hardhat/Ethers made under the hood for us when we called the `.deploy()` function. Two important ones to call out here are [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), which is the request to actually write our contract onto the Ropsten chain, and [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash) which is a request to read information about our transaction given the hash (a typical pattern when 
+Here you’ll see a handful of JSON-RPC calls that Hardhat/Ethers made under the hood for us when we called the `.deploy()` function. Two important ones to call out here are [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), which is the request to actually write our contract onto the Ropsten chain, and [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash) which is a request to read information about our transaction given the hash (a typical pattern when
 transactions). To learn more about sending transactions, check out this tutorial on [sending transactions using Web3](https://docs.alchemyapi.io/alchemy/tutorials/sending-transactions-using-web3-and-alchemy)
 
 That’s all for part 1 of this tutorial, in part 2 we’ll actually [interact with our smart contract](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#part-2-interact-with-your-smart-contract) by updated our initial message, and in part 3 we’ll [publish our smart contract to Etherscan](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#optional-part-3-publish-your-smart-contract-to-etherscan) so everyone will know how to interact with it.
