@@ -32,6 +32,7 @@
   "page-find-wallet-description-alpha": "Fully open-source Ethereum wallet that leverages the secure enclave on mobile, offers full testnet support and embraces TokenScript standard.",
   "page-find-wallet-description-ambo": "Cut straight to investing and get your first investment within minutes of downloading the app",
   "page-find-wallet-description-argent": "One tap to earn interest & invest; borrow, store and send. Own it.",
+  "page-find-wallet-description-bitcoindotcom": "The Bitcoin.com Wallet now supports Ethereum! Buy, hold, send, and trade ETH using a fully non-custodial wallet trusted by millions.",
   "page-find-wallet-description-coinbase": "The secure app to store crypto yourself",
   "page-find-wallet-description-coinomi": "Coinomi is the oldest multi-chain, defi-ready, cross-platform wallet for bitcoin, altcoins & tokens - never hacked, with millions of users.",
   "page-find-wallet-description-dcent": "D'CENT Wallet is the über convenient multi-cryptocurrency wallet with built-in DApp browser for easy access to DeFi, NFT, and variety of services.",
@@ -53,6 +54,7 @@
   "page-find-wallet-description-pillar": "Non-custodial, community-owned wallet with its own L2 Payment Network.",
   "page-find-wallet-description-portis": "The non-custodial blockchain wallet that makes apps simple for everyone",
   "page-find-wallet-description-rainbow": "A better home for your Ethereum assets",
+  "page-find-wallet-description-samsung": "Keep your valuables safe and secure with Samsung Blockchain.",
   "page-find-wallet-description-status": "Secure messaging app, crypto wallet, and Web3 browser built with state-of-the-art technology",
   "page-find-wallet-description-tokenpocket": "TokenPocket：A secure and convenient world-leading digital currency wallet and a portal to DApps, with Multi-chain supported.",
   "page-find-wallet-description-torus": "One-Click login for Web 3.0",
@@ -60,6 +62,7 @@
   "page-find-wallet-description-trust": "Trust Wallet is a decentralized multi-coin cryptocurrency wallet. Buy crypto, explore dapps, swap assets, and more while keeping control of your keys.",
   "page-find-wallet-description-unstoppable": "Unstoppable Wallet is an open-source, non-custodial storage solution known for its intuitive design and frictionless user experience. Natively integrates decentralized trading/exchange capabilities.",
   "page-find-wallet-description-zengo": "ZenGo is the first keyless crypto wallet. With ZenGo, there are no private keys, passwords or seed phrases to manage or lose. Buy, trade, earn and store Ethereum with unprecedented simplicity and safety",
+  "page-find-wallet-description-walleth": "100% open source (GPLv3) and native Android Ethereum Wallet for your service since 2017. Connect to your favorite Ethereum Applications via WalletConnect and use it directly with hardware wallets like the TREZOR or KeepKey via USB or the KeyCard via NFC.",
   "page-find-wallet-dharma-logo-alt": "Dharma logo",
   "page-find-wallet-enjin-logo-alt": "Enjin logo",
   "page-find-wallet-Ethereum-wallets": "Ethereum Wallets",
@@ -102,6 +105,7 @@
   "page-find-wallet-raise-an-issue": "raise an issue in GitHub",
   "page-find-wallet-search-btn": "Search chosen features",
   "page-find-wallet-showing": "Showing ",
+  "page-find-wallet-samsung-logo-alt": "Samsung Blockchain Wallet logo",
   "page-find-wallet-status-logo-alt": "Status logo",
   "page-find-wallet-swaps": "Decentralized token swaps",
   "page-find-wallet-swaps-desc": "Trade between ETH and other tokens directly from your wallet.",
@@ -121,5 +125,6 @@
   "page-find-wallet-withdraw-desc": "You can cash out your ETH straight to your bank account without going through an exchange.",
   "page-find-wallet-yet": "yet",
   "page-find-wallet-zengo-logo-alt": "ZenGo logo",
+  "page-find-wallet-walleth-logo-alt": "WallETH logo",
   "page-stake-eth": "Stake ETH"
 }

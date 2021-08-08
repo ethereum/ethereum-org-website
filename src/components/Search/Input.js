@@ -41,11 +41,15 @@ const Input = ({ query, setQuery, refine, ...rest }) => {
     setQuery(value)
   }
 
+  const handleSubmit = (event) => {
+    event.preventDefault()
+  }
+
   const intl = useIntl()
   const searchString = translateMessageId("search", intl)
 
   return (
-    <Form>
+    <Form onSubmit={handleSubmit}>
       <StyledInput
         type="text"
         placeholder={searchString}

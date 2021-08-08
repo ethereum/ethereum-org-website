@@ -1,0 +1,22 @@
+{
+  "comp-tutorial-metadata-minute-read": "分の読書",
+  "page-tutorial-listing-policy-intro": "チュートリアルを提出する前に、リストポリシーをお読みください。",
+  "comp-tutorial-metadata-tip-author": "著者にチップを渡す",
+  "page-tutorial-listing-policy": "記事一覧ポリシー",
+  "page-tutorial-new-github": "GitHubは初めてですか？",
+  "page-tutorial-new-github-desc": "問題を提起する - 必要な情報を記入し、チュートリアルを貼り付けます。",
+  "page-tutorial-pull-request": "プルリクエストを作る",
+  "page-tutorial-pull-request-btn": "プルリクエストを作る",
+  "page-tutorial-pull-request-desc-1": "に従ってください",
+  "page-tutorial-pull-request-desc-2": "tutorials/your-tutorial-name/index.md",
+  "page-tutorial-pull-request-desc-3": "命名構造。",
+  "page-tutorial-raise-issue-btn": "問題を提起する",
+  "page-tutorial-read-time": "分",
+  "page-tutorial-submit-btn": "チュートリアルを提出する",
+  "page-tutorial-submit-tutorial": "チュートリアルを提出するために、あなたはGitHubを使用する必要があります。私たちはあなたが問題またはプルリクエストを作成ことを歓迎します。",
+  "page-tutorial-subtitle": "キュレーションされたコミュニティチュートリアルリストへようこそ。",
+  "page-tutorial-tags-error": "これらのタグが全て付いているチュートリアルはありません",
+  "page-tutorial-title": "イーサリウムの開発チュートリアル",
+  "page-tutorials-meta-description": "検証されたイーサリウムコミュニティチュートリアルをトピック別に参照し、フィルタリングします。",
+  "page-tutorials-meta-title": "イーサリウムの開発チュートリアル"
+}

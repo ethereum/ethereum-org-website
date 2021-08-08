@@ -497,7 +497,7 @@ const DevelopersPage = ({ data }) => {
               <Translation id="page-developers-oracle-desc" />
             </p>
 
-            <Link to="/developers/docs/layer-2-scaling/">
+            <Link to="/developers/docs/scaling/">
               <Translation id="page-developers-scaling-link" />
             </Link>
             <p>

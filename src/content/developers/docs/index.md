@@ -43,4 +43,4 @@ If this is your first attempt at Ethereum development, we recommend starting at 
 
 - [Token standards](/developers/docs/standards/tokens/)
 - [Oracles](/developers/docs/oracles/)
-- [Scaling](/developers/docs/layer-2-scaling/)
+- [Scaling](/developers/docs/scaling/)

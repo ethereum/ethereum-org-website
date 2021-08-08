@@ -6,7 +6,7 @@ lang: en
 sidebar: true
 tags: ["solidity", "erc-20"]
 skill: beginner
-published: 2021-3-9
+published: 2021-03-09
 ---
 
 ## Introduction {#introduction}
@@ -819,7 +819,7 @@ Make sure to update `_totalSupply` when the total number of tokens changes.
     }
 ```
 
-The `_burn` function is almost identical to `_emit`, except it goes in the other direction.
+The `_burn` function is almost identical to `_mint`, except it goes in the other direction.
 
 #### The \_approve function {#\_approve}
 

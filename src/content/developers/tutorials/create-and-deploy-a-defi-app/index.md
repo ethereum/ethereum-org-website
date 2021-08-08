@@ -192,7 +192,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract FarmToken is ERC20 {
     using Address for address;
-    using SafeMath for uint256;
+    using SafeMath for uint256; // As of Solidity v0.8.0, mathematical operations can be done safely without the need for SafeMath
     using SafeERC20 for IERC20;
 
     IERC20 public token;
@@ -471,6 +471,6 @@ _output of withdrawMyTokenFromTokenFarm.js_
 
 [Ganache | Truffle Suite](https://www.trufflesuite.com/ganache)
 
-[What is DeFi? A Begginer's Guide (2021 Updated) (99bitcoins.com)](https://99bitcoins.com/what-is-defi/)
+[What is DeFi? A Beginner's Guide (2021 Updated) (99bitcoins.com)](https://99bitcoins.com/what-is-defi/)
 
 [DeFi - The Decentralized Finance Leaderboard at DeFi Pulse](https://defipulse.com/)

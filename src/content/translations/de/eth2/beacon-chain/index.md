@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus isShipped date="Shipped!">
+<UpgradeStatus isShipped date="Versandt!">
     Die Beacon Chain wurde am 1. Dezember um 12:00 UTC eingeführt. Um mehr zu erfahren, schau dir die <a href="https://beaconscan.com/">Daten</a> an. Wenn Du auch beim Validieren von Transaktionen auf der Beacon Chain helfen möchtest, kannst Du <a href="/eth2/staking/">Deine ETH staken</a>.
 </UpgradeStatus>
 
@@ -48,13 +48,17 @@ Letztlich wird die Beacon Chain durch ein Zufallsprinzip auch dafür sorgen, das
 
 Die Eth2-Upgrades sind alle miteinander verknüpft. Zusammenfassend wirkt sich die Beacon Chain auf weitere Upgrades wie folgt aus:
 
-### Shards und die Beacon Chain {#shards-and-beacon-chain}
-
-Shard Chains können nur dann sicher ins Ethereum-Netzwerk eingeführt werden, wenn ein funktionierender Proof-of-Stake-Konsensmechanismus bereits etabliert ist. Mit der Beacon Chain wird Staking eingeführt, wodurch der Weg für das Shard Chains-Upgrade geebnet wird.<ButtonLink to="/eth2/shard-chains/">Shard Chains</ButtonLink>
-
 ### Mainnet und die Beacon Chain {#mainnet-and-beacon-chain}
 
-Zu Beginn wird die Beacon Chain parallel und als separate Blockchain zum heutigen Ethereum-Mainnet existieren. Letztlich werden jedoch beide verbunden sein. Der Plan ist, das Mainnet an das Proof-of-Stake-System "anzudocken", welches von der Beacon Chain kontrolliert und koordiniert wird.<ButtonLink to="/eth2/docking/">Das Andocken</ButtonLink>
+Zu Beginn wird die Beacon Chain parallel und als separate Blockchain zum heutigen Ethereum-Mainnet existieren. Letztlich werden jedoch beide verbunden sein. Der Plan ist, das Mainnet an das Proof-of-Stake-System "anzudocken", welches von der Beacon Chain kontrolliert und koordiniert wird.
+
+<ButtonLink to="/eth2/merge/">Das Andocken</ButtonLink>
+
+### Shards und die Beacon Chain {#shards-and-beacon-chain}
+
+Shard Chains können nur dann sicher ins Ethereum-Netzwerk eingeführt werden, wenn ein funktionierender Proof-of-Stake-Konsensmechanismus bereits etabliert ist. Mit der Beacon Chain wird Staking eingeführt, wodurch der Weg für das Shard Chains-Upgrade geebnet wird.
+
+<ButtonLink to="/eth2/shard-chains/">Shard Chains</ButtonLink>
 
 <Divider />
 

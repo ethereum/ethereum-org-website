@@ -467,7 +467,7 @@ const HomePage = ({ data }) => {
 
   const touts = [
     {
-      image: data.docking.childImageSharp.fixed,
+      image: data.merge.childImageSharp.fixed,
       alt: translateMessageId("page-index-tout-eth2-image-alt", intl),
       title: translateMessageId("page-index-tout-eth2-title", intl),
       description: translateMessageId("page-index-tout-eth2-description", intl),
@@ -1068,7 +1068,7 @@ export const query = graphql`
         }
       }
     }
-    docking: file(relativePath: { eq: "eth2/docking.png" }) {
+    merge: file(relativePath: { eq: "eth2/merge.png" }) {
       childImageSharp {
         fixed(width: 320) {
           ...GatsbyImageSharpFixed

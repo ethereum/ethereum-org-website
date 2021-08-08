@@ -197,19 +197,19 @@ const StatsBoxGrid = () => {
     // Skip APIs when not in production
     if (process.env.NODE_ENV !== "production") {
       setEthPrice({
-        value: formatPrice(1330),
+        value: formatPrice(2265),
         hasError: false,
       })
       setValueLocked({
-        value: formatTVL(23456789000),
+        value: formatTVL(57141111000),
         hasError: false,
       })
       setTxs({
-        value: formatTxs(1234567),
+        value: formatTxs(1305167),
         hasError: false,
       })
       setNodes({
-        value: formatNodes(8040),
+        value: formatNodes(5472),
         hasError: false,
       })
     } else {

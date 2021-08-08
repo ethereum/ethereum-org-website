@@ -851,6 +851,16 @@ const DappsPage = ({ data, location }) => {
       image: data.zerion.childImageSharp.fluid,
       alt: translateMessageId("page-dapps-zerion-logo-alt", intl),
     },
+    {
+      title: "Rotki",
+      description: translateMessageId(
+        "page-dapps-dapp-description-rotki",
+        intl
+      ),
+      link: "https://rotki.com/",
+      image: data.rotki.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-rotki-logo-alt", intl),
+    },
   ]
 
   const computing = [
@@ -1017,6 +1027,13 @@ const DappsPage = ({ data, location }) => {
       link: "https://www.larvalabs.com/cryptopunks",
       image: data.cryptopunks.childImageSharp.fluid,
       alt: translateMessageId("page-dapps-cryptopunks-logo-alt", intl),
+    },
+    {
+      title: "POAP - Proof of Attendance Protocol",
+      description: translateMessageId("page-dapps-dapp-description-poap", intl),
+      link: "https://poap.xyz",
+      image: data.poap.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-poap-logo-alt", intl),
     },
   ]
 
@@ -1876,6 +1893,12 @@ export const query = graphql`
       ...dappImage
     }
     zerion: file(relativePath: { eq: "dapps/zerion.png" }) {
+      ...dappImage
+    }
+    rotki: file(relativePath: { eq: "dapps/rotki.png" }) {
+      ...dappImage
+    }
+    poap: file(relativePath: { eq: "dapps/poap.png" }) {
       ...dappImage
     }
   }

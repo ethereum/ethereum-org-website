@@ -23,6 +23,7 @@ Select your language of choice to find projects, resources, and virtual communit
 - [Ethereum for Rust developers](/developers/docs/programming-languages/rust/)
 - [Ethereum for .NET developers](/developers/docs/programming-languages/dot-net/)
 - [Ethereum for Delphi developers](/developers/docs/programming-languages/delphi/)
+- [Ethereum for Dart developers](/developers/docs/programming-languages/dart/)
 
 ### What if my language is not supported {#other-lang}
 

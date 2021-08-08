@@ -299,13 +299,13 @@ But we're missing one last piece of the puzzle and that's the server. You can ei
 
 ### Graph Explorer: The hosted service {#graph-explorer-the-hosted-service}
 
-The easiest way is to use the hosted service. Follow the instructions [here](https://thegraph.com/docs/deploy-a-subgraph) to deploy a subgraph. For many projects you can actually find exisiting subgraphs in the explorer at https://thegraph.com/explorer/.
+The easiest way is to use the hosted service. Follow the instructions [here](https://thegraph.com/docs/deploy-a-subgraph) to deploy a subgraph. For many projects you can actually find existing subgraphs in the explorer at https://thegraph.com/explorer/.
 
 ![The Graph-Explorer](./thegraph-explorer.png)
 
 ### Running your own node {#running-your-own-node}
 
-Alternatively you can run your own node: https://github.com/graphprotocol/graph-node#quick-start. One reason to do this might be using a network that's not supported by the hosted service. Currently supported are mainnet, Kovan, Rinkeby, Ropsten, Goerli, PoA-Core, xDAI and Sokol.
+Alternatively you can run your own node: https://github.com/graphprotocol/graph-node#quick-start. One reason to do this might be using a network that's not supported by the hosted service. Currently supported are Mainnet, Kovan, Rinkeby, Ropsten, Goerli, PoA-Core, xDAI and Sokol.
 
 ## The decentralized future {#the-decentralized-future}
 

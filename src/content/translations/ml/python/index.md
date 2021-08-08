@@ -26,7 +26,7 @@ sidebar: true
 
 ## തുടക്കക്കാരന്റെ ലേഖനങ്ങൾ {#beginner-articles}
 
-- [വൈപ്പറുമായുള്ള സ്മാർട്ട് കരാറുകള്‍ക്കായി ഒരു ആമുഖം](https://kauri.io/article/af913a853eaf4db88627b3ff9572b770/v1/an-introduction-to-smart-contracts-with-vyper)
+- [വൈപ്പറുമായുള്ള സ്മാർട്ട് കരാറുകള്‍ക്കായി ഒരു ആമുഖം](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [പൈത്തൺ ഫ്ലാസ്ക് ഉപയോഗിച്ച് Ethereum കരാർ എങ്ങനെ വികസിപ്പിക്കാം?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Web3.py-ക്കുള്ള ആമുഖം പൈത്തൺ ഡവലപ്പർമാർക്കുള്ള Ethereum](https://www.dappuniversity.com/articles/web3-py-intro)
 - [പൈത്തൺ, web3.py എന്നിവ ഉപയോഗിച്ച് ഒരു സ്മാർട്ട് കരാർ ഫംഗ്ഷനെ എങ്ങനെ വിളിക്കാം](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
@@ -40,8 +40,8 @@ sidebar: true
 
 ## നൂതന ഉപയോഗ പാറ്റേണുകൾ {#advanced-use-patterns}
 
-- [പൈത്തൺ ഉപയോഗിച്ച് Ethereum സ്മാർട്ട് കോൺ‌ട്രാക്റ്റ് കംപൈൽ ചെയ്യുന്നു, വിന്യസിക്കുന്നു, വിളിക്കുന്നു](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [സ്ലിതർ ഉപയോഗിച്ച് സോളിഡിറ്റി സ്മാർട്ട് കരാറുകൾ വിശകലനം ചെയ്യുക](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
+- [പൈത്തൺ ഉപയോഗിച്ച് Ethereum സ്മാർട്ട് കോൺ‌ട്രാക്റ്റ് കംപൈൽ ചെയ്യുന്നു, വിന്യസിക്കുന്നു, വിളിക്കുന്നു](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
+- [സ്ലിതർ ഉപയോഗിച്ച് സോളിഡിറ്റി സ്മാർട്ട് കരാറുകൾ വിശകലനം ചെയ്യുക](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 
 ## പൈത്തൺ പ്രോജക്റ്റുകളും ഉപകരണങ്ങളും {#python-projects-and-tools}
 

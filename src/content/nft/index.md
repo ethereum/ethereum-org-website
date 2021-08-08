@@ -202,7 +202,7 @@ The NFT world and the [decentralized finance (DeFi)](/defi/) world are starting 
 
 #### NFT-backed loans {#nft-backed-loans}
 
-There are DeFi applications that let you borrow money by using collateral. For example you collateralise 10 ETH so you can borrow 5000 DAI ([a stablecoin](/stablecoins/)). This guarantees that the lender gets paid back – if the borrower does't pay back the DAI, the collateral is sent to the lender. However not everyone has enough crypto to use as collateral.
+There are DeFi applications that let you borrow money by using collateral. For example you collateralise 10 ETH so you can borrow 5000 DAI ([a stablecoin](/stablecoins/)). This guarantees that the lender gets paid back – if the borrower doesn't pay back the DAI, the collateral is sent to the lender. However not everyone has enough crypto to use as collateral.
 
 Projects are beginning to explore using NFTs as collateral instead. Imagine you bought a rare CryptoPunk NFT back in the day – they can fetch $1000s at today's prices. By putting this up as collateral, you can access a loan with the same rule set. If you don't pay back the DAI, your CryptoPunk will be sent to the lender as collateral. This could eventually work with anything you tokenise as an NFT.
 
@@ -318,7 +318,7 @@ _It’s also important to remember that Ethereum does more than just financial t
 
 #### Timelines {#timelines}
 
-The process has already started. [The Beacon Chain](/eth2/beacon-chain/), the first upgrade, shipped in December 2020. This provides the foundation for staking by allowing stakers to join the system. The next step relevant to energy efficiency is to merge the current chain, the one secured by miners, into the Beacon Chain where mining isn't needed. Timelines can't be exact at this stage, but it's estimated that this will happen some time in 2021/2022. This process is known as the docking or the merge. [More on the docking](/eth2/docking/).
+The process has already started. [The Beacon Chain](/eth2/beacon-chain/), the first upgrade, shipped in December 2020. This provides the foundation for staking by allowing stakers to join the system. The next step relevant to energy efficiency is to merge the current chain, the one secured by miners, into the Beacon Chain where mining isn't needed. Timelines can't be exact at this stage, but it's estimated that this will happen some time in 2021/2022. This process is known as the merge (formerly referred to as the docking). [More on the merge](/eth2/merge/).
 
 <ButtonLink to="/eth2/">More on Eth2</ButtonLink>
 
@@ -326,7 +326,7 @@ The process has already started. [The Beacon Chain](/eth2/beacon-chain/), the fi
 
 While we wait for Eth2, products are moving to a "layer 2" technology known as rollups. Working on top of Ethereum, this technology lets you "roll up" or batch many transactions into a single one that is submitted to the chain. By moving as many things off the chain and only submitting the truly important bits (the cryptographic proofs), demand for block space will decrease. This will in turn lower the amount of computing power needed to create new blocks.
 
-[More on rollups and layer 2 technology](/developers/docs/layer-2-scaling/)
+[More on rollups and layer 2 technology](/developers/docs/scaling/layer-2-rollups/)
 
 #### A more efficient NFT standard...
 

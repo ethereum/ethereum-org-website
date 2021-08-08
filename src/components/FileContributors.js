@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { useIntl } from "gatsby-plugin-intl"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { useQuery, gql } from "@apollo/client"
 
 import ButtonLink from "./ButtonLink"
@@ -11,9 +11,27 @@ import Translation from "./Translation"
 import { ButtonSecondary } from "./SharedStyledComponents"
 import { getLocaleTimestamp } from "../utils/time"
 
+const loadingStyles = css`
+  font-size: 0;
+  background: ${({ theme }) =>
+    `linear-gradient(-90deg, ${theme.colors.lightBorder} 0%, ${theme.colors.searchBackgroundEmpty} 50%, ${theme.colors.lightBorder} 100%)`};
+  background-size: 400% 400%;
+  animation: pulse 1.2s ease-in-out infinite;
+
+  @keyframes pulse {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: -135% 0%;
+    }
+  }
+`
+
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
+  position: relative;
 
   border-radius: 2px;
   padding: 0.5rem;
@@ -29,12 +47,36 @@ const Container = styled.div`
   }
 `
 
+const SkeletonContainer = styled(Container)`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  transition: opacity 0.15s ease-in-out;
+
+  ${({ loading }) =>
+    !loading &&
+    `
+    opacity: 0;
+    pointer-events: none;
+  `}
+`
+
 const LeftContent = styled.div`
   display: flex;
   align-items: center;
   margin-right: 1rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: ${(props) => props.theme.fontSizes.s};
+  }
+`
+
+const SkeletonLeftContent = styled(LeftContent)`
+  flex: 1;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    flex: none;
   }
 `
 
@@ -45,15 +87,46 @@ const Avatar = styled.img`
   border-radius: 50%;
 `
 
+const SkeletonAvatar = styled.div`
+  height: 40px;
+  width: 40px;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  ${loadingStyles}
+`
+
 const Info = styled.div`
   line-height: 130%;
   color: ${(props) => props.theme.colors.text200};
+`
+
+const SkeletonInfo = styled(Info)`
+  ${loadingStyles}
+  height: 40px;
+  flex: 1;
+  border-radius: 3px;
 `
 
 const ButtonContainer = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+`
+
+const SkeletonButtonContainer = styled(ButtonContainer)`
+  ${loadingStyles}
+  width: 145px;
+  border-radius: 3px;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-top: 1rem;
+    justify-content: center;
+    width: calc(50% - 2rem);
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    height: 40px;
+    width: 50%;
+    margin-top: 1rem;
+  }
 `
 
 const ContributorsButton = styled(ButtonSecondary)`
@@ -70,6 +143,12 @@ const ContributorsButton = styled(ButtonSecondary)`
     justify-content: center;
     width: 50%;
   }
+
+  ${({ loading }) =>
+    loading &&
+    `
+    visibility: hidden;
+  `}
 `
 
 const GithubButton = styled(ButtonLink)`
@@ -151,27 +230,34 @@ const FileContributors = ({ relativePath, className, editPath }) => {
     variables: { relativePath },
   })
 
-  if (loading || error) return null
+  if (error) return null
 
-  const commits = data.repository?.ref?.target?.history?.edges?.map(
+  const commits = data?.repository?.ref?.target?.history?.edges?.map(
     (commit) => commit.node
   )
 
-  const lastCommit = commits[0]
-  const lastContributor = lastCommit.author
-  const uniqueContributors = commits.reduce(
-    (res, cur) => {
-      for (const contributor of res) {
-        const hasAuthorInfo = !!contributor.user && !!cur.author.user
-        if (hasAuthorInfo && contributor.user.login === cur.author.user.login) {
+  const lastCommit = commits?.[0] || {}
+  const lastContributor = lastCommit?.author || {}
+  const uniqueContributors =
+    commits?.reduce(
+      (res, cur) => {
+        if (cur.author.user === null) {
           return res
         }
-      }
-      res.push(cur.author)
-      return res
-    },
-    [lastContributor]
-  )
+        for (const contributor of res) {
+          const hasAuthorInfo = !!contributor.user && !!cur.author.user
+          if (
+            hasAuthorInfo &&
+            contributor.user.login === cur.author.user.login
+          ) {
+            return res
+          }
+        }
+        res.push(cur.author)
+        return res
+      },
+      [lastContributor]
+    ) || []
 
   return (
     <div className={className}>
@@ -195,6 +281,13 @@ const FileContributors = ({ relativePath, className, editPath }) => {
         </ContributorList>
       </Modal>
       <Container>
+        <SkeletonContainer loading={!!loading}>
+          <SkeletonLeftContent>
+            <SkeletonAvatar />
+            <SkeletonInfo />
+          </SkeletonLeftContent>
+          <SkeletonButtonContainer />
+        </SkeletonContainer>
         <LeftContent>
           <Avatar src={lastContributor.avatarUrl} alt={lastContributor.name} />
           <Info>
@@ -209,7 +302,10 @@ const FileContributors = ({ relativePath, className, editPath }) => {
           </Info>
         </LeftContent>
         <ButtonContainer>
-          <ContributorsButton onClick={() => setModalOpen(true)}>
+          <ContributorsButton
+            onClick={() => setModalOpen(true)}
+            loading={loading}
+          >
             <Translation id="see-contributors" />
           </ContributorsButton>
           {editPath && (

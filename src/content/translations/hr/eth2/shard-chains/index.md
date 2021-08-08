@@ -48,7 +48,7 @@ Kada se isporuče prvi lanci djelića, oni će samo pružiti dodatne podatke mre
 
 Rollup je tehnologija „sloja 2” koja postoji danas. Omogućuju aplikacijama dapp da grupiraju ili skupe transakcije u jednu transakciju izvan lanca, generiraju kriptografski dokaz i zatim ga predaju lancu. To smanjuje podatke potrebne za transakciju. Kombinirajući to s dodatnom dostupnošću podataka koju pružaju djelić dobivate 100 000 transakcija u sekundi.
 
-[Više o tehnologiji rollup](/developers/docs/layer-2-scaling/)
+[Više o tehnologiji rollup](/developers/docs/scaling/layer-2-rollups/#rollups)
 
 ## Lanci djelića, verzija 2: izvršavanje koda {#code-execution}
 
@@ -56,7 +56,9 @@ Plan je uvijek bio dodati dodatnu funkcionalnost djelićima, kako bi postali sli
 
 ### Trebaju li djelići izvršenje koda? {#do-shards-need-code-execution}
 
-Vitalik Buterin, u podcastu Bankless, predstavio je 3 potencijalne opcije o kojima vrijedi razgovarati. <iframe width="100%" height="315" src="/developers/docs/layer-2-scaling/" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Vitalik Buterin, u podcastu Bankless, predstavio je 3 potencijalne opcije o kojima vrijedi razgovarati.
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
 
 #### 1. Nije potrebno izvršenje stanja {#state-execution-not-needed}
 
@@ -84,11 +86,15 @@ Sve su nadogradnje Eth2 donekle međusobno povezane. Dakle, ponovimo ukratko kak
 
 ### Djelići i Beacon Chain {#shards-and-beacon-chain}
 
-Beacon Chain sadrži svu logiku za održavanje djelića na sigurnom i sinkroniziranim. Beacon Chain koordinirat će učesnike u mreži, dodjeljujući ih djelićima na kojima trebaju raditi. Također će olakšati komunikaciju između djelića primanjem i pohranom podataka o transakcijama djelića kojima mogu pristupiti drugi djelići. To će djelićima dati snimak stanja Ethereuma kako bi sve bilo ažurno.<ButtonLink to="/eth2/beacon-chain/">Beacon Chain</ButtonLink>
+Beacon Chain sadrži svu logiku za održavanje djelića na sigurnom i sinkroniziranim. Beacon Chain koordinirat će učesnike u mreži, dodjeljujući ih djelićima na kojima trebaju raditi. Također će olakšati komunikaciju između djelića primanjem i pohranom podataka o transakcijama djelića kojima mogu pristupiti drugi djelići. To će djelićima dati snimak stanja Ethereuma kako bi sve bilo ažurno.
+
+<ButtonLink to="/eth2/beacon-chain/">Beacon Chain</ButtonLink>
 
 ### Djelići i spajanje {#shards-and-docking}
 
-Glavna mreža Ethereum postojat će kao i danas čak i nakon uvođenja djelića. Međutim, u jednom će trenutku glavna mreža morati postati djelić kako bi mogla prijeći na ulaganje. Vidjet ćemo hoće li glavna mreža postojati kao jedini „pametni” djelić koji se može nositi s izvršavanjem koda – u svakom slučaju, morat će se donijeti odluka u drugoj fazi razdjeljivanja.<ButtonLink to="/eth2/docking/">Spajanje</ButtonLink>
+Glavna mreža Ethereum postojat će kao i danas čak i nakon uvođenja djelića. Međutim, u jednom će trenutku glavna mreža morati postati djelić kako bi mogla prijeći na ulaganje. Vidjet ćemo hoće li glavna mreža postojati kao jedini „pametni” djelić koji se može nositi s izvršavanjem koda – u svakom slučaju, morat će se donijeti odluka u drugoj fazi razdjeljivanja.
+
+<ButtonLink to="/eth2/merge/">Spajanje</ButtonLink>
 
 <Divider />
 

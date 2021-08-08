@@ -224,6 +224,10 @@
   from = "/delphi/"
   to = "/en/developers/docs/programming-languages/delphi/"
   force = true
+[[redirects]]
+  from = "/dart/"
+  to = "/en/developers/docs/programming-languages/dart/"
+  force = true
 
 # Norwegian update
 ## All translations
@@ -254,6 +258,9 @@
   from = "/en/delphi/"
   to = "/en/developers/docs/programming-languages/delphi/"
 [[redirects]]
+  from = "/en/dart/"
+  to = "/en/developers/docs/programming-languages/dart/"
+[[redirects]]
   from = "/en/developers/docs/mining/"
   to = "/en/developers/docs/consensus-mechanisms/pow/mining/"
 
@@ -271,7 +278,24 @@
   to = "/:splat/developers/learning-tools/"
 [[redirects]]
   from = "/*/eth2/the-docking"
-  to = "/:splat/eth2/docking/"
+  to = "/:splat/eth2/merge/"
+[[redirects]]
+  from = "/*/eth2/the-merge"
+  to = "/:splat/eth2/merge/"
+[[redirects]]
+  from = "/*/eth2/docking"
+  to = "/:splat/eth2/merge/"
+[[redirects]]
+  from = "/*/developers/docs/layer-2-scaling"
+  to = "/:splat/developers/docs/scaling/layer-2-rollups"
+
+# Jobs
+[[redirects]]
+  from = "/*/about/web-developer"
+  to = "/:splat/about/#open-jobs"
+[[redirects]]
+  from = "/*/about/community-lead"
+  to = "/:splat/about/#open-jobs"
 
 # A redirect rule with all the supported properties
 # [[redirects]]

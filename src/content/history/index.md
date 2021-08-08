@@ -1,5 +1,5 @@
 ---
-title: History of Ethereum
+title: History and Forks of Ethereum
 description: A history of the Ethereum blockchain including major milestones, releases, and forks.
 lang: en
 sidebar: true
@@ -23,6 +23,41 @@ These rule changes may create a temporary split in the network. New blocks could
 <Divider />
 
 ## 2021 {#2021}
+
+### (_In Progress_) Altair {#altair}
+
+The Altair upgrade is the first scheduled upgrade for the [Beacon Chain](/eth2/beacon-chain). It is expected to go live in 2021. It will add support for "sync committees", which can enable light clients, and will bring inactivity and slashing penalties up to their full values.
+
+- [Read the Altair upgrade specification](https://github.com/ethereum/eth2.0-specs/tree/dev/specs/altair)
+
+---
+
+### London {#london}
+
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Aug-05-2021 12:33:42 PM +UTC</code><br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/12965000">12,965,000</a><br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH price: $2621 USD<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210805124609/https://ethereum.org/en/">ethereum.org on waybackmachine</a>
+
+#### Summary {#london-summary}
+
+The London upgrade introduced [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), which reformed the transaction fee market, along with changes to how gas refunds are handled and the [Ice Age](https://ethereum.org/en/glossary/#ice-age) schedule.
+
+- [Are you a dApp developer? Be sure to upgrade your libraries and tooling.](https://github.com/ethereum/eth1.0-specs/blob/master/network-upgrades/ecosystem-readiness.md)
+- [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
+- [Read the Ethereum Cat Herder's explainer](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
+
+<ExpandableCard title="London EIPs" contentPreview="Official improvements included in this upgrade.">
+
+- [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) – _improves the transaction fee market_
+- [EIP-3198](https://eips.ethereum.org/EIPS/eip-3198) – _returns the `BASEFEE` from a block_
+- [EIP-3529](https://eips.ethereum.org/EIPS/eip-3529) - _reduces gas refunds for EVM operations_
+- [EIP-3541](https://eips.ethereum.org/EIPS/eip-3541) - _prevents deploying contracts starting with `0xEF`_
+- [EIP-3554](https://eips.ethereum.org/EIPS/eip-3554) – _delays the Ice Age until December 2021_
+
+</ExpandableCard>
+
+---
 
 ### Berlin {#berlin}
 
@@ -77,7 +112,7 @@ The [Beacon Chain](/eth2/beacon-chain/) needed 16384 deposits of 32 staked ETH t
 
 #### Summary {#deposit-contract-summary}
 
-The staking deposit contract introduced [staking](/glossary/#staking) to the Ethereum ecosystem. Although a [mainnet](/glossary/#mainnet) contract, it had a direct impact on the timeline for launching the [Beacon Chain](/eth2/beacon-chain/), an important [Eth2 upgrade](/eth2/).
+The staking deposit contract introduced [staking](/glossary/#staking) to the Ethereum ecosystem. Although a [Mainnet](/glossary/#mainnet) contract, it had a direct impact on the timeline for launching the [Beacon Chain](/eth2/beacon-chain/), an important [Eth2 upgrade](/eth2/).
 
 [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
@@ -122,7 +157,7 @@ The Istanbul fork:
 
 - Optimised the [gas](/glossary/#gas) cost of certain actions in the [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Improved denial-of-service attack resilience.
-- Made [Layer 2 scaling](/developers/docs/layer-2-scaling/) solutions based on SNARKs and STARKs more performant.
+- Made [Layer 2 scaling](/developers/docs/scaling/layer-2-rollups/) solutions based on SNARKs and STARKs more performant.
 - Enabled Ethereum and Zcash to interoperate.
 - Allowed contracts to introduce more creative functions.
 
@@ -134,7 +169,7 @@ The Istanbul fork:
 - [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _cheaper cryptography to improve [gas](/glossary/#gas) costs._
 - [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _protects Ethereum against replay attacks by adding `CHAINID` [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine)._
 - [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _optimising opcode gas prices based on consumption._
-- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _reduces the cost of CallData to allow more data in blocks – good for [Layer 2 scaling](/developers/docs/layer-2-scaling/)._
+- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _reduces the cost of CallData to allow more data in blocks – good for [Layer 2 scaling](/developers/docs/scaling/layer-2-rollups/)._
 - [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) – _other opcode gas price alterations._
 
 </ExpandableCard>
@@ -185,7 +220,7 @@ The Byzantium fork:
 - Reduced block [mining](/developers/docs/consensus-mechanisms/pow/mining/) rewards from 5 to 3 ETH.
 - Delayed the [difficulty bomb](/glossary/#difficulty-bomb) by a year.
 - Added ability to make non-state-changing calls to other contracts.
-- Added certain cryptography methods to allow for [layer 2 scaling](/developers/docs/layer-2-scaling/).
+- Added certain cryptography methods to allow for [layer 2 scaling](/developers/docs/scaling/layer-2-rollups/).
 
 [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
@@ -193,8 +228,8 @@ The Byzantium fork:
 
 - [EIP-140](https://eips.ethereum.org/EIPS/eip-140) – _adds `REVERT` opcode._
 - [EIP-658](https://eips.ethereum.org/EIPS/eip-658) – _status field added to transaction receipts to indicate success or failure._
-- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _adds elliptic curve and scalar multiplication to allow for [ZK-Snarks](/developers/docs/layer-2-scaling/#rollups)._
-- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _adds elliptic curve and scalar multiplication to allow for [ZK-Snarks](/developers/docs/layer-2-scaling/#rollups)._
+- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _adds elliptic curve and scalar multiplication to allow for [ZK-Snarks](/developers/docs/scaling/layer-2-rollups/#zk-rollups)._
+- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _adds elliptic curve and scalar multiplication to allow for [ZK-Snarks](/developers/docs/scaling/layer-2-rollups/#zk-rollups)._
 - [EIP-198](https://eips.ethereum.org/EIPS/eip-198) – _enables RSA signature verification._
 - [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _adds support for variable length return values._
 - [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _adds `STATICCALL` opcode, allowing non-state-changing calls to other contracts._
@@ -268,7 +303,7 @@ The Tangerine Whistle fork was the first response to the denial of service (DoS)
 
 #### Summary {#dao-fork-summary}
 
-The DAO fork was in response to the [2016 DAO attack](https://www.coindesk.com/understanding-dao-hack-journalists) where an insecure [DAO](/glossary/#dao) contract was drained of over 3.6 million ETH in a hack. The fork moved the funds from the faulty contract to a [new contract](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) with a single funtion: withdraw. Anyone who lost funds could withdraw 1 ETH for every 100 DAO tokens in their wallets.
+The DAO fork was in response to the [2016 DAO attack](https://www.coindesk.com/understanding-dao-hack-journalists) where an insecure [DAO](/glossary/#dao) contract was drained of over 3.6 million ETH in a hack. The fork moved the funds from the faulty contract to a [new contract](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) with a single function: withdraw. Anyone who lost funds could withdraw 1 ETH for every 100 DAO tokens in their wallets.
 
 This course of action was voted on by the Ethereum community. Any ETH holder was able to vote via a transaction on [a voting platform](http://v1.carbonvote.com/). The decision to fork reached over 85% of the votes.
 

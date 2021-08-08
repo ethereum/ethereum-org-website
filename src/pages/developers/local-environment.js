@@ -482,7 +482,7 @@ const ChooseStackPage = ({ data }) => {
         <Subtitle>Local development blockchain</Subtitle>
         <p>
           When creating a new smart contract, you definitely don't want to
-          deploy it straight to to Ethereum's public mainnet (it costs money).
+          deploy it straight to to Ethereum's public Mainnet (it costs money).
           First, we recommend setting up a personal blockchain for local
           development, where you can run tests & kick the tires on your dapp.
         </p>
