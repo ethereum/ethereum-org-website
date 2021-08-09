@@ -40,9 +40,21 @@ const ButtonContainer = styled.div`
 const FeedbackCard = () => {
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
 
-  const title = feedbackSubmitted
-    ? "Thanks for your feedback!"
-    : "Did this page help answer your question?"
+  const discordLink = (
+    <a
+      href="https://discord.gg/rZz26QWfCg"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Discord
+    </a>
+  )
+
+  const title = feedbackSubmitted ? (
+    <>Join our public {discordLink} and get the answer you're looking for</>
+  ) : (
+    <>Did this page help answer your question?</>
+  )
 
   const handleClick = (isHelpful) => {
     trackCustomEvent({
