@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { ButtonSecondary } from "./SharedStyledComponents"
 import { trackCustomEvent } from "../utils/matomo"
+import Link from "./Link"
 
 const Card = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.border};
@@ -39,21 +40,15 @@ const ButtonContainer = styled.div`
 
 const FeedbackCard = () => {
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
+  const [isHelpful, setIsHelpful] = useState(false)
 
-  const discordLink = (
-    <a
-      href="https://discord.gg/rZz26QWfCg"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Discord
-    </a>
-  )
-
-  const title = feedbackSubmitted ? (
-    <>Join our public {discordLink} and get the answer you're looking for</>
+  const title = isHelpful ? (
+    <>Thanks for your feedback!</>
   ) : (
-    <>Did this page help answer your question?</>
+    <>
+      Join our public <Link to="https://discord.gg/rZz26QWfCg">Discord</Link>{" "}
+      and get the answer you're looking for
+    </>
   )
 
   const handleClick = (isHelpful) => {
@@ -62,12 +57,17 @@ const FeedbackCard = () => {
       eventAction: `Clicked`,
       eventName: isHelpful,
     })
+    setIsHelpful(isHelpful)
     setFeedbackSubmitted(true)
   }
   return (
     <Card>
       <Content>
-        <Title>{title}</Title>
+        <Title>
+          {feedbackSubmitted
+            ? title
+            : "Did this page help answer your question?"}
+        </Title>
         {!feedbackSubmitted && (
           <ButtonContainer>
             <ButtonSecondary onClick={() => handleClick(true)}>
