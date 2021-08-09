@@ -1059,6 +1059,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/Rodney-O-C-Melby"><img src="https://avatars.githubusercontent.com/u/16503898?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rodney Olav C Melby</b></sub></a><br /><a href="#content-Rodney-O-C-Melby" title="Content">🖋</a></td>
     <td align="center"><a href="https://cryptojobslist.com"><img src="https://avatars.githubusercontent.com/u/936436?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Raman</b></sub></a><br /><a href="#content-ksaitor" title="Content">🖋</a></td>
+    <td align="center"><a href="https://attrace.com"><img src="https://avatars.githubusercontent.com/u/9334333?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Roeland Werring</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aruleking" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
