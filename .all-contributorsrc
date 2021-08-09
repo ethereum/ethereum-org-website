@@ -4310,6 +4310,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "ruleking",
+      "name": "Roeland Werring",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9334333?v=4",
+      "profile": "https://attrace.com",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
