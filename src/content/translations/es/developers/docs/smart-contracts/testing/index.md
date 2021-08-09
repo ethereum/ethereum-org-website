@@ -3,7 +3,7 @@ title: Prueba de contratos inteligentes
 description:
 lang: es
 sidebar: true
-incomplete: verdadero
+incomplete: true
 ---
 
 ## Herramientas de prueba y bibliotecas {#testing-tools-and-libraries}

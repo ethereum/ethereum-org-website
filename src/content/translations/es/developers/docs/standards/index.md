@@ -3,7 +3,7 @@ title: Estándares de desarrollo de Ethereum
 description:
 lang: es
 sidebar: true
-incomplete: verdadero
+incomplete: true
 ---
 
 ## Descripción de estándares {#standards-overview}

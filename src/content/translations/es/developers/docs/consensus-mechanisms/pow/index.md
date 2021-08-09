@@ -3,7 +3,7 @@ title: Prueba de trabajo (PoW, por sus siglas en inglés)
 description: Una explicación del protocolo de consenso de la prueba de trabajo y su función en Ethereum.
 lang: es
 sidebar: true
-incomplete: verdadero
+incomplete: true
 ---
 
 Ethereum, como Bitcoin, utiliza actualmente un protocolo de consenso llamado [Prueba de trabajo (PoW, por sus siglas en inglés)](https://en.wikipedia.org/wiki/Proof_of_work). Esto permite a la red de Ethereum ponerse de acuerdo sobre el estado de toda la información registrada en la blockchain de Ethereum y prevenir ciertos tipos de ataques económicos.

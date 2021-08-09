@@ -3,7 +3,7 @@ title: Gas y tarifas
 description:
 lang: es
 sidebar: true
-incomplete: verdadero
+incomplete: true
 ---
 
 El gas es esencial para la red de Ethereum. Se trata del combustible que le permite operar, de la misma manera que un vehículo necesita gasolina para funcionar.

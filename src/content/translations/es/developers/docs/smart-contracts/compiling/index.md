@@ -3,7 +3,7 @@ title: Compilación de contratos inteligentes
 description: Una explicación de por qué necesitas compilar contratos inteligentes y qué es lo que realmente hace la compilación.
 lang: es
 sidebar: true
-incomplete: verdadero
+incomplete: true
 ---
 
 Necesitas compilar tu contrato para que tu aplicación web y la máquina virtual de Ethereum (EVM) puedan entenderlo.

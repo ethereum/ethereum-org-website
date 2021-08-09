@@ -3,7 +3,7 @@ title: Estándares de tokens
 description:
 lang: es
 sidebar: true
-incomplete: verdadero
+incomplete: true
 ---
 
 ## Introducción {#introduction}

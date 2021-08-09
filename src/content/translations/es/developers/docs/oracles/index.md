@@ -3,7 +3,7 @@ title: Oracles
 description: Los oráculos ayudan a proporcionar datos del mundo real a tu aplicación de Ethereum, ya que los contratos inteligentes, por sí solos, no pueden consultar información del mundo real.
 lang: es
 sidebar: true
-incomplete: verdadero
+incomplete: true
 ---
 
 Los oráculos son feeds de datos que conectan Ethereum a información del mundo real, externa a la blockchain (off-chain) para que puedas consultar datos en tus contratos inteligentes. Por ejemplo, las dapps de mercados de predicciones utilizan oráculos para establecer pagos basados en eventos. Un mercado de predicción podría pedirte que apostases tu ETH sobre el próximo presidente de los Estados Unidos. Utilizarán un oráculo para confirmar el resultado y pagar a los ganadores.

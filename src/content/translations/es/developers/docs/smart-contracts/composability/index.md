@@ -3,7 +3,7 @@ title: Composición del contrato inteligente
 description:
 lang: es
 sidebar: true
-incomplete: verdadero
+incomplete: true
 ---
 
 ## Una breve introducción {#a-brief-introduction}

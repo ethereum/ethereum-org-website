@@ -3,7 +3,7 @@ title: Mecanismos de consenso
 description: Una explicación de los protocolos de consenso en los sistemas distribuidos y de su función en Etherum.
 lang: es
 sidebar: true
-incomplete: verdadero
+incomplete: true
 ---
 
 Cuando se trata de blockchains como Ethereum (que, básicamente, son bases de datos distribuidas), los nodos de la red deben ser capaces de llegar a un acuerdo sobre el estado actual del sistema. Esto se consigue con ayuda de mecanismos de consenso.

@@ -3,7 +3,7 @@ title: Escalado de capa 2
 description: Una introducción a las diferentes opciones de escalado, que desarrolla actualmente la comunidad de Ethereum.
 lang: es
 sidebar: true
-incomplete: verdadero
+incomplete: true
 sidebarDepth: 3
 ---
 

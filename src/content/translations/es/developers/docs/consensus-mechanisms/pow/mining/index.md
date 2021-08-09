@@ -3,7 +3,7 @@ title: Minería
 description: Una explicación sobre el funcionamiento de la minería en Etherum y sobre cómo mantiene a Etherum seguro y descentralizado.
 lang: es
 sidebar: true
-incomplete: verdadero
+incomplete: true
 ---
 
 ## Requisitos previos {#prerequisites}

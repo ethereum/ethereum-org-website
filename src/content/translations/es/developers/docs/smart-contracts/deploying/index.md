@@ -3,7 +3,7 @@ title: Implementación de contratos inteligentes
 description:
 lang: es
 sidebar: true
-incomplete: verdadero
+incomplete: true
 ---
 
 Necesitas implementar tu contrato inteligente para que esté disponible para los usuarios de una red de Ethereum.

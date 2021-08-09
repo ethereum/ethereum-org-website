@@ -3,7 +3,7 @@ title: Prueba de participación (PoS)
 description: Una explicación del protocolo de consenso de la prueba de participación y su papel en Ethereum.
 lang: es
 sidebar: true
-incomplete: verdadero
+incomplete: true
 ---
 
 Ethereum se está trasladando a un mecanismo de consenso llamado prueba de participación (PoS) desde la[prueba de trabajo (PoW)](/developers/docs/consensus-mechanisms/pow/). Este siempre ha sido el plan, ya que es clave para la estrategia de la comunidad: conseguir que Ethereum crezca mediante [las actualizaciones de Eth2](/eth2/). Sin embargo, obtener una correcta PoS es un gran reto técnico y no es tan sencillo como usar PoW para alcanzar un consenso a través de la red.
