@@ -418,11 +418,13 @@ Le modèle d'émission sera le suivant :
 - 0,099 x le montant total vendu sera conservé comme réserve à long terme.
 - 0,26 x le montant total vendu sera alloué aux mineurs chaque année indéfiniment après ce point.
 
-Groupe Au lancement Après 1 an Après 5 ans
-
----
-
-Unités monétaires 1,198 X 1,458 X 2,498 X Acheteurs 83,5 % 68,6 % 40,0 % Réserve dépensée avant vente 8,26 % 6,79 % 3,96 % Réserve utilisée après vente 8,26 % 6,79 % 3,96 % Mineurs 0 % 17,8 % 52,0 %
+| Groupe                       | Au lancement | Après 1 an | Après 5 ans |
+| ---------------------------- | ------------ | ---------- | ----------- |
+| Unités monétaires            | 1,198 X      | 1,458 X    | 2,498 X     |
+| Acheteurs                    | 83,5 %       | 68,6 %     | 40,0 %      |
+| Réserve dépensée avant vente | 8,26 %       | 6,79 %     | 3,96 %      |
+| Réserve utilisée après vente | 8,26 %       | 6,79 %     | 3,96 %      |
+| Mineurs                      | 0 %          | 17,8 %     | 52,0 %      |
 
 **Taux de croissance de l'offre à long terme (en pourcentage)**
 
