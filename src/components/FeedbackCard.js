@@ -47,7 +47,7 @@ const FeedbackCard = () => {
   ) : (
     <>
       Join our public <Link to="https://discord.gg/rZz26QWfCg">Discord</Link>{" "}
-      and get the answer you're looking for
+      and get the answer you're looking for.
     </>
   )
 
