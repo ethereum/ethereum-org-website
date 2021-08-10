@@ -23,9 +23,6 @@ Here are some of the most popular token standards on Ethereum:
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - A standard interface for non-fungible tokens, like a deed for artwork or a song.
 - [ERC-777](https://eips.ethereum.org/EIPS/eip-777) - ERC-777 allows people to build extra functionality on top of tokens such as a mixer contract for improved transaction privacy or an emergency recover function to bail you out if you lose your private keys.
 
-
-
-
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_

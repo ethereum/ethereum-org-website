@@ -18,7 +18,7 @@ export const useActiveHash = (itemIds, rootMargin = `0% 0% -80% 0%`) => {
           }
         })
       },
-      { rootMargin: rootMargin}
+      { rootMargin: rootMargin }
     )
 
     itemIds?.forEach((id) => {

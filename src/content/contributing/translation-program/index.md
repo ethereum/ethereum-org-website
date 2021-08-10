@@ -43,21 +43,22 @@ If you want to get involved and help us grow the global Ethereum community by tr
    ![Crowdin online editor](./online-editor.png)
 
    **_1 – Left sidebar_**
-   -  Untranslated (red) – text that has not been worked on yet. These are the strings that you should be translating.
-   -  Translated (green) – text that has already been translated, but not yet reviewed. You are welcome to suggest alternate translations, or vote on existing ones using the ‘’+’’ and ‘’-‘‘ buttons in the editor.
-   -  Approved (check mark) – text that has already been reviewed and is currently live on the website.
+
+   - Untranslated (red) – text that has not been worked on yet. These are the strings that you should be translating.
+   - Translated (green) – text that has already been translated, but not yet reviewed. You are welcome to suggest alternate translations, or vote on existing ones using the ‘’+’’ and ‘’-‘‘ buttons in the editor.
+   - Approved (check mark) – text that has already been reviewed and is currently live on the website.
 
    You can also use the buttons on top to search for specific strings, filter them by status or change the view.
-   
+
    **_2 – Editor area_**
-   
+
    The main translation area – source text is displayed on top, with additional context and screenshots, if available.
    To suggest a new translation, enter your translation in the ‘’Enter translation here’’ field and click Save.
-    
+
    You can also find existing translations of the string and translations into other languages in this section, as well as translation memory matches and machine translation suggestions.
 
    **_3 – Right sidebar_**
-   
+
    This is where you can find comments, translation memory entries and glossary entries. The default view shows the comments and allows translators to communicate, raise issues or report incorrect translations.
 
    By using the buttons on top, you can also switch to the Translation Memory, where you can search for existing translations, or to the Glossary, which contains descriptions and standard translations of key terms.
@@ -69,7 +70,7 @@ If you want to get involved and help us grow the global Ethereum community by tr
 
 Do you have any questions? Or want to collaborate with our team and other translators? Please post in the #translations channel of our [ethereum.org Discord server](https://discord.gg/6WX7E97)
 
-  You can also reach out to us at translations@ethereum.org
+You can also reach out to us at translations@ethereum.org
 
 Thank you for your participation in the ethereum.org Translation Program!
 
