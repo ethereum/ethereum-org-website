@@ -4292,6 +4292,42 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "Rodney-O-C-Melby",
+      "name": "Rodney Olav C Melby",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16503898?v=4",
+      "profile": "https://github.com/Rodney-O-C-Melby",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "ksaitor",
+      "name": "Raman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/936436?v=4",
+      "profile": "https://cryptojobslist.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "ruleking",
+      "name": "Roeland Werring",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9334333?v=4",
+      "profile": "https://attrace.com",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "kladkogex",
+      "name": "Stan Kladko",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13399135?v=4",
+      "profile": "https://github.com/skalenetwork",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

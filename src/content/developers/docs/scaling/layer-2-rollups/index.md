@@ -58,7 +58,7 @@ Being on layer 2, ZK-rollups can be optimised to reduce transaction size further
 | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | Faster finality time since the state is instantly verified once the proofs are sent to the main chain.            | Some don't have EVM support.                                                                          |
 | Not vulnerable to the economic attacks that [Optimistic rollups](#optimistic-pros-and-cons) can be vulnerable to. | Validity proofs are intense to compute – not worth it for applications with little on-chain activity. |
-| Secure and decentralized, since the data that is needed to recover the state is stored on the layer 1 chain.      |                                                                                                       |
+| Secure and decentralized, since the data that is needed to recover the state is stored on the layer 1 chain.      | Operator can influence transaction ordering                                                           |
 
 #### Use ZK-rollups {#use-zk-rollups}
 
@@ -96,7 +96,7 @@ So you can see the incentives: participants get penalized for conducting fraud a
 | Pros                                                                                                             | Cons                                                                        |
 | ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | Anything you can do on Ethereum layer 1, you can do with Optimistic rollups as it's EVM and Solidity compatible. | Long wait times for on-chain transaction due to potential fraud challenges. |
-| All transaction data is stored on the layer 1 chain, meaning it's secure and decentralized.                      |                                                                             |
+| All transaction data is stored on the layer 1 chain, meaning it's secure and decentralized.                      | Operator can influence transaction ordering                                 |
 
 #### Use Optimistic rollups {#use-optimistic-rollups}
 

@@ -60,7 +60,6 @@ Shard chains can only safely enter the Ethereum ecosystem with a proof-of-stake 
 
 <ButtonLink to="/eth2/shard-chains/">Shard chains</ButtonLink>
 
-
 <Divider />
 
 ## Interact with the Beacon Chain {#interact-with-beacon-chain}

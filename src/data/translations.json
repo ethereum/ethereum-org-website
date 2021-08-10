@@ -32,7 +32,7 @@
     "language": "Ελληνικά"
   },
   "es": {
-    "version": 2.0,
+    "version": 2.1,
     "language": "Español"
   },
   "fa": {
@@ -56,7 +56,7 @@
     "language": "Hrvatski"
   },
   "hu": {
-    "version": 2.0,
+    "version": 2.1,
     "language": "Magyar"
   },
   "id": {
@@ -84,7 +84,7 @@
     "language": "Lietuvis"
   },
   "ml": {
-    "version": 1.1,
+    "version": 2.0,
     "language": "മലയാളം"
   },
   "nl": {
@@ -140,7 +140,7 @@
     "language": "Tiếng Việt"
   },
   "zh": {
-    "version": 1.1,
+    "version": 2.2,
     "language": "简体中文"
   },
   "zh-tw": {
