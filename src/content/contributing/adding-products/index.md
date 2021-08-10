@@ -79,6 +79,10 @@ This is a design decision that ethereum.org is responsible for.
 
 But rest assured, **there will be links to other websites that rank more dapps/wallets**
 
+### Product Ordering {#product-ordering}
+
+Unless products are specifically ordered otherwise, such as alphabetically, products will be displayed from most to least recently added to the page. In other words, the newest products get added to the bottom of the list. 
+
 ### Terms of use {#terms-of-use}
 
 Please also refer to our [terms of use](/terms-of-use/). Information on ethereum.org is provided solely for general information purposes.
