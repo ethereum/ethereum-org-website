@@ -418,11 +418,13 @@ A kiadási modell a következő:
 - A teljes értékesített összeg 0,099x részét hosszú távú tartalékba helyezik.
 - A teljes értékesített összeg 0,26x része a bányászokhoz kerül évente, örökre ezután a pont után.
 
-Csoport induláskor 1 év után 5 év után
-
----
-
-Valuta egység 1,198X 1,458X 2,498X Vásárlók 83,5% 68,6% 40,0% Értékesítés előtt elköltött tartalék 8,26% 6,79% 3,96% Értékesítés után felhasznált tartalék 8,26% 6,79% 3,96% Bányászok 0% 17,8% 52,0%
+| Csoport                               | induláskor | 1 év után | 5 év után |
+| ------------------------------------- | ---------- | --------- | --------- |
+| Valuta egység                         | 1,198X     | 1,458X    | 2,498X    |
+| Vásárlók                              | 83,5%      | 68,6%     | 40,0%     |
+| Értékesítés előtt elköltött tartalék  | 8,26%      | 6,79%     | 3,96%     |
+| Értékesítés után felhasznált tartalék | 8,26%      | 6,79%     | 3,96%     |
+| Bányászok                             | 0%         | 17,8%     | 52,0%     |
 
 **Hosszú távú kínálati növekedési ütem (százalék)**
 
