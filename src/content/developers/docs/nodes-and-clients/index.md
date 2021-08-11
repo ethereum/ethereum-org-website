@@ -55,7 +55,7 @@ Running a node allows you to trustlessly and privately use Ethereum while suppor
 
 Running your own node enables you to use Ethereum in a truly private, self-sufficient and trustless manner. You don't need to trust the network because you can verify the data yourself with your client. "Don't trust, verify" is a popular blockchain mantra.
 
-- You can run the programs using your node on the same computer. This allows you to connect to your node using IPC or possibly through rewriting the node to load your program as a plugin bringing low latency which is a requirement when you to replace your transactions as fast as possible (aka frontrunning).
+- You can connect to your node using **Inter-process Communications (IPC)** or rewrite the node to load your program as a plugin. This grants low latency, which is required to replace your transactions as fast as possible (i.e. frontrunning).
 - You can program your own custom RPC endpoints.
 - Your node verifies all the transactions and blocks against consensus rules by itself. This means you don’t have to rely on any other nodes in the network or fully trust them.
 - You won't have to leak your addresses and balances to random nodes. Everything can be checked with your own client.
