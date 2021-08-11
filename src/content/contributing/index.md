@@ -67,7 +67,7 @@ Decisions about individual PRs, design evolution and major upgrades are made by 
 
 ## New to open-source? {#new-to-open-source}
 
-We have low barrier to entry issues on our Github repository specifically designed for developers who are new to open-source labelled [good first issue](https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
+We have low barrier to entry issues on our Github repository specifically designed for developers who are new to open-source labelled [good first issue](https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
 
 ## Claim your contributor POAP {#poap}
 
