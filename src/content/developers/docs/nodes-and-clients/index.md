@@ -42,7 +42,7 @@ If you want to [run your own node](/developers/docs/nodes-and-clients/run-a-node
 
 ### Archive node {#archive-node}
 
-- Stores everything kept in the full node and builds an archive of historical states. Needed if you want to query something like an account balance at block #4,000,000 or simply and realiablely [test your own transactions set without mining them using OpenEthereum](https://openethereum.github.io/JSONRPC-trace-module#trace_callmany).
+- Stores everything kept in the full node and builds an archive of historical states. Needed if you want to query something like an account balance at block #4,000,000, or simply and reliably [test your own transactions set without mining them using OpenEthereum](https://openethereum.github.io/JSONRPC-trace-module#trace_callmany).
 - These data represent units of terabytes which makes archive nodes less attractive for average users but can be handy for services like block explorers, wallet vendors, and chain analytics.
 
 Syncing clients in any mode other than archive will result in pruned blockchain data. This means, there is no archive of all historical state but the full node is able to build them on demand.
