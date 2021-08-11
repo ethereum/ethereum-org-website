@@ -4328,6 +4328,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "JaredFlomen",
+      "name": "Jared Flomen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58126876?v=4",
+      "profile": "http://jaredflomen.ca",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
