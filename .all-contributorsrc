@@ -4337,6 +4337,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "mannekin",
+      "name": "Joseph Wallace",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38049812?v=4",
+      "profile": "http://atimidblog.com",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
