@@ -130,8 +130,7 @@ Go Ethereum (Geth for short) is one of the original implementations of the Ether
 
 #### Erigon {#erigon}
 
-Previously known as Turbo‐Geth. It is a fork of Go Ethereum oriented toward speed and disk‐space efficiency. It is fully compatible with Go Ethereum except for the on‐disk blockchain/database layout.
-
+Erigon, formerly known as Turbo‐Geth, is a fork of Go Ethereum oriented toward speed and disk‐space efficiency. Erigon is a completely re-architected implementation of Ethereum, currently written in Go but with implementations in other languages planned. Erigon's goal is to provide a faster, more modular, and more optimized implementation of Ethereum. It can perform a full archive node sync using less than 2TB of disk space, in under 3 days
 #### OpenEthereum {#openethereum}
 
 OpenEthereum is a fast, feature-rich and advanced CLI-based Ethereum client. It's built to provide the essential infrastructure for speedy and reliable services which require fast synchronisation and maximum up-time. OpenEthereum’s goal is to be the fastest, lightest, and most secure Ethereum client. It provides a clean, modular codebase for:
