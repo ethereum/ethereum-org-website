@@ -38,5 +38,21 @@
     "description": "A global virtual hackathon to build the foundation for the decentralized web.",
     "startDate": "2021-07-30",
     "endDate": "2021-08-20"
+  },
+  {
+    "title": "ETHOnline",
+    "to": "https://online.ethglobal.com/",
+    "sponsor": null,
+    "description": "ETHGlobal's biggest event of the year.",
+    "startDate": "2021-09-17",
+    "endDate": "2021-10-15"
+  },
+  {
+    "title": "ETH LISBON",
+    "to": "https://www.ethlisbon.org/",
+    "sponsor": "TBA",
+    "description": "A hackathon organized by the biggest Fintech hub in Portugal(Fintech House)",
+    "startDate": "2021-10-22",
+    "endDate": "2021-10-24"
   }
 ]
