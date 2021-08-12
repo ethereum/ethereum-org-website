@@ -31,11 +31,6 @@ Before diving into frameworks, we recommend you first read through our introduct
 
 ## Available frameworks {#available-frameworks}
 
-**Dapptools -** **_A suite of Ethereum focused CLI tools following the Unix design philosophy, favoring composability, configurability and extensibility._**
-
-- [Homepage](https://dapp.tools/)
-- [GitHub](https://github.com/dapphub/dapptools/)
-
 **Truffle -** **_A development environment, testing framework, build pipeline, and other tools._**
 
 - [trufflesuite.com](https://www.trufflesuite.com/)
@@ -92,6 +87,11 @@ Before diving into frameworks, we recommend you first read through our introduct
 
 - [Docs](https://etherlime.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/LimeChain/etherlime)
+
+**Dapptools -** **_A suite of Ethereum focused CLI tools following the Unix design philosophy, favoring composability, configurability and extensibility._**
+
+- [Homepage](https://dapp.tools/)
+- [GitHub](https://github.com/dapphub/dapptools/)
 
 ## Further reading {#further-reading}
 
