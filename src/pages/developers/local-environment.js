@@ -274,7 +274,7 @@ const frameworksList = [
   {
     id: "dapptools",
     url: "https://dapp.tools/",
-    githubUrl: "https://github.com/dapphub/dapptools/",
+    githubUrl: "https://github.com/dapphub/dapptools",
     background: "#fff",
     name: "Dapptools",
     description: "page-local-environment-dapptools-desc",
