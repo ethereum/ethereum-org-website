@@ -15,3 +15,4 @@ jobs:
           stale-issue-label: "Status: Stale"
           stale-issue-message: "This issue is stale because it has been open 45 days with no activity."
           days-before-stale: 45
+          days-before-close: -1
