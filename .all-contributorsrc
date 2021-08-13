@@ -4356,6 +4356,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "mds1",
+      "name": "Matt",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17163988?v=4",
+      "profile": "https://mattsolomon.dev",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
