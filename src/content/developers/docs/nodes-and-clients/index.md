@@ -42,7 +42,7 @@ If you want to [run your own node](/developers/docs/nodes-and-clients/run-a-node
 
 ### Archive node {#archive-node}
 
-- Stores everything kept in the full node and builds an archive of historical states. Needed if you want to query something like an account balance at block #4,000,000.
+- Stores everything kept in the full node and builds an archive of historical states. Needed if you want to query something like an account balance at block #4,000,000, or simply and reliably [test your own transactions set without mining them using OpenEthereum](https://openethereum.github.io/JSONRPC-trace-module#trace_callmany).
 - These data represent units of terabytes which makes archive nodes less attractive for average users but can be handy for services like block explorers, wallet vendors, and chain analytics.
 
 Syncing clients in any mode other than archive will result in pruned blockchain data. This means, there is no archive of all historical states but the full node is able to build them on demand.
@@ -58,6 +58,8 @@ Running your own node enables you to use Ethereum in a truly private, self-suffi
 - Your node verifies all the transactions and blocks against consensus rules by itself. This means you don’t have to rely on any other nodes in the network or fully trust them.
 - You won't have to leak your addresses and balances to random nodes. Everything can be checked with your own client.
 - Your dapp can be more secure and private if you use your own node. [Metamask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) and some other wallets can be easily pointed to your own local node.
+- You can program your own custom RPC endpoints.
+- You can connect to your node using **Inter-process Communications (IPC)** or rewrite the node to load your program as a plugin. This grants low latency, which is required to replace your transactions as fast as possible (i.e. frontrunning).
 
 ![How you access Ethereum via your application and nodes](./nodes.png)
 
@@ -107,13 +109,13 @@ The Ethereum community maintains multiple open-source clients, developed by diff
 
 This table summarizes the different clients. All of them are actively worked on and pass [client tests](https://github.com/ethereum/tests).
 
-| Client                                                       | Language   | Operating systems     | Networks                                   | Sync strategies  | State pruning   |
-| ------------------------------------------------------------ | ---------- | --------------------- | ------------------------------------------ | ---------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)                           | Go         | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Fast, Full, Snap | Archive, Pruned |
-| [OpenEthereum](https://github.com/openethereum/openethereum) | Rust       | Linux, Windows, macOS | Mainnet, Kovan, Ropsten, and more          | Warp, Full       | Archive, Pruned |
-| [Nethermind](http://nethermind.io/)                          | C#, .NET   | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, and more | Fast, Full       | Archive, Pruned |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java       | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, and Görli       | Fast, Full       | Archive, Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon)              | Go / Multi | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Full             | Archive, Pruned |
+| Client                                                       | Language | Operating systems     | Networks                                   | Sync strategies         | State pruning   |
+| ------------------------------------------------------------ | -------- | --------------------- | ------------------------------------------ | ----------------------- | --------------- |
+| [Geth](https://geth.ethereum.org/)                           | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Fast, Full              | Archive, Pruned |
+| [OpenEthereum](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, macOS | Mainnet, Kovan, Ropsten, and more          | Warp, Full              | Archive, Pruned |
+| [Nethermind](http://nethermind.io/)                          | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, and more | Fast, Full              | Archive, Pruned |
+| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, and Görli       | Fast, Full              | Archive, Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon)                           | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Fast, Full              | Archive, Pruned |
 
 For more on supported networks, read up on [Ethereum networks](/developers/docs/networks/).
 
@@ -153,6 +155,10 @@ Hyperledger Besu is an enterprise-grade Ethereum client for public and permissio
 
 Erigon is a completely re-architected implementation of Ethereum, currently written in Go but with implementations in other languages planned. Erigon's goal is to provide a faster, more modular, and more optimized implementation of Ethereum. It can perform a full archive node sync using less than 2TB of disk space, in under 3 days.
 
+#### Erigon {#erigon}
+
+Erigon, formerly known as Turbo‐Geth, is a fork of Go Ethereum oriented toward speed and disk‐space efficiency. Erigon is a completely re-architected implementation of Ethereum, currently written in Go but with implementations in other languages planned. Erigon's goal is to provide a faster, more modular, and more optimized implementation of Ethereum. It can perform a full archive node sync using less than 2TB of disk space, in under 3 days
+
 ### Sync modes {#sync-modes}
 
 - Full – downloads all blocks (including headers, transactions and receipts) and generates the state of the blockchain incrementally by executing every block.
@@ -164,7 +170,7 @@ Erigon is a completely re-architected implementation of Ethereum, currently writ
 
 You define the type of sync when you get set up, like so:
 
-**Setting up light sync in [GETH](https://geth.ethereum.org/)**
+**Setting up light sync in [GETH](https://geth.ethereum.org/) or [ERIGON](https://github.com/ledgerwatch/erigon)**
 
 `geth --syncmode "light"`
 
