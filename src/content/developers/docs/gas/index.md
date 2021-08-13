@@ -155,7 +155,6 @@ If you are looking to reduce gas costs for your ETH you are able to set a tip to
 If you want to monitor gas prices so you are able to send your ETH for less you can use many different tools such as:
 
 - [Etherscan](https://etherscan.io/gastracker)
-- [GasNow](https://www.gasnow.org)
 
 ## Further Reading {#further-reading}
 
