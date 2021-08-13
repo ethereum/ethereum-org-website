@@ -8,7 +8,7 @@ sidebar: true
 # Contributing to ethereum.org 🦄 {#contributing-to-ethereumorg-}
 
 <InfoBanner shouldCenter emoji=":tada:">
-  Claim your POAP token! If you contributed to ethereum.org in 2020, there's a unique POAP waiting for you.{" "}
+  Claim your POAP token! If you contributed to ethereum.org, there's a unique POAP waiting for you.{" "}
   <a href="#poap">More on POAPs</a>
 </InfoBanner>
 
