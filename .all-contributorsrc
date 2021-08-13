@@ -4374,6 +4374,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "ricky321u",
+      "name": "Ricky",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17769771?v=4",
+      "profile": "https://github.com/ricky321u",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
