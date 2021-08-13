@@ -20,7 +20,7 @@ Since each Ethereum transaction requires computational resources to execute, eac
 ![A diagram showing where gas is needed in EVM operations](./gas.png)
 _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-Gas fees are paid in Ethereum's native currency, ether (ETH). Gas prices are denoted in gwei, which itself is a denomination of ETH - each gwei is equal to 0.000000001 ETH (10<sup>-9</sup> ETH). For example, instead of saying that your gas costs 0.000000001 ether, you can say your gas costs 1 gwei.
+Gas fees are paid in Ethereum's native currency, ether (ETH). Gas prices are denoted in gwei, which itself is a denomination of ETH - each gwei is equal to 0.000000001 ETH (10<sup>-9</sup> ETH). For example, instead of saying that your gas costs 0.000000001 ether, you can say your gas costs 1 gwei. The word 'gwei' itself means 'giga-wei', and it is equal to 1,000,000,000 wei. Wei itself (named after [Wei Dai](https://en.wikipedia.org/wiki/Wei_Dai), creator of [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) is the smallest unit of ETH.
 
 ## Prior to the London upgrade {#pre-london}
 
@@ -155,13 +155,13 @@ If you are looking to reduce gas costs for your ETH you are able to set a tip to
 If you want to monitor gas prices so you are able to send your ETH for less you can use many different tools such as:
 
 - [Etherscan](https://etherscan.io/gastracker)
-- [GasNow](https://www.gasnow.org)
 
 ## Further Reading {#further-reading}
 
 - [Ethereum Gas Explained](https://defiprime.com/gas)
 - [Is Ethereum more expensive to use as price rises?](https://docs.ethhub.io/questions-about-ethereum/is-ethereum-more-expensive-to-use-as-price-rises/)
 - [Reducing the gas consumption of your Smart Contracts](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
+- [Proof of Stake versus Proof of Work](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 
 ## Related Tools {#related-tools}
 
