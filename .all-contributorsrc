@@ -4365,6 +4365,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "ytrezq",
+      "name": "ytrezq",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3824869?v=4",
+      "profile": "https://github.com/ytrezq",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
