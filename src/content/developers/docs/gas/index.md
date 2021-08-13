@@ -170,7 +170,6 @@ If you want to monitor gas prices so you are able to send your ETH for less you 
 - [Etherscan Gas Tracker](https://etherscan.io/gastracker) _Transaction gas price estimator_
 - [Bloxy Gas Analytics](https://stat.bloxy.info/superset/dashboard/gas/?standalone=true) _Ethereum network gas stats_
 - [Blocknative's Gas Platform](https://www.blocknative.com/gas) _Gas estimation API powered by Blocknative's global mempool data platform_
-- [Gas Now](https://www.gasnow.org) _A tool for forecasting the price of gas on the Ethereum network_
 
 ## Related Topics {#related-topics}
 
