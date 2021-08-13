@@ -65,6 +65,10 @@ Decisions about individual PRs, design evolution and major upgrades are made by 
 - [@ethdotorg](https://twitter.com/ethdotorg)
 - [Discord server](https://discord.gg/CetY6Y4)
 
+## New to open-source? {#new-to-open-source}
+
+We have low barrier to entry issues on our Github repository specifically designed for developers who are new to open-source labelled [good first issue](https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
+
 ## Claim your contributor POAP {#poap}
 
 If your contribution gets merged into ethereum.org, we'll mint you a unique contributors POAP. A Proof of Attendance Protocol (POAP) token is on-chain proof that you helped make the ecosystem a little more awesome.

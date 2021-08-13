@@ -85,7 +85,9 @@ Reține că trebuie să conectezi discul la un port USB 3.0 (albastru)
 
 ## Descărcarea și instalarea imaginii {#image-download-and-installation}
 
-### 1. Descarcă imaginea Eth 1.0 sau Eth 2.0 {#1-download-eth-10-or-eth-20-images}<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">Descarcă imaginea Eth 1.0</ButtonLink>
+### 1. Descarcă imaginea Eth 1.0 sau Eth 2.0 {#1-download-eth-10-or-eth-20-images}
+
+<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">Descarcă imaginea Eth 1.0</ButtonLink>
 
 sha256 7fa9370d13857dd6abc8fde637c7a9a7a66b307d5c28b0d29a09c73c55c<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">Descarcă imaginea Eth2</ButtonLink>
 

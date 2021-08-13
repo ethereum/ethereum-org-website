@@ -30,9 +30,9 @@ Când va fi gata, rețeaua principală Ethereum va „andoca” cu lanțul Beaco
 
 Rețeaua principală va aduce posibilitatea de a rula contracte inteligente în sistemul de Dovadă a Mizei (PoS), plus istoricul complet și starea actuală a Ethereum, pentru a asigura tranziția lină pentru toți deținătorii și utilizatorii de ETH.
 
-<!-- ### Improving mainnet
+<!-- ### Improving Mainnet
 
-Before mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
+Before Mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
 
 These include Improvements for
 
@@ -56,8 +56,12 @@ Upgrade-urile Eth2 sunt oarecum interdependente. Să recapitulăm cum se corelea
 
 ### Andocarea și lanțul Beacon {#docking-and-beacon-chain}
 
-După realizarea andocării, stakerii vor fi desemnați să valideze rețeaua principală Ethereum. La fel ca în cazul lanțurilor de fragmente. [Mineritul](/developers/docs/consensus-mechanisms/pow/mining/) nu va mai fi necesar, astfel încât minerii își vor investi probabil câștigurile în mizarea în noul sistem de Dovadă a Mizei (PoS).<ButtonLink to="/eth2/beacon-chain/">Lanțul Beacon</ButtonLink>
+După realizarea andocării, stakerii vor fi desemnați să valideze rețeaua principală Ethereum. La fel ca în cazul lanțurilor de fragmente. [Mineritul](/developers/docs/consensus-mechanisms/pow/mining/) nu va mai fi necesar, astfel încât minerii își vor investi probabil câștigurile în mizarea în noul sistem de Dovadă a Mizei (PoS).
+
+<ButtonLink to="/eth2/beacon-chain/">Lanțul Beacon</ButtonLink>
 
 ### Andocarea și lanțurile de fragmente {#docking-and-shard-chains}
 
-Având în vedere că rețeaua principală va deveni un fragment, implementarea cu succes a lanțurilor de fragmente este esențială pentru acest upgrade. Probabil că tranziția va juca un rol important în a ajuta comunitatea să decidă dacă va lansa un al doilea upgrade la fragmentare (sharding). Acest upgrade va face celelalte fragmente un fel de rețea principală: vor putea să gestioneze tranzacții și contracte inteligente nu doar să furnizeze mai multe date.<ButtonLink to="/eth2/shard-chains/">Lanțuri de fragmente</ButtonLink>
+Având în vedere că rețeaua principală va deveni un fragment, implementarea cu succes a lanțurilor de fragmente este esențială pentru acest upgrade. Probabil că tranziția va juca un rol important în a ajuta comunitatea să decidă dacă va lansa un al doilea upgrade la fragmentare (sharding). Acest upgrade va face celelalte fragmente un fel de rețea principală: vor putea să gestioneze tranzacții și contracte inteligente nu doar să furnizeze mai multe date.
+
+<ButtonLink to="/eth2/shard-chains/">Lanțuri de fragmente</ButtonLink>

@@ -40,8 +40,8 @@ sidebar: true
 
 ## উন্নত ইউজ প্যাটার্ন {#advanced-use-patterns}
 
-- [পাইথন ব্যবহার করে ইথেরিয়াম স্মার্ট কন্ট্র্যাক্টস কম্পাইল, ডেপ্লয় ও কল করা](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [স্লিদার-এর সাথে সলিডিটি স্মার্ট কন্ট্র্যাক্টস বিশ্লেষণ করা](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
+- [পাইথন ব্যবহার করে ইথেরিয়াম স্মার্ট কন্ট্র্যাক্টস কম্পাইল, ডেপ্লয় ও কল করা](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
+- [স্লিদার-এর সাথে সলিডিটি স্মার্ট কন্ট্র্যাক্টস বিশ্লেষণ করা](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 
 ## পাইথন প্রোজেক্ট ও টুল {#python-projects-and-tools}
 

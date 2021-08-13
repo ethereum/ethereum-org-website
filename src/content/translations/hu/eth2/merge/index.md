@@ -30,9 +30,9 @@ Amikor minden készen áll, az Ethereum főhálózat "bedokkol" a Beacon Chainne
 
 A főhálózat lehetővé teszi majd az okosszerződések futtatását a proof-of-stake rendszeren, valamint magával hozza a jelenlegi Ethereum állapotot és történetet, ezzel biztosítva, hogy az összes ETH tulajdonos és felhasználó számára elakadásmentes legyen az átállás.
 
-<!-- ### Improving mainnet
+<!-- ### Improving Mainnet
 
-Before mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
+Before Mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
 
 These include Improvements for
 
@@ -56,8 +56,12 @@ Az Eth2 fejlesztések némileg összefüggnek. Foglaljuk össze tehát, hogy a d
 
 ### Dokkolás és a Beacon Chain {#docking-and-beacon-chain}
 
-Amint megtörtént a dokkolás, a letétbe helyezőket kijelölik az Ethereum főhálózat validálására. Csakúgy, mint a shard láncoknál. [A bányászat](/developers/docs/consensus-mechanisms/pow/mining/) így feleslegessé válik, tehát a bányászok az új proof-of-stake rendszerben valószínűleg letétbe helyezésbe fektetik majd, amit kerestek.<ButtonLink to="/eth2/beacon-chain/">A Beacon Chain</ButtonLink>
+Amint megtörtént a dokkolás, a letétbe helyezőket kijelölik az Ethereum főhálózat validálására. Csakúgy, mint a shard láncoknál. [A bányászat](/developers/docs/consensus-mechanisms/pow/mining/) így feleslegessé válik, tehát a bányászok az új proof-of-stake rendszerben valószínűleg letétbe helyezésbe fektetik majd, amit kerestek.
+
+<ButtonLink to="/eth2/beacon-chain/">A Beacon Chain</ButtonLink>
 
 ### Dokkolás és shard láncok {#docking-and-shard-chains}
 
-Mivel a főhálózat egy sharddá válik, a shard láncok sikeres implementációja kritikus ezen fejlesztési lépés szempontjából. Valószínű, hogy az átmenet egy fontos szerepet fog játszani, hogy a közösség eldöntse szeretne-e egy második sharding fejlesztést. Ez a fejlesztés a többi shardot is a főhálózathoz hasonlóvá teszi: képesek lesznek tranzakciókat és okosszerződéseket feldolgozni, nem csak több adatot biztosítani.<ButtonLink to="/eth2/shard-chains/">Shard láncok</ButtonLink>
+Mivel a főhálózat egy sharddá válik, a shard láncok sikeres implementációja kritikus ezen fejlesztési lépés szempontjából. Valószínű, hogy az átmenet egy fontos szerepet fog játszani, hogy a közösség eldöntse szeretne-e egy második sharding fejlesztést. Ez a fejlesztés a többi shardot is a főhálózathoz hasonlóvá teszi: képesek lesznek tranzakciókat és okosszerződéseket feldolgozni, nem csak több adatot biztosítani.
+
+<ButtonLink to="/eth2/shard-chains/">Shard láncok</ButtonLink>

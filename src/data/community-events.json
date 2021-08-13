@@ -8,12 +8,20 @@
     "endDate": "2021-04-21"
   },
   {
-    "title": "Women Spotlight: My Journey Into Blockchain Development",
-    "to": "https://www.eventbrite.com/e/women-spotlight-my-journey-into-blockchain-development-tickets-159612484237",
-    "sponsor": "OpenZeppelin",
-    "description": "In this event, we will feature leading women in the blockchain industry who have one common goal; furthering blockchain technology through development and education.",
-    "startDate": "2021-06-24",
-    "endDate": "2021-06-24"
+    "title": "Ethereum Community Conference 4 (EthCC) - Paris",
+    "to": "https://ethcc.io/",
+    "sponsor": null,
+    "description": "The largest annual European Ethereum event focused on technology and community. Three intense days of conferences, networking and learning.",
+    "startDate": "2021-07-20",
+    "endDate": "2021-07-22"
+  },
+  {
+    "title": "EthCC Week - Paris",
+    "to": "https://ethccweek.fr/",
+    "sponsor": null,
+    "description": "Along with the flagship events of EthCC, multiple side events, meetups, panels and parties will take place on the same week in Paris.",
+    "startDate": "2021-07-19",
+    "endDate": "2021-07-25"
   },
   {
     "title": "ETHOdyssey",
@@ -22,5 +30,29 @@
     "description": "Global Online Ethereum Hackathon",
     "startDate": "2021-07-02",
     "endDate": "2021-08-01"
+  },
+  {
+    "title": "HackFS",
+    "to": "https://fs.ethglobal.com/",
+    "sponsor": null,
+    "description": "A global virtual hackathon to build the foundation for the decentralized web",
+    "startDate": "2021-07-30",
+    "endDate": "2021-08-20"
+  },
+  {
+    "title": "ETHOnline",
+    "to": "https://online.ethglobal.com/",
+    "sponsor": "ETHGlobal",
+    "description": "Virtual Summit and Hackathon",
+    "startDate": "2021-09-17",
+    "endDate": "2021-10-15"
+  },
+  {
+    "title": "ETHLisbon",
+    "to": "https://www.ethlisbon.org/",
+    "sponsor": null,
+    "description": "A hackathon organized by the biggest Fintech hub in Portugal",
+    "startDate": "2021-10-22",
+    "endDate": "2021-10-24"
   }
 ]

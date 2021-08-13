@@ -108,7 +108,7 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
   - There are many open-source community calls, and having notetakers is a huge help. If you’re interested, join the Ethereum Cat Herders chat [here](https://gitter.im/ethereum-cat-herders/meeting-notes-and-summaries), and introduce yourself!
 - **Translate Ethereum content into your native language**
   - ethereum.org maintains a translation program that translates the website, and other resources, into many different languages
-  - Find out how to get involved [here](/languages/#ethereum-org-translation-program)
+  - Find out how to get involved [here](/contributing/translation-program)
 
 **Financial professional or accountant**
 
@@ -130,8 +130,8 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
 ## Ethereum Jobs {#ethereum-jobs}
 
 **Want to find a job working in Ethereum?**
-
 - [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/ethereum/)
 - [Crypto.jobs](https://crypto.jobs/)
 - [Careers at ConsenSys](https://consensys.net/careers/)
 - [Blocktribe](https://blocktribe.com/)
+- [Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)

@@ -1,0 +1,22 @@
+{
+  "comp-tutorial-metadata-minute-read": "മിനിറ്റ് വായിച്ചു",
+  "page-tutorial-listing-policy-intro": "നിങ്ങൾ ഒരു ട്യൂട്ടോറിയൽ സമർപ്പിക്കുന്നതിന് മുമ്പ് ഞങ്ങളുടെ ലിസ്റ്റിംഗ് നയം വായിക്കുക.",
+  "comp-tutorial-metadata-tip-author": "ടിപ്പ് രചയിതാവ്",
+  "page-tutorial-listing-policy": "ലേഖന ലിസ്റ്റിംഗ് നയം",
+  "page-tutorial-new-github": "GitHub- ൽ പുതിയതാണോ?",
+  "page-tutorial-new-github-desc": "ഒരു പ്രശ്നം ഉന്നയിക്കുക - അഭ്യർത്ഥിച്ച വിവരങ്ങൾ പൂരിപ്പിച്ച് നിങ്ങളുടെ ട്യൂട്ടോറിയൽ ഒട്ടിക്കുക.",
+  "page-tutorial-pull-request": "ഒരു പുൾ അഭ്യർത്ഥന സൃഷ്ടിക്കുക",
+  "page-tutorial-pull-request-btn": "പുൾ അഭ്യർത്ഥന സൃഷ്ടിക്കുക",
+  "page-tutorial-pull-request-desc-1": "ദയവായി പിന്തുടരുക",
+  "page-tutorial-pull-request-desc-2": "ട്യൂട്ടോറിയലുകൾ‌/നിങ്ങളുടെ-ട്യൂട്ടോറിയൽ‌-നാമം/index.md",
+  "page-tutorial-pull-request-desc-3": "പേരിടൽ ഘടന.",
+  "page-tutorial-raise-issue-btn": "പ്രശ്നം ഉയർത്തുക",
+  "page-tutorial-read-time": "മിനിറ്റ്",
+  "page-tutorial-submit-btn": "ഒരു ട്യൂട്ടോറിയൽ സമർപ്പിക്കുക",
+  "page-tutorial-submit-tutorial": "ഒരു ട്യൂട്ടോറിയൽ സമർപ്പിക്കാൻ, നിങ്ങൾ GitHub ഉപയോഗിക്കേണ്ടതുണ്ട്. ഒരു പ്രശ്നമോ പുൾ അഭ്യർത്ഥനയോ സൃഷ്ടിക്കാൻ ഞങ്ങൾ നിങ്ങളെ സ്വാഗതം ചെയ്യുന്നു.",
+  "page-tutorial-subtitle": "ഞങ്ങളുടെ കമ്മ്യൂണിറ്റി ട്യൂട്ടോറിയലുകളുടെ ക്യൂറേറ്റുചെയ്‌ത ലിസ്റ്റിലേക്ക് സ്വാഗതം.",
+  "page-tutorial-tags-error": "ട്യൂട്ടോറിയലുകളിൽ ഈ ടാഗുകളെല്ലാം ഇല്ല",
+  "page-tutorial-title": "Ethereum ഡവലപ്മെന്‍റ് ട്യൂട്ടോറിയൽ",
+  "page-tutorials-meta-description": "വിഷയം അനുസരിച്ച് പരിശോധിച്ച Ethereum കമ്മ്യൂണിറ്റി ട്യൂട്ടോറിയലുകൾ ബ്രൗസ് ചെയ്ത് ഫിൽട്ടർ ചെയ്യുക.",
+  "page-tutorials-meta-title": "Ethereum ഡവലപ്മെന്‍റ് ട്യൂട്ടോറിയൽ"
+}

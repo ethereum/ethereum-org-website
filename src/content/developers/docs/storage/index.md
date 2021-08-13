@@ -110,6 +110,7 @@ PoS based:
 - [GitHub](https://github.com/ipfs/ipfs)
 
 **Storj DCS -** **_Secure, private, and S3-compatible decentralized cloud object storage for developers._**
+
 - [Storj](https://storj.io/)
 - [Documentation](https://docs.storj.io/)
 
