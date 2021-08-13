@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus isShipped date="Shipped!">
+<UpgradeStatus isShipped date="Spedito!">
     La beacon chain è stata resa disponibile il primo dicembre a mezzogiorno (UTC). Per saperne di più, <a href="https://beaconscan.com/">esplora i dati</a>. Se vuoi contribuire a convalidare la catena, puoi <a href="/eth2/staking/">fare staking con i tuoi ETH</a>.
 </UpgradeStatus>
 
@@ -48,13 +48,17 @@ Alla fine la beacon chain sarà anche responsabile dell'assegnazione casuale deg
 
 Gli aggiornamenti a Eth2 sono tutti interconnessi in qualche modo. Quindi ricapitoliamo per vedere come la beacon chain incide sugli altri aggiornamenti.
 
-### Shard e beacon chain {#shards-and-beacon-chain}
-
-Le shard chain potranno entrare in modo sicuro nell'ecosistema Ethereum solo quando sarà presente un meccanismo di consenso proof of stake. La beacon chain introdurrà lo staking, aprendo la strada per l'aggiornamento alle shard chain.<ButtonLink to="/eth2/shard-chains/">Le shard chain</ButtonLink>
-
 ### La rete principale e la beacon chain {#mainnet-and-beacon-chain}
 
-La beacon chain, all'inizio, esisterà separatamente rispetto alla rete principale Ethereum che usiamo oggi. Alle fine però le due realtà verranno collegate. L'intenzione è di "agganciare" (docking) la rete principale al sistema proof of stake che è controllato e coordinato dalla beacon chain.<ButtonLink to="/eth2/merge/">Il docking</ButtonLink>
+La beacon chain, all'inizio, esisterà separatamente rispetto alla rete principale Ethereum che usiamo oggi. Alle fine però le due realtà verranno collegate. L'intenzione è di "agganciare" (docking) la rete principale al sistema proof of stake che è controllato e coordinato dalla beacon chain.
+
+<ButtonLink to="/eth2/merge/">Il docking</ButtonLink>
+
+### Shard e beacon chain {#shards-and-beacon-chain}
+
+Le shard chain potranno entrare in modo sicuro nell'ecosistema Ethereum solo quando sarà presente un meccanismo di consenso proof of stake. La beacon chain introdurrà lo staking, aprendo la strada per l'aggiornamento alle shard chain.
+
+<ButtonLink to="/eth2/shard-chains/">Le shard chain</ButtonLink>
 
 <Divider />
 

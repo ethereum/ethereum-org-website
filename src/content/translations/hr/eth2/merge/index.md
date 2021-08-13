@@ -30,10 +30,9 @@ Kad bude spremna, glavna mreža Ethereum spojit će se s nadogradnjom Beacon Cha
 
 Glavna mreža omogućit će pokretanje pametnih ugovora u sustav Proof of Stake, i cijelu povijest i trenutačno stanje mreže Ethereum, kako bi se osigurao prijelaz bez problema za sve vlasnike i korisnike ETH-a.
 
+<!-- ### Improving Mainnet
 
-<!-- ### Improving mainnet
-
-Before mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
+Before Mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
 
 These include Improvements for
 
@@ -57,8 +56,12 @@ Sve su nadogradnje Eth2 donekle međusobno povezane. Pa, sagledajmo kakav odnos 
 
 ### Sjedinjenje i Beacon Chain {#docking-and-beacon-chain}
 
-Nakon spajanja, bit će dodijeljeni učesnici koji će provjeriti valjanost mreže Ethereum. Baš kao i s lancima djelića. [ Rudarenje ](/developers/docs/consensus-mechanisms/pow/mining/) više neće biti potrebno, pa će rudari svoju zaradu vjerojatno uložiti u učešća u novom sustavu Proof of Stake.<ButtonLink to="/eth2/beacon-chain/">Beacon Chain</ButtonLink>
+Nakon spajanja, bit će dodijeljeni učesnici koji će provjeriti valjanost mreže Ethereum. Baš kao i s lancima djelića. [ Rudarenje ](/developers/docs/consensus-mechanisms/pow/mining/) više neće biti potrebno, pa će rudari svoju zaradu vjerojatno uložiti u učešća u novom sustavu Proof of Stake.
+
+<ButtonLink to="/eth2/beacon-chain/">Beacon Chain</ButtonLink>
 
 ### Spajanje i lanci djelića {#docking-and-shard-chains}
 
-Kad glavna mreža postane djelić, uspješna implementacija lanaca djelića bit će presudna za ovu nadogradnju. Vjerojatno će tranzicija igrati važnu ulogu u pomaganju zajednici da odluči hoće li pokrenuti drugu nadogradnju na metodu razdjeljivanja. Ova će nadogradnja kreirati druge djeliće poput glavne mreže: oni će moći obrađivati transakcije i pametne ugovore, a ne samo pružati više podataka.<ButtonLink to="/eth2/shard-chains/">Lanci djelića</ButtonLink>
+Kad glavna mreža postane djelić, uspješna implementacija lanaca djelića bit će presudna za ovu nadogradnju. Vjerojatno će tranzicija igrati važnu ulogu u pomaganju zajednici da odluči hoće li pokrenuti drugu nadogradnju na metodu razdjeljivanja. Ova će nadogradnja kreirati druge djeliće poput glavne mreže: oni će moći obrađivati transakcije i pametne ugovore, a ne samo pružati više podataka.
+
+<ButtonLink to="/eth2/shard-chains/">Lanci djelića</ButtonLink>

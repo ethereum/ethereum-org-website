@@ -15,7 +15,7 @@ You should understand what an Ethereum node is and why you might want to run a c
 ## Choosing an approach {#choosing-approach}
 
 The first step in spinning up your node is choosing your approach. You have to choose the client (the software), the environment, and the parameters you want to start with.
-See all the available [mainnet clients](/developers/docs/nodes-and-clients/#advantages-of-different-implementations).
+See all the available [Mainnet clients](/developers/docs/nodes-and-clients/#advantages-of-different-implementations).
 
 #### Client settings {#client-settings}
 
@@ -33,7 +33,7 @@ To simplify let's think about running a node on both a local physical machine an
 
 - Cloud
   - Providers offer high server uptime, static public IP addresses
-  - Getting dedicated or virtual server can be more comfortable then building your own
+  - Getting dedicated or virtual server can be more comfortable than building your own
   - Trade off is trusting a third party - server provider
   - Because of required storage size for full node, price of a rented server might get high
 - Own hardware
@@ -56,7 +56,7 @@ However, a censorship-resistant, decentralized network should not rely on cloud 
 - [Avado](https://ava.do/).
 
 Check the minimum and recommended [disk space requirements for each client and sync mod](/developers/docs/nodes-and-clients/#requirements).
-Generally, modest computing power should be enough. The problem is usually drive speed. During initial sync, Ethereum clients perform a lot of read/write operations, therefore SSD is strongly recommended. A client might not even [be able to sync current state on HDD](https://github.com/ethereum/go-ethereum/issues/16796#issuecomment-391649278) and get stuck a few blocks behind mainnet.
+Generally, modest computing power should be enough. The problem is usually drive speed. During initial sync, Ethereum clients perform a lot of read/write operations, therefore SSD is strongly recommended. A client might not even [be able to sync current state on HDD](https://github.com/ethereum/go-ethereum/issues/16796#issuecomment-391649278) and get stuck a few blocks behind Mainnet.
 You can run most of the clients on a [single board computer with ARM](/developers/docs/nodes-and-clients/#ethereum-on-a-single-board-computer/). You can also use the [Ethbian](https://ethbian.org/index.html) operating system for Raspberry Pi 4. This lets you [[run a client by flashing the SD card](/developers/tutorials/run-node-raspberry-pi/).
 Based on your software and the hardware choices, the initial synchronization time and storage requirements may vary. Be sure to [check sync times and storage requirements](/developers/docs/nodes-and-clients/#recommended-specifications).
 Also make sure your internet connection is not limited by a [bandwidth cap](https://en.wikipedia.org/wiki/Data_cap). It's recommended to use an unmetered connection since initial sync and data broadcasted to the network could exceed your limit.
@@ -74,12 +74,13 @@ First, download your preferred [client software](/developers/docs/nodes-and-clie
 You can simply download an executable application or installation package which suits your operating system and architecture. Always verify signatures and checksums of downloaded packages. Some clients also offer repositories for easier installation and updates.
 If you prefer, you can build from source. All of the clients are open source so you can build them from source code with the proper compiler.
 
-Executable binaries for stable mainnet client implementations can be downloaded from their release pages:
+Executable binaries for stable Mainnet client implementations can be downloaded from their release pages:
 
 - [Geth](https://geth.ethereum.org/downloads/),
 - [OpenEthereum,](https://github.com/openethereum/openethereum/releases),
 - [Nethermind](https://downloads.nethermind.io/),
-- [Besu](https://pegasys.tech/solutions/hyperledger-besu/).
+- [Besu](https://pegasys.tech/solutions/hyperledger-besu/),
+- [Erigon](https://github.com/ledgerwatch/erigon).
 
 ### Starting the client {#starting-the-client}
 

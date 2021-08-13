@@ -20,7 +20,6 @@ import {
 } from "./SharedStyledComponents"
 
 import { translateMessageId } from "../utils/translations"
-import { BsTypeH3 } from "react-icons/bs"
 
 const Card = styled.div`
   border-radius: 2px;

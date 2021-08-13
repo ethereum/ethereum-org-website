@@ -77,7 +77,6 @@ const Wrapper = styled.div`
 
 const ImageWrapper = styled.div`
   width: 40px;
-  height: 40px;
   margin-right: 1rem;
   padding: 0.25rem;
   background-color: ${({ background }) => background};

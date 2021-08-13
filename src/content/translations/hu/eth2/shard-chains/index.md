@@ -48,7 +48,7 @@ Amikor a shard láncokat először bevezetik csak extra adatot fognak biztosíta
 
 A rollupok egy "layer 2" technológia részei, melyek ma is léteznek. Lehetővé teszik a dappok számára, hogy off-chain módon több tranzakciók összekötegeljenek vagy "feltekerjenek (roll-up)" egy tranzakcióba, majd egy kriptográfiai bizonyítékot generálnak, ezután pedig továbbítják azt a láncra. Ez csökkenti egy adott tranzakció számára szükséges adatot. Ha ezt kombináljuk az extra adat elérhetőséggel, amit a shardok biztosítanak, akkor 100,000 tranzakció is lehetséges egy másodperc alatt.
 
-[Bővebben a rollupokról](/developers/docs/layer-2-scaling/)
+[Bővebben a rollupokról](/developers/docs/scaling/layer-2-rollups/#rollups)
 
 ## Shard láncok verzió 2: kódfuttatás {#code-execution}
 
@@ -56,7 +56,9 @@ Mindig is az volt a terv, hogy shardok extra funkciókat kapjanak, és minél in
 
 ### Kell a shardoknak kódot futtatniuk? {#do-shards-need-code-execution}
 
-Amikor Vitalik Buterin a Bankless podcaston beszélt, három megvitatásra érdemes potenciális lehetőséget mutatott be. <iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Amikor Vitalik Buterin a Bankless podcaston beszélt, három megvitatásra érdemes potenciális lehetőséget mutatott be.
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
 
 #### 1. Állapot-futtatás nem szükséges {#state-execution-not-needed}
 
@@ -84,11 +86,15 @@ Az Eth2 fejlesztések némileg összefüggnek. Foglaljuk össze tehát, hogy a s
 
 ### Shardok és a Beacon Chain {#shards-and-beacon-chain}
 
-A beacon chain tartalmazza a shardok biztonságához és szinkronizáltságához szükséges összes információt. A beacon chain fogja koordinálni a letétbe helyezőket a hálózaton úgy, hogy shardokat oszt ki nekik, amin dolgozniuk kell. És megkönnyíti a shardok közötti kommunikációt azáltal, hogy shardok tranzakciós adatait fogadja és tárolja, amelyekhez más shardok is hozzáférhetnek. Ez a shardoknak egy pillanatképet fog adni az Ethereum állapotáról, hogy minden naprakész legyen.<ButtonLink to="/eth2/beacon-chain/">A Beacon Chain</ButtonLink>
+A beacon chain tartalmazza a shardok biztonságához és szinkronizáltságához szükséges összes információt. A beacon chain fogja koordinálni a letétbe helyezőket a hálózaton úgy, hogy shardokat oszt ki nekik, amin dolgozniuk kell. És megkönnyíti a shardok közötti kommunikációt azáltal, hogy shardok tranzakciós adatait fogadja és tárolja, amelyekhez más shardok is hozzáférhetnek. Ez a shardoknak egy pillanatképet fog adni az Ethereum állapotáról, hogy minden naprakész legyen.
+
+<ButtonLink to="/eth2/beacon-chain/">A Beacon Chain</ButtonLink>
 
 ### A shardok és a dokkolás {#shards-and-docking}
 
-Az Ethereum főhálózat a ma ismert formában fog létezni a shardok bevezetése után is. Azonban egy ponton a főhálózatnak is egy sharddá kell válnia, hogy a letétbe helyezési átmenet megtörténjen. Később kiderül majd, hogy a főhálózat lesz-e végül az egyedüli "okos" shard, ami kódlefutást fog végezni - de így vagy úgy, ezt a döntést meg kell majd hozni a shardolás 2-es fázisában.<ButtonLink to="/eth2/merge/">A dokkolás</ButtonLink>
+Az Ethereum főhálózat a ma ismert formában fog létezni a shardok bevezetése után is. Azonban egy ponton a főhálózatnak is egy sharddá kell válnia, hogy a letétbe helyezési átmenet megtörténjen. Később kiderül majd, hogy a főhálózat lesz-e végül az egyedüli "okos" shard, ami kódlefutást fog végezni - de így vagy úgy, ezt a döntést meg kell majd hozni a shardolás 2-es fázisában.
+
+<ButtonLink to="/eth2/merge/">A dokkolás</ButtonLink>
 
 <Divider />
 

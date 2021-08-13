@@ -26,7 +26,7 @@ Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/ro/learn/) 
 
 ## Articole pentru începători {#beginner-articles}
 
-- [Introducere în contracte smart cu Vyper](https://kauri.io/article/af913a853eaf4db88627b3ff9572b770/v1/an-introduction-to-smart-contracts-with-vyper)
+- [Introducere în contracte smart cu Vyper](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [Cum programezi contracte Ethereum folosind Python Flask?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Introducere în Web3.py - Ethereum pentru programatori Python](https://www.dappuniversity.com/articles/web3-py-intro)
 - [Cum să apelezi o funcție de contract smart folosind Python și Web3.py](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
@@ -40,8 +40,8 @@ Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/ro/learn/) 
 
 ## Modele avansate de utilizare {#advanced-use-patterns}
 
-- [Compilarea, implementarea și apelarea contractelor smart Ethereum cu Python](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [Analiza contractelor smart Solidity cu Slither](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
+- [Compilarea, implementarea și apelarea contractelor smart Ethereum cu Python](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
+- [Analiza contractelor smart Solidity cu Slither](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 
 ## Proiecte și instrumente Python {#python-projects-and-tools}
 

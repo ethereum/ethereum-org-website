@@ -27,7 +27,7 @@ sidebarDepth: 1
 
 ## 입문자용 문서 {#beginner-articles}
 
-- [바이퍼를 사용한 스마트 컨트랙트 소개](https://kauri.io/article/af913a853eaf4db88627b3ff9572b770/v1/an-introduction-to-smart-contracts-with-vyper)
+- [바이퍼를 사용한 스마트 컨트랙트 소개](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [Python 플라스크를 사용하여 이더리움 컨트랙트를 개발하는 방법](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Web3.py 소개 - Python 개발자를 위한 이더리움](https://www.dappuniversity.com/articles/web3-py-intro)
 - [Python과 web3.py를 사용하여 스마트 컨트랙트 함수를 호출하는 방법](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
@@ -41,8 +41,8 @@ sidebarDepth: 1
 
 ## 고급 사용 패턴 {#advanced-use-patterns}
 
-- [Python을 사용하여 이더리움 스마트 컨트랙트 컴파일, 배포, 호출하기](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [Slither를 사용하여 솔리디티 스마트 컨트랙트 분석하기](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
+- [Python을 사용하여 이더리움 스마트 컨트랙트 컴파일, 배포, 호출하기](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
+- [Slither를 사용하여 솔리디티 스마트 컨트랙트 분석하기](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 
 ## Python 프로젝트 및 도구 {#python-projects-and-tools}
 

@@ -1,6 +1,6 @@
 ---
 title: Shard chain
-description: 'Scopri le shard chain: partizioni della rete che assicurano a Ethereum più capacità di transazione e maggior facilità di esecuzione.'
+description: "Scopri le shard chain: partizioni della rete che assicurano a Ethereum più capacità di transazione e maggior facilità di esecuzione."
 lang: it
 template: eth2
 sidebar: true
@@ -48,7 +48,7 @@ Le prime shard chain disponibili forniranno solo dati aggiuntivi in rete. Non ge
 
 I rollup sono una tecnologia di secondo livello che esiste già oggi. Permettono alle dapp di raggruppare o "eseguire il roll up" delle transazioni in una sola transazione off-chain, generare una prova crittografica e inviarla alla catena. In questo modo, i dati necessari per una transazione vengono ridotti. Combinando questo aspetto con le informazioni extra rese disponibili dalle shard, s ottengono 100.000 transazioni al secondo.
 
-[Maggiori informazioni sui rollup](/developers/docs/layer-2-scaling/)
+[Maggiori informazioni sui rollup](/developers/docs/scaling/layer-2-rollups/#rollups)
 
 ## Shard chain versione 2: esecuzione di codice {#code-execution}
 
@@ -56,7 +56,9 @@ Il piano è sempre stato quello di aggiungere ulteriori funzionalità agli shard
 
 ### Gli shard devono eseguire codice? {#do-shards-need-code-execution}
 
-Vitalik Buterin, parlando al podcast Bankless, ha presentato 3 potenziali opzioni di cui vale la pena discutere. <iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Vitalik Buterin, parlando al podcast Bankless, ha presentato 3 potenziali opzioni di cui vale la pena discutere.
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
 
 #### 1. Esecuzione di stato non necessaria {#state-execution-not-needed}
 
@@ -84,11 +86,15 @@ Gli aggiornamenti a Eth2 sono in qualche modo interconnessi. Quindi riassumiamo 
 
 ### Shard e beacon chain {#shards-and-beacon-chain}
 
-La beacon chain contiene la logica per mantenere al sicuro e sincronizzati gli shard. La beacon chain coordinerà gli staker nella rete, assegnandoli agli shard su cui dovranno operare. Faciliterà inoltre la comunicazione tra gli shard, ricevendo e salvando i dati delle transazioni degli shard che saranno accessibili da parte degli altri shard. Gli shard avranno così un'istantanea dello stato di Ethereum per mantenere tutto aggiornato.<ButtonLink to="/eth2/beacon-chain/">La beacon chain</ButtonLink>
+La beacon chain contiene la logica per mantenere al sicuro e sincronizzati gli shard. La beacon chain coordinerà gli staker nella rete, assegnandoli agli shard su cui dovranno operare. Faciliterà inoltre la comunicazione tra gli shard, ricevendo e salvando i dati delle transazioni degli shard che saranno accessibili da parte degli altri shard. Gli shard avranno così un'istantanea dello stato di Ethereum per mantenere tutto aggiornato.
+
+<ButtonLink to="/eth2/beacon-chain/">La beacon chain</ButtonLink>
 
 ### Gli shard e il docking {#shards-and-docking}
 
-La rete principale Ethereum esisterà come esiste oggi anche dopo l'introduzione degli shard. Però, a un certo punto, la rete principale dovrà diventare uno shard, in modo tale da poter passare allo staking. Rimane da valutare se la rete principale sarà l'unico shard "smart" in grado di gestire l'esecuzione di codice. In ogni caso la decisione verrà presa durante la fase 2 dello sharding.<ButtonLink to="/eth2/merge/">Il docking</ButtonLink>
+La rete principale Ethereum esisterà come esiste oggi anche dopo l'introduzione degli shard. Però, a un certo punto, la rete principale dovrà diventare uno shard, in modo tale da poter passare allo staking. Rimane da valutare se la rete principale sarà l'unico shard "smart" in grado di gestire l'esecuzione di codice. In ogni caso la decisione verrà presa durante la fase 2 dello sharding.
+
+<ButtonLink to="/eth2/merge/">Il docking</ButtonLink>
 
 <Divider />
 
