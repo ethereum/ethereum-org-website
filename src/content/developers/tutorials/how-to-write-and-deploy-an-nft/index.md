@@ -1,6 +1,6 @@
 ---
 title: How to Write & Deploy an NFT (Part 1/3 of NFT Tutorial Series)
-description: This tutorial is Part 1 of a series on NFTs that will take you step by step on how to write and deploy a Non Fungible Token (ERC-721 token) smart contract using Ethereum and Inter Planetary File System (IPFS). In [Part II, we will describe how to mint an NFT using our smart contract](/developers/tutorials/how-to-mint-an-nft/), and in [Part III, we will explain how to view your freshly minted NFT on Metamask](/developers/tutorials/how-to-view-nft-in-metamask/)!
+description: This tutorial is Part 1 of a series on NFTs that will take you step by step on how to write and deploy a Non Fungible Token (ERC-721 token) smart contract using Ethereum and Inter Planetary File System (IPFS).
 author: "Sumi Mudgil"
 tags: ["NFTs", "ERC-721", "Alchemy", "Solidity", "smart contracts"]
 skill: beginner
@@ -8,19 +8,20 @@ lang: en
 sidebar: false
 published: 2021-04-22
 ---
+
 With NFTs bringing blockchain into the public eye, now is an excellent opportunity to understand the hype yourself by publishing your own NFT (ERC-721 Token) on the Ethereum blockchain!
 
 Alchemy is extremely proud to be powering the biggest names in the NFT space, including Makersplace (recently set a record digital artwork sale at Christie’s for $69 Million), Dapper Labs (creators of NBA Top Shot & Crypto Kitties), OpenSea (the world’s largest NFT marketplace), Zora, Super Rare, NFTfi, Foundation, Enjin, Origin Protocol, Immutable, and more.
 
-In this tutorial, we will walk through creating and deploying an ERC-721 smart contract on the Ropsten test network using [Metamask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), [Pinata](https://pinata.cloud/)and [Alchemy](https://dashboard.alchemyapi.io/signup?referral=affiliate:aab0c546-cc29-4180-8d31-fbce31367277) (don’t fret if you don’t understand what any of this means yet — we will explain it!).
+In this tutorial, we will walk through creating and deploying an ERC-721 smart contract on the Ropsten test network using [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), [Pinata](https://pinata.cloud/) and [Alchemy](https://dashboard.alchemyapi.io/signup?referral=affiliate:aab0c546-cc29-4180-8d31-fbce31367277) (don’t fret if you don’t understand what any of this means yet — we will explain it!).
 
-In Part 2 of this tutorial we’ll go through how we can use our smart contract to mint an NFT, and in Part 3 we’ll explain how to view your NFT on Metamask.
+In Part 2 of this tutorial we’ll go through how we can use our smart contract to mint an NFT, and in Part 3 we’ll explain how to view your NFT on MetaMask.
 
 And of course, if you have questions at any point, don’t hesitate to reach out in the [Alchemy Discord](https://discord.gg/gWuC7zB)!
 
 ## Step 1: Connect to the Ethereum network {#connect-to-ethereum}
 
-There a bunch of ways to make requests to the Ethereum blockchain, but to make things easiest, we’ll use a free account on [Alchemy](https://dashboard.alchemyapi.io/signup?referral=affiliate:3bda2c8a-2393-4923-a7d9-f98c7c2f4520), a blockchain developer platform and API that allows us to communicate with the Ethereum chain without having to run our own nodes.
+There a bunch of ways to make requests to the Ethereum blockchain, but to make things easy, we’ll use a free account on [Alchemy](https://dashboard.alchemyapi.io/signup?referral=affiliate:3bda2c8a-2393-4923-a7d9-f98c7c2f4520), a blockchain developer platform and API that allows us to communicate with the Ethereum chain without having to run our own nodes.
 
 In this tutorial, we’ll also take advantage of Alchemy’s developer tools for monitoring and analytics to understand what’s going on under the hood in our smart contract deployment. If you don’t already have an Alchemy account, you can sign up for free [here](https://dashboard.alchemyapi.io/signup).
 
@@ -34,29 +35,29 @@ Once you’ve created an Alchemy account, you can generate an API key by creatin
 
 2. Name your app (we chose “My First NFT!”), offer a short description, select “Staging” for the Environment (used for your app bookkeeping), and choose “Ropsten” for your network.
 
-![Configure and publish your app](./configure-and-publish-your-app.png )
+![Configure and publish your app](./configure-and-publish-your-app.png)
 
 3. Click “Create app” and that’s it! Your app should appear in the table below.
 
 ## Step 3: Create an Ethereum account (address) {#create-eth-address}
 
-We need an Ethereum account to send and receive transactions. For this tutorial, we’ll use Metamask, a virtual wallet in the browser used to manage your Ethereum account address. If you want to understand more about how transactions on Ethereum work, check out [this page](/developers/docs/transactions/) from the Ethereum foundation.
+We need an Ethereum account to send and receive transactions. For this tutorial, we’ll use MetaMask, a virtual wallet in the browser used to manage your Ethereum account address. If you want to understand more about how transactions on Ethereum work, check out [this page](/developers/docs/transactions/) from the Ethereum foundation.
 
-You can download and create a Metamask account for free [here](https://metamask.io/download.html). When you are creating an account, or if you already have an account, make sure to switch over to the “Ropsten Test Network” in the upper right (so that we’re not dealing with real money).
+You can download and create a MetaMask account for free [here](https://metamask.io/download.html). When you are creating an account, or if you already have an account, make sure to switch over to the “Ropsten Test Network” in the upper right (so that we’re not dealing with real money).
 
 ![Set Ropsten as your network](./metamask-ropsten.png)
 
-Step 4: Add ether from a Faucet
+## Step 4: Add ether from a Faucet
 
-In order to deploy our smart contract to the test network, we’ll need some fake ETH. To get ETH you can go to the [Ropsten faucet](https://faucet.ropsten.be/) and enter your Ropsten account address, then click “Send Ropsten ETH.” You should see ETH in your Metamask account soon after!
+In order to deploy our smart contract to the test network, we’ll need some fake ETH. To get ETH you can go to the [Ropsten faucet](https://faucet.ropsten.be/) and enter your Ropsten account address, then click “Send Ropsten ETH.” You should see ETH in your MetaMask account soon after!
 
 ## Step 5: Check your Balance {#check-balance}
 
-To double check our balance is there, let’s make an [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) request using [Alchemy’s composer tool](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). This will return the amount of ETH in our wallet. After you input your Metamask account address and click “Send Request”, you should see a response like this:
+To double check our balance is there, let’s make an [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) request using [Alchemy’s composer tool](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). This will return the amount of ETH in our wallet. After you input your MetaMask account address and click “Send Request”, you should see a response like this:
 
     `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
 
-**NOTE: **This result is in wei not ETH. Wei is used as the smallest denomination of ether. The conversion from wei to ETH is 1 eth = 10<sup>18</sup> wei. So if we convert 0xde0b6b3a7640000 to decimal we get 1*10<sup>18</sup> wei which equals 1 ETH.
+**NOTE: **This result is in wei not ETH. Wei is used as the smallest denomination of ether. The conversion from wei to ETH is 1 eth = 10<sup>18</sup> wei. So if we convert 0xde0b6b3a7640000 to decimal we get 1\*10<sup>18</sup> wei which equals 1 ETH.
 
 Phew! Our fake money is all there.
 
@@ -73,15 +74,15 @@ Now that we’re inside our project folder, we’ll use npm init to initialize t
 
 It doesn’t really matter how you answer the installation questions, here is how we did it for reference:
 
-    package name: (my-nft) 
-    version: (1.0.0) 
+    package name: (my-nft)
+    version: (1.0.0)
     description: My first NFT!
-    entry point: (index.js) 
-    test command: 
-    git repository: 
-    keywords: 
-    author: 
-    license: (ISC) 
+    entry point: (index.js)
+    test command:
+    git repository:
+    keywords:
+    author:
+    license: (ISC)
     About to write to /Users/thesuperb1/Desktop/my-nft/package.json:
 
     {
@@ -98,7 +99,7 @@ It doesn’t really matter how you answer the installation questions, here is ho
 
 Approve the package.json, and we’re good to go!
 
-## Step 7: Download [Hardhat](https://hardhat.org/getting-started/#overview) {#download-hardhat}
+## Step 7: Install [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
 
 Hardhat is a development environment to compile, deploy, test, and debug your Ethereum software. It helps developers when building smart contracts and dApps locally before deploying to the live chain.
 
@@ -139,78 +140,77 @@ To keep our project organized, we’ll create two new folders. Navigate to the r
     mkdir contracts
     mkdir scripts
 
-* contracts/ is where we’ll keep our NFT smart contract code
+- contracts/ is where we’ll keep our NFT smart contract code
 
-* scripts/ is where we’ll keep scripts to deploy and interact with our smart contract
+- scripts/ is where we’ll keep scripts to deploy and interact with our smart contract
 
 ## Step 10: Write our contract {#write-contract}
 
-Now time that our environment is set up, onto more exciting stuff: *writing our smart contract code!*
+Now time that our environment is set up, onto more exciting stuff: _writing our smart contract code!_
 
 Open up the my-nft project in your favorite editor (we like [VSCode](https://code.visualstudio.com/)). Smart contracts are written in a language called Solidity which is what we will use to write our MyNFT.sol smart contract.‌
 
-1. Navigate to the `“contracts”` folder and create a new file called MyNFT.sol
+1. Navigate to the `contracts` folder and create a new file called MyNFT.sol
 
 2. Below is our NFT smart contract code, which based off of the [OpenZepplin](https://docs.openzeppelin.com/contracts/3.x/erc721) library’s ERC-721 implementation. Copy and paste the contents below into your MyNFT.sol file.
 
-    ```solidity
-    //Contract based on [https://docs.openzeppelin.com/contracts/3.x/erc721](https://docs.openzeppelin.com/contracts/3.x/erc721)
-    // SPDX-License-Identifier: MIT
-    pragma solidity ^0.7.3;
+   ```solidity
+   //Contract based on [https://docs.openzeppelin.com/contracts/3.x/erc721](https://docs.openzeppelin.com/contracts/3.x/erc721)
+   // SPDX-License-Identifier: MIT
+   pragma solidity ^0.7.3;
 
-    import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-    import "@openzeppelin/contracts/utils/Counters.sol";
-    import "@openzeppelin/contracts/access/Ownable.sol";
-    
+   import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+   import "@openzeppelin/contracts/utils/Counters.sol";
+   import "@openzeppelin/contracts/access/Ownable.sol";
 
-    contract MyNFT is ERC721, Ownable {
-        using Counters for Counters.Counter;
-        Counters.Counter private _tokenIds;
+   contract MyNFT is ERC721, Ownable {
+       using Counters for Counters.Counter;
+       Counters.Counter private _tokenIds;
 
-        constructor() public ERC721("MyNFT", "NFT") {}
+       constructor() public ERC721("MyNFT", "NFT") {}
 
-        function mintNFT(address recipient, string memory tokenURI)
-            public onlyOwner
-            returns (uint256)
-        {
-            _tokenIds.increment();
+       function mintNFT(address recipient, string memory tokenURI)
+           public onlyOwner
+           returns (uint256)
+       {
+           _tokenIds.increment();
 
-            uint256 newItemId = _tokenIds.current();
-            _mint(recipient, newItemId);
-            _setTokenURI(newItemId, tokenURI);
+           uint256 newItemId = _tokenIds.current();
+           _mint(recipient, newItemId);
+           _setTokenURI(newItemId, tokenURI);
 
-            return newItemId;
-        }
-    }
-    ```
+           return newItemId;
+       }
+   }
+   ```
 
 3. Because we are inheriting classes from the OpenZepplin contracts library, in your command line run `npm install @openzeppelin/contracts` to install the library into our folder.
 
-So, what does this code *do* exactly? Let’s break it down, line-by-line.
+So, what does this code _do_ exactly? Let’s break it down, line-by-line.
 
 At the top of our smart contract, we import three [OpenZepplin](https://openzeppelin.com/) smart contract classes:
 
-* @openzeppelin/contracts/token/ERC721/ERC721.solcontains the implementation of the ERC-721 standard, which our NFT smart contract will inherit. (To be a valid NFT, your smart contract must implement all the methods of the ERC-721 standard.) To learn more about the inherited ERC-721 functions, check out the interface definition [here](https://eips.ethereum.org/EIPS/eip-721).
+- @openzeppelin/contracts/token/ERC721/ERC721.sol contains the implementation of the ERC-721 standard, which our NFT smart contract will inherit. (To be a valid NFT, your smart contract must implement all the methods of the ERC-721 standard.) To learn more about the inherited ERC-721 functions, check out the interface definition [here](https://eips.ethereum.org/EIPS/eip-721).
 
-* @openzeppelin/contracts/utils/Counters.solprovides counters that can only be incremented or decremented by one. Our smart contract uses a counter to keep track of the total number of NFTs minted and set the unique ID our new NFT. (Each NFT minted using a smart contract must be assigned a unique ID—here our unique ID is just determined by the total number of NFTs in existance. For example, the first NFT we mint with our smart contract has an ID of "1," our second NFT has an ID of "2," etc.)
+- @openzeppelin/contracts/utils/Counters.sol provides counters that can only be incremented or decremented by one. Our smart contract uses a counter to keep track of the total number of NFTs minted and set the unique ID our new NFT. (Each NFT minted using a smart contract must be assigned a unique ID—here our unique ID is just determined by the total number of NFTs in existance. For example, the first NFT we mint with our smart contract has an ID of "1," our second NFT has an ID of "2," etc.)
 
-* @openzeppelin/contracts/access/Ownable.sol sets up [access control](https://docs.openzeppelin.com/contracts/3.x/access-control) on our smart contract, so only the owner of the smart contract (you) can mint NFTs. (Note, including access control is entirely a preference. If you'd like anyone to be able to mint an NFT using your smart contract, remove the word Ownable on line 10 and onlyOwner on line 17.)
+- @openzeppelin/contracts/access/Ownable.sol sets up [access control](https://docs.openzeppelin.com/contracts/3.x/access-control) on our smart contract, so only the owner of the smart contract (you) can mint NFTs. (Note, including access control is entirely a preference. If you'd like anyone to be able to mint an NFT using your smart contract, remove the word Ownable on line 10 and onlyOwner on line 17.)
 
-After our import statements, we have our custom NFT smart contract, which is surprisingly short — it only contains a counter, a constructor, and single function! This is thanks to our inherited OpenZepplin contracts, which implement most of the methods we need to create an NFT, such as ownerOf which returns the owner of the NFT, and transferFrom,which transfers ownership of the NFT from one account to another.
+After our import statements, we have our custom NFT smart contract, which is surprisingly short — it only contains a counter, a constructor, and single function! This is thanks to our inherited OpenZepplin contracts, which implement most of the methods we need to create an NFT, such as `ownerOf` which returns the owner of the NFT, and `transferFrom`, which transfers ownership of the NFT from one account to another.
 
 In our ERC-721 constructor, you’ll notice we pass 2 strings, “MyNFT” and “NFT.” The first variable is the smart contract’s name, and the second is its symbol. You can name each of these variables whatever you wish!
 
 Finally, we have our function `mintNFT(address recipient, string memory tokenURI)` that allows us to mint an NFT! You'll notice it this function takes in two variables:
 
-* `address recipient` specifies the address that will receive your freshly minted NFT
+- `address recipient` specifies the address that will receive your freshly minted NFT
 
-* `string memory tokenURI` is a string that should resolve to a JSON document that describes the NFT's metadata. An NFT's metadata is really what brings it to life, allowing it to have configurable properties, such as a name, description, image, and other attributes. In part 2 of this tutorial, we will describe how to configure this metadata.
+- `string memory tokenURI` is a string that should resolve to a JSON document that describes the NFT's metadata. An NFT's metadata is really what brings it to life, allowing it to have configurable properties, such as a name, description, image, and other attributes. In part 2 of this tutorial, we will describe how to configure this metadata.
 
 `mintNFT` calls some methods from the inherited ERC-721 library, and ultimately returns a number that represents the ID of the freshly minted NFT.
 
-## Step 11: Connect Metamask & Alchemy to your project {#connect-metamask-and-alchemy}
+## Step 11: Connect MetaMask & Alchemy to your project {#connect-metamask-and-alchemy}
 
-Now that we’ve created a Metamask wallet, Alchemy account, and written our smart contract, it’s time to connect the three.
+Now that we’ve created a MetaMask wallet, Alchemy account, and written our smart contract, it’s time to connect the three.
 
 Every transaction sent from your virtual wallet requires a signature using your unique private key. To provide our program with this permission, we can safely store our private key (and Alchemy API key) in an environment file.
 
@@ -220,11 +220,11 @@ First, install the dotenv package in your project directory:
 
     npm install dotenv --save
 
-Then, create a .env file in the root directory of our project, and add your Metamask private key and HTTP Alchemy API URL to it.
+Then, create a .env file in the root directory of our project, and add your MetaMask private key and HTTP Alchemy API URL to it.
 
-* Follow [these instructions](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) to export your private key from Metamask
+- Follow [these instructions](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) to export your private key from MetaMask
 
-* See below to get HTTP Alchemy API URL and copy it to your clipboard
+- See below to get HTTP Alchemy API URL and copy it to your clipboard
 
 ![Copy your Alchemy API URL](./copy-alchemy-api-url.gif)
 
@@ -289,20 +289,20 @@ Navigate to the `scripts/` folder and create a new file called `deploy.js`, addi
 
 ```js
 async function main() {
-   const MyNFT = await ethers.getContractFactory("MyNFT");
+  const MyNFT = await ethers.getContractFactory("MyNFT")
 
-   // Start deployment, returning a promise that resolves to a contract object
-   const myNFT = await MyNFT.deploy();
-   console.log("Contract deployed to address:", myNFT.address);
+  // Start deployment, returning a promise that resolves to a contract object
+  const myNFT = await MyNFT.deploy()
+  console.log("Contract deployed to address:", myNFT.address)
 }
 
 main()
   .then(() => process.exit(0))
-  .catch(error => {
-    console.error(error);
-    process.exit(1);
-  });
- ```
+  .catch((error) => {
+    console.error(error)
+    process.exit(1)
+  })
+```
 
 Hardhat does an amazing job of explaining what each of these lines of code does in their [Contracts tutorial](https://hardhat.org/tutorial/testing-contracts.html#writing-tests), we’ve adopted their explanations here.
 
@@ -328,7 +328,7 @@ If we go to the [Ropsten etherscan](https://ropsten.etherscan.io/) and search fo
 
 ![View your transaction address on Etherscan](./etherscan-transaction.png)
 
-The From address should match your Metamask account address and the To address will say “Contract Creation.” If we click into the transaction, we’ll see our contract address in the To field:
+The From address should match your MetaMask account address and the To address will say “Contract Creation.” If we click into the transaction, we’ll see our contract address in the To field:
 
 ![View your contract address on Etherscan](./etherscan-contract.png)
 
@@ -336,7 +336,7 @@ Yasssss! You just deployed your NFT smart contract to the Ethereum chain!
 
 To understand what’s going on under the hood, let’s navigate to the Explorer tab in our [Alchemy dashboard ](https://dashboard.alchemyapi.io/explorer). If you have multiple Alchemy apps make sure to filter by app and select “MyNFT”.
 
-![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer)
+![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer.png)
 
 Here you’ll see a handful of JSON-RPC calls that Hardhat/Ethers made under the hood for us when we called the .deploy() function. Two important ones to call out here are [eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth_sendrawtransaction), which is the request to actually write our smart contract onto the Ropsten chain, and [eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash) which is a request to read information about our transaction given the hash (a typical pattern when sending transactions). To learn more about sending transactions, check out this tutorial on [sending transactions using Web3](https://docs.alchemyapi.io/alchemy/tutorials/sending-transactions-using-web3-and-alchemy).
 
