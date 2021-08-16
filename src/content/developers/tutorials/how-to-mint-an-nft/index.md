@@ -245,13 +245,13 @@ async function mintNFT(tokenURI) {
 
 ## Step 9: Call mintNFT and run node contract-interact.js {#call-mintnft-fn}
 
-Remember the metadata.json you uploaded to Pinata? Get its hashcode from Pinata and pass the following into a call to mintNFT [https://gateway.pinata.cloud/ipfs/<metadata-hash-code>](https://gateway.pinata.cloud/ipfs/<hash-code>)
+Remember the metadata.json you uploaded to Pinata? Get its hashcode from Pinata and pass the following into a call to mintNFT `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>`
 
 Here’s how to get the hashcode:
 
 ![How to get your nft metadata hashcode on Pinata](./metadataPinata.gif)_How to get your nft metadata hashcode on Pinata_
 
-> Double check that the hashcode you copied links to your **metadata.json** by loading [https://gateway.pinata.cloud/ipfs/<metadata-hash-code>](https://gateway.pinata.cloud/ipfs/%3Chash-code%3E) into a separate window. The page should look similar to the screenshot below:
+> Double check that the hashcode you copied links to your **metadata.json** by loading `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>` into a separate window. The page should look similar to the screenshot below:
 
 ![Your page should display the json metadata](./metadataJSON.png)_Your page should display the json metadata_
 
