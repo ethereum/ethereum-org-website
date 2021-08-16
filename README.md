@@ -447,11 +447,6 @@ export const query = graphql`
 
 - If you haven't contributed yet and would like to earn a POAP to show your loyalty to the Ethereum space, head over to the [issues](https://github.com/ethereum/ethereum-org-website/issues/) tab to get started!
 
-### 2020 Contributor POAP
-
-- If you commited any changes in 2020 that were merged into our repo, you also have a POAP waiting, and this again includes our dedicated translators on Crowdin
-- See 2021 section above for how to claim
-
 <hr style="margin-top: 3em; margin-bottom: 3em;">
 
 ## Contributors
