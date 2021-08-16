@@ -1,0 +1,13 @@
+[
+  {
+    "url": "https://docs.alchemy.com/alchemy/tutorials/how-to-create-an-nft/how-to-mint-a-nft",
+    "title": "How to Mint an NFT",
+    "description": "This tutorial describes how to mint an NFT on the Ethereum blockchain using Web 3",
+    "author": "Alchemy",
+    "authorGithub": "https://github.com/alchemyplatform",
+    "tags": ["solidity"],
+    "skillLevel": "beginner",
+    "timeToRead": "10",
+    "publishDate": "08/08/2021"
+  }
+]

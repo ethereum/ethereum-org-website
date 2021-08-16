@@ -19,6 +19,8 @@ import { Page, ButtonSecondary } from "../../components/SharedStyledComponents"
 import { getLocaleTimestamp, INVALID_DATETIME } from "../../utils/time"
 import { hasTutorials } from "../../utils/translations"
 
+import foreignTutorials from "../../data/tutorials.json"
+
 const SubSlogan = styled.p`
   font-size: 20px;
   line-height: 140%;
@@ -220,9 +222,23 @@ const TutorialsPage = ({ data, pageContext }) => {
       published: tutorial.frontmatter.published,
     }))
 
+  const externalTutorials = foreignTutorials.map((tutorial) => ({
+    to: tutorial.url,
+    title: tutorial.title,
+    description: tutorial.description,
+    author: tutorial.author,
+    tags: tutorial.tags.map((tag) => tag.toLowerCase().trim()),
+    skill: tutorial.skillLevel,
+    timeToRead: tutorial.timeToRead,
+    published: tutorial.publishDate,
+  }))
+
   // Tally all subject tag counts
   const tagsConcatenated = []
   for (const tutorial of allTutorials) {
+    tagsConcatenated.push(...tutorial.tags)
+  }
+  for (const tutorial of externalTutorials) {
     tagsConcatenated.push(...tutorial.tags)
   }
   const allTags = tagsConcatenated.map((tag) => ({ name: tag, totalCount: 1 }))
@@ -240,11 +256,14 @@ const TutorialsPage = ({ data, pageContext }) => {
 
   const [state, setState] = useState({
     activeTagNames: [],
-    filteredTutorials: allTutorials,
+    filteredTutorials: [].concat(externalTutorials, allTutorials),
   })
 
   const clearActiveTags = () => {
-    setState({ activeTagNames: [], filteredTutorials: allTutorials })
+    setState({
+      activeTagNames: [],
+      filteredTutorials: [].concat(externalTutorials, allTutorials),
+    })
   }
 
   const handleTagSelect = (tagName) => {
@@ -259,9 +278,9 @@ const TutorialsPage = ({ data, pageContext }) => {
     }
 
     // If no tags are active, show all tutorials, otherwise filter by active tag
-    let filteredTutorials = allTutorials
+    let filteredTutorials = [].concat(externalTutorials, allTutorials)
     if (activeTagNames.length > 0) {
-      filteredTutorials = allTutorials.filter((tutorial) => {
+      filteredTutorials = state.filteredTutorials.filter((tutorial) => {
         for (const tag of activeTagNames) {
           if (!tutorial.tags.includes(tag)) {
             return false
