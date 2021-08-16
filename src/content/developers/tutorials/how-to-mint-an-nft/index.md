@@ -74,7 +74,7 @@ Once you’ve created an account:
 
 - Upload an image to pinata — this will be the image asset for your NFT. Feel free to name the asset whatever you wish
 
-- After you upload, at the top of the page, there should be a green popup that allows you to view the hash of your upload → Copy that hashcode. You can view your upload at: [https://gateway.pinata.cloud/ipfs/<](https://gateway.pinata.cloud/ipfs/QmarPqdEuzh5RsWpyH2hZ3qSXBCzC5RyK3ZHnFkAsk7u2f)hash-code>
+- After you upload, at the top of the page, there should be a green popup that allows you to view the hash of your upload → Copy that hashcode. You can view your upload at: [https://gateway.pinata.cloud/ipfs/\<](https://gateway.pinata.cloud/ipfs/QmarPqdEuzh5RsWpyH2hZ3qSXBCzC5RyK3ZHnFkAsk7u2f)hash-code>
 
 For the more visual learners, the steps above are summarized here:
 
