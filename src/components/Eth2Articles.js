@@ -28,57 +28,55 @@ const RightColumn = styled.div`
     margin-left: 0rem;
   }
 `
-
 // TODO move into /data/ directory
 const dannyArticles = [
   {
-    title: "The State of Eth2, Jan 2021",
-    description: "20 January 2021",
-    link:
-      "https://blog.ethereum.org/2021/01/20/the-state-of-eth2-january-2021/",
+    title: "Finalized no. 27",
+    description: "26 July 2021",
+    link: "https://blog.ethereum.org/2021/07/26/finalized-no-27/",
   },
   {
-    title: "Eth2 quick update no. 21",
-    description: "27 November 2020",
-    link: "https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/",
+    title: "Finalized no. 26",
+    description: "25 May 2021",
+    link: "https://blog.ethereum.org/2021/05/25/finalized-no-26/",
   },
   {
-    title: "Eth2 quick update no. 20",
-    description: "13 November 2020",
-    link: "https://blog.ethereum.org/2020/11/13/eth2-quick-update-no-20/",
+    title: "Finalized no. 25",
+    description: "2 April 2021",
+    link: "https://blog.ethereum.org/2021/04/02/finalized-no-25/",
   },
   {
-    title: "Eth2 quick update no. 19",
-    description: "4 November 2020",
-    link: "https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/",
+    title: "Finalized no. 24",
+    description: "24 March 2021",
+    link: "https://blog.ethereum.org/2021/03/24/finalized-no-24/",
   },
 ]
 
 // TODO move into /data/ directory
 const benArticles = [
   {
-    title: "What’s New in Eth2 – #60",
-    description: "15 January 2021",
+    title: "What’s New in Eth2 – #75",
+    description: "13 August 2021",
     link:
-      "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_210115",
+      "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_210813",
   },
   {
-    title: "What's New in Eth2 - #59",
-    description: "30 December 2020",
+    title: "What's New in Eth2 - #74",
+    description: "30 July 2021",
     link:
-      "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_201230",
+      "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_210730",
   },
   {
-    title: "What’s New in Eth2 - #58",
-    description: "12 December 2020",
+    title: "What’s New in Eth2 - #73",
+    description: "16 July 2021",
     link:
-      "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_201212",
+      "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_210716",
   },
   {
-    title: "What's New in Eth2 – #57",
-    description: "30 November 2020",
+    title: "What's New in Eth2 – #72",
+    description: "2 July 2021",
     link:
-      "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_201130",
+      "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_210702",
   },
 ]
 
