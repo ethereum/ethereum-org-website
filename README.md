@@ -1064,6 +1064,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://mattsolomon.dev"><img src="https://avatars.githubusercontent.com/u/17163988?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matt</b></sub></a><br /><a href="#content-mds1" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/ytrezq"><img src="https://avatars.githubusercontent.com/u/3824869?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ytrezq</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ytrezq" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/ricky321u"><img src="https://avatars.githubusercontent.com/u/17769771?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ricky</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aricky321u" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/smudgil"><img src="https://avatars.githubusercontent.com/u/38195323?v=4?s=100" width="100px;" alt=""/><br /><sub><b>smudgil</b></sub></a><br /><a href="#content-smudgil" title="Content">🖋</a></td>
   </tr>
 </table>
 
