@@ -13,7 +13,7 @@ JSON-RPC is a stateless, light-weight remote procedure call (RPC) protocol. Prim
 
 ## JSON-RPC resources {#json-rpc-resources}
 
-- [Ethereum JSON-RPC Specification](https://playground.open-rpc.org/)
+- [Ethereum JSON-RPC Specification](https://playground.open-rpc.org/?schemaUrl=https://raw.githubusercontent.com/ethereum/eth1.0-apis/assembled-spec/openrpc.json&uiSchema[appBar][ui:splitView]=false&uiSchema[appBar][ui:input]=false&uiSchema[appBar][ui:examplesDropdown]=false)
 - [Ethereum JSON-RPC Specification GitHub repo](https://github.com/ethereum/eth1.0-apis)
 
 ## Client implementations {#client-implementations}
