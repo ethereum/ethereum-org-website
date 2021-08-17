@@ -4328,6 +4328,70 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "JaredFlomen",
+      "name": "Jared Flomen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58126876?v=4",
+      "profile": "http://jaredflomen.ca",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
+    },
+    {
+      "login": "mannekin",
+      "name": "Joseph Wallace",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38049812?v=4",
+      "profile": "http://atimidblog.com",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "ahmedprusevic",
+      "name": "Ahmed Prusevic",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24927091?v=4",
+      "profile": "https://ahmed.prusevic.com/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "mds1",
+      "name": "Matt",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17163988?v=4",
+      "profile": "https://mattsolomon.dev",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "ytrezq",
+      "name": "ytrezq",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3824869?v=4",
+      "profile": "https://github.com/ytrezq",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "ricky321u",
+      "name": "Ricky",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17769771?v=4",
+      "profile": "https://github.com/ricky321u",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "smudgil",
+      "name": "smudgil",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38195323?v=4",
+      "profile": "https://github.com/smudgil",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

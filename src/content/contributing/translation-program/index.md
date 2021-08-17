@@ -18,7 +18,7 @@ Our progress so far:
 If you want to get involved and help us grow the global Ethereum community by translating the website into your language, follow the steps below!
 
 <InfoBanner shouldCenter emoji=":tada:">
-  Claim your POAP token! If you translated ethereum.org in 2020 or 2021, there's a unique POAP waiting for you.{" "}
+  Claim your POAP token! If you translated ethereum.org in 2021, there's a unique POAP waiting for you.{" "}
   <a href="https://ethereum.org/en/contributing/#poap">More on POAPs</a>
 </InfoBanner>
 
