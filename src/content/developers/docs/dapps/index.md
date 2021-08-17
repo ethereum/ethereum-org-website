@@ -88,6 +88,8 @@ Tokens must be generated in order to prove the value nodes that contribute to th
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
+- [What is a Dapp? A Guide to Ethereum Dapps](https://www.freecodecamp.org/news/what-is-a-dapp-a-guide-to-ethereum-dapps/)
+
 ## Related Topics {#related-topics}
 
 - [Introduction to the Ethereum stack](/developers/docs/ethereum-stack/)
