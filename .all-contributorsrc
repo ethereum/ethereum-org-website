@@ -4392,6 +4392,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "cosinekitty",
+      "name": "Don Cross",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11699954?v=4",
+      "profile": "http://cosinekitty.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
