@@ -4401,6 +4401,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "jacksonet00",
+      "name": "Jackson Taylor",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57923799?v=4",
+      "profile": "http://jacksontaylor.info",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
