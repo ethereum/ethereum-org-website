@@ -4189,7 +4189,10 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/80549215?v=4",
       "profile": "https://github.com/robriks",
       "contributions": [
-        "bug"
+        "bug",
+        "projectManagement",
+        "question",
+        "doc"
       ]
     },
     {
