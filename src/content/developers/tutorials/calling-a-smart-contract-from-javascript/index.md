@@ -97,7 +97,7 @@ In the next part we’ll call the `balanceOf` function to retrieve the current a
 
 The first example will call a “constant” method and execute its smart contract method in the EVM without sending any transaction. For this we’ll read the ERC20 balance of an address. [Read our article about ERC20 tokens](/developers/tutorials/understand-the-erc20-token-smart-contract/).
 
-You can access an instantiated smart contract methods that you provided the ABI for as follow: `yourContract.methods.methodname`. By using the `call` function you’ll receive the result of executing the function.
+You can access an instantiated smart contract methods that you provided the ABI for as follows: `yourContract.methods.methodname`. By using the `call` function you’ll receive the result of executing the function.
 
 ```js
 daiToken.methods.balanceOf(senderAddress).call(function (err, res) {
@@ -129,4 +129,4 @@ daiToken.methods
 
 The call function returns the hash of the transaction that will be mined into the blockchain. On Ethereum, transaction hashes are predictable - that’s how we can get the hash of the transaction before it is executed ([learn how hashes are calculated here](https://ethereum.stackexchange.com/questions/45648/how-to-calculate-the-assigned-txhash-of-a-transaction)).
 
-As the function only submits the transaction to the blockchain, we can’t see the result until we know when it is mined and included in the blockchain. In the next tutorial we’ll learn [how to wait for a transaction to be executed on the blockchain by knowing it’s hash](https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-ethereum-with-js/).
+As the function only submits the transaction to the blockchain, we can’t see the result until we know when it is mined and included in the blockchain. In the next tutorial we’ll learn [how to wait for a transaction to be executed on the blockchain by knowing its hash](https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-ethereum-with-js/).
