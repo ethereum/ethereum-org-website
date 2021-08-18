@@ -18,3 +18,5 @@ Smart contracts are public on Ethereum and can be thought of as open APIs. You d
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
+
+- [Composability is Innovation](https://future.a16z.com/how-composability-unlocks-crypto-and-everything-else/#:~:text=Ethereum%20smart%20contract%20developers%20enabled,types%20of%20contracts%20should%20behave.&text=With%20these%20token%20standards%20in,be%20assembled%20into%20larger%20systems)
