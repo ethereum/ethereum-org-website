@@ -65,9 +65,9 @@ _It’s also important to remember that Ethereum does more than just financial t
 
 ## Criticism
 
-PoS has also been criticised for promoting a centralised aristocracy rule of the network, because the right to propose blocks is "bought" by staking funds. However, there are many thousands of individual holders of sufficient funds (32 ETH) that could choose to become a validator. The minimum staked value probably also represents a much cheaper entry point to validating the network than the investment of capital required to run a PoW mining rig for a blockchain like Bitcoin.
+PoS has also been criticised for promoting a centralised or aristocratic rule of the network, because the right to propose blocks is "bought" by staking funds. However, there are many thousands of individual holders of sufficient funds (32 ETH) that could choose to become a validator. There are currently more than 130,000 Ethereum validators. The minimum staked value probably also represents a much cheaper entry point to validating the network than the investment of capital required to run a PoW mining rig for a blockchain like Bitcoin.
 
-it is important to realise that there are alternative blockchains already offer lower energy consumption either because they already use PoS or because they have other efficiencies built into their validation protocols. However, to deliver these efficiency gains the alternative chains have invariably compromised security, decentralisation or scalability. The merge from PoW to PoS drastically improves Ethereum's energy-efficiency while also preserving its decentralisation and security.
+It is also important to realise that there are alternative blockchains already offering lower energy consumption either because they already use PoS or because they have other efficiencies built into their validation protocols. However, to deliver these efficiency gains the alternative chains have invariably compromised security, decentralisation or scalability. The merge from PoW to PoS drastically improves Ethereum's energy-efficiency while also preserving its decentralisation and security.
 
 ## Summary
 
