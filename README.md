@@ -1069,6 +1069,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://jacksontaylor.info"><img src="https://avatars.githubusercontent.com/u/57923799?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jackson Taylor</b></sub></a><br /><a href="#ideas-jacksonet00" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/MrBrain295"><img src="https://avatars.githubusercontent.com/u/66077254?v=4?s=100" width="100px;" alt=""/><br /><sub><b>MrBrain295</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AMrBrain295" title="Bug reports">🐛</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=MrBrain295" title="Documentation">📖</a> <a href="#ideas-MrBrain295" title="Ideas, Planning, & Feedback">🤔</a> <a href="#content-MrBrain295" title="Content">🖋</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/SafePalWallet"><img src="https://avatars.githubusercontent.com/u/52519650?v=4?s=100" width="100px;" alt=""/><br /><sub><b>SafePalWallet</b></sub></a><br /><a href="#content-SafePalWallet" title="Content">🖋</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
