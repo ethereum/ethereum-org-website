@@ -90,8 +90,6 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 - [What Are Decentralized Apps?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps)
 
-- [What is a Dapp? A Guide to Ethereum Dapps](https://www.freecodecamp.org/news/what-is-a-dapp-a-guide-to-ethereum-dapps/)
-
 ## Related Topics {#related-topics}
 
 - [Introduction to the Ethereum stack](/developers/docs/ethereum-stack/)
