@@ -4425,6 +4425,15 @@
         "ideas",
         "content"
       ]
+    },
+    {
+      "login": "SafePalWallet",
+      "name": "SafePalWallet",
+      "avatar_url": "https://avatars.githubusercontent.com/u/52519650?v=4",
+      "profile": "https://github.com/SafePalWallet",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
