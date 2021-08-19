@@ -88,6 +88,8 @@ Tokens must be generated in order to prove the value nodes that contribute to th
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
+- [What Are Decentralized Apps?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps)
+
 ## Related Topics {#related-topics}
 
 - [Introduction to the Ethereum stack](/developers/docs/ethereum-stack/)
