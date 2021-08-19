@@ -134,8 +134,8 @@ Depending on the image, you will be running:
 You can log in through SSH or using the console (if you have a monitor and keyboard attached)
 
 ```bash
-User: ethereum
-Password: ethereum
+User: ubuntu
+Password: ubuntu
 ```
 
 You will be prompted to change the password on first login, so you will need to login twice.
