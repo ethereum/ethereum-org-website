@@ -50,7 +50,7 @@
   "page-developers-meta-desc": "Documentation, tutorials, and tools for developers building on Ethereum.",
   "page-developers-mining-desc": "How new blocks are created and consensus is reached",
   "page-developers-mining-link": "Mining",
-  "page-developers-networks-desc": "An overview of mainnet and the test networks",
+  "page-developers-networks-desc": "An overview of Mainnet and the test networks",
   "page-developers-networks-link": "Networks",
   "page-developers-node-clients-desc": "How blocks and transactions are verified in the network",
   "page-developers-node-clients-link": "Nodes and clients",

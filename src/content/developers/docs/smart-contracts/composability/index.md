@@ -18,3 +18,5 @@ Smart contracts are public on Ethereum and can be thought of as open APIs. You d
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
+
+- [Composability is Innovation](https://future.a16z.com/how-composability-unlocks-crypto-and-everything-else/)

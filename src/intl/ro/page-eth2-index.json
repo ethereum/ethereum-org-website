@@ -40,7 +40,7 @@
   "page-eth2-diagram-validators": "Mai multe despre validatori",
   "page-eth2-dive": "Aprofundează viziunea",
   "page-eth2-dive-desc": "Cum vom face Ethereum mai scalabil, mai sigur și mai durabil? Totul păstrând etosul central al descentralizării Ethereum.",
-  "page-eth2-docking": "Andocarea",
+  "page-eth2-docking": "Combinarea",
   "page-eth2-docking-answer-1": "Andocarea se produce atunci când rețeaua principală se transformă într-un fragment. Acest lucru va veni după o implementare cu succes a lanțurilor de fragmente.",
   "page-eth2-docking-btn": "Mai multe despre andocare",
   "page-eth2-docking-desc": "Rețeaua principală Ethereum va trebui să „andocheze” sau „fuzioneze” cu lanțul Beacon la un moment dat. Acest lucru va permite mizarea pentru întreaga rețea și va semnala sfârșitul mineritului cu consum intensiv de energie.",

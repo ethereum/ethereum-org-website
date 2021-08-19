@@ -33,9 +33,10 @@ A submitted transaction includes the following information:
 - `value` – amount of ETH to transfer from sender to recipient (in WEI, a denomination of ETH)
 - `data` – optional field to include arbitrary data
 - `gasLimit` – the maximum amount of gas units that can be consumed by the transaction. Units of gas represent computational steps
-- `gasPrice` – the fee the sender pays per unit of gas
+- `maxPriorityFeePerGas` - the maximum amount of gas to be included as a tip to the miner
+- `maxFeePerGas` - the maximum amount of gas willing to be paid for the transaction (inclusive of `baseFeePerGas` and `maxPriorityFeePerGas`)
 
-Gas is a reference to the computation required to process the transaction by a miner. Users have to pay a fee for this computation. The `gasLimit` and `gasPrice` determine the maximum transaction fee paid to the miner. [More on Gas](/developers/docs/gas/).
+Gas is a reference to the computation required to process the transaction by a miner. Users have to pay a fee for this computation. The `gasLimit`, and `maxPriorityFeePerGas` determine the maximum transaction fee paid to the miner. [More on Gas](/developers/docs/gas/).
 
 The transaction object will look a little like this:
 
@@ -44,7 +45,8 @@ The transaction object will look a little like this:
   from: "0xEA674fdDe714fd979de3EdF0F56AA9716B898ec8",
   to: "0xac03bb73b6a9e108530aff4df5077c2b3d481e5a",
   gasLimit: "21000",
-  gasPrice: "200",
+  maxFeePerGas: "300"
+  maxPriorityFeePerGas: "10"
   nonce: "0",
   value: "10000000000",
 }
@@ -65,7 +67,8 @@ Example [JSON-RPC](https://eth.wiki/json-rpc/API) call:
     {
       "from": "0x1923f626bb8dc025849e00f99c25fe2b2f7fb0db",
       "gas": "0x55555",
-      "gasPrice": "0x1234",
+      "maxFeePerGas": "0x1234",
+      "maxPriorityFeePerGas": "0x1234",
       "input": "0xabcd",
       "nonce": "0x0",
       "to": "0x07a565b7ed7d7a678680a4c162885bedbb695fe0",
@@ -85,7 +88,8 @@ Example response:
     "raw": "0xf88380018203339407a565b7ed7d7a678680a4c162885bedbb695fe080a44401a6e4000000000000000000000000000000000000000000000000000000000000001226a0223a7c9bcf5531c99be5ea7082183816eb20cfe0bbc322e97cc5c7f71ab8b20ea02aadee6b34b45bb15bc42d9c09de4a6754e7000908da72d48cc7704971491663",
     "tx": {
       "nonce": "0x0",
-      "gasPrice": "0x1234",
+      "maxFeePerGas": "0x1234",
+      "maxPriorityFeePerGas": "0x1234",
       "gas": "0x55555",
       "to": "0x07a565b7ed7d7a678680a4c162885bedbb695fe0",
       "value": "0x1234",
@@ -108,10 +112,10 @@ With the signature hash, the transaction can be cryptographically proven that it
 
 As mentioned, transactions cost [gas](/developers/docs/gas/) to execute. Simple transfer transactions require 21000 units of Gas.
 
-So for Bob to send Alice 1 ETH at a `gasPrice` of 200 gwei, Bob will need to pay the following fee:
+So for Bob to send Alice 1 ETH at a `baseFeePerGas` of 190 gwei and `maxPriorityFeePerGas` of 10 gwei, Bob will need to pay the following fee:
 
 ```
-200 * 21000 = 4,200,000 gwei
+(190 + 10) * 21000 = 4,200,000 gwei
 --or--
 0.0042 ETH
 ```
@@ -120,7 +124,9 @@ Bob's account will be debited **-1.0042 ETH**
 
 Alice's account will be credited **+1.0 ETH**
 
-The miner processing the transaction will get **+0.0042 ETH**
+The base fee will be burned **-0.003735 ETH**
+
+Miner keeps the tip **+0.000197 ETH**
 
 Gas is required for any smart contract interaction too.
 
@@ -137,7 +143,7 @@ Once the transaction has been submitted the following happens:
    `0x97d99bc7729211111a21b12c933c949d4f31684f1d6954ff477d0477538ff017`
 2. The transaction is then broadcast to the network and included in a pool with lots of other transactions.
 3. A miner must pick your transaction and include it in a block in order to verify the transaction and consider it "successful".
-   - You may end up waiting at this stage if the network is busy and miners aren't able to keep up. Miners will always prioritise transactions with higher `GASPRICE` because they get to keep the fees.
+   - You may end up waiting at this stage if the network is busy and miners aren't able to keep up.
 4. Your transaction will also get a block confirmation number. This is the number of blocks created since the block that your transaction was included in. The higher the number, the greater the certainty that the transaction was processed and recognised by the network. This is because sometimes the block your transaction was included in may not have made it into the chain.
    - The larger the block confirmation number the more immutable the transaction is. So for higher value transactions, more block confirmations may be desired.
 
@@ -268,7 +274,7 @@ Ethers
     value: utils.parseEther(1.0017071732629267),
 
     // The chain ID; 0 indicates replay-attack vulnerable
-    // (eg. 1 = Homestead mainnet, 3 = Ropsten testnet)
+    // (eg. 1 = Homestead Mainnet, 3 = Ropsten testnet)
     chainId: 1,
 
     // The signature of the transaction (TestRPC may fail to include these)

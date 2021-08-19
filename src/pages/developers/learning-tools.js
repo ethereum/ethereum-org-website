@@ -127,6 +127,15 @@ const LearningToolsPage = ({ data }) => {
       background: "#ffffff",
       subjects: ["Vyper"],
     },
+    {
+      name: "Capture The Ether",
+      description: "page-learning-tools-capture-the-ether-description",
+      url: "https://capturetheether.com/",
+      image: data.captureTheEther.childImageSharp.fixed,
+      alt: "page-learning-tools-capture-the-ether-logo-alt",
+      background: "#1B9AAA",
+      subjects: ["Solidity"],
+    },
   ]
 
   const bootcamps = [
@@ -274,6 +283,11 @@ export const learningToolImage = graphql`
 
 export const query = graphql`
   query {
+    captureTheEther: file(
+      relativePath: { eq: "dev-tools/capturetheether.png" }
+    ) {
+      ...learningToolImage
+    }
     chainshot: file(relativePath: { eq: "dev-tools/chainshot.png" }) {
       ...learningToolImage
     }

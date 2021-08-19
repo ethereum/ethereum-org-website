@@ -8,7 +8,7 @@ sidebar: true
 # Contributing to ethereum.org 🦄 {#contributing-to-ethereumorg-}
 
 <InfoBanner shouldCenter emoji=":tada:">
-  Claim your POAP token! If you contributed to ethereum.org in 2020, there's a unique POAP waiting for you.{" "}
+  Claim your POAP token! If you contributed to ethereum.org in 2021, there's a unique POAP waiting for you.{" "}
   <a href="#poap">More on POAPs</a>
 </InfoBanner>
 
@@ -64,6 +64,10 @@ Decisions about individual PRs, design evolution and major upgrades are made by 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
 - [Discord server](https://discord.gg/CetY6Y4)
+
+## New to open-source? {#new-to-open-source}
+
+We have low barrier to entry issues on our Github repository specifically designed for developers who are new to open-source labelled [good first issue](https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
 
 ## Claim your contributor POAP {#poap}
 

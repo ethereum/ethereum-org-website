@@ -45,7 +45,7 @@ Simplified state channels that only deal with payments (e.g. ETH transfers). The
 
 | Pros                                                                            | Cons                                                                                                                                                |
 | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Instant withdrawal/settling on mainnet (if both parties to a channel cooperate) | Time and cost to set up and settle a channel - not so good for occasional one-off transactions between arbitrary users.                             |
+| Instant withdrawal/settling on Mainnet (if both parties to a channel cooperate) | Time and cost to set up and settle a channel - not so good for occasional one-off transactions between arbitrary users.                             |
 | Extremely high throughput is possible                                           | Need to periodically watch the network (liveness requirement) or delegate this responsibility to someone else to ensure the security of your funds. |
 | Lowest cost per transaction - good for streaming micropayments                  | Have to lockup funds in open payment channels                                                                                                       |
 |                                                                                 | Don't support open participation                                                                                                                    |
