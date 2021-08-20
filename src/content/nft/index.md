@@ -92,7 +92,7 @@ NFTs are different from ERC-20 tokens, such as DAI or LINK, in that each individ
   - Signatures
 - Lots and lots more options to get creative with!
 
-An NFT can only have one owner at a time. The way this is managed is through the uniqueID and metadata that no other token can replicate. NFTs are minted through smart contracts that verify ownership and manage transferability of the NFT's. When someone creates, or mints an NFT they are executing code stored in smart contracts that conform to different standards, such as ERC-721. This in turn is then added to the blockchain where the NFT is being managed. The minting process, from a high level, has the following steps that it goes through:
+An NFT can only have one owner at a time. Ownership is managed through the uniqueID and metadata that no other token can replicate. NFTs are minted through smart contracts that assign ownership and manage the transferability of the NFT's. When someone creates or mints an NFT, they execute code stored in smart contracts that conform to different standards, such as ERC-721. This in turn is then added to the blockchain where the NFT is being managed. The minting process, from a high level, has the following steps that it goes through:
 
 - Creating a new block
 - Validating information
