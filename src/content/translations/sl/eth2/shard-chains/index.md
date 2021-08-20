@@ -15,7 +15,7 @@ summaryPoints:
 ---
 
 <UpgradeStatus date="~2021">
-    Razdrobljene verige bi lahko bile uvedene enkrat v letu 2021, odvisno od hitrosti napredka po zagonu <a href="/en/eth2/beacon-chain/">oddajniške verige</a>. Ti drobci bodo Ethereumu zagotovili boljšo zmogljivost za obdelavo in dostop do podatkov, vendar se ne bodo uporabljali za izvajanje kode. Podrobnosti tega bodo še določene.
+    Razdrobljene verige bi lahko bile uvedene enkrat v letu 2021, odvisno od hitrosti napredka po zagonu <a href="/eth2/beacon-chain/">oddajniške verige</a>. Ti drobci bodo Ethereumu zagotovili boljšo zmogljivost za obdelavo in dostop do podatkov, vendar se ne bodo uporabljali za izvajanje kode. Podrobnosti tega bodo še določene.
 </UpgradeStatus>
 
 ## Kaj je razdrobitev? {#what-is-sharding}

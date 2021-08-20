@@ -15,7 +15,7 @@ summaryPoints:
 ---
 
 <UpgradeStatus date="~2021">
-    A shard láncokat nagyjából 2021 körül kellene bevezetni attól függően, hogy milyen előrelépések történnek <a href="/en/eth2/beacon-chain/">a Beacon Chain</a> elindítása után. Ezek a shardok az Ethereum számára nagyobb tárolási és elérési kapacitást tesznek lehetővé, de kód futtatásra nem lehet majd használni. Annak részletei még kialakulóban vannak.
+    A shard láncokat nagyjából 2021 körül kellene bevezetni attól függően, hogy milyen előrelépések történnek <a href="/eth2/beacon-chain/">a Beacon Chain</a> elindítása után. Ezek a shardok az Ethereum számára nagyobb tárolási és elérési kapacitást tesznek lehetővé, de kód futtatásra nem lehet majd használni. Annak részletei még kialakulóban vannak.
 </UpgradeStatus>
 
 ## Mi az a sharding? {#what-is-sharding}
