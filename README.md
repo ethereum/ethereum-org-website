@@ -1071,6 +1071,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/SafePalWallet"><img src="https://avatars.githubusercontent.com/u/52519650?v=4?s=100" width="100px;" alt=""/><br /><sub><b>SafePalWallet</b></sub></a><br /><a href="#content-SafePalWallet" title="Content">🖋</a></td>
+    <td align="center"><a href="https://svaddadhi.github.io/"><img src="https://avatars.githubusercontent.com/u/29217475?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vishal Vaddadhi</b></sub></a><br /><a href="#content-svaddadhi" title="Content">🖋</a></td>
   </tr>
 </table>
 
