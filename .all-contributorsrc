@@ -4444,6 +4444,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "matthewrkula",
+      "name": "Matt Kula",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1483546?v=4",
+      "profile": "https://github.com/matthewrkula",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
