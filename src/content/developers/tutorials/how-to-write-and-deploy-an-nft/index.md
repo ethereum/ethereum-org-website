@@ -200,11 +200,11 @@ After our import statements, we have our custom NFT smart contract, which is sur
 
 In our ERC-721 constructor, you’ll notice we pass 2 strings, “MyNFT” and “NFT.” The first variable is the smart contract’s name, and the second is its symbol. You can name each of these variables whatever you wish!
 
-Finally, we have our function `mintNFT(address recipient, string memory tokenURI)` that allows us to mint an NFT! You'll notice it this function takes in two variables:
+Finally, we have our function `mintNFT(address recipient, string memory uri)` that allows us to mint an NFT! You'll notice it this function takes in two variables:
 
 - `address recipient` specifies the address that will receive your freshly minted NFT
 
-- `string memory tokenURI` is a string that should resolve to a JSON document that describes the NFT's metadata. An NFT's metadata is really what brings it to life, allowing it to have configurable properties, such as a name, description, image, and other attributes. In part 2 of this tutorial, we will describe how to configure this metadata.
+- `string memory uri` is a string that should resolve to a JSON document that describes the NFT's metadata. An NFT's metadata is really what brings it to life, allowing it to have configurable properties, such as a name, description, image, and other attributes. In part 2 of this tutorial, we will describe how to configure this metadata.
 
 `mintNFT` calls some methods from the inherited ERC-721 library, and ultimately returns a number that represents the ID of the freshly minted NFT.
 
