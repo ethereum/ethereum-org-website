@@ -202,25 +202,20 @@ const published = (locale, published) => {
 const TutorialsPage = ({ data, pageContext }) => {
   const intl = useIntl()
   // Filter tutorials by language and map to object
-  const allTutorials = data.allTutorials.nodes
-    .filter((tutorial) =>
-      hasTutorials(pageContext.language)
-        ? tutorial.frontmatter.lang === pageContext.language
-        : tutorial.frontmatter.lang === "en"
-    )
-    .map((tutorial) => ({
-      to:
-        tutorial.fields.slug.substr(0, 3) === "/en"
-          ? tutorial.fields.slug.substr(3)
-          : tutorial.fields.slug,
-      title: tutorial.frontmatter.title,
-      description: tutorial.frontmatter.description,
-      author: tutorial.frontmatter.author,
-      tags: tutorial.frontmatter.tags.map((tag) => tag.toLowerCase().trim()),
-      skill: tutorial.frontmatter.skill,
-      timeToRead: tutorial.timeToRead,
-      published: tutorial.frontmatter.published,
-    }))
+  const internalTutorials = data.allTutorials.nodes.map((tutorial) => ({
+    to:
+      tutorial.fields.slug.substr(0, 3) === "/en"
+        ? tutorial.fields.slug.substr(3)
+        : tutorial.fields.slug,
+    title: tutorial.frontmatter.title,
+    description: tutorial.frontmatter.description,
+    author: tutorial.frontmatter.author,
+    tags: tutorial.frontmatter.tags.map((tag) => tag.toLowerCase().trim()),
+    skill: tutorial.frontmatter.skill,
+    timeToRead: tutorial.timeToRead,
+    published: tutorial.frontmatter.published,
+    lang: tutorial.frontmatter.lang || "en",
+  }))
 
   const externalTutorials = foreignTutorials.map((tutorial) => ({
     to: tutorial.url,
@@ -230,12 +225,22 @@ const TutorialsPage = ({ data, pageContext }) => {
     tags: tutorial.tags.map((tag) => tag.toLowerCase().trim()),
     skill: tutorial.skillLevel,
     timeToRead: tutorial.timeToRead,
-    published: tutorial.publishDate,
+    published: new Date(tutorial.publishDate).toISOString(),
+    lang: tutorial.lang || "en",
   }))
+
+  const allTutorials = []
+    .concat(externalTutorials, internalTutorials)
+    .filter((tutorial) =>
+      hasTutorials(pageContext.language)
+        ? tutorial.lang === pageContext.language
+        : tutorial.lang === "en"
+    )
+    .sort((a, b) => new Date(b.published) - new Date(a.published))
 
   // Tally all subject tag counts
   const tagsConcatenated = []
-  for (const tutorial of allTutorials) {
+  for (const tutorial of internalTutorials) {
     tagsConcatenated.push(...tutorial.tags)
   }
   for (const tutorial of externalTutorials) {
@@ -256,13 +261,13 @@ const TutorialsPage = ({ data, pageContext }) => {
 
   const [state, setState] = useState({
     activeTagNames: [],
-    filteredTutorials: [].concat(externalTutorials, allTutorials),
+    filteredTutorials: allTutorials,
   })
 
   const clearActiveTags = () => {
     setState({
       activeTagNames: [],
-      filteredTutorials: [].concat(externalTutorials, allTutorials),
+      filteredTutorials: allTutorials,
     })
   }
 
@@ -278,7 +283,7 @@ const TutorialsPage = ({ data, pageContext }) => {
     }
 
     // If no tags are active, show all tutorials, otherwise filter by active tag
-    let filteredTutorials = [].concat(externalTutorials, allTutorials)
+    let filteredTutorials = allTutorials
     if (activeTagNames.length > 0) {
       filteredTutorials = state.filteredTutorials.filter((tutorial) => {
         for (const tag of activeTagNames) {
