@@ -157,7 +157,7 @@ Open up the my-nft project in your favorite editor (we like [VSCode](https://cod
    ```solidity
    //Contract based on [https://docs.openzeppelin.com/contracts/3.x/erc721](https://docs.openzeppelin.com/contracts/3.x/erc721)
    // SPDX-License-Identifier: MIT
-   pragma solidity ^0.7.3;
+   pragma solidity ^0.8.0;
 
    import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
    import "@openzeppelin/contracts/utils/Counters.sol";
@@ -169,7 +169,7 @@ Open up the my-nft project in your favorite editor (we like [VSCode](https://cod
 
        constructor() public ERC721("MyNFT", "NFT") {}
 
-       function mintNFT(address recipient, string memory tokenURI)
+       function mintNFT(address recipient, string memory uri)
            public onlyOwner
            returns (uint256)
        {
@@ -177,7 +177,7 @@ Open up the my-nft project in your favorite editor (we like [VSCode](https://cod
 
            uint256 newItemId = _tokenIds.current();
            _mint(recipient, newItemId);
-           _setTokenURI(newItemId, tokenURI);
+           uri = tokenURI(newItemId);
 
            return newItemId;
        }
