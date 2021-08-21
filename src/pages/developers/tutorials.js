@@ -240,12 +240,10 @@ const TutorialsPage = ({ data, pageContext }) => {
 
   // Tally all subject tag counts
   const tagsConcatenated = []
-  for (const tutorial of internalTutorials) {
+  for (const tutorial of allTutorials) {
     tagsConcatenated.push(...tutorial.tags)
   }
-  for (const tutorial of externalTutorials) {
-    tagsConcatenated.push(...tutorial.tags)
-  }
+
   const allTags = tagsConcatenated.map((tag) => ({ name: tag, totalCount: 1 }))
   const sanitizedAllTags = Array.from(
     allTags.reduce(
