@@ -4453,6 +4453,16 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "Hamza-Shahzad",
+      "name": "Hamza Shahzad",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13493539?v=4",
+      "profile": "http://hamza.ai",
+      "contributions": [
+        "code",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
