@@ -16,6 +16,7 @@ If this is your first attempt at Ethereum development, we recommend starting at 
 ### Fundamental topics {#fundamental-topics}
 
 - [Intro to Ethereum](/developers/docs/intro-to-ethereum/) _– A quick overview of Ethereum_
+- [Intro to Ether](/developers/docs/intro-to-ether/) _– A quick overview of Ether_
 - [Web2 vs Web3](/developers/docs/web2-vs-web3/) _– The fundamental differences that blockchain-based applications provide_
 - [Intro to dapps](/developers/docs/dapps/) _– An introduction to decentralized applications_
 - [The Ethereum Virtual Machine (EVM)](/developers/docs/evm/) _– The EVM handles all the computation on the Ethereum network_

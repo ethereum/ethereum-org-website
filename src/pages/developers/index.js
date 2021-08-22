@@ -329,6 +329,13 @@ const DevelopersPage = ({ data }) => {
               <Translation id="page-developers-into-eth-desc" />
             </p>
 
+            <Link to="/developers/docs/intro-to-ether/">
+              <Translation id="page-developers-intro-ether-link" />
+            </Link>
+            <p>
+              <Translation id="page-developers-into-ether-desc" />
+            </p>
+
             <Link to="/developers/docs/dapps/">
               <Translation id="page-developers-intro-dapps-link" />
             </Link>
