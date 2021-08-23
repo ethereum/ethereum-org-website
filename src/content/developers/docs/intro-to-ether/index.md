@@ -11,7 +11,7 @@ To help you better understand this page, we recommend you first read [Introducti
 
 ## What is a cryptocurrency? {#what-is-a-cryptocurrency}
 
-A cryptocurrency is a medium of exchange that is secured by a blockchain-based ledger.
+A cryptocurrency is a medium of exchange secured by a blockchain-based ledger.
 
 A "medium of exchange" is anything that is widely accepted as payment for goods and services, and a "ledger" is a data store that keeps track of transactions. Blockchain technology allows users to make transactions on the ledger without reliance upon a trusted third party to maintain the ledger.
 
