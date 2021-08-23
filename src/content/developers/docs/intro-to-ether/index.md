@@ -23,7 +23,7 @@ Since Bitcoin's release, developers have created many different types of cryptoc
 
 Ether (ETH) is the cryptocurrency that pays for computing services on the [Ethereum blockchain](/developers/docs/intro-to-ethereum).
 
-The Ethereum blockchain allows developers to create [decentralized applications (dapps)](/developers/docs/intro-to-dapps), sharing a common pool of computing power. Because this shared pool has a finite amount of power, Ethereum needs a way to determine who gets access to the computing resources — otherwise, a dapp could consume the entire network by submitting an infinite loop or other malicious program.
+The Ethereum blockchain allows developers to create [decentralized applications (dapps)](/developers/docs/intro-to-dapps), which all share a pool of computing power. This shared pool is finite, so Ethereum needs to determine who gets access to the computing power. Otherwise, a dapp with an accidental infinite loop or another malicious program could consume the entire network.
 
 The Ether cryptocurrency provides a pricing mechanism for Ethereum's computing power. When users want to make a transaction, they must pay an amount of Ether that is proportional to the total amount of computing the transaction requires. Thus, even if a malicious dapp submitted an infinite loop, the transaction would eventually run out of Ether and terminate, allowing the network to return to normal.
 
