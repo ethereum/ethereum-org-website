@@ -27,7 +27,7 @@ You should have a good understanding of all the foundational topics and a high-l
 Multiple projects provide implementations of Plasma that you can integrate into your dapps:
 
 - [OMG Network](https://omg.network/)
-- [Polygon](https://polygon.technology/)[previously Matic Network](https://matic.network/)
+- [Polygon](https://polygon.technology/) (previously Matic Network)
 - [Gluon](https://gluon.network/)
 - [Gazelle](https://gzle.io/)
 - [LeapDAO](https://ipfs.leapdao.org/)
