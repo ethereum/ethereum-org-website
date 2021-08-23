@@ -154,7 +154,14 @@ If you are looking to reduce gas costs for your ETH you are able to set a tip to
 
 If you want to monitor gas prices so you are able to send your ETH for less you can use many different tools such as:
 
-- [Etherscan](https://etherscan.io/gastracker)
+- [Etherscan](https://etherscan.io/gastracker) _Transaction gas price estimator_
+- [GasNow](https://www.gasnow.org) _ETH Gas Price forecast system_
+- [ETH Gas Station](https://ethgasstation.info/) _Consumer oriented metrics for the Ethereum gas market_
+
+## Related Tools {#related-tools}
+
+- [Bloxy Gas Analytics](https://stat.bloxy.info/superset/dashboard/gas/?standalone=true) _Ethereum network gas stats_
+- [Blocknative's Gas Platform](https://www.blocknative.com/gas) _Gas estimation API powered by Blocknative's global mempool data platform_
 
 ## Further Reading {#further-reading}
 
@@ -162,13 +169,6 @@ If you want to monitor gas prices so you are able to send your ETH for less you 
 - [Is Ethereum more expensive to use as price rises?](https://docs.ethhub.io/questions-about-ethereum/is-ethereum-more-expensive-to-use-as-price-rises/)
 - [Reducing the gas consumption of your Smart Contracts](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
 - [Proof of Stake versus Proof of Work](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
-
-## Related Tools {#related-tools}
-
-- [ETH Gas Station](https://ethgasstation.info/) _Consumer oriented metrics for the Ethereum gas market_
-- [Etherscan Gas Tracker](https://etherscan.io/gastracker) _Transaction gas price estimator_
-- [Bloxy Gas Analytics](https://stat.bloxy.info/superset/dashboard/gas/?standalone=true) _Ethereum network gas stats_
-- [Blocknative's Gas Platform](https://www.blocknative.com/gas) _Gas estimation API powered by Blocknative's global mempool data platform_
 
 ## Related Topics {#related-topics}
 
