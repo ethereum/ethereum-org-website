@@ -77,9 +77,30 @@ This website has an alternative domain name powered by NFTs, **ethereum.eth**. O
 
 ## How do NFTs work? {#how-nfts-work}
 
-NFTs have some special properties:
+NFTs are different from ERC-20 tokens, such as DAI or LINK, in that each individual token is completely unique and is not divisible. NFTs give the ability to assign or claim ownership of any unique piece of digital data, trackable by using Ethereum's blockchain as a public ledger. An NFT is minted from digital objects as a representation of digital or non-digital assets. For example, an NFT could represent:
 
-- Each token minted has a unique identifier.
+- Digital Art:
+  - GIFs
+  - Collectibles
+  - Music
+  - Videos
+- Real World Items:
+  - Deeds to a car
+  - Tickets to a real world event
+  - Tokenized invoices
+  - Legal documents
+  - Signatures
+- Lots and lots more options to get creative with!
+
+An NFT can only have one owner at a time. Ownership is managed through the uniqueID and metadata that no other token can replicate. NFTs are minted through smart contracts that assign ownership and manage the transferability of the NFT's. When someone creates or mints an NFT, they execute code stored in smart contracts that conform to different standards, such as ERC-721. This information is added to the blockchain where the NFT is being managed. The minting process, from a high level, has the following steps that it goes through:
+
+- Creating a new block
+- Validating information
+- Recording information into the blockchain
+
+NFT's have some special properties:
+
+- Each token minted has a unique identifier that is directly linked to one Ethereum address.
 - They're not directly interchangeable with other tokens 1:1. For example 1 ETH is exactly the same as another ETH. This isn't the case with NFTs.
 - Each token has an owner and this information is easily verifiable.
 - They live on Ethereum and can be bought and sold on any Ethereum-based NFT market.
@@ -87,6 +108,15 @@ NFTs have some special properties:
 In other words, if you _own_ an NFT:
 
 - You can easily prove you own it.
+  - Proving you own an NFT is very similar to proving you have ETH in your account.
+  - For example, let's say you purchase an NFT, and the ownership of the unique token is transferred to your wallet via your public address.
+  - The token proves that your copy of the digital file is the original.
+  - Your private key is proof-of-ownership of the original.
+  - The content creator's public key serves as a certificate of authenticity for that particular digital artefact.
+    - The creators public key is essentially a permanent part of the token's history. The creator's public key can demonstrate that the token you hold was created by a particular individual, thus contributing to its market value (vs a counterfeit).
+  - Another way to think about proving you own the NFT is by signing messages to prove you own the private key behind the address.
+    - As mentioned above, your private key is proof-of-ownership of the original. This tells us that the private keys behind that address control the NFT.
+    - A signed message can be used as proof that you own your private keys without revealing them to anybody and thus proving you own the NFT as well!
 - No one can manipulate it in any way.
 - You can sell it, and in some cases this will earn the original creator resale royalties.
 - Or, you can hold it forever, resting comfortably knowing your asset is secured by your wallet on Ethereum.

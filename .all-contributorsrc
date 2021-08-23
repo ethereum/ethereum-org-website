@@ -4435,6 +4435,34 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "svaddadhi",
+      "name": "Vishal Vaddadhi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29217475?v=4",
+      "profile": "https://svaddadhi.github.io/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "matthewrkula",
+      "name": "Matt Kula",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1483546?v=4",
+      "profile": "https://github.com/matthewrkula",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "Hamza-Shahzad",
+      "name": "Hamza Shahzad",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13493539?v=4",
+      "profile": "http://hamza.ai",
+      "contributions": [
+        "code",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
