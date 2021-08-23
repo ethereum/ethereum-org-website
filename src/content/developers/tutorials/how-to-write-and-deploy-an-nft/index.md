@@ -5,7 +5,7 @@ author: "Sumi Mudgil"
 tags: ["NFTs", "ERC-721", "Alchemy", "Solidity", "smart contracts"]
 skill: beginner
 lang: en
-sidebar: false
+sidebar: true
 published: 2021-04-22
 ---
 

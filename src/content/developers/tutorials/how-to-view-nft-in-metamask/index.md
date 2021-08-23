@@ -6,7 +6,7 @@ tags:
   ["NFTs", "ERC-721", "Alchemy", "MetaMask", "non fungible tokens", "Solidity"]
 skill: beginner
 lang: en
-sidebar: false
+sidebar: true
 published: 2021-4-22
 ---
 
