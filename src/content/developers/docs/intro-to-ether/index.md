@@ -45,7 +45,7 @@ Thus, gas fees functions as an auction mechanism for inclusion in the next Ether
 
 ## Minting Ether {#minting-ether}
 
-Ether is minted by the Ethereum protocol when a miner creates a block. To incentivize block creation, the protocol grants a "reward" in each block, incrementing the balance of an address set by the block's miner. The block reward has changed over time, and today it is 2 ETH per block.
+Ether is minted by the Ethereum protocol when a miner creates a block. As an incentive to miners, the protocol grants a reward in each block, incrementing the balance of an address set by the block's miner. The block reward has changed over time, and today it is 2 ETH per block.
 
 Ethereum also provides smaller rewards to miners who create ["uncle blocks"](/developers/docs/data-and-analytics/block-explorers/#blocks), which are beyond the scope of this introduction.
 
