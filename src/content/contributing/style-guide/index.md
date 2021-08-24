@@ -135,7 +135,7 @@ Sentences using active voice are more concise and efficient, making your writing
 
 [Read more on active voice](https://www.grammarly.com/blog/active-vs-passive-voice/)
 
-_This isn't an easy one, especially for non-native English speakers. If you aren't sure, don't worry. We'll help with this one._
+_This isn't an easy one, especially for non-native English speakers. If you aren't sure, don't worry. We'll help with any of these._
 
 ### Linking to internal pages {#internal-links}
 
