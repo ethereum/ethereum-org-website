@@ -7,7 +7,7 @@ sidebar: true
 
 # Ethereum.org Style Guide {#style-guide}
 
-Content on [Etheruem.org](http://etheruem.org) is crowdsourced and primarily written by our incredible contributors. This style guide aims to standardize certain aspects of contributing content to make the contribution process smoother.
+Content on [Etheruem.org](/) is crowdsourced and primarily written by our incredible contributors. This style guide aims to standardize certain aspects of contributing content to make the contribution process smoother.
 
 ## Who can submit content to Ethereum.org {#who-can-help}
 
