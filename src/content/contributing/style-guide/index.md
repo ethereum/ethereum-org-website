@@ -63,7 +63,7 @@ For words that have multiple spellings, use American English over British Englis
 - `color` over `colour`
 - `analyze` over `analyse`
 
-### Acroynyms {#acroynyms}
+### Acronyms {#acronyms}
 
 When introducing an unfamiliar acronym, spell out the full term, and put the acronym in parentheses. Put both the full term and acronym in bold.
 
