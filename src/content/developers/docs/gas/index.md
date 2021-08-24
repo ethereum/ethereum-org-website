@@ -22,7 +22,7 @@ _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/d
 
 Gas fees are paid in Ethereum's native currency, ether (ETH). Gas prices are denoted in gwei, which itself is a denomination of ETH - each gwei is equal to 0.000000001 ETH (10<sup>-9</sup> ETH). For example, instead of saying that your gas costs 0.000000001 ether, you can say your gas costs 1 gwei. The word 'gwei' itself means 'giga-wei', and it is equal to 1,000,000,000 wei. Wei itself (named after [Wei Dai](https://en.wikipedia.org/wiki/Wei_Dai), creator of [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) is the smallest unit of ETH.
 
-## Prior to the London upgrade {#pre-london}
+## Prior to the London Upgrade {#pre-london}
 
 The way transaction fees on the Ethereum network are calculated changed during the London network upgrade. Here is a recap of how things used to work:
 
@@ -57,7 +57,7 @@ Taylor will be credited 1.0000 ETH.
 Miner receives the tip of 0.00021 ETH.
 Base fee of 0.0021 ETH is burned.
 
-Additionally, Jordan can also set a max fee (`maxFeePerGas`) for the transaction. The difference between the max fee and the actual fee is refunded to Jordan, i.e. `refund = max fee - (base fee + priority fee)`. Jordan can set a maximum amount to pay for the transaction to execute and not worry about are overpaying "beyond" the base fee when the transaction is executed.
+Additionally, Jordan can also set a max fee (`maxFeePerGas`) for the transaction. The difference between the max fee and the actual fee is refunded to Jordan, i.e. `refund = max fee - (base fee + priority fee)`. Jordan can set a maximum amount to pay for the transaction to execute and not worry about overpaying "beyond" the base fee when the transaction is executed.
 
 ### Block Size {#block-size}
 

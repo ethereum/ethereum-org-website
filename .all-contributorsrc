@@ -2222,7 +2222,8 @@
       "avatar_url": "https://avatars2.githubusercontent.com/u/4423365?v=4",
       "profile": "https://www.chainshot.com/",
       "contributions": [
-        "content"
+        "content",
+        "doc"
       ]
     },
     {
@@ -4189,7 +4190,10 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/80549215?v=4",
       "profile": "https://github.com/robriks",
       "contributions": [
-        "bug"
+        "bug",
+        "projectManagement",
+        "question",
+        "doc"
       ]
     },
     {
@@ -4391,6 +4395,73 @@
       "profile": "https://github.com/smudgil",
       "contributions": [
         "content"
+      ]
+    },
+    {
+      "login": "cosinekitty",
+      "name": "Don Cross",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11699954?v=4",
+      "profile": "http://cosinekitty.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "jacksonet00",
+      "name": "Jackson Taylor",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57923799?v=4",
+      "profile": "http://jacksontaylor.info",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "MrBrain295",
+      "name": "MrBrain295",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66077254?v=4",
+      "profile": "https://github.com/MrBrain295",
+      "contributions": [
+        "bug",
+        "doc",
+        "ideas",
+        "content"
+      ]
+    },
+    {
+      "login": "SafePalWallet",
+      "name": "SafePalWallet",
+      "avatar_url": "https://avatars.githubusercontent.com/u/52519650?v=4",
+      "profile": "https://github.com/SafePalWallet",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "svaddadhi",
+      "name": "Vishal Vaddadhi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29217475?v=4",
+      "profile": "https://svaddadhi.github.io/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "matthewrkula",
+      "name": "Matt Kula",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1483546?v=4",
+      "profile": "https://github.com/matthewrkula",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "Hamza-Shahzad",
+      "name": "Hamza Shahzad",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13493539?v=4",
+      "profile": "http://hamza.ai",
+      "contributions": [
+        "code",
+        "bug"
       ]
     }
   ],
