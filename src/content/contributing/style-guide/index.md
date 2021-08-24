@@ -139,7 +139,7 @@ _This isn't an easy one, especially for non-native English speakers. If you aren
 
 ### Linking to internal pages {#internal-links}
 
-When linking to another page on Ethereum.org, use the relative path over the absolute path. This maintains consistency across different language versions of the site and ensures links work correctly in local development.
+When linking to another page on Ethereum.org, use the relative path over the absolute path. Do not hard-code the language path (ie. `/en`). This maintains consistency across different language versions of the site and ensures links work correctly in local development.
 
 ```md
 <!-- Good -->
