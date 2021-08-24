@@ -33,7 +33,7 @@ Because ethereum.org caters to a wide variety of users, all content on the site 
 
 ## Objectivity {#objectivity}
 
-[Ethereum.org](http://ethereum.org) documentation aims to maintain a credibly neutral source of truth to inform readers about Ethereum and its ecosystem. Some examples of things that we don't want in the content on Ethereum.org:
+Ethereum.org documentation aims to maintain a credibly neutral source of truth to inform readers about Ethereum and its ecosystem. Some examples of things that we don't want in the content on ethereum.org:
 
 **Grand, unverifiable claims about Ethereum or adjacent technologies**
 
