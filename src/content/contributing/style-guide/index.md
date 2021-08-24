@@ -169,7 +169,7 @@ When adding an image to a page, the image should be downloaded and placed in the
 
 ### Using Emojis {#images}
 
-Everyone loves emojis <Emoji text="🥰" size={1} /> To stanardize the appearence of all Emojis across browsers [Ethereum.org](http://ethereum.org) uses an `Emoji` component.
+Everyone loves emojis <Emoji text="🥰" size={1} /> To standardize the appearance of all Emojis across browsers ethereum.org uses an `Emoji` component.
 
 ```md
 <--- Good --->
