@@ -158,11 +158,11 @@ When adding an image to a page, the image should be downloaded and placed in the
 `![alt text for image](./image.png)`
 
 ```md
-<--- Good --->
+<!-- Good -->
 
 ![How to mint your NFT](./mintYourNFT.gif)
 
-<--- Bad --->
+<!-- Bad -->
 
 ![How to mint your NFT](https://cdn-images-1.medium.com/max/2000/0342fj_fsdfs.gif)
 ```
