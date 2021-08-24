@@ -142,12 +142,13 @@ _This isn't an easy one, especially for non-native English speakers. If you aren
 When linking to another page on Ethereum.org, use the relative path over the absolute path. This maintains consistency across different language versions of the site and ensures links work correctly in local development.
 
 ```md
-<--- Good --->
+<!-- Good -->
 
 Read more about [smart contracts](/docs/developers/smart-contracts)
 
-<--- Bad --->
+<!-- Bad -->
 
+Read more about [smart contracts](/en/docs/developers/smart-contracts)
 Read more about [smart contracts](https://ethereum.org/en/docs/developers/smart-contracts)
 ```
 
