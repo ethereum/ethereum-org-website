@@ -75,6 +75,19 @@ When introducing an unfamiliar acronym, spell out the full term, and put the acr
 
 Many of the topics covered on [Ethereum.org](http://ethereum.org) are technically complex. To reduce confusion to the reader, terms should be used consistently. For example, don't cycle back-and-forth between proof-of-work and PoW at random.
 
+### Ethereum {#ethereum}
+
+Ethereum is a proper noun and should always be capitalized.
+
+- `Ethereum` not `ethereum`
+
+### Ether {#ether}
+
+Ether is a common noun and should not be capitalized unless at the beginning of a sentence. ETH, on the other hand, is a currency abbreviation and should always be capitalized.
+
+- `ether` not `Ether`
+- `ETH` not `eth or Eth`
+
 ### Mainnet {#mainnet}
 
 When referring to the Ethereum Mainnet (i.e. not referring to a testnet) use the proper noun. Proper nouns help avoid confusion and build greater understanding.
