@@ -29,7 +29,7 @@ Developers or others who want technical information about Ethereum.
 
 People, businesses, and other organizations who want to understand Ethereum's value in an enterprise setting
 
-Because [Ethereum.org](http://ethereum.org) caters to a wide variety of users, all content on the site should make an effort to explain any technologies and concepts as simply as possible.
+Because ethereum.org caters to a wide variety of users, all content on the site should make an effort to explain any technologies and concepts as simply as possible.
 
 ## Objectivity {#objectivity}
 
