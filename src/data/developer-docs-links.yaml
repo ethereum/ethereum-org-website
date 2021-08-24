@@ -123,6 +123,8 @@
               to: /developers/docs/standards/tokens/erc-20/
             - id: docs-nav-erc-721
               to: /developers/docs/standards/tokens/erc-721/
+    - id: docs-nav-miner-extractable-value
+      to: /developers/docs/miner-extractable-value/
     - id: docs-nav-oracles
       to: /developers/docs/oracles/
     - id: docs-nav-scaling
