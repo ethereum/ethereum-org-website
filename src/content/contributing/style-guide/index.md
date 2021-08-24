@@ -45,7 +45,7 @@ Because ethereum.org caters to a wide variety of users, all content on the site 
 
 **Politically charged rhetoric**
 
-> e.g. _ "This political party are better for decentralization because..."_
+> e.g. _ "This political party is better for decentralization because..."_
 
 ## Tone {#tone}
 
