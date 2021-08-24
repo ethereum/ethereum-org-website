@@ -11,7 +11,7 @@ Content on [Etheruem.org](/) is crowdsourced and primarily written by our incred
 
 ## Who can submit content to Ethereum.org {#who-can-help}
 
-Anyone! [Ethereum.org](http://ethereum.org) is entirely open source, and many of its best pages are submitted by curious learners who expanded their notes into documentation pages now living on the site!
+Anyone! Ethereum.org is entirely open source, and many of its best pages are submitted by curious learners who expanded their notes into documentation pages now living on the site!
 
 ## Audience {#audience}
 
