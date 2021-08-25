@@ -4472,6 +4472,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "corwintines",
+      "name": "Corwin Smith",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15589226?v=4",
+      "profile": "http://corwintines.netlify.com",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
