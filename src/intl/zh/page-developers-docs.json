@@ -15,6 +15,7 @@
   "docs-nav-dot-net": ".NET",
   "docs-nav-erc-20": "ERC-20协议",
   "docs-nav-erc-721": "ERC-721协议",
+  "docs-nav-erc-777": "ERC-777协议",
   "docs-nav-ethereum-client-apis": "以太坊客户端API",
   "docs-nav-ethereum-stack": "以太坊权益",
   "docs-nav-evm": "以太坊虚拟机(EVM)",

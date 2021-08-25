@@ -16,6 +16,7 @@
   "docs-nav-dot-net": ".NET",
   "docs-nav-erc-20": "ERC-20: Fungible Tokens",
   "docs-nav-erc-721": "ERC-721: NFTs",
+  "docs-nav-erc-777": "ERC-777",
   "docs-nav-ethereum-client-apis": "Ethereum client APIs",
   "docs-nav-ethereum-stack": "Ethereum stack",
   "docs-nav-evm": "Ethereum virtual machine (EVM)",
