@@ -13,7 +13,7 @@ This is an open-source community effort, so feel free to suggest new topics, add
 
 If this is your first attempt at Ethereum development, we recommend starting at the beginning and working your way through like a book.
 
-### Foundational topics {#foundational-topics}
+### Foundational topics {#fundamental-topics}
 
 - [Intro to Ethereum](/developers/docs/intro-to-ethereum/) _– A quick overview of Ethereum_
 - [Intro to dapps](/developers/docs/dapps/) _– An introduction to decentralized applications_
@@ -27,11 +27,11 @@ If this is your first attempt at Ethereum development, we recommend starting at 
 - [Networks](/developers/docs/networks/) _– Implementations of Ethereum including test networks_
 - [Consensus mechanisms](/developers/docs/consensus-mechanisms/) _– How the individual nodes of a distributed network agree on the current state of the system_
 
-### Ethereum stack {#ethereum-stack}
+### Ethereum stack {#the-ethereum-stack}
 
 - [Intro to the stack](/developers/docs/ethereum-stack/) _– An overview of the Ethereum/web3 stack_
 - [Smart contracts](/developers/docs/smart-contracts/) _– Programs that reside at an Ethereum address and run functions when triggered by transactions_
-- [Development networks]() _– Local blockchain environments used to test dapps before deployment_
+- [Development networks](/developers/docs/development-networks/) _– Local blockchain environments used to test dapps before deployment_
 - [Development frameworks](/developers/docs/frameworks/) _– Tools that makes developing with Ethereum easier_
 - [Ethereum client APIs](/developers/docs/apis/javascript/) _– Convenience libraries that allow your web app to interact with Ethereum and smart contracts_
 - [Data and analytics](/developers/docs/data-and-analytics) _– How blockchain data is aggregated, organized and implemented into dapps_
