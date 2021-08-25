@@ -743,5 +743,8 @@ export const query = graphql`
     opera: file(relativePath: { eq: "wallets/opera.png" }) {
       ...listImage
     }
+    coin98: file(relativePath: { eq: "wallets/coin98.png" }) {
+      ...listImage
+    }
   }
 `
