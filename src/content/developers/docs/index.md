@@ -13,7 +13,7 @@ This is an open-source community effort, so feel free to suggest new topics, add
 
 If this is your first attempt at Ethereum development, we recommend starting at the beginning and working your way through like a book.
 
-### Foundational topics {#fundamental-topics}
+### Foundational topics {#foundational-topics}
 
 - [Intro to Ethereum](/developers/docs/intro-to-ethereum/) _– A quick overview of Ethereum_
 - [Intro to dapps](/developers/docs/dapps/) _– An introduction to decentralized applications_
@@ -27,7 +27,7 @@ If this is your first attempt at Ethereum development, we recommend starting at 
 - [Networks](/developers/docs/networks/) _– Implementations of Ethereum including test networks_
 - [Consensus mechanisms](/developers/docs/consensus-mechanisms/) _– How the individual nodes of a distributed network agree on the current state of the system_
 
-### Ethereum stack {#the-ethereum-stack}
+### Ethereum stack {#ethereum-stack}
 
 - [Intro to the stack](/developers/docs/ethereum-stack/) _– An overview of the Ethereum/web3 stack_
 - [Smart contracts](/developers/docs/smart-contracts/) _– Programs that reside at an Ethereum address and run functions when triggered by transactions_
