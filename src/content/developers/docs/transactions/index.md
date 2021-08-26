@@ -15,6 +15,13 @@ Transactions are cryptographically signed instructions from accounts. An account
 
 To help you better understand this page, we recommend you first read [Accounts](/developers/docs/accounts/) and our [introduction to Ethereum](/developers/docs/intro-to-ethereum/).
 
+##Types of transactions {#types-of-transactions}
+
+In Ethereum there are different types of transactions tyey are: 
+- Normal transactions; a transaction from one wallet to another.
+- Contract deployment trasactions; a transaction thats not sending anything to a wallet and, where the data field is used for the contract code.
+- Transactions with a signature value that does not contain the chain ID.
+
 ## What's a transaction? {#whats-a-transaction}
 
 An Ethereum transaction refers to an action initiated by an externally-owned account, in other words an account managed by a human, not a contract. For example, if Bob sends Alice 1 ETH, Bob's account must be debited and Alice's must be credited. This state-changing action takes place within a transaction.
