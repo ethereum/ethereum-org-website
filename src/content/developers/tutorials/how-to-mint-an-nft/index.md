@@ -54,7 +54,7 @@ If you want to see the ABI you can print it to your console:
 console.log(JSON.stringify(contract.abi))
 ```
 
-To run mint-nft.jsand see your ABI printed to the console navigate to your terminal and run
+To run mint-nft.js and see your ABI printed to the console navigate to your terminal and run
 
 ```js
 node scripts/mint-nft.js
