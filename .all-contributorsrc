@@ -4482,7 +4482,7 @@
         "code"
       ]
     },
-     {
+    {
       "login": "spiolat",
       "name": "spiolat",
       "avatar_url": "https://avatars.githubusercontent.com/u/89148238?v=4",
@@ -4497,6 +4497,16 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/88025075?v=4",
       "profile": "https://github.com/hosyminh95",
       "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "chiarawilden",
+      "name": "Chiara Wilden",
+      "avatar_url": "https://avatars.githubusercontent.com/u/77884268?v=4",
+      "profile": "https://chiarawilden.com",
+      "contributions": [
+        "ideas",
         "doc"
       ]
     }
