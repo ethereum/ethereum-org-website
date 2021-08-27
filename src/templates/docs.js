@@ -220,9 +220,6 @@ const DocsPage = ({ data, pageContext }) => {
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
-          {/* {mdx.frontmatter.title === "Ethereum development documentation" && (
-            <DeveloperDocsLinks />
-          )} */}
           {isPageIncomplete && <CallToContribute editPath={absoluteEditPath} />}
           <BackToTop>
             <a href="#top">
