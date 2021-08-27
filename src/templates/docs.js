@@ -194,8 +194,6 @@ const DocsPage = ({ data, pageContext }) => {
   const { relativePath } = pageContext
   const absoluteEditPath = `${editContentUrl}${relativePath}`
 
-  console.log(tocItems)
-
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
       <PageMetadata

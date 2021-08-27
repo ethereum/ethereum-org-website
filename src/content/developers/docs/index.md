@@ -2,7 +2,7 @@
 title: Ethereum development documentation
 description: Introducing the ethereum.org developer documentation.
 lang: en
-sidebar: true
+sidebar: false
 ---
 
 This documentation is designed to help you build with Ethereum. It covers Ethereum as a concept, explains the Ethereum tech stack, and documents advanced topics for more complex applications and use cases.
