@@ -82,6 +82,14 @@ const Title = styled.p`
   font-weight: 600;
   font-size: 24px;
   margin-right: 6rem;
+  &:after {
+    margin-left: 0.125em;
+    margin-right: 0.3em;
+    display: ${(props) => (props.isExternal ? "inline" : "none")};
+    content: "↗";
+    transition: all 0.1s ease-in-out;
+    font-style: normal;
+  }
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     margin-right: 0rem;
   }
@@ -215,6 +223,7 @@ const TutorialsPage = ({ data, pageContext }) => {
     timeToRead: tutorial.timeToRead,
     published: tutorial.frontmatter.published,
     lang: tutorial.frontmatter.lang || "en",
+    isExternal: false,
   }))
 
   const externalTutorials = foreignTutorials.map((tutorial) => ({
@@ -227,6 +236,7 @@ const TutorialsPage = ({ data, pageContext }) => {
     timeToRead: tutorial.timeToRead,
     published: new Date(tutorial.publishDate).toISOString(),
     lang: tutorial.lang || "en",
+    isExternal: true,
   }))
 
   const allTutorials = []
@@ -414,9 +424,9 @@ const TutorialsPage = ({ data, pageContext }) => {
         )}
         {state.filteredTutorials.map((tutorial) => {
           return (
-            <TutorialCard key={tutorial.to} to={tutorial.to}>
+            <TutorialCard key={tutorial.to} to={tutorial.to} hideArrow>
               <TitleContainer>
-                <Title>{tutorial.title}</Title>
+                <Title isExternal={tutorial.isExternal}>{tutorial.title}</Title>
                 <Pill isSecondary={true}>{tutorial.skill}</Pill>
               </TitleContainer>
               <Author>
@@ -425,6 +435,20 @@ const TutorialsPage = ({ data, pageContext }) => {
                 <Emoji text=":stopwatch:" size={1} ml={`0.5em`} mr={`0.5em`} />
                 {tutorial.timeToRead}{" "}
                 <Translation id="page-tutorial-read-time" />
+                {tutorial.isExternal && (
+                  <>
+                    {" "}
+                    •<Emoji
+                      text=":link:"
+                      size={1}
+                      ml={`0.5em`}
+                      mr={`0.5em`}
+                    />{" "}
+                    <Link to={tutorial.to} hideArrow>
+                      External
+                    </Link>
+                  </>
+                )}
               </Author>
               <About>{tutorial.description}</About>
               <PillContainer>
