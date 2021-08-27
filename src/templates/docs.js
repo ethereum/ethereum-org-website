@@ -31,6 +31,7 @@ import {
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import DocsNav from "../components/DocsNav"
+import DeveloperDocsLinks from "../components/DeveloperDocsLinks"
 
 const Page = styled.div`
   display: flex;
@@ -172,6 +173,7 @@ const components = {
   Pill,
   CallToContribute,
   Emoji,
+  DeveloperDocsLinks,
 }
 
 const Contributors = styled(FileContributors)`
@@ -191,6 +193,8 @@ const DocsPage = ({ data, pageContext }) => {
   const { editContentUrl } = data.siteData.siteMetadata
   const { relativePath } = pageContext
   const absoluteEditPath = `${editContentUrl}${relativePath}`
+
+  console.log(tocItems)
 
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
@@ -218,6 +222,9 @@ const DocsPage = ({ data, pageContext }) => {
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
+          {/* {mdx.frontmatter.title === "Ethereum development documentation" && (
+            <DeveloperDocsLinks />
+          )} */}
           {isPageIncomplete && <CallToContribute editPath={absoluteEditPath} />}
           <BackToTop>
             <a href="#top">

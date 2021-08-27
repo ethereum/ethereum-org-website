@@ -10,24 +10,34 @@
   items:
     - id: docs-nav-intro-to-ethereum
       to: /developers/docs/intro-to-ethereum/
+      descp_id: docs-nav-intro-to-ethereum-descp
     - id: docs-nav-intro-to-ether
       to: /developers/docs/intro-to-ether/
+      descp_id: docs-nav-intro-to-ether-descp
     - id: docs-nav-intro-to-dapps
       to: /developers/docs/dapps/
+      descp_id: docs-nav-intro-to-dapps-descp
     - id: docs-nav-web2-vs-web3
       to: /developers/docs/web2-vs-web3/
+      descp_id: docs-nav-web2-vs-web3-descp
     - id: docs-nav-accounts
       to: /developers/docs/accounts/
+      descp_id: docs-nav-accounts-descp
     - id: docs-nav-transactions
       to: /developers/docs/transactions/
+      descp_id: docs-nav-transactions-descp
     - id: docs-nav-blocks
       to: /developers/docs/blocks/
+      descp_id: docs-nav-blocks-descp
     - id: docs-nav-evm
       to: /developers/docs/evm/
+      descp_id: docs-nav-evm-descp
     - id: docs-nav-gas
       to: /developers/docs/gas/
+      descp_id: docs-nav-gas-descp
     - id: docs-nav-nodes-and-clients
       to: /developers/docs/nodes-and-clients/
+      descp_id: docs-nav-nodes-and-clients-descp
       items:
         - id: docs-nav-run-a-node
           to: /developers/docs/nodes-and-clients/run-a-node/
@@ -35,8 +45,10 @@
           to: /developers/docs/nodes-and-clients/nodes-as-a-service/
     - id: docs-nav-networks
       to: /developers/docs/networks/
+      descp_id: docs-nav-networks-descp
     - id: docs-nav-consensus-mechanisms
       to: /developers/docs/consensus-mechanisms/
+      descp_id: docs-nav-consensus-mechanisms-descp
       items:
         - id: docs-nav-proof-of-work
           to: /developers/docs/consensus-mechanisms/pow/
@@ -50,8 +62,10 @@
   items:
     - id: docs-nav-intro-to-the-stack
       to: /developers/docs/ethereum-stack/
+      descp_id: docs-nav-intro-to-the-stack-descp
     - id: docs-nav-smart-contracts
       to: /developers/docs/smart-contracts/
+      descp_id: docs-nav-smart-contracts-descp
       items:
         - id: docs-nav-smart-contract-languages
           to: /developers/docs/smart-contracts/languages/
@@ -69,10 +83,13 @@
           to: /developers/docs/smart-contracts/composability/
     - id: docs-nav-development-networks
       to: /developers/docs/development-networks/
+      descp_id: docs-nav-development-networks-descp
     - id: docs-nav-development-frameworks
       to: /developers/docs/frameworks/
+      descp_id: docs-nav-development-frameworks-descp
     - id: docs-nav-ethereum-client-apis
       path: /developers/docs/apis/
+      descp_id: docs-nav-ethereum-client-apis-descp
       items:
         - id: docs-nav-java-script-apis
           to: /developers/docs/apis/javascript/
@@ -82,17 +99,22 @@
           to: /developers/docs/apis/json-rpc/
     - id: docs-nav-data-and-analytics
       to: /developers/docs/data-and-analytics/
+      descp_id: docs-nav-data-and-analytics-descp
       items:
         - id: docs-nav-block-explorers
           to: /developers/docs/data-and-analytics/block-explorers/
     - id: docs-nav-security
       to: /developers/docs/security/
+      descp_id: docs-nav-security-descp
     - id: docs-nav-storage
       to: /developers/docs/storage/
+      descp_id: docs-nav-storage-descp
     - id: docs-nav-integrated-development-environments-ides
       to: /developers/docs/ides/
+      descp_id: docs-nav-integrated-development-environments-ides-descp
     - id: docs-nav-programming-languages
       to: /developers/docs/programming-languages/
+      descp_id: docs-nav-programming-languages-descp
       items:
         - id: docs-nav-dart
           to: /developers/docs/programming-languages/dart/
@@ -115,6 +137,7 @@
   items:
     - id: docs-nav-standards
       to: /developers/docs/standards/
+      descp_id: docs-nav-standards-descp
       items:
         - id: docs-nav-token-standards
           to: /developers/docs/standards/tokens/
@@ -125,8 +148,10 @@
               to: /developers/docs/standards/tokens/erc-721/
     - id: docs-nav-oracles
       to: /developers/docs/oracles/
+      descp_id: docs-nav-oracles-descp
     - id: docs-nav-scaling
       to: /developers/docs/scaling/
+      descp_id: docs-nav-scaling-descp
       items:
         - id: docs-nav-scaling-layer-2
           to: /developers/docs/scaling/layer-2-rollups/
