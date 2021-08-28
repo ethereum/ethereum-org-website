@@ -56,7 +56,7 @@ Gwei, short for giga-Wei, is often used to describe gas costs on the Ethereum ne
 | Denomination | Value in Ether   | Common Usage              |
 | ------------ | ---------------- | ------------------------- |
 | Wei          | 10<sup>-18</sup> | Technical implementations |
-| Gwei         | 10<sup>-15</sup> | Human-readable gas fees   |
+| Gwei         | 10<sup>-9</sup>  | Human-readable gas fees   |
 
 ## Transferring Ether {#transferring-ether}
 
