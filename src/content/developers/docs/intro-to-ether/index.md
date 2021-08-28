@@ -33,29 +33,30 @@ It is [common](https://www.reuters.com/article/us-crypto-currencies-lending-insi
 
 ## Minting Ether {#minting-ether}
 
-Ether is minted by the Ethereum protocol when a miner creates a block. As an incentive to miners, the protocol grants a reward in each block, incrementing the balance of an address set by the block's miner. The block reward has changed over time, and today it is 2 ETH per block.
+Minting is a process in which new Ether is created on the Ethereum ledger. The new Ether is created by the underlying Ethereum protocol, and it is not possible for a user to create new Ether.
+
+Ether is minted when a miner creates a block on the Ethereum blockchain. As an incentive to miners, the protocol grants a reward in each block, incrementing the balance of an address set by the block's miner. The block reward has changed over time, and today it is 2 ETH per block.
 
 ## Burning Ether {#burning-ether}
 
-Ether burn occurs in every transaction on Ethereum. When a user pays for their transaction, their base fee is automatically destroyed. [In some blocks](https://etherscan.io/block/12965263), more Ether are burned than minted due to base fee burn.
+Just as Ether can be created by minting, Ether can be destroyed by a process called burning. When burn occurs, Ether is removed from the Ethereum ledger.
 
-[More on base fees](/developers/docs/gas/#base-fee)
+Ether burn occurs in every transaction on Ethereum. When a user pays for their transaction, their base gas fee is automatically destroyed by the Ethereum protocol. [In some blocks](https://etherscan.io/block/12965263), more Ether are burned than minted due to base fee burn.
+
+[More on base gas fees](/developers/docs/gas/#base-fee)
 
 ## Denominations of Ether {#denominations}
 
-Since many transactions on Ethereum are small, Ether has several denominations which may be referenced for smaller amounts.
+Since many transactions on Ethereum are small, Ether has several denominations which may be referenced for smaller amounts. Of these denominations, Wei and gwei are particularly important.
 
-The denominations below can be found in the [Ethereum Whitepaper](/whitepaper/#currency-and-issuance). Others have been proposed, but Wei, Szabo, and Finney remain the most commonly used denominations. Each is named after a famous member of the cypherpunks, a group of cryptographers whose work influenced today's blockchain space.
+Wei the smallest possible amount of Ether, and as a result, many technical implementations, such as the [Ethereum Yellowpaper](https://ethereum.github.io/yellowpaper/paper.pdf), will base all calculations in Wei.
 
-| Denomination | Value in Ether   | Background                                                                                                                                                                                                        |
-| ------------ | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Wei          | 10<sup>-18</sup> | Computer scientist whose [b-money](http://www.weidai.com/bmoney.txt) system was a foundational work in blockchain development.                                                                                    |
-| Szabo        | 10<sup>-6</sup>  | Computer scientist who helped [define the concept of smart contracts](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html). |
-| Finney       | 10<sup>-3</sup>  | Digital rights activist and first user of Bitcoin after Satoshi Nakamoto.                                                                                                                                         |
+Gwei, short for giga-Wei, is often used to describe gas costs on the Ethereum network.
 
-Of these denominations, Wei is particularly important, as it is the smallest possible amount of Ether. As a result, many technical implementations, such as the [Ethereum Yellowpaper](https://ethereum.github.io/yellowpaper/paper.pdf), will base all calculations in Wei.
-
-Giga-wei or "gwei" is often used to describe gas costs on the Ethereum network.
+| Denomination | Value in Ether   | Common Usage              |
+| ------------ | ---------------- | ------------------------- |
+| Wei          | 10<sup>-18</sup> | Technical implementations |
+| Gwei         | 10<sup>-15</sup> | Human-readable gas fees   |
 
 ## Transferring Ether {#transferring-ether}
 
