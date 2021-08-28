@@ -23,7 +23,7 @@ Ether (ETH) is the cryptocurrency used to pay for computing services on the [Eth
 
 The Ethereum blockchain allows developers to create [decentralized applications (dapps)](/developers/docs/intro-to-dapps), which all share a pool of computing power. This shared pool is finite, so Ethereum needs to determine who gets access to the computing power. Otherwise, a dapp with an accidental infinite loop or another malicious program could consume the entire network.
 
-The Ether cryptocurrency supports a pricing mechanism for Ethereum's computing power. When users want to make a transaction, they must pay gas fees in Ether. These fees depend on the total amount of computing required by a transaction, as well as the network-wide demand for computing when the transaction is submitted.
+The Ether cryptocurrency supports a pricing mechanism for Ethereum's computing power. When users want to make a transaction, they must pay Ether to have their transaction recognized on the blockchain. These usage costs are called gas fees, and they depend on the total amount of computing required by a transaction, as well as the network-wide demand for computing when the transaction is submitted.
 
 Thus, even if a malicious dapp submitted an infinite loop, the transaction would eventually run out of Ether and terminate, allowing the network to return to normal.
 
