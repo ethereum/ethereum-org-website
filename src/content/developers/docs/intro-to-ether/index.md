@@ -13,7 +13,7 @@ To help you better understand this page, we recommend you first read [Introducti
 
 A cryptocurrency is a medium of exchange secured by a blockchain-based ledger.
 
-A "medium of exchange" is anything that is widely accepted as payment for goods and services, and a "ledger" is a data store that keeps track of transactions. Blockchain technology allows users to make transactions on the ledger without reliance upon a trusted third party to maintain the ledger.
+A medium of exchange is anything that is widely accepted as payment for goods and services, and a ledger is a data store that keeps track of transactions. Blockchain technology allows users to make transactions on the ledger without reliance upon a trusted third party to maintain the ledger.
 
 The original cryptocurrency was Bitcoin, released in 2009 by the pseudonymous Satoshi Nakamoto. In this first implementation, the Bitcoin cryptocurrency was a medium of exchange used to pay for one specific service: validating transactions on the bitcoin blockchain. Today, the Bitcoin crytpocurrency is used to pay for goods and services ouside the bitcoin blockchain.
 
