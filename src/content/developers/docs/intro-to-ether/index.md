@@ -71,7 +71,7 @@ Giga-wei or "gwei" is often used to describe gas costs on the Ethereum network.
 
 ## Transferring Ether {#transferring-ether}
 
-Each [transaction](/developers/docs/transactions/#whats-a-transaction) in the Ethereum blockchain contains a `value` field, which transfers a specified amount of Ether, denominated in Wei, to send from the sender's address to the recipient address.
+Each transaction in the Ethereum blockchain contains a `value` field, which transfers a specified amount of Ether, denominated in Wei, to send from the sender's address to the recipient address.
 
 When the recipient address is a [smart contract](/developers/docs/smart-contracts/), this transferred Ether may be used to pay for gas when the smart contract executes its code.
 
