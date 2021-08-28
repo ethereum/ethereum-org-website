@@ -11,9 +11,9 @@ To help you better understand this page, we recommend you first read [Introducti
 
 ## What is a cryptocurrency? {#what-is-a-cryptocurrency}
 
-A cryptocurrency is a medium of exchange that is secured by a blockchain-based ledger. A medium of exchange is anything that is widely accepted as payment for goods and services, and a ledger is a data store that keeps track of transactions.
+A cryptocurrency is a medium of exchange secured by a blockchain-based ledger.
 
-Blockchain technology allows users to make transactions on the ledger without reliance upon a trusted third party to ensure all transactions are accurately recorded on the ledger.
+A medium of exchange is anything that is widely accepted as payment for goods and services, and a ledger is a data store that keeps track of transactions. Blockchain technology allows users to make transactions on the ledger without reliance upon a trusted third party to maintain the ledger.
 
 The first-ever cryptocurrency was Bitcoin, created by Satoshi Nakamoto. Since Bitcoin's release in 2009, people have made thousands of cryptocurrencies across many different types of blockchains.
 
@@ -21,7 +21,7 @@ The first-ever cryptocurrency was Bitcoin, created by Satoshi Nakamoto. Since Bi
 
 Ether (ETH) is the cryptocurrency used to pay for computing services on the [Ethereum blockchain](/developers/docs/intro-to-ethereum).
 
-The Ethereum blockchain allows developers to create [decentralized applications (dapps)](/developers/docs/intro-to-dapps), sharing a common pool of computing power. Because this shared pool has a finite amount of power, Ethereum needs a way to determine who gets access to the computing resources — otherwise, a dapp could consume the entire network by submitting an infinite loop or other malicious program.
+The Ethereum blockchain allows developers to create [decentralized applications (dapps)](/developers/docs/intro-to-dapps), which all share a pool of computing power. This shared pool is finite, so Ethereum needs to determine who gets access to the computing power. Otherwise, a dapp with an accidental infinite loop or another malicious program could consume the entire network.
 
 The Ether cryptocurrency supports a pricing mechanism for Ethereum's computing power. When users want to make a transaction, they must pay gas fees in Ether. These fees depend on the total amount of computing required by a transaction, as well as the network-wide demand for computing when the transaction is submitted.
 
@@ -33,7 +33,7 @@ It is [common](https://www.reuters.com/article/us-crypto-currencies-lending-insi
 
 ## Minting Ether {#minting-ether}
 
-Ether is minted by the Ethereum protocol when a miner creates a block. To incentivize block creation, the protocol grants a "reward" in each block, incrementing the balance of an address set by the block's miner. The block reward has changed over time, and today it is 2 ETH per block.
+Ether is minted by the Ethereum protocol when a miner creates a block. As an incentive to miners, the protocol grants a reward in each block, incrementing the balance of an address set by the block's miner. The block reward has changed over time, and today it is 2 ETH per block.
 
 ## Burning Ether {#burning-ether}
 
