@@ -60,6 +60,7 @@ const Text = styled.text`
   font-weight: ${(props) => (props.isActive ? 700 : 500)};
   opacity: ${(props) => (props.isActive ? 1.0 : 0.6)};
   font-size: 1.4rem;
+  padding: 0.5rem;
   text-transform: uppercase;
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     transform: translate(-80px, 0px);
