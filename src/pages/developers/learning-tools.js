@@ -127,6 +127,15 @@ const LearningToolsPage = ({ data }) => {
       background: "#ffffff",
       subjects: ["Vyper"],
     },
+    {
+      name: "Capture The Ether",
+      description: "page-learning-tools-capture-the-ether-description",
+      url: "https://capturetheether.com/",
+      image: data.captureTheEther.childImageSharp.fixed,
+      alt: "page-learning-tools-capture-the-ether-logo-alt",
+      background: "#1B9AAA",
+      subjects: ["Solidity"],
+    },
   ]
 
   const bootcamps = [
@@ -146,6 +155,15 @@ const LearningToolsPage = ({ data }) => {
       image: data.consensys.childImageSharp.fixed,
       alt: "page-learning-tools-consensys-academy-logo-alt",
       background: "#F6F7F9",
+      subjects: ["Solidity", "web3"],
+    },
+    {
+      name: "Lambda School",
+      description: "page-learning-tools-lambdaschool-description",
+      url: "https://lambdaschool.com/learn-blockchain-development",
+      image: data.lambdaschool.childImageSharp.fixed,
+      alt: "page-learning-tools-lambdaschool-logo-alt",
+      background: "#111F29",
       subjects: ["Solidity", "web3"],
     },
   ]
@@ -274,10 +292,18 @@ export const learningToolImage = graphql`
 
 export const query = graphql`
   query {
+    captureTheEther: file(
+      relativePath: { eq: "dev-tools/capturetheether.png" }
+    ) {
+      ...learningToolImage
+    }
     chainshot: file(relativePath: { eq: "dev-tools/chainshot.png" }) {
       ...learningToolImage
     }
     consensys: file(relativePath: { eq: "dev-tools/consensys.png" }) {
+      ...learningToolImage
+    }
+    lambdaschool: file(relativePath: { eq: "dev-tools/lambdaschool.png" }) {
       ...learningToolImage
     }
     cryptoZombie: file(relativePath: { eq: "dev-tools/crypto-zombie.png" }) {

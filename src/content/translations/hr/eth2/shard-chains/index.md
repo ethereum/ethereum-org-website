@@ -15,7 +15,7 @@ summaryPoints:
 ---
 
 <UpgradeStatus date="~2021">
-    Lanci djelića trebali bi se isporučiti u 2021. godini, ovisno o tome koliko će brzo napredovati radovi nakon pokretanja nadogradnje <a href="/en/eth2/beacon-chain/"> Beacon Chain </a>. Ti će djelići Ethereumu dati veći kapacitet za pohranu i pristup podacima, ali neće se upotrebljavati za izvršavanje koda. Pojedinosti o tome još se otkrivaju.
+    Lanci djelića trebali bi se isporučiti u 2021. godini, ovisno o tome koliko će brzo napredovati radovi nakon pokretanja nadogradnje <a href="/eth2/beacon-chain/"> Beacon Chain </a>. Ti će djelići Ethereumu dati veći kapacitet za pohranu i pristup podacima, ali neće se upotrebljavati za izvršavanje koda. Pojedinosti o tome još se otkrivaju.
 </UpgradeStatus>
 
 ## Što je razdjeljivanje? {#what-is-sharding}

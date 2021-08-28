@@ -36,10 +36,9 @@ EIP editors are tasked with process of reviewing EIPs for technical soundness, c
 - Nick Savers (Community)
 - Micah Zoltu (Community)
 
-EIP editors alongside with community members of [Ethereum Cat Herders](https://ethereumcatherders.com/) and [Ethererum Magicians](https://ethereum-magicians.org/) are deciding which EIP gets implemented, are responsible for facilitation of EIPs as well as moving the EIPs to "Final" or "Withdrawn" stage. 
+EIP editors alongside with community members of [Ethereum Cat Herders](https://ethereumcatherders.com/) and [Ethererum Magicians](https://ethereum-magicians.org/) are deciding which EIP gets implemented, are responsible for facilitation of EIPs as well as moving the EIPs to "Final" or "Withdrawn" stage.
 
 Full standardization process alongside with chart is described in [EIP-1](https://eips.ethereum.org/EIPS/eip-1)
-
 
 ## Learn more {#learn-more}
 
@@ -50,7 +49,8 @@ If you’re interested to read more about EIPs, check out the [EIPs website](htt
 - [EIP statuses and what they mean](https://eips.ethereum.org/)
 
 ## Participate {#participate}
-Anyone can create EIP or ERC although you should read [EIP-1](https://eips.ethereum.org/EIPS/eip-1) which outlines the EIP process, what is EIP, types of EIPs, what EIP document should contain, EIP format and template, list of EIP Editors and all you need to know about EIPs before creating one. Your new EIP should define  new feature that is not really complex yet not super niche and can be used in by projects in the Ethereum ecosystem. The hardest part is facilitation, you as the author need to facilitate people around your EIP, collect feedback, write articles describing problems that your EIP solves and collaborate with projects to implement your EIP.
+
+Anyone can create EIP or ERC although you should read [EIP-1](https://eips.ethereum.org/EIPS/eip-1) which outlines the EIP process, what is EIP, types of EIPs, what EIP document should contain, EIP format and template, list of EIP Editors and all you need to know about EIPs before creating one. Your new EIP should define new feature that is not really complex yet not super niche and can be used in by projects in the Ethereum ecosystem. The hardest part is facilitation, you as the author need to facilitate people around your EIP, collect feedback, write articles describing problems that your EIP solves and collaborate with projects to implement your EIP.
 
 If you’re interested to follow along the discussion process or share your input about EIPs, check out the [Ethereum Magicians forum](https://ethereum-magicians.org/), where EIPs are discussed with the community.
 

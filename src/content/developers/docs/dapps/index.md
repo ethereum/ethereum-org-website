@@ -74,7 +74,7 @@ Tokens must be generated in order to prove the value nodes that contribute to th
 - [rimble.consensys.design](https://rimble.consensys.design)
 - [GitHub](https://github.com/ConsenSys/rimble-ui)
 
-**One Click Dapp** **_- FOSS tool for generating dapp frontends from an [ABI](/developers/docs/apis/javascript/#interact-with-smart-contract-functions)._**
+**One Click Dapp** **_- FOSS tool for generating dapp frontends from an [ABI](/glossary/#abi)._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/One-Click-Dapp/one-click-dApp)
@@ -87,6 +87,8 @@ Tokens must be generated in order to prove the value nodes that contribute to th
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
+
+- [What Are Decentralized Apps?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps)
 
 ## Related Topics {#related-topics}
 

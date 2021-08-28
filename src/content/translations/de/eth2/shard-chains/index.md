@@ -15,7 +15,7 @@ summaryPoints:
 ---
 
 <UpgradeStatus date="~2021">
-    Shard Chains sollten irgendwann in 2021 implementiert werden – in Abhängigkeit davon, wie schnell die Arbeit voranschreitet, nachdem <a href="/en/eth2/beacon-chain/"> die Beacon Chain </a> eingeführt wurde. Diese Shards werden Ethereum mehr Kapazität für das Speichern und den Zugriff auf Daten geben, aber sie werden nicht für die Ausführung von Codes verwendet. Die Details hierfür werden noch ausgearbeitet.
+    Shard Chains sollten irgendwann in 2021 implementiert werden – in Abhängigkeit davon, wie schnell die Arbeit voranschreitet, nachdem <a href="/eth2/beacon-chain/"> die Beacon Chain </a> eingeführt wurde. Diese Shards werden Ethereum mehr Kapazität für das Speichern und den Zugriff auf Daten geben, aber sie werden nicht für die Ausführung von Codes verwendet. Die Details hierfür werden noch ausgearbeitet.
 </UpgradeStatus>
 
 ## Was ist Sharding? {#what-is-sharding}

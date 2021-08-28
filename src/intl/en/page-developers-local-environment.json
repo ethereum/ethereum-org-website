@@ -1,6 +1,8 @@
 {
   "page-local-environment-brownie-desc": "A Python-based development and testing framework for smart contracts targeting the Ethereum Virtual Machine.",
   "page-local-environment-brownie-logo-alt": "Brownie logo",
+  "page-local-environment-dapptools-desc": "A suite of Ethereum focused CLI tools following the Unix design philosophy, favoring composability, configurability and extensibility.",
+  "page-local-environment-dapptools-logo-alt": "Dapptools logo",
   "page-local-environment-embark-desc": "The all-in-one developer platform for building and deploying decentralized applications.",
   "page-local-environment-embark-logo-alt": "Embark logo",
   "page-local-environment-epirus-desc": "A platform for developing, deploying and monitoring blockchain applications on the Java Virtual Machine",
