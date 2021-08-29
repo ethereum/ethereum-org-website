@@ -4519,6 +4519,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "FitFingers",
+      "name": "James Hooper",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44674550?v=4",
+      "profile": "https://fitfingers.github.io/",
+      "contributions": [
+        "bug",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
