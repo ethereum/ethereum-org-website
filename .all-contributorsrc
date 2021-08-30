@@ -4548,6 +4548,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "schroeder-g",
+      "name": "Alexander Goncalves",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66321261?v=4",
+      "profile": "https://github.com/schroeder-g",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
