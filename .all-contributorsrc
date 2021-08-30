@@ -4463,6 +4463,127 @@
         "code",
         "bug"
       ]
+    },
+    {
+      "login": "MukulKolpe",
+      "name": "Mukul Kolpe",
+      "avatar_url": "https://avatars.githubusercontent.com/u/78664749?v=4",
+      "profile": "https://github.com/MukulKolpe",
+      "contributions": [
+        "code",
+        "bug",
+        "doc"
+      ]
+    },
+    {
+      "login": "corwintines",
+      "name": "Corwin Smith",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15589226?v=4",
+      "profile": "http://corwintines.netlify.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "spiolat",
+      "name": "spiolat",
+      "avatar_url": "https://avatars.githubusercontent.com/u/89148238?v=4",
+      "profile": "https://github.com/spiolat",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "hosyminh95",
+      "name": "hosyminh95",
+      "avatar_url": "https://avatars.githubusercontent.com/u/88025075?v=4",
+      "profile": "https://github.com/hosyminh95",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "chiarawilden",
+      "name": "Chiara Wilden",
+      "avatar_url": "https://avatars.githubusercontent.com/u/77884268?v=4",
+      "profile": "https://chiarawilden.com",
+      "contributions": [
+        "ideas",
+        "doc"
+      ]
+    },
+    {
+      "login": "DanhPTHTech",
+      "name": "DanhPTHTech",
+      "avatar_url": "https://avatars.githubusercontent.com/u/83639953?v=4",
+      "profile": "https://github.com/DanhPTHTech",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "FitFingers",
+      "name": "James Hooper",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44674550?v=4",
+      "profile": "https://fitfingers.github.io/",
+      "contributions": [
+        "bug",
+        "doc"
+      ]
+    },
+    {
+      "login": "hegrec",
+      "name": "Christopher Hegre",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6075845?v=4",
+      "profile": "http://www.hegrec.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "najeeb95",
+      "name": "Najeeb Nabwani",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29060164?v=4",
+      "profile": "https://github.com/najeeb95",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "schroeder-g",
+      "name": "Alexander Goncalves",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66321261?v=4",
+      "profile": "https://github.com/schroeder-g",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "gcasalett",
+      "name": "Gabe Casalett",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5896438?v=4",
+      "profile": "http://www.casalett.net",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "waynedyer12",
+      "name": "waynedyer12",
+      "avatar_url": "https://avatars.githubusercontent.com/u/89638901?v=4",
+      "profile": "https://github.com/waynedyer12",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "tapstephenson",
+      "name": "tap (pts.eth)",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10340540?v=4",
+      "profile": "https://github.com/tapstephenson",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

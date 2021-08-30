@@ -113,4 +113,5 @@ Ethereum is the perfect foundation for DAOs for a number of reasons:
 - [How to Start a DAO-Powered Digital Community](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 
 ### Videos {#videos}
+
 - [What is a DAO in crypto?](https://youtu.be/KHm0uUPqmVE)

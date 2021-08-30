@@ -10,6 +10,8 @@
   items:
     - id: docs-nav-intro-to-ethereum
       to: /developers/docs/intro-to-ethereum/
+    - id: docs-nav-intro-to-ether
+      to: /developers/docs/intro-to-ether/
     - id: docs-nav-intro-to-dapps
       to: /developers/docs/dapps/
     - id: docs-nav-web2-vs-web3

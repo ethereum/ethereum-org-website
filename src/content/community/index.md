@@ -131,6 +131,7 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
 ## Ethereum Jobs {#ethereum-jobs}
 
 **Want to find a job working in Ethereum?**
+
 - [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/ethereum/)
 - [Crypto.jobs](https://crypto.jobs/)
 - [Careers at ConsenSys](https://consensys.net/careers/)

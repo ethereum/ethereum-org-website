@@ -13,9 +13,9 @@ published: 2021-04-22
 [3LAU](https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=5f72ef64643b): $11 Million
 [Grimes](https://www.theguardian.com/music/2021/mar/02/grimes-sells-digital-art-collection-non-fungible-tokens): $6 Million
 
-All of them minted their NFT’s using Alchemy’s powerful API. In this tutorial, we’ll teach you how to the same in <10 minutes.
+All of them minted their NFT’s using Alchemy’s powerful API. In this tutorial, we’ll teach you how to do the same in <10 minutes.
 
-“Minting a NFT” is the act of publishing a unique instance of your ERC-721 token on the blockchain. Using our smart contract from [Part 1 of this NFT tutorial series](/developers/tutorials/how-to-write-and-deploy-an-nft/), let’s flex our web3 skills and mint a NFT. At the end of this tutorial, you’ll be able to mint as many NFTs as your heart (and wallet) desires!
+“Minting an NFT” is the act of publishing a unique instance of your ERC-721 token on the blockchain. Using our smart contract from [Part 1 of this NFT tutorial series](/developers/tutorials/how-to-write-and-deploy-an-nft/), let’s flex our web3 skills and mint a NFT. At the end of this tutorial, you’ll be able to mint as many NFTs as your heart (and wallet) desires!
 
 Let’s get started!
 
@@ -54,7 +54,7 @@ If you want to see the ABI you can print it to your console:
 console.log(JSON.stringify(contract.abi))
 ```
 
-To run mint-nft.jsand see your ABI printed to the console navigate to your terminal and run
+To run mint-nft.js and see your ABI printed to the console navigate to your terminal and run
 
 ```js
 node scripts/mint-nft.js
