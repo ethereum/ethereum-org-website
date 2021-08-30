@@ -4471,7 +4471,8 @@
       "profile": "https://github.com/MukulKolpe",
       "contributions": [
         "code",
-        "bug"
+        "bug",
+        "doc"
       ]
     },
     {
@@ -4516,6 +4517,43 @@
       "name": "DanhPTHTech",
       "avatar_url": "https://avatars.githubusercontent.com/u/83639953?v=4",
       "profile": "https://github.com/DanhPTHTech",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "FitFingers",
+      "name": "James Hooper",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44674550?v=4",
+      "profile": "https://fitfingers.github.io/",
+      "contributions": [
+        "bug",
+        "doc"
+      ]
+    },
+    {
+      "login": "hegrec",
+      "name": "Christopher Hegre",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6075845?v=4",
+      "profile": "http://www.hegrec.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "najeeb95",
+      "name": "Najeeb Nabwani",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29060164?v=4",
+      "profile": "https://github.com/najeeb95",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "schroeder-g",
+      "name": "Alexander Goncalves",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66321261?v=4",
+      "profile": "https://github.com/schroeder-g",
       "contributions": [
         "doc"
       ]
