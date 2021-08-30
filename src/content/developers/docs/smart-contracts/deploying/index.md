@@ -25,7 +25,7 @@ This means you'll need to pay a transaction fee so make sure you have some ETH.
 ### What you'll need {#what-youll-need}
 
 - your contract's bytecode – this is generated through [compilation](/developers/docs/smart-contracts/compiling/).
-- Ether for gas – you'll set your gas limit like other transactions so be aware that contract deployment needs a lot more gas than a simple ETH transfer.
+- ether for gas – you'll set your gas limit like other transactions so be aware that contract deployment needs a lot more gas than a simple ETH transfer.
 - a deployment script or plugin.
 - access to an [Ethereum node](/developers/docs/nodes-and-clients/), either by running your own, connecting to a public node, or via an API key using a service like Infura or Alchemy
 
