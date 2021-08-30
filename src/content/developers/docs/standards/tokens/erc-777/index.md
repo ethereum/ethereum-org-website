@@ -39,7 +39,7 @@ The hooks are registered and discovered using the [ERC-1820](https://eips.ethere
 2. Prevent accidental transfers to non ERC-777 smart contracts. In cases where the receiving contract has not registered a hook thus not compatible with ERC-777. The sending contract will abort the transaction.
 3. Hooks can reject transactions.
 
-#### Decimals {#decimals}
+### Decimals {#decimals}
 
 The standard also improves the confusion around `decimals` in ERC-20. Thus, making development a bit easier.
 
