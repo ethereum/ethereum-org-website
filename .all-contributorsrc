@@ -4575,6 +4575,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "tapstephenson",
+      "name": "tap (pts.eth)",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10340540?v=4",
+      "profile": "https://github.com/tapstephenson",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
