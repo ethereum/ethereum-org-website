@@ -443,7 +443,7 @@ const TutorialsPage = ({ data, pageContext }) => {
                       size={1}
                       ml={`0.5em`}
                       mr={`0.5em`}
-                    />{" "}
+                    />
                     <Link to={tutorial.to} hideArrow>
                       External
                     </Link>
