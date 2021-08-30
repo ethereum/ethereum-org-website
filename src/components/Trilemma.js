@@ -282,7 +282,7 @@ const Trilemma = () => {
       <Triangle
         width="540"
         height="620"
-        viewBox="-100 100 810 915"
+        viewBox="-100 100 850 915"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
