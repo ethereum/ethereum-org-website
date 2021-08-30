@@ -44,7 +44,7 @@ The standard also improves the confusion around `decimals` in ERC-20. Thus, maki
 
 ### Backwards compatibility with ERC-20 {#backwards-compatibility-with-erc-20}
 
-It means that ERC-777 contracts can be interacted with as if they were ERC-20 contracts.
+ERC-777 contracts can be interacted with as if they were ERC-20 contracts.
 
 ## Further Reading {#further-reading}
 
