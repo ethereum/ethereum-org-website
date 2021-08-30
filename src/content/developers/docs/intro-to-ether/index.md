@@ -21,13 +21,13 @@ The first-ever cryptocurrency was Bitcoin, created by Satoshi Nakamoto. Since Bi
 
 Ether (ETH) is the cryptocurrency used to pay for computing services on the [Ethereum blockchain](/developers/docs/intro-to-ethereum).
 
+It is [common](https://www.reuters.com/article/us-crypto-currencies-lending-insight-idUSKBN25M0GP#:~:text=price%20of%20ethereum) [to](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845#:~:text=cryptocurrencies%20including%20ethereum) [conflate](https://www.cnn.com/2021/03/14/tech/nft-art-buying/index.html#:~:text=price%20of%20ethereum) Ethereum and Ether — when people reference the "price of Ethereum," they are almost always describing the price of Ether.
+
 The Ethereum blockchain allows developers to create [decentralized applications (dapps)](/developers/docs/dapps), which all share a pool of computing power. This shared pool is finite, so Ethereum needs to determine who gets access to the computing power. Otherwise, a dapp with an accidental infinite loop or another malicious program could consume the entire network.
 
 The Ether cryptocurrency supports a pricing mechanism for Ethereum's computing power. When users want to make a transaction, they must pay Ether to have their transaction recognized on the blockchain. These usage costs are called gas fees, and they depend on the total amount of computing required by a transaction, as well as the network-wide demand for computing when the transaction is submitted.
 
 Thus, even if a malicious dapp submitted an infinite loop, the transaction would eventually run out of Ether and terminate, allowing the network to return to normal.
-
-It is [common](https://www.reuters.com/article/us-crypto-currencies-lending-insight-idUSKBN25M0GP#:~:text=price%20of%20ethereum) [to](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845#:~:text=cryptocurrencies%20including%20ethereum) [conflate](https://www.cnn.com/2021/03/14/tech/nft-art-buying/index.html#:~:text=price%20of%20ethereum) Ethereum and Ether — when people reference the "price of Ethereum," they are almost always describing the price of Ether.
 
 [More on gas](/developers/docs/gas/)
 
@@ -43,7 +43,7 @@ Just as Ether can be created by minting, Ether can be destroyed by a process cal
 
 Ether burn occurs in every transaction on Ethereum. When a user pays for their transaction, their base gas fee is automatically destroyed by the Ethereum protocol. [In some blocks](https://etherscan.io/block/12965263), more Ether are burned than minted due to base fee burn.
 
-[More on base gas fees](/developers/docs/gas/#base-fee)
+[More on gas base-fees](/developers/docs/gas/#base-fee)
 
 ## Denominations of Ether {#denominations}
 
