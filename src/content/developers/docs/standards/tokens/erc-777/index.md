@@ -15,7 +15,7 @@ To better understand this page, we recommend you first read about [ERC-20](/deve
 
 ## Body {#body}
 
-### Breaking down the definition {#breaking-down-the-definition}
+## Breaking down the definition {#breaking-down-the-definition}
 
 Token standards describe how a smart contract should be implemented so that it is compatible with other smart contracts and clients know how to interact with it.
 
