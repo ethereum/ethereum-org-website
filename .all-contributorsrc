@@ -4530,6 +4530,15 @@
         "bug",
         "doc"
       ]
+    },
+    {
+      "login": "hegrec",
+      "name": "Christopher Hegre",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6075845?v=4",
+      "profile": "http://www.hegrec.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
