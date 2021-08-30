@@ -201,7 +201,7 @@ After our import statements, we have our custom NFT smart contract, which is sur
 
 In our ERC-721 constructor, you’ll notice we pass 2 strings, “MyNFT” and “NFT.” The first variable is the smart contract’s name, and the second is its symbol. You can name each of these variables whatever you wish!
 
-Finally, we have our function `mintNFT(address recipient, string memory tokenURI)` that allows us to mint an NFT! You'll notice it this function takes in two variables:
+Finally, we have our function `mintNFT(address recipient, string memory uri)` that allows us to mint an NFT! You'll notice this function takes in two variables:
 
 - `address recipient` specifies the address that will receive your freshly minted NFT
 
