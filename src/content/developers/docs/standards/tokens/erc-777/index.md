@@ -43,7 +43,7 @@ The hooks are registered and discovered using the [ERC-1820](https://eips.ethere
 
 The standard also improves the confusion around `decimals` in ERC-20. Thus, making development a bit easier.
 
-#### Backwards compatibility with ERC-20 {#backwards-compatibility-with-erc-20}
+### Backwards compatibility with ERC-20 {#backwards-compatibility-with-erc-20}
 
 It means that ERC-777 contracts can be interacted with as if they were ERC-20 contracts.
 
