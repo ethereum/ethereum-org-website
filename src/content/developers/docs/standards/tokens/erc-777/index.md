@@ -11,7 +11,7 @@ ERC-777 is a fungible token standard improving the existing [ERC-20](/developers
 
 ## Prerequisites {#prerequisites}
 
-[ERC-20](/developers/docs/standards/tokens/erc-20/)
+To better understand this page, we recommend you first read about [ERC-20](/developers/docs/standards/tokens/erc-20/)
 
 ## Body {#body}
 
