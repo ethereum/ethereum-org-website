@@ -162,14 +162,15 @@ Open up the my-nft project in your favorite editor (we like [VSCode](https://cod
    import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
    import "@openzeppelin/contracts/utils/Counters.sol";
    import "@openzeppelin/contracts/access/Ownable.sol";
+   import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 
-   contract MyNFT is ERC721, Ownable {
+   contract MyNFT is ERC721URIStorage, Ownable {
        using Counters for Counters.Counter;
        Counters.Counter private _tokenIds;
 
        constructor() public ERC721("MyNFT", "NFT") {}
 
-       function mintNFT(address recipient, string memory uri)
+       function mintNFT(address recipient, string memory tokenURI)
            public onlyOwner
            returns (uint256)
        {
@@ -177,7 +178,7 @@ Open up the my-nft project in your favorite editor (we like [VSCode](https://cod
 
            uint256 newItemId = _tokenIds.current();
            _mint(recipient, newItemId);
-           uri = tokenURI(newItemId);
+           _setTokenURI(newItemId, tokenURI);
 
            return newItemId;
        }
@@ -200,11 +201,11 @@ After our import statements, we have our custom NFT smart contract, which is sur
 
 In our ERC-721 constructor, you’ll notice we pass 2 strings, “MyNFT” and “NFT.” The first variable is the smart contract’s name, and the second is its symbol. You can name each of these variables whatever you wish!
 
-Finally, we have our function `mintNFT(address recipient, string memory uri)` that allows us to mint an NFT! You'll notice it this function takes in two variables:
+Finally, we have our function `mintNFT(address recipient, string memory tokenURI)` that allows us to mint an NFT! You'll notice it this function takes in two variables:
 
 - `address recipient` specifies the address that will receive your freshly minted NFT
 
-- `string memory uri` is a string that should resolve to a JSON document that describes the NFT's metadata. An NFT's metadata is really what brings it to life, allowing it to have configurable properties, such as a name, description, image, and other attributes. In part 2 of this tutorial, we will describe how to configure this metadata.
+- `string memory tokenURI` is a string that should resolve to a JSON document that describes the NFT's metadata. An NFT's metadata is really what brings it to life, allowing it to have configurable properties, such as a name, description, image, and other attributes. In part 2 of this tutorial, we will describe how to configure this metadata.
 
 `mintNFT` calls some methods from the inherited ERC-721 library, and ultimately returns a number that represents the ID of the freshly minted NFT.
 
@@ -260,7 +261,7 @@ Update your hardhat.config.js to look like this:
     require("@nomiclabs/hardhat-ethers");
     const { API_URL, PRIVATE_KEY } = process.env;
     module.exports = {
-       solidity: "0.7.3",
+       solidity: "0.8.0",
        defaultNetwork: "ropsten",
        networks: {
           hardhat: {},
