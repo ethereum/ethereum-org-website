@@ -16,6 +16,7 @@ If this is your first attempt at Ethereum development, we recommend starting at 
 ### Foundational topics {#foundational-topics}
 
 - [Intro to Ethereum](/developers/docs/intro-to-ethereum/) _– A quick overview of Ethereum_
+- [Intro to Ether](/developers/docs/intro-to-ether/) _– A quick overview of Ether_
 - [Intro to dapps](/developers/docs/dapps/) _– An introduction to decentralized applications_
 - [Web2 vs Web3](/developers/docs/web2-vs-web3/) _– The fundamental differences that blockchain-based applications provide_
 - [Accounts](/developers/docs/accounts/) _– Entities in the network that can hold a balance and send transactions_
@@ -36,12 +37,12 @@ If this is your first attempt at Ethereum development, we recommend starting at 
 - [Ethereum client APIs](/developers/docs/apis/javascript/) _– Convenience libraries that allow your web app to interact with Ethereum and smart contracts_
 - [Data and analytics](/developers/docs/data-and-analytics) _– How blockchain data is aggregated, organized and implemented into dapps_
 - [Security](/developers/docs/security/) _– Best practices for managing smart contract attacks and vulnerabilities_
-- [Storage](/developers/docs/storage/) _– Decentralized storage structures and mechanisms_ 
+- [Storage](/developers/docs/storage/) _– Decentralized storage structures and mechanisms_
 - [Integrated Development Environments (IDEs)](/developers/docs/ides/) _– The best environments to write dapp code_
 - [Programming languages](/developers/docs/programming-languages/) _– How to get started with Ethereum using languages you may already know_
 
 ### Advanced {#advanced}
 
-- [Standards](/developers/docs/standards/tokens/) _– Agreed upon protocols for maintaining efficiency and accessibility of projects to the community_ 
+- [Standards](/developers/docs/standards/tokens/) _– Agreed upon protocols for maintaining efficiency and accessibility of projects to the community_
 - [Oracles](/developers/docs/oracles/) _– How information is injected into the Ethereum blockchain_
 - [Scaling](/developers/docs/scaling/) _– Methods for preserving decentralization and security as Ethereum grows_

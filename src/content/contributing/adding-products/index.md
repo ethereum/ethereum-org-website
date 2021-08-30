@@ -81,7 +81,7 @@ But rest assured, **there will be links to other websites that rank more dapps/w
 
 ### Product Ordering {#product-ordering}
 
-Unless products are specifically ordered otherwise, such as alphabetically, products will be displayed from most to least recently added to the page. In other words, the newest products get added to the bottom of the list. 
+Unless products are specifically ordered otherwise, such as alphabetically, products will be displayed from most to least recently added to the page. In other words, the newest products get added to the bottom of the list.
 
 ### Terms of use {#terms-of-use}
 
