@@ -66,10 +66,6 @@ Tokens must be generated in order to prove the value nodes that contribute to th
 ---==crwdHRulesLBB_2_BBsuleRHdwrc==
 -->## Dapp 工具 {#dapp-tools}
 
-**Rimble UI** **_- 去中心化应用程序的自适应组件和设计标准。_**
-
-- [rimble.consensys.design](https://rimble.consensys.design)
-- [GitHub](https://github.com/ConsenSys/rimble-ui)
 
 **One Click Dapp** **_- FOSS 工具，用于从 ABI 生成 dapp 前端_**。
 

@@ -66,10 +66,6 @@ Tokens must be generated in order to prove the value nodes that contribute to th
 ---==crwdHRulesLBB_2_BBsuleRHdwrc==
 -->## Dapp eszközök {#dapp-tools}
 
-**Rimble UI** **_- Decentralizált alkalmazások alkalmazkodó komponensei és tervezési szabványai._**
-
-- [rimble.consensys.design](https://rimble.consensys.design)
-- [GitHub](https://github.com/ConsenSys/rimble-ui)
 
 **One Click Dapp** **_- FOSS eszköz, mely egy dapp frontendet generál egy ABI-ból._**
 

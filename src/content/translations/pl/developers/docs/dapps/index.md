@@ -66,10 +66,6 @@ Tokens must be generated in order to prove the value nodes that contribute to th
 ---==crwdHRulesLBB_2_BBsuleRHdwrc==
 -->## Narzędzia aplikacji zdecentralizowanych {#dapp-tools}
 
-**Interfejs użytkownika Rimble** **_– komponenty z możliwością dostosowania i standardy projektowe dla aplikacji zdecentralizowanych._ **
-
-- [projekt rimble.consensus](https://rimble.consensys.design)
-- [GitHub](https://github.com/ConsenSys/rimble-ui)
 
 **One ​​Click Dapp** **_– narzędzie FOSS do generowania frontendów dapp z ABI._**
 
