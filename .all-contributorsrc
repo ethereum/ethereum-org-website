@@ -4611,6 +4611,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "NotManyIdeasDev",
+      "name": "Gianni Alessandroni",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45824238?v=4",
+      "profile": "http://notmanyideasdev.github.io",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
