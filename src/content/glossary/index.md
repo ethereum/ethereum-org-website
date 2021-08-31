@@ -115,7 +115,7 @@ A special [transaction](#transaction), with the [zero address](#zero-address) as
 
 ### crosslink {#crosslink}
 
-A crosslink provides a summary of a shard's state. It's how [shard](#shard) chains will communicate with one another via the [Beacon Chain](#beacon-chain)in the sharded [proof-of-stake system](#proof-of-stake).
+A crosslink provides a summary of a shard's state. It's how [shard](#shard) chains will communicate with one another via the [Beacon Chain](#beacon-chain) in the sharded [proof-of-stake system](#proof-of-stake).
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work" title="Proof-of-stake" />
 
