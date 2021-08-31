@@ -4584,6 +4584,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "jamesmorgan",
+      "name": "James Morgan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/110869?v=4",
+      "profile": "https://medium.com/@james.morgan",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
