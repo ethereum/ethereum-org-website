@@ -16,7 +16,7 @@ If this is your first attempt at Ethereum development, we recommend starting at 
 ### Foundational topics {#foundational-topics}
 
 - [Intro to Ethereum](/developers/docs/intro-to-ethereum/) _– A quick overview of Ethereum_
-- [Intro to Ether](/developers/docs/intro-to-ether/) _– A quick overview of Ether_
+- [Intro to ether](/developers/docs/intro-to-ether/) _– A quick overview of ether_
 - [Intro to dapps](/developers/docs/dapps/) _– An introduction to decentralized applications_
 - [Web2 vs Web3](/developers/docs/web2-vs-web3/) _– The fundamental differences that blockchain-based applications provide_
 - [Accounts](/developers/docs/accounts/) _– Entities in the network that can hold a balance and send transactions_

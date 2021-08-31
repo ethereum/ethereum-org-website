@@ -937,7 +937,7 @@ address.
 ERC-20 liquidity token. It is similar to the [OpenWhisk ERC-20 contract](/developers/tutorials/erc20-annotated-code), so
 I will only explain the part that is different, the `permit` functionality.
 
-Transactions on Ethereum cost Ether (ETH), which is equivalent to real money. If you have ERC-20 tokens but not ETH, you can't send
+Transactions on Ethereum cost ether (ETH), which is equivalent to real money. If you have ERC-20 tokens but not ETH, you can't send
 transactions, so you can't do anything with them. One solution to avoid this problem is
 [meta-transactions](https://uniswap.org/docs/v2/smart-contract-integration/supporting-meta-transactions/).
 The owner of the tokens signs a transaction that allows somebody else to withdraw tokens off chain and sends it using the Internet to
@@ -1445,7 +1445,7 @@ for ETH to give back to the liquidity provider.
     }
 ```
 
-These functions relay meta-transactions to allow users without Ether to withdraw from the pool, using [the permit
+These functions relay meta-transactions to allow users without ether to withdraw from the pool, using [the permit
 mechanism](#UniswapV2ERC20).
 
 ```solidity
@@ -2206,7 +2206,7 @@ which allows an account to spend out the allowance provided by a different accou
 }
 ```
 
-This function transfers Ether to an account. Any call to a different contract can attempt to send Ether. Because we
+This function transfers ether to an account. Any call to a different contract can attempt to send ether. Because we
 don't need to actually call any function, we don't send any data with the call.
 
 ## Conclusion {#Conclusion}
