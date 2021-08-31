@@ -445,7 +445,7 @@ const TutorialsPage = ({ data, pageContext }) => {
                       mr={`0.5em`}
                     />{" "}
                     <Link to={tutorial.to} hideArrow>
-                      External
+                      <Translation id="page-tutorial-external-link" />
                     </Link>
                   </>
                 )}
