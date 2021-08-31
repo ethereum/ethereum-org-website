@@ -4584,6 +4584,42 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "jamesmorgan",
+      "name": "James Morgan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/110869?v=4",
+      "profile": "https://medium.com/@james.morgan",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "sharon-wang",
+      "name": "Sharon Wang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25834218?v=4",
+      "profile": "https://www.linkedin.com/in/sharon--wang/",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "enriavil1",
+      "name": "Enrique Jose  Avila Asapche",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19207637?v=4",
+      "profile": "https://github.com/enriavil1",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "NotManyIdeasDev",
+      "name": "Gianni Alessandroni",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45824238?v=4",
+      "profile": "http://notmanyideasdev.github.io",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
