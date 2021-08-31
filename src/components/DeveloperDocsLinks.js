@@ -4,30 +4,27 @@ import Translation from "./Translation"
 import Link from "./Link"
 import docLinks from "../data/developer-docs-links.yaml"
 
-const DeveloperDocsLinks = () => {
-  return docLinks.map((items) => (
+const DeveloperDocsLinks = () =>
+  docLinks.map(({ id, items }) => (
     <>
       <Header3>
-        <Translation id={items.id} />
+        <Translation id={id} />
       </Header3>
       <ul>
-        {items.items &&
-          items.items.map((item) => {
-            return (
-              <ListItem>
-                <Link to={item.to || item.path}>
-                  <Translation id={item.id} />
-                </Link>
-                <em>
-                  {" – "}
-                  <Translation id={item.descp_id} />
-                </em>
-              </ListItem>
-            )
-          })}
+        {items &&
+          items.map(({ id, to, path, description }) => (
+            <ListItem>
+              <Link to={to || path}>
+                <Translation id={id} />
+              </Link>
+              <i>
+                {" – "}
+                <Translation id={description} />
+              </i>
+            </ListItem>
+          ))}
       </ul>
     </>
   ))
-}
 
 export default DeveloperDocsLinks
