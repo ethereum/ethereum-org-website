@@ -1,17 +1,5 @@
 [
   {
-    "url": "https://docs.alchemy.com/alchemy/tutorials/how-to-create-an-nft/how-to-mint-a-nft",
-    "title": "How to Mint an NFT",
-    "description": "This tutorial describes how to mint an NFT on the Ethereum blockchain using Web 3",
-    "author": "Alchemy",
-    "authorGithub": "https://github.com/alchemyplatform",
-    "tags": ["solidity", "nfts"],
-    "skillLevel": "beginner",
-    "timeToRead": "10",
-    "lang": "en",
-    "publishDate": "08/08/2021"
-  },
-  {
     "url": "https://hardhat.org/tutorial/",
     "title": "Hardhat's tutorial for beginners",
     "description": "Hardhat's beginners guide to Ethereum contracts and dApp development",
@@ -20,6 +8,43 @@
     "tags": ["hardhat", "solidity", "testing", "smart-contracts"],
     "skillLevel": "beginner",
     "lang": "en",
+    "timeToRead": "1",
     "publishDate": "06/22/2021"
+  },
+  {
+    "url": "https://dev.to/dabit3/the-complete-guide-to-full-stack-ethereum-development-3j13",
+    "title": "The Complete Guide to Full Stack Ethereum Development",
+    "description": "Building Full Stack dApps with React, Ethers.js, Solidity, and Hardhat",
+    "author": "Nader Dabit",
+    "authorGithub": "https://github.com/dabit3",
+    "tags": ["solidity", "hardhat", "ethers.js", "smart-contracts", "react"],
+    "skillLevel": "beginner",
+    "timeToRead": "18",
+    "lang": "en",
+    "publishDate": "08/25/2021"
+  },
+  {
+    "url": "https://github.com/austintgriffith/scaffold-eth/tree/simple-nft-example",
+    "title": "Simple NFT Example",
+    "description": "Build, mint, and send around your own ERC721!",
+    "author": "Austin Griffith",
+    "authorGithub": "https://github.com/austintgriffith",
+    "tags": ["solidity", "smart-contracts", "react"],
+    "skillLevel": "beginner",
+    "timeToRead": "1",
+    "lang": "en",
+    "publishDate": "08/03/2021"
+  },
+  {
+    "url": "https://github.com/austintgriffith/scaffold-eth/tree/challenge-1-decentralized-staking",
+    "title": "Decentralized Staking App",
+    "description": "Build, test and ship your own decentralized staking app!",
+    "author": "Austin Griffith",
+    "authorGithub": "https://github.com/austintgriffith",
+    "tags": ["solidity", "smart-contracts", "react", "testing"],
+    "skillLevel": "beginner",
+    "timeToRead": "1",
+    "lang": "en",
+    "publishDate": "08/15/2021"
   }
 ]
