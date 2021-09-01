@@ -97,7 +97,7 @@ EIP Champions should familiarise themselves with prior work and proposals before
 
 ### Working Groups {#working-groups}
 
-It is unrealistic to expect that the initial EIP will be included on the Ethereum Mainnet without change for more significant initiatives. In practice, these will require EIP Champions to work with a subset of Protocol Developers to specify, implement, test, iterate on and finalize their proposal. Historically, these working groups have involved several months (and sometimes years!) of work. Similarly, EIP Champions for such changes should involve relevant Application/Tooling Developers early in their efforts to gather end-user feedback and mitigate any deployment risks.
+An initial EIP is unlikely to be implemented on the Ethereum Mainnet without edits or changes. Generally, EIP Champions will work with a subset of Protocol Developers to specify, implement, test, iterate, and finalize their proposal. Historically, these working groups have required several months (and sometimes years!) of work. Similarly, EIP Champions for such changes should involve relevant Application/Tooling Developers early in their efforts to gather end-user feedback and mitigate any deployment risks.
 
 ### Community Consensus {#community-consensus}
 
