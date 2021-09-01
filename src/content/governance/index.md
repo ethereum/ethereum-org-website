@@ -39,7 +39,7 @@ Whilst at a protocol level, Ethereum uses off-chain governance, many use cases b
 
 ## Who is involved? {#who-is-involved}
 
-There are various stakeholders in the Ethereum community, each playing a role in the governance process. Starting from the stakeholders closest to the protocol and zooming out, we have:
+There are various stakeholders in the [Ethereum community](/community/), each playing a role in the governance process. Starting from the stakeholders closest to the protocol and zooming out, we have:
 
 - **Protocol Developers** (a.k.a. "Core Developers" ): these people maintain the various Ethereum implementations (e.g. go-ethereum, Nethermind, Besu, Erigon at the execution layer or Prysm, Lighthouse, Nimbus, Teku, Lodestar at the consensus layer);
 - **EIP Authors**: these people propose changes to the Ethereum protocol, in the form of Ethereum Improvement Proposals (EIPs);
