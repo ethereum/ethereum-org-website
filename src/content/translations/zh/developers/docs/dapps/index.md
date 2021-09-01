@@ -66,7 +66,6 @@ Tokens must be generated in order to prove the value nodes that contribute to th
 ---==crwdHRulesLBB_2_BBsuleRHdwrc==
 -->## Dapp 工具 {#dapp-tools}
 
-
 **One Click Dapp** **_- FOSS 工具，用于从 ABI 生成 dapp 前端_**。
 
 - [oneclickdapp.com](https://oneclickdapp.com)
