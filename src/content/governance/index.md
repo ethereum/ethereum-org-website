@@ -7,7 +7,7 @@ sidebar: true
 
 # Introduction to Ethereum Governance {#introduction}
 
-_If no one owns Ethereum, how are decisions about past and future changes to Ethereum made? Ethereum Governance refers to the process that allows such decisions to be made_
+_If no one owns Ethereum, how are decisions about past and future changes to Ethereum made? Ethereum governance refers to the process that allows such decisions to be made_
 
 <Divider />
 
@@ -27,7 +27,7 @@ No one person owns the Ethereum protocol, but decisions still need to be made ab
 
 ## Ethereum Governance {#ethereum-governance}
 
-Ethereum Governance is the process by which protocol changes are made. It's important to point out that this process isn't related to how people and applications use the protocol - Ethereum is permissionless. Anyone from anywhere in the world can participate in on-chain activities. There are no rules set for who can or cannot build an application or send a transaction. However, there is a process to propose changes to the core protocol, which these applications run on top of. Since so many people depend on Ethereum's stability, there is a very high coordination threshold for core changes, including social and technical processes, to ensure any changes to Ethereum are secure and widely supported by the community
+Ethereum governance is the process by which protocol changes are made. It's important to point out that this process isn't related to how people and applications use the protocol - Ethereum is permissionless. Anyone from anywhere in the world can participate in on-chain activities. There are no rules set for who can or cannot build an application or send a transaction. However, there is a process to propose changes to the core protocol, which these applications run on top of. Since so many people depend on Ethereum's stability, there is a very high coordination threshold for core changes, including social and technical processes, to ensure any changes to Ethereum are secure and widely supported by the community
 
 ### On-chain vs Off-chain governance {#on-chain-vs-off-chain}
 
@@ -61,7 +61,7 @@ _Note: any individual can be part of multiple of these groups (e.g. a protocol d
 
 ## What is an EIP? {#what-is-an-eip}
 
-One important process used in Ethereum Governance is the proposal of **Ethereum Improvement Proposals (EIPs)**. EIPs are standards specifying potential new features or processes for Ethereum. Anyone within the Ethereum community can create an EIP. For example, none of the authors of EIP-721, the EIP that standardized NFTs, have worked directly on Ethereum's protocol development.
+One important process used in Ethereum governance is the proposal of **Ethereum Improvement Proposals (EIPs)**. EIPs are standards specifying potential new features or processes for Ethereum. Anyone within the Ethereum community can create an EIP. For example, none of the authors of EIP-721, the EIP that standardized NFTs, have worked directly on Ethereum's protocol development.
 
 <ButtonLink to="/eips/">More on EIPs</ButtonLink>
 
