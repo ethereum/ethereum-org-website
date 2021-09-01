@@ -99,7 +99,7 @@ Unfortunately, there is no clear playbook on how to handle contentious proposals
 
 As the champion of a contentious EIP, you should try and build consensus, address objections and document community support for your proposal. Given the size and diversity of the Ethereum community, there isn't a single metric (e.g. a coin vote) that can be used, and EIP Champions are expected to adapt to the circumstances of their proposal.
 
-Beyond the security of the Ethereum network, which contentious forks may compromise, significant weight is usually placed on what Application/Tooling Developers and Application Users value, given that their using and developing on Ethereum is what makes the ecosystem attractive for other stakeholders.
+Beyond the security of the Ethereum network, significant weight is usually placed on what Application/Tooling Developers and Application Users value, given that their using and developing on Ethereum is what makes the ecosystem attractive for other stakeholders.
 
 <Divider />
 
