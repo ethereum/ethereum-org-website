@@ -95,7 +95,7 @@ It is unrealistic to expect that the initial EIP will be included on the Ethereu
 
 ### Community Consensus {#community-consensus}
 
-Unfortunately, there is no clear playbook on how to handle contentious proposals. Because they have no way to force people to adopt network upgrades, Protocol Developers will generally avoid including EIPs who are contentious amongst various stakeholder groups.
+Unfortunately, there is no clear playbook on how to handle contentious proposals. Since they have no way to force people to adopt network upgrades, Protocol Developers will generally avoid including EIPs that are contentious amongst various stakeholder groups.
 
 As the champion of a contentious EIP, you should try and build consensus, address objections and document community support for your proposal. Given the size and diversity of the Ethereum community, there isn't a single metric (e.g. a coin vote) that can be used, and EIP Champions are expected to adapt to the circumstances of their proposal.
 
