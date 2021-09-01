@@ -432,7 +432,7 @@ It can be assumed that they use 100w per 5.5 validators. This is a gross overest
 
 In total, Ethereum on proof-of-stake therefore consumes something on the order of 2.62 megawatt, which is about the same as a small American town.
 
-This is a reduction of at least 99.95% in total energy use from the Digiconomist estimate of 44.94 TWh per year that the Ethereum miners currently consume.
+This is a reduction of at least 99.95% in total energy usage from the Digiconomist estimate of 44.94 TWh per year that the Ethereum miners currently consume.
 
 #### 2. Visa energy consumption {#fn-2}
 
