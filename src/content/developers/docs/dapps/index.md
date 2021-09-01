@@ -69,11 +69,6 @@ Tokens must be generated in order to prove the value nodes that contribute to th
 
 ## Dapp tools {#dapp-tools}
 
-**Rimble UI** **_- Adaptable components and design standards for decentralized applications._**
-
-- [GitHub](https://github.com/ConsenSys/rimble-ui)
-- [Example dapp](https://consensys.github.io/rimble-app-demo/)
-
 **One Click Dapp** **_- FOSS tool for generating dapp frontends from an [ABI](/glossary/#abi)._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
