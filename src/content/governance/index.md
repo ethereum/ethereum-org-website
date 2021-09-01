@@ -148,7 +148,7 @@ When the Beacon Chain merges with the Ethereum execution layer, the governance p
 - [Propose an EIP](/eips/#participate)
 - [Discuss current proposals](https://ethereum-magicians.org/)
 - [Get involved in R&D discussion](https://discord.gg/mncqtgVSVw)
-- [Run a node](/developers/docs/nodes-and-clients/)
+- [Run a node](/developers/docs/nodes-and-clients/run-a-node/)
 
 ## Further reading {#further-reading}
 
