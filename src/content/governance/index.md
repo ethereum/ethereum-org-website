@@ -25,13 +25,15 @@ No one person owns the Ethereum protocol, but decisions still need to be made ab
 
 Ethereum Governance is the process by which protocol changes are made. It's important to point out that this process isn't related to how people and applications use the protocol - Ethereum is permissionless. Anyone from anywhere in the world can participate in on-chain activities. There are no rules set for who can or cannot build an application or send a transaction. However, there is a process to propose changes to the core protocol, which these applications run on top of. Since so many people depend on Ethereum's stability, there is a very high coordination threshold for core changes, including social and technical processes, to ensure any changes to Ethereum are secure and widely supported by the community
 
-### Off-chain vs On-chain governance {#off-chain-vs-on-chain}
+### On-chain vs Off-chain governance {#on-chain-vs-off-chain}
 
-Ethereum Governance happens off-chain. Off-chain governance means that any protocol change decisions happen through an informal process of social discussion, which, if approved, would be implemented in code.
+Blockchain technology allows for new governance capabilities, known as on-chain governance. On-chain governance is when proposed protocol changes are decided by a stakeholder vote, usually by holders of a governance token, and voting happens on the blockchain. With on-chain governance, the proposed protocol changes are already written in code and implemented automatically if the stakeholders approve the changes.
 
-The opposite approach, on-chain governance, is when proposed protocol changes are decided by a stakeholder vote, usually by holders of a governance token, which happens on the blockchain. With on-chain governance, the proposed protocol changes are already written in code and implemented automatically if the stakeholders approve the changes.
+The opposite approach, off-chain governance, is where any protocol change decisions happen through an informal process of social discussion, which, if approved, would be implemented in code.
 
-Whilst at a protocol level, Ethereum uses off-chain governance, many use cases built on top of Ethereum, such as DAOs, use on-chain governance.
+**Ethereum governance happens off-chain** with a wide variety of stakeholders involved in the process.
+
+_Whilst at a protocol level Ethereum governance is off-chain, many use cases built on top of Ethereum, such as DAOs, use on-chain governance._
 
 <ButtonLink to="/dao/">More on DAOs</ButtonLink>
 
