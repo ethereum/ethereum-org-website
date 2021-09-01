@@ -4638,6 +4638,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "ndrozd",
+      "name": "Nikita Drozd",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6696080?v=4",
+      "profile": "https://github.com/ndrozd",
+      "contributions": [
+        "bug",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
