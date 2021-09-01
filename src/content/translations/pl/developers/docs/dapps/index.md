@@ -66,7 +66,6 @@ Tokens must be generated in order to prove the value nodes that contribute to th
 ---==crwdHRulesLBB_2_BBsuleRHdwrc==
 -->## Narzędzia aplikacji zdecentralizowanych {#dapp-tools}
 
-
 **One ​​Click Dapp** **_– narzędzie FOSS do generowania frontendów dapp z ABI._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
