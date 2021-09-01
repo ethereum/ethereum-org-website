@@ -10,5 +10,16 @@
     "timeToRead": "10",
     "lang": "en",
     "publishDate": "08/08/2021"
+  },
+  {
+    "url": "https://hardhat.org/tutorial/",
+    "title": "Hardhat's tutorial for beginners",
+    "description": "Hardhat's beginners guide to Ethereum contracts and dApp development",
+    "author": "Hardhat",
+    "authorGithub": "https://https://hardhat.org/",
+    "tags": ["hardhat", "solidity", "testing", "smart-contracts"],
+    "skillLevel": "beginner",
+    "lang": "en",
+    "publishDate": "06/22/2021"
   }
 ]
