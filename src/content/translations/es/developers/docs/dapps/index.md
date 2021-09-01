@@ -66,7 +66,6 @@ Tokens must be generated in order to prove the value nodes that contribute to th
 ---==crwdHRulesLBB_2_BBsuleRHdwrc==
 -->## Las herramientas de las dapps {#dapp-tools}
 
-
 **One Click Dapp\*\***_: Herramienta FOSS para generar front-ends de dapps desde una ABI._\*\*
 
 - [oneclickdapp.com](https://oneclickdapp.com)
