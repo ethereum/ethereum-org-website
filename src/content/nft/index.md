@@ -402,6 +402,7 @@ Most NFTs are built using a consistent standard known as [ERC-721](/developers/d
 - [A beginner's guide to NFTs](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, January 2020_
 - [Everything you need to know about the metaverse](https://foundation.app/blog/enter-the-metaverse) – _Foundation team, foundation.app_
 - [No, CryptoArtists Aren’t Harming the Planet](https://medium.com/superrare/no-cryptoartists-arent-harming-the-planet-43182f72fc61)
+- [A country's worth of power, no more](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _Carl Beekhuizen, May 18 2021_
 
 <Divider />
 
@@ -411,23 +412,27 @@ Most NFTs are built using a consistent standard known as [ERC-721](/developers/d
 
 This explains how we arrived at our energy estimates above. These estimates apply to the network as a whole and are not just reserved for the process of creating, buying, or selling NFTs.
 
-#### 1. 99.98% energy reduction from mining {#fn-1}
+#### 1. 99.95% energy reduction from mining {#fn-1}
 
-The 99.98% reduction in energy consumption from a system secured by mining to a system secured by staking is calculated using the following data sources:
+The 99.95% reduction in energy consumption from a system secured by mining to a system secured by staking is calculated using the following data sources:
 
-- 24 tWh of annualized electrical energy is consumed by mining Ethereum - [Digiconomist](https://digiconomist.net/ethereum-energy-consumption)
+- 44.49 TWh of annualized electrical energy is consumed by mining Ethereum - [Digiconomist](https://digiconomist.net/ethereum-energy-consumption)
 
 - The average desktop computer, all that's needed to run Proof of Stake, uses 0.06kWh of energy per hour – [Silicon Valley power chart](https://www.siliconvalleypower.com/residents/save-energy/appliance-energy-use-chart) (Some estimates are a little higher at 0.15kWh)
 
-The calculation also assumes that the user running Ethereum never lets their computer sleep or switches off their monitor.
+At the time of writing, there are 140 592 validators from 16 405 unique addresses.
+Of those, 87 897 validators are assumed to be staking from home.
 
-Daily usage: `0.06kWh * 24 = 1.44 kWh` per day per person
+It is assumed the average person staking from home uses a 100 watt desktop personal computer setup to run an average of 5.4 validator clients.
 
-Annual usage: `1.44 kWh * 365 = 525.6 kWh` per year per person
+The 87 897 validators running from home gives us 16 300 users consuming ~1.64 megawatt of energy.
 
-If there are 10,000 people running Ethereum (rounding up current numbers of 8000ish) the cost of running the entire network is `10,000 nodes * 525.6kWh = 5,256,000 kWh`.
+The rest of the validators are run by custodial stakers such as exchanges and staking services.
+It can be assumed that they use 100w per 5.5 validators. This is a gross overestimation to be on the safe side.
 
-5,256,000kWh is 0.005256tWh. With 24tWh produced by mining, that's 0.0219% of the energy required or a decrease of 99.98%.
+In total, Ethereum on proof-of-stake therefore consumes something on the order of 2.62 megawatt, which is about the same as a small American town.
+
+This is a reduction of at least 99.95% in total energy usage from the Digiconomist estimate of 44.94 TWh per year that the Ethereum miners currently consume.
 
 #### 2. Visa energy consumption {#fn-2}
 
