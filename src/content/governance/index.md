@@ -9,6 +9,8 @@ sidebar: true
 
 _If no one owns Ethereum, how are decisions about past and future changes to Ethereum made? Ethereum Governance refers to the process that allows such decisions to be made_
 
+<Divider />
+
 ## What is Governance? {#what-is-governance}
 
 The Cambridge dictionary defines governance as:
@@ -16,6 +18,8 @@ The Cambridge dictionary defines governance as:
 > _the way that organizations or countries are managed at the highest level, and the systems for doing this_
 
 In essence, governance is the system in place that allows decisions to be made. In a typical organizational structure, the executive team or a directors' board may have the final say in decision-making. In a political system, elected officials may enact legislation that attempts to represent their constituent's desires.
+
+<Divider />
 
 ## Decentralized Governance {#decentalized-governance}
 
