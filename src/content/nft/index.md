@@ -428,7 +428,7 @@ It is assumed the average person staking from home uses a 100 watt desktop perso
 The 87 897 validators running from home gives us 16 300 users consuming ~1.64 megawatt of energy.
 
 The rest of the validators are run by custodial stakers such as exchanges and staking services.
-It can be assumed that they use 100w per 5.5 validators. This is a gross overestimate to be on the safe side.
+It can be assumed that they use 100w per 5.5 validators. This is a gross overestimation to be on the safe side.
 
 In total, Ethereum on proof-of-stake therefore consumes something on the order of 2.62 megawatt, which is about the same as a small American town.
 
