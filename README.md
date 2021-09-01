@@ -1100,6 +1100,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/raj-shekhar1"><img src="https://avatars.githubusercontent.com/u/55439064?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Raj Shekhar Bhardwaj</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=raj-shekhar1" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/joakimengerstam"><img src="https://avatars.githubusercontent.com/u/12713452?v=4?s=100" width="100px;" alt=""/><br /><sub><b>joakimengerstam</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=joakimengerstam" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/ndrozd"><img src="https://avatars.githubusercontent.com/u/6696080?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nikita Drozd</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Androzd" title="Bug reports">🐛</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=ndrozd" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://scottcameron.uk"><img src="https://avatars.githubusercontent.com/u/83584447?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Scott</b></sub></a><br /><a href="#design-Scott1UP" title="Design">🎨</a></td>
   </tr>
 </table>
 
