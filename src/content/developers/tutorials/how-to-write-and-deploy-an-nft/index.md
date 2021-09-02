@@ -21,7 +21,7 @@ And of course, if you have questions at any point, don’t hesitate to reach out
 
 ## Step 1: Connect to the Ethereum network {#connect-to-ethereum}
 
-There a bunch of ways to make requests to the Ethereum blockchain, but to make things easy, we’ll use a free account on [Alchemy](https://dashboard.alchemyapi.io/signup?referral=affiliate:3bda2c8a-2393-4923-a7d9-f98c7c2f4520), a blockchain developer platform and API that allows us to communicate with the Ethereum chain without having to run our own nodes.
+There are a bunch of ways to make requests to the Ethereum blockchain, but to make things easy, we’ll use a free account on [Alchemy](https://dashboard.alchemyapi.io/signup?referral=affiliate:3bda2c8a-2393-4923-a7d9-f98c7c2f4520), a blockchain developer platform and API that allows us to communicate with the Ethereum chain without having to run our own nodes.
 
 In this tutorial, we’ll also take advantage of Alchemy’s developer tools for monitoring and analytics to understand what’s going on under the hood in our smart contract deployment. If you don’t already have an Alchemy account, you can sign up for free [here](https://dashboard.alchemyapi.io/signup).
 
@@ -57,7 +57,7 @@ To double check our balance is there, let’s make an [eth_getBalance](https://d
 
     `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
 
-**NOTE: **This result is in wei not ETH. Wei is used as the smallest denomination of ether. The conversion from wei to ETH is 1 eth = 10<sup>18</sup> wei. So if we convert 0xde0b6b3a7640000 to decimal we get 1\*10<sup>18</sup> wei which equals 1 ETH.
+**NOTE: **This result is in wei, not ETH. Wei is used as the smallest denomination of ether. The conversion from wei to ETH is 1 eth = 10<sup>18</sup> wei. So if we convert 0xde0b6b3a7640000 to decimal we get 1\*10<sup>18</sup> wei, which equals 1 ETH.
 
 Phew! Our fake money is all there.
 
@@ -72,7 +72,7 @@ Now that we’re inside our project folder, we’ll use npm init to initialize t
 
     npm init
 
-It doesn’t really matter how you answer the installation questions, here is how we did it for reference:
+It doesn’t really matter how you answer the installation questions; here is how we did it for reference:
 
     package name: (my-nft)
     version: (1.0.0)
@@ -146,13 +146,13 @@ To keep our project organized, we’ll create two new folders. Navigate to the r
 
 ## Step 10: Write our contract {#write-contract}
 
-Now time that our environment is set up, onto more exciting stuff: _writing our smart contract code!_
+Now that our environment is set up, on to more exciting stuff: _writing our smart contract code!_
 
 Open up the my-nft project in your favorite editor (we like [VSCode](https://code.visualstudio.com/)). Smart contracts are written in a language called Solidity which is what we will use to write our MyNFT.sol smart contract.‌
 
 1. Navigate to the `contracts` folder and create a new file called MyNFT.sol
 
-2. Below is our NFT smart contract code, which based off of the [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc721) library’s ERC-721 implementation. Copy and paste the contents below into your MyNFT.sol file.
+2. Below is our NFT smart contract code, which we based on the [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc721) library’s ERC-721 implementation. Copy and paste the contents below into your MyNFT.sol file.
 
    ```solidity
    //Contract based on [https://docs.openzeppelin.com/contracts/3.x/erc721](https://docs.openzeppelin.com/contracts/3.x/erc721)
@@ -193,7 +193,7 @@ At the top of our smart contract, we import three [OpenZeppelin](https://openzep
 
 - @openzeppelin/contracts/token/ERC721/ERC721.sol contains the implementation of the ERC-721 standard, which our NFT smart contract will inherit. (To be a valid NFT, your smart contract must implement all the methods of the ERC-721 standard.) To learn more about the inherited ERC-721 functions, check out the interface definition [here](https://eips.ethereum.org/EIPS/eip-721).
 
-- @openzeppelin/contracts/utils/Counters.sol provides counters that can only be incremented or decremented by one. Our smart contract uses a counter to keep track of the total number of NFTs minted and set the unique ID our new NFT. (Each NFT minted using a smart contract must be assigned a unique ID—here our unique ID is just determined by the total number of NFTs in existance. For example, the first NFT we mint with our smart contract has an ID of "1," our second NFT has an ID of "2," etc.)
+- @openzeppelin/contracts/utils/Counters.sol provides counters that can only be incremented or decremented by one. Our smart contract uses a counter to keep track of the total number of NFTs minted and set the unique ID on our new NFT. (Each NFT minted using a smart contract must be assigned a unique ID—here our unique ID is just determined by the total number of NFTs in existence. For example, the first NFT we mint with our smart contract has an ID of "1," our second NFT has an ID of "2," etc.)
 
 - @openzeppelin/contracts/access/Ownable.sol sets up [access control](https://docs.openzeppelin.com/contracts/3.x/access-control) on our smart contract, so only the owner of the smart contract (you) can mint NFTs. (Note, including access control is entirely a preference. If you'd like anyone to be able to mint an NFT using your smart contract, remove the word Ownable on line 10 and onlyOwner on line 17.)
 
