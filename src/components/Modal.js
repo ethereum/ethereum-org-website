@@ -24,9 +24,18 @@ const ModalContainer = styled.div`
   position: fixed;
   z-index: 1002;
   cursor: pointer;
-  padding: 15% 1rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    align-items: flex-start;
+    padding: 0px;
+    justify-content: flex-start;
+  }
 `
 
 const StyledModal = styled.div`
@@ -34,7 +43,6 @@ const StyledModal = styled.div`
   padding: 1rem;
   height: auto;
   cursor: auto;
-  max-height: 100%;
   max-width: 600px;
   background: ${(props) => props.theme.colors.background};
   display: flex;
@@ -73,7 +81,13 @@ const Overlay = ({ isActive }) => (
 
 const Modal = ({ children, className, isOpen, setIsOpen }) => {
   const ref = useRef()
+  const fixOverflow = (isOpen) => {
+    if (typeof window !== "undefined") {
+      document.documentElement.style.overflow = isOpen ? "hidden" : "unset"
+    }
+  }
 
+  fixOverflow(isOpen)
   // Close modal on outside clicks & `Escape` keypress
   useOnClickOutside(ref, () => setIsOpen(false))
   useKeyPress(`Escape`, () => setIsOpen(false))

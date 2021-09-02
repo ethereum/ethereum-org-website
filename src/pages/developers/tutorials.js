@@ -171,8 +171,6 @@ const ModalBody = styled.div`
   display: flex;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex-direction: column;
-    max-height: 16rem;
-    overflow-y: scroll;
   }
 `
 
@@ -438,12 +436,7 @@ const TutorialsPage = ({ data, pageContext }) => {
                 {tutorial.isExternal && (
                   <>
                     {" "}
-                    •<Emoji
-                      text=":link:"
-                      size={1}
-                      ml={`0.5em`}
-                      mr={`0.5em`}
-                    />
+                    •<Emoji text=":link:" size={1} ml={`0.5em`} mr={`0.5em`} />
                     <Link to={tutorial.to} hideArrow>
                       <Translation id="page-tutorial-external-link" />
                     </Link>
