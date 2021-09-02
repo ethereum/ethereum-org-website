@@ -97,6 +97,11 @@ Thank you for your participation in the ethereum.org Translation Program!
 - [Chinese translators group](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)
   _– Notion page for easier coordination between Chinese translators_
 
+**Versions overview**
+
+- [Translations Versions](/contributing/translation-program/translation-versions/)
+  _– What is included in each language version_
+
 ## Eth2 Launchpad Translations {#eth2-launchpad}
 
 Our translation community is also working on the [Eth2 Launchpad](https://launchpad.ethereum.org/en/). This allows anyone to set up an Ethereum validator and help secure the Ethereum network. The Launchpad is currently live in 15 languages.
