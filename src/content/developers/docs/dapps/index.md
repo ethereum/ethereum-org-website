@@ -69,6 +69,15 @@ Tokens must be generated in order to prove the value nodes that contribute to th
 
 ## Dapp tools {#dapp-tools}
 
+**Create Eth App** **_- Create Ethereum-powered apps with one command._**
+
+- [GitHub](https://github.com/paulrberg/create-eth-app)
+
+**Scaffold-ETH** **_- Quickly experiment with Solidity using a frontend that adapts to your smart contract._**
+
+- [Example dapp](https://punkwallet.io/)
+- [GitHub](https://github.com/austintgriffith/scaffold-eth)
+
 **One Click Dapp** **_- FOSS tool for generating dapp frontends from an [ABI](/glossary/#abi)._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
