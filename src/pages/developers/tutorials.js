@@ -432,18 +432,22 @@ const TutorialsPage = ({ data, pageContext }) => {
               <Author>
                 <Emoji text=":writing_hand:" size={1} mr={`0.5em`} />
                 {tutorial.author} •{published(intl.locale, tutorial.published)}
-                <Emoji text=":stopwatch:" size={1} ml={`0.5em`} mr={`0.5em`} />
-                {tutorial.timeToRead}{" "}
-                <Translation id="page-tutorial-read-time" />
-                {tutorial.isExternal && (
+                {tutorial.timeToRead && (
                   <>
-                    {" "}
-                    •<Emoji
-                      text=":link:"
+                    <Emoji
+                      text=":stopwatch:"
                       size={1}
                       ml={`0.5em`}
                       mr={`0.5em`}
                     />
+                    {tutorial.timeToRead}{" "}
+                    <Translation id="page-tutorial-read-time" />
+                  </>
+                )}
+                {tutorial.isExternal && (
+                  <>
+                    {" "}
+                    •<Emoji text=":link:" size={1} ml={`0.5em`} mr={`0.5em`} />
                     <Link to={tutorial.to} hideArrow>
                       <Translation id="page-tutorial-external-link" />
                     </Link>
