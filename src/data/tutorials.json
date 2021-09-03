@@ -8,7 +8,6 @@
     "tags": ["hardhat", "solidity", "testing", "smart-contracts"],
     "skillLevel": "beginner",
     "lang": "en",
-    "timeToRead": "1",
     "publishDate": "06/22/2021"
   },
   {
@@ -31,7 +30,6 @@
     "authorGithub": "https://github.com/austintgriffith",
     "tags": ["solidity", "smart-contracts", "react"],
     "skillLevel": "beginner",
-    "timeToRead": "1",
     "lang": "en",
     "publishDate": "08/03/2021"
   },
@@ -43,7 +41,6 @@
     "authorGithub": "https://github.com/austintgriffith",
     "tags": ["solidity", "smart-contracts", "react", "testing"],
     "skillLevel": "beginner",
-    "timeToRead": "1",
     "lang": "en",
     "publishDate": "08/15/2021"
   },
@@ -55,7 +52,6 @@
     "authorGithub": "https://github.com/kwsantiago",
     "tags": ["solidity", "oracles"],
     "skillLevel": "beginner",
-    "timeToRead": "1",
     "lang": "en",
     "publishDate": "01/05/2021"
   },
@@ -67,7 +63,6 @@
     "authorGithub": "https://github.com/kwsantiago",
     "tags": ["solidity", "oracles"],
     "skillLevel": "beginner",
-    "timeToRead": "1",
     "lang": "en",
     "publishDate": "01/05/2021"
   }

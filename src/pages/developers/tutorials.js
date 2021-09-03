@@ -430,6 +430,7 @@ const TutorialsPage = ({ data, pageContext }) => {
                 <Pill isSecondary={true}>{tutorial.skill}</Pill>
               </TitleContainer>
               <Author>
+                {/* TODO: Refactor each tutorial tag as a component */}
                 <Emoji text=":writing_hand:" size={1} mr={`0.5em`} />
                 {tutorial.author} •{published(intl.locale, tutorial.published)}
                 {tutorial.timeToRead && (
