@@ -7,11 +7,11 @@ sidebar: true
 
 # Translation Versions {#translation-versions}
 
-Todo
+Below we have provided a breakdown of how each translation version changes [ethereum.org](/) in their localized language.
 
 ## Version 2.0 {#version-20}
 
-Language V2.1 translates high-impact, highly trafficed pages on ethereum.org
+Language V2.0 translates high-impact, highly trafficed pages on ethereum.org and the navigation components.
 
 ### Primary Pages {#primary}
 
@@ -29,9 +29,15 @@ Language V2.1 translates high-impact, highly trafficed pages on ethereum.org
 - [Shard chains](/eth2/shard-chains/)
 - [Developers' Home](/developers/)
 
+### Navigation {#navigation}
+
+- Main navbar
+- Footer navbar
+- Developer docs sidebar
+
 ## Version 2.1 {#version-21}
 
-Language V2.2 translates the majority of the developer docs and several less trafficed but important pages.
+Language V2.1 translates the majority of the developer docs and several less trafficed but important pages.
 
 ### Secondary Pages {#secondary}
 

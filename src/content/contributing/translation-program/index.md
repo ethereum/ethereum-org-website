@@ -99,8 +99,7 @@ Thank you for your participation in the ethereum.org Translation Program!
 
 **Versions overview**
 
-- [Translations Versions](/contributing/translation-program/translation-versions/)
-  _– What is included in each language version_
+- [Translations Versions](/contributing/translation-program/translation-versions/) _– What is included in each language version of ethereum.org_
 
 ## Eth2 Launchpad Translations {#eth2-launchpad}
 
