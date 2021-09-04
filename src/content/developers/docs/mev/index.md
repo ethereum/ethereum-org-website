@@ -1,11 +1,13 @@
 ---
-title: Miner extractable value
-description: An introduction to miner extractable value
+title: Maximal (miner) extractable value (MEV)
+description: An introduction to maximal (miner) extractable value (MEV)
 lang: en
 sidebar: true
 ---
 
-Miner extractable value (MEV) refers to the value that miners can theoretically extract from block mining in excess of the standard block reward and gas fees, by virtue of miners' ability to include, exclude, and change the order of transactions in a block.
+Maximal extractable value (MEV) refers to the maximum value that can be extracted from block production in excess of the standard block reward and gas fees, by including, excluding, and changing the order of transactions in a block.
+
+In a [proof-of-work](/developers/docs/consensus-mechanisms/pow/) context, maximal extractable value may also be called "miner extractable value." This is because in proof-of-work, miners control transaction inclusion, exclusion, and ordering.
 
 ## Prerequisites {#prerequisites}
 
@@ -13,7 +15,7 @@ Make sure you're familiar with [transactions](/developers/docs/transactions/), [
 
 ## MEV extraction {#mev-extraction}
 
-While in theory MEV accrues entirely to miners (because miners are the only party that can guarantee the execution of a profitable MEV opportunity), in practice, MEV is mostly extracted by independent network participants referred to as "searchers." Searchers run complex algorithms on blockchain data to detect profitable MEV opportunities and have bots to automatically submit those profitable transactions to the network.
+While in theory, MEV accrues entirely to miners, because miners are the only party that can guarantee the execution of a profitable MEV opportunity (at least in Eth1 — this will change in Eth2), in practice, a large portion of MEV is extracted by independent network participants referred to as "searchers." Searchers run complex algorithms on blockchain data to detect profitable MEV opportunities and have bots to automatically submit those profitable transactions to the network.
 
 Miners do get a portion of the full MEV amount anyway because searchers are willing to pay high gas fees (which go to the miner) in exchange for higher likelihood of inclusion of their profitable transactions in a block. Assuming searchers are economically rational, the gas fee that a searcher is willing to pay will be an amount up to 100% of the searcher's MEV (because if the gas fee was higher, the searcher would lose money).
 
@@ -31,7 +33,9 @@ Rather than programming complex algorithms to detect profitable MEV opportunitie
 
 ### Flashbots {#mev-extraction-flashbots}
 
-Flashbots is a third-party project, unaffiliated with the Ethereum core team, that runs a service that allows searchers to submit MEV transactions to miners without revealing them to the public mempool. This prevents transactions from being frontrun by generalized frontrunners. As of this writing, a significant portion of MEV transactions is routed through Flashbots, meaning generalized frontrunners aren't as effective as they used to be.
+Flashbots is a independent project which extends the go-ethereum client with a service that allows searchers to submit MEV transactions to miners without revealing them to the public mempool. This prevents transactions from being frontrun by generalized frontrunners.
+
+As of this writing, a significant portion of MEV transactions is routed through Flashbots, meaning generalized frontrunners aren't as effective as they used to be.
 
 ## MEV examples {#mev-examples}
 
@@ -73,11 +77,11 @@ However, since NFT transactions happen on the same blockchain shared by all othe
 
 For example, if there's a hot drop and a searcher really, really wants a certain NFT or set of NFTs, they can program a transaction such that they are the first in line to buy the NFT, or they can buy the entire set of NFTs in a single transaction. Or if an NFT is [mistakenly listed at a super low price](https://www.theblockcrypto.com/post/113546/mistake-sees-69000-cryptopunk-sold-for-less-than-a-cent), a searcher can frontrun other purchasers and snap it up for cheap.
 
-One prominent example of NFT MEV occurred when a searcher spent $7 million to [buy](https://etherscan.io/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5) every single Cryptopunk at the price floor. On Twitter, the searcher [outlined their rationale](https://twitter.com/0x650d/status/1424779795892690946), explaining that they believe Cryptopunks will become extremely valuable in the long term as crypto supersedes traditional tech and finance companies.
+One prominent example of NFT MEV occurred when a searcher spent $7 million to [buy](https://etherscan.io/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5) every single Cryptopunk at the price floor. A blockchain researcher [explained on Twitter](twitter.com/IvanBogatyy/status/1422232184493121538) how the buyer worked with an MEV provider to keep their purchase secret.
 
 ### The long tail {#mev-examples-long-tail}
 
-DEX arbitrage, liquidations, and sandwich trading are all very well-known MEV opportunities and are unlikely to be profitable for new searchers. However, there is a huge long tail of less well-known MEV opportunities (NFT MEV is arguably one such opportunity).
+DEX arbitrage, liquidations, and sandwich trading are all very well-known MEV opportunities and are unlikely to be profitable for new searchers. However, there is a huge long tail of lesser known MEV opportunities (NFT MEV is arguably one such opportunity).
 
 Searchers who are just getting started may be able to find more success by searching for MEV in this longer tail. Flashbot's [MEV job board](https://github.com/flashbots/mev-job-board) has some cool emerging opportunities posted.
 
@@ -105,7 +109,7 @@ This possibility of blockchain re-organization has been [previously explored on 
 
 MEV extraction ballooned in early 2021, resulting in extremely high gas prices in the first few months of the year. The emergence of Flashbots's MEV relay has reduced the effectiveness of generalized frontrunners and has taken gas price auctions off-chain, lowering gas prices for ordinary users.
 
-While many searchers are still making good money from MEV, as opportunities become more well-known and more and more searchers compete for the same opportunity, miners will capture more and more total MEV revenue (because the same sort of gas auctions as originally described above also occur in Flashbots, albeit privately, and miners will capture the resulting gas revenue).
+While many searchers are still making good money from MEV, as opportunities become more well-known and more and more searchers compete for the same opportunity, miners will capture more and more total MEV revenue (because the same sort of gas auctions as originally described above also occur in Flashbots, albeit privately, and miners will capture the resulting gas revenue). MEV is also not unique to Ethereum, and as opportunities become more competitive on Ethereum, searchers are moving to alternate blockchains like Binance Smart Chain, where similar MEV opportunities as those on Ethereum exist with less competition.
 
 As DeFi grows and increases in popularity, MEV may soon significantly outweigh the base Ethereum block reward. With that comes a growing possibility of selfish block remining and consensus instability. Some consider this to be an existential threat to Ethereum, and disincentivizing selfish mining is an active area of research in Ethereum protocol theory.
 

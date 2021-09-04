@@ -497,11 +497,11 @@ const DevelopersPage = ({ data }) => {
               <Translation id="page-developers-token-standards-desc" />
             </p>
 
-            <Link to="/developers/docs/miner-extractable-value/">
-              <Translation id="page-developers-miner-extractable-value-link" />
+            <Link to="/developers/docs/mev/">
+              <Translation id="page-developers-mev-link" />
             </Link>
             <p>
-              <Translation id="page-developers-miner-extractable-value-desc" />
+              <Translation id="page-developers-mev-desc" />
             </p>
 
             <Link to="/developers/docs/oracles/">
