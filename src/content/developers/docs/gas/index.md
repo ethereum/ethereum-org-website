@@ -24,7 +24,7 @@ Gas fees are paid in Ethereum's native currency, ether (ETH). Gas prices are den
 
 ## Prior to the London Upgrade {#pre-london}
 
-The way transaction fees on the Ethereum network are calculated changed during the London network upgrade. Here is a recap of how things used to work:
+The way transaction fees on the Ethereum network were calculated changed with the [the London Upgrade](/history/#london) of August 2021. Here is a recap of how things used to work:
 
 Let's say Alice had to pay Bob 1 ETH.
 In the transaction the gas limit is 21,000 units and the gas price is 200 gwei.
@@ -42,7 +42,7 @@ This video offers a concise overview of gas and why it exists:
 
 ## After the London Upgrade {#post-london}
 
-[The London Upgrade](/history/#london) aims to make transacting on Ethereum more predictable for users by overhauling Ethereum's transaction-fee-mechanism. The high-level benefits introduced by this change include better transaction fee estimation, generally quicker transaction inclusion, and offsetting the ETH issuance by burning a percentage of transaction fees.
+[The London Upgrade](/history/#london) was implemented on August 5th, 2021 to make transacting on Ethereum more predictable for users by overhauling Ethereum's transaction-fee-mechanism. The high-level benefits introduced by this change include better transaction fee estimation, generally quicker transaction inclusion, and offsetting the ETH issuance by burning a percentage of transaction fees.
 
 Starting with the London network upgrade, every block has a base fee, the minimum price per unit of gas for inclusion in this block, calculated by the network based on demand for block space. As the base fee of the transaction fee is burnt, users are also expected to set a tip (priority fee) in their transactions. The tip compensates miners for executing and propagating user transactions in blocks and is expected to be set automatically by most wallets.
 
