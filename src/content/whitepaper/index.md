@@ -212,7 +212,7 @@ general, the target is recalibrated by the network every 2016 blocks so
 that on average a new block is produced by some node in the network
 every ten minutes. In order to compensate miners for this computational
 work, the miner of every block is entitled to include a transaction
-giving themselves 12.5 BTC out of nowhere. Additionally, if any
+giving themselves 6.25 BTC out of nowhere. Additionally, if any
 transaction has a higher total denomination in its inputs than in its
 outputs, the difference also goes to the miner as a "transaction fee".
 Incidentally, this is also the only mechanism by which BTC are issued;
