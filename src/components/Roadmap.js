@@ -57,6 +57,10 @@ const Roadmap = () => {
     implemented: blankIssues,
   })
 
+  // Checks if any of the label objects in the array of labels associated with an issue have the spam label
+  const issueIsSpam = ({ labels }) =>
+    labels.some((label) => label.name === "Status: Spam")
+
   // TODO update to pull PRs & issues separately
   useEffect(() => {
     axios
@@ -98,7 +102,8 @@ const Roadmap = () => {
               (issue) =>
                 issue.state === "closed" &&
                 "allcontributors[bot]" !== issue.user.login &&
-                !!issue.pull_request
+                !!issue.pull_request &&
+                !issueIsSpam(issue)
             )
             .slice(0, 6)
           setIssues({
