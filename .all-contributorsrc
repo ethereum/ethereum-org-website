@@ -4657,6 +4657,15 @@
       "contributions": [
         "design"
       ]
+    },
+    {
+      "login": "stefanrsathianathen",
+      "name": "Stefan Sathianathen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22087626?v=4",
+      "profile": "http://stefanrs.me",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
