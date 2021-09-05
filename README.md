@@ -159,7 +159,7 @@ $ git push
 
 ## Translation Program
 
-_The Translation Program is an initiative to translate ethereum.org into different languages and make the website accessible to people from all over the world._
+_The Translation Program is a project to translate ethereum.org into other languages and make the website accessible to individuals all around the world._
 
 If you are looking to get involved as a translator, you can [join our project in Crowdin](https://crowdin.com/project/ethereum-org/invite/) and start translating the website to your language immediately.
 
@@ -345,7 +345,7 @@ export default ComponentName;
   `
   ```
 
-- [Framer Motion](https://www.framer.com/motion/) - An open source and production-ready motion library for React on the web, used for our animated designs
+- [Framer Motion](https://www.framer.com/motion/) -An open source, production-ready motion library for React on the web, which we utilise for our animated designs
 - **Emojis**: We use [Twemoji](https://twemoji.twitter.com/), an open-source emoji set created by Twitter. These are hosted by us, and used to provide a consistent experience across operating systems.
 
 ```
