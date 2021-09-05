@@ -7,7 +7,7 @@ sidebar: true
 
 # Our design principles {#contributing-to-ethereumorg-}
 
-👋 Hello, and welcome to the **design principles** for ethereum.org. This is part of an ongoing process to evolve and improve ethereum.org.
+<Emoji text=":wave:" size={1} /> Hello, and welcome to the **design principles** for ethereum.org. This is part of an ongoing process to evolve and improve ethereum.org.
 
 Our principles inform the look and feel of the site and the content that's on it.
 
