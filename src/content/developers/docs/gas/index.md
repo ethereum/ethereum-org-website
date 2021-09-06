@@ -24,7 +24,7 @@ Gas fees are paid in Ethereum's native currency, ether (ETH). Gas prices are den
 
 ## Prior to the London Upgrade {#pre-london}
 
-The way transaction fees on the Ethereum network were calculated changed with the [the London Upgrade](/history/#london) of August 2021. Here is a recap of how things used to work:
+The way transaction fees on the Ethereum network were calculated changed with [the London Upgrade](/history/#london) of August 2021. Here is a recap of how things used to work:
 
 Let's say Alice had to pay Bob 1 ETH.
 In the transaction the gas limit is 21,000 units and the gas price is 200 gwei.
