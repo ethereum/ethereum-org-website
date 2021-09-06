@@ -117,6 +117,10 @@ If you are interested you can read the exact
 
 Continue down the rabbit hole with these [EIP-1559 Resources](https://hackmd.io/@timbeiko/1559-resources).
 
+## Calcuating fees {#calculating-fees}
+
+One of the main benefits got through EIP-1559 is improving the user's experience when setting transaction fees. Instead of explicitly stating how much you are willing to pay to get your transaction through, wallet providers will automatically set a recommended transaction fee to reduce the amount of complexity burdened onto their users.
+
 ## Why do gas fees exist? {#why-do-gas-fees-exist}
 
 In short, gas fees help keep the Ethereum network secure. By requiring a fee for every computation executed on the network, we prevent bad actors from spamming the network. In order to prevent accidental or hostile infinite loops or other computational wastage in code, each transaction is required to set a limit to how many computational steps of code execution it can use. The fundamental unit of computation is "gas".
