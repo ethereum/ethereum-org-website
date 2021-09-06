@@ -111,7 +111,7 @@ With the signature hash, the transaction can be cryptographically proven that it
 ## Types of transactions {#types-of-transactions}
 
 On Ethereum there are a few different types of transactions:
- 
+
 - Regular transactions: a transaction from one wallet to another.
 - Contract deployment transactions: a transaction without a 'to' address, where the data field is used for the contract code.
 
@@ -304,6 +304,22 @@ Ethers
 Watch Austin walk you through transactions, gas, and mining.
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/er-0ihqFQB0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Typed Transaction Envelope
+
+Ethereum has different transaction types that specify what a transaction should do. For example, sending Ether to an address, deploying a contract, etc.  
+Ethereum now has a new transaction standard that was defined and created by Micah Zoltu in [EIP-2718](https://eips.ethereum.org/EIPS/eip-2718): Typed Transaction Envelope, which forms the basis for some new and other yet-to-be-developed features on Ethereum.
+
+Previously, Ethereum had one format for transactions. Each transaction consists of a nonce, gas price, gas limit, to address, value, data, v, r, and s. These fields are RLP-encoded, to look something like this:  
+`RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
+
+EIP-2718 defines a new generalised envelope for typed transactions. In the new standard, transactions look like this:  
+`TransactionType || TransactionPayload`
+
+Where the fields are defined as:
+
+- TransactionType: a number between 0 and 0x7f, for a total of 128 possible transaction types.
+- TransactionPayload: an arbitrary byte array, defined by the transaction type.
 
 ## Further reading {#further-reading}
 
