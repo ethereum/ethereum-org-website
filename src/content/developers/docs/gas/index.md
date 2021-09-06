@@ -104,6 +104,10 @@ With the new base fee getting burned, the London Upgrade introduced a priority f
 
 To execute a transaction on the network users are able to specify a maximum limit they are willing to pay for their transaction to be executed. This optional parameter is known as the `maxFeePerGas`. In order for a transaction to be executed the max fee must exceed the sum of the base fee and the tip. The transaction sender is refunded the difference between the max fee and the sum of the base fee and tip.
 
+### Calcuating fees {#calculating-fees}
+
+One of the main benefits achieved with the London upgrade is improving the user's experience when setting transaction fees. For wallets that support the upgrade, instead of explicitly stating how much you are willing to pay to get your transaction through, wallet providers will automatically set a recommended transaction fee to reduce the amount of complexity burdened onto their users.
+
 ## EIP-1559 {#eip-1559}
 
 The implementation of [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) in the London Upgrade made the transaction fee mechanism more complex than the previous gas price auction, but it has the advantage of making gas fees more predictable, resulting in a more efficient transaction fee market. Users can submit transactions with a `maxFeePerGas` corresponding to how much they are willing to pay for the transaction to be executing, knowing that they will not pay more than the market price for gas (`baseFeePerGas`), and get any extra, minus their tip, refunded.
@@ -116,10 +120,6 @@ If you are interested you can read the exact
 [EIP-1559 specifications](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md).
 
 Continue down the rabbit hole with these [EIP-1559 Resources](https://hackmd.io/@timbeiko/1559-resources).
-
-## Calcuating fees {#calculating-fees}
-
-One of the main benefits got through EIP-1559 is improving the user's experience when setting transaction fees. Instead of explicitly stating how much you are willing to pay to get your transaction through, wallet providers will automatically set a recommended transaction fee to reduce the amount of complexity burdened onto their users.
 
 ## Why do gas fees exist? {#why-do-gas-fees-exist}
 
