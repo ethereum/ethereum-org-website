@@ -17,7 +17,7 @@ The Cambridge dictionary defines governance as:
 
 > _the way that organizations or countries are managed at the highest level, and the systems for doing this_
 
-In essence, governance is the system in place that allows decisions to be made. In a typical organizational structure, the executive team or a directors' board may have the final say in decision-making. In a political system, elected officials may enact legislation that attempts to represent their constituent's desires.
+In essence, governance is the system in place that allows decisions to be made. In a typical organizational structure, the executive team or a directors' board may have the final say in decision-making. In a political system, elected officials may enact legislation that attempts to represent their constituents' desires.
 
 <Divider />
 
@@ -141,7 +141,7 @@ Watch more on the DAO hack:
 
 <Divider />
 
-### The utility of forking {#forking-utility}
+### The utility of forking {#forking-utility}
 
 The Ethereum/Ethereum Classic fork is an excellent example of a healthy fork. We had two groups who disagreed strongly enough with each other on some core values to feel it was worth the risks involved to pursue their specific courses of action.
 
