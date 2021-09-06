@@ -333,7 +333,7 @@ const DevelopersPage = ({ data }) => {
               <Translation id="page-developers-intro-ether-link" />
             </Link>
             <p>
-              <Translation id="page-developers-into-ether-desc" />
+              <Translation id="page-developers-intro-ether-desc" />
             </p>
 
             <Link to="/developers/docs/dapps/">
