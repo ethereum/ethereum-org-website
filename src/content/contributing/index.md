@@ -43,7 +43,7 @@ _Any questions?_ 🤔 Reach out on our [Discord server](https://discord.gg/CetY6
 
 Whether you're adding to the site, creating content or working on open issues, you'll need a [GitHub](https://github.com) account.
 
-All updates are made via the GitHub PR process. This means you create a local copy of the website, make your changes and request to merge in your changes.
+All changes are done using the GitHub PR procedure. This means you build a local copy of the website, make your modifications, and then request that your changes be merged in.
 
 If you've not done this before, follow the instructions at the bottom of our [GitHub repository](https://github.com/ethereum/ethereum-org-website).
 
