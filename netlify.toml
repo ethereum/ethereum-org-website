@@ -226,6 +226,23 @@
   to = "/en/developers/docs/programming-languages/dart/"
   force = true
 
+# Use-cases
+[[redirects]]
+  from = "/nft/"
+  to = "/en/nft/"
+[[redirects]]
+  from = "/nfts/"
+  to = "/en/nft/"
+[[redirects]]
+  from = "/dao/"
+  to = "/en/dao/"
+[[redirects]]
+  from = "/daos/"
+  to = "/en/dao/"
+[[redirects]]
+  from = "/defi/"
+  to = "/en/defi/"
+
 # Norwegian update
 ## All translations
 [[redirects]]
