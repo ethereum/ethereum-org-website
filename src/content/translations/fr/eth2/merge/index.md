@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~2021/22">
+<UpgradeStatus date="~Q1/Q2 2022">
     Cette mise à niveau suivra l'arrivée des chaînes de fragments. Mais c’est le moment où la <a href="/eth2/vision/">vision Eth2</a> devient réalité : plus d’évolutivité, de sécurité et de durabilité avec la mise en jeu, qui soutient l’ensemble du réseau.
 </UpgradeStatus>
 

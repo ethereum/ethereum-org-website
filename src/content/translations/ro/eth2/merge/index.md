@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~2021/22">
+<UpgradeStatus date="~Q1/Q2 2022">
     Acest upgrade va urma după sosirea lanțurilor de fragmente. Dar este momentul în care <a href="/eth2/vision/">viziunea Eth2</a> devine pe deplin realizată – mai multă scalabilitate, securitate și durabilitate, cu mizarea care susține întreaga rețea.
 </UpgradeStatus>
 
