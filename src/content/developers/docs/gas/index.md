@@ -155,6 +155,8 @@ If you are looking to reduce gas costs for your ETH you are able to set a tip to
 If you want to monitor gas prices so you are able to send your ETH for less you can use many different tools such as:
 
 - [Etherscan](https://etherscan.io/gastracker) _Transaction gas price estimator_
+- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Gas estimating Chrome extension supporting both Type 0 legacy transactions and Type 2 EIP-1559 transactions._ 
+
 - [ETH Gas Station](https://ethgasstation.info/) _Consumer oriented metrics for the Ethereum gas market_
 
 ## Related Tools {#related-tools}
