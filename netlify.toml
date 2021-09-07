@@ -79,9 +79,6 @@
   from = "/crowdsale"
   to = "/en/developers/"
 [[redirects]]
-  from = "/dao"
-  to = "/en/developers/"
-[[redirects]]
   from = "/cli"
   to = "/en/developers/"
 [[redirects]]
