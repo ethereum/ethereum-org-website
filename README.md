@@ -15,7 +15,7 @@ This is the repo for the [ethereum.org](https://ethereum.org) website, a resourc
 
 ## Looking for the Ethereum blockchain's code?
 
-If you're looking for the Ethereum blockchain itself, there is no single repo. Instead, Ethereum has multiple implementations of the protocol written in different programming languages for security and diversity. [Check out the different implementations](https://ethereum.org/en/developers/docs/nodes-and-clients/#clients)
+If you're looking for the Ethereum blockchain itself, there is no single repo. Instead, Ethereum has multiple implementations of the protocol written in different programming languages for security and diversity. [Check out the different implementations].(https://ethereum.org/en/developers/docs/nodes-and-clients/#clients)
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">
 
