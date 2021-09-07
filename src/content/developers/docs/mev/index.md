@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-Maximal (formerly "miner") extractable value (MEV) refers to the maximum value that can be extracted from block production in excess of the standard block reward and gas fees, by including, excluding, and changing the order of transactions in a block.
+Maximal (formerly "miner") extractable value (MEV) refers to the maximum value that can be extracted from block production in excess of the standard block reward and gas fees by including, excluding, and changing the order of transactions in a block.
 
 In a [proof-of-work](/developers/docs/consensus-mechanisms/pow/) context, maximal extractable value is also called "miner extractable value." This is because in proof-of-work, miners control transaction inclusion, exclusion, and ordering.
 
@@ -15,7 +15,7 @@ Make sure you're familiar with [transactions](/developers/docs/transactions/), [
 
 ## MEV extraction {#mev-extraction}
 
-While in theory, MEV accrues entirely to miners, because miners are the only party that can guarantee the execution of a profitable MEV opportunity (at least in Eth1 — this will change in Eth2), in practice, a large portion of MEV is extracted by independent network participants referred to as "searchers." Searchers run complex algorithms on blockchain data to detect profitable MEV opportunities and have bots to automatically submit those profitable transactions to the network.
+In theory MEV accrues entirely to miners because miners are the only party that can guarantee the execution of a profitable MEV opportunity (at least in Eth1 — this will change in Eth2). In practice, however, a large portion of MEV is extracted by independent network participants referred to as "searchers." Searchers run complex algorithms on blockchain data to detect profitable MEV opportunities and have bots to automatically submit those profitable transactions to the network.
 
 Miners do get a portion of the full MEV amount anyway because searchers are willing to pay high gas fees (which go to the miner) in exchange for higher likelihood of inclusion of their profitable transactions in a block. Assuming searchers are economically rational, the gas fee that a searcher is willing to pay will be an amount up to 100% of the searcher's MEV (because if the gas fee was higher, the searcher would lose money).
 
@@ -53,7 +53,7 @@ It works like this: if two DEXes are offering a token at two different prices, s
 
 Lending protocol liquidations present another well-known MEV opportunity.
 
-Lending protocols like Maker and Aave function by requiring users to deposit some sort of collateral (for example, plain ETH). Users can then borrow different assets and tokens from others depending on what they need (for example, they may borrow MKR if they want to vote on a MakerDAO governance proposal or SUSHI if they want to earn a portion of trading fees on Sushiswap) up to a certain amount of their deposited collateral — for instance, 30% (the exact borrowing power percentage is determined by the protocol). The users they borrow the other tokens from function as lenders in this case.
+Lending protocols like Maker and Aave function by requiring users to deposit some sort of collateral (e.g. ETH). Users can then borrow different assets and tokens from others depending on what they need (for example, they may borrow MKR if they want to vote on a MakerDAO governance proposal or SUSHI if they want to earn a portion of trading fees on Sushiswap) up to a certain amount of their deposited collateral — for instance, 30% (the exact borrowing power percentage is determined by the protocol). The users they borrow the other tokens from function as lenders in this case.
 
 As the value of a borrower's collateral fluctuates, so too does their borrowing power. If, due to market fluctuations, the value of borrowed assets exceeds say, 30% of the value of their collateral (again, the exact percentage is determined by the protocol), the protocol typically allows anyone to liquidate the collateral, instantly paying off the lenders (this is similar to how [margin calls](https://www.investopedia.com/terms/m/margincall.asp) work in traditional finance). If liquidated, the borrower usually has to pay a hefty liquidation fee, some of which goes to the liquidator — which is where the MEV opportunity comes in.
 
@@ -63,7 +63,7 @@ Searchers compete to parse blockchain data as fast as possible to determine whic
 
 Sandwich trading is another common method of MEV extraction.
 
-To sandwich, a searcher will watch the mempool for large DEX trades. For instance, suppose someone wants to buy 10,000 UNI (or some other large amount of UNI) with DAI on Uniswap. A trade of this magnitude will have a meaningful impact the UNI/DAI pair, potentially significantly raising the price of UNI relative to DAI.
+To sandwich, a searcher will watch the mempool for large DEX trades. For instance, suppose someone wants to buy 10,000 UNI with DAI on Uniswap. A trade of this magnitude will have a meaningful impact the UNI/DAI pair, potentially significantly raising the price of UNI relative to DAI.
 
 A searcher can calculate the approximate price impact of this large trade on the UNI/DAI pair and execute an optimal buy order immediately _before_ the large trade, buying UNI cheaply, then execute a sell order immediately _after_ the large trade, selling it for the higher price caused by the large order.
 
@@ -75,15 +75,15 @@ MEV in the NFT space is an emergent phenomenon, and isn't necessarily profitable
 
 However, since NFT transactions happen on the same blockchain shared by all other Ethereum transactions, searchers can use similar techniques as those used in traditional MEV opportunities in the NFT market too.
 
-For example, if there's a hot drop and a searcher really, really wants a certain NFT or set of NFTs, they can program a transaction such that they are the first in line to buy the NFT, or they can buy the entire set of NFTs in a single transaction. Or if an NFT is [mistakenly listed at a super low price](https://www.theblockcrypto.com/post/113546/mistake-sees-69000-cryptopunk-sold-for-less-than-a-cent), a searcher can frontrun other purchasers and snap it up for cheap.
+For example, if there's a popular NFT drop and a searcher wants a certain NFT or set of NFTs, they can program a transaction such that they are the first in line to buy the NFT, or they can buy the entire set of NFTs in a single transaction. Or if an NFT is [mistakenly listed at a low price](https://www.theblockcrypto.com/post/113546/mistake-sees-69000-cryptopunk-sold-for-less-than-a-cent), a searcher can frontrun other purchasers and snap it up for cheap.
 
 One prominent example of NFT MEV occurred when a searcher spent $7 million to [buy](https://etherscan.io/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5) every single Cryptopunk at the price floor. A blockchain researcher [explained on Twitter](twitter.com/IvanBogatyy/status/1422232184493121538) how the buyer worked with an MEV provider to keep their purchase secret.
 
 ### The long tail {#mev-examples-long-tail}
 
-DEX arbitrage, liquidations, and sandwich trading are all very well-known MEV opportunities and are unlikely to be profitable for new searchers. However, there is a huge long tail of lesser known MEV opportunities (NFT MEV is arguably one such opportunity).
+DEX arbitrage, liquidations, and sandwich trading are all very well-known MEV opportunities and are unlikely to be profitable for new searchers. However, there is a long tail of lesser known MEV opportunities (NFT MEV is arguably one such opportunity).
 
-Searchers who are just getting started may be able to find more success by searching for MEV in this longer tail. Flashbot's [MEV job board](https://github.com/flashbots/mev-job-board) has some cool emerging opportunities posted.
+Searchers who are just getting started may be able to find more success by searching for MEV in this longer tail. Flashbot's [MEV job board](https://github.com/flashbots/mev-job-board) lists some emerging opportunities.
 
 ## Effects of MEV {#effects-of-mev}
 
@@ -103,7 +103,7 @@ At the network layer, generalized frontrunners and the gas-price auctions they o
 
 Beyond what's happening _within_ blocks, MEV can have deleterious effects _between_ blocks. If the MEV available in a block significantly exceeds the standard block reward, miners may be incentivized to remine blocks and capture the MEV for themselves, causing blockchain re-organization and consensus instability.
 
-This possibility of blockchain re-organization has been [previously explored on the bitcoin blockchain](https://dl.acm.org/doi/10.1145/2976749.2978408). As bitcoin's block reward halves and transaction fees make up a greater and greater portion of the block reward, situations arise where it becomes economically rational for miners to give up the next block's reward and instead remine past blocks with higher fees. With the growth of MEV, the same sort of situation could occur in Ethereum, threatening the integrity of the blockchain.
+This possibility of blockchain re-organization has been [previously explored on the Bitcoin blockchain](https://dl.acm.org/doi/10.1145/2976749.2978408). As Bitcoin's block reward halves and transaction fees make up a greater and greater portion of the block reward, situations arise where it becomes economically rational for miners to give up the next block's reward and instead remine past blocks with higher fees. With the growth of MEV, the same sort of situation could occur in Ethereum, threatening the integrity of the blockchain.
 
 ## State of MEV {#state-of-mev}
 
@@ -116,7 +116,7 @@ As DeFi grows and increases in popularity, MEV may soon significantly outweigh t
 ## Related resources {#related-resources}
 
 - [Flashbots GitHub](https://github.com/flashbots/pm)
-- [MEV-Explore](https://explore.flashbots.net/)
+- [MEV-Explore](https://explore.flashbots.net/) _Dashboard and live transaction explorer for MEV transactions_
 
 ## Further reading {#further-reading}
 
