@@ -290,10 +290,10 @@ Navigate to the `scripts/` folder and create a new file called `deploy.js`, addi
 
 ```js
 async function main() {
-  const MyNFT = await ethers.getContractFactory("MyNFT")
+  let MyNFT = await ethers.getContractFactory("MyNFT")
 
   // Start deployment, returning a promise that resolves to a contract object
-  const myNFT = await MyNFT.deploy()
+  myNFT = await MyNFT.deploy()
   console.log("Contract deployed to address:", myNFT.address)
 }
 
