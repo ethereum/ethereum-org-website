@@ -14,7 +14,7 @@ We'll consider [our article policy](https://ethereum.org/en/contributing/adding-
 
 **Tutorial description**
 
-<!-- Summarise what the user should be able to accomplish by following tutorial -->
+<!-- Summarize what the user should be able to accomplish by following tutorial -->
 
 **Tag your tutorial**
 
