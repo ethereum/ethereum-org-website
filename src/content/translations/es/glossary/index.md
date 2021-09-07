@@ -384,7 +384,7 @@ Un tipo especial de [contrato](#smart-contract) sin funciones pagaderas, sin fun
 
 ### cliente ligero {#lightweight-client}
 
-Un cliente de Ethreum que no almacena una copia local de la [blockchain](#blockchain), o bien valida bloques y [transacciones](#transaction). Ofrece las funciones de una [cartera](#wallet) y puede crear y transmitir transacciones.
+Un cliente de Ethereum que no almacena una copia local de la [blockchain](#blockchain), o bien valida bloques y [transacciones](#transaction). Ofrece las funciones de una [cartera](#wallet) y puede crear y transmitir transacciones.
 
 <Divider />
 
