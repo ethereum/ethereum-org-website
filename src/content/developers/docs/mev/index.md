@@ -1,13 +1,13 @@
 ---
-title: Maximal (miner) extractable value (MEV)
-description: An introduction to maximal (miner) extractable value (MEV)
+title: Miner extractable value (MEV)
+description: An introduction to miner extractable value (MEV)
 lang: en
 sidebar: true
 ---
 
-Maximal extractable value (MEV) refers to the maximum value that can be extracted from block production in excess of the standard block reward and gas fees, by including, excluding, and changing the order of transactions in a block.
+Maximal (formerly "miner") extractable value (MEV) refers to the maximum value that can be extracted from block production in excess of the standard block reward and gas fees, by including, excluding, and changing the order of transactions in a block.
 
-In a [proof-of-work](/developers/docs/consensus-mechanisms/pow/) context, maximal extractable value may also be called "miner extractable value." This is because in proof-of-work, miners control transaction inclusion, exclusion, and ordering.
+In a [proof-of-work](/developers/docs/consensus-mechanisms/pow/) context, maximal extractable value is also called "miner extractable value." This is because in proof-of-work, miners control transaction inclusion, exclusion, and ordering.
 
 ## Prerequisites {#prerequisites}
 
@@ -111,7 +111,7 @@ MEV extraction ballooned in early 2021, resulting in extremely high gas prices i
 
 While many searchers are still making good money from MEV, as opportunities become more well-known and more and more searchers compete for the same opportunity, miners will capture more and more total MEV revenue (because the same sort of gas auctions as originally described above also occur in Flashbots, albeit privately, and miners will capture the resulting gas revenue). MEV is also not unique to Ethereum, and as opportunities become more competitive on Ethereum, searchers are moving to alternate blockchains like Binance Smart Chain, where similar MEV opportunities as those on Ethereum exist with less competition.
 
-As DeFi grows and increases in popularity, MEV may soon significantly outweigh the base Ethereum block reward. With that comes a growing possibility of selfish block remining and consensus instability. Some consider this to be an existential threat to Ethereum, and disincentivizing selfish mining is an active area of research in Ethereum protocol theory.
+As DeFi grows and increases in popularity, MEV may soon significantly outweigh the base Ethereum block reward. With that comes a growing possibility of selfish block remining and consensus instability. Some consider this to be an existential threat to Ethereum, and disincentivizing selfish mining is an active area of research in Ethereum protocol theory. One solution currently being explored is [MEV reward smoothing](https://ethresear.ch/t/committee-driven-mev-smoothing/10408).
 
 ## Related resources {#related-resources}
 
