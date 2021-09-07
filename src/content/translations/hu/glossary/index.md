@@ -10,7 +10,7 @@ sidebarDepth: 2
 
 <Divider />
 
-## {#section-numbers}
+## # {#section-numbers}
 
 ### 51% attack (51%-os támadás) {#51-attack}
 

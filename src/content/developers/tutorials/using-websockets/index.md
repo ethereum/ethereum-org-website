@@ -16,6 +16,7 @@ tags:
 skill: beginner
 source: Alchemy docs
 sourceUrl: https://docs.alchemyapi.io/guides/using-websockets
+published: 2020-12-01
 ---
 
 This is an entry level guide to using WebSockets and Alchemy to make requests to the Ethereum blockchain.
@@ -244,11 +245,10 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ```json
 {
-  "jsonrpc":"2.0",
-  "id":1,
-  "result":true
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": true
 }
-
 ```
 
 ---
