@@ -106,7 +106,7 @@ To execute a transaction on the network users are able to specify a maximum limi
 
 ### Calcuating fees {#calculating-fees}
 
-One of the main benefits achieved with the London upgrade is improving the user's experience when setting transaction fees. For wallets that support the upgrade, instead of explicitly stating how much you are willing to pay to get your transaction through, wallet providers will automatically set a recommended transaction fee to reduce the amount of complexity burdened onto their users.
+One of the main benefits achieved with the London upgrade is improving the user's experience when setting transaction fees. For wallets that support the upgrade, instead of explicitly stating how much you are willing to pay to get your transaction through, wallet providers will automatically set a recommended transaction fee (base fee + recommended priority fee) to reduce the amount of complexity burdened onto their users.
 
 ## EIP-1559 {#eip-1559}
 
