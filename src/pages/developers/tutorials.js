@@ -202,7 +202,7 @@ const published = (locale, published) => {
   return localeTimestamp !== INVALID_DATETIME ? (
     <span>
       <Emoji text=":calendar:" size={1} ml={`0.5em`} mr={`0.5em`} />{" "}
-      {localeTimestamp} •
+      {localeTimestamp}
     </span>
   ) : null
 }
@@ -435,6 +435,8 @@ const TutorialsPage = ({ data, pageContext }) => {
                 {tutorial.author} •{published(intl.locale, tutorial.published)}
                 {tutorial.timeToRead && (
                   <>
+                    {" "}
+                    •
                     <Emoji
                       text=":stopwatch:"
                       size={1}
