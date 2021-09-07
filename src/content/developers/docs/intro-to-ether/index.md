@@ -1,6 +1,6 @@
 ---
 title: Intro to ether
-description: A dapp developer's introduction to the ether cryptocurrency.
+description: A developer's introduction to the ether cryptocurrency.
 lang: en
 sidebar: true
 ---
