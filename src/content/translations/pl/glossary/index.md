@@ -654,7 +654,7 @@ Nazwa ta pochodzi od brytyjskiego matematyka i informatyka Alana Turinga. System
 
 [Węzeł](#node) w systemie [proof-of-stake](#proof-of-stake) odpowiedzialny za przechowywanie danych, przetwarzanie transakcji i dodawanie nowych bloków do blockchainu. Aby aktywować oprogramowanie walidatora, musisz mieć możliwość [stakingu](#staking) 32 ETH.
 
-<DocLink to="/developers/docs/consenus-mechanisms/pos" title="Proof of Stake" /> <DocLink to="/eth2/staking/" title="Stakowanie w Ethereum" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos" title="Proof of Stake" /> <DocLink to="/eth2/staking/" title="Stakowanie w Ethereum" />
 
 ### Dowód ważności {#validity-proof}
 

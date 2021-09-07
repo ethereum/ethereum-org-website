@@ -657,7 +657,7 @@ A concept named after English mathematician and computer scientist Alan Turing- 
 
 A [node](#node) in a [proof-of-stake](#proof-of-stake) system responsible for storing data, processing transactions, and adding new blocks to the blockchain. To active validator software, you need to be able to [stake](#staking) 32 ETH.
 
-<DocLink to="/developers/docs/consenus-mechanisms/pos" title="Proof of stake" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos" title="Proof of stake" />
 <DocLink to="/eth2/staking/" title="Staking in Ethereum" />
 
 ### Validity proof {#validity-proof}
