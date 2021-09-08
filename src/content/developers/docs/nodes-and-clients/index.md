@@ -109,13 +109,13 @@ The Ethereum community maintains multiple open-source clients, developed by diff
 
 This table summarizes the different clients. All of them are actively worked on and pass [client tests](https://github.com/ethereum/tests).
 
-| Client                                                       | Language | Operating systems     | Networks                                   | Sync strategies         | State pruning   |
-| ------------------------------------------------------------ | -------- | --------------------- | ------------------------------------------ | ----------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)                           | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Fast, Full              | Archive, Pruned |
-| [OpenEthereum](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, macOS | Mainnet, Kovan, Ropsten, and more          | Warp, Full              | Archive, Pruned |
-| [Nethermind](http://nethermind.io/)                          | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, and more | Fast, Full              | Archive, Pruned |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, and Görli       | Fast, Full              | Archive, Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon)                           | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Fast, Full              | Archive, Pruned |
+| Client                                                       | Language | Operating systems     | Networks                                   | Sync strategies | State pruning   |
+| ------------------------------------------------------------ | -------- | --------------------- | ------------------------------------------ | --------------- | --------------- |
+| [Geth](https://geth.ethereum.org/)                           | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Fast, Full      | Archive, Pruned |
+| [OpenEthereum](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, macOS | Mainnet, Kovan, Ropsten, and more          | Warp, Full      | Archive, Pruned |
+| [Nethermind](http://nethermind.io/)                          | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, and more | Fast, Full      | Archive, Pruned |
+| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, and Görli       | Fast, Full      | Archive, Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon)              | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Fast, Full      | Archive, Pruned |
 
 For more on supported networks, read up on [Ethereum networks](/developers/docs/networks/).
 
@@ -150,10 +150,6 @@ Nethermind also has [detailed documentation](https://docs.nethermind.io), strong
 #### Besu {#besu}
 
 Hyperledger Besu is an enterprise-grade Ethereum client for public and permissioned networks. It runs all of the Ethereum Mainnet features, from tracing to GraphQL, has extensive monitoring and is supported by ConsenSys, both in open community channels and through commercial SLAs for enterprises. It is written in Java and is Apache 2.0 licensed.
-
-#### Erigon {#erigon}
-
-Erigon is a completely re-architected implementation of Ethereum, currently written in Go but with implementations in other languages planned. Erigon's goal is to provide a faster, more modular, and more optimized implementation of Ethereum. It can perform a full archive node sync using less than 2TB of disk space, in under 3 days.
 
 #### Erigon {#erigon}
 

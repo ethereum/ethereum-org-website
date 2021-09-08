@@ -54,5 +54,13 @@
     "description": "A hackathon organized by the biggest Fintech hub in Portugal",
     "startDate": "2021-10-22",
     "endDate": "2021-10-24"
+  },
+  {
+    "title": "LisCon",
+    "to": "https://liscon.org/",
+    "sponsor": null,
+    "description": "Ethereum Conference in Lisbon, Portugal",
+    "startDate": "2021-10-20",
+    "endDate": "2021-10-21"
   }
 ]

@@ -157,6 +157,15 @@ const LearningToolsPage = ({ data }) => {
       background: "#F6F7F9",
       subjects: ["Solidity", "web3"],
     },
+    {
+      name: "Lambda School",
+      description: "page-learning-tools-lambdaschool-description",
+      url: "https://lambdaschool.com/learn-blockchain-development",
+      image: data.lambdaschool.childImageSharp.fixed,
+      alt: "page-learning-tools-lambdaschool-logo-alt",
+      background: "#111F29",
+      subjects: ["Solidity", "web3"],
+    },
   ]
 
   return (
@@ -292,6 +301,9 @@ export const query = graphql`
       ...learningToolImage
     }
     consensys: file(relativePath: { eq: "dev-tools/consensys.png" }) {
+      ...learningToolImage
+    }
+    lambdaschool: file(relativePath: { eq: "dev-tools/lambdaschool.png" }) {
       ...learningToolImage
     }
     cryptoZombie: file(relativePath: { eq: "dev-tools/crypto-zombie.png" }) {

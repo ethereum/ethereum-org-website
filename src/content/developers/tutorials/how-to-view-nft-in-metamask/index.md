@@ -6,8 +6,8 @@ tags:
   ["NFTs", "ERC-721", "Alchemy", "MetaMask", "non fungible tokens", "Solidity"]
 skill: beginner
 lang: en
-sidebar: false
-published: 2021-4-22
+sidebar: true
+published: 2021-04-22
 ---
 
 This tutorial is Part 3/3 in the NFT Tutorial series, where we view our newly minted NFT. However, you can use the general tutorial for any ERC-721 token using MetaMask, including on Mainnet or any testnet. If you’d like to learn how to mint your own NFT on Ethereum, you should check out [Part 1 on How to Write & Deploy an NFT smart contract](/developers/tutorials/how-to-write-and-deploy-an-nft)!

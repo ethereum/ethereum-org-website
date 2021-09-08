@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~2021/22">
+<UpgradeStatus date="~Q1/Q2 2022">
     Dieses Upgrade erfolgt im Anschluss an die Implementierung von Shard Chains. Es stellt den Moment dar, in dem die <a href="/eth2/vision/">Eth2-Vision</a> Realität wird – ein durch Staking außerordentlich skalierbares, sicheres und nachhaltiges Netzwerk.
 </UpgradeStatus>
 
