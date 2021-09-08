@@ -451,8 +451,6 @@ A software client that participates in the network.
 
 <DocLink to="/developers/docs/nodes-and-clients/" title="Nodes and Clients" />
 
-<DocLink to="/developers/docs/nodes-and-clients/" title="Nodes and Clients" />
-
 ### nonce {#nonce}
 
 In cryptography, a value that can only be used once. There are two types of nonce used in Ethereum- an account nonce is a transaction counter in each account, which is used to prevent replay attacks; a [proof-of-work](#pow) nonce is the random value in a block that was used to satisfy the [proof-of-work](#pow).
