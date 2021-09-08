@@ -59,7 +59,10 @@ const Roadmap = () => {
 
   // Checks if any of the label objects in the array of labels associated with an issue have the spam label
   const issueIsSpam = ({ labels }) =>
-    labels.some((label) => label.name === "Status: Spam")
+    labels.some((label) => label.name === "Type: Spam")
+
+  const issueIsAbandoned = ({ labels }) =>
+    labels.some((label) => label.name === "Status: Abandoned")
 
   // TODO update to pull PRs & issues separately
   useEffect(() => {
@@ -103,7 +106,8 @@ const Roadmap = () => {
                 issue.state === "closed" &&
                 "allcontributors[bot]" !== issue.user.login &&
                 !!issue.pull_request &&
-                !issueIsSpam(issue)
+                !issueIsSpam(issue) &&
+                !issueIsAbandoned(issue)
             )
             .slice(0, 6)
           setIssues({
