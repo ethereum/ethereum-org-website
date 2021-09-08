@@ -7,15 +7,15 @@ sidebar: true
 
 # Ethereum.org Style Guide {#style-guide}
 
-Content on [Etheruem.org](/) is crowdsourced and primarily written by our incredible contributors. This style guide aims to standardize certain aspects of contributing content to make the contribution process smoother.
+Content on [etheruem.org](/) is crowdsourced and primarily written by our incredible contributors. This style guide aims to standardize certain aspects of contributing content to make the contribution process smoother.
 
-## Who can submit content to Ethereum.org {#who-can-help}
+## Who can submit content to ethereum.org {#who-can-help}
 
 Anyone! Ethereum.org is entirely open source, and many of its best pages are submitted by curious learners who expanded their notes into documentation pages now living on the site!
 
 ## Audience {#audience}
 
-[Ethereum.org](http://ethereum.org) content caters to a large and varied audience. Loosely we can categorize them as:
+Ethereum.org content caters to a large and varied audience. Loosely we can categorize them as:
 
 #### Individuals
 
@@ -73,7 +73,7 @@ When introducing an unfamiliar acronym, spell out the full term, and put the acr
 
 ### Consistency {#consistency}
 
-Many of the topics covered on [Ethereum.org](http://ethereum.org) are technically complex. To reduce confusion to the reader, terms should be used consistently. For example, don't cycle back-and-forth between proof-of-work and PoW at random.
+Many of the topics covered on ethereum.org are technically complex. To reduce confusion to the reader, terms should be used consistently. For example, don't cycle back-and-forth between proof-of-work and PoW at random.
 
 ### Ethereum {#ethereum}
 
@@ -197,4 +197,4 @@ The London Upgrade is live ❤️
 
 ## Anything else? {#anything-else}
 
-Like everything on Ethereum.org, the style guide is an open-source work-in-progress with room for improvement. If there is anything you think should be added to improve this document please [edit it on GitHub](https://github.com/ethereum/ethereum-org-website/blob/dev/src/content/contributing/style-guide/index.md).
+Like everything on ethereum.org, the style guide is an open-source work-in-progress with room for improvement. If there is anything you think should be added to improve this document please [edit it on GitHub](https://github.com/ethereum/ethereum-org-website/blob/dev/src/content/contributing/style-guide/index.md).
