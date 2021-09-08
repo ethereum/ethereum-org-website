@@ -35,7 +35,10 @@ If you want to get involved and help us grow the global Ethereum community by tr
    ![Translated and untranslated files on Crowdin](./crowdin-files.png)
 
    A note on content versions: we use version management within Crowdin to avoid translation delays for added content. When you check out a language, for example, [Filipino](https://crowdin.com/project/ethereum-org/fil#) you'll see folders for each site version ("v2.0", "v2.1", etc.).
+
    We encourage you to translate the lowest version first and work your way up to higher versions (v.2.0 → v.2.1 → v.2.2 → ⋯) as lower versions will be updated on the site first.
+
+   [Learn more about ethereum.org content versions](/en/contributing/translation-program/content-versions/)
 
 3. **Translate**  
    After selecting the file you want to translate, it will open in the online editor. If you have never used Crowdin before, you can use this quick guide to go over the basics.
@@ -99,7 +102,7 @@ Thank you for your participation in the ethereum.org Translation Program!
 
 **Versions overview**
 
-- [Translations Versions](/contributing/translation-program/translation-versions/) _– What is included in each language version of ethereum.org_
+- [Content versions](/contributing/translation-program/content-versions/) _– Which pages are included in each content version of ethereum.org_
 
 ## Eth2 Launchpad Translations {#eth2-launchpad}
 
