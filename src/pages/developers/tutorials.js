@@ -202,7 +202,7 @@ const published = (locale, published) => {
   return localeTimestamp !== INVALID_DATETIME ? (
     <span>
       <Emoji text=":calendar:" size={1} ml={`0.5em`} mr={`0.5em`} />{" "}
-      {localeTimestamp} •
+      {localeTimestamp}
     </span>
   ) : null
 }
@@ -430,20 +430,27 @@ const TutorialsPage = ({ data, pageContext }) => {
                 <Pill isSecondary={true}>{tutorial.skill}</Pill>
               </TitleContainer>
               <Author>
+                {/* TODO: Refactor each tutorial tag as a component */}
                 <Emoji text=":writing_hand:" size={1} mr={`0.5em`} />
                 {tutorial.author} •{published(intl.locale, tutorial.published)}
-                <Emoji text=":stopwatch:" size={1} ml={`0.5em`} mr={`0.5em`} />
-                {tutorial.timeToRead}{" "}
-                <Translation id="page-tutorial-read-time" />
-                {tutorial.isExternal && (
+                {tutorial.timeToRead && (
                   <>
                     {" "}
-                    •<Emoji
-                      text=":link:"
+                    •
+                    <Emoji
+                      text=":stopwatch:"
                       size={1}
                       ml={`0.5em`}
                       mr={`0.5em`}
                     />
+                    {tutorial.timeToRead}{" "}
+                    <Translation id="page-tutorial-read-time" />
+                  </>
+                )}
+                {tutorial.isExternal && (
+                  <>
+                    {" "}
+                    •<Emoji text=":link:" size={1} ml={`0.5em`} mr={`0.5em`} />
                     <Link to={tutorial.to} hideArrow>
                       <Translation id="page-tutorial-external-link" />
                     </Link>

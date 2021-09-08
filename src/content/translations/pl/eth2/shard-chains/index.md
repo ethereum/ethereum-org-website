@@ -14,8 +14,8 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~2021">
-    Łańcuchy odłamkowe powinny być dostarczone około 2021 r., w zależności od tego, jak będą postępowały prace po wdrożeniu <a href="/eth2/beacon-chain/">łańcucha śledzącego</a>. Te fragmentacje dadzą Ethereum większą pojemność przechowywania i dostępu do danych, ale nie będzie można ich używać do wykonywania kodu. Szczegóły tego są wciąż opracowywane.
+<UpgradeStatus date="~2022">
+    Łańcuchy odłamkowe powinny być dostarczone około 2022 r., w zależności od tego, jak będą postępowały prace po wdrożeniu <a href="/eth2/beacon-chain/">łańcucha śledzącego</a>. Te fragmentacje dadzą Ethereum większą pojemność przechowywania i dostępu do danych, ale nie będzie można ich używać do wykonywania kodu. Szczegóły tego są wciąż opracowywane.
 </UpgradeStatus>
 
 ## Czym jest sharding? {#what-is-sharding}

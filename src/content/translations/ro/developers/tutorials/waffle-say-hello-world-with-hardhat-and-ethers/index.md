@@ -137,7 +137,7 @@ Testele Waffle folosesc Mocha (un cadru de testare) cu Chai (o bibliotecă de af
 ✓ Trebuie să returneze noul mesaj de salut odată ce a fost schimbat
 ```
 
-### Totul arată bine până acum, hai să adăugăm ceva mai multă complexitate proiectului nostru <emoji text=":slightly_smiling_face:" size={1}/> {#adding-complexity}
+### Totul arată bine până acum, hai să adăugăm ceva mai multă complexitate proiectului nostru <Emoji text=":slightly_smiling_face:" size={1}/> {#adding-complexity}
 
 Imaginează-ți o situație când cineva adaugă un string gol ca salut. Nu ar fi un salut călduros, nu?  
 Să ne asigurăm că acest lucru nu se întâmplă:

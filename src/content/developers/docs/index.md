@@ -44,5 +44,6 @@ If this is your first attempt at Ethereum development, we recommend starting at 
 ### Advanced {#advanced}
 
 - [Standards](/developers/docs/standards/tokens/) _– Agreed upon protocols for maintaining efficiency and accessibility of projects to the community_
+- [Miner extractable value (MEV)](/developers/docs/mev/) _- How value is extracted from the Ethereum blockchain beyond the block reward_
 - [Oracles](/developers/docs/oracles/) _– How information is injected into the Ethereum blockchain_
 - [Scaling](/developers/docs/scaling/) _– Methods for preserving decentralization and security as Ethereum grows_

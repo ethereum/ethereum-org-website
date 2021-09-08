@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~2021/22">
+<UpgradeStatus date="~Q1/Q2 2022">
     Ova nadogradnja uslijedit će nakon dolaska lanaca djelića. Ali to je trenutak u kojem se <a href="/eth2/vision/"> vizija nadogradnje Eth2 </a> u potpunosti ostvaruje – veća nadogradivost, sigurnost i održivost uz ulaganja koja podržavaju cijelu mrežu.
 </UpgradeStatus>
 

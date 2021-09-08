@@ -305,6 +305,12 @@ const WalletCompare = ({ location }) => {
       safepal: file(relativePath: { eq: "wallets/safepal.png" }) {
         ...walletCardImage
       }
+      opera: file(relativePath: { eq: "wallets/opera.png" }) {
+        ...walletCardImage
+      }
+      coin98: file(relativePath: { eq: "wallets/coin98.png" }) {
+        ...walletCardImage
+      }
     }
   `)
 
