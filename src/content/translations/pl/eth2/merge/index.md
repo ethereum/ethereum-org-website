@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~2021/22">
+<UpgradeStatus date="~Q1/Q2 2022">
     To ulepszenie nastąpi po uruchomieniu łańcuchów fragmentowych. Będzie to chwila, w której <a href="/eth2/vision/">wizja Eth2</a> zostanie w pełni zrealizowana — bardziej skalarna, bezpieczna i po równi rozwijana z inwestycją wspierającą całą sieć.
 </UpgradeStatus>
 

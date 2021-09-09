@@ -24,7 +24,7 @@ Gas fees are paid in Ethereum's native currency, ether (ETH). Gas prices are den
 
 ## Prior to the London Upgrade {#pre-london}
 
-The way transaction fees on the Ethereum network are calculated changed during the London network upgrade. Here is a recap of how things used to work:
+The way transaction fees on the Ethereum network were calculated changed with [the London Upgrade](/history/#london) of August 2021. Here is a recap of how things used to work:
 
 Let's say Alice had to pay Bob 1 ETH.
 In the transaction the gas limit is 21,000 units and the gas price is 200 gwei.
@@ -42,7 +42,7 @@ This video offers a concise overview of gas and why it exists:
 
 ## After the London Upgrade {#post-london}
 
-[The London Upgrade](/history/#london) aims to make transacting on Ethereum more predictable for users by overhauling Ethereum's transaction-fee-mechanism. The high-level benefits introduced by this change include better transaction fee estimation, generally quicker transaction inclusion, and offsetting the ETH issuance by burning a percentage of transaction fees.
+[The London Upgrade](/history/#london) was implemented on August 5th, 2021 to make transacting on Ethereum more predictable for users by overhauling Ethereum's transaction-fee-mechanism. The high-level benefits introduced by this change include better transaction fee estimation, generally quicker transaction inclusion, and offsetting the ETH issuance by burning a percentage of transaction fees.
 
 Starting with the London network upgrade, every block has a base fee, the minimum price per unit of gas for inclusion in this block, calculated by the network based on demand for block space. As the base fee of the transaction fee is burnt, users are also expected to set a tip (priority fee) in their transactions. The tip compensates miners for executing and propagating user transactions in blocks and is expected to be set automatically by most wallets.
 
@@ -104,6 +104,10 @@ With the new base fee getting burned, the London Upgrade introduced a priority f
 
 To execute a transaction on the network users are able to specify a maximum limit they are willing to pay for their transaction to be executed. This optional parameter is known as the `maxFeePerGas`. In order for a transaction to be executed the max fee must exceed the sum of the base fee and the tip. The transaction sender is refunded the difference between the max fee and the sum of the base fee and tip.
 
+### Calcuating fees {#calculating-fees}
+
+One of the main benefits achieved with the London upgrade is improving the user's experience when setting transaction fees. For wallets that support the upgrade, instead of explicitly stating how much you are willing to pay to get your transaction through, wallet providers will automatically set a recommended transaction fee (base fee + recommended priority fee) to reduce the amount of complexity burdened onto their users.
+
 ## EIP-1559 {#eip-1559}
 
 The implementation of [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) in the London Upgrade made the transaction fee mechanism more complex than the previous gas price auction, but it has the advantage of making gas fees more predictable, resulting in a more efficient transaction fee market. Users can submit transactions with a `maxFeePerGas` corresponding to how much they are willing to pay for the transaction to be executing, knowing that they will not pay more than the market price for gas (`baseFeePerGas`), and get any extra, minus their tip, refunded.
@@ -154,7 +158,15 @@ If you are looking to reduce gas costs for your ETH you are able to set a tip to
 
 If you want to monitor gas prices so you are able to send your ETH for less you can use many different tools such as:
 
-- [Etherscan](https://etherscan.io/gastracker)
+- [Etherscan](https://etherscan.io/gastracker) _Transaction gas price estimator_
+- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Gas estimating Chrome extension supporting both Type 0 legacy transactions and Type 2 EIP-1559 transactions._ 
+
+- [ETH Gas Station](https://ethgasstation.info/) _Consumer oriented metrics for the Ethereum gas market_
+
+## Related Tools {#related-tools}
+
+- [Bloxy Gas Analytics](https://stat.bloxy.info/superset/dashboard/gas/?standalone=true) _Ethereum network gas stats_
+- [Blocknative's Gas Platform](https://www.blocknative.com/gas) _Gas estimation API powered by Blocknative's global mempool data platform_
 
 ## Further Reading {#further-reading}
 
@@ -162,13 +174,6 @@ If you want to monitor gas prices so you are able to send your ETH for less you 
 - [Is Ethereum more expensive to use as price rises?](https://docs.ethhub.io/questions-about-ethereum/is-ethereum-more-expensive-to-use-as-price-rises/)
 - [Reducing the gas consumption of your Smart Contracts](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
 - [Proof of Stake versus Proof of Work](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
-
-## Related Tools {#related-tools}
-
-- [ETH Gas Station](https://ethgasstation.info/) _Consumer oriented metrics for the Ethereum gas market_
-- [Etherscan Gas Tracker](https://etherscan.io/gastracker) _Transaction gas price estimator_
-- [Bloxy Gas Analytics](https://stat.bloxy.info/superset/dashboard/gas/?standalone=true) _Ethereum network gas stats_
-- [Blocknative's Gas Platform](https://www.blocknative.com/gas) _Gas estimation API powered by Blocknative's global mempool data platform_
 
 ## Related Topics {#related-topics}
 

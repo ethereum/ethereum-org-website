@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~2021/22">
+<UpgradeStatus date="~Q1/Q2 2022">
     Bu yükseltme, shard zincirlerinin gelişini takip edecektir. Ancak o zaman <a href="/eth2/vision/">Eth2 vision</a> tamamen gerçekleşmiş olacaktır – daha fazla ölçeklenebilirlik, güvenlik ve sürdürülebilirlikle birlikte tüm ağı destekleyen paydaşlık.
 </UpgradeStatus>
 

@@ -108,6 +108,13 @@ Example response:
 
 With the signature hash, the transaction can be cryptographically proven that it came from the sender and submitted to the network.
 
+## Types of transactions {#types-of-transactions}
+
+On Ethereum there are a few different types of transactions:
+ 
+- Regular transactions: a transaction from one wallet to another.
+- Contract deployment transactions: a transaction without a 'to' address, where the data field is used for the contract code.
+
 ### On gas {#on-gas}
 
 As mentioned, transactions cost [gas](/developers/docs/gas/) to execute. Simple transfer transactions require 21000 units of Gas.
