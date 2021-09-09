@@ -115,7 +115,7 @@ Beyond the security of the Ethereum network, significant weight has historically
 
 Having many stakeholders with different motivations and beliefs means that disagreements are not uncommon.
 
-Generally, disagreements are handled with long-form discussion to understand the root of the problem. Typically, one group concedes, or a happy medium is achieved. If one group feels strongly enough, forcing through a particular change could result in a chain split. A chain split is when some stakeholders protest implementing a protocol change resulting in different, incompatible versions of the protocol operating, from which two distinct blockchains emerge.
+Generally, disagreements are handled with long-form discussion in public forums to understand the root of the problem and allow anyone to weigh in. Typically, one group concedes, or a happy medium is achieved. If one group feels strongly enough, forcing through a particular change could result in a chain split. A chain split is when some stakeholders protest implementing a protocol change resulting in different, incompatible versions of the protocol operating, from which two distinct blockchains emerge.
 
 ### The DAO fork {#dao-fork}
 
