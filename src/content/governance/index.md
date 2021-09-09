@@ -103,7 +103,7 @@ The initial draft of an EIP is unlikely to be implemented on the Ethereum Mainne
 
 While some EIPs are straightforward technical improvements with minimal nuance, some are more complex and inherently tradeoffs which will affect different stakeholders in different ways. This means some EIPs end up being more contentious within the community than others.
 
-Unfortunately, there is no clear playbook on how to handle contentious proposals. Since they have no way to force people to adopt network upgrades, Protocol Developers will generally avoid including EIPs where the contentiousness outweighs the benefits to the broader community.
+There is no clear playbook on how to handle contentious proposals. Since Protocol Developers have no way to force people to adopt network upgrades, they will generally avoid implementing EIPs where the contentiousness outweighs the benefits to the broader community.
 
 As the champion of a contentious EIP, you should try and address objections to build consensus around your EIP. Given the size and diversity of the Ethereum community, there isn't a single metric (e.g. a coin vote) that can be used to gauge community consensus, and EIP Champions are expected to adapt to the circumstances of their proposal. This being said, EIP Champions are expected to solicit feedback from all relevant stakeholders.
 
