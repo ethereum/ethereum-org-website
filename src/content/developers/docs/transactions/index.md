@@ -305,15 +305,14 @@ Watch Austin walk you through transactions, gas, and mining.
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/er-0ihqFQB0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Typed Transaction Envelope
+## Typed Transaction Envelope {#typed-transaction-envelope}
 
-Ethereum has different transaction types that specify what a transaction should do. For example, sending Ether to an address, deploying a contract, etc.  
-Ethereum now has a new transaction standard that was defined and created by Micah Zoltu in [EIP-2718](https://eips.ethereum.org/EIPS/eip-2718): Typed Transaction Envelope, which forms the basis for some new and other yet-to-be-developed features on Ethereum.
+[EIP-2718: Typed Transaction Envelope](https://eips.ethereum.org/EIPS/eip-2718) defines a transaction type that is an envelope for future transaction types.
 
 Previously, Ethereum had one format for transactions. Each transaction consists of a nonce, gas price, gas limit, to address, value, data, v, r, and s. These fields are RLP-encoded, to look something like this:  
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
-EIP-2718 defines a new generalised envelope for typed transactions. In the new standard, transactions look like this:  
+EIP-2718 is a new generalised envelope for typed transactions. In the new standard, transactions are interpreted as:  
 `TransactionType || TransactionPayload`
 
 Where the fields are defined as:
