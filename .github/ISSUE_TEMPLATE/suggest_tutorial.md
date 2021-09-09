@@ -34,7 +34,7 @@ We'll consider [our article policy](https://ethereum.org/en/contributing/adding-
 
 **For tutorials to be hosted on Ethereum.org: Tutorial Content**
 
-<!-- Please the full tutorial paste in markdown -->
+<!-- Please paste the full tutorial in markdown -->
 
 **For tutorials hosted elsewhere: URL to tutorial**
 
