@@ -307,6 +307,7 @@ Watch Austin walk you through transactions, gas, and mining.
 
 ## Typed Transaction Envelope {#typed-transaction-envelope}
 
+Over time, Ethereum has evolved to support multiple types of transactions. This allows new features like access lists and EIP-1559 to be implemented without affecting legacy transaction formats.  
 [EIP-2718: Typed Transaction Envelope](https://eips.ethereum.org/EIPS/eip-2718) defines a transaction type that is an envelope for future transaction types.
 
 Previously, Ethereum had one format for transactions. Each transaction consists of a nonce, gas price, gas limit, to address, value, data, v, r, and s. These fields are RLP-encoded, to look something like this:  
