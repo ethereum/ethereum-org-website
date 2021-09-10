@@ -86,6 +86,7 @@ The Ethereum community includes people of many different backgrounds and skillse
 - Check out [projects related to your area of expertise or programming language of choice](/developers/docs/programming-languages/)
 - Watch or participate in the [Core Dev calls](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
 - [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - tooling, documentation, and infrastructure areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
+- [Web3Bridge](https://www.web3bridge.com/) - join the aspiring web3 community in their initiative to identify, train, and support hundreds of developers and community members throughout Africa
 
 **Researchers & Academics**
 
@@ -130,8 +131,8 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
 ## Ethereum Jobs {#ethereum-jobs}
 
 **Want to find a job working in Ethereum?**
+
 - [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/ethereum/)
 - [Crypto.jobs](https://crypto.jobs/)
 - [Careers at ConsenSys](https://consensys.net/careers/)
-- [Blocktribe](https://blocktribe.com/)
 - [Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)

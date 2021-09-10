@@ -10,7 +10,7 @@ sidebarDepth: 2
 
 <Divider />
 
-## {#section-numbers}
+## # {#section-numbers}
 
 ### attaque de 51 % {#51-attack}
 
@@ -644,7 +644,7 @@ Concept nommé d'après le mathématicien et informaticien anglais Alan Turing. 
 
 Dans un système de [preuve d'enjeu](#proof-of-stake), [nœud](#node) responsable du stockage des données, du traitement des transactions, et de l'ajout de nouveaux blocs à la blockchain. Pour activer le logiciel validateur, vous devez pouvoir [miser](#staking) 32 ETH.
 
-<DocLink to="/developers/docs/consenus-mechanisms/pos" title="preuve d'enjeu" /> <DocLink to="/eth2/staking/" title="Miser sur Ethereum" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos" title="preuve d'enjeu" /> <DocLink to="/eth2/staking/" title="Miser sur Ethereum" />
 
 ### preuve de validité {#validity-proof}
 

@@ -10,7 +10,7 @@ sidebarDepth: 2
 
 <Divider />
 
-## {#section-numbers}
+## # {#section-numbers}
 
 ### Ataque del 51% {#51-attack}
 
@@ -384,7 +384,7 @@ Un tipo especial de [contrato](#smart-contract) sin funciones pagaderas, sin fun
 
 ### cliente ligero {#lightweight-client}
 
-Un cliente de Ethreum que no almacena una copia local de la [blockchain](#blockchain), o bien valida bloques y [transacciones](#transaction). Ofrece las funciones de una [cartera](#wallet) y puede crear y transmitir transacciones.
+Un cliente de Ethereum que no almacena una copia local de la [blockchain](#blockchain), o bien valida bloques y [transacciones](#transaction). Ofrece las funciones de una [cartera](#wallet) y puede crear y transmitir transacciones.
 
 <Divider />
 
@@ -644,7 +644,7 @@ Un concepto que lleva el nombre del matemático y informático inglés Alan Turi
 
 Un [nodo](#node) en un sistema de [Prueba de participación](#proof-of-stake) responsable de almacenar datos, procesar transacciones y agregar nuevos bloques a la blockchain. Para activar el software validador, debes poder [participar](#staking) con 32 ETH.
 
-<DocLink to="/developers/docs/consenus-mechanisms/pos" title="Prueba de participación" /> <DocLink to="/eth2/staking/" title="Participación en Ethereum" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos" title="Prueba de participación" /> <DocLink to="/eth2/staking/" title="Participación en Ethereum" />
 
 ### Prueba de validación {#validity-proof}
 

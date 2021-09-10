@@ -21,7 +21,7 @@
   },
   "cs": {
     "version": 1.1,
-    "language": "čeština"
+    "language": "Čeština"
   },
   "de": {
     "version": 2.0,
@@ -68,7 +68,7 @@
     "language": "Ibo"
   },
   "it": {
-    "version": 2.0,
+    "version": 2.1,
     "language": "Italiano"
   },
   "ja": {
@@ -93,10 +93,10 @@
   },
   "nb": {
     "version": 1.1,
-    "language": "norsk"
+    "language": "Norsk"
   },
   "pl": {
-    "version": 1.0,
+    "version": 2.2,
     "language": "Polski"
   },
   "pt": {
@@ -125,7 +125,7 @@
   },
   "sl": {
     "version": 2.0,
-    "language": "Slovenija"
+    "language": "Slovenščina"
   },
   "tr": {
     "version": 2.0,

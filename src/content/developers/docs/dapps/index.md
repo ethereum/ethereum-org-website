@@ -69,10 +69,14 @@ Tokens must be generated in order to prove the value nodes that contribute to th
 
 ## Dapp tools {#dapp-tools}
 
-**Rimble UI** **_- Adaptable components and design standards for decentralized applications._**
+**Scaffold-ETH** **_- Quickly experiment with Solidity using a frontend that adapts to your smart contract._**
 
-- [rimble.consensys.design](https://rimble.consensys.design)
-- [GitHub](https://github.com/ConsenSys/rimble-ui)
+- [GitHub](https://github.com/austintgriffith/scaffold-eth)
+- [Example dapp](https://punkwallet.io/)
+
+**Create Eth App** **_- Create Ethereum-powered apps with one command._**
+
+- [GitHub](https://github.com/paulrberg/create-eth-app)
 
 **One Click Dapp** **_- FOSS tool for generating dapp frontends from an [ABI](/glossary/#abi)._**
 
@@ -87,6 +91,8 @@ Tokens must be generated in order to prove the value nodes that contribute to th
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
+
+- [What Are Decentralized Apps?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps)
 
 ## Related Topics {#related-topics}
 

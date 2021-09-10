@@ -115,7 +115,7 @@ A special [transaction](#transaction), with the [zero address](#zero-address) as
 
 ### crosslink {#crosslink}
 
-A crosslink provides a summary of a shard's state. It's how [shard](#shard) chains will communicate with one another via the [Beacon Chain](#beacon-chain)in the sharded [proof-of-stake system](#proof-of-stake).
+A crosslink provides a summary of a shard's state. It's how [shard](#shard) chains will communicate with one another via the [Beacon Chain](#beacon-chain) in the sharded [proof-of-stake system](#proof-of-stake).
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work" title="Proof-of-stake" />
 
@@ -657,7 +657,7 @@ A concept named after English mathematician and computer scientist Alan Turing- 
 
 A [node](#node) in a [proof-of-stake](#proof-of-stake) system responsible for storing data, processing transactions, and adding new blocks to the blockchain. To active validator software, you need to be able to [stake](#staking) 32 ETH.
 
-<DocLink to="/developers/docs/consenus-mechanisms/pos" title="Proof of stake" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos" title="Proof of stake" />
 <DocLink to="/eth2/staking/" title="Staking in Ethereum" />
 
 ### Validity proof {#validity-proof}

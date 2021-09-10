@@ -10,7 +10,7 @@ sidebarDepth: 2
 
 <Divider />
 
-## {#section-numbers}
+## # {#section-numbers}
 
 ### 51% 攻击 {#51-attack}
 
@@ -644,7 +644,7 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 [权益证明](#proof-of-stake)系统中的[节点](#node)，负责存储数据、处理交易并且在区块链中添加新区块。 要激活一名验证者，需要[质押](#staking) 32 ETH。
 
-<DocLink to="/developers/docs/consenus-mechanisms/pos" title="权益证明" /> <DocLink to="/eth2/staking/" title="质押" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos" title="权益证明" /> <DocLink to="/eth2/staking/" title="质押" />
 
 ### Validity proof 有效性证明 {#validity-proof}
 

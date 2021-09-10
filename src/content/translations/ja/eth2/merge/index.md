@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~2021/22">
+<UpgradeStatus date="~Q1/Q2 2022">
     このアップグレードは、シャードチェーンの到着後に行われます。 しかし、それは <a href="/eth2/vision/">Eth2 vision</a> が完全に実現される瞬間です 。ステーキングがネットワーク全体をサポートし、さらなるスケーラビリティ、セキュリティ、および持続可能性が実現します。
 </UpgradeStatus>
 

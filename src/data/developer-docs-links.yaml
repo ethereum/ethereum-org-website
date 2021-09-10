@@ -10,6 +10,8 @@
   items:
     - id: docs-nav-intro-to-ethereum
       to: /developers/docs/intro-to-ethereum/
+    - id: docs-nav-intro-to-ether
+      to: /developers/docs/intro-to-ether/
     - id: docs-nav-intro-to-dapps
       to: /developers/docs/dapps/
     - id: docs-nav-web2-vs-web3
@@ -121,6 +123,8 @@
               to: /developers/docs/standards/tokens/erc-20/
             - id: docs-nav-erc-721
               to: /developers/docs/standards/tokens/erc-721/
+    - id: docs-nav-mev
+      to: /developers/docs/mev/
     - id: docs-nav-oracles
       to: /developers/docs/oracles/
     - id: docs-nav-scaling

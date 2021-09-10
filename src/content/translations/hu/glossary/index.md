@@ -10,7 +10,7 @@ sidebarDepth: 2
 
 <Divider />
 
-## {#section-numbers}
+## # {#section-numbers}
 
 ### 51% attack (51%-os támadás) {#51-attack}
 
@@ -644,7 +644,7 @@ Az angol matematikus és számítástechnikus Alan Turing után elnevezett fogal
 
 Egy [csomópont](#node) a [letétbizonyíték](#proof-of-stake) alapú rendszerben, amely az adattárolásért, a tranzakciók felolgozásáért, és az új blokkok blokklánchoz való hozzáadásáért felel. A validátor-szoftver aktiválásához 32 ETH-t kell [letétbe helyezned](#staking).
 
-<DocLink to="/developers/docs/consenus-mechanisms/pos" title="Proof-of-stake" /> <DocLink to="/eth2/staking/" title="Letétbe helyezés az Ethereumon" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos" title="Proof-of-stake" /> <DocLink to="/eth2/staking/" title="Letétbe helyezés az Ethereumon" />
 
 ### Validity proof (érvényességi bizonyíték) {#validity-proof}
 
