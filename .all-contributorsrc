@@ -4721,6 +4721,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "markstrefford",
+      "name": "Mark Strefford",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1695274?v=4",
+      "profile": "http://delirium.digital",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
