@@ -1119,6 +1119,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/agorismlabs"><img src="https://avatars.githubusercontent.com/u/84196983?v=4?s=100" width="100px;" alt=""/><br /><sub><b>agorismlabs</b></sub></a><br /><a href="#ideas-agorismlabs" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://tanishq.xyz"><img src="https://avatars.githubusercontent.com/u/15674971?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tanishq Sharma</b></sub></a><br /><a href="#ideas-tanishqsh" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="http://delirium.digital"><img src="https://avatars.githubusercontent.com/u/1695274?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mark Strefford</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Amarkstrefford" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/akwodkiewicz"><img src="https://avatars.githubusercontent.com/u/22861194?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andrzej Wódkiewicz</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=akwodkiewicz" title="Documentation">📖</a></td>
   </tr>
 </table>
 
