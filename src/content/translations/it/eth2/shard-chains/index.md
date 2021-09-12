@@ -14,8 +14,8 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~2021">
-    Le shard chain saranno disponibili nel corso del 2021, in base alla rapidità del lavoro in seguito al lancio della <a href="/eth2/beacon-chain/">beacon chain</a>. Queste shard garantiranno a Ethereum più capacità di archiviazione e acceso ai dati, ma non verranno usate per eseguire codice. I dettagli sono ancora da chiarire.
+<UpgradeStatus date="~2022">
+    Le shard chain saranno disponibili nel corso del 2022, in base alla rapidità del lavoro in seguito al lancio della <a href="/eth2/beacon-chain/">beacon chain</a>. Queste shard garantiranno a Ethereum più capacità di archiviazione e acceso ai dati, ma non verranno usate per eseguire codice. I dettagli sono ancora da chiarire.
 </UpgradeStatus>
 
 ## Cos'è lo sharding? {#what-is-sharding}

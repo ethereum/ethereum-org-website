@@ -644,7 +644,7 @@ Concetto che prende il nome dal matematico e informatico inglese Alan Turing. Un
 
 [Nodo](#node) in un sistema [Proof of Stake](#proof-of-stake) responsabile della memorizzazione dei dati, dell'elaborazione delle transazioni e dell'aggiunta di nuovi blocchi alla blockchain. Per il software di validatore attivo, è necessario essere in grado di fare [staking](#staking) con 32 ETH.
 
-<DocLink to="/developers/docs/consenus-mechanisms/pos" title="Proof of Stake" /> <DocLink to="/eth2/staking/" title="Staking in Ethereum" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos" title="Proof of Stake" /> <DocLink to="/eth2/staking/" title="Staking in Ethereum" />
 
 ### prova di validità {#validity-proof}
 

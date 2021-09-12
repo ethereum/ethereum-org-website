@@ -15,7 +15,7 @@ published: 2021-04-22
 
 All of them minted their NFT’s using Alchemy’s powerful API. In this tutorial, we’ll teach you how to do the same in <10 minutes.
 
-“Minting an NFT” is the act of publishing a unique instance of your ERC-721 token on the blockchain. Using our smart contract from [Part 1 of this NFT tutorial series](/developers/tutorials/how-to-write-and-deploy-an-nft/), let’s flex our web3 skills and mint a NFT. At the end of this tutorial, you’ll be able to mint as many NFTs as your heart (and wallet) desires!
+“Minting an NFT” is the act of publishing a unique instance of your ERC-721 token on the blockchain. Using our smart contract from [Part 1 of this NFT tutorial series](/developers/tutorials/how-to-write-and-deploy-an-nft/), let’s flex our web3 skills and mint an NFT. At the end of this tutorial, you’ll be able to mint as many NFTs as your heart (and wallet) desires!
 
 Let’s get started!
 
@@ -66,7 +66,7 @@ If you remember from our tutorial in Part 1, our mintNFT smart contract function
 
 > _Interplanetary File System (IPFS) is a decentralized protocol and peer-to-peer network for storing and sharing data in a distributed file system._
 
-We will use Pinata, a convenient IPFS API and toolkit, to store our NFT asset and metadata to ensure our NFT is truly decentralized. If you don’t have a Pinata account, sign up for a free account [here](https://pinata.cloud/signup) and complete the steps to verify your email.
+We will use Pinata, a convenient IPFS API and toolkit, to store our NFT asset and metadata to ensure our NFT is truly decentralized. If you don’t have a Pinata account, sign up for a free account [here](https://app.pinata.cloud) and complete the steps to verify your email.
 
 Once you’ve created an account:
 
@@ -74,7 +74,7 @@ Once you’ve created an account:
 
 - Upload an image to pinata — this will be the image asset for your NFT. Feel free to name the asset whatever you wish
 
-- After you upload, at the top of the page, there should be a green popup that allows you to view the hash of your upload → Copy that hashcode. You can view your upload at: [https://gateway.pinata.cloud/ipfs/\<](https://gateway.pinata.cloud/ipfs/QmarPqdEuzh5RsWpyH2hZ3qSXBCzC5RyK3ZHnFkAsk7u2f)hash-code>
+- After you upload, at the top of the page, there should be a green popup that allows you to view the hash of your upload → Copy that hashcode. You can view your upload at: `https://gateway.pinata.cloud/ipfs/<hash-code>`. You can find the image we used on IPFS [here](https://gateway.pinata.cloud/ipfs/QmarPqdEuzh5RsWpyH2hZ3qSXBCzC5RyK3ZHnFkAsk7u2f), for example.
 
 For the more visual learners, the steps above are summarized here:
 
@@ -128,7 +128,7 @@ const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 
 Now, in order to create and send transactions to the Ethereum chain, we’ll use your public ethereum account address to get the account nonce (will explain below).
 
-Add your public key to your .env file —if you completed part 1 of the tutorial, our .env file should now look like this:
+Add your public key to your .env file — if you completed part 1 of the tutorial, our .env file should now look like this:
 
 ```js
 API_URL = "https://eth-ropsten.alchemyapi.io/v2/your-api-key"
@@ -138,23 +138,23 @@ PUBLIC_KEY = "your-public-account-address"
 
 ## Step 7: Create your transaction {#create-txn}
 
-First, let’s define a function called mintNFT(tokenData) and create our transaction by doing the following:
+First, let’s define a function named `mintNFT(tokenData)` and create our transaction by doing the following:
 
-1. Grab your PRIVATE*KEY \_and* PUBLIC_KEY from the .env file.
+1. Grab your _PRIVATE_KEY_ and _PUBLIC_KEY_ from the `.env` file.
 
-1. Next, we’ll need to figure out the account nonce. The nonce specification is used to keep track of the number of transactions sent from your address— which we need for security purposes and to prevent [replay attacks](/glossary/#nonce). To get the number of transactions sent from your address, we use [getTransactionCount](/developers/docs/apis/json-rpc/#eth_gettransactioncount).
+1. Next, we’ll need to figure out the account nonce. The nonce specification is used to keep track of the number of transactions sent from your address — which we need for security purposes and to prevent [replay attacks](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce). To get the number of transactions sent from your address, we use [getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount).
 
 1. Finally we’ll set up our transaction with the following info:
 
-- 'from': PUBLIC_KEY : The origin of our transaction is our public address
+- `'from': PUBLIC_KEY` — The origin of our transaction is our public address
 
-- 'to': contractAddress : The contract we wish to interact with and send the transaction
+- `'to': contractAddress` — The contract we wish to interact with and send the transaction
 
-- 'nonce': nonce : The account nonce with the number of transactions send from our address
+- `'nonce': nonce` — The account nonce with the number of transactions send from our address
 
-- 'gas': estimatedGas : The estimated gas needed to complete the transaction
+- `'gas': estimatedGas` — The estimated gas needed to complete the transaction
 
-- 'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI() : The computation we wish to perform in this transaction— which in this case is minting a NFT
+- `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — The computation we wish to perform in this transaction — which in this case is minting a NFT
 
 Your mint-nft.js file should look like this now:
 
@@ -189,7 +189,7 @@ Your mint-nft.js file should look like this now:
 
 Now that we’ve created our transaction, we need to sign it in order to send it off. Here is where we’ll use our private key.
 
-web3.eth.sendSignedTransaction will give us the transaction hash, which we can use to make sure our transaction was mined and didn't get dropped by the network. You'll notice in the transaction signing section, we've added some error checking so we know if our transaction successfully went through.
+`web3.eth.sendSignedTransaction` will give us the transaction hash, which we can use to make sure our transaction was mined and didn't get dropped by the network. You'll notice in the transaction signing section, we've added some error checking so we know if our transaction successfully went through.
 
 ```js
 require("dotenv").config()
@@ -304,7 +304,7 @@ async function mintNFT(tokenURI) {
       )
     })
     .catch((err) => {
-      console.log(" Promise failed:", err)
+      console.log("Promise failed:", err)
     })
 }
 
@@ -313,7 +313,7 @@ mintNFT(
 )
 ```
 
-Now, run node scripts/mint-nft.js to deploy your NFT. After a couple of seconds, you should see a response like this in your terminal:
+Now, run `node scripts/mint-nft.js` to deploy your NFT. After a couple of seconds, you should see a response like this in your terminal:
 
     The hash of your transaction is: 0x10e5062309de0cd0be7edc92e8dbab191aa2791111c44274483fa766039e0e00
 

@@ -7,7 +7,7 @@ incomplete: true
 sidebarDepth: 3
 ---
 
-Uses validity proofs like [ZK-rollups](#zk-rollups) but data is not stored on the main layer 1 Ethereum chain. This can lead to 10k transactions per second per validium chain and multiple chains can be run in parallel.
+Uses validity proofs like [ZK-rollups](/developers/docs/scaling/layer-2-rollups#zk-rollups) but data is not stored on the main layer 1 Ethereum chain. This can lead to 10k transactions per second per validium chain and multiple chains can be run in parallel.
 
 ## Prerequisites {#prerequisites}
 
