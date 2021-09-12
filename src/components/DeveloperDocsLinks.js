@@ -1,15 +1,13 @@
 import React from "react"
-import { Header3, ListItem } from "./SharedStyledComponents"
+import { ListItem } from "./SharedStyledComponents"
 import Translation from "./Translation"
 import Link from "./Link"
 import docLinks from "../data/developer-docs-links.yaml"
 
-const DeveloperDocsLinks = () =>
-  docLinks.map(({ id, items }) => (
-    <>
-      <Header3>
-        <Translation id={id} />
-      </Header3>
+const DeveloperDocsLinks = ({ headerId }) =>
+  docLinks
+    .filter(({ id }) => id.includes(headerId))
+    .map(({ items }) => (
       <ul>
         {items &&
           items.map(({ id, to, path, description }) => (
@@ -24,7 +22,6 @@ const DeveloperDocsLinks = () =>
             </ListItem>
           ))}
       </ul>
-    </>
-  ))
+    ))
 
 export default DeveloperDocsLinks

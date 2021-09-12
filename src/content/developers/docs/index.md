@@ -2,7 +2,7 @@
 title: Ethereum development documentation
 description: Introducing the ethereum.org developer documentation.
 lang: en
-sidebar: false
+sidebar: true
 ---
 
 This documentation is designed to help you build with Ethereum. It covers Ethereum as a concept, explains the Ethereum tech stack, and documents advanced topics for more complex applications and use cases.
@@ -13,4 +13,14 @@ This is an open-source community effort, so feel free to suggest new topics, add
 
 If this is your first attempt at Ethereum development, we recommend starting at the beginning and working your way through like a book.
 
-<DeveloperDocsLinks />
+### Foundational topics {#foundational-topics}
+
+<DeveloperDocsLinks headerId="foundational-topics" />
+
+### Ethereum stack {#ethereum-stack}
+
+<DeveloperDocsLinks headerId="ethereum-stack" />
+
+### Advanced {#advanced}
+
+<DeveloperDocsLinks headerId="advanced" />
