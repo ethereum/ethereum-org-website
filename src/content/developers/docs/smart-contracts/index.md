@@ -44,7 +44,7 @@ contract VendingMachine {
     // When 'VendingMachine' contract is deployed:
     // 1. set the deploying address as the owner of the contract
     // 2. set the deployed smart contract's cupcake balance to 100
-    constructor() public {
+    constructor() {
         owner = msg.sender;
         cupcakeBalances[address(this)] = 100;
     }
