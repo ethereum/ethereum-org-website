@@ -208,7 +208,7 @@ Implemented by OpenEthereum. Nodes regularly generate a consensus-critical state
 
 ##### Beam sync
 
-Implemented by Nethermind and Trinity. Works like fast sync but also downloads the state data (witnesses) for the latest blocks, which allows you to query the chain within the first few minutes from starting.
+Implemented by Nethermind and Trinity. Works like fast sync but also downloads the data needed to execute latest blocks, which allows you to query the chain within the first few minutes from starting.
 
 - Syncs state first and enables you to query RPC in a few minutes.
 - Still in development and not fully relyable, background sync is slowed down and RPC responses might fail.
