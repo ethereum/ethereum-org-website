@@ -159,7 +159,7 @@ Erigon, formerly known as Turbo‐Geth, is a fork of Go Ethereum oriented toward
 
 To follow and verify current data in the network, the Ethereum client needs to sync with the latest network state. This is done by downloading data from peers, cryptographically verifying their integrity, and building a local blockchain database. 
 
-Synchronization modes represent different approaches to this process with various trade-offs. Clients also vary in their implementation details of sync algorithms. Always refer to the official documentation of your chosen client for specifics on implementation.
+Synchronization modes represent different approaches to this process with various trade-offs. Clients also vary in their implementation of sync algorithms. Always refer to the official documentation of your chosen client for specifics on implementation.
 
 #### Overview of strategies
 
