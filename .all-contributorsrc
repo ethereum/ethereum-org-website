@@ -4747,6 +4747,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "lntel",
+      "name": "Joseph Harris",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37447006?v=4",
+      "profile": "https://github.com/lntel",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
