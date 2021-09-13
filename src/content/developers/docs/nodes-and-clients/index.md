@@ -186,7 +186,7 @@ General overview of synchronization approaches used in Mainnet ready clients:
 
 #### Setup in client
 
-Clients offer rich configuration options to suite your needs. Pick the one which suits you the most based on its level of security, available data, and cost. Apart from the synchronization algorithm, you can also set pruning of different kinds of old data. Pruning enables deleting outdated data, e.g. removing state trie nodes that are unreachable from recent blocks. 
+Clients offer rich configuration options to suit your needs. Pick the one that suits you best based on the level of security, available data, and cost. Apart from the synchronization algorithm, you can also set pruning of different kinds of old data. Pruning enables deleting outdated data, e.g. removing state trie nodes that are unreachable from recent blocks. 
 
 Pay attention to the client's documentation or help page to find out which sync mode is the default. You can define the preferred type of sync when you get set up, like so:
 
