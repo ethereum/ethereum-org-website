@@ -163,7 +163,7 @@ Synchronization modes represent different approaches to this process with variou
 
 #### Overview of strategies
 
-General overview of synchronization approaches used in mainnet ready clients:
+General overview of synchronization approaches used in Mainnet ready clients:
 
 - Full – downloads all blocks (including headers, transactions, and receipts) and generates the state of the blockchain incrementally by executing every block from genesis.
     - Minimizes trust and offers the highest security by verifying every transaction.
