@@ -16,11 +16,9 @@ To better understand this page, we recommend you first read our [introduction to
 
 ## What is a consensus mechanism? {#what-is-a-consensus-mechanism}
 
-Consensus mechanisms (also known as consensus protocols or consensus algorithms) allow distributed systems (networks of computers) to work together and stay secure.
+Ethereum is a distributed system with copies of the entire blockchain existing on thousands of computers (nodes) simultaneously. In order for Ethereum to exist as a singleton ["state-machine"](https://www.freecodecamp.org/news/state-machines-basics-of-computer-science-d42855debc66/) these nodes must agree that the network exists in a particular definitive state. Ethereum's state updates after each block as transactions are executed. As blocks are added to the blockchain, a definitive history of the state emerges.
 
-For decades, these mechanisms have been used to establish consensus among database nodes, application servers, and other enterprise infrastructure. In recent years, new consensus protocols have been invented to allow cryptoeconomic systems, such as Ethereum, to agree on the state of the network.
-
-A consensus mechanism in a cryptoeconomic system also helps prevent certain kinds of economic attacks. In theory, an attacker can compromise consensus by controlling 51% of the network. Consensus mechanisms are designed to make this "51% attack" unfeasible. Different mechanisms are engineered to solve this security problem differently.
+The way the nodes come to agreement about which state is truthful is known as the consensus mechanism. The [proof-of-work](developers/docs/consensus-mechanisms/index.md) (PoW) consensus mechanism currently used by Ethereum trusts the version of the blockchain that has had the most work done on it (usually the "longest chain"). This work comes from miners who solve computational puzzles, giving them the right to submit a block. The requirement that the miner has expended energy to do this work is a security mechanism against spam or fraudulent blocks being submitted to the blockchain. The crucial concept is that the miner demonstrably has "skin in the game", i.e. they have a strong economic disincentive to defraud the network. Later, Ethereum will transition from PoW to [proof-of-stake (POS)](developers/docs/consensus-mechanisms/pos/index.md) which uses staked ether as its economic incentive and a "most votes" mechanism to choose the truthful chain. Fundamentally, a consensus mechanism is an application of game theory and economics that ensures only honest state-changes can occur on a network.
 
 <!-- ### Consensus -->
 
@@ -78,7 +76,7 @@ A **chain selection rule** is used to decide which chain is the "correct" chain.
 
 The combination of PoW and longest chain rule is known as "Nakamoto Consensus."
 
-Eth2 (the [beacon chain](/eth2/beacon-chain/)) uses a consensus mechanism called [Casper the Friendly Finality Gadget](https://arxiv.org/abs/1710.09437), which is PoS based.
+Eth2 (the [beacon chain](/eth2/beacon-chain/)) combines a fork-choice mechanism called "LMD-GHOST" and a finality gadget called "Casper" (together called "Gasper") to reach consensus. The validators for each block are randomly selected from a pool of nodes who have staked 32 ETH as collateral against dishonest behaviour ([PoS](/developers/docs/consensus-mechanisms/pos)).
 
 ## Further Reading {#further-reading}
 
