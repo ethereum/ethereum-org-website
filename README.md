@@ -1125,6 +1125,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/lntel"><img src="https://avatars.githubusercontent.com/u/37447006?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joseph Harris</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=lntel" title="Documentation">📖</a></td>
     <td align="center"><a href="https://o.zgur.org"><img src="https://avatars.githubusercontent.com/u/375834?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ozgur</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=rootqa" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/adilanchian"><img src="https://avatars.githubusercontent.com/u/13204620?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alec Dilanchian</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=adilanchian" title="Documentation">📖</a></td>
   </tr>
 </table>
 
