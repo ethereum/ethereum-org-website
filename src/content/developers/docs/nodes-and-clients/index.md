@@ -155,28 +155,83 @@ Hyperledger Besu is an enterprise-grade Ethereum client for public and permissio
 
 Erigon, formerly known as Turbo‐Geth, is a fork of Go Ethereum oriented toward speed and disk‐space efficiency. Erigon is a completely re-architected implementation of Ethereum, currently written in Go but with implementations in other languages planned. Erigon's goal is to provide a faster, more modular, and more optimized implementation of Ethereum. It can perform a full archive node sync using less than 2TB of disk space, in under 3 days
 
-### Sync modes {#sync-modes}
+### Synchronization modes {#sync-modes}
 
-- Full – downloads all blocks (including headers, transactions and receipts) and generates the state of the blockchain incrementally by executing every block.
-- Fast (Default) – downloads all blocks (including headers, transactions and receipts), verifies all headers, and downloads the state and verifies it against the headers.
-- Light – downloads all block headers, block data, and verifies some randomly.
-- Warp sync – Every 5,000 blocks, nodes will take a consensus-critical snapshot of that block’s state. Any node can fetch these snapshots over the network, enabling a fast sync. [More on Warp](https://openethereum.github.io/Warp-Sync-Snapshot-Format.html)
-- Beam sync – A sync mode that allows you to get going faster. It doesn't require long waits to sync, instead it back-fills data over time. [More on Beam](https://medium.com/@jason.carver/intro-to-beam-sync-a0fd168be14a)
-- Header sync – you can use a trusted checkpoint to start syncing from a more recent header and then leave it up to a background process to fill the gaps eventually
+To follow and verify current data in the network, the Ethereum client needs to sync with the latest network state. This is done by downloading data from peers, cryptographically verifying their integrity, and building a local blockchain database.
 
-You define the type of sync when you get set up, like so:
+Synchronization modes represent different approaches to this process with various trade-offs. Clients also vary in their implementation of sync algorithms. Always refer to the official documentation of your chosen client for specifics on implementation.
+
+#### Overview of strategies
+
+General overview of synchronization approaches used in Mainnet ready clients:
+
+##### Full sync
+
+Full syncs downloads all blocks (including headers, transactions, and receipts) and generates the state of the blockchain incrementally by executing every block from genesis.
+
+- Minimizes trust and offers the highest security by verifying every transaction.
+- With an increasing number of transactions, it can take days to weeks to process all transactions.
+
+##### Fast sync
+
+Fast sync downloads all blocks (including headers, transactions, and receipts), verifies all headers, downloads the state and verifies it against the headers.
+
+- Relies on the security of the consensus mechanism.
+- Synchronization takes only a few hours.
+
+##### Light sync
+
+Light client mode downloads all block headers, block data, and verifies some randomly. Only syncs tip of the chain from the trusted checkpoint.
+
+- Gets only the latest state while relying on trust in developers and consensus mechanism.
+- Client ready to use with current network state in a few minutes.
+
+[More on Light clients](https://www.parity.io/blog/what-is-a-light-client/)
+
+##### Snap sync
+
+Implemented by Geth. Using dynamic snapshots served by peers retrieves all the account and storage data without downloading intermediate trie nodes and then reconstructs the Merkle trie locally.
+
+- Fastest sync strategy developed by Geth, currently its default
+- Saves a lot of disk usage and network bandwidth without sacrificing security.
+
+[More on Snap](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
+
+##### Warp sync
+
+Implemented by OpenEthereum. Nodes regularly generate a consensus-critical state snapshot and any peer can fetch these snapshots over the network, enabling a fast sync from this point.
+
+- Fastest and default sync mode of OpenEthereum relies on static snapshots served by peers.
+- Similar strategy as snap sync but without certain security benefits.
+
+[More on Warp](https://openethereum.github.io/Beginner-Introduction#warping---no-warp)
+
+##### Beam sync
+
+Implemented by Nethermind and Trinity. Works like fast sync but also downloads the data needed to execute latest blocks, which allows you to query the chain within the first few minutes from starting.
+
+- Syncs state first and enables you to query RPC in a few minutes.
+- Still in development and not fully relyable, background sync is slowed down and RPC responses might fail.
+
+[More on Beam](https://medium.com/@jason.carver/intro-to-beam-sync-a0fd168be14a)
+
+#### Setup in client {#client-setup}
+
+Clients offer rich configuration options to suit your needs. Pick the one that suits you best based on the level of security, available data, and cost. Apart from the synchronization algorithm, you can also set pruning of different kinds of old data. Pruning enables deleting outdated data, e.g. removing state trie nodes that are unreachable from recent blocks.
+
+Pay attention to the client's documentation or help page to find out which sync mode is the default. You can define the preferred type of sync when you get set up, like so:
 
 **Setting up light sync in [GETH](https://geth.ethereum.org/) or [ERIGON](https://github.com/ledgerwatch/erigon)**
 
 `geth --syncmode "light"`
 
-For further details check the tutorial on [running Geth light node](/developers/tutorials/run-light-node-geth/).
+For further details, check out the tutorial on [running Geth light node](/developers/tutorials/run-light-node-geth/).
 
 **Setting up full sync with archive in [Besu](https://besu.hyperledger.org/)**
 
 `besu --sync-mode=FULL`
 
-Like any other configuration, it can be defined with the startup flag or in the config file. Another example is [Nethermind](https://docs.nethermind.io/nethermind/) which prompts you to choose sync mode during first initialization and creates config.
+Like any other configuration, it can be defined with the startup flag or in the config file. Another example is [Nethermind](https://docs.nethermind.io/nethermind/) which prompts you to choose a configuration during first initialization and creates a config file.
 
 ## Hardware {#hardware}
 

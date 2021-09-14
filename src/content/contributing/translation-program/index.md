@@ -97,6 +97,8 @@ Thank you for your participation in the ethereum.org Translation Program!
 
 **Communities**
 
+- [Language-specific Translation Groups](https://discord.gg/6WX7E97)
+  _– an initiative to connect ethereum.org translators into Translation Groups_
 - [Chinese translators group](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)
   _– Notion page for easier coordination between Chinese translators_
 
@@ -104,11 +106,11 @@ Thank you for your participation in the ethereum.org Translation Program!
 
 - [Content versions](/contributing/translation-program/content-versions/) _– Which pages are included in each content version of ethereum.org_
 
-## Eth2 Launchpad Translations {#eth2-launchpad}
+## Ethereum Staking Launchpad Translations {#staking-launchpad}
 
-Our translation community is also working on the [Eth2 Launchpad](https://launchpad.ethereum.org/en/). This allows anyone to set up an Ethereum validator and help secure the Ethereum network. The Launchpad is currently live in 15 languages.
+Our translation community is also working on the [Staking Launchpad](https://launchpad.ethereum.org/en/). This allows anyone to set up an Ethereum validator and help secure the Ethereum network. The Launchpad is currently live in 17 languages.
 
-If you're interested, [join the Eth2 Launchpad translation project on Crowdin](https://crowdin.com/project/launchpad-translation). You can [create an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose) on GitHub to request the addition of a new language, if your language is not available on Crowdin.
+If you're interested, [join the Ethereum Staking Launchpad translation project on Crowdin](https://crowdin.com/project/ethereum-staking-launchpad). You can [create an issue](https://github.com/ethereum/staking-launchpad/issues/new) on GitHub to request the addition of a new language, if your language is not available on Crowdin.
 
 ## In-progress translations {#in-progress}
 

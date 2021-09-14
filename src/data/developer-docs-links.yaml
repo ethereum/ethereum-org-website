@@ -123,6 +123,8 @@
               to: /developers/docs/standards/tokens/erc-20/
             - id: docs-nav-erc-721
               to: /developers/docs/standards/tokens/erc-721/
+    - id: docs-nav-mev
+      to: /developers/docs/mev/
     - id: docs-nav-oracles
       to: /developers/docs/oracles/
     - id: docs-nav-scaling

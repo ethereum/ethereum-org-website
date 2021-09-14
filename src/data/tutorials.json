@@ -1,14 +1,69 @@
 [
   {
-    "url": "https://docs.alchemy.com/alchemy/tutorials/how-to-create-an-nft/how-to-mint-a-nft",
-    "title": "How to Mint an NFT",
-    "description": "This tutorial describes how to mint an NFT on the Ethereum blockchain using Web 3",
-    "author": "Alchemy",
-    "authorGithub": "https://github.com/alchemyplatform",
-    "tags": ["solidity", "nfts"],
+    "url": "https://hardhat.org/tutorial/",
+    "title": "Hardhat's tutorial for beginners",
+    "description": "Hardhat's beginners guide to Ethereum contracts and dApp development",
+    "author": "Hardhat",
+    "authorGithub": "https://https://hardhat.org/",
+    "tags": ["hardhat", "solidity", "testing", "smart-contracts"],
     "skillLevel": "beginner",
-    "timeToRead": "10",
     "lang": "en",
-    "publishDate": "08/08/2021"
+    "publishDate": "06/22/2021"
+  },
+  {
+    "url": "https://dev.to/dabit3/the-complete-guide-to-full-stack-ethereum-development-3j13",
+    "title": "The Complete Guide to Full Stack Ethereum Development",
+    "description": "Building Full Stack dApps with React, Ethers.js, Solidity, and Hardhat",
+    "author": "Nader Dabit",
+    "authorGithub": "https://github.com/dabit3",
+    "tags": ["solidity", "hardhat", "ethers.js", "smart-contracts", "react"],
+    "skillLevel": "beginner",
+    "timeToRead": "18",
+    "lang": "en",
+    "publishDate": "08/25/2021"
+  },
+  {
+    "url": "https://github.com/austintgriffith/scaffold-eth/tree/simple-nft-example",
+    "title": "Simple NFT Example",
+    "description": "Build, mint, and send around your own ERC721!",
+    "author": "Austin Griffith",
+    "authorGithub": "https://github.com/austintgriffith",
+    "tags": ["solidity", "smart-contracts", "react"],
+    "skillLevel": "beginner",
+    "lang": "en",
+    "publishDate": "08/03/2021"
+  },
+  {
+    "url": "https://github.com/austintgriffith/scaffold-eth/tree/challenge-1-decentralized-staking",
+    "title": "Decentralized Staking App",
+    "description": "Build, test and ship your own decentralized staking app!",
+    "author": "Austin Griffith",
+    "authorGithub": "https://github.com/austintgriffith",
+    "tags": ["solidity", "smart-contracts", "react", "testing"],
+    "skillLevel": "beginner",
+    "lang": "en",
+    "publishDate": "08/15/2021"
+  },
+  {
+    "url": "https://blog.chain.link/fetch-current-crypto-price-data-solidity/",
+    "title": "How to Fetch the Current Price of Ethereum in Solidity",
+    "description": "Learn how to fetch the current price of Bitcoin, Ethereum and other cryptocurrencies in your Solidity smart contracts.",
+    "author": "Harry Papacharissiou",
+    "authorGithub": "https://github.com/kwsantiago",
+    "tags": ["solidity", "oracles"],
+    "skillLevel": "beginner",
+    "lang": "en",
+    "publishDate": "01/05/2021"
+  },
+  {
+    "url": "https://blog.chain.link/fetch-current-crypto-price-data-solidity/",
+    "title": "How to Fetch the Current Price of Ethereum in Solidity",
+    "description": "Learn how to fetch the current price of Bitcoin, Ethereum and other cryptocurrencies in your Solidity smart contracts.",
+    "author": "Harry Papacharissiou",
+    "authorGithub": "https://github.com/kwsantiago",
+    "tags": ["solidity", "oracles"],
+    "skillLevel": "beginner",
+    "lang": "en",
+    "publishDate": "01/05/2021"
   }
 ]

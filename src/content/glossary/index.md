@@ -35,6 +35,10 @@ both from outside the blockchain and for contract-to-contract interactions.
 
 <DocLink to="/developers/docs/smart-contracts/compiling/#web-applications" title="ABI" />
 
+### application programming interface {#api}
+
+An Application Programming Interface (API) is a set of definitions for how to use a piece of software. An API sits between an application and a web server, and facilitates the transfer of data between them.
+
 ### assert {#assert}
 
 In [Solidity](#solidity), `assert(false)` compiles to `0xfe`, an invalid opcode, which uses up all remaining [gas](#gas) and reverts all changes. When an `assert()` statement fails, something very wrong and unexpected is happening, and you will need to fix your code. You should use `assert()` to avoid conditions that should never, ever occur.
@@ -451,8 +455,6 @@ A software client that participates in the network.
 
 <DocLink to="/developers/docs/nodes-and-clients/" title="Nodes and Clients" />
 
-<DocLink to="/developers/docs/nodes-and-clients/" title="Nodes and Clients" />
-
 ### nonce {#nonce}
 
 In cryptography, a value that can only be used once. There are two types of nonce used in Ethereum- an account nonce is a transaction counter in each account, which is used to prevent replay attacks; a [proof-of-work](#pow) nonce is the random value in a block that was used to satisfy the [proof-of-work](#pow).
@@ -657,7 +659,7 @@ A concept named after English mathematician and computer scientist Alan Turing- 
 
 A [node](#node) in a [proof-of-stake](#proof-of-stake) system responsible for storing data, processing transactions, and adding new blocks to the blockchain. To active validator software, you need to be able to [stake](#staking) 32 ETH.
 
-<DocLink to="/developers/docs/consenus-mechanisms/pos" title="Proof of stake" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos" title="Proof of stake" />
 <DocLink to="/eth2/staking/" title="Staking in Ethereum" />
 
 ### Validity proof {#validity-proof}
