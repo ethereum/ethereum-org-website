@@ -4774,6 +4774,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "horacio",
+      "name": "Horacio Bertorello",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7662728?v=4",
+      "profile": "http://horacio.eth",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
