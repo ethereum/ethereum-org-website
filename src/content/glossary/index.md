@@ -30,7 +30,7 @@ Most generally, this represents an [EOA](#eoa) or [contract](#contract-accouint)
 
 ### application programming interface
 
-An API is a set of definitions and protocols for building and integrating application software. API stands for application programming interface.
+An Application Programming Interface (API) is a set of definitions for how to use a piece of software. An API sits between an application and a web server, and facilitates the transfer of data between them.
 
 ### application binary interface (ABI) {#abi}
 
