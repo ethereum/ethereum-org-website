@@ -10,24 +10,34 @@
   items:
     - id: docs-nav-intro-to-ethereum
       to: /developers/docs/intro-to-ethereum/
+      description: docs-nav-intro-to-ethereum-description
     - id: docs-nav-intro-to-ether
       to: /developers/docs/intro-to-ether/
+      description: docs-nav-intro-to-ether-description
     - id: docs-nav-intro-to-dapps
       to: /developers/docs/dapps/
+      description: docs-nav-intro-to-dapps-description
     - id: docs-nav-web2-vs-web3
       to: /developers/docs/web2-vs-web3/
+      description: docs-nav-web2-vs-web3-description
     - id: docs-nav-accounts
       to: /developers/docs/accounts/
+      description: docs-nav-accounts-description
     - id: docs-nav-transactions
       to: /developers/docs/transactions/
+      description: docs-nav-transactions-description
     - id: docs-nav-blocks
       to: /developers/docs/blocks/
+      description: docs-nav-blocks-description
     - id: docs-nav-evm
       to: /developers/docs/evm/
+      description: docs-nav-evm-description
     - id: docs-nav-gas
       to: /developers/docs/gas/
+      description: docs-nav-gas-description
     - id: docs-nav-nodes-and-clients
       to: /developers/docs/nodes-and-clients/
+      description: docs-nav-nodes-and-clients-description
       items:
         - id: docs-nav-run-a-node
           to: /developers/docs/nodes-and-clients/run-a-node/
@@ -35,8 +45,10 @@
           to: /developers/docs/nodes-and-clients/nodes-as-a-service/
     - id: docs-nav-networks
       to: /developers/docs/networks/
+      description: docs-nav-networks-description
     - id: docs-nav-consensus-mechanisms
       to: /developers/docs/consensus-mechanisms/
+      description: docs-nav-consensus-mechanisms-description
       items:
         - id: docs-nav-proof-of-work
           to: /developers/docs/consensus-mechanisms/pow/
@@ -50,8 +62,10 @@
   items:
     - id: docs-nav-intro-to-the-stack
       to: /developers/docs/ethereum-stack/
+      description: docs-nav-intro-to-the-stack-description
     - id: docs-nav-smart-contracts
       to: /developers/docs/smart-contracts/
+      description: docs-nav-smart-contracts-description
       items:
         - id: docs-nav-smart-contract-languages
           to: /developers/docs/smart-contracts/languages/
@@ -69,10 +83,13 @@
           to: /developers/docs/smart-contracts/composability/
     - id: docs-nav-development-networks
       to: /developers/docs/development-networks/
+      description: docs-nav-development-networks-description
     - id: docs-nav-development-frameworks
       to: /developers/docs/frameworks/
+      description: docs-nav-development-frameworks-description
     - id: docs-nav-ethereum-client-apis
       path: /developers/docs/apis/
+      description: docs-nav-ethereum-client-apis-description
       items:
         - id: docs-nav-java-script-apis
           to: /developers/docs/apis/javascript/
@@ -82,17 +99,22 @@
           to: /developers/docs/apis/json-rpc/
     - id: docs-nav-data-and-analytics
       to: /developers/docs/data-and-analytics/
+      description: docs-nav-data-and-analytics-description
       items:
         - id: docs-nav-block-explorers
           to: /developers/docs/data-and-analytics/block-explorers/
     - id: docs-nav-security
       to: /developers/docs/security/
+      description: docs-nav-security-description
     - id: docs-nav-storage
       to: /developers/docs/storage/
+      description: docs-nav-storage-description
     - id: docs-nav-integrated-development-environments-ides
       to: /developers/docs/ides/
+      description: docs-nav-integrated-development-environments-ides-description
     - id: docs-nav-programming-languages
       to: /developers/docs/programming-languages/
+      description: docs-nav-programming-languages-description
       items:
         - id: docs-nav-dart
           to: /developers/docs/programming-languages/dart/
@@ -115,6 +137,7 @@
   items:
     - id: docs-nav-standards
       to: /developers/docs/standards/
+      description: docs-nav-standards-description
       items:
         - id: docs-nav-token-standards
           to: /developers/docs/standards/tokens/
@@ -125,10 +148,13 @@
               to: /developers/docs/standards/tokens/erc-721/
     - id: docs-nav-mev
       to: /developers/docs/mev/
+      description: docs-nav-mev-description
     - id: docs-nav-oracles
       to: /developers/docs/oracles/
+      description: docs-nav-oracles-description
     - id: docs-nav-scaling
       to: /developers/docs/scaling/
+      description: docs-nav-scaling-description
       items:
         - id: docs-nav-scaling-layer-2
           to: /developers/docs/scaling/layer-2-rollups/

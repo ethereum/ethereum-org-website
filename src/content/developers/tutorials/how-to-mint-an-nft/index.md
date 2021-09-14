@@ -140,7 +140,7 @@ PUBLIC_KEY = "your-public-account-address"
 
 First, let’s define a function named `mintNFT(tokenData)` and create our transaction by doing the following:
 
-1. Grab your *PRIVATE_KEY* and *PUBLIC_KEY* from the `.env` file.
+1. Grab your _PRIVATE_KEY_ and _PUBLIC_KEY_ from the `.env` file.
 
 1. Next, we’ll need to figure out the account nonce. The nonce specification is used to keep track of the number of transactions sent from your address — which we need for security purposes and to prevent [replay attacks](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce). To get the number of transactions sent from your address, we use [getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount).
 
