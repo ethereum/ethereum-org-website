@@ -166,6 +166,15 @@ const LearningToolsPage = ({ data }) => {
       background: "#111F29",
       subjects: ["Solidity", "web3"],
     },
+    {
+      name: "_buildspace",
+      description: "page-learning-tools-buildspace-description",
+      url: "https://buildspace.so",
+      image: data.buildspace.childImageSharp.fixed,
+      alt: "page-learning-tools-buildspace-logo-alt",
+      background: "#F6F7F9",
+      subjects: ["Solidity", "web3"],
+    },
   ]
 
   return (
@@ -304,6 +313,9 @@ export const query = graphql`
       ...learningToolImage
     }
     lambdaschool: file(relativePath: { eq: "dev-tools/lambdaschool.png" }) {
+      ...learningToolImage
+    }
+    buildspace: file(relativePath: { eq: "dev-tools/buildspace.png" }) {
       ...learningToolImage
     }
     cryptoZombie: file(relativePath: { eq: "dev-tools/crypto-zombie.png" }) {
