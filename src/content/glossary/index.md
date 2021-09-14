@@ -35,6 +35,10 @@ both from outside the blockchain and for contract-to-contract interactions.
 
 <DocLink to="/developers/docs/smart-contracts/compiling/#web-applications" title="ABI" />
 
+### application programming interface {#api}
+
+An Application Programming Interface (API) is a set of definitions for how to use a piece of software. An API sits between an application and a web server, and facilitates the transfer of data between them.
+
 ### assert {#assert}
 
 In [Solidity](#solidity), `assert(false)` compiles to `0xfe`, an invalid opcode, which uses up all remaining [gas](#gas) and reverts all changes. When an `assert()` statement fails, something very wrong and unexpected is happening, and you will need to fix your code. You should use `assert()` to avoid conditions that should never, ever occur.
