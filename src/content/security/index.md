@@ -35,7 +35,7 @@ Example of a strong password: ymv\*azu.EAC8eyp8umf
 
 ### Use unique passwords for everything
 
-A strong password doesn't provide as much protection if the password is revealed in a data breach. The website [Have I Been Pwned](<notion://www.notion.so/efdn/%5B%3Chttps://haveibeenpwned.com/%3E%5D(%3Chttps://haveibeenpwned.com/%3E)>) allows you to check if your accounts were involved in any data breaches stored in their database. If they have, **you should change pwned passwords immediately**. Using unique passwords for every account lowers the risk of hackers getting access to all of your accounts when one of your passwords is compromised.
+A strong password doesn't provide as much protection if the password is revealed in a data breach. The website [Have I Been Pwned](https://haveibeenpwned.com) allows you to check if your accounts were involved in any data breaches stored in their database. If they have, **you should change pwned passwords immediately**. Using unique passwords for every account lowers the risk of hackers getting access to all of your accounts when one of your passwords is compromised.
 
 ### Use a password manager
 
