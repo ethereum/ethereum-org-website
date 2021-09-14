@@ -28,16 +28,16 @@ An object containing an [address](#address), balance, [nonce](#nonce), and optio
 
 Most generally, this represents an [EOA](#eoa) or [contract](#contract-accouint) that can receive (destination address) or send (source address) [transactions](#transaction) on the blockchain. More specifically, it is the rightmost 160 bits of a [Keccak hash](#keccak-256) of an [ECDSA](#ecdsa) [public key](#public-key).
 
-### application programming interface
-
-An Application Programming Interface (API) is a set of definitions for how to use a piece of software. An API sits between an application and a web server, and facilitates the transfer of data between them.
-
 ### application binary interface (ABI) {#abi}
 
 The standard way to interact with [contracts](#contract-account) in the Ethereum ecosystem,
 both from outside the blockchain and for contract-to-contract interactions.
 
 <DocLink to="/developers/docs/smart-contracts/compiling/#web-applications" title="ABI" />
+
+### application programming interface {#api}
+
+An Application Programming Interface (API) is a set of definitions for how to use a piece of software. An API sits between an application and a web server, and facilitates the transfer of data between them.
 
 ### assert {#assert}
 
@@ -126,10 +126,6 @@ A crosslink provides a summary of a shard's state. It's how [shard](#shard) chai
 <Divider />
 
 ## D {#section-d}
-
-### DAG
-
-DAG stands for Directed Acyclic Graph and without going into too many details, it is a crucial file in ETH and ETC mining. DAG file size grows over time, exactly every 30.000 blocks (Ethereum) or every 100 hours to be precise.
 
 ### Decentralized Autonomous Organization (DAO) {#dao}
 
