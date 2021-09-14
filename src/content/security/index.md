@@ -45,9 +45,10 @@ Remembering strong, unique passwords for every account you have isn't ideal. A p
 
 #### Try a password manager:
 
-- [LastPass](<[https://www.lastpass.com/](https://www.lastpass.com/)>)
-- [1Password](<[https://1password.com/](https://1password.com/)>)
-- [KeePass](<[https://keepass.info/](https://keepass.info/)>)
+- [Bitwarden](https://bitwarden.com/)
+- [KeePass](https://keepass.info/)
+- [LastPass](https://www.lastpass.com/)
+- [1Password](https://1password.com/)
 
 ### Use Two-Factor Authentication
 
