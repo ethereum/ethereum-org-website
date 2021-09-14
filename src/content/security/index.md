@@ -17,17 +17,17 @@ With interest in cryptocurrencies growing exponentially, learning best practices
 
 Over 80% of account hacks are a result of weak or stolen passwords. A long combination of characters, numbers and symbols is best to keep your accounts secure.
 
-A common mistake individuals make is using a long combination of common dictionary words. Passwords like this are insecure because they are prone to a simple hacking technique known as a [dictionary attack](<[https://en.wikipedia.org/wiki/Dictionary_attack](https://en.wikipedia.org/wiki/Dictionary_attack)>).
+A common mistake individuals make is using a combination of two to three common, related dictionary words. Passwords like this are insecure because they are prone to a simple hacking technique known as a [dictionary attack](<[https://en.wikipedia.org/wiki/Dictionary_attack](https://en.wikipedia.org/wiki/Dictionary_attack)>).
 
 ```md
-Example of a weak password: FluffyKittens!
+Example of a weak password: CuteFluffyKittens!
 
 Example of a strong password: ymv\*azu.EAC8eyp8umf
 ```
 
 #### Good password practices:
 
-- Make passwords **at least** 12 characters long
+- Make passwords as long as allowed by either your password generator or the form you're filling out.
 - Use a mixture of uppercase, lowercase, numbers and symbols
 - Avoid common dictionary words
 
@@ -38,6 +38,12 @@ Example of a strong password: ymv\*azu.EAC8eyp8umf
 A strong password doesn't provide as much protection if the password is revealed in a data breach. The website [Have I Been Pwned](https://haveibeenpwned.com) allows you to check if your accounts were involved in any data breaches stored in their database. If they have, **you should change pwned passwords immediately**. Using unique passwords for every account lowers the risk of hackers getting access to all of your accounts when one of your passwords is compromised.
 
 ### Use a password manager
+
+<InfoBanner emoji=":bulb:">
+  <div>
+    Using a password manager takes care of creating strong, unique passwords and remembering them! We <strong>strongly</strong> recommend using one.
+  </div>
+</InfoBanner>
 
 Remembering strong, unique passwords for every account you have isn't ideal. A password manager offers a secure, encrypted store for all your passwords that you can access through one strong master password. They also suggest strong passwords when signing up for a new service, so you don't have to create your own. Many password managers will also tell you if you have been involved in a data breach, allowing you to change the passwords before any malicious attacks.
 
@@ -52,7 +58,13 @@ Remembering strong, unique passwords for every account you have isn't ideal. A p
 
 ### Use Two-Factor Authentication
 
-Using **Two-Factor Authentication (2FA)** provides an additional *security factor* for your online accounts so that knowing your password alone is not enough to access an account. Most commonly, this is a randomised 6-digit code that you can access through an authenticator app.
+To prove you are you there are different unique proofs that can be used for authentication. These are known as factors and the three main factors are:
+
+- something you know (your password)
+- something you are (such as a fingerprint or iris scanner)
+- and something you own (a security key)
+
+Using **Two-Factor Authentication (2FA)** provides an additional *security factor* for your online accounts so that knowing your password alone (something you know) is not enough to access an account. Most commonly, the second factor is a randomised 6-digit code (something you own) that you can access through an authenticator app such as Google Authenticator or Authy. These work as a "something you own" factor because the seed is stored on your device.
 
 <InfoBanner emoji=":lock:">
   <div>
@@ -68,7 +80,9 @@ Using **Two-Factor Authentication (2FA)** provides an additional *security fa
   </div>
 </InfoBanner>
 
-[More on 2FA](<[https://authy.com/what-is-2fa/](https://authy.com/what-is-2fa/)>)
+Watch more on the 2FA:
+
+<iframe width="100%" height="315px" src="https://www.youtube.com/embed/m8jlnZuV1i4?start=3479&end=3875" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Uninstall browser extentions
 
@@ -209,6 +223,7 @@ These fraudulent brokers find their targets by using fake accounts on YouTube to
 
 ### Crypto Security
 
+- [Crypto Security: Passwords and Authentication](https://www.youtube.com/watch?v=m8jlnZuV1i4)
 - [4 Ways to Stay Safe in Crypto](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/)
 
 ### Scams to be aware of
