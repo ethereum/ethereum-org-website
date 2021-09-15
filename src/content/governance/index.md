@@ -11,6 +11,10 @@ _If no one owns Ethereum, how are decisions about past and future changes to Eth
 
 <Divider />
 
+## What is Governance? {#what-is-governance}
+
+Governance is the systems in place that allow decisions to be made. In a typical organizational structure, the executive team or a board of directors may have the final say in decision-making. Or perhaps shareholders vote on proposals to enact change. In a political system, elected officials may enact legislation that attempts to represent their constituents' desires.
+
 ## Decentralized Governance {#decentalized-governance}
 
 Governance is the systems in place that allow decisions to be made. In a typical organizational structure, the executive team or a board of directors may have the final say in decision-making. Or perhaps shareholders vote on proposals to enact change. In a political system, elected officials may enact legislation that attempts to represent their constituents' desires.
