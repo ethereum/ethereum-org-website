@@ -114,7 +114,7 @@ One of the biggest reasons people get scammed in crypto generally is a lack of u
 
 **Never, for anyone reason, hand out your private keys!**
 
-The private key to your wallet acts as your digital signature. It is the only thing stopping someone who knows your wallet address from draining your account of all of its funds!
+The private key to your wallet acts as your digital signature. It is the only thing stopping someone who knows your wallet address from draining your account of all of its assets!
 
 ### Use a Hardware Wallet
 
