@@ -1,5 +1,5 @@
 ---
-title: Decentralized autonomous organisations (DAOs)
+title: Decentralized autonomous organizations (DAOs)
 description: An overview of DAOs on Ethereum
 lang: en
 template: use-cases
@@ -105,7 +105,14 @@ Ethereum is the perfect foundation for DAOs for a number of reasons:
 
 ## Further reading {#further-reading}
 
+### DAO Articles {#dao-articles}
+
 - [What's a DAO?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
 - [House of DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [What is a DAO and what is it for?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [How to Start a DAO-Powered Digital Community](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
+- [What is a DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
+
+### Videos {#videos}
+
+- [What is a DAO in crypto?](https://youtu.be/KHm0uUPqmVE)

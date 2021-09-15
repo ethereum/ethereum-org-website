@@ -29,7 +29,7 @@ Both account types have the ability to:
 
 - Creating an account costs nothing
 - Can initiate transactions
-- Transactions between externally-owned accounts can only be ETH transfers
+- Transactions between externally-owned accounts can only be ETH/token transfers
 
 **Contract**
 
@@ -126,7 +126,7 @@ For dapp development, you'll want access to dummy accounts with test ETH so you 
 
 ## A note on wallets {#a-note-on-wallets}
 
-An account is not a wallet. A wallet is the keypair associated with a user-owned account, which allow a user to make transactions from or manage the account.
+An account is not a wallet. A wallet is the keypair associated with a user-owned account, which allows a user to make transactions from or manage the account.
 
 ## A visual demo {#a-visual-demo}
 

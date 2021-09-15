@@ -14,8 +14,8 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~2021">
-    Lanțurile de fragmente ar trebui să fie livrate în 2021, în funcție de cât de repede progresează munca după lansarea <a href="/en/eth2/beacon-chain/">lanțului Beacon</a>. Aceste fragmente vor oferi Ethereum mai multă capacitate de stocare și acces la date, dar nu vor fi utilizate pentru executarea de cod. Detaliile despre aceasta sunt încă în curs de analiză.
+<UpgradeStatus date="~2022">
+    Lanțurile de fragmente ar trebui să fie livrate în 2022, în funcție de cât de repede progresează munca după lansarea <a href="/eth2/beacon-chain/">lanțului Beacon</a>. Aceste fragmente vor oferi Ethereum mai multă capacitate de stocare și acces la date, dar nu vor fi utilizate pentru executarea de cod. Detaliile despre aceasta sunt încă în curs de analiză.
 </UpgradeStatus>
 
 ## Ce este fragmentarea? {#what-is-sharding}
@@ -48,7 +48,7 @@ Când vor fi livrate primele lanțuri de fragmente, acestea vor furniza doar dat
 
 Rollup-urile sunt o tehnologie de „nivel 2” care există astăzi. Acestea permit aplicațiilor descentralizate (dapps) să grupeze („roll up”) tranzacții într-o singură tranzacție în afara lanțului, să genereze o dovadă criptografică și apoi să o trimită lanțului. Acest lucru reduce datele necesare executării unei tranzacții. Combină acest lucru cu disponibilitatea tuturor datelor suplimentare oferită de fragmente și obții 100.000 de tranzacții pe secundă.
 
-[Mai multe despre rollup-uri](/developers/docs/layer-2-scaling/)
+[Mai multe despre rollup-uri](/developers/docs/scaling/layer-2-rollups/)
 
 ## Lanțuri de fragmente versiunea 2: executarea codului {#code-execution}
 
@@ -56,7 +56,9 @@ Planul a fost întotdeauna de a adăuga funcționalități suplimentare fragment
 
 ### Fragmentele trebuie să execute cod? {#do-shards-need-code-execution}
 
-Vitalik Buterin, când a vorbit pe podcast-ul Bankless, a prezentat 3 opțiuni potențiale care merită discutate. <iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Vitalik Buterin, când a vorbit pe podcast-ul Bankless, a prezentat 3 opțiuni potențiale care merită discutate.
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
 
 #### 1. Executarea stării nu este necesară {#state-execution-not-needed}
 
@@ -84,11 +86,15 @@ Actualizările Eth2 sunt oarecum interdependente. Să recapitulăm legătura din
 
 ### Fragmentele și lanțul Beacon {#shards-and-beacon-chain}
 
-Lanțul Beacon conține toată logica pentru păstrarea fragmentelor în siguranță și sincronizate. Lanțul Beacon va coordona stakerii din rețea, atribuindu-le fragmente la care trebuie să lucreze. Și va facilita, de asemenea, comunicarea între fragmente prin primirea și stocarea datelor de tranzacție a fragmentelor la care pot avea acces alte fragmente. Aceasta va oferi fragmentelor un instantaneu al stării Ethereum pentru a menține totul la zi.<ButtonLink to="/eth2/beacon-chain/">Lanțul Beacon</ButtonLink>
+Lanțul Beacon conține toată logica pentru păstrarea fragmentelor în siguranță și sincronizate. Lanțul Beacon va coordona stakerii din rețea, atribuindu-le fragmente la care trebuie să lucreze. Și va facilita, de asemenea, comunicarea între fragmente prin primirea și stocarea datelor de tranzacție a fragmentelor la care pot avea acces alte fragmente. Aceasta va oferi fragmentelor un instantaneu al stării Ethereum pentru a menține totul la zi.
+
+<ButtonLink to="/eth2/beacon-chain/">Lanțul Beacon</ButtonLink>
 
 ### Fragmentele și andocarea {#shards-and-docking}
 
-Rețeaua principală Ethereum va exista așa cum există astăzi chiar și după introducerea fragmentelor. Cu toate acestea, la un moment dat, rețeaua principală va trebui să devină un fragment, astfel încât să poată face tranziția la mizare. Rămâne de văzut dacă rețeaua principală va exista ca singurul fragment „inteligent” care poate gestiona executarea de cod - dar în orice caz, în faza 2 a fragmentării, va trebui să se ia o decizie cu privire la aceasta.<ButtonLink to="/eth2/merge/">Andocarea</ButtonLink>
+Rețeaua principală Ethereum va exista așa cum există astăzi chiar și după introducerea fragmentelor. Cu toate acestea, la un moment dat, rețeaua principală va trebui să devină un fragment, astfel încât să poată face tranziția la mizare. Rămâne de văzut dacă rețeaua principală va exista ca singurul fragment „inteligent” care poate gestiona executarea de cod - dar în orice caz, în faza 2 a fragmentării, va trebui să se ia o decizie cu privire la aceasta.
+
+<ButtonLink to="/eth2/merge/">Andocarea</ButtonLink>
 
 <Divider />
 

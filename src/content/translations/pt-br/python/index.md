@@ -27,7 +27,7 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 
 ## Artigos para Iniciantes {#beginner-articles}
 
-- [Uma Introdução aos Smart Contracts com Vyper](https://kauri.io/article/af913a853eaf4db88627b3ff9572b770/v1/an-introduction-to-smart-contracts-with-vyper)
+- [Uma Introdução aos Smart Contracts com Vyper](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [Como desenvolver um contrato Ethereum utilizando Python Flask?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Intro para Web3.py · Ethereum para desenvolvedores Python](https://www.dappuniversity.com/articles/web3-py-intro)
 - [Como chamar uma função do Smart Contract utilizando Python e web3.py](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
@@ -41,8 +41,8 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 
 ## Padrões de uso avançado {#advanced-use-patterns}
 
-- [Compilando, implantando e chamando Smart Contracts Ethereum utilizando Python](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [Analisando Smart Contracts em Solidity usando Slither](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
+- [Compilando, implantando e chamando Smart Contracts Ethereum utilizando Python](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
+- [Analisando Smart Contracts em Solidity usando Slither](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 
 ## Projetos e Ferramentas em Python {#python-projects-and-tools}
 

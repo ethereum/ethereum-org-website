@@ -7,13 +7,21 @@
     "version": 1.1,
     "language": "العربية"
   },
+  "bg": {
+    "version": 2.0,
+    "language": "български"
+  },
   "bn": {
     "version": 1.1,
     "language": "বাংলা"
   },
+  "ca": {
+    "version": 2.0,
+    "language": "Català"
+  },
   "cs": {
     "version": 1.1,
-    "language": "čeština"
+    "language": "Čeština"
   },
   "de": {
     "version": 2.0,
@@ -24,7 +32,7 @@
     "language": "Ελληνικά"
   },
   "es": {
-    "version": 2.0,
+    "version": 2.1,
     "language": "Español"
   },
   "fa": {
@@ -36,7 +44,7 @@
     "language": "Suomi"
   },
   "fr": {
-    "version": 1.1,
+    "version": 2.1,
     "language": "Français"
   },
   "hi": {
@@ -48,7 +56,7 @@
     "language": "Hrvatski"
   },
   "hu": {
-    "version": 2.0,
+    "version": 2.1,
     "language": "Magyar"
   },
   "id": {
@@ -60,11 +68,11 @@
     "language": "Ibo"
   },
   "it": {
-    "version": 2.0,
+    "version": 2.1,
     "language": "Italiano"
   },
   "ja": {
-    "version": 1.1,
+    "version": 2.0,
     "language": "日本語"
   },
   "ko": {
@@ -76,7 +84,7 @@
     "language": "Lietuvis"
   },
   "ml": {
-    "version": 1.1,
+    "version": 2.0,
     "language": "മലയാളം"
   },
   "nl": {
@@ -85,10 +93,10 @@
   },
   "nb": {
     "version": 1.1,
-    "language": "norsk"
+    "language": "Norsk"
   },
   "pl": {
-    "version": 1.0,
+    "version": 2.2,
     "language": "Polski"
   },
   "pt": {
@@ -104,7 +112,7 @@
     "language": "Română"
   },
   "ru": {
-    "version": 1.0,
+    "version": 2.0,
     "language": "Pусский"
   },
   "se": {
@@ -116,15 +124,15 @@
     "language": "Slovenský"
   },
   "sl": {
-    "version": 1.0,
-    "language": "Slovenija"
+    "version": 2.0,
+    "language": "Slovenščina"
   },
   "tr": {
-    "version": 1.1,
+    "version": 2.0,
     "language": "Türkçe"
   },
   "uk": {
-    "version": 1.1,
+    "version": 2.0,
     "language": "Українська"
   },
   "vi": {
@@ -132,7 +140,7 @@
     "language": "Tiếng Việt"
   },
   "zh": {
-    "version": 1.1,
+    "version": 2.2,
     "language": "简体中文"
   },
   "zh-tw": {

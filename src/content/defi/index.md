@@ -386,6 +386,7 @@ todo -->
 
 - [Finematics - decentralized finance education](https://finematics.com/) – _Videos on DeFi_
 - [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) - _DeFi basics: Everything you need to know to get started in this occasionally baffling space._
+- [Whiteboard Crypto](https://youtu.be/17QRFlml4pA) _What is DeFi?_
 
 ### Communities {#communities}
 

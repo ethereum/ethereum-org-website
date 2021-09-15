@@ -1,10 +1,10 @@
 id,name,url,brand_color,has_mobile,has_desktop,has_web,has_hardware,has_card_deposits,has_explore_dapps,has_defi_integrations,has_bank_withdrawals,has_limits_protection,has_high_volume_purchases,has_multisig,has_dex_integrations
 trust,Trust,https://trustwallet.com/,#FFF,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE
-argent,Argent,https://www.argent.xyz/,#FF875B,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE
+argent,Argent,https://www.argent.xyz/,#FFF,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE
 dharma,Dharma,https://www.dharma.io/,#FFF,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE
 imtoken,imToken,https://token.im/,#FFF,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
 portis,Portis,https://www.portis.io/,#FFF,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
-metamask,MetaMask,https://metamask.io/,#FFF,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE
+metamask,MetaMask,https://metamask.io/,#FFF,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE
 gnosis,Gnosis Safe,https://gnosis-safe.io/,#FFF,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE
 torus,Torus,https://toruswallet.io/,#FFF,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
 coinbase,Coinbase Wallet,https://wallet.coinbase.com/,#FFF,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
@@ -27,7 +27,11 @@ dcent,D'CENT,https://dcentwallet.com/,#FFF,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE
 fortmatic,Fortmatic,https://fortmatic.com/,#FFF,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
 unstoppable,Unstoppable,https://unstoppable.money/,#000,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
 guarda,Guarda Wallet,https://guarda.com/,#FFF,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE
-linen,Linen,https://linen.app/,#FFF,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE
+linen,Linen,https://linen.app/,#FFF,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE
 coinomi,Coinomi,https://www.coinomi.com/en/,#11b8ef,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE
 walleth,WallETH,https://walleth.org,#FFF,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 samsung,Samsung Blockchain Wallet,https://www.samsung.com/global/galaxy/apps/samsung-blockchain/,#FFF,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+bitcoindotcom,Bitcoin.com Wallet,https://wallet.bitcoin.com/,#FFF,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE
+safepal,SafePal,https://safepal.io/,#3F37FF,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
+opera,Opera browser,https://www.opera.com/crypto,#FFFFFF,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+coin98,Coin98 Wallet,https://coin98.com/wallet,#FFFFFF,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE

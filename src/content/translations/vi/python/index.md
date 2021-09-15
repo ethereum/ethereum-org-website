@@ -27,7 +27,7 @@ Cần một hướng dẫn cơ bản hơn? Tham khảo [ethereum.org/learn](/vi/
 
 ## Bài viết cho người mới bắt đầu {#beginner-articles}
 
-- [Giới thiệu về Hợp đồng thông minh với Vyper](https://kauri.io/article/af913a853eaf4db88627b3ff9572b770/v1/an-introduction-to-smart-contracts-with-vyper)
+- [Giới thiệu về Hợp đồng thông minh với Vyper](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [Phát triển hợp đồng Ethereum bằng Python Flask như thế nào?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Giới thiệu về Web3.py · Ethereum dành cho nhà phát triển Python](https://www.dappuniversity.com/articles/web3-py-intro)
 - [Cách gọi chức năng Hợp đồng thông minh bằng Python và web3.py](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
@@ -41,8 +41,8 @@ Cần một hướng dẫn cơ bản hơn? Tham khảo [ethereum.org/learn](/vi/
 
 ## Các mẫu sử dụng nâng cao {#advanced-use-patterns}
 
-- [Biên dịch, triển khai và gọi hợp đồng thông minh Ethereum bằng Python](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [Phân tích Hợp đồng thông minh Solidity với Slither](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
+- [Biên dịch, triển khai và gọi hợp đồng thông minh Ethereum bằng Python](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
+- [Phân tích Hợp đồng thông minh Solidity với Slither](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 
 ## Các dự án và công cụ Python {#python-projects-and-tools}
 

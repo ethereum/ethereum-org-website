@@ -21,7 +21,7 @@ than another Token from the same Smart Contract, maybe due to its age, rarity or
 Wait, visual?
 
 Yes! All NFTs have a `uint256` variable called `tokenId`, so for any ERC-721 Contract, the pair
-`contract address, uint256 tokenId` must be globally unique. Said that a dApp can have a "converter" that
+`contract address, uint256 tokenId` must be globally unique. That said, a dApp can have a "converter" that
 uses the `tokenId` as input and outputs an image of something cool, like zombies, weapons, skills or amazing kitties!
 
 ## Prerequisites {#prerequisites}

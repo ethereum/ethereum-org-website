@@ -18,7 +18,7 @@ _The Ethereum Foundation is sponsoring a wave of Eth2 staking community grants. 
 
 Calling all those interested in building up the Eth2 staking and validator community!
 
-Eth2 is happening! The mainnet [deposit contract address](/eth2/deposit-contract/) is deployed. And [genesis of the Beacon Chain](https://hackmd.io/@benjaminion/genesis) is [right around the corner](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/). Which means, stakers are gearing up to stake.
+Eth2 is happening! The Mainnet [deposit contract address](/eth2/deposit-contract/) is deployed. And [genesis of the Beacon Chain](https://hackmd.io/@benjaminion/genesis) is [right around the corner](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/). Which means, stakers are gearing up to stake.
 
 The Ethereum Foundation is funding the creation of tools, documentation, and resources to make for a delightful staking and validator experience. While the spirited staker ecosystem has already made great progress with respect to public good community resources, we are still in the early days and there's more work to do!
 
@@ -161,7 +161,7 @@ title="Data analysis and visualisation">
 
    <p>For example:</p>
    <ul>
-    <li>Consider applying <a href="https://www.notion.so/69fe10ffe83748bc87faa0e2586ba857">Medalla Data Challenge wishlist</a> ideas to mainnet with enhanced scripts, extended analysis, or live monitoring.</li>
+    <li>Consider applying <a href="https://www.notion.so/69fe10ffe83748bc87faa0e2586ba857">Medalla Data Challenge wishlist</a> ideas to Mainnet with enhanced scripts, extended analysis, or live monitoring.</li>
     <li>Simplify, through tutorials or tools, collection of network attestation data.</li>
     <li>Build support tools for live insights and visualisations into the network.</li>
     <li>Use rumor agents to analyze and/or visualize gossip subnets in real time.</li>
@@ -253,7 +253,7 @@ contentPreview="You need to use the dedicated launchpad product."
 title="How do I start staking?">
 
    <p>
-    If you're new to staking, we encourage you to practice first on a testnet before moving to mainnet. Follow the steps to set up a validator on the Medalla testnet via <a href="https://medalla.launchpad.ethereum.org/">the Medalla launchpad</a>.
+    If you're new to staking, we encourage you to practice first on a testnet before moving to Mainnet. Follow the steps to set up a validator on the Medalla testnet via <a href="https://medalla.launchpad.ethereum.org/">the Medalla launchpad</a>.
    </p>
    <p>
     Once you're ready for real ETH, head on over to <a href="http://launchpad.ethereum.org/">the Eth2 launchpad</a> to set up your Eth2 validator.

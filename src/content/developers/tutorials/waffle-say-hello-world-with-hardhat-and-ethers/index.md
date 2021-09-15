@@ -130,7 +130,7 @@ Waffle tests use Mocha (a test framework) with Chai (an assertion library). All 
 ✓ Should return the new greeting once it's changed
 ```
 
-### Everything looks great so far, let's add some more complexity to our project <emoji text=":slightly_smiling_face:" size={1}/> {#adding-complexity}
+### Everything looks great so far, let's add some more complexity to our project <Emoji text=":slightly_smiling_face:" size={1}/> {#adding-complexity}
 
 Imagine a situation where someone adds an empty string as a greeting. It wouldn't be a warm greeting, right?  
 Let's make sure that doesn't happen:

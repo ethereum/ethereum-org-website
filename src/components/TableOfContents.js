@@ -7,6 +7,7 @@ import styled from "styled-components"
 import ButtonLink from "./ButtonLink"
 import Icon from "./Icon"
 import Translation from "./Translation"
+import { useActiveHash } from "../hooks/useActiveHash"
 import { dropdownIconContainerVariant } from "./SharedStyledComponents"
 
 const customIdRegEx = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/
@@ -206,12 +207,9 @@ const trimmedTitle = (title) => {
   return match ? title.replace(match[1], "").trim() : title
 }
 
-const TableOfContentsLink = ({ depth, item }) => {
+const TableOfContentsLink = ({ depth, item, activeHash }) => {
   const url = `#${getCustomId(item.title)}`
-  let isActive = false
-  if (typeof window !== `undefined`) {
-    isActive = window.location.hash === url
-  }
+  const isActive = activeHash === url
   const isNested = depth === 2
   let classes = ""
   if (isActive) {
@@ -227,20 +225,27 @@ const TableOfContentsLink = ({ depth, item }) => {
   )
 }
 
-const ItemsList = ({ items, depth, maxDepth }) => {
+const ItemsList = ({ items, depth, maxDepth, activeHash }) => {
   if (depth > maxDepth || !items) {
     return null
   }
   return items.map((item, index) => (
     <ListItem key={index}>
       <div>
-        <TableOfContentsLink depth={depth} item={item} />
+        {item.title && (
+          <TableOfContentsLink
+            depth={depth}
+            item={item}
+            activeHash={activeHash}
+          />
+        )}
         {item.items && (
           <InnerList key={item.title}>
             <ItemsList
               items={item.items}
               depth={depth + 1}
               maxDepth={maxDepth}
+              activeHash={activeHash}
             />
           </InnerList>
         )}
@@ -301,6 +306,28 @@ const TableOfContents = ({
   isMobile = false,
 }) => {
   const intl = useIntl()
+
+  const titleIds = []
+
+  if (!isMobile) {
+    const getTitleIds = (items, depth) => {
+      if (depth > (maxDepth ? maxDepth : 1)) return
+
+      items?.forEach((item) => {
+        if (item.items && Array.isArray(item.items)) {
+          if (item.title) titleIds.push(getCustomId(item.title))
+          getTitleIds(item.items, depth + 1)
+        } else {
+          titleIds.push(getCustomId(item.title))
+        }
+      })
+    }
+
+    getTitleIds(items, 0)
+  }
+
+  const activeHash = useActiveHash(titleIds)
+
   if (!items) {
     return null
   }
@@ -337,7 +364,12 @@ const TableOfContents = ({
         <Header>
           <Translation id="on-this-page" />
         </Header>
-        <ItemsList items={items} depth={0} maxDepth={maxDepth ? maxDepth : 1} />
+        <ItemsList
+          items={items}
+          depth={0}
+          maxDepth={maxDepth ? maxDepth : 1}
+          activeHash={activeHash}
+        />
       </OuterList>
     </Aside>
   )

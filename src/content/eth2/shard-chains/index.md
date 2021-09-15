@@ -10,7 +10,7 @@ summaryPoints:
     "Sharding is a multi-phase upgrade to improve Ethereum’s scalability and capacity.",
     "Shard chains spread the network's load across 64 new chains.",
     "They make it easier to run a node by keeping hardware requirements low.",
-    'This upgrade is planned to follow the merge of mainnet with the Beacon Chain.',
+    "This upgrade is planned to follow the merge of Mainnet with the Beacon Chain.",
   ]
 ---
 
@@ -51,12 +51,12 @@ Rollups are a "layer 2" technology that exists today. They allow dapps to bundle
 <InfoBanner isWarning={false}>
   Given recent progress in layer 2 scaling solution research and development, this has prompted the prioritization of the merge upgrade ahead of shard chains. These will be the focus following mainnet transition to proof of stake.
 
-  [More on rollups](/developers/docs/scaling/layer-2-rollups/)
+[More on rollups](/developers/docs/scaling/layer-2-rollups/)
 </InfoBanner>
 
 ## Shard chains version 2: code execution {#code-execution}
 
-The plan was always to add extra functionality to shards, to make them more like the [Ethereum mainnet](/glossary/#mainnet) today. This would allow them to store and execute smart contracts and handle accounts. But considering the transactions per second boost that version 1 shards provide, does this still need to happen? This is still being debated in the community and it seems like there are a few options.
+The plan was always to add extra functionality to shards, to make them more like the [Ethereum Mainnet](/glossary/#mainnet) today. This would allow them to store and execute smart contracts and handle accounts. But considering the transactions per second boost that version 1 shards provide, does this still need to happen? This is still being debated in the community and it seems like there are a few options.
 
 ### Do shards need code execution? {#do-shards-need-code-execution}
 
@@ -96,9 +96,9 @@ The Beacon Chain contains all the logic for keeping shards secure and synced up.
 
 ### Shards and the merge {#shards-and-docking}
 
-By the time additional shards are added, Ethereum mainnet will already be secured by the Beacon Chain using proof of stake. This enables a fertile mainnet to build shard chains off of, powered by layer 2 solutions that supercharge the scalability. 
+By the time additional shards are added, Ethereum Mainnet will already be secured by the Beacon Chain using proof of stake. This enables a fertile mainnet to build shard chains off of, powered by layer 2 solutions that supercharge the scalability.
 
-It remains to be seen whether mainnet will exist as the only “smart” shard that can handle code execution – but either way, the decision to expand shards can be revisted as needed.
+It remains to be seen whether mainnet will exist as the only “smart” shard that can handle code execution – but either way, the decision to expand shards can be revisited as needed.
 
 <ButtonLink to="/eth2/merge/">The merge</ButtonLink>
 

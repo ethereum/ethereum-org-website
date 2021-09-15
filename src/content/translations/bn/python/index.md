@@ -26,7 +26,7 @@ sidebar: true
 
 ## শিক্ষানবিসদের জন্য প্রবন্ধ {#beginner-articles}
 
-- [ভাইপারের সঙ্গে স্মার্ট কন্ট্র্যাক্টের সূচনা](https://kauri.io/article/af913a853eaf4db88627b3ff9572b770/v1/an-introduction-to-smart-contracts-with-vyper)
+- [ভাইপারের সঙ্গে স্মার্ট কন্ট্র্যাক্টের সূচনা](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [পাইথন ফ্লাস্ক ব্যবহার করে কীভাবে ইথেরিয়াম কন্ট্র্যাক্ট ডেভেলপ করা যায়?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Web3.py এর সূচনা - পাইথন ডেভেলপারদের জন্য ইথেরিয়াম](https://www.dappuniversity.com/articles/web3-py-intro)
 - [পাইথন ও web3.py ব্যবহার করে কীভাবে একটি স্মার্ট কন্ট্র্যাক্ট ফাংশনকে কল করা যায়](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
@@ -40,8 +40,8 @@ sidebar: true
 
 ## উন্নত ইউজ প্যাটার্ন {#advanced-use-patterns}
 
-- [পাইথন ব্যবহার করে ইথেরিয়াম স্মার্ট কন্ট্র্যাক্টস কম্পাইল, ডেপ্লয় ও কল করা](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [স্লিদার-এর সাথে সলিডিটি স্মার্ট কন্ট্র্যাক্টস বিশ্লেষণ করা](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
+- [পাইথন ব্যবহার করে ইথেরিয়াম স্মার্ট কন্ট্র্যাক্টস কম্পাইল, ডেপ্লয় ও কল করা](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
+- [স্লিদার-এর সাথে সলিডিটি স্মার্ট কন্ট্র্যাক্টস বিশ্লেষণ করা](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 
 ## পাইথন প্রোজেক্ট ও টুল {#python-projects-and-tools}
 
