@@ -107,7 +107,7 @@ One of the biggest reasons people get scammed in crypto generally is a lack of u
 <DocLink to="/what-is-ethereum/" title="What is Ethereum?" />
 
 <DocLink to="/eth/" title="What is ether?" />
-
+<Divider />
 ## Wallet Security
 
 ### Don't give out your Private keys
