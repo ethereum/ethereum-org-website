@@ -17,7 +17,6 @@ Governance is the systems in place that allow decisions to be made. In a typical
 
 ## Decentralized Governance {#decentalized-governance}
 
-
 No one person owns or controls the Ethereum protocol, but decisions still need to be made about implementing changes to best ensure the longevity and prosperity of the network. This lack of ownership makes traditional organizational governance an incompatible solution.
 
 ## Ethereum Governance {#ethereum-governance}
