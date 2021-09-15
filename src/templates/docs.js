@@ -27,6 +27,7 @@ import {
   Header1,
   Header2,
   Header3,
+  Header4,
   ListItem,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
@@ -126,19 +127,13 @@ const H3 = styled(Header3)`
   }
 `
 
-const StyledH4 = styled.h4`
-  /* Anchor tag styles */
-  a {
-    position: relative;
-    display: none;
-    margin-left: 0rem;
-    padding-right: 0.5rem;
-    font-size: 1rem;
-    vertical-align: middle;
-    &:hover {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-    }
+const StyledH4 = styled(Header4)`
+  &:before {
+    height: 160px;
+    margin-top: -160px;
+  }
+  a.header-anchor {
+    vertical-align: baseline;
   }
 `
 
