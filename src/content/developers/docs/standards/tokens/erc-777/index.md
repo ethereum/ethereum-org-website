@@ -31,7 +31,7 @@ The hooks are registered and discovered using the [ERC-1820](https://eips.ethere
 
 ### Decimals {#decimals}
 
-The standard also improves the confusion around `decimals` in ERC-20. Thus, making development a bit easier.
+The standard also solves the confusion around `decimals` caused in ERC-20. This clarity improves the developer experience.
 
 ### Backwards compatibility with ERC-20 {#backwards-compatibility-with-erc-20}
 
