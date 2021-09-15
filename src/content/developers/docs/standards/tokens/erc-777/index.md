@@ -19,7 +19,7 @@ The ERC-777 provides the following improvements over ERC-20.
 
 ### Hooks {#hooks}
 
-Hooks are a function described in a smart contract that will be called when tokens are sent or received. Essentially, smart contracts can react to incoming or outgoing tokens.
+Hooks are a function described in the code of a smart contract. Hooks get called when tokens are sent or received through the contract. This allows a smart contract to react to incoming or outgoing tokens.
 
 The hooks are registered and discovered using the [ERC-1820](https://eips.ethereum.org/EIPS/eip-1820) standard.
 
