@@ -322,7 +322,7 @@ EIP-2718 is a new generalised envelope for typed transactions. In the new standa
 Where the fields are defined as:
 
 - `TransactionType` - a number between 0 and 0x7f, for a total of 128 possible transaction types.
-- `TransactionPayload` an arbitrary byte array defined by the transaction type.
+- `TransactionPayload` - an arbitrary byte array defined by the transaction type.
 
 ## Further reading {#further-reading}
 
