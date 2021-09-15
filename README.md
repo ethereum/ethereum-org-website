@@ -1127,6 +1127,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://o.zgur.org"><img src="https://avatars.githubusercontent.com/u/375834?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ozgur</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=rootqa" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/adilanchian"><img src="https://avatars.githubusercontent.com/u/13204620?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alec Dilanchian</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=adilanchian" title="Documentation">📖</a></td>
     <td align="center"><a href="http://horacio.eth"><img src="https://avatars.githubusercontent.com/u/7662728?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Horacio Bertorello</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=horacio" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://www.technobunnies.com"><img src="https://avatars.githubusercontent.com/u/20266893?v=4?s=100" width="100px;" alt=""/><br /><sub><b>m4sterbunny</b></sub></a><br /><a href="#projectManagement-m4sterbunny" title="Project Management">📆</a> <a href="#question-m4sterbunny" title="Answering Questions">💬</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=m4sterbunny" title="Documentation">📖</a></td>
   </tr>
 </table>
 
