@@ -8,17 +8,17 @@ assignees: ""
 
 We'll consider [our article policy](https://ethereum.org/en/contributing/adding-articles/) when reviewing the tutorial, so please take a look there first.
 
-**Tag your tutorial**
-
-<!-- What topics are covered in your tutorial? Check out the current tags on https://ethereum.org/en/developers/tutorials/ but feel free to add new ones -->
-
 **Tutorial title**
 
 <!-- What is the title of your tutorial?-->
 
 **Tutorial description**
 
-<!-- Summarise what the user should be able to accomplish by following tutorial -->
+<!-- Summarize what the user should be able to accomplish by following tutorial -->
+
+**Tag your tutorial**
+
+<!-- What topics are covered in your tutorial? Check out the current tags on https://ethereum.org/en/developers/tutorials/ but feel free to add new ones -->
 
 **Publication**
 
@@ -28,6 +28,14 @@ We'll consider [our article policy](https://ethereum.org/en/contributing/adding-
 
 <!-- What level of experience does someone need to be to complete the tutorial? Beginner/Intermediate/Advanced -->
 
-**Paste in your tutorial below**
+**Hosted on Ethereum.org or hosted elsewhere?**
 
-<!-- Please paste in markdown -->
+<!-- Let us know if you want your tutorial to be hosted on the ethereum.org website or if it is published elsewhere and you want us to link out to the tutorial -->
+
+**For tutorials to be hosted on Ethereum.org: Tutorial Content**
+
+<!-- Please paste the full tutorial in markdown -->
+
+**For tutorials hosted elsewhere: URL to tutorial**
+
+<!-- Please paste the URL to your tutorial -->

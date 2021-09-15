@@ -181,6 +181,10 @@ const Footer = () => {
           text: "ethereum-glossary",
         },
         {
+          text: "ethereum-governance",
+          to: "/governance/",
+        },
+        {
           to: "/eips/",
           text: "eips",
         },

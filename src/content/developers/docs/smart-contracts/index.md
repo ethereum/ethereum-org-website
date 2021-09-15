@@ -33,7 +33,7 @@ This logic is programmed into the vending machine.
 A smart contract, like a vending machine, has logic programmed into it. Here's a simple example of how this vending machine might look like as a smart contract:
 
 ```solidity
-pragma solidity 0.6.11;
+pragma solidity 0.8.7;
 
 contract VendingMachine {
 
@@ -44,7 +44,7 @@ contract VendingMachine {
     // When 'VendingMachine' contract is deployed:
     // 1. set the deploying address as the owner of the contract
     // 2. set the deployed smart contract's cupcake balance to 100
-    constructor() public {
+    constructor() {
         owner = msg.sender;
         cupcakeBalances[address(this)] = 100;
     }

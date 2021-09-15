@@ -31,6 +31,7 @@ import {
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import DocsNav from "../components/DocsNav"
+import DeveloperDocsLinks from "../components/DeveloperDocsLinks"
 
 const Page = styled.div`
   display: flex;
@@ -172,6 +173,7 @@ const components = {
   Pill,
   CallToContribute,
   Emoji,
+  DeveloperDocsLinks,
 }
 
 const Contributors = styled(FileContributors)`

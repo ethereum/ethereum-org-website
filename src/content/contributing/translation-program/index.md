@@ -11,9 +11,9 @@ The Translation Program is a collaborative effort to translate ethereum.org into
 
 Our progress so far:
 
-- **1,800 +** translators
+- **1,900 +** translators
 - **37** languages live on site
-- **1.5 million** words translated in 2021
+- **1.7 million** words translated in 2021
 
 If you want to get involved and help us grow the global Ethereum community by translating the website into your language, follow the steps below!
 
@@ -35,7 +35,10 @@ If you want to get involved and help us grow the global Ethereum community by tr
    ![Translated and untranslated files on Crowdin](./crowdin-files.png)
 
    A note on content versions: we use version management within Crowdin to avoid translation delays for added content. When you check out a language, for example, [Filipino](https://crowdin.com/project/ethereum-org/fil#) you'll see folders for each site version ("v2.0", "v2.1", etc.).
+
    We encourage you to translate the lowest version first and work your way up to higher versions (v.2.0 → v.2.1 → v.2.2 → ⋯) as lower versions will be updated on the site first.
+
+   [Learn more about ethereum.org content versions](/en/contributing/translation-program/content-versions/)
 
 3. **Translate**  
    After selecting the file you want to translate, it will open in the online editor. If you have never used Crowdin before, you can use this quick guide to go over the basics.
@@ -94,14 +97,20 @@ Thank you for your participation in the ethereum.org Translation Program!
 
 **Communities**
 
+- [Language-specific Translation Groups](https://discord.gg/6WX7E97)
+  _– an initiative to connect ethereum.org translators into Translation Groups_
 - [Chinese translators group](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)
   _– Notion page for easier coordination between Chinese translators_
 
-## Eth2 Launchpad Translations {#eth2-launchpad}
+**Versions overview**
 
-Our translation community is also working on the [Eth2 Launchpad](https://launchpad.ethereum.org/en/). This allows anyone to set up an Ethereum validator and help secure the Ethereum network. The Launchpad is currently live in 15 languages.
+- [Content versions](/contributing/translation-program/content-versions/) _– Which pages are included in each content version of ethereum.org_
 
-If you're interested, [join the Eth2 Launchpad translation project on Crowdin](https://crowdin.com/project/launchpad-translation). You can [create an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose) on GitHub to request the addition of a new language, if your language is not available on Crowdin.
+## Ethereum Staking Launchpad Translations {#staking-launchpad}
+
+Our translation community is also working on the [Staking Launchpad](https://launchpad.ethereum.org/en/). This allows anyone to set up an Ethereum validator and help secure the Ethereum network. The Launchpad is currently live in 17 languages.
+
+If you're interested, [join the Ethereum Staking Launchpad translation project on Crowdin](https://crowdin.com/project/ethereum-staking-launchpad). You can [create an issue](https://github.com/ethereum/staking-launchpad/issues/new) on GitHub to request the addition of a new language, if your language is not available on Crowdin.
 
 ## In-progress translations {#in-progress}
 
