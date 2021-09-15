@@ -151,8 +151,9 @@ Once the transaction has been submitted the following happens:
 2. The transaction is then broadcast to the network and included in a pool with lots of other transactions.
 3. A miner must pick your transaction and include it in a block in order to verify the transaction and consider it "successful".
    - You may end up waiting at this stage if the network is busy and miners aren't able to keep up.
-4. Your transaction will also get a block confirmation number. This is the number of blocks created since the block that your transaction was included in. The higher the number, the greater the certainty that the transaction was processed and recognised by the network. This is because sometimes the block your transaction was included in may not have made it into the chain.
-   - The larger the block confirmation number the more immutable the transaction is. So for higher value transactions, more block confirmations may be desired.
+4. Your transaction will receive "confirmations". The number of confirmations is the number of blocks created since the block that included your transaction. The higher the number, the greater the certainty that the network processed and recognised the transaction.
+   - Recent blocks may get re-organised, giving the impression the transaction was unsuccessful; however, the transaction may still be valid but included in a different block.
+   - The probability of a re-organisation diminishes with every subsequent block mined, i.e. the greater the number of confirmations, the more immutable the transaction is.
 
 <!-- **State change**
 
@@ -191,7 +192,7 @@ A contract can decide how much of its remaining gas should be sent with the inne
 
 As already said, the called contract (which can be the same as the caller) will receive a freshly cleared instance of memory and has access to the call payload - which will be provided in a separate area called the calldata. After it has finished execution, it can return data which will be stored at a location in the caller’s memory preallocated by the caller.
 
-Calls are limited to a depth of 1024, which means that for more complex operations, loops should be preferred over recursive calls.
+Calls are limited to a depth of 1024, so you should prefer loops over recursive calls for more complex operations.
 ```
 
 <!-- Feels like this should maybe form a more advanced/complex doc that sits under transactions. Stuff like Ethers and providers need some sort of intro-->
