@@ -323,6 +323,8 @@ Where the fields are defined as:
 
 ## Further reading {#further-reading}
 
+- [EIP-2718: Typed Transaction Envelope](https://eips.ethereum.org/EIPS/eip-2718) 
+
 _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related topics {#related-topics}
