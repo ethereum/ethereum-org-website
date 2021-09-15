@@ -102,7 +102,7 @@ Browser extensions like Chrome extensions or Add-ons for Firefox can augment use
 
 ### Upgrade Your Knowledge
 
-One of the biggest reasons people get scammed in crypto generally is a lack of understanding. If you don't understand that no one owns the Ethereum network, then it's easy to fall prey to the kind customer service agent who promises to return your lost ETH in exchange for your private keys. Educating yourself on how Ethereum works is a worthwhile investment.
+One of the biggest reasons people get scammed in crypto generally is a lack of understanding. For example, if you don't understand that the Ethereum network is decentralized and owned by no one, then it's easy to fall prey to someone pretending to be a customer service agent that promises to return your lost ETH in exchange for your private keys. Educating yourself on how Ethereum works is a worthwhile investment.
 
 <DocLink to="/what-is-ethereum/" title="What is Ethereum?" />
 
