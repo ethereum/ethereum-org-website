@@ -87,9 +87,9 @@ Where ether is stored. Users can initialize accounts, deposit ether into the acc
 
 ### Transactions {#transactions}
 
-A “transaction request” is the formal term for a request for code execution on the EVM, and a “transaction” is a fulfilled transaction request and the associated change in the EVM state. Any user can broadcast a transaction request to the network from a node. For the transaction request to affect the agreed-upon EVM state, it must be validated, executed, and “committed to the network” by some other node. Execution of any code causes a state change in the EVM; upon commitment, this state change is broadcast to all nodes in the network. Some examples of transactions:
+A "transaction request" is the formal term for a request for code execution on the EVM, and a "transaction" is a fulfilled transaction request and the associated change in the EVM state. Any user can broadcast a transaction request to the network from a node. For the transaction request to affect the agreed-upon EVM state, it must be validated, executed, and "committed to the network" by another node. Execution of any code causes a state change in the EVM; upon commitment, this state change is broadcast to all nodes in the network. Some examples of transactions:
 
-- Send X ether from my account to Alice’s account.
+- Send X ether from my account to Alice's account.
 - Publish some smart contract code into EVM memory.
 - Execute the code of the smart contract at address X in the EVM, with arguments Y.
 
@@ -97,7 +97,7 @@ A “transaction request” is the formal term for a request for code execution 
 
 ### Blocks {#blocks}
 
-The volume of transactions is very high, so transactions are “committed” in batches, or blocks. Blocks generally contain dozens to hundreds of transactions.
+The volume of transactions is very high, so transactions are "committed" in batches, or blocks. Blocks generally contain dozens to hundreds of transactions.
 
 [More on blocks](/developers/docs/blocks/)
 
