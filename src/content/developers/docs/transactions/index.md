@@ -307,7 +307,7 @@ Watch Austin walk you through transactions, gas, and mining.
 
 ## Typed Transaction Envelope {#typed-transaction-envelope}
 
-Ethereum originally had one format for transactions. Each transaction consists of a nonce, gas price, gas limit, to address, value, data, v, r, and s. These fields are RLP-encoded, to look something like this:  
+Ethereum originally had one format for transactions. Each transaction contained a nonce, gas price, gas limit, to address, value, data, v, r, and s. These fields are RLP-encoded, to look something like this:  
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
