@@ -4783,6 +4783,17 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "m4sterbunny",
+      "name": "m4sterbunny",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20266893?v=4",
+      "profile": "http://www.technobunnies.com",
+      "contributions": [
+        "projectManagement",
+        "question",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
