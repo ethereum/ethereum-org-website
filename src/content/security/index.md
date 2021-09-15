@@ -132,7 +132,7 @@ Keeping private keys offline massively reduces the risk of being hacked, even if
 Accidently sending crypto to the wrong wallet address is a common mistake. Unless you know the address owner, there will be no way for you to retrieve your funds.
 
 Always make sure the address you are sending to exactly matches the desired recipient's address before sending a transaction.
-
+It is also recommended when interacting with a smart contract to read the transaction message before signing.
 ### Set smart contract spend limits
 
 When interacting with smart contracts, do not allow unlimited spend limits. An unlimited spend could enable the smart contract to drain your wallet. Instead, set spending limits to only the amount necessary for the transaction.
