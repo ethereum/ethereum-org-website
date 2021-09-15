@@ -1,8 +1,8 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e8f2e766-888b-4954-8500-1b647d84db99/deploy-status)](https://app.netlify.com/sites/ethereumorg/deploys)
-[![All Contributors](https://img.shields.io/badge/all_contributors-258-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/github/all-contributors/ethereum/ethereum-org-website?color=orange&style=flat-square)](#contributors-)
 [![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=ethereum.org%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat-square)](https://discord.gg/CetY6Y4)
 [![Twitter Follow](https://img.shields.io/twitter/follow/ethdotorg.svg?style=social)](https://twitter.com/ethdotorg)
-[![Crowdin](https://badges.crowdin.net/ethereum-org/localized.svg)](https://crowdin.com/project/ethereumfoundation)
+[![Crowdin](https://badges.crowdin.net/ethereum-org/localized.svg)](https://crowdin.com/project/ethereum-org)
 
 <h1 align="center" style="margin-top: 1em; margin-bottom: 3em;">
   <p><a href="https://ethereum.org"><img alt="ethereum logo" src="./eth-transparent.png" alt="ethereum.org" width="125"></a></p>
@@ -1118,6 +1118,15 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://ProjectAFA.org"><img src="https://avatars.githubusercontent.com/u/4008777?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Skylar Weaver</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=skylarweaver" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/agorismlabs"><img src="https://avatars.githubusercontent.com/u/84196983?v=4?s=100" width="100px;" alt=""/><br /><sub><b>agorismlabs</b></sub></a><br /><a href="#ideas-agorismlabs" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://tanishq.xyz"><img src="https://avatars.githubusercontent.com/u/15674971?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tanishq Sharma</b></sub></a><br /><a href="#ideas-tanishqsh" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="http://delirium.digital"><img src="https://avatars.githubusercontent.com/u/1695274?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mark Strefford</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Amarkstrefford" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/akwodkiewicz"><img src="https://avatars.githubusercontent.com/u/22861194?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andrzej Wódkiewicz</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=akwodkiewicz" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://hugo.md"><img src="https://avatars.githubusercontent.com/u/1646536?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hugo</b></sub></a><br /><a href="#content-hugomd" title="Content">🖋</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/lntel"><img src="https://avatars.githubusercontent.com/u/37447006?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joseph Harris</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=lntel" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://o.zgur.org"><img src="https://avatars.githubusercontent.com/u/375834?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ozgur</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=rootqa" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/adilanchian"><img src="https://avatars.githubusercontent.com/u/13204620?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alec Dilanchian</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=adilanchian" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://horacio.eth"><img src="https://avatars.githubusercontent.com/u/7662728?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Horacio Bertorello</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=horacio" title="Documentation">📖</a></td>
   </tr>
 </table>
 

@@ -3,7 +3,6 @@
     "README.md"
   ],
   "imageSize": 100,
-  "badgeTemplate": "[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-orange.svg?style=flat-square)](#contributors)",
   "commit": false,
   "contributors": [
     {
@@ -4720,6 +4719,69 @@
       "profile": "https://tanishq.xyz",
       "contributions": [
         "ideas"
+      ]
+    },
+    {
+      "login": "markstrefford",
+      "name": "Mark Strefford",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1695274?v=4",
+      "profile": "http://delirium.digital",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "akwodkiewicz",
+      "name": "Andrzej Wódkiewicz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22861194?v=4",
+      "profile": "https://github.com/akwodkiewicz",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "hugomd",
+      "name": "Hugo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1646536?v=4",
+      "profile": "http://hugo.md",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "lntel",
+      "name": "Joseph Harris",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37447006?v=4",
+      "profile": "https://github.com/lntel",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "rootqa",
+      "name": "Ozgur",
+      "avatar_url": "https://avatars.githubusercontent.com/u/375834?v=4",
+      "profile": "https://o.zgur.org",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "adilanchian",
+      "name": "Alec Dilanchian",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13204620?v=4",
+      "profile": "https://github.com/adilanchian",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "horacio",
+      "name": "Horacio Bertorello",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7662728?v=4",
+      "profile": "http://horacio.eth",
+      "contributions": [
+        "doc"
       ]
     }
   ],

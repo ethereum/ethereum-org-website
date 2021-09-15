@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-# Contributing to ethereum.org 🦄 {#contributing-to-ethereumorg-}
+# Contributing to ethereum.org 🦄 {#contributing-to-ethereumorg}
 
 <InfoBanner shouldCenter emoji=":tada:">
   Claim your POAP token! If you contributed to ethereum.org in 2021, there's a unique POAP waiting for you.{" "}
@@ -18,13 +18,13 @@ ethereum.org is an open-source project. So if you want to help improve [our port
 
 - [Work on an open issue](https://github.com/ethereum/ethereum-org-website/issues)
   _– Work we've identified that needs doing_
-- [Join the translations program ](/en/contributing/translation-program/)
+- [Join the translations program](/en/contributing/translation-program/)
   _– Help us bring ethereum.org to new languages_
-- [Add community articles ](/en/contributing/adding-articles/)
+- [Add community articles](/en/contributing/adding-articles/)
   _– Add a helpful article to a relevant page_
-- [Add a product ](/en/contributing/adding-products/)
+- [Add a product](/en/contributing/adding-products/)
   _– Add a dapp or wallet to a relevant page_
-- [Add developer tools ](/en/contributing/adding-developer-tools/)
+- [Add developer tools](/en/contributing/adding-developer-tools/)
   _– Add a developer tool to a relevant page_
 - [Add an exchange](/en/contributing/adding-exchanges/)
   _– Add an exchange to our [exchange finder](/get-eth/#country-picker)_
@@ -34,7 +34,7 @@ ethereum.org is an open-source project. So if you want to help improve [our port
   _– Let us know about any ideas you have for a new feature or design_
 - [Add a glossary term](/en/contributing/adding-glossary-terms)
   _– Help us continue to expand the Ethereum [glossary](/glossary/)_
-- [Create/edit content ](/en/contributing/#how-to-update-content)
+- [Create/edit content](/en/contributing/#how-to-update-content)
   _– Suggest new pages or makes tweaks to what's here already_
 
 _Any questions?_ 🤔 Reach out on our [Discord server](https://discord.gg/CetY6Y4)
@@ -43,9 +43,7 @@ _Any questions?_ 🤔 Reach out on our [Discord server](https://discord.gg/CetY6
 
 Whether you're adding to the site, creating content or working on open issues, you'll need a [GitHub](https://github.com) account.
 
-All changes are made via the GitHub PR process. This means you create a local copy of the website, make your changes and request to have your changes merged.
-
-If you've not done this before, follow the instructions at the bottom of our [GitHub repository](https://github.com/ethereum/ethereum-org-website).
+All updates are made via the GitHub PR process. This means you create a local copy of the website, make your changes and request to merge your changes. If you've never done this before, follow the instructions at the bottom of our [GitHub repository](https://github.com/ethereum/ethereum-org-website).
 
 You don't need permission to work on anything, but it's always best to let us know what you're planning to do. You can do this by:
 
@@ -56,6 +54,7 @@ Before contributing , make sure you're familiar with:
 
 - the evolving [vision of ethereum.org](/about/)
 - our [design principles](/en/contributing/design-principles/)
+- our [style guide](/en/contributing/style-guide/)
 
 ## How decisions about the site are made {#how-decisions-about-the-site-are-made}
 

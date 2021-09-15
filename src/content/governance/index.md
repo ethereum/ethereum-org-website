@@ -47,7 +47,7 @@ _Whilst at the protocol level Ethereum governance is off-chain, many use cases b
 
 There are various stakeholders in the [Ethereum community](/community/), each playing a role in the governance process. Starting from the stakeholders furthest from the protocol and zooming in, we have:
 
-- **Ether holders**: these people own the ETH token. [More on ETH](/eth/).
+- **Ether holders**: these people hold an arbitrary amount of ETH. [More on ETH](/eth/).
 - **Application Users**: these people interact with applications on the Ethereum blockchain.
 - **Application/Tooling Developers**: these people write applications that are run on the Ethereum blockchain (e.g. DeFi, NFTs, etc.) or build tooling to interact with Ethereum (e.g. wallets, test suites, etc.). [More on dapps](/dapps/).
 - **Node Operators**: these people run nodes that propagate blocks and transactions, rejecting any invalid transaction or block that they come across. [More on nodes](/developers/docs/nodes-and-clients/).
@@ -168,7 +168,7 @@ When the Beacon Chain merges with the Ethereum execution layer, the governance p
 - [Get involved in R&D discussion](https://ethresear.ch/)
 - [Join the Ethereum R&D discord](https://discord.gg/mncqtgVSVw)
 - [Run a node](/developers/docs/nodes-and-clients/run-a-node/)
-- [Contribute to client development](https://ethereum.org/en/developers/docs/nodes-and-clients/#clients)
+- [Contribute to client development](/developers/docs/nodes-and-clients/#clients)
 - [Core Developer Apprenticeship Program](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
 
 ## Further reading {#further-reading}
