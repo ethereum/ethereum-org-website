@@ -179,7 +179,7 @@ A contract can decide how much of its remaining gas should be sent with the inne
 
 As already said, the called contract (which can be the same as the caller) will receive a freshly cleared instance of memory and has access to the call payload - which will be provided in a separate area called the calldata. After it has finished execution, it can return data which will be stored at a location in the caller’s memory preallocated by the caller.
 
-Calls are limited to a depth of 1024 which means, that for more complex operations, loops should be preferred over recursive calls.
+Calls are limited to a depth of 1024, so you should prefer loops over recursive calls for more complex operations.
 ```
 
 <!-- Feels like this should maybe form a more advanced/complex doc that sits under transactions. Stuff like Ethers and providers need some sort of intro-->
