@@ -127,13 +127,14 @@ const H3 = styled(Header3)`
   }
 `
 
-const StyledH4 = styled(Header4)`
+const H4 = styled(Header4)`
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    font-size: 1rem;
+    font-weight: 600;
+  }
   &:before {
     height: 160px;
     margin-top: -160px;
-  }
-  a.header-anchor {
-    vertical-align: baseline;
   }
 `
 
@@ -154,7 +155,7 @@ const components = {
   h1: H1,
   h2: H2,
   h3: H3,
-  h4: StyledH4,
+  h4: H4,
   p: Paragraph,
   li: ListItem,
   pre: Codeblock,
