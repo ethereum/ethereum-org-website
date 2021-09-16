@@ -175,7 +175,7 @@ const GetInvolvedPage = ({ data, location }) => {
       background: "#23292E",
       description: <Translation id="page-eth2-get-involved-written-go" />,
       alt: "eth2-client-prysm-logo-alt",
-      url: "https://prylabs.net/",
+      url: "https://docs.prylabs.network/docs/getting-started/",
       image: data.prysm.childImageSharp.fixed,
       githubUrl: "https://github.com/prysmaticlabs/prysm",
       isProductionReady: true,
