@@ -4829,6 +4829,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "james-prysm",
+      "name": "james-prysm",
+      "avatar_url": "https://avatars.githubusercontent.com/u/90280386?v=4",
+      "profile": "https://github.com/james-prysm",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
