@@ -20,6 +20,7 @@ You should have a good understanding of all the foundational topics and a high-l
 | No withdrawal delay (no latency to on-chain/cross-chain tx); consequent greater capital efficiency.       | Limited support for general computation/smart contracts; specialized languages required.                                                 |
 | Not vulnerable to certain economic attacks faced by fraud-proof based systems in high-value applications. | High computational power required to generate ZK proofs; not cost effective for low throughput applications.                             |
 |                                                                                                           | Slower subjective finality time (10-30 min to generate a ZK proof) (but faster to full finality because there is no dispute time delay). |
+|                                                                                                           | Generating a proof requires off-chain data to be available at all times.                                                                 |
 
 ### Use Validium {#use-validium}
 
