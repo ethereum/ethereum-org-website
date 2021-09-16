@@ -27,6 +27,7 @@ import {
   Header1,
   Header2,
   Header3,
+  Header4,
   ListItem,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
@@ -127,19 +128,14 @@ const H3 = styled(Header3)`
   }
 `
 
-const StyledH4 = styled.h4`
-  /* Anchor tag styles */
-  a {
-    position: relative;
-    display: none;
-    margin-left: 0rem;
-    padding-right: 0.5rem;
+const H4 = styled(Header4)`
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 1rem;
-    vertical-align: middle;
-    &:hover {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-    }
+    font-weight: 600;
+  }
+  &:before {
+    height: 160px;
+    margin-top: -160px;
   }
 `
 
@@ -160,7 +156,7 @@ const components = {
   h1: H1,
   h2: H2,
   h3: H3,
-  h4: StyledH4,
+  h4: H4,
   p: Paragraph,
   li: ListItem,
   pre: Codeblock,
