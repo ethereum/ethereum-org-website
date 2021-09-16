@@ -1133,6 +1133,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://calvinsomething.com"><img src="https://avatars.githubusercontent.com/u/73667022?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Calvin Storoschuk</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Acalvinsomething" title="Bug reports">🐛</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=calvinsomething" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/Clashinm"><img src="https://avatars.githubusercontent.com/u/89336570?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Clashinm</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Clashinm" title="Documentation">📖</a></td>
   </tr>
 </table>
 
