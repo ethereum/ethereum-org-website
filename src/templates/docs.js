@@ -83,7 +83,8 @@ const Content = styled.article`
 
 const H1 = styled(Header1)`
   font-size: 2.5rem;
-  font-family: "SFMono-Regular", monospace;
+  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
+    "Liberation Mono", Menlo, Courier, monospace;
   text-transform: uppercase;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 2rem;
@@ -102,7 +103,8 @@ const H1 = styled(Header1)`
 `
 
 const H2 = styled(Header2)`
-  font-family: "SFMono-Regular", monospace;
+  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
+    "Liberation Mono", Menlo, Courier, monospace;
   text-transform: uppercase;
 
   font-size: 1.5rem;

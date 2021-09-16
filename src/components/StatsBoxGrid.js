@@ -29,7 +29,8 @@ const Title = styled.p`
   margin-bottom: 0.5rem;
   color: ${({ theme }) => theme.colors.text};
   text-transform: uppercase;
-  font-family: "SFMono-Regular", monospace;
+  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
+    "Liberation Mono", Menlo, Courier, monospace;
 `
 
 const Grid = styled.div`
