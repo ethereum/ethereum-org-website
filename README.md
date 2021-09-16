@@ -1129,6 +1129,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://horacio.eth"><img src="https://avatars.githubusercontent.com/u/7662728?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Horacio Bertorello</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=horacio" title="Documentation">📖</a></td>
     <td align="center"><a href="http://www.technobunnies.com"><img src="https://avatars.githubusercontent.com/u/20266893?v=4?s=100" width="100px;" alt=""/><br /><sub><b>m4sterbunny</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=m4sterbunny" title="Documentation">📖</a></td>
     <td align="center"><a href="https://yutingzhao1991.github.io/"><img src="https://avatars.githubusercontent.com/u/1061968?v=4?s=100" width="100px;" alt=""/><br /><sub><b>愚指导</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=yutingzhao1991" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/rayjasson98"><img src="https://avatars.githubusercontent.com/u/48130098?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ray Jasson</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=rayjasson98" title="Documentation">📖</a></td>
   </tr>
 </table>
 
