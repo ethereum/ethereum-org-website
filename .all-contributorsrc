@@ -4810,6 +4810,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "calvinsomething",
+      "name": "Calvin Storoschuk",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73667022?v=4",
+      "profile": "https://calvinsomething.com",
+      "contributions": [
+        "bug",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
