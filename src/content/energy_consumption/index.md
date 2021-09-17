@@ -40,16 +40,16 @@ We can use this data to compare Ethereum to a global service like Visa. 100,000 
 - 25000 transactions per second.
 - `100,000 / 25000 = 4` seconds to process 100,000 transactions.
 
-We can also estimate Ethereum's energy expenditure per second, making a conservative estimate that there are 200,000 active validators securing the network:
+We can also estimate Ethereum's energy expenditure per second, making a conservative estimate that there are 10,000 active validators securing the network (there are over 180,000 validators on the eacon chain at the moment, but many validators can operate on a single node. Currently, there are 3000-4000 individual nodes, so 10,000 is a conservative estimate for post-merge):
 
-`1.44kWh daily usage * 200,000 network nodes = 288,000kWh` per day.
-There are 86,400 seconds in a day, so `288,000 / 86,400 = 3.3333 kWh` per second.
+`1.44kWh daily usage * 10,000 network nodes = 14,400kWh` per day.
+There are 86,400 seconds in a day, so `14,400 / 86,400 = 0.1667 kWh` per second.
 
-If we multiply that by the amount of time it takes to process 100,000 transaction: `3.333 * 4 = 13.333 kWh`.
+If we multiply that by the amount of time it takes to process 100,000 transaction: `0.1667 * 4 = 0.667 kWh`.
 
-This is ~9% of the energy used by Visa for the same number of transactions, or a reduction in energy expenditure by a factor of ~11.
+This is ~0.4% of the energy used by Visa for the same number of transactions, or a reduction in energy expenditure by a factor of ~225.
 
-Repeating the calculation with the maximum transactions-per-second yields 3.33 kWh per second which is about 2% of the energy expenditure of Visa, or a reduction of ~49x.
+Repeating the calculation with the maximum transactions-per-second yields 0.1667 kWh per second which is about 0.1% of the energy expenditure of Visa, or a reduction of ~894x.
 
 _We’ve provided the basic comparison to Visa to baseline your understanding of post-merge Ethereum energy consumption against a familiar name. However, in practice, it’s not really correct to compare based on number of transactions. Ethereum’s energy output is time-based. If Ethereum did more or less transactions from one minute to the next, the energy output would stay the same._
 
