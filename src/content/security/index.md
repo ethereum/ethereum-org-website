@@ -198,7 +198,7 @@ Some phishing emails ask users to click on links that will re-direct them to imi
 
 If you receive an email from an unknown sender, remember:
 
-- Never open a link or attachment from email addresses you don't recognise
+- Never open a link or attachment from email addresses you don't recognize
 - Never divulge your personal information or passwords to anyone
 - Delete emails from unknown senders
 
