@@ -23,7 +23,9 @@ PoW is a very robust way to secure the against dishonest changes to the blockcha
 
 ## PoS
 
-A greener future for Ethereum is already being built in the form of a proof-of-stake (PoS) chain. Under PoS, the arbitrary puzzle solving is not necessary, drastically reducing the energy expenditure required to secure the network. Miners are replaced by validators who perform the same function except that instead of expending their assets up-front in the form of computational work, they stake ETH as collateral against dishonest behaviour. If the validator's node is non-responsive, or a fraudulent block is submitted to the chain, the staked assets can be "slashed", strongly incentivizing honesty and securing the network. Similarly to PoW, in order to maintain a fraudulent blockchain, a validator would require 51% of the total ETH staked in the network. Unlike PoW, however, consensus is not based on the longest chain, but on a mechanism known as ["casper"](https://arxiv.org/abs/1710.09437). Migrating from PoW to PoS eliminates the need to expend energy on arbitrary computations.
+A greener future for Ethereum is already being built in the form of a proof-of-stake (PoS) chain. Under proof-of-stake, arbitrary puzzle-solving is unnecessary. This drastically reduces the energy expenditure required to secure the network. Miners get replaced by validators who perform the same function except that instead of expending their assets up-front in the form of computational work, they stake ETH as collateral against dishonest behaviour. If the validator's node is non-responsive or a fraudulent block gets submitted to the chain, the staked assets can be "slashed", strongly incentivizing honesty and securing the network.
+
+Similarly to proof-of-work, to maintain a fraudulent blockchain, a validator would require 51% of the total ETH staked in the network. However, unlike proof-of-work, consensus is not based on the longest chain, but a mechanism known as ["Casper"](https://arxiv.org/abs/1710.09437). Migrating from proof-of-work to proof-of-stake eliminates the need to expend energy on arbitrary computations.
 
 ## The merge
 
