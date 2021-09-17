@@ -112,7 +112,7 @@ One of the biggest reasons people get scammed in crypto generally is a lack of u
 
 ### Don't give out your Private keys
 
-**Never, for anyone reason, hand out your private keys!**
+**Never, for any reason, share your private keys!**
 
 The private key to your wallet acts as your digital signature. It is the only thing stopping someone who knows your wallet address from draining your account of all of its assets!
 
