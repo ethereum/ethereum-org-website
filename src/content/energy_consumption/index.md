@@ -15,7 +15,7 @@ Transactions on the Ethereum blockchain are validated by [miners](/developers/do
 
 This only works if there is a cost associated with mining and some unpredictability about which specific node submits the next block. These conditions are met by imposing [proof-of-work](/developers/docs/consensus-mechanisms/pow/) (PoW). To be eligible to submit a block of transactions a miner must solve an arbitrary computational puzzle faster than any other miner. This creates competition between miners and cost in the form of energy expenditure. In order to successfully defraud the blockchain, a dishonest miner would have to consistently win the PoW race which is both very unlikely and prohibitively expensive. PoW is therefore a way to secure the network.
 
-Ethereum has implemented the PoW protocol since its inception. While migration away from PoW has always been a fundamental goal of Ethereum, it has also arguably been the most philosophically and technologically challenging because the viable alternatives all required some compromise in one of Ethereum's core principles.
+Ethereum has used proof-of-work since genesis. Migrating off of proof-of-work has always been a fundamental goal of Ethereum. Still, it has been philosophically and technologically challenging because the viable alternatives all required to compromise Ethereum's core principles.
 
 ## PoW energy expenditure
 
