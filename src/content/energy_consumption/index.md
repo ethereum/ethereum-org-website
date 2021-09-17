@@ -19,7 +19,7 @@ Ethereum has implemented the PoW protocol since its inception. While migration a
 
 ## PoW energy expenditure
 
-PoW is a very robust way to secure the against dishonest changes to the blockchain, but it is problematic for several reasons. Since the right to mine a block requires solving a computational puzzle, miners can increase their odds of success by investing in more powerful hardware, leading to an arms race of increasingly expensive and power-hungry mining equipment. Ethereum's PoW protocol currently consumes as much energy as a medium-sized country.
+Proof-of-work is a very robust way to secure against dishonest changes to the blockchain, but it is problematic for several reasons. Since the right to mine a block requires solving a computational puzzle, miners can increase their odds of success by investing in more powerful hardware, leading to an arms race of increasingly expensive and power-hungry mining equipment. Ethereum's PoW protocol currently consumes as much energy as a medium-sized country.
 
 ## PoS
 
