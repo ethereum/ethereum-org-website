@@ -94,7 +94,7 @@ Browser extensions like Chrome extensions or Add-ons for Firefox can augment use
 - Removing unused browser extensions
 - Install Chrome extensions locally to stop auto-updating (Advanced)
 
-[More on the risks of browser extentions](<[https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)>)
+[More on the risks of browser extentions](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
 
 <Divider />
 
