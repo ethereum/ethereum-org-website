@@ -7,7 +7,7 @@ sidebar: true
 
 # Introduction to Ethereum's Energy Consumption {#introduction-to-ethereum-energy-consumption}
 
-Ethereum is now on the cusp of becoming a truly low-carbon blockchain. Achieving this without sacrificing decentralization has been a major technical challenge for Ethereum developers. This page will explain why building out Ethereum to its current state has required a significant upfront carbon cost and how this will be remediated in future ugrades.
+Ethereum's current energy expenditure is too high and unsustainable. Resolving energy expenditure concerns without sacrificing security and decentralization has been a significant technical challenge for Ethereum's development. Let's explore why building Ethereum has had a high environmental impact and how upcoming network upgrades will dramatically change this.
 
 ## Energy secures the network {energy-secures-the-network}
 
