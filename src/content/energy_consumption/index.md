@@ -27,7 +27,7 @@ A greener future for Ethereum is already being built in the form of a proof-of-s
 
 ## The merge
 
-There is now a functional PoS blockchain called the [Beacon Chain]("https://ethereum.org/en/eth2/beacon-chain/") that has been running since December 2020 that is demonstrating the viability of the PoS protocol. The merge refers to the point in time when Ethereum leaves PoW behind and fully adopts PoS. The target date for this is now late 2021 - early 2022.
+There is now a functional proof-of-stake chain called the [Beacon Chain]("https://ethereum.org/en/eth2/beacon-chain/") that has been running since December 2020 that is demonstrating the viability of the proof-of-stake protocol. The merge refers to the point in time when Ethereum leaves proof-of-work behind and fully adopts proof-of-stake. The merge is expected to happen ~Q4 2021/Q1 2022.
 
 ## PoS energy expenditure
 
