@@ -19,21 +19,19 @@ The first cryptocurrency was Bitcoin, created by Satoshi Nakamoto. Since Bitcoin
 
 ## What is ether? {#what-is-ether}
 
-Ether (ETH) is the cryptocurrency used to pay for computing services on the [Ethereum blockchain](/developers/docs/intro-to-ethereum).
+**Ether (ETH)** is the cryptocurrency used to pay for computing resources on the Ethereum blockchain.
 
-It is [common](https://www.reuters.com/article/us-crypto-currencies-lending-insight-idUSKBN25M0GP#:~:text=price%20of%20ethereum) [to](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845#:~:text=cryptocurrencies%20including%20ethereum) [conflate](https://www.cnn.com/2021/03/14/tech/nft-art-buying/index.html#:~:text=price%20of%20ethereum) Ethereum and ether — when people reference the "price of Ethereum," they are almost always describing the price of ether.
+Ethereum allows developers to create [**decentralized applications (dapps)**](/developers/docs/dapps), which all share a pool of computing power. This shared pool is finite, so Ethereum needs to determine who gets access to the computing power. Otherwise, a dapp could accidentally or maliciously consume the entire network.
 
-The Ethereum blockchain allows developers to create [decentralized applications (dapps)](/developers/docs/dapps), which all share a pool of computing power. This shared pool is finite, so Ethereum needs to determine who gets access to the computing power. Otherwise, a dapp with an accidental infinite loop or another malicious program could consume the entire network.
+The ether cryptocurrency supports a pricing mechanism for Ethereum's computing power. When users want to make a transaction, they must pay ether to have their transaction recognized on the blockchain. These usage costs are known as [gas fees](/developers/docs/gas/), and the gas fee depends on the amount of computing power required to execute the transaction and the network-wide demand for computing power at the time.
 
-The ether cryptocurrency supports a pricing mechanism for Ethereum's computing power. When users want to make a transaction, they must pay ether to have their transaction recognized on the blockchain. These usage costs are called gas fees, and they depend on the total amount of computing required by a transaction, as well as the network-wide demand for computing when the transaction is submitted.
+Therefore, even if a malicious dapp submitted an infinite loop, the transaction would eventually run out of ether and terminate, allowing the network to return to normal.
 
-Thus, even if a malicious dapp submitted an infinite loop, the transaction would eventually run out of ether and terminate, allowing the network to return to normal.
-
-[More on gas](/developers/docs/gas/)
+It is [common](https://www.reuters.com/article/us-crypto-currencies-lending-insight-idUSKBN25M0GP#:~:text=price%20of%20ethereum) [to](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845#:~:text=cryptocurrencies%20including%20ethereum) [conflate](https://www.cnn.com/2021/03/14/tech/nft-art-buying/index.html#:~:text=price%20of%20ethereum) Ethereum and ether — when people reference the "price of Ethereum," they are describing the price of ether.
 
 ## Minting ether {#minting-ether}
 
-Minting is a process in which new ether is created on the Ethereum ledger. The new ether is created by the underlying Ethereum protocol, and it is not possible for a user to create new ether.
+Minting is the process in which new ether gets created on the Ethereum ledger. The underlying Ethereum protocol creates the new ether, and it is not possible for a user to create ether.
 
 Ether is minted when a miner creates a block on the Ethereum blockchain. As an incentive to miners, the protocol grants a reward in each block, incrementing the balance of an address set by the block's miner. The block reward has changed over time, and today it is 2 ETH per block.
 
