@@ -7,7 +7,7 @@ sidebar: true
 
 ## Staying Safe on Ethereum
 
-With interest in cryptocurrencies growing exponentially, learning best practices when using cryptocurrency is essential. Crypto can be fun and exciting, but there are also serious risks. If you put in this small amount of upfront work, you can mitigate these risks.
+With interest in cryptocurrencies growing, learning best practices when using cryptocurrency is essential. Crypto can be fun and exciting, but there are also serious risks. If you put in this small amount of upfront work, you can mitigate these risks.
 
 <Divider />
 
