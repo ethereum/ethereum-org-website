@@ -94,6 +94,10 @@ At a high level, proof-of-stake has the same end goal as proof-of-work: to help 
 - [Majority attack](https://en.bitcoin.it/wiki/Majority_attack)
 - [On settlement finality](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
 
+### Videos {#videos}
+
+ - [What is Proof of Work?](https://youtu.be/XLcWy1uV8YM)
+
 ## Related Topics {#related-topics}
 
 - [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
