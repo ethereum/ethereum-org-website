@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import { MDXProvider } from "@mdx-js/react"
@@ -20,6 +20,11 @@ import Pill from "../components/Pill"
 import TableOfContents from "../components/TableOfContents"
 import SectionNav from "../components/SectionNav"
 import Translation from "../components/Translation"
+import Emoji from "../components/Emoji"
+import DocsNav from "../components/DocsNav"
+
+import { ZenModeContext } from "../contexts/ZenModeContext.js"
+
 import { isLangRightToLeft } from "../utils/translations"
 import {
   Divider,
@@ -29,8 +34,6 @@ import {
   Header3,
   ListItem,
 } from "../components/SharedStyledComponents"
-import Emoji from "../components/Emoji"
-import DocsNav from "../components/DocsNav"
 
 const Page = styled.div`
   display: flex;
@@ -41,7 +44,7 @@ const Page = styled.div`
 
 const ContentContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: ${(props) => (props.isZenMode ? "center" : "space-between")};
   width: 100%;
   padding: 0 2rem 0 0;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
@@ -181,6 +184,7 @@ const Contributors = styled(FileContributors)`
 `
 
 const DocsPage = ({ data, pageContext }) => {
+  const { isZenMode } = useContext(ZenModeContext)
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(intl.locale)
 
@@ -203,7 +207,7 @@ const DocsPage = ({ data, pageContext }) => {
         {/* TODO move to common.json */}
         <Translation id="banner-page-incomplete" />
       </BannerNotification>
-      <ContentContainer>
+      <ContentContainer isZenMode={isZenMode}>
         <Content>
           <H1 id="top">{mdx.frontmatter.title}</H1>
           <Contributors gitCommits={gitCommits} editPath={absoluteEditPath} />
