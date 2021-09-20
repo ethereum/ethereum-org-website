@@ -131,9 +131,9 @@ Bob's account will be debited **-1.0042 ETH**
 
 Alice's account will be credited **+1.0 ETH**
 
-The base fee will be burned **-0.003735 ETH**
+The base fee will be burned **-0.00399 ETH**
 
-Miner keeps the tip **+0.000197 ETH**
+Miner keeps the tip **+0.000210 ETH**
 
 Gas is required for any smart contract interaction too.
 
