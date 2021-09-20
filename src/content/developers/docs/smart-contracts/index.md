@@ -92,6 +92,8 @@ Smart contracts alone cannot get information about "real-world" events because t
 
 There are ways to get around this using [oracles](/developers/docs/oracles/).
 
+Smart contracts are also limited to 24kb but, this can be avoided by using [The Diamond Pattern](https://eips.ethereum.org/EIPS/eip-2535)
+
 ## Smart contract resources {#smart-contract-resources}
 
 **OpenZeppelin Contracts -** **_Library for secure smart contract development._**
