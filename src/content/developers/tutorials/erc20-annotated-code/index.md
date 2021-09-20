@@ -6,7 +6,7 @@ lang: en
 sidebar: true
 tags: ["solidity", "erc-20"]
 skill: beginner
-published: 2021-3-9
+published: 2021-03-09
 ---
 
 ## Introduction {#introduction}
@@ -352,7 +352,7 @@ As the name suggests, this variable keeps track of the total supply of tokens.
     uint8 private _decimals;
 ```
 
-These three variables are used to impprove readability. The first two are self-explanatory, but `_decimals`
+These three variables are used to improve readability. The first two are self-explanatory, but `_decimals`
 isn't.
 
 On one hand, ethereum does not have floating point or fractional variables. On the other hand,
@@ -413,7 +413,7 @@ The constructor is called when the contract is first created. By convention, fun
      * be displayed to a user as `5,05` (`505 / 10 ** 2`).
      *
      * Tokens usually opt for a value of 18, imitating the relationship between
-     * Ether and Wei. This is the value {ERC20} uses, unless {_setupDecimals} is
+     * ether and wei. This is the value {ERC20} uses, unless {_setupDecimals} is
      * called.
      *
      * NOTE: This information is only used for _display_ purposes: it in
@@ -819,7 +819,7 @@ Make sure to update `_totalSupply` when the total number of tokens changes.
     }
 ```
 
-The `_burn` function is almost identical to `_emit`, except it goes in the other direction.
+The `_burn` function is almost identical to `_mint`, except it goes in the other direction.
 
 #### The \_approve function {#\_approve}
 

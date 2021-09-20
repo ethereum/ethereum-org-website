@@ -37,7 +37,7 @@ const TranslationsInProgress = () => {
   return (
     <LangContainer>
       {translationsInProgress.map((lang) => {
-        const url = `https://crowdin.com/project/ethereumfoundation/${lang.code}`
+        const url = `https://crowdin.com/project/ethereum-org/${lang.code}`
         return (
           <LangItem to={url} key={lang.code} hideArrow>
             <h4>{lang.name}</h4>

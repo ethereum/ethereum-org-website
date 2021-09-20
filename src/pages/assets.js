@@ -154,6 +154,47 @@ const AssetsPage = ({ data }) => {
 
         <Row>
           <AssetDownload
+            title={translateMessageId("page-assets-infrastructure", intl)}
+            alt={translateMessageId("page-assets-infrastructure", intl)}
+            image={data.infrastructure.childImageSharp}
+            artistName="William Tempest"
+            artistUrl="https://cargocollective.com/willtempest"
+          />
+          <AssetDownload
+            title={translateMessageId("page-assets-finance", intl)}
+            alt={translateMessageId("page-assets-finance", intl)}
+            image={data.finance.childImageSharp}
+            artistName="William Tempest"
+            artistUrl="https://cargocollective.com/willtempest"
+          />
+          <AssetDownload
+            title={translateMessageId("page-assets-impact", intl)}
+            alt={translateMessageId("page-assets-impact", intl)}
+            image={data.impact.childImageSharp}
+            artistName="William Tempest"
+            artistUrl="https://cargocollective.com/willtempest"
+          />
+        </Row>
+
+        <Row>
+          <AssetDownload
+            title={translateMessageId("page-assets-future", intl)}
+            alt={translateMessageId("page-assets-future", intl)}
+            image={data.future.childImageSharp}
+            artistName="William Tempest"
+            artistUrl="https://cargocollective.com/willtempest"
+          />
+          <AssetDownload
+            title={translateMessageId("page-assets-hackathon", intl)}
+            alt={translateMessageId("page-assets-hackathon", intl)}
+            image={data.hackathon.childImageSharp}
+            artistName="William Tempest"
+            artistUrl="https://cargocollective.com/willtempest"
+          />
+        </Row>
+
+        <Row>
+          <AssetDownload
             title={translateMessageId("page-assets-robot", intl)}
             alt={translateMessageId("page-assets-robot", intl)}
             image={data.wallet.childImageSharp}
@@ -184,6 +225,57 @@ const AssetsPage = ({ data }) => {
             image={data.eth.childImageSharp}
             artistName="Viktor Hachmang"
             artistUrl="http://viktorhachmang.nl/"
+          />
+        </Row>
+
+        <Row>
+          <AssetDownload
+            title={translateMessageId("page-assets-mainnet", intl)}
+            alt={translateMessageId("page-assets-mainnet", intl)}
+            image={data.oldShip.childImageSharp}
+            artistName="Viktor Hachmang"
+            artistUrl="https://viktorhachmang.nl"
+          />
+          <AssetDownload
+            title={translateMessageId("page-assets-merge", intl)}
+            alt={translateMessageId("page-assets-merge", intl)}
+            image={data.merge.childImageSharp}
+            artistName="Viktor Hachmang"
+            artistUrl="https://viktorhachmang.nl"
+          />
+        </Row>
+
+        <Row>
+          <AssetDownload
+            title={translateMessageId("page-assets-beacon-chain", intl)}
+            alt={translateMessageId("page-assets-beacon-chain", intl)}
+            image={data.beaconChain.childImageSharp}
+            artistName="Viktor Hachmang"
+            artistUrl="http://viktorhachmang.nl/"
+          />
+          <AssetDownload
+            title={translateMessageId("page-assets-sharding", intl)}
+            alt={translateMessageId("page-assets-sharding", intl)}
+            image={data.newRings.childImageSharp}
+            artistName="Viktor Hachmang"
+            artistUrl="https://viktorhachmang.nl"
+          />
+        </Row>
+
+        <Row>
+          <AssetDownload
+            title={translateMessageId("page-assets-defi", intl)}
+            alt={translateMessageId("page-assets-defi", intl)}
+            image={data.defi.childImageSharp}
+            artistName="Patrick Atkins"
+            artistUrl="https://www.patrickatkins.co.uk/"
+          />
+          <AssetDownload
+            title={translateMessageId("page-assets-dao", intl)}
+            alt={translateMessageId("page-assets-dao", intl)}
+            image={data.dao.childImageSharp}
+            artistName="Patrick Atkins"
+            artistUrl="https://www.patrickatkins.co.uk/"
           />
         </Row>
 
@@ -500,10 +592,10 @@ export const query = graphql`
     hero: file(relativePath: { eq: "home/hero.png" }) {
       ...heroImage
     }
-    developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
+    doge: file(relativePath: { eq: "doge-computer.png" }) {
       ...assetItem
     }
-    doge: file(relativePath: { eq: "doge-computer.png" }) {
+    developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       ...assetItem
     }
     enterprise: file(relativePath: { eq: "enterprise-eth.png" }) {
@@ -512,10 +604,45 @@ export const query = graphql`
     wallet: file(relativePath: { eq: "wallet.png" }) {
       ...assetItem
     }
-    eth: file(relativePath: { eq: "eth.png" }) {
+    hackathon: file(relativePath: { eq: "hackathon_transparent.png" }) {
+      ...assetItem
+    }
+    impact: file(relativePath: { eq: "impact_transparent.png" }) {
+      ...assetItem
+    }
+    future: file(relativePath: { eq: "future_transparent.png" }) {
+      ...assetItem
+    }
+    finance: file(relativePath: { eq: "finance_transparent.png" }) {
+      ...assetItem
+    }
+    infrastructure: file(
+      relativePath: { eq: "infrastructure_transparent.png" }
+    ) {
       ...assetItem
     }
     whatIsEthereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
+      ...assetItem
+    }
+    eth: file(relativePath: { eq: "eth.png" }) {
+      ...assetItem
+    }
+    oldShip: file(relativePath: { eq: "eth2/oldship.png" }) {
+      ...assetItem
+    }
+    merge: file(relativePath: { eq: "eth2/merge.png" }) {
+      ...assetItem
+    }
+    beaconChain: file(relativePath: { eq: "eth2/core.png" }) {
+      ...assetItem
+    }
+    newRings: file(relativePath: { eq: "eth2/newrings.png" }) {
+      ...assetItem
+    }
+    defi: file(relativePath: { eq: "use-cases/defi.png" }) {
+      ...assetItem
+    }
+    dao: file(relativePath: { eq: "use-cases/dao-2.png" }) {
       ...assetItem
     }
     ethGifCat: file(relativePath: { eq: "eth-gif-cat.png" }) {

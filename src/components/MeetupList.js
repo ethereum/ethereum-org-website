@@ -252,12 +252,6 @@ const meetups = [
     link: "https://www.meetup.com/Seattle-Ethereum-Meetup/",
   },
   {
-    title: "DC Blockchain Developers",
-    emoji: ":us:",
-    location: "Washington D.C.",
-    link: "https://www.meetup.com/DC-Blockchain-Developers/",
-  },
-  {
     title: "Chiang Mai Dapps",
     emoji: ":thailand:",
     location: "Chiang Mai",

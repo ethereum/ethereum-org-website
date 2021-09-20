@@ -44,7 +44,7 @@ Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/ro/learn/) 
 
 **Ethers.js -** **_Implementare completă de portofel Ethereum și utilitare, în JavaScript și TypeScript._**
 
-- [Documentație](https://docs.ethers.io/ethers.js/html/)
+- [Documentație](https://docs.ethers.io/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
 **ethereumjs-vm -** **_Implementare Ethereum VM în JavaScript_**

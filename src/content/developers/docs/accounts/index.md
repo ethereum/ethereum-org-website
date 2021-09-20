@@ -29,11 +29,11 @@ Both account types have the ability to:
 
 - Creating an account costs nothing
 - Can initiate transactions
-- Transactions between externally-owned accounts can only be ETH transfers
+- Transactions between externally-owned accounts can only be ETH/token transfers
 
 **Contract**
 
-- Creating an account has a cost because you're using network storage
+- Creating a contract has a cost because you're using network storage
 - Can only send transactions in response to receiving a transaction
 - Transactions from an external account to a contract account can trigger code which can execute many different actions, such as transferring tokens or even creating a new contract
 
@@ -67,7 +67,7 @@ Example:
 
 `fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd036415f`
 
-The public key is generated from the private key using the [Elliptic Curve Digital Signature Algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). You get a public address for your account by taking the last 20 bytes of the public key and adding `0x` to the beginning.
+The public key is generated from the private key using the [Elliptic Curve Digital Signature Algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). You get a public address for your account by taking the last 20 bytes of the Keccak-256 hash of the public key and adding `0x` to the beginning.
 
 Here's an example of creating an account in the console using GETH's `personal_newAccount`
 
@@ -126,15 +126,15 @@ For dapp development, you'll want access to dummy accounts with test ETH so you 
 
 ## A note on wallets {#a-note-on-wallets}
 
-An account is not a wallet. A wallet is the keypair associated with a user-owned account, which allow a user to make transactions from or manage the account.
+An account is not a wallet. A wallet is the keypair associated with a user-owned account, which allows a user to make transactions from or manage the account.
 
 ## A visual demo {#a-visual-demo}
 
 Watch Austin walk you through hash functions, and key pairs.
 
-<iframe width="100%" height="315" src="youtube.com/embed/QJ010l-pBpE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/QJ010l-pBpE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<iframe width="100%" height="315" src="youtube.com/embed/9LtBDy67Tho" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/9LtBDy67Tho" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Further reading {#further-reading}
 

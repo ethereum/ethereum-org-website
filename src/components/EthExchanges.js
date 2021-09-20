@@ -192,6 +192,7 @@ const EthExchanges = () => {
           bittrex
           coinbase
           coinmama
+          coinspot
           country
           cryptocom
           gemini
@@ -230,6 +231,9 @@ const EthExchanges = () => {
         ...cardListImage
       }
       coinmama: file(relativePath: { eq: "exchanges/coinmama.png" }) {
+        ...cardListImage
+      }
+      coinspot: file(relativePath: { eq: "exchanges/coinspot.png" }) {
         ...cardListImage
       }
       cryptocom: file(relativePath: { eq: "exchanges/crypto.com.png" }) {
@@ -312,6 +316,12 @@ const EthExchanges = () => {
       url: "https://www.coinmama.com/",
       image: data.coinmama,
       usaExceptions: ["CT", "FL", "IA", "NY"],
+    },
+    coinspot: {
+      name: "CoinSpot",
+      url: "https://www.coinspot.com.au/",
+      image: data.coinspot,
+      usaExceptions: [],
     },
     cryptocom: {
       name: "Crypto.com",

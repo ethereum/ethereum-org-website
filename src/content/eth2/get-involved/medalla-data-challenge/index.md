@@ -33,7 +33,7 @@ The Ethereum 2.0 [Medalla testnet](https://github.com/goerli/medalla) is live. V
 
 The Ethereum Foundation are running this challenge because there's a lot to learn and discover from Medalla testnet activity. Your findings will give the Ethereum community —from beginners to core researchers— important insight into Medalla, the last step en route to Phase 0, the [Beacon Chain](/eth2/beacon-chain/).
 
-If Medalla proves stable, mainnet launch is next! And so, this is a critical moment to get involved in the Ethereum community <Twemoji svg text=":rocket:" />
+If Medalla proves stable, Mainnet launch is next! And so, this is a critical moment to get involved in the Ethereum community <Twemoji svg text=":rocket:" />
 
 ### How to submit {#how-to-submit}
 

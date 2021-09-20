@@ -212,7 +212,7 @@ general, the target is recalibrated by the network every 2016 blocks so
 that on average a new block is produced by some node in the network
 every ten minutes. In order to compensate miners for this computational
 work, the miner of every block is entitled to include a transaction
-giving themselves 12.5 BTC out of nowhere. Additionally, if any
+giving themselves 6.25 BTC out of nowhere. Additionally, if any
 transaction has a higher total denomination in its inputs than in its
 outputs, the difference also goes to the miner as a "transaction fee".
 Incidentally, this is also the only mechanism by which BTC are issued;
@@ -536,15 +536,14 @@ principles:
     are still usable in other protocols as well. Ethereum development
     should be maximally done so as to benefit the entire cryptocurrency
     ecosystem, not just itself.
-4.  **Agility**: details of the Ethereum protocol are not set in stone.
-    Although we will be extremely judicious about making modifications
-    to high-level constructs, for instance with the [sharding
-    roadmap](https://ethresear.ch/t/sharding-phase-1-spec/1407/),
-    abstracting execution, with only data availability enshrined in
-    consensus. Computational tests later on in the development process
-    may lead us to discover that certain modifications, e.g. to the
-    protocol architecture or to the Ethereum Virtual Machine (EVM), will
-    substantially improve scalability or security. If any such
+4.  **Agility**: although details of the Ethereum protocol are not set
+    in stone, we will be extremely judicious about making modifications
+    to its high-level constructs. For instance, there was
+    [extensive discussion on the specification and implementation of the sharding roadmap](https://ethresear.ch/t/sharding-phase-1-spec/1407/).
+    Additionally, computational tests later on in the development
+    process may lead us to discover that certain modifications, e.g. to
+    the protocol architecture or to the Ethereum Virtual Machine (EVM),
+    will substantially improve scalability or security. If any such
     opportunities are found, we will exploit them.
 5.  **Non-discrimination** and **non-censorship**: the protocol should
     not attempt to actively restrict or prevent specific categories of
@@ -1414,15 +1413,13 @@ The issuance model will be as follows:
 - 0.26x the total amount sold will be allocated to miners per year
   forever after that point.
 
-Group At launch After 1 year After 5 years
-
----
-
-Currency units 1.198X 1.458X 2.498X
-Purchasers 83.5% 68.6% 40.0%
-Reserve spent pre-sale 8.26% 6.79% 3.96%
-Reserve used post-sale 8.26% 6.79% 3.96%
-Miners 0% 17.8% 52.0%
+| Group                  | At launch | After 1 year | After 5 years |
+| ---------------------- | --------- | ------------ | ------------- |
+| Currency units         | 1.198X    | 1.458X       | 2.498X        |
+| Purchasers             | 83.5%     | 68.6%        | 40.0%         |
+| Reserve spent pre-sale | 8.26%     | 6.79%        | 3.96%         |
+| Reserve used post-sale | 8.26%     | 6.79%        | 3.96%         |
+| Miners                 | 0%        | 17.8%        | 52.0%         |
 
 **Long-Term Supply Growth Rate (percent)**
 

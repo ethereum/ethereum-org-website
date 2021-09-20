@@ -94,7 +94,6 @@ export const walletCardImage = graphql`
 
 const ResultsContainer = styled.div`
   margin-top: 0rem;
-  text-align: center;
 `
 
 const ResultsGrid = styled.div`
@@ -207,6 +206,9 @@ const WalletCompare = ({ location }) => {
       argent: file(relativePath: { eq: "wallets/argent.png" }) {
         ...walletCardImage
       }
+      bitcoindotcom: file(relativePath: { eq: "wallets/bitcoindotcom.png" }) {
+        ...walletCardImage
+      }
       coinbase: file(relativePath: { eq: "wallets/coinbase.png" }) {
         ...walletCardImage
       }
@@ -270,6 +272,9 @@ const WalletCompare = ({ location }) => {
       rainbow: file(relativePath: { eq: "wallets/rainbow.png" }) {
         ...walletCardImage
       }
+      samsung: file(relativePath: { eq: "wallets/samsung.png" }) {
+        ...walletCardImage
+      }
       squarelink: file(relativePath: { eq: "wallets/squarelink.png" }) {
         ...walletCardImage
       }
@@ -291,7 +296,19 @@ const WalletCompare = ({ location }) => {
       zengo: file(relativePath: { eq: "wallets/zengo.png" }) {
         ...walletCardImage
       }
+      walleth: file(relativePath: { eq: "wallets/walleth.png" }) {
+        ...walletCardImage
+      }
       tokenpocket: file(relativePath: { eq: "wallets/tokenpocket.png" }) {
+        ...walletCardImage
+      }
+      safepal: file(relativePath: { eq: "wallets/safepal.png" }) {
+        ...walletCardImage
+      }
+      opera: file(relativePath: { eq: "wallets/opera.png" }) {
+        ...walletCardImage
+      }
+      coin98: file(relativePath: { eq: "wallets/coin98.png" }) {
         ...walletCardImage
       }
     }

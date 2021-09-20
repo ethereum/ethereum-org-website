@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-A decentralized application (dapp) is an application built on a decentralized network that combines a [smart contract](/developers/docs/smart-contracts/) and a frontend user interface. Note, in Ethereum smart-contracts are accessible and transparent – like open APIs – so your dapp can even include a smart contract that someone else has written.
+A decentralized application (dapp) is an application built on a decentralized network that combines a [smart contract](/developers/docs/smart-contracts/) and a frontend user interface. Note: in Ethereum, smart-contracts are accessible and transparent – like open APIs – so your dapp can even include a smart contract that someone else has written.
 
 ## Prerequisites {#prerequisites}
 
@@ -69,12 +69,16 @@ Tokens must be generated in order to prove the value nodes that contribute to th
 
 ## Dapp tools {#dapp-tools}
 
-**Rimble UI** **_- Adaptable components and design standards for decentralized applications._**
+**Scaffold-ETH** **_- Quickly experiment with Solidity using a frontend that adapts to your smart contract._**
 
-- [rimble.consensys.design](https://rimble.consensys.design)
-- [GitHub](https://github.com/ConsenSys/rimble-ui)
+- [GitHub](https://github.com/austintgriffith/scaffold-eth)
+- [Example dapp](https://punkwallet.io/)
 
-**One Click Dapp** **_- FOSS tool for generating dapp frontends from an ABI._**
+**Create Eth App** **_- Create Ethereum-powered apps with one command._**
+
+- [GitHub](https://github.com/paulrberg/create-eth-app)
+
+**One Click Dapp** **_- FOSS tool for generating dapp frontends from an [ABI](/glossary/#abi)._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/One-Click-Dapp/one-click-dApp)
@@ -87,6 +91,8 @@ Tokens must be generated in order to prove the value nodes that contribute to th
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
+
+- [What Are Decentralized Apps?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps)
 
 ## Related Topics {#related-topics}
 

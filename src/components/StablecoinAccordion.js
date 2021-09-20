@@ -20,7 +20,6 @@ import {
 } from "./SharedStyledComponents"
 
 import { translateMessageId } from "../utils/translations"
-import { BsTypeH3 } from "react-icons/bs"
 
 const Card = styled.div`
   border-radius: 2px;
@@ -353,25 +352,25 @@ const StablecoinAccordion = () => {
     {
       title: "DyDx",
       image: data.dydx.childImageSharp.fixed,
-      link: "https://beaconcha.in",
+      link: "https://dydx.exchange",
       alt: translateMessageId("dydx-logo", intl),
     },
     {
       title: "Loopring",
       image: data.loopring.childImageSharp.fixed,
-      link: "https://beaconcha.in",
+      link: "https://loopring.org",
       alt: translateMessageId("loopring-logo", intl),
     },
     {
       title: "1inch",
       image: data.oneinch.childImageSharp.fixed,
-      link: "https://beaconcha.in",
+      link: "https://app.1inch.io",
       alt: translateMessageId("1inch-logo", intl),
     },
     {
       title: "Matcha",
       image: data.matcha.childImageSharp.fixed,
-      link: "https://beaconcha.in",
+      link: "https://matcha.xyz",
       alt: translateMessageId("matcha-logo", intl),
     },
   ]
@@ -386,7 +385,7 @@ const StablecoinAccordion = () => {
     {
       title: "DyDx",
       image: data.dydx.childImageSharp.fixed,
-      link: "https://beaconcha.in",
+      link: "https://dydx.exchange",
       alt: translateMessageId("dydx-logo", intl),
     },
     {

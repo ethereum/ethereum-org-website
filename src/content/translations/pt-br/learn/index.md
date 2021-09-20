@@ -86,7 +86,7 @@ Há muitos esforços sendo feitos para tornar a Ethereum mais “escalável” m
 
 "Layer 1" refere-se a melhorar o núcleo de protocolo da Ethereum. O projeto principal para melhorar o protocolo central da Ethereum é [ETH 2.0](./#eth-2-0).
 
-"Layer 2" refere-se à tecnologias que são construídas "no topo" do protocolo de Ethereum base, permitindo maior escalabilidade sem comprometer a segurança. Também existem tecnologias "off-chain", como as "side chains" (correntes paralelas), que permitem uma maior escalabilidade através da criação de um conjunto diferente de compromissos em matéria de segurança.
+"Layer 2" refere-se à tecnologias que são construídas "no topo" do protocolo de Ethereum base, permitindo maior escalabilidade sem comprometer a segurança. Também existem tecnologias "off-chain", como as "sidechains" (correntes paralelas), que permitem uma maior escalabilidade através da criação de um conjunto diferente de compromissos em matéria de segurança.
 
 - [Making Sense of Layer 2](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _Feb 12, 2018 - Josh Stark_
 - [The Case for Ethereum Scalability](https://medium.com/connext/the-case-for-ethereum-scalability-d2a8035f880f) _Jan 18, 2019 - Hunter Hillman, Steven McKie, and Eric Olszewski_

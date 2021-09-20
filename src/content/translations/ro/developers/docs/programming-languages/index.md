@@ -22,5 +22,6 @@ Selectează limbajul preferat pentru a găsi proiecte, resurse și comunități 
 - [Ethereum pentru programatori Rust](/developers/docs/programming-languages/rust/)
 - [Ethereum pentru programatori .NET](/developers/docs/programming-languages/dot-net/)
 - [Ethereum pentru programatori Delphi](/developers/docs/programming-languages/delphi/)
+- [Ethereum pentru programatori Dart](/developers/docs/programming-languages/dart/)
 
 Nu vezi aici limbajul preferat? Solicită o pagină nouă de [deschidere a unei probleme](https://github.com/ethereum/ethereum-org-website/issues/new/choose)

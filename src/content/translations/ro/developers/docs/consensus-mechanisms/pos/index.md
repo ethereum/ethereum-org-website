@@ -69,7 +69,7 @@ Pentru a face acest lucru în dovada mizei PoS, Casper, un protocol de finalitat
 
 După cum a spus Vlad Zamfir, acest lucru este ca un miner care participă la un atac de 51%, al cărui hardware este distrus imediat.
 
-## Dovada mizei și securitatea
+## Dovada mizei și securitatea {#pos-and-security}
 
 Amenințarea unui [atac 51%](https://www.investopedia.com/terms/1/51-attack.asp) încă există în dovada mizei, dar este și mai riscant pentru atacatori. Pentru a face acest lucru, va trebui să controlezi 51% din tot ETH-ul mizat în rețea. Nu numai că sunt mulți bani, dar probabil ar provoca scăderea valorii ETH. Există foarte puține stimulente pentru a distruge valoarea unei monede în care deții o participație majoritară. Există stimulente mai puternice pentru a menține rețeaua sigură și sănătoasă.
 

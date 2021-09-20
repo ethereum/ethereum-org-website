@@ -27,7 +27,7 @@ Tarvitsetko perusteellisempaa aloitusta? Katso [ethereum.org/fi/learn](/learn/) 
 
 ## Aloittelijan artikkelit {#beginner-articles}
 
-- [Johdanto älysopimuksiin Vyperillä](https://kauri.io/article/af913a853eaf4db88627b3ff9572b770/v1/an-introduction-to-smart-contracts-with-vyper)
+- [Johdanto älysopimuksiin Vyperillä](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [Miten voin kehittää Ethereum-sopimuksen käyttäen Python Flaskia?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Johdanto Web3.py:hyn · Ethereum Python-kehittäjille](https://www.dappuniversity.com/articles/web3-py-intro)
 - [Miten voin kutsua älysopimusfunktiota käyttäen Pythonia ja web3.py:tä](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
@@ -41,8 +41,8 @@ Tarvitsetko perusteellisempaa aloitusta? Katso [ethereum.org/fi/learn](/learn/) 
 
 ## Edistyneet käyttösuunnittelumallit {#advanced-use-patterns}
 
-- [Ethereumin älysopimusten kääntäminen, julkaiseminen ja kutsuminen Pythonilla](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [Analysoi Solidity-älysopimuksia Slitherillä](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
+- [Ethereumin älysopimusten kääntäminen, julkaiseminen ja kutsuminen Pythonilla](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
+- [Analysoi Solidity-älysopimuksia Slitherillä](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 
 ## Python-projektit ja -työkalut {#python-projects-and-tools}
 

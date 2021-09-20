@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
+import { useQuery, gql } from "@apollo/client"
 
 import GitStars from "./GitStars"
 import ButtonLink from "./ButtonLink"
@@ -111,6 +112,27 @@ const Children = styled.div`
   margin-top: 1rem;
 `
 
+const REPO_DATA = gql`
+  query RepoData(
+    $repoOwner: String!
+    $repoName: String!
+    $repoLangCount: Int!
+  ) {
+    repository(owner: $repoOwner, name: $repoName) {
+      stargazerCount
+      languages(
+        orderBy: { field: SIZE, direction: DESC }
+        first: $repoLangCount
+      ) {
+        nodes {
+          name
+        }
+      }
+      url
+    }
+  }
+`
+
 const ProductCard = ({
   url,
   background,
@@ -119,39 +141,58 @@ const ProductCard = ({
   description,
   alt = "",
   children,
-  gitHubRepo,
+  githubUrl = "",
+  repoLangCount = 1,
   subjects,
-}) => (
-  <Card>
-    <ImageWrapper background={background}>
-      <Image fixed={image} alt={alt} />
-    </ImageWrapper>
-    <Content className="hover">
-      <div>
-        {gitHubRepo && <GitStars gitHubRepo={gitHubRepo} />}
-        <Title gitHidden={!gitHubRepo}>{name}</Title>
-        <Description>{description}</Description>
-      </div>
-      {children && <Children>{children}</Children>}
-    </Content>
-    <SubjectContainer>
-      {subjects &&
-        subjects.map((subject, idx) => (
-          <SubjectPill key={idx} subject={subject}>
-            {subject}
-          </SubjectPill>
-        ))}
-      {gitHubRepo &&
-        gitHubRepo.languages.nodes.map(({ name }, idx) => (
-          <SubjectPill key={idx} subject={name}>
-            {name.toUpperCase()}
-          </SubjectPill>
-        ))}
-    </SubjectContainer>
-    <StyledButtonLink to={url} hideArrow={true}>
-      Open {name}
-    </StyledButtonLink>
-  </Card>
-)
+}) => {
+  const split = githubUrl.split("/")
+  const repoOwner = split[split.length - 2]
+  const repoName = split[split.length - 1]
+
+  // TODO add loading state
+  const { error, data } = useQuery(REPO_DATA, {
+    variables: {
+      repoOwner,
+      repoName,
+      repoLangCount,
+    },
+    skip: !githubUrl,
+  })
+
+  const hasRepoData = data && data.repository && !error
+
+  return (
+    <Card>
+      <ImageWrapper background={background}>
+        <Image fixed={image} alt={alt} />
+      </ImageWrapper>
+      <Content className="hover">
+        <div>
+          {hasRepoData && <GitStars gitHubRepo={data.repository} />}
+          <Title gitHidden={!hasRepoData}>{name}</Title>
+          <Description>{description}</Description>
+        </div>
+        {children && <Children>{children}</Children>}
+      </Content>
+      <SubjectContainer>
+        {subjects &&
+          subjects.map((subject, idx) => (
+            <SubjectPill key={idx} subject={subject}>
+              {subject}
+            </SubjectPill>
+          ))}
+        {hasRepoData &&
+          data.repository.languages.nodes.map(({ name }, idx) => (
+            <SubjectPill key={idx} subject={name}>
+              {name.toUpperCase()}
+            </SubjectPill>
+          ))}
+      </SubjectContainer>
+      <StyledButtonLink to={url} hideArrow={true}>
+        Open {name}
+      </StyledButtonLink>
+    </Card>
+  )
+}
 
 export default ProductCard

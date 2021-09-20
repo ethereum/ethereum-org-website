@@ -5,18 +5,6 @@ const supportedLanguages = translations.supportedLanguages
 const defaultLanguage = `en`
 const siteUrl = `https://ethereum.org`
 
-// Note: to run this application locally you need to:
-// 1. Create a .env file in the root directory (see .env.example)
-// 2. Create a Github personal access token with `read:user` scope
-// https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token
-// 3. Assign the token to GITHUB_TOKEN_NO_SCOPE in your .env file
-const GITHUB_TOKEN_READ_ONLY =
-  process.env.CONTEXT === "production"
-    ? process.env.GITHUB_TOKEN_READ_ONLY_PROD
-    : process.env.CONTEXT === "deploy-preview"
-    ? process.env.GITHUB_TOKEN_READ_ONLY_STAGING
-    : process.env.GITHUB_TOKEN_READ_ONLY_DEV
-
 module.exports = {
   siteMetadata: {
     // `title` & `description` pulls from respective ${lang}.json files in PageMetadata.js
@@ -216,25 +204,6 @@ module.exports = {
       options: {
         name: `data`,
         path: `${__dirname}/src/data`,
-      },
-    },
-    // Source GitHub API
-    {
-      resolve: `gatsby-source-graphql`,
-      options: {
-        typeName: `GitHub`,
-        fieldName: `github`,
-        url: `https://api.github.com/graphql`,
-        headers: {
-          Authorization: `Bearer ${GITHUB_TOKEN_READ_ONLY}`,
-        },
-        // https://www.gatsbyjs.com/plugins/gatsby-source-graphql/#performance-tuning
-        batch: true,
-        // See https://github.com/graphql/dataloader#new-dataloaderbatchloadfn--options
-        // for a full list of DataLoader options
-        dataLoaderOptions: {
-          maxBatchSize: 10,
-        },
       },
     },
     // Process files within /src/data/

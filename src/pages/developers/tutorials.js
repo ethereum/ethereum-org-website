@@ -19,6 +19,8 @@ import { Page, ButtonSecondary } from "../../components/SharedStyledComponents"
 import { getLocaleTimestamp, INVALID_DATETIME } from "../../utils/time"
 import { hasTutorials } from "../../utils/translations"
 
+import foreignTutorials from "../../data/tutorials.json"
+
 const SubSlogan = styled.p`
   font-size: 20px;
   line-height: 140%;
@@ -80,6 +82,14 @@ const Title = styled.p`
   font-weight: 600;
   font-size: 24px;
   margin-right: 6rem;
+  &:after {
+    margin-left: 0.125em;
+    margin-right: 0.3em;
+    display: ${(props) => (props.isExternal ? "inline" : "none")};
+    content: "↗";
+    transition: all 0.1s ease-in-out;
+    font-style: normal;
+  }
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     margin-right: 0rem;
   }
@@ -192,7 +202,7 @@ const published = (locale, published) => {
   return localeTimestamp !== INVALID_DATETIME ? (
     <span>
       <Emoji text=":calendar:" size={1} ml={`0.5em`} mr={`0.5em`} />{" "}
-      {localeTimestamp} •
+      {localeTimestamp}
     </span>
   ) : null
 }
@@ -200,31 +210,50 @@ const published = (locale, published) => {
 const TutorialsPage = ({ data, pageContext }) => {
   const intl = useIntl()
   // Filter tutorials by language and map to object
-  const allTutorials = data.allTutorials.nodes
+  const internalTutorials = data.allTutorials.nodes.map((tutorial) => ({
+    to:
+      tutorial.fields.slug.substr(0, 3) === "/en"
+        ? tutorial.fields.slug.substr(3)
+        : tutorial.fields.slug,
+    title: tutorial.frontmatter.title,
+    description: tutorial.frontmatter.description,
+    author: tutorial.frontmatter.author,
+    tags: tutorial.frontmatter.tags.map((tag) => tag.toLowerCase().trim()),
+    skill: tutorial.frontmatter.skill,
+    timeToRead: tutorial.timeToRead,
+    published: tutorial.frontmatter.published,
+    lang: tutorial.frontmatter.lang || "en",
+    isExternal: false,
+  }))
+
+  const externalTutorials = foreignTutorials.map((tutorial) => ({
+    to: tutorial.url,
+    title: tutorial.title,
+    description: tutorial.description,
+    author: tutorial.author,
+    tags: tutorial.tags.map((tag) => tag.toLowerCase().trim()),
+    skill: tutorial.skillLevel,
+    timeToRead: tutorial.timeToRead,
+    published: new Date(tutorial.publishDate).toISOString(),
+    lang: tutorial.lang || "en",
+    isExternal: true,
+  }))
+
+  const allTutorials = []
+    .concat(externalTutorials, internalTutorials)
     .filter((tutorial) =>
       hasTutorials(pageContext.language)
-        ? tutorial.frontmatter.lang === pageContext.language
-        : tutorial.frontmatter.lang === "en"
+        ? tutorial.lang === pageContext.language
+        : tutorial.lang === "en"
     )
-    .map((tutorial) => ({
-      to:
-        tutorial.fields.slug.substr(0, 3) === "/en"
-          ? tutorial.fields.slug.substr(3)
-          : tutorial.fields.slug,
-      title: tutorial.frontmatter.title,
-      description: tutorial.frontmatter.description,
-      author: tutorial.frontmatter.author,
-      tags: tutorial.frontmatter.tags.map((tag) => tag.toLowerCase().trim()),
-      skill: tutorial.frontmatter.skill,
-      timeToRead: tutorial.timeToRead,
-      published: tutorial.frontmatter.published,
-    }))
+    .sort((a, b) => new Date(b.published) - new Date(a.published))
 
   // Tally all subject tag counts
   const tagsConcatenated = []
   for (const tutorial of allTutorials) {
     tagsConcatenated.push(...tutorial.tags)
   }
+
   const allTags = tagsConcatenated.map((tag) => ({ name: tag, totalCount: 1 }))
   const sanitizedAllTags = Array.from(
     allTags.reduce(
@@ -244,7 +273,10 @@ const TutorialsPage = ({ data, pageContext }) => {
   })
 
   const clearActiveTags = () => {
-    setState({ activeTagNames: [], filteredTutorials: allTutorials })
+    setState({
+      activeTagNames: [],
+      filteredTutorials: allTutorials,
+    })
   }
 
   const handleTagSelect = (tagName) => {
@@ -261,7 +293,7 @@ const TutorialsPage = ({ data, pageContext }) => {
     // If no tags are active, show all tutorials, otherwise filter by active tag
     let filteredTutorials = allTutorials
     if (activeTagNames.length > 0) {
-      filteredTutorials = allTutorials.filter((tutorial) => {
+      filteredTutorials = state.filteredTutorials.filter((tutorial) => {
         for (const tag of activeTagNames) {
           if (!tutorial.tags.includes(tag)) {
             return false
@@ -392,17 +424,38 @@ const TutorialsPage = ({ data, pageContext }) => {
         )}
         {state.filteredTutorials.map((tutorial) => {
           return (
-            <TutorialCard key={tutorial.to} to={tutorial.to}>
+            <TutorialCard key={tutorial.to} to={tutorial.to} hideArrow>
               <TitleContainer>
-                <Title>{tutorial.title}</Title>
+                <Title isExternal={tutorial.isExternal}>{tutorial.title}</Title>
                 <Pill isSecondary={true}>{tutorial.skill}</Pill>
               </TitleContainer>
               <Author>
+                {/* TODO: Refactor each tutorial tag as a component */}
                 <Emoji text=":writing_hand:" size={1} mr={`0.5em`} />
                 {tutorial.author} •{published(intl.locale, tutorial.published)}
-                <Emoji text=":stopwatch:" size={1} ml={`0.5em`} mr={`0.5em`} />
-                {tutorial.timeToRead}{" "}
-                <Translation id="page-tutorial-read-time" />
+                {tutorial.timeToRead && (
+                  <>
+                    {" "}
+                    •
+                    <Emoji
+                      text=":stopwatch:"
+                      size={1}
+                      ml={`0.5em`}
+                      mr={`0.5em`}
+                    />
+                    {tutorial.timeToRead}{" "}
+                    <Translation id="page-tutorial-read-time" />
+                  </>
+                )}
+                {tutorial.isExternal && (
+                  <>
+                    {" "}
+                    •<Emoji text=":link:" size={1} ml={`0.5em`} mr={`0.5em`} />
+                    <Link to={tutorial.to} hideArrow>
+                      <Translation id="page-tutorial-external-link" />
+                    </Link>
+                  </>
+                )}
               </Author>
               <About>{tutorial.description}</About>
               <PillContainer>

@@ -13,7 +13,7 @@ Dacă vrei să utilizezi un anumit limbaj de programare pentru a te conecta la u
 
 ## Condiții prealabile {#prerequisites}
 
-Ar putea fi util să înțelegi [Stiva Ethereum](/developers/docs/ethereum-stack/) și [Clienții Ethereum](/docs/nodes-and-clients/).
+Ar putea fi util să înțelegi [Stiva Ethereum](/developers/docs/ethereum-stack/) și [Clienții Ethereum](/developers/docs/nodes-and-clients/).
 
 ## De ce să folosești o bibliotecă? {#why-use-a-library}
 

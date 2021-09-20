@@ -44,7 +44,7 @@ sidebar: true
 
 **Ethers.js -** **_تطبيق محفظة إيثريوم مكتملة مع الأدوات المساعدة باستخدام JavaScript و TypeScript._**
 
-- [التوثيق](https://docs.ethers.io/ethers.js/html/)
+- [التوثيق](https://docs.ethers.io/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
 **ethereumjs-vm -** **_VM الخاص بإيثريوم المنفذ في JavaScript_**

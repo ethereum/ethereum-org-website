@@ -10,12 +10,12 @@ import ActionCard from "../../components/ActionCard"
 import CalloutBanner from "../../components/CalloutBanner"
 import Emoji from "../../components/Emoji"
 import Eth2Articles from "../../components/Eth2Articles"
-import Eth2Diagram from "../../components/Eth2Diagram"
 import ExpandableCard from "../../components/ExpandableCard"
 import GhostCard from "../../components/GhostCard"
 import InfoBanner from "../../components/InfoBanner"
 import Link from "../../components/Link"
 import PageMetadata from "../../components/PageMetadata"
+import BannerNotification from "../../components/BannerNotification"
 import Translation from "../../components/Translation"
 import PageHero from "../../components/PageHero"
 import {
@@ -189,13 +189,6 @@ const RightColumn = styled.div`
   }
 `
 
-const FullWidthContainer = styled(Page)`
-  background: ${(props) => props.theme.colors.ednBackground};
-  padding: 2rem;
-  overflow-x: scroll;
-  margin-bottom: 2rem;
-`
-
 const Faq = styled.div`
   display: flex;
   margin-top: 4rem;
@@ -207,6 +200,16 @@ const Faq = styled.div`
 
 const ResearchContainer = styled.div`
   margin-top: 2rem;
+`
+
+const StyledBannerNotification = styled(BannerNotification)`
+  display: flex;
+  justify-content: center;
+`
+
+const StyledEmoji = styled(Emoji)`
+  margin-right: 1rem;
+  flex-shrink: 0;
 `
 
 const paths = [
@@ -234,7 +237,7 @@ const Eth2IndexPage = ({ data }) => {
     title: translateMessageId("page-eth2-upgrades", intl),
     header: translateMessageId("page-eth2-upgrading", intl),
     subtitle: translateMessageId("page-eth2-upgrade-desc", intl),
-    image: data.docking.childImageSharp.fluid,
+    image: data.merge.childImageSharp.fluid,
     alt: translateMessageId("page-dapps-doge-img-alt", intl),
     buttons: [
       {
@@ -258,18 +261,18 @@ const Eth2IndexPage = ({ data }) => {
       date: <Translation id="page-eth2-beacon-chain-estimate" />,
     },
     {
+      image: data.themerge.childImageSharp.fixed,
+      title: <Translation id="page-eth2-docking" />,
+      description: <Translation id="page-eth2-docking-desc" />,
+      to: "/eth2/merge/",
+      date: <Translation id="page-eth2-docking-estimate" />,
+    },
+    {
       image: data.shards.childImageSharp.fixed,
       title: <Translation id="page-eth2-shard-title" />,
       description: <Translation id="page-eth2-shard-desc" />,
       to: "/eth2/shard-chains/",
       date: <Translation id="page-eth2-shard-estimate" />,
-    },
-    {
-      image: data.thedocking.childImageSharp.fixed,
-      title: <Translation id="page-eth2-docking" />,
-      description: <Translation id="page-eth2-docking-desc" />,
-      to: "/eth2/docking/",
-      date: <Translation id="page-eth2-docking-estimate" />,
     },
   ]
 
@@ -279,6 +282,16 @@ const Eth2IndexPage = ({ data }) => {
         title={translateMessageId("page-eth2-meta-title", intl)}
         description={translateMessageId("page-eth2-meta-desc", intl)}
       />
+      <StyledBannerNotification shouldShow>
+        <StyledEmoji text=":megaphone:" />
+        <div>
+          <b>Latest:</b> Eth2 researchers are working on ways to accelerate the
+          merge. It will probably happen earlier than expected. More soon.{" "}
+          <Link to="https://blog.ethereum.org/category/research-and-development/">
+            Follow updates
+          </Link>
+        </div>
+      </StyledBannerNotification>
       <PageHero content={heroContent} />
       <Divider />
       <Content>
@@ -353,9 +366,7 @@ const Eth2IndexPage = ({ data }) => {
           ))}
         </StyledCardContainer>
       </Content>
-      <FullWidthContainer>
-        <Eth2Diagram />
-      </FullWidthContainer>
+      {/* TODO: Upgrade existing Eth2Diagram with new plan, then reinstate here */}
       <Content>
         <ContributeCard>
           <div>
@@ -440,13 +451,7 @@ const Eth2IndexPage = ({ data }) => {
               <p>
                 <Translation id="page-eth2-beacon-chain-date" />
               </p>
-              <Link to="/eth2/shard-chains/">
-                <Translation id="page-eth2-shard-title" />
-              </Link>
-              <p>
-                <Translation id="page-eth2-shard-date" />
-              </p>
-              <Link to="/eth2/docking/">
+              <Link to="/eth2/merge/">
                 <Translation id="page-eth2-docking" />
               </Link>
               <p>
@@ -454,6 +459,12 @@ const Eth2IndexPage = ({ data }) => {
                 <Link to="/glossary/#mainnet">
                   <Translation id="page-eth2-docking-mainnet" />
                 </Link>
+              </p>
+              <Link to="/eth2/shard-chains/">
+                <Translation id="page-eth2-shard-title" />
+              </Link>
+              <p>
+                <Translation id="page-eth2-shard-date" />
               </p>
             </ExpandableCard>
             <ExpandableCard
@@ -497,13 +508,13 @@ const Eth2IndexPage = ({ data }) => {
               </p>
               <ul>
                 <li>
-                  <Link to="/eth2/shard-chains/">
-                    <Translation id="page-eth2-shard-lower" />
+                  <Link to="/eth2/merge/">
+                    <Translation id="page-eth2-just-docking" />
                   </Link>
                 </li>
                 <li>
-                  <Link to="/eth2/docking/">
-                    <Translation id="page-eth2-just-docking" />
+                  <Link to="/eth2/shard-chains/">
+                    <Translation id="page-eth2-shard-lower" />
                   </Link>
                 </li>
               </ul>
@@ -529,7 +540,7 @@ const Eth2IndexPage = ({ data }) => {
               </p>
               <p>
                 <Translation id="page-eth2-question-4-answer-2" />{" "}
-                <Link to="/eth2/docking/">
+                <Link to="/eth2/merge/">
                   <Translation id="page-eth2-just-docking" />
                 </Link>
               </p>
@@ -579,13 +590,13 @@ const Eth2IndexPage = ({ data }) => {
               </p>
               <ul>
                 <li>
-                  <Link to="/eth2/shard-chains/">
-                    <Translation id="page-eth2-shard-lower" />
+                  <Link to="/eth2/merge/">
+                    <Translation id="page-eth2-just-docking" />
                   </Link>
                 </li>
                 <li>
-                  <Link to="/eth2/docking/">
-                    <Translation id="page-eth2-just-docking" />
+                  <Link to="/eth2/shard-chains/">
+                    <Translation id="page-eth2-shard-lower" />
                   </Link>
                 </li>
               </ul>
@@ -804,7 +815,7 @@ export const query = graphql`
         }
       }
     }
-    docking: file(relativePath: { eq: "eth2/docking.png" }) {
+    merge: file(relativePath: { eq: "eth2/merge.png" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
@@ -825,7 +836,7 @@ export const query = graphql`
         }
       }
     }
-    thedocking: file(relativePath: { eq: "eth2/docking.png" }) {
+    themerge: file(relativePath: { eq: "eth2/merge.png" }) {
       childImageSharp {
         fixed(width: 420) {
           ...GatsbyImageSharpFixed

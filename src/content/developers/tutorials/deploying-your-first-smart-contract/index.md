@@ -14,7 +14,7 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 I guess you are as excited as us to [deploy](/developers/docs/smart-contracts/deploying/) and interact with your first [smart contract](/developers/docs/smart-contracts/) on the Ethereum blockchain.
 
-Don’t worry, as it’s our fist smart contract, we’ll deploy it on a [local test network](/developers/docs/networks/) so it does not cost anything for you to deploy and play as much as you’d like with it.
+Don’t worry, as it’s our first smart contract, we’ll deploy it on a [local test network](/developers/docs/networks/) so it does not cost anything for you to deploy and play as much as you’d like with it.
 
 ## Writing our contract {#writing-our-contract}
 
@@ -77,7 +77,7 @@ Then navigate to the deploy and run transactions screen:
 
 Once you are on the "deploy and run" transactions screen, double check that your contract name appears and click on Deploy. As you can see on the top of the page, the current environment is “Javascript VM” that means that we’ll deploy and interact with our smart contract on a local test blockchain to be able to test faster and without any fees.
 
-![The deploy button in the Remix solidity compiler](./remix-deploy.png)
+![The deploy button in the Remix solidity compiler](./remix-deploy-button.png)
 
 Once you've clicked the “Deploy” button, you’ll see your contract appear on the bottom. Click the arrow on the left to expand it so we’ll see the content of our contract. This is our variable `counter`, our `increment()` function and the getter `getCounter()`.
 

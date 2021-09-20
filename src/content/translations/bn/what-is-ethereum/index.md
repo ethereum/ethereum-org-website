@@ -47,18 +47,16 @@ lang: bn
 
 [ভিতালিক বুতেরিনের সাথে বিকেন্দ্রীভূত সবকিছু](https://youtu.be/WSN5BaCzsbo)
 
-<div class="iframe-container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/WSN5BaCzsbo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/WSN5BaCzsbo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 [ব্লকচেইনের সামনের পথ ব্যাখ্যা করছেন বেন হরোয়িটজ](https://www.youtube.com/watch?v=l9jvKWKmRfs&feature=youtu.be)
 
 <div class="iframe-container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/l9jvKWKmRfs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/l9jvKWKmRfs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 [টেকক্রাঞ্চ কর্তৃক ইথেরিয়াম-এর ব্লকচেইন](https://www.youtube.com/watch?v=WfULutvxvzY)
 
 <div class="iframe-container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/WfULutvxvzY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/WfULutvxvzY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>

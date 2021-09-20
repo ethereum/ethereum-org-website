@@ -22,6 +22,7 @@ import SectionNav from "../components/SectionNav"
 import Translation from "../components/Translation"
 import Emoji from "../components/Emoji"
 import DocsNav from "../components/DocsNav"
+import DeveloperDocsLinks from "../components/DeveloperDocsLinks"
 
 import { ZenModeContext } from "../contexts/ZenModeContext.js"
 
@@ -32,6 +33,7 @@ import {
   Header1,
   Header2,
   Header3,
+  Header4,
   ListItem,
 } from "../components/SharedStyledComponents"
 
@@ -129,19 +131,14 @@ const H3 = styled(Header3)`
   }
 `
 
-const StyledH4 = styled.h4`
-  /* Anchor tag styles */
-  a {
-    position: relative;
-    display: none;
-    margin-left: 0rem;
-    padding-right: 0.5rem;
+const H4 = styled(Header4)`
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 1rem;
-    vertical-align: middle;
-    &:hover {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-    }
+    font-weight: 600;
+  }
+  &:before {
+    height: 160px;
+    margin-top: -160px;
   }
 `
 
@@ -162,7 +159,7 @@ const components = {
   h1: H1,
   h2: H2,
   h3: H3,
-  h4: StyledH4,
+  h4: H4,
   p: Paragraph,
   li: ListItem,
   pre: Codeblock,
@@ -175,6 +172,7 @@ const components = {
   Pill,
   CallToContribute,
   Emoji,
+  DeveloperDocsLinks,
 }
 
 const Contributors = styled(FileContributors)`
@@ -185,14 +183,13 @@ const Contributors = styled(FileContributors)`
 
 const DocsPage = ({ data, pageContext }) => {
   const { isZenMode } = useContext(ZenModeContext)
-  const intl = useIntl()
-  const isRightToLeft = isLangRightToLeft(intl.locale)
+  const { locale } = useIntl()
+  const isRightToLeft = isLangRightToLeft(locale)
 
   const mdx = data.pageData
   const tocItems = mdx.tableOfContents.items
   const isPageIncomplete = mdx.frontmatter.incomplete
 
-  const gitCommits = data.gitData.repository.ref.target.history.edges
   const { editContentUrl } = data.siteData.siteMetadata
   const { relativePath } = pageContext
   const absoluteEditPath = `${editContentUrl}${relativePath}`
@@ -210,7 +207,10 @@ const DocsPage = ({ data, pageContext }) => {
       <ContentContainer isZenMode={isZenMode}>
         <Content>
           <H1 id="top">{mdx.frontmatter.title}</H1>
-          <Contributors gitCommits={gitCommits} editPath={absoluteEditPath} />
+          <Contributors
+            relativePath={relativePath}
+            editPath={absoluteEditPath}
+          />
           <TableOfContents
             editPath={absoluteEditPath}
             items={tocItems}
@@ -226,7 +226,7 @@ const DocsPage = ({ data, pageContext }) => {
               <Translation id="back-to-top" /> ↑
             </a>
           </BackToTop>
-          <FeedbackCard />
+          {locale === "en" && <FeedbackCard />}
           <DocsNav relativePath={relativePath}></DocsNav>
         </Content>
         {mdx.frontmatter.sidebar && tocItems && (
@@ -262,34 +262,6 @@ export const query = graphql`
       }
       body
       tableOfContents
-    }
-    gitData: github {
-      repository(name: "ethereum-org-website", owner: "ethereum") {
-        ref(qualifiedName: "master") {
-          target {
-            ... on GitHub_Commit {
-              history(path: $relativePath) {
-                edges {
-                  node {
-                    message
-                    commitUrl
-                    author {
-                      name
-                      email
-                      avatarUrl(size: 100)
-                      user {
-                        url
-                        login
-                      }
-                    }
-                    committedDate
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
     }
   }
 `

@@ -28,25 +28,22 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
   - [Ethereum Stackexchange](https://ethereum.stackexchange.com) - _discussion and help for Ethereum developers_
   - [Ethereum Research](https://ethresear.ch) - _the most influential messageboard for cryptoeconomic research_
 - Chat rooms
+  - [Eth R&D Discord server](https://discord.gg/qGpsxSA)
   - [Ethereum Gitter](https://gitter.im/ethereum/home) - _chat room for the Ethereum github repo_
   - [Ethereum Cat Herders](https://discord.gg/tzYmDmF) - _community oriented around offering project management support to Ethereum development_
   - [Ethereum Hackers](https://ethglobal.co/discord) - _Discord chat run by [ETHGlobal](https://www.ethglobal.co/): an online community for Ethereum hackers all over the world_
   - [CryptoDevs Discord](https://discord.gg/5W5tVb3) - _Ethereum development focused Discord community_
   - [EthStaker Discord](https://discord.gg/NvCxbCu) - _Support for the [Beacon Chain](/eth2/beacon-chain/) staking community_
+  - [ethereum.org Website Team](https://discord.gg/CetY6Y4) - _Stop by and chat ethereum.org web design with the team and folks from the community_
 - Twitter
   - The Ethereum community is very active on Twitter - not sure where to start?
     - [List of influential Ethereum twitter accounts](https://hive.one/ethereum/)
-
-## Community support {#community-support}
-
-<Help />
 
 ## Upcoming events {#upcoming-events}
 
 **Every month, there are major Ethereum events around the world.** Consider attending one near you to meet more people in the community, learn about employment opportunities, and develop new skills.
 
-- [Chainlink Hackathon Spring 2021](https://chain.link/hackathon) – Virtual Chainlink hackathon (Mar 15 - Apr 11)
-- [Scaling Ethereum](https://scaling.ethglobal.co/) – Hackathon dedicated to ETH2 and L2 on Ethereum (Apr 16 - May 14)
+<UpcomingEventsList/>
 
 _Have an event to add to this list? [Add it](https://github.com/ethereum/ethereum-org-website#how-can-i-contribute)!_
 
@@ -73,9 +70,10 @@ This is a non-exhaustive list built by our community. Know of an active meetup g
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Community focused on funding Ethereum development_
 - [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _Women-led projects_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Collective of Web3 builders_
-- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - Promote the DAO concept in non-tech field and help people create value through DAO.
-- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - Freelancer Web3 development collective working as a DAO
+- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Promote the DAO concept in non-tech field and help people create value through DAO._
+- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Freelancer Web3 development collective working as a DAO_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Community governance of DAOhaus_
+- [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _Community of builders who believe in collective ownership of the internet_
 
 ## How can I get involved? {#how-can-i-get-involved}
 
@@ -89,6 +87,7 @@ The Ethereum community includes people of many different backgrounds and skillse
 - Check out [projects related to your area of expertise or programming language of choice](/developers/docs/programming-languages/)
 - Watch or participate in the [Core Dev calls](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
 - [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - tooling, documentation, and infrastructure areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
+- [Web3Bridge](https://www.web3bridge.com/) - join the aspiring web3 community in their initiative to identify, train, and support hundreds of developers and community members throughout Africa
 
 **Researchers & Academics**
 
@@ -111,7 +110,7 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
   - There are many open-source community calls, and having notetakers is a huge help. If you’re interested, join the Ethereum Cat Herders chat [here](https://gitter.im/ethereum-cat-herders/meeting-notes-and-summaries), and introduce yourself!
 - **Translate Ethereum content into your native language**
   - ethereum.org maintains a translation program that translates the website, and other resources, into many different languages
-  - Find out how to get involved [here](/languages/#ethereum-org-translation-program)
+  - Find out how to get involved [here](/contributing/translation-program)
 
 **Financial professional or accountant**
 
@@ -128,13 +127,13 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
 
 ## Ethereum Grants {#ethereum-grants}
 
-[View open Ethereum grants](/grants/)
+[View open Ethereum grants](/community/grants/)
 
 ## Ethereum Jobs {#ethereum-jobs}
 
 **Want to find a job working in Ethereum?**
 
-- [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/)
+- [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/ethereum/)
 - [Crypto.jobs](https://crypto.jobs/)
 - [Careers at ConsenSys](https://consensys.net/careers/)
-- [Blocktribe](https://blocktribe.com/)
+- [Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)

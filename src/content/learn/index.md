@@ -37,6 +37,7 @@ High-level explanations of Ethereum and blockchain technology generally.
 - [A Gentle Introduction to Ethereum](https://bitsonblocks.net/2016/10/02/gentle-introduction-ethereum/) _Oct 2, 2016 - Antony Lewis_
 - [Introduction to Blockchain through Cryptoeconomics - Part 1](https://medium.com/blockchain-at-berkeley/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) _Jan 26, 2018 - Zubin Koticha_
 - [Introduction to Blockchain through Cryptoeconomics - Part 2](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-1252f6a6c012) _July 19, 2018 - Zubin Koticha_
+- [Understanding Ethereum](https://allan-gulley.medium.com/understanding-ethereum-819c2096b613?sk=c89f3aa5a4fd8b5fa0dae3042a3fa011) _Apr 27, 2021 - Allan Gulley_
 - [Ethereum's original Whitepaper](/whitepaper/)
 
 ## Smart Contracts {#smart-contracts}
@@ -46,6 +47,10 @@ A “smart contract” is simply a piece of code that is running on Ethereum. It
 - Want to learn how to program on Ethereum with smart contracts? [ethereum.org/developers](/developers/)
 - [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _Nov 12, 2018 - Andreas M. Antonopoulos, Gavin Wood_
 - [What are Smart Contracts/Decentralized Applications?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) _Updated often - Ethhub_
+
+## Ethereum development {#ethereum-development}
+
+Aspiring Ethereum developer? Check out our developer portal. It's got documentation, tutorials, and other resources for learning how to build Ethereum products. [View developer portal](/developers/learning-tools/)
 
 ## Proof of Work and Mining {#proof-of-work-and-mining}
 
@@ -78,7 +83,7 @@ There are many efforts underway to make Ethereum more “scalable” by improvin
 
 “Layer 2” refers to technologies that are built “on top” of the base Ethereum protocol, enabling greater scalability without compromising on security. There are also “off-chain” technologies like side-chains, which enable greater scalability by making a different set of security tradeoffs.
 
-[More on Layer 2](/developers/docs/layer-2-scaling/)
+[More on Layer 2](/developers/docs/scaling/layer-2-rollups/)
 
 ## Eth2 {#eth-2-0}
 
@@ -108,3 +113,24 @@ Critical views of Ethereum and Cryptocurrencies.
 - [The Challenges of Building Ethereum Infrastructure](https://medium.com/@lopp/the-challenges-of-building-ethereum-infrastructure-87e443e47a4b) _Jan 8, 2018 - Jameson Lopp_
 - [Parsimonious Answers to Difficult Questions](https://www.youtube.com/watch?v=GOkSg0BuSdw&feature=youtu.be) _(Video) March 10, 2019 - Rick Dudley_
 - [There’s no good reason to trust blockchain technology](https://www.wired.com/story/theres-no-good-reason-to-trust-blockchain-technology/) _Feb 6, 2019 - Bruce Schneier_
+
+## Books and podcasts {#books-and-podcasts}
+
+Books on Ethereum and Cryptocurrencies:
+
+- [Out of the Ether: The Amazing Story of Ethereum and the $55 Million Heist that Almost Destroyed It All](https://www.goodreads.com/book/show/55360267-out-of-the-ether) _September 29, 2020 - Matthew Leising_
+- [The Infinite Machine: How an Army of Crypto-hackers Is Building the Next Internet with Ethereum](https://www.goodreads.com/en/book/show/50175330-the-infinite-machine) _July 14, 2020 - Camila Russo_
+- [The Age of Cryptocurrency: How Bitcoin and the Blockchain Are Challenging the Global Economic Order](https://www.goodreads.com/en/book/show/22174460-the-age-of-cryptocurrency) _January 12, 2016 - Paul Vigna, Michael J. Casey_
+- [The Truth Machine: The Blockchain and the Future of Everything](https://www.goodreads.com/en/book/show/34964890-the-truth-machine) _February 27, 2018 - Paul Vigna, Michael J. Casey_
+- [Digital Gold: Bitcoin and the Inside Story of the Misfits and Millionaires Trying to Reinvent Money](https://www.goodreads.com/book/show/23546676-digital-gold) _May 24, 2021 - Nathaniel Popper_
+- [Kings of Crypto: One Startup's Quest to Take Cryptocurrency Out of Silicon Valley and Onto Wall Street](https://www.goodreads.com/en/book/show/56274031-kings-of-crypto) _December 15, 2020 - Jeff John Roberts_
+- [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) _December 23, 2018 – Andreas M. Antonopoulos, Gavin Wood Ph.D. _
+
+Podcasts addressing Ethereum and Cryptocurrencies:
+
+- [Into the Ether](https://podcast.ethhub.io/) _A podcast focusing on all things Ethereum and DeFi_
+- [Bankless](http://podcast.banklesshq.com/) _A guide to Crypto finance_
+- [Uncommon Core](https://uncommoncore.co/podcast/) _Explores the transformative nature of trust-minimized currency and financial services_
+- [Zero Knowledge](https://www.zeroknowledge.fm/) _Goes deep into the tech that will power the emerging decentralised web and the community building this_
+- [Epicenter](https://epicenter.tv/) _Explores the technical, economic, and social implications of the Crypto industry_
+- [Unchained](https://unchainedpodcast.com/) _dives deep into the people building the decentralized internet, the details of this technology that could underpin our future, and some of the thorniest topics in crypto, such as regulation, security and privacy_

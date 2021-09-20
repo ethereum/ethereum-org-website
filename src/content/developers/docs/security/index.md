@@ -17,7 +17,7 @@ This will cover smart contract security so make sure you're familiar with [smart
 
 ## How to write more secure Smart Contract code {#how-to-write-more-secure-smart-contract-code}
 
-Before launching any code to mainnet, it is important to take sufficient precaution to protect anything of value your smart contract is entrusted with. In this article, we will discuss a few specific attacks, provide resources to learn about more attack types, and leave you with some basic tooling and best practices to ensure your contracts function correctly and securely.
+Before launching any code to Mainnet, it is important to take sufficient precaution to protect anything of value your smart contract is entrusted with. In this article, we will discuss a few specific attacks, provide resources to learn about more attack types, and leave you with some basic tooling and best practices to ensure your contracts function correctly and securely.
 
 ## Audits are not a silver bullet {#audits-are-not-a-silver-bullet}
 

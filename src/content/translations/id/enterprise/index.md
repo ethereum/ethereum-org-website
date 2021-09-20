@@ -17,7 +17,7 @@ Kenapa perusahaan perlu peduli dengan Enterprise Ethereum?
 - Pengurangan biaya yang dikeluarkan untuk trust (kepercayaan) dan koordinasi dengan pihak bisnis lain
 - Peningkatan akuntabilitas dan efisiensi operasional di dalam jaringan bisnis
 - Future-proof bisnis anda secara kompetitif
-- Kompatibilitas dengan jaringan mainnet publik ataupun dengan perizinan, jaringan privat
+- Kompatibilitas dengan jaringan Mainnet publik ataupun dengan perizinan, jaringan privat
 
 Untuk informasi yang lebih dalam, anda bisa membaca artikel terkait dibawah ini:
 

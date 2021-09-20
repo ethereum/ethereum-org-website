@@ -7,17 +7,17 @@ sidebar: true
 
 ## What is a blockchain? {#what-is-a-blockchain}
 
-A blockchain is best described as a public database that is updated and shared across many computers in a network.
+A blockchain is a public database that is updated and shared across many computers in a network.
 
 "Block" refers to the fact that data and state are stored in sequential batches or "blocks". If you send ETH to someone else, the transaction data needs to be added to a block for it to be successful.
 
 "Chain" refers to the fact that each block cryptographically references its parent. A block's data cannot be changed without changing all subsequent blocks, which would require the consensus of the entire network.
 
-Each new block and the chain as a whole must be agreed upon by every node in the network. This is so everyone has the same data. For this to work, blockchains need a consensus mechanism.
+Each new block and the chain as a whole must be agreed upon by every computer in the network. These computers are known as "nodes". This is so everyone has the same data. To accomplish this distributed agreement, blockchains need a consensus mechanism.
 
-Ethereum currently uses a proof-of-work consensus mechanism. This means that anyone who wants to add new blocks to the chain must solve a difficult puzzle that you need a lot of computing power to work on. Solving the puzzle "proves" that you have spent the computational resources. Doing this is known as [mining](/developers/docs/consensus-mechanisms/pow/mining/). Mining can be trial and error but adding a block successfully is rewarded in ETH. On the other hand, submitting fraudulent blocks is not an attractive option considering the resources you've spent on producing the block.
+Ethereum currently uses a [proof-of-work](/developers/docs/consensus-mechanisms/pow/) consensus mechanism. This means that anyone who wants to add new blocks to the chain must solve a difficult puzzle that requires a lot of computing power. Solving the puzzle "proves" that you have spent the computational resources. Doing this is known as [mining](/developers/docs/consensus-mechanisms/pow/mining/). Mining is typically brute force trial and error but adding a block successfully is rewarded in ETH.
 
-New blocks are broadcast to the nodes in the network, checked and verified, updating the state for everyone.
+New blocks are broadcasted to the nodes in the network, checked and verified, thus updating the state of the blockchain for everyone.
 
 So to summarise, when you send ETH to someone, the transaction must be mined and included in a new block. The updated state is then shared with the entire network. More on the details below.
 
@@ -25,7 +25,11 @@ Watch Austin walk you through blockchains:
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/zcX7OJ-L8XQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-If you want to see how blockchain hashes data, and then the previous block references all the past blocks, be sure to check out [this demo](https://andersbrownworth.com/blockchain/blockchain). It makes understanding the hashing of blocks really simple.
+If you want to see how blockchain hashes data, and then the previous block references all the past blocks, be sure to check out [this demo](https://andersbrownworth.com/blockchain/blockchain) by Anders Brownworth and watch the accompanying video below. It makes understanding the hashing of blocks really simple.
+
+Watch Anders explain hashes in blockchains:
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## What is Ethereum? {#what-is-ethereum}
 
@@ -37,13 +41,13 @@ Cryptographic mechanisms ensure that once transactions are verified as valid and
 
 ## What is ether? {#what-is-ether}
 
-The purpose of Ether, the cryptocurrency, is to allow for the existence of a market for computation. Such a market provides an economic incentive for participants to verify/execute transaction requests and to provide computational resources to the network.
+The purpose of ether, the cryptocurrency, is to allow for the existence of a market for computation. Such a market provides an economic incentive for participants to verify/execute transaction requests and to provide computational resources to the network.
 
 Any participant who broadcasts a transaction request must also offer some amount of ether to the network, as a bounty to be awarded to whoever eventually does the work of verifying the transaction, executing it, committing it to the blockchain, and broadcasting it to the network.
 
 The amount of ether paid is a function of the length of the computation. This also prevents malicious participants from intentionally clogging the network by requesting the execution of infinite loops or resource-intensive scripts, as these actors will be continually charged.
 
-## What are dapps? {#what-are-dapps}
+## What are smart contracts? {#what-are-smart-contracts}
 
 In practice, participants don’t write new code every time they want to request a computation on the EVM. Rather, application developers upload programs (reusable snippets of code) into EVM storage, and then users make requests for the execution of these code snippets with varying parameters. We call the programs uploaded to and executed by the network smart contracts.
 
@@ -106,6 +110,8 @@ A reusable snippet of code (a program) which a developer publishes into EVM memo
 ## Further reading {#further-reading}
 
 - [Ethereum Whitepaper](/whitepaper/)
+
+_Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related tutorials {#related-tutorials}
 

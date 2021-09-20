@@ -27,7 +27,7 @@ sidebarDepth: 1
 
 ## 初級記事 {#beginner-articles}
 
-- [Vyper を使ったスマートコントラクト入門](https://kauri.io/article/af913a853eaf4db88627b3ff9572b770/v1/an-introduction-to-smart-contracts-with-vyper)
+- [Vyper を使ったスマートコントラクト入門](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [Python の Flask を使ってイーサリアムコントラクトを開発するには？](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Web3.py 入門 - Python 開発者のためのイーサリアム](https://www.dappuniversity.com/articles/web3-py-intro)
 - [Python と web3.py を使ったスマートコントラクト関数の呼び出し方](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
@@ -41,8 +41,8 @@ sidebarDepth: 1
 
 ## 高度な利用パターン {#advanced-use-patterns}
 
-- [Python を使ったイーサリアムスマートコントラクトのコンパイル、デプロイ、呼び出し](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [Slither で Solidity スマートコントラクトを分析](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
+- [Python を使ったイーサリアムスマートコントラクトのコンパイル、デプロイ、呼び出し](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
+- [Slither で Solidity スマートコントラクトを分析](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 
 ## Python のプロジェクトとツール {#python-projects-and-tools}
 

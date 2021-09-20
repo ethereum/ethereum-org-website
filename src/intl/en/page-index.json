@@ -50,7 +50,7 @@
   "page-index-network-stats-eth-price-description": "ETH price (USD)",
   "page-index-network-stats-eth-price-explainer": "The latest price for 1 ether. You can buy as little as 0.000000000000000001 – you don't need to buy 1 whole ETH.",
   "page-index-network-stats-tx-day-description": "Transactions today",
-  "page-index-network-stats-tx-day-explainer": "The number of transactions succesfully processed on the network in the last 24 hours.",
+  "page-index-network-stats-tx-day-explainer": "The number of transactions successfully processed on the network in the last 24 hours.",
   "page-index-network-stats-value-defi-description": "Value locked in DeFi (USD)",
   "page-index-network-stats-value-defi-explainer": "The amount of money in decentralized finance (DeFi) applications, the Ethereum digital economy.",
   "page-index-network-stats-nodes-description": "Nodes",

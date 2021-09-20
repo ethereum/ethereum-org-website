@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react"
+import { ApolloProvider } from "@apollo/client"
+import client from "../apollo"
 import { ThemeProvider } from "styled-components"
 import { IntlProvider, IntlContextProvider } from "gatsby-plugin-intl"
 import styled from "styled-components"
@@ -7,6 +9,7 @@ import "../styles/layout.css"
 import { lightTheme, darkTheme, GlobalStyle } from "../theme"
 
 import Footer from "./Footer"
+import ReleaseBanner from "./ReleaseBanner"
 import Nav from "./Nav"
 import SideNav from "./SideNav"
 import SideNavMobile from "./SideNavMobile"
@@ -99,45 +102,44 @@ const Layout = (props) => {
   const path = props.path
 
   return (
-    <IntlProvider
-      locale={intl.language}
-      defaultLocale={intl.defaultLanguage}
-      messages={intl.messages}
-    >
-      <IntlContextProvider value={intl}>
-        <ThemeProvider theme={theme}>
-          <GlobalStyle isDarkTheme={isDarkTheme} />
-          <TranslationBanner
-            shouldShow={shouldShowTranslationBanner}
-            isPageContentEnglish={isPageContentEnglish}
-            isPageRightToLeft={isPageRightToLeft}
-            originalPagePath={intl.originalPath}
-          />
-          <ContentContainer
-            shouldShowSideNav={shouldShowSideNav}
-            isZenMode={isZenMode}
-          >
-            {!isZenMode && (
-              <Nav
-                handleThemeChange={handleThemeChange}
-                isDarkTheme={isDarkTheme}
-                path={path}
-              />
-            )}
-            {shouldShowSideNav && <SideNavMobile path={path} />}
-            <MainContainer>
-              {!isZenMode && shouldShowSideNav && <SideNav path={path} />}
-              <MainContent>
-                <ZenModeContext.Provider value={{ isZenMode, setIsZenMode }}>
-                  <Main>{props.children}</Main>
-                </ZenModeContext.Provider>
-              </MainContent>
-            </MainContainer>
-            <Footer />
-          </ContentContainer>
-        </ThemeProvider>
-      </IntlContextProvider>
-    </IntlProvider>
+    <ApolloProvider client={client}>
+      <IntlProvider
+        locale={intl.language}
+        defaultLocale={intl.defaultLanguage}
+        messages={intl.messages}
+      >
+        <IntlContextProvider value={intl}>
+          <ThemeProvider theme={theme}>
+            <GlobalStyle isDarkTheme={isDarkTheme} />
+            <TranslationBanner
+              shouldShow={shouldShowTranslationBanner}
+              isPageContentEnglish={isPageContentEnglish}
+              isPageRightToLeft={isPageRightToLeft}
+              originalPagePath={intl.originalPath}
+            />
+            <ContentContainer isZenMode={isZenMode}>
+              {!isZenMode && (
+                <Nav
+                  handleThemeChange={handleThemeChange}
+                  isDarkTheme={isDarkTheme}
+                  path={path}
+                />
+              )}
+              {shouldShowSideNav && <SideNavMobile path={path} />}
+              <MainContainer>
+                {!isZenMode && shouldShowSideNav && <SideNav path={path} />}
+                <MainContent>
+                  <ZenModeContext.Provider value={{ isZenMode, setIsZenMode }}>
+                    <Main>{props.children}</Main>
+                  </ZenModeContext.Provider>
+                </MainContent>
+              </MainContainer>
+              <Footer />
+            </ContentContainer>
+          </ThemeProvider>
+        </IntlContextProvider>
+      </IntlProvider>
+    </ApolloProvider>
   )
 }
 

@@ -48,11 +48,11 @@ Dessa decentraliserade appar (eller "dapps") får fördelarna med cryptocurrency
 [Decentralized Everything med Vitalik Buterin](https://youtu.be/WSN5BaCzsbo)
 
 <div class="iframe-container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/WSN5BaCzsbo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/WSN5BaCzsbo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 [Ethereum’s Blockchain av TechCrunch](https://www.youtube.com/watch?v=WfULutvxvzY)
 
 <div class="iframe-container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/WfULutvxvzY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/WfULutvxvzY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>

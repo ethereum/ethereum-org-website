@@ -1,0 +1,22 @@
+{
+  "comp-tutorial-metadata-minute-read": "一分钟阅读",
+  "page-tutorial-listing-policy-intro": "在您提交教程之前，请阅读我们的上架政策。",
+  "comp-tutorial-metadata-tip-author": "提示作者",
+  "page-tutorial-listing-policy": "文章上架政策",
+  "page-tutorial-new-github": "新到 GitHub？",
+  "page-tutorial-new-github-desc": "提出问题 — — 只需填写所需信息并粘贴您的教程。",
+  "page-tutorial-pull-request": "创建拉取请求",
+  "page-tutorial-pull-request-btn": "创建拉取请求",
+  "page-tutorial-pull-request-desc-1": "请跟随",
+  "page-tutorial-pull-request-desc-2": "教程/您的教程名称/index.md",
+  "page-tutorial-pull-request-desc-3": "命名结构。",
+  "page-tutorial-raise-issue-btn": "提出问题",
+  "page-tutorial-read-time": "分钟",
+  "page-tutorial-submit-btn": "提交一个教程",
+  "page-tutorial-submit-tutorial": "要提交一个教程，您需要使用 GitHub 。我们欢迎您创建一个问题或拉取请求。",
+  "page-tutorial-subtitle": "欢迎来到我们管理的社区教程的列表。",
+  "page-tutorial-tags-error": "没有教程包含所有这些标签",
+  "page-tutorial-title": "以太坊开发教程",
+  "page-tutorials-meta-description": "按主题浏览并过滤已审查的以太坊社区教程。",
+  "page-tutorials-meta-title": "以太坊开发教程"
+}

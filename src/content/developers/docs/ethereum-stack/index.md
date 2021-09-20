@@ -35,7 +35,7 @@ In order for an application to interact with the Ethereum blockchain (i.e. read 
 
 Ethereum nodes are computers running software - an Ethereum client. A client is an implementation of Ethereum that verifies all transactions in each block, keeping the network secure and the data accurate. Ethereum nodes ARE the Ethereum blockchain. They collectively store the state of the Ethereum blockchain and reach consensus on transactions to mutate the blockchain state.
 
-By connecting your application to an Ethereum node (via a JSON RPC spec), your application is able to read data from the blockchain (such as user account balances) as well as broadcast new transactions to the network (such as transfering ETH between user accounts or executing functions of smart contracts).
+By connecting your application to an Ethereum node (via a JSON RPC spec), your application is able to read data from the blockchain (such as user account balances) as well as broadcast new transactions to the network (such as transferring ETH between user accounts or executing functions of smart contracts).
 
 ## Level 4: Ethereum Client APIs {#ethereum-client-apis}
 
