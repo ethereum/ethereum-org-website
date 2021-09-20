@@ -4867,6 +4867,16 @@
         "bug",
         "doc"
       ]
+    },
+    {
+      "login": "abcoathup",
+      "name": "Andrew B Coathup",
+      "avatar_url": "https://avatars.githubusercontent.com/u/28278242?v=4",
+      "profile": "https://github.com/abcoathup",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
