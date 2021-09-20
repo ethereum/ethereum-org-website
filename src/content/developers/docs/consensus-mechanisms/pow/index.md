@@ -96,7 +96,7 @@ At a high level, proof-of-stake has the same end goal as proof-of-work: to help 
 
 ### Videos {#videos}
 
- - [What is Proof of Work?](https://youtu.be/XLcWy1uV8YM)
+ - [What is Proof of Work (PoW)｜Explained For Beginners](https://www.youtube.com/watch?v=3EUAcxhuoU4)
 
 ## Related Topics {#related-topics}
 
