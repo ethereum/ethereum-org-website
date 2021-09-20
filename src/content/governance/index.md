@@ -13,17 +13,11 @@ _If no one owns Ethereum, how are decisions about past and future changes to Eth
 
 ## What is Governance? {#what-is-governance}
 
-The Cambridge dictionary defines governance as:
-
-> _the way that organizations or countries are managed at the highest level, and the systems for doing this_
-
-In essence, governance is the system in place that allows decisions to be made. In a typical organizational structure, the executive team or a directors' board may have the final say in decision-making. In a political system, elected officials may enact legislation that attempts to represent their constituents' desires.
-
-<Divider />
+Governance is the systems in place that allow decisions to be made. In a typical organizational structure, the executive team or a board of directors may have the final say in decision-making. Or perhaps shareholders vote on proposals to enact change. In a political system, elected officials may enact legislation that attempts to represent their constituents' desires.
 
 ## Decentralized Governance {#decentalized-governance}
 
-No one person owns the Ethereum protocol, but decisions still need to be made about implementing changes to best ensure the longevity and prosperity of the network. This lack of ownership makes traditional organizational governance an incompatible solution.
+No one person owns or controls the Ethereum protocol, but decisions still need to be made about implementing changes to best ensure the longevity and prosperity of the network. This lack of ownership makes traditional organizational governance an incompatible solution.
 
 ## Ethereum Governance {#ethereum-governance}
 

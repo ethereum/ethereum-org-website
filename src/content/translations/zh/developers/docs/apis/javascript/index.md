@@ -46,7 +46,7 @@ var web3 = new Web3("http://localhost:8545")
 var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
 
 // 更改提供者
-web3。 etProvider("ws://localhost:8546")
+web3.setProvider("ws://localhost:8546")
 // 或
 web3.setProvider(new Web3.providers.WebsocketProvider("ws://localhost:8546"))
 

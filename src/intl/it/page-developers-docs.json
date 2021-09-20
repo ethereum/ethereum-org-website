@@ -16,6 +16,7 @@
   "docs-nav-dot-net": ".NET",
   "docs-nav-erc-20": "ERC-20",
   "docs-nav-erc-721": "ERC-721",
+  "docs-nav-erc-777": "ERC-777",
   "docs-nav-ethereum-client-apis": "API client Ethereum",
   "docs-nav-ethereum-stack": "Stack di Ethereum",
   "docs-nav-evm": "Macchina virtuale Ethereum (EVM)",
