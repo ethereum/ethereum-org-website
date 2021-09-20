@@ -4847,6 +4847,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "metalocal",
+      "name": "metalocal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/82745711?v=4",
+      "profile": "https://github.com/metalocal",
+      "contributions": [
+        "bug",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
