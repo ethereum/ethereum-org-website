@@ -1,17 +1,9 @@
-import React, { useState, useEffect, useRef } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 import axios from "axios"
 
-import {
-  AreaChart,
-  ResponsiveContainer,
-  Area,
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-} from "recharts"
+import { AreaChart, ResponsiveContainer, Area, XAxis } from "recharts"
 import Translation from "./Translation"
 import Tooltip from "./Tooltip"
 import Link from "./Link"
@@ -88,12 +80,8 @@ const StyledIcon = styled(Icon)`
   margin-right: 0.5rem;
   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
   }
-  &:hover {
-    fill: ${({ theme }) => theme.colors.primary};
-  }
-  &:active {
-    fill: ${({ theme }) => theme.colors.primary};
-  }
+  &:hover,
+  &:active,
   &:focus {
     fill: ${({ theme }) => theme.colors.primary};
   }
@@ -117,12 +105,10 @@ const LoadingMessage = () => (
 
 const Lines = styled.div`
   position: absolute;
-  // margin-left: -10%;
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 200px;
-  // z-index: 0;
+  height: 65%;
 `
 
 const ButtonContainer = styled.div`
@@ -130,7 +116,6 @@ const ButtonContainer = styled.div`
   right: 20px;
   bottom: 20px;
   font-family: "SFMono-Regular", monospace;
-  // background: ${({ theme, color }) => theme.colors[color]};
 `
 
 const Button = styled.button`
@@ -142,14 +127,7 @@ const Button = styled.button`
   border-radius: 1px;
   border: 1px solid ${({ theme, color }) => theme.colors[color]};
   outline: none;
-  // text-transform: uppercase;
-  // margin: 10px 0px;
   cursor: pointer;
-  // box-shadow: 0px 2px 2px lightgray;
-  // transition: ease background-color 250ms;
-  // &:hover {
-  //   background-color: blue;
-  // }
   &:disabled {
     cursor: default;
     opacity: 0.7;
@@ -157,17 +135,18 @@ const Button = styled.button`
 `
 
 const ButtonToggle = styled(Button)`
-  // opacity: 0.7;
-  ${({ active }) =>
+  ${({ active, theme }) =>
     active &&
     `
-    background-color: #C0B9DD;
-    opacity: 1; 
+    background-color: ${theme.colors.gridPurple};
+    opacity: 1;
   `}
 `
 
+const ranges = ["30d", "90d"]
+
 const GridItem = ({ metric }) => {
-  const { title, description, state, line, buttonContainer } = metric
+  const { title, description, state, buttonContainer, range } = metric
   const isLoading = !state.value
   const value = state.hasError ? (
     <ErrorMessage />
@@ -184,47 +163,45 @@ const GridItem = ({ metric }) => {
     </StatRow>
   )
 
-  console.log(line)
-  let isLoading1 = true
-  if (line !== undefined) {
-    isLoading1 = !(line.current.value.length > 0)
+  // Returns either 90 or 30-day data range depending on `range` selection
+  const filteredData = (data) => {
+    if (!data) return null
+    if (range === ranges[1]) return [...data]
+    return data.filter(({ timestamp }) => {
+      const millisecondRange = 1000 * 60 * 60 * 24 * 30
+      const now = new Date().getTime()
+      return timestamp >= now - millisecondRange
+    })
   }
 
-  // const isLoading1 = true
-  const chart = line.current.hasError ? (
-    <ErrorMessage />
-  ) : isLoading1 ? (
-    <LoadingMessage />
-  ) : (
-    <AreaChart
-      width={720}
-      height={200}
-      data={line.current.value}
-      margin={{ left: -5 }}
-    >
-      <defs>
-        <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
-          <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-        </linearGradient>
-        <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-          <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
-        </linearGradient>
-      </defs>
-
-      <Area
-        type="monotone"
-        dataKey="uv"
-        stroke="#8884d8"
-        fillOpacity={0.3}
-        fill="url(#colorUv)"
-        fillOpacity="0.2"
-        connectNulls={true}
-      />
-
-      <XAxis dataKey="pv" axisLine={false} tick={false} />
-    </AreaChart>
+  const chart = (
+    <ResponsiveContainer width="100%" height="100%">
+      <AreaChart
+        data={filteredData(state.data)}
+        margin={{ left: -5, right: -5 }}
+      >
+        <defs>
+          <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
+            <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
+          </linearGradient>
+          <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
+            <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+          </linearGradient>
+        </defs>
+        <Area
+          type="monotone"
+          dataKey="value"
+          stroke="#8884d8"
+          fillOpacity={0.3}
+          fill="url(#colorUv)"
+          fillOpacity="0.2"
+          connectNulls={true}
+        />
+        <XAxis dataKey="timestamp" axisLine={false} tick={false} />
+      </AreaChart>
+    </ResponsiveContainer>
   )
 
   return (
@@ -233,8 +210,12 @@ const GridItem = ({ metric }) => {
         <Title>{title}</Title>
         <p>{description}</p>
       </div>
-      <Lines>{chart}</Lines>
-      <ButtonContainer>{buttonContainer}</ButtonContainer>
+      {!state.hasError && !isLoading && (
+        <>
+          <Lines>{chart}</Lines>
+          <ButtonContainer>{buttonContainer}</ButtonContainer>
+        </>
+      )}
       <Value>{value}</Value>
     </Box>
   )
@@ -247,42 +228,48 @@ const tooltipContent = (metric) => (
   </div>
 )
 
+const RangeSelector = ({ state, setState }) => (
+  <div>
+    {ranges.map((range, idx) => (
+      <ButtonToggle
+        active={state === range}
+        onClick={() => {
+          setState(ranges[idx])
+        }}
+        key={idx}
+      >
+        {range}
+      </ButtonToggle>
+    ))}
+  </div>
+)
+
 const StatsBoxGrid = () => {
   const intl = useIntl()
-  const [ethPrice, setEthPrice] = useState({
+  const [ethPrices, setEthPrices] = useState({
+    data: [],
     value: 0,
     hasError: false,
   })
   const [valueLocked, setValueLocked] = useState({
+    data: [],
     value: 0,
     hasError: false,
   })
   const [txs, setTxs] = useState({
+    data: [],
     value: 0,
     hasError: false,
   })
   const [nodes, setNodes] = useState({
+    data: [],
     value: 0,
     hasError: false,
   })
-  const coingecko = useRef({
-    value: [],
-    hasError: false,
-  })
-  const etherscanNodes = useRef({
-    value: [],
-    hasError: false,
-  })
-  const etherscanTransactions = useRef({
-    value: [],
-    hasError: false,
-  })
-  const defipulse = useRef({
-    value: [],
-    hasError: false,
-  })
-
-  const [defaultRender, setDefaultRender] = useState([])
+  const [selectedRangePrice, setSelectedRangePrice] = useState(ranges[0])
+  const [selectedRangeTvl, setSelectedRangeTvl] = useState(ranges[0])
+  const [selectedRangeNodes, setSelectedRangeNodes] = useState(ranges[0])
+  const [selectedRangeTxs, setSelectedRangeTxs] = useState(ranges[0])
 
   const formatPrice = (price) => {
     return new Intl.NumberFormat(intl.locale, {
@@ -317,331 +304,132 @@ const StatsBoxGrid = () => {
       maximumSignificantDigits: 4,
     }).format(nodes)
   }
+
   useEffect(() => {
-    // coinGeckoData("30")
-    // etherscanNodesData(oneMonthAgo)
-    // defipulseData("1m")
-
-    // Skip APIs when not in production
-    if (process.env.NODE_ENV !== "production") {
-      setEthPrice({
-        value: formatPrice(1330),
-        hasError: false,
-      })
-      setValueLocked({
-        value: formatTVL(23456789000),
-        hasError: false,
-      })
-      setTxs({
-        value: formatTxs(1234567),
-        hasError: false,
-      })
-      setNodes({
-        value: formatNodes(8040),
-        hasError: false,
-      })
-    } else {
-      const fetchPrice = async () => {
-        try {
-          const response = await axios.get(
-            "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd&include_24hr_change=true"
-          )
-          const { usd } = response.data.ethereum
-          const value = formatPrice(usd)
-          setEthPrice({
+    const fetchPrices = async () => {
+      try {
+        const daysToFetch = 90
+        const toUnixTimestamp = Math.floor(new Date().getTime() / 1000) // "Now" as unix timestamp (seconds)
+        const fromUnixTimestamp = toUnixTimestamp - 60 * 60 * 24 * daysToFetch // {daysToFetch} days ago (in seconds)
+        // TODO: Switch back to `getData()` to use cache before prod
+        const {
+          data: { prices },
+        } = await axios.get(
+          `https://api.coingecko.com/api/v3/coins/ethereum/market_chart/range?vs_currency=usd&from=${fromUnixTimestamp}&to=${toUnixTimestamp}`
+        )
+        const data = prices
+          .map(([timestamp, value]) => ({
+            timestamp,
             value,
-            hasError: false,
-          })
-        } catch (error) {
-          console.error(error)
-          setEthPrice({
-            hasError: true,
-          })
-        }
-      }
-      fetchPrice()
-
-      const fetchNodes = async () => {
-        try {
-          const data = await getData("/.netlify/functions/etherscan")
-          const total = data.result.TotalNodeCount
-          const value = formatNodes(total)
-          setNodes({
+          }))
+          .sort((a, b) => b.timestamp - a.timestamp)
+          .map(({ timestamp, value }) => ({
+            name: new Date(timestamp).toISOString().split("T")[0],
+            timestamp,
             value,
-            hasError: false,
-          })
-        } catch (error) {
-          console.error(error)
-          setNodes({
-            hasError: true,
-          })
-        }
-      }
-      fetchNodes()
+          }))
 
-      const fetchTotalValueLocked = async () => {
-        try {
-          const data = await getData("/.netlify/functions/defipulse")
-          const ethereumTVL = data.ethereumTVL
-          const value = formatTVL(ethereumTVL)
-          setValueLocked({
-            value,
-            hasError: false,
-          })
-        } catch (error) {
-          console.error(error)
-          setValueLocked({
-            hasError: true,
-          })
-        }
-      }
-      fetchTotalValueLocked()
-
-      const fetchTxCount = async () => {
-        // let transactionsData = []
-        try {
-          const { result } = await getData("/.netlify/functions/txs")
-          // result: [{UTCDate: string, unixTimeStamp: string, transactionCount: number}, {...}]
-          console.log(result)
-          for (const i in result) {
-            etherscanTransactions.current.value.push({
-              name: "Page A",
-              uv: result[i]["transactionCount"],
-              pv: result[i]["UTCDate"],
-              amt: 2400,
-            })
-          }
-
-          const count = result[0].transactionCount
-          const value = formatTxs(count)
-          setTxs({
-            value,
-            hasError: false,
-          })
-          // const valueAll = transactionsData
-          // setetherscanTransactions({
-          //   valueAll,
-          //   hasError: false,
-          // })
-          setDefaultRender(value)
-        } catch (error) {
-          console.error(error)
-          setTxs({
-            hasError: true,
-          })
-          etherscanTransactions.current = {
-            value: [],
-            hasError: true,
-          }
-          setDefaultRender([])
-        }
-      }
-      fetchTxCount()
-    }
-  }, [])
-
-  var today = new Date(),
-    date =
-      today.getFullYear() +
-      "-" +
-      (today.getMonth() + 1) +
-      "-" +
-      (today.getDate() - 1),
-    oneMonthAgo =
-      today.getFullYear() + "-" + today.getMonth() + "-" + (today.getDate() - 1)
-  const start = "2019-10-30"
-  // useEffect(() => {
-  //   coinGeckoData("30")
-  //   etherscanNodesData(oneMonthAgo)
-  //   defipulseData("1m")
-  // }, [])
-
-  const coinGeckoData = async (mode) => {
-    let priceData = []
-
-    let coingeckoUrl = `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=${mode}&interval=hour`
-    try {
-      const response = await axios.get(coingeckoUrl)
-      for (const i in response.data.prices) {
-        priceData.push({
-          name: "Page A",
-          uv: response.data.prices[i][1],
-          pv: i,
-          amt: 2400,
+        const value = formatPrice(data[0].value)
+        setEthPrices({
+          data, // historical data: {timestamp: unix-milliseconds, value }
+          value, // current value
+          hasError: false,
+        })
+      } catch (error) {
+        setEthPrices({
+          hasError: true,
         })
       }
-
-      const value = priceData
-      coingecko.current = {
-        value,
-        hasError: false,
-      }
-      setDefaultRender(value)
-      // console.log(coingecko.value, value)
-    } catch (error) {
-      console.error(error)
-      coingecko.current = {
-        value: [],
-        hasError: true,
-      }
-      setDefaultRender([])
     }
-  }
+    fetchPrices()
 
-  const etherscanNodesData = async (mode1) => {
-    let nodesData = []
-
-    let etherscanNodesUrl = `https://api.etherscan.io/api?module=stats&action=nodecounthistory&startdate=${mode1}&enddate=${date}&sort=asc&apikey=N94JWP2M9229I9UAP48EXSAH9RPW4874CG`
-    try {
-      const response = await axios.get(etherscanNodesUrl)
-      for (const i in response.data.result) {
-        nodesData.push({
-          name: "Page A",
-          uv: response.data.result[i]["TotalNodeCount"],
-          pv: response.data.result[i]["UTCDate"],
-          amt: 2400,
+    const fetchNodes = async () => {
+      try {
+        const { result } = await getData("/.netlify/functions/etherscan")
+        const data = result
+          .map(({ UTCDate, TotalNodeCount }) => ({
+            timestamp: new Date(UTCDate).getTime(),
+            value: TotalNodeCount,
+          }))
+          .sort((a, b) => b.timestamp - a.timestamp)
+          .map(({ timestamp, value }) => ({
+            name: new Date(timestamp).toISOString().split("T")[0],
+            timestamp,
+            value,
+          }))
+        const value = formatNodes(data[0].value)
+        setNodes({
+          data, // historical data: {timestamp: unix-milliseconds, value }
+          value, // current value
+          hasError: false,
+        })
+      } catch (error) {
+        console.error(error)
+        setNodes({
+          hasError: true,
         })
       }
-
-      const value = nodesData
-      etherscanNodes.current = {
-        value,
-        hasError: false,
-      }
-      setDefaultRender(value)
-      // console.log(coingecko.value, value)
-    } catch (error) {
-      console.error(error)
-      etherscanNodes.current = {
-        value: [],
-        hasError: true,
-      }
-      setDefaultRender([])
     }
-  }
+    fetchNodes()
 
-  const defipulseData = async (mode2) => {
-    let valuelockedData = []
+    const fetchTotalValueLocked = async () => {
+      try {
+        const response = await getData("/.netlify/functions/defipulse")
+        const data = response
+          .map(({ timestamp, tvlUSD }) => ({
+            timestamp: parseInt(timestamp) * 1000,
+            value: tvlUSD,
+          }))
+          .sort((a, b) => b.timestamp - a.timestamp)
+          .map(({ timestamp, value }) => ({
+            name: new Date(timestamp).toISOString().split("T")[0],
+            timestamp,
+            value,
+          }))
+        const value = formatTVL(data[0].value)
+        setValueLocked({
+          data, // historical data: {timestamp: unix-milliseconds, value }
+          value, // current value
+          hasError: false,
+        })
+      } catch (error) {
+        console.error(error)
+        setValueLocked({
+          hasError: true,
+        })
+      }
+    }
+    fetchTotalValueLocked()
 
-    let defipulseUrl = `https://data-api.defipulse.com/api/v1/defipulse/api/GetHistory?api-key=ac8a88c787d9db8dfe0951199ae76fd73538d6bee9fef57c7911cc280364&period=${mode2}&length=days`
-    try {
-      const response = await axios.get(defipulseUrl)
-      console.log(response)
-      if (response.data) {
-        for (let i = 1; i <= response.data.length; i++) {
-          valuelockedData.push({
-            name: " Page A",
-            uv: response.data[response.data.length - i]["tvlUSD"] / 1000000000,
-            pv: response.data.length - i,
-            amt: 2400,
-          })
-        }
-        const value = valuelockedData
-        defipulse.current = {
+    const fetchTxCount = async () => {
+      try {
+        const response = await getData("/.netlify/functions/txs")
+        const data = response.result
+          .map(({ unixTimeStamp, transactionCount }) => ({
+            timestamp: parseInt(unixTimeStamp) * 1000, // unix milliseconds
+            value: transactionCount,
+          }))
+          .sort((a, b) => b.timestamp - a.timestamp)
+          .map(({ timestamp, value }) => ({
+            name: new Date(timestamp).toISOString().split("T")[0],
+            timestamp,
+            value,
+          }))
+        const value = formatTxs(data[0].value)
+        setTxs({
+          data,
           value,
           hasError: false,
-        }
-        setDefaultRender(value)
-      } else {
-        const value = valuelockedData
-        defipulse.current = {
-          value: [],
+        })
+      } catch (error) {
+        console.error(error)
+        setTxs({
           hasError: true,
-        }
-        setDefaultRender(value)
+        })
       }
-    } catch (error) {
-      console.error(error)
-      defipulse.current = {
-        value: [],
-        hasError: true,
-      }
-      setDefaultRender([])
     }
-  }
-
-  const types = [0, 1]
-  const defaultTypes = ["30d", "ALL"]
-
-  const coingeckoTypes = ["30", "max"]
-
-  const [priceActive, setPriceActive] = useState(types[0])
-  function ToggleGroupPrice() {
-    return (
-      <div>
-        {types.map((type, idx) => (
-          <ButtonToggle
-            active={priceActive === type}
-            onClick={() => {
-              coinGeckoData(coingeckoTypes[type])
-              setPriceActive(type)
-            }}
-            key={idx}
-          >
-            {defaultTypes[type]}
-          </ButtonToggle>
-        ))}
-      </div>
-    )
-  }
-  const defipulseTypes = ["1m", "all"]
-  const [valueLockedActive, setValueLockedActive] = useState(types[0])
-  function ToggleGroupValueLocked() {
-    return (
-      <div>
-        {types.map((type, idx) => (
-          <ButtonToggle
-            active={valueLockedActive === type}
-            onClick={() => {
-              defipulseData(defipulseTypes[type])
-              setValueLockedActive(type)
-            }}
-            key={idx}
-          >
-            {defaultTypes[type]}
-          </ButtonToggle>
-        ))}
-      </div>
-    )
-  }
-  const etherscanTypes = [oneMonthAgo, start]
-  const [nodesActive, setNodesActive] = useState(types[0])
-  function ToggleGroupNodes() {
-    return (
-      <div>
-        {types.map((type, idx) => (
-          <ButtonToggle
-            active={nodesActive === type}
-            onClick={() => {
-              etherscanNodesData(etherscanTypes[type])
-              setNodesActive(type)
-            }}
-            key={idx}
-          >
-            {defaultTypes[type]}
-          </ButtonToggle>
-        ))}
-      </div>
-    )
-  }
-  const [transactionsActive, setTransactionsActive] = useState(types[0])
-  function ToggleGroupTransactions() {
-    return (
-      <div>
-        {types.map((type, idx) => (
-          <ButtonToggle
-            active={transactionsActive === type}
-            onClick={() => {
-              setTransactionsActive(type)
-            }}
-            key={idx}
-          >
-            {defaultTypes[type]}
-          </ButtonToggle>
-        ))}
-      </div>
-    )
-  }
+    fetchTxCount()
+  }, [])
 
   const metrics = [
     {
@@ -653,9 +441,14 @@ const StatsBoxGrid = () => {
       description: (
         <Translation id="page-index-network-stats-eth-price-explainer" />
       ),
-      line: etherscanTransactions,
-      buttonContainer: <ToggleGroupTransactions />,
-      state: ethPrice,
+      buttonContainer: (
+        <RangeSelector
+          state={selectedRangePrice}
+          setState={setSelectedRangePrice}
+        />
+      ),
+      state: ethPrices,
+      range: selectedRangePrice,
     },
     {
       apiProvider: "Etherscan",
@@ -664,9 +457,14 @@ const StatsBoxGrid = () => {
       description: (
         <Translation id="page-index-network-stats-tx-day-explainer" />
       ),
-      line: etherscanTransactions,
-      buttonContainer: <ToggleGroupTransactions />,
+      buttonContainer: (
+        <RangeSelector
+          state={selectedRangeTxs}
+          setState={setSelectedRangeTxs}
+        />
+      ),
       state: txs,
+      range: selectedRangeTxs,
     },
     {
       apiProvider: "DeFi Pulse",
@@ -677,9 +475,14 @@ const StatsBoxGrid = () => {
       description: (
         <Translation id="page-index-network-stats-value-defi-explainer" />
       ),
-      line: etherscanTransactions,
-      buttonContainer: <ToggleGroupTransactions />,
+      buttonContainer: (
+        <RangeSelector
+          state={selectedRangeTvl}
+          setState={setSelectedRangeTvl}
+        />
+      ),
       state: valueLocked,
+      range: selectedRangeTvl,
     },
     {
       apiProvider: "Etherscan",
@@ -688,9 +491,14 @@ const StatsBoxGrid = () => {
       description: (
         <Translation id="page-index-network-stats-nodes-explainer" />
       ),
-      line: etherscanTransactions,
-      buttonContainer: <ToggleGroupTransactions />,
+      buttonContainer: (
+        <RangeSelector
+          state={selectedRangeNodes}
+          setState={setSelectedRangeNodes}
+        />
+      ),
       state: nodes,
+      range: selectedRangeNodes,
     },
   ]
 
