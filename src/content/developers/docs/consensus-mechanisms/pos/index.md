@@ -69,7 +69,7 @@ To do this in proof-of-stake, Casper, a finality protocol, gets validators to ag
 
 As Vlad Zamfir put it, this is like a miner participating in a 51% attack, causing their mining hardware to immediately burn down.
 
-## Proof-of-stake and security
+## Proof-of-stake and security {#pos-and-security}
 
 The threat of a [51% attack](https://www.investopedia.com/terms/1/51-attack.asp) still exists in proof-of-stake, but it's even more risky for the attackers. To do so, you'd need to control 51% of the staked ETH. Not only is this a lot of money, but it would probably cause ETH's value to drop. There's very little incentive to destroy the value of a currency you have a majority stake in. There are stronger incentives to keep the network secure and healthy.
 
@@ -80,7 +80,7 @@ Stake slashings, ejections, and other penalties, coordinated by the beacon chain
 | Pros                                                                                                                                                                                                                                                                      | Cons                                                                                      |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | Staking makes it easier for you to run a node. It doesn't require huge investments in hardware or energy, and if you don't have enough ETH to stake, you can join staking pools.                                                                                          | Proof-of-stake is still in its infancy, and less battle-tested, compared to proof-of-work |
-| Staking is more decentralized. It allows for increased participation, and more nodes doesn't mean increased % returns, like with mining.                                                                                                                                   |                                                                                           |
+| Staking is more decentralized. It allows for increased participation, and more nodes doesn't mean increased % returns, like with mining.                                                                                                                                  |                                                                                           |
 | Staking allows for secure sharding. Shard chains allow Ethereum to create multiple blocks at the same time, increasing transaction throughput. Sharding the network in a proof-of-work system would simply lower the power needed to compromise a portion of the network. |                                                                                           |
 
 ## Further Reading {#further-reading}

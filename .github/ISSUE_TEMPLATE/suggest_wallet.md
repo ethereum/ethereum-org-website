@@ -12,6 +12,22 @@ Only continue with the issue if your wallet meets the criteria listed there.
 
 If it does complete the following information which we need to accurately list the wallet.
 
+**Is your wallet security tested? Please explain security measures i.e. security audit, internal security team or some other method.**
+
+<!-- Please explain any security measures you have taken to ensure your wallet is secure -->
+
+**When did your wallet go live to users?**
+
+<!-- Please provide an exact or approximate date when your wallet was usable by the public -->
+
+**Does your wallet have an active development team?**
+
+<!-- Are developers actively working on the wallet? -->
+
+**Is your wallet open-source?**
+
+<!-- If yes, please provide a direct link to the repository, if you can -->
+
 **Is your wallet globally accessible?**
 
 <!-- Please list any KYC requirements or geographic limitations of your wallet, if any exist. -->

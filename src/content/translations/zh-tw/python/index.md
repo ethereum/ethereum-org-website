@@ -40,7 +40,7 @@ sidebar: true
 
 ## 高級使用模式 {#advanced-use-patterns}
 
-- [使用 Python 編譯、部署和調用 Ethereum 智能合約](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
+- [使用 Python 編譯、部署和調用 Ethereum 智能合約](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
 - [使用 Slither 分析 Solidity 智能合約](使用 Python 編譯、部署和調用 Ethereum 智能合約)
 
 ## Python 項目和工具 {#python-projects-and-tools}

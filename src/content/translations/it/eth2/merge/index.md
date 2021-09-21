@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~2021/22">
+<UpgradeStatus date="~Q1/Q2 2022">
     Questo aggiornamento seguirà l'arrivo delle shard chain. Ma è il momento in cui la <a href="/eth2/vision/">vision Eth2</a> si realizza pienamente: maggiore scalabilità, sicurezza e sostenibilità con lo staking a supporto di tutta la rete.
 </UpgradeStatus>
 
@@ -30,10 +30,9 @@ Quando sarà pronta, la rete principale Ethereum sarà "agganciata" (docking) da
 
 La rete principale aggiungerà la capacità di eseguire smart contract nel sistema di proof of stake, oltre a tutta la storia e allo stato corrente di Ethereum, per consentire consentendo una transizione senza intoppi per gli utenti e i possessori di ETH.
 
+<!-- ### Improving Mainnet
 
-<!-- ### Improving mainnet
-
-Before mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
+Before Mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
 
 These include Improvements for
 
@@ -57,8 +56,12 @@ Gli aggiornamenti Eth2 sono in qualche modo correlati. Quindi ricapitoliamo come
 
 ### Docking e beacon chain {#docking-and-beacon-chain}
 
-Una volta avvenuto il docking, saranno assegnati utenti che fanno staking, per convalidare la rete principale Ethereum. Proprio come con le shard chain. [Il mining](/developers/docs/consensus-mechanisms/pow/mining/) non sarà più necessario e chi se ne occupava potrà investire i propri guadagni nello staking nel nuovo sistema proof of stake.<ButtonLink to="/eth2/beacon-chain/">La beacon chain</ButtonLink>
+Una volta avvenuto il docking, saranno assegnati utenti che fanno staking, per convalidare la rete principale Ethereum. Proprio come con le shard chain. [Il mining](/developers/docs/consensus-mechanisms/pow/mining/) non sarà più necessario e chi se ne occupava potrà investire i propri guadagni nello staking nel nuovo sistema proof of stake.
+
+<ButtonLink to="/eth2/beacon-chain/">La beacon chain</ButtonLink>
 
 ### Docking e shard chain {#docking-and-shard-chains}
 
-Quando la rete principale diventerà uno shard, la riuscita dell'implementazione delle shard chain sarà fondamentale per questo aggiornamento. È probabile che la transizione svolgerà un ruolo importante nell'aiutare la community a decidere se distribuire un secondo aggiornamento per lo sharding. Questo aggiornamento renderà gli altri shard come la rete principale: saranno in grado di gestire transazioni e smart contract e non solo di fornire più dati.<ButtonLink to="/eth2/shard-chains/">Shard chain</ButtonLink>
+Quando la rete principale diventerà uno shard, la riuscita dell'implementazione delle shard chain sarà fondamentale per questo aggiornamento. È probabile che la transizione svolgerà un ruolo importante nell'aiutare la community a decidere se distribuire un secondo aggiornamento per lo sharding. Questo aggiornamento renderà gli altri shard come la rete principale: saranno in grado di gestire transazioni e smart contract e non solo di fornire più dati.
+
+<ButtonLink to="/eth2/shard-chains/">Shard chain</ButtonLink>

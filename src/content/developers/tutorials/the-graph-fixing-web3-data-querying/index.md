@@ -305,7 +305,7 @@ The easiest way is to use the hosted service. Follow the instructions [here](htt
 
 ### Running your own node {#running-your-own-node}
 
-Alternatively you can run your own node: https://github.com/graphprotocol/graph-node#quick-start. One reason to do this might be using a network that's not supported by the hosted service. Currently supported are mainnet, Kovan, Rinkeby, Ropsten, Goerli, PoA-Core, xDAI and Sokol.
+Alternatively you can run your own node: https://github.com/graphprotocol/graph-node#quick-start. One reason to do this might be using a network that's not supported by the hosted service. Currently supported are Mainnet, Kovan, Rinkeby, Ropsten, Goerli, PoA-Core, xDAI and Sokol.
 
 ## The decentralized future {#the-decentralized-future}
 

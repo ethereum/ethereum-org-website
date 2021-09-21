@@ -418,11 +418,13 @@ Modelul de emisiune va fi după cum urmează:
 - 0,099x suma totală vândută va fi menținută pe termen lung ca rezervă.
 - 0,26x suma totală vândută va fi alocată minerilor pe an pentru totdeauna după acel moment.
 
-Grup La lansare După 1 an După 5 ani
-
----
-
-Unități valutare 1,198X 1,458X 2,498X Cumpărători 83,5% 68,6% 40,0% Rezervă cheltuită pre-vânzare 8,26% 6,79% 3,96% Rezervă folosite post-vânzare 8,26% 6,79% 3,96% Mineri 0% 17,8% 52,0%
+| Grup                          | La lansare | După 1 an | După 5 ani |
+| ----------------------------- | ---------- | --------- | ---------- |
+| Unități valutare              | 1,198X     | 1,458X    | 2,498X     |
+| Cumpărători                   | 83,5%      | 68,6%     | 40,0%      |
+| Rezervă cheltuită pre-vânzare | 8,26%      | 6,79%     | 3,96%      |
+| Rezervă folosite post-vânzare | 8,26%      | 6,79%     | 3,96%      |
+| Mineri                        | 0%         | 17,8%     | 52,0%      |
 
 **Rata de creștere a aprovizionării pe termen lung (procente)**
 

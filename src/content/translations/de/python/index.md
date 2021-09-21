@@ -40,8 +40,8 @@ Brauchst du zuerst einen grundsätzlichen Einstieg? Schaue dir [ethereum.org/lea
 
 ## Fortgeschrittene Verwendungsmuster {#advanced-use-patterns}
 
-- [Kompilierung, Bereitstellung und Aufruf von Ethereum Smart Contracts mit Python](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [Solidity Smart Contracts mit Slither analysieren](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
+- [Kompilierung, Bereitstellung und Aufruf von Ethereum Smart Contracts mit Python](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
+- [Solidity Smart Contracts mit Slither analysieren](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 
 ## Python-Projekte und Tools {#python-projects-and-tools}
 

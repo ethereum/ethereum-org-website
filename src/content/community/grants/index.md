@@ -16,7 +16,7 @@ This list is curated by our community. If there's something missing or incorrect
 These programs support the broad Ethereum ecosystem by offering grants to a wide scope of projects. These include solutions for scalability, community building, security, privacy and more. These grants are not specific to any one Ethereum platform, and are a good place to start if you're unsure.
 
 - [EF Ecosystem Support Program](https://esp.ethereum.foundation) - _Funding open source projects that benefit Ethereum, with a particular focus on universal tools, infrastructure, research and public goods_
-- [EF Rollup Community Grants Wave](https://esp.ethereum.foundation/en/rollup-grants/) - _For everything related to rollups. Proposals are due April 16th 2021_
+- [Ethereum RFPs](https://github.com/ethereum/requests-for-proposals) - _Requests for Proposals by the Ethereum Foundation for work and projects in the Ethereum ecosystem_
 - [MetaCartel](https://www.metacartel.org/grants/) - _Dapp development, DAO creation_  
   Grants ranging from $1K - $8K USD.
 - [Moloch DAO](https://www.molochdao.com/) - _Privacy, layer 2 scaling, client security, and more_

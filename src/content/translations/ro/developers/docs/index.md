@@ -43,4 +43,4 @@ Dacă aceasta este prima ta încercare de dezvoltare Ethereum, îți recomandăm
 
 - [Standarde de tokenuri](/developers/docs/standards/tokens/)
 - [Oracole](/developers/docs/oracles/)
-- [Scalare](/developers/docs/layer-2-scaling/)
+- [Scalare](/developers/docs/scaling/#layer-2-scaling)

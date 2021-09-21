@@ -41,8 +41,8 @@ Tarvitsetko perusteellisempaa aloitusta? Katso [ethereum.org/fi/learn](/learn/) 
 
 ## Edistyneet käyttösuunnittelumallit {#advanced-use-patterns}
 
-- [Ethereumin älysopimusten kääntäminen, julkaiseminen ja kutsuminen Pythonilla](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [Analysoi Solidity-älysopimuksia Slitherillä](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
+- [Ethereumin älysopimusten kääntäminen, julkaiseminen ja kutsuminen Pythonilla](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
+- [Analysoi Solidity-älysopimuksia Slitherillä](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 
 ## Python-projektit ja -työkalut {#python-projects-and-tools}
 

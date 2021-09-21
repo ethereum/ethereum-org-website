@@ -14,7 +14,7 @@ A timeline of all the major milestones, forks, and updates to the Ethereum block
 
 Forks are when major technical upgrades or changes need to be made to the network – they typically stem from [Ethereum Improvement Proposals (EIPs)](/eips/) and change the "rules" of the protocol.
 
-When upgrades are needed in traditional, centrally-controlled software, the company will just publish a new version for the end-user. Blockchains work differently because there is no central ownership. [Ethereum clients](/developers/docs/nodes-and-clients/) must update their software to implement the new fork rules. Plus block creators (miners in a proof-of-work world, validators in a proof-of-stake world) and nodes must create blocks and validate against the new rules. [More on consensus mechanisms](/developers/docs/consenus-mechanisms/)
+When upgrades are needed in traditional, centrally-controlled software, the company will just publish a new version for the end-user. Blockchains work differently because there is no central ownership. [Ethereum clients](/developers/docs/nodes-and-clients/) must update their software to implement the new fork rules. Plus block creators (miners in a proof-of-work world, validators in a proof-of-stake world) and nodes must create blocks and validate against the new rules. [More on consensus mechanisms](/developers/docs/consensus-mechanisms/)
 
 These rule changes may create a temporary split in the network. New blocks could be produced according to the new rules or the old ones. Forks are usually agreed upon ahead of time so that clients adopt the changes in unison and the fork with the upgrades becomes the main chain. However in rare cases, disagreements over forks can cause the network to permanently split – most notably the creation of Ethereum Classic with the [DAO fork](#dao-fork).
 
@@ -24,29 +24,38 @@ These rule changes may create a temporary split in the network. New blocks could
 
 ## 2021 {#2021}
 
-### (_In Progress_) London {#london}
+### (_In Progress_) Altair {#altair}
 
-The London upgrade is scheduled to go live on Ethereum in July 2021. It will introduce [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), which reforms the transaction fee market, along with changes to how gas refunds are handled and the [Ice Age](https://ethereum.org/en/glossary/#ice-age) schedule.
+The Altair upgrade is the first scheduled upgrade for the [Beacon Chain](/eth2/beacon-chain). It is expected to go live in 2021. It will add support for "sync committees", which can enable light clients, and will bring inactivity and slashing penalties up to their full values.
 
-- [Read the London upgrade specification](https://github.com/ethereum/eth1.0-specs/blob/master/network-upgrades/mainnet-upgrades/london.md)
-
-<ExpandableCard title="London EIPs" contentPreview="Improvements included in this upgrade.">
-
-- [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) – _improves the transaction fee market_
-- [EIP-3198](https://eips.ethereum.org/EIPS/eip-3198) – _returns the `BASEFEE` from a block_
-- [EIP-3238](https://eips.ethereum.org/EIPS/eip-3238) – _delays the Ice Age_
-
-_Note: more EIPs may be added to the upgrade over the coming weeks, and the EIPs above may still be modified prior to the upgrade being deployed._
-
-</ExpandableCard>
+- [Read the Altair upgrade specification](https://github.com/ethereum/eth2.0-specs/tree/dev/specs/altair)
 
 ---
 
-### (_In Progress_) Altair {#altair}
+### London {#london}
 
-The Altair upgrade is the first scheduled upgrade for the [Beacon Chain](/eth2/beacon-chain). It is expected to go live in 2021. It will add support for "sync commitees", which can enable light clients, and will bring inactivity and slashing penalties up to their full values.
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Aug-05-2021 12:33:42 PM +UTC</code><br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/12965000">12,965,000</a><br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH price: $2621 USD<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210805124609/https://ethereum.org/en/">ethereum.org on waybackmachine</a>
 
-- [Read the Altair upgrade specification](https://github.com/ethereum/eth2.0-specs/tree/dev/specs/altair)
+#### Summary {#london-summary}
+
+The London upgrade introduced [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), which reformed the transaction fee market, along with changes to how gas refunds are handled and the [Ice Age](https://ethereum.org/en/glossary/#ice-age) schedule.
+
+- [Are you a dApp developer? Be sure to upgrade your libraries and tooling.](https://github.com/ethereum/eth1.0-specs/blob/master/network-upgrades/ecosystem-readiness.md)
+- [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
+- [Read the Ethereum Cat Herder's explainer](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
+
+<ExpandableCard title="London EIPs" contentPreview="Official improvements included in this upgrade.">
+
+- [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) – _improves the transaction fee market_
+- [EIP-3198](https://eips.ethereum.org/EIPS/eip-3198) – _returns the `BASEFEE` from a block_
+- [EIP-3529](https://eips.ethereum.org/EIPS/eip-3529) - _reduces gas refunds for EVM operations_
+- [EIP-3541](https://eips.ethereum.org/EIPS/eip-3541) - _prevents deploying contracts starting with `0xEF`_
+- [EIP-3554](https://eips.ethereum.org/EIPS/eip-3554) – _delays the Ice Age until December 2021_
+
+</ExpandableCard>
 
 ---
 
@@ -103,7 +112,7 @@ The [Beacon Chain](/eth2/beacon-chain/) needed 16384 deposits of 32 staked ETH t
 
 #### Summary {#deposit-contract-summary}
 
-The staking deposit contract introduced [staking](/glossary/#staking) to the Ethereum ecosystem. Although a [mainnet](/glossary/#mainnet) contract, it had a direct impact on the timeline for launching the [Beacon Chain](/eth2/beacon-chain/), an important [Eth2 upgrade](/eth2/).
+The staking deposit contract introduced [staking](/glossary/#staking) to the Ethereum ecosystem. Although a [Mainnet](/glossary/#mainnet) contract, it had a direct impact on the timeline for launching the [Beacon Chain](/eth2/beacon-chain/), an important [Eth2 upgrade](/eth2/).
 
 [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 

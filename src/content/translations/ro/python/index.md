@@ -40,8 +40,8 @@ Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/ro/learn/) 
 
 ## Modele avansate de utilizare {#advanced-use-patterns}
 
-- [Compilarea, implementarea și apelarea contractelor smart Ethereum cu Python](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [Analiza contractelor smart Solidity cu Slither](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
+- [Compilarea, implementarea și apelarea contractelor smart Ethereum cu Python](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
+- [Analiza contractelor smart Solidity cu Slither](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 
 ## Proiecte și instrumente Python {#python-projects-and-tools}
 

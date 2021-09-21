@@ -272,6 +272,15 @@ const H2 = styled.h2`
 
 const frameworksList = [
   {
+    id: "dapptools",
+    url: "https://dapp.tools/",
+    githubUrl: "https://github.com/dapphub/dapptools",
+    background: "#fff",
+    name: "Dapptools",
+    description: "page-local-environment-dapptools-desc",
+    alt: "page-local-environment-dapptools-logo-alt",
+  },
+  {
     id: "waffle",
     url: "https://getwaffle.io/",
     githubUrl: "https://github.com/EthWorks/waffle",
@@ -482,7 +491,7 @@ const ChooseStackPage = ({ data }) => {
         <Subtitle>Local development blockchain</Subtitle>
         <p>
           When creating a new smart contract, you definitely don't want to
-          deploy it straight to to Ethereum's public mainnet (it costs money).
+          deploy it straight to to Ethereum's public Mainnet (it costs money).
           First, we recommend setting up a personal blockchain for local
           development, where you can run tests & kick the tires on your dapp.
         </p>
@@ -624,6 +633,9 @@ export const query = graphql`
           src
         }
       }
+    }
+    dapptools: file(relativePath: { eq: "dev-tools/dapptools.png" }) {
+      ...devtoolImage
     }
     waffle: file(relativePath: { eq: "dev-tools/waffle.png" }) {
       ...devtoolImage

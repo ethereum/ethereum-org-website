@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus isShipped date="Shipped!">
+<UpgradeStatus isShipped date="Kiszállított!">
     A Beacon Chain december 1.-jén központi idő szerint délben indult el. További információért <a href="https://beaconscan.com/">nézd meg az adatokat</a>. Ha szeretnél segíteni a lánc érvényesítésében, akkor <a href="/eth2/staking/">letétbe tudod helyezni az ETH-edet</a>.
 </UpgradeStatus>
 
@@ -48,13 +48,17 @@ Végsősoron a Beacon Chain lesz felelős azért, hogy véletlenszerűen kijelö
 
 Az Eth2 fejlesztések némileg összefüggnek. Foglaljuk össze tehát, hogy a Beacon Chain hogyan hat a többi fejlesztésre.
 
-### Shardok és a Beacon Chain {#shards-and-beacon-chain}
-
-A shard láncokat csak a proof-of-stake konszenzus mechnanizmussal lehet biztonságosan bevezetni az Ethereum ökoszisztémába. A Beacon Chain bevezeti a letétbe helyezést (staking) ezzel lekövezve a shard láncok bevezetéséhez szükséges utat.<ButtonLink to="/eth2/shard-chains/">Shard láncok</ButtonLink>
-
 ### Főhálózat és a Beacon Chain {#mainnet-and-beacon-chain}
 
-A Beacon Chain eleinte különállóan fog létezni az Ethereum főhálózattól, melyet ma is használunk. De végül össze lesznek kapcsolva. A terv a főhálózat “dokkolása” a proof-of-stake rendszerhez, melyet a Beacon Chain vezérel és koordinál.<ButtonLink to="/eth2/merge/">A dokkolás</ButtonLink>
+A Beacon Chain eleinte különállóan fog létezni az Ethereum főhálózattól, melyet ma is használunk. De végül össze lesznek kapcsolva. A terv a főhálózat “dokkolása” a proof-of-stake rendszerhez, melyet a Beacon Chain vezérel és koordinál.
+
+<ButtonLink to="/eth2/merge/">A dokkolás</ButtonLink>
+
+### Shardok és a Beacon Chain {#shards-and-beacon-chain}
+
+A shard láncokat csak a proof-of-stake konszenzus mechnanizmussal lehet biztonságosan bevezetni az Ethereum ökoszisztémába. A Beacon Chain bevezeti a letétbe helyezést (staking) ezzel lekövezve a shard láncok bevezetéséhez szükséges utat.
+
+<ButtonLink to="/eth2/shard-chains/">Shard láncok</ButtonLink>
 
 <Divider />
 

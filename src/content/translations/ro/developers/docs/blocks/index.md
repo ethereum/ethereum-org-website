@@ -27,7 +27,9 @@ Pentru a păstra istoricul tranzacțiilor, blocurile sunt strict ordonate (fieca
 
 Odată ce un bloc este asamblat (minat) de către un miner din rețea, acesta este propagat către restul rețelei; toate nodurile adaugă acest bloc la sfârșitul blockchain-ului lor, iar exploatarea continuă. Procesul exact de asamblare a blocurilor (minerit) și procesul de angajament/consens sunt specificate în prezent prin protocolul Ethereum „Dovada muncii”.
 
-### O demonstrație vizuală {#a-visual-demo} <iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+### O demonstrație vizuală {#a-visual-demo}
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
 
 ## Protocolul „Dovada muncii” {#proof-of-work-protocol}
 

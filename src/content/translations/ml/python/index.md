@@ -40,8 +40,8 @@ sidebar: true
 
 ## നൂതന ഉപയോഗ പാറ്റേണുകൾ {#advanced-use-patterns}
 
-- [പൈത്തൺ ഉപയോഗിച്ച് Ethereum സ്മാർട്ട് കോൺ‌ട്രാക്റ്റ് കംപൈൽ ചെയ്യുന്നു, വിന്യസിക്കുന്നു, വിളിക്കുന്നു](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [സ്ലിതർ ഉപയോഗിച്ച് സോളിഡിറ്റി സ്മാർട്ട് കരാറുകൾ വിശകലനം ചെയ്യുക](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
+- [പൈത്തൺ ഉപയോഗിച്ച് Ethereum സ്മാർട്ട് കോൺ‌ട്രാക്റ്റ് കംപൈൽ ചെയ്യുന്നു, വിന്യസിക്കുന്നു, വിളിക്കുന്നു](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
+- [സ്ലിതർ ഉപയോഗിച്ച് സോളിഡിറ്റി സ്മാർട്ട് കരാറുകൾ വിശകലനം ചെയ്യുക](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 
 ## പൈത്തൺ പ്രോജക്റ്റുകളും ഉപകരണങ്ങളും {#python-projects-and-tools}
 

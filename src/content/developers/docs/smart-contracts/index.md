@@ -9,7 +9,7 @@ sidebar: true
 
 A "smart contract" is simply a program that runs on the Ethereum blockchain. It's a collection of code (its functions) and data (its state) that resides at a specific address on the Ethereum blockchain.
 
-Smart contracts are a type of [Ethereum account](/developers/docs/accounts/). This means they have a balance and they can send transactions over the network. However they're not controlled by a user, instead they are deployed to the network and run as programmed. User accounts can then interact with a smart contract by submitting transactions that execute a function defined on the smart contract. Smart contracts can define rules, like a regular contract, and automatically enforce them via the code.
+Smart contracts are a type of [Ethereum account](/developers/docs/accounts/). This means they have a balance and they can send transactions over the network. However they're not controlled by a user, instead they are deployed to the network and run as programmed. User accounts can then interact with a smart contract by submitting transactions that execute a function defined on the smart contract. Smart contracts can define rules, like a regular contract, and automatically enforce them via the code. Smart contracts can not be deleted by default, and interactions with them are irreversible.
 
 ## Prerequisites {#prerequisites}
 
@@ -33,7 +33,7 @@ This logic is programmed into the vending machine.
 A smart contract, like a vending machine, has logic programmed into it. Here's a simple example of how this vending machine might look like as a smart contract:
 
 ```solidity
-pragma solidity 0.6.11;
+pragma solidity 0.8.7;
 
 contract VendingMachine {
 
@@ -44,7 +44,7 @@ contract VendingMachine {
     // When 'VendingMachine' contract is deployed:
     // 1. set the deploying address as the owner of the contract
     // 2. set the deployed smart contract's cupcake balance to 100
-    constructor() public {
+    constructor() {
         owner = msg.sender;
         cupcakeBalances[address(this)] = 100;
     }
@@ -91,6 +91,8 @@ Learn more about [smart contract composability](/developers/docs/smart-contracts
 Smart contracts alone cannot get information about "real-world" events because they can't send HTTP requests. This is by design. Relying on external information could jeopardise consensus, which is important for security and decentralization.
 
 There are ways to get around this using [oracles](/developers/docs/oracles/).
+
+Another limitation of smart contracts is the maximum contract size. A smart contract can be a maximum of 24KB or it will run out of gas. This can be circumnavigated by using [The Diamond Pattern](https://eips.ethereum.org/EIPS/eip-2535).
 
 ## Smart contract resources {#smart-contract-resources}
 

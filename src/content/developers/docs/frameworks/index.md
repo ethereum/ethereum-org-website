@@ -88,6 +88,11 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [Docs](https://etherlime.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/LimeChain/etherlime)
 
+**Dapptools -** **_A suite of Ethereum focused CLI tools following the Unix design philosophy, favoring composability, configurability and extensibility._**
+
+- [Homepage](https://dapp.tools/)
+- [GitHub](https://github.com/dapphub/dapptools/)
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_

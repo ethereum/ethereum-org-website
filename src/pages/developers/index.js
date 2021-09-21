@@ -329,6 +329,13 @@ const DevelopersPage = ({ data }) => {
               <Translation id="page-developers-into-eth-desc" />
             </p>
 
+            <Link to="/developers/docs/intro-to-ether/">
+              <Translation id="page-developers-intro-ether-link" />
+            </Link>
+            <p>
+              <Translation id="page-developers-intro-ether-desc" />
+            </p>
+
             <Link to="/developers/docs/dapps/">
               <Translation id="page-developers-intro-dapps-link" />
             </Link>
@@ -488,6 +495,13 @@ const DevelopersPage = ({ data }) => {
             </Link>
             <p>
               <Translation id="page-developers-token-standards-desc" />
+            </p>
+
+            <Link to="/developers/docs/mev/">
+              <Translation id="page-developers-mev-link" />
+            </Link>
+            <p>
+              <Translation id="page-developers-mev-desc" />
             </p>
 
             <Link to="/developers/docs/oracles/">

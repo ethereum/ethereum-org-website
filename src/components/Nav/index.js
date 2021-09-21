@@ -211,6 +211,10 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           to: "/glossary/",
         },
         {
+          text: "ethereum-governance",
+          to: "/governance/",
+        },
+        {
           text: "eips",
           to: "/eips/",
         },

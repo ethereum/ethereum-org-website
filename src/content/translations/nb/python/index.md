@@ -40,8 +40,8 @@ Trenger du en mer grunnleggende primer først? Sjekk ut [ethereum.org/learn](/le
 
 ## Avansert bruks Mønster {#advanced-use-patterns}
 
-- [Sammenstilling, distribuering og kalling til smartkontrakter for Ethereum ved hjelp av Python](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [Analysere Solidity Smart Kontrakter med Slither](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
+- [Sammenstilling, distribuering og kalling til smartkontrakter for Ethereum ved hjelp av Python](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
+- [Analysere Solidity Smart Kontrakter med Slither](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 
 ## Go Prosjekter og Verktøy {#python-projects-and-tools}
 

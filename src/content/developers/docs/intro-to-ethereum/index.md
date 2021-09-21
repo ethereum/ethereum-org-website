@@ -25,7 +25,11 @@ Watch Austin walk you through blockchains:
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/zcX7OJ-L8XQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-If you want to see how blockchain hashes data, and then the previous block references all the past blocks, be sure to check out [this demo](https://andersbrownworth.com/blockchain/blockchain). It makes understanding the hashing of blocks really simple.
+If you want to see how blockchain hashes data, and then the previous block references all the past blocks, be sure to check out [this demo](https://andersbrownworth.com/blockchain/blockchain) by Anders Brownworth and watch the accompanying video below. It makes understanding the hashing of blocks really simple.
+
+Watch Anders explain hashes in blockchains:
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## What is Ethereum? {#what-is-ethereum}
 
@@ -37,7 +41,7 @@ Cryptographic mechanisms ensure that once transactions are verified as valid and
 
 ## What is ether? {#what-is-ether}
 
-The purpose of Ether, the cryptocurrency, is to allow for the existence of a market for computation. Such a market provides an economic incentive for participants to verify/execute transaction requests and to provide computational resources to the network.
+The purpose of ether, the cryptocurrency, is to allow for the existence of a market for computation. Such a market provides an economic incentive for participants to verify/execute transaction requests and to provide computational resources to the network.
 
 Any participant who broadcasts a transaction request must also offer some amount of ether to the network, as a bounty to be awarded to whoever eventually does the work of verifying the transaction, executing it, committing it to the blockchain, and broadcasting it to the network.
 

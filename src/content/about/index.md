@@ -49,11 +49,15 @@ This means the website needs to handle many different user journeys, from “a d
 
 ## Design principles {#design-principles}
 
-We use design principles to guide our content and design decisions on the site: [design principles](/en/contributing/design-principles/).
+We use a set of [design principles](/en/contributing/design-principles/) to guide our content and design decisions on the site.
 
-We welcome feedback on them. Remember, ethereum.org is for the community, by the community.
+## Style guide {#style-guide}
 
-Make sure you read the principles if you'd like to [contribute to the site](/en/contributing/).
+We have a [style guide](/en/contributing/style-guide/) to standardize certain aspects of writing content to make the contribution process smoother.
+
+We welcome feedback on both the design principles and the style guide. Remember, ethereum.org is for the community, by the community.
+
+Make sure you read [our principles](/en/contributing/design-principles/) and [our style guide](/en/contributing/style-guide/) if you'd like to [contribute to the site](/en/contributing/).
 
 ## Roadmap {#roadmap}
 
@@ -64,7 +68,5 @@ Make sure you read the principles if you'd like to [contribute to the site](/en/
 Although this website is open-source and anyone can work on it, we do have a team dedicated to ethereum.org and other Ethereum Foundation web projects.
 
 We'll post any job openings here. If you don't see a role here for you, head over to [Discord](https://discord.gg/CetY6Y4) and let us know how you'd like to work with us!
-
-- [Community & ecosystem lead](/about/community-lead/)
 
 Looking beyond the ethereum.org team? [Check out other Ethereum related jobs](/community/#ethereum-jobs).

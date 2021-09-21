@@ -413,7 +413,7 @@ The constructor is called when the contract is first created. By convention, fun
      * be displayed to a user as `5,05` (`505 / 10 ** 2`).
      *
      * Tokens usually opt for a value of 18, imitating the relationship between
-     * Ether and Wei. This is the value {ERC20} uses, unless {_setupDecimals} is
+     * ether and wei. This is the value {ERC20} uses, unless {_setupDecimals} is
      * called.
      *
      * NOTE: This information is only used for _display_ purposes: it in

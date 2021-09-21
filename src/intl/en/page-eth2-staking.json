@@ -13,7 +13,7 @@
   "page-eth2-staking-deposit-address-desc": "If you’ve already followed the setup instructions on the launchpad, you’ll know you need to send a transaction to the staking deposit contract. We recommend you check the address very carefully. You can find the official address on ethereum.org and a number of other trusted sites.",
   "page-eth2-staking-desc-1": "Rewards are given for actions that help the network reach consensus. You'll get rewards for batching transactions into a new block or checking the work of other validators because that's what keeps the chain running securely.",
   "page-eth2-staking-desc-2": "Although you can earn rewards for doing work that benefits the network, you can lose ETH for malicious actions, going offline, and failing to validate.",
-  "page-eth2-staking-desc-3": "You'll need 32 ETH to become a full validator or some ETH to join a staking pool. You'll also need to run an 'Eth1' or mainnet client. The launchpad will walk you through the process and hardware requirements. Alternatively, you can use a backend API.",
+  "page-eth2-staking-desc-3": "You'll need 32 ETH to become a full validator or some ETH to join a staking pool. You'll also need to run an 'Eth1' or Mainnet client. The launchpad will walk you through the process and hardware requirements. Alternatively, you can use a backend API.",
   "page-eth2-staking-description": "Staking is the act of depositing 32 ETH to activate validator software. As a validator you’ll be responsible for storing data, processing transactions, and adding new blocks to the blockchain. This will keep Ethereum secure for everyone and earn you new ETH in the process. This process, known as proof-of-stake, is being introduced by the Beacon Chain.",
   "page-eth2-staking-docked": "More on the merge",
   "page-eth2-staking-dyor": "Do your own research",
@@ -50,13 +50,13 @@
   "page-eth2-staking-title-3": "Requirements",
   "page-eth2-staking-title-4": "How to stake your ETH",
   "page-eth2-staking-upgrades-li": "Proof-of-stake is managed by the Beacon Chain.",
-  "page-eth2-staking-upgrades-li-2": "Ethereum will have a proof-of-stake Beacon Chain and a proof-of-work mainnet for the forseeable future. Mainnet is the Ethereum we've been using for years.",
+  "page-eth2-staking-upgrades-li-2": "Ethereum will have a proof-of-stake Beacon Chain and a proof-of-work Mainnet for the forseeable future. Mainnet is the Ethereum we've been using for years.",
   "page-eth2-staking-upgrades-li-3": "During this time, stakers will be adding new blocks to the Beacon Chain but not processing mainnet transactions.",
   "page-eth2-staking-upgrades-li-4": "Ethereum will fully transition to a proof-of-stake system once the Ethereum mainnet merges with the Beacon Chain.",
-  "page-eth2-staking-upgrades-li-5": "A miner upgrade will follow to enable withdraw of staked funds.",
+  "page-eth2-staking-upgrades-li-5": "A minor upgrade will follow to enable withdraw of staked funds.",
   "page-eth2-staking-upgrades-title": "Proof-of-stake and Eth2 upgrades",
   "page-eth2-staking-validators": "More validators, more security",
   "page-eth2-staking-validators-desc": "In a blockchain like Ethereum it is possible to censor and reorder transactions to suit you if you control a majority of the network. But, to control a majority of the network, you need a majority of validators, and for this you’d need to control a majority of the ETH in the system – that’s a lot! This amount of ETH grows every time a new validator enters the system, bolstering the security of the network. Proof-of-work, the security model proof-of-stake will replace, requires the validators (miners) to have specialist hardware and lots of physical space – entering the system as a miner is difficult so security against majority attacks doesn't increase as much. Proof-of-stake doesn't have these requirements, which should grow the network (and its resistance to majority attacks) to sizes that aren't possible with proof of work.",
-  "page-eth2-staking-withdrawals": "Withdrawals won't be live right away",
-  "page-eth2-staking-withdrawals-desc": "You won't be able to withdraw your stake until future upgrades are deployed. Withdraws will be available in a miner upgrade following the merge of mainnet with the Beacon Chain."
+  "page-eth2-staking-withdrawals": "Withdraws won't be live right away",
+  "page-eth2-staking-withdrawals-desc": "You won't be able to withdraw your stake until future upgrades are deployed. Withdraws will be available in a minor upgrade following the merge of Mainnet with the Beacon Chain."
 }

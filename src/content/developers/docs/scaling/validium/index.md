@@ -7,7 +7,7 @@ incomplete: true
 sidebarDepth: 3
 ---
 
-Uses validity proofs like [ZK-rollups](#zk-rollups) but data is not stored on the main layer 1 Ethereum chain. This can lead to 10k transactions per second per validium chain and multiple chains can be run in parallel.
+Uses validity proofs like [ZK-rollups](/developers/docs/scaling/layer-2-rollups#zk-rollups) but data is not stored on the main layer 1 Ethereum chain. This can lead to 10k transactions per second per validium chain and multiple chains can be run in parallel.
 
 ## Prerequisites {#prerequisites}
 
@@ -20,6 +20,7 @@ You should have a good understanding of all the foundational topics and a high-l
 | No withdrawal delay (no latency to on-chain/cross-chain tx); consequent greater capital efficiency.       | Limited support for general computation/smart contracts; specialized languages required.                                                 |
 | Not vulnerable to certain economic attacks faced by fraud-proof based systems in high-value applications. | High computational power required to generate ZK proofs; not cost effective for low throughput applications.                             |
 |                                                                                                           | Slower subjective finality time (10-30 min to generate a ZK proof) (but faster to full finality because there is no dispute time delay). |
+|                                                                                                           | Generating a proof requires off-chain data to be available at all times.                                                                 |
 
 ### Use Validium {#use-validium}
 

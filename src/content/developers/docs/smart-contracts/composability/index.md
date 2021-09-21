@@ -8,7 +8,7 @@ incomplete: true
 
 ## A brief introduction {#a-brief-introduction}
 
-Smart contracts are public on Ethereum and can be thought of as open APIs. You don't need to write your own smart contract to become a dapp developer, you just need to know how to interact with them. For example, you can use the existing smart contracts of [Uniswap](https://uniswap.exchange/swap), a decentralized exchange, to handle all the token swap logic in your app – you don't need to start from scratch. [Check out some of their contracts](https://github.com/Uniswap/uniswap-v2-core/tree/master/contracts).
+Smart contracts are public on Ethereum and can be thought of as open APIs. You don't need to write your own smart contract to become a dapp developer, you just need to know how to interact with them. For example, you can use the existing smart contracts of [Uniswap](https://uniswap.exchange/swap), a decentralized exchange, to handle all the token swap logic in your app – you don't need to start from scratch. Check out some of their [v2](https://github.com/Uniswap/uniswap-v2-core/tree/master/contracts) and [v3](https://github.com/Uniswap/uniswap-v3-core/tree/main/contracts) contracts.
 
 ## Related tutorials {#related-tutorials}
 
@@ -18,3 +18,5 @@ Smart contracts are public on Ethereum and can be thought of as open APIs. You d
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
+
+- [Composability is Innovation](https://future.a16z.com/how-composability-unlocks-crypto-and-everything-else/)

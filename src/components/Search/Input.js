@@ -40,7 +40,7 @@ const Input = ({ query, setQuery, refine, ...rest }) => {
     refine(value)
     setQuery(value)
   }
-  
+
   const handleSubmit = (event) => {
     event.preventDefault()
   }

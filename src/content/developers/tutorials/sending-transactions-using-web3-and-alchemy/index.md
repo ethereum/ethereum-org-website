@@ -122,19 +122,19 @@ async function main() {
     const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
     const web3 = createAlchemyWeb3(API_URL);
     const myAddress = '0x610Ae88399fc1687FA7530Aac28eC2539c7d6d63' //TODO: replace this address with your own public address
-   
+
     const nonce = await web3.eth.getTransactionCount(myAddress, 'latest'); // nonce starts counting from 0
 
     const transaction = {
      'to': '0x31B98D14007bDEe637298086988A0bBd31184523', // faucet address to return eth
      'value': 1000000000000000000, // 1 ETH
-     'gas': 30000, 
+     'gas': 30000,
      'nonce': nonce,
      // optional data field to send message or execute smart contract
     };
-   
+
     const signedTx = await web3.eth.accounts.signTransaction(transaction, PRIVATE_KEY);
-    
+
     web3.eth.sendSignedTransaction(signedTx.rawTransaction, function(error, hash) {
     if (!error) {
       console.log("🎉 The hash of your transaction is: ", hash, "\n Check Alchemy's Mempool to view the status of your transaction!");
@@ -155,7 +155,7 @@ Now, before we jump into running this code, let's talk about some of the compone
 - `transaction`: The transaction object has a few aspects we need to specify
   - `to`: This is the address we want to send ETH to. In this case, we are sending ETH back to the [Rinkeby faucet](https://faucet.rinkeby.io/) we initially requested from.
   - `value`: This is the amount we wish to send, specified in wei where 10^18 wei = 1 ETH
-  - `gas`: There are many ways to determine the right amount of gas to include with your transaction. Alchemy even has a [gas price webhook](https://docs.alchemyapi.io/guides/alchemy-notify#address-activity-1) to notify you when the gas price falls within a certain threshold. For mainnet transactions, it's good practice to check a gas estimator like [ETH Gas Station](https://ethgasstation.info/) to determine the right amount of gas to include. 21000 is the minimum amount of gas an operation on Ethereum will use, so to ensure our transaction will be executed we put 30000 here.
+  - `gas`: There are many ways to determine the right amount of gas to include with your transaction. Alchemy even has a [gas price webhook](https://docs.alchemyapi.io/guides/alchemy-notify#address-activity-1) to notify you when the gas price falls within a certain threshold. For Mainnet transactions, it's good practice to check a gas estimator like [ETH Gas Station](https://ethgasstation.info/) to determine the right amount of gas to include. 21000 is the minimum amount of gas an operation on Ethereum will use, so to ensure our transaction will be executed we put 30000 here.
   - `nonce`: see above nonce definition. Nonce starts counting from zero.
   - [OPTIONAL] data: Used for sending additional information with your transfer, or calling a smart contract, not required for balance transfers, check out the note below.
 - `signedTx`: To sign our transaction object we will use the `signTransaction` method with our `PRIVATE_KEY`

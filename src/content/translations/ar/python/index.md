@@ -40,8 +40,8 @@ sidebar: true
 
 ## أنماط الاستخدام المتقدم {#advanced-use-patterns}
 
-- [تأليف ونشر وطلب عقود إثيريوم الذكية باستخدام Python](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [تحليل عقود Solidity الذكية باستخدام Slither](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
+- [تأليف ونشر وطلب عقود إثيريوم الذكية باستخدام Python](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
+- [تحليل عقود Solidity الذكية باستخدام Slither](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 
 ## مشروعات وأدوات Python {#python-projects-and-tools}
 
