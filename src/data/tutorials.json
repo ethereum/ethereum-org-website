@@ -17,7 +17,7 @@
     "description": "We explore the world of using SVGs to generate random NFT ImageURIs and Metadata 100% on-chain.  ",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
-    "tags": ["solidity", "ethers.js", "hardhat", "NFT", "smart-contracts", "javascript", "chainlink", "video"],
+    "tags": ["solidity", "ethers.js", "hardhat", "NFT", "smart contracts", "javascript", "chainlink", "video"],
     "skillLevel": "beginner",
     "timeToRead": "180",
     "lang": "en",
