@@ -5,19 +5,19 @@ lang: en
 sidebar: true
 ---
 
-## Staying Safe on Ethereum
+## Ethereum security and scams {#introduction}
 
 With interest in cryptocurrencies growing, learning best practices when using cryptocurrency is essential. Crypto can be fun and exciting, but there are also serious risks. If you put in this small amount of upfront work, you can mitigate these risks.
 
 <Divider />
 
-## Web Security 101
+## Web security 101 {#web-security}
 
-### Use strong passwords
+### Use strong passwords {#use-strong-passwords}
 
-Over 80% of account hacks are a result of weak or stolen passwords. A long combination of characters, numbers and symbols is best to keep your accounts secure.
+[Over 80% of account hacks are a result of weak or stolen passwords](https://cloudnine.com/ediscoverydaily/electronic-discovery/80-percent-hacking-related-breaches-related-password-issues-cybersecurity-trends/). A long combination of characters, numbers and symbols is best to keep your accounts secure.
 
-A common mistake individuals make is using a combination of two to three common, related dictionary words. Passwords like this are insecure because they are prone to a simple hacking technique known as a [dictionary attack](<[https://en.wikipedia.org/wiki/Dictionary_attack](https://en.wikipedia.org/wiki/Dictionary_attack)>).
+A common mistake individuals make is using a combination of two to three common, related dictionary words. Passwords like this are insecure because they are prone to a simple hacking technique known as a [dictionary attack](https://en.wikipedia.org/wiki/Dictionary_attack).
 
 ```md
 Example of a weak password: CuteFluffyKittens!
@@ -25,19 +25,22 @@ Example of a weak password: CuteFluffyKittens!
 Example of a strong password: ymv\*azu.EAC8eyp8umf
 ```
 
-#### Good password practices:
+Another common mistake is using passwords that can be easily guessed or found out through [social engineering](<https://en.wikipedia.org/wiki/Social_engineering_(security)>). Including your mother's maiden name, the name's of your children or pets, or dates of birth in your password is not secure and will increase the risk of your password getting hacked.
 
-- Make passwords as long as allowed by either your password generator or the form you're filling out.
+#### Good password practices: {#good-password-practices}
+
+- Make passwords as long as allowed by either your password generator or the form you're filling out
 - Use a mixture of uppercase, lowercase, numbers and symbols
+- Don't use personal details, such as family names, in your password
 - Avoid common dictionary words
 
 [More on creating strong passwords](https://terranovasecurity.com/how-to-create-a-strong-password-in-7-easy-steps/)
 
-### Use unique passwords for everything
+### Use unique passwords for everything {#use-unique-passwords}
 
 A strong password doesn't provide as much protection if the password is revealed in a data breach. The website [Have I Been Pwned](https://haveibeenpwned.com) allows you to check if your accounts were involved in any data breaches stored in their database. If they have, **you should change pwned passwords immediately**. Using unique passwords for every account lowers the risk of hackers getting access to all of your accounts when one of your passwords is compromised.
 
-### Use a password manager
+### Use a password manager {#use-password-manager}
 
 <InfoBanner emoji=":bulb:">
   <div>
@@ -49,20 +52,20 @@ Remembering strong, unique passwords for every account you have isn't ideal. A p
 
 ![Example of using a password manager](./passwordManager.png)
 
-#### Try a password manager:
+#### Try a password manager: {#try-password-manager}
 
 - [Bitwarden](https://bitwarden.com/)
 - [KeePass](https://keepass.info/)
 - [LastPass](https://www.lastpass.com/)
 - [1Password](https://1password.com/)
 
-### Use Two-Factor Authentication
+### Use Two-Factor Authentication {#two-factor-authentication}
 
 To prove you are you there are different unique proofs that can be used for authentication. These are known as factors and the three main factors are:
 
-- something you know (your password)
-- something you are (such as a fingerprint or iris scanner)
-- and something you own (a security key)
+- Something you know (your password)
+- Something you are (such as a fingerprint or iris scanner)
+- Something you own (a security key)
 
 Using **Two-Factor Authentication (2FA)** provides an additional *security factor* for your online accounts so that knowing your password alone (something you know) is not enough to access an account. Most commonly, the second factor is a randomised 6-digit code (something you own) that you can access through an authenticator app such as Google Authenticator or Authy. These work as a "something you own" factor because the seed is stored on your device.
 
@@ -80,15 +83,19 @@ Using **Two-Factor Authentication (2FA)** provides an additional *security fa
   </div>
 </InfoBanner>
 
+#### Security keys {#security-keys}
+
+For those who want to take the next step in 2FA, consider using a security key. Security keys are physical hardware authentication devices that work in the same way as authenticator apps. Using a security key is the most secure way to 2FA.
+
 Watch more on the 2FA:
 
 <iframe width="100%" height="315px" src="https://www.youtube.com/embed/m8jlnZuV1i4?start=3479&end=3875" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### Uninstall browser extentions
+### Uninstall browser extentions {#uninstall-browser-extentions}
 
 Browser extensions like Chrome extensions or Add-ons for Firefox can augment useful browser functionality and improve user experience, but they come with risks. By default, most browser extensions ask for access to 'read and change site data', allowing them to do almost anything with your data. Chrome extensions are always automatically updated, so a previously safe extension may update later to include malicious code. Most browser extensions are not trying to steal your data, but you should be aware that they can.
 
-#### Stay safe by:
+#### Stay safe by: {#browser-extention-safety}
 
 - Only install browser extensions from trusted sources
 - Removing unused browser extensions
@@ -98,9 +105,9 @@ Browser extensions like Chrome extensions or Add-ons for Firefox can augment use
 
 <Divider />
 
-## Crypto Security 101
+## Crypto Security 101 {#crypto-security}
 
-### Upgrade Your Knowledge
+### Upgrade Your Knowledge {#upgrade-your-knowledge}
 
 One of the biggest reasons people get scammed in crypto generally is a lack of understanding. For example, if you don't understand that the Ethereum network is decentralized and owned by no one, then it's easy to fall prey to someone pretending to be a customer service agent that promises to return your lost ETH in exchange for your private keys. Educating yourself on how Ethereum works is a worthwhile investment.
 
@@ -109,80 +116,89 @@ One of the biggest reasons people get scammed in crypto generally is a lack of u
 <DocLink to="/eth/" title="What is ether?" />
 <Divider />
 
-## Wallet Security
+## Wallet Security {#wallet-security}
 
-### Don't give out your Private keys
+### Don't give out your Private keys {#protect-private-keys}
 
 **Never, for any reason, share your private keys!**
 
-The private key to your wallet acts as your digital signature. It is the only thing stopping someone who knows your wallet address from draining your account of all of its assets!
+The private key to your wallet acts as a password to your Ethereum wallet. It is the only thing stopping someone who knows your wallet address from draining your account of all of its assets!
 
-### Use a Hardware Wallet
+<DocLink to="/wallets/" title="What's an Ethereum wallet?" />
+
+#### Don't take screenshots of your seed phrases/private keys {#screenshot-private-keys}
+
+By screenshotting your seed phrases or private keys, you risk syncing them to the cloud and potentially making them accessible to hackers. Obtaining private keys from the cloud is a common attack vector for hackers.
+
+### Use a Hardware Wallet {#use-hardware-wallet}
 
 A hardware wallet provides offline storage for private keys. They are considered the most secure wallet option for storing your private keys.
 
 Keeping private keys offline massively reduces the risk of being hacked, even if a hacker gets control of your computer.
 
-#### Try a hardware wallet:
+#### Try a hardware wallet: {#try-hardware-wallet}
 
-- [Ledger](<[https://www.ledger.com/](https://www.ledger.com/)>)
-- [Trezor](<[https://trezor.io/](https://trezor.io/)>)
+- [Ledger](https://www.ledger.com/)
+- [Trezor](https://trezor.io/)
 
-### Double check transactions
+### Double check transactions before sending {#double-check-transactions}
 
-Accidently sending crypto to the wrong wallet address is a common mistake. Unless you know the address owner, there will be no way for you to retrieve your funds.
+Accidently sending crypto to the wrong wallet address is a common mistake. **A transaction sent on Ethereum is irrevesible.** Unless you know the address owner and can convince them to send you your fund back, there will be no way for you to retrieve your funds.
 
 Always make sure the address you are sending to exactly matches the desired recipient's address before sending a transaction.
 It is also recommended when interacting with a smart contract to read the transaction message before signing.
-### Set smart contract spend limits
+
+### Set smart contract spend limits {#spend-limits}
 
 When interacting with smart contracts, do not allow unlimited spend limits. An unlimited spend could enable the smart contract to drain your wallet. Instead, set spending limits to only the amount necessary for the transaction.
 
-### Don't take screenshots of your seed phrases/private keys
+Many Ethereum wallets offer limits protection to safeguard against accounts being drained.
 
-By screenshotting your seed phrases or private keys, you risk syncing them to the cloud and potentially making them accessible to hackers. Obtaining private keys from the cloud is a common attack vector for hackers.
+[Explore wallets with limits protection](/wallets/find-wallet/?filters=has_limits_protection)
 
 <Divider />
 
-## Common Scams
+## Common scams {#common-scams}
 
-Todo: add copy here
+Todo:
 
-### Giveaway scam (Double your ETH)
+No one is going to give you free or discounted ETH!
+
+### Giveaway scam {#giveaway}
 
 One of the most common scams in cryptocurrency is the giveaway scam. The giveaway scam can take many forms, but the general premise is that if you send ETH to the provided wallet address, you will receive your ETH back but doubled. *For this reason, it is also known as the 2-for-1 scam.*
 
 These scams usually stipulate a limited time of opportunity to claim the giveaway to encourage poor decision-making and create a sense of false urgency.
 
-#### Twitter Hack
+#### Social media hacks {#social-media-hacks}
 
 A high-profile version of this occurred in July 2020, when the Twitter accounts of prominent celebrities and organisations got hacked. The hacker simultaneously posted a Bitcoin giveaway on the hacked accounts. Although the deceptive tweets were quickly noticed and deleted, the hackers still managed to get away with 11 bitcoin (or $500,000 as of September 2021)
 
-![A scam on Twitter](./twitterScam.png)
+![A scam on Twitter](./appleTwitterScam.png)
 
-#### Vitalik Giveaway
+#### Celebrity giveaway {#celebrity-giveaway}
 
-The Vitalik giveaway is another common form the giveaway scam takes. The scammers will take a recorded video interview or conference talk given by Vitalik Buterin, co-founder of Ethereum, and livestream it on YouTube - making it appear as though Vitalik was giving a live video interview endorsing a cryptocurrency giveaway.
+The celebrity giveaway is another common form the giveaway scam takes. The scammers will take a recorded video interview or conference talk given a celebrity and livestream it on YouTube - making it appear as though the celebrity was giving a live video interview endorsing a cryptocurrency giveaway.
 
-Vitalik is used most often in this scam, but many other prominent people involved in crypto are also used (e.g. Elon Musk or Charles Hoskinson). Including a well-known person gives the scammers livestream a sense of legitimacy (this looks sketchy, but Vitalik is involved, so it must be ok!).
+Vitalik Buterin is used most often in this scam, but many other prominent people involved in crypto are also used (e.g. Elon Musk or Charles Hoskinson). Including a well-known person gives the scammers livestream a sense of legitimacy (this looks sketchy, but Vitalik is involved, so it must be ok!).
 
 **Giveaways are always scams. If you send your funds to these accounts, you will lose them forever.**
 
 ![A scam on YouTube](./youtubeScam.png)
 
-### Support Scams
+### Support scams {#support-scams}
 
 Cryptocurrency is a relatively young and misunderstood technology. A common scam that takes advantage of this is the support scam, where scammers will impersonate support personnel for popular wallets, exchanges, or blockchains.
 
 Much of the discussion about Ethereum happens on Discord. Support scammers will commonly find their target by searching for support questions in public discord channels and then sending the enquirer a private message offering support. By building trust, support scammers try to trick you into revealing your private keys or sending your funds to their wallets.
 
-![A support scam on Discord](./supportScam.png)
+![A support scam on Discord](./discordScam.png)
 
 As a general rule, staff will never communicate with you through private, unofficial channels. Some simple things to keep in mind when dealing with support:
 
 - Never share your private keys, seed phrases or passwords
 - Never allow anyone remote access into your computer
-- Never communicate in unofficial private channels
+- Never communicate outside an organizations designated channels
 
 <InfoBanner emoji=":lock:">
   <div>
@@ -190,7 +206,7 @@ As a general rule, staff will never communicate with you through private, unoffi
   </div>
 </InfoBanner>
 
-### Phishing Scams
+### Phishing scams {#phishing-scams}
 
 Phishing scams are another increasingly common angle that scammers will use to attempt to steal your wallet's funds.
 
@@ -202,7 +218,9 @@ If you receive an email from an unknown sender, remember:
 - Never divulge your personal information or passwords to anyone
 - Delete emails from unknown senders
 
-### Crypto trading broker scams
+[More on avoiding phishing scams](https://support.mycrypto.com/staying-safe/mycrypto-protips-how-not-to-get-scammed-during-ico)
+
+### Crypto trading broker scams {#broker-scams}
 
 Scam crypto trading brokers claim to be specialist cryptocurrency brokers who will offer to take your money and invest it on your behalf. The promises of unrealistic returns usually accompany this offer. After the scammer receives your funds, they may lead you on, asking that you send more funds, so you don't miss out on further investment gains, or they may disappear entirely.
 
@@ -214,19 +232,37 @@ These fraudulent brokers find their targets by using fake accounts on YouTube to
 
 <Divider />
 
-## Further Reading
+## Further reading {#further-reading}
 
-### Web Security
+### Web security {#reading-web-security}
 
 - [This is why you shouldn’t use texts for two-factor authentication](https://www.theverge.com/2017/9/18/16328172/sms-two-factor-authentication-hack-password-bitcoin)
 - [Up to 3 million devices infected by malware-laced Chrome and Edge add-ons](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/)
 - [How to Create a Strong Password — That You Won’t Forget](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget)
+- [What is a security key?](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq)
 
-### Crypto Security
+### Crypto security {#reading-crypto-security}
 
-- [Crypto Security: Passwords and Authentication](https://www.youtube.com/watch?v=m8jlnZuV1i4)
+- [Protecting Yourself and Your Funds](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) - _MyCrypto_
 - [4 Ways to Stay Safe in Crypto](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/)
+- [Security Guide For Dummies And Smart People Too](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) - _MyCrypto_
+- [Crypto Security: Passwords and Authentication](https://www.youtube.com/watch?v=m8jlnZuV1i4)
 
-### Scams to be aware of
+### Scam education {#reading-scam-education}
 
+- [Common Scams](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [Bitcoin.org Scams](https://bitcoin.org/en/scams)
+
+## Ideas scratchpad
+
+A couple good suggestions from there that perhaps we should add:
+
+- Don't use a clipboard manager
+- Bookmark Your Crypto Sites / Do Not Trust Random URLs / Always Verify that the Site You Landed on Is Legit
+
+- Add pricing info for password managers
+
+For scams
+
+- Add details about Youtube hacks
+- Add rugpulls
