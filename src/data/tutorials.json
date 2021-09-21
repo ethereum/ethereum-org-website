@@ -38,7 +38,7 @@
   {
     "url": "https://www.youtube.com/watch?v=bdXJmWajZRY",
     "title": "Upgrading your Smart Contracts | A Tutorial & Introduction",
-    "description": "Learn how to make contracts that use flash loans. Using Brownie, Solidity, Aave. ",
+    "description": "Learn how to make contracts that use flash loans. Using Brownie, Solidity, Aave.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
     "tags": ["solidity", "web3.py", "brownie", "Aave", "smart contracts", "python", "video", "defi"],
