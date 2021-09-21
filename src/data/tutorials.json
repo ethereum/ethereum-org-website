@@ -65,7 +65,7 @@
     "description": "Build your own ERC20 token using Brownie, Python, and Solidity. ",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
-    "tags": ["solidity", "web3.py", "brownie", "upgrades", "smart-contracts", "python", "openzeppelin", "chainlink", "video"],
+    "tags": ["solidity", "web3.py", "brownie", "upgrades", "smart contracts", "python", "openzeppelin", "chainlink", "video"],
     "skillLevel": "beginner",
     "timeToRead": "17",
     "lang": "en",
