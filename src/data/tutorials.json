@@ -62,7 +62,7 @@
   {
     "url": "https://www.youtube.com/watch?v=p36tXHX1JD8",
     "title": "NFT/ERC-721/Collectible END-TO-END TUTORIAL | Deploy, List on Opensea, Host Metadata on IPFS",
-    "description": "Build your own ERC20 token using Brownie, Python, and Solidity. ",
+    "description": "Build your own ERC20 token using Brownie, Python, and Solidity.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
     "tags": ["solidity", "web3.py", "brownie", "upgrades", "smart contracts", "python", "openzeppelin", "chainlink", "video"],
