@@ -41,7 +41,7 @@
     "description": "Learn how to make contracts that use flash loans. Using Brownie, Solidity, Aave. ",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
-    "tags": ["solidity", "web3.py", "brownie", "Aave", "smart-contracts", "python", "video", "defi"],
+    "tags": ["solidity", "web3.py", "brownie", "Aave", "smart contracts", "python", "video", "defi"],
     "skillLevel": "intermediate",
     "timeToRead": "17",
     "lang": "en",
