@@ -77,7 +77,7 @@
     "description": "Deploy your smart contract to Opensea, end-to-end. The Ultimate/end-to-end tutorial.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
-    "tags": ["solidity", "web3.py", "brownie", "smart-contracts", "python", "openzeppelin", "erc20", "video"],
+    "tags": ["solidity", "web3.py", "brownie", "smart contracts", "python", "openzeppelin", "ERC-20", "video"],
     "skillLevel": "beginner",
     "timeToRead": "30",
     "lang": "en",
