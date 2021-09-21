@@ -50,7 +50,7 @@
   {
     "url": "https://www.youtube.com/watch?v=Aw7yvGFtOvI",
     "title": "Aave Flash Loan Tutorial",
-    "description": "All about upgradable smart contracts, proxies, and using delegatecall in your solidity. ",
+    "description": "All about upgradable smart contracts, proxies, and using delegatecall in your solidity.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
     "tags": ["solidity", "web3.py", "brownie", "upgrades", "smart contracts", "python", "openzeppelin", "proxies", "video"],
