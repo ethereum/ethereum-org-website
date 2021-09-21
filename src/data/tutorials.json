@@ -5,7 +5,7 @@
     "description": "This course will give you a full introduction into all of the core concepts in blockchain, smart contracts, solidity, NFTs/ERC721s, ERC20s, Coding Decentralized Finance (DeFi), python and solidity, Chainlink, Ethereum, upgradable smart contracts, and full stack blockchain development. ",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
-    "tags": ["solidity", "brownie", "web3.py", "smart-contracts", "react", "blockchain", "video", "IPFS", "oracles", "NFT", "ERC20", "upgrades", "python", "mocking", "testing", "Aave", "chainlink", "ganache"],
+    "tags": ["solidity", "brownie", "web3.py", "smart contracts", "react", "blockchain", "video", "IPFS", "oracles", "NFT", "ERC-20", "upgrades", "python", "mocking", "testing", "Aave", "chainlink", "ganache"],
     "skillLevel": "beginner",
     "timeToRead": "960",
     "lang": "en",
