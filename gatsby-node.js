@@ -290,9 +290,7 @@ exports.onCreatePage = ({ page, actions }) => {
         isOutdated,
         //display TranslationBanner for translation-component pages that are still in English
         isContentEnglish:
-          langVersion < 2 &&
-          !page.component.includes("/developers/index.js") &&
-          !page.component.includes("/index.js"),
+          langVersion < 2 && !page.component.includes("/index.js"),
       },
     })
   }
