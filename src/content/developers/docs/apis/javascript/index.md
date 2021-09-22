@@ -13,7 +13,7 @@ If you want to use JavaScript to connect with an Ethereum node, it's possible to
 
 ## Prerequisites {#prerequisites}
 
-As well as understanding JavaScript, it might be helpful to understand the [Ethereum stack](/developers/docs/ethereum-stack/) and [Ethereum clients](/developers/docs/nodes-and-clients/).
+It might be helpful to understand the [Ethereum stack](/developers/docs/ethereum-stack/) and [Ethereum clients](/developers/docs/nodes-and-clients/) along with basic understanding of JavaScript will be helpful.
 
 ## Why use a library? {#why-use-a-library}
 
