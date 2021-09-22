@@ -4877,6 +4877,15 @@
         "doc",
         "bug"
       ]
+    },
+    {
+      "login": "andyGallagher",
+      "name": "Andrew Gallagher",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43940590?v=4",
+      "profile": "https://www.andrewgallagher-portfolio.com/",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
