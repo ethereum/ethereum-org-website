@@ -1140,6 +1140,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/himanshu3w"><img src="https://avatars.githubusercontent.com/u/63382395?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Himanshu Singh</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ahimanshu3w" title="Bug reports">🐛</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=himanshu3w" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/abcoathup"><img src="https://avatars.githubusercontent.com/u/28278242?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andrew B Coathup</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=abcoathup" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aabcoathup" title="Bug reports">🐛</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://www.andrewgallagher-portfolio.com/"><img src="https://avatars.githubusercontent.com/u/43940590?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andrew Gallagher</b></sub></a><br /><a href="#content-andyGallagher" title="Content">🖋</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
