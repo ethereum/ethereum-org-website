@@ -79,7 +79,7 @@ Before diving into frameworks, we recommend you first read through our introduct
 
 **Alchemy -** **_Ethereum Development Platform._**
 
-- [alchemyapi.io](https://alchemyapi.io/)
+- [alchemy.com](https://www.alchemy.com/)
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/A39JVCM)
 
