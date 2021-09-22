@@ -96,6 +96,7 @@ Eth2 (the [beacon chain](/eth2/beacon-chain/)) uses a consensus mechanism called
 
 ## Further Reading {#further-reading}
 
+- [What Is a Blockchain Consensus Algorithm?](https://academy.binance.com/en/articles/what-is-a-blockchain-consensus-algorithm)
 - [What is Nakamoto Consensus? Complete Beginner’s Guide](https://blockonomi.com/nakamoto-consensus/)
 - [How Does Casper work?](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [On the Security and Performance of Proof of Work Blockchains](https://eprint.iacr.org/2016/555.pdf)
