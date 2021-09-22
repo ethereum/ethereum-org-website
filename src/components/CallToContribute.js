@@ -60,7 +60,6 @@ const GithubIcon = styled(Icon)`
 const Description = styled.p`
   line-height: 140%;
   color: ${(props) => props.theme.colors.text};
-  font-family: "SFMono-Regular", monospace;
   font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
     "Liberation Mono", Menlo, Courier, monospace;
 `
