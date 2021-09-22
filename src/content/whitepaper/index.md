@@ -441,7 +441,7 @@ important limitations:
   2<sup>k</sup> for every k up to 30) and having O pick which UTXO to
   send to A and which to B.
 - **Lack of state** - a [UTXO can either be spent or
-  unspent](https://bitcoin.org/en/glossary/unspent-transaction-output);
+  unspent](https://developer.bitcoin.org/devguide/transactions.html);
   there is no opportunity for multi-stage contracts or scripts which
   keep any other internal state beyond that. This makes it hard to
   make multi-stage options contracts, decentralized exchange offers or
@@ -526,7 +526,7 @@ principles:
     Innovations such as Ethash (see the [Yellow Paper Appendix](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.J)
     or [wiki article](https://github.com/ethereum/wiki/wiki/Ethash)),
     modified Patricia trees ([Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.D),
-    [wiki](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree))
+    [wiki](https://eth.wiki/en/fundamentals/patricia-tree))
     and RLP
     ([YP](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.B),
     [wiki](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP))
