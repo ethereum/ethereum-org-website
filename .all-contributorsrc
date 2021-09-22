@@ -4886,6 +4886,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "phatngluu",
+      "name": "Phat Nguyen Luu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44693107?v=4",
+      "profile": "https://github.com/phatngluu",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
