@@ -44,7 +44,7 @@ Read more about the [benefits of running your own node](/developers/docs/nodes-a
 
 Here is a list of some of the most popular Ethereum node providers, feel free to add any that are missing! Each node service offers different benefits and features in addition to free or paid tiers, you should investigate which ones best suit your needs prior to making a decision.
 
-- [**Alchemy**](https://alchemyapi.io/)
+- [**Alchemy**](https://www.alchemy.com/)
   - [Docs](https://docs.alchemyapi.io/)
   - Features
     - Free tier option
