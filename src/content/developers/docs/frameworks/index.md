@@ -85,7 +85,7 @@ Before diving into frameworks, we recommend you first read through our introduct
 
 **Etherlime -** **_Ethers.js based framework for dapp development (Solidity & Vyper), deployment, debugging, testing and more._**
 
-- [Docs](https://etherlime.readthedocs.io/en/latest/)
+- [Docs](https://etherlime.gitbook.io/etherlime/)
 - [GitHub](https://github.com/LimeChain/etherlime)
 
 **Dapptools -** **_A suite of Ethereum focused CLI tools following the Unix design philosophy, favoring composability, configurability and extensibility._**
