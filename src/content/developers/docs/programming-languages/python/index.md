@@ -46,26 +46,29 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 ## Python Projects and Tools {#python-projects-and-tools}
 
+### Active:
+
+- [Web3.py](https://github.com/ethereum/web3.py) - _Python library for interacting with Ethereum_
 - [Brownie](https://github.com/eth-brownie/brownie) - _Python framework for deploying, testing and interacting with Ethereum smart contracts_
-- [eth-utils](https://github.com/ethereum/eth-utils/) - _utility functions for working with Ethereum related codebases_
+- [Vyper](https://github.com/ethereum/vyper/) - _Pythonic Smart Contract Language for the EVM_
 - [py-evm](https://github.com/ethereum/py-evm) - _implementation of the Ethereum Virtual Machine_
+- [Mamba](https://mamba.black) - _framework to write, compile, and deploy smart contracts written in Vyper language_
+- [eth-tester](https://github.com/ethereum/eth-tester) - _tools for testing Ethereum-based applications_
+- [eth-utils](https://github.com/ethereum/eth-utils/) - _utility functions for working with Ethereum related codebases_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _Python wrapper around the solc solidity compiler with 0.5.x support_
 - [py-wasm](https://github.com/ethereum/py-wasm) - _Python implementation of the web assembly interpreter_
-- [pydevp2p](https://github.com/ethereum/pydevp2p) - _Implementation of the Ethereum P2P stack_
+- [pydevp2p](https://github.com/ethereum/pydevp2p) - _implementation of the Ethereum P2P stack_
 - [pymaker](https://github.com/makerdao/pymaker) - _Python API for Maker contracts_
-- [Mamba](https://mamba.black) - _framework to write, compile, and deploy smart contracts written in Vyper language_
-- [Trinity](https://github.com/ethereum/trinity) - _Ethereum Python client_
-- [Vyper](https://github.com/ethereum/vyper/) - _Pythonic Smart Contract Language for the EVM_
-- [Web3.py](https://github.com/ethereum/web3.py) - _Python library for interacting with Ethereum_
 
-Looking for more resources? Check out [ethereum.org/developers.](/developers/)
+
+### Archived / No Longer Maintained:
+
+- [Trinity](https://github.com/ethereum/trinity) - _Ethereum Python client_
+
+Looking for more resources? Check out [ethereum.org/developers](/developers/).
 
 ## Python Community Contributors {#python-community-contributors}
 
-- [Py-EVM Gitter](https://gitter.im/ethereum/py-evm)
-- [Trinity Gitter](https://gitter.im/ethereum/trinity)
-- [Vyper Gitter](https://gitter.im/ethereum/vyper)
-- [Webpy Gitter](https://gitter.im/ethereum/web3.py)
 - [Ethereum Python Community Discord](https://discord.gg/9zk7snTfWe)
 
 ## Other Aggregated Lists {#other-aggregated-lists}
