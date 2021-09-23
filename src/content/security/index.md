@@ -118,7 +118,7 @@ One of the biggest reasons people get scammed in crypto generally is a lack of u
 
 ## Wallet Security {#wallet-security}
 
-### Don't give out your Private keys {#protect-private-keys}
+### Don't give out your private keys {#protect-private-keys}
 
 **Never, for any reason, share your private keys!**
 
