@@ -321,7 +321,7 @@ const TableOfContents = ({
   editPath,
   isMobile = false,
 }) => {
-  const { isZenMode, setIsZenMode } = useContext(ZenModeContext)
+  const { isZenMode, handleZenModeChange } = useContext(ZenModeContext)
   const intl = useIntl()
 
   const titleIds = []
@@ -368,7 +368,7 @@ const TableOfContents = ({
       <OuterList>
         <ZenModeContainer>
           <ZenModeText>Zen Mode:</ZenModeText>
-          <ZenModeToggleContainer onClick={() => setIsZenMode(!isZenMode)}>
+          <ZenModeToggleContainer onClick={handleZenModeChange}>
             <Icon name={isZenMode ? "zenModeOn" : "zenModeOff"} size="2rem" />
           </ZenModeToggleContainer>
         </ZenModeContainer>

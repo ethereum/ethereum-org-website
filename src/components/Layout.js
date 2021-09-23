@@ -58,22 +58,26 @@ const Layout = (props) => {
   const [isZenMode, setIsZenMode] = useState(false)
   const [shouldShowSideNav, setShouldShowSideNav] = useState(false)
 
-  // set isDarkTheme based on browser/app user preferences
+  // set isDarkTheme and zenMode based on browser/app user preferences
   useEffect(() => {
-    if (localStorage && localStorage.getItem("dark-theme") !== null) {
-      setIsDarkTheme(localStorage.getItem("dark-theme") === "true")
-    } else {
-      setIsDarkTheme(window.matchMedia("(prefers-color-scheme: dark)").matches)
+    if (localStorage) {
+      if (localStorage.getItem("dark-theme") !== null) {
+        setIsDarkTheme(localStorage.getItem("dark-theme") === "true")
+      } else {
+        setIsDarkTheme(
+          window.matchMedia("(prefers-color-scheme: dark)").matches
+        )
+      }
+
+      if (localStorage.getItem("zen-mode") !== null) {
+        setIsZenMode(localStorage.getItem("zen-mode") === "true")
+      }
     }
   }, [])
 
   useEffect(() => {
     if (props.path.includes("/docs/")) {
       setShouldShowSideNav(true)
-
-      if (localStorage && localStorage.getItem("zen-mode") !== null) {
-        setIsZenMode(localStorage.getItem("zen-mode") === "true")
-      }
     }
   }, [props.path])
 
@@ -81,6 +85,13 @@ const Layout = (props) => {
     setIsDarkTheme(!isDarkTheme)
     if (localStorage) {
       localStorage.setItem("dark-theme", !isDarkTheme)
+    }
+  }
+
+  const handleZenModeChange = () => {
+    setIsZenMode(!isZenMode)
+    if (localStorage) {
+      localStorage.setItem("zen-mode", !isZenMode)
     }
   }
 
@@ -129,7 +140,9 @@ const Layout = (props) => {
               <MainContainer>
                 {!isZenMode && shouldShowSideNav && <SideNav path={path} />}
                 <MainContent>
-                  <ZenModeContext.Provider value={{ isZenMode, setIsZenMode }}>
+                  <ZenModeContext.Provider
+                    value={{ isZenMode, handleZenModeChange }}
+                  >
                     <Main>{props.children}</Main>
                   </ZenModeContext.Provider>
                 </MainContent>
