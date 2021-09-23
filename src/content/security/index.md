@@ -130,7 +130,7 @@ The private key to your wallet acts as a password to your Ethereum wallet. It is
 
 By screenshotting your seed phrases or private keys, you risk syncing them to the cloud and potentially making them accessible to hackers. Obtaining private keys from the cloud is a common attack vector for hackers.
 
-### Use a Hardware Wallet {#use-hardware-wallet}
+### Use a hardware wallet {#use-hardware-wallet}
 
 A hardware wallet provides offline storage for private keys. They are considered the most secure wallet option for storing your private keys.
 
