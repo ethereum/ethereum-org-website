@@ -322,8 +322,8 @@ const StatsBoxGrid = () => {
             timestamp,
             value,
           }))
-          .sort((a, b) => b.timestamp - a.timestamp)
-        const value = formatPrice(data[0].value)
+          .sort((a, b) => a.timestamp - b.timestamp)
+        const value = formatPrice(data[data.length - 1].value)
         setEthPrices({
           data, // historical data: {timestamp: unix-milliseconds, value }
           value, // current value
@@ -346,8 +346,8 @@ const StatsBoxGrid = () => {
             timestamp: new Date(UTCDate).getTime(),
             value: TotalNodeCount,
           }))
-          .sort((a, b) => b.timestamp - a.timestamp)
-        const value = formatNodes(data[0].value)
+          .sort((a, b) => a.timestamp - b.timestamp)
+        const value = formatNodes(data[data.length - 1].value)
         setNodes({
           data, // historical data: {timestamp: unix-milliseconds, value }
           value, // current value
@@ -371,8 +371,8 @@ const StatsBoxGrid = () => {
             timestamp: parseInt(timestamp) * 1000,
             value: tvlUSD,
           }))
-          .sort((a, b) => b.timestamp - a.timestamp)
-        const value = formatTVL(data[0].value)
+          .sort((a, b) => a.timestamp - b.timestamp)
+        const value = formatTVL(data[data.length - 1].value)
         setValueLocked({
           data, // historical data: {timestamp: unix-milliseconds, value }
           value, // current value
@@ -396,8 +396,8 @@ const StatsBoxGrid = () => {
             timestamp: parseInt(unixTimeStamp) * 1000, // unix milliseconds
             value: transactionCount,
           }))
-          .sort((a, b) => b.timestamp - a.timestamp)
-        const value = formatTxs(data[0].value)
+          .sort((a, b) => a.timestamp - b.timestamp)
+        const value = formatTxs(data[data.length - 1].value)
         setTxs({
           data,
           value,
