@@ -6,21 +6,21 @@ sidebar: true
 incomplete: true
 ---
 
-Ethereum, like Bitcoin, currently uses a consensus protocol called [Proof-of-work (PoW)](https://en.wikipedia.org/wiki/Proof_of_work). This allows the nodes of the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain, and prevents certain kinds of economic attacks.
+Ethereum, like Bitcoin, currently uses a consensus protocol called **[Proof-of-work (PoW)](https://en.wikipedia.org/wiki/Proof_of_work)**. This allows the nodes of the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain and prevents certain kinds of economic attacks.
 
-Over the next few years, proof-of-work will be phased out in favour of [Proof-of-stake (PoS)](/developers/docs/consensus-mechanisms/pos). This will also phase out mining from Ethereum. For more details on timing, check the progress of the [Eth2 merge upgrade](/eth2/merge/).
+Over the next year, proof-of-work will be phased out in favour of **[Proof-of-stake (PoS)](/developers/docs/consensus-mechanisms/pos)**. The transition to proof-of-stake will also phase out mining from Ethereum. For more details on timing, check the progress of the [Eth2 merge upgrade](/eth2/merge/).
 
 ## Prerequisites {#prerequisites}
 
-To better understand this page, we recommend you first read up on [transactions](/developers/docs/transactions/) and [blocks](/developers/docs/blocks/).
+To better understand this page, we recommend you first read up on [transactions](/developers/docs/transactions/), [blocks](/developers/docs/blocks/), and [consensus mechanisms](/developers/docs/consensus-mechanisms/).
 
 ## What is Proof-of-work (PoW)? {#what-is-pow}
 
-Proof-of-work is the mechanism that allows the decentralized Ethereum network to come to consensus, or agree on things like account balances and the order of transactions. This prevents users "double spending" their coins and ensures that the Ethereum chain is incredibly difficult to attack or overwrite.
+Proof-of-work is the mechanism that allows the decentralized Ethereum network to come to consensus, or agree on things like account balances and the order of transactions. This prevents users from "double spending" their coins and ensures that the Ethereum chain is tremendously difficult to attack or manipulate.
 
 ## Proof-of-work and mining {#pow-and-mining}
 
-Proof-of-work is the underlying algorithm that sets the difficulty and rules for the work miners do. Mining is the "work" itself. It's the act of adding valid blocks to the chain. This is important because the chain's length helps the network spot the valid Ethereum chain and understand Ethereum's current state. The more "work" done, the longer the chain, and the higher the block number, the more certain the network can be of the current state of things.
+Proof-of-work is the underlying algorithm that sets the difficulty and rules for the work miners do. Mining is the "work" itself. It's the act of adding valid blocks to the chain. This is important because the chain's length helps the network follow the correct Ethereum chain and understand Ethereum's current state. The more "work" done, the longer the chain, and the higher the block number, the more certain the network can be of the current state of things.
 
 [More on mining](/developers/docs/consensus-mechanisms/pow/mining/)
 
@@ -70,13 +70,17 @@ This is something to bear in mind when designing dapps, as it would be a poor us
 
 Remember, this timing doesn't include the wait times for having a transaction picked up by a miner.
 
+## Proof-of-work energy-usage {#energy}
+
+A major criticism of proof-of-work is the amount of energy output required to keep the network safe. To maintain security and decentralization, Ethereum on proof-of-work consumes 73.2 TWh annually, the energy equivalent of a medium-sized country like Austria.
+
 ## Pros and cons {#pros-and-cons}
 
-| Pros                                                                                                                                                                                                               | Cons                                                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Proof-of-work is neutral. You don't need ETH to get started and block rewards allow you to go from 0ETH to a positive balance. With [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) you need ETH to start with. | Proof-of-work uses up so much energy that it's bad for the environment.                                                                                |
+| Pros                                                                                                                                                                                                                         | Cons                                                                                                                                         |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Proof-of-work is neutral. You don't need ETH to get started and block rewards allow you to go from 0ETH to a positive balance. With [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) you need ETH to start with. | Proof-of-work uses up so much energy that it's bad for the environment.                                                                      |
 | Proof-of-work is a tried and tested consensus mechanism that has kept Bitcoin and Ethereum secure and decentralized for many years.                                                                                          | If you want to mine, you need such specialized equipment that it's a big investment to start.                                                |
-| Compared to proof-of-stake it's relatively easy to implement.                                                                                                                                                      | Due to increasing computation needed, mining pools could potentially dominate the mining game, leading to centralization and security risks. |
+| Compared to proof-of-stake it's relatively easy to implement.                                                                                                                                                                | Due to increasing computation needed, mining pools could potentially dominate the mining game, leading to centralization and security risks. |
 
 ## Compared to proof of stake {#compared-to-pos}
 
@@ -89,14 +93,18 @@ At a high level, proof-of-stake has the same end goal as proof-of-work: to help 
 
 [More on proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 
+## More of a visual learner? {#visual-learner}
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/3EUAcxhuoU4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Further Reading {#further-reading}
 
-- [Majority attack](https://en.bitcoin.it/wiki/Majority_attack)
+- [Majority attack](https://en.bitcoin.it/wiki/Majority_attack/)
 - [On settlement finality](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
 
 ### Videos {#videos}
 
- - [What is Proof of Work (PoW)｜Explained For Beginners](https://www.youtube.com/watch?v=3EUAcxhuoU4)
+- [A technical explanation of proof-of-work protocols](https://youtu.be/9V1bipPkCTU)
 
 ## Related Topics {#related-topics}
 
