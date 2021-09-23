@@ -1,5 +1,5 @@
 ---
-title: Ethereum security and scams
+title: Ethereum security and scam prevention
 description: Staying safe on Ethereum
 lang: en
 sidebar: true
