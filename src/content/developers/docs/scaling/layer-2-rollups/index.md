@@ -40,7 +40,7 @@ Rollups require "operators" to stake a bond in the rollup contract. This incenti
 There are two types of rollups with different security models:
 
 - **Optimistic rollups**: assumes transactions are valid by default and only runs computation, via a [**fraud proof**](/glossary/#fraud-proof), in the event of a challenge
-- **Zero knowledge rollups**: runs computation off-chain and submits a [**validity proof**](/glossary/#validity-proof) to the chain
+- **Zero-knowledge rollups**: runs computation off-chain and submits a [**validity proof**](/glossary/#validity-proof) to the chain
 
 ### Optimistic rollups {#optimistic-rollups}
 
@@ -85,7 +85,7 @@ Multiple implementations of Optimistic rollups exist that you can integrate into
 - [Fuel Network](https://fuel.sh/)
 - [Cartesi](https://cartesi.io/)
 
-### Zero knowledge rollups {#zk-rollups}
+### Zero-knowledge rollups {#zk-rollups}
 
 **Zero-knowledge rollups (ZK-rollups)** bundle (or "roll-up") hundreds of transfers off-chain and generate a cryptographic proof, known as a SNARK (succinct non-interactive argument of knowledge). This is known as a validity proof and is posted on layer 1.
 
