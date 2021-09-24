@@ -62,11 +62,12 @@ Looking for more resources? Check out [ethereum.org/developers.](/developers/)
 
 ## Python Community Contributors {#python-community-contributors}
 
+- [Ethereum Python Community Discord](https://discord.gg/9zk7snTfWe)
 - [Py-EVM Gitter](https://gitter.im/ethereum/py-evm)
 - [Trinity Gitter](https://gitter.im/ethereum/trinity)
 - [Vyper Gitter](https://gitter.im/ethereum/vyper)
 - [Webpy Gitter](https://gitter.im/ethereum/web3.py)
-- [Ethereum Python Community Discord](https://discord.gg/9zk7snTfWe)
+
 
 ## Other Aggregated Lists {#other-aggregated-lists}
 
