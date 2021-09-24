@@ -25,7 +25,7 @@ Watch Austin walk you through blockchains:
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/zcX7OJ-L8XQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-If you want to see how blockchain hashes data and then the previous block references all the past blocks, be sure to check out [this demo](https://andersbrownworth.com/blockchain/blockchain) by Anders Brownworth and watch the accompanying video below. It makes understanding the hashing of blocks really simple.
+If you want to see how blockchain hashes data and then the previous block references all the past blocks, be sure to check out [this demo](https://andersbrownworth.com/blockchain/blockchain) by Anders Brownworth and watch the accompanying video below.
 
 Watch Anders explain hashes in blockchains:
 
