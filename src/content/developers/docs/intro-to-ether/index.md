@@ -47,7 +47,7 @@ Since many transactions on Ethereum are small, ether has several denominations w
 
 Wei is the smallest possible amount of ether, and as a result, many technical implementations, such as the [Ethereum Yellowpaper](https://ethereum.github.io/yellowpaper/paper.pdf), will base all calculations in Wei.
 
-Gwei, short for giga-Wei, is often used to describe gas costs on Ethereum.
+Gwei, short for giga-wei, is often used to describe gas costs on Ethereum.
 
 | Denomination | Value in ether   | Common Usage              |
 | ------------ | ---------------- | ------------------------- |
