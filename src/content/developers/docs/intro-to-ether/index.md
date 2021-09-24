@@ -21,7 +21,7 @@ The first cryptocurrency was Bitcoin, created by Satoshi Nakamoto. Since Bitcoin
 
 **Ether (ETH)** is the cryptocurrency used to pay for computing resources on the Ethereum blockchain.
 
-Ethereum allows developers to create [**decentralized applications (dapps)**](/developers/docs/dapps), which all share a pool of computing power. This shared pool is finite, so Ethereum needs to determine who gets access to the computing power. Otherwise, a dapp could accidentally or maliciously consume the entire network.
+Ethereum allows developers to create [**decentralized applications (dapps)**](/developers/docs/dapps), which all share a pool of computing power. This shared pool is finite, so Ethereum needs to determine who gets access to use it. Otherwise, a dapp could accidentally or maliciously consume all network resources, which would block others from accessing it.
 
 The ether cryptocurrency supports a pricing mechanism for Ethereum's computing power. When users want to make a transaction, they must pay ether to have their transaction recognized on the blockchain. These usage costs are known as [gas fees](/developers/docs/gas/), and the gas fee depends on the amount of computing power required to execute the transaction and the network-wide demand for computing power at the time.
 
