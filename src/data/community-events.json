@@ -62,5 +62,13 @@
     "description": "Ethereum Conference in Lisbon, Portugal",
     "startDate": "2021-10-20",
     "endDate": "2021-10-21"
+  },
+  {
+    "title": "Chainlink Hackathon",
+    "to": "https://chain.link/hackathon",
+    "sponsor": "Chainlink",
+    "description": "Join us for our biggest hackathon yet, where you’ll get the chance to build the next generation of hybrid smart contracts alongside developers, creators, artists, and industry-leading mentors from across the blockchain ecosystem.",
+    "startDate": "2021-10-22",
+    "endDate": "2021-11-28"
   }
 ]
