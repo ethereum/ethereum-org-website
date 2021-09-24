@@ -39,11 +39,6 @@ sidebar: true
 - [相关文档](https://docs.epirus.io)
 - [GitHub](https://github.com/epirus-io/epirus-cli)
 
-**Etherlime -** **_基于 Ethers.js 的框架，用于去中心化应用程序开发（Solidity 和 Vyper）、部署、调试、测试等。_**
-
-- [相关文档](https://etherlime.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/LimeChain/etherlime)
-
 **Hardhat -** **_专业人员的以太坊开发环境_**
 
 - [hardhat.org](https://hardhat.org)
