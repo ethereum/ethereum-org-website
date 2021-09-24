@@ -37,7 +37,7 @@ Ether is minted when a miner creates a block on the Ethereum blockchain. As an i
 
 ## Burning ether {#burning-ether}
 
-As well as creating ether through minting, ether can get destroyed by a process called 'burning'. When ether gets burned, it gets removed from circulation permanently.
+As well as creating ether through block rewards, ether can get destroyed by a process called 'burning'. When ether gets burned, it gets removed from circulation permanently.
 
 Ether burn occurs in every transaction on Ethereum. When users pay for their transactions, their base gas fee gets destroyed by the protocol. Depending on network demand, [some blocks](https://etherscan.io/block/12965263) burn more ether than they mint.
 
