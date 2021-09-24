@@ -245,7 +245,7 @@ Niente può sostituire la conoscenza dei principi di base della sicurezza di Eth
 **SmartContract.Codes -** **_Motore di ricerca per codice sorgente Solidity verificato_**
 
 - [smartcontract.codes (alpha)](https://smartcontract.codes/)
-- [Documentazione](https://github.com/ethereum-play/smartcontract.codes/blob/master/README.md)
+- [Documentazione](https://github.com/playproject-io/smartcontract.codes)
 
 **Manticore -** **_Interfaccia da riga di comando che usa uno strumento di esecuzione simbolica su Smart Contract e file binari_**
 

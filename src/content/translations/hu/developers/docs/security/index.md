@@ -245,7 +245,7 @@ Bár nem helyettesítheti az Ethereum biztonsági alapismereteinek megértését
 **SmartContract.Codes -** **_Ellenőrzött Solidity forráskódok keresőmotora_**
 
 - [smartcontract.codes (alpha)](https://smartcontract.codes/)
-- [Dokumentáció](https://github.com/ethereum-play/smartcontract.codes/blob/master/README.md)
+- [Dokumentáció](https://github.com/playproject-io/smartcontract.codes)
 
 **Manticore -** **_Egy Cli, ami egy szimbolikus futtató eszközt használ okosszerződésekre és binary-kre._**
 

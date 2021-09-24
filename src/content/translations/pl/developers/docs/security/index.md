@@ -245,7 +245,7 @@ Chociaż nic nie zastąpi zrozumienia podstaw bezpieczeństwa Ethereum i zaanga�
 **SmartContract.Codes —** **_wyszukiwarka sprawdzonych kodów źródłowych Solidity._**
 
 - [smartcontract.codes (alfa)](https://smartcontract.codes/)
-- [Dokumentacja](https://github.com/ethereum-play/smartcontract.codes/blob/master/README.md)
+- [Dokumentacja](https://github.com/playproject-io/smartcontract.codes)
 
 **Manticore —** **_interfejs wiersza poleceń, który wykorzystuje symboliczne narzędzie do wykonywania inteligentnych kontraktów i plików binarnych._**
 

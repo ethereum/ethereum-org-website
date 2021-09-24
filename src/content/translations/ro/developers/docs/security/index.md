@@ -245,7 +245,7 @@ Deși nu există nici un substitut pentru înțelegerea elementelor de bază ale
 **SmartContract.Codes -** **_motor de căutare pentru coduri sursă Solidity verificate._**
 
 - [smartcontract.codes (alpha)](https://smartcontract.codes/)
-- [Documentație](https://github.com/ethereum-play/smartcontract.codes/blob/master/README.md)
+- [Documentație](https://github.com/playproject-io/smartcontract.codes)
 
 **Manticore -** **_o interfață tip linie de comandă care utilizează un instrument de execuție simbolică pe contracte inteligente și binare._**
 

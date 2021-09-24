@@ -245,7 +245,7 @@ Aunque no hay sustituto para entender los conceptos básicos de seguridad de Eth
 **SmartContract.Codes: ** **_Motor de búsqueda para códigos fuente verificados de Solidity._**
 
 - [smartcontract.codes (alpha)](https://smartcontract.codes/)
-- [Documentación](https://github.com/ethereum-play/smartcontract.codes/blob/master/README.md)
+- [Documentación](https://github.com/playproject-io/smartcontract.codes)
 
 **Manticore:** **_ Una interfaz de línea de comandos que utiliza una herramienta de ejecución simbólica en contratos inteligentes y binarios._**
 

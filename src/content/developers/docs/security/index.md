@@ -245,7 +245,7 @@ While there is no substitute for understanding Ethereum security basics and enga
 **SmartContract.Codes -** **_Search engine for verified solidity source codes._**
 
 - [smartcontract.codes (alpha)](https://smartcontract.codes/)
-- [Documentation](https://github.com/ethereum-play/smartcontract.codes/blob/master/README.md)
+- [Documentation](https://github.com/playproject-io/smartcontract.codes)
 
 **Manticore -** **_A command line interface that uses a symbolic execution tool on smart contracts and binaries._**
 
