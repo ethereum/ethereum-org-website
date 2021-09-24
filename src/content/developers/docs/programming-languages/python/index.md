@@ -35,7 +35,6 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Dapp Development for Python Programmers](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
 - [Creating a Python Ethereum Interface: Part 1](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
 - [Ethereum Smart Contracts in Python: a comprehensive(ish) guide](https://hackernoon.com/ethereum-smart-contracts-in-python-a-comprehensive-ish-guide-771b03990988)
-- [Everything you need to know about the Trinity Ethereum client](https://medium.com/@pipermerriam/everything-you-need-to-know-about-the-trinity-ethereum-client-b093c756d1de)
 - [Using Brownie and Python to deploy Smart Contracts](https://dev.to/patrickalphac/using-brownie-for-to-deploy-smart-contracts-1kkp)
 - [Creating NFTs on OpenSea with Brownie](https://www.freecodecamp.org/news/how-to-make-an-nft-and-render-on-opensea-marketplace/)
 
