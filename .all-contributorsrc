@@ -4896,6 +4896,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Andrew-Sofos",
+      "name": "Andreas Sofos",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56540744?v=4",
+      "profile": "https://github.com/Andrew-Sofos",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
