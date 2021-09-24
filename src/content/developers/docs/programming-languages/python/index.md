@@ -60,6 +60,14 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 Looking for more resources? Check out [ethereum.org/developers.](/developers/)
 
+## Projects using Python tooling
+
+Here are some Ethereum based projects that use tools mentioned on this page. You can look the open source repositories for example code and best practices.
+
+- [Yearn Finance](https://yearn.finance/) and [Yearn Vault Contracts repository](https://github.com/yearn/yearn-vaults)
+- [Curve](https://curve.fi/) and [Curve smart contracts repository](https://github.com/curvefi/curve-contract)
+- [BadgerDAO](https://badger.com/) and [smart contracts using Brownie toolchain](https://github.com/Badger-Finance/badger-system)
+
 ## Python Community Contributors {#python-community-contributors}
 
 - [Py-EVM Gitter](https://gitter.im/ethereum/py-evm)
