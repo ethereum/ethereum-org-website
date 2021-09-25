@@ -8,6 +8,8 @@ sidebarDepth: 2
 
 # Deprecated software {#summary-deprecated-software}
 
+This is a list of key Ethereum-related projects and resources which have been deprecated or are no longer maintained. It is important to highlight deprecated work so that users can find viable alternatives and also to prevent malicious versions from being distributed.
+
 Here are some excellent starting points:
 
 - [Decentralizing Everything](https://www.youtube.com/watch?v=WSN5BaCzsbo&feature=youtu.be) _Sep 18, 2017 - Vitalik Buterin (Video)_
