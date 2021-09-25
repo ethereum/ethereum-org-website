@@ -3,6 +3,8 @@ import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import { connectSearchBox } from "react-instantsearch-dom"
 
+import { useKeyPress } from "../../hooks/useKeyPress"
+
 import Icon from "../Icon"
 import { translateMessageId } from "../../utils/translations"
 
@@ -26,15 +28,25 @@ const StyledInput = styled.input`
   }
 `
 
-const SearchIcon = styled(Icon)`
+const SearchSlashIcon = styled(Icon)`
   position: absolute;
   top: 50%;
   margin-top: -12px;
   right: 6px;
-  fill: ${(props) => props.theme.colors.text};
+
+  path:nth-child(1) {
+    fill: ${(props) => props.theme.colors.searchBorder};
+  }
+
+  path:nth-child(2) {
+    fill: ${(props) => props.theme.colors.text};
+  }
 `
 
 const Input = ({ query, setQuery, refine, ...rest }) => {
+  const intl = useIntl()
+  const searchString = translateMessageId("search", intl)
+
   const handleInputChange = (event) => {
     const value = event.target.value
     refine(value)
@@ -45,12 +57,19 @@ const Input = ({ query, setQuery, refine, ...rest }) => {
     event.preventDefault()
   }
 
-  const intl = useIntl()
-  const searchString = translateMessageId("search", intl)
+  const focusSearch = (event) => {
+    const searchInput = document.getElementById("header-search")
+    if (document.activeElement !== searchInput) {
+      event.preventDefault()
+      searchInput.focus()
+    }
+  }
+  useKeyPress("/", focusSearch)
 
   return (
     <Form onSubmit={handleSubmit}>
       <StyledInput
+        id="header-search"
         type="text"
         placeholder={searchString}
         value={query}
@@ -58,7 +77,7 @@ const Input = ({ query, setQuery, refine, ...rest }) => {
         onChange={handleInputChange}
         {...rest}
       />
-      <SearchIcon name="search" />
+      <SearchSlashIcon name="searchSlash" />
     </Form>
   )
 }
