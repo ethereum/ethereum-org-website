@@ -77,7 +77,7 @@ The base fee is calculated by a formula that compares the size of the previous b
 | 2            |          30M |           0% |       100.0 gwei |
 | 3            |          30M |        12.5% |       112.5 gwei |
 | 4            |          30M |        12.5% |       126.6 gwei |
-| 5            |          30M |        12.5% |       142.3 gwei |
+| 5            |          30M |        12.5% |       142.4 gwei |
 | 6            |          30M |        12.5% |       160.2 gwei |
 | 7            |          30M |        12.5% |       180.2 gwei |
 | 8            |          30M |        12.5% |       202.8 gwei |
