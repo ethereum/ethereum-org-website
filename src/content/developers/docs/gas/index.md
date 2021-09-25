@@ -80,7 +80,7 @@ The base fee is calculated by a formula that compares the size of the previous b
 | 5            |          30M |        12.5% |       142.4 gwei |
 | 6            |          30M |        12.5% |       160.2 gwei |
 | 7            |          30M |        12.5% |       180.2 gwei |
-| 8            |          30M |        12.5% |       202.8 gwei |
+| 8            |          30M |        12.5% |       202.7 gwei |
 
 Relative to the pre-London gas auction market, this transaction-fee-mechanism change causes fee prediction to be more reliable. Following the table above - to create a transaction on block number 9, a wallet will let the user know with certainty that the **maximum base fee** to be added to the next block is `current base fee * 112.5%` or `202.8 gwei * 112.5% = 228.1 gwei`.
 
