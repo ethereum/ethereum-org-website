@@ -104,7 +104,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Unique Ethereum SDK
     - Unique API endpoints
     - Direct, technical support
-- [**Pocket Netowrk**](https://www.pokt.network/)
+- [**Pocket Network**](https://www.pokt.network/)
   - [Docs](https://docs.pokt.network/home/)
   - Features
 - [**QuikNode**](https://www.quiknode.io/)
