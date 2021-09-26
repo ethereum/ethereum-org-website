@@ -23,6 +23,7 @@ const ModalContainer = styled.div`
   right: 0px;
   position: fixed;
   z-index: 1002;
+  padding: 15% 1rem 15%;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -33,7 +34,6 @@ const ModalContainer = styled.div`
   -webkit-overflow-scrolling: touch;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     align-items: flex-start;
-    padding: 0px;
     justify-content: flex-start;
   }
 `
