@@ -233,7 +233,7 @@ const GetInvolvedPage = ({ data, location }) => {
       alt: "eth2-client-nimbus-logo-alt",
       url: "https://nimbus.team/",
       image: data.nimbus.childImageSharp.fixed,
-      githubUrl: "https://github.com/status-im/nimbus-eth1",
+      githubUrl: "https://github.com/status-im/nimbus-eth2",
       isProductionReady: true,
     },
     {
