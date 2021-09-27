@@ -163,7 +163,7 @@ Many Ethereum wallets offer limits protection to safeguard against accounts bein
 Scammers are always looking for ways to take your funds off you. It is impossible to stop scammers completely, but we can make them less effective by being aware of the most techniques used. There are many variations of these scams, but they generally follow the same high-level patterns. If nothing else, remember:
 
 - always be skeptical
-- one is going to give you free or discounted ETH!
+- no one is going to give you free or discounted ETH!
 - no one needs access to your private keys or personal information
 
 ### Giveaway scam {#giveaway}
