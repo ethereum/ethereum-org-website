@@ -4865,7 +4865,8 @@
       "profile": "https://github.com/himanshu3w",
       "contributions": [
         "bug",
-        "doc"
+        "doc",
+        "ideas"
       ]
     },
     {
@@ -4892,6 +4893,24 @@
       "name": "Phat Nguyen Luu",
       "avatar_url": "https://avatars.githubusercontent.com/u/44693107?v=4",
       "profile": "https://github.com/phatngluu",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Andrew-Sofos",
+      "name": "Andreas Sofos",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56540744?v=4",
+      "profile": "https://github.com/Andrew-Sofos",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "fselmo",
+      "name": "Felipe Selmo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3532824?v=4",
+      "profile": "https://github.com/fselmo",
       "contributions": [
         "doc"
       ]

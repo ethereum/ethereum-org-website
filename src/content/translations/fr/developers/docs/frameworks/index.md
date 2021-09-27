@@ -39,11 +39,6 @@ Avant de plonger dans les frameworks, nous vous recommandons de commencer par li
 - [Documentation](https://docs.epirus.io)
 - [GitHub](https://github.com/epirus-io/epirus-cli)
 
-**Etherlime -** **_Framework basé sur ethers.js pour le développement (Solidity et Vyper), le déploiement, le débogage et le test des DApps, et plus encore._**
-
-- [Documentation](https://etherlime.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/LimeChain/etherlime)
-
 **Hardhat -** **_Environnement de développement professionnel Ethereum._**
 
 - [hardhat.org](https://hardhat.org)
