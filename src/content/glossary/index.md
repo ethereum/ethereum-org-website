@@ -316,13 +316,13 @@ A fixed-length fingerprint of variable-size input, produced by a hash function. 
 
 ### HD wallet {#hd-wallet}
 
-A [wallet](#wallets) using the hierarchical deterministic (HD) key creation and transfer protocol.
+A [wallet](#wallet) using the hierarchical deterministic (HD) key creation and transfer protocol.
 
 [Read more at github.com](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki)
 
 ### HD wallet seed {#hd-wallet-seed}
 
-A value used to generate the master [private key](#private-key) and master chain code for an HD [wallet](#wallets). The wallet seed can be represented by mnemonic words, making it easier for humans to copy, back up, and restore private keys.
+A value used to generate the master [private key](#private-key) and master chain code for an HD [wallet](#wallet). The wallet seed can be represented by mnemonic words, making it easier for humans to copy, back up, and restore private keys.
 
 ### homestead {#homestead}
 
@@ -400,7 +400,7 @@ A special type of [contract](#smart-contract) that has no payable functions, no 
 
 ### lightweight client {#lightweight-client}
 
-An Ethereum client that does not store a local copy of the [blockchain](#blockchain), or validate blocks and [transactions](#transaction). It offers the functions of a [wallet](#wallets) and can create and broadcast transactions.
+An Ethereum client that does not store a local copy of the [blockchain](#blockchain), or validate blocks and [transactions](#transaction). It offers the functions of a [wallet](#wallet) and can create and broadcast transactions.
 
 <Divider />
 
@@ -641,7 +641,7 @@ Data committed to the Ethereum Blockchain signed by an originating [account](#ac
 
 ### transaction fee {#transaction-fee}
 
-A fee you need to pay whenever you use the Ethereum network. Examples include sending funds from your [wallet](#wallets) or a [dapp](#dapp) interaction, like swapping tokens or buying a collectible. You can think of this like a service charge. This fee will change based on how busy the network is. This is because [miners](#miner), the people responsible for processing your transaction, are likely to prioritise transactions with higher fees – so congestion forces the price up.
+A fee you need to pay whenever you use the Ethereum network. Examples include sending funds from your [wallet](#wallet) or a [dapp](#dapp) interaction, like swapping tokens or buying a collectible. You can think of this like a service charge. This fee will change based on how busy the network is. This is because [miners](#miner), the people responsible for processing your transaction, are likely to prioritise transactions with higher fees – so congestion forces the price up.
 
 At a technical level, your transaction fee relates to how much [gas](#gas) your transaction requires.
 
