@@ -23,11 +23,11 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 我们将带您注册 Alchemy 来编写您的第一个 web3 脚本！ 无需区块链的开发经验！
 
-## 1. 注册免费 Alchemy 帐户 {#sign-up-for-a-free-alchemy-account}
+## 1\. 注册免费 Alchemy 帐户 {#sign-up-for-a-free-alchemy-account}
 
 创建一个 Alchemy 帐户很容易。[在此免费注册](https://dashboard.alchemyapi.io/signup/)。
 
-## 2. 创建一个 Alchemy 应用程序 {#create-an-alchemy-app}
+## 2\. 创建一个 Alchemy 应用程序 {#create-an-alchemy-app}
 
 要使用 Alchemy 产品，您需要一个 API 密钥来对您的请求进行身份验证。
 
@@ -41,7 +41,7 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 ![使用Alchemy创建应用程序的截图](./create-app.png)
 
-您也可以通过将鼠标悬停在““Apps”上并选择一个来获取现有 API 密钥。 您可以在这里“查看密钥”，以及“编辑应用程序”来特定域名加入白名单、查看几个开发者工具，并查看分析。
+您也可以通过将鼠标悬停在“Apps”上并选择一个来获取现有 API 密钥。 您可以在这里“查看密钥”，以及“编辑应用程序”来特定域名加入白名单、查看几个开发者工具，并查看分析。
 
 ![显示用户如何获取API密钥的GIF图](./pull-api-keys.gif)
 
@@ -59,13 +59,13 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 这是一个可通过命令行运行的示例，用于查询当前燃气价格：
 
 ```bash
-curl [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alchemyapi.io/v2/demo) \
+curl https://eth-mainnet.alchemyapi.io/v2/demo \
 -X POST \
 -H "Content-Type: application/json" \
 -d '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":73}'
 ```
 
-***注意： *使用您自己的 API 密钥* [\_https://eth-mainnet.alchemyapio/v2/your-api-key*](https://eth-mainnet.alchemyapi.io/jsonrpc/your-api-key)\*** _替换_ [_https://eth-mainnet.alchemyapi.o/v2/demo_](https://eth-mainnet.alchemyapi.io/jsonrpc/demo)。
+_**注意**： 使用您自己的 API 密钥 https://eth-mainnet.alchemyapio/v2/**your-api-key** 替换 [https://eth-mainnet.alchemyapi.o/v2/demo](https://eth-mainnet.alchemyapi.io/jsonrpc/demo)。_
 
 **结果：**
 
@@ -121,7 +121,7 @@ cd web3-example
 npm install @alch/alchemy-web3
 ```
 
-**‌3. 创建一个名为`index.js` **的文件并添加以下内容：</p>
+**‌3. 创建一个名为 `index.js` **的文件并添加以下内容：\*\*
 
 > 最终应将`demo`替换为您的 Alchemy HTTP API 密钥 。
 
