@@ -23,6 +23,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 ## Beginner articles {#beginner-articles}
 
+- [A (Python) Developer's Guide to Ethereum](https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/)
 - [An Introduction to Smart Contracts with Vyper](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [Deploy your own ERC20 Token with Python and Brownie](https://betterprogramming.pub/python-blockchain-token-deployment-tutorial-create-an-erc20-77a5fd2e1a58)
 - [How to develop Ethereum contract using Python Flask?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
@@ -34,7 +35,6 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Dapp Development for Python Programmers](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
 - [Creating a Python Ethereum Interface: Part 1](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
 - [Ethereum Smart Contracts in Python: a comprehensive(ish) guide](https://hackernoon.com/ethereum-smart-contracts-in-python-a-comprehensive-ish-guide-771b03990988)
-- [Everything you need to know about the Trinity Ethereum client](https://medium.com/@pipermerriam/everything-you-need-to-know-about-the-trinity-ethereum-client-b093c756d1de)
 - [Using Brownie and Python to deploy Smart Contracts](https://dev.to/patrickalphac/using-brownie-for-to-deploy-smart-contracts-1kkp)
 - [Creating NFTs on OpenSea with Brownie](https://www.freecodecamp.org/news/how-to-make-an-nft-and-render-on-opensea-marketplace/)
 
@@ -46,26 +46,37 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 ## Python Projects and Tools {#python-projects-and-tools}
 
+### Active:
+
+- [Web3.py](https://github.com/ethereum/web3.py) - _Python library for interacting with Ethereum_
 - [Brownie](https://github.com/eth-brownie/brownie) - _Python framework for deploying, testing and interacting with Ethereum smart contracts_
-- [eth-utils](https://github.com/ethereum/eth-utils/) - _utility functions for working with Ethereum related codebases_
+- [Vyper](https://github.com/ethereum/vyper/) - _Pythonic Smart Contract Language for the EVM_
 - [py-evm](https://github.com/ethereum/py-evm) - _implementation of the Ethereum Virtual Machine_
+- [Mamba](https://mamba.black) - _framework to write, compile, and deploy smart contracts written in Vyper language_
+- [eth-tester](https://github.com/ethereum/eth-tester) - _tools for testing Ethereum-based applications_
+- [eth-utils](https://github.com/ethereum/eth-utils/) - _utility functions for working with Ethereum related codebases_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _Python wrapper around the solc solidity compiler with 0.5.x support_
 - [py-wasm](https://github.com/ethereum/py-wasm) - _Python implementation of the web assembly interpreter_
-- [pydevp2p](https://github.com/ethereum/pydevp2p) - _Implementation of the Ethereum P2P stack_
+- [pydevp2p](https://github.com/ethereum/pydevp2p) - _implementation of the Ethereum P2P stack_
 - [pymaker](https://github.com/makerdao/pymaker) - _Python API for Maker contracts_
-- [Mamba](https://mamba.black) - _framework to write, compile, and deploy smart contracts written in Vyper language_
-- [Trinity](https://github.com/ethereum/trinity) - _Ethereum Python client_
-- [Vyper](https://github.com/ethereum/vyper/) - _Pythonic Smart Contract Language for the EVM_
-- [Web3.py](https://github.com/ethereum/web3.py) - _Python library for interacting with Ethereum_
 
-Looking for more resources? Check out [ethereum.org/developers.](/developers/)
+
+### Archived / No Longer Maintained:
+
+- [Trinity](https://github.com/ethereum/trinity) - _Ethereum Python client_
+
+Looking for more resources? Check out [ethereum.org/developers](/developers/).
+
+## Projects using Python tooling
+
+Here are some Ethereum based projects that use tools mentioned on this page. You can look the open source repositories for example code and best practices.
+
+- [Yearn Finance](https://yearn.finance/) and [Yearn Vault Contracts repository](https://github.com/yearn/yearn-vaults)
+- [Curve](https://curve.fi/) and [Curve smart contracts repository](https://github.com/curvefi/curve-contract)
+- [BadgerDAO](https://badger.com/) and [smart contracts using Brownie toolchain](https://github.com/Badger-Finance/badger-system)
 
 ## Python Community Contributors {#python-community-contributors}
 
-- [Py-EVM Gitter](https://gitter.im/ethereum/py-evm)
-- [Trinity Gitter](https://gitter.im/ethereum/trinity)
-- [Vyper Gitter](https://gitter.im/ethereum/vyper)
-- [Webpy Gitter](https://gitter.im/ethereum/web3.py)
 - [Ethereum Python Community Discord](https://discord.gg/9zk7snTfWe)
 
 ## Other Aggregated Lists {#other-aggregated-lists}

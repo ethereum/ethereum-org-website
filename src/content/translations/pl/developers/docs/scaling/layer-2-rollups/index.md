@@ -106,7 +106,7 @@ Istnieje wiele implementacji optymistycznych pakietów zbiorczych, które można
 - [Offchain Labs Arbitrum Rollup](https://offchainlabs.com/)
 - [Sieć paliwowa](https://fuel.sh/)
 - [Cartesi](https://cartesi.io)
-- [OMGX](https://omgx.network)
+- [Boba](https://boba.network/)
 
 ## Rozwiązania hybrydowe {#hybrid-solutions}
 

@@ -25,10 +25,10 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 **Alchemy -** **_Ethereum Development Platform._**
 
-- [alchemyapi.io](https://alchemyapi.io)
+- [alchemy.com](https://www.alchemy.com/)
 - [Documentation](https://docs.alchemyapi.io/)
 - [GitHub](https://github.com/alchemyplatform)
-- [Discord](https://discord.gg/kwqVnrA)
+- [Discord](https://discord.com/invite/A39JVCM)
 
 **BlockCypher -** **_Ethereum Web APIs_**
 

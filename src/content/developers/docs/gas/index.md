@@ -76,11 +76,11 @@ The base fee is calculated by a formula that compares the size of the previous b
 | 1            |          15M |           0% |         100 gwei |
 | 2            |          30M |           0% |         100 gwei |
 | 3            |          30M |        12.5% |       112.5 gwei |
-| 4            |          30M |        12.5% |       126.5 gwei |
+| 4            |          30M |        12.5% |       126.6 gwei |
 | 5            |          30M |        12.5% |       142.4 gwei |
 | 6            |          30M |        12.5% |       160.2 gwei |
 | 7            |          30M |        12.5% |       180.2 gwei |
-| 8            |          30M |        12.5% |       202.8 gwei |
+| 8            |          30M |        12.5% |       202.7 gwei |
 
 Relative to the pre-London gas auction market, this transaction-fee-mechanism change causes fee prediction to be more reliable. Following the table above - to create a transaction on block number 9, a wallet will let the user know with certainty that the **maximum base fee** to be added to the next block is `current base fee * 112.5%` or `202.8 gwei * 112.5% = 228.1 gwei`.
 
@@ -92,7 +92,7 @@ It's also important to note it is unlikely we will see extended spikes of full b
 | ...          |          ... |        12.5% |              ... |
 | 50           |          30M |        12.5% |     28531.3 gwei |
 | ...          |          ... |        12.5% |              ... |
-| 100          |          30M |        12.5% | 10302608.57 gwei |
+| 100          |          30M |        12.5% |  10302608.6 gwei |
 
 ### Priority Fee (Tips) {#priority-fee}
 
@@ -104,7 +104,7 @@ With the new base fee getting burned, the London Upgrade introduced a priority f
 
 To execute a transaction on the network users are able to specify a maximum limit they are willing to pay for their transaction to be executed. This optional parameter is known as the `maxFeePerGas`. In order for a transaction to be executed the max fee must exceed the sum of the base fee and the tip. The transaction sender is refunded the difference between the max fee and the sum of the base fee and tip.
 
-### Calcuating fees {#calculating-fees}
+### Calculating fees {#calculating-fees}
 
 One of the main benefits achieved with the London upgrade is improving the user's experience when setting transaction fees. For wallets that support the upgrade, instead of explicitly stating how much you are willing to pay to get your transaction through, wallet providers will automatically set a recommended transaction fee (base fee + recommended priority fee) to reduce the amount of complexity burdened onto their users.
 
