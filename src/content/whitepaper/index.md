@@ -524,12 +524,12 @@ principles:
     make a small protocol modification in one place, the application
     stack would continue to function without any further modification.
     Innovations such as Ethash (see the [Yellow Paper Appendix](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.J)
-    or [wiki article](https://github.com/ethereum/wiki/wiki/Ethash)),
+    or [wiki article](https://eth.wiki/en/concepts/ethash/ethash)),
     modified Patricia trees ([Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.D),
     [wiki](https://eth.wiki/en/fundamentals/patricia-tree))
     and RLP
     ([YP](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.B),
-    [wiki](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP))
+    [wiki](https://eth.wiki/en/fundamentals/rlp))
     should be, and are, implemented as separate, feature-complete
     libraries. This is so that even though they are used in Ethereum,
     even if Ethereum does not require certain features, such features
