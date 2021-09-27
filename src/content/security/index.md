@@ -105,7 +105,7 @@ Browser extensions like Chrome extensions or Add-ons for Firefox can augment use
 
 <Divider />
 
-## Crypto Security 101 {#crypto-security}
+## Crypto security 101 {#crypto-security}
 
 ### Level up your knowledge {#level-up-your-knowledge}
 
@@ -116,7 +116,7 @@ One of the biggest reasons people get scammed in crypto generally is a lack of u
 <DocLink to="/eth/" title="What is ether?" />
 <Divider />
 
-## Wallet Security {#wallet-security}
+## Wallet security {#wallet-security}
 
 ### Don't give out your private keys {#protect-private-keys}
 
@@ -160,9 +160,11 @@ Many Ethereum wallets offer limits protection to safeguard against accounts bein
 
 ## Common scams {#common-scams}
 
-Todo:
+Scammers are always looking for ways to take your funds off you. It is impossible to stop scammers completely, but we can make them less effective by being aware of the most techniques used. There are many variations of these scams, but they generally follow the same high-level patterns. If nothing else, remember:
 
-No one is going to give you free or discounted ETH!
+- always be skeptical
+- one is going to give you free or discounted ETH!
+- no one needs access to your private keys or personal information
 
 ### Giveaway scam {#giveaway}
 
@@ -253,7 +255,7 @@ These fraudulent brokers find their targets by using fake accounts on YouTube to
 - [Common Scams](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [Bitcoin.org Scams](https://bitcoin.org/en/scams)
 
-## Ideas scratchpad
+<!-- ## Ideas scratchpad
 
 A couple good suggestions from there that perhaps we should add:
 
@@ -265,4 +267,4 @@ A couple good suggestions from there that perhaps we should add:
 For scams
 
 - Add details about Youtube hacks
-- Add rugpulls
+- Add rugpulls -->
