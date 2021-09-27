@@ -242,11 +242,6 @@ Deși nu există nici un substitut pentru înțelegerea elementelor de bază ale
 - [mythril](https://github.com/ConsenSys/mythril)
 - [Documentație](https://mythril-classic.readthedocs.io/en/master/about.html)
 
-**SmartContract.Codes -** **_motor de căutare pentru coduri sursă Solidity verificate._**
-
-- [smartcontract.codes (alpha)](https://smartcontract.codes/)
-- [Documentație](https://github.com/playproject-io/smartcontract.codes)
-
 **Manticore -** **_o interfață tip linie de comandă care utilizează un instrument de execuție simbolică pe contracte inteligente și binare._**
 
 - [GitHub](https://github.com/trailofbits/manticore)

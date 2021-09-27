@@ -242,11 +242,6 @@ Bien qu'il n'y ait pas de substitut à la compréhension des bases de sécurité
 - [mythril](https://github.com/ConsenSys/mythril)
 - [Documentation](https://mythril-classic.readthedocs.io/en/master/about.html)
 
-**SmartContract.Codes -** **_Moteur de recherche pour les codes sources Solidity vérifiés_**
-
-- [smartcontract.codes (alpha)](https://smartcontract.codes/)
-- [Documentation](https://github.com/playproject-io/smartcontract.codes)
-
 **Manticore -** **_Interface en ligne de commande qui utilise un outil d'exécution symbolique sur les contrats intelligents et les fichiers binaires_**
 
 - [GitHub](https://github.com/trailofbits/manticore)

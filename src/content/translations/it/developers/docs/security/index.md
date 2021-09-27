@@ -242,11 +242,6 @@ Niente può sostituire la conoscenza dei principi di base della sicurezza di Eth
 - [mythril](https://github.com/ConsenSys/mythril)
 - [Documentazione](https://mythril-classic.readthedocs.io/en/master/about.html)
 
-**SmartContract.Codes -** **_Motore di ricerca per codice sorgente Solidity verificato_**
-
-- [smartcontract.codes (alpha)](https://smartcontract.codes/)
-- [Documentazione](https://github.com/playproject-io/smartcontract.codes)
-
 **Manticore -** **_Interfaccia da riga di comando che usa uno strumento di esecuzione simbolica su Smart Contract e file binari_**
 
 - [GitHub](https://github.com/trailofbits/manticore)

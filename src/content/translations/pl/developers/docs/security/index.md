@@ -242,11 +242,6 @@ Chociaż nic nie zastąpi zrozumienia podstaw bezpieczeństwa Ethereum i zaanga�
 - [mithril](https://github.com/ConsenSys/mythril)
 - [Dokumentacja](https://mythril-classic.readthedocs.io/en/master/about.html)
 
-**SmartContract.Codes —** **_wyszukiwarka sprawdzonych kodów źródłowych Solidity._**
-
-- [smartcontract.codes (alfa)](https://smartcontract.codes/)
-- [Dokumentacja](https://github.com/playproject-io/smartcontract.codes)
-
 **Manticore —** **_interfejs wiersza poleceń, który wykorzystuje symboliczne narzędzie do wykonywania inteligentnych kontraktów i plików binarnych._**
 
 - [GitHub](https://github.com/trailofbits/manticore)
