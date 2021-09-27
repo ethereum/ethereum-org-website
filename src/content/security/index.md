@@ -44,7 +44,7 @@ A strong password doesn't provide as much protection if the password is revealed
 
 <InfoBanner emoji=":bulb:">
   <div>
-    Using a password manager takes care of creating strong, unique passwords and remembering them! We <strong>strongly</strong> recommend using one.
+    Using a password manager takes care of creating strong, unique passwords and remembering them! We <strong>strongly</strong> recommend using one, and most of them are free!
   </div>
 </InfoBanner>
 
@@ -61,13 +61,13 @@ Remembering strong, unique passwords for every account you have isn't ideal. A p
 
 ### Use Two-Factor Authentication {#two-factor-authentication}
 
-To prove you are you there are different unique proofs that can be used for authentication. These are known as factors and the three main factors are:
+To prove you are actually you, there are different unique proofs that can be used for authentication. These are known as **factors** and the three main factors are:
 
-- Something you know (your password)
-- Something you are (such as a fingerprint or iris scanner)
-- Something you own (a security key)
+- Something you know (such as a password or security question)
+- Something you are (such as a fingerprint or iris/facial scanner)
+- Something you own (a security key or authentication app on your phone)
 
-Using **Two-Factor Authentication (2FA)** provides an additional *security factor* for your online accounts so that knowing your password alone (something you know) is not enough to access an account. Most commonly, the second factor is a randomised 6-digit code (something you own) that you can access through an authenticator app such as Google Authenticator or Authy. These work as a "something you own" factor because the seed is stored on your device.
+Using **Two-Factor Authentication (2FA)** provides an additional *security factor* for your online accounts so that knowing your password alone (something you know) is not enough to access an account. Most commonly, the second factor is a randomized 6-digit code, known as a **time-based one-time password (TOTP)**, that you can access through an authenticator app such as Google Authenticator or Authy. These work as a "something you own" factor because the seed that generates the timed code is stored on your device.
 
 <InfoBanner emoji=":lock:">
   <div>
@@ -85,7 +85,7 @@ Using **Two-Factor Authentication (2FA)** provides an additional *security fa
 
 #### Security keys {#security-keys}
 
-For those who want to take the next step in 2FA, consider using a security key. Security keys are physical hardware authentication devices that work in the same way as authenticator apps. Using a security key is the most secure way to 2FA.
+For those who want to take the next step in 2FA, consider using a security key. Security keys are physical hardware authentication devices that work in the same way as authenticator apps. Using a security key is the most secure way to 2FA. Many of these keys utilize the FIDO Universal 2nd Factor (U2F) standard. [Learn more about FIDO U2F](https://www.yubico.com/authentication-standards/fido-u2f/).
 
 Watch more on the 2FA:
 
@@ -107,7 +107,7 @@ Browser extensions like Chrome extensions or Add-ons for Firefox can augment use
 
 ## Crypto Security 101 {#crypto-security}
 
-### Upgrade your knowledge {#upgrade-your-knowledge}
+### Level up your knowledge {#level-up-your-knowledge}
 
 One of the biggest reasons people get scammed in crypto generally is a lack of understanding. For example, if you don't understand that the Ethereum network is decentralized and owned by no one, then it's easy to fall prey to someone pretending to be a customer service agent that promises to return your lost ETH in exchange for your private keys. Educating yourself on how Ethereum works is a worthwhile investment.
 
@@ -143,7 +143,7 @@ Keeping private keys offline massively reduces the risk of being hacked, even if
 
 ### Double check transactions before sending {#double-check-transactions}
 
-Accidently sending crypto to the wrong wallet address is a common mistake. **A transaction sent on Ethereum is irrevesible.** Unless you know the address owner and can convince them to send you your fund back, there will be no way for you to retrieve your funds.
+Accidentally sending crypto to the wrong wallet address is a common mistake. **A transaction sent on Ethereum is irreversible.** Unless you know the address owner and can convince them to send you your fund back, there will be no way for you to retrieve your funds.
 
 Always make sure the address you are sending to exactly matches the desired recipient's address before sending a transaction.
 It is also recommended when interacting with a smart contract to read the transaction message before signing.
@@ -172,7 +172,7 @@ These scams usually stipulate a limited time of opportunity to claim the giveawa
 
 #### Social media hacks {#social-media-hacks}
 
-A high-profile version of this occurred in July 2020, when the Twitter accounts of prominent celebrities and organisations got hacked. The hacker simultaneously posted a Bitcoin giveaway on the hacked accounts. Although the deceptive tweets were quickly noticed and deleted, the hackers still managed to get away with 11 bitcoin (or $500,000 as of September 2021)
+A high-profile version of this occurred in July 2020, when the Twitter accounts of prominent celebrities and organizations got hacked. The hacker simultaneously posted a Bitcoin giveaway on the hacked accounts. Although the deceptive tweets were quickly noticed and deleted, the hackers still managed to get away with 11 bitcoin (or $500,000 as of September 2021)
 
 ![A scam on Twitter](./appleTwitterScam.png)
 
