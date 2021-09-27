@@ -84,6 +84,17 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Advanced analytics
     - Automated updates
     - Technical support
+- [**InfStones**](https://infstones.com/)
+  - Features
+    - Free tier option
+    - Scale as you go
+    - Analytics
+    - Dashboard
+    - Unique API endpoints
+    - Dedicated full nodes
+    - Fast sync time for dedicated deployments
+    - Direct 24/7 support
+    - Access to 50+ blockchain nodes
 - [**Infura**](https://infura.io/)
   - [Docs](https://infura.io/docs)
   - Features
