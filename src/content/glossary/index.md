@@ -684,7 +684,7 @@ A high-level programming language with Python-like syntax. Intended to get close
 
 ## W {#section-w}
 
-### wallet {#wallets}
+### wallet {#wallet}
 
 Software that holds [private keys](#private-key). Used to access and control Ethereum [accounts](#account) and interact with [smart contracts](#smart-contract). Keys need not be stored in a wallet, and can instead be retrieved from offline storage (i.e. a memory card or paper) for improved security. Despite the name, wallets never store the actual coins or tokens.
 
