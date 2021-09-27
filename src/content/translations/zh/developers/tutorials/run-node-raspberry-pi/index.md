@@ -14,8 +14,6 @@ source: r/ethereum
 sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_raspberry_pi_4_images_release/
 ---
 
-<!--Content below provided by @EthereumOnArm-->
-
 **TL;DR**：刷写您的 Raspberry PI 4，插入以太网电缆，连接 SSD 磁盘并打开设备电源，将 Raspberry PI 4 变为完整的以太坊 1.0 节点或以太坊 2.0 节点（信标链/验证器）
 
 [了解以太坊 2.0 (Eth2)](/en/eth2/)
@@ -90,9 +88,13 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 ## 映像下载和安装 {#image-download-and-installation}
 
-### 1. 下载 Eth 1.0 或 Eth 2.0 映像 {#1-download-eth-10-or-eth-20-images}<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">下载 Eth 1.0 映像</ButtonLink>
+### 1. 下载 Eth 1.0 或 Eth 2.0 映像 {#1-download-eth-10-or-eth-20-images}
 
-ssha256 7fa9370d13857dd6abcc8fde637c7a9a7e3a66b307d5c28b0c0d29a09c73c55c<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">下载 Eth2 映像</ButtonLink>
+<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">下载 Eth 1.0 映像</ButtonLink>
+
+ssha256 7fa9370d13857dd6abcc8fde637c7a9a7e3a66b307d5c28b0c0d29a09c73c55c
+
+<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">下载 Eth2 映像</ButtonLink>
 
 sha256 74c0c15b708720e5ae5cac324f1afded6316537fb17166109326755232cd316e
 
