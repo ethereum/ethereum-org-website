@@ -129,6 +129,16 @@ To achieve this, our community of volunteer translators is working on translatin
 - To support the sharing of knowledge across languages with the aim of creating a better informed and educated Ethereum community.
 - To increase Ethereum's inclusivity and accessibility by providing translated content and removing the language barriers that prevent non-English speakers from joining the ecosystem.
 
+**Ethereum Foundation blog**
+
+To keep in touch with the latest updates about the Translation Program, you can follow the [Ethereum Foundation blog](https://blog.ethereum.org/).
+
+Our older posts are available below:
+
+- [https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
+- [https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
+- [https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
+
 ## Ethereum Staking Launchpad Translations {#staking-launchpad}
 
 Our translation community is also working on the [Staking Launchpad](https://launchpad.ethereum.org/en/). This allows anyone to set up an Ethereum validator and help secure the Ethereum network. The Launchpad is currently live in 17 languages.
