@@ -1144,6 +1144,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://www.andrewgallagher-portfolio.com/"><img src="https://avatars.githubusercontent.com/u/43940590?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andrew Gallagher</b></sub></a><br /><a href="#content-andyGallagher" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/phatngluu"><img src="https://avatars.githubusercontent.com/u/44693107?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Phat Nguyen Luu</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=phatngluu" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Andrew-Sofos"><img src="https://avatars.githubusercontent.com/u/56540744?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andreas Sofos</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Andrew-Sofos" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/fselmo"><img src="https://avatars.githubusercontent.com/u/3532824?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Felipe Selmo</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=fselmo" title="Documentation">📖</a></td>
   </tr>
 </table>
 
