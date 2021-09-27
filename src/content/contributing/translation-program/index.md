@@ -135,9 +135,9 @@ To keep in touch with the latest updates about the Translation Program, you can 
 
 Our older posts are available below:
 
-- [https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
-- [https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
-- [https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
+- [Translation Program announcement](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
+- [July 2020 post](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
+- [December 2020 post](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
 
 ## Ethereum Staking Launchpad Translations {#staking-launchpad}
 
