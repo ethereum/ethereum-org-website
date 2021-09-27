@@ -106,6 +106,29 @@ Thank you for your participation in the ethereum.org Translation Program!
 
 - [Content versions](/contributing/translation-program/content-versions/) _– Which pages are included in each content version of ethereum.org_
 
+## Translation Program mission and vision {#mission-and-vision}
+
+The Ethereum community is truly global and all-inclusive. However, as over 3/4 of the world’s population do not speak English, we want to provide them with content in their native language, in order to be the portal to Ethereum for the global community.
+
+The aim of the ethereum.org Translation Program is to make Ethereum accessible to everyone, regardless of their nationality and language.
+
+To achieve this, our community of volunteer translators is working on translating the website and other Ethereum content into as many languages as possible.
+
+**Our mission**
+
+- By providing translated versions of the website, visitors from all over the world can learn about Ethereum in their native language.
+    - This helps to bridge language gaps and provides visitors with more inclusive and more generally understandable content.
+    - In addition, this facilitates the onboarding of more members to the global Ethereum community.
+- Translated content about Ethereum allows for easier and more inclusive sharing of information and knowledge.
+- By opening up the Translation Program to voluntary contributions, community members from all over the world have a chance to contribute to Ethereum and make their mark on the ecosystem.
+- The Translation Program also allows us to identify and connect with numerous supporters and contributors, looking to get involved with Ethereum.
+
+**Our vision**
+
+- To translate essential content for members of the Ethereum community from as many countries and parts of the world as possible.
+- To support the sharing of knowledge across languages with the aim of creating a better informed and educated Ethereum community.
+- To increase Ethereum's inclusivity and accessibility by providing translated content and removing the language barriers that prevent non-English speakers from joining the ecosystem.
+
 ## Ethereum Staking Launchpad Translations {#staking-launchpad}
 
 Our translation community is also working on the [Staking Launchpad](https://launchpad.ethereum.org/en/). This allows anyone to set up an Ethereum validator and help secure the Ethereum network. The Launchpad is currently live in 17 languages.
