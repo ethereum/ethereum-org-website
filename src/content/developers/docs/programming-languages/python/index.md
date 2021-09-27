@@ -21,7 +21,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Write your First Smart Contract](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Learn How to Compile and Deploy Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Beginner articles {#beginner-articles}
+## Beginner Articles {#beginner-articles}
 
 - [A (Python) Developer's Guide to Ethereum](https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/)
 - [An Introduction to Smart Contracts with Vyper](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
@@ -67,19 +67,18 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 Looking for more resources? Check out [ethereum.org/developers](/developers/).
 
-## Projects using Python tooling
+## Projects Using Python Tooling
 
-Here are some Ethereum based projects that use tools mentioned on this page. You can look the open source repositories for example code and best practices.
+The following Ethereum-based projects use tools mentioned on this page. The related open-source repositories serve as a good reference for example code and best practices.
 
 - [Yearn Finance](https://yearn.finance/) and [Yearn Vault Contracts repository](https://github.com/yearn/yearn-vaults)
 - [Curve](https://curve.fi/) and [Curve smart contracts repository](https://github.com/curvefi/curve-contract)
 - [BadgerDAO](https://badger.com/) and [smart contracts using Brownie toolchain](https://github.com/Badger-Finance/badger-system)
 
 ## Python Community Contributors {#python-community-contributors}
-
-- [Ethereum Python Community Discord](https://discord.gg/9zk7snTfWe)
+The [Ethereum Python Community Discord](https://discord.gg/9zk7snTfWe) is host to a rapidly growing community and is the dedicated 
+resource for discussions on any of the above projects and related topics.
 
 ## Other Aggregated Lists {#other-aggregated-lists}
 
 The Vyper wiki has an [incredible list of resources for Vyper](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources)  
-For a compiled source of Python related tools, check out [py-eth.com](http://py-eth.com/).
