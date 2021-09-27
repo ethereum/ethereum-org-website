@@ -241,11 +241,6 @@ contract NoLongerAVictim {
 - [mythril](https://github.com/ConsenSys/mythril)
 - [相关文档](https://mythril-classic.readthedocs.io/en/master/about.html)
 
-**SmartContract.codes -** **_用于搜索经过验证的 Solidity 源代码的搜索引擎。_**
-
-- [smartcontract.codes (alpha)](https://smartcontract.codes/)
-- [相关文档](https://github.com/ethereum-play/smartcontract.codes/blob/master/README.md)
-
 **Manticore -** **_在智能合约和二进制文件上使用符号执行工具的命令行界面。_**
 
 - [GitHub](https://github.com/trailofbits/manticore)
