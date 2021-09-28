@@ -10,13 +10,43 @@ sidebarDepth: 2
 
 This is a list of key Ethereum-related projects and resources which have been deprecated or are no longer maintained. It is important to highlight deprecated work so that users can find viable alternatives and also to prevent malicious versions from being distributed.
 
-## Section
+## Communications {#communications}
 
-### Subsection Mist and Meteor Dapp Wallet {#mist-and-meteor-dapp-wallet}
+### Gitter Channels {#gitter-channels}
 
-Date Deprecated: March 27, 2019
+## Dapps and Services {#dapps-and-services}
+
+### Cover Protocol {#cover-protocol}
+
+### The DAO {#the-dao}
+
+This is a smart contract which was exploited, leading to a community-organized hard fork in order to return the funds to the stakeholders. The UX front-end is discontinued, and there is a smart contract for recovering funds.
+
+### SparkPool {#sparkpool}
+
+This was an Ethereum-centered mining pool based in the PRC. It was disbanded as a result of stricter legal regulations instituted in Fall 2021.
+
+## Documentation and Information Sources {#documentation-and-information-sources}
+
+### eth.wiki {#eth-wiki}
+
+### forum.ethereum.org {#forum-ethereum-org}
+
+## Software {#software}
+
+This section is for software for the desktop, command line, or server which has been deprecated. The main types are wallets, integrated development environments, languages, and Ethereum clients. Definitely be careful to not install deprecated software unless you are certain it is from the original source, e.g. a repo hosted under https://github.com/ethereum.
+
+### Grid {#grid}
+
+### Meteor Dapp Wallet {#meteor-dapp-wallet}
+
+### Mist {#mist}
+
+### Mix {#mix}
 
 ### Parity {#parity}
+
+### Serpent {#serpent}
 
 ### Trinity {#trinity}
 
