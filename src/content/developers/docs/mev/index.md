@@ -125,3 +125,4 @@ As DeFi grows and increases in popularity, MEV may soon significantly outweigh t
 - [Ethereum is a Dark Forest](https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest/)
 - [Escaping the Dark Forest](https://samczsun.com/escaping-the-dark-forest/)
 - [Flashbots: Frontrunning the MEV Crisis](https://medium.com/flashbots/frontrunning-the-mev-crisis-40629a613752)
+- [@bertcmiller's MEV Threads](https://twitter.com/bertcmiller/status/1402665992422047747)
