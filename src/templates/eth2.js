@@ -384,16 +384,6 @@ const Eth2Page = ({ data, data: { mdx } }) => {
 
   return (
     <Container>
-      <StyledBannerNotification shouldShow>
-        <StyledEmoji text=":megaphone:" />
-        <div>
-          <b>Latest:</b> Eth2 researchers are working on ways to accelerate the
-          merge. It will probably happen earlier than expected. More soon.{" "}
-          <Link to="https://blog.ethereum.org/category/research-and-development/">
-            Follow updates
-          </Link>
-        </div>
-      </StyledBannerNotification>
       <HeroContainer>
         <TitleCard>
           <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
