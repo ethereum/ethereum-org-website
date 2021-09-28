@@ -10,13 +10,13 @@ sidebarDepth: 2
 
 This is a list of key Ethereum-related projects and resources which have been deprecated or are no longer maintained. It is important to highlight deprecated work so that users can find viable alternatives and also to prevent malicious versions from being distributed.
 
-## Mist and Meteor Dapp Wallet
+## Mist and Meteor Dapp Wallet {#mist-and-meteor-dapp-wallet}
 
 Date Deprecated: March 27, 2019
 
-## Parity 
+## Parity {#parity}
 
-## Trinity
+## Trinity {#trinity}
 
 ## How Ethereum works {#how-ethereum-works}
 
