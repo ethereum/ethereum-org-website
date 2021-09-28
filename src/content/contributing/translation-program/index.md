@@ -115,14 +115,14 @@ The ethereum.org Translation Program aims to make Ethereum accessible to everyon
 **Our mission**
 
 - Provide translated versions of the website to empower visitors worldwide to learn about Ethereum in their native language
-- Facilitate the onboarding of those who stand to benefit the most from Ethereum
+- Facilitate the onboarding of more members to the global Ethereum community
 - Allow for more accessible and more inclusive sharing of Ethereum information and knowledge
 - Empower community members to contribute translations to Ethereum and make their mark on the ecosystem
 - Identify, connect with, and provide guidance to passionate contributors looking to get involved in the ecosystem
 
 **Our vision**
 
-- Translate essential content for members of the Ethereum community from as many countries and parts of the world as possible.
+- Translate essential content for members of the Ethereum community from as many countries and parts of the world as possible
 - Support knowledge sharing across languages to create a better informed and educated Ethereum community
 - Increase Ethereum's inclusivity and accessibility by removing the language barriers preventing non-English speakers from joining the ecosystem
 
