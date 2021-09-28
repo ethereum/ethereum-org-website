@@ -1149,6 +1149,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://capitalgram.com"><img src="https://avatars.githubusercontent.com/u/49922?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mikko Ohtamaa</b></sub></a><br /><a href="#ideas-miohtama" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="http://iamkabilan.github.io"><img src="https://avatars.githubusercontent.com/u/38951107?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kabilan</b></sub></a><br /><a href="#ideas-iamkabilan" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://colinsteidtmann.com/"><img src="https://avatars.githubusercontent.com/u/34821973?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Colin Steidtmann</b></sub></a><br /><a href="#content-colinsteidtmann" title="Content">🖋</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
