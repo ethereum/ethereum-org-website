@@ -29,7 +29,7 @@ assets such as domain names ([Namecoin](http://namecoin.org)), as well
 as more complex applications involving having digital assets being
 directly controlled by a piece of code implementing arbitrary rules
 ([smart contracts](http://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/idea.html))
-or even blockchain-based [decentralized autonomous organizations](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/)
+or even blockchain-based [decentralized autonomous organizations](https://bitcoinmagazine.com/technical/bootstrapping-a-decentralized-autonomous-corporation-part-i-1379644274)
 (DAOs). What Ethereum intends to provide is a blockchain with a built-in
 fully fledged Turing-complete programming language that can be used to
 create "contracts" that can be used to encode arbitrary state transition
