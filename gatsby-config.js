@@ -176,6 +176,7 @@ module.exports = {
       resolve: `gatsby-plugin-react-helmet-canonical-urls`,
       options: {
         siteUrl,
+        noQueryString: true,
       },
     },
     // Needed for `gatsby-image`
