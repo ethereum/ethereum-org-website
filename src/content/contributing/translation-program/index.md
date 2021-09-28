@@ -108,33 +108,31 @@ Thank you for your participation in the ethereum.org Translation Program!
 
 ## Mission and vision {#mission-and-vision}
 
-The Ethereum community strives to be truly global and all-inclusive. Given that over 3/4 of the world’s population do not speak English, we want to provide them with content in their native language, in order for ethereum.org to be the portal to Ethereum for the global community.
+The Ethereum community aims to be global and inclusive, yet much of its content only caters to English speakers, leaving out the world's 6 billion non-English speakers. For ethereum.org to act as the portal into Ethereum for the worldwide community, we believe providing non-English speakers with Ethereum content in their native languages is essential.
 
-The aim of the ethereum.org Translation Program is to make Ethereum accessible to everyone, regardless of their nationality and language, by translating the website and other Ethereum content into as many languages as possible.
+The ethereum.org Translation Program aims to make Ethereum accessible to everyone by translating ethereum.org and other Ethereum content into as many languages as possible.
 
 **Our mission**
 
-- Provide translated versions of the website to empower visitors from all over the world to learn about Ethereum in their native language.
+- Provide translated versions of the website to empower visitors worldwide to learn about Ethereum in their native language
 - Facilitate the onboarding of those who stand to benefit the most from Ethereum
-- Allow for easier and more inclusive sharing of Ethereum information and knowledge.
-- Open up the Translation Program to voluntary contributions to empower community members from all over the world to have a chance to contribute to Ethereum and make their mark on the ecosystem.
-- Identify and connect with supporters and contributors looking to get involved with Ethereum and help provide guidance.
+- Allow for more accessible and more inclusive sharing of Ethereum information and knowledge
+- Empower community members to contribute translations to Ethereum and make their mark on the ecosystem
+- Identify, connect with, and provide guidance to passionate contributors looking to get involved in the ecosystem
 
 **Our vision**
 
 - Translate essential content for members of the Ethereum community from as many countries and parts of the world as possible.
-- Support knowledge sharing across languages with the aim of creating a better informed and educated Ethereum community.
-- Increase Ethereum's inclusivity and accessibility by providing translated content and removing the language barriers that prevent non-English speakers from joining the ecosystem.
+- Support knowledge sharing across languages to create a better informed and educated Ethereum community
+- Increase Ethereum's inclusivity and accessibility by removing the language barriers preventing non-English speakers from joining the ecosystem
 
 **Latest updates**
 
-To keep in touch with the latest Translation Program progress, you can follow the [Ethereum Foundation blog](https://blog.ethereum.org/).
+To keep up-to-date with the latest Translation Program progress, you can follow the [Ethereum Foundation blog](https://blog.ethereum.org/):
 
-Our most recent posts are available below:
-
-- [August 2019 Translation Program launch](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
-- [July 2020 milestones update](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
 - [December 2020 milestones update](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
+- [July 2020 milestones update](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
+- [August 2019 Translation Program launch](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
 
 ## Ethereum Staking Launchpad Translations {#staking-launchpad}
 
