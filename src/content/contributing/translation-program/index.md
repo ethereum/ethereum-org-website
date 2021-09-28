@@ -110,9 +110,7 @@ Thank you for your participation in the ethereum.org Translation Program!
 
 The Ethereum community strives to be truly global and all-inclusive. Given that over 3/4 of the world’s population do not speak English, we want to provide them with content in their native language, in order for ethereum.org to be the portal to Ethereum for the global community.
 
-The aim of the ethereum.org Translation Program is to make Ethereum accessible to everyone, regardless of their nationality and language.
-
-To achieve this, our community of volunteer translators is working on translating the website and other Ethereum content into as many languages as possible.
+The aim of the ethereum.org Translation Program is to make Ethereum accessible to everyone, regardless of their nationality and language, by translating the website and other Ethereum content into as many languages as possible.
 
 **Our mission**
 
