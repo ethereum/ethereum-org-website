@@ -106,7 +106,7 @@ Thank you for your participation in the ethereum.org Translation Program!
 
 - [Content versions](/contributing/translation-program/content-versions/) _– Which pages are included in each content version of ethereum.org_
 
-## Ethereum Staking Launchpad Translations {#staking-launchpad}
+## Ethereum Staking Launchpad translations {#staking-launchpad}
 
 Our translation community is also working on the [Staking Launchpad](https://launchpad.ethereum.org/en/). This allows anyone to set up an Ethereum validator and help secure the Ethereum network. The Launchpad is currently live in 17 languages.
 
