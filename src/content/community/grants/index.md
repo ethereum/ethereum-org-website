@@ -26,7 +26,7 @@ These programs support the broad Ethereum ecosystem by offering grants to a wide
 
 These projects have created their own grants for projects aimed at developing and experimenting with their own technology.
 
-- [TheGraph](https://airtable.com/shreX09LazIhsg0bU) – _[The Graph](https://thegraph.com/) ecosystem_
+- [TheGraph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) ecosystem_
 - [Uniswap](https://airtable.com/shrEXXxXB1humz7VS) – _[Uniswap](https://uniswap.org/) community_
 - [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) – _[Balancer](https://balancer.fi/) Ecosystem Fund_
 
