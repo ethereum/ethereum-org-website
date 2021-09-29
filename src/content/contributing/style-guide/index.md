@@ -224,6 +224,28 @@ The London Upgrade is live <Emoji text="❤️" size={1} />
 The London Upgrade is live ❤️
 ```
 
+### Header casing {#header-casing}
+
+This site uses **sentence casing** for header names as a convention. Only the first word and proper nouns are capitalized. This applies to all markdown files on lines that begin with hashes (#).
+
+```md
+<!-- Good -->
+
+## Minting your NFT
+
+### Setting up your wallet
+
+### Get enough ether
+
+<!-- Bad -->
+
+## Minting Your NFT
+
+### Setting Up Your Wallet
+
+### Getting Enough Ether
+```
+
 ## Anything else? {#anything-else}
 
 Like all content on ethereum.org, this style guide is an open-source work-in-progress with room for improvement. If there is anything you think should be added to improve this document please [suggest an edit on GitHub](https://github.com/ethereum/ethereum-org-website/blob/dev/src/content/contributing/style-guide/index.md).
