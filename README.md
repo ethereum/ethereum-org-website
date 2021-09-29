@@ -1151,6 +1151,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://colinsteidtmann.com/"><img src="https://avatars.githubusercontent.com/u/34821973?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Colin Steidtmann</b></sub></a><br /><a href="#content-colinsteidtmann" title="Content">🖋</a></td>
+    <td align="center"><a href="https://snikhill.tech"><img src="https://avatars.githubusercontent.com/u/51415616?v=4?s=100" width="100px;" alt=""/><br /><sub><b>SNikhill</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=SNikhill" title="Code">💻</a></td>
   </tr>
 </table>
 
