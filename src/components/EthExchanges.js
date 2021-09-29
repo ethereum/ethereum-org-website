@@ -190,6 +190,7 @@ const EthExchanges = () => {
           binance
           bitbuy
           bittrex
+          bitvavo
           coinbase
           coinmama
           coinspot
@@ -225,6 +226,9 @@ const EthExchanges = () => {
         ...cardListImage
       }
       bittrex: file(relativePath: { eq: "exchanges/bittrex.png" }) {
+        ...cardListImage
+      }
+      bitvavo: file(relativePath: { eq: "exchanges/bitvavo.png" }) {
         ...cardListImage
       }
       coinbase: file(relativePath: { eq: "exchanges/coinbase.png" }) {
@@ -304,6 +308,12 @@ const EthExchanges = () => {
       url: "https://global.bittrex.com/",
       image: data.bittrex,
       usaExceptions: ["CT", "HI", "NY", "NH", "TX", "VT", "VA"],
+    },
+    bitvavo: {
+      name: "Bitvavo",
+      url: "https://bitvavo.com/en/ethereum",
+      image: data.bitvavo,
+      usaExceptions: [],
     },
     coinbase: {
       name: "Coinbase",
