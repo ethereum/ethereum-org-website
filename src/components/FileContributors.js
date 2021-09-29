@@ -48,7 +48,6 @@ const Container = styled.div`
 `
 
 const SkeletonContainer = styled(Container)`
-  justify-content: flex-start;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -76,11 +75,7 @@ const LeftContent = styled.div`
 
 const SkeletonLeftContent = styled(LeftContent)`
   flex: 1;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-right: 2rem;
-  }
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-right: 1rem;
     flex: none;
   }
 `
@@ -114,8 +109,8 @@ const SkeletonInfo = styled(Info)`
 
 const ButtonContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  align-content: center;
+  align-items: flex-end;
+  justify-content: space-between;
 `
 
 const SkeletonButtonContainer = styled(ButtonContainer)`
@@ -125,10 +120,11 @@ const SkeletonButtonContainer = styled(ButtonContainer)`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-top: 1rem;
     justify-content: center;
-    height: 40px;
+    width: calc(50% - 2rem);
   }
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
+    height: 40px;
+    width: 50%;
     margin-top: 1rem;
   }
 `
@@ -142,9 +138,10 @@ const ContributorsButton = styled(ButtonSecondary)`
     border: 0px;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 1rem;
+    margin-right: 0.5rem;
     margin-bottom: 0.5rem;
     justify-content: center;
+    width: 50%;
   }
 
   ${({ loading }) =>
@@ -157,6 +154,7 @@ const ContributorsButton = styled(ButtonSecondary)`
 const GithubButton = styled(ButtonLink)`
   margin-top: 0;
   height: 40px;
+  width: 50%;
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
     display: none;
   }
