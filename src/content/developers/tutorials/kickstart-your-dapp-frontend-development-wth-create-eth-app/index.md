@@ -34,7 +34,7 @@ cd my-eth-app
 yarn react-app:start
 ```
 
-It is using [create-react-app](https://github.com/facebook/create-react-app) under the hood. To see your app, open `http://localhost:3000/`. When you’re ready to deploy to production, create a minified bundle with yarn build. One easy way to host this would be [Netlify](https://www.netlify.com/). You can create a Github repo, add it to Netlify, setup the build command and you are finished! Your app will be hosted and usable for everyone. And all of it free of charge.
+It is using [create-react-app](https://github.com/facebook/create-react-app) under the hood. To see your app, open `http://localhost:3000/`. When you’re ready to deploy to production, create a minified bundle with yarn build. One easy way to host this would be [Netlify](https://www.netlify.com/). You can create a GitHub repo, add it to Netlify, setup the build command and you are finished! Your app will be hosted and usable for everyone. And all of it free of charge.
 
 ## Features {#features}
 

@@ -77,9 +77,9 @@ Még több anyagot keresel? Tekintsd meg az [ethereum.org/developers](/en/develo
 
 ## .NET közösségi hozzájárulók {#dot-net-community-contributors}
 
-Mi a Nethereumon főleg a [Gitteren](https://gitter.im/Nethereum/Nethereum) lógunk, ahol bárki nyugodtan kérdezhet/válaszolhat, segítséget kaphat vagy csak pihenhet. Nyugodtan csinálj egy PR-et vagy nyiss egy ticketet a [Nethereum Github repository-ban](https://github.com/Nethereum), vagy csak böngéssz a rengeteg mellék/minta projektjeink között. Megtalálsz minket [Discord-on](https://discord.gg/jQPrR58FxX) is!
+Mi a Nethereumon főleg a [Gitteren](https://gitter.im/Nethereum/Nethereum) lógunk, ahol bárki nyugodtan kérdezhet/válaszolhat, segítséget kaphat vagy csak pihenhet. Nyugodtan csinálj egy PR-et vagy nyiss egy ticketet a [Nethereum GitHub repository-ban](https://github.com/Nethereum), vagy csak böngéssz a rengeteg mellék/minta projektjeink között. Megtalálsz minket [Discord-on](https://discord.gg/jQPrR58FxX) is!
 
-Mi a Nethermind-nál a [Gittert](https://gitter.im/nethermindeth/nethermind) használjuk kapcsolattartásra. PR-ekért vagy ticketekért, tekintsd meg a [Nethermind Github repository-t](https://github.com/NethermindEth/nethermind).
+Mi a Nethermind-nál a [Gittert](https://gitter.im/nethermindeth/nethermind) használjuk kapcsolattartásra. PR-ekért vagy ticketekért, tekintsd meg a [Nethermind GitHub repository-t](https://github.com/NethermindEth/nethermind).
 
 ## Egyéb összesített lista {#other-aggregated-lists}
 

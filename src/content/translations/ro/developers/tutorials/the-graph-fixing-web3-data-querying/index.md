@@ -134,7 +134,7 @@ Din motive de confort, probabil ai vrea să utilizezi un instrument șablon, cum
 ```yaml
 specVersion: 0.0.1
 description: Plasarea pariurilor pe Ethereum
-repository: - Github link -
+repository: - GitHub link -
 schema:
   file: ./schema.graphql
 dataSources:

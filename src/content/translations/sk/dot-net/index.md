@@ -80,9 +80,9 @@ Hľadáte ďalšie zdroje informácií? Pozrite si [ethereum.org/sk/developers](
 
 ## Prispievatelia do komunity .NET {#dot-net-community-contributors}
 
-Členovia komunity Netherea sa najčastejšie stretávajú na sociálnej sieti [Gitter](https://gitter.im/Nethereum/Nethereum), kde ktokoľvek môže klásť otázky aj odpovedať na ne, získať pomoc alebo len tak prežívať. Neostýchajte sa vytvoriť PR alebo otvoriť problém v [Github repozitári Netherea](https://github.com/Nethereum) alebo preskúmať mnohé naše vedľajšie či ukážkové projekty.
+Členovia komunity Netherea sa najčastejšie stretávajú na sociálnej sieti [Gitter](https://gitter.im/Nethereum/Nethereum), kde ktokoľvek môže klásť otázky aj odpovedať na ne, získať pomoc alebo len tak prežívať. Neostýchajte sa vytvoriť PR alebo otvoriť problém v [GitHub repozitári Netherea](https://github.com/Nethereum) alebo preskúmať mnohé naše vedľajšie či ukážkové projekty.
 
-V rámci Nethermindu komunikujeme tiež [na Gitteri](https://gitter.im/nethermindeth/nethermind). Ak chcete vytvoriť PR alebo otvoriť problém, prejdite do [Github repozitára Nethermindu](https://github.com/NethermindEth/nethermind).
+V rámci Nethermindu komunikujeme tiež [na Gitteri](https://gitter.im/nethermindeth/nethermind). Ak chcete vytvoriť PR alebo otvoriť problém, prejdite do [GitHub repozitára Nethermindu](https://github.com/NethermindEth/nethermind).
 
 ## Ďalšie súhrnné zoznamy {#other-aggregated-lists}
 
