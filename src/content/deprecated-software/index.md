@@ -38,15 +38,46 @@ This section is for software for the desktop, command line, or server which has 
 
 ### Grid {#grid}
 
+Deprecated on December 10, 2020
+
+Grid was a desktop application that allowed you to securely download, configure and use various clients and tools in the Ethereum ecosystem. Grid provided a user-friendly interface to assist a less technical audience in safely interacting with technical tools, which increased accessibility for everyone. 
+
+Add in an alternative to grid? 
+
+You can view the repository here:
+https://github.com/ethereum/grid 
+
 ### Meteor Dapp Wallet {#meteor-dapp-wallet}
+
+Deprecated on March 27, 2019
+
+This was an important component of Mist, and for many years the Meteor Dapp Wallet web UI was hosted as a subdomain on ethereum.org. The Mist multisig wallet solidity code was also included, deployable to EVM blockchains e.g. Ethereum mainnet via the UI. 
+
+The wallet as bytecode deployed to EVM blockchains continues to be used to store value without incident. It can be interacted with directly, or via wallets like MyCrypto.
+
+You can view the repository here:
+https://github.com/ethereum/meteor-dapp-wallet 
 
 ### Mist {#mist}
 
+Deprecated on March 27, 2019
+
+Mist was a concept browser that connected you to the ethereum blockchain and used p2p file transfer to access Dapps. 
+
+You can view the repository here: 
+https://github.com/ethereum/mist
+
 ### Mix {#mix}
 
-### Parity {#parity}
+Mix was an IDE that allowed developers to build and deploy contracts and decentralized applications on top of the Ethereum blockchain.
 
-### Serpent {#serpent}
+You can view the repository here: 
+https://github.com/ethereum/mix 
+
+We recommend using [Remix](https://remix.ethereum.org/#optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.7+commit.e28d00a7.js) as an alternative web IDE for your Solidity development. 
+
+
+### Parity {#parity}
 
 ### Trinity {#trinity}
 
