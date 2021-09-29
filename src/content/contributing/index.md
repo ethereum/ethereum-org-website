@@ -76,7 +76,7 @@ If your contribution gets merged into ethereum.org, we'll mint you a unique cont
 
 ### How to claim {#how-to-claim}
 
-1. Join our [Discord server](https://discord.gg/Gnz2jWHw6t).
+1. Join our [Discord server](https://discord.gg/E8dET2ux8y).
 2. Paste a link to your contribution in the #poaps-🏆 channel.
 3. Wait for a member of our team to send you a link to your minted POAP.
 4. Claim your POAP!
