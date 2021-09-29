@@ -21,7 +21,7 @@ Ethereum.org content caters to a large and varied audience. Because ethereum.org
 
 Loosely we can categorize the site audiences as:
 
-### Individuals
+### Individuals {#individuals}
 
 App users, investors, enthusiasts, or anyone who is "new to Ethereum".
 
@@ -33,7 +33,7 @@ App users, investors, enthusiasts, or anyone who is "new to Ethereum".
 - "I want to get a sense of the size and activity of the Ethereum community, to decide if it's active enough, so I can get help if needed"
 - "I’m excited about Ethereum and want to get involved, but I don’t know what to do next"
 
-### Developers
+### Developers {#developers}
 
 Developers or others who want technical information about Ethereum.
 
@@ -44,7 +44,7 @@ Developers or others who want technical information about Ethereum.
 - "I want to learn about Ethereum's technical roadmap"
 - "I’ve started work on an Ethereum project, and want to try out a few smart contract testing libraries"
 
-### Enterprises
+### Enterprises {#enterprises}
 
 People, businesses, and other organizations who want to understand Ethereum's value in an enterprise setting.
 
