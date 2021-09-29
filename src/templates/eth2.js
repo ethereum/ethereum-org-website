@@ -135,11 +135,13 @@ const H2 = styled.h2`
   font-size: 32px;
   font-weight: 700;
   margin-top: 4rem;
+
   a {
     display: none;
   }
 
   /* Anchor tag styles */
+
   a {
     position: relative;
     display: none;
@@ -147,6 +149,7 @@ const H2 = styled.h2`
     padding-right: 0.5rem;
     font-size: 1rem;
     vertical-align: middle;
+
     &:hover {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
@@ -164,11 +167,13 @@ const H2 = styled.h2`
 const H3 = styled.h3`
   font-size: 24px;
   font-weight: 700;
+
   a {
     display: none;
   }
 
   /* Anchor tag styles */
+
   a {
     position: relative;
     display: none;
@@ -176,6 +181,7 @@ const H3 = styled.h3`
     padding-right: 0.5rem;
     font-size: 1rem;
     vertical-align: middle;
+
     &:hover {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
@@ -311,9 +317,11 @@ const MoreContent = styled(Link)`
   padding: 1rem;
   display: flex;
   justify-content: center;
+
   &:hover {
     background: ${(props) => props.theme.colors.background};
   }
+
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     display: none;
   }
@@ -374,7 +382,7 @@ const dropdownLinks = {
 
 const Eth2Page = ({ data, data: { mdx } }) => {
   const intl = useIntl()
-  const isRightToLeft = isLangRightToLeft(intl.locale)
+  const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang)
   const tocItems = mdx.tableOfContents.items
 
   // TODO some `gitLogLatestDate` are `null` - why?
@@ -454,6 +462,7 @@ export const eth2PageQuery = graphql`
       frontmatter {
         title
         description
+        lang
         sidebar
         sidebarDepth
         summaryPoints
