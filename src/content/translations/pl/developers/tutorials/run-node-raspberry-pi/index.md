@@ -237,7 +237,7 @@ Po raz pierwszy, musisz utworzyć ręcznie konto, uruchamiając plik binarny „
 
 Włożyliśmy dużo pracy, próbując skonfigurować Raspberry Pi 4 jako pełny węzeł Ethereum, ponieważ wiemy, że ogromna baza użytkowników tego urządzenia może mieć bardzo pozytywny wpływ na sieć.
 
-Proszę wziąć pod uwagę, że jest to pierwszy obraz oparty na Ubuntu 20.04, więc może być kilka błędów. Jeśli tak, otwórz zgłoszenie na [Github](https://github.com/diglos/pi-gen) lub skontaktuj się z nami na [Twitter](https://twitter.com/EthereumOnARM).
+Proszę wziąć pod uwagę, że jest to pierwszy obraz oparty na Ubuntu 20.04, więc może być kilka błędów. Jeśli tak, otwórz zgłoszenie na [GitHub](https://github.com/diglos/pi-gen) lub skontaktuj się z nami na [Twitter](https://twitter.com/EthereumOnARM).
 
 ## Odniesienia {#references}
 

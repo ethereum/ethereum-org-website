@@ -81,9 +81,9 @@ sidebarDepth: 1
 
 ## .NET 커뮤니티 기여자 {#dot-net-community-contributors}
 
-Nethereum과 관련해서는 주로 [Gitter](https://gitter.im/Nethereum/Nethereum)에서 활동하고 있습니다. 여기서는 누구나 자유롭게 질문하고 답변하며, 도움을 받거나 그냥 시간을 보낼 수도 있습니다. [Nethereum Github 리포지토리](https://github.com/Nethereum)에서 부담 없이 PR(Pull Request)을 하거나 이슈를 생성해 보세요. 또는 다양한 사이드/샘플 프로젝트도 탐색해 볼 수 있습니다.
+Nethereum과 관련해서는 주로 [Gitter](https://gitter.im/Nethereum/Nethereum)에서 활동하고 있습니다. 여기서는 누구나 자유롭게 질문하고 답변하며, 도움을 받거나 그냥 시간을 보낼 수도 있습니다. [Nethereum GitHub 리포지토리](https://github.com/Nethereum)에서 부담 없이 PR(Pull Request)을 하거나 이슈를 생성해 보세요. 또는 다양한 사이드/샘플 프로젝트도 탐색해 볼 수 있습니다.
 
-Nethermind와 관련해서도 [Gitter](https://gitter.im/nethermindeth/nethermind)를 통해 소통해 보세요. PR 또는 이슈는 [Nethermind Github 리포지토리](https://github.com/NethermindEth/nethermind)를 확인해 보세요.
+Nethermind와 관련해서도 [Gitter](https://gitter.im/nethermindeth/nethermind)를 통해 소통해 보세요. PR 또는 이슈는 [Nethermind GitHub 리포지토리](https://github.com/NethermindEth/nethermind)를 확인해 보세요.
 
 ## 그 밖의 통합 목록 {#other-aggregated-lists}
 
