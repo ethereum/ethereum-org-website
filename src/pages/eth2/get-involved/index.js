@@ -225,10 +225,10 @@ const GetInvolvedPage = ({ data, location }) => {
           <Translation id="page-eth2-get-involved-written-javascript" />
         ),
         alt: "eth2-client-lodestar-logo-alt",
-        url: "https://chainsafe.io/",
+        url: "https://lodestar.chainsafe.io/",
         image: data.lodestar.childImageSharp.fixed,
         githubUrl: "https://github.com/ChainSafe/lodestar",
-        isProductionReady: false,
+        isProductionReady: true,
       },
       {
         name: "Nimbus",
