@@ -131,7 +131,7 @@ const components = {
 
 const StaticPage = ({ data: { siteData, mdx }, pageContext }) => {
   const intl = useIntl()
-  const isRightToLeft = isLangRightToLeft(intl.locale)
+  const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang)
 
   const lastUpdatedDate = mdx.parent.fields
     ? mdx.parent.fields.gitLogLatestDate
@@ -150,7 +150,7 @@ const StaticPage = ({ data: { siteData, mdx }, pageContext }) => {
       />
       <ContentContainer>
         <Breadcrumbs slug={mdx.fields.slug} />
-        <LastUpdated>
+        <LastUpdated dir={isLangRightToLeft(intl.locale) ? "rtl" : "ltr"}>
           <Translation id="page-last-updated" />:{" "}
           {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
         </LastUpdated>
@@ -189,6 +189,7 @@ export const staticPageQuery = graphql`
       frontmatter {
         title
         description
+        lang
         sidebar
         sidebarDepth
       }

@@ -82,7 +82,7 @@ Watch more on the different types of consensus mechanisms used on Ethereum:
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/ojxfbN78WFQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### Sybil Resistance & Chain Selection {#sybil-resistance}
+### Sybil resistance & chain selection {#sybil-chain}
 
 Now technically, proof-of-work and proof-of-stake are not consensus protocols by themselves, but they are often referred to as such for simplicity. They are actually Sybil resistance mechanisms and block author selectors; they are a way to decide who is the author of the latest block. It's this Sybil resistance mechanism combined with a chain selection rule that makes up a true consensus mechanism.
 
@@ -94,7 +94,7 @@ The combination of proof-of-work and longest chain rule is known as "Nakamoto Co
 
 Eth2 (the [beacon chain](/eth2/beacon-chain/)) uses a consensus mechanism called [Casper the Friendly Finality Gadget](https://arxiv.org/abs/1710.09437), which is proof-of-stake based.
 
-## Further Reading {#further-reading}
+## Further reading {#further-reading}
 
 - [What Is a Blockchain Consensus Algorithm?](https://academy.binance.com/en/articles/what-is-a-blockchain-consensus-algorithm)
 - [What is Nakamoto Consensus? Complete Beginner’s Guide](https://blockonomi.com/nakamoto-consensus/)
@@ -103,7 +103,7 @@ Eth2 (the [beacon chain](/eth2/beacon-chain/)) uses a consensus mechanism called
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
-## Related Topics {#related-topics}
+## Related topics {#related-topics}
 
 - [Proof of work](/developers/docs/consensus-mechanisms/pow/)
 - [Mining](/developers/docs/consensus-mechanisms/pow/mining/)

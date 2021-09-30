@@ -144,6 +144,7 @@ const ProductCard = ({
   githubUrl = "",
   repoLangCount = 1,
   subjects,
+  hideStars = false,
 }) => {
   const split = githubUrl.split("/")
   const repoOwner = split[split.length - 2]
@@ -168,7 +169,9 @@ const ProductCard = ({
       </ImageWrapper>
       <Content className="hover">
         <div>
-          {hasRepoData && <GitStars gitHubRepo={data.repository} />}
+          {hasRepoData && (
+            <GitStars gitHubRepo={data.repository} hideStars={hideStars} />
+          )}
           <Title gitHidden={!hasRepoData}>{name}</Title>
           <Description>{description}</Description>
         </div>

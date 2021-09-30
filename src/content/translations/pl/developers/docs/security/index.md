@@ -242,11 +242,6 @@ Chociaż nic nie zastąpi zrozumienia podstaw bezpieczeństwa Ethereum i zaanga�
 - [mithril](https://github.com/ConsenSys/mythril)
 - [Dokumentacja](https://mythril-classic.readthedocs.io/en/master/about.html)
 
-**SmartContract.Codes —** **_wyszukiwarka sprawdzonych kodów źródłowych Solidity._**
-
-- [smartcontract.codes (alfa)](https://smartcontract.codes/)
-- [Dokumentacja](https://github.com/ethereum-play/smartcontract.codes/blob/master/README.md)
-
 **Manticore —** **_interfejs wiersza poleceń, który wykorzystuje symboliczne narzędzie do wykonywania inteligentnych kontraktów i plików binarnych._**
 
 - [GitHub](https://github.com/trailofbits/manticore)
@@ -303,7 +298,7 @@ Low level call in Victim.withdraw() (bad-contract.sol#11-16):
     - (success) = msg.sender.call.value(amount)() (bad-contract.sol#13)
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls
 INFO:Slither:bad-contract.sol analyzed (1 contracts with 46 detectors), 2 result(s) found
-INFO:Slither:Use https://crytic.io/ to get access to additional detectors and Github integration
+INFO:Slither:Use https://crytic.io/ to get access to additional detectors and GitHub integration
 ```
 
 Slither zidentyfikował tutaj możliwość wielobieżności, identyfikując kluczowe linie, w których może wystąpić problem, i podając nam link do dalszych szczegółów na temat problemu:

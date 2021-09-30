@@ -5,17 +5,17 @@ lang: en
 sidebar: true
 ---
 
-# Introduction to Ethereum Governance {#introduction}
+# Introduction to Ethereum governance {#introduction}
 
 _If no one owns Ethereum, how are decisions about past and future changes to Ethereum made? Ethereum governance refers to the process that allows such decisions to be made_
 
 <Divider />
 
-## What is Governance? {#what-is-governance}
+## What is governance? {#what-is-governance}
 
 Governance is the systems in place that allow decisions to be made. In a typical organizational structure, the executive team or a board of directors may have the final say in decision-making. Or perhaps shareholders vote on proposals to enact change. In a political system, elected officials may enact legislation that attempts to represent their constituents' desires.
 
-## Decentralized Governance {#decentalized-governance}
+## Decentralized governance {#decentalized-governance}
 
 No one person owns or controls the Ethereum protocol, but decisions still need to be made about implementing changes to best ensure the longevity and prosperity of the network. This lack of ownership makes traditional organizational governance an incompatible solution.
 
@@ -23,7 +23,7 @@ No one person owns or controls the Ethereum protocol, but decisions still need t
 
 Ethereum governance is the process by which protocol changes are made. It's important to point out that this process isn't related to how people and applications use the protocol - Ethereum is permissionless. Anyone from anywhere in the world can participate in on-chain activities. There are no rules set for who can or cannot build an application or send a transaction. However, there is a process to propose changes to the core protocol, which these applications run on top of. Since so many people depend on Ethereum's stability, there is a very high coordination threshold for core changes, including social and technical processes, to ensure any changes to Ethereum are secure and widely supported by the community
 
-### On-chain vs Off-chain governance {#on-chain-vs-off-chain}
+### On-chain vs off-chain governance {#on-chain-vs-off-chain}
 
 Blockchain technology allows for new governance capabilities, known as on-chain governance. On-chain governance is when proposed protocol changes are decided by a stakeholder vote, usually by holders of a governance token, and voting happens on the blockchain. With some forms of on-chain governance, the proposed protocol changes are already written in code and implemented automatically if the stakeholders approve the changes.
 
@@ -61,7 +61,7 @@ One important process used in Ethereum governance is the proposal of **Ethereum 
 
 <Divider />
 
-## The Formal Process {#formal-process}
+## The formal process {#formal-process}
 
 The formal process for introducing changes to the Ethereum protocol is as follows:
 
@@ -83,17 +83,17 @@ The formal process for introducing changes to the Ethereum protocol is as follow
 
 This flow, while very simplified, gives an overview of the significant stages for a protocol change to be activated on Ethereum. Now, let's look at the informal factors at play during this process.
 
-## Informal Process {#informal-process}
+## The informal process {#informal-process}
 
-### Understanding Prior Work {#prior-work}
+### Understanding prior work {#prior-work}
 
 EIP Champions should familiarise themselves with prior work and proposals before creating an EIP which can be seriously considered for deployment on the Ethereum Mainnet. This way, the EIP hopefully brings something new which hasn't been rejected before. The three main places to research this are the [EIP repository](https://github.com/ethereum/eips), [Ethereum Magicians](https://www.ethereum-magicians.org/) and [ethresear.ch](https://www.ethresear.ch/).
 
-### Working Groups {#working-groups}
+### Working groups {#working-groups}
 
 The initial draft of an EIP is unlikely to be implemented on the Ethereum Mainnet without edits or changes. Generally, EIP Champions will work with a subset of Protocol Developers to specify, implement, test, iterate, and finalize their proposal. Historically, these working groups have required several months (and sometimes years!) of work. Similarly, EIP Champions for such changes should involve relevant Application/Tooling Developers early in their efforts to gather end-user feedback and mitigate any deployment risks.
 
-### Community Consensus {#community-consensus}
+### Community consensus {#community-consensus}
 
 While some EIPs are straightforward technical improvements with minimal nuance, some are more complex and inherently tradeoffs which will affect different stakeholders in different ways. This means some EIPs end up being more contentious within the community than others.
 
@@ -143,7 +143,7 @@ The ability to fork in the face of significant political, philosophical or econo
 
 <Divider />
 
-## Beacon Chain Development {#beacon-chain}
+## Beacon Chain development {#beacon-chain}
 
 The Ethereum governance process often trades off speed and efficiency for openness and inclusivity. In order to accelerate the development of the Beacon Chain, it was launched separately from the proof of work Ethereum network and followed its own governance practices.
 

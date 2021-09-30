@@ -39,11 +39,6 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 - [Documentazione](https://docs.epirus.io)
 - [GitHub](https://github.com/epirus-io/epirus-cli)
 
-**Etherlime:** **_ framework basato su ethers.js per lo sviluppo (Solidity e Vyper), la distribuzione, il debug, il test di dapp e altro_**
-
-- [Documenti](https://etherlime.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/LimeChain/etherlime)
-
 **Hardhat:** **_ ambiente di sviluppo Ethereum per professionisti_**
 
 - [hardhat.org](https://hardhat.org)

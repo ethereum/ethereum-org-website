@@ -84,7 +84,8 @@ const ContentContainer = styled.article`
 
 const H1 = styled(Header1)`
   font-size: 2.5rem;
-  font-family: "SFMono-Regular", monospace;
+  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
+    "Liberation Mono", Menlo, Courier, monospace;
   text-transform: uppercase;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 1.75rem;
@@ -96,7 +97,8 @@ const H1 = styled(Header1)`
 `
 
 const H2 = styled(Header2)`
-  font-family: "SFMono-Regular", monospace;
+  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
+    "Liberation Mono", Menlo, Courier, monospace;
   text-transform: uppercase;
 
   &:before {
@@ -157,10 +159,9 @@ const Contributors = styled(FileContributors)`
 `
 
 const TutorialPage = ({ data, pageContext }) => {
-  const intl = useIntl()
-  const isRightToLeft = isLangRightToLeft(intl.locale)
-
   const pageData = data.pageData
+  const isRightToLeft = isLangRightToLeft(pageData.frontmatter.lang)
+
   const tocItems = pageData.tableOfContents.items
 
   const { editContentUrl } = data.siteData.siteMetadata
@@ -215,6 +216,7 @@ export const query = graphql`
       frontmatter {
         title
         description
+        lang
         tags
         author
         source
