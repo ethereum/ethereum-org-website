@@ -4959,6 +4959,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "SlashHash",
+      "name": "SlashHash",
+      "avatar_url": "https://avatars.githubusercontent.com/u/83152561?v=4",
+      "profile": "https://www.youtube.com/channel/UCJJWZ6IKi_hxSsh-upLAH-g",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
