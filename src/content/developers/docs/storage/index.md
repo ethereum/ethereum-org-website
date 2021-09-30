@@ -121,7 +121,7 @@ PoS based:
 
 - [Filecoin.io](https://filecoin.io/)
 - [Documentation](https://docs.filecoin.io/)
-- [Github](https://github.com/filecoin-project/)
+- [GitHub](https://github.com/filecoin-project/)
 
 **Arweave - _Arweave is a dStorage platform for storing data._**
 
@@ -133,7 +133,7 @@ PoS based:
 
 - [0Chain.net](https://0chain.net/)
 - [Documentation](https://docs.0chain.net/0chain/)
-- [Github](https://github.com/0chain/)
+- [GitHub](https://github.com/0chain/)
 
 **Swarm - _A distributed storage platform and content distribution service for the Ethereum web3 stack._**
 

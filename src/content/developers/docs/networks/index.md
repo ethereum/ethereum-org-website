@@ -47,7 +47,7 @@ A proof-of-authority testnet for those running Geth client.
 
 A proof-of-work testnet. This means it's the best like-for-like representation of Ethereum.
 
-### Testnet Faucets {#testnet-faucets}
+### Testnet faucets {#testnet-faucets}
 
 ETH on testnets has no real value; therefore, there are no markets for testnet ETH. Since you need ETH to actually interact with Ethereum, most people get testnet ETH from faucets. Most faucets are webapps where you can input an address which you request ETH to be sent to.
 

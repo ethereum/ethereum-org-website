@@ -23,7 +23,7 @@ A változások technikai specifikációjával együtt az EIP-k egy olyan egység
 
 ## EIP-k története {#history-of-eips}
 
-Az [Ethereum Improvement Proposals (EIPs) Github gyűjteményt](https://github.com/ethereum/EIPs) 2015 októberében hozták létre. Az EIP folyamat a [Bitcoin Improvement Proposals (BIPs)](https://github.com/bitcoin/bips) folyamaton alapul, ami pedig a [Python Enhancement Proposals (PEPs)](https://www.python.org/dev/peps/) folyamaton alapul.
+Az [Ethereum Improvement Proposals (EIPs) GitHub gyűjteményt](https://github.com/ethereum/EIPs) 2015 októberében hozták létre. Az EIP folyamat a [Bitcoin Improvement Proposals (BIPs)](https://github.com/bitcoin/bips) folyamaton alapul, ami pedig a [Python Enhancement Proposals (PEPs)](https://www.python.org/dev/peps/) folyamaton alapul.
 
 Az EIP szerkesztők feladata a technikai hibátlanság, a helyesírás/nyelvtan és a kód stílus ellenőrzése. Többek között Martin Becze, Vitalik Buterin és Gavin Wood voltak az eredeti EIP szerkesztők 2015-től 2016 végéig. A jelenlegi EIP szerkesztők:
 

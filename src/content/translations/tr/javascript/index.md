@@ -30,7 +30,7 @@ Başlamadan önce daha fazla bilgiye mi ihtiyacın var? Bu adrese giderek [ether
 
 - [Dökümantasyon](https://solidity.readthedocs.io)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Solidity Github Sohbet Odası](https://gitter.im/ethereum/solidity/)
+- [Solidity GitHub Sohbet Odası](https://gitter.im/ethereum/solidity/)
 
 **Truffle -** **_A development environment and testing framework built with Node._**
 

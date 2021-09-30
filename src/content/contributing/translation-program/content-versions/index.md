@@ -5,7 +5,7 @@ description: Which pages each content version of Ethereum.org contains
 sidebar: true
 ---
 
-# Content Versions {#content-versions}
+# Content versions {#content-versions}
 
 As mentioned in our [Translation Program overview](/en/contributing/translation-program/), we use [version management within Crowdin](https://support.crowdin.com/versions-management/) to create manageable milestones for translators and to avoid delays on getting translations deployed to the website. When you check out a language to translate, for example, [German](https://crowdin.com/project/ethereum-org/de) you'll see folders for each content version ("v2.0", "v2.1", "v2.2", etc.).
 
@@ -15,7 +15,7 @@ Below is a breakdown of the website pages each content version contains.
 
 Language v2.0 translates high-impact, highly trafficked pages on ethereum.org and the navigation components.
 
-### Primary Pages {#primary}
+### Primary pages {#primary}
 
 - [Ethereum.org homepage](/)
 - [What is Ethereum?](/what-is-ethereum/)
@@ -51,7 +51,7 @@ Language v2.0 translates high-impact, highly trafficked pages on ethereum.org an
 
 Language v2.1 translates the developer docs and several less trafficked but important pages.
 
-### Secondary Pages {#secondary}
+### Secondary pages {#secondary}
 
 - [Ethereum Improvement Proposals (EIPs)](/eips/)
 - [Enterprise Ethereum](/enterprise/)
@@ -61,7 +61,7 @@ Language v2.1 translates the developer docs and several less trafficked but impo
 - [Whitepaper](/whitepaper/)
 - [About ethereum.org](/about/)
 
-### Developer Documentation {#developer-docs}
+### Developer documentation {#developer-docs}
 
 - All [developer documentation](/developers/docs/) pages
 

@@ -81,9 +81,9 @@ Etsitkö lisää resursseja? Katso [ethereum.org/fi/developers](/developers/).
 
 ## .NET-yhteisön osallistujat {#dot-net-community-contributors}
 
-Me Nethereumilla useimmiten vietämme eniten aikaa [Gitterissä](https://gitter.im/Nethereum/Nethereum), jonne kaikki ovat tervetulleita kysymään/vastaamaan kysymyksiin, saamaan apua tai vain chillaamaan. Voit halutessasi tehdä suhdetoimintaa tai avata ongelman [Nethereum Github -tietolähteessä](https://github.com/Nethereum), tai vain selata meidän useita sivu-/näyteprojektejamme.
+Me Nethereumilla useimmiten vietämme eniten aikaa [Gitterissä](https://gitter.im/Nethereum/Nethereum), jonne kaikki ovat tervetulleita kysymään/vastaamaan kysymyksiin, saamaan apua tai vain chillaamaan. Voit halutessasi tehdä suhdetoimintaa tai avata ongelman [Nethereum GitHub -tietolähteessä](https://github.com/Nethereum), tai vain selata meidän useita sivu-/näyteprojektejamme.
 
-Nethermindilla pidetään yhteyttä [Gitterissä](https://gitter.im/nethermindeth/nethermind). Suhdetoimintaa tai ongelmia varten tutustu [Nethermind Github -tietolähteeseen](https://github.com/NethermindEth/nethermind).
+Nethermindilla pidetään yhteyttä [Gitterissä](https://gitter.im/nethermindeth/nethermind). Suhdetoimintaa tai ongelmia varten tutustu [Nethermind GitHub -tietolähteeseen](https://github.com/NethermindEth/nethermind).
 
 ## Muita kerättyjä listoja {#other-aggregated-lists}
 
