@@ -50,7 +50,7 @@ Platforms with contract-based persistence:
 
 ### Additional considerations {#additional-considertion}
 
-As a bonus, IPFS doesn't really have an incentive structure for holding data, but it is an excellent tool in the community. If you'd like data to persist on IPFS, you have to reach out to a pinning service, which will "pin" your data for you.
+As a bonus, IPFS doesn't really have an incentive structure for holding data, but it is an excellent tool in the community. If you'd like data to persist on IPFS, you have to reach out to a pinning service, which will "pin" your data for you. You can even run your own node and contribute to the network!
 
 - [IPFS](https://ipfs.io/)
 
