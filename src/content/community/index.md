@@ -107,7 +107,7 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
   - Ethereum needs good writers who can explain its value in plain language
   - Not ready to publish your own articles? Consider contributing to the existing content on community resources like [EthHub](https://docs.ethhub.io/), or propose new content for ethereum.org!
 - **Offer to take notes for community calls**
-  - There are many open-source community calls, and having notetakers is a huge help. If you’re interested, join the Ethereum Cat Herders chat [here](https://gitter.im/ethereum-cat-herders/meeting-notes-and-summaries), and introduce yourself!
+  - There are many open-source community calls, and having notetakers is a huge help. If you’re interested, join the [Ethereum Cat Herders discord](https://discord.com/invite/tzYmDmF), and introduce yourself!
 - **Translate Ethereum content into your native language**
   - ethereum.org maintains a translation program that translates the website, and other resources, into many different languages
   - Find out how to get involved [here](/contributing/translation-program)

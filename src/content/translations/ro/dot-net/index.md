@@ -80,9 +80,9 @@ Cauți mai multe resurse? Accesează [ethereum.org/developers.](/ro/developers/)
 
 ## Contributori ai comunității .NET {#dot-net-community-contributors}
 
-De obicei, cei de la Nethereum pot fi găsiți pe [Gitter](https://gitter.im/Nethereum/Nethereum), unde toată lumea poate să pună întrebări și să dea răspunsuri, să primească ajutor sau pur și simplu să se relaxeze. Poți să faci un PR sau să dechizi un tichet în [Nethereum Github repository](https://github.com/Nethereum) sau să descoperi numeroasele noastre proiecte secundare/de test.
+De obicei, cei de la Nethereum pot fi găsiți pe [Gitter](https://gitter.im/Nethereum/Nethereum), unde toată lumea poate să pună întrebări și să dea răspunsuri, să primească ajutor sau pur și simplu să se relaxeze. Poți să faci un PR sau să dechizi un tichet în [Nethereum GitHub repository](https://github.com/Nethereum) sau să descoperi numeroasele noastre proiecte secundare/de test.
 
-La Nethermind, te invităm să ne contactezi prin [Gitter](https://gitter.im/nethermindeth/nethermind). Pentru PR sau tichete accesează [Nethermind Github repository](https://github.com/NethermindEth/nethermind).
+La Nethermind, te invităm să ne contactezi prin [Gitter](https://gitter.im/nethermindeth/nethermind). Pentru PR sau tichete accesează [Nethermind GitHub repository](https://github.com/NethermindEth/nethermind).
 
 ## Alte liste agregate {#other-aggregated-lists}
 

@@ -298,7 +298,7 @@ Low level call in Victim.withdraw() (bad-contract.sol#11-16):
     - (success) = msg.sender.call.value(amount)() (bad-contract.sol#13)
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls
 INFO:Slither:bad-contract.sol analyzed (1 contracts with 46 detectors), 2 result(s) found
-INFO:Slither:Use https://crytic.io/ to get access to additional detectors and Github integration
+INFO:Slither:Use https://crytic.io/ to get access to additional detectors and GitHub integration
 ```
 
 Slither zidentyfikował tutaj możliwość wielobieżności, identyfikując kluczowe linie, w których może wystąpić problem, i podając nam link do dalszych szczegółów na temat problemu:

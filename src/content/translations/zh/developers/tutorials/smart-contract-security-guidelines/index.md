@@ -77,7 +77,7 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 
 - **编写详尽的单元测试。**全面的测试套件对于构建高质量的软件至关重要。
 - **编写[Slither](https://github.com/crytic/slither)、[Echidna](https://github.com/crytic/echidna)和[Manticore](https://github.com/trailofbits/manticore)自定义检查和属性。**自动化工具将帮助确保您的合约安全。 查看本指南的其余部分，了解如何编写高效的检查和属性。
-- **使用[crytic.io](https://crytic.io/)。**Crytic 与 Github 集成，提供对私有 Slither 探测器的访问，并从 Echidna 运行自定义属性检查。
+- **使用[crytic.io](https://crytic.io/)。**Crytic 与 GitHub 集成，提供对私有 Slither 探测器的访问，并从 Echidna 运行自定义属性检查。
 
 ### Solidity {#solidity}
 
