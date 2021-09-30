@@ -115,7 +115,7 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
 **Financial professionals & Accountants**
 
 - Ethereum is home to the “Decentralized Finance” ecosystem - a network of protocols and applications that offer an alternative financial system. If you’re a financial professional, check out some DeFi apps at [DeFi Pulse](https://defipulse.com/) or [DeFiPrime](https://defiprime.com)
-- Accountant? Assets on Ethereum - ETH, tokens, DeFi, etc - introduce many novel accounting issues. You could start by checking out some projects that aim to help users of cryptocurrency solve their bookkeeping & accounting challenges, like [VeriLedger](https://veriledger.io/) or [Rotki](https://rotki.com/)
+- Accountant? Assets on Ethereum - ETH, tokens, DeFi, etc - introduce many novel accounting issues. You could start by checking out some projects that aim to help users of cryptocurrency solve their bookkeeping & accounting challenges, like [Rotki](https://rotki.com/)
 
 **Product Managers**
 
