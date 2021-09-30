@@ -45,7 +45,8 @@ Grid was a desktop application that allowed you to securely download, configure 
 Add in an alternative to grid? 
 
 You can view the repository here:
-https://github.com/ethereum/grid 
+
+- https://github.com/ethereum/grid 
 
 ### Meteor Dapp Wallet {#meteor-dapp-wallet}
 
@@ -56,7 +57,8 @@ This was an important component of Mist, and for many years the Meteor Dapp Wall
 The wallet as bytecode deployed to EVM blockchains continues to be used to store value without incident. It can be interacted with directly, or via wallets like MyCrypto.
 
 You can view the repository here:
-https://github.com/ethereum/meteor-dapp-wallet 
+
+- https://github.com/ethereum/meteor-dapp-wallet 
 
 ### Mist {#mist}
 
@@ -65,14 +67,16 @@ Deprecated on March 27, 2019
 Mist was a concept browser that connected you to the ethereum blockchain and used p2p file transfer to access Dapps. 
 
 You can view the repository here: 
-https://github.com/ethereum/mist
+
+- https://github.com/ethereum/mist
 
 ### Mix {#mix}
 
 Mix was an IDE that allowed developers to build and deploy contracts and decentralized applications on top of the Ethereum blockchain.
 
 You can view the repository here: 
-https://github.com/ethereum/mix 
+
+- https://github.com/ethereum/mix 
 
 We recommend using [Remix](https://remix.ethereum.org/#optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.7+commit.e28d00a7.js) as an alternative web IDE for your Solidity development. 
 
