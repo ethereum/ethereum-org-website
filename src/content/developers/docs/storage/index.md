@@ -71,7 +71,7 @@ Types of dStorage with a challenge mechanism:
 
 ### Decentrality {#decentrality}
 
-There aren't great tools to measure the level of decentralization of platforms, but in general, you'll want to use tools that don't have some form of KYC to prove they are genuinely decentralized.
+There aren't great tools to measure the level of decentralization of platforms, but in general, you'll want to use tools that don't have some form of KYC to provide evidence they are not centralized.
 
 Decentralized tools without KYC:
 
