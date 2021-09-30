@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-## Standards Overview {#standards-overview}
+## Standards overview {#standards-overview}
 
 The Ethereum community has adopted many standards that help keep projects (such as [Ethereum clients](/developers/docs/nodes-and-clients/) and wallets) interoperable across implementations, and ensure smart contracts and dapps remain composable.
 

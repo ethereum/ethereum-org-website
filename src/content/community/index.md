@@ -1,13 +1,13 @@
 ---
-title: Get involved in the Ethereum Community
-description: How to get involved in the Ethereum Community.
+title: Get involved in the Ethereum community
+description: How to get involved in the Ethereum community.
 sidebar: true
 lang: en
 ---
 
-# Ethereum Community {#ethereum-community}
+# Ethereum community {#ethereum-community}
 
-**Learn how to get involved in the Ethereum Community**
+**Learn how to get involved in the Ethereum community**
 
 The Ethereum community includes tens of thousands of developers, technologists, users, miners, HODLers, and enthusiasts all over the world. There are many ways to get involved in the Ethereum community: you can attend an event, join a meetup group, contribute to a project, or participate in one of many online forums about Ethereum.
 
@@ -57,9 +57,9 @@ Interested in starting your own meetup? Check out the [BUIDL Network](https://co
 
 This is a non-exhaustive list built by our community. Know of an active meetup group to add to this list? [Please add it](https://github.com/ethereum/ethereum-org-website#content-contributions)!
 
-## Decentralized Autonomous Organizations (DAOs) {#decentralized-autonomous-organizations-daos}
+## Decentralized autonomous organizations (DAOs) {#decentralized-autonomous-organizations-daos}
 
-"DAOs" are Decentralized Autonomous Organizations. These groups leverage Ethereum technology to facilitate organization and collaboration. For instance, for controlling membership, voting on proposals, or managing pooled assets. While DAOs are still experimental, they offer opportunities for you to find groups that you identify with, find collaborators, and grow your impact on the Ethereum community. [More on DAOs](/dao/)
+"DAOs" are Decentralized autonomous organizations. These groups leverage Ethereum technology to facilitate organization and collaboration. For instance, for controlling membership, voting on proposals, or managing pooled assets. While DAOs are still experimental, they offer opportunities for you to find groups that you identify with, find collaborators, and grow your impact on the Ethereum community. [More on DAOs](/dao/)
 
 - [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _Legal engineering_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Art community_
@@ -112,7 +112,7 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
   - ethereum.org maintains a translation program that translates the website, and other resources, into many different languages
   - Find out how to get involved [here](/contributing/translation-program)
 
-**Financial professional or accountant**
+**Financial professionals & Accountants**
 
 - Ethereum is home to the “Decentralized Finance” ecosystem - a network of protocols and applications that offer an alternative financial system. If you’re a financial professional, check out some DeFi apps at [DeFi Pulse](https://defipulse.com/) or [DeFiPrime](https://defiprime.com)
 - Accountant? Assets on Ethereum - ETH, tokens, DeFi, etc - introduce many novel accounting issues. You could start by checking out some projects that aim to help users of cryptocurrency solve their bookkeeping & accounting challenges, like [VeriLedger](https://veriledger.io/) or [Rotki](https://rotki.com/)
@@ -125,11 +125,11 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
 
 - There are many marketing and communications positions in the Ethereum ecosystem!
 
-## Ethereum Grants {#ethereum-grants}
+## Ethereum grants {#ethereum-grants}
 
 [View open Ethereum grants](/community/grants/)
 
-## Ethereum Jobs {#ethereum-jobs}
+## Ethereum jobs {#ethereum-jobs}
 
 **Want to find a job working in Ethereum?**
 

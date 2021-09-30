@@ -68,7 +68,7 @@ A proof-of-stake system is kept secure by the fact that you'd need 51% of the to
 
 More on [proof of stake](/developers/docs/consensus-mechanisms/pos/)
 
-### Sybil Resistance & Chain Selection
+### Sybil resistance & chain selection {#sybil-chain}
 
 Now technically, both proof-of-work (PoW) and proof-of-stake (PoS) are not consensus protocols by themselves, but they are often referred to as such for simplicity. PoW and PoS are actually Sybil resistance mechanisms and block author selectors, they are a way to decide who is the author of the latest block. It's this mechanism combined with at least a chain selection rule that makes up a true consensus mechanism.
 
@@ -80,14 +80,14 @@ The combination of PoW and longest chain rule is known as "Nakamoto Consensus."
 
 Eth2 (the [beacon chain](/eth2/beacon-chain/)) uses a consensus mechanism called [Casper the Friendly Finality Gadget](https://arxiv.org/abs/1710.09437), which is PoS based.
 
-## Further Reading {#further-reading}
+## Further reading {#further-reading}
 
 - [What is Nakamoto Consensus? Complete Beginner’s Guide](https://blockonomi.com/nakamoto-consensus/)
 - [On the Security and Performance of Proof of Work Blockchains](https://eprint.iacr.org/2016/555.pdf)
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
-## Related Topics {#related-topics}
+## Related topics {#related-topics}
 
 - [Proof of work](/developers/docs/consensus-mechanisms/pow/)
 - [Mining](/developers/docs/consensus-mechanisms/pow/mining/)

@@ -40,7 +40,7 @@ High-level explanations of Ethereum and blockchain technology generally.
 - [Understanding Ethereum](https://allan-gulley.medium.com/understanding-ethereum-819c2096b613?sk=c89f3aa5a4fd8b5fa0dae3042a3fa011) _Apr 27, 2021 - Allan Gulley_
 - [Ethereum's original Whitepaper](/whitepaper/)
 
-## Smart Contracts {#smart-contracts}
+## Smart contracts {#smart-contracts}
 
 A “smart contract” is simply a piece of code that is running on Ethereum. It’s called a “contract” because code that runs on Ethereum can control valuable things like ETH or other digital assets.
 
@@ -52,7 +52,7 @@ A “smart contract” is simply a piece of code that is running on Ethereum. It
 
 Aspiring Ethereum developer? Check out our developer portal. It's got documentation, tutorials, and other resources for learning how to build Ethereum products. [View developer portal](/developers/learning-tools/)
 
-## Proof of Work and Mining {#proof-of-work-and-mining}
+## Proof-of-work and Mining {#proof-of-work-and-mining}
 
 Ethereum currently uses a system called "Proof of Work". This allows the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain, and prevents certain kinds of economic attacks.
 
@@ -75,7 +75,7 @@ Enterprise Ethereum refers to private, consortium, and hybrid implementations of
 
 Read more about [Enterprise Ethereum](/enterprise/).
 
-## Improving Ethereum’s Scalability {#improving-ethereums-scalability}
+## Improving Ethereum’s scalability {#improving-ethereums-scalability}
 
 There are many efforts underway to make Ethereum more “scalable” by improving its speed and overall transaction throughput. Generally these are sorted into “Layer 1” and “Layer 2” solutions.
 

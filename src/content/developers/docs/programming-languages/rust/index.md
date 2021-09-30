@@ -1,5 +1,5 @@
 ---
-title: Ethereum for Rust Developers
+title: Ethereum for Rust developers
 description: Learn how to develop for Ethereum using rust-based projects and tooling
 lang: en
 sidebar: true
@@ -10,7 +10,7 @@ incomplete: true
 
 Use Ethereum to create decentralized applications (or "dapps") that utilize the benefits of cryptocurrency and blockchain technology. These dapps can be trustworthy, meaning that once they are deployed to Ethereum, they will always run as programmed. They can control digital assets in order to create new kinds of financial applications. They can be decentralized, meaning that no single entity or person controls them and are nearly impossible to censor.
 
-## Getting Started with Smart Contracts and the Solidity Language {#getting-started-with-smart-contracts-and-solidity}
+## Getting started with smart contracts and the Solidity language {#getting-started-with-smart-contracts-and-solidity}
 
 **Take your first steps to integrating Rust with Ethereum**
 
@@ -30,14 +30,14 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Setting up your Oasis SDK dev environment](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
 - [A step-by-step tutorial on how to write contracts in rust Wasm for Kovan](https://github.com/paritytech/pwasm-tutorial)
 
-## Intermediate Articles {#intermediate-articles}
+## Intermediate articles {#intermediate-articles}
 
 - [Rust-Web3 Documentation](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Rust-Web3 Working Examples](https://github.com/tomusdrw/rust-web3/blob/master/examples)
 - [Creating a Secret Ballot with OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
 - [Creating a Private Chat Server with OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
-## Advanced Use Patterns {#advanced-use-patterns}
+## Advanced use patterns {#advanced-use-patterns}
 
 - [pwasm_ethereum externs library to interact with Ethereum-like network](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
 - [Build A Decentralized Chat Using JavaScript and Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
@@ -46,7 +46,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [An Intro to Secret Contracts](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
 - [Deploying Solidity Contracts on Oasis (Compound)](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)
 
-## Rust Projects and Tools {#rust-projects-and-tools}
+## Rust projects and tools {#rust-projects-and-tools}
 
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Collection of externs to interact with ethereum-like network._
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/)
@@ -59,7 +59,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 Looking for more resources? Check out [ethereum.org/developers.](/developers/)
 
-## Rust Community Contributors {#rust-community-contributors}
+## Rust community contributors {#rust-community-contributors}
 
 - [Ethereum WebAssembly](https://gitter.im/ewasm/Lobby)
 - [Oasis Gitter](https://gitter.im/Oasis-official/Lobby)

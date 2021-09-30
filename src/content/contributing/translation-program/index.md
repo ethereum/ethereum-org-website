@@ -134,7 +134,7 @@ To keep up-to-date with the latest Translation Program progress, you can follow 
 - [July 2020 milestones update](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
 - [August 2019 Translation Program launch](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
 
-## Ethereum Staking Launchpad Translations {#staking-launchpad}
+## Ethereum Staking Launchpad translations {#staking-launchpad}
 
 Our translation community is also working on the [Staking Launchpad](https://launchpad.ethereum.org/en/). This allows anyone to set up an Ethereum validator and help secure the Ethereum network. The Launchpad is currently live in 17 languages.
 

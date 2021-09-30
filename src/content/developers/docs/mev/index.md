@@ -89,13 +89,13 @@ Searchers who are just getting started may be able to find more success by searc
 
 MEV is not all bad — there are both positive and negative consequences to MEV on Ethereum.
 
-### The Good {#effects-of-mev-the-good}
+### The good {#effects-of-mev-the-good}
 
 Many DeFi projects rely on economically rational actors to ensure the usefulness and stability of their protocols. For instance, DEX arbitrage ensures that users get the best, most correct prices for their tokens, and lending protocols rely on speedy liquidations when borrowers fall below collateralization ratios to ensure lenders get paid back.
 
 Without rational searchers seeking and fixing economic inefficiencies and taking advantage of protocols' economic incentives, DeFi protocols and dapps in general may not be as robust as they are today.
 
-### The Bad {#effects-of-mev-the-bad}
+### The bad {#effects-of-mev-the-bad}
 
 At the application layer, some forms of MEV, like sandwich trading, result in an unequivocally worse experience for users. Users who are sandwiched face increased slippage and worse execution on their trades.
 
