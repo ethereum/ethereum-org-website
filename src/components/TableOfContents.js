@@ -342,7 +342,7 @@ const TableOfContents = ({
     )
   }
 
-  const shouldShowEditButtom = editPath && editPath.length > 0
+  const shouldShowEditButtom = !!editPath
   return (
     <Aside className={className}>
       <OuterList>
