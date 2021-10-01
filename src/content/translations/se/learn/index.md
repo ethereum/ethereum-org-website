@@ -62,7 +62,6 @@ Ett "smart kontrakt" är helt enkelt en bit kod som körs på Ethereum. Det kall
 Ethereum använder för närvarande ett system som kallas ”Proof of Work”. Detta gör att Ethereum-nätverket kan komma överens om tillståndet för all information registrerad på Ethereum blockchain och förhindrar vissa typer av ekonomiska attacker.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Uppdateras ofta - Ethhub_
-- [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 I ETH 2.0 kommer Ethereum att flytta till ett annat system som kallas “Proof of Stake”. [Läs mer om ETH 2.0 nedan](#eth-2-0).
 

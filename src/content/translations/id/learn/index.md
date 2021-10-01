@@ -62,7 +62,6 @@ Penjelasan tingkat lanjut mengenai Ethereum dan teknologi blockchain secara umum
 Ethereum sekarang menggunakan sebuah sistem yang dikenal sebagai “Proof of Work”. Hal ini membuat jaringan Ethereum untuk bisa setuju mengenai seluruh status informasi yang dicatat di blockchain Ethereum, dan mencegah serangan tertentu terhadap blockchain.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Sering diupdate - Ethhub_
-- [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 Di ETH 2.0, Ethereum akan pindah ke sistem baru bernama “Proof of Stake”. [Baca lebih lanjut mengenai ETH 2.0 di bawah](#eth-2-0).
 
