@@ -228,7 +228,7 @@ const GetInvolvedPage = ({ data, location }) => {
         url: "https://lodestar.chainsafe.io/",
         image: data.lodestar.childImageSharp.fixed,
         githubUrl: "https://github.com/ChainSafe/lodestar",
-        isProductionReady: true,
+        isProductionReady: false,
       },
       {
         name: "Nimbus",
