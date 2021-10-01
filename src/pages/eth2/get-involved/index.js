@@ -240,16 +240,6 @@ const GetInvolvedPage = ({ data, location }) => {
         githubUrl: "https://github.com/status-im/nimbus-eth2",
         isProductionReady: true,
       },
-      // {
-      //   name: "Trinity",
-      //   background: "#0B131E",
-      //   description: <Translation id="page-eth2-get-involved-written-python" />,
-      //   alt: "eth2-client-trinity-logo-alt",
-      //   url: "https://trinity.ethereum.org/",
-      //   image: data.trinity.childImageSharp.fixed,
-      //   githubUrl: "https://github.com/ethereum/trinity",
-      //   isProductionReady: false,
-      // },
     ].sort(() => Math.random() - 0.5)
     setClients(randomizedClients)
   }, [])
