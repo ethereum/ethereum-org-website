@@ -185,6 +185,15 @@ const LearningToolsPage = ({ data }) => {
       background: "#141236",
       subjects: ["Solidity", "web3"],
     },
+    {
+      name: "NFT school",
+      description: "page-learning-tools-nftschool-description",
+      url: "https://nftschool.dev/",
+      image: data.nftschool.childImageSharp.fixed,
+      alt: "page-learning-tools-nftschool-logo-alt",
+      background: "#111F29",
+      subjects: ["Solidity", "web3"],
+    },
   ]
 
   return (
@@ -344,6 +353,9 @@ export const query = graphql`
       ...learningToolImage
     }
     ethdotbuild: file(relativePath: { eq: "dev-tools/eth-dot-build.png" }) {
+      ...learningToolImage
+    }
+    nftschool: file(relativePath: { eq: "dev-tools/nftschool.png" }) {
       ...learningToolImage
     }
     learn: file(relativePath: { eq: "enterprise-eth.png" }) {
