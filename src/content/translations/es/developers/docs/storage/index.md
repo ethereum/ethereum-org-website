@@ -26,12 +26,6 @@ En contraposición a un servidor centralizado gestionado por una sola empresa u 
 - [Documentación](https://github.com/orbitdb/field-manual)
 - [GitHub](https://github.com/orbitdb/orbit-db)
 
-**3Box:** **_Almacenamiento de base de datos IPFS controlado por el usuario para aplicaciones ricas en datos y atractivas. Soporte para perfiles, espacios cifrados y mensajería con complementos adicionales para simplificar el desarrollo._**
-
-- [3Box](https://3box.io)
-- [3Box.js](https://github.com/3box/3box-js)
-- [Plugins de 3Box](https://docs.3box.io/build/plugins)
-
 ## Más lectura {#further-reading}
 
 _¿Conoces algún recurso en la comunidad que te haya servido de ayuda? Edita esta página y añádelo._

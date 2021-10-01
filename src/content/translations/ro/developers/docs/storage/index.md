@@ -26,12 +26,6 @@ Spre deosebire de un server situat central, operat de o singură companie sau or
 - [Documentație](https://github.com/orbitdb/field-manual)
 - [GitHub](https://github.com/orbitdb/orbit-db)
 
-**3Box -** **_stocare de baze de date IPFS controlată de utilizator pentru aplicații bogate în date și atractive. Suport pentru profiluri, spații criptate și mesagerie, cu plug-inuri suplimentare pentru simplificarea dezvoltării._**
-
-- [3Box](https://3box.io)
-- [3Box.js](https://github.com/3box/3box-js)
-- [Plug-inuri 3Box](https://docs.3box.io/build/plugins)
-
 ## Referințe suplimentare {#further-reading}
 
 _Cunoști o resursă comunitară care te-a ajutat? Editează această pagină și adaug-o!_
