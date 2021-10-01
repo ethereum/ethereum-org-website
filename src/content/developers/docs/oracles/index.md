@@ -388,6 +388,7 @@ _We'd love more documentation on creating an oracle smart contract. If you can h
 - [Implementing a Blockchain Oracle on Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_
 - [Why can't smart contracts make API calls?](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) - _StackExchange_
 - [Why we need decentralized oracles](https://newsletter.banklesshq.com/p/why-we-need-decentralized-oracles) - _Bankless_
+- [So you want to use a price oracle](https://samczsun.com/so-you-want-to-use-a-price-oracle/) -_samczsun_
 
 **Videos**
 
