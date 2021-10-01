@@ -77,9 +77,9 @@ incomplete: true
 
 ## .NET 社区贡献者 {#dot-net-community-contributors}
 
-在 Nethereum，我们主要活跃于 [Gitter](https://gitter.im/Nethereum/Nethereum) 上，任何人都可以前来提问/回答问题，获得帮助或者前来逛逛。 您可以自由地在 [Nethereum Github 库](https://github.com/Nethereum)上提交 PR 或者开启问题，或者只是前来浏览我们已有的许多小项目/样本项目。 你可以在[ Discord ](https://discord.gg/jQPrR58FxX)上找到我们！
+在 Nethereum，我们主要活跃于 [Gitter](https://gitter.im/Nethereum/Nethereum) 上，任何人都可以前来提问/回答问题，获得帮助或者前来逛逛。 您可以自由地在 [Nethereum GitHub 库](https://github.com/Nethereum)上提交 PR 或者开启问题，或者只是前来浏览我们已有的许多小项目/样本项目。 你可以在[ Discord ](https://discord.gg/jQPrR58FxX)上找到我们！
 
-在 Nethermind，让我们通过 [Gitter](https://gitter.im/nethermindeth/nethermind) 取得联系。 关于 PR 或者问题，请查看 [Nethermind Github 库](https://github.com/NethermindEth/nethermind)。
+在 Nethermind，让我们通过 [Gitter](https://gitter.im/nethermindeth/nethermind) 取得联系。 关于 PR 或者问题，请查看 [Nethermind GitHub 库](https://github.com/NethermindEth/nethermind)。
 
 ## 其他汇总列表 {#other-aggregated-lists}
 

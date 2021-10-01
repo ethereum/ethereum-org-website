@@ -66,7 +66,7 @@ Decisions about individual PRs, design evolution and major upgrades are made by 
 
 ## New to open-source? {#new-to-open-source}
 
-We have low barrier to entry issues on our Github repository specifically designed for developers who are new to open-source labelled [good first issue](https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
+We have low barrier to entry issues on our GitHub repository specifically designed for developers who are new to open-source labelled [good first issue](https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
 
 ## Claim your contributor POAP {#poap}
 
@@ -76,7 +76,7 @@ If your contribution gets merged into ethereum.org, we'll mint you a unique cont
 
 ### How to claim {#how-to-claim}
 
-1. Join our [Discord server](https://discord.gg/CetY6Y4).
+1. Join our [Discord server](https://discord.gg/E8dET2ux8y).
 2. Paste a link to your contribution in the #poaps-🏆 channel.
 3. Wait for a member of our team to send you a link to your minted POAP.
 4. Claim your POAP!

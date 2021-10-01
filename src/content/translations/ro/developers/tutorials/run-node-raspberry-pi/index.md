@@ -234,7 +234,7 @@ Pentru prima dată, trebuie să creezi manual un cont executând „validatorul�
 
 Am muncit mult încercând să instalăm Raspberry Pi 4 ca un nod complet Ethereum, deoarece știm că imensa bază de utilizare a acestui dispozitiv ar putea avea un impact foarte pozitiv în rețea.
 
-Te rugăm să iei în considerare faptul că aceasta este prima imagine bazată pe Ubuntu 20.04, astfel încât ar putea exista unele erori. Dacă găsești erori, deschide un tichet pe [Github](https://github.com/diglos/pi-gen) sau contactează-ne pe [Twitter](https://twitter.com/EthereumOnARM).
+Te rugăm să iei în considerare faptul că aceasta este prima imagine bazată pe Ubuntu 20.04, astfel încât ar putea exista unele erori. Dacă găsești erori, deschide un tichet pe [GitHub](https://github.com/diglos/pi-gen) sau contactează-ne pe [Twitter](https://twitter.com/EthereumOnARM).
 
 ## Referințe {#references}
 

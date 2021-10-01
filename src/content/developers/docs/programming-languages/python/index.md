@@ -10,7 +10,7 @@ incomplete: true
 
 Use Ethereum to create decentralized applications (or "dapps") that utilize the benefits of cryptocurrency and blockchain technology. These dapps can be trustworthy, meaning that once they are deployed to Ethereum, they will always run as programmed. They can control digital assets in order to create new kinds of financial applications. They can be decentralized, meaning that no single entity or person controls them and are nearly impossible to censor.
 
-## Getting Started with Smart Contracts and the Solidity Language {#getting-started-with-smart-contracts-and-solidity}
+## Getting started with smart contracts and the Solidity language {#getting-started-with-smart-contracts-and-solidity}
 
 **Take your first steps to integrating Python with Ethereum**
 
@@ -30,7 +30,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Intro to Web3.py · Ethereum For Python Developers](https://www.dappuniversity.com/articles/web3-py-intro)
 - [How to call a Smart Contract function using Python and web3.py](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
 
-## Intermediate Articles {#intermediate-articles}
+## Intermediate articles {#intermediate-articles}
 
 - [Dapp Development for Python Programmers](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
 - [Creating a Python Ethereum Interface: Part 1](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
@@ -38,13 +38,13 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Using Brownie and Python to deploy Smart Contracts](https://dev.to/patrickalphac/using-brownie-for-to-deploy-smart-contracts-1kkp)
 - [Creating NFTs on OpenSea with Brownie](https://www.freecodecamp.org/news/how-to-make-an-nft-and-render-on-opensea-marketplace/)
 
-## Advanced Use Patterns {#advanced-use-patterns}
+## Advanced use patterns {#advanced-use-patterns}
 
 - [Compiling, deploying and calling Ethereum smartcontract using Python](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
 - [Analyze Solidity Smart Contracts with Slither](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 - [Blockchain Fintech Tutorial: Lending and Borrowing With Python](https://blog.chain.link/blockchain-fintech-defi-tutorial-lending-borrowing-python/)
 
-## Python Projects and Tools {#python-projects-and-tools}
+## Python projects and tools {#python-projects-and-tools}
 
 ### Active:
 
@@ -60,8 +60,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [pydevp2p](https://github.com/ethereum/pydevp2p) - _implementation of the Ethereum P2P stack_
 - [pymaker](https://github.com/makerdao/pymaker) - _Python API for Maker contracts_
 
-
-### Archived / No Longer Maintained:
+### Archived / No longer maintained:
 
 - [Trinity](https://github.com/ethereum/trinity) - _Ethereum Python client_
 
@@ -69,7 +68,7 @@ Looking for more resources? Check out [ethereum.org/developers](/developers/).
 
 ## Projects using Python tooling
 
-Here are some Ethereum based projects that use tools mentioned on this page. You can look the open source repositories for example code and best practices.
+The following Ethereum-based projects use tools mentioned on this page. The related open-source repositories serve as a good reference for example code and best practices.
 
 - [Yearn Finance](https://yearn.finance/) and [Yearn Vault Contracts repository](https://github.com/yearn/yearn-vaults)
 - [Curve](https://curve.fi/) and [Curve smart contracts repository](https://github.com/curvefi/curve-contract)
@@ -77,9 +76,9 @@ Here are some Ethereum based projects that use tools mentioned on this page. You
 
 ## Python Community Contributors {#python-community-contributors}
 
-- [Ethereum Python Community Discord](https://discord.gg/9zk7snTfWe)
+The [Ethereum Python Community Discord](https://discord.gg/9zk7snTfWe) is host to a rapidly growing community and is the dedicated
+resource for discussions on any of the above projects and related topics.
 
-## Other Aggregated Lists {#other-aggregated-lists}
+## Other aggregated lists {#other-aggregated-lists}
 
-The Vyper wiki has an [incredible list of resources for Vyper](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources)  
-For a compiled source of Python related tools, check out [py-eth.com](http://py-eth.com/).
+The Vyper wiki has an [incredible list of resources for Vyper](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources)

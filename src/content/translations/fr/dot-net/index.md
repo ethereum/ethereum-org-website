@@ -80,9 +80,9 @@ Vous cherchez davantage de ressources ? Consultez [ethereum.org/developers.](/fr
 
 ## Contributeurs de la communauté .NET {#dot-net-community-contributors}
 
-Chez Nethereum, on traine principalement sur [Gitter](https://gitter.im/Nethereum/Nethereum) où tout le monde est le bienvenu pour poser/répondre à des questions, obtenir de l'aide ou tout simplement se détendre. N'hésitez pas à faire une PR ou à ouvrir un ticket sur le dépôt [Nethereum Github](https://github.com/Nethereum), ou simplement pour parcourir les nombreux projets / exemples que nous avons.
+Chez Nethereum, on traine principalement sur [Gitter](https://gitter.im/Nethereum/Nethereum) où tout le monde est le bienvenu pour poser/répondre à des questions, obtenir de l'aide ou tout simplement se détendre. N'hésitez pas à faire une PR ou à ouvrir un ticket sur le dépôt [Nethereum GitHub](https://github.com/Nethereum), ou simplement pour parcourir les nombreux projets / exemples que nous avons.
 
-Retrouvez Nethermin sur [Gitter](https://gitter.im/nethermindeth/nethermind). Pour les PR ou les problèmes, consultez le dépôt [Nethermind Github](https://github.com/NethermindEth/nethermind).
+Retrouvez Nethermin sur [Gitter](https://gitter.im/nethermindeth/nethermind). Pour les PR ou les problèmes, consultez le dépôt [Nethermind GitHub](https://github.com/NethermindEth/nethermind).
 
 ## Autres listes de ressources {#other-aggregated-lists}
 

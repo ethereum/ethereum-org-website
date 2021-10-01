@@ -135,7 +135,7 @@ And the full documentation can be seen here: https://thegraph.com/docs/define-a-
 ```yaml
 specVersion: 0.0.1
 description: Placing Bets on Ethereum
-repository: - Github link -
+repository: - GitHub link -
 schema:
   file: ./schema.graphql
 dataSources:

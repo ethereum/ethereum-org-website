@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-## Ethereum security and scam prevention {#introduction}
+# Ethereum security and scam prevention {#introduction}
 
 With interest in cryptocurrencies growing, learning best practices when using cryptocurrency is essential. Crypto can be fun and exciting, but there are also serious risks. If you put in this small amount of upfront work, you can mitigate these risks.
 

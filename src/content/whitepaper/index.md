@@ -29,7 +29,7 @@ assets such as domain names ([Namecoin](http://namecoin.org)), as well
 as more complex applications involving having digital assets being
 directly controlled by a piece of code implementing arbitrary rules
 ([smart contracts](http://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/idea.html))
-or even blockchain-based [decentralized autonomous organizations](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/)
+or even blockchain-based [decentralized autonomous organizations](https://bitcoinmagazine.com/technical/bootstrapping-a-decentralized-autonomous-corporation-part-i-1379644274)
 (DAOs). What Ethereum intends to provide is a blockchain with a built-in
 fully fledged Turing-complete programming language that can be used to
 create "contracts" that can be used to encode arbitrary state transition
@@ -524,12 +524,12 @@ principles:
     make a small protocol modification in one place, the application
     stack would continue to function without any further modification.
     Innovations such as Ethash (see the [Yellow Paper Appendix](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.J)
-    or [wiki article](https://github.com/ethereum/wiki/wiki/Ethash)),
+    or [wiki article](https://eth.wiki/en/concepts/ethash/ethash)),
     modified Patricia trees ([Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.D),
     [wiki](https://eth.wiki/en/fundamentals/patricia-tree))
     and RLP
     ([YP](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.B),
-    [wiki](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP))
+    [wiki](https://eth.wiki/en/fundamentals/rlp))
     should be, and are, implemented as separate, feature-complete
     libraries. This is so that even though they are used in Ethereum,
     even if Ethereum does not require certain features, such features
@@ -959,8 +959,7 @@ file storage startups, the most prominent being Dropbox, seeking to
 allow users to upload a backup of their hard drive and have the service
 store the backup and allow the user to access it in exchange for a
 monthly fee. However, at this point the file storage market is at times
-relatively inefficient; a cursory look at various [existing
-solutions](http://online-storage-service-review.toptenreviews.com/)
+relatively inefficient; a cursory look at various existing solutions 
 shows that, particularly at the "uncanny valley" 20-200 GB level at
 which neither free quotas nor enterprise-level discounts kick in,
 monthly prices for mainstream file storage costs are such that you are

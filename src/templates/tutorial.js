@@ -159,10 +159,9 @@ const Contributors = styled(FileContributors)`
 `
 
 const TutorialPage = ({ data, pageContext }) => {
-  const intl = useIntl()
-  const isRightToLeft = isLangRightToLeft(intl.locale)
-
   const pageData = data.pageData
+  const isRightToLeft = isLangRightToLeft(pageData.frontmatter.lang)
+
   const tocItems = pageData.tableOfContents.items
 
   const { editContentUrl } = data.siteData.siteMetadata
@@ -217,6 +216,7 @@ export const query = graphql`
       frontmatter {
         title
         description
+        lang
         tags
         author
         source
