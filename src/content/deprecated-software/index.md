@@ -61,7 +61,7 @@ We recommend using [Remix](https://remix.ethereum.org/#optimize=false&runs=200&e
 ### Parity {#parity}
 
 <p align="center">
-  <img width="460" height="300" src="https://github.com/openethereum/parity-ethereum/blob/v2.7.2-stable/docs/logo-parity-ethereum.svg">
+  <img width="460" height="300" src="https://raw.githubusercontent.com/openethereum/parity-ethereum/v2.7.2-stable/docs/logo-parity-ethereum.svg"/>
 </p>
 
 ### Trinity {#trinity}
