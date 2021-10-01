@@ -143,7 +143,6 @@ const ContributorsButton = styled(ButtonSecondary)`
   }
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-top: 1rem;
-    margin-right: 0.5rem;
     margin-bottom: 0.5rem;
     justify-content: center;
   }
