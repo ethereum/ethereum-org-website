@@ -77,7 +77,7 @@ Cerchi altre risorse? Dai un'occhiata a [ethereum.org/developers](/en/developers
 
 ## Collaboratori della community .NET {#dot-net-community-contributors}
 
-Per Nethereum, scambiamo opinioni per lo più su [Gitter](https://gitter.im/Nethereum/Nethereum), dove tutti possono chiedere o rispondere a domande, cercare aiuto o semplicemente consultare informazioni. Inserisci Fai pure una PR o apri una segnalazione sul [repository Github di Nethereum](https://github.com/Nethereum), oppure semplicemente sfoglia i molti progetti disponibili. Ci trovi anche su [Discord](https://discord.gg/jQPrR58FxX)!
+Per Nethereum, scambiamo opinioni per lo più su [Gitter](https://gitter.im/Nethereum/Nethereum), dove tutti possono chiedere o rispondere a domande, cercare aiuto o semplicemente consultare informazioni. Inserisci Fai pure una PR o apri una segnalazione sul [repository GitHub di Nethereum](https://github.com/Nethereum), oppure semplicemente sfoglia i molti progetti disponibili. Ci trovi anche su [Discord](https://discord.gg/jQPrR58FxX)!
 
 Per Nethermind, ci mettiamo in contatto tramite [Gitter](https://gitter.im/nethermindeth/nethermind). Per PR o segnalazioni, dai un'occhiata al [repository GitHub di Nethermind](https://github.com/NethermindEth/nethermind).
 

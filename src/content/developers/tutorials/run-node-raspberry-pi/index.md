@@ -236,7 +236,7 @@ The first time, you need to create manually an account by running the “validat
 
 We put a lot of work trying to setup the Raspberry Pi 4 as a full Ethereum node as we know the massive user base of this device may have a very positive impact in the network.
 
-Please, take into account that this is the first image based on Ubuntu 20.04 so there may be some bugs. If so, open an issue on [Github](https://github.com/diglos/pi-gen) or reach us on [Twitter](https://twitter.com/EthereumOnARM).
+Please, take into account that this is the first image based on Ubuntu 20.04 so there may be some bugs. If so, open an issue on [GitHub](https://github.com/diglos/pi-gen) or reach us on [Twitter](https://twitter.com/EthereumOnARM).
 
 ## References {#references}
 

@@ -81,9 +81,9 @@ Reikia daugiau išteklių? Apsilankykite [ethereum.org/developers.](/developers/
 
 ## .NET bendruomenės bendraautoriai {#dot-net-community-contributors}
 
-Nethereum platformoje daugiausiai bendraujame per [Gitter](https://gitter.im/Nethereum/Nethereum), kur kiekvienas gali užduoti klausimą arba atsakyti į kitų klausimus, gauti pagalbos ar tiesiog praleisti laiką. Drąsiai atlikite PR ar iškelkite klausimą [Nethereum Github duomenų saugykloje](https://github.com/Nethereum) ar tiesiog peržvelkite daugybę mūsų sukurtų šalutinių ar pavyzdinių projektų.
+Nethereum platformoje daugiausiai bendraujame per [Gitter](https://gitter.im/Nethereum/Nethereum), kur kiekvienas gali užduoti klausimą arba atsakyti į kitų klausimus, gauti pagalbos ar tiesiog praleisti laiką. Drąsiai atlikite PR ar iškelkite klausimą [Nethereum GitHub duomenų saugykloje](https://github.com/Nethereum) ar tiesiog peržvelkite daugybę mūsų sukurtų šalutinių ar pavyzdinių projektų.
 
-Apsilankykite Nethermind ir susisiekite su mumis per [Gitter](https://gitter.im/nethermindeth/nethermind). Dėl PR arba klausimų apsilankykite [Nethermind Github duomenų saugykloje](https://github.com/NethermindEth/nethermind).
+Apsilankykite Nethermind ir susisiekite su mumis per [Gitter](https://gitter.im/nethermindeth/nethermind). Dėl PR arba klausimų apsilankykite [Nethermind GitHub duomenų saugykloje](https://github.com/NethermindEth/nethermind).
 
 ## Kiti suvestiniai sąrašai {#other-aggregated-lists}
 

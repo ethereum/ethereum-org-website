@@ -29,7 +29,7 @@ sidebar: true
 **সলিডিটি -** **_ইথেরিয়ামে সবচেয়ে জনপ্রিয় ল্যাঙ্গুয়েজ, জাভাস্ক্রিপ্ট দ্বারা অনুপ্রাণিত_**
 
 - [ডকুমেন্টেশন](https://solidity.readthedocs.io)
-- [Github](https://github.com/ethereum/solidity/)
+- [GitHub](https://github.com/ethereum/solidity/)
 - [সলিডিটি গিটার চ্যাটরুম](https://gitter.im/ethereum/solidity/)
 
 **ট্রাফল-** **_নোড-এর সাথে নির্মিত একটি ডেভেলপমেন্ট এনভায়রনমেন্ট ও টেস্টিং ফ্রেমওয়ার্ক_**

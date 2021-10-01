@@ -81,9 +81,9 @@ sidebarDepth: 1
 
 ## .NET コミュニティコントリビューター {#dot-net-community-contributors}
 
-Netherum では、主に[Gitter](https://gitter.im/Nethereum/Nethereum)で議論しており、質問や回答を歓迎する他、助けを求めたり、ゆっくりしたりしてください。 [Nethereum の Github リポジトリ](https://github.com/Nethereum)で PR をしたり、issue を立てたりすることもできますし、私たちが持つ多くのサイドプロジェクトやサンプルプロジェクトを閲覧することもできます。
+Netherum では、主に[Gitter](https://gitter.im/Nethereum/Nethereum)で議論しており、質問や回答を歓迎する他、助けを求めたり、ゆっくりしたりしてください。 [Nethereum の GitHub リポジトリ](https://github.com/Nethereum)で PR をしたり、issue を立てたりすることもできますし、私たちが持つ多くのサイドプロジェクトやサンプルプロジェクトを閲覧することもできます。
 
-Nethermind では、[Gitter](https://gitter.im/nethermindeth/nethermind)を通じて連絡を取り合いましょう。 PR や issue については、[Nethermind の Github リポジトリ](https://github.com/NethermindEth/nethermind)をチェックしてください。
+Nethermind では、[Gitter](https://gitter.im/nethermindeth/nethermind)を通じて連絡を取り合いましょう。 PR や issue については、[Nethermind の GitHub リポジトリ](https://github.com/NethermindEth/nethermind)をチェックしてください。
 
 ## 他のリスト {#other-aggregated-lists}
 

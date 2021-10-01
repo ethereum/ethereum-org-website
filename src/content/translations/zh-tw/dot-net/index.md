@@ -80,9 +80,9 @@ sidebar: true
 
 ## .NET 社區貢獻者 {#dot-net-community-contributors}
 
-在 Nethereum，我們主要活躍於[Gitter](https://gitter.im/Nethereum/Nethereum) 上，任何人都可以前來提問/回答問題，獲得幫助或者前來逛逛。 您可以自由地在 [Nethereum Github 庫](https://github.com/Nethereum)上提交 PR 或者開啟問題。或者只是前來瀏覽我們已有的許多小項目/樣本項目。
+在 Nethereum，我們主要活躍於[Gitter](https://gitter.im/Nethereum/Nethereum) 上，任何人都可以前來提問/回答問題，獲得幫助或者前來逛逛。 您可以自由地在 [Nethereum GitHub 庫](https://github.com/Nethereum)上提交 PR 或者開啟問題。或者只是前來瀏覽我們已有的許多小項目/樣本項目。
 
-在 Nethermind，讓我們通過 [Gitter](https://gitter.im/nethermindeth/nethermind) 取得聯繫。 關於 PR 或者問題，請查看 [Nethermind Github 庫](https://github.com/NethermindEth/nethermind)。
+在 Nethermind，讓我們通過 [Gitter](https://gitter.im/nethermindeth/nethermind) 取得聯繫。 關於 PR 或者問題，請查看 [Nethermind GitHub 庫](https://github.com/NethermindEth/nethermind)。
 
 ## 其他匯總列表 {#other-aggregated-lists}
 

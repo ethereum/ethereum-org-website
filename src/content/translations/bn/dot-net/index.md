@@ -80,9 +80,9 @@ Looking for more resources? ক্লিক করুন [ethereum.org/developer
 
 ## .NET Community Contributors {#dot-net-community-contributors}
 
-At Nethereum, we mostly hang out on [Gitter](https://gitter.im/Nethereum/Nethereum) where everyone is welcome to ask/answer questions, get help, or just chill. Feel free to do a PR or open an issue on the [Nethereum Github repository](https://github.com/Nethereum), or just to browse through the many side/sample projects we have.
+At Nethereum, we mostly hang out on [Gitter](https://gitter.im/Nethereum/Nethereum) where everyone is welcome to ask/answer questions, get help, or just chill. Feel free to do a PR or open an issue on the [Nethereum GitHub repository](https://github.com/Nethereum), or just to browse through the many side/sample projects we have.
 
-At Nethermind, let's get in touch through [Gitter](https://gitter.im/nethermindeth/nethermind). For PRs or issues, check out the [Nethermind Github repository](https://github.com/NethermindEth/nethermind).
+At Nethermind, let's get in touch through [Gitter](https://gitter.im/nethermindeth/nethermind). For PRs or issues, check out the [Nethermind GitHub repository](https://github.com/NethermindEth/nethermind).
 
 ## Other Aggregated Lists {#other-aggregated-lists}
 

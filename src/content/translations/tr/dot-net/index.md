@@ -80,9 +80,9 @@ Daha fazla kaynak için Göz at [ethereum.org/developers.](/tr/developers/)
 
 ## .NET Toplumu Katkıda Bulunanları {#dot-net-community-contributors}
 
-Nethereum'da, biz çoğu zaman [Gitter](https://gitter.im/Nethereum/Nethereum) da zaman geçiriyoruz. Burası herkesin kabul edildiği, soru ve cevaplar yazabildiği, yardım alabildiği veya sadece kafa dağıttığı bir yerdir. Feel free to do a PR or open an issue on the [Nethereum Github repository](https://github.com/Nethereum), or just to browse through the many side/sample projects we have.
+Nethereum'da, biz çoğu zaman [Gitter](https://gitter.im/Nethereum/Nethereum) da zaman geçiriyoruz. Burası herkesin kabul edildiği, soru ve cevaplar yazabildiği, yardım alabildiği veya sadece kafa dağıttığı bir yerdir. Feel free to do a PR or open an issue on the [Nethereum GitHub repository](https://github.com/Nethereum), or just to browse through the many side/sample projects we have.
 
-At Nethermind, let's get in touch through [Gitter](https://gitter.im/nethermindeth/nethermind). For PRs or issues, check out the [Nethermind Github repository](https://github.com/NethermindEth/nethermind).
+At Nethermind, let's get in touch through [Gitter](https://gitter.im/nethermindeth/nethermind). For PRs or issues, check out the [Nethermind GitHub repository](https://github.com/NethermindEth/nethermind).
 
 ## Other Aggregated Lists {#other-aggregated-lists}
 
