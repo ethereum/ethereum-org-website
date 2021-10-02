@@ -63,7 +63,6 @@ sidebarDepth: 1
 イーサリアムは現在 Proof of Work と呼ばれるシステムを使用しています。 これによってイーサリアムブロックチェーンに記録された全ての情報の状態に関してネットワーク全体で合意を取り、経済的な攻撃を防ぐことができます。
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _頻繁にアップデートあり - Ethhub_
-- [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 ETH 2.0 ではイーサリアムは「Proof of Stake」という別のシステムに移行します。 [ETH 2.0 については下部で学ぶことができます](./#eth-2-0)。
 

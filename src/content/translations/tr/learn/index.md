@@ -62,7 +62,6 @@ Bir "Akıllı sözleşme" basitçe Ethereum üzerinde çalışan bir kod parçac
 Ethereum şuanda "Çalışma Kanıtı (Proof of Work)" adında bir sistem kullanmaktadır. Bu Ethereum ağına bütün bilgilerin kaydedilmesine olanak sağlamaktadır, ve bu sayede türlü ekonomik saldırıların önüne geçmektedir.
 
 - [Ethereum madeni ne demek?](https://docs.ethhub.io/using-ethereum/mining/) _ Sık sık güncellenen - Ethhub_
-- [Ethereum Mining Nasıl Çalışır?](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 ETH 2.0'da, Ethereum “Bahis Kanıt” adı verilen farklı bir sisteme geçecek. [Aşağıda ETH 2.0 hakkında devamını oku](#eth-2-0)
 

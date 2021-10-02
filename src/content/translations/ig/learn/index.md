@@ -56,8 +56,8 @@ Na mgbakwunye na ozi dị na peeji a, enwere ọtụtụ ihe enyere obodo aka kw
   Ethereum ugbu a na-eji usoro akpọrọ “Ihe akaebe nke Oru”. Nke a na-enye ohere ka netwọk Ethereum kwenye na steeti ozi niile edekọtara na blockchain Ethereum, ma gbochie ụdị mwakpo akụ na ụba.
 
   - [Kedu ihe ọ pụtara ekwuputa Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Emelitere ohuru ọtụtụ mgbe - Ethhub_
-  - [Ka Ngwuputa Ethereum si arụ ọrụ](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
-    Na ETH 2.0, Ethereum ga aga na sistemụ dị iche akpọrọ “Ihe akaebe nke Ntinye ego”. [Gụkwuo banyere ETH 2.0 n'okpuru](#eth-2-0).
+
+  Na ETH 2.0, Ethereum ga aga na sistemụ dị iche akpọrọ “Ihe akaebe nke Ntinye ego”. [Gụkwuo banyere ETH 2.0 n'okpuru](#eth-2-0).
 
   ## Ndị ahịa na Ebe nzuko {#clients-and-nodes}
 

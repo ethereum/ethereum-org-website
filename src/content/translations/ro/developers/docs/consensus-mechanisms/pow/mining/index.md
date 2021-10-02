@@ -44,7 +44,6 @@ Urmărește cum Austin te ghidează prin minerit și blockchain-ul de dovadă a 
 ## Referințe suplimentare {#further-reading}
 
 - [Ce înseamnă pentru mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
-- [Cum funcționează mineritul Ethereum](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 ## Instrumente corelate {#related-tools}
 

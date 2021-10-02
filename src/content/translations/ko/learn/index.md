@@ -63,7 +63,6 @@ sidebarDepth: 1
 이더리움은 현재 “작업 증명(Proof of Work)”이라는 시스템을 사용하고 있습니다. 이 시스템은 이더리움 블록체인에 기록되는 모든 정보의 상태에 대해 이더리움 네트워크가 합의에 이를 수 있도록 하며, 51% 공격과 같은 네트워크에 대한 특정 유형의 공격을 방지합니다.
 
 - [이더리움을 채굴한다는 것은 어떤 의미인가?](https://docs.ethhub.io/using-ethereum/mining/) _자주 갱신됨 - Ethhub_
-- [이더리움 채굴의 작동 원리](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 이더리움은 ETH 2.0을 통해 지분 증명(Proof of Stake) 시스템으로 전환될 예정입니다. [ETH 2.0에 대해 자세히 알아보기](./#eth-2-0).
 

@@ -46,7 +46,6 @@ incomplete: true
 ## 延伸阅读 {#further-reading}
 
 - [挖矿是什么意思？](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
-- [挖矿是怎么工作的](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 ## 相关工具 {#related-tools}
 

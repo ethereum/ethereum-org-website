@@ -56,7 +56,6 @@ sidebar: true
 В настоящее время Ethereum использует систему подтверждения транзакций под названием «Доказательство работы». Она позволяет сети Ethereum согласовать состояние всей информации, зарегистрированной в блокчейне Ethereum, а также предотвращает некоторые виды экономических атак.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Updated often - Ethhub_
-- [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 В ETH 2.0 Ethereum перейдет на другую систему под названием «Доказательство доли владения». [Вы можете больше узнать о ETH 2.0 ниже](#eth-2-0).
 
