@@ -186,7 +186,7 @@ const LearningToolsPage = ({ data }) => {
       subjects: ["Solidity", "web3"],
     },
     {
-      name: "NFT school",
+      name: "NFT School",
       description: "page-learning-tools-nftschool-description",
       url: "https://nftschool.dev/",
       image: data.nftschool.childImageSharp.fixed,
