@@ -10,6 +10,7 @@ import { lightTheme, darkTheme, GlobalStyle } from "../theme"
 
 import Footer from "./Footer"
 import ReleaseBanner from "./ReleaseBanner"
+import VisuallyHidden from "./VisuallyHidden"
 import Nav from "./Nav"
 import SideNav from "./SideNav"
 import SideNavMobile from "./SideNavMobile"
@@ -58,7 +59,7 @@ const Layout = (props) => {
   const [isZenMode, setIsZenMode] = useState(false)
   const [shouldShowSideNav, setShouldShowSideNav] = useState(false)
 
-  // set isDarkTheme and zenMode based on browser/app user preferences
+  // set isDarkTheme and isZenMode based on browser/app user preferences
   useEffect(() => {
     if (localStorage) {
       if (localStorage.getItem("dark-theme") !== null) {
@@ -129,16 +130,20 @@ const Layout = (props) => {
               originalPagePath={intl.originalPath}
             />
             <ContentContainer isZenMode={isZenMode}>
-              {!isZenMode && (
+              <VisuallyHidden isHidden={isZenMode}>
                 <Nav
                   handleThemeChange={handleThemeChange}
                   isDarkTheme={isDarkTheme}
                   path={path}
                 />
-              )}
+              </VisuallyHidden>
               {shouldShowSideNav && <SideNavMobile path={path} />}
               <MainContainer>
-                {!isZenMode && shouldShowSideNav && <SideNav path={path} />}
+                {shouldShowSideNav && (
+                  <VisuallyHidden isHidden={isZenMode}>
+                    <SideNav path={path} />
+                  </VisuallyHidden>
+                )}
                 <MainContent>
                   <ZenModeContext.Provider
                     value={{ isZenMode, handleZenModeChange }}
