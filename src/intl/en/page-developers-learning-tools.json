@@ -35,5 +35,7 @@
   "page-learning-tools-sandbox-desc": "These sandboxes will give you a space to experiment with writing smart contracts and understanding Ethereum.",
   "page-learning-tools-studio-description": "A web-based IDE where you can follow tutorials to create and test smart contracts, and build a frontend for them.",
   "page-learning-tools-vyperfun-description": "Learn Vyper building your own Pokémon game.",
-  "page-learning-tools-vyperfun-logo-alt": "Vyper.fun logo"
+  "page-learning-tools-vyperfun-logo-alt": "Vyper.fun logo",
+  "page-learning-tools-nftschool-description": "Explore what's going on with non-fungible tokens, or NFTs from the technical side.",
+  "page-learning-tools-nftschool-logo-alt": "NFT school Logo"
 }
