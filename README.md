@@ -1158,6 +1158,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://tatum.io/"><img src="https://avatars.githubusercontent.com/u/10884869?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lukáš Kotol</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Hathoriel" title="Documentation">📖</a></td>
     <td align="center"><a href="http://instagram.com/drumnickydrum"><img src="https://avatars.githubusercontent.com/u/25669830?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nick Carbone</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=drumnickydrum" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/Ashwin-exe"><img src="https://avatars.githubusercontent.com/u/58840757?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ashwin Nair</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Ashwin-exe" title="Code">💻</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
