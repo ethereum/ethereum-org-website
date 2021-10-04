@@ -40,7 +40,6 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Developer learning tools](/developers/learning-tools/)
 - [Developer local environment setup](/developers/local-environment/)
 - [Language support](/languages/)
-- [Brand assets](/assets/)
 
 ## Use case pages {#use-case-pages}
 
