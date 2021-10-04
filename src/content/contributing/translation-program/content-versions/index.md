@@ -121,7 +121,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Plasma](/developers/docs/scaling/plasma)
 - [Validium](/developers/docs/scaling/validium/)
 
-## Additional Learn and general Pages {#general-pages}
+## Additional Learn and general pages {#general-pages}
 
 - [About ethereum.org](/about/)
 - [Ethereum Improvement Proposals (EIPs)](/eips/)
