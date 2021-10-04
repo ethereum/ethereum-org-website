@@ -129,6 +129,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Private Ethereum](/enterprise/private-ethereum/)
 - [History](/history/)
 - [Glossary](/glossary/)
+- [Brand assets](/assets/)
 
 ## Developer tutorials {#tutorials}
 
