@@ -52,7 +52,7 @@ Below is a breakdown of the website pages each content bucket contains.
 
 ## Foundational developer docs {#foundational-docs}
 
-- [Introduction README](/developers/docs/)
+- [Overview](/developers/docs/)
 - [Intro to Ethereum](/developers/docs/intro-to-ethereum/)
 - [Intro to ether](/developers/docs/intro-to-ether/)
 - [Intro to dapps](/developers/docs/dapps)
