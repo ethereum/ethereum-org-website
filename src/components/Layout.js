@@ -59,26 +59,26 @@ const Layout = (props) => {
   const [isZenMode, setIsZenMode] = useState(false)
   const [shouldShowSideNav, setShouldShowSideNav] = useState(false)
 
-  // set isDarkTheme and isZenMode based on browser/app user preferences
+  // set isDarkTheme based on browser/app user preferences
   useEffect(() => {
-    if (localStorage) {
-      if (localStorage.getItem("dark-theme") !== null) {
-        setIsDarkTheme(localStorage.getItem("dark-theme") === "true")
-      } else {
-        setIsDarkTheme(
-          window.matchMedia("(prefers-color-scheme: dark)").matches
-        )
-      }
-
-      if (localStorage.getItem("zen-mode") !== null) {
-        setIsZenMode(localStorage.getItem("zen-mode") === "true")
-      }
+    if (localStorage && localStorage.getItem("dark-theme") !== null) {
+      setIsDarkTheme(localStorage.getItem("dark-theme") === "true")
+    } else {
+      setIsDarkTheme(window.matchMedia("(prefers-color-scheme: dark)").matches)
     }
   }, [])
 
   useEffect(() => {
     if (props.path.includes("/docs/")) {
       setShouldShowSideNav(true)
+
+      if (localStorage.getItem("zen-mode") !== null) {
+        const isMobile = document && document.documentElement.clientWidth < 1024
+        setIsZenMode(localStorage.getItem("zen-mode") === "true" && !isMobile)
+      }
+    } else {
+      // zen mode only applicable in /docs pages
+      setIsZenMode(false)
     }
   }, [props.path])
 
@@ -90,9 +90,11 @@ const Layout = (props) => {
   }
 
   const handleZenModeChange = () => {
-    setIsZenMode(!isZenMode)
+    const isMobile = document && document.documentElement.clientWidth < 1024
+    const toggledVal = !isZenMode && !isMobile
+    setIsZenMode(toggledVal)
     if (localStorage) {
-      localStorage.setItem("zen-mode", !isZenMode)
+      localStorage.setItem("zen-mode", toggledVal)
     }
   }
 
@@ -136,8 +138,8 @@ const Layout = (props) => {
                   isDarkTheme={isDarkTheme}
                   path={path}
                 />
+                {shouldShowSideNav && <SideNavMobile path={path} />}
               </VisuallyHidden>
-              {shouldShowSideNav && <SideNavMobile path={path} />}
               <MainContainer>
                 {shouldShowSideNav && (
                   <VisuallyHidden isHidden={isZenMode}>
