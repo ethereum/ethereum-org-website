@@ -39,11 +39,6 @@ Przed zagłębieniem się w frameworki zalecamy przeczytanie naszego wprowadzeni
 - [Dokumentacja](https://docs.epirus.io)
 - [GitHub](https://github.com/epirus-io/epirus-cli)
 
-**Etherlime —** **_struktura oparta na Ethers.js do tworzenia aplikacji dapp (Solidity i Vyper), wdrażanie, debugowanie, testowanie i nie tylko._**
-
-- [Dokumenty](https://etherlime.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/LimeChain/etherlime)
-
 **Hardhat —** **_środowisko programistyczne Ethereum dla profesjonalistów_**
 
 - [hardhat.org](https://hardhat.org)

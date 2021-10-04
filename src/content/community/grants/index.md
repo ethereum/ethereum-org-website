@@ -5,13 +5,13 @@ sidebar: true
 lang: en
 ---
 
-# Ethereum Grants {#ethereum-grants}
+# Ethereum grants {#ethereum-grants}
 
 The programs listed below offer a variety of funding grants for projects working to promote the success and growth of the Ethereum ecosystem. Use this as a guide to find and apply for funds to help make your next Ethereum project a success.
 
 This list is curated by our community. If there's something missing or incorrect, please edit this page!
 
-### Broad Ethereum Ecosystem {#broad-ethereum-ecosystem}
+### Broad Ethereum ecosystem {#broad-ethereum-ecosystem}
 
 These programs support the broad Ethereum ecosystem by offering grants to a wide scope of projects. These include solutions for scalability, community building, security, privacy and more. These grants are not specific to any one Ethereum platform, and are a good place to start if you're unsure.
 
@@ -22,16 +22,15 @@ These programs support the broad Ethereum ecosystem by offering grants to a wide
 - [Moloch DAO](https://www.molochdao.com/) - _Privacy, layer 2 scaling, client security, and more_
 - [Open Grants](https://opengrants.com/explore)
 
-### Project Specific {#project-specific}
+### Project specific {#project-specific}
 
 These projects have created their own grants for projects aimed at developing and experimenting with their own technology.
 
-- [MakerDAO](https://community-development.makerdao.com/en/programs/development-grants/) – _[MakerDAO](https://makerdao.com/en/) development_
-- [TheGraph](https://airtable.com/shreX09LazIhsg0bU) – _[The Graph](https://thegraph.com/) ecosystem_
+- [TheGraph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) ecosystem_
 - [Uniswap](https://airtable.com/shrEXXxXB1humz7VS) – _[Uniswap](https://uniswap.org/) community_
 - [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) – _[Balancer](https://balancer.fi/) Ecosystem Fund_
 
-### Quadratic Funding {#quadratic-funding}
+### Quadratic funding {#quadratic-funding}
 
 The open source roots of Ethereum have led to the growth of an interesting new fundraising model: quadratic funding. This has the potential to improve the way we fund all types of public goods in the future. Quadratic funding makes sure that the projects that receive the most funding are those with the most unique demand. In other words, projects that stand to improve the lives of the most people. [More on quadratic funding.](/defi/#quadratic-funding)
 

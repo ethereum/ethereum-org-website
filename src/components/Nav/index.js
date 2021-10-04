@@ -195,6 +195,10 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           to: "/nft/",
         },
         {
+          text: "ethereum-security",
+          to: "/security/",
+        },
+        {
           text: "history-of-ethereum",
           to: "/history/",
         },

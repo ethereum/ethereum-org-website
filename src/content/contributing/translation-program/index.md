@@ -11,9 +11,9 @@ The Translation Program is a collaborative effort to translate ethereum.org into
 
 Our progress so far:
 
-- **1,900 +** translators
+- **2,000 +** translators
 - **37** languages live on site
-- **1.7 million** words translated in 2021
+- **1.9 million** words translated in 2021
 
 If you want to get involved and help us grow the global Ethereum community by translating the website into your language, follow the steps below!
 
@@ -21,6 +21,26 @@ If you want to get involved and help us grow the global Ethereum community by tr
   Claim your POAP token! If you translated ethereum.org in 2021, there's a unique POAP waiting for you.{" "}
   <a href="https://ethereum.org/en/contributing/#poap">More on POAPs</a>
 </InfoBanner>
+
+## Mission and vision {#mission-and-vision}
+
+The Ethereum community aims to be global and inclusive, yet much of its content only caters to English speakers, leaving out the world's 6 billion non-English speakers. For ethereum.org to act as the portal into Ethereum for the worldwide community, we believe providing non-English speakers with Ethereum content in their native languages is essential.
+
+The ethereum.org Translation Program aims to make Ethereum accessible to everyone by translating ethereum.org and other Ethereum content into as many languages as possible.
+
+**Our mission**
+
+- Provide translated versions of the website to empower visitors worldwide to learn about Ethereum in their native language
+- Facilitate the onboarding of more members to the global Ethereum community
+- Allow for more accessible and more inclusive sharing of Ethereum information and knowledge
+- Empower community members to contribute translations to Ethereum and make their mark on the ecosystem
+- Identify, connect with, and provide guidance to passionate contributors looking to get involved in the ecosystem
+
+**Our vision**
+
+- Translate essential content for members of the Ethereum community from as many countries and parts of the world as possible
+- Support knowledge sharing across languages to create a better informed and educated Ethereum community
+- Increase Ethereum's inclusivity and accessibility by removing the language barriers preventing non-English speakers from joining the ecosystem
 
 ## How to translate {#how-to-translate}
 
@@ -106,7 +126,15 @@ Thank you for your participation in the ethereum.org Translation Program!
 
 - [Content versions](/contributing/translation-program/content-versions/) _– Which pages are included in each content version of ethereum.org_
 
-## Ethereum Staking Launchpad Translations {#staking-launchpad}
+**Latest updates**
+
+To keep up-to-date with the latest Translation Program progress, you can follow the [Ethereum Foundation blog](https://blog.ethereum.org/):
+
+- [December 2020 milestones update](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
+- [July 2020 milestones update](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
+- [August 2019 Translation Program launch](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
+
+## Ethereum Staking Launchpad translations {#staking-launchpad}
 
 Our translation community is also working on the [Staking Launchpad](https://launchpad.ethereum.org/en/). This allows anyone to set up an Ethereum validator and help secure the Ethereum network. The Launchpad is currently live in 17 languages.
 

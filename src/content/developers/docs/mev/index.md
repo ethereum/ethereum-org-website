@@ -77,7 +77,7 @@ However, since NFT transactions happen on the same blockchain shared by all othe
 
 For example, if there's a popular NFT drop and a searcher wants a certain NFT or set of NFTs, they can program a transaction such that they are the first in line to buy the NFT, or they can buy the entire set of NFTs in a single transaction. Or if an NFT is [mistakenly listed at a low price](https://www.theblockcrypto.com/post/113546/mistake-sees-69000-cryptopunk-sold-for-less-than-a-cent), a searcher can frontrun other purchasers and snap it up for cheap.
 
-One prominent example of NFT MEV occurred when a searcher spent $7 million to [buy](https://etherscan.io/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5) every single Cryptopunk at the price floor. A blockchain researcher [explained on Twitter](twitter.com/IvanBogatyy/status/1422232184493121538) how the buyer worked with an MEV provider to keep their purchase secret.
+One prominent example of NFT MEV occurred when a searcher spent $7 million to [buy](https://etherscan.io/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5) every single Cryptopunk at the price floor. A blockchain researcher [explained on Twitter](https://twitter.com/IvanBogatyy/status/1422232184493121538) how the buyer worked with an MEV provider to keep their purchase secret.
 
 ### The long tail {#mev-examples-long-tail}
 
@@ -89,13 +89,13 @@ Searchers who are just getting started may be able to find more success by searc
 
 MEV is not all bad — there are both positive and negative consequences to MEV on Ethereum.
 
-### The Good {#effects-of-mev-the-good}
+### The good {#effects-of-mev-the-good}
 
 Many DeFi projects rely on economically rational actors to ensure the usefulness and stability of their protocols. For instance, DEX arbitrage ensures that users get the best, most correct prices for their tokens, and lending protocols rely on speedy liquidations when borrowers fall below collateralization ratios to ensure lenders get paid back.
 
 Without rational searchers seeking and fixing economic inefficiencies and taking advantage of protocols' economic incentives, DeFi protocols and dapps in general may not be as robust as they are today.
 
-### The Bad {#effects-of-mev-the-bad}
+### The bad {#effects-of-mev-the-bad}
 
 At the application layer, some forms of MEV, like sandwich trading, result in an unequivocally worse experience for users. Users who are sandwiched face increased slippage and worse execution on their trades.
 
@@ -125,3 +125,4 @@ As DeFi grows and increases in popularity, MEV may soon significantly outweigh t
 - [Ethereum is a Dark Forest](https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest/)
 - [Escaping the Dark Forest](https://samczsun.com/escaping-the-dark-forest/)
 - [Flashbots: Frontrunning the MEV Crisis](https://medium.com/flashbots/frontrunning-the-mev-crisis-40629a613752)
+- [@bertcmiller's MEV Threads](https://twitter.com/bertcmiller/status/1402665992422047747)

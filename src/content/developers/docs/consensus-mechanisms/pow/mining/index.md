@@ -47,17 +47,16 @@ Watch Austin walk you through mining and the proof-of-work blockchain.
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/zcX7OJ-L8XQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Further Reading {#further-reading}
+## Further reading {#further-reading}
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
-- [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
-## Related Tools {#related-tools}
+## Related tools {#related-tools}
 
 - [Top Ethereum miners](https://etherscan.io/stat/miner?range=7&blocktype=blocks)
 - [Ethereum mining calculator](https://minerstat.com/coin/ETH)
 
-## Related Topics {#related-topics}
+## Related topics {#related-topics}
 
 - [Gas](/developers/docs/gas/)
 - [EVM](/developers/docs/evm/)

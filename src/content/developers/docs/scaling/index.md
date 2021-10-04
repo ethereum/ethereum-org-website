@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-## Scaling Overview {#scaling-overview}
+## Scaling overview {#scaling-overview}
 
 As the number of people using Ethereum has grown, the blockchain has reached certain capacity limitations. This has driven up the cost of using the network, creating the need for "scaling solutions." There are multiple solutions being researched, tested and implemented that take different approaches to achieve similar goals.
 
@@ -19,7 +19,7 @@ Conceptually we first categorize scaling as either on-chain scaling or off-chain
 
 You should have a good understanding of all the foundational topics. Implementing scaling solutions is advanced as the technology is less battle-tested, and continues to be researched and developed.
 
-## On-Chain Scaling {#on-chain-scaling}
+## On-Chain scaling {#on-chain-scaling}
 
 This method of scaling requires changes to the Ethereum protocol (layer 1 [Mainnet](/glossary/#mainnet)). Sharding is currently the main focus for this method of scaling.
 
@@ -29,11 +29,11 @@ Sharding is the process of splitting a database horizontally to spread the load.
 
 Learn more about [sharding](/eth2/shard-chains/).
 
-## Off-Chain Scaling {#off-chain-scaling}
+## Off-chain scaling {#off-chain-scaling}
 
 Off-chain solutions are implemented separately from layer 1 Mainnet - they require no changes to the existing Ethereum protocol. Some solutions, known as "layer 2" solutions, derive their security directly from layer 1 Ethereum consensus, such as [rollups](/developers/docs/scaling/layer-2-rollups/) or [state channels](/developers/docs/scaling/state-channels/). Other solutions involve the creation of new chains in various forms that derive their security separately from Mainnet, such as [sidechains](#sidechains) or [plasma](#plasma) chains. These solutions communicate with Mainnet, but derive their security differently to obtain a variety of goals.
 
-### Layer 2 Scaling {#layer-2-scaling}
+### Layer 2 scaling {#layer-2-scaling}
 
 This category of off-chain solutions derives its security from Mainnet Ethereum.
 
@@ -50,7 +50,7 @@ Rollups perform transaction execution outside layer 1 and then the data is poste
 
 Learn more about [rollups](/developers/docs/scaling/layer-2-rollups/).
 
-#### State Channels {#channels}
+#### State channels {#channels}
 
 State channels utilize multisig contracts to enable participants to transact quickly and freely off-chain, then settle finality with Mainnet. This minimizes network congestion, fees, and delays. The two types of channels are currently state channels and payment channels.
 

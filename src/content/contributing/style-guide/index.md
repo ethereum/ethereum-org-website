@@ -1,11 +1,11 @@
 ---
 title: Style Guide
-description: Style Guide for ethereum.org
+description: Style guide for ethereum.org
 lang: en
 sidebar: true
 ---
 
-# Ethereum.org Style Guide {#style-guide}
+# Ethereum.org style guide {#style-guide}
 
 Content on [ethereum.org](/) is crowdsourced and primarily written by our incredible contributors. This style guide aims to standardize certain aspects of writing content to make the contribution process smoother.
 
@@ -21,7 +21,7 @@ Ethereum.org content caters to a large and varied audience. Because ethereum.org
 
 Loosely we can categorize the site audiences as:
 
-### Individuals
+### Individuals {#individuals}
 
 App users, investors, enthusiasts, or anyone who is "new to Ethereum".
 
@@ -33,7 +33,7 @@ App users, investors, enthusiasts, or anyone who is "new to Ethereum".
 - "I want to get a sense of the size and activity of the Ethereum community, to decide if it's active enough, so I can get help if needed"
 - "I’m excited about Ethereum and want to get involved, but I don’t know what to do next"
 
-### Developers
+### Developers {#developers}
 
 Developers or others who want technical information about Ethereum.
 
@@ -44,7 +44,7 @@ Developers or others who want technical information about Ethereum.
 - "I want to learn about Ethereum's technical roadmap"
 - "I’ve started work on an Ethereum project, and want to try out a few smart contract testing libraries"
 
-### Enterprises
+### Enterprises {#enterprises}
 
 People, businesses, and other organizations who want to understand Ethereum's value in an enterprise setting.
 
@@ -77,7 +77,7 @@ The tone of the content on the site should be welcoming, friendly and straightfo
 
 Read the [ethereum.org design principles](/en/contributing/design-principles/) for more on direction tone.
 
-## Best Practices {#best-practices}
+## Best practices {#best-practices}
 
 ### Use American English {#american-english}
 
@@ -147,7 +147,7 @@ Proof-of-work should be capitalized at the beginning of a sentence. In any other
 
 The same rules we apply to proof-of-work are applicable to proof-of-stake, proof-of-authority, proof-of-humanity, proof-of-individuality, etc.
 
-### Use Active Voice {#use-active-voice}
+### Use active voice {#use-active-voice}
 
 Sentences using active voice are more concise and efficient, making your writing more engaging and easier to comprehend.
 
@@ -208,7 +208,7 @@ When adding an image to a page, the image should be downloaded and placed in the
 
 This helps us ensure the image will be available.
 
-### Using Emojis {#images}
+### Using emojis {#images}
 
 Everyone loves emojis <Emoji text="🥰" size={1} /> To standardize the appearance of all Emojis across browsers, ethereum.org uses an `<Emoji />` React component.
 
@@ -222,6 +222,28 @@ The London Upgrade is live <Emoji text="❤️" size={1} />
 <--- Bad --->
 
 The London Upgrade is live ❤️
+```
+
+### Header casing {#header-casing}
+
+This site uses **sentence casing** for header names as a convention. Only the first word and proper nouns are capitalized. This applies to all markdown files on lines that begin with hashes (#).
+
+```md
+<!-- Good -->
+
+## Minting your NFT
+
+### Setting up your wallet
+
+### Get enough ether
+
+<!-- Bad -->
+
+## Minting Your NFT
+
+### Setting Up Your Wallet
+
+### Getting Enough Ether
 ```
 
 ## Anything else? {#anything-else}

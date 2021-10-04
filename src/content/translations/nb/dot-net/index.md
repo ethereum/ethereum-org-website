@@ -80,9 +80,9 @@ Ser du etter flere ressurser? Sjekk ut [ethereum.org/developers.](/developers/)
 
 ## .NET Community-bidragsytere {#dot-net-community-contributors}
 
-I Nethereum, er vi for det meste på [Gitter](https://gitter.im/Nethereum/Nethereum) der alle er velkomne til å spørre/svare på spørsmål, få hjelp, eller bare slappe av. Du er velkommen til å sjekke ut eller åpne en sak på [Nethereum Github repository](https://github.com/Nethereum), eller bare se gjennom de mange sidene/eksempelprosjektene vi har.
+I Nethereum, er vi for det meste på [Gitter](https://gitter.im/Nethereum/Nethereum) der alle er velkomne til å spørre/svare på spørsmål, få hjelp, eller bare slappe av. Du er velkommen til å sjekke ut eller åpne en sak på [Nethereum GitHub repository](https://github.com/Nethereum), eller bare se gjennom de mange sidene/eksempelprosjektene vi har.
 
-I Nethermind kan vi kontaktes gjennom [Gitter](https://gitter.im/nethermindeth/nethermind). Ved problemer, sjekk ut [Nethermind Github repository](https://github.com/NethermindEth/nethermind).
+I Nethermind kan vi kontaktes gjennom [Gitter](https://gitter.im/nethermindeth/nethermind). Ved problemer, sjekk ut [Nethermind GitHub repository](https://github.com/NethermindEth/nethermind).
 
 ## Andre aggregerte lister {#other-aggregated-lists}
 

@@ -25,7 +25,7 @@ The hooks are registered and discovered using the [ERC-1820](https://eips.ethere
 
 #### Why are hooks great? {#why-are-hooks-great}
 
-1. Hook allow sending tokens to a contract and notifying the contract in a single transaction, unlike [ERC-20](https://eips.ethereum.org/EIPS/eip-20), which requires a double call (`approve`/`transferFrom`) to achieve this.
+1. Hooks allow sending tokens to a contract and notifying the contract in a single transaction, unlike [ERC-20](https://eips.ethereum.org/EIPS/eip-20), which requires a double call (`approve`/`transferFrom`) to achieve this.
 2. Contracts that have not registered hooks are incompatible with ERC-777. The sending contract will abort the transaction when the receiving contract has not registered a hook. This prevents accidental transfers to non-ERC-777 smart contracts.
 3. Hooks can reject transactions.
 

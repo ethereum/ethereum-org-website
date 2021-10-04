@@ -33,7 +33,8 @@ const H1 = styled.h1`
   margin-top: 0;
   color: ${(props) => props.theme.colors.text};
   font-style: normal;
-  font-family: "SFMono-Regular", monospace;
+  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
+    "Liberation Mono", Menlo, Courier, monospace;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 2rem;
@@ -173,6 +174,24 @@ const LearningToolsPage = ({ data }) => {
       image: data.buildspace.childImageSharp.fixed,
       alt: "page-learning-tools-buildspace-logo-alt",
       background: "#F6F7F9",
+      subjects: ["Solidity", "web3"],
+    },
+    {
+      name: "Questbook",
+      description: "page-learning-tools-questbook-description",
+      url: "https://questbook.app/",
+      image: data.questbook.childImageSharp.fixed,
+      alt: "page-learning-tools-questbook-logo-alt",
+      background: "#141236",
+      subjects: ["Solidity", "web3"],
+    },
+    {
+      name: "NFT School",
+      description: "page-learning-tools-nftschool-description",
+      url: "https://nftschool.dev/",
+      image: data.nftschool.childImageSharp.fixed,
+      alt: "page-learning-tools-nftschool-logo-alt",
+      background: "#111F29",
       subjects: ["Solidity", "web3"],
     },
   ]
@@ -327,10 +346,16 @@ export const query = graphql`
     vyperfun: file(relativePath: { eq: "dev-tools/vyperfun.png" }) {
       ...learningToolImage
     }
+    questbook: file(relativePath: { eq: "dev-tools/questbook.png" }) {
+      ...learningToolImage
+    }
     remix: file(relativePath: { eq: "dev-tools/remix.png" }) {
       ...learningToolImage
     }
     ethdotbuild: file(relativePath: { eq: "dev-tools/eth-dot-build.png" }) {
+      ...learningToolImage
+    }
+    nftschool: file(relativePath: { eq: "dev-tools/nftschool.png" }) {
       ...learningToolImage
     }
     learn: file(relativePath: { eq: "enterprise-eth.png" }) {

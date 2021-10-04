@@ -22,7 +22,7 @@ _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/d
 
 Gas fees are paid in Ethereum's native currency, ether (ETH). Gas prices are denoted in gwei, which itself is a denomination of ETH - each gwei is equal to 0.000000001 ETH (10<sup>-9</sup> ETH). For example, instead of saying that your gas costs 0.000000001 ether, you can say your gas costs 1 gwei. The word 'gwei' itself means 'giga-wei', and it is equal to 1,000,000,000 wei. Wei itself (named after [Wei Dai](https://en.wikipedia.org/wiki/Wei_Dai), creator of [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) is the smallest unit of ETH.
 
-## Prior to the London Upgrade {#pre-london}
+## Prior to the London upgrade {#pre-london}
 
 The way transaction fees on the Ethereum network were calculated changed with [the London Upgrade](/history/#london) of August 2021. Here is a recap of how things used to work:
 
@@ -40,7 +40,7 @@ This video offers a concise overview of gas and why it exists:
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/AJvzNICwcwc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## After the London Upgrade {#post-london}
+## After the London upgrade {#post-london}
 
 [The London Upgrade](/history/#london) was implemented on August 5th, 2021 to make transacting on Ethereum more predictable for users by overhauling Ethereum's transaction-fee-mechanism. The high-level benefits introduced by this change include better transaction fee estimation, generally quicker transaction inclusion, and offsetting the ETH issuance by burning a percentage of transaction fees.
 
@@ -59,13 +59,13 @@ Base fee of 0.0021 ETH is burned.
 
 Additionally, Jordan can also set a max fee (`maxFeePerGas`) for the transaction. The difference between the max fee and the actual fee is refunded to Jordan, i.e. `refund = max fee - (base fee + priority fee)`. Jordan can set a maximum amount to pay for the transaction to execute and not worry about overpaying "beyond" the base fee when the transaction is executed.
 
-### Block Size {#block-size}
+### Block size {#block-size}
 
 Before the London Upgrade, Ethereum had fixed-sized blocks. In times of high network demand, these blocks operated at total capacity. As a result, users often had to wait for high demand to reduce to get included in a block, which led to a poor user experience.
 
 The London Upgrade introduced variable-size blocks to Ethereum. Each block has a target size of 15 million gas but, the size of blocks will increase or decrease in accordance with network demand, up until the block limit of 30 million gas (2x the target block size). The protocol achieves an equilibrium block size of 15 million on average through the process of _tâtonnement_. This means if the block size is greater than the target block size, the protocol will increase the base fee for the following block. Similarly, the protocol will decrease the base fee if the block size is less than the target block size. The amount the base fee is adjusted by is proportional to how far from the current block size is from the target. [More on blocks](/developers/docs/blocks/).
 
-### Base Fee {#base-fee}
+### Base fee {#base-fee}
 
 Every block has a base fee which acts as a reserve price. To be eligible for inclusion in a block the offered price per gas must at least equal the base fee. The base fee is calculated independently of the current block and is instead determined by the blocks before it - making transaction fees more predictable for users. When the block is mined this base fee is "burned", removing it from circulation.
 
@@ -76,11 +76,11 @@ The base fee is calculated by a formula that compares the size of the previous b
 | 1            |          15M |           0% |         100 gwei |
 | 2            |          30M |           0% |         100 gwei |
 | 3            |          30M |        12.5% |       112.5 gwei |
-| 4            |          30M |        12.5% |       126.5 gwei |
+| 4            |          30M |        12.5% |       126.6 gwei |
 | 5            |          30M |        12.5% |       142.4 gwei |
 | 6            |          30M |        12.5% |       160.2 gwei |
 | 7            |          30M |        12.5% |       180.2 gwei |
-| 8            |          30M |        12.5% |       202.8 gwei |
+| 8            |          30M |        12.5% |       202.7 gwei |
 
 Relative to the pre-London gas auction market, this transaction-fee-mechanism change causes fee prediction to be more reliable. Following the table above - to create a transaction on block number 9, a wallet will let the user know with certainty that the **maximum base fee** to be added to the next block is `current base fee * 112.5%` or `202.8 gwei * 112.5% = 228.1 gwei`.
 
@@ -92,19 +92,19 @@ It's also important to note it is unlikely we will see extended spikes of full b
 | ...          |          ... |        12.5% |              ... |
 | 50           |          30M |        12.5% |     28531.3 gwei |
 | ...          |          ... |        12.5% |              ... |
-| 100          |          30M |        12.5% | 10302608.57 gwei |
+| 100          |          30M |        12.5% |  10302608.6 gwei |
 
-### Priority Fee (Tips) {#priority-fee}
+### Priority fee (tips) {#priority-fee}
 
 Before the London Upgrade, miners would receive the total gas fee from any transaction included in a block.
 
 With the new base fee getting burned, the London Upgrade introduced a priority fee (tip) to incentivize miners to include a transaction in the block. Without tips, miners would find it economically viable to mine empty blocks, as they would receive the same block reward. Under normal conditions, a small tip provides miners a minimal incentive to include a transaction. For transactions that need to get preferentially executed ahead of other transactions in the same block, a higher tip will be necessary to attempt to outbid competing transactions.
 
-### Max Fee {#maxfee}
+### Max fee {#maxfee}
 
 To execute a transaction on the network users are able to specify a maximum limit they are willing to pay for their transaction to be executed. This optional parameter is known as the `maxFeePerGas`. In order for a transaction to be executed the max fee must exceed the sum of the base fee and the tip. The transaction sender is refunded the difference between the max fee and the sum of the base fee and tip.
 
-### Calcuating fees {#calculating-fees}
+### Calculating fees {#calculating-fees}
 
 One of the main benefits achieved with the London upgrade is improving the user's experience when setting transaction fees. For wallets that support the upgrade, instead of explicitly stating how much you are willing to pay to get your transaction through, wallet providers will automatically set a recommended transaction fee (base fee + recommended priority fee) to reduce the amount of complexity burdened onto their users.
 
@@ -163,18 +163,18 @@ If you want to monitor gas prices so you are able to send your ETH for less you 
 
 - [ETH Gas Station](https://ethgasstation.info/) _Consumer oriented metrics for the Ethereum gas market_
 
-## Related Tools {#related-tools}
+## Related tools {#related-tools}
 
 - [Bloxy Gas Analytics](https://stat.bloxy.info/superset/dashboard/gas/?standalone=true) _Ethereum network gas stats_
 - [Blocknative's Gas Platform](https://www.blocknative.com/gas) _Gas estimation API powered by Blocknative's global mempool data platform_
 
-## Further Reading {#further-reading}
+## Further reading {#further-reading}
 
 - [Ethereum Gas Explained](https://defiprime.com/gas)
 - [Is Ethereum more expensive to use as price rises?](https://docs.ethhub.io/questions-about-ethereum/is-ethereum-more-expensive-to-use-as-price-rises/)
 - [Reducing the gas consumption of your Smart Contracts](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
 - [Proof of Stake versus Proof of Work](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 
-## Related Topics {#related-topics}
+## Related topics {#related-topics}
 
 - [Mining](/developers/docs/consensus-mechanisms/pow/mining/)

@@ -38,7 +38,8 @@ const HeroContent = styled(Content)`
 const Slogan = styled.h1`
   font-style: normal;
   font-weight: normal;
-  font-family: "SFMono-Regular", monospace;
+  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
+    "Liberation Mono", Menlo, Courier, monospace;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 32px;

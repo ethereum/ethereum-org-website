@@ -37,9 +37,11 @@ const Slash = styled.span`
 const CrumbLink = styled(Link)`
   text-decoration: none;
   color: ${(props) => props.theme.colors.textTableOfContents};
+
   &:hover {
     color: ${(props) => props.theme.colors.primary};
   }
+
   &.active {
     color: ${(props) => props.theme.colors.primary};
   }
@@ -77,7 +79,7 @@ const Breadcrumbs = ({ slug, startDepth = 0, className }) => {
   })
 
   return (
-    <List className={className}>
+    <List className={className} dir={"auto"}>
       {crumbs.map((crumb, idx) => (
         <ListItem key={idx}>
           <Crumb>

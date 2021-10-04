@@ -55,7 +55,7 @@ A validator vote for a [Beacon Chain](#beacon-chain) or [shard](#shard) [block](
 
 ### Beacon Chain {#beacon-chain}
 
-An Eth2 upgrade that will become the coordinator for the Ethereum network. It introduces [proof-of-stake](#proof-of-stake) and [validators](#validator) to Ethereum. It will eventually be merged with [Mainnet](#mainnet).
+An Eth2 upgrade that will become the coordinator for the Ethereum network. It introduces [proof-of-stake](#pos) and [validators](#validator) to Ethereum. It will eventually be merged with [Mainnet](#mainnet).
 
 <DocLink to="/eth2/beacon-chain/" title="Beacon Chain" />
 
@@ -551,7 +551,7 @@ A family of cryptographic hash functions published by the National Institute of 
 
 ### shard / shard chain {#shard}
 
-A [proof-of-stake](#proof-of-stake) chain that is coordinated by the [Beacon Chain](#beacon-chain) and secured by [validators](#validator). There will be 64 added to the network as part of the Eth2 shard chain upgrade. Shard chains will offer increased transaction throughput for Ethereum by providing additional data to [layer 2](#layer-2) solutions like [optimistic rollups](#optimistic-rollups) and [ZK-rollups](#zk-rollups).
+A [proof-of-stake](#pos) chain that is coordinated by the [Beacon Chain](#beacon-chain) and secured by [validators](#validator). There will be 64 added to the network as part of the Eth2 shard chain upgrade. Shard chains will offer increased transaction throughput for Ethereum by providing additional data to [layer 2](#layer-2) solutions like [optimistic rollups](#optimistic-rollups) and [ZK-rollups](#zk-rollups).
 
 <DocLink to="/eth2/shard-chains" title="Shard chains" />
 
@@ -567,7 +567,7 @@ A computer programming term that describes an object of which only a single inst
 
 ### slot {#slot}
 
-A period of time (12 seconds) in which a new [Beacon Chain](#beacon-chain) and [shard](#shard) chain block can be proposed by a [validator](#validator) in the [proof-of-stake](#proof-of-stake) system. A slot may be empty. 32 slots make up an [epoch](#epoch).
+A period of time (12 seconds) in which a new [Beacon Chain](#beacon-chain) and [shard](#shard) chain block can be proposed by a [validator](#validator) in the [proof-of-stake](#pos) system. A slot may be empty. 32 slots make up an [epoch](#epoch).
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work" title="Proof-of-stake" />
 
@@ -657,7 +657,7 @@ A concept named after English mathematician and computer scientist Alan Turing- 
 
 ### validator {#validator}
 
-A [node](#node) in a [proof-of-stake](#proof-of-stake) system responsible for storing data, processing transactions, and adding new blocks to the blockchain. To active validator software, you need to be able to [stake](#staking) 32 ETH.
+A [node](#node) in a [proof-of-stake](#pos) system responsible for storing data, processing transactions, and adding new blocks to the blockchain. To active validator software, you need to be able to [stake](#staking) 32 ETH.
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos" title="Proof of stake" />
 <DocLink to="/eth2/staking/" title="Staking in Ethereum" />
@@ -684,7 +684,7 @@ A high-level programming language with Python-like syntax. Intended to get close
 
 ## W {#section-w}
 
-### wallet {#wallets}
+### wallet {#wallet}
 
 Software that holds [private keys](#private-key). Used to access and control Ethereum [accounts](#account) and interact with [smart contracts](#smart-contract). Keys need not be stored in a wallet, and can instead be retrieved from offline storage (i.e. a memory card or paper) for improved security. Despite the name, wallets never store the actual coins or tokens.
 
