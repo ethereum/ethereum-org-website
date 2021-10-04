@@ -54,7 +54,7 @@ To consistently create malicious yet valid blocks, you'd need over 51% of the ne
 
 ### Proof-of-work economics {#economics}
 
-Proof-of-work is also responsible for issuing new currency into the system and incentivising miners to do the work.
+Proof-of-work is also responsible for issuing new currency into the system and incentivizing miners to do the work.
 
 Miners who successfully create a block get rewarded with two freshly minted ETH and all the transaction fees within the block. A miner may also get 1.75 ETH for an uncle block. Uncle blocks are valid blocks created by a miner practically at the same time as another miner mined the successful block. Uncle blocks usually happen due to network latency.
 
