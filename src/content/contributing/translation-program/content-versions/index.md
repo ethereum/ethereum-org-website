@@ -50,7 +50,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Translation guide](/contributing/translation-program/translation-guide/)
 - [Ethereum grants](/community/grants/)
 
-## Foundation developer docs {#foundational-docs}
+## Foundational developer docs {#foundational-docs}
 
 - [Introduction README](/developers/docs/)
 - [Intro to Ethereum](/developers/docs/intro-to-ethereum/)
