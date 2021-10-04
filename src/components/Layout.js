@@ -90,11 +90,9 @@ const Layout = (props) => {
   }
 
   const handleZenModeChange = () => {
-    const isMobile = document && document.documentElement.clientWidth < 1024
-    const toggledVal = !isZenMode && !isMobile
-    setIsZenMode(toggledVal)
+    setIsZenMode(!isZenMode)
     if (localStorage) {
-      localStorage.setItem("zen-mode", toggledVal)
+      localStorage.setItem("zen-mode", !isZenMode)
     }
   }
 
