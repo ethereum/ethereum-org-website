@@ -44,7 +44,6 @@ Nézd meg ahogy Austin végig kísér a bányászaton és a proof-of-work blokkl
 ## További olvasnivaló {#further-reading}
 
 - [Mit jelent Ethereumot bányászni?](https://docs.ethhub.io/using-ethereum/mining/) _Ethhub_
-- [Hogyan működik az Ethereum bányászat](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 ## Kapcsolódó eszközök {#related-tools}
 

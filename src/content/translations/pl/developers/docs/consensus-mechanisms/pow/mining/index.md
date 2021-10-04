@@ -44,7 +44,6 @@ Zobacz, jak Austin poprowadzi Cię przez wydobycie i blockchain typu „proof-of
 ## Dalsza lektura {#further-reading}
 
 - [Co to znaczy kopać Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
-- [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 ## Powiązane narzędzia {#related-tools}
 

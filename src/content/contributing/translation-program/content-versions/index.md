@@ -7,17 +7,18 @@ sidebar: true
 
 # Content versions {#content-versions}
 
-As mentioned in our [Translation Program overview](/en/contributing/translation-program/), we use [version management within Crowdin](https://support.crowdin.com/versions-management/) to create manageable milestones for translators and to avoid delays on getting translations deployed to the website. When you check out a language to translate, for example, [German](https://crowdin.com/project/ethereum-org/de) you'll see folders for each content version ("v2.0", "v2.1", "v2.2", etc.).
+As mentioned in our [Translation Program overview](/en/contributing/translation-program/), we use 'content buckets' within Crowdin to get the highest priority content released first. When you check out a language to translate, for example, [German](https://crowdin.com/project/ethereum-org/de) you'll see folders for each content bucket.
 
-Below is a breakdown of the website pages each content version contains.
+Below is a breakdown of the website pages each content bucket contains.
 
-## Version 2.0 {#version-20}
-
-Language v2.0 translates high-impact, highly trafficked pages on ethereum.org and the navigation components.
-
-### Primary pages {#primary}
+## Homepage {#homepage}
 
 - [Ethereum.org homepage](/)
+- Main navbar
+- Footer links
+
+## Use Ethereum Pages {#use-ethereum-pages}
+
 - [What is Ethereum?](/what-is-ethereum/)
 - [What is ether (ETH)?](/eth/)
 - [Get ETH](/get-eth/)
@@ -39,36 +40,97 @@ Language v2.0 translates high-impact, highly trafficked pages on ethereum.org an
 - [Developer learning tools](/developers/learning-tools/)
 - [Developer local environment setup](/developers/local-environment/)
 - [Language support](/languages/)
-- [Brand assets](/assets/)
 
-### Navigation {#navigation}
+## Use case pages {#use-case-pages}
 
-- Main navbar
-- Footer links
+- [Decentralized autonomous organizations (DAOs)](/dao/)
+- [Decentralized finance (DeFi)](/defi/)
+- [Non-fungible tokens (NFT)](/nft/)
+- [Translation Program](/contributing/translation-program/)
+- [Translation guide](/contributing/translation-program/translation-guide/)
+- [Ethereum grants](/community/grants/)
+
+## Foundational developer docs {#foundational-docs}
+
+- [Overview](/developers/docs/)
+- [Intro to Ethereum](/developers/docs/intro-to-ethereum/)
+- [Intro to ether](/developers/docs/intro-to-ether/)
+- [Intro to dapps](/developers/docs/dapps)
+- [Web2 vs Web3](/developers/docs/web2-vs-web3/)
+- [Accounts](/developers/docs/accounts/)
+- [Transactions](/developers/docs/transactions/)
+- [Blocks](/developers/docs/blocks/)
+- [Ethereum virtual machine (EVM)](/developers/docs/evm/)
+- [Gas](/developers/docs/gas/)
+- [Nodes and clients](/developers/docs/nodes-and-clients/)
+- [Nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/)
+- [Networks](/developers/docs/networks/)
+- [Consensus mechanisms](/developers/docs/consensus-mechanisms/)
+- [Proof of work](/developers/docs/consensus-mechanisms/pow/)
+- [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
+- [Proof of stake](/developers/docs/consensus-mechanisms/pos/)
 - Developer docs sidebar
 
-## Version 2.1 {#version-21}
+## Ethereum stack developer docs {#ethereum-stack-docs}
 
-Language v2.1 translates the developer docs and several less trafficked but important pages.
+- [Introduction to the Ethereum stack](/developers/docs/ethereum-stack/)
+- [Smart contracts](/developers/docs/smart-contracts/)
+- [Smart contract languages](/developers/docs/smart-contracts/languages/)
+- [Smart contract anatomy](/developers/docs/smart-contracts/anatomy/)
+- [Smart contract libraries](/developers/docs/smart-contracts/libraries)
+- [Testing smart contracts](/developers/docs/smart-contracts/testing)
+- [Compiling smart contracts](/developers/docs/smart-contracts/compiling)
+- [Deploying smart contracts](/developers/docs/smart-contracts/deploying)
+- [Composability](/developers/docs/smart-contracts/composability/)
+- [Deployment networks](/developers/docs/development-networks/)
+- [Development frameworks](/developers/docs/frameworks/)
+- [JavaScript APIs](/developers/docs/apis/javascript/)
+- [Backend APIs](/developers/docs/apis/backend/)
+- [JSON-RPC](/developers/docs/apis/json-rpc/)
+- [Data and analytics](/developers/docs/data-and-analytics/)
+- [Block explorers](/developers/docs/data-and-analytics/block-explorers/)
+- [Security](/developers/docs/security/)
+- [Storage](/developers/docs/storage/)
+- [Integrated Development Environments (IDEs)](/developers/docs/ides/)
+- [Programming languages](/developers/docs/programming-languages/)
+- [Delphi](/developers/docs/programming-languages/delphi/)
+- [.NET](/developers/docs/programming-languages/dot-net/)
+- [Golang](/developers/docs/programming-languages/golang/)
+- [Java](/developers/docs/programming-languages/java/)
+- [JavaScript](/developers/docs/programming-languages/javascript/)
+- [Python](/developers/docs/programming-languages/python/)
+- [Rust](/developers/docs/programming-languages/rust/)
 
-### Secondary pages {#secondary}
+## Whitepaper {#whitepaper}
 
+- [Whitepaper](/whitepaper/)
+
+## Advanced developer docs {#advanced-docs}
+
+- [Standards](/developers/docs/standards/)
+- [Token standards](/developers/docs/standards/tokens/)
+- [ERC-20](/developers/docs/standards/tokens/erc-20/)
+- [ERC-721](/developers/docs/standards/tokens/erc-721/)
+- [ERC-777](/developers/docs/mev/)
+- [Miner extractable value (MEV)](/developers/docs/mev/)
+- [Orcles](/developers/docs/oracles/)
+- [Scaling](/developers/docs/scaling/)
+- [Layer 2 Rollups](/developers/docs/scaling/layer-2-rollups/)
+- [State channels](/developers/docs/scaling/state-channels)
+- [Sidechains](/developers/docs/scaling/sidechains)
+- [Plasma](/developers/docs/scaling/plasma)
+- [Validium](/developers/docs/scaling/validium/)
+
+## Additional Learn and general pages {#general-pages}
+
+- [About ethereum.org](/about/)
 - [Ethereum Improvement Proposals (EIPs)](/eips/)
 - [Enterprise Ethereum](/enterprise/)
 - [Private Ethereum](/enterprise/private-ethereum/)
 - [History](/history/)
 - [Glossary](/glossary/)
-- [Whitepaper](/whitepaper/)
-- [About ethereum.org](/about/)
+- [Brand assets](/assets/)
 
-### Developer documentation {#developer-docs}
-
-- All [developer documentation](/developers/docs/) pages
-
-## Version 2.2 {#version-22}
-
-Language v2.2 translates the collection of developer tutorials hosted on ethereum.org.
-
-### Tutorials {#tutorials}
+## Developer tutorials {#tutorials}
 
 - All [developer tutorial](/developers/tutorials/) pages

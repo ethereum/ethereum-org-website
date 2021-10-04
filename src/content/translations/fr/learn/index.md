@@ -62,7 +62,6 @@ Un contrat autonome est tout simplement un morceau de code qui s'exécute sur Et
 Actuellement, Ethereum utilise un système appelé «&nbsp;preuve de travail&nbsp;» (_Proof of Work_). Celui-ci permet à l'ensemble du réseau Ethereum de se mettre d'accord sur l'état de toutes les informations enregistrées sur la blockchain Ethereum, empêchant ainsi certains types d'attaques économiques.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Mis à jour régulièrement - Ethhub_
-- [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 Avec ETH 2.0, Ethereum adoptera un système différent appelé «&nbsp;preuve d'enjeu&nbsp;» (_Proof of Stake_). [Plus d'informations sur ETH 2.0 ci-dessous](#eth-2-0).
 

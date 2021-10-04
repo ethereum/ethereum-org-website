@@ -26,12 +26,6 @@ incomplete: true
 - [相关文档](https://github.com/orbitdb/field-manual)
 - [GitHub](https://github.com/orbitdb/orbit-db)
 
-**3Box -** **_用户控制的 IPFS 数据库存储，用于存放数据丰富和吸引人的应用。 支持配置文件、加密空间和信息传递，并有额外的插件来简化开发。_**
-
-- [3Box](https://3box.io)
-- [3Box.js](https://github.com/3box/3box-js)
-- [3Box 插件](https://docs.3box.io/build/plugins)
-
 ## 延伸阅读 {#further-reading}
 
 _你知道有什么社区资源帮助过你吗？ 编辑并添加本页面！_

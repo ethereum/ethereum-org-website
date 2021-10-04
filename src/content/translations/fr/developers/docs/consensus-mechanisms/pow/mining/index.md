@@ -44,7 +44,6 @@ Regardez Austin vous guider à travers le minage et la blockchain. <iframe width
 ## Complément d'information {#further-reading}
 
 - [Que signifie miner Ethereum ?](https://docs.ethhub.io/using-ethereum/mining/) _Ethhub_
-- [Comment fonctionne le minage d'Ethereum](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 ## Outils connexes {#related-tools}
 

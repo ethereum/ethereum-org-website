@@ -44,7 +44,6 @@ Lasciati guidare da Austin attraverso il mining e la blockchain basata sulla Pro
 ## Letture consigliate {#further-reading}
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
-- [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 ## Strumenti correlati {#related-tools}
 
