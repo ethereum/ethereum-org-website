@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-Gas is essential to the Ethereum network. It is the fuel that allows it to operate like a car needs gasoline to run.
+Gas is essential to the Ethereum network. It is the fuel that allows it to operate, in the same way that a car needs gasoline to run.
 
 ## Prerequisites {#prerequisites}
 
@@ -13,9 +13,9 @@ To better understand this page, we recommend you first read up on [transactions]
 
 ## What is gas? {#what-is-gas}
 
-Gas refers to the unit that measures computational effort required to execute specific operations on the Ethereum network.
+Gas refers to the unit that measures the amount of computational effort required to execute specific operations on the Ethereum network.
 
-Since each Ethereum transaction requires computational resources to execute, each transaction requires a fee. Therefore, gas refers to the fee needed to conduct a transaction on Ethereum successfully.
+Since each Ethereum transaction requires computational resources to execute, each transaction requires a fee. Gas refers to the fee needed to conduct a transaction on Ethereum successfully.
 
 ![A diagram showing where gas is needed in EVM operations](./gas.png)
 _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
@@ -44,7 +44,7 @@ This video offers a concise overview of gas and why it exists:
 
 [The London Upgrade](/history/#london) was implemented on August 5th, 2021, to make transacting on Ethereum more predictable for users by overhauling Ethereum's transaction-fee-mechanism. The high-level benefits introduced by this change include better transaction fee estimation, generally quicker transaction inclusion, and offsetting the ETH issuance by burning a percentage of transaction fees.
 
-Starting with the London network upgrade, every block has a base fee, the minimum price per unit of gas for inclusion in this block, calculated by the network based on demand for block space. As the base fee of the transaction fee is burnt, users are also expected to deposit a tip (priority fee) in their transactions. The tip compensates miners for executing and propagating user transactions in blocks and is expected to be set automatically by most wallets.
+Starting with the London network upgrade, every block has a base fee, the minimum price per unit of gas for inclusion in this block, calculated by the network based on demand for block space. As the base fee of the transaction fee is burnt, users are also expected to set a tip (priority fee) in their transactions. The tip compensates miners for executing and propagating user transactions in blocks and is expected to be set automatically by most wallets.
 
 Calculating the total transaction fee works as follows: `Gas units (limit) * (Base fee + Tip)`
 
@@ -57,17 +57,17 @@ Taylor will be credited 1.0000 ETH.
 Miner receives the tip of 0.00021 ETH.
 Base fee of 0.0021 ETH is burned.
 
-Additionally, Jordan can also set a max fee (`maxFeePerGas`) for the transaction. The difference between the max and actual fees is refunded to Jordan, i.e. `refund = max fee - (base fee + priority fee)`. Thus, Jordan can set a maximum amount to pay for the transaction to execute and not worry about overpaying "beyond" the base fee when the transaction is executed.
+Additionally, Jordan can also set a max fee (`maxFeePerGas`) for the transaction. The difference between the max fee and the actual fee is refunded to Jordan, i.e. `refund = max fee - (base fee + priority fee)`. Thus, Jordan can set a maximum amount to pay for the transaction to execute and not worry about overpaying "beyond" the base fee when the transaction is executed.
 
 ### Block size {#block-size}
 
-Before the London Upgrade, Ethereum had fixed-sized blocks. During this time, blocks would operate at total capacity when there was a high demand for the network. As a result, users often had to wait for the demand to diminish to get included in a block, which led to a poor user experience.
+Before the London Upgrade, Ethereum had fixed-sized blocks. In times of high network demand, these blocks operated at total capacity. As a result, users often had to wait for high demand to reduce to get included in a block, which led to a poor user experience.
 
-The London Upgrade introduced variable-size blocks to Ethereum. Each block has a target size of 15 million gas, but the size of blocks will increase or decrease under network demand, up until the block limit of 30 million gas (2x the target block size). The protocol achieves an equilibrium block size of 15 million on average through the process of _tâtonnement_. For example, if the block size exceeds the target block size, the protocol will increase the base fee for the following block Similarly, the protocol will decrease the base fee if the block size is less than the target block size. The amount the base fee is adjusted by is proportional to how far from the current block size is from the target. [More on blocks](/developers/docs/blocks/).
+The London Upgrade introduced variable-size blocks to Ethereum. Each block has a target size of 15 million gas, but the size of blocks will increase or decrease in accordance with network demand, up until the block limit of 30 million gas (2x the target block size). The protocol achieves an equilibrium block size of 15 million on average through the process of _tâtonnement_. For example, if the block size is greater than the target block size, the protocol will increase the base fee for the following block. Similarly, the protocol will decrease the base fee if the block size is less than the target block size. The amount the base fee is adjusted by is proportional to how far the current block size is from the target. [More on blocks](/developers/docs/blocks/).
 
 ### Base fee {#base-fee}
 
-Every block has a base fee which acts as a reserve price. To be eligible for inclusion in a block, the offered price per gas must equal the base fee. The base fee is calculated independently of the current block and is instead determined by the blocks before it - making transaction fees more predictable for users. When the block is mined, this base fee is "burned", removing it from circulation.
+Every block has a base fee which acts as a reserve price. To be eligible for inclusion in a block, the offered price per gas must be at least as much as the base fee. The base fee is calculated independently of the current block and is instead determined by the blocks before it - making transaction fees more predictable for users. When the block is mined, this base fee is "burned", removing it from circulation.
 
 The base fee is calculated by a formula that compares the size of the previous block (the amount of gas used for all the transactions) with the target size. Thus, the base fee will increase by a maximum of 12.5% per block if the target block size is exceeded. This exponential growth makes it economically non-viable for block size to remain high indefinitely.
 
@@ -102,7 +102,7 @@ With the new base fee getting burned, the London Upgrade introduced a priority f
 
 ### Max fee {#maxfee}
 
-To execute a transaction on the network, users are can specify a maximum limit they are willing to pay for their transaction to be executed. This optional parameter is known as the `maxFeePerGas`. For a transaction to be executed the, max fee must exceed the sum of the base fee and the tip. The transaction sender is refunded the difference between the max fee and the sum of the base fee and tip.
+To execute a transaction on the network, users can specify a maximum limit they are willing to pay for their transaction to be executed. This optional parameter is known as the `maxFeePerGas`. For a transaction to be executed the, max fee must exceed the sum of the base fee and the tip. The transaction sender is refunded the difference between the max fee and the sum of the base fee and tip.
 
 ### Calculating fees {#calculating-fees}
 
@@ -144,13 +144,13 @@ Gas price alone does not determine how much we have to pay for a particular tran
 
 ## Initiatives to reduce gas costs {#initiatives-to-reduce-gas-costs}
 
-With the new network upgrades of Ethereum 2.0 (also known as Eth2 or Serenity) should ultimately address some of the gas fee issues, which will, in turn, enable the platform to process thousands of transactions per second and scale globally.
+The new network upgrades of Ethereum 2.0 (also known as Eth2 or Serenity) will ultimately address some of the gas fee issues, which will, in turn, enable the platform to process thousands of transactions per second and scale globally.
 
-Layer 2 scaling is a primary initiative to improve gas costs, user experience, and scalability greatly. [More on layer 2 scaling](/developers/docs/scaling/layer-2-rollups/).
+Layer 2 scaling is a primary initiative to greatly improve gas costs, user experience and scalability. [More on layer 2 scaling](/developers/docs/scaling/layer-2-rollups/).
 
-The new proof-of-stake model should reduce high power consumption and reliance on specialized hardware. In addition, the new PoS system was introduced on the Beacon Chain. This chain will allow the decentralized Ethereum network to agree and keep the network secure, but avoid high energy use by requiring a financial commitment.
+The new proof-of-stake model, introduced on the Beacon Chain, should reduce high power consumption and reliance on specialized hardware. This chain will allow the decentralized Ethereum network to agree and keep the network secure, while limiting energy consumption by instead requiring a financial commitment.
 
-Anyone with at least 32 ETH can to stake them and become a validator responsible for processing transactions, proposing new blocks to, add to the blockchain and storing data. Users who have less than 32 ETH can join staking pools.
+Anyone with at least 32 ETH can stake them and become a validator responsible for processing transactions, validating blocks, and proposing new blocks to add to the chain. Users who have less than 32 ETH can join staking pools.
 
 ## Strategies for you to reduce gas costs {#strategies-for-you-to-reduce-gas-costs}
 
