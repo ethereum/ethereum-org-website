@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import { connectSearchBox } from "react-instantsearch-dom"
@@ -26,12 +26,29 @@ const StyledInput = styled.input`
   &:focus {
     outline: ${(props) => props.theme.colors.primary} auto 1px;
   }
+  
+  @media only screen and (min-width: ${(props) => props.theme.breakpoints.m}) {
+    padding-left: 2rem;
+  }
+`
+
+const LeftSearchIcon = styled(Icon)`
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  margin-top: -12px;
+`
+
+const SearchIcon = styled(Icon)`
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  margin-top: -12px;
 `
 
 const SearchSlashIcon = styled(Icon)`
   position: absolute;
-  top: 50%;
-  margin-top: -12px;
+  top: 25%;
   right: 6px;
 
   path:nth-child(1) {
@@ -45,6 +62,7 @@ const SearchSlashIcon = styled(Icon)`
 
 const Input = ({ query, setQuery, refine, ...rest }) => {
   const intl = useIntl()
+  const [showSearchSlash,setShowSearchSlash] = useState(false)
   const searchString = translateMessageId("search", intl)
 
   const handleInputChange = (event) => {
@@ -66,8 +84,15 @@ const Input = ({ query, setQuery, refine, ...rest }) => {
   }
   useKeyPress("/", focusSearch)
 
+  useEffect(() => {
+    setShowSearchSlash(window.innerWidth >= 768)
+  }, [])
+
   return (
     <Form onSubmit={handleSubmit}>
+      {showSearchSlash && (
+        <LeftSearchIcon name="search" />
+      )}
       <StyledInput
         id="header-search"
         type="text"
@@ -77,7 +102,13 @@ const Input = ({ query, setQuery, refine, ...rest }) => {
         onChange={handleInputChange}
         {...rest}
       />
-      <SearchSlashIcon name="searchSlash" />
+      {showSearchSlash && (
+        <SearchSlashIcon name="searchSlash" size={'20'}/>
+      )}
+
+      {!showSearchSlash && (
+        <SearchIcon name="search" />
+      )}
     </Form>
   )
 }

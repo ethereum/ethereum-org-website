@@ -14,6 +14,7 @@ import {
   MdMenu,
   MdWbSunny,
   MdFlip,
+  MdSearch,
 } from "react-icons/md"
 import { BsSlashSquare } from "react-icons/bs"
 import { BsQuestionSquareFill } from "react-icons/bs"
@@ -35,6 +36,7 @@ const Icon = ({ name, size, className }) => (
     {name === "menu" && <MdMenu />}
     {name === "twitter" && <FaTwitter />}
     {name === "searchSlash" && <BsSlashSquare />}
+    {name === "search" && <MdSearch />}
     {name === "youtube" && <FaYoutube />}
     {name === "discord" && <FaDiscord />}
     {name === "glossary" && <BsQuestionSquareFill />}
