@@ -1155,6 +1155,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://www.youtube.com/channel/UCJJWZ6IKi_hxSsh-upLAH-g"><img src="https://avatars.githubusercontent.com/u/83152561?v=4?s=100" width="100px;" alt=""/><br /><sub><b>SlashHash</b></sub></a><br /><a href="#ideas-SlashHash" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://harshmathurx.github.io/website/"><img src="https://avatars.githubusercontent.com/u/58532371?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Harsh Mathur</b></sub></a><br /><a href="#content-harshmathurx" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/pranavvdesai"><img src="https://avatars.githubusercontent.com/u/74852751?v=4?s=100" width="100px;" alt=""/><br /><sub><b>pranav desai</b></sub></a><br /><a href="#content-pranavvdesai" title="Content">🖋</a></td>
+    <td align="center"><a href="http://tatum.io/"><img src="https://avatars.githubusercontent.com/u/10884869?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lukáš Kotol</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Hathoriel" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://instagram.com/drumnickydrum"><img src="https://avatars.githubusercontent.com/u/25669830?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nick Carbone</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=drumnickydrum" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/Ashwin-exe"><img src="https://avatars.githubusercontent.com/u/58840757?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ashwin Nair</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Ashwin-exe" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/julian-st"><img src="https://avatars.githubusercontent.com/u/31321934?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Julian Ste</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=julian-st" title="Code">💻</a></td>
   </tr>
 </table>
 

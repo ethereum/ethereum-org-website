@@ -4986,6 +4986,42 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "Hathoriel",
+      "name": "Lukáš Kotol",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10884869?v=4",
+      "profile": "http://tatum.io/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "drumnickydrum",
+      "name": "Nick Carbone",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25669830?v=4",
+      "profile": "http://instagram.com/drumnickydrum",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Ashwin-exe",
+      "name": "Ashwin Nair",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58840757?v=4",
+      "profile": "https://github.com/Ashwin-exe",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "julian-st",
+      "name": "Julian Ste",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31321934?v=4",
+      "profile": "https://github.com/julian-st",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
