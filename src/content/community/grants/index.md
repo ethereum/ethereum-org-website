@@ -13,7 +13,7 @@ This list is curated by our community. If there's something missing or incorrect
 
 ### Broad Ethereum ecosystem {#broad-ethereum-ecosystem}
 
-These programs support the broad Ethereum ecosystem by offering grants to a wide scope of projects. These include solutions for scalability, community building, security, privacy and more. These grants are not specific to any one Ethereum platform and are a good place to start if you're unsure.
+These programs support the broad Ethereum ecosystem by offering grants to a wide scope of projects. These include solutions for scalability, community building, security, privacy, and more. These grants are not specific to any one Ethereum platform and are a good place to start if you're unsure.
 
 - [EF Ecosystem Support Program](https://esp.ethereum.foundation) - _Funding open source projects that benefit Ethereum, with a particular focus on universal tools, infrastructure, research and public goods_
 - [Ethereum RFPs](https://github.com/ethereum/requests-for-proposals) - _Requests for Proposals by the Ethereum Foundation for work and projects in the Ethereum ecosystem_
