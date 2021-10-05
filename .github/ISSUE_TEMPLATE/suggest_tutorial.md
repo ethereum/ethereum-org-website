@@ -2,7 +2,7 @@
 name: Suggest a tutorial
 about: Suggest a tutorial to our developers platform
 title: ""
-labels: "Type: Feature, Type: Content"
+labels: "feature :sparkles:, content :fountain_pen:"
 assignees: ""
 ---
 
