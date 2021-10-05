@@ -26,12 +26,12 @@ published: 2021-02-26
 
 The tutorial demonstrates test setup and run using yarn, but there is no problem if you prefer npm - I will provide proper references to the official Waffle [documentation](https://ethereum-waffle.readthedocs.io/en/latest/index.html).
 
-## Install Waffle
+## Install Dependencies
 
-[Add](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#installation) ethereum-waffle package to the dev dependencies of your project.
+[Add](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#installation) ethereum-waffle and typescript dependencies to the dev dependencies of your project.
 
 ```bash
-yarn add --dev ethereum-waffle
+yarn add --dev ethereum-waffle ts-node typescript @types/jest
 ```
 
 ## Example smart contract
@@ -95,7 +95,7 @@ Testing with Waffle requires using Chai matchers and Mocha, so you need to [add]
 ```json
 "scripts": {
     "build": "waffle",
-    "test": "export NODE_ENV=test && mocha 'test/**/*.test.ts'"
+    "test": "export NODE_ENV=test && mocha -r ts-node/register 'test/**/*.test.ts'"
   }
 ```
 
