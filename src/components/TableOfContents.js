@@ -368,7 +368,7 @@ const TableOfContents = ({
       <OuterList>
         <ZenModeContainer>
           <ZenModeText>Zen Mode:</ZenModeText>
-          <ZenModeToggleContainer onClick={handleZenModeChange}>
+          <ZenModeToggleContainer onClick={(_e) => handleZenModeChange()}>
             <Icon name={isZenMode ? "zenModeOn" : "zenModeOff"} size="2rem" />
           </ZenModeToggleContainer>
         </ZenModeContainer>

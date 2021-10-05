@@ -18,6 +18,8 @@ import TranslationBanner from "./TranslationBanner"
 
 import { ZenModeContext } from "../contexts/ZenModeContext"
 
+import { useKeyPress } from "../hooks/useKeyPress"
+
 import { isLangRightToLeft } from "../utils/translations"
 
 const ContentContainer = styled.div`
@@ -59,6 +61,9 @@ const Layout = (props) => {
   const [isZenMode, setIsZenMode] = useState(false)
   const [shouldShowSideNav, setShouldShowSideNav] = useState(false)
 
+  // Exit Zen Mode on 'esc' click
+  useKeyPress(`Escape`, () => handleZenModeChange(false))
+
   // set isDarkTheme based on browser/app user preferences
   useEffect(() => {
     if (localStorage && localStorage.getItem("dark-theme") !== null) {
@@ -89,10 +94,13 @@ const Layout = (props) => {
     }
   }
 
-  const handleZenModeChange = () => {
-    setIsZenMode(!isZenMode)
+  const handleZenModeChange = (val) => {
+    // Use 'val' param if provided. Otherwise toggle
+    const newVal = val !== undefined ? val : !isZenMode
+
+    setIsZenMode(newVal)
     if (localStorage) {
-      localStorage.setItem("zen-mode", !isZenMode)
+      localStorage.setItem("zen-mode", newVal)
     }
   }
 
@@ -152,7 +160,9 @@ const Layout = (props) => {
                   </ZenModeContext.Provider>
                 </MainContent>
               </MainContainer>
-              <Footer />
+              <VisuallyHidden isHidden={isZenMode}>
+                <Footer />
+              </VisuallyHidden>
             </ContentContainer>
           </ThemeProvider>
         </IntlContextProvider>
