@@ -62,7 +62,6 @@ Um "smart contract" é simplesmente um pedaço de código que é executado em Et
 O Ethereum atualmente usa um sistema chamado "Proof of Work". Isso permite que a rede Ethereum concorde com o estado de todas as informações registadas no blockchain do Ethereum, e previne certos tipos de ataques económicos.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Atualizado frequentemente - Ethhub_
-- [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 No ETH 2.0, o Ethereum vai se mover para um sistema diferente chamado "Proof Stake". [Leia mais sobre ETH 2.0 abaixo](#eth-2-0).
 
@@ -79,7 +78,7 @@ Há muitos esforços em curso para tornar o Ethereum mais “escalável”, melh
 
 "Layer 1" refere-se ao melhoramento do protocolo atual e central do Ethereum. O principal projeto para melhorar o protocolo central da Ethereum é [ETH 2.0](#eth-2-0).
 
-Layer 2 refere-se a tecnologias que são construídas "sobre" o protocolo base Ethereum, permitindo uma maior escalabilidade sem comprometer a segurança. Também existem tecnologias "off-chain", como as "side chains", que permitem uma maior escalabilidade através da criação de um conjunto diferente de compromissos em matéria de segurança.
+Layer 2 refere-se a tecnologias que são construídas "sobre" o protocolo base Ethereum, permitindo uma maior escalabilidade sem comprometer a segurança. Também existem tecnologias "off-chain", como as "sidechains", que permitem uma maior escalabilidade através da criação de um conjunto diferente de compromissos em matéria de segurança.
 
 - [Making Sense of Layer 2](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _12 de fevereiro de 2018 - Josh Stark_
 - [The Case for Ethereum Scalability](https://medium.com/connext/the-case-for-ethereum-scalability-d2a8035f880f) _18 de janeiro de 2019 - Hunter Hillman, Steven McKie, and Eric Olszewski_

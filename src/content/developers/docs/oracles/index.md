@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-Oracles are data feeds that connect Ethereum to off-chain, real-world information, so you can query data in your smart contracts. For example, prediction market dapps use oracles to settle payments based on events. A prediction market may ask you to bet your ETH on the next president of the United States. They'll use an oracle to confirm the outcome and pay out to the winners.
+Oracles are data feeds that connect Ethereum to off-chain, real-world information so that you can query data in your smart contracts. For example, prediction market dapps use oracles to settle payments based on events. A prediction market may ask you to bet your ETH on who will become the next president of the United States. They'll use an oracle to confirm the outcome and payout to the winners.
 
 ## Prerequisites {#prerequisites}
 
@@ -16,9 +16,13 @@ Make sure you're familiar with [nodes](/developers/docs/nodes-and-clients/), [co
 
 An oracle is a bridge between the blockchain and the real world. They act as on-chain APIs you can query to get information into your smart contracts. This could be anything from price information to weather reports. Oracles can also be bi-directional, used to "send" data out to the real world.
 
+Watch Patrick explain Oracles:
+
+<iframe width="100%" height="315px" src="https://www.youtube.com/embed/ZJfkNzyO7-U?start=10" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Why are they needed? {#why-are-they-needed}
 
-With a blockchain like Ethereum you need every node in the network to be able to replay every transaction and end up with the same result, guaranteed. APIs introduce potentially variable data. If you were sending someone an amount of ETH based on an agreed $USD value using a price API, the query would return a different result from one day to the next. Not to mention, the API could be hacked or deprecated. If this happens, the nodes in the network wouldn't be able to agree on Ethereum's current state, effectively breaking [consensus](/developers/docs/consensus-mechanisms/).
+With a blockchain like Ethereum, you need every node in the network to replay every transaction and end up with the same result, guaranteed. APIs introduce potentially variable data. If you were sending ETH based on an agreed $USD value using a price API, the query would return a different result from one day to the next. Not to mention, the API could be hacked or deprecated. If this happens, the nodes in the network wouldn't be able to agree on Ethereum's current state, effectively breaking [consensus](/developers/docs/consensus-mechanisms/).
 
 Oracles solve this problem by posting the data on the blockchain. So any node replaying the transaction will use the same immutable data that's posted for all to see. To do this, an oracle is typically made up of a smart contract and some off-chain components that can query APIs, then periodically send transactions to update the smart contract's data.
 
@@ -33,9 +37,15 @@ To understand how an oracle works, let's play through a scenario where your smar
 5. The nodes call on the oracle smart contract.
 6. The oracle smart contract returns the data to your smart contract. -->
 
+### The oracle problem {#oracle-problem}
+
+As we mentioned, Ethereum transactions cannot access off-chain data directly. At the same time, relying on a single source of truth to provide data is insecure and invalidates the decentralization of a smart contract. This is known as the oracle problem.
+
+We can avoid the oracle problem by using a decentralized oracle that pulls from multiple data sources; if one data source is hacked or fails, the smart contract will still function as intended.
+
 ### Security {#security}
 
-An oracle is only as secure as its data source(s). If a dapp uses Uniswap as an oracle for its ETH/DAI price feed, it is possible for an attacker to move the price on Uniswap in order to manipulate the dapp's understanding of the current price. An example of how to combat this is [a feed system](https://developer.makerdao.com/feeds/) like the one used by MakerDAO, which collates price data from a number of external price feeds instead of just relying on a single source.
+An oracle is only as secure as its data source(s). If a dapp uses Uniswap as an oracle for its ETH/DAI price feed, an attacker can move the price on Uniswap to manipulate the dapp's understanding of the current price. An example of how to combat this is [a feed system](https://developer.makerdao.com/feeds/) like the one used by MakerDAO, which collates price data from many external price feeds instead of just relying on a single source.
 
 ### Architecture {#architecture}
 
@@ -50,18 +60,18 @@ This is how to get data in a 1 to 1 manner, however to improve security you may 
 
 The next step might be to have a network of these nodes making these calls to different APIs and sources, and aggregating the data on-chain.
 
-[Chainlink Off-Chain Reporting](https://blog.chain.link/off-chain-reporting-live-on-mainnet/) (Chainlink OCR) has improved on this methodology by having the off-chain oracle network communicate with each other, cryptographically sign their responses, aggregate their responses off-chain, and send only 1 transaction on-chain with the result. This way, fewer gas is spent but you still get the guarantee of decentralized data since every node has signed their part of the transaction, making it unchangeable by the node sending the transaction. If the node doesn't transact, the escalation policy kicks in, and the next node sends the transaction.
+[Chainlink Off-Chain Reporting](https://blog.chain.link/off-chain-reporting-live-on-mainnet/) (Chainlink OCR) has improved on this methodology by having the off-chain oracle network communicate with each other, cryptographically sign their responses, aggregate their responses off-chain, and send only one transaction on-chain with the result. This way, less gas is spent, but you still get the guarantee of decentralized data since every node has signed their part of the transaction, making it unchangeable by the node sending the transaction. The escalation policy kicks in if the node doesn't transact, and the next node sends the transaction.
 
 ## Usage {#usage}
 
-Using services like Chainlink, you can reference decentralized data on-chain, that has already been pulled from the real world and aggregated. Sort of like a public commons, but for decentralized data. You can also build your own modular oracle networks to get any customized data you're looking for. In addition, you can do off-chain computation and send information to the real world as well. Chainlink has infrastructure in place to:
+Using services like Chainlink, you can reference decentralized data on-chain that has already been pulled from the real world and aggregated. Sort of like a public commons, but for decentralized data. You can also build your own modular oracle networks to get any customized data you're looking for. In addition, you can do off-chain computation and send information to the real world as well. Chainlink has the infrastructure in place to:
 
 - [Get crypto price feeds in your contract](https://chain.link/solutions/defi)
 - [Generate verifiable random numbers (useful for gaming)](https://chain.link/solutions/chainlink-vrf)
 - [Call external APIs](https://docs.chain.link/docs/request-and-receive-data)
   – One novel use of this is [Checking wBTC reserves](https://cointelegraph.com/news/1b-in-wrapped-bitcoin-now-being-audited-using-chainlink-s-proof-of-reserve)
 
-This is an example of how to get the latest ETH price in your smart contract using a Chainlink price feed:
+Here is an example of how to get the latest ETH price in your smart contract using a Chainlink price feed:
 
 ### Chainlink Data Feeds {#chainlink-data-feeds}
 
@@ -107,14 +117,14 @@ contract PriceConsumerV3 {
 
 Chainlink VRF (Verifiable Random Function) is a provably-fair and verifiable source of randomness designed for smart contracts. Smart contract developers can use Chainlink VRF as a tamper-proof random number generation (RNG) to build reliable smart contracts for any applications which rely on unpredictable outcomes:
 
-- Blockchain games and NFTs.
-- Random assignment of duties and resources (e.g. randomly assigning judges to cases).
-- Choosing a representative sample for consensus mechanisms.
+- Blockchain games and NFTs
+- Random assignment of duties and resources (e.g. randomly assigning judges to cases)
+- Choosing a representative sample for consensus mechanisms
 
 Random numbers are difficult because blockchains are deterministic.
 
-Working with Chainlink Oracles outside of data feeds follows the [request and recieve cycle](https://docs.chain.link/docs/architecture-request-model) of working with Chainlink. They use the LINK token to send oracle providers oracle gas for returning responses. The LINK token is specifically designed to work with oracles and are based on the upgraded ERC-677 token, which is backwards compatible with [ERC-20](/developers/docs/standards/tokens/erc-20/).
-The following code, if deployed on the Kovan testnet will retreive a cryptographically proven random number. To make the request, fund the contract with some testnet LINK token that you can get from the [Kovan LINK Faucet](https://kovan.chain.link/).
+Working with Chainlink Oracles outside of data feeds follows the [request and receive cycle](https://docs.chain.link/docs/architecture-request-model) of working with Chainlink. They use the LINK token to send oracle providers oracle gas for returning responses. The LINK token is specifically designed to work with oracles and are based on the upgraded ERC-677 token, which is backwards compatible with [ERC-20](/developers/docs/standards/tokens/erc-20/).
+The following code, if deployed on the Kovan testnet will retrieve a cryptographically proven random number. To make the request, fund the contract with some testnet LINK token that you can get from the [Kovan LINK Faucet](https://kovan.chain.link/).
 
 ```javascript
 
@@ -166,11 +176,11 @@ contract RandomNumberConsumer is VRFConsumerBase {
 
 ### Chainlink API Call {#chainlink-api-call}
 
-[Chainlink API Calls](https://docs.chain.link/docs/make-a-http-get-request) are the easiest way to get data from the off-chain world in the traditional way the web works: API calls. Doing a single instance of this and having only 1 oracle makes it centralized by nature. In order to keep it truly decentralized a smart contract platform would need to use numerous nodes, found in an [external data market](https://market.link/).
+[Chainlink API Calls](https://docs.chain.link/docs/make-a-http-get-request) are the easiest way to get data from the off-chain world in the traditional way the web works: API calls. Doing a single instance of this and having only one oracle makes it centralized by nature. To keep it truly decentralized, a smart contract platform would need to use numerous nodes found in an [external data market](https://market.link/).
 
 [Deploy the following code in remix on the kovan network to test](https://remix.ethereum.org/#version=soljson-v0.6.7+commit.b8d736ae.js&optimize=false&evmVersion=null&gist=8a173a65099261582a652ba18b7d96c1)
 
-This also follows the request and receive cycle of oracles, and needs the contract to be funded with Kovan LINK (the oracle gas) in order to work.
+This also follows the request and receive cycle of oracles and needs the contract to be funded with Kovan LINK (the oracle gas) to work.
 
 ```javascript
 pragma solidity ^0.6.0;
@@ -239,13 +249,15 @@ contract APIConsumer is ChainlinkClient {
 }
 ```
 
-You can learn more about the applications of chainlink by reading [the developers blog](https://blog.chain.link/tag/developers/).
+You can learn more about the applications of Chainlink by reading the [Chainlink developers blog](https://blog.chain.link/tag/developers/).
 
 ## Oracle services {#other-services}
 
 - [Chainlink](https://chain.link/)
 - [Witnet](https://witnet.io/)
 - [Provable](https://provable.xyz/)
+- [Paralink](https://paralink.network/)
+- [Dos.Network](https://dos.network/)
 
 ### Build an oracle smart contract {#build-an-oracle-smart-contract}
 
@@ -367,7 +379,21 @@ _We'd love more documentation on creating an oracle smart contract. If you can h
 
 ## Further reading {#further-reading}
 
+**Articles**
+
+- [What Is a Blockchain Oracle?](https://chain.link/education/blockchain-oracles) - _Chainlink_
+- [Oracles](https://docs.ethhub.io/built-on-ethereum/oracles/what-are-oracles/) – _EthHub_
 - [What is a Blockchain Oracle?](https://betterprogramming.pub/what-is-a-blockchain-oracle-f5ccab8dbd72) - _Patrick Collins_
-- [Decentralised Oracles: a comprehensive overview](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) –_Julien Thevenard_
-- [Implementing a Blockchain Oracle on Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) –_Pedro Costa_
-- [Oracles](https://docs.ethhub.io/built-on-ethereum/oracles/what-are-oracles/) –_EthHub_
+- [Decentralised Oracles: a comprehensive overview](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) – _Julien Thevenard_
+- [Implementing a Blockchain Oracle on Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_
+- [Why can't smart contracts make API calls?](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) - _StackExchange_
+- [Why we need decentralized oracles](https://newsletter.banklesshq.com/p/why-we-need-decentralized-oracles) - _Bankless_
+- [So you want to use a price oracle](https://samczsun.com/so-you-want-to-use-a-price-oracle/) -_samczsun_
+
+**Videos**
+
+- [Oracles and the Expansion of Blockchain Utility](https://youtu.be/BVUZpWa8vpw) - _Real Vision Finance_
+
+**Tutorials**
+
+- [How to Fetch the Current Price of Ethereum in Solidity](https://blog.chain.link/fetch-current-crypto-price-data-solidity/) - _Chainlink_

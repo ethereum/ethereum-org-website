@@ -18,7 +18,7 @@ Implementarea unui contract costă de asemenea ETH, deci ar trebui să te famili
 
 În cele din urmă, va trebui să compilezi contractul înainte de a-l implementa, deci asigură-te că ai citit despre [compilarea contractelor inteligente](/developers/docs/smart-contracts/compiling/).
 
-## Cum să implementezi un contract inteligent
+## Cum să implementezi un contract inteligent {#how-to-deploy-a-smart-contract}
 
 Acest lucru înseamnă înseamnă că va trebui să plătești o taxă de tranzacție, deci asigură-te că ai ceva ETH.
 
@@ -58,6 +58,6 @@ Odată implementat, contractul tău va avea o adresă Ethereum ca și alte [cont
 
 _Cunoști o resursă comunitară care te-a ajutat? Editează această pagină și adaug-o!_
 
-## Subiecte corelate
+## Subiecte corelate {#related-topics}
 
 - [Cadrele de dezvoltare](/developers/docs/frameworks/)

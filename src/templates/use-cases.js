@@ -8,7 +8,6 @@ import Img from "gatsby-image"
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown from "../components/ButtonDropdown"
 import BannerNotification from "../components/BannerNotification"
-import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import ExpandableCard from "../components/ExpandableCard"
 import DocLink from "../components/DocLink"
@@ -349,9 +348,8 @@ const TitleCard = styled.div`
 `
 
 const UseCasePage = ({ data, pageContext }) => {
-  const intl = useIntl()
-  const isRightToLeft = isLangRightToLeft(intl.locale)
   const mdx = data.pageData
+  const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang)
   const tocItems = mdx.tableOfContents.items
 
   const { editContentUrl } = data.siteData.siteMetadata
@@ -465,6 +463,7 @@ export const useCasePageQuery = graphql`
       frontmatter {
         title
         description
+        lang
         sidebar
         emoji
         sidebarDepth

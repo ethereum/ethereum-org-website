@@ -84,7 +84,8 @@ const ContentContainer = styled.article`
 
 const H1 = styled(Header1)`
   font-size: 2.5rem;
-  font-family: "SFMono-Regular", monospace;
+  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
+    "Liberation Mono", Menlo, Courier, monospace;
   text-transform: uppercase;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 1.75rem;
@@ -96,7 +97,8 @@ const H1 = styled(Header1)`
 `
 
 const H2 = styled(Header2)`
-  font-family: "SFMono-Regular", monospace;
+  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
+    "Liberation Mono", Menlo, Courier, monospace;
   text-transform: uppercase;
 
   &:before {
@@ -157,13 +159,11 @@ const Contributors = styled(FileContributors)`
 `
 
 const TutorialPage = ({ data, pageContext }) => {
-  const intl = useIntl()
-  const isRightToLeft = isLangRightToLeft(intl.locale)
-
   const pageData = data.pageData
+  const isRightToLeft = isLangRightToLeft(pageData.frontmatter.lang)
+
   const tocItems = pageData.tableOfContents.items
 
-  const gitCommits = data.gitData.repository.ref.target.history.edges
   const { editContentUrl } = data.siteData.siteMetadata
   const { relativePath } = pageContext
   const absoluteEditPath = `${editContentUrl}${relativePath}`
@@ -187,7 +187,7 @@ const TutorialPage = ({ data, pageContext }) => {
         <MDXProvider components={components}>
           <MDXRenderer>{pageData.body}</MDXRenderer>
         </MDXProvider>
-        <Contributors gitCommits={gitCommits} editPath={absoluteEditPath} />
+        <Contributors relativePath={relativePath} editPath={absoluteEditPath} />
       </ContentContainer>
       {pageData.frontmatter.sidebar && tocItems && (
         <DesktopTableOfContents
@@ -216,6 +216,7 @@ export const query = graphql`
       frontmatter {
         title
         description
+        lang
         tags
         author
         source
@@ -229,34 +230,6 @@ export const query = graphql`
       body
       tableOfContents
       timeToRead
-    }
-    gitData: github {
-      repository(name: "ethereum-org-website", owner: "ethereum") {
-        ref(qualifiedName: "master") {
-          target {
-            ... on GitHub_Commit {
-              history(path: $relativePath) {
-                edges {
-                  node {
-                    message
-                    commitUrl
-                    author {
-                      name
-                      email
-                      avatarUrl(size: 100)
-                      user {
-                        url
-                        login
-                      }
-                    }
-                    committedDate
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
     }
   }
 `

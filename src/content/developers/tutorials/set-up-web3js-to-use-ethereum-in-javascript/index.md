@@ -90,4 +90,4 @@ if (window.ethereum != null) {
 }
 ```
 
-Alternatives to web3.js like [Ethers.js](https://docs.ethers.io/ethers.js/html/) do exist but we’ll focus all our JavaScript tutorials on web3.js as it is the official library to interact with Ethereum in the browser. In the next tutorial we’ll see [how to easily listen to new incoming blocks on the blockchain and see what they contains](https://ethereumdev.io/listening-to-new-transactions-happening-on-the-blockchain/).
+Alternatives to web3.js like [Ethers.js](https://docs.ethers.io/) do exist but we’ll focus all our JavaScript tutorials on web3.js as it is the official library to interact with Ethereum in the browser. In the next tutorial we’ll see [how to easily listen to new incoming blocks on the blockchain and see what they contains](https://ethereumdev.io/listening-to-new-transactions-happening-on-the-blockchain/).

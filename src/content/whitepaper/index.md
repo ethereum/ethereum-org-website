@@ -29,7 +29,7 @@ assets such as domain names ([Namecoin](http://namecoin.org)), as well
 as more complex applications involving having digital assets being
 directly controlled by a piece of code implementing arbitrary rules
 ([smart contracts](http://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/idea.html))
-or even blockchain-based [decentralized autonomous organizations](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/)
+or even blockchain-based [decentralized autonomous organizations](https://bitcoinmagazine.com/technical/bootstrapping-a-decentralized-autonomous-corporation-part-i-1379644274)
 (DAOs). What Ethereum intends to provide is a blockchain with a built-in
 fully fledged Turing-complete programming language that can be used to
 create "contracts" that can be used to encode arbitrary state transition
@@ -212,7 +212,7 @@ general, the target is recalibrated by the network every 2016 blocks so
 that on average a new block is produced by some node in the network
 every ten minutes. In order to compensate miners for this computational
 work, the miner of every block is entitled to include a transaction
-giving themselves 12.5 BTC out of nowhere. Additionally, if any
+giving themselves 6.25 BTC out of nowhere. Additionally, if any
 transaction has a higher total denomination in its inputs than in its
 outputs, the difference also goes to the miner as a "transaction fee".
 Incidentally, this is also the only mechanism by which BTC are issued;
@@ -441,7 +441,7 @@ important limitations:
   2<sup>k</sup> for every k up to 30) and having O pick which UTXO to
   send to A and which to B.
 - **Lack of state** - a [UTXO can either be spent or
-  unspent](https://bitcoin.org/en/glossary/unspent-transaction-output);
+  unspent](https://developer.bitcoin.org/devguide/transactions.html);
   there is no opportunity for multi-stage contracts or scripts which
   keep any other internal state beyond that. This makes it hard to
   make multi-stage options contracts, decentralized exchange offers or
@@ -524,27 +524,26 @@ principles:
     make a small protocol modification in one place, the application
     stack would continue to function without any further modification.
     Innovations such as Ethash (see the [Yellow Paper Appendix](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.J)
-    or [wiki article](https://github.com/ethereum/wiki/wiki/Ethash)),
+    or [wiki article](https://eth.wiki/en/concepts/ethash/ethash)),
     modified Patricia trees ([Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.D),
-    [wiki](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree))
+    [wiki](https://eth.wiki/en/fundamentals/patricia-tree))
     and RLP
     ([YP](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.B),
-    [wiki](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP))
+    [wiki](https://eth.wiki/en/fundamentals/rlp))
     should be, and are, implemented as separate, feature-complete
     libraries. This is so that even though they are used in Ethereum,
     even if Ethereum does not require certain features, such features
     are still usable in other protocols as well. Ethereum development
     should be maximally done so as to benefit the entire cryptocurrency
     ecosystem, not just itself.
-4.  **Agility**: details of the Ethereum protocol are not set in stone.
-    Although we will be extremely judicious about making modifications
-    to high-level constructs, for instance with the [sharding
-    roadmap](https://ethresear.ch/t/sharding-phase-1-spec/1407/),
-    abstracting execution, with only data availability enshrined in
-    consensus. Computational tests later on in the development process
-    may lead us to discover that certain modifications, e.g. to the
-    protocol architecture or to the Ethereum Virtual Machine (EVM), will
-    substantially improve scalability or security. If any such
+4.  **Agility**: although details of the Ethereum protocol are not set
+    in stone, we will be extremely judicious about making modifications
+    to its high-level constructs. For instance, there was
+    [extensive discussion on the specification and implementation of the sharding roadmap](https://ethresear.ch/t/sharding-phase-1-spec/1407/).
+    Additionally, computational tests later on in the development
+    process may lead us to discover that certain modifications, e.g. to
+    the protocol architecture or to the Ethereum Virtual Machine (EVM),
+    will substantially improve scalability or security. If any such
     opportunities are found, we will exploit them.
 5.  **Non-discrimination** and **non-censorship**: the protocol should
     not attempt to actively restrict or prevent specific categories of
@@ -960,8 +959,7 @@ file storage startups, the most prominent being Dropbox, seeking to
 allow users to upload a backup of their hard drive and have the service
 store the backup and allow the user to access it in exchange for a
 monthly fee. However, at this point the file storage market is at times
-relatively inefficient; a cursory look at various [existing
-solutions](http://online-storage-service-review.toptenreviews.com/)
+relatively inefficient; a cursory look at various existing solutions 
 shows that, particularly at the "uncanny valley" 20-200 GB level at
 which neither free quotas nor enterprise-level discounts kick in,
 monthly prices for mainstream file storage costs are such that you are
@@ -1414,15 +1412,13 @@ The issuance model will be as follows:
 - 0.26x the total amount sold will be allocated to miners per year
   forever after that point.
 
-Group At launch After 1 year After 5 years
-
----
-
-Currency units 1.198X 1.458X 2.498X
-Purchasers 83.5% 68.6% 40.0%
-Reserve spent pre-sale 8.26% 6.79% 3.96%
-Reserve used post-sale 8.26% 6.79% 3.96%
-Miners 0% 17.8% 52.0%
+| Group                  | At launch | After 1 year | After 5 years |
+| ---------------------- | --------- | ------------ | ------------- |
+| Currency units         | 1.198X    | 1.458X       | 2.498X        |
+| Purchasers             | 83.5%     | 68.6%        | 40.0%         |
+| Reserve spent pre-sale | 8.26%     | 6.79%        | 3.96%         |
+| Reserve used post-sale | 8.26%     | 6.79%        | 3.96%         |
+| Miners                 | 0%        | 17.8%        | 52.0%         |
 
 **Long-Term Supply Growth Rate (percent)**
 

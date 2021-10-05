@@ -60,7 +60,7 @@ const Tooltip = ({ content, children }) => {
   return (
     <>
       {isVisible && <ModalReturn onClick={() => setIsVisible(false)} />}
-      <Container onClick={() => setIsVisible(!isVisible)}>
+      <Container title="More info" onClick={() => setIsVisible(!isVisible)}>
         {children}
         {isVisible && (
           <Content>

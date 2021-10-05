@@ -1,0 +1,22 @@
+{
+  "comp-tutorial-metadata-minute-read": "минута четене",
+  "page-tutorial-listing-policy-intro": "Преди да предоставите дадено указание, моля, прочетете нашата политика за изброяване.",
+  "comp-tutorial-metadata-tip-author": "Подсказан автор",
+  "page-tutorial-listing-policy": "политика на изброяване на статия",
+  "page-tutorial-new-github": "За пръв път в GitHub?",
+  "page-tutorial-new-github-desc": "Съобщавате за проблем – просто попълнете нужната информация и публикувайте указанието си.",
+  "page-tutorial-pull-request": "Създайте заявка за сливане",
+  "page-tutorial-pull-request-btn": "Създайте заявка за сливане",
+  "page-tutorial-pull-request-desc-1": "Моля, следвайте",
+  "page-tutorial-pull-request-desc-2": "tutorials/your-tutorial-name/index.md",
+  "page-tutorial-pull-request-desc-3": "даване на име на структура.",
+  "page-tutorial-raise-issue-btn": "Съобщете за проблем",
+  "page-tutorial-read-time": "мин",
+  "page-tutorial-submit-btn": "Публикувайте урок",
+  "page-tutorial-submit-tutorial": "За да публикувате урок, ще трябва да използвате GitHub. Добре дошли сте да зададете въпрос или заявка за сливане.",
+  "page-tutorial-subtitle": "Добре дошли в нашия подбран списък с уроци за общността.",
+  "page-tutorial-tags-error": "Никои от уроците нямат всички тези тагове",
+  "page-tutorial-title": "Уроци за развитие на Етереум",
+  "page-tutorials-meta-description": "Търсете и филтрирайте проверените уроци на общността на Етереум по теми.",
+  "page-tutorials-meta-title": "Уроци за развитие на Етереум"
+}

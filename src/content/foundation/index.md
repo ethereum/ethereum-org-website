@@ -29,6 +29,14 @@ You can access video content of conference presentations for every year since it
 
 Learn more at [devcon.org](https://devcon.org/), check out the [Devcon Blog](https://blog.ethereum.org/category/devcon/), or follow [@efdevcon](https://twitter.com/EFDevcon) for the latest announcements.
 
+### Fellowship Program {#fellowship-program}
+
+The [Ethereum Foundation Fellowship Program](https://fellowship.ethereum.foundation/) is a pilot project that focuses on seeking opportunities in emerging economies. Developing countries today account for over 80% of the world’s population. Amongst about 400,000 babies born every day around the world, more than 360,000 are born in developing countries. People in developing nations represent not only our future as a people, but they may also represent the next billion active users of Ethereum.
+
+The Fellowship Program provides the EF an opportunity to work with change-makers, whose projects have high potential to create impact in emerging economies by using Ethereum. The program features a unique experience that includes mentorship, expertise and access to leaders in the Ethereum ecosystem.
+
+Learn more at [fellowship.ethereum.foundation](https://fellowship.ethereum.foundation/) or check out the [recent blog post on the Fellowship Program](https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion/).
+
 <br/>
 
 For more on the Foundation and their work, visit [ethereum.foundation](http://ethereum.foundation/), or check out the [Ethereum Foundation Blog](https://blog.ethereum.org/) for the EF's latest news and announcements.

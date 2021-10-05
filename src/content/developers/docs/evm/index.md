@@ -13,7 +13,7 @@ The Ethereum protocol itself exists solely for the purpose of keeping the contin
 
 Some basic familiarity with common terminology in computer science such as [bytes](https://en.wikipedia.org/wiki/Byte), [memory](https://en.wikipedia.org/wiki/Computer_memory), and a [stack](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>) are necessary to understand the EVM. It would also be helpful to be comfortable with cryptography/blockchain concepts like [hash functions](https://en.wikipedia.org/wiki/Cryptographic_hash_function), [Proof-of-Work](https://en.wikipedia.org/wiki/Proof_of_work) and the [Merkle Tree](https://en.wikipedia.org/wiki/Merkle_tree).
 
-## From Ledger to State Machine {#from-ledger-to-state-machine}
+## From ledger to state machine {#from-ledger-to-state-machine}
 
 The analogy of a 'distributed ledger' is often used to describe blockchains like Bitcoin, which enable a decentralized currency using fundamental tools of cryptography. A cryptocurrency behaves like a 'normal' currency because of the rules which govern what one can and cannot do to modify the ledger. For example, a Bitcoin address cannot spend more Bitcoin than it has previously received. These rules underpin all transactions on Bitcoin and many other blockchains.
 
@@ -22,7 +22,7 @@ While Ethereum has its own native cryptocurrency (Ether) that follows almost exa
 ![A diagram showing the make up of the EVM](./evm.png)
 _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## The Ethereum State Transition Function {#the-ethereum-state-transition-function}
+## The Ethereum state transition function {#the-ethereum-state-transition-function}
 
 The EVM behaves as a mathematical function would: Given an input, it produces a deterministic output. It therefore is quite helpful to more formally describe Ethereum as having a **state transition function**:
 
@@ -42,7 +42,7 @@ Transactions are cryptographically signed instructions from accounts. There are 
 
 Contract creation results in the creation of a new contract account containing compiled [smart contract](/developers/docs/smart-contracts/anatomy/) bytecode. Whenever another account makes a message call to that contract, it executes its bytecode.
 
-## EVM Instructions {#evm-instructions}
+## EVM instructions {#evm-instructions}
 
 The EVM executes as a [stack machine](https://en.wikipedia.org/wiki/Stack_machine) with a depth of 1024 items. Each item is a 256-bit word, which was chosen for the ease of use with 256-bit cryptography (such as Keccak-256 hashes or secp256k1 signatures).
 
@@ -57,7 +57,7 @@ _Diagrams adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/
 
 <!-- TODO add full list from  https://eth.wiki/concepts/evm/implementations -->
 
-## EVM Implementations {#evm-implementations}
+## EVM implementations {#evm-implementations}
 
 All implementations of the EVM must adhere to the specification described in the Ethereum Yellowpaper.
 
@@ -70,6 +70,7 @@ All [Ethereum clients](/developers/docs/nodes-and-clients/#clients) include an E
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
 - [eEVM](https://github.com/microsoft/eevm) - _C++_
 - [Hyperledger Burrow](https://github.com/hyperledger/burrow) - _Go_
+- [hevm](https://github.com/dapphub/dapptools/tree/master/src/hevm) - _Haskell_
 
 ## Further Reading {#further-reading}
 

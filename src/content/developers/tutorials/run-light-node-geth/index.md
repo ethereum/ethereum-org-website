@@ -29,7 +29,7 @@ This process may take anywhere from hours to days, and requires a few hundred GB
 
 ## Mainnet and Testnet {#mainnet-and-testnet}
 
-By default, Geth runs a mainnet node. You can run `geth --ropsten` to run a Ropsten testnet full node. You can run a node on Rinkeby by swapping `ropsten` for `rinkeby`.
+By default, Geth runs a Mainnet node. You can run `geth --ropsten` to run a Ropsten testnet full node. You can run a node on Rinkeby by swapping `ropsten` for `rinkeby`.
 
 [Learn more about different networks](/developers/docs/networks/).
 

@@ -62,7 +62,6 @@ Un „contract smart” este o secvență de cod care rulează pe Ethereum. Se n
 Ethereum folosește un sistem numit „Proof of Work”. Acesta îi permite rețelei Ethereum să se pună de acord în privința stării tuturor informațiilor înregistrate pe blockchainul Ethereum și previne anumite tipuri de atac economic.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Actualizat frecvent - Ethhub_
-- [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 În ETH 2.0, Ethereum va migra la un alt tip de sistem, numit „Proof of Stake". [Citește mai mult despre ETH 2.0 mai jos](#eth-2-0).
 

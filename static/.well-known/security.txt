@@ -1,0 +1,29 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Contact: mailto:security@ethereum.org
+Expires: 2021-12-31T23:59:00.000Z
+Encryption: https://ethereum.org/security_at_ethereum.org.asc
+Acknowledgments: https://bounty.ethereum.org
+Acknowledgments: https://eth2bounty.ethereum.org
+Preferred-Languages: en
+Canonical: https://ethereum.org/.well-known/security.txt
+Policy: https://bounty.ethereum.org
+Policy: https://eth2bounty.ethereum.org
+Hiring: https://ethereum.org/en/about/#open-jobs
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEErpbtlp5HmwCE8+F/6I0zNPpfagoFAmEAERMACgkQ6I0zNPpf
+agpbtA//fqy/nVWpr9zgL6Ofs0mFor5+WVMECm6MDmJIg4gB6MylGZ62mZvzT8EB
+SjpkRHFFEyEuQGTLWbLEqEOMe2lF9f7Et5gAOUf1S7Ky+y/sOZwAXVvyFUQ0o2lC
+i1/L2PsDxr2sDix5jQZepuBEC7EvjLSkDkPGIj+tVqc61MU4OxwYJnlozuuHf+G5
+ZWROglHgcCMfydmIos/5acxlmTvGvTfQmp29BdGng9XapZztHj/Vpb7Gr6TACPST
+qYLx8QePAccL3TagtpLHjEdTeOrC2JLHW3FNegogbt6agHRARNHFJzuP9HyZS7h+
+0rtPHV85QWfQExDGOLeitSiYVXx2dgXR1diwZNJdXmF7mlE9DQFxueGJqk+Rjirp
+ZT+kXsYb8f3dRNgRxC3KGLG+jrXHiEQM2NwBlrfHWdLy602oQRzu64E9m7ZMK0/O
+BkYwO+fjbCUSpSBRm11fJKJj2nIK98DUTeKnu9uS3E9T7OiIBkL5/F3BPgxD4cVs
+RkRSVcDj86q1eS9H28e7HYoTBAq9nNhJwbS4NjtyZOMNC8VibXUbTdc+N1NsKGav
+gTHoFBi6MeIP2KQ4r7Xf+WrAMpbo+SxiqP74SkTk9wftMb5c0Tf58+oIvTkeaLl9
+p4Z8EUWtjVj+IjDaAafDQ8c1EkMsB/fCqvMW/7Xraa6IpgCzlKk=
+=JDVA
+-----END PGP SIGNATURE-----

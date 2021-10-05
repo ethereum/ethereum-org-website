@@ -26,7 +26,7 @@ Aceste modificări de regulă pot crea o divizare temporară în rețea. Blocuri
 
 ### Geneza lanțului Beacon {#beacon-chain-genesis}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>01 dec. 2020 12:00:35 PM + UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numărul blocului lanțului Beacon: <a href="https://beaconscan.com/slot/1">1</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preț ETH: 586,23 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201207184633/https://www.ethereum.org/en/">ethereum.org pe waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>01 dec. 2020 12:00:35 PM + UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numărul blocului lanțului Beacon: <a href="https://beaconscan.com/slot/1">1</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preț ETH: 586,23 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201207184633/https://www.ethereum.org/en/">ethereum.org pe waybackmachine</a>
 
 #### Rezumat {#beacon-chain-genesis-summary}
 
@@ -40,11 +40,11 @@ Aceste modificări de regulă pot crea o divizare temporară în rețea. Blocuri
 
 ### S-a implementat contractul de depunere a mizei {#staking-deposit-contract}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>14 oct. 2020 09:22:52 AM + UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Număr de bloc: <a href="https://etherscan.io/block/11052984">11052984</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preț ETH: 379,04 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201104235727/https://ethereum.org/en/">ethereum.org pe waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>14 oct. 2020 09:22:52 AM + UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Număr de bloc: <a href="https://etherscan.io/block/11052984">11052984</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preț ETH: 379,04 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201104235727/https://ethereum.org/en/">ethereum.org pe waybackmachine</a>
 
 #### Rezumat {#deposit-contract-summary}
 
-Contractul de depozit de miză a introdus [miza](/glossary/#staking) în ecosistemul Ethereum. Deși este un contract [mainnet](/glossary/#mainnet) (rețea principală), acesta a avut un impact direct asupra cronologiei lansării [lanțului Beacon](/eth2/beacon-chain/), un important [upgrade Eth2](/eth2/).
+Contractul de depozit de miză a introdus [miza](/glossary/#staking) în ecosistemul Ethereum. Deși este un contract [Mainnet](/glossary/#mainnet) (rețea principală), acesta a avut un impact direct asupra cronologiei lansării [lanțului Beacon](/eth2/beacon-chain/), un important [upgrade Eth2](/eth2/).
 
 [Citește anunțul Fundației Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
@@ -54,7 +54,7 @@ Contractul de depozit de miză a introdus [miza](/glossary/#staking) în ecosist
 
 ### Muir Glacier {#muir-glacier}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>02 ian. 2020 08:30:49 AM + UTCC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Număr de bloc: <a href="https://etherscan.io/block/9.200.000">9.200.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preț ETH: 127,18 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20200103093618/https://ethereum.org/">ethereum.org pe waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>02 ian. 2020 08:30:49 AM + UTCC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Număr de bloc: <a href="https://etherscan.io/block/9.200.000">9.200.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preț ETH: 127,18 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20200103093618/https://ethereum.org/">ethereum.org pe waybackmachine</a>
 
 #### Rezumat {#muir-glacier-summary}
 
@@ -75,7 +75,7 @@ Furculița Muir Glacier a introdus o întârziere în [bomba de dificultate](/gl
 
 ### Istanbul {#istanbul}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>08 dec. 2019 12:25:09 AM + UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Număr de bloc: <a href="https://etherscan.io/block/9.069.000">9.069.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preț ETH: 151,06 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20191216101254if*/https://ethereum.org/">ethereum.org pe waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>08 dec. 2019 12:25:09 AM + UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Număr de bloc: <a href="https://etherscan.io/block/9.069.000">9.069.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preț ETH: 151,06 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20191216101254if*/https://ethereum.org/">ethereum.org pe waybackmachine</a>
 
 #### Rezumat {#istanbul-summary}
 
@@ -83,7 +83,7 @@ Furculița Istanbul:
 
 - A optimizat costul [gazului](/glossary/#gas) anumitor acțiuni din [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - A îmbunătățit rezistența la atacul prin refuz de serviciu.
-- A făcut soluțiile de [scalare Layer 2](/developers/docs/layer-2-scaling/) bazate pe SNARK-uri și STARK-uri mai performante.
+- A făcut soluțiile de [scalare Layer 2](/developers/docs/scaling/layer-2-rollups/) bazate pe SNARK-uri și STARK-uri mai performante.
 - A permis interoperabilitatea dintre Ethereum și Zcash.
 - A permis contractelor să introducă funcții mai creative.
 
@@ -95,7 +95,7 @@ Furculița Istanbul:
 - [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) –_criptografie mai ieftină pentru a îmbunătăți costurile de [gas](/glossary/#gas)._
 - [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _protejează Ethereum împotriva atacurilor de reluare prin adăugarea „CHAINID” [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine)._
 - [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _optimizarea prețurilor gazului opcode pe baza consumului._
-- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _reduce costul CallData pentru a permite mai multe date în blocuri – bun pentru [scalarea Layer 2](/developers/docs/layer-2-scaling/)._
+- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _reduce costul CallData pentru a permite mai multe date în blocuri – bun pentru [scalarea Layer 2](/developers/docs/scaling/layer-2-rollups/)._
 - [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) – _alte modificări ale prețului gazului opcode._
 
 </ExpandableCard>
@@ -104,7 +104,7 @@ Furculița Istanbul:
 
 ### Constantinopol {#constantinople}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>28 feb. 2019 19:52:04 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Număr bloc: <a href="https://etherscan.io/block/7.280.000">7.280.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preț ETH: 136,29 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20190415163751/https://www.ethereum.org/">ethereum.org pe waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>28 feb. 2019 19:52:04 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Număr bloc: <a href="https://etherscan.io/block/7.280.000">7.280.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preț ETH: 136,29 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20190415163751/https://www.ethereum.org/">ethereum.org pe waybackmachine</a>
 
 #### Rezumat {#constantinople-summary}
 
@@ -131,7 +131,7 @@ Furculița Constantinopol:
 
 ### Byzantium {#byzantium}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>16 oct. 2017 05:22:11 + UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Număr bloc: <a href="https://etherscan.io/block/4.370.000">4.370.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preț ETH: 334,23 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20171017201143/https://www.ethereum.org/">ethereum.org pe waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>16 oct. 2017 05:22:11 + UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Număr bloc: <a href="https://etherscan.io/block/4.370.000">4.370.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preț ETH: 334,23 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20171017201143/https://www.ethereum.org/">ethereum.org pe waybackmachine</a>
 
 #### Rezumat {#byzantium-summary}
 
@@ -140,7 +140,7 @@ Furculița Byzantium:
 - A redus recompensele [miniere](/developers/docs/consensus-mechanisms/pow/mining/) pe bloc de la 5 la 3 ETH.
 - A amânat [bomba de dificultate](/glossary/#difficulty-bomb) cu un an.
 - A adăugat capacitatea de a efectua apeluri către alte contracte care nu modifică starea.
-- A adăugat anumite metode de criptografie pentru a permite \[scalarea layer-ului 2\]((/developers/docs/layer-2-scaling/).
+- A adăugat anumite metode de criptografie pentru a permite [scalarea layer-ului 2](/developers/docs/scaling/layer-2-rollups/).
 
 [Citește anunțul Fundației Ethereum](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
@@ -148,8 +148,8 @@ Furculița Byzantium:
 
 - [EIP-140](https://eips.ethereum.org/EIPS/eip-140) – _adaugă opcodul „REVERT”._
 - [EIP-658](https://eips.ethereum.org/EIPS/eip-658) – _adaugă câmpul „stare” la recepțiile tranzacției pentru a indica succesul sau eșecul_
-- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _adaugă curba eliptică și înmulțirea scalară pentru a permite [ZK-Snarks](/developers/docs/layer-2-scaling/#rollups)._
-- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _adaugă curba eliptică și înmulțirea scalară pentru a permite [ZK-Snarks](/developers/docs/layer-2-scaling/#rollups)._
+- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _adaugă curba eliptică și înmulțirea scalară pentru a permite [ZK-Snarks](/developers/docs/scaling/layer-2-rollups/)._
+- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _adaugă curba eliptică și înmulțirea scalară pentru a permite [ZK-Snarks](/developers/docs/scaling/layer-2-rollups/)._
 - [EIP-198](https://eips.ethereum.org/EIPS/eip-198) – _permite verificarea semnăturii RSA._
 - [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _adaugă suport pentru valorile de returnare de lungime variabilă._
 - [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _adaugă opcodul „STATICCALL”, care permite apeluri care nu modifică starea către alte contracte._
@@ -164,7 +164,7 @@ Furculița Byzantium:
 
 ### Spurious Dragon {#spurious-dragon}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>22 nov. 2016 16:15:44 PM + UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Număr bloc: <a href="https://etherscan.io/block/2.675.000">2.675.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preț ETH: 9,84 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161127154654/https://www.ethereum.org/">ethereum.org pe waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>22 nov. 2016 16:15:44 PM + UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Număr bloc: <a href="https://etherscan.io/block/2.675.000">2.675.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preț ETH: 9,84 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161127154654/https://www.ethereum.org/">ethereum.org pe waybackmachine</a>
 
 #### Rezumat {#spurious-dragon-summary}
 
@@ -189,7 +189,7 @@ Furculița Spurious Dragon a fost al doilea răspuns la atacurile de refuz de se
 
 ### Tangerine whistle {#tangerine-whistle}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>18 oct. 2016 01:19:31 PM + UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Număr bloc: <a href="https://etherscan.io/block/2.463.000">2.463.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preț ETH: 12,50 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161030043727/https://www.ethereum.org/">ethereum.org pe waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>18 oct. 2016 01:19:31 PM + UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Număr bloc: <a href="https://etherscan.io/block/2.463.000">2.463.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preț ETH: 12,50 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161030043727/https://www.ethereum.org/">ethereum.org pe waybackmachine</a>
 
 #### Rezumat {#tangerine-whistle-summary}
 
@@ -210,7 +210,7 @@ Furculița Tangerine Whistle a fost primul răspuns la atacurile de refuz de ser
 
 ### Furculița DAO {#dao-fork}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>20 iul. 2016 01:20:40 PM + UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Număr bloc: <a href="https://etherscan.io/block/1.920.000">1.920.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Preț ETH: 12,54 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160803215306/https://ethereum.org/">ethereum.org pe waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>20 iul. 2016 01:20:40 PM + UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Număr bloc: <a href="https://etherscan.io/block/1.920.000">1.920.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Preț ETH: 12,54 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160803215306/https://ethereum.org/">ethereum.org pe waybackmachine</a>
 
 #### Rezumat {#dao-fork-summary}
 
@@ -226,7 +226,7 @@ Unii mineri au refuzat să bifurce pentru că incidentul DAO nu a fost un defect
 
 ### Homestead {#homestead}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>14 mar. 2016 06:49:53 PM + UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Număr bloc: <a href="https://etherscan.io/block/1150000">1.150.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preț ETH: 12,50 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160313203843/https://www.ethereum.org/">ethereum.org pe waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>14 mar. 2016 06:49:53 PM + UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Număr bloc: <a href="https://etherscan.io/block/1150000">1.150.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preț ETH: 12,50 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160313203843/https://www.ethereum.org/">ethereum.org pe waybackmachine</a>
 
 #### Rezumat {#homestead-summary}
 
@@ -248,7 +248,7 @@ Furculița Homestead care arată spre viitor. Aceasta a inclus mai multe modific
 
 ### Frontier thawing {#frontier-thawing}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>07 sep. 2015 09:33:09 PM + UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Număr bloc: <a href="https://etherscan.io/block/200.000">200.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preț ETH: 1,24 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150912193811/https://www.ethereum.org/">ethereum.org pe waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>07 sep. 2015 09:33:09 PM + UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Număr bloc: <a href="https://etherscan.io/block/200.000">200.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preț ETH: 1,24 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150912193811/https://www.ethereum.org/">ethereum.org pe waybackmachine</a>
 
 #### Rezumat {#frontier-thawing-summary}
 
@@ -260,7 +260,7 @@ Furculița Frontier Thawing a ridicat limita de [gas](/glossary/#gas) de 5.000 p
 
 ### Frontier {#frontier}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>30 iul. 2015 03:26:13 PM + UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Număr bloc: <a href="https://etherscan.io/block/0">0</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preț ETH: N/A<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150802035735/https://www.ethereum.org/">ethereum.org pe waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>30 iul. 2015 03:26:13 PM + UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Număr bloc: <a href="https://etherscan.io/block/0">0</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Preț ETH: N/A<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150802035735/https://www.ethereum.org/">ethereum.org pe waybackmachine</a>
 
 #### Rezumat {#frontier-summary}
 
@@ -274,7 +274,7 @@ Frontier a fost o implementare în direct, dar cea mai esențială componentă a
 
 ### Vânzarea de eter {#ether-sale}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 22 iulie – 02 septembrie 2014<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140804235628/https://www.ethereum.org/">ethereum.org pe waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 22 iulie – 02 septembrie 2014<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140804235628/https://www.ethereum.org/">ethereum.org pe waybackmachine</a>
 
 Eter a fost pus în vânzare oficial timp de 42 de zile. Se putea cumpăra cu BTC.
 
@@ -284,7 +284,7 @@ Eter a fost pus în vânzare oficial timp de 42 de zile. Se putea cumpăra cu BT
 
 ### A fost lansat Yellowpaper {#yellowpaper}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 01 aprilie 2014<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140509173418/https://www.ethereum.org/">ethereum.org pe waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 01 aprilie 2014<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140509173418/https://www.ethereum.org/">ethereum.org pe waybackmachine</a>
 
 Yellow Paper, scris de Dr. Gavin Wood, este o definiție tehnică a protocolului Ethereum.
 
@@ -296,7 +296,7 @@ Yellow Paper, scris de Dr. Gavin Wood, este o definiție tehnică a protocolului
 
 ### A fost lansat Whitepaper {#whitepaper}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 27 noiembrie 2013<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140208030136/http://www.ethereum.org/">ethereum.org pe waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 27 noiembrie 2013<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140208030136/http://www.ethereum.org/">ethereum.org pe waybackmachine</a>
 
 Lucrarea introductivă, publicată în 2013 de Vitalik Buterin, fondatorul Ethereum, înainte de lansarea proiectului în 2015.
 

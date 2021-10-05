@@ -33,7 +33,8 @@ const H1 = styled.h1`
   margin-top: 0;
   color: ${(props) => props.theme.colors.text};
   font-style: normal;
-  font-family: "SFMono-Regular", monospace;
+  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
+    "Liberation Mono", Menlo, Courier, monospace;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 2rem;
@@ -127,6 +128,15 @@ const LearningToolsPage = ({ data }) => {
       background: "#ffffff",
       subjects: ["Vyper"],
     },
+    {
+      name: "Capture The Ether",
+      description: "page-learning-tools-capture-the-ether-description",
+      url: "https://capturetheether.com/",
+      image: data.captureTheEther.childImageSharp.fixed,
+      alt: "page-learning-tools-capture-the-ether-logo-alt",
+      background: "#1B9AAA",
+      subjects: ["Solidity"],
+    },
   ]
 
   const bootcamps = [
@@ -146,6 +156,42 @@ const LearningToolsPage = ({ data }) => {
       image: data.consensys.childImageSharp.fixed,
       alt: "page-learning-tools-consensys-academy-logo-alt",
       background: "#F6F7F9",
+      subjects: ["Solidity", "web3"],
+    },
+    {
+      name: "Lambda School",
+      description: "page-learning-tools-lambdaschool-description",
+      url: "https://lambdaschool.com/learn-blockchain-development",
+      image: data.lambdaschool.childImageSharp.fixed,
+      alt: "page-learning-tools-lambdaschool-logo-alt",
+      background: "#111F29",
+      subjects: ["Solidity", "web3"],
+    },
+    {
+      name: "_buildspace",
+      description: "page-learning-tools-buildspace-description",
+      url: "https://buildspace.so",
+      image: data.buildspace.childImageSharp.fixed,
+      alt: "page-learning-tools-buildspace-logo-alt",
+      background: "#F6F7F9",
+      subjects: ["Solidity", "web3"],
+    },
+    {
+      name: "Questbook",
+      description: "page-learning-tools-questbook-description",
+      url: "https://questbook.app/",
+      image: data.questbook.childImageSharp.fixed,
+      alt: "page-learning-tools-questbook-logo-alt",
+      background: "#141236",
+      subjects: ["Solidity", "web3"],
+    },
+    {
+      name: "NFT School",
+      description: "page-learning-tools-nftschool-description",
+      url: "https://nftschool.dev/",
+      image: data.nftschool.childImageSharp.fixed,
+      alt: "page-learning-tools-nftschool-logo-alt",
+      background: "#111F29",
       subjects: ["Solidity", "web3"],
     },
   ]
@@ -274,10 +320,21 @@ export const learningToolImage = graphql`
 
 export const query = graphql`
   query {
+    captureTheEther: file(
+      relativePath: { eq: "dev-tools/capturetheether.png" }
+    ) {
+      ...learningToolImage
+    }
     chainshot: file(relativePath: { eq: "dev-tools/chainshot.png" }) {
       ...learningToolImage
     }
     consensys: file(relativePath: { eq: "dev-tools/consensys.png" }) {
+      ...learningToolImage
+    }
+    lambdaschool: file(relativePath: { eq: "dev-tools/lambdaschool.png" }) {
+      ...learningToolImage
+    }
+    buildspace: file(relativePath: { eq: "dev-tools/buildspace.png" }) {
       ...learningToolImage
     }
     cryptoZombie: file(relativePath: { eq: "dev-tools/crypto-zombie.png" }) {
@@ -289,10 +346,16 @@ export const query = graphql`
     vyperfun: file(relativePath: { eq: "dev-tools/vyperfun.png" }) {
       ...learningToolImage
     }
+    questbook: file(relativePath: { eq: "dev-tools/questbook.png" }) {
+      ...learningToolImage
+    }
     remix: file(relativePath: { eq: "dev-tools/remix.png" }) {
       ...learningToolImage
     }
     ethdotbuild: file(relativePath: { eq: "dev-tools/eth-dot-build.png" }) {
+      ...learningToolImage
+    }
+    nftschool: file(relativePath: { eq: "dev-tools/nftschool.png" }) {
       ...learningToolImage
     }
     learn: file(relativePath: { eq: "enterprise-eth.png" }) {

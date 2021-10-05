@@ -44,7 +44,7 @@ sidebar: true
 
 **Ethers.js -** **_JavaScript 和 TypeScript 中完整的以太坊钱包实现和实用工具。_**
 
-- [相关文档](https://docs.ethers.io/ethers.js/html/)
+- [相关文档](https://docs.ethers.io/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
 **ethereumjs-vm -** **_在 JavaScript 中实现以太坊虚拟机（VM）_**

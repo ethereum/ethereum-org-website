@@ -341,7 +341,7 @@ contract Simple {
 Each path executed has its state of the blockchain. A state is either ready or it is killed, meaning that it reaches a THROW or REVERT instruction:
 
 - [m.ready_states](https://manticore.readthedocs.io/en/latest/states.html#accessing): the list of states that are ready (they did not execute a REVERT/INVALID)
-- [m.killed_states](https://manticore.readthedocs.io/en/latest/states.html#accessings): the list of states that are ready (they did not execute a REVERT/INVALID)
+- [m.killed_states](https://manticore.readthedocs.io/en/latest/states.html#accessings): the list of states that are killed
 - [m.all_states](https://manticore.readthedocs.io/en/latest/states.html#accessings): all the states
 
 ```python

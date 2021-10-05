@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 
@@ -10,6 +10,8 @@ import { Page, Content } from "../components/SharedStyledComponents"
 import languageMetadata from "../data/translations"
 import { translateMessageId } from "../utils/translations"
 import { CardItem as LangItem } from "../components/SharedStyledComponents"
+import Icon from "../components/Icon"
+import NakedButton from "../components/NakedButton"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
@@ -34,15 +36,62 @@ const LangTitle = styled.div`
   text-transform: uppercase;
 `
 
+const Form = styled.form`
+  margin: 0;
+  position: relative;
+  border-radius: 0.25em;
+  width: clamp(min(400px, 100%), 50%, 600px);
+`
+
+const StyledInput = styled.input`
+  border: 1px solid ${(props) => props.theme.colors.searchBorder};
+  color: ${(props) => props.theme.colors.text};
+  background: ${(props) => props.theme.colors.searchBackground};
+  padding: 0.5rem;
+  padding-right: 2rem;
+  border-radius: 0.25em;
+  width: 100%;
+
+  &:focus {
+    outline: ${(props) => props.theme.colors.primary} auto 1px;
+  }
+`
+
+const IconButton = styled(NakedButton)`
+  position: absolute;
+  top: 50%;
+  margin-top: -12px;
+  right: 6px;
+`
+
+const ResetIcon = styled(Icon)`
+  fill: ${(props) => props.theme.colors.text};
+`
+
 const LanguagesPage = () => {
   const intl = useIntl()
-
+  const [keyword, setKeyword] = useState("")
+  const resetKeyword = (e) => {
+    e.preventDefault()
+    setKeyword("")
+  }
+  const searchString = translateMessageId(
+    "page-languages-filter-placeholder",
+    intl
+  )
   let translationsCompleted = []
   for (const lang in languageMetadata) {
     const langMetadata = languageMetadata[lang]
     langMetadata["path"] = `/${lang}/`
     langMetadata["name"] = translateMessageId(`language-${lang}`, intl)
-    translationsCompleted.push(languageMetadata[lang])
+    const nativeLangTitle = langMetadata["language"]
+    const englishLangTitle = langMetadata["name"]
+    if (
+      englishLangTitle.toLowerCase().includes(keyword.toLowerCase()) ||
+      nativeLangTitle.toLowerCase().includes(keyword.toLowerCase())
+    ) {
+      translationsCompleted.push(languageMetadata[lang])
+    }
   }
   translationsCompleted.sort((a, b) => a["name"].localeCompare(b["name"]))
 
@@ -70,6 +119,18 @@ const LanguagesPage = () => {
           <h2>
             <Translation id="page-languages-translations-available" />:
           </h2>
+          <Form>
+            <StyledInput
+              value={keyword}
+              placeholder={searchString}
+              onChange={(e) => setKeyword(e.target.value)}
+            />
+            {keyword === "" ? null : (
+              <IconButton onClick={resetKeyword}>
+                <ResetIcon name="close" />
+              </IconButton>
+            )}
+          </Form>
           <LangContainer>
             {translationsCompleted.map((lang) => (
               <LangItem to={lang.path} key={lang["name"]}>

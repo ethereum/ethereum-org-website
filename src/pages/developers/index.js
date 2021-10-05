@@ -69,7 +69,8 @@ const HeroCopy = styled.div`
 const H1 = styled.h1`
   font-style: normal;
   font-weight: normal;
-  font-family: "SFMono-Regular", monospace;
+  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
+    "Liberation Mono", Menlo, Courier, monospace;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 32px;
@@ -329,6 +330,13 @@ const DevelopersPage = ({ data }) => {
               <Translation id="page-developers-into-eth-desc" />
             </p>
 
+            <Link to="/developers/docs/intro-to-ether/">
+              <Translation id="page-developers-intro-ether-link" />
+            </Link>
+            <p>
+              <Translation id="page-developers-intro-ether-desc" />
+            </p>
+
             <Link to="/developers/docs/dapps/">
               <Translation id="page-developers-intro-dapps-link" />
             </Link>
@@ -490,6 +498,13 @@ const DevelopersPage = ({ data }) => {
               <Translation id="page-developers-token-standards-desc" />
             </p>
 
+            <Link to="/developers/docs/mev/">
+              <Translation id="page-developers-mev-link" />
+            </Link>
+            <p>
+              <Translation id="page-developers-mev-desc" />
+            </p>
+
             <Link to="/developers/docs/oracles/">
               <Translation id="page-developers-oracles-link" />
             </Link>
@@ -497,7 +512,7 @@ const DevelopersPage = ({ data }) => {
               <Translation id="page-developers-oracle-desc" />
             </p>
 
-            <Link to="/developers/docs/layer-2-scaling/">
+            <Link to="/developers/docs/scaling/">
               <Translation id="page-developers-scaling-link" />
             </Link>
             <p>

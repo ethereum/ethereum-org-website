@@ -45,7 +45,7 @@ Cần một hướng dẫn cơ bản hơn? Tham khảo [ethereum.org/learn](/vi/
 
 **Ethers.js -** **_Công cụ thiết lập và các tiện ích ví Ethereum toàn diện bằng ngôn ngữ JavaScript và TypeScript._**
 
-- [Tài liệu tham khảo](https://docs.ethers.io/ethers.js/html/)
+- [Tài liệu tham khảo](https://docs.ethers.io/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
 **ethereumjs-vm -** **_Máy ảo Ethereum được triển khai bằng JavaScript_**

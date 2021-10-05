@@ -79,14 +79,14 @@ Before diving into frameworks, we recommend you first read through our introduct
 
 **Alchemy -** **_Ethereum Development Platform._**
 
-- [alchemyapi.io](https://alchemyapi.io/)
+- [alchemy.com](https://www.alchemy.com/)
 - [GitHub](https://github.com/alchemyplatform)
-- [Discord](https://discord.gg/kwqVnrA)
+- [Discord](https://discord.com/invite/A39JVCM)
 
-**Etherlime -** **_Ethers.js based framework for dapp development (Solidity & Vyper), deployment, debugging, testing and more._**
+**Dapptools -** **_A suite of Ethereum focused CLI tools following the Unix design philosophy, favoring composability, configurability and extensibility._**
 
-- [Docs](https://etherlime.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/LimeChain/etherlime)
+- [Homepage](https://dapp.tools/)
+- [GitHub](https://github.com/dapphub/dapptools/)
 
 ## Further reading {#further-reading}
 

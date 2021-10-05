@@ -45,7 +45,7 @@ sidebarDepth: 1
 
 **Ethers.js —** **_повна реалізація гаманця Ethereum та інших службових програм на JavaScript і TypeScript._**
 
-- [Документація](https://docs.ethers.io/ethers.js/html/)
+- [Документація](https://docs.ethers.io/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
 **ethereumjs-vm —** **_ВМ Ethereum, реалізована на JavaScript_**

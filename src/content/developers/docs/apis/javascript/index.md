@@ -253,7 +253,7 @@ ethers.utils.formatEther(balance)
 
 **Ethers.js -** **_Complete Ethereum wallet implementation and utilities in JavaScript and TypeScript._**
 
-- [Documentation](https://docs.ethers.io/ethers.js/html/)
+- [Documentation](https://docs.ethers.io/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
 **The Graph -** **_A protocol for indexing Ethereum and IPFS data and querying it using GraphQL._**

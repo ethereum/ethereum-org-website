@@ -63,7 +63,6 @@ Zjednodušeně řečeno, „smart kontrakt“ je kód programu, který může b�
 Ethereum v současnosti používá systém „Proof of Work“. Ten umožňuje členům sítě Ethereum dosáhnout společného konsenzu o tom, v jakém stavu jsou informace na blockchain Ethereum zaznamenávány, a zabraňuje tak celé řadě ekonomických útoků.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Pravidelně aktualizováno – Ethhub_
-- [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 V následující verzi ETH 2.0 plánuje Ethereum využívat jiný systém s názvem „Proof of Stake“. [Více o ETH 2.0 se můžete dozvědět níže](./#eth-2-0).
 

@@ -74,7 +74,7 @@ Both images include the same packages, the only difference between them is that 
 
 ## Storage {#storage}
 
-You will need and SSD to run the Ethereum clients (without an SSD drive there’s absolutely no chance of syncing the Ethereum blockchain). There are 2 options:
+You will need an SSD to run the Ethereum clients (without an SSD drive there’s absolutely no chance of syncing the Ethereum blockchain). There are 2 options:
 
 - Use a USB portable SSD disk such as the Samsung T5 Portable SSD.
 - Use a USB 3.0 External Hard Drive Case with a SSD Disk. In our case we used a Inateck 2.5 Hard Drive Enclosure FE2011. Make sure to buy a case with an UAS compliant chip, particularly, one of these: JMicron (JMS567 or JMS578) or ASMedia (ASM1153E).
@@ -195,7 +195,7 @@ sudo systemctl start lighthouse && sudo systemctl enable lighthouse
 
 ## Changing parameters {#changing-parameters}
 
-Clients’ config files are located in the /etc/ethereum/ directory. You can edit these files and restart the systemd service in order for the changes to take effect. The only exception is Nethermind which, additionally, has a mainnet config file located here:
+Clients’ config files are located in the /etc/ethereum/ directory. You can edit these files and restart the systemd service in order for the changes to take effect. The only exception is Nethermind which, additionally, has a Mainnet config file located here:
 
 ```bash
 /etc/nethermind/configs/mainnet.cfg
@@ -236,7 +236,7 @@ The first time, you need to create manually an account by running the “validat
 
 We put a lot of work trying to setup the Raspberry Pi 4 as a full Ethereum node as we know the massive user base of this device may have a very positive impact in the network.
 
-Please, take into account that this is the first image based on Ubuntu 20.04 so there may be some bugs. If so, open an issue on [Github](https://github.com/diglos/pi-gen) or reach us on [Twitter](https://twitter.com/EthereumOnARM).
+Please, take into account that this is the first image based on Ubuntu 20.04 so there may be some bugs. If so, open an issue on [GitHub](https://github.com/diglos/pi-gen) or reach us on [Twitter](https://twitter.com/EthereumOnARM).
 
 ## References {#references}
 

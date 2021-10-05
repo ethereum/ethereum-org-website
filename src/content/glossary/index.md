@@ -28,6 +28,17 @@ An object containing an [address](#address), balance, [nonce](#nonce), and optio
 
 Most generally, this represents an [EOA](#eoa) or [contract](#contract-accouint) that can receive (destination address) or send (source address) [transactions](#transaction) on the blockchain. More specifically, it is the rightmost 160 bits of a [Keccak hash](#keccak-256) of an [ECDSA](#ecdsa) [public key](#public-key).
 
+### application binary interface (ABI) {#abi}
+
+The standard way to interact with [contracts](#contract-account) in the Ethereum ecosystem,
+both from outside the blockchain and for contract-to-contract interactions.
+
+<DocLink to="/developers/docs/smart-contracts/compiling/#web-applications" title="ABI" />
+
+### application programming interface {#api}
+
+An Application Programming Interface (API) is a set of definitions for how to use a piece of software. An API sits between an application and a web server, and facilitates the transfer of data between them.
+
 ### assert {#assert}
 
 In [Solidity](#solidity), `assert(false)` compiles to `0xfe`, an invalid opcode, which uses up all remaining [gas](#gas) and reverts all changes. When an `assert()` statement fails, something very wrong and unexpected is happening, and you will need to fix your code. You should use `assert()` to avoid conditions that should never, ever occur.
@@ -44,7 +55,7 @@ A validator vote for a [Beacon Chain](#beacon-chain) or [shard](#shard) [block](
 
 ### Beacon Chain {#beacon-chain}
 
-An Eth2 upgrade that will become the coordinator for the Ethereum network. It introduces [proof-of-stake](#proof-of-stake) and [validators](#validator) to Ethereum. It will eventually be merged with [mainnet](#mainnet).
+An Eth2 upgrade that will become the coordinator for the Ethereum network. It introduces [proof-of-stake](#pos) and [validators](#validator) to Ethereum. It will eventually be merged with [Mainnet](#mainnet).
 
 <DocLink to="/eth2/beacon-chain/" title="Beacon Chain" />
 
@@ -108,7 +119,7 @@ A special [transaction](#transaction), with the [zero address](#zero-address) as
 
 ### crosslink {#crosslink}
 
-A crosslink provides a summary of a shard's state. It's how [shard](#shard) chains will communicate with one another via the [Beacon Chain](#beacon-chain)in the sharded [proof-of-stake system](#proof-of-stake).
+A crosslink provides a summary of a shard's state. It's how [shard](#shard) chains will communicate with one another via the [Beacon Chain](#beacon-chain) in the sharded [proof-of-stake system](#proof-of-stake).
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work" title="Proof-of-stake" />
 
@@ -150,7 +161,7 @@ A network-wide setting that controls how much computation is required to produce
 
 ### difficulty bomb {#difficulty-bomb}
 
-Planned exponential increase in [proof-of-work](#pow) [difficulty](#difficulty) setting designed to motivate the transition to [proof-of-stake](#pos), reducing the changes of a [fork](#hard-fork)
+Planned exponential increase in [proof-of-work](#pow) [difficulty](#difficulty) setting designed to motivate the transition to [proof-of-stake](#pos), reducing the chances of a [fork](#hard-fork)
 
 ### digital signature {#digital-signatures}
 
@@ -162,7 +173,7 @@ A short string of data a user produces for a document using a [private key](#pri
 
 ### elliptic curve digital signature algorithm (ECDSA) {#ecdsa}
 
-A cryptographic algorithm used by Ethereum to ensure that funds can only be spent by their owners.
+A cryptographic algorithm used by Ethereum to ensure that funds can only be spent by their owners. It's the preferred method for creating public and private keys. Relevant for account [address](#address) generation and [transaction](#transaction) verification.
 
 ### epoch {#epoch}
 
@@ -257,7 +268,7 @@ A change in protocol causing the creation of an alternative chain, or a temporal
 
 A security model for certain [layer 2](#layer-2) solutions where, to increase speed, transactions are [rolled up](#rollups) into batches and submitted to Ethereum in a single transaction. They are assumed valid but can be challenged if fraud is suspected. A fraud proof will then run the transaction to see if fraud took place. This method increases the amount of transactions possible while maintaining security. Some [rollups](#rollups) use [validity proofs](#validity-proof).
 
-<DocLink to="/developers/docs/layer-2-scaling/#optimistic-rollups" title="Optimistic rollups" />
+<DocLink to="/developers/docs/scaling/layer-2-rollups/#optimistic-rollups" title="Optimistic rollups" />
 
 ### frontier {#frontier}
 
@@ -375,7 +386,7 @@ A JSON-encoded file that contains a single (randomly generated) [private key](#p
 
 An area of development focused on layering improvements on top of the Ethereum protocol. These improvements are related to [transaction](#transaction) speeds, cheaper [transaction fees](#transaction-fee), and transaction privacy.
 
-<DocLink to="/developers/docs/layer-2-scaling/" title="Layer 2" />
+<DocLink to="/developers/docs/scaling/layer-2-rollups/" title="Layer 2" />
 
 ### LevelDB {#level-db}
 
@@ -395,7 +406,7 @@ An Ethereum client that does not store a local copy of the [blockchain](#blockch
 
 ## M {#section-m}
 
-### mainnet {#mainnet}
+### Mainnet {#mainnet}
 
 Short for "main network," this is the main public Ethereum [blockchain](#blockchain). Real ETH, real value, and real consequences. Also known as layer 1 when discussing [layer 2](#layer-2) scaling solutions. (Also, see [testnet](#testnet))
 
@@ -444,8 +455,6 @@ A software client that participates in the network.
 
 <DocLink to="/developers/docs/nodes-and-clients/" title="Nodes and Clients" />
 
-<DocLink to="/developers/docs/nodes-and-clients/" title="Nodes and Clients" />
-
 ### nonce {#nonce}
 
 In cryptography, a value that can only be used once. There are two types of nonce used in Ethereum- an account nonce is a transaction counter in each account, which is used to prevent replay attacks; a [proof-of-work](#pow) nonce is the random value in a block that was used to satisfy the [proof-of-work](#pow).
@@ -460,9 +469,9 @@ When a [miner](#miner) finds a valid [block](#block), another miner may have pub
 
 ### Optimistic rollup {#optimistic-rollup}
 
-A [rollup](#rollups) of transactions that use [fraud proofs](#fraud-proof) to offer increased [layer 2](#layer-2) transaction throughput while using the security provided by [mainnet](#mainnet) (layer 1). Unlike [Plasma](#plasma), a similar layer 2 solution, Optimistic rollups can handle more complex transaction types – anything possible in the [EVM](#evm). They do have latency issues compared to [Zero-knowledge rollups](#zk-rollups) because a transaction can be challenged via the fraud proof.
+A [rollup](#rollups) of transactions that use [fraud proofs](#fraud-proof) to offer increased [layer 2](#layer-2) transaction throughput while using the security provided by [Mainnet](#mainnet) (layer 1). Unlike [Plasma](#plasma), a similar layer 2 solution, Optimistic rollups can handle more complex transaction types – anything possible in the [EVM](#evm). They do have latency issues compared to [Zero-knowledge rollups](#zk-rollups) because a transaction can be challenged via the fraud proof.
 
-<DocLink to="/developers/docs/layer-2-scaling/#optimistic-rollups" title="Optimistic Rollups" />
+<DocLink to="/developers/docs/scaling/layer-2-rollups/#optimistic-rollups" title="Optimistic Rollups" />
 
 <Divider />
 
@@ -474,9 +483,9 @@ One of the most prominent interoperable implementations of the Ethereum client s
 
 ### Plasma {#plasma}
 
-A [layer 2](#layer-2) scaling solution that uses [fraud proofs](#fraud-proof), like [Optimistic rollups](#optimistic-rollups). Plasma is limited to simple transactions like basic token transfers and swaps.
+An off-chain scaling solution that uses [fraud proofs](#fraud-proof), like [Optimistic rollups](#optimistic-rollups). Plasma is limited to simple transactions like basic token transfers and swaps.
 
-<DocLink to="/developers/docs/layer-2-scaling/#Plasma" title="Plasma" />
+<DocLink to="/developers/docs/scaling/plasma" title="Plasma" />
 
 ### private key (secret key) {#private-key}
 
@@ -524,7 +533,7 @@ An encoding standard designed by the Ethereum developers to encode and serialize
 
 A type of [layer 2](#layer-2) scaling solution that batches multiple transactions and submits them to [the Ethereum main chain](#mainnet) in a single transaction. This allows for reductions in [gas](#gas) costs and increases in [transaction](#transaction) throughput. There are Optimistic and Zero-knowledge rollups which use different security methods to offer these scalability gains.
 
-<DocLink to="/developers/docs/layer-2-scaling/#rollups" title="Rollups" />
+<DocLink to="/developers/docs/scaling/layer-2-rollups/" title="Rollups" />
 
 <Divider />
 
@@ -532,7 +541,7 @@ A type of [layer 2](#layer-2) scaling solution that batches multiple transaction
 
 ### Serenity {#serenity}
 
-The fourth and final development stage of Ethereum.
+The fourth and final development stage of Ethereum, otherwise known as Ethereum 2.0.
 
 <DocLink to="/eth2/" title="Ethereum 2.0 (Eth2)" />
 
@@ -542,15 +551,15 @@ A family of cryptographic hash functions published by the National Institute of 
 
 ### shard / shard chain {#shard}
 
-A [proof-of-stake](#proof-of-stake) chain that is coordinated by the [Beacon Chain](#beacon-chain) and secured by [validators](#validator). There will be 64 added to the network as part of the Eth2 shard chain upgrade. Shard chains will offer increased transaction throughput for Ethereum by providing additional data to [layer 2](#layer-2) solutions like [optimistic rollups](#optimistic-rollups) and [ZK rollups](#zk-rollups).
+A [proof-of-stake](#pos) chain that is coordinated by the [Beacon Chain](#beacon-chain) and secured by [validators](#validator). There will be 64 added to the network as part of the Eth2 shard chain upgrade. Shard chains will offer increased transaction throughput for Ethereum by providing additional data to [layer 2](#layer-2) solutions like [optimistic rollups](#optimistic-rollups) and [ZK-rollups](#zk-rollups).
 
 <DocLink to="/eth2/shard-chains" title="Shard chains" />
 
 ### sidechain {#sidechain}
 
-A scaling solution that uses a separate chain with different, often faster, [consensus rules](#consensus-rules). A bridge is needed to connect these sidechains to [mainnet](#mainnet). [Rollups](#rollups) also use sidechains, but they operate in collaboration with [mainnet](#mainnet) instead.
+A scaling solution that uses a separate chain with different, often faster, [consensus rules](#consensus-rules). A bridge is needed to connect these sidechains to [Mainnet](#mainnet). [Rollups](#rollups) also use sidechains, but they operate in collaboration with [Mainnet](#mainnet) instead.
 
-<DocLink to="/developers/docs/layer-2-scaling/#sidechains" title="Sidechains" />
+<DocLink to="/developers/docs/scaling/sidechains/" title="Sidechains" />
 
 ### singleton {#singleton}
 
@@ -558,7 +567,7 @@ A computer programming term that describes an object of which only a single inst
 
 ### slot {#slot}
 
-A period of time (12 seconds) in which a new [Beacon Chain](#beacon-chain) and [shard](#shard) chain block can be proposed by a [validator](#validator) in the [proof-of-stake](#proof-of-stake) system. A slot may be empty. 32 slots make up an [epoch](#epoch).
+A period of time (12 seconds) in which a new [Beacon Chain](#beacon-chain) and [shard](#shard) chain block can be proposed by a [validator](#validator) in the [proof-of-stake](#pos) system. A slot may be empty. 32 slots make up an [epoch](#epoch).
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work" title="Proof-of-stake" />
 
@@ -596,9 +605,9 @@ Depositing a quantity of [ether](#ether) (your stake) to become a validator and 
 
 ### state channels {#state-channels}
 
-A [layer 2](#layer-2) solution where a channel is set up between participants, where they can transact freely and cheaply. Only a [transaction](#transaction) to set up the channel and close the channel is sent to [mainnet](#mainnet). This allows for very high transaction throughput, but does rely on knowing number of participants up front and locking up of funds.
+A [layer 2](#layer-2) solution where a channel is set up between participants, where they can transact freely and cheaply. Only a [transaction](#transaction) to set up the channel and close the channel is sent to [Mainnet](#mainnet). This allows for very high transaction throughput, but does rely on knowing number of participants up front and locking up of funds.
 
-<DocLink to="/developers/docs/layer-2-scaling/#state-channels" title="State channels" />
+<DocLink to="/developers/docs/scaling/state-channels/#state-channels" title="State channels" />
 
 ### szabo {#szabo}
 
@@ -614,13 +623,13 @@ A [hard fork](#hard-fork) of the Ethereum blockchain, which occurred at block 2,
 
 ### testnet {#testnet}
 
-Short for "test network," a network used to simulate the behavior of the main Ethereum network (see [mainnet](#mainnet)).
+Short for "test network," a network used to simulate the behavior of the main Ethereum network (see [Mainnet](#mainnet)).
 
 <DocLink to="/developers/docs/networks/#testnets" title="Testnets" />
 
 ### token standard {#token-standard}
 
-Introduced by ERC-20 proposal, this provides a standardized [smart contract](#smart-contract) structure for fungible tokens. Tokens from the same contract can be tracked, traded, and are interchangable, unlike [NFTs](#nft).
+Introduced by ERC-20 proposal, this provides a standardized [smart contract](#smart-contract) structure for fungible tokens. Tokens from the same contract can be tracked, traded, and are interchangeable, unlike [NFTs](#nft).
 
 <DocLink to="/developers/docs/standards/tokens/erc-20/" title="ERC-20 Token Standard" />
 
@@ -648,22 +657,22 @@ A concept named after English mathematician and computer scientist Alan Turing- 
 
 ### validator {#validator}
 
-A [node](#node) in a [proof-of-stake](#proof-of-stake) system responsible for storing data, processing transactions, and adding new blocks to the blockchain. To active validator software, you need to be able to [stake](#staking) 32 ETH.
+A [node](#node) in a [proof-of-stake](#pos) system responsible for storing data, processing transactions, and adding new blocks to the blockchain. To active validator software, you need to be able to [stake](#staking) 32 ETH.
 
-<DocLink to="/developers/docs/consenus-mechanisms/pos" title="Proof of stake" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos" title="Proof of stake" />
 <DocLink to="/eth2/staking/" title="Staking in Ethereum" />
 
 ### Validity proof {#validity-proof}
 
 A security model for certain [layer 2](#layer-2) solutions where, to increase speed, transactions are [rolled up](/#rollups) into batches and submitted to Ethereum in a single transaction. The transaction computation is done off-chain and then supplied to the main chain with a proof of their validity. This method increases the amount of transactions possible while maintaining security. Some [rollups](#rollups) use [fraud proofs](#fraud-proof).
 
-<DocLink to="/developers/docs/layer-2-scaling/#zk-rollups" title="Zero-knowledge rollups" />
+<DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups" title="Zero-knowledge rollups" />
 
 ### Validium {#validium}
 
-A [layer 2](#layer-2) solution that uses [validity proofs](#validity-proof) to improve transaction throughput. Unlike [Zero-knowlege rollups](#zk-rollup), Validium data isn't stored on layer 1 [mainnet](#mainnet).
+An off-chain solution that uses [validity proofs](#validity-proof) to improve transaction throughput. Unlike [Zero-knowledge rollups](#zk-rollup), Validium data isn't stored on layer 1 [Mainnet](#mainnet).
 
-<DocLink to="/developers/docs/layer-2-scaling/#validium" title="Validium" />
+<DocLink to="/developers/docs/scaling/validium/" title="Validium" />
 
 ### Vyper {#vyper}
 
@@ -675,7 +684,7 @@ A high-level programming language with Python-like syntax. Intended to get close
 
 ## W {#section-w}
 
-### wallet {#wallets}
+### wallet {#wallet}
 
 Software that holds [private keys](#private-key). Used to access and control Ethereum [accounts](#account) and interact with [smart contracts](#smart-contract). Keys need not be stored in a wallet, and can instead be retrieved from offline storage (i.e. a memory card or paper) for improved security. Despite the name, wallets never store the actual coins or tokens.
 
@@ -701,9 +710,9 @@ A special Ethereum address, composed entirely of zeros, that is specified as the
 
 ### Zero-knowledge rollup {#zk-rollup}
 
-A [rollup](#rollups) of transactions that use [validity proofs](#validity-proof) to offer increased [layer 2](#layer-2) transaction throughput while using the security provided by [mainnet](#mainnet) (layer 1). Although they can't handle complex transaction types, like [Optimistic rollups](#optimistic-rollups), they don't have latency issues because transactions are provably valid when submitted.
+A [rollup](#rollups) of transactions that use [validity proofs](#validity-proof) to offer increased [layer 2](#layer-2) transaction throughput while using the security provided by [Mainnet](#mainnet) (layer 1). Although they can't handle complex transaction types, like [Optimistic rollups](#optimistic-rollups), they don't have latency issues because transactions are provably valid when submitted.
 
-<DocLink to="/developers/docs/layer-2-scaling/#zk-rollups" title="Zero-knowledge Rollups" />
+<DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups" title="Zero-knowledge Rollups" />
 
 <Divider />
 

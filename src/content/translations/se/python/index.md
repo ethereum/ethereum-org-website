@@ -26,7 +26,7 @@ Behöver du en mer grundläggande introduktion först? Kolla in [ethereum.org/se
 
 ## Nybörjarartiklar {#beginner-articles}
 
-- [En introduktion till smarta kontrakt med Vyper](https://kauri.io/article/af913a853eaf4db88627b3ff9572b770/v1/an-introduction-to-smart-contracts-with-vyper)
+- [En introduktion till smarta kontrakt med Vyper](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [Hur utvecklar man Ethereum kontrakt med Python Flask?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Intro till Web3.py · Ethereum för Python-utvecklare](https://www.dappuniversity.com/articles/web3-py-intro)
 - [Hur man anropar en Smart Contract-funktion med hjälp av Python och web3.py](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
@@ -40,8 +40,8 @@ Behöver du en mer grundläggande introduktion först? Kolla in [ethereum.org/se
 
 ## Avancerad användning av mönster {#advanced-use-patterns}
 
-- [Kompilera, distribuera och anropa Ethereum smarta kontrakt med hjälp av Python](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [Analysera Solidity smarta kontrakt med Slither](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
+- [Kompilera, distribuera och anropa Ethereum smarta kontrakt med hjälp av Python](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
+- [Analysera Solidity smarta kontrakt med Slither](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 
 ## Python-projekt och verktyg {#python-projects-and-tools}
 

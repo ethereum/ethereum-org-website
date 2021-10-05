@@ -34,7 +34,7 @@ cd my-eth-app
 yarn react-app:start
 ```
 
-It is using [create-react-app](https://github.com/facebook/create-react-app) under the hood. To see your app, open `http://localhost:3000/`. When you’re ready to deploy to production, create a minified bundle with yarn build. One easy way to host this would be [Netlify](https://www.netlify.com/). You can create a Github repo, add it to Netlify, setup the build command and you are finished! Your app will be hosted and usable for everyone. And all of it free of charge.
+It is using [create-react-app](https://github.com/facebook/create-react-app) under the hood. To see your app, open `http://localhost:3000/`. When you’re ready to deploy to production, create a minified bundle with yarn build. One easy way to host this would be [Netlify](https://www.netlify.com/). You can create a GitHub repo, add it to Netlify, setup the build command and you are finished! Your app will be hosted and usable for everyone. And all of it free of charge.
 
 ## Features {#features}
 
@@ -57,7 +57,7 @@ The _create-eth-app_ in particular is making use of the new [hooks effects](http
 
 ### ethers.js {#ethersjs}
 
-While [Web3](https://web3js.readthedocs.io/en/v1.2.7/) is still mostly used, [ethers.js](https://docs.ethers.io/ethers.js/html/) has been getting a lot more traction as an alternative in the last year and is the one integrated into _create-eth-app_. You can work with this one, change it to Web3 or consider upgrading to [ethers.js v5](https://docs-beta.ethers.io/) which is almost out of beta.
+While [Web3](https://web3js.readthedocs.io/en/v1.2.7/) is still mostly used, [ethers.js](https://docs.ethers.io/) has been getting a lot more traction as an alternative in the last year and is the one integrated into _create-eth-app_. You can work with this one, change it to Web3 or consider upgrading to [ethers.js v5](https://docs-beta.ethers.io/) which is almost out of beta.
 
 ### The Graph {#the-graph}
 

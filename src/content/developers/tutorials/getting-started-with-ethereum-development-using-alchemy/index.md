@@ -24,7 +24,7 @@ Creating an account with Alchemy is easy, [sign up for free here](https://dashbo
 
 ## 2\. Create an Alchemy App {#create-an-alchemy-app}
 
-To communicte with the Ethereum chain and to use Alchemy’s products, you need an API key to authenticate your requests.
+To communicate with the Ethereum chain and to use Alchemy’s products, you need an API key to authenticate your requests.
 
 You can [create API keys from the dashboard](http://dashboard.alchemyapi.io/). To make a new key, navigate to “Create App” as shown below:
 
@@ -60,7 +60,7 @@ curl https://eth-mainnet.alchemyapi.io/v2/demo \
 -d '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":73}'
 ```
 
-**_NOTE:_** _Replace_ [_https://eth-mainnet.alchemyapi.io/v2/demo_](https://eth-mainnet.alchemyapi.io/jsonrpc/demo) _with your own API key_ [_https://eth-mainnet.alchemyapi.io/v2/your-api-key_](https://eth-mainnet.alchemyapi.io/jsonrpc/your-api-key)_._
+_**NOTE:** Replace [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alchemyapi.io/jsonrpc/demo) with your own API key https://eth-mainnet.alchemyapi.io/v2/**your-api-key**._
 
 **Results:**
 
@@ -106,7 +106,8 @@ Now to get our hands dirty with a little web3 programming we’ll write a simple
 1.  **If you haven’t already, in your terminal create a new project directory and cd into it:**
 
 ```
-mkdir web3-examplecd web3-example
+mkdir web3-example
+cd web3-example
 ```
 
 **2\. Install the Alchemy web3 (or any web3) dependency into your project if you have not already:**
@@ -122,7 +123,7 @@ npm install @alch/alchemy-web3
 ```js
 async function main() {
   const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
-  const web3 = createAlchemyWeb3("https://eth-   mainnet.alchemyapi.io/v2/demo")
+  const web3 = createAlchemyWeb3("https://eth-mainnet.alchemyapi.io/v2/demo")
   const blockNumber = await web3.eth.getBlockNumber()
   console.log("The latest block number is " + blockNumber)
 }

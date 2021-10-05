@@ -110,7 +110,7 @@ function update_name(string value) public {
 
 ### View functions {#view-functions}
 
-These functions promise not to modify the state of the contract's data. Command examples are "getter" functions – you might use this to receive a user's balance for example.
+These functions promise not to modify the state of the contract's data. Common examples are "getter" functions – you might use this to receive a user's balance for example.
 
 ```solidity
 // Solidity example
@@ -374,8 +374,8 @@ contract Token {
         // Only the contract owner can call this function
         require(msg.sender == owner, "You are not the owner.");
 
-        // Ensures a maximum amount of tokens
-        require(amount < 1e60, "Maximum issuance succeeded");
+        // Enforces a maximum amount of tokens
+        require(amount < 1e60, "Maximum issuance exceeded");
 
         // Increases the balance of `receiver` by `amount`
         balances[receiver] += amount;

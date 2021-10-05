@@ -50,6 +50,7 @@ const outdatedMarkdownPages = [
   "/wallets/",
   "/what-is-ethereum/",
 ]
+
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 
@@ -288,7 +289,8 @@ exports.onCreatePage = ({ page, actions }) => {
         ...page.context,
         isOutdated,
         //display TranslationBanner for translation-component pages that are still in English
-        isContentEnglish: langVersion < 2 && !page.component.includes('/developers/index.js')
+        isContentEnglish:
+          langVersion < 2 && !page.component.includes("/index.js"),
       },
     })
   }

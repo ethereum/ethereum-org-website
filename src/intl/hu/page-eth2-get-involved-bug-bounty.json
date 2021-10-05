@@ -83,6 +83,7 @@
   "page-eth2-bug-bountycard-li-5": "Alacsony hatás, magas valószínűség",
   "page-eth2-bug-bountycard-li-6": "Magas hatás, közepes valószínűség",
   "page-eth2-bug-bountycard-li-7": "Közepes hatás, magas valószínűség",
+  "page-eth2-bug-bountycard-li-8": "Magas hatás, magas valószínűség",
   "page-eth2-bug-bountycard-low": "Alacsony",
   "page-eth2-bug-bountycard-low-risk": "Alacsony kockázatú bug beadása",
   "page-eth2-bug-bountycard-medium-risk": "Közepes kockázatú bug beadása",

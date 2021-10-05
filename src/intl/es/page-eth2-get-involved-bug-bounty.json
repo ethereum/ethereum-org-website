@@ -83,6 +83,7 @@
   "page-eth2-bug-bountycard-li-5": "Impacto bajo, probabilidad alta",
   "page-eth2-bug-bountycard-li-6": "Impacto alto, probabilidad media",
   "page-eth2-bug-bountycard-li-7": "Impacto medio, probabilidad alta",
+  "page-eth2-bug-bountycard-li-8": "Impacto alto, probabilidad alta",
   "page-eth2-bug-bountycard-low": "Baja",
   "page-eth2-bug-bountycard-low-risk": "Enviar un error de riesgo bajo",
   "page-eth2-bug-bountycard-medium-risk": "Enviar un error de riesgo medio",

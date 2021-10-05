@@ -190,8 +190,10 @@ const EthExchanges = () => {
           binance
           bitbuy
           bittrex
+          bitvavo
           coinbase
           coinmama
+          coinspot
           country
           cryptocom
           gemini
@@ -226,10 +228,16 @@ const EthExchanges = () => {
       bittrex: file(relativePath: { eq: "exchanges/bittrex.png" }) {
         ...cardListImage
       }
+      bitvavo: file(relativePath: { eq: "exchanges/bitvavo.png" }) {
+        ...cardListImage
+      }
       coinbase: file(relativePath: { eq: "exchanges/coinbase.png" }) {
         ...cardListImage
       }
       coinmama: file(relativePath: { eq: "exchanges/coinmama.png" }) {
+        ...cardListImage
+      }
+      coinspot: file(relativePath: { eq: "exchanges/coinspot.png" }) {
         ...cardListImage
       }
       cryptocom: file(relativePath: { eq: "exchanges/crypto.com.png" }) {
@@ -301,6 +309,12 @@ const EthExchanges = () => {
       image: data.bittrex,
       usaExceptions: ["CT", "HI", "NY", "NH", "TX", "VT", "VA"],
     },
+    bitvavo: {
+      name: "Bitvavo",
+      url: "https://bitvavo.com/en/ethereum",
+      image: data.bitvavo,
+      usaExceptions: [],
+    },
     coinbase: {
       name: "Coinbase",
       url: "https://www.coinbase.com/",
@@ -312,6 +326,12 @@ const EthExchanges = () => {
       url: "https://www.coinmama.com/",
       image: data.coinmama,
       usaExceptions: ["CT", "FL", "IA", "NY"],
+    },
+    coinspot: {
+      name: "CoinSpot",
+      url: "https://www.coinspot.com.au/",
+      image: data.coinspot,
+      usaExceptions: [],
     },
     cryptocom: {
       name: "Crypto.com",

@@ -36,7 +36,6 @@ const StyledIcon = styled(Icon)`
 const CardFace = styled(motion.div)`
   position: absolute;
   backface-visibility: hidden;
-  height: 100%;
   width: 100%;
   color: ${({ theme }) => theme.colors.text};
   box-shadow: 0px 14px 66px rgba(0, 0, 0, 0.07),
@@ -46,8 +45,8 @@ const CardFace = styled(motion.div)`
 
 const CardFront = styled(CardFace)`
   display: flex;
-  height: 100%;
   width: 100%;
+  min-height: 400px;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 4px;
@@ -78,7 +77,6 @@ const Wrapper = styled.div`
 
 const ImageWrapper = styled.div`
   width: 40px;
-  height: 40px;
   margin-right: 1rem;
   padding: 0.25rem;
   background-color: ${({ background }) => background};
@@ -166,8 +164,7 @@ const FeatureRow = styled.div`
 `
 
 const StyledButtonSecondary = styled(ButtonSecondary)`
-  margin: 1rem;
-  margin-bottom: 0rem;
+  margin: auto 1rem 0 1rem;
 `
 
 const HeaderRow = styled.div`
@@ -311,7 +308,7 @@ const WalletCard = ({ wallet }) => {
           >
             <FlipIcon>
               <Translation id="page-find-wallet-card-more-info" />
-              <StyledIcon name="flip" ml="1rem" size="1.25rem" />
+              <StyledIcon name="flip" ml="1rem" size="20px" />
             </FlipIcon>
           </StyledButtonSecondary>
           <StyledButtonLink to={wallet.url} hideArrow={true}>
@@ -335,7 +332,7 @@ const WalletCard = ({ wallet }) => {
                 </ImageWrapper>
                 <Title>{wallet.name}</Title>
               </BackHeaderRow>
-              <Icon name="flip" ml="1rem" size="1.5rem" />
+              <Icon name="flip" ml="1rem" size="24px" />
             </FlipTitle>
             <FeaturesHeader>
               <Translation id="page-find-wallet-card-features" />

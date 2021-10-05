@@ -63,7 +63,8 @@ const AddressContainer = styled.div`
 const Code = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
-  font-family: "SFMono-Regular", monospace;
+  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
+    "Liberation Mono", Menlo, Courier, monospace;
   background: ${(props) => props.theme.colors.ednBackground};
   padding-left: 0.25rem;
   padding-right: 0.25rem;

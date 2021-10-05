@@ -18,7 +18,7 @@ Proč by se firmy měly starat o Ethereum?
 - Snížené náklady na důvěru a koordinaci mezi podnikatelskými stranami
 - Zlepšená transparentnost a operační efektivita obchodní sítě
 - Konkurenceschopná budoucnost podnikání
-- Kompatibilita s hlavní sítí (mainnet) i se soukromými sítěmi s omezeným přístupem
+- Kompatibilita s hlavní sítí (Mainnet) i se soukromými sítěmi s omezeným přístupem
 
 Tady jsou některé související články pro více informací:
 

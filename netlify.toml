@@ -79,9 +79,6 @@
   from = "/crowdsale"
   to = "/en/developers/"
 [[redirects]]
-  from = "/dao"
-  to = "/en/developers/"
-[[redirects]]
   from = "/cli"
   to = "/en/developers/"
 [[redirects]]
@@ -224,6 +221,27 @@
   from = "/delphi/"
   to = "/en/developers/docs/programming-languages/delphi/"
   force = true
+[[redirects]]
+  from = "/dart/"
+  to = "/en/developers/docs/programming-languages/dart/"
+  force = true
+
+# Use-cases
+[[redirects]]
+  from = "/nft/"
+  to = "/en/nft/"
+[[redirects]]
+  from = "/nfts/"
+  to = "/en/nft/"
+[[redirects]]
+  from = "/dao/"
+  to = "/en/dao/"
+[[redirects]]
+  from = "/daos/"
+  to = "/en/dao/"
+[[redirects]]
+  from = "/defi/"
+  to = "/en/defi/"
 
 # Norwegian update
 ## All translations
@@ -254,6 +272,9 @@
   from = "/en/delphi/"
   to = "/en/developers/docs/programming-languages/delphi/"
 [[redirects]]
+  from = "/en/dart/"
+  to = "/en/developers/docs/programming-languages/dart/"
+[[redirects]]
   from = "/en/developers/docs/mining/"
   to = "/en/developers/docs/consensus-mechanisms/pow/mining/"
 
@@ -269,6 +290,26 @@
 [[redirects]]
   from = "/*/build"
   to = "/:splat/developers/learning-tools/"
+[[redirects]]
+  from = "/*/eth2/the-docking"
+  to = "/:splat/eth2/merge/"
+[[redirects]]
+  from = "/*/eth2/the-merge"
+  to = "/:splat/eth2/merge/"
+[[redirects]]
+  from = "/*/eth2/docking"
+  to = "/:splat/eth2/merge/"
+[[redirects]]
+  from = "/*/developers/docs/layer-2-scaling"
+  to = "/:splat/developers/docs/scaling/layer-2-rollups"
+
+# Jobs
+[[redirects]]
+  from = "/*/about/web-developer"
+  to = "/:splat/about/#open-jobs"
+[[redirects]]
+  from = "/*/about/community-lead"
+  to = "/:splat/about/#open-jobs"
 
 # A redirect rule with all the supported properties
 # [[redirects]]

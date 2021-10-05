@@ -1,5 +1,5 @@
 ---
-title: Decentralized autonomous organisations (DAOs)
+title: Decentralized autonomous organizations (DAOs)
 description: An overview of DAOs on Ethereum
 lang: en
 template: use-cases
@@ -44,7 +44,7 @@ This opens up so many new opportunities for global collaboration and coordinatio
 
 To help this make more sense, here's a few examples of how you could use a DAO:
 
-- A charity – you can accept membership and donations from anyone in the world and the group can decide how they to spend donations.
+- A charity – you can accept membership and donations from anyone in the world and the group can decide how they want to spend donations.
 - A freelancer network – you could create a network of contractors who pool their funds for office spaces and software subscriptions.
 - Ventures and grants – you could create a venture fund that pools investment capital and votes on ventures to back. Repaid money could later be redistributed amongst DAO-members.
 
@@ -105,7 +105,14 @@ Ethereum is the perfect foundation for DAOs for a number of reasons:
 
 ## Further reading {#further-reading}
 
+### DAO Articles {#dao-articles}
+
 - [What's a DAO?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
 - [House of DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [What is a DAO and what is it for?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [How to Start a DAO-Powered Digital Community](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
+- [What is a DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
+
+### Videos {#videos}
+
+- [What is a DAO in crypto?](https://youtu.be/KHm0uUPqmVE)

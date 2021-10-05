@@ -21,7 +21,7 @@ Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/learn/) sau
 - [Scrie primul tău contract inteligent](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Cum să compilezi și implementezi Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Lucrul cu clienții Ethereum
+## Lucrul cu clienții Ethereum {#working-with-ethereum-clients}
 
 Află cum să utilizezi [Web3J](https://github.com/web3j/web3j) și Hyperledger Besu, doi clienți de top din Java Ethereum
 

@@ -63,7 +63,6 @@ Kvalifikuoti paaiškinimai apie Ethereum ir apie blokų grandinę apskritai.
 Šiuo metu Ethereum naudojama sistema pavadinimu „Proof of Work“ (liet. „darbo įrodymas“). Taip Ethereum tinklo nariai gali sutarti dėl visos Ethereum blokų grandinėje įrašytos informacijos būsenos ir išvengti tam tikrų ekonominių išpuolių.
 
 - [Ką reiškia Ethereum kasyba?](https://docs.ethhub.io/using-ethereum/mining/) _Dažnai atnaujinama - EthHub_
-- [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 ETH 2.0 versijoje Ethereum bus pereinama prie kitokios sistemos, kuri vadinama „Proof of Stake“ (liet. „lėšų įrodymas“). [Skaitykite daugiau apie ETH 2.0 žemiau](./#eth-2-0).
 
@@ -86,7 +85,7 @@ Dedame dideles pastangas didindami Ethereum spartą ir bendrą sandorių našum�
 
 1 lygmuo reiškia pagrindinio Ethereum protokolo tobulinimą. Pirminis projektas, skirtas patobulinti pagrindinį Ethereum protokolą, yra [ETH 2.0](./#eth-2-0).
 
-2 lygmuo reiškia technologijas, kurios papildo pagrindinį Ethereum protokolą, užtikrindamos didesnį pralaidumą nesumažinant saugumo Taip pat esama negrandininių (off-chain) technologijų, tokių kaip šoninės grandinės (side chains), kurios užtikrina didesnį panaudojimo mastą, suteikdamos atitinkamai mažiau saugumo.
+2 lygmuo reiškia technologijas, kurios papildo pagrindinį Ethereum protokolą, užtikrindamos didesnį pralaidumą nesumažinant saugumo Taip pat esama negrandininių (off-chain) technologijų, tokių kaip šoninės grandinės (sidechains), kurios užtikrina didesnį panaudojimo mastą, suteikdamos atitinkamai mažiau saugumo.
 
 - [Making Sense of Layer 2](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _2018 m. vasario 12 d. - Josh Stark_
 - [The Case for Ethereum Scalability](https://medium.com/connext/the-case-for-ethereum-scalability-d2a8035f880f) _2019 m. sausio 18 d. - Hunter Hillman, Steven McKie ir Eric Olszewski_

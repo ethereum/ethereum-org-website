@@ -30,7 +30,7 @@ Başlamadan önce daha fazla bilgiye mi ihtiyacın var? Bu adrese giderek [ether
 
 - [Dökümantasyon](https://solidity.readthedocs.io)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Solidity Github Sohbet Odası](https://gitter.im/ethereum/solidity/)
+- [Solidity GitHub Sohbet Odası](https://gitter.im/ethereum/solidity/)
 
 **Truffle -** **_A development environment and testing framework built with Node._**
 
@@ -44,7 +44,7 @@ Başlamadan önce daha fazla bilgiye mi ihtiyacın var? Bu adrese giderek [ether
 
 **Ethers.js -** **_Complete Ethereum wallet implementation and utilities in JavaScript and TypeScript._**
 
-- [Dökümanlar](https://docs.ethers.io/ethers.js/html/)
+- [Dökümanlar](https://docs.ethers.io/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
 **ethereumjs-vm -** **_The Ethereum VM implemented in JavaScript_**

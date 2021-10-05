@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-## Standards Overview {#standards-overview}
+## Standards overview {#standards-overview}
 
 The Ethereum community has adopted many standards that help keep projects (such as [Ethereum clients](/developers/docs/nodes-and-clients/) and wallets) interoperable across implementations, and ensure smart contracts and dapps remain composable.
 
@@ -30,6 +30,7 @@ Certain EIPs relate to application-level standards (e.g. a standard smart-contra
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - A standard interface for fungible (interchangeable) tokens, like voting tokens, staking tokens or virtual currencies.
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - A standard interface for non-fungible tokens, like a deed for artwork or a song.
+- [ERC-777](/developers/docs/standards/tokens/erc-777/) - A token standard improving over ERC-20
 
 Learn more about [token standards](/developers/docs/standards/tokens/).
 

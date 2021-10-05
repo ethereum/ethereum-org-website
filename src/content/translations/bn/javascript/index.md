@@ -29,7 +29,7 @@ sidebar: true
 **সলিডিটি -** **_ইথেরিয়ামে সবচেয়ে জনপ্রিয় ল্যাঙ্গুয়েজ, জাভাস্ক্রিপ্ট দ্বারা অনুপ্রাণিত_**
 
 - [ডকুমেন্টেশন](https://solidity.readthedocs.io)
-- [Github](https://github.com/ethereum/solidity/)
+- [GitHub](https://github.com/ethereum/solidity/)
 - [সলিডিটি গিটার চ্যাটরুম](https://gitter.im/ethereum/solidity/)
 
 **ট্রাফল-** **_নোড-এর সাথে নির্মিত একটি ডেভেলপমেন্ট এনভায়রনমেন্ট ও টেস্টিং ফ্রেমওয়ার্ক_**
@@ -44,7 +44,7 @@ sidebar: true
 
 **Ethers.js -** **_সম্পূর্ণ ইথেরিয়াম ওয়ালেট বাস্তবায়ন এবং জাভাস্ক্রিপ্ট ও টাইপস্ক্রিপ্ট-এ ইউটিলিটি।_**
 
-- [নথিপত্র](https://docs.ethers.io/ethers.js/html/)
+- [নথিপত্র](https://docs.ethers.io/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
 **ethereumjs-vm -** **_জাভাস্ক্রিপ্টে বাস্তবায়িত এথেরিয়াম ভিএম_**

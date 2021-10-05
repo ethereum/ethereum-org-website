@@ -74,7 +74,6 @@ sidebar: true
 اتریوم در حال حاضر از سیستمی به نام "گواه اثبات کار" استفاده می‌کند.این به شبکه اتریوم اجازه می‌دهد که روی وضعیت تمام اطلاعات ثبت‌شده روی بلاک‌چین اتریوم توافق شود، و مانع بعضی از انواع حملات اقتصادی می‌گردد.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Updated often - Ethhub_
-- [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 در ETH 2.0 اتریوم روی سیستم دیگری به نام "گواه اثبات سهام" منتقل می‌شود.
 [Read more about ETH 2.0 below](#eth-2-0)

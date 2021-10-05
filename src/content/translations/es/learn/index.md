@@ -63,7 +63,6 @@ Un "contrato inteligente" es simplemente un fragmento de código de programació
 Actualmente Ethereum utiliza un sistema llamado "Prueba de trabajo" o "Proof of Work" (PoW). Esto permite a la red de Ethereum ponerse de acuerdo sobre el estado de toda la información registrada en la cadena de bloques de Ethereum, y evita ciertos tipos de ataques económicos.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Actualizado frecuentemente. Ethhub_
-- [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 En ETH 2.0, Ethereum cambiará a un sistema diferente llamado “Proof of Stake”. [Lea más sobre ETH 2.0 a continuación](./#eth-2-0).
 

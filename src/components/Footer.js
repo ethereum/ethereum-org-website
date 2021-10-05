@@ -101,18 +101,22 @@ const socialLinks = [
   {
     icon: "github",
     to: "https://github.com/ethereum/ethereum-org-website",
+    ariaLabel: "GitHub",
   },
   {
     icon: "twitter",
     to: "https://twitter.com/ethdotorg",
+    ariaLabel: "Twitter",
   },
   {
     icon: "youtube",
     to: "https://youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g",
+    ariaLabel: "Youtube",
   },
   {
     icon: "discord",
     to: "https://discord.gg/CetY6Y4",
+    ariaLabel: "Discord",
   },
 ]
 
@@ -173,8 +177,16 @@ const Footer = () => {
           to: "/eth2/",
         },
         {
+          text: "ethereum-security",
+          to: "/security/",
+        },
+        {
           to: `/glossary/`,
           text: "ethereum-glossary",
+        },
+        {
+          text: "ethereum-governance",
+          to: "/governance/",
         },
         {
           to: "/eips/",
@@ -327,7 +339,12 @@ const Footer = () => {
             <SocialIcons>
               {socialLinks.map((link, idx) => {
                 return (
-                  <Link to={link.to} hideArrow={true} key={idx}>
+                  <Link
+                    to={link.to}
+                    hideArrow={true}
+                    key={idx}
+                    ariaLabel={link.ariaLabel}
+                  >
                     <SocialIcon name={link.icon} size="36" />
                   </Link>
                 )

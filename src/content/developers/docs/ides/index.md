@@ -44,7 +44,12 @@ Most established IDEs have built plugins to enhance the Ethereum development exp
 - [GitHub](https://github.com/JetBrains)
 - [IntelliJ Solidity](https://github.com/intellij-solidity/intellij-solidity/)
 
-## Plugins and Extensions {#plugins-extensions}
+**Remix Desktop -** **_Experience Remix IDE on your local machine_**
+
+- [Download](https://github.com/ethereum/remix-desktop/releases)
+- [GitHub](https://github.com/ethereum/remix-desktop)
+
+## Plugins and extensions {#plugins-extensions}
 
 - [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Ethereum Solidity Language for Visual Studio Code
 - [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - Code formatter using prettier

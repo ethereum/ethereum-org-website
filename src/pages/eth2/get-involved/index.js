@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useState, useEffect } from "react"
 import { ThemeContext } from "styled-components"
 import styled from "styled-components"
 import { graphql } from "gatsby"
@@ -97,12 +97,6 @@ const ReverseRow = styled.div`
   }
 `
 
-const Status = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 2rem;
-`
-
 const StyledCardContainer = styled(CardContainer)`
   margin-top: 2rem;
   margin-bottom: 3rem;
@@ -113,32 +107,8 @@ const StyledCardGrid = styled(CardGrid)`
   margin-bottom: 3rem;
 `
 
-const H2 = styled.h2`
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: 0px;
-  text-align: left;
-`
-
-const On = styled.div`
-  width: 8px;
-  height: 8px;
-  background: ${(props) => props.theme.colors.success400};
-  border-radius: 64px;
-`
-
 const StyledCardList = styled(CardList)`
   margin-right: 2rem;
-`
-
-const Title = styled.p`
-  text-transform: uppercase;
-  font-size: 14px;
-  color: ${(props) => props.theme.colors.text};
-  margin-bottom: 0rem;
-  margin-left: 0.5rem;
 `
 
 const Staking = styled.div`
@@ -190,13 +160,6 @@ const StyledCalloutBanner = styled(CalloutBanner)`
   }
 `
 
-const TemporaryCallout = styled(CalloutBanner)`
-  background: transparent;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  border-radius: 4px;
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-`
-
 const GetInvolvedPage = ({ data, location }) => {
   const intl = useIntl()
   const themeContext = useContext(ThemeContext)
@@ -206,79 +169,90 @@ const GetInvolvedPage = ({ data, location }) => {
   const bountyHunters = data.bountyHunters.nodes.sort(
     (a, b) => b.score - a.score
   )
-  const clients = [
-    {
-      name: "Prysm",
-      background: "#23292E",
-      description: <Translation id="page-eth2-get-involved-written-go" />,
-      alt: "eth2-client-prysm-logo-alt",
-      url: "https://prylabs.net/",
-      image: data.prysm.childImageSharp.fixed,
-      gitHubRepo: data.prysmGitHub.repository,
-    },
-    {
-      name: "Lighthouse",
-      background: "",
-      description: <Translation id="page-eth2-get-involved-written-rust" />,
-      alt: "eth2-client-lighthouse-logo-alt",
-      url: "https://lighthouse-book.sigmaprime.io/",
-      image: isDarkTheme
-        ? data.lighthouseDark.childImageSharp.fixed
-        : data.lighthouseLight.childImageSharp.fixed,
-      gitHubRepo: data.lighthouseGitHub.repository,
-    },
-    {
-      name: "Teku",
-      background: "#3359D5",
-      description: <Translation id="page-eth2-get-involved-written-java" />,
-      alt: "eth2-client-teku-logo-alt",
-      url: "https://pegasys.tech/teku",
-      image: isDarkTheme
-        ? data.tekuLight.childImageSharp.fixed
-        : data.tekuDark.childImageSharp.fixed,
-      gitHubRepo: data.tekuGitHub.repository,
-    },
-    {
-      name: "Cortex",
-      background: "#4CAEE5",
-      description: <Translation id="page-eth2-get-involved-written-net" />,
-      alt: "eth2-client-cortex-logo-alt",
-      url: "https://nethermind.io/",
-      image: data.cortex.childImageSharp.fixed,
-      gitHubRepo: data.cortexGitHub.repository,
-    },
-    {
-      name: "Lodestar",
-      background: "#14140B",
-      description: (
-        <Translation id="page-eth2-get-involved-written-javascript" />
-      ),
-      alt: "eth2-client-lodestar-logo-alt",
-      url: "https://chainsafe.io/",
-      image: data.lodestar.childImageSharp.fixed,
-      gitHubRepo: data.lodestarGitHub.repository,
-    },
-    {
-      name: "Nimbus",
-      background: "#DC8600",
-      description: <Translation id="page-eth2-get-involved-written-nim" />,
-      alt: "eth2-client-nimbus-logo-alt",
-      url: "https://nimbus.team/",
-      image: data.nimbus.childImageSharp.fixed,
-      gitAccount: "status-im",
-      gitRepo: "nimbus-eth1",
-      gitHubRepo: data.nimbusGitHub.repository,
-    },
-    {
-      name: "Trinity",
-      background: "#0B131E",
-      description: <Translation id="page-eth2-get-involved-written-python" />,
-      alt: "eth2-client-trinity-logo-alt",
-      url: "https://trinity.ethereum.org/",
-      image: data.trinity.childImageSharp.fixed,
-      gitHubRepo: data.trinityGitHub.repository,
-    },
-  ]
+
+  const [clients, setClients] = useState([])
+
+  useEffect(() => {
+    const randomizedClients = [
+      {
+        name: "Prysm",
+        background: "#23292E",
+        description: <Translation id="page-eth2-get-involved-written-go" />,
+        alt: "eth2-client-prysm-logo-alt",
+        url: "https://docs.prylabs.network/docs/getting-started/",
+        image: data.prysm.childImageSharp.fixed,
+        githubUrl: "https://github.com/prysmaticlabs/prysm",
+        isProductionReady: true,
+      },
+      {
+        name: "Lighthouse",
+        background: "",
+        description: <Translation id="page-eth2-get-involved-written-rust" />,
+        alt: "eth2-client-lighthouse-logo-alt",
+        url: "https://lighthouse-book.sigmaprime.io/",
+        image: isDarkTheme
+          ? data.lighthouseDark.childImageSharp.fixed
+          : data.lighthouseLight.childImageSharp.fixed,
+        githubUrl: "https://github.com/sigp/lighthouse",
+        isProductionReady: true,
+      },
+      {
+        name: "Teku",
+        background: "#3359D5",
+        description: <Translation id="page-eth2-get-involved-written-java" />,
+        alt: "eth2-client-teku-logo-alt",
+        url: "https://pegasys.tech/teku",
+        image: isDarkTheme
+          ? data.tekuLight.childImageSharp.fixed
+          : data.tekuDark.childImageSharp.fixed,
+        githubUrl: "https://github.com/ConsenSys/teku",
+        isProductionReady: true,
+      },
+      {
+        name: "Cortex",
+        background: "#4CAEE5",
+        description: <Translation id="page-eth2-get-involved-written-net" />,
+        alt: "eth2-client-cortex-logo-alt",
+        url: "https://nethermind.io/",
+        image: data.cortex.childImageSharp.fixed,
+        githubUrl: "https://github.com/NethermindEth/nethermind",
+        isProductionReady: false,
+      },
+      {
+        name: "Lodestar",
+        background: "#14140B",
+        description: (
+          <Translation id="page-eth2-get-involved-written-javascript" />
+        ),
+        alt: "eth2-client-lodestar-logo-alt",
+        url: "https://lodestar.chainsafe.io/",
+        image: data.lodestar.childImageSharp.fixed,
+        githubUrl: "https://github.com/ChainSafe/lodestar",
+        isProductionReady: false,
+      },
+      {
+        name: "Nimbus",
+        background: "#DC8600",
+        description: <Translation id="page-eth2-get-involved-written-nim" />,
+        alt: "eth2-client-nimbus-logo-alt",
+        url: "https://nimbus.team/",
+        image: data.nimbus.childImageSharp.fixed,
+        githubUrl: "https://github.com/status-im/nimbus-eth2",
+        isProductionReady: true,
+      },
+      {
+        name: "Trinity",
+        background: "#0B131E",
+        description: <Translation id="page-eth2-get-involved-written-python" />,
+        alt: "eth2-client-trinity-logo-alt",
+        url: "https://trinity.ethereum.org/",
+        image: data.trinity.childImageSharp.fixed,
+        githubUrl: "https://github.com/ethereum/trinity",
+        isProductionReady: false,
+      },
+    ].sort(() => Math.random() - 0.5)
+    setClients(randomizedClients)
+  }, [])
 
   const ethresearch = [
     {
@@ -349,9 +323,9 @@ const GetInvolvedPage = ({ data, location }) => {
             </Subtitle>
           </HeroContainer>
         </HeroCard>
-        <H2>
+        <h2>
           <Translation id="page-eth2-get-involved-how" />
-        </H2>
+        </h2>
         <p>
           <Translation id="page-eth2-get-involved-how-desc" />
         </p>
@@ -367,49 +341,54 @@ const GetInvolvedPage = ({ data, location }) => {
             </StyledCard>
           ))}
         </StyledCardContainer>
-        <TemporaryCallout
-          image={data.rhino.childImageSharp.fluid}
-          alt={translateMessageId("eth2-rhino-img-alt", intl)}
-          title={translateMessageId("page-eth2-get-involved-grants", intl)}
-          description={translateMessageId(
-            "page-eth2-get-involved-grants-desc",
-            intl
-          )}
-        >
-          <div>
-            <ButtonLink to="/eth2/get-involved/staking-community-grants/">
-              <Translation id="page-eth2-get-involved-more" />
-            </ButtonLink>
-          </div>
-          <Status>
-            <On />
-            <Title>
-              <Translation id="page-eth2-get-involved-date" />
-            </Title>
-          </Status>
-        </TemporaryCallout>
       </Content>
       <Divider id="clients" />
       <Content>
-        <H2>
+        <h2>
           <Translation id="page-eth2-get-involved-run-clients" />
-        </H2>
+        </h2>
         <p>
           <Translation id="page-eth2-get-involved-run-clients-desc" />
         </p>
+        <h3>
+          <Translation id="page-eth2-get-involved-run-clients-production" />
+        </h3>
         <StyledCardGrid>
-          {clients.map((client, idx) => (
-            <ProductCard
-              key={idx}
-              url={client.url}
-              background={client.background}
-              image={client.image}
-              name={client.name}
-              description={client.description}
-              alt={translateMessageId(client.alt, intl)}
-              gitHubRepo={client.gitHubRepo}
-            />
-          ))}
+          {clients
+            .filter((client) => client.isProductionReady)
+            .map((client, idx) => (
+              <ProductCard
+                key={idx}
+                url={client.url}
+                background={client.background}
+                image={client.image}
+                name={client.name}
+                description={client.description}
+                alt={translateMessageId(client.alt, intl)}
+                githubUrl={client.githubUrl}
+                hideStars={true}
+              />
+            ))}
+        </StyledCardGrid>
+        <h3>
+          <Translation id="page-eth2-get-involved-run-clients-experimental" />
+        </h3>
+        <StyledCardGrid>
+          {clients
+            .filter((client) => !client.isProductionReady)
+            .map((client, idx) => (
+              <ProductCard
+                key={idx}
+                url={client.url}
+                background={client.background}
+                image={client.image}
+                name={client.name}
+                description={client.description}
+                alt={translateMessageId(client.alt, intl)}
+                githubUrl={client.githubUrl}
+                hideStars={true}
+              />
+            ))}
         </StyledCardGrid>
       </Content>
       <Staking>
@@ -433,9 +412,9 @@ const GetInvolvedPage = ({ data, location }) => {
         <Content>
           <Row>
             <LeftColumn>
-              <H2 id="#bug-bounty">
+              <h2 id="#bug-bounty">
                 <Translation id="page-eth2-get-involved-bug-hunting" />
-              </H2>
+              </h2>
               <p>
                 <Translation id="page-eth2-get-involved-bug-hunting-desc" />
               </p>
@@ -472,9 +451,9 @@ const GetInvolvedPage = ({ data, location }) => {
             <StyledCardList content={ethresearch} />
           </LeftColumn>
           <RightColumn>
-            <H2>
+            <h2>
               <Translation id="page-eth2-get-involved-join" />
-            </H2>
+            </h2>
             <p>
               <Translation id="page-eth2-get-involved-join-desc" />
             </p>
@@ -494,18 +473,6 @@ export const Clients = graphql`
         ...GatsbyImageSharpFixed
       }
     }
-  }
-`
-
-export const eth2RepoInfo = graphql`
-  fragment eth2RepoInfo on GitHub_Repository {
-    stargazerCount
-    languages(orderBy: { field: SIZE, direction: DESC }, first: 1) {
-      nodes {
-        name
-      }
-    }
-    url
   }
 `
 
@@ -530,21 +497,11 @@ export const query = graphql`
     prysm: file(relativePath: { eq: "eth2/prysm.png" }) {
       ...Clients
     }
-    prysmGitHub: github {
-      repository(owner: "prysmaticlabs", name: "prysm") {
-        ...eth2RepoInfo
-      }
-    }
     lighthouseLight: file(relativePath: { eq: "eth2/lighthouse-light.png" }) {
       ...Clients
     }
     lighthouseDark: file(relativePath: { eq: "eth2/lighthouse-dark.png" }) {
       ...Clients
-    }
-    lighthouseGitHub: github {
-      repository(owner: "sigp", name: "lighthouse") {
-        ...eth2RepoInfo
-      }
     }
     tekuDark: file(relativePath: { eq: "eth2/teku-dark.png" }) {
       ...Clients
@@ -552,42 +509,17 @@ export const query = graphql`
     tekuLight: file(relativePath: { eq: "eth2/teku-light.png" }) {
       ...Clients
     }
-    tekuGitHub: github {
-      repository(owner: "ConsenSys", name: "teku") {
-        ...eth2RepoInfo
-      }
-    }
     cortex: file(relativePath: { eq: "eth2/cortex.png" }) {
       ...Clients
-    }
-    cortexGitHub: github {
-      repository(owner: "NethermindEth", name: "nethermind") {
-        ...eth2RepoInfo
-      }
     }
     lodestar: file(relativePath: { eq: "eth2/lodestar.png" }) {
       ...Clients
     }
-    lodestarGitHub: github {
-      repository(owner: "ChainSafe", name: "lodestar") {
-        ...eth2RepoInfo
-      }
-    }
     trinity: file(relativePath: { eq: "eth2/trinity.png" }) {
       ...Clients
     }
-    trinityGitHub: github {
-      repository(owner: "ethereum", name: "trinity") {
-        ...eth2RepoInfo
-      }
-    }
     nimbus: file(relativePath: { eq: "eth2/nimbus.png" }) {
       ...Clients
-    }
-    nimbusGitHub: github {
-      repository(owner: "status-im", name: "nimbus-eth1") {
-        ...eth2RepoInfo
-      }
     }
   }
 `

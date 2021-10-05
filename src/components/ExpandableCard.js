@@ -1,6 +1,5 @@
 import styled from "styled-components"
-// TODO add motion animation
-// import { motion } from "framer-motion"
+import { motion } from "framer-motion"
 import { FakeLink } from "./SharedStyledComponents"
 import Translation from "../components/Translation"
 
@@ -38,7 +37,7 @@ const TextPreview = styled.p`
   margin-bottom: 0rem;
 `
 
-const Text = styled.div`
+const Text = styled(motion.div)`
   font-size: 16px;
   font-weight: 400;
   color: ${(props) => props.theme.colors.text};
@@ -57,6 +56,42 @@ const ButtonContainer = styled.div`
 
 const ExpandableCard = ({ children, contentPreview, title }) => {
   const [isVisible, setIsVisible] = useState(false)
+  const expandCollapse = {
+    collapsed: {
+      height: 0,
+      transition: {
+        when: "afterChildren",
+      },
+    },
+    expanded: {
+      height: "100%",
+      transition: {
+        when: "beforeChildren",
+      },
+    },
+  }
+  const showHide = {
+    collapsed: {
+      display: "none",
+    },
+    expanded: {
+      display: "inline-block",
+    },
+  }
+  const fadeInOut = {
+    collapsed: {
+      opacity: 0,
+      transition: {
+        duration: 0.1,
+      },
+    },
+    expanded: {
+      opacity: 1,
+      transition: {
+        duration: 0.4,
+      },
+    },
+  }
   return (
     <Card>
       <Content>
@@ -77,7 +112,25 @@ const ExpandableCard = ({ children, contentPreview, title }) => {
           )}
         </ButtonContainer>
       </Content>
-      {isVisible && <Text>{children}</Text>}
+      <motion.div
+        variants={expandCollapse}
+        animate={isVisible ? "expanded" : "collapsed"}
+        initial={false}
+      >
+        <motion.div
+          variants={showHide}
+          animate={isVisible ? "expanded" : "collapsed"}
+          initial={false}
+        >
+          <Text
+            variants={fadeInOut}
+            animate={isVisible ? "expanded" : "collapsed"}
+            initial={false}
+          >
+            {children}
+          </Text>
+        </motion.div>
+      </motion.div>
     </Card>
   )
 }
