@@ -4,6 +4,7 @@ description: Resumen de qué es el almacenamiento descentralizado y herramientas
 lang: es
 sidebar: true
 incomplete: true
+isOutdated: true
 ---
 
 En contraposición a un servidor centralizado gestionado por una sola empresa u organización, los sistemas de almacenamiento descentralizados consisten en una red de punto a punto de operadores de usuario, que poseen una porción de los datos generales creando un sistema resistente de almacenamiento y compartición de archivos.
