@@ -129,7 +129,7 @@ const components = {
   UpcomingEventsList,
 }
 
-const StaticPage = ({ data: { siteData, mdx }, pageContext }) => {
+const StaticPage = ({ data: { siteData, pageData: mdx }, pageContext }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang)
 
@@ -182,7 +182,7 @@ export const staticPageQuery = graphql`
         editContentUrl
       }
     }
-    mdx: mdx(fields: { relativePath: { eq: $relativePath } }) {
+    pageData: mdx(fields: { relativePath: { eq: $relativePath } }) {
       fields {
         slug
       }
