@@ -82,7 +82,8 @@ const Layout = (props) => {
 
   const isPageLanguageEnglish = intl.language === intl.defaultLanguage
   const isPageContentEnglish = !!props.pageContext.isContentEnglish
-  const isPageTranslationOutdated = !!props.pageContext.isOutdated
+  const isPageTranslationOutdated =
+    !!props.pageContext.isOutdated || !!props.data.mdx?.frontmatter.isOutdated
   const isPageRightToLeft = isLangRightToLeft(intl.language)
 
   const shouldShowTranslationBanner =

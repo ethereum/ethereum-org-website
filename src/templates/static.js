@@ -192,6 +192,7 @@ export const staticPageQuery = graphql`
         lang
         sidebar
         sidebarDepth
+        isOutdated
       }
       body
       tableOfContents
