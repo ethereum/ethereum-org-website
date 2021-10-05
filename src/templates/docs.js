@@ -260,6 +260,7 @@ export const query = graphql`
         incomplete
         sidebar
         sidebarDepth
+        isOutdated
       }
       body
       tableOfContents

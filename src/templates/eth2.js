@@ -473,6 +473,7 @@ export const eth2PageQuery = graphql`
             }
           }
         }
+        isOutdated
       }
       body
       tableOfContents
