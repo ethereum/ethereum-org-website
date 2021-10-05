@@ -11,7 +11,7 @@ sidebar: true
 
 Verwende Ethereum, um dezentralen Anwendungen (oder „dApps“) zu erschaffen, die von den kryptografischen Begebenheiten von Kryptowährungen und der Blockchain-Technologie profitieren. Sie sind vertrauenswürdig, was bedeutet, dass dApps nach dem Hochladen auf Ethereum immer exakt wie programmiert ausgeführt werden. Sie können digitale Vermögenswerte verwalten und dadurch neuartige Finanzanwendungen erschaffen. Sie können dezentralisiert sein, was bedeutet, dass keine einzelne Einheit oder Person sie kontrollieren kann und sie so fast unmöglich zu zensieren ist.
 
-Erstelle dezentrale Anwendungen auf Ethereum und interagiere mit Smart Contracts unter Verwendung von Tools und Sprachen aus dem Microsoft-Technologie-Stack - Unterstützt C#, # Visual Basic . ET, F#, über Werkzeuge wie VSCode und Visual Studio, mit dem .NET Framework/.NET Core/.NET Standard. Starte eine Ethereum-Blockchain mit Microsoft Azure Blockchain in wenigen Minuten. Bring die Liebe von .NET zu Ethereum!
+Erstelle dezentrale Anwendungen auf Ethereum und interagiere mit Smart Contracts unter Verwendung von Tools und Sprachen aus dem Microsoft-Technologie-Stack - Unterstützt C#, Visual Basic .NET, F#, über Werkzeuge wie VSCode und Visual Studio, mit dem .NET Framework/.NET Core/.NET Standard. Starte eine Ethereum-Blockchain mit Microsoft Azure Blockchain in wenigen Minuten. Bring die Liebe von .NET zu Ethereum!
 
 <img src="https://raw.githubusercontent.com/Nethereum/Nethereum/master/logos/logo192x192t.png" />
 
