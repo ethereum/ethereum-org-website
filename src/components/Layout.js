@@ -84,7 +84,7 @@ const Layout = (props) => {
   const isPageContentEnglish = !!props.pageContext.isContentEnglish
   const isPageTranslationOutdated =
     !!props.pageContext.isOutdated ||
-    !!props.data.pageData?.frontmatter?.isOutdated
+    !!props.data?.pageData?.frontmatter?.isOutdated
   const isPageRightToLeft = isLangRightToLeft(intl.language)
 
   const shouldShowTranslationBanner =
