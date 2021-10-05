@@ -1,12 +1,12 @@
 ---
 title: Monitoring Geth with InfluxDB and Grafana
 description:
-author: "Mario Havel"
+author: "guanlong huang"
 tags: ["clients", "geth", "nodes"]
 skill: intermediate
 lang: en
 sidebar: true
-published: 2021-01-13
+published: 2021-10-06
 ---
 
 This tutorial will help you set up monitoring for your Geth node so you can better understand its performance and identify potential problems.
