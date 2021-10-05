@@ -3,6 +3,7 @@ title: Ethereum számlák
 description: Az Ethereum számlák magyarázata – az adatstruktúrájuk és a kapcsolatuk a kulcspár kriptográfiával.
 lang: hu
 sidebar: true
+isOutdated: true
 ---
 
 Egy Ethereum számla egy olyan entitás, mely ether (ETH) egyenleggel rendelkezik és tranzakciókat tud indítani az Ethereumon. A számlák lehetnek felhasználók által irányítottak, vagy okos szerződésként telepítettek.
