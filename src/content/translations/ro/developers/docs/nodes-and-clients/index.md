@@ -4,6 +4,7 @@ description: O prezentare generală a nodurilor Ethereum și a software-ului cli
 lang: ro
 sidebar: true
 sidebarDepth: 2
+isOutdated: true
 ---
 
 Pentru ca Ethereum să funcționeze în mod descentralizat, are nevoie de o rețea distribuită de noduri care să poată verifica blocurile și datele tranzacțiilor. Ai nevoie de o aplicație, cunoscută sub numele de client, pe dispozitivul tău pentru a „rula” un nod.
