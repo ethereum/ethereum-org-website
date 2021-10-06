@@ -1,6 +1,6 @@
 ---
 title: 📩 Submitting and Verifying your Smart Contract to Etherscan (Part 3/4 of Hello World dApp Series)
-description: Introductory tutorial on writing and deploying a simple smart contract on Ethereum.
+description: Step by step guide on submitting your smart contract's ABI to Etherscan so anyone can look at the contract's methods and variables and understand how to interact with it.
 author: "nstrike2"
 tags:
   [
