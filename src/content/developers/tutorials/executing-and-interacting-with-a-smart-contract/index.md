@@ -10,7 +10,7 @@ tags:
     "alchemy",
     "smart contracts",
     "getting started",
-    "deploying",
+    "deploying"
   ]
 skill: beginner
 lang: en
