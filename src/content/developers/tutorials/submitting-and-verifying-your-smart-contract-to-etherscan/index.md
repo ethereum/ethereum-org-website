@@ -11,7 +11,7 @@ tags:
     "smart contracts",
     "etherscan",
     "getting started",
-    "verifying",
+    "verifying"
   ]
 skill: beginner
 lang: en
