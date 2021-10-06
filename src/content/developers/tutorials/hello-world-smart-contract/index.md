@@ -1,5 +1,5 @@
 ---
-title: Hello World Smart Contract for Beginners
+title: Hello World Smart Contract for Beginners (Part 1/4 of Hello World dApp Series)
 description: Introductory tutorial on writing and deploying a simple smart contract on Ethereum.
 author: "elanh"
 tags:
