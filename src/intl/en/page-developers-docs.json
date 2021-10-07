@@ -53,6 +53,8 @@
   "docs-nav-networks-description": "Implementations of Ethereum including test networks",
   "docs-nav-nodes-and-clients": "Nodes and clients",
   "docs-nav-nodes-and-clients-description": "The individuals participating in the network and the software they run to verify transactions",
+  "docs-nav-opcodes": "Opcodes",
+  "docs-nav-opcodes-description": "Opcodes for the Ethereum virtual machine",
   "docs-nav-run-a-node": "Run a node",
   "docs-nav-nodes-as-a-service": "Nodes as a service",
   "docs-nav-oracles": "Oracles",
