@@ -58,7 +58,7 @@
   "page-developers-networks-link": "Networks",
   "page-developers-node-clients-desc": "How blocks and transactions are verified in the network",
   "page-developers-node-clients-link": "Nodes and clients",
-  "page-developers-opcodes-desc": "Opcodes for the  for the Ethereum virtual machine (EVM)",
+  "page-developers-opcodes-desc": "Opcodes for the Ethereum virtual machine (EVM)",
   "page-developers-opcodes-link": "Opcodes",
   "page-developers-oracle-desc": "Getting off-chain data into your smart contracts",
   "page-developers-oracles-link": "Oracles",
