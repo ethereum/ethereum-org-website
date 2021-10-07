@@ -5,7 +5,6 @@
   "eth2-client-nimbus-logo-alt": "Nimbus logosu",
   "eth2-client-prysm-logo-alt": "Prysm logosu",
   "eth2-client-teku-logo-alt": "Teku logosu",
-  "eth2-client-trinity-logo-alt": "Trinity logosu",
   "eth2-rhino-img-alt": "İleride lazım olacak Eth2 çalışma grafiği",
   "page-eth2-answer-1": "Eth2' yi bugün kullanmış olduğumuz Ethereum' un bir dizi yükseltmesi olarak düşünebiliriz. Bu yükseltmeler beacon chain adı verilen yeni bir chain ve shards diye bilinen 64'e kadar chain oluşturmayı kapsar.",
   "page-eth2-answer-2": "Bunlar, bugün kullandığımız Ethereum ana ağından ayrıdır ve onun yerini almaz.  Bunun yerine ana ağ, zamanla eklenen bu paralel sistemle dock edecek veya \"birleşecektir\".",

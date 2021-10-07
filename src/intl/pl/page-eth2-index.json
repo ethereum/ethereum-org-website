@@ -5,7 +5,6 @@
   "eth2-client-nimbus-logo-alt": "Logo Nimbus",
   "eth2-client-prysm-logo-alt": "Logo Prysm",
   "eth2-client-teku-logo-alt": "Logo Teku",
-  "eth2-client-trinity-logo-alt": "Logo Trinity",
   "eth2-rhino-img-alt": "Wykres Eth 2 Rhino przed załadowaniem",
   "page-eth2-answer-1": "Pomyśl o Eth2 jako zestawie ulepszeń dodawanych w celu ulepszenia Ethereum, którego używamy dzisiaj. Ulepszenia te obejmują utworzenie nowego łańcucha zwanego łańcuchem śledzącym i do 64 łańcuchów zwanych odłamkami.",
   "page-eth2-answer-2": "Są one niezależne od głównej sieci Ethereum, której używamy dzisiaj, ale jej nie zastąpią. Zamiast tego sieć główna zadokuje się lub „połączy” z tym równoległym systemem, który będzie dodawany z czasem.",

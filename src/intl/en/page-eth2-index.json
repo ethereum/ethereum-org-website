@@ -5,7 +5,6 @@
   "eth2-client-nimbus-logo-alt": "Nimbus logo",
   "eth2-client-prysm-logo-alt": "Prysm logo",
   "eth2-client-teku-logo-alt": "Teku logo",
-  "eth2-client-trinity-logo-alt": "Trinity logo",
   "eth2-rhino-img-alt": "Graphic of Eth 2 Rhino charging ahead",
   "page-eth2-answer-1": "Think of Eth2 as a set of upgrades being added to improve the Ethereum we use today. These upgrades include the creation of a new chain called the beacon chain and up to 64 chains known as shards.",
   "page-eth2-answer-2": "These are separate to the Ethereum Mainnet we use today but won’t replace it. Instead Mainnet will \"merge\" with this parallel system that’s being added over time.",

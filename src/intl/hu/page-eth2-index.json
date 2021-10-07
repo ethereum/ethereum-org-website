@@ -5,7 +5,6 @@
   "eth2-client-nimbus-logo-alt": "Nimbus logo",
   "eth2-client-prysm-logo-alt": "Prysm logo",
   "eth2-client-teku-logo-alt": "Teku logo",
-  "eth2-client-trinity-logo-alt": "Trinity logo",
   "eth2-rhino-img-alt": "Egy Eth2 orrszarvú menetelésének ábrája",
   "page-eth2-answer-1": "Gondolj úgy az Eth2-re, mint egy fejlesztési sorozatra, melyeket a ma használt Ethereumhoz hozzáadunk, hogy tovább fejlesszük. Ezekbe a fejlesztésekbe beletartozik egy új lánc, melyet Beacon Chainnek nevezünk és további 64 lánc, melyeket shardoknak nevezünk.",
   "page-eth2-answer-2": "Ezek a ma használt Ethereum főhálózattól különállóak, de nem fogják helyettesíteni azt. Ehelyett a főhálózat bedokkol vagy 'beolvad' ebbe a párhuzamos rendszerbe, melyet idővel hozzáadunk.",
