@@ -12,7 +12,7 @@ If you want to be certain of correctness and aware of every edge case, using the
 
 For operations with dynamic gas costs, see [gas.md](https://github.com/wolflo/evm-opcodes/blob/main/gas.md).
 
-| Hex   | Name          | Gas   | Stack top | Stack bottom | Mem / Storage | Notes |
+| Stack   | Name          | Gas   | Initial Stack | Resulting Stack | Mem / Storage | Notes |
 | :---: | :---          | :---: | :---       | :---          | :---  | :--- |
 00      | STOP          | 0     |            |                      || halt execution
 01      | ADD           | 3     | `a, b` | `a + b`	                || (u)int256 addition modulo 2\*\*256
@@ -76,12 +76,12 @@ For operations with dynamic gas costs, see [gas.md](https://github.com/wolflo/ev
 53      | MSTORE8       |3[\*](https://github.com/wolflo/evm-opcodes/blob/main/gas.md#a0-1-memory-expansion)| `ost, val` | `.` | mem[ost] := val && 0xFF | write a single byte to memory
 54      | SLOAD         |[A6](https://github.com/wolflo/evm-opcodes/blob/main/gas.md#a6-sload)| `key` | `storage[key]`           || read word from storage
 55      | SSTORE        |[A7](https://github.com/wolflo/evm-opcodes/blob/main/gas.md#a7-sstore)   | `key, val` | `.` | storage[key] := val | write word to storage
-56      | JUMP          | 8     | `dst` | `.`                      || `$pc := dst`
+56      | JUMP          | 8     | `dst` | `.`                      || `$pc := dst` mark that `pc` is only assigned if `dst` is a valid jumpdest
 57      | JUMPI         | 10    | `dst, condition` | `.`           || `$pc := condition ? dst : $pc + 1`
 58      | PC            | 2     | `.` | `$pc`                      || program counter
 59      | MSIZE         | 2     | `.` | `len(mem)`                 || size of memory in current execution context, in bytes
 5A      | GAS           | 2     | `.` | `gasRemaining`             ||
-5B      | JUMPDEST      | 1     | || mark valid jump destination
+5B      | JUMPDEST      | 1     | || mark valid jump destination | a valid jump destination for example a jump destination not inside the push data
 5C-5F   | *invalid*
 60      | PUSH1         | 3     | `.` | `uint8`                    || push 1-byte value onto stack
 61      | PUSH2         | 3     | `.` | `uint16`                   || push 2-byte value onto stack
