@@ -73,6 +73,7 @@ The following Ethereum-based projects use tools mentioned on this page. The rela
 - [Yearn Finance](https://yearn.finance/) and [Yearn Vault Contracts repository](https://github.com/yearn/yearn-vaults)
 - [Curve](https://curve.fi/) and [Curve smart contracts repository](https://github.com/curvefi/curve-contract)
 - [BadgerDAO](https://badger.com/) and [smart contracts using Brownie toolchain](https://github.com/Badger-Finance/badger-system)
+- [Sushi](https://sushi.com/) uses [Python in managing and deploying their vesting contracts](https://github.com/sushiswap/sushi-vesting-protocols)
 
 ## Python Community Contributors {#python-community-contributors}
 
