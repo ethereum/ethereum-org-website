@@ -111,7 +111,7 @@ Mix was of the earliest Ethereum-related applications. See this [presentation by
 
 ### Parity {#parity}
 
-<p align="center">
+<p align="center" style="background-color:#ccc;">
   <img width="230" height="150" src="https://raw.githubusercontent.com/openethereum/parity-ethereum/v2.7.2-stable/docs/logo-parity-ethereum.svg"/>
 </p>
 
@@ -119,39 +119,117 @@ Deprecated on June 2, 2020
 
 **Summary**
 
+**Archives**
+
+[Archived GitHub repo](https://github.com/openethereum/parity-ethereum)
+
 **Alternatives**
 
 The sucessor project to Parity Ethereum client is [Open Ethereum](https://github.com/openethereum/openethereum).
 
 [Spin up your own Ethereum node](https://ethereum.org/en/developers/docs/nodes-and-clients/run-a-node/#getting-the-client) on ethereum.org includes a section for downloading, installing, and running an Ethereum client.
 
-**Archives**
-
-[Archived GitHub repo](https://github.com/openethereum/parity-ethereum)
 
 
 ### Trinity {#trinity}
+
+**Summary**
+
+**Archives**
+
+**History**
+
+**Alternatives**
+
 
 ## Dapps and Services {#dapps-and-services}
 
 ### Cover Protocol {#cover-protocol}
 
+**Summary**
+
+**Archives**
+
+**History**
+
+**Alternatives**
+
 ### The DAO {#the-dao}
+
+**Summary**
 
 This is a smart contract which was exploited, leading to a community-organized hard fork in order to return the funds to the stakeholders. The UX front-end is discontinued, and there is a smart contract for recovering funds.
 
+**Archives**
+
+**History**
+
+**Alternatives**
+
 ### SparkPool {#sparkpool}
 
+**Summary**
+
 This was an Ethereum-centered mining pool based in the PRC. It was disbanded as a result of stricter legal regulations instituted in Fall 2021.
+
+**Archives**
+
+**History**
+
+**Alternatives**
 
 
 ## Documentation and Information Sources {#documentation-and-information-sources}
 
+
 ### eth.wiki {#eth-wiki}
+
+**Summary**
+
+**Archives**
+
+**History**
+
+**Alternatives**
+
 
 ### forum.ethereum.org {#forum-ethereum-org}
 
+**Summary**
 
-## Communications {#communications}
+**Archives**
 
-### Gitter Channels {#gitter-channels}
+**History**
+
+**Alternatives**
+
+
+## Gitter Channels {#gitter-channels}
+
+
+### AllCoreDevs {#allcorewdevs-gitter}
+
+**Summary**
+
+**Archives**
+
+**History**
+
+**Alternatives**
+
+
+### EthereumJS {#ethereumjs-gitter}
+
+**Summary**
+
+**Archives**
+
+**History**
+
+**Alternatives**
+
+
+
+
+
+
