@@ -108,11 +108,12 @@ Mix was of the earliest Ethereum-related applications. See this [presentation by
 
 [Remix](https://remix.ethereum.org/) is a browser-hosted IDE for Solidity / smart contract development, testing, and deployment, also has desktop option.
 
-
 ### Parity {#parity}
 
-<p align="center" style="background-color:#ccc;">
-  <img width="230" height="150" src="https://raw.githubusercontent.com/openethereum/parity-ethereum/v2.7.2-stable/docs/logo-parity-ethereum.svg"/>
+<p align="center">
+  <img width="230" height="150" 
+  	style="background-color:#ccc; padding:0px 10px 0px 10px;"
+  	src="https://raw.githubusercontent.com/openethereum/parity-ethereum/v2.7.2-stable/docs/logo-parity-ethereum.svg" />
 </p>
 
 Deprecated on June 2, 2020
@@ -127,7 +128,7 @@ Deprecated on June 2, 2020
 
 The sucessor project to Parity Ethereum client is [Open Ethereum](https://github.com/openethereum/openethereum).
 
-[Spin up your own Ethereum node](https://ethereum.org/en/developers/docs/nodes-and-clients/run-a-node/#getting-the-client) on ethereum.org includes a section for downloading, installing, and running an Ethereum client.
+The ["Spin up your own Ethereum node"](https://ethereum.org/en/developers/docs/nodes-and-clients/run-a-node/#getting-the-client) resource on ethereum.org includes a section for downloading, installing, and running an Ethereum client.
 
 
 
@@ -135,14 +136,23 @@ The sucessor project to Parity Ethereum client is [Open Ethereum](https://github
 
 **Summary**
 
+Trinity was a python-based Ethereum client which served as a research tool for the community.
+
 **Archives**
+
+[Archived GitHub repo](https://github.com/ethereum/trinity)
 
 **History**
 
+Trinity was the successor project to [pyethereum](https://github.com/ethereum/pyethereum/tree/b704a5c6577863edc539a1ec3d2620a443b950fb), an early python-based Ethereum client.
+
 **Alternatives**
+
+The ["Spin up your own Ethereum node"](https://ethereum.org/en/developers/docs/nodes-and-clients/run-a-node/#getting-the-client) resource on ethereum.org includes a section for downloading, installing, and running an Ethereum client.
 
 
 ## Dapps and Services {#dapps-and-services}
+
 
 ### Cover Protocol {#cover-protocol}
 
@@ -150,27 +160,47 @@ The sucessor project to Parity Ethereum client is [Open Ethereum](https://github
 
 **Archives**
 
-**History**
+[Website](https://wayback.archive-it.org/17679/20211004074635/https://www.coverprotocol.com/)
 
-**Alternatives**
+[Medium articles](https://wayback.archive-it.org/17679/20211004074633/https://coverprotocol.medium.com/)
+
+[GitHub repos](https://github.com/CoverProtocol/cover-core-v1)
+
+[Documentation](https://wayback.archive-it.org/17679/20211004074634/https://docs.coverprotocol.com/)
+
 
 ### The DAO {#the-dao}
 
 **Summary**
 
-This is a smart contract which was exploited, leading to a community-organized hard fork in order to return the funds to the stakeholders. The UX front-end is discontinued, and there is a smart contract for recovering funds.
+This was a smart contract, dapp, and forum for organizing the funding of projects. A vulnerability was exploited and much of the ETH was drained, leading to a community-organized hard fork in order to return ETH to those who had deposited to The DAO. The UX front-end and forum are discontinued.
 
 **Archives**
 
+[Internet Archive of "daohub.org" on May 14, 2016](https://web.archive.org/web/20160514105232/https://daohub.org/)
+
 **History**
 
+While The DAO failed, the concept endured. The basic technical, social, and governance model innovated for The DAO is widely in use in DeFi, NFT, and project-funding communities.
+
+["DAO Fork" on ethereum.org](https://ethereum.org/en/history/#dao-fork)
+
+[Wikipedia entry for "The DAO"](https://en.wikipedia.org/wiki/The_DAO_(organization))
+
 **Alternatives**
+
+["DAOs" on ethereum.org](https://ethereum.org/en/dao/)
+
+[MolochDAO](https://www.molochdao.com/)
+
+[Gitcoin Grants](https://gitcoin.co/grants/)
+
 
 ### SparkPool {#sparkpool}
 
 **Summary**
 
-This was an Ethereum-centered mining pool based in the PRC. It was disbanded as a result of stricter legal regulations instituted in Fall 2021.
+This was an Ethereum-centered mining pool based in the PRC. It was disbanded as a result of stricter legal regulations instituted in Fall, 2021.
 
 **Archives**
 
@@ -182,7 +212,7 @@ This was an Ethereum-centered mining pool based in the PRC. It was disbanded as 
 ## Documentation and Information Sources {#documentation-and-information-sources}
 
 
-### eth.wiki {#eth-wiki}
+### eth.wiki and Legacy Wiki {#eth-wiki}
 
 **Summary**
 
@@ -206,28 +236,34 @@ This was an Ethereum-centered mining pool based in the PRC. It was disbanded as 
 
 ## Gitter Channels {#gitter-channels}
 
-
 ### AllCoreDevs {#allcorewdevs-gitter}
 
 **Summary**
 
+This was the main public coordination comms channel for [Ethereum client core developers](https://github.com/ethereum/pm/).
+
 **Archives**
 
-**History**
+[ethereum/AllCoreDevs Gitter Channel](https://gitter.im/ethereum/AllCoreDevs)
 
 **Alternatives**
+
+Go to the "allcoredevs" channel on the [EthR&D Discord Server](https://discord.gg/qHv7AjTDuK)
 
 
 ### EthereumJS {#ethereumjs-gitter}
 
 **Summary**
 
+This was the main public coordination comms channel for the [EthereumJS project](https://ethereumjs.github.io/).
+
 **Archives**
 
-**History**
+[ethereum/EthereumJS Gitter Channel](https://gitter.im/ethereum/ethereumjs)
 
 **Alternatives**
 
+Go to the [EthereumJS Discord Server](https://discord.gg/TNwARpR)
 
 
 
