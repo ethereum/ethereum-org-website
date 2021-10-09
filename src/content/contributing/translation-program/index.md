@@ -54,9 +54,9 @@ The ethereum.org Translation Program aims to make Ethereum accessible to everyon
 
    ![Translated and untranslated files on Crowdin](./crowdin-files.png)
 
-   A note on content versions: we use version management within Crowdin to avoid translation delays for added content. When you check out a language, for example, [Filipino](https://crowdin.com/project/ethereum-org/fil#) you'll see folders for each site version ("v2.0", "v2.1", etc.).
+   A note on content versions: we use 'content buckets' within Crowdin to get the highest priority content released first. When you check out a language, for example, [Filipino](https://crowdin.com/project/ethereum-org/fil#) you'll see folders for content bucket ("1. Homepage", "2. Use Ethereum Pages", etc.).
 
-   We encourage you to translate the lowest version first and work your way up to higher versions (v.2.0 → v.2.1 → v.2.2 → ⋯) as lower versions will be updated on the site first.
+   We encourage you to translate in this numerical order (1 → 2 → 3 → ⋯) to ensure the highest impact pages are translated first.
 
    [Learn more about ethereum.org content versions](/en/contributing/translation-program/content-versions/)
 
