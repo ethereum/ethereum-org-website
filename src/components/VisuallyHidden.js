@@ -41,7 +41,7 @@ VisuallyHidden.propTypes = {
 }
 
 VisuallyHidden.defaultProps = {
-  isHidden: true,
+  isHidden: false,
 }
 
 export default VisuallyHidden

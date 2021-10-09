@@ -82,8 +82,9 @@ const Layout = (props) => {
         setIsZenMode(localStorage.getItem("zen-mode") === "true" && !isMobile)
       }
     } else {
-      // zen mode only applicable in /docs pages
+      // isZenMode and shouldShowSideNav only applicable in /docs pages
       setIsZenMode(false)
+      setShouldShowSideNav(false)
     }
   }, [props.path])
 

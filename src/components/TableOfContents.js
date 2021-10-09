@@ -367,7 +367,9 @@ const TableOfContents = ({
     <Aside className={className}>
       <OuterList>
         <ZenModeContainer>
-          <ZenModeText>Zen Mode:</ZenModeText>
+          <ZenModeText>
+            <Translation id="zen-mode">Zen Mode:</Translation>
+          </ZenModeText>
           <ZenModeToggleContainer onClick={(_e) => handleZenModeChange()}>
             <Icon name={isZenMode ? "zenModeOn" : "zenModeOff"} size="2rem" />
           </ZenModeToggleContainer>
