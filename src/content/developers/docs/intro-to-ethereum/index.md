@@ -15,7 +15,9 @@ A blockchain is a public database that is updated and shared across many compute
 
 Every computer in the network must agree upon each new block and the chain as a whole. These computers are known as "nodes". Nodes ensure everyone interacting with the blockchain has the same data. To accomplish this distributed agreement, blockchains need a consensus mechanism.
 
-Ethereum currently uses a [proof-of-work](/developers/docs/consensus-mechanisms/pow/) consensus mechanism. This means that anyone who wants to add new blocks to the chain must solve a difficult puzzle that requires a lot of computing power. Solving the puzzle "proves" that you have done the "work" by using computational resources. Doing this is known as [mining](/developers/docs/consensus-mechanisms/pow/mining/). Mining is typically brute force trial and error, but successfully adding a block is rewarded in ETH.
+Ethereum previously used a [proof-of-work](/developers/docs/consensus-mechanisms/pow/) consensus mechanism. That meant that anyone who wants to add new blocks to the chain must solve a difficult puzzle that requires a lot of computing power. Solving the puzzle "proves" that you have done the "work" by using computational resources. Doing this is known as [mining](/developers/docs/consensus-mechanisms/pow/mining/). Mining is typically brute force trial and error, but successfully adding a block is rewarded in ETH.
+
+Now, Ethereum uses a [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) consensus mechanism. It requires users to stake their ETH to become a validator in the network. Validators are responsible for the same thing as miners in proof-of-work: ordering transactions and creating new blocks so that all nodes can agree on the state of the network.
 
 New blocks are broadcast to the nodes in the network, checked and verified, thus updating the state of the blockchain for everyone.
 
