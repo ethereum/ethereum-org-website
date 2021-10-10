@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import { connectSearchBox } from "react-instantsearch-dom"
@@ -26,17 +26,10 @@ const StyledInput = styled.input`
   &:focus {
     outline: ${(props) => props.theme.colors.primary} auto 1px;
   }
-  
-  @media only screen and (min-width: ${(props) => props.theme.breakpoints.m}) {
+
+  @media only screen and (min-width: ${(props) => props.theme.breakpoints.l}) {
     padding-left: 2rem;
   }
-`
-
-const LeftSearchIcon = styled(Icon)`
-  position: absolute;
-  left: 6px;
-  top: 50%;
-  margin-top: -12px;
 `
 
 const SearchIcon = styled(Icon)`
@@ -44,25 +37,31 @@ const SearchIcon = styled(Icon)`
   right: 6px;
   top: 50%;
   margin-top: -12px;
+
+  @media only screen and (min-width: ${(props) => props.theme.breakpoints.l}) {
+    left: 6px;
+  }
 `
 
-const SearchSlashIcon = styled(Icon)`
+const SearchSlash = styled.p`
+  background: ${(props) => props.theme.colors.searchBackground};
+  border: 1px solid ${(props) => props.theme.colors.searchBorder};
+  border-radius: 0.25em;
+  color: ${(props) => props.theme.colors.text};
+  display: none;
+  margin-bottom: 0;
+  padding: 0 5px;
   position: absolute;
-  top: 25%;
   right: 6px;
+  top: 20%;
 
-  path:nth-child(1) {
-    fill: ${(props) => props.theme.colors.searchBorder};
-  }
-
-  path:nth-child(2) {
-    fill: ${(props) => props.theme.colors.text};
+  @media only screen and (min-width: ${(props) => props.theme.breakpoints.l}) {
+    display: inline-block;
   }
 `
 
 const Input = ({ query, setQuery, refine, ...rest }) => {
   const intl = useIntl()
-  const [showSearchSlash,setShowSearchSlash] = useState(false)
   const searchString = translateMessageId("search", intl)
 
   const handleInputChange = (event) => {
@@ -84,15 +83,8 @@ const Input = ({ query, setQuery, refine, ...rest }) => {
   }
   useKeyPress("/", focusSearch)
 
-  useEffect(() => {
-    setShowSearchSlash(window.innerWidth >= 768)
-  }, [])
-
   return (
     <Form onSubmit={handleSubmit}>
-      {showSearchSlash && (
-        <LeftSearchIcon name="search" />
-      )}
       <StyledInput
         id="header-search"
         type="text"
@@ -102,13 +94,8 @@ const Input = ({ query, setQuery, refine, ...rest }) => {
         onChange={handleInputChange}
         {...rest}
       />
-      {showSearchSlash && (
-        <SearchSlashIcon name="searchSlash" size={'20'}/>
-      )}
-
-      {!showSearchSlash && (
-        <SearchIcon name="search" />
-      )}
+      <SearchSlash>/</SearchSlash>
+      <SearchIcon name="search" />
     </Form>
   )
 }
