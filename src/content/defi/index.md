@@ -166,7 +166,7 @@ To be able to do the above example in the traditional finance world, you'd need 
 
 <Divider />
 
-### Start saving with crypto {#saving}
+### Start saving with crypto {#savings}
 
 #### Lending {#lending}
 
