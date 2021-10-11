@@ -226,6 +226,7 @@ export const query = graphql`
         sidebar
         sidebarDepth
         address
+        isOutdated
       }
       body
       tableOfContents

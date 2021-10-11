@@ -476,6 +476,7 @@ export const useCasePageQuery = graphql`
             }
           }
         }
+        isOutdated
       }
       body
       tableOfContents

@@ -4,6 +4,7 @@ description: Przegląd węzłów Ethereum i oprogramowania klienta, a także jak
 lang: pl
 sidebar: true
 sidebarDepth: 2
+isOutdated: true
 ---
 
 Aby Ethereum działało w sposób zdecentralizowany, potrzebuje rozproszonej sieci węzłów, która może weryfikować bloki i dane transakcji. Potrzebujesz aplikacji znanej jako klient, aby „uruchomić węzeł”.

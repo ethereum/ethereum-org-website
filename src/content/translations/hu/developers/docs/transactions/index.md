@@ -3,6 +3,7 @@ title: Tranzakciók
 description: Egy áttekintő az Ethereum tranzakciókról – hogyan működnek, az adatszerkezetük és hogyan lehet őket elküldeni egy alkalmazáson keresztül.
 lang: hu
 sidebar: true
+isOutdated: true
 ---
 
 A tranzakciók számlákból származó kriptográfiailag aláírt instrukciók. Egy számla tranzakciót indíthat, hogy frissítse az Ethereum hálózat állapotát. A legegyszerűbb tranzakció az ETH átutalása egyik számláról a másikra.

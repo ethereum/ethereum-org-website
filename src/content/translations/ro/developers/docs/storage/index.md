@@ -4,6 +4,7 @@ description: Prezentare generală stocării descentralizate și a instrumentelor
 lang: ro
 sidebar: true
 incomplete: true
+isOutdated: true
 ---
 
 Spre deosebire de un server situat central, operat de o singură companie sau organizație, sistemele de stocare descentralizate constau dintr-o rețea peer-to-peer de utilizatori-operatori care dețin o parte din datele globale, creând un sistem rezistent de stocare și partajare a fișierelor.

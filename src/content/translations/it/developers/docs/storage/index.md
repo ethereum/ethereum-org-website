@@ -4,6 +4,7 @@ description: Panoramica del significato di storage decentralizzato e strumenti d
 lang: it
 sidebar: true
 incomplete: true
+isOutdated: true
 ---
 
 A differenza di un server centralizzato gestito da una singola azienda o organizzazione, lo storage decentralizzato è una rete peer-to-peer di utenti-operatori che detengono una porzione dei dati complessivi, creando un sistema resiliente per l'archiviazione e la condivisione di file.

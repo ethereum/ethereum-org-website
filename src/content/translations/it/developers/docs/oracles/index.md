@@ -4,6 +4,7 @@ description: Gli oracoli aiutano a inserire dati del mondo reale in un'applicazi
 lang: it
 sidebar: true
 incomplete: true
+isOutdated: true
 ---
 
 Gli oracoli sono feed di dati che collegano Ethereum a informazioni del mondo reale esternamente alla catena, in modo da poter interrogare i dati negli Smart Contract. Ad esempio, le dapp dei mercati predittivi utilizzano gli oracoli per effettuare i pagamenti in base a eventi. Un mercato predittivo potrebbe chiedere di puntare ETH sul prossimo presidente degli Stati Uniti. Userà un oracolo per confermare l'esito e pagare i vincitori.

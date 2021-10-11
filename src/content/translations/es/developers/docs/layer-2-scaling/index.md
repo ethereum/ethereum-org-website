@@ -5,6 +5,7 @@ lang: es
 sidebar: true
 incomplete: true
 sidebarDepth: 3
+isOutdated: true
 ---
 
 La capa 2 es un término colectivo de soluciones diseñadas para ayudar a escalar tu aplicación mediante el manejo de transacciones de la cadena principal de Ethereum (capa 1). La velocidad de transacción sufre cuando la red está ocupada, lo que puede hacer que la experiencia del usuario sea poco favorable para ciertos tipos de dapps. Además, en cuanto la red se activa más, los precios del gas aumentan a medida que los remitentes de las transacciones intentan superar sus apuestas. Esto puede encarecer mucho el uso de Ethereum.

@@ -4,6 +4,7 @@ description: Podstawowy przegląd usług węzłów, zalet i wad oraz popularnych
 lang: pl
 sidebar: true
 sidebarDepth: 2
+isOutdated: true
 ---
 
 ## Wprowadzenie {#Introduction}
