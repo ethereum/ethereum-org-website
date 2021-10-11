@@ -79,7 +79,7 @@ There's a decentralized alternative to most financial services. But Ethereum als
 - [Access stable currencies](#stablecoins)
 - [Borrow funds with collateral](#lending)
 - [Borrow without collateral](#flash-loans)
-- [Start crypto savings](#savings)
+- [Start crypto savings](#saving)
 - [Trade tokens](#swaps)
 - [Grow your portfolio](#investing)
 - [Fund your ideas](#crowdfunding)
@@ -166,7 +166,7 @@ To be able to do the above example in the traditional finance world, you'd need 
 
 <Divider />
 
-### Start saving with crypto {#savings}
+### Start saving with crypto {#saving}
 
 #### Lending {#lending}
 
