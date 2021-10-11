@@ -8,7 +8,7 @@ sidebarDepth: 2
 
 # Deprecated software {#summary-deprecated-software}
 
-This is a list of key Ethereum-related projects and resources which have been deprecated or are no longer maintained. It is important to highlight deprecated work so that users can find viable alternatives and also to prevent malicious versions from being distributed.
+This is a list of key Ethereum-related projects and resources which have been deprecated or are no longer maintained. It is important to highlight deprecated work so that users can find viable alternatives and to prevent malicious versions from being distributed.
 
 ## Software {#software}
 
@@ -20,7 +20,7 @@ Deprecated on December 10, 2020
 
 **Summary**
 
-Grid was a desktop application that allowed you to securely download, configure and use various clients and tools in the Ethereum ecosystem. Grid provided a user-friendly interface to assist a less technical audience in safely interacting with technical tools, which increased accessibility for everyone. 
+Grid was a desktop application that allowed you to securely download, configure, and use various clients and tools in the Ethereum ecosystem. Grid provided a user-friendly interface to assist a less technical audience in safely interacting with technical tools, which increased accessibility for everyone. 
 
 
 **Archives**
@@ -30,14 +30,12 @@ Grid was a desktop application that allowed you to securely download, configure 
 
 **History**
 
-Grid was a successor to Mist, removing the wallet but adding the ability to host nodes of multiple protocols.
+Grid was a successor to Mist, removing the wallet, but adding the ability to host nodes of multiple protocols.
 
 
 **Alternatives**
 
 [DappNode](https://dappnode.io/) is a platform for deploying and hosting DApps, P2P clients, and blockchain nodes.
-
-
 
 
 ### Meteor Dapp Wallet {#meteor-dapp-wallet}
@@ -52,7 +50,7 @@ The Mist Multisig Contract (solidity code) was also included, and Meteor Dapp Wa
 
 **Not deprecated: deployed Mist Multisigs**
 
-The Mist Multisig -- deployed as bytecode to Ethereum mainnet by thousands of users -- continues to be used to store and manage value without incident. [How to Interact with a Mist Multisig Contract](https://support.mycrypto.com/how-to/sending/how-to-interact-with-a-multisig-contract) proves a good overview for how to use these smart contracts.
+The Mist Multisig -- deployed as bytecode to Ethereum mainnet by thousands of users -- continues to be used to store and manage value without incident. [How to Interact with a Mist Multisig Contract](https://support.mycrypto.com/how-to/sending/how-to-interact-with-a-multisig-contract) provides a good overview for how to use these smart contracts.
 
 **Archives**
 
@@ -73,7 +71,7 @@ Deprecated on March 27, 2019
 
 **Summary**
 
-Mist was specialized browser that enabled users to manage Ethereum keys with a built-in wallet and interact with dapps hosted on traditional web.
+Mist was a specialized browser that enabled users to manage Ethereum keys with a built-in wallet and interact with dapps hosted on traditional web.
 
 **Archives**
 
@@ -81,7 +79,7 @@ Mist was specialized browser that enabled users to manage Ethereum keys with a b
 
 **History**
 
-Mist was an important early experiment because it explored how to manage Ethereum keys, introduced users to financial tools like multisigs, and demonstrated how the Web3 would work. It also introduced users to innovations like blockies, cute and memorable 8-bit style graphics representing Ethereum keys.
+Mist was an important early experiment because it explored how to manage Ethereum keys, introduced users to financial tools, like multisigs, and demonstrated how the Web3 would work. It also introduced users to innovations like blockies, cute and memorable 8-bit style graphics representing Ethereum keys.
 
 **Alternatives**
 
@@ -90,7 +88,7 @@ Mist was an important early experiment because it explored how to manage Ethereu
 
 ### Mix {#mix}
 
-Discontinued on Aug 11, 2016
+Deprecated on August 11, 2016
 
 **Summary**
 
@@ -106,7 +104,7 @@ Mix was of the earliest Ethereum-related applications. See this [presentation by
 
 **Alternatives**
 
-[Remix](https://remix.ethereum.org/) is a browser-hosted IDE for Solidity / smart contract development, testing, and deployment, also has desktop option.
+[Remix](https://remix.ethereum.org/) is a browser-hosted IDE for Solidity / smart contract development, testing, and deployment. It also has a desktop option.
 
 ### Parity {#parity}
 
