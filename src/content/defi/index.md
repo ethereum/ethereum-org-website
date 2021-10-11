@@ -79,7 +79,7 @@ There's a decentralized alternative to most financial services. But Ethereum als
 - [Access stable currencies](#stablecoins)
 - [Borrow funds with collateral](#lending)
 - [Borrow without collateral](#flash-loans)
-- [Start crypto savings](#savings)
+- [Start crypto savings](#saving)
 - [Trade tokens](#swaps)
 - [Grow your portfolio](#investing)
 - [Fund your ideas](#crowdfunding)
