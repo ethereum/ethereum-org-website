@@ -5031,6 +5031,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "Sednaoui",
+      "name": "marc",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7014833?v=4",
+      "profile": "https://github.com/Sednaoui",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

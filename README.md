@@ -1162,6 +1162,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/Ashwin-exe"><img src="https://avatars.githubusercontent.com/u/58840757?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ashwin Nair</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Ashwin-exe" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/julian-st"><img src="https://avatars.githubusercontent.com/u/31321934?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Julian Ste</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=julian-st" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/0xpranay"><img src="https://avatars.githubusercontent.com/u/48883700?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pranay Reddy</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=0xpranay" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/Sednaoui"><img src="https://avatars.githubusercontent.com/u/7014833?v=4?s=100" width="100px;" alt=""/><br /><sub><b>marc</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Sednaoui" title="Documentation">📖</a></td>
   </tr>
 </table>
 
