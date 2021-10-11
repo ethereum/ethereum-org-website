@@ -1,5 +1,5 @@
 ---
-title: Opcodes for the Ethereum Virtual Machine (EVM)
+title: Opcodes for the EVM
 description: An introduction to the opcodes for the Ethereum virtual machine.
 lang: en
 sidebar: true
