@@ -1,6 +1,6 @@
 ---
 title: Opcodes for the EVM
-description: An introduction to the opcodes for the Ethereum virtual machine.
+description: A list of all available opcodes for the Ethereum virtual machine.
 lang: en
 sidebar: true
 ---
