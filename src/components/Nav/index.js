@@ -355,7 +355,12 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
             </LeftItems>
             <RightItems>
               <Search />
-              <ThemeToggle onClick={handleThemeChange}>
+              <ThemeToggle
+                onClick={handleThemeChange}
+                aria-label={
+                  isDarkTheme ? "Switch to Light Theme" : "Switch to Dark Theme"
+                }
+              >
                 <NavIcon name={isDarkTheme ? "darkTheme" : "lightTheme"} />
               </ThemeToggle>
               <RightNavLink to="/languages/">
