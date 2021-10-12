@@ -5077,6 +5077,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "coreyar",
+      "name": "Corey Rice",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7258308?v=4",
+      "profile": "https://github.com/coreyar",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
