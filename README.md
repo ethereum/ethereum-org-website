@@ -1167,6 +1167,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/under3415"><img src="https://avatars.githubusercontent.com/u/3857822?v=4?s=100" width="100px;" alt=""/><br /><sub><b>under3415</b></sub></a><br /><a href="#ideas-under3415" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/GaurKS"><img src="https://avatars.githubusercontent.com/u/75743822?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gaurav Kumar Shah</b></sub></a><br /><a href="#ideas-GaurKS" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="http://hubertsikorski.com"><img src="https://avatars.githubusercontent.com/u/46070006?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hubert Sikorski</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=princeelector" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
