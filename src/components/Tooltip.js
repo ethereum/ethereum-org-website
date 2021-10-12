@@ -23,11 +23,19 @@ const Content = styled.div`
   cursor: default;
   border-radius: 4px;
   bottom: calc(100% + 1rem);
-  left: 50%;
+  left: 25%;
+  bottom: 120%;
   transform: translateX(-50%);
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     width: 140px;
   }
+`
+
+const ModalHoverOff = styled.div`
+  z-index: 99;
+  position: absolute;
+  width: 20px;
+  height: 20px;
 `
 
 const Arrow = styled.span`
@@ -60,11 +68,21 @@ const Tooltip = ({ content, children }) => {
   return (
     <>
       {isVisible && <ModalReturn onClick={() => setIsVisible(false)} />}
-      <Container title="More info" onClick={() => setIsVisible(!isVisible)}>
+      <Container
+        title="More info"
+        onMouseEnter={() => setIsVisible(true)}
+        onClick={() => setIsVisible(!isVisible)}
+      >
+        {isVisible && (
+          <ModalHoverOff onMouseLeave={() => setIsVisible(false)} />
+        )}
         {children}
         {isVisible && (
-          <Content>
-            <Arrow />
+          <Content
+            onMouseEnter={() => setIsVisible(true)}
+            onMouseLeave={() => setIsVisible(false)}
+          >
+            <Arrow onMouseEnter={() => setIsVisible(true)} />
             {content}
           </Content>
         )}
