@@ -5068,6 +5068,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "princeelector",
+      "name": "Hubert Sikorski",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46070006?v=4",
+      "profile": "http://hubertsikorski.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
