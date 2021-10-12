@@ -5,7 +5,6 @@
   "eth2-client-nimbus-logo-alt": "Nimbus徽标",
   "eth2-client-prysm-logo-alt": "Prysm徽标",
   "eth2-client-teku-logo-alt": "Teku徽标",
-  "eth2-client-trinity-logo-alt": "Trinity徽标",
   "eth2-rhino-img-alt": "图片：Eth2 Rhino正在充电",
   "page-eth2-answer-1": "Eth2可以看作是一组被添加到今天我们正在使用的ETH中的升级。这些升级包括创造一个叫做信标链的新链以及分片，这个分片可以包括多达64条链。",
   "page-eth2-answer-2": "这些将与我们正在使用的以太坊主网分开，但是这并不意味着它替代以太坊主网。恰恰相反，随着时间的推进，主网将和这个不断被增加的并行系统进行合并。",
