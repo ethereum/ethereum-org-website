@@ -54,6 +54,10 @@ Proof of work means the following:
 - `stateRoot` – the entire state of the system: account balances, contract storage, contract code and account nonces are inside.
 - `nonce` – a hash that, when combined with the mixHash, proves that the block has gone through [proof of work](/developers/docs/consensus-mechanisms/pow/).
 
+## Block time {#block-time}
+
+Block time defines the time it takes to mine a block. It can be further categorized into expected block time and average block time. For different cryptocurrencies, block time also differs. In ethereum, it is between 10 to 19 seconds. The expected block time is set as a constant value to prevent miners from impacting the security of the network by adding more computational power. The average block time is evaluated after each block in ethereum. Comparing it with expected block time, if it is larger, difficulty will be decreased. If smaller, it will be increased. That's the core design principle behind block time. Going deeper, you can search more on level of difficulty in ethereum and difficulty bomb.
+
 ## Block size {#block-size}
 
 A final important note is that blocks themselves are bounded in size. Each block has a target size of 15 million gas but the size of blocks will increase or decrease in accordance with network demands, up until the block limit of 30 million gas (2x target block size). The total amount of gas expended by all transactions in the block must be less than the block gas limit. This is important because it ensures that blocks can’t be arbitrarily large. If blocks could be arbitrarily large, then less performant full nodes would gradually stop being able to keep up with the network due to space and speed requirements.
