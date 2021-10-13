@@ -4,6 +4,7 @@ description: 以太坊节点和客户端软件的概述，以及如何设置节�
 lang: zh
 sidebar: true
 sidebarDepth: 2
+isOutdated: true
 ---
 
 以太坊要以去中心化的方式工作，它需要一个分布式的节点网络，能够验证区块和交易数据。 您需要一个被称为客户端的应用程序，才能在您的设备上“运行”一个节点。

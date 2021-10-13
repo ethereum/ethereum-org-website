@@ -75,7 +75,7 @@ $ yarn
 We recommend setting this up when running the project locally, as we use the GitHub API to fetch repository data for many projects & files.
 
 > - [Follow these instructions](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) to create a personal GitHub API token
->   - When selecting scopes in step 7, leave everything unchecked (the data we fetch doesn't require any [scope](https://docs.github.com/en/developers/apps/scopes-for-oauth-apps#available-scopes))
+>   - When selecting scopes in step 8, leave everything unchecked (the data we fetch doesn't require any [scope](https://docs.github.com/en/developers/apps/scopes-for-oauth-apps#available-scopes))
 > - In local repo root directory: Make a copy of `.env.example` and name it `.env`
 > - Copy & paste your new GitHub API token into `.env`
 
@@ -1146,7 +1146,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/Andrew-Sofos"><img src="https://avatars.githubusercontent.com/u/56540744?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andreas Sofos</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Andrew-Sofos" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/fselmo"><img src="https://avatars.githubusercontent.com/u/3532824?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Felipe Selmo</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=fselmo" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/bingwei-infstones"><img src="https://avatars.githubusercontent.com/u/64890979?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Bingwei Qin</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=bingwei-infstones" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://capitalgram.com"><img src="https://avatars.githubusercontent.com/u/49922?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mikko Ohtamaa</b></sub></a><br /><a href="#ideas-miohtama" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://capitalgram.com"><img src="https://avatars.githubusercontent.com/u/49922?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mikko Ohtamaa</b></sub></a><br /><a href="#ideas-miohtama" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=miohtama" title="Documentation">📖</a></td>
     <td align="center"><a href="http://iamkabilan.github.io"><img src="https://avatars.githubusercontent.com/u/38951107?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kabilan</b></sub></a><br /><a href="#ideas-iamkabilan" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
   <tr>
@@ -1162,6 +1162,14 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/Ashwin-exe"><img src="https://avatars.githubusercontent.com/u/58840757?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ashwin Nair</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Ashwin-exe" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/julian-st"><img src="https://avatars.githubusercontent.com/u/31321934?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Julian Ste</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=julian-st" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/0xpranay"><img src="https://avatars.githubusercontent.com/u/48883700?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pranay Reddy</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=0xpranay" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/Sednaoui"><img src="https://avatars.githubusercontent.com/u/7014833?v=4?s=100" width="100px;" alt=""/><br /><sub><b>marc</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Sednaoui" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/mbaragiola"><img src="https://avatars.githubusercontent.com/u/3682895?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mariano Baragiola</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=mbaragiola" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/under3415"><img src="https://avatars.githubusercontent.com/u/3857822?v=4?s=100" width="100px;" alt=""/><br /><sub><b>under3415</b></sub></a><br /><a href="#ideas-under3415" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/GaurKS"><img src="https://avatars.githubusercontent.com/u/75743822?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gaurav Kumar Shah</b></sub></a><br /><a href="#ideas-GaurKS" title="Ideas, Planning, & Feedback">🤔</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="http://hubertsikorski.com"><img src="https://avatars.githubusercontent.com/u/46070006?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hubert Sikorski</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=princeelector" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/coreyar"><img src="https://avatars.githubusercontent.com/u/7258308?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Corey Rice</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=coreyar" title="Documentation">📖</a></td>
   </tr>
 </table>
 

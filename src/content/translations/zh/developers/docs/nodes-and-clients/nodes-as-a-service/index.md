@@ -4,6 +4,7 @@ description: 节点服务及其利弊和主流供应商的入门级概述。
 lang: zh
 sidebar: true
 sidebarDepth: 2
+isOutdated: true
 ---
 
 ## 介绍 {#Introduction}

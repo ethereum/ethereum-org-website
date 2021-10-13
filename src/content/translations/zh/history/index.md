@@ -4,6 +4,7 @@ description: 以太坊区块链的历史，包括了主要的里程碑、版本�
 lang: zh
 sidebar: true
 sidebarDepth: 1
+isOutdated: true
 ---
 
 # 以太坊的历史 {#the-history-of-ethereum}

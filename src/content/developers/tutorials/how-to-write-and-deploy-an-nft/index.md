@@ -231,8 +231,8 @@ Then, create a .env file in the root directory of our project, and add your Meta
 
 Your .env should now look like this:
 
-    API_URL = "https://eth-ropsten.alchemyapi.io/v2/your-api-key"
-    PRIVATE_KEY = "your-metamask-private-key"
+    API_URL="https://eth-ropsten.alchemyapi.io/v2/your-api-key"
+    PRIVATE_KEY="your-metamask-private-key"
 
 To actually connect these to our code, we’ll reference these variables in our hardhat.config.js file on step 13.
 

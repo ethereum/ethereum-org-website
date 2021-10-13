@@ -4,6 +4,7 @@ description: Historique de la blockchain Ethereum, y compris les avancées majeu
 lang: fr
 sidebar: true
 sidebarDepth: 1
+isOutdated: true
 ---
 
 # Historique d'Ethereum {#the-history-of-ethereum}
