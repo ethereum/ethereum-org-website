@@ -35,7 +35,7 @@ cd /home/training
 
 ### Binary {#binary}
 
-[https://github.com/crytic/echidna/releases/tag/1.4.0.0](https://github.com/crytic/echidna/releases/tag/1.4.0.0)
+[https://github.com/crytic/echidna/releases/](https://github.com/crytic/echidna/releases/)
 
 ## Introduction to property-based fuzzing {#introduction-to-property-based-fuzzing}
 
