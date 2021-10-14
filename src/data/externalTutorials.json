@@ -31,6 +31,27 @@
     "publishDate": "09/09/2021"
   },
   {
+    "url": "https://www.youtube.com/watch?v=EXas4uBqQr8",
+    "title": "What is Multicall?",
+    "description": "We go through the how to make a ton of API calls to our blockchain node with 1 single API call to a multicall contract. We learn how we can keep our API calls low, and be more efficient overall.  ",
+    "author": "Patrick Collins",
+    "authorGithub": "https://github.com/PatrickAlphaC",
+    "tags": [
+      "solidity",
+      "brownie",
+      "web3.py",
+      "ethers.js",
+      "video",
+      "python",
+      "javascript",
+      "multicall"
+    ],
+    "skillLevel": "intermediate",
+    "timeToRead": "15",
+    "lang": "en",
+    "publishDate": "10/14/2021"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=9oERTH9Bkw0",
     "title": "How to make NFT Art with On-Chain Metadata",
     "description": "Explore the world of using SVGs to generate random NFT ImageURIs and Metadata 100% on-chain.",
