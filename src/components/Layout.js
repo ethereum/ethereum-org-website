@@ -78,7 +78,9 @@ const Layout = (props) => {
       setShouldShowSideNav(true)
 
       if (localStorage.getItem("zen-mode") !== null) {
-        const isMobile = document && document.documentElement.clientWidth < 1024
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        )
         setIsZenMode(localStorage.getItem("zen-mode") === "true" && !isMobile)
       }
     } else {
