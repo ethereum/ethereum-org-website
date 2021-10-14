@@ -2,6 +2,48 @@
   "index_name": "prod-ethereum-org",
   "start_urls": [
     {
+      "url": "https://ethereum.org/(?P<lang>.*?)/developers/tutorials/",
+      "variables": {
+        "lang": [
+          "en",
+          "ar",
+          "bn",
+          "cs",
+          "de",
+          "el",
+          "es",
+          "fa",
+          "fi",
+          "fr",
+          "hi",
+          "hu",
+          "id",
+          "ig",
+          "it",
+          "ja",
+          "ko",
+          "lt",
+          "ml",
+          "nb",
+          "nl",
+          "pl",
+          "pt",
+          "pt-br",
+          "ru",
+          "sk",
+          "sl",
+          "ro",
+          "se",
+          "tr",
+          "uk",
+          "vi",
+          "zh",
+          "zh-tw"
+        ]
+      },
+      "page_rank": 1
+    },
+    {
       "url": "https://ethereum.org/(?P<lang>.*?)/",
       "variables": {
         "lang": [
@@ -40,10 +82,11 @@
           "zh",
           "zh-tw"
         ]
-      }
+      },
+      "page_rank": 10
     }
   ],
-  "stop_urls": [],
+  "stop_urls": [".*(?<!/)$"],
   "selectors": {
     "lvl0": {
       "selector": "title",
