@@ -16,6 +16,12 @@ This section is for software for the desktop, command line, or server which has 
 
 ### Grid {#grid}
 
+<p align="center">
+  <img width="300" height="150" 
+  	style="background-color:#fff; padding:0px 10px 0px 10px;"
+  	src="https://user-images.githubusercontent.com/47108/53807420-80433380-3f1d-11e9-80cd-967aabb26506.png" />
+</p>
+
 Deprecated on December 10, 2020
 
 **Summary**
@@ -129,8 +135,13 @@ The sucessor project to Parity Ethereum client is [Open Ethereum](https://github
 The ["Spin up your own Ethereum node"](https://ethereum.org/en/developers/docs/nodes-and-clients/run-a-node/#getting-the-client) resource on ethereum.org includes a section for downloading, installing, and running an Ethereum client.
 
 
-
 ### Trinity {#trinity}
+
+<p align="center">
+  <img width="230" height="150" 
+  	style="background-color:#fff; padding:0px 10px 0px 10px;"
+  	src="https://trinity.ethereum.org/images/trinity-logo-icon.svg" />
+</p>
 
 **Summary**
 
@@ -153,6 +164,12 @@ The ["Spin up your own Ethereum node"](https://ethereum.org/en/developers/docs/n
 
 
 ### Cover Protocol {#cover-protocol}
+
+<p align="center">
+  <img width="180" height="180" 
+  	style="background-color:#fff; padding:0px 10px 0px 10px;"
+  	src="https://pbs.twimg.com/profile_images/1346933366302650371/XIWyVVDL_400x400.jpg" />
+</p>
 
 **Summary**
 
@@ -195,6 +212,12 @@ While The DAO failed, the concept endured. The basic technical, social, and gove
 
 
 ### SparkPool {#sparkpool}
+
+<p align="center">
+  <img width="200" height="200" 
+  	style="background-color:#fff; padding:0px 10px 0px 10px;"
+  	src="https://pbs.twimg.com/profile_images/1143714781666217984/aUVasr8L_400x400.png" />
+</p>
 
 **Summary**
 
