@@ -33,8 +33,7 @@ const H1 = styled.h1`
   margin-top: 0;
   color: ${(props) => props.theme.colors.text};
   font-style: normal;
-  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
-    "Liberation Mono", Menlo, Courier, monospace;
+  font-family: ${(props) => props.theme.fonts.monospace};
   text-transform: uppercase;
   font-weight: 600;
   font-size: 2rem;

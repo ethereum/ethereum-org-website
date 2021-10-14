@@ -876,7 +876,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://davidawad.com"><img src="https://avatars.githubusercontent.com/u/4019054?v=4?s=100" width="100px;" alt=""/><br /><sub><b>David Awad</b></sub></a><br /><a href="#content-davidawad" title="Content">🖋</a></td>
     <td align="center"><a href="http://www.rtfs.hu"><img src="https://avatars.githubusercontent.com/u/20340?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alex Beregszaszi</b></sub></a><br /><a href="#content-axic" title="Content">🖋</a></td>
     <td align="center"><a href="http://www.adamgoth.com"><img src="https://avatars.githubusercontent.com/u/5225766?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Adam Goth</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aadamgoth" title="Bug reports">🐛</a> <a href="#content-adamgoth" title="Content">🖋</a></td>
-    <td align="center"><a href="https://github.com/Anuragtech02"><img src="https://avatars.githubusercontent.com/u/55744578?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anurag Pal</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Anuragtech02" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/Anuragtech02"><img src="https://avatars.githubusercontent.com/u/55744578?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anurag Pal</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Anuragtech02" title="Code">💻</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=Anuragtech02" title="Documentation">📖</a></td>
     <td align="center"><a href="https://www.codechef.com/users/chaos_"><img src="https://avatars.githubusercontent.com/u/29145212?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vishal Pratap Singh</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Vishal19111999" title="Code">💻</a></td>
   </tr>
   <tr>
@@ -1170,6 +1170,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="http://hubertsikorski.com"><img src="https://avatars.githubusercontent.com/u/46070006?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hubert Sikorski</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=princeelector" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/coreyar"><img src="https://avatars.githubusercontent.com/u/7258308?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Corey Rice</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=coreyar" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/ezenwankwogabriel"><img src="https://avatars.githubusercontent.com/u/32826083?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ezenwankwo Gabriel</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ezenwankwogabriel" title="Documentation">📖</a></td>
   </tr>
 </table>
 

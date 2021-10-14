@@ -29,8 +29,7 @@ const PointsExchangeLabel = styled.div`
 `
 
 const PointsExchangeTitle = styled.h2`
-  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
-    "Liberation Mono", Menlo, Courier, monospace;
+  font-family: ${(props) => props.theme.fonts.monospace};
   font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
