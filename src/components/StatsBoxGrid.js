@@ -343,7 +343,11 @@ const StatsBoxGrid = () => {
 
     const fetchNodes = async () => {
       try {
-        const { result } = await getData("/.netlify/functions/etherscan")
+        const { result } = await getData(
+          process.env.NODE_ENV === "production"
+            ? "/.netlify/functions/etherscan"
+            : "http://localhost:9000/etherscan"
+        )
         const data = result
           .map(({ UTCDate, TotalNodeCount }) => ({
             timestamp: new Date(UTCDate).getTime(),
@@ -368,7 +372,11 @@ const StatsBoxGrid = () => {
 
     const fetchTotalValueLocked = async () => {
       try {
-        const response = await getData("/.netlify/functions/defipulse")
+        const response = await getData(
+          process.env.NODE_ENV === "production"
+            ? "/.netlify/functions/defipulse"
+            : "http://localhost:9000/defipulse"
+        )
         const data = response
           .map(({ timestamp, tvlUSD }) => ({
             timestamp: parseInt(timestamp) * 1000,
@@ -393,7 +401,11 @@ const StatsBoxGrid = () => {
 
     const fetchTxCount = async () => {
       try {
-        const response = await getData("/.netlify/functions/txs")
+        const response = await getData(
+          process.env.NODE_ENV === "production"
+            ? "/.netlify/functions/txs"
+            : "http://localhost:9000/txs"
+        )
         const data = response.result
           .map(({ unixTimeStamp, transactionCount }) => ({
             timestamp: parseInt(unixTimeStamp) * 1000, // unix milliseconds
