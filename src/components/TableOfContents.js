@@ -1,6 +1,5 @@
 import React, { useState, useContext } from "react"
 import { motion } from "framer-motion"
-import { useIntl } from "gatsby-plugin-intl"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
@@ -323,7 +322,6 @@ const TableOfContents = ({
   isMobile = false,
 }) => {
   const { isZenMode, handleZenModeChange } = useContext(ZenModeContext)
-  const intl = useIntl()
 
   const titleIds = []
 
@@ -364,7 +362,7 @@ const TableOfContents = ({
   }
 
   const shouldShowZenModeToggle = slug?.includes("/docs/")
-  const shouldShowEditButtom = editPath && intl.locale === "en"
+  const shouldShowEditButtom = !!editPath
 
   return (
     <Aside className={className}>

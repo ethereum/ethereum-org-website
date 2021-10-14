@@ -4,6 +4,7 @@ description: Az Ethereum blokklánc története a nagyobb mérföld kövekkel, k
 lang: hu
 sidebar: true
 sidebarDepth: 1
+isOutdated: true
 ---
 
 # Az Ethereum története {#the-history-of-ethereum}

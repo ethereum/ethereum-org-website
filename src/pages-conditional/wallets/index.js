@@ -746,5 +746,8 @@ export const query = graphql`
     coin98: file(relativePath: { eq: "wallets/coin98.png" }) {
       ...listImage
     }
+    bitkeep: file(relativePath: { eq: "wallets/bitkeep.png" }) {
+      ...listImage
+    }
   }
 `

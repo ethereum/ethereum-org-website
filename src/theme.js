@@ -324,6 +324,10 @@ const darkThemeColors = Object.assign({}, baseColors, darkColors)
 const theme = {
   isDark: false, // Overwritten in Object.assign
   colors: {}, // Overwritten in Object.assign
+  fonts: {
+    monospace:
+      '"SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono", "Liberation Mono", Menlo, Courier, monospace',
+  },
   fontSizes: {
     // based on typical browser default font size of 16px
     xs: "0.75rem", // 12px

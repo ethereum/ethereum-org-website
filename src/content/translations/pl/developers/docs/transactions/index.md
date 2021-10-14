@@ -3,6 +3,7 @@ title: Transakcje
 description: Przegląd transakcji Ethereum – sposób działania, struktury danych i metody wysyłania za pośrednictwem aplikacji.
 lang: pl
 sidebar: true
+isOutdated: true
 ---
 
 Transakcje to podpisane kryptograficznie instrukcje od kont. Konto inicjuje transakcję, aby zaktualizować stan sieci Ethereum. Najprostszą transakcją jest przeniesienie ETH z jednego konta na drugie.

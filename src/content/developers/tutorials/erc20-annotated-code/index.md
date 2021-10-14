@@ -766,9 +766,8 @@ so they are only useful if you inherit from the contract and add your own
 logic to decide under what conditions to mint new tokens or burn existing
 ones.
 
-**NOTE:** Every ERC-20 token has its own business logic that dictates
-
-token management. For example, a fixed supply contract might only call `_mint`
+**NOTE:** Every ERC-20 token has its own business logic that dictates token management.
+For example, a fixed supply contract might only call `_mint`
 in the constructor and never call `_burn`. A contract that sells tokens
 will call `_mint` when it is paid, and presumably call `_burn` at some point
 to avoid runaway inflation.

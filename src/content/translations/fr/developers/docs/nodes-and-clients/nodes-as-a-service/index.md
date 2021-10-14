@@ -4,6 +4,7 @@ description: Présentation de base des services de nœuds, de leurs avantages et
 lang: fr
 sidebar: true
 sidebarDepth: 2
+isOutdated: true
 ---
 
 ## Introduction {#Introduction}

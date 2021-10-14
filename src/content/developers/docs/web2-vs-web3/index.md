@@ -32,6 +32,7 @@ Web3 has some limitations right now:
 
 - Scalability – transactions are slower on web3 because they're decentralized. Changes to state, like a payment, need to be processed by a miner and propagated throughout the network.
 - UX – interacting with web3 applications can require extra steps, software, and education. This can be a hurdle to adoption.
+- Accessibility – the lack of integration in modern web browsers makes web3 less accessible to most users.
 - Cost – most successful dapps put very small portions of their code on the blockchain as it's expensive.
 
 ## Centralization vs decentralization {#centralization-vs-decentralization}
@@ -54,3 +55,4 @@ Note that these are general patterns that may not hold true in every network. Fu
 
 - [The Meaning of Decentralization](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274) _Feb 6, 2017 - Vitalik Buterin_
 - [Why Decentralization Matters](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e) _Feb 18, 2018 - Chris Dixon_
+- [What Is Web 3.0 & Why It Matters](https://medium.com/fabric-ventures/what-is-web-3-0-why-it-matters-934eb07f3d2b) _Dec 31, 2019 - Max Mersch_ and Richard Muirhead\_

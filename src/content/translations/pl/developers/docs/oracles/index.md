@@ -4,6 +4,7 @@ description: Wyrocznie umożliwiają uzyskanie danych ze świata rzeczywistego d
 lang: pl
 sidebar: true
 incomplete: true
+isOutdated: true
 ---
 
 Wyrocznie to źródła danych łączące Ethereum z informacjami spoza łańcucha, ze świata rzeczywistego, umożliwiające zapytania o dane w inteligentnych kontraktach. Na przykład aplikacje dapp rynków prognostycznych używają wyroczni do rozliczania płatności na podstawie zdarzeń. Rynek prognostyczny może poprosić Cię o postawienie ETH na następnego prezydenta Stanów Zjednoczonych. Użyje wyroczni, aby potwierdzić wynik i wypłacić nagrodę zwycięzcom.
