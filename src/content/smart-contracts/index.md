@@ -1,63 +1,67 @@
 ---
-title: What is an Ethereum smart contract?
-description: An intro to understanding and developing smart contracts
+title: Smart contracts
+description: A non-technical introduction to smart contracts
 lang: en
-emoji: ":handshake:"
 sidebar: true
-sidebarDepth: 2
-summaryPoints:
-  [
-    "Smart contracts are computer programs.",
-    "Smart contracts improve on several aspects of traditional contracts.",
-    "Smart contracts have current and future use cases.",
-  ]
 ---
 
-## What's a smart contract? {#smart-contract-definition}
+# Introduction to smart contracts {#introduction-to-smart-contracts}
 
-A smart contract is a computer program. Specifically, it's a program that runs on decentralized networks/computers. 
+Smart contracts are computer programs stored on the blockchain that allows us to convert traditional contracts into digital equivalents. Smart contracts are very logical - following an _if this then that_ structure, and performing actions based on predetermined conditions in a deterministic way.
 
-This article should take you on the following mini-journey:
+Nick Szabo coined the term "smart contract". In 1994, he wrote [an introduction to the concept](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) and, in 1996, [an exploration of what smart contracts could do](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 
-- So what is a smart contract?
-- Ahh ok... why would we want to have smart contracts?
-- I kind of get it... can you provide me some examples?
+Nick Szabo envisioned a digital marketplace built on these automatic, cryptographically secure processes. A place where transactions and business functions can happen trustlessly — without intermediaries. Smart contracts on Ethereum put this vision into practice.
 
-So, what is a smart contract? Is this just a clever brand name? Believe it or not, it's an unadulterated tech/cypherpunk term.
+## What are contracts? {#what-are-contracts}
 
-Nick Szabo (a computer scientist, mathematician and crypto icon) coined the term "smart contract". In 1994, he wrote [an introduction to the concept](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) and, in 1996, [an exploration of what smart contracts could do](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
+You're probably thinking: _"I'm not a lawyer! Why would I care about contracts?"_. Truth be told, "smart contract" isn't a great name. For most people, it brings to mind needlessly long terms and conditions agreements or boring legal documents.
 
-Nick Szabo envisioned a digital marketplace built on these automatic, cryptographically secure processes. A place where transactions and business functions can happen trustlessly — without intermediaries. Ethereum is putting that vision into practice.
+Contracts are just agreements. That is, any form of agreement can be encapsulated within the conditions of a contract. Verbal agreements or pen-and-paper contracts are acceptable for many things, but they aren't without flaws.
 
-## (Dumb) contracts vs. smart contracts {#smart-contract-term}
+### Trust and contracts {#trust-and-contracts}
 
-Why is a smart contract called a contract? Why do we need contracts to be smart? To answer that, let's look at what a traditional pen-and-paper contract really does.
+One of the biggest problems with a traditional contract is the need for trusted individuals to follow through with the contract's outcomes.
 
-For example, let's consider a classic pork bellies futures contract. The buyer agrees to pay the current market price for a certain amount of pork at some point in the future. The seller agrees to sell at that price, deliver that quantity and meet that deadline.
+Here is an example:
 
-You have three variables: price, quantity and date. Pretty simple, right?
+Alice and Bob are having a bicycle race. Let's say Alice bets Bob $10 that she will win the race. Bob is confident he'll be the winner and agrees to the bet. In the end, Alice finishes the race well ahead of Bob and is the clear winner. But Bob refuses to pay out on the bet, claiming Alice must have cheated.
 
-Here's another example. You sign a sales contract for a used car, which allows the dealership to take your money and give you the car.
+This silly example illustrates the problem with any non-smart agreement. Even if the conditions of the agreement get met (i.e. you are the winner of the race), you must still trust another person to fulfill the agreement (i.e. payout on the bet).
 
-What do these contracts do? Essentially, they represent agreements. They provide an outline for a transaction.
+## Smart contracts {#smart-contracts}
 
-## If normal contracts work, why do we need smart contracts? {#why-smart-contracts}
+Smart contracts digitize agreements by turning the terms of an agreement into computer code that automatically executes when the contract terms are met.
 
-The ink-and-paper method is fine for some things, but it isn't the be-all and end-all. Basically, we need smart contracts because regular contracts can't do enough.
+### A digital vending machine {#vending-machine}
 
-### Automation {#automation}
+The best metaphor for a smart contract is a vending machine, which works somewhat similarly to a smart contract - specific inputs guarantee predetermined outputs.
 
-One main advantage of smart contracts is that they can act automatically. For example, you could write a smart contract that holds funds in escrow for your future pork belly purchase, transferring the money to the seller once you both confirm receipt. You could write a contract that automatically gives you a digital version of a car's title when you pay the dealer.
+- You select a product
+- The vending machine verifies the amount payable to purchase the product
+- You insert the correct amount
+- The vending machine verifies you have inserted the correct amount
+- The vending machine dispenses the product of choice
 
-Automation eliminates the need to trust an intermediary in many cases. It also simplifies transactions.
+The vending machine will only dispense your desired product after all requirements are met. If you don't select a product or insert enough money, the vending machine won't give out your product.
+
+### Automatic execution {#automation}
+
+One of the most significant benefits smart contracts have over regular contracts is that the outcome is automatically executed when the contract conditions are realized. There is no need to wait for a human to execute the result. In other words: smart contracts remove the need for trust.
+
+For example, you could write a smart contract that holds funds in escrow for a child, transferring the money to their digital wallet after a specific date. You could write a contract that automatically gives you a digital version of a car's title when you pay the dealer.
+
+### Predictable outcomes {#predictability}
+
+The human factor is one of the biggest points of failure with traditional contracts. For example, two individual judges may interpret a traditional contract in different ways. Their interpretations could lead to different decisions getting made and disparate outcomes. Smart contracts remove the possibility of different interpretations. Instead, smart contracts execute precisely based on the conditions written within the contract's code. This precision means that given the same circumstances, the smart contract will produce the same result.
 
 ### Public record {#public-record}
 
-Smart contracts would also be useful for audits and tracking. Since Ethereum smart contracts are on a public blockchain, anyone can instantly track asset transfers and various other information. You can check to see that someone sent money to your address, for example.
+Smart contracts are also useful for audits and tracking. Since Ethereum smart contracts are on a public blockchain, anyone can instantly track asset transfers and other related information. You can check to see that someone sent money to your address, for example.
 
-### Privacy protection {#privacy-protection
+### Privacy protection {#privacy-protection}
 
-Smart contracts can also protect our privacy. Since Ethereum is a pseudonymous network (your transactions are tied publicly to a unique cryptographic address, not your personal identity), you can protect your privacy from observers.
+Smart contracts can also protect our privacy. Since Ethereum is a pseudonymous network (your transactions are tied publicly to a unique cryptographic address, not your identity), you can protect your privacy from observers.
 
 ### Visible terms and predictable outcomes {#predictable-outcomes}
 
@@ -65,19 +69,27 @@ Finally, like contracts, you can check what's in a smart contract before you sig
 
 ## Smart contracts: use cases {#use-cases}
 
-So, smart contracts are computer programs that live on the blockchain. They can execute automatically. You can track their transactions, predict how they act and even use them pseudonymously. That's cool. But...
-
-But what are they good for? Well, smart contracts can do anything that other complete-computer programs do. 
+So, smart contracts are computer programs that live on the blockchain. They can execute automatically. You can track their transactions, predict how they act and even use them pseudonymously. That's cool. But what are they good for? Well, smart contracts can do anything that other complete-computer programs do.
 
 They can perform computations, create currency, record data, mint NFTs, send communications and even generate graphics. Here are some popular, real-world examples:
 
 - An automatic, open currency exchange
-- A cat-collecting and -breeding game
+- An insurance policy that pays out automatically
+- Transferring digital assets
+- A cat-collecting and breeding game
 - A US Dollar coin factory
 - A standard that lets people create customized, interoperable currencies
 
-## Learning more about smart contracts {#learn-more}
+## More of a visual learner? {#visual-learner}
 
-For a more robust discussion of smart contracts, check out [The Ethereum Book](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract). You can also dive in and start coding in Solidity (a popular smart contract language) over at [Crypto Zombies](https://cryptozombies.io).
+Watch Finematics explain smart contracts:
 
-Thanks for reading, and have fun! 
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/pWGLtjG-F5c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Further reading {#further-reading}
+
+- [How Smart Contracts Will Change the World](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
+- [Smart Contracts: The Blockchain Technology That Will Replace Lawyers](https://blockgeeks.com/guides/smart-contracts/)
+- [Smart contracts for developers](/developers/docs/smart-contracts/)
+- Learn to write smart-contracts with [CryptoZombies](https://cryptozombies.io)
+- [The Ethereum Book](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
