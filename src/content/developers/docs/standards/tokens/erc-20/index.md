@@ -39,9 +39,9 @@ is and will always be equal to all the other Tokens.
 The ERC-20 (Ethereum Request for Comments 20), proposed by Fabian Vogelsteller in November 2015, is a Token Standard that
 implements an API for tokens within Smart Contracts.
 
-It provides functionalities like to transfer tokens from one account to another, to get the current token balance of an
-account and also the total supply of the token available on the network. Besides these it also has some other functionalities
-like to approve that an amount of token from an account can be spent by a third party account.
+It provides functionalities to: transfer tokens from one account to another, get the current token balance of an
+account, get the total supply of the token available on the network, and approve whether an amount of token 
+from an account can be spent by a third party account.
 
 If a Smart Contract implements the following methods and events it can be called an ERC-20 Token Contract and, once deployed, it
 will be responsible to keep track of the created tokens on Ethereum.
