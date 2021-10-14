@@ -65,7 +65,7 @@ The broad areas that are frequently relevant for smart contracts include:
 
   - Echidna and Manticore are the tools to favor to test state-machine specifications.
 
-- **Access controls.** If your system have privileged users (e.g. an owner, controllers, ...) you must ensure that (1) each user can only perform the authorized actions and (2) no user can block actions from a more priviledged user.
+- **Access controls.** If your system has privileged users (e.g. an owner, controllers, ...) you must ensure that (1) each user can only perform the authorized actions and (2) no user can block actions from a more privileged user.
 
   - Slither, Echidna and Manticore can check for correct access controls. For example, Slither can check that only whitelisted functions lack the onlyOwner modifier. Echidna and Manticore are useful for more complex access control, such as a permission given only if the contract reaches a given state.
 
