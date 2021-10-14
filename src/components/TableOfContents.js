@@ -318,6 +318,7 @@ const TableOfContents = ({
   items,
   maxDepth,
   className,
+  slug,
   editPath,
   isMobile = false,
 }) => {
@@ -361,19 +362,23 @@ const TableOfContents = ({
       />
     )
   }
+
+  const shouldShowZenModeToggle = slug?.includes("/docs/")
   const shouldShowEditButtom = editPath && intl.locale === "en"
 
   return (
     <Aside className={className}>
       <OuterList>
-        <ZenModeContainer>
-          <ZenModeText>
-            <Translation id="zen-mode">Zen Mode:</Translation>
-          </ZenModeText>
-          <ZenModeToggleContainer onClick={(_e) => handleZenModeChange()}>
-            <Icon name={isZenMode ? "zenModeOn" : "zenModeOff"} size="2rem" />
-          </ZenModeToggleContainer>
-        </ZenModeContainer>
+        {shouldShowZenModeToggle && (
+          <ZenModeContainer>
+            <ZenModeText>
+              <Translation id="zen-mode">Zen Mode:</Translation>
+            </ZenModeText>
+            <ZenModeToggleContainer onClick={(_e) => handleZenModeChange()}>
+              <Icon name={isZenMode ? "zenModeOn" : "zenModeOff"} size="2rem" />
+            </ZenModeToggleContainer>
+          </ZenModeContainer>
+        )}
         {shouldShowEditButtom && (
           <ButtonContainer>
             <ButtonLink to={editPath} isSecondary={true} mt={0}>

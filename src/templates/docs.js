@@ -195,7 +195,7 @@ const DocsPage = ({ data, pageContext }) => {
   const isPageIncomplete = mdx.frontmatter.incomplete
 
   const { editContentUrl } = data.siteData.siteMetadata
-  const { relativePath } = pageContext
+  const { relativePath, slug } = pageContext
   const absoluteEditPath = `${editContentUrl}${relativePath}`
 
   return (
@@ -216,6 +216,7 @@ const DocsPage = ({ data, pageContext }) => {
             editPath={absoluteEditPath}
           />
           <TableOfContents
+            slug={slug}
             editPath={absoluteEditPath}
             items={tocItems}
             isMobile={true}
@@ -235,6 +236,7 @@ const DocsPage = ({ data, pageContext }) => {
         </Content>
         {mdx.frontmatter.sidebar && tocItems && (
           <DesktopTableOfContents
+            slug={slug}
             editPath={absoluteEditPath}
             items={tocItems}
             isPageIncomplete={isPageIncomplete}
