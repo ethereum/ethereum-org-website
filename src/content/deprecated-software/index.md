@@ -46,6 +46,12 @@ Grid was a successor to Mist, removing the wallet, but adding the ability to hos
 
 ### Meteor Dapp Wallet {#meteor-dapp-wallet}
 
+<p align="center">
+  <img width="600" height="450" 
+  	style="background-color:#fff; padding:0px 10px 0px 10px;"
+  	src="https://miro.medium.com/max/700/0*L222OAjPhe_KL1Iy." />
+</p>
+
 Deprecated on March 27, 2019
 
 **Summary**
@@ -72,6 +78,12 @@ See the [Ethereum Wallets](https://ethereum.org/wallets/) page on ethereum.org.
 
 
 ### Mist {#mist}
+
+<p align="center">
+  <img width="120" height="200" 
+  	style="background-color:#fff; padding:0px 10px 0px 10px;"
+  	src="https://mist.ethereum.org/images/logo@2x.png" />
+</p>
 
 Deprecated on March 27, 2019
 
@@ -115,9 +127,9 @@ Mix was of the earliest Ethereum-related applications. See this [presentation by
 ### Parity {#parity}
 
 <p align="center">
-  <img width="230" height="150" 
-  	style="background-color:#ccc; padding:0px 10px 0px 10px;"
-  	src="https://raw.githubusercontent.com/openethereum/parity-ethereum/v2.7.2-stable/docs/logo-parity-ethereum.svg" />
+  <img width="240" height="180" 
+  	style="background-color:#fff; padding:0px 10px 0px 10px;"
+  	src="https://davidgerard.co.uk/blockchain/wp-content/uploads/2017/11/parity-logo.png" />
 </p>
 
 Deprecated on June 2, 2020
@@ -143,6 +155,8 @@ The ["Spin up your own Ethereum node"](https://ethereum.org/en/developers/docs/n
   	src="https://trinity.ethereum.org/images/trinity-logo-icon.svg" />
 </p>
 
+Deprecated on July 1, 2021
+
 **Summary**
 
 Trinity was a python-based Ethereum client which served as a research tool for the community.
@@ -166,9 +180,9 @@ The ["Spin up your own Ethereum node"](https://ethereum.org/en/developers/docs/n
 ### Cover Protocol {#cover-protocol}
 
 <p align="center">
-  <img width="180" height="180" 
-  	style="background-color:#fff; padding:0px 10px 0px 10px;"
-  	src="https://pbs.twimg.com/profile_images/1346933366302650371/XIWyVVDL_400x400.jpg" />
+  <img width="400" height="267" 
+  	style="background-color:#fff; padding:0px 0px 0px 0px;"
+  	src="https://miro.medium.com/max/1838/0*kA6PGbaYHLJOI66O" />
 </p>
 
 **Summary**
@@ -214,9 +228,9 @@ While The DAO failed, the concept endured. The basic technical, social, and gove
 ### SparkPool {#sparkpool}
 
 <p align="center">
-  <img width="200" height="200" 
+  <img width="562" height="124" 
   	style="background-color:#fff; padding:0px 10px 0px 10px;"
-  	src="https://pbs.twimg.com/profile_images/1143714781666217984/aUVasr8L_400x400.png" />
+  	src="https://cryptodiffer.com/src/images/person/SparkPool-cryptodiffer.png" />
 </p>
 
 **Summary**
