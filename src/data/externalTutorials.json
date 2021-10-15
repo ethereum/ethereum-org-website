@@ -37,13 +37,10 @@
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
     "tags": [
-      "solidity",
       "brownie",
       "web3.py",
-      "ethers.js",
       "video",
       "python",
-      "javascript",
       "multicall"
     ],
     "skillLevel": "intermediate",
