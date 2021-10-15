@@ -56,7 +56,7 @@ Proof of work means the following:
 
 ## Block time {#block-time}
 
-Block time defines the time it takes to mine a block. It can be further categorized into expected block time and average block time. For different cryptocurrencies, block time also differs. In ethereum, it is between 10 to 19 seconds. The expected block time is set as a constant value to prevent miners from impacting the security of the network by adding more computational power. The average block time is evaluated after each block in ethereum. Comparing it with expected block time, if it is larger, difficulty will be decreased. If smaller, it will be increased. That's the core design principle behind block time. Going deeper, you can search more on level of difficulty in ethereum and difficulty bomb.
+Block time refers to the time it takes to mine a new block. In Ethereum, the average block time is between 10 to 19 seconds, and is evaluated after each block. The expected block time is set as a constant at the protocol level, and is used to protect security of the network when more computational power is added by the miners. The average block time is compared with the expected block time, and if the average block time is higher, then the difficulty is decreased in the block header. If the average block time is smaller, then the difficulty in the block header will be increased.
 
 ## Block size {#block-size}
 
