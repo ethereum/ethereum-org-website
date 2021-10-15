@@ -33,7 +33,7 @@
   {
     "url": "https://www.youtube.com/watch?v=EXas4uBqQr8",
     "title": "What is Multicall?",
-    "description": "We go through the how to make a ton of API calls to our blockchain node with 1 single API call to a multicall contract. We learn how we can keep our API calls low, and be more efficient overall.  ",
+    "description": "Learn how to make multiple API calls to a blockchain node with a single API call to a multicall contract.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
     "tags": [
