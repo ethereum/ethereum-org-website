@@ -5096,6 +5096,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "TomLisankie",
+      "name": "Thomas Lisankie",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92654?v=4",
+      "profile": "https://tomlisankie.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
