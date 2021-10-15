@@ -24,18 +24,11 @@ const Content = styled.div`
   border-radius: 4px;
   bottom: calc(100% + 1rem);
   left: 25%;
-  bottom: 120%;
+  bottom: 125%;
   transform: translateX(-50%);
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     width: 140px;
   }
-`
-
-const ModalHoverOff = styled.div`
-  z-index: 99;
-  position: absolute;
-  width: 20px;
-  height: 20px;
 `
 
 const Arrow = styled.span`
@@ -60,29 +53,29 @@ const ModalReturn = styled.div`
 
 // TODO add `position` prop
 const Tooltip = ({ content, children }) => {
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  )
   const [isVisible, setIsVisible] = useState(false)
 
-  // TODO add hover effects
-  // onMouseLeave={() => setIsVisible(false)}
-  // onMouseEnter={() => setIsVisible(true)}
   return (
     <>
-      {isVisible && <ModalReturn onClick={() => setIsVisible(false)} />}
+      {isVisible && isMobile && (
+        <ModalReturn onClick={() => setIsVisible(false)} />
+      )}
       <Container
         title="More info"
-        onMouseEnter={() => setIsVisible(true)}
-        onClick={() => setIsVisible(!isVisible)}
+        onMouseEnter={!isMobile ? () => setIsVisible(true) : null}
+        onMouseLeave={!isMobile ? () => setIsVisible(false) : null}
+        onClick={isMobile ? () => setIsVisible(!isVisible) : null}
       >
-        {isVisible && (
-          <ModalHoverOff onMouseLeave={() => setIsVisible(false)} />
-        )}
         {children}
         {isVisible && (
           <Content
-            onMouseEnter={() => setIsVisible(true)}
-            onMouseLeave={() => setIsVisible(false)}
+            onMouseEnter={!isMobile ? () => setIsVisible(true) : null}
+            onMouseLeave={!isMobile ? () => setIsVisible(false) : null}
           >
-            <Arrow onMouseEnter={() => setIsVisible(true)} />
+            <Arrow />
             {content}
           </Content>
         )}
