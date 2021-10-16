@@ -16,7 +16,6 @@ import {
   MdFlip,
   MdSearch,
 } from "react-icons/md"
-import { BsSlashSquare } from "react-icons/bs"
 import { BsQuestionSquareFill } from "react-icons/bs"
 import { IoCodeDownload } from "react-icons/io5"
 import { IoCodeOutline } from "react-icons/io5"
@@ -35,7 +34,6 @@ const Icon = ({ name, size, className }) => (
     {name === "lightTheme" && <MdWbSunny />}
     {name === "menu" && <MdMenu />}
     {name === "twitter" && <FaTwitter />}
-    {name === "searchSlash" && <BsSlashSquare />}
     {name === "search" && <MdSearch />}
     {name === "youtube" && <FaYoutube />}
     {name === "discord" && <FaDiscord />}
