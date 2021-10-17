@@ -33,7 +33,8 @@ const StyledNav = styled.nav`
 `
 
 const SubNav = styled.nav`
-  padding: 1rem 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   box-sizing: border-box;
   display: flex;
   background: ${(props) => props.theme.colors.ednBackground};
@@ -42,8 +43,13 @@ const SubNav = styled.nav`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     display: none;
   }
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    padding-left: 400px;
+
+  @media (min-width: 1440px) and (max-width: 2560px) {
+    padding-left: 35rem;
+  }
+
+  @media (min-width: 1440px) and (max-width: 1440px) {
+    padding-left: 2rem;
   }
 `
 
