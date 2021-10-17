@@ -42,6 +42,9 @@ const SubNav = styled.nav`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     display: none;
   }
+  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
+    padding-left: 400px;
+  }
 `
 
 const NavContent = styled.div`

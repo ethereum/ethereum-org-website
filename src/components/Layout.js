@@ -101,6 +101,11 @@ const Layout = (props) => {
         <IntlContextProvider value={intl}>
           <ThemeProvider theme={theme}>
             <GlobalStyle isDarkTheme={isDarkTheme} />
+            <Nav
+              handleThemeChange={handleThemeChange}
+              isDarkTheme={isDarkTheme}
+              path={path}
+            />
             <TranslationBanner
               shouldShow={shouldShowTranslationBanner}
               isPageContentEnglish={isPageContentEnglish}
@@ -108,11 +113,6 @@ const Layout = (props) => {
               originalPagePath={intl.originalPath}
             />
             <ContentContainer>
-              <Nav
-                handleThemeChange={handleThemeChange}
-                isDarkTheme={isDarkTheme}
-                path={path}
-              />
               {shouldShowSideNav && <SideNavMobile path={path} />}
               <MainContainer>
                 {shouldShowSideNav && <SideNav path={path} />}
