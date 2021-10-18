@@ -26,8 +26,7 @@ Deprecated on December 10, 2020
 
 **Summary**
 
-Grid was a desktop application that allowed you to securely download, configure, and use various clients and tools in the Ethereum ecosystem. Grid provided a user-friendly interface to assist a less technical audience in safely interacting with technical tools, which increased accessibility for everyone. 
-
+Grid was a Javascript-based desktop application that allowed you to securely access Ethereum, IPFS, and other decentralized networks. It provided a user-friendly interface to assist a less technical audience in safely interacting with dapps, which increased accessibility for everyone. 
 
 **Archives**
 
@@ -36,8 +35,7 @@ Grid was a desktop application that allowed you to securely download, configure,
 
 **History**
 
-Grid was a successor to Mist, removing the wallet, but adding the ability to host nodes of multiple protocols.
-
+Grid could be seen as a successor to Mist, also a standalone, Javascript-based desktop app which included a Geth node. Grid removed the wallet aspect, and added a plugin-style approach for running different kinds of nodes.
 
 **Alternatives**
 
@@ -50,7 +48,7 @@ Deprecated on March 27, 2019
 
 **Summary**
 
-This was an important component of Mist, an Ethereum wallet for managing keys, deploying and interacting with smart contracts. For many years the Meteor Dapp Wallet web UI was hosted as a subdomain on ethereum.org. 
+Meteor Dapp Wallet was a component of Mist, an Ethereum wallet for managing Ethereum accounts and interacting with smart contracts. For many years the Meteor Dapp Wallet web UI was hosted as a subdomain "wallet.ethereum.org". 
 
 The Mist Multisig Contract (solidity code) was also included, and Meteor Dapp Wallet featured a user interface for configuring and deploying it.
 
@@ -77,7 +75,7 @@ Deprecated on March 27, 2019
 
 **Summary**
 
-Mist was a specialized browser that enabled users to manage Ethereum keys with a built-in wallet and interact with dapps hosted on traditional web.
+Mist was a specialized browser built with Electron that enabled users to manage Ethereum accounts and interact with dapps hosted on the traditional web.
 
 **Archives**
 
@@ -124,9 +122,15 @@ Deprecated on June 2, 2020
 
 **Summary**
 
+Parity was an Ethereum client written in Rust.
+
 **Archives**
 
 [Archived GitHub repo](https://github.com/openethereum/parity-ethereum)
+
+**History**
+
+As one of two major, viable clients in the early years of Ethereum (the other being Geth), Parity was a crucial part of the ecosystem. During the Shanghai Attacks of 2016 Parity enabled Ethereum network to continue operating when clients like Geth were taken down by the attack, proving the importance of client diversity.
 
 **Alternatives**
 
@@ -145,7 +149,7 @@ The ["Spin up your own Ethereum node"](https://ethereum.org/en/developers/docs/n
 
 **Summary**
 
-Trinity was a python-based Ethereum client which served as a research tool for the community.
+Trinity was a python-based Ethereum client which served as a research and educational tool for the community. A large number of python-based modules related to Trinity continue to be maintained by the same team, including [Py-EVM](https://github.com/ethereum/py-evm).
 
 **Archives**
 
@@ -159,8 +163,11 @@ Trinity was the successor project to [pyethereum](https://github.com/ethereum/py
 
 The ["Spin up your own Ethereum node"](https://ethereum.org/en/developers/docs/nodes-and-clients/run-a-node/#getting-the-client) resource on ethereum.org includes a section for downloading, installing, and running an Ethereum client.
 
+The [EthereumJS](https://github.com/ethereumjs) project has a similar research and educational use-case as Trinity did. 
 
 ## Dapps and Services {#dapps-and-services}
+
+This section is for services deployed to Ethereum mainnet and other EVM-based networks. Be aware that the dapps and services here may include DeFi applications which have been hacked or may suffer security vulnerabilities due to lack of maintenance, changes in the protocol, etc.
 
 
 ### Cover Protocol {#cover-protocol}
@@ -171,7 +178,11 @@ The ["Spin up your own Ethereum node"](https://ethereum.org/en/developers/docs/n
   	src="https://pbs.twimg.com/profile_images/1346933366302650371/XIWyVVDL_400x400.jpg" />
 </p>
 
+Shut down in Fall 2021
+
 **Summary**
+
+Cover was an DeFi insurance protocol running on Ethereum and other EVM-based networks.
 
 **Archives**
 
@@ -186,9 +197,11 @@ The ["Spin up your own Ethereum node"](https://ethereum.org/en/developers/docs/n
 
 ### The DAO {#the-dao}
 
+Hacked and shut down in Summer 2016
+
 **Summary**
 
-This was a smart contract, dapp, and forum for organizing the funding of projects. A vulnerability was exploited and much of the ETH was drained, leading to a community-organized hard fork in order to return ETH to those who had deposited to The DAO. The UX front-end and forum are discontinued.
+The DAO was a smart contract, dapp, and forum for organizing the funding of projects. A vulnerability was exploited and much of the ETH was drained, leading to a community-organized hard fork in order to return ETH to those who had deposited to The DAO. The UX front-end and forum are discontinued.
 
 **Archives**
 
@@ -219,27 +232,38 @@ While The DAO failed, the concept endured. The basic technical, social, and gove
   	src="https://pbs.twimg.com/profile_images/1143714781666217984/aUVasr8L_400x400.png" />
 </p>
 
+Shut down in Fall 2021
+
 **Summary**
 
-This was an Ethereum-centered mining pool based in the PRC. It was disbanded as a result of stricter legal regulations instituted in Fall, 2021.
+Headquartered in Hangzhou, the SparkPool service and community was one of the largest Ethereum-centered mining pools in the world.  
 
 **Archives**
 
 **History**
 
+Associated with the EthFans community, the service was launched in 2015. SparkPool was disbanded  in Fall, 2021 as a result of stricter legal regulations.
+
 **Alternatives**
+
+[Ethermine](https://ethermine.org/)
 
 
 ## Documentation and Information Sources {#documentation-and-information-sources}
 
+There are numerous sources of documentation, articles, tutorials, and forums which are now removed or live but no loner maintained. We have selected a few which are significant or who's current status as deprecated may lead to confusion or scam attempts.
 
-### eth.wiki and Legacy Wiki {#eth-wiki}
+### Legacy Wiki and eth.wiki {#eth-wiki}
 
 **Summary**
+
+Legacy Wiki and eth.wiki were wikis maintained by the Ethereum Foundation for the wider community. They were mainly oriented toward hosting detailed descriptions of key aspects of the Ethereum platform and summarizations of technical roadmaps
 
 **Archives**
 
 **History**
+
+Legacy Wiki was a GitHub wiki and a very early locus of technical content including the White Paper. Over time developers migrated to other platforms, including eth.wiki was the successor to Legacy Wiki.
 
 **Alternatives**
 
@@ -248,11 +272,19 @@ This was an Ethereum-centered mining pool based in the PRC. It was disbanded as 
 
 **Summary**
 
+Ethereum Community Forum was a discussion board maintained by the Ethereum Foundation and hosted on Vanilla Forums. It used the subdomain "forum.ethereum.org".
+
 **Archives**
+
+Archive URL: [https://wayback.archive-it.org/16516/20210618210825/https://forum.ethereum.org/](https://wayback.archive-it.org/16516/20210618210825/https://forum.ethereum.org/)
 
 **History**
 
+This Forum was an early, "official" discussion board for the Ethereum community. Along with [/r/ethereum](https://reddit.com/r/ethereum) and a handful of Skype channels, it was an important point of coordination for developers, designers, and organizers. Over the years the participants of the Forum moved on and it became more of a place for the mining community.
+
 **Alternatives**
+
+[/r/ethereum](https://reddit.com/r/ethereum), and a large number of DAO Forums and Discord servers.
 
 
 ## Gitter Channels {#gitter-channels}
@@ -261,7 +293,7 @@ This was an Ethereum-centered mining pool based in the PRC. It was disbanded as 
 
 **Summary**
 
-This was the main public coordination comms channel for [Ethereum client core developers](https://github.com/ethereum/pm/).
+AllCoreDevs Gitter was the main public coordination comms channel for [Ethereum client core developers](https://github.com/ethereum/pm/).
 
 **Archives**
 
@@ -269,14 +301,14 @@ This was the main public coordination comms channel for [Ethereum client core de
 
 **Alternatives**
 
-Go to the "allcoredevs" channel on the [EthR&D Discord Server](https://discord.gg/qHv7AjTDuK)
+Please use the "allcoredevs" channel on the [EthR&D Discord Server](https://discord.gg/qHv7AjTDuK)
 
 
 ### EthereumJS {#ethereumjs-gitter}
 
 **Summary**
 
-This was the main public coordination comms channel for the [EthereumJS project](https://ethereumjs.github.io/).
+EthereumJS Gitter was the main public coordination comms channel for the [EthereumJS project](https://ethereumjs.github.io/).
 
 **Archives**
 
@@ -284,7 +316,7 @@ This was the main public coordination comms channel for the [EthereumJS project]
 
 **Alternatives**
 
-Go to the [EthereumJS Discord Server](https://discord.gg/TNwARpR)
+Please use the [EthereumJS Discord Server](https://discord.gg/TNwARpR)
 
 
 
