@@ -7,7 +7,7 @@ sidebar: true
 
 # Introduction to smart contracts {#introduction-to-smart-contracts}
 
-Smart contracts are computer programs stored on the blockchain that allows us to convert traditional contracts into digital equivalents. Smart contracts are very logical - following an _if this then that_ structure, and performing actions based on predetermined conditions in a deterministic way.
+Smart contracts are the fundamental building blocks of [Ethereum applications](/dapps/). They are computer programs stored on the blockchain that allows us to convert traditional contracts into digital parallels. Smart contracts are very logical - following an if this then that structure. This means they behave exactly as programmed and cannot be changed.
 
 Nick Szabo coined the term "smart contract". In 1994, he wrote [an introduction to the concept](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) and, in 1996, [an exploration of what smart contracts could do](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 
@@ -15,7 +15,7 @@ Nick Szabo envisioned a digital marketplace built on these automatic, cryptograp
 
 ## What are contracts? {#what-are-contracts}
 
-You're probably thinking: _"I'm not a lawyer! Why would I care about contracts?"_. Truth be told, "smart contract" isn't a great name. For most people, it brings to mind needlessly long terms and conditions agreements or boring legal documents.
+You're probably thinking: _"I'm not a lawyer! Why would I care about contracts?"_. For most people, contracts bring to mind needlessly long terms and conditions agreements or boring legal documents.
 
 Contracts are just agreements. That is, any form of agreement can be encapsulated within the conditions of a contract. Verbal agreements or pen-and-paper contracts are acceptable for many things, but they aren't without flaws.
 
@@ -38,7 +38,7 @@ Smart contracts digitize agreements by turning the terms of an agreement into co
 A simple metaphor for a smart contract is a vending machine, which works somewhat similarly to a smart contract - specific inputs guarantee predetermined outputs.
 
 - You select a product
-- The vending machine verifies the amount payable to purchase the product
+- The vending machine returns the amount required to purchase the product
 - You insert the correct amount
 - The vending machine verifies you have inserted the correct amount
 - The vending machine dispenses the product of choice
@@ -49,7 +49,7 @@ The vending machine will only dispense your desired product after all requiremen
 
 One of the most significant benefits smart contracts have over regular contracts is that the outcome is automatically executed when the contract conditions are realized. There is no need to wait for a human to execute the result. In other words: smart contracts remove the need for trust.
 
-For example, you could write a smart contract that holds funds in escrow for a child, transferring the money to their digital wallet after a specific date. You could write a contract that automatically gives you a digital version of a car's title when you pay the dealer.
+For example, you could write a smart contract that holds funds in escrow for a child, allowing them to withdraw funds after a specific date. If they try to withdraw the funds before the specified date, the smart contract won't execute. Or, you could write a contract that automatically gives you a digital version of a car's title when you pay the dealer.
 
 ### Predictable outcomes {#predictability}
 
@@ -63,9 +63,9 @@ Smart contracts are also useful for audits and tracking. Since Ethereum smart co
 
 Smart contracts can also protect our privacy. Since Ethereum is a pseudonymous network (your transactions are tied publicly to a unique cryptographic address, not your identity), you can protect your privacy from observers.
 
-### Visible terms and predictable outcomes {#predictable-outcomes}
+### Visible terms {#visible-terms}
 
-Finally, like contracts, you can check what's in a smart contract before you sign it (or otherwise interact with it). Better yet, you can predict exactly how these computer programs will act — something that is certainly not always true with the intermediary parties that handle ink-and-paper contracts.
+Finally, like contracts, you can check what's in a smart contract before you sign it (or otherwise interact with it). Better yet, public transparency of the terms in the contract means that anyone can scrutinize it.
 
 ## Smart contracts: use cases {#use-cases}
 
