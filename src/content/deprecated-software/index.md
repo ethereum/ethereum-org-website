@@ -279,16 +279,19 @@ Legacy Wiki and eth.wiki were wikis maintained by the Ethereum Foundation for th
 
 [Archived GitHub repo for Legacy Wiki](https://github.com/ethereum/wiki/wiki)
 
-
 **History**
 
-Legacy Wiki was a GitHub wiki and a very early locus of technical content including the White Paper. Over time developers migrated to other platforms, including eth.wiki was the successor to Legacy Wiki.
+Legacy Wiki was a GitHub wiki and a very early locus of technical content (including the original Ethereum White Paper). Over time, Ethereum developers migrated their documentation, specifications, and technical description work to other platforms like [Read the Docs](https://readthedocs.org/) and GitHub-hosted content. 
+
+In 2019 and 2020, eth.wiki became the successor to Legacy Wiki, but an enduring community of contributors did not materialize.
 
 **Alternatives**
 
-[Ethereum.org Website](https://ethereum.org)
+Community-driven content: [Ethereum.org Website](https://ethereum.org), [EthHub Docs](https://docs.ethhub.io/)
 
-[EthHub Docs](https://docs.ethhub.io/)
+Ethereum software projects often host their documentation on [Read the Docs](https://readthedocs.org/)
+
+GitHub-hosted technical specifications: [EIPs](https://github.com/ethereum/eips), [Execution Specs](https://github.com/ethereum/execution-specs), [Consensus Specs](https://github.com/ethereum/consensus-specs)
 
 
 ### forum.ethereum.org {#forum-ethereum-org}
