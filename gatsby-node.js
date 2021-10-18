@@ -141,6 +141,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       slug.includes(`/terms-of-use/`) ||
       slug.includes(`/contributing/`)
     const language = node.frontmatter.lang
+    if (!!language) {
+      throw `Missing 'lang' frontmatter property. All markdown pages must have a lang property. Page slug: ${slug}`
+    }
     const relativePath = node.fields.relativePath
 
     // If markdown file is English, check for corresponding file in each language.
