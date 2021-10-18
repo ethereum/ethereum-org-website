@@ -91,5 +91,5 @@ Watch Finematics explain smart contracts:
 - [How Smart Contracts Will Change the World](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
 - [Smart Contracts: The Blockchain Technology That Will Replace Lawyers](https://blockgeeks.com/guides/smart-contracts/)
 - [Smart contracts for developers](/developers/docs/smart-contracts/)
-- Learn to write smart-contracts with [CryptoZombies](https://cryptozombies.io)
+- [Learn to write smart-contracts](/developers/learning-tools/)
 - [The Ethereum Book](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
