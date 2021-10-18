@@ -69,7 +69,7 @@ Finally, like contracts, you can check what's in a smart contract before you sig
 
 ## Smart contracts: use cases {#use-cases}
 
-So, smart contracts are computer programs that live on the blockchain. They can execute automatically. You can track their transactions, predict how they act and even use them pseudonymously. That's cool. But what are they good for? Well, smart contracts can do anything that other complete-computer programs do.
+So, smart contracts are computer programs that live on the blockchain. They can execute automatically. You can track their transactions, predict how they act and even use them pseudonymously. That's cool. But what are they good for? Well, smart contracts can do essentially anything that other computer programs do.
 
 They can perform computations, create currency, record data, mint NFTs, send communications and even generate graphics. Here are some popular, real-world examples:
 
