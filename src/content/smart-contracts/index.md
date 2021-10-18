@@ -35,7 +35,7 @@ Smart contracts digitize agreements by turning the terms of an agreement into co
 
 ### A digital vending machine {#vending-machine}
 
-The best metaphor for a smart contract is a vending machine, which works somewhat similarly to a smart contract - specific inputs guarantee predetermined outputs.
+A simple metaphor for a smart contract is a vending machine, which works somewhat similarly to a smart contract - specific inputs guarantee predetermined outputs.
 
 - You select a product
 - The vending machine verifies the amount payable to purchase the product
