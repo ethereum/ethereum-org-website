@@ -275,11 +275,20 @@ Legacy Wiki and eth.wiki were wikis maintained by the Ethereum Foundation for th
 
 **Archives**
 
+[Archived GitHub repo for eth.wiki](https://github.com/ethereum/eth-wiki)
+
+[Archived GitHub repo for Legacy Wiki](https://github.com/ethereum/wiki/wiki)
+
+
 **History**
 
 Legacy Wiki was a GitHub wiki and a very early locus of technical content including the White Paper. Over time developers migrated to other platforms, including eth.wiki was the successor to Legacy Wiki.
 
 **Alternatives**
+
+[Ethereum.org Website](https://ethereum.org)
+
+[EthHub Docs](https://docs.ethhub.io/)
 
 
 ### forum.ethereum.org {#forum-ethereum-org}
