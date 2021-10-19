@@ -302,6 +302,9 @@
 [[redirects]]
   from = "/*/developers/docs/layer-2-scaling"
   to = "/:splat/developers/docs/scaling"
+[[redirects]]
+  from = "/*/developers/docs/api"
+  to = "/:splat/developers/docs/javascript/"
 
 # Jobs
 [[redirects]]
