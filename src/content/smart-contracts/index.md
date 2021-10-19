@@ -67,7 +67,7 @@ Smart contracts can also protect our privacy. Since Ethereum is a pseudonymous n
 
 Finally, like contracts, you can check what's in a smart contract before you sign it (or otherwise interact with it). Better yet, public transparency of the terms in the contract means that anyone can scrutinize it.
 
-## Smart contracts: use cases {#use-cases}
+## Smart contract use cases {#use-cases}
 
 So, smart contracts are computer programs that live on the blockchain. They can execute automatically. You can track their transactions, predict how they act and even use them pseudonymously. That's cool. But what are they good for? Well, smart contracts can do essentially anything that other computer programs do.
 
