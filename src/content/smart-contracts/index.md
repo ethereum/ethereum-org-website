@@ -73,12 +73,12 @@ So, smart contracts are computer programs that live on the blockchain. They can 
 
 They can perform computations, create currency, store data, mint NFTs, send communications and even generate graphics. Here are some popular, real-world examples:
 
-- An automatic, open currency exchange
-- An insurance policy that pays out automatically
-- Transferring digital assets
-- A cat-collecting and breeding game
-- A US Dollar coin factory
-- A standard that lets people create customized, interoperable currencies
+- [Stablecoins](/stablecoins/)
+- [Creating and distributing unique digital assets](/nft/)
+- [An automatic, open currency exchange](/get-eth/#dex/)
+- [Decentralized gaming](/dapps/?category=gaming)
+- [An insurance policy that pays out automatically](https://etherisc.com/)
+- [A standard that lets people create customized, interoperable currencies](/developers/docs/standards/tokens/)
 
 ## More of a visual learner? {#visual-learner}
 
