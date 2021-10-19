@@ -4,6 +4,7 @@ description: Les oracles servent à amener les données du monde réel dans votr
 lang: fr
 sidebar: true
 incomplete: true
+isOutdated: true
 ---
 
 Les oracles sont des flux de données qui connectent Ethereum aux informations hors chaîne du monde réel pour vous permettre d’interroger les données dans vos contrats intelligents. Par exemple, les DApps de marchés prédictifs utilisent les oracles pour régler des paiements en fonction des événements. Un marché prédictif peut vous demander de miser vos ETH sur le prochain président des États-Unis. Ils utiliseront un oracle pour confirmer le résultat et rémunérer les gagnants.

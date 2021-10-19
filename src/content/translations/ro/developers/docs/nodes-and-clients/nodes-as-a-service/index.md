@@ -4,6 +4,7 @@ description: O prezentare generală la nivel de intrare a serviciilor de noduri,
 lang: ro
 sidebar: true
 sidebarDepth: 2
+isOutdated: true
 ---
 
 ## Introducere {#Introduction}

@@ -4,6 +4,7 @@ description: Una historia de la blockchain de Ethereum, que incluye los principa
 lang: es
 sidebar: true
 sidebarDepth: 1
+isOutdated: true
 ---
 
 # La historia de Ethereum {#the-history-of-ethereum}

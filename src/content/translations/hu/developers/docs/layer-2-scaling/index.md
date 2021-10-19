@@ -5,6 +5,7 @@ lang: hu
 sidebar: true
 incomplete: true
 sidebarDepth: 3
+isOutdated: true
 ---
 
 A 2. réteg (layer 2) egy gyűjtőnév az olyan megoldásoknak, melyeket arra terveztek, hogy skálázzák az alkalmazásodat úgy, hogy a tranzakciókat az Ethereum láncon (1. réteg) kívül kezelik. A tranzakciós sebesség szenved, amikor a hálózaton nagy a forgalom, mely rontja a felhasználói élményt bizonyos dapp típusoknál. Ahogy nő a hálózat forgalma, úgy nőnek a gáz árak, mivel a tranzakció küldők próbálják egymást túllicitálni. Ez nagyon drágává teszi az Ethereum használatát.

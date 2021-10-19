@@ -2,7 +2,7 @@
 name: Suggest a glossary term
 about: Suggest a new ethereum.org glossary term
 title: ""
-labels: "Type: Feature, Type: Content"
+labels: "feature :sparkles:, content :fountain_pen:"
 assignees: ""
 ---
 

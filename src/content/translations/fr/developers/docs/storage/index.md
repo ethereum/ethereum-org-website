@@ -4,6 +4,7 @@ description: Présentation du stockage décentralisé et des outils disponibles 
 lang: fr
 sidebar: true
 incomplete: true
+isOutdated: true
 ---
 
 Contrairement à un serveur centralisé géré par une seule société ou organisation, les systèmes de stockage décentralisés sont constitués d'un réseau P2P d'opérateurs utilisateurs qui détiennent une partie des données globales, ce qui crée un système de stockage et de partage de fichiers résilient.

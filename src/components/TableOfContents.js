@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { motion } from "framer-motion"
-import { useIntl } from "gatsby-plugin-intl"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
@@ -305,8 +304,6 @@ const TableOfContents = ({
   editPath,
   isMobile = false,
 }) => {
-  const intl = useIntl()
-
   const titleIds = []
 
   if (!isMobile) {
@@ -345,7 +342,7 @@ const TableOfContents = ({
     )
   }
 
-  const shouldShowEditButtom = editPath && intl.locale === "en"
+  const shouldShowEditButtom = !!editPath
   return (
     <Aside className={className}>
       <OuterList>

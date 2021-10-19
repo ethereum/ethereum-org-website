@@ -5,7 +5,6 @@
   "eth2-client-nimbus-logo-alt": "Logotip de Nimbus",
   "eth2-client-prysm-logo-alt": "Logotip de Prysm",
   "eth2-client-teku-logo-alt": "Logotip de Teku",
-  "eth2-client-trinity-logo-alt": "Logotip de Trinity",
   "eth2-rhino-img-alt": "Gràfic d'Eth 2 Rhino carregant per davant",
   "page-eth2-answer-1": "Pensa en Eth2 com un conjunt d’actualitzacions que s’afegeixen per millorar l’Ethereum que fem servir avui. Aquestes actualitzacions inclouen la creació d’una nova cadena anomenada Cadena de Balisa i fins a 64 cadenes conegudes com a fragments.",
   "page-eth2-answer-2": "Aquestes són independents de la xarxa principal Ethereum que fem servir avui, però no la substituiran. En lloc d'això, la xarxa principal s'acoblarà o \"fusionarà\" amb aquest sistema paral·lel que s'afegirà amb el pas del temps.",

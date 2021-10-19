@@ -4,6 +4,7 @@ description: Przegląd tego, czym jest zdecentralizowana pamięć i dostępne na
 lang: pl
 sidebar: true
 incomplete: true
+isOutdated: true
 ---
 
 W przeciwieństwie do centralnie zlokalizowanego serwera obsługiwanego przez jedną firmę lub organizację, zdecentralizowane systemy pamięci masowej składają się z sieci peer-to-peer użytkowników-operatorów, którzy posiadają część ogólnych danych, tworząc odporny system przechowywania i udostępniania plików.

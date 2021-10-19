@@ -4,6 +4,7 @@ description: Présentation des nœuds Ethereum et des logiciels clients, de la f
 lang: fr
 sidebar: true
 sidebarDepth: 2
+isOutdated: true
 ---
 
 Pour qu'Ethereum fonctionne de façon décentralisée, il faut un réseau distribué de nœuds qui peuvent vérifier les blocs et les données de transaction. Vous avez besoin d'une application ("un client") sur votre appareil pour "exécuter" un nœud.

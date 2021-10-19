@@ -54,9 +54,9 @@ The ethereum.org Translation Program aims to make Ethereum accessible to everyon
 
    ![Translated and untranslated files on Crowdin](./crowdin-files.png)
 
-   A note on content versions: we use version management within Crowdin to avoid translation delays for added content. When you check out a language, for example, [Filipino](https://crowdin.com/project/ethereum-org/fil#) you'll see folders for each site version ("v2.0", "v2.1", etc.).
+   A note on content versions: we use 'content buckets' within Crowdin to get the highest priority content released first. When you check out a language, for example, [Filipino](https://crowdin.com/project/ethereum-org/fil#) you'll see folders for content bucket ("1. Homepage", "2. Use Ethereum Pages", etc.).
 
-   We encourage you to translate the lowest version first and work your way up to higher versions (v.2.0 → v.2.1 → v.2.2 → ⋯) as lower versions will be updated on the site first.
+   We encourage you to translate in this numerical order (1 → 2 → 3 → ⋯) to ensure the highest impact pages are translated first.
 
    [Learn more about ethereum.org content versions](/en/contributing/translation-program/content-versions/)
 
@@ -90,6 +90,10 @@ The ethereum.org Translation Program aims to make Ethereum accessible to everyon
 
 4. **Review process**  
    Once you've completed the translation (i.e. all files for a content version display 100%), our professional translation service will review (and potentially edit) the content. Once the review is complete (i.e. review progress is 100%), we will add it to the website.
+   
+<InfoBanner shouldCenter emoji=":warning:">
+Please do not use machine translation to translate the project. All the translations will be reviewed before being added to the website. If your suggested translations are found to be machine translated, they will be dismissed and contributors who use machine translation often will be removed from the project.
+</InfoBanner>
 
 Do you have any questions? Or want to collaborate with our team and other translators? Please post in the #translations channel of our [ethereum.org Discord server](https://discord.gg/6WX7E97)
 
@@ -130,6 +134,7 @@ Thank you for your participation in the ethereum.org Translation Program!
 
 To keep up-to-date with the latest Translation Program progress, you can follow the [Ethereum Foundation blog](https://blog.ethereum.org/):
 
+- [October 2021 milestones update](https://blog.ethereum.org/2021/10/04/translation-program-update/)
 - [December 2020 milestones update](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
 - [July 2020 milestones update](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
 - [August 2019 Translation Program launch](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)

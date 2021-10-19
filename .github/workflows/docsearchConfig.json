@@ -2,12 +2,14 @@
   "index_name": "prod-ethereum-org",
   "start_urls": [
     {
-      "url": "https://ethereum.org/(?P<lang>.*?)/",
+      "url": "https://ethereum.org/(?P<lang>.*?)/developers/tutorials/",
       "variables": {
         "lang": [
           "en",
           "ar",
+          "bg",
           "bn",
+          "ca",
           "cs",
           "de",
           "el",
@@ -16,6 +18,7 @@
           "fi",
           "fr",
           "hi",
+          "hr",
           "hu",
           "id",
           "ig",
@@ -24,31 +27,74 @@
           "ko",
           "lt",
           "ml",
-          "nb",
           "nl",
+          "nb",
           "pl",
           "pt",
           "pt-br",
+          "ro",
           "ru",
+          "se",
           "sk",
           "sl",
-          "ro",
-          "se",
           "tr",
           "uk",
           "vi",
           "zh",
           "zh-tw"
         ]
-      }
+      },
+      "page_rank": 1
+    },
+    {
+      "url": "https://ethereum.org/(?P<lang>.*?)/",
+      "variables": {
+        "lang": [
+          "en",
+          "ar",
+          "bg",
+          "bn",
+          "ca",
+          "cs",
+          "de",
+          "el",
+          "es",
+          "fa",
+          "fi",
+          "fr",
+          "hi",
+          "hr",
+          "hu",
+          "id",
+          "ig",
+          "it",
+          "ja",
+          "ko",
+          "lt",
+          "ml",
+          "nl",
+          "nb",
+          "pl",
+          "pt",
+          "pt-br",
+          "ro",
+          "ru",
+          "se",
+          "sk",
+          "sl",
+          "tr",
+          "uk",
+          "vi",
+          "zh",
+          "zh-tw"
+        ]
+      },
+      "page_rank": 10
     }
   ],
-  "stop_urls": [],
+  "stop_urls": [".*(?<!/)$"],
   "selectors": {
-    "lvl0": {
-      "selector": "title",
-      "global": true
-    },
+    "lvl0": { "selector": "title", "global": true },
     "lvl1": "#___gatsby h1",
     "lvl2": {
       "selector": "//meta[@name='description']/@content",
