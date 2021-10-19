@@ -195,8 +195,8 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           to: "/nft/",
         },
         {
-          text: "what-is-decentralization",
-          to: "/decentralization/",
+          text: "smart-contracts",
+          to: "/smart-contracts/",
         },
         {
           text: "history-of-ethereum",
