@@ -137,7 +137,7 @@ $ git push
 
 ### Submit your PR
 
-- After your changes are commited to your GitHub fork, submit a pull request (PR) to the `dev` branch of the `ethereum/ethereum-org-website` repo
+- After your changes are committed to your GitHub fork, submit a pull request (PR) to the `dev` branch of the `ethereum/ethereum-org-website` repo
 - In your PR description, reference the issue it resolves (see [linking a pull request to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword))
   - ex. `Updates out of date content [Fixes #1234]`
 - Netlify (our hosting service) deploys all PRs to a publicly accessible preview URL, e.g.:
@@ -178,7 +178,7 @@ To get more information about the program, learn how to use Crowdin, check on th
   - [Gatsby Docs](https://www.gatsbyjs.org/docs/)
 - [React](https://reactjs.org/) - A JavaScript library for building component-based user interfaces
 - [GraphQL](https://graphql.org/) - A query language for APIs
-- [Algolia](https://www.algolia.com/) - Site indexing, rapid intra-site search results, and search analytics
+- [Algolia](https://www.algolia.com/) - Site indexing, rapid intra-site search results, and search analytics. [Learn more on how we implement Algolia for site search](./docs/ALGOLIA_DOCSEARCH.md).
   - Primary implementation: `/src/components/Search/index.js`
 - [Crowdin](https://crowdin.com/) - crowdsourcing for our translation efforts (See "Translation initiative" below)
 - [GitHub Actions](https://github.com/features/actions) - Manages CI/CD, and issue tracking
@@ -201,7 +201,7 @@ To get more information about the program, learn how to use Crowdin, check on th
 | `/src/pages`<br>`/src/pages-conditional` | React components that function as stand alone pages. <br>For example: `ethereum.org/en/wallets/find-wallet` is built from `src/pages/wallets/find-wallet.js`                                                        |
 | `/src/scripts`<br>`/src/utils`           | Custom utility scripts                                                                                                                                                                                              |
 | `/src/styles`                            | Stores `layout.css` which contains root level css styling                                                                                                                                                           |
-| `/src/templates`                         | JSX templates that define layouts of differnt regions of the site                                                                                                                                                   |
+| `/src/templates`                         | JSX templates that define layouts of different regions of the site                                                                                                                                                  |
 | `/src/theme.js`                          | Declares site color themes, breakpoints and other constants (try to utilize these colors first)                                                                                                                     |
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">
@@ -244,7 +244,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
   <p>All Ethereum transactions require a fee, known as Gas, that gets paid to the miner. <Link to="link">More on Gas</Link></p>
   ```
 
-  Once, you've addded your English content to the appropriate JSON file, the above code should look something more like:
+  Once, you've added your English content to the appropriate JSON file, the above code should look something more like:
 
   ```
    <p><Translation id="page-transactions" />{" "}<Link to="link"><Translation id="page-transactions-gas-link" /></Link></p>
@@ -442,7 +442,7 @@ export const query = graphql`
 
 ### ethereum.org 2021 Contributor POAP
 
-- If you have commited any changes in 2021 so far that were merged into our repo, you have a POAP waiting!
+- If you have committed any changes in 2021 so far that were merged into our repo, you have a POAP waiting!
 - This includes our dedicated translators on Crowdin
 
   [![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=Claim%20Your%20POAP!%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat)](https://discord.gg/CetY6Y4)
@@ -1171,6 +1171,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://hubertsikorski.com"><img src="https://avatars.githubusercontent.com/u/46070006?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hubert Sikorski</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=princeelector" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/coreyar"><img src="https://avatars.githubusercontent.com/u/7258308?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Corey Rice</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=coreyar" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/ezenwankwogabriel"><img src="https://avatars.githubusercontent.com/u/32826083?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ezenwankwo Gabriel</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ezenwankwogabriel" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://tomlisankie.com"><img src="https://avatars.githubusercontent.com/u/92654?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Thomas Lisankie</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=TomLisankie" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/tylerilunga/"><img src="https://avatars.githubusercontent.com/u/11746486?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tyler Ilunga</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=TylerIlunga" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://linkedin.com/in/katarzynakosturek/"><img src="https://avatars.githubusercontent.com/u/36547835?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kasia Kosturek</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=kocvrek" title="Documentation">📖</a></td>
   </tr>
 </table>
 

@@ -31,6 +31,18 @@
     "publishDate": "09/09/2021"
   },
   {
+    "url": "https://www.youtube.com/watch?v=EXas4uBqQr8",
+    "title": "What is Multicall?",
+    "description": "Learn how to make multiple API calls to a blockchain node with a single API call to a multicall contract.",
+    "author": "Patrick Collins",
+    "authorGithub": "https://github.com/PatrickAlphaC",
+    "tags": ["brownie", "web3.py", "video", "python", "multicall"],
+    "skillLevel": "intermediate",
+    "timeToRead": "15",
+    "lang": "en",
+    "publishDate": "10/14/2021"
+  },
+  {
     "url": "https://www.youtube.com/watch?v=9oERTH9Bkw0",
     "title": "How to make NFT Art with On-Chain Metadata",
     "description": "Explore the world of using SVGs to generate random NFT ImageURIs and Metadata 100% on-chain.",
