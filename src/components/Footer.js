@@ -161,10 +161,6 @@ const Footer = () => {
           text: "what-is-ether",
         },
         {
-          to: `/smart-contracts/`,
-          text: "smart-contracts",
-        },
-        {
           to: `/learn/`,
           text: "guides-and-resources",
         },
