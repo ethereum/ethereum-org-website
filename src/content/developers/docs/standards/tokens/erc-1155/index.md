@@ -11,18 +11,13 @@ A standard interface for contracts that manage multiple token types. A single de
 
 **What is meant by Multi-Token Standard?**
 
-The idea is simple and seeks to create a smart contract interface that can represent and control any number of fungible and non-fungible token types. In this way, the ERC-1155 token can do the same functions as an [ERC-20](/developers/docs/standards/tokens/erc-20/) and [ERC-721](/developers/docs/standards/tokens/erc-721/) token, and even both at the same time. And best of all, improving the functionality of both standards, making it more efficient and correcting obvious implementation errors on the ERC-20 and ERC-721 standards.
+The idea is simple and seeks to create a smart contract interface that can represent and control any number of fungible and non-fungible token types. In this way, the ERC-1155 token can do the same functions as an [ERC-20](/developers/docs/standards/tokens/erc-20/) and [ERC-721](/developers/docs/standards/tokens/erc-721/) token, and even both at the same time. And best of all, improving the functionality of both standards, making it more efficient, and correcting obvious implementation errors on the ERC-20 and ERC-721 standards.
 
-The ERC-1155 token is fully described in a EIP (Ethereum Improvement Proposal), more specifically in
-the [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155), from which it derives its name.
+The ERC-1155 token is described fully in [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155).
 
 ## Prerequisites {#prerequisites}
 
-- [Accounts](/developers/docs/accounts/)
-- [Smart Contracts](/developers/docs/smart-contracts/)
-- [Token standards](/developers/docs/standards/tokens/)
-- [ERC-20](/developers/docs/standards/tokens/erc-20/)
-- [ERC-721](/developers/docs/standards/tokens/erc-721/)
+To better understand this page, we recommend you first read about [token standards](/developers/docs/standards/tokens/), [ERC-20](/developers/docs/standards/tokens/erc-20/), and [ERC-721](/developers/docs/standards/tokens/erc-721/).
 
 ## ERC-1155 Functions and Features: {#body}
 
@@ -33,7 +28,7 @@ the [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155), from which it derives i
 - [NFT support](#nft_support): If supply is only 1, treat it as NFT.
 - [Safe Transfer Rules](#safe_transfer_rule): Set of rules for secure transfer.
 
-### **Batch Transfers** {#batch_transfers}
+### Batch Transfers {#batch-transfers}
 
 The batch transfer works very similar to regular ERC-20 transfers. Let's look at the regular ERC-20 transferFrom function:
 
@@ -59,7 +54,7 @@ The only difference in ERC-1155 is that we pass the values as an array and we al
 
 In ERC-1155 we only have `transferFrom`, no `transfer`. To use it like a regular `transfer`, just set the from address to the address that's calling the function.
 
-### **Batch Balance** {#batch_balance}
+### Batch Balance {#batch-balance}
 
 The respective ERC-20 `balanceOf` call likewise has its partner function with batch support. As a reminder, this is the ERC-20 version:
 
@@ -86,7 +81,7 @@ For example given `_ids=[3, 6, 13]` and `_owners=[0xbeef..., 0x1337..., 0x1111..
 ]
 ```
 
-### **Batch Approval** {#batch_approval}
+### Batch Approval {#batch-approval}
 
 ```solidity
 // ERC-1155
@@ -101,13 +96,13 @@ function isApprovedForAll(
 ) external view returns (bool);
 ```
 
-The approvals are slightly different from ERC-20. Instead of approving specific amounts, you simply set an operator to approved or not approved via `setApprovalForAll`.
+The approvals are slightly different than ERC-20. Instead of approving specific amounts, you set an operator to approved or not approved via `setApprovalForAll`.
 
 Reading the current status can be done via `isApprovedForAll`. As you can see, it's an all or nothing. You cannot define how many tokens to approve or even which token class.
 
 This is intentionally designed with simplicity in mind. You can only approve everything for one address.
 
-### **Recieve Hook** {#recieve_hook}
+### Recieve Hook {#recieve-hook}
 
 ```solidity
 function onERC1155BatchReceived(
@@ -127,11 +122,11 @@ bytes4(keccak256("onERC1155BatchReceived(address,address,uint256[],uint256[],byt
 
 When the receiving contract returns this value, it is assumed the contract accepts the transfer and knows how to handle the ERC-1155 tokens. Great, no more stuck tokens in a contract!
 
-### **NFT Support** {#safe_transfer_rule}
+### NFT Support {#safe-transfer-rule}
 
 When a supply is given as just one, the token is essentially a non-fungible token (NFT). And as is standard for ERC-721, you can define a metadata URL. The URL can be read and modified by clients, see [here](https://eips.ethereum.org/EIPS/eip-1155#metadata).
 
-### **Safe Transfer Rule** {#safe_transfer_rule}
+### Safe Transfer Rule {#safe-transfer-rule}
 
 We've touched on a few safe transfer rules already in the previous explanations. But let's look at the most important of the rules:
 
