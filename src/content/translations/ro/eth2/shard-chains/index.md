@@ -14,8 +14,8 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~2021">
-    Lanțurile de fragmente ar trebui să fie livrate în 2021, în funcție de cât de repede progresează munca după lansarea <a href="/en/eth2/beacon-chain/">lanțului Beacon</a>. Aceste fragmente vor oferi Ethereum mai multă capacitate de stocare și acces la date, dar nu vor fi utilizate pentru executarea de cod. Detaliile despre aceasta sunt încă în curs de analiză.
+<UpgradeStatus date="~2022">
+    Lanțurile de fragmente ar trebui să fie livrate în 2022, în funcție de cât de repede progresează munca după lansarea <a href="/eth2/beacon-chain/">lanțului Beacon</a>. Aceste fragmente vor oferi Ethereum mai multă capacitate de stocare și acces la date, dar nu vor fi utilizate pentru executarea de cod. Detaliile despre aceasta sunt încă în curs de analiză.
 </UpgradeStatus>
 
 ## Ce este fragmentarea? {#what-is-sharding}

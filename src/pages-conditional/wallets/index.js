@@ -737,5 +737,17 @@ export const query = graphql`
     walleth: file(relativePath: { eq: "wallets/walleth.png" }) {
       ...listImage
     }
+    safepal: file(relativePath: { eq: "wallets/safepal.png" }) {
+      ...listImage
+    }
+    opera: file(relativePath: { eq: "wallets/opera.png" }) {
+      ...listImage
+    }
+    coin98: file(relativePath: { eq: "wallets/coin98.png" }) {
+      ...listImage
+    }
+    bitkeep: file(relativePath: { eq: "wallets/bitkeep.png" }) {
+      ...listImage
+    }
   }
 `

@@ -24,6 +24,10 @@ const Pill = styled.div`
   text-align: center;
 `
 
+const StyledIcon = styled(Icon)`
+  margin: 0.25rem;
+`
+
 const GlyphPill = styled(Pill)`
   display: flex;
   align-items: center;
@@ -43,12 +47,19 @@ const Text = styled.div`
   background: ${(props) => props.theme.colors.searchBackgroundEmpty};
 `
 
-const GitStars = ({ gitHubRepo, className }) => {
+const GitStars = ({ gitHubRepo, className, hideStars }) => {
   // Stringify with commas
   let starsString = gitHubRepo.stargazerCount.toString()
   const rgx = /(\d+)(\d{3})/
   while (rgx.test(starsString)) {
     starsString = starsString.replace(rgx, "$1,$2")
+  }
+  if (hideStars) {
+    return (
+      <Container className={className} to={gitHubRepo.url} hideArrow={true}>
+        <StyledIcon name="github" size="16px" />
+      </Container>
+    )
   }
   return (
     <Container className={className} to={gitHubRepo.url} hideArrow={true}>

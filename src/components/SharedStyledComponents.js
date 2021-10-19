@@ -360,7 +360,7 @@ export const Header4 = styled.h4`
 
   /* Needed to fix issues of header padding overlapping links */
   /* https://github.com/confluenza/confluenza/pull/17 */
-  position: inherit !important;
+  position: unset !important;
 
   /* Prevent nav overlap */
   &:before {

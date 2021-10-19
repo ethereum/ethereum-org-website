@@ -99,7 +99,8 @@ code,
 kbd,
 pre,
 samp {
-  font-family: "SFMono-Regular", monospace;
+  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
+    "Liberation Mono", Menlo, Courier, monospace;
   font-size: 1em;
 }
 figure {

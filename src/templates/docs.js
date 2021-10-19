@@ -27,10 +27,12 @@ import {
   Header1,
   Header2,
   Header3,
+  Header4,
   ListItem,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import DocsNav from "../components/DocsNav"
+import DeveloperDocsLinks from "../components/DeveloperDocsLinks"
 
 const Page = styled.div`
   display: flex;
@@ -81,7 +83,7 @@ const Content = styled.article`
 
 const H1 = styled(Header1)`
   font-size: 2.5rem;
-  font-family: "SFMono-Regular", monospace;
+  font-family: ${(props) => props.theme.fonts.monospace};
   text-transform: uppercase;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 2rem;
@@ -100,7 +102,7 @@ const H1 = styled(Header1)`
 `
 
 const H2 = styled(Header2)`
-  font-family: "SFMono-Regular", monospace;
+  font-family: ${(props) => props.theme.fonts.monospace};
   text-transform: uppercase;
 
   font-size: 1.5rem;
@@ -120,25 +122,22 @@ const H3 = styled(Header3)`
     font-size: 1rem;
     font-weight: 600;
   }
+
   &:before {
     height: 160px;
     margin-top: -160px;
   }
 `
 
-const StyledH4 = styled.h4`
-  /* Anchor tag styles */
-  a {
-    position: relative;
-    display: none;
-    margin-left: 0rem;
-    padding-right: 0.5rem;
+const H4 = styled(Header4)`
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 1rem;
-    vertical-align: middle;
-    &:hover {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-    }
+    font-weight: 600;
+  }
+
+  &:before {
+    height: 160px;
+    margin-top: -160px;
   }
 `
 
@@ -159,7 +158,7 @@ const components = {
   h1: H1,
   h2: H2,
   h3: H3,
-  h4: StyledH4,
+  h4: H4,
   p: Paragraph,
   li: ListItem,
   pre: Codeblock,
@@ -172,6 +171,7 @@ const components = {
   Pill,
   CallToContribute,
   Emoji,
+  DeveloperDocsLinks,
 }
 
 const Contributors = styled(FileContributors)`
@@ -181,10 +181,10 @@ const Contributors = styled(FileContributors)`
 `
 
 const DocsPage = ({ data, pageContext }) => {
-  const { locale } = useIntl()
-  const isRightToLeft = isLangRightToLeft(locale)
-
   const mdx = data.pageData
+  const { locale } = useIntl()
+  const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang)
+
   const tocItems = mdx.tableOfContents.items
   const isPageIncomplete = mdx.frontmatter.incomplete
 
@@ -254,9 +254,11 @@ export const query = graphql`
       frontmatter {
         title
         description
+        lang
         incomplete
         sidebar
         sidebarDepth
+        isOutdated
       }
       body
       tableOfContents

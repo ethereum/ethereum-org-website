@@ -1,18 +1,15 @@
 ---
 title: Decentralized Storage
-description: Overview of what decentralized storage is and available tools to integrate into a dapp.
+description: Overview of what decentralized storage is and the available tools to integrate it into a dapp.
 lang: en
 sidebar: true
-incomplete: true
 ---
 
-# Introduction
+Unlike a centralized server operated by a single company or organization, decentralized storage systems consist of a peer-to-peer network of user-operators who hold a portion of the overall data, creating a resilient file storage sharing system. These can be in a blockchain-based application or any peer-to-peer-based network.
 
-As opposed to a centrally located server operated by a single company or organization, decentralized storage systems consist of a peer-to-peer network of user-operators who hold a portion of the overall data, creating a resilient system of file storage and sharing. These can be in a blockchain-based application, or any peer-to-peer based network.
+Ethereum itself can be used as a decentralized storage system, and it is when it comes to code storage in all the smart contracts. However, when it comes to large amounts of data, that isn't what Ethereum was designed for. The chain is steadily growing, but at the time of writing, the Ethereum chain is around 500GB - 1TB ([depending on the client](https://etherscan.io/chartsync/chaindefault)), and every node on the network needs to be able to store all of the data. If the chain were to expand to large amounts of data (say 5TBs) it wouldn't be feasible for all nodes to continue to run. Also, the cost of deploying this much data to Mainnet would be prohibitively expensive due to [gas](/developers/docs/gas) fees.
 
-Ethereum itself can be used as a decentralized storage system, and in fact it is when it comes to code storage in all the smart contracts. When it comes to large amounts of data, however, that isn't what the system is designed for. At the time of writing, the Ethereum chain is around 350GB, and every node on the network needs to be able to store all 350GB of data. If the chain were to expand to large amounts of data (say 5TBs) it wouldn't be feasible for all nodes to continue to run. Also, this can get incredibly expensive to deploy new data due to the size.
-
-Due to these constraints, we need a different chain or methodology to storing large amounts of data in a decentralized manner.
+Due to these constraints, we need a different chain or methodology to store large amounts of data in a decentralized way.
 
 When looking at decentralized storage (dStorage) options, there are a few things a user must keep in mind.
 
@@ -23,28 +20,28 @@ When looking at decentralized storage (dStorage) options, there are a few things
 
 ## Persistence mechanism / incentive structure {#persistence-mechanism}
 
-### Blockchain Based {#blockchain-based}
+### Blockchain-based {#blockchain-based}
 
-In order for a piece of data to persist forever, there needs to be some type of persistance mechanism. For example, on Ethereum, the persistance mechanism is that the whole chain needs to be accounted for when running a node. New pieces of data are tacked onto the end of the chain, and it continues to grow.
+For a piece of data to persist forever, we need to use a persistence mechanism. For example, on Ethereum, the persistence mechanism is that the whole chain needs to be accounted for when running a node. New pieces of data get tacked onto the end of the chain, and it continues to grow.
 
-This is the first type of persistence: **blockchain based** persistence.
+This is known as ** blockchain-based** persistence.
 
-The issue with this, is that again, the chain could get far too big to feasibly upkeep and store all the data.
+The issue with blockchain-based persistence is that the chain could get far too big to upkeep and store all the data feasibly.
 
-The blockchain must also have some type of incentive structure. The following chains are generally paid at mining time - when the data is added to the chain, the nodes are paid to add the data on.
+The blockchain must also have some type of incentive structure. For blockchain-based persistence, there is a payment made to the miner. When the data is added to the chain, the nodes are paid to add the data on.
 
-Platforms with blockchain based persistence:
+Platforms with blockchain-based persistence:
 
 - Ethereum
 - [Arweave](https://www.arweave.org/)
 
-### Contract Based {#contract-based}
+### Contract-based {#contract-based}
 
-Contract based persistence has the intuition that data cannot be stored forever, and instead must be upkept with contract agreements. These are agreements made with multiple nodes that have promised to hold a piece of data for a period of time. They must be refunded or renewed whenever they run out to keep the data persisted.
+**Contract-based** persistence has the intuition that data cannot be stored forever and instead must be upkept with contract agreements. These are agreements made with multiple nodes that have promised to hold a piece of data for a period of time. They must be refunded or renewed whenever they run out to keep the data persisted.
 
-Often, instead of storing all the data in a chain, they instead store the hash of where the data is located on a chain. This way, the entire chain doesn't need to store all the data, just a hash of where it's located.
+In most cases, instead of storing all data on-chain, the hash of where the data is located on a chain gets stored. This way, the entire chain doesn't need to scale to keep all of the data.
 
-Platforms with contract based persistence:
+Platforms with contract-based persistence:
 
 - [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
 - [Skynet](https://siasky.net/)
@@ -53,7 +50,7 @@ Platforms with contract based persistence:
 
 ### Additional considerations {#additional-considertion}
 
-As a bonus, IPFS doesn't really have an incentive structure for holding data, but it is a great tool in the community. If you'd like data to persist on IPFS, you have to reach out to a pinning service, which will "pin" your data for you.
+As a bonus, IPFS doesn't really have an incentive structure for holding data, but it is an excellent tool in the community. If you'd like data to persist on IPFS, you have to reach out to a pinning service, which will "pin" your data for you. You can even run your own node and contribute to the network!
 
 - [IPFS](https://ipfs.io/)
 
@@ -74,7 +71,7 @@ Types of dStorage with a challenge mechanism:
 
 ### Decentrality {#decentrality}
 
-There aren't great tools to measure the level of decentralization of platforms, but in general you'll want to use tools that don't have some form of KYC to prove they are actually decentralized.
+There aren't great tools to measure the level of decentralization of platforms, but in general, you'll want to use tools that don't have some form of KYC to provide evidence they are not centralized.
 
 Decentralized tools without KYC:
 
@@ -87,7 +84,7 @@ Decentralized tools without KYC:
 
 ### Consensus {#consensus}
 
-Most of these tools have their own version of a [consensus mechanism](/developers/docs/consensus-mechanisms/) but generally they are based on either [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/) or [proof-of-stake (PoS)](/developers/docs/consensus-mechanisms/pos/).
+Most of these tools have their own version of a [consensus mechanism](/developers/docs/consensus-mechanisms/) but generally they are based on either [**proof-of-work (PoW)**](/developers/docs/consensus-mechanisms/pow/) or [**proof-of-stake (PoS)**](/developers/docs/consensus-mechanisms/pos/).
 
 PoW based:
 
@@ -97,69 +94,75 @@ PoW based:
 
 PoS based:
 
-- [Eth2](/eth2/)
+- [The Beacon Chain](/eth2/beacon-chain/)
 - Filecoin
 - 0Chain
 
 ## Related tools {#related-tools}
 
-**IPFS -** **_InterPlanetary File System is a decentralized storage and file referencing system for Ethereum._**
+**IPFS - _InterPlanetary File System is a decentralized storage and file referencing system for Ethereum._**
 
-- [ipfs.io](https://ipfs.io/)
+- [Ipfs.io](https://ipfs.io/)
 - [Documentation](https://docs.ipfs.io/)
 - [GitHub](https://github.com/ipfs/ipfs)
 
-**Storj DCS -** **_Secure, private, and S3-compatible decentralized cloud object storage for developers._**
+**Storj DCS - _Secure, private, and S3-compatible decentralized cloud object storage for developers._**
 
-- [Storj](https://storj.io/)
+- [Storj.io](https://storj.io/)
 - [Documentation](https://docs.storj.io/)
 
-**Skynet -** **_Skynet is a decentralized PoW chain dedicated to a decentralized web._**
+**Skynet - _Skynet is a decentralized PoW chain dedicated to a decentralized web._**
 
-- [Skynet](https://siasky.net/)
+- [Skynet.net](https://siasky.net/)
 - [Documentation](https://siasky.net/docs/)
+- [GitHub](https://github.com/SkynetLabs/)
 
-**Filecoin -** **_Filecoin was created from the same team behind IPFS. It is an incentive layer on top of the IPFS ideals._**
+**Filecoin - _Filecoin was created from the same team behind IPFS. It is an incentive layer on top of the IPFS ideals._**
 
-- [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
+- [Filecoin.io](https://filecoin.io/)
 - [Documentation](https://docs.filecoin.io/)
-- [Github](https://github.com/filecoin-project)
+- [GitHub](https://github.com/filecoin-project/)
 
-**Arweave -** **_Arweave is a dStorage platform for storing data._**
+**Arweave - _Arweave is a dStorage platform for storing data._**
 
-- [Arweave](https://www.arweave.org/)
+- [Arweave.org](https://www.arweave.org/)
 - [Documentation](https://docs.arweave.org/info/)
-- [Arweave](https://github.com/ArweaveTeam/arweave)
+- [Arweave](https://github.com/ArweaveTeam/arweave/)
 
-**0chain -** **_0Chain is a proof-of-stake dStorage platform with sharding and blobbers._**
+**0chain - _0Chain is a proof-of-stake dStorage platform with sharding and blobbers._**
 
-- [0Chain](https://0chain.net/)
-- [Documentation](https://0chain.net/page-documentation.html)
-- [Github](https://github.com/0chain)
+- [0Chain.net](https://0chain.net/)
+- [Documentation](https://docs.0chain.net/0chain/)
+- [GitHub](https://github.com/0chain/)
 
-**Swarm -** **_A distributed storage platform and content distribution service for the Ethereum web3 stack._**
+**Swarm - _A distributed storage platform and content distribution service for the Ethereum web3 stack._**
 
-- [Swarm](https://ethersphere.github.io/swarm-home/)
-- [GitHub](https://github.com/ethersphere/swarm)
+- [EthSwarm.org](https://www.ethswarm.org/)
+- [Documentation](https://docs.ethswarm.org/docs/)
+- [GitHub](https://github.com/ethersphere/)
 
-**OrbitDB -** **_A decentralized peer to peer database on top of IPFS._**
+**OrbitDB - _A decentralized peer to peer database on top of IPFS._**
 
-- [Documentation](https://github.com/orbitdb/field-manual)
-- [GitHub](https://github.com/orbitdb/orbit-db)
+- [OrbitDB.org](https://orbitdb.org/)
+- [Documentation](https://github.com/orbitdb/field-manual/)
+- [GitHub](https://github.com/orbitdb/orbit-db/)
 
-**3Box -** **_User-controlled IPFS database storage for data-rich and engaging applications. Support for profiles, encrypted spaces, and messaging, with additional drop-in plugins to simplify development._**
-
-- [3Box](https://3box.io)
-- [3Box.js](https://github.com/3box/3box-js)
-- [3Box Plugins](https://docs.3box.io/learn/building-a-distributed-appstore-with-3box#5723)
-
-**Aleph.im -** **_Decentralized cloud project (database, file storage, computing and DID). A unique blend of offchain and onchain peer-to-peer technology. IPFS and multi-chain compatibility._**
+**Aleph.im - _Decentralized cloud project (database, file storage, computing and DID). A unique blend of offchain and onchain peer-to-peer technology. IPFS and multi-chain compatibility._**
 
 - [Aleph.im](https://aleph.im/)
-- [Documentation](https://aleph.im/#/developers)
+- [Documentation](https://aleph.im/#/developers/)
 - [GitHub](https://github.com/aleph-im/)
 
+**Ceramic - _User-controlled IPFS database storage for data-rich and engaging applications._**
+
+- [Ceramic.network](https://ceramic.network/)
+- [Documentation](https://developers.ceramic.network/learn/welcome/)
+- [GitHub](https://github.com/ceramicnetwork/js-ceramic/)
+
 ## Further reading {#further-reading}
+
+- [What Is Decentralized Storage?](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
+- [Busting Five Common Myths about Decentralized Storage](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
 
 _Know of a community resource that helped you? Edit this page and add it!_
 

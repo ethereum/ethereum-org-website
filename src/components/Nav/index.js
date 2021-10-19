@@ -199,6 +199,10 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           to: "/smart-contracts/",
         },
         {
+          text: "ethereum-security",
+          to: "/security/",
+        },
+        {
           text: "history-of-ethereum",
           to: "/history/",
         },
@@ -213,6 +217,10 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         {
           text: "ethereum-glossary",
           to: "/glossary/",
+        },
+        {
+          text: "ethereum-governance",
+          to: "/governance/",
         },
         {
           text: "eips",
@@ -351,7 +359,12 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
             </LeftItems>
             <RightItems>
               <Search />
-              <ThemeToggle onClick={handleThemeChange}>
+              <ThemeToggle
+                onClick={handleThemeChange}
+                aria-label={
+                  isDarkTheme ? "Switch to Light Theme" : "Switch to Dark Theme"
+                }
+              >
                 <NavIcon name={isDarkTheme ? "darkTheme" : "lightTheme"} />
               </ThemeToggle>
               <RightNavLink to="/languages/">

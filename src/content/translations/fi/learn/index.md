@@ -63,7 +63,6 @@ Korkeatasoisia englanninkielisiä artikkeleita Ethereumista ja lohkoketjuteknolo
 Ethereum käyttää menetelmää nimeltä "Proof of Work". Tämä mahdollistaa Ethereum-verkon konsensusmenettelyn, jolla validoidaan kaikkien Ethereum-lohkoketjuun tallennettujen tietojen tila ja estetään tietynlaisia taloudellisia hyökkäyksiä.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Päivitetään usein - Ethhub_
-- [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 ETH 2.0 -versiossa Ethereum tulee siirtymään toiseen menetelmään nimeltä "Proof of Stake". [Lue lisää ETH 2.0 -versiosta jäljempänä](#eth-2-0).
 

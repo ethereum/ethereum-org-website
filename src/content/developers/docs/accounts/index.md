@@ -29,7 +29,7 @@ Both account types have the ability to:
 
 - Creating an account costs nothing
 - Can initiate transactions
-- Transactions between externally-owned accounts can only be ETH transfers
+- Transactions between externally-owned accounts can only be ETH/token transfers
 
 **Contract**
 

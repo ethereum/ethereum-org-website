@@ -66,7 +66,7 @@ const ModalClose = styled.div`
 const Title = styled.div`
   margin-left: 1.5rem;
   text-transform: uppercase;
-  font-family: "SFMono-Regular", monospace;
+  font-family: ${(props) => props.theme.fonts.monospace};
 `
 
 const ModalCloseIcon = styled(Icon)`

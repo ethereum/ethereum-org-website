@@ -15,7 +15,7 @@ Ethereum smart contracts are extremely flexible, capable of both holding large q
 
 This will cover smart contract security so make sure you're familiar with [smart contracts](/developers/docs/smart-contracts/) before tackling security.
 
-## How to write more secure Smart Contract code {#how-to-write-more-secure-smart-contract-code}
+## How to write more secure smart contract code {#how-to-write-more-secure-smart-contract-code}
 
 Before launching any code to Mainnet, it is important to take sufficient precaution to protect anything of value your smart contract is entrusted with. In this article, we will discuss a few specific attacks, provide resources to learn about more attack types, and leave you with some basic tooling and best practices to ensure your contracts function correctly and securely.
 
@@ -23,7 +23,7 @@ Before launching any code to Mainnet, it is important to take sufficient precaut
 
 Years prior, the tooling for writing, compiling, testing, and deploying smart contracts was very immature, leading many projects to write Solidity code in haphazard ways, throw it over a wall to an auditor who would investigate the code to ensure it functions securely and as expected. In 2020, the development processes and tooling that support writing Solidity is significantly better; leveraging these best practices not only ensures your project is easier to manage, it is a vital part of your project's security. An audit at the end of writing your smart contract is no longer sufficient as the only security consideration your project makes. Security starts before you write your first line of smart contract code, **security starts with proper design and development processes**.
 
-## Smart Contract Development Process {#smart-contract-development-process}
+## Smart contract development process {#smart-contract-development-process}
 
 At a minimum:
 
@@ -226,7 +226,7 @@ Further reading:
 
 While there is no substitute for understanding Ethereum security basics and engaging a professional auditing firm to review your code, there are many tools available to help highlight potential issues in your code.
 
-### Smart Contract Security {#smart-contract-security}
+### Smart contract security {#smart-contract-security}
 
 **Slither -** **_Solidity static analysis framework written in Python 3._**
 
@@ -241,11 +241,6 @@ While there is no substitute for understanding Ethereum security basics and enga
 
 - [mythril](https://github.com/ConsenSys/mythril)
 - [Documentation](https://mythril-classic.readthedocs.io/en/master/about.html)
-
-**SmartContract.Codes -** **_Search engine for verified solidity source codes._**
-
-- [smartcontract.codes (alpha)](https://smartcontract.codes/)
-- [Documentation](https://github.com/ethereum-play/smartcontract.codes/blob/master/README.md)
 
 **Manticore -** **_A command line interface that uses a symbolic execution tool on smart contracts and binaries._**
 
@@ -303,7 +298,7 @@ Low level call in Victim.withdraw() (bad-contract.sol#11-16):
 	- (success) = msg.sender.call.value(amount)() (bad-contract.sol#13)
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls
 INFO:Slither:bad-contract.sol analyzed (1 contracts with 46 detectors), 2 result(s) found
-INFO:Slither:Use https://crytic.io/ to get access to additional detectors and Github integration
+INFO:Slither:Use https://crytic.io/ to get access to additional detectors and GitHub integration
 ```
 
 Slither has identified the potential for re-entrancy here, identifying the key lines where the issue might occur and giving us a link for more details about the issue:
@@ -314,13 +309,13 @@ allowing you to quickly learn about potential problems with your code. Like all 
 
 ## Further reading {#further-reading}
 
-**Smart Contract Security Best Practices Guide**
+**Smart contract security best practices guides**
 
 - [consensys.github.io/smart-contract-best-practices/](https://consensys.github.io/smart-contract-best-practices/)
 - [GitHub](https://github.com/ConsenSys/smart-contract-best-practices/)
 - [Aggregated collection of security recommendations and best practices](https://github.com/guylando/KnowledgeLists/blob/master/EthereumSmartContracts.md)
 
-**Smart Contract Security Verification Standard (SCSVS)**
+**Smart contract security verification standard (SCSVS)**
 
 - [securing.github.io/SCSVS/](https://securing.github.io/SCSVS/)
 

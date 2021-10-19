@@ -251,7 +251,7 @@ import "../../math/SafeMath.sol";
 
 - `GSN/Context.sol` is the definitions required to use [OpenGSN](https://www.opengsn.org/), a system that allows users without ether
   to use the blockchain. Note that this is an old version, if you want to integrate with OpenGSN
-  [use this tutorial](https://docs.opengsn.org/tutorials/integration.html).
+  [use this tutorial](https://docs.opengsn.org/javascript-client/tutorial.html).
 - [The SafeMath library](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/), which is used to make
   addition and subtraction without overflows. This is necessary because otherwise a person might somehow have one token, spend
   two tokens, and then have 2^256-1 tokens.
@@ -413,7 +413,7 @@ The constructor is called when the contract is first created. By convention, fun
      * be displayed to a user as `5,05` (`505 / 10 ** 2`).
      *
      * Tokens usually opt for a value of 18, imitating the relationship between
-     * Ether and Wei. This is the value {ERC20} uses, unless {_setupDecimals} is
+     * ether and wei. This is the value {ERC20} uses, unless {_setupDecimals} is
      * called.
      *
      * NOTE: This information is only used for _display_ purposes: it in
@@ -766,9 +766,8 @@ so they are only useful if you inherit from the contract and add your own
 logic to decide under what conditions to mint new tokens or burn existing
 ones.
 
-**NOTE:** Every ERC-20 token has its own business logic that dictates
-
-token management. For example, a fixed supply contract might only call `_mint`
+**NOTE:** Every ERC-20 token has its own business logic that dictates token management.
+For example, a fixed supply contract might only call `_mint`
 in the constructor and never call `_burn`. A contract that sells tokens
 will call `_mint` when it is paid, and presumably call `_burn` at some point
 to avoid runaway inflation.

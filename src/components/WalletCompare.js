@@ -302,6 +302,18 @@ const WalletCompare = ({ location }) => {
       tokenpocket: file(relativePath: { eq: "wallets/tokenpocket.png" }) {
         ...walletCardImage
       }
+      safepal: file(relativePath: { eq: "wallets/safepal.png" }) {
+        ...walletCardImage
+      }
+      opera: file(relativePath: { eq: "wallets/opera.png" }) {
+        ...walletCardImage
+      }
+      coin98: file(relativePath: { eq: "wallets/coin98.png" }) {
+        ...walletCardImage
+      }
+      bitkeep: file(relativePath: { eq: "wallets/bitkeep.png" }) {
+        ...walletCardImage
+      }
     }
   `)
 

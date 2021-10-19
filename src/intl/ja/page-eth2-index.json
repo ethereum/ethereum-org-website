@@ -5,7 +5,6 @@
   "eth2-client-nimbus-logo-alt": "Nimbus ロゴ",
   "eth2-client-prysm-logo-alt": "Prysm ロゴ",
   "eth2-client-teku-logo-alt": "Teku ロゴ",
-  "eth2-client-trinity-logo-alt": "Trinity ロゴ",
   "eth2-rhino-img-alt": "先に充電するEth 2 Rhinoのグラフィック",
   "page-eth2-answer-1": "Eth2は、今日私達が使用しているイーサリアムを改善するために追加されたアップグレードだと考えてください。これらのアップグレードには、ビーコンチェーンと呼ばれる新しいチェーンと、シャードと呼ばれる最大64チェーンの作成が含まれています。",
   "page-eth2-answer-2": "これらは今日使用されているイーサリアムのメインネットとは別物ですが、メインネットに取って代わるものではありません。その代わりに、メインネットは時間をかけて、追加されているこの並列システムと、ドッキングまたは「マージ」を行います。",

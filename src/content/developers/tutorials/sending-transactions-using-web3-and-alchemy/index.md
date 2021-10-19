@@ -11,7 +11,7 @@ source: Alchemy docs
 sourceUrl: https://docs.alchemyapi.io/tutorials/sending-transactions-using-web3-and-alchemy
 ---
 
-This is a beginner friendly guide to sending Ethereum transactions using web3. There are three main steps in order to send a transaction to the ethereum blockchain: create, sign, and broadcast. We’ll go through all three, hopefully answering any questions you might have! In this tutorial, we'll be using [Alchemy](https://www.alchemyapi.io/) to send our transactions to the Ethereum chain. You can [create a free Alchemy account here](https://dashboard.alchemyapi.io/signup/).
+This is a beginner friendly guide to sending Ethereum transactions using web3. There are three main steps in order to send a transaction to the ethereum blockchain: create, sign, and broadcast. We’ll go through all three, hopefully answering any questions you might have! In this tutorial, we'll be using [Alchemy](https://www.alchemy.com/) to send our transactions to the Ethereum chain. You can [create a free Alchemy account here](https://dashboard.alchemyapi.io/signup/).
 
 **NOTE:** This guide is for singing your transactions on the _backend_ for your app, if you want to integrate signing your transactions on the frontend, check out integrating [Web3 with a browser provider](https://docs.alchemyapi.io/documentation/alchemy-web3#with-a-browser-provider).
 
@@ -122,19 +122,19 @@ async function main() {
     const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
     const web3 = createAlchemyWeb3(API_URL);
     const myAddress = '0x610Ae88399fc1687FA7530Aac28eC2539c7d6d63' //TODO: replace this address with your own public address
-   
+
     const nonce = await web3.eth.getTransactionCount(myAddress, 'latest'); // nonce starts counting from 0
 
     const transaction = {
      'to': '0x31B98D14007bDEe637298086988A0bBd31184523', // faucet address to return eth
      'value': 1000000000000000000, // 1 ETH
-     'gas': 30000, 
+     'gas': 30000,
      'nonce': nonce,
      // optional data field to send message or execute smart contract
     };
-   
+
     const signedTx = await web3.eth.accounts.signTransaction(transaction, PRIVATE_KEY);
-    
+
     web3.eth.sendSignedTransaction(signedTx.rawTransaction, function(error, hash) {
     if (!error) {
       console.log("🎉 The hash of your transaction is: ", hash, "\n Check Alchemy's Mempool to view the status of your transaction!");

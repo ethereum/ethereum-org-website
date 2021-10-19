@@ -38,7 +38,7 @@ const HeroContent = styled(Content)`
 const Slogan = styled.h1`
   font-style: normal;
   font-weight: normal;
-  font-family: "SFMono-Regular", monospace;
+  font-family: ${(props) => props.theme.fonts.monospace};
   text-transform: uppercase;
   font-weight: 600;
   font-size: 32px;
@@ -271,6 +271,15 @@ const H2 = styled.h2`
 //   ]
 
 const frameworksList = [
+  {
+    id: "dapptools",
+    url: "https://dapp.tools/",
+    githubUrl: "https://github.com/dapphub/dapptools",
+    background: "#fff",
+    name: "Dapptools",
+    description: "page-local-environment-dapptools-desc",
+    alt: "page-local-environment-dapptools-logo-alt",
+  },
   {
     id: "waffle",
     url: "https://getwaffle.io/",
@@ -624,6 +633,9 @@ export const query = graphql`
           src
         }
       }
+    }
+    dapptools: file(relativePath: { eq: "dev-tools/dapptools.png" }) {
+      ...devtoolImage
     }
     waffle: file(relativePath: { eq: "dev-tools/waffle.png" }) {
       ...devtoolImage

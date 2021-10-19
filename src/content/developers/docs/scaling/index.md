@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-## Scaling Overview {#scaling-overview}
+## Scaling overview {#scaling-overview}
 
 As the number of people using Ethereum has grown, the blockchain has reached certain capacity limitations. This has driven up the cost of using the network, creating the need for "scaling solutions." There are multiple solutions being researched, tested and implemented that take different approaches to achieve similar goals.
 
@@ -19,7 +19,7 @@ Conceptually we first categorize scaling as either on-chain scaling or off-chain
 
 You should have a good understanding of all the foundational topics. Implementing scaling solutions is advanced as the technology is less battle-tested, and continues to be researched and developed.
 
-## On-Chain Scaling {#on-chain-scaling}
+## On-Chain scaling {#on-chain-scaling}
 
 This method of scaling requires changes to the Ethereum protocol (layer 1 [Mainnet](/glossary/#mainnet)). Sharding is currently the main focus for this method of scaling.
 
@@ -29,17 +29,17 @@ Sharding is the process of splitting a database horizontally to spread the load.
 
 Learn more about [sharding](/eth2/shard-chains/).
 
-## Off-Chain Scaling {#off-chain-scaling}
+## Off-chain scaling {#off-chain-scaling}
 
 Off-chain solutions are implemented separately from layer 1 Mainnet - they require no changes to the existing Ethereum protocol. Some solutions, known as "layer 2" solutions, derive their security directly from layer 1 Ethereum consensus, such as [rollups](/developers/docs/scaling/layer-2-rollups/) or [state channels](/developers/docs/scaling/state-channels/). Other solutions involve the creation of new chains in various forms that derive their security separately from Mainnet, such as [sidechains](#sidechains) or [plasma](#plasma) chains. These solutions communicate with Mainnet, but derive their security differently to obtain a variety of goals.
 
-### Layer 2 Scaling {#layer-2-scaling}
+### Layer 2 scaling {#layer-2-scaling}
 
 This category of off-chain solutions derives its security from Mainnet Ethereum.
 
-Most layer 2 solutions are centered around a server or cluster of servers, each of which may be referred to as a node, validator, operator, sequencer, block producer, or similar term. Depending on the implementation, these layer 2 nodes may be run by the businesses or entities that use them, or by a 3rd party operator, or by a large group of individuals (similar to Mainnet). Generally speaking, transactions are submitted to these layer 2 nodes instead of being submitted directly to layer 1 (mainnet); the layer 2 instance then batches them into groups before anchoring them to layer 1, after which they are secured by layer 1 and cannot be altered. The details of how this is done vary significantly between different layer 2 technologies and implementations.
+Most layer 2 solutions are centered around a server or cluster of servers, each of which may be referred to as a node, validator, operator, sequencer, block producer, or similar term. Depending on the implementation, these layer 2 nodes may be run by the individuals, businesses or entities that use them, or by a 3rd party operator, or by a large group of individuals (similar to Mainnet). Generally speaking, transactions are submitted to these layer 2 nodes instead of being submitted directly to layer 1 (Mainnet). For some solutions the layer 2 instance then batches them into groups before anchoring them to layer 1, after which they are secured by layer 1 and cannot be altered. The details of how this is done vary significantly between different layer 2 technologies and implementations.
 
-A specific layer 2 instance may be open and shared by many applications, or may be deployed by one company and dedicated to supporting only their application.
+A specific layer 2 instance may be open and shared by many applications, or may be deployed by one project and dedicated to supporting only their application.
 
 #### Rollups {#rollups}
 
@@ -50,7 +50,7 @@ Rollups perform transaction execution outside layer 1 and then the data is poste
 
 Learn more about [rollups](/developers/docs/scaling/layer-2-rollups/).
 
-#### State Channels {#channels}
+#### State channels {#channels}
 
 State channels utilize multisig contracts to enable participants to transact quickly and freely off-chain, then settle finality with Mainnet. This minimizes network congestion, fees, and delays. The two types of channels are currently state channels and payment channels.
 

@@ -5,7 +5,6 @@
   "eth2-client-nimbus-logo-alt": "Logo Nimbus",
   "eth2-client-prysm-logo-alt": "Logo Prysm",
   "eth2-client-teku-logo-alt": "Logo Teku",
-  "eth2-client-trinity-logo-alt": "Logo Trinity",
   "eth2-rhino-img-alt": "Graficul evoluției Eth2 Rhino",
   "page-eth2-answer-1": "Gândește-te la Eth2 ca la un set de upgrade-uri adăugate pentru a îmbunătăți Ethereum-ul pe care îl folosim astăzi. Aceste upgrade-uri includ crearea unui nou lanț numit lanțul Beacon și până la 64 de lanțuri cunoscute sub numele de fragmente",
   "page-eth2-answer-2": "Acestea sunt separate de rețeaua principală Ethereum pe care o folosim astăzi, dar nu o vor înlocui. În schimb, rețeaua principală va andoca sau „fuziona” cu acest sistem paralel care este adăugat în timp.",

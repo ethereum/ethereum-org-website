@@ -5,7 +5,6 @@
   "eth2-client-nimbus-logo-alt": "Nimbus logo",
   "eth2-client-prysm-logo-alt": "Prysm logo",
   "eth2-client-teku-logo-alt": "Teku logo",
-  "eth2-client-trinity-logo-alt": "Trinity logo",
   "eth2-rhino-img-alt": "Графічне зображення носорога, що біжить уперед (оновлення Eth 2)",
   "page-eth2-answer-1": "Вважайте Eth2 набором оновлень, покликаних покращити відомий нам сьогодні Ethereum. У рамках цих оновлень буде створено новий ланцюг Beacon Chain і до 64 сегментів даних.",
   "page-eth2-answer-2": "Ці оновлення не стосуватимуться основної мережі Ethereum, що наразі використовується, однак і не замінять її. Натомість основну мережу буде з’єднано з цією паралельною системою, яку ми додамо згодом.",

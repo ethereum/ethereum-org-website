@@ -63,7 +63,6 @@ Một "hợp đồng thông minh" đơn giản là một phần của đoạn m�
 Ethereum hiện đang sử dụng một hệ thống có tên là "Bằng chứng công việc". Điều này cho phép mạng Ethereum đồng ý về trạng thái của tất cả các thông tin được ghi lại trên chuỗi khối Ethereum và ngăn chặn một số loại tấn công kinh tế nhất định.
 
 - [Khai thác Ethereum có nghĩa là gì?](https://docs.ethhub.io/using-ethereum/mining/) _Cập nhật thường xuyên - Ethhub_
-- [Cách thức khai thác Ethereum](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 Trong ETH 2.0, Ethereum sẽ được chuyển sang một hệ thống khác có tên là "Bằng chứng cổ phần". [Đọc thêm về ETH 2.0 bên dưới](#eth-2-0).
 

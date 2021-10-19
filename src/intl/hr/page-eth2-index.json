@@ -5,7 +5,6 @@
   "eth2-client-nimbus-logo-alt": "Nimbus logo",
   "eth2-client-prysm-logo-alt": "Prysm logo",
   "eth2-client-teku-logo-alt": "Teku logo",
-  "eth2-client-trinity-logo-alt": "Trinity logo",
   "eth2-rhino-img-alt": "Grafika nasrtanja Eth 2 nosoroga",
   "page-eth2-answer-1": "Zamislite Eth2 kao skup nadogradnji koje se dodaju za poboljšanje Ethereuma koji danas koristimo. Te nadogradnje uključuju stvaranje novog lanca nazvanog Beacon Chain i do 64 lanca poznatih kao djelići.",
   "page-eth2-answer-2": "Oni su odvojeni od glavne mreže Ethereum kojom se danas koristimo, ali je neće zamijeniti. Umjesto toga, glavna mreža spojit će se ili sjediniti s ovim paralelnim sustavom koji se dodaje s vremenom.",

@@ -63,7 +63,6 @@ Um "contrato inteligente" é simplesmente um pedaço de código que está sendo 
 A Ethereum usa atualmente um sistema chamado "Prova de Trabalho". Isto permite que a rede Ethereum concorde com o estado de todas as informações gravadas no blockchain Ethereum, e previne certos tipos de ataques econômicos.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Atualizado frequentemente - Ethhub_
-- [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 No ETH 2.0, a Ethereum vai mudar para um sistema diferente chamado "Prova de Participação". [Leia mais sobre ETH 2.0 abaixo](./#eth-2-0).
 

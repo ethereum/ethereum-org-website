@@ -1,0 +1,270 @@
+---
+title: 智能合约语言
+description: 两种主要的智能合约语言（Solidity 和 Vyper）的概述和比较。
+lang: zh
+sidebar: true
+---
+
+关于以太坊的一个重要方面是，智能合约可以使用相对友好的开发者语言编程。 关于以太坊的一个重要方面是可以使用相对开发人员友好的语言对智能合约进行编程。
+
+最受欢迎和维护得最好的两种语言是：
+
+- Solidity
+- Vyper
+
+更有经验的开发者也可能想要使用 Yul：一种用于[以太坊虚拟机](/developers/docs/evm/)的中间语言，或者是 Yul+ 语言，这是一种 Yul 扩展。
+
+## 前置要求 {#prerequisites}
+
+如果已经有编程语言的知识，特别是关于 JavaScript 或 Python 的，可以帮助你体验到智能合约语言的差异。 同时，我们建议你在深入理解语言差异之前，先理解作为概念的智能合约。 [智能合约简介](/developers/docs/smart-contracts/)。
+
+## Solidity {#solidity}
+
+- 受 C++、 Python 和 JavaScript 影响。
+- 静态类型（编译时已知变量类型）。
+- 支持：
+  - 继承（你可以拓展其它合约）。
+  - 库（您可以创建从不同的合约调用的可重用代码——就像静态函数在其它面向对象编程语言的静态类中一样）。
+  - 复杂的用户自定义类型。
+
+### 重要链接 {#important-links}
+
+- [相关文档](https://docs.soliditylang.org/en/latest/)
+- [Solidity 语言网站](https://soliditylang.org/)
+- [Solidity 示例](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
+- [GitHub](https://github.com/ethereum/solidity/)
+- [Solidity Gitter 聊天室](https://gitter.im/ethereum/solidity/)
+- [备忘单](https://reference.auditless.com/cheatsheet)
+- [Solidity 博客](https://blog.soliditylang.org/)
+
+### 合约示例 {#example-contract}
+
+```solidity
+/ SPDX-License-Identifier: GPL-3.0
+pragma solidity >= 0.7.0;
+
+contract Coin {
+    // The keyword "public" makes variables
+    // accessible from other contracts
+    address public minter;
+    mapping (address => uint) public balances;
+
+    // Events allow clients to react to specific
+    // contract changes you declare
+    event Sent(address from, address to, uint amount);
+
+    // Constructor code is only run when the contract
+    // is created
+    constructor() {
+        minter = msg.sender;
+    }
+
+    // Sends an amount of newly created coins to an address
+    // Can only be called by the contract creator
+    function mint(address receiver, uint amount) public {
+        require(msg.sender == minter);
+        require(amount < 1e60);
+        balances[receiver] += amount;
+    }
+
+    // Sends an amount of existing coins
+    // from any caller to an address
+    function send(address receiver, uint amount) public {
+        require(amount <= balances[msg.sender], "Insufficient balance.");
+        balances[msg.sender] -= amount;
+        balances[receiver] += amount;
+        emit Sent(msg.sender, receiver, amount);
+    }
+}
+```
+
+这个示例应该能让你感觉到 Solidity 合约语法是什么样子的。 关于函数和变量的详细描述，[请查看文档](https://docs.soliditylang.org/en/latest/contracts.html)。
+
+## Vyper {#vyper}
+
+- 类 Python 编程语言
+- 强类型
+- 小而且易懂的编译器代码
+- 为了更安全和易于审阅，特意提供比 Solidity 少的功能。 Vyper 不支持：
+  - 修饰符
+  - 继承
+  - 内联装配
+  - 函数重载
+  - 操作重载
+  - 递归调用
+  - 无限长度循环
+  - 二进制定长浮点
+
+更多信息，[Vyper 原理](https://vyper.readthedocs.io/en/latest/index.html)。
+
+### 重要的链接 {#important-links-1}
+
+- [相关文档](https://vyper.readthedocs.io)
+- [Vyper 示例](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
+- [GitHub](https://github.com/vyperlang/vyper)
+- [Vyper Gitter 聊天室](https://gitter.im/vyperlang/community)
+- [备忘单](https://reference.auditless.com/cheatsheet)
+- [更新日期：2020 年 1 月 8 日](https://blog.ethereum.org/2020/01/08/update-on-the-vyper-compiler)
+
+### 示例 {#example}
+
+```python
+# Open Auction
+
+# Auction params
+# Beneficiary receives money from the highest bidder
+beneficiary: public(address)
+auctionStart: public(uint256)
+auctionEnd: public(uint256)
+
+# Current state of auction
+highestBidder: public(address)
+highestBid: public(uint256)
+
+# Set to true at the end, disallows any change
+ended: public(bool)
+
+# Keep track of refunded bids so we can follow the withdraw pattern
+pendingReturns: public(HashMap[address, uint256])
+@external
+def __init__(_beneficiary: address, _bidding_time: uint256):
+    self.beneficiary = _beneficiary
+    self.auctionStart = block.timestamp
+    self.auctionEnd = self.auctionStart + _bidding_time
+
+# Bid on the auction with the value sent
+# together with this transaction.
+# The value will only be refunded if the
+# auction is not won.
+@external
+@payable
+def bid():
+    # Check if bidding period is over.
+    assert block.timestamp < self.auctionEnd
+    # Check if bid is high enough
+    assert msg.value > self.highestBid
+    # Track the refund for the previous high bidder
+    self.pendingReturns[self.highestBidder] += self.highestBid
+    # Track new high bid
+    self.highestBidder = msg.sender
+    self.highestBid = msg.value The withdraw pattern is
+# used here to avoid a security issue. If refunds were directly
+# sent as part of bid(), a malicious bidding contract could block
+# those refunds and thus block new higher bids from coming in.
+@external
+def withdraw():
+    pending_amount: uint256 = self.pendingReturns[msg.sender]
+    self.pendingReturns[msg.sender] = 0
+    send(msg.sender, pending_amount)
+
+# End the auction and send the highest bid
+# to the beneficiary.
+@external
+def endAuction():
+    # It is a good guideline to structure functions that interact
+    # with other contracts (i.e. they call functions or send Ether)
+    # into three phases:
+    # 1. checking conditions
+    # 2. performing actions (potentially changing conditions)
+    # 3. interacting with other contracts
+    # If these phases are mixed up, the other contract could call
+    # back into the current contract and modify the state or cause
+    # effects (ether payout) to be performed multiple times.
+    # If functions called internally include interaction with external
+    # contracts, they also have to be considered interaction with
+    # external contracts.
+
+    # 1. Conditions
+    # Check if auction endtime has been reached
+    assert block.timestamp >= self.auctionEnd
+    # Check if this function has already been called
+    assert not self.ended
+
+    # 2. Effects
+    self.ended = True
+
+    # 3. Interaction
+    send(self.beneficiary, self.highestBid)
+```
+
+这个例子应该让你了解 Vyper 合约语法是什么样的。 有关函数和变量的更详细说明，[参见文档](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction)。
+
+## Yul 和 Yul+ {#yul}
+
+如果您是以太坊的新手并且尚未使用智能合约语言进行任何编码，我们建议您开始使用 Solidity 或 Vyper。 只有在您熟知智能合约安全最佳做法和使用 EVM 的具体细节后，才可以查看 Yul 或 Yul+。
+
+**Yul**
+
+- 以太坊的中继语言。
+- 支持 [EVM](en/developers/docs/evm) 和 [eWASM](https://github.com/ewasm)，一种以太坊风格的 WebAssembly，以及旨在成为两个平台均可用的公分母。
+- 高级优化阶段的良好目标，既使 EVM 和 eWASM 平台均等受益。
+
+**Yul+**
+
+- Yul 的低级、高效扩展。
+- 最初设计用于[ optimistic rollup ](en/developers/docs/layer-2-scaling/#rollups-and-sidechains)合约。
+- Yul+ 可以被视为对 Yul 的实验性升级建议，为其添加新功能。
+
+### 重要的链接 {#important-links-2}
+
+- [Yul 相关文档](https://docs.soliditylang.org/en/latest/yul.html)
+- [Yul+ 相关文档](https://github.com/fuellabs/yulp)
+- [Yul+ 实战场](https://yulp.fuel.sh/)
+- [Yul+ 介绍帖子](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
+
+### 合约示例 {#example-contract-2}
+
+以下简单示例实现了幂函数。 它可以使用 `solc --strict-assembly --bin input.yul` 编译。 这个例子应该 存储在 input.yul 文件中。
+
+```
+{
+    function power(base, exponent) -> result
+    {
+        switch exponent
+        case 0 { result := 1 }
+        case 1 { result := base }
+        default
+        {
+            result := power(mul(base, base), div(exponent, 2))
+            if mod(exponent, 2) { result := mul(base, result) }
+        }
+    }
+    let res := power(calldataload(0), calldataload(32))
+    mstore(0, res)
+    return(0, 32)
+}
+```
+
+如果您已经熟悉智能合约，可以在 [此处找到 Yul 中的完整 ERC20 实例 ](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example)。
+
+## 如何选择 {#how-to-choose}
+
+与任何其他编程语言一样，它主要是关于为合适的工作以及个人喜好选择合适的工具。
+
+如果您还没有尝试过任何一种语言，请考虑以下几点：
+
+### Solidity 的优点是什么？ {#solidity-advantages}
+
+- 如果您是初学者，这里有很多教程和学习工具。 在[通过编码学习](https://ethereum.org/en/developers/learning-tools/)部分了解更多相关信息。
+- 好的开发者工具可用
+- Solidity 拥有庞大的开发人员社区，这意味着您很可能会很快找到问题的答案。
+
+### Vyper 的优点是什么？ {#vyper-advatages}
+
+- 想要编写智能合约的 Python 开发人员入门的好方法。
+- Vyper 的功能较少，因此非常适合快速制作创意原型。
+- Vyper 旨在易于审计并最大限度地提高人类可读性。
+
+### Yul 和 Yul+ 的优点是什么？ {#yul-advantages}
+
+- 简单而实用的低级语言。
+- 允许更接近原始 EVM，这有助于优化合约的 gas 使用量。
+
+## 语言比较 {#language-comparisons}
+
+关于基本语法的比较、合同生命周期、接口、操作员、数据结构、功能、控制流程以及更多，请查看[由 Auditless 编写的备忘单](https://reference.auditless.com/cheatsheet/)
+
+## 延伸阅读 {#further-reading}
+
+- [OpenZeppelin 的 Solidity 合约库](https://docs.openzeppelin.com/contracts)
+- [Solidity 示例](https://solidity-by-example.org)

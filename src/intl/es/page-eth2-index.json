@@ -5,7 +5,6 @@
   "eth2-client-nimbus-logo-alt": "Logo de Nimbus",
   "eth2-client-prysm-logo-alt": "Logo de Prysm",
   "eth2-client-teku-logo-alt": "Logo de Teku",
-  "eth2-client-trinity-logo-alt": "Logo de Trinity",
   "eth2-rhino-img-alt": "Gráfico de Rhino de Eth 2 cargando por delante",
   "page-eth2-answer-1": "Piensa en Eth2 como un conjunto de actualizaciones que se están añadiendo para mejorar el Ethereum que usamos hoy. Estas mejoras incluyen la creación de una nueva cadena llamada \"cadena de baliza\" y hasta 64 cadenas conocidas como \"fragmentos\".",
   "page-eth2-answer-2": "Son independientes de la red principal de Ethereum que utilizamos hoy en día, pero no la reemplazarán. En vez de eso, la red principal se acoplará o \"fusionará\" con este sistema paralelo que se está añadiendo con el tiempo.",

@@ -4,6 +4,7 @@ description:
 lang: ro
 sidebar: true
 incomplete: true
+isOutdated: true
 ---
 
 Gazul este esențial pentru rețeaua Ethereum. Este combustibilul care îi permite să funcționeze, ca o mașină care are nevoie de benzină pentru a rula.
