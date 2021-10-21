@@ -7,12 +7,12 @@ sidebar: true
 
 # Contributing to ethereum.org 🦄 {#contributing-to-ethereumorg}
 
+The ethereum.org website, like Ethereum more broadly, is an open-source project. So if you want to help improve [our portal to Ethereum](/about/), here's how you can help out.
+
 <InfoBanner shouldCenter emoji=":tada:">
   Claim your POAP token! If you contributed to ethereum.org in 2021, there's a unique POAP waiting for you.{" "}
   <a href="#poap">More on POAPs</a>
 </InfoBanner>
-
-ethereum.org is an open-source project. So if you want to help improve [our portal to Ethereum](/about/), here's how you can help out.
 
 ## Ways to contribute {#ways-to-contribute}
 

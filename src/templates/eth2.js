@@ -7,7 +7,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown from "../components/ButtonDropdown"
-import BannerNotification from "../components/BannerNotification"
+import UpgradeBannerNotification from "../components/UpgradeBannerNotification"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Icon from "../components/Icon"
@@ -351,16 +351,6 @@ const TitleCard = styled.div`
   }
 `
 
-const StyledBannerNotification = styled(BannerNotification)`
-  display: flex;
-  justify-content: center;
-`
-
-const StyledEmoji = styled(Emoji)`
-  margin-right: 1rem;
-  flex-shrink: 0;
-`
-
 const dropdownLinks = {
   text: "page-eth2-upgrades-guide",
   ariaLabel: "page-eth2-upgrades-aria-label",
@@ -392,6 +382,7 @@ const Eth2Page = ({ data, data: { mdx } }) => {
 
   return (
     <Container>
+      <UpgradeBannerNotification />
       <HeroContainer>
         <TitleCard>
           <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
@@ -473,6 +464,7 @@ export const eth2PageQuery = graphql`
             }
           }
         }
+        isOutdated
       }
       body
       tableOfContents

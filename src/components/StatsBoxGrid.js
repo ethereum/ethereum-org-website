@@ -31,8 +31,7 @@ const Title = styled.p`
   margin-bottom: 0.5rem;
   color: ${({ theme }) => theme.colors.text};
   text-transform: uppercase;
-  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
-    "Liberation Mono", Menlo, Courier, monospace;
+  font-family: ${(props) => props.theme.fonts.monospace};
 `
 
 const Grid = styled.div`
@@ -116,14 +115,12 @@ const ButtonContainer = styled.div`
   position: absolute;
   right: 20px;
   bottom: 20px;
-  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
-    "Liberation Mono", Menlo, Courier, monospace;
+  font-family: ${(props) => props.theme.fonts.monospace};
 `
 
 const Button = styled.button`
   background: ${(props) => props.theme.colors.background};
-  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
-    "Liberation Mono", Menlo, Courier, monospace;
+  font-family: ${(props) => props.theme.fonts.monospace};
   font-size: 20px;
   color: ${({ theme }) => theme.colors.text};
   padding: 2px 15px;

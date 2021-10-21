@@ -3,6 +3,7 @@ title: Conturi Ethereum
 description: O explicație a conturilor Ethereum – structurile lor de date și relația lor cu criptografia perechii de chei.
 lang: ro
 sidebar: true
+isOutdated: true
 ---
 
 Un cont Ethereum este o entitate cu un sold de eter (ETH) care poate trimite tranzacții pe Ethereum. Conturile pot fi controlate de utilizator sau implementate sub formă de contracte inteligente.

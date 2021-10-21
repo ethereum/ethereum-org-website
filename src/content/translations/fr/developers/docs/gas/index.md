@@ -4,6 +4,7 @@ description:
 lang: fr
 sidebar: true
 incomplete: true
+isOutdated: true
 ---
 
 Le carburant est un élément essentiel du réseau Ethereum. Il lui permet de fonctionner, tout comme une voiture a besoin d'essence pour avancer.

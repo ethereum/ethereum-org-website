@@ -4,6 +4,7 @@ description: 概述什么是分布式存储和集成到 dapp 中的相关工具�
 lang: zh
 sidebar: true
 incomplete: true
+isOutdated: true
 ---
 
 不同于由一个公司或组织控制的中心服务器，分布式储存系统包由持有部分数据的用户操作者组成对等网络，实现了一个具有弹性的文件储存、共享系统。

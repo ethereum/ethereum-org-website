@@ -11,7 +11,7 @@ sidebar: true
 
 Bruk Ethereum til å utvikle desentraliserte applikasjoner (eller "dapps") som utnytter fordelene med kryptovaluta og blokkjedeknologi. De er pålitelige. Det vil si at når de er utrullet på Ethereum, vil de alltid kjøre som programmert. Det kan styre digitale eiendeler for å skape nye typer finansielle applikasjoner. De kan være desentraliserte, det betyr at ingen enkeltenhet eller person styrer dem, og er nesten umulig å sensurere.
 
-Bygg desentraliserte applikasjoner oppå Ethereum og samhandle med smarte kontrakter ved hjelp av verktøy og språk fra Microsofts technology stack - Supporting C#, # Visual Basic . ET, F#, verktøy som for eksempel VSCode og Visual Studio, gjennom .NET Framework/.NET Core/.NET Standard. Distribuer en Ethereum-blokkjede på Azure med Microsoft Azure Blockchain på få minutter. Bring nyttigheten av .NET til Ethereum!
+Bygg desentraliserte applikasjoner oppå Ethereum og samhandle med smarte kontrakter ved hjelp av verktøy og språk fra Microsofts technology stack - Supporting C#, Visual Basic .NET, F#, verktøy som for eksempel VSCode og Visual Studio, gjennom .NET Framework/.NET Core/.NET Standard. Distribuer en Ethereum-blokkjede på Azure med Microsoft Azure Blockchain på få minutter. Bring nyttigheten av .NET til Ethereum!
 
 <img src="https://raw.githubusercontent.com/Nethereum/Nethereum/master/logos/logo192x192t.png" />
 

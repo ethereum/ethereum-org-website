@@ -4,6 +4,7 @@ description: Panoramica dei nodi Ethereum e del software client, come configurar
 lang: it
 sidebar: true
 sidebarDepth: 2
+isOutdated: true
 ---
 
 Affinché Ethereum funzioni in modo decentralizzato, serve una rete distribuita di nodi in grado di verificare i dati dei blocchi e delle transazioni. Serve un'applicazione, detta client, sul dispositivo che "esegua" un nodo.
