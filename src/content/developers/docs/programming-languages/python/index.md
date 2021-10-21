@@ -26,6 +26,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [A (Python) Developer's Guide to Ethereum](https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/)
 - [An Introduction to Smart Contracts with Vyper](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [Deploy your own ERC20 Token with Python and Brownie](https://betterprogramming.pub/python-blockchain-token-deployment-tutorial-create-an-erc20-77a5fd2e1a58)
+- [How to create an Ethereum Token (ERC20) with Python, Brownie and Vyper](https://rasulkireev.com/creating-ethereum-token-with-python/)
 - [How to develop Ethereum contract using Python Flask?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Intro to Web3.py · Ethereum For Python Developers](https://www.dappuniversity.com/articles/web3-py-intro)
 - [How to call a Smart Contract function using Python and web3.py](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
