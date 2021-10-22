@@ -25,7 +25,7 @@ To better understand this page, we recommend you first read about [token standar
 - [Batch Balance](#batch_balance): Get the balances of multiple assets in a single call.
 - [Batch Approval](#batch_approval): Approve all tokens to an address.
 - [Hooks](#recieve_hook): Receive tokens hook.
-- [NFT support](#nft_support): If supply is only 1, treat it as NFT.
+- [NFT Support](#nft_support): If supply is only 1, treat it as NFT.
 - [Safe Transfer Rules](#safe_transfer_rule): Set of rules for secure transfer.
 
 ### Batch Transfers {#batch-transfers}
@@ -124,7 +124,7 @@ When the receiving contract returns this value, it is assumed the contract accep
 
 ### NFT Support {#safe-transfer-rule}
 
-When a supply is given as just one, the token is essentially a non-fungible token (NFT). And as is standard for ERC-721, you can define a metadata URL. The URL can be read and modified by clients, see [here](https://eips.ethereum.org/EIPS/eip-1155#metadata).
+When the supply is just one, the token is essentially a non-fungible token (NFT). And as is standard for ERC-721, you can define a metadata URL. The URL can be read and modified by clients, see [here](https://eips.ethereum.org/EIPS/eip-1155#metadata).
 
 ### Safe Transfer Rule {#safe-transfer-rule}
 
@@ -137,7 +137,7 @@ We've touched on a few safe transfer rules already in the previous explanations.
    3. any of the balance(s) of the holder(s) for token(s) in `_ids` is lower than the respective amount(s) in `_values` sent to the recipient.
    4. any other error occurs.
 
-_Note_: All batch functions including the hook also exist as version without batch. This is done for gas efficiency, considering transferring just one asset will likely still be the most commonly used way. We've left them out for simplicity in the explanations, incl. safe transfer rules. The names are identical, just remove the 'Batch'.
+_Note_: All batch functions including the hook also exist as versions without batch. This is done for gas efficiency, considering transferring just one asset will likely still be the most commonly used way. We've left them out for simplicity in the explanations, including safe transfer rules. The names are identical, just remove the 'Batch'.
 
 ## Further reading {#further-reading}
 
