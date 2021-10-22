@@ -135,6 +135,21 @@ $ git commit -m "brief description of changes [Fixes #1234]"
 $ git push
 ```
 
+### Local development with lambda functions
+
+There may be times where you develop features that make external API requests to other services. For these we write lamda functions to obfuscate API keys. In order to test these locally, you will need to do the following:
+
+1. Download a CORS enabling browswer extension (ex: https://chrome.google.com/webstore/search/cors).
+2. Enable CORS in the downloaded browser extension.
+3. Add the relevant API key to the `.env` file.
+4. After you have started your development server for ethereum.org (above), start up a netlify lambda server using:
+
+```
+yarn start:lambda
+```
+
+5. Where you reference /.netlify functions for server calls, add a conditional to call localhost:9000 endpoints when not in the production environment.
+
 ### Submit your PR
 
 - After your changes are committed to your GitHub fork, submit a pull request (PR) to the `dev` branch of the `ethereum/ethereum-org-website` repo
@@ -1174,6 +1189,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://tomlisankie.com"><img src="https://avatars.githubusercontent.com/u/92654?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Thomas Lisankie</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=TomLisankie" title="Documentation">📖</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/tylerilunga/"><img src="https://avatars.githubusercontent.com/u/11746486?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tyler Ilunga</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=TylerIlunga" title="Documentation">📖</a></td>
     <td align="center"><a href="http://linkedin.com/in/katarzynakosturek/"><img src="https://avatars.githubusercontent.com/u/36547835?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kasia Kosturek</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=kocvrek" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/solarpunklabs"><img src="https://avatars.githubusercontent.com/u/84196983?v=4?s=100" width="100px;" alt=""/><br /><sub><b>solarpunklabs</b></sub></a><br /><a href="#ideas-solarpunklabs" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
