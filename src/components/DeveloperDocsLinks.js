@@ -12,9 +12,13 @@ const DeveloperDocsLinks = ({ headerId }) =>
         {items &&
           items.map(({ id, to, path, description, items }) => (
             <ListItem>
-              <Link to={to || path}>
+              {to || path ? (
+                <Link to={to || path}>
+                  <Translation id={id} />
+                </Link>
+              ) : (
                 <Translation id={id} />
-              </Link>
+              )}
               <i>
                 {" – "}
                 <Translation id={description} />
