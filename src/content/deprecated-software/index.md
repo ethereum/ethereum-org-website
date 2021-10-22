@@ -287,7 +287,7 @@ In 2019 and 2020, eth.wiki became the successor to Legacy Wiki, but an enduring 
 
 **Alternatives**
 
-Community-driven content: [Ethereum.org Website](https://ethereum.org), [EthHub Docs](https://docs.ethhub.io/)
+Community-driven content: [Ethereum.org Website](/), [EthHub Docs](https://docs.ethhub.io/)
 
 Ethereum software projects often host their documentation on [Read the Docs](https://readthedocs.org/)
 
