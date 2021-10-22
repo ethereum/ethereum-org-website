@@ -72,7 +72,7 @@ See Mist below.
 
 **Alternatives**
 
-See the [Ethereum Wallets](https://ethereum.org/wallets/) page on ethereum.org.
+See the [Ethereum Wallets](/wallets/) page on ethereum.org.
 
 
 ### Mist {#mist}
