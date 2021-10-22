@@ -231,7 +231,7 @@ While The DAO failed, the concept endured. The basic technical, social, and gove
 
 **Alternatives**
 
-["DAOs" on ethereum.org](https://ethereum.org/en/dao/)
+["DAOs" on ethereum.org](/dao/)
 
 [MolochDAO](https://www.molochdao.com/)
 
