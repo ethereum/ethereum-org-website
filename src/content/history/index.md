@@ -38,7 +38,7 @@ The Altair upgrade is the first scheduled upgrade for the [Beacon Chain](/eth2/b
 
 #### <Emoji text=":tada:" size={1} mr="0.5rem" />Fun fact! {#altair-fun-fact}
 
-Altair is the first major network upgrade that will have an exact known rollout time. Every upgrade thus far has been based on a declared block number on the proof-of-work chain, where block times vary. The Beacon Chain does not require solving for proof-of-work, and instead works on a time-based epoch system consisting of 32 twelve-second "slots" of time where validators can propose blocks. This is why we know exactly when we'll hit epoch 74,240 and Altair will be live!
+Altair is the first major network upgrade that will have an exact rollout time. Every upgrade so far has been based on a declared block number on the proof-of-work chain, where block times vary. The Beacon Chain does not require solving for proof-of-work, and instead works on a time-based epoch system consisting of 32 twelve-second "slots" of time where validators can propose blocks. This is why we know exactly when we'll hit epoch 74,240 and Altair will be live!
 
 - [Beaconcha.in Glossary - Slots](https://kb.beaconcha.in/glossary#slots)
 
