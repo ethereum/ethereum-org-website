@@ -271,7 +271,7 @@ There are numerous sources of documentation, articles, tutorials, and forums whi
 
 **Summary**
 
-Legacy Wiki and eth.wiki were wikis maintained by the Ethereum Foundation for the wider community. They were mainly oriented toward hosting detailed descriptions of key aspects of the Ethereum platform and summarizations of technical roadmaps
+Legacy Wiki and eth.wiki were wikis maintained by the Ethereum Foundation for the wider community. They were mainly oriented toward hosting detailed descriptions of key aspects of the Ethereum platform and summarizations of technical roadmaps.
 
 **Archives**
 
