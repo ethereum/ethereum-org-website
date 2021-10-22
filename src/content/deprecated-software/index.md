@@ -225,7 +225,7 @@ The DAO was a smart contract, dapp, and forum for organizing the funding of proj
 
 While The DAO failed, the concept endured. The basic technical, social, and governance model innovated for The DAO is widely in use in DeFi, NFT, and project-funding communities.
 
-["DAO Fork" on ethereum.org](https://ethereum.org/en/history/#dao-fork)
+["DAO Fork" on ethereum.org](/history/#dao-fork)
 
 [Wikipedia entry for "The DAO"](https://en.wikipedia.org/wiki/The_DAO_(organization))
 
