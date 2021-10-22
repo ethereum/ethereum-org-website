@@ -40,19 +40,19 @@ As a prerequisite, you should have a beginner-level understanding of React—kno
 
 What are we here for? Let's get started! 😎
 
-**🛠 Step 1:** [Clone the starter files](./#step-1-clone-the-starter-files)
+**🛠 Step 1:** [Clone the starter files](#step-1-starter-files)
 
-**🧑‍🎨 Step 2:**  [Check out the starter files](./#step-2-check-out-the-starter-files)
+**🧑‍🎨 Step 2:**  [Check out the starter files](#step-2-check-out-the-starter-files)
 
-**🤝 Step 3:** [Read from your smart contract](./#step-3-read-from-your-smart-contract)
+**🤝 Step 3:** [Read from your smart contract](#step-3-read-from-your-smart-contract)
 
-**💻 Step 4:** [Set up your Ethereum wallet](./#step-4-create-an-instance-of-your-contract)
+**💻 Step 4:** [Set up your Ethereum wallet](#step-4-create-an-instance-of-your-contract)
 
-**📖 Step 5:** [Connect Metamask to your UI](./#step-5-connect-metamask-to-your-UI)
+**📖 Step 5:** [Connect Metamask to your UI](#step-5-connect-metamask-to-your-UI)
 
-**🔺 Step 6:** [Implement the `updateMessage` function](./#step-6-implement-the-updateMessage-function)
+**🔺 Step 6:** [Implement the `updateMessage` function](#step-6-implement-the-updateMessage-function)
 
-## Step 1: Clone the starter files
+## Step 1: Clone the starter files {#step-1-starter-files}
 
 First, go to the [hello-world-part-four github repository](https://github.com/alchemyplatform/hello-world-part-four-tutorial) to get the starter files for this project. Clone this repository into your local environment.
 
@@ -69,7 +69,7 @@ Next, open your copy of `starter-files` to your favorite code editor \(at Alchem
 
 All of the code we'll write will live under the `src` folder. We'll be editing the `HelloWorld.js` component and the `util/interact.js` javascript files to give our project Web3 functionality.
 
-## Step 2: Check out the starter files
+## Step 2: Check out the starter files {#step-2-check-out-the-starter-files}
 
 Before we start coding, it's super important that we figure out what's already provided for us in the starter files.
 
@@ -276,7 +276,7 @@ The four unimplemented functions after our `helloWorldContract` object do the fo
 
 Now that we understand what we're working with, let's figure out how to read from our smart contract!
 
-## Step 3: Read from your smart contract
+## Step 3: Read from your smart contract {#step-3-read-from-your-smart-contract}
 
 To read from your smart contract, you'll need to successfully set up:
 
@@ -510,7 +510,7 @@ Now that we're able to read from our smart contract, it would be great to figure
 
 So, next we'll tackle setting up our Ethereum wallet \(Metamask\) and then connecting it to our dApp!
 
-## Step 4: Set up your Ethereum wallet
+## Step 4: Set up your Ethereum wallet {#step-4-create-an-instance-of-your-contract}
 
 To write anything to the Ethereum chain, users must sign transactions using their virtual wallet's private keys. For this tutorial, we’ll use [Metamask](https://metamask.io/), a virtual wallet in the browser used to manage your Ethereum account address, as it makes this transaction signing super easy for the end-user.
 
@@ -540,7 +540,7 @@ To double check our balance is there, let’s make an [eth\_getBalance](https://
 
 Phew! Our fake money is all there! 🤑
 
-## Step 5: Connect Metamask to your UI
+## Step 5: Connect Metamask to your UI {#step-5-connect-metamask-to-your-UI}
 
 Now that our Metamask wallet is set up, let's connect our dApp to it!
 
@@ -781,7 +781,7 @@ useEffect(async () => {
 
 And that's it! We've successfully completed programming all of our wallet functionality! Now onto our last task: updating the message stored in our smart contract!
 
-## Step 6: Implement the `updateMessage` function
+## Step 6: Implement the `updateMessage` function {#step-6-implement-the-updateMessage-function}
 
 🏃🏽‍♀️Alrighty fam, we've arrived at the home stretch! In the `updateMessage` of your `interact.js` file, we're going to do the following:
 
