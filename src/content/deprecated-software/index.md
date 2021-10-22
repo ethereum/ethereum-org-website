@@ -175,7 +175,7 @@ Trinity was the successor project to [pyethereum](https://github.com/ethereum/py
 
 **Alternatives**
 
-The ["Spin up your own Ethereum node"](https://ethereum.org/en/developers/docs/nodes-and-clients/run-a-node/#getting-the-client) resource on ethereum.org includes a section for downloading, installing, and running an Ethereum client.
+The ["Spin up your own Ethereum node"](/developers/docs/nodes-and-clients/run-a-node/#getting-the-client) resource on ethereum.org includes a section for downloading, installing, and running an Ethereum client.
 
 The [EthereumJS](https://github.com/ethereumjs) project has a similar research and educational use-case as Trinity did. 
 
