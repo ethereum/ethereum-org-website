@@ -48,6 +48,7 @@ const Container = styled.div`
 `
 
 const SkeletonContainer = styled(Container)`
+  justify-content: flex-start;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -75,7 +76,11 @@ const LeftContent = styled.div`
 
 const SkeletonLeftContent = styled(LeftContent)`
   flex: 1;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-right: 2rem;
+  }
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    margin-right: 1rem;
     flex: none;
   }
 `
@@ -109,8 +114,8 @@ const SkeletonInfo = styled(Info)`
 
 const ButtonContainer = styled.div`
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+  flex-direction: column;
+  align-content: center;
 `
 
 const SkeletonButtonContainer = styled(ButtonContainer)`
@@ -120,11 +125,10 @@ const SkeletonButtonContainer = styled(ButtonContainer)`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-top: 1rem;
     justify-content: center;
-    width: calc(50% - 2rem);
+    height: 40px;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    height: 40px;
-    width: 50%;
+    width: 100%;
     margin-top: 1rem;
   }
 `
@@ -139,9 +143,8 @@ const ContributorsButton = styled(ButtonSecondary)`
   }
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-top: 1rem;
-    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
     justify-content: center;
-    width: 50%;
   }
 
   ${({ loading }) =>
@@ -154,7 +157,6 @@ const ContributorsButton = styled(ButtonSecondary)`
 const GithubButton = styled(ButtonLink)`
   margin-top: 0;
   height: 40px;
-  width: 50%;
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
     display: none;
   }
@@ -311,7 +313,10 @@ const FileContributors = ({ relativePath, className, editPath }) => {
           {editPath && (
             <GithubButton to={editPath} isSecondary={true}>
               <ButtonContent>
-                <GithubIcon name="github" /> <span>Edit page</span>
+                <GithubIcon name="github" />
+                <span>
+                  <Translation id="edit-page" />
+                </span>
               </ButtonContent>
             </GithubButton>
           )}

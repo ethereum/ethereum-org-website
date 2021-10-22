@@ -81,9 +81,9 @@ Tìm kiếm thêm nguồn lực? Truy cập vào [ethereum.org/developers.](/vi/
 
 ## Những người đóng góp cho cộng đồng .NET {#dot-net-community-contributors}
 
-Tại Nethereum, chúng tôi chủ yếu tập trung vào [Gitter](https://gitter.im/Nethereum/Nethereum) nơi mọi người có thể hỏi/trả lời câu hỏi, nhận trợ giúp hoặc chỉ thư giãn. Hãy thoải mái làm PR hoặc mở một vấn đề trên [Kho lưu trữ Github của Nethereum](https://github.com/Nethereum), hoặc chỉ để duyệt qua nhiều dự án phụ/mẫu mà chúng tôi có.
+Tại Nethereum, chúng tôi chủ yếu tập trung vào [Gitter](https://gitter.im/Nethereum/Nethereum) nơi mọi người có thể hỏi/trả lời câu hỏi, nhận trợ giúp hoặc chỉ thư giãn. Hãy thoải mái làm PR hoặc mở một vấn đề trên [Kho lưu trữ GitHub của Nethereum](https://github.com/Nethereum), hoặc chỉ để duyệt qua nhiều dự án phụ/mẫu mà chúng tôi có.
 
-Tại Nethermind, hãy liên lạc qua [Gitter](https://gitter.im/nethermindeth/nethermind). Đối với các PR hoặc vấn đề, hãy kiểm tra [Kho lưu trữ Github của Nethermind](https://github.com/NethermindEth/nethermind).
+Tại Nethermind, hãy liên lạc qua [Gitter](https://gitter.im/nethermindeth/nethermind). Đối với các PR hoặc vấn đề, hãy kiểm tra [Kho lưu trữ GitHub của Nethermind](https://github.com/NethermindEth/nethermind).
 
 ## Danh sách tổng hợp khác {#other-aggregated-lists}
 

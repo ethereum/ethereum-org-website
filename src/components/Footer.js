@@ -177,8 +177,16 @@ const Footer = () => {
           to: "/eth2/",
         },
         {
+          text: "ethereum-security",
+          to: "/security/",
+        },
+        {
           to: `/glossary/`,
           text: "ethereum-glossary",
+        },
+        {
+          text: "ethereum-governance",
+          to: "/governance/",
         },
         {
           to: "/eips/",

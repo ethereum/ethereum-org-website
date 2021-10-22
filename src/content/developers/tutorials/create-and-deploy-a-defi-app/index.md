@@ -17,7 +17,7 @@ In this tutorial we will build a DeFi Application with Solidity where users can 
 
 If this is the first time you are writing a smart contract, you will need to set up your environment. We are going to use two tools: [Truffle](https://www.trufflesuite.com/) and [Ganache](https://www.trufflesuite.com/ganache).
 
-Truffle is a development environment and testing framework for developing smart contracts for Ethereum. With Truffle it is easy to build and deploy smart contracts to the blockchain. Ganache allows us to create a local Ethereum blockchain in order to test smart contracts. It simulates the features of the real network and the first 10 accounts are funded with 100 test Ether, thus making the smart contract deployment and testing free and easy. Ganache is available as a desktop application and a command-line tool. For this article we will be using the UI desktop application.
+Truffle is a development environment and testing framework for developing smart contracts for Ethereum. With Truffle it is easy to build and deploy smart contracts to the blockchain. Ganache allows us to create a local Ethereum blockchain in order to test smart contracts. It simulates the features of the real network and the first 10 accounts are funded with 100 test ether, thus making the smart contract deployment and testing free and easy. Ganache is available as a desktop application and a command-line tool. For this article we will be using the UI desktop application.
 
 ![Ganache UI desktop application](https://cdn-images-1.medium.com/max/2360/1*V1iQ5onbLbT5Ib2QaiOSyg.png)_Ganache UI desktop application_
 
@@ -50,7 +50,7 @@ npm install @openzeppelin/contracts
 Using the OpenZeppelin library we can create our ERC20 token by writing to `contracts/MyToken.sol` with the following solidity code:
 
 ```solidity
-pragma solidity ^0.6.2;
+pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
@@ -99,7 +99,7 @@ The default version is the `Solidity v0.5.16`. Since our token is written using 
 // Configure your compilers
 compilers: {
   solc: {
-    version: "0.6.2",    // Fetch exact version from solc-bin (default: truffle's version)
+    version: "^0.8.0",    // Fetch exact version from solc-bin (default: truffle's version)
     // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
     // settings: {          // See the solidity docs for advice about optimization and evmVersion
     //  optimizer: {
@@ -140,7 +140,7 @@ Open Ganache and select the option "Quickstart" to start a local Ethereum blockc
 truffle migrate
 ```
 
-The address used to deploy our contracts is the first one from the list of addresses that Ganache shows us. To verify that, we can open the Ganache desktop application and we can verify that the balance of Ether for the first account has been reduced due to the cost of Ether to deploy our smart contracts:
+The address used to deploy our contracts is the first one from the list of addresses that Ganache shows us. To verify that, we can open the Ganache desktop application and we can verify that the balance of ether for the first account has been reduced due to the cost of ether to deploy our smart contracts:
 
 ![Ganache desktop application](https://cdn-images-1.medium.com/max/2346/1*1iJ9VRlyLuza58HL3DLfpg.png)_Ganache desktop application_
 

@@ -246,16 +246,16 @@ const meetups = [
     link: "https://www.meetup.com/SF_Ethereum/",
   },
   {
+    title: "Chainlink San Francisco",
+    emoji: ":us:",
+    location: "SF / Bay Area",
+    link: "https://www.meetup.com/Chainlink-San-Francisco/",
+  },
+  {
     title: "Seattle",
     emoji: ":us:",
     location: "Seattle",
     link: "https://www.meetup.com/Seattle-Ethereum-Meetup/",
-  },
-  {
-    title: "DC Blockchain Developers",
-    emoji: ":us:",
-    location: "Washington D.C.",
-    link: "https://www.meetup.com/DC-Blockchain-Developers/",
   },
   {
     title: "Chiang Mai Dapps",

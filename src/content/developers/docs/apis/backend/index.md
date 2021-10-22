@@ -25,10 +25,10 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 **Alchemy -** **_Ethereum Development Platform._**
 
-- [alchemyapi.io](https://alchemyapi.io)
+- [alchemy.com](https://www.alchemy.com/)
 - [Documentation](https://docs.alchemyapi.io/)
 - [GitHub](https://github.com/alchemyplatform)
-- [Discord](https://discord.gg/kwqVnrA)
+- [Discord](https://discord.com/invite/A39JVCM)
 
 **BlockCypher -** **_Ethereum Web APIs_**
 
@@ -86,6 +86,13 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [GitHub](https://github.com/Nethereum/Nethereum)
 - [Documentation](http://docs.nethereum.com/en/latest/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
+
+**Tatum -** **_The ultimate blockchain development platform._**
+
+- [Tatum](https://tatum.io/)
+- [GitHub](https://github.com/tatumio/)
+- [Documentation](https://docs.tatum.io/)
+- [Discord](https://discord.gg/EDmW3kjTC9)
 
 ## Further reading {#further-reading}
 

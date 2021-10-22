@@ -63,7 +63,6 @@ sidebarDepth: 1
 На цей час Ethereum використовує систему під назвою «Підтвердження роботи». Вона дозволяє мережі Ethereum узгоджувати стан усієї інформації, зареєстрованої в блокчейні Ethereum, і запобігає певним видам економічних атак.
 
 - [Що означає "майнити Ethereum"?](https://docs.ethhub.io/using-ethereum/mining/) _Часто оновлюється — Ethhub_
-- [Як працює майнинг Ethereum](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 В ETH 2.0 Ethereum перейде на іншу систему, яка називається «Підтвердження ставки». [Детальніше про ETH 2.0 читайте нижче](#eth-2-0).
 

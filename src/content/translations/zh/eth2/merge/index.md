@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~2021/22">
+<UpgradeStatus date="~Q1/Q2 2022">
     此升级将跟随分片链的到来进行。 但这是 <a href="/eth2/vision/">Eth2 愿景</a> 完全实现的时候——更多的可扩展性、安全性和可持续性，并支持整个网络。
 </UpgradeStatus>
 

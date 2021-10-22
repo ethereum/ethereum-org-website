@@ -98,7 +98,7 @@ The Beacon Chain contains all the logic for keeping shards secure and synced up.
 
 By the time additional shards are added, Ethereum Mainnet will already be secured by the Beacon Chain using proof of stake. This enables a fertile mainnet to build shard chains off of, powered by layer 2 solutions that supercharge the scalability.
 
-It remains to be seen whether mainnet will exist as the only “smart” shard that can handle code execution – but either way, the decision to expand shards can be revisted as needed.
+It remains to be seen whether mainnet will exist as the only “smart” shard that can handle code execution – but either way, the decision to expand shards can be revisited as needed.
 
 <ButtonLink to="/eth2/merge/">The merge</ButtonLink>
 

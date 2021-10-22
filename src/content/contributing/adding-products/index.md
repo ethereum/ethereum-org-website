@@ -21,7 +21,7 @@ Although we welcome new additions, we chose the current wallets and dapps based 
 
 - _Inspirational_: anything on ethereum.org should offer something new to users
 - _A good story_: what's listed should provide an "aha" moment
-- _Credible_: everything should be legitimate businesses/projects to minimise risk to users
+- _Credible_: everything should be legitimate businesses/projects to minimize risk to users
 
 Overall **ethereum.org wants to provide a "seamless onboarding experience" for new users**. For that reason, we add wallets/dapps based on their:
 
@@ -32,13 +32,14 @@ Overall **ethereum.org wants to provide a "seamless onboarding experience" for n
 
 Here's our decision framework in more detail. Feel free to provide feedback or suggest changes.
 
-## The decision framework {#decison-framework}
+## The decision framework {#decision-framework}
 
 ### Criteria for inclusion: the must-haves {#criteria-for-inclusion-the-must-haves}
 
 - **A security-tested product** – whether through audit, an internal security team or some other method, your product's security must be reliably tested. This reduces the risk to our users and shows us that you take security seriously.
-- **A product** **that has been "live" for over 6 months** – this is another indication of security. 6 months is a good timeframe for critical bugs and exploitations to have been found.
+- **A product that has been "live" for over 6 months** – this is another indication of security. 6 months is a good time frame for critical bugs and exploitations to have been found.
 - **Worked on by an active team** – this helps ensure quality and that a user will get support with their queries.
+- **Honest and accurate listing information** - it is expected that any suggested listings from projects come with honest and accurate information. Products that falsify listing information, such as declaring your product is "open-source" when it is not, will be removed.
 
 ### Criteria for ranking: the nice-to-haves {#criteria-for-ranking-the-nice-to-haves}
 
@@ -81,7 +82,7 @@ But rest assured, **there will be links to other websites that rank more dapps/w
 
 ### Product Ordering {#product-ordering}
 
-Unless products are specifically ordered otherwise, such as alphabetically, products will be displayed from most to least recently added to the page. In other words, the newest products get added to the bottom of the list. 
+Unless products are specifically ordered otherwise, such as alphabetically, products will be displayed from most to least recently added to the page. In other words, the newest products get added to the bottom of the list.
 
 ### Terms of use {#terms-of-use}
 
@@ -91,8 +92,8 @@ Please also refer to our [terms of use](/terms-of-use/). Information on ethereum
 
 As is the fluid nature of Ethereum, teams and products come and go and innovation happens daily, so we'll undertake routine checks of our content to:
 
-- ensure that all wallets and dapps listed still fulfil our criteria.
-- there aren't products that have been suggested that meet more of our criteria than the ones currently listed
+- ensure that all wallets and dapps listed still fulfil our criteria
+- verify there aren't products that have been suggested that meet more of our criteria than the ones currently listed
 
 You can help with this by checking and letting us know. [Create an issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=) or send an email to [website@ethereum.org](mailto:website@ethereum.org)
 

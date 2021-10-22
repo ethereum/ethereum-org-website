@@ -54,5 +54,29 @@
     "description": "A hackathon organized by the biggest Fintech hub in Portugal",
     "startDate": "2021-10-22",
     "endDate": "2021-10-24"
+  },
+  {
+    "title": "LisCon",
+    "to": "https://liscon.org/",
+    "sponsor": null,
+    "description": "Ethereum Conference in Lisbon, Portugal",
+    "startDate": "2021-10-20",
+    "endDate": "2021-10-21"
+  },
+  {
+    "title": "Chainlink Hackathon",
+    "to": "https://chain.link/hackathon",
+    "sponsor": "Chainlink",
+    "description": "Build the next generation of hybrid smart contracts alongside developers, creators, artists, and industry-leading mentors from across the blockchain ecosystem.",
+    "startDate": "2021-10-22",
+    "endDate": "2021-11-28"
+  },
+  {
+    "title": "ETH Portland",
+    "to": "https://2021.ethportland.com",
+    "sponsor": null,
+    "description": "ETH Portland is a gathering of ETH folks from the Northwest. The goal is to bring together the local community & have fun.",
+    "startDate": "2021-10-28",
+    "endDate": "2021-10-29"
   }
 ]

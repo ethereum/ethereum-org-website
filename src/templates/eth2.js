@@ -7,7 +7,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown from "../components/ButtonDropdown"
-import BannerNotification from "../components/BannerNotification"
+import UpgradeBannerNotification from "../components/UpgradeBannerNotification"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Icon from "../components/Icon"
@@ -135,11 +135,13 @@ const H2 = styled.h2`
   font-size: 32px;
   font-weight: 700;
   margin-top: 4rem;
+
   a {
     display: none;
   }
 
   /* Anchor tag styles */
+
   a {
     position: relative;
     display: none;
@@ -147,6 +149,7 @@ const H2 = styled.h2`
     padding-right: 0.5rem;
     font-size: 1rem;
     vertical-align: middle;
+
     &:hover {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
@@ -164,11 +167,13 @@ const H2 = styled.h2`
 const H3 = styled.h3`
   font-size: 24px;
   font-weight: 700;
+
   a {
     display: none;
   }
 
   /* Anchor tag styles */
+
   a {
     position: relative;
     display: none;
@@ -176,6 +181,7 @@ const H3 = styled.h3`
     padding-right: 0.5rem;
     font-size: 1rem;
     vertical-align: middle;
+
     &:hover {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
@@ -311,9 +317,11 @@ const MoreContent = styled(Link)`
   padding: 1rem;
   display: flex;
   justify-content: center;
+
   &:hover {
     background: ${(props) => props.theme.colors.background};
   }
+
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     display: none;
   }
@@ -343,16 +351,6 @@ const TitleCard = styled.div`
   }
 `
 
-const StyledBannerNotification = styled(BannerNotification)`
-  display: flex;
-  justify-content: center;
-`
-
-const StyledEmoji = styled(Emoji)`
-  margin-right: 1rem;
-  flex-shrink: 0;
-`
-
 const dropdownLinks = {
   text: "page-eth2-upgrades-guide",
   ariaLabel: "page-eth2-upgrades-aria-label",
@@ -374,7 +372,7 @@ const dropdownLinks = {
 
 const Eth2Page = ({ data, data: { mdx } }) => {
   const intl = useIntl()
-  const isRightToLeft = isLangRightToLeft(intl.locale)
+  const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang)
   const tocItems = mdx.tableOfContents.items
 
   // TODO some `gitLogLatestDate` are `null` - why?
@@ -384,16 +382,7 @@ const Eth2Page = ({ data, data: { mdx } }) => {
 
   return (
     <Container>
-      <StyledBannerNotification shouldShow>
-        <StyledEmoji text=":megaphone:" />
-        <div>
-          <b>Latest:</b> Eth2 researchers are working on ways to accelerate the
-          merge. It will probably happen earlier than expected. More soon.{" "}
-          <Link to="https://blog.ethereum.org/category/research-and-development/">
-            Follow updates
-          </Link>
-        </div>
-      </StyledBannerNotification>
+      <UpgradeBannerNotification />
       <HeroContainer>
         <TitleCard>
           <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
@@ -464,6 +453,7 @@ export const eth2PageQuery = graphql`
       frontmatter {
         title
         description
+        lang
         sidebar
         sidebarDepth
         summaryPoints
@@ -474,6 +464,7 @@ export const eth2PageQuery = graphql`
             }
           }
         }
+        isOutdated
       }
       body
       tableOfContents

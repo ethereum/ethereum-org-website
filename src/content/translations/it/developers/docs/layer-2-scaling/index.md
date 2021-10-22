@@ -5,6 +5,7 @@ lang: it
 sidebar: true
 incomplete: true
 sidebarDepth: 3
+isOutdated: true
 ---
 
 Livello 2 è un termine collettivo per indicare soluzioni progettate per aiutare un'applicazione a gestire transazioni al di fuori della catena Ethereum principale (livello 1). La velocità delle transazioni ne risente quando la rete è molto carica, e l'esperienza utente può risultare poco piacevole per alcuni tipi di dapp. Man mano che la rete diventa più congestionata, il prezzo del carburante sale perché i mittenti delle transazioni mirano a superarsi a vicenda. Questo può rendere l'utilizzo di Ethereum parecchio dispendioso.

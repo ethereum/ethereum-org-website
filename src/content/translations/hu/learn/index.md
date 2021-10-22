@@ -63,7 +63,6 @@ Az "okos szerződés" csupán egy kódrészlet, mely az Ethereumon fut. Azért h
 Az Ethereum jelenleg egy proof-of-work-nek nevezett rendszert használ. Ez lehetővé teszi, hogy az Ethereum hálózat az összes Ethereum blokkláncra feljegyzett információ állapotáról egyet tudjon érteni és bizonyos ökonómiai támadásokat megakadályozni.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Gyakran frissítve - Ethhub_
-- [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 Az ETH 2.0-val az Ethereum egy különböző rendszerre fog váltani, melyet proof-of-stake-nek hívnak. [Olvass többet az ETH 2.0-ról](#eth-2-0).
 

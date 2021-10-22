@@ -63,7 +63,6 @@ Uno "Smart Contract" è semplicemente codice che viene eseguito in Ethereum. Si 
 Ethereum attualmente usa un sistema chiamato "Proof of Work" che consente alla rete Ethereum di concordare lo stato di tutte le informazioni registrate sulla blockchain Ethereum e di evitare determinati tipi di attacchi economici.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Aggiornato frequentemente - Ethhub_
-- [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 In ETH 2.0, Ethereum userà un sistema diverso, chiamato “Proof of Stake”. [Scopri di più su ETH 2.0 qui sotto](#eth-2-0).
 

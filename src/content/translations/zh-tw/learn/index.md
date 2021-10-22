@@ -62,7 +62,6 @@ sidebar: true
 Ethereum 目前使用的是「工作量證明」系統。 在工作量證明的架構下，Ethereum 網路可以決定所有紀錄在 Ethereum 區塊鏈上的資料狀態，同時也可避免特定型態的經濟攻擊。
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Updated often - Ethhub_
-- [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 在 ETH2.0 中，Ethereum 會轉向另一個名為「權益證明」的系統。 [參閱下列資源以深入了解 ETH 2.0](#eth-2-0)。
 

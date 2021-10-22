@@ -207,7 +207,7 @@ We’ve created a Metamask wallet, Alchemy account, and written our smart contra
 
 Every transaction sent from your virtual wallet requires a signature using your unique private key. To provide our program with this permission, we can safely store our private key (and Alchemy API key) in an environment file.
 
-> To learn more about sending transactions, check out [this tutorial](/sending-transactions-using-web3-and-alchemy) on sending transactions using web3.
+> To learn more about sending transactions, check out [this tutorial](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) on sending transactions using web3.
 
 First, install the dotenv package in your project directory:
 
@@ -254,15 +254,14 @@ We’ve added several dependencies and plugins so far, now we need to update `ha
 Update your `hardhat.config.js` to look like this:
 
 ```
-/**
-* @type import('hardhat/config').HardhatUserConfig
-*/
-
 require('dotenv').config();
 
 require("@nomiclabs/hardhat-ethers");
 const { API_URL, PRIVATE_KEY } = process.env;
 
+/**
+* @type import('hardhat/config').HardhatUserConfig
+*/
 module.exports = {
    solidity: "0.7.3",
    defaultNetwork: "ropsten",

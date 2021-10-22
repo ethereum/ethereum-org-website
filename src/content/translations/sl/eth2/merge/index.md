@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~2021/22">
+<UpgradeStatus date="~Q1/Q2 2022">
     Ta nadgradnja bo sledila uvedbi razdrobljenih verig. Vendar je to trenutek, ko bo <a href="/eth2/vision/">vizija o Eth2</a> povsem uresničena – večja razširljivost, varnost in trajnost, celotno omrežje pa bo podpiralo zastavljanje.
 </UpgradeStatus>
 

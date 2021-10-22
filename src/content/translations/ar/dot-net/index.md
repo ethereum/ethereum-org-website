@@ -80,9 +80,9 @@ sidebar: true
 
 ## مساهمي مجتمع.NET {#dot-net-community-contributors}
 
-في نيثريوم، نمضي أوقاتنا في الغالب على [Gitter](https://gitter.im/Nethereum/Nethereum) حيث يُرحب بقيام الجميع بطرح/الإجابة على الأسئلة، الحصول على المساعدة، أو مجرد الاستجمام. فلا تتردد في القيام بـ PR أو فتح موضوع عن [مستودع Github على نيثريوم](https://github.com/Nethereum)، أو مجرد تصفح العديد من المشاريع الجانبية/عينات المشارع الموجودة لدينا.
+في نيثريوم، نمضي أوقاتنا في الغالب على [Gitter](https://gitter.im/Nethereum/Nethereum) حيث يُرحب بقيام الجميع بطرح/الإجابة على الأسئلة، الحصول على المساعدة، أو مجرد الاستجمام. فلا تتردد في القيام بـ PR أو فتح موضوع عن [مستودع GitHub على نيثريوم](https://github.com/Nethereum)، أو مجرد تصفح العديد من المشاريع الجانبية/عينات المشارع الموجودة لدينا.
 
-في نيثيرمايند، لنتواصل من خلال [Gitter](https://gitter.im/nethermindeth/nethermind). وبالنسبة لـPRs أو الموضوعات، راجع [مستودع Github على نيثيرمايند](https://github.com/NethermindEth/nethermind).
+في نيثيرمايند، لنتواصل من خلال [Gitter](https://gitter.im/nethermindeth/nethermind). وبالنسبة لـPRs أو الموضوعات، راجع [مستودع GitHub على نيثيرمايند](https://github.com/NethermindEth/nethermind).
 
 ## قوائم مجمّعة أخرى {#other-aggregated-lists}
 

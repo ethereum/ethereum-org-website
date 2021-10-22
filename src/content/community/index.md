@@ -1,13 +1,13 @@
 ---
-title: Get involved in the Ethereum Community
-description: How to get involved in the Ethereum Community.
+title: Get involved in the Ethereum community
+description: How to get involved in the Ethereum community.
 sidebar: true
 lang: en
 ---
 
-# Ethereum Community {#ethereum-community}
+# Ethereum community {#ethereum-community}
 
-**Learn how to get involved in the Ethereum Community**
+**Learn how to get involved in the Ethereum community**
 
 The Ethereum community includes tens of thousands of developers, technologists, users, miners, HODLers, and enthusiasts all over the world. There are many ways to get involved in the Ethereum community: you can attend an event, join a meetup group, contribute to a project, or participate in one of many online forums about Ethereum.
 
@@ -29,7 +29,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
   - [Ethereum Research](https://ethresear.ch) - _the most influential messageboard for cryptoeconomic research_
 - Chat rooms
   - [Eth R&D Discord server](https://discord.gg/qGpsxSA)
-  - [Ethereum Gitter](https://gitter.im/ethereum/home) - _chat room for the Ethereum github repo_
+  - [Ethereum Gitter](https://gitter.im/ethereum/home) - _chat room for the Ethereum GitHub repo_
   - [Ethereum Cat Herders](https://discord.gg/tzYmDmF) - _community oriented around offering project management support to Ethereum development_
   - [Ethereum Hackers](https://ethglobal.co/discord) - _Discord chat run by [ETHGlobal](https://www.ethglobal.co/): an online community for Ethereum hackers all over the world_
   - [CryptoDevs Discord](https://discord.gg/5W5tVb3) - _Ethereum development focused Discord community_
@@ -57,9 +57,9 @@ Interested in starting your own meetup? Check out the [BUIDL Network](https://co
 
 This is a non-exhaustive list built by our community. Know of an active meetup group to add to this list? [Please add it](https://github.com/ethereum/ethereum-org-website#content-contributions)!
 
-## Decentralized Autonomous Organizations (DAOs) {#decentralized-autonomous-organizations-daos}
+## Decentralized autonomous organizations (DAOs) {#decentralized-autonomous-organizations-daos}
 
-"DAOs" are Decentralized Autonomous Organizations. These groups leverage Ethereum technology to facilitate organization and collaboration. For instance, for controlling membership, voting on proposals, or managing pooled assets. While DAOs are still experimental, they offer opportunities for you to find groups that you identify with, find collaborators, and grow your impact on the Ethereum community. [More on DAOs](/dao/)
+"DAOs" are Decentralized autonomous organizations. These groups leverage Ethereum technology to facilitate organization and collaboration. For instance, for controlling membership, voting on proposals, or managing pooled assets. While DAOs are still experimental, they offer opportunities for you to find groups that you identify with, find collaborators, and grow your impact on the Ethereum community. [More on DAOs](/dao/)
 
 - [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _Legal engineering_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Art community_
@@ -70,9 +70,10 @@ This is a non-exhaustive list built by our community. Know of an active meetup g
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Community focused on funding Ethereum development_
 - [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _Women-led projects_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Collective of Web3 builders_
-- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - Promote the DAO concept in non-tech field and help people create value through DAO.
-- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - Freelancer Web3 development collective working as a DAO
+- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Promote the DAO concept in non-tech field and help people create value through DAO._
+- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Freelancer Web3 development collective working as a DAO_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Community governance of DAOhaus_
+- [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _Community of builders who believe in collective ownership of the internet_
 
 ## How can I get involved? {#how-can-i-get-involved}
 
@@ -106,15 +107,15 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
   - Ethereum needs good writers who can explain its value in plain language
   - Not ready to publish your own articles? Consider contributing to the existing content on community resources like [EthHub](https://docs.ethhub.io/), or propose new content for ethereum.org!
 - **Offer to take notes for community calls**
-  - There are many open-source community calls, and having notetakers is a huge help. If you’re interested, join the Ethereum Cat Herders chat [here](https://gitter.im/ethereum-cat-herders/meeting-notes-and-summaries), and introduce yourself!
+  - There are many open-source community calls, and having notetakers is a huge help. If you’re interested, join the [Ethereum Cat Herders discord](https://discord.com/invite/tzYmDmF), and introduce yourself!
 - **Translate Ethereum content into your native language**
   - ethereum.org maintains a translation program that translates the website, and other resources, into many different languages
   - Find out how to get involved [here](/contributing/translation-program)
 
-**Financial professional or accountant**
+**Financial professionals & Accountants**
 
 - Ethereum is home to the “Decentralized Finance” ecosystem - a network of protocols and applications that offer an alternative financial system. If you’re a financial professional, check out some DeFi apps at [DeFi Pulse](https://defipulse.com/) or [DeFiPrime](https://defiprime.com)
-- Accountant? Assets on Ethereum - ETH, tokens, DeFi, etc - introduce many novel accounting issues. You could start by checking out some projects that aim to help users of cryptocurrency solve their bookkeeping & accounting challenges, like [VeriLedger](https://veriledger.io/) or [Rotki](https://rotki.com/)
+- Accountant? Assets on Ethereum - ETH, tokens, DeFi, etc - introduce many novel accounting issues. You could start by checking out some projects that aim to help users of cryptocurrency solve their bookkeeping & accounting challenges, like [Rotki](https://rotki.com/)
 
 **Product Managers**
 
@@ -124,15 +125,16 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
 
 - There are many marketing and communications positions in the Ethereum ecosystem!
 
-## Ethereum Grants {#ethereum-grants}
+## Ethereum grants {#ethereum-grants}
 
 [View open Ethereum grants](/community/grants/)
 
-## Ethereum Jobs {#ethereum-jobs}
+## Ethereum jobs {#ethereum-jobs}
 
 **Want to find a job working in Ethereum?**
+
 - [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/ethereum/)
 - [Crypto.jobs](https://crypto.jobs/)
 - [Careers at ConsenSys](https://consensys.net/careers/)
-- [Blocktribe](https://blocktribe.com/)
 - [Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)
+- [Bankless jobs board](https://pallet.xyz/list/bankless/jobs)

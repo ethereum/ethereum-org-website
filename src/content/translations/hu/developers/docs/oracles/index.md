@@ -4,6 +4,7 @@ description: Az orákulumok segítségével külvilági adatokat vihetsz be az E
 lang: hu
 sidebar: true
 incomplete: true
+isOutdated: true
 ---
 
 A orákulumok olyan adatcsatornák, amelyek összekapcsolják az Ethereumot az off-chain, valós információkkal, így le tudod kérdezni az adatokat az okosszerződéseidben. Például a hírpiac dappok orákulumokat használnak, hogy az események alapján elszámolják a kifizetéseket. Egy hírpiacon lehetőséged van ETH-ben fogadni, hogy például ki lesz az Egyesül Államok elnöke. Egy orákulumot fognak használni, hogy megerősítsék a kimenetelt és kifizessék a nyerteseket.

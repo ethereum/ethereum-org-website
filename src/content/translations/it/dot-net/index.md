@@ -12,7 +12,7 @@ sidebarDepth: 1
 
 Usa Ethereum per creare applicazioni decentralizzate (dette "dapp") che sfruttano i vantaggi delle criptovalute e della tecnologia blockchain. Queste dapp sono attendibili perché, una volta distribuite su Ethereum, vengono eseguite sempre come programmato. Possono controllare beni digitali per creare nuovi tipi di applicazioni finanziarie. Possono essere decentralizzate, pertanto nessuna entità singola o individuo le controlla e sono quasi impossibili da censurare.
 
-Crea applicazioni decentralizzate su Ethereum e interagisci con Smart Contract utilizzando strumenti e linguaggi Microsoft. Supporta C#, # Visual Basic . ET, F#, con strumenti come VSCode e Visual Studio, in .NET Framework/.NET Core/.NET Standard. Distribuisci una blockchain Ethereum su Azure usando Microsoft Azure Blockchain in pochi minuti. Porta .NET su Ethereum!
+Crea applicazioni decentralizzate su Ethereum e interagisci con Smart Contract utilizzando strumenti e linguaggi Microsoft. Supporta C#, Visual Basic .NET, F#, con strumenti come VSCode e Visual Studio, in .NET Framework/.NET Core/.NET Standard. Distribuisci una blockchain Ethereum su Azure usando Microsoft Azure Blockchain in pochi minuti. Porta .NET su Ethereum!
 
 <img src="https://raw.githubusercontent.com/Nethereum/Nethereum/master/logos/logo192x192t.png" />
 
@@ -81,7 +81,7 @@ Cerchi altre risorse? Dai un'occhiata a [ethereum.org/developers.](/it/developer
 
 ## Collaboratori della community .NET {#dot-net-community-contributors}
 
-Per Nethereum, scambiamo opinioni per lo più su [Gitter](https://gitter.im/Nethereum/Nethereum), dove tutti possono chiedere o rispondere a domande, cercare aiuto o semplicemente leggere. Fai pure una PR o apri una segnalazione sul [repository Github di Nethereum](https://github.com/Nethereum), o semplicemente sfoglia i molti progetti disponibili.
+Per Nethereum, scambiamo opinioni per lo più su [Gitter](https://gitter.im/Nethereum/Nethereum), dove tutti possono chiedere o rispondere a domande, cercare aiuto o semplicemente leggere. Fai pure una PR o apri una segnalazione sul [repository GitHub di Nethereum](https://github.com/Nethereum), o semplicemente sfoglia i molti progetti disponibili.
 
 Per Nethermind, mettiamoci in contatto tramite [Gitter](https://gitter.im/nethermindeth/nethermind). Per PR o problemi, dai un'occhiata al [repository GitHub di Nethermind](https://github.com/NethermindEth/nethermind).
 

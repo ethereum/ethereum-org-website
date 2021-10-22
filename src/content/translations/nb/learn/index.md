@@ -62,7 +62,6 @@ En «smart kontrakt» er bare en liten bit kode som kjører på Ethereum. Den ka
 Ethereum brukes i dag et system kalt “Proof Work”. Det gjør det mulig for Ethereum-nettverket å bli enige om tilstanden på all informasjon som registreres i Ethereum-blokkkjeden, og forhindrer visse typer økonomiske angrep.
 
 - [Hva betyr det å "mine" Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Oppdatert ofte - Ethhub_
-- [Hvordan Ethereum "Mining" fungerer](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 I ETH 2.0 vil Ethereum bli ført videre til et annet system kalt “Proof of Stake”. [Les mer om ETH 2.0 under](#eth-2-0).
 

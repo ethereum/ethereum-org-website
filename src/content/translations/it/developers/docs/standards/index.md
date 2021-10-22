@@ -14,7 +14,7 @@ Normalmente, gli standard vengono introdotti come [proposte di miglioramento di 
 
 - [Introduzione alle EIP](/en/eips/)
 - [Elenco delle EIP](https://eips.ethereum.org/)
-- [Repository Github delle EIP](https://github.com/ethereum/EIPs)
+- [Repository GitHub delle EIP](https://github.com/ethereum/EIPs)
 - [Forum di discussione per le EIP](https://ethereum-magicians.org/c/eips)
 - [Ethereum Governance Overview](https://blog.bmannconsulting.com/ethereum-governance/) _31 marzo 2019 - Boris Mann_
 - [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/)_ 23 Marzo 2020 - Hudson Jameson_

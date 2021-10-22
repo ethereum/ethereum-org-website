@@ -39,11 +39,6 @@ Mielőtt elmerülnél a keretrendszerekben, javasoljuk, hogy olvasd át a beveze
 - [Dokumentáció](https://docs.epirus.io)
 - [GitHub](https://github.com/epirus-io/epirus-cli)
 
-**Etherlime -** **_Ethers.js alapú keretrendszer dapp fejlesztéshez (Solidity & Vyper), telepítés, debugging, tesztelés és egyebek._**
-
-- [Dokumentáció](https://etherlime.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/LimeChain/etherlime)
-
 **Hardhat -** **_Ethereum fejlesztői környezet profiknak_**
 
 - [hardhat.org](https://hardhat.org)

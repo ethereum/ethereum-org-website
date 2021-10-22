@@ -14,7 +14,7 @@ A timeline of all the major milestones, forks, and updates to the Ethereum block
 
 Forks are when major technical upgrades or changes need to be made to the network – they typically stem from [Ethereum Improvement Proposals (EIPs)](/eips/) and change the "rules" of the protocol.
 
-When upgrades are needed in traditional, centrally-controlled software, the company will just publish a new version for the end-user. Blockchains work differently because there is no central ownership. [Ethereum clients](/developers/docs/nodes-and-clients/) must update their software to implement the new fork rules. Plus block creators (miners in a proof-of-work world, validators in a proof-of-stake world) and nodes must create blocks and validate against the new rules. [More on consensus mechanisms](/developers/docs/consenus-mechanisms/)
+When upgrades are needed in traditional, centrally-controlled software, the company will just publish a new version for the end-user. Blockchains work differently because there is no central ownership. [Ethereum clients](/developers/docs/nodes-and-clients/) must update their software to implement the new fork rules. Plus block creators (miners in a proof-of-work world, validators in a proof-of-stake world) and nodes must create blocks and validate against the new rules. [More on consensus mechanisms](/developers/docs/consensus-mechanisms/)
 
 These rule changes may create a temporary split in the network. New blocks could be produced according to the new rules or the old ones. Forks are usually agreed upon ahead of time so that clients adopt the changes in unison and the fork with the upgrades becomes the main chain. However in rare cases, disagreements over forks can cause the network to permanently split – most notably the creation of Ethereum Classic with the [DAO fork](#dao-fork).
 
@@ -26,9 +26,25 @@ These rule changes may create a temporary split in the network. New blocks could
 
 ### (_In Progress_) Altair {#altair}
 
-The Altair upgrade is the first scheduled upgrade for the [Beacon Chain](/eth2/beacon-chain). It is expected to go live in 2021. It will add support for "sync committees", which can enable light clients, and will bring inactivity and slashing penalties up to their full values.
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Planned: <code>Oct-27-2021 10:56:23 AM +UTC</code><br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Planned epoch number: 74,240<br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: <em>to be determined</em><br />
+
+#### Summary {#altair-summary}
+
+The Altair upgrade is the first scheduled upgrade for the [Beacon Chain](/eth2/beacon-chain). It will add support for "sync committees", which can enable light clients, and will bring inactivity and slashing penalties up to their full values.
 
 - [Read the Altair upgrade specification](https://github.com/ethereum/eth2.0-specs/tree/dev/specs/altair)
+
+#### <Emoji text=":tada:" size={1} mr="0.5rem" />Fun fact! {#altair-fun-fact}
+
+Altair is the first major network upgrade that will have an exact rollout time. Every upgrade so far has been based on a declared block number on the proof-of-work chain, where block times vary. The Beacon Chain does not require solving for proof-of-work, and instead works on a time-based epoch system consisting of 32 twelve-second "slots" of time where validators can propose blocks. This is why we know exactly when we'll hit epoch 74,240 and Altair will be live!
+
+- [Beaconcha.in Glossary - Slots](https://kb.beaconcha.in/glossary#slots)
+
+#### <Emoji text="🚨" size={1} mr="0.5rem" />Beacon Chain node operators {#altair-cta}
+
+The date for this upgrade has been set for Wednesday, October 27. If you are operating a beacon chain node, _it's time to upgrade_ to a version that supports the Altair upgrade. Check with your clients communication channels for latest information and details on compatible versions.
 
 ---
 
@@ -303,7 +319,7 @@ The Tangerine Whistle fork was the first response to the denial of service (DoS)
 
 #### Summary {#dao-fork-summary}
 
-The DAO fork was in response to the [2016 DAO attack](https://www.coindesk.com/understanding-dao-hack-journalists) where an insecure [DAO](/glossary/#dao) contract was drained of over 3.6 million ETH in a hack. The fork moved the funds from the faulty contract to a [new contract](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) with a single function: withdraw. Anyone who lost funds could withdraw 1 ETH for every 100 DAO tokens in their wallets.
+The DAO fork was in response to the [2016 DAO attack](https://www.coindesk.com/markets/2016/06/25/understanding-the-dao-attack/) where an insecure [DAO](/glossary/#dao) contract was drained of over 3.6 million ETH in a hack. The fork moved the funds from the faulty contract to a [new contract](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) with a single function: withdraw. Anyone who lost funds could withdraw 1 ETH for every 100 DAO tokens in their wallets.
 
 This course of action was voted on by the Ethereum community. Any ETH holder was able to vote via a transaction on [a voting platform](http://v1.carbonvote.com/). The decision to fork reached over 85% of the votes.
 

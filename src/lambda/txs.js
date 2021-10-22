@@ -2,21 +2,18 @@ const axios = require("axios")
 
 const handler = async () => {
   try {
-    const daysToFetch = 30
-    const milliseconds = daysToFetch * 24 * 60 * 60 * 1000
+    const daysToFetch = 90
     const now = new Date()
-    // startdate and enddate format: YYYY-MM-DD
-    const to = now.toISOString().split("T")[0]
-    const from = new Date(now.getTime() - milliseconds)
+    const endDate = now.toISOString().split("T")[0] // YYYY-MM-DD
+    const startDate = new Date(now.setDate(now.getDate() - daysToFetch))
       .toISOString()
-      .split("T")[0]
+      .split("T")[0] // {daysToFetch} days ago
     const response = await axios.get(
-      `https://api.etherscan.io/api?module=stats&action=dailytx&startdate=${from}&enddate=${to}&sort=desc&apikey=${process.env.ETHERSCAN_API_KEY}`
+      `https://api.etherscan.io/api?module=stats&action=dailytx&startdate=${startDate}&enddate=${endDate}&sort=asc&apikey=${process.env.ETHERSCAN_API_KEY}`
     )
     if (response.status < 200 || response.status >= 300) {
       return { statusCode: response.status, body: response.statusText }
     }
-
     const { data } = response
     return {
       statusCode: 200,

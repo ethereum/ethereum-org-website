@@ -4,6 +4,7 @@ description: Panoramica del significato di storage decentralizzato e strumenti d
 lang: it
 sidebar: true
 incomplete: true
+isOutdated: true
 ---
 
 A differenza di un server centralizzato gestito da una singola azienda o organizzazione, lo storage decentralizzato è una rete peer-to-peer di utenti-operatori che detengono una porzione dei dati complessivi, creando un sistema resiliente per l'archiviazione e la condivisione di file.
@@ -25,12 +26,6 @@ A differenza di un server centralizzato gestito da una singola azienda o organiz
 
 - [Documentazione](https://github.com/orbitdb/field-manual)
 - [GitHub](https://github.com/orbitdb/orbit-db)
-
-**3Box -\*\***_ Database IPFS controllato dagli utenti per applicazioni coinvolgenti e con una grande mole di dati. Supporta profili, spazi criptati e messaggistica, con plug-in aggiuntivi per semplificare lo sviluppo._\*\*
-
-- [3Box](https://3box.io)
-- [3Box.js](https://github.com/3box/3box-js)
-- [3Box Plugins](https://docs.3box.io/build/plugins)
 
 ## Letture consigliate {#further-reading}
 

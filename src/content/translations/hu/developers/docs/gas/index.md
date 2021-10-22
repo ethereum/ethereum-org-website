@@ -4,6 +4,7 @@ description:
 lang: hu
 sidebar: true
 incomplete: true
+isOutdated: true
 ---
 
 Az gáz (Gas) nélkülözhetetlen az Ethereum hálózaton. Ez az üzemanyag, amitől működik, ahogyan az autóknak is szükségük van benzinre, hogy menjenek.

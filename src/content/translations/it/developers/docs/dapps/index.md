@@ -66,11 +66,6 @@ Tokens must be generated in order to prove the value nodes that contribute to th
 ---==crwdHRulesLBB_2_BBsuleRHdwrc==
 -->## Strumenti per le dapp {#dapp-tools}
 
-**Rimble UI** **_: componenti adattabili e con progettazione standard di progettazione per applicazioni decentralizzate_**
-
-- [rimble.consensys.design](https://rimble.consensys.design)
-- [GitHub](https://github.com/ConsenSys/rimble-ui)
-
 **One Click Dapp** **_: strumento FOSS per generare frontend di dapp da un'ABI._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
