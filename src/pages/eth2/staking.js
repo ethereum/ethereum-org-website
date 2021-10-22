@@ -157,7 +157,7 @@ const StakingPage = ({ data, location }) => {
     title: translateMessageId("page-eth2-staking-title-4", intl),
     header: translateMessageId("page-eth2-staking-header-1", intl),
     subtitle: translateMessageId("page-eth2-staking-subtitle", intl),
-    image: data.rhino.childImageSharp.fluid,
+    image: data.rhino.childImageSharp.gatsbyImageData,
     alt: translateMessageId("page-eth2-staking-image-alt", intl),
     buttons: [
       {
@@ -294,7 +294,7 @@ const StakingPage = ({ data, location }) => {
       </Content>
       <Divider />
       <StyledCallout
-        image={data.rhino.childImageSharp.fluid}
+        image={data.rhino.childImageSharp.gatsbyImageData}
         alt={translateMessageId("eth2-rhino-img-alt", intl)}
         title={translateMessageId("page-eth2-staking-join-community", intl)}
         description={translateMessageId(
@@ -407,20 +407,16 @@ export default StakingPage
 export const poolImage = graphql`
   fragment poolImage on File {
     childImageSharp {
-      fixed(height: 20) {
-        ...GatsbyImageSharpFixed
-      }
+      gatsbyImageData(height: 20, layout: FIXED)
     }
   }
 `
 
 export const query = graphql`
-  query {
+  {
     rhino: file(relativePath: { eq: "eth2/eth2_rhino.png" }) {
       childImageSharp {
-        fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 500, layout: CONSTRAINED)
       }
     }
     consensys: file(relativePath: { eq: "projects/consensys.png" }) {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo } from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
@@ -46,7 +46,7 @@ const StyledGradientContainer = styled(GradientContainer)`
   background: ${(props) => props.theme.colors.ednBackground};
 ` */
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   background-size: cover;
   background-repeat: repeat;
   align-self: center;
@@ -455,7 +455,7 @@ const StablecoinsPage = ({ data }) => {
       background: "linear-gradient(225deg, #AA589B 0%, #5CB8C4 100%)",
       url: "https://aave.com",
       alt: translateMessageId("aave-logo", intl),
-      image: data.aave.childImageSharp.fixed,
+      image: data.aave.childImageSharp.gatsbyImageData,
       name: "Aave",
       /* data: [
         {
@@ -483,7 +483,7 @@ const StablecoinsPage = ({ data }) => {
       background: "#F9FAFB",
       url: "https://compound.finance",
       alt: translateMessageId("compound-logo", intl),
-      image: data.compound.childImageSharp.fixed,
+      image: data.compound.childImageSharp.gatsbyImageData,
       name: "Compound",
       /* data: [
         {
@@ -511,7 +511,7 @@ const StablecoinsPage = ({ data }) => {
       background: "#212121",
       url: "https://trade.dydx.exchange/portfolio/overview",
       alt: translateMessageId("dydx-logo", intl),
-      image: data.dydx.childImageSharp.fixed,
+      image: data.dydx.childImageSharp.gatsbyImageData,
       name: "dYdX",
       /* data: [
         {
@@ -539,7 +539,7 @@ const StablecoinsPage = ({ data }) => {
       background: "linear-gradient(135deg, #C7EFE6 0%, #EEEAC7 100%)",
       url: "https://oasis.app",
       alt: translateMessageId("oasis-logo", intl),
-      image: data.oasis.childImageSharp.fixed,
+      image: data.oasis.childImageSharp.gatsbyImageData,
       name: "Oasis",
       /* data: [
         {
@@ -584,7 +584,7 @@ const StablecoinsPage = ({ data }) => {
     title: translateMessageId("page-stablecoins-title", intl),
     header: translateMessageId("page-stablecoins-hero-header", intl),
     subtitle: translateMessageId("page-stablecoins-hero-subtitle", intl),
-    image: data.stablecoins.childImageSharp.fluid,
+    image: data.stablecoins.childImageSharp.gatsbyImageData,
     alt: translateMessageId("page-stablecoins-hero-alt", intl),
     buttons: [
       {
@@ -722,7 +722,7 @@ const StablecoinsPage = ({ data }) => {
                 </div>
               </StyledLeftColumn>
               <Image
-                fluid={data.dailarge.childImageSharp.fluid}
+                fluid={data.dailarge.childImageSharp.gatsbyImageData}
                 alt={translateMessageId("page-stablecoins-dai-logo", intl)}
               />
             </StyledDaiBanner>
@@ -757,7 +757,7 @@ const StablecoinsPage = ({ data }) => {
                 </div>
               </StyledLeftColumn>
               <Image
-                fluid={data.usdclarge.childImageSharp.fluid}
+                fluid={data.usdclarge.childImageSharp.gatsbyImageData}
                 alt={translateMessageId("page-stablecoins-usdc-logo", intl)}
               />
             </USDCBanner>
@@ -800,7 +800,7 @@ const StablecoinsPage = ({ data }) => {
             "page-stablecoins-stablecoins-dapp-callout-description",
             intl
           )}
-          image={data.doge.childImageSharp.fluid}
+          image={data.doge.childImageSharp.gatsbyImageData}
           maxImageWidth={600}
           alt={translateMessageId(
             "page-stablecoins-stablecoins-dapp-callout-image-alt",
@@ -881,75 +881,55 @@ const StablecoinsPage = ({ data }) => {
 export default StablecoinsPage
 
 export const query = graphql`
-  query {
+  {
     stablecoins: file(relativePath: { eq: "stablecoins/hero.png" }) {
       childImageSharp {
-        fluid(maxWidth: 624) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 624, layout: CONSTRAINED)
       }
     }
     dai: file(relativePath: { eq: "stablecoins/dai-large.png" }) {
       childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 600, layout: CONSTRAINED)
       }
     }
     dailarge: file(relativePath: { eq: "stablecoins/dai-large.png" }) {
       childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 300, layout: CONSTRAINED)
       }
     }
     usdclarge: file(relativePath: { eq: "stablecoins/usdc-large.png" }) {
       childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 300, layout: CONSTRAINED)
       }
     }
     doge: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 600, layout: CONSTRAINED)
       }
     }
     compound: file(relativePath: { eq: "stablecoins/compound.png" }) {
       childImageSharp {
-        fixed(width: 160) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(width: 160, layout: FIXED)
       }
     }
     aave: file(relativePath: { eq: "stablecoins/aave.png" }) {
       childImageSharp {
-        fixed(width: 64) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(width: 64, layout: FIXED)
       }
     }
     dydx: file(relativePath: { eq: "exchanges/dydx.png" }) {
       childImageSharp {
-        fixed(width: 80) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(width: 80, layout: FIXED)
       }
     }
     oasis: file(relativePath: { eq: "stablecoins/dai-large.png" }) {
       childImageSharp {
-        fixed(width: 80) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(width: 80, layout: FIXED)
       }
     }
     oasissmall: file(relativePath: { eq: "stablecoins/dai-large.png" }) {
       childImageSharp {
-        fixed(width: 24) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(width: 24, layout: FIXED)
       }
     }
   }

@@ -92,27 +92,27 @@ const VisionPage = ({ data, location }) => {
     title: translateMessageId("page-eth2-vision-title", intl),
     header: translateMessageId("page-eth2-vision-future", intl),
     subtitle: translateMessageId("page-eth2-vision-subtitle", intl),
-    image: data.oldship.childImageSharp.fluid,
+    image: data.oldship.childImageSharp.gatsbyImageData,
     alt: translateMessageId("page-eth-whats-eth-hero-alt", intl),
   }
 
   const upgrades = [
     {
-      image: data.beaconchain.childImageSharp.fixed,
+      image: data.beaconchain.childImageSharp.gatsbyImageData,
       title: <Translation id="page-eth2-beacon-chain-title" />,
       description: <Translation id="page-eth2-beacon-chain-desc" />,
       to: "/eth2/beacon-chain/",
       date: <Translation id="page-eth2-beacon-chain-estimate" />,
     },
     {
-      image: data.themerge.childImageSharp.fixed,
+      image: data.themerge.childImageSharp.gatsbyImageData,
       title: <Translation id="page-eth2-docking" />,
       description: <Translation id="page-eth2-docking-desc" />,
       to: "/eth2/merge/",
       date: <Translation id="page-eth2-docking-estimate" />,
     },
     {
-      image: data.shards.childImageSharp.fixed,
+      image: data.shards.childImageSharp.gatsbyImageData,
       title: <Translation id="page-eth2-shard-title" />,
       description: <Translation id="page-eth2-shard-desc" />,
       to: "/eth2/shard-chains/",
@@ -293,47 +293,35 @@ const VisionPage = ({ data, location }) => {
 export default VisionPage
 
 export const query = graphql`
-  query {
+  {
     oldship: file(relativePath: { eq: "eth2/oldship.png" }) {
       childImageSharp {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 800, layout: CONSTRAINED)
       }
     }
     rhino: file(relativePath: { eq: "eth2/eth2_rhino.png" }) {
       childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 600, layout: CONSTRAINED)
       }
     }
     merge: file(relativePath: { eq: "eth2/merge.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     beaconchain: file(relativePath: { eq: "eth2/core.png" }) {
       childImageSharp {
-        fixed(width: 420) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(width: 420, layout: FIXED)
       }
     }
     shards: file(relativePath: { eq: "eth2/newrings.png" }) {
       childImageSharp {
-        fixed(width: 420) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(width: 420, layout: FIXED)
       }
     }
     themerge: file(relativePath: { eq: "eth2/merge.png" }) {
       childImageSharp {
-        fixed(width: 420) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(width: 420, layout: FIXED)
       }
     }
   }

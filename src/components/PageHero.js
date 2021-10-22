@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import ButtonLink from "./ButtonLink"
 import { Content } from "./SharedStyledComponents"
 
@@ -28,7 +28,7 @@ const HeroContent = styled.div`
   }
 `
 
-const HeroImg = styled(Img)`
+const HeroImg = styled(GatsbyImage)`
   flex: 1 1 50%;
   background-size: cover;
   background-repeat: no-repeat;

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import Link from "./Link"
 
@@ -32,7 +32,7 @@ const Title = styled.h3`
   margin-bottom: 1rem;
 `
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   width: 100%;
   height: 100%;
   min-width: 100px;

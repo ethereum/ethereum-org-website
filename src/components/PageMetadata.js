@@ -18,7 +18,7 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
     ogImageEthtwo,
   } = useStaticQuery(
     graphql`
-      query {
+      {
         site {
           siteMetadata {
             author
@@ -27,30 +27,22 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
         }
         ogImageDefault: file(relativePath: { eq: "home/hero.png" }) {
           childImageSharp {
-            fixed(width: 1200) {
-              src
-            }
+            gatsbyImageData(width: 1200, placeholder: BLURRED, layout: FIXED)
           }
         }
         ogImageDevelopers: file(relativePath: { eq: "enterprise-eth.png" }) {
           childImageSharp {
-            fixed(width: 1200) {
-              src
-            }
+            gatsbyImageData(width: 1200, placeholder: BLURRED, layout: FIXED)
           }
         }
         ogImageDapps: file(relativePath: { eq: "doge-computer.png" }) {
           childImageSharp {
-            fixed(width: 1200) {
-              src
-            }
+            gatsbyImageData(width: 1200, placeholder: BLURRED, layout: FIXED)
           }
         }
         ogImageEthtwo: file(relativePath: { eq: "eth2/eth2_doge.png" }) {
           childImageSharp {
-            fixed(width: 1200) {
-              src
-            }
+            gatsbyImageData(width: 1200, placeholder: BLURRED, layout: FIXED)
           }
         }
       }
@@ -79,15 +71,15 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
 
         /* Set fallback ogImage based on path */
         const siteUrl = site.siteMetadata.url
-        let ogImage = ogImageDefault.childImageSharp.fixed.src
+        let ogImage = ogImageDefault.childImageSharp.gatsbyImageData.src
         if (pathname.includes("/developers/")) {
-          ogImage = ogImageDevelopers.childImageSharp.fixed.src
+          ogImage = ogImageDevelopers.childImageSharp.gatsbyImageData.src
         }
         if (pathname.includes("/dapps/")) {
-          ogImage = ogImageDapps.childImageSharp.fixed.src
+          ogImage = ogImageDapps.childImageSharp.gatsbyImageData.src
         }
         if (pathname.includes("/eth2/")) {
-          ogImage = ogImageEthtwo.childImageSharp.fixed.src
+          ogImage = ogImageEthtwo.childImageSharp.gatsbyImageData.src
         }
         if (image) {
           ogImage = image

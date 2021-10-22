@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
 import ActionCard from "../components/ActionCard"
@@ -27,7 +27,7 @@ import {
   translateMessageId,
 } from "../utils/translations"
 
-const Hero = styled(Img)`
+const Hero = styled(GatsbyImage)`
   width: 100%;
   min-height: 380px;
   max-height: 440px;
@@ -209,13 +209,13 @@ const StyledCardContainer = styled(CardContainer)`
   }
 `
 
-const IntroImage = styled(Img)`
+const IntroImage = styled(GatsbyImage)`
   width: 100%;
   background-size: cover;
   background: no-repeat 50px;
 `
 
-const FeatureImage = styled(Img)`
+const FeatureImage = styled(GatsbyImage)`
   width: 100%;
 `
 
@@ -423,7 +423,7 @@ const HomePage = ({ data }) => {
 
   const cards = [
     {
-      image: data.robotfixed.childImageSharp.fixed,
+      image: data.robotfixed.childImageSharp.gatsbyImageData,
       title: translateMessageId("page-index-get-started-wallet-title", intl),
       description: translateMessageId(
         "page-index-get-started-wallet-description",
@@ -434,7 +434,7 @@ const HomePage = ({ data }) => {
     },
 
     {
-      image: data.ethfixed.childImageSharp.fixed,
+      image: data.ethfixed.childImageSharp.gatsbyImageData,
       title: translateMessageId("page-index-get-started-eth-title", intl),
       description: translateMessageId(
         "page-index-get-started-eth-description",
@@ -444,7 +444,7 @@ const HomePage = ({ data }) => {
       to: "/get-eth/",
     },
     {
-      image: data.dogefixed.childImageSharp.fixed,
+      image: data.dogefixed.childImageSharp.gatsbyImageData,
       title: translateMessageId("page-index-get-started-dapps-title", intl),
       description: translateMessageId(
         "page-index-get-started-dapps-description",
@@ -454,7 +454,7 @@ const HomePage = ({ data }) => {
       to: "/dapps/",
     },
     {
-      image: data.devfixed.childImageSharp.fixed,
+      image: data.devfixed.childImageSharp.gatsbyImageData,
       title: translateMessageId("page-index-get-started-devs-title", intl),
       description: translateMessageId(
         "page-index-get-started-devs-description",
@@ -467,14 +467,14 @@ const HomePage = ({ data }) => {
 
   const touts = [
     {
-      image: data.merge.childImageSharp.fixed,
+      image: data.merge.childImageSharp.gatsbyImageData,
       alt: translateMessageId("page-index-tout-eth2-image-alt", intl),
       title: translateMessageId("page-index-tout-eth2-title", intl),
       description: translateMessageId("page-index-tout-eth2-description", intl),
       to: "/eth2/",
     },
     {
-      image: data.infrastructurefixed.childImageSharp.fixed,
+      image: data.infrastructurefixed.childImageSharp.gatsbyImageData,
       alt: translateMessageId("page-index-tout-enterprise-image-alt", intl),
       title: translateMessageId("page-index-tout-enterprise-title", intl),
       description: translateMessageId(
@@ -484,7 +484,7 @@ const HomePage = ({ data }) => {
       to: "/enterprise/",
     },
     {
-      image: data.enterprise.childImageSharp.fixed,
+      image: data.enterprise.childImageSharp.gatsbyImageData,
       alt: translateMessageId("page-index-tout-community-image-alt", intl),
       title: translateMessageId("page-index-tout-community-title", intl),
       description: translateMessageId(
@@ -708,7 +708,7 @@ contract SimpleDomainRegistry {
         description={translateMessageId("page-index-meta-description", intl)}
       />
       <Hero
-        fluid={data.hero.childImageSharp.fluid}
+        fluid={data.hero.childImageSharp.gatsbyImageData}
         alt={translateMessageId("page-index-hero-image-alt", intl)}
         loading="eager"
       />
@@ -737,7 +737,7 @@ contract SimpleDomainRegistry {
             </IntroLeftColumn>
             <ImageContainer>
               <IntroImage
-                fluid={data.hackathon.childImageSharp.fluid}
+                fluid={data.hackathon.childImageSharp.gatsbyImageData}
                 alt={translateMessageId(
                   "page-index-get-started-image-alt",
                   intl
@@ -779,7 +779,7 @@ contract SimpleDomainRegistry {
           </FeatureContent>
           <ImageContainer>
             <FeatureImage
-              fluid={data.ethereum.childImageSharp.fluid}
+              fluid={data.ethereum.childImageSharp.gatsbyImageData}
               alt={translateMessageId(
                 "page-index-what-is-ethereum-image-alt",
                 intl
@@ -807,7 +807,7 @@ contract SimpleDomainRegistry {
           </FeatureContent>
           <ImageContainer>
             <FeatureImage
-              fluid={data.impact.childImageSharp.fluid}
+              fluid={data.impact.childImageSharp.gatsbyImageData}
               alt={translateMessageId("page-index-defi-image-alt", intl)}
             />
           </ImageContainer>
@@ -817,7 +817,7 @@ contract SimpleDomainRegistry {
         <Row>
           <ImageContainer>
             <FeatureImage
-              fluid={data.infrastructure.childImageSharp.fluid}
+              fluid={data.infrastructure.childImageSharp.gatsbyImageData}
               alt={translateMessageId("page-index-nft-alt", intl)}
             />
           </ImageContainer>
@@ -860,7 +860,7 @@ contract SimpleDomainRegistry {
           </FeatureContent>
           <ImageContainer>
             <FeatureImage
-              fluid={data.future.childImageSharp.fluid}
+              fluid={data.future.childImageSharp.gatsbyImageData}
               alt={translateMessageId("page-index-internet-image-alt", intl)}
             />
           </ImageContainer>
@@ -945,7 +945,7 @@ contract SimpleDomainRegistry {
             "page-index-contribution-banner-description",
             intl
           )}
-          image={data.finance.childImageSharp.fluid}
+          image={data.finance.childImageSharp.gatsbyImageData}
           maxImageWidth={600}
           alt={translateMessageId(
             "page-index-contribution-banner-image-alt",
@@ -972,107 +972,79 @@ contract SimpleDomainRegistry {
 export default HomePage
 
 export const query = graphql`
-  query {
+  {
     hero: file(relativePath: { eq: "home/hero.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1440) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     ethereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1440) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     enterprise: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
-        fixed(width: 320) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(width: 320, layout: FIXED)
       }
     }
     dogefixed: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        fixed(width: 320) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(width: 320, layout: FIXED)
       }
     }
     robotfixed: file(relativePath: { eq: "wallet-cropped.png" }) {
       childImageSharp {
-        fixed(width: 320) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(width: 320, layout: FIXED)
       }
     }
     ethfixed: file(relativePath: { eq: "eth.png" }) {
       childImageSharp {
-        fixed(width: 320) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(width: 320, layout: FIXED)
       }
     }
     devfixed: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       childImageSharp {
-        fixed(width: 320) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(width: 320, layout: FIXED)
       }
     }
     future: file(relativePath: { eq: "future_transparent.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1440) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     impact: file(relativePath: { eq: "impact_transparent.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1440) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     finance: file(relativePath: { eq: "finance_transparent.png" }) {
       childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 600, layout: CONSTRAINED)
       }
     }
     hackathon: file(relativePath: { eq: "hackathon_transparent.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1440) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     infrastructure: file(
       relativePath: { eq: "infrastructure_transparent.png" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1440) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     infrastructurefixed: file(
       relativePath: { eq: "infrastructure_transparent.png" }
     ) {
       childImageSharp {
-        fixed(width: 320) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(width: 320, layout: FIXED)
       }
     }
     merge: file(relativePath: { eq: "eth2/merge.png" }) {
       childImageSharp {
-        fixed(width: 320) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(width: 320, layout: FIXED)
       }
     }
   }

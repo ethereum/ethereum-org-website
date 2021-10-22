@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
 import { shuffle } from "lodash"
@@ -78,7 +78,7 @@ const SubtitleThree = styled.div`
   text-align: center;
 `
 
-const FindWallet = styled(Img)`
+const FindWallet = styled(GatsbyImage)`
   margin-top: 2rem;
   max-width: 800px;
   background-size: cover;
@@ -202,20 +202,17 @@ const articles = [
   {
     title: <Translation id="page-wallets-protecting-yourself" />,
     description: "MyCrypto",
-    link:
-      "https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds",
+    link: "https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds",
   },
   {
     title: <Translation id="page-wallets-keys-to-safety" />,
     description: <Translation id="page-wallets-blog" />,
-    link:
-      "https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf",
+    link: "https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf",
   },
   {
     title: <Translation id="page-wallets-how-to-store" />,
     description: "ConsenSys",
-    link:
-      "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
+    link: "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
   },
 ]
 
@@ -228,7 +225,7 @@ const WalletsPage = ({ data }) => {
     // Add fields for CardList
     const randomWallets = shuffle(
       nodes.map((node) => {
-        node.image = data[node.id].childImageSharp.fixed
+        node.image = data[node.id].childImageSharp.gatsbyImageData
         node.title = node.name
         node.description = translateMessageId(
           `page-find-wallet-description-${node.id}`,
@@ -264,7 +261,7 @@ const WalletsPage = ({ data }) => {
     title: translateMessageId("page-wallets-title", intl),
     header: translateMessageId("page-wallets-slogan", intl),
     subtitle: translateMessageId("page-wallets-subtitle", intl),
-    image: data.hero.childImageSharp.fluid,
+    image: data.hero.childImageSharp.gatsbyImageData,
     alt: translateMessageId("page-wallets-alt", intl),
     buttons: [
       {
@@ -279,7 +276,7 @@ const WalletsPage = ({ data }) => {
       <PageMetadata
         title={translateMessageId("page-wallets-meta-title", intl)}
         description={translateMessageId("page-wallets-meta-description", intl)}
-        image={data.ogImage.childImageSharp.fixed.src}
+        image={data.ogImage.childImageSharp.gatsbyImageData.src}
       />
       <PageHero content={heroContent} />
       <StyledGrayContainer>
@@ -420,7 +417,10 @@ const WalletsPage = ({ data }) => {
             <ButtonLink to="/wallets/find-wallet/">
               <Translation id="page-wallets-find-wallet-btn" />
             </ButtonLink>
-            <FindWallet fluid={data.findWallet.childImageSharp.fluid} alt="" />
+            <FindWallet
+              fluid={data.findWallet.childImageSharp.gatsbyImageData}
+              alt=""
+            />
           </CentralColumn>
         </Content>
       </GradientContainer>
@@ -503,7 +503,7 @@ const WalletsPage = ({ data }) => {
         </H2>
         <CalloutCardContainer>
           <StyledCallout
-            image={data.eth.childImageSharp.fixed}
+            image={data.eth.childImageSharp.gatsbyImageData}
             title={translateMessageId("page-wallets-get-some", intl)}
             alt={translateMessageId("page-wallets-get-some-alt", intl)}
             description={translateMessageId("page-wallets-get-some-desc", intl)}
@@ -515,7 +515,7 @@ const WalletsPage = ({ data }) => {
             </div>
           </StyledCallout>
           <StyledCallout
-            image={data.dapps.childImageSharp.fixed}
+            image={data.dapps.childImageSharp.gatsbyImageData}
             title={translateMessageId("page-wallets-try-dapps", intl)}
             alt={translateMessageId("page-wallets-try-dapps-alt", intl)}
             description={translateMessageId(
@@ -540,9 +540,7 @@ export default WalletsPage
 export const calloutImage = graphql`
   fragment calloutImage on File {
     childImageSharp {
-      fixed(height: 200) {
-        ...GatsbyImageSharpFixed
-      }
+      gatsbyImageData(height: 200, layout: FIXED)
     }
   }
 `
@@ -550,34 +548,26 @@ export const calloutImage = graphql`
 export const listImage = graphql`
   fragment listImage on File {
     childImageSharp {
-      fixed(height: 20) {
-        ...GatsbyImageSharpFixed
-      }
+      gatsbyImageData(height: 20, layout: FIXED)
     }
   }
 `
 
 export const query = graphql`
-  query {
+  {
     hero: file(relativePath: { eq: "wallet.png" }) {
       childImageSharp {
-        fluid(maxHeight: 600) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(height: 600, layout: FULL_WIDTH)
       }
     }
     findWallet: file(relativePath: { eq: "wallets/find-wallet.png" }) {
       childImageSharp {
-        fluid(maxWidth: 800, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 800, quality: 100, layout: CONSTRAINED)
       }
     }
     ogImage: file(relativePath: { eq: "wallet-cropped.png" }) {
       childImageSharp {
-        fixed(width: 738) {
-          src
-        }
+        gatsbyImageData(width: 738, placeholder: BLURRED, layout: FIXED)
       }
     }
     eth: file(relativePath: { eq: "eth-logo.png" }) {

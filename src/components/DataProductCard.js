@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import Link from "./Link"
 
@@ -14,7 +14,7 @@ const ImageWrapper = styled.div`
   min-height: 200px;
 `
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   width: 100%;
   align-self: center;
   max-width: 372px;
@@ -88,7 +88,7 @@ const Box = styled.div`
   align-items: center;
 `
 
-const Logo = styled(Img)`
+const Logo = styled(GatsbyImage)`
   min-width: 24px;
   margin-right: 0.5rem;
 `

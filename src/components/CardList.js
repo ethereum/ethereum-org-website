@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import Link from "./Link"
 
@@ -68,7 +68,7 @@ const RightContainer = styled.div`
   flex-wrap: wrap;
 `
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   min-width: 20px;
   margin-right: 1rem;
   margin-top: 4px;

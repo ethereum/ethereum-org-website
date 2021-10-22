@@ -174,9 +174,7 @@ const NoResultsSingle = ({ children }) => (
 export const cardListImage = graphql`
   fragment cardListImage on File {
     childImageSharp {
-      fixed(width: 20) {
-        ...GatsbyImageSharpFixed
-      }
+      gatsbyImageData(width: 20, layout: FIXED)
     }
   }
 `
@@ -489,7 +487,7 @@ const EthExchanges = () => {
           title: exchanges[exchange].name,
           description,
           link: exchanges[exchange].url,
-          image: exchanges[exchange].image.childImageSharp.fixed,
+          image: exchanges[exchange].image.childImageSharp.gatsbyImageData,
         }
       })
       .sort((a, b) => a.title.localeCompare(b.title))
@@ -530,7 +528,7 @@ const EthExchanges = () => {
               title: currentWallet,
               description,
               link: walletObject.url,
-              image: walletObject.image.childImageSharp.fixed,
+              image: walletObject.image.childImageSharp.gatsbyImageData,
             })
           }, [])
         )

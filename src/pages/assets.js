@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import { ThemeContext } from "styled-components"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 
 import AssetDownload from "../components/AssetDownload"
@@ -17,7 +17,7 @@ import { translateMessageId } from "../utils/translations"
 // import darkVideo from "../assets/ethereum-hero-dark.mp4"
 // import lightVideo from "../assets/ethereum-hero-light.mp4"
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   align-self: center;
   width: 100%;
   margin-bottom: 2rem;
@@ -97,7 +97,7 @@ const AssetsPage = ({ data }) => {
         <HeroContainer>
           <Header>
             <Image
-              fixed={heroImage.childImageSharp.fixed}
+              fixed={heroImage.childImageSharp.gatsbyImageData}
               alt={translateMessageId("page-assets-eth-diamond-gray", intl)}
             />
             <h1>
@@ -557,36 +557,28 @@ export default AssetsPage
 export const heroImage = graphql`
   fragment heroImage on File {
     childImageSharp {
-      fluid(maxWidth: 1440) {
-        ...GatsbyImageSharpFluid
-      }
+      gatsbyImageData(layout: FULL_WIDTH)
     }
   }
 `
 export const assetItem = graphql`
   fragment assetItem on File {
     childImageSharp {
-      fluid(maxWidth: 1000) {
-        ...GatsbyImageSharpFluid
-      }
+      gatsbyImageData(layout: FULL_WIDTH)
     }
   }
 `
 
 export const query = graphql`
-  query {
+  {
     heroImage: file(relativePath: { eq: "assets/eth-diamond-black.png" }) {
       childImageSharp {
-        fixed(width: 80) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(width: 80, layout: FIXED)
       }
     }
     heroImageDark: file(relativePath: { eq: "assets/eth-diamond-purple.png" }) {
       childImageSharp {
-        fixed(width: 80) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(width: 80, layout: FIXED)
       }
     }
     hero: file(relativePath: { eq: "home/hero.png" }) {

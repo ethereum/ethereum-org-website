@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { useQuery, gql } from "@apollo/client"
 
 import GitStars from "./GitStars"
@@ -16,7 +16,7 @@ const ImageWrapper = styled.div`
   min-height: 200px;
 `
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   width: 100%;
   align-self: center;
   max-width: 372px;

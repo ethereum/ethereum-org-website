@@ -1,7 +1,7 @@
 import React from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { translateMessageId } from "../utils/translations"
 import Morpher from "./Morpher"
@@ -10,7 +10,7 @@ import Translation from "./Translation"
 import Link from "./Link"
 import { Divider } from "./SharedStyledComponents"
 
-const Hero = styled(Img)`
+const Hero = styled(GatsbyImage)`
   width: 100%;
   min-height: 380px;
   max-height: 500px;
@@ -102,33 +102,25 @@ const H3 = styled.h3`
 const LegacyPageHome = () => {
   const intl = useIntl()
   const data = useStaticQuery(graphql`
-    query {
+    {
       hero: file(relativePath: { eq: "home/hero.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1440) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
       individuals: file(relativePath: { eq: "doge-computer.png" }) {
         childImageSharp {
-          fixed(height: 200) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(height: 200, layout: FIXED)
         }
       }
       developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
         childImageSharp {
-          fixed(height: 200) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(height: 200, layout: FIXED)
         }
       }
       enterprise: file(relativePath: { eq: "enterprise-eth.png" }) {
         childImageSharp {
-          fixed(height: 200) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(height: 200, layout: FIXED)
         }
       }
     }
@@ -180,7 +172,7 @@ const LegacyPageHome = () => {
         description={translateMessageId("page-index-meta-description", intl)}
       />
       <Hero
-        fluid={data.hero.childImageSharp.fluid}
+        fluid={data.hero.childImageSharp.gatsbyImageData}
         alt={translateMessageId("page-index-hero-image-alt", intl)}
         loading="eager"
       />
@@ -202,8 +194,8 @@ const LegacyPageHome = () => {
         <SectionContainer>
           {sections.map((section, idx) => (
             <Section key={idx}>
-              <Img
-                fixed={section.img.src.childImageSharp.fixed}
+              <GatsbyImage
+                image={section.img.src.childImageSharp.gatsbyImageData}
                 alt={translateMessageId(section.img.alt, intl)}
               />
               <h2>

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import ButtonLink from "./ButtonLink"
 import Translation from "./Translation"
@@ -59,7 +59,7 @@ const LeftContainer = styled.div`
   flex-direction: column;
 `
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
   border-radius: 2px;
 `

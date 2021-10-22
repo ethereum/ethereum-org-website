@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import { shuffle } from "lodash"
@@ -91,7 +91,7 @@ const Column = styled.div`
   width: 100%;
 `
 
-const Hero = styled(Img)`
+const Hero = styled(GatsbyImage)`
   flex: 1 1 100%;
   max-width: 800px;
   background-size: cover;
@@ -370,7 +370,7 @@ const ChooseStackPage = ({ data }) => {
   useEffect(() => {
     const list = shuffle(
       frameworksList.map((item) => {
-        item.image = data[item.id].childImageSharp.fixed
+        item.image = data[item.id].childImageSharp.gatsbyImageData
         return item
       })
     )
@@ -455,7 +455,7 @@ const ChooseStackPage = ({ data }) => {
           </Column>
           <Column>
             <Hero
-              fluid={data.hero.childImageSharp.fluid}
+              fluid={data.hero.childImageSharp.gatsbyImageData}
               alt={translateMessageId("alt-eth-blocks", intl)}
               loading="eager"
             />
@@ -611,27 +611,21 @@ export default ChooseStackPage
 export const devtoolImage = graphql`
   fragment devtoolImage on File {
     childImageSharp {
-      fixed(height: 100) {
-        ...GatsbyImageSharpFixed
-      }
+      gatsbyImageData(height: 100, layout: FIXED)
     }
   }
 `
 
 export const query = graphql`
-  query {
+  {
     hero: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       childImageSharp {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 800, layout: CONSTRAINED)
       }
     }
     ogImage: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       childImageSharp {
-        fixed(width: 1200) {
-          src
-        }
+        gatsbyImageData(width: 1200, placeholder: BLURRED, layout: FIXED)
       }
     }
     dapptools: file(relativePath: { eq: "dev-tools/dapptools.png" }) {

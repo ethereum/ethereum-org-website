@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
@@ -64,7 +64,7 @@ const HeroContainer = styled.div`
   }
 `
 
-const Hero = styled(Img)`
+const Hero = styled(GatsbyImage)`
   flex: 1 1 100%;
   max-width: 800px;
   background-size: cover;
@@ -138,7 +138,7 @@ const StyledCard = styled(Card)`
   }
 `
 
-const Banner = styled(Img)`
+const Banner = styled(GatsbyImage)`
   opacity: 0.3;
   width: 100%;
   height: 400px;
@@ -259,14 +259,14 @@ const WhatIsEthereumPage = ({ data }) => {
       title: <Translation id="page-what-is-ethereum-native-title" />,
       to: "/eth/",
       alt: translateMessageId("page-what-is-ethereum-native-alt", intl),
-      image: data.eth.childImageSharp.fixed,
+      image: data.eth.childImageSharp.gatsbyImageData,
       description: <Translation id="page-what-is-ethereum-native-crypto" />,
     },
     {
       title: <Translation id="page-what-is-ethereum-wallets" />,
       to: "/wallets/",
       alt: translateMessageId("page-what-is-ethereum-native-img-alt", intl),
-      image: data.wallets.childImageSharp.fixed,
+      image: data.wallets.childImageSharp.gatsbyImageData,
 
       description: <Translation id="page-what-is-ethereum-wallets-desc" />,
     },
@@ -274,7 +274,7 @@ const WhatIsEthereumPage = ({ data }) => {
       title: <Translation id="page-what-is-ethereum-dapps-title" />,
       to: "/dapps/",
       alt: translateMessageId("page-what-is-ethereum-dapps-img-alt", intl),
-      image: data.dapps.childImageSharp.fixed,
+      image: data.dapps.childImageSharp.gatsbyImageData,
       description: <Translation id="page-what-is-ethereum-dapps-desc" />,
     },
   ]
@@ -283,21 +283,21 @@ const WhatIsEthereumPage = ({ data }) => {
       title: <Translation id="page-what-is-ethereum-defi-title" />,
       to: "/defi/",
       alt: translateMessageId("page-what-is-ethereum-defi-alt", intl),
-      image: data.defi.childImageSharp.fixed,
+      image: data.defi.childImageSharp.gatsbyImageData,
       description: <Translation id="page-what-is-ethereum-defi-description" />,
     },
     {
       title: <Translation id="page-what-is-ethereum-nft-title" />,
       to: "/nft/",
       alt: translateMessageId("page-what-is-ethereum-nft-alt", intl),
-      image: data.nft.childImageSharp.fixed,
+      image: data.nft.childImageSharp.gatsbyImageData,
       description: <Translation id="page-what-is-ethereum-nft-description" />,
     },
     {
       title: <Translation id="page-what-is-ethereum-dao-title" />,
       to: "/dao/",
       alt: translateMessageId("page-what-is-ethereum-dao-alt", intl),
-      image: data.dao.childImageSharp.fixed,
+      image: data.dao.childImageSharp.gatsbyImageData,
       description: <Translation id="page-what-is-ethereum-dao-description" />,
     },
   ]
@@ -309,7 +309,7 @@ const WhatIsEthereumPage = ({ data }) => {
           "page-what-is-ethereum-meta-description",
           intl
         )}
-        image={data.ogImage.childImageSharp.fixed.src}
+        image={data.ogImage.childImageSharp.gatsbyImageData.src}
       />
       <HeroContent>
         <HeroContainer>
@@ -328,7 +328,7 @@ const WhatIsEthereumPage = ({ data }) => {
             </SubtitleTwo>
           </Header>
           <Hero
-            fluid={data.hero.childImageSharp.fluid}
+            fluid={data.hero.childImageSharp.gatsbyImageData}
             alt={translateMessageId(
               "page-what-is-ethereum-alt-img-bazaar",
               intl
@@ -356,7 +356,7 @@ const WhatIsEthereumPage = ({ data }) => {
       </StyledGrayContatiner>
       <BannerContainer>
         <Banner
-          fluid={data.banner.childImageSharp.fluid}
+          fluid={data.banner.childImageSharp.gatsbyImageData}
           alt={translateMessageId("page-what-is-ethereum-alt-img-social", intl)}
         />
         <BannerMessage>
@@ -473,7 +473,7 @@ const WhatIsEthereumPage = ({ data }) => {
       <Content>
         <CardContainer>
           <StyledCallout
-            image={data.developers.childImageSharp.fixed}
+            image={data.developers.childImageSharp.gatsbyImageData}
             title={translateMessageId("page-what-is-ethereum-build", intl)}
             alt={translateMessageId("page-what-is-ethereum-alt-img-lego", intl)}
             description={translateMessageId(
@@ -488,7 +488,7 @@ const WhatIsEthereumPage = ({ data }) => {
             </div>
           </StyledCallout>
           <StyledCallout
-            image={data.community.childImageSharp.fixed}
+            image={data.community.childImageSharp.gatsbyImageData}
             title={translateMessageId("page-what-is-ethereum-community", intl)}
             alt={translateMessageId("page-what-is-ethereum-alt-img-comm", intl)}
             description={translateMessageId(
@@ -513,52 +513,40 @@ export default WhatIsEthereumPage
 export const useCaseImage = graphql`
   fragment useCaseImage on File {
     childImageSharp {
-      fixed(height: 260) {
-        ...GatsbyImageSharpFixed
-      }
+      gatsbyImageData(height: 260, layout: FIXED)
     }
   }
 `
 export const actionCardImage = graphql`
   fragment actionCardImage on File {
     childImageSharp {
-      fixed(width: 368) {
-        ...GatsbyImageSharpFixed
-      }
+      gatsbyImageData(width: 368, layout: FIXED)
     }
   }
 `
 export const calloutImage = graphql`
   fragment calloutImage on File {
     childImageSharp {
-      fixed(height: 200) {
-        ...GatsbyImageSharpFixed
-      }
+      gatsbyImageData(height: 200, layout: FIXED)
     }
   }
 `
 
 export const query = graphql`
-  query {
+  {
     hero: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 800, layout: CONSTRAINED)
       }
     }
     ogImage: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
-        fixed(width: 1200) {
-          src
-        }
+        gatsbyImageData(width: 1200, placeholder: BLURRED, layout: FIXED)
       }
     }
     banner: file(relativePath: { eq: "home/hero.png" }) {
       childImageSharp {
-        fluid(maxHeight: 400) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(height: 400, layout: FULL_WIDTH)
       }
     }
     dapps: file(relativePath: { eq: "doge-computer.png" }) {

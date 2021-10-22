@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const StyledCard = styled.div`
   background: ${(props) => props.theme.colors.searchBackground};
@@ -9,7 +9,7 @@ const StyledCard = styled.div`
   padding: 1.5rem;
 `
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   & > img {
     width: 3em !important;
     height: 3em !important;

@@ -85,9 +85,7 @@ const ClearLink = styled.button`
 export const walletCardImage = graphql`
   fragment walletCardImage on File {
     childImageSharp {
-      fluid(maxWidth: 64) {
-        ...GatsbyImageSharpFluid
-      }
+      gatsbyImageData(width: 64, layout: CONSTRAINED)
     }
   }
 `
