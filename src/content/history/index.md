@@ -36,7 +36,13 @@ The Altair upgrade is the first scheduled upgrade for the [Beacon Chain](/eth2/b
 
 - [Read the Altair upgrade specification](https://github.com/ethereum/eth2.0-specs/tree/dev/specs/altair)
 
-#### <Emoji text="🚨" size={1} mr="0.5rem" /> Beacon Chain node operators {#altair-cta}
+#### <Emoji text=":tada:" size={1} mr="0.5rem" />Fun fact! {#altair-fun-fact}
+
+Altair is the first major network upgrade that will have an exact rollout time. Every upgrade so far has been based on a declared block number on the proof-of-work chain, where block times vary. The Beacon Chain does not require solving for proof-of-work, and instead works on a time-based epoch system consisting of 32 twelve-second "slots" of time where validators can propose blocks. This is why we know exactly when we'll hit epoch 74,240 and Altair will be live!
+
+- [Beaconcha.in Glossary - Slots](https://kb.beaconcha.in/glossary#slots)
+
+#### <Emoji text="🚨" size={1} mr="0.5rem" />Beacon Chain node operators {#altair-cta}
 
 The date for this upgrade has been set for Wednesday, October 27. If you are operating a beacon chain node, _it's time to upgrade_ to a version that supports the Altair upgrade. Check with your clients communication channels for latest information and details on compatible versions.
 
