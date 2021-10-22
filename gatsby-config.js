@@ -181,6 +181,7 @@ module.exports = {
     },
     // Needed for `gatsby-image`
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
     // CSS in JS
     `gatsby-plugin-styled-components`,
     // Source assets
