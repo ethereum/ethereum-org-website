@@ -10,7 +10,7 @@ const DeveloperDocsLinks = ({ headerId }) =>
     .map(({ items }) => (
       <ul>
         {items &&
-          items.map(({ id, to, path, description }) => (
+          items.map(({ id, to, path, description, items }) => (
             <ListItem>
               <Link to={to || path}>
                 <Translation id={id} />
@@ -19,6 +19,16 @@ const DeveloperDocsLinks = ({ headerId }) =>
                 {" – "}
                 <Translation id={description} />
               </i>
+              <ul>
+                {items &&
+                  items.map(({ id, to, path }) => (
+                    <ListItem>
+                      <Link to={to || path}>
+                        <Translation id={id} />
+                      </Link>
+                    </ListItem>
+                  ))}
+              </ul>
             </ListItem>
           ))}
       </ul>
