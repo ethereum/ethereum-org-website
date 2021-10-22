@@ -44,7 +44,6 @@ const getMessages = (path, language) => {
 
 const outdatedMarkdownPages = [
   "/dapps/",
-  "/deprecated-software/",
   "/enterprise/",
   "/eth/",
   "/learn/",
