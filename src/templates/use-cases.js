@@ -34,7 +34,6 @@ import {
   Paragraph,
   Header1,
   Header4,
-  H5,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 
@@ -196,7 +195,6 @@ const components = {
   h2: H2,
   h3: H3,
   h4: Header4,
-  h5: H5,
   p: Paragraph,
   pre: Pre,
   table: MarkdownTable,
