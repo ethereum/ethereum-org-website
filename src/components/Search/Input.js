@@ -50,7 +50,7 @@ const SearchSlash = styled.p`
   color: ${(props) => props.theme.colors.text};
   display: none;
   margin-bottom: 0;
-  padding: 0 5px;
+  padding: 0 7px;
   position: absolute;
   right: 6px;
   top: 20%;
