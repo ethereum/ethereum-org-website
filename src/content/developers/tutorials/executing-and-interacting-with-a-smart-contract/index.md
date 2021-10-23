@@ -35,19 +35,19 @@ Now that we've successfully deployed a smart contract to the ropsten network, le
 
 This guide assumes you already have an [Alchemy account](https://alchemy.com/?r=e68b2f77-7fc7-4ef7-8e9c-cdfea869b9b5), access to our [Dashboard](https://dashboard.alchemyapi.io/) and have gone through our [Hello World Smart Contract](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract) tutorial. 
 
-**🛠 Step 1:** [Create a interact.js file](#step-1-create-a-interact.js-file)
+**🛠 Step 1:** [Create a interact.js file](./#step-1-create-a-interact.js-file)
 
-**🧑‍🎨 Step 2:**  [Update your .env file](#step-2-update-your-.env-file)
+**🧑‍🎨 Step 2:**  [Update your .env file](./#step-2-update-your-.env-file)
 
-**🤝 Step 3:** [Grab your contract ABI](#step-3-grab-your-contract-ABI)
+**🤝 Step 3:** [Grab your contract ABI](./#step-3-grab-your-contract-ABI)
 
-**💻 Step 4:** [Create an instance of your contract](#step-4-create-an-instance-of-your-contract)
+**💻 Step 4:** [Create an instance of your contract](./#step-4-create-an-instance-of-your-contract)
 
-**📖 Step 5:** [Read the init message](#step-5-read-the-init-message)
+**📖 Step 5:** [Read the init message](./#step-5-read-the-init-message)
 
-**🔺 Step 6:** [Update the message](#step-6-update-the-message)
+**🔺 Step 6:** [Update the message](./#step-6-update-the-message)
 
-**⏫ Step 7:** [Read the new message](#step-7-read-the-new-message)
+**⏫ Step 7:** [Read the new message](./#step-7-read-the-new-message)
 
 ### Step 1: Create a interact.js file {#step-1-create-a-interact.js-file}
 
