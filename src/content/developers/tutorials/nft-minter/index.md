@@ -33,29 +33,29 @@ In this tutorial, we will be using [React](https://reactjs.org/) as our frontend
 
 As a prerequisite, you should have a beginner-level understanding of React—know how components, props, useState/useEffect, and basic function calling works. If you've never heard of any of those terms before, you may want to check out this [Intro to React tutorial](https://reactjs.org/tutorial/tutorial.html). For the more visual learners, we highly recommend this excellent [Full Modern React Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d) video series by Net Ninja.
 
-**🛠 Step 0:** [Making NFTs 101](#step-0-making-nfts-101)
+**🛠 Step 0:** [Making NFTs 101](./#step-0-making-nfts-101)
 
-**🧑‍🎨 Step 1:**  [Clone the starter files](#step-1-clone-the-starter-files)
+**🧑‍🎨 Step 1:**  [Clone the starter files](./#step-1-clone-the-starter-files)
 
-**🤝 Step 2:** [Check out our starter files](#step-2-check-out-our-starter-files)
+**🤝 Step 2:** [Check out our starter files](./#step-2-check-out-our-starter-files)
 
-**💻 Step 3:** [Set up your Ethereum wallet](#step-3-set-up-your-ethereum-wallet)
+**💻 Step 3:** [Set up your Ethereum wallet](./#step-3-set-up-your-ethereum-wallet)
 
-**📖 Step 4:** [Connect Metamask to your UI](#step-4-connect-metamask-to-your-UI)
+**📖 Step 4:** [Connect Metamask to your UI](./#step-4-connect-metamask-to-your-UI)
 
-**🔺 Step 5:** [NFT Metadata 101](#step-5-nft-metadata-101)
+**🔺 Step 5:** [NFT Metadata 101](./#step-5-nft-metadata-101)
 
-**⏫ Step 6:** [Use Pinata to pin your metadata to IPFS](#step-6-use-pinata-to-pin-your-metadata-to-IPFS)
+**⏫ Step 6:** [Use Pinata to pin your metadata to IPFS](./#step-6-use-pinata-to-pin-your-metadata-to-IPFS)
 
-**🪄 Step 7:** [Load your smart contract](#step-7-load-your-smart-contract)
+**🪄 Step 7:** [Load your smart contract](./#step-7-load-your-smart-contract)
 
-**✍️ Step 8:** [Implement the mintNFT function](#step-8-implement-the-mintnft-function)
+**✍️ Step 8:** [Implement the mintNFT function](./#step-8-implement-the-mintnft-function)
 
-**📞 Step 9:** [Connect mintNFT to our Minter.js frontend](#step-9-connect-mintnft-to-our-minter.js-frontend)
+**📞 Step 9:** [Connect mintNFT to our Minter.js frontend](./#step-9-connect-mintnft-to-our-minter.js-frontend)
 
-**🤖 Step 10:** [Deploy your NFT to a Live Website](#step-10-deploy-your-NFT-to-a-live-website)
+**🤖 Step 10:** [Deploy your NFT to a Live Website](./#step-10-deploy-your-NFT-to-a-live-website)
 
-**🚀 Step 11:** [Take the blockchain world by storm](#step-11-take-the-blockchain-world-by-storm)
+**🚀 Step 11:** [Take the blockchain world by storm](./#step-11-take-the-blockchain-world-by-storm)
 
 And if you haven't already, you'll definitely need an Alchemy account to complete this tutorial as well as build anything on the blockchain. Sign up for a free account [here](https://alchemy.com/?a=eth-org-nft-minter)!
 
