@@ -23,21 +23,45 @@ published: 2021-10-06
 
 One of the greatest challenges for developers coming from a Web2 background is figuring out how to connect your smart contact to a frontend project and interact with it.
 
-By building an NFT minter—a simple UI where you can input a link to your digital asset, a title,  and a description —you'll learn how to:
+By building an NFT minter — a simple UI where you can input a link to your digital asset, a title,  and a description — you'll learn how to:
 
 * Connect to Metamask via your frontend project
 * Call smart contract methods from your frontend
 * Sign transactions using Metamask
 
-In this tutorial, we will be using [React](https://reactjs.org/) as our frontend framework. Because this tutorial is primarily focused on Web3 development, we won't be spending much time breaking down React fundamentals. Instead, we'll be focusing on bringing functionality to our project
+In this tutorial, we will be using [React](https://reactjs.org/) as our frontend framework. Because this tutorial is primarily focused on Web3 development, we won't be spending much time breaking down React fundamentals. Instead, we'll be focusing on bringing functionality to our project.
 
 As a prerequisite, you should have a beginner-level understanding of React—know how components, props, useState/useEffect, and basic function calling works. If you've never heard of any of those terms before, you may want to check out this [Intro to React tutorial](https://reactjs.org/tutorial/tutorial.html). For the more visual learners, we highly recommend this excellent [Full Modern React Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d) video series by Net Ninja.
+
+**🛠 Step 0:** [Making NFTs 101](#step-0-making-nfts-101)
+
+**🧑‍🎨 Step 1:**  [Clone the starter files](#step-1-clone-the-starter-files)
+
+**🤝 Step 2:** [Check out our starter files](#step-2-check-out-our-starter-files)
+
+**💻 Step 3:** [Set up your Ethereum wallet](#step-3-set-up-your-ethereum-wallet)
+
+**📖 Step 4:** [Connect Metamask to your UI](#step-4-connect-metamask-to-your-UI)
+
+**🔺 Step 5:** [NFT Metadata 101](#step-5-nft-metadata-101)
+
+**⏫ Step 6:** [Use Pinata to pin your metadata to IPFS](#step-6-use-pinata-to-pin-your-metadata-to-IPFS)
+
+**🪄 Step 7:** [Load your smart contract](#step-7-load-your-smart-contract)
+
+**✍️ Step 8:** [Implement the mintNFT function](#step-8-implement-the-mintnft-function)
+
+**📞 Step 9:** [Connect mintNFT to our Minter.js frontend](#step-9-connect-mintnft-to-our-minter.js-frontend)
+
+**🤖 Step 10:** [Deploy your NFT to a Live Website](#step-10-deploy-your-NFT-to-a-live-website)
+
+**🚀 Step 11:** [Take the blockchain world by storm](#step-11-take-the-blockchain-world-by-storm)
 
 And if you haven't already, you'll definitely need an Alchemy account to complete this tutorial as well as build anything on the blockchain. Sign up for a free account [here](https://alchemy.com/?a=eth-org-nft-minter)!
 
 Without further ado, let's get started!
 
-## Step 0: Making NFTs 101
+## Step 0: Making NFTs 101 {#step-0-making-nfts-101}
 
 Before we even start looking at any code, it's important to understand how making an NFT works. It involves two steps:
 
@@ -57,7 +81,7 @@ In this tutorial, we're going to focus on part 2, calling an existing NFT's smar
 
 Cool, now that we understand how making an NFT works, let's clone our starter files!
 
-## Step 1: Clone the starter files
+## Step 1: Clone the starter files {#step-1-clone-the-starter-files}
 
 First, go to the [nft-minter-tutorial](https://github.com/alchemyplatform/nft-minter-tutorial) github repository to get the starter files for this project. Clone this repository into your local environment.
 
@@ -74,7 +98,7 @@ Next open your copy of `minter-starter-files` in to your favorite code editor \(
 
 All of the code we'll write will live under the `src` folder. We'll be editing the `Minter.js` component and writing additional javascript files to give our project Web3 functionality.
 
-## Step 2: Check out our starter files
+## Step 2: Check out our starter files {#step-2-check-out-our-starter-files}
 
 Before we start coding, it's important to check out what's already provided for us in the starter files.
 
@@ -210,7 +234,7 @@ If you go to the `App.js` file, which is the main component in React that acts a
 
 Now that we understand what we're working with, let's set up our Ethereum wallet!
 
-## Step 3: Set up your Ethereum wallet
+## Step 3: Set up your Ethereum wallet {#step-3-set-up-your-ethereum-wallet}
 
 For users to be able to interact with your smart contract they will need to connect their Ethereum wallet to your dApp.  
 
@@ -238,7 +262,7 @@ To double check our balance is there, let’s make an [eth\_getBalance](https://
 
 Phew! Our fake money is all there! 🤑
 
-## Step 4: Connect Metamask to your UI
+## Step 4: Connect Metamask to your UI {#step-4-connect-metamask-to-your-UI}
 
 Now that our Metamask wallet is set up, let's connect our dApp to it!
 
@@ -486,7 +510,7 @@ useEffect(async () => {
 
 And voila! We've  completed programming all of our wallet functionality! Now that our wallet is set up, let's figure out how to mint our NFT!
 
-## Step 5: NFT Metadata 101
+## Step 5: NFT Metadata 101 {#step-5-nft-metadata-101}
 
 So remember the NFT metadata we just talked about in Step 0 of this tutorial—it brings an NFT to life, allowing it to have properties, such as a digital asset, name, description, and other attributes.
 
@@ -500,9 +524,9 @@ The text in the "Link to Asset", "Name", "Description" fields will comprise the 
 
 To store our metadata on IPFS, we will use [Pinata](https://pinata.cloud/), a convenient IPFS API and toolkit. In the next step, we'll explain exactly how to do this!
 
-## Step 6: Use [Pinata](https://pinata.cloud/) to pin your metadata to IPFS
+## Step 6: Use Pintata to pin your metadata to IPFS {#step-6-use-pinata-to-pin-your-metadata-to-IPFS}
 
-If you don't have a Pinata account, sign up for a free account [here](https://pinata.cloud/signup) and complete the steps to verify your email and account.
+If you don't have a [Pinata](https://pinata.cloud/) account, sign up for a free account [here](https://pinata.cloud/signup) and complete the steps to verify your email and account.
 
 ### Create your Pinata API key
 
@@ -602,7 +626,7 @@ Then we have our asynchronous function `pinJSONToIPFS`, which takes a `JSONBody`
 
 As with our `connectWallet`function return types, we're returning JSON objects so we can use  their parameters to update our state variables and UI.
 
-## Step 7: Load your smart contract
+## Step 7: Load your smart contract {#step-7-load-your-smart-contract}
 
 Now that we have a way to upload our NFT metadata to IPFS via our `pinJSONToIPFS` function, we're going to need a way to load an instance of our smart contract so we can call its `mintNFT` function.
 
@@ -678,7 +702,7 @@ const contractAddress = "0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE";
 
 Once we have both of those, we're ready to start coding our mint function!
 
-## Step 8: Implement the `mintNFT` function
+## Step 8: Implement the mintNFT function {#step-8-implement-the-mintnft-function}
 
 Inside your `interact.js` file, let's define our function, `mintNFT`, which eponymously will mint our NFT.
 
@@ -863,7 +887,7 @@ export const mintNFT = async(url, name, description) => {
 
 That's one giant function! Now, we just need to connect our `mintNFT` function to our `Minter.js` component...
 
-## Step 9: Connect `mintNFT` to our `Minter.js` frontend
+## Step 9: Connect mintNFT to our Minter.js frontend {#step-9-connect-mintnft-to-our-minter.js-fronten}
 
 Open up your `Minter.js` file and update the  `import { connectWallet, getCurrentWalletConnected } from "./utils/interact.js";` line at the top to be:
 
@@ -880,15 +904,13 @@ const onMintPressed = async () => {
 };
 ```
 
-## Step 10: Deploy your NFT to a Live Website
+## Step 10: Deploy your NFT to a Live Website {#step-10-deploy-your-NFT-to-a-live-website}
 
-Ready to take your project live for users to interact with? Check out the tutorial below for deploying your Minter to a live website:
-
-{% page-ref page="how-do-i-deploy-nfts-online.md" %}
+Ready to take your project live for users to interact with? Check out [this tutorial](https://docs.alchemy.com/alchemy/tutorials/nft-minter/how-do-i-deploy-nfts-online) for deploying your Minter to a live website.
 
 One last step...
 
-## Step 11: Take the blockchain world by storm 🚀
+## Step 11: Take the blockchain world by storm {#step-11-take-the-blockchain-world-by-storm)}
 
 JK, you made it to the end of the tutorial! To recap, by building an NFT minter, you successfully learned how to:
 
