@@ -90,7 +90,7 @@
   "page-find-wallet-we-found": "我们发现",
   "page-find-wallet-withdraw": "变现至银行",
   "page-find-wallet-withdraw-desc": "无需交易所，您就可以将您的ETH直接变现并存入您的银行账户。",
-  "page-find-wallet-yet": "没有",
+  "page-find-wallet-yet": "",
   "page-find-wallet-zengo-logo-alt": "ZenGo徽标",
   "page-stake-eth": "质押ETH"
 }
