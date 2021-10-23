@@ -40,17 +40,17 @@ As a prerequisite, you should have a beginner-level understanding of React—kno
 
 What are we here for? Let's get started! 😎
 
-**🛠 Step 1:** [Clone the starter files](#step-1-starter-files)
+**🛠 Step 1:** [Clone the starter files](./#step-1-starter-files)
 
-**🧑‍🎨 Step 2:**  [Check out the starter files](#step-2-check-out-the-starter-files)
+**🧑‍🎨 Step 2:**  [Check out the starter files](./#step-2-check-out-the-starter-files)
 
-**🤝 Step 3:** [Read from your smart contract](#step-3-read-from-your-smart-contract)
+**🤝 Step 3:** [Read from your smart contract](./#step-3-read-from-your-smart-contract)
 
-**💻 Step 4:** [Set up your Ethereum wallet](#step-4-create-an-instance-of-your-contract)
+**💻 Step 4:** [Set up your Ethereum wallet](./#step-4-create-an-instance-of-your-contract)
 
-**📖 Step 5:** [Connect Metamask to your UI](#step-5-connect-metamask-to-your-UI)
+**📖 Step 5:** [Connect Metamask to your UI](./#step-5-connect-metamask-to-your-UI)
 
-**🔺 Step 6:** [Implement the `updateMessage` function](#step-6-implement-the-updateMessage-function)
+**🔺 Step 6:** [Implement the `updateMessage` function](./#step-6-implement-the-updateMessage-function)
 
 ## Step 1: Clone the starter files {#step-1-starter-files}
 
