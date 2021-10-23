@@ -4,6 +4,7 @@ description: Oracolele te ajută să introduci date din lumea reală în aplica�
 lang: ro
 sidebar: true
 incomplete: true
+isOutdated: true
 ---
 
 Oracolele sunt fluxuri de date care conectează Ethereum la informații din lumea reală, în afara lanțului, astfel încât să poți interoga datele în contractele tale inteligente. De exemplu, aplicațiile dapp de predicție de piață utilizează oracole pentru a deconta plăți pe baza evenimentelor. O piață de predicție îți poate cere să pariezi ETH pe următorul președinte al Statelor Unite. Vor folosi un oracol pentru a confirma rezultatul și pentru a plăti câștigătorilor.

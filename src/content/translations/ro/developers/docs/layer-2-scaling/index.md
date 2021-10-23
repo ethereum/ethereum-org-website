@@ -5,6 +5,7 @@ lang: ro
 sidebar: true
 incomplete: true
 sidebarDepth: 3
+isOutdated: true
 ---
 
 Nivelul 2 este un termen colectiv pentru soluții concepute pentru a te ajuta la scalarea aplicației prin gestionarea tranzacțiilor din lanțul principal Ethereum (nivelul 1). Viteza de tranzacție suferă atunci când rețeaua este ocupată, ceea ce poate face experiența utilizatorului slabă pentru anumite tipuri de aplicații dapp. Și pe măsură ce rețeaua devine mai aglomerată, prețurile gazului cresc, pe măsură ce expeditorii de tranzacții își propun să se supraliciteze reciproc. Aceasta poate face ca utilizarea Ethereum să fie foarte costisitoare.

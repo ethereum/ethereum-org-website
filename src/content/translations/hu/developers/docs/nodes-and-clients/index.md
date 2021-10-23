@@ -4,6 +4,7 @@ description: Egy áttekintő az Ethereum csomópontokról és kliens szoftverekr
 lang: hu
 sidebar: true
 sidebarDepth: 2
+isOutdated: true
 ---
 
 Ahhoz, hogy az Ethereum decentralziáltan tudjon működni, egy elosztott csomópontokból álló hálózatra van szüksége, mely blokkokat és tranzakciós adatokat tud érvényesíteni. Egy kliensnek nevezett alkalmazásra van szükséged az eszközödön, hogy egy csomópontot "futtass".

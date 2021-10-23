@@ -4,6 +4,7 @@ description: Historia blockchainu Ethereum, w tym najważniejsze kamienie milowe
 lang: pl
 sidebar: true
 sidebarDepth: 1
+isOutdated: true
 ---
 
 # Historia Ethereum {#the-history-of-ethereum}

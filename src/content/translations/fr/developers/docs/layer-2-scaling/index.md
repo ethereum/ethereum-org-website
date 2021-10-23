@@ -5,6 +5,7 @@ lang: fr
 sidebar: true
 incomplete: true
 sidebarDepth: 3
+isOutdated: true
 ---
 
 La couche 2 est un terme collectif désignant les solutions conçues pour aider à redimensionner votre application en gérant les transactions hors de la chaîne principale Ethereum (couche 1). La vitesse de transaction est affectée lorsque le réseau est occupé, ce qui peu appauvrir l'expérience utilisateur pour certains types de DApps. Et plus le réseau est fréquenté, plus le prix du carburant augmente, car les expéditeurs de transactions cherchent à surenchérir. Cela peut rendre l'utilisation d'Ethereum très onéreuse.

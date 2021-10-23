@@ -22,11 +22,11 @@ When looking at decentralized storage (dStorage) options, there are a few things
 
 ### Blockchain-based {#blockchain-based}
 
-For a piece of data to persist forever, we need to use a persistence mechanism. For example, on Ethereum, the persistence mechanism is that the whole chain needs to be accounted for when running a node. New pieces of data get tacked onto the end of the chain, and it continues to grow.
+For a piece of data to persist forever, we need to use a persistence mechanism. For example, on Ethereum, the persistence mechanism is that the whole chain needs to be accounted for when running a node. New pieces of data get tacked onto the end of the chain, and it continues to grow - requiring every node to replicate all the embedded data.
 
-This is known as ** blockchain-based** persistence.
+This is known as **blockchain-based** persistence.
 
-The issue with blockchain-based persistence is that the chain could get far too big to upkeep and store all the data feasibly.
+The issue with blockchain-based persistence is that the chain could get far too big to upkeep and store all the data feasibly (e.g. [many sources](https://healthit.com.au/how-big-is-the-internet-and-how-do-we-measure-it/) estimate the Internet to require over 40 Zetabytes of storage capacity).
 
 The blockchain must also have some type of incentive structure. For blockchain-based persistence, there is a payment made to the miner. When the data is added to the chain, the nodes are paid to add the data on.
 
@@ -37,7 +37,7 @@ Platforms with blockchain-based persistence:
 
 ### Contract-based {#contract-based}
 
-**Contract-based** persistence has the intuition that data cannot be stored forever and instead must be upkept with contract agreements. These are agreements made with multiple nodes that have promised to hold a piece of data for a period of time. They must be refunded or renewed whenever they run out to keep the data persisted.
+**Contract-based** persistence has the intuition that data cannot be replicated by every node and stored forever, and instead must be upkept with contract agreements. These are agreements made with multiple nodes that have promised to hold a piece of data for a period of time. They must be refunded or renewed whenever they run out to keep the data persisted.
 
 In most cases, instead of storing all data on-chain, the hash of where the data is located on a chain gets stored. This way, the entire chain doesn't need to scale to keep all of the data.
 
@@ -50,9 +50,12 @@ Platforms with contract-based persistence:
 
 ### Additional considerations {#additional-considertion}
 
-As a bonus, IPFS doesn't really have an incentive structure for holding data, but it is an excellent tool in the community. If you'd like data to persist on IPFS, you have to reach out to a pinning service, which will "pin" your data for you. You can even run your own node and contribute to the network!
+IPFS is a distributed system for storing and accessing files, websites, applications, and data. It doesn't have a built-in incentive scheme, but can instead be used with any of the contract-based incentive solutions above for longer-term persistence. Another way to persist data on IPFS is to work with a pinning service, which will "pin" your data for you. You can even run your own IPFS node and contribute to the network to persist your and/or other's data for free!
 
-- [IPFS](https://ipfs.io/)
+- [IPFS](https://docs.ipfs.io/concepts/what-is-ipfs/)
+- [Pinata](https://www.pinata.cloud/) _(IPFS pinning service)_
+- [web3.storage](https://web3.storage/) _(IPFS/Filecoin pinning service)_
+- [Infura](https://infura.io/product/ipfs) _(IPFS pinning service)_
 
 ## Data retention {#data-retention}
 

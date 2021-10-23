@@ -1611,7 +1611,7 @@ Return values are always returned in memory.
         require(amounts[amounts.length - 1] >= amountOutMin, 'UniswapV2Router: INSUFFICIENT_OUTPUT_AMOUNT');
 ```
 
-Calculate the amount to be purchased in each swap. It the result is less than the minimum the trader is willing to accept,
+Calculate the amount to be purchased in each swap. If the result is less than the minimum the trader is willing to accept,
 revert out of the transaction.
 
 ```solidity

@@ -50,7 +50,7 @@ npm install @openzeppelin/contracts
 Using the OpenZeppelin library we can create our ERC20 token by writing to `contracts/MyToken.sol` with the following solidity code:
 
 ```solidity
-pragma solidity ^0.6.2;
+pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
@@ -99,7 +99,7 @@ The default version is the `Solidity v0.5.16`. Since our token is written using 
 // Configure your compilers
 compilers: {
   solc: {
-    version: "0.6.2",    // Fetch exact version from solc-bin (default: truffle's version)
+    version: "^0.8.0",    // Fetch exact version from solc-bin (default: truffle's version)
     // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
     // settings: {          // See the solidity docs for advice about optimization and evmVersion
     //  optimizer: {

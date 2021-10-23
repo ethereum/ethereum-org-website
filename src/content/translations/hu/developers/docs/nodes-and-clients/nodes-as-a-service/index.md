@@ -4,6 +4,7 @@ description: Belépőszintű áttekintés a csomópont-szolgáltatásokról, az 
 lang: hu
 sidebar: true
 sidebarDepth: 2
+isOutdated: true
 ---
 
 ## Bevezetés {#Introduction}

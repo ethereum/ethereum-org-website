@@ -4,6 +4,7 @@ description:
 lang: pl
 sidebar: true
 incomplete: true
+isOutdated: true
 ---
 
 Gaz ma kluczowe znaczenie dla sieci Ethereum. To jest paliwo, które pozwala mu działać w taki sam sposób, jak samochód potrzebuje benzyny.

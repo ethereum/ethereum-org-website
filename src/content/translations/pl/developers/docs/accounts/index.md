@@ -3,6 +3,7 @@ title: Konta Ethereum
 description: Wyjaśnienie kont Ethereum – ich struktury danych i powiązania z kryptografią kluczy.
 lang: pl
 sidebar: true
+isOutdated: true
 ---
 
 Konto Ethereum jest jednostką z saldem etheru (ETH), która może wysyłać transakcje na Ethereum. Konta mogą być kontrolowane przez użytkownika lub wdrażane jako inteligentne kontrakty.

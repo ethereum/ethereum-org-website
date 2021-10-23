@@ -4,6 +4,7 @@ description: Áttekintő arról, hogy mi is az a decentralizált tárhely és az
 lang: hu
 sidebar: true
 incomplete: true
+isOutdated: true
 ---
 
 A központilag elhelyezett, egyetlen vállalat vagy szervezet által működtetett szerverrel szemben a decentralizált tárolórendszerek a felhasználói operátorok peer-to-peer hálózatából állnak, akik az összes adat egy részét tárolják, így egy rugalmas fájltárolási és megosztási rendszert hozva létre.

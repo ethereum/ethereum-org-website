@@ -54,6 +54,7 @@ const Page = styled.div`
 // Apply styles for classes within markdown here
 const ContentContainer = styled.article`
   max-width: ${(props) => props.theme.breakpoints.m};
+  width: 100%;
 
   .featured {
     padding-left: 1rem;
@@ -129,7 +130,7 @@ const components = {
   UpcomingEventsList,
 }
 
-const StaticPage = ({ data: { siteData, mdx }, pageContext }) => {
+const StaticPage = ({ data: { siteData, pageData: mdx }, pageContext }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang)
 
@@ -182,7 +183,7 @@ export const staticPageQuery = graphql`
         editContentUrl
       }
     }
-    mdx: mdx(fields: { relativePath: { eq: $relativePath } }) {
+    pageData: mdx(fields: { relativePath: { eq: $relativePath } }) {
       fields {
         slug
       }
@@ -192,6 +193,7 @@ export const staticPageQuery = graphql`
         lang
         sidebar
         sidebarDepth
+        isOutdated
       }
       body
       tableOfContents

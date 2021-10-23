@@ -4,6 +4,7 @@ description: O istorie a blockchain-ului Ethereum care include repere majore, la
 lang: ro
 sidebar: true
 sidebarDepth: 1
+isOutdated: true
 ---
 
 # Istoria Ethereum {#the-history-of-ethereum}

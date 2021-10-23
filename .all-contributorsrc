@@ -2994,7 +2994,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/55744578?v=4",
       "profile": "https://github.com/Anuragtech02",
       "contributions": [
-        "code"
+        "code",
+        "doc"
       ]
     },
     {
@@ -4930,7 +4931,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/49922?v=4",
       "profile": "https://capitalgram.com",
       "contributions": [
-        "ideas"
+        "ideas",
+        "doc"
       ]
     },
     {
@@ -5030,6 +5032,132 @@
       "profile": "https://github.com/0xpranay",
       "contributions": [
         "code"
+      ]
+    },
+    {
+      "login": "Sednaoui",
+      "name": "marc",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7014833?v=4",
+      "profile": "https://github.com/Sednaoui",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "mbaragiola",
+      "name": "Mariano Baragiola",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3682895?v=4",
+      "profile": "https://github.com/mbaragiola",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "under3415",
+      "name": "under3415",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3857822?v=4",
+      "profile": "https://github.com/under3415",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "GaurKS",
+      "name": "Gaurav Kumar Shah",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75743822?v=4",
+      "profile": "https://github.com/GaurKS",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "princeelector",
+      "name": "Hubert Sikorski",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46070006?v=4",
+      "profile": "http://hubertsikorski.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "coreyar",
+      "name": "Corey Rice",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7258308?v=4",
+      "profile": "https://github.com/coreyar",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "ezenwankwogabriel",
+      "name": "Ezenwankwo Gabriel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32826083?v=4",
+      "profile": "https://github.com/ezenwankwogabriel",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "TomLisankie",
+      "name": "Thomas Lisankie",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92654?v=4",
+      "profile": "https://tomlisankie.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "TylerIlunga",
+      "name": "Tyler Ilunga",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11746486?v=4",
+      "profile": "https://www.linkedin.com/in/tylerilunga/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "kocvrek",
+      "name": "Kasia Kosturek",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36547835?v=4",
+      "profile": "http://linkedin.com/in/katarzynakosturek/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "solarpunklabs",
+      "name": "solarpunklabs",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84196983?v=4",
+      "profile": "https://github.com/solarpunklabs",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "aakhtar3",
+      "name": "aakhtar3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16447834?v=4",
+      "profile": "https://ayyazakhtar.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "shryasss",
+      "name": "Shreyas Londhe",
+      "avatar_url": "https://avatars.githubusercontent.com/u/62744899?v=4",
+      "profile": "https://github.com/shryasss",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "timbeccue",
+      "name": "Tim Beccue",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35314207?v=4",
+      "profile": "https://github.com/timbeccue",
+      "contributions": [
+        "content"
       ]
     }
   ],

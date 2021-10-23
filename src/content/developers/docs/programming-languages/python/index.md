@@ -52,7 +52,6 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Brownie](https://github.com/eth-brownie/brownie) - _Python framework for deploying, testing and interacting with Ethereum smart contracts_
 - [Vyper](https://github.com/ethereum/vyper/) - _Pythonic Smart Contract Language for the EVM_
 - [py-evm](https://github.com/ethereum/py-evm) - _implementation of the Ethereum Virtual Machine_
-- [Mamba](https://mamba.black) - _framework to write, compile, and deploy smart contracts written in Vyper language_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _tools for testing Ethereum-based applications_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _utility functions for working with Ethereum related codebases_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _Python wrapper around the solc solidity compiler with 0.5.x support_
@@ -63,6 +62,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 ### Archived / No longer maintained:
 
 - [Trinity](https://github.com/ethereum/trinity) - _Ethereum Python client_
+- [Mamba](https://mamba.black) - _framework to write, compile, and deploy smart contracts written in Vyper language_
 
 Looking for more resources? Check out [ethereum.org/developers](/developers/).
 
@@ -73,6 +73,8 @@ The following Ethereum-based projects use tools mentioned on this page. The rela
 - [Yearn Finance](https://yearn.finance/) and [Yearn Vault Contracts repository](https://github.com/yearn/yearn-vaults)
 - [Curve](https://curve.fi/) and [Curve smart contracts repository](https://github.com/curvefi/curve-contract)
 - [BadgerDAO](https://badger.com/) and [smart contracts using Brownie toolchain](https://github.com/Badger-Finance/badger-system)
+- [Sushi](https://sushi.com/) uses [Python in managing and deploying their vesting contracts](https://github.com/sushiswap/sushi-vesting-protocols)
+- [Alpha Finance](https://alphafinance.io/), of Alpha Homora fame, uses [Brownie to test and deploy smart contracts](https://github.com/AlphaFinanceLab/alpha-staking-contract)
 
 ## Python Community Contributors {#python-community-contributors}
 
