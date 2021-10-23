@@ -61,6 +61,7 @@ const Content = styled.article`
   flex: 1 1 ${(props) => props.theme.breakpoints.m};
   max-width: ${(props) => props.theme.breakpoints.m};
   padding: 3rem 4rem 4rem;
+  margin: 0px auto;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     max-width: 100%;
   }
@@ -83,8 +84,7 @@ const Content = styled.article`
 
 const H1 = styled(Header1)`
   font-size: 2.5rem;
-  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
-    "Liberation Mono", Menlo, Courier, monospace;
+  font-family: ${(props) => props.theme.fonts.monospace};
   text-transform: uppercase;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 2rem;
@@ -103,8 +103,7 @@ const H1 = styled(Header1)`
 `
 
 const H2 = styled(Header2)`
-  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
-    "Liberation Mono", Menlo, Courier, monospace;
+  font-family: ${(props) => props.theme.fonts.monospace};
   text-transform: uppercase;
 
   font-size: 1.5rem;

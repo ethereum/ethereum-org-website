@@ -52,7 +52,8 @@ const Card = styled(Link)`
     0px 10px 17px rgba(0, 0, 0, 0.03), 0px 4px 7px rgba(0, 0, 0, 0.05);
   margin: 1rem;
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-radius: 4px;
     box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
     background: ${(props) => props.theme.colors.tableBackgroundHover};

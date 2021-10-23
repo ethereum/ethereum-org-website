@@ -459,7 +459,7 @@ In 104.2 seconds, the Ethereum network will use the following amount of energy:
 
 There are 86,400 seconds in a day, so `14,400 / 86,400 = 0.1666666667kWh` per second.
 
-If we times that by the amount of time it takes to process 100,000 transaction: `0.1666666667 * 104.2 = 17.3666666701 kWh`.
+If we multiply that by the amount of time it takes to process 100,000 transaction: `0.1666666667 * 104.2 = 17.3666666701 kWh`.
 
 That is **11.6554809866%** of the energy consumed by the same amount of transactions on Visa.
 

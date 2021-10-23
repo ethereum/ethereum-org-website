@@ -54,6 +54,7 @@ const Page = styled.div`
 // Apply styles for classes within markdown here
 const ContentContainer = styled.article`
   max-width: ${(props) => props.theme.breakpoints.m};
+  width: 100%;
 
   .featured {
     padding-left: 1rem;

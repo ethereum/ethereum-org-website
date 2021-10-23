@@ -1,5 +1,5 @@
 ---
-title: Security
+title: Smart contract security
 description: Security considerations for Ethereum developers
 lang: en
 sidebar: true

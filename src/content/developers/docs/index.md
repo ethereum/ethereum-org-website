@@ -7,7 +7,7 @@ sidebar: true
 
 This documentation is designed to help you build with Ethereum. It covers Ethereum as a concept, explains the Ethereum tech stack, and documents advanced topics for more complex applications and use cases.
 
-This is an open-source community effort, so feel free to suggest new topics, add new content, and provide examples wherever you think it might be helpful. All documentation can be edited via GitHub – if you're unsure how, [follow these instructions](https://github.com/ethereum/ethereum-org-website/blob/dev/README.md).
+This is an open-source community effort, so feel free to suggest new topics, add new content, and provide examples wherever you think it might be helpful. All documentation can be edited via GitHub – if you're unsure how, [follow these instructions](https://github.com/ethereum/ethereum-org-website/tree/dev/docs/contributing/EDITING_MARKDOWN.md).
 
 ## Development modules {#development-modules}
 
