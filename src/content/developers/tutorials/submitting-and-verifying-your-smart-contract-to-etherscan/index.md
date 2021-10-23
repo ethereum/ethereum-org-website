@@ -21,7 +21,11 @@ published: 2021-10-06
 
 # 📩 Submitting your Smart Contract to Etherscan
 
-You should have completed part 1 [creating and deploying a smart contract](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract), and part 2 [interacting with your smart contract](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract) prior to starting part 3 below. 
+You should have completed part 1 [creating and deploying a smart contract](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract), and part 2 [interacting with your smart contract](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract) prior to starting part 3 below.
+
+If you're more into video learning, click on the thumbnail below for a step-by-step walkthrough! 👇
+
+[![](https://img.youtube.com/vi/x1a5lrW-9fo/maxresdefault.jpg)](https://www.youtube.com/watch?v=x1a5lrW-9fo)
 
 And if you haven't already, you'll definitely need an Alchemy account to complete any of these tutorials. Sign up for a free account [here](https://alchemy.com/?a=eth-org-etherscan)!
 
@@ -33,17 +37,17 @@ By verifying your smart contract on Etherscan, anyone can view your source code 
 
 ## 📋 Steps to submitting and verifying your smart contract to Etherscan using Alchemy
 
-This guide assumes you already have an [Alchemy account](https://alchemy.com/?r=e68b2f77-7fc7-4ef7-8e9c-cdfea869b9b5), access to our [Dashboard](https://dashboard.alchemyapi.io/), have gone through our [Hello World Smart Contract](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract), and also have completed our [Interacting with a Smart Contract](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract) tutorial.
+This guide assumes you already have an [Alchemy account](https://alchemy.com/?a=eth-org-etherscan), access to our [Dashboard](https://dashboard.alchemyapi.io/), have gone through our [Hello World Smart Contract](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract), and also have completed our [Interacting with a Smart Contract](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract) tutorial.
 
-**🛠 Step 1:** [Generate an API Key on your Etherscan account](./#step-1-generate-an-api-key-on-your-etherscan-account)
+**🛠 Step 1:** [Generate an API Key on your Etherscan account](#step-1-generate-an-api-key-on-your-etherscan-account)
 
-**👷 Step 2:**  [HardHat-deployed smart contracts](./#step-2-hardhat-deployed-smart-contracts)
+**👷 Step 2:**  [HardHat-deployed smart contracts](#step-2-hardhat-deployed-smart-contracts)
 
-**💻 Step 3:** [Truffle-deployed smart contracts](./#step-3-truffle-deployed-smart-contracts)
+**💻 Step 3:** [Truffle-deployed smart contracts](#step-3-truffle-deployed-smart-contracts)
 
-**🧑‍🎨 Step 4:** [Check out your smart contract on Etherscan!](./#step-4-check-out-your-smart-contract-on-etherscan!)
+**🧑‍🎨 Step 4:** [Check out your smart contract on Etherscan!](#step-4-check-out-your-smart-contract-on-etherscan!)
 
-### Step 1: Generate an API Key on your Etherscan account
+### Step 1: Generate an API Key on your Etherscan account {#step-1-generate-an-api-key-on-your-etherscan-account}
 
 An Etherscan API Key is necessary to verify that you're the owner of the smart contract that you're trying to publish. 
 
@@ -82,7 +86,7 @@ PRIVATE_KEY = "your-private-account-address"
 ETHERSCAN_API_KEY = "your-etherscan-key" 
 ```
 
-### Step 2: HardHat-deployed smart contracts
+### Step 2: HardHat-deployed smart contracts {#step-2-hardhat-deployed-smart-contracts}
 
 This is where our steps diverge for HardHat and Truffle deployed smart contracts, as they require different plugins. Skip to the _Step 3: Truffle-deployed smart contracts_ section if you deployed your contract using Truffle.
 
@@ -94,15 +98,18 @@ Publishing your contract to Etherscan with HardHat is super simple. To get start
 npm install --save-dev @nomiclabs/hardhat-etherscan
 ```
 
-Once installed, include the following statement at the top of your `hardhat.config.js`:
+Once installed, include the following statement at the top of your `hardhat.config.js`, and add the Etherscan config options:
 
-```text
+```javascript
+// hardhat.config.js
+
+require('dotenv').config();
+require("@nomiclabs/hardhat-ethers");
 require("@nomiclabs/hardhat-etherscan");
-```
 
-Next, add the following Etherscan config to your `hardhat.config.js` file:
+const { API_URL, PRIVATE_KEY } = process.env;
+const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
 
-```text
 module.exports = {
   solidity: "0.7.3",
   defaultNetwork: "ropsten",
@@ -116,7 +123,7 @@ module.exports = {
   etherscan: {
     // Your API key for Etherscan
     // Obtain one at https://etherscan.io/
-    apiKey: process.env.ETHERSCAN_API_KEY
+    apiKey: ETHERSCAN_API_KEY
   }
 };
 ```
@@ -131,6 +138,8 @@ Finally, run the `verify` task, passing the address of the contract, and the net
 npx hardhat verify --network ropsten DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
 ```
 
+Make sure that `DEPLOYED_CONTRACT_ADDRESS` is the address of your deployed smart contract on the Ropsten test network. Also, the last argument,`'Hello World!'` must be the same string value that you used during the deploy step in Part 1.
+
 If all goes well, you should see the following message in your terminal:
 
 ```text
@@ -143,9 +152,9 @@ Successfully verified contract HelloWorld on Etherscan.
 https://ropsten.etherscan.io/address/<contract-address>#contracts
 ```
 
-Congrats! Your smart contract code should be on Etherescan! Check out [Step 4](./#step-4-check-out-your-smart-contract-on-etherscan!) to see how to view your smart contract code!
+Congrats! Your smart contract code should be on Etherescan! Check out [Step 4](#step-4-check-out-your-smart-contract-on-etherscan!) to see how to view your smart contract code!
 
-### Step 3: Truffle-deployed smart contracts
+### Step 3: Truffle-deployed smart contracts {#step-3-truffle-deployed-smart-contracts}
 
 Skip this section if you deployed your smart contract with HardHat.
 
@@ -253,7 +262,7 @@ Pass - Verified: https://ropsten.etherscan.io/address/<contract-address>#contrac
 Successfully verified 1 contract(s).
 ```
 
-### Step 4: Check out your smart contract on Etherscan!
+### Step 4: Check out your smart contract on Etherscan! {#step-4-check-out-your-smart-contract-on-etherscan!}
 
 When you navigate to the link provided in your terminal, you should be able to see your smart contract code and ABI published on Etherscan!
 
