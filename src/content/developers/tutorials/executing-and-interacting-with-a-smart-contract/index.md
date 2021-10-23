@@ -21,7 +21,7 @@ published: 2021-10-06
 
 Before starting this tutorial on interacting with a smart contract, you should have completed part 1 — [Hello World Smart Contract](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract) (creating and deploying a smart contract). In part 3 we'll go over [submitting our contract to Etherscan](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/submitting-your-smart-contract-to-etherscan) so anyone can understand how to interact with it!
 
-And if you're more into video learning, click on the thumbnail below for a step-by-step walkthrough! 👇
+If you're more into video learning, click on the thumbnail below for a step-by-step walkthrough! 👇
 
 [![](https://img.youtube.com/vi/g73EGNKatDw/maxresdefault.jpg)](https://www.youtube.com/watch?v=sQJ-XQBzEuc)
 
