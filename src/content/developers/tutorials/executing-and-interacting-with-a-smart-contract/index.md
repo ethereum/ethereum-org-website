@@ -34,27 +34,27 @@ There are two versions of this tutorial: one using **Hardhat** and one using **T
 
 This guide assumes you already have an [Alchemy account](https://alchemy.com/?r=e68b2f77-7fc7-4ef7-8e9c-cdfea869b9b5), access to our [Dashboard](https://dashboard.alchemyapi.io/) and have gone through our [Hello World Smart Contract](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract) tutorial. 
 
-**🛠 Step 1:** [Install web3 library](./#step-1-install-web3-library)
+**🛠 Step 1:** [Install web3 library](#step-1-install-web3-library)
 
-**🧑‍🎨 Step 2:**  [Create a contract-interact.js file](./#step-2-create-a-contract-interact.js-file)
+**🧑‍🎨 Step 2:**  [Create a contract-interact.js file](#step-2-create-a-contract-interact.js-file)
 
-**🤝 Step 3:** [Grab your contract ABI](./#step-3-grab-your-contract-ABI)
+**🤝 Step 3:** [Grab your contract ABI](#step-3-grab-your-contract-ABI)
 
-**💻 Step 4:** [Create an instance of your contract](./#step-4-create-an-instance-of-your-contract)
+**💻 Step 4:** [Create an instance of your contract](#step-4-create-an-instance-of-your-contract)
 
-**📖 Step 5:** [Read the init message](./#step-5-read-the-init-message)
+**📖 Step 5:** [Read the init message](#step-5-read-the-init-message)
 
-**🔺 Step 6:** [Update the message](./#step-6-update-the-message)
+**🔺 Step 6:** [Update the message](#step-6-update-the-message)
 
-**⏫ Step 7:** [Update the .env file](./#step-7-update-the-.env-file)
+**⏫ Step 7:** [Update the .env file](#step-7-update-the-.env-file)
 
-**🪄 Step 8:** [Create the transaction](./#step-8-create-the-transaction)
+**🪄 Step 8:** [Create the transaction](#step-8-create-the-transaction)
 
-**✍️ Step 9:** [Sign the transaction](./#step-9-sign-the-transaction)
+**✍️ Step 9:** [Sign the transaction](#step-9-sign-the-transaction)
 
-**📞 Step 10:** [Call updateMessage and run contract-interact.js](./#step-10-call-updatemessage-and-run-contract-interact.js)
+**📞 Step 10:** [Call updateMessage and run contract-interact.js](#step-10-call-updatemessage-and-run-contract-interact.js)
 
-### Step 1: Install web3 library
+### Step 1: Install web3 library {#step-1-install-web3-library}
 
 If you followed the tutorial on [creating your smart contract using Hardhat](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/#create-and-deploy-your-smart-contract-using-hardhat), you already have experience using Ethers.js. Web3 is similar to Ethers as it is a library used to make creating requests to the Ethereum chain easier. There are a handful of [web3 providers](https://docs.alchemy.com/alchemy/introduction/getting-started/#other-web3-libraries) you can choose from, however in this tutorial we'll be using [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3), which is an enhanced web3 library that offers automatic retries and robust WebSocket support. 
 
@@ -64,7 +64,7 @@ In your project home directory run:
 npm install @alch/alchemy-web3
 ```
 
-### Step 2: Create a contract-interact.js file
+### Step 2: Create a contract-interact.js file {#step-2-create-a-contract-interact.js-file}
 
 Inside your `scripts/` folder for the hardhat tutorial, or your home directory for the [Truffle tutorial](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract#create-and-deploy-your-smart-contract-using-truffle), create a `contract-interact.js` file and add the following lines of code:
 
@@ -75,7 +75,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(API_URL);
 ```
 
-### Step 3: Grab your contract ABI
+### Step 3: Grab your contract ABI {#step-3-grab-your-contract-ABI}
 
 Our contract ABI \(Application Binary Interface\) is the interface to interact with our smart contract. You can learn more about Contract ABIs [here](https://docs.alchemy.com/alchemy/guides/eth_getlogs#what-are-ab-is). Hardhat \(and Truffle\) automatically generates an ABI for us and saves it in the HelloWorld.json file.  In order to use this we'll need to parse out the contents by adding the following lines of code to our `contract-interact.js` file:
 
@@ -107,7 +107,7 @@ node scripts/contract-interact.js
 node contract-interact.js
 ```
 
-### Step 4: Create an instance of your contract
+### Step 4: Create an instance of your contract {#step-4-create-an-instance-of-your-contract}
 
 In order to interact with our contract we need to create an instance of it in our code. To do so we'll need our contract address which we can get from the deployment or [Etherscan](https://ropsten.etherscan.io/) by looking up the address you used to deploy the contract. In the above example our contract address is `0x70c86b8d660eBd0adef24E9ACcb389BFb6611B2b`. 
 
@@ -118,7 +118,7 @@ const contractAddress = "0x70c86b8d660eBd0adef24E9ACcb389BFb6611B2b";
 const helloWorldContract = new web3.eth.Contract(contract.abi, contractAddress);
 ```
 
-### Step 5: Read the init message
+### Step 5: Read the init message {#step-5-read-the-init-message}
 
 Remember when we deployed our contract with the`initMessage = "Hello world!"`? We are now going to read that message stored in our smart contract and print it to the console. 
 
@@ -142,13 +142,13 @@ The message is: Hello world!
 
 Congrats! You've just successfully read smart contract data from the Ethereum blockchain, way to go! 
 
-### Step 6: Update the message
+### Step 6: Update the message {#step-6-update-the-message}
 
 Now instead of just reading the message, we'll update the messaged saved in our smart contract using the `update` function. ‌
 
 In order to do so we'll need to create a transaction, sign it, and send it inside another async function that we'll call`updateMessage(newMessage)`. This can be pretty confusing when you first get started so we'll split it up into multiple steps. 
 
-### Step 7: Update the `.env` file
+### Step 7: Update the `.env` file {#step-7-update-the-.env-file}
 
 In order to create and send transactions to the Ethereum chain, we'll need to add a couple more things to our .env file. 
 
@@ -174,7 +174,7 @@ PRIVATE_KEY = "your-private-account-address"
 
 If you haven't already, sign up for Alchemy [here](https://alchemy.com/?a=eth-org-executing)!
 
-### Step 8: Create the transaction
+### Step 8: Create the transaction {#step-8-create-the-transaction}
 
 Define `updateMessage(newMessage)` and create our transaction. 
 
@@ -230,7 +230,7 @@ async function main() {
 main();
 ```
 
-### Step 9: Sign the transaction
+### Step 9: Sign the transaction {#step-9-sign-the-transaction}
 
 Now that we've created our transaction, we need to sign it in order to send it off. Here is where we'll use our private key. 
 
@@ -287,7 +287,7 @@ async function main() {
 main();
 ```
 
-### Step 10: Call `updateMessage` and run `contract-interact.js`
+### Step 10: Call `updateMessage` and run `contract-interact.js` {#step-10-call-updatemessage-and-run-contract-interact.js}
 
 Finally, we can call `updateMessage` with our new message by making an `await` call in `main` for `updateMessage` with your `newMessage.` 
 
