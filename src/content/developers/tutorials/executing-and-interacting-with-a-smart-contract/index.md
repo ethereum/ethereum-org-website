@@ -23,7 +23,7 @@ Before starting this tutorial on interacting with a smart contract, you should h
 
 If you're more into video learning, click on the thumbnail below for a step-by-step walkthrough! 👇
 
-[![](https://img.youtube.com/vi/g73EGNKatDw/maxresdefault.jpg)](https://www.youtube.com/watch?v=sQJ-XQBzEuc)
+[![](https://img.youtube.com/vi/sQJ-XQBzEuc/maxresdefault.jpg)](https://www.youtube.com/watch?v=sQJ-XQBzEuc)
 
 And if you haven't already, you'll definitely need an Alchemy account to complete this tutorial as well as build anything on the blockchain. Sign up for a free account [here](https://alchemy.com/?a=eth-org-executing)!
 
