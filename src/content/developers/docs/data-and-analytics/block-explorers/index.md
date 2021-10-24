@@ -124,7 +124,7 @@ Smart contract accounts have all the data that a user account will have, but som
 
 ### Tokens {#tokens}
 
-Token are a type of contract so they'll have similar data to a smart contract. But because they have value and can be traded they have additional data points:
+Tokens are a type of contract so they'll have similar data to a smart contract. But because they have value and can be traded they have additional data points:
 
 - Type – Whether they're an ERC-20, ERC-721 or another token standard.
 - Price – If they're an ERC-20 they'll have a current market value.
