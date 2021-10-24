@@ -46,6 +46,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 <UpcomingEventsList/>
 
 _Have an event to add to this list? [Add it](https://github.com/ethereum/ethereum-org-website#how-can-i-contribute)!_
+- <a href="https://unblock.africa/">Metamask Weekend</a> - A meetup by Unblock Africa for beginner and intermediate blockchain enthusiasts to learn how to interact with the Ethereum blockchain, utilize the decentralized applications on it and learn how to deploy smart contracts. (10/29/2021 - 10/30/2021)
 
 ## Ethereum meetup groups {#ethereum-meetup-groups}
 

@@ -54,7 +54,7 @@ There are different models for DAO membership. Membership can determine how voti
 
 ### Token-based membership {#token-based-membership}
 
-Usually fully permissionless, depending on the token used. Mostly these governance tokens can be traded for permissionlessly on a decentralized exchange. Others must be earned through providing liquidity or some other ‘proof of work’. Either way, simply holding the token grants access to voting.
+Usually fully permissionless, depending on the token used. Mostly these governance tokens can be traded permissionlessly on a decentralized exchange. Others must be earned through providing liquidity or some other ‘proof of work’. Either way, simply holding the token grants access to voting.
 
 _Typically used to govern broad decentralized protocols and/or tokens themselves._
 
