@@ -5159,6 +5159,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "robertjosephwayne",
+      "name": "Robert Joseph Wayne",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22128622?v=4",
+      "profile": "http://www.robertjosephwayne.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
