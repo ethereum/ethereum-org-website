@@ -137,7 +137,7 @@ $ git push
 
 ### Local development with lambda functions
 
-There may be times where you develop features that make external API requests to other services. For these we write lamda functions to obfuscate API keys. In order to test these locally, you will need to do the following:
+There may be times where you develop features that make external API requests to other services. For these we write lambda functions to obfuscate API keys. In order to test these locally, you will need to do the following:
 
 1. Download a CORS enabling browswer extension (ex: https://chrome.google.com/webstore/search/cors).
 2. Enable CORS in the downloaded browser extension.
