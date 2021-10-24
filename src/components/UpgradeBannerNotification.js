@@ -22,7 +22,7 @@ export default () => (
       client to support the Altair upgrade set for{" "}
       <Link to="/history#altair">Oct 27</Link>. See communications from your
       client developer team for further details.{" "}
-      <Link to="https://blog.ethereum.org/category/research-and-development/">
+      <Link to="https://blog.ethereum.org/2021/10/05/altair-announcement/">
         Follow updates
       </Link>
     </div>
