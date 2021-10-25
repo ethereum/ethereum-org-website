@@ -33,7 +33,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
   - [Ethereum Cat Herders](https://discord.gg/tzYmDmF) - _community oriented around offering project management support to Ethereum development_
   - [Ethereum Hackers](https://ethglobal.co/discord) - _Discord chat run by [ETHGlobal](https://www.ethglobal.co/): an online community for Ethereum hackers all over the world_
   - [CryptoDevs Discord](https://discord.gg/5W5tVb3) - _Ethereum development focused Discord community_
-  - [EthStaker Discord](https://discord.gg/NvCxbCu) - _Support for the [Beacon Chain](/eth2/beacon-chain/) staking community_
+  - [EthStaker Discord](https://discord.io/ethstaker) - _Support for the [Beacon Chain](/eth2/beacon-chain/) staking community_
   - [ethereum.org Website Team](https://discord.gg/CetY6Y4) - _Stop by and chat ethereum.org web design with the team and folks from the community_
 - Twitter
   - The Ethereum community is very active on Twitter - not sure where to start?
@@ -46,6 +46,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 <UpcomingEventsList/>
 
 _Have an event to add to this list? [Add it](https://github.com/ethereum/ethereum-org-website#how-can-i-contribute)!_
+- <a href="https://unblock.africa/">Metamask Weekend</a> - A meetup by Unblock Africa for beginner and intermediate blockchain enthusiasts to learn how to interact with the Ethereum blockchain, utilize the decentralized applications on it and learn how to deploy smart contracts. (10/29/2021 - 10/30/2021)
 
 ## Ethereum meetup groups {#ethereum-meetup-groups}
 

@@ -137,7 +137,7 @@ $ git push
 
 ### Local development with lambda functions
 
-There may be times where you develop features that make external API requests to other services. For these we write lamda functions to obfuscate API keys. In order to test these locally, you will need to do the following:
+There may be times where you develop features that make external API requests to other services. For these we write lambda functions to obfuscate API keys. In order to test these locally, you will need to do the following:
 
 1. Download a CORS enabling browswer extension (ex: https://chrome.google.com/webstore/search/cors).
 2. Enable CORS in the downloaded browser extension.
@@ -1195,6 +1195,13 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://ayyazakhtar.com"><img src="https://avatars.githubusercontent.com/u/16447834?v=4?s=100" width="100px;" alt=""/><br /><sub><b>aakhtar3</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=aakhtar3" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/shryasss"><img src="https://avatars.githubusercontent.com/u/62744899?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Shreyas Londhe</b></sub></a><br /><a href="#content-shryasss" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/timbeccue"><img src="https://avatars.githubusercontent.com/u/35314207?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tim Beccue</b></sub></a><br /><a href="#content-timbeccue" title="Content">🖋</a></td>
+    <td align="center"><a href="http://www.robertjosephwayne.com"><img src="https://avatars.githubusercontent.com/u/22128622?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Robert Joseph Wayne</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=robertjosephwayne" title="Documentation">📖</a> <a href="#content-robertjosephwayne" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/pdesmondflynn"><img src="https://avatars.githubusercontent.com/u/93043668?v=4?s=100" width="100px;" alt=""/><br /><sub><b>pdesmondflynn</b></sub></a><br /><a href="#content-pdesmondflynn" title="Content">🖋</a></td>
+    <td align="center"><a href="https://meta.wikimedia.org/wiki/User:Danidamiobi"><img src="https://avatars.githubusercontent.com/u/18666499?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Daniel Damilola Obiokeke</b></sub></a><br /><a href="#content-danidamiobi" title="Content">🖋</a></td>
+    <td align="center"><a href="https://mpj.io"><img src="https://avatars.githubusercontent.com/u/11813607?v=4?s=100" width="100px;" alt=""/><br /><sub><b>mpj</b></sub></a><br /><a href="#content-empeje" title="Content">🖋</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/hungdoansy"><img src="https://avatars.githubusercontent.com/u/19758667?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hung Doan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ahungdoansy" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 

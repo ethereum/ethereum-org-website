@@ -5159,6 +5159,52 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "robertjosephwayne",
+      "name": "Robert Joseph Wayne",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22128622?v=4",
+      "profile": "http://www.robertjosephwayne.com",
+      "contributions": [
+        "doc",
+        "content"
+      ]
+    },
+    {
+      "login": "pdesmondflynn",
+      "name": "pdesmondflynn",
+      "avatar_url": "https://avatars.githubusercontent.com/u/93043668?v=4",
+      "profile": "https://github.com/pdesmondflynn",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "danidamiobi",
+      "name": "Daniel Damilola Obiokeke",
+      "avatar_url": "https://avatars.githubusercontent.com/u/18666499?v=4",
+      "profile": "https://meta.wikimedia.org/wiki/User:Danidamiobi",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "empeje",
+      "name": "mpj",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11813607?v=4",
+      "profile": "https://mpj.io",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "hungdoansy",
+      "name": "Hung Doan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19758667?v=4",
+      "profile": "https://github.com/hungdoansy",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
