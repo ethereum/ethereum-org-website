@@ -1200,6 +1200,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://meta.wikimedia.org/wiki/User:Danidamiobi"><img src="https://avatars.githubusercontent.com/u/18666499?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Daniel Damilola Obiokeke</b></sub></a><br /><a href="#content-danidamiobi" title="Content">🖋</a></td>
     <td align="center"><a href="https://mpj.io"><img src="https://avatars.githubusercontent.com/u/11813607?v=4?s=100" width="100px;" alt=""/><br /><sub><b>mpj</b></sub></a><br /><a href="#content-empeje" title="Content">🖋</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/hungdoansy"><img src="https://avatars.githubusercontent.com/u/19758667?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hung Doan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ahungdoansy" title="Bug reports">🐛</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
