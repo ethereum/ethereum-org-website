@@ -5196,6 +5196,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "hungdoansy",
+      "name": "Hung Doan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19758667?v=4",
+      "profile": "https://github.com/hungdoansy",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
