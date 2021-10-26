@@ -32,6 +32,9 @@
     - id: docs-nav-evm
       to: /developers/docs/evm/
       description: docs-nav-evm-description
+      items:
+        - id: docs-nav-opcodes
+          to: /developers/docs/evm/opcodes
     - id: docs-nav-gas
       to: /developers/docs/gas/
       description: docs-nav-gas-description
