@@ -37,7 +37,7 @@ Sieć testowa proof-of-authority działająca między klientami.
 
 #### Kovan {#kovan}
 
-Sieć testowa roof-of-authority dla osób obsługujących klienty OpenEthereum.
+Sieć testowa proof-of-authority dla osób obsługujących klienty OpenEthereum.
 
 #### Rinkeby {#rinkeby}
 
