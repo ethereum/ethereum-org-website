@@ -64,7 +64,7 @@ Actualmente Ethereum utiliza un sistema llamado "Prueba de trabajo" o "Proof of 
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Actualizado frecuentemente. Ethhub_
 
-En ETH 2.0, Ethereum cambiará a un sistema diferente llamado “Proof of Stake”. [Lea más sobre ETH 2.0 a continuación](./#eth-2-0).
+En ETH 2.0, Ethereum cambiará a un sistema diferente llamado “Proof of Stake”. [Lea más sobre ETH 2.0 a continuación](/#eth-2-0).
 
 ## Clientes y nodos {#clients-and-nodes}
 
@@ -83,7 +83,7 @@ Lee más acerca de [Ethereum para empresas](/enterprise).
 
 Hay muchos esfuerzos en marcha para hacer que Ethereum sea más "escalable" mediante la mejora de su velocidad y el rendimiento general de las transacciones. Generalmente se clasifican en soluciones de "Capa 1" y "Capa 2".
 
-La "Capa 1" se refiere a la mejora del protocolo de Ethereum. El proyecto principal para mejorar el protocolo básico de Ethereum es [ETH 2.0](./#eth-2-0).
+La "Capa 1" se refiere a la mejora del protocolo de Ethereum. El proyecto principal para mejorar el protocolo básico de Ethereum es [ETH 2.0](/#eth-2-0).
 
 La "Capa 2" se refiere a las tecnologías que se construyen "sobre" el protocolo base de Ethereum, lo que ofrece una mayor escalabilidad sin comprometer la seguridad. También existen tecnologías "off-chain" como las side-chains, que permiten una mayor escalabilidad al hacer un conjunto diferente de concesiones de seguridad.
 
