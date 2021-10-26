@@ -91,7 +91,6 @@
       to: /developers/docs/frameworks/
       description: docs-nav-development-frameworks-description
     - id: docs-nav-ethereum-client-apis
-      path: /developers/docs/apis/
       description: docs-nav-ethereum-client-apis-description
       items:
         - id: docs-nav-java-script-apis
