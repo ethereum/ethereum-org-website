@@ -33,7 +33,7 @@ These rule changes may create a temporary split in the network. New blocks could
 
 #### Summary {#altair-summary}
 
-The Altair upgrade is the first scheduled upgrade for the [Beacon Chain](/eth2/beacon-chain). It added support for "sync committees", which enables light clients, and brings inactivity and slashing penalties up to their full values.
+The Altair upgrade was the first scheduled upgrade for the [Beacon Chain](/eth2/beacon-chain). It added support for "sync committees"—enabling light clients, and bringing validator inactivity and slashing penalties up to their full values.
 
 - [Read the Altair upgrade specification](https://github.com/ethereum/eth2.0-specs/tree/dev/specs/altair)
 
