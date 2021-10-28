@@ -157,6 +157,7 @@ const ZenModeContainer = styled.div`
 
 const ZenModeToggleContainer = styled.span`
   cursor: pointer;
+  padding-top: 6px;
 `
 
 const ZenModeText = styled.span`
