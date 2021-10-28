@@ -90,10 +90,7 @@ const Tooltip = ({ content, children }) => {
       >
         {children}
         {isVisible && (
-          <Content
-            onMouseEnter={!isMobile ? () => setIsVisible(true) : null}
-            onMouseLeave={!isMobile ? () => setIsVisible(false) : null}
-          >
+          <Content>
             <Arrow />
             {content}
           </Content>
