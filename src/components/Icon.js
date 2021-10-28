@@ -12,9 +12,9 @@ import {
   MdInfoOutline,
   MdLanguage,
   MdMenu,
+  MdSearch,
   MdWbSunny,
   MdFlip,
-  MdSearch,
 } from "react-icons/md"
 import { BsQuestionSquareFill } from "react-icons/bs"
 import { IoCodeDownload } from "react-icons/io5"
