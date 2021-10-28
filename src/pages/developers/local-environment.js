@@ -293,7 +293,7 @@ const frameworksList = [
     id: "hardhat",
     url: "https://hardhat.org/",
     githubUrl: "https://github.com/nomiclabs/hardhat",
-    background: "#2A2C32",
+    background: "#faf8fb",
     name: "Hardhat",
     description: "page-local-environment-hardhat-desc",
     alt: "page-local-environment-hardhat-logo-alt",
