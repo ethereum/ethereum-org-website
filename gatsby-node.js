@@ -135,6 +135,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       template = `docs`
     }
 
+    const isLegal =
+      slug.includes(`/cookie-policy/`) ||
+      slug.includes(`/privacy-policy/`) ||
+      slug.includes(`/terms-of-use/`) ||
+      slug.includes(`/contributing/`)
     const language = node.frontmatter.lang
     if (!language) {
       throw `Missing 'lang' frontmatter property. All markdown pages must have a lang property. Page slug: ${slug}`
@@ -159,6 +164,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             component: path.resolve(`./src/templates/${template}.js`),
             context: {
               slug: langSlug,
+              ignoreTranslationBanner: isLegal,
               isOutdated: false,
               isContentEnglish: true,
               relativePath: relativePath, // Use English path for template MDX query
