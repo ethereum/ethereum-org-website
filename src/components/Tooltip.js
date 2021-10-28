@@ -53,10 +53,14 @@ const ModalReturn = styled.div`
 
 // TODO add `position` prop
 const Tooltip = ({ content, children }) => {
-  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-    navigator.userAgent
-  )
   const [isVisible, setIsVisible] = useState(false)
+  let isMobile = false
+
+  if (typeof window !== "undefined") {
+    isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      window.navigator.userAgent
+    )
+  }
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
