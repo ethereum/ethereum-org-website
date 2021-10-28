@@ -44,7 +44,6 @@ const SearchIcon = styled(Icon)`
 `
 
 const SearchSlash = styled.p`
-  background: ${(props) => props.theme.colors.searchBackground};
   border: 1px solid ${(props) => props.theme.colors.searchBorder};
   border-radius: 0.25em;
   color: ${(props) => props.theme.colors.text};
@@ -81,6 +80,7 @@ const Input = ({ query, setQuery, refine, ...rest }) => {
       searchInput.focus()
     }
   }
+
   useKeyPress("/", focusSearch)
 
   return (
