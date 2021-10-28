@@ -1,9 +1,9 @@
 import { useEffect } from "react"
 
 export const useKeyPress = (targetKey, handler) => {
-  const downHandler = ({ key }) => {
-    if (key === targetKey) {
-      handler()
+  const downHandler = (event) => {
+    if (event.key === targetKey) {
+      handler(event)
     }
   }
 
