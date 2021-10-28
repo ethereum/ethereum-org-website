@@ -15,7 +15,6 @@ import GhostCard from "../../components/GhostCard"
 import InfoBanner from "../../components/InfoBanner"
 import Link from "../../components/Link"
 import PageMetadata from "../../components/PageMetadata"
-import UpgradeBannerNotification from "../../components/UpgradeBannerNotification"
 import Translation from "../../components/Translation"
 import PageHero from "../../components/PageHero"
 import {
@@ -272,7 +271,6 @@ const Eth2IndexPage = ({ data }) => {
         title={translateMessageId("page-eth2-meta-title", intl)}
         description={translateMessageId("page-eth2-meta-desc", intl)}
       />
-      <UpgradeBannerNotification />
       <PageHero content={heroContent} />
       <Divider />
       <Content>

@@ -61,6 +61,7 @@ const Content = styled.article`
   flex: 1 1 ${(props) => props.theme.breakpoints.m};
   max-width: ${(props) => props.theme.breakpoints.m};
   padding: 3rem 4rem 4rem;
+  margin: 0px auto;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     max-width: 100%;
   }

@@ -254,15 +254,14 @@ We’ve added several dependencies and plugins so far, now we need to update `ha
 Update your `hardhat.config.js` to look like this:
 
 ```
-/**
-* @type import('hardhat/config').HardhatUserConfig
-*/
-
 require('dotenv').config();
 
 require("@nomiclabs/hardhat-ethers");
 const { API_URL, PRIVATE_KEY } = process.env;
 
+/**
+* @type import('hardhat/config').HardhatUserConfig
+*/
 module.exports = {
    solidity: "0.7.3",
    defaultNetwork: "ropsten",

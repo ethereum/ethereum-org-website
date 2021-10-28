@@ -132,3 +132,9 @@ Podcasts addressing Ethereum and Cryptocurrencies:
 - [Zero Knowledge](https://www.zeroknowledge.fm/) _Goes deep into the tech that will power the emerging decentralised web and the community building this_
 - [Epicenter](https://epicenter.tv/) _Explores the technical, economic, and social implications of the Crypto industry_
 - [Unchained](https://unchainedpodcast.com/) _dives deep into the people building the decentralized internet, the details of this technology that could underpin our future, and some of the thorniest topics in crypto, such as regulation, security and privacy_
+
+## Archived / No longer maintained:
+
+Resources about Ethereum-related projects and resources which have been deprecated or are no longer maintained.
+
+- [Deprecated Software](/depricated-software/) _A list of deprecated software, dapps, and documentation_
