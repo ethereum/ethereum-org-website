@@ -90,7 +90,7 @@ The ethereum.org Translation Program aims to make Ethereum accessible to everyon
 
 4. **Review process**  
    Once you've completed the translation (i.e. all files for a content version display 100%), our professional translation service will review (and potentially edit) the content. Once the review is complete (i.e. review progress is 100%), we will add it to the website.
-   
+
 <InfoBanner shouldCenter emoji=":warning:">
 Please do not use machine translation to translate the project. All the translations will be reviewed before being added to the website. If your suggested translations are found to be machine translated, they will be dismissed and contributors who use machine translation often will be removed from the project.
 </InfoBanner>

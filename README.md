@@ -216,7 +216,7 @@ To get more information about the program, learn how to use Crowdin, check on th
 | `/src/pages`<br>`/src/pages-conditional` | React components that function as stand alone pages. <br>For example: `ethereum.org/en/wallets/find-wallet` is built from `src/pages/wallets/find-wallet.js`                                                        |
 | `/src/scripts`<br>`/src/utils`           | Custom utility scripts                                                                                                                                                                                              |
 | `/src/styles`                            | Stores `layout.css` which contains root level css styling                                                                                                                                                           |
-| `/src/templates`                         | JSX templates that define layouts of different regions of the site                                                                                                                                                   |
+| `/src/templates`                         | JSX templates that define layouts of different regions of the site                                                                                                                                                  |
 | `/src/theme.js`                          | Declares site color themes, breakpoints and other constants (try to utilize these colors first)                                                                                                                     |
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">

@@ -36,13 +36,7 @@
     "description": "Learn how to make multiple API calls to a blockchain node with a single API call to a multicall contract.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
-    "tags": [
-      "brownie",
-      "web3.py",
-      "video",
-      "python",
-      "multicall"
-    ],
+    "tags": ["brownie", "web3.py", "video", "python", "multicall"],
     "skillLevel": "intermediate",
     "timeToRead": "15",
     "lang": "en",
