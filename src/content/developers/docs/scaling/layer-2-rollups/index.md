@@ -101,7 +101,7 @@ Being on layer 2, ZK-rollups can be optimised to reduce transaction size further
 | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | Faster finality time since the state is instantly verified once the proofs are sent to the main chain.            | Some don't have EVM support.                                                                          |
 | Not vulnerable to the economic attacks that [Optimistic rollups](#optimistic-pros-and-cons) can be vulnerable to. | Validity proofs are intense to compute – not worth it for applications with little on-chain activity. |
-| Secure and decentralized, since the data that is needed to recover the state is stored on the layer 1 chain.      | An operator can influence transaction. ordering                                                       |
+| Secure and decentralized, since the data that is needed to recover the state is stored on the layer 1 chain.      | An operator can influence transaction ordering                                                       |
 
 #### A visual explanation of ZK-rollups {#zk-video}
 
