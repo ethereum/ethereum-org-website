@@ -1209,6 +1209,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://www.linkedin.com/in/bertcmiller/"><img src="https://avatars.githubusercontent.com/u/30010302?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Robert Miller</b></sub></a><br /><a href="#content-bertmiller" title="Content">🖋</a></td>
     <td align="center"><a href="https://florian.sesser.at/"><img src="https://avatars.githubusercontent.com/u/454605?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Florian Sesser</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=hacklschorsch" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/xianxiongwang"><img src="https://avatars.githubusercontent.com/u/30892152?v=4?s=100" width="100px;" alt=""/><br /><sub><b>xianxiongwang</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=xianxiongwang" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
