@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 
 const Container = styled.div`
@@ -61,21 +61,6 @@ const Tooltip = ({ content, children }) => {
       window.navigator.userAgent
     )
   }
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (isMobile) {
-        setIsVisible(false)
-      }
-    })
-    return () => {
-      window.removeEventListener("scroll", () => {
-        if (isMobile) {
-          setIsVisible(false)
-        }
-      })
-    }
-  }, [isVisible])
 
   return (
     <>
