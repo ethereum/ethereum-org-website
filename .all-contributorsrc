@@ -5254,6 +5254,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "hacklschorsch",
+      "name": "Florian Sesser",
+      "avatar_url": "https://avatars.githubusercontent.com/u/454605?v=4",
+      "profile": "https://florian.sesser.at/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
