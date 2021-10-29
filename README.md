@@ -1206,6 +1206,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/joaoMpf"><img src="https://avatars.githubusercontent.com/u/56357437?v=4?s=100" width="100px;" alt=""/><br /><sub><b>joaoMpf</b></sub></a><br /><a href="#translation-joaoMpf" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/bskrksyp9"><img src="https://avatars.githubusercontent.com/u/31563474?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Bhaskar Kashyap</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=bskrksyp9" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/bleesherman"><img src="https://avatars.githubusercontent.com/u/82793845?v=4?s=100" width="100px;" alt=""/><br /><sub><b>bleesherman</b></sub></a><br /><a href="#content-bleesherman" title="Content">🖋</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/bertcmiller/"><img src="https://avatars.githubusercontent.com/u/30010302?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Robert Miller</b></sub></a><br /><a href="#content-bertmiller" title="Content">🖋</a></td>
   </tr>
 </table>
 
