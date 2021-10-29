@@ -559,7 +559,7 @@ contract CryptoPizza is IERC721, ERC165 {
         bytes memory _data
     ) public {
         this.transferFrom(from, to, pizzaId);
-        require(_checkOnERC721Received(from, to, pizzaId, _data), "Must implmement onERC721Received.");
+        require(_checkOnERC721Received(from, to, pizzaId, _data), "Must implement onERC721Received.");
     }
 
     /**
