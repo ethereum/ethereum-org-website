@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import { translateMessageId } from "../../utils/translations"
 import Translation from "../../components/Translation"
@@ -98,7 +98,7 @@ const FindWalletPage = ({ location, data }) => {
 
       <HeroContainer>
         <Hero
-          fluid={data.hero.childImageSharp.gatsbyImageData}
+          image={getImage(data.hero)}
           alt={translateMessageId("page-find-wallet-image-alt", intl)}
           loading="eager"
         />
@@ -131,7 +131,7 @@ const FindWalletPage = ({ location, data }) => {
           "page-find-wallet-use-wallet-desc",
           intl
         )}
-        image={data.dapps.childImageSharp.gatsbyImageData}
+        image={getImage(data.dapps)}
         alt={translateMessageId(
           "page-index-sections-individuals-image-alt",
           intl

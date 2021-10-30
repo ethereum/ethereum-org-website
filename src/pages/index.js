@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
 import ActionCard from "../components/ActionCard"
@@ -420,10 +420,9 @@ const HomePage = ({ data }) => {
     setActiveCode(id)
     setModalOpen(true)
   }
-
   const cards = [
     {
-      image: data.robotfixed.childImageSharp.gatsbyImageData,
+      image: getImage(data.robotfixed),
       title: translateMessageId("page-index-get-started-wallet-title", intl),
       description: translateMessageId(
         "page-index-get-started-wallet-description",
@@ -432,9 +431,8 @@ const HomePage = ({ data }) => {
       alt: translateMessageId("page-index-get-started-wallet-image-alt", intl),
       to: "/wallets/find-wallet/",
     },
-
     {
-      image: data.ethfixed.childImageSharp.gatsbyImageData,
+      image: getImage(data.ethfixed),
       title: translateMessageId("page-index-get-started-eth-title", intl),
       description: translateMessageId(
         "page-index-get-started-eth-description",
@@ -444,7 +442,7 @@ const HomePage = ({ data }) => {
       to: "/get-eth/",
     },
     {
-      image: data.dogefixed.childImageSharp.gatsbyImageData,
+      image: getImage(data.dogefixed),
       title: translateMessageId("page-index-get-started-dapps-title", intl),
       description: translateMessageId(
         "page-index-get-started-dapps-description",
@@ -454,7 +452,7 @@ const HomePage = ({ data }) => {
       to: "/dapps/",
     },
     {
-      image: data.devfixed.childImageSharp.gatsbyImageData,
+      image: getImage(data.devfixed),
       title: translateMessageId("page-index-get-started-devs-title", intl),
       description: translateMessageId(
         "page-index-get-started-devs-description",
@@ -467,14 +465,14 @@ const HomePage = ({ data }) => {
 
   const touts = [
     {
-      image: data.merge.childImageSharp.gatsbyImageData,
+      image: getImage(data.merge),
       alt: translateMessageId("page-index-tout-eth2-image-alt", intl),
       title: translateMessageId("page-index-tout-eth2-title", intl),
       description: translateMessageId("page-index-tout-eth2-description", intl),
       to: "/eth2/",
     },
     {
-      image: data.infrastructurefixed.childImageSharp.gatsbyImageData,
+      image: getImage(data.infrastructurefixed),
       alt: translateMessageId("page-index-tout-enterprise-image-alt", intl),
       title: translateMessageId("page-index-tout-enterprise-title", intl),
       description: translateMessageId(
@@ -484,7 +482,7 @@ const HomePage = ({ data }) => {
       to: "/enterprise/",
     },
     {
-      image: data.enterprise.childImageSharp.gatsbyImageData,
+      image: getImage(data.enterprise),
       alt: translateMessageId("page-index-tout-community-image-alt", intl),
       title: translateMessageId("page-index-tout-community-title", intl),
       description: translateMessageId(
@@ -708,7 +706,7 @@ contract SimpleDomainRegistry {
         description={translateMessageId("page-index-meta-description", intl)}
       />
       <Hero
-        fluid={data.hero.childImageSharp.gatsbyImageData}
+        image={getImage(data.hero)}
         alt={translateMessageId("page-index-hero-image-alt", intl)}
         loading="eager"
       />
@@ -737,7 +735,7 @@ contract SimpleDomainRegistry {
             </IntroLeftColumn>
             <ImageContainer>
               <IntroImage
-                fluid={data.hackathon.childImageSharp.gatsbyImageData}
+                image={getImage(data.hackathon)}
                 alt={translateMessageId(
                   "page-index-get-started-image-alt",
                   intl
@@ -779,7 +777,7 @@ contract SimpleDomainRegistry {
           </FeatureContent>
           <ImageContainer>
             <FeatureImage
-              fluid={data.ethereum.childImageSharp.gatsbyImageData}
+              image={getImage(data.ethereum)}
               alt={translateMessageId(
                 "page-index-what-is-ethereum-image-alt",
                 intl
@@ -807,7 +805,7 @@ contract SimpleDomainRegistry {
           </FeatureContent>
           <ImageContainer>
             <FeatureImage
-              fluid={data.impact.childImageSharp.gatsbyImageData}
+              image={getImage(data.impact)}
               alt={translateMessageId("page-index-defi-image-alt", intl)}
             />
           </ImageContainer>
@@ -817,7 +815,7 @@ contract SimpleDomainRegistry {
         <Row>
           <ImageContainer>
             <FeatureImage
-              fluid={data.infrastructure.childImageSharp.gatsbyImageData}
+              image={getImage(data.infrastructure)}
               alt={translateMessageId("page-index-nft-alt", intl)}
             />
           </ImageContainer>
@@ -860,7 +858,7 @@ contract SimpleDomainRegistry {
           </FeatureContent>
           <ImageContainer>
             <FeatureImage
-              fluid={data.future.childImageSharp.gatsbyImageData}
+              image={getImage(data.future)}
               alt={translateMessageId("page-index-internet-image-alt", intl)}
             />
           </ImageContainer>
@@ -945,7 +943,7 @@ contract SimpleDomainRegistry {
             "page-index-contribution-banner-description",
             intl
           )}
-          image={data.finance.childImageSharp.gatsbyImageData}
+          image={getImage(data.finance)}
           maxImageWidth={600}
           alt={translateMessageId(
             "page-index-contribution-banner-image-alt",

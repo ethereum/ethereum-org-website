@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
+import { getImage } from "gatsby-plugin-image"
 
 import { translateMessageId } from "../../utils/translations"
 import Translation from "../../components/Translation"
@@ -92,27 +93,27 @@ const VisionPage = ({ data, location }) => {
     title: translateMessageId("page-eth2-vision-title", intl),
     header: translateMessageId("page-eth2-vision-future", intl),
     subtitle: translateMessageId("page-eth2-vision-subtitle", intl),
-    image: data.oldship.childImageSharp.gatsbyImageData,
+    image: getImage(data.oldship),
     alt: translateMessageId("page-eth-whats-eth-hero-alt", intl),
   }
 
   const upgrades = [
     {
-      image: data.beaconchain.childImageSharp.gatsbyImageData,
+      image: getImage(data.beaconchain),
       title: <Translation id="page-eth2-beacon-chain-title" />,
       description: <Translation id="page-eth2-beacon-chain-desc" />,
       to: "/eth2/beacon-chain/",
       date: <Translation id="page-eth2-beacon-chain-estimate" />,
     },
     {
-      image: data.themerge.childImageSharp.gatsbyImageData,
+      image: getImage(data.themerge),
       title: <Translation id="page-eth2-docking" />,
       description: <Translation id="page-eth2-docking-desc" />,
       to: "/eth2/merge/",
       date: <Translation id="page-eth2-docking-estimate" />,
     },
     {
-      image: data.shards.childImageSharp.gatsbyImageData,
+      image: getImage(data.shards),
       title: <Translation id="page-eth2-shard-title" />,
       description: <Translation id="page-eth2-shard-desc" />,
       to: "/eth2/shard-chains/",

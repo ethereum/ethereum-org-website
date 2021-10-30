@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
 import Select from "react-select"
 import styled from "styled-components"
@@ -487,7 +488,7 @@ const EthExchanges = () => {
           title: exchanges[exchange].name,
           description,
           link: exchanges[exchange].url,
-          image: exchanges[exchange].image.childImageSharp.gatsbyImageData,
+          image: getImage(exchanges[exchange].image),
         }
       })
       .sort((a, b) => a.title.localeCompare(b.title))
@@ -528,7 +529,7 @@ const EthExchanges = () => {
               title: currentWallet,
               description,
               link: walletObject.url,
-              image: walletObject.image.childImageSharp.gatsbyImageData,
+              image: getImage(walletObject.image),
             })
           }, [])
         )

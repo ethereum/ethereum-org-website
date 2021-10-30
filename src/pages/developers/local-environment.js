@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import { shuffle } from "lodash"
@@ -370,7 +370,7 @@ const ChooseStackPage = ({ data }) => {
   useEffect(() => {
     const list = shuffle(
       frameworksList.map((item) => {
-        item.image = data[item.id].childImageSharp.gatsbyImageData
+        item.image = getImage(data[item.id])
         return item
       })
     )
@@ -398,30 +398,6 @@ const ChooseStackPage = ({ data }) => {
           <br />
           <Translation id="page-local-environment-setup-subtitle-2" />
         </SubSlogan>
-
-        {/* <Hero
-            fluid={data.hero.childImageSharp.fluid}
-            alt="Illustration of blocks being organised like an ETH symbol"
-            loading="eager"
-          /> */}
-
-        {/* <CardGrid>
-          <StyledCard
-            emoji=":fast_forward:"
-            title="Skip setup"
-            description="Use a pre-made stack."
-          ></StyledCard>
-          <StyledCard
-            emoji=":pancakes:"
-            title="Create your own stack"
-            description="Looking to compare projects to integrate into a framework? Get an idea of the options available for different layers of the stack."
-          ></StyledCard>
-          <StyledCard
-            emoji=":woman_student:"
-            title="Learn about the stack"
-            description="If you're not ready and want to brush up on your Ethereum knowledge, check out our docs."
-          ></StyledCard>
-        </CardGrid> */}
       </HeroContent>
       <Content>
         <TwoColumnContent>
@@ -455,7 +431,7 @@ const ChooseStackPage = ({ data }) => {
           </Column>
           <Column>
             <Hero
-              fluid={data.hero.childImageSharp.gatsbyImageData}
+              image={getImage(data.hero)}
               alt={translateMessageId("alt-eth-blocks", intl)}
               loading="eager"
             />

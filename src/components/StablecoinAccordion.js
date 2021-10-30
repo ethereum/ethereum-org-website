@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
 import { useIntl, navigate } from "gatsby-plugin-intl"
 import styled from "styled-components"
 // TODO add motion animation
@@ -311,31 +312,31 @@ const StablecoinAccordion = () => {
   const dapps = [
     {
       title: "Uniswap",
-      image: data.uniswap.childImageSharp.gatsbyImageData,
+      image: getImage(data.uniswap),
       link: "https://uniswap.org",
       alt: translateMessageId("uniswap-logo", intl),
     },
     {
       title: "DyDx",
-      image: data.dydx.childImageSharp.gatsbyImageData,
+      image: getImage(data.dydx),
       link: "https://dydx.exchange",
       alt: translateMessageId("dydx-logo", intl),
     },
     {
       title: "Loopring",
-      image: data.loopring.childImageSharp.gatsbyImageData,
+      image: getImage(data.loopring),
       link: "https://loopring.org",
       alt: translateMessageId("loopring-logo", intl),
     },
     {
       title: "1inch",
-      image: data.oneinch.childImageSharp.gatsbyImageData,
+      image: getImage(data.oneinch),
       link: "https://app.1inch.io",
       alt: translateMessageId("1inch-logo", intl),
     },
     {
       title: "Matcha",
-      image: data.matcha.childImageSharp.gatsbyImageData,
+      image: getImage(data.matcha),
       link: "https://matcha.xyz",
       alt: translateMessageId("matcha-logo", intl),
     },
@@ -344,25 +345,25 @@ const StablecoinAccordion = () => {
   const borrow = [
     {
       title: "Compound",
-      image: data.compound.childImageSharp.gatsbyImageData,
+      image: getImage(data.compound),
       link: "https://compound.finance",
       alt: translateMessageId("compound-logo", intl),
     },
     {
       title: "DyDx",
-      image: data.dydx.childImageSharp.gatsbyImageData,
+      image: getImage(data.dydx),
       link: "https://dydx.exchange",
       alt: translateMessageId("dydx-logo", intl),
     },
     {
       title: "Aave",
-      image: data.aave.childImageSharp.gatsbyImageData,
+      image: getImage(data.aave),
       link: "https://aave.com",
       alt: translateMessageId("aave-logo", intl),
     },
     {
       title: "Oasis",
-      image: data.oasis.childImageSharp.gatsbyImageData,
+      image: getImage(data.oasis),
       link: "https://oasis.app",
       alt: translateMessageId("oasis-logo", intl),
     },
@@ -374,7 +375,7 @@ const StablecoinAccordion = () => {
         "page-stablecoins-accordion-earn-project-bounties",
         intl
       ),
-      image: data.gitcoin.childImageSharp.gatsbyImageData,
+      image: getImage(data.gitcoin),
       link: "https://gitcoin.co/explorer",
       description: translateMessageId(
         "page-stablecoins-accordion-earn-project-1-description",
@@ -387,7 +388,7 @@ const StablecoinAccordion = () => {
         "page-stablecoins-accordion-earn-project-community",
         intl
       ),
-      image: data.maker.childImageSharp.gatsbyImageData,
+      image: getImage(data.maker),
       link: "https://community-development.makerdao.com/en/contribute/",
       description: translateMessageId(
         "page-stablecoins-accordion-earn-project-2-description",
@@ -400,7 +401,7 @@ const StablecoinAccordion = () => {
         "page-stablecoins-accordion-earn-project-bug-bounties",
         intl
       ),
-      image: data.eth.childImageSharp.gatsbyImageData,
+      image: getImage(data.eth),
       link: "/eth2/get-involved/bug-bounty/",
       description: translateMessageId(
         "page-stablecoins-accordion-earn-project-3-description",
@@ -413,37 +414,37 @@ const StablecoinAccordion = () => {
   const exchanges = [
     {
       title: "Coinbase",
-      image: data.coinbase.childImageSharp.gatsbyImageData,
+      image: getImage(data.coinbase),
       link: "https://coinbase.com",
       alt: translateMessageId("coinbase-logo", intl),
     },
     {
       title: "Gemini",
-      image: data.gemini.childImageSharp.gatsbyImageData,
+      image: getImage(data.gemini),
       link: "https://gemini.com",
       alt: translateMessageId("gemini-logo", intl),
     },
     {
       title: "Kraken",
-      image: data.kraken.childImageSharp.gatsbyImageData,
+      image: getImage(data.kraken),
       link: "https://kraken.com",
       alt: translateMessageId("kraken-logo", intl),
     },
     {
       title: "Coinmama",
-      image: data.coinmama.childImageSharp.gatsbyImageData,
+      image: getImage(data.coinmama),
       link: "https://coinmama.com",
       alt: translateMessageId("coinmama-logo", intl),
     },
     {
       title: "Bittrex",
-      image: data.bittrex.childImageSharp.gatsbyImageData,
+      image: getImage(data.bittrex),
       link: "https://global.bittrex.com",
       alt: translateMessageId("bittrex-logo", intl),
     },
     {
       title: "Binance",
-      image: data.binance.childImageSharp.gatsbyImageData,
+      image: getImage(data.binance),
       link: "https://binance.com",
       alt: translateMessageId("binance-logo", intl),
     },

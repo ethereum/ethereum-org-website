@@ -43,7 +43,7 @@ const Content = styled.div`
 
 const Callout = ({ image, alt, title, description, children, className }) => (
   <StyledCard className={className}>
-    <Image fixed={image} alt={alt} />
+    <Image image={image} alt={alt} />
     <Content>
       <div>
         <h3>{title}</h3>

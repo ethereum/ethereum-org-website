@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
@@ -255,7 +255,7 @@ const DevelopersPage = ({ data }) => {
             </HeroCopy>
           </HeroCopyContainer>
           <Hero
-            fluid={data.ednHero.childImageSharp.gatsbyImageData}
+            image={getImage(data.ednHero)}
             alt={translateMessageId("alt-eth-blocks", intl)}
             loading="eager"
           />
@@ -294,7 +294,7 @@ const DevelopersPage = ({ data }) => {
             </p>
           </IntroColumn>
           <StyledCallout
-            image={data.developers.childImageSharp.gatsbyImageData}
+            image={getImage(data.developers)}
             title={translateMessageId("page-developers-improve-ethereum", intl)}
             description={translateMessageId(
               "page-developers-improve-ethereum-desc",
@@ -364,7 +364,7 @@ const DevelopersPage = ({ data }) => {
               <Translation id="page-developers-language-desc" />
             </p>
             <ImageContainer>
-              <Image fixed={data.doge.childImageSharp.gatsbyImageData} />
+              <Image image={getImage(data.doge)} />
             </ImageContainer>
           </Column>
           <Column>

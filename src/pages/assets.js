@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import { ThemeContext } from "styled-components"
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 
 import AssetDownload from "../components/AssetDownload"
@@ -97,7 +97,7 @@ const AssetsPage = ({ data }) => {
         <HeroContainer>
           <Header>
             <Image
-              fixed={heroImage.childImageSharp.gatsbyImageData}
+              image={getImage(heroImage)}
               alt={translateMessageId("page-assets-eth-diamond-gray", intl)}
             />
             <h1>

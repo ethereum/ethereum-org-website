@@ -80,7 +80,7 @@ const ProductList = ({ content, category }) => (
     {content.map(({ title, description, link, image, alt, id }, idx) => (
       <Item key={id || idx}>
         <ImageContainer>
-          {image && <Image fluid={image} alt={alt} />}
+          {image && <Image image={image} alt={alt} />}
         </ImageContainer>
         <TextContent>
           <LeftContainer>

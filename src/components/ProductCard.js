@@ -165,7 +165,7 @@ const ProductCard = ({
   return (
     <Card>
       <ImageWrapper background={background}>
-        <Image fixed={image} alt={alt} />
+        <Image image={image} alt={alt} />
       </ImageWrapper>
       <Content className="hover">
         <div>

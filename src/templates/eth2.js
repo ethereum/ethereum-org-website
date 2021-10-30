@@ -4,7 +4,7 @@ import { useIntl } from "gatsby-plugin-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown from "../components/ButtonDropdown"
 import UpgradeBannerNotification from "../components/UpgradeBannerNotification"
@@ -400,7 +400,7 @@ const Eth2Page = ({ data, data: { mdx } }) => {
             {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
           </LastUpdated>
         </TitleCard>
-        <Image fluid={mdx.frontmatter.image.childImageSharp.gatsbyImageData} />
+        <Image image={getImage(mdx.frontmatter.image)} />
       </HeroContainer>
       <MoreContent to="#content">
         <Icon name="chevronDown" />

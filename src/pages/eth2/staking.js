@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
+import { getImage } from "gatsby-plugin-image"
 
 import { translateMessageId } from "../../utils/translations"
 import Translation from "../../components/Translation"
@@ -157,7 +158,7 @@ const StakingPage = ({ data, location }) => {
     title: translateMessageId("page-eth2-staking-title-4", intl),
     header: translateMessageId("page-eth2-staking-header-1", intl),
     subtitle: translateMessageId("page-eth2-staking-subtitle", intl),
-    image: data.rhino.childImageSharp.gatsbyImageData,
+    image: getImage(data.rhino),
     alt: translateMessageId("page-eth2-staking-image-alt", intl),
     buttons: [
       {
@@ -294,7 +295,7 @@ const StakingPage = ({ data, location }) => {
       </Content>
       <Divider />
       <StyledCallout
-        image={data.rhino.childImageSharp.gatsbyImageData}
+        image={getImage(data.rhino)}
         alt={translateMessageId("eth2-rhino-img-alt", intl)}
         title={translateMessageId("page-eth2-staking-join-community", intl)}
         description={translateMessageId(

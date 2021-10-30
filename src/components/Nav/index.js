@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { cloneDeep } from "lodash"
 
@@ -329,7 +329,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         <NavContent>
           <HomeLogoNavLink to="/">
             <HomeLogo
-              fixed={data.file.childImageSharp.gatsbyImageData}
+              image={getImage(data.file)}
               alt={translateMessageId("ethereum-logo", intl)}
             />
           </HomeLogoNavLink>

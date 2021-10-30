@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
@@ -259,14 +259,14 @@ const WhatIsEthereumPage = ({ data }) => {
       title: <Translation id="page-what-is-ethereum-native-title" />,
       to: "/eth/",
       alt: translateMessageId("page-what-is-ethereum-native-alt", intl),
-      image: data.eth.childImageSharp.gatsbyImageData,
+      image: getImage(data.eth),
       description: <Translation id="page-what-is-ethereum-native-crypto" />,
     },
     {
       title: <Translation id="page-what-is-ethereum-wallets" />,
       to: "/wallets/",
       alt: translateMessageId("page-what-is-ethereum-native-img-alt", intl),
-      image: data.wallets.childImageSharp.gatsbyImageData,
+      image: getImage(data.wallets),
 
       description: <Translation id="page-what-is-ethereum-wallets-desc" />,
     },
@@ -274,7 +274,7 @@ const WhatIsEthereumPage = ({ data }) => {
       title: <Translation id="page-what-is-ethereum-dapps-title" />,
       to: "/dapps/",
       alt: translateMessageId("page-what-is-ethereum-dapps-img-alt", intl),
-      image: data.dapps.childImageSharp.gatsbyImageData,
+      image: getImage(data.dapps),
       description: <Translation id="page-what-is-ethereum-dapps-desc" />,
     },
   ]
@@ -283,21 +283,21 @@ const WhatIsEthereumPage = ({ data }) => {
       title: <Translation id="page-what-is-ethereum-defi-title" />,
       to: "/defi/",
       alt: translateMessageId("page-what-is-ethereum-defi-alt", intl),
-      image: data.defi.childImageSharp.gatsbyImageData,
+      image: getImage(data.defi),
       description: <Translation id="page-what-is-ethereum-defi-description" />,
     },
     {
       title: <Translation id="page-what-is-ethereum-nft-title" />,
       to: "/nft/",
       alt: translateMessageId("page-what-is-ethereum-nft-alt", intl),
-      image: data.nft.childImageSharp.gatsbyImageData,
+      image: getImage(data.nft),
       description: <Translation id="page-what-is-ethereum-nft-description" />,
     },
     {
       title: <Translation id="page-what-is-ethereum-dao-title" />,
       to: "/dao/",
       alt: translateMessageId("page-what-is-ethereum-dao-alt", intl),
-      image: data.dao.childImageSharp.gatsbyImageData,
+      image: getImage(data.dao),
       description: <Translation id="page-what-is-ethereum-dao-description" />,
     },
   ]
@@ -328,7 +328,7 @@ const WhatIsEthereumPage = ({ data }) => {
             </SubtitleTwo>
           </Header>
           <Hero
-            fluid={data.hero.childImageSharp.gatsbyImageData}
+            image={getImage(data.hero)}
             alt={translateMessageId(
               "page-what-is-ethereum-alt-img-bazaar",
               intl
@@ -356,7 +356,7 @@ const WhatIsEthereumPage = ({ data }) => {
       </StyledGrayContatiner>
       <BannerContainer>
         <Banner
-          fluid={data.banner.childImageSharp.gatsbyImageData}
+          image={getImage(data.banner)}
           alt={translateMessageId("page-what-is-ethereum-alt-img-social", intl)}
         />
         <BannerMessage>
@@ -473,7 +473,7 @@ const WhatIsEthereumPage = ({ data }) => {
       <Content>
         <CardContainer>
           <StyledCallout
-            image={data.developers.childImageSharp.gatsbyImageData}
+            image={getImage(data.developers)}
             title={translateMessageId("page-what-is-ethereum-build", intl)}
             alt={translateMessageId("page-what-is-ethereum-alt-img-lego", intl)}
             description={translateMessageId(
@@ -488,7 +488,7 @@ const WhatIsEthereumPage = ({ data }) => {
             </div>
           </StyledCallout>
           <StyledCallout
-            image={data.community.childImageSharp.gatsbyImageData}
+            image={getImage(data.community)}
             title={translateMessageId("page-what-is-ethereum-community", intl)}
             alt={translateMessageId("page-what-is-ethereum-alt-img-comm", intl)}
             description={translateMessageId(

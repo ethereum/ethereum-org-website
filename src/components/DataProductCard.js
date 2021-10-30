@@ -103,7 +103,7 @@ const DataProductCard = ({
 }) => (
   <Card hideArrow={true} to={url}>
     <ImageWrapper background={background}>
-      <Image fixed={image} alt={`${name} logo`} />
+      <Image image={image} alt={`${name} logo`} />
     </ImageWrapper>
     <Content>
       <div>
@@ -115,7 +115,7 @@ const DataProductCard = ({
           {data.map(({ logo, coin, apy }, idx) => (
             <DataRow key={idx}>
               <Box>
-                {logo && <Logo fixed={logo} />}
+                {logo && <Logo image={logo} />}
                 {coin}
               </Box>
               <div>{apy}% APY</div>

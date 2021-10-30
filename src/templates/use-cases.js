@@ -4,7 +4,7 @@ import { useIntl } from "gatsby-plugin-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown from "../components/ButtonDropdown"
 import BannerNotification from "../components/BannerNotification"
@@ -411,7 +411,7 @@ const UseCasePage = ({ data, pageContext }) => {
         </TitleCard>
         <Image
           useCase={useCase}
-          fluid={mdx.frontmatter.image.childImageSharp.gatsbyImageData}
+          image={getImage(mdx.frontmatter.image)}
           alt={mdx.frontmatter.alt}
         />
       </HeroContainer>

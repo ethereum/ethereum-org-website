@@ -23,7 +23,7 @@ const Description = styled.p`
 
 const ImageCard = ({ image, title, description, children, className }) => (
   <StyledCard className={className}>
-    <Image fluid={image} />
+    <Image image={image} />
     <h3>{title}</h3>
     <Description>{description}</Description>
     {children}

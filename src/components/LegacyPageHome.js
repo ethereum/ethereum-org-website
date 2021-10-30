@@ -1,7 +1,7 @@
 import React from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { translateMessageId } from "../utils/translations"
 import Morpher from "./Morpher"
@@ -172,7 +172,7 @@ const LegacyPageHome = () => {
         description={translateMessageId("page-index-meta-description", intl)}
       />
       <Hero
-        fluid={data.hero.childImageSharp.gatsbyImageData}
+        image={getImage(data.hero)}
         alt={translateMessageId("page-index-hero-image-alt", intl)}
         loading="eager"
       />
@@ -195,7 +195,7 @@ const LegacyPageHome = () => {
           {sections.map((section, idx) => (
             <Section key={idx}>
               <GatsbyImage
-                image={section.img.src.childImageSharp.gatsbyImageData}
+                image={getImage(section.img.src)}
                 alt={translateMessageId(section.img.alt, intl)}
               />
               <h2>

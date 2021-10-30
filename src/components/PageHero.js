@@ -113,7 +113,7 @@ const PageHero = ({ content, children, className, isReverse }) => {
           )}
           {children}
         </HeroContent>
-        <HeroImg fluid={image} alt={alt} loading="eager" />
+        <HeroImg image={image} alt={alt} loading="eager" />
       </HeroContainer>
     </Content>
   )

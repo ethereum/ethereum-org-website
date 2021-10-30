@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import makeBlockie from "ethereum-blockies-base64"
+import { getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
 
 import Breadcrumbs from "../../components/Breadcrumbs"
@@ -263,22 +264,22 @@ const DepositContractPage = ({ data, location }) => {
     {
       title: "ConsenSys",
       link: "https://consensys.net/blog/news/eth2-phase-0-deposit-contract-address/",
-      image: data.consensys.childImageSharp.gatsbyImageData,
+      image: getImage(data.consensys),
     },
     {
       title: "Ethereum Foundation",
       link: "https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/",
-      image: data.ef.childImageSharp.gatsbyImageData,
+      image: getImage(data.ef),
     },
     {
       title: "Etherscan",
       link: `https://etherscan.io/address/${DEPOSIT_CONTRACT_ADDRESS}`,
-      image: data.etherscan.childImageSharp.gatsbyImageData,
+      image: getImage(data.etherscan),
     },
     {
       title: "EthHub",
       link: "https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/deposit-contract/",
-      image: data.ethhub.childImageSharp.gatsbyImageData,
+      image: getImage(data.ethhub),
     },
   ]
 

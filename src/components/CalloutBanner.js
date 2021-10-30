@@ -78,7 +78,7 @@ const CalloutBanner = ({
   className,
 }) => (
   <StyledCard className={className}>
-    <Image fluid={image} alt={alt} maxImageWidth={maxImageWidth} />
+    <Image image={image} alt={alt} maxImageWidth={maxImageWidth} />
     <Content>
       <H2>{title}</H2>
       <Description>{description}</Description>

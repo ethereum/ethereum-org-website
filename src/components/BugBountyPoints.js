@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react"
 import { ThemeContext } from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import axios from "axios"
 
@@ -173,11 +173,11 @@ const BugBountyPoints = () => {
             </TokenValue>
           </Row>
           <Row>
-            <Token fixed={data.dai.childImageSharp.gatsbyImageData} />
+            <Token image={getImage(data.dai)} />
             <TokenValue>{pointsInDAI} DAI</TokenValue>
           </Row>
           <Row>
-            <Token fixed={ethImage.childImageSharp.gatsbyImageData} />
+            <Token image={getImage(ethImage)} />
             <TokenValue>{pointsInETH} ETH</TokenValue>
           </Row>
         </ValueRow>

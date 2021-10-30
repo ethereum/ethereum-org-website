@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
@@ -227,7 +227,7 @@ const Eth2IndexPage = ({ data }) => {
     title: translateMessageId("page-eth2-upgrades", intl),
     header: translateMessageId("page-eth2-upgrading", intl),
     subtitle: translateMessageId("page-eth2-upgrade-desc", intl),
-    image: data.merge.childImageSharp.gatsbyImageData,
+    image: getImage(data.merge),
     alt: translateMessageId("page-dapps-doge-img-alt", intl),
     buttons: [
       {
@@ -244,21 +244,21 @@ const Eth2IndexPage = ({ data }) => {
 
   const upgrades = [
     {
-      image: data.beaconchain.childImageSharp.gatsbyImageData,
+      image: getImage(data.beaconchain),
       title: <Translation id="page-eth2-beacon-chain-title" />,
       description: <Translation id="page-eth2-beacon-chain-desc" />,
       to: "/eth2/beacon-chain/",
       date: <Translation id="page-eth2-beacon-chain-estimate" />,
     },
     {
-      image: data.themerge.childImageSharp.gatsbyImageData,
+      image: getImage(data.themerge),
       title: <Translation id="page-eth2-docking" />,
       description: <Translation id="page-eth2-docking-desc" />,
       to: "/eth2/merge/",
       date: <Translation id="page-eth2-docking-estimate" />,
     },
     {
-      image: data.shards.childImageSharp.gatsbyImageData,
+      image: getImage(data.shards),
       title: <Translation id="page-eth2-shard-title" />,
       description: <Translation id="page-eth2-shard-desc" />,
       to: "/eth2/shard-chains/",
@@ -314,7 +314,7 @@ const Eth2IndexPage = ({ data }) => {
         </Vision>
       </Content>
       <StyledCallout
-        image={data.oldship.childImageSharp.gatsbyImageData}
+        image={getImage(data.oldship)}
         alt={translateMessageId("page-eth-whats-eth-hero-alt", intl)}
         title={translateMessageId("page-eth2-dive", intl)}
         description={translateMessageId("page-eth2-dive-desc", intl)}
@@ -408,7 +408,7 @@ const Eth2IndexPage = ({ data }) => {
                 <Translation id="page-eth2-deposit-contract-staking-more-link" />
               </ButtonLink>
             </StakingCard>
-            <StakingImage fluid={data.rhino.childImageSharp.gatsbyImageData} />
+            <StakingImage image={getImage(data.rhino)} />
           </StakingRightColumn>
         </StakingColumns>
       </Staking>

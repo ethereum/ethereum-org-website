@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
 
@@ -294,7 +294,7 @@ const WhatIsEthereumPage = (props) => {
             </ButtonLink>
           </Header>
           <Hero
-            fluid={data.eth.childImageSharp.gatsbyImageData}
+            image={getImage(data.eth)}
             alt={translateMessageId("page-eth-whats-eth-hero-alt", intl)}
             loading="eager"
           />
@@ -372,7 +372,7 @@ const WhatIsEthereumPage = (props) => {
               "page-eth-whats-ethereum-desc",
               intl
             )}
-            image={data.ethereum.childImageSharp.gatsbyImageData}
+            image={getImage(data.ethereum)}
           />
           <TextDivider />
           <div>
@@ -392,7 +392,7 @@ const WhatIsEthereumPage = (props) => {
                 "page-eth-whats-defi-description",
                 intl
               )}
-              image={data.defi.childImageSharp.gatsbyImageData}
+              image={getImage(data.defi)}
             />
           </div>
           <TextDivider />
@@ -438,7 +438,7 @@ const WhatIsEthereumPage = (props) => {
         <StyledCalloutBanner
           title={translateMessageId("page-eth-where-to-buy", intl)}
           description={translateMessageId("page-eth-where-to-buy-desc", intl)}
-          image={data.ethCat.childImageSharp.gatsbyImageData}
+          image={getImage(data.ethCat)}
           alt={translateMessageId("page-eth-cat-img-alt", intl)}
           maxImageWidth={300}
         >

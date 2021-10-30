@@ -3,6 +3,7 @@ import { ThemeContext } from "styled-components"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
+import { getImage } from "gatsby-plugin-image"
 
 import { translateMessageId } from "../../../utils/translations"
 import Card from "../../../components/Card"
@@ -180,7 +181,7 @@ const GetInvolvedPage = ({ data, location }) => {
         description: <Translation id="page-eth2-get-involved-written-go" />,
         alt: "eth2-client-prysm-logo-alt",
         url: "https://docs.prylabs.network/docs/getting-started/",
-        image: data.prysm.childImageSharp.gatsbyImageData,
+        image: getImage(data.prysm),
         githubUrl: "https://github.com/prysmaticlabs/prysm",
         isProductionReady: true,
       },
@@ -191,8 +192,8 @@ const GetInvolvedPage = ({ data, location }) => {
         alt: "eth2-client-lighthouse-logo-alt",
         url: "https://lighthouse-book.sigmaprime.io/",
         image: isDarkTheme
-          ? data.lighthouseDark.childImageSharp.gatsbyImageData
-          : data.lighthouseLight.childImageSharp.gatsbyImageData,
+          ? getImage(data.lighthouseDark)
+          : getImage(data.lighthouseLight),
         githubUrl: "https://github.com/sigp/lighthouse",
         isProductionReady: true,
       },
@@ -202,9 +203,7 @@ const GetInvolvedPage = ({ data, location }) => {
         description: <Translation id="page-eth2-get-involved-written-java" />,
         alt: "eth2-client-teku-logo-alt",
         url: "https://pegasys.tech/teku",
-        image: isDarkTheme
-          ? data.tekuLight.childImageSharp.gatsbyImageData
-          : data.tekuDark.childImageSharp.gatsbyImageData,
+        image: isDarkTheme ? getImage(data.tekuLight) : getImage(data.tekuDark),
         githubUrl: "https://github.com/ConsenSys/teku",
         isProductionReady: true,
       },
@@ -214,7 +213,7 @@ const GetInvolvedPage = ({ data, location }) => {
         description: <Translation id="page-eth2-get-involved-written-net" />,
         alt: "eth2-client-cortex-logo-alt",
         url: "https://nethermind.io/",
-        image: data.cortex.childImageSharp.gatsbyImageData,
+        image: getImage(data.cortex),
         githubUrl: "https://github.com/NethermindEth/nethermind",
         isProductionReady: false,
       },
@@ -226,7 +225,7 @@ const GetInvolvedPage = ({ data, location }) => {
         ),
         alt: "eth2-client-lodestar-logo-alt",
         url: "https://lodestar.chainsafe.io/",
-        image: data.lodestar.childImageSharp.gatsbyImageData,
+        image: getImage(data.lodestar),
         githubUrl: "https://github.com/ChainSafe/lodestar",
         isProductionReady: false,
       },
@@ -236,7 +235,7 @@ const GetInvolvedPage = ({ data, location }) => {
         description: <Translation id="page-eth2-get-involved-written-nim" />,
         alt: "eth2-client-nimbus-logo-alt",
         url: "https://nimbus.team/",
-        image: data.nimbus.childImageSharp.gatsbyImageData,
+        image: getImage(data.nimbus),
         githubUrl: "https://github.com/status-im/nimbus-eth2",
         isProductionReady: true,
       },
@@ -383,7 +382,7 @@ const GetInvolvedPage = ({ data, location }) => {
       </Content>
       <Staking>
         <StyledCalloutBanner
-          image={data.rhino.childImageSharp.gatsbyImageData}
+          image={getImage(data.rhino)}
           alt={translateMessageId("eth2-rhino-img-alt", intl)}
           title={translateMessageId("page-eth2-get-involved-stake", intl)}
           description={translateMessageId(

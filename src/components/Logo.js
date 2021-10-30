@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { ThemeContext } from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
 import { translateMessageId } from "../utils/translations"
 
@@ -27,7 +27,7 @@ const Logo = () => {
   const image = isDarkTheme ? data.light : data.dark
   return (
     <GatsbyImage
-      image={image.childImageSharp.gatsbyImageData}
+      image={getImage(image)}
       alt={translateMessageId("ethereum-foundation-logo", intl)}
     />
   )

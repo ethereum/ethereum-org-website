@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import { ThemeContext } from "styled-components"
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
@@ -209,36 +209,36 @@ const BugBountiesPage = ({ data, location }) => {
     {
       title: "Prysm",
       link: "https://prylabs.net/",
-      image: data.prysmSmall.childImageSharp.gatsbyImageData,
+      image: getImage(data.prysmSmall),
     },
     {
       title: "Lighthouse",
       link: "https://lighthouse-book.sigmaprime.io/",
       image: isDarkTheme
-        ? data.lighthouseSmallDark.childImageSharp.gatsbyImageData
-        : data.lighthouseSmallLight.childImageSharp.gatsbyImageData,
+        ? getImage(data.lighthouseSmallDark)
+        : getImage(data.lighthouseSmallLight),
     },
     {
       title: "Teku",
       link: "https://pegasys.tech/teku",
       image: isDarkTheme
-        ? data.tekuSmallLight.childImageSharp.gatsbyImageData
-        : data.tekuSmallDark.childImageSharp.gatsbyImageData,
+        ? getImage(data.tekuSmallLight)
+        : getImage(data.tekuSmallDark),
     },
     {
       title: "Nimbus",
       link: "https://our.status.im/tag/nimbus/",
-      image: data.nimbusSmall.childImageSharp.gatsbyImageData,
+      image: getImage(data.nimbusSmall),
     },
   ]
 
   const tekuImage = isDarkTheme
-    ? data.tekuLight.childImageSharp.gatsbyImageData
-    : data.tekuDark.childImageSharp.gatsbyImageData
+    ? getImage(data.tekuLight)
+    : getImage(data.tekuDark)
 
   const lighthouseImage = isDarkTheme
-    ? data.lighthouseDark.childImageSharp.gatsbyImageData
-    : data.lighthouseLight.childImageSharp.gatsbyImageData
+    ? getImage(data.lighthouseDark)
+    : getImage(data.lighthouseLight)
 
   const specs = [
     {
@@ -308,10 +308,10 @@ const BugBountiesPage = ({ data, location }) => {
         <Translation id="page-eth2-bug-bounty-clients" />
       </ClientIntro>
       <ClientRow>
-        <Client fixed={data.prysm.childImageSharp.gatsbyImageData} />
-        <Client fixed={lighthouseImage} />
-        <Client fixed={tekuImage} />
-        <Client fixed={data.nimbus.childImageSharp.gatsbyImageData} />
+        <Client image={getImage(data.prysm)} />
+        <Client image={lighthouseImage} />
+        <Client image={tekuImage} />
+        <Client image={getImage(data.nimbus)} />
       </ClientRow>
       <StyledGrayContainer id="rules">
         <Content>

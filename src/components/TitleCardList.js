@@ -147,7 +147,7 @@ const TitleCardList = ({
       const isLink = !!link
       return isLink ? (
         <ItemLink key={id || idx} to={link}>
-          {image && <Image fixed={image} alt={alt} />}
+          {image && <Image image={image} alt={alt} />}
           <LeftContainer>
             <ItemTitle>{title}</ItemTitle>
 
@@ -161,7 +161,7 @@ const TitleCardList = ({
         </ItemLink>
       ) : (
         <Item key={idx} onClick={() => clickHandler(idx)}>
-          {image && <Image fixed={image} alt={alt} />}
+          {image && <Image image={image} alt={alt} />}
           <LeftContainer>
             <ItemTitle>{title}</ItemTitle>
 

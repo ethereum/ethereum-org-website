@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
 import { shuffle } from "lodash"
@@ -225,7 +225,7 @@ const WalletsPage = ({ data }) => {
     // Add fields for CardList
     const randomWallets = shuffle(
       nodes.map((node) => {
-        node.image = data[node.id].childImageSharp.gatsbyImageData
+        node.image = getImage(data[node.id])
         node.title = node.name
         node.description = translateMessageId(
           `page-find-wallet-description-${node.id}`,
@@ -261,7 +261,7 @@ const WalletsPage = ({ data }) => {
     title: translateMessageId("page-wallets-title", intl),
     header: translateMessageId("page-wallets-slogan", intl),
     subtitle: translateMessageId("page-wallets-subtitle", intl),
-    image: data.hero.childImageSharp.gatsbyImageData,
+    image: getImage(data.hero),
     alt: translateMessageId("page-wallets-alt", intl),
     buttons: [
       {
@@ -417,10 +417,7 @@ const WalletsPage = ({ data }) => {
             <ButtonLink to="/wallets/find-wallet/">
               <Translation id="page-wallets-find-wallet-btn" />
             </ButtonLink>
-            <FindWallet
-              fluid={data.findWallet.childImageSharp.gatsbyImageData}
-              alt=""
-            />
+            <FindWallet image={getImage(data.findWallet)} alt="" />
           </CentralColumn>
         </Content>
       </GradientContainer>
@@ -503,7 +500,7 @@ const WalletsPage = ({ data }) => {
         </H2>
         <CalloutCardContainer>
           <StyledCallout
-            image={data.eth.childImageSharp.gatsbyImageData}
+            image={getImage(data.eth)}
             title={translateMessageId("page-wallets-get-some", intl)}
             alt={translateMessageId("page-wallets-get-some-alt", intl)}
             description={translateMessageId("page-wallets-get-some-desc", intl)}
@@ -515,7 +512,7 @@ const WalletsPage = ({ data }) => {
             </div>
           </StyledCallout>
           <StyledCallout
-            image={data.dapps.childImageSharp.gatsbyImageData}
+            image={getImage(data.dapps)}
             title={translateMessageId("page-wallets-try-dapps", intl)}
             alt={translateMessageId("page-wallets-try-dapps-alt", intl)}
             description={translateMessageId(

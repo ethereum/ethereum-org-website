@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Link from "./Link"
 
@@ -81,7 +81,7 @@ const ActionCard = ({
         isBottom={isBottom}
         className="action-card-image-wrapper"
       >
-        {!isImageURL && <Image fixed={image} alt={alt} />}
+        {!isImageURL && <Image image={image} alt={alt} />}
         {isImageURL && (
           <img src={image} alt={alt} className="action-card-image" />
         )}
