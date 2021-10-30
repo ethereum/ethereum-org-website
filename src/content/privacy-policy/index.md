@@ -60,8 +60,8 @@ after no later than two days:
 - Unique identification code for Woocommerce customer
 
 The collection and processing of this technical data is for the purpose
-of enabling theuse of our website, continuously ensuring system security
-and stability, optimisingour website, and for internal statistical
+of enabling the use of our website, continuously ensuring system security
+and stability, optimising our website, and for internal statistical
 purposes. This is our legitimate interest in the processing of data in
 the sense of Art. 6 Par. 1 lit. f GDPR.
 
