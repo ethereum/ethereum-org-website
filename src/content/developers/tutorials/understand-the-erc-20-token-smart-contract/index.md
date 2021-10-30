@@ -37,7 +37,7 @@ interface IERC20 {
 }
 ```
 
-Here is a line-by-line explainer of what every function is for. After this we’ll present a simple implementation of the a ERC-20 token.
+Here is a line-by-line explainer of what every function is for. After this we’ll present a simple implementation of the ERC-20 token.
 
 ## Getters {#getters}
 
