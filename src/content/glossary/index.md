@@ -215,7 +215,7 @@ A [proof-of-work](#pow) algorithm for Ethereum 1.0.
 
 ### ether {#ether}
 
-The native cryptocurrency used by the Ethereum ecosystem, which covers [gas](#gas) costs when executing transactions. Also writen as ETH or its symbol Ξ, the Greek uppercase Xi character.
+The native cryptocurrency used by the Ethereum ecosystem, which covers [gas](#gas) costs when executing transactions. Also written as ETH or its symbol Ξ, the Greek uppercase Xi character.
 
 <DocLink to="/eth/" title="Currency for our digital future" />
 
