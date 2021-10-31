@@ -271,7 +271,7 @@ const WhatIsEthereumPage = (props) => {
       <PageMetadata
         title={translateMessageId("page-eth-whats-eth-meta-title", intl)}
         description={translateMessageId("page-eth-whats-eth-meta-desc", intl)}
-        image={data.ogImage.childImageSharp.gatsbyImageData.src}
+        image={getImage(data.ogImage)?.images.fallback.src}
       />
       <Content>
         <HeroContainer>

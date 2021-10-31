@@ -309,7 +309,7 @@ const WhatIsEthereumPage = ({ data }) => {
           "page-what-is-ethereum-meta-description",
           intl
         )}
-        image={data.ogImage.childImageSharp.gatsbyImageData.src}
+        image={getImage(data.ogImage)?.images.fallback.src}
       />
       <HeroContent>
         <HeroContainer>

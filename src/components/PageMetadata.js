@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import { Location } from "@reach/router"
+import { getImage } from "gatsby-plugin-image"
 
 import { translateMessageId, languageMetadata } from "../utils/translations"
 
@@ -58,7 +59,7 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
   return (
     <Location>
       {({ location }) => {
-        /* Set canonocial URL w/ language path to avoid duplicate content */
+        /* Set canonical URL w/ language path to avoid duplicate content */
         /* e.g. set ethereum.org/about/ to ethereum.org/en/about/ */
         const { pathname } = location
         let canonicalPath = pathname
@@ -71,15 +72,15 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
 
         /* Set fallback ogImage based on path */
         const siteUrl = site.siteMetadata.url
-        let ogImage = ogImageDefault.childImageSharp.gatsbyImageData.src
+        let ogImage = getImage(ogImageDefault)?.images.fallback.src
         if (pathname.includes("/developers/")) {
-          ogImage = ogImageDevelopers.childImageSharp.gatsbyImageData.src
+          ogImage = getImage(ogImageDevelopers)?.images.fallback.src
         }
         if (pathname.includes("/dapps/")) {
-          ogImage = ogImageDapps.childImageSharp.gatsbyImageData.src
+          ogImage = getImage(ogImageDapps)?.images.fallback.src
         }
         if (pathname.includes("/eth2/")) {
-          ogImage = ogImageEthtwo.childImageSharp.gatsbyImageData.src
+          ogImage = getImage(ogImageEthtwo)?.images.fallback.src
         }
         if (image) {
           ogImage = image

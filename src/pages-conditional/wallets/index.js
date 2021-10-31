@@ -276,7 +276,7 @@ const WalletsPage = ({ data }) => {
       <PageMetadata
         title={translateMessageId("page-wallets-meta-title", intl)}
         description={translateMessageId("page-wallets-meta-description", intl)}
-        image={data.ogImage.childImageSharp.gatsbyImageData.src}
+        image={getImage(data.ogImage)?.images.fallback.src}
       />
       <PageHero content={heroContent} />
       <StyledGrayContainer>

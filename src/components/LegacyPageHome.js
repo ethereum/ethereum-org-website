@@ -195,7 +195,7 @@ const LegacyPageHome = () => {
           {sections.map((section, idx) => (
             <Section key={idx}>
               <GatsbyImage
-                image={getImage(section.img.src)}
+                image={getImage(section.img)}
                 alt={translateMessageId(section.img.alt, intl)}
               />
               <h2>

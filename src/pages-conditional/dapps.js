@@ -1166,13 +1166,12 @@ const DappsPage = ({ data, location }) => {
       },
     ],
   }
-
   return (
     <Page>
       <PageMetadata
         title={translateMessageId("decentralized-applications-dapps", intl)}
         description={translateMessageId("page-dapps-desc", intl)}
-        image={data.ogImage.childImageSharp.gatsbyImageData.src}
+        image={getImage(data.ogImage)?.images.fallback.src}
       />
       <PageHero content={heroContent} />
       <Divider />
