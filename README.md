@@ -1212,6 +1212,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/xianxiongwang"><img src="https://avatars.githubusercontent.com/u/30892152?v=4?s=100" width="100px;" alt=""/><br /><sub><b>xianxiongwang</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=xianxiongwang" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/sshirokov"><img src="https://avatars.githubusercontent.com/u/40149?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Slava Shirokov</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=sshirokov" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://linktr.ee/cryptocribsnft"><img src="https://avatars.githubusercontent.com/u/93357542?v=4?s=100" width="100px;" alt=""/><br /><sub><b>BenOfTheBlockchain</b></sub></a><br /><a href="#ideas-BenOfTheBlockchain" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
