@@ -5273,6 +5273,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "sshirokov",
+      "name": "Slava Shirokov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40149?v=4",
+      "profile": "https://github.com/sshirokov",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
