@@ -118,14 +118,16 @@ const Layout = (props) => {
 
   const isPageLanguageEnglish = intl.language === intl.defaultLanguage
   const isPageContentEnglish = !!props.pageContext.isContentEnglish
+  const isTranslationBannerIgnored = !props.pageContext.ignoreTranslationBanner
   const isPageTranslationOutdated =
     !!props.pageContext.isOutdated ||
     !!props.data?.pageData?.frontmatter?.isOutdated
   const isPageRightToLeft = isLangRightToLeft(intl.language)
 
   const shouldShowTranslationBanner =
-    isPageTranslationOutdated ||
-    (isPageContentEnglish && !isPageLanguageEnglish)
+    (isPageTranslationOutdated ||
+      (isPageContentEnglish && !isPageLanguageEnglish)) &&
+    isTranslationBannerIgnored
 
   const path = props.path
 
