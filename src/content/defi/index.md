@@ -374,9 +374,9 @@ todo -->
 
 ### DeFi data {#defi-data}
 
-- [DeFi Llama](https://defillama.com/)
 - [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
+- [DeFi Llama](https://defillama.com/)
 
 ### DeFi articles {#defi-articles}
 
