@@ -5,7 +5,6 @@ lang: en
 sidebar: true
 ---
 
-
 Ethereum's current energy expenditure is too high and unsustainable. Resolving energy expenditure concerns without sacrificing security and decentralization has been a significant technical challenge for Ethereum's development. Let's explore why building Ethereum has had a high environmental impact and how upcoming network upgrades will dramatically change this.
 
 ## Energy secures the network {energy-secures-the-network}
@@ -20,19 +19,19 @@ Ethereum has used proof-of-work since genesis. Migrating off of proof-of-work ha
 
 Proof-of-work is a robust way to secure against dishonest changes to the blockchain, but it is problematic for several reasons. Since the right to mine a block requires solving a computational puzzle, miners can increase their odds of success by investing in more powerful hardware. These incentives cause an arms race with miners acquiring increasingly power-hungry mining equipment. Ethereum's proof-of-work protocol currently consumes as much energy as a medium-sized country.
 
-## Proof-of-stake (PoS) {#proof-of-stake}
+## Proof-of-stake {#proof-of-stake}
 
 A greener future for Ethereum is already being built in the form of a **proof-of-stake (PoS)** chain. Under proof-of-stake, arbitrary puzzle-solving is unnecessary. Removing puzzle-solving drastically reduces the energy expenditure required to secure the network. Miners get replaced by validators who perform the same function except that instead of expending their assets up-front in the form of computational work, they stake ETH as collateral against dishonest behavior. If the validator's node is non-responsive or a fraudulent block gets submitted to the chain, the staked assets can be "slashed", strongly incentivizing honesty and securing the network.
 
 Similarly to proof-of-work, to maintain a fraudulent blockchain, a validator would require 51% of the total ETH staked in the network. However, unlike proof-of-work, consensus is not based on the longest chain, but a mechanism known as ["Casper"](https://arxiv.org/abs/1710.09437). Migrating from proof-of-work to proof-of-stake eliminates the need to expend energy on arbitrary computations.
 
-## The merge
+## The merge {#the-merge}
 
 There is a functional proof-of-stake chain called the [Beacon Chain](/eth2/beacon-chain/) that has been running since December 2020 that is demonstrating the viability of the proof-of-stake protocol. The merge refers to the point in time when Ethereum leaves proof-of-work behind and fully adopts proof-of-stake. The merge is expected to happen ~Q2 2022. [More on the merge](/eth2/merge/).
 
 ## Proof-of-stake energy expenditure {#proof-of-stake-energy}
 
-As well as building confidence in the proof-of-stake mechanism, the Beacon Chain also enables estimates of Ethereum's post-merge energy usage. A recent [blog post on the Ethereum blog](https://blog.ethereum.org/2021/05/18/country-power-no-more/) suggested that the merge to proof-of-stake could result in a 99.95% reduction in total energy use, with proof-of-stake being ~2000x more efficient than proof-of-work. The energy expenditure of Ethereum will be roughly equal to the cost of running a home computer for each node on the network.
+As well as building confidence in the proof-of-stake mechanism, the Beacon Chain also enables estimates of Ethereum's post-merge energy usage. A recent [blog post on the ethereum.org blog](https://blog.ethereum.org/2021/05/18/country-power-no-more/) suggested that the merge to proof-of-stake could result in a 99.95% reduction in total energy use, with proof-of-stake being ~2000x more efficient than proof-of-work. The energy expenditure of Ethereum will be roughly equal to the cost of running a home computer for each node on the network.
 
 ![image](energy_use_per_transaction.png)
 
@@ -56,10 +55,22 @@ _We’ve provided the basic comparison to Visa to baseline your understanding of
 
 _It’s also important to remember that Ethereum does more than just financial transactions, it’s a platform for applications, so a fairer comparison might be to many companies/industries including Visa, AWS and more!_
 
-## A greener Ethereum (#green-ethereum}
+## A greener Ethereum {#green-ethereum}
 
 While Ethereum's energy consumption has historically been substantial, there has been a major investment of developer time and intellect into transitioning from energy-hungry to energy-efficient block validation. To quote [Bankless](http://podcast.banklesshq.com/), the best way to conserve the energy consumed by proof-of-work is simply to "turn it off", which is the approach Ethereum has committed to take.
 
 <InfoBanner emoji=":evergreen_tree:">
   If you think these stats are incorrect or can be made more accurate, please raise an issue or PR. These are estimates by the ethereum.org team made using publicly accessible information and the current Ethereum roadmap. This doesn't represent an official promise from the Ethereum Foundation. 
 </InfoBanner>
+
+## Further reading {#further-reading}
+
+- [A country's worth of power, no more](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _Carl Beekhuizen, May 18 2021_
+- [Ethereum Energy Consumption Index](https://digiconomist.net/ethereum-energy-consumption/) – _Digiconomist_
+
+## Related Topics {#related-topics}
+
+- [Ethereum's vision](/eth2/vision/)
+- [The Beacon Chain](/eth2/beacon-chain)
+- [The merge](/eth2/merge/)
+- [Sharding](/eth2/beacon-chain/)
