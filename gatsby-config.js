@@ -97,25 +97,26 @@ module.exports = {
             }
           }
         }`,
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.nodes
-            .filter((node) => {
+        resolvePages: ({ site, allSitePage: { nodes: allPages } }) => {
+          return allPages
+            .filter((page) => {
               // Filter out 404 pages
-              return !node.path.includes("404")
+              return !page.path.includes("404")
             })
-            .map((node) => {
-              const path = node.path
-              const url = `${site.siteMetadata.siteUrl}${path}`
-              const changefreq = path.includes(`/${defaultLanguage}/`)
-                ? `weekly`
-                : `monthly`
-              const priority = path.includes(`/${defaultLanguage}/`) ? 0.7 : 0.5
-              return {
-                url,
-                changefreq,
-                priority,
-              }
-            }),
+            .map((page) => ({ ...page, siteUrl: site.siteMetadata.siteUrl }))
+        },
+        serialize: ({ path, siteUrl }) => {
+          const url = `${siteUrl}${path}`
+          const changefreq = path.includes(`/${defaultLanguage}/`)
+            ? `weekly`
+            : `monthly`
+          const priority = path.includes(`/${defaultLanguage}/`) ? 0.7 : 0.5
+          return {
+            url,
+            changefreq,
+            priority,
+          }
+        },
       },
     },
     // Ability to set custom IDs for headings (for translations)
