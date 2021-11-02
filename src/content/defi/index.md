@@ -376,6 +376,7 @@ todo -->
 
 - [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
+- [DeFi Llama](https://defillama.com/)
 
 ### DeFi articles {#defi-articles}
 
@@ -390,4 +391,5 @@ todo -->
 
 ### Communities {#communities}
 
+- [DeFi Llama Discord server](https://discord.gg/buPFYXzDDd)
 - [DeFi Pulse Discord server](https://discord.gg/Gx4TCTk)
