@@ -14,7 +14,7 @@ const StyledEmoji = styled(Emoji)`
   flex-shrink: 0;
 `
 
-export default () => (
+export default UpgradeBannerNotification = () => (
   <StyledBannerNotification shouldShow>
     <StyledEmoji text=":megaphone:" />
     <div>

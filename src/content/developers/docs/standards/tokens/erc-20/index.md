@@ -16,7 +16,7 @@ Tokens can represent virtually anything in Ethereum:
 - lottery tickets
 - financial assets like a share in a company
 - a fiat currency like USD
-- an ounce of gold 
+- an ounce of gold
 - and more...
 
 Such a powerful feature of Ethereum must be handled by a robust standard, right? That's exactly

@@ -32,12 +32,14 @@ transferred to your computer's hard drive. We use the following cookies:
   websites, the pages you have visited and the links you have
   followed.
 
+<MatomoOptOut />
+
 You can find more information about the individual cookies we use and
 the purposes for which we use them in the table below:
 
 | Cookie | Name     | Purpose                                                                                                                                                                  |
 | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Matomo | \_pk_id  | Used to distinguish users. Enables us to identify which pages are popular, estimate our audience size and usage pattern, and better understand how the web site is used. |
+| Matomo | \_pk_id  | Used to distinguish users. Enables us to identify which pages are popular, estimate our audience size and usage pattern, and better understand how the website is used. |
 | Matomo | \_pk_ses | Used to store temporary session data. This a short lived cookie, only lasting for a few minutes.                                                                         |
 
 You can block cookies by activating the setting on your browser that

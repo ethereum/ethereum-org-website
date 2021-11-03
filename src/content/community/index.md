@@ -28,12 +28,12 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
   - [Ethereum Stackexchange](https://ethereum.stackexchange.com) - _discussion and help for Ethereum developers_
   - [Ethereum Research](https://ethresear.ch) - _the most influential messageboard for cryptoeconomic research_
 - Chat rooms
-  - [Eth R&D Discord server](https://discord.gg/qGpsxSA)
   - [Ethereum Gitter](https://gitter.im/ethereum/home) - _chat room for the Ethereum GitHub repo_
   - [Ethereum Cat Herders](https://discord.gg/tzYmDmF) - _community oriented around offering project management support to Ethereum development_
   - [Ethereum Hackers](https://ethglobal.co/discord) - _Discord chat run by [ETHGlobal](https://www.ethglobal.co/): an online community for Ethereum hackers all over the world_
   - [CryptoDevs Discord](https://discord.gg/5W5tVb3) - _Ethereum development focused Discord community_
   - [EthStaker Discord](https://discord.io/ethstaker) - _Support for the [Beacon Chain](/eth2/beacon-chain/) staking community_
+  - [Eth R&D Discord](https://discord.gg/qGpsxSA) - _Strictly for focused discussions around core protocol development (Not for individual support or assistance)_
   - [ethereum.org Website Team](https://discord.gg/CetY6Y4) - _Stop by and chat ethereum.org web design with the team and folks from the community_
 - Twitter
   - The Ethereum community is very active on Twitter - not sure where to start?

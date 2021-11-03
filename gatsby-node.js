@@ -149,7 +149,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     // If markdown file is English, check for corresponding file in each language.
     // e.g. English file: "src/content/community/index.md"
     // e.g. corresponding German file: "src/content/translations/de/community/index.md"
-    if (language === defaultLanguage && !isLegal) {
+    if (language === defaultLanguage) {
       for (const lang of supportedLanguages) {
         const splitPath = relativePath.split("/")
         splitPath.splice(2, 0, `translations/${lang}`)
@@ -164,6 +164,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             component: path.resolve(`./src/templates/${template}.js`),
             context: {
               slug: langSlug,
+              ignoreTranslationBanner: isLegal,
               isOutdated: false,
               isContentEnglish: true,
               relativePath: relativePath, // Use English path for template MDX query

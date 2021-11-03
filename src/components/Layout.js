@@ -10,10 +10,15 @@ import { lightTheme, darkTheme, GlobalStyle } from "../theme"
 
 import Footer from "./Footer"
 import ReleaseBanner from "./ReleaseBanner"
+import VisuallyHidden from "./VisuallyHidden"
 import Nav from "./Nav"
 import SideNav from "./SideNav"
 import SideNavMobile from "./SideNavMobile"
 import TranslationBanner from "./TranslationBanner"
+
+import { ZenModeContext } from "../contexts/ZenModeContext"
+
+import { useKeyPress } from "../hooks/useKeyPress"
 
 import { isLangRightToLeft } from "../utils/translations"
 
@@ -53,7 +58,12 @@ const Main = styled.main`
 
 const Layout = (props) => {
   const [isDarkTheme, setIsDarkTheme] = useState(false)
+  const [isZenMode, setIsZenMode] = useState(false)
   const [shouldShowSideNav, setShouldShowSideNav] = useState(false)
+
+  // Exit Zen Mode on 'esc' click
+  useKeyPress(`Escape`, () => handleZenModeChange(false))
+
   // set isDarkTheme based on browser/app user preferences
   useEffect(() => {
     if (localStorage && localStorage.getItem("dark-theme") !== null) {
@@ -64,13 +74,39 @@ const Layout = (props) => {
   }, [])
 
   useEffect(() => {
-    setShouldShowSideNav(props.path.includes("/docs/"))
+    if (props.path.includes("/docs/")) {
+      setShouldShowSideNav(true)
+
+      if (localStorage.getItem("zen-mode") !== null) {
+        let isMobile = false
+        if (typeof window !== undefined) {
+          isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            window.navigator.userAgent
+          )
+        }
+        setIsZenMode(localStorage.getItem("zen-mode") === "true" && !isMobile)
+      }
+    } else {
+      // isZenMode and shouldShowSideNav only applicable in /docs pages
+      setIsZenMode(false)
+      setShouldShowSideNav(false)
+    }
   }, [props.path])
 
   const handleThemeChange = () => {
     setIsDarkTheme(!isDarkTheme)
     if (localStorage) {
       localStorage.setItem("dark-theme", !isDarkTheme)
+    }
+  }
+
+  const handleZenModeChange = (val) => {
+    // Use 'val' param if provided. Otherwise toggle
+    const newVal = val !== undefined ? val : !isZenMode
+
+    setIsZenMode(newVal)
+    if (localStorage) {
+      localStorage.setItem("zen-mode", newVal)
     }
   }
 
@@ -82,14 +118,16 @@ const Layout = (props) => {
 
   const isPageLanguageEnglish = intl.language === intl.defaultLanguage
   const isPageContentEnglish = !!props.pageContext.isContentEnglish
+  const isTranslationBannerIgnored = !props.pageContext.ignoreTranslationBanner
   const isPageTranslationOutdated =
     !!props.pageContext.isOutdated ||
     !!props.data?.pageData?.frontmatter?.isOutdated
   const isPageRightToLeft = isLangRightToLeft(intl.language)
 
   const shouldShowTranslationBanner =
-    isPageTranslationOutdated ||
-    (isPageContentEnglish && !isPageLanguageEnglish)
+    (isPageTranslationOutdated ||
+      (isPageContentEnglish && !isPageLanguageEnglish)) &&
+    isTranslationBannerIgnored
 
   const path = props.path
 
@@ -109,20 +147,32 @@ const Layout = (props) => {
               isPageRightToLeft={isPageRightToLeft}
               originalPagePath={intl.originalPath}
             />
-            <ContentContainer>
-              <Nav
-                handleThemeChange={handleThemeChange}
-                isDarkTheme={isDarkTheme}
-                path={path}
-              />
-              {shouldShowSideNav && <SideNavMobile path={path} />}
+            <ContentContainer isZenMode={isZenMode}>
+              <VisuallyHidden isHidden={isZenMode}>
+                <Nav
+                  handleThemeChange={handleThemeChange}
+                  isDarkTheme={isDarkTheme}
+                  path={path}
+                />
+                {shouldShowSideNav && <SideNavMobile path={path} />}
+              </VisuallyHidden>
               <MainContainer>
-                {shouldShowSideNav && <SideNav path={path} />}
+                {shouldShowSideNav && (
+                  <VisuallyHidden isHidden={isZenMode}>
+                    <SideNav path={path} />
+                  </VisuallyHidden>
+                )}
                 <MainContent>
-                  <Main>{props.children}</Main>
+                  <ZenModeContext.Provider
+                    value={{ isZenMode, handleZenModeChange }}
+                  >
+                    <Main>{props.children}</Main>
+                  </ZenModeContext.Provider>
                 </MainContent>
               </MainContainer>
-              <Footer />
+              <VisuallyHidden isHidden={isZenMode}>
+                <Footer />
+              </VisuallyHidden>
             </ContentContainer>
           </ThemeProvider>
         </IntlContextProvider>

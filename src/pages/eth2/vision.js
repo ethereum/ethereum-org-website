@@ -14,7 +14,6 @@ import PageHero from "../../components/PageHero"
 import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
-import UpgradeBannerNotification from "../../components/UpgradeBannerNotification"
 import {
   CardContainer,
   Content,
@@ -126,7 +125,6 @@ const VisionPage = ({ data, location }) => {
         title={translateMessageId("page-eth2-vision-meta-title", intl)}
         description={translateMessageId("page-eth2-vision-meta-desc", intl)}
       />
-      <UpgradeBannerNotification />
       <PageHero content={heroContent} />
       <Divider />
       <Content>

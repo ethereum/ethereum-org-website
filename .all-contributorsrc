@@ -1622,7 +1622,8 @@
       "avatar_url": "https://avatars1.githubusercontent.com/u/509756?v=4",
       "profile": "https://github.com/jpitts",
       "contributions": [
-        "ideas"
+        "ideas",
+        "content"
       ]
     },
     {
@@ -3207,7 +3208,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/27740273?v=4",
       "profile": "http://hakeem-almidan.com",
       "contributions": [
-        "content"
+        "content",
+        "code"
       ]
     },
     {
@@ -5022,7 +5024,9 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/31321934?v=4",
       "profile": "https://github.com/julian-st",
       "contributions": [
-        "code"
+        "code",
+        "doc",
+        "content"
       ]
     },
     {
@@ -5204,6 +5208,115 @@
       "profile": "https://github.com/hungdoansy",
       "contributions": [
         "bug"
+      ]
+    },
+    {
+      "login": "pwilczynskiclearcode",
+      "name": "Paweł Wilczyński",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3940860?v=4",
+      "profile": "https://github.com/pwilczynskiclearcode",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "joaoMpf",
+      "name": "joaoMpf",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56357437?v=4",
+      "profile": "https://github.com/joaoMpf",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "bskrksyp9",
+      "name": "Bhaskar Kashyap",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31563474?v=4",
+      "profile": "https://github.com/bskrksyp9",
+      "contributions": [
+        "doc",
+        "content"
+      ]
+    },
+    {
+      "login": "bleesherman",
+      "name": "bleesherman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/82793845?v=4",
+      "profile": "https://github.com/bleesherman",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "bertmiller",
+      "name": "Robert Miller",
+      "avatar_url": "https://avatars.githubusercontent.com/u/30010302?v=4",
+      "profile": "https://www.linkedin.com/in/bertcmiller/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "hacklschorsch",
+      "name": "Florian Sesser",
+      "avatar_url": "https://avatars.githubusercontent.com/u/454605?v=4",
+      "profile": "https://florian.sesser.at/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "xianxiongwang",
+      "name": "xianxiongwang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/30892152?v=4",
+      "profile": "https://github.com/xianxiongwang",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "sshirokov",
+      "name": "Slava Shirokov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40149?v=4",
+      "profile": "https://github.com/sshirokov",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "BenOfTheBlockchain",
+      "name": "BenOfTheBlockchain",
+      "avatar_url": "https://avatars.githubusercontent.com/u/93357542?v=4",
+      "profile": "https://linktr.ee/cryptocribsnft",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "0xngmi",
+      "name": "0xngmi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/80541789?v=4",
+      "profile": "https://github.com/0xngmi",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "phyBrackets",
+      "name": "Shivam Rajput",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75530356?v=4",
+      "profile": "https://github.com/phyBrackets",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "erhuve",
+      "name": "Raymond",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59463268?v=4",
+      "profile": "https://github.com/erhuve",
+      "contributions": [
+        "code"
       ]
     }
   ],

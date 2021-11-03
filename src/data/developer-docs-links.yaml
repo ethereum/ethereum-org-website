@@ -32,6 +32,9 @@
     - id: docs-nav-evm
       to: /developers/docs/evm/
       description: docs-nav-evm-description
+      items:
+        - id: docs-nav-opcodes
+          to: /developers/docs/evm/opcodes
     - id: docs-nav-gas
       to: /developers/docs/gas/
       description: docs-nav-gas-description
@@ -88,7 +91,6 @@
       to: /developers/docs/frameworks/
       description: docs-nav-development-frameworks-description
     - id: docs-nav-ethereum-client-apis
-      path: /developers/docs/apis/
       description: docs-nav-ethereum-client-apis-description
       items:
         - id: docs-nav-java-script-apis

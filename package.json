@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "2.45.1",
+  "version": "2.46.0",
   "description": "Website of ethereum.org",
   "main": "index.js",
   "repository": "git@github.com:ethereum/ethereum-org-website.git",
@@ -69,6 +69,9 @@
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0",
     "react-test-renderer": "^17.0.1"
+  },
+  "resolutions": {
+    "sharp": "0.27.0"
   },
   "scripts": {
     "build": "yarn merge-translations && yarn copy-contributors && yarn build:app && yarn build:lambda",
