@@ -344,7 +344,7 @@ Importantly this improves the energy efficiency while preserving Ethereum's dece
 
 _We’ve provided the basic comparison to Visa to baseline your understanding of Eth2 energy consumption against a familiar name. However, in practice, it’s not really correct to compare based on number of transactions. Ethereum’s energy output is time-based. If Ethereum did more or less transactions from one minute to the next, the energy output would stay the same._
 
-_It’s also important to remember that Ethereum does more than just financial transactions, it’s a platform for applications, so a fairer comparison might be too many companies/industries including Visa, AWS and more!_
+_It’s also important to remember that Ethereum does more than just financial transactions, it’s a platform for applications, so a fairer comparison might be to many companies/industries including Visa, AWS and more!_
 
 #### Timelines {#timelines}
 
