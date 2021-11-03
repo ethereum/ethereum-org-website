@@ -32,7 +32,7 @@ Generalmente, rappresenta un [EOA](#eoa) o un [contratto](#contract-accouint) ch
 
 In [Solidity](#solidity), `assert(false)` viene compilata in `0xfe`, un opcode non valido che usa tutto il [carburante](#gas) rimanente e annulla tutte le modifiche. Quando un'istruzione `assert()` fallisce, avviene qualcosa di molto sbagliato e imprevisto ed è necessario correggere il codice. Devi usare `assert()` per evitare condizioni che non dovrebbero verificarsi mai.
 
-<DocLink to="/developers/docs/security/" title="Sicurezza" />
+<DocLink to="/developers/docs/smart-contracts/security/" title="Sicurezza" />
 
 ### attestazione {#attestation}
 
@@ -352,7 +352,7 @@ Una volta distribuito il codice di un [contratto](#smart-contract) (o di una [li
 
 Detta anche "algoritmo di allungamento della password", è usata dai formati [keystore](#keystore-file) per proteggere contro attacchi di forza bruta, dictionary e rainbow table ai danni della crittografia di una passphrase, mediante continuo hashing della passphrase.
 
-<DocLink to="/developers/docs/security/" title="Sicurezza" />
+<DocLink to="/developers/docs/smart-contracts/security/" title="Sicurezza" />
 
 ### keccak-256 {#keccak-256}
 
@@ -504,7 +504,7 @@ Dati restituiti da un client Ethereum per rappresentare il risultato di una part
 
 Attacco che consiste nella chiamata da parte del contratto di un aggressore alla funzione del contratto della vittima in modo che, durante l'esecuzione, la vittima chiami di nuovo il contratto dell'aggressore, in modo ricorsivo. Questo può causare, ad esempio, il furto di fondi perché vengono ignorate le parti del contratto della vittima che aggiornano i saldi o contano gli importi prelevati.
 
-<DocLink to="/developers/docs/security/#re-entrancy" title="Codice rientrante" />
+<DocLink to="/developers/docs/smart-contracts/security/#re-entrancy" title="Codice rientrante" />
 
 ### ricompensa {#reward}
 

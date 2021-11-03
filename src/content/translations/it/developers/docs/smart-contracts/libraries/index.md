@@ -105,7 +105,7 @@ Infine, per decidere se includere una libreria, considera l'uso generale che ne 
 
 ## Tutorial correlati {#related-tutorials}
 
-- [Security considerations for Ethereum developers](/developers/docs/security/) _– Tutorial sulle considerazioni di sicurezza durante lo sviluppo di Smart Contract che include l'uso della libreria._
+- [Security considerations for Ethereum developers](/developers/docs/smart-contracts/security/) _– Tutorial sulle considerazioni di sicurezza durante lo sviluppo di Smart Contract che include l'uso della libreria._
 - [Understand the ERC-20 token smart contract](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _-Tutorial sullo standard ERC20, fornito da diverse librerie._
 
 ## Letture consigliate {#further-reading}

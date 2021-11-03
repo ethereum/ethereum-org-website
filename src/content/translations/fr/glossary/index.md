@@ -32,7 +32,7 @@ Plus généralement, il s'agit d'un [EOA](#eoa) ou d'un [compte de contrat](#con
 
 Dans [Solidity](#solidity), `assert(false)` compile en `0xfe`, un code d'opération (opcode) non valide, qui utilise tout le [carburant](#gas) restant et annule toutes les modifications. Lorsqu'une déclaration `assert()` échoue, quelque chose ne fonctionne pas du tout comme prévu, et vous devez corriger votre code. Il est conseillé d'utiliser `assert()` pour éviter les conditions qui ne doivent jamais se produire.
 
-<DocLink to="/developers/docs/security/" title="sécurité" />
+<DocLink to="/developers/docs/smart-contracts/security/" title="sécurité" />
 
 ### attestation {#attestation}
 
@@ -352,7 +352,7 @@ Une fois que le code d'un [contrat](#smart-contract) (ou celui d'une [bibliothè
 
 Aussi appelé "algorithme d'étirement de mot de passe", elle est utilisée par les formats de [keystore](#keystore-file) pour protéger contre les attaques de force brute, de dictionnaire et de table arc-en-ciel sur le chiffrement des phrases de sécurité, en hachant celles-ci de façon répétée.
 
-<DocLink to="/developers/docs/security/" title="Sécurité" />
+<DocLink to="/developers/docs/smart-contracts/security/" title="Sécurité" />
 
 ### keccak-256 {#keccak-256}
 
@@ -504,7 +504,7 @@ Données renvoyées par un client Ethereum pour représenter le résultat d'une 
 
 Attaque qui consiste en un contrat attaquant qui appelle une fonction du contrat de la victime de telle façon que, pendant l'exécution, la victime rappelle le contrat de l'attaquant de façon récursive. Par exemple, en ignorant certaines parties du contrat de la victime qui mettent à jour les soldes ou comptabilisent les montants de retrait, cela peut aboutir à un vol de fonds.
 
-<DocLink to="/developers/docs/security/#re-entrancy" title="réentrance" />
+<DocLink to="/developers/docs/smart-contracts/security/#re-entrancy" title="réentrance" />
 
 ### récompense {#reward}
 
