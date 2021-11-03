@@ -4,6 +4,7 @@ description: Una visión general de los nodos de Ethereum y del software del cli
 lang: es
 sidebar: true
 sidebarDepth: 2
+isOutdated: true
 ---
 
 Para que Ethereum funcione de forma descentralizada, necesita de una red de nodos distribuida que pueda verificar bloques e información de transacciones. Necesitas una aplicación, conocida como cliente, para "ejecutar" un nodo en tu dispositivo.

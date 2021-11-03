@@ -145,7 +145,7 @@ checks:
 ### Step 5: Create a Codechecks account {#step-5-create-a-codechecks-account}
 
 - Create an account with [Codechecks](http://codechecks.io/).
-- Add the Github repo to it.
+- Add the GitHub repo to it.
 - Copy the secret and add the `CC_SECRET=COPIED SECRET` to your CI (see here for [Travis](https://docs.travis-ci.com/user/environment-variables/), here for [CircleCi](https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-project)).
 - Now go ahead and create a pull request.
 
@@ -186,7 +186,7 @@ Solidity coverage starts its own ganache-cli, so we don't have to worry about th
 ### Step 4: Add repository to coveralls {#step-4-add-repository-to-coveralls}
 
 - Create an account with [Coveralls](https://coveralls.io/).
-- Add the Github repo to it.
+- Add the GitHub repo to it.
 - Now go ahead and create a pull request.
 
 ![Example coverall](./coverall.png)

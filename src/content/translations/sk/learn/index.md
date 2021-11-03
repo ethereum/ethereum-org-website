@@ -62,7 +62,6 @@ Smart kontrakt – „inteligentná zmluva“ je v jednoduchosti časť kódu, k
 Ethereum v súčasnosti používa systém s názvom „Proof of Work“. Ten umožňuje uzlom siete Etherea dohodnúť sa na stave všetkých informácií zaznamenaných na blockchaine Etherea a bráni určitým typom ekonomických útokov.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Pravidelne aktualizované – Ethhub_
-- [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 V rámci nového Etherea 2.0 sa však bude využívať iný systém s názvom „Proof of Stake“. [Prečítajte si viac o Ethereu 2.0 nižšie](#eth-2-0).
 

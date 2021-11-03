@@ -178,4 +178,4 @@ After compiling, in the Remix deploy section you’ll select the factory to be d
 
 ![Selecting the factory to be deployed in Remix](./counterfactory-deploy.png)
 
-Then you can play with your contract factory and check the value changing. If you’d like to call the smart contract from a difference address you’ll need to change the address in the Account select of Remix.
+Then you can play with your contract factory and check the value changing. If you’d like to call the smart contract from a different address you’ll need to change the address in the Account select of Remix.

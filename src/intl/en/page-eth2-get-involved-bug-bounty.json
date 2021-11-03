@@ -50,7 +50,7 @@
   "page-eth2-bug-bounty-specs-docs": "Specification documents",
   "page-eth2-bug-bounty-submit": "Submit a bug",
   "page-eth2-bug-bounty-submit-desc": "For each bug you find you’ll be rewarded points. The points you earn depend on the severity of the bug. The Ethereum Foundation (EF) determine severity using the OWASP method.",
-  "page-eth2-bug-bounty-subtitle": "Earn up to $50,000 USD and a place on the leaderboard by finding Eth2 protocol and client bugs.",
+  "page-eth2-bug-bounty-subtitle": "Earn up to $50,000 USD and a place on the leaderboard by finding Eth2 protocol and client bugs. In order to get more eyes on the Altair upgrade, all bounties for vulnerabilities related to the Altair upgrade have been doubled between now and four weeks after the launch (Nov 27). Critical Altair bugs in both clients and specs are now worth up to $100k.",
   "page-eth2-bug-bounty-title": "Open for submissions",
   "page-eth2-bug-bounty-title-1": "Beacon Chain",
   "page-eth2-bug-bounty-title-2": "Fork choice",

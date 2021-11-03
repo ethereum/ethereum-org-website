@@ -348,9 +348,8 @@ const TitleCard = styled.div`
 `
 
 const UseCasePage = ({ data, pageContext }) => {
-  const intl = useIntl()
-  const isRightToLeft = isLangRightToLeft(intl.locale)
   const mdx = data.pageData
+  const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang)
   const tocItems = mdx.tableOfContents.items
 
   const { editContentUrl } = data.siteData.siteMetadata
@@ -464,6 +463,7 @@ export const useCasePageQuery = graphql`
       frontmatter {
         title
         description
+        lang
         sidebar
         emoji
         sidebarDepth
@@ -476,6 +476,7 @@ export const useCasePageQuery = graphql`
             }
           }
         }
+        isOutdated
       }
       body
       tableOfContents

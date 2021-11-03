@@ -24,6 +24,7 @@ import TranslationsInProgress from "../components/TranslationsInProgress"
 import SectionNav from "../components/SectionNav"
 import DocLink from "../components/DocLink"
 import GhostCard from "../components/GhostCard"
+import MatomoOptOut from "../components/MatomoOptOut"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
 import {
@@ -54,6 +55,7 @@ const Page = styled.div`
 // Apply styles for classes within markdown here
 const ContentContainer = styled.article`
   max-width: ${(props) => props.theme.breakpoints.m};
+  width: 100%;
 
   .featured {
     padding-left: 1rem;
@@ -127,11 +129,12 @@ const components = {
   CardContainer,
   GhostCard,
   UpcomingEventsList,
+  MatomoOptOut,
 }
 
-const StaticPage = ({ data: { siteData, mdx }, pageContext }) => {
+const StaticPage = ({ data: { siteData, pageData: mdx }, pageContext }) => {
   const intl = useIntl()
-  const isRightToLeft = isLangRightToLeft(intl.locale)
+  const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang)
 
   const lastUpdatedDate = mdx.parent.fields
     ? mdx.parent.fields.gitLogLatestDate
@@ -150,7 +153,7 @@ const StaticPage = ({ data: { siteData, mdx }, pageContext }) => {
       />
       <ContentContainer>
         <Breadcrumbs slug={mdx.fields.slug} />
-        <LastUpdated>
+        <LastUpdated dir={isLangRightToLeft(intl.locale) ? "rtl" : "ltr"}>
           <Translation id="page-last-updated" />:{" "}
           {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
         </LastUpdated>
@@ -182,15 +185,17 @@ export const staticPageQuery = graphql`
         editContentUrl
       }
     }
-    mdx: mdx(fields: { relativePath: { eq: $relativePath } }) {
+    pageData: mdx(fields: { relativePath: { eq: $relativePath } }) {
       fields {
         slug
       }
       frontmatter {
         title
         description
+        lang
         sidebar
         sidebarDepth
+        isOutdated
       }
       body
       tableOfContents

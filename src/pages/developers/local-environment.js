@@ -38,7 +38,7 @@ const HeroContent = styled(Content)`
 const Slogan = styled.h1`
   font-style: normal;
   font-weight: normal;
-  font-family: "SFMono-Regular", monospace;
+  font-family: ${(props) => props.theme.fonts.monospace};
   text-transform: uppercase;
   font-weight: 600;
   font-size: 32px;
@@ -293,8 +293,9 @@ const frameworksList = [
     id: "hardhat",
     url: "https://hardhat.org/",
     githubUrl: "https://github.com/nomiclabs/hardhat",
-    background: "#2A2C32",
+    background: "#faf8fb",
     name: "Hardhat",
+    image: "https://hardhat.org/assets/img/Hardhat-logo.652a7049.svg",
     description: "page-local-environment-hardhat-desc",
     alt: "page-local-environment-hardhat-logo-alt",
   },
@@ -370,6 +371,7 @@ const ChooseStackPage = ({ data }) => {
   useEffect(() => {
     const list = shuffle(
       frameworksList.map((item) => {
+        if (item.image) return item
         item.image = data[item.id].childImageSharp.fixed
         return item
       })
@@ -640,9 +642,7 @@ export const query = graphql`
     waffle: file(relativePath: { eq: "dev-tools/waffle.png" }) {
       ...devtoolImage
     }
-    hardhat: file(relativePath: { eq: "dev-tools/hardhat.png" }) {
-      ...devtoolImage
-    }
+
     truffle: file(relativePath: { eq: "dev-tools/truffle.png" }) {
       ...devtoolImage
     }

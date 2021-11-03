@@ -63,9 +63,8 @@ Zjednodušeně řečeno, „smart kontrakt“ je kód programu, který může b�
 Ethereum v současnosti používá systém „Proof of Work“. Ten umožňuje členům sítě Ethereum dosáhnout společného konsenzu o tom, v jakém stavu jsou informace na blockchain Ethereum zaznamenávány, a zabraňuje tak celé řadě ekonomických útoků.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Pravidelně aktualizováno – Ethhub_
-- [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
-V následující verzi ETH 2.0 plánuje Ethereum využívat jiný systém s názvem „Proof of Stake“. [Více o ETH 2.0 se můžete dozvědět níže](./#eth-2-0).
+V následující verzi ETH 2.0 plánuje Ethereum využívat jiný systém s názvem „Proof of Stake“. [Více o ETH 2.0 se můžete dozvědět níže](/#eth-2-0).
 
 ## Klienti a uzly {#clients-and-nodes}
 
@@ -84,7 +83,7 @@ Více informací o [Ethereu pro firmy](/enterprise).
 
 Velké úsilí na zvýšení propustnosti a rychlosti transakcí je vynakládáno ve snaze dosáhnout lépe „škálovatelného“ Etherea. Rozlišují se řešení typu „Layer 1“ a „Layer 2“.
 
-„Layer 1“ se týká vylepšení základního protokolu Ethereum. Hlavním projektem pro vylepšení základního protokolu Ethereum je [ETH 2.0](./#eth-2-0).
+„Layer 1“ se týká vylepšení základního protokolu Ethereum. Hlavním projektem pro vylepšení základního protokolu Ethereum je [ETH 2.0](/#eth-2-0).
 
 „Layer 2“ se týká technologií, které jsou postavené „nad“ základním protokolem Ethereum a umožňují lepší škálovatelnost, aniž by se slevovalo na bezpečnosti. Dále existují „off-chain“ technologie, jako je například side-chains, které zvyšují škálovatelnost, avšak na úkor kompromisů na úrovni bezpečnosti.
 

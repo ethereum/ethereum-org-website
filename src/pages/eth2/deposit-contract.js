@@ -111,7 +111,7 @@ const AddressCard = styled.div`
 `
 
 const Address = styled.div`
-  font-family: "SFMono-Regular", monospace;
+  font-family: ${(props) => props.theme.fonts.monospace};
   border-radius: 2px;
   font-size: 2rem;
   flex-wrap: wrap;

@@ -62,7 +62,6 @@ sidebar: true
 以太坊目前使用的系统是“工作量证明”机制。 这种机制使得以太坊网络能够就以太坊区块链上所记录的信息状态达成一致，并使其免受某些经济攻击。
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Updated often - Ethhub_
-- [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 在 ETH 2.0 中，以太坊将转向另一种不同的系统——“权益证明” (Proof of Stake)。 [浏览更多 ETH 2.0 相关信息](#eth-2-0)。
 

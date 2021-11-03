@@ -144,6 +144,7 @@ const ProductCard = ({
   githubUrl = "",
   repoLangCount = 1,
   subjects,
+  hideStars = false,
 }) => {
   const split = githubUrl.split("/")
   const repoOwner = split[split.length - 2]
@@ -161,14 +162,28 @@ const ProductCard = ({
 
   const hasRepoData = data && data.repository && !error
 
+  // Check if image is an svg as gatsby-image doesn't support svg
+  let isSvg = false
+  if (typeof image === "string") {
+    if (image.includes("svg")) {
+      isSvg = true
+    }
+  }
+
   return (
     <Card>
       <ImageWrapper background={background}>
-        <Image fixed={image} alt={alt} />
+        {isSvg ? (
+          <img src={image} alt={alt} />
+        ) : (
+          <Image fixed={image} alt={alt} />
+        )}
       </ImageWrapper>
       <Content className="hover">
         <div>
-          {hasRepoData && <GitStars gitHubRepo={data.repository} />}
+          {hasRepoData && (
+            <GitStars gitHubRepo={data.repository} hideStars={hideStars} />
+          )}
           <Title gitHidden={!hasRepoData}>{name}</Title>
           <Description>{description}</Description>
         </div>

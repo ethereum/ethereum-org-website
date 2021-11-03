@@ -4,28 +4,28 @@ name-template: v$NEXT_PATCH_VERSION
 tag-template: v$NEXT_PATCH_VERSION
 categories:
   - title: ":rocket: Enhancement"
-    label: "Type: Feature"
+    label: "feature :sparkles:"
 
   - title: ":globe_with_meridians: Translations"
-    label: "Type: Translation"
+    label: "translation :earth_africa:"
 
   - title: ":bug: Bug Fix"
-    label: "Type: Bug"
+    label: "bug :bug:"
 
   - title: ":memo: Documentation"
-    label: "Type: Documentation"
+    label: "documentation :book:"
 
   - title: ":nail_care: Refactor"
-    label: "Type: Refactor"
+    label: "refactor :recycle:"
 
   - title: ":house: Internal"
-    label: "Type: Internal"
+    label: "internal :house:"
 
   - title: ":wrench: Tooling"
-    label: "Type: Tooling"
+    label: "tooling :wrench:"
 
   - title: ":package: Dependencies"
-    label: "Type: Dependencies"
+    label: "dependencies :package:"
 
 change-template: "- $TITLE (#$NUMBER) @$AUTHOR"
 no-changes-template: "- No changes"

@@ -1,12 +1,12 @@
 ---
-title: Ethereum for Dart Developers
+title: Ethereum for Dart developers
 description: Learn how to develop for Ethereum using the Dart language
 lang: en
 sidebar: true
 incomplete: true
 ---
 
-## Getting Started with Smart Contracts and the Solidity Language {#getting-started-with-smart-contracts-and-solidity}
+## Getting started with smart contracts and the Solidity language {#getting-started-with-smart-contracts-and-solidity}
 
 ## Tutorials {#tutorials}
 

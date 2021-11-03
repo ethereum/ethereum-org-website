@@ -51,7 +51,7 @@ const MenuContainer = styled(motion.div)`
   position: fixed;
   left: 0;
   top: 0;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   width: 100%;
   max-width: 450px;
@@ -127,7 +127,7 @@ const CloseIconContainer = styled.span`
 
 const MenuItems = styled.ul`
   margin: 0;
-  height: 100vh;
+  height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
   padding: 3rem 1rem 8rem;

@@ -4,6 +4,7 @@ description: Présentation du stockage décentralisé et des outils disponibles 
 lang: fr
 sidebar: true
 incomplete: true
+isOutdated: true
 ---
 
 Contrairement à un serveur centralisé géré par une seule société ou organisation, les systèmes de stockage décentralisés sont constitués d'un réseau P2P d'opérateurs utilisateurs qui détiennent une partie des données globales, ce qui crée un système de stockage et de partage de fichiers résilient.
@@ -25,12 +26,6 @@ Contrairement à un serveur centralisé géré par une seule société ou organi
 
 - [Documentation](https://github.com/orbitdb/field-manual)
 - [GitHub](https://github.com/orbitdb/orbit-db)
-
-**3Box -** **_Système de stockage de base de données IPFS contrôlé par l'utilisateur pour des applications engageantes et riches en données. Prise en charge des profils, des espaces chiffrés et de la messagerie, avec des plugins de dépôt supplémentaires pour simplifier le développement._**
-
-- [3Box](https://3box.io)
-- [3Box.js](https://github.com/3box/3box-js)
-- [Plugins 3Box](https://docs.3box.io/build/plugins)
 
 ## Complément d'information {#further-reading}
 

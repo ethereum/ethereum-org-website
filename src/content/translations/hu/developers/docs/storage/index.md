@@ -4,6 +4,7 @@ description: Áttekintő arról, hogy mi is az a decentralizált tárhely és az
 lang: hu
 sidebar: true
 incomplete: true
+isOutdated: true
 ---
 
 A központilag elhelyezett, egyetlen vállalat vagy szervezet által működtetett szerverrel szemben a decentralizált tárolórendszerek a felhasználói operátorok peer-to-peer hálózatából állnak, akik az összes adat egy részét tárolják, így egy rugalmas fájltárolási és megosztási rendszert hozva létre.
@@ -25,12 +26,6 @@ A központilag elhelyezett, egyetlen vállalat vagy szervezet által működtete
 
 - [Dokumentáció](https://github.com/orbitdb/field-manual)
 - [GitHub](https://github.com/orbitdb/orbit-db)
-
-**3Box -** **_Felhasználók által irányított IPDS adatbázis tárhely adatgazdag és vonzó alkalmazásoknak. Támogatás a profiloknak, titkosított tereknek, üzenetváltásoknak további drop-in pluginekkel, melyek leegyszerűsítik a fejlesztést._**
-
-- [3Box](https://3box.io)
-- [3Box.js](https://github.com/3box/3box-js)
-- [3Box Pluginok](https://docs.3box.io/build/plugins)
 
 ## További olvasnivaló {#further-reading}
 

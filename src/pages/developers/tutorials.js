@@ -19,7 +19,7 @@ import { Page, ButtonSecondary } from "../../components/SharedStyledComponents"
 import { getLocaleTimestamp, INVALID_DATETIME } from "../../utils/time"
 import { hasTutorials } from "../../utils/translations"
 
-import foreignTutorials from "../../data/tutorials.json"
+import foreignTutorials from "../../data/externalTutorials.json"
 
 const SubSlogan = styled.p`
   font-size: 20px;
@@ -98,7 +98,7 @@ const Title = styled.p`
 const PageTitle = styled.h1`
   font-style: normal;
   font-weight: normal;
-  font-family: "SFMono-Regular", monospace;
+  font-family: ${(props) => props.theme.fonts.monospace};
   text-transform: uppercase;
   font-weight: 600;
   font-size: 32px;

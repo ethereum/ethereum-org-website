@@ -231,8 +231,8 @@ Then, create a .env file in the root directory of our project, and add your Meta
 
 Your .env should now look like this:
 
-    API_URL = "https://eth-ropsten.alchemyapi.io/v2/your-api-key"
-    PRIVATE_KEY = "your-metamask-private-key"
+    API_URL="https://eth-ropsten.alchemyapi.io/v2/your-api-key"
+    PRIVATE_KEY="your-metamask-private-key"
 
 To actually connect these to our code, we’ll reference these variables in our hardhat.config.js file on step 13.
 
@@ -244,7 +244,7 @@ Hardhat makes it super easy to integrate [Plugins](https://hardhat.org/plugins/)
 
 In your project directory type:
 
-    npm install --save-dev @nomiclabs/hardhat-ethers 'ethers@^5.0.0'
+    npm install --save-dev @nomiclabs/hardhat-ethers ethers@^5.0.0
 
 We’ll also require ethers in our hardhat.config.js in the next step.
 

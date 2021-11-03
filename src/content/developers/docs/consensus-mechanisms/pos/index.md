@@ -83,11 +83,11 @@ Stake slashings, ejections, and other penalties, coordinated by the beacon chain
 | Staking is more decentralized. It allows for increased participation, and more nodes doesn't mean increased % returns, like with mining.                                                                                                                                  |                                                                                           |
 | Staking allows for secure sharding. Shard chains allow Ethereum to create multiple blocks at the same time, increasing transaction throughput. Sharding the network in a proof-of-work system would simply lower the power needed to compromise a portion of the network. |                                                                                           |
 
-## Further Reading {#further-reading}
+## Further reading {#further-reading}
 
 - [What is Proof of Stake](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
 - [The Beacon Chain Ethereum 2.0 explainer you need to read first](https://ethos.dev/beacon-chain/) _Ethos.dev_
 
-## Related Topics {#related-topics}
+## Related topics {#related-topics}
 
 - [Proof of work](/developers/docs/consensus-mechanisms/pow/)

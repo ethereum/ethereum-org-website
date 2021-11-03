@@ -63,9 +63,8 @@ Um "contrato inteligente" é simplesmente um pedaço de código que está sendo 
 A Ethereum usa atualmente um sistema chamado "Prova de Trabalho". Isto permite que a rede Ethereum concorde com o estado de todas as informações gravadas no blockchain Ethereum, e previne certos tipos de ataques econômicos.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Atualizado frequentemente - Ethhub_
-- [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
-No ETH 2.0, a Ethereum vai mudar para um sistema diferente chamado "Prova de Participação". [Leia mais sobre ETH 2.0 abaixo](./#eth-2-0).
+No ETH 2.0, a Ethereum vai mudar para um sistema diferente chamado "Prova de Participação". [Leia mais sobre ETH 2.0 abaixo](/#eth-2-0).
 
 ## Clientes e Nodos {#clients-and-nodes}
 
@@ -84,7 +83,7 @@ Leia mais sobre a [Ethereum empresarial](/enterprise/).
 
 Há muitos esforços sendo feitos para tornar a Ethereum mais “escalável” melhorando sua velocidade e rendimento de transação. Geralmente, estes são classificados em soluções de "Layer 1" e "Layer 2".
 
-"Layer 1" refere-se a melhorar o núcleo de protocolo da Ethereum. O projeto principal para melhorar o protocolo central da Ethereum é [ETH 2.0](./#eth-2-0).
+"Layer 1" refere-se a melhorar o núcleo de protocolo da Ethereum. O projeto principal para melhorar o protocolo central da Ethereum é [ETH 2.0](/#eth-2-0).
 
 "Layer 2" refere-se à tecnologias que são construídas "no topo" do protocolo de Ethereum base, permitindo maior escalabilidade sem comprometer a segurança. Também existem tecnologias "off-chain", como as "sidechains" (correntes paralelas), que permitem uma maior escalabilidade através da criação de um conjunto diferente de compromissos em matéria de segurança.
 

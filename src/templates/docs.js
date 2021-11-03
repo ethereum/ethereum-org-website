@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import { MDXProvider } from "@mdx-js/react"
@@ -20,6 +20,12 @@ import Pill from "../components/Pill"
 import TableOfContents from "../components/TableOfContents"
 import SectionNav from "../components/SectionNav"
 import Translation from "../components/Translation"
+import Emoji from "../components/Emoji"
+import DocsNav from "../components/DocsNav"
+import DeveloperDocsLinks from "../components/DeveloperDocsLinks"
+
+import { ZenModeContext } from "../contexts/ZenModeContext.js"
+
 import { isLangRightToLeft } from "../utils/translations"
 import {
   Divider,
@@ -27,10 +33,9 @@ import {
   Header1,
   Header2,
   Header3,
+  Header4,
   ListItem,
 } from "../components/SharedStyledComponents"
-import Emoji from "../components/Emoji"
-import DocsNav from "../components/DocsNav"
 
 const Page = styled.div`
   display: flex;
@@ -41,7 +46,7 @@ const Page = styled.div`
 
 const ContentContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: ${(props) => (props.isZenMode ? "center" : "space-between")};
   width: 100%;
   padding: 0 2rem 0 0;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
@@ -59,6 +64,7 @@ const Content = styled.article`
   flex: 1 1 ${(props) => props.theme.breakpoints.m};
   max-width: ${(props) => props.theme.breakpoints.m};
   padding: 3rem 4rem 4rem;
+  margin: 0px auto;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     max-width: 100%;
   }
@@ -81,7 +87,7 @@ const Content = styled.article`
 
 const H1 = styled(Header1)`
   font-size: 2.5rem;
-  font-family: "SFMono-Regular", monospace;
+  font-family: ${(props) => props.theme.fonts.monospace};
   text-transform: uppercase;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 2rem;
@@ -100,7 +106,7 @@ const H1 = styled(Header1)`
 `
 
 const H2 = styled(Header2)`
-  font-family: "SFMono-Regular", monospace;
+  font-family: ${(props) => props.theme.fonts.monospace};
   text-transform: uppercase;
 
   font-size: 1.5rem;
@@ -120,25 +126,22 @@ const H3 = styled(Header3)`
     font-size: 1rem;
     font-weight: 600;
   }
+
   &:before {
     height: 160px;
     margin-top: -160px;
   }
 `
 
-const StyledH4 = styled.h4`
-  /* Anchor tag styles */
-  a {
-    position: relative;
-    display: none;
-    margin-left: 0rem;
-    padding-right: 0.5rem;
+const H4 = styled(Header4)`
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 1rem;
-    vertical-align: middle;
-    &:hover {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-    }
+    font-weight: 600;
+  }
+
+  &:before {
+    height: 160px;
+    margin-top: -160px;
   }
 `
 
@@ -159,7 +162,7 @@ const components = {
   h1: H1,
   h2: H2,
   h3: H3,
-  h4: StyledH4,
+  h4: H4,
   p: Paragraph,
   li: ListItem,
   pre: Codeblock,
@@ -172,6 +175,7 @@ const components = {
   Pill,
   CallToContribute,
   Emoji,
+  DeveloperDocsLinks,
 }
 
 const Contributors = styled(FileContributors)`
@@ -181,15 +185,16 @@ const Contributors = styled(FileContributors)`
 `
 
 const DocsPage = ({ data, pageContext }) => {
-  const { locale } = useIntl()
-  const isRightToLeft = isLangRightToLeft(locale)
-
+  const { isZenMode } = useContext(ZenModeContext)
   const mdx = data.pageData
+  const { locale } = useIntl()
+  const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang)
+
   const tocItems = mdx.tableOfContents.items
   const isPageIncomplete = mdx.frontmatter.incomplete
 
   const { editContentUrl } = data.siteData.siteMetadata
-  const { relativePath } = pageContext
+  const { relativePath, slug } = pageContext
   const absoluteEditPath = `${editContentUrl}${relativePath}`
 
   return (
@@ -202,7 +207,7 @@ const DocsPage = ({ data, pageContext }) => {
         {/* TODO move to common.json */}
         <Translation id="banner-page-incomplete" />
       </BannerNotification>
-      <ContentContainer>
+      <ContentContainer isZenMode={isZenMode}>
         <Content>
           <H1 id="top">{mdx.frontmatter.title}</H1>
           <Contributors
@@ -210,6 +215,7 @@ const DocsPage = ({ data, pageContext }) => {
             editPath={absoluteEditPath}
           />
           <TableOfContents
+            slug={slug}
             editPath={absoluteEditPath}
             items={tocItems}
             isMobile={true}
@@ -229,6 +235,7 @@ const DocsPage = ({ data, pageContext }) => {
         </Content>
         {mdx.frontmatter.sidebar && tocItems && (
           <DesktopTableOfContents
+            slug={slug}
             editPath={absoluteEditPath}
             items={tocItems}
             isPageIncomplete={isPageIncomplete}
@@ -254,9 +261,11 @@ export const query = graphql`
       frontmatter {
         title
         description
+        lang
         incomplete
         sidebar
         sidebarDepth
+        isOutdated
       }
       body
       tableOfContents

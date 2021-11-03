@@ -45,10 +45,10 @@ The transaction object will look a little like this:
   from: "0xEA674fdDe714fd979de3EdF0F56AA9716B898ec8",
   to: "0xac03bb73b6a9e108530aff4df5077c2b3d481e5a",
   gasLimit: "21000",
-  maxFeePerGas: "300"
-  maxPriorityFeePerGas: "10"
+  maxFeePerGas: "300",
+  maxPriorityFeePerGas: "10",
   nonce: "0",
-  value: "10000000000",
+  value: "10000000000"
 }
 ```
 
@@ -111,7 +111,7 @@ With the signature hash, the transaction can be cryptographically proven that it
 ## Types of transactions {#types-of-transactions}
 
 On Ethereum there are a few different types of transactions:
- 
+
 - Regular transactions: a transaction from one wallet to another.
 - Contract deployment transactions: a transaction without a 'to' address, where the data field is used for the contract code.
 
@@ -131,9 +131,9 @@ Bob's account will be debited **-1.0042 ETH**
 
 Alice's account will be credited **+1.0 ETH**
 
-The base fee will be burned **-0.003735 ETH**
+The base fee will be burned **-0.00399 ETH**
 
-Miner keeps the tip **+0.000197 ETH**
+Miner keeps the tip **+0.000210 ETH**
 
 Gas is required for any smart contract interaction too.
 
@@ -151,8 +151,9 @@ Once the transaction has been submitted the following happens:
 2. The transaction is then broadcast to the network and included in a pool with lots of other transactions.
 3. A miner must pick your transaction and include it in a block in order to verify the transaction and consider it "successful".
    - You may end up waiting at this stage if the network is busy and miners aren't able to keep up.
-4. Your transaction will also get a block confirmation number. This is the number of blocks created since the block that your transaction was included in. The higher the number, the greater the certainty that the transaction was processed and recognised by the network. This is because sometimes the block your transaction was included in may not have made it into the chain.
-   - The larger the block confirmation number the more immutable the transaction is. So for higher value transactions, more block confirmations may be desired.
+4. Your transaction will receive "confirmations". The number of confirmations is the number of blocks created since the block that included your transaction. The higher the number, the greater the certainty that the network processed and recognised the transaction.
+   - Recent blocks may get re-organised, giving the impression the transaction was unsuccessful; however, the transaction may still be valid but included in a different block.
+   - The probability of a re-organisation diminishes with every subsequent block mined, i.e. the greater the number of confirmations, the more immutable the transaction is.
 
 <!-- **State change**
 
@@ -191,7 +192,7 @@ A contract can decide how much of its remaining gas should be sent with the inne
 
 As already said, the called contract (which can be the same as the caller) will receive a freshly cleared instance of memory and has access to the call payload - which will be provided in a separate area called the calldata. After it has finished execution, it can return data which will be stored at a location in the caller’s memory preallocated by the caller.
 
-Calls are limited to a depth of 1024, which means that for more complex operations, loops should be preferred over recursive calls.
+Calls are limited to a depth of 1024, so you should prefer loops over recursive calls for more complex operations.
 ```
 
 <!-- Feels like this should maybe form a more advanced/complex doc that sits under transactions. Stuff like Ethers and providers need some sort of intro-->
@@ -305,7 +306,28 @@ Watch Austin walk you through transactions, gas, and mining.
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/er-0ihqFQB0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Typed Transaction Envelope {#typed-transaction-envelope}
+
+Ethereum originally had one format for transactions. Each transaction contained a nonce, gas price, gas limit, to address, value, data, v, r, and s. These fields are RLP-encoded, to look something like this:
+
+`RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
+
+Ethereum has evolved to support multiple types of transactions to allow for new features such as access lists and [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) to be implemented without affecting legacy transaction formats.
+
+[EIP-2718: Typed Transaction Envelope](https://eips.ethereum.org/EIPS/eip-2718) defines a transaction type that is an envelope for future transaction types.
+
+EIP-2718 is a new generalised envelope for typed transactions. In the new standard, transactions are interpreted as:
+
+`TransactionType || TransactionPayload`
+
+Where the fields are defined as:
+
+- `TransactionType` - a number between 0 and 0x7f, for a total of 128 possible transaction types.
+- `TransactionPayload` - an arbitrary byte array defined by the transaction type.
+
 ## Further reading {#further-reading}
+
+- [EIP-2718: Typed Transaction Envelope](https://eips.ethereum.org/EIPS/eip-2718)
 
 _Know of a community resource that helped you? Edit this page and add it!_
 

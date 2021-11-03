@@ -50,6 +50,7 @@ const outdatedMarkdownPages = [
   "/wallets/",
   "/what-is-ethereum/",
 ]
+
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 
@@ -140,12 +141,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       slug.includes(`/terms-of-use/`) ||
       slug.includes(`/contributing/`)
     const language = node.frontmatter.lang
+    if (!language) {
+      throw `Missing 'lang' frontmatter property. All markdown pages must have a lang property. Page slug: ${slug}`
+    }
     const relativePath = node.fields.relativePath
 
     // If markdown file is English, check for corresponding file in each language.
     // e.g. English file: "src/content/community/index.md"
     // e.g. corresponding German file: "src/content/translations/de/community/index.md"
-    if (language === defaultLanguage && !isLegal) {
+    if (language === defaultLanguage) {
       for (const lang of supportedLanguages) {
         const splitPath = relativePath.split("/")
         splitPath.splice(2, 0, `translations/${lang}`)
@@ -160,6 +164,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             component: path.resolve(`./src/templates/${template}.js`),
             context: {
               slug: langSlug,
+              ignoreTranslationBanner: isLegal,
               isOutdated: false,
               isContentEnglish: true,
               relativePath: relativePath, // Use English path for template MDX query
@@ -289,7 +294,7 @@ exports.onCreatePage = ({ page, actions }) => {
         isOutdated,
         //display TranslationBanner for translation-component pages that are still in English
         isContentEnglish:
-          langVersion < 2 && !page.component.includes("/developers/index.js"),
+          langVersion < 2 && !page.component.includes("/index.js"),
       },
     })
   }

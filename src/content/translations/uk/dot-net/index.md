@@ -81,9 +81,9 @@ sidebarDepth: 1
 
 ## Учасники спільноти .NET {#dot-net-community-contributors}
 
-У Nethereum ми в основному спілкуємось на [Gitter](https://gitter.im/Nethereum/Nethereum), де кожен бажаючий може задати запитання чи відповісти на нього, отримати допомогу або просто розслабитися. Не соромтеся використовувати pull requests або відкривати питання у репозиторії [Nethereum Github](https://github.com/Nethereum) чи просто переглядати безліч сторонніх проектів або прикладів проектів, які у нас є.
+У Nethereum ми в основному спілкуємось на [Gitter](https://gitter.im/Nethereum/Nethereum), де кожен бажаючий може задати запитання чи відповісти на нього, отримати допомогу або просто розслабитися. Не соромтеся використовувати pull requests або відкривати питання у репозиторії [Nethereum GitHub](https://github.com/Nethereum) чи просто переглядати безліч сторонніх проектів або прикладів проектів, які у нас є.
 
-У Nethermind давайте зв’яжемось через [Gitter](https://gitter.im/nethermindeth/nethermind). Щодо pull requests або питань перегляньте репозіторій [Nethermind Github](https://github.com/NethermindEth/nethermind).
+У Nethermind давайте зв’яжемось через [Gitter](https://gitter.im/nethermindeth/nethermind). Щодо pull requests або питань перегляньте репозіторій [Nethermind GitHub](https://github.com/NethermindEth/nethermind).
 
 ## Інші зведені списки {#other-aggregated-lists}
 

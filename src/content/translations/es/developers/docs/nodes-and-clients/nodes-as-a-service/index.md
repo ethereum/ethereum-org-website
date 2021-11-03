@@ -4,6 +4,7 @@ description: Una visión general para principiantes de los servicios de nodos, l
 lang: es
 sidebar: true
 sidebarDepth: 2
+isOutdated: true
 ---
 
 ## Introducción {#Introduction}

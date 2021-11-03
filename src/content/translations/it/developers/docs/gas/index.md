@@ -4,6 +4,7 @@ description:
 lang: it
 sidebar: true
 incomplete: true
+isOutdated: true
 ---
 
 Il carburante è un elemento essenziale per la rete Ethereum. Cconsente di far funzionare la rete, così come un'automobile ha bisogno di benzina per funzionare.

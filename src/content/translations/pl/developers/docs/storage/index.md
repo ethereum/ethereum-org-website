@@ -4,6 +4,7 @@ description: Przegląd tego, czym jest zdecentralizowana pamięć i dostępne na
 lang: pl
 sidebar: true
 incomplete: true
+isOutdated: true
 ---
 
 W przeciwieństwie do centralnie zlokalizowanego serwera obsługiwanego przez jedną firmę lub organizację, zdecentralizowane systemy pamięci masowej składają się z sieci peer-to-peer użytkowników-operatorów, którzy posiadają część ogólnych danych, tworząc odporny system przechowywania i udostępniania plików.
@@ -25,12 +26,6 @@ W przeciwieństwie do centralnie zlokalizowanego serwera obsługiwanego przez je
 
 - [Dokumentacja](https://github.com/orbitdb/field-manual)
 - [GitHub](https://github.com/orbitdb/orbit-db)
-
-**3Box —** **<em x-id="4">kontrolowany przez użytkownika magazyn baz danych IPFS dla bogatych w dane i atrakcyjnych aplikacji. Obsługa profili, przestrzeni zaszyfrowanych i wiadomości oraz dodatkowych wtyczek drop-in upraszczających programowanie.</em>**
-
-- [3Box](https://3box.io)
-- [3Box.js](https://github.com/3box/3box-js)
-- [Wtyczki 3Box](https://docs.3box.io/build/plugins)
 
 ## Dalsza lektura {#further-reading}
 

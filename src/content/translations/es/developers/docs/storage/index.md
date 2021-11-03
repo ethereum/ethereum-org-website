@@ -4,6 +4,7 @@ description: Resumen de qué es el almacenamiento descentralizado y herramientas
 lang: es
 sidebar: true
 incomplete: true
+isOutdated: true
 ---
 
 En contraposición a un servidor centralizado gestionado por una sola empresa u organización, los sistemas de almacenamiento descentralizados consisten en una red de punto a punto de operadores de usuario, que poseen una porción de los datos generales creando un sistema resistente de almacenamiento y compartición de archivos.
@@ -25,12 +26,6 @@ En contraposición a un servidor centralizado gestionado por una sola empresa u 
 
 - [Documentación](https://github.com/orbitdb/field-manual)
 - [GitHub](https://github.com/orbitdb/orbit-db)
-
-**3Box:** **_Almacenamiento de base de datos IPFS controlado por el usuario para aplicaciones ricas en datos y atractivas. Soporte para perfiles, espacios cifrados y mensajería con complementos adicionales para simplificar el desarrollo._**
-
-- [3Box](https://3box.io)
-- [3Box.js](https://github.com/3box/3box-js)
-- [Plugins de 3Box](https://docs.3box.io/build/plugins)
 
 ## Más lectura {#further-reading}
 

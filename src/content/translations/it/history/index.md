@@ -4,6 +4,7 @@ description: Storia della blockchain Ethereum che include le principali pietre m
 lang: it
 sidebar: true
 sidebarDepth: 1
+isOutdated: true
 ---
 
 # La storia di Ethereum {#the-history-of-ethereum}

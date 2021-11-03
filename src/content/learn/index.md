@@ -22,7 +22,6 @@ In addition to the information on this page, there are many community-built reso
 - [EthHub](https://docs.ethhub.io) _Comprehensive knowledge base for all things Ethereum_
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _An educational resource about Ethereum targeted at beginners_
 - [Ethereum.wiki](https://eth.wiki) _A community-built wiki about Ethereum’s technology_
-- [Kauri](https://kauri.io) _Technical articles and tutorials for Ethereum and related projects_
 - [Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Videos and talks about Ethereum_
 - [Week in Ethereum News](https://weekinethereumnews.com/) _A weekly newsletter covering key developments across the ecosystem_
 - [What’s new in ETH 2.0](https://eth2.news) _A regular newsletter about Eth2 development_
@@ -40,7 +39,7 @@ High-level explanations of Ethereum and blockchain technology generally.
 - [Understanding Ethereum](https://allan-gulley.medium.com/understanding-ethereum-819c2096b613?sk=c89f3aa5a4fd8b5fa0dae3042a3fa011) _Apr 27, 2021 - Allan Gulley_
 - [Ethereum's original Whitepaper](/whitepaper/)
 
-## Smart Contracts {#smart-contracts}
+## Smart contracts {#smart-contracts}
 
 A “smart contract” is simply a piece of code that is running on Ethereum. It’s called a “contract” because code that runs on Ethereum can control valuable things like ETH or other digital assets.
 
@@ -52,12 +51,11 @@ A “smart contract” is simply a piece of code that is running on Ethereum. It
 
 Aspiring Ethereum developer? Check out our developer portal. It's got documentation, tutorials, and other resources for learning how to build Ethereum products. [View developer portal](/developers/learning-tools/)
 
-## Proof of Work and Mining {#proof-of-work-and-mining}
+## Proof-of-work and Mining {#proof-of-work-and-mining}
 
 Ethereum currently uses a system called "Proof of Work". This allows the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain, and prevents certain kinds of economic attacks.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Updated often - Ethhub_
-- [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 You can learn more about [proof of work](/developers/docs/consensus-mechanisms/pow/) and [mining](/developers/docs/consensus-mechanisms/pow/mining/) within our developer documentation.
 
@@ -75,7 +73,7 @@ Enterprise Ethereum refers to private, consortium, and hybrid implementations of
 
 Read more about [Enterprise Ethereum](/enterprise/).
 
-## Improving Ethereum’s Scalability {#improving-ethereums-scalability}
+## Improving Ethereum’s scalability {#improving-ethereums-scalability}
 
 There are many efforts underway to make Ethereum more “scalable” by improving its speed and overall transaction throughput. Generally these are sorted into “Layer 1” and “Layer 2” solutions.
 
@@ -134,3 +132,9 @@ Podcasts addressing Ethereum and Cryptocurrencies:
 - [Zero Knowledge](https://www.zeroknowledge.fm/) _Goes deep into the tech that will power the emerging decentralised web and the community building this_
 - [Epicenter](https://epicenter.tv/) _Explores the technical, economic, and social implications of the Crypto industry_
 - [Unchained](https://unchainedpodcast.com/) _dives deep into the people building the decentralized internet, the details of this technology that could underpin our future, and some of the thorniest topics in crypto, such as regulation, security and privacy_
+
+## Archived / No longer maintained:
+
+Resources about Ethereum-related projects and resources which have been deprecated or are no longer maintained.
+
+- [Deprecated Software](/depricated-software/) _A list of deprecated software, dapps, and documentation_

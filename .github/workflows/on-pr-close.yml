@@ -1,7 +1,7 @@
 name: Close Pull Request
 
 on:
-  pull_request:
+  pull_request_target:
     types: [closed]
 
 jobs:
@@ -17,5 +17,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              labels: ['Status: Abandoned']
+              labels: ['abandoned']
             })

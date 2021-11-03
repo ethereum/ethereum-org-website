@@ -66,7 +66,7 @@ If you remember from our tutorial in Part 1, our mintNFT smart contract function
 
 > _Interplanetary File System (IPFS) is a decentralized protocol and peer-to-peer network for storing and sharing data in a distributed file system._
 
-We will use Pinata, a convenient IPFS API and toolkit, to store our NFT asset and metadata to ensure our NFT is truly decentralized. If you don’t have a Pinata account, sign up for a free account [here](https://pinata.cloud/signup) and complete the steps to verify your email.
+We will use Pinata, a convenient IPFS API and toolkit, to store our NFT asset and metadata to ensure our NFT is truly decentralized. If you don’t have a Pinata account, sign up for a free account [here](https://app.pinata.cloud) and complete the steps to verify your email.
 
 Once you’ve created an account:
 
@@ -140,7 +140,7 @@ PUBLIC_KEY = "your-public-account-address"
 
 First, let’s define a function named `mintNFT(tokenData)` and create our transaction by doing the following:
 
-1. Grab your *PRIVATE_KEY* and *PUBLIC_KEY* from the `.env` file.
+1. Grab your _PRIVATE_KEY_ and _PUBLIC_KEY_ from the `.env` file.
 
 1. Next, we’ll need to figure out the account nonce. The nonce specification is used to keep track of the number of transactions sent from your address — which we need for security purposes and to prevent [replay attacks](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce). To get the number of transactions sent from your address, we use [getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount).
 

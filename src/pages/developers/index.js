@@ -69,7 +69,7 @@ const HeroCopy = styled.div`
 const H1 = styled.h1`
   font-style: normal;
   font-weight: normal;
-  font-family: "SFMono-Regular", monospace;
+  font-family: ${(props) => props.theme.fonts.monospace};
   text-transform: uppercase;
   font-weight: 500;
   font-size: 32px;
