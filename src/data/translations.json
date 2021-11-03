@@ -3,8 +3,148 @@
     "version": 2.4,
     "language": "English"
   },
+  "ar": {
+    "version": 1.1,
+    "language": "العربية"
+  },
+  "bg": {
+    "version": 2.0,
+    "language": "български"
+  },
+  "bn": {
+    "version": 1.1,
+    "language": "বাংলা"
+  },
+  "ca": {
+    "version": 2.0,
+    "language": "Català"
+  },
+  "cs": {
+    "version": 1.1,
+    "language": "Čeština"
+  },
+  "de": {
+    "version": 2.0,
+    "language": "Deutsch"
+  },
+  "el": {
+    "version": 2.0,
+    "language": "Ελληνικά"
+  },
   "es": {
     "version": 2.1,
     "language": "Español"
+  },
+  "fa": {
+    "version": 1.0,
+    "language": "فارسی"
+  },
+  "fi": {
+    "version": 1.1,
+    "language": "Suomi"
+  },
+  "fr": {
+    "version": 2.1,
+    "language": "Français"
+  },
+  "hi": {
+    "version": 2.0,
+    "language": "हिन्दी"
+  },
+  "hr": {
+    "version": 2.0,
+    "language": "Hrvatski"
+  },
+  "hu": {
+    "version": 2.1,
+    "language": "Magyar"
+  },
+  "id": {
+    "version": 1.1,
+    "language": "Bahasa Indonesia"
+  },
+  "ig": {
+    "version": 1.0,
+    "language": "Ibo"
+  },
+  "it": {
+    "version": 2.1,
+    "language": "Italiano"
+  },
+  "ja": {
+    "version": 2.0,
+    "language": "日本語"
+  },
+  "ko": {
+    "version": 1.1,
+    "language": "한국어"
+  },
+  "lt": {
+    "version": 1.1,
+    "language": "Lietuvis"
+  },
+  "ml": {
+    "version": 2.0,
+    "language": "മലയാളം"
+  },
+  "nl": {
+    "version": 1.0,
+    "language": "Nederlands"
+  },
+  "nb": {
+    "version": 1.1,
+    "language": "Norsk"
+  },
+  "pl": {
+    "version": 2.2,
+    "language": "Polski"
+  },
+  "pt": {
+    "version": 1.0,
+    "language": "Português"
+  },
+  "pt-br": {
+    "version": 1.1,
+    "language": "Português"
+  },
+  "ro": {
+    "version": 2.2,
+    "language": "Română"
+  },
+  "ru": {
+    "version": 2.0,
+    "language": "Pусский"
+  },
+  "se": {
+    "version": 1.1,
+    "language": "Svenska"
+  },
+  "sk": {
+    "version": 1.1,
+    "language": "Slovenský"
+  },
+  "sl": {
+    "version": 2.0,
+    "language": "Slovenščina"
+  },
+  "tr": {
+    "version": 2.0,
+    "language": "Türkçe"
+  },
+  "uk": {
+    "version": 2.0,
+    "language": "Українська"
+  },
+  "vi": {
+    "version": 1.1,
+    "language": "Tiếng Việt"
+  },
+  "zh": {
+    "version": 2.2,
+    "language": "简体中文"
+  },
+  "zh-tw": {
+    "version": 1.1,
+    "language": "繁體中文"
   }
 }
