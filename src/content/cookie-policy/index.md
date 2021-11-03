@@ -32,6 +32,8 @@ transferred to your computer's hard drive. We use the following cookies:
   websites, the pages you have visited and the links you have
   followed.
 
+<MatomoOptOut />
+
 You can find more information about the individual cookies we use and
 the purposes for which we use them in the table below:
 
