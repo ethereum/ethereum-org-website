@@ -21,15 +21,15 @@ See all the available [Mainnet clients](/developers/docs/nodes-and-clients/#adva
 
 Client implementations enable different sync modes and various other options. [Sync modes](/developers/docs/nodes-and-clients/#sync-modes) represent different methods of downloading and validating blockchain data. Before starting the node, you should decide what network and sync mode to use. The most important things to consider is the disk space and sync time client will need.
 
-All features and options can be found in documentation of each client. Various client configurations can be set by executing client with corresponding flags. You can get more information on flags from [EthHub](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/#client-settings) or client documentation.
-For testing purposes, you might prefer running client on one of testnet networks. [See overview of supported networks](/developers/docs/nodes-and-clients/#clients).
+All features and options can be found in the client's documentation. Various client configurations can be set by executing the client with the corresponding flags. You can get more information on flags from [EthHub](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/#client-settings) or the client documentation.
+For testing purposes, you might prefer running a client on one of testnet networks. [See overview of supported networks](/developers/docs/nodes-and-clients/#clients).
 
 ### Environment and hardware {#environment-and-hardware}
 
 #### Local or cloud {#local-vs-cloud}
 
-Ethereum clients are able to run on consumer grade computers and don't require special hardware like mining for example. Therefore you have various options for deploying based on your needs.
-To simplify let's think about running a node on both a local physical machine and a cloud server:
+Ethereum clients are able to run on consumer grade computers and don't require special hardware, like mining for example. Therefore, you have various options for deploying based on your needs.
+To simplify, let's think about running a node on both a local physical machine and a cloud server:
 
 - Cloud
   - Providers offer high server uptime, static public IP addresses
@@ -42,7 +42,7 @@ To simplify let's think about running a node on both a local physical machine an
   - An option to buy preconfigured machines
   - You have to physically prepare, maintain, and potentially troubleshoot the machine
 
-Both options have different advantages summed up above. If you are looking for a cloud solution, in addition to many traditional cloud computing providers, there are also services focused on deploying nodes, for example:
+Both options have different advantages summed up above. If you are looking for a cloud solution, in addition to many traditional cloud computing providers, there are also services focused on deploying nodes.  For example:
 
 - [QuikNode](https://www.quiknode.io/),
 - [Blockdaemon](https://blockdaemon.com),
@@ -56,7 +56,7 @@ However, a censorship-resistant, decentralized network should not rely on cloud 
 - [Avado](https://ava.do/).
 
 Check the minimum and recommended [disk space requirements for each client and sync mod](/developers/docs/nodes-and-clients/#requirements).
-Generally, modest computing power should be enough. The problem is usually drive speed. During initial sync, Ethereum clients perform a lot of read/write operations, therefore SSD is strongly recommended. A client might not even [be able to sync current state on HDD](https://github.com/ethereum/go-ethereum/issues/16796#issuecomment-391649278) and get stuck a few blocks behind Mainnet.
+Generally, modest computing power should be enough. The problem is usually drive speed. During initial sync, Ethereum clients perform a lot of read/write operations.  Therefore SSD is strongly recommended. A client might not even [be able to sync current state on HDD](https://github.com/ethereum/go-ethereum/issues/16796#issuecomment-391649278) and get stuck a few blocks behind Mainnet.
 You can run most of the clients on a [single board computer with ARM](/developers/docs/nodes-and-clients/#ethereum-on-a-single-board-computer/). You can also use the [Ethbian](https://ethbian.org/index.html) operating system for Raspberry Pi 4. This lets you [[run a client by flashing the SD card](/developers/tutorials/run-node-raspberry-pi/).
 Based on your software and the hardware choices, the initial synchronization time and storage requirements may vary. Be sure to [check sync times and storage requirements](/developers/docs/nodes-and-clients/#recommended-specifications).
 Also make sure your internet connection is not limited by a [bandwidth cap](https://en.wikipedia.org/wiki/Data_cap). It's recommended to use an unmetered connection since initial sync and data broadcasted to the network could exceed your limit.
