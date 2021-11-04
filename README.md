@@ -1216,6 +1216,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/0xngmi"><img src="https://avatars.githubusercontent.com/u/80541789?v=4?s=100" width="100px;" alt=""/><br /><sub><b>0xngmi</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=0xngmi" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/phyBrackets"><img src="https://avatars.githubusercontent.com/u/75530356?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Shivam Rajput</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=phyBrackets" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/erhuve"><img src="https://avatars.githubusercontent.com/u/59463268?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Raymond</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=erhuve" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/justincjohnson"><img src="https://avatars.githubusercontent.com/u/25121264?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Justin Johnson</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=justincjohnson" title="Documentation">📖</a></td>
   </tr>
 </table>
 

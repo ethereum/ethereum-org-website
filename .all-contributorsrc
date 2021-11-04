@@ -5318,6 +5318,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "justincjohnson",
+      "name": "Justin Johnson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25121264?v=4",
+      "profile": "https://github.com/justincjohnson",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
