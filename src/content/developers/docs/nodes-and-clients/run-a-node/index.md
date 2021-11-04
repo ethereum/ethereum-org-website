@@ -42,7 +42,7 @@ To simplify, let's think about running a node on both a local physical machine a
   - An option to buy preconfigured machines
   - You have to physically prepare, maintain, and potentially troubleshoot the machine
 
-Both options have different advantages summed up above. If you are looking for a cloud solution, in addition to many traditional cloud computing providers, there are also services focused on deploying nodes.  For example:
+Both options have different advantages summed up above. If you are looking for a cloud solution, in addition to many traditional cloud computing providers, there are also services focused on deploying nodes. For example:
 
 - [QuikNode](https://www.quiknode.io/),
 - [Blockdaemon](https://blockdaemon.com),
@@ -56,7 +56,7 @@ However, a censorship-resistant, decentralized network should not rely on cloud 
 - [Avado](https://ava.do/).
 
 Check the minimum and recommended [disk space requirements for each client and sync mod](/developers/docs/nodes-and-clients/#requirements).
-Generally, modest computing power should be enough. The problem is usually drive speed. During initial sync, Ethereum clients perform a lot of read/write operations.  Therefore SSD is strongly recommended. A client might not even [be able to sync current state on HDD](https://github.com/ethereum/go-ethereum/issues/16796#issuecomment-391649278) and get stuck a few blocks behind Mainnet.
+Generally, modest computing power should be enough. The problem is usually drive speed. During initial sync, Ethereum clients perform a lot of read/write operations. Therefore SSD is strongly recommended. A client might not even [be able to sync current state on HDD](https://github.com/ethereum/go-ethereum/issues/16796#issuecomment-391649278) and get stuck a few blocks behind Mainnet.
 You can run most of the clients on a [single board computer with ARM](/developers/docs/nodes-and-clients/#ethereum-on-a-single-board-computer/). You can also use the [Ethbian](https://ethbian.org/index.html) operating system for Raspberry Pi 4. This lets you [[run a client by flashing the SD card](/developers/tutorials/run-node-raspberry-pi/).
 Based on your software and the hardware choices, the initial synchronization time and storage requirements may vary. Be sure to [check sync times and storage requirements](/developers/docs/nodes-and-clients/#recommended-specifications).
 Also make sure your internet connection is not limited by a [bandwidth cap](https://en.wikipedia.org/wiki/Data_cap). It's recommended to use an unmetered connection since initial sync and data broadcasted to the network could exceed your limit.
