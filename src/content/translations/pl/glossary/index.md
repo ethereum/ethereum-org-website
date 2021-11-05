@@ -38,7 +38,7 @@ Standardowy sposób pracy z [kontraktami](#contract-account) w ekosystemie Ether
 
 W [Solidity](#solidity) instrukcja `assert(false)` kompiluje się do `0xfe`, nieprawidłowego kodu operacji, który zużywa całe pozostałe [paliwo](#gas) i cofa wszystkie zmiany. Gdy instrukcja `assert()` nie powiedzie się, dzieje się coś bardzo złego i nieoczekiwanego i musisz naprawić swój kod. Instrukcji `assert()` należy użyć, aby uniknąć warunków, które nigdy nie powinny wystąpić.
 
-<DocLink to="/developers/docs/security/" title="Ochrona" />
+<DocLink to="/developers/docs/smart-contracts/security/" title="Ochrona" />
 
 ### poświadczenie {#attestation}
 
@@ -362,7 +362,7 @@ Po wdrożeniu kod [kontraktu](#smart-contract) (lub [biblioteki](#library)) staj
 
 Znana również jako „algorytm rozszerzania hasła”, jest używana w pliku [kestore](#keystore-file) do ochrony zaszyfrowanego hasła przed przed atakami siłowymi, atakami słownikowymi i atakami z użyciem tablic tęczowych, wielokrotnie haszując hasło.
 
-<DocLink to="/developers/docs/security/" title="Ochrona" />
+<DocLink to="/developers/docs/smart-contracts/security/" title="Ochrona" />
 
 ### keccak-256 {#keccak-256}
 
@@ -514,7 +514,7 @@ Dane zwracane przez klienta Ethereum, reprezentujące wynik konkretnej [transakc
 
 Atak składający się z kontraktu atakującego wywołującego kontrakt ofiary w taki sposób, że podczas wykonania ofiara ponownie wywołuje kontrakt atakującego rekursywnie. Może to skutkować na przykład kradzieżą środków poprzez pominięcie tych części kontraktu ofiary, które aktualizują saldo lub liczą kwoty odstąpienia.
 
-<DocLink to="/developers/docs/security/#re-entrancy" title="Wielobieżność" />
+<DocLink to="/developers/docs/smart-contracts/security/#re-entrancy" title="Wielobieżność" />
 
 ### nagroda {#reward}
 

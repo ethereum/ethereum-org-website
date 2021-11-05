@@ -105,7 +105,7 @@ Por último, al decidir si incluir o no una biblioteca, considera su uso general
 
 ## Tutoriales relacionados {#related-tutorials}
 
-- [Consideraciones de seguridad para desarrolladores de Ethereum](/developers/docs/security/)_: Un tutorial sobre consideraciones de seguridad que deben tenerse en cuenta al construir contratos inteligentes, incluyendo el uso de bibliotecas._
+- [Consideraciones de seguridad para desarrolladores de Ethereum](/developers/docs/smart-contracts/security/)_: Un tutorial sobre consideraciones de seguridad que deben tenerse en cuenta al construir contratos inteligentes, incluyendo el uso de bibliotecas._
 - [Entender el contrato inteligente de token ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _: Tutorial en el estándar ERC-20, proporcionado por múltiples bibliotecas._
 
 ## Más lectura {#further-reading}

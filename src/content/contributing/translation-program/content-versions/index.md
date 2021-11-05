@@ -89,7 +89,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [JSON-RPC](/developers/docs/apis/json-rpc/)
 - [Data and analytics](/developers/docs/data-and-analytics/)
 - [Block explorers](/developers/docs/data-and-analytics/block-explorers/)
-- [Security](/developers/docs/security/)
+- [Smart contract security](/developers/docs/smart-contracts/security/)
 - [Storage](/developers/docs/storage/)
 - [Integrated Development Environments (IDEs)](/developers/docs/ides/)
 - [Programming languages](/developers/docs/programming-languages/)

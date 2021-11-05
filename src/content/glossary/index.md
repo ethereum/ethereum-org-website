@@ -43,7 +43,7 @@ An Application Programming Interface (API) is a set of definitions for how to us
 
 In [Solidity](#solidity), `assert(false)` compiles to `0xfe`, an invalid opcode, which uses up all remaining [gas](#gas) and reverts all changes. When an `assert()` statement fails, something very wrong and unexpected is happening, and you will need to fix your code. You should use `assert()` to avoid conditions that should never, ever occur.
 
-<DocLink to="/developers/docs/security/" title="Security" />
+<DocLink to="/developers/docs/smart-contracts/security/" title="Smart contract security" />
 
 ### attestation {#attestation}
 
@@ -368,7 +368,7 @@ A [transaction](#transaction) sent from a [contract account](#contract-account) 
 
 Also known as a "password stretching algorithm," it is used by [keystore](#keystore-file) formats to protect against brute-force, dictionary, and rainbow table attacks on passphrase encryption, by repeatedly hashing the passphrase.
 
-<DocLink to="/developers/docs/security/" title="Security" />
+<DocLink to="/developers/docs/smart-contracts/security/" title="Smart contract security" />
 
 ### keccak-256 {#keccak-256}
 
@@ -519,7 +519,7 @@ Data returned by an Ethereum client to represent the result of a particular [tra
 
 An attack that consists of an attacker contract calling a victim contract function in such a way that during execution the victim calls the attacker contract again, recursively. This can result, for example, in the theft of funds by skipping parts of the victim contract that update balances or count withdrawal amounts.
 
-<DocLink to="/developers/docs/security/#re-entrancy" title="Re-entrancy" />
+<DocLink to="/developers/docs/smart-contracts/security/#re-entrancy" title="Re-entrancy" />
 
 ### reward {#reward}
 
