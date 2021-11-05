@@ -40,7 +40,7 @@ Mechanizm konsensusu w systemie kryptoekonomicznym pomaga również zapobiegać 
 <!-- Why do different consensus protocols exist? -->
 <!-- What are the tradeoffs of each? -->
 
-### Proof of Work {#proof-of-work}
+### Proof-of-work {#proof-of-work}
 
 Ethereum, podobnie jak Bitcoin, wykorzystuje obecnie protokół konsensusu proof-of-work (PoW).
 
@@ -54,7 +54,7 @@ Sieć jest bezpieczna dzięki temu, że do oszukania łańcucha potrzeba 51% moc
 
 Więcej informacji o [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/)
 
-### Proof of stake {#proof-of-stake}
+### Proof-of-stake {#proof-of-stake}
 
 Ethereum planuje uaktualnienie do protokołu konsensusu [proof-of-stake (PoS)](/developers/docs/consensus-mechanisms/pos/).
 
@@ -74,6 +74,6 @@ Więcej informacji o [proof-of-stake (PoS)](/developers/docs/consensus-mechanism
 
 ## Tematy powiązane {#related-topics}
 
-- [Proof of work](/developers/docs/consensus-mechanisms/pow/)
+- [Proof-of-work](/developers/docs/consensus-mechanisms/pow/)
 - [Wydobywanie](/developers/docs/consensus-mechanisms/pow/mining/)
-- [Proof of stake](/developers/docs/consensus-mechanisms/pos/)
+- [Proof-of-stake](/developers/docs/consensus-mechanisms/pos/)

@@ -25,7 +25,7 @@ Az elkötelezettségek elosztásával elegendő időt adunk az összes hálózat
 
 Hogy megőrizzük a tranzakciós történetet, a blokkoknak szigorú sorrendet kell betartaniuk (minden létrejövő új blokk tartalmaz egy referenciát a szülő blokkjára), és a blokkokban lévő tranzakciók is szigorú sorrendet követnek. Ritka esetek kivételével bármikor amikor a hálózat összes résztvevője egyetért a blokkok pontos számában és előzményeiben, és azon dolgozik, hogy az aktuális élő tranzakciós kérelmeket a következő blokkba csomagolja.
 
-Amint egy blokk össze van állítva (ki van bányászva) egy bányász által a hálózaton, tovább terjed a hálózat többi része számára; az összes csomópont hozzáfűzi ezt a blokkot a blokkláncukra és folytatódik a bányászat. A pontos blokk összeállítási (bányászati) folyamatot és az elköteleződés/konszenzus folyamatot jelenleg az Ethereum “Proof-of-Work” protokollja specifikálja.
+Amint egy blokk össze van állítva (ki van bányászva) egy bányász által a hálózaton, tovább terjed a hálózat többi része számára; az összes csomópont hozzáfűzi ezt a blokkot a blokkláncukra és folytatódik a bányászat. A pontos blokk összeállítási (bányászati) folyamatot és az elköteleződés/konszenzus folyamatot jelenleg az Ethereum “proof-of-work” protokollja specifikálja.
 
 ### Egy vizuális bemutató {#a-visual-demo} <iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
 

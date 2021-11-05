@@ -248,7 +248,7 @@ Usługa wykonana za pośrednictwem [inteligentnego kontraktu](#smart-contract), 
 
 Nieodwołalność jest gwarancją, że zestaw transakcji przed upływem danego czasu nie zmieni się i nie będzie mógł zostać wycofany.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/#finality" title="Nieodwołalność proof-of-work" /> <DocLink to="/developers/docs/consensus-mechanisms/pos/#finality" title="Nieodwołalność proof-of stake" />
+<DocLink to="/developers/docs/consensus-mechanisms/pow/#finality" title="Nieodwołalność proof-of-work" /> <DocLink to="/developers/docs/consensus-mechanisms/pos/#finality" title="Nieodwołalność proof-of-stake" />
 
 ### finney {#finney}
 
@@ -490,13 +490,13 @@ Jest to tajna liczba, która umożliwia użytkownikom w sieci Ethereum dowodzeni
 
 Jest to metoda, za pomocą której protokół blockchainu kryptowaluty umożliwia uzyskanie [konsensusu](#consensus) w środowisku rozproszonym. PoS wymaga przedstawienia dowodu własności określonej kwoty kryptowaluty (jest to „stawka”, jaką użytkownik ma w sieci), aby dana osoba mogła uczestniczyć w weryfikacji transakcji.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/" title="Proof of Stake" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos/" title="Proof-of-stake" />
 
-### proof of work (PoW) {#pow}
+### Proof-of-work (PoW) {#pow}
 
 Są do dane (dowód), których uzyskanie wymaga intensywnych obliczeń. W Ethereum [górnicy](#miner) muszą znaleźć liczbowe rozwiązanie algorytmu [Ethash](#ethash) zgodnie z poziomem [trudności](#difficulty) obowiązującym na poziomie sieci.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/" title="Proof of Work" />
+<DocLink to="/developers/docs/consensus-mechanisms/pow/" title="Proof-of-work" />
 
 ### klucz publiczny {#public-key}
 
@@ -654,7 +654,7 @@ Nazwa ta pochodzi od brytyjskiego matematyka i informatyka Alana Turinga. System
 
 [Węzeł](#node) w systemie [proof-of-stake](#proof-of-stake) odpowiedzialny za przechowywanie danych, przetwarzanie transakcji i dodawanie nowych bloków do blockchainu. Aby aktywować oprogramowanie walidatora, musisz mieć możliwość [stakingu](#staking) 32 ETH.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos" title="Proof of Stake" /> <DocLink to="/eth2/staking/" title="Stakowanie w Ethereum" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos" title="Proof-of-stake" /> <DocLink to="/eth2/staking/" title="Stakowanie w Ethereum" />
 
 ### Dowód ważności {#validity-proof}
 

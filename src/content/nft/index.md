@@ -418,7 +418,7 @@ The 99.95% reduction in energy consumption from a system secured by mining to a 
 
 - 44.49 TWh of annualized electrical energy is consumed by mining Ethereum - [Digiconomist](https://digiconomist.net/ethereum-energy-consumption)
 
-- The average desktop computer, all that's needed to run Proof of Stake, uses 0.06kWh of energy per hour – [Silicon Valley power chart](https://www.siliconvalleypower.com/residents/save-energy/appliance-energy-use-chart) (Some estimates are a little higher at 0.15kWh)
+- The average desktop computer, all that's needed to run proof-of-stake, uses 0.06kWh of energy per hour – [Silicon Valley power chart](https://www.siliconvalleypower.com/residents/save-energy/appliance-energy-use-chart) (Some estimates are a little higher at 0.15kWh)
 
 At the time of writing, there are 140 592 validators from 16 405 unique addresses.
 Of those, 87 897 validators are assumed to be staking from home.

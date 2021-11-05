@@ -15,7 +15,7 @@ Un viaggio nel tempo per illustrare tutte le principali pietre miliari, diramazi
 
 Le diramazioni si verificano quando è necessario apportare aggiornamenti o modifiche tecniche importanti nella rete. Tipicamente derivano da [proposte di miglioramento di Ethereum (EIP)](/eips/) e cambiano le "regole" del protocollo.
 
-Quando sono necessari aggiornamenti in software tradizionali controllati centralmente, l'azienda pubblica una nuova versione per l'utente finale. Le blockchain funzionano diversamente perché non esiste una proprietà centrale. I [client Ethereum](/developers/docs/nodes-and-clients/) devono aggiornare il proprio software per implementare le nuove regole di diramazione. Inoltre i creatori dei blocchi (miner in contesto Proof of Work e validatori in contesto Proof of Stake) e i nodi devono creare blocchi e convalidarli in base alle nuove regole. [Ulteriori informazioni sui meccanismi di consenso](/developers/docs/consensus-mechanisms/)
+Quando sono necessari aggiornamenti in software tradizionali controllati centralmente, l'azienda pubblica una nuova versione per l'utente finale. Le blockchain funzionano diversamente perché non esiste una proprietà centrale. I [client Ethereum](/developers/docs/nodes-and-clients/) devono aggiornare il proprio software per implementare le nuove regole di diramazione. Inoltre i creatori dei blocchi (miner in contesto proof-of-work e validatori in contesto proof-of-stake) e i nodi devono creare blocchi e convalidarli in base alle nuove regole. [Ulteriori informazioni sui meccanismi di consenso](/developers/docs/consensus-mechanisms/)
 
 Queste modifiche alle regole possono creare una divisione temporanea nella rete. I nuovi blocchi potrebbero essere creati in base alle nuove regole o a quelle vecchie. Le diramazioni di solito sono concordate in anticipo in modo che i client adottino le modifiche all'unisono e la diramazione legata agli upgrade diventi la catena principale. Tuttavia, in rari casi, disaccordi sulle diramazioni possono causare una divisione permanente della rete, come è successo con la creazione di Ethereum Classic con la [diramazione DAO](#dao-fork).
 
@@ -59,7 +59,7 @@ Il contratto di deposito in staking ha introdotto lo [staking](/glossary/#stakin
 
 #### Riepilogo {#muir-glacier-summary}
 
-La diramazione di Muir Glacier ha introdotto un ritardo nella [bomba di difficoltà](/glossary/#difficulty-bomb). Aumenta la difficoltà del blocco del meccanismo di consenso [Proof of Work](/developers/docs/consensus-mechanisms/pow/), che rischiava di degradare l'utilizzabilità di Ethereum, aumentando i tempi d'attesa per l'invio delle transazioni e l'uso delle dapp.
+La diramazione di Muir Glacier ha introdotto un ritardo nella [bomba di difficoltà](/glossary/#difficulty-bomb). Aumenta la difficoltà del blocco del meccanismo di consenso [proof-of-work](/developers/docs/consensus-mechanisms/pow/), che rischiava di degradare l'utilizzabilità di Ethereum, aumentando i tempi d'attesa per l'invio delle transazioni e l'uso delle dapp.
 
 - [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Leggi la spiegazione del Cat Herder di Ethereum](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
@@ -111,7 +111,7 @@ La diramazione di Instanbul:
 
 La diramazione Constantinople:
 
-- Ha assicurato che la blockchain non si bloccasse prima dell'[implementazione della Proof of Stake](#beacon-chain-genesis).
+- Ha assicurato che la blockchain non si bloccasse prima dell'[implementazione della proof-of-stake](#beacon-chain-genesis).
 - Ha ottimizzato i prezzi del [carburante](/glossary/#gas) di certe azioni nell'[EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Ha aggiunto la capacità di interagire con gli indirizzi non ancora creati.
 
@@ -122,7 +122,7 @@ La diramazione Constantinople:
 - [EIP-145](https://eips.ethereum.org/EIPS/eip-145) – _ottimizza il costo di certe azioni sulla catena_
 - [EIP-1014](https://eips.ethereum.org/EIPS/eip-1014) – _consente di interagire con gli indirizzi che ancora devono essere creati._
 - [EIP-1052](https://eips.ethereum.org/EIPS/eip-1052) – _ottimizza il costo di certe azioni sulla catena._
-- [EIP-1234](https://eips.ethereum.org/EIPS/eip-1234) – _fa in modo che la blockchain non si blocchi prima della Proof of Stake._
+- [EIP-1234](https://eips.ethereum.org/EIPS/eip-1234) – _fa in modo che la blockchain non si blocchi prima della proof-of-stake._
 
 </ExpandableCard>
 

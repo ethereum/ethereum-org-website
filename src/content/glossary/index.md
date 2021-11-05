@@ -491,17 +491,17 @@ An off-chain scaling solution that uses [fraud proofs](#fraud-proof), like [Opti
 
 A secret number that allows Ethereum users to prove ownership of an account or contracts, by producing a digital signature (see [public key](#public-key), [address](#address), [ECDSA](#ecdsa)).
 
-### proof of stake (PoS) {#pos}
+### Proof-of-stake (PoS) {#pos}
 
 A method by which a cryptocurrency blockchain protocol aims to achieve distributed [consensus](#consensus). PoS asks users to prove ownership of a certain amount of cryptocurrency (their "stake" in the network) in order to be able to participate in the validation of transactions.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/" title="Proof of stake" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos/" title="Proof-of-stake" />
 
-### proof of work (PoW) {#pow}
+### Proof-of-work (PoW) {#pow}
 
 A piece of data (the proof) that requires significant computation to find. In Ethereum, [miners](#miner) must find a numeric solution to the [Ethash](#ethash) algorithm that meets a network-wide [difficulty](#difficulty) target.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/" title="Proof of work" />
+<DocLink to="/developers/docs/consensus-mechanisms/pow/" title="Proof-of-work" />
 
 ### public key {#public-key}
 
@@ -659,7 +659,7 @@ A concept named after English mathematician and computer scientist Alan Turing- 
 
 A [node](#node) in a [proof-of-stake](#pos) system responsible for storing data, processing transactions, and adding new blocks to the blockchain. To active validator software, you need to be able to [stake](#staking) 32 ETH.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos" title="Proof of stake" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos" title="Proof-of-stake" />
 <DocLink to="/eth2/staking/" title="Staking in Ethereum" />
 
 ### Validity proof {#validity-proof}

@@ -53,13 +53,13 @@ Aspiring Ethereum developer? Check out our developer portal. It's got documentat
 
 ## Proof-of-work and Mining {#proof-of-work-and-mining}
 
-Ethereum currently uses a system called "Proof of Work". This allows the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain, and prevents certain kinds of economic attacks.
+Ethereum currently uses a system called "proof-of-work". This allows the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain, and prevents certain kinds of economic attacks.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Updated often - Ethhub_
 
 You can learn more about [proof of work](/developers/docs/consensus-mechanisms/pow/) and [mining](/developers/docs/consensus-mechanisms/pow/mining/) within our developer documentation.
 
-In ETH 2.0, Ethereum will be moving to a different system called "Proof of Stake". [Read more about ETH 2.0 below](#eth-2-0).
+In ETH 2.0, Ethereum will be moving to a different system called "proof-of-stake". [Read more about ETH 2.0 below](#eth-2-0).
 
 ## Clients and Nodes {#clients-and-nodes}
 

@@ -1,28 +1,28 @@
 ---
-title: Proof of Work (PoW)
-description: Spiegazione del consenso con il protocollo Proof of Work e il suo ruolo in Ethereum.
+title: Proof-of-work (PoW)
+description: Spiegazione del consenso con il protocollo proof-of-work e il suo ruolo in Ethereum.
 lang: it
 sidebar: true
 incomplete: true
 ---
 
-Ethereum, come Bitcoin, attualmente utilizza un protocollo di consenso detto [Proof of Work (PoW)](https://en.wikipedia.org/wiki/Proof_of_work) che consente ai nodi della rete Ethereum di concordare sullo stato di tutte le informazioni registrate sulla blockchain Ethereum e impedisce alcuni tipi di attacchi economici.
+Ethereum, come Bitcoin, attualmente utilizza un protocollo di consenso detto [proof-of-work (PoW)](https://en.wikipedia.org/wiki/Proof_of_work) che consente ai nodi della rete Ethereum di concordare sullo stato di tutte le informazioni registrate sulla blockchain Ethereum e impedisce alcuni tipi di attacchi economici.
 
 ## Prerequisiti {#prerequisites}
 
 Per comprendere meglio questa pagina, consigliamo di leggere prima [transazioni](/en/developers/docs/transactions/) e [blocchi](/en/developers/docs/blocks/).
 
-## Cos'è la Proof of Work (PoW)? {#what-is-pow}
+## Cos'è la proof-of-work (PoW)? {#what-is-pow}
 
-La Proof of Work (PoW) è il meccanismo che consente di raggiungere il consenso nella rete decentralizzata Ethereum o di concordare su alcuni aspetti come il saldo degli account e l'ordine delle transazioni. Questo impedisce che gli utenti spendano due volte le loro monete e assicura che la catena Ethereum sia incredibilmente difficile da attaccare o sovrascrivere.
+La proof-of-work (PoW) è il meccanismo che consente di raggiungere il consenso nella rete decentralizzata Ethereum o di concordare su alcuni aspetti come il saldo degli account e l'ordine delle transazioni. Questo impedisce che gli utenti spendano due volte le loro monete e assicura che la catena Ethereum sia incredibilmente difficile da attaccare o sovrascrivere.
 
-## Proof of Work e mining {#pow-and-mining}
+## Proof-of-work e mining {#pow-and-mining}
 
-La Proof of Work è l'algoritmo sottostante che imposta la difficoltà e le regole per il lavoro che i miner devono svolgere. Il mining è il "lavoro" da svolgere. Si tratta dell'atto di aggiungere blocchi validi alla catena. Questo è importante perché la lunghezza della catena aiuta la rete a identificare la catena Ethereum valida e a capire lo stato attuale di Ethereum. Più "lavoro" viene svolto, più è lunga la catena, più elevato è il numero di blocchi e più alta è la certezza che la rete si trovi allo stato delle cose attuale.
+La proof-of-work è l'algoritmo sottostante che imposta la difficoltà e le regole per il lavoro che i miner devono svolgere. Il mining è il "lavoro" da svolgere. Si tratta dell'atto di aggiungere blocchi validi alla catena. Questo è importante perché la lunghezza della catena aiuta la rete a identificare la catena Ethereum valida e a capire lo stato attuale di Ethereum. Più "lavoro" viene svolto, più è lunga la catena, più elevato è il numero di blocchi e più alta è la certezza che la rete si trovi allo stato delle cose attuale.
 
 [Maggiori informazioni sul mining](/developers/docs/consensus-mechanisms/pow/mining/)
 
-## Come funziona la Proof of Work di Ethereum? {#how-it-works}
+## Come funziona la proof-of-work di Ethereum? {#how-it-works}
 
 Le transazioni di Ethereum vengono elaborate sono in blocchi. Ogni blocco ha:
 
@@ -32,9 +32,9 @@ Le transazioni di Ethereum vengono elaborate sono in blocchi. Ogni blocco ha:
 
 Questi dati del blocco sono correlati direttamente alla PoW.
 
-### Il lavoro nella Proof of Work {#the-work}
+### Il lavoro nella proof-of-work {#the-work}
 
-Il protocollo di Proof of Work, detto Ethash, richiede che i miner competano tramite processi di tentativo ed errore per trovare il nonce di un blocco. Solo i blocchi con un nonce valido possono essere aggiunti alla catena.
+Il protocollo di proof-of-work, detto Ethash, richiede che i miner competano tramite processi di tentativo ed errore per trovare il nonce di un blocco. Solo i blocchi con un nonce valido possono essere aggiunti alla catena.
 
 Quando compete per creare un blocco, un miner inserisce ripetutamente un set di dati, che si può ottenere solo tramite il download e l'esecuzione dell'intera catena (che è quello che fa il miner), attraverso una funzione matematica. Lo scopo è quello di generare un mixHash che si trovi sotto il nonce target, come dettato dalla difficoltà del blocco. Il miglior modo per farlo è tramite un processo di continui tentativi ed errori.
 
@@ -42,7 +42,7 @@ La difficoltà determina il target per l'hash. Più basso è il target, più pic
 
 L'hashing rende le frodi facili da individuare. Ma la PoW è anche un grande deterrente contro gli attacchi alla catena.
 
-### Proof of Work e sicurezza {#security}
+### Proof-of-work e sicurezza {#security}
 
 I miner sono incentivati a fare questo lavoro sulla catena principale di Ethereum. L'incentivo a iniziare una catena propria è molto ridotto per i miner, perché minerebbe il sistema. Le blockchain fanno affidamento sul fatto di avere un solo stato di riferimento, che è considerato l'unica fonte di verità. E gli utenti sceglieranno sempre la catena più lunga o più "pesante".
 
@@ -50,7 +50,7 @@ L'obiettivo della PoW è di estendere la catena. La catena più lunga è quella 
 
 Per creare costantemente blocchi malevoli ma validi, bisognerebbe avere più del 51% della potenza di mining della rete, per poter battere tutti gli altri. Servirebbe davvero un'enorme potenza di calcolo per essere in grado di affrontare questa quantità di "lavoro". E il costo dell'energia utilizzata potrebbe anche superare i guadagni ottenibili con un attacco.
 
-### L'economia della Proof of Work {#economics}
+### L'economia della proof-of-work {#economics}
 
 La PoW è anche responsabile del rilascio di nuova valuta nel sistema e dell'incentivazione dei miner a fare il proprio lavoro.
 
@@ -74,11 +74,11 @@ Ricorda che il periodo di tempo non include l'attesa che intercorre prima che la
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | La PoW è neutrale. Non servono ETH per iniziare e le ricompense per i blocchi consentono di passare da 0 ETH a un saldo positivo. Con la [ proof of stake](/developers/docs/consensus-mechanisms/pos/) servono ETH per iniziare. | La PoW consuma molta energia, e questo va a scapito dell'ambiente.                                                                                                                                       |
 | La PoW è un meccanismo di consenso testato e ben collaudato che mantiene Bitcoin ed Ethereum sicure e decentralizzate da molti anni.                                                                                             | Chi desidera occuparsi di mining deve avere apparecchiature specializzate, con un conseguente notevole investimento iniziale.                                                                            |
-| Rispetto alla Proof of Stake è relativamente facile da implementare.                                                                                                                                                             | A causa della crescente richiesta di potenza di calcolo, alcuni i gruppi di mining potrebbero potenzialmente dominare l'attività di mining, portando così alla centralizzazione e a rischi di sicurezza. |
+| Rispetto alla proof-of-stake è relativamente facile da implementare.                                                                                                                                                             | A causa della crescente richiesta di potenza di calcolo, alcuni i gruppi di mining potrebbero potenzialmente dominare l'attività di mining, portando così alla centralizzazione e a rischi di sicurezza. |
 
-## Confronto con la Proof of Stake {#compared-to-pos}
+## Confronto con la proof-of-stake {#compared-to-pos}
 
-A un alto livello, la Proof of Stake ha lo stesso obiettivo della Proof of Work: permettere a una rete decentralizzata di raggiungere il consenso in totale sicurezza. Ma ci sono alcune differenze nei processi e nel personale:
+A un alto livello, la proof-of-stake ha lo stesso obiettivo della proof-of-work: permettere a una rete decentralizzata di raggiungere il consenso in totale sicurezza. Ma ci sono alcune differenze nei processi e nel personale:
 
 - La PoS scambia l'importanza della potenza di calcolo con gli ETH in staking
 - La PoS sostituisce i miner con i validatori. I validatori fanno staking con i loro ETH per avere la possibilità di creare nuovi blocchi.
@@ -95,4 +95,4 @@ A un alto livello, la Proof of Stake ha lo stesso obiettivo della Proof of Work:
 ## Argomenti correlati {#related-topics}
 
 - [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
-- [Proof of Stake](/developers/docs/consensus-mechanisms/pos/)
+- [Proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
