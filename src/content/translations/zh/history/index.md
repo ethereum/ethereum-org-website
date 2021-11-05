@@ -286,7 +286,7 @@ Frontier thawing 分叉取消了每个[区块](/glossary/#block) 5,000 [gas](/gl
 
 以太币预售为期 42 天。 你可以使用比特币进行购买。
 
-[请阅读以太坊基金会公告](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale/)
+[请阅读以太坊基金会公告 ](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale/)
 
 ---
 

@@ -27,7 +27,7 @@ Musisz dobrze się orientować we wszystkich podstawowych tematach i mieć zaawa
 Wiele projektów dostarcza implementacje Plasma, które można zintegrować z własnymi aplikacjami zdecentralizowanymi:
 
 - [Sieć OMG](https://omg.network/)
-- [Polygon](https://polygon.technology/), [poprzednio Matic Network](https://matic.network/)
+- [Polygon ](https://polygon.technology/), [poprzednio Matic Network](https://matic.network/)
 - [Gluon](https://gluon.network/)
 - [Gazelle](https://gzle.io/)
 - [LeapDAO](https://ipfs.leapdao.org/)

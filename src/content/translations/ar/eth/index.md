@@ -20,6 +20,6 @@ lang: ar
 
 لمزيد من المعلومات حول كيفية شراء ETH، راجع هذه الأدلة:
 
-- [كيفية شراء إيثر (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd)_ تُحدث دورياَ-MyCrypto_
-- [كيفية شراء إيثر](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/)_ تُحدث دورياَ-EthHub_
-- [إيثريوم، العملة الرقمية](https://www.cryptokitties.co/faq#ethereum-a-digital-currency)_CryptoKitties_
+- [ كيفية شراء إيثر (ETH) ](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd)_ تُحدث دورياَ-MyCrypto_
+- [ كيفية شراء إيثر ](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/)_ تُحدث دورياَ-EthHub_
+- [ إيثريوم، العملة الرقمية ](https://www.cryptokitties.co/faq#ethereum-a-digital-currency)_CryptoKitties_

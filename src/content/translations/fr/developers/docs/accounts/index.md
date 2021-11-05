@@ -17,7 +17,7 @@ Les comptes sont un sujet très accessible pour les débutants, mais pour mieux 
 Ethereum comprend deux types de comptes :
 
 - Les propriétés externes, contrôlées par toute personne ayant les clés correspondantes
-- Les contrats intelligents déployés sur le réseau, contrôlé par un code En savoir plus sur les [les contrats intelligents](/en/developers/docs/smart-contracts/)
+- Les contrats intelligents déployés sur le réseau, contrôlé par un code En savoir plus sur les [ les contrats intelligents](/en/developers/docs/smart-contracts/)
 
 Les deux types peuvent :
 

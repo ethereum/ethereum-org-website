@@ -20,7 +20,7 @@ summaryPoints:
 
 ## ドッキングとは何ですか? {#what-is-the-docking}
 
-最初に、他の Eth2 アップグレードは [メインネット](/glossary/#mainnet) とは別にリリースされていることを覚えておくことが重要です。 イーサリアムメインネットは [プルーフ・オブ・ワーク](/developers/docs/consensus-mechanisms/pow/)によって引き続き保護されます [ビーコンチェーン](/developers/docs/consensus-mechanisms/pow/) と [シャードチェーン](/eth2/beacon-chain/) を [](/eth2/shard-chains/) [ププルーフオブステーク](/developers/docs/consensus-mechanisms/pos/) を使用して並列に実行されます。 ドッキングは、これら 2 つのシステムが統合されるときです。
+最初に、他の Eth2 アップグレードは [メインネット](/glossary/#mainnet) とは別にリリースされていることを覚えておくことが重要です。 イーサリアムメインネットは [プルーフ・オブ・ワーク](/developers/docs/consensus-mechanisms/pow/)によって引き続き保護されます [ ビーコンチェーン ](/developers/docs/consensus-mechanisms/pow/) と [シャードチェーン](/eth2/beacon-chain/) を [](/eth2/shard-chains/) [ププルーフオブステーク](/developers/docs/consensus-mechanisms/pos/) を使用して並列に実行されます。 ドッキングは、これら 2 つのシステムが統合されるときです。
 
 イーサリアムは恒星間航海にはまだ準備ができていない宇宙船だと想像してください。 ビーコンチェーンとシャードチェーンで、コミュニティは新しいエンジンと強化された船体を構築しました。 適切な時期が来ると、現在の船はこの新しいシステムにドッキングして一隻の船になることができ、数光年にわたる宇宙旅行に旅立つ準備ができます。
 

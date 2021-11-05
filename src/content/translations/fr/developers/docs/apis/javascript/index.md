@@ -293,5 +293,5 @@ _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 ## Tutoriels connexes {#related-tutorials}
 
 - [Configurer Web3js pour utiliser la blockchain Ethereum avec JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/)_ - Instructions pour installer et intégrer Web3js à votre projet_
-- [Appeler un contrat intelligent à partir de JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _ - À l'aide du jeton DAI, découvrez comment appeler une fonction de contrat en utilisant JavaScript._
+- [ Appeler un contrat intelligent à partir de JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _ - À l'aide du jeton DAI, découvrez comment appeler une fonction de contrat en utilisant JavaScript._
 - [Envoi des transactions en utilisant Web3 et Alchemy](/developers/tutorials/sending-transactions-using-Web3-and-alchemy/) _ - Procédure étape par étape pour envoyer des transactions depuis le backend._

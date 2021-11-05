@@ -26,7 +26,7 @@ sidebarDepth: 2
 
 ### address 地址 {#address}
 
-通常来说，地址代表一个[外部帐户](#eoa)或[合约](#contract-accouint)，可以在区块链上接收（目标地址）或发送（源地址）[交易](#transaction)。 地址是 [ECDSA](#ecdsa) [公钥](#public-key)的[Keccak 哈希](#keccak-256)中最右的 160 位数。
+通常来说，地址代表一个[外部帐户](#eoa)或[合约](#contract-accouint)，可以在区块链上接收（目标地址）或发送（源地址）[交易](#transaction)。 地址是 [ECDSA ](#ecdsa)[公钥](#public-key)的[ Keccak 哈希](#keccak-256)中最右的 160 位数。
 
 ### assert 断言 {#assert}
 
@@ -60,7 +60,7 @@ Eth2 升级的一部分，它将成为以太坊网络的协调者。 它会给�
 
 ### blockchain 区块链 {#blockchain}
 
-以太坊网络中由[工作量证明](#pow)验证的[区块](#block)序列，每个区块与其父块相连，可一直追溯到[创世纪块](#genesis-block)。 它没有区块大小限制，而使用 [gas 上限](#gas-limit)来调整区块大小。
+以太坊网络中由[工作量证明](#pow)验证的[区块](#block)序列，每个区块与其父块相连，可一直追溯到[创世纪块](#genesis-block)。 它没有区块大小限制，而使用 [ gas 上限](#gas-limit)来调整区块大小。
 
 <DocLink to="/developers/docs/intro-to-ethereum#what-is-a-blockchain" title="什么是区块链？" />
 
@@ -100,7 +100,7 @@ Eth2 升级的一部分，它将成为以太坊网络的协调者。 它会给�
 
 ### contract account 合约帐户 {#contract-account}
 
-一个包含代码的帐户，只要接收到来自其他[帐户](#account)（[EOA](#eoa)或[合约帐户](#contract-account)) [交易](#transaction)就会执行合约代码。
+一个包含代码的帐户，只要接收到来自其他[帐户](#account)（[EOA ](#eoa)或[合约帐户](#contract-account)) [交易](#transaction)就会执行合约代码。
 
 ### contract creation transaction 创建合约交易 {#contract-creation-transaction}
 
@@ -130,7 +130,7 @@ Eth2 升级的一部分，它将成为以太坊网络的协调者。 它会给�
 
 ### decentralized exchange (DEX) 去中心化交易所 {#dex}
 
-是 [dapp](#dapp) 的一种类型，让人们可以在网络上与对等点交换代币。 你需要有 [Eth](#ether) 才可以使用 Dex（以支付[交易费](#transaction-fee)），但它们不像中心化交易所那样受地理限制——任何人都可以参与。
+是 [dapp](#dapp) 的一种类型，让人们可以在网络上与对等点交换代币。 你需要有 [ Eth](#ether) 才可以使用 Dex（以支付[交易费](#transaction-fee)），但它们不像中心化交易所那样受地理限制——任何人都可以参与。
 
 <DocLink to="/get-eth/#dex" title="去中心化交易所" />
 
@@ -192,7 +192,7 @@ ENS 注册表是一个单一总[合约](#smart-contract)，如 [EIP](#eip) 137 �
 
 ### Ethereum Request for Comments (ERC) 以太坊意见征求 (ERC) {#erc}
 
-ERC 是部分试图定义以太坊具体使用标准的[EIP](#eip)贴上的标签。
+ERC 是部分试图定义以太坊具体使用标准的[ EIP ](#eip)贴上的标签。
 
 <DocLink to="/eips/" title="EIP 简介" />
 
@@ -204,7 +204,7 @@ ERC 是部分试图定义以太坊具体使用标准的[EIP](#eip)贴上的标�
 
 ### ETH {#ether}
 
-以太坊生态系统中使用的原生加密货币，用来支付执行事务时的[gas](#gas)开销。 也被写作 ETH 或符号形式 Ξ，这是希腊字母 Xi 的大写。
+以太坊生态系统中使用的原生加密货币，用来支付执行事务时的[ gas ](#gas)开销。 也被写作 ETH 或符号形式 Ξ，这是希腊字母 Xi 的大写。
 
 <DocLink to="/eth/" title="我们数字未来的货币" />
 
@@ -498,7 +498,7 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 ### receipt 收据 {#receipt}
 
-收据是由以太坊客户端返回的数据，用来表示特定[交易](#transaction)的结果，数据包含交易[哈希](#hash)、打包的[区块](#block)高度、实际 [gas](#gas)消耗量，如果该交易用来部署[合约](#smart-contract)，则还会返回该合约[地址](#address)交易。
+收据是由以太坊客户端返回的数据，用来表示特定[交易](#transaction)的结果，数据包含交易[哈希](#hash)、打包的[区块](#block)高度、实际 [gas ](#gas)消耗量，如果该交易用来部署[合约](#smart-contract)，则还会返回该合约[地址](#address)交易。
 
 ### re-entrancy attack 重放攻击 {#re-entrancy-attack}
 
@@ -620,7 +620,7 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 ### transaction 交易 {#transaction}
 
-由一个原始[帐户](#account)签署并以一个特定地址为目标的提交到以太坊区块链上的数据， 该交易包含交易[gas 上限](#gas-limit)等元数据。
+由一个原始[帐户](#account)签署并以一个特定地址为目标的提交到以太坊区块链上的数据， 该交易包含交易[ gas 上限](#gas-limit)等元数据。
 
 <DocLink to="/developers/docs/transactions/" title="交易" />
 
@@ -690,7 +690,7 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 ### zero address 零地址 {#zero-address}
 
-一个特殊的以太坊地址，地址的所有字节都为 0，作为 [“创建合约交易”](#contract-creation-transaction) 的目标地址。
+一个特殊的以太坊地址，地址的所有字节都为 0，作为[ “创建合约交易” ](#contract-creation-transaction)的目标地址。
 
 ### Zero-knowledge rollup ZK Rollup {#zk-rollup}
 

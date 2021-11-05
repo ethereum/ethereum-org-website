@@ -15,7 +15,7 @@ sidebar: true
 
 **റസ്റ്റിനെ Ethereum-വുമായി സംയോജിപ്പിക്കുന്നതിന് നിങ്ങളുടെ ആദ്യ ഘട്ടങ്ങൾ കൈക്കൊള്ളുക**
 
-ആദ്യം കൂടുതൽ അടിസ്ഥാന പ്രൈമർ ആവശ്യമുണ്ടോ? [ethereum.org/learn](/ml/learn/) അല്ലെങ്കിൽ [ethereum.org/developers](/ml/developers/) പരിശോധിക്കുക.
+ആദ്യം കൂടുതൽ അടിസ്ഥാന പ്രൈമർ ആവശ്യമുണ്ടോ? [ ethereum.org/learn ](/ml/learn/) അല്ലെങ്കിൽ [ ethereum.org/developers ](/ml/developers/) പരിശോധിക്കുക.
 
 - [ബ്ലോക്ക്ചെയിൻ വിവരണം](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [സ്മാർട്ട് കോൺട്രാക്ട്നെ പറ്റി മനസ്സിലാക്കുന്നു](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -42,24 +42,24 @@ sidebar: true
 
 - [എതിരെയും പോലുള്ള നെറ്റ്‌വർക്കുമായി സംവദിക്കുന്നതിന് pwasm_ethereum ബാഹ്യ ലൈബ്രറി](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
 - [ജാവാസ്ക്രിപ്റ്റും റസ്റ്റും ഉപയോഗിച്ച് വികേന്ദ്രീകൃത ചാറ്റ് നിർമ്മിക്കുക](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
-- [Vue.js & Rust ഉപയോഗിച്ച് വികേന്ദ്രീകൃത ടോഡോ അപ്ലിക്കേഷൻ നിർമ്മിക്കുക](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
+- [Vue.js & Rust ഉപയോഗിച്ച് വികേന്ദ്രീകൃത ടോഡോ അപ്ലിക്കേഷൻ നിർമ്മിക്കുക ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [എനിഗ്മ ഉപയോഗിച്ച് ആരംഭിക്കുക - റസ്റ്റ് പ്രോഗ്രാമിംഗ് ഭാഷയിൽ](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [രഹസ്യ കരാറുകളിലേക്കുള്ള ഒരു ആമുഖം](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
 - [ഒയാസിസ് (സംയുക്ത)-ത്തില്‍ സോളിഡിറ്റി കരാറുകൾ വിന്യസിക്കൽ](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)
 
 ## റസ്റ് പ്രോജക്റ്റുകളും ഉപകരണങ്ങളും {#rust-projects-and-tools}
 
-- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _ ethereum പോലുള്ള നെറ്റ്‌വർക്കുമായി സംവദിക്കാനുള്ള ബാഹ്യ ശേഖരണം. _
+- [ pwasm-ethereum ](https://github.com/paritytech/pwasm-ethereum) - _ ethereum പോലുള്ള നെറ്റ്‌വർക്കുമായി സംവദിക്കാനുള്ള ബാഹ്യ ശേഖരണം. _
 - [Ethereum വെബ് അസംബ്ലി](https://ewasm.readthedocs.io/en/mkdocs/)
-- [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _ OASIS API റഫറൻസ് _
-- [eth-utils](https://github.com/ethereum/eth-utils/) - _ Ethereum അനുബന്ധ കോഡ്ബേസുകളിൽ പ്രവർത്തിക്കാനുള്ള യൂട്ടിലിറ്റി ഫംഗ്ഷനുകൾ _
+- [ oasis_std ](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _ OASIS API റഫറൻസ് _
+- [ eth-utils ](https://github.com/ethereum/eth-utils/) - _ Ethereum അനുബന്ധ കോഡ്ബേസുകളിൽ പ്രവർത്തിക്കാനുള്ള യൂട്ടിലിറ്റി ഫംഗ്ഷനുകൾ _
 - [സോളാരിസ്](https://github.com/paritytech/sol-rs)
-- [സ്പുട്‌നിക്വിഎം](https://github.com/sorpaas/rust-evm) - _ റസ്റ്റ് Ethereum വെർച്വൽ മെഷീൻ നടപ്പാക്കൽ _
-- [പാരിറ്റി](https://github.com/paritytech/parity-ethereum) - _ Ethereum Rust client _
-- [റസ്റ്റ്-വെബ് 3](https://github.com/tomusdrw/rust-web3) - _ Web3.js ലൈബ്രറിയുടെ റസ്റ്റ് നടപ്പാക്കൽ _
-- [വേവ്‌ലെറ്റ്](https://wavelet.perlin.net/docs/smart-contracts) - _ റസ്റ്റിലെ വേവ്‌ലെറ്റ് സ്മാർട്ട് കരാർ _
+- [ സ്പുട്‌നിക്വിഎം ](https://github.com/sorpaas/rust-evm) - _ റസ്റ്റ് Ethereum വെർച്വൽ മെഷീൻ നടപ്പാക്കൽ _
+- [ പാരിറ്റി ](https://github.com/paritytech/parity-ethereum) - _ Ethereum Rust client _
+- [ റസ്റ്റ്-വെബ് 3 ](https://github.com/tomusdrw/rust-web3) - _ Web3.js ലൈബ്രറിയുടെ റസ്റ്റ് നടപ്പാക്കൽ _
+- [ വേവ്‌ലെറ്റ് ](https://wavelet.perlin.net/docs/smart-contracts) - _ റസ്റ്റിലെ വേവ്‌ലെറ്റ് സ്മാർട്ട് കരാർ _
 
-കൂടുതൽ ഉറവിടങ്ങൾക്കായി തിരയുകയാണോ? [ethereum.org/developers.](/ml/developers/) പരിശോധിക്കുക
+കൂടുതൽ ഉറവിടങ്ങൾക്കായി തിരയുകയാണോ? [ ethereum.org/developers. ](/ml/developers/) പരിശോധിക്കുക
 
 ## റസ്റ്റ് കമ്മ്യൂണിറ്റി സംഭാവകർ {#rust-community-contributors}
 

@@ -68,4 +68,4 @@ sidebar: true
 
 ## অন্যান্য সমষ্টীভূত তালিকা {#other-aggregated-lists}
 
-[এ ভাইপার উইকি-তে ভাইপারের জন্য অবিশ্বাস্য সম্পদগুলির একটি তালিকা আছে](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources) পাইথনের সাথে সম্পর্কিত টুলগুলির একটি কম্পাইল করা সোর্সের জন্য [py-eth.com](http://py-eth.com/) দেখুন।
+[ এ ভাইপার উইকি-তে ভাইপারের জন্য অবিশ্বাস্য সম্পদগুলির একটি তালিকা আছে](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources) পাইথনের সাথে সম্পর্কিত টুলগুলির একটি কম্পাইল করা সোর্সের জন্য [py-eth.com](http://py-eth.com/) দেখুন।

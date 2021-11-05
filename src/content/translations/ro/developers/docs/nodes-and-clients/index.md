@@ -11,7 +11,7 @@ Pentru ca Ethereum să funcționeze în mod descentralizat, are nevoie de o reț
 
 ## Condiții prealabile {#prerequisites}
 
-Ar trebui să înțelegi conceptul unei rețele descentralizate înainte de a continua și de a rula propria instanță de client Ethereum. Aruncă o privire la [introducerea în Ethereum](/developers/docs/intro-to-ethereum/).
+Ar trebui să înțelegi conceptul unei rețele descentralizate înainte de a continua și de a rula propria instanță de client Ethereum. Aruncă o privire la [ introducerea în Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Ce sunt nodurile și clienții? {#what-are-nodes-and-clients}
 

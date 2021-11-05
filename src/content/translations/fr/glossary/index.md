@@ -36,7 +36,7 @@ Dans [Solidity](#solidity), `assert(false)` compile en `0xfe`, un code d'opérat
 
 ### attestation {#attestation}
 
-Il s'agit du vote d'un validateur pour un bloc de la [chaîne phare](#beacon-chain) ou un [bloc](#block)[de fragments](#shard). Les validateurs doivent attester de la conformité des blocs, signalant qu'ils sont d'accord avec l'état proposé par le bloc.
+Il s'agit du vote d'un validateur pour un bloc de la [chaîne phare](#beacon-chain) ou un [bloc](#block)[ de fragments](#shard). Les validateurs doivent attester de la conformité des blocs, signalant qu'ils sont d'accord avec l'état proposé par le bloc.
 
 <Divider />
 
@@ -590,7 +590,7 @@ Déposer une quantité d'[ether](#ether) (votre mise) pour devenir validateur et
 
 ### canaux d'état {#state-channels}
 
-Solution de la [couche 2](#layer-2) où un canal est mis en place entre les participants pour qu'ils puissent effectuer des transactions librement et à moindre coût. Une seule [transaction](#transaction) est envoyée au [réseau principal](#mainnet) pour configurer et fermer le canal. Cela permet un débit de transaction très élevé, mais repose sur la connaissance du nombre de participants au départ et le blocage de fonds.
+Solution de la [couche 2](#layer-2) où un canal est mis en place entre les participants pour qu'ils puissent effectuer des transactions librement et à moindre coût. Une seule [transaction ](#transaction) est envoyée au [réseau principal](#mainnet) pour configurer et fermer le canal. Cela permet un débit de transaction très élevé, mais repose sur la connaissance du nombre de participants au départ et le blocage de fonds.
 
 <DocLink to="/developers/docs/layer-2-scaling/#state-channels" title="canaux d'état" />
 

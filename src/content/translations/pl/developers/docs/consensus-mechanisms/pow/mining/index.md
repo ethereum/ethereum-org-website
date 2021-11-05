@@ -24,7 +24,7 @@ W zdecentralizowanych systemach, takich jak Ethereum, musimy dopilnować, aby ws
 
 ## Jak są wydobywane transakcje Ethereum {#how-ethereum-transactions-are-mined}
 
-1. Użytkownik pisze i podpisuje żądanie [transakcji](/en/developers/docs/transactions/) kluczem prywatnym niektórych [kont](/en/developers/docs/accounts/).
+1. Użytkownik pisze i podpisuje żądanie [transakcji](/en/developers/docs/transactions/) kluczem prywatnym niektórych [ kont](/en/developers/docs/accounts/).
 2. Użytkownik wysyła żądanie transakcji do całej sieci Ethereum z jakiegoś [węzła](/en/developers/docs/nodes-and-clients/).
 3. Po usłyszeniu o nowym żądaniu transakcji, każdy węzeł w sieci Ethereum dodaje żądanie do swojej lokalnej pamięci, listy wszystkich żądań transakcji, o których słyszał, a które nie zostały jeszcze zatwierdzone do blockchaina w bloku.
 4. W pewnym momencie węzeł górniczy agreguje kilkadziesiąt lub kilkaset żądań transakcji w potencjalny [blok](/en/developers/docs/blocks/), w sposób maksymalizujący zarabiane [opłaty transakcyjne](/en/developers/docs/gas/), ale nie przekraczając limitu gazu blokowego. Następnie węzeł wydobywczy:

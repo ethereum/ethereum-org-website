@@ -10,7 +10,7 @@ Ethereum, comme Bitcoin, utilise actuellement un protocole de consensus appelé 
 
 ## Prérequis {#prerequisites}
 
-Pour mieux comprendre cette page, nous vous recommandons de commencer par lire celles sur les [transactions](/en/developers/docs/transactions/) et les [blocs](/en/developers/docs/blocks/).
+Pour mieux comprendre cette page, nous vous recommandons de commencer par lire celles sur les [transactions ](/en/developers/docs/transactions/) et les [blocs](/en/developers/docs/blocks/).
 
 ## Qu'est ce que la preuve de travail (PoW) ? {#what-is-pow}
 

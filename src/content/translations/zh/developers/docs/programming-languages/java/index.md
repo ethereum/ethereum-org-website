@@ -23,7 +23,7 @@ incomplete: true
 
 ## 使用以太坊客户端
 
-了解如何使用[Web3J](https://github.com/web3j/web3j)和 Hyperledger Besu 这两个领先的 Java 以太坊客户端。
+了解如何使用[ Web3J ](https://github.com/web3j/web3j)和 Hyperledger Besu 这两个领先的 Java 以太坊客户端。
 
 - [使用 Java 、Eclipse 和 Web3J 连接以太坊客户端](https://kauri.io/article/b9eb647c47a546bc95693acc0be72546/connecting-to-an-ethereum-client-with-java-eclipse-and-web3j)
 - [使用 Java 和 Web3j 管理以太坊帐户](https://kauri.io/article/925d923e12c543da9a0a3e617be963b4/manage-an-ethereum-account-with-java-and-web3j)

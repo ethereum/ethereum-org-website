@@ -20,7 +20,7 @@ Se vuoi scrivere in JavaScript per interrogare la blockchain, inviare transazion
 **Dai un'occhiata a:**
 
 - [Web3.js](https://web3js.readthedocs.io/)
-- [Ethers.js](https://docs.ethers.io/) _– Contiene l'implementazione del portafoglio di Ethereum e le utility in JavaScript e TypeScript._
+- [Ethers.js ](https://docs.ethers.io/) _– Contiene l'implementazione del portafoglio di Ethereum e le utility in JavaScript e TypeScript._
 
 ### Smart Contract {#smart-contracts}
 

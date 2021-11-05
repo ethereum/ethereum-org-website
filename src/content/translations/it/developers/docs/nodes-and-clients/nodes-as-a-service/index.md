@@ -25,7 +25,7 @@ Alcuni servizi offrono un nodo personale dedicato e lo gestiscono, mentre altri 
 
 Quasi tutti i servizi di nodo sono estremamente facili da integrare, richiedono modifiche di una sola riga di codice per sostituire il nodo originale o persino per passare da un servizio all'altro.
 
-Spesso i servizi di nodo eseguono una varietà di [client](/developers/docs/nodes-and-clients/#clients) e [tipi di nodo](/developers/docs/nodes-and-clients/#node-types), che consentono di accedere a nodi completi e di archivio, oltre a metodi specifici del client in un'unica API.
+Spesso i servizi di nodo eseguono una varietà di [ client](/developers/docs/nodes-and-clients/#clients) e [tipi di nodo](/developers/docs/nodes-and-clients/#node-types), che consentono di accedere a nodi completi e di archivio, oltre a metodi specifici del client in un'unica API.
 
 È importante notare che i servizi di nodo non memorizzano le chiavi private né le informazioni, e non lo devono fare.
 

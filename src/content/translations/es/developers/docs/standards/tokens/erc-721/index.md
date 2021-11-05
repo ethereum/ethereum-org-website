@@ -228,7 +228,7 @@ recent_births = [get_event_data(ck_extra_events_abi[1], log)["args"] for log in 
 
 ## NFT populares {#popular-nfts}
 
-- [Etherscan NFT Tracker](https://etherscan.io/tokens-nft) enumera los principales NFT en Ethereum por volumen de transferencias.
+- [ Etherscan NFT Tracker ](https://etherscan.io/tokens-nft) enumera los principales NFT en Ethereum por volumen de transferencias.
 - [CryptoKitties](https://www.cryptokitties.co/) es un juego centrado en criables, coleccionables y tan adorables criaturas que llamamos CryptoKitties.
 - [Sorare](https://sorare.com/) es un juego de fútbol de fantasía global en el que puedes coleccionar coleccionables de ediciones limitadas, gestiona tus equipos y compite para ganar premios.
 - [Ethereum Name Service (ENS)](https://ens.domains/) ofrece un Nombre en forma descentralizada de abordar los recursos tanto dentro y fuera de la cadena de bloques utilizando nombres sencillos y legibles por humanos.

@@ -43,7 +43,7 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 
 - [Biblioteca externa pwasm_ethereum para interactuar con redes similares a Ethereum](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
 - [Construir un chat descentralizado mediante JavaScript y Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
-- [Crear una aplicación descentralizada de tareas con Vue.js & Rust](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
+- [Crear una aplicación descentralizada de tareas con Vue.js & Rust ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Introducción a Enigma: un lenguaje de programación de Rust](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [Una introducción a los contratos secretos](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
 - [Implementación de contratos de Solidity en Oasis (compuesto)](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)

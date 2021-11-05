@@ -70,7 +70,7 @@ Un conjunto abstracto de instrucciones diseñado para una ejecución eficiente p
 
 ### Bifurcación de Bizancio {#byzantium-fork}
 
-La primera de dos [bifurcaciones duras de codigo](#hard-fork) para la etapa de desarrollo [Metropolis](#metropolis). Incluyó EIP-649 con el retraso de la [bomba de dificultad](#difficulty-bomb) Metropolis y la reducción de Recompensa de Bloques, donde la [Edad de Hielo](#ice-age) se retrasó 1 año y la recompensa del bloque se redujo de 5 a 3 ether.
+La primera de dos [ bifurcaciones duras de codigo](#hard-fork) para la etapa de desarrollo [Metropolis](#metropolis). Incluyó EIP-649 con el retraso de la [bomba de dificultad](#difficulty-bomb) Metropolis y la reducción de Recompensa de Bloques, donde la [Edad de Hielo](#ice-age) se retrasó 1 año y la recompensa del bloque se redujo de 5 a 3 ether.
 
 <Divider />
 

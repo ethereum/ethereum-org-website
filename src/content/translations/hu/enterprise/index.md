@@ -158,4 +158,4 @@ Itt egy pár vállalati alkalmazás, melyek telepítve lettek a nyilvános Ether
 
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _elektromos fizetések_
 
-Ha szeretnél valamit hozzáadni a listához, akkor nézd meg [a közreműködési instrukciókat](https://ethereum.org/en/contributing/).
+Ha szeretnél valamit hozzáadni a listához, akkor nézd meg [ a közreműködési instrukciókat](https://ethereum.org/en/contributing/).

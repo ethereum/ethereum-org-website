@@ -54,6 +54,6 @@ Voir également :
 
 <cite class="citation">
 
-Contenu de la page en partie issu de l'article [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/), par Hudson Jameson
+Contenu de la page en partie issu de l'article [Ethereum Protocol Development Governance and Network Upgrade Coordination ](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/), par Hudson Jameson
 
 </cite>
