@@ -218,10 +218,6 @@ const Footer = () => {
           to: `/developers/local-environment/`,
           text: "set-up-local-env",
         },
-        {
-          to: `/developers/`,
-          text: "developer-resources",
-        },
       ],
     },
     {
