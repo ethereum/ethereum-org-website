@@ -265,7 +265,7 @@ Associated with the EthFans community, the service was launched in 2015. SparkPo
 
 ## Documentation and Information Sources {#documentation-and-information-sources}
 
-There are numerous sources of documentation, articles, tutorials, and forums which are now removed or live but no longer maintained. We have selected a few which are significant or who's current status as deprecated may lead to confusion or scam attempts.
+There are numerous sources of documentation, articles, tutorials, and forums which are now removed or live but no longer maintained. We have selected a few which are significant or whose current status as deprecated may lead to confusion or scam attempts.
 
 ### Legacy Wiki and eth.wiki {#eth-wiki}
 
