@@ -14,7 +14,7 @@ To better understand this page, we recommend you first read up on [consensus mec
 
 ## What is proof-of-stake (PoS)? {#what-is-pos}
 
-Proof of stake is a type of [consensus mechanism](/developers/docs/consensus-mechanisms/) used by blockchain networks to achieve distributed consensus.
+Proof-of-stake is a type of [consensus mechanism](/developers/docs/consensus-mechanisms/) used by blockchain networks to achieve distributed consensus.
 
 It requires users to stake their ETH to become a validator in the network. Validators are responsible for the same thing as miners in [proof-of-work](/developers/docs/consensus-mechanisms/pow/): ordering transactions and creating new blocks so that all nodes can agree on the state of the network.
 
@@ -90,4 +90,4 @@ Stake slashings, ejections, and other penalties, coordinated by the beacon chain
 
 ## Related topics {#related-topics}
 
-- [Proof of work](/developers/docs/consensus-mechanisms/pow/)
+- [Proof-of-work](/developers/docs/consensus-mechanisms/pow/)

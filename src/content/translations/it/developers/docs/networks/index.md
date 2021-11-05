@@ -29,23 +29,23 @@ Oltre alla rete principale, sono disponibili reti di test pubbliche. Si tratta d
 
 In genere è importante testare il codice di un contratto su una rete di prova prima di distribuirlo sulla rete principale. Se crei dapp che si integrano con gli Smart Contract esistenti, la maggior parte dei progetti ha copie distribuite sulle reti di prova con le quali è possibile interagire.
 
-La maggior parte delle reti di prova utilizza un meccanismo di consenso Proof of Authority. Significa che viene scelto un ristretto numero di nodi per convalidare le transazioni e creare nuovi blocchi, e questi fanno staking con la propria identità in questo processo. È difficile incentivare il mining su una rete di prova con meccanismo Proof of work, e questo potrebbe renderla vulnerabile.
+La maggior parte delle reti di prova utilizza un meccanismo di consenso proof-of-authority. Significa che viene scelto un ristretto numero di nodi per convalidare le transazioni e creare nuovi blocchi, e questi fanno staking con la propria identità in questo processo. È difficile incentivare il mining su una rete di prova con meccanismo proof-of-work, e questo potrebbe renderla vulnerabile.
 
 #### Görli {#goerli}
 
-Rete di prova di tipo Proof of Authority che funziona su client.
+Rete di prova di tipo proof-of-authority che funziona su client.
 
 #### Kovan {#kovan}
 
-Rete di prova Proof of Authority per client che eseguono OpenEthereum.
+Rete di prova proof-of-authority per client che eseguono OpenEthereum.
 
 #### Rinkeby {#rinkeby}
 
-Rete di prova Proof of Authority per chi esegue client Geth.
+Rete di prova proof-of-authority per chi esegue client Geth.
 
 #### Ropsten {#ropsten}
 
-Rete di prova Proof of Work. Significa che è la rappresentazione più simile a Ethereum.
+Rete di prova proof-of-work. Significa che è la rappresentazione più simile a Ethereum.
 
 ### Faucet della rete di prova {#testnet-faucets}
 

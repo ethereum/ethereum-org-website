@@ -32,7 +32,7 @@
   "page-eth2-staking-more-sharding": "Więcej o shardingu",
   "page-eth2-staking-pool": "Stakowanie w puli",
   "page-eth2-staking-pool-desc": "Jeśli masz mniej niż 32 ETH, będziesz mógł dodać mniejszą stawkę do puli stawek. Niektóre firmy mogą to wszystko zrobić w Twoim imieniu, więc nie musisz się martwić o pozostanie online. Oto kilka firm do sprawdzenia.",
-  "page-eth2-staking-pos-explained": "Wyjaśnienie Proof-of stake",
+  "page-eth2-staking-pos-explained": "Wyjaśnienie proof-of stake",
   "page-eth2-staking-pos-explained-desc": "Staking jest tym, co musisz zrobić, aby zostać walidatorem w systemie proof-of-stake. Jest to mechanizm konsensusu, który zastąpi obecnie obowiązujący system proof-of-work. Mechanizmy konsensusu sprawiają, że łańcuchy bloków, takie jak Ethereum, są bezpieczne i zdecentralizowane.",
   "page-eth2-staking-pos-explained-desc-1": "Proof-of-stake pomaga zabezpieczyć sieć na wiele sposobów:",
   "page-eth2-staking-services": "Zobacz usługi stakingu",
