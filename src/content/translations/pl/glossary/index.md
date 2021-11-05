@@ -248,7 +248,7 @@ Usługa wykonana za pośrednictwem [inteligentnego kontraktu](#smart-contract), 
 
 Nieodwołalność jest gwarancją, że zestaw transakcji przed upływem danego czasu nie zmieni się i nie będzie mógł zostać wycofany.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/#finality" title="Nieodwołalność proof-of-work" /> <DocLink to="/developers/docs/consensus-mechanisms/pos/#finality" title="Nieodwołalność proof-of stake" />
+<DocLink to="/developers/docs/consensus-mechanisms/pow/#finality" title="Nieodwołalność proof-of-work" /> <DocLink to="/developers/docs/consensus-mechanisms/pos/#finality" title="Nieodwołalność proof-of-stake" />
 
 ### finney {#finney}
 

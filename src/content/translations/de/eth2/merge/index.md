@@ -26,7 +26,7 @@ Stelle dir Ethereum als Raumschiff vor, das noch nicht ganz für seine interstel
 
 ## Andocken ans Mainnet {#docking-mainnet}
 
-Wenn alles bereit ist, wird das Ethereum-Mainnet an die Beacon Chain "angedockt" und zu seinem eigenen Shard werden, die statt [proof-of-work](/developers/docs/consensus-mechanisms/pow/) das proof-of Stake-Verfahren anwendet.
+Wenn alles bereit ist, wird das Ethereum-Mainnet an die Beacon Chain "angedockt" und zu seinem eigenen Shard werden, die statt [proof-of-work](/developers/docs/consensus-mechanisms/pow/) das proof-of-stake-Verfahren anwendet.
 
 Mainnet wird es sowohl ermöglichen, Smart Contracts ins proof-of-stake-System einzubringen, als auch die gesamte Geschichte und den aktuellen Zustand von Ethereum, um einen flüssigen Übergang für alle Besitzer und Nutzer von ETH zu garantieren.
 
