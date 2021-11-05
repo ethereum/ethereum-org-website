@@ -34,7 +34,7 @@ Ny til Ethereum? Disse artiklene og ressursene er et godt sted å komme i gang.
 
 - [En nybegynnerguide for Ethereum](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf) _Feb 23, 2017 - Linda Xie_
 - [Video: Hva er ether og Ethereum?](https://www.youtube.com/watch?v=fjnovGRQrRE) _April 25, 2019 - CME Group_
-- [Hva er Ethereum? ](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) _District0x_
+- [Hva er Ethereum?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) _District0x_
 - [Hva er ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Oppdatert - Ethub_
 - [Komplett introduksjon til Ethereum](https://www.mewtopia.com/absolute-beginners-guide/) _juli 23, 2019_
 - [Sak for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _Jan 30, 2018 - Elad Gil_
@@ -67,7 +67,7 @@ I ETH 2.0 vil Ethereum bli ført videre til et annet system kalt “Proof of Sta
 
 ## Klienter og Noder {#clients-and-nodes}
 
-Ethereum-nettverket er bygget opp av mange noder som kjører kompatibel klientprogramvare. Det er to klienter som brukes av et flertall av Noder: [Geth](https://geth.ethereum.org/) (skrevet i Go) og [ Parity](https://www.parity.io/ethereum/) (skrevet i Rust).
+Ethereum-nettverket er bygget opp av mange noder som kjører kompatibel klientprogramvare. Det er to klienter som brukes av et flertall av Noder: [Geth](https://geth.ethereum.org/) (skrevet i Go) og [Parity](https://www.parity.io/ethereum/) (skrevet i Rust).
 
 - Vil du lære hvordan du kjører din egen Node? → [ethereum.org/developers](/developers/#clients-running-your-own-node/)
 - [Omfattende liste over alle Ethereum klienter](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
@@ -102,7 +102,7 @@ Det er mye arbeid i gang for å gjøre Ethereum mer "skalabellerbar" ved å forb
 
 ### Plasma {#plasma}
 
-- [ Forstå Plasma, Part 1: Det grunnleggende](https://www.theblockcrypto.com/2019/02/07/understanding-plasma-part-1-the-basics/) _Feb 7, 2019 - Daniel Goldman_
+- [Forstå Plasma, Part 1: Det grunnleggende](https://www.theblockcrypto.com/2019/02/07/understanding-plasma-part-1-the-basics/) _Feb 7, 2019 - Daniel Goldman_
 - [Forstå Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) _District0x_
 - [Lær Plasma - En ressursmengde for rammeverket i plasma](https://www.learnplasma.org/en/)
 
@@ -130,7 +130,7 @@ For mer informasjon, se [EthHub's forklarende side om ETH 1.x](https://docs.ethh
 “Cryptoeconomics” er den praktiske vitenskapen av å bygge distribuerte systemer, der egenskapene til disse systemene er sikret av finansielle insentiver og hvor de økonomiske mekanismene garanteres ved hjelp av kryptografi. Det er allmenn betegnelse for praksisen med å designe og skalere blokkkjeder som Ethereum og Bitcoin.
 
 - [Cryptoeconomics.study](https://cryptoeconomics.study/)
-- [Introduksjon til kryptokonomi ](https://www.youtube.com/watch?v=F0FCI8GxO5I) _(Video) Aug 19, 2018 - Karl Floersch_
+- [Introduksjon til kryptokonomi](https://www.youtube.com/watch?v=F0FCI8GxO5I) _(Video) Aug 19, 2018 - Karl Floersch_
 - [Gjør mening av kryptokonomi](https://medium.com/l4-media/making-sense-of-cryptoeconomics-5edea77e4e8d) _Nov 16 2017 - Josh Stark_
 
 ## Kritikk og skepsis {#critique-and-skepticism}
@@ -140,4 +140,4 @@ Kritiske holdninger av Ethereum og Cryptovaluta.
 - [Ethereum sitt veikart er ikke ambisiøst nok](https://decryptmedia.com/6136/vulcanize-rick-dudley-ethereum-roadmap-makerdao-polkadot) _March 27, 2019 - Interview with Rick Dudley_
 - [Utfordringene med å bygge etereum sin infrastruktur](https://medium.com/@lopp/the-challenges-of-building-ethereum-infrastructure-87e443e47a4b) _Jan 8, 2018 - Jameson Lopp_
 - [Parsimonious svarer på vanskelige spørsmål](https://www.youtube.com/watch?v=GOkSg0BuSdw&feature=youtu.be) _(Video) March 10, 2019 - Rick Dudley_
-- [ Det er ingen god grunn til å stole på blokkjede-teknologi](https://www.wired.com/story/theres-no-good-reason-to-trust-blockchain-technology/) _Feb 6, 2019 - Bruce Schneier_
+- [Det er ingen god grunn til å stole på blokkjede-teknologi](https://www.wired.com/story/theres-no-good-reason-to-trust-blockchain-technology/) _Feb 6, 2019 - Bruce Schneier_

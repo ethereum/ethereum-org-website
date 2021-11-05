@@ -53,7 +53,7 @@ sidebar: true
 
 একটি "স্মার্ট কন্ট্র্যাক্ট" হল ইথেরিয়ামে চালিত একটি কোডের অংশ। এটিকে একটি "কন্ট্রাক্ট" বলা হয় কারণ ইথেরিয়ামে চালিত কোডটি ETH বা অন্যান্য ডিজিটাল সম্পদের মতো মূল্যবান জিনিসগুলিকে নিয়ন্ত্রণ করতে পারে।
 
-- স্মার্ট কন্ট্রাক্ট সহ ইথেরিয়ামে কীভাবে প্রোগ্রাম শুরু করবেন তা শিখতে চান? [ ethereum.org/developers](/bn/developers/)
+- স্মার্ট কন্ট্রাক্ট সহ ইথেরিয়ামে কীভাবে প্রোগ্রাম শুরু করবেন তা শিখতে চান? [ethereum.org/developers](/bn/developers/)
 - [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _নভেম্বর 12, 2018 - আন্ড্রেয়াস এম আন্তোপোলোস, গ্যাভিন উড_
 - [What are Smart Contracts/Decentralized Applications?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications)_প্রায়শই আপডেট করা হয় - Ethhub_
 
@@ -114,7 +114,7 @@ ETH 2.0 এ, ইথেরিয়াম "প্রুফ অফ স্টেক
 - [8 Teams Are Sprinting to Build the Next Generation of Ethereum](https://www.coindesk.com/next-gen-buidlers-the-8-teams-working-on-ethereum-2-0) _ ডিসেম্বর 9, 2018 - ক্রিস্টিন কিম_
 - [Proof of Stake](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/proof-of-stake/) _এথহাব দ্বারা প্রায়শই আপডেট করা হয়।_
 - [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) _ এথহাব দ্বারা প্রায়শই আপডেট করা হয়।_
-- [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin ](https://youtu.be/kCVpDrlVesA)_ (ভিডিও) নভেম্বর, 2018 - ইউটিউব_
+- [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA)_ (ভিডিও) নভেম্বর, 2018 - ইউটিউব_
 - [ETH 2.0 Researchers AMA Part 1](https://docs.ethhub.io/other/ethereum-2.0-ama/#part-1) _জানুয়ারী 24, 2019 - ইথহাব_
 - [ETH 2.0 Researchers AMA Part 2](https://docs.ethhub.io/other/ethereum-2.0-ama/#part-2) _জুলাই 15, 2019 - ইথহাব_
 - [9 Things You Didn't Know About Ethereum 2.0](https://our.status.im/9-things-you-didnt-know-about-ethereum-2-0/) _18 জুলাই, 2019 - ব্রুনো স্কভোর্চ_
@@ -137,6 +137,6 @@ ETH 1.x হলো বিদ্যমান ইথেরিয়াম প্র
 ইথেরিয়াম এবং ক্রিপ্টোকারেন্সিগুলির সমালোচনামূলক মতামত।
 
 - [Ethereum’s roadmap isn’t ambitious enough](https://decryptmedia.com/6136/vulcanize-rick-dudley-ethereum-roadmap-makerdao-polkadot) _27 শে মার্চ, 2019 - রিক ডাডলির সাথে সাক্ষাৎকার_
-- [The Challenges of Building Ethereum Infrastructure ](https://medium.com/@lopp/the-challenges-of-building-ethereum-infrastructure-87e443e47a4b) _জানুয়ারী 8, 2018 - জেমসন লপ্প_
+- [The Challenges of Building Ethereum Infrastructure](https://medium.com/@lopp/the-challenges-of-building-ethereum-infrastructure-87e443e47a4b) _জানুয়ারী 8, 2018 - জেমসন লপ্প_
 - [Parsimonious Answers to Difficult Questions](https://www.youtube.com/watch?v=GOkSg0BuSdw&feature=youtu.be) _(ভিডিও) 10 ই মার্চ, 2019 - রিক ডাডলি_
 - [There’s no good reason to trust blockchain technology](https://www.wired.com/story/theres-no-good-reason-to-trust-blockchain-technology/) _ফেব্রুয়ারি 6, 2019 - ব্রুস শ্নেয়ার_

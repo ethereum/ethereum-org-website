@@ -17,7 +17,7 @@ Počujete o Ethereu prvýkrát? Tak ste na správnom mieste. Začnime celkovým 
 
 **Ethereum, ktoré vzniklo v roku 2015, je dnes popredným svetovým programovateľným blockchainom.**
 
-**Rovnako ako iné blockchainy, má aj Ethereum svoju vlastnú kryptomenu nazývanú ether (ETH).** ETH je digitálnou menou. Ak ste už počuli o [ bitcoine](http://bitcoin.org/), vedzte, že ETH má mnoho rovnakých funkcií. Je plne digitálna a je možné ju okamžite poslať komukoľvek na svete. ETH nie je pod kontrolou žiadnej vlády ani korporácie – je decentralizovaná a je nedostatkovou komoditou. Ľudia na celom svete ju používajú na uskutočňovanie platieb, investície alebo ako zábezpeku.
+**Rovnako ako iné blockchainy, má aj Ethereum svoju vlastnú kryptomenu nazývanú ether (ETH).** ETH je digitálnou menou. Ak ste už počuli o [bitcoine](http://bitcoin.org/), vedzte, že ETH má mnoho rovnakých funkcií. Je plne digitálna a je možné ju okamžite poslať komukoľvek na svete. ETH nie je pod kontrolou žiadnej vlády ani korporácie – je decentralizovaná a je nedostatkovou komoditou. Ľudia na celom svete ju používajú na uskutočňovanie platieb, investície alebo ako zábezpeku.
 
 **Ethereum však dokáže oveľa viac ako iné blockchainy.** Ethereum je programovateľný, čo znamená, že vývojárom umožňuje [vytvárať nové druhy aplikácií](/sk/dapps/).
 

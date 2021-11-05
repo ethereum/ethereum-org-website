@@ -20,7 +20,7 @@ summaryPoints:
 
 ## Što radi Beacon Chain? {#what-does-the-beacon-chain-do}
 
-Beacon Chain će dirigirati ili uskladiti proširenu mrežu [ djelića](/eth2/shard-chains/) i [učesnika](/eth2/staking/). Ali neće biti kao današnja [glavna mreža Ethereum](/glossary/#mainnet). Ne podržava račune ili pametne ugovore.
+Beacon Chain će dirigirati ili uskladiti proširenu mrežu [djelića](/eth2/shard-chains/) i [učesnika](/eth2/staking/). Ali neće biti kao današnja [glavna mreža Ethereum](/glossary/#mainnet). Ne podržava račune ili pametne ugovore.
 
 Beacon Chain će tijekom vremena mijenjati ulogu, međutim to je temeljna komponenta za [siguran, održiv i nadogradiv Ethereum na kojem radimo](/eth2/vision/).
 
@@ -30,7 +30,7 @@ Beacon Chain će tijekom vremena mijenjati ulogu, međutim to je temeljna kompon
 
 Beacon Chain će predstaviti [Proof of Stake](/developers/docs/consensus-mechanisms/pos/) Etereumu. Ovo je novi način da pomognete održati Ethereum sigurnim. Shvatite to kao javno dobro koje će Ethereum učiniti zdravijim i zaraditi vam više ETH-a u procesu. U praksi, to će uključiti vaše ulaganje ETH-a kako biste aktivirali softver za validaciju. Kao validator, obrađivat ćete transakcije i stvarati nove blokove u lancu.
 
-Ulagati i postati validator, jednostavnije je od [ rudarenja ](/developers/docs/mining/) (kako je mreža trenutačno zaštićena). Postoji nada da će to dugoročno pomoći da Ethereum bude sigurniji. Što više ljudi sudjeluje u mreži, to će ona biti decentraliziranija i sigurnija od napada.
+Ulagati i postati validator, jednostavnije je od [rudarenja](/developers/docs/mining/) (kako je mreža trenutačno zaštićena). Postoji nada da će to dugoročno pomoći da Ethereum bude sigurniji. Što više ljudi sudjeluje u mreži, to će ona biti decentraliziranija i sigurnija od napada.
 
 <InfoBanner emoji=":money_bag:">
 Ako ste zainteresirani za validiranje i pomoć u osiguranju za Beacon Chain, <a href="/eth2/staking/"> saznajte više o sudjelovanju</a>.
@@ -42,7 +42,7 @@ Ovo je također važna promjena za drugu nadogradnju Eth2: [lanci djelića](/eth
 
 Lanci djelića bit će druga nadogradnja Eth2. Povećat će kapacitet mreže i poboljšati brzinu transakcija proširenjem mreže na 64 blok-lanca. Beacon Chain je važan prvi korak u uvođenju lanaca djelića, jer im je za siguran rad potreban ulog.
 
-Na kraju će i Beacon Chain biti odgovoran za nasumično dodjeljivanje učesnika za validaciju lanaca djelića. To je ključno za otežavanje učesnicima da budu u dosluhu i da preotmu djelić. Dakle, to znači da im je šansa [ manja od 1 u trilijun](https://medium.com/@chihchengliang/minimum-committee-size-explained-67047111fa20).
+Na kraju će i Beacon Chain biti odgovoran za nasumično dodjeljivanje učesnika za validaciju lanaca djelića. To je ključno za otežavanje učesnicima da budu u dosluhu i da preotmu djelić. Dakle, to znači da im je šansa [manja od 1 u trilijun](https://medium.com/@chihchengliang/minimum-committee-size-explained-67047111fa20).
 
 ## Odnos između nadogradnji {#relationship-between-upgrades}
 

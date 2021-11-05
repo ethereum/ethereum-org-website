@@ -69,4 +69,4 @@ sidebarDepth: 1
 
 ## Інші зведені списки {#other-aggregated-lists}
 
-На вікі-сторінці Vyper є [ неймовірний перелік ресурсів для Vyper.](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources) Щоб отримати доступ до інформації про інструменти, пов'язані з Python, завітайте на [py-eth.com](http://py-eth.com/).
+На вікі-сторінці Vyper є [неймовірний перелік ресурсів для Vyper.](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources) Щоб отримати доступ до інформації про інструменти, пов'язані з Python, завітайте на [py-eth.com](http://py-eth.com/).

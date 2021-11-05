@@ -56,7 +56,7 @@ Mai multe despre [dovada muncii (PoW)](/developers/docs/consensus-mechanisms/pow
 
 ### Dovada mizei {#proof-of-stake}
 
-Ethereum are planuri de a face upgrade la un protocol de consens [dovada mizei (PoS) ](/developers/docs/consensus-mechanisms/pos/).
+Ethereum are planuri de a face upgrade la un protocol de consens [dovada mizei (PoS)](/developers/docs/consensus-mechanisms/pos/).
 
 #### Crearea blocului {#pos-block-creation}
 

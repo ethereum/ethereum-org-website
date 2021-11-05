@@ -42,7 +42,7 @@ sidebar: true
 
 - [pwasm_ethereum 外部庫與類以太坊網絡交互](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
 - [使用 JavaScript 和 Rust 搭建去中心化聊天室](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
-- [使用 Vue.js 和 Rust 構建一個去中心化待辦事項應用程序 ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
+- [使用 Vue.js 和 Rust 構建一個去中心化待辦事項應用程序](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [從 Enigma 開始 - 用 Rust 編程語言](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [Secret Contracts 介紹](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
 - [在 Oasis (Compound) 上部署 Solidity 合約](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)
@@ -51,7 +51,7 @@ sidebar: true
 
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _與類以太坊網絡交互的外部庫集合_
 - [以太坊 Web 大會](https://ewasm.readthedocs.io/en/mkdocs/)
-- [ oasis_std ](https://docs.rs/oasis-std/0.2.7/oasis_std/)- _OASIS API 參考_
+- [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/)- _OASIS API 參考_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _使用以太坊相關代碼庫的實用函數工具_
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _Rust 以太坊虛擬機實現_

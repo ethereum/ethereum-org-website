@@ -42,7 +42,7 @@ sidebar: true
 
 - [pwasm_ethereum 外部库与类以太坊网络交互](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
 - [使用 JavaScript 和 Rust 搭建去中心化聊天室](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
-- [使用 Vue.js 和 Rust 构建一个去中心化待办事项应用程序 ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
+- [使用 Vue.js 和 Rust 构建一个去中心化待办事项应用程序](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [从 Enigma 开始 - 用 Rust 编程语言](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [Secret Contracts 介绍](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
 - [在 Oasis (Compound) 上部署 Solidity 合约](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)

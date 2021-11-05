@@ -39,7 +39,7 @@ L'exécution de vos propres nœuds peut s'avérer très coûteuse, qu'il s'agiss
 
 En utilisant un service de nœuds, vous centralisez l'aspect infrastructure de votre produit. C'est pourquoi les projets qui accordent la plus haute importance à la décentralisation pourraient préférer des nœuds auto-hébergés plutôt que des nœuds d'origine externe.
 
-En savoir plus sur les [avantages à exécuter votre propre nœud ](/developers/docs/nodes-and-clients/#benefits-to-you).
+En savoir plus sur les [avantages à exécuter votre propre nœud](/developers/docs/nodes-and-clients/#benefits-to-you).
 
 ## Services de nœuds populaires {#popular-node-services}
 

@@ -7,7 +7,7 @@ sidebar: true
 
 # Acerca de ethereum.org {#about-ethereumorg}
 
-ethereum.org es un recurso público de código abierto para la comunidad Ethereum al que cualquiera puede contribuir. Contamos con un pequeño equipo dedicado a mantener y desarrollar el sitio, que es financiado por la [ Fundación Ethereum ](/foundation/).
+ethereum.org es un recurso público de código abierto para la comunidad Ethereum al que cualquiera puede contribuir. Contamos con un pequeño equipo dedicado a mantener y desarrollar el sitio, que es financiado por la [Fundación Ethereum](/foundation/).
 
 ## Nuestra visión {#our-vision}
 
@@ -30,7 +30,7 @@ Tenemos algunos principios básicos que nos ayudan a hacer esto.
 
 Queremos que nuestros usuarios muestren su interés y que se responda a sus preguntas. Así que nuestro portal necesita combinar información, "momentos mágicos" y enlaces a los brillantes recursos de la comunidad que ahí existen. El propósito de nuestro contenido es ser un “portal de incorporación” y no un sustituto de los extensos recursos que ya existen. Estamos ansiosos por ofrecer asistencia e integrarnos con los recursos creados por la comunidad, para darles más visibilidad y hacerlos más reconocibles.
 
-La base de [ la comunidad de Ethereum ](/en/community/)es la siguiente: no solo necesitamos servir a la comunidad, sino colaborar con sus miembros e incorporar sus comentarios. El sitio web no es solo para la comunidad que tenemos ahora, sino para la comunidad que esperamos ser a medida que crezcamos. Debemos recordar que nuestra comunidad es global y alberga personas con muchos idiomas, de muchas regiones y de diversas culturas.
+La base de [la comunidad de Ethereum](/en/community/) es la siguiente: no solo necesitamos servir a la comunidad, sino colaborar con sus miembros e incorporar sus comentarios. El sitio web no es solo para la comunidad que tenemos ahora, sino para la comunidad que esperamos ser a medida que crezcamos. Debemos recordar que nuestra comunidad es global y alberga personas con muchos idiomas, de muchas regiones y de diversas culturas.
 
 ### 2. ethereum.org está siempre evolucionando 🛠 {#core-principles-2}
 

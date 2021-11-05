@@ -20,13 +20,13 @@ summaryPoints:
 
 ## Què és l'acoblament? {#what-is-the-docking}
 
-És important recordar que inicialment les altres actualitzacions d'Eth2 estan essent enviades de forma separada des de la [xarxa principal](/glossary/#mainnet), la cadena que utilitzem avui en dia. La xarxa principal d'Ethereum seguirà estant protegida mitjançant la [prova de treball](/developers/docs/consensus-mechanisms/pow/), fins i tot quan [ la Cadena de Balisa ](/eth2/beacon-chain/)i les seves [ cadenes de fragments ](/eth2/shard-chains/) s'executin en paral·lel utilitzant [ prova de participació](/developers/docs/consensus-mechanisms/pos/). L'acoblament és quan aquests dos sistemes es fusionen.
+És important recordar que inicialment les altres actualitzacions d'Eth2 estan essent enviades de forma separada des de la [xarxa principal](/glossary/#mainnet), la cadena que utilitzem avui en dia. La xarxa principal d'Ethereum seguirà estant protegida mitjançant la [prova de treball](/developers/docs/consensus-mechanisms/pow/), fins i tot quan [la Cadena de Balisa](/eth2/beacon-chain/) i les seves [cadenes de fragments](/eth2/shard-chains/) s'executin en paral·lel utilitzant [prova de participació](/developers/docs/consensus-mechanisms/pos/). L'acoblament és quan aquests dos sistemes es fusionen.
 
 Imagina que Ethereum és una nau espacial que no està del tot preparada per a un viatge interestel·lar. Amb la Cadena de Balisa i les cadenes de fragments, la comunitat ha creat un nou motor i un habitacle més reforçat. Quan sigui el moment, la nau actual s'acoblarà a aquest nou sistema per convertir-se en una única nau, preparada per viatjar a anys llum i conquerir l'univers.
 
 ## Acoblament de la xarxa principal {#docking-mainnet}
 
-Quan estigui preparada, la xarxa principal d'Ethereum s'acoblarà a la Cadena de Balisa transformant-se en un fragment propi que utilitzi la prova de participació en lloc de [ la prova de treball](/developers/docs/consensus-mechanisms/pow/).
+Quan estigui preparada, la xarxa principal d'Ethereum s'acoblarà a la Cadena de Balisa transformant-se en un fragment propi que utilitzi la prova de participació en lloc de [la prova de treball](/developers/docs/consensus-mechanisms/pow/).
 
 La xarxa principal aportarà la capacitat d'executar contractes intel·ligents en el sistema de prova de participació, a més de l'historial complet i l'estat actual d'Ethereum, per garantir que la transició sigui fluida per a tots els titulars i usuaris d'ETH.
 
@@ -48,7 +48,7 @@ These improvements all have a place in Eth2 so it’s likely that their progress
 
 ## Després de l'acoblament {#after-the-docking}
 
-Això marcarà el final de la prova de treball per Ethereum i el principi d'una nova era més sostenible i respectuosa amb el medi ambient. Arribats a aquest punt, Ethereum tindrà la mida, la seguretat i la sostenibilitat descrites a la [ visió d'Eth2](/eth2/vision/).
+Això marcarà el final de la prova de treball per Ethereum i el principi d'una nova era més sostenible i respectuosa amb el medi ambient. Arribats a aquest punt, Ethereum tindrà la mida, la seguretat i la sostenibilitat descrites a la [visió d'Eth2](/eth2/vision/).
 
 ## Relació entre les millores {#relationship-between-upgrades}
 

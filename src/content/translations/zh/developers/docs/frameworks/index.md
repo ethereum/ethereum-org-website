@@ -19,7 +19,7 @@ sidebar: true
 
 ## 前置要求 {#prerequisites}
 
-在更深入介绍这个框架之前，我们推荐你先阅读下面对于 [DAPP ](/developers/docs/dapps/)的简介以及[以太坊堆栈](/developers/docs/ethereum-stack/)。
+在更深入介绍这个框架之前，我们推荐你先阅读下面对于 [DAPP](/developers/docs/dapps/) 的简介以及[以太坊堆栈](/developers/docs/ethereum-stack/)。
 
 ## 可用的框架 {#available-frameworks}
 

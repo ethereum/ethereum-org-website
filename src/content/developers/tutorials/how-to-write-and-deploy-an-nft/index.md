@@ -335,7 +335,7 @@ The From address should match your MetaMask account address and the To address w
 
 Yasssss! You just deployed your NFT smart contract to the Ethereum chain!
 
-To understand what’s going on under the hood, let’s navigate to the Explorer tab in our [Alchemy dashboard ](https://dashboard.alchemyapi.io/explorer). If you have multiple Alchemy apps make sure to filter by app and select “MyNFT”.
+To understand what’s going on under the hood, let’s navigate to the Explorer tab in our [Alchemy dashboard](https://dashboard.alchemyapi.io/explorer). If you have multiple Alchemy apps make sure to filter by app and select “MyNFT”.
 
 ![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer.png)
 

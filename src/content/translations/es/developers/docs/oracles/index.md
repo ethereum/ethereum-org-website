@@ -46,7 +46,7 @@ Servicios como Chainlink ofrecen oracles-as-a-service (oráculos como un servici
 
 - [Obtener feeds de precio de criptomonedas en tu contrato inteligente](https://chain.link/solutions/defi)
 - [Generar números aleatorios verificables (útiles para gaming)](https://chain.link/solutions/chainlink-vrf)
-- [Hacer llamadas a API externas](https://docs.chain.link/docs/request-and-receive-data): Un caso de uso novedoso de esto es[ revisar reservas de wBTC](https://cointelegraph.com/news/1b-in-wrapped-bitcoin-now-being-audited-using-chainlink-s-proof-of-reserve)
+- [Hacer llamadas a API externas](https://docs.chain.link/docs/request-and-receive-data): Un caso de uso novedoso de esto es [revisar reservas de wBTC](https://cointelegraph.com/news/1b-in-wrapped-bitcoin-now-being-audited-using-chainlink-s-proof-of-reserve)
 
 Aquí se presenta un ejemplo de cómo obtener el precio más reciente mediante tu contrato inteligente con ayuda de un feed de precios de Chainlink:
 
@@ -94,7 +94,7 @@ contract PriceConsumerV3 {
 
 ### Construir un contrato inteligente de oráculo {#build-an-oracle-smart-contract}
 
-Aquí se presenta un ejemplo de un contrato inteligente de oráculos diseñado por Pedro Costa. Puedes encontrar anotaciones adicionales en su artículo: [ Implementación de un Oracle de la blockchain de Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e).
+Aquí se presenta un ejemplo de un contrato inteligente de oráculos diseñado por Pedro Costa. Puedes encontrar anotaciones adicionales en su artículo: [Implementación de un Oracle de la blockchain de Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e).
 
 ```solidity
 pragma solidity >=0.4.21 <0.6.0;

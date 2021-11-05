@@ -42,7 +42,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/id/learn/) 
 
 - [pwasm_ethereum - Library externs untuk berinteraksi dengan jaringan seperti Ethereum](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
 - [Bangun Dapp Obrolan yang Terdesentralisi Menggunakan JavaScript dan Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
-- [Bangun Dapp To-do List menggunakan Vue.js & Rust ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
+- [Bangun Dapp To-do List menggunakan Vue.js & Rust](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Memulai dengan Enigma - Dalam Bahasa Pemrograman Rust](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [Mengenal Smart Contract Rahasia](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
 - [Meluncurkan Smart Contract Solidity di Oasis (Compound)](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)

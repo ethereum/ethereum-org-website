@@ -42,7 +42,7 @@ Behöver du en mer grundläggande introduktion först? Kolla in [ethereum.org/se
 
 - [pwasm_ethereum externs: bibliotek för att interagera med Ethereum-liknande nätverk](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
 - [Bygg en decentraliserad chatt med JavaScript och Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
-- [Bygg en decentraliserad Todo-app med hjälp av Vue.js & Rust ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
+- [Bygg en decentraliserad Todo-app med hjälp av Vue.js & Rust](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Komma igång med Enigma - i Rust-programmeringsspråk](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [En introduktion till hemliga kontrakt](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
 - [Distribuera Solidity-kontrakt på Oasis (Compound)](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)

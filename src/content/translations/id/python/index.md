@@ -68,4 +68,4 @@ Ingin mencari informasi tambahan? Kunjungi [ethereum.org/developers.](/id/develo
 
 ## Daftar Artikel Lainnya {#other-aggregated-lists}
 
-Vyper wiki punya banyak [ artikel bagus untuk Vyper](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources). Untuk kumpulan sumber daya Python lainnya yang terkait dengan Ethereum, kunjungi [py-eth.com](http://py-eth.com/).
+Vyper wiki punya banyak [artikel bagus untuk Vyper](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources). Untuk kumpulan sumber daya Python lainnya yang terkait dengan Ethereum, kunjungi [py-eth.com](http://py-eth.com/).

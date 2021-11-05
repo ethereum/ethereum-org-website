@@ -43,7 +43,7 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 
 - [pwasm_ethereum: biblioteca externa para interagir com uma rede análoga a Ethereum](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
 - [Construa um bate-papo descentralizado utilizando JavaScript e Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
-- [Construa um aplicativo descentralizado de tarefas utilizando Vue.js & Rust ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
+- [Construa um aplicativo descentralizado de tarefas utilizando Vue.js & Rust](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Introdução a Enigma - na Linguagem de Programação Rust](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [Uma Introdução a Contratos Secretos](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
 - [Implantando Contratos em Solidity no Oasis (Composto)](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)

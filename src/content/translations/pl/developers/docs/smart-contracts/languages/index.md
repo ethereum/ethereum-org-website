@@ -243,7 +243,7 @@ Poniższy prosty przykład implementuje funkcję potęgową. Można go skompilow
 }
 ```
 
-Jeśli masz już duże doświadczenie w inteligentnych kontraktach, pełną implementację ERC20 w Yul znajdziesz [tutaj ](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
+Jeśli masz już duże doświadczenie w inteligentnych kontraktach, pełną implementację ERC20 w Yul znajdziesz [tutaj](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
 
 ## Jak wybrać {#how-to-choose}
 

@@ -50,9 +50,9 @@ lang: fa
 
 - [معرفی فناوری اتریوم Ethereum](https://coiniran.com/%d9%85%d8%b9%d8%b1%d9%81%db%8c-%d9%81%d9%86-%d8%a2%d9%88%d8%b1%db%8c-%d8%a7%d8%aa%d8%b1%db%8c%d9%88%d9%85-ethereum/) _March 2016 - کوین ایران_
 - [مختصری در رابطه با اتریوم](https://coiniran.com/about-ethereum-network/) _March 2017 - کوین ایران_
-- [ وایت پیپر ارز رمزنگاری شده اتریوم (Ethereum)؛ قسمت نخست](https://coiniran.com/ethereum-whitepaper/)
+- [وایت پیپر ارز رمزنگاری شده اتریوم (Ethereum)؛ قسمت نخست](https://coiniran.com/ethereum-whitepaper/)
 - [ترجمه وایت پیپر ارز رمزنگاری شده اتریوم (Ethereum)؛ قسمت دوم](https://coiniran.com/ethereum-whitepaper-pt2/)
-- [ ترجمه وایت پیپر ارز رمزنگاری شده اتریوم (Ethereum)؛ قسمت سوم](https://coiniran.com/ethereum-whitepaper-pt3/)
+- [ترجمه وایت پیپر ارز رمزنگاری شده اتریوم (Ethereum)؛ قسمت سوم](https://coiniran.com/ethereum-whitepaper-pt3/)
 - [اتریوم و ساختار فنی این تکنولوژی](https://soundcloud.com/shiryakhat/ethereum-episode-0002) _2017 Feb 19, - پادکست شیر‌یا‌خط_
 
 [Decentralized Everything with Vitalik Buterin](https://youtu.be/WSN5BaCzsbo)

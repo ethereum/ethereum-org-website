@@ -105,4 +105,4 @@ Un fragment reutilizabil de cod (un program) pe care un programator îl publică
 
 ## Tutoriale corelate {#related-tutorials}
 
-- [Un ghid al programatorului la Ethereum, partea 1 ](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– O explorare foarte prietenoasă a Ethereum folosind Python și web3.py_
+- [Un ghid al programatorului la Ethereum, partea 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– O explorare foarte prietenoasă a Ethereum folosind Python și web3.py_

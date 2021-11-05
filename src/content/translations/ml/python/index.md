@@ -17,7 +17,7 @@ sidebar: true
 
 **പൈത്തൺ Ethereum-വുമായി സംയോജിപ്പിക്കുന്നതിന് നിങ്ങളുടെ ആദ്യ ഘട്ടങ്ങൾ കൈക്കൊള്ളുക**
 
-ആദ്യം കൂടുതൽ അടിസ്ഥാന പ്രൈമർ ആവശ്യമുണ്ടോ? [ ethereum.org/learn ](/ml/learn/) അല്ലെങ്കിൽ [ ethereum.org/developers ](/ml/developers/) പരിശോധിക്കുക.
+ആദ്യം കൂടുതൽ അടിസ്ഥാന പ്രൈമർ ആവശ്യമുണ്ടോ? [ethereum.org/learn](/ml/learn/) അല്ലെങ്കിൽ [ethereum.org/developers](/ml/developers/) പരിശോധിക്കുക.
 
 - [ബ്ലോക്ക്ചെയിൻ വിവരണം](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [സ്മാർട്ട് കോൺട്രാക്ട്നെ പറ്റി മനസ്സിലാക്കുന്നു](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -45,19 +45,19 @@ sidebar: true
 
 ## പൈത്തൺ പ്രോജക്റ്റുകളും ഉപകരണങ്ങളും {#python-projects-and-tools}
 
-- [ ബ്രൗണി ](https://github.com/eth-brownie/brownie) - _ Ethereum സ്മാർട്ട് കരാറുകളുമായി വിന്യസിക്കുന്നതിനും പരിശോധിക്കുന്നതിനും സംവദിക്കുന്നതിനുമുള്ള പൈത്തൺ ചട്ടക്കൂട് _
-- [ eth-utils ](https://github.com/ethereum/eth-utils/) - _ Ethereum അനുബന്ധ കോഡ്ബേസുകളിൽ പ്രവർത്തിക്കാനുള്ള യൂട്ടിലിറ്റി ഫംഗ്ഷനുകൾ _
-- [ py-evm ](https://github.com/ethereum/py-evm) - _ Ethereum വെർച്വൽ മെഷീന്‍ നടപ്പാക്കൽ _
-- [ py-solc-x ](https://pypi.org/project/py-solc-x/) - _ 0.5.x പിന്തുണയോടെ സോൾക്ക് സോളിഡിറ്റി കംപൈലറിന് ചുറ്റുമുള്ള പൈത്തൺ റാപ്പർ _
-- [ py-wasm ](https://github.com/ethereum/py-wasm) - _ വെബ് അസംബ്ലി ഇന്റർപ്രെറ്ററിന്റെ പൈത്തൺ നടപ്പാക്കൽ _
-- [ pydevp2p ](https://github.com/ethereum/pydevp2p) - _ എതിരെയും P2P സ്റ്റാക്ക് നടപ്പാക്കൽ _
-- [ പൈമേക്കർ ](https://github.com/makerdao/pymaker) - _ മേക്കർ കരാറുകൾക്കായുള്ള പൈത്തൺ API _
-- [ മാമ്പ ](https://mamba.black) - _ വൈപ്പർ ഭാഷയിൽ എഴുതിയ സ്മാർട്ട് കരാറുകൾ എഴുതുന്നതിനും സമാഹരിക്കുന്നതിനും വിന്യസിക്കുന്നതിനുമുള്ള ചട്ടക്കൂട് _
-- [ ട്രിനിറ്റി ](https://github.com/ethereum/trinity) - _ Ethereum പൈത്തൺ ക്ലയന്റ്_
-- [ വൈപ്പർ ](https://github.com/ethereum/vyper/) - _ EVM-നായുള്ള പൈത്തോണിക് സ്മാർട്ട് കരാർ ഭാഷ _
-- [ Web3.py ](https://github.com/ethereum/web3.py) - _ Ethereum-വുമായി സംവദിക്കുന്നതിനുള്ള പൈത്തൺ ലൈബ്രറി _
+- [ബ്രൗണി](https://github.com/eth-brownie/brownie) - _ Ethereum സ്മാർട്ട് കരാറുകളുമായി വിന്യസിക്കുന്നതിനും പരിശോധിക്കുന്നതിനും സംവദിക്കുന്നതിനുമുള്ള പൈത്തൺ ചട്ടക്കൂട് _
+- [eth-utils](https://github.com/ethereum/eth-utils/) - _ Ethereum അനുബന്ധ കോഡ്ബേസുകളിൽ പ്രവർത്തിക്കാനുള്ള യൂട്ടിലിറ്റി ഫംഗ്ഷനുകൾ _
+- [py-evm](https://github.com/ethereum/py-evm) - _ Ethereum വെർച്വൽ മെഷീന്‍ നടപ്പാക്കൽ _
+- [py-solc-x](https://pypi.org/project/py-solc-x/) - _ 0.5.x പിന്തുണയോടെ സോൾക്ക് സോളിഡിറ്റി കംപൈലറിന് ചുറ്റുമുള്ള പൈത്തൺ റാപ്പർ _
+- [py-wasm](https://github.com/ethereum/py-wasm) - _ വെബ് അസംബ്ലി ഇന്റർപ്രെറ്ററിന്റെ പൈത്തൺ നടപ്പാക്കൽ _
+- [pydevp2p](https://github.com/ethereum/pydevp2p) - _ എതിരെയും P2P സ്റ്റാക്ക് നടപ്പാക്കൽ _
+- [പൈമേക്കർ](https://github.com/makerdao/pymaker) - _ മേക്കർ കരാറുകൾക്കായുള്ള പൈത്തൺ API _
+- [മാമ്പ](https://mamba.black) - _ വൈപ്പർ ഭാഷയിൽ എഴുതിയ സ്മാർട്ട് കരാറുകൾ എഴുതുന്നതിനും സമാഹരിക്കുന്നതിനും വിന്യസിക്കുന്നതിനുമുള്ള ചട്ടക്കൂട് _
+- [ട്രിനിറ്റി](https://github.com/ethereum/trinity) - _ Ethereum പൈത്തൺ ക്ലയന്റ്_
+- [വൈപ്പർ](https://github.com/ethereum/vyper/) - _ EVM-നായുള്ള പൈത്തോണിക് സ്മാർട്ട് കരാർ ഭാഷ _
+- [Web3.py](https://github.com/ethereum/web3.py) - _ Ethereum-വുമായി സംവദിക്കുന്നതിനുള്ള പൈത്തൺ ലൈബ്രറി _
 
-കൂടുതൽ ഉറവിടങ്ങൾക്കായി തിരയുകയാണോ? [ ethereum.org/developers. ](/ml/developers/) പരിശോധിക്കുക
+കൂടുതൽ ഉറവിടങ്ങൾക്കായി തിരയുകയാണോ? [ethereum.org/developers.](/ml/developers/) പരിശോധിക്കുക
 
 ## പൈത്തൺ കമ്മ്യൂണിറ്റി സംഭാവകർ {#python-community-contributors}
 
@@ -68,4 +68,4 @@ sidebar: true
 
 ## മറ്റ് മൊത്തം ലിസ്റ്റുകൾ {#other-aggregated-lists}
 
-വൈപ്പർ വിക്കിയിൽ ഒരു [ വൈപ്പറിനായുള്ള അവിശ്വസനീയമായ വിഭവങ്ങളുടെ പട്ടിക ](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources) ഉണ്ട്. പൈത്തൺ അനുബന്ധ ഉപകരണങ്ങളുടെ സമാഹരിച്ച ഉറവിടത്തിനായി, [ py-eth.com ](http://py-eth.com/) പരിശോധിക്കുക.
+വൈപ്പർ വിക്കിയിൽ ഒരു [വൈപ്പറിനായുള്ള അവിശ്വസനീയമായ വിഭവങ്ങളുടെ പട്ടിക](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources) ഉണ്ട്. പൈത്തൺ അനുബന്ധ ഉപകരണങ്ങളുടെ സമാഹരിച്ച ഉറവിടത്തിനായി, [py-eth.com](http://py-eth.com/) പരിശോധിക്കുക.

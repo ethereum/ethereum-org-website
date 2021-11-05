@@ -22,7 +22,7 @@ Bu sayfadaki bilgilere ek olarak, araştırılmaya değer birçok topluluk taraf
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _Yeni başlayanlar için hedeflenen Ethereum hakkında bir eğitim kaynağı_
 - [Ethereum.wiki](https://eth.wiki) _Ethereum’un teknolojisi hakkında topluluk tarafından oluşturulmuş bir wiki_
 - [Kauri](https://kauri.io)_Ethereum ve ilgili projeler için teknik makaleler ve öğretici bilgiler_
-- [Ethereum Foundation YouTube kanalı ](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Videolar ve Ethereum hakkında konuşuyor_
+- [Ethereum Foundation YouTube kanalı](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Videolar ve Ethereum hakkında konuşuyor_
 - [Haftalık Ethereum hakkında yeni haberler](https://weekinethereumnews.com/) _ Ekosistemdeki önemli gelişmeleri içeren haftalık bir bülten_
 - [ETH 2.0'daki yenilikler](https://eth2.news) _ETH 2.0 gelişimi hakkında bir bülten_
 - [ethresear.ch forum](https://ethresear.ch/) _ETH 2.0 ve sonrası için Ethereum hakkında daha derin teknik tartışmalar_
@@ -47,7 +47,7 @@ Genel olarak Ethereum ve blockchain teknolojisinin üst düzey açıklamaları.
 - [Ethereum nasıl çalışır?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) _Eylül 27, 2017 - Preethi Kasireddy_
 - [Ethereum'a Nazik Bir Giriş](https://bitsonblocks.net/2016/10/02/gentle-introduction-ethereum/) _Ekim 2, 2016 - Antony Lewis_
 - [Cryptoeconomics ile Blockchain'e giriş - Bölüm 1](https://medium.com/blockchain-at-berkeley/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) _ Ocak 26, 2018 - Zubin Koticha_
-- [Cryptoeconomics ile Blockchain'e Giriş -Bölüm 2 ](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-1252f6a6c012) _Mart 19, 2018 - Zubin Koticha_
+- [Cryptoeconomics ile Blockchain'e Giriş -Bölüm 2](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-1252f6a6c012) _Mart 19, 2018 - Zubin Koticha_
 
 ## Akıllı Sözleşmeler {#smart-contracts}
 
@@ -70,7 +70,7 @@ ETH 2.0'da, Ethereum “Bahis Kanıt” adı verilen farklı bir sisteme geçece
 Ethereum her biri uyumlu client kullanan pek çok birimden oluşmaktadır. İşte birimlerin çoğunun kullandığı iki client: [Geth](https://geth.ethereum.org/) (Go ile yazıldı) ve [Parity](https://www.parity.io/ethereum/) (Rust ile yazıldı).
 
 - Kendi birimini nasıl çalıştıracağını öğrenmek ister misin? [ethereum.org/developers](/tr/developers/#clients-running-your-own-node/)
-- [Tüm Ethereum müşterilerinin kapsamlı listesi ](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
+- [Tüm Ethereum müşterilerinin kapsamlı listesi](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Kurumsal Ethereum {#enterprise-ethereum}
 
@@ -116,7 +116,7 @@ ETH 2.0 (“Huzur” olarak da bilinir), çekirdek Ethereum protokolünün bir s
 - [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) _Sık sık güncellenen - EthHub_
 - [ETH 2.0 - Ethereum'u Ölçeklendirmeye Giden Yol - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(Video) Kasım 2018 - YouTube_
 - [ETH 2.0 Tartışmalar AMA Bölüm 1](https://docs.ethhub.io/other/ethereum-2.0-ama/#part-1) _Ocak 24 2019 - EthHub_
-- [ETH 2.0 tartışmalar AMA Bölüm 2 ](https://docs.ethhub.io/other/ethereum-2.0-ama/#part-2) _Temmuz 15, 2019 - EthHub_
+- [ETH 2.0 tartışmalar AMA Bölüm 2](https://docs.ethhub.io/other/ethereum-2.0-ama/#part-2) _Temmuz 15, 2019 - EthHub_
 - [Ethereum 2.0 Hakkında Bilmediğiniz Şeyler](https://our.status.im/9-things-you-didnt-know-about-ethereum-2-0/) _Temmuz 18, 2019 - Bruno Škvorc_
 
 ## ETH 1.x {#eth-1x}

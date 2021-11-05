@@ -37,7 +37,7 @@ Utilice Ethereum para crear aplicaciones no centralizadas (ó "dapps"), que apro
 
 ## Artículos y documentos de nivel intermedio {#intermediate-articles-and-docs}
 
-- [Documentación Ethereum de Go ](https://geth.ethereum.org/docs/): _La documentación oficial para implementar Ethereum Golang_
+- [Documentación Ethereum de Go](https://geth.ethereum.org/docs/): _La documentación oficial para implementar Ethereum Golang_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
 - [Creación de una Dapp en Go con Geth](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
 - [Trabajar con la red privada Ethereum con Golang y Geth](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
@@ -71,7 +71,7 @@ Utilice Ethereum para crear aplicaciones no centralizadas (ó "dapps"), que apro
 
 - [Geth Discord](https://discordapp.com/invite/nthXNEv)
 - [Geth Gist](https://gitter.im/ethereum/go-ethereum)
-- [Gophers Slack](https://invite.slack.golangbridge.org/): [canal #ethereum ](https://https:/gophers.slack.com/messages/C9HP1S9V2)
+- [Gophers Slack](https://invite.slack.golangbridge.org/): [canal #ethereum](https://https:/gophers.slack.com/messages/C9HP1S9V2)
 - [StackExchange: Ethereum](https://ethereum.stackexchange.com/)
 - [Multi Geth Gitter](https://gitter.im/ethoxy/multi-geth)
 - [Gitter de Ethereum](https://gitter.im/ethereum/home)

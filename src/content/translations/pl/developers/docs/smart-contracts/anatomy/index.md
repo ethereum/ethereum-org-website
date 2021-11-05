@@ -57,7 +57,7 @@ Aby uzyskać więcej wyjaśnień, zapoznaj się z dokumentami:
 
 Wartości przechowywane tylko przez cały okres wykonywania funkcji kontraktowej nazywane są zmiennymi pamięci. Ponieważ nie są one przechowywane na stałe w blockchain, są znacznie tańsze w użyciu.
 
-Dowiedz się więcej o tym, jak EVM przechowuje dane (magazyn, pamięć i stos) w [Dokumenty Solidity ](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
+Dowiedz się więcej o tym, jak EVM przechowuje dane (magazyn, pamięć i stos) w [Dokumenty Solidity](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
 
 <!-- TODO provide examples of when to use storage vs. memory -->
 

@@ -43,7 +43,7 @@ sidebarDepth: 1
 
 - [이더리움 네트워크와의 상호 작용을 위한 pwasm_ethereum extern 라이브러리](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
 - [JavaScript와 Rust를 사용하여 탈중앙화 채팅 구축하기](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
-- [Vue.js 및 Rust를 사용하여 탈중앙화 할 일 목록 앱 제작하기 ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
+- [Vue.js 및 Rust를 사용하여 탈중앙화 할 일 목록 앱 제작하기](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Enigma 시작하기 - Rust 프로그래밍 언어](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [시크릿 컨트랙트 소개](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
 - [Oasis에서 솔리디티 컨트랙트 배포하기(복합)](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)

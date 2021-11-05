@@ -69,8 +69,8 @@ Offentlige og private Ethereum-nettverk kan trenge spesifikke funksjoner som kre
 
 ### Sikkerhet {#security}
 
-- [ Clef](https://geth.ethereum.org/clef/Overview) _brukt til å signere transaksjoner og data og er ment som en erstatning for geth sin kontostyring_
-- [ EthSigner ](https://gitter.im/PegaSysEng/EthSigner) _En signerings applikasjon for transaksjoner som skal brukes med en web3-leverandør_
+- [Clef](https://geth.ethereum.org/clef/Overview) _brukt til å signere transaksjoner og data og er ment som en erstatning for geth sin kontostyring_
+- [EthSigner](https://gitter.im/PegaSysEng/EthSigner) _En signerings applikasjon for transaksjoner som skal brukes med en web3-leverandør_
 
 ### Verktøy {#tooling}
 

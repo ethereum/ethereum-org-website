@@ -43,7 +43,7 @@ Cần một hướng dẫn cơ bản hơn? Tham khảo [ethereum.org/learn](/vi/
 
 - [Thư viện ngoài pwasm_ethereum để tương tác với mạng giống như Ethereum](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
 - [Xây dựng một cuộc trò chuyện phi tập trung bằng cách sử dụng JavaScript và Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
-- [Xây dựng ứng dụng làm việc phi tập trung bằng Vue.js & Rust ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
+- [Xây dựng ứng dụng làm việc phi tập trung bằng Vue.js & Rust](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Bắt đầu với Enigma - Trong ngôn ngữ lập trình Rust](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [Giới thiệu về hợp đồng bí mật](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
 - [Triển khai Hợp đồng Solidity trên Oasis (Tổng hợp)](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)

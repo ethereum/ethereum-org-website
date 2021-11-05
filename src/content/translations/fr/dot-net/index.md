@@ -34,7 +34,7 @@ Besoin d’une approche plus élémentaire&nbsp;? Jetez un oeil à [ethereum.org
 - [Installation de VS Code Solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
 - [Un tuto orienté développeur .NET pour créer et appeler des contrats intelligents Ethereum](https://medium.com/coinmonks/a-net-developers-workflow-for-creating-and-calling-ethereum-smart-contracts-44714f191db2)
 - [Intégration de contrats intelligents avec Nethereum](https://kauri.io/article/b54334b0695342c1bbe161c4c4467b50/smart-contracts-integration-with-nethereum)
-- [Interfacer .NET et contrats intelligents avec Nethereum ](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933)
+- [Interfacer .NET et contrats intelligents avec Nethereum](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933)
 - [Nethereum - Une bibliothèque d’intégration .NET open source pour la blockchain](https://kauri.io/article/d15dfd4903f149cdb84b3ce666103b52/v1/nethereum-an-open-source-.net-integration-library-for-blockchain)
 - [Écrire des transactions Ethereum dans la base de données SQL en utilisant Nethereum](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
 - [Voir comment déployer facilement des contrats intelligents Ethereum en utilisant C# et VisualStudio](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c)

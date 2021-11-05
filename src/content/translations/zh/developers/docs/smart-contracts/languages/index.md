@@ -202,7 +202,7 @@ def endAuction():
 **Yul+**
 
 - Yul 的低级、高效扩展。
-- 最初设计用于[ optimistic rollup ](en/developers/docs/layer-2-scaling/#rollups-and-sidechains)合约。
+- 最初设计用于[optimistic rollup](en/developers/docs/layer-2-scaling/#rollups-and-sidechains)合约。
 - Yul+ 可以被视为对 Yul 的实验性升级建议，为其添加新功能。
 
 ### 重要的链接 {#important-links-2}
@@ -235,7 +235,7 @@ def endAuction():
 }
 ```
 
-如果您已经熟悉智能合约，可以在 [此处找到 Yul 中的完整 ERC20 实例 ](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example)。
+如果您已经熟悉智能合约，可以在 [此处找到 Yul 中的完整 ERC20 实例](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example)。
 
 ## 如何选择 {#how-to-choose}
 

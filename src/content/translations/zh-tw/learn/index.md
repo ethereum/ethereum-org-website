@@ -7,7 +7,7 @@ sidebar: true
 
 # 學習 Ethereum {#learn-about-ethereum}
 
-**歡迎來到[ ethereum.org/learn](/zh-tw/learn/)，這裡提供一系列可以幫助你學習更多關於 Ethereum 的資源。**本頁內容包含技術**和**非技術的文章、指南、和資源。 如果你是第一次接觸 Ethereum，[建議你從這裡開始](/zh-tw/what-is-ethereum/)。
+**歡迎來到[ethereum.org/learn](/zh-tw/learn/)，這裡提供一系列可以幫助你學習更多關於 Ethereum 的資源。**本頁內容包含技術**和**非技術的文章、指南、和資源。 如果你是第一次接觸 Ethereum，[建議你從這裡開始](/zh-tw/what-is-ethereum/)。
 
 你可以先從些地方著手：
 

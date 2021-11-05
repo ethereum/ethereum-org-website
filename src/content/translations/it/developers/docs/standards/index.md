@@ -8,7 +8,7 @@ incomplete: true
 
 ## Panoramica degli standard {#standards-overview}
 
-La community Ethereum ha adottato numerosi standard che aiutano a mantenere i progetti (come [ i client Ethereum](/developers/docs/nodes-and-clients/) e i portafogli) interoperabili tra le diverse implementazioni e garantiscono che Smart Contract e dapp rimangano componibili.
+La community Ethereum ha adottato numerosi standard che aiutano a mantenere i progetti (come [i client Ethereum](/developers/docs/nodes-and-clients/) e i portafogli) interoperabili tra le diverse implementazioni e garantiscono che Smart Contract e dapp rimangano componibili.
 
 Normalmente, gli standard vengono introdotti come [proposte di miglioramento di Ethereum](/en/eips/) (EIP) che vengono discusse dai membri della community attraverso un [processo standard](https://eips.ethereum.org/EIPS/eip-1).
 

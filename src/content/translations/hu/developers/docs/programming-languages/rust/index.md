@@ -41,7 +41,7 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 
 - [pwasm_ethereum externs library Ethereum-szerű hálózatokkal való interakciókhoz](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
 - [Építs egy decentralizált chat-et JavaScript és Rust használatával](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
-- [Építs egy decentralizált To-Do alkalmazást Vue.js-szel & Rust-tal ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
+- [Építs egy decentralizált To-Do alkalmazást Vue.js-szel & Rust-tal](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Enigma első lépések - Rust programozási nyelven](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [Bevezetés a titkos szerződésekbe](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
 - [Solidity szerződések telepítése Oasis-ba (Compound)](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)

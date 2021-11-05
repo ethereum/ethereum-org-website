@@ -9,7 +9,7 @@ isOutdated: true
 
 ## Introducción {#Introduction}
 
-Ejecutar tu propio [ nodo de Ethereum](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) puede ser desafiante, especialmente al principio o durante una escalada rápida. Hay un [número de servicios](#popular-node-services) que ejecutan infraestructuras de nodo optimizadas para ti; así podrás centrarte en desarrollar tu producto o aplicación. Te explicaremos el funcionamiento de los servicios de nodos, las ventajas y desventajas de usarlos, y haremos una lista con los proveedores por si estás interesado en ponerte en marcha.
+Ejecutar tu propio [nodo de Ethereum](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) puede ser desafiante, especialmente al principio o durante una escalada rápida. Hay un [número de servicios](#popular-node-services) que ejecutan infraestructuras de nodo optimizadas para ti; así podrás centrarte en desarrollar tu producto o aplicación. Te explicaremos el funcionamiento de los servicios de nodos, las ventajas y desventajas de usarlos, y haremos una lista con los proveedores por si estás interesado en ponerte en marcha.
 
 ## Requisitos previos {#prerequisites}
 
