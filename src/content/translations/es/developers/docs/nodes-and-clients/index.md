@@ -65,7 +65,7 @@ Ejecutar tu propio nodo te permite utilizar Ethereum de una manera realmente pri
 
 Un conjunto diverso de nodos es importante para la salud, seguridad y resiliencia operativa de Ethereum.
 
-- Proporcionan acceso a los datos de blockchain para clientes ligeros que dependen de ello. En picos de alto uso, es necesario que hayan suficientes nodos completos para ayudar a los nodos lgeros a sincronizarse. Los nodos ligeros no almacenan la blockchain completa, sino que verifican los datos usando [los estados raíz en las cabeceras de los bloques](/en/developers/docs/blocks/#block-anatomy). Ellos pueden solicitar más información de los bloques si lo necesitan.
+- Proporcionan acceso a los datos de blockchain para clientes ligeros que dependen de ello. En picos de alto uso, es necesario que hayan suficientes nodos completos para ayudar a los nodos lgeros a sincronizarse. Los nodos ligeros no almacenan la blockchain completa, sino que verifican los datos usando [ los estados raíz en las cabeceras de los bloques](/en/developers/docs/blocks/#block-anatomy). Ellos pueden solicitar más información de los bloques si lo necesitan.
 - Los nodos completos hacen cumplir las reglas de consenso de prueba de trabajo, de modo que no se les puede engañar para que acepten bloques que no siguen dichas reglas. Esto proporciona seguridad extra a la red porque, si todos los nodos fueran nodos ligeros y no realizaran la verificación completa, los mineros podrían atacar la red, y por ejemplo, crear bloques con mayores recompensas.
 
 Si ejecuta un nodo completo, toda la red Ethereum se beneficia de él.
@@ -221,7 +221,7 @@ Hay nuevos clientes que soportan las [actualizaciones de Eth2](/eth2/beacon-chai
 Hay muchas instrucciones e información sobre los clientes de Ethereum en Internet, aquí se incluyen algunas que puedan ser útiles.
 
 - [Ethereum 101 - Parte 2 - Explicación de los nodos](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 13 de Febrero de 2019_
-- [Ejecución de los nodos completos de Ethereum: Una guía para los recién llegados](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _Nov 7, 2019 - Justin Leroux_
+- [Ejecución de los nodos completos de Ethereum: Una guía para los recién llegados ](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _Nov 7, 2019 - Justin Leroux_
 - [Ejecución de un nodo Ethereum](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/)_: ETHHub, actualizado frecuentemente_
 - [Análisis de los requisitos de hardware para ser un nodo validado y completo de Ethereum](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902)_: Albert Palau, 24 de Septiembre de 2018_
 - [Ejecución de un Nodo Besu Hyperledger en el Mainnet de Ethereum: Beneficios, requerimientos y configuración](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _, Felipe Faraggi, 7 de Mayo de 2020_

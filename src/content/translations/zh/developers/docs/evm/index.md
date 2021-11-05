@@ -54,7 +54,7 @@ Removed as we should probably show memory and account storage too if showing sta
 
 然而，合约确实包含一个 Merkle Patricia _storage_ trie（作为按 word 编址的 word 数组），该 trie 与帐户和部分全局状态相关联。
 
-已编译的智能合约字节码作为许多 EVM [opcodes](https://www.ethervm.io/)执行，它们执行标准的堆栈操作，例如 ` XOR`、` AND`、` ADD`、`SUB`等。 EVM 还实现了一些区块链特定的堆栈操作，如 `ADDRESS`、`BALANCE`、`SHA3`、`BLOCKHASH`，等等。
+已编译的智能合约字节码作为许多 EVM [ opcodes ](https://www.ethervm.io/)执行，它们执行标准的堆栈操作，例如 ` XOR`、` AND`、` ADD`、`SUB`等。 EVM 还实现了一些区块链特定的堆栈操作，如 `ADDRESS`、`BALANCE`、`SHA3`、`BLOCKHASH`，等等。
 
 ![EVM 操作需要 Gas](../gas/gas.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 

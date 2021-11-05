@@ -28,7 +28,7 @@ El rol de la Cadena de Balisa canviarà amb el pas del temps, però és un eleme
 
 ### Introducció de les "apostes" {#introducing-staking}
 
-La Cadena de Balisa introduirà la [prova de participació](/developers/docs/consensus-mechanisms/pos/) a Ethereum. És una manera nova d'ajudar a mantenir segura l'Ethereum. T'ho pots imaginar com un bé públic que farà Ethereum més saludable i et farà guanyar més ETH en el procés. A la pràctica, hauràs d'apostar ETH per tal d'activar el programari de validació. Com a validador, processaràs les transaccions i crearàs nous blocs a la cadena.
+La Cadena de Balisa introduirà la [prova de participació ](/developers/docs/consensus-mechanisms/pos/) a Ethereum. És una manera nova d'ajudar a mantenir segura l'Ethereum. T'ho pots imaginar com un bé públic que farà Ethereum més saludable i et farà guanyar més ETH en el procés. A la pràctica, hauràs d'apostar ETH per tal d'activar el programari de validació. Com a validador, processaràs les transaccions i crearàs nous blocs a la cadena.
 
 Apostar i convertir-se en validador és més senzill que [minar](/developers/docs/mining/) (la manera actual de mantenir la xarxa segura). I s'espera que això contribueixi a fer Ethereum més segura a llarg termini. Com més gent participi a la xarxa, més descentralitzada i segura serà davant dels atacs.
 

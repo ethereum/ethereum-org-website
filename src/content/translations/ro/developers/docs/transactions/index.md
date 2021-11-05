@@ -124,7 +124,7 @@ Minerul care procesează tranzacția va primi ** + 0,0042 ETH**
 
 Gazul este necesar și pentru orice interacțiune cu contractul inteligent.
 
-![Diagramă care arată modul în care este rambursat gazul neutilizat](../../../../../developers/docs/nodes-and-clients/gas-tx.png) _Diagramă adaptată din [EVM Ethereum ilustrat](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagramă care arată modul în care este rambursat gazul neutilizat](../../../../../developers/docs/nodes-and-clients/gas-tx.png) _Diagramă adaptată din [EVM Ethereum ilustrat ](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Orice gaz neutilizat într-o tranzacție este rambursat în contul utilizatorului.
 

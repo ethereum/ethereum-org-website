@@ -51,7 +51,7 @@ Contractele, cu toate acestea, conțin un _spațiu de stocare_ Merkle Patricia t
 
 Bytecode-ul compilat al contractului inteligent se execută ca un număr de [opcoduri](https://www.ethervm.io/) EVM, care efectuează operațiuni de stivă standard cum ar fi `XOR`, `AND`, `ADD`, `SUB` etc. EVM implementează, de asemenea, o serie de operațiuni de stivă specifice blockchain, cum ar fi `ADDRESS`, `BALANCE`, `SHA3`, `BLOCKHASH` etc.
 
-![O diagramă care arată unde este necesar gaz pentru operațiunile EVM](../../../../../developers/docs/gas/gas.png) _Diagrame adaptate din[Ethereum EVM ilustrat](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![O diagramă care arată unde este necesar gaz pentru operațiunile EVM](../../../../../developers/docs/gas/gas.png) _Diagrame adaptate din[ Ethereum EVM ilustrat](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 <!-- TODO add full list from  https://eth.wiki/concepts/evm/implementations -->
 

@@ -19,7 +19,7 @@ Novo na Ethereum? Você está no lugar correto. Vamos começar com a imagem gera
 
 **Como outras blockchains, Ethereum tem uma criptomoeda nativa chamada ether (ETH).** ETH é dinheiro digital. Se você ouviu falar de [Bitcoin](http://bitcoin.org/), o ETH tem muitas das mesmas características. É puramente digital e pode ser enviado instantaneamente a qualquer pessoa do mundo. O fornecimento de ETH não é controlado por nenhum governo ou empresa - é descentralizado, e é escasso. Pessoas ao redor de todo o mundo usam ETH para fazer pagamentos, como um meio de valor ou como garantia.
 
-**Mas, ao contrário de outras blockchains, a Ethereum pode fazer muito mais.** A Ethereum é programável, o que significa que os desenvolvedores podem usá-la para [construir novos tipos de aplicativos](/pt-br/dapps/).
+**Mas, ao contrário de outras blockchains, a Ethereum pode fazer muito mais.** A Ethereum é programável, o que significa que os desenvolvedores podem usá-la para[ construir novos tipos de aplicativos](/pt-br/dapps/).
 
 Estos aplicativos descentralizados (ou "dapps") ganham os benefícios da tecnologia de criptomoeda e blockchain. Eles podem ser confiáveis, o que significa que, uma vez que são “enviados” para a Ethereum, eles serão sempre executados como programados. Podem controlar os activos digitais para criar novos tipos de aplicações financeiras. Podem ser descentralizados, o que significa que nenhuma entidade ou pessoa os controla.
 

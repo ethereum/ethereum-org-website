@@ -21,7 +21,7 @@ Cuando escribas contratos inteligentes, hay una gran posibilidad de que te encue
 
 Las bibliotecas de contratos inteligentes suelen proporcionar implementaciones reutilizables de estos comportamientos como [bibliotecas](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries) o a través de [herencia](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance) en Solidity.
 
-Como ejemplo, a continuación se muestra una versión simplificada del [`contrato de propietario`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/access/Ownable.sol) de la [biblioteca de contractos OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts), que diseña una dirección como el propietario de un contrato y proporciona un modificador para restringir el acceso a un método únicamente a dicho propietario.
+Como ejemplo, a continuación se muestra una versión simplificada del [`contrato de propietario ` ](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/access/Ownable.sol) de la [biblioteca de contractos OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts), que diseña una dirección como el propietario de un contrato y proporciona un modificador para restringir el acceso a un método únicamente a dicho propietario.
 
 ```solidity
 contract Ownable {

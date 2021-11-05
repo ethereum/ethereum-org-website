@@ -28,10 +28,10 @@ incomplete: true
 
 ### 代币标准 {#token-standards}
 
-- [ERC-20 - 代币的标准接口](/developers/docs/standards/tokens/erc-20/)
+- [ERC-20 - 代币的标准接口 ](/developers/docs/standards/tokens/erc-20/)
 - [ERC721 - 非同质化代币 (NFT) 标准接口](/developers/docs/standards/tokens/erc-721/)
 
-了解更多关于[代币标准](/developers/docs/standards/tokens/)的信息。
+了解更多关于[ 代币标准](/developers/docs/standards/tokens/)的信息。
 
 ## 延伸阅读 {#further-reading}
 

@@ -84,8 +84,8 @@ Genel ve özel Ethereum ağları, ağ katılımcıları tarafından istenen öze
 
 - [Alethio Discord](https://discord.gg/d2t8NuU)
 - [Infura Discourse](https://community.infura.io/)
-- [Kaleido Twitter](https://twitter.com/Kaleido_io)
-- [Hyperledger Rocketchat](https://chat.hyperledger.org/)
+- [Kaleido Twitter ](https://twitter.com/Kaleido_io)
+- [Hyperledger Rocketchat ](https://chat.hyperledger.org/)
 - [Hyperledger Rocketchat (Besu channel)](https://chat.hyperledger.org/channel/besu)
 - [Hyperledger Rocketchat (Burrow channel)](https://chat.hyperledger.org/channel/burrow)
 - [PegaSys Twitter](https://twitter.com/Kaleido_io)

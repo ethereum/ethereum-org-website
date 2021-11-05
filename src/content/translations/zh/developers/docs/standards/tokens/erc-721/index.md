@@ -31,7 +31,7 @@ ERC-721（Ethereum Request for Comments 721），由 William Entriken、Dieter S
 
 如果一个智能合约实现了下列方法和事件，它就可以被称为 ERC-721 非同质化代币合约。 一旦被部署，它将负责跟踪在以太坊上创建的代币。
 
-来自[EIP-721](https://eips.ethereum.org/EIPS/eip-721)：
+来自[ EIP-721 ](https://eips.ethereum.org/EIPS/eip-721)：
 
 #### 方法 {#methods}
 

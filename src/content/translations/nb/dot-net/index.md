@@ -55,7 +55,7 @@ Trenger du en mer grunnleggende informasjon først? Sjekk ut [ethereum.org/learn
 - [Unity og Ethereum: Hvorfor og hvordan](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
 - [Lag ASP.NET Core Web API for Ethereum dapps](https://tech-mint.com/create-asp-net-core-web-api-for-ethereum-dapps/)
 - [Bruke Nethereum Web3 til å Implementere System for sporing av forsyningskjeder](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
-- [Nethereum Block Behandling](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/), med [C# Playground sample](http://playground.nethereum.com/csharp/id/1025)
+- [Nethereum Block Behandling ](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/), med [C# Playground sample](http://playground.nethereum.com/csharp/id/1025)
 - [Nethereum Websocket Streaming](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)
 - [Kaleido og Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum og Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)

@@ -79,4 +79,4 @@ Leter du etter flere ressurser? Sjekk ut [ethereum.org/developers.](/developers/
 ## Andre aggregerte lister {#other-aggregated-lists}
 
 - [Awesome Ethereum](https://github.com/btomashvili/awesome-ethereum)
-- [Consensys: En definitiv liste over Ethereum Utviklerverktøy](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [GitHub kilde](https://github.com/ConsenSys/ethereum-developer-tools-list)
+- [Consensys: En definitiv liste over Ethereum Utviklerverktøy ](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [GitHub kilde](https://github.com/ConsenSys/ethereum-developer-tools-list)

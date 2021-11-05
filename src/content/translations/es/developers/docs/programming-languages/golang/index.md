@@ -72,7 +72,7 @@ Usa Ethereum para crear aplicaciones descentralizadas (o "dapps"). Estas dapps p
 
 - [Geth Discord](https://discordapp.com/invite/nthXNEv)
 - [Geth Gist](https://gitter.im/ethereum/go-ethereum)
-- [Gophers Slack](https://invite.slack.golangbridge.org/): [canal #ethereum](https://gophers.slack.com/messages/C9HP1S9V2)
+- [Gophers Slack](https://invite.slack.golangbridge.org/): [canal #ethereum ](https://gophers.slack.com/messages/C9HP1S9V2)
 - [StackExchange: Ethereum](https://ethereum.stackexchange.com/)
 - [Multi Geth Gitter](https://gitter.im/ethoxy/multi-geth)
 - [Gitter de Ethereum](https://gitter.im/ethereum/home)

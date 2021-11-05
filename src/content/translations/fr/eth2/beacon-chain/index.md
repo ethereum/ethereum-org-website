@@ -42,7 +42,7 @@ C'est également un changement important pour la deuxième mise à niveau d'Eth2
 
 Les chaînes fragment constitueront la deuxième mise à niveau d'Eth2. Ils augmenteront la capacité du réseau et amélioreront la vitesse des transactions en étendant le réseau à 64 blockchains. La chaîne phare est une première étape importante dans l'introduction des chaînes fragment, car elles requièrent des enjeux pour fonctionner en toute sécurité.
 
-Au final, la chaîne phare sera également responsable de l'assignation aléatoire des validateurs pour sécuriser les chaînes fragment. Il s'agit d'un élément clé pour compliquer toute tentative de collusion entre les validateurs qui essaieraient de prendre le contrôle d'un fragment. En fait, ça réduit leur chance de réussite à [moins d'une chance sur un trillion](https://medium.com/@chihchengliang/minimum-committee-size-explained-67047111fa20).
+Au final, la chaîne phare sera également responsable de l'assignation aléatoire des validateurs pour sécuriser les chaînes fragment. Il s'agit d'un élément clé pour compliquer toute tentative de collusion entre les validateurs qui essaieraient de prendre le contrôle d'un fragment. En fait, ça réduit leur chance de réussite à [ moins d'une chance sur un trillion](https://medium.com/@chihchengliang/minimum-committee-size-explained-67047111fa20).
 
 ## Relations entre les mises à niveau {#relationship-between-upgrades}
 

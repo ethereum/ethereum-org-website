@@ -51,7 +51,7 @@ contract MyContract is Ownable {
 }
 ```
 
-另一个比较受欢迎的例子是[SafeMath](https://docs.openzeppelin.com/contracts/3.x/utilities#math)或[DsMath](https://dappsys.readthedocs.io/en/latest/ds_math.html)。 这些库（与基础合约不同）提供了语言本身不具有的带有溢出检查的算术函数。 使用这些库而不是本地的算术操作可以来防止你的合约出现溢出错误，这些错误可能会导致灾难性的后果！
+另一个比较受欢迎的例子是[ SafeMath ](https://docs.openzeppelin.com/contracts/3.x/utilities#math)或[DsMath](https://dappsys.readthedocs.io/en/latest/ds_math.html)。 这些库（与基础合约不同）提供了语言本身不具有的带有溢出检查的算术函数。 使用这些库而不是本地的算术操作可以来防止你的合约出现溢出错误，这些错误可能会导致灾难性的后果！
 
 ### 标准 {#standards}
 

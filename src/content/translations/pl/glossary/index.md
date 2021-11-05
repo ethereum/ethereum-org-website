@@ -76,7 +76,7 @@ Zestaw abstrakcyjnych instrukcji przeznaczony do skutecznego wykonywania przez p
 
 ### Fork Byzantium {#byzantium-fork}
 
-Pierwszy z dwóch [hard forków](#hard-fork) na etapie rozwoju [Metropolis](#metropolis). Obejmował on EIP-649: opóźnienie [bomby trudności](#difficulty-bomb) w Metropolis i zmniejszenie nagród za blok, gdzie [Epoka Lodowcowa](#ice-age) została opóźniona o 1 rok, a nagroda za blok została zmniejszona z 5 do 3 ETH.
+Pierwszy z dwóch [hard forków](#hard-fork) na etapie rozwoju [Metropolis](#metropolis). Obejmował on EIP-649: opóźnienie [bomby trudności](#difficulty-bomb) w Metropolis i zmniejszenie nagród za blok, gdzie [Epoka Lodowcowa ](#ice-age) została opóźniona o 1 rok, a nagroda za blok została zmniejszona z 5 do 3 ETH.
 
 <Divider />
 
@@ -90,7 +90,7 @@ Konwertowanie kodu napisanego w wysokopoziomowym języku programowania (np. [Sol
 
 ### komitet {#committee}
 
-Grupa co najmniej 128 [walidatorów](#validator) przypisana losowo do bloków śledzących i odłamkowych przez [łańcuch śledzący](#beacon-chain).
+Grupa co najmniej 128 [walidatorów](#validator) przypisana losowo do bloków śledzących i odłamkowych przez [łańcuch śledzący ](#beacon-chain).
 
 ### konsensus {#consensus}
 
@@ -388,7 +388,7 @@ Przechowywany na dysku magazyn open source typu klucz-wartość, zaimplementowan
 
 ### biblioteka {#library}
 
-[Kontrakt](#smart-contract) specjalnego rodzaju, który nie ma funkcji do odbioru płatności, funkcji rezerwowej ani pamięci na dane. W związku z tym nie może odbierać ani przechowywać etherów, ani przechowywać danych. Biblioteka to zainstalowany kod, który może być wywoływany w trybie odczytu przez inne kontrakty na potrzeby obliczeń.
+[Kontrakt ](#smart-contract) specjalnego rodzaju, który nie ma funkcji do odbioru płatności, funkcji rezerwowej ani pamięci na dane. W związku z tym nie może odbierać ani przechowywać etherów, ani przechowywać danych. Biblioteka to zainstalowany kod, który może być wywoływany w trybie odczytu przez inne kontrakty na potrzeby obliczeń.
 
 <DocLink to="/developers/docs/smart-contracts/libraries/" title="Biblioteki kontraktów inteligentnych" />
 
@@ -704,7 +704,7 @@ To specjalny adres w Ethereum, obejmujący same zera. Jest on podawany jako adre
 
 ### pakiet zbiorczy o wiedzy zerowej {#zk-rollup}
 
-[Pakiet zbiorczy](#rollups)transakcji korzystający z [dowodów ważności](#validity-proof) w celu zwiększenia przepustowości transakcji [warstwy 2](#layer-2) przy zastosowaniu zabezpieczeń zapewnianych przez [sieć główną](#mainnet) (warstwa 1). Pakiety zbiorcze o wiedzy zerowej nie mogą obsługiwać złożonych transakcji (co mogą robić [optymistyczne pakiety zbiorcze](#optimistic-rollups)), ale nie dotyczą ich problemy z opóźnieniami, ponieważ przedłożone transakcje są ewidentnie ważne.
+[Pakiet zbiorczy](#rollups)transakcji korzystający z [ dowodów ważności](#validity-proof) w celu zwiększenia przepustowości transakcji [warstwy 2](#layer-2) przy zastosowaniu zabezpieczeń zapewnianych przez [sieć główną](#mainnet) (warstwa 1). Pakiety zbiorcze o wiedzy zerowej nie mogą obsługiwać złożonych transakcji (co mogą robić [optymistyczne pakiety zbiorcze](#optimistic-rollups)), ale nie dotyczą ich problemy z opóźnieniami, ponieważ przedłożone transakcje są ewidentnie ważne.
 
 <DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups" title="Pakiety zbiorcze o wiedzy zerowej" />
 

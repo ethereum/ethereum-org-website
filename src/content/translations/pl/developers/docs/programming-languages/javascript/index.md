@@ -24,7 +24,7 @@ Możesz użyć tych bibliotek do interakcji z inteligentnymi kontraktami w Ether
 
 ### Inteligentne kontrakty {#smart-contracts}
 
-Jeśli jesteś programistą JavaScript i chcesz napisać własną inteligentny kontrakt, możesz zapoznać się z [Solidity](https://solidity.readthedocs.io). To najpopularniejszy język inteligentnych kontraktów, w dużej mierze inspirowany Javascript.
+Jeśli jesteś programistą JavaScript i chcesz napisać własną inteligentny kontrakt, możesz zapoznać się z [Solidity ](https://solidity.readthedocs.io). To najpopularniejszy język inteligentnych kontraktów, w dużej mierze inspirowany Javascript.
 
 Dowiedz się więcej o [inteligentnych kontraktach](/en/developers/docs/smart-contracts/).
 

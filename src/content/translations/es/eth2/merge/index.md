@@ -26,7 +26,7 @@ Imagine que Ethereum es una nave espacial que no está lista para un viaje inter
 
 ## Acoplamiento de la red principal {#docking-mainnet}
 
-Cuando esté lista, la red principal de Ethereum se "acoplará" a la Cadena de Baliza y se convertirá en su propio fragmento, que utiliza la prueba de participación en lugar de la [prueba de trabajo](/developers/docs/consensus-mechanisms/pow/).
+Cuando esté lista, la red principal de Ethereum se "acoplará" a la Cadena de Baliza y se convertirá en su propio fragmento, que utiliza la prueba de participación en lugar de la [ prueba de trabajo](/developers/docs/consensus-mechanisms/pow/).
 
 La red principal aportará la capacidad de ejecutar contratos inteligentes en el sistema de prueba de participación, además del historial completo y el estado actual de Ethereum, para garantizar que la transición sea fluida para todos los titulares y usuarios de ETH.
 

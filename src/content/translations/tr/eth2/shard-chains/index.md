@@ -52,7 +52,7 @@ Toplamlar, bugün var olan bir "2. katman" teknolojisidir. Merkeziyetsiz uygulam
 
 ## Parça zincirleri versiyon 2: kod yürütme {#code-execution}
 
-Plan, her zaman parçalara ekstra işlevsellik eklemek, onları bugün daha çok [Ethereum mainnet](/glossary/#mainnet) gibi yapmaktı. Bu, akıllı sözleşmeleri saklamalarına ve yürütmelerine ve hesapları yönetmelerine olanak tanır. Ancak sürüm 1 parçalarının sağladığı saniye başına işlem artışı dikkate alındığında, bunun yine de olması gerekiyor mu? Bu hala toplulukta tartışılıyor ve birkaç seçenek var gibi görünüyor
+Plan, her zaman parçalara ekstra işlevsellik eklemek, onları bugün daha çok [ Ethereum mainnet ](/glossary/#mainnet) gibi yapmaktı. Bu, akıllı sözleşmeleri saklamalarına ve yürütmelerine ve hesapları yönetmelerine olanak tanır. Ancak sürüm 1 parçalarının sağladığı saniye başına işlem artışı dikkate alındığında, bunun yine de olması gerekiyor mu? Bu hala toplulukta tartışılıyor ve birkaç seçenek var gibi görünüyor
 
 ### Parçaların kod çalıştırmaya ihtiyacı var mı? {#do-shards-need-code-execution}
 
@@ -76,7 +76,7 @@ Son olarak, belki de bu tartışmayı ZK kıvılcımları patladığında tekrar
 
 İşte aynı bağlamda biraz daha düşünme:
 
-- [Birinci Aşama Tamamlandı: Eth2 veri kullanılabilirliği motoru olarak](https://ethresear.ch/t/phase-one-and-done-eth2-as-a-data-availability-engine/5269/8)-_cdetrio,ethrear.ch_
+- [Birinci Aşama Tamamlandı: Eth2 veri kullanılabilirliği motoru olarak ](https://ethresear.ch/t/phase-one-and-done-eth2-as-a-data-availability-engine/5269/8)-_cdetrio,ethrear.ch_
 
 Bu hala aktif bir tartışma noktasıdır. Daha fazlasını öğrendikten sonra bu sayfaları güncelleyeceğiz.
 

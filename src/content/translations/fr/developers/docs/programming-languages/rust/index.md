@@ -41,7 +41,7 @@ Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/en
 
 - [pwasm_ethereum externs library to interact with Ethereum-like network](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
 - [Build A Decentralized Chat Using JavaScript and Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
-- [Build a Decentralized Todo App Using Vue.js & Rust](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
+- [Build a Decentralized Todo App Using Vue.js & Rust ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Getting Started with Enigma - In Rust Programming Language](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [An Intro to Secret Contracts](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
 - [Deploying Solidity Contracts on Oasis (Compound)](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)

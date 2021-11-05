@@ -241,7 +241,7 @@ Cet exemple simple implémente une fonction puissance. Il peut être compilé en
 }
 ```
 
-Si vous avez déjà une bonne expérience en développement de contrats intelligents, vous trouverez ici une [implémentation complète ERC20 dans Yul](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
+Si vous avez déjà une bonne expérience en développement de contrats intelligents, vous trouverez ici une [implémentation complète ERC20 dans Yul ](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
 
 ## Comment choisir {#how-to-choose}
 
@@ -268,7 +268,7 @@ Voici quelques éléments à considérer si vous n'en avez encore essayé :
 
 ## Comparaison des langages {#language-comparisons}
 
-Pour des comparaisons de la syntaxe de base, du cycle de vie des contrats, des interfaces, des opérateurs, des structures de données, des fonctions, du flux de contrôle, et plus encore, consultez la page Auditless [Solidity & Vyper Cheat Sheet](https://reference.auditless.com/cheatsheet/)
+Pour des comparaisons de la syntaxe de base, du cycle de vie des contrats, des interfaces, des opérateurs, des structures de données, des fonctions, du flux de contrôle, et plus encore, consultez la page Auditless [ Solidity & Vyper Cheat Sheet](https://reference.auditless.com/cheatsheet/)
 
 ## Complément d'information {#further-reading}
 

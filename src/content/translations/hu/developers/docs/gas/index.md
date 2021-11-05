@@ -40,9 +40,9 @@ Annak ellenére, hogy a tranzakciós díjak limitálva vannak, a nem felhasznál
 
 ## Kapcsolódó eszközök {#related-tools}
 
-- [ETH üzemanyag állomás](https://ethgasstation.info/)_ Vevő orientált metrikák az Ethereum gáz piacáról _
-- [Etherscan gáz követő felület](https://etherscan.io/gastracker)_ Tranzakciós díj becslés _
-- [Bloxy gáz analitikája](https://stat.bloxy.info/superset/dashboard/gas/?standalone=true)_ Ethereum gáz statisztikák_
+- [ ETH üzemanyag állomás ](https://ethgasstation.info/)_ Vevő orientált metrikák az Ethereum gáz piacáról _
+- [ Etherscan gáz követő felület ](https://etherscan.io/gastracker)_ Tranzakciós díj becslés _
+- [ Bloxy gáz analitikája ](https://stat.bloxy.info/superset/dashboard/gas/?standalone=true)_ Ethereum gáz statisztikák_
 
 ## Kapcsolódó témák {#related-topics}
 
