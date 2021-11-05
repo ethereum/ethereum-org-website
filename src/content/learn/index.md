@@ -137,4 +137,4 @@ Podcasts addressing Ethereum and Cryptocurrencies:
 
 Resources about Ethereum-related projects and resources which have been deprecated or are no longer maintained.
 
-- [Deprecated Software](/depricated-software/) _A list of deprecated software, dapps, and documentation_
+- [Deprecated Software](/deprecated-software/) _A list of deprecated software, dapps, and documentation_
