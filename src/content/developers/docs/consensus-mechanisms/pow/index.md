@@ -44,6 +44,10 @@ The difficulty determines the target for the hash. The lower the target, the sma
 
 Hashing makes fraud easy to spot. But proof-of-work as a process is also a big deterrent to attacking the chain.
 
+### Attack
+
+The proof of work consensus is susceptible to a 51% attack. This means a miner can have control over 51% of the hashing power on a network and can manipulate the data on the blockchain if this happens.
+
 ### Proof-of-work and security {#security}
 
 Miners are incentivised to do this work on the main Ethereum chain. There is little incentive for a subset of miners to start their own chain – it undermines the system. Blockchains rely on having a single state as a source of truth. And users will always choose the longest or "heaviest" chain.
