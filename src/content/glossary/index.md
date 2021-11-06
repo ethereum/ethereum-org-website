@@ -473,6 +473,12 @@ A [rollup](#rollups) of transactions that use [fraud proofs](#fraud-proof) to of
 
 <DocLink to="/developers/docs/scaling/layer-2-rollups/#optimistic-rollups" title="Optimistic Rollups" />
 
+### Oracle {#oracle}
+
+An oracle is a bridge between the [blockchain](#blockchain) and the real world. They act as on-chain [APIs](#api) that can be queried for information and used in [smart contracts](#smart-contract). This could be anything from price information to weather reports. Oracles can also be bi-directional, used to "send" data out to the real world.
+
+<DocLink to="/developers/docs/oracles/" title="Oracles" />
+
 <Divider />
 
 ## P {#section-p}
