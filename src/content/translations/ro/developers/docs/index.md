@@ -34,7 +34,7 @@ Dacă aceasta este prima ta încercare de dezvoltare Ethereum, îți recomandăm
 - [Contracte inteligente](/developers/docs/smart-contracts/) _– Programe care se află la o adresă Ethereum și rulează funcții atunci când sunt declanșate de tranzacții_
 - [Limbaje de programare](/developers/docs/programming-languages/) _– Cum să începi cu Ethereum folosind limbaje pe care probabil le cunoști deja_
 - [Bibliotecile client JavaScript](/developers/docs/apis/javascript/) _– Biblioteci utile care permit aplicației tale web să interacționeze cu Ethereum și contractele inteligente_
-- [Securitate](/developers/docs/security/)
+- [Securitate](/developers/docs/smart-contracts/security/)
 - [Stocare](/developers/docs/storage/)
 - [Cadre de dezvoltare](/developers/docs/frameworks/) _– Instrumente care facilitează dezvoltarea cu Ethereum_
 - [Medii de dezvoltare](/developers/docs/ides/) _– Cele mai bune medii pentru a scrie codul aplicației dapp_

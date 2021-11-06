@@ -38,7 +38,7 @@ Standardowy sposób pracy z [kontraktami](#contract-account) w ekosystemie Ether
 
 W [Solidity](#solidity) instrukcja `assert(false)` kompiluje się do `0xfe`, nieprawidłowego kodu operacji, który zużywa całe pozostałe [paliwo](#gas) i cofa wszystkie zmiany. Gdy instrukcja `assert()` nie powiedzie się, dzieje się coś bardzo złego i nieoczekiwanego i musisz naprawić swój kod. Instrukcji `assert()` należy użyć, aby uniknąć warunków, które nigdy nie powinny wystąpić.
 
-<DocLink to="/developers/docs/security/" title="Ochrona" />
+<DocLink to="/developers/docs/smart-contracts/security/" title="Ochrona" />
 
 ### poświadczenie {#attestation}
 
@@ -248,7 +248,7 @@ Usługa wykonana za pośrednictwem [inteligentnego kontraktu](#smart-contract), 
 
 Nieodwołalność jest gwarancją, że zestaw transakcji przed upływem danego czasu nie zmieni się i nie będzie mógł zostać wycofany.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/#finality" title="Nieodwołalność proof-of-work" /> <DocLink to="/developers/docs/consensus-mechanisms/pos/#finality" title="Nieodwołalność proof-of stake" />
+<DocLink to="/developers/docs/consensus-mechanisms/pow/#finality" title="Nieodwołalność proof-of-work" /> <DocLink to="/developers/docs/consensus-mechanisms/pos/#finality" title="Nieodwołalność proof-of-stake" />
 
 ### finney {#finney}
 
@@ -362,7 +362,7 @@ Po wdrożeniu kod [kontraktu](#smart-contract) (lub [biblioteki](#library)) staj
 
 Znana również jako „algorytm rozszerzania hasła”, jest używana w pliku [kestore](#keystore-file) do ochrony zaszyfrowanego hasła przed przed atakami siłowymi, atakami słownikowymi i atakami z użyciem tablic tęczowych, wielokrotnie haszując hasło.
 
-<DocLink to="/developers/docs/security/" title="Ochrona" />
+<DocLink to="/developers/docs/smart-contracts/security/" title="Ochrona" />
 
 ### keccak-256 {#keccak-256}
 
@@ -490,13 +490,13 @@ Jest to tajna liczba, która umożliwia użytkownikom w sieci Ethereum dowodzeni
 
 Jest to metoda, za pomocą której protokół blockchainu kryptowaluty umożliwia uzyskanie [konsensusu](#consensus) w środowisku rozproszonym. PoS wymaga przedstawienia dowodu własności określonej kwoty kryptowaluty (jest to „stawka”, jaką użytkownik ma w sieci), aby dana osoba mogła uczestniczyć w weryfikacji transakcji.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/" title="Proof of Stake" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos/" title="Proof-of-stake" />
 
-### proof of work (PoW) {#pow}
+### Proof-of-work (PoW) {#pow}
 
 Są do dane (dowód), których uzyskanie wymaga intensywnych obliczeń. W Ethereum [górnicy](#miner) muszą znaleźć liczbowe rozwiązanie algorytmu [Ethash](#ethash) zgodnie z poziomem [trudności](#difficulty) obowiązującym na poziomie sieci.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/" title="Proof of Work" />
+<DocLink to="/developers/docs/consensus-mechanisms/pow/" title="Proof-of-work" />
 
 ### klucz publiczny {#public-key}
 
@@ -514,7 +514,7 @@ Dane zwracane przez klienta Ethereum, reprezentujące wynik konkretnej [transakc
 
 Atak składający się z kontraktu atakującego wywołującego kontrakt ofiary w taki sposób, że podczas wykonania ofiara ponownie wywołuje kontrakt atakującego rekursywnie. Może to skutkować na przykład kradzieżą środków poprzez pominięcie tych części kontraktu ofiary, które aktualizują saldo lub liczą kwoty odstąpienia.
 
-<DocLink to="/developers/docs/security/#re-entrancy" title="Wielobieżność" />
+<DocLink to="/developers/docs/smart-contracts/security/#re-entrancy" title="Wielobieżność" />
 
 ### nagroda {#reward}
 
@@ -654,7 +654,7 @@ Nazwa ta pochodzi od brytyjskiego matematyka i informatyka Alana Turinga. System
 
 [Węzeł](#node) w systemie [proof-of-stake](#proof-of-stake) odpowiedzialny za przechowywanie danych, przetwarzanie transakcji i dodawanie nowych bloków do blockchainu. Aby aktywować oprogramowanie walidatora, musisz mieć możliwość [stakingu](#staking) 32 ETH.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos" title="Proof of Stake" /> <DocLink to="/eth2/staking/" title="Stakowanie w Ethereum" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos" title="Proof-of-stake" /> <DocLink to="/eth2/staking/" title="Stakowanie w Ethereum" />
 
 ### Dowód ważności {#validity-proof}
 

@@ -66,9 +66,9 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/)
 - [Networks](/developers/docs/networks/)
 - [Consensus mechanisms](/developers/docs/consensus-mechanisms/)
-- [Proof of work](/developers/docs/consensus-mechanisms/pow/)
+- [Proof-of-work](/developers/docs/consensus-mechanisms/pow/)
 - [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
-- [Proof of stake](/developers/docs/consensus-mechanisms/pos/)
+- [Proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 - Developer docs sidebar
 
 ## Ethereum stack developer docs {#ethereum-stack-docs}
@@ -89,7 +89,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [JSON-RPC](/developers/docs/apis/json-rpc/)
 - [Data and analytics](/developers/docs/data-and-analytics/)
 - [Block explorers](/developers/docs/data-and-analytics/block-explorers/)
-- [Security](/developers/docs/security/)
+- [Smart contract security](/developers/docs/smart-contracts/security/)
 - [Storage](/developers/docs/storage/)
 - [Integrated Development Environments (IDEs)](/developers/docs/ides/)
 - [Programming languages](/developers/docs/programming-languages/)

@@ -51,13 +51,13 @@ Inteligentny kontrakt (ang. „smart contract”) to prosty fragment kodu urucha
 
 - Chcesz nauczyć się programować w Ethereum za pomocą kontraktów? [ethereum.org/pl/developers](/pl/developers/)
 
-## Proof of Work i kopanie kryptowaluty {#proof-of-work-and-mining}
+## Proof-of-work i kopanie kryptowaluty {#proof-of-work-and-mining}
 
-Ethereum używa obecnie systemu o nazwie „Proof of Work”. Umożliwia to sieci Ethereum uzgodnienie stanu wszystkich informacji zapisanych w blokchain Ethereum i zapobiega niektórym rodzajom ataków gospodarczych.
+Ethereum używa obecnie systemu o nazwie „proof-of-work. Umożliwia to sieci Ethereum uzgodnienie stanu wszystkich informacji zapisanych w blokchain Ethereum i zapobiega niektórym rodzajom ataków gospodarczych.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Często aktualizowane - Ethhub_
 
-W ETH 2.0 Ethereum zostanie przeniesione do innego systemu o nazwie „Proof of Stake”. [Czytaj więcej o ETH 2.0 poniżej](#eth-2-0).
+W ETH 2.0 Ethereum zostanie przeniesione do innego systemu o nazwie „proof-of-stake”. [Czytaj więcej o ETH 2.0 poniżej](#eth-2-0).
 
 ## Klienci i węzły {#clients-and-nodes}
 

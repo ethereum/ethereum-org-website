@@ -105,7 +105,7 @@ Végül, amikor eldöntöd, hogy felveszel-e egy könyvtárat, vedd figyelembe a
 
 ## Kapcsolódó útmutatók {#related-tutorials}
 
-- [Biztonsági megfontolások Ethereum fejlesztőknek](/developers/docs/security/) _– Egy biztonsági megfontolásokról szóló útmutató okosszerződés fejlesztéshez könyvtár használattal._
+- [Biztonsági megfontolások Ethereum fejlesztőknek](/developers/docs/smart-contracts/security/) _– Egy biztonsági megfontolásokról szóló útmutató okosszerződés fejlesztéshez könyvtár használattal._
 - [Az ERC-20 token okosszerződés megértése](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _-Útmutató az ERC20 szabványról több könyvtáron keresztül._
 
 ## További olvasnivaló {#further-reading}

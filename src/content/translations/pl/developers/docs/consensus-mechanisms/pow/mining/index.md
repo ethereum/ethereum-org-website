@@ -8,7 +8,7 @@ incomplete: true
 
 ## Wymagania wstępne {#prerequisites}
 
-Aby lepiej zrozumieć tę stronę, zalecamy najpierw zapoznanie się z [transakcjami](/en/developers/docs/transactions/), [blokami](/en/developers/docs/blocks/) i [Proof of Work](/developers/docs/consensus-mechanisms/pow/).
+Aby lepiej zrozumieć tę stronę, zalecamy najpierw zapoznanie się z [transakcjami](/en/developers/docs/transactions/), [blokami](/en/developers/docs/blocks/) i [proof-of-work](/developers/docs/consensus-mechanisms/pow/).
 
 ## Czym jest wydobycie w Ethereum? {#what-is-ethereum-mining}
 
@@ -29,7 +29,7 @@ W zdecentralizowanych systemach, takich jak Ethereum, musimy dopilnować, aby ws
 3. Po usłyszeniu o nowym żądaniu transakcji, każdy węzeł w sieci Ethereum dodaje żądanie do swojej lokalnej pamięci, listy wszystkich żądań transakcji, o których słyszał, a które nie zostały jeszcze zatwierdzone do blockchaina w bloku.
 4. W pewnym momencie węzeł górniczy agreguje kilkadziesiąt lub kilkaset żądań transakcji w potencjalny [blok](/en/developers/docs/blocks/), w sposób maksymalizujący zarabiane [opłaty transakcyjne](/en/developers/docs/gas/), ale nie przekraczając limitu gazu blokowego. Następnie węzeł wydobywczy:
    1. Weryfikuje ważność każdego żądania transakcji (tj. nikt nie próbuje przenieść eteru z konta, dla którego nie złożył podpisu, żądanie nie jest zniekształcone itp.), a następnie wykonuje kod żądania, zmieniając stan ich lokalnej kopii EVM. Górnik otrzymuje opłatę transakcyjną za każde takie żądanie transakcji na własny rachunek.
-   2. Rozpoczyna proces tworzenia „certyfikatu legalności” Proof-of-Work dla potencjalnego bloku, gdy wszystkie żądania transakcji w bloku zostaną zweryfikowane i wykonane na lokalnej kopii EVM.
+   2. Rozpoczyna proces tworzenia „certyfikatu legalności” proof-of-work dla potencjalnego bloku, gdy wszystkie żądania transakcji w bloku zostaną zweryfikowane i wykonane na lokalnej kopii EVM.
 5. W końcu górnik zakończy produkcję certyfikatu dla bloku, który zawiera nasze konkretne żądanie transakcji. Górnik następnie emituje wypełniony blok, który zawiera certyfikat i sumę kontrolną żądanego nowego stanu EVM.
 6. Inne węzły słyszą o nowym bloku. Weryfikują certyfikat, samodzielnie wykonują wszystkie transakcje na bloku (w tym transakcję oryginalnie wyemitowaną przez naszego użytkownika) i sprawdzają, czy suma kontrolna ich nowego stanu EVM po wykonaniu wszystkich transakcji jest zgodna z sumą kontrolną stanu zgłaszanego przez blok górnika. Dopiero wtedy węzły dołączają ten blok do ogona swojego blokchaina i akceptują nowy stan EVM jako stan kanoniczny.
 7. Każdy węzeł usuwa wszystkie transakcje w nowym bloku z lokalnej pamięci niespełnionych żądań transakcji.
@@ -54,4 +54,4 @@ Zobacz, jak Austin poprowadzi Cię przez wydobycie i blockchain typu „proof-of
 
 - [Paliwo](/developers/docs/gas/)
 - [Maszyna Wirtualna Ethereum (EVM)](/developers/docs/evm/)
-- [Proof of work](/developers/docs/consensus-mechanisms/pow/)
+- [Proof-of-work](/developers/docs/consensus-mechanisms/pow/)

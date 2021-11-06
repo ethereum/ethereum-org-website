@@ -57,13 +57,13 @@ Un „contract smart” este o secvență de cod care rulează pe Ethereum. Se n
 - [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _12 noiembrie 2018 - Andreas M. Antonopoulos, Gavin Wood_
 - [What are Smart Contracts/Decentralized Applications?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) _Actualizat frecvent - Ethhub_
 
-## Proof of Work și operațiile de mining {#proof-of-work-and-mining}
+## Proof-of-work și operațiile de mining {#proof-of-work-and-mining}
 
-Ethereum folosește un sistem numit „Proof of Work”. Acesta îi permite rețelei Ethereum să se pună de acord în privința stării tuturor informațiilor înregistrate pe blockchainul Ethereum și previne anumite tipuri de atac economic.
+Ethereum folosește un sistem numit „proof-of-work”. Acesta îi permite rețelei Ethereum să se pună de acord în privința stării tuturor informațiilor înregistrate pe blockchainul Ethereum și previne anumite tipuri de atac economic.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Actualizat frecvent - Ethhub_
 
-În ETH 2.0, Ethereum va migra la un alt tip de sistem, numit „Proof of Stake". [Citește mai mult despre ETH 2.0 mai jos](#eth-2-0).
+În ETH 2.0, Ethereum va migra la un alt tip de sistem, numit proof-of-stake". [Citește mai mult despre ETH 2.0 mai jos](#eth-2-0).
 
 ## Clienți și noduri {#clients-and-nodes}
 

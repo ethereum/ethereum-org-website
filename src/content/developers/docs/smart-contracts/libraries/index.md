@@ -19,7 +19,7 @@ You can usually find two kind of building blocks in smart contract libraries: re
 
 When writing smart contracts, there is a good chance you'll find yourself writing similar patterns over and over, like assigning an _admin_ address to carry out protected operations in a contract, or adding an emergency _pause_ button in the event of an unexpected issue.
 
-Smart contract libraries usually provide reusable implementations of these behaviors as [libraries](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries) or via [inheritance](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance) in Solidity. 
+Smart contract libraries usually provide reusable implementations of these behaviors as [libraries](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries) or via [inheritance](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance) in Solidity.
 
 As an example, following is a simplified version of the [`Ownable` contract](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/access/Ownable.sol) from the [OpenZeppelin Contracts library](https://github.com/OpenZeppelin/openzeppelin-contracts), which designs an address as the owner of a contract, and provides a modifier for restricting access to a method only to that owner.
 
@@ -105,7 +105,7 @@ Last, when deciding on whether to include a library, consider its overall usage.
 
 ## Related tutorials {#related-tutorials}
 
-- [Security considerations for Ethereum developers](/developers/docs/security/) _– A tutorial on security considerations when building smart contracts, including library usage._
+- [Security considerations for Ethereum developers](/developers/docs/smart-contracts/security/) _– A tutorial on security considerations when building smart contracts, including library usage._
 - [Understand the ERC-20 token smart contract](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _-Tutorial on the ERC20 standard, provided by multiple libraries._
 
 ## Further reading {#further-reading}
