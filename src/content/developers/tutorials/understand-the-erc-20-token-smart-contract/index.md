@@ -45,7 +45,7 @@ Here is a line-by-line explainer of what every function is for. After this we’
 function totalSupply() external view returns (uint256);
 ```
 
-Returns the amount of tokens in existence. This function is a getter and does not modify the state of the contract. Keep in mind that there is no floats in Solidity. Therefore most tokens adopt 18 decimals and will return the total supply and other results as followed 1000000000000000000 for 1 token. Not every tokens has 18 decimals and this is something you really need to watch for when dealing with tokens.
+Returns the amount of tokens in existence. This function is a getter and does not modify the state of the contract. Keep in mind that there are no floats in Solidity. Therefore most tokens adopt 18 decimals and will return the total supply and other results as followed 1000000000000000000 for 1 token. Not every tokens has 18 decimals and this is something you really need to watch for when dealing with tokens.
 
 ```solidity
 function balanceOf(address account) external view returns (uint256);
