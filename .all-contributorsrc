@@ -5345,6 +5345,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "notjustinshaw",
+      "name": "Justin Shaw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46334750?v=4",
+      "profile": "http://justinshaw.eth",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
