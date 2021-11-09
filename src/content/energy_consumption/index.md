@@ -17,7 +17,7 @@ Ethereum has used proof-of-work since genesis. Migrating off of proof-of-work ha
 
 ## Proof-of-work energy expenditure {#proof-of-work}
 
-Proof-of-work is a robust way to secure against dishonest changes to the blockchain, but it is problematic for several reasons. Since the right to mine a block requires solving a computational puzzle, miners can increase their odds of success by investing in more powerful hardware. These incentives cause an arms race with miners acquiring increasingly power-hungry mining equipment. Ethereum's proof-of-work protocol currently consumes as much energy as a medium-sized country<sup>[^1]</sup>.
+Proof-of-work is a robust way to secure against dishonest changes to the blockchain, but it is problematic for several reasons. Since the right to mine a block requires solving a computational puzzle, miners can increase their odds of success by investing in more powerful hardware. These incentives cause an arms race with miners acquiring increasingly power-hungry mining equipment. Ethereum's proof-of-work protocol currently has a total annualized power consumption approximately equal to that of Finland <sup>[^1]</sup> and carbon footprint similar to Switzerland<sup>[^1]</sup>.
 
 ## Proof-of-stake {#proof-of-stake}
 
@@ -35,14 +35,14 @@ As well as building confidence in the proof-of-stake mechanism, the Beacon Chain
 
 ![image](energy_use_per_transaction.png)
 
-<p style="text-align: center;"><small><i>Estimates based on May 2021 data</i></small></p>
+<p style="text-align: center;"><small><i>Estimate of PoW energy consumption per tx used in figure based on [May 2021 data](https://blog.ethereum.org/2021/05/18/country-power-no-more/), at time of writing the same source suggested up to [175.56 Kwh]((https://digiconomist.net/ethereum-energy-consumption)) </i></small></p>
 
 Let's compare these numbers to a service such as Visa. 100,000 Visa transactions uses 149kWh of energy<sup>[^2]</sup>. Assuming sharding has been implemented, Ethereum's current transaction rate (15 transactions per second) will be increased by at least 64x (the number of shards), not accounting for additional optimization from rollups. A realistic estimate for post-merge, sharded Ethereum with rollups is [25,000 - 100,000](https://twitter.com/VitalikButerin/status/1312905884549300224?s=20) transactions per second. We can use this information to estimate a maximum and minimum energy expenditure per 100,000 transactions.
 
 - 25,000 transactions per second.
 - `100,000 / 25,000 = 4` seconds to process 100,000 transactions.
 
-We can also estimate Ethereum's energy expenditure per second, making a conservative estimate that 10,000 active validators are securing the network (there are over 180,000 validators on the Beacon Chain at the moment, but many validators can operate on a single node. Currently, there are 3000-4000 individual nodes, so 10,000 is a conservative estimate for post-merge):
+We can also estimate Ethereum's energy expenditure per second, making a conservative estimate that 10,000 active validators are securing the network (there are over [250,000 validators on the Beacon Chain](https://beaconscan.com/) at the moment, but many validators can operate on a single node. Currently, there are 3000-4000 individual nodes, so 10,000 is a conservative estimate for post-merge):
 
 `1.44kWh daily usage * 10,000 network nodes = 14,400kWh` per day.
 There are 86,400 seconds in a day, so `14,400 / 86,400 = 0.1667 kWh` per second.
