@@ -288,7 +288,7 @@ There are new clients to support the [Eth2 upgrades](/eth2/beacon-chain/). They 
 
 ## Further reading {#further-reading}
 
-There is a lot of instructions and information about Ethereum clients on the internet, here are few that might be helpful.
+There is a lot of information about Ethereum clients on the internet. Here are few resources that might be helpful.
 
 - [Ethereum 101 - Part 2 - Understanding Nodes](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 13 February 2019_
 - [Running Ethereum Full Nodes: A Guide for the Barely Motivated](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 November 2019_

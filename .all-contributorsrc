@@ -4658,7 +4658,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/83584447?v=4",
       "profile": "http://scottcameron.uk",
       "contributions": [
-        "design"
+        "design",
+        "bug"
       ]
     },
     {
@@ -5317,6 +5318,78 @@
       "profile": "https://github.com/erhuve",
       "contributions": [
         "code"
+      ]
+    },
+    {
+      "login": "justincjohnson",
+      "name": "Justin Johnson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25121264?v=4",
+      "profile": "https://github.com/justincjohnson",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "sakshamgurbhele",
+      "name": "SA KSH AM ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64558515?v=4",
+      "profile": "https://bio.link/saksham",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "RedWolf4845",
+      "name": "Samrat",
+      "avatar_url": "https://avatars.githubusercontent.com/u/93679609?v=4",
+      "profile": "https://github.com/RedWolf4845",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "notjustinshaw",
+      "name": "Justin Shaw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46334750?v=4",
+      "profile": "http://justinshaw.eth",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "meoww-bot",
+      "name": "meoww-bot",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14239840?v=4",
+      "profile": "https://meow.page",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "GhostWalker562",
+      "name": "Philip Vu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43276017?v=4",
+      "profile": "http://moonsdontburn.design",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "connerj70",
+      "name": "Conner Jensen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29151695?v=4",
+      "profile": "http://connerjensen.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "jhaymesdev",
+      "name": "Jhaymes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/69610160?v=4",
+      "profile": "https://jhaymesdev.web.app/",
+      "contributions": [
+        "ideas"
       ]
     }
   ],

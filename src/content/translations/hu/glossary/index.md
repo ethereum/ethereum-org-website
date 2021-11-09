@@ -32,7 +32,7 @@ Egy objektum, mely egy [címet](#address), egy egyenleget, [egy nonce-t](#nonce)
 
 A [Solidity-ben](#solidity), az `assert(false)` a `0xfe` opkódra fordítódik, mely egy érvénytelen opkód, ami felhasználja az összes megmaradt [gázt](#gas) és visszaállítja a változásokat. Ha egy `assert()` állítás meghiúsul, akkor valami nagyon rossz és váratlan történik, és meg kell javítanod a kódot. Az `assert()` kódot, olyan feltételek elkerülésére kell használnod, melynek soha sem szabad megtörténnie.
 
-<DocLink to="/developers/docs/security/" title="Biztonság" />
+<DocLink to="/developers/docs/smart-contracts/security/" title="Biztonság" />
 
 ### attestation (tanúsítás) {#attestation}
 
@@ -352,7 +352,7 @@ Egy [tranzakció](#transaction) egy [szerződéses számláról](#contract-accou
 
 Más néven "jelszó nyújtó algoritmus", melyet a [keystore](#keystore-file) formátumok használnak, hogy védekezzenek a brute-force, dictionary és a szivárvány tábla támadásokkal szemben a jelszó titkosításoknál a jelszó ismételt hashelésével.
 
-<DocLink to="/developers/docs/security/" title="Biztonság" />
+<DocLink to="/developers/docs/smart-contracts/security/" title="Biztonság" />
 
 ### keccak-256 {#keccak-256}
 
@@ -504,7 +504,7 @@ Egy Ethereum kliens által visszadott adat, mely egy adott [tranzakció](#transa
 
 Egy támadás, mely során egy támadó szerződés meghívja az áldozat szerződés egyik függvényét úgy, hogy újra meghívja a függvényt lefutás közben rekurzívan. Ez például a pénz ellopását eredményezheti úgy, hogy kihagy egy pár lépést az áldozat szerződéséből, mely frissítené az egyenlegeket vagy számolná a kiutalási mennyiségeket.
 
-<DocLink to="/developers/docs/security/#re-entrancy" title="Újbóli belépés (re-entrancy)" />
+<DocLink to="/developers/docs/smart-contracts/security/#re-entrancy" title="Újbóli belépés (re-entrancy)" />
 
 ### reward (jutalom) {#reward}
 

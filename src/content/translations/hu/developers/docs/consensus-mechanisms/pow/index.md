@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-Az Ethereum a Bitcoinhoz hasonlóan egy konszenzus protokollt használ, melyet úgy hívnak, hogy [Proof of Work (PoW)](https://en.wikipedia.org/wiki/Proof_of_work). Ez lehetővé teszi, hogy az Ethereum hálózat csomópontjainak, hogy az összes Ethereum blokkláncra feljegyzett információ állapotáról egyet tudjanak érteni és bizonyos gazdasági támadásokat meg tudjanak akadályozni.
+Az Ethereum a Bitcoinhoz hasonlóan egy konszenzus protokollt használ, melyet úgy hívnak, hogy [proof-of-work (PoW)](https://en.wikipedia.org/wiki/Proof_of_work). Ez lehetővé teszi, hogy az Ethereum hálózat csomópontjainak, hogy az összes Ethereum blokkláncra feljegyzett információ állapotáról egyet tudjanak érteni és bizonyos gazdasági támadásokat meg tudjanak akadályozni.
 
 ## Előfeltételek {#prerequisites}
 

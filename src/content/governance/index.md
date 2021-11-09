@@ -15,7 +15,7 @@ _If no one owns Ethereum, how are decisions about past and future changes to Eth
 
 Governance is the systems in place that allow decisions to be made. In a typical organizational structure, the executive team or a board of directors may have the final say in decision-making. Or perhaps shareholders vote on proposals to enact change. In a political system, elected officials may enact legislation that attempts to represent their constituents' desires.
 
-## Decentralized governance {#decentalized-governance}
+## Decentralized governance {#decentralized-governance}
 
 No one person owns or controls the Ethereum protocol, but decisions still need to be made about implementing changes to best ensure the longevity and prosperity of the network. This lack of ownership makes traditional organizational governance an incompatible solution.
 
@@ -145,7 +145,7 @@ The ability to fork in the face of significant political, philosophical or econo
 
 ## Beacon Chain development {#beacon-chain}
 
-The Ethereum governance process often trades off speed and efficiency for openness and inclusivity. In order to accelerate the development of the Beacon Chain, it was launched separately from the proof of work Ethereum network and followed its own governance practices.
+The Ethereum governance process often trades off speed and efficiency for openness and inclusivity. In order to accelerate the development of the Beacon Chain, it was launched separately from the proof-of-work Ethereum network and followed its own governance practices.
 
 While the specification and implementations development has always been fully open source, the formal processes used to propose updates described above weren't used. This allowed changes to be specified and agreed upon quicker by researchers and implementers.
 

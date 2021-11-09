@@ -105,7 +105,7 @@ Na koniec, podejmując decyzję o włączeniu biblioteki, weź pod uwagę jej og
 
 ## Powiązane samouczki {#related-tutorials}
 
-- [Zagadnienia bezpieczeństwa dla programistów Ethereum](/developers/docs/security/) _– samouczek na temat zagadnień bezpieczeństwa podczas tworzenia inteligentnych kontraktów, z uwzględnieniem korzystania z bibliotek._
+- [Zagadnienia bezpieczeństwa dla programistów Ethereum](/developers/docs/smart-contracts/security/) _– samouczek na temat zagadnień bezpieczeństwa podczas tworzenia inteligentnych kontraktów, z uwzględnieniem korzystania z bibliotek._
 - [Informacje o kontraktach inteligentnych tokena ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _— samouczek dotyczący standardu ERC20 oferowanego przez wiele bibliotek._
 
 ## Dalsza lektura {#further-reading}

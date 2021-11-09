@@ -48,7 +48,7 @@ Platforms with contract-based persistence:
 - [Storj](https://storj.io/)
 - [0Chain](https://0chain.net/)
 
-### Additional considerations {#additional-considertion}
+### Additional considerations {#additional-consideration}
 
 IPFS is a distributed system for storing and accessing files, websites, applications, and data. It doesn't have a built-in incentive scheme, but can instead be used with any of the contract-based incentive solutions above for longer-term persistence. Another way to persist data on IPFS is to work with a pinning service, which will "pin" your data for you. You can even run your own IPFS node and contribute to the network to persist your and/or other's data for free!
 

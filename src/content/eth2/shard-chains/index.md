@@ -49,7 +49,7 @@ When the first shard chains are shipped they will just provide extra data to the
 Rollups are a "layer 2" technology that exists today. They allow dapps to bundle or “roll up” transactions into a single transaction off-chain, generate a cryptographic proof and then submit it to the chain. This reduces the data needed for a transaction. Combine this with all the extra data availability provided by shards and you get 100,000 transactions per second.
 
 <InfoBanner isWarning={false}>
-  Given recent progress in layer 2 scaling solution research and development, this has prompted the prioritization of the merge upgrade ahead of shard chains. These will be the focus following mainnet transition to proof of stake.
+  Given recent progress in layer 2 scaling solution research and development, this has prompted the prioritization of the merge upgrade ahead of shard chains. These will be the focus following mainnet transition to proof-of-stake.
 
 [More on rollups](/developers/docs/scaling/layer-2-rollups/)
 </InfoBanner>
@@ -96,7 +96,7 @@ The Beacon Chain contains all the logic for keeping shards secure and synced up.
 
 ### Shards and the merge {#shards-and-docking}
 
-By the time additional shards are added, Ethereum Mainnet will already be secured by the Beacon Chain using proof of stake. This enables a fertile mainnet to build shard chains off of, powered by layer 2 solutions that supercharge the scalability.
+By the time additional shards are added, Ethereum Mainnet will already be secured by the Beacon Chain using proof-of-stake. This enables a fertile mainnet to build shard chains off of, powered by layer 2 solutions that supercharge the scalability.
 
 It remains to be seen whether mainnet will exist as the only “smart” shard that can handle code execution – but either way, the decision to expand shards can be revisited as needed.
 

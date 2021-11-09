@@ -66,7 +66,7 @@ Eseguire un nodo permette di utilizzare Ethereum in modo veramente privato, auto
 Avere una serie diversificata di nodi è importante per la salute, la sicurezza e la resilienza operativa di Ethereum.
 
 - I nodi forniscono accesso ai dati della blockchain per i client leggeri che dipendono da essa. In caso di picchi di utilizzo, per agevolare la sincronizzazione dei nodi leggeri, è necessario che i nodi completi siano in quantità sufficiente. I nodi ridotti non memorizzano l'intera blockchain, ma verificano i dati attraverso le [radici di stato nelle intestazioni dei blocchi](/en/developers/docs/blocks/#block-anatomy). Se ne hanno bisogno, possono richiedere ulteriori informazioni ai blocchi.
-- I nodi completi applicano le regole di consenso Proof of Work e quindi non possono essere ingannati ad accettare blocchi che non li seguono. Questo fornisce ulteriore sicurezza nella rete, perché se tutti i nodi fossero leggeri, cioè non effettuassero una verifica completa, i miner potrebbero attaccare la rete e, ad esempio, creare blocchi con ricompense più elevate.
+- I nodi completi applicano le regole di consenso proof-of-work e quindi non possono essere ingannati ad accettare blocchi che non li seguono. Questo fornisce ulteriore sicurezza nella rete, perché se tutti i nodi fossero leggeri, cioè non effettuassero una verifica completa, i miner potrebbero attaccare la rete e, ad esempio, creare blocchi con ricompense più elevate.
 
 Se si esegue un nodo completo, l'intera rete di Ethereum ne beneficia.
 
@@ -212,7 +212,7 @@ Dispositivi piccoli, convenienti ed efficienti come questi sono ideali per esegu
 
 ## Client Eth2 {#eth2-clients}
 
-Ci sono nuovi client per supportare gli [upgrade a Eth2](/eth2/beacon-chain/). Eseguiranno la beacon chain e supporteranno il nuovo meccanismo di consenso [Proof of Stake](/developers/docs/consensus-mechanisms/pos/).
+Ci sono nuovi client per supportare gli [upgrade a Eth2](/eth2/beacon-chain/). Eseguiranno la beacon chain e supporteranno il nuovo meccanismo di consenso [proof-of-stake](/developers/docs/consensus-mechanisms/pos/).
 
 [Visualizza i clienti Eth2](/eth2/get-involved/#clients).
 

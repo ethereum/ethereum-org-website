@@ -9,7 +9,7 @@ summaryPoints:
   [
     "Beacon Chain ne mijenja ništa o Ethereumu kojim se koristimo danas.",
     "Koordinirat će mrežu.",
-    "On predstavlja Proof of Stake u Ethereumovom ekosustavu.",
+    "On predstavlja proof-of-stake u Ethereumovom ekosustavu.",
     "To možete prepoznati kao „Fazu 0” na tehničkom planu.",
   ]
 ---
@@ -28,7 +28,7 @@ Beacon Chain će tijekom vremena mijenjati ulogu, međutim to je temeljna kompon
 
 ### Osnove ulaganja {#introducing-staking}
 
-Beacon Chain će predstaviti [Proof of Stake](/developers/docs/consensus-mechanisms/pos/) Etereumu. Ovo je novi način da pomognete održati Ethereum sigurnim. Shvatite to kao javno dobro koje će Ethereum učiniti zdravijim i zaraditi vam više ETH-a u procesu. U praksi, to će uključiti vaše ulaganje ETH-a kako biste aktivirali softver za validaciju. Kao validator, obrađivat ćete transakcije i stvarati nove blokove u lancu.
+Beacon Chain će predstaviti [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) Etereumu. Ovo je novi način da pomognete održati Ethereum sigurnim. Shvatite to kao javno dobro koje će Ethereum učiniti zdravijim i zaraditi vam više ETH-a u procesu. U praksi, to će uključiti vaše ulaganje ETH-a kako biste aktivirali softver za validaciju. Kao validator, obrađivat ćete transakcije i stvarati nove blokove u lancu.
 
 Ulagati i postati validator, jednostavnije je od [ rudarenja ](/developers/docs/mining/) (kako je mreža trenutačno zaštićena). Postoji nada da će to dugoročno pomoći da Ethereum bude sigurniji. Što više ljudi sudjeluje u mreži, to će ona biti decentraliziranija i sigurnija od napada.
 
@@ -50,13 +50,13 @@ Sve nadogradnje Eth2 donekle su međusobno povezane. Dakle, ponovimo ukratko kak
 
 ### Glavna mreža i Beacon Chain {#mainnet-and-beacon-chain}
 
-Beacon Chain će u početku postojati odvojeno od glavne mreže Ethereum mreže kojom se koristimo danas. Ali će na kraju će biti povezani. Plan je spojiti glavnu mrežu u sustav Proof of Stake koji kontrolira i koordinira Beacon Chain.
+Beacon Chain će u početku postojati odvojeno od glavne mreže Ethereum mreže kojom se koristimo danas. Ali će na kraju će biti povezani. Plan je spojiti glavnu mrežu u sustav proof-of-stake koji kontrolira i koordinira Beacon Chain.
 
 <ButtonLink to="/eth2/merge/">Spajanje</ButtonLink>
 
 ### Djelići i Beacon Chain {#shards-and-beacon-chain}
 
-Lanci djelića mogu sigurno ući u Ethereumov ekosustav samo ako je uspostavljen mehanizam konsenzusa Proof of Stake. Beacon Chain predstavit će ulaganje, radeći put za nadogradnju lanca djelića.
+Lanci djelića mogu sigurno ući u Ethereumov ekosustav samo ako je uspostavljen mehanizam konsenzusa proof-of-stake. Beacon Chain predstavit će ulaganje, radeći put za nadogradnju lanca djelića.
 
 <ButtonLink to="/eth2/shard-chains/">Lanci djelića</ButtonLink>
 

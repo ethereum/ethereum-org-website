@@ -25,13 +25,13 @@ Dzięki rozgraniczaniu zatwierdzeń (transakcji zatwierdzeniowych) dajemy wszyst
 
 Aby zachować historię transakcji, bloki są ściśle uporządkowane (każdy nowy blok zawiera odniesienie do bloku nadrzędnego), podobnie ściśle uporządkowane są transakcje wewnątrz bloków. Poza rzadkimi przypadkami w każdym dowolnym momencie wszyscy uczestnicy sieci uzgadniają dokładną liczbę i historię bloków, pracują również nad tym, aby grupować bieżące żądania transakcji w następnym bloku.
 
-Gdy dany blok jest już złożony (wydobyty) przez jakiegoś górnika w sieci, jest rozprowadzany do reszty sieci; wszystkie węzły dodają ten blok na koniec swojego blockchaina, a wydobywanie trwa nadal. Dokładny proces składania (wydobywania) bloków, jak i proces zatwierdzania/konsensusu, są obecnie określone protokołem "Proof-of-Work" sieci Ethereum.
+Gdy dany blok jest już złożony (wydobyty) przez jakiegoś górnika w sieci, jest rozprowadzany do reszty sieci; wszystkie węzły dodają ten blok na koniec swojego blockchaina, a wydobywanie trwa nadal. Dokładny proces składania (wydobywania) bloków, jak i proces zatwierdzania/konsensusu, są obecnie określone protokołem "proof-of-work" sieci Ethereum.
 
 ### Demo wizualne {#a-visual-demo} <iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
 
 ## Protokół proof-of-work (dowodu wykonanej pracy) {#proof-of-work-protocol}
 
-Proof of work oznacza, że:
+Proof-of-work oznacza, że:
 
 - Węzły wydobywcze muszą zużyć zmienne acz znaczne ilości energii, czasu i mocy obliczeniowej, aby wyprodukować „certyfikat legalności” dla bloku, który proponują sieci. Pomaga to w ochronie sieci m.in. przed spamem/atakami typu denial-of-service, ponieważ produkcja certyfikatów obarczona jest dużym kosztem.
 - Inni górnicy, którzy dowiadują się o nowym bloku z ważnym certyfikatem legalności, muszą go zaakceptować jako kolejny, obowiązujący blok w blockchainie.

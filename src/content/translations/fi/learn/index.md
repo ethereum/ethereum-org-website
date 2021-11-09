@@ -58,13 +58,13 @@ Korkeatasoisia englanninkielisiä artikkeleita Ethereumista ja lohkoketjuteknolo
 - [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _Nov 12, 2018 - Andreas M. Antonopoulos, Gavin Wood_
 - [What are Smart Contracts/Decentralized Applications?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) _Päivitetään usein - Ethhub_
 
-## Proof of Work ja louhinta {#proof-of-work-and-mining}
+## Proof-of-work ja louhinta {#proof-of-work-and-mining}
 
-Ethereum käyttää menetelmää nimeltä "Proof of Work". Tämä mahdollistaa Ethereum-verkon konsensusmenettelyn, jolla validoidaan kaikkien Ethereum-lohkoketjuun tallennettujen tietojen tila ja estetään tietynlaisia taloudellisia hyökkäyksiä.
+Ethereum käyttää menetelmää nimeltä "proof-of-work". Tämä mahdollistaa Ethereum-verkon konsensusmenettelyn, jolla validoidaan kaikkien Ethereum-lohkoketjuun tallennettujen tietojen tila ja estetään tietynlaisia taloudellisia hyökkäyksiä.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Päivitetään usein - Ethhub_
 
-ETH 2.0 -versiossa Ethereum tulee siirtymään toiseen menetelmään nimeltä "Proof of Stake". [Lue lisää ETH 2.0 -versiosta jäljempänä](#eth-2-0).
+ETH 2.0 -versiossa Ethereum tulee siirtymään toiseen menetelmään nimeltä "proof-of-stake". [Lue lisää ETH 2.0 -versiosta jäljempänä](#eth-2-0).
 
 ## Asiakasohjelmat ja solmut {#clients-and-nodes}
 
