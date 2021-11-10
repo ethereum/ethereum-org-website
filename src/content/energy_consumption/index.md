@@ -21,9 +21,9 @@ Proof-of-work is a robust way to secure against dishonest changes to the blockch
 
 ## Proof-of-stake {#proof-of-stake}
 
-A greener future for Ethereum is already being built in the form of a **proof-of-stake (PoS)** chain. Under proof-of-stake, arbitrary puzzle-solving is unnecessary. Removing puzzle-solving drastically reduces the energy expenditure required to secure the network. Miners get replaced by validators who perform the same function except that instead of expending their assets up-front in the form of computational work, they stake ETH as collateral against dishonest behavior. If the validator submits a provably fradulent block to the chain, the staked assets will be "slashed", strongly incentivizing honesty and securing the network.
+A greener future for Ethereum is already being built in the form of a **proof-of-stake (PoS)** chain. Under proof-of-stake, arbitrary puzzle-solving is unnecessary. Removing puzzle-solving drastically reduces the energy expenditure required to secure the network. Miners get replaced by validators who perform the same function except that instead of expending their assets up-front in the form of computational work, they stake ETH as collateral against dishonest behavior. If the validator is lazy (absent when they are supposed to fulfill some validator duty) their staked ETH can slowly leak away, while provably dishonest behaviour results in the the staked assets being "slashed". This strongly incentivizes active and honest participation in securing the network.
 
-Similarly to proof-of-work, to maintain a fraudulent blockchain, a validator would require 51% of the total ETH staked in the network. However, unlike on proof-of-work, where the potential loss of a failed attack is only the cost of generating the hash power needed to mine, on proof-of-stake, the possible loss of an attack is the entire amount of ETH used as collateral. This disincentive structure allows for network security with proof-of-stake while eliminating the need to expend energy on arbitrary computations.
+Similarly to proof-of-work, to maintain a fraudulent blockchain, a validator would require 51% of the total ETH staked in the network. However, unlike on proof-of-work, where the potential loss of a failed attack is only the cost of generating the hash power needed to mine, on proof-of-stake, the possible loss of an attack is the entire amount of ETH used as collateral. This disincentive structure allows for network security with proof-of-stake while eliminating the need to expend energy on arbitrary computations. Detailed explanations of the network security under PoS can be found [here](https://vitalik.ca/general/2017/12/31/pos_faq.html).
 
 ## The merge {#the-merge}
 
@@ -42,7 +42,7 @@ Let's compare these numbers to a service such as Visa. 100,000 Visa transactions
 - 25,000 transactions per second.
 - `100,000 / 25,000 = 4` seconds to process 100,000 transactions.
 
-We can also estimate Ethereum's energy expenditure per second, making a conservative estimate that 10,000 active validators are securing the network (there are over [250,000 validators on the Beacon Chain](https://beaconscan.com/) at the moment, but many validators can operate on a single node. Currently, there are 3000-4000 individual nodes, so 10,000 is a conservative estimate for post-merge):
+We can also estimate Ethereum's energy expenditure per second, making a conservative estimate that 10,000 active validators are securing the network (there are over [250,000 validators on the Beacon Chain](https://beaconscan.com/) at the moment, but many validators can operate on a single node. Currently, there are estimated to be 3000-4000 individual nodes, so 10,000 is a conservative estimate for post-merge):
 
 `1.44kWh daily usage * 10,000 network nodes = 14,400kWh` per day.
 There are 86,400 seconds in a day, so `14,400 / 86,400 = 0.1667 kWh` per second.
