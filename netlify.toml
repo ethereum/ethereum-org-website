@@ -21,6 +21,7 @@
 
 [build.environment]
   NODE_VERSION = "14.18.1"
+  NODE_OPTIONS = "--max_old_space_size=8192"
 
 # Production context: all deploys from the Production branch set in your site's
 # deploy contexts will inherit these settings.
