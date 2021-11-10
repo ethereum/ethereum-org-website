@@ -10,6 +10,8 @@ sidebarDepth: 2
 
 This is a list of key Ethereum-related projects and resources which have been deprecated or are no longer maintained. It is important to highlight deprecated work so that users can find viable alternatives and to prevent malicious versions from being distributed.
 
+This list is curated by our community. If there's something missing or incorrect, please edit this page!
+
 ## Software {#software}
 
 This section is for software for the desktop, command line, or server which has been deprecated. The main types are wallets, integrated development environments, languages, and Ethereum clients. Definitely be careful to not install deprecated software unless you are certain it is from the original source, e.g. a repo hosted under https://github.com/ethereum.
@@ -343,8 +345,3 @@ EthereumJS Gitter was the main public coordination comms channel for the [Ethere
 **Alternatives**
 
 Please use the [EthereumJS Discord Server](https://discord.gg/TNwARpR)
-
-
-
-
-
