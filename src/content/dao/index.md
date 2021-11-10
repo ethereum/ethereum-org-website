@@ -16,7 +16,7 @@ summaryPoints:
   ]
 ---
 
-## What are DAOs? {#what-are-daos}
+## What is DAOs? {#what-are-daos}
 
 DAOs are an effective and safe way to work with like-minded folks around the globe.
 
