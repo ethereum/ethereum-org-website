@@ -9,6 +9,8 @@ import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import PageHero from "../components/PageHero"
+import MeetupList from "../components/MeetupList"
+
 import {
   CardContainer,
   Content,
@@ -486,6 +488,7 @@ const CommunityPage = ({ data }) => {
         </RowReverse>
       </SupportContainer>
       <Divider />
+      <MeetupList />
     </Page>
   )
 }

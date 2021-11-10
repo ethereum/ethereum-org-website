@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import Emoji from "./Emoji"
 
@@ -310,23 +310,42 @@ const LeftContainer = styled.div`
   flex: 1 1 75%;
   margin-right: 1rem;
 `
+
+const filterMeetups = (query) => {
+  if (!query) return meetups
+
+  return meetups.filter((meetup) => {
+    return meetup.title.includes(query)
+  })
+}
+
 // TODO create generalized CardList / TableCard
 // TODO prop if ordered list or unordered
-const MeetupList = () => (
-  <Table>
-    {meetups.map((meetup, idx) => (
-      <Item key={idx} to={meetup.link}>
-        <LeftContainer>
-          <ItemNumber>{idx + 1}</ItemNumber>
-          <ItemTitle>{meetup.title}</ItemTitle>
-        </LeftContainer>
-        <RightContainer>
-          <Emoji text={meetup.emoji} size={1} mr={`0.5em`} />
-          <ItemDesc>{meetup.location}</ItemDesc>
-        </RightContainer>
-      </Item>
-    ))}
-  </Table>
-)
+const MeetupList = () => {
+  const [searchField, setSearchField] = useState("")
+  const filteredMeetups = filterMeetups(searchField)
+
+  const handleSearch = (event) => setSearchField(event.target.value)
+
+  return (
+    <div>
+      <input onChange={handleSearch} />
+      <Table>
+        {filteredMeetups.map((meetup, idx) => (
+          <Item key={idx} to={meetup.link}>
+            <LeftContainer>
+              <ItemNumber>{idx + 1}</ItemNumber>
+              <ItemTitle>{meetup.title}</ItemTitle>
+            </LeftContainer>
+            <RightContainer>
+              <Emoji text={meetup.emoji} size={1} mr={`0.5em`} />
+              <ItemDesc>{meetup.location}</ItemDesc>
+            </RightContainer>
+          </Item>
+        ))}
+      </Table>
+    </div>
+  )
+}
 
 export default MeetupList
