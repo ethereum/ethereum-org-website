@@ -42,6 +42,119 @@ const getMessages = (path, language) => {
   }
 }
 
+// TODO: Team chat next week on how to go about checking if a markdown file is outdated
+/**
+ * Markdown isOutdated check
+ * Checks last modified times for translated file and english base file.
+ * If the last translated file modified time is newer than than the english base file
+ * then return false. If translated file modified is older than base file, return true.
+ * If there is not english file, return true
+ * @param {string} path filepath for translated mdx file
+ * @returns boolean for if file is outdated or not
+ */
+const checkIsMdxOutdated = (path) => {
+  try {
+    const splitPath = path.split("/")
+    splitPath.splice(7, 2)
+    const englishPath = splitPath.join("/")
+
+    const re = /([#]+) [^\{]+\{#([^\}]+)\}/gim
+
+    const translatedData = fs.readFileSync(path, "utf-8")
+    const englishData = fs.readFileSync(englishPath, "utf-8")
+
+    const translatedMatch = translatedData.match(re)
+    const translatedParsed = []
+    const englishMatch = englishData.match(re)
+    const englishParsed = []
+
+    for (let i = 0; i < translatedMatch.length; i++) {
+      const temp = re.exec(translatedMatch[i])
+      if (temp) {
+        translatedParsed.push([temp[1], temp[2]])
+      }
+    }
+
+    for (let i = 0; i < englishMatch.length; i++) {
+      const temp = re.exec(englishMatch[i])
+      if (temp) {
+        englishParsed.push([temp[1], temp[2]])
+      }
+    }
+
+    // TODO: change this return statement based on outcomes we discuss as a team
+    return true
+  } catch (err) {
+    return true
+  }
+}
+
+/**
+ * JSON isOutdated check
+ * Checks if translated JSON file exists.
+ * If translated file exists, checks that all translations are present (checks keys), and that all the keys are the same
+ * @param {*} path url path used to derive file path from
+ * @param {*} lang language abbreviation for language path
+ * @returns {{isOutdated: boolean, isContentEnglish: boolean}}
+ */
+const checkIsPageOutdated = async (path, lang) => {
+  try {
+    // Files that need index appended on the end. Ex page-index.json, page-developers-index.json, page-eth2-index.json
+    const indexFilePaths = ["", "developers", "eth2"]
+    const filePath = path.split("/").filter((text) => text !== "")
+
+    if (
+      indexFilePaths.includes(filePath[filePath.length - 1]) ||
+      filePath.length === 0
+    ) {
+      filePath.push("index")
+    }
+
+    const joinedFilepath = filePath.join("-")
+    const srcPath = `${__dirname}/src/intl/${lang}/page-${joinedFilepath}.json`
+    const englishPath = `${__dirname}/src/intl/en/page-${joinedFilepath}.json`
+
+    // If no file exists, default to english
+    if (!fs.existsSync(srcPath)) {
+      return {
+        isOutdated: true,
+        isContentEnglish: true,
+      }
+    } else {
+      const translatedData = JSON.parse(fs.readFileSync(srcPath))
+      const englishData = JSON.parse(fs.readFileSync(englishPath))
+      const translatedKeys = Object.keys(translatedData)
+      const englishKeys = Object.keys(englishData)
+
+      // Check if same amount of keys
+      if (translatedKeys.length !== englishKeys.length) {
+        return {
+          isOutdated: true,
+          isContentEnglish: false,
+        }
+      }
+
+      // Check if all the keys are the same
+      if (
+        JSON.stringify(translatedKeys.sort()) !==
+        JSON.stringify(englishKeys.sort())
+      ) {
+        return {
+          isOutdated: true,
+          isContentEnglish: false,
+        }
+      }
+
+      return {
+        isOutdated: false,
+        isContentEnglish: false,
+      }
+    }
+  } catch {
+    return true
+  }
+}
+
 const outdatedMarkdownPages = [
   "/dapps/",
   "/enterprise/",
@@ -51,7 +164,10 @@ const outdatedMarkdownPages = [
   "/what-is-ethereum/",
 ]
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
+// Loops through all the files dictated by Gatsby (building pages folder), as well as
+// folders flagged through the gatsby-source-filesystem plugin in gatsby-config
+// This seems to be where the source and transform holdup is?
+exports.onCreateNode = async ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 
   // Edit markdown nodes
@@ -63,10 +179,8 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       slug = slug.replace("/translations", "")
       const split = slug.split("/")
       split.splice(1, 1)
-      const originalPath = split.join("/")
-      if (outdatedMarkdownPages.includes(originalPath)) {
-        isOutdated = true
-      }
+
+      isOutdated = await checkIsMdxOutdated(node.fileAbsolutePath)
     } else {
       slug = `/${defaultLanguage}${slug}`
     }
@@ -123,7 +237,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
   }
 
-  result.data.allMdx.edges.forEach(({ node }) => {
+  // For all markdown nodes, create a page
+  result.data.allMdx.edges.filter(({ node }) => {
     const slug = node.fields.slug
 
     // Set template of markdown files
@@ -272,20 +387,22 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 }
 
+// Only ran when creating component pages
 // Add additional context to translated pages
 // https://www.gatsbyjs.com/docs/creating-and-modifying-pages/#pass-context-to-pages
-exports.onCreatePage = ({ page, actions }) => {
+exports.onCreatePage = async ({ page, actions }) => {
   const { createPage, deletePage } = actions
 
   const isTranslated = page.context.language !== defaultLanguage
   const hasNoContext = page.context.isOutdated === undefined
   const langVersion = getLangContentVersion(page.context.language)
 
+  // Can we add this context in onCreateNode? Have to look into Gatsby to figure out lifecycle of this
   if (isTranslated && hasNoContext) {
-    let isOutdated = false
-    if (page.component.includes("src/pages/index.js")) {
-      isOutdated = true
-    }
+    const { isOutdated, isContentEnglish } = await checkIsPageOutdated(
+      page.context.intl.originalPath,
+      page.context.language
+    )
     deletePage(page)
     createPage({
       ...page,
@@ -293,8 +410,9 @@ exports.onCreatePage = ({ page, actions }) => {
         ...page.context,
         isOutdated,
         //display TranslationBanner for translation-component pages that are still in English
-        isContentEnglish:
-          langVersion < 2 && !page.component.includes("/index.js"),
+        isContentEnglish,
+        // // We can check if isContentEnglish through our crawling
+        // langVersion < 2 && !page.component.includes("/index.js"),
       },
     })
   }
