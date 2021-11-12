@@ -169,7 +169,7 @@ Create a sample project
 Quit
 ```
 
-This will generate a `hardhat.config.js` file for us, which is where we’ll specify all of the set up for our project (on step 13).
+This will generate a `hardhat.config.js` file for us, which is where we’ll specify all of the setup for our project (on step 13).
 
 ### Step 9: Add project folders {#step-9-add-project-folders}
 
