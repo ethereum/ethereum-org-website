@@ -50,7 +50,7 @@ Navigate to the “Create App” page in your Alchemy Dashboard by hovering over
 
 Name your app “Hello World”, offer a short description, select “Staging” for the Environment (used for your app bookkeeping), and choose “Ropsten” for your network.
 
-![](./create-app-view-hello-world.png)
+![create app view hello world](./create-app-view-hello-world.png)
 
 Double check that you're selecting the Roptsen testnet!
 
