@@ -21,7 +21,6 @@ published: 2021-10-25
 
 If you are new to blockchain development and don’t know where to start, or just want to understand how to deploy and interact with smart contracts, this guide is for you. We will walk through creating and deploying a simple, smart contract on the Ropsten test network using a virtual wallet ([Metamask](https://metamask.io)), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org) and [Truffle](https://www.trufflesuite.com), and [Alchemy](https://alchemyapi.io/eth) (don’t worry if you don’t understand what any of this means yet, we will explain it!).
 
-You can find [Part 2: Interacting with the Smart Contract ](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract)once it’s deployed, and [Part 3: Submitting Your Smart Contract to Etherscan](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/submitting-your-smart-contract-to-etherscan) on the sidebar to your left!
 
 If you're more into video learning, click on the thumbnail below for a step-by-step walkthrough! 👇
 
