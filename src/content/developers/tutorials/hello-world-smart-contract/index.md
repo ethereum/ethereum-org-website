@@ -17,7 +17,6 @@ sidebar: true
 published: 2021-10-25
 ---
 
-# 🌎 Hello World Smart Contract
 
 _Estimated time to complete this guide: \~15 minutes_
 
