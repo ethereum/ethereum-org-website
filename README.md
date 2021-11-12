@@ -1227,6 +1227,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://connerjensen.com"><img src="https://avatars.githubusercontent.com/u/29151695?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Conner Jensen</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=connerj70" title="Documentation">📖</a></td>
     <td align="center"><a href="https://jhaymesdev.web.app/"><img src="https://avatars.githubusercontent.com/u/69610160?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jhaymes</b></sub></a><br /><a href="#ideas-jhaymesdev" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://self.agency"><img src="https://avatars.githubusercontent.com/u/2541728?v=4?s=100" width="100px;" alt=""/><br /><sub><b>daniel sieradski</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=selfagency" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
