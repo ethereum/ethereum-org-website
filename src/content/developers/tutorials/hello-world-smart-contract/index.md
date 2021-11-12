@@ -38,7 +38,7 @@ There are two versions of this tutorial: one using **Hardhat** and one using **T
 
 ### Step 1: Connect to the Ethereum network {#step-1-connect-to-the-ethereum-network}
 
-There are many ways to make requests to the Ethereum chain. For simplicity, we’ll use a free account on Alchemy, a blockchain developer platform and API that allows us to communicate with the Ethereum chain without having to run our own nodes. The platform also has developer tools for monitoring and analytics that we’ll take advantage of in this tutorial to understand what’s going on under the hood in our smart contract deployment. If you don’t already have an Alchemy account, [you can sign up for free here](https://alchemyapi.io/eth).
+There are many ways to make requests to the Ethereum chain. For simplicity, we’ll use a free account on Alchemy, a blockchain developer platform and API that allows us to communicate with the Ethereum chain without running a node ourselves. The platform also has developer tools for monitoring and analytics that we’ll take advantage of in this tutorial to understand what’s going on under the hood in our smart contract deployment. If you don’t already have an Alchemy account, [you can sign up for free here](https://www.alchemy.com/).
 
 ### Step 2: Create your app and API key {#step-2-create-your-app-and-api-key}
 
