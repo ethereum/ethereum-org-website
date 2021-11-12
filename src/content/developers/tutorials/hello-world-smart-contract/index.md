@@ -28,7 +28,7 @@ If you're more into video learning, click on the thumbnail below for a step-by-s
 
 And if you haven't already, you'll definitely need an Alchemy account to complete this tutorial. [Sign up for a free account](https://www.alchemy.com/).
 
-And if you have questions at any point feel free to reach out in the [Alchemy Discord](https://discord.gg/gWuC7zB)!
+If you have questions at any point, feel free to reach out in the [Alchemy Discord](https://discord.gg/gWuC7zB)!
 
 ### Hardhat vs Truffle
 
