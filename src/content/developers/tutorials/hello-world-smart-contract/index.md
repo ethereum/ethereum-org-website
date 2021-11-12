@@ -32,7 +32,7 @@ If you have questions at any point, feel free to reach out in the [Alchemy Disco
 
 ### Hardhat vs Truffle
 
-There are two versions of this tutorial: one using **Hardhat** and one using **Truffle**. They are both development environments for building on Ethereum and have similar functionality so it's totally up to you to decide which you want to use. Hardhat is the newer kid on the block and tends to be a bit cleaner/easier to use, they also have lots of plugins to make it more customizable.
+There are two versions of this tutorial: one using **Hardhat** and one using **Truffle**. They are both development environments for building on Ethereum and have similar functionality, so it's totally up to you to decide which you want to use. Hardhat is the newer kid on the block and tends to be a bit cleaner to use, and they also have lots of plugins to make it more customizable.
 
 ## Create and Deploy your Smart Contract using Hardhat
 
