@@ -26,7 +26,7 @@ If you're more into video learning, click on the thumbnail below for a step-by-s
 
 [![](https://img.youtube.com/vi/g73EGNKatDw/maxresdefault.jpg)](https://www.youtube.com/watch?v=g73EGNKatDw)
 
-And if you haven't already, you'll definitely need an Alchemy account to complete this tutorial as well as build anything on the blockchain. Sign up for a free account [here](https://alchemy.com/?a=eth-org-executing)!
+And if you haven't already, you'll definitely need an Alchemy account to complete this tutorial. [Sign up for a free account](https://www.alchemy.com/).
 
 And if you have questions at any point feel free to reach out in the [Alchemy Discord](https://discord.gg/gWuC7zB)!
 
