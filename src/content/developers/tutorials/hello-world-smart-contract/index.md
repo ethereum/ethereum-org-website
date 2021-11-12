@@ -96,9 +96,6 @@ cd hello-world
 
 Now that we’re inside our project folder, we’ll use `npm init` to initialize the project. If you don’t already have npm installed, follow [these instructions](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (we’ll also need Node.js so download that too!).
 
-```bash
-npm init # (or npm init --yes)
-```
 
 It doesn’t really matter how you answer the installation questions, here is how we did it for reference:
 
