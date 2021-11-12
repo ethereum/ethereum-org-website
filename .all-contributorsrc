@@ -5392,6 +5392,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "selfagency",
+      "name": "daniel sieradski",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2541728?v=4",
+      "profile": "https://self.agency",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
