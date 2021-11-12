@@ -5401,6 +5401,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "bgillcode",
+      "name": "bgillcode",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35796630?v=4",
+      "profile": "https://github.com/bgillcode",
+      "contributions": [
+        "doc",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
