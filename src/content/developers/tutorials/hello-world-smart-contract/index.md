@@ -34,37 +34,7 @@ If you have questions at any point, feel free to reach out in the [Alchemy Disco
 
 There are two versions of this tutorial: one using **Hardhat** and one using **Truffle**. They are both development environments for building on Ethereum and have similar functionality, so it's totally up to you to decide which you want to use. Hardhat is the newer kid on the block and tends to be a bit cleaner to use, and they also have lots of plugins to make it more customizable.
 
-## Create and Deploy your Smart Contract using Hardhat
-
-**🛠 Step 1:** [Connect to the Ethereum network](./#step-1-connect-to-the-ethereum-network)
-
-**🧑‍🎨 Step 2:**  [Create your app and API key](./#step-2-create-your-app-and-api-key)
-
-**🤝 Step 3:** [Create an Ethereum account](./#step-3-create-an-ethereum-account)
-
-**💻 Step 4:** [Add ether from a Faucet](./#step-4-add-ether-from-a-faucet)
-
-**📖 Step 5:** [Check your Balance](./#step-5-check-your-balance)
-
-**🔺 Step 6:** [Initialize our project](./#step-6-initialize-our-project)
-
-**⏫ Step 7:** [Download Hardhat](./#step-7-download-hardhat)
-
-**🪄 Step 8:** [Create Hardhat project](./#step-8-create-hardhat-project)
-
-**✍️ Step 9:** [Add project folders](./#step-9-add-project-folders)
-
-**📞 Step 10:** [Write our contract](./#step-10-write-our-contract)
-
-**🤖 Step 11:** [Connect Metamask & Alchemy to your project](#step-11-connect-metamask-&-alchemy-to-your-project)
-
-**🚀 Step 12:** [Install Ethers.js](#step-12-install-ethers.js)
-
-**⬆️ Step 13:** [Update hardhat.config.js](#step-13-update-hardhat.config.js)
-
-**📜 Step 14:** [Compile our contract](#step-14-compile-our-contract)
-
-**🖊️ Step 15:** [Write our deploy script](#step-15-write-our-deploy-script)
+## Create and Deploy your Smart Contract using Hardhat {#hardhat}
 
 ### Step 1: Connect to the Ethereum network {#step-1-connect-to-the-ethereum-network}
 
