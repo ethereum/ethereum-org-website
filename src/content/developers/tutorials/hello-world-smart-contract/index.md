@@ -86,7 +86,7 @@ Phew! Our fake money is all there🤑 .
 
 ### Step 6: Initialize our project {#step-6-initialize-our-project}
 
-First, we’ll need to create a folder for our project. Navigate to your [command line](https://www.computerhope.com/jargon/c/commandi.htm) and type:
+First, we’ll need to create a folder for our project. Navigate to your command line and type:
 
 ```
 mkdir hello-world
