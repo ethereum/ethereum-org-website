@@ -74,9 +74,10 @@ To double check our balance is there, let’s make an [eth\_getBalance](https://
 
 After you input your Metamask account address and click “Send Request”, you should see a response that looks like this:
 
-```
+```json
+
 {"jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000"}
-```
+
 
 > **NOTE:** This result is in wei not ETH. Wei is used as the smallest denomination of ether. The conversion from wei to ETH is: 1 eth = 10<sup>18</sup> wei. So if we convert 0x2B5E3AF16B1880000 to decimal we get 5\*10¹⁸ which equals 5 ETH.
 >
