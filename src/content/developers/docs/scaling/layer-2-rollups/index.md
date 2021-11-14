@@ -134,6 +134,8 @@ Hybrid solutions exist that combine the best parts of multiple layer 2 technolog
 - [An Incomplete Guide to Rollups](https://vitalik.ca/general/2021/01/05/rollup.html)
 - [Optimistic Rollups vs ZK Rollups](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
 - [Zero-Knowledge Blockchain Scalability](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
+- [Why rollups + data shards are the only sustainable solution for high scalability](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
+- [Ethereum-powered ZK-Rollups: World Beaters](https://hackmd.io/@canti/rkUT0BD8K)
 
 **ZK-rollups**
 
@@ -151,6 +153,7 @@ Hybrid solutions exist that combine the best parts of multiple layer 2 technolog
 **Hybrid solutions**
 
 - [Adding Hybrid PoS-Rollup Sidechain to Celer’s Coherent Layer-2 Platform on Ethereum](https://medium.com/celer-network/adding-hybrid-pos-rollup-sidechain-to-celers-coherent-layer-2-platform-d1d3067fe593)
+- [Volitions: best of all worlds](https://polynya.medium.com/volitions-best-of-all-worlds-cfd313aec9a8)
 
 **Videos**
 
