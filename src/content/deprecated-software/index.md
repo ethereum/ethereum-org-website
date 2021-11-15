@@ -146,6 +146,26 @@ Mix was of the earliest Ethereum-related applications. See this [presentation by
 
 [Remix](https://remix.ethereum.org/) is a browser-hosted IDE for Solidity / smart contract development, testing, and deployment. It also has a desktop option.
 
+### Aleth {#aleth}
+
+Deprecated on October 6, 2021
+
+**Summary**
+
+Aleth was an Ethereum client written in C++.
+
+**Archives**
+
+[Archived GitHub repo](https://github.com/ethereum/aleth)
+
+**History**
+
+Aleth was the third most popular client for Ethereum before being deprecated on October 6, 2021.
+
+**Alternatives**
+
+[Geth](https://geth.ethereum.org/) is a well-known altenative Ethereum client.
+
 ### Parity {#parity}
 
 <p align="center">
