@@ -1233,6 +1233,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://plutum.org"><img src="https://avatars.githubusercontent.com/u/61752416?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Cameron Fink</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=cameronfink" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/0xvenom"><img src="https://avatars.githubusercontent.com/u/94072825?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Venom</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=0xvenom" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/JulienMaurice"><img src="https://avatars.githubusercontent.com/u/68739585?v=4?s=100" width="100px;" alt=""/><br /><sub><b>JulienM</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=JulienMaurice" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/Synesso"><img src="https://avatars.githubusercontent.com/u/21859?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jem Mawson</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Synesso" title="Documentation">📖</a></td>
   </tr>
 </table>
 

@@ -5438,6 +5438,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "Synesso",
+      "name": "Jem Mawson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/21859?v=4",
+      "profile": "https://github.com/Synesso",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
