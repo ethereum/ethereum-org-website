@@ -42,12 +42,10 @@ const getMessages = (path, language) => {
   }
 }
 
-// TODO: Team chat next week on how to go about checking if a markdown file is outdated
 /**
  * Markdown isOutdated check
- * Checks last modified times for translated file and english base file.
- * If the last translated file modified time is newer than than the english base file
- * then return false. If translated file modified is older than base file, return true.
+ * Parse headers in markdown file (both translated and english) and compare their info structure.
+ * If this structure is not the same, then the file isOutdated.
  * If there is not english file, return true
  * @param {string} path filepath for translated mdx file
  * @returns boolean for if file is outdated or not
@@ -63,27 +61,16 @@ const checkIsMdxOutdated = (path) => {
     const translatedData = fs.readFileSync(path, "utf-8")
     const englishData = fs.readFileSync(englishPath, "utf-8")
 
-    const translatedMatch = translatedData.match(re)
-    const translatedParsed = []
-    const englishMatch = englishData.match(re)
-    const englishParsed = []
+    let englishMatch = ""
+    let intlMatch = ""
+    englishData.match(re).forEach((match) => {
+      englishMatch += match.replace(re, (_, p1, p2) => p1 + p2)
+    })
+    translatedData.match(re).forEach((match) => {
+      intlMatch += match.replace(re, (_, p1, p2) => p1 + p2)
+    })
 
-    for (let i = 0; i < translatedMatch.length; i++) {
-      const temp = re.exec(translatedMatch[i])
-      if (temp) {
-        translatedParsed.push([temp[1], temp[2]])
-      }
-    }
-
-    for (let i = 0; i < englishMatch.length; i++) {
-      const temp = re.exec(englishMatch[i])
-      if (temp) {
-        englishParsed.push([temp[1], temp[2]])
-      }
-    }
-
-    // TODO: change this return statement based on outcomes we discuss as a team
-    return true
+    return englishMatch !== intlMatch
   } catch (err) {
     return true
   }
@@ -92,7 +79,8 @@ const checkIsMdxOutdated = (path) => {
 /**
  * JSON isOutdated check
  * Checks if translated JSON file exists.
- * If translated file exists, checks that all translations are present (checks keys), and that all the keys are the same
+ * If translated file exists, checks that all translations are present (checks keys), and that all the keys are the same.
+ * If translation file exists, isContentEnglish will be false
  * @param {*} path url path used to derive file path from
  * @param {*} lang language abbreviation for language path
  * @returns {{isOutdated: boolean, isContentEnglish: boolean}}
