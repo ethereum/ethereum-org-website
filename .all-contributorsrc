@@ -5457,6 +5457,15 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "polluterofminds",
+      "name": "Justin Hunter",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10519834?v=4",
+      "profile": "https://polluterofminds.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
