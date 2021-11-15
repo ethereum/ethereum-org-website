@@ -1234,6 +1234,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/0xvenom"><img src="https://avatars.githubusercontent.com/u/94072825?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Venom</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=0xvenom" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/JulienMaurice"><img src="https://avatars.githubusercontent.com/u/68739585?v=4?s=100" width="100px;" alt=""/><br /><sub><b>JulienM</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=JulienMaurice" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Synesso"><img src="https://avatars.githubusercontent.com/u/21859?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jem Mawson</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Synesso" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://www.mislavjuric.com/"><img src="https://avatars.githubusercontent.com/u/14131045?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mislav</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=MislavJuric" title="Code">💻</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=MislavJuric" title="Documentation">📖</a></td>
   </tr>
 </table>
 
