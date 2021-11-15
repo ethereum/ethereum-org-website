@@ -5447,6 +5447,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "MislavJuric",
+      "name": "Mislav",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14131045?v=4",
+      "profile": "http://www.mislavjuric.com/",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
