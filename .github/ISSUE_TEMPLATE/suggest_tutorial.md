@@ -6,7 +6,7 @@ labels: "feature :sparkles:, content :fountain_pen:"
 assignees: ""
 ---
 
-We'll consider [our article policy](https://ethereum.org/en/contributing/adding-articles/) when reviewing the tutorial, so please take a look there first.
+We'll consider [our content resources policy](https://ethereum.org/en/contributing/content-resources/) when reviewing the tutorial, so please take a look there first.
 
 **Tutorial title**
 
