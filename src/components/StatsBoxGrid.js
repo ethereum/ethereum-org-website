@@ -138,7 +138,7 @@ const ButtonToggle = styled(Button)`
   ${({ active, theme }) =>
     active &&
     `
-    background-color: ${theme.colors.gridPurple};
+    background-color: ${theme.colors.homeBoxPurple};
     opacity: 1;
   `}
 `
