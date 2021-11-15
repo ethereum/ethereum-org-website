@@ -1232,6 +1232,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/bgillcode"><img src="https://avatars.githubusercontent.com/u/35796630?v=4?s=100" width="100px;" alt=""/><br /><sub><b>bgillcode</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=bgillcode" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=bgillcode" title="Code">💻</a></td>
     <td align="center"><a href="http://plutum.org"><img src="https://avatars.githubusercontent.com/u/61752416?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Cameron Fink</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=cameronfink" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/0xvenom"><img src="https://avatars.githubusercontent.com/u/94072825?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Venom</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=0xvenom" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/JulienMaurice"><img src="https://avatars.githubusercontent.com/u/68739585?v=4?s=100" width="100px;" alt=""/><br /><sub><b>JulienM</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=JulienMaurice" title="Code">💻</a></td>
   </tr>
 </table>
 
