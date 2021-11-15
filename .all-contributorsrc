@@ -5411,6 +5411,15 @@
         "doc",
         "code"
       ]
+    },
+    {
+      "login": "cameronfink",
+      "name": "Cameron Fink",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61752416?v=4",
+      "profile": "http://plutum.org",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
