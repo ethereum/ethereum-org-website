@@ -5466,6 +5466,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "entonbiba",
+      "name": "Enton Biba",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5193884?v=4",
+      "profile": "http://www.entonbiba.com/",
+      "contributions": [
+        "a11y"
+      ]
     }
   ],
   "contributorsPerLine": 7,
