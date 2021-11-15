@@ -5420,6 +5420,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "0xvenom",
+      "name": "Venom",
+      "avatar_url": "https://avatars.githubusercontent.com/u/94072825?v=4",
+      "profile": "https://github.com/0xvenom",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
