@@ -1230,6 +1230,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://self.agency"><img src="https://avatars.githubusercontent.com/u/2541728?v=4?s=100" width="100px;" alt=""/><br /><sub><b>daniel sieradski</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=selfagency" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/bgillcode"><img src="https://avatars.githubusercontent.com/u/35796630?v=4?s=100" width="100px;" alt=""/><br /><sub><b>bgillcode</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=bgillcode" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=bgillcode" title="Code">💻</a></td>
+    <td align="center"><a href="http://plutum.org"><img src="https://avatars.githubusercontent.com/u/61752416?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Cameron Fink</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=cameronfink" title="Documentation">📖</a></td>
   </tr>
 </table>
 
