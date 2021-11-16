@@ -1,19 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import ButtonLink from "../components/ButtonLink"
-import MarkdownTable from "../components/MarkdownTable"
 import Link from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
-import Translation from "../components/Translation"
-import { isLangRightToLeft } from "../utils/translations"
 import Emoji from "../components/Emoji"
 import {
-  Divider,
   Paragraph,
   Header1,
   Header4,
@@ -173,18 +168,6 @@ const Pre = styled.pre`
   white-space: pre-wrap;
 `
 
-const H1 = styled.h1`
-  font-size: 48px;
-  font-weight: 700;
-  text-align: right;
-  margin-top: 0rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    text-align: left;
-    font-size: 40px;
-    display: none;
-  }
-`
-
 const H2 = styled.h2`
   font-size: 32px;
   font-weight: 700;
@@ -311,15 +294,12 @@ const StyledLink = styled(Link)`
 `
 
 const JobPage = ({ data: { mdx } }) => {
-  const intl = useIntl()
-  const isRightToLeft = isLangRightToLeft(intl.locale)
-
   return (
     <Container>
       <HeroContainer>
         <Image fluid={mdx.frontmatter.image.childImageSharp.fluid} />
       </HeroContainer>
-      <Page dir={isRightToLeft ? "rtl" : "ltr"}>
+      <Page dir="ltr">
         <PageMetadata
           title={mdx.frontmatter.title}
           description={mdx.frontmatter.description}
