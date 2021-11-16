@@ -28,7 +28,7 @@ NFT stands for non-fungible token. Non-fungible is an economic term that you cou
 
 Fungible items, on the other hand, can be exchanged because their value defines them rather than their unique properties. For example, ETH or dollars are fungible because 1 ETH / $1 USD is exchangeable for another 1 ETH / $1 USD.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/Xdkkux6OxfM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe title="YouTube video titled What Are NFTs and How Can They Be Used in Decentralized Finance? DEFI Explained" width="100%" height="315" src="https://www.youtube.com/embed/Xdkkux6OxfM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## The internet of assets {#internet-of-assets}
 
@@ -348,7 +348,7 @@ _It’s also important to remember that Ethereum does more than just financial t
 
 #### Timelines {#timelines}
 
-The process has already started. [The Beacon Chain](/eth2/beacon-chain/), the first upgrade, shipped in December 2020. This provides the foundation for staking by allowing stakers to join the system. The next step relevant to energy efficiency is to merge the current chain, the one secured by miners, into the Beacon Chain where mining isn't needed. Timelines can't be exact at this stage, but it's estimated that this will happen sometime in 2021/2022. This process is known as the merge (formerly referred to as the docking). [More on the merge](/eth2/merge/).
+The process has already started. [The Beacon Chain](/eth2/beacon-chain/), the first upgrade, shipped in December 2020. This provides the foundation for staking by allowing stakers to join the system. The next step relevant to energy efficiency is to merge the current chain, the one secured by miners, into the Beacon Chain where mining isn't needed. Timelines can't be exact at this stage, but it's estimated that this will happen sometime in 2022. This process is known as the merge (formerly referred to as the docking). [More on the merge](/eth2/merge/).
 
 <ButtonLink to="/eth2/">More on Eth2</ButtonLink>
 
@@ -418,7 +418,7 @@ The 99.95% reduction in energy consumption from a system secured by mining to a 
 
 - 44.49 TWh of annualized electrical energy is consumed by mining Ethereum - [Digiconomist](https://digiconomist.net/ethereum-energy-consumption)
 
-- The average desktop computer, all that's needed to run Proof of Stake, uses 0.06kWh of energy per hour – [Silicon Valley power chart](https://www.siliconvalleypower.com/residents/save-energy/appliance-energy-use-chart) (Some estimates are a little higher at 0.15kWh)
+- The average desktop computer, all that's needed to run proof-of-stake, uses 0.06kWh of energy per hour – [Silicon Valley power chart](https://www.siliconvalleypower.com/residents/save-energy/appliance-energy-use-chart) (Some estimates are a little higher at 0.15kWh)
 
 At the time of writing, there are 140 592 validators from 16 405 unique addresses.
 Of those, 87 897 validators are assumed to be staking from home.

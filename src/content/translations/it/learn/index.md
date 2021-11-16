@@ -58,13 +58,13 @@ Uno "Smart Contract" è semplicemente codice che viene eseguito in Ethereum. Si 
 - [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _Nov 12, 2018 - Andreas M. Antonopoulos, Gavin Wood_
 - [What are Smart Contracts/Decentralized Applications?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) _Aggiornato di frequente - Ethhub_
 
-## Proof of Work e mining {#proof-of-work-and-mining}
+## Proof-of-work e mining {#proof-of-work-and-mining}
 
-Ethereum attualmente usa un sistema chiamato "Proof of Work" che consente alla rete Ethereum di concordare lo stato di tutte le informazioni registrate sulla blockchain Ethereum e di evitare determinati tipi di attacchi economici.
+Ethereum attualmente usa un sistema chiamato "proof-of-work" che consente alla rete Ethereum di concordare lo stato di tutte le informazioni registrate sulla blockchain Ethereum e di evitare determinati tipi di attacchi economici.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Aggiornato frequentemente - Ethhub_
 
-In ETH 2.0, Ethereum userà un sistema diverso, chiamato “Proof of Stake”. [Scopri di più su ETH 2.0 qui sotto](#eth-2-0).
+In ETH 2.0, Ethereum userà un sistema diverso, chiamato “proof-of-stake”. [Scopri di più su ETH 2.0 qui sotto](#eth-2-0).
 
 ## Client e nodi {#clients-and-nodes}
 

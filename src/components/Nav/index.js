@@ -321,6 +321,12 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       setIsMenuOpen(false)
       setIsSearchOpen(false)
     }
+
+    if (isMenuOpen || isSearchOpen) {
+      document.documentElement.style.overflowY = "scroll"
+    } else {
+      document.documentElement.style.overflowY = "hidden"
+    }
   }
 
   const shouldShowSubNav = path.includes("/developers/")

@@ -82,7 +82,7 @@ A major criticism of proof-of-work is the amount of energy output required to ke
 | Proof-of-work is a tried and tested consensus mechanism that has kept Bitcoin and Ethereum secure and decentralized for many years.                                                                                          | If you want to mine, you need such specialized equipment that it's a big investment to start.                                                |
 | Compared to proof-of-stake it's relatively easy to implement.                                                                                                                                                                | Due to increasing computation needed, mining pools could potentially dominate the mining game, leading to centralization and security risks. |
 
-## Compared to proof of stake {#compared-to-pos}
+## Compared to proof-of-stake {#compared-to-pos}
 
 At a high level, proof-of-stake has the same end goal as proof-of-work: to help the decentralized network reach consensus securely. But it has some differences in process and personnel:
 
@@ -109,4 +109,4 @@ At a high level, proof-of-stake has the same end goal as proof-of-work: to help 
 ## Related Topics {#related-topics}
 
 - [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
-- [Proof of stake](/developers/docs/consensus-mechanisms/pos/)
+- [Proof-of-stake](/developers/docs/consensus-mechanisms/pos/)

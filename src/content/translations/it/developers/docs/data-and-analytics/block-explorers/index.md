@@ -50,7 +50,7 @@ A Ethereum vengono aggiunti nuovi blocchi ogni ~12 secondi (il dato può fluttua
 - Hash padre: hash del blocco precedente a quello attuale.
 - Sha3Uncles: hash combinato di tutti i blocchi zio per un determinato blocco padre.
 - StateRoot: hash root dell'albero di Merkel che conserva l'intero stato del sistema.
-- Nonce: valore usato per dimostrare la Proof of Work per un blocco da parte del miner.
+- Nonce: valore usato per dimostrare la proof-of-work per un blocco da parte del miner.
 
 **Blocchi zio**
 
@@ -138,7 +138,7 @@ I token sono un tipo di contratto, quindi hanno dati simili a quelli di uno Smar
 
 ### Rete {#network}
 
-Naturalmente ci sono alcuni dati che indicano la salute della rete. Sono abbastanza specifici del meccanismo di consenso Proof of Work di Ethereum. Quando Ethereum passerà a Eth2 alcuni di questi dati saranno ridondanti
+Naturalmente ci sono alcuni dati che indicano la salute della rete. Sono abbastanza specifici del meccanismo di consenso proof-of-work di Ethereum. Quando Ethereum passerà a Eth2 alcuni di questi dati saranno ridondanti
 
 - Difficoltà: l'attuale difficoltà di mining.
 - Tasso di hash: stima di quanti hash sono stati generati dai miner di Ethereum tentando di risolvere il blocco corrente o un blocco specifico.

@@ -32,7 +32,7 @@ sidebarDepth: 2
 
 在 [Solidity 语言里](#solidity)，`assert(false)` 会被编译成 `0xfe`，这是一个无效的操作码，它会消耗完剩下的 [gas](#gas) 并复原所有的变更。 当一个 `assert()` 语句失效，表明出现了非常严重和没有预期的问题，你将需要修复你的代码。 你应该使用 `assert()` 以避免永远不应该发生的情况。
 
-<DocLink to="/developers/docs/security/" title="安全性" />
+<DocLink to="/developers/docs/smart-contracts/security/" title="安全性" />
 
 ### attestation 证明 {#attestation}
 
@@ -352,7 +352,7 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 也称为密钥延伸算法，通过[密钥库](#keystore-file)文件格式来防止暴力破解，防止攻击者预先计算派生密钥的字典或 “彩虹表”，通过重复计算密令的哈希来实现。
 
-<DocLink to="/developers/docs/security/" title="安全性" />
+<DocLink to="/developers/docs/smart-contracts/security/" title="安全性" />
 
 ### keccak-256 {#keccak-256}
 
@@ -504,7 +504,7 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 攻击者合约调用受害者合约函数，使得在调用执行过程中受害者合约会循环调用攻击者合约。 这可能导致通过跳过受害者合约的余额更新或提款金额计算的部分来盗窃资金。
 
-<DocLink to="/developers/docs/security/#re-entrancy" title="重入攻击" />
+<DocLink to="/developers/docs/smart-contracts/security/#re-entrancy" title="重入攻击" />
 
 ### reward 区块奖励 {#reward}
 

@@ -46,7 +46,6 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 <UpcomingEventsList/>
 
 _Have an event to add to this list? [Add it](https://github.com/ethereum/ethereum-org-website#how-can-i-contribute)!_
-- <a href="https://unblock.africa/">Metamask Weekend</a> - A meetup by Unblock Africa for beginner and intermediate blockchain enthusiasts to learn how to interact with the Ethereum blockchain, utilize the decentralized applications on it and learn how to deploy smart contracts. (10/29/2021 - 10/30/2021)
 
 ## Ethereum meetup groups {#ethereum-meetup-groups}
 
@@ -89,6 +88,7 @@ The Ethereum community includes people of many different backgrounds and skillse
 - Watch or participate in the [Core Dev calls](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
 - [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - tooling, documentation, and infrastructure areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
 - [Web3Bridge](https://www.web3bridge.com/) - join the aspiring web3 community in their initiative to identify, train, and support hundreds of developers and community members throughout Africa
+- [useWeb3](https://www.useweb3.xyz/) - a curated overview of the latest resources on Ethereum, Solidity and Web3 development.
 
 **Researchers & Academics**
 
@@ -139,3 +139,4 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
 - [Careers at ConsenSys](https://consensys.net/careers/)
 - [Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)
 - [Bankless jobs board](https://pallet.xyz/list/bankless/jobs)
+- [useWeb3 Jobs](https://www.useweb3.xyz/jobs)

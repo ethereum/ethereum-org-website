@@ -105,7 +105,7 @@ Totuși, folosirea bibliotecilor de contracte inteligente prezintă riscul inclu
 
 ## Tutoriale corelate {#related-tutorials}
 
-- [Considerații de securitate pentru programatorii Ethereum](/developers/docs/security/) _– Un tutorial privind considerațiile de securitate atunci când construiești contracte inteligente, inclusiv utilizarea de biblioteci._
+- [Considerații de securitate pentru programatorii Ethereum](/developers/docs/smart-contracts/security/) _– Un tutorial privind considerațiile de securitate atunci când construiești contracte inteligente, inclusiv utilizarea de biblioteci._
 - [Înțelege contractul inteligent token ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _-Tutorial privind standardul ERC20, oferit de mai multe biblioteci._
 
 ## Referințe suplimentare {#further-reading}

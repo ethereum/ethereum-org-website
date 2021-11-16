@@ -105,7 +105,7 @@ Enfin, au moment où vous décidez s'inclure une bibliothèque, considérez son 
 
 ## Tutoriels connexes {#related-tutorials}
 
-- [Considérations de sécurité pour les développeurs Ethereum](/developers/docs/security/) _- Tutoriel sur les considérations de sécurité lors de la construction de contrats intelligents, y compris l'utilisation de la bibliothèque_
+- [Considérations de sécurité pour les développeurs Ethereum](/developers/docs/smart-contracts/security/) _- Tutoriel sur les considérations de sécurité lors de la construction de contrats intelligents, y compris l'utilisation de la bibliothèque_
 - [Comprendre le contrat intelligent de jeton ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _- Tutoriel sur la norme ERC20, fournie par de multiples bibliothèques_
 
 ## Complément d'information {#further-reading}

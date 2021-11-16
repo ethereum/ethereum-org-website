@@ -90,4 +90,4 @@ Aby zapobiegać innym aktom złego zachowania, łańcuch śledzący będzie koor
 
 ## Tematy powiązane {#related-topics}
 
-- [Proof of work](/developers/docs/consensus-mechanisms/pow/)
+- [Proof-of-work](/developers/docs/consensus-mechanisms/pow/)
