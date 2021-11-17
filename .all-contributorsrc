@@ -5475,6 +5475,15 @@
       "contributions": [
         "a11y"
       ]
+    },
+    {
+      "login": "byoriolserra",
+      "name": "Oriol Serra",
+      "avatar_url": "https://avatars.githubusercontent.com/u/87442357?v=4",
+      "profile": "https://github.com/byoriolserra",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
