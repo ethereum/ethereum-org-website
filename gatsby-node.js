@@ -51,110 +51,111 @@ const getMessages = (path, language) => {
  * @returns boolean for if file is outdated or not
  */
 const checkIsMdxOutdated = (path) => {
+  const splitPath = path.split("/")
+  splitPath.splice(7, 2)
+  const englishPath = splitPath.join("/")
+
+  const re = /([#]+) [^\{]+\{#([^\}]+)\}/gim
+  let translatedData, englishData
+
   try {
-    const splitPath = path.split("/")
-    splitPath.splice(7, 2)
-    const englishPath = splitPath.join("/")
+    translatedData = fs.readFileSync(path, "utf-8")
+    englishData = fs.readFileSync(englishPath, "utf-8")
+  } catch {
+    console.error("fs.readFileSync error")
+    return true
+  }
 
-    const re = /([#]+) [^\{]+\{#([^\}]+)\}/gim
-
-    const translatedData = fs.readFileSync(path, "utf-8")
-    const englishData = fs.readFileSync(englishPath, "utf-8")
-
-    let englishMatch = ""
-    let intlMatch = ""
+  let englishMatch = ""
+  let intlMatch = ""
+  try {
     englishData.match(re).forEach((match) => {
       englishMatch += match.replace(re, (_, p1, p2) => p1 + p2)
     })
     translatedData.match(re).forEach((match) => {
       intlMatch += match.replace(re, (_, p1, p2) => p1 + p2)
     })
-
-    return englishMatch !== intlMatch
-  } catch (err) {
+  } catch {
+    console.error("regex error")
     return true
   }
+
+  return englishMatch !== intlMatch
 }
 
 /**
  * JSON isOutdated check
- * Checks if translated JSON file exists.
- * If translated file exists, checks that all translations are present (checks keys), and that all the keys are the same.
+ * Checks if translation JSON file exists.
+ * If translation file exists, checks that all translations are present (checks keys), and that all the keys are the same.
  * If translation file exists, isContentEnglish will be false
  * @param {*} path url path used to derive file path from
  * @param {*} lang language abbreviation for language path
  * @returns {{isOutdated: boolean, isContentEnglish: boolean}}
  */
 const checkIsPageOutdated = async (path, lang) => {
-  try {
-    // Files that need index appended on the end. Ex page-index.json, page-developers-index.json, page-eth2-index.json
-    const indexFilePaths = ["", "developers", "eth2"]
-    const filePath = path.split("/").filter((text) => text !== "")
+  // Files that need index appended on the end. Ex page-index.json, page-developers-index.json, page-eth2-index.json
+  const indexFilePaths = ["", "developers", "eth2"]
+  const filePath = path.split("/").filter((text) => text !== "")
 
-    if (
-      indexFilePaths.includes(filePath[filePath.length - 1]) ||
-      filePath.length === 0
-    ) {
-      filePath.push("index")
+  if (
+    indexFilePaths.includes(filePath[filePath.length - 1]) ||
+    filePath.length === 0
+  ) {
+    filePath.push("index")
+  }
+
+  const joinedFilepath = filePath.join("-")
+  const srcPath = `${__dirname}/src/intl/${lang}/page-${joinedFilepath}.json`
+  const englishPath = `${__dirname}/src/intl/en/page-${joinedFilepath}.json`
+
+  // If no file exists, default to english
+  if (!fs.existsSync(srcPath)) {
+    return {
+      isOutdated: true,
+      isContentEnglish: true,
     }
-
-    const joinedFilepath = filePath.join("-")
-    const srcPath = `${__dirname}/src/intl/${lang}/page-${joinedFilepath}.json`
-    const englishPath = `${__dirname}/src/intl/en/page-${joinedFilepath}.json`
-
-    // If no file exists, default to english
-    if (!fs.existsSync(srcPath)) {
+  } else {
+    let translatedData, englishData, translatedKeys, englishKeys
+    try {
+      translatedData = JSON.parse(fs.readFileSync(srcPath))
+      englishData = JSON.parse(fs.readFileSync(englishPath))
+      translatedKeys = Object.keys(translatedData)
+      englishKeys = Object.keys(englishData)
+    } catch (err) {
+      console.error("fs.readFileSync error")
       return {
         isOutdated: true,
         isContentEnglish: true,
       }
-    } else {
-      const translatedData = JSON.parse(fs.readFileSync(srcPath))
-      const englishData = JSON.parse(fs.readFileSync(englishPath))
-      const translatedKeys = Object.keys(translatedData)
-      const englishKeys = Object.keys(englishData)
-
-      // Check if same amount of keys
-      if (translatedKeys.length !== englishKeys.length) {
-        return {
-          isOutdated: true,
-          isContentEnglish: false,
-        }
-      }
-
-      // Check if all the keys are the same
-      if (
-        JSON.stringify(translatedKeys.sort()) !==
-        JSON.stringify(englishKeys.sort())
-      ) {
-        return {
-          isOutdated: true,
-          isContentEnglish: false,
-        }
-      }
-
+    }
+    // Check if same amount of keys
+    if (translatedKeys.length !== englishKeys.length) {
       return {
-        isOutdated: false,
+        isOutdated: true,
         isContentEnglish: false,
       }
     }
-  } catch {
-    return true
+
+    // Check if all the keys are the same
+    if (
+      JSON.stringify(translatedKeys.sort()) !==
+      JSON.stringify(englishKeys.sort())
+    ) {
+      return {
+        isOutdated: true,
+        isContentEnglish: false,
+      }
+    }
+
+    return {
+      isOutdated: false,
+      isContentEnglish: false,
+    }
   }
 }
 
-const outdatedMarkdownPages = [
-  "/dapps/",
-  "/enterprise/",
-  "/eth/",
-  "/learn/",
-  "/wallets/",
-  "/what-is-ethereum/",
-]
-
 // Loops through all the files dictated by Gatsby (building pages folder), as well as
 // folders flagged through the gatsby-source-filesystem plugin in gatsby-config
-// This seems to be where the source and transform holdup is?
 exports.onCreateNode = async ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 
@@ -385,7 +386,6 @@ exports.onCreatePage = async ({ page, actions }) => {
   const hasNoContext = page.context.isOutdated === undefined
   const langVersion = getLangContentVersion(page.context.language)
 
-  // Can we add this context in onCreateNode? Have to look into Gatsby to figure out lifecycle of this
   if (isTranslated && hasNoContext) {
     const { isOutdated, isContentEnglish } = await checkIsPageOutdated(
       page.context.intl.originalPath,
