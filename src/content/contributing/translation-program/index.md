@@ -22,6 +22,12 @@ If you want to get involved and help us grow the global Ethereum community by tr
   <a href="https://ethereum.org/en/contributing/#poap">More on POAPs</a>
 </InfoBanner>
 
+<br/>
+
+<InfoBanner shouldCenter emoji=":tada:">
+  <a href="https://ethereum.org/en/contributing/translation-program/acknowledgements/">Translator Acknowledgements!</a>
+</InfoBanner>
+
 ## Mission and vision {#mission-and-vision}
 
 The Ethereum community aims to be global and inclusive, yet much of its content only caters to English speakers, leaving out the world's 6 billion non-English speakers. For ethereum.org to act as the portal into Ethereum for the worldwide community, we believe providing non-English speakers with Ethereum content in their native languages is essential.

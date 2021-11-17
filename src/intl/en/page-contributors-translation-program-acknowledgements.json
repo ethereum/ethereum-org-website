@@ -1,0 +1,18 @@
+{
+  "page-contributors-translation-program-acknowledgements-acknowledgement-page-title": "Acknowledgement Page",
+  "page-contributors-translation-program-acknowledgements-acknowledgement-page-1": "Ethereum.org translators are volunteers, making an effort to contribute to the website by helping to translate it into as many languages as possible.",
+  "page-contributors-translation-program-acknowledgements-acknowledgement-page-2": "This page is dedicated to the initiatives, aimed at acknowledging our translators and their efforts, highlighting our most outstanding contributors, and supporting them on their professional journeys.",
+  "page-contributors-translation-program-acknowledgements-acknowledgement-page-3": "All of the translators active in our project in Crowdin are featured on our translators page, divided by language.",
+  "page-contributors-translation-program-acknowledgements-acknowledgement-page-4": "The most active translators in a given period (yearly vs. all-time) will also earn their place on the Translation Leaderboard.",
+  "page-contributors-translation-program-acknowledgements-acknowledgement-page-5": "Professional or upcoming translators, as well as translation students and linguists looking to add a new field of expertise, can request a Translator Certificate to certify their contributions to the website.",
+  "page-contributors-translation-program-acknowledgements-meta-description": "Acknowledgement of all the great work our translators do",
+  "page-contributors-translation-program-acknowledgements-meta-title": "Translators Acknowledgement",
+  "page-contributors-translation-program-acknowledgements-our-translators-cta": "Check out our full list of translators, dedicating their time and skills to help us make Ethereum content available to everyone.",
+  "page-contributors-translation-program-acknowledgements-our-translators-title": "Our Translators",
+  "page-contributors-translation-program-acknowledgements-our-translators-1": "Community is at the heart of the ethereum.org Translation Program.",
+  "page-contributors-translation-program-acknowledgements-our-translators-2": "Having thousands of community members contributing to our project by getting involved in the translation effort, it is difficult to acknowledge everyone.",
+  "page-contributors-translation-program-acknowledgements-our-translators-3": "All of our translators are listed here, alphanumerically, based on their chosen name in Crowdin.",
+  "page-contributors-translation-program-acknowledgements-our-translators-4": "If you are a translator and would like to use your real name, nickname, ENS domain, etc., you can change your Full Name on Crowdin.",
+  "page-contributors-translation-program-acknowledgements-translation-leaderboard-title": "Translation Leaderboard",
+  "page-contributors-translation-program-acknowledgements-translation-leaderboard-1": "Help us translate ethereum.org and earn a place on the Translation Leaderboard! The Translation Program is a collaborative effort and thousands of contributors have gotten involved by volunteering their time to help us make the website accessible in as many languages as possible. Our top translators are highlighted on the all-time and yearly leaderboard."
+}
