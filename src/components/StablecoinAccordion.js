@@ -422,7 +422,7 @@ const StablecoinAccordion = () => {
         intl
       ),
       image: data.maker.childImageSharp.fixed,
-      link: "https://community-development.makerdao.com/en/contribute/",
+      link: "https://makerdao.world/en/resources/",
       description: translateMessageId(
         "page-stablecoins-accordion-earn-project-2-description",
         intl
