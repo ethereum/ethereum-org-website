@@ -5494,6 +5494,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "tbenson89",
+      "name": "A. Tyler Benson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25698188?v=4",
+      "profile": "http://slmodd.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
