@@ -1240,6 +1240,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://polluterofminds.com"><img src="https://avatars.githubusercontent.com/u/10519834?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Justin Hunter</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=polluterofminds" title="Documentation">📖</a></td>
     <td align="center"><a href="http://www.entonbiba.com/"><img src="https://avatars.githubusercontent.com/u/5193884?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Enton Biba</b></sub></a><br /><a href="#a11y-entonbiba" title="Accessibility">️️️️♿️</a></td>
     <td align="center"><a href="https://github.com/byoriolserra"><img src="https://avatars.githubusercontent.com/u/87442357?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Oriol Serra</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Abyoriolserra" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/nlarche"><img src="https://avatars.githubusercontent.com/u/3041222?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nicolas LARCHE</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Anlarche" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
