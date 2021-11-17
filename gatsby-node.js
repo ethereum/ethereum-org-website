@@ -44,7 +44,7 @@ const getMessages = (path, language) => {
 
 /**
  * Markdown isOutdated check
- * Parse headers in markdown file (both translated and english) and compare their info structure.
+ * Parse header ids in markdown file (both translated and english) and compare their info structure.
  * If this structure is not the same, then the file isOutdated.
  * If there is not english file, return true
  * @param {string} path filepath for translated mdx file
