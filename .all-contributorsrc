@@ -5503,6 +5503,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "zhous",
+      "name": "Derek周朝晖",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1388904?v=4",
+      "profile": "http://www.NaturalDAO.io",
+      "contributions": [
+        "doc",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
