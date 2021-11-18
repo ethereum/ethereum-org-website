@@ -219,6 +219,7 @@ module.exports = {
     },
     // Needed for `gatsby-image`
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-gatsby-cloud`,
   ],
   // https://www.gatsbyjs.com/docs/reference/release-notes/v2.28/#feature-flags-in-gatsby-configjs
   flags: {
