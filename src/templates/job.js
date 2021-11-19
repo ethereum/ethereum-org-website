@@ -12,6 +12,7 @@ import {
   Paragraph,
   Header1,
   Header4,
+  ListItem,
 } from "../components/SharedStyledComponents"
 
 const Page = styled.div`
@@ -232,6 +233,7 @@ const components = {
   h3: H3,
   h4: Header4,
   p: Paragraph,
+  li: ListItem,
   pre: Pre,
   ButtonLink,
   Emoji,
