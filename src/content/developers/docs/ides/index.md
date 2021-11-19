@@ -49,9 +49,17 @@ Most established IDEs have built plugins to enhance the Ethereum development exp
 - [Download](https://github.com/ethereum/remix-desktop/releases)
 - [GitHub](https://github.com/ethereum/remix-desktop)
 
+**Truffle Development Suite -** **_Gets developers from idea to dapp as comfortably as possible_**
+
+- [Truffle website](https://trufflesuite.com)
+- [Truffle](https://trufflesuite.com/truffle)
+- [Ganache](https://trufflesuite.com/ganache)
+- [Drizzle](https://trufflesuite.com/drizzle)
+- [Github](https://github.com/trufflesuite)
+
 ## Plugins and extensions {#plugins-extensions}
 
-- [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Ethereum Solidity Language for Visual Studio Code
+- [Solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Ethereum Solidity Language for Visual Studio Code
 - [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - Code formatter using prettier
 
 ## Further reading {#further-reading}
