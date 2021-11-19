@@ -158,12 +158,12 @@ const LearningToolsPage = ({ data }) => {
       subjects: ["Solidity", "web3"],
     },
     {
-      name: "Lambda School",
-      description: "page-learning-tools-lambdaschool-description",
-      url: "https://lambdaschool.com/learn-blockchain-development",
-      image: data.lambdaschool.childImageSharp.fixed,
-      alt: "page-learning-tools-lambdaschool-logo-alt",
-      background: "#111F29",
+      name: "BloomTech",
+      description: "page-learning-tools-bloomtech-description",
+      url: "https://www.bloomtech.com/courses/web3",
+      image: data.bloomtech.childImageSharp.fixed,
+      alt: "page-learning-tools-bloomtech-logo-alt",
+      background: "#FFFFFF",
       subjects: ["Solidity", "web3"],
     },
     {
@@ -330,7 +330,7 @@ export const query = graphql`
     consensys: file(relativePath: { eq: "dev-tools/consensys.png" }) {
       ...learningToolImage
     }
-    lambdaschool: file(relativePath: { eq: "dev-tools/lambdaschool.png" }) {
+    bloomtech: file(relativePath: { eq: "dev-tools/bloomtech.png" }) {
       ...learningToolImage
     }
     buildspace: file(relativePath: { eq: "dev-tools/buildspace.png" }) {
