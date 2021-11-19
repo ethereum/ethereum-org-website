@@ -86,5 +86,13 @@
     "description": "The Ethereum dev conference in Dubai on everything DeFi, NFTs, EVM scaling, Gaming and more with a focus on decentralization and community projects.",
     "startDate": "2022-03-29",
     "endDate": "2022-03-30"
+  },
+  {
+    "title": "ZK Hack",
+    "to": "https://www.zkhack.dev",
+    "sponsor": null,
+    "description": "ZK Hack is a 7-week virtual event featuring weekly workshops and advanced puzzle solving competitions.",
+    "startDate": "2021-10-26",
+    "endDate": "2021-12-07"
   }
 ]
