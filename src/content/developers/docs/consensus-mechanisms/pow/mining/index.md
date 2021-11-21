@@ -64,7 +64,7 @@ Watch Austin walk you through mining and the proof-of-work blockchain.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
 
-## Related tools {#related-tools}
+### Related tools {#related-tools}
 
 - [Top Ethereum miners](https://etherscan.io/stat/miner?range=7&blocktype=blocks)
 - [Etherscan mining calculator](https://etherscan.io/ether-mining-calculator)
