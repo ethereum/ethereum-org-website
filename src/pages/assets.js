@@ -86,7 +86,9 @@ const AssetsPage = ({ data }) => {
   const intl = useIntl()
   const themeContext = useContext(ThemeContext)
   const isDarkTheme = themeContext.isDark
-  const heroImage = isDarkTheme ? data.heroImageDark : data.heroImage
+  const assetPageHeroImage = isDarkTheme
+    ? data.assetPageHeroImageDark
+    : data.assetPageHeroImage
   return (
     <Page>
       <PageMetadata
@@ -97,7 +99,7 @@ const AssetsPage = ({ data }) => {
         <HeroContainer>
           <Header>
             <Image
-              image={getImage(heroImage)}
+              image={getImage(assetPageHeroImage)}
               alt={translateMessageId("page-assets-eth-diamond-gray", intl)}
             />
             <h1>
@@ -554,13 +556,6 @@ const AssetsPage = ({ data }) => {
 
 export default AssetsPage
 
-export const heroImage = graphql`
-  fragment heroImage on File {
-    childImageSharp {
-      gatsbyImageData(layout: FULL_WIDTH)
-    }
-  }
-`
 export const assetItem = graphql`
   fragment assetItem on File {
     childImageSharp {
@@ -571,18 +566,22 @@ export const assetItem = graphql`
 
 export const query = graphql`
   {
-    heroImage: file(relativePath: { eq: "assets/eth-diamond-black.png" }) {
+    assetPageHeroImage: file(
+      relativePath: { eq: "assets/eth-diamond-black.png" }
+    ) {
       childImageSharp {
         gatsbyImageData(width: 80, layout: FIXED)
       }
     }
-    heroImageDark: file(relativePath: { eq: "assets/eth-diamond-purple.png" }) {
+    assetPageHeroImageDark: file(
+      relativePath: { eq: "assets/eth-diamond-purple.png" }
+    ) {
       childImageSharp {
         gatsbyImageData(width: 80, layout: FIXED)
       }
     }
     hero: file(relativePath: { eq: "home/hero.png" }) {
-      ...heroImage
+      ...assetItem
     }
     doge: file(relativePath: { eq: "doge-computer.png" }) {
       ...assetItem
@@ -650,10 +649,10 @@ export const query = graphql`
       ...assetItem
     }
     oldHero: file(relativePath: { eq: "assets/hero.png" }) {
-      ...heroImage
+      ...assetItem
     }
     oldHeroDark: file(relativePath: { eq: "assets/hero-dark.png" }) {
-      ...heroImage
+      ...assetItem
     }
     efLogo: file(relativePath: { eq: "ef-logo.png" }) {
       ...assetItem
