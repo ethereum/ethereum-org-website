@@ -297,22 +297,22 @@ const CommunityPage = ({ data }) => {
   const cards = [
     {
       image: data.docking.childImageSharp.fixed,
-      title: "Read our guide on contributing",
+      title: "Join an online community",
       description:
-        "Find out everything you need to know about contributing to ethereum.org.",
+        "Find your tribe and participate in community with other Ethereum enthusiasts",
       alt: translateMessageId("page-index-get-started-wallet-image-alt", intl),
-      to: "/#",
+      to: "/community/online",
     },
     {
       image: data.eth.childImageSharp.fixed,
-      title: "Work on an open issue on GitHub",
+      title: "Find Ethereum events",
       description: "We've identified impactful work that needs doing.",
       alt: translateMessageId("page-index-get-started-eth-image-alt", intl),
       to: "/#",
     },
     {
       image: data.doge.childImageSharp.fixed,
-      title: "Join the translation program",
+      title: "Contribute to the ecosystem",
       description:
         "Help us bring ethereum.org to new cultures through language.",
       alt: translateMessageId("page-index-get-started-dapps-image-alt", intl),
@@ -320,9 +320,9 @@ const CommunityPage = ({ data }) => {
     },
     {
       image: data.enterpriseFixed.childImageSharp.fixed,
-      title: "Participate in an online community",
+      title: "Get Support",
       description:
-        "Join the hundreds of thousands of Ethereum enthusiasts to discuss Ethereum",
+        "Need help? Connect with experts from the ecosystem to get your questions answered.",
       alt: translateMessageId("page-index-get-started-devs-image-alt", intl),
       to: "/#",
     },
