@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import { MDXProvider } from "@mdx-js/react"
@@ -20,6 +20,12 @@ import Pill from "../components/Pill"
 import TableOfContents from "../components/TableOfContents"
 import SectionNav from "../components/SectionNav"
 import Translation from "../components/Translation"
+import Emoji from "../components/Emoji"
+import DocsNav from "../components/DocsNav"
+import DeveloperDocsLinks from "../components/DeveloperDocsLinks"
+
+import { ZenModeContext } from "../contexts/ZenModeContext.js"
+
 import { isLangRightToLeft } from "../utils/translations"
 import {
   Divider,
@@ -30,9 +36,6 @@ import {
   Header4,
   ListItem,
 } from "../components/SharedStyledComponents"
-import Emoji from "../components/Emoji"
-import DocsNav from "../components/DocsNav"
-import DeveloperDocsLinks from "../components/DeveloperDocsLinks"
 
 const Page = styled.div`
   display: flex;
@@ -43,7 +46,7 @@ const Page = styled.div`
 
 const ContentContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: ${(props) => (props.isZenMode ? "center" : "space-between")};
   width: 100%;
   padding: 0 2rem 0 0;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
@@ -61,6 +64,7 @@ const Content = styled.article`
   flex: 1 1 ${(props) => props.theme.breakpoints.m};
   max-width: ${(props) => props.theme.breakpoints.m};
   padding: 3rem 4rem 4rem;
+  margin: 0px auto;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     max-width: 100%;
   }
@@ -181,6 +185,7 @@ const Contributors = styled(FileContributors)`
 `
 
 const DocsPage = ({ data, pageContext }) => {
+  const { isZenMode } = useContext(ZenModeContext)
   const mdx = data.pageData
   const { locale } = useIntl()
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang)
@@ -189,7 +194,7 @@ const DocsPage = ({ data, pageContext }) => {
   const isPageIncomplete = mdx.frontmatter.incomplete
 
   const { editContentUrl } = data.siteData.siteMetadata
-  const { relativePath } = pageContext
+  const { relativePath, slug } = pageContext
   const absoluteEditPath = `${editContentUrl}${relativePath}`
 
   return (
@@ -202,7 +207,7 @@ const DocsPage = ({ data, pageContext }) => {
         {/* TODO move to common.json */}
         <Translation id="banner-page-incomplete" />
       </BannerNotification>
-      <ContentContainer>
+      <ContentContainer isZenMode={isZenMode}>
         <Content>
           <H1 id="top">{mdx.frontmatter.title}</H1>
           <Contributors
@@ -210,6 +215,7 @@ const DocsPage = ({ data, pageContext }) => {
             editPath={absoluteEditPath}
           />
           <TableOfContents
+            slug={slug}
             editPath={absoluteEditPath}
             items={tocItems}
             isMobile={true}
@@ -229,6 +235,7 @@ const DocsPage = ({ data, pageContext }) => {
         </Content>
         {mdx.frontmatter.sidebar && tocItems && (
           <DesktopTableOfContents
+            slug={slug}
             editPath={absoluteEditPath}
             items={tocItems}
             isPageIncomplete={isPageIncomplete}

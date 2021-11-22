@@ -28,7 +28,7 @@ NFT stands for non-fungible token. Non-fungible is an economic term that you cou
 
 Fungible items, on the other hand, can be exchanged because their value defines them rather than their unique properties. For example, ETH or dollars are fungible because 1 ETH / $1 USD is exchangeable for another 1 ETH / $1 USD.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/Xdkkux6OxfM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe title="YouTube video titled What Are NFTs and How Can They Be Used in Decentralized Finance? DEFI Explained" width="100%" height="315" src="https://www.youtube.com/embed/Xdkkux6OxfM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## The internet of assets {#internet-of-assets}
 
@@ -348,7 +348,7 @@ _It’s also important to remember that Ethereum does more than just financial t
 
 #### Timelines {#timelines}
 
-The process has already started. [The Beacon Chain](/eth2/beacon-chain/), the first upgrade, shipped in December 2020. This provides the foundation for staking by allowing stakers to join the system. The next step relevant to energy efficiency is to merge the current chain, the one secured by miners, into the Beacon Chain where mining isn't needed. Timelines can't be exact at this stage, but it's estimated that this will happen some time in 2021/2022. This process is known as the merge (formerly referred to as the docking). [More on the merge](/eth2/merge/).
+The process has already started. [The Beacon Chain](/eth2/beacon-chain/), the first upgrade, shipped in December 2020. This provides the foundation for staking by allowing stakers to join the system. The next step relevant to energy efficiency is to merge the current chain, the one secured by miners, into the Beacon Chain where mining isn't needed. Timelines can't be exact at this stage, but it's estimated that this will happen sometime in 2022. This process is known as the merge (formerly referred to as the docking). [More on the merge](/eth2/merge/).
 
 <ButtonLink to="/eth2/">More on Eth2</ButtonLink>
 
@@ -368,7 +368,7 @@ Ethereum is open source software and new standards are being figured out and agr
 
 <!-- Ethereum currently used proof-of-work to achieve consensus. It is a top priority of the community to transition to a proof-of-stake system, to increase decentralization, security and scalability, while reducing energy consumption requirements imposed from proof-of-work. Several layer 2 scaling solutions, such as rollups, are being developed and implemented which also aim to improve scalability while decreasing energy usage. EIP-2309 is a proposal also aiming to improve the efficiency of layer 1 NFT transactions.
 
-Before these scaling solutions are fully implemented, it is worth noting that NFT's specifically are not necessarily _directly_ causing any increased carbon emission. The proof-of-work consensus mechanism that currently underlies the entire Ethereum blockchain is being used whether NFTs are being minted or not. If NFTs were to disappear today, there is a strong chance that block space would remain in demand for other reasons, though even if demand for block space decreased it wouldn't drastically impact energy consumption. For sake of example, imagine the demand for transacting on Ethereum falls to where the blocks are now empty. Miners would still be incentivized to produce blocks for the reward, and the hashing power required to do so would persist despite an empty block. More realistically, other transactions would take the place of NFT transactions. So again, there remains a strong and a active push to advance layer 2 solutions, and finalize Ethereum's transition to a proof-of-stake system.
+Before these scaling solutions are fully implemented, it is worth noting that NFT's specifically are not necessarily _directly_ causing any increased carbon emission. The proof-of-work consensus mechanism that currently underlies the entire Ethereum blockchain is being used whether NFTs are being minted or not. If NFTs were to disappear today, there is a strong chance that block space would remain in demand for other reasons, though even if demand for block space decreased it wouldn't drastically impact energy consumption. For sake of example, imagine the demand for transacting on Ethereum falls to where the blocks are now empty. Miners would still be incentivized to produce blocks for the reward, and the hashing power required to do so would persist despite an empty block. More realistically, other transactions would take the place of NFT transactions. So again, there remains a strong and an active push to advance layer 2 solutions, and finalize Ethereum's transition to a proof-of-stake system.
 
 All this being said, let's talk more about proof-of-work. Objectively there is a significant amount of energy that must be consumed in order to achieve the security that Ethereum offers.
 Based on this, many people are quick to subjectively argue that the carbon footprint from proof-of-work blockchains is a "waste of energy."
@@ -408,7 +408,7 @@ Most NFTs are built using a consistent standard known as [ERC-721](/developers/d
 
 ### Footnotes and sources {#footnotes-and-sources}
 
-<!-- TODO: after shipping this can form the basis of an energy efficiency page. I suspect this could also live under learn and just do some general mythbusting and supply stats about eth2 energy usage-->
+<!-- TODO: after shipping this can form the basis of an energy efficiency page. I suspect this could also live under learn and just do some general myth-busting and supply stats about eth2 energy usage-->
 
 This explains how we arrived at our energy estimates above. These estimates apply to the network as a whole and are not just reserved for the process of creating, buying, or selling NFTs.
 
@@ -418,7 +418,7 @@ The 99.95% reduction in energy consumption from a system secured by mining to a 
 
 - 44.49 TWh of annualized electrical energy is consumed by mining Ethereum - [Digiconomist](https://digiconomist.net/ethereum-energy-consumption)
 
-- The average desktop computer, all that's needed to run Proof of Stake, uses 0.06kWh of energy per hour – [Silicon Valley power chart](https://www.siliconvalleypower.com/residents/save-energy/appliance-energy-use-chart) (Some estimates are a little higher at 0.15kWh)
+- The average desktop computer, all that's needed to run proof-of-stake, uses 0.06kWh of energy per hour – [Silicon Valley power chart](https://www.siliconvalleypower.com/residents/save-energy/appliance-energy-use-chart) (Some estimates are a little higher at 0.15kWh)
 
 At the time of writing, there are 140 592 validators from 16 405 unique addresses.
 Of those, 87 897 validators are assumed to be staking from home.
@@ -459,7 +459,7 @@ In 104.2 seconds, the Ethereum network will use the following amount of energy:
 
 There are 86,400 seconds in a day, so `14,400 / 86,400 = 0.1666666667kWh` per second.
 
-If we times that by the amount of time it takes to process 100,000 transaction: `0.1666666667 * 104.2 = 17.3666666701 kWh`.
+If we multiply that by the amount of time it takes to process 100,000 transaction: `0.1666666667 * 104.2 = 17.3666666701 kWh`.
 
 That is **11.6554809866%** of the energy consumed by the same amount of transactions on Visa.
 

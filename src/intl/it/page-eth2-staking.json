@@ -54,7 +54,7 @@
   "page-eth2-staking-upgrades-li-3": "Nel frattempo, gli staker aggiungeranno nuovi blocchi alla beacon chain ma non elaboreranno transazioni sulla rete principale.",
   "page-eth2-staking-upgrades-li-4": "Ethereum completerà la transizione a un sistema di tipo proof of stake una volta che la rete principale diventerà uno shard.",
   "page-eth2-staking-upgrades-li-5": "Solo a questo punto potrai prelevare l'importo utilizzato per lo staking.",
-  "page-eth2-staking-upgrades-title": "Proof of stake e aggiornamenti di Eth2",
+  "page-eth2-staking-upgrades-title": "Proof-of-stake e aggiornamenti di Eth2",
   "page-eth2-staking-validators": "Più validatori, più sicurezza",
   "page-eth2-staking-validators-desc": "In una blockchain come Ethereum è possibile che si verifichino episodi di corruzione nel caso in cui si controlli il 51% della rete. Per esempio, con il 51% dei validatori potresti dichiarare che il tuo saldo corrisponde a 1.000.000 di ETH anziché a di 1 ETH. Però, per controllare il 51% dei validatori, dovresti possedere il 51% degli ETH in circolazione: sono tantissimi!",
   "page-eth2-staking-withdrawals": "I prelievi non saranno disponibili da subito",

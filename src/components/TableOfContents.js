@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import { motion } from "framer-motion"
 import { Link } from "gatsby"
 import styled from "styled-components"
@@ -8,6 +8,8 @@ import Icon from "./Icon"
 import Translation from "./Translation"
 import { useActiveHash } from "../hooks/useActiveHash"
 import { dropdownIconContainerVariant } from "./SharedStyledComponents"
+
+import { ZenModeContext } from "../contexts/ZenModeContext"
 
 const customIdRegEx = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/
 
@@ -145,6 +147,21 @@ const ButtonContent = styled.div`
 const GithubIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.text};
   margin-right: 0.5rem;
+`
+
+const ZenModeContainer = styled.div`
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+`
+
+const ZenModeToggleContainer = styled.span`
+  cursor: pointer;
+  padding-top: 6px;
+`
+
+const ZenModeText = styled.span`
+  margin-right: 0.7rem;
 `
 
 // Mobile styles
@@ -301,9 +318,12 @@ const TableOfContents = ({
   items,
   maxDepth,
   className,
+  slug,
   editPath,
   isMobile = false,
 }) => {
+  const { isZenMode, handleZenModeChange } = useContext(ZenModeContext)
+
   const titleIds = []
 
   if (!isMobile) {
@@ -342,10 +362,22 @@ const TableOfContents = ({
     )
   }
 
+  const shouldShowZenModeToggle = slug?.includes("/docs/")
   const shouldShowEditButtom = !!editPath
+
   return (
     <Aside className={className}>
       <OuterList>
+        {shouldShowZenModeToggle && (
+          <ZenModeContainer>
+            <ZenModeText>
+              <Translation id="zen-mode" />
+            </ZenModeText>
+            <ZenModeToggleContainer onClick={(_e) => handleZenModeChange()}>
+              <Icon name={isZenMode ? "zenModeOn" : "zenModeOff"} size="2rem" />
+            </ZenModeToggleContainer>
+          </ZenModeContainer>
+        )}
         {shouldShowEditButtom && (
           <ButtonContainer>
             <ButtonLink to={editPath} isSecondary={true} mt={0}>

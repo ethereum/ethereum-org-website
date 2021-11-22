@@ -52,7 +52,7 @@ pragma solidity >=0.6.0 <0.8.0;
 ```
 
 The Solidity language is still evolving quickly, and new versions may not be compatible with old code
-([see here](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)). Therefore, it is a goood idea to specify not just a minimum
+([see here](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)). Therefore, it is a good idea to specify not just a minimum
 version of the language, but also a maximum version, the latest with which you tested the code.
 
 &nbsp;

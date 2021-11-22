@@ -125,7 +125,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - 15+ Blockchains Supported
     - 6400+ Nodes earning POKT for serving applications
     - Archival Node, Archival Node w/ Tracing, & Testnet Node Support
-    - Ethereum Mainnet Node Client Diversity 
+    - Ethereum Mainnet Node Client Diversity
     - No Single Point of Failure
     - Zero Downtime
     - Cost-Effective Near-Zero Tokenomics (stake POKT once for network bandwidth)
@@ -134,7 +134,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Infinitely scale the number of requests per day and nodes per hour as you go
     - The most private, censorship-resistant option
     - Hands-on developer support
-    - [Pocket Portal](https://bit.ly/ETHorg_POKTportal) dashboard and analytics 
+    - [Pocket Portal](https://bit.ly/ETHorg_POKTportal) dashboard and analytics
 - [**QuikNode**](https://www.quiknode.io/)
   - Features
     - 7 day free trial

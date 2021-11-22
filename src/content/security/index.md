@@ -25,7 +25,7 @@ Example of a weak password: CuteFluffyKittens!
 Example of a strong password: ymv\*azu.EAC8eyp8umf
 ```
 
-Another common mistake is using passwords that can be easily guessed or found out through [social engineering](<https://en.wikipedia.org/wiki/Social_engineering_(security)>). Including your mother's maiden name, the name's of your children or pets, or dates of birth in your password is not secure and will increase the risk of your password getting hacked.
+Another common mistake is using passwords that can be easily guessed or found out through [social engineering](<https://en.wikipedia.org/wiki/Social_engineering_(security)>). Including your mother's maiden name, the names of your children or pets, or dates of birth in your password is not secure and will increase the risk of your password getting hacked.
 
 #### Good password practices: {#good-password-practices}
 
@@ -91,11 +91,11 @@ Watch more on the 2FA:
 
 <iframe width="100%" height="315px" src="https://www.youtube.com/embed/m8jlnZuV1i4?start=3479&end=3875" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### Uninstall browser extentions {#uninstall-browser-extentions}
+### Uninstall browser extensions {#uninstall-browser-extensions}
 
 Browser extensions like Chrome extensions or Add-ons for Firefox can augment useful browser functionality and improve user experience, but they come with risks. By default, most browser extensions ask for access to 'read and change site data', allowing them to do almost anything with your data. Chrome extensions are always automatically updated, so a previously safe extension may update later to include malicious code. Most browser extensions are not trying to steal your data, but you should be aware that they can.
 
-#### Stay safe by: {#browser-extention-safety}
+#### Stay safe by: {#browser-extension-safety}
 
 - Only install browser extensions from trusted sources
 - Removing unused browser extensions

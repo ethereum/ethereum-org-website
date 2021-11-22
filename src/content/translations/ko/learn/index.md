@@ -58,13 +58,13 @@ sidebarDepth: 1
 - [스마트 컨트랙트란 무엇인가요?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _2018년 11월 12일 - Andreas M. Antonopoulos, Gavin Wood_
 - [스마트 컨트랙트/탈중앙화 애플리케이션이란 무엇인가요?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) _자주 갱신됨 - Ethhub_
 
-## 작업 증명(Proof of Work)과 채굴 {#proof-of-work-and-mining}
+## 작업 증명(proof-of-work)과 채굴 {#proof-of-work-and-mining}
 
-이더리움은 현재 “작업 증명(Proof of Work)”이라는 시스템을 사용하고 있습니다. 이 시스템은 이더리움 블록체인에 기록되는 모든 정보의 상태에 대해 이더리움 네트워크가 합의에 이를 수 있도록 하며, 51% 공격과 같은 네트워크에 대한 특정 유형의 공격을 방지합니다.
+이더리움은 현재 “작업 증명(proof-of-work)”이라는 시스템을 사용하고 있습니다. 이 시스템은 이더리움 블록체인에 기록되는 모든 정보의 상태에 대해 이더리움 네트워크가 합의에 이를 수 있도록 하며, 51% 공격과 같은 네트워크에 대한 특정 유형의 공격을 방지합니다.
 
 - [이더리움을 채굴한다는 것은 어떤 의미인가?](https://docs.ethhub.io/using-ethereum/mining/) _자주 갱신됨 - Ethhub_
 
-이더리움은 ETH 2.0을 통해 지분 증명(Proof of Stake) 시스템으로 전환될 예정입니다. [ETH 2.0에 대해 자세히 알아보기](./#eth-2-0).
+이더리움은 ETH 2.0을 통해 지분 증명(proof-of-stake) 시스템으로 전환될 예정입니다. [ETH 2.0에 대해 자세히 알아보기](/#eth-2-0).
 
 ## 클라이언트와 노드 {#clients-and-nodes}
 
@@ -83,7 +83,7 @@ sidebarDepth: 1
 
 현재 거래 처리량과 속도를 향상해 이더리움의 확장성 문제를 해결하기 위한 많은 노력이 진행 중입니다. 이는 일반적으로 “Layer 1”과 “Layer 2” 솔루션으로 구분됩니다.
 
-“Layer 1”은 이더리움 코어 프로토콜을 개선시키는 것을 의미합니다. 이더리움 코어 프로토콜을 개선하기 위한 주요 프로젝트로는 [ETH 2.0](./#eth-2-0)이 있습니다.
+“Layer 1”은 이더리움 코어 프로토콜을 개선시키는 것을 의미합니다. 이더리움 코어 프로토콜을 개선하기 위한 주요 프로젝트로는 [ETH 2.0](/#eth-2-0)이 있습니다.
 
 “Layer 2”는 이더리움 프로토콜을 “기반”으로 작동되는 기술로, 보안 측면 이슈를 최소화하면서 확장성을 향상시킬 수 있습니다. 또한 사이드체인과 같은 “오프체인” 기술은 보안 측면에서 적절한 타협점을 찾아 확장성을 높일 수 있습니다.
 

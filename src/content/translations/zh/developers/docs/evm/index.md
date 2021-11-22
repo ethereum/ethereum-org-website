@@ -43,7 +43,7 @@ Y(S, T)= S'
 
 ## EVM 说明 {#evm-instructions}
 
-EVM 作为一个[堆栈机](https://en. wikipedia. org/wiki/Stack_machine)运行，其栈的深度为 1024 个项。 每一项都是 256 比特的 word，选择如此是为了与 SHA-3-256 哈希方案最大限度地兼容。
+EVM 作为一个[堆栈机](https://en.wikipedia.org/wiki/Stack_machine)运行，其栈的深度为 1024 个项。 每一项都是 256 比特的 word，选择如此是为了与 SHA-3-256 哈希方案最大限度地兼容。
 
 <!-- ![A diagram showing the make up of the stack](./evm-stack.png)
 _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_

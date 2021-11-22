@@ -14,7 +14,7 @@ published: 2020-06-14
 
 您可能会对运行[以太坊节点](/developers/docs/nodes-and-clients/)感兴趣。 最简单的实现方式就是下载、安装和运行 Geth。 通过 Geth，我们只需数分钟便能设置并运行一个轻节点。
 
-首先，您将需要[安装 Geth](https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum)。
+首先，您将需要[安装 Geth](https://geth.ethereum.org/docs/install-and-build/installing-geth)。
 
 安装 Geth 之后，只需在命令行中键入
 

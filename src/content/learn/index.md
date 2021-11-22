@@ -53,13 +53,13 @@ Aspiring Ethereum developer? Check out our developer portal. It's got documentat
 
 ## Proof-of-work and Mining {#proof-of-work-and-mining}
 
-Ethereum currently uses a system called "Proof of Work". This allows the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain, and prevents certain kinds of economic attacks.
+Ethereum currently uses a system called "proof-of-work". This allows the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain, and prevents certain kinds of economic attacks.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Updated often - Ethhub_
 
 You can learn more about [proof of work](/developers/docs/consensus-mechanisms/pow/) and [mining](/developers/docs/consensus-mechanisms/pow/mining/) within our developer documentation.
 
-In ETH 2.0, Ethereum will be moving to a different system called "Proof of Stake". [Read more about ETH 2.0 below](#eth-2-0).
+In ETH 2.0, Ethereum will be moving to a different system called "proof-of-stake". [Read more about ETH 2.0 below](#eth-2-0).
 
 ## Clients and Nodes {#clients-and-nodes}
 
@@ -132,3 +132,9 @@ Podcasts addressing Ethereum and Cryptocurrencies:
 - [Zero Knowledge](https://www.zeroknowledge.fm/) _Goes deep into the tech that will power the emerging decentralised web and the community building this_
 - [Epicenter](https://epicenter.tv/) _Explores the technical, economic, and social implications of the Crypto industry_
 - [Unchained](https://unchainedpodcast.com/) _dives deep into the people building the decentralized internet, the details of this technology that could underpin our future, and some of the thorniest topics in crypto, such as regulation, security and privacy_
+
+## Archived / No longer maintained:
+
+Resources about Ethereum-related projects and resources which have been deprecated or are no longer maintained.
+
+- [Deprecated Software](/deprecated-software/) _A list of deprecated software, dapps, and documentation_

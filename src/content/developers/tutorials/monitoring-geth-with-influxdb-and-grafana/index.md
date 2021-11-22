@@ -24,7 +24,7 @@ An Ethereum client collects lots of data which can be read in the form of a chro
 - [Prometheus](https://prometheus.io/) (pull model)
 - [InfluxDB](https://www.influxdata.com/get-influxdb/) (push model)
 - [Telegraf](https://www.influxdata.com/get-influxdb/)
-- [Grafana](https:/grafana.com/)
+- [Grafana](https://www.grafana.com/)
 - [Datadog](https://www.datadoghq.com/)
 - [Chronograf](https://www.influxdata.com/time-series-platform/chronograf/)
 

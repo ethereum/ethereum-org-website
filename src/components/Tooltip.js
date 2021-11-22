@@ -23,7 +23,8 @@ const Content = styled.div`
   cursor: default;
   border-radius: 4px;
   bottom: calc(100% + 1rem);
-  left: 50%;
+  left: 25%;
+  bottom: 125%;
   transform: translateX(-50%);
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     width: 140px;
@@ -53,14 +54,26 @@ const ModalReturn = styled.div`
 // TODO add `position` prop
 const Tooltip = ({ content, children }) => {
   const [isVisible, setIsVisible] = useState(false)
+  let isMobile = false
 
-  // TODO add hover effects
-  // onMouseLeave={() => setIsVisible(false)}
-  // onMouseEnter={() => setIsVisible(true)}
+  if (typeof window !== "undefined") {
+    isMobile =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        window.navigator.userAgent
+      )
+  }
+
   return (
     <>
-      {isVisible && <ModalReturn onClick={() => setIsVisible(false)} />}
-      <Container title="More info" onClick={() => setIsVisible(!isVisible)}>
+      {isVisible && isMobile && (
+        <ModalReturn onClick={() => setIsVisible(false)} />
+      )}
+      <Container
+        title="More info"
+        onMouseEnter={!isMobile ? () => setIsVisible(true) : null}
+        onMouseLeave={!isMobile ? () => setIsVisible(false) : null}
+        onClick={isMobile ? () => setIsVisible(!isVisible) : null}
+      >
         {children}
         {isVisible && (
           <Content>

@@ -34,7 +34,7 @@ S'il s'agit de votre première tentative de développement pour Ethereum, nous v
 - [Contrats intelligents](/developers/docs/smart-contracts/) _- Programmes résidant à une adresse Ethereum et exécutant des fonctions quand ils sont déclenchés par des transactions_
 - [Langages de programmation](/developers/docs/programming-languages/) _- Démarrer avec Ethereum en utilisant des langages que vous connaissez peut-être déjà_
 - [Bibliothèques clientes JavaScript](/developers/docs/apis/javascript/) _- Bibliothèques pratiques qui permettent à votre application Web d'interagir avec Ethereum et les contrats intelligents_
-- [Sécurité](/developers/docs/security/)
+- [Sécurité](/developers/docs/smart-contracts/security/)
 - [Stockage](/developers/docs/storage/)
 - [Frameworks de développement](/developers/docs/frameworks/) _- Outils qui facilite le développement avec Ethereum_
 - [Environnements de développement](/developers/docs/ides/) _- Meilleurs environnements pour rédiger le code des DApps_

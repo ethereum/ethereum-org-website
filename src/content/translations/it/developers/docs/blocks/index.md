@@ -25,13 +25,13 @@ Scaglionando gli invii, diamo a tutti i partecipanti della rete abbastanza tempo
 
 Per preservare la cronologia delle transazioni, i blocchi sono ordinati in modo rigoroso (ogni nuovo blocco che viene creato contiene un riferimento al blocco padre) e anche le transazioni all'interno del blocco sono ordinate altrettanto rigorosamente. A parte in rari casi, in ogni momento, tutti i partecipanti della rete concordano sul numero e sulla cronologia esatta dei blocchi e lavorano per raggruppare le richieste di transazione live nel blocco successivo.
 
-Dopo essere stato realizzato (si parla di mining) da alcuni miner della rete, un blocco viene propagato al resto della rete; tutti i nodi vengono aggiunti al blocco alla fine della relativa blockchain e il processo di mining continua. Il processo esatto di costruzione dei blocchi (mining) e il processo di invio/consenso è attualmente specificato nel protocollo di Ethereum "Proof of work".
+Dopo essere stato realizzato (si parla di mining) da alcuni miner della rete, un blocco viene propagato al resto della rete; tutti i nodi vengono aggiunti al blocco alla fine della relativa blockchain e il processo di mining continua. Il processo esatto di costruzione dei blocchi (mining) e il processo di invio/consenso è attualmente specificato nel protocollo di Ethereum "proof-of-work".
 
 ### Demo visiva {#a-visual-demo} <iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
 
-## Protocollo Proof of Work {#proof-of-work-protocol}
+## Protocollo proof-of-work {#proof-of-work-protocol}
 
-Proof of work significa:
+Proof-of-work significa:
 
 - I nodi di mining devono impegnare una quantità variabile ma consistente di energia, tempo e potenza di calcolo per produrre un "certificato di legittimità" per il blocco che propongono alla rete. Questo aiuta a proteggere la rete da spam o attacchi DoS, tra le altre cose \*, perché questi certificati sono costosi da produrre.
 - Gli altri miner a cui viene inviata notifica di un nuovo blocco con un certificato di legittimità valido devono \*accettare il nuovo blocco come blocco successivo canonico della blockchain.

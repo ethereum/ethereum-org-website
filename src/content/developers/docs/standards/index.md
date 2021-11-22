@@ -30,7 +30,8 @@ Certain EIPs relate to application-level standards (e.g. a standard smart-contra
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - A standard interface for fungible (interchangeable) tokens, like voting tokens, staking tokens or virtual currencies.
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - A standard interface for non-fungible tokens, like a deed for artwork or a song.
-- [ERC-777](/developers/docs/standards/tokens/erc-777/) - A token standard improving over ERC-20
+- [ERC-777](/developers/docs/standards/tokens/erc-777/) - A token standard improving over ERC-20.
+- [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - A token standard which can contain both fungible and non-fungible assets.
 
 Learn more about [token standards](/developers/docs/standards/tokens/).
 

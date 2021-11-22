@@ -9,7 +9,7 @@ sidebar: true
 
 As utilization of the network continues to grow, an increasing amount of valuable information will exist in the on-chain data. As the volume of data rapidly increases, calculating and aggregating this information to report upon or drive a dApp can become a time and process heavy endeavor.
 
-Leveraging existing data providers can expedite development, produce more accurate results, and reduce on going maintenance efforts. This will enable a team to concentrate on the core functionality their project is trying to provide.
+Leveraging existing data providers can expedite development, produce more accurate results, and reduce ongoing maintenance efforts. This will enable a team to concentrate on the core functionality their project is trying to provide.
 
 ## Prerequisites {#prerequisites}
 
