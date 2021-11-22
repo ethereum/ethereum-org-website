@@ -11,7 +11,7 @@ published: 2020-06-14
 
 You may be interested in running an [Ethereum node](/developers/docs/nodes-and-clients/). One of the easiest ways to do so is by downloading, installing, and running Geth. With Geth, we can have a light node up and running in minutes.
 
-First, you’ll want to [install Geth](https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum).
+First, you’ll want to [install Geth](https://geth.ethereum.org/docs/install-and-build/installing-geth).
 
 Once you’ve installed Geth, running an Ethereum full node is as simple as typing
 

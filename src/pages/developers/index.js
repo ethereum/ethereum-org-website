@@ -466,11 +466,11 @@ const DevelopersPage = ({ data }) => {
               <Translation id="page-developers-block-explorers-desc" />
             </p>
 
-            <Link to="/developers/docs/security/">
-              <Translation id="page-developers-security-link" />
+            <Link to="/developers/docs/smart-contracts/security/">
+              <Translation id="page-developers-smart-contract-security-link" />
             </Link>
             <p>
-              <Translation id="page-developers-security-desc" />
+              <Translation id="page-developers-smart-contract-security-desc" />
             </p>
 
             <Link to="/developers/docs/storage/">

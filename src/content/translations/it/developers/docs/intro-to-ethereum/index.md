@@ -15,7 +15,7 @@ Una blockchain si può descrivere come un database pubblico che viene aggiornato
 
 Ogni nuovo blocco, e la catena in generale, devono essere approvati da ogni nodo nella rete. In questo modo, ognuno ha gli stessi dati. Per fare questo, la blockchain ha bisogno di un meccanismo di consenso.
 
-Ethereum attualmente utilizza un meccanismo di consenso basato sulla Proof of Work. Questo significa che chiunque voglia aggiungere nuovi blocchi alla catena deve risolvere un enigma difficile, che richiede molta potenza di calcolo. Risolvere l'enigma offre la prova (in inglese "proof") che sono state impiegate risorse di calcolo. Questa attività è detta [mining](/en/developers/docs/consensus-mechanisms/pow/mining/). Il mining può comportare tentativi ed errori, ma l'aggiunta di un blocco comporta una ricompensa in Eth. D'altra parte, inviare blocchi fraudolenti non è un'opzione interessante, considerate le risorse che devono essere impiegate per produrre il blocco.
+Ethereum attualmente utilizza un meccanismo di consenso basato sulla proof-of-work. Questo significa che chiunque voglia aggiungere nuovi blocchi alla catena deve risolvere un enigma difficile, che richiede molta potenza di calcolo. Risolvere l'enigma offre la prova (in inglese "proof") che sono state impiegate risorse di calcolo. Questa attività è detta [mining](/en/developers/docs/consensus-mechanisms/pow/mining/). Il mining può comportare tentativi ed errori, ma l'aggiunta di un blocco comporta una ricompensa in Eth. D'altra parte, inviare blocchi fraudolenti non è un'opzione interessante, considerate le risorse che devono essere impiegate per produrre il blocco.
 
 I nuovi blocchi vengono trasmessi ai nodi della rete, controllati e verificati, aggiornando lo stato di tutti.
 

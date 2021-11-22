@@ -315,16 +315,16 @@ At such an early stage in DeFi, there are both opportunities and risks. Make sur
 - **Combination opportunities** – the system is open, new products are coming to market all the time that combine existing services to unlock new opportunities.
 - **Greater efficiency** – smart contracts remove the need for custodians and escrows reducing transaction time and cost without compromising security.
 - **More transparency** – everything is public, this makes auditing and understanding risks a lot easier. If something does go wrong, investigations are far simpler.
-- **More accessible** – DeFi allows you to use these markets without giving away your identity. These protocols are open to everyone an can't discriminate based on personal details.
+- **More accessible** – DeFi allows you to use these markets without giving away your identity. These protocols are open to everyone and can't discriminate based on personal details.
 
 ### Risks
 
 - **Smart contracts**
   - they are the backbone of DeFi so if there a smart contract bug it poses a big risk to the protocol's users.
   - At this early stage, you are at a disadvantage if you can't read the code and verify its safety yourself. Instead you must trust the protocol and any third party security audits.
-  - one smart contract bug can have a devastating effect within the ecosystem if other products rely on that smart contract. This is one of the downsides of Ethereum's combination oppportunities.
+  - one smart contract bug can have a devastating effect within the ecosystem if other products rely on that smart contract. This is one of the downsides of Ethereum's combination opportunities.
 - **Admin keys**
-  - oten teams will set up their smart contracts with admin keys. These keys allow them to upgrade the contract and shut it down in an emergency. If a malicious actor got these keys they could potentially drain funds from the contract.
+  - often teams will set up their smart contracts with admin keys. These keys allow them to upgrade the contract and shut it down in an emergency. If a malicious actor got these keys they could potentially drain funds from the contract.
 - **External data**
   - a lot of DeFi relies on external data sources, provided by oracles. If an oracle's data is compromised...
 - **Scalability**
@@ -376,6 +376,7 @@ todo -->
 
 - [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
+- [DeFi Llama](https://defillama.com/)
 
 ### DeFi articles {#defi-articles}
 
@@ -390,4 +391,5 @@ todo -->
 
 ### Communities {#communities}
 
+- [DeFi Llama Discord server](https://discord.gg/buPFYXzDDd)
 - [DeFi Pulse Discord server](https://discord.gg/Gx4TCTk)

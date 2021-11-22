@@ -29,7 +29,7 @@ Transactions require a fee and must be mined to become valid. To make this overv
 A submitted transaction includes the following information:
 
 - `recipient` – the receiving address (if an externally-owned account, the transaction will transfer value. If a contract account, the transaction will execute the contract code)
-- `signature` – the identifier of the sender. This is generated when the sender's private key signs the transaction and confirms the sender has authorised this transaction
+- `signature` – the identifier of the sender. This is generated when the sender's private key signs the transaction and confirms the sender has authorized this transaction
 - `value` – amount of ETH to transfer from sender to recipient (in WEI, a denomination of ETH)
 - `data` – optional field to include arbitrary data
 - `gasLimit` – the maximum amount of gas units that can be consumed by the transaction. Units of gas represent computational steps
@@ -45,10 +45,10 @@ The transaction object will look a little like this:
   from: "0xEA674fdDe714fd979de3EdF0F56AA9716B898ec8",
   to: "0xac03bb73b6a9e108530aff4df5077c2b3d481e5a",
   gasLimit: "21000",
-  maxFeePerGas: "300"
-  maxPriorityFeePerGas: "10"
+  maxFeePerGas: "300",
+  maxPriorityFeePerGas: "10",
   nonce: "0",
-  value: "10000000000",
+  value: "10000000000"
 }
 ```
 
@@ -308,15 +308,15 @@ Watch Austin walk you through transactions, gas, and mining.
 
 ## Typed Transaction Envelope {#typed-transaction-envelope}
 
-Ethereum originally had one format for transactions. Each transaction contained a nonce, gas price, gas limit, to address, value, data, v, r, and s. These fields are RLP-encoded, to look something like this:  
+Ethereum originally had one format for transactions. Each transaction contained a nonce, gas price, gas limit, to address, value, data, v, r, and s. These fields are RLP-encoded, to look something like this:
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
-Ethereum has evolved to support multiple types of transactions to allow for new features such as access lists and [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) to be implemented without affecting legacy transaction formats.  
+Ethereum has evolved to support multiple types of transactions to allow for new features such as access lists and [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) to be implemented without affecting legacy transaction formats.
 
 [EIP-2718: Typed Transaction Envelope](https://eips.ethereum.org/EIPS/eip-2718) defines a transaction type that is an envelope for future transaction types.
 
-EIP-2718 is a new generalised envelope for typed transactions. In the new standard, transactions are interpreted as:  
+EIP-2718 is a new generalised envelope for typed transactions. In the new standard, transactions are interpreted as:
 
 `TransactionType || TransactionPayload`
 
@@ -327,7 +327,7 @@ Where the fields are defined as:
 
 ## Further reading {#further-reading}
 
-- [EIP-2718: Typed Transaction Envelope](https://eips.ethereum.org/EIPS/eip-2718) 
+- [EIP-2718: Typed Transaction Envelope](https://eips.ethereum.org/EIPS/eip-2718)
 
 _Know of a community resource that helped you? Edit this page and add it!_
 

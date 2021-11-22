@@ -331,7 +331,7 @@ contract Incrementor {
 
 ### Run Echidna {#run-echidna-2}
 
-To enable the assertion failture testing, create an [Echidna configuration file](https://github.com/crytic/echidna/wiki/Config) `config.yaml`:
+To enable the assertion failure testing, create an [Echidna configuration file](https://github.com/crytic/echidna/wiki/Config) `config.yaml`:
 
 ```yaml
 checkAsserts: true
@@ -355,7 +355,7 @@ As you can see, Echidna reports some assertion failure in the `inc` function. Ad
 
 ### When and how use assertions {#when-and-how-use-assertions}
 
-Assertions can be used as alternatives to explicit properties, specially if the conditions to check are directly related with the correct use of some operation `f`. Adding assertions after some code will enforce that the check will happen inmediately after it was executed:
+Assertions can be used as alternatives to explicit properties, specially if the conditions to check are directly related with the correct use of some operation `f`. Adding assertions after some code will enforce that the check will happen immediately after it was executed:
 
 ```solidity
 function f(..) public {
@@ -551,7 +551,7 @@ Seed: -7293830866560616537
 
 ```
 
-This time, it found that the property is violated inmmediately.
+This time, it found that the property is violated immediately.
 
 ## Finding transactions with high gas consumption {#finding-transactions-with-high-gas-consumption}
 

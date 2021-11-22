@@ -11,9 +11,9 @@ The Translation Program is a collaborative effort to translate ethereum.org into
 
 Our progress so far:
 
-- **2,000 +** translators
+- **2,200 +** translators
 - **37** languages live on site
-- **1.9 million** words translated in 2021
+- **2.4 million** words translated in 2021
 
 If you want to get involved and help us grow the global Ethereum community by translating the website into your language, follow the steps below!
 
@@ -90,7 +90,7 @@ The ethereum.org Translation Program aims to make Ethereum accessible to everyon
 
 4. **Review process**  
    Once you've completed the translation (i.e. all files for a content version display 100%), our professional translation service will review (and potentially edit) the content. Once the review is complete (i.e. review progress is 100%), we will add it to the website.
-   
+
 <InfoBanner shouldCenter emoji=":warning:">
 Please do not use machine translation to translate the project. All the translations will be reviewed before being added to the website. If your suggested translations are found to be machine translated, they will be dismissed and contributors who use machine translation often will be removed from the project.
 </InfoBanner>
@@ -128,7 +128,7 @@ Thank you for your participation in the ethereum.org Translation Program!
 
 **Versions overview**
 
-- [Content versions](/contributing/translation-program/content-versions/) _– Which pages are included in each content version of ethereum.org_
+- [Content versions](/contributing/translation-program/content-versions/) _– which pages are included in each content version of ethereum.org_
 
 **Latest updates**
 

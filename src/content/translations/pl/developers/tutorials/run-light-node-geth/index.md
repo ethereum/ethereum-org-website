@@ -14,7 +14,7 @@ published: 2020-06-14
 
 Możesz być zainteresowany uruchomieniem [węzła Ethereum](/developers/docs/nodes-and-clients/). Jednym z najprostszych sposobów jest pobieranie, instalowanie i uruchamianie Geth. Dzięki Geth możemy uruchomić lekki węzeł w ciągu kilku minut.
 
-Najpierw musisz [zainstalować Geth](https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum).
+Najpierw musisz [zainstalować Geth](https://geth.ethereum.org/docs/install-and-build/installing-geth).
 
 Po zainstalowaniu Getha uruchomienie pełnego węzła Ethereum jest tak proste, jak pisanie
 

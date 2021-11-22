@@ -78,5 +78,13 @@
     "description": "ETH Portland is a gathering of ETH folks from the Northwest. The goal is to bring together the local community & have fun.",
     "startDate": "2021-10-28",
     "endDate": "2021-10-29"
+  },
+  {
+    "title": "ETHDubai",
+    "to": "https://www.ethdubaiconf.org",
+    "sponsor": null,
+    "description": "The Ethereum dev conference in Dubai on everything DeFi, NFTs, EVM scaling, Gaming and more with a focus on decentralization and community projects.",
+    "startDate": "2022-03-29",
+    "endDate": "2022-03-30"
   }
 ]

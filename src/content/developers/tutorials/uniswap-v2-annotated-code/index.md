@@ -429,7 +429,7 @@ between them. For example, assume this sequence of events:
 | Trader E deposits 10 token0 and gets 10.079 token1 back  | 1,000.990 |   999.010 | 5,150     |                                        0.998 | 99.63+40\*1.1018 = 143.702 |
 
 Lets say we want to calculate the average price of **Token0** between the timestamps 5,030 and 5,150. The difference in the value of
-`price0Culumative` is 143.702-29.07=114.632. This is the average across two minutes (120 seconds). So the average price is
+`price0Cumulative` is 143.702-29.07=114.632. This is the average across two minutes (120 seconds). So the average price is
 114.632/120 = 0.955.
 
 This price calculation is the reason we need to know the old reserve sizes.

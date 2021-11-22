@@ -60,11 +60,11 @@ Kvalifikuoti paaiškinimai apie Ethereum ir apie blokų grandinę apskritai.
 
 ## Darbo įrodymas ir kasyba {#proof-of-work-and-mining}
 
-Šiuo metu Ethereum naudojama sistema pavadinimu „Proof of Work“ (liet. „darbo įrodymas“). Taip Ethereum tinklo nariai gali sutarti dėl visos Ethereum blokų grandinėje įrašytos informacijos būsenos ir išvengti tam tikrų ekonominių išpuolių.
+Šiuo metu Ethereum naudojama sistema pavadinimu „proof-of-work“ (liet. „darbo įrodymas“). Taip Ethereum tinklo nariai gali sutarti dėl visos Ethereum blokų grandinėje įrašytos informacijos būsenos ir išvengti tam tikrų ekonominių išpuolių.
 
 - [Ką reiškia Ethereum kasyba?](https://docs.ethhub.io/using-ethereum/mining/) _Dažnai atnaujinama - EthHub_
 
-ETH 2.0 versijoje Ethereum bus pereinama prie kitokios sistemos, kuri vadinama „Proof of Stake“ (liet. „lėšų įrodymas“). [Skaitykite daugiau apie ETH 2.0 žemiau](./#eth-2-0).
+ETH 2.0 versijoje Ethereum bus pereinama prie kitokios sistemos, kuri vadinama „proof-of-stake“ (liet. „lėšų įrodymas“). [Skaitykite daugiau apie ETH 2.0 žemiau](/#eth-2-0).
 
 ## Klientai ir mazgai {#clients-and-nodes}
 
@@ -83,7 +83,7 @@ Skaityti daugiau apie [Ethereum verslui](/enterprise).
 
 Dedame dideles pastangas didindami Ethereum spartą ir bendrą sandorių našumą, kad šis tinklas taptų dar plačiau pritaikomas. Jie išskiriami į “1 lygio” ir “2 lygio” sprendimus.
 
-1 lygmuo reiškia pagrindinio Ethereum protokolo tobulinimą. Pirminis projektas, skirtas patobulinti pagrindinį Ethereum protokolą, yra [ETH 2.0](./#eth-2-0).
+1 lygmuo reiškia pagrindinio Ethereum protokolo tobulinimą. Pirminis projektas, skirtas patobulinti pagrindinį Ethereum protokolą, yra [ETH 2.0](/#eth-2-0).
 
 2 lygmuo reiškia technologijas, kurios papildo pagrindinį Ethereum protokolą, užtikrindamos didesnį pralaidumą nesumažinant saugumo Taip pat esama negrandininių (off-chain) technologijų, tokių kaip šoninės grandinės (sidechains), kurios užtikrina didesnį panaudojimo mastą, suteikdamos atitinkamai mažiau saugumo.
 

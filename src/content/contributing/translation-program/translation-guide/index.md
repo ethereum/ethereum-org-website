@@ -37,6 +37,7 @@ If you want to raise a flag on a particular string that needs attention, feel fr
 
 - Click the second button of the top-right bar. The hidden tab will appear on your right. Leave a new comment and click the "Issue" checkbox on the bottom. You can specify the type of issue by choosing one of the options from the drop-down menu.
 - Once submitted, it will be reported to our team. We will fix the issue and let you know by replying to your comment and closing the issue.
+- If you report an incorrect translation, the translation and your suggested alternative will be reviewed by a native speaker during the next review.
 
 ![Showing how to make comments and issues](./comment-issue.png)
 

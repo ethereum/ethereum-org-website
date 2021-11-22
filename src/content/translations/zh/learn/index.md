@@ -63,7 +63,7 @@ sidebar: true
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Updated often - Ethhub_
 
-在 ETH 2.0 中，以太坊将转向另一种不同的系统——“权益证明” (Proof of Stake)。 [浏览更多 ETH 2.0 相关信息](#eth-2-0)。
+在 ETH 2.0 中，以太坊将转向另一种不同的系统——“权益证明” (proof-of-stake)。 [浏览更多 ETH 2.0 相关信息](#eth-2-0)。
 
 ## 客户端和节点 {#clients-and-nodes}
 

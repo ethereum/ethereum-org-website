@@ -7,7 +7,6 @@ import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown from "../components/ButtonDropdown"
-import UpgradeBannerNotification from "../components/UpgradeBannerNotification"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Icon from "../components/Icon"
@@ -382,7 +381,6 @@ const Eth2Page = ({ data, data: { mdx } }) => {
 
   return (
     <Container>
-      <UpgradeBannerNotification />
       <HeroContainer>
         <TitleCard>
           <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} />

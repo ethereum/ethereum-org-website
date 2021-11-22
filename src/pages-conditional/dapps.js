@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
-import { useIntl, navigate } from "gatsby-plugin-intl"
+import { useIntl } from "gatsby-plugin-intl"
 import { translateMessageId } from "../utils/translations"
 import Translation from "../components/Translation"
 import Pill from "../components/Pill"
@@ -377,9 +377,7 @@ const DappsPage = ({ data, location }) => {
         ? selectedCategory
         : FINANCE
     )
-    if (location.hash.length > 0 && location.hash[0] === "#") {
-      navigate(location.hash)
-    } else if (window && queryParamCategories && explore.current) {
+    if (window && queryParamCategories && explore.current) {
       window.scrollTo({
         top: explore.current.offsetTop - 76,
         behavior: "smooth",
@@ -394,16 +392,12 @@ const DappsPage = ({ data, location }) => {
     if (isMobile) {
       // Add #explore and refresh
       newPath += "#explore"
-      navigate(newPath)
     } else {
       // If within `window` and not in the bottom mobile selection...
       if (window) {
         newPath = `/${intl.locale}${newPath}`
         // Apply new path without page refresh
         window.history.pushState(null, "", newPath)
-      } else {
-        // Otherwise refresh
-        navigate(newPath)
       }
     }
   }
