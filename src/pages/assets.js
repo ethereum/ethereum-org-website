@@ -87,8 +87,8 @@ const AssetsPage = ({ data }) => {
   const themeContext = useContext(ThemeContext)
   const isDarkTheme = themeContext.isDark
   const assetPageHeroImage = isDarkTheme
-    ? data.assetPageHeroImageDark
-    : data.assetPageHeroImage
+    ? data.ethDiamondPurpleHero
+    : data.ethDiamondBlackHero
   return (
     <Page>
       <PageMetadata
@@ -337,13 +337,13 @@ const AssetsPage = ({ data }) => {
 
         <Row>
           {/* TODO artistUrl */}
-          <AssetDownload
+          {/* <AssetDownload
             title={translateMessageId("page-assets-hero-particles", intl)}
             alt={translateMessageId("page-assets-hero-particles", intl)}
             image={data.oldHero}
             artistName="EthWorks & Alan Wu"
             artistUrl=""
-          />
+          /> */}
           <AssetDownload
             title={translateMessageId("page-assets-hero-particles", intl)}
             alt={translateMessageId("page-assets-hero-particles", intl)}
@@ -566,14 +566,14 @@ export const assetItem = graphql`
 
 export const query = graphql`
   {
-    assetPageHeroImage: file(
+    ethDiamondBlackHero: file(
       relativePath: { eq: "assets/eth-diamond-black.png" }
     ) {
       childImageSharp {
         gatsbyImageData(width: 80, layout: FIXED)
       }
     }
-    assetPageHeroImageDark: file(
+    ethDiamondPurpleHero: file(
       relativePath: { eq: "assets/eth-diamond-purple.png" }
     ) {
       childImageSharp {
@@ -648,12 +648,12 @@ export const query = graphql`
     ethGifWaves: file(relativePath: { eq: "eth-gif-waves.png" }) {
       ...assetItem
     }
-    oldHero: file(relativePath: { eq: "assets/hero.png" }) {
-      ...assetItem
-    }
-    oldHeroDark: file(relativePath: { eq: "assets/hero-dark.png" }) {
-      ...assetItem
-    }
+    # oldHero: file(relativePath: { eq: "assets/hero.png" }) {
+    #   ...assetItem
+    # }
+    # oldHeroDark: file(relativePath: { eq: "assets/hero-dark.png" }) {
+    #   ...assetItem
+    # }
     efLogo: file(relativePath: { eq: "ef-logo.png" }) {
       ...assetItem
     }
