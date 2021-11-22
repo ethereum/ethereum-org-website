@@ -39,9 +39,9 @@ Requests for computation are called transaction requests; the record of all tran
 
 Cryptographic mechanisms ensure that once transactions are verified as valid and added to the blockchain, they can't be tampered with later. The same mechanisms also ensure that all transactions are signed and executed with appropriate "permissions" (no one should be able to send digital assets from Alice's account, except for Alice herself).
 
-## What is ether? {#what-is-ether}
+## What is ether(ETH)? {#what-is-ether}
 
-The purpose of ether, the cryptocurrency, is to allow for a market for computation. Such a market provides an economic incentive for participants to verify and execute transaction requests and provide computational resources to the network.
+The purpose of ether which is denoted as ETH, the cryptocurrency, is to allow for a market for computation. Such a market provides an economic incentive for participants to verify and execute transaction requests and provide computational resources to the network.
 
 Any participant who broadcasts a transaction request must also offer some amount of ether to the network as a bounty. This bounty will be awarded to whoever eventually does the work of verifying the transaction, executing it, committing it to the blockchain, and broadcasting it to the network.
 
