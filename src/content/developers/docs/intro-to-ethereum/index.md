@@ -67,6 +67,8 @@ The sequence of all blocks that have been committed to the Ethereum network in t
 
 The native cryptocurrency of Ethereum. Users pay ether to other users to have their code execution requests fulfilled.
 
+[More on ETH](/developers/docs/intro-to-ether/)
+
 ### EVM {#evm}
 
 The Ethereum Virtual Machine is the global virtual computer whose state every participant on the Ethereum network stores and agrees on. Any participant can request the execution of arbitrary code on the EVM; code execution changes the state of the EVM.
