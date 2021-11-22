@@ -5513,6 +5513,15 @@
         "doc",
         "translation"
       ]
+    },
+    {
+      "login": "dschenkelman",
+      "name": "Damian Schenkelman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3376731?v=4",
+      "profile": "http://yenkel.dev",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

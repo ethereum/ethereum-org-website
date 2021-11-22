@@ -1243,6 +1243,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/nlarche"><img src="https://avatars.githubusercontent.com/u/3041222?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nicolas LARCHE</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Anlarche" title="Bug reports">🐛</a></td>
     <td align="center"><a href="http://slmodd.com"><img src="https://avatars.githubusercontent.com/u/25698188?v=4?s=100" width="100px;" alt=""/><br /><sub><b>A. Tyler Benson</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=tbenson89" title="Documentation">📖</a></td>
     <td align="center"><a href="http://www.NaturalDAO.io"><img src="https://avatars.githubusercontent.com/u/1388904?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Derek周朝晖</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=zhous" title="Documentation">📖</a> <a href="#translation-zhous" title="Translation">🌍</a></td>
+    <td align="center"><a href="http://yenkel.dev"><img src="https://avatars.githubusercontent.com/u/3376731?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Damian Schenkelman</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=dschenkelman" title="Documentation">📖</a></td>
   </tr>
 </table>
 
