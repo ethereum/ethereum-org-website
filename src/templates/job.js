@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import ButtonLink from "../components/ButtonLink"
 import Link from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
@@ -254,7 +254,7 @@ const HeroContainer = styled.div`
   }
 `
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   flex: 1 1 100%;
   max-width: 640px;
   background-size: cover;
@@ -297,13 +297,12 @@ const JobPage = ({ data: { mdx } }) => {
   return (
     <Container>
       <HeroContainer>
-        <Image fluid={mdx.frontmatter.image.childImageSharp.fluid} />
+        <Image image={getImage(mdx.frontmatter.image)} />
       </HeroContainer>
       <Page dir="ltr">
         <PageMetadata
           title={mdx.frontmatter.title}
           description={mdx.frontmatter.description}
-          image={mdx.frontmatter.image.childImageSharp.fluid.src}
         />
         <InfoColumn>
           <KeyInfo>
@@ -390,9 +389,7 @@ export const JobQuery = graphql`
         link
         image {
           childImageSharp {
-            fluid(maxHeight: 400) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(height: 400)
           }
         }
       }
