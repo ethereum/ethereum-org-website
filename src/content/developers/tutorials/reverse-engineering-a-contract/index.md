@@ -81,7 +81,7 @@ This snippet starts with a `JUMPDEST`. EVM (Ethereum virtual machine) programs t
 | 6A | DUP3       | 6 CALLVALUE 0 6 CALLVALUE
 | 6B | SLOAD      | Storage[6] CALLVALUE 0 6 CALLVALUE
 
-So when there is no call data we read the value of Storage[6]. We don't know what this value is right now, but we can look for transactions that the contract received with no call data. Transactions which just transfer ETH without any call data (and therefore no method) have in Etherscan the method `Transfer`. In fact, [the very first transaction the contract received](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7) is a transfer.
+So when there is no call data we read the value of Storage[6]. We don't know what this value is yet, but we can look for transactions that the contract received with no call data. Transactions which just transfer ETH without any call data (and therefore no method) have in Etherscan the method `Transfer`. In fact, [the very first transaction the contract received](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7) is a transfer.
 
 If we look in that transaction and click **Click to see More**, we see that the call data, called input data, is indeed empty (`0x`). Notice also that the value is 1.559 ETH, that will be relevant later.
 
@@ -93,6 +93,7 @@ Next, click the **State** tab and expand the contract we're reverse engineering 
 
 If we look in the state changes caused by [other `Transfer` transactions from the same period](https://etherscan.io/tx/0xf708d306de39c422472f43cb975d97b66fd5d6a6863db627067167cbf93d84d1#statechange) we see that `Storage[6]` tracked the value of the contract for a while. For now we'll call it `Value*`. The asterisk (`*`) reminds us that we don't *know* what this variable does yet, but it can't be just to track the contract value because there's no need to use storage, which is very expensive, when you can get your accounts balance using `ADDRESS BALANCE`. The first opcode pushes the contract's own address. The second one reads the address at the top of the stack and replaces it with the balance of that address.
 
+
 | Offset | Opcode | Stack |
 | -: | - | - |
 | 6C | PUSH2 0x0075 | 0x75 Value\* CALLVALUE 0 6 CALLVALUE
@@ -101,14 +102,62 @@ If we look in the state changes caused by [other `Transfer` transactions from th
 | 71 | PUSH2 0x01a7 | 0x01A7 Value\* CALLVALUE 0x75 0 6 CALLVALUE
 | 74 | JUMP         |
 
+We'll continue to trace this code at the jump destination.
+
+
+| Offset | Opcode | Stack |
+| -: | - | - |
+| 1A7	| JUMPDEST | Value\* CALLVALUE 0x75 0 6 CALLVALUE
+| 1A8	|	PUSH1 0x00 | 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE
+| 1AA	|	DUP3       | CALLVALUE 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE
+| 1AB	|	NOT        | 2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE
+
+The `NOT` is bitwise, so it reverses the value of every bit in the call value.  
+
+
+| Offset | Opcode | Stack |
+| -: | - | - |
+| 1AC	|	DUP3 | Value\* 2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE
+| 1AD	|	GT   | Value\*>2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE
+| 1AE	|	ISZERO | Value\*<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE
+| 1AF	|	PUSH2 0x01df | 0x01DF Value\*<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE
+| 1B2	|	JUMPI
+
+We jump if Value\* is smaller than 2^256-CALLVALUE-1 or equal to it. This looks like logic to prevent overflow. And indeed, we see that after a few nonsense operations (writing to memory is about to get deleted, for example) at offset 0x01DE the contract reverts if the overflow is detected, which is normal behavior.
+
+Note that such an overflow is extremely unlikely, because it would require the call value plus `Value*` to be comparable to 2^256 wei, about 10^59 ETH. [The total ETH supply, at writing, is less than two hundred million](https://etherscan.io/stat/supply).
+
+
+| Offset | Opcode | Stack |
+| -: | - | - |
+| 1DF	| JUMPDEST | 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE
+| 1E0	|	POP | Value\* CALLVALUE 0x75 0 6 CALLVALUE
+| 1E1	| ADD | Value\*+CALLVALUE 0x75 0 6 CALLVALUE
+| 1E2	| SWAP1 | 0x75 Value\*+CALLVALUE 0 6 CALLVALUE
+| 1E3	| JUMP
+
+If we got here, get `Value* + CALLVALUE` and jump to offset 0x75.
+
+
+| Offset | Opcode | Stack |
+| -: | - | - | 
+| 75 | JUMPDEST | Value\*+CALLVALUE 0 6 CALLVALUE
+| 76 | SWAP1    | 0 Value\*+CALLVALUE 6 CALLVALUE
+| 77 | SWAP2    | 6 Value\*+CALLVALUE 0 CALLVALUE
+| 78 | SSTORE   | 0 CALLVALUE
+
+If we get here (which requires the call data to be empty) we add to `Value*` the call value. This is consistent with what we say `Transfer` transactions do.
+
+| Offset | Opcode |
+| -: | - |
+| 79 | POP
+| 7A | POP
+| 7B | STOP
+
+Finally, clear the stack (which isn't necessary) and signal the successful end of the transaction.
 
 
 
 
-75	1	JUMPDEST
-76	1	SWAP1
-77	1	SWAP2
-78	1	SSTORE
-79	1	POP
-7A	1	POP
-7B	1	STOP
+
+
