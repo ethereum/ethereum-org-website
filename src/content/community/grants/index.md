@@ -11,7 +11,7 @@ The programs listed below offer a variety of funding grants for projects working
 
 This list is curated by our community. If there's something missing or incorrect, please edit this page!
 
-### Broad Ethereum ecosystem {#broad-ethereum-ecosystem}
+## Broad Ethereum ecosystem {#broad-ethereum-ecosystem}
 
 These programs support the broad Ethereum ecosystem by offering grants to a wide scope of projects. These include solutions for scalability, community building, security, privacy, and more. These grants are not specific to any one Ethereum platform and are a good place to start if you're unsure.
 
@@ -22,7 +22,7 @@ These programs support the broad Ethereum ecosystem by offering grants to a wide
 - [Moloch DAO](https://www.molochdao.com/) - _Privacy, layer 2 scaling, client security, and more_
 - [Open Grants](https://opengrants.com/explore)
 
-### Project specific {#project-specific}
+## Project specific {#project-specific}
 
 These projects have created their own grants for projects aimed at developing and experimenting with their own technology.
 
@@ -31,9 +31,13 @@ These projects have created their own grants for projects aimed at developing an
 - [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) – _[Balancer](https://balancer.fi/) Ecosystem Fund_
 - [mStable](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) community_
 
-### Quadratic funding {#quadratic-funding}
+## Quadratic funding {#quadratic-funding}
 
 The open source roots of Ethereum have led to the growth of an interesting new fundraising model: quadratic funding. This has the potential to improve the way we fund all types of public goods in the future. Quadratic funding makes sure that the projects that receive the most funding are those with the most unique demand. In other words, projects that stand to improve the lives of the most people. [More on quadratic funding.](/defi/#quadratic-funding)
 
 - [Gitcoin](https://gitcoin.co/grants)
 - [clr.fund](https://clr.fund/)
+
+## Work in Ethereum {#work-in-ethereum}
+
+Not ready to start your own project? There are hundreds of companies actively looking for passionate individuals to work in and contribute to the Ethereum ecosystem. Looking for more information? [Check out Ethereum related jobs](/community/get-involved/#ethereum-jobs/)

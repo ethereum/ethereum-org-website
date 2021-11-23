@@ -9,7 +9,7 @@ lang: en
 
 The Ethereum community includes people of many different backgrounds and skillsets. Whether you’re a developer, an artist, or an accountant, there are ways to get involved. Here’s a list of suggestions that might help you get started.
 
-## Developers 💻
+## Developers <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - Learn about and try Ethereum at [ethereum.org/developers/](/developers/)
 - [Find a bounty on Gitcoin](https://gitcoin.co/), work on a small or large technical issue, earn crypto!
@@ -19,7 +19,7 @@ The Ethereum community includes people of many different backgrounds and skillse
 - [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - tooling, documentation, and infrastructure areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
 - [Web3Bridge](https://www.web3bridge.com/) - join the aspiring web3 community in their initiative to identify, train, and support hundreds of developers and community members throughout Africa
 
-## Researchers & Academics 🔍
+## Researchers & Academics <Emoji text=":mag:" size={1} />‍ {#researchers-and-academics}
 
 Do you have a background in mathematics, cryptography, or economics? You might be interested in some of the cutting-edge work being done within the Ethereum ecosystem
 
@@ -27,87 +27,74 @@ Do you have a background in mathematics, cryptography, or economics? You might b
 - [Ethresear.ch](https://ethresear.ch) - Ethereum’s primary forum for research, and the world’s most influential forum for cryptoeconomics
 - [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - research areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
 
-**Have non-technical skills, and aren’t sure where to start?**
+## Non-technical skillsets <Emoji text=":briefcase:" size={1} />‍ {#non-technical}
 
 If you’re not a developer, it can be hard to know where to start in Ethereum. Here are a few suggestions, along with resources for specific professional backgrounds.
 
-- **Organize a meetup in your city**
-  - Not sure how to start? The [BUIDL network](https://consensys.net/developers/buidlnetwork/) can help.
-- **Write content about Ethereum**
-  - Ethereum needs good writers who can explain its value in plain language
-  - Not ready to publish your own articles? Consider contributing to the existing content on community resources like [EthHub](https://docs.ethhub.io/), or propose new content for ethereum.org!
-- **Offer to take notes for community calls**
-  - There are many open-source community calls, and having notetakers is a huge help. If you’re interested, join the [Ethereum Cat Herders discord](https://discord.com/invite/tzYmDmF), and introduce yourself!
-- **Translate Ethereum content into your native language**
-  - ethereum.org maintains a translation program that translates the website, and other resources, into many different languages
-  - Find out how to get involved [here](/contributing/translation-program)
+### Organize a meetup in your city {#meetups}
 
-**Financial professionals & Accountants**
+- Not sure how to start? The [BUIDL network](https://consensys.net/developers/buidlnetwork/) can help.
+
+### Write content about Ethereum {#write-content}
+
+- Ethereum needs good writers who can explain its value in plain language
+- Not ready to publish your own articles? Consider contributing to the existing content on community resources like [EthHub](https://docs.ethhub.io/), or propose new content for ethereum.org!
+
+### Offer to take notes for community calls {#take-notes}
+
+- There are many open-source community calls, and having notetakers is a huge help. If you’re interested, join the [Ethereum Cat Herders discord](https://discord.com/invite/tzYmDmF), and introduce yourself!
+
+### Translate Ethereum content into your native language {#translate-ethereum}
+
+- ethereum.org maintains a translation program that translates the website, and other resources, into many different languages
+- Find out how to get involved [here](/contributing/translation-program)
+
+### Run a node {#run-a-node}
+
+Join thousands of node operators in helping to further decentralize Ethereum.
+
+- [More on how to run a node](/developers/docs/nodes-and-clients/run-a-node/)
+
+### Stake your ETH {#staking}
+
+By staking your ETH you can earn rewards whilst helping to secure the Ethereum network.
+
+-[More on staking](/eth2/staking/)
+
+### Support projects {#suport-projects}
+
+The Ethereum ecosystem is on a mission to fund public goods and impactful projects. With very small donations you can show your support and allow important work to be realized.
+
+- [Gitcoin](https://gitcoin.co/fund)
+- [clr.fund](https://clr.fund/#/about)
+
+## Financial professionals & Accountants <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}
 
 - Ethereum is home to the “Decentralized Finance” ecosystem - a network of protocols and applications that offer an alternative financial system. If you’re a financial professional, check out some DeFi apps at [DeFi Pulse](https://defipulse.com/) or [DeFiPrime](https://defiprime.com)
 - Accountant? Assets on Ethereum - ETH, tokens, DeFi, etc - introduce many novel accounting issues. You could start by checking out some projects that aim to help users of cryptocurrency solve their bookkeeping & accounting challenges, like [Rotki](https://rotki.com/)
 
-**Product Managers**
+## Product Managers <Emoji text=":fountain_pen:" size={1} />‍ {#product-managers}
 
 - The Ethereum ecosystem needs your talents! Many companies are hiring for product manager roles. If you want to start by contributing to an open source project, get in touch with the [Ethereum Cat Herders](https://discord.gg/tzYmDmF) or [MetaCartel](https://www.metacartel.org/)
 
-**Marketing**
+## Marketing <Emoji text=":megaphone:" size={1} />‍ {#marketing}
 
 - There are many marketing and communications positions in the Ethereum ecosystem!
 
-The Ethereum community includes tens of thousands of developers, technologists, users, miners, HODLers, and enthusiasts all over the world. There are many ways to get involved in the Ethereum community: you can attend an event, join a meetup group, contribute to a project, or participate in one of many online forums about Ethereum.
+## Ethereum jobs {#ethereum-jobs}
 
-Want to contribute to Ethereum more directly? Check out [how to get involved](#how-can-i-get-involved) below for a list of ways that you can contribute based on your skills and professional background.
+**Want to find a job working in Ethereum?**
 
-## Online communities {#online-communities}
+- [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/ethereum/)
+- [Crypto.jobs](https://crypto.jobs/)
+- [Careers at ConsenSys](https://consensys.net/careers/)
+- [Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)
+- [Bankless jobs board](https://pallet.xyz/list/bankless/jobs)
+- [useWeb3 Jobs](https://www.useweb3.xyz/jobs)
 
-Hundreds of thousands of Ethereum enthusiasts gather in these online forums to share news, talk about recent developments, debate technical issues, and imagine the future.
+## Join a DAO {#decentralized-autonomous-organizations-daos}
 
-- Forums
-  - [r/ethereum](https://www.reddit.com/r/ethereum/) - _all things Ethereum_
-  - [r/ethfinance](https://www.reddit.com/r/ethfinance/) - _the financial side of Ethereum, including DeFi_
-  - [r/ethdev](https://www.reddit.com/r/ethdev/) - _focused on Ethereum development_
-  - [r/ethtrader](https://www.reddit.com/r/ethtrader/) - _trends & market analysis_
-  - [r/EtherMining](https://www.reddit.com/r/EtherMining/) - _focused on securing the Ethereum Network (mining)_
-  - [r/ethstaker](https://www.reddit.com/r/ethstaker/) - _welcome to all interested in staking on Ethereum_
-  - [Fellowship of Ethereum Magicians](https://ethereum-magicians.org) - _community oriented around technical standards in Ethereum_
-  - [Ethereum Stackexchange](https://ethereum.stackexchange.com) - _discussion and help for Ethereum developers_
-  - [Ethereum Research](https://ethresear.ch) - _the most influential messageboard for cryptoeconomic research_
-- Chat rooms
-  - [Eth R&D Discord server](https://discord.gg/qGpsxSA)
-  - [Ethereum Gitter](https://gitter.im/ethereum/home) - _chat room for the Ethereum GitHub repo_
-  - [Ethereum Cat Herders](https://discord.gg/tzYmDmF) - _community oriented around offering project management support to Ethereum development_
-  - [Ethereum Hackers](https://ethglobal.co/discord) - _Discord chat run by [ETHGlobal](https://www.ethglobal.co/): an online community for Ethereum hackers all over the world_
-  - [CryptoDevs Discord](https://discord.gg/5W5tVb3) - _Ethereum development focused Discord community_
-  - [EthStaker Discord](https://discord.io/ethstaker) - _Support for the [Beacon Chain](/eth2/beacon-chain/) staking community_
-  - [ethereum.org Website Team](https://discord.gg/CetY6Y4) - _Stop by and chat ethereum.org web design with the team and folks from the community_
-- Twitter
-  - The Ethereum community is very active on Twitter - not sure where to start?
-    - [List of influential Ethereum twitter accounts](https://hive.one/ethereum/)
-
-## Upcoming events {#upcoming-events}
-
-**Every month, there are major Ethereum events around the world.** Consider attending one near you to meet more people in the community, learn about employment opportunities, and develop new skills.
-
-<UpcomingEventsList/>
-
-_Have an event to add to this list? [Add it](https://github.com/ethereum/ethereum-org-website#how-can-i-contribute)!_
-
-- <a href="https://unblock.africa/">Metamask Weekend</a> - A meetup by Unblock Africa for beginner and intermediate blockchain enthusiasts to learn how to interact with the Ethereum blockchain, utilize the decentralized applications on it and learn how to deploy smart contracts. (10/29/2021 - 10/30/2021)
-
-## Ethereum meetup groups {#ethereum-meetup-groups}
-
-"Meetups" are small events held by groups of Ethereum enthusiasts - a chance for people interested in Ethereum to get together, talk about Ethereum, and learn about recent developments.
-
-<MeetupList/>
-
-Interested in starting your own meetup? Check out the [BUIDL Network](https://consensys.net/developers/buidlnetwork/), an initiative by ConsenSys to help support Ethereum’s meetup communities.
-
-This is a non-exhaustive list built by our community. Know of an active meetup group to add to this list? [Please add it](https://github.com/ethereum/ethereum-org-website#content-contributions)!
-
-## Decentralized autonomous organizations (DAOs) {#decentralized-autonomous-organizations-daos}
-
-"DAOs" are Decentralized autonomous organizations. These groups leverage Ethereum technology to facilitate organization and collaboration. For instance, for controlling membership, voting on proposals, or managing pooled assets. While DAOs are still experimental, they offer opportunities for you to find groups that you identify with, find collaborators, and grow your impact on the Ethereum community. [More on DAOs](/dao/)
+"DAOs" are decentralized autonomous organizations. These groups leverage Ethereum technology to facilitate organization and collaboration. For instance, for controlling membership, voting on proposals, or managing pooled assets. While DAOs are still experimental, they offer opportunities for you to find groups that you identify with, find collaborators, and grow your impact on the Ethereum community. [More on DAOs](/dao/)
 
 - [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _Legal engineering_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Art community_
@@ -122,17 +109,3 @@ This is a non-exhaustive list built by our community. Know of an active meetup g
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Freelancer Web3 development collective working as a DAO_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Community governance of DAOhaus_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _Community of builders who believe in collective ownership of the internet_
-
-## Ethereum grants {#ethereum-grants}
-
-[View open Ethereum grants](/community/grants/)
-
-## Ethereum jobs {#ethereum-jobs}
-
-**Want to find a job working in Ethereum?**
-
-- [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/ethereum/)
-- [Crypto.jobs](https://crypto.jobs/)
-- [Careers at ConsenSys](https://consensys.net/careers/)
-- [Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)
-- [Bankless jobs board](https://pallet.xyz/list/bankless/jobs)

@@ -329,7 +329,7 @@ const MeetupList = () => {
 
   return (
     <div>
-      <input onChange={handleSearch} />
+      {/* <input onChange={handleSearch} /> */}
       <Table>
         {filteredMeetups.map((meetup, idx) => (
           <Item key={idx} to={meetup.link}>

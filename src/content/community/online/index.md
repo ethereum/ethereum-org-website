@@ -11,8 +11,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 
 ## Forums
 
-- <Icon name="youtube" /> [r/ethereum](https://www.reddit.com/r/ethereum/) - _all things Ethereum_
-- <CommunityListItem name="youtube" description="the financial side of Ethereum, including DeFi">
+- [r/ethereum](https://www.reddit.com/r/ethereum/) - _all things Ethereum_ <Icon name="youtube" />
 - [r/ethfinance](https://www.reddit.com/r/ethfinance/) - _the financial side of Ethereum, including DeFi_
 - [r/ethdev](https://www.reddit.com/r/ethdev/) - _focused on Ethereum development_
 - [r/ethtrader](https://www.reddit.com/r/ethtrader/) - _trends & market analysis_
@@ -38,3 +37,9 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 - [@ethereum]() - Offical account of the Ethereum Foundation
 - [@ethdotorg]() - The portal to Ethereum, built for our growing global community
 - [List of influential Ethereum twitter accounts]() - The Ethereum community is very active on Twitter
+
+<Divider />
+
+## Explore other online Ethereum communities
+
+- [DAOs](/community/daos/)
