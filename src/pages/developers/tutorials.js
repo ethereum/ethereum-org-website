@@ -17,7 +17,6 @@ import Emoji from "../../components/Emoji"
 import { Page, ButtonSecondary } from "../../components/SharedStyledComponents"
 
 import { getLocaleTimestamp, INVALID_DATETIME } from "../../utils/time"
-import { hasTutorials } from "../../utils/translations"
 
 import foreignTutorials from "../../data/externalTutorials.json"
 
@@ -241,11 +240,7 @@ const TutorialsPage = ({ data, pageContext }) => {
 
   const allTutorials = []
     .concat(externalTutorials, internalTutorials)
-    .filter((tutorial) =>
-      hasTutorials(pageContext.language)
-        ? tutorial.lang === pageContext.language
-        : tutorial.lang === "en"
-    )
+    .filter((tutorial) => tutorial.lang === pageContext.language)
     .sort((a, b) => new Date(b.published) - new Date(a.published))
 
   // Tally all subject tag counts

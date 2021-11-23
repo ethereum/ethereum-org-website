@@ -3,7 +3,6 @@ const fs = require("fs")
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const gatsbyConfig = require(`./gatsby-config.js`)
-const { getLangContentVersion } = require(`./src/utils/translations`)
 
 const supportedLanguages = gatsbyConfig.siteMetadata.supportedLanguages
 const defaultLanguage = gatsbyConfig.siteMetadata.defaultLanguage
@@ -51,9 +50,11 @@ const getMessages = (path, language) => {
  * @returns boolean for if file is outdated or not
  */
 const checkIsMdxOutdated = (path) => {
-  const splitPath = path.split("/")
-  splitPath.splice(7, 2)
-  const englishPath = splitPath.join("/")
+  const splitPath = path.split(__dirname)
+  const tempSplitPath = splitPath[1]
+  const tempSplit = tempSplitPath.split("/")
+  tempSplit.splice(3, 2)
+  const englishPath = `${__dirname}${tempSplit.join("/")}`
 
   const re = /([#]+) [^\{]+\{#([^\}]+)\}/gim
   let translatedData, englishData
@@ -312,66 +313,34 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 
   // Create contentVersion v2.0 pages
-  const contentV2Pages = [`eth`, `dapps`, `wallets/index`, `what-is-ethereum`]
-  const contentV2Languages = supportedLanguages.filter(
-    (lang) => getLangContentVersion(lang) >= 2.0
-  )
-  contentV2Pages.forEach((page) => {
+  // Check if outdatedMarkdown markdown page exists for another language, if they do, skip creating page-conditional page
+  const outdatedMarkdown = [`eth`, `dapps`, `wallets`, `what-is-ethereum`]
+  outdatedMarkdown.forEach((page) => {
     const component = page
-    // Account for nested pages
-    if (page.includes("/index")) {
-      page = page.replace("/index", "")
-    }
-    contentV2Languages.forEach((lang) => {
-      createPage({
-        path: `/${lang}/${page}/`,
-        component: path.resolve(`./src/pages-conditional/${component}.js`),
-        context: {
-          slug: `/${lang}/${page}/`,
-          intl: {
-            language: lang,
-            languages: supportedLanguages,
-            defaultLanguage,
-            messages: getMessages("./src/intl/", lang),
-            routed: true,
-            originalPath: `/${page}/`,
-            redirect: false,
+    supportedLanguages.forEach((lang) => {
+      const pathCheck = `${__dirname}/src/content/translations/${lang}/${component}/index.md`
+      if (!fs.existsSync(pathCheck, fs.constants.R_OK | fs.constants.W_OK)) {
+        createPage({
+          path: `/${lang}/${page}/`,
+          component: path.resolve(
+            component === "wallets"
+              ? `./src/pages-conditional/${component}/index.js`
+              : `./src/pages-conditional/${component}.js`
+          ),
+          context: {
+            slug: `/${lang}/${page}/`,
+            intl: {
+              language: lang,
+              languages: supportedLanguages,
+              defaultLanguage,
+              messages: getMessages("./src/intl/", lang),
+              routed: true,
+              originalPath: `/${page}/`,
+              redirect: false,
+            },
           },
-        },
-      })
-    })
-  })
-
-  // Create contentVersion v1.0 pages
-  // v1.0 doesn't have existing markdown files for these pages
-  const contentV1Pages = [`eth`, `dapps`, `wallets/index`]
-  const contentV1Languages = supportedLanguages.filter(
-    (lang) => getLangContentVersion(lang) === 1.0
-  )
-  contentV1Pages.forEach((page) => {
-    const component = page
-    // Account for nested pages
-    if (page.includes("/index")) {
-      page = page.replace("/index", "")
-    }
-    contentV1Languages.forEach((lang) => {
-      createPage({
-        path: `/${lang}/${page}/`,
-        component: path.resolve(`./src/pages-conditional/${component}.js`),
-        context: {
-          slug: `/${lang}/${page}/`,
-          isContentEnglish: true,
-          intl: {
-            language: lang,
-            languages: supportedLanguages,
-            defaultLanguage,
-            messages: getMessages("./src/intl/", lang),
-            routed: true,
-            originalPath: `/${page}/`,
-            redirect: false,
-          },
-        },
-      })
+        })
+      }
     })
   })
 }
@@ -384,7 +353,6 @@ exports.onCreatePage = async ({ page, actions }) => {
 
   const isTranslated = page.context.language !== defaultLanguage
   const hasNoContext = page.context.isOutdated === undefined
-  const langVersion = getLangContentVersion(page.context.language)
 
   if (isTranslated && hasNoContext) {
     const { isOutdated, isContentEnglish } = await checkIsPageOutdated(
@@ -399,8 +367,6 @@ exports.onCreatePage = async ({ page, actions }) => {
         isOutdated,
         //display TranslationBanner for translation-component pages that are still in English
         isContentEnglish,
-        // // We can check if isContentEnglish through our crawling
-        // langVersion < 2 && !page.component.includes("/index.js"),
       },
     })
   }

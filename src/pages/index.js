@@ -10,7 +10,6 @@ import Icon from "../components/Icon"
 import CalloutBanner from "../components/CalloutBanner"
 import CodeModal from "../components/CodeModal"
 import Codeblock from "../components/Codeblock"
-import LegacyPageHome from "../components/LegacyPageHome"
 import Morpher from "../components/Morpher"
 import PageMetadata from "../components/PageMetadata"
 import StatsBoxGrid from "../components/StatsBoxGrid"
@@ -22,10 +21,7 @@ import {
   GrayContainer,
   LeftColumn,
 } from "../components/SharedStyledComponents"
-import {
-  getLangContentVersion,
-  translateMessageId,
-} from "../utils/translations"
+import { translateMessageId } from "../utils/translations"
 
 const Hero = styled(Img)`
   width: 100%;
@@ -409,12 +405,6 @@ const HomePage = ({ data }) => {
   const intl = useIntl()
   const [isModalOpen, setModalOpen] = useState(false)
   const [activeCode, setActiveCode] = useState(0)
-
-  // Language versions 2.4 & above support this homepage content
-  // If current language is below, render LegacyPageHome
-  if (getLangContentVersion(intl.locale) < 2.4) {
-    return <LegacyPageHome />
-  }
 
   const toggleCodeExample = (id) => {
     setActiveCode(id)
