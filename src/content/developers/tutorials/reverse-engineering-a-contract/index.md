@@ -155,8 +155,66 @@ If we get here (which requires the call data to be empty) we add to `Value*` the
 
 Finally, clear the stack (which isn't necessary) and signal the successful end of the transaction.
 
-### The Handler at 0x7C (4 < Call Data Size < 0)
+
+### The Handler at 0x7C (0 > Call Data Size > 4)
+
+If there is call data, but less than four bytes of it, we arrive here. When we get here the stack is empty.
 
 
+| Offset | Opcode | Stack |
+| -: | - | - | 
+| 7C | JUMPDEST |
+| 7D | PUSH1 0x00   | 0x00
+| 7F | PUSH2 0x009d | 0x9D 0x00
+| 82 | PUSH1 0x03   | 0x03 0x9D 0x00
+| 84 | SLOAD        | Storage[3] 0x9D 0x00
+
+This is another storage cell, one that I couldn't find in any transactions so it's harder to know what it means.
 
 
+| Offset | Opcode | Stack |
+| -: | - | - | 
+| 85 | PUSH20 0xffffffffffffffffffffffffffffffffffffffff | 0xff....ff Storage[3] 0x9D 0x00
+| 9A | AND | Storage[3]-as-address 0x9D 0x00
+
+
+These opcodes truncate the value we read from Storage[3] to 160 bits, the length of an Ethereum address.
+
+| Offset | Opcode | Stack |
+| -: | - | - | 
+| 9B | SWAP1 | 0x9D Storage[3]-as-address 0x00
+| 9C | JUMP  | Storage[3]-as-address 0x00
+
+This just is superflous, since we're going to the next opcode. This code isn't nearly as gas-efficient as it could be.
+
+| Offset | Opcode | Stack |
+| -: | - | - | 
+| 9D | JUMPDEST | Storage[3]-as-address 0x00
+9E	1	SWAP1
+9F	1	POP
+A0	2	PUSH1 0x40
+A2	1	MLOAD
+A3	1	CALLDATASIZE
+A4	2	PUSH1 0x00
+A6	1	DUP3
+A7	1	CALLDATACOPY
+A8	2	PUSH1 0x00
+AA	1	DUP1
+AB	1	CALLDATASIZE
+AC	1	DUP4
+AD	1	DUP6
+AE	1	GAS
+AF	1	DELEGATE_CALL
+B0	1	RETURNDATASIZE
+B1	1	DUP1
+B2	2	PUSH1 0x00
+B4	1	DUP5
+B5	1	RETURNDATACOPY
+B6	1	DUP2
+B7	1	DUP1
+B8	1	ISZERO
+B9	3	PUSH2 0x00c0
+BC	1	JUMPI
+BD	1	DUP2
+BE	1	DUP5
+BF	1	RETURN
