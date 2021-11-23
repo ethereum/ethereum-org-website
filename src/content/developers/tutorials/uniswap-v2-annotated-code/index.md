@@ -587,8 +587,8 @@ out of it.
 
 | Event                                                        | reserve0 | reserve1 | reserve0 \* reserve1 | Value of the pool (reserve0 + reserve1) |
 | ------------------------------------------------------------ | -------: | -------: | -------------------: | --------------------------------------: |
-| Initial setup                                                |        8 |       32 |                 1024 |                                      40 |
-| Trader deposits 8 **Token0** tokens, gets back 16 **Token1** |       16 |       16 |                 1024 |                                      32 |
+| Initial setup                                                |        8 |       32 |                  256 |                                      40 |
+| Trader deposits 8 **Token0** tokens, gets back 16 **Token1** |       16 |       16 |                  256 |                                      32 |
 
 As you can see, the trader earned an extra 8 tokens, which come from a reduction in the value of the pool, hurting the depositor that owns it.
 
