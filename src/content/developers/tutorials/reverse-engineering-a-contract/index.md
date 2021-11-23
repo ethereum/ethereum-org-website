@@ -87,8 +87,9 @@ If we look in that transaction and click **Click to see More**, we see that the 
 
 ![The call data is empty](calldata-empty.png)
 
+Next, click the **State** tab and expand the contract we're reverse engineering (0x2510...). You can see that `Storage[6]` did change during the transaction, and if you change Hex to **Number**, you see it became 1,559,000,000,000,000,000, the value transferred in wei (I added the commas for clarity), corresponding to the next contract value.
 
-[for state changes](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7#statechange) and expand the contract we are reverse engineering, we can see that it did change 
+![The change in Storage[6]](storage6.png)
 
 
 6C	3	PUSH2 0x0075
