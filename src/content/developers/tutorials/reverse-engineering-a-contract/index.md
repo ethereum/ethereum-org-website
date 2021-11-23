@@ -11,7 +11,7 @@ published: 2021-12-30
 
 ## Introduction {#introduction}
 
-*There are no secrets on the blockchain*, everything that happens should be consistent, verifiable, and publicly available. Ideally, [contracts should have their source code published and verified on Etherscan](https://etherscan.io/address/0xb8901acb165ed027e32754e0ffe830802919727f#code). However, [that is not always the case](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f#code).
+*There are no secrets on the blockchain*, everything that happens is consistent, verifiable, and publicly available. Ideally, [contracts should have their source code published and verified on Etherscan](https://etherscan.io/address/0xb8901acb165ed027e32754e0ffe830802919727f#code). However, [that is not always the case](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f#code).
 
 There are reverse compilers, but they don't always produce [usable results](https://etherscan.io/bytecode-decompiler?a=0x2510c039cc3b061d79e564b38836da87e31b342f). In this article you learn how to manually reverse engineer and understand a contract from [the opcodes](https://github.com/wolflo/evm-opcodes).
 
@@ -58,7 +58,7 @@ This code does two things:
 1. Write 0x80 as a 32 byte value to memory locations 0x40-0x5F (0x80 is stored in 0x5F, and 0x40-0x5E are all zeroes).
 2. Read the calldata size. Normally the call data for an Ethereum contract follows [the ABI (application binary interface)](https://docs.soliditylang.org/en/v0.8.10/abi-spec.html), which at a minimum requires four bytes for the function selector. If the call data size is less than four, jump to 0x5E.
 
-### The Error Handler at 0x5E
+### The Handler at 0x5E
 
 This is the error handler code.
 
@@ -69,15 +69,28 @@ This is the error handler code.
 | 60 |	PUSH2 0x007c
 | 63 |	JUMPI
 
-This snippet starts with a `JUMPDEST`. EVM (Ethereum virtual machine) programs throw an exception if you jump to an opcode that isn't `JUMPDEST`.
+This snippet starts with a `JUMPDEST`. EVM (Ethereum virtual machine) programs throw an exception if you jump to an opcode that isn't `JUMPDEST`. Then it looks at the CALLDATASIZE, and if it is "true" (that is, not zero) jumps to 0x7C. We'll get to that below.
 
 
-64	1	CALLVALUE
-65	2	PUSH1 0x06
-67	2	PUSH1 0x00
-69	1	DUP3
-6A	1	DUP3
-6B	1	SLOAD
+| Offset | Opcode | Stack (after opcode)
+| -: | - | - |
+| 64 | 	CALLVALUE | [wei](https://ethereum.org/en/glossary/#wei) provided by the call. Called `msg.value` in Solidity
+| 65 | PUSH1 0x06 | 6 CALLVALUE
+| 67 | PUSH1 0x00 | 0 6 CALLVALUE
+| 69 | DUP3       | CALLVALUE 0 6 CALLVALUE
+| 6A | DUP3       | 6 CALLVALUE 0 6 CALLVALUE
+| 6B | SLOAD      | Storage[6] CALLVALUE 0 6 CALLVALUE
+
+So when there is no call data we read the value of Storage[6]. We don't know what this value is right now, but we can look for transactions that the contract received with no call data. Transactions which just transfer ETH without any call data (and therefore no method) have in Etherscan the method `Transfer`. In fact, [the very first transaction the contract received](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7) is a transfer.
+
+If we look in that transaction and click **Click to see More**, we see that the call data, called input data, is indeed empty (`0x`). Notice also that the value is 1.559 ETH, that will be relevant later.
+
+![The call data is empty](calldata-empty.png)
+
+
+[for state changes](https://etherscan.io/tx/0xeec75287a583c36bcc7ca87685ab41603494516a0f5986d18de96c8e630762e7#statechange) and expand the contract we are reverse engineering, we can see that it did change 
+
+
 6C	3	PUSH2 0x0075
 6F	1	SWAP2
 70	1	SWAP1
