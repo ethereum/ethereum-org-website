@@ -39,17 +39,54 @@ In `A1` put the first offest, zero. Then, in `A2`, put this function and again c
 
 We need this function to give us the hexadecimal value because the values that are pushed prior to jumps (`JUMP` and `JUMPI`) are given to us in hexadecimal. 
 
-## The Entry Point
+## The Entry Point (0x00)
 
-This is the initial part of the code
+Contracts are always executed from the first byte. This is the initial part of the code:
+
+| Offset | Opcode   | Stack (after the opcode) |
+| -----: | ------   | ------------------------ |
+| 0	 | PUSH1 0x80   | 0x80   
+| 2	 | PUSH1 0x40   | 0x40, 0x80
+| 4	 | MSTORE       | Empty
+| 5	 | PUSH1 0x04   | 0x04
+| 7	 | CALLDATASIZE | CALLDATASIZE 0x04
+| 8	 | LT           | CALLDATASIZE<4
+| 9	 | PUSH2 0x005e | 0x5E CALLDATASIZE<4
+| C	 | JUMPI        | Empty
+
+This code does two things:
+1. Write 0x80 as a 32 byte value to memory locations 0x40-0x5F (0x80 is stored in 0x5F, and 0x40-0x5E are all zeroes).
+2. Read the calldata size. Normally the call data for an Ethereum contract follows [the ABI (application binary interface)](https://docs.soliditylang.org/en/v0.8.10/abi-spec.html), which at a minimum requires four bytes for the function selector. If the call data size is less than four, jump to 0x5E.
+
+### The Error Handler at 0x5E
+
+This is the error handler code.
 
 | Offset | Opcode |
 | -----: | ------ |
-| 0	 | PUSH1 0x80
-| 2	 | PUSH1 0x40
-| 4	 | MSTORE
-| 5	 | PUSH1 0x04
-| 7	 |	CALLDATASIZE
-| 8	 | LT
-| 9	 |	PUSH2 0x005e
-| C	 |	JUMPI
+| 5E | JUMPDEST |
+| 5F |	CALLDATASIZE
+| 60 |	PUSH2 0x007c
+| 63 |	JUMPI
+
+This snippet starts with a `JUMPDEST`. EVM (Ethereum virtual machine) programs throw an exception if you jump to an opcode that isn't `JUMPDEST`.
+
+
+64	1	CALLVALUE
+65	2	PUSH1 0x06
+67	2	PUSH1 0x00
+69	1	DUP3
+6A	1	DUP3
+6B	1	SLOAD
+6C	3	PUSH2 0x0075
+6F	1	SWAP2
+70	1	SWAP1
+71	3	PUSH2 0x01a7
+74	1	JUMP
+75	1	JUMPDEST
+76	1	SWAP1
+77	1	SWAP2
+78	1	SSTORE
+79	1	POP
+7A	1	POP
+7B	1	STOP
