@@ -103,8 +103,12 @@ const TranslationLeaderboard = () => {
   const [filterAmount, updateFilterAmount] = useState(10)
   const [dateRangeType, updateDateRangeType] = useState("monthData")
 
+  const showLess = () => {
+    updateFilterAmount(10)
+  }
+
   const showMore = () => {
-    updateFilterAmount(filterAmount + 25)
+    updateFilterAmount(50)
   }
 
   return (
@@ -168,8 +172,14 @@ const TranslationLeaderboard = () => {
           })}
       </Table>
       <ButtonRow>
-        <ButtonSecondary onClick={showMore}>
-          <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-show-more" />
+        <ButtonSecondary onClick={filterAmount === 10 ? showMore : showLess}>
+          <Translation
+            id={
+              filterAmount === 10
+                ? "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-more"
+                : "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-less"
+            }
+          />
         </ButtonSecondary>
       </ButtonRow>
     </div>
