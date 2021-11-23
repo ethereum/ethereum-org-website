@@ -58,7 +58,7 @@ This code does two things:
 1. Write 0x80 as a 32 byte value to memory locations 0x40-0x5F (0x80 is stored in 0x5F, and 0x40-0x5E are all zeroes).
 2. Read the calldata size. Normally the call data for an Ethereum contract follows [the ABI (application binary interface)](https://docs.soliditylang.org/en/v0.8.10/abi-spec.html), which at a minimum requires four bytes for the function selector. If the call data size is less than four, jump to 0x5E.
 
-### The Handler at 0x5E
+### The Handler at 0x5E (for non-ABI call data)
 
 This is the error handler code.
 
@@ -91,12 +91,20 @@ Next, click the **State** tab and expand the contract we're reverse engineering 
 
 ![The change in Storage[6]](storage6.png)
 
+If we look in the state changes caused by [other `Transfer` transactions from the same period](https://etherscan.io/tx/0xf708d306de39c422472f43cb975d97b66fd5d6a6863db627067167cbf93d84d1#statechange) we see that `Storage[6]` tracked the value of the contract for a while. For now we'll call it `Value*`. The asterisk (`*`) reminds us that we don't *know* what this variable does yet, but it can't be just to track the contract value because there's no need to use storage, which is very expensive, when you can get your accounts balance using `ADDRESS BALANCE`. The first opcode pushes the contract's own address. The second one reads the address at the top of the stack and replaces it with the balance of that address.
 
-6C	3	PUSH2 0x0075
-6F	1	SWAP2
-70	1	SWAP1
-71	3	PUSH2 0x01a7
-74	1	JUMP
+| Offset | Opcode | Stack |
+| -: | - | - |
+| 6C | PUSH2 0x0075 | 0x75 Value\* CALLVALUE 0 6 CALLVALUE
+| 6F | SWAP2        | CALLVALUE Value\* 0x75 0 6 CALLVALUE
+| 70 | SWAP1        | Value\* CALLVALUE 0x75 0 6 CALLVALUE
+| 71 | PUSH2 0x01a7 | 0x01A7 Value\* CALLVALUE 0x75 0 6 CALLVALUE
+| 74 | JUMP         |
+
+
+
+
+
 75	1	JUMPDEST
 76	1	SWAP1
 77	1	SWAP2
