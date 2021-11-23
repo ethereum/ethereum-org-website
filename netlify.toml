@@ -21,7 +21,6 @@
 
 [build.environment]
   NODE_VERSION = "14.18.1"
-  NODE_OPTIONS = "--max_old_space_size=3072"
 
 # Production context: all deploys from the Production branch set in your site's
 # deploy contexts will inherit these settings.
@@ -62,6 +61,10 @@
 # contexts no matter where you define them in the file.
 # For context-specific rules, use _headers or _redirects files, which are
 # PER-DEPLOY.
+
+# Implement @netlify/plugin-gatsby to use Netlify with Gatsby v4.
+[[plugins]]
+package = "@netlify/plugin-gatsby"
 
 # Legacy website pages
 [[redirects]]
@@ -375,6 +378,3 @@
     # Basic-Auth allows you to password protect your whole site.
     # This feature may not be available on all plans.
     # Basic-Auth = "someuser:somepassword anotheruser:anotherpassword"
-
-[[plugins]]
-package = "@netlify/plugin-gatsby"
