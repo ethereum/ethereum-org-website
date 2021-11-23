@@ -1245,6 +1245,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://www.NaturalDAO.io"><img src="https://avatars.githubusercontent.com/u/1388904?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Derek周朝晖</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=zhous" title="Documentation">📖</a> <a href="#translation-zhous" title="Translation">🌍</a></td>
     <td align="center"><a href="http://yenkel.dev"><img src="https://avatars.githubusercontent.com/u/3376731?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Damian Schenkelman</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=dschenkelman" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="http://www.sigasi.com"><img src="https://avatars.githubusercontent.com/u/735288?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hendrik Eeckhaut</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=heeckhau" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/womensrights"><img src="https://avatars.githubusercontent.com/u/65018876?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Susannah Evans</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=womensrights" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
