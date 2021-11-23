@@ -220,7 +220,15 @@ module.exports = {
       },
     },
     // Needed for `gatsby-image`
-    `gatsby-transformer-sharp`,
+    /**
+     * Currently you cannot use StaticImage or gatsby-transformer-sharp in SSR or DSG pages.
+     * The best workaround is to use an image CDN such as Cloudinary or imgix to host your images.
+     * https://www.gatsbyjs.com/docs/how-to/images-and-media/using-cloudinary-image-service/
+     * https://github.com/imgix/gatsby
+     * This will give you faster builds and rendering too.
+     */
+    // `gatsby-transformer-sharp`,
+    `gatsby-plugin-netlify`,
   ],
   // https://www.gatsbyjs.com/docs/reference/release-notes/v2.28/#feature-flags-in-gatsby-configjs
   flags: {
