@@ -60,7 +60,6 @@ This code does two things:
 
 ### The Handler at 0x5E (for non-ABI call data)
 
-This is the error handler code.
 
 | Offset | Opcode |
 | -----: | ------ |
@@ -156,7 +155,7 @@ If we get here (which requires the call data to be empty) we add to `Value*` the
 
 Finally, clear the stack (which isn't necessary) and signal the successful end of the transaction.
 
-
+### The Handler at 0x7C (4 < Call Data Size < 0)
 
 
 
