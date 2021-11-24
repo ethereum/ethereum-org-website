@@ -1251,6 +1251,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/eulerbeat"><img src="https://avatars.githubusercontent.com/u/52531715?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Minimalist Optimalist</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aeulerbeat" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://vluna.github.io/portfolio/"><img src="https://avatars.githubusercontent.com/u/8848639?v=4?s=100" width="100px;" alt=""/><br /><sub><b>vluna</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=vluna" title="Code">💻</a></td>
     <td align="center"><a href="https://arghyabiswas.me"><img src="https://avatars.githubusercontent.com/u/43907522?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Arghya Biswas</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=arghyab0" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/abhi-go"><img src="https://avatars.githubusercontent.com/u/86805484?v=4?s=100" width="100px;" alt=""/><br /><sub><b>abhi-go</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=abhi-go" title="Documentation">📖</a></td>
   </tr>
 </table>
 
