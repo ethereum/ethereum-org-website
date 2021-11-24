@@ -728,7 +728,7 @@ It looks like 0x08B3 is also a subroutine, one that goes on until the `JUMP` at 
 | 8B8	| PUSH1 0x40 | 0x40 0x24 (((first isClaimed parameter))) 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
 | 8BA	| MLOAD      | mload(0x40) 0x24 (((first isClaimed parameter))) 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
   
-Until we have a better idea of the use of 0x40 in this contract, I am just going to refer to it as `mload(0x40)` as [Yul](https://docs.soliditylang.org/en/v0.8.10/yul.html) does.
+Until we have a better idea of the use of memory location 0x40 in this contract, I am just going to refer to it as `mload(0x40)` as [Yul](https://docs.soliditylang.org/en/v0.8.10/yul.html) does.
   
 | Offset | Opcode | Stack |
 | --: | - | - |   
