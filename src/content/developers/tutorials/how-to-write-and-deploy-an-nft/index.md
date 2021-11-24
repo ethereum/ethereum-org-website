@@ -47,7 +47,7 @@ You can download and create a MetaMask account for free [here](https://metamask.
 
 ![Set Ropsten as your network](./metamask-ropsten.png)
 
-## Step 4: Add ether from a Faucet
+## Step 4: Add ether from a Faucet {#in-this-tutorial-youll-learn-how-to}
 
 In order to deploy our smart contract to the test network, we’ll need some fake ETH. To get ETH you can go to the [Ropsten faucet](https://faucet.ropsten.be/) and enter your Ropsten account address, then click “Send Ropsten ETH.” You should see ETH in your MetaMask account soon after!
 

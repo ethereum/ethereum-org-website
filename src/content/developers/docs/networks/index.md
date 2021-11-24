@@ -74,7 +74,7 @@ If a public Ethereum network is like the public internet, you can think of a con
 
 <!-- TODO
 
-## Interacting with testnets
+## Interacting with testnets {#in-this-tutorial-youll-learn-how-to}
 
 ### Your own local network {#your-own-local-network}
 
