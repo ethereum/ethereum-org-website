@@ -5540,6 +5540,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "eulerbeat",
+      "name": "Minimalist Optimalist",
+      "avatar_url": "https://avatars.githubusercontent.com/u/52531715?v=4",
+      "profile": "https://github.com/eulerbeat",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
