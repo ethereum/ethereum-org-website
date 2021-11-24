@@ -312,20 +312,25 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   })
 
-  // Create contentVersion v2.0 pages
-  // Check if outdatedMarkdown markdown page exists for another language, if they do, skip creating page-conditional page
+  // Create `/pages-conditional/` pages for each language unless a markdown page already exists.
+  // This avoids overwriting markdown pages with a component page of the same name.
+  // Note: once all these markdown pages have been replaced with updated JSON translation files,
+  // we can remove this logic and the `/pages-conditional/` directory.
   const outdatedMarkdown = [`eth`, `dapps`, `wallets`, `what-is-ethereum`]
   outdatedMarkdown.forEach((page) => {
-    const component = page
     supportedLanguages.forEach((lang) => {
-      const pathCheck = `${__dirname}/src/content/translations/${lang}/${component}/index.md`
-      if (!fs.existsSync(pathCheck, fs.constants.R_OK | fs.constants.W_OK)) {
+      const markdownPath = `${__dirname}/src/content/translations/${lang}/${page}/index.md`
+      const langHasOutdatedMarkdown = fs.existsSync(
+        markdownPath,
+        fs.constants.R_OK | fs.constants.W_OK
+      )
+      if (!langHasOutdatedMarkdown) {
         createPage({
           path: `/${lang}/${page}/`,
           component: path.resolve(
-            component === "wallets"
-              ? `./src/pages-conditional/${component}/index.js`
-              : `./src/pages-conditional/${component}.js`
+            page === "wallets"
+              ? `./src/pages-conditional/${page}/index.js`
+              : `./src/pages-conditional/${page}.js`
           ),
           context: {
             slug: `/${lang}/${page}/`,
@@ -345,8 +350,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 }
 
-// Only ran when creating component pages
 // Add additional context to translated pages
+// Only ran when creating component pages
 // https://www.gatsbyjs.com/docs/creating-and-modifying-pages/#pass-context-to-pages
 exports.onCreatePage = async ({ page, actions }) => {
   const { createPage, deletePage } = actions
