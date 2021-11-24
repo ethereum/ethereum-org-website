@@ -564,7 +564,7 @@ Do you feel you understand the contract at this point? I don't. So far we have t
 | Transfer | Accept the value provided by the call and increase `Value*` by that amount
 | [splitter()](#splitter) | Return Storage[3], the proxy address 
 | [currentWindow()](#currentwindow) | Return Storage[1]
-| [merkleRoot()(#merkeroot) | Return Storage[0]
+| [merkleRoot()](#merkeroot) | Return Storage[0]
 | [0x81e580d3](#0x81e580d3) | Return the value from a lookup table, provided the parameter is less than Storage[4]
 | [0x1f135823](#0x1f135823) | Return Storage[6], a.k.a. Value\*
   
@@ -577,4 +577,10 @@ But we know any other functionality is provided by the contract in Storage[3]. M
 When we [look at a contract](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f) we can also see the transaction that created it. 
   
 ![Click the create transaction](create-tx.png)
+  
+If we click that transaction, and then the **State** tab, we can see the initial values of the parameters. Specifically, we can see that Storage[3] contains [0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761](https://etherscan.io/address/0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761). That contract must contain the missing functionality. We can understand it using the same tools we used for the contract we are investigating.
+  
+  
+## The Proxy Contract {#the-proxy-contract}  
+  
   
