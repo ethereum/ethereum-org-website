@@ -5549,6 +5549,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "vluna",
+      "name": "vluna",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8848639?v=4",
+      "profile": "https://vluna.github.io/portfolio/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
