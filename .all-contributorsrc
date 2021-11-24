@@ -5576,6 +5576,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "fvictorio",
+      "name": "Franco Victorio",
+      "avatar_url": "https://avatars.githubusercontent.com/u/417134?v=4",
+      "profile": "https://github.com/fvictorio",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
