@@ -75,7 +75,7 @@ This snippet starts with a `JUMPDEST`. EVM (Ethereum virtual machine) programs t
 
 | Offset | Opcode | Stack (after opcode)
 | -: | - | - |
-| 64 | 	CALLVALUE | [wei](https://ethereum.org/en/glossary/#wei) provided by the call. Called `msg.value` in Solidity
+| 64 | 	CALLVALUE | [Wei](https://ethereum.org/en/glossary/#wei) provided by the call. Called `msg.value` in Solidity
 | 65 | PUSH1 0x06 | 6 CALLVALUE
 | 67 | PUSH1 0x00 | 0 6 CALLVALUE
 | 69 | DUP3       | CALLVALUE 0 6 CALLVALUE
@@ -227,10 +227,10 @@ Copy all the call data to memory, starting at 0x80.
 Now things are a lot clearer. This contract can act as a [proxy](https://blog.openzeppelin.com/proxy-patterns/), calling the address in Storage[3] to do the real work. `DELEGATE_CALL` calls a separate contract, but stays in the same storage. This means that the delegated contract, the one we are a proxy for, accesses the same storage space. The parameters for the call are:
 
 
-- *Gas* All the remaining gas 
-- *Called address* Storage[3]-as-address 
-- *Call data* The CALLDATASIZE bytes starting at 0x80, which is where we put the original call data
-- *Return data* None (0x00 - 0x00) We'll get the return data by other means (see below)
+- *Gas*: All the remaining gas 
+- *Called address*: Storage[3]-as-address 
+- *Call data*: The CALLDATASIZE bytes starting at 0x80, which is where we put the original call data
+- *Return data*:  None (0x00 - 0x00) We'll get the return data by other means (see below)
 
 
 
@@ -313,16 +313,16 @@ If no match is found, the code jumps to [the proxy handler at 0x7C](#the-handler
   
 ### splitter()   {#splitter}
   
-| Offset | Opcode |
-| -: | - | - | 
+| Offset | Opcode | Stack 
+| -: | - | - |
 | 103	| JUMPDEST |
-| 104	| CALLVALUE | 
-| 105	| DUP1 |
-| 106	| ISZERO |
-| 107	| PUSH2 0x010f |
-| 10A	| JUMPI |
-| 10B	|	PUSH1 0x00 |
-| 10D	| DUP1 |
+| 104	| CALLVALUE | CALLVALUE 
+| 105	| DUP1 | CALLVALUE CALLVALUE
+| 106	| ISZERO | CALLVALUE==0 CALLVALUE
+| 107	| PUSH2 0x010f | 0x010F CALLVALUE==0 CALLVALUE
+| 10A	| JUMPI | CALLVALUE
+| 10B	|	PUSH1 0x00 | 0x00 CALLVALUE
+| 10D	| DUP1 | 0x00 0x00 CALLVALUE
 | 10E	| REVERT |
   
 The first thing this function does is check that the call did not send any ETH. This function is not [`payable`](https://solidity-by-example.org/payable/). If somebody sent us ETH that much be a mistake and we want to `REVERT` to avoid having that ETH where they can't get it back.
@@ -375,7 +375,7 @@ In the case of `splitter()`, this returns the address for which we are a proxy. 
   
 ### currentWindow()  {#currentwindow}
   
-The code in offsets 0x158-0x163 is identical to what we saw in 0x103-0x10E in `splitter()`, so we know `currentWindow()` is also not `payable`. 
+The code in offsets 0x158-0x163 is identical to what we saw in 0x103-0x10E in `splitter()` (other than the `JUMPI` destination), so we know `currentWindow()` is also not `payable`. 
   
 | Offset | Opcode | Stack |
 | -: | - | - |
@@ -386,38 +386,181 @@ The code in offsets 0x158-0x163 is identical to what we saw in 0x103-0x10E in `s
 | 16B	| SLOAD | Storage[1] 0xDA
 | 16C	| DUP2 | 0xDA Storage[1] 0xDA
 | 16D	| JUMP | Storage[1] 0xDA
-| DA  | JUMPDEST | Storage[1] 0xDA
-| DB	| PUSH1 0x40 | 0x40 Storage[1] 0xDA
-| DD	| MLOAD | 0x80 Storage[1] 0xDA
-| DE	| SWAP1 | Storage[1] 0x80 0xDA
-| DF	| DUP2 | 0x80 Storage[1] 0x80 0xDA
+  
+
+#### The DA code {#the-da-code}  
+
+This code is also shared with other methods. So we'll call the value in the stack Y, and just remember that in `currentWindow()` the value of this Y is Storage[1].   
+
+| Offset | Opcode | Stack |
+| -: | - | - |   
+| DA  | JUMPDEST | Y 0xDA
+| DB	| PUSH1 0x40 | 0x40 Y 0xDA
+| DD	| MLOAD | 0x80 Y 0xDA
+| DE	| SWAP1 | Y 0x80 0xDA
+| DF	| DUP2 | 0x80 Y 0x80 0xDA
 | E0	| MSTORE | 0x80 0xDA
 
-Write Storage[1] to 0x80-0x9F.
+Write Y to 0x80-0x9F.
 
-  
 | Offset | Opcode | Stack |
 | -: | - | - |
 | E1 | PUSH1 0x20 | 0x20 0x80 0xDA
 | E3	| ADD | 0xA0 0xDA
 
-And the rest is already explained [above](#the-e4-code). So `currentWindow()` returns the 0x20 bytes in 0x80-0x9F, which are Storage[1].  
+And the rest is already explained [above](#the-e4-code). So jumps to 0xDA write the stack top (Y) to 0x80-0x9F, and return that value. In the case of `currentWindow()`, it returns Storage[1].
   
   
 ### merkleRoot()   {#merkleroot}
+  
+The code in offsets 0xED-0xF8 is identical to what we saw in 0x103-0x10E in `splitter()` (other than the `JUMPI` destination), so we know `merkleRoot()` is also not `payable`. 
+  
 
 | Offset | Opcode | Stack |
 | -: | - | - |  
+| F9 | JUMPDEST
+| FA |  POP
+| FB | PUSH2 0x00da | 0xDA
+| FE | PUSH1 0x00 | 0x00 0xDA 
+| 100	| SLOAD | Storage[0] 0xDA
+| 101	| DUP2 | 0xDA Storage[0] 0xDA
+| 102	| JUMP | Storage[0] 0xDA
+  
+What happens after the jump [we already figured out](#the-da-code). So `merkleRoot()` returns Storage[0].
   
   
 ### 0x81e580d3  {#0x81e580d3}
+  
+The code in offsets 0x138-0x143 is identical to what we saw in 0x103-0x10E in `splitter()` (other than the `JUMPI` destination), so we know this function is also not `payable`. 
+  
 
 | Offset | Opcode | Stack |
 | -: | - | - |
+| 144	| JUMPDEST
+| 145	| POP
+| 146	| PUSH2 0x00da | 0xDA
+| 149	| PUSH2 0x0153 | 0x0153 0xDA
+| 14C	| CALLDATASIZE | CALLDATASIZE 0x0153 0xDA
+| 14D	| PUSH1 0x04   | 0x04 CALLDATASIZE 0x0153 0xDA |
+| 14F	| PUSH2 0x018f | 0x018F 0x04 CALLDATASIZE 0x0153 0xDA |
+| 152	| JUMP         | 0x04 CALLDATASIZE 0x0153 0xDA |
+| 18F	| JUMPDEST     | 0x04 CALLDATASIZE 0x0153 0xDA |
+| 190	| PUSH1 0x00   | 0x00 0x04 CALLDATASIZE 0x0153 0xDA |
+| 192	| PUSH1 0x20   | 0x20 0x00 0x04 CALLDATASIZE 0x0153 0xDA |
+| 194	| DUP3         | 0x04 0x20 0x00 0x04 CALLDATASIZE 0x0153 0xDA |
+| 195	| DUP5         | CALLDATASIZE 0x04 0x20 0x00 0x04 CALLDATASIZE 0x0153 0xDA |
+| 196	| SUB          | CALLDATASIZE-4 0x20 0x00 0x04 CALLDATASIZE 0x0153 0xDA |
+| 197	| SLT          | CALLDATASIZE-4<32 0x00 0x04 CALLDATASIZE 0x0153 0xDA |
+| 198	| ISZERO       | CALLDATASIZE-4>=32 0x00 0x04 CALLDATASIZE 0x0153 0xDA |
+| 199	| PUSH2 0x01a0 | 0x01A0 CALLDATASIZE-4>=32 0x00 0x04 CALLDATASIZE 0x0153 0xDA |
+| 19C	| JUMPI        | 0x00 0x04 CALLDATASIZE 0x0153 0xDA |
 
+It looks like this function takes at least 32 bytes (one word) of call data. If it doesn't get it:
+
+  
+| Offset | Opcode | Stack |
+| -: | - | - |  
+| 19D | DUP1 | 0x00 0x00 0x04 CALLDATASIZE 0x0153 0xDA | 
+| 19E	| DUP2 | 0x00 0x00 0x00 0x04 CALLDATASIZE 0x0153 0xDA |
+| 19F	| REVERT  
+  
+The transaction is reverted without any return data.
+
+  
+Let's see what happens if the function *does* get the call data it needs.
+
+| Offset | Opcode | Stack |
+| -: | - | - | 
+| 1A0	| JUMPDEST | 0x00 0x04 CALLDATASIZE 0x0153 0xDA | 
+| 1A1	| POP | 0x04 CALLDATASIZE 0x0153 0xDA |
+| 1A2	| CALLDATALOAD | calldataload(4) CALLDATASIZE 0x0153 0xDA |
+  
+`calldataload(4)` is the first word of the call data *after* the method signature
+  
+| Offset | Opcode | Stack |
+| -: | - | - |   
+| 1A3	| SWAP2        | 0x0153 CALLDATASIZE calldataload(4)  0xDA
+| 1A4	|	SWAP1        | CALLDATASIZE 0x0153 calldataload(4) 0xDA
+| 1A5	| POP          | 0x0153 calldataload(4)  0xDA
+| 1A6	| JUMP         | calldataload(4)  0xDA
+| 153	| JUMPDEST     | calldataload(4)  0xDA
+| 154	| PUSH2 0x016e | 0x016E calldataload(4)  0xDA
+| 157	| JUMP         | calldataload(4) 0xDA  
+| 16E	| JUMPDEST     | calldataload(4) 0xDA
+| 16F	| PUSH1 0x04   | 0x04 calldataload(4) 0xDA
+| 171	| DUP2         | calldataload(4) 0x04 calldataload(4) 0xDA
+| 172	| DUP2         | 0x04 calldataload(4) 0x04 calldataload(4) 0xDA
+| 173	| SLOAD        | Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA
+| 174	| DUP2         | calldataload(4) Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA
+| 175	| LT           | calldataload(4)<Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA
+| 176	| PUSH2 0x017e | 0x017EC calldataload(4)<Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA
+| 179	| JUMPI        | calldataload(4) 0x04 calldataload(4) 0xDA
+  
+  
+If the first word is not less than Storage[4], the function fails. It reverts without any returned value:
+  
+| Offset | Opcode | Stack |
+| -: | - | - | 
+| 17A	| PUSH1 0x00 | 0x00 ...
+| 17C	| DUP1 | 0x00 0x00 ...
+| 17D	| REVERT 
+  
+If the calldataload(4) is less than Storage[4], we get this code:  
+  
+| Offset | Opcode | Stack |
+| -: | - | - | 
+| 17E	| JUMPDEST | calldataload(4) 0x04 calldataload(4) 0xDA
+| 17F	| PUSH1 0x00 | 0x00 calldataload(4) 0x04 calldataload(4) 0xDA
+| 181	| SWAP2      | 0x04 calldataload(4) 0x00 calldataload(4) 0xDA
+| 182	| DUP3       | 0x00 0x04 calldataload(4) 0x00 calldataload(4) 0xDA
+| 183	| MSTORE     | calldataload(4) 0x00 calldataload(4) 0xDA
+  
+And memory locations 0x00-0x1F now contain the data 0x04 (0x00-0x1E are all zeros, 0x1F is four)
+
+| Offset | Opcode | Stack |
+| -: | - | - | 
+| 184	| PUSH1 0x20 | 0x20 calldataload(4) 0x00 calldataload(4) 0xDA
+| 186	| SWAP1 | calldataload(4) 0x20 0x00 calldataload(4) 0xDA
+| 187	| SWAP2 | 0x00 0x20 calldataload(4) calldataload(4) 0xDA
+| 188	| SHA3  | <SHA3 of 0x00-0x1F> calldataload(4) calldataload(4) 0xDA
+| 189	| ADD   | <SHA3 of 0x00-0x1F>+calldataload(4) calldataload(4) 0xDA
+| 18A	| SLOAD | Storage[<SHA3 of 0x00-0x1F> + calldataload(4)] calldataload(4) 0xDA
+  
+So there is a lookup table in storage, which starts at the SHA3 of 0x000...0004 and has an entry for every legitimate call data value (value below Storage[4]).
+  
+
+| Offset | Opcode | Stack |
+| -: | - | - | 
+| 18B	|	SWAP1 | calldataload(4) Storage[<SHA3 of 0x00-0x1F> + calldataload(4)] 0xDA
+| 18C	| POP   | Storage[<SHA3 of 0x00-0x1F> + calldataload(4)] 0xDA
+| 18D	| DUP2  | 0xDA Storage[<SHA3 of 0x00-0x1F> + calldataload(4)] 0xDA
+| 18E	| JUMP  | Storage[<SHA3 of 0x00-0x1F> + calldataload(4)] 0xDA
+  
+We already know what [the code at offset 0xDA](#the-da-code) does, it returns the stack top value to the caller. So this function returns the value from the lookup table to the caller. 
+  
   
 ### 0x1f135823  {#0x1f135823}
 
+The code in offsets 0xC4-0xCF is identical to what we saw in 0x103-0x10E in `splitter()` (other than the `JUMPI` destination), so we know this function is also not `payable`.  
+  
 | Offset | Opcode | Stack |
 | -: | - | - |  
+| D0 | JUMPDEST
+| D1 | POP
+| D2 | PUSH2 0x00da | 0xDA
+| D5 | PUSH1 0x06   | 0x06 0xDA
+| D7 | SLOAD        | Value\* 0xDA
+| D8 | DUP2         | 0xDA Value\* 0xDA
+| D9 | JUMP         | Value\* 0xDA
   
+We already know what [the code at offset 0xDA](#the-da-code) does, it returns the stack top value to the caller. So this function returns `Value*`.
+  
+## The Constructor {#the-constructor}
+  
+Do you feel you understand the contract at this point? I don't. So far we have these methods:
+  
+| Method | Meaning |
+| - | - | 
+| Transfer | Accept the value provided by the call and increase `Value*` by that amount
+| splitter() | Return Storage[3], the proxy address 
+| 
