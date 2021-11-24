@@ -234,6 +234,7 @@ Now things are a lot clearer. This contract can act as a [proxy](https://blog.op
 | Return data | None (0x00 - 0x00) We'll get the return data by other means (see below)
 
 
+
 | Offset | Opcode | Stack |
 | -: | - | - | 
 | B0 | RETURNDATASIZE | RETURNDATASIZE <call success/failure> 0x80 Storage[3]-as-address
@@ -244,19 +245,25 @@ Now things are a lot clearer. This contract can act as a [proxy](https://blog.op
 
 Here we copy all the return data to the memory buffer starting at 0x80. 
 
+
 | Offset | Opcode | Stack |
 | -: | - | - | 
 | B6 | DUP2 | <call success/failure> RETURNDATASIZE <call success/failure> 0x80 Storage[3]-as-address |
-| B7 | DUP1 | <call success/failure> <call success/failure> RETURNDATASIZE <call success/failure> 0x80 Storage[3]-as-address
-| B8 | ISZERO | <did the call fail> <call success/failure> RETURNDATASIZE <call success/failure> 0x80 Storage[3]-as-address
+| B7 | DUP1 | <call success/failure> <call success/failure> RETURNDATASIZE <call success/failure> 0x80 Storage[3]-as-address |
+| B8 | ISZERO |  <did the call fail> <call success/failure> RETURNDATASIZE <call success/failure> 0x80 Storage[3]-as-address |
 | B9 | PUSH2 0x00c0 | 0xC0 <did the call fail> <call success/failure> RETURNDATASIZE <call success/failure> 0x80 Storage[3]-as-address
 | BC | JUMPI | <call success/failure> RETURNDATASIZE <call success/failure> 0x80 Storage[3]-as-address
 | BD | DUP2  | RETURNDATASIZE <call success/failure> RETURNDATASIZE <call success/failure> 0x80 Storage[3]-as-address
 | BE | DUP5  | 0x80 RETURNDATASIZE <call success/failure> RETURNDATASIZE <call success/failure> 0x80 Storage[3]-as-address
-| BF | RETURN |
+| BF | RETURN | |
+  
+  
+  
+  
   
 So after the call we copy the return data to the buffer 0x80 - 0x80+RETURNDATASIZE, and if the call is successful we then `RETURN` with exactly that buffer.  
- 
+
+  
 ### DELEGATECALL Failed
   
 If we get here, to 0xC0, it means that the contract we called reverted. As we are just a proxy for that contract, we want to return the same data and also revert. 
@@ -266,6 +273,59 @@ If we get here, to 0xC0, it means that the contract we called reverted. As we ar
 | C0 | JUMPDEST | <call success/failure> RETURNDATASIZE <call success/failure> 0x80 Storage[3]-as-address
 | C1 | DUP2 | RETURNDATASIZE <call success/failure> RETURNDATASIZE <call success/failure> 0x80 Storage[3]-as-address
 | C2 | DUP5 | 0x80 RETURNDATASIZE <call success/failure> RETURNDATASIZE <call success/failure> 0x80 Storage[3]-as-address
-| C3 | REVERT
+| C3 | REVERT |
+
   
 So we `REVERT` with the same buffer we used for `RETURN` earlier:  0x80 - 0x80+RETURNDATASIZE
+
+  
+## ABI calls
+  
+If the call data size is four bytes or more this might be a valid ABI call. 
+  
+| Offset | Opcode | Stack |
+| -: | - | - |   
+| D	 |PUSH1 0x00 | 0x00
+| F	 | CALLDATALOAD | <First word (256 bits) of the call data>
+| 10 | PUSH1 0xe0   | 0xE0 <First word (256 bits) of the call data>
+| 12 | SHR | <first 32 bits (4 bytes) of the call data>
+  
+Etherscan tells us that `1C` is an unknown opcode, because [it was added after Etherscan wrote this feature](https://eips.ethereum.org/EIPS/eip-145) and they haven't updated it. An [up to data opcode table](https://github.com/wolflo/evm-opcodes) shows us that this is shift right
+  
+| Offset | Opcode | Stack |
+| -: | - | - |   
+| 13 | DUP1 | <first 32 bits (4 bytes) of the call data> <first 32 bits (4 bytes) of the call data>
+| 14 | PUSH4 0x3cd8045e | 0x3CD8045E <first 32 bits (4 bytes) of the call data> <first 32 bits (4 bytes) of the call data>
+| 19 | GT | 0x3CD8045E>first-32-bits-of-the-call-data  <first 32 bits (4 bytes) of the call data>
+| 1A | PUSH2 0x0043 | 0x43 0x3CD8045E>first-32-bits-of-the-call-data  <first 32 bits (4 bytes) of the call data>
+| 1D | JUMPI | <first 32 bits (4 bytes) of the call data>
+  
+By dividing the method signature matching tests in two like this saves half the tests on average. The code that immediately follows this and the code in 0x43 follow the same pattern: `DUP1` the first 32 bits of the call data, `PUSH4 <method signature>`, run `EQ` to check for equality, and then `JUMPI` if the method signature matches. Here are the method signatures and their addresses:
+  
+| Method signature | Offset to jump into |
+| - | - |
+| 0x3cd8045e | 0x0103 |
+| 0x81e580d3 | 0x0138 |
+| 0xba0bafb4 | 0x0158 |
+| 0x1f135823 | 0x00C4 |
+| 0x2eb4a7ab | 0x00ED |
+
+If no match is found, the code jumps to 0x7C.
+  
+### No match found  
+  
+If no match is found, we assume that we need to be a proxy, and the contract as Storage[3] might have the appropriate method. We still have the first 32 bits of the call data in the stack, but they are irrelevant so I won't bother adding them on each line
+  
+| Offset | Opcode | Stack |
+| -: | - | - |   
+| 7C | JUMPDEST | 
+| 7D | PUSH1 0x00 | 0x00
+| 7F | PUSH2 0x009d | 0x9D 0x00
+| 82 | PUSH1 0x03 | 0x03 0x9D 0x00
+| 84 | SLOAD      | Storage[3] 0x9D 0x00
+| 85 | PUSH20 0xffffffffffffffffffffffffffffffffffffffff | 0xFF...FF Storage[3] 0x9D 0x00
+| 9A | AND | Proxy-address 0x9D 0x00
+| 9B | SWAP1 | 0x9D Proxy-address 0x00
+| 9C | JUMP  | Proxy-address 0x00
+  
+  
