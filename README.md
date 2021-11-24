@@ -1254,6 +1254,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/abhi-go"><img src="https://avatars.githubusercontent.com/u/86805484?v=4?s=100" width="100px;" alt=""/><br /><sub><b>abhi-go</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=abhi-go" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/fvictorio"><img src="https://avatars.githubusercontent.com/u/417134?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Franco Victorio</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=fvictorio" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://kevinjones.engineer"><img src="https://avatars.githubusercontent.com/u/20748598?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kevin Jones</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=joneskj55" title="Code">💻</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ajoneskj55" title="Bug reports">🐛</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
