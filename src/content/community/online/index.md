@@ -11,6 +11,8 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 
 ## Forums
 
+<!-- - ![POAP Logo](src/assets/poap-logo.svg) POAP -->
+
 - [r/ethereum](https://www.reddit.com/r/ethereum/) - _all things Ethereum_ <Icon name="youtube" />
 - [r/ethfinance](https://www.reddit.com/r/ethfinance/) - _the financial side of Ethereum, including DeFi_
 - [r/ethdev](https://www.reddit.com/r/ethdev/) - _focused on Ethereum development_
@@ -23,8 +25,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 
 ## Chat rooms
 
-- <Icon name="discord" /> [Eth R&D Discord server](https://discord.gg/qGpsxSA)
-- <Icon name="discord" /> [Ethereum Gitter](https://gitter.im/ethereum/home) - _chat room for the Ethereum GitHub repo_
+- <Icon name="discord" /> <a href="https://gitter.im/ethereum/home">Ethereum Gitter</a> - <i>chat room for the Ethereum GitHub repo</i>
 - [Ethereum Cat Herders](https://discord.gg/tzYmDmF) - _community oriented around offering project management support to Ethereum development_
 - [Ethereum Hackers](https://ethglobal.co/discord) - _Discord chat run by [ETHGlobal](https://www.ethglobal.co/): an online community for Ethereum hackers all over the world_
 - [CryptoDevs Discord](https://discord.gg/5W5tVb3) - _Ethereum development focused Discord community_
