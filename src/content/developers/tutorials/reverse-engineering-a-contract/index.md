@@ -17,7 +17,7 @@ There are reverse compilers, but they don't always produce [usable results](http
 
 To be able to understand this article you should already know the basics of the EVM, and be at least somewhat familiar with EVM assembler. [You read about about these topics here](https://medium.com/mycrypto/the-ethereum-virtual-machine-how-does-it-work-9abac2b7c9e).
 
-## Prepare the Executable Code
+## Prepare the Executable Code {#prepare-the-executable-code}
 
 You can get the opcodes by going to Etherscan for the contract, clicking the **Contract** tab and then **Switch of Opcodes View**. You get a view that is one opcode per line.
 
@@ -41,7 +41,7 @@ In `A1` put the first offest, zero. Then, in `A2`, put this function and again c
 
 We need this function to give us the hexadecimal value because the values that are pushed prior to jumps (`JUMP` and `JUMPI`) are given to us in hexadecimal. 
 
-## The Entry Point (0x00)
+## The Entry Point (0x00) {#the-entry-point-0x00}
 
 Contracts are always executed from the first byte. This is the initial part of the code:
 
@@ -60,7 +60,7 @@ This code does two things:
 1. Write 0x80 as a 32 byte value to memory locations 0x40-0x5F (0x80 is stored in 0x5F, and 0x40-0x5E are all zeroes).
 2. Read the calldata size. Normally the call data for an Ethereum contract follows [the ABI (application binary interface)](https://docs.soliditylang.org/en/v0.8.10/abi-spec.html), which at a minimum requires four bytes for the function selector. If the call data size is less than four, jump to 0x5E.
 
-### The Handler at 0x5E (for non-ABI call data)
+### The Handler at 0x5E (for non-ABI call data) {#the-handler-at-0x5e-for-non-abi-call-data}
 
 
 | Offset | Opcode |
@@ -158,7 +158,7 @@ If we get here (which requires the call data to be empty) we add to `Value*` the
 Finally, clear the stack (which isn't necessary) and signal the successful end of the transaction.
 
 
-## The Handler at 0x7C 
+## The Handler at 0x7C {#the-handler-at-0x7c}
 
 I purposely did not put in the heading what this handler does. The point isn't to teach you how this specific contract works, but how to reverse engineer contracts. You will learn what it does the same way I did, by following the code.
 
@@ -264,7 +264,7 @@ Here we copy all the return data to the memory buffer starting at 0x80.
 So after the call we copy the return data to the buffer 0x80 - 0x80+RETURNDATASIZE, and if the call is successful we then `RETURN` with exactly that buffer.  
 
   
-### DELEGATECALL Failed
+### DELEGATECALL Failed {#delegatecall-failed}
   
 If we get here, to 0xC0, it means that the contract we called reverted. As we are just a proxy for that contract, we want to return the same data and also revert. 
   
@@ -279,7 +279,7 @@ If we get here, to 0xC0, it means that the contract we called reverted. As we ar
 So we `REVERT` with the same buffer we used for `RETURN` earlier:  0x80 - 0x80+RETURNDATASIZE
 
   
-## ABI calls
+## ABI calls {#abi-calls}
   
 If the call data size is four bytes or more this might be a valid ABI call. 
   
