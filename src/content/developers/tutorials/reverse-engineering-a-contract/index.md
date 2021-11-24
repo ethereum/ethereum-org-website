@@ -124,7 +124,7 @@ The `NOT` is bitwise, so it reverses the value of every bit in the call value.
 | 1AF	|	PUSH2 0x01df | 0x01DF Value\*<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE
 | 1B2	|	JUMPI
 
-We jump if Value\* is smaller than 2^256-CALLVALUE-1 or equal to it. This looks like logic to prevent overflow. And indeed, we see that after a few nonsense operations (writing to memory is about to get deleted, for example) at offset 0x01DE the contract reverts if the overflow is detected, which is normal behavior.
+We jump if `Value*` is smaller than 2^256-CALLVALUE-1 or equal to it. This looks like logic to prevent overflow. And indeed, we see that after a few nonsense operations (writing to memory is about to get deleted, for example) at offset 0x01DE the contract reverts if the overflow is detected, which is normal behavior.
 
 Note that such an overflow is extremely unlikely, because it would require the call value plus `Value*` to be comparable to 2^256 wei, about 10^59 ETH. [The total ETH supply, at writing, is less than two hundred million](https://etherscan.io/stat/supply).
 
@@ -310,22 +310,4 @@ By dividing the method signature matching tests in two like this saves half the 
 | 0x1f135823 | 0x00C4 |
 | 0x2eb4a7ab | 0x00ED |
 
-If no match is found, the code jumps to 0x7C.
-  
-### No match found  
-  
-If no match is found, we assume that we need to be a proxy, and the contract as Storage[3] might have the appropriate method. We still have the first 32 bits of the call data in the stack, but they are irrelevant so I won't bother adding them on each line
-  
-| Offset | Opcode | Stack |
-| -: | - | - |   
-| 7C | JUMPDEST | 
-| 7D | PUSH1 0x00 | 0x00
-| 7F | PUSH2 0x009d | 0x9D 0x00
-| 82 | PUSH1 0x03 | 0x03 0x9D 0x00
-| 84 | SLOAD      | Storage[3] 0x9D 0x00
-| 85 | PUSH20 0xffffffffffffffffffffffffffffffffffffffff | 0xFF...FF Storage[3] 0x9D 0x00
-| 9A | AND | Proxy-address 0x9D 0x00
-| 9B | SWAP1 | 0x9D Proxy-address 0x00
-| 9C | JUMP  | Proxy-address 0x00
-  
-  
+If no match is found, the code jumps to the proxy handler at 0x7C.
