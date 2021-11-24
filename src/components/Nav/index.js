@@ -161,6 +161,10 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           to: "/dapps/",
         },
         {
+          text: "run-a-node",
+          to: "/run-a-node/",
+        },
+        {
           text: "page-stablecoins-title",
           to: "/stablecoins/",
         },
