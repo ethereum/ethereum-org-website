@@ -156,9 +156,11 @@ If we get here (which requires the call data to be empty) we add to `Value*` the
 Finally, clear the stack (which isn't necessary) and signal the successful end of the transaction.
 
 
-### The Handler at 0x7C (0 > Call Data Size > 4)
+### The Handler at 0x7C 
 
-If there is call data, but less than four bytes of it, we arrive here. When we get here the stack is empty.
+We get here from several places:
+* If there is call data of 1, 2, or 3 bytes (from offset 0x63)
+* 
 
 
 | Offset | Opcode | Stack |
@@ -169,7 +171,7 @@ If there is call data, but less than four bytes of it, we arrive here. When we g
 | 82 | PUSH1 0x03   | 0x03 0x9D 0x00
 | 84 | SLOAD        | Storage[3] 0x9D 0x00
 
-This is another storage cell, one that I couldn't find in any transactions so it's harder to know what it means.
+This is another storage cell, one that I couldn't find in any transactions so it's harder to know what it means. The code below will make it clearer.
 
 
 | Offset | Opcode | Stack |
@@ -190,21 +192,44 @@ This just is superflous, since we're going to the next opcode. This code isn't n
 | Offset | Opcode | Stack |
 | -: | - | - | 
 | 9D | JUMPDEST | Storage[3]-as-address 0x00
-9E	1	SWAP1
-9F	1	POP
-A0	2	PUSH1 0x40
-A2	1	MLOAD
-A3	1	CALLDATASIZE
-A4	2	PUSH1 0x00
-A6	1	DUP3
-A7	1	CALLDATACOPY
-A8	2	PUSH1 0x00
-AA	1	DUP1
-AB	1	CALLDATASIZE
-AC	1	DUP4
-AD	1	DUP6
-AE	1	GAS
-AF	1	DELEGATE_CALL
+| 9E | SWAP1    | 0x00 Storage[3]-as-address
+| 9F | POP      | Storage[3]-as-address
+| A0 | PUSH1 0x40 | 0x40 Storage[3]-as-address
+| A2 | MLOAD      | Mem[0x40] Storage[3]-as-address
+
+In the very beginning of the code we set Mem[0x40] to 0x80. If we look for 0x40 later, we see that we don't change it - so we can assume it is 0x80.
+
+
+| Offset | Opcode | Stack |
+| -: | - | - | 
+| A3 | CALLDATASIZE | CALLDATASIZE 0x80 Storage[3]-as-address
+| A4 | PUSH1 0x00   | 0x00 CALLDATASIZE 0x80 Storage[3]-as-address
+| A6 | DUP3         | 0x80 0x00 CALLDATASIZE 0x80 Storage[3]-as-address
+| A7 | CALLDATACOPY | 0x80 Storage[3]-as-address
+
+Copy all the call data to memory, starting at 0x80.
+
+
+| Offset | Opcode | Stack |
+| -: | - | - | 
+| A8 | PUSH1 0x00    | 0x00 0x80 Storage[3]-as-address
+| AA | DUP1          | 0x00 0x00 0x80 Storage[3]-as-address
+| AB | CALLDATASIZE  | CALLDATASIZE 0x00 0x00 0x80 Storage[3]-as-address
+| AC | DUP4          | 0x80 CALLDATASIZE 0x00 0x00 0x80 Storage[3]-as-address
+| AD | DUP6          | Storage[3]-as-address 0x80 CALLDATASIZE 0x00 0x00 0x80 Storage[3]-as-address
+| AE | GAS           | GAS Storage[3]-as-address 0x80 CALLDATASIZE 0x00 0x00 0x80 Storage[3]-as-address
+| AF | DELEGATE_CALL |
+
+Now things are a lot clearer. This contract can act as a [proxy](https://blog.openzeppelin.com/proxy-patterns/), calling the address in Storage[3] to do the real work. `DELEGATE_CALL` calls a separate contract, but stays in the same storage. This means that the delegated contract, the one we are a proxy for, accesses the same storage space. The parameters for the call are:
+
+| Parameter | Value |
+| - | - |
+| Gas | All the remaining gas 
+| Called address | Storage[3]-as-address 
+| Call data | The CALLDATASIZE bytes starting at 0x80, which is where we put the original call data
+| Return data | None (0x00 - 0x00) We'll get the return data by other means (see below)
+
+
 B0	1	RETURNDATASIZE
 B1	1	DUP1
 B2	2	PUSH1 0x00
