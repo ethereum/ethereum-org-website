@@ -226,12 +226,11 @@ Copy all the call data to memory, starting at 0x80.
 
 Now things are a lot clearer. This contract can act as a [proxy](https://blog.openzeppelin.com/proxy-patterns/), calling the address in Storage[3] to do the real work. `DELEGATE_CALL` calls a separate contract, but stays in the same storage. This means that the delegated contract, the one we are a proxy for, accesses the same storage space. The parameters for the call are:
 
-| Parameter | Value |
-| - | - |
-| Gas | All the remaining gas 
-| Called address | Storage[3]-as-address 
-| Call data | The CALLDATASIZE bytes starting at 0x80, which is where we put the original call data
-| Return data | None (0x00 - 0x00) We'll get the return data by other means (see below)
+
+- *Gas* All the remaining gas 
+- *Called address* Storage[3]-as-address 
+- *Call data* The CALLDATASIZE bytes starting at 0x80, which is where we put the original call data
+- *Return data* None (0x00 - 0x00) We'll get the return data by other means (see below)
 
 
 
