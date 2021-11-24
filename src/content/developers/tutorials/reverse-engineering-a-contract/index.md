@@ -309,4 +309,14 @@ By dividing the method signature matching tests in two like this saves half the 
 | ??? | 0x1f135823 | 0x00C4 |
 | [merkleRoot()](https://www.4byte.directory/signatures/?bytes4_signature=0x2eb4a7ab) | 0x2eb4a7ab | 0x00ED |
 
-If no match is found, the code jumps to [the proxy handler at 0x7C](#the-handler-at-0x7c), in the hope that the contract to which we are a proxy might have a match.
+If no match is found, the code jumps to [the proxy handler at 0x7C](#the-handler-at-0x7c), in the hope that the contract to which we are a proxy has a match.
+  
+### splitter()
+  
+### currentWindow()
+  
+### merkleRoot()
+  
+### 0x81e580d3
+  
+### 0x1f135823
