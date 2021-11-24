@@ -555,12 +555,26 @@ The code in offsets 0xC4-0xCF is identical to what we saw in 0x103-0x10E in `spl
   
 We already know what [the code at offset 0xDA](#the-da-code) does, it returns the stack top value to the caller. So this function returns `Value*`.
   
-## The Constructor {#the-constructor}
+### Method Summary {#method-summary}
   
 Do you feel you understand the contract at this point? I don't. So far we have these methods:
   
 | Method | Meaning |
 | - | - | 
 | Transfer | Accept the value provided by the call and increase `Value*` by that amount
-| splitter() | Return Storage[3], the proxy address 
-| 
+| [splitter()](#splitter) | Return Storage[3], the proxy address 
+| [currentWindow()](#currentwindow) | Return Storage[1]
+| [merkleRoot()(#merkeroot) | Return Storage[0]
+| [0x81e580d3](#0x81e580d3) | Return the value from a lookup table, provided the parameter is less than Storage[4]
+| [0x1f135823](#0x1f135823) | Return Storage[6], a.k.a. Value\*
+  
+  
+But we know any other functionality is provided by the contract in Storage[3]. Maybe if we knew what that contract is it'll give us a clue. Thankfully, this is the blockchain and everything is known, at least in theory. We didn't see any methods that set Storage[3], so it must have been set by the constructor.
+  
+  
+## The Constructor {#the-constructor}
+  
+When we [look at a contract](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f) we can also see the transaction that created it. 
+  
+![Click the create transaction](create-tx.png)
+  
