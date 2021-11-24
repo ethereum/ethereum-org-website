@@ -311,12 +311,12 @@ By dividing the method signature matching tests in two like this saves half the 
 
 If no match is found, the code jumps to [the proxy handler at 0x7C](#the-handler-at-0x7c), in the hope that the contract to which we are a proxy has a match.
   
-### splitter()
+### splitter()   {#splitter}
   
-### currentWindow()
+### currentWindow()  {#currentwindow}
   
-### merkleRoot()
+### merkleRoot()   {#merkleroot}
   
-### 0x81e580d3
+### 0x81e580d3  {#0x81e580d3}
   
-### 0x1f135823
+### 0x1f135823  {#0x1f135823}
