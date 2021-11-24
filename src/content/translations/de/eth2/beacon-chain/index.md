@@ -9,7 +9,7 @@ summaryPoints:
   [
     "Die Beacon Chain selbst ändert nichts an der heutigen Verwendung von Ethereum.",
     "Ihre Aufgabe wird die Koordination des Eth2-Netzwerks sein.",
-    "Sie führt Proof-of-Stake ins Ethereum-System ein.",
+    "Sie führt proof-of-stake ins Ethereum-System ein.",
     'In den verschiedenen technischen Entwicklungsstufen ist darunter die "Phase 0" gemeint.',
   ]
 ---
@@ -28,7 +28,7 @@ Mit der Zeit können sich Aufgabe und Rolle der Beacon Chain zwar verändern, si
 
 ### Einführung ins Staking {#introducing-staking}
 
-Die Beacon Chain wird [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/) für Ethereum einführen. Dies eröffnet neue Möglichkeiten für die Beteiligung an der Sicherheit des Ethereum-Netzwerks. Man kann es sich als frei verfügbares Gut vorstellen, das Ethereum vitaler macht und dir dabei im Prozess einige ETH einbringt. In der Praxis bedeutet das, ETH einzusetzen, um die Validierungssoftware zu aktivieren. Als Validator verarbeitest du Transaktionen auf der Blockchain und beteiligst dich an der Erstellung neuer Blöcke.
+Die Beacon Chain wird [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) für Ethereum einführen. Dies eröffnet neue Möglichkeiten für die Beteiligung an der Sicherheit des Ethereum-Netzwerks. Man kann es sich als frei verfügbares Gut vorstellen, das Ethereum vitaler macht und dir dabei im Prozess einige ETH einbringt. In der Praxis bedeutet das, ETH einzusetzen, um die Validierungssoftware zu aktivieren. Als Validator verarbeitest du Transaktionen auf der Blockchain und beteiligst dich an der Erstellung neuer Blöcke.
 
 Das Staking als Validator ist einfacher, als das [Mining](/developers/docs/mining/) (wie das Netzwerk momentan gesichert wird). Langfristig besteht die Hoffnung darin, Ethereum durch Staking noch sicherer zu machen. Je mehr Leute sich aktiv am Netzwerk beteiligen, desto dezentraler und damit robuster und sicherer ist Ethereum gegen potentielle Angriffe.
 
@@ -50,13 +50,13 @@ Die Eth2-Upgrades sind alle miteinander verknüpft. Zusammenfassend wirkt sich d
 
 ### Mainnet und die Beacon Chain {#mainnet-and-beacon-chain}
 
-Zu Beginn wird die Beacon Chain parallel und als separate Blockchain zum heutigen Ethereum-Mainnet existieren. Letztlich werden jedoch beide verbunden sein. Der Plan ist, das Mainnet an das Proof-of-Stake-System "anzudocken", welches von der Beacon Chain kontrolliert und koordiniert wird.
+Zu Beginn wird die Beacon Chain parallel und als separate Blockchain zum heutigen Ethereum-Mainnet existieren. Letztlich werden jedoch beide verbunden sein. Der Plan ist, das Mainnet an das proof-of-stake-system "anzudocken", welches von der Beacon Chain kontrolliert und koordiniert wird.
 
 <ButtonLink to="/eth2/merge/">Das Andocken</ButtonLink>
 
 ### Shards und die Beacon Chain {#shards-and-beacon-chain}
 
-Shard Chains können nur dann sicher ins Ethereum-Netzwerk eingeführt werden, wenn ein funktionierender Proof-of-Stake-Konsensmechanismus bereits etabliert ist. Mit der Beacon Chain wird Staking eingeführt, wodurch der Weg für das Shard Chains-Upgrade geebnet wird.
+Shard Chains können nur dann sicher ins Ethereum-Netzwerk eingeführt werden, wenn ein funktionierender proof-of-stake-Konsensmechanismus bereits etabliert ist. Mit der Beacon Chain wird Staking eingeführt, wodurch der Weg für das Shard Chains-Upgrade geebnet wird.
 
 <ButtonLink to="/eth2/shard-chains/">Shard Chains</ButtonLink>
 

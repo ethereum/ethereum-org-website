@@ -43,7 +43,7 @@ An Application Programming Interface (API) is a set of definitions for how to us
 
 In [Solidity](#solidity), `assert(false)` compiles to `0xfe`, an invalid opcode, which uses up all remaining [gas](#gas) and reverts all changes. When an `assert()` statement fails, something very wrong and unexpected is happening, and you will need to fix your code. You should use `assert()` to avoid conditions that should never, ever occur.
 
-<DocLink to="/developers/docs/security/" title="Security" />
+<DocLink to="/developers/docs/smart-contracts/security/" title="Smart contract security" />
 
 ### attestation {#attestation}
 
@@ -368,7 +368,7 @@ A [transaction](#transaction) sent from a [contract account](#contract-account) 
 
 Also known as a "password stretching algorithm," it is used by [keystore](#keystore-file) formats to protect against brute-force, dictionary, and rainbow table attacks on passphrase encryption, by repeatedly hashing the passphrase.
 
-<DocLink to="/developers/docs/security/" title="Security" />
+<DocLink to="/developers/docs/smart-contracts/security/" title="Smart contract security" />
 
 ### keccak-256 {#keccak-256}
 
@@ -473,6 +473,12 @@ A [rollup](#rollups) of transactions that use [fraud proofs](#fraud-proof) to of
 
 <DocLink to="/developers/docs/scaling/layer-2-rollups/#optimistic-rollups" title="Optimistic Rollups" />
 
+### Oracle {#oracle}
+
+An oracle is a bridge between the [blockchain](#blockchain) and the real world. They act as on-chain [APIs](#api) that can be queried for information and used in [smart contracts](#smart-contract).
+
+<DocLink to="/developers/docs/oracles/" title="Oracles" />
+
 <Divider />
 
 ## P {#section-p}
@@ -491,17 +497,17 @@ An off-chain scaling solution that uses [fraud proofs](#fraud-proof), like [Opti
 
 A secret number that allows Ethereum users to prove ownership of an account or contracts, by producing a digital signature (see [public key](#public-key), [address](#address), [ECDSA](#ecdsa)).
 
-### proof of stake (PoS) {#pos}
+### Proof-of-stake (PoS) {#pos}
 
 A method by which a cryptocurrency blockchain protocol aims to achieve distributed [consensus](#consensus). PoS asks users to prove ownership of a certain amount of cryptocurrency (their "stake" in the network) in order to be able to participate in the validation of transactions.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/" title="Proof of stake" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos/" title="Proof-of-stake" />
 
-### proof of work (PoW) {#pow}
+### Proof-of-work (PoW) {#pow}
 
 A piece of data (the proof) that requires significant computation to find. In Ethereum, [miners](#miner) must find a numeric solution to the [Ethash](#ethash) algorithm that meets a network-wide [difficulty](#difficulty) target.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/" title="Proof of work" />
+<DocLink to="/developers/docs/consensus-mechanisms/pow/" title="Proof-of-work" />
 
 ### public key {#public-key}
 
@@ -519,7 +525,7 @@ Data returned by an Ethereum client to represent the result of a particular [tra
 
 An attack that consists of an attacker contract calling a victim contract function in such a way that during execution the victim calls the attacker contract again, recursively. This can result, for example, in the theft of funds by skipping parts of the victim contract that update balances or count withdrawal amounts.
 
-<DocLink to="/developers/docs/security/#re-entrancy" title="Re-entrancy" />
+<DocLink to="/developers/docs/smart-contracts/security/#re-entrancy" title="Re-entrancy" />
 
 ### reward {#reward}
 
@@ -659,7 +665,7 @@ A concept named after English mathematician and computer scientist Alan Turing- 
 
 A [node](#node) in a [proof-of-stake](#pos) system responsible for storing data, processing transactions, and adding new blocks to the blockchain. To active validator software, you need to be able to [stake](#staking) 32 ETH.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos" title="Proof of stake" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos" title="Proof-of-stake" />
 <DocLink to="/eth2/staking/" title="Staking in Ethereum" />
 
 ### Validity proof {#validity-proof}

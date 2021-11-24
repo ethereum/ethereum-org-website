@@ -38,6 +38,7 @@ const MobileModal = styled(motion.div)`
   left: 0;
   right: 0;
   bottom: 0;
+  height: 100vh;
 `
 
 const mobileModalVariants = {
@@ -51,7 +52,7 @@ const MenuContainer = styled(motion.div)`
   position: fixed;
   left: 0;
   top: 0;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
   width: 100%;
   max-width: 450px;
@@ -165,7 +166,7 @@ const SectionItem = styled.li`
   }
 `
 
-const BottomMenu = styled.div`
+const BottomMenu = styled(motion.div)`
   background: ${(props) => props.theme.colors.background};
   border-top: 1px solid ${(props) => props.theme.colors.lightBorder};
   padding-right: 1rem;
@@ -181,7 +182,9 @@ const BottomMenu = styled.div`
   align-items: center;
   width: 100%;
   max-width: 450px;
+  z-index: 99;
 `
+
 const BottomItem = styled.div`
   flex: 1 1 120px;
   display: flex;
@@ -326,29 +329,34 @@ const MobileNavMenu = ({
             )
           )}
         </MenuItems>
-        <BottomMenu>
-          <BottomItem onClick={() => toggleMenu("search")}>
-            <MenuIcon name="search" />
-            <BottomItemText>
-              <Translation id="search" />
-            </BottomItemText>
-          </BottomItem>
-          <BottomItem onClick={toggleTheme}>
-            <MenuIcon name={isDarkTheme ? "darkTheme" : "lightTheme"} />
-            <BottomItemText>
-              <Translation id={isDarkTheme ? "dark-mode" : "light-mode"} />
-            </BottomItemText>
-          </BottomItem>
-          <BottomItem onClick={toggleMenu}>
-            <BottomLink to="/languages/">
-              <MenuIcon name="language" />
-              <BottomItemText>
-                <Translation id="languages" />
-              </BottomItemText>
-            </BottomLink>
-          </BottomItem>
-        </BottomMenu>
       </MenuContainer>
+      <BottomMenu
+        aria-hidden={!isMenuOpen}
+        animate={isMenuOpen ? "open" : "closed"}
+        variants={mobileMenuVariants}
+        initial="closed"
+      >
+        <BottomItem onClick={() => toggleMenu("search")}>
+          <MenuIcon name="search" />
+          <BottomItemText>
+            <Translation id="search" />
+          </BottomItemText>
+        </BottomItem>
+        <BottomItem onClick={toggleTheme}>
+          <MenuIcon name={isDarkTheme ? "darkTheme" : "lightTheme"} />
+          <BottomItemText>
+            <Translation id={isDarkTheme ? "dark-mode" : "light-mode"} />
+          </BottomItemText>
+        </BottomItem>
+        <BottomItem onClick={toggleMenu}>
+          <BottomLink to="/languages/">
+            <MenuIcon name="language" />
+            <BottomItemText>
+              <Translation id="languages" />
+            </BottomItemText>
+          </BottomLink>
+        </BottomItem>
+      </BottomMenu>
       <SearchContainer
         animate={isSearchOpen ? "open" : "closed"}
         variants={mobileMenuVariants}

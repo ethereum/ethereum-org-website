@@ -26,15 +26,15 @@ By spacing out commits, we give all network participants enough time to come to 
 
 To preserve the transaction history, blocks are strictly ordered (every new block created contains a reference to its parent block), and transactions within blocks are strictly ordered as well. Except in rare cases, at any given time, all participants on the network are in agreement on the exact number and history of blocks, and are working to batch the current live transaction requests into the next block.
 
-Once a block is put together (mined) by some miner on the network, it is propagated to the rest of the network; all nodes add this block to the end of their blockchain, and mining continues. The exact block-assembly (mining) process and commitment/consensus process is currently specified by Ethereum’s “Proof-of-Work” protocol.
+Once a block is put together (mined) by some miner on the network, it is propagated to the rest of the network; all nodes add this block to the end of their blockchain, and mining continues. The exact block-assembly (mining) process and commitment/consensus process is currently specified by Ethereum’s “proof-of-work” protocol.
 
 ### A visual demo {#a-visual-demo}
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Proof of work protocol {#proof-of-work-protocol}
+## Proof-of-work protocol {#proof-of-work-protocol}
 
-Proof of work means the following:
+Proof-of-work means the following:
 
 - Mining nodes have to spend a variable but substantial amount of energy, time, and computational power to produce a “certificate of legitimacy” for a block they propose to the network. This helps protect the network from spam/denial-of-service attacks, among other things, since certificates are expensive to produce.
 - Other miners who hear about a new block with a valid certificate of legitimacy must accept the new block as the canonical next block on the blockchain.
@@ -52,7 +52,7 @@ Proof of work means the following:
 - `parentHash` – the unique identifier for the block that came before (this is how blocks are linked in a chain).
 - `transactions` – the transactions included in the block.
 - `stateRoot` – the entire state of the system: account balances, contract storage, contract code and account nonces are inside.
-- `nonce` – a hash that, when combined with the mixHash, proves that the block has gone through [proof of work](/developers/docs/consensus-mechanisms/pow/).
+- `nonce` – a hash that, when combined with the mixHash, proves that the block has gone through [proof-of-work](/developers/docs/consensus-mechanisms/pow/).
 
 ## Block time {#block-time}
 

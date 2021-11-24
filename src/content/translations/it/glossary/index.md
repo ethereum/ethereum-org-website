@@ -32,7 +32,7 @@ Generalmente, rappresenta un [EOA](#eoa) o un [contratto](#contract-accouint) ch
 
 In [Solidity](#solidity), `assert(false)` viene compilata in `0xfe`, un opcode non valido che usa tutto il [carburante](#gas) rimanente e annulla tutte le modifiche. Quando un'istruzione `assert()` fallisce, avviene qualcosa di molto sbagliato e imprevisto ed è necessario correggere il codice. Devi usare `assert()` per evitare condizioni che non dovrebbero verificarsi mai.
 
-<DocLink to="/developers/docs/security/" title="Sicurezza" />
+<DocLink to="/developers/docs/smart-contracts/security/" title="Sicurezza" />
 
 ### attestazione {#attestation}
 
@@ -44,7 +44,7 @@ Il voto di un validatore per una [beacon chain](#beacon-chain) o [blocco](#block
 
 ### beacon chain {#beacon-chain}
 
-Aggiornamento a Eth2 che diventerà il coordinatore della rete Ethereum. Introduce la [Proof of Stake](#proof-of-stake) e i [validatori](#validator) in Ethereum. Alla fine sarà unita con la [rete principale](#mainnet).
+Aggiornamento a Eth2 che diventerà il coordinatore della rete Ethereum. Introduce la [proof-of-stake](#proof-of-stake) e i [validatori](#validator) in Ethereum. Alla fine sarà unita con la [rete principale](#mainnet).
 
 <DocLink to="/eth2/beacon-chain/" title="Beacon chain" />
 
@@ -60,7 +60,7 @@ Raccolta di informazioni necessarie (intestazione di un blocco) sulle [transazio
 
 ### blockchain {#blockchain}
 
-In Ethereum, sequenza di [blocchi](#block) convalidati dal sistema [Proof of Work](#pow), ognuna collegata al proprio predecessore fino al [blocco genesi](#genesis-block). Non esiste un limite della dimensione del blocco, ma ci sono diversi [limiti per il carburante](#gas-limit).
+In Ethereum, sequenza di [blocchi](#block) convalidati dal sistema [proof-of-work](#pow), ognuna collegata al proprio predecessore fino al [blocco genesi](#genesis-block). Non esiste un limite della dimensione del blocco, ma ci sono diversi [limiti per il carburante](#gas-limit).
 
 <DocLink to="/developers/docs/intro-to-ethereum#what-is-a-blockchain" title="Cos'è una Blockchain?" />
 
@@ -96,7 +96,7 @@ Le regole di convalida del blocco che i nodi completi seguono per mantenere il c
 
 ### Diramazione Costantinople {#constantinople-fork}
 
-Seconda parte della fase [Metropolis](#metropolis), originariamente pianificata per la metà del 2018. Si prevedeva il passaggio a un algoritmo di consenso ibrido [Proof of Work](#pow)/[Proof of Stake](#pos), tra gli altri cambiamenti.
+Seconda parte della fase [Metropolis](#metropolis), originariamente pianificata per la metà del 2018. Si prevedeva il passaggio a un algoritmo di consenso ibrido [proof-of-work](#pow)/[proof-of-stake](#pos), tra gli altri cambiamenti.
 
 ### account contratto {#contract-account}
 
@@ -108,9 +108,9 @@ Account che contiene codice che viene eseguito ogni volta che viene ricevuta una
 
 ### crosslink {#crosslink}
 
-Un crosslink fornisce un riepilogo dello stato di uno shard. È così che le catene [shard](#shard) comunicheranno tra di loro attraverso la [beacon chain](#beacon-chain) nel [sistema Proof of Stake](#proof-of-stake) a shard.
+Un crosslink fornisce un riepilogo dello stato di uno shard. È così che le catene [shard](#shard) comunicheranno tra di loro attraverso la [beacon chain](#beacon-chain) nel [sistema proof-of-stake](#proof-of-stake) a shard.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work" title="Proof of Stake" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work" title="Proof-of-stake" />
 
 <Divider />
 
@@ -146,11 +146,11 @@ Abbreviazione di "finanza decentralizzata", una vasta categoria di [dapp](#dapp)
 
 ### difficoltà {#difficulty}
 
-Impostazione a livello della rete che controlla quanto calcolo è necessario per produrre una [Proof of Work](#pow).
+Impostazione a livello della rete che controlla quanto calcolo è necessario per produrre una [proof-of-work](#pow).
 
 ### bomba di difficoltà {#difficulty-bomb}
 
-Aumento esponenziale pianificato della [difficoltà](#difficulty) della [Proof of Work](#pow) impostata per motivare la transizione alla [Proof of Stake](#pos), riducendo i cambiamenti di una [diramazione](#hard-fork)
+Aumento esponenziale pianificato della [difficoltà](#difficulty) della [proof-of-work](#pow) impostata per motivare la transizione alla [proof-of-stake](#pos), riducendo i cambiamenti di una [diramazione](#hard-fork)
 
 ### firma digitale {#digital-signatures}
 
@@ -168,7 +168,7 @@ Algoritmo crittografico utilizzato da Ethereum per garantire che i fondi possano
 
 Periodo di 32 [slot](#slot) (6,4 minuti) nel sistema coordinato [beacon chain](#beacon-chain). In ogni epoca, per motivi di sicurezza, le [commissioni](#committee) di [validatori](#validator) vengono cambiate. In ogni epoca c'è un'opportunità per [finalizzare](#finality) la catena.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work" title="Proof of Stake" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work" title="Proof-of-stake" />
 
 ### Proposta di miglioramento di Ethereum (EIP) {#eip}
 
@@ -198,7 +198,7 @@ Etichetta assegnata ad alcune [EIP](#eip) per tentare di definire uno standard s
 
 ### Ethash {#ethash}
 
-Algoritmo [Proof of Work](#pow) per Ethereum 1.0.
+Algoritmo [proof-of-work](#pow) per Ethereum 1.0.
 
 [Per saperne di più: https://eth.wiki/](https://eth.wiki/en/concepts/ethash/ethash)
 
@@ -242,7 +242,7 @@ Servizio fornito tramite [Smart Contract](#smart-contract) che dispensa fondi so
 
 La finalità è la garanzia che una serie di transazioni prima di un dato periodo non cambieranno né saranno annullate.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/#finality" title="Finalità della Proof of Work" /> <DocLink to="/developers/docs/consensus-mechanisms/pos/#finality" title="Finalità della Proof of Stake" />
+<DocLink to="/developers/docs/consensus-mechanisms/pow/#finality" title="Finalità della proof-of-work" /> <DocLink to="/developers/docs/consensus-mechanisms/pos/#finality" title="Finalità della proof-of-stake" />
 
 ### finney {#finney}
 
@@ -326,7 +326,7 @@ Codifica degli indirizzi Ethereum parzialmente compatibile con la codifica IBAN 
 
 ### era glaciale (Ice Age) {#ice-age}
 
-[Diramazione permanente](#hard-fork) di Ethereum al blocco 200.000 per introdurre un aumento esponenziale della [difficoltà](#difficulty) (o [bomba di difficoltà](#difficulty-bomb)), che motivi una transizione a passare al [Proof of Stake](#pos).
+[Diramazione permanente](#hard-fork) di Ethereum al blocco 200.000 per introdurre un aumento esponenziale della [difficoltà](#difficulty) (o [bomba di difficoltà](#difficulty-bomb)), che motivi una transizione a passare al [proof-of-stake](#pos).
 
 ### ambiente di sviluppo integrato (IDE) {#ide}
 
@@ -352,7 +352,7 @@ Una volta distribuito il codice di un [contratto](#smart-contract) (o di una [li
 
 Detta anche "algoritmo di allungamento della password", è usata dai formati [keystore](#keystore-file) per proteggere contro attacchi di forza bruta, dictionary e rainbow table ai danni della crittografia di una passphrase, mediante continuo hashing della passphrase.
 
-<DocLink to="/developers/docs/security/" title="Sicurezza" />
+<DocLink to="/developers/docs/smart-contracts/security/" title="Sicurezza" />
 
 ### keccak-256 {#keccak-256}
 
@@ -412,7 +412,7 @@ Terza fase di sviluppo di Ethereum, lanciata nell'ottobre 2017.
 
 ### miner {#miner}
 
-[Nodo](#node) della rete che trova [Proof of Work](#pow) valide per i nuovi blocchi, tramite passaggi ripetuti di hash (vedi [Ethash](#ethash)).
+[Nodo](#node) della rete che trova [proof-of-work](#pow) valide per i nuovi blocchi, tramite passaggi ripetuti di hash (vedi [Ethash](#ethash)).
 
 <DocLink to="/developers/docs/consensus-mechanisms/pow/mining/" title="Mining" />
 
@@ -442,7 +442,7 @@ Software client che partecipa alla rete.
 
 ### nonce {#nonce}
 
-In termini crittografici è un valore che può essere usato una volta sola. Ci sono due tipi di nonce utilizzati in Ethereum: un nonce account è un contatore di transazioni in ogni account, che viene usato per impedire attacchi replay; un nonce [Proof of Work](#pow) è il valore casuale di un blocco che è stato utilizzato per soddisfare la [Proof of Work](#pow).
+In termini crittografici è un valore che può essere usato una volta sola. Ci sono due tipi di nonce utilizzati in Ethereum: un nonce account è un contatore di transazioni in ogni account, che viene usato per impedire attacchi replay; un nonce [proof-of-work](#pow) è il valore casuale di un blocco che è stato utilizzato per soddisfare la [proof-of-work](#pow).
 
 <Divider />
 
@@ -476,17 +476,17 @@ Soluzione per il passaggio al [livello 2](#layer-2) che utilizza [prove di frode
 
 Numero segreto che consente agli utenti di Ethereum di dimostrare la proprietà di un account o di un contratto, producendo una firma digitale (vedi [chiave pubblica](#public-key), [indirizzo](#address), [ECDSA](#ecdsa)).
 
-### Proof of Stake (PoS) {#pos}
+### Proof-of-stake (PoS) {#pos}
 
 Metodo con cui un protocollo blockchain di criptovalute mira a raggiungere il [consenso distribuito](#consensus). La PoS chiede agli utenti di dimostrare la proprietà di una determinata quantità di criptovalute (la loro "stake", o quota, nella rete) per poter partecipare alla convalida delle transazioni.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/" title="Proof of Stake" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos/" title="Proof-of-stake" />
 
-### Proof of Work (PoW) {#pow}
+### Proof-of-work (PoW) {#pow}
 
 Informazioni (la prova) che richiedono calcoli significativi per essere trovate. In Ethereum, i [miner](#miner) devono trovare una soluzione numerica per l'algoritmo [Ethash](#ethash) che soddisfi una [difficoltà](#difficulty) specificata a livello di rete.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/" title="Proof of Work" />
+<DocLink to="/developers/docs/consensus-mechanisms/pow/" title="Proof-of-work" />
 
 ### chiave pubblica {#public-key}
 
@@ -504,11 +504,11 @@ Dati restituiti da un client Ethereum per rappresentare il risultato di una part
 
 Attacco che consiste nella chiamata da parte del contratto di un aggressore alla funzione del contratto della vittima in modo che, durante l'esecuzione, la vittima chiami di nuovo il contratto dell'aggressore, in modo ricorsivo. Questo può causare, ad esempio, il furto di fondi perché vengono ignorate le parti del contratto della vittima che aggiornano i saldi o contano gli importi prelevati.
 
-<DocLink to="/developers/docs/security/#re-entrancy" title="Codice rientrante" />
+<DocLink to="/developers/docs/smart-contracts/security/#re-entrancy" title="Codice rientrante" />
 
 ### ricompensa {#reward}
 
-Quantità di ether inclusa in ogni nuovo blocco come ricompensa da parte della rete al [miner](#miner) che ha trovato la soluzione [Proof of Work](#pow).
+Quantità di ether inclusa in ogni nuovo blocco come ricompensa da parte della rete al [miner](#miner) che ha trovato la soluzione [proof-of-work](#pow).
 
 ### prefisso a lunghezza ricorsiva (RLP) {#rlp}
 
@@ -536,7 +536,7 @@ Famiglia di funzioni hash crittografiche pubblicata dal National Institute of St
 
 ### shard/shard chain {#shard}
 
-Catena [Proof of Stake](#proof-of-stake) coordinata dalla [beacon chain](#beacon-chain) e protetta dai [validatori](#validator). Ne verranno aggiunte 64 alla rete all'interno dell'upgrade alla shard chain Eth2. Le shard chain offriranno maggiori volumi di transazioni a Ethereum fornendo dati aggiuntivi alle soluzioni di [livello 2](#layer-2) come gli [Optimistic rollup](#optimistic-rollups) e i [rollup ZK](#zk-rollups).
+Catena [proof-of-stake](#proof-of-stake) coordinata dalla [beacon chain](#beacon-chain) e protetta dai [validatori](#validator). Ne verranno aggiunte 64 alla rete all'interno dell'upgrade alla shard chain Eth2. Le shard chain offriranno maggiori volumi di transazioni a Ethereum fornendo dati aggiuntivi alle soluzioni di [livello 2](#layer-2) come gli [Optimistic rollup](#optimistic-rollups) e i [rollup ZK](#zk-rollups).
 
 <DocLink to="/eth2/shard-chains" title="Shard chain" />
 
@@ -552,9 +552,9 @@ Termine appartenente al contesto di programmazione che descrive un oggetto di cu
 
 ### slot {#slot}
 
-Periodo di tempo (12 secondi) in cui un nuovo blocco della [beacon chain](#beacon-chain) e della [shard chain](#shard) può essere proposto da un [validatore](#validator) nel sistema [Proof of Stake](#proof-of-stake). Uno slot può rimanere vuoto. 32 slot formano un'[epoca](#epoch).
+Periodo di tempo (12 secondi) in cui un nuovo blocco della [beacon chain](#beacon-chain) e della [shard chain](#shard) può essere proposto da un [validatore](#validator) nel sistema [proof-of-stake](#proof-of-stake). Uno slot può rimanere vuoto. 32 slot formano un'[epoca](#epoch).
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work" title="Proof of Stake" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work" title="Proof-of-stake" />
 
 ### Smart Contract {#smart-contract}
 
@@ -584,7 +584,7 @@ Token [ERC-20](#token-standard) con un valore ancorato al valore di un'altra ris
 
 ### staking {#staking}
 
-Depositare una quantità di [ether](#ether) (lo stake) per diventare validatore e proteggere la [rete](#network). Un validatore controlla [transazioni](#transaction) e propone [blocchi](#block) secondo un modello di consenso [Proof of Stake](#pos). Lo staking dà un incentivo economico per agire nel miglior interesse della rete. Si ottengono ricompense per svolgere i compiti di [validatore](#validator), ma si perdono quantità variabili di ETH se non si svolgono tali compiti.
+Depositare una quantità di [ether](#ether) (lo stake) per diventare validatore e proteggere la [rete](#network). Un validatore controlla [transazioni](#transaction) e propone [blocchi](#block) secondo un modello di consenso [proof-of-stake](#pos). Lo staking dà un incentivo economico per agire nel miglior interesse della rete. Si ottengono ricompense per svolgere i compiti di [validatore](#validator), ma si perdono quantità variabili di ETH se non si svolgono tali compiti.
 
 <DocLink to="/eth2/staking/" title="Fai staking con i tuoi ETH per diventare validatore di Ethereum" />
 
@@ -642,9 +642,9 @@ Concetto che prende il nome dal matematico e informatico inglese Alan Turing. Un
 
 ### validatore {#validator}
 
-[Nodo](#node) in un sistema [Proof of Stake](#proof-of-stake) responsabile della memorizzazione dei dati, dell'elaborazione delle transazioni e dell'aggiunta di nuovi blocchi alla blockchain. Per il software di validatore attivo, è necessario essere in grado di fare [staking](#staking) con 32 ETH.
+[Nodo](#node) in un sistema [proof-of-stake](#proof-of-stake) responsabile della memorizzazione dei dati, dell'elaborazione delle transazioni e dell'aggiunta di nuovi blocchi alla blockchain. Per il software di validatore attivo, è necessario essere in grado di fare [staking](#staking) con 32 ETH.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos" title="Proof of Stake" /> <DocLink to="/eth2/staking/" title="Staking in Ethereum" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos" title="Proof-of-stake" /> <DocLink to="/eth2/staking/" title="Staking in Ethereum" />
 
 ### prova di validità {#validity-proof}
 

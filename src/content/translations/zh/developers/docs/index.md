@@ -34,7 +34,7 @@ sidebar: true
 - [智能合约](/developers/docs/smart-contracts/) _——当交易触发时在相应的以太坊地址所运行函数的程序_
 - [编程语言](/developers/docs/programming-languages/) _——如何使用您可能已经掌握的语言开始以太坊编程_
 - [Javascript 客户端库](/developers/docs/apis/javascript/) _——方便库允许您的 web 应用与以太坊和智能合约交互_
-- [安全性](/developers/docs/security/)
+- [安全性](/developers/docs/smart-contracts/security/)
 - [存储](/developers/docs/storage/)
 - [开发框架](/developers/docs/frameworks/) _——使便于以太坊开发的工具_
 - [开发环境](/developers/docs/ides/) _——编写 dapp 代码的最佳环境_

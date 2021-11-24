@@ -105,6 +105,6 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related topics {#related-topics}
 
-- [Proof of work](/developers/docs/consensus-mechanisms/pow/)
+- [Proof-of-work](/developers/docs/consensus-mechanisms/pow/)
 - [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
-- [Proof of stake](/developers/docs/consensus-mechanisms/pos/)
+- [Proof-of-stake](/developers/docs/consensus-mechanisms/pos/)

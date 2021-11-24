@@ -107,7 +107,7 @@ On the other hand, if you run a client, you can share it with your friends who m
 
 The Ethereum community maintains multiple open-source clients, developed by different teams using different programming languages. This makes the network stronger and more diverse. The ideal goal is to achieve diversity without any client dominating to reduce any single points of failure.
 
-This table summarizes the different clients. All of them are actively worked on and pass [client tests](https://github.com/ethereum/tests).
+This table summarizes the different clients. All of them pass [client tests](https://github.com/ethereum/tests) and are actively maintained to stay updated with network upgrades.
 
 | Client                                                       | Language | Operating systems     | Networks                                   | Sync strategies | State pruning   |
 | ------------------------------------------------------------ | -------- | --------------------- | ------------------------------------------ | --------------- | --------------- |
@@ -136,6 +136,8 @@ OpenEthereum is a fast, feature-rich and advanced CLI-based Ethereum client. It'
 - minimal memory and storage footprint.
 
 OpenEthereum is developed using the cutting-edge Rust programming language and licensed under the GPLv3.
+
+**Note that OpenEthereum [has been deprecated](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) and is no longer be maintained.** Use it with caution and preferably switch to another client implementation.
 
 #### Nethermind {#nethermind}
 
@@ -288,7 +290,7 @@ There are new clients to support the [Eth2 upgrades](/eth2/beacon-chain/). They 
 
 ## Further reading {#further-reading}
 
-There is a lot of instructions and information about Ethereum clients on the internet, here are few that might be helpful.
+There is a lot of information about Ethereum clients on the internet. Here are few resources that might be helpful.
 
 - [Ethereum 101 - Part 2 - Understanding Nodes](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 13 February 2019_
 - [Running Ethereum Full Nodes: A Guide for the Barely Motivated](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 November 2019_
