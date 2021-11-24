@@ -320,10 +320,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   outdatedMarkdown.forEach((page) => {
     supportedLanguages.forEach((lang) => {
       const markdownPath = `${__dirname}/src/content/translations/${lang}/${page}/index.md`
-      const langHasOutdatedMarkdown = fs.existsSync(
-        markdownPath,
-        fs.constants.R_OK | fs.constants.W_OK
-      )
+      const langHasOutdatedMarkdown = fs.existsSync(markdownPath)
       if (!langHasOutdatedMarkdown) {
         createPage({
           path: `/${lang}/${page}/`,

@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
+import { some } from "lodash"
 
 import Translation from "../../components/Translation"
 import { translateMessageId } from "../../utils/translations"
@@ -238,14 +239,21 @@ const TutorialsPage = ({ data, pageContext }) => {
     isExternal: true,
   }))
 
-  const allTutorials = []
-    .concat(externalTutorials, internalTutorials)
-    .filter((tutorial) => tutorial.lang === pageContext.language)
+  const allTutorials = [].concat(externalTutorials, internalTutorials)
+
+  const hasTutorialsCheck = some(allTutorials, ["lang", pageContext.language])
+
+  const filteredTutorials = allTutorials
+    .filter((tutorial) =>
+      hasTutorialsCheck
+        ? tutorial.lang === pageContext.language
+        : tutorial.lang === "en"
+    )
     .sort((a, b) => new Date(b.published) - new Date(a.published))
 
   // Tally all subject tag counts
   const tagsConcatenated = []
-  for (const tutorial of allTutorials) {
+  for (const tutorial of filteredTutorials) {
     tagsConcatenated.push(...tutorial.tags)
   }
 
@@ -264,13 +272,13 @@ const TutorialsPage = ({ data, pageContext }) => {
 
   const [state, setState] = useState({
     activeTagNames: [],
-    filteredTutorials: allTutorials,
+    filteredTutorials: filteredTutorials,
   })
 
   const clearActiveTags = () => {
     setState({
       activeTagNames: [],
-      filteredTutorials: allTutorials,
+      filteredTutorials: filteredTutorials,
     })
   }
 
