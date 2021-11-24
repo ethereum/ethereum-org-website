@@ -313,10 +313,111 @@ If no match is found, the code jumps to [the proxy handler at 0x7C](#the-handler
   
 ### splitter()   {#splitter}
   
+| Offset | Opcode |
+| -: | - | - | 
+| 103	| JUMPDEST |
+| 104	| CALLVALUE | 
+| 105	| DUP1 |
+| 106	| ISZERO |
+| 107	| PUSH2 0x010f |
+| 10A	| JUMPI |
+| 10B	|	PUSH1 0x00 |
+| 10D	| DUP1 |
+| 10E	| REVERT |
+  
+The first thing this function does is check that the call did not send any ETH. This function is not [`payable`](https://solidity-by-example.org/payable/). If somebody sent us ETH that much be a mistake and we want to `REVERT` to avoid having that ETH where they can't get it back.
+  
+| Offset | Opcode | Stack |
+| -: | - | - |   
+| 10F | JUMPDEST |
+| 110	| POP |
+| 111 | PUSH1 0x03 | 0x03
+| 113	| SLOAD | <Storage[3] a.k.a the contract for which we are a proxy>
+| 114 | PUSH1 0x40 | 0x40 <Storage[3] a.k.a the contract for which we are a proxy>
+| 116	| MLOAD | 0x80 <Storage[3] a.k.a the contract for which we are a proxy> |
+| 117	| PUSH20 0xffffffffffffffffffffffffffffffffffffffff | 0xFF...FF 0x80 <Storage[3] a.k.a the contract for which we are a proxy>
+| 12C	| SWAP1 | 0x80 0xFF...FF <Storage[3] a.k.a the contract for which we are a proxy>
+| 12D	| SWAP2 | <Storage[3] a.k.a the contract for which we are a proxy> 0xFF...FF 0x80
+| 12E	| AND   | ProxyAddr 0x80
+| 12F	| DUP2  | 0x80 ProxyAddr 0x80
+| 130	| MSTORE | 0x80    
+
+And 0x80 now contains the proxy address
+  
+| Offset | Opcode | Stack |
+| -: | - | - |   
+| 131	| PUSH1 0x20 | 0x20 0x80
+| 133	| ADD | 0xA0
+| 134	| PUSH2 0x00e4 | 0xE4 0xA0
+| 137	|	JUMP | 0xA0
+  
+  
+#### The E4 Code {#the-e4-code}
+  
+This is the first time we see these lines, but they are shared with other methods (see below). So we'll call the value in the stack X, and just remember that in `splitter()` the value of this X is 0xA0.
+  
+
+| Offset | Opcode | Stack |
+| -: | - | - |
+| E4	| JUMPDEST | X
+| E5	| PUSH1 0x40 | 0x40 X
+| E7	| MLOAD | 0x80 X
+| E8	| DUP1  | 0x80 0x80 X
+| E9	| SWAP2 | X 0x80 0x80
+| EA	|	SUB   | X-0x80 0x80
+| EB	| SWAP1 | 0x80 X-0x80
+| EC	| RETURN |
+  
+So this code receives a memory pointer in the stack (X), and causes the contract to `RETURN` with a buffer that is 0x80 - X.
+  
+In the case of `splitter()`, this returns the address for which we are a proxy. `RETURN` returns the buffer in 0x80-0x9F, which is where we wrote this data (offset 0x130 above).
+  
+  
 ### currentWindow()  {#currentwindow}
   
+The code in offsets 0x158-0x163 is identical to what we saw in 0x103-0x10E in `splitter()`, so we know `currentWindow()` is also not `payable`. 
+  
+| Offset | Opcode | Stack |
+| -: | - | - |
+| 164	| JUMPDEST |
+| 165	| POP |
+| 166	| PUSH2 0x00da | 0xDA
+| 169	| PUSH1 0x01 | 0x01 0xDA
+| 16B	| SLOAD | Storage[1] 0xDA
+| 16C	| DUP2 | 0xDA Storage[1] 0xDA
+| 16D	| JUMP | Storage[1] 0xDA
+| DA  | JUMPDEST | Storage[1] 0xDA
+| DB	| PUSH1 0x40 | 0x40 Storage[1] 0xDA
+| DD	| MLOAD | 0x80 Storage[1] 0xDA
+| DE	| SWAP1 | Storage[1] 0x80 0xDA
+| DF	| DUP2 | 0x80 Storage[1] 0x80 0xDA
+| E0	| MSTORE | 0x80 0xDA
+
+Write Storage[1] to 0x80-0x9F.
+
+  
+| Offset | Opcode | Stack |
+| -: | - | - |
+| E1 | PUSH1 0x20 | 0x20 0x80 0xDA
+| E3	| ADD | 0xA0 0xDA
+
+And the rest is already explained [above](#the-e4-code). So `currentWindow()` returns the 0x20 bytes in 0x80-0x9F, which are Storage[1].  
+  
+  
 ### merkleRoot()   {#merkleroot}
+
+| Offset | Opcode | Stack |
+| -: | - | - |  
+  
   
 ### 0x81e580d3  {#0x81e580d3}
+
+| Offset | Opcode | Stack |
+| -: | - | - |
+
   
 ### 0x1f135823  {#0x1f135823}
+
+| Offset | Opcode | Stack |
+| -: | - | - |  
+  
