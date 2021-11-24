@@ -5585,6 +5585,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "joneskj55",
+      "name": "Kevin Jones",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20748598?v=4",
+      "profile": "https://kevinjones.engineer",
+      "contributions": [
+        "code",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
