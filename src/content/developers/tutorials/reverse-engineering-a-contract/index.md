@@ -164,7 +164,7 @@ I purposely did not put in the heading what this handler does. The point isn't t
 
 We get here from several places:
 * If there is call data of 1, 2, or 3 bytes (from offset 0x63)
-* 
+* If the method signature is unknown (from offsets 0x42 and 0x5D)
 
 
 | Offset | Opcode | Stack |
@@ -299,14 +299,14 @@ Etherscan tells us that `1C` is an unknown opcode, because [it was added after E
 | 1A | PUSH2 0x0043 | 0x43 0x3CD8045E>first-32-bits-of-the-call-data  <first 32 bits (4 bytes) of the call data>
 | 1D | JUMPI | <first 32 bits (4 bytes) of the call data>
   
-By dividing the method signature matching tests in two like this saves half the tests on average. The code that immediately follows this and the code in 0x43 follow the same pattern: `DUP1` the first 32 bits of the call data, `PUSH4 <method signature>`, run `EQ` to check for equality, and then `JUMPI` if the method signature matches. Here are the method signatures and their addresses:
+By dividing the method signature matching tests in two like this saves half the tests on average. The code that immediately follows this and the code in 0x43 follow the same pattern: `DUP1` the first 32 bits of the call data, `PUSH4 <method signature>`, run `EQ` to check for equality, and then `JUMPI` if the method signature matches. Here are the method signatures, their addresses, and if known [the corresponding method definition](https://www.4byte.directory/):
   
-| Method signature | Offset to jump into |
-| - | - |
-| 0x3cd8045e | 0x0103 |
-| 0x81e580d3 | 0x0138 |
-| 0xba0bafb4 | 0x0158 |
-| 0x1f135823 | 0x00C4 |
-| 0x2eb4a7ab | 0x00ED |
+| Method | Method signature | Offset to jump into |
+| - | - | - |
+| [splitter()](https://www.4byte.directory/signatures/?bytes4_signature=0x3cd8045e) | 0x3cd8045e | 0x0103 |
+| ??? | 0x81e580d3 | 0x0138 |
+| [currentWindow()](https://www.4byte.directory/signatures/?bytes4_signature=0xba0bafb4) | 0xba0bafb4 | 0x0158 |
+| ??? | 0x1f135823 | 0x00C4 |
+| [merkleRoot()](https://www.4byte.directory/signatures/?bytes4_signature=0x2eb4a7ab) | 0x2eb4a7ab | 0x00ED |
 
-If no match is found, the code jumps to the proxy handler at 0x7C.
+If no match is found, the code jumps to [the proxy handler at 0x7C](#the-handler-at-0x7c), in the hope that the contract to which we are a proxy might have a match.
