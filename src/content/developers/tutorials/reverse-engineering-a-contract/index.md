@@ -15,6 +15,8 @@ published: 2021-12-30
 
 There are reverse compilers, but they don't always produce [usable results](https://etherscan.io/bytecode-decompiler?a=0x2510c039cc3b061d79e564b38836da87e31b342f). In this article you learn how to manually reverse engineer and understand a contract from [the opcodes](https://github.com/wolflo/evm-opcodes).
 
+To be able to understand this article you should already know the basics of the EVM, and be at least somewhat familiar with EVM assembler. [You read about about these topics here](https://medium.com/mycrypto/the-ethereum-virtual-machine-how-does-it-work-9abac2b7c9e).
+
 ## Prepare the Executable Code
 
 You can get the opcodes by going to Etherscan for the contract, clicking the **Contract** tab and then **Switch of Opcodes View**. You get a view that is one opcode per line.
@@ -156,7 +158,9 @@ If we get here (which requires the call data to be empty) we add to `Value*` the
 Finally, clear the stack (which isn't necessary) and signal the successful end of the transaction.
 
 
-### The Handler at 0x7C 
+## The Handler at 0x7C 
+
+I purposely did not put in the heading what this handler does. The point isn't to teach you how this specific contract works, but how to reverse engineer contracts. You will learn what it does the same way I did, by following the code.
 
 We get here from several places:
 * If there is call data of 1, 2, or 3 bytes (from offset 0x63)
@@ -230,16 +234,38 @@ Now things are a lot clearer. This contract can act as a [proxy](https://blog.op
 | Return data | None (0x00 - 0x00) We'll get the return data by other means (see below)
 
 
-B0	1	RETURNDATASIZE
-B1	1	DUP1
-B2	2	PUSH1 0x00
-B4	1	DUP5
-B5	1	RETURNDATACOPY
-B6	1	DUP2
-B7	1	DUP1
-B8	1	ISZERO
-B9	3	PUSH2 0x00c0
-BC	1	JUMPI
-BD	1	DUP2
-BE	1	DUP5
-BF	1	RETURN
+| Offset | Opcode | Stack |
+| -: | - | - | 
+| B0 | RETURNDATASIZE | RETURNDATASIZE <call success/failure> 0x80 Storage[3]-as-address
+| B1 | DUP1           | RETURNDATASIZE RETURNDATASIZE <call success/failure> 0x80 Storage[3]-as-address
+| B2 | PUSH1 0x00     | 0x00 RETURNDATASIZE RETURNDATASIZE <call success/failure> 0x80 Storage[3]-as-address
+| B4 | DUP5           | 0x80 0x00 RETURNDATASIZE RETURNDATASIZE <call success/failure> 0x80 Storage[3]-as-address
+| B5 | RETURNDATACOPY | RETURNDATASIZE <call success/failure> 0x80 Storage[3]-as-address
+
+Here we copy all the return data to the memory buffer starting at 0x80. 
+
+| Offset | Opcode | Stack |
+| -: | - | - | 
+| B6 | DUP2 | <call success/failure> RETURNDATASIZE <call success/failure> 0x80 Storage[3]-as-address |
+| B7 | DUP1 | <call success/failure> <call success/failure> RETURNDATASIZE <call success/failure> 0x80 Storage[3]-as-address
+| B8 | ISZERO | <did the call fail> <call success/failure> RETURNDATASIZE <call success/failure> 0x80 Storage[3]-as-address
+| B9 | PUSH2 0x00c0 | 0xC0 <did the call fail> <call success/failure> RETURNDATASIZE <call success/failure> 0x80 Storage[3]-as-address
+| BC | JUMPI | <call success/failure> RETURNDATASIZE <call success/failure> 0x80 Storage[3]-as-address
+| BD | DUP2  | RETURNDATASIZE <call success/failure> RETURNDATASIZE <call success/failure> 0x80 Storage[3]-as-address
+| BE | DUP5  | 0x80 RETURNDATASIZE <call success/failure> RETURNDATASIZE <call success/failure> 0x80 Storage[3]-as-address
+| BF | RETURN |
+  
+So after the call we copy the return data to the buffer 0x80 - 0x80+RETURNDATASIZE, and if the call is successful we then `RETURN` with exactly that buffer.  
+ 
+### DELEGATECALL Failed
+  
+If we get here, to 0xC0, it means that the contract we called reverted. As we are just a proxy for that contract, we want to return the same data and also revert. 
+  
+| Offset | Opcode | Stack |
+| -: | - | - |   
+| C0 | JUMPDEST | <call success/failure> RETURNDATASIZE <call success/failure> 0x80 Storage[3]-as-address
+| C1 | DUP2 | RETURNDATASIZE <call success/failure> RETURNDATASIZE <call success/failure> 0x80 Storage[3]-as-address
+| C2 | DUP5 | 0x80 RETURNDATASIZE <call success/failure> RETURNDATASIZE <call success/failure> 0x80 Storage[3]-as-address
+| C3 | REVERT
+  
+So we `REVERT` with the same buffer we used for `RETURN` earlier:  0x80 - 0x80+RETURNDATASIZE
