@@ -79,7 +79,7 @@ const AssetDownload = ({
         {children && <ImageContainer>{children}</ImageContainer>}
         {!children && (
           <ImageContainer>
-            <Image image={image.fluid} alt={alt} />
+            <Image image={image} alt={alt} />
           </ImageContainer>
         )}
         {artistName && (

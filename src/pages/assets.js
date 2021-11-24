@@ -86,7 +86,9 @@ const AssetsPage = ({ data }) => {
   const intl = useIntl()
   const themeContext = useContext(ThemeContext)
   const isDarkTheme = themeContext.isDark
-  const heroImage = isDarkTheme ? data.heroImageDark : data.heroImage
+  const assetPageHeroImage = isDarkTheme
+    ? data.ethDiamondPurpleHero
+    : data.ethDiamondBlackHero
   return (
     <Page>
       <PageMetadata
@@ -97,7 +99,7 @@ const AssetsPage = ({ data }) => {
         <HeroContainer>
           <Header>
             <Image
-              image={getImage(heroImage)}
+              image={getImage(assetPageHeroImage)}
               alt={translateMessageId("page-assets-eth-diamond-gray", intl)}
             />
             <h1>
@@ -333,8 +335,8 @@ const AssetsPage = ({ data }) => {
           />
         </Row> */}
 
-        <Row>
-          {/* TODO artistUrl */}
+        {/* TODO artistUrl */}
+        {/* <Row>
           <AssetDownload
             title={translateMessageId("page-assets-hero-particles", intl)}
             alt={translateMessageId("page-assets-hero-particles", intl)}
@@ -349,7 +351,7 @@ const AssetsPage = ({ data }) => {
             artistName="EthWorks & Alan Wu"
             artistUrl=""
           />
-        </Row>
+        </Row> */}
 
         <H2 id="brand">
           <Translation id="page-assets-ethereum-brand-assets" />
@@ -554,13 +556,6 @@ const AssetsPage = ({ data }) => {
 
 export default AssetsPage
 
-export const heroImage = graphql`
-  fragment heroImage on File {
-    childImageSharp {
-      gatsbyImageData(layout: FULL_WIDTH)
-    }
-  }
-`
 export const assetItem = graphql`
   fragment assetItem on File {
     childImageSharp {
@@ -571,18 +566,22 @@ export const assetItem = graphql`
 
 export const query = graphql`
   {
-    heroImage: file(relativePath: { eq: "assets/eth-diamond-black.png" }) {
+    ethDiamondBlackHero: file(
+      relativePath: { eq: "assets/eth-diamond-black.png" }
+    ) {
       childImageSharp {
         gatsbyImageData(width: 80, layout: FIXED)
       }
     }
-    heroImageDark: file(relativePath: { eq: "assets/eth-diamond-purple.png" }) {
+    ethDiamondPurpleHero: file(
+      relativePath: { eq: "assets/eth-diamond-purple.png" }
+    ) {
       childImageSharp {
         gatsbyImageData(width: 80, layout: FIXED)
       }
     }
     hero: file(relativePath: { eq: "home/hero.png" }) {
-      ...heroImage
+      ...assetItem
     }
     doge: file(relativePath: { eq: "doge-computer.png" }) {
       ...assetItem
@@ -649,12 +648,12 @@ export const query = graphql`
     ethGifWaves: file(relativePath: { eq: "eth-gif-waves.png" }) {
       ...assetItem
     }
-    oldHero: file(relativePath: { eq: "assets/hero.png" }) {
-      ...heroImage
-    }
-    oldHeroDark: file(relativePath: { eq: "assets/hero-dark.png" }) {
-      ...heroImage
-    }
+    # oldHero: file(relativePath: { eq: "assets/hero.png" }) {
+    #   ...assetItem
+    # }
+    # oldHeroDark: file(relativePath: { eq: "assets/hero-dark.png" }) {
+    #   ...assetItem
+    # }
     efLogo: file(relativePath: { eq: "ef-logo.png" }) {
       ...assetItem
     }
