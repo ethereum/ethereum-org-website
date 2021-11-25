@@ -26,7 +26,7 @@ If you're more into video learning, click on the thumbnail below for a step-by-s
 
 [![](https://img.youtube.com/vi/g73EGNKatDw/maxresdefault.jpg)](https://www.youtube.com/watch?v=g73EGNKatDw)
 
-And if you haven't already, you'll definitely need an Alchemy account to complete this tutorial. [Sign up for a free account](https://www.alchemy.com/).
+You'll need an Alchemy account to complete this tutorial. [Sign up for a free account](https://www.alchemy.com/).
 
 If you have questions at any point, feel free to reach out in the [Alchemy Discord](https://discord.gg/gWuC7zB)!
 
