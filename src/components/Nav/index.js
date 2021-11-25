@@ -281,8 +281,25 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           to: "/community/",
         },
         {
+          text: "ethereum-online",
+          to: "/community/online/",
+        },
+        {
+          text: "ethereum-events",
+          to: "/community/events/",
+        },
+
+        {
+          text: "get-involved",
+          to: "/community/get-involved/",
+        },
+        {
           text: "grants",
           to: "/community/grants/",
+        },
+        {
+          text: "ethereum-support",
+          to: "/community/support/",
         },
       ],
     },
