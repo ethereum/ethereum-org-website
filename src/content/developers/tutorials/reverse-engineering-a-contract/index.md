@@ -20,7 +20,7 @@ To be able to understand this article you should already know the basics of the 
 
 ## Prepare the Executable Code {#prepare-the-executable-code}
 
-You can get the opcodes by going to Etherscan for the contract, clicking the **Contract** tab and then **Switch of Opcodes View**. You get a view that is one opcode per line.
+You can get the opcodes by going to Etherscan for the contract, clicking the **Contract** tab and then **Switch to Opcodes View**. You get a view that is one opcode per line.
 
 ![Opcode View from Etherscan](opcode-view.png)
 
