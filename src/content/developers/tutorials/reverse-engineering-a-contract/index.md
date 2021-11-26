@@ -14,7 +14,7 @@ published: 2021-12-30
 
 *There are no secrets on the blockchain*, everything that happens is consistent, verifiable, and publicly available. Ideally, [contracts should have their source code published and verified on Etherscan](https://etherscan.io/address/0xb8901acb165ed027e32754e0ffe830802919727f#code). However, [that is not always the case](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f#code).
 
-There are reverse compilers, but they don't always produce [usable results](https://etherscan.io/bytecode-decompiler?a=0x2510c039cc3b061d79e564b38836da87e31b342f). In this article you learn how to manually reverse engineer and understand a contract from [the opcodes](https://github.com/wolflo/evm-opcodes).
+There are reverse compilers, but they don't always produce [usable results](https://etherscan.io/bytecode-decompiler?a=0x2510c039cc3b061d79e564b38836da87e31b342f). In this article you learn how to manually reverse engineer and understand a contract from [the opcodes](https://github.com/wolflo/evm-opcodes), as well as how to interpret the results of a decompiler.
 
 To be able to understand this article you should already know the basics of the EVM, and be at least somewhat familiar with EVM assembler. [You read about about these topics here](https://medium.com/mycrypto/the-ethereum-virtual-machine-how-does-it-work-9abac2b7c9e).
 
@@ -606,7 +606,7 @@ And that the methods it supports are:
   
 We can ignore the bottom four methods because we will never get to them. Their signatures are such that our original contract takes care of them by itself (you can click the signatures to see the details above), so they must be [methods that are overriden](https://medium.com/upstate-interactive/solidity-override-vs-virtual-functions-c0a5dfb83aaf).
   
-One of the remaining methods is `claim(<params>)`, and another is `isClaimed(<params>)`, so it looks like an airdrop contract. Instead of going through the rest opcode by opcode, we can [try the decompiler](https://etherscan.io/bytecode-decompiler?a=0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761), which produces usable results from this contract.
+One of the remaining methods is `claim(<params>)`, and another is `isClaimed(<params>)`, so it looks like an airdrop contract. Instead of going through the rest opcode by opcode, we can [try the decompiler](https://etherscan.io/bytecode-decompiler?a=0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761), which produces usable results for three functions from this contract. Reverse engineering the other ones is left as an exercise to the reader.
 
 
 ### scaleAmountByPercentage {#scaleamountbypercentage}
@@ -646,11 +646,6 @@ We see here two important things:
 * `_param2`, while it is declared as a `uint256`, is actually an address
 * `_param1` is the window being claimed, which has to be `currentWindow` or earlier.
 
-With this information, the function declaration becomes:
-
-```python
-def claim(uint256 _claimWindow, address _claimFor, uint256 _param3, array _param4) payable: 
-```
 
 ```python
 ...
@@ -711,7 +706,74 @@ At the end of the function we see a log entry being generated. [Look at the gene
 
 ![A claim transaction](claim-tx.png)
 
-  
+
+### 1e7df9d3 {#1e7df9d3}
+
+This function is very similar to [`claim`](#claim) above. It also checks a merkle proof, attempts to transfer ETH to the first, and produces the same type of log entry.
+
+```python  
+def unknown1e7df9d3(uint256 _param1, uint256 _param2, array _param3) payable: 
+...
+  idx = 0
+  s = 0
+  while idx < _param3.length:
+      if idx >= mem[96]:
+          revert with 0, 50
+      _55 = mem[(32 * idx) + 128]
+      if s + sha3(mem[(32 * _param3.length) + 160 len mem[(32 * _param3.length) + 128]]) > mem[(32 * idx) + 128]:
+...
+          s = sha3(mem[_58 + 32 len mem[_58]])
+          continue 
+      mem[mem[64] + 32] = s + sha3(mem[(32 * _param3.length) + 160 len mem[(32 * _param3.length) + 128]])
+...
+  if unknown2eb4a7ab != s:
+      revert with 0, 'Invalid proof'
+...
+  call addr(_param1) with:
+     value s wei
+       gas 30000 wei
+  if not return_data.size:
+      if not ext_call.success:
+          require ext_code.size(stor2)
+          call stor2.deposit() with:
+             value s wei
+               gas gas_remaining wei
+...
+  log 0xdbd5389f: addr(_param1), s, bool(ext_call.success)  
+```
+
+The main difference is that the first parameter, the window to withdraw, isn't there. Instead, there is a loop over all the windows that could be claimed.
+
+```python
+  idx = 0
+  s = 0  
+  while idx < currentWindow:
+...
+      if stor5[mem[0]]:
+          if idx == -1:
+              revert with 0, 17
+          idx = idx + 1
+          s = s
+          continue 
+...
+      stor5[idx][addr(_param1)] = 1
+      if idx >= unknown81e580d3.length:
+          revert with 0, 50
+      mem[0] = 4
+      if unknown81e580d3[idx] and _param2 > -1 / unknown81e580d3[idx]:
+          revert with 0, 17
+      if s > !(unknown81e580d3[idx] * _param2 / 100 * 10^6):
+          revert with 0, 17
+      if idx == -1:
+          revert with 0, 17
+      idx = idx + 1
+      s = s + (unknown81e580d3[idx] * _param2 / 100 * 10^6)
+      continue 
+```
+
+So it looks like a `claim` variant that claims all the windows.
+
+
 ## Conclusion
 
 By now you should know how to understand contracts whose source code is not available, using either the opcodes or (when it works) the decompiler. As is evident from the length of this article, reverse engineering a contract is not trivial, but in a system where security is essential it is an important skill to be able to verify contracts work as promised.
