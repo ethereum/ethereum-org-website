@@ -23,27 +23,27 @@ export const dannyArticles = [
 
 export const benArticles = [
   {
-    title: "What's New in Eth2 – #76",
-    description: "27 August 2021",
+    title: "What’s New in Eth2 – #82",
+    description: "19 November 2021",
     link:
-      "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_210827",
+      "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_211119",
   },
   {
-    title: "What’s New in Eth2 – #75",
-    description: "13 August 2021",
+    title: "What’s New in Eth2 – #81",
+    description: "5 November 2021",
     link:
-      "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_210813",
+      "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_211105",
   },
   {
-    title: "What's New in Eth2 - #74",
-    description: "30 July 2021",
+    title: "What’s New in Eth2 – #80",
+    description: "22 October 2021",
     link:
-      "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_210730",
+      "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_211022",
   },
   {
-    title: "What’s New in Eth2 - #73",
-    description: "16 July 2021",
+    title: "What’s New in Eth2 – #79",
+    description: "8 October 2021",
     link:
-      "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_210716",
+      "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_211008",
   },
 ]
