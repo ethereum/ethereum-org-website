@@ -5613,6 +5613,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "agryaznov",
+      "name": "Alexander Gryaznov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3878903?v=4",
+      "profile": "http://agryaznov.com",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
