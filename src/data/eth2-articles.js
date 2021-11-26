@@ -1,23 +1,23 @@
 export const dannyArticles = [
   {
-    title: "Finalized no. 28",
-    description: "25 August 2021",
-    link: "https://blog.ethereum.org/2021/08/25/finalized-no-28/",
+    title: "Finalized no. 32",
+    description: "22 November 2021",
+    link: "https://blog.ethereum.org/2021/11/22/finalized-no-32/",
   },
   {
-    title: "Finalized no. 27",
-    description: "26 July 2021",
-    link: "https://blog.ethereum.org/2021/07/26/finalized-no-27/",
+    title: "Finalized no. 31",
+    description: "2 November 2021",
+    link: "https://blog.ethereum.org/2021/11/02/finalized-no-31/",
   },
   {
-    title: "Finalized no. 26",
-    description: "25 May 2021",
-    link: "https://blog.ethereum.org/2021/05/25/finalized-no-26/",
+    title: "Finalized no. 30",
+    description: "19 October 2021",
+    link: "https://blog.ethereum.org/2021/10/19/finalized-no-30/",
   },
   {
-    title: "Finalized no. 25",
-    description: "2 April 2021",
-    link: "https://blog.ethereum.org/2021/04/02/finalized-no-25/",
+    title: "Finalized no. 29",
+    description: "28 September 2021",
+    link: "https://blog.ethereum.org/2021/09/28/finalized-no-29/",
   },
 ]
 
