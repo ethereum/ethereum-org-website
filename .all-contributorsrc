@@ -5622,6 +5622,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "pettinarip",
+      "name": "Pablo Pettinari",
+      "avatar_url": "https://avatars.githubusercontent.com/u/468158?v=4",
+      "profile": "https://pettinarip.github.io/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
