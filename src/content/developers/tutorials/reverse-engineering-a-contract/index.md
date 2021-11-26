@@ -4,10 +4,11 @@ description: How to understand a contract when you don't have the source code
 author: Ori Pomerantz
 lang: en
 sidebar: true
-tags: ["evm", "opcodes", "reverse"]
+tags: ["evm", "opcodes", "reverse engineering", "decompiler"]
 skill: advanced
 published: 2021-12-30
 ---
+
 
 ## Introduction {#introduction}
 
@@ -600,13 +601,227 @@ And that the methods it supports are:
 | ??? | 0x1e7df9d3 | 0x00C3 |
 | [currentWindow()](https://www.4byte.directory/signatures/?bytes4_signature=0xba0bafb4) | [0xba0bafb4](#currentwindow) | 0x0148 |  
 | [merkleRoot()](https://www.4byte.directory/signatures/?bytes4_signature=0x2eb4a7ab) | [0x2eb4a7ab](#merkleroot) | 0x0107 |  
-| ??? | [0x81e580d3](#0x1f135823) | 0x0122 |  
+| ??? | [0x81e580d3](#0x81e580d3) | 0x0122 |  
 | ??? | [0x1f135823](#0x1f135823) | 0x00D8 |  
   
 We can ignore the bottom four methods because we will never get to them. Their signatures are such that our original contract takes care of them by itself (you can click the signatures to see the details above), so they must be [methods that are overriden](https://medium.com/upstate-interactive/solidity-override-vs-virtual-functions-c0a5dfb83aaf).
   
-One of the remaining methods is `claim(<params>)`, and another is `isClaimed(<params>)`. So it looks like an airdrop contract. Let's look at these functions to verify.
+One of the remaining methods is `claim(<params>)`, and another is `isClaimed(<params>)`, so it looks like an airdrop contract. We'll look in more details later, but for now I want to understand `incrementWindow()`, as a sanity check to see if it indeed increments `Storage[1]`, which is what [`currentWindow()`](#currentwindow) returns.
+
+Instead of going through the rest opcode by opcode, we can [try the decompiler](https://etherscan.io/bytecode-decompiler?a=0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761), which produces usable results from this contract.
+
+
+### scaleAmountByPercentage {#scaleamountbypercentage}
+
+This is what the decompiler gives us for this function:
+
+```python
+def unknown8ffb5c97(uint256 _param1, uint256 _param2) payable: 
+  require calldata.size - 4 >=′ 64
+  if _param1 and _param2 > -1 / _param1:
+      revert with 0, 17
+  return (_param1 * _param2 / 100 * 10^6)
+```
+
+The first `require` tests that the call data has, in addition to the four bytes of the function signature, at least 64 bytes, enough for the two parameters. If not then there is obviously something wrong.
+
+The `if` statement seems to check that `_param1` is not zero, and that `_param1 * _param2` is not negative. It is probably to prevent cases of wrap around. 
+
+Finally, the function returns a scaled value.
+
+
+### claim   {#claim}
+
+The code the decompiler creates is complex, and not all of it is relevant for us. I am going to skip some of it to focus on the lines that I believe provide useful information
+
+```python
+def unknown2e7ba6ef(uint256 _param1, uint256 _param2, uint256 _param3, array _param4) payable: 
+...
+  require _param2 == addr(_param2)
+...
+  if currentWindow <= _param1:
+      revert with 0, 'cannot claim for a future window'
+```
+
+We see here two important things:
+
+* `_param2`, while it is declared as a `uint256`, is actually an address
+* `_param1` is the window being claimed, which has to be `currentWindow` or earlier.
+
+With this information, the function declaration becomes:
+
+```python
+def claim(uint256 _claimWindow, address _claimFor, uint256 _param3, array _param4) payable: 
+```
+
+```python
+...
+  if stor5[_claimWindow][addr(_claimFor)]:
+      revert with 0, 'Account already claimed the given window'
+```
+
+So now we know that Storage[5] is an array of windows and addresses, and whether the address claimed the reward for that window.
+
+
+```python
+...
+  idx = 0
+  s = 0
+  while idx < _param4.length:
+...
+      if s + sha3(mem[(32 * _param4.length) + 328 len mem[(32 * _param4.length) + 296]]) > mem[(32 * idx) + 296]:
+          mem[mem[64] + 32] = mem[(32 * idx) + 296]
+          ...
+          s = sha3(mem[_62 + 32 len mem[_62]])
+          continue 
+...
+      s = sha3(mem[_66 + 32 len mem[_66]])
+      continue 
+  if unknown2eb4a7ab != s:
+      revert with 0, 'Invalid proof'
+```
+
+We know that `unknown2eb4a7ab` is actually the function `merkleRoot()`, so this code looks like it is verifying a [merkle proof](https://medium.com/crypto-0-nite/merkle-proofs-explained-6dd429623dc5). This means that `_param4` is a merkle proof. 
+
+```python
+  call addr(_param2) with:
+     value unknown81e580d3[_param1] * _param3 / 100 * 10^6 wei
+       gas 30000 wei
+```
+
+This is how a contract transfers its own ETH to another address (contract or externally owned). It calls it with a value that is the amount to be transfered. So it looks like this is an airdrop of ETH.
+
+
+```python
+  if not return_data.size:
+      if not ext_call.success:
+          require ext_code.size(stor2)
+          call stor2.deposit() with:
+             value unknown81e580d3[_param1] * _param3 / 100 * 10^6 wei
+```
+
+The bottom two lines tell us that Storage[2] is also a contract that we call. If we [look at the constructor transaction](https://etherscan.io/tx/0xa1ea0549fb349eb7d3aff90e1d6ce7469fdfdcd59a2fd9b8d1f5e420c0d05b58#statechange) we see that this contract is [0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2), a Wrapped Ether contract [whose source code has been uploaded to Etherscan](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2#code). 
+
+So it looks like the contracts attempts to send ETH to `_param2`. If it can do it, great. If not, it attempts to send [WETH](https://weth.io/). If  `_param2` is an externally owned account (EOA) then it can always receive ETH, but contracts can refuse to receive ETH. However, WETH is ERC-20 and contracts can't refuse to accept that.
+
+```python
+...
+  log 0xdbd5389f: addr(_param2), unknown81e580d3[_param1] * _param3 / 100 * 10^6, bool(ext_call.success)
+```
+
+At the end of the function we see a log entry being generated. [Look at the generated log entries](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f#events) and filter on the topic that starts with `0xdbd5...`. If we [click one of the transactions that generated such an entry](https://etherscan.io/tx/0xe7d3b7e00f645af17dfbbd010478ef4af235896c65b6548def1fe95b3b7d2274) we see that indeed it looks like a claim - the account sent a message to the contract we're reverse engineering, and in return got ETH.
+
+![A claim transaction](claim-tx.png)
+
+### Storage {#storage}
+
+The decompiler gives us this for the storage:
+
+```
+def storage:
+  unknown2eb4a7ab is uint256 at storage 0
+  currentWindow is uint256 at storage 1
+  stor2 is addr at storage 2
+  unknown81e580d3 is array of uint256 at storage 4
+  stor5 is mapping of uint8 at storage 5
+  unknown1f135823 is uint256 at storage 6
+```
+
+However, our work with the original contract showed us that Storage[6] is `Value*`, some kind of value accumulator.
+
+
+### incrementWindow {#incrementWindow}
+
+| Offset | Opcode | Stack |
+| --: | - | - | 
+| 110	| JUMPDEST |
+| 111	| PUSH2 0x00d6 | 0xD6
+| 114	| PUSH2 0x044d | 0x044D 0xD6
+| 117	| JUMP         | 0xD6
+| 44D | JUMPDEST     | 0xD6
+| 44E	| PUSH1 0x00   | 0x00 0xD6
+| 450	| PUSH1 0x01   | 0x01 0x00 0xD6
+| 452	| SLOAD        | Storage[1] 0x01 0x00 0xD6
+| 453	|	PUSH1 0x00   | 0x00 Storage[1] 0x01 0x00 0xD6
+| 455	|	EQ           | Storage[1]==0x00 0x01 0x00 0xD6
+| 456	| ISZERO       | Storage[1]!=0x00 0x01 0x00 0xD6
+| 457	| PUSH2 0x0461 | 0x0461 Storage[1]!=0x00 0x01 0x00 0xD6
+| 45A	| JUMPI        | 0x01 0x00 0xD6
+
+If Storage[1], `currentWindow()` is equal to zero (which is the initial value), then we don't jump here and the execution continues with:
+
+| Offset | Opcode | Stack |
+| --: | - | - | 
+| 45B	| POP | 0x00 0xD6 |
+| 45C	|	SELFBALANCE | SELFBALANCE 0x00 0xD6
+| 45D	| PUSH2 0x0466 | 0x0466 SELFBALANCE 0x00 0xD6
+| 460	| JUMP         | SELFBALANCE 0x00 0xD6
+
+
+If Storage[1], `currentWindw()`, is not equal to zero then we get:
+
+| Offset | Opcode | Stack |
+| --: | - | - | 
+| 461	| JUMPDEST | 0x01 0x00 0xD6
+| 462	| POP | 0x00 0xD6
+| 463	|	PUSH1 0x06 | 0x06 0x00 0xD6
+| 465 |	SLOAD | Value\* 0x00 0xD6
+
+Regardless of `currentWindow()`, we continue with address 0x0466. We'll call the value at the stack top `SELFBALANCE/Value*` because it can be either one.
+
+
+| Offset | Opcode | Stack |
+| --: | - | - | 
+| 466	| JUMPDEST | SELFBALANCE/Value\* 0x00 0xD6
+| 467	| PUSH1 0x00 | 0x00 SELFBALANCE/Value\* 0x00 0xD6
+| 469 | PUSH1 0x06 | 0x06 0x00 SELFBALANCE/Value\* 0x00 0xD6
+| 46B	|	SSTORE     | SELFBALANCE/Value\* 0x00 0xD6
+
+Here we see that `incrementWindow()`, whatever else it does, also resets `Value*` to zero. This is interesting, and probably an important clue.
+
+| Offset | Opcode | Stack |
+| --: | - | - | 
+| 46C	|	DUP1 | SELFBALANCE/Value\* SELFBALANCE/Value\* 0x00 0xD6
+| 46D	| PUSH2 0x04b8 | 0x04b8 SELFBALANCE/Value\* SELFBALANCE/Value\* 0x00 0xD6
+| 470	|	JUMPI        | SELFBALANCE/Value\* 0x00 0xD6
+
+So we jump if either balance or `Value*` is not zero. If it is zero, we have this code:
+
+
+| Offset | Opcode | Stack |
+| --: | - | - | 
+| 471	| PUSH1 | 0x40 SELFBALANCE/Value\* 0x00 0xD6
+| 473	| MLOAD | Memory[0x40] SELFBALANCE/Value\* 0x00 0xD6
+| 474	| PUSH3 0x461bcd | 0x461bcd Memory[0x40] SELFBALANCE/Value\* 0x00 0xD6
+| 478	| PUSH1 0xe5 | 
+47A	1	1b'(Unknown Opcode)
+47B	1	DUP2
+47C	1	MSTORE
+47D	2	PUSH1 0x20
+47F	2	PUSH1 0x04
+481	1	DUP3
+482	1	ADD
+483	1	MSTORE
+484	2	PUSH1 0x1e
+486	2	PUSH1 0x24
+488	1	DUP3
+489	1	ADD
+48A	1	MSTORE
+48B	33	PUSH32 0x4e6f206164646974696f6e616c2066756e647320666f722077696e646f770000
+4AC	2	PUSH1 0x44
+4AE	1	DUP3
+4AF	1	ADD
+4B0	1	MSTORE
+4B1	2	PUSH1 0x64
+4B3	1	ADD
+4B4	3	PUSH2 0x0204
+4B7	1	JUMP
   
+  
+
+Now we get to code that is executed if the self balance or `Value\*` is not zero.
+
+0x04B8
   
 ### isClaimed(uint256,address)
   
@@ -837,3 +1052,7 @@ Continuing with the execution:
 601	1	POP
 602	1	JUMP
   
+  
+## Conclusion
+
+As is evident from the length of this article, reverse engineering a contract is not trivial. However, now that you know how to do it you should be able to understand contracts where the source code is not publicly available, and hopefully check that act as expected. 
