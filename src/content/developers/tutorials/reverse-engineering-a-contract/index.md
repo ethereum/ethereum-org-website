@@ -286,19 +286,19 @@ If the call data size is four bytes or more this might be a valid ABI call.
 | Offset | Opcode | Stack |
 | -: | - | - |   
 | D	 |PUSH1 0x00 | 0x00
-| F	 | CALLDATALOAD | (((First word (256 bits) of the call data>
-| 10 | PUSH1 0xe0   | 0xE0 (((First word (256 bits) of the call data>
-| 12 | SHR | (((first 32 bits (4 bytes) of the call data>
+| F	 | CALLDATALOAD | (((First word (256 bits) of the call data)))
+| 10 | PUSH1 0xe0   | 0xE0 (((First word (256 bits) of the call data)))
+| 12 | SHR | (((first 32 bits (4 bytes) of the call data)))
   
 Etherscan tells us that `1C` is an unknown opcode, because [it was added after Etherscan wrote this feature](https://eips.ethereum.org/EIPS/eip-145) and they haven't updated it. An [up to data opcode table](https://github.com/wolflo/evm-opcodes) shows us that this is shift right
   
 | Offset | Opcode | Stack |
 | -: | - | - |   
-| 13 | DUP1 | (((first 32 bits (4 bytes) of the call data))) (((first 32 bits (4 bytes) of the call data>
-| 14 | PUSH4 0x3cd8045e | 0x3CD8045E (((first 32 bits (4 bytes) of the call data))) (((first 32 bits (4 bytes) of the call data>
-| 19 | GT | 0x3CD8045E>first-32-bits-of-the-call-data  (((first 32 bits (4 bytes) of the call data>
-| 1A | PUSH2 0x0043 | 0x43 0x3CD8045E>first-32-bits-of-the-call-data  (((first 32 bits (4 bytes) of the call data>
-| 1D | JUMPI | (((first 32 bits (4 bytes) of the call data>
+| 13 | DUP1 | (((first 32 bits (4 bytes) of the call data))) (((first 32 bits (4 bytes) of the call data)))
+| 14 | PUSH4 0x3cd8045e | 0x3CD8045E (((first 32 bits (4 bytes) of the call data))) (((first 32 bits (4 bytes) of the call data)))
+| 19 | GT | 0x3CD8045E>first-32-bits-of-the-call-data  (((first 32 bits (4 bytes) of the call data)))
+| 1A | PUSH2 0x0043 | 0x43 0x3CD8045E>first-32-bits-of-the-call-data  (((first 32 bits (4 bytes) of the call data)))
+| 1D | JUMPI | (((first 32 bits (4 bytes) of the call data)))
   
 By dividing the method signature matching tests in two like this saves half the tests on average. The code that immediately follows this and the code in 0x43 follow the same pattern: `DUP1` the first 32 bits of the call data, `PUSH4 (((method signature>`, run `EQ` to check for equality, and then `JUMPI` if the method signature matches. Here are the method signatures, their addresses, and if known [the corresponding method definition](https://www.4byte.directory/):
   
@@ -333,11 +333,11 @@ The first thing this function does is check that the call did not send any ETH. 
 | 10F | JUMPDEST |
 | 110	| POP |
 | 111 | PUSH1 0x03 | 0x03
-| 113	| SLOAD | (((Storage[3] a.k.a the contract for which we are a proxy>
-| 114 | PUSH1 0x40 | 0x40 (((Storage[3] a.k.a the contract for which we are a proxy>
+| 113	| SLOAD | (((Storage[3] a.k.a the contract for which we are a proxy)))
+| 114 | PUSH1 0x40 | 0x40 (((Storage[3] a.k.a the contract for which we are a proxy)))
 | 116	| MLOAD | 0x80 (((Storage[3] a.k.a the contract for which we are a proxy))) |
-| 117	| PUSH20 0xffffffffffffffffffffffffffffffffffffffff | 0xFF...FF 0x80 (((Storage[3] a.k.a the contract for which we are a proxy>
-| 12C	| SWAP1 | 0x80 0xFF...FF (((Storage[3] a.k.a the contract for which we are a proxy>
+| 117	| PUSH20 0xffffffffffffffffffffffffffffffffffffffff | 0xFF...FF 0x80 (((Storage[3] a.k.a the contract for which we are a proxy)))
+| 12C	| SWAP1 | 0x80 0xFF...FF (((Storage[3] a.k.a the contract for which we are a proxy)))
 | 12D	| SWAP2 | (((Storage[3] a.k.a the contract for which we are a proxy))) 0xFF...FF 0x80
 | 12E	| AND   | ProxyAddr 0x80
 | 12F	| DUP2  | 0x80 ProxyAddr 0x80
@@ -606,9 +606,7 @@ And that the methods it supports are:
   
 We can ignore the bottom four methods because we will never get to them. Their signatures are such that our original contract takes care of them by itself (you can click the signatures to see the details above), so they must be [methods that are overriden](https://medium.com/upstate-interactive/solidity-override-vs-virtual-functions-c0a5dfb83aaf).
   
-One of the remaining methods is `claim(<params>)`, and another is `isClaimed(<params>)`, so it looks like an airdrop contract. We'll look in more details later, but for now I want to understand `incrementWindow()`, as a sanity check to see if it indeed increments `Storage[1]`, which is what [`currentWindow()`](#currentwindow) returns.
-
-Instead of going through the rest opcode by opcode, we can [try the decompiler](https://etherscan.io/bytecode-decompiler?a=0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761), which produces usable results from this contract.
+One of the remaining methods is `claim(<params>)`, and another is `isClaimed(<params>)`, so it looks like an airdrop contract. Instead of going through the rest opcode by opcode, we can [try the decompiler](https://etherscan.io/bytecode-decompiler?a=0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761), which produces usable results from this contract.
 
 
 ### scaleAmountByPercentage {#scaleamountbypercentage}
@@ -713,346 +711,7 @@ At the end of the function we see a log entry being generated. [Look at the gene
 
 ![A claim transaction](claim-tx.png)
 
-### Storage {#storage}
-
-The decompiler gives us this for the storage:
-
-```
-def storage:
-  unknown2eb4a7ab is uint256 at storage 0
-  currentWindow is uint256 at storage 1
-  stor2 is addr at storage 2
-  unknown81e580d3 is array of uint256 at storage 4
-  stor5 is mapping of uint8 at storage 5
-  unknown1f135823 is uint256 at storage 6
-```
-
-However, our work with the original contract showed us that Storage[6] is `Value*`, some kind of value accumulator.
-
-
-### incrementWindow {#incrementWindow}
-
-| Offset | Opcode | Stack |
-| --: | - | - | 
-| 110	| JUMPDEST |
-| 111	| PUSH2 0x00d6 | 0xD6
-| 114	| PUSH2 0x044d | 0x044D 0xD6
-| 117	| JUMP         | 0xD6
-| 44D | JUMPDEST     | 0xD6
-| 44E	| PUSH1 0x00   | 0x00 0xD6
-| 450	| PUSH1 0x01   | 0x01 0x00 0xD6
-| 452	| SLOAD        | Storage[1] 0x01 0x00 0xD6
-| 453	|	PUSH1 0x00   | 0x00 Storage[1] 0x01 0x00 0xD6
-| 455	|	EQ           | Storage[1]==0x00 0x01 0x00 0xD6
-| 456	| ISZERO       | Storage[1]!=0x00 0x01 0x00 0xD6
-| 457	| PUSH2 0x0461 | 0x0461 Storage[1]!=0x00 0x01 0x00 0xD6
-| 45A	| JUMPI        | 0x01 0x00 0xD6
-
-If Storage[1], `currentWindow()` is equal to zero (which is the initial value), then we don't jump here and the execution continues with:
-
-| Offset | Opcode | Stack |
-| --: | - | - | 
-| 45B	| POP | 0x00 0xD6 |
-| 45C	|	SELFBALANCE | SELFBALANCE 0x00 0xD6
-| 45D	| PUSH2 0x0466 | 0x0466 SELFBALANCE 0x00 0xD6
-| 460	| JUMP         | SELFBALANCE 0x00 0xD6
-
-
-If Storage[1], `currentWindw()`, is not equal to zero then we get:
-
-| Offset | Opcode | Stack |
-| --: | - | - | 
-| 461	| JUMPDEST | 0x01 0x00 0xD6
-| 462	| POP | 0x00 0xD6
-| 463	|	PUSH1 0x06 | 0x06 0x00 0xD6
-| 465 |	SLOAD | Value\* 0x00 0xD6
-
-Regardless of `currentWindow()`, we continue with address 0x0466. We'll call the value at the stack top `SELFBALANCE/Value*` because it can be either one.
-
-
-| Offset | Opcode | Stack |
-| --: | - | - | 
-| 466	| JUMPDEST | SELFBALANCE/Value\* 0x00 0xD6
-| 467	| PUSH1 0x00 | 0x00 SELFBALANCE/Value\* 0x00 0xD6
-| 469 | PUSH1 0x06 | 0x06 0x00 SELFBALANCE/Value\* 0x00 0xD6
-| 46B	|	SSTORE     | SELFBALANCE/Value\* 0x00 0xD6
-
-Here we see that `incrementWindow()`, whatever else it does, also resets `Value*` to zero. This is interesting, and probably an important clue.
-
-| Offset | Opcode | Stack |
-| --: | - | - | 
-| 46C	|	DUP1 | SELFBALANCE/Value\* SELFBALANCE/Value\* 0x00 0xD6
-| 46D	| PUSH2 0x04b8 | 0x04b8 SELFBALANCE/Value\* SELFBALANCE/Value\* 0x00 0xD6
-| 470	|	JUMPI        | SELFBALANCE/Value\* 0x00 0xD6
-
-So we jump if either balance or `Value*` is not zero. If it is zero, we have this code:
-
-
-| Offset | Opcode | Stack |
-| --: | - | - | 
-| 471	| PUSH1 | 0x40 SELFBALANCE/Value\* 0x00 0xD6
-| 473	| MLOAD | Memory[0x40] SELFBALANCE/Value\* 0x00 0xD6
-| 474	| PUSH3 0x461bcd | 0x461bcd Memory[0x40] SELFBALANCE/Value\* 0x00 0xD6
-| 478	| PUSH1 0xe5 | 
-47A	1	1b'(Unknown Opcode)
-47B	1	DUP2
-47C	1	MSTORE
-47D	2	PUSH1 0x20
-47F	2	PUSH1 0x04
-481	1	DUP3
-482	1	ADD
-483	1	MSTORE
-484	2	PUSH1 0x1e
-486	2	PUSH1 0x24
-488	1	DUP3
-489	1	ADD
-48A	1	MSTORE
-48B	33	PUSH32 0x4e6f206164646974696f6e616c2066756e647320666f722077696e646f770000
-4AC	2	PUSH1 0x44
-4AE	1	DUP3
-4AF	1	ADD
-4B0	1	MSTORE
-4B1	2	PUSH1 0x64
-4B3	1	ADD
-4B4	3	PUSH2 0x0204
-4B7	1	JUMP
-  
-  
-
-Now we get to code that is executed if the self balance or `Value\*` is not zero.
-
-0x04B8
-  
-### isClaimed(uint256,address)
-  
-It is best to start with `isClaimed()` because it has less parameters and is therefore simpler.
-  
-SANITY CHECK FROM HERE  
-  
-| Offset | Opcode | Stack |
-| --: | - | - | 
-| 151 | JUMPDEST |
-| 152	|	PUSH2 0x0164 | 0x0164
-| 155	| PUSH2 0x015f | 0x015F 0x0164
-| 158	| CALLDATASIZE | CALLDATASIZE 0x015F 0x0164
-| 159	|	PUSH1 0x04   | 0x04 CALLDATASIZE 0x015F 0x0164
-| 15B	| PUSH2 0x0a56 | 0x0A56 0x04 CALLDATASIZE 0x015F 0x0164
-| 15E	| JUMP         | 0x04 CALLDATASIZE 0x015F 0x0164
-| A56	| JUMPDEST     | 0x04 CALLDATASIZE 0x015F 0x0164
-| A57	| PUSH1 0x00   | 0x00 0x04 CALLDATASIZE 0x015F 0x0164
-| A59	| DUP1         | 0x00 0x00 0x04 CALLDATASIZE 0x015F 0x0164
-| A5A	| PUSH1 0x40   | 0x40 0x00 0x00 0x04 CALLDATASIZE 0x015F 0x0164
-| A5C	| DUP4         | 0x04 0x40 0x00 0x00 0x04 CALLDATASIZE 0x015F 0x0164
-| A5D	| DUP6         | CALLDATASIZE 0x04 0x40 0x00 0x00 0x04 CALLDATASIZE 0x015F 0x0164
-| A5E	| SUB          | CALLDATASIZE-0x04 0x40 0x00 0x00 0x04 CALLDATASIZE 0x015F 0x0164
-| A5F	| SLT          | CALLDATASIZE-0x04<0x40 0x00 0x00 0x04 CALLDATASIZE 0x015F 0x0164
-| A60	| ISZERO       | CALLDATASIZE-0x04>=0x40 0x00 0x00 0x04 CALLDATASIZE 0x015F 0x0164
-| A61	| PUSH2 0x0a68 | 0x0A68 CALLDATASIZE-0x04>=0x40 0x00 0x00 0x04 CALLDATASIZE 0x015F 0x0164
-| A64	| JUMPI        | 0x00 0x00 0x04 CALLDATASIZE 0x015F 0x0164
-  
-If we got here, it means that the call data size is less than 64 bytes, which is what we'd expect from the function signature. This means there's an error somewhere and we can't run. And indeed if you look at the code in 0x0A65-0x0A67, it is just a `REVERT` with an empty buffer. The interesting code continues at 0x0A68.
-  
-| Offset | Opcode | Stack |
-| --: | - | - | 
-| A68	| JUMPDEST | 0x00 0x00 0x04 CALLDATASIZE 0x015F 0x0164
-| A69	| DUP3     | 0x04 0x00 0x00 0x04 CALLDATASIZE 0x015F 0x0164
-| A6A	| CALLDATALOAD | (((first isClaimed parameter))) 0x00 0x00 0x04 CALLDATASIZE 0x015F 0x0164
-| A6B	| SWAP2 | 0x00 0x00 (((first isClaimed parameter))) 0x04 CALLDATASIZE 0x015F 0x0164
-| A6C	| POP   | 0x00 (((first isClaimed parameter))) 0x04 CALLDATASIZE 0x015F 0x0164
-| A6D	| PUSH2 0x0a78 | 0x0A78 0x00 (((first isClaimed parameter))) 0x04 CALLDATASIZE 0x015F 0x0164
-| A70	| PUSH1 0x20   | 0x20 0x0A78 0x00 (((first isClaimed parameter))) 0x04 CALLDATASIZE 0x015F 0x0164
-| A72	| DUP5         | 0x04 0x20 0x0A78 0x00 (((first isClaimed parameter))) 0x04 CALLDATASIZE 0x015F 0x0164
-| A73	| ADD          | 0x24 0x0A78 0x00 (((first isClaimed parameter))) 0x04 CALLDATASIZE 0x015F 0x0164
-| A74	| PUSH2 0x0953 | 0x0953 0x24 0x0A78 0x00 (((first isClaimed parameter))) 0x04 CALLDATASIZE 0x015F 0x0164
-| A77	| JUMP         | 0x24 0x0A78 0x00 (((first isClaimed parameter))) 0x04 CALLDATASIZE 0x015F 0x0164
-| 953	| JUMPDEST     | 0x24 0x0A78 0x00 (((first isClaimed parameter))) 0x04 CALLDATASIZE 0x015F 0x0164  
-| 954	| DUP1         | 0x24 0x24 0x0A78 0x00 (((first isClaimed parameter))) 0x04 CALLDATASIZE 0x015F 0x0164
-| 955	| CALLDATALOAD | (((second isClaimed parameter))) 0x24 0x0A78 0x00 (((first isClaimed parameter))) 0x04 CALLDATASIZE 0x015F 0x0164
-| 956	| PUSH20 0xffffffffffffffffffffffffffffffffffffffff | 0xFF...FF (((second isClaimed parameter))) 0x24 0x0A78 0x00 (((first isClaimed parameter))) 0x04 CALLDATASIZE 0x015F 0x0164
-| 96B	| DUP2         | (((second isClaimed parameter))) 0xFF...FF (((second isClaimed parameter))) 0x24 0x0A78 0x00 (((first isClaimed parameter))) 0x04 CALLDATASIZE 0x015F 0x0164
-| 96C	| AND          | (((second isClaimed parameter, truncated to address size))) (((second isClaimed parameter))) 0x24 0x0A78 0x00 (((first isClaimed parameter))) 0x04 CALLDATASIZE 0x015F 0x0164
-| 96D	| DUP2         | (((second isClaimed parameter))) (((second isClaimed parameter, truncated to address size))) (((second isClaimed parameter))) 0x24 0x0A78 0x00 (((first isClaimed parameter))) 0x04 CALLDATASIZE 0x015F 0x0164
-| 96E	| EQ           | (((is the second parameter a valid address))) (((second isClaimed parameter))) 0x24 0x0A78 0x00 (((first isClaimed parameter))) 0x04 CALLDATASIZE 0x015F 0x0164
-  
-So now we know if the second parameter, which is supposed to be an address, fits in 160 bits. If it isn't, we `REVERT` with an empty buffer. If it is valid, execution continues at 0x0977
-  
-| Offset | Opcode | Stack |
-| --: | - | - | 
-| 977	| JUMPDEST | (((second isClaimed parameter))) 0x24 0x0A78 0x00 (((first isClaimed parameter))) 0x04 CALLDATASIZE 0x015F 0x0164
-| 978	| SWAP2    | 0x0A78 (((second isClaimed parameter))) 0x24 0x00 (((first isClaimed parameter))) 0x04 CALLDATASIZE 0x015F 0x0164
-| 979	| SWAP1    | (((second isClaimed parameter))) 0x0A78 0x24 0x00 (((first isClaimed parameter))) 0x04 CALLDATASIZE 0x015F 0x0164
-| 97A	| POP      | 0x0A78 0x24 0x00 (((first isClaimed parameter))) 0x04 CALLDATASIZE 0x015F 0x0164
-| 97B	| JUMP     | 0x24 0x00 (((first isClaimed parameter))) 0x04 CALLDATASIZE 0x015F 0x0164
-  
-  
-We see here that the code at 0x0953-0x97B is a subroutine, which uses the two top values in the stack as parameters:
-  
-- Offset into the call data
-- Return address
-  
-This subroutine then reverts if the value in the offset is not a 160 bit address. If it's legitimate, it returns with the offset into the call data in the stack. We should mark this on the spreadsheet, because we may encounter this subroutine again.
-  
-| Offset | Opcode | Stack |
-| --: | - | - | 
-| A78	| JUMPDEST | 0x24 0x00 (((first isClaimed parameter))) 0x04 CALLDATASIZE 0x015F 0x0164
-| A79	| SWAP1    | 0x00 0x24 (((first isClaimed parameter))) 0x04 CALLDATASIZE 0x015F 0x0164
-| A7A	| POP      | 0x24 (((first isClaimed parameter))) 0x04 CALLDATASIZE 0x015F 0x0164
-| A7B	| SWAP3    | CALLDATASIZE (((first isClaimed parameter))) 0x04 0x24 0x015F 0x0164
-| A7C	| POP      | (((first isClaimed parameter))) 0x04 0x24 0x015F 0x0164
-| A7D	| SWAP3    | 0x015F 0x04 0x24 (((first isClaimed parameter))) 0x0164
-| A7E	| SWAP1    | 0x04 0x015F 0x24 (((first isClaimed parameter))) 0x0164
-| A7F	|	POP      | 0x015F 0x24 (((first isClaimed parameter))) 0x0164
-| A80	|	JUMP     | 0x24 (((first isClaimed parameter))) 0x0164
-
-The code between 0x0A56 and 0x0A80 also looks like a subroutine, but a much more complex one. It starts with this stack: 
-  
-```  
-0x04 CALLDATASIZE 0x015F 0x0164
-```
-  
-And ends with:
-```
-0x24 (((first isClaimed parameter))) 0x0164
-```
-  
-Along the way reverting if there aren't enough parameters, or if the second parameter is not an address. It's hard to find a generic description for this one, so maybe we should mark the code 0x0A56 - 0x0A80 as complex subroutine and leave it at that for now.  
-  
-
-| Offset | Opcode | Stack |
-| --: | - | - |   
-| 15F	| JUMPDEST | 0x24 (((first isClaimed parameter))) 0x0164
-| 160	| PUSH2 0x0590 | 0x0590 0x24 (((first isClaimed parameter))) 0x0164
-| 163	| JUMP         | 0x24 (((first isClaimed parameter))) 0x0164
-| 590	| JUMPDEST     | 0x24 (((first isClaimed parameter))) 0x0164
-| 591	| PUSH1 0x00   | 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 593	| PUSH1 0x05   | 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 595	| PUSH1 0x00   | 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 597	| PUSH2 0x05a0 | 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 59A	| DUP6         | (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 59B	| DUP6         | 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 59C	|	PUSH2 0x08b3 | 0x08B3 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 59F	|	JUMP         | 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-  
-It looks like 0x08B3 is also a subroutine, one that goes on until the `JUMP` at 0x08E2.  
-  
-| Offset | Opcode | Stack |
-| --: | - | - | 
-| 8B3	| JUMPDEST | 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 8B4	| PUSH1 0x00 | 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 8B6	| DUP3       | (((first isClaimed parameter))) 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 8B7	| DUP3       | 0x24 (((first isClaimed parameter))) 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 8B8	| PUSH1 0x40 | 0x40 0x24 (((first isClaimed parameter))) 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 8BA	| MLOAD      | mload(0x40) 0x24 (((first isClaimed parameter))) 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-  
-Until we have a better idea of the use of memory location 0x40 in this contract, I am just going to refer to it as `mload(0x40)` as [Yul](https://docs.soliditylang.org/en/v0.8.10/yul.html) does.
-  
-| Offset | Opcode | Stack |
-| --: | - | - |   
-| 8BB	| PUSH1 0x20 | 0x20 mload(0x40) 0x24 (((first isClaimed parameter))) 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 8BD	| ADD   | mload(0x40)+0x20 0x24 (((first isClaimed parameter))) 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 8BE	| PUSH2 0x05e5 | 0x05E5 mload(0x40)+0x20 0x24 (((first isClaimed parameter))) 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 8C1	|	SWAP3 | (((first isClaimed parameter))) mload(0x40)+0x20 0x24 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 8C2	| SWAP2 | 0x24 mload(0x40)+0x20 (((first isClaimed parameter))) 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 8C3	|	SWAP1 | mload(0x40)+0x20 0x24 (((first isClaimed parameter))) 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 8C4	|	SWAP2 | (((first isClaimed parameter))) 0x24 mload(0x40)+0x20 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 8C5	| DUP3 | mload(0x40)+0x20 (((first isClaimed parameter))) 0x24 mload(0x40)+0x20 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 8C6	| MSTORE | 0x24 mload(0x40)+0x20 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-  
-We see here that `mload(0x40)` is the location of a memory buffer, and that we write the first isClaimed parameter into the second word in it (each EVM word is 256 bits = 32 bytes). So instead of `mload(0x40)` from now on I'll use `buf_0x40` (there may be other memory buffer addresses later).
-
-We should start keeping track of memory.
-
-| Memory start | Memory end | Value |
-| - | - | - |
-| 0x40 | 0x5F | the address of buf_0x40 |
-| buf_0x40+0x20 | buf_0x40+3F | first isClaimed parameter |
-
-Continuing with the execution:
-  
-| Offset | Opcode | Stack |
-| --: | - | - |     
-| 8C7	| PUSH1 0x60 | 0x60 0x24 buf_0x40+0x20 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 8C9	| SHL | (((0x24\*2^96))) buf_0x40+0x20 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 8CA	| PUSH12 0xffffffffffffffffffffffff | (((0xFF...FF (12 bytes)))) (((0x24\*2^96))) buf_0x40+0x20 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 8D7	| NOT | (((0xFF..FF for 20 bytes followed by 12 zero bytes))) (((0x24\*2^96))) buf_0x40+0x20 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 8D8	| AND | (((0x24 followed by 12 zero bytes))) buf_0x40+0x20 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 8D9	| PUSH1 0x20 | 0x20 (((0x24 followed by 12 zero bytes))) buf_0x40+0x20 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 8DB	| DUP3 | buf_0x40+0x20 0x20 (((0x24 followed by 12 zero bytes))) buf_0x40+0x20 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 8DC	| ADD | buf_0x40+0x40 (((0x24 followed by 12 zero bytes))) buf_0x40+0x20 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 8DD	|	MSTORE | buf_0x40+0x20 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-
-So now our memory map is:
-
-| Memory start | Memory end | Value |
-| - | - | - |
-| 0x40 | 0x5F | the address of buf_0x40 |
-| buf_0x40+0x20 | buf_0x40+3F | first isClaimed parameter |
-| buf_0x40+0x40 | buf_0x40+5F | 0x24 followed by 12 zero bytes |
-
-Continuing with the execution:
-
-| Offset | Opcode | Stack |
-| --: | - | - | 
-| 8DE	| PUSH1 0x34 | 0x34 buf_0x40+0x20 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 8E0	| ADD | buf_0x40+0x54 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 8E1	| SWAP1 | 0x05E5 buf_0x40+0x54 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 8E2	|	JUMP | buf_0x40+0x54 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 5E5	| JUMPDEST | buf_0x40+0x54 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 5E6	| PUSH1 0x40 | 0x40 buf_0x40+0x54 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 5E8	| MLOAD | buf_0x40 buf_0x40+0x54 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 5E9	| PUSH1 0x20 | 0x20 buf_0x40 buf_0x40+0x54 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 5EB	| DUP2 | buf_0x40 0x20 buf_0x40 buf_0x40+0x54 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 5EC	| DUP4 | buf_0x40+0x54 buf_0x40 0x20 buf_0x40 buf_0x40+0x54 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 5ED	| SUB | 0x54 0x20 buf_0x40 buf_0x40+0x54 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 5EE	| SUB | 0x34 buf_0x40 buf_0x40+0x54 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 5EF	| DUP2 | buf_0x40 0x34 buf_0x40 buf_0x40+0x54 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 5F0	| MSTORE | buf_0x40 buf_0x40+0x54 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-
-So now our memory map is:
-
-| Memory start | Memory end | Value |
-| - | - | - |
-| 0x40 | 0x5F | the address of buf_0x40 |
-| buf_0x40      | buf_0x40+1F | 0x34 |
-| buf_0x40+0x20 | buf_0x40+3F | first isClaimed parameter |
-| buf_0x40+0x40 | buf_0x40+5F | 0x24 followed by 12 zero bytes |
-
-Continuing with the execution:
-
-| Offset | Opcode | Stack |
-| --: | - | - | 
-| 5F1	| SWAP1 | buf_0x40+0x54 buf_0x40 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 5F2	| PUSH1 0x40 | 0x40 buf_0x40+0x54 buf_0x40 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 5F4	| MSTORE | buf_0x40 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-
-So now our memory map is:
-
-| Memory start | Memory end | Value |
-| - | - | - |
-| 0x40 | 0x5F | the old address of buf_0x40 + 0x54 |
-| buf_0x40      | buf_0x40+1F | 0x34 |
-| buf_0x40+0x20 | buf_0x40+3F | first isClaimed parameter |
-| buf_0x40+0x40 | buf_0x40+5F | 0x24 followed by 12 zero bytes |
-
-Continuing with the execution:
-
-| Offset | Opcode | Stack |
-| --: | - | - | 
-| 5F5	| DUP1 | buf_0x40 buf_0x40 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 5F6	| MLOAD | 0x34 buf_0x40 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 5F7	| SWAP1 | buf_0x40 0x34 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 5F8	| PUSH1 0x20 | 0x20 buf_0x40 0x34 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 5FA	| ADD | buf_0x40+0x20 0x34 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 5FB	| SHA3 | (((SHA3 of the 0x34 byte buffer starting at buf_0x40+0x20))) 0x05E5 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 5FC	| SWAP1 | 0x05E5 (((SHA3 of the 0x34 byte buffer starting at buf_0x40+0x20))) 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 5FD	| POP | (((SHA3 of the 0x34 byte buffer starting at buf_0x40+0x20))) 0x00 0x24 (((first isClaimed parameter))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 5FE	| SWAP3 | (((first isClaimed parameter))) 0x00 0x24 (((SHA3 of the 0x34 byte buffer starting at buf_0x40+0x20))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 5FF	| SWAP2 | 0x24 0x00 (((first isClaimed parameter))) (((SHA3 of the 0x34 byte buffer starting at buf_0x40+0x20))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-| 600	| POP | 0x00 (((first isClaimed parameter))) (((SHA3 of the 0x34 byte buffer starting at buf_0x40+0x20))) 0x05A0 0x00 0x05 0x00 0x24 (((first isClaimed parameter))) 0x0164
-601	1	POP
-602	1	JUMP
-  
   
 ## Conclusion
 
-As is evident from the length of this article, reverse engineering a contract is not trivial. However, now that you know how to do it you should be able to understand contracts where the source code is not publicly available, and hopefully check that act as expected. 
+By now you should know how to understand contracts whose source code is not available, using either the opcodes or (when it works) the decompiler. As is evident from the length of this article, reverse engineering a contract is not trivial, but in a system where security is essential it is an important skill to be able to verify contracts work as promised.
