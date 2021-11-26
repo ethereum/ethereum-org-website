@@ -218,7 +218,7 @@ As one of two major, viable clients in the early years of Ethereum (the other be
 
 [Erigon](https://github.com/ledgerwatch/erigon) Erigon (previously called Turbo-Geth) is a next generation Ethereum client on the efficiency frontier, written in Go.
 
-**Note:** _The successor project to Parity Ethereum client was [Open Ethereum](https://github.com/openethereum/openethereum) which has since been deprecated._
+**Note:** _The successor project to Parity Ethereum client was [OpenEthereum](https://github.com/openethereum/openethereum) **which has since been deprecated.**_
 
 The ["Spin up your own Ethereum node"](/developers/docs/nodes-and-clients/run-a-node/#getting-the-client) resource on ethereum.org includes a section for downloading, installing, and running an Ethereum client.
 
