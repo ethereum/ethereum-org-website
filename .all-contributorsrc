@@ -5604,6 +5604,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "vishvanathan-k",
+      "name": "Vishvanathan K",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66466541?v=4",
+      "profile": "https://github.com/vishvanathan-k",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

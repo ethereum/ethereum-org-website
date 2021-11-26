@@ -1257,6 +1257,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://kevinjones.engineer"><img src="https://avatars.githubusercontent.com/u/20748598?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kevin Jones</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=joneskj55" title="Code">💻</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ajoneskj55" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/ShubhankarKG"><img src="https://avatars.githubusercontent.com/u/50791000?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Shubhankar Kanchan Gupta</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AShubhankarKG" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/vishvanathan-k"><img src="https://avatars.githubusercontent.com/u/66466541?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vishvanathan K</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=vishvanathan-k" title="Documentation">📖</a></td>
   </tr>
 </table>
 
