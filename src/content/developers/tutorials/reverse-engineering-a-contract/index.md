@@ -634,9 +634,9 @@ The code the decompiler creates is complex, and not all of it is relevant for us
 
 ```python
 def unknown2e7ba6ef(uint256 _param1, uint256 _param2, uint256 _param3, array _param4) payable: 
-...
+  ...
   require _param2 == addr(_param2)
-...
+  ...
   if currentWindow <= _param1:
       revert with 0, 'cannot claim for a future window'
 ```
@@ -648,7 +648,7 @@ We see here two important things:
 
 
 ```python
-...
+  ...
   if stor5[_claimWindow][addr(_claimFor)]:
       revert with 0, 'Account already claimed the given window'
 ```
@@ -657,17 +657,17 @@ So now we know that Storage[5] is an array of windows and addresses, and whether
 
 
 ```python
-...
+  ...
   idx = 0
   s = 0
   while idx < _param4.length:
-...
+  ...
       if s + sha3(mem[(32 * _param4.length) + 328 len mem[(32 * _param4.length) + 296]]) > mem[(32 * idx) + 296]:
           mem[mem[64] + 32] = mem[(32 * idx) + 296]
           ...
           s = sha3(mem[_62 + 32 len mem[_62]])
           continue 
-...
+      ...
       s = sha3(mem[_66 + 32 len mem[_66]])
       continue 
   if unknown2eb4a7ab != s:
@@ -698,7 +698,7 @@ The bottom two lines tell us that Storage[2] is also a contract that we call. If
 So it looks like the contracts attempts to send ETH to `_param2`. If it can do it, great. If not, it attempts to send [WETH](https://weth.io/). If  `_param2` is an externally owned account (EOA) then it can always receive ETH, but contracts can refuse to receive ETH. However, WETH is ERC-20 and contracts can't refuse to accept that.
 
 ```python
-...
+  ...
   log 0xdbd5389f: addr(_param2), unknown81e580d3[_param1] * _param3 / 100 * 10^6, bool(ext_call.success)
 ```
 
@@ -713,7 +713,7 @@ This function is very similar to [`claim`](#claim) above. It also checks a merkl
 
 ```python  
 def unknown1e7df9d3(uint256 _param1, uint256 _param2, array _param3) payable: 
-...
+  ...
   idx = 0
   s = 0
   while idx < _param3.length:
@@ -721,14 +721,14 @@ def unknown1e7df9d3(uint256 _param1, uint256 _param2, array _param3) payable:
           revert with 0, 50
       _55 = mem[(32 * idx) + 128]
       if s + sha3(mem[(32 * _param3.length) + 160 len mem[(32 * _param3.length) + 128]]) > mem[(32 * idx) + 128]:
-...
+          ...
           s = sha3(mem[_58 + 32 len mem[_58]])
           continue 
       mem[mem[64] + 32] = s + sha3(mem[(32 * _param3.length) + 160 len mem[(32 * _param3.length) + 128]])
-...
+  ...
   if unknown2eb4a7ab != s:
       revert with 0, 'Invalid proof'
-...
+  ...
   call addr(_param1) with:
      value s wei
        gas 30000 wei
@@ -738,7 +738,7 @@ def unknown1e7df9d3(uint256 _param1, uint256 _param2, array _param3) payable:
           call stor2.deposit() with:
              value s wei
                gas gas_remaining wei
-...
+  ...
   log 0xdbd5389f: addr(_param1), s, bool(ext_call.success)  
 ```
 
@@ -748,14 +748,14 @@ The main difference is that the first parameter, the window to withdraw, isn't t
   idx = 0
   s = 0  
   while idx < currentWindow:
-...
+      ...
       if stor5[mem[0]]:
           if idx == -1:
               revert with 0, 17
           idx = idx + 1
           s = s
           continue 
-...
+      ...
       stor5[idx][addr(_param1)] = 1
       if idx >= unknown81e580d3.length:
           revert with 0, 50
