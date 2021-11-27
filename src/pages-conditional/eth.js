@@ -221,25 +221,25 @@ const benefits = [
 
 const tokenLinks = [
   {
-    link: "https://ethereum.org/en/stablecoins/",
+    link: "/stablecoins/",
     caption: "",
     title: <Translation id="page-eth-tokens-stablecoins" />,
     description: <Translation id="page-eth-tokens-stablecoins-description" />,
   },
   {
-    link: "https://ethereum.org/en/defi/",
+    link: "/defi/",
     caption: "",
     title: <Translation id="page-eth-tokens-defi" />,
     description: <Translation id="page-eth-tokens-defi-description" />,
   },
   {
-    link: "https://ethereum.org/en/nft/",
+    link: "/nft/",
     caption: "",
     title: <Translation id="page-eth-tokens-nft" />,
     description: <Translation id="page-eth-tokens-nft-description" />,
   },
   {
-    link: "https://ethereum.org/en/dao/",
+    link: "/dao/",
     caption: "",
     title: <Translation id="page-eth-tokens-dao" />,
     description: <Translation id="page-eth-tokens-dao-description" />,
