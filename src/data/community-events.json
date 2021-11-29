@@ -114,10 +114,10 @@
   {
     "title": "DeFiCon",
     "to": "https://deficon.nyc/",
-    "sponsor": "GitcoinDAO",
+    "sponsor": null,
     "description": "DeFiCon is a nonprofit conference with a mission to elevate the ethos of peer-to-peer crypto.",
-    "startDate": "2022-12-18",
-    "endDate": "2022-12-19"
+    "startDate": "2021-12-18",
+    "endDate": "2021-12-19"
   },
   {
     "title": "Ethereum Community Conference 5 (EthCC)",
