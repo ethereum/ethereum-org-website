@@ -333,17 +333,17 @@ const CommunityPage = ({ data }) => {
       "The Ethereum community is home to hundreds of thousands of developers, technologists, designers, users, HODLers and enthusiasts.",
     image: data.enterprise.childImageSharp.fluid,
     alt: translateMessageId("page-community-hero-alt", intl),
-    buttons: [
-      {
-        content: "How can I get involved?",
-        path: "#get-involved",
-      },
-      {
-        content: "Developer support",
-        path: "#",
-        isSecondary: "isSecondary",
-      },
-    ],
+    // buttons: [
+    //   {
+    //     content: "How can I get involved?",
+    //     path: "#get-involved",
+    //   },
+    //   {
+    //     content: "Developer support",
+    //     path: "#",
+    //     isSecondary: "isSecondary",
+    //   },
+    // ],
   }
 
   const cards = [
@@ -351,14 +351,15 @@ const CommunityPage = ({ data }) => {
       image: data.docking.childImageSharp.fixed,
       title: "Join an online community",
       description:
-        "Find your tribe and participate in community with other Ethereum enthusiasts",
+        "Find your tribe and participate in community with other Ethereum enthusiasts.",
       alt: translateMessageId("page-index-get-started-wallet-image-alt", intl),
       to: "/community/online/",
     },
     {
       image: data.eth.childImageSharp.fixed,
-      title: "Find Ethereum events",
-      description: "We've identified impactful work that needs doing.",
+      title: "Ethereum events",
+      description:
+        "Find and participate in an Ethereum conference, hackathon, or meetup.",
       alt: translateMessageId("page-index-get-started-eth-image-alt", intl),
       to: "/community/events/",
     },
@@ -369,14 +370,6 @@ const CommunityPage = ({ data }) => {
         "Check out how to get involved for a list of ways that you can contribute based on your skills and professional background.",
       alt: translateMessageId("page-index-get-started-dapps-image-alt", intl),
       to: "/community/get-involved/",
-    },
-    {
-      image: data.enterpriseFixed.childImageSharp.fixed,
-      title: "Get support",
-      description:
-        "Need help? Connect with experts from the ecosystem to get your questions answered.",
-      alt: translateMessageId("page-index-get-started-devs-image-alt", intl),
-      to: "/community/support/",
     },
   ]
 
@@ -448,10 +441,12 @@ const CommunityPage = ({ data }) => {
                 attend an event, join a meetup group, contribute to a project,
                 or participate in one of the many online forums about Ethereum.
               </Subtitle>
+              {/* 
               <ButtonLink to="/community/grants">
-                {/* <Translation id="page-community-get-involved-button" /> */}
+                <Translation id="page-community-get-involved-button" /> 
                 Get involved!
               </ButtonLink>
+              */}
             </IntroLeftColumn>
             <ImageContainer>
               <IntroImage
@@ -490,8 +485,8 @@ const CommunityPage = ({ data }) => {
             <Subtitle>
               {/* <Translation id="page-community-open-source-description" /> */}
               Are you building on Ethereum, or do you want to? Funding grants
-              are available to help get your project off the ground, and these
-              projects are looking for passionate people to work for them..
+              are available to help you get a project off the ground, and
+              companies are looking to fill thousands of jobs.
             </Subtitle>
             <ButtonRow>
               <ButtonLink to="/community/grants/">
@@ -561,20 +556,18 @@ const CommunityPage = ({ data }) => {
           <FeatureContent>
             <H2>
               {/* <Translation id="page-community-support" /> */}
-              Developer support
+              Ethereum support
             </H2>
             <Subtitle>
               {/* <Translation id="page-community-support-description" /> */}
-              The Ethereum community has adopted many standards that are helpful
-              to developers. Typically these are introduced as Ethereum
-              Improvement Proposals (EIPS), which are discussed by community
-              members through a standard process. We've created a dedicated area
-              to help you get started.
+              Need support? There is no official Ethereum support, but hundreds
+              of helpful communities are available to help you prosper on
+              Ethereum.
             </Subtitle>
             <div>
-              <ButtonLink to="/">
+              <ButtonLink to="/community/support/">
                 {/* <Translation id="page-community-support-button" /> */}
-                Find out more
+                Get support
               </ButtonLink>
             </div>
           </FeatureContent>
