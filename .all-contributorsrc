@@ -5633,6 +5633,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Celetra",
+      "name": "Celetra",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65692335?v=4",
+      "profile": "http://celetralabs.com",
+      "contributions": [
+        "bug",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
