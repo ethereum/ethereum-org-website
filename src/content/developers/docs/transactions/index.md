@@ -29,7 +29,7 @@ Transactions require a fee and must be mined to become valid. To make this overv
 A submitted transaction includes the following information:
 
 - `recipient` – the receiving address (if an externally-owned account, the transaction will transfer value. If a contract account, the transaction will execute the contract code)
-- `signature` – the identifier of the sender. This is generated when the sender's private key signs the transaction and confirms the sender has authorised this transaction
+- `signature` – the identifier of the sender. This is generated when the sender's private key signs the transaction and confirms the sender has authorized this transaction
 - `value` – amount of ETH to transfer from sender to recipient (in WEI, a denomination of ETH)
 - `data` – optional field to include arbitrary data
 - `gasLimit` – the maximum amount of gas units that can be consumed by the transaction. Units of gas represent computational steps
@@ -151,9 +151,9 @@ Once the transaction has been submitted the following happens:
 2. The transaction is then broadcast to the network and included in a pool with lots of other transactions.
 3. A miner must pick your transaction and include it in a block in order to verify the transaction and consider it "successful".
    - You may end up waiting at this stage if the network is busy and miners aren't able to keep up.
-4. Your transaction will receive "confirmations". The number of confirmations is the number of blocks created since the block that included your transaction. The higher the number, the greater the certainty that the network processed and recognised the transaction.
-   - Recent blocks may get re-organised, giving the impression the transaction was unsuccessful; however, the transaction may still be valid but included in a different block.
-   - The probability of a re-organisation diminishes with every subsequent block mined, i.e. the greater the number of confirmations, the more immutable the transaction is.
+4. Your transaction will receive "confirmations". The number of confirmations is the number of blocks created since the block that included your transaction. The higher the number, the greater the certainty that the network processed and recognized the transaction.
+   - Recent blocks may get re-organized, giving the impression the transaction was unsuccessful; however, the transaction may still be valid but included in a different block.
+   - The probability of a re-organization diminishes with every subsequent block mined, i.e. the greater the number of confirmations, the more immutable the transaction is.
 
 <!-- **State change**
 
