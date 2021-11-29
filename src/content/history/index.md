@@ -27,7 +27,7 @@ These rule changes may create a temporary split in the network. New blocks could
 ### _(In Progress)_ Arrow Glacier {#arrow-glacier}
 
 <Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Estimated: Dec-08-2021</code><br />
-<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Block number: 13,773,000<br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Block number: <a href="https://etherscan.io/block/13773000">13,773,000</a><br />
 <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: to be determined<br />
 
 #### Summary {#arrow-glacier-summary}
