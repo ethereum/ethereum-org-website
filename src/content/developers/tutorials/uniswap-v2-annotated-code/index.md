@@ -211,7 +211,7 @@ and therefore each token0 is worth reserve1/reserve0 token1's.
     uint32  private blockTimestampLast; // uses single storage slot, accessible via getReserves
 ```
 
-The timestamp for the last block in which an exchange occured, used to track exchange rates across time.
+The timestamp for the last block in which an exchange occurred, used to track exchange rates across time.
 
 ```solidity
     uint public price0CumulativeLast;
@@ -233,7 +233,7 @@ The way the pair exchange decides on the exchange rate between token0 and token1
 the two reserves constant during trades. `kLast` is this value. It changes when a liquidity provider
 deposits or withdraws tokens, and it increases slightly because of the 0.3% market fee.
 
-Here is a simple example. Note that for the sake of simplicity the table only has has three digits after the decimal point, and we ignore the
+Here is a simple example. Note that for the sake of simplicity the table only has three digits after the decimal point, and we ignore the
 0.3% trading fee so the numbers are not accurate.
 
 | Event                                       |  reserve0 |  reserve1 | reserve0 \* reserve1 | Average exchange rate (token1 / token0) |
@@ -428,7 +428,7 @@ between them. For example, assume this sequence of events:
 | Trader D deposits 100 token1 and gets 109.01 token0 back |   990.990 | 1,009.090 | 5,110     |                                        1.018 |    91.37+10\*0.826 = 99.63 |
 | Trader E deposits 10 token0 and gets 10.079 token1 back  | 1,000.990 |   999.010 | 5,150     |                                        0.998 | 99.63+40\*1.1018 = 143.702 |
 
-Lets say we want to calculate the average price of **Token0** between the timestamps 5,030 and 5,150. The difference in the value of
+Let's say we want to calculate the average price of **Token0** between the timestamps 5,030 and 5,150. The difference in the value of
 `price0Cumulative` is 143.702-29.07=114.632. This is the average across two minutes (120 seconds). So the average price is
 114.632/120 = 0.955.
 
@@ -453,7 +453,7 @@ Finally, update the global variables and emit a `Sync` event.
 
 In Uniswap 2.0 traders pay a 0.30% fee to use the market. Most of that fee (0.25% of the trade)
 always goes to the liquidity providers. The remaining 0.05% can go either to the liquidity
-providers or to an address specified by the factory as a protocol fee, which pays Unisoft for
+providers or to an address specified by the factory as a protocol fee, which pays Uniswap for
 their development effort.
 
 To reduce calculations (and therefore gas costs), this fee is only calculated when liquidity
@@ -650,7 +650,7 @@ Is should also be called [from a periphery account](#UniswapV2Router02).
         uint liquidity = balanceOf[address(this)];
 ```
 
-The periphery contract transfered the liquidity to be burned to this contract before the call. That way
+The periphery contract transferred the liquidity to be burned to this contract before the call. That way
 we know how much liquidity to burn, and we can make sure that it gets burned.
 
 ```solidity
@@ -739,7 +739,7 @@ called by other entities than our periphery contract).
             require(balance0Adjusted.mul(balance1Adjusted) >= uint(_reserve0).mul(_reserve1).mul(1000**2), 'UniswapV2: K');
 ```
 
-This is a sanity check to make sure we don't lose from the swap. There is no circumnstance in which a swap should reduce
+This is a sanity check to make sure we don't lose from the swap. There is no circumstance in which a swap should reduce
 `reserve0*reserve1`.
 
 ```solidity
@@ -758,11 +758,11 @@ It is possible for the real balances to get out of sync with the reserves that t
 There is no way to withdraw tokens without the contract's consent, but deposits are a different matter. An account
 can transfer tokens to the exchange without calling either `mint` or `swap`.
 
-In that case there are are two solutions:
+In that case there are two solutions:
 
 - `sync`, update the reserves to the current balances
 - `skim`, withdraw the extra amount. Note that any account is allowed to call `skim` because we don't know who
-  depoisted the tokens. This information is emitted in an event, but events are not accessible from the blockchain.
+  deposited the tokens. This information is emitted in an event, but events are not accessible from the blockchain.
 
 ```solidity
     // force balances to match reserves
@@ -1012,7 +1012,7 @@ Don't accept transactions after the deadline.
 ```
 
 `abi.encodePacked(...)` is the message we expect to get. We know what the nonce should be, so there is no need for us to
-get it as a paramete
+get it as a parameter
 
 The Ethereum signature algorithm expects to get 256 bits to sign, so we use the `keccak256` hash function.
 
@@ -1335,7 +1335,7 @@ than the user thought), we need to issue a refund.
 
 #### Remove Liquidity {#remove-liquidity}
 
-The functions to remove liquidity and pay back the liquidity provider.
+These functions will remove liquidity and pay back the liquidity provider.
 
 ```solidity
     // **** REMOVE LIQUIDITY ****
@@ -1757,7 +1757,7 @@ each transfer (the way we do before calling the original `_swap`). Instead we ha
 many tokens we got back.
 
 Note: In theory we could just use this function instead of `_swap`, but in certain cases (for example, if the transfer
-ends up beign reverted because there isn't enough at the end to meet the required minimum) that would end up costing more
+ends up being reverted because there isn't enough at the end to meet the required minimum) that would end up costing more
 gas. Transfer fee tokens are pretty rare, so while we need to accommodate them there's no need to all swaps to assume they
 go through at least one of them.
 
@@ -2087,7 +2087,7 @@ the numerator by 997 and the denominator by 1000, achieving the same effect.
     }
 ```
 
-This function does roughtly the same thing, but it gets the output amount and provides the input.
+This function does roughly the same thing, but it gets the output amount and provides the input.
 
 ```solidity
 
@@ -2211,8 +2211,8 @@ don't need to actually call any function, we don't send any data with the call.
 
 ## Conclusion {#Conclusion}
 
-This is a long article of about 50 pages. If you made it here, congratulations. Hopefully now you understand the considerations
-in writing a real-life application (as opoosed to short sample programs) and are better able to write contracts for your own
+This is a long article of about 50 pages. If you made it here, congratulations! Hopefully by now you've understood the considerations
+in writing a real-life application (as opposed to short sample programs) and are better to be able to write contracts for your own
 use cases.
 
 Now go and write something useful and amaze us.
