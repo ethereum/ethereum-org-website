@@ -299,7 +299,8 @@ export const Header2 = styled.h2`
   /* Selected specifically for mdx rendered side icon link */
   a.header-anchor {
     position: relative;
-    display: none;
+    display: initial;
+    opacity: 0;
     margin-left: -1.5em;
     padding-right: 0.5rem;
     font-size: 1rem;
@@ -307,6 +308,7 @@ export const Header2 = styled.h2`
     &:hover {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
+      opacity: 1;
     }
   }
 
@@ -314,6 +316,7 @@ export const Header2 = styled.h2`
     a.header-anchor {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
+      opacity: 1;
     }
   }
 `
@@ -336,7 +339,8 @@ export const Header3 = styled.h3`
   /* Selected specifically for mdx rendered side icon link */
   a.header-anchor {
     position: relative;
-    display: none;
+    display: initial;
+    opacity: 0;
     margin-left: -1.5em;
     padding-right: 0.5rem;
     font-size: 1rem;
@@ -344,6 +348,7 @@ export const Header3 = styled.h3`
     &:hover {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
+      opacity: 1;
     }
   }
 
@@ -351,6 +356,7 @@ export const Header3 = styled.h3`
     a.header-anchor {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
+      opacity: 1;
     }
   }
 `
