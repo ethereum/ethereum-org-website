@@ -5643,6 +5643,15 @@
         "bug",
         "doc"
       ]
+    },
+    {
+      "login": "sharadseth",
+      "name": "sharadseth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14011221?v=4",
+      "profile": "https://github.com/sharadseth",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
