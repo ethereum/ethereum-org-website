@@ -24,6 +24,31 @@ These rule changes may create a temporary split in the network. New blocks could
 
 ## 2021 {#2021}
 
+### _(In Progress)_ Arrow Glacier {#arrow-glacier}
+
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Estimated: Dec-08-2021</code><br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Block number: 13,773,000<br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: to be determined<br />
+
+#### Summary {#arrow-glacier-summary}
+
+The Arrow Glacier network upgrade pushes back the [difficulty bomb](/glossary/#difficulty-bomb) by several months. This is the only change introduced in this upgrade, and is similar in nature to the [Muir Glacier](#muir-glacier) upgrade. Similar changes have been performed on the [Byzantium](#byzantium), [Constantinople](#constantinople) and [London](#london) network upgrades.
+
+- [EF Blog - Arrow Glacier Upgrade Announcement](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
+- [Ethereum Cat Herders - Ethereum Arrow Glacier Upgrade](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
+
+<ExpandableCard title="Arrow Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+
+- [EIP-4345](https://eips.ethereum.org/EIPS/eip-4345) – _delays the difficulty bomb until June 2022_
+
+</ExpandableCard>
+
+#### <Emoji text=":police_car_light:" size={1} mr="0.5rem" />Node operators {#arrow-glacier-node-operators}
+
+Be sure to upgrade your client software to the latest version before December 5, 2021 to account for variable block times. This will help avoid having your client sync to a pre-fork chain, resulting in the inability to send funds or properly verify transactions.
+
+---
+
 ### Altair {#altair}
 
 <Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Oct-27-2021 10:56:23 AM +UTC</code><br />
