@@ -94,5 +94,37 @@
     "description": "ZK Hack is a 7-week virtual event featuring weekly workshops and advanced puzzle solving competitions.",
     "startDate": "2021-10-26",
     "endDate": "2021-12-07"
+  },
+  {
+    "title": "ETHDenver",
+    "to": "https://www.ethdenver.com/",
+    "sponsor": null,
+    "description": "ETHDenver is a member-owned Community Innovation Festival. With the genesis of SporkDAO in June of 2021, ETHDenver is the first event based DAO in the world.",
+    "startDate": "2022-02-11",
+    "endDate": "2022-02-20"
+  },
+  {
+    "title": "Schelling Point",
+    "to": "https://schellingpoint.gitcoin.co/",
+    "sponsor": "GitcoinDAO",
+    "description": "A one-day celebration of mechanism design, coordination tech, public goods, and regen finance.",
+    "startDate": "2022-02-17",
+    "endDate": "2022-02-17"
+  },
+  {
+    "title": "DeFiCon",
+    "to": "https://deficon.nyc/",
+    "sponsor": "GitcoinDAO",
+    "description": "DeFiCon is a nonprofit conference with a mission to elevate the ethos of peer-to-peer crypto.",
+    "startDate": "2022-12-18",
+    "endDate": "2022-12-19"
+  },
+  {
+    "title": "Ethereum Community Conference 5 (EthCC)",
+    "to": "https://ethcc.io/",
+    "sponsor": null,
+    "description": "The largest annual European Ethereum event focused on technology and community. Three intense days of conferences, networking and learning.",
+    "startDate": "2021-07-19",
+    "endDate": "2021-07-21"
   }
 ]
