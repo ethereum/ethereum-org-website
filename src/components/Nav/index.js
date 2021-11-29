@@ -340,8 +340,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
     }
   }
 
-  const shouldShowSubNav =
-    path.includes("/developers/") || path.includes("/community/")
+  const shouldShowSubNav = path.includes("/developers/")
 
   return (
     <NavContainer>
