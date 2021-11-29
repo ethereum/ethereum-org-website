@@ -11,9 +11,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 
 ## Forums
 
-<!-- - ![POAP Logo](src/assets/poap-logo.svg) POAP -->
-
-- [r/ethereum](https://www.reddit.com/r/ethereum/) - _all things Ethereum_ <Icon name="youtube" />
+- [r/ethereum](https://www.reddit.com/r/ethereum/) - _all things Ethereum_
 - [r/ethfinance](https://www.reddit.com/r/ethfinance/) - _the financial side of Ethereum, including DeFi_
 - [r/ethdev](https://www.reddit.com/r/ethdev/) - _focused on Ethereum development_
 - [r/ethtrader](https://www.reddit.com/r/ethtrader/) - _trends & market analysis_
@@ -26,18 +24,18 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 ## Chat rooms
 
 - <Icon name="discord" /> <a href="https://gitter.im/ethereum/home">Ethereum Gitter</a> - <i>chat room for the Ethereum GitHub repo</i>
-- [Ethereum Cat Herders](https://discord.gg/tzYmDmF) - _community oriented around offering project management support to Ethereum development_
-- [Ethereum Hackers](https://ethglobal.co/discord) - _Discord chat run by [ETHGlobal](https://www.ethglobal.co/): an online community for Ethereum hackers all over the world_
-- [CryptoDevs Discord](https://discord.gg/5W5tVb3) - _Ethereum development focused Discord community_
-- [EthStaker Discord](https://discord.io/ethstaker) - _Support for the [Beacon Chain](/eth2/beacon-chain/) staking community_
-- [Ethereum.org Website Team](https://discord.gg/CetY6Y4) - _Stop by and chat ethereum.org web design with the team and folks from the community_
+- <Icon name="discord" /> <a href="https://discord.gg/tzYmDmF">Ethereum Cat Herders</a> - <i>community oriented around offering project management support to Ethereum development</i>
+- <Icon name="discord" /> <a href="https://ethglobal.co/discord">Ethereum Hackers</a> - <i>Discord chat run by ETHGlobal: an online community for Ethereum hackers all over the world</i>
+- <Icon name="discord" /> <a href="https://discord.gg/5W5tVb3">CryptoDevs</a> - <i>Ethereum development focused Discord community</i>
+- <Icon name="discord" /> <a href="https://discord.io/ethstaker">EthStaker Discord</a> - <i>community oriented around offering project management support to Ethereum development</i>
+- <Icon name="discord" /> <a href="https://discord.gg/CetY6Y4">Ethereum.org website team</a> - <i>stop by and chat ethereum.org web development and design with the team and folks from the community</i>
 
 ## YouTube and Twitter
 
-- <Icon name="youtube" /> - [Ethereum Foundation]() - _Stop by and chat ethereum.org web design with the team and folks from the community_
-- [@ethereum]() - Offical account of the Ethereum Foundation
-- [@ethdotorg]() - The portal to Ethereum, built for our growing global community
-- [List of influential Ethereum twitter accounts]() - The Ethereum community is very active on Twitter
+- [Ethereum Foundation]() - _Keep upto date with the latest from the Ethereum Foundation_
+- [@ethereum]() - _Offical account of the Ethereum Foundation_
+- [@ethdotorg]() - _The portal to Ethereum, built for our growing global community_
+- [List of influential Ethereum twitter accounts]()
 
 <Divider />
 
