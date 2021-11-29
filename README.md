@@ -1260,6 +1260,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/vishvanathan-k"><img src="https://avatars.githubusercontent.com/u/66466541?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vishvanathan K</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=vishvanathan-k" title="Documentation">📖</a></td>
     <td align="center"><a href="http://agryaznov.com"><img src="https://avatars.githubusercontent.com/u/3878903?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alexander Gryaznov</b></sub></a><br /><a href="#ideas-agryaznov" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://pettinarip.github.io/"><img src="https://avatars.githubusercontent.com/u/468158?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pablo Pettinari</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=pettinarip" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://celetralabs.com"><img src="https://avatars.githubusercontent.com/u/65692335?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Celetra</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ACeletra" title="Bug reports">🐛</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=Celetra" title="Documentation">📖</a></td>
   </tr>
 </table>
 
