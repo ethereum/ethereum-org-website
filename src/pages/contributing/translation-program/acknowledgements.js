@@ -8,6 +8,7 @@ import styled from "styled-components"
 // Components
 import ActionCard from "../../../components/ActionCard"
 import Breadcrumbs from "../../../components/Breadcrumbs"
+import Link from "../../../components/Link"
 import PageMetadata from "../../../components/PageMetadata"
 import Translation from "../../../components/Translation"
 import TranslationLeaderboard from "../../../components/TranslationLeaderboard"
@@ -141,10 +142,19 @@ const TranslatorAcknowledgements = ({ data, location }) => {
           </LeftColumn>
           <RightColumn>
             <p>
+              <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-cta" />
+            </p>
+            <p>
               <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-1" />
             </p>
             <p>
               <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-2" />
+            </p>
+            <p>
+              <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-3" />
+            </p>
+            <p>
+              <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-4" />
             </p>
           </RightColumn>
         </TwoColumnContent>
@@ -163,9 +173,6 @@ const TranslatorAcknowledgements = ({ data, location }) => {
         <p>
           <Translation id="page-contributing-translation-program-acknowledgements-our-translators-3" />
         </p>
-        <p>
-          <Translation id="page-contributing-translation-program-acknowledgements-our-translators-4" />
-        </p>
         <CentralActionCard
           to="/contributing/translation-program/contributors/"
           title={translateMessageId(
@@ -178,6 +185,44 @@ const TranslatorAcknowledgements = ({ data, location }) => {
           )}
           image={data.ethereum.childImageSharp.fixed}
         />
+      </Content>
+
+      <Content>
+        <h1>
+          <Translation id="page-contributing-translation-program-acknowledgements-poaps-title" />
+        </h1>
+        <p>
+          <Translation id="page-contributing-translation-program-acknowledgements-1" />
+        </p>
+        <p>
+          <Translation id="page-contributing-translation-program-acknowledgements-2" />
+        </p>
+        <p>
+          <Translation id="page-contributing-translation-program-acknowledgements-3" />
+        </p>
+        <h3>
+          <Translation id="page-contributing-translation-program-acknowledgements-how-to-claim-title" />
+        </h3>
+        <ol type="1">
+          <li>
+            <Translation id="page-contributing-translation-program-acknowledgements-how-to-claim-1" />{" "}
+            <Link to="https://discord.gg/CetY6Y4">
+              <Translation id="page-contributing-translation-program-acknowledgements-how-to-claim-1-discord" />
+            </Link>
+          </li>
+          <li>
+            <Translation id="page-contributing-translation-program-acknowledgements-how-to-claim-2" />
+          </li>
+          <li>
+            <Translation id="page-contributing-translation-program-acknowledgements-how-to-claim-3" />
+          </li>
+          <li>
+            <Translation id="page-contributing-translation-program-acknowledgements-how-to-claim-4" />
+          </li>
+        </ol>
+        <p>
+          <Translation id="page-contributing-translation-program-acknowledgements-4" />
+        </p>
       </Content>
     </Page>
   )

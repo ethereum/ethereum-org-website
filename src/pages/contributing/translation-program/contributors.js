@@ -12,7 +12,7 @@ import {
 } from "../../../components/SharedStyledComponents"
 
 // Data
-import yearData from "../../../data/translation_reports/year_data.json"
+import allTimeData from "../../../data/translation_reports/alltime_data.json"
 
 // Styles
 const HorizontalUl = styled.ul`
@@ -44,7 +44,7 @@ const Contributors = ({ location }) => {
           <Translation id="page-contributing-translation-program-contributors-thank-you" />
         </h2>
         <HorizontalUl>
-          {yearData.data
+          {allTimeData.data
             .map(({ user }) => user.username)
             .sort((user1, user2) =>
               user1.toLowerCase().localeCompare(user2.toLowerCase())

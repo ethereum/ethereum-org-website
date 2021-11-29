@@ -9,7 +9,12 @@ import Translation from "./Translation"
 
 // Data
 import monthData from "../data/translation_reports/month_data.json"
-import yearData from "../data/translation_reports/year_data.json"
+import quarterData from "../data/translation_reports/quarter_data.json"
+import allTimeData from "../data/translation_reports/alltime_data.json"
+
+const Content = styled.div`
+  margin-bottom: 2rem;
+`
 
 const Table = styled.div`
   background-color: ${(props) => props.theme.colors.background};
@@ -55,6 +60,7 @@ const TextContainer = styled.div`
   flex-direction: row;
   align-items: center;
   margin-right: 2rem;
+  overflow-wrap: anywhere;
 `
 
 const WordsContainer = styled.div`
@@ -88,17 +94,50 @@ const ButtonRow = styled.div`
 `
 
 const ButtonSecondaryStyled = styled(ButtonSecondary)`
-  margin: 0 1rem;
+  margin: 0.5rem 1rem;
   border-radius: 25pt;
   width: 120px;
   height: 30px;
   padding: 0;
+  color: ${(props) =>
+    props.isSelected ? props.theme.colors.primary : props.theme.colors.text};
+  border: 1px solid
+    ${(props) =>
+      props.isSelected ? props.theme.colors.primary : props.theme.colors.text};
+`
+
+const LanguageMobile = styled.p`
+  margin: 0;
+  display: none;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    display: block;
+    font-size: ${(props) => props.theme.fontSizes.s};
+    opacity: 0.6;
+  }
+`
+
+const LangaugeContainer = styled(TextContainer)`
+  display: inherit;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    display: none;
+  }
+`
+
+const StyledEmoji = styled(Emoji)`
+  display: block;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    display: none;
+  }
 `
 
 const TranslationLeaderboard = () => {
   const leaderboardData = {
     monthData,
-    yearData,
+    quarterData,
+    allTimeData,
   }
   const [filterAmount, updateFilterAmount] = useState(10)
   const [dateRangeType, updateDateRangeType] = useState("monthData")
@@ -112,13 +151,25 @@ const TranslationLeaderboard = () => {
   }
 
   return (
-    <div>
+    <Content>
       <ButtonRow>
-        <ButtonSecondaryStyled onClick={() => updateDateRangeType("monthData")}>
+        <ButtonSecondaryStyled
+          onClick={() => updateDateRangeType("monthData")}
+          isSelected={dateRangeType === "monthData"}
+        >
           <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-month-view" />
         </ButtonSecondaryStyled>
-        <ButtonSecondaryStyled onClick={() => updateDateRangeType("yearData")}>
-          <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-year-view" />
+        <ButtonSecondaryStyled
+          onClick={() => updateDateRangeType("quarterData")}
+          isSelected={dateRangeType === "quarterData"}
+        >
+          <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-quarter-view" />
+        </ButtonSecondaryStyled>
+        <ButtonSecondaryStyled
+          onClick={() => updateDateRangeType("allTimeData")}
+          isSelected={dateRangeType === "allTimeData"}
+        >
+          <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-all-time-view" />
         </ButtonSecondaryStyled>
       </ButtonRow>
       <Table>
@@ -127,9 +178,9 @@ const TranslationLeaderboard = () => {
           <TextContainer>
             <Translation id="page-contributing-translation-program-acknowledgements-translator" />
           </TextContainer>
-          <TextContainer>
+          <LangaugeContainer>
             <Translation id="page-contributing-translation-program-acknowledgements-language" />
-          </TextContainer>
+          </LangaugeContainer>
           <WordsContainer>
             <Translation id="page-contributing-translation-program-acknowledgements-total-words" />
           </WordsContainer>
@@ -155,11 +206,16 @@ const TranslationLeaderboard = () => {
                 )}
                 <TextContainer>
                   <Avatar src={user.avatarUrl} />
-                  {user.username}
+                  <div>
+                    {user.username}
+                    <LanguageMobile>{languages[0]?.name || ""}</LanguageMobile>
+                  </div>
                 </TextContainer>
-                <TextContainer>{languages[0]?.name || ""}</TextContainer>
+                <LangaugeContainer>
+                  {languages[0]?.name || ""}
+                </LangaugeContainer>
                 <WordsContainer>
-                  <Emoji
+                  <StyledEmoji
                     ml={"1rem"}
                     mr={"1rem"}
                     size={1.5}
@@ -182,7 +238,7 @@ const TranslationLeaderboard = () => {
           />
         </ButtonSecondary>
       </ButtonRow>
-    </div>
+    </Content>
   )
 }
 
