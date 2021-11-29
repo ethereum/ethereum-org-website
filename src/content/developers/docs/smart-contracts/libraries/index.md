@@ -21,7 +21,7 @@ When writing smart contracts, there is a good chance you'll find yourself writin
 
 Smart contract libraries usually provide reusable implementations of these behaviors as [libraries](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries) or via [inheritance](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance) in Solidity.
 
-As an example, following is a simplified version of the [`Ownable` contract](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/access/Ownable.sol) from the [OpenZeppelin Contracts library](https://github.com/OpenZeppelin/openzeppelin-contracts), which designs an address as the owner of a contract, and provides a modifier for restricting access to a method only to that owner.
+As an example, following is a simplified version of the [`Ownable` contract](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/access/Ownable.sol) from the [OpenZeppelin Contracts library](https://github.com/OpenZeppelin/openzeppelin-contracts), which designates an address as the owner of a contract, and provides a modifier for restricting access to a method only to that owner.
 
 ```solidity
 contract Ownable {
