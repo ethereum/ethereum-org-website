@@ -1,7 +1,10 @@
 files:
   - source: src/content/dao/index.md
     translation: src/content/dao/%two_letters_code%%original_file_name%
+    export_only_approved: true
   - source: src/content/defi/index.md
     translation: src/content/defi/%two_letters_code%%original_file_name%
+    export_only_approved: true
   - source: src/content/nft/index.md
     translation: src/content/nft/%two_letters_code%%original_file_name%
+    export_only_approved: true
