@@ -194,12 +194,12 @@ const RunANodePage = ({ data }) => {
           <Translation id="page-run-a-node-why-run-a-node-title" />
         </h2>
         <InfoContent>
-          {whyRunANodeCards.map((card) => {
+          {whyRunANodeCards.map((card, idx) => {
             return (
-              <InfoCard>
+              <InfoCard key={idx}>
                 <h3>{card.title}</h3>
-                {card.body.map((item) => {
-                  return <p>{item}</p>
+                {card.body.map((item, idx) => {
+                  return <p key={idx}>{item}</p>
                 })}
               </InfoCard>
             )
@@ -208,6 +208,125 @@ const RunANodePage = ({ data }) => {
       </Content>
 
       <Divider />
+
+      <Content>
+        <h2>
+          <Translation id="page-run-a-node-getting-started-hardware-title" />
+        </h2>
+        <p>
+          <Translation id="page-run-a-node-getting-started-hardware-1" />
+        </p>
+
+        <div>
+          <h3>
+            <Translation id="page-run-a-node-build-your-own-title" />
+          </h3>
+          <p>
+            <Translation id="page-run-a-node-build-your-own-minimum-specs" />
+          </p>
+          <ul>
+            <li>
+              <Translation id="page-run-a-node-build-your-own-8gb" />
+            </li>
+            <li>
+              <Translation id="page-run-a-node-build-your-own-ssd" />{" "}
+              <i>
+                <Translation id="page-run-a-node-build-your-own-ssd-note" />
+              </i>
+            </li>
+          </ul>
+          <br />
+          <p>
+            <Translation id="page-run-a-node-build-your-own-recommended" />
+          </p>
+          <ul>
+            <li>
+              <Translation id="page-run-a-node-build-your-own-nuc" />
+            </li>
+            <li>
+              <Translation id="page-run-a-node-build-your-own-connection" />
+            </li>
+            <li>
+              <Translation id="page-run-a-node-build-your-own-peripherals" />
+            </li>
+          </ul>
+          <p>
+            <Translation id="page-run-a-node-build-your-own-raspberry-pi" />
+          </p>
+        </div>
+
+        <div>
+          <h3>
+            <Translation id="page-run-a-node-buy-fully-loaded-title" />
+          </h3>
+          <p>
+            <Translation id="page-run-a-node-buy-fully-loaded-1" />
+          </p>
+          <p>
+            <Translation id="page-run-a-node-buy-fully-loaded-note" />
+          </p>
+        </div>
+      </Content>
+
+      <Content>
+        <h2>
+          <Translation id="page-run-a-node-getting-started-software-title" />
+        </h2>
+
+        <div>
+          <p>
+            <Translation id="page-run-a-node-getting-started-software-section-1-1" />
+          </p>
+          <p>
+            <Translation id="page-run-a-node-getting-started-software-section-1-2" />
+          </p>
+        </div>
+
+        <div>
+          <p>
+            <Translation id="page-run-a-node-getting-started-software-section-2-1" />
+          </p>
+        </div>
+
+        <div>
+          <p>
+            <Translation id="page-run-a-node-getting-started-software-section-3-1" />
+          </p>
+        </div>
+      </Content>
+
+      <Content>
+        <h2>
+          <Translation id="page-run-a-node-choose-your-adventure" />
+        </h2>
+
+        <div>
+          <h3>
+            <Translation id="page-run-a-node-plug-and-play-title" />
+          </h3>
+          <p>
+            <Translation id="page-run-a-node-plug-and-play-1" />
+          </p>
+          <button>
+            <Translation id="page-run-a-node-shop-dappnode" />
+          </button>
+          <button>
+            <Translation id="page-run-a-node-shop-avado" />
+          </button>
+        </div>
+
+        <div>
+          <h3>
+            <Translation id="page-run-a-node-install-manually-title" />
+          </h3>
+          <p>
+            <Translation id="page-run-a-node-install-manually-1" />
+          </p>
+          <button>
+            <Translation id="page-run-a-node-dappnode-setup" />
+          </button>
+        </div>
+      </Content>
     </Page>
   )
 }
