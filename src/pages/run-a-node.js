@@ -5,6 +5,11 @@ import Img from "gatsby-image"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 
+// Assets
+import dappnode from "../assets/run-a-node/dappnode.svg"
+import phonetap from "../assets/run-a-node/phonetap.svg"
+import terminal from "../assets/run-a-node/terminal.svg"
+
 // Components
 import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
@@ -280,9 +285,11 @@ const RunANodePage = ({ data }) => {
           <p>
             <Translation id="page-run-a-node-getting-started-software-section-1-2" />
           </p>
+          <img src={terminal} />
         </div>
 
         <div>
+          <img src={phonetap} />
           <p>
             <Translation id="page-run-a-node-getting-started-software-section-2-1" />
           </p>
@@ -292,6 +299,7 @@ const RunANodePage = ({ data }) => {
           <p>
             <Translation id="page-run-a-node-getting-started-software-section-3-1" />
           </p>
+          <img src={dappnode} />
         </div>
       </Content>
 
