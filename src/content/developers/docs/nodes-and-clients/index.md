@@ -169,7 +169,7 @@ General overview of synchronization approaches used in Mainnet ready clients:
 
 ##### Full sync
 
-Full syncs downloads all blocks (including headers, transactions, and receipts) and generates the state of the blockchain incrementally by executing every block from genesis.
+Full sync downloads all blocks (including headers, transactions, and receipts) and generates the state of the blockchain incrementally by executing every block from genesis.
 
 - Minimizes trust and offers the highest security by verifying every transaction.
 - With an increasing number of transactions, it can take days to weeks to process all transactions.
