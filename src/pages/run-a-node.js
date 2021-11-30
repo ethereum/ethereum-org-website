@@ -88,6 +88,19 @@ const Width20 = styled.div`
   }
 `
 
+const Flex = styled.div`
+  display: flex;
+`
+
+const Container = styled.div`
+  background: #f5f5f5;
+  border: 1px solid #d1d1d1;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: black;
+  padding: 0 36pt;
+`
+
 const RunANodePage = ({ data }) => {
   const intl = useIntl()
 
@@ -248,55 +261,57 @@ const RunANodePage = ({ data }) => {
           <Translation id="page-run-a-node-getting-started-hardware-1" />
         </p>
 
-        <div>
-          <h3>
-            <Translation id="page-run-a-node-build-your-own-title" />
-          </h3>
-          <p>
-            <Translation id="page-run-a-node-build-your-own-minimum-specs" />
-          </p>
-          <ul>
-            <li>
-              <Translation id="page-run-a-node-build-your-own-8gb" />
-            </li>
-            <li>
-              <Translation id="page-run-a-node-build-your-own-ssd" />{" "}
-              <i>
-                <Translation id="page-run-a-node-build-your-own-ssd-note" />
-              </i>
-            </li>
-          </ul>
-          <br />
-          <p>
-            <Translation id="page-run-a-node-build-your-own-recommended" />
-          </p>
-          <ul>
-            <li>
-              <Translation id="page-run-a-node-build-your-own-nuc" />
-            </li>
-            <li>
-              <Translation id="page-run-a-node-build-your-own-connection" />
-            </li>
-            <li>
-              <Translation id="page-run-a-node-build-your-own-peripherals" />
-            </li>
-          </ul>
-          <p>
-            <Translation id="page-run-a-node-build-your-own-raspberry-pi" />
-          </p>
-        </div>
+        <Flex>
+          <Container>
+            <h3>
+              <Translation id="page-run-a-node-build-your-own-title" />
+            </h3>
+            <p>
+              <Translation id="page-run-a-node-build-your-own-minimum-specs" />
+            </p>
+            <ul>
+              <li>
+                <Translation id="page-run-a-node-build-your-own-8gb" />
+              </li>
+              <li>
+                <Translation id="page-run-a-node-build-your-own-ssd" />{" "}
+                <i>
+                  <Translation id="page-run-a-node-build-your-own-ssd-note" />
+                </i>
+              </li>
+            </ul>
+            <br />
+            <p>
+              <Translation id="page-run-a-node-build-your-own-recommended" />
+            </p>
+            <ul>
+              <li>
+                <Translation id="page-run-a-node-build-your-own-nuc" />
+              </li>
+              <li>
+                <Translation id="page-run-a-node-build-your-own-connection" />
+              </li>
+              <li>
+                <Translation id="page-run-a-node-build-your-own-peripherals" />
+              </li>
+            </ul>
+            <p>
+              <Translation id="page-run-a-node-build-your-own-raspberry-pi" />
+            </p>
+          </Container>
 
-        <div>
-          <h3>
-            <Translation id="page-run-a-node-buy-fully-loaded-title" />
-          </h3>
-          <p>
-            <Translation id="page-run-a-node-buy-fully-loaded-1" />
-          </p>
-          <p>
-            <Translation id="page-run-a-node-buy-fully-loaded-note" />
-          </p>
-        </div>
+          <Container>
+            <h3>
+              <Translation id="page-run-a-node-buy-fully-loaded-title" />
+            </h3>
+            <p>
+              <Translation id="page-run-a-node-buy-fully-loaded-1" />
+            </p>
+            <p>
+              <Translation id="page-run-a-node-buy-fully-loaded-note" />
+            </p>
+          </Container>
+        </Flex>
       </Content>
 
       <Content>
@@ -346,32 +361,34 @@ const RunANodePage = ({ data }) => {
           <Translation id="page-run-a-node-choose-your-adventure" />
         </h2>
 
-        <div>
-          <h3>
-            <Translation id="page-run-a-node-plug-and-play-title" />
-          </h3>
-          <p>
-            <Translation id="page-run-a-node-plug-and-play-1" />
-          </p>
-          <button>
-            <Translation id="page-run-a-node-shop-dappnode" />
-          </button>
-          <button>
-            <Translation id="page-run-a-node-shop-avado" />
-          </button>
-        </div>
+        <Flex>
+          <Container>
+            <h3>
+              <Translation id="page-run-a-node-plug-and-play-title" />
+            </h3>
+            <p>
+              <Translation id="page-run-a-node-plug-and-play-1" />
+            </p>
+            <button>
+              <Translation id="page-run-a-node-shop-dappnode" />
+            </button>
+            <button>
+              <Translation id="page-run-a-node-shop-avado" />
+            </button>
+          </Container>
 
-        <div>
-          <h3>
-            <Translation id="page-run-a-node-install-manually-title" />
-          </h3>
-          <p>
-            <Translation id="page-run-a-node-install-manually-1" />
-          </p>
-          <button>
-            <Translation id="page-run-a-node-dappnode-setup" />
-          </button>
-        </div>
+          <Container>
+            <h3>
+              <Translation id="page-run-a-node-install-manually-title" />
+            </h3>
+            <p>
+              <Translation id="page-run-a-node-install-manually-1" />
+            </p>
+            <button>
+              <Translation id="page-run-a-node-dappnode-setup" />
+            </button>
+          </Container>
+        </Flex>
       </Content>
     </Page>
   )
