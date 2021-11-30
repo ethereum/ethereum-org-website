@@ -44,11 +44,15 @@ const SplitContent = styled.div`
 `
 
 const Highlight = styled(Content)`
-  background: #f9e4d5;
+  background: ${(props) => props.backgroundColor};
   border: 1px solid #dadada;
   box-sizing: border-box;
   border-radius: 4px;
   color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
 `
 
 const InfoContent = styled(Content)`
@@ -66,6 +70,22 @@ const InfoCard = styled.div`
   height: 520px;
   margin-bottom: 20px;
   padding: 0 36pt;
+`
+
+const Width80 = styled.div`
+  width: 80%;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    width: 100%;
+  }
+`
+
+const Width20 = styled.div`
+  width: 20%;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    width: 100%;
+  }
 `
 
 const RunANodePage = ({ data }) => {
@@ -179,20 +199,26 @@ const RunANodePage = ({ data }) => {
         </TwoColumnContent>
       </Content>
 
-      <Highlight>
-        <h2>
-          <Translation id="page-run-a-node-highlight-title" />
-        </h2>
-        <p>
-          <Translation id="page-run-a-node-highlight-body" />
-        </p>
-        <p>
-          <b>
-            <Translation id="page-run-a-node-highlight-bold" />
-          </b>
-        </p>
-        <Img fluid={data.impact.childImageSharp.fluid} />
-      </Highlight>
+      <Content>
+        <Highlight backgroundColor={"#f9e4d5"}>
+          <Width80>
+            <h2>
+              <Translation id="page-run-a-node-highlight-title" />
+            </h2>
+            <p>
+              <Translation id="page-run-a-node-highlight-body" />
+            </p>
+            <p>
+              <b>
+                <Translation id="page-run-a-node-highlight-bold" />
+              </b>
+            </p>
+          </Width80>
+          <Width20>
+            <Img fluid={data.impact.childImageSharp.fluid} />
+          </Width20>
+        </Highlight>
+      </Content>
 
       <Content>
         <h2>
@@ -278,29 +304,41 @@ const RunANodePage = ({ data }) => {
           <Translation id="page-run-a-node-getting-started-software-title" />
         </h2>
 
-        <div>
-          <p>
-            <Translation id="page-run-a-node-getting-started-software-section-1-1" />
-          </p>
-          <p>
-            <Translation id="page-run-a-node-getting-started-software-section-1-2" />
-          </p>
-          <img src={terminal} />
-        </div>
+        <Highlight backgroundColor={"#D7FBFE"}>
+          <Width80>
+            <p>
+              <Translation id="page-run-a-node-getting-started-software-section-1-1" />
+            </p>
+            <p>
+              <Translation id="page-run-a-node-getting-started-software-section-1-2" />
+            </p>
+          </Width80>
+          <Width20>
+            <img src={terminal} />
+          </Width20>
+        </Highlight>
 
-        <div>
-          <img src={phonetap} />
-          <p>
-            <Translation id="page-run-a-node-getting-started-software-section-2-1" />
-          </p>
-        </div>
+        <Highlight backgroundColor={"#f9e4d5"}>
+          <Width20>
+            <img src={phonetap} />
+          </Width20>
+          <Width80>
+            <p>
+              <Translation id="page-run-a-node-getting-started-software-section-2-1" />
+            </p>
+          </Width80>
+        </Highlight>
 
-        <div>
-          <p>
-            <Translation id="page-run-a-node-getting-started-software-section-3-1" />
-          </p>
-          <img src={dappnode} />
-        </div>
+        <Highlight backgroundColor={"#FAE6F8"}>
+          <Width80>
+            <p>
+              <Translation id="page-run-a-node-getting-started-software-section-3-1" />
+            </p>
+          </Width80>
+          <Width20>
+            <img src={dappnode} />
+          </Width20>
+        </Highlight>
       </Content>
 
       <Content>
