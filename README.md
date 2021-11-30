@@ -1263,6 +1263,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://celetralabs.com"><img src="https://avatars.githubusercontent.com/u/65692335?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Celetra</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ACeletra" title="Bug reports">🐛</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=Celetra" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/sharadseth"><img src="https://avatars.githubusercontent.com/u/14011221?v=4?s=100" width="100px;" alt=""/><br /><sub><b>sharadseth</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=sharadseth" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/mariahpickett"><img src="https://avatars.githubusercontent.com/u/74935737?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mariah</b></sub></a><br /><a href="#content-mariahpickett" title="Content">🖋</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
