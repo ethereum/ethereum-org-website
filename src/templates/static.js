@@ -114,6 +114,7 @@ const components = {
   MeetupList,
   RandomAppList,
   Roadmap,
+  Link,
   Logo,
   ButtonLink,
   Contributors,

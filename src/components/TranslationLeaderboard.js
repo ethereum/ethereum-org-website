@@ -4,13 +4,13 @@ import styled from "styled-components"
 
 // Components
 import Emoji from "./Emoji"
-import { ButtonSecondary } from "./SharedStyledComponents"
+import { Option, OptionContainer, OptionText } from "./SharedStyledComponents"
 import Translation from "./Translation"
 
 // Data
-import monthData from "../data/translation_reports/month_data.json"
-import quarterData from "../data/translation_reports/quarter_data.json"
-import allTimeData from "../data/translation_reports/alltime_data.json"
+import monthData from "../data/translation-reports/month-data.json"
+import quarterData from "../data/translation-reports/quarter-data.json"
+import allTimeData from "../data/translation-reports/alltime-data.json"
 
 const Content = styled.div`
   margin-bottom: 2rem;
@@ -85,44 +85,11 @@ const ItemNumber = styled.div`
   opacity: 0.4;
 `
 
-const ButtonRow = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1rem;
-  flex-wrap: wrap;
-`
-
-const ButtonSecondaryStyled = styled(ButtonSecondary)`
-  margin: 0.5rem 1rem;
-  border-radius: 25pt;
-  width: 120px;
-  height: 30px;
-  padding: 0;
-  color: ${(props) =>
-    props.isSelected ? props.theme.colors.primary : props.theme.colors.text};
-  border: 1px solid
-    ${(props) =>
-      props.isSelected ? props.theme.colors.primary : props.theme.colors.text};
-`
-
-const LanguageMobile = styled.p`
+const Language = styled.p`
   margin: 0;
-  display: none;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    display: block;
-    font-size: ${(props) => props.theme.fontSizes.s};
-    opacity: 0.6;
-  }
-`
-
-const LangaugeContainer = styled(TextContainer)`
-  display: inherit;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    display: none;
-  }
+  display: block;
+  font-size: ${(props) => props.theme.fontSizes.s};
+  opacity: 0.6;
 `
 
 const StyledEmoji = styled(Emoji)`
@@ -152,35 +119,38 @@ const TranslationLeaderboard = () => {
 
   return (
     <Content>
-      <ButtonRow>
-        <ButtonSecondaryStyled
+      <OptionContainer>
+        <Option
           onClick={() => updateDateRangeType("monthData")}
-          isSelected={dateRangeType === "monthData"}
+          isActive={dateRangeType === "monthData"}
         >
-          <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-month-view" />
-        </ButtonSecondaryStyled>
-        <ButtonSecondaryStyled
+          <OptionText fontSize={"18px"}>
+            <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-month-view" />
+          </OptionText>
+        </Option>
+        <Option
           onClick={() => updateDateRangeType("quarterData")}
-          isSelected={dateRangeType === "quarterData"}
+          isActive={dateRangeType === "quarterData"}
         >
-          <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-quarter-view" />
-        </ButtonSecondaryStyled>
-        <ButtonSecondaryStyled
+          <OptionText fontSize={"18px"}>
+            <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-quarter-view" />
+          </OptionText>
+        </Option>
+        <Option
           onClick={() => updateDateRangeType("allTimeData")}
-          isSelected={dateRangeType === "allTimeData"}
+          isActive={dateRangeType === "allTimeData"}
         >
-          <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-all-time-view" />
-        </ButtonSecondaryStyled>
-      </ButtonRow>
+          <OptionText fontSize={"18px"}>
+            <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-all-time-view" />
+          </OptionText>
+        </Option>
+      </OptionContainer>
       <Table>
         <Header>
           <ItemNumber>#</ItemNumber>
           <TextContainer>
             <Translation id="page-contributing-translation-program-acknowledgements-translator" />
           </TextContainer>
-          <LangaugeContainer>
-            <Translation id="page-contributing-translation-program-acknowledgements-language" />
-          </LangaugeContainer>
           <WordsContainer>
             <Translation id="page-contributing-translation-program-acknowledgements-total-words" />
           </WordsContainer>
@@ -200,7 +170,7 @@ const TranslationLeaderboard = () => {
             return (
               <Item key={idx}>
                 {emoji ? (
-                  <Emoji mr={"1rem"} text={emoji} />
+                  <Emoji mr={"1rem"} size={2} text={emoji} />
                 ) : (
                   <ItemNumber>{idx + 1}</ItemNumber>
                 )}
@@ -208,36 +178,30 @@ const TranslationLeaderboard = () => {
                   <Avatar src={user.avatarUrl} />
                   <div>
                     {user.username}
-                    <LanguageMobile>{languages[0]?.name || ""}</LanguageMobile>
+                    <Language>{languages[0]?.name || ""}</Language>
                   </div>
                 </TextContainer>
-                <LangaugeContainer>
-                  {languages[0]?.name || ""}
-                </LangaugeContainer>
                 <WordsContainer>
-                  <StyledEmoji
-                    ml={"1rem"}
-                    mr={"1rem"}
-                    size={1.5}
-                    text={":writing:"}
-                  />
+                  <StyledEmoji mr={"0.5rem"} size={1.5} text={":writing:"} />
                   {translated}
                 </WordsContainer>
               </Item>
             )
           })}
       </Table>
-      <ButtonRow>
-        <ButtonSecondary onClick={filterAmount === 10 ? showMore : showLess}>
-          <Translation
-            id={
-              filterAmount === 10
-                ? "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-more"
-                : "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-less"
-            }
-          />
-        </ButtonSecondary>
-      </ButtonRow>
+      <OptionContainer>
+        <Option onClick={filterAmount === 10 ? showMore : showLess}>
+          <OptionText fontSize={"18px"}>
+            <Translation
+              id={
+                filterAmount === 10
+                  ? "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-more"
+                  : "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-less"
+              }
+            />
+          </OptionText>
+        </Option>
+      </OptionContainer>
     </Content>
   )
 }

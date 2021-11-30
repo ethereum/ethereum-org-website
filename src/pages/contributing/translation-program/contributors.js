@@ -12,7 +12,7 @@ import {
 } from "../../../components/SharedStyledComponents"
 
 // Data
-import allTimeData from "../../../data/translation_reports/alltime_data.json"
+import allTimeData from "../../../data/translation-reports/alltime-data.json"
 
 // Styles
 const HorizontalUl = styled.ul`

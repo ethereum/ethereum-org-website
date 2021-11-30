@@ -19,13 +19,13 @@ If you want to get involved and help us grow the global Ethereum community by tr
 
 <InfoBanner shouldCenter emoji=":tada:">
   Claim your POAP token! If you translated ethereum.org in 2021, there's a unique POAP waiting for you.{" "}
-  <a href="https://ethereum.org/en/contributing/#poap">More on POAPs</a>
+  <Link to="/contributing/#poap">More on POAPs</Link>
 </InfoBanner>
 
 <br/>
 
-<InfoBanner shouldCenter emoji=":tada:">
-  <a href="https://ethereum.org/en/contributing/translation-program/acknowledgements/">Translator Acknowledgements!</a>
+<InfoBanner emoji=":tada:">
+  <Link to="/contributing/translation-program/acknowledgements/">Translator Acknowledgements!</Link>
 </InfoBanner>
 
 ## Mission and vision {#mission-and-vision}
@@ -109,7 +109,7 @@ Thank you for your participation in the ethereum.org Translation Program!
 
 <InfoBanner shouldCenter emoji=":information_source:">
   If you're helping us with translations, you might find some useful information in our translations FAQ. 
-  {" "}<a href="/en/contributing/translation-program/translation-guide/">Translating ethereum.org FAQ</a>
+  {" "}<Link to="/en/contributing/translation-program/translation-guide/">Translating ethereum.org FAQ</Link>
 </InfoBanner>
 
 ## Resources {#resources}
