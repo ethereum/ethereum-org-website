@@ -13,7 +13,7 @@ Before jumping into smart contract libraries, it's a good idea to have a nice un
 
 ## What's in a library {#whats-in-a-library}
 
-You can usually find two kind of building blocks in smart contract libraries: reusable behaviors you can add to your contracts, and implementations of various standards.
+You can usually find two kinds of building blocks in smart contract libraries: reusable behaviors you can add to your contracts, and implementations of various standards.
 
 ### Behaviors {#behaviors}
 
