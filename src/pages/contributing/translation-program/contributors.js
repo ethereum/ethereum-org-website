@@ -45,6 +45,12 @@ const Contributors = ({ location }) => {
         </h2>
         <HorizontalUl>
           {allTimeData.data
+            .filter(
+              (item) =>
+                item.user.username !== "ethdotorg" &&
+                !item.user.username.includes("LQS") &&
+                !item.user.username.includes("REMOVED_USER")
+            )
             .map(({ user }) => user.username)
             .sort((user1, user2) =>
               user1.toLowerCase().localeCompare(user2.toLowerCase())

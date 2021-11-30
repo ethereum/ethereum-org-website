@@ -156,6 +156,12 @@ const TranslationLeaderboard = () => {
           </WordsContainer>
         </Header>
         {leaderboardData[dateRangeType].data
+          .filter(
+            (item) =>
+              item.user.username !== "ethdotorg" &&
+              !item.user.username.includes("LQS_") &&
+              !item.user.username.includes("REMOVED_USER")
+          )
           .filter((item, idx) => idx < filterAmount)
           .map((item, idx) => {
             const { user, translated, languages } = item
