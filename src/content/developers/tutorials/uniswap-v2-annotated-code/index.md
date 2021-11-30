@@ -106,7 +106,7 @@ This is most common flow, used by traders:
 #### Caller
 
 1. Provide the periphery account with an allowance of liquidity tokens to be burned in exchange for the underlying tokens.
-2. Call one of the periphery contract's addLiquidity functions.
+2. Call one of the periphery contract's removeLiquidity functions.
 
 #### In the periphery contract (UniswapV2Router02.sol)
 
