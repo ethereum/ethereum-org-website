@@ -1265,6 +1265,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/mariahpickett"><img src="https://avatars.githubusercontent.com/u/74935737?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mariah</b></sub></a><br /><a href="#content-mariahpickett" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/ascrookes"><img src="https://avatars.githubusercontent.com/u/1642035?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Amadou Crookes</b></sub></a><br /><a href="#content-ascrookes" title="Content">🖋</a></td>
   </tr>
 </table>
 
