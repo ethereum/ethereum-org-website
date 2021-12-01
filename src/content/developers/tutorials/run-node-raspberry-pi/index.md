@@ -248,7 +248,7 @@ Please, take into account that this is the first image based on Ubuntu 20.04 so 
 6. https://grafana.com
 7. https://forum.armbian.com/topic/5565-zram-vs-swap/
 8. https://geth.ethereum.org
-9. https://github.com/openethereum/openethereum
+9. https://github.com/openethereum/openethereum \* **Note that OpenEthereum [has been deprecated](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) and is no longer being maintained.** Use it with caution and preferably switch to another client implementation.
 10. https://nethermind.io
 11. https://www.hyperledger.org/projects/besu
 12. https://github.com/prysmaticlabs/prysm

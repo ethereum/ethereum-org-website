@@ -137,7 +137,7 @@ OpenEthereum is a fast, feature-rich and advanced CLI-based Ethereum client. It'
 
 OpenEthereum is developed using the cutting-edge Rust programming language and licensed under the GPLv3.
 
-**Note that OpenEthereum [has been deprecated](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) and is no longer be maintained.** Use it with caution and preferably switch to another client implementation.
+**Note that OpenEthereum [has been deprecated](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) and is no longer being maintained.** Use it with caution and preferably switch to another client implementation.
 
 #### Nethermind {#nethermind}
 

@@ -24,7 +24,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 ## Beginner articles {#beginner-articles}
 
 - [Choosing an Ethereum Client](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
-- [The Rust Ethereum Client](https://openethereum.github.io/)
+- [The Rust Ethereum Client](https://openethereum.github.io/) \* **Note that OpenEthereum [has been deprecated](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) and is no longer being maintained.** Use it with caution and preferably switch to another client implementation.
 - [Sending Transaction to Ethereum Using Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [An Introduction to Smart Contracts with Parity Ethereum Client](https://wiki.parity.io/Smart-Contracts)
 - [Setting up your Oasis SDK dev environment](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
