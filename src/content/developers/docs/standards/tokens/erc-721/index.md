@@ -243,6 +243,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 ## Popular NFTs {#popular-nfts}
 
 - [Etherscan NFT Tracker](https://etherscan.io/tokens-nft) list the top NFT on Ethereum by transfers volume.
+- [CryptoPunks](https://larvalabs.com/cryptopunks) is a collection of 10,000 unique characters, algorithmically generated.
 - [CryptoKitties](https://www.cryptokitties.co/) is a game centered around breedable, collectible, and oh-so-adorable
   creatures we call CryptoKitties.
 - [Sorare](https://sorare.com/) is a global fantasy football game where you can collect limited editions collectibles,
@@ -254,6 +255,8 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
   censorship-resistant websites.
 - [Gods Unchained Cards](https://godsunchained.com/) is a TCG on the Ethereum blockchain that uses NFT's to bring real ownership
   to in-game assets.
+- [Bored Ape Yacht Club](https://boredapeyachtclub.com) is a collection of 10,000 unique Bored Apes which gives you access to
+  member-only benefits and all areas of the project (future areas and perks can be unlocked by the community through roadmap activation).
 
 ## Further reading {#further-reading}
 
