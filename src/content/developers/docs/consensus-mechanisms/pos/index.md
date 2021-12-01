@@ -69,6 +69,12 @@ To do this in proof-of-stake, Casper, a finality protocol, gets validators to ag
 
 As Vlad Zamfir put it, this is like a miner participating in a 51% attack, causing their mining hardware to immediately burn down.
 
+## How POS addresses mining power {#How POS addresses mining power}
+
+In POW, Mining requires a lot of computing power to run different cryptographic computations to solve computing challenges. The energy consumed by mining leaves a significant carbon footprint. In addition, miners waste a lot of electricity by mining because the ASIC machines used to mine only have one function. Miners typically earn their income in cryptocurrencies, but often pay operating expenses such as electricity and rent in fiat currencies. As a result, miners' currency exchange activities have had a profound impact on the cryptocurrency market.
+
+The PoS algorithm solves this problem by effectively substituting staking for computing power, limiting an individual's mining power to a percentage of his ownership staked. This means a significant reduction in energy consumption and the manufacture of single-purpose hardware, such as ASIC machines, because they are no longer needed.
+
 ## Proof-of-stake and security {#pos-and-security}
 
 The threat of a [51% attack](https://www.investopedia.com/terms/1/51-attack.asp) still exists in proof-of-stake, but it's even more risky for the attackers. To do so, you'd need to control 51% of the staked ETH. Not only is this a lot of money, but it would probably cause ETH's value to drop. There's very little incentive to destroy the value of a currency you have a majority stake in. There are stronger incentives to keep the network secure and healthy.
