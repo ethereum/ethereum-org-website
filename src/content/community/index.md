@@ -140,3 +140,4 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
 - [Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)
 - [Bankless jobs board](https://pallet.xyz/list/bankless/jobs)
 - [useWeb3 Jobs](https://www.useweb3.xyz/jobs)
+- [Web3Jobs](https://web3.career)
