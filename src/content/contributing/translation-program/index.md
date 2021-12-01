@@ -11,9 +11,9 @@ The Translation Program is a collaborative effort to translate ethereum.org into
 
 Our progress so far:
 
-- **2,200 +** translators
-- **37** languages live on site
-- **2.4 million** words translated in 2021
+- [**2,200 +** translators](/contributing/translation-program/acknowledgements/)
+- [**37** languages live on site](/languages/)
+- [**2.4 million** words translated in 2021](/contributing/translation-program/acknowledgements/)
 
 If you want to get involved and help us grow the global Ethereum community by translating the website into your language, follow the steps below!
 
@@ -56,7 +56,7 @@ The ethereum.org Translation Program aims to make Ethereum accessible to everyon
 2. **Open the language you want to translate and find a document to work on**  
    The website content is divided into a number of documents and language versions. You can check the progress of each document on the right – if translation progress is below 100%, please contribute!
 
-   Don't see your language listed? [Open an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
+   Don't see your language listed? [Open an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose) or ask in our [Discord](https://discord.gg/6WX7E97)
 
    ![Translated and untranslated files on Crowdin](./crowdin-files.png)
 
@@ -127,7 +127,7 @@ Thank you for your participation in the ethereum.org Translation Program!
 
 **Communities**
 
-- [Language-specific Translation Groups](https://discord.gg/6WX7E97)
+- [Language-specific Discord translation groups](https://discord.gg/6WX7E97)
   _– an initiative to connect ethereum.org translators into Translation Groups_
 - [Chinese translators group](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)
   _– Notion page for easier coordination between Chinese translators_

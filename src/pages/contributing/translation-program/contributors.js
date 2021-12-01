@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 // Components
 import Breadcrumbs from "../../../components/Breadcrumbs"
+import Link from "../../../components/Link"
 import Translation from "../../../components/Translation"
 import {
   Content,
@@ -40,6 +41,22 @@ const Contributors = ({ location }) => {
         <h1>
           <Translation id="page-contributing-translation-program-contributors-title" />
         </h1>
+        <p>
+          <Translation id="page-contributing-translation-program-contributors-our-translators-1" />
+        </p>
+        <p>
+          <Translation id="page-contributing-translation-program-contributors-our-translators-2" />
+        </p>
+        <p>
+          <Translation id="page-contributing-translation-program-contributors-our-translators-3" />
+        </p>
+        <p>
+          <Translation id="page-languages-interested" />{" "}
+          <Link to="/en/contributing/translation-program/">
+            <Translation id="page-languages-learn-more" />
+          </Link>
+          .
+        </p>
         <h2>
           <Translation id="page-contributing-translation-program-contributors-thank-you" />
         </h2>
@@ -59,6 +76,13 @@ const Contributors = ({ location }) => {
               return <ListItem>{user}</ListItem>
             })}
         </HorizontalUl>
+        <p>
+          <Translation id="page-languages-interested" />{" "}
+          <Link to="/en/contributing/translation-program/">
+            <Translation id="page-languages-learn-more" />
+          </Link>
+          .
+        </p>
       </Content>
     </Page>
   )

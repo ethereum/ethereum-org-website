@@ -111,7 +111,11 @@ const TranslatorAcknowledgements = ({ data, location }) => {
               <Translation id="page-contributing-translation-program-acknowledgements-acknowledgement-page-2" />
             </p>
             <p>
-              <Translation id="page-contributing-translation-program-acknowledgements-acknowledgement-page-3" />
+              <Translation id="page-contributing-translation-program-acknowledgements-acknowledgement-page-3" />{" "}
+              <Link to="/contributing/translation-program/contributors/">
+                <Translation id="page-contributing-translation-program-acknowledgements-acknowledgement-page-link" />
+              </Link>
+              .
             </p>
             <p>
               <Translation id="page-contributing-translation-program-acknowledgements-acknowledgement-page-4" />
@@ -150,16 +154,9 @@ const TranslatorAcknowledgements = ({ data, location }) => {
             <p>
               <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-2" />
             </p>
-            <p>
-              <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-3" />
-            </p>
-            <p>
-              <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-4" />
-            </p>
           </RightColumn>
         </TwoColumnContent>
       </Content>
-
       <Content>
         <h1>
           <Translation id="page-contributing-translation-program-acknowledgements-our-translators-title" />
@@ -167,16 +164,10 @@ const TranslatorAcknowledgements = ({ data, location }) => {
         <p>
           <Translation id="page-contributing-translation-program-acknowledgements-our-translators-1" />
         </p>
-        <p>
-          <Translation id="page-contributing-translation-program-acknowledgements-our-translators-2" />
-        </p>
-        <p>
-          <Translation id="page-contributing-translation-program-acknowledgements-our-translators-3" />
-        </p>
         <CentralActionCard
           to="/contributing/translation-program/contributors/"
           title={translateMessageId(
-            "page-contributing-translation-program-acknowledgements-our-translators-title",
+            "page-contributing-translation-program-acknowledgements-our-translators-view-all",
             intl
           )}
           description={translateMessageId(
