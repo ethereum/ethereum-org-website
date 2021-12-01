@@ -410,7 +410,6 @@ const HomePage = ({ data }) => {
   if (intl.locale !== "en") {
     return <LegacyPageHome />
   }
-  console.log(intl)
 
   const toggleCodeExample = (id) => {
     setActiveCode(id)
