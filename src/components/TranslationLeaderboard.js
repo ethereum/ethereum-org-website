@@ -72,8 +72,12 @@ const WordsContainer = styled.div`
 
 const Avatar = styled.img`
   margin-right: 1rem;
-  height: 20px;
-  width: 20px;
+  height: 40px;
+  width: 40px;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    height: 30px;
+    width: 30px;
+  }
   border-radius: 50%;
   @media (max-width: ${(props) => props.theme.breakpoints.xs}) {
     display: none;
