@@ -5680,6 +5680,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "AndreyAzimov",
+      "name": "Andrey Azimov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5325909?v=4",
+      "profile": "https://web3.career",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
