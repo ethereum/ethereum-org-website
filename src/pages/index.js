@@ -10,6 +10,7 @@ import Icon from "../components/Icon"
 import CalloutBanner from "../components/CalloutBanner"
 import CodeModal from "../components/CodeModal"
 import Codeblock from "../components/Codeblock"
+import LegacyPageHome from "../components/LegacyPageHome"
 import Morpher from "../components/Morpher"
 import PageMetadata from "../components/PageMetadata"
 import StatsBoxGrid from "../components/StatsBoxGrid"
@@ -405,6 +406,11 @@ const HomePage = ({ data }) => {
   const intl = useIntl()
   const [isModalOpen, setModalOpen] = useState(false)
   const [activeCode, setActiveCode] = useState(0)
+
+  if (intl.locale !== "en") {
+    return <LegacyPageHome />
+  }
+  console.log(intl)
 
   const toggleCodeExample = (id) => {
     setActiveCode(id)
