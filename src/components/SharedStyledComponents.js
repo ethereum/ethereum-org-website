@@ -476,6 +476,7 @@ export const Option = styled.div`
 export const OptionText = styled.div`
   font-size: ${(props) => props.fontSize};
   line-height: 100%;
+  text-align: center;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 16px;
     font-weight: 600;
