@@ -55,7 +55,6 @@ const Item = styled.div`
 `
 
 const TextContainer = styled.div`
-  flex: 1 1 75%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -64,10 +63,10 @@ const TextContainer = styled.div`
 `
 
 const WordsContainer = styled.div`
-  flex: 1 1 36%;
+  min-width: 20%;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: left;
 `
 
 const Avatar = styled.img`
@@ -102,6 +101,10 @@ const StyledEmoji = styled(Emoji)`
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     display: none;
   }
+`
+
+const Flex = styled.div`
+  display: flex;
 `
 
 const TranslationLeaderboard = () => {
@@ -151,10 +154,12 @@ const TranslationLeaderboard = () => {
       </OptionContainer>
       <Table>
         <Header>
-          <ItemNumber>#</ItemNumber>
-          <TextContainer>
-            <Translation id="page-contributing-translation-program-acknowledgements-translator" />
-          </TextContainer>
+          <Flex>
+            <ItemNumber>#</ItemNumber>
+            <TextContainer>
+              <Translation id="page-contributing-translation-program-acknowledgements-translator" />
+            </TextContainer>
+          </Flex>
           <WordsContainer>
             <Translation id="page-contributing-translation-program-acknowledgements-total-words" />
           </WordsContainer>
@@ -179,18 +184,20 @@ const TranslationLeaderboard = () => {
             }
             return (
               <Item key={idx}>
-                {emoji ? (
-                  <Emoji mr={"1rem"} size={2} text={emoji} />
-                ) : (
-                  <ItemNumber>{idx + 1}</ItemNumber>
-                )}
-                <TextContainer>
-                  <Avatar src={user.avatarUrl} />
-                  <div>
-                    {user.username}
-                    <Language>{languages[0]?.name || ""}</Language>
-                  </div>
-                </TextContainer>
+                <Flex>
+                  {emoji ? (
+                    <Emoji mr={"1rem"} size={2} text={emoji} />
+                  ) : (
+                    <ItemNumber>{idx + 1}</ItemNumber>
+                  )}
+                  <TextContainer>
+                    <Avatar src={user.avatarUrl} />
+                    <div>
+                      {user.username}
+                      <Language>{languages[0]?.name || ""}</Language>
+                    </div>
+                  </TextContainer>
+                </Flex>
                 <WordsContainer>
                   <StyledEmoji mr={"0.5rem"} size={1.5} text={":writing:"} />
                   {translated}
