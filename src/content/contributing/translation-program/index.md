@@ -17,15 +17,10 @@ Our progress so far:
 
 If you want to get involved and help us grow the global Ethereum community by translating the website into your language, follow the steps below!
 
-<InfoBanner shouldCenter emoji=":tada:">
-  Claim your POAP token! If you translated ethereum.org in 2021, there's a unique POAP waiting for you.{" "}
-  <Link to="/contributing/#poap">More on POAPs</Link>
-</InfoBanner>
-
-<br/>
-
 <InfoBanner emoji=":tada:">
-  <Link to="/contributing/translation-program/acknowledgements/">Translator Acknowledgements!</Link>
+  Check out our <Link to="/contributing/translation-program/acknowledgements/">Translator Acknowledgements</Link> page, and{" "}
+  claim your POAP token! If you translated ethereum.org in 2021, there's a unique POAP waiting for you.{" "}
+  <Link to="/contributing/translation-program/acknowledgements/#poap">More on POAPs</Link>
 </InfoBanner>
 
 ## Mission and vision {#mission-and-vision}

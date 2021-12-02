@@ -30,6 +30,13 @@ const TwoColumnContent = styled.div`
   }
 `
 
+const LeaderboardContent = styled(Content)`
+  max-width: 800px;
+  h1 {
+    text-align: center;
+  }
+`
+
 const LeftColumn = styled.div`
   margin-right: 2rem;
   width: 50%;
@@ -137,27 +144,16 @@ const TranslatorAcknowledgements = ({ data, location }) => {
         </TwoColumnContent>
       </Content>
 
-      <Content>
+      <LeaderboardContent>
         <h1>
           <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-title" />
         </h1>
-        <TwoColumnContent>
-          <LeftColumn>
-            <TranslationLeaderboard />
-          </LeftColumn>
-          <RightColumn>
-            <p>
-              <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-cta" />
-            </p>
-            <p>
-              <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-1" />
-            </p>
-            <p>
-              <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-2" />
-            </p>
-          </RightColumn>
-        </TwoColumnContent>
-      </Content>
+        <TranslationLeaderboard />
+        <p>
+          <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-1" />
+        </p>
+      </LeaderboardContent>
+
       <Content>
         <h1>
           <Translation id="page-contributing-translation-program-acknowledgements-our-translators-title" />
@@ -179,7 +175,7 @@ const TranslatorAcknowledgements = ({ data, location }) => {
         />
       </Content>
 
-      <Content>
+      <Content id="poap">
         <h1>
           <Translation id="page-contributing-translation-program-acknowledgements-poaps-title" />
         </h1>

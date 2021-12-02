@@ -1,6 +1,7 @@
 // Libraries
 import React from "react"
 import styled from "styled-components"
+import { useIntl } from "gatsby-plugin-intl"
 
 // Components
 import Breadcrumbs from "../../../components/Breadcrumbs"
@@ -15,6 +16,9 @@ import {
 
 // Data
 import allTimeData from "../../../data/translation-reports/alltime-data.json"
+
+// Utils
+import { translateMessageId } from "../../../utils/translations"
 
 // Styles
 const HorizontalUl = styled.ul`
@@ -35,15 +39,16 @@ const HorizontalUl = styled.ul`
 `
 
 const Contributors = ({ location }) => {
+  const intl = useIntl()
   return (
     <Page>
       <PageMetadata
         title={translateMessageId(
-          "page-contributing-translation-program-acknowledgements-meta-title",
+          "page-contributing-translation-program-contributors-meta-title",
           intl
         )}
         description={translateMessageId(
-          "page-contributing-translation-program-acknowledgements-meta-description",
+          "page-contributing-translation-program-contributors-meta-description",
           intl
         )}
       />

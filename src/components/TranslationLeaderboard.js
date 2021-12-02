@@ -83,8 +83,11 @@ const Avatar = styled.img`
   }
 `
 
-const ItemNumber = styled.div`
-  margin-right: 1rem;
+const Width40 = styled.div`
+  width: 40px;
+`
+
+const ItemNumber = styled(Width40)`
   opacity: 0.4;
 `
 
@@ -186,7 +189,9 @@ const TranslationLeaderboard = () => {
               <Item key={idx}>
                 <Flex>
                   {emoji ? (
-                    <Emoji mr={"1rem"} size={2} text={emoji} />
+                    <Width40>
+                      <Emoji mr={"1rem"} size={2} text={emoji} />
+                    </Width40>
                   ) : (
                     <ItemNumber>{idx + 1}</ItemNumber>
                   )}
