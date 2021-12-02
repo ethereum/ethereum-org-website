@@ -61,7 +61,7 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
       {({ location }) => {
         /* Set canonical URL w/ language path to avoid duplicate content */
         /* e.g. set ethereum.org/about/ to ethereum.org/en/about/ */
-        const { pathname } = location
+        const { pathname, host } = location
         let canonicalPath = pathname
         const firstDirectory = canonicalPath.split("/")[1]
         if (!supportedLanguages.includes(firstDirectory)) {
@@ -71,7 +71,6 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
           canonicalUrl || `${site.siteMetadata.url}${canonicalPath}`
 
         /* Set fallback ogImage based on path */
-        const siteUrl = window ? window.location.host : site.siteMetadata.url
         let ogImage = getImage(ogImageDefault)?.images.fallback.src
         if (pathname.includes("/developers/")) {
           ogImage = getImage(ogImageDevelopers)?.images.fallback.src
@@ -85,7 +84,7 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
         if (image) {
           ogImage = image
         }
-        const ogImageUrl = siteUrl.concat(ogImage)
+        const ogImageUrl = host.concat(ogImage)
 
         return (
           <Helmet
@@ -140,7 +139,7 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
               },
               {
                 property: `og:url`,
-                content: siteUrl,
+                content: host,
               },
               {
                 property: `og:image`,
