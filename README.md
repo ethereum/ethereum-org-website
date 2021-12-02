@@ -1268,6 +1268,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/ascrookes"><img src="https://avatars.githubusercontent.com/u/1642035?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Amadou Crookes</b></sub></a><br /><a href="#content-ascrookes" title="Content">🖋</a></td>
     <td align="center"><a href="http://nathanwoodruff.dev"><img src="https://avatars.githubusercontent.com/u/46133948?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nathan Woodruff</b></sub></a><br /><a href="#ideas-nwoodr94" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://web3.career"><img src="https://avatars.githubusercontent.com/u/5325909?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andrey Azimov</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=AndreyAzimov" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://ddocs.co.uk"><img src="https://avatars.githubusercontent.com/u/38940580?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anita Diamond</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ddocs" title="Documentation">📖</a></td>
   </tr>
 </table>
 
