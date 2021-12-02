@@ -76,7 +76,7 @@ const checkIsMdxOutdated = (path) => {
       intlMatch += match.replace(re, (_, p1, p2) => p1 + p2)
     })
   } catch {
-    console.error("regex error")
+    console.error("regex error", englishPath, path)
     return true
   }
 
