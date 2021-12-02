@@ -1274,6 +1274,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://matthieuscarset.com"><img src="https://avatars.githubusercontent.com/u/7369593?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matthieu SCARSET</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=MatthieuScarset" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://blog.luoxinxin.com.cn"><img src="https://avatars.githubusercontent.com/u/16456918?v=4?s=100" width="100px;" alt=""/><br /><sub><b>zhanxin</b></sub></a><br /><a href="#translation-luozhanxin" title="Translation">🌍</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=luozhanxin" title="Documentation">📖</a></td>
   </tr>
 </table>
 
