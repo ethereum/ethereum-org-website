@@ -140,7 +140,7 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
               },
               {
                 property: `og:url`,
-                content: host,
+                content: siteUrl,
               },
               {
                 property: `og:image`,
