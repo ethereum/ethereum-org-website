@@ -127,13 +127,14 @@ export const NavLink = styled(Link)`
   }
 `
 
-export const FakeLink = styled.div`
+// Avoid DOM error for nested links
+export const FakeLink = styled.span`
   color: ${(props) => props.theme.colors.primary};
   cursor: pointer;
 `
 
 // Avoid DOM error for nested links
-export const FakeLinkExternal = styled.div`
+export const FakeLinkExternal = styled.span`
   color: ${(props) => props.theme.colors.primary};
   &:after {
     margin-left: 0.125em;

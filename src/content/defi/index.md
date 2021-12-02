@@ -310,14 +310,14 @@ DeFi is an open-source movement. The DeFi protocols and applications are all ope
 
 At such an early stage in DeFi, there are both opportunities and risks. Make sure you're aware of both before diving in.
 
-### Opportunities
+### Opportunities {#opportunities}
 
 - **Combination opportunities** – the system is open, new products are coming to market all the time that combine existing services to unlock new opportunities.
 - **Greater efficiency** – smart contracts remove the need for custodians and escrows reducing transaction time and cost without compromising security.
 - **More transparency** – everything is public, this makes auditing and understanding risks a lot easier. If something does go wrong, investigations are far simpler.
 - **More accessible** – DeFi allows you to use these markets without giving away your identity. These protocols are open to everyone and can't discriminate based on personal details.
 
-### Risks
+### Risks {#risks}
 
 - **Smart contracts**
   - they are the backbone of DeFi so if there a smart contract bug it poses a big risk to the protocol's users.
@@ -343,7 +343,7 @@ TODO: Add back when it's affordable :)
 
 Before you try out any DeFi products, remember that we are in the early stages of this financial revolution. Only spend what you can afford and do your research.
 
-### Transaction fees
+### Transaction fees {#transaction-fees}
 
 DeFi relies on Ethereum to keep transactions secure. Ethereum security comes at a cost. The people who do the work to make Ethereum safe, known as miners, must be incentivised. Transaction fees are part of the incentive for securing Ethereum – think of it like a tip to the person processing your transaction. However, this fee is variable and increases when the network is busy. After all, miners need to prioritise all the pending transactions and they're incentivised to choose transactions which include a larger tip. This is known in the community as "gas" as it "fuels" the transaction.
 
@@ -352,21 +352,21 @@ DeFi relies on Ethereum to keep transactions secure. Ethereum security comes at 
     <a href="https://www.ethgasstation.info/">Check gas prices</a> [What's a normal amount?]
 </InfoBanner>
 
-### On/off-ramps
+### On/off-ramps {#onoff-ramps}
 
 Getting funds in or out of DeFi into the traditional financial system will require a ramp.
 
-### The DeFi essentials
+### The DeFi essentials {#the-defi-essentials}
 
 - a wallet – you'll need one to connect to applications and manage your funds.
 - some Eth – you'll need to pay transaction fees
 - some time – don't DeFi in a rush, take time to read everything, double check everything. With greater financial freedom comes some risk. In most cases sending funds to the wrong place is irreversible.
 
-### Do a token swap
+### Do a token swap {#do-a-token-swap}
 
 todo – is it worth it with current gas prices?
 
-### Earn some interest
+### Earn some interest {#earn-some-interest}
 
 todo -->
 

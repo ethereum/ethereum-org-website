@@ -133,7 +133,7 @@ Podcasts addressing Ethereum and Cryptocurrencies:
 - [Epicenter](https://epicenter.tv/) _Explores the technical, economic, and social implications of the Crypto industry_
 - [Unchained](https://unchainedpodcast.com/) _dives deep into the people building the decentralized internet, the details of this technology that could underpin our future, and some of the thorniest topics in crypto, such as regulation, security and privacy_
 
-## Archived / No longer maintained:
+## Archived / No longer maintained: {#archived--no-longer-maintained}
 
 Resources about Ethereum-related projects and resources which have been deprecated or are no longer maintained.
 
