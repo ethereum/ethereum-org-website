@@ -71,21 +71,21 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
           canonicalUrl || `${site.siteMetadata.url}${canonicalPath}`
 
         /* Set fallback ogImage based on path */
-        const siteUrl = site.siteMetadata.url
-        // let ogImage = getImage(ogImageDefault)?.images.fallback.src
-        // if (pathname.includes("/developers/")) {
-        //   ogImage = getImage(ogImageDevelopers)?.images.fallback.src
-        // }
-        // if (pathname.includes("/dapps/")) {
-        //   ogImage = getImage(ogImageDapps)?.images.fallback.src
-        // }
-        // if (pathname.includes("/eth2/")) {
-        //   ogImage = getImage(ogImageEthtwo)?.images.fallback.src
-        // }
-        // if (image) {
-        //   ogImage = image
-        // }
-        // const ogImageUrl = siteUrl.concat(ogImage)
+        const siteUrl = window ? window.location.host : site.siteMetadata.url
+        let ogImage = getImage(ogImageDefault)?.images.fallback.src
+        if (pathname.includes("/developers/")) {
+          ogImage = getImage(ogImageDevelopers)?.images.fallback.src
+        }
+        if (pathname.includes("/dapps/")) {
+          ogImage = getImage(ogImageDapps)?.images.fallback.src
+        }
+        if (pathname.includes("/eth2/")) {
+          ogImage = getImage(ogImageEthtwo)?.images.fallback.src
+        }
+        if (image) {
+          ogImage = image
+        }
+        const ogImageUrl = siteUrl.concat(ogImage)
 
         return (
           <Helmet
@@ -134,18 +134,18 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
                 name: `twitter:description`,
                 content: desc,
               },
-              // {
-              //   name: `twitter:image`,
-              //   content: ogImageUrl,
-              // },
+              {
+                name: `twitter:image`,
+                content: ogImageUrl,
+              },
               {
                 property: `og:url`,
                 content: siteUrl,
               },
-              // {
-              //   property: `og:image`,
-              //   content: ogImageUrl,
-              // },
+              {
+                property: `og:image`,
+                content: ogImageUrl,
+              },
               {
                 property: `og:video`,
                 content: `https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g`,
