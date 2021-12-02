@@ -56,14 +56,14 @@ This is the flow of data and control that happens when you perform the three mai
 
 This is most common flow, used by traders:
 
-#### Caller {#in-the-core-contract-uniswapv2pairsol-2}
+#### Caller {#caller}
 
 1. Provide the periphery account with an allowance in the amount to be swapped.
 2. Call one of the periphery contract's many swap functions (which one depends on whether ETH is involved
    or not, whether the trader specifies the amount of tokens to deposit or the amount of tokens to get back, etc).
    Every swap function accepts a `path`, an array of exchanges to go through.
 
-#### In the periphery contract (UniswapV2Router02.sol) {#in-the-core-contract-uniswapv2pairsol-2}
+#### In the periphery contract (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02-sol}
 
 3. Identify the amounts that need to be traded on each exchange along the path.
 4. Iterates over the path. For every exchange along the way it sends the input token and then calls the exchange's `swap` function.
@@ -77,18 +77,18 @@ This is most common flow, used by traders:
 7. Send the output tokens to the destination.
 8. Call `_update` to update the reserve amounts
 
-#### Back in the periphery contract (UniswapV2Router02.sol) {#in-the-core-contract-uniswapv2pairsol-2}
+#### Back in the periphery contract (UniswapV2Router02.sol) {#back-in-the-periphery-contract-uniswapv2router02-sol}
 
 9. Perform any necessary cleanup (for example, burn WETH tokens to get back ETH to send the trader)
 
 ### Add Liquidity {#add-liquidity-flow}
 
-#### Caller {#in-the-core-contract-uniswapv2pairsol-2}
+#### Caller {#caller-2}
 
 1. Provide the periphery account with an allowance in the amounts to be added to the liquidity pool.
 2. Call one of the periphery contract's addLiquidity functions.
 
-#### In the periphery contract (UniswapV2Router02.sol) {#in-the-core-contract-uniswapv2pairsol-2}
+#### In the periphery contract (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02sol-2}
 
 3. Create a new pair exchange if necessary
 4. If there is an existing pair exchange, calculate the amount of tokens to add. This is supposed to be identical value for
@@ -103,16 +103,16 @@ This is most common flow, used by traders:
 
 ### Remove Liquidity {#remove-liquidity-flow}
 
-#### Caller {#in-the-core-contract-uniswapv2pairsol-2}
+#### Caller {#caller-3}
 
 1. Provide the periphery account with an allowance of liquidity tokens to be burned in exchange for the underlying tokens.
 2. Call one of the periphery contract's addLiquidity functions.
 
-#### In the periphery contract (UniswapV2Router02.sol) {#in-the-core-contract-uniswapv2pairsol-2}
+#### In the periphery contract (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02sol-3}
 
 3. Send the liquidity tokens to the pair exchange
 
-#### In the core contract (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
+#### In the core contract (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-3}
 
 4. Send the destination address the underlying tokens in proportion to the burned tokens. For example if
    there are 1000 A tokens in the pool, 500 B tokens, and 90 liquidity tokens, and we receive 9 tokens
@@ -382,7 +382,7 @@ This function allows the factory (and only the factory) to specify the two ERC-2
 
 #### Internal Update Functions {#pair-update-internal}
 
-##### \_update {#sync-or-skip}
+##### \_update {#_update}
 
 ```solidity
     // update reserves and, on the first call per block, price accumulators
@@ -444,7 +444,7 @@ This price calculation is the reason we need to know the old reserve sizes.
 
 Finally, update the global variables and emit a `Sync` event.
 
-##### \_mintFee {#sync-or-skip}
+##### \_mintFee {#_mintfee}
 
 ```solidity
     // if fee is on, mint liquidity equivalent to 1/6th of the growth in sqrt(k)
@@ -529,7 +529,7 @@ Note that while any transaction or contract _can_ call these functions, they are
 the periphery contract. If you call them directly you won't be able to cheat the pair exchange, but you might
 lose value through a mistake.
 
-##### mint {#sync-or-skip}
+##### mint {#mint}
 
 ```solidity
     // this low-level function should be called from a contract which performs important safety checks
@@ -631,7 +631,7 @@ Use the `UniswapV2ERC20._mint` function to actually create the additional liquid
 
 Update the state variables (`reserve0`, `reserve1`, and if needed `kLast`) and emit the appropriate event.
 
-##### burn {#sync-or-skip}
+##### burn {#burn}
 
 ```solidity
     // this low-level function should be called from a contract which performs important safety checks
@@ -679,7 +679,7 @@ The liquidity provider receives equal value of both tokens. This way we don't ch
 
 The rest of the `burn` function is the mirror image of the `mint` function above.
 
-##### swap {#sync-or-skip}
+##### swap {#swap}
 
 ```solidity
     // this low-level function should be called from a contract which performs important safety checks

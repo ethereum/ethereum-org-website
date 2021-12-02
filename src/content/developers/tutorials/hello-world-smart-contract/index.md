@@ -233,7 +233,7 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 To actually connect these to our code, we’ll reference these variables in our `hardhat.config.js` file on step 13.
 
-## Step 12: Install Ethers.js {step-12} {#in-this-tutorial-youll-learn-how-to}
+## Step 12: Install Ethers.js {#step-12-install-ethersjs}
 
 Ethers.js is a library that makes it easier to interact and make requests to Ethereum by wrapping [standard JSON-RPC methods](/developers/docs/apis/json-rpc/) with more user friendly methods.
 
@@ -247,7 +247,7 @@ npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 
 We’ll also require ethers in our `hardhat.config.js` in the next step.
 
-## Step 13: Update hardhat.config.js {step-13} {#assumptions}
+## Step 13: Update hardhat.config.js {#step-13-update-hardhatconfigjs}
 
 We’ve added several dependencies and plugins so far, now we need to update `hardhat.config.js` so that our project knows about all of them.
 
@@ -275,7 +275,7 @@ module.exports = {
 }
 ```
 
-## Step 14: Compile our contract {step-14} {#usingtellor}
+## Step 14: Compile our contract {#step-14-compile-our-contracts}
 
 To make sure everything is working so far, let’s compile our contract. The `compile` task is one of the built-in hardhat tasks.
 

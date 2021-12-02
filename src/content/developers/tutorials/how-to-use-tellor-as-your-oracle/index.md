@@ -13,7 +13,7 @@ sourceUrl: https://docs.tellor.io/tellor/
 
 Pop Quiz: Your protocol is just about finished, but it needs an oracle to plug in to get an active off chain data feed going...What do you do?
 
-## (Soft) Prerequisites {#in-this-tutorial-youll-learn-how-to}
+## (Soft) Prerequisites {#soft-prerequisites}
 
 This post aims to make accessing an oracle feed as simple and straightforward as possible. That said, we're assuming the following about your coding skill-level to focus on the oracle aspect.
 
@@ -25,7 +25,7 @@ Assumptions:
 
 Tellor is a live and open-sourced oracle ready for implementation. This beginner's guide is here to showcase the ease with which one can get up and running with Tellor, providing your project with a fully decentralized and censorship-resistent oracle.
 
-## Overview {#assumptions}
+## Overview {#overview}
 
 Tellor is an oracle system where parties can request the value of an off-chain data point (e.g. BTC/USD) and miners compete to add this value to an on-chain data-bank, accessible by all Ethereum smart contracts. The inputs to this data-bank are secured by a network of staked miners. Tellor utilizes cryptoeconomic incentive mechanisms, rewarding honest data submissions by miners and punishing bad actors through the issuance of Tellor’s token, Tributes (TRB) and a dispute mechanism.
 
@@ -80,7 +80,7 @@ contract BtcPriceContract is UsingTellor {
 
 ## Looking to do some testing first? See the list below for our active testnet addresses: {#looking-to-do-some-testing-first-see-the-list-below-for-our-active-testnet-addresses}
 
-#### Addresses: {#for-a-more-robust-implementation-of-the-tellor-oracle-check-out-the-full-list-of-available-functions-here}
+#### Addresses: {#addresses}
 
 Mainnet: [`0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0`](https://etherscan.io/address/0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0)
 
@@ -92,7 +92,7 @@ Ropsten: [`0x20374E579832859f180536A69093A126Db1c8aE9`](https://ropsten.ethersca
 
 Goerli: [`0x20374E579832859f180536A69093A126Db1c8aE9`](https://goerli.etherscan.io/address/0x20374E579832859f180536A69093A126Db1c8aE9#code)
 
-#### The following networks use the ['Fellowship'](https://github.com/tellor-io/fellowship) instead of the POW miners: {#for-a-more-robust-implementation-of-the-tellor-oracle-check-out-the-full-list-of-available-functions-here}
+#### The following networks use the ['Fellowship'](https://github.com/tellor-io/fellowship) instead of the POW miners:
 
 BSC Testnet: [`0xbc2f9E092ac5CED686440E5062D11D6543202B24`](https://testnet.bscscan.com/address/0xbc2f9E092ac5CED686440E5062D11D6543202B24)
 

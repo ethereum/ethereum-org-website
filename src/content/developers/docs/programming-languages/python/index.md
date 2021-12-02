@@ -66,7 +66,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 Looking for more resources? Check out [ethereum.org/developers](/developers/).
 
-## Projects using Python tooling {#in-this-tutorial-youll-learn-how-to}
+## Projects using Python tooling {#projects-using-python-tooling}
 
 The following Ethereum-based projects use tools mentioned on this page. The related open-source repositories serve as a good reference for example code and best practices.
 
