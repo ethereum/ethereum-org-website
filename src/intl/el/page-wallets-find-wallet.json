@@ -63,7 +63,7 @@
   "page-find-wallet-myetherwallet-logo-alt": "Λογότυπο MyEtherWallet",
   "page-find-wallet-new-to-wallets": "Είστε καινούργιοι στα πορτοφόλια; Ενημερωθείτε παρακάτω πριν ξεκινήσετε.",
   "page-find-wallet-new-to-wallets-link": "Πορτοφόλια Ethereum",
-  "page-find-wallet-not-all-features": "Κανένα πορτοφόλι δεν διαθέτει όλα αυτά τα χαρακτηριστικά",
+  "page-find-wallet-not-all-features": "Κανένα πορτοφόλι δεν διαθέτει όλα αυτά τα χαρακτηριστικά <b>ακόμη</b>",
   "page-find-wallet-not-endorsements": "Τα πορτοφόλια που παρατίθενται σε αυτή τη σελίδα δεν είναι επίσημα εγκεκριμένα και παρέχονται μόνο για ενημερωτικούς σκοπούς. Οι περιγραφές έχουν παραχωρηθεί από τις αντίστοιχες εταιρείες. Προσθέτουμε προϊόντα σε αυτή τη σελίδα με βάση τα κριτήρια μας",
   "page-find-wallet-overwhelmed": "στα Ethereum πορτοφόλια παρακάτω. Πάρα πολλά; Εφαρμόστε τα παρακάτω φίλτρα.",
   "page-find-wallet-pillar-logo-alt": "Λογότυπο Pillar",
@@ -88,7 +88,6 @@
   "page-find-wallet-we-found": "Βρέθηκαν",
   "page-find-wallet-withdraw": "Ανάληψη σε τράπεζα",
   "page-find-wallet-withdraw-desc": "Μπορείτε να εξαργυρώσετε τα ETH σας κατευθείαν στον τραπεζικό σας λογαριασμό χωρίς να κάνετε ανταλλαγή.",
-  "page-find-wallet-yet": "ακόμη",
   "page-find-wallet-zengo-logo-alt": "Λογότυπο ZenGo",
   "page-stake-eth": "Αποθήκευση ΕΤΗ"
 }

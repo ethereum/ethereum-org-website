@@ -63,7 +63,7 @@
   "page-find-wallet-myetherwallet-logo-alt": "മൈഇതർ വാലറ്റ് ലോഗോ",
   "page-find-wallet-new-to-wallets": "വാലറ്റുകളുമായി ബന്ധപ്പെടുന്നത് ആദ്യമാണോ? നിങ്ങൾ ആരംഭിക്കുന്നതിനുള്ള ഒരു അവലോകനം ഇവിടെയുണ്ട്.",
   "page-find-wallet-new-to-wallets-link": "Ethereum വാലറ്റുകൾ",
-  "page-find-wallet-not-all-features": "ഒരു വാലറ്റിനും ഈ സവിശേഷതകളൊന്നുമില്ല",
+  "page-find-wallet-not-all-features": "ഒരു വാലറ്റിനും ഈ സവിശേഷതകളൊന്നുമില്ല <b>എന്നിട്ടും</b>",
   "page-find-wallet-not-endorsements": "ഈ പേജിൽ ലിസ്റ്റുചെയ്‌തിരിക്കുന്ന വാലറ്റുകൾ ഔദ്യോഗിക അംഗീകാരങ്ങളല്ല, അവ വിവര ആവശ്യങ്ങൾക്കായി മാത്രം നൽകിയിരിക്കുന്നു. അവയുടെ വിവരണങ്ങൾ വാലറ്റ് കമ്പനികൾ തന്നെ നൽകിയിട്ടുണ്ട്. ഞങ്ങളുടെ മാനദണ്ഡങ്ങൾ അടിസ്ഥാനമാക്കി ഞങ്ങൾ ഈ പേജിലേക്ക് ഉൽപ്പന്നങ്ങൾ ചേർക്കുന്നു",
   "page-find-wallet-overwhelmed": "ചുവടെ ഔദ്യോഗിക വാലറ്റുകൾ. സംഭ്രമിച്ചുപോയോ? സവിശേഷതകൾ പ്രകാരം ഫിൽട്ടർ ചെയ്യാൻ ശ്രമിക്കുക.",
   "page-find-wallet-pillar-logo-alt": "പില്ലർ ലോഗോ",
@@ -88,7 +88,6 @@
   "page-find-wallet-we-found": "ഞങ്ങൾ കണ്ടെത്തി",
   "page-find-wallet-withdraw": "ബാങ്കിലേക്ക് പിൻവലിക്കുക",
   "page-find-wallet-withdraw-desc": "ഒരു എക്സ്ചേഞ്ചിലൂടെ പോകാതെ തന്നെ നിങ്ങളുടെ ബാങ്ക് അക്കൗണ്ടിലേക്ക് ETH ക്യാഷ് ഔട്ട് ചെയ്യാം.",
-  "page-find-wallet-yet": "എന്നിട്ടും",
   "page-find-wallet-zengo-logo-alt": "സെൻഗോ ലോഗോ",
   "page-stake-eth": "ETH സ്റ്റേക്ക് ചെയ്യുക"
 }

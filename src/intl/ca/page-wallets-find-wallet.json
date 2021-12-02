@@ -63,7 +63,7 @@
   "page-find-wallet-myetherwallet-logo-alt": "Logotip de MyEtherWallet",
   "page-find-wallet-new-to-wallets": "Nou amb les carteres? Aquí tens una visió general per començar.",
   "page-find-wallet-new-to-wallets-link": "Carteres d'Ethereum",
-  "page-find-wallet-not-all-features": "Cap cartera té totes aquestes funcions",
+  "page-find-wallet-not-all-features": "Cap cartera té totes aquestes funcions <b>encara</b>",
   "page-find-wallet-not-endorsements": "Les carteres que apareixen en aquesta pàgina no estan homologades de manera oficial i es proporcionen només amb finalitats informatives. Les descripcions les han facilitat les pròpies empreses de les carteres. Afegim productes a aquesta pàgina d'acord amb els criteris de les nostres carteres",
   "page-find-wallet-overwhelmed": "d'Ethereum a continuació. Estàs aclaparat? Intenta filtrar per funcions.",
   "page-find-wallet-pillar-logo-alt": "Logotip de Pillar",
@@ -88,7 +88,6 @@
   "page-find-wallet-we-found": "Hem trobat",
   "page-find-wallet-withdraw": "Retira al banc",
   "page-find-wallet-withdraw-desc": "Pots retirar els teus ETH directament al teu compte bancari sense passar per un intercanvi.",
-  "page-find-wallet-yet": "encara",
   "page-find-wallet-zengo-logo-alt": "Logotip de ZenGo",
   "page-stake-eth": "Aposta ETH"
 }

@@ -63,7 +63,7 @@
   "page-find-wallet-myetherwallet-logo-alt": "MyEtherWallet logo",
   "page-find-wallet-new-to-wallets": "Ще не користувалися гаманцями? Нижче наведено поради для початку роботи.",
   "page-find-wallet-new-to-wallets-link": "Гаманці Ethereum",
-  "page-find-wallet-not-all-features": "Жоден гаманець не має усіх цих функцій",
+  "page-find-wallet-not-all-features": "Жоден гаманець не має усіх цих функцій <b>ще</b>",
   "page-find-wallet-not-endorsements": "Гаманці, перераховані на цій сторінці, не є офіційними схваленнями, і надаються тільки в інформаційних цілях. Їхні описи надано компаніями з розробки гаманців. Ми додаємо продукти на цю сторінку за критеріями наших",
   "page-find-wallet-overwhelmed": "гаманців Ethereum (їх наведено нижче). Зацікавились? Спробуйте відфільтрувати їх.",
   "page-find-wallet-pillar-logo-alt": "Pillar logo",
@@ -88,7 +88,6 @@
   "page-find-wallet-we-found": "Ми знайшли",
   "page-find-wallet-withdraw": "Вивести на банківський рахунок",
   "page-find-wallet-withdraw-desc": "Ви можете виводити ETH прямо на банківський рахунок. Для цього не потрібно використовувати обмінник.",
-  "page-find-wallet-yet": "ще",
   "page-find-wallet-zengo-logo-alt": "ZenGo logo",
   "page-stake-eth": "Частка ETH"
 }

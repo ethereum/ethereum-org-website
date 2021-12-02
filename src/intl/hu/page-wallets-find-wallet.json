@@ -63,7 +63,7 @@
   "page-find-wallet-myetherwallet-logo-alt": "MyEtherWallet logo",
   "page-find-wallet-new-to-wallets": "Még nincs tárcád? Itt egy útmutató, hogy elindulj.",
   "page-find-wallet-new-to-wallets-link": "Ethereum tárcák",
-  "page-find-wallet-not-all-features": "Egyik tárca sem rendelkezik ezekkel a tulajdonságokkal",
+  "page-find-wallet-not-all-features": "Egyik tárca sem rendelkezik ezekkel a tulajdonságokkal <b>még</b>",
   "page-find-wallet-not-endorsements": "Az oldalon felsorolt tárcák nincsenek hivatalosan jóváhagyva és csak információs célokat szolgálnak. A leírásukat maguk a tárca vállalatok biztosították. Ehhez az oldalhoz a következő kritériumok szerint adunk hozzá új terméket: ",
   "page-find-wallet-overwhelmed": "Ethereum tárcák alul. Túl sok? Próbálj rászűrni a tulajdonságok szerint.",
   "page-find-wallet-pillar-logo-alt": "Pillar logo",
@@ -88,7 +88,6 @@
   "page-find-wallet-we-found": "Találtunk",
   "page-find-wallet-withdraw": "Banki kiutalás",
   "page-find-wallet-withdraw-desc": "Ki tudod fizetni az ETH-edet egyenesen a bankszámládra anélkül, hogy tőzsdére kellene lépned.",
-  "page-find-wallet-yet": "még",
   "page-find-wallet-zengo-logo-alt": "ZenGo logo",
   "page-stake-eth": "ETH letétbe helyezése"
 }

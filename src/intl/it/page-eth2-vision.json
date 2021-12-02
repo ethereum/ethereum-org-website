@@ -43,7 +43,6 @@
   "page-eth2-vision-sustainability-desc-3": "Anche se lo staking verrà introdotto con la beacon chain, la rete Ethereum che utilizziamo oggi funzionerà in parallelo per un determinato periodo di tempo, prima di \"fondersi\" o \"agganciarsi\" agli aggiornamenti Eth2. Un sistema è protetto dagli ETH, l'altro dalla capacità di calcolo, questo perché, all'inizio, le shard chain non saranno in grado di gestire entità come gli account o le dapp. Quindi non potremo fare a meno improvvisamente del mining e della rete principale.",
   "page-eth2-vision-sustainability-desc-8": "Una volta che gli aggiornamenti alla beacon chain e alla shard chain saranno completati e funzionanti, inizierà il lavoro di docking della rete principale al nuovo sistema, per trasformare la rete principale in uno shard protetto dagli ETH e molto meno dispendioso dal punto di vista energetico.",
   "page-eth2-vision-sustainability-subtitle": "Ethereum deve essere più amica dell'ambiente.",
-  "page-eth2-vision-The": ". The",
   "page-eth2-vision-title": "La vision Eth2",
   "page-eth2-vision-title-1": "Rete congestionata",
   "page-eth2-vision-title-2": "Spazio su disco",

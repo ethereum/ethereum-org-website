@@ -419,10 +419,7 @@ const TutorialsPage = ({ data, pageContext }) => {
           <ResultsContainer>
             <Emoji text=":crying_face:" size={3} mb={`2em`} mt={`2em`} />
             <h2>
-              <Translation id="page-tutorial-tags-error" />{" "}
-              <b>
-                <Translation id="page-find-wallet-yet" />
-              </b>
+              <Translation id="page-tutorial-tags-error" />
             </h2>
             <p>
               <Translation id="page-find-wallet-try-removing" />
