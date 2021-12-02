@@ -63,7 +63,6 @@ const checkIsMdxOutdated = (path) => {
     translatedData = fs.readFileSync(path, "utf-8")
     englishData = fs.readFileSync(englishPath, "utf-8")
   } catch {
-    console.error("fs.readFileSync error")
     return true
   }
 
@@ -77,7 +76,6 @@ const checkIsMdxOutdated = (path) => {
       intlMatch += match.replace(re, (_, p1, p2) => p1 + p2)
     })
   } catch {
-    console.error("regex error")
     return true
   }
 
@@ -123,7 +121,6 @@ const checkIsPageOutdated = async (path, lang) => {
       translatedKeys = Object.keys(translatedData)
       englishKeys = Object.keys(englishData)
     } catch (err) {
-      console.error("fs.readFileSync error")
       return {
         isOutdated: true,
         isContentEnglish: true,
