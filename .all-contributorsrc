@@ -5726,6 +5726,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "luozhanxin",
+      "name": "zhanxin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16456918?v=4",
+      "profile": "http://blog.luoxinxin.com.cn",
+      "contributions": [
+        "translation",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
