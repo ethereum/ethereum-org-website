@@ -120,9 +120,10 @@ const TranslatorAcknowledgements = ({ data, location }) => {
             <p>
               <Translation id="page-contributing-translation-program-acknowledgements-acknowledgement-page-4" />
             </p>
-            <p>
+            {/* TODO: add certification section */}
+            {/* <p>
               <Translation id="page-contributing-translation-program-acknowledgements-acknowledgement-page-5" />
-            </p>
+            </p> */}
           </LeftColumn>
           <RightColumn>
             <Image
