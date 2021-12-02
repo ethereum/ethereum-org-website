@@ -323,7 +323,7 @@ const hello_world = await HelloWorld.deploy();
 
 Calling `deploy()` on a `ContractFactory` will start the deployment, and return a `Promise` that resolves to a `Contract`. This is the object that has a method for each of our smart contract functions.
 
-## Step 16: Deploy our contract {#step-16-deploy-our-contract-step-16}
+## Step 16: Deploy our contract {#step-16-deploy-our-contract}
 
 We’re finally ready to deploy our smart contract! Navigate to the command line and run:
 
