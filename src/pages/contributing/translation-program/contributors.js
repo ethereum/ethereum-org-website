@@ -6,6 +6,7 @@ import styled from "styled-components"
 import Breadcrumbs from "../../../components/Breadcrumbs"
 import Link from "../../../components/Link"
 import Translation from "../../../components/Translation"
+import PageMetadata from "../../../components/PageMetadata"
 import {
   Content,
   ListItem,
@@ -36,6 +37,17 @@ const HorizontalUl = styled.ul`
 const Contributors = ({ location }) => {
   return (
     <Page>
+      <PageMetadata
+        title={translateMessageId(
+          "page-contributing-translation-program-acknowledgements-meta-title",
+          intl
+        )}
+        description={translateMessageId(
+          "page-contributing-translation-program-acknowledgements-meta-description",
+          intl
+        )}
+      />
+
       <Content>
         <Breadcrumbs slug={location.pathname} />
         <h1>
