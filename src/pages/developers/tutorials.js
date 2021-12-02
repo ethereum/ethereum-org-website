@@ -15,7 +15,11 @@ import Pill from "../../components/Pill"
 import Tag from "../../components/Tag"
 import TutorialTags from "../../components/TutorialTags"
 import Emoji from "../../components/Emoji"
-import { Page, ButtonSecondary } from "../../components/SharedStyledComponents"
+import {
+  ButtonSecondary,
+  FakeLink,
+  Page,
+} from "../../components/SharedStyledComponents"
 
 import { getLocaleTimestamp, INVALID_DATETIME } from "../../utils/time"
 
@@ -454,9 +458,9 @@ const TutorialsPage = ({ data, pageContext }) => {
                   <>
                     {" "}
                     •<Emoji text=":link:" size={1} ml={`0.5em`} mr={`0.5em`} />
-                    <Link to={tutorial.to} hideArrow>
+                    <FakeLink>
                       <Translation id="page-tutorial-external-link" />
-                    </Link>
+                    </FakeLink>
                   </>
                 )}
               </Author>
