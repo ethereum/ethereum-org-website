@@ -29,7 +29,7 @@ sidebarDepth: 1
 - [러스트 이더리움 클라이언트](https://wiki.parity.io/Setup)
 - [러스트를 사용하여 이더리움에 트랜잭션 보내기](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
 - [패리티이더리움 클라이언트를 사용한 스마트 컨트랙트 소개](https://wiki.parity.io/Smart-Contracts)
-- [오아시스 SDK (Oasis SDK) 개발 환경 설정하기](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [오아시스 SDK (Oasis SDK) 개발 환경 설정하기](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Kovan용 Wasm의 컨트랙트를 러스트로 작성하는 방법에 대한 단계별 가이드](https://github.com/paritytech/pwasm-tutorial)
 
 ## 중급 사용자용 참고 자료 {#intermediate-articles}

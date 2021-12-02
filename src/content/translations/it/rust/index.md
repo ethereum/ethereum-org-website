@@ -29,7 +29,7 @@ Ti servono prima le nozioni di base? Dai un'occhiata a [ethereum.org/learn](/it/
 - [Il client Ethereum in Rust (in inglese)](https://wiki.parity.io/Setup)
 - [Inviare transazioni a Ethereum usando Rust (in inglese)](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
 - [Introduzione agli Smart Contract con il client Ethereum Parity (in inglese)](https://wiki.parity.io/Smart-Contracts)
-- [Configurare un ambiente di sviluppo Oasis SDK (in inglese)](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [Configurare un ambiente di sviluppo Oasis SDK (in inglese)](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Tutorial passo-passo per scrivere contratti in rust Wasm per Kovan (in inglese)](https://github.com/paritytech/pwasm-tutorial)
 
 ## Articoli di livello intermedio {#intermediate-articles}

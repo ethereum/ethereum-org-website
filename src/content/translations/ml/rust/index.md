@@ -28,7 +28,7 @@ sidebar: true
 - [റസ്റ്റ് Ethereum ക്ലയൻറ്](https://wiki.parity.io/Setup)
 - [റസ്റ്റ് ഉപയോഗിച്ച് Ethereum-ലേക്ക് ഇടപാട് അയയ്ക്കുന്നു](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
 - [പാരിറ്റി Ethereum ക്ലയന്റുമായുള്ള സ്മാർട്ട് കരാറുകളുടെ ഒരു ആമുഖം](https://wiki.parity.io/Smart-Contracts)
-- [നിങ്ങളുടെ ഒയാസിസ് SDK dev പരിസ്ഥിതി സജ്ജമാക്കുന്നു](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [നിങ്ങളുടെ ഒയാസിസ് SDK dev പരിസ്ഥിതി സജ്ജമാക്കുന്നു](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [കോവന് വേണ്ടി റസ്ര്റ് വാസമില്‍ എങ്ങനെ കരാറുകൾ എഴുതാം എന്നതിനെക്കുറിച്ചുള്ള ഒരു ഘട്ടം ഘട്ടമായുള്ള ട്യൂട്ടോറിയൽ](https://github.com/paritytech/pwasm-tutorial)
 
 ## ഇന്റർമീഡിയറ്റ് ലേഖനങ്ങൾ {#intermediate-articles}

@@ -29,7 +29,7 @@ sidebarDepth: 1
 - [Клієнт Ethereum на Rust](https://wiki.parity.io/Setup)
 - [Надсилання транзакції до Ethereum із використанням Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
 - [Введення до смарт-контрактів із використанням клієнта Parity Ethereum](https://wiki.parity.io/Smart-Contracts)
-- [Налаштування середовища розробки Oasis SDK](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [Налаштування середовища розробки Oasis SDK](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Покрокове керівництво з написання контрактів на rust Wasm для Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Проміжні статті {#intermediate-articles}

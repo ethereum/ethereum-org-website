@@ -28,7 +28,7 @@ Behöver du en mer grundläggande introduktion först? Kolla in [ethereum.org/se
 - [Rust Ethereum-klienten](https://wiki.parity.io/Setup)
 - [Skicka transaktionen till Ethereum med hjälp av Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
 - [En introduktion till smarta kontrakt med Parity Ethereum Client](https://wiki.parity.io/Smart-Contracts)
-- [Konfigurera din Oasis SDK dev-miljö](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [Konfigurera din Oasis SDK dev-miljö](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [En stegvis handledning om hur man skriver kontrakt i Rust Wasm för Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Mellanliggande artiklar {#intermediate-articles}
