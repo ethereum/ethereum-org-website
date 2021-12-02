@@ -287,7 +287,7 @@ npx hardhat compile
 
 You might get a warning about `SPDX license identifier not provided in source file` , but no need to worry about that — hopefully everything else looks good! If not, you can always message in the [Alchemy discord](https://discord.gg/u72VCg3).
 
-## Step 15: Write our deploy script {step-15} {#looking-to-do-some-testing-first-see-the-list-below-for-our-active-testnet-addresses}
+## Step 15: Write our deploy script {#step-15-write-our-deploy-scripts}
 
 Now that our contract is written and our configuration file is good to go, it’s time to write our contract deploy script.
 
