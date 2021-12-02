@@ -71,6 +71,7 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
           canonicalUrl || `${site.siteMetadata.url}${canonicalPath}`
 
         /* Set fallback ogImage based on path */
+        const siteUrl = site.siteMetadata.url
         let ogImage = getImage(ogImageDefault)?.images.fallback.src
         if (pathname.includes("/developers/")) {
           ogImage = getImage(ogImageDevelopers)?.images.fallback.src
@@ -84,7 +85,7 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
         if (image) {
           ogImage = image
         }
-        const ogImageUrl = host.concat(ogImage)
+        const ogImageUrl = siteUrl.concat(ogImage)
 
         return (
           <Helmet
