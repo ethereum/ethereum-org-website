@@ -5689,6 +5689,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "ddocs",
+      "name": "Anita Diamond",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38940580?v=4",
+      "profile": "https://ddocs.co.uk",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
