@@ -85,7 +85,7 @@ const Contributors = ({ location }) => {
               user1.toLowerCase().localeCompare(user2.toLowerCase())
             )
             .map((user) => {
-              return <ListItem>{user}</ListItem>
+              return <ListItem key={user}>{user}</ListItem>
             })}
         </HorizontalUl>
         <p>
