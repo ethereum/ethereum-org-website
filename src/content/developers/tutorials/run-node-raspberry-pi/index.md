@@ -64,7 +64,7 @@ Both images include the same packages, the only difference between them is that 
 ### Recommended hardware and setup {#recommended-hardware-and-setup}
 
 - Raspberry 4 (model B) - 4GB
-- MicroSD Card (16 GB Class 10 minimun)
+- MicroSD Card (16 GB Class 10 minimum)
 - SSD USB 3.0 disk (see storage section)
 - Power supply
 - Ethernet cable
