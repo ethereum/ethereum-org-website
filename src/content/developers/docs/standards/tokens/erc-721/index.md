@@ -255,8 +255,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
   censorship-resistant websites.
 - [Gods Unchained Cards](https://godsunchained.com/) is a TCG on the Ethereum blockchain that uses NFT's to bring real ownership
   to in-game assets.
-- [Bored Ape Yacht Club](https://boredapeyachtclub.com) is a collection of 10,000 unique Bored Apes which gives you access to
-  member-only benefits and all areas of the project (future areas and perks can be unlocked by the community through roadmap activation).
+- [Bored Ape Yacht Club](https://boredapeyachtclub.com) is a collection of 10,000 unique NFTs, which, as well as being a provably-rare piece of art, acts as a membership token to the club, providing member perks and benefits that increase over time.
 
 ## Further reading {#further-reading}
 
