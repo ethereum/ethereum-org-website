@@ -18,6 +18,12 @@ import { Content, Page } from "../../../components/SharedStyledComponents"
 import { translateMessageId } from "../../../utils/translations"
 
 // Styles
+const H1 = styled.h1`
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    font-size: 2rem;
+  }
+`
+
 const TwoColumnContent = styled.div`
   display: flex;
   width: 100%;
@@ -57,7 +63,6 @@ const RightColumn = styled.div`
 
 const Image = styled(Img)`
   width: 100%;
-  min-height: 380px;
   max-height: 500px;
   background-size: cover;
   background: no-repeat 50px;
@@ -106,9 +111,9 @@ const TranslatorAcknowledgements = ({ data, location }) => {
 
       <Content>
         <Breadcrumbs slug={location.pathname} />
-        <h1>
+        <H1>
           <Translation id="page-contributing-translation-program-acknowledgements-acknowledgement-page-title" />
-        </h1>
+        </H1>
         <TwoColumnContent>
           <LeftColumn>
             <p>
@@ -145,9 +150,9 @@ const TranslatorAcknowledgements = ({ data, location }) => {
       </Content>
 
       <LeaderboardContent>
-        <h1>
+        <H1>
           <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-title" />
-        </h1>
+        </H1>
         <TranslationLeaderboard />
         <p>
           <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-1" />
@@ -155,9 +160,9 @@ const TranslatorAcknowledgements = ({ data, location }) => {
       </LeaderboardContent>
 
       <Content>
-        <h1>
+        <H1>
           <Translation id="page-contributing-translation-program-acknowledgements-our-translators-title" />
-        </h1>
+        </H1>
         <p>
           <Translation id="page-contributing-translation-program-acknowledgements-our-translators-1" />
         </p>
@@ -176,9 +181,9 @@ const TranslatorAcknowledgements = ({ data, location }) => {
       </Content>
 
       <Content id="poap">
-        <h1>
+        <H1>
           <Translation id="page-contributing-translation-program-acknowledgements-poaps-title" />
-        </h1>
+        </H1>
         <p>
           <Translation id="page-contributing-translation-program-acknowledgements-1" />
         </p>
