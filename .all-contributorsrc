@@ -5746,6 +5746,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "aburk3",
+      "name": "Austin Burke",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24820716?v=4",
+      "profile": "https://austinburke.dev",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
