@@ -1,9 +1,13 @@
 // https://www.gatsbyjs.org/docs/node-apis/
 const fs = require("fs")
 const path = require(`path`)
+const util = require("util")
+const child_process = require("child_process")
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const gatsbyConfig = require(`./gatsby-config.js`)
 const { getLangContentVersion } = require(`./src/utils/translations`)
+
+const exec = util.promisify(child_process.exec)
 
 const supportedLanguages = gatsbyConfig.siteMetadata.supportedLanguages
 const defaultLanguage = gatsbyConfig.siteMetadata.defaultLanguage
@@ -325,4 +329,17 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
   `
   createTypes(typeDefs)
+}
+
+// Build lambda functions when the build is complete and the `/public` folder exists
+exports.onPostBuild = async (gatsbyNodeHelpers) => {
+  const { reporter } = gatsbyNodeHelpers
+
+  const reportOut = (report) => {
+    const { stderr, stdout } = report
+    if (stderr) reporter.error(stderr)
+    if (stdout) reporter.info(stdout)
+  }
+
+  reportOut(await exec("npm run build:lambda"))
 }

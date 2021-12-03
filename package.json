@@ -76,7 +76,7 @@
   "scripts": {
     "postinstall": "yarn prebuild",
     "prebuild": "yarn merge-translations && yarn copy-contributors",
-    "build": "yarn prebuild && yarn build:app && yarn build:lambda",
+    "build": "yarn prebuild && yarn build:app",
     "build:app": "gatsby build",
     "build:lambda": "netlify-lambda build src/lambda",
     "copy-contributors": "node src/scripts/copy-contributors.js",
