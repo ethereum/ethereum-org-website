@@ -1,7 +1,7 @@
 // Libraries
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 
@@ -61,7 +61,7 @@ const RightColumn = styled.div`
   }
 `
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   width: 100%;
   max-height: 500px;
   background-size: cover;
@@ -139,7 +139,7 @@ const TranslatorAcknowledgements = ({ data, location }) => {
           </LeftColumn>
           <RightColumn>
             <Image
-              fluid={data.dogeComputer.childImageSharp.fluid}
+              image={getImage(data.dogeComputer)}
               alt={translateMessageId(
                 "page-contributing-translation-program-acknowledgements-hero-image-alt",
                 intl
@@ -227,16 +227,12 @@ export const query = graphql`
   query {
     dogeComputer: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(placeholder: BLURRED, width: 500, layout: FIXED)
       }
     }
     ethereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
-        fixed(width: 220) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(placeholder: BLURRED, width: 220, layout: FIXED)
       }
     }
   }
