@@ -223,87 +223,87 @@ const StablecoinAccordion = () => {
     {
       uniswap: file(relativePath: { eq: "dapps/uni.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 24, layout: FIXED)
+          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
         }
       }
       compound: file(relativePath: { eq: "dapps/compound.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 24, layout: FIXED)
+          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
         }
       }
       aave: file(relativePath: { eq: "dapps/aave.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 24, layout: FIXED)
+          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
         }
       }
       oasis: file(relativePath: { eq: "dapps/stabledai.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 24, layout: FIXED)
+          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
         }
       }
       dydx: file(relativePath: { eq: "exchanges/dydx.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 24, layout: FIXED)
+          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
         }
       }
       gitcoin: file(relativePath: { eq: "dapps/gitcoin.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 24, layout: FIXED)
+          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
         }
       }
       maker: file(relativePath: { eq: "stablecoins/maker.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 24, layout: FIXED)
+          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
         }
       }
       eth: file(relativePath: { eq: "favicon.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 24, layout: FIXED)
+          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
         }
       }
       oneinch: file(relativePath: { eq: "exchanges/1inch.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 24, layout: FIXED)
+          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
         }
       }
       loopring: file(relativePath: { eq: "dapps/loopring.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 24, layout: FIXED)
+          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
         }
       }
       matcha: file(relativePath: { eq: "dapps/matcha.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 24, layout: FIXED)
+          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
         }
       }
       coinbase: file(relativePath: { eq: "exchanges/coinbase.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 24, layout: FIXED)
+          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
         }
       }
       kraken: file(relativePath: { eq: "exchanges/kraken.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 24, layout: FIXED)
+          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
         }
       }
       coinmama: file(relativePath: { eq: "exchanges/coinmama.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 24, layout: FIXED)
+          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
         }
       }
       gemini: file(relativePath: { eq: "exchanges/gemini.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 24, layout: FIXED)
+          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
         }
       }
       binance: file(relativePath: { eq: "exchanges/binance.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 24, layout: FIXED)
+          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
         }
       }
       bittrex: file(relativePath: { eq: "exchanges/bittrex.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 24, layout: FIXED)
+          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
         }
       }
     }

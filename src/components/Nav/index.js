@@ -134,7 +134,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
     {
       file(relativePath: { eq: "eth-home-icon.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 22, layout: FIXED)
+          gatsbyImageData(placeholder: BLURRED, width: 22, layout: FIXED)
         }
       }
     }

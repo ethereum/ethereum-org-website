@@ -884,52 +884,52 @@ export const query = graphql`
   {
     stablecoins: file(relativePath: { eq: "stablecoins/hero.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 624, layout: CONSTRAINED)
+        gatsbyImageData(placeholder: BLURRED, width: 624, layout: CONSTRAINED)
       }
     }
     dai: file(relativePath: { eq: "stablecoins/dai-large.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 600, layout: CONSTRAINED)
+        gatsbyImageData(placeholder: BLURRED, width: 600, layout: CONSTRAINED)
       }
     }
     dailarge: file(relativePath: { eq: "stablecoins/dai-large.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 300, layout: CONSTRAINED)
+        gatsbyImageData(placeholder: BLURRED, width: 300, layout: CONSTRAINED)
       }
     }
     usdclarge: file(relativePath: { eq: "stablecoins/usdc-large.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 300, layout: CONSTRAINED)
+        gatsbyImageData(placeholder: BLURRED, width: 300, layout: CONSTRAINED)
       }
     }
     doge: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 600, layout: CONSTRAINED)
+        gatsbyImageData(placeholder: BLURRED, width: 600, layout: CONSTRAINED)
       }
     }
     compound: file(relativePath: { eq: "stablecoins/compound.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 160, layout: FIXED)
+        gatsbyImageData(placeholder: BLURRED, width: 160, layout: FIXED)
       }
     }
     aave: file(relativePath: { eq: "stablecoins/aave.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 64, layout: FIXED)
+        gatsbyImageData(placeholder: BLURRED, width: 64, layout: FIXED)
       }
     }
     dydx: file(relativePath: { eq: "exchanges/dydx.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 80, layout: FIXED)
+        gatsbyImageData(placeholder: BLURRED, width: 80, layout: FIXED)
       }
     }
     oasis: file(relativePath: { eq: "stablecoins/dai-large.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 80, layout: FIXED)
+        gatsbyImageData(placeholder: BLURRED, width: 80, layout: FIXED)
       }
     }
     oasissmall: file(relativePath: { eq: "stablecoins/dai-large.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 24, layout: FIXED)
+        gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
       }
     }
   }

@@ -559,7 +559,7 @@ export default AssetsPage
 export const assetItem = graphql`
   fragment assetItem on File {
     childImageSharp {
-      gatsbyImageData(layout: FULL_WIDTH)
+      gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
     }
   }
 `
@@ -570,14 +570,14 @@ export const query = graphql`
       relativePath: { eq: "assets/eth-diamond-black.png" }
     ) {
       childImageSharp {
-        gatsbyImageData(width: 80, layout: FIXED)
+        gatsbyImageData(placeholder: BLURRED, width: 80, layout: FIXED)
       }
     }
     ethDiamondPurpleHero: file(
       relativePath: { eq: "assets/eth-diamond-purple.png" }
     ) {
       childImageSharp {
-        gatsbyImageData(width: 80, layout: FIXED)
+        gatsbyImageData(placeholder: BLURRED, width: 80, layout: FIXED)
       }
     }
     hero: file(relativePath: { eq: "home/hero.png" }) {

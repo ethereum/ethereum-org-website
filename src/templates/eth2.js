@@ -457,7 +457,11 @@ export const eth2PageQuery = graphql`
         summaryPoints
         image {
           childImageSharp {
-            gatsbyImageData(height: 640, layout: FULL_WIDTH)
+            gatsbyImageData(
+              placeholder: BLURRED
+              height: 640
+              layout: FULL_WIDTH
+            )
           }
         }
         isOutdated

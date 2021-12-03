@@ -529,22 +529,22 @@ export const query = graphql`
   {
     ednHero: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 800, layout: CONSTRAINED)
+        gatsbyImageData(placeholder: BLURRED, width: 800, layout: CONSTRAINED)
       }
     }
     developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       childImageSharp {
-        gatsbyImageData(height: 200, layout: FIXED)
+        gatsbyImageData(placeholder: BLURRED, height: 200, layout: FIXED)
       }
     }
     doge: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        gatsbyImageData(height: 320, layout: FIXED)
+        gatsbyImageData(placeholder: BLURRED, height: 320, layout: FIXED)
       }
     }
     ogImage: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 1200, placeholder: BLURRED, layout: FIXED)
+        gatsbyImageData(placeholder: BLURRED, width: 1200, layout: FIXED)
       }
     }
   }

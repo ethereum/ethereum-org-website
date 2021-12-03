@@ -180,9 +180,10 @@ module.exports = {
         noQueryString: true,
       },
     },
-    // Needed for `gatsby-image`
-    `gatsby-plugin-sharp`,
+    // Needed for `gatsby-plugin-image`
     `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     // CSS in JS
     `gatsby-plugin-styled-components`,
     // Source assets
@@ -219,8 +220,6 @@ module.exports = {
         include: /\.md$|\.csv/i, // Only .md & .csv files
       },
     },
-    // Needed for `gatsby-image`
-    `gatsby-transformer-sharp`,
   ],
   // https://www.gatsbyjs.com/docs/reference/release-notes/v2.28/#feature-flags-in-gatsby-configjs
   flags: {

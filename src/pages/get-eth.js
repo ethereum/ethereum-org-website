@@ -445,7 +445,7 @@ export default GetETHPage
 export const listItemImage = graphql`
   fragment listItemImage on File {
     childImageSharp {
-      gatsbyImageData(width: 20, layout: FIXED)
+      gatsbyImageData(placeholder: BLURRED, width: 20, layout: FIXED)
     }
   }
 `
@@ -454,17 +454,17 @@ export const query = graphql`
   {
     hero: file(relativePath: { eq: "get-eth.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH)
+        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
       }
     }
     wallet: file(relativePath: { eq: "wallet.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 600, layout: CONSTRAINED)
+        gatsbyImageData(placeholder: BLURRED, width: 600, layout: CONSTRAINED)
       }
     }
     dapps: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 600, layout: CONSTRAINED)
+        gatsbyImageData(placeholder: BLURRED, width: 600, layout: CONSTRAINED)
       }
     }
     localcryptos: file(relativePath: { eq: "exchanges/localcryptos.png" }) {

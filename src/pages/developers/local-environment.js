@@ -589,7 +589,7 @@ export default ChooseStackPage
 export const devtoolImage = graphql`
   fragment devtoolImage on File {
     childImageSharp {
-      gatsbyImageData(height: 100, layout: FIXED)
+      gatsbyImageData(placeholder: BLURRED, height: 100, layout: FIXED)
     }
   }
 `
@@ -598,12 +598,12 @@ export const query = graphql`
   {
     hero: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 800, layout: CONSTRAINED)
+        gatsbyImageData(placeholder: BLURRED, width: 800, layout: CONSTRAINED)
       }
     }
     ogImage: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 1200, placeholder: BLURRED, layout: FIXED)
+        gatsbyImageData(placeholder: BLURRED, width: 1200, layout: FIXED)
       }
     }
     dapptools: file(relativePath: { eq: "dev-tools/dapptools.png" }) {

@@ -105,22 +105,22 @@ const LegacyPageHome = () => {
     {
       hero: file(relativePath: { eq: "home/hero.png" }) {
         childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH)
+          gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
         }
       }
       individuals: file(relativePath: { eq: "doge-computer.png" }) {
         childImageSharp {
-          gatsbyImageData(height: 200, layout: FIXED)
+          gatsbyImageData(placeholder: BLURRED, height: 200, layout: FIXED)
         }
       }
       developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
         childImageSharp {
-          gatsbyImageData(height: 200, layout: FIXED)
+          gatsbyImageData(placeholder: BLURRED, height: 200, layout: FIXED)
         }
       }
       enterprise: file(relativePath: { eq: "enterprise-eth.png" }) {
         childImageSharp {
-          gatsbyImageData(height: 200, layout: FIXED)
+          gatsbyImageData(placeholder: BLURRED, height: 200, layout: FIXED)
         }
       }
     }

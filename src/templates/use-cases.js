@@ -469,7 +469,11 @@ export const useCasePageQuery = graphql`
         alt
         image {
           childImageSharp {
-            gatsbyImageData(height: 640, layout: FULL_WIDTH)
+            gatsbyImageData(
+              placeholder: BLURRED
+              height: 640
+              layout: FULL_WIDTH
+            )
           }
         }
         isOutdated

@@ -782,32 +782,32 @@ export const query = graphql`
   {
     oldship: file(relativePath: { eq: "eth2/oldship.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 800, layout: CONSTRAINED)
+        gatsbyImageData(placeholder: BLURRED, width: 800, layout: CONSTRAINED)
       }
     }
     rhino: file(relativePath: { eq: "eth2/eth2_rhino.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 320, layout: CONSTRAINED)
+        gatsbyImageData(placeholder: BLURRED, width: 320, layout: CONSTRAINED)
       }
     }
     merge: file(relativePath: { eq: "eth2/merge.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH)
+        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
       }
     }
     beaconchain: file(relativePath: { eq: "eth2/core.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 420, layout: FIXED)
+        gatsbyImageData(placeholder: BLURRED, width: 420, layout: FIXED)
       }
     }
     shards: file(relativePath: { eq: "eth2/newrings.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 420, layout: FIXED)
+        gatsbyImageData(placeholder: BLURRED, width: 420, layout: FIXED)
       }
     }
     themerge: file(relativePath: { eq: "eth2/merge.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 420, layout: FIXED)
+        gatsbyImageData(placeholder: BLURRED, width: 420, layout: FIXED)
       }
     }
   }

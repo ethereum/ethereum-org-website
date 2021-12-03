@@ -61,7 +61,7 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
       {({ location }) => {
         /* Set canonical URL w/ language path to avoid duplicate content */
         /* e.g. set ethereum.org/about/ to ethereum.org/en/about/ */
-        const { pathname, host } = location
+        const { pathname } = location
         let canonicalPath = pathname
         const firstDirectory = canonicalPath.split("/")[1]
         if (!supportedLanguages.includes(firstDirectory)) {

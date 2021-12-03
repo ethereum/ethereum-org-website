@@ -516,37 +516,37 @@ export const query = graphql`
   {
     banner: file(relativePath: { eq: "home/eth-tokens.png" }) {
       childImageSharp {
-        gatsbyImageData(height: 400, layout: FULL_WIDTH)
+        gatsbyImageData(placeholder: BLURRED, height: 400, layout: FULL_WIDTH)
       }
     }
     dapps: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 372, layout: FIXED)
+        gatsbyImageData(placeholder: BLURRED, width: 372, layout: FIXED)
       }
     }
     eth: file(relativePath: { eq: "eth.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 800, layout: CONSTRAINED)
+        gatsbyImageData(placeholder: BLURRED, width: 800, layout: CONSTRAINED)
       }
     }
     ogImage: file(relativePath: { eq: "eth.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 1200, placeholder: BLURRED, layout: FIXED)
+        gatsbyImageData(placeholder: BLURRED, width: 1200, layout: FIXED)
       }
     }
     ethereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 220, layout: FIXED)
+        gatsbyImageData(placeholder: BLURRED, width: 220, layout: FIXED)
       }
     }
     defi: file(relativePath: { eq: "finance_transparent.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 220, layout: FIXED)
+        gatsbyImageData(placeholder: BLURRED, width: 220, layout: FIXED)
       }
     }
     ethCat: file(relativePath: { eq: "eth-gif-cat.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 600, layout: CONSTRAINED)
+        gatsbyImageData(placeholder: BLURRED, width: 600, layout: CONSTRAINED)
       }
     }
   }

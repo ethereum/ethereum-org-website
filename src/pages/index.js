@@ -973,76 +973,76 @@ export const query = graphql`
   {
     hero: file(relativePath: { eq: "home/hero.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH)
+        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
       }
     }
     ethereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH)
+        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
       }
     }
     enterprise: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 320, layout: FIXED)
+        gatsbyImageData(placeholder: BLURRED, width: 320, layout: FIXED)
       }
     }
     dogefixed: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 320, layout: FIXED)
+        gatsbyImageData(placeholder: BLURRED, width: 320, layout: FIXED)
       }
     }
     robotfixed: file(relativePath: { eq: "wallet-cropped.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 320, layout: FIXED)
+        gatsbyImageData(placeholder: BLURRED, width: 320, layout: FIXED)
       }
     }
     ethfixed: file(relativePath: { eq: "eth.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 320, layout: FIXED)
+        gatsbyImageData(placeholder: BLURRED, width: 320, layout: FIXED)
       }
     }
     devfixed: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 320, layout: FIXED)
+        gatsbyImageData(placeholder: BLURRED, width: 320, layout: FIXED)
       }
     }
     future: file(relativePath: { eq: "future_transparent.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH)
+        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
       }
     }
     impact: file(relativePath: { eq: "impact_transparent.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH)
+        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
       }
     }
     finance: file(relativePath: { eq: "finance_transparent.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 600, layout: CONSTRAINED)
+        gatsbyImageData(placeholder: BLURRED, width: 600, layout: CONSTRAINED)
       }
     }
     hackathon: file(relativePath: { eq: "hackathon_transparent.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH)
+        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
       }
     }
     infrastructure: file(
       relativePath: { eq: "infrastructure_transparent.png" }
     ) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH)
+        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
       }
     }
     infrastructurefixed: file(
       relativePath: { eq: "infrastructure_transparent.png" }
     ) {
       childImageSharp {
-        gatsbyImageData(width: 320, layout: FIXED)
+        gatsbyImageData(placeholder: BLURRED, width: 320, layout: FIXED)
       }
     }
     merge: file(relativePath: { eq: "eth2/merge.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 320, layout: FIXED)
+        gatsbyImageData(placeholder: BLURRED, width: 320, layout: FIXED)
       }
     }
   }

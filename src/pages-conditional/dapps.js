@@ -1706,14 +1706,19 @@ export default DappsPage
 export const dappImage = graphql`
   fragment dappImage on File {
     childImageSharp {
-      gatsbyImageData(width: 80, layout: CONSTRAINED)
+      gatsbyImageData(placeholder: BLURRED, width: 80, layout: CONSTRAINED)
     }
   }
 `
 export const editorImage = graphql`
   fragment editorImage on File {
     childImageSharp {
-      gatsbyImageData(height: 80, quality: 100, layout: FIXED)
+      gatsbyImageData(
+        placeholder: BLURRED
+        height: 80
+        quality: 100
+        layout: FIXED
+      )
     }
   }
 `
@@ -1722,27 +1727,27 @@ export const query = graphql`
   {
     doge: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 624, layout: CONSTRAINED)
+        gatsbyImageData(placeholder: BLURRED, width: 624, layout: CONSTRAINED)
       }
     }
     ogImage: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 1200, placeholder: BLURRED, layout: FIXED)
+        gatsbyImageData(placeholder: BLURRED, width: 1200, layout: FIXED)
       }
     }
     magicians: file(relativePath: { eq: "magicians.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 300, layout: CONSTRAINED)
+        gatsbyImageData(placeholder: BLURRED, width: 300, layout: CONSTRAINED)
       }
     }
     developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       childImageSharp {
-        gatsbyImageData(height: 200, layout: FIXED)
+        gatsbyImageData(placeholder: BLURRED, height: 200, layout: FIXED)
       }
     }
     wallet: file(relativePath: { eq: "wallet.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 300, layout: CONSTRAINED)
+        gatsbyImageData(placeholder: BLURRED, width: 300, layout: CONSTRAINED)
       }
     }
     uniswapec: file(relativePath: { eq: "dapps/uni.png" }) {
