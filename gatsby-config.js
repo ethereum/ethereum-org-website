@@ -125,6 +125,8 @@ module.exports = {
     // Image support in markdown
     `gatsby-remark-images`,
     `gatsby-remark-copy-linked-files`,
+    // READING time
+    "gatsby-remark-reading-time",
     // MDX support
     {
       resolve: `gatsby-plugin-mdx`,
