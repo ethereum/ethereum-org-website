@@ -162,7 +162,7 @@ const ProductCard = ({
 
   const hasRepoData = data && data.repository && !error
 
-  // Check if image is an svg as gatsby-image doesn't support svg
+  // Check if image is an svg as gatsby-plugin-image doesn't support svg
   let isSvg = false
   if (typeof image === "string") {
     if (image.includes("svg")) {
