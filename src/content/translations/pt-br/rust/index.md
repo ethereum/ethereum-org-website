@@ -36,8 +36,6 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 
 - [Documentação Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Exemplos Rust-Web3](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Criando um Secret Ballot com o OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Criando um servidor de bate-papo privado com o OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Padrões para uso Avançado {#advanced-use-patterns}
 

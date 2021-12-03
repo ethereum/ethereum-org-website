@@ -34,8 +34,6 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na [ethereum.org/learn](
 
 - [Dokumentacja Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Przykłady działania Rust-Web3](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Tworzenie tajnej karty do głosowania za pomocą pakietu OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Tworzenie prywatnego serwera czatu za pomocą OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Przykłady zaawansowane {#advanced-use-patterns}
 

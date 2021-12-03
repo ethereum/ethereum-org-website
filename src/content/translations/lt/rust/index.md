@@ -36,8 +36,6 @@ Norėtumėte pradėti nuo ko nors paprastesnio? Apsilankykite [ethereum.org/lear
 
 - [Rust-Web3 dokumentai](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Rust-Web3 darbo pavyzdžiai](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Slapto balsavimo kūrimas su OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Privačių poklabių serverio kūrimas su OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Pažangaus naudojimo modeliai {#advanced-use-patterns}
 

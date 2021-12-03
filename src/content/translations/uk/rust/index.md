@@ -36,8 +36,6 @@ sidebarDepth: 1
 
 - [Документація Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Демонстраційні приклади Rust-Web3](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Створення тайного голосування з використанням OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Створення сервера приватних чатів із використанням OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Розширене використання шаблонів {#advanced-use-patterns}
 

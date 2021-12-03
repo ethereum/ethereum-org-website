@@ -35,8 +35,6 @@ Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/ro/learn/) 
 
 - [Documentația Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Exemple practice de Rust-Web3](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Cum să creezi un sistem de vot secret cu Oasis SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Cum să creezi un server privat de chat cu Oasis SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Modele avansate de utilizare {#advanced-use-patterns}
 

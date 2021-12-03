@@ -35,8 +35,6 @@ sidebar: true
 
 - [റസ്റ്റ്-വെബ് 3 ഡോക്യുമെന്റേഷൻ](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [റസ്റ്റ്-വെബ് 3 പ്രവർത്തന ഉദാഹരണങ്ങൾ](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [OASIS SDK ഉപയോഗിച്ച് ഒരു രഹസ്യ ബാലറ്റ് സൃഷ്ടിക്കുന്നു](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [OASIS SDK ഉപയോഗിച്ച് ഒരു സ്വകാര്യ ചാറ്റ് സെർവർ സൃഷ്ടിക്കുന്നു](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## നൂതന ഉപയോഗ പാറ്റേണുകൾ {#advanced-use-patterns}
 

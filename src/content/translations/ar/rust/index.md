@@ -35,8 +35,6 @@ sidebar: true
 
 - [توثيق Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [أمثلة عمل Rust-Web3](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [إنشاء Secret Ballot باستخدام OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [إنشاء خادم دردشة خاص باستخدام OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## أنماط الاستخدام المتقدم {#advanced-use-patterns}
 

@@ -35,7 +35,6 @@ Potrebujete ďalšie základné informácie o Ethereu? Pozrite si [ethereum.org/
 
 - [Rust-Web3 Documentation](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Rust-Web3 Working Examples](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Creating a Private Chat Server with OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Príklady použitia pre pokročilých {#advanced-use-patterns}
 

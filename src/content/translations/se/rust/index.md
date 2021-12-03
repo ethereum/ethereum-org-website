@@ -35,8 +35,6 @@ Behöver du en mer grundläggande introduktion först? Kolla in [ethereum.org/se
 
 - [Rust-Web3-dokumentation](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Rust-Web3 arbetsexempel](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Skapa en hemlig omröstning med OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Skapa en privat chattserver med OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Avancerad användning av mönster {#advanced-use-patterns}
 

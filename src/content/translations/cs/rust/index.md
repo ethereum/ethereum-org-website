@@ -36,8 +36,6 @@ Potřebujete nejdříve úplně základní informace? Podívejte se na [ethereum
 
 - [Dokumentace Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Příklady Rust-Web3](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Vytvoření tajného hlasování s OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Vytvoření soukromého chatovacího serveru s OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Pokročilé používání {#advanced-use-patterns}
 

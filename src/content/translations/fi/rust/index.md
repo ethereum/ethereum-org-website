@@ -36,8 +36,6 @@ Tarvitsetko perusteellisempaa aloitusta? Katso [ethereum.org/fi/learn](/learn/) 
 
 - [Rust-Web3 -dokumentaatio](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Rust-Web3 -työskentelyesimerkit](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Vaalisalaisuuden luominen OASIS SDK:lla](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Yksityisen chat-serverin luominen OASIS SDK:lla](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Edistyneet käyttösuunnittelumallit {#advanced-use-patterns}
 

@@ -36,8 +36,6 @@ Cần một hướng dẫn cơ bản hơn? Tham khảo [ethereum.org/learn](/vi/
 
 - [Tài liệu tham khảo Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Ví dụ làm việc của Rust-Web3](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Tạo một lá phiếu bí mật với OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Tạo một máy chủ trò chuyện riêng tư với OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Các mẫu sử dụng nâng cao {#advanced-use-patterns}
 
