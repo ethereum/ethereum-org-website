@@ -454,7 +454,7 @@ export const query = graphql`
   {
     hero: file(relativePath: { eq: "get-eth.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH, quality: 100)
       }
     }
     wallet: file(relativePath: { eq: "wallet.png" }) {

@@ -554,7 +554,12 @@ export const query = graphql`
   {
     hero: file(relativePath: { eq: "wallet.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, height: 600, layout: FULL_WIDTH)
+        gatsbyImageData(
+          placeholder: BLURRED
+          height: 600
+          layout: FULL_WIDTH
+          quality: 100
+        )
       }
     }
     findWallet: file(relativePath: { eq: "wallets/find-wallet.png" }) {

@@ -529,7 +529,12 @@ export const query = graphql`
   {
     ednHero: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 800, layout: CONSTRAINED)
+        gatsbyImageData(
+          placeholder: BLURRED
+          width: 800
+          layout: CONSTRAINED
+          quality: 100
+        )
       }
     }
     developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {

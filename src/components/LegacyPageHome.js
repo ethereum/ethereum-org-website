@@ -105,7 +105,11 @@ const LegacyPageHome = () => {
     {
       hero: file(relativePath: { eq: "home/hero.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+          gatsbyImageData(
+            placeholder: BLURRED
+            layout: FULL_WIDTH
+            quality: 100
+          )
         }
       }
       individuals: file(relativePath: { eq: "doge-computer.png" }) {
