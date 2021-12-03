@@ -55,6 +55,18 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Unique API endpoints
     - Webhooks
     - Direct support
+- [**Ankr**](https://www.ankr.com/)
+  - [Docs](https://docs.ankr.com/)
+  - Features
+    - Ankr Protocol - open access to Public RPC API endpoints for 8+ chains
+    - Load balancing and node health monitoring for a fast and reliable gateway to the nearest available node
+    - Premium tier enabling WSS endpoint and uncapped rate limit
+    - One-click full node and validator node deployment for 40+ chains
+    - Scale as you go
+    - Analytics tools
+    - Dashboard
+    - RPC, HTTPS and WSS endpoints
+    - Direct support
 - [**BlockDaemon**](https://blockdaemon.com/)
   - [Docs](https://ubiquity.docs.blockdaemon.com/)
   - Benefits

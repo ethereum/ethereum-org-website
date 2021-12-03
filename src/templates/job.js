@@ -12,6 +12,7 @@ import {
   Paragraph,
   Header1,
   Header4,
+  ListItem,
 } from "../components/SharedStyledComponents"
 
 const Page = styled.div`
@@ -178,7 +179,8 @@ const H2 = styled.h2`
   /* Anchor tag styles */
   a {
     position: relative;
-    display: none;
+    display: initial;
+    opacity: 0;
     margin-left: -1.5em;
     padding-right: 0.5rem;
     font-size: 1rem;
@@ -186,12 +188,14 @@ const H2 = styled.h2`
     &:hover {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
+      opacity: 1;
     }
   }
   &:hover {
     a {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
+      opacity: 1;
     }
   }
 `
@@ -205,7 +209,8 @@ const H3 = styled.h3`
   /* Anchor tag styles */
   a {
     position: relative;
-    display: none;
+    display: initial;
+    opacity: 0;
     margin-left: -1.5em;
     padding-right: 0.5rem;
     font-size: 1rem;
@@ -213,12 +218,14 @@ const H3 = styled.h3`
     &:hover {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
+      opacity: 1;
     }
   }
   &:hover {
     a {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
+      opacity: 1;
     }
   }
 `
@@ -232,6 +239,7 @@ const components = {
   h3: H3,
   h4: Header4,
   p: Paragraph,
+  li: ListItem,
   pre: Pre,
   ButtonLink,
   Emoji,

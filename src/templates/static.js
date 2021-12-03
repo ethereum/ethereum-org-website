@@ -114,6 +114,7 @@ const components = {
   MeetupList,
   RandomAppList,
   Roadmap,
+  Link,
   Logo,
   ButtonLink,
   Contributors,
@@ -143,7 +144,9 @@ const StaticPage = ({ data: { siteData, pageData: mdx }, pageContext }) => {
   const tocItems = mdx.tableOfContents.items
   const { editContentUrl } = siteData.siteMetadata
   const { relativePath } = pageContext
-  const absoluteEditPath = `${editContentUrl}${relativePath}`
+  const absoluteEditPath = relativePath.split("/").includes("whitepaper")
+    ? ""
+    : `${editContentUrl}${relativePath}`
 
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>

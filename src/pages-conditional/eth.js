@@ -221,21 +221,25 @@ const benefits = [
 
 const tokenLinks = [
   {
+    link: "/stablecoins/",
     caption: "",
     title: <Translation id="page-eth-tokens-stablecoins" />,
     description: <Translation id="page-eth-tokens-stablecoins-description" />,
   },
   {
+    link: "/defi/",
     caption: "",
     title: <Translation id="page-eth-tokens-defi" />,
     description: <Translation id="page-eth-tokens-defi-description" />,
   },
   {
+    link: "/nft/",
     caption: "",
     title: <Translation id="page-eth-tokens-nft" />,
     description: <Translation id="page-eth-tokens-nft-description" />,
   },
   {
+    link: "/dao/",
     caption: "",
     title: <Translation id="page-eth-tokens-dao" />,
     description: <Translation id="page-eth-tokens-dao-description" />,

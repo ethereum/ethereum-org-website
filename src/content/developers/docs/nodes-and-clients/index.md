@@ -107,7 +107,7 @@ On the other hand, if you run a client, you can share it with your friends who m
 
 The Ethereum community maintains multiple open-source clients, developed by different teams using different programming languages. This makes the network stronger and more diverse. The ideal goal is to achieve diversity without any client dominating to reduce any single points of failure.
 
-This table summarizes the different clients. All of them are actively worked on and pass [client tests](https://github.com/ethereum/tests).
+This table summarizes the different clients. All of them pass [client tests](https://github.com/ethereum/tests) and are actively maintained to stay updated with network upgrades.
 
 | Client                                                       | Language | Operating systems     | Networks                                   | Sync strategies | State pruning   |
 | ------------------------------------------------------------ | -------- | --------------------- | ------------------------------------------ | --------------- | --------------- |
@@ -137,6 +137,8 @@ OpenEthereum is a fast, feature-rich and advanced CLI-based Ethereum client. It'
 
 OpenEthereum is developed using the cutting-edge Rust programming language and licensed under the GPLv3.
 
+**Note that OpenEthereum [has been deprecated](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) and is no longer being maintained.** Use it with caution and preferably switch to another client implementation.
+
 #### Nethermind {#nethermind}
 
 Nethermind is an Ethereum implementation created with the C# .NET tech stack, running on all major platforms including ARM. It offers great performance with:
@@ -161,25 +163,25 @@ To follow and verify current data in the network, the Ethereum client needs to s
 
 Synchronization modes represent different approaches to this process with various trade-offs. Clients also vary in their implementation of sync algorithms. Always refer to the official documentation of your chosen client for specifics on implementation.
 
-#### Overview of strategies
+#### Overview of strategies {#overview-of-strategies}
 
 General overview of synchronization approaches used in Mainnet ready clients:
 
-##### Full sync
+##### Full sync {#full-symc}
 
-Full syncs downloads all blocks (including headers, transactions, and receipts) and generates the state of the blockchain incrementally by executing every block from genesis.
+Full sync downloads all blocks (including headers, transactions, and receipts) and generates the state of the blockchain incrementally by executing every block from genesis.
 
 - Minimizes trust and offers the highest security by verifying every transaction.
 - With an increasing number of transactions, it can take days to weeks to process all transactions.
 
-##### Fast sync
+##### Fast sync {#fast-symc}
 
 Fast sync downloads all blocks (including headers, transactions, and receipts), verifies all headers, downloads the state and verifies it against the headers.
 
 - Relies on the security of the consensus mechanism.
 - Synchronization takes only a few hours.
 
-##### Light sync
+##### Light sync {#light-sync}
 
 Light client mode downloads all block headers, block data, and verifies some randomly. Only syncs tip of the chain from the trusted checkpoint.
 
@@ -188,7 +190,7 @@ Light client mode downloads all block headers, block data, and verifies some ran
 
 [More on Light clients](https://www.parity.io/blog/what-is-a-light-client/)
 
-##### Snap sync
+##### Snap sync {#snap-sync}
 
 Implemented by Geth. Using dynamic snapshots served by peers retrieves all the account and storage data without downloading intermediate trie nodes and then reconstructs the Merkle trie locally.
 
@@ -197,7 +199,7 @@ Implemented by Geth. Using dynamic snapshots served by peers retrieves all the a
 
 [More on Snap](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
 
-##### Warp sync
+##### Warp sync {#warp-sync}
 
 Implemented by OpenEthereum. Nodes regularly generate a consensus-critical state snapshot and any peer can fetch these snapshots over the network, enabling a fast sync from this point.
 
@@ -206,7 +208,7 @@ Implemented by OpenEthereum. Nodes regularly generate a consensus-critical state
 
 [More on Warp](https://openethereum.github.io/Beginner-Introduction#warping---no-warp)
 
-##### Beam sync
+##### Beam sync {#beam-sync}
 
 Implemented by Nethermind and Trinity. Works like fast sync but also downloads the data needed to execute latest blocks, which allows you to query the chain within the first few minutes from starting.
 

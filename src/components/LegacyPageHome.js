@@ -22,7 +22,6 @@ const Page = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   width: 100%;
   margin: 0 auto;
 `
@@ -49,7 +48,6 @@ const H1 = styled.h1`
   font-weight: 400;
   font-size: 1.5rem;
   margin: 1.5rem 0;
-
   max-width: 80%;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     max-width: 100%;
@@ -79,12 +77,10 @@ const Section = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     margin-right: 0;
   }
-
   & > h2 {
     margin-top: 1rem;
     font-size: 1.25rem;
   }
-
   & > p {
     color: ${(props) => props.theme.colors.text200};
     max-width: 400px;
