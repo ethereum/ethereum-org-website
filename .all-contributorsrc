@@ -5755,6 +5755,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "rich1n",
+      "name": "Richard Rodrigues",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66102911?v=4",
+      "profile": "http://rich1n.com",
+      "contributions": [
+        "doc",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
