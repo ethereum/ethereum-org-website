@@ -84,6 +84,7 @@ Multiple implementations of Optimistic rollups exist that you can integrate into
 - [Boba](https://boba.network/)
 - [Fuel Network](https://fuel.sh/)
 - [Cartesi](https://cartesi.io/)
+- [Metis](https://metis.io/)
 
 ### Zero-knowledge rollups {#zk-rollups}
 
