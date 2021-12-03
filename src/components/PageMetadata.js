@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import { Location } from "@reach/router"
-import { getImage } from "gatsby-plugin-image"
+import { getSrc } from "gatsby-plugin-image"
 
 import { translateMessageId, languageMetadata } from "../utils/translations"
 
@@ -72,20 +72,20 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
 
         /* Set fallback ogImage based on path */
         const siteUrl = site.siteMetadata.url
-        let ogImage = getImage(ogImageDefault)?.images.fallback.src
+        let ogImage = getSrc(ogImageDefault)
         if (pathname.includes("/developers/")) {
-          ogImage = getImage(ogImageDevelopers)?.images.fallback.src
+          ogImage = getSrc(ogImageDevelopers)
         }
         if (pathname.includes("/dapps/")) {
-          ogImage = getImage(ogImageDapps)?.images.fallback.src
+          ogImage = getSrc(ogImageDapps)
         }
         if (pathname.includes("/eth2/")) {
-          ogImage = getImage(ogImageEthtwo)?.images.fallback.src
+          ogImage = getSrc(ogImageEthtwo)
         }
         if (image) {
           ogImage = image
         }
-        const ogImageUrl = siteUrl.concat(ogImage)
+        const ogImageUrl = `${siteUrl}${ogImage}`
 
         return (
           <Helmet
