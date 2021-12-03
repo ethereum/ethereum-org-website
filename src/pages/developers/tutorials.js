@@ -223,7 +223,7 @@ const TutorialsPage = ({ data, pageContext }) => {
     author: tutorial.frontmatter.author,
     tags: tutorial.frontmatter.tags.map((tag) => tag.toLowerCase().trim()),
     skill: tutorial.frontmatter.skill,
-    timeToRead: tutorial.fields.readingTime.minutes,
+    timeToRead: Math.round(tutorial.fields.readingTime.minutes),
     published: tutorial.frontmatter.published,
     lang: tutorial.frontmatter.lang || "en",
     isExternal: false,
