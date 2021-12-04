@@ -40,7 +40,7 @@ the purposes for which we use them in the table below:
 | Cookie | Name     | Purpose                                                                                                                                                                  |
 | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Matomo | \_pk_id  | Used to distinguish users. Enables us to identify which pages are popular, estimate our audience size and usage pattern, and better understand how the website is used. |
-| Matomo | \_pk_ses | Used to store temporary session data. This a short lived cookie, only lasting for a few minutes.                                                                         |
+| Matomo | \_pk_ses | Used to store temporary session data. This is a short lived cookie, only lasting for a few minutes.                                                                         |
 
 You can block cookies by activating the setting on your browser that
 allows you to refuse the setting of all or some cookies. However, if you
