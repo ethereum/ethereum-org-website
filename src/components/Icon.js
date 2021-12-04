@@ -2,7 +2,13 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import { IconContext } from "react-icons"
-import { FaGithub, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa"
+import {
+  FaGithub,
+  FaTwitter,
+  FaYoutube,
+  FaDiscord,
+  FaYinYang,
+} from "react-icons/fa"
 import {
   MdAdd,
   MdBrightness2,
@@ -17,8 +23,17 @@ import {
   MdFlip,
   MdLiveHelp,
 } from "react-icons/md"
-import { BsQuestionSquareFill, BsToggleOff, BsToggleOn } from "react-icons/bs"
+import { BsQuestionSquareFill } from "react-icons/bs"
 import { IoCodeOutline, IoCodeDownload } from "react-icons/io5"
+
+const LowerOpacityFaYinYang = styled(FaYinYang)`
+  opacity: 0.5;
+`
+
+const LowerOpacityFaYinYangActive = styled(LowerOpacityFaYinYang)`
+  opacity: 0.5;
+  fill: ${(props) => props.theme.colors.selectActive} !important;
+`
 
 const Icon = ({ name, size, className }) => (
   <IconContext.Provider value={{ size: size, className: className }}>
@@ -31,8 +46,8 @@ const Icon = ({ name, size, className }) => (
     {name === "info" && <MdInfoOutline />}
     {name === "language" && <MdLanguage />}
     {name === "lightTheme" && <MdWbSunny />}
-    {name === "zenModeOff" && <BsToggleOff />}
-    {name === "zenModeOn" && <BsToggleOn />}
+    {name === "yinYangInactive" && <LowerOpacityFaYinYang />}
+    {name === "yinYangActive" && <LowerOpacityFaYinYangActive />}
     {name === "menu" && <MdMenu />}
     {name === "twitter" && <FaTwitter />}
     {name === "search" && <MdSearch />}

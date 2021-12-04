@@ -136,7 +136,8 @@ const StyledTableOfContentsLink = styled(Link)`
 `
 
 const ButtonContainer = styled(ListItem)`
-  margin-bottom: 1.5rem;
+  margin: 0.5rem 0;
+  opacity: 0.7;
 `
 
 const ButtonContent = styled.div`
@@ -158,10 +159,6 @@ const ZenModeContainer = styled.div`
 const ZenModeToggleContainer = styled.span`
   cursor: pointer;
   padding-top: 6px;
-`
-
-const ZenModeText = styled.span`
-  margin-right: 0.7rem;
 `
 
 // Mobile styles
@@ -368,16 +365,15 @@ const TableOfContents = ({
   return (
     <Aside className={className}>
       <OuterList>
-        {shouldShowZenModeToggle && (
-          <ZenModeContainer>
-            <ZenModeText>
-              <Translation id="zen-mode" />
-            </ZenModeText>
-            <ZenModeToggleContainer onClick={(_e) => handleZenModeChange()}>
-              <Icon name={isZenMode ? "zenModeOn" : "zenModeOff"} size="2rem" />
-            </ZenModeToggleContainer>
-          </ZenModeContainer>
-        )}
+        <Header>
+          <Translation id="on-this-page" />
+        </Header>
+        <ItemsList
+          items={items}
+          depth={0}
+          maxDepth={maxDepth ? maxDepth : 1}
+          activeHash={activeHash}
+        />
         {shouldShowEditButtom && (
           <ButtonContainer>
             <ButtonLink to={editPath} isSecondary={true} mt={0}>
@@ -390,15 +386,16 @@ const TableOfContents = ({
             </ButtonLink>
           </ButtonContainer>
         )}
-        <Header>
-          <Translation id="on-this-page" />
-        </Header>
-        <ItemsList
-          items={items}
-          depth={0}
-          maxDepth={maxDepth ? maxDepth : 1}
-          activeHash={activeHash}
-        />
+        {shouldShowZenModeToggle && (
+          <ZenModeContainer>
+            <ZenModeToggleContainer onClick={(_e) => handleZenModeChange()}>
+              <Icon
+                name={isZenMode ? "yinYangActive" : "yinYangInactive"}
+                size="1.5rem"
+              />
+            </ZenModeToggleContainer>
+          </ZenModeContainer>
+        )}
       </OuterList>
     </Aside>
   )
