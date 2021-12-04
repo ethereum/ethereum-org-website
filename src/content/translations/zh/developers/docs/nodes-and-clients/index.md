@@ -21,7 +21,7 @@ isOutdated: true
 
 许多[以太坊客户端](/developers/docs/nodes-and-clients/#clients)的实现已经以多种语言存在。 这些客户端实现的共同之处是它们都遵循了正式的规范。 此规范决定了以太坊网络和区块链的功能。
 
-![以太坊1x 客户端](./client-diagram.png) 以太坊客户端功能的简化图表。
+![以太坊1x 客户端](../../../../../developers/docs/nodes-and-clients/client-diagram.png) 以太坊客户端功能的简化图表。
 
 ## 节点类型 {#node-types}
 
@@ -59,7 +59,7 @@ isOutdated: true
 - 您不必将地址和余额泄露到随机节点。 一切都可以由您自己的客户检查。
 - 如果您使用自己的节点，则去中心化应用可以更安全和私有。 [Metamask](https://metamask.io)、[MyTherWallet](https://myetherwallet.com) 和其他钱包可以轻松指向您自己的本地节点。
 
-![如何通过您的应用程序和节点访问以太坊](./nodes.png)
+![如何通过您的应用程序和节点访问以太坊](../../../../../developers/docs/nodes-and-clients/nodes.png)
 
 ### 网络优势 {#network-benefits}
 
@@ -198,9 +198,9 @@ Hyperledger Besu 是一个企业级的以太坊客户端，用于公共和许可
 | Nethermind  | 200GB 以上           | 3TB 以上             |
 | Besu        | 750GB 以上           | 4TB 以上             |
 
-![图表表明，完全同步所需的 GB 数正呈上升趋势](./full-sync.png)
+![图表表明，完全同步所需的 GB 数正呈上升趋势](../../../../../developers/docs/nodes-and-clients/full-sync.png)
 
-![图表表明，存档同步所需的GB数正呈上升趋势。](./archive-sync.png)
+![图表表明，存档同步所需的GB数正呈上升趋势。](../../../../../developers/docs/nodes-and-clients/archive-sync.png)
 
 这些图表显示储存要求总是如何改变的。 关于 Geth 和 Parity 的最新数据，请参阅[完整同步数据](https://etherscan.io/chartsync/chaindefault)和[归档同步数据](https://etherscan.io/chartsync/chainarchive)。
 
