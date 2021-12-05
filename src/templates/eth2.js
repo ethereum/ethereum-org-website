@@ -482,7 +482,6 @@ export const eth2PageQuery = graphql`
         image {
           childImageSharp {
             gatsbyImageData(
-              height: 640
               layout: FULL_WIDTH
               placeholder: BLURRED
               quality: 100

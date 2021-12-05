@@ -518,26 +518,6 @@ export default WhatIsEthereumPage
 
 export const query = graphql`
   {
-    banner: file(relativePath: { eq: "home/eth-tokens.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          height: 400
-          layout: FULL_WIDTH
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    dapps: file(relativePath: { eq: "doge-computer.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 372
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
     eth: file(relativePath: { eq: "eth.png" }) {
       childImageSharp {
         gatsbyImageData(
