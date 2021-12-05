@@ -223,87 +223,172 @@ const StablecoinAccordion = () => {
     {
       uniswap: file(relativePath: { eq: "dapps/uni.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       compound: file(relativePath: { eq: "dapps/compound.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       aave: file(relativePath: { eq: "dapps/aave.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       oasis: file(relativePath: { eq: "dapps/stabledai.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       dydx: file(relativePath: { eq: "exchanges/dydx.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       gitcoin: file(relativePath: { eq: "dapps/gitcoin.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       maker: file(relativePath: { eq: "stablecoins/maker.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       eth: file(relativePath: { eq: "favicon.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       oneinch: file(relativePath: { eq: "exchanges/1inch.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       loopring: file(relativePath: { eq: "dapps/loopring.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       matcha: file(relativePath: { eq: "dapps/matcha.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       coinbase: file(relativePath: { eq: "exchanges/coinbase.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       kraken: file(relativePath: { eq: "exchanges/kraken.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       coinmama: file(relativePath: { eq: "exchanges/coinmama.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       gemini: file(relativePath: { eq: "exchanges/gemini.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       binance: file(relativePath: { eq: "exchanges/binance.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       bittrex: file(relativePath: { eq: "exchanges/bittrex.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
     }

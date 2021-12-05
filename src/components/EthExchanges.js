@@ -175,7 +175,12 @@ const NoResultsSingle = ({ children }) => (
 export const cardListImage = graphql`
   fragment cardListImage on File {
     childImageSharp {
-      gatsbyImageData(width: 20, placeholder: BLURRED, layout: FIXED)
+      gatsbyImageData(
+        width: 20
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `

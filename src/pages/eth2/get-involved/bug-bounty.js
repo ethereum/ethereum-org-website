@@ -527,7 +527,12 @@ export default BugBountiesPage
 export const ClientLogos = graphql`
   fragment ClientLogos on File {
     childImageSharp {
-      gatsbyImageData(placeholder: BLURRED, width: 60, layout: FIXED)
+      gatsbyImageData(
+        width: 60
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
@@ -535,7 +540,12 @@ export const ClientLogos = graphql`
 export const ClientLogosSmall = graphql`
   fragment ClientLogosSmall on File {
     childImageSharp {
-      gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
+      gatsbyImageData(
+        width: 24
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `

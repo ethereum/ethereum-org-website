@@ -470,7 +470,12 @@ export default DepositContractPage
 export const sourceImage = graphql`
   fragment sourceImage on File {
     childImageSharp {
-      gatsbyImageData(placeholder: BLURRED, height: 20, layout: FIXED)
+      gatsbyImageData(
+        height: 20
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `

@@ -28,22 +28,42 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
         }
         ogImageDefault: file(relativePath: { eq: "home/hero.png" }) {
           childImageSharp {
-            gatsbyImageData(width: 1200, placeholder: BLURRED, layout: FIXED)
+            gatsbyImageData(
+              width: 1200
+              layout: FIXED
+              placeholder: BLURRED
+              quality: 100
+            )
           }
         }
         ogImageDevelopers: file(relativePath: { eq: "enterprise-eth.png" }) {
           childImageSharp {
-            gatsbyImageData(width: 1200, placeholder: BLURRED, layout: FIXED)
+            gatsbyImageData(
+              width: 1200
+              layout: FIXED
+              placeholder: BLURRED
+              quality: 100
+            )
           }
         }
         ogImageDapps: file(relativePath: { eq: "doge-computer.png" }) {
           childImageSharp {
-            gatsbyImageData(width: 1200, placeholder: BLURRED, layout: FIXED)
+            gatsbyImageData(
+              width: 1200
+              layout: FIXED
+              placeholder: BLURRED
+              quality: 100
+            )
           }
         }
         ogImageEthtwo: file(relativePath: { eq: "eth2/eth2_doge.png" }) {
           childImageSharp {
-            gatsbyImageData(width: 1200, placeholder: BLURRED, layout: FIXED)
+            gatsbyImageData(
+              width: 1200
+              layout: FIXED
+              placeholder: BLURRED
+              quality: 100
+            )
           }
         }
       }

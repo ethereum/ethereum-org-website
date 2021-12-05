@@ -154,12 +154,17 @@ export const query = graphql`
   {
     hero: file(relativePath: { eq: "wallets/find-wallet-hero.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH, quality: 100)
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
     dapps: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 600, layout: CONSTRAINED)
+        gatsbyImageData(
+          width: 600
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
   }

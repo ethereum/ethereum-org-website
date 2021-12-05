@@ -458,7 +458,12 @@ export default GetInvolvedPage
 export const Clients = graphql`
   fragment Clients on File {
     childImageSharp {
-      gatsbyImageData(placeholder: BLURRED, width: 80, layout: FIXED)
+      gatsbyImageData(
+        width: 80
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
@@ -476,7 +481,12 @@ export const query = graphql`
     }
     rhino: file(relativePath: { eq: "eth2/eth2_rhino.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 800, layout: CONSTRAINED)
+        gatsbyImageData(
+          width: 800
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     prysm: file(relativePath: { eq: "eth2/prysm.png" }) {

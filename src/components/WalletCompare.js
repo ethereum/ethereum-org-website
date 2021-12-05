@@ -85,7 +85,12 @@ const ClearLink = styled.button`
 export const walletCardImage = graphql`
   fragment walletCardImage on File {
     childImageSharp {
-      gatsbyImageData(placeholder: BLURRED, width: 64, layout: CONSTRAINED)
+      gatsbyImageData(
+        width: 64
+        layout: CONSTRAINED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `

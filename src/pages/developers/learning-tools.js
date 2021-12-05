@@ -312,10 +312,10 @@ export const learningToolImage = graphql`
   fragment learningToolImage on File {
     childImageSharp {
       gatsbyImageData(
-        placeholder: BLURRED
         height: 100
-        quality: 100
         layout: FIXED
+        placeholder: BLURRED
+        quality: 100
       )
     }
   }
@@ -363,7 +363,12 @@ export const query = graphql`
     }
     learn: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 800, layout: CONSTRAINED)
+        gatsbyImageData(
+          width: 800
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
   }

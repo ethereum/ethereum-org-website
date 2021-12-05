@@ -530,26 +530,41 @@ export const query = graphql`
     ednHero: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
         gatsbyImageData(
-          placeholder: BLURRED
           width: 800
           layout: CONSTRAINED
+          placeholder: BLURRED
           quality: 100
         )
       }
     }
     developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, height: 200, layout: FIXED)
+        gatsbyImageData(
+          height: 200
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     doge: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, height: 320, layout: FIXED)
+        gatsbyImageData(
+          height: 320
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     ogImage: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 1200, layout: FIXED)
+        gatsbyImageData(
+          width: 1200
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
   }

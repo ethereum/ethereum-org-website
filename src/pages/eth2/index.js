@@ -782,32 +782,57 @@ export const query = graphql`
   {
     oldship: file(relativePath: { eq: "eth2/oldship.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 800, layout: CONSTRAINED)
+        gatsbyImageData(
+          width: 800
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     rhino: file(relativePath: { eq: "eth2/eth2_rhino.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 320, layout: CONSTRAINED)
+        gatsbyImageData(
+          width: 320
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     merge: file(relativePath: { eq: "eth2/merge.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
     beaconchain: file(relativePath: { eq: "eth2/core.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 420, layout: FIXED)
+        gatsbyImageData(
+          width: 420
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     shards: file(relativePath: { eq: "eth2/newrings.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 420, layout: FIXED)
+        gatsbyImageData(
+          width: 420
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     themerge: file(relativePath: { eq: "eth2/merge.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 420, layout: FIXED)
+        gatsbyImageData(
+          width: 420
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
   }

@@ -13,12 +13,22 @@ const Logo = () => {
     {
       dark: file(relativePath: { eq: "ef-logo.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, height: 100, layout: FIXED)
+          gatsbyImageData(
+            height: 100
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       light: file(relativePath: { eq: "ef-logo-white.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, height: 100, layout: FIXED)
+          gatsbyImageData(
+            height: 100
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
     }

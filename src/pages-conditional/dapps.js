@@ -1667,7 +1667,12 @@ export default DappsPage
 export const dappImage = graphql`
   fragment dappImage on File {
     childImageSharp {
-      gatsbyImageData(placeholder: BLURRED, width: 80, layout: CONSTRAINED)
+      gatsbyImageData(
+        width: 80
+        layout: CONSTRAINED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
@@ -1675,10 +1680,10 @@ export const editorImage = graphql`
   fragment editorImage on File {
     childImageSharp {
       gatsbyImageData(
-        placeholder: BLURRED
         height: 80
-        quality: 100
         layout: FIXED
+        placeholder: BLURRED
+        quality: 100
       )
     }
   }
@@ -1688,27 +1693,52 @@ export const query = graphql`
   {
     doge: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 624, layout: CONSTRAINED)
+        gatsbyImageData(
+          width: 624
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     ogImage: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 1200, layout: FIXED)
+        gatsbyImageData(
+          width: 1200
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     magicians: file(relativePath: { eq: "magicians.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 300, layout: CONSTRAINED)
+        gatsbyImageData(
+          width: 300
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, height: 200, layout: FIXED)
+        gatsbyImageData(
+          height: 200
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     wallet: file(relativePath: { eq: "wallet.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 300, layout: CONSTRAINED)
+        gatsbyImageData(
+          width: 300
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     uniswapec: file(relativePath: { eq: "dapps/uni.png" }) {

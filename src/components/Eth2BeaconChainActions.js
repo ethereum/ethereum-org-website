@@ -58,7 +58,12 @@ const StyledButtonLink = styled(ButtonLink)`
 export const DataLogo = graphql`
   fragment DataLogo on File {
     childImageSharp {
-      gatsbyImageData(width: 24, placeholder: BLURRED, layout: FIXED)
+      gatsbyImageData(
+        width: 24
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `

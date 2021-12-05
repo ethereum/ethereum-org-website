@@ -513,21 +513,36 @@ export default WhatIsEthereumPage
 export const useCaseImage = graphql`
   fragment useCaseImage on File {
     childImageSharp {
-      gatsbyImageData(placeholder: BLURRED, height: 260, layout: FIXED)
+      gatsbyImageData(
+        height: 260
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
 export const actionCardImage = graphql`
   fragment actionCardImage on File {
     childImageSharp {
-      gatsbyImageData(placeholder: BLURRED, width: 368, layout: FIXED)
+      gatsbyImageData(
+        width: 368
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
 export const calloutImage = graphql`
   fragment calloutImage on File {
     childImageSharp {
-      gatsbyImageData(placeholder: BLURRED, height: 200, layout: FIXED)
+      gatsbyImageData(
+        height: 200
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
@@ -537,21 +552,31 @@ export const query = graphql`
     hero: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
         gatsbyImageData(
-          placeholder: BLURRED
           width: 800
           layout: CONSTRAINED
+          placeholder: BLURRED
           quality: 100
         )
       }
     }
     ogImage: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 1200, layout: FIXED)
+        gatsbyImageData(
+          width: 1200
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     banner: file(relativePath: { eq: "home/hero.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, height: 400, layout: FULL_WIDTH)
+        gatsbyImageData(
+          height: 400
+          layout: FULL_WIDTH
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     dapps: file(relativePath: { eq: "doge-computer.png" }) {

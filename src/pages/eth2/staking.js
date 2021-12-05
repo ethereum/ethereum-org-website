@@ -408,7 +408,12 @@ export default StakingPage
 export const poolImage = graphql`
   fragment poolImage on File {
     childImageSharp {
-      gatsbyImageData(placeholder: BLURRED, height: 20, layout: FIXED)
+      gatsbyImageData(
+        height: 20
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
@@ -417,7 +422,12 @@ export const query = graphql`
   {
     rhino: file(relativePath: { eq: "eth2/eth2_rhino.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 500, layout: CONSTRAINED)
+        gatsbyImageData(
+          width: 500
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     consensys: file(relativePath: { eq: "projects/consensys.png" }) {

@@ -397,7 +397,7 @@ export const JobQuery = graphql`
         link
         image {
           childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, height: 400)
+            gatsbyImageData(height: 400, placeholder: BLURRED, quality: 100)
           }
         }
       }

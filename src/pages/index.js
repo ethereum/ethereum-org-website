@@ -968,20 +968,20 @@ export const query = graphql`
   {
     hero: file(relativePath: { eq: "home/hero.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH, quality: 100)
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
     ethereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH, quality: 100)
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
     enterprise: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
         gatsbyImageData(
-          placeholder: BLURRED
           width: 320
           layout: FIXED
+          placeholder: BLURRED
           quality: 100
         )
       }
@@ -989,9 +989,9 @@ export const query = graphql`
     dogefixed: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
         gatsbyImageData(
-          placeholder: BLURRED
           width: 320
           layout: FIXED
+          placeholder: BLURRED
           quality: 100
         )
       }
@@ -999,9 +999,9 @@ export const query = graphql`
     robotfixed: file(relativePath: { eq: "wallet-cropped.png" }) {
       childImageSharp {
         gatsbyImageData(
-          placeholder: BLURRED
           width: 320
           layout: FIXED
+          placeholder: BLURRED
           quality: 100
         )
       }
@@ -1009,9 +1009,9 @@ export const query = graphql`
     ethfixed: file(relativePath: { eq: "eth.png" }) {
       childImageSharp {
         gatsbyImageData(
-          placeholder: BLURRED
           width: 320
           layout: FIXED
+          placeholder: BLURRED
           quality: 100
         )
       }
@@ -1019,43 +1019,43 @@ export const query = graphql`
     devfixed: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       childImageSharp {
         gatsbyImageData(
-          placeholder: BLURRED
           width: 320
           layout: FIXED
+          placeholder: BLURRED
           quality: 100
         )
       }
     }
     future: file(relativePath: { eq: "future_transparent.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH, quality: 100)
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
     impact: file(relativePath: { eq: "impact_transparent.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH, quality: 100)
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
     finance: file(relativePath: { eq: "finance_transparent.png" }) {
       childImageSharp {
         gatsbyImageData(
-          placeholder: BLURRED
           width: 600
           layout: CONSTRAINED
+          placeholder: BLURRED
           quality: 100
         )
       }
     }
     hackathon: file(relativePath: { eq: "hackathon_transparent.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH, quality: 100)
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
     infrastructure: file(
       relativePath: { eq: "infrastructure_transparent.png" }
     ) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH, quality: 100)
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
     infrastructurefixed: file(
@@ -1063,9 +1063,9 @@ export const query = graphql`
     ) {
       childImageSharp {
         gatsbyImageData(
-          placeholder: BLURRED
           width: 320
           layout: FIXED
+          placeholder: BLURRED
           quality: 100
         )
       }
@@ -1073,9 +1073,9 @@ export const query = graphql`
     merge: file(relativePath: { eq: "eth2/merge.png" }) {
       childImageSharp {
         gatsbyImageData(
-          placeholder: BLURRED
           width: 320
           layout: FIXED
+          placeholder: BLURRED
           quality: 100
         )
       }

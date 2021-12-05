@@ -559,7 +559,7 @@ export default AssetsPage
 export const assetItem = graphql`
   fragment assetItem on File {
     childImageSharp {
-      gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH, quality: 100)
+      gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
     }
   }
 `
@@ -571,9 +571,9 @@ export const query = graphql`
     ) {
       childImageSharp {
         gatsbyImageData(
-          placeholder: BLURRED
           width: 80
           layout: FIXED
+          placeholder: BLURRED
           quality: 100
         )
       }
@@ -583,9 +583,9 @@ export const query = graphql`
     ) {
       childImageSharp {
         gatsbyImageData(
-          placeholder: BLURRED
           width: 80
           layout: FIXED
+          placeholder: BLURRED
           quality: 100
         )
       }

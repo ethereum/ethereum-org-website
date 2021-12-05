@@ -72,7 +72,12 @@ const ValueRow = styled(Row)`
 export const TokenLogo = graphql`
   fragment TokenLogo on File {
     childImageSharp {
-      gatsbyImageData(height: 24, placeholder: BLURRED, layout: FIXED)
+      gatsbyImageData(
+        height: 24
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `

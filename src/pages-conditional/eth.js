@@ -520,37 +520,72 @@ export const query = graphql`
   {
     banner: file(relativePath: { eq: "home/eth-tokens.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, height: 400, layout: FULL_WIDTH)
+        gatsbyImageData(
+          height: 400
+          layout: FULL_WIDTH
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     dapps: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 372, layout: FIXED)
+        gatsbyImageData(
+          width: 372
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     eth: file(relativePath: { eq: "eth.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 800, layout: CONSTRAINED)
+        gatsbyImageData(
+          width: 800
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     ogImage: file(relativePath: { eq: "eth.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 1200, layout: FIXED)
+        gatsbyImageData(
+          width: 1200
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     ethereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 220, layout: FIXED)
+        gatsbyImageData(
+          width: 220
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     defi: file(relativePath: { eq: "finance_transparent.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 220, layout: FIXED)
+        gatsbyImageData(
+          width: 220
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     ethCat: file(relativePath: { eq: "eth-gif-cat.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 600, layout: CONSTRAINED)
+        gatsbyImageData(
+          width: 600
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
   }

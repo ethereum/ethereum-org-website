@@ -537,7 +537,12 @@ export default WalletsPage
 export const calloutImage = graphql`
   fragment calloutImage on File {
     childImageSharp {
-      gatsbyImageData(placeholder: BLURRED, height: 200, layout: FIXED)
+      gatsbyImageData(
+        height: 200
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
@@ -545,7 +550,12 @@ export const calloutImage = graphql`
 export const listImage = graphql`
   fragment listImage on File {
     childImageSharp {
-      gatsbyImageData(placeholder: BLURRED, height: 20, layout: FIXED)
+      gatsbyImageData(
+        height: 20
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
@@ -555,9 +565,9 @@ export const query = graphql`
     hero: file(relativePath: { eq: "wallet.png" }) {
       childImageSharp {
         gatsbyImageData(
-          placeholder: BLURRED
           height: 600
           layout: FULL_WIDTH
+          placeholder: BLURRED
           quality: 100
         )
       }
@@ -565,16 +575,21 @@ export const query = graphql`
     findWallet: file(relativePath: { eq: "wallets/find-wallet.png" }) {
       childImageSharp {
         gatsbyImageData(
-          placeholder: BLURRED
           width: 800
-          quality: 100
           layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
         )
       }
     }
     ogImage: file(relativePath: { eq: "wallet-cropped.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 738, layout: FIXED)
+        gatsbyImageData(
+          width: 738
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     eth: file(relativePath: { eq: "eth-logo.png" }) {

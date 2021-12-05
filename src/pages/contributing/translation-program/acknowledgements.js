@@ -227,12 +227,22 @@ export const query = graphql`
   query {
     dogeComputer: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 500, layout: FIXED)
+        gatsbyImageData(
+          width: 500
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     ethereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 220, layout: FIXED)
+        gatsbyImageData(
+          width: 220
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
   }

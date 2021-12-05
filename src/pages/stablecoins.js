@@ -884,52 +884,102 @@ export const query = graphql`
   {
     stablecoins: file(relativePath: { eq: "stablecoins/hero.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 624, layout: CONSTRAINED)
+        gatsbyImageData(
+          width: 624
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     dai: file(relativePath: { eq: "stablecoins/dai-large.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 600, layout: CONSTRAINED)
+        gatsbyImageData(
+          width: 600
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     dailarge: file(relativePath: { eq: "stablecoins/dai-large.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 300, layout: CONSTRAINED)
+        gatsbyImageData(
+          width: 300
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     usdclarge: file(relativePath: { eq: "stablecoins/usdc-large.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 300, layout: CONSTRAINED)
+        gatsbyImageData(
+          width: 300
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     doge: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 600, layout: CONSTRAINED)
+        gatsbyImageData(
+          width: 600
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     compound: file(relativePath: { eq: "stablecoins/compound.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 160, layout: FIXED)
+        gatsbyImageData(
+          width: 160
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     aave: file(relativePath: { eq: "stablecoins/aave.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 64, layout: FIXED)
+        gatsbyImageData(
+          width: 64
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     dydx: file(relativePath: { eq: "exchanges/dydx.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 80, layout: FIXED)
+        gatsbyImageData(
+          width: 80
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     oasis: file(relativePath: { eq: "stablecoins/dai-large.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 80, layout: FIXED)
+        gatsbyImageData(
+          width: 80
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     oasissmall: file(relativePath: { eq: "stablecoins/dai-large.png" }) {
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, width: 24, layout: FIXED)
+        gatsbyImageData(
+          width: 24
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
   }
