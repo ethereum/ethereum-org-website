@@ -48,7 +48,7 @@ isOutdated: true
 <!--this hash refers to the code of this account on the Ethereum virtual machine (EVM). This EVM code gets executed if the account gets a message call. It cannot be changed unlike the other account fields.  -->
 - `storageRoot` – 有时被称为一个存储哈希。 Merkle Patricia 树的根节点的 256 位哈希，Merkle Patricia 树编码了帐户的存储内容（256 位整数值键值对），256 位整数值的 Keccak 256 位哈希作为 Key，RLP 编码的 256 位整数值作为值。 此树编码帐户存储内容的哈希，默认情况下是空。
 
-![显示帐户组成部分的图表](./accounts.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![显示帐户组成部分的图表](../../../../../developers/docs/accounts/accounts.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## 外部持有的帐户和密钥对 {#externally-owned-accounts-and-key-pairs}
 

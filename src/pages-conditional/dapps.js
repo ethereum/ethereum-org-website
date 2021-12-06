@@ -28,6 +28,9 @@ import {
   Page,
   CenterDivider,
   Divider,
+  Option,
+  OptionContainer,
+  OptionText,
 } from "../components/SharedStyledComponents"
 
 const MagiciansImage = styled(Img)`
@@ -123,17 +126,6 @@ const StyledInfoBanner = styled(InfoBanner)`
   }
 `
 
-const OptionContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 0 2rem;
-  margin-bottom: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    width: 100%;
-  }
-`
-
 const StyledCalloutBanner = styled(CalloutBanner)`
   margin: 8rem 0 4rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
@@ -145,37 +137,6 @@ const MobileOptionContainer = styled(OptionContainer)`
   text-align: center;
   @media (min-width: ${(props) => props.theme.breakpoints.m}) {
     display: none;
-  }
-`
-
-const Option = styled.div`
-  border-radius: 2rem;
-  border: 1px solid
-    ${(props) =>
-      props.isActive ? props.theme.colors.primary : props.theme.colors.text};
-  box-shadow: ${(props) =>
-    props.isActive ? props.theme.colors.tableBoxShadow : `none`};
-  display: flex;
-  color: ${(props) =>
-    props.isActive ? props.theme.colors.primary : props.theme.colors.text};
-  align-items: center;
-  padding: 1rem 1.5rem;
-  margin: 0.5rem;
-  cursor: pointer;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: 100%;
-    justify-content: center;
-    margin-left: 0;
-    margin-right: 0;
-  }
-`
-
-const OptionText = styled.div`
-  font-size: 24px;
-  line-height: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    font-size: 16px;
-    font-weight: 600;
   }
 `
 
@@ -1266,7 +1227,7 @@ const DappsPage = ({ data, location }) => {
                 onClick={() => handleCategorySelect(key, false)}
               >
                 <Emoji mr={`1rem`} text={category.emoji} />
-                <OptionText>{category.title}</OptionText>
+                <OptionText fontSize={"24px"}>{category.title}</OptionText>
               </Option>
             )
           })}

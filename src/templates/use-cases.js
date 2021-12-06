@@ -133,6 +133,16 @@ const H2 = styled.h2`
   font-size: 32px;
   font-weight: 700;
   margin-top: 4rem;
+
+  /* Prevent nav overlap */
+  &:before {
+    content: "";
+    display: block;
+    height: 120px;
+    margin-top: -120px;
+    visibility: hidden;
+  }
+
   a {
     display: none;
   }
@@ -165,6 +175,16 @@ const H2 = styled.h2`
 const H3 = styled.h3`
   font-size: 24px;
   font-weight: 700;
+
+  /* Prevent nav overlap */
+  &:before {
+    content: "";
+    display: block;
+    height: 120px;
+    margin-top: -120px;
+    visibility: hidden;
+  }
+
   a {
     display: none;
   }
