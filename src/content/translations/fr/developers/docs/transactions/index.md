@@ -20,7 +20,7 @@ Pour vous aider à mieux comprendre cet article, nous vous recommandons de comme
 
 Une transaction Ethereum est une action initiée par un compte externe, c'est-à-dire un compte géré par un être humain et non par un contrat. Par exemple, si Marc envoie 1 ETH à Alice, le compte de Marc doit être débité et celui d'Alice doit être crédité. Cette action, qui modifie l'état, se produit dans le cadre d'une transaction.
 
-![Diagramme montrant un changement d'état de cause de la transaction](./tx.png) _Schéma adapté à partir du document [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagramme montrant un changement d'état de cause de la transaction](../../../../../developers/docs/transactions/tx.png) _Schéma adapté à partir du document [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Les transactions, qui modifient l'état de l'EVM, doivent être diffusées sur l'ensemble du réseau. N'importe quel nœud peut diffuser une demande pour qu'une transaction soit exécutée sur l'EVM. Un mineur exécutera ensuite la transaction et propagera au reste du réseau le changement d'état qui en résultera.
 
@@ -124,7 +124,7 @@ Le mineur traitant la transaction recevra **+0,0042 ETH**.
 
 Du carburant est également requis pour toute interaction avec un contrat intelligent.
 
-![Diagramme montrant comment le carburant inutilisé est remboursé](./gas-tx.png) _Schéma adapté à partir du document [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagramme montrant comment le carburant inutilisé est remboursé](../../../../../developers/docs/transactions/gas-tx.png) _Schéma adapté à partir du document [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Tout carburant non utilisé dans une transaction est remboursé sur le compte de l'utilisateur.
 

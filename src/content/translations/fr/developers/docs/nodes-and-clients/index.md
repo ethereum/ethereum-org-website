@@ -21,7 +21,7 @@ Vous pouvez voir une vue du réseau Ethereum en temps réel en consultant cette 
 
 De nombreuses [implémentations de clients Ethereum](/developers/docs/nodes-and-clients/#clients) existent dans différentes langues. Ce qu'elles ont en commun, c'est qu'elles suivent toutes une spécification formelle. Cette spécification dicte le fonctionnement du réseau Ethereum et de la blockchain.
 
-![Client Eth1x](./client-diagram.png) Diagramme simplifié des fonctionnalités Ethereum Client
+![Client Eth1x](../../../../../developers/docs/nodes-and-clients/client-diagram.png) Diagramme simplifié des fonctionnalités Ethereum Client
 
 ## Types de nœuds {#node-types}
 
@@ -59,7 +59,7 @@ L'exécution de votre propre nœud vous permet d'utiliser Ethereum de façon vra
 - Vous n'aurez pas à divulguer vos adresses et vos soldes à des nœuds aléatoires. Tout peut être contrôlé avec votre propre client.
 - Votre DApp peut être privée et plus sécurisée si vous utilisez votre propre nœud. [Metamask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) et d'autres portefeuilles peuvent être facilement pointés vers votre propre nœud local.
 
-![Comment accéder à Ethereum via votre application et vos nœuds](./nodes.png)
+![Comment accéder à Ethereum via votre application et vos nœuds](../../../../../developers/docs/nodes-and-clients/nodes.png)
 
 ### Avantages du réseau {#network-benefits}
 
@@ -198,9 +198,9 @@ Selon le logiciel et le mode de synchronisation utilisés, des centaines de Go d
 | Nethermind   | 200 Go+                            | 3 To+                               |
 | Besu         | 750 Go+                            | 4 To+                               |
 
-![Graphique montrant que le nombre de Go nécessaires pour une synchronisation complète a tendance à augmenter](./full-sync.png)
+![Graphique montrant que le nombre de Go nécessaires pour une synchronisation complète a tendance à augmenter](../../../../../developers/docs/nodes-and-clients/full-sync.png)
 
-![Graphique montrant que le nombre de Go nécessaires pour une synchronisation d'archives a tendance à augmenter](./archive-sync.png)
+![Graphique montrant que le nombre de Go nécessaires pour une synchronisation d'archives a tendance à augmenter](../../../../../developers/docs/nodes-and-clients/archive-sync.png)
 
 Ces chiffres montrent l'évolution constante des exigences de stockage. Pour obtenir les informations Geth et Parity les plus récentes, lisez les page sur les [données de synchronisation complètes](https://etherscan.io/chartsync/chaindefault) et les [données de synchronisation d'archives](https://etherscan.io/chartsync/chainarchive).
 
