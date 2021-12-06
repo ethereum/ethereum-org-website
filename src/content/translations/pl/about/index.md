@@ -38,7 +38,7 @@ Ethereum i jego społeczność ciągle ewoluują, więc ethereum.org także. Dla
 
 Bazujemy na otwartości i społeczności współtwórców – także Ty możesz zaproponować zmiany lub nas wesprzeć.
 
-[Dowiedz się więcej o współtworzeniu](/en/contributing/)
+[Dowiedz się więcej o współtworzeniu](/contributing/)
 
 ### 3. ethereum.org nie jest typową stroną produktową 🦄 {#core-principles-3}
 
@@ -48,11 +48,11 @@ Co jest najlepszą stroną internetową dla platformy blokchain pozostaje pytani
 
 ## Zasady projektowania {#design-principles}
 
-Używamy zasad projektowania by kierować naszymi treściami i decyzjami projektowymi na stronie: [zasady projektowania](/en/contributing/design-principles/).
+Używamy zasad projektowania by kierować naszymi treściami i decyzjami projektowymi na stronie: [zasady projektowania](/contributing/design-principles/).
 
 Z zadowoleniem przyjmujemy opinie na ich temat. Pamiętaj, strona ethereum.org jest tworzona dla społeczności przez społeczność.
 
-Jeśli chcesz [współtworzyć stronę](/en/contributing/) upewnij się, że zapoznałeś się z zasadami.
+Jeśli chcesz [współtworzyć stronę](/contributing/) upewnij się, że zapoznałeś się z zasadami.
 
 ## Plan działania {#roadmap}
 

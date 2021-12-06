@@ -16,7 +16,7 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 **TL;DR**：刷写您的 Raspberry PI 4，插入以太网电缆，连接 SSD 磁盘并打开设备电源，将 Raspberry PI 4 变为完整的以太坊 1.0 节点或以太坊 2.0 节点（信标链/验证器）
 
-[了解以太坊 2.0 (Eth2)](/en/eth2/)
+[了解以太坊 2.0 (Eth2)](/eth2/)
 
 首先是一些背景。 如您所知，运行 Raspberry Pi 4 镜像时，我们已经遇到了一些内存问题[[1]](/developers/tutorials/run-node-raspberry-pi/#references)，因为 Raspbian 操作系统仍然在 32 位上运行[[2]](/developers/tutorials/run-node-raspberry-pi/#references)（至少 userland 如此）。 虽然我们更愿意坚持使用官方操作系统，但我们得出的结论是，为了解决这些问题，我们需要迁移原生的 64 位操作系统。
 

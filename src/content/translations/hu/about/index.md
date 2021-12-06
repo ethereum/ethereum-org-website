@@ -48,11 +48,11 @@ Az Ethereum nagy dolog: magában foglal egy közösséget, egy technológiát, e
 
 ## Tervezési elvek {#design-principles}
 
-Tervezési elveket alkalmazunk a webhely tartalmi és tervezési döntéseink irányításához: [tervezési elvek](/en/contributing/design-principles/).
+Tervezési elveket alkalmazunk a webhely tartalmi és tervezési döntéseink irányításához: [tervezési elvek](/contributing/design-principles/).
 
 Szívesen fogadunk róluk visszajelzéseket. Ne feledd, az ethereum.org a közösségért van a közösség által.
 
-Olvasd el az elveket, ha szeretnél [közreműködni az oldalhoz](/en/contributing/).
+Olvasd el az elveket, ha szeretnél [közreműködni az oldalhoz](/contributing/).
 
 ## Ütemterv {#roadmap}
 

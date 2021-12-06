@@ -158,4 +158,4 @@ Oto niektóre aplikacje dla przedsiębiorstw, które zostały wdrożone w public
 
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _płatności za energię elektryczną_
 
-Jeśli chcesz dodać coś do tej listy, zapoznaj się z [instrukcjami dotyczącymi wkładu](https://ethereum.org/en/contributing/).
+Jeśli chcesz dodać coś do tej listy, zapoznaj się z [instrukcjami dotyczącymi wkładu](/contributing/).

@@ -10,9 +10,9 @@ incomplete: true
 
 Społeczność Ethereum przyjęła wiele standardów, które pomagają utrzymać interoperacyjność projektów (takich jak [klienci Ethereum](/developers/docs/nodes-and-clients/) i portfele) we wszystkich implementacjach oraz zapewniają, że inteligentne kontrakty i dapps pozostają komponowalne.
 
-Zazwyczaj standardy są wprowadzane jako [Propozycje ulepszeń Ethereum](/en/eips/) (Ethereum Improvement Proposals, EIP), które są omawiane przez członków społeczności za pośrednictwem <a href="https://eips.ethereum.org/EIPS/eip-1">procesu dotyczącego standardów</a>.
+Zazwyczaj standardy są wprowadzane jako [Propozycje ulepszeń Ethereum](/eips/) (Ethereum Improvement Proposals, EIP), które są omawiane przez członków społeczności za pośrednictwem <a href="https://eips.ethereum.org/EIPS/eip-1">procesu dotyczącego standardów</a>.
 
-- [Wprowadzenie do EIP](/en/eips/)
+- [Wprowadzenie do EIP](/eips/)
 - [Lista EIP](https://eips.ethereum.org/)
 - [Repozytorium EIP na GitHub](https://github.com/ethereum/EIPs)
 - [Forum dyskusyjne EIP](https://ethereum-magicians.org/c/eips)

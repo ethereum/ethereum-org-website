@@ -38,7 +38,7 @@ Ethereum e la sua community sono in continua evoluzione. ethereum.org lo sarà d
 
 Siamo open source, con una community di collaboratori, quindi anche tu puoi proporre modifiche o aiutarci.
 
-[Come contribuire](/en/contributing/)
+[Come contribuire](/contributing/)
 
 ### 3. ethereum.org non è uno dei soliti siti che propongono prodotti 🦄 {#core-principles-3}
 
@@ -48,11 +48,11 @@ Ethereum è tanta roba: include una community, una tecnologia, una serie di idee
 
 ## Principi di progettazione {#design-principles}
 
-Usiamo principi di progettazione per guidare il nostro contenuto e le nostre decisioni che riguardano la progettazione sul sito: [principi di progettazione](/en/contributing/design-principles/).
+Usiamo principi di progettazione per guidare il nostro contenuto e le nostre decisioni che riguardano la progettazione sul sito: [principi di progettazione](/contributing/design-principles/).
 
 Ogni tipo di feedback è benvenuto. Ricorda, ethereum.org è per la community, dalla community.
 
-Leggi prima i principi se desideri [contribuire al sito](/en/contributing/).
+Leggi prima i principi se desideri [contribuire al sito](/contributing/).
 
 ## Roadmap {#roadmap}
 
