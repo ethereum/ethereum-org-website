@@ -20,7 +20,7 @@ Para entender más el contenido de esta página, te recomendamos que leas primer
 
 Una transacción de Ethereum hace referencia a una acción iniciada por una cuenta de propiedad externa, en otras palabras, una cuenta controlada por un humano, no un contrato. Por ejemplo, si Bob le envía 1 ETH a Alice, este debe debitarse de la cuenta de Bob y acreditarse en la cuenta de Alice. Esta acción modificadora del estado de la red tiene lugar en una transacción.
 
-![Diagrama que muestra cómo una transacción causa cambios de estado](./tx.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagrama que muestra cómo una transacción causa cambios de estado](../../../../../developers/docs/transactions/tx.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Las transacciones, que modifican el estado de la EVM, se deben transmitir a toda la red. Cualquier nodo puede transmitir una solicitud de una transacción que se va ejecutar en la EVM; a continuación, un minero ejecutará la transacción y propagará la modificación de estado que resulte de ello al resto de la red.
 
@@ -124,7 +124,7 @@ El procesamiento del minero de la transacción obtendrá **+0,0042 ETH**
 
 El gas también es necesario para cualquier interacción del contrato inteligente.
 
-![Diagrama mostrando como el gas no utilizado es retornado](./gas-tx.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagrama mostrando como el gas no utilizado es retornado](../../../../../developers/docs/transactions/gas-tx.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Cualquier gas no utilizado en una transacción es reembolsado a la cuenta de usuario.
 

@@ -17,7 +17,7 @@ Los bloques son muy fáciles de manejar incluso para los principiantes. Sin emba
 
 Organizamos las transacciones en bloques para garantizar que todos los participantes en la red Ethereum mantienen un estado sincronizado y están de acuerdo sobre el historial preciso de las transacciones. Esto significa que decenas (o cientos) de transacciones se confirman, acuerdan y sincronizan a la vez.
 
-![Un diagrama muestra cómo la transacción en un bloque causa cambios de estado](./tx-block.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Un diagrama muestra cómo la transacción en un bloque causa cambios de estado](../../../../../developers/docs/blocks/tx-block.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Al separar los commits (formación exitosa de una cadena), damos a todos los participantes de la red el tiempo suficiente para llegar a un consenso: aunque las solicitudes de transacción ocurren docenas de veces por segundo, los bloques en Ethereum se confirman aproximadamente una vez cada 15 segundos.
 
