@@ -51,8 +51,8 @@ const Image = styled(GatsbyImage)`
   background-repeat: repeat;
   align-self: center;
   width: 100%;
-  min-width: 240px;
   max-width: 240px;
+  flex: 1;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     margin: 2rem 2rem;
     min-width: 160px;
@@ -80,7 +80,7 @@ const StyledGhostCard = styled(GhostCard)`
 const Row = styled.div`
   display: flex;
   width: 100%;
-  align-items: flex-start;
+  align-items: stretch;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
   }

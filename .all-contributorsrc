@@ -5765,6 +5765,34 @@
         "doc",
         "translation"
       ]
+    },
+    {
+      "login": "samnang",
+      "name": "Samnang Chhun",
+      "avatar_url": "https://avatars.githubusercontent.com/u/131172?v=4",
+      "profile": "https://github.com/samnang",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "m-t-a97",
+      "name": "Tanvir Ahmed",
+      "avatar_url": "https://avatars.githubusercontent.com/u/54685928?v=4",
+      "profile": "http://m-t-ahmed.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "JorisZierold",
+      "name": "Joris Zierold",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13258954?v=4",
+      "profile": "https://github.com/JorisZierold",
+      "contributions": [
+        "doc",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,

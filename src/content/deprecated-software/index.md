@@ -190,7 +190,7 @@ Aleth was the third most popular client for Ethereum before being deprecated on 
 
 **Alternatives**
 
-[Geth](https://geth.ethereum.org/) is a well-known altenative Ethereum client.
+[Geth](https://geth.ethereum.org/) is a well-known alternative Ethereum client.
 
 ### Parity {#parity}
 
@@ -336,7 +336,7 @@ Deprecated on Nov 13, 2020.
 
 **Summary**
 
-This project aimed to implements somes EIP about Tokens (e.g. EIP20) as smart contract to allow developers to easily incorporate them into their Solidity applications while adhering to standards.
+This project aimed to implement some EIP about Tokens (e.g. EIP20) as smart contract to allow developers to easily incorporate them into their Solidity applications while adhering to standards.
 
 **Archives**
 
