@@ -56,7 +56,7 @@ Kontrakty jednak zawierają drzewo _pamięciowe_ Merkle Patricia (jako adresowal
 
 Skompilowany kod bitowy inteligentnego kontraktu wykonywany jest jako szereg [kodów operacyjnych](https://www.ethervm.io/) EVM, które przeprowadzają standardowe operacje na stosie, takie jak `XOR`, `AND`, `ADD`, `SUB` itp. EVM implementuje również szereg operacji stosu specyficznych dla blockchaina, takich jak `ADDRESS`, `BALANDCE`, `SHA3`, `BLOCKHASH` itp.
 
-![Schemat pokazujący, gdzie potrzebny jest gaz dla operacji EVM](../gas/gas.png) _Schemat zaadaptowany z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Schemat pokazujący, gdzie potrzebny jest gaz dla operacji EVM](../../../../../developers/docs/gas/gas.png) _Schemat zaadaptowany z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 <!-- TODO add full list from  https://eth.wiki/concepts/evm/implementations -->
 
