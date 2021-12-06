@@ -7,7 +7,7 @@ import Link from "./Link"
 const meetups = [
   {
     title: "DeFi Dubai",
-    emoji: ":uae:",
+    emoji: ":united_arab_emirates:",
     location: "Dubai",
     link: "https://www.meetup.com/DeFi-Dubai/",
   },
