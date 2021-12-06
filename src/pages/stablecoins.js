@@ -249,8 +249,11 @@ const InfoIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.text};
 `
 
-const ButtonLinkRight = styled(ButtonLink)`
-  margin-left: 1rem;
+const ButtonLinkContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  gap: 1em;
 `
 
 const tooltipContent = (
@@ -807,14 +810,14 @@ const StablecoinsPage = ({ data }) => {
             intl
           )}
         >
-          <div>
+          <ButtonLinkContainer>
             <ButtonLink to="/dapps/">
               <Translation id="page-stablecoins-explore-dapps" />
             </ButtonLink>
-            <ButtonLinkRight isSecondary to="/defi/">
+            <ButtonLink isSecondary to="/defi/">
               <Translation id="page-stablecoins-more-defi-button" />
-            </ButtonLinkRight>
-          </div>
+            </ButtonLink>
+          </ButtonLinkContainer>
         </StyledCalloutBanner>
         <h2>
           <Translation id="page-stablecoins-save-stablecoins" />
