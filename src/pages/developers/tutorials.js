@@ -245,7 +245,9 @@ const TutorialsPage = ({ data, pageContext }) => {
 
   const allTutorials = [].concat(externalTutorials, internalTutorials)
 
-  const hasTutorialsCheck = some(allTutorials, ["lang", pageContext.language])
+  const hasTutorialsCheck = allTutorials.some(
+    (tutorial) => tutorial.lang === pageContext.language
+  )
 
   const filteredTutorials = allTutorials
     .filter((tutorial) =>
