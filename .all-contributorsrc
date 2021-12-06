@@ -5765,6 +5765,15 @@
         "doc",
         "translation"
       ]
+    },
+    {
+      "login": "samnang",
+      "name": "Samnang Chhun",
+      "avatar_url": "https://avatars.githubusercontent.com/u/131172?v=4",
+      "profile": "https://github.com/samnang",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
