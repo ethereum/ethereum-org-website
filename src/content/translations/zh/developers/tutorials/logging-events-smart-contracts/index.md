@@ -16,9 +16,9 @@ sourceUrl: https://ethereumdev.io/logging-data-with-events/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-# Rejestrowanie danych z inteligentnych kontraktów ze zdarzeniami {#logging-data-from-smart-contracts-with-events}
-
 在 solidity 中，[事件](/developers/docs/smart-contracts/anatomy/#events-and-logs)是智能合约可触发的调度信号。 去中心化应用或其他任何连接到以太坊 JSON-PRC API 的程序，都可以监听这些事件，并执行相应操作。 可以建立事件的索引，以便稍后可以搜索到事件历史记录。
+
+## 事件 {#events}
 
 在撰写这篇文章之时，以太坊区块链上最常见的事件是由 ERC20 代币转账时触发的 Transfer 事件。
 
