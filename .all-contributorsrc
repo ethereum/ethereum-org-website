@@ -5783,6 +5783,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "JorisZierold",
+      "name": "Joris Zierold",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13258954?v=4",
+      "profile": "https://github.com/JorisZierold",
+      "contributions": [
+        "doc",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
