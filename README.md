@@ -1279,6 +1279,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://austinburke.dev"><img src="https://avatars.githubusercontent.com/u/24820716?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Austin Burke</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=aburk3" title="Documentation">📖</a></td>
     <td align="center"><a href="http://rich1n.com"><img src="https://avatars.githubusercontent.com/u/66102911?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Richard Rodrigues</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=rich1n" title="Documentation">📖</a> <a href="#translation-rich1n" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/samnang"><img src="https://avatars.githubusercontent.com/u/131172?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Samnang Chhun</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=samnang" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://m-t-ahmed.com"><img src="https://avatars.githubusercontent.com/u/54685928?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tanvir Ahmed</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=m-t-a97" title="Documentation">📖</a></td>
   </tr>
 </table>
 
