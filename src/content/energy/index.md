@@ -22,11 +22,11 @@ At the time of writing, there are 140,592 validators from 16,405 unique addresse
 
 ![](https://storage.googleapis.com/ethereum-hackmd/upload_5d69a63da0d4ebb6cc7b808b9a58e00f.png)
 
-How much power does it take to run a beacon node (BN), 5.4 validator clients (VC), and an eth1 full-node? Using my personal setup as a base, it’s around 15 watt. Joe Clapis (a Rocket Pool dev) recently ran 10 VCs, a Nimbus BN, and a Geth full node off of a 10Ah USB battery bank for 10 hours, meaning that this setup averaged 5W. It is unlikely that the average staker is running such an optimised setup, so let’s call it 100W all in.
+How much power does it take to run a beacon node (BN), 5.4 validator clients (VC), and an eth1 full-node? Using an average personal setup as a base, it’s around 15 watt. Joe Clapis (a Rocket Pool dev) recently ran 10 VCs, a Nimbus BN, and a Geth full node off of a 10Ah USB battery bank for 10 hours, meaning that this setup averaged 5W. It is unlikely that the average staker is running such an optimised setup, so let’s call it 100W all in.
 
 Multiplying this with the 87k validators from before means that home-stakers consume ~1.64 megawatt. Estimating the power consumed by custodial stakers is a bit harder, they run tens of thousands of validator clients with redundancy and backups.
 
-To make life easy, let’s also just assume that they use 100W per 5.5 validators. Based off of the staking infrustructure teams I have spoken to, this is a **gross** over-estimate. The real answer is something like 50x less (And if you are a custodial staking team consuming more than 5W/ validator hit me up, I’m sure I can help you out).
+To make life easy, let’s also just assume that they use 100W per 5.5 validators. Based off of the staking infrustructure teams I have spoken to, this is a **gross** over-estimate. The real answer is something like 50x less.
 
 In total, a Proof-of-Stake Ethereum therefore consumes something on the order of 2.62 megawatt. This is not on the scale of countries, provinces, or even cities, but that of a small town (around 2100 American homes).
 
@@ -44,7 +44,7 @@ If energy consumption per-transaction is more your speed, that’s ~35Wh/tx (avg
 
 ## Looking Forward {looking-forward}
 
-While Ethereum continues to use PoW for now, that won’t be the case for much longer. In the past few weeks, [we have seen](https://twitter.com/protolambda/status/1388093066993668098) the emergence of the first testnets for _The Merge_, the name given to the moment Ethereum switches to from PoW to PoS. Several teams of engineers are working overtime to ensure that _The Merge_ arrives as soon as possible, and without compromising on safety.
+While Ethereum continues to use PoW for now, that won’t be the case for much longer. In the past few months, [we have seen](https://twitter.com/protolambda/status/1388093066993668098) the emergence of the first testnets for _The Merge_, the name given to the moment Ethereum switches to from PoW to PoS. Several teams of engineers are working overtime to ensure that _The Merge_ arrives as soon as possible, and without compromising on safety.
 
 Scaling solutions (such as rollups and sharding) will help further decrease the energy consumed per-transaction by leveraging economies of scale.
 
