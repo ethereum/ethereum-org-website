@@ -16,7 +16,7 @@ Forks are when major technical upgrades or changes need to be made to the networ
 
 When upgrades are needed in traditional, centrally-controlled software, the company will just publish a new version for the end-user. Blockchains work differently because there is no central ownership. [Ethereum clients](/developers/docs/nodes-and-clients/) must update their software to implement the new fork rules. Plus block creators (miners in a proof-of-work world, validators in a proof-of-stake world) and nodes must create blocks and validate against the new rules. [More on consensus mechanisms](/developers/docs/consensus-mechanisms/)
 
-These rule changes may create a temporary split in the network. New blocks could be produced according to the new rules or the old ones. Forks are usually agreed upon ahead of time so that clients adopt the changes in unison and the fork with the upgrades becomes the main chain. However in rare cases, disagreements over forks can cause the network to permanently split – most notably the creation of Ethereum Classic with the [DAO fork](#dao-fork).
+These rule changes may create a temporary split in the network. New blocks could be produced according to the new rules or the old ones. Forks are usually agreed upon ahead of time so that clients adopt the changes in unison and the fork with the upgrades becomes the main chain. However, in rare cases, disagreements over forks can cause the network to permanently split – most notably the creation of Ethereum Classic with the [DAO fork](#dao-fork).
 
 </ExpandableCard>
 
@@ -58,7 +58,7 @@ Be sure to upgrade your client software to the latest version before December 5,
 
 #### Summary {#altair-summary}
 
-The Altair upgrade was the first scheduled upgrade for the [Beacon Chain](/eth2/beacon-chain). It added support for "sync committees"—enabling light clients, and bringing validator inactivity and slashing penalties up to their full values.
+The Altair upgrade was the first scheduled upgrade for the [Beacon Chain](/eth2/beacon-chain). It added support for "sync committees" – enabling light clients, and bringing validator inactivity and slashing penalties up to their full values.
 
 - [Read the Altair upgrade specification](https://github.com/ethereum/eth2.0-specs/tree/dev/specs/altair)
 
@@ -194,7 +194,7 @@ The Muir Glacier fork introduced a delay to the [difficulty bomb](/glossary/#dif
 The Istanbul fork:
 
 - Optimised the [gas](/glossary/#gas) cost of certain actions in the [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
-- Improved denial-of-service attack resilience.
+- Improved denial of service attack resilience.
 - Made [Layer 2 scaling](/developers/docs/scaling/layer-2-rollups/) solutions based on SNARKs and STARKs more performant.
 - Enabled Ethereum and Zcash to interoperate.
 - Allowed contracts to introduce more creative functions.
