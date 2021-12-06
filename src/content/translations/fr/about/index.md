@@ -30,7 +30,7 @@ Certains principes fondamentaux nous aident à atteindre ces objectifs.
 
 Nous voulons intéresser nos utilisateurs et répondre à leurs questions. Notre portail doit donc proposer des informations, des "moments magiques" ainsi que des liens vers les brillantes ressources communautaires disponibles. Notre objectif, en matière de contenu, est de proposer un "portail d’intégration" et non un substitut aux vastes ressources qui existent déjà. Nous tenons à soutenir et à intégrer les ressources créées par la communauté en leur donnant plus de visibilité et en facilitant leur découverte.
 
-La communauté [Ethereum](/en/community/) est au cœur de cette démarche : nous ne devons pas seulement la servir, nous devons travailler avec ses membres et intégrer leurs commentaires. Le site Web n'est pas seulement destiné à la communauté actuelle, mais aussi à celle que nous espérons devenir. Nous devons nous rappeler que notre communauté est mondiale, constituée de personnes parlant différentes langues, provenant de différentes régions et possédant différentes cultures.
+La communauté [Ethereum](/community/) est au cœur de cette démarche : nous ne devons pas seulement la servir, nous devons travailler avec ses membres et intégrer leurs commentaires. Le site Web n'est pas seulement destiné à la communauté actuelle, mais aussi à celle que nous espérons devenir. Nous devons nous rappeler que notre communauté est mondiale, constituée de personnes parlant différentes langues, provenant de différentes régions et possédant différentes cultures.
 
 ### 2. ethereum.org est en constante évolution 🛠 {#core-principles-2}
 

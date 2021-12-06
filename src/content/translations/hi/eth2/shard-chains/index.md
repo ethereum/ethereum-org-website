@@ -39,7 +39,7 @@ summaryPoints:
 <br />
 
 <InfoBanner isWarning={true}>
-  सबसे पहले, आपको अपने Eth2 क्लाइंट के रूप में एक ही समय में मेननेट क्लाइंट को चलाने की आवश्यकता होगी। <a href="https://launchpad.ethereum.org" target="_blank"> लॉन्चपैड </a> आप हार्डवेयर आवश्यकताओं और प्रक्रिया के माध्यम से चलेंगे। वैकल्पिक रूप से आप <a href="/en/developers/docs/apis/backend/#available-libraries">बैकएंड API</a> का उपयोग कर सकते हैं।
+  सबसे पहले, आपको अपने Eth2 क्लाइंट के रूप में एक ही समय में मेननेट क्लाइंट को चलाने की आवश्यकता होगी। <a href="https://launchpad.ethereum.org" target="_blank"> लॉन्चपैड </a> आप हार्डवेयर आवश्यकताओं और प्रक्रिया के माध्यम से चलेंगे। वैकल्पिक रूप से आप <a href="/developers/docs/apis/backend/#available-libraries">बैकएंड API</a> का उपयोग कर सकते हैं।
 </InfoBanner>
 
 ## शार्ड चेन संस्करण 1: डेटा उपलब्धता {#data-availability}

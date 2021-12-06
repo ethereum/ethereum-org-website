@@ -17,7 +17,7 @@ Alapvető számítástudományi fogalmak ismerete, mint például a [bájtok](ht
 
 Az 'elosztott főkönyv' analógiáját gyakran használjuk olyan blokkláncok jellemzésére, mint a Bitcoin, mely lehetővé egy decentralizált valuta létrehozását alapvető kriptográfiai eszközök használatával. Egy kriptovaluta úgy viselkedik, mint egy 'normál' valuta a szabályok miatt, melyek meghatározzák, hogy az adott illető mit vagy mit nem tehet, hogy megváltoztassa a főkönyvet. Például egy Bitcoin cím nem költhet el több bitcoint, mint amennyit előzőleg megkapott. Ezek a szabályok támasztják alá az összes Bitcoin tranzakciót és sok más blokkláncot is.
 
-Amíg az Ethereumnak megvan a saját natív kriptovalutája (Ether), mely ugyanazokat az intuitív szabályokat követi, emellett lehetőséget ad egy másik hathatós funkciónak: [az okosszerződéseknek](/en/developers/docs/smart-contracts/). Ehhez a bonyolultabb funkcióhoz egy szofisztikáltabb analógia szükségeltetik. Egy elosztott főkönyv helyett az Ethereum egy elosztott [állapot gép](https://en.wikipedia.org/wiki/Finite-state_machine). Az Ethereum állapota egy nagy adatstruktúra, mely nem csak a számlákat és az egyenlegeket tárolja, de egy _állapot gépet_ is, mely blokkról blokkra változhat egy előre meghatározott szabályrendszer szerint és tetszőleges gépi kódot tud végrehajtani. Az állatot blokkról blokkra történő megváltozásának specifikus szabályait az EVM rögzíti.
+Amíg az Ethereumnak megvan a saját natív kriptovalutája (Ether), mely ugyanazokat az intuitív szabályokat követi, emellett lehetőséget ad egy másik hathatós funkciónak: [az okosszerződéseknek](/developers/docs/smart-contracts/). Ehhez a bonyolultabb funkcióhoz egy szofisztikáltabb analógia szükségeltetik. Egy elosztott főkönyv helyett az Ethereum egy elosztott [állapot gép](https://en.wikipedia.org/wiki/Finite-state_machine). Az Ethereum állapota egy nagy adatstruktúra, mely nem csak a számlákat és az egyenlegeket tárolja, de egy _állapot gépet_ is, mely blokkról blokkra változhat egy előre meghatározott szabályrendszer szerint és tetszőleges gépi kódot tud végrehajtani. Az állatot blokkról blokkra történő megváltozásának specifikus szabályait az EVM rögzíti.
 
 ![Egy diagram mely az EVM felépítését mutatja be](./evm.png) _Diagram átvéve az [Ethereum EVM illusztrálva](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_ anyagból
 
@@ -82,4 +82,4 @@ Az összes [Ethereum kliens](/developers/docs/nodes-and-clients/#clients) tartal
 
 ## Kapcsolódó témák {#related-topics}
 
-- [Gáz](/en/developers/docs/gas/)
+- [Gáz](/developers/docs/gas/)

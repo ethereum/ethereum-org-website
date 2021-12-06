@@ -7,13 +7,13 @@ sidebar: true
 
 JavaScript est l'un des langages les plus populaires de l'écosystème Ethereum. Il existe même une [équipe](https://github.com/ethereumjs) dont le but est de développer autant d'Ethereum que possible en JavaScript.
 
-Il est possible de rédiger en JavaScript (ou en quelque chose d'approchant) à [tous les niveaux de la pile](/en/developers/docs/ethereum-stack/).
+Il est possible de rédiger en JavaScript (ou en quelque chose d'approchant) à [tous les niveaux de la pile](/developers/docs/ethereum-stack/).
 
 ## Interagir avec Ethereum {#interact-with-ethereum}
 
 ### Bibliothèques d'API JavaScript {#javascript-api-libraries}
 
-Si vous souhaitez rédiger du JavaScript pour interroger la blockchain, envoyer des transactions et plus encore, la façon la plus pratique est d'utiliser une [bibliothèque d'API JavaScript](/en/developers/docs/apis/javascript/). Ces API permettent aux développeurs d'interagir facilement avec les [nœuds du réseau Ethereum](/en/developers/docs/nodes-and-clients/).
+Si vous souhaitez rédiger du JavaScript pour interroger la blockchain, envoyer des transactions et plus encore, la façon la plus pratique est d'utiliser une [bibliothèque d'API JavaScript](/developers/docs/apis/javascript/). Ces API permettent aux développeurs d'interagir facilement avec les [nœuds du réseau Ethereum](/developers/docs/nodes-and-clients/).
 
 Exploitez ces bibliothèques pour interagir avec des contrats intelligents sur Ethereum afin de pouvoir construire une DApp dans laquelle vous utilisez juste JavaScript pour interagir avec des contrats existants.
 
@@ -26,13 +26,13 @@ Exploitez ces bibliothèques pour interagir avec des contrats intelligents sur E
 
 Si vous êtes un développeur JavaScript qui souhaite rédiger son propre contrat intelligent, nous vous conseillons de vous familiariser avec [Solidity](https://solidity.readthedocs.io). Il s'agit du langage de contrat intelligent le plus populaire, et il est fortement inspiré de JavaScript.
 
-Plus d'infos sur les [contrats intelligents](/en/developers/docs/smart-contracts/).
+Plus d'infos sur les [contrats intelligents](/developers/docs/smart-contracts/).
 
 ## Comprendre le protocole {#understand-the-protocol}
 
 ### La machine virtuelle Ethereum (EVM) {#the-ethereum-virtual-machine}
 
-Il existe une implémentation de JavaScript de la [machine virtuelle Ethereum](/en/developers/docs/evm/). Elle prend en charge les dernières règles concernant les fourches. Les règles de fourche sont les modifications apportées à l'EVM suite à de mises à niveau planifiées.
+Il existe une implémentation de JavaScript de la [machine virtuelle Ethereum](/developers/docs/evm/). Elle prend en charge les dernières règles concernant les fourches. Les règles de fourche sont les modifications apportées à l'EVM suite à de mises à niveau planifiées.
 
 Il existe différents packages JavaScript que vous pouvez consulter pour mieux comprendre :
 

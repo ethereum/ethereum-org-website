@@ -10,14 +10,14 @@ Un compte Ethereum est une entité avec un solde en ether (ETH) qui peut envoyer
 
 ## Prérequis {#prerequisites}
 
-Les comptes sont un sujet très accessible pour les débutants, mais pour mieux comprendre cette page, nous vous recommandons de commencer par lire cette [introduction à Ethereum](/en/developers/docs/intro-to-ethereum/).
+Les comptes sont un sujet très accessible pour les débutants, mais pour mieux comprendre cette page, nous vous recommandons de commencer par lire cette [introduction à Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Types de comptes {#types-of-account}
 
 Ethereum comprend deux types de comptes :
 
 - Les propriétés externes, contrôlées par toute personne ayant les clés correspondantes
-- Les contrats intelligents déployés sur le réseau, contrôlé par un code En savoir plus sur les [ les contrats intelligents](/en/developers/docs/smart-contracts/)
+- Les contrats intelligents déployés sur le réseau, contrôlé par un code En savoir plus sur les [ les contrats intelligents](/developers/docs/smart-contracts/)
 
 Les deux types peuvent :
 
@@ -127,5 +127,5 @@ _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
 ## Sujets connexes {#related-topics}
 
-- [Contrats intelligents](/en/developers/docs/smart-contracts/)
-- [Transactions](/en/developers/docs/transactions/)
+- [Contrats intelligents](/developers/docs/smart-contracts/)
+- [Transactions](/developers/docs/transactions/)

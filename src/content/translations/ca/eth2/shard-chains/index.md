@@ -39,7 +39,7 @@ Amb menys requeriments de hardware, la fragmentació farà més fàcil executar 
 <br />
 
 <InfoBanner isWarning={true}>
-  En primer lloc, necessitaràs executar un client de la xarxa principal alhora que el client Eth2. <a href="https://launchpad.ethereum.org" target="_blank">La plataforma de llançament</a> et guiarà a través del procés i els requeriments de hardware. Alternativament, pots utilitzar una <a href="/en/developers/docs/apis/backend/#available-libraries">API de backend</a>.
+  En primer lloc, necessitaràs executar un client de la xarxa principal alhora que el client Eth2. <a href="https://launchpad.ethereum.org" target="_blank">La plataforma de llançament</a> et guiarà a través del procés i els requeriments de hardware. Alternativament, pots utilitzar una <a href="/developers/docs/apis/backend/#available-libraries">API de backend</a>.
 </InfoBanner>
 
 ## Cadenes de fragments versió 1: disponibilitat de dades {#data-availability}

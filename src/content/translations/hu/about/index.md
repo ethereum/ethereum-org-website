@@ -30,7 +30,7 @@ Van egy pár alapelvünk, melyek segítenek ezt elérni.
 
 Szeretnénk felkelteni a felhasználók érdeklődését és megválaszolni a kérdéseiket. Tehát portálunknak egyesítenie kell az információkat, a "varázslatos pillanatokat" és a linkeket a kiváló közösségi forrásokhoz, amelyek odakint vannak. Tartalmunk célja, hogy egy „onboarding portál” legyünk, és ne helyettesítsük a már meglévő kiterjedt forrásokat. Szeretnénk támogatni és integrálni a közösség által felépített erőforrásokat, nagyobb láthatóságot és felfedezhetőséget biztosítva számukra.
 
-[Az Ethereum közösség](/en/community/) ennek a középpontjában áll: nemcsak a közösséget kell szolgálnunk, hanem együtt kell működnünk velük és fel kell használnunk a visszajelzéseiket. A weboldal nem csak a mostani közösség számára szól, hanem ahhoz a közösséghez is, amihez reményeink szerint felnőhetünk. Emlékeznünk kell arra, hogy közösségünk globális, és sok nyelvből, régióból és kultúrából származó embereket tartalmaz.
+[Az Ethereum közösség](/community/) ennek a középpontjában áll: nemcsak a közösséget kell szolgálnunk, hanem együtt kell működnünk velük és fel kell használnunk a visszajelzéseiket. A weboldal nem csak a mostani közösség számára szól, hanem ahhoz a közösséghez is, amihez reményeink szerint felnőhetünk. Emlékeznünk kell arra, hogy közösségünk globális, és sok nyelvből, régióból és kultúrából származó embereket tartalmaz.
 
 ### 2. Az ethereum.org folyamatosan fejlődik 🛠 {#core-principles-2}
 

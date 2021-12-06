@@ -60,4 +60,4 @@ _Znasz jakieś zasoby społeczności, które Ci pomogły? Wyedytuj tę stronę 
 
 ## Powiązane tematy
 
-- [Frameworki programistyczne](/en/developers/docs/frameworks/)
+- [Frameworki programistyczne](/developers/docs/frameworks/)

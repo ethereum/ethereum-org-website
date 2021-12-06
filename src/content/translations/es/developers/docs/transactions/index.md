@@ -14,7 +14,7 @@ Las transacciones son instrucciones firmadas criptográficamente que se emiten d
 
 ## Requisitos previos {#prerequisites}
 
-Para entender más el contenido de esta página, te recomendamos que leas primero la página sobre [Cuentas](/en/developers/docs/accounts/), así como nuestra [Introducción a Ethereum](/en/developers/docs/intro-to-ethereum/).
+Para entender más el contenido de esta página, te recomendamos que leas primero la página sobre [Cuentas](/developers/docs/accounts/), así como nuestra [Introducción a Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## ¿Qué es una transacción? {#whats-a-transaction}
 
@@ -35,7 +35,7 @@ Una transacción enviada incluye la siguiente información:
 - `LímiteDeGas`: Cantidad máxima de unidades de gas que puede consumir la transacción. Las unidades de gas representan pasos computacionales
 - `PrecioDeGas`: La comisión que el remitente paga por unidad de gas.
 
-El gas es una referencia al trabajo computacional que se necesita para que el minero procese la transacción. Los usuarios tienen que pagar una comisión por ese trabajo computacional. El `límiteDeGas` y el `precioDeGas` determinan la comisión de gas máxima que se le paga al minero. [Mas ínformación acerca del gas](/en/developers/docs/gas/).
+El gas es una referencia al trabajo computacional que se necesita para que el minero procese la transacción. Los usuarios tienen que pagar una comisión por ese trabajo computacional. El `límiteDeGas` y el `precioDeGas` determinan la comisión de gas máxima que se le paga al minero. [Mas ínformación acerca del gas](/developers/docs/gas/).
 
 El objeto de la transacción luce de la siguiente forma:
 
@@ -289,7 +289,7 @@ _¿Conoces algún recurso en la comunidad que te haya servido de ayuda? Edita es
 
 ## Temas relacionados {#related-topics}
 
-- [Cuentas](/en/developers/docs/accounts/)
-- [Máquina Virtual de Ethereum (MVE)](/en/developers/docs/evm/)
-- [Gas](/en/developers/docs/gas/)
-- [Minería](/en/developers/docs/consensus-mechanisms/pow/mining/)
+- [Cuentas](/developers/docs/accounts/)
+- [Máquina Virtual de Ethereum (MVE)](/developers/docs/evm/)
+- [Gas](/developers/docs/gas/)
+- [Minería](/developers/docs/consensus-mechanisms/pow/mining/)

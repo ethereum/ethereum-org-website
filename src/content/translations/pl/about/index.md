@@ -30,7 +30,7 @@ Mamy kilka podstawowych zasad, które pomagają nam to osiągnąć.
 
 Chcemy zainteresować naszych użytkowników i odpowiedzieć na ich pytania. Dlatego nasz portal musi łączyć w sobie informacje, „magiczne momenty” oraz linki do znakomitych zasobów społeczności, które istnieją w sieci. Nasze treści mają być „portalem wdrożeniowym”, a nie substytutem istniejących już rozległych zasobów. Chcielibyśmy wspierać i integrować się z zasobami zbudowanymi przez społeczność, zwiększając ich widoczność i zwiększając ich rozpoznawalność.
 
-[Społeczność Ethereum](/en/community/) jest w centrum tego projektu: musimy nie tylko jej służyć, lecz także współdziałać z nią i uwzględniać jej feedback. Strona internetowa jest nie tylko dla naszej obecnej społeczności, ale dla społeczności, którą mamy nadzieję się stać. Musimy pamiętać, że nasza społeczność jest globalna; łączy ludzi wielu języków, regionów i kultur.
+[Społeczność Ethereum](/community/) jest w centrum tego projektu: musimy nie tylko jej służyć, lecz także współdziałać z nią i uwzględniać jej feedback. Strona internetowa jest nie tylko dla naszej obecnej społeczności, ale dla społeczności, którą mamy nadzieję się stać. Musimy pamiętać, że nasza społeczność jest globalna; łączy ludzi wielu języków, regionów i kultur.
 
 ### 2. ethereum.org ciągle ewoluuje 🛠 {#core-principles-2}
 

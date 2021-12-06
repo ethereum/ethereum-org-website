@@ -11,7 +11,7 @@ Il carburante è un elemento essenziale per la rete Ethereum. Cconsente di far f
 
 ## Prerequisiti {#prerequisites}
 
-Per capire meglio questa pagina, consigliamo di leggere gli argomenti su [transazioni](/en/developers/docs/transactions/) ed [EVM](/en/developers/docs/evm/).
+Per capire meglio questa pagina, consigliamo di leggere gli argomenti su [transazioni](/developers/docs/transactions/) ed [EVM](/developers/docs/evm/).
 
 ## Cos'è il carburante? {#what-is-gas}
 
@@ -46,4 +46,4 @@ Sebbene una transazione includa un limite, il carburante non utilizzato in una t
 
 ## Argomenti correlati {#related-topics}
 
-- [Mining](/en/developers/docs/consensus-mechanisms/pow/mining/)
+- [Mining](/developers/docs/consensus-mechanisms/pow/mining/)

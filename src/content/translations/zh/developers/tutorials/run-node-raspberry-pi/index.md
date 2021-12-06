@@ -18,11 +18,11 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 [了解以太坊 2.0 (Eth2)](/en/eth2/)
 
-首先是一些背景。 如您所知，运行 Raspberry Pi 4 镜像时，我们已经遇到了一些内存问题[[1]](/en/developers/tutorials/run-node-raspberry-pi/#references)，因为 Raspbian 操作系统仍然在 32 位上运行[[2]](/en/developers/tutorials/run-node-raspberry-pi/#references)（至少 userland 如此）。 虽然我们更愿意坚持使用官方操作系统，但我们得出的结论是，为了解决这些问题，我们需要迁移原生的 64 位操作系统。
+首先是一些背景。 如您所知，运行 Raspberry Pi 4 镜像时，我们已经遇到了一些内存问题[[1]](/developers/tutorials/run-node-raspberry-pi/#references)，因为 Raspbian 操作系统仍然在 32 位上运行[[2]](/developers/tutorials/run-node-raspberry-pi/#references)（至少 userland 如此）。 虽然我们更愿意坚持使用官方操作系统，但我们得出的结论是，为了解决这些问题，我们需要迁移原生的 64 位操作系统。
 
 此外，[Eth 2.0 客户端](href)不支持 32 位二进制文件，因此使用 Raspbian 会将 Raspberry PI 4 排除在运行 Eth 2.0 节点（以及进行权益质押的可能性）之外。
 
-因此，几经测试，我们现在将发布基于 Ubuntu 20.04 64 位[[3]](/en/developers/tutorials/run-node-raspberry-pi/#references)的两个不同映像：Eth 1.0 版和 Eth 2.0 版。
+因此，几经测试，我们现在将发布基于 Ubuntu 20.04 64 位[[3]](/developers/tutorials/run-node-raspberry-pi/#references)的两个不同映像：Eth 1.0 版和 Eth 2.0 版。
 
 基本上，两者都是相同的映像，并且包含基于 Raspbian 的映像的相同功能。 但它们被设置为默认运行 Eth 1.0 或 Eth 2.0 软件。
 
@@ -32,7 +32,7 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 - 基于 Ubuntu 20.04 64 位
 - 自动完成 USB 磁盘分区和格式化
-- 在 Armbian 工作的基础上增加了交换内存（ZRAM 内核模块+一个交换文件）[[7]](/en/developers/tutorials/run-node-raspberry-pi/#references)。
+- 在 Armbian 工作的基础上增加了交换内存（ZRAM 内核模块+一个交换文件）[[7]](/developers/tutorials/run-node-raspberry-pi/#references)。
 - 根据 MAC 哈希值将主机名改为像“ethnode-e2a3e6fe”这样的名称。
 - 将软件作为 systemd 服务运行并开始同步区块链
 - 包括一个用于安装和升级以太坊软件的 APT 存储库
@@ -44,23 +44,23 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 ### 以太坊 1.0 客户端 {#ethereum-10-clients}
 
-- Geth[[8]](/en/developers/tutorials/run-node-raspberry-pi/#references)：1.9.13 (官方二进制文件)
-- Parity[[9]](/en/developers/tutorials/run-node-raspberry-pi/#references)：2.7.2（交叉编译）。
-- Nethermind [[10]](/en/developers/tutorials/run-node-raspberry-pi/#references)：1.8.28（交叉编译）。
-- Hyperledger Besu[[11]](/en/developers/tutorials/run-node-raspberry-pi/#references)：1.4.4（已编译）。
+- Geth[[8]](/developers/tutorials/run-node-raspberry-pi/#references)：1.9.13 (官方二进制文件)
+- Parity[[9]](/developers/tutorials/run-node-raspberry-pi/#references)：2.7.2（交叉编译）。
+- Nethermind [[10]](/developers/tutorials/run-node-raspberry-pi/#references)：1.8.28（交叉编译）。
+- Hyperledger Besu[[11]](/developers/tutorials/run-node-raspberry-pi/#references)：1.4.4（已编译）。
 
 ### 以太坊 2.0 客户端 {#ethereum-20-clients}
 
-- Prysm[[12]](/en/developers/tutorials/run-node-raspberry-pi/#references)：1.0.0-alpha6（官方二进制文件）。
-- Lighthouse[[13]](/en/developers/tutorials/run-node-raspberry-pi/#references)：0.1.1（已编译）。
+- Prysm[[12]](/developers/tutorials/run-node-raspberry-pi/#references)：1.0.0-alpha6（官方二进制文件）。
+- Lighthouse[[13]](/developers/tutorials/run-node-raspberry-pi/#references)：0.1.1（已编译）。
 
 ### 以太坊框架 {#ethereum-framework}
 
-- Swarm[[14]](/en/developers/tutorials/run-node-raspberry-pi/#references)：0.5.7（官方二进制文件）。
-- Raiden Network[[15]](/en/developers/tutorials/run-node-raspberry-pi/#references)：0.200.0~rc1（官方二进制文件）。
-- IPFS[[16]](/en/developers/tutorials/run-node-raspberry-pi/#references)：0.5.0（官方二进制文件）。
-- Statusd[[17]](/en/developers/tutorials/run-node-raspberry-pi/#references)：0.52.3（已编译）。
-- Vipnode[[18]](/en/developers/tutorials/run-node-raspberry-pi/#references)：2.3.3（官方二进制文件）。
+- Swarm[[14]](/developers/tutorials/run-node-raspberry-pi/#references)：0.5.7（官方二进制文件）。
+- Raiden Network[[15]](/developers/tutorials/run-node-raspberry-pi/#references)：0.200.0~rc1（官方二进制文件）。
+- IPFS[[16]](/developers/tutorials/run-node-raspberry-pi/#references)：0.5.0（官方二进制文件）。
+- Statusd[[17]](/developers/tutorials/run-node-raspberry-pi/#references)：0.52.3（已编译）。
+- Vipnode[[18]](/developers/tutorials/run-node-raspberry-pi/#references)：2.3.3（官方二进制文件）。
 
 ## 安装指南和使用方法 {#installation-guide-and-usage}
 
@@ -71,7 +71,7 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 - SSD USB 3.0 磁盘（见存储部分）
 - 电源
 - 以太网电缆
-- 30303 端口转发（Eth 1.0）和 13000 端口转发（Eth 2.0） [[4]](/en/developers/tutorials/run-name-raspberry-pi/#references)。
+- 30303 端口转发（Eth 1.0）和 13000 端口转发（Eth 2.0） [[4]](/developers/tutorials/run-name-raspberry-pi/#references)。
 - 带散热片和风扇的机箱（可选，但强烈推荐）
 - USB 键盘、显示器和 HDMI 电缆（微型 HDMI）（可选）。
 
@@ -159,11 +159,11 @@ sudo tail -f /var/log/syslog
 
 现在您需要等待区块链同步。 在 Eth 1.0 的情况下，这将需要几天的时间，具体取决于若干因素，但可以预计最多需要 5-7 天。
 
-如果运行的是 Eth2 Topaz 测试网，则可以预期约 1-2 天的信标链同步时间。 请记住，您需要稍后设置验证器才能启动权益质押过程。 [如何运行 Eth 2.0 验证器](/en/developers/tutorials/run-node-raspberry-pi/#validator)
+如果运行的是 Eth2 Topaz 测试网，则可以预期约 1-2 天的信标链同步时间。 请记住，您需要稍后设置验证器才能启动权益质押过程。 [如何运行 Eth 2.0 验证器](/developers/tutorials/run-node-raspberry-pi/#validator)
 
 ## 监测仪表板 {#monitoring-dashboards}
 
-在这第一个版本中，包括了 3 个基于 Prometheus 的监测仪表板[[5]](/en/developers/tutorials/run-node-raspberry-pi/#references) / Grafana[[6]](/en/developers/tutorials/run-node-raspberry-pi/#references)，以便监测节点和客户端的数据（Geth 和 Besu）。 您可以通过您的 Web 浏览器访问：
+在这第一个版本中，包括了 3 个基于 Prometheus 的监测仪表板[[5]](/developers/tutorials/run-node-raspberry-pi/#references) / Grafana[[6]](/developers/tutorials/run-node-raspberry-pi/#references)，以便监测节点和客户端的数据（Geth 和 Besu）。 您可以通过您的 Web 浏览器访问：
 
 ```bash
 URL：http://your_raspberrypi_IP:3000

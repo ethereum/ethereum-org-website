@@ -39,7 +39,7 @@ Les exigences en matière de matériel étant moins élevées, la fragmentation 
 <br />
 
 <InfoBanner isWarning={true}>
-  Dans un premier temps, vous devrez exécuter un client principal en même temps que votre client Eth2. <a href="https://launchpad.ethereum.org" target="_blank">Le tableau de bord</a> vous guidera à travers les exigences matérielles et les processus. Vous pouvez également utiliser une <a href="/en/developers/docs/apis/backend/#available-libraries">API backend</a>.
+  Dans un premier temps, vous devrez exécuter un client principal en même temps que votre client Eth2. <a href="https://launchpad.ethereum.org" target="_blank">Le tableau de bord</a> vous guidera à travers les exigences matérielles et les processus. Vous pouvez également utiliser une <a href="/developers/docs/apis/backend/#available-libraries">API backend</a>.
 </InfoBanner>
 
 ## Chaînes de fragments version 1 : disponibilité des données {#data-availability}

@@ -39,7 +39,7 @@ summaryPoints:
 <br />
 
 <InfoBanner isWarning={true}>
-  最初は、Eth2クライアントと同時にmainnetクライアントを実行する必要があります。 <a href="https://launchpad.ethereum.org" target="_blank">launchpad</a> では、ハードウェア要件とプロセスについて説明します。 あるいは、 <a href="/en/developers/docs/apis/backend/#available-libraries">バックエンドAPI</a> を使用することもできます。
+  最初は、Eth2クライアントと同時にmainnetクライアントを実行する必要があります。 <a href="https://launchpad.ethereum.org" target="_blank">launchpad</a> では、ハードウェア要件とプロセスについて説明します。 あるいは、 <a href="/developers/docs/apis/backend/#available-libraries">バックエンドAPI</a> を使用することもできます。
 </InfoBanner>
 
 ## シャードチェーン バージョン 1：データの可用性 {#data-availability}

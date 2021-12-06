@@ -245,7 +245,7 @@ def endAuction():
 
 ### Solidity 的优点是什么？ {#solidity-advantages}
 
-- 如果您是初学者，这里有很多教程和学习工具。 在[通过编码学习](https://ethereum.org/en/developers/learning-tools/)部分了解更多相关信息。
+- 如果您是初学者，这里有很多教程和学习工具。 在[通过编码学习](https://ethereum.org/developers/learning-tools/)部分了解更多相关信息。
 - 好的开发者工具可用
 - Solidity 拥有庞大的开发人员社区，这意味着您很可能会很快找到问题的答案。
 

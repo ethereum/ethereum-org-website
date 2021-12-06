@@ -9,7 +9,7 @@ Les blocs sont des lots de transactions avec un hachage du bloc précédent dans
 
 ## Prérequis {#prerequisites}
 
-Les blocs sont un sujet très accessible pour les débutants. Mais pour vous aider à mieux comprendre cette page, nous vous recommandons de commencer par lire les pages [Comptes](/en/developers/docs/accounts/), [Transactions](/en/developers/docs/transactions/) et [Introduction à Ethereum](/en/developers/docs/intro-to-ethereum/).
+Les blocs sont un sujet très accessible pour les débutants. Mais pour vous aider à mieux comprendre cette page, nous vous recommandons de commencer par lire les pages [Comptes](/developers/docs/accounts/), [Transactions](/developers/docs/transactions/) et [Introduction à Ethereum](/developers/docs/intro-to-ethereum/).
 
 <!--The content below was provided by Brian Gu with exception of "what's in a block"-->
 
@@ -39,7 +39,7 @@ Preuve de travail signifie ceci :
 - Les autres mineurs qui entendent parler d'un nouveau bloc avec un certificat de légitimité valide doivent accepter le nouveau bloc en tant que bloc conforme suivant sur la blockchain.
 - Le délai exact nécessaire à chaque mineur pour produire ce certificat est une variable aléatoire avec d'importants écarts. Cela garantit qu'il est peu probable* que deux mineurs produisent simultanément des validations pour un bloc proposé en même temps. Lorsqu'un mineur produit et propage un nouveau bloc certifié, il peut être presque certain qu'il sera accepté par le réseau comme le bloc conforme suivant sur la blockchain, sans conflit* (bien qu'il existe également un protocole pour traiter les conflits dans le cas où deux blockchains certifiés sont produites presque simultanément).
 
-[En savoir plus sur le minage](/en/developers/docs/consensus-mechanisms/pow/mining/)
+[En savoir plus sur le minage](/developers/docs/consensus-mechanisms/pow/mining/)
 
 ## Que contient un bloc ? {#block-anatomy}
 
@@ -62,6 +62,6 @@ _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
 ## Sujets connexes {#related-topics}
 
-- [Minage](/en/developers/docs/consensus-mechanisms/pow/mining/)
-- [Transactions](/en/developers/docs/transactions/)
-- [Gas](/en/developers/docs/gas/)
+- [Minage](/developers/docs/consensus-mechanisms/pow/mining/)
+- [Transactions](/developers/docs/transactions/)
+- [Gas](/developers/docs/gas/)

@@ -11,7 +11,7 @@ Affinché Ethereum funzioni in modo decentralizzato, serve una rete distribuita 
 
 ## Prerequisiti {#prerequisites}
 
-È necessario conoscere il concetto di rete decentralizzata prima di approfondire le informazioni ed eseguire un'istanza di un client Ethereum. Consulta la nostra [introduzione a Ethereum](/en/developers/docs/intro-to-ethereum/).
+È necessario conoscere il concetto di rete decentralizzata prima di approfondire le informazioni ed eseguire un'istanza di un client Ethereum. Consulta la nostra [introduzione a Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Che cosa sono i nodi e i client? {#what-are-nodes-and-clients}
 
@@ -65,7 +65,7 @@ Eseguire un nodo permette di utilizzare Ethereum in modo veramente privato, auto
 
 Avere una serie diversificata di nodi è importante per la salute, la sicurezza e la resilienza operativa di Ethereum.
 
-- I nodi forniscono accesso ai dati della blockchain per i client leggeri che dipendono da essa. In caso di picchi di utilizzo, per agevolare la sincronizzazione dei nodi leggeri, è necessario che i nodi completi siano in quantità sufficiente. I nodi ridotti non memorizzano l'intera blockchain, ma verificano i dati attraverso le [radici di stato nelle intestazioni dei blocchi](/en/developers/docs/blocks/#block-anatomy). Se ne hanno bisogno, possono richiedere ulteriori informazioni ai blocchi.
+- I nodi forniscono accesso ai dati della blockchain per i client leggeri che dipendono da essa. In caso di picchi di utilizzo, per agevolare la sincronizzazione dei nodi leggeri, è necessario che i nodi completi siano in quantità sufficiente. I nodi ridotti non memorizzano l'intera blockchain, ma verificano i dati attraverso le [radici di stato nelle intestazioni dei blocchi](/developers/docs/blocks/#block-anatomy). Se ne hanno bisogno, possono richiedere ulteriori informazioni ai blocchi.
 - I nodi completi applicano le regole di consenso proof-of-work e quindi non possono essere ingannati ad accettare blocchi che non li seguono. Questo fornisce ulteriore sicurezza nella rete, perché se tutti i nodi fossero leggeri, cioè non effettuassero una verifica completa, i miner potrebbero attaccare la rete e, ad esempio, creare blocchi con ricompense più elevate.
 
 Se si esegue un nodo completo, l'intera rete di Ethereum ne beneficia.
@@ -113,7 +113,7 @@ Questa tabella riassume i diversi client. Tutti sono attivi, gestiti e hanno sup
 | [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java       | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten e Görli        | Fast, Full                    | Archive, Pruned           |
 | [Trinity](https://trinity.ethereum.org/)                     | Python     | Linux, macOS          | Mainnet, Görli, Ropsten e altre          | Full, Beam, Fast/Header       | Archive                   |
 
-Per ulteriori informazioni sulle reti supportate, consulta [reti Ethereum](/en/developers/docs/networks/).
+Per ulteriori informazioni sulle reti supportate, consulta [reti Ethereum](/developers/docs/networks/).
 
 ### Vantaggi delle diverse implementazioni {#advantages-of-different-implementations}
 
@@ -206,7 +206,7 @@ Da questi grafici si capisce che i requisiti di archiviazione cambiano in contin
 
 ### Ethereum su un computer a scheda singola {#ethereum-on-a-single-board-computer}
 
-Il modo più conveniente ed economico di eseguire un il nodo Ethereum è quello di utilizzare un computer a scheda singola con architettura ARM come Raspberry Pi. [Ethereum su ARM](https://twitter.com/EthereumOnARM) fornisce immagini di client Geth, Parity, Nethermind e Besu. Ecco un semplice tutorial che spiega come [come realizzare e configurare un client ARM](/en/developers/tutorials/run-node-raspberry-pi/).
+Il modo più conveniente ed economico di eseguire un il nodo Ethereum è quello di utilizzare un computer a scheda singola con architettura ARM come Raspberry Pi. [Ethereum su ARM](https://twitter.com/EthereumOnARM) fornisce immagini di client Geth, Parity, Nethermind e Besu. Ecco un semplice tutorial che spiega come [come realizzare e configurare un client ARM](/developers/tutorials/run-node-raspberry-pi/).
 
 Dispositivi piccoli, convenienti ed efficienti come questi sono ideali per eseguire un nodo a casa.
 
@@ -228,8 +228,8 @@ Ci sono moltissime istruzioni e informazioni sui client Ethereum in Internet, ne
 
 ## Argomenti correlati {#related-topics}
 
-- [Blocchi](/en/developers/docs/blocks/)
-- [Reti](/en/developers/docs/networks/)
+- [Blocchi](/developers/docs/blocks/)
+- [Reti](/developers/docs/networks/)
 
 ## Tutorial correlati {#related-tutorials}
 

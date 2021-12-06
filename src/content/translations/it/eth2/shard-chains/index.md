@@ -39,7 +39,7 @@ Con requisiti hardware minori, lo sharding faciliterà l'esecuzione dei [client]
 <br />
 
 <InfoBanner isWarning={true}>
-  All'inizio, dovrai eseguire contemporaneamente un client per la rete principale e un client Eth2. <a href="https://launchpad.ethereum.org" target="_blank">Il launchpad</a> ti mostrerà i requisiti hardware e il processo. In alternativa, puoi usare un'<a href="/en/developers/docs/apis/backend/#available-libraries">API backend</a>.
+  All'inizio, dovrai eseguire contemporaneamente un client per la rete principale e un client Eth2. <a href="https://launchpad.ethereum.org" target="_blank">Il launchpad</a> ti mostrerà i requisiti hardware e il processo. In alternativa, puoi usare un'<a href="/developers/docs/apis/backend/#available-libraries">API backend</a>.
 </InfoBanner>
 
 ## Shard chain versione 1: disponibilità dei dati {#data-availability}

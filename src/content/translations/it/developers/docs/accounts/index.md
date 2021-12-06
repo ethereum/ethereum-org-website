@@ -10,14 +10,14 @@ Un account Ethereum è un'entità con un saldo in ether (ETH) che può inviare t
 
 ## Prerequisiti {#prerequisites}
 
-Gli account sono un argomento piuttosto basico. Per capire meglio questa pagina, consigliamo tuttavia di leggere prima la nostra [introduzione a Ethereum](/en/developers/docs/intro-to-ethereum/).
+Gli account sono un argomento piuttosto basico. Per capire meglio questa pagina, consigliamo tuttavia di leggere prima la nostra [introduzione a Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Tipi di account {#types-of-account}
 
 Ethereum ha due tipi di account:
 
 - Di proprietà esterna: controllato da chiunque possieda chiavi private
-- Contratto: uno Smart Contract distribuito sulla rete, controllato da codice. Scopri di più sugli [Smart Contract](/en/developers/docs/smart-contracts/)
+- Contratto: uno Smart Contract distribuito sulla rete, controllato da codice. Scopri di più sugli [Smart Contract](/developers/docs/smart-contracts/)
 
 Entrambi i tipi di account hanno la possibilità di:
 
@@ -127,5 +127,5 @@ _Conosci una risorsa della community che ti è stata utile? Modifica questa pagi
 
 ## Argomenti correlati {#related-topics}
 
-- [Smart Contract](/en/developers/docs/smart-contracts/)
-- [Transazioni](/en/developers/docs/transactions/)
+- [Smart Contract](/developers/docs/smart-contracts/)
+- [Transazioni](/developers/docs/transactions/)

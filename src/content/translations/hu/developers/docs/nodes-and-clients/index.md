@@ -11,7 +11,7 @@ Ahhoz, hogy az Ethereum decentralziáltan tudjon működni, egy elosztott csomó
 
 ## Előfeltételek {#prerequisites}
 
-Érdemes tisztában lenned a decentralizált hálózat fogalmával, mielőtt belemélyednél és futtatnád a saját Ethereum kliens példányodat. Nézd meg a [bevezetés az Ethereumba](/en/developers/docs/intro-to-ethereum/) cikket.
+Érdemes tisztában lenned a decentralizált hálózat fogalmával, mielőtt belemélyednél és futtatnád a saját Ethereum kliens példányodat. Nézd meg a [bevezetés az Ethereumba](/developers/docs/intro-to-ethereum/) cikket.
 
 ## Mik azok a csomópontok és kliensek? {#what-are-nodes-and-clients}
 
@@ -65,7 +65,7 @@ A saját csomópont futtatása lehetővé teszi az Ethereum valóban privát, ö
 
 A csomópontok sokfélesége fontos az Ethereum egészsége, biztonsága és működési rugalmassága szempontjából.
 
-- Kis méretű csomópontok számára szolgáltatnak blokklánc adatokat, melyek tőlük függnek. Magas használati csúcsok esetén elegendő teljes csomópontnak kell lennie a kis méretű csomópontok szinkronizálásához. A kis méretű csomópontok nem tárolják az egész blokkláncot, ehelyett az adatait hitelesítik a [blokk fejlécekben lévő állapot gyökereken](/en/developers/docs/blocks/#block-anatomy) keresztül. További információkat kérhetnek a blokkokról, ha szükségük van rá.
+- Kis méretű csomópontok számára szolgáltatnak blokklánc adatokat, melyek tőlük függnek. Magas használati csúcsok esetén elegendő teljes csomópontnak kell lennie a kis méretű csomópontok szinkronizálásához. A kis méretű csomópontok nem tárolják az egész blokkláncot, ehelyett az adatait hitelesítik a [blokk fejlécekben lévő állapot gyökereken](/developers/docs/blocks/#block-anatomy) keresztül. További információkat kérhetnek a blokkokról, ha szükségük van rá.
 - A teljes csomópontok betartatják a proof-of-work konszenzus szabályait, így nem lehet őket becsapni olyan blokkok elfogadására, amelyek nem követik őket. Ez extra biztonságot nyújt a hálózatnak, mert ha az összes csomópont kis méretű csomópont lenne, amelyek nem végeznek teljes ellenőrzést, a bányászok megtámadhatnák a hálózatot, és adott esetben magasabb jutalommal rendelkező blokkokat hozhatnának létre.
 
 Ha teljes csomópontot futtatsz, az egész Ethereum hálózat profitál belőle.
@@ -113,7 +113,7 @@ Ez a táblázat összegezi a különböző klienseket. Az összesen aktívan dol
 | [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, és Görli           | Gyors, teljes              | Archív, csökkentett |
 | [Trinity](https://trinity.ethereum.org/)                     | Python   | Linux, macOS          | Mainnet, Görli, Ropsten, és még több          | Full, Beam, Fast/Header    | Archív              |
 
-További információkért a támogatott hálózatokról olvasd el az [Ethereum hálózatok](/en/developers/docs/networks/) cikket.
+További információkért a támogatott hálózatokról olvasd el az [Ethereum hálózatok](/developers/docs/networks/) cikket.
 
 ### A különböző implementációk előnyei {#advantages-of-different-implementations}
 
@@ -206,7 +206,7 @@ A fenti értékek mutatják hogy mindig változik a tárhelykövetelmény. A leh
 
 ### Ethereum egy egykártyás számítógépen {#ethereum-on-a-single-board-computer}
 
-A lehető legkényelmesebb és legegyszerűbb módja egy Ethereum csomópont futtatásának ha egykártyás számítógépet használunk ARM architektúrával, mint mondjuk egy Raspberry Pi. [Ethereum ARM-en](https://twitter.com/EthereumOnARM) találunk képeket Geth Parity, Nethermind és Besu kliensekről. Egy egyszerű leírás arról, hogy [hogyan telepítsünk egy ARM klienst](/en/developers/tutorials/run-node-raspberry-pi/).
+A lehető legkényelmesebb és legegyszerűbb módja egy Ethereum csomópont futtatásának ha egykártyás számítógépet használunk ARM architektúrával, mint mondjuk egy Raspberry Pi. [Ethereum ARM-en](https://twitter.com/EthereumOnARM) találunk képeket Geth Parity, Nethermind és Besu kliensekről. Egy egyszerű leírás arról, hogy [hogyan telepítsünk egy ARM klienst](/developers/tutorials/run-node-raspberry-pi/).
 
 A kicsi, olcsó, és hatékony eszközök mint ezek ideálisak egy otthoni csomópont futtatására.
 
@@ -228,8 +228,8 @@ Az interneten rengeteg utasítás és információ található az Ethereum klien
 
 ## Kapcsolódó témák {#related-topics}
 
-- [Blokkok](/en/developers/docs/blocks/)
-- [Hálózatok](/en/developers/docs/networks/)
+- [Blokkok](/developers/docs/blocks/)
+- [Hálózatok](/developers/docs/networks/)
 
 ## Kapcsolódó útmutatók {#related-tutorials}
 

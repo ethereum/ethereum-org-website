@@ -39,7 +39,7 @@ Daha düşük donanım gereksinimleri ile parçalama, herhangi bir aracı hizmet
 <br />
 
 <InfoBanner isWarning={true}>
-  İlk olarak, Eth2 istemcinizle aynı anda bir ana ağ istemcisi çalıştırmanız gerekecektir. <a href="https://launchpad.ethereum.org" target="_blank">Başlatma panosu</a>, donanım gereksinimleri ve süreç boyunca size yol gösterecektir. Alternatif olarak bir <a href="/en/developers/docs/apis/backend/#available-libraries">arka uç API'si</a> kullanabilirsiniz.
+  İlk olarak, Eth2 istemcinizle aynı anda bir ana ağ istemcisi çalıştırmanız gerekecektir. <a href="https://launchpad.ethereum.org" target="_blank">Başlatma panosu</a>, donanım gereksinimleri ve süreç boyunca size yol gösterecektir. Alternatif olarak bir <a href="/developers/docs/apis/backend/#available-libraries">arka uç API'si</a> kullanabilirsiniz.
 </InfoBanner>
 
 ## Parça zincirleri sürüm 1: veri kullanılabilirliği {#data-availability}

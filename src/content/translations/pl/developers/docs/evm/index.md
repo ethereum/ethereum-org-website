@@ -17,7 +17,7 @@ Do zrozumienia EVM konieczna jest znajomość podstawowej terminologii informaty
 
 Analogia „księgi głównej” jest często używana w celu opisania blockchainów np. takich jak Bitcoin, które umożliwiają zdecentralizowanym walutom używanie fundamentalnych narzędzi kryptograficznych. Kryptowaluta zachowuje się, jak „normalna“ waluta poprzez zasady jakimi jest zarządzana, co ktoś może, a czego nie może robić, aby zmodyfikować księgę główną. Dla przykładu, adres Bitcoina nie może wydać więcej Bitcoinów, niż wcześniej otrzymał. Zasady te są podstawą wszystkich transakcji na Bitcoinie i wielu innych blockchainach.
 
-Choć Ethereum ma swoją własną kryptowalutę (Ether), która działa niemal dokładnie według tych samych intuicyjnych zasad, pozwala również stosować znacznie bardziej rozbudowaną funkcję: [inteligentne kontrakty](/en/developers/docs/smart-contracts/). Dla tej skomplikowanej funkcji wymagana jest bardziej wyszukana analogia. W odróżnieniu od rozproszonej księgi główne, Ethereum jest rozproszoną [maszyną stanową](https://pl.wikipedia.org/wiki/Automat_sko%C5%84czony). Stany Ethereum są wielkimi strukturami danych, które przechowują nie tylko wszystkie konta i ich salda, ale też _stan maszyny_, który może zmieniać się od bloku do bloku zgodnie z predefiniowanymi zasadami, i który może wykonywać dowolny kod maszynowy. Konkretne zasady zmiany stanu od bloku do bloku są zdefiniowane przez EVM.
+Choć Ethereum ma swoją własną kryptowalutę (Ether), która działa niemal dokładnie według tych samych intuicyjnych zasad, pozwala również stosować znacznie bardziej rozbudowaną funkcję: [inteligentne kontrakty](/developers/docs/smart-contracts/). Dla tej skomplikowanej funkcji wymagana jest bardziej wyszukana analogia. W odróżnieniu od rozproszonej księgi główne, Ethereum jest rozproszoną [maszyną stanową](https://pl.wikipedia.org/wiki/Automat_sko%C5%84czony). Stany Ethereum są wielkimi strukturami danych, które przechowują nie tylko wszystkie konta i ich salda, ale też _stan maszyny_, który może zmieniać się od bloku do bloku zgodnie z predefiniowanymi zasadami, i który może wykonywać dowolny kod maszynowy. Konkretne zasady zmiany stanu od bloku do bloku są zdefiniowane przez EVM.
 
 ![Schemat przedstawiający strukturę EVM](../../../../../developers/docs/evm/evm.png) _Schemat zaadaptowany z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
@@ -82,4 +82,4 @@ Wszyscy [klienci Ethereum](/developers/docs/nodes-and-clients/#clients) posiadaj
 
 ## Tematy powiązane {#related-topics}
 
-- [Gaz](/en/developers/docs/gas/)
+- [Gaz](/developers/docs/gas/)

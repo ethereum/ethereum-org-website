@@ -33,4 +33,4 @@ _¿Conoces algún recurso en la comunidad que te haya servido de ayuda? Edita es
 
 ## Temas relacionados {#related-topics}
 
-- [Frameworks de desarrollo](/en/developers/docs/frameworks/)
+- [Frameworks de desarrollo](/developers/docs/frameworks/)

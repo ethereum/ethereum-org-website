@@ -39,7 +39,7 @@ Z manjšimi zahtevami glede strojne opreme bo razdrobitev omogočala lastno izva
 <br />
 
 <InfoBanner isWarning={true}>
-  Na začetku boste morali odjemalca za glavno omrežje izvajati skupaj z odjemalcem Eth2. <a href="https://launchpad.ethereum.org" target="_blank">Na zagonski platformi</a> boste našli opis zahtev glede strojne opreme in postopka. Namesto tega lahko uporabljate <a href="/en/developers/docs/apis/backend/#available-libraries">zaledni API</a>.
+  Na začetku boste morali odjemalca za glavno omrežje izvajati skupaj z odjemalcem Eth2. <a href="https://launchpad.ethereum.org" target="_blank">Na zagonski platformi</a> boste našli opis zahtev glede strojne opreme in postopka. Namesto tega lahko uporabljate <a href="/developers/docs/apis/backend/#available-libraries">zaledni API</a>.
 </InfoBanner>
 
 ## 1. različica razdrobljenih verig: razpoložljivost podatkov {#data-availability}

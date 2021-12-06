@@ -10,14 +10,14 @@ Una cuenta Ethereum cuenta con un saldo en ether (ETH), que permite realizar tra
 
 ## Requisitos previos {#prerequisites}
 
-Las cuentas son muy fáciles de manejar incluso para los principiantes. Sin embargo, para ayudarte a comprender mejor esta pagina, te recomendamos visitar nuestra [introducción a Ethereum](/en/developers/docs/intro-to-ethereum/).
+Las cuentas son muy fáciles de manejar incluso para los principiantes. Sin embargo, para ayudarte a comprender mejor esta pagina, te recomendamos visitar nuestra [introducción a Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Tipos de cuenta {#types-of-account}
 
 Ethereum tiene dos tipos de cuenta:
 
 - De propiedad externa: cualquier persona que disponga de las claves privadas puede controlarla
-- De contrato: se trata de un contrato inteligente implementado en la red, que se controla mediante código. Si deseas obtener más información, consulta [contratos inteligentes](/en/developers/docs/smart-contracts/)
+- De contrato: se trata de un contrato inteligente implementado en la red, que se controla mediante código. Si deseas obtener más información, consulta [contratos inteligentes](/developers/docs/smart-contracts/)
 
 Ambos tipos de cuenta tienen la habilidad de:
 
@@ -127,5 +127,5 @@ _¿Conoces algún recurso en la comunidad que te haya servido de ayuda? Edita es
 
 ## Temas relacionados {#related-topics}
 
-- [Contratos inteligentes](/en/developers/docs/smart-contracts/)
-- [Transacciones](/en/developers/docs/transactions/)
+- [Contratos inteligentes](/developers/docs/smart-contracts/)
+- [Transacciones](/developers/docs/transactions/)

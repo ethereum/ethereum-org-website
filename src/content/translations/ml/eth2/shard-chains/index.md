@@ -39,7 +39,7 @@ summaryPoints:
 <br />
 
 <InfoBanner isWarning={true}>
-  ആദ്യം, നിങ്ങളുടെ Eth2 ക്ലയന്റിന്റെ അതേ സമയം നിങ്ങൾ ഒരു മെയിൻനെറ്റ് ക്ലയന്റ് പ്രവർത്തിപ്പിക്കേണ്ടതുണ്ട്. <a href="https://launchpad.ethereum.org" target="_blank"> ലോഞ്ച്പാഡ് </a> ഹാർഡ്‌വെയർ ആവശ്യകതകളിലൂടെയും പ്രക്രിയകളിലൂടെയും നിങ്ങളെ കൊണ്ടുപോകും. പകരമായി നിങ്ങൾക്ക് ഒരു <a href="/en/developers/docs/apis/backend/#available-libraries"> ബാക്കെൻഡ് API </a> ഉപയോഗിക്കാം.
+  ആദ്യം, നിങ്ങളുടെ Eth2 ക്ലയന്റിന്റെ അതേ സമയം നിങ്ങൾ ഒരു മെയിൻനെറ്റ് ക്ലയന്റ് പ്രവർത്തിപ്പിക്കേണ്ടതുണ്ട്. <a href="https://launchpad.ethereum.org" target="_blank"> ലോഞ്ച്പാഡ് </a> ഹാർഡ്‌വെയർ ആവശ്യകതകളിലൂടെയും പ്രക്രിയകളിലൂടെയും നിങ്ങളെ കൊണ്ടുപോകും. പകരമായി നിങ്ങൾക്ക് ഒരു <a href="/developers/docs/apis/backend/#available-libraries"> ബാക്കെൻഡ് API </a> ഉപയോഗിക്കാം.
 </InfoBanner>
 
 ## ഷാർഡ് ചെയിൻസ് പതിപ്പ് 1: ഡാറ്റ ലഭ്യത {#data-availability}

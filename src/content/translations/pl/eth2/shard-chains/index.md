@@ -39,7 +39,7 @@ Dzięki zmniejszonym wymaganiom sprzętowym fragmentacja ułatwi samodzielne uru
 <br />
 
 <InfoBanner isWarning={true}>
-  Na początku musisz uruchomić klienta sieci głównej w tym samym czasie co klienta Eth2. <a href="https://launchpad.ethereum.org" target="_blank">Launchpad</a> poprowadzi Cię przez wymagania sprzętowe oraz proces. Jako alternatywnego rozwiązania możesz też użyć <a href="/en/developers/docs/apis/backend/#available-libraries">backendowego API</a>.
+  Na początku musisz uruchomić klienta sieci głównej w tym samym czasie co klienta Eth2. <a href="https://launchpad.ethereum.org" target="_blank">Launchpad</a> poprowadzi Cię przez wymagania sprzętowe oraz proces. Jako alternatywnego rozwiązania możesz też użyć <a href="/developers/docs/apis/backend/#available-libraries">backendowego API</a>.
 </InfoBanner>
 
 ## Wersja 1 łańcucha odłamkowego: dostępność danych {#data-availability}
