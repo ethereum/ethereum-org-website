@@ -1281,6 +1281,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/samnang"><img src="https://avatars.githubusercontent.com/u/131172?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Samnang Chhun</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=samnang" title="Documentation">📖</a></td>
     <td align="center"><a href="http://m-t-ahmed.com"><img src="https://avatars.githubusercontent.com/u/54685928?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tanvir Ahmed</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=m-t-a97" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/JorisZierold"><img src="https://avatars.githubusercontent.com/u/13258954?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joris Zierold</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=JorisZierold" title="Documentation">📖</a> <a href="#ideas-JorisZierold" title="Ideas, Planning, & Feedback">🤔</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
