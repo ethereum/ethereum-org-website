@@ -38,7 +38,7 @@
   "page-eth2-bug-bounty-points-usd": "2 USD",
   "page-eth2-bug-bounty-quality": "Calitatea descrierii",
   "page-eth2-bug-bounty-quality-desc": ": Recompense mai mari sunt plătite pentru rapoarte clare, bine scrise.",
-  "page-eth2-bug-bounty-quality-fix": "<b>Calitatea remedierii</b>, dacă este inclus: recompense mai mari sunt plătite pentru rapoarte cu o descriere clară a modului de soluționare a problemei.",
+  "page-eth2-bug-bounty-quality-fix": "<strong>Calitatea remedierii</strong>, dacă este inclus: recompense mai mari sunt plătite pentru rapoarte cu o descriere clară a modului de soluționare a problemei.",
   "page-eth2-bug-bounty-quality-repro": "Calitatea reproductibilității",
   "page-eth2-bug-bounty-quality-repro-desc": ": Te rugăm să incluzi codul de testare, scripturile și instrucțiunile detaliate. Cu cât ne este mai ușor să reproducem și să verificăm vulnerabilitatea, cu atât este mai mare recompensa.",
   "page-eth2-bug-bounty-questions": "Ai întrebări?",

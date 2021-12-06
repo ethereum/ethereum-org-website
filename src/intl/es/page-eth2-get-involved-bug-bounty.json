@@ -38,7 +38,7 @@
   "page-eth2-bug-bounty-points-usd": "2 dólares",
   "page-eth2-bug-bounty-quality": "Calidad de la descripción",
   "page-eth2-bug-bounty-quality-desc": ": se pagan recompensas más altas por informes claros y bien escritos.",
-  "page-eth2-bug-bounty-quality-fix": "<b>Calidad de la corrección</b>, si se incluye: se pagan recompensas más altas por informes que describan con claridad cómo arreglar el problema.",
+  "page-eth2-bug-bounty-quality-fix": "<strong>Calidad de la corrección</strong>, si se incluye: se pagan recompensas más altas por informes que describan con claridad cómo arreglar el problema.",
   "page-eth2-bug-bounty-quality-repro": "Calidad de la reproducción",
   "page-eth2-bug-bounty-quality-repro-desc": ": incluye código de prueba, scripts e instrucciones detalladas. Cuanto más fácil sea reproducir y verificar la vulnerabilidad, mayor será la recompensa.",
   "page-eth2-bug-bounty-questions": "¿Preguntas?",
