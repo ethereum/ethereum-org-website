@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
-import { some } from "lodash"
 
 import Translation from "../../components/Translation"
 import { translateMessageId } from "../../utils/translations"
