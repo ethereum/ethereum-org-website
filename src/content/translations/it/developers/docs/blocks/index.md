@@ -17,7 +17,7 @@ Quello dei blocchi è un argomento piuttosto basico. Per aiutarti però a compre
 
 Per assicurare che tutti i partecipanti della rete Ethereum siano sincronizzati e concordino sulla cronologia esatta delle transazioni, raggruppiamo le transazioni in blocchi. Significa che decine (o centinaia) di transazioni vengono inviate, approvate e sincronizzate in una volta sola.
 
-![Diagramma che mostra una transazione in un blocco che causa cambiamenti di stato](./tx-block.png) _Diagramma adattato dall' [illustrazione dell'Ethereum EVM](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagramma che mostra una transazione in un blocco che causa cambiamenti di stato](../../../../../developers/docs/blocks/tx-block.png) _Diagramma adattato dall' [illustrazione dell'Ethereum EVM](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Scaglionando gli invii, diamo a tutti i partecipanti della rete abbastanza tempo per giungere al consenso: anche se arrivano decine di richieste di transazione al secondo, i blocchi su Ethereum vengono inviati più o meno ogni quindici secondi.
 

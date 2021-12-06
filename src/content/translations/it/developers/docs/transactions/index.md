@@ -20,7 +20,7 @@ Per comprendere meglio questa pagina, raccomandiamo di leggere la sezione [Accou
 
 Con transazione Ethereum ci si riferisce ad un'azione iniziata da un account di proprietà esterna, in altre parole gestito dall'uomo e non da un contratto. Per esempio, se Bob manda ad Alice 1 ETH, sull'account di Bob verrà addebitato l'importo e su quello di Alice accreditato. Questa azione che modifica lo stato avviene all'interno di una transazione.
 
-![Diagramma che mostra un cambiamento di stato causato da una transazione](./tx.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagramma che mostra un cambiamento di stato causato da una transazione](../../../../../developers/docs/transactions/tx.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Le transazioni, che cambiano lo stato dell'EVM, devono essere trasmesse all'intera rete. Ogni nodo può trasmettere una richiesta di esecuzione di una transazione sull'EVM; in seguito, un miner eseguirà la transazione e propagherà il cambiamento di stato risultante al resto della rete.
 
@@ -124,7 +124,7 @@ Il miner che elabora la transazione riceverà **+0,0042 ETH**
 
 Il carburante è richiesto anche per ogni interazione con Smart Contract.
 
-![Diagramma che mostra come viene rimborsato il carburante inutilizzato](./gas-tx.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagramma che mostra come viene rimborsato il carburante inutilizzato](../../../../../developers/docs/transactions/gas-tx.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Il carburante non utilizzato viene rimborsato sull'account dell'utente.
 
