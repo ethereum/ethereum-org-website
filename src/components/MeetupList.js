@@ -262,7 +262,7 @@ const meetups = [
     emoji: ":thailand:",
     location: "Chiang Mai",
     link: "https://www.facebook.com/groups/219236462407862/",
-  },  
+  },
   {
     title: "Web3 Together",
     emoji: ":cambodia:",
@@ -316,11 +316,30 @@ const LeftContainer = styled.div`
   flex: 1 1 75%;
   margin-right: 1rem;
 `
+
+// function for shuffling list (implements Fisher-Yates Shuffle)
+function shuffle(array) {
+  let currentIndex = array.length,
+    randomIndex
+  // While there remain elements to shuffle...
+  while (currentIndex != 0) {
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex)
+    currentIndex--
+    // And swap it with the current element.
+    ;[array[currentIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[currentIndex],
+    ]
+  }
+  return array
+}
+
 // TODO create generalized CardList / TableCard
 // TODO prop if ordered list or unordered
 const MeetupList = () => (
   <Table>
-    {meetups.map((meetup, idx) => (
+    {shuffle(meetups).map((meetup, idx) => (
       <Item key={idx} to={meetup.link}>
         <LeftContainer>
           <ItemNumber>{idx + 1}</ItemNumber>
