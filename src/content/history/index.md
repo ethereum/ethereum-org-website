@@ -58,7 +58,7 @@ Be sure to upgrade your client software to the latest version before December 5,
 
 #### Summary {#altair-summary}
 
-The Altair upgrade was the first scheduled upgrade for the [Beacon Chain](/eth2/beacon-chain). It added support for "sync committees" – enabling light clients, and bringing validator inactivity and slashing penalties up to their full values.
+The Altair upgrade was the first scheduled upgrade for the [Beacon Chain](/eth2/beacon-chain). It added support for "sync committees"—enabling light clients, and bringing validator inactivity and slashing penalties up to their full values.
 
 - [Read the Altair upgrade specification](https://github.com/ethereum/eth2.0-specs/tree/dev/specs/altair)
 
@@ -194,7 +194,7 @@ The Muir Glacier fork introduced a delay to the [difficulty bomb](/glossary/#dif
 The Istanbul fork:
 
 - Optimised the [gas](/glossary/#gas) cost of certain actions in the [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
-- Improved denial of service attack resilience.
+- Improved denial-of-service attack resilience.
 - Made [Layer 2 scaling](/developers/docs/scaling/layer-2-rollups/) solutions based on SNARKs and STARKs more performant.
 - Enabled Ethereum and Zcash to interoperate.
 - Allowed contracts to introduce more creative functions.
