@@ -203,7 +203,8 @@ exports.onCreateNode = async ({ node, getNode, actions }) => {
 }
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
+  createRedirect({ fromPath: "/", toPath: "/en/", isPermanent: true })
 
   const result = await graphql(`
     query {
