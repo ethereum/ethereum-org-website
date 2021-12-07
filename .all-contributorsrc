@@ -5812,6 +5812,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "patcito",
+      "name": "Patrick Aljord",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26435?v=4",
+      "profile": "https://twitter.com/patcito",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
