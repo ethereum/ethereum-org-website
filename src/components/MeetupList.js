@@ -269,6 +269,12 @@ const meetups = [
     location: "Phnom Penh",
     link: "https://www.facebook.com/Web3Together",
   },
+  {
+    title: "DeFi Dubai",
+    emoji: ":united_arab_emirates:",
+    location: "Dubai",
+    link: "https://www.meetup.com/DeFi-Dubai/",
+  },
 ]
 
 const Table = styled.div`
