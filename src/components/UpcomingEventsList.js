@@ -9,7 +9,7 @@ const EventList = styled.ul`
   }
 `
 
-const EvenListItem = styled.li`
+const EventListItem = styled.li`
   list-style-type: none;
 `
 
@@ -65,14 +65,14 @@ const UpcomingEventsList = () => {
       {orderedUpcomingEvents?.map(
         ({ title, to, formattedDetails, date }, idx) => {
           return (
-            <EvenListItem key={idx}>
+            <EventListItem key={idx}>
               <EventCard
                 title={title}
                 to={to}
                 date={date}
                 description={formattedDetails}
               />
-            </EvenListItem>
+            </EventListItem>
           )
         }
       )}
