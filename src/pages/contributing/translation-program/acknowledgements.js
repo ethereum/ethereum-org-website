@@ -24,6 +24,8 @@ const H1 = styled.h1`
   }
 `
 
+const H2 = styled.h2``
+
 const TwoColumnContent = styled.div`
   display: flex;
   width: 100%;
@@ -38,7 +40,7 @@ const TwoColumnContent = styled.div`
 
 const LeaderboardContent = styled(Content)`
   max-width: 800px;
-  h1 {
+  h2 {
     text-align: center;
   }
 `
@@ -150,9 +152,9 @@ const TranslatorAcknowledgements = ({ data, location }) => {
       </Content>
 
       <LeaderboardContent>
-        <H1>
+        <H2>
           <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-title" />
-        </H1>
+        </H2>
         <TranslationLeaderboard />
         <p>
           <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-1" />
@@ -160,9 +162,9 @@ const TranslatorAcknowledgements = ({ data, location }) => {
       </LeaderboardContent>
 
       <Content>
-        <H1>
+        <H2>
           <Translation id="page-contributing-translation-program-acknowledgements-our-translators-title" />
-        </H1>
+        </H2>
         <p>
           <Translation id="page-contributing-translation-program-acknowledgements-our-translators-1" />
         </p>
@@ -181,9 +183,9 @@ const TranslatorAcknowledgements = ({ data, location }) => {
       </Content>
 
       <Content id="poap">
-        <H1>
+        <H2>
           <Translation id="page-contributing-translation-program-acknowledgements-poaps-title" />
-        </H1>
+        </H2>
         <p>
           <Translation id="page-contributing-translation-program-acknowledgements-1" />
         </p>
