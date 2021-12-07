@@ -16,11 +16,6 @@ To better understand this page, we recommend you first read up on [consensus mec
 
 Proof-of-stake is a type of [consensus mechanism](/developers/docs/consensus-mechanisms/) used by blockchain networks to achieve distributed consensus.
 
-It was first introduced and implemented in the Peercoin blockchain in 2012. https://bitcointalk.org/index.php?topic=101820.0 
-
- A proof of stake algorithm works as follows. When creating a proof-of-stake block, a miner needs to construct a “coinstake” transaction, sending some money in their possession to themselves as well as a preset reward (like an interest rate, similar to Bitcoin’s 25 BTC block reward). A SHA256 hash is calculated based only on the transaction input, some additional fixed data, and the current time (as an integer representing the number of seconds since Jan 1, 1970). This hash is then checked against a proof of work requirement, much like Bitcoin, except the difficulty is inversely proportional to the “coin age” of the transaction input. Coin age is defined as the size of the transaction input, in Peercoin, multiplied by the time that the input has existed. Because the hash is based only on the time and static data, there is no way to make hashes quickly by doing more work; every second, each Peercoin transaction output has a certain chance of producing a valid work proportional to its age and how many peercoin it contains, and that is that. Essentially, every Peercoin can act as a “simulated mining rig”, albeit with the interesting property that its mining power goes up linearly over time but resets to zero every time it finds a valid block.
- https://bitcoinmagazine.com/culture/what-proof-of-stake-is-and-why-it-matters-1377531463
-
 It requires users to stake their ETH to become a validator in the network. Validators are responsible for the same thing as miners in [proof-of-work](/developers/docs/consensus-mechanisms/pow/): ordering transactions and creating new blocks so that all nodes can agree on the state of the network.
 
 Proof-of-stake comes with a number of improvements to the proof-of-work system:
