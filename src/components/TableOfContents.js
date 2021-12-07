@@ -10,6 +10,7 @@ import { useActiveHash } from "../hooks/useActiveHash"
 import { dropdownIconContainerVariant } from "./SharedStyledComponents"
 
 const customIdRegEx = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/
+const emojiRegEx = /<Emoji [^/]+\/>/g
 
 const Aside = styled.aside`
   position: sticky;
@@ -203,7 +204,11 @@ const getCustomId = (title) => {
 
 const trimmedTitle = (title) => {
   const match = customIdRegEx.exec(title)
-  return match ? title.replace(match[1], "").trim() : title
+  const trimmedTitle = match ? title.replace(match[1], "").trim() : title
+
+  // Removes Twemoji components from title
+  const emojiMatch = emojiRegEx.exec(trimmedTitle)
+  return emojiMatch ? trimmedTitle.replaceAll(emojiRegEx, "") : trimmedTitle
 }
 
 const TableOfContentsLink = ({ depth, item, activeHash }) => {
