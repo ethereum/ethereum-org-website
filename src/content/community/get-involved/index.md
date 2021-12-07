@@ -9,7 +9,7 @@ lang: en
 
 The Ethereum community includes people of many different backgrounds and skillsets. Whether you’re a developer, an artist, or an accountant, there are ways to get involved. Here’s a list of suggestions that might help you get started.
 
-## Developers 💻 {#developers}
+## Developers <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - Learn about and try Ethereum at [ethereum.org/developers/](/developers/)
 - [Find a bounty on Gitcoin](https://gitcoin.co/), work on a small or large technical issue, earn crypto!
