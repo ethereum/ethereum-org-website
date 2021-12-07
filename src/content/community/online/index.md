@@ -9,7 +9,7 @@ lang: en
 
 Hundreds of thousands of Ethereum enthusiasts gather in these online forums to share news, talk about recent developments, debate technical issues, and imagine the future.
 
-## Forums
+## Forums {#forums}
 
 - [r/ethereum](https://www.reddit.com/r/ethereum/) - _all things Ethereum_
 - [r/ethfinance](https://www.reddit.com/r/ethfinance/) - _the financial side of Ethereum, including DeFi_
@@ -21,7 +21,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 - [Ethereum Stackexchange](https://ethereum.stackexchange.com) - _discussion and help for Ethereum developers_
 - [Ethereum Research](https://ethresear.ch) - _the most influential messageboard for cryptoeconomic research_
 
-## Chat rooms
+## Chat rooms {#chat-rooms}
 
 - <Icon name="discord" /> <a href="https://gitter.im/ethereum/home">Ethereum Gitter</a> - <i>chat room for the Ethereum GitHub repo</i>
 - <Icon name="discord" /> <a href="https://discord.gg/tzYmDmF">Ethereum Cat Herders</a> - <i>community oriented around offering project management support to Ethereum development</i>
@@ -30,15 +30,15 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 - <Icon name="discord" /> <a href="https://discord.io/ethstaker">EthStaker Discord</a> - <i>community oriented around offering project management support to Ethereum development</i>
 - <Icon name="discord" /> <a href="https://discord.gg/CetY6Y4">Ethereum.org website team</a> - <i>stop by and chat ethereum.org web development and design with the team and folks from the community</i>
 
-## YouTube and Twitter
+## YouTube and Twitter {#youtube-and-twitter}
 
-- [Ethereum Foundation]() - _Keep upto date with the latest from the Ethereum Foundation_
-- [@ethereum]() - _Offical account of the Ethereum Foundation_
-- [@ethdotorg]() - _The portal to Ethereum, built for our growing global community_
-- [List of influential Ethereum twitter accounts]()
+- [Ethereum Foundation](https://www.youtube.com/c/EthereumFoundation) - _Keep upto date with the latest from the Ethereum Foundation_
+- [@ethereum](https://twitter.com/ethereum) - _Offical account of the Ethereum Foundation_
+- [@ethdotorg](https://twitter.com/ethdotorg) - _The portal to Ethereum, built for our growing global community_
+- [List of influential Ethereum twitter accounts](https://hive.one/c/Ethereum?page=1)
 
 <Divider />
 
-## Explore other online Ethereum communities
+## Explore other online Ethereum communities {#explore}
 
 - [DAOs](/community/daos/)
