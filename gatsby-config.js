@@ -222,6 +222,7 @@ module.exports = {
     },
     // Needed for Gatsby Cloud redirect support
     `gatsby-plugin-gatsby-cloud`,
+    `gatsby-plugin-netlify`,
   ],
   // https://www.gatsbyjs.com/docs/reference/release-notes/v2.28/#feature-flags-in-gatsby-configjs
   flags: {
