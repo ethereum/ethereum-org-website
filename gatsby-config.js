@@ -220,6 +220,8 @@ module.exports = {
         include: /\.md$|\.csv/i, // Only .md & .csv files
       },
     },
+    // Needed for Gatsby Cloud redirect support
+    `gatsby-plugin-gatsby-cloud`,
   ],
   // https://www.gatsbyjs.com/docs/reference/release-notes/v2.28/#feature-flags-in-gatsby-configjs
   flags: {
