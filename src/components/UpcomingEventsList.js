@@ -1,6 +1,17 @@
 import React, { useEffect, useState } from "react"
-import Link from "../components/Link"
+import styled from "styled-components"
 import events from "../data/community-events.json"
+import EventCard from "../components/EventCard"
+
+const EventList = styled.ul`
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin-left: 0;
+  }
+`
+
+const EvenListItem = styled.li`
+  list-style-type: none;
+`
 
 const UpcomingEventsList = () => {
   const [orderedUpcomingEvents, setOrderedUpcomingEvents] = useState()
@@ -35,12 +46,13 @@ const UpcomingEventsList = () => {
               event.endDate
             ).toLocaleDateString()}`
 
-      const details = `${event.sponsor ? "(" + event.sponsor + ")" : ""} - ${
+      const details = `${event.sponsor ? "(" + event.sponsor + ")" : ""} ${
         event.description
-      } (${dateRange})`
+      }`
 
       return {
         ...event,
+        date: dateRange,
         formattedDetails: details,
       }
     })
@@ -49,16 +61,22 @@ const UpcomingEventsList = () => {
   }, [])
 
   return (
-    <ul>
-      {orderedUpcomingEvents?.map(({ title, to, formattedDetails }, idx) => {
-        return (
-          <li key={idx}>
-            <Link to={to}>{title}</Link>
-            {formattedDetails}
-          </li>
-        )
-      })}
-    </ul>
+    <EventList>
+      {orderedUpcomingEvents?.map(
+        ({ title, to, formattedDetails, date }, idx) => {
+          return (
+            <EvenListItem key={idx}>
+              <EventCard
+                title={title}
+                to={to}
+                date={date}
+                description={formattedDetails}
+              />
+            </EvenListItem>
+          )
+        }
+      )}
+    </EventList>
   )
 }
 
