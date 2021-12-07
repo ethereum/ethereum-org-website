@@ -1283,6 +1283,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/JorisZierold"><img src="https://avatars.githubusercontent.com/u/13258954?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joris Zierold</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=JorisZierold" title="Documentation">📖</a> <a href="#ideas-JorisZierold" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/selfwithin"><img src="https://avatars.githubusercontent.com/u/94748148?v=4?s=100" width="100px;" alt=""/><br /><sub><b>selfwithin</b></sub></a><br /><a href="#ideas-selfwithin" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=selfwithin" title="Documentation">📖</a></td>
   </tr>
 </table>
 

@@ -5793,6 +5793,16 @@
         "doc",
         "ideas"
       ]
+    },
+    {
+      "login": "selfwithin",
+      "name": "selfwithin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/94748148?v=4",
+      "profile": "https://github.com/selfwithin",
+      "contributions": [
+        "ideas",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
