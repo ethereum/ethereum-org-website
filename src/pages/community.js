@@ -579,27 +579,6 @@ const CommunityPage = ({ data }) => {
           </ImageContainer>
         </RowReverse>
       </SupportContainer>
-      <Content>
-        <CentralColumn>
-          <Divider />
-          <H2>Ethereum meetup groups</H2>
-          <CenterText>
-            "Meetups" are small events held by groups of Ethereum enthusiasts -
-            a chance for people interested in Ethereum to get together, talk
-            about Ethereum, and learn about recent developments.
-          </CenterText>
-          <MeetupList />
-          <CenterText>
-            Interested in starting your own meetup? Check out the [BUIDL
-            Network](https://consensys.net/developers/buidlnetwork/), an
-            initiative by ConsenSys to help support Ethereum’s meetup
-            communities. This is a non-exhaustive list built by our community.
-            Know of an active meetup group to add to this list? [Please add
-            it](https://github.com/ethereum/ethereum-org-website#content-contributions)
-          </CenterText>
-        </CentralColumn>
-      </Content>
-
       <Divider />
     </Page>
   )
