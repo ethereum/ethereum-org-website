@@ -5,6 +5,7 @@ import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
 import ActionCard from "../components/ActionCard"
+import Callout from "../components/Callout"
 import Card from "../components/Card"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
@@ -301,6 +302,29 @@ const IntroLeftColumn = styled(LeftColumn)`
   }
 `
 
+const TwoColumnContent = styled(Content)`
+  display: flex;
+  align-items: center;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`
+
+const Column = styled.div`
+  flex: 0 0 50%;
+  max-width: 75%;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    max-width: 100%;
+  }
+  margin-bottom: 1.5rem;
+`
+
+const StyledCallout = styled(Callout)`
+  flex: 1 1 416px;
+  min-height: 100%;
+`
+
 const CommunityPage = ({ data }) => {
   const intl = useIntl()
 
@@ -580,6 +604,35 @@ const CommunityPage = ({ data }) => {
         </RowReverse>
       </SupportContainer>
       <Divider />
+      <TwoColumnContent>
+        <Column>
+          <h2>Try Ethereum for yourself</h2>
+        </Column>
+      </TwoColumnContent>
+      <Content>
+        <CardContainer>
+          <StyledCallout
+            image={data.eth.childImageSharp.fixed}
+            title="Get some ETH"
+            alt="alt"
+            description="ETH is the native currency of Ethereum. You'll need some ETH in your wallet to use Ethereum applications."
+          >
+            <div>
+              <ButtonLink to="/get-eth/">Get ETH</ButtonLink>
+            </div>
+          </StyledCallout>
+          <StyledCallout
+            image={data.doge.childImageSharp.fixed}
+            title="Try some dapps"
+            alt="alt"
+            description="Dapps are applications built on Ethereum. Dapps are disrupting current business models and inventing new ones."
+          >
+            <div>
+              <ButtonLink to="/dapps/">Explore dapps</ButtonLink>
+            </div>
+          </StyledCallout>
+        </CardContainer>
+      </Content>
     </Page>
   )
 }
