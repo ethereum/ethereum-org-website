@@ -39,7 +39,7 @@ Uaktualnienie Altair jest pierwszym planowanym uaktualnieniem [łańcucha śledz
 
 #### Podsumowanie {#london-summary}
 
-Uaktualnienie London wprowadziło [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), która zreformowała rynek opłat transakcyjnych oraz wprowadziła zmiany do sposobu obsługi zwrotów kosztów gazu oraz do harmonogramu [Epoki Lodowcowej](https://ethereum.org/en/glossary/#ice-age) (Ice Age).
+Uaktualnienie London wprowadziło [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), która zreformowała rynek opłat transakcyjnych oraz wprowadziła zmiany do sposobu obsługi zwrotów kosztów gazu oraz do harmonogramu [Epoki Lodowcowej](/glossary/#ice-age) (Ice Age).
 
 - [Jesteś deweloperem aplikacji zdecentralizowanych? Pamiętaj o uaktualnieniu bibliotek i narzędzi.](https://github.com/ethereum/eth1.0-specs/blob/master/network-upgrades/ecosystem-readiness.md)
 - [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)

@@ -164,4 +164,4 @@ Here are some of the enterprise applications that have been deployed to the publ
 
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _electricity payments_
 
-If you would like to add to this list, please see [instructions for contributing](https://ethereum.org/en/contributing/).
+If you would like to add to this list, please see [instructions for contributing](/contributing/).

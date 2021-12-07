@@ -339,7 +339,7 @@ const TutorialsPage = ({ data, pageContext }) => {
         </ModalTitle>
         <p>
           <Translation id="page-tutorial-listing-policy-intro" />{" "}
-          <Link to="https://ethereum.org/en/contributing/content-resources/">
+          <Link to="/contributing/content-resources/">
             <Translation id="page-tutorial-listing-policy" />
           </Link>
         </p>

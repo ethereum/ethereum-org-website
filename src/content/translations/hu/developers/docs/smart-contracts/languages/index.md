@@ -251,7 +251,7 @@ Mint minden más programozási nyelvnél, itt is leginkább a megfelelő eszköz
 
 ### Mi a jó a Solidity-ben? {#solidity-advantages}
 
-- Ha kezdő vagy, akkor sok útmutató és tanulási anyag áll rendelkezésedre. További anyagért látogasd meg [Tanulás kódolással](https://ethereum.org/developers/learning-tools/) szekciót.
+- Ha kezdő vagy, akkor sok útmutató és tanulási anyag áll rendelkezésedre. További anyagért látogasd meg [Tanulás kódolással](/developers/learning-tools/) szekciót.
 - Jó fejlesztői eszközök érhetők el.
 - A Solidity-nek nagy a fejlesztői közössége, ami azt jelenti, hogy nagy valószínűséggel gyorsan választ kapsz majd a kérdéseidre.
 

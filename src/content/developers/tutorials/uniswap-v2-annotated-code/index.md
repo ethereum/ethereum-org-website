@@ -382,7 +382,7 @@ This function allows the factory (and only the factory) to specify the two ERC-2
 
 #### Internal Update Functions {#pair-update-internal}
 
-##### \_update {#_update}
+##### \_update {#\_update}
 
 ```solidity
     // update reserves and, on the first call per block, price accumulators
@@ -444,7 +444,7 @@ This price calculation is the reason we need to know the old reserve sizes.
 
 Finally, update the global variables and emit a `Sync` event.
 
-##### \_mintFee {#_mintfee}
+##### \_mintFee {#\_mintfee}
 
 ```solidity
     // if fee is on, mint liquidity equivalent to 1/6th of the growth in sqrt(k)
@@ -865,7 +865,7 @@ exchange.
 ```
 
 We want the address of the new exchange to be deterministic, so it can be calculated in advance off chain
-(this can be useful for [layer 2 transactions](https://ethereum.org/en/developers/docs/layer-2-scaling/)).
+(this can be useful for [layer 2 transactions](/developers/docs/layer-2-scaling/)).
 To do this we need to have a consistent order of the token addresses, regardless of the order in which we have
 received them, so we sort them here.
 

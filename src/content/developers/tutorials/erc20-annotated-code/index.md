@@ -86,7 +86,7 @@ By convention, interface names start with `I`.
 This function is `external`, meaning [it can only be called from outside the contract](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2).
 It returns the total supply of tokens in the contract. This value is returned using the most common type in Ethereum, unsigned 256 bits (256 bits is the
 native word size of the EVM). This function is also a `view`, which means that it does not change the state, so it can be executed on a single node instead of having
-every node in the blockchain run it. This kind of function does not generate a transaction and does not cost [gas](https://ethereum.org/en/developers/docs/gas/).
+every node in the blockchain run it. This kind of function does not generate a transaction and does not cost [gas](/developers/docs/gas/).
 
 **Note:** In theory it might appear that a contract's creator could cheat by returning a smaller total supply than the real value, making each token appear
 more valuable than it actually is. However, that fear ignores the true nature of the blockchain. Everything that happens on the blockchain can be verified by

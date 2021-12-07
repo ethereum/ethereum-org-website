@@ -249,7 +249,7 @@ Estas son algunas cosas que debes tener en cuenta si aún no has probado ninguno
 
 ### ¿Qué tiene de genial Solidity? {#solidity-advantages}
 
-- Si eres un principiante, encontrarás muchos tutoriales y herramientas de aprendizaje por ahí. Obtén más información al respecto en la sección [Aprender programando](https://ethereum.org/developers/learning-tools/).
+- Si eres un principiante, encontrarás muchos tutoriales y herramientas de aprendizaje por ahí. Obtén más información al respecto en la sección [Aprender programando](/developers/learning-tools/).
 - Buenas herramientas de desarrollador disponibles.
 - Solidity tiene una gran comunidad de desarrolladores, lo que significa que muy probablemente encontrarás rápidamente las respuestas a tus preguntas.
 
