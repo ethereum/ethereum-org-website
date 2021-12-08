@@ -23,7 +23,6 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 
 ## Chat rooms {#chat-rooms}
 
-- <Icon name="discord" /> <a href="https://gitter.im/ethereum/home">Ethereum Gitter</a> - <i>chat room for the Ethereum GitHub repo</i>
 - <Icon name="discord" /> <a href="https://discord.gg/tzYmDmF">Ethereum Cat Herders</a> - <i>community oriented around offering project management support to Ethereum development</i>
 - <Icon name="discord" /> <a href="https://ethglobal.co/discord">Ethereum Hackers</a> - <i>Discord chat run by ETHGlobal: an online community for Ethereum hackers all over the world</i>
 - <Icon name="discord" /> <a href="https://discord.gg/5W5tVb3">CryptoDevs</a> - <i>Ethereum development focused Discord community</i>
