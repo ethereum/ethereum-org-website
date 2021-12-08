@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
-import events from "../data/community-events.json"
+
 import EventCard from "../components/EventCard"
+import InfoBanner from "../components/InfoBanner"
+
+import events from "../data/community-events.json"
 
 const EventList = styled.ul`
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
@@ -59,6 +62,15 @@ const UpcomingEventsList = () => {
 
     setOrderedUpcomingEvents(formattedEvents)
   }, [])
+
+  if (orderedUpcomingEvents?.length === 0) {
+    return (
+      <InfoBanner emoji=":information_source:">
+        We're not aware of any upcoming events. Know of one? Please add it to
+        this page!
+      </InfoBanner>
+    )
+  }
 
   return (
     <EventList>
