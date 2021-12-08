@@ -311,11 +311,37 @@ const LeftContainer = styled.div`
   margin-right: 1rem;
 `
 
+const StyledInput = styled.input`
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1.5rem;
+
+  border: 1px solid ${(props) => props.theme.colors.searchBorder};
+  color: ${(props) => props.theme.colors.text};
+  background: ${(props) => props.theme.colors.searchBackground};
+  padding: 0.5rem;
+  border-radius: 0.25em;
+  width: 100%;
+
+  &:focus {
+    outline: ${(props) => props.theme.colors.primary} auto 1px;
+  }
+  &:placeholder {
+    color: ${(props) => props.theme.colors.text200};
+  }
+`
+
 const filterMeetups = (query) => {
   if (!query) return meetups
 
+  const lowercaseQuery = query.toLowerCase()
+
   return meetups.filter((meetup) => {
-    return meetup.title.includes(query) || meetup.location.includes(query)
+    return (
+      meetup.title.toLowerCase().includes(lowercaseQuery) ||
+      meetup.location.toLowerCase().includes(lowercaseQuery)
+    )
   })
 }
 
@@ -329,7 +355,10 @@ const MeetupList = () => {
 
   return (
     <div>
-      <input onChange={handleSearch} />
+      <StyledInput
+        onChange={handleSearch}
+        placeholder={"Search by meetup title or location"}
+      />
       <Table>
         {filteredMeetups.map((meetup, idx) => (
           <Item key={idx} to={meetup.link}>
