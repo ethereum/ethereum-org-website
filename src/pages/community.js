@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
@@ -11,7 +11,6 @@ import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import PageHero from "../components/PageHero"
-import MeetupList from "../components/MeetupList"
 
 import {
   CardContainer,
@@ -357,17 +356,6 @@ const CommunityPage = ({ data }) => {
       "The Ethereum community is home to hundreds of thousands of developers, technologists, designers, users, HODLers and enthusiasts.",
     image: data.enterprise.childImageSharp.fluid,
     alt: translateMessageId("page-community-hero-alt", intl),
-    // buttons: [
-    //   {
-    //     content: "How can I get involved?",
-    //     path: "#get-involved",
-    //   },
-    //   {
-    //     content: "Developer support",
-    //     path: "#",
-    //     isSecondary: "isSecondary",
-    //   },
-    // ],
   }
 
   const cards = [
@@ -389,11 +377,19 @@ const CommunityPage = ({ data }) => {
     },
     {
       image: data.doge.childImageSharp.fixed,
-      title: "Get involved",
+      title: "Contribute to a project",
       description:
         "Check out how to get involved for a list of ways that you can contribute based on your skills and professional background.",
       alt: translateMessageId("page-index-get-started-dapps-image-alt", intl),
       to: "/community/get-involved/",
+    },
+    {
+      image: data.future.childImageSharp.fixed,
+      title: "Search for grants",
+      description:
+        "Funding grants are available to help you get a project off the ground.",
+      alt: translateMessageId("page-index-get-started-dapps-image-alt", intl),
+      to: "/community/grants/",
     },
   ]
 
@@ -428,7 +424,7 @@ const CommunityPage = ({ data }) => {
         )}
       /> */}
       <PageMetadata
-        title="Community home"
+        title="Community Hub"
         description="Community homepage description"
       />
       <PageHero isReverse content={heroContent} />
@@ -499,30 +495,23 @@ const CommunityPage = ({ data }) => {
       <OpenSourceContainer>
         <RowReverse>
           <FeatureContent>
-            {/* <StyledH2>
-              <Translation id="page-index-what-is-ethereum" />
-            </StyledH2> */}
             <H2>
               {/* <Translation id="page-community-open-source" /> */}
               Creator? Builder? Get paid for your work.
             </H2>
             <Subtitle>
               {/* <Translation id="page-community-open-source-description" /> */}
-              Are you building on Ethereum, or do you want to? Funding grants
-              are available to help you get a project off the ground, and
-              companies are looking to fill thousands of jobs.
+              Are you building on Ethereum, or do you want to? Companies are
+              hiring for thousands of technical and non-technical roles. Got an
+              idea of your own? Try finding a grant to get your project off the
+              ground.
             </Subtitle>
             <ButtonRow>
-              <ButtonLink to="/community/grants/">
-                {/* <Translation id="page-community-poap-button" /> */}
-                Explore Grants
-              </ButtonLink>
-              <StyledButtonLink
-                isSecondary
-                to="/community/get-involved/#ethereum-jobs/"
-              >
-                {/* <Translation id="page-community-poap-secondary-button" /> */}
+              <ButtonLink to="/community/get-involved/#ethereum-jobs/">
                 Find a job
+              </ButtonLink>
+              <StyledButtonLink isSecondary to="/community/grants/">
+                Explore Grants
               </StyledButtonLink>
             </ButtonRow>
           </FeatureContent>
@@ -691,6 +680,13 @@ export const query = graphql`
       }
     }
     doge: file(relativePath: { eq: "doge-computer.png" }) {
+      childImageSharp {
+        fixed(width: 320) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    future: file(relativePath: { eq: "future_transparent.png" }) {
       childImageSharp {
         fixed(width: 320) {
           ...GatsbyImageSharpFixed

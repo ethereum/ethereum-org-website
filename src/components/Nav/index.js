@@ -277,7 +277,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       ariaLabel: "community-menu",
       items: [
         {
-          text: "ethereum-community",
+          text: "community-hub",
           to: "/community/",
         },
         {
