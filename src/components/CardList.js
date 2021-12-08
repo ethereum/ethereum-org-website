@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+import Img from "gatsby-image"
 
 import Link from "./Link"
 
@@ -68,7 +68,7 @@ const RightContainer = styled.div`
   flex-wrap: wrap;
 `
 
-const Image = styled(GatsbyImage)`
+const Image = styled(Img)`
   min-width: 20px;
   margin-right: 1rem;
   margin-top: 4px;
@@ -81,7 +81,7 @@ const CardList = ({ content, className, clickHandler }) => (
       const isLink = !!link
       return isLink ? (
         <ItemLink key={id || idx} to={link}>
-          {image && <Image image={image} alt={alt} />}
+          {image && <Image fixed={image} alt={alt} />}
           <LeftContainer>
             <ItemTitle>{title}</ItemTitle>
 
@@ -95,7 +95,7 @@ const CardList = ({ content, className, clickHandler }) => (
         </ItemLink>
       ) : (
         <Item key={idx} onClick={() => clickHandler(idx)}>
-          {image && <Image image={image} alt={alt} />}
+          {image && <Image fixed={image} alt={alt} />}
           <LeftContainer>
             <ItemTitle>{title}</ItemTitle>
 

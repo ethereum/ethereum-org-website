@@ -59,7 +59,8 @@ Icon.propTypes = {
 
 const StyledIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.secondary};
-  &:hover path:last-of-type {
+
+  &:hover path {
     fill: ${(props) => props.theme.colors.primary};
   }
 `

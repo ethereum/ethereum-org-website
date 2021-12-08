@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
 import { translateMessageId } from "../utils/translations"
@@ -70,7 +70,7 @@ const HeroContainer = styled.div`
   }
 `
 
-const Hero = styled(GatsbyImage)`
+const Hero = styled(Img)`
   position: absolute !important;
   z-index: -1;
   width: 100%;
@@ -103,7 +103,7 @@ const CardContainer = styled.div`
   }
 `
 
-const WalletImage = styled(GatsbyImage)`
+const WalletImage = styled(Img)`
   align-self: center;
   width: 50%;
   max-width: 600px;
@@ -183,7 +183,7 @@ const GetETHPage = ({ data }) => {
     {
       title: "Localcryptos.com",
       link: "https://localcryptos.com/",
-      image: getImage(data.localcryptos),
+      image: data.localcryptos.childImageSharp.fixed,
     },
   ].sort((a, b) => a.title.localeCompare(b.title))
 
@@ -191,49 +191,52 @@ const GetETHPage = ({ data }) => {
     {
       title: "1inch",
       link: "https://1inch.exchange/#/",
-      image: getImage(data.oneinch),
+      image: data.oneinch.childImageSharp.fixed,
     },
     {
       title: "Bancor",
       link: "https://www.bancor.network/",
-      image: getImage(data.bancor),
+      image: data.bancor.childImageSharp.fixed,
     },
     {
       title: "dYdX",
       link: "https://dydx.exchange/",
-      image: getImage(data.dydx),
+      image: data.dydx.childImageSharp.fixed,
     },
     {
       title: "Kyber",
       link: "https://kyberswap.com/swap/",
-      image: getImage(data.kyber),
+      image: data.kyber.childImageSharp.fixed,
     },
     {
       title: "Loopring",
       link: "https://exchange.loopring.io/",
-      image: getImage(data.loopring),
+      image: data.loopring.childImageSharp.fixed,
     },
     {
       title: "Uniswap",
       link: "https://app.uniswap.org/#/swap",
-      image: getImage(data.uniswap),
+      image: data.uniswap.childImageSharp.fixed,
     },
   ].sort((a, b) => a.title.localeCompare(b.title))
 
   const safetyArticles = [
     {
       title: "Protecting yourself and your funds",
-      link: "https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds",
+      link:
+        "https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds",
       description: "MyCrypto",
     },
     {
       title: "The keys to keeping your crypto safe",
-      link: "https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf",
+      link:
+        "https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf",
       description: "Coinbase blog",
     },
     {
       title: "How to store digital assets on Ethereum",
-      link: "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
+      link:
+        "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
       description: "ConsenSys",
     },
   ]
@@ -247,7 +250,7 @@ const GetETHPage = ({ data }) => {
 
       <HeroContainer>
         <Hero
-          image={getImage(data.hero)}
+          fluid={data.hero.childImageSharp.fluid}
           alt={translateMessageId("page-get-eth-hero-image-alt", intl)}
           loading="eager"
         />
@@ -371,7 +374,7 @@ const GetETHPage = ({ data }) => {
       </Content>
       <TwoColumnContent>
         <WalletLeftColumn>
-          <WalletImage image={getImage(data.wallet)} />
+          <WalletImage fluid={data.wallet.childImageSharp.fluid} />
           <h3>
             <Translation id="page-get-eth-community-safety" />
           </h3>
@@ -423,7 +426,7 @@ const GetETHPage = ({ data }) => {
           "page-get-eth-use-your-eth-dapps",
           intl
         )}
-        image={getImage(data.dapps)}
+        image={data.dapps.childImageSharp.fluid}
         alt={translateMessageId(
           "page-index-sections-individuals-image-alt",
           intl
@@ -445,41 +448,34 @@ export default GetETHPage
 export const listItemImage = graphql`
   fragment listItemImage on File {
     childImageSharp {
-      gatsbyImageData(
-        width: 20
-        layout: FIXED
-        placeholder: BLURRED
-        quality: 100
-      )
+      fixed(width: 20) {
+        ...GatsbyImageSharpFixed
+      }
     }
   }
 `
 
 export const query = graphql`
-  {
+  query {
     hero: file(relativePath: { eq: "get-eth.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        fluid(maxWidth: 1440) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
     wallet: file(relativePath: { eq: "wallet.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 600
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
     dapps: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 600
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
     localcryptos: file(relativePath: { eq: "exchanges/localcryptos.png" }) {

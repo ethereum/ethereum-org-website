@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import { ThemeContext } from "styled-components"
 import styled from "styled-components"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
@@ -149,7 +149,7 @@ const FullLeaderboardContainer = styled.div`
   align-items: center;
 `
 
-const Client = styled(GatsbyImage)`
+const Client = styled(Img)`
   margin: 4rem;
   margin-top: 1rem;
   margin-bottom: 3rem;
@@ -209,53 +209,57 @@ const BugBountiesPage = ({ data, location }) => {
     {
       title: "Prysm",
       link: "https://prylabs.net/",
-      image: getImage(data.prysmSmall),
+      image: data.prysmSmall.childImageSharp.fixed,
     },
     {
       title: "Lighthouse",
       link: "https://lighthouse-book.sigmaprime.io/",
       image: isDarkTheme
-        ? getImage(data.lighthouseSmallDark)
-        : getImage(data.lighthouseSmallLight),
+        ? data.lighthouseSmallDark.childImageSharp.fixed
+        : data.lighthouseSmallLight.childImageSharp.fixed,
     },
     {
       title: "Teku",
       link: "https://pegasys.tech/teku",
       image: isDarkTheme
-        ? getImage(data.tekuSmallLight)
-        : getImage(data.tekuSmallDark),
+        ? data.tekuSmallLight.childImageSharp.fixed
+        : data.tekuSmallDark.childImageSharp.fixed,
     },
     {
       title: "Nimbus",
       link: "https://our.status.im/tag/nimbus/",
-      image: getImage(data.nimbusSmall),
+      image: data.nimbusSmall.childImageSharp.fixed,
     },
   ]
 
   const tekuImage = isDarkTheme
-    ? getImage(data.tekuLight)
-    : getImage(data.tekuDark)
+    ? data.tekuLight.childImageSharp.fixed
+    : data.tekuDark.childImageSharp.fixed
 
   const lighthouseImage = isDarkTheme
-    ? getImage(data.lighthouseDark)
-    : getImage(data.lighthouseLight)
+    ? data.lighthouseDark.childImageSharp.fixed
+    : data.lighthouseLight.childImageSharp.fixed
 
   const specs = [
     {
       title: <Translation id="page-eth2-bug-bounty-title-1" />,
-      link: "https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/beacon-chain.md",
+      link:
+        "https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/beacon-chain.md",
     },
     {
       title: <Translation id="page-eth2-bug-bounty-title-2" />,
-      link: "https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/fork-choice.md",
+      link:
+        "https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/fork-choice.md",
     },
     {
       title: <Translation id="page-eth2-bug-bounty-title-3" />,
-      link: "https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/deposit-contract.md",
+      link:
+        "https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/deposit-contract.md",
     },
     {
       title: <Translation id="page-eth2-bug-bounty-title-4" />,
-      link: "https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/p2p-interface.md",
+      link:
+        "https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/p2p-interface.md",
     },
   ]
   return (
@@ -308,10 +312,10 @@ const BugBountiesPage = ({ data, location }) => {
         <Translation id="page-eth2-bug-bounty-clients" />
       </ClientIntro>
       <ClientRow>
-        <Client image={getImage(data.prysm)} />
-        <Client image={lighthouseImage} />
-        <Client image={tekuImage} />
-        <Client image={getImage(data.nimbus)} />
+        <Client fixed={data.prysm.childImageSharp.fixed} />
+        <Client fixed={lighthouseImage} />
+        <Client fixed={tekuImage} />
+        <Client fixed={data.nimbus.childImageSharp.fixed} />
       </ClientRow>
       <StyledGrayContainer id="rules">
         <Content>
@@ -527,12 +531,9 @@ export default BugBountiesPage
 export const ClientLogos = graphql`
   fragment ClientLogos on File {
     childImageSharp {
-      gatsbyImageData(
-        width: 60
-        layout: FIXED
-        placeholder: BLURRED
-        quality: 100
-      )
+      fixed(width: 60) {
+        ...GatsbyImageSharpFixed
+      }
     }
   }
 `
@@ -540,12 +541,9 @@ export const ClientLogos = graphql`
 export const ClientLogosSmall = graphql`
   fragment ClientLogosSmall on File {
     childImageSharp {
-      gatsbyImageData(
-        width: 24
-        layout: FIXED
-        placeholder: BLURRED
-        quality: 100
-      )
+      fixed(width: 24) {
+        ...GatsbyImageSharpFixed
+      }
     }
   }
 `

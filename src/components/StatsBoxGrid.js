@@ -348,7 +348,7 @@ const StatsBoxGrid = () => {
         const data = result
           .map(({ UTCDate, TotalNodeCount }) => ({
             timestamp: new Date(UTCDate).getTime(),
-            value: Number(TotalNodeCount),
+            value: TotalNodeCount,
           }))
           .sort((a, b) => a.timestamp - b.timestamp)
         const value = formatNodes(data[data.length - 1].value)

@@ -334,6 +334,7 @@ Associated with the EthFans community, the service was launched in 2015. SparkPo
 
 Deprecated on Nov 13, 2020.
 
+
 **Summary**
 
 This project aimed to implement some EIP about Tokens (e.g. EIP20) as smart contract to allow developers to easily incorporate them into their Solidity applications while adhering to standards.
@@ -342,9 +343,11 @@ This project aimed to implement some EIP about Tokens (e.g. EIP20) as smart cont
 
 [GitHub repo](https://github.com/ConsenSys/Tokens/blob/master/contracts/eip20/EIP20.sol)
 
+
 **History**
 
 The project was discontinued in favor of the "thoroughly vetted OpenZeppelin token implementations" - as per Consensys team's own words.
+
 
 **Alternatives**
 

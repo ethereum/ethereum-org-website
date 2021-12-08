@@ -3,7 +3,6 @@ import { ThemeContext } from "styled-components"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
-import { getImage } from "gatsby-plugin-image"
 
 import { translateMessageId } from "../../../utils/translations"
 import Card from "../../../components/Card"
@@ -181,7 +180,7 @@ const GetInvolvedPage = ({ data, location }) => {
         description: <Translation id="page-eth2-get-involved-written-go" />,
         alt: "eth2-client-prysm-logo-alt",
         url: "https://docs.prylabs.network/docs/getting-started/",
-        image: getImage(data.prysm),
+        image: data.prysm.childImageSharp.fixed,
         githubUrl: "https://github.com/prysmaticlabs/prysm",
         isProductionReady: true,
       },
@@ -192,8 +191,8 @@ const GetInvolvedPage = ({ data, location }) => {
         alt: "eth2-client-lighthouse-logo-alt",
         url: "https://lighthouse-book.sigmaprime.io/",
         image: isDarkTheme
-          ? getImage(data.lighthouseDark)
-          : getImage(data.lighthouseLight),
+          ? data.lighthouseDark.childImageSharp.fixed
+          : data.lighthouseLight.childImageSharp.fixed,
         githubUrl: "https://github.com/sigp/lighthouse",
         isProductionReady: true,
       },
@@ -203,7 +202,9 @@ const GetInvolvedPage = ({ data, location }) => {
         description: <Translation id="page-eth2-get-involved-written-java" />,
         alt: "eth2-client-teku-logo-alt",
         url: "https://pegasys.tech/teku",
-        image: isDarkTheme ? getImage(data.tekuLight) : getImage(data.tekuDark),
+        image: isDarkTheme
+          ? data.tekuLight.childImageSharp.fixed
+          : data.tekuDark.childImageSharp.fixed,
         githubUrl: "https://github.com/ConsenSys/teku",
         isProductionReady: true,
       },
@@ -213,7 +214,7 @@ const GetInvolvedPage = ({ data, location }) => {
         description: <Translation id="page-eth2-get-involved-written-net" />,
         alt: "eth2-client-cortex-logo-alt",
         url: "https://nethermind.io/",
-        image: getImage(data.cortex),
+        image: data.cortex.childImageSharp.fixed,
         githubUrl: "https://github.com/NethermindEth/nethermind",
         isProductionReady: false,
       },
@@ -225,7 +226,7 @@ const GetInvolvedPage = ({ data, location }) => {
         ),
         alt: "eth2-client-lodestar-logo-alt",
         url: "https://lodestar.chainsafe.io/",
-        image: getImage(data.lodestar),
+        image: data.lodestar.childImageSharp.fixed,
         githubUrl: "https://github.com/ChainSafe/lodestar",
         isProductionReady: false,
       },
@@ -235,7 +236,7 @@ const GetInvolvedPage = ({ data, location }) => {
         description: <Translation id="page-eth2-get-involved-written-nim" />,
         alt: "eth2-client-nimbus-logo-alt",
         url: "https://nimbus.team/",
-        image: getImage(data.nimbus),
+        image: data.nimbus.childImageSharp.fixed,
         githubUrl: "https://github.com/status-im/nimbus-eth2",
         isProductionReady: true,
       },
@@ -382,7 +383,7 @@ const GetInvolvedPage = ({ data, location }) => {
       </Content>
       <Staking>
         <StyledCalloutBanner
-          image={getImage(data.rhino)}
+          image={data.rhino.childImageSharp.fluid}
           alt={translateMessageId("eth2-rhino-img-alt", intl)}
           title={translateMessageId("page-eth2-get-involved-stake", intl)}
           description={translateMessageId(
@@ -458,18 +459,15 @@ export default GetInvolvedPage
 export const Clients = graphql`
   fragment Clients on File {
     childImageSharp {
-      gatsbyImageData(
-        width: 80
-        layout: FIXED
-        placeholder: BLURRED
-        quality: 100
-      )
+      fixed(width: 80) {
+        ...GatsbyImageSharpFixed
+      }
     }
   }
 `
 
 export const query = graphql`
-  {
+  query {
     bountyHunters: allEth2BountyHuntersCsv(
       sort: { order: DESC, fields: score }
     ) {
@@ -481,12 +479,9 @@ export const query = graphql`
     }
     rhino: file(relativePath: { eq: "eth2/eth2_rhino.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 800
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
     prysm: file(relativePath: { eq: "eth2/prysm.png" }) {

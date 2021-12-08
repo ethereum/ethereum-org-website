@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
-import { getImage } from "gatsby-plugin-image"
 
 import { translateMessageId } from "../../utils/translations"
 import Translation from "../../components/Translation"
@@ -158,7 +157,7 @@ const StakingPage = ({ data, location }) => {
     title: translateMessageId("page-eth2-staking-title-4", intl),
     header: translateMessageId("page-eth2-staking-header-1", intl),
     subtitle: translateMessageId("page-eth2-staking-subtitle", intl),
-    image: getImage(data.rhino),
+    image: data.rhino.childImageSharp.fluid,
     alt: translateMessageId("page-eth2-staking-image-alt", intl),
     buttons: [
       {
@@ -295,7 +294,7 @@ const StakingPage = ({ data, location }) => {
       </Content>
       <Divider />
       <StyledCallout
-        image={getImage(data.rhino)}
+        image={data.rhino.childImageSharp.fluid}
         alt={translateMessageId("eth2-rhino-img-alt", intl)}
         title={translateMessageId("page-eth2-staking-join-community", intl)}
         description={translateMessageId(
@@ -408,26 +407,20 @@ export default StakingPage
 export const poolImage = graphql`
   fragment poolImage on File {
     childImageSharp {
-      gatsbyImageData(
-        height: 20
-        layout: FIXED
-        placeholder: BLURRED
-        quality: 100
-      )
+      fixed(height: 20) {
+        ...GatsbyImageSharpFixed
+      }
     }
   }
 `
 
 export const query = graphql`
-  {
+  query {
     rhino: file(relativePath: { eq: "eth2/eth2_rhino.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 500
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
     consensys: file(relativePath: { eq: "projects/consensys.png" }) {

@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import { ThemeContext } from "styled-components"
 import styled from "styled-components"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
 import AssetDownload from "../components/AssetDownload"
@@ -17,7 +17,7 @@ import { translateMessageId } from "../utils/translations"
 // import darkVideo from "../assets/ethereum-hero-dark.mp4"
 // import lightVideo from "../assets/ethereum-hero-light.mp4"
 
-const Image = styled(GatsbyImage)`
+const Image = styled(Img)`
   align-self: center;
   width: 100%;
   margin-bottom: 2rem;
@@ -86,9 +86,7 @@ const AssetsPage = ({ data }) => {
   const intl = useIntl()
   const themeContext = useContext(ThemeContext)
   const isDarkTheme = themeContext.isDark
-  const assetPageHeroImage = isDarkTheme
-    ? data.ethDiamondPurpleHero
-    : data.ethDiamondBlackHero
+  const heroImage = isDarkTheme ? data.heroImageDark : data.heroImage
   return (
     <Page>
       <PageMetadata
@@ -99,7 +97,7 @@ const AssetsPage = ({ data }) => {
         <HeroContainer>
           <Header>
             <Image
-              image={getImage(assetPageHeroImage)}
+              fixed={heroImage.childImageSharp.fixed}
               alt={translateMessageId("page-assets-eth-diamond-gray", intl)}
             />
             <h1>
@@ -124,7 +122,7 @@ const AssetsPage = ({ data }) => {
           <AssetDownload
             title={translateMessageId("page-assets-hero", intl)}
             alt={translateMessageId("page-assets-hero", intl)}
-            image={data.hero}
+            image={data.hero.childImageSharp}
             artistName="Liam Cobb"
             artistUrl="https://liamcobb.com/"
           />
@@ -134,21 +132,21 @@ const AssetsPage = ({ data }) => {
           <AssetDownload
             title={translateMessageId("page-assets-doge", intl)}
             alt={translateMessageId("page-assets-doge", intl)}
-            image={data.doge}
+            image={data.doge.childImageSharp}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
             title={translateMessageId("page-assets-blocks", intl)}
             alt={translateMessageId("page-assets-blocks", intl)}
-            image={data.developers}
+            image={data.developers.childImageSharp}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
             title={translateMessageId("page-assets-enterprise", intl)}
             alt={translateMessageId("page-assets-enterprise", intl)}
-            image={data.enterprise}
+            image={data.enterprise.childImageSharp}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
@@ -158,21 +156,21 @@ const AssetsPage = ({ data }) => {
           <AssetDownload
             title={translateMessageId("page-assets-infrastructure", intl)}
             alt={translateMessageId("page-assets-infrastructure", intl)}
-            image={data.infrastructure}
+            image={data.infrastructure.childImageSharp}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
             title={translateMessageId("page-assets-finance", intl)}
             alt={translateMessageId("page-assets-finance", intl)}
-            image={data.finance}
+            image={data.finance.childImageSharp}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
             title={translateMessageId("page-assets-impact", intl)}
             alt={translateMessageId("page-assets-impact", intl)}
-            image={data.impact}
+            image={data.impact.childImageSharp}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
@@ -182,14 +180,14 @@ const AssetsPage = ({ data }) => {
           <AssetDownload
             title={translateMessageId("page-assets-future", intl)}
             alt={translateMessageId("page-assets-future", intl)}
-            image={data.future}
+            image={data.future.childImageSharp}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
             title={translateMessageId("page-assets-hackathon", intl)}
             alt={translateMessageId("page-assets-hackathon", intl)}
-            image={data.hackathon}
+            image={data.hackathon.childImageSharp}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
@@ -199,14 +197,14 @@ const AssetsPage = ({ data }) => {
           <AssetDownload
             title={translateMessageId("page-assets-robot", intl)}
             alt={translateMessageId("page-assets-robot", intl)}
-            image={data.wallet}
+            image={data.wallet.childImageSharp}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
             title={translateMessageId("page-assets-robot", intl)}
             alt={translateMessageId("page-assets-robot", intl)}
-            image={data.wallet}
+            image={data.wallet.childImageSharp}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
             shouldHide={true}
@@ -217,14 +215,14 @@ const AssetsPage = ({ data }) => {
           <AssetDownload
             title={translateMessageId("page-assets-bazaar", intl)}
             alt={translateMessageId("page-assets-bazaar", intl)}
-            image={data.whatIsEthereum}
+            image={data.whatIsEthereum.childImageSharp}
             artistName="Viktor Hachmang"
             artistUrl="http://viktorhachmang.nl/"
           />
           <AssetDownload
             title={translateMessageId("page-assets-eth", intl)}
             alt={translateMessageId("page-assets-eth", intl)}
-            image={data.eth}
+            image={data.eth.childImageSharp}
             artistName="Viktor Hachmang"
             artistUrl="http://viktorhachmang.nl/"
           />
@@ -234,14 +232,14 @@ const AssetsPage = ({ data }) => {
           <AssetDownload
             title={translateMessageId("page-assets-mainnet", intl)}
             alt={translateMessageId("page-assets-mainnet", intl)}
-            image={data.oldShip}
+            image={data.oldShip.childImageSharp}
             artistName="Viktor Hachmang"
             artistUrl="https://viktorhachmang.nl"
           />
           <AssetDownload
             title={translateMessageId("page-assets-merge", intl)}
             alt={translateMessageId("page-assets-merge", intl)}
-            image={data.merge}
+            image={data.merge.childImageSharp}
             artistName="Viktor Hachmang"
             artistUrl="https://viktorhachmang.nl"
           />
@@ -251,14 +249,14 @@ const AssetsPage = ({ data }) => {
           <AssetDownload
             title={translateMessageId("page-assets-beacon-chain", intl)}
             alt={translateMessageId("page-assets-beacon-chain", intl)}
-            image={data.beaconChain}
+            image={data.beaconChain.childImageSharp}
             artistName="Viktor Hachmang"
             artistUrl="http://viktorhachmang.nl/"
           />
           <AssetDownload
             title={translateMessageId("page-assets-sharding", intl)}
             alt={translateMessageId("page-assets-sharding", intl)}
-            image={data.newRings}
+            image={data.newRings.childImageSharp}
             artistName="Viktor Hachmang"
             artistUrl="https://viktorhachmang.nl"
           />
@@ -268,14 +266,14 @@ const AssetsPage = ({ data }) => {
           <AssetDownload
             title={translateMessageId("page-assets-defi", intl)}
             alt={translateMessageId("page-assets-defi", intl)}
-            image={data.defi}
+            image={data.defi.childImageSharp}
             artistName="Patrick Atkins"
             artistUrl="https://www.patrickatkins.co.uk/"
           />
           <AssetDownload
             title={translateMessageId("page-assets-dao", intl)}
             alt={translateMessageId("page-assets-dao", intl)}
-            image={data.dao}
+            image={data.dao.childImageSharp}
             artistName="Patrick Atkins"
             artistUrl="https://www.patrickatkins.co.uk/"
           />
@@ -319,39 +317,39 @@ const AssetsPage = ({ data }) => {
         <Row>
           <AssetDownload
             title="ETH gif (1)"
-            image={data.ethGifCat}
+            image={data.ethGifCat.childImageSharp}
           />
           <AssetDownload
             title="ETH gif (2)"
-            image={data.ethGifChalk}
+            image={data.ethGifChalk.childImageSharp}
           />
           <AssetDownload
             title="ETH gif (3)"
-            image={data.ethGifSun}
+            image={data.ethGifSun.childImageSharp}
           />
           <AssetDownload
             title="ETH gif (4)"
-            image={data.ethGifWaves}
+            image={data.ethGifWaves.childImageSharp}
           />
         </Row> */}
 
-        {/* TODO artistUrl */}
-        {/* <Row>
+        <Row>
+          {/* TODO artistUrl */}
           <AssetDownload
             title={translateMessageId("page-assets-hero-particles", intl)}
             alt={translateMessageId("page-assets-hero-particles", intl)}
-            image={data.oldHero}
+            image={data.oldHero.childImageSharp}
             artistName="EthWorks & Alan Wu"
             artistUrl=""
           />
           <AssetDownload
             title={translateMessageId("page-assets-hero-particles", intl)}
             alt={translateMessageId("page-assets-hero-particles", intl)}
-            image={data.oldHeroDark}
+            image={data.oldHeroDark.childImageSharp}
             artistName="EthWorks & Alan Wu"
             artistUrl=""
           />
-        </Row> */}
+        </Row>
 
         <H2 id="brand">
           <Translation id="page-assets-ethereum-brand-assets" />
@@ -365,22 +363,22 @@ const AssetsPage = ({ data }) => {
           <AssetDownload
             title={translateMessageId("page-assets-eth-diamond-glyph", intl)}
             alt={translateMessageId("page-assets-eth-diamond-glyph", intl)}
-            image={data.ethDiamondGlyph}
+            image={data.ethDiamondGlyph.childImageSharp}
           />
           <AssetDownload
             title={translateMessageId("page-assets-eth-diamond-gray", intl)}
             alt={translateMessageId("page-assets-eth-diamond-gray", intl)}
-            image={data.ethDiamondBlack}
+            image={data.ethDiamondBlack.childImageSharp}
           />
           <AssetDownload
             title={translateMessageId("page-assets-eth-diamond-color", intl)}
             alt={translateMessageId("page-assets-eth-diamond-color", intl)}
-            image={data.ethDiamondColor}
+            image={data.ethDiamondColor.childImageSharp}
           />
           <AssetDownload
             title={translateMessageId("page-assets-eth-diamond-purple", intl)}
             alt={translateMessageId("page-assets-eth-diamond-purple", intl)}
-            image={data.ethDiamondPurple}
+            image={data.ethDiamondPurple.childImageSharp}
           />
         </Row>
         <Row>
@@ -390,7 +388,7 @@ const AssetsPage = ({ data }) => {
               intl
             )}
             alt={translateMessageId("page-assets-eth-logo-portrait-gray", intl)}
-            image={data.ethPortraitBlack}
+            image={data.ethPortraitBlack.childImageSharp}
           />
           <AssetDownload
             title={translateMessageId(
@@ -401,12 +399,12 @@ const AssetsPage = ({ data }) => {
               "page-assets-eth-logo-landscape-gray",
               intl
             )}
-            image={data.ethLandscapeBlack}
+            image={data.ethLandscapeBlack.childImageSharp}
           />
           <AssetDownload
             title={translateMessageId("page-assets-eth-wordmark-gray", intl)}
             alt={translateMessageId("page-assets-eth-wordmark-gray", intl)}
-            image={data.ethWordmarkBlack}
+            image={data.ethWordmarkBlack.childImageSharp}
           />
         </Row>
         <Row>
@@ -419,7 +417,7 @@ const AssetsPage = ({ data }) => {
               "page-assets-eth-logo-portrait-purple",
               intl
             )}
-            image={data.ethPortraitPurple}
+            image={data.ethPortraitPurple.childImageSharp}
           />
           <AssetDownload
             title={translateMessageId(
@@ -430,12 +428,12 @@ const AssetsPage = ({ data }) => {
               "page-assets-eth-logo-landscape-purple",
               intl
             )}
-            image={data.ethLandscapePurple}
+            image={data.ethLandscapePurple.childImageSharp}
           />
           <AssetDownload
             title={translateMessageId("page-assets-eth-wordmark-purple", intl)}
             alt={translateMessageId("page-assets-eth-wordmark-purple", intl)}
-            image={data.ethWordmarkPurple}
+            image={data.ethWordmarkPurple.childImageSharp}
           />
         </Row>
 
@@ -447,22 +445,22 @@ const AssetsPage = ({ data }) => {
           <AssetDownload
             title={translateMessageId("page-assets-eth-diamond-white", intl)}
             alt={translateMessageId("page-assets-eth-diamond-white", intl)}
-            image={data.ethDiamondBlackWhite}
+            image={data.ethDiamondBlackWhite.childImageSharp}
           />
           <AssetDownload
             title={translateMessageId("page-assets-eth-diamond-gray", intl)}
             alt={translateMessageId("page-assets-eth-diamond-gray", intl)}
-            image={data.ethDiamondBlackGray}
+            image={data.ethDiamondBlackGray.childImageSharp}
           />
           <AssetDownload
             title={translateMessageId("page-assets-eth-diamond-purple", intl)}
             alt={translateMessageId("page-assets-eth-diamond-purple", intl)}
-            image={data.ethDiamondPurplePurple}
+            image={data.ethDiamondPurplePurple.childImageSharp}
           />
           <AssetDownload
             title={translateMessageId("page-assets-eth-diamond-white", intl)}
             alt={translateMessageId("page-assets-eth-diamond-white", intl)}
-            image={data.ethDiamondPurpleWhite}
+            image={data.ethDiamondPurpleWhite.childImageSharp}
           />
         </Row>
         <Row>
@@ -472,7 +470,7 @@ const AssetsPage = ({ data }) => {
               intl
             )}
             alt={translateMessageId("page-assets-eth-logo-portrait-gray", intl)}
-            image={data.ethPortraitBlackGray}
+            image={data.ethPortraitBlackGray.childImageSharp}
           />
           <AssetDownload
             title={translateMessageId(
@@ -483,12 +481,12 @@ const AssetsPage = ({ data }) => {
               "page-assets-eth-logo-landscape-gray",
               intl
             )}
-            image={data.ethLandscapeBlackGray}
+            image={data.ethLandscapeBlackGray.childImageSharp}
           />
           <AssetDownload
             title={translateMessageId("page-assets-eth-wordmark-gray", intl)}
             alt={translateMessageId("page-assets-eth-wordmark-gray", intl)}
-            image={data.ethWordmarkBlackGray}
+            image={data.ethWordmarkBlackGray.childImageSharp}
           />
         </Row>
         <Row>
@@ -501,7 +499,7 @@ const AssetsPage = ({ data }) => {
               "page-assets-eth-logo-portrait-purple",
               intl
             )}
-            image={data.ethPortraitPurplePurple}
+            image={data.ethPortraitPurplePurple.childImageSharp}
           />
           <AssetDownload
             title={translateMessageId(
@@ -512,12 +510,12 @@ const AssetsPage = ({ data }) => {
               "page-assets-eth-logo-landscape-purple",
               intl
             )}
-            image={data.ethLandscapePurplePurple}
+            image={data.ethLandscapePurplePurple.childImageSharp}
           />
           <AssetDownload
             title={translateMessageId("page-assets-eth-wordmark-purple", intl)}
             alt={translateMessageId("page-assets-eth-wordmark-purple", intl)}
-            image={data.ethWordmarkPurplePurple}
+            image={data.ethWordmarkPurplePurple.childImageSharp}
           />
         </Row>
         <Row>
@@ -530,7 +528,7 @@ const AssetsPage = ({ data }) => {
               "page-assets-eth-logo-portrait-white",
               intl
             )}
-            image={data.ethPortraitPurpleWhite}
+            image={data.ethPortraitPurpleWhite.childImageSharp}
           />
           <AssetDownload
             title={translateMessageId(
@@ -541,12 +539,12 @@ const AssetsPage = ({ data }) => {
               "page-assets-eth-logo-landscape-white",
               intl
             )}
-            image={data.ethLandscapePurpleWhite}
+            image={data.ethLandscapePurpleWhite.childImageSharp}
           />
           <AssetDownload
             title={translateMessageId("page-assets-eth-wordmark-white", intl)}
             alt={translateMessageId("page-assets-eth-wordmark-white", intl)}
-            image={data.ethWordmarkPurpleWhite}
+            image={data.ethWordmarkPurpleWhite.childImageSharp}
           />
         </Row>
       </Content>
@@ -556,42 +554,43 @@ const AssetsPage = ({ data }) => {
 
 export default AssetsPage
 
+export const heroImage = graphql`
+  fragment heroImage on File {
+    childImageSharp {
+      fluid(maxWidth: 1440) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
 export const assetItem = graphql`
   fragment assetItem on File {
     childImageSharp {
-      gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      fluid(maxWidth: 1000) {
+        ...GatsbyImageSharpFluid
+      }
     }
   }
 `
 
 export const query = graphql`
-  {
-    ethDiamondBlackHero: file(
-      relativePath: { eq: "assets/eth-diamond-black.png" }
-    ) {
+  query {
+    heroImage: file(relativePath: { eq: "assets/eth-diamond-black.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 80
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fixed(width: 80) {
+          ...GatsbyImageSharpFixed
+        }
       }
     }
-    ethDiamondPurpleHero: file(
-      relativePath: { eq: "assets/eth-diamond-purple.png" }
-    ) {
+    heroImageDark: file(relativePath: { eq: "assets/eth-diamond-purple.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 80
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fixed(width: 80) {
+          ...GatsbyImageSharpFixed
+        }
       }
     }
     hero: file(relativePath: { eq: "home/hero.png" }) {
-      ...assetItem
+      ...heroImage
     }
     doge: file(relativePath: { eq: "doge-computer.png" }) {
       ...assetItem
@@ -658,12 +657,12 @@ export const query = graphql`
     ethGifWaves: file(relativePath: { eq: "eth-gif-waves.png" }) {
       ...assetItem
     }
-    # oldHero: file(relativePath: { eq: "assets/hero.png" }) {
-    #   ...assetItem
-    # }
-    # oldHeroDark: file(relativePath: { eq: "assets/hero-dark.png" }) {
-    #   ...assetItem
-    # }
+    oldHero: file(relativePath: { eq: "assets/hero.png" }) {
+      ...heroImage
+    }
+    oldHeroDark: file(relativePath: { eq: "assets/hero-dark.png" }) {
+      ...heroImage
+    }
     efLogo: file(relativePath: { eq: "ef-logo.png" }) {
       ...assetItem
     }

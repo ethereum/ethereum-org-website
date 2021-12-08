@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Img from "gatsby-image"
 import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
 
@@ -75,7 +75,7 @@ const HeroContainer = styled.div`
   }
 `
 
-const Hero = styled(GatsbyImage)`
+const Hero = styled(Img)`
   flex: 1 1 100%;
   max-width: 800px;
   align-self: center;
@@ -260,7 +260,8 @@ const cardListContent = [
     caption: <Translation id="page-eth-last-updated" />,
   },
   {
-    link: "https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd",
+    link:
+      "https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd",
     title: <Translation id="page-eth-how-to-buy" />,
     description: "MyCrypto",
     caption: <Translation id="page-eth-how-to-buy-caption" />,
@@ -275,7 +276,7 @@ const WhatIsEthereumPage = (props) => {
       <PageMetadata
         title={translateMessageId("page-eth-whats-eth-meta-title", intl)}
         description={translateMessageId("page-eth-whats-eth-meta-desc", intl)}
-        image={getImage(data.ogImage)?.images.fallback.src}
+        image={data.ogImage.childImageSharp.fixed.src}
       />
       <Content>
         <HeroContainer>
@@ -298,7 +299,7 @@ const WhatIsEthereumPage = (props) => {
             </ButtonLink>
           </Header>
           <Hero
-            image={getImage(data.eth)}
+            fluid={data.eth.childImageSharp.fluid}
             alt={translateMessageId("page-eth-whats-eth-hero-alt", intl)}
             loading="eager"
           />
@@ -376,7 +377,7 @@ const WhatIsEthereumPage = (props) => {
               "page-eth-whats-ethereum-desc",
               intl
             )}
-            image={getImage(data.ethereum)}
+            image={data.ethereum.childImageSharp.fixed}
           />
           <TextDivider />
           <div>
@@ -396,7 +397,7 @@ const WhatIsEthereumPage = (props) => {
                 "page-eth-whats-defi-description",
                 intl
               )}
-              image={getImage(data.defi)}
+              image={data.defi.childImageSharp.fixed}
             />
           </div>
           <TextDivider />
@@ -442,7 +443,7 @@ const WhatIsEthereumPage = (props) => {
         <StyledCalloutBanner
           title={translateMessageId("page-eth-where-to-buy", intl)}
           description={translateMessageId("page-eth-where-to-buy-desc", intl)}
-          image={getImage(data.ethCat)}
+          image={data.ethCat.childImageSharp.fluid}
           alt={translateMessageId("page-eth-cat-img-alt", intl)}
           maxImageWidth={300}
         >
@@ -517,55 +518,54 @@ const WhatIsEthereumPage = (props) => {
 export default WhatIsEthereumPage
 
 export const query = graphql`
-  {
+  query {
+    banner: file(relativePath: { eq: "home/eth-tokens.png" }) {
+      childImageSharp {
+        fluid(maxHeight: 400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    dapps: file(relativePath: { eq: "doge-computer.png" }) {
+      childImageSharp {
+        fixed(width: 372) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
     eth: file(relativePath: { eq: "eth.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 800
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
     ogImage: file(relativePath: { eq: "eth.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 1200
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fixed(width: 1200) {
+          src
+        }
       }
     }
     ethereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 220
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fixed(width: 220) {
+          ...GatsbyImageSharpFixed
+        }
       }
     }
     defi: file(relativePath: { eq: "finance_transparent.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 220
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fixed(width: 220) {
+          ...GatsbyImageSharpFixed
+        }
       }
     }
     ethCat: file(relativePath: { eq: "eth-gif-cat.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 600
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
   }

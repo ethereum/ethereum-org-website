@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Img from "gatsby-image"
 import styled from "styled-components"
 import { cloneDeep } from "lodash"
 
@@ -104,7 +104,7 @@ const HomeLogoNavLink = styled(Link)`
   align-items: center;
 `
 
-const HomeLogo = styled(GatsbyImage)`
+const HomeLogo = styled(Img)`
   opacity: 0.85;
   &:hover {
     opacity: 1;
@@ -131,15 +131,12 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false)
 
   const data = useStaticQuery(graphql`
-    {
+    query {
       file(relativePath: { eq: "eth-home-icon.png" }) {
         childImageSharp {
-          gatsbyImageData(
-            width: 22
-            layout: FIXED
-            placeholder: BLURRED
-            quality: 100
-          )
+          fixed(width: 22) {
+            ...GatsbyImageSharpFixed
+          }
         }
       }
     }
@@ -340,7 +337,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         <NavContent>
           <HomeLogoNavLink to="/">
             <HomeLogo
-              image={getImage(data.file)}
+              fixed={data.file.childImageSharp.fixed}
               alt={translateMessageId("ethereum-logo", intl)}
             />
           </HomeLogoNavLink>

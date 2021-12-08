@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+import Img from "gatsby-image"
 import ButtonLink from "./ButtonLink"
 import { Content } from "./SharedStyledComponents"
 
@@ -28,7 +28,7 @@ const HeroContent = styled.div`
   }
 `
 
-const HeroImg = styled(GatsbyImage)`
+const HeroImg = styled(Img)`
   flex: 1 1 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -113,7 +113,7 @@ const PageHero = ({ content, children, className, isReverse }) => {
           )}
           {children}
         </HeroContent>
-        <HeroImg image={image} alt={alt} loading="eager" />
+        <HeroImg fluid={image} alt={alt} loading="eager" />
       </HeroContainer>
     </Content>
   )

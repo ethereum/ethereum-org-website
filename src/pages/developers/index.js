@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
@@ -92,7 +92,7 @@ const MonoSubtitle = styled.h2`
   margin-bottom: 0rem;
 `
 
-const Hero = styled(GatsbyImage)`
+const Hero = styled(Img)`
   flex: 1 1 50%;
   max-width: 800px;
   background-size: cover;
@@ -108,7 +108,7 @@ const Hero = styled(GatsbyImage)`
   }
 `
 
-const Image = styled(GatsbyImage)`
+const Image = styled(Img)`
   max-width: 400px;
   margin-top: 4rem;
 `
@@ -255,7 +255,7 @@ const DevelopersPage = ({ data }) => {
             </HeroCopy>
           </HeroCopyContainer>
           <Hero
-            image={getImage(data.ednHero)}
+            fluid={data.ednHero.childImageSharp.fluid}
             alt={translateMessageId("alt-eth-blocks", intl)}
             loading="eager"
           />
@@ -294,7 +294,7 @@ const DevelopersPage = ({ data }) => {
             </p>
           </IntroColumn>
           <StyledCallout
-            image={getImage(data.developers)}
+            image={data.developers.childImageSharp.fixed}
             title={translateMessageId("page-developers-improve-ethereum", intl)}
             description={translateMessageId(
               "page-developers-improve-ethereum-desc",
@@ -364,7 +364,7 @@ const DevelopersPage = ({ data }) => {
               <Translation id="page-developers-language-desc" />
             </p>
             <ImageContainer>
-              <Image image={getImage(data.doge)} />
+              <Image fixed={data.doge.childImageSharp.fixed} />
             </ImageContainer>
           </Column>
           <Column>
@@ -526,45 +526,33 @@ const DevelopersPage = ({ data }) => {
 export default DevelopersPage
 
 export const query = graphql`
-  {
+  query {
     ednHero: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 800
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
     developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          height: 200
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fixed(height: 200) {
+          ...GatsbyImageSharpFixed
+        }
       }
     }
     doge: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          height: 320
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fixed(height: 320) {
+          ...GatsbyImageSharpFixed
+        }
       }
     }
     ogImage: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 1200
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fixed(width: 1200) {
+          src
+        }
       }
     }
   }

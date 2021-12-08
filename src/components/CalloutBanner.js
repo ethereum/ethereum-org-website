@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+import Img from "gatsby-image"
 
 const StyledCard = styled.div`
   display: flex;
@@ -52,7 +52,7 @@ const Description = styled.p`
   color: ${(props) => props.theme.colors.text200};
 `
 
-const Image = styled(GatsbyImage)`
+const Image = styled(Img)`
   align-self: center; /* prevents crop */
   width: 100%;
   max-width: ${(props) => `${props.maxImageWidth}px`};
@@ -78,7 +78,7 @@ const CalloutBanner = ({
   className,
 }) => (
   <StyledCard className={className}>
-    <Image image={image} alt={alt} maxImageWidth={maxImageWidth} />
+    <Image fluid={image} alt={alt} maxImageWidth={maxImageWidth} />
     <Content>
       <H2>{title}</H2>
       <Description>{description}</Description>

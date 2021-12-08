@@ -1,7 +1,7 @@
 // Libraries
 import React from "react"
 import { graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Img from "gatsby-image"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 
@@ -24,8 +24,6 @@ const H1 = styled.h1`
   }
 `
 
-const H2 = styled.h2``
-
 const TwoColumnContent = styled.div`
   display: flex;
   width: 100%;
@@ -40,7 +38,7 @@ const TwoColumnContent = styled.div`
 
 const LeaderboardContent = styled(Content)`
   max-width: 800px;
-  h2 {
+  h1 {
     text-align: center;
   }
 `
@@ -63,7 +61,7 @@ const RightColumn = styled.div`
   }
 `
 
-const Image = styled(GatsbyImage)`
+const Image = styled(Img)`
   width: 100%;
   max-height: 500px;
   background-size: cover;
@@ -141,7 +139,7 @@ const TranslatorAcknowledgements = ({ data, location }) => {
           </LeftColumn>
           <RightColumn>
             <Image
-              image={getImage(data.dogeComputer)}
+              fluid={data.dogeComputer.childImageSharp.fluid}
               alt={translateMessageId(
                 "page-contributing-translation-program-acknowledgements-hero-image-alt",
                 intl
@@ -152,9 +150,9 @@ const TranslatorAcknowledgements = ({ data, location }) => {
       </Content>
 
       <LeaderboardContent>
-        <H2>
+        <H1>
           <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-title" />
-        </H2>
+        </H1>
         <TranslationLeaderboard />
         <p>
           <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-1" />
@@ -162,9 +160,9 @@ const TranslatorAcknowledgements = ({ data, location }) => {
       </LeaderboardContent>
 
       <Content>
-        <H2>
+        <H1>
           <Translation id="page-contributing-translation-program-acknowledgements-our-translators-title" />
-        </H2>
+        </H1>
         <p>
           <Translation id="page-contributing-translation-program-acknowledgements-our-translators-1" />
         </p>
@@ -183,9 +181,9 @@ const TranslatorAcknowledgements = ({ data, location }) => {
       </Content>
 
       <Content id="poap">
-        <H2>
+        <H1>
           <Translation id="page-contributing-translation-program-acknowledgements-poaps-title" />
-        </H2>
+        </H1>
         <p>
           <Translation id="page-contributing-translation-program-acknowledgements-1" />
         </p>
@@ -229,22 +227,16 @@ export const query = graphql`
   query {
     dogeComputer: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 500
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
     ethereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 220
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fixed(width: 220) {
+          ...GatsbyImageSharpFixed
+        }
       }
     }
   }

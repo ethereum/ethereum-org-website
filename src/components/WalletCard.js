@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Img from "gatsby-image"
 import { motion } from "framer-motion"
 import Emoji from "./Emoji"
 import Pill from "./Pill"
@@ -84,7 +84,7 @@ const ImageWrapper = styled.div`
   border-radius: 4px;
 `
 
-const Image = styled(GatsbyImage)`
+const Image = styled(Img)`
   width: 100%;
 `
 
@@ -262,7 +262,10 @@ const WalletCard = ({ wallet }) => {
           <Wrapper onClick={() => setIsCardFlipped(!isCardFlipped)}>
             <HeaderRow>
               <ImageWrapper background={wallet.brand_color}>
-                <Image image={getImage(wallet.image)} alt={wallet.alt} />
+                <Image
+                  fluid={wallet.image.childImageSharp.fluid}
+                  alt={wallet.alt}
+                />
               </ImageWrapper>
               <Title>{wallet.name}</Title>
             </HeaderRow>
@@ -322,7 +325,10 @@ const WalletCard = ({ wallet }) => {
             <FlipTitle>
               <BackHeaderRow>
                 <ImageWrapper background={wallet.brand_color}>
-                  <Image image={getImage(wallet.image)} alt={wallet.alt} />
+                  <Image
+                    fluid={wallet.image.childImageSharp.fluid}
+                    alt={wallet.alt}
+                  />
                 </ImageWrapper>
                 <Title>{wallet.name}</Title>
               </BackHeaderRow>

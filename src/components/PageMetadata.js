@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import { Location } from "@reach/router"
-import { getSrc } from "gatsby-plugin-image"
 
 import { translateMessageId, languageMetadata } from "../utils/translations"
 
@@ -19,7 +18,7 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
     ogImageEthtwo,
   } = useStaticQuery(
     graphql`
-      {
+      query {
         site {
           siteMetadata {
             author
@@ -28,42 +27,30 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
         }
         ogImageDefault: file(relativePath: { eq: "home/hero.png" }) {
           childImageSharp {
-            gatsbyImageData(
-              width: 1200
-              layout: FIXED
-              placeholder: BLURRED
-              quality: 100
-            )
+            fixed(width: 1200) {
+              src
+            }
           }
         }
         ogImageDevelopers: file(relativePath: { eq: "enterprise-eth.png" }) {
           childImageSharp {
-            gatsbyImageData(
-              width: 1200
-              layout: FIXED
-              placeholder: BLURRED
-              quality: 100
-            )
+            fixed(width: 1200) {
+              src
+            }
           }
         }
         ogImageDapps: file(relativePath: { eq: "doge-computer.png" }) {
           childImageSharp {
-            gatsbyImageData(
-              width: 1200
-              layout: FIXED
-              placeholder: BLURRED
-              quality: 100
-            )
+            fixed(width: 1200) {
+              src
+            }
           }
         }
         ogImageEthtwo: file(relativePath: { eq: "eth2/eth2_doge.png" }) {
           childImageSharp {
-            gatsbyImageData(
-              width: 1200
-              layout: FIXED
-              placeholder: BLURRED
-              quality: 100
-            )
+            fixed(width: 1200) {
+              src
+            }
           }
         }
       }
@@ -79,7 +66,7 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
   return (
     <Location>
       {({ location }) => {
-        /* Set canonical URL w/ language path to avoid duplicate content */
+        /* Set canonocial URL w/ language path to avoid duplicate content */
         /* e.g. set ethereum.org/about/ to ethereum.org/en/about/ */
         const { pathname } = location
         let canonicalPath = pathname
@@ -92,20 +79,20 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
 
         /* Set fallback ogImage based on path */
         const siteUrl = site.siteMetadata.url
-        let ogImage = getSrc(ogImageDefault)
+        let ogImage = ogImageDefault.childImageSharp.fixed.src
         if (pathname.includes("/developers/")) {
-          ogImage = getSrc(ogImageDevelopers)
+          ogImage = ogImageDevelopers.childImageSharp.fixed.src
         }
         if (pathname.includes("/dapps/")) {
-          ogImage = getSrc(ogImageDapps)
+          ogImage = ogImageDapps.childImageSharp.fixed.src
         }
         if (pathname.includes("/eth2/")) {
-          ogImage = getSrc(ogImageEthtwo)
+          ogImage = ogImageEthtwo.childImageSharp.fixed.src
         }
         if (image) {
           ogImage = image
         }
-        const ogImageUrl = `${siteUrl}${ogImage}`
+        const ogImageUrl = siteUrl.concat(ogImage)
 
         return (
           <Helmet

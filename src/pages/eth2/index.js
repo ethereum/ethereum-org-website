@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
@@ -167,7 +167,7 @@ const StakingCard = styled(StyledCard)`
   margin: 0;
 `
 
-const StakingImage = styled(GatsbyImage)`
+const StakingImage = styled(Img)`
   margin: 3rem 0;
   align-self: center;
   width: 100%;
@@ -226,7 +226,7 @@ const Eth2IndexPage = ({ data }) => {
     title: translateMessageId("page-eth2-upgrades", intl),
     header: translateMessageId("page-eth2-upgrading", intl),
     subtitle: translateMessageId("page-eth2-upgrade-desc", intl),
-    image: getImage(data.merge),
+    image: data.merge.childImageSharp.fluid,
     alt: translateMessageId("page-dapps-doge-img-alt", intl),
     buttons: [
       {
@@ -243,21 +243,21 @@ const Eth2IndexPage = ({ data }) => {
 
   const upgrades = [
     {
-      image: getImage(data.beaconchain),
+      image: data.beaconchain.childImageSharp.fixed,
       title: <Translation id="page-eth2-beacon-chain-title" />,
       description: <Translation id="page-eth2-beacon-chain-desc" />,
       to: "/eth2/beacon-chain/",
       date: <Translation id="page-eth2-beacon-chain-estimate" />,
     },
     {
-      image: getImage(data.themerge),
+      image: data.themerge.childImageSharp.fixed,
       title: <Translation id="page-eth2-docking" />,
       description: <Translation id="page-eth2-docking-desc" />,
       to: "/eth2/merge/",
       date: <Translation id="page-eth2-docking-estimate" />,
     },
     {
-      image: getImage(data.shards),
+      image: data.shards.childImageSharp.fixed,
       title: <Translation id="page-eth2-shard-title" />,
       description: <Translation id="page-eth2-shard-desc" />,
       to: "/eth2/shard-chains/",
@@ -312,7 +312,7 @@ const Eth2IndexPage = ({ data }) => {
         </Vision>
       </Content>
       <StyledCallout
-        image={getImage(data.oldship)}
+        image={data.oldship.childImageSharp.fluid}
         alt={translateMessageId("page-eth-whats-eth-hero-alt", intl)}
         title={translateMessageId("page-eth2-dive", intl)}
         description={translateMessageId("page-eth2-dive-desc", intl)}
@@ -406,7 +406,7 @@ const Eth2IndexPage = ({ data }) => {
                 <Translation id="page-eth2-deposit-contract-staking-more-link" />
               </ButtonLink>
             </StakingCard>
-            <StakingImage image={getImage(data.rhino)} />
+            <StakingImage fluid={data.rhino.childImageSharp.fluid} />
           </StakingRightColumn>
         </StakingColumns>
       </Staking>
@@ -779,60 +779,47 @@ const Eth2IndexPage = ({ data }) => {
 export default Eth2IndexPage
 
 export const query = graphql`
-  {
+  query {
     oldship: file(relativePath: { eq: "eth2/oldship.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 800
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
     rhino: file(relativePath: { eq: "eth2/eth2_rhino.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 320
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fluid(maxWidth: 320) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
     merge: file(relativePath: { eq: "eth2/merge.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
     beaconchain: file(relativePath: { eq: "eth2/core.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 420
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fixed(width: 420) {
+          ...GatsbyImageSharpFixed
+        }
       }
     }
     shards: file(relativePath: { eq: "eth2/newrings.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 420
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fixed(width: 420) {
+          ...GatsbyImageSharpFixed
+        }
       }
     }
     themerge: file(relativePath: { eq: "eth2/merge.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 420
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fixed(width: 420) {
+          ...GatsbyImageSharpFixed
+        }
       }
     }
   }

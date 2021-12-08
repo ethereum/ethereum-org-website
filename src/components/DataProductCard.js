@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+import Img from "gatsby-image"
 
 import Link from "./Link"
 
@@ -14,7 +14,7 @@ const ImageWrapper = styled.div`
   min-height: 200px;
 `
 
-const Image = styled(GatsbyImage)`
+const Image = styled(Img)`
   width: 100%;
   align-self: center;
   max-width: 372px;
@@ -88,7 +88,7 @@ const Box = styled.div`
   align-items: center;
 `
 
-const Logo = styled(GatsbyImage)`
+const Logo = styled(Img)`
   min-width: 24px;
   margin-right: 0.5rem;
 `
@@ -103,7 +103,7 @@ const DataProductCard = ({
 }) => (
   <Card hideArrow={true} to={url}>
     <ImageWrapper background={background}>
-      <Image image={image} alt={`${name} logo`} />
+      <Image fixed={image} alt={`${name} logo`} />
     </ImageWrapper>
     <Content>
       <div>
@@ -115,7 +115,7 @@ const DataProductCard = ({
           {data.map(({ logo, coin, apy }, idx) => (
             <DataRow key={idx}>
               <Box>
-                {logo && <Logo image={logo} />}
+                {logo && <Logo fixed={logo} />}
                 {coin}
               </Box>
               <div>{apy}% APY</div>

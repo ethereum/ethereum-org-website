@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import makeBlockie from "ethereum-blockies-base64"
-import { getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
 
 import Breadcrumbs from "../../components/Breadcrumbs"
@@ -263,23 +262,25 @@ const DepositContractPage = ({ data, location }) => {
   const addressSources = [
     {
       title: "ConsenSys",
-      link: "https://consensys.net/blog/news/eth2-phase-0-deposit-contract-address/",
-      image: getImage(data.consensys),
+      link:
+        "https://consensys.net/blog/news/eth2-phase-0-deposit-contract-address/",
+      image: data.consensys.childImageSharp.fixed,
     },
     {
       title: "Ethereum Foundation",
       link: "https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/",
-      image: getImage(data.ef),
+      image: data.ef.childImageSharp.fixed,
     },
     {
       title: "Etherscan",
       link: `https://etherscan.io/address/${DEPOSIT_CONTRACT_ADDRESS}`,
-      image: getImage(data.etherscan),
+      image: data.etherscan.childImageSharp.fixed,
     },
     {
       title: "EthHub",
-      link: "https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/deposit-contract/",
-      image: getImage(data.ethhub),
+      link:
+        "https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/deposit-contract/",
+      image: data.ethhub.childImageSharp.fixed,
     },
   ]
 
@@ -377,8 +378,7 @@ const DepositContractPage = ({ data, location }) => {
                   callback={() =>
                     setState({
                       ...state,
-                      userWillCheckOtherSources:
-                        !state.userWillCheckOtherSources,
+                      userWillCheckOtherSources: !state.userWillCheckOtherSources,
                     })
                   }
                 >
@@ -470,12 +470,9 @@ export default DepositContractPage
 export const sourceImage = graphql`
   fragment sourceImage on File {
     childImageSharp {
-      gatsbyImageData(
-        height: 20
-        layout: FIXED
-        placeholder: BLURRED
-        quality: 100
-      )
+      fixed(height: 20) {
+        ...GatsbyImageSharpFixed
+      }
     }
   }
 `

@@ -4,7 +4,7 @@ import { useIntl } from "gatsby-plugin-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Img from "gatsby-image"
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown from "../components/ButtonDropdown"
 import BannerNotification from "../components/BannerNotification"
@@ -34,6 +34,7 @@ import {
   Paragraph,
   Header1,
   Header4,
+  H5,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 
@@ -221,6 +222,7 @@ const components = {
   h2: H2,
   h3: H3,
   h4: Header4,
+  h5: H5,
   p: Paragraph,
   pre: Pre,
   table: MarkdownTable,
@@ -297,7 +299,7 @@ const HeroContainer = styled.div`
   }
 `
 
-const Image = styled(GatsbyImage)`
+const Image = styled(Img)`
   flex: 1 1 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -437,7 +439,7 @@ const UseCasePage = ({ data, pageContext }) => {
         </TitleCard>
         <Image
           useCase={useCase}
-          image={getImage(mdx.frontmatter.image)}
+          fluid={mdx.frontmatter.image.childImageSharp.fluid}
           alt={mdx.frontmatter.alt}
         />
       </HeroContainer>
@@ -495,11 +497,9 @@ export const useCasePageQuery = graphql`
         alt
         image {
           childImageSharp {
-            gatsbyImageData(
-              layout: FULL_WIDTH
-              placeholder: BLURRED
-              quality: 100
-            )
+            fluid(maxHeight: 640) {
+              ...GatsbyImageSharpFluid
+            }
           }
         }
         isOutdated

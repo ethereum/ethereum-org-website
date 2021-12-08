@@ -4,7 +4,7 @@ import { useIntl } from "gatsby-plugin-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Img from "gatsby-image"
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown from "../components/ButtonDropdown"
 import Breadcrumbs from "../components/Breadcrumbs"
@@ -317,7 +317,7 @@ const HeroContainer = styled.div`
   }
 `
 
-const Image = styled(GatsbyImage)`
+const Image = styled(Img)`
   flex: 1 1 100%;
   max-width: 816px;
   background-size: cover;
@@ -422,7 +422,7 @@ const Eth2Page = ({ data, data: { mdx } }) => {
             {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
           </LastUpdated>
         </TitleCard>
-        <Image image={getImage(mdx.frontmatter.image)} />
+        <Image fluid={mdx.frontmatter.image.childImageSharp.fluid} />
       </HeroContainer>
       <MoreContent to="#content">
         <Icon name="chevronDown" />
@@ -481,11 +481,9 @@ export const eth2PageQuery = graphql`
         summaryPoints
         image {
           childImageSharp {
-            gatsbyImageData(
-              layout: FULL_WIDTH
-              placeholder: BLURRED
-              quality: 100
-            )
+            fluid(maxHeight: 640) {
+              ...GatsbyImageSharpFluid
+            }
           }
         }
         isOutdated

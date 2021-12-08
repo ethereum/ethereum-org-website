@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Img from "gatsby-image"
 import Emoji from "./Emoji"
 
 import Translation from "../components/Translation"
@@ -19,7 +19,7 @@ const Container = styled.div`
   }
 `
 
-const Image = styled(GatsbyImage)`
+const Image = styled(Img)`
   align-self: center;
   width: 100%;
 `
@@ -69,7 +69,7 @@ const AssetDownload = ({
   title,
 }) => {
   const baseUrl = `https://ethereum.org`
-  const downloadUri = src ? src : getImage(image)?.images.fallback.src
+  const downloadUri = src ? src : image.fluid.src
   const downloadUrl = `${baseUrl}${downloadUri}`
 
   return (
@@ -79,7 +79,7 @@ const AssetDownload = ({
         {children && <ImageContainer>{children}</ImageContainer>}
         {!children && (
           <ImageContainer>
-            <Image image={getImage(image)} alt={alt} />
+            <Image fluid={image.fluid} alt={alt} />
           </ImageContainer>
         )}
         {artistName && (

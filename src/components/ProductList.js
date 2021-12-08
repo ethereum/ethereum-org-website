@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+import Img from "gatsby-image"
 
 import ButtonLink from "./ButtonLink"
 import Translation from "./Translation"
@@ -59,7 +59,7 @@ const LeftContainer = styled.div`
   flex-direction: column;
 `
 
-const Image = styled(GatsbyImage)`
+const Image = styled(Img)`
   box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
   border-radius: 2px;
 `
@@ -80,7 +80,7 @@ const ProductList = ({ content, category }) => (
     {content.map(({ title, description, link, image, alt, id }, idx) => (
       <Item key={id || idx}>
         <ImageContainer>
-          {image && <Image image={image} alt={alt} />}
+          {image && <Image fluid={image} alt={alt} />}
         </ImageContainer>
         <TextContent>
           <LeftContainer>

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+import Img from "gatsby-image"
 
 const StyledCard = styled.div`
   display: flex;
@@ -26,7 +26,7 @@ const Description = styled.p`
   color: ${(props) => props.theme.colors.text200};
 `
 
-const Image = styled(GatsbyImage)`
+const Image = styled(Img)`
   margin-top: -10rem;
   align-self: center;
   max-width: 263px;
@@ -43,7 +43,7 @@ const Content = styled.div`
 
 const Callout = ({ image, alt, title, description, children, className }) => (
   <StyledCard className={className}>
-    <Image image={image} alt={alt} />
+    <Image fixed={image} alt={alt} />
     <Content>
       <div>
         <h3>{title}</h3>

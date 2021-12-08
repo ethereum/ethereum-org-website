@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo } from "react"
 import styled from "styled-components"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
@@ -46,7 +46,7 @@ const StyledGradientContainer = styled(GradientContainer)`
   background: ${(props) => props.theme.colors.ednBackground};
 ` */
 
-const Image = styled(GatsbyImage)`
+const Image = styled(Img)`
   background-size: cover;
   background-repeat: repeat;
   align-self: center;
@@ -455,7 +455,7 @@ const StablecoinsPage = ({ data }) => {
       background: "linear-gradient(225deg, #AA589B 0%, #5CB8C4 100%)",
       url: "https://aave.com",
       alt: translateMessageId("aave-logo", intl),
-      image: getImage(data.aave),
+      image: data.aave.childImageSharp.fixed,
       name: "Aave",
       /* data: [
         {
@@ -483,7 +483,7 @@ const StablecoinsPage = ({ data }) => {
       background: "#F9FAFB",
       url: "https://compound.finance",
       alt: translateMessageId("compound-logo", intl),
-      image: getImage(data.compound),
+      image: data.compound.childImageSharp.fixed,
       name: "Compound",
       /* data: [
         {
@@ -511,7 +511,7 @@ const StablecoinsPage = ({ data }) => {
       background: "#212121",
       url: "https://trade.dydx.exchange/portfolio/overview",
       alt: translateMessageId("dydx-logo", intl),
-      image: getImage(data.dydx),
+      image: data.dydx.childImageSharp.fixed,
       name: "dYdX",
       /* data: [
         {
@@ -539,7 +539,7 @@ const StablecoinsPage = ({ data }) => {
       background: "linear-gradient(135deg, #C7EFE6 0%, #EEEAC7 100%)",
       url: "https://oasis.app",
       alt: translateMessageId("oasis-logo", intl),
-      image: getImage(data.oasis),
+      image: data.oasis.childImageSharp.fixed,
       name: "Oasis",
       /* data: [
         {
@@ -584,7 +584,7 @@ const StablecoinsPage = ({ data }) => {
     title: translateMessageId("page-stablecoins-title", intl),
     header: translateMessageId("page-stablecoins-hero-header", intl),
     subtitle: translateMessageId("page-stablecoins-hero-subtitle", intl),
-    image: getImage(data.stablecoins),
+    image: data.stablecoins.childImageSharp.fluid,
     alt: translateMessageId("page-stablecoins-hero-alt", intl),
     buttons: [
       {
@@ -722,7 +722,7 @@ const StablecoinsPage = ({ data }) => {
                 </div>
               </StyledLeftColumn>
               <Image
-                image={getImage(data.dailarge)}
+                fluid={data.dailarge.childImageSharp.fluid}
                 alt={translateMessageId("page-stablecoins-dai-logo", intl)}
               />
             </StyledDaiBanner>
@@ -757,7 +757,7 @@ const StablecoinsPage = ({ data }) => {
                 </div>
               </StyledLeftColumn>
               <Image
-                image={getImage(data.usdclarge)}
+                fluid={data.usdclarge.childImageSharp.fluid}
                 alt={translateMessageId("page-stablecoins-usdc-logo", intl)}
               />
             </USDCBanner>
@@ -800,7 +800,7 @@ const StablecoinsPage = ({ data }) => {
             "page-stablecoins-stablecoins-dapp-callout-description",
             intl
           )}
-          image={getImage(data.doge)}
+          image={data.doge.childImageSharp.fluid}
           maxImageWidth={600}
           alt={translateMessageId(
             "page-stablecoins-stablecoins-dapp-callout-image-alt",
@@ -881,105 +881,75 @@ const StablecoinsPage = ({ data }) => {
 export default StablecoinsPage
 
 export const query = graphql`
-  {
+  query {
     stablecoins: file(relativePath: { eq: "stablecoins/hero.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 624
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fluid(maxWidth: 624) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
     dai: file(relativePath: { eq: "stablecoins/dai-large.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 600
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
     dailarge: file(relativePath: { eq: "stablecoins/dai-large.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 300
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
     usdclarge: file(relativePath: { eq: "stablecoins/usdc-large.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 300
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
     doge: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 600
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
     compound: file(relativePath: { eq: "stablecoins/compound.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 160
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fixed(width: 160) {
+          ...GatsbyImageSharpFixed
+        }
       }
     }
     aave: file(relativePath: { eq: "stablecoins/aave.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 64
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fixed(width: 64) {
+          ...GatsbyImageSharpFixed
+        }
       }
     }
     dydx: file(relativePath: { eq: "exchanges/dydx.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 80
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fixed(width: 80) {
+          ...GatsbyImageSharpFixed
+        }
       }
     }
     oasis: file(relativePath: { eq: "stablecoins/dai-large.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 80
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fixed(width: 80) {
+          ...GatsbyImageSharpFixed
+        }
       }
     }
     oasissmall: file(relativePath: { eq: "stablecoins/dai-large.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 24
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fixed(width: 24) {
+          ...GatsbyImageSharpFixed
+        }
       }
     }
   }

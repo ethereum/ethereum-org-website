@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Img from "gatsby-image"
 
 import { translateMessageId } from "../../utils/translations"
 import Translation from "../../components/Translation"
@@ -50,7 +50,7 @@ const HeroContainer = styled.div`
   }
 `
 
-const Hero = styled(GatsbyImage)`
+const Hero = styled(Img)`
   position: absolute !important;
   z-index: -1;
   width: 100%;
@@ -98,7 +98,7 @@ const FindWalletPage = ({ location, data }) => {
 
       <HeroContainer>
         <Hero
-          image={getImage(data.hero)}
+          fluid={data.hero.childImageSharp.fluid}
           alt={translateMessageId("page-find-wallet-image-alt", intl)}
           loading="eager"
         />
@@ -131,7 +131,7 @@ const FindWalletPage = ({ location, data }) => {
           "page-find-wallet-use-wallet-desc",
           intl
         )}
-        image={getImage(data.dapps)}
+        image={data.dapps.childImageSharp.fluid}
         alt={translateMessageId(
           "page-index-sections-individuals-image-alt",
           intl
@@ -151,20 +151,19 @@ const FindWalletPage = ({ location, data }) => {
 export default FindWalletPage
 
 export const query = graphql`
-  {
+  query {
     hero: file(relativePath: { eq: "wallets/find-wallet-hero.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+        fluid(maxWidth: 1440) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
     dapps: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        gatsbyImageData(
-          width: 600
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
   }
