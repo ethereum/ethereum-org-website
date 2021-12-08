@@ -1,7 +1,10 @@
+// Libraries
 import React, { useState } from "react"
 import styled from "styled-components"
-import Emoji from "./Emoji"
 
+// Components
+import Emoji from "./Emoji"
+import InfoBanner from "./InfoBanner"
 import Link from "./Link"
 
 const meetups = [
@@ -360,18 +363,25 @@ const MeetupList = () => {
         placeholder={"Search by meetup title or location"}
       />
       <Table>
-        {filteredMeetups.map((meetup, idx) => (
-          <Item key={idx} to={meetup.link}>
-            <LeftContainer>
-              <ItemNumber>{idx + 1}</ItemNumber>
-              <ItemTitle>{meetup.title}</ItemTitle>
-            </LeftContainer>
-            <RightContainer>
-              <Emoji text={meetup.emoji} size={1} mr={`0.5em`} />
-              <ItemDesc>{meetup.location}</ItemDesc>
-            </RightContainer>
-          </Item>
-        ))}
+        {filteredMeetups.length ? (
+          filteredMeetups.map((meetup, idx) => (
+            <Item key={idx} to={meetup.link}>
+              <LeftContainer>
+                <ItemNumber>{idx + 1}</ItemNumber>
+                <ItemTitle>{meetup.title}</ItemTitle>
+              </LeftContainer>
+              <RightContainer>
+                <Emoji text={meetup.emoji} size={1} mr={`0.5em`} />
+                <ItemDesc>{meetup.location}</ItemDesc>
+              </RightContainer>
+            </Item>
+          ))
+        ) : (
+          <InfoBanner emoji=":information_source:">
+            We don't have any meetups matching this search. Know of one? Please
+            add it to this page!
+          </InfoBanner>
+        )}
       </Table>
     </div>
   )
