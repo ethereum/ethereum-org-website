@@ -11,7 +11,7 @@ lang: en
 
 <UpcomingEventsList/>
 
-This is a non-exhaustive list built by our community. Know of an upcoming Ethereum event to add to this list? [Please add it](https://github.com/ethereum/ethereum-org-website#content-contributions)!
+This is a non-exhaustive list maintained by our community. Know of an upcoming Ethereum event to add to this list? [Please add it](https://github.com/ethereum/ethereum-org-website#content-contributions)!
 
 ## Ethereum meetups {#meetups}
 

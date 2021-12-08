@@ -21,12 +21,14 @@ Despite the lack of official support, many groups, communities, and projects acr
 
 ## Wallet support {#wallet-support}
 
-Having trouble with your wallet? Most wallets have dedicated support teams that can help.
+Having trouble with your wallet? Most wallets have dedicated support teams that can help:
 
 - [MetaMask](https://metamask.zendesk.com/hc/)
 - [Argent](https://support.argent.xyz/hc/)
 
-_This is not an exhaustive list. Need help finding support? Join the [ethereum.org discord](https://discord.gg/rZz26QWfCg) and we'll try to help._
+_This is not an exhaustive list. Need help finding support for a specific wallet? Join the [ethereum.org discord](https://discord.gg/rZz26QWfCg) and we'll try to help._
+
+Looking for an Ethereum wallet? [Explore our full list of Ethereum wallets](/wallets/find-wallet/).
 
 ## Building dapps {#building-support}
 
@@ -36,17 +38,19 @@ Building can be hard. Here are some development focused spaces with experienced 
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 
+You can also find documentation and development guides in our [Ethereum developer resources](/developers/) section.
+
 ### Tooling {#dapp-tooling}
 
 Does your question relate to a particular tool, project, or library? Most projects have chat servers or forums dedicated to supporting you.
+
+Here are some popular examples:
 
 - [Solidity](https://gitter.im/ethereum/solidity/) <!-- What is the best place to send people to here? -->
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
 - [Truffle](https://discord.gg/8uKcsccEYE)
-- [Chainlink](https://discord.gg/2YHSAey)
-- [Optimism](https://discord.gg/wGt8hjbZtu)
 
 ## Running a node {#node-support}
 
@@ -71,6 +75,8 @@ Most of the teams building Ethereum clients also have dedicated, public-facing, 
 - [Lighthouse](https://discord.gg/cyAszAh)
 - [Teku](https://discord.gg/7hPv2T6)
 - [Lodestar](https://discord.gg/aMxzVcr)
+
+You can also [learn how to run a node here](/developers/docs/nodes-and-clients/run-a-node/).
 
 ## Common Questions {#common-questions}
 
