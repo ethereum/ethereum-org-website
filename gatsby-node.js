@@ -1,8 +1,12 @@
 // https://www.gatsbyjs.org/docs/node-apis/
 const fs = require("fs")
 const path = require(`path`)
+const util = require("util")
+const child_process = require("child_process")
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const gatsbyConfig = require(`./gatsby-config.js`)
+
+const exec = util.promisify(child_process.exec)
 
 const supportedLanguages = gatsbyConfig.siteMetadata.supportedLanguages
 const defaultLanguage = gatsbyConfig.siteMetadata.defaultLanguage
@@ -76,7 +80,7 @@ const checkIsMdxOutdated = (path) => {
       intlMatch += match.replace(re, (_, p1, p2) => p1 + p2)
     })
   } catch {
-    console.error("regex error")
+    console.warn(`regex error in ${englishPath}`)
     return true
   }
 
@@ -199,7 +203,169 @@ exports.onCreateNode = async ({ node, getNode, actions }) => {
 }
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
+  createRedirect({
+    fromPath: "/",
+    toPath: "/en/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "/what-is-ethereum/",
+    toPath: "/en/what-is-ethereum/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "/eth/",
+    toPath: "/en/eth/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "/dapps/",
+    toPath: "/en/dapps/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "/wallets/",
+    toPath: "/en/wallets/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "/learn/",
+    toPath: "/en/learn/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "/community/",
+    toPath: "/en/community/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "/build/",
+    toPath: "/en/developers/learning-tools/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "/developers/",
+    toPath: "/en/developers/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "/enterprise/",
+    toPath: "/en/enterprise/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "/whitepaper/",
+    toPath: "/en/whitepaper/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "/foundation/",
+    toPath: "/en/foundation/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "/eips/",
+    toPath: "/en/eips/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "/about/",
+    toPath: "/en/about/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "/privacy-policy/",
+    toPath: "/en/privacy-policy/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "/terms-of-use/",
+    toPath: "/en/terms-of-use/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "/cookie-policy/",
+    toPath: "/en/cookie-policy/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "/languages/",
+    toPath: "/en/languages/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "/enterprise/",
+    toPath: "/en/enterprise/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "/java/",
+    toPath: "/en/developers/docs/programming-languages/java/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "/python/",
+    toPath: "/en/developers/docs/programming-languages/python/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "/javascript/",
+    toPath: "/en/developers/docs/programming-languages/javascript/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "/golang/",
+    toPath: "/en/developers/docs/programming-languages/golang/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "/rust/",
+    toPath: "/en/developers/docs/programming-languages/rust/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "/dot-net/",
+    toPath: "/en/developers/docs/programming-languages/dot-net/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "/delphi/",
+    toPath: "/en/developers/docs/programming-languages/delphi/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "/dart/",
+    toPath: "/en/developers/docs/programming-languages/dart/",
+    isPermanent: true,
+    force: true,
+  })
 
   const result = await graphql(`
     query {
@@ -397,4 +563,17 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
   `
   createTypes(typeDefs)
+}
+
+// Build lambda functions when the build is complete and the `/public` folder exists
+exports.onPostBuild = async (gatsbyNodeHelpers) => {
+  const { reporter } = gatsbyNodeHelpers
+
+  const reportOut = (report) => {
+    const { stderr, stdout } = report
+    if (stderr) reporter.error(stderr)
+    if (stdout) reporter.info(stdout)
+  }
+
+  reportOut(await exec("npm run build:lambda && cp netlify.toml public"))
 }

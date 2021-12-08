@@ -60,6 +60,6 @@ contract Counter {
 
 如果我们现在部署合约并调用 increment 函数，如果您在名为 logs 的数组内单击新交易，我们将看到 Remix 会自动显示它。
 
-![Remix截屏](./remix-screenshot.png)
+![Remix截屏](../../../../../developers/tutorials/logging-events-smart-contracts/remix-screenshot.png)
 
 日志在调试智能合约时非常有用，另一方面，如果您构建一个不同人使用的应用，并且使分析更容易跟踪和了解您的智能合约的使用情况，那么日志也是非常重要的手段。 交易生成的日志会显示常见的区块浏览器中，并且，举例来说，您也可以使用它们来创建链外脚本，用于侦听特定的事件，并且这些事件发生时采取相应操作。

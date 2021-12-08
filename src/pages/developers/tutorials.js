@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
-import { some } from "lodash"
 
 import Translation from "../../components/Translation"
 import { translateMessageId } from "../../utils/translations"
@@ -245,7 +244,9 @@ const TutorialsPage = ({ data, pageContext }) => {
 
   const allTutorials = [].concat(externalTutorials, internalTutorials)
 
-  const hasTutorialsCheck = some(allTutorials, ["lang", pageContext.language])
+  const hasTutorialsCheck = allTutorials.some(
+    (tutorial) => tutorial.lang === pageContext.language
+  )
 
   const filteredTutorials = allTutorials
     .filter((tutorial) =>
