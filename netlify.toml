@@ -131,6 +131,10 @@
   to = "/en/eth/"
   force = true
 [[redirects]]
+  from = "/eth2/"
+  to = "/en/eth2/"
+  force = true
+[[redirects]]
   from = "/dapps/"
   to = "/en/dapps/"
   force = true
@@ -231,18 +235,23 @@
 [[redirects]]
   from = "/nft/"
   to = "/en/nft/"
+  force = true
 [[redirects]]
   from = "/nfts/"
   to = "/en/nft/"
+  force = true
 [[redirects]]
   from = "/dao/"
   to = "/en/dao/"
+  force = true
 [[redirects]]
   from = "/daos/"
   to = "/en/dao/"
+  force = true
 [[redirects]]
   from = "/defi/"
   to = "/en/defi/"
+  force = true
 
 # Norwegian update
 ## All translations
