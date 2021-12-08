@@ -263,8 +263,7 @@ const DepositContractPage = ({ data, location }) => {
   const addressSources = [
     {
       title: "ConsenSys",
-      link:
-        "https://consensys.net/blog/news/eth2-phase-0-deposit-contract-address/",
+      link: "https://consensys.net/blog/news/eth2-phase-0-deposit-contract-address/",
       image: getImage(data.consensys),
     },
     {
@@ -279,8 +278,7 @@ const DepositContractPage = ({ data, location }) => {
     },
     {
       title: "EthHub",
-      link:
-        "https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/deposit-contract/",
+      link: "https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/deposit-contract/",
       image: getImage(data.ethhub),
     },
   ]
@@ -379,7 +377,8 @@ const DepositContractPage = ({ data, location }) => {
                   callback={() =>
                     setState({
                       ...state,
-                      userWillCheckOtherSources: !state.userWillCheckOtherSources,
+                      userWillCheckOtherSources:
+                        !state.userWillCheckOtherSources,
                     })
                   }
                 >
