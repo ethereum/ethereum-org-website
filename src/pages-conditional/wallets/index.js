@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
 import { shuffle } from "lodash"
@@ -78,7 +78,7 @@ const SubtitleThree = styled.div`
   text-align: center;
 `
 
-const FindWallet = styled(Img)`
+const FindWallet = styled(GatsbyImage)`
   margin-top: 2rem;
   max-width: 800px;
   background-size: cover;
@@ -228,7 +228,7 @@ const WalletsPage = ({ data }) => {
     // Add fields for CardList
     const randomWallets = shuffle(
       nodes.map((node) => {
-        node.image = data[node.id].childImageSharp.fixed
+        node.image = getImage(data[node.id])
         node.title = node.name
         node.description = translateMessageId(
           `page-find-wallet-description-${node.id}`,
@@ -264,7 +264,7 @@ const WalletsPage = ({ data }) => {
     title: translateMessageId("page-wallets-title", intl),
     header: translateMessageId("page-wallets-slogan", intl),
     subtitle: translateMessageId("page-wallets-subtitle", intl),
-    image: data.hero.childImageSharp.fluid,
+    image: getImage(data.hero),
     alt: translateMessageId("page-wallets-alt", intl),
     buttons: [
       {
@@ -279,7 +279,7 @@ const WalletsPage = ({ data }) => {
       <PageMetadata
         title={translateMessageId("page-wallets-meta-title", intl)}
         description={translateMessageId("page-wallets-meta-description", intl)}
-        image={data.ogImage.childImageSharp.fixed.src}
+        image={getImage(data.ogImage)?.images.fallback.src}
       />
       <PageHero content={heroContent} />
       <StyledGrayContainer>
@@ -420,7 +420,7 @@ const WalletsPage = ({ data }) => {
             <ButtonLink to="/wallets/find-wallet/">
               <Translation id="page-wallets-find-wallet-btn" />
             </ButtonLink>
-            <FindWallet fluid={data.findWallet.childImageSharp.fluid} alt="" />
+            <FindWallet image={getImage(data.findWallet)} alt="" />
           </CentralColumn>
         </Content>
       </GradientContainer>
@@ -503,7 +503,7 @@ const WalletsPage = ({ data }) => {
         </H2>
         <CalloutCardContainer>
           <StyledCallout
-            image={data.eth.childImageSharp.fixed}
+            image={getImage(data.eth)}
             title={translateMessageId("page-wallets-get-some", intl)}
             alt={translateMessageId("page-wallets-get-some-alt", intl)}
             description={translateMessageId("page-wallets-get-some-desc", intl)}
@@ -515,7 +515,7 @@ const WalletsPage = ({ data }) => {
             </div>
           </StyledCallout>
           <StyledCallout
-            image={data.dapps.childImageSharp.fixed}
+            image={getImage(data.dapps)}
             title={translateMessageId("page-wallets-try-dapps", intl)}
             alt={translateMessageId("page-wallets-try-dapps-alt", intl)}
             description={translateMessageId(
@@ -540,9 +540,12 @@ export default WalletsPage
 export const calloutImage = graphql`
   fragment calloutImage on File {
     childImageSharp {
-      fixed(height: 200) {
-        ...GatsbyImageSharpFixed
-      }
+      gatsbyImageData(
+        height: 200
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
@@ -550,34 +553,41 @@ export const calloutImage = graphql`
 export const listImage = graphql`
   fragment listImage on File {
     childImageSharp {
-      fixed(height: 20) {
-        ...GatsbyImageSharpFixed
-      }
+      gatsbyImageData(
+        height: 20
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
 
 export const query = graphql`
-  query {
+  {
     hero: file(relativePath: { eq: "wallet.png" }) {
       childImageSharp {
-        fluid(maxHeight: 600) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
     findWallet: file(relativePath: { eq: "wallets/find-wallet.png" }) {
       childImageSharp {
-        fluid(maxWidth: 800, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(
+          width: 800
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     ogImage: file(relativePath: { eq: "wallet-cropped.png" }) {
       childImageSharp {
-        fixed(width: 738) {
-          src
-        }
+        gatsbyImageData(
+          width: 738
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     eth: file(relativePath: { eq: "eth-logo.png" }) {
