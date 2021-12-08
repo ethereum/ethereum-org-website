@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Emoji from "./Emoji"
+import { sortBy } from 'lodash'
 
 import Link from "./Link"
 
@@ -318,13 +319,13 @@ const LeftContainer = styled.div`
 `
 
 // sort meetups by country and then by city
-_.sortBy(meetups, ['emoji', 'location']);
+const sortedMeetups = sortBy(meetups, ['emoji', 'location']);
 
 // TODO create generalized CardList / TableCard
 // TODO prop if ordered list or unordered
 const MeetupList = () => (
   <Table>
-    {meetups.map((meetup, idx) => (
+    {sortedMeetups.map((meetup, idx) => (
       <Item key={idx} to={meetup.link}>
         <LeftContainer>
           <ItemNumber>{idx + 1}</ItemNumber>
