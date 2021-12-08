@@ -262,7 +262,7 @@ const meetups = [
     emoji: ":thailand:",
     location: "Chiang Mai",
     link: "https://www.facebook.com/groups/219236462407862/",
-  }, 
+  },
   {
     title: "Web3 Together",
     emoji: ":cambodia:",
