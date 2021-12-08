@@ -249,6 +249,10 @@ const InfoIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.text};
 `
 
+const ButtonLinkWrap = styled(ButtonLink)`
+  white-space: break-spaces;
+`
+
 const ButtonLinkContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -814,9 +818,9 @@ const StablecoinsPage = ({ data }) => {
             <ButtonLink to="/dapps/">
               <Translation id="page-stablecoins-explore-dapps" />
             </ButtonLink>
-            <ButtonLink isSecondary to="/defi/">
+            <ButtonLinkWrap isSecondary to="/defi/">
               <Translation id="page-stablecoins-more-defi-button" />
-            </ButtonLink>
+            </ButtonLinkWrap>
           </ButtonLinkContainer>
         </StyledCalloutBanner>
         <h2>
