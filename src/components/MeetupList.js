@@ -315,7 +315,7 @@ const filterMeetups = (query) => {
   if (!query) return meetups
 
   return meetups.filter((meetup) => {
-    return meetup.title.includes(query)
+    return meetup.title.includes(query) || meetup.location.includes(query)
   })
 }
 
@@ -329,7 +329,7 @@ const MeetupList = () => {
 
   return (
     <div>
-      {/* <input onChange={handleSearch} /> */}
+      <input onChange={handleSearch} />
       <Table>
         {filteredMeetups.map((meetup, idx) => (
           <Item key={idx} to={meetup.link}>
