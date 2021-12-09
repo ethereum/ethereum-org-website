@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
@@ -162,13 +162,13 @@ const ImageContainer = styled.div`
   }
 `
 
-const IntroImage = styled(Img)`
+const IntroImage = styled(GatsbyImage)`
   width: 100%;
   background-size: cover;
   background: no-repeat 50px;
 `
 
-const FeatureImage = styled(Img)`
+const FeatureImage = styled(GatsbyImage)`
   width: 100%;
 `
 
@@ -354,13 +354,13 @@ const CommunityPage = ({ data }) => {
     header: "Welcome to the Ethereum community hub",
     subtitle:
       "The Ethereum community is home to hundreds of thousands of developers, technologists, designers, users, HODLers and enthusiasts.",
-    image: data.enterprise.childImageSharp.fluid,
+    image: getImage(data.enterprise),
     alt: translateMessageId("page-community-hero-alt", intl),
   }
 
   const cards = [
     {
-      image: data.docking.childImageSharp.fixed,
+      image: getImage(data.docking),
       title: "Join an online community",
       description:
         "Find your tribe and participate in community with other Ethereum enthusiasts.",
@@ -368,7 +368,7 @@ const CommunityPage = ({ data }) => {
       to: "/community/online/",
     },
     {
-      image: data.eth.childImageSharp.fixed,
+      image: getImage(data.eth),
       title: "Ethereum events",
       description:
         "Find and participate in an Ethereum conference, hackathon, or meetup.",
@@ -376,7 +376,7 @@ const CommunityPage = ({ data }) => {
       to: "/community/events/",
     },
     {
-      image: data.doge.childImageSharp.fixed,
+      image: getImage(data.doge),
       title: "Contribute to a project",
       description:
         "Check out how to get involved for a list of ways that you can contribute based on your skills and professional background.",
@@ -384,7 +384,7 @@ const CommunityPage = ({ data }) => {
       to: "/community/get-involved/",
     },
     {
-      image: data.future.childImageSharp.fixed,
+      image: getImage(data.future),
       title: "Search for grants",
       description:
         "Funding grants are available to help you get a project off the ground.",
@@ -470,7 +470,7 @@ const CommunityPage = ({ data }) => {
             </IntroLeftColumn>
             <ImageContainer>
               <IntroImage
-                fluid={data.developerBlocks.childImageSharp.fluid}
+                image={getImage(data.developerBlocks)}
                 alt={translateMessageId(
                   "page-community-get-involved-image-alt",
                   intl
@@ -517,7 +517,7 @@ const CommunityPage = ({ data }) => {
           </FeatureContent>
           <ImageContainer>
             <FeatureImage
-              fluid={data.ethereum.childImageSharp.fluid}
+              image={getImage(data.ethereum)}
               alt={translateMessageId(
                 "page-community-open-source-image-alt",
                 intl
@@ -558,7 +558,7 @@ const CommunityPage = ({ data }) => {
           </FeatureContent>
           <ImageContainer>
             <FeatureImage
-              fluid={data.finance.childImageSharp.fluid}
+              image={getImage(data.finance)}
               alt={translateMessageId("page-index-internet-image-alt", intl)}
             />
           </ImageContainer>
@@ -586,7 +586,7 @@ const CommunityPage = ({ data }) => {
           </FeatureContent>
           <ImageContainer>
             <FeatureImage
-              fluid={data.hackathon.childImageSharp.fluid}
+              image={getImage(data.hackathon)}
               alt={translateMessageId("page-community-support-alt", intl)}
             />
           </ImageContainer>
@@ -601,7 +601,7 @@ const CommunityPage = ({ data }) => {
       <Content>
         <CardContainer>
           <StyledCallout
-            image={data.eth.childImageSharp.fixed}
+            image={getImage(data.eth)}
             title="Get some ETH"
             alt="alt"
             description="ETH is the native currency of Ethereum. You'll need some ETH in your wallet to use Ethereum applications."
@@ -611,7 +611,7 @@ const CommunityPage = ({ data }) => {
             </div>
           </StyledCallout>
           <StyledCallout
-            image={data.doge.childImageSharp.fixed}
+            image={getImage(data.doge)}
             title="Try some dapps"
             alt="alt"
             description="Dapps are applications built on Ethereum. Dapps are disrupting current business models and inventing new ones."
@@ -632,72 +632,102 @@ export const query = graphql`
   query {
     enterprise: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(
+          width: 800
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     developerBlocks: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       childImageSharp {
-        fluid(maxWidth: 624) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(
+          width: 624
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     ethereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1440) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(
+          width: 1440
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     finance: file(relativePath: { eq: "finance_transparent.png" }) {
       childImageSharp {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(
+          width: 800
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     hackathon: file(relativePath: { eq: "hackathon_transparent.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1440) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(
+          width: 1440
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     docking: file(relativePath: { eq: "eth2/core.png" }) {
       childImageSharp {
-        fixed(width: 320) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(
+          width: 320
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     eth: file(relativePath: { eq: "eth.png" }) {
       childImageSharp {
-        fixed(width: 320) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(
+          width: 320
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     doge: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        fixed(width: 320) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(
+          width: 320
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     future: file(relativePath: { eq: "future_transparent.png" }) {
       childImageSharp {
-        fixed(width: 320) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(
+          width: 320
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     enterpriseFixed: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
-        fixed(width: 320) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(
+          width: 320
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
   }

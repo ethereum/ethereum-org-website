@@ -59,7 +59,7 @@ const Title = styled.h1`
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: 400;
-  margin-bottom: -2rem;
+  margin-bottom: 1rem;
   color: ${(props) => props.theme.colors.text300};
 `
 
