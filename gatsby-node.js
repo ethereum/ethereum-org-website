@@ -207,7 +207,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage, createRedirect } = actions
 
   redirects.forEach((redirect) => {
-    createRedirect(redirect)
+    createRedirect({
+      ...redirect,
+      isPermanent: true,
+      ignoreCase: true,
+      force: true,
+    })
   })
 
   const result = await graphql(`
