@@ -30,7 +30,7 @@ module.exports = {
         defaultLanguage,
         // redirect to `/${lang}/` when connecting to `/`
         // based on user's browser language preference
-        redirect: true,
+        redirect: false, // TODO look into this - test out disabling this?
       },
     },
     // Web app manifest
