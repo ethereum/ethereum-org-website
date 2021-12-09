@@ -194,16 +194,6 @@ const H3 = styled.h3`
   margin-bottom: 1rem;
 `
 
-const CenterText = styled.p`
-  text-align: center;
-  max-width: 800px;
-  margin-bottom: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: auto 1.5rem;
-    margin-bottom: 1rem;
-  }
-`
-
 const OpenSourceContainer = styled.div`
   background: ${(props) => props.theme.colors.homeBoxTurquoise};
   display: flex;
@@ -327,33 +317,10 @@ const StyledCallout = styled(Callout)`
 const CommunityPage = ({ data }) => {
   const intl = useIntl()
 
-  // const heroContent = {
-  //   title: translateMessageId("page-community-title, intl),
-  //   header: translateMessageId("page-community-hero-header", intl),
-  //   subtitle: translateMessageId("page-community-hero-subtitle", intl),
-  //   image: data.stablecoins.childImageSharp.fluid,
-  //   alt: translateMessageId("page-community-hero-alt", intl),
-  //   buttons: [
-  //     {
-  //       content: translateMessageId("page-community-hero-button", intl),
-  //       path: "#",
-  //     },
-  //     {
-  //       content: translateMessageId(
-  //         "page-community-developer-support-button",
-  //         intl
-  //       ),
-  //       path: "#",
-  //       isSecondary: "isSecondary",
-  //     },
-  //   ],
-  // }
-
   const heroContent = {
-    title: "Join the community",
-    header: "Welcome to the Ethereum community hub",
-    subtitle:
-      "The Ethereum community is home to hundreds of thousands of developers, technologists, designers, users, HODLers and enthusiasts.",
+    title: translateMessageId("page-community-hero-title", intl),
+    header: translateMessageId("page-community-hero-header", intl),
+    subtitle: translateMessageId("page-community-hero-subtitle", intl),
     image: getImage(data.enterprise),
     alt: translateMessageId("page-community-hero-alt", intl),
   }
@@ -361,33 +328,41 @@ const CommunityPage = ({ data }) => {
   const cards = [
     {
       image: getImage(data.docking),
-      title: "Join an online community",
-      description:
-        "Find your tribe and participate in community with other Ethereum enthusiasts.",
+      title: translateMessageId("page-community-card-1-title", intl),
+      description: translateMessageId(
+        "page-community-card-1-description",
+        intl
+      ),
       alt: translateMessageId("page-index-get-started-wallet-image-alt", intl),
       to: "/community/online/",
     },
     {
       image: getImage(data.eth),
-      title: "Ethereum events",
-      description:
-        "Find and participate in an Ethereum conference, hackathon, or meetup.",
+      title: translateMessageId("page-community-card-2-title", intl),
+      description: translateMessageId(
+        "page-community-card-2-description",
+        intl
+      ),
       alt: translateMessageId("page-index-get-started-eth-image-alt", intl),
       to: "/community/events/",
     },
     {
       image: getImage(data.doge),
-      title: "Contribute to a project",
-      description:
-        "Check out how to get involved for a list of ways that you can contribute based on your skills and professional background.",
+      title: translateMessageId("page-community-card-3-title", intl),
+      description: translateMessageId(
+        "page-community-card-3-description",
+        intl
+      ),
       alt: translateMessageId("page-index-get-started-dapps-image-alt", intl),
       to: "/community/get-involved/",
     },
     {
       image: getImage(data.future),
-      title: "Search for grants",
-      description:
-        "Funding grants are available to help you get a project off the ground.",
+      title: translateMessageId("page-community-card-4-title", intl),
+      description: translateMessageId(
+        "page-community-card-4-description",
+        intl
+      ),
       alt: translateMessageId("page-index-get-started-dapps-image-alt", intl),
       to: "/community/grants/",
     },
@@ -396,43 +371,56 @@ const CommunityPage = ({ data }) => {
   const whyGetInvolvedCards = [
     {
       emoji: ":mage:",
-      title: "Find your tribe",
-      description:
-        "There is a tribe for everyone. Find and connect with like minded individuals to discuss, ponder, and celebrate Ethereum together.",
+      title: translateMessageId(
+        "page-community-why-get-involved-card-1-title",
+        intl
+      ),
+      description: translateMessageId(
+        "page-community-why-get-involved-card-1-description",
+        intl
+      ),
     },
     {
       emoji: ":dollar:",
-      title: "Earn a living",
-      description:
-        "Everyone has bills to pay. Ethereum allows you to find meaningful work, and get paid well to do it.",
+      title: translateMessageId(
+        "page-community-why-get-involved-card-2-title",
+        intl
+      ),
+      description: translateMessageId(
+        "page-community-why-get-involved-card-2-description",
+        intl
+      ),
     },
     {
       emoji: ":collision:",
-      title: "Make a difference",
-      description:
-        "Getting involved with Ethereum allows you to be an active stakeholder in a technology that is having a positive impact on millions of people.",
+      title: translateMessageId(
+        "page-community-why-get-involved-card-3-title",
+        intl
+      ),
+      description: translateMessageId(
+        "page-community-why-get-involved-card-3-description",
+        intl
+      ),
     },
   ]
 
   return (
     <Page>
-      {/* <PageMetadata
-        title={translateMessageId("page-community-title", intl)}
+      <PageMetadata
+        title={translateMessageId("page-community-meta-title", intl)}
         description={translateMessageId(
           "page-community-meta-description",
           intl
         )}
-      /> */}
-      <PageMetadata
-        title="Community Hub"
-        description="Community homepage description"
       />
       <PageHero isReverse content={heroContent} />
       <Divider />
       <StyledPurpleContainer>
         <Content>
           <CentralColumn>
-            <H2>Why get involved?</H2>
+            <H2>
+              <Translation id="page-community-why-get-involved-title" />
+            </H2>
           </CentralColumn>
           <CardContainer>
             {whyGetInvolvedCards.map((card, idx) => (
@@ -451,22 +439,11 @@ const CommunityPage = ({ data }) => {
           <IntroRow>
             <IntroLeftColumn>
               <H2 id="get-involved">
-                {/* <Translation id="page-community-get-involved" /> */}
-                How can I get involved?
+                <Translation id="page-community-get-involved-title" />
               </H2>
               <Subtitle>
-                {/* <Translation id="page-community-get-involved-description" /> */}
-                There are many ways to get involved in the fast-growing Ethereum
-                community; you can join one of the popular online communities,
-                attend an event, join a meetup group, contribute to a project,
-                or participate in one of the many online forums about Ethereum.
+                <Translation id="page-community-get-involved-description" />
               </Subtitle>
-              {/* 
-              <ButtonLink to="/community/grants">
-                <Translation id="page-community-get-involved-button" /> 
-                Get involved!
-              </ButtonLink>
-              */}
             </IntroLeftColumn>
             <ImageContainer>
               <IntroImage
@@ -496,22 +473,17 @@ const CommunityPage = ({ data }) => {
         <RowReverse>
           <FeatureContent>
             <H2>
-              {/* <Translation id="page-community-open-source" /> */}
-              Creator? Builder? Get paid for your work.
+              <Translation id="page-community-open-source" />
             </H2>
             <Subtitle>
-              {/* <Translation id="page-community-open-source-description" /> */}
-              Are you building on Ethereum, or do you want to? Companies are
-              hiring for thousands of technical and non-technical roles. Got an
-              idea of your own? Try finding a grant to get your project off the
-              ground.
+              <Translation id="page-community-open-source-description" />
             </Subtitle>
             <ButtonRow>
               <ButtonLink to="/community/get-involved/#ethereum-jobs/">
-                Find a job
+                <Translation id="page-community-find-a-job" />
               </ButtonLink>
               <StyledButtonLink isSecondary to="/community/grants/">
-                Explore Grants
+                <Translation id="page-community-explore-grants" />
               </StyledButtonLink>
             </ButtonRow>
           </FeatureContent>
@@ -531,27 +503,20 @@ const CommunityPage = ({ data }) => {
           <FeatureContent>
             <LeftColumnContent>
               <H2>
-                {/* <Translation id="page-community-poap" /> */}
-                Contribute to ethereum.org
+                <Translation id="page-community-contribute" />
               </H2>
               <Subtitle>
-                {/* <Translation id="page-community-poap-description" /> */}
-                For many people, ethereum.org is their first step into the
-                ecosystem. It is kept up-to-date and accurate by thousands of
-                open-source contributors. Want to help? Read our guide on
-                contributing, or take up an issue on our GitHub.
+                <Translation id="page-community-contribute-description" />
               </Subtitle>
               <ButtonRow>
                 <ButtonLink to="/contributing/">
-                  {/* <Translation id="page-community-poap-button" /> */}
-                  More on contributing
+                  <Translation id="page-community-contribute-button" />
                 </ButtonLink>
                 <StyledButtonLink
                   isSecondary
                   to="https://github.com/ethereum/ethereum-org-website/"
                 >
-                  {/* <Translation id="page-community-poap-secondary-button" /> */}
-                  View on GitHub
+                  <Translation id="page-community-contribute-secondary-button" />
                 </StyledButtonLink>
               </ButtonRow>
             </LeftColumnContent>
@@ -568,19 +533,14 @@ const CommunityPage = ({ data }) => {
         <RowReverse>
           <FeatureContent>
             <H2>
-              {/* <Translation id="page-community-support" /> */}
-              Ethereum support
+              <Translation id="page-community-support" />
             </H2>
             <Subtitle>
-              {/* <Translation id="page-community-support-description" /> */}
-              Need support? There is no official Ethereum support, but hundreds
-              of helpful communities are available to help you prosper on
-              Ethereum.
+              <Translation id="page-community-support-description" />
             </Subtitle>
             <div>
               <ButtonLink to="/community/support/">
-                {/* <Translation id="page-community-support-button" /> */}
-                Get support
+                <Translation id="page-community-support-button" />
               </ButtonLink>
             </div>
           </FeatureContent>
@@ -595,29 +555,44 @@ const CommunityPage = ({ data }) => {
       <Divider />
       <TwoColumnContent>
         <Column>
-          <h2>Try Ethereum for yourself</h2>
+          <h2>
+            <Translation id="page-community-try-ethereum" />
+          </h2>
         </Column>
       </TwoColumnContent>
       <Content>
         <CardContainer>
           <StyledCallout
             image={getImage(data.eth)}
-            title="Get some ETH"
-            alt="alt"
-            description="ETH is the native currency of Ethereum. You'll need some ETH in your wallet to use Ethereum applications."
+            title={translateMessageId("page-community-get-eth-title", intl)}
+            alt={translateMessageId("page-community-get-eth-alt", intl)}
+            description={translateMessageId(
+              "page-community-get-eth-description",
+              intl
+            )}
           >
             <div>
-              <ButtonLink to="/get-eth/">Get ETH</ButtonLink>
+              <ButtonLink to="/get-eth/">
+                <Translation id="page-community-get-eth" />
+              </ButtonLink>
             </div>
           </StyledCallout>
           <StyledCallout
             image={getImage(data.doge)}
-            title="Try some dapps"
-            alt="alt"
-            description="Dapps are applications built on Ethereum. Dapps are disrupting current business models and inventing new ones."
+            title={translateMessageId(
+              "page-community-explore-dapps-title",
+              intl
+            )}
+            alt={translateMessageId("page-community-explore-dapps-alt", intl)}
+            description={translateMessageId(
+              "page-community-explore-dapps-description",
+              intl
+            )}
           >
             <div>
-              <ButtonLink to="/dapps/">Explore dapps</ButtonLink>
+              <ButtonLink to="/dapps/">
+                <Translation id="page-community-explore-dapps" />
+              </ButtonLink>
             </div>
           </StyledCallout>
         </CardContainer>
