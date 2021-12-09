@@ -9,7 +9,7 @@
   },
   {
     "fromPath": "/ether",
-    "toPath": "/en/dapps/"
+    "toPath": "/en/eth/"
   },
   {
     "fromPath": "/token",
@@ -32,32 +32,8 @@
     "toPath": "/en/"
   },
   {
-    "fromPath": "/use",
-    "toPath": "/en/dapps/"
-  },
-  {
     "fromPath": "/beginners",
     "toPath": "/en/what-is-ethereum/"
-  },
-  {
-    "fromPath": "/ar/use",
-    "toPath": "/ar/dapps/"
-  },
-  {
-    "fromPath": "/de/use",
-    "toPath": "/de/dapps/"
-  },
-  {
-    "fromPath": "/fr/use",
-    "toPath": "/fr/dapps/"
-  },
-  {
-    "fromPath": "/id/use",
-    "toPath": "/id/dapps/"
-  },
-  {
-    "fromPath": "/sk/use",
-    "toPath": "/sk/dapps/"
   },
   {
     "fromPath": "/",
@@ -216,7 +192,7 @@
   },
   {
     "fromPath": "/no/*",
-    "toPath": "/nb/:splat"
+    "toPath": "/nb/*"
   },
   {
     "fromPath": "/en/java/",
@@ -260,34 +236,38 @@
   },
   {
     "fromPath": "/*/beginners",
-    "toPath": "/:splat/what-is-ethereum/"
+    "toPath": "/*/what-is-ethereum/"
+  },
+  {
+    "fromPath": "/*/use",
+    "toPath": "/*/dapps/"
   },
   {
     "fromPath": "/*/build",
-    "toPath": "/:splat/developers/learning-tools/"
+    "toPath": "/*/developers/learning-tools/"
   },
   {
     "fromPath": "/*/eth2/the-docking",
-    "toPath": "/:splat/eth2/merge/"
+    "toPath": "/*/eth2/merge/"
   },
   {
     "fromPath": "/*/eth2/the-merge",
-    "toPath": "/:splat/eth2/merge/"
+    "toPath": "/*/eth2/merge/"
   },
   {
     "fromPath": "/*/eth2/docking",
-    "toPath": "/:splat/eth2/merge/"
+    "toPath": "/*/eth2/merge/"
   },
   {
     "fromPath": "/*/developers/docs/layer-2-scaling",
-    "toPath": "/:splat/developers/docs/scaling"
+    "toPath": "/*/developers/docs/scaling"
   },
   {
     "fromPath": "/*/about/web-developer",
-    "toPath": "/:splat/about/#open-jobs"
+    "toPath": "/*/about/#open-jobs"
   },
   {
     "fromPath": "/*/about/community-lead",
-    "toPath": "/:splat/about/#open-jobs"
+    "toPath": "/*/about/#open-jobs"
   }
 ]
