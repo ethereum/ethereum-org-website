@@ -40,15 +40,14 @@ const Title = styled.h3`
   margin-top: 0;
 `
 
-const EventCard = ({ title, to, date, description, className }) => (
+const EventCard = ({ title, to, date, description, className, location }) => (
   <StyledCard className={className}>
     <Date>
       {date}
       <Emoji text=":spiral_calendar:" size={1} ml={`0.5em`} />
     </Date>
     <Location>
-      {/* TODO: Refactor events to have locations */}
-      <LocationText>New York</LocationText>
+      <LocationText>{location}</LocationText>
       <Emoji text=":round_pushpin:" size={1} ml={`0.5em`} />
     </Location>
     <Title>{title}</Title>
