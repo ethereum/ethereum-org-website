@@ -8,7 +8,7 @@ const StyledCard = styled.div`
   flex: 1 1 30%;
   max-width: 620px;
   min-width: 240px;
-  margin: 1rem;
+  margin: 2rem 0;
   flex-direction: column;
   justify-content: space-between;
   background: ${(props) => props.theme.colors.ednBackground};

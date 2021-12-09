@@ -11,9 +11,7 @@ import Link from "../components/Link"
 import events from "../data/community-events.json"
 
 const EventList = styled.ul`
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-left: 0;
-  }
+  margin: 0;
 `
 
 const EventListItem = styled.li`
