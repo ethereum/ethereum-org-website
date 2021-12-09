@@ -53,11 +53,11 @@ Preprosto povedano je "pametna pogodba" samo delček kode, ki se izvaja v Ethere
 
 ## Dokaz dela in rudarjenje {#proof-of-work-and-mining}
 
-Ethereum trenutno uporablja sistem imenovan dokaz dela (“Proof of Work”). Ta omrežju Ethereum omogoča, da ima preverljivo stanje vseh podatkov, zabeleženih v verigi blokov Ethereuma, in preprečuje nekatere vrste ekonomskih napadov na omrežje.
+Ethereum trenutno uporablja sistem imenovan dokaz dela (“proof-of-work). Ta omrežju Ethereum omogoča, da ima preverljivo stanje vseh podatkov, zabeleženih v verigi blokov Ethereuma, in preprečuje nekatere vrste ekonomskih napadov na omrežje.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Pogosto posodobljeno – Ethhub_
 
-V ETH 2.0 bo Ethereum prešel na drugačen sistem, imenovan "dokaz deleža" (“Proof of Stake”). [Več o ETH 2.0 preberite spodaj](#eth-2-0).
+V ETH 2.0 bo Ethereum prešel na drugačen sistem, imenovan "dokaz deleža" (“proof-of-stake”). [Več o ETH 2.0 preberite spodaj](#eth-2-0).
 
 ## Odjemalci in vozlišča {#clients-and-nodes}
 

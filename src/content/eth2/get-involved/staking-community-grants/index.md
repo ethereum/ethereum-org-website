@@ -36,7 +36,7 @@ If you want to submit something but need some inspiration, check out the <a href
 Ideas and projects at any stage of development are welcome:
 
 - Idea phase.
-- Proof of concept.
+- Proof-of-concept.
 - Work in progress.
 - Fleshed out project.
 

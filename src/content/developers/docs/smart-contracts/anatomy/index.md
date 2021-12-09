@@ -176,7 +176,7 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
 Using this Remix tutorial, [create a `constructor` function](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
 --->
 
-<!-- TODO add additional funciton types
+<!-- TODO add additional function types
 
 ### Pure functions {#pure-functions}
 
@@ -559,7 +559,7 @@ contract CryptoPizza is IERC721, ERC165 {
         bytes memory _data
     ) public {
         this.transferFrom(from, to, pizzaId);
-        require(_checkOnERC721Received(from, to, pizzaId, _data), "Must implmement onERC721Received.");
+        require(_checkOnERC721Received(from, to, pizzaId, _data), "Must implement onERC721Received.");
     }
 
     /**

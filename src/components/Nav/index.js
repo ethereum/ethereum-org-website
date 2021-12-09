@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { cloneDeep } from "lodash"
 
@@ -104,7 +104,7 @@ const HomeLogoNavLink = styled(Link)`
   align-items: center;
 `
 
-const HomeLogo = styled(Img)`
+const HomeLogo = styled(GatsbyImage)`
   opacity: 0.85;
   &:hover {
     opacity: 1;
@@ -131,12 +131,15 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false)
 
   const data = useStaticQuery(graphql`
-    query {
+    {
       file(relativePath: { eq: "eth-home-icon.png" }) {
         childImageSharp {
-          fixed(width: 22) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(
+            width: 22
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
     }
@@ -338,6 +341,12 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       setIsMenuOpen(false)
       setIsSearchOpen(false)
     }
+
+    if (isMenuOpen || isSearchOpen) {
+      document.documentElement.style.overflowY = "scroll"
+    } else {
+      document.documentElement.style.overflowY = "hidden"
+    }
   }
 
   const shouldShowSubNav = path.includes("/developers/")
@@ -348,7 +357,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         <NavContent>
           <HomeLogoNavLink to="/">
             <HomeLogo
-              fixed={data.file.childImageSharp.fixed}
+              image={getImage(data.file)}
               alt={translateMessageId("ethereum-logo", intl)}
             />
           </HomeLogoNavLink>

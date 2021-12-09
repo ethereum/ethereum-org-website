@@ -55,6 +55,18 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Unique API endpoints
     - Webhooks
     - Direct support
+- [**Ankr**](https://www.ankr.com/)
+  - [Docs](https://docs.ankr.com/)
+  - Features
+    - Ankr Protocol - open access to Public RPC API endpoints for 8+ chains
+    - Load balancing and node health monitoring for a fast and reliable gateway to the nearest available node
+    - Premium tier enabling WSS endpoint and uncapped rate limit
+    - One-click full node and validator node deployment for 40+ chains
+    - Scale as you go
+    - Analytics tools
+    - Dashboard
+    - RPC, HTTPS and WSS endpoints
+    - Direct support
 - [**BlockDaemon**](https://blockdaemon.com/)
   - [Docs](https://ubiquity.docs.blockdaemon.com/)
   - Benefits
@@ -125,7 +137,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - 15+ Blockchains Supported
     - 6400+ Nodes earning POKT for serving applications
     - Archival Node, Archival Node w/ Tracing, & Testnet Node Support
-    - Ethereum Mainnet Node Client Diversity 
+    - Ethereum Mainnet Node Client Diversity
     - No Single Point of Failure
     - Zero Downtime
     - Cost-Effective Near-Zero Tokenomics (stake POKT once for network bandwidth)
@@ -134,7 +146,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Infinitely scale the number of requests per day and nodes per hour as you go
     - The most private, censorship-resistant option
     - Hands-on developer support
-    - [Pocket Portal](https://bit.ly/ETHorg_POKTportal) dashboard and analytics 
+    - [Pocket Portal](https://bit.ly/ETHorg_POKTportal) dashboard and analytics
 - [**QuikNode**](https://www.quiknode.io/)
   - Features
     - 7 day free trial

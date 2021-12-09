@@ -19,7 +19,7 @@ Ethereum currently uses a [proof-of-work](/developers/docs/consensus-mechanisms/
 
 New blocks are broadcast to the nodes in the network, checked and verified, thus updating the state of the blockchain for everyone.
 
-So to summarise, when you send ETH to someone, the transaction must be mined and included in a new block. The updated state is then shared with the entire network.
+So to summarize, when you send ETH to someone, the transaction must be mined and included in a new block. The updated state is then shared with the entire network.
 
 Watch Austin walk you through blockchains:
 
@@ -41,7 +41,7 @@ Cryptographic mechanisms ensure that once transactions are verified as valid and
 
 ## What is ether? {#what-is-ether}
 
-The purpose of ether, the cryptocurrency, is to allow for a market for computation. Such a market provides an economic incentive for participants to verify and execute transaction requests and provide computational resources to the network.
+**Ether (ETH)** is the native cryptocurrency of Ethereum. The purpose of ether is to allow for a market for computation. Such a market provides an economic incentive for participants to verify and execute transaction requests and provide computational resources to the network.
 
 Any participant who broadcasts a transaction request must also offer some amount of ether to the network as a bounty. This bounty will be awarded to whoever eventually does the work of verifying the transaction, executing it, committing it to the blockchain, and broadcasting it to the network.
 
@@ -66,6 +66,8 @@ The sequence of all blocks that have been committed to the Ethereum network in t
 ### ETH {#eth}
 
 The native cryptocurrency of Ethereum. Users pay ether to other users to have their code execution requests fulfilled.
+
+[More on ETH](/developers/docs/intro-to-ether/)
 
 ### EVM {#evm}
 

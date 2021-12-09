@@ -58,13 +58,13 @@ sidebarDepth: 1
 - [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _2018 年 11 月 12 日 - Andreas M. Antonopoulos, Gavin Wood_
 - [What are Smart Contracts/Decentralized Applications?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) _頻繁にアップデートあり - Ethhub_
 
-## Proof of Work とマイニング {#proof-of-work-and-mining}
+## Proof-of-work とマイニング {#proof-of-work-and-mining}
 
-イーサリアムは現在 Proof of Work と呼ばれるシステムを使用しています。 これによってイーサリアムブロックチェーンに記録された全ての情報の状態に関してネットワーク全体で合意を取り、経済的な攻撃を防ぐことができます。
+イーサリアムは現在 proof-of-work と呼ばれるシステムを使用しています。 これによってイーサリアムブロックチェーンに記録された全ての情報の状態に関してネットワーク全体で合意を取り、経済的な攻撃を防ぐことができます。
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _頻繁にアップデートあり - Ethhub_
 
-ETH 2.0 ではイーサリアムは「Proof of Stake」という別のシステムに移行します。 [ETH 2.0 については下部で学ぶことができます](/#eth-2-0)。
+ETH 2.0 ではイーサリアムは「proof-of-stake」という別のシステムに移行します。 [ETH 2.0 については下部で学ぶことができます](/#eth-2-0)。
 
 ## クライアントとノード {#clients-and-nodes}
 

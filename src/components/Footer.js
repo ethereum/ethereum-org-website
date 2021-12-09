@@ -218,10 +218,6 @@ const Footer = () => {
           to: `/developers/local-environment/`,
           text: "set-up-local-env",
         },
-        {
-          to: `/developers/`,
-          text: "developer-resources",
-        },
       ],
     },
     {
@@ -286,7 +282,7 @@ const Footer = () => {
           text: "jobs",
         },
         {
-          to: "/en/contributing/",
+          to: "/contributing/",
           text: "contributing",
         },
         {
@@ -294,15 +290,15 @@ const Footer = () => {
           text: "language-support",
         },
         {
-          to: "/en/privacy-policy/",
+          to: "/privacy-policy/",
           text: "privacy-policy",
         },
         {
-          to: "/en/terms-of-use/",
+          to: "/terms-of-use/",
           text: "terms-of-use",
         },
         {
-          to: "/en/cookie-policy/",
+          to: "/cookie-policy/",
           text: "cookie-policy",
         },
         {

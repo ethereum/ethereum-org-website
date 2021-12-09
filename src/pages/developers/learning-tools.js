@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
 
 import { translateMessageId } from "../../utils/translations"
@@ -83,7 +84,7 @@ const LearningToolsPage = ({ data }) => {
       name: "Remix",
       description: "page-learning-tools-remix-description",
       url: "https://remix.ethereum.org",
-      image: data.remix.childImageSharp.fixed,
+      image: getImage(data.remix),
       alt: "page-learning-tools-remix-logo-alt",
       background: "#5098D6",
       subjects: ["Solidity", "Vyper"],
@@ -92,7 +93,7 @@ const LearningToolsPage = ({ data }) => {
       name: "Eth.build",
       description: "page-learning-tools-eth-dot-build-description",
       url: "https://eth.build/",
-      image: data.ethdotbuild.childImageSharp.fixed,
+      image: getImage(data.ethdotbuild),
       alt: "page-learning-tools-eth-dot-build-logo-alt",
       background: "#000000",
       subjects: ["web3"],
@@ -104,7 +105,7 @@ const LearningToolsPage = ({ data }) => {
       name: "CryptoZombies",
       description: "page-learning-tools-cryptozombies-description",
       url: "https://cryptozombies.io/en/solidity",
-      image: data.cryptoZombie.childImageSharp.fixed,
+      image: getImage(data.cryptoZombie),
       alt: "page-learning-tools-cryptozombies-logo-alt",
       background: "#2B2F48",
       subjects: ["Solidity"],
@@ -113,7 +114,7 @@ const LearningToolsPage = ({ data }) => {
       name: "Ethernauts",
       description: "page-learning-tools-ethernauts-description",
       url: "https://ethernaut.openzeppelin.com/",
-      image: data.oz.childImageSharp.fixed,
+      image: getImage(data.oz),
       alt: "page-learning-tools-ethernauts-logo-alt",
       background: "#4F62DC",
       subjects: ["Solidity"],
@@ -122,7 +123,7 @@ const LearningToolsPage = ({ data }) => {
       name: "Vyper.fun",
       description: "page-learning-tools-vyperfun-description",
       url: "https://vyper.fun",
-      image: data.vyperfun.childImageSharp.fixed,
+      image: getImage(data.vyperfun),
       alt: "page-learning-tools-vyperfun-logo-alt",
       background: "#ffffff",
       subjects: ["Vyper"],
@@ -131,7 +132,7 @@ const LearningToolsPage = ({ data }) => {
       name: "Capture The Ether",
       description: "page-learning-tools-capture-the-ether-description",
       url: "https://capturetheether.com/",
-      image: data.captureTheEther.childImageSharp.fixed,
+      image: getImage(data.captureTheEther),
       alt: "page-learning-tools-capture-the-ether-logo-alt",
       background: "#1B9AAA",
       subjects: ["Solidity"],
@@ -143,7 +144,7 @@ const LearningToolsPage = ({ data }) => {
       name: "ChainShot",
       description: "page-learning-tools-chainshot-description",
       url: "https://www.chainshot.com",
-      image: data.chainshot.childImageSharp.fixed,
+      image: getImage(data.chainshot),
       alt: "page-learning-tools-chainshot-logo-alt",
       background: "#111F29",
       subjects: ["Solidity", "Vyper", "web3"],
@@ -152,25 +153,25 @@ const LearningToolsPage = ({ data }) => {
       name: "ConsenSys Academy",
       description: "page-learning-tools-consensys-academy-description",
       url: "https://consensys.net/academy/bootcamp/",
-      image: data.consensys.childImageSharp.fixed,
+      image: getImage(data.consensys),
       alt: "page-learning-tools-consensys-academy-logo-alt",
       background: "#F6F7F9",
       subjects: ["Solidity", "web3"],
     },
     {
-      name: "Lambda School",
-      description: "page-learning-tools-lambdaschool-description",
-      url: "https://lambdaschool.com/learn-blockchain-development",
-      image: data.lambdaschool.childImageSharp.fixed,
-      alt: "page-learning-tools-lambdaschool-logo-alt",
-      background: "#111F29",
+      name: "BloomTech",
+      description: "page-learning-tools-bloomtech-description",
+      url: "https://www.bloomtech.com/courses/web3",
+      image: getImage(data.bloomtech),
+      alt: "page-learning-tools-bloomtech-logo-alt",
+      background: "#FFFFFF",
       subjects: ["Solidity", "web3"],
     },
     {
       name: "_buildspace",
       description: "page-learning-tools-buildspace-description",
       url: "https://buildspace.so",
-      image: data.buildspace.childImageSharp.fixed,
+      image: getImage(data.buildspace),
       alt: "page-learning-tools-buildspace-logo-alt",
       background: "#F6F7F9",
       subjects: ["Solidity", "web3"],
@@ -179,7 +180,7 @@ const LearningToolsPage = ({ data }) => {
       name: "Questbook",
       description: "page-learning-tools-questbook-description",
       url: "https://questbook.app/",
-      image: data.questbook.childImageSharp.fixed,
+      image: getImage(data.questbook),
       alt: "page-learning-tools-questbook-logo-alt",
       background: "#141236",
       subjects: ["Solidity", "web3"],
@@ -188,7 +189,7 @@ const LearningToolsPage = ({ data }) => {
       name: "NFT School",
       description: "page-learning-tools-nftschool-description",
       url: "https://nftschool.dev/",
-      image: data.nftschool.childImageSharp.fixed,
+      image: getImage(data.nftschool),
       alt: "page-learning-tools-nftschool-logo-alt",
       background: "#111F29",
       subjects: ["Solidity", "web3"],
@@ -283,7 +284,7 @@ const LearningToolsPage = ({ data }) => {
       </StackContainer>
       <Content>
         <CalloutBanner
-          image={data.learn.childImageSharp.fluid}
+          image={getImage(data.learn)}
           alt={translateMessageId(
             "page-index-sections-enterprise-image-alt",
             intl
@@ -310,15 +311,18 @@ export default LearningToolsPage
 export const learningToolImage = graphql`
   fragment learningToolImage on File {
     childImageSharp {
-      fixed(height: 100, quality: 100) {
-        ...GatsbyImageSharpFixed
-      }
+      gatsbyImageData(
+        height: 100
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
 
 export const query = graphql`
-  query {
+  {
     captureTheEther: file(
       relativePath: { eq: "dev-tools/capturetheether.png" }
     ) {
@@ -330,7 +334,7 @@ export const query = graphql`
     consensys: file(relativePath: { eq: "dev-tools/consensys.png" }) {
       ...learningToolImage
     }
-    lambdaschool: file(relativePath: { eq: "dev-tools/lambdaschool.png" }) {
+    bloomtech: file(relativePath: { eq: "dev-tools/bloomtech.png" }) {
       ...learningToolImage
     }
     buildspace: file(relativePath: { eq: "dev-tools/buildspace.png" }) {
@@ -359,9 +363,12 @@ export const query = graphql`
     }
     learn: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(
+          width: 800
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
   }

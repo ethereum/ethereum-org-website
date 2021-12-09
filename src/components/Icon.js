@@ -23,11 +23,10 @@ import {
   MdSearch,
   MdWbSunny,
   MdFlip,
+  MdLiveHelp,
 } from "react-icons/md"
-import { BsQuestionSquareFill } from "react-icons/bs"
-import { IoCodeDownload } from "react-icons/io5"
-import { IoCodeOutline } from "react-icons/io5"
-import { MdLiveHelp } from "react-icons/md"
+import { BsQuestionSquareFill, BsToggleOff, BsToggleOn } from "react-icons/bs"
+import { IoCodeOutline, IoCodeDownload } from "react-icons/io5"
 
 const socialColors = {
   reddit: "#FF4301",
@@ -48,6 +47,8 @@ const Icon = ({ name, color = false, size, className }) => (
     {name === "info" && <MdInfoOutline />}
     {name === "language" && <MdLanguage />}
     {name === "lightTheme" && <MdWbSunny />}
+    {name === "zenModeOff" && <BsToggleOff />}
+    {name === "zenModeOn" && <BsToggleOn />}
     {name === "menu" && <MdMenu />}
     {name === "twitter" && (
       <FaTwitter color={color ? socialColors.twitter : undefined} />
