@@ -39,6 +39,4 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 
 <Divider />
 
-## Explore other online Ethereum communities {#explore}
-
-- [DAOs](/community/daos/)
+<!-- TODO: Add section linking to DAO's -->
