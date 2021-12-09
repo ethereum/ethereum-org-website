@@ -78,20 +78,25 @@ Most of the teams building Ethereum clients also have dedicated, public-facing, 
 
 You can also [learn how to run a node here](/developers/docs/nodes-and-clients/run-a-node/).
 
-## Common Questions {#common-questions}
+## Frequently asked questions {#faq}
 
 #### I've sent ETH to the wrong wallet {#wrong-wallet}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+A transaction sent on Ethereum is irreversible, and unfortunately, if you've sent ETH to the wrong wallet, there is no way to recover these funds. No one central organization, entity, or person owns Ethereum, which means no one can reverse transactions. Therefore, it is vital always to double-check your transactions.
+
+#### How can I claim my Ethereum giveaway? {#giveaway-scam}
+
+Ethereum giveaways are scams designed to steal your ETH. Do not be tempted by too good to be true offers—if you send ETH to a giveaway address, you will not receive a giveaway, and you will not be able to recover your funds.
+
+[More on scam prevention](/security/#common-scams)
 
 #### My transaction is stuck {#stuck-transaction}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Transactions on Ethereum can sometimes get stuck if you have submitted a lower transaction fee than is required due to network demand. Many wallets provide an option to resubmit the same transaction with a higher transaction fee to allow the transaction to be processed. Alternatively, you can cancel a pending transaction by sending a transaction to your own address and using the same nonce as the pending transaction.
 
-#### I've lost my seedphrae {#lost-seedphrase}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+[How to speed up or cancel a pending transaction on MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489251-How-to-speed-up-or-cancel-a-pending-transaction)
+[How to cancel pending Ethereum transactions](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
 #### How do I mine Ethereum? {#mining-ethereum}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+We do not recommend buying mining equipment if you are not already mining Ethereum. In ~Q2 2022, the merge will happen, switching Ethereum from proof-of-work to proof-of-stake. This change means mining Ethereum will no longer be possible. If you are still interested in mining Ethereum, you can seek help from mining communities, such as [/r/EtherMining](https://www.reddit.com/r/EtherMining/).
