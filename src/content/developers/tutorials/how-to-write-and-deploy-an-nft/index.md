@@ -47,7 +47,7 @@ You can download and create a MetaMask account for free [here](https://metamask.
 
 ![Set Ropsten as your network](./metamask-ropsten.png)
 
-## Step 4: Add ether from a Faucet
+## Step 4: Add ether from a Faucet {#step-4-add-ether-from-a-faucet}
 
 In order to deploy our smart contract to the test network, we’ll need some fake ETH. To get ETH you can go to the [Ropsten faucet](https://faucet.ropsten.be/) and enter your Ropsten account address, then click “Send Ropsten ETH.” You should see ETH in your MetaMask account soon after!
 
@@ -244,7 +244,7 @@ Hardhat makes it super easy to integrate [Plugins](https://hardhat.org/plugins/)
 
 In your project directory type:
 
-    npm install --save-dev @nomiclabs/hardhat-ethers ethers@^5.0.0
+    npm install --save-dev @nomiclabs/hardhat-ethers 'ethers@^5.0.0'
 
 We’ll also require ethers in our hardhat.config.js in the next step.
 

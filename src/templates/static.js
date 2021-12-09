@@ -24,6 +24,7 @@ import TranslationsInProgress from "../components/TranslationsInProgress"
 import SectionNav from "../components/SectionNav"
 import DocLink from "../components/DocLink"
 import GhostCard from "../components/GhostCard"
+import MatomoOptOut from "../components/MatomoOptOut"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
 import {
@@ -113,6 +114,7 @@ const components = {
   MeetupList,
   RandomAppList,
   Roadmap,
+  Link,
   Logo,
   ButtonLink,
   Contributors,
@@ -128,6 +130,7 @@ const components = {
   CardContainer,
   GhostCard,
   UpcomingEventsList,
+  MatomoOptOut,
 }
 
 const StaticPage = ({ data: { siteData, pageData: mdx }, pageContext }) => {
@@ -141,7 +144,9 @@ const StaticPage = ({ data: { siteData, pageData: mdx }, pageContext }) => {
   const tocItems = mdx.tableOfContents.items
   const { editContentUrl } = siteData.siteMetadata
   const { relativePath } = pageContext
-  const absoluteEditPath = `${editContentUrl}${relativePath}`
+  const absoluteEditPath = relativePath.split("/").includes("whitepaper")
+    ? ""
+    : `${editContentUrl}${relativePath}`
 
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>

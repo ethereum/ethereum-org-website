@@ -7,7 +7,7 @@ sidebar: true
 
 Since Ethereum is a protocol, this means there can be multiple independent "networks" conforming to this protocol that do not interact with each other.
 
-Networks are different Ethereum environments you can access for development, testing, or production use cases. Your Ethereum account will work across the different networks but your account balance and transaction history wont carry over from the main Ethereum network. For testing purposes, it's useful to know which networks are available and how to get testnet ETH so you can play around with it.
+Networks are different Ethereum environments you can access for development, testing, or production use cases. Your Ethereum account will work across the different networks but your account balance and transaction history won't carry over from the main Ethereum network. For testing purposes, it's useful to know which networks are available and how to get testnet ETH so you can play around with it.
 
 ## Prerequisites {#prerequisites}
 
@@ -74,7 +74,7 @@ If a public Ethereum network is like the public internet, you can think of a con
 
 <!-- TODO
 
-## Interacting with testnets
+## Interacting with testnets {#interactihg-with-tesetnets}
 
 ### Your own local network {#your-own-local-network}
 

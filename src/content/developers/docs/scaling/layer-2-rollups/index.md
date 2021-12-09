@@ -26,7 +26,7 @@ Rollups are solutions that perform transaction _execution_ outside the main Ethe
 Three simplified properties of rollups are:
 
 1. transaction _execution_ outside layer 1
-2. data or proof of transactions is on layer 1
+2. data or proof-of-transactions is on layer 1
 3. a rollup smart contract in layer 1 that can enforce correct transaction execution on layer 2 by using the transaction data on layer 1
 
 Rollups require "operators" to stake a bond in the rollup contract. This incentivises operators to verify and execute transactions correctly.
@@ -101,7 +101,7 @@ Being on layer 2, ZK-rollups can be optimised to reduce transaction size further
 | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | Faster finality time since the state is instantly verified once the proofs are sent to the main chain.            | Some don't have EVM support.                                                                          |
 | Not vulnerable to the economic attacks that [Optimistic rollups](#optimistic-pros-and-cons) can be vulnerable to. | Validity proofs are intense to compute – not worth it for applications with little on-chain activity. |
-| Secure and decentralized, since the data that is needed to recover the state is stored on the layer 1 chain.      | An operator can influence transaction. ordering                                                       |
+| Secure and decentralized, since the data that is needed to recover the state is stored on the layer 1 chain.      | An operator can influence transaction ordering                                                        |
 
 #### A visual explanation of ZK-rollups {#zk-video}
 
@@ -134,6 +134,8 @@ Hybrid solutions exist that combine the best parts of multiple layer 2 technolog
 - [An Incomplete Guide to Rollups](https://vitalik.ca/general/2021/01/05/rollup.html)
 - [Optimistic Rollups vs ZK Rollups](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
 - [Zero-Knowledge Blockchain Scalability](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
+- [Why rollups + data shards are the only sustainable solution for high scalability](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
+- [Ethereum-powered ZK-Rollups: World Beaters](https://hackmd.io/@canti/rkUT0BD8K)
 
 **ZK-rollups**
 
@@ -151,6 +153,7 @@ Hybrid solutions exist that combine the best parts of multiple layer 2 technolog
 **Hybrid solutions**
 
 - [Adding Hybrid PoS-Rollup Sidechain to Celer’s Coherent Layer-2 Platform on Ethereum](https://medium.com/celer-network/adding-hybrid-pos-rollup-sidechain-to-celers-coherent-layer-2-platform-d1d3067fe593)
+- [Volitions: best of all worlds](https://polynya.medium.com/volitions-best-of-all-worlds-cfd313aec9a8)
 
 **Videos**
 

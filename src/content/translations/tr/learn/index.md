@@ -59,7 +59,7 @@ Bir "Akıllı sözleşme" basitçe Ethereum üzerinde çalışan bir kod parçac
 
 ## İş Kanıtı ve Madencilik {#proof-of-work-and-mining}
 
-Ethereum şuanda "Çalışma Kanıtı (Proof of Work)" adında bir sistem kullanmaktadır. Bu Ethereum ağına bütün bilgilerin kaydedilmesine olanak sağlamaktadır, ve bu sayede türlü ekonomik saldırıların önüne geçmektedir.
+Ethereum şuanda "Çalışma Kanıtı (proof-of-work)" adında bir sistem kullanmaktadır. Bu Ethereum ağına bütün bilgilerin kaydedilmesine olanak sağlamaktadır, ve bu sayede türlü ekonomik saldırıların önüne geçmektedir.
 
 - [Ethereum madeni ne demek?](https://docs.ethhub.io/using-ethereum/mining/) _ Sık sık güncellenen - Ethhub_
 

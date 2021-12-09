@@ -19,7 +19,7 @@ EVM 的物理实例不能像指向云端或海浪那样描述，但它确实作�
 
 虽然以太坊有自己的本机加密货币（Ether），遵循几乎完全相同的直观规则，但它也支持更强大的功能：[智能合约](/developers/docs/smart-contracts/)。 对于此更复杂的功能，需要一个更复杂的类比。 以太坊不是分布式账本，而是分布式[状态机](https://en.wikipedia.org/wiki/Finite-state_machine)。 以太坊的状态是一个大型数据结构，它不仅保存所有帐户和余额，而且还保存一个*机器状态*，它可以根据预定义的一组规则在不同的区块之间进行更改，并且可以执行任意的机器代码。 在区块中更改状态的具体规则由 EVM 定义。
 
-![EVM 组成结构图](./evm.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![EVM 组成结构图](../../../../../developers/docs/evm/evm.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## 以太坊状态转换函数 {#the-ethereum-state-transition-function}
 
@@ -43,7 +43,7 @@ Y(S, T)= S'
 
 ## EVM 说明 {#evm-instructions}
 
-EVM 作为一个[堆栈机](https://en. wikipedia. org/wiki/Stack_machine)运行，其栈的深度为 1024 个项。 每一项都是 256 比特的 word，选择如此是为了与 SHA-3-256 哈希方案最大限度地兼容。
+EVM 作为一个[堆栈机](https://en.wikipedia.org/wiki/Stack_machine)运行，其栈的深度为 1024 个项。 每一项都是 256 比特的 word，选择如此是为了与 SHA-3-256 哈希方案最大限度地兼容。
 
 <!-- ![A diagram showing the make up of the stack](./evm-stack.png)
 _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
@@ -56,7 +56,7 @@ Removed as we should probably show memory and account storage too if showing sta
 
 已编译的智能合约字节码作为许多 EVM [ opcodes ](https://www.ethervm.io/)执行，它们执行标准的堆栈操作，例如 ` XOR`、` AND`、` ADD`、`SUB`等。 EVM 还实现了一些区块链特定的堆栈操作，如 `ADDRESS`、`BALANCE`、`SHA3`、`BLOCKHASH`，等等。
 
-![EVM 操作需要 Gas](../gas/gas.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![EVM 操作需要 Gas](../../../../../developers/docs/gas/gas.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 <!-- TODO add full list from  https://eth.wiki/concepts/evm/implementations -->
 

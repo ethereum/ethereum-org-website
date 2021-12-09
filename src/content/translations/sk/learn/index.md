@@ -57,13 +57,13 @@ Smart kontrakt – „inteligentná zmluva“ je v jednoduchosti časť kódu, k
 - [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _12. novembra 2018 - Andreas M. Antonopoulos, Gavin Wood_
 - [What are Smart Contracts/Decentralized Applications?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) _pravidelne aktualizované - Ethhub_
 
-## Proof of Work a ťaženie {#proof-of-work-and-mining}
+## Proof-of-work a ťaženie {#proof-of-work-and-mining}
 
-Ethereum v súčasnosti používa systém s názvom „Proof of Work“. Ten umožňuje uzlom siete Etherea dohodnúť sa na stave všetkých informácií zaznamenaných na blockchaine Etherea a bráni určitým typom ekonomických útokov.
+Ethereum v súčasnosti používa systém s názvom „proof-of-work. Ten umožňuje uzlom siete Etherea dohodnúť sa na stave všetkých informácií zaznamenaných na blockchaine Etherea a bráni určitým typom ekonomických útokov.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Pravidelne aktualizované – Ethhub_
 
-V rámci nového Etherea 2.0 sa však bude využívať iný systém s názvom „Proof of Stake“. [Prečítajte si viac o Ethereu 2.0 nižšie](#eth-2-0).
+V rámci nového Etherea 2.0 sa však bude využívať iný systém s názvom „proof-of-stake. [Prečítajte si viac o Ethereu 2.0 nižšie](#eth-2-0).
 
 ## Klienty a uzly {#clients-and-nodes}
 

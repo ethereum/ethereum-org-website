@@ -1,0 +1,250 @@
+[
+  {
+    "fromPath": "/pdfs/*",
+    "toPath": "/en/"
+  },
+  {
+    "fromPath": "/brand",
+    "toPath": "/en/assets/"
+  },
+  {
+    "fromPath": "/ether",
+    "toPath": "/en/eth/"
+  },
+  {
+    "fromPath": "/token",
+    "toPath": "/en/developers/"
+  },
+  {
+    "fromPath": "/crowdsale",
+    "toPath": "/en/developers/"
+  },
+  {
+    "fromPath": "/cli",
+    "toPath": "/en/developers/"
+  },
+  {
+    "fromPath": "/greeter",
+    "toPath": "/en/developers/"
+  },
+  {
+    "fromPath": "/search",
+    "toPath": "/en/"
+  },
+  {
+    "fromPath": "/use",
+    "toPath": "/en/dapps/"
+  },
+  {
+    "fromPath": "/beginners",
+    "toPath": "/en/what-is-ethereum/"
+  },
+  {
+    "fromPath": "/",
+    "toPath": "/en/"
+  },
+  {
+    "fromPath": "/what-is-ethereum/",
+    "toPath": "/en/what-is-ethereum/"
+  },
+  {
+    "fromPath": "/eth/",
+    "toPath": "/en/eth/"
+  },
+  {
+    "fromPath": "/dapps/",
+    "toPath": "/en/dapps/"
+  },
+  {
+    "fromPath": "/wallets/",
+    "toPath": "/en/wallets/"
+  },
+  {
+    "fromPath": "/learn/",
+    "toPath": "/en/learn/"
+  },
+  {
+    "fromPath": "/community/",
+    "toPath": "/en/community/"
+  },
+  {
+    "fromPath": "/build/",
+    "toPath": "/en/developers/learning-tools/"
+  },
+  {
+    "fromPath": "/developers/",
+    "toPath": "/en/developers/"
+  },
+  {
+    "fromPath": "/enterprise/",
+    "toPath": "/en/enterprise/"
+  },
+  {
+    "fromPath": "/whitepaper/",
+    "toPath": "/en/whitepaper/"
+  },
+  {
+    "fromPath": "/foundation/",
+    "toPath": "/en/foundation/"
+  },
+  {
+    "fromPath": "/eips/",
+    "toPath": "/en/eips/"
+  },
+  {
+    "fromPath": "/about/",
+    "toPath": "/en/about/"
+  },
+  {
+    "fromPath": "/privacy-policy/",
+    "toPath": "/en/privacy-policy/"
+  },
+  {
+    "fromPath": "/terms-of-use/",
+    "toPath": "/en/terms-of-use/"
+  },
+  {
+    "fromPath": "/cookie-policy/",
+    "toPath": "/en/cookie-policy/"
+  },
+  {
+    "fromPath": "/languages/",
+    "toPath": "/en/languages/"
+  },
+  {
+    "fromPath": "/enterprise/",
+    "toPath": "/en/enterprise/"
+  },
+  {
+    "fromPath": "/java/",
+    "toPath": "/en/developers/docs/programming-languages/java/"
+  },
+  {
+    "fromPath": "/python/",
+    "toPath": "/en/developers/docs/programming-languages/python/"
+  },
+  {
+    "fromPath": "/javascript/",
+    "toPath": "/en/developers/docs/programming-languages/javascript/"
+  },
+  {
+    "fromPath": "/golang/",
+    "toPath": "/en/developers/docs/programming-languages/golang/"
+  },
+  {
+    "fromPath": "/rust/",
+    "toPath": "/en/developers/docs/programming-languages/rust/"
+  },
+  {
+    "fromPath": "/dot-net/",
+    "toPath": "/en/developers/docs/programming-languages/dot-net/"
+  },
+  {
+    "fromPath": "/delphi/",
+    "toPath": "/en/developers/docs/programming-languages/delphi/"
+  },
+  {
+    "fromPath": "/dart/",
+    "toPath": "/en/developers/docs/programming-languages/dart/"
+  },
+  {
+    "fromPath": "/nft/",
+    "toPath": "/en/nft/"
+  },
+  {
+    "fromPath": "/nfts/",
+    "toPath": "/en/nft/"
+  },
+  {
+    "fromPath": "/dao/",
+    "toPath": "/en/dao/"
+  },
+  {
+    "fromPath": "/daos/",
+    "toPath": "/en/dao/"
+  },
+  {
+    "fromPath": "/defi/",
+    "toPath": "/en/defi/"
+  },
+  {
+    "fromPath": "/no/*",
+    "toPath": "/nb/:splat"
+  },
+  {
+    "fromPath": "/en/java/",
+    "toPath": "/en/developers/docs/programming-languages/java/"
+  },
+  {
+    "fromPath": "/en/python/",
+    "toPath": "/en/developers/docs/programming-languages/python/"
+  },
+  {
+    "fromPath": "/en/javascript/",
+    "toPath": "/en/developers/docs/programming-languages/javascript/"
+  },
+  {
+    "fromPath": "/en/golang/",
+    "toPath": "/en/developers/docs/programming-languages/golang/"
+  },
+  {
+    "fromPath": "/en/rust/",
+    "toPath": "/en/developers/docs/programming-languages/rust/"
+  },
+  {
+    "fromPath": "/en/dot-net/",
+    "toPath": "/en/developers/docs/programming-languages/dot-net/"
+  },
+  {
+    "fromPath": "/en/delphi/",
+    "toPath": "/en/developers/docs/programming-languages/delphi/"
+  },
+  {
+    "fromPath": "/en/dart/",
+    "toPath": "/en/developers/docs/programming-languages/dart/"
+  },
+  {
+    "fromPath": "/en/developers/docs/mining/",
+    "toPath": "/en/developers/docs/consensus-mechanisms/pow/mining/"
+  },
+  {
+    "fromPath": "/en/eth2/the-beacon-chain/",
+    "toPath": "/en/eth2/beacon-chain/"
+  },
+  {
+    "fromPath": "/*/beginners",
+    "toPath": "/:splat/what-is-ethereum/"
+  },
+  {
+    "fromPath": "/*/build",
+    "toPath": "/:splat/developers/learning-tools/"
+  },
+  {
+    "fromPath": "/*/eth2/the-docking",
+    "toPath": "/:splat/eth2/merge/"
+  },
+  {
+    "fromPath": "/*/eth2/the-merge",
+    "toPath": "/:splat/eth2/merge/"
+  },
+  {
+    "fromPath": "/*/eth2/docking",
+    "toPath": "/:splat/eth2/merge/"
+  },
+  {
+    "fromPath": "/*/developers/docs/layer-2-scaling",
+    "toPath": "/:splat/developers/docs/scaling"
+  },
+  {
+    "fromPath": "/*/about/web-developer",
+    "toPath": "/:splat/about/#open-jobs"
+  },
+  {
+    "fromPath": "/*/about/community-lead",
+    "toPath": "/:splat/about/#open-jobs"
+  },
+  {
+    "fromPath": "/*/use",
+    "toPath": "/:splat/dapps/"
+  }
+]

@@ -40,33 +40,33 @@ Un meccanismo di consenso in un sistema criptoeconomico aiuta anche a prevenire 
 <!-- Why do different consensus protocols exist? -->
 <!-- What are the tradeoffs of each? -->
 
-### Proof of Work {#proof-of-work}
+### Proof-of-work {#proof-of-work}
 
-Ethereum, come Bitcoin, utilizza attualmente un protocollo di consenso Proof of Work (PoW).
+Ethereum, come Bitcoin, utilizza attualmente un protocollo di consenso proof-of-work (PoW).
 
 #### Creazione di blocchi {#pow-block-creation}
 
-La Proof of Work è costituita da [miner](/developers/docs/consensus-mechanisms/pow/mining/), che competono per creare nuovi blocchi pieni di transazioni elaborate. Il vincitore condivide il nuovo blocco con il resto della rete e guadagna ETH appena coniati. La gara è vinta dal computer che riesce a risolvere un rompicapo matematico nel modo più veloce: questo produce il collegamento crittografico tra il blocco corrente e il blocco che lo ha preceduto. Risolvere questo rompicapo rappresenta il lavoro da svolgere nel modello "Proof of Work".
+La proof-of-work è costituita da [miner](/developers/docs/consensus-mechanisms/pow/mining/), che competono per creare nuovi blocchi pieni di transazioni elaborate. Il vincitore condivide il nuovo blocco con il resto della rete e guadagna ETH appena coniati. La gara è vinta dal computer che riesce a risolvere un rompicapo matematico nel modo più veloce: questo produce il collegamento crittografico tra il blocco corrente e il blocco che lo ha preceduto. Risolvere questo rompicapo rappresenta il lavoro da svolgere nel modello "proof-of-work".
 
 #### Sicurezza {#pow-security}
 
 La sicurezza della rete è garantita dal fatto che è necessario il 51% della potenza totale di elaborazione della rete per frodare la catena. Questo richiederebbe investimenti talmente enormi in attrezzature ed energia, che si rischierebbe di spendere più del profitto ottenibile.
 
-Ulteriori informazioni sulla [Proof of Work (PoW)](/developers/docs/consensus-mechanisms/pow/)
+Ulteriori informazioni sulla [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/)
 
-### Proof of Stake {#proof-of-stake}
+### Proof-of-stake {#proof-of-stake}
 
-Ethereum prevede di aggiornare il proprio protocollo di consenso al [Proof of Stake (PoS)](/developers/docs/consensus-mechanisms/pos/).
+Ethereum prevede di aggiornare il proprio protocollo di consenso al [proof-of-stake (PoS)](/developers/docs/consensus-mechanisms/pos/).
 
 #### Creazione blocchi {#pos-block-creation}
 
-La Proof of Stake è resa possibile da validatori che fanno stake con i propri ETH per prendere parte al sistema. Un validatore è scelto a caso per creare nuovi blocchi, condividerli con la rete e guadagnare ricompense. Anziché svolgere un intenso lavoro di calcolo, è sufficiente fare stake con gli ETH nella rete. Questo aspetto è ciò che incentiva un comportamento sano della rete.
+La proof-of-stake è resa possibile da validatori che fanno stake con i propri ETH per prendere parte al sistema. Un validatore è scelto a caso per creare nuovi blocchi, condividerli con la rete e guadagnare ricompense. Anziché svolgere un intenso lavoro di calcolo, è sufficiente fare stake con gli ETH nella rete. Questo aspetto è ciò che incentiva un comportamento sano della rete.
 
 #### Sicurezza {#pos-security}
 
-Il sistema di Proof of Stake è mantenuto al sicuro dal fatto che sarebbe necessario il 51% del totale di ETH in stake per frodare la catena. E che in caso di comportamento malevolo, viene eseguito lo slashing dello stake.
+Il sistema di proof-of-stake è mantenuto al sicuro dal fatto che sarebbe necessario il 51% del totale di ETH in stake per frodare la catena. E che in caso di comportamento malevolo, viene eseguito lo slashing dello stake.
 
-Ulteriori informazioni sulla [Proof of Stake (PoS)](/developers/docs/consensus-mechanisms/pos/)
+Ulteriori informazioni sulla [proof-of-stake (PoS)](/developers/docs/consensus-mechanisms/pos/)
 
 ## Letture consigliate {#further-reading}
 
@@ -74,6 +74,6 @@ Ulteriori informazioni sulla [Proof of Stake (PoS)](/developers/docs/consensus-m
 
 ## Argomenti correlati {#related-topics}
 
-- [Proof of Work](/developers/docs/consensus-mechanisms/pow/)
+- [Proof-of-work](/developers/docs/consensus-mechanisms/pow/)
 - [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
-- [Proof of Stake](/developers/docs/consensus-mechanisms/pos/)
+- [Proof-of-stake](/developers/docs/consensus-mechanisms/pos/)

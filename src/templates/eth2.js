@@ -4,10 +4,9 @@ import { useIntl } from "gatsby-plugin-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown from "../components/ButtonDropdown"
-import UpgradeBannerNotification from "../components/UpgradeBannerNotification"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Icon from "../components/Icon"
@@ -136,6 +135,15 @@ const H2 = styled.h2`
   font-weight: 700;
   margin-top: 4rem;
 
+  /* Prevent nav overlap */
+  &:before {
+    content: "";
+    display: block;
+    height: 120px;
+    margin-top: -120px;
+    visibility: hidden;
+  }
+
   a {
     display: none;
   }
@@ -144,7 +152,8 @@ const H2 = styled.h2`
 
   a {
     position: relative;
-    display: none;
+    display: initial;
+    opacity: 0;
     margin-left: -1.5em;
     padding-right: 0.5rem;
     font-size: 1rem;
@@ -153,6 +162,7 @@ const H2 = styled.h2`
     &:hover {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
+      opacity: 1;
     }
   }
 
@@ -160,6 +170,7 @@ const H2 = styled.h2`
     a {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
+      opacity: 1;
     }
   }
 `
@@ -168,6 +179,15 @@ const H3 = styled.h3`
   font-size: 24px;
   font-weight: 700;
 
+  /* Prevent nav overlap */
+  &:before {
+    content: "";
+    display: block;
+    height: 120px;
+    margin-top: -120px;
+    visibility: hidden;
+  }
+
   a {
     display: none;
   }
@@ -176,7 +196,8 @@ const H3 = styled.h3`
 
   a {
     position: relative;
-    display: none;
+    display: initial;
+    opacity: 0;
     margin-left: -1.5em;
     padding-right: 0.5rem;
     font-size: 1rem;
@@ -185,6 +206,7 @@ const H3 = styled.h3`
     &:hover {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
+      opacity: 1;
     }
   }
 
@@ -192,6 +214,7 @@ const H3 = styled.h3`
     a {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
+      opacity: 1;
     }
   }
 `
@@ -294,7 +317,7 @@ const HeroContainer = styled.div`
   }
 `
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   flex: 1 1 100%;
   max-width: 816px;
   background-size: cover;
@@ -382,7 +405,6 @@ const Eth2Page = ({ data, data: { mdx } }) => {
 
   return (
     <Container>
-      <UpgradeBannerNotification />
       <HeroContainer>
         <TitleCard>
           <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
@@ -400,7 +422,7 @@ const Eth2Page = ({ data, data: { mdx } }) => {
             {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
           </LastUpdated>
         </TitleCard>
-        <Image fluid={mdx.frontmatter.image.childImageSharp.fluid} />
+        <Image image={getImage(mdx.frontmatter.image)} />
       </HeroContainer>
       <MoreContent to="#content">
         <Icon name="chevronDown" />
@@ -459,9 +481,11 @@ export const eth2PageQuery = graphql`
         summaryPoints
         image {
           childImageSharp {
-            fluid(maxHeight: 640) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              quality: 100
+            )
           }
         }
         isOutdated

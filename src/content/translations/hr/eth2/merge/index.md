@@ -1,6 +1,6 @@
 ---
 title: Spajanje glavne mreže s nadogradnjom Eth2
-description: Saznajte više o spajanju – pridruživanje glavne mreže Ethereum Proof of Stake sustavu koji koordinira Beacon Chain.
+description: Saznajte više o spajanju – pridruživanje glavne mreže Ethereum proof-of-stake sustavu koji koordinira Beacon Chain.
 lang: hr
 template: eth2
 sidebar: true
@@ -9,7 +9,7 @@ summaryPoints:
   [
     "Na kraju će se trenutačna glavna mreža Ethereum „spojiti” s ostatkom nadogradnji Eth2.",
     "Spajanje će sjediniti glavnu mrežu „Eth1” s nadogradnjom Eth2 Beacon Chain i sustavom razdjeljivanja.",
-    "Ovo će označiti kraj procesa Proof of Work za Ethereum i prijelaz na Proof of Stake.",
+    "Ovo će označiti kraj procesa proof-of-work za Ethereum i prijelaz na proof-of-stake.",
     "To vam može biti poznato kao „faza 1.5” na tehničkim planovima.",
   ]
 ---
@@ -20,15 +20,15 @@ summaryPoints:
 
 ## Što je spajanje? {#what-is-the-docking}
 
-Važno je imati na umu da se u početku ostale nadogradnje Eth2 isporučuju odvojeno od [ glavne mreže ](/glossary/#mainnet) – lanca kojim se koristimo danas. Glavna mreža Ethereum i dalje biti osigurana pomoću mehanizma [Proof of Work ](/developers/docs/consensus-mechanisms/pow/), čak i dok [Beacon Chain](/eth2/beacon-chain/) i njegovi [lanci djelića](/eth2/shard-chains/) rade paralelno pomoću mehanizma [ Proof of Stake](/developers/docs/consensus-mechanisms/pos/). Spajanje je kad se ova dva sustava sjedine.
+Važno je imati na umu da se u početku ostale nadogradnje Eth2 isporučuju odvojeno od [ glavne mreže ](/glossary/#mainnet) – lanca kojim se koristimo danas. Glavna mreža Ethereum i dalje biti osigurana pomoću mehanizma [proof-of-work](/developers/docs/consensus-mechanisms/pow/), čak i dok [Beacon Chain](/eth2/beacon-chain/) i njegovi [lanci djelića](/eth2/shard-chains/) rade paralelno pomoću mehanizma [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). Spajanje je kad se ova dva sustava sjedine.
 
 Zamislite da je Ethereum svemirski brod koji nije baš spreman za međuzvjezdano putovanje. Zajednica je s nadogradnjom Beacon chain i lancima djelića izgradila novi motor i očvrsnuti trup. Kad dođe vrijeme, trenutačni brod pristat će uz novi sustav i oni će postati jedno, spremni za ozbiljne svjetlosne godine i zauzimanje svemira.
 
 ## Spajanje s glavnom mrežom {#docking-mainnet}
 
-Kad bude spremna, glavna mreža Ethereum spojit će se s nadogradnjom Beacon Chain, postajući vlastiti djelić koji upotrebljava Proof of Stake umjesto [ Proof of Work ](/developers/docs/consensus-mechanisms/pow/).
+Kad bude spremna, glavna mreža Ethereum spojit će se s nadogradnjom Beacon Chain, postajući vlastiti djelić koji upotrebljava proof-of-stake umjesto [ proof-of-work ](/developers/docs/consensus-mechanisms/pow/).
 
-Glavna mreža omogućit će pokretanje pametnih ugovora u sustav Proof of Stake, i cijelu povijest i trenutačno stanje mreže Ethereum, kako bi se osigurao prijelaz bez problema za sve vlasnike i korisnike ETH-a.
+Glavna mreža omogućit će pokretanje pametnih ugovora u sustav proof-of-stake, i cijelu povijest i trenutačno stanje mreže Ethereum, kako bi se osigurao prijelaz bez problema za sve vlasnike i korisnike ETH-a.
 
 <!-- ### Improving Mainnet
 
@@ -56,7 +56,7 @@ Sve su nadogradnje Eth2 donekle međusobno povezane. Pa, sagledajmo kakav odnos 
 
 ### Sjedinjenje i Beacon Chain {#docking-and-beacon-chain}
 
-Nakon spajanja, bit će dodijeljeni učesnici koji će provjeriti valjanost mreže Ethereum. Baš kao i s lancima djelića. [ Rudarenje ](/developers/docs/consensus-mechanisms/pow/mining/) više neće biti potrebno, pa će rudari svoju zaradu vjerojatno uložiti u učešća u novom sustavu Proof of Stake.
+Nakon spajanja, bit će dodijeljeni učesnici koji će provjeriti valjanost mreže Ethereum. Baš kao i s lancima djelića. [ Rudarenje ](/developers/docs/consensus-mechanisms/pow/mining/) više neće biti potrebno, pa će rudari svoju zaradu vjerojatno uložiti u učešća u novom sustavu proof-of-stake.
 
 <ButtonLink to="/eth2/beacon-chain/">Beacon Chain</ButtonLink>
 

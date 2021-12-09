@@ -35,7 +35,6 @@ Başlamadan önce daha fazla bilgiye mi ihtiyacın var? Bu adrese göz at [ether
 
 - [Rust-Web3 Documentation](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Rust-Web3 Working Examples](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Creating a Secret Ballot with OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
 - [Creating a Private Chat Server with OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## İleri Düzey Kullanım Şekilleri {#advanced-use-patterns}

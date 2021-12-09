@@ -57,13 +57,13 @@ Penjelasan tingkat lanjut mengenai Ethereum dan teknologi blockchain secara umum
 - [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _12 Nov, 2018 - Andreas M. Antonopoulos, Gavin Wood_
 - [What are Smart Contracts/Decentralized Applications?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) _Sering diupdate - Ethhub_
 
-## Proof of Work dan Mining {#proof-of-work-and-mining}
+## Proof-of-work dan Mining {#proof-of-work-and-mining}
 
-Ethereum sekarang menggunakan sebuah sistem yang dikenal sebagai “Proof of Work”. Hal ini membuat jaringan Ethereum untuk bisa setuju mengenai seluruh status informasi yang dicatat di blockchain Ethereum, dan mencegah serangan tertentu terhadap blockchain.
+Ethereum sekarang menggunakan sebuah sistem yang dikenal sebagai “proof-of-work”. Hal ini membuat jaringan Ethereum untuk bisa setuju mengenai seluruh status informasi yang dicatat di blockchain Ethereum, dan mencegah serangan tertentu terhadap blockchain.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Sering diupdate - Ethhub_
 
-Di ETH 2.0, Ethereum akan pindah ke sistem baru bernama “Proof of Stake”. [Baca lebih lanjut mengenai ETH 2.0 di bawah](#eth-2-0).
+Di ETH 2.0, Ethereum akan pindah ke sistem baru bernama “proof-of-stake”. [Baca lebih lanjut mengenai ETH 2.0 di bawah](#eth-2-0).
 
 ## Client dan Node {#clients-and-nodes}
 

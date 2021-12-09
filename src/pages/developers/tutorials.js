@@ -14,10 +14,13 @@ import Pill from "../../components/Pill"
 import Tag from "../../components/Tag"
 import TutorialTags from "../../components/TutorialTags"
 import Emoji from "../../components/Emoji"
-import { Page, ButtonSecondary } from "../../components/SharedStyledComponents"
+import {
+  ButtonSecondary,
+  FakeLink,
+  Page,
+} from "../../components/SharedStyledComponents"
 
 import { getLocaleTimestamp, INVALID_DATETIME } from "../../utils/time"
-import { hasTutorials } from "../../utils/translations"
 
 import foreignTutorials from "../../data/externalTutorials.json"
 
@@ -239,10 +242,15 @@ const TutorialsPage = ({ data, pageContext }) => {
     isExternal: true,
   }))
 
-  const allTutorials = []
-    .concat(externalTutorials, internalTutorials)
+  const allTutorials = [].concat(externalTutorials, internalTutorials)
+
+  const hasTutorialsCheck = allTutorials.some(
+    (tutorial) => tutorial.lang === pageContext.language
+  )
+
+  const filteredTutorials = allTutorials
     .filter((tutorial) =>
-      hasTutorials(pageContext.language)
+      hasTutorialsCheck
         ? tutorial.lang === pageContext.language
         : tutorial.lang === "en"
     )
@@ -250,7 +258,7 @@ const TutorialsPage = ({ data, pageContext }) => {
 
   // Tally all subject tag counts
   const tagsConcatenated = []
-  for (const tutorial of allTutorials) {
+  for (const tutorial of filteredTutorials) {
     tagsConcatenated.push(...tutorial.tags)
   }
 
@@ -269,13 +277,13 @@ const TutorialsPage = ({ data, pageContext }) => {
 
   const [state, setState] = useState({
     activeTagNames: [],
-    filteredTutorials: allTutorials,
+    filteredTutorials: filteredTutorials,
   })
 
   const clearActiveTags = () => {
     setState({
       activeTagNames: [],
-      filteredTutorials: allTutorials,
+      filteredTutorials: filteredTutorials,
     })
   }
 
@@ -331,7 +339,7 @@ const TutorialsPage = ({ data, pageContext }) => {
         </ModalTitle>
         <p>
           <Translation id="page-tutorial-listing-policy-intro" />{" "}
-          <Link to="https://ethereum.org/en/contributing/adding-articles/">
+          <Link to="https://ethereum.org/en/contributing/content-resources/">
             <Translation id="page-tutorial-listing-policy" />
           </Link>
         </p>
@@ -451,9 +459,9 @@ const TutorialsPage = ({ data, pageContext }) => {
                   <>
                     {" "}
                     •<Emoji text=":link:" size={1} ml={`0.5em`} mr={`0.5em`} />
-                    <Link to={tutorial.to} hideArrow>
+                    <FakeLink>
                       <Translation id="page-tutorial-external-link" />
-                    </Link>
+                    </FakeLink>
                   </>
                 )}
               </Author>

@@ -260,7 +260,9 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 To actually connect these to our code, we’ll reference these variables in our `hardhat.config.js` file on step 13.
 
+
 ### Step 12: Install Ethers.js {#step-12-install-ethers.js}
+
 
 Ethers.js is a library that makes it easier to interact and make requests to Ethereum by wrapping [standard JSON-RPC methods](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc) with more user friendly methods.
 
@@ -274,7 +276,9 @@ npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 
 We’ll also require ethers in our `hardhat.config.js` in the next step.
 
+
 ### Step 13: Update hardhat.config.js {#step-13-update-hardhat.config.js}
+
 
 We’ve added several dependencies and plugins so far, now we need to update `hardhat.config.js` so that our project knows about all of them.
 
@@ -303,7 +307,9 @@ module.exports = {
 }
 ```
 
+
 ### Step 14: Compile our contract {#step-14-compile-our-contract}
+
 
 To make sure everything is working so far, let’s compile our contract. The `compile` task is one of the built-in hardhat tasks.
 
@@ -315,7 +321,9 @@ npx hardhat compile
 
 You might get a warning about `SPDX license identifier not provided in source file` , but no need to worry about that — hopefully everything else looks good! If not, you can always message in the [Alchemy discord](https://discord.gg/u72VCg3).
 
+
 ### Step 15: Write our deploy script {#step-15-write-our-deploy-script}
+
 
 Now that our contract is written and our configuration file is good to go, it’s time to write our contract deploy script.
 
@@ -352,7 +360,9 @@ const hello_world = await HelloWorld.deploy();
 
 Calling `deploy()` on a `ContractFactory` will start the deployment, and return a `Promise` that resolves to a `Contract` object. This is the object that has a method for each of our smart contract functions.
 
+
 ### Step 16: Deploy our contract
+
 
 We’re finally ready to deploy our smart contract! Navigate to the command line and run:
 
