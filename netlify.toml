@@ -14,4 +14,5 @@
   # command = "yarn build" # debug with: "yarn build --verbose"
 
   # Directory with the serverless Lambda functions to deploy to AWS.
+  # netlify-lambda needs this netlify.toml file in order to build
   functions = "public/functions"
