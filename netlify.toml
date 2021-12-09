@@ -262,63 +262,81 @@
 [[redirects]]
   from = "/en/java/"
   to = "/en/developers/docs/programming-languages/java/"
+  force = true
 [[redirects]]
   from = "/en/python/"
   to = "/en/developers/docs/programming-languages/python/"
+  force = true
 [[redirects]]
   from = "/en/javascript/"
   to = "/en/developers/docs/programming-languages/javascript/"
+  force = true
 [[redirects]]
   from = "/en/golang/"
   to = "/en/developers/docs/programming-languages/golang/"
+  force = true
 [[redirects]]
   from = "/en/rust/"
   to = "/en/developers/docs/programming-languages/rust/"
+  force = true
 [[redirects]]
   from = "/en/dot-net/"
   to = "/en/developers/docs/programming-languages/dot-net/"
+  force = true
 [[redirects]]
   from = "/en/delphi/"
   to = "/en/developers/docs/programming-languages/delphi/"
+  force = true
 [[redirects]]
   from = "/en/dart/"
   to = "/en/developers/docs/programming-languages/dart/"
+  force = true
 [[redirects]]
   from = "/en/developers/docs/mining/"
   to = "/en/developers/docs/consensus-mechanisms/pow/mining/"
+  force = true
 
 # Eth2 updates
 [[redirects]]
   from = "/en/eth2/the-beacon-chain/"
   to = "/en/eth2/beacon-chain/"
+  force = true
 
 ## All langugages
 [[redirects]]
   from = "/*/beginners"
   to = "/:splat/what-is-ethereum/"
+  force = true
 [[redirects]]
   from = "/*/build"
   to = "/:splat/developers/learning-tools/"
+  force = true
 [[redirects]]
   from = "/*/eth2/the-docking"
   to = "/:splat/eth2/merge/"
+  force = true
 [[redirects]]
   from = "/*/eth2/the-merge"
   to = "/:splat/eth2/merge/"
+  force = true
 [[redirects]]
   from = "/*/eth2/docking"
   to = "/:splat/eth2/merge/"
+  force = true
 [[redirects]]
   from = "/*/developers/docs/layer-2-scaling"
   to = "/:splat/developers/docs/scaling"
+  force = true
 
 # Jobs
 [[redirects]]
   from = "/*/about/web-developer"
   to = "/:splat/about/#open-jobs"
+  force = true
 [[redirects]]
   from = "/*/about/community-lead"
   to = "/:splat/about/#open-jobs"
+  force = true
 
 # A redirect rule with all the supported properties
 # [[redirects]]
