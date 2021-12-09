@@ -413,5 +413,5 @@ exports.onPostBuild = async (gatsbyNodeHelpers) => {
     if (stdout) reporter.info(stdout)
   }
 
-  reportOut(await exec("npm run build:lambda && cp netlify.toml public"))
+  reportOut(await exec("npm run build:lambda"))
 }
