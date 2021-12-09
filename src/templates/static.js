@@ -39,6 +39,7 @@ import {
 import Emoji from "../components/Emoji"
 import UpcomingEventsList from "../components/UpcomingEventsList"
 import Icon from "../components/Icon"
+import SocialListItem from "../components/SocialListItem"
 
 const Page = styled.div`
   display: flex;
@@ -130,6 +131,8 @@ const components = {
   GhostCard,
   UpcomingEventsList,
   Icon,
+  Link,
+  SocialListItem,
 }
 
 const StaticPage = ({ data: { siteData, pageData: mdx }, pageContext }) => {
