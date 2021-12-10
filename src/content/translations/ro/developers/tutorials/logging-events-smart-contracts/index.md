@@ -14,6 +14,8 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 În Solidity, [evenimentele](/developers/docs/smart-contracts/anatomy/#events-and-logs) sunt semnalele expediate pe care contractele inteligente le pot declanșa. Aplicațiile dapp sau orice conectat la Ethereum JSON-RPC API, pot asculta aceste evenimente și pot acționa în consecință. De asemenea, evenimentul poate fi indexat, pentru ca istoricul evenimentelor să poată fi căutat mai târziu.
 
+## Evenimente {#events}
+
 Cel mai comun eveniment pe Ethereum blockchain la momentul scrierii acestui articol este evenimentul de transfer, care este emis de tokenuri ERC20 atunci când cineva transferă tokenuri.
 
 ```solidity

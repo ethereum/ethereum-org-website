@@ -4,6 +4,7 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import { shuffle } from "lodash"
+import { getImage } from "gatsby-plugin-image"
 import { translateMessageId } from "../../../utils/translations"
 import Card from "../../../components/Card"
 import Leaderboard from "../../../components/Leaderboard"
@@ -385,7 +386,7 @@ const GetInvolvedPage = ({ data, location }) => {
       </Content>
       <Staking>
         <StyledCalloutBanner
-          image={data.rhino.childImageSharp.fluid}
+          image={getImage(data.rhino)}
           alt={translateMessageId("eth2-rhino-img-alt", intl)}
           title={translateMessageId("page-eth2-get-involved-stake", intl)}
           description={translateMessageId(
@@ -461,15 +462,18 @@ export default GetInvolvedPage
 export const Clients = graphql`
   fragment Clients on File {
     childImageSharp {
-      fixed(width: 80) {
-        ...GatsbyImageSharpFixed
-      }
+      gatsbyImageData(
+        width: 80
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
 
 export const query = graphql`
-  query {
+  {
     bountyHunters: allEth2BountyHuntersCsv(
       sort: { order: DESC, fields: score }
     ) {
@@ -481,9 +485,12 @@ export const query = graphql`
     }
     rhino: file(relativePath: { eq: "eth2/eth2_rhino.png" }) {
       childImageSharp {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(
+          width: 800
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     prysm: file(relativePath: { eq: "eth2/prysm.png" }) {

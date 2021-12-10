@@ -40,9 +40,10 @@ The ERC-20 (Ethereum Request for Comments 20), proposed by Fabian Vogelsteller i
 implements an API for tokens within Smart Contracts.
 
 Example functionalities ERC-20 provides:
+
 - transfer tokens from one account to another
 - get the current token balance of an account
-- get the total supply of the token available on the network 
+- get the total supply of the token available on the network
 - approve whether an amount of token from an account can be spent by a third-party account
 
 If a Smart Contract implements the following methods and events it can be called an ERC-20 Token Contract and, once deployed, it

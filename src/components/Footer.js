@@ -225,7 +225,7 @@ const Footer = () => {
       links: [
         {
           to: `/community/`,
-          text: "ethereum-community",
+          text: "community-hub",
         },
         {
           to: "/foundation/",

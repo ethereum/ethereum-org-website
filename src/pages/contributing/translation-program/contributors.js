@@ -36,6 +36,10 @@ const HorizontalUl = styled.ul`
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     grid-template-columns: 1fr 1fr;
   }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    grid-template-columns: 1fr;
+  }
 `
 
 const Contributors = ({ location }) => {
