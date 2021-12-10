@@ -90,7 +90,7 @@ const StyledIcon = styled(Icon)`
   fill: ${(props) =>
     props.color ? props.color : props.theme.colors.secondary};
 
-  &:hover path {
+  &:hover svg {
     fill: ${(props) => props.theme.colors.primary};
   }
 `

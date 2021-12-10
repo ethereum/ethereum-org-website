@@ -119,6 +119,11 @@ const ThemeToggle = styled(NakedButton)`
   margin-left: 1rem;
   display: flex;
   align-items: center;
+  &:hover {
+    svg {
+      fill: ${(props) => props.theme.colors.primary};
+    }
+  }
 `
 
 const NavIcon = styled(Icon)`
