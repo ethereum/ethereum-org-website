@@ -28,7 +28,7 @@ sidebar: true
 - [Rust 以太坊客户端](https://wiki.parity.io/Setup)
 - [使用 Rust 向以太坊发送交易](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
 - [Parity 以太坊客户端智能合约简介](https://wiki.parity.io/Smart-Contracts)
-- [设置 Oasis SDK 开发环境](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [设置 Oasis SDK 开发环境](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [一步步教您如何用 Rust 为 Kovan 编写 Wasm 合约](https://github.com/paritytech/pwasm-tutorial)
 
 ## 中级文章 {#intermediate-articles}

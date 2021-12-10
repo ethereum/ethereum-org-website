@@ -29,7 +29,7 @@ sidebarDepth: 1
 - [Rust イーサリアムクライアント](https://wiki.parity.io/Setup)
 - [Rust を使用してイーサリアムにトランザクションを送信する](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
 - [Parity イーサリアムクライアントでスマートコントラクト入門](https://wiki.parity.io/Smart-Contracts)
-- [Oasis SDK 開発環境のセットアップ](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [Oasis SDK 開発環境のセットアップ](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Kovan のために Rust の Wasm でコントラクトを書く手法のステップバイステップ・チュートリアル](https://github.com/paritytech/pwasm-tutorial)
 
 ## 中級記事 {#intermediate-articles}
