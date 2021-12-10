@@ -27,15 +27,13 @@ incomplete: true
 - [Rust 以太坊客户端](https://wiki.parity.io/Setup)
 - [使用 Rust 向以太坊发送交易](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
 - [Parity 以太坊客户端智能合约简介](https://wiki.parity.io/Smart-Contracts)
-- [设置 Oasis SDK 开发环境](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [设置 Oasis SDK 开发环境](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [一步步教您如何用 Rust 为 Kovan 编写 Wasm 合约](https://github.com/paritytech/pwasm-tutorial)
 
 ## 面向中等程度者的文章 {#intermediate-articles}
 
 - [Rust-Web3 相关文档](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Rust-Web3 工作示例](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [使用 OASIS SDK 创建秘密投票](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [使用 OASIS SDK 创建私密聊天服务器](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## 面向高等程度者的使用模式 {#advanced-use-patterns}
 

@@ -29,15 +29,13 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 - [El cliente de Ethereum basado en Rust](https://wiki.parity.io/Setup)
 - [Enviar una transacción a Ethereum mediante Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
 - [Una introducción a los contratos inteligentes con el cliente de Parity Ethereum](https://wiki.parity.io/Smart-Contracts)
-- [Configurar un entorno de desarrollo de Oasis SDK](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [Configurar un entorno de desarrollo de Oasis SDK](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Un tutorial paso a paso sobre cómo escribir contratos en Rust Wasm para Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Artículos de nivel intermedio {#intermediate-articles}
 
 - [Documentación de Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Ejemplos de trabajo de Rust-Web3](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Crear una selección secreta con OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Crear un servidor de chat privado con OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Patrones de uso avanzado {#advanced-use-patterns}
 

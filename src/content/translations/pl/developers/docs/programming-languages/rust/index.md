@@ -27,15 +27,13 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na [ethereum.org/learn](
 - [Klient Ethereum Rust](https://wiki.parity.io/Setup)
 - [Wysyłanie transakcji do Ethereum za pomocą Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
 - [Wprowadzenie do inteligentnych kontraktów z klientem Parity Ethereum](https://wiki.parity.io/Smart-Contracts)
-- [Konfigurowanie środowiska deweloperskiego Oasis SDK](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [Konfigurowanie środowiska deweloperskiego Oasis SDK](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Samouczek krok po kroku, jak pisać umowy w Rust Wasm dla Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Artykuły dla średniozaawansowanych {#intermediate-articles}
 
 - [Dokumentacja Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Przykłady działania Rust-Web3](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Tworzenie tajnej karty do głosowania za pomocą pakietu OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Tworzenie prywatnego serwera czatu za pomocą OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Przykłady zaawansowane {#advanced-use-patterns}
 

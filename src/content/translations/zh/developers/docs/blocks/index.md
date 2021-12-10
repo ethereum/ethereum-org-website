@@ -17,7 +17,7 @@ sidebar: true
 
 为了确保以太坊网络上的所有参与者保持同步状态并就交易的确切历史达成共识，我们将交易分为多个区块。 这意味着一次提交、商定和同步数十个（或数百个）交易。
 
-![区块中的交易导致状态变化的图表](./tx-block.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![区块中的交易导致状态变化的图表](../../../../../developers/docs/blocks/tx-block.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 通过间隔提交，即使交易请求每秒发生数十次，我们仍能给所有网络参与者足够的时间达成共识。 以太坊上的区块大约每十五秒提交一次。
 

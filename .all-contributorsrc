@@ -5765,6 +5765,80 @@
         "doc",
         "translation"
       ]
+    },
+    {
+      "login": "samnang",
+      "name": "Samnang Chhun",
+      "avatar_url": "https://avatars.githubusercontent.com/u/131172?v=4",
+      "profile": "https://github.com/samnang",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "m-t-a97",
+      "name": "Tanvir Ahmed",
+      "avatar_url": "https://avatars.githubusercontent.com/u/54685928?v=4",
+      "profile": "http://m-t-ahmed.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "JorisZierold",
+      "name": "Joris Zierold",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13258954?v=4",
+      "profile": "https://github.com/JorisZierold",
+      "contributions": [
+        "doc",
+        "ideas"
+      ]
+    },
+    {
+      "login": "selfwithin",
+      "name": "selfwithin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/94748148?v=4",
+      "profile": "https://github.com/selfwithin",
+      "contributions": [
+        "ideas",
+        "doc"
+      ]
+    },
+    {
+      "login": "jnathnjshua",
+      "name": "Jonathan Joshua",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46720446?v=4",
+      "profile": "https://github.com/jnathnjshua",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "patcito",
+      "name": "Patrick Aljord",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26435?v=4",
+      "profile": "https://twitter.com/patcito",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "decipherer2",
+      "name": "decifer",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16278986?v=4",
+      "profile": "https://github.com/decipherer2",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "aghArdeshir",
+      "name": "aghArdeshir",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5755214?v=4",
+      "profile": "https://github.com/aghArdeshir",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
