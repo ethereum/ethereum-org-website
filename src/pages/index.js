@@ -22,7 +22,11 @@ import {
   GrayContainer,
   LeftColumn,
 } from "../components/SharedStyledComponents"
-import { translateMessageId } from "../utils/translations"
+import {
+  translateMessageId,
+  legacyHomepageLanguages,
+} from "../utils/translations"
+// import translations from "../data/translations.json"
 
 const Hero = styled(GatsbyImage)`
   width: 100%;
@@ -402,14 +406,12 @@ const StyledCalloutBanner = styled(CalloutBanner)`
   }
 `
 
-const HomePage = ({ data }) => {
+const HomePage = ({ data, pageContext: { language } }) => {
   const intl = useIntl()
   const [isModalOpen, setModalOpen] = useState(false)
   const [activeCode, setActiveCode] = useState(0)
 
-  if (intl.locale !== "en") {
-    return <LegacyPageHome />
-  }
+  if (legacyHomepageLanguages.includes(language)) return <LegacyPageHome />
 
   const toggleCodeExample = (id) => {
     setActiveCode(id)
