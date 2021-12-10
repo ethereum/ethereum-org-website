@@ -33,4 +33,4 @@ _Conosci una risorsa della community che ti è stata utile? Modifica questa pagi
 
 ## Argomenti correlati {#related-topics}
 
-- [Framework di sviluppo](/en/developers/docs/frameworks/)
+- [Framework di sviluppo](/developers/docs/frameworks/)

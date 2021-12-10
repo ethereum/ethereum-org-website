@@ -72,7 +72,7 @@ GameContract.events.BetPlaced({
 
 现在，对于我们的简单示例来说，这在某种程度上还是不错的。 但是假设我们现在只想显示当前玩家输/赢的赌注金额。 嗯，我们运气不好，您最好部署一份新的合约来存储这些值，并将它们提取出来。 现在想象一下一个更复杂的智能合约和去中心化应用，事情可能很快就会变得一团糟。
 
-![一个不简单的查询](./one-does-not-simply-query.jpg)
+![一个不简单的查询](../../../../../developers/tutorials/the-graph-fixing-web3-data-querying/one-does-not-simply-query.jpg)
 
 您可以看到这并不是最优的：
 
@@ -80,7 +80,7 @@ GameContract.events.BetPlaced({
 - 存储这些值需要额外的 gas 成本。
 - 需要另一个调用来获取以太坊节点的数据。
 
-![是不够好的](./not-good-enough.jpg)
+![是不够好的](../../../../../developers/tutorials/the-graph-fixing-web3-data-querying/not-good-enough.jpg)
 
 现在让我们看看更好的解决方案。
 
@@ -88,7 +88,7 @@ GameContract.events.BetPlaced({
 
 首先我们来谈谈 GraphQL，它最初是由 Facebook 设计和实现的。 您可能熟悉传统的 Rest API 模型。 现在设想一下，您可以编写一个查询来精确查找您想要的数据：
 
-![GraphQL API与REST API](./graphql.jpg)
+![GraphQL API与REST API](../../../../../developers/tutorials/the-graph-fixing-web3-data-querying/graphql.jpg)
 
 <!-- TODO gif embed not working: -->
 <!-- Need additional plugin? https://github.com/gatsbyjs/gatsby/issues/7317#issuecomment-412984851 -->
@@ -103,7 +103,7 @@ GameContract.events.BetPlaced({
 
 区块链是一个去中心化的数据库，但与通常情况不同的是，我们没有适用于这个数据库的查询语言。 检索数据的解决方案是痛苦的，或者是完全不可能的。 The Graph 是一种用于为区块链数据建立索引并进行查询的去中心化协议。 您可能已经猜到了，它使用 GraphQL 作为查询语言。
 
-![The Graph](./thegraph.png)
+![The Graph](../../../../../developers/tutorials/the-graph-fixing-web3-data-querying/thegraph.png)
 
 示例总是最容易理解的，所以让我们为 GameContract 示例使用 The Graph。
 
@@ -289,7 +289,7 @@ React.useEffect(() => {
 }, [loading, error, data])
 ```
 
-![Magic](./magic.jpg)
+![Magic](../../../../../developers/tutorials/the-graph-fixing-web3-data-querying/magic.jpg)
 
 但我们缺少了这个拼图的最后一块，那就是服务器。 您可以自行运行一个服务器或使用托管服务。
 
@@ -299,7 +299,7 @@ React.useEffect(() => {
 
 最简单的方法是使用托管服务。 按照[此处](https://thegraph.com/docs/deploy-a-subgraph)的说明来部署子图。 对于许多项目，您实际上可以在https://thegraph.com/explorer/的资源管理器中找到现有的子图。
 
-![The Graph浏览器](./thegraph-explorer.png)
+![The Graph浏览器](../../../../../developers/tutorials/the-graph-fixing-web3-data-querying/thegraph-explorer.png)
 
 ### 运行您自己的节点 {#running-your-own-node}
 

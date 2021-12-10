@@ -14,8 +14,8 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~2022">
-    Shard Chains sollten irgendwann in 2022 implementiert werden – in Abhängigkeit davon, wie schnell die Arbeit voranschreitet, nachdem <a href="/eth2/beacon-chain/"> die Beacon Chain </a> eingeführt wurde. Diese Shards werden Ethereum mehr Kapazität für das Speichern und den Zugriff auf Daten geben, aber sie werden nicht für die Ausführung von Codes verwendet. Die Details hierfür werden noch ausgearbeitet.
+<UpgradeStatus date="~2023">
+    Shard Chains sollten irgendwann in 2023 implementiert werden – in Abhängigkeit davon, wie schnell die Arbeit voranschreitet, nachdem <a href="/eth2/beacon-chain/"> die Beacon Chain </a> eingeführt wurde. Diese Shards werden Ethereum mehr Kapazität für das Speichern und den Zugriff auf Daten geben, aber sie werden nicht für die Ausführung von Codes verwendet. Die Details hierfür werden noch ausgearbeitet.
 </UpgradeStatus>
 
 ## Was ist Sharding? {#what-is-sharding}
@@ -39,7 +39,7 @@ Dank Sharding werden geringere Hardwareanforderungen es vereinfachen, [Clients](
 <br />
 
 <InfoBanner isWarning={true}>
-  Zunächst benötigst du neben deinem Eth2-Client auch einen Mainnet-Client. <a href="https://launchpad.ethereum.org" target="_blank">Das Launchpad</a> wird dich durch die Hardwareanforderungen und den Prozess begleiten. Alternativ kannst du einen <a href="/en/developers/docs/apis/backend/#available-libraries">Backend-API</a> verwenden.
+  Zunächst benötigst du neben deinem Eth2-Client auch einen Mainnet-Client. <a href="https://launchpad.ethereum.org" target="_blank">Das Launchpad</a> wird dich durch die Hardwareanforderungen und den Prozess begleiten. Alternativ kannst du einen <a href="/developers/docs/apis/backend/#available-libraries">Backend-API</a> verwenden.
 </InfoBanner>
 
 ## Shard Chains Version 1: Datenverfügbarkeit {#data-availability}

@@ -5,7 +5,7 @@ lang: it
 sidebar: true
 ---
 
-Un applicazione decentralizzata (dapp) è un'applicazione costruita su una rete decentralizzata che coniuga uno [Smart Contract](/en/developers/docs/smart-contracts/) con un'interfaccia utente di front end. In Ethereum gli Smart Contract sono accessibili e trasparenti (come le API aperte) quindi una dapp può anche includere Smart Contract scritto da altri.
+Un applicazione decentralizzata (dapp) è un'applicazione costruita su una rete decentralizzata che coniuga uno [Smart Contract](/developers/docs/smart-contracts/) con un'interfaccia utente di front end. In Ethereum gli Smart Contract sono accessibili e trasparenti (come le API aperte) quindi una dapp può anche includere Smart Contract scritto da altri.
 
 ## Prerequisiti {#prerequisites}
 
@@ -24,7 +24,7 @@ Una dapp può avere codice frontend e interfacce utente scritti in qualsiasi lin
 
 ### Informazioni sugli Smart Contract {#on-smart-contracts}
 
-Per presentare le dapp, dobbiamo introdurre gli Smart Contract, cioè il backend della dapp, in mancanza di una definizione migliore. Per una panoramica dettagliata, visita la sezione sugli [Smart Contract](/en/developers/docs/smart-contracts/).
+Per presentare le dapp, dobbiamo introdurre gli Smart Contract, cioè il backend della dapp, in mancanza di una definizione migliore. Per una panoramica dettagliata, visita la sezione sugli [Smart Contract](/developers/docs/smart-contracts/).
 
 Uno Smart Contract è codice che gira sulla blockchain Ethereum e che funziona esattamente come programmato. Una volta distribuito nella rete, non può più essere modificato. Le dapp possono essere decentralizzate perché sono controllate della logica scritta nel contratto, non da un individuo o da un'azienda. Questo significa anche gli Smart Contract devono essere progettati molto attentamente e testati accuratamente.
 
@@ -82,5 +82,5 @@ _Conosci una risorsa della community che ti è stata utile? Modifica questa pagi
 
 ## Argomenti correlati {#related-topics}
 
-- [Introduzione allo stack di Ethereum](/en/developers/docs/ethereum-stack/)
-- [Framework di sviluppo](/en/developers/docs/frameworks/)
+- [Introduzione allo stack di Ethereum](/developers/docs/ethereum-stack/)
+- [Framework di sviluppo](/developers/docs/frameworks/)

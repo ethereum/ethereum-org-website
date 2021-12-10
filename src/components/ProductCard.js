@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { useQuery, gql } from "@apollo/client"
 
 import GitStars from "./GitStars"
@@ -16,7 +16,7 @@ const ImageWrapper = styled.div`
   min-height: 200px;
 `
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   width: 100%;
   align-self: center;
   max-width: 372px;
@@ -162,7 +162,7 @@ const ProductCard = ({
 
   const hasRepoData = data && data.repository && !error
 
-  // Check if image is an svg as gatsby-image doesn't support svg
+  // Check if image is an svg as gatsby-plugin-image doesn't support svg
   let isSvg = false
   if (typeof image === "string") {
     if (image.includes("svg")) {
@@ -176,7 +176,7 @@ const ProductCard = ({
         {isSvg ? (
           <img src={image} alt={alt} />
         ) : (
-          <Image fixed={image} alt={alt} />
+          <Image image={image} alt={alt} />
         )}
       </ImageWrapper>
       <Content className="hover">

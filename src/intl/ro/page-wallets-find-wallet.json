@@ -61,7 +61,7 @@
   "page-find-wallet-myetherwallet-logo-alt": "Logo MyEtherWallet",
   "page-find-wallet-new-to-wallets": "Ești nou în portofele? Iată o prezentare generală pentru a începe.",
   "page-find-wallet-new-to-wallets-link": "Portofele Ethereum",
-  "page-find-wallet-not-all-features": "Niciun portofel nu are toate aceste caracteristici",
+  "page-find-wallet-not-all-features": "Niciun portofel nu are toate aceste caracteristici <strong>încă</strong>",
   "page-find-wallet-not-endorsements": "Portofelele enumerate pe această pagină nu sunt aprobări oficiale și sunt furnizate numai în scop informativ. Descrierile lor au fost furnizate chiar de companiile de portofele. Adăugăm produse la această pagină pe baza criteriilor noastre",
   "page-find-wallet-overwhelmed": "de portofele Ethereum mai jos. Impresionat? Încearcă să filtrezi după caracteristici.",
   "page-find-wallet-pillar-logo-alt": "Logo Pillar",
@@ -86,7 +86,6 @@
   "page-find-wallet-we-found": "Am găsit",
   "page-find-wallet-withdraw": "Retragere prin transfer bancar",
   "page-find-wallet-withdraw-desc": "Poți retrage ETH direct în contul tău bancar fără a trece printr-un schimb.",
-  "page-find-wallet-yet": "încă",
   "page-find-wallet-zengo-logo-alt": "Logo ZenGo",
   "page-stake-eth": "Mizează ETH"
 }

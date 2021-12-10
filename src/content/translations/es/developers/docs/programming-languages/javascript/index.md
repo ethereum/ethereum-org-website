@@ -7,13 +7,13 @@ sidebar: true
 
 JavaScript se encuentra entre los lenguajes más populares del ecosistema Ethereum. De hecho, hay un [equipo](https://github.com/ethereumjs) dedicado a programar la mayor cantidad posible de Ethereum en JavaScript.
 
-Hay posibilidad de programar en JavaScript (o algo similar) en [todos los niveles de la pila](/en/developers/docs/ethereum-stack/).
+Hay posibilidad de programar en JavaScript (o algo similar) en [todos los niveles de la pila](/developers/docs/ethereum-stack/).
 
 ## Interactuar con Ethereum {#interact-with-ethereum}
 
 ### Bibliotecas API JavaScript {#javascript-api-libraries}
 
-Si quieres escribir JavaScript para consultas del blockchain, enviar transacciones y demás, la forma más conveniente es utilizando la [biblioteca de API de JavaScript](/en/developers/docs/apis/javascript/). Estas API permiten a los desarrolladores interactuar fácilmente con los nodos [de la red Ethereum](/en/developers/docs/nodes-and-clients/).
+Si quieres escribir JavaScript para consultas del blockchain, enviar transacciones y demás, la forma más conveniente es utilizando la [biblioteca de API de JavaScript](/developers/docs/apis/javascript/). Estas API permiten a los desarrolladores interactuar fácilmente con los nodos [de la red Ethereum](/developers/docs/nodes-and-clients/).
 
 Puedes utilizar estas bibliotecas para interactuar con contratos inteligentes en Ethereum de modo que es posible construir una dapp que solo utilice JavaScript para interactuar con contratos preexistentes.
 
@@ -26,13 +26,13 @@ Puedes utilizar estas bibliotecas para interactuar con contratos inteligentes en
 
 Si eres un programador de JavaScript y deseas escribir un contrato inteligente propio, te interesa familiarizarte con [Solidity](https://solidity.readthedocs.io). Es el lenguaje más popular para contratos y está muy inspirado en JavaScript.
 
-Más información sobre [contratos inteligentes](/en/developers/docs/smart-contracts/).
+Más información sobre [contratos inteligentes](/developers/docs/smart-contracts/).
 
 ## Comprender el protocolo {#understand-the-protocol}
 
 ### La máquina virtual de Ethereum {#the-ethereum-virtual-machine}
 
-Hay una implementación de la máquina virtual de [Ethereum](/en/developers/docs/evm/) en JavaScript. Soporta las últimas reglas de bifurcación. Las reglas de bifurcación se refieren a los cambios realizados a la EVM como resultado de las actualizaciones previstas.
+Hay una implementación de la máquina virtual de [Ethereum](/developers/docs/evm/) en JavaScript. Soporta las últimas reglas de bifurcación. Las reglas de bifurcación se refieren a los cambios realizados a la EVM como resultado de las actualizaciones previstas.
 
 Esto está dividido en varios paquetes de JavaScript, los cuales pueden ser revisados para un mayor entendimiento:
 

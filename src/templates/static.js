@@ -39,6 +39,8 @@ import {
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import UpcomingEventsList from "../components/UpcomingEventsList"
+import Icon from "../components/Icon"
+import SocialListItem from "../components/SocialListItem"
 
 const Page = styled.div`
   display: flex;
@@ -114,6 +116,7 @@ const components = {
   MeetupList,
   RandomAppList,
   Roadmap,
+  Link,
   Logo,
   ButtonLink,
   Contributors,
@@ -129,6 +132,9 @@ const components = {
   CardContainer,
   GhostCard,
   UpcomingEventsList,
+  Icon,
+  Link,
+  SocialListItem,
   MatomoOptOut,
 }
 
@@ -143,7 +149,9 @@ const StaticPage = ({ data: { siteData, pageData: mdx }, pageContext }) => {
   const tocItems = mdx.tableOfContents.items
   const { editContentUrl } = siteData.siteMetadata
   const { relativePath } = pageContext
-  const absoluteEditPath = `${editContentUrl}${relativePath}`
+  const absoluteEditPath = relativePath.split("/").includes("whitepaper")
+    ? ""
+    : `${editContentUrl}${relativePath}`
 
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>

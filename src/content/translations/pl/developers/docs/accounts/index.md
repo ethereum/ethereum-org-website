@@ -10,14 +10,14 @@ Konto Ethereum jest jednostką z saldem etheru (ETH), która może wysyłać tra
 
 ## Warunki wstępne {#prerequisites}
 
-Konta to bardzo przyjazny dla początkujących temat. Ale aby pomóc Ci lepiej zrozumieć tę stronę, zalecamy przeczytanie naszego [wprowadzenia do Ethereum](/en/developers/docs/intro-to-ethereum/).
+Konta to bardzo przyjazny dla początkujących temat. Ale aby pomóc Ci lepiej zrozumieć tę stronę, zalecamy przeczytanie naszego [wprowadzenia do Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Rodzaje kont {#types-of-account}
 
 Ethereum ma dwa typy kont:
 
 - Zewnętrznie posiadane – kontrolowane przez każdego, kto ma klucze prywatne
-- Kontrakt – inteligentny kontrakt realizowany w sieci, kontrolowany kodem. Dowiedz się więcej o [inteligentnych kontraktach](/en/developers/docs/smart-contracts/)
+- Kontrakt – inteligentny kontrakt realizowany w sieci, kontrolowany kodem. Dowiedz się więcej o [inteligentnych kontraktach](/developers/docs/smart-contracts/)
 
 Oba typy kont mają możliwość:
 
@@ -127,5 +127,5 @@ _Wiesz o zasobach społecznościowych, które Ci pomogły? Wyedytuj tę stronę 
 
 ## Powiązane tematy {#related-topics}
 
-- [Inteligentne kontrakty](/en/developers/docs/smart-contracts/)
-- [Transakcje](/en/developers/docs/transactions/)
+- [Inteligentne kontrakty](/developers/docs/smart-contracts/)
+- [Transakcje](/developers/docs/transactions/)

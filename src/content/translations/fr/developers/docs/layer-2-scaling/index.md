@@ -85,7 +85,7 @@ Les rollups optimisés utilisent une chaîne latérale positionnée en parallèl
 
 Avec les rollups optimisés, les transactions sont écrites sur la chaîne principale Ethereum en tant que données d'appel, ce qui les optimise davantage en réduisant le coût du carburant.
 
-Le calcul étant la partie lente et coûteuse de l'utilisation d'Ethereum, les rollups optimisés peuvent offrir 10 à 100 fois plus d'évolutivité en fonction de la transaction. Ce nombre augmentera encore plus avec l'introduction de la mise à niveau Eth2 vers les [chaînes de fragments](/en/eth2/shard-chains). Cela est dû au fait qu'il y aura plus de données disponibles en cas de contestation d'une transaction.
+Le calcul étant la partie lente et coûteuse de l'utilisation d'Ethereum, les rollups optimisés peuvent offrir 10 à 100 fois plus d'évolutivité en fonction de la transaction. Ce nombre augmentera encore plus avec l'introduction de la mise à niveau Eth2 vers les [chaînes de fragments](/eth2/shard-chains). Cela est dû au fait qu'il y aura plus de données disponibles en cas de contestation d'une transaction.
 
 #### Contestation des transactions {#disputing-transactions}
 
@@ -114,7 +114,7 @@ Vous êtes donc remboursé pour avoir prouvé la fraude.
 
 <!-- #### The Optimism virtual machine (OVM)
 
-What makes Optimistic rollups particularly exciting is that the chain works the same as the main Ethereum chain because it's based on [the EVM](/en/developers/docs/evm/). It doesn't use Ethereum, it is Ethereum. This means if you want to use Optimistic rollups, it's just a matter of deploying it to the OVM. It looks, feels, and acts just like the Ethereum main chain–you write contracts in Solidity, and interact with the chain via the Web3 API.
+What makes Optimistic rollups particularly exciting is that the chain works the same as the main Ethereum chain because it's based on [the EVM](/developers/docs/evm/). It doesn't use Ethereum, it is Ethereum. This means if you want to use Optimistic rollups, it's just a matter of deploying it to the OVM. It looks, feels, and acts just like the Ethereum main chain–you write contracts in Solidity, and interact with the chain via the Web3 API.
 
 The OVM also has a bunch of features that allow for a really seamless experience moving code from the EVM. In fact you can move Solidity contracts onto a cheaper and faster solution with just a few lines of code.
 

@@ -251,7 +251,7 @@ Ecco alcuni aspetti da considerare se non hai ancora provato nessun linguaggio:
 
 ### Quali vantaggi offre Solidity? {#solidity-advantages}
 
-- Se non hai esperienza, sono disponibili molti tutorial e strumenti d'apprendimento. Scopri di più nella sezione [Impara scrivendo codice](https://ethereum.org/en/developers/learning-tools/).
+- Se non hai esperienza, sono disponibili molti tutorial e strumenti d'apprendimento. Scopri di più nella sezione [Impara scrivendo codice](/developers/learning-tools/).
 - Disponibilità di buoni strumenti per gli sviluppatori.
 - Solidity ha un'estesa community di sviluppatori, e quindi probabilmente troverai risposte alle tue domande abbastanza rapidamente.
 

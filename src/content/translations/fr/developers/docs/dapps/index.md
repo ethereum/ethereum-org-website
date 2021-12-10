@@ -5,7 +5,7 @@ lang: fr
 sidebar: true
 ---
 
-Une application décentralisée (DApp) est une application construite sur un réseau décentralisé qui combine un [contrat intelligent](/en/developers/docs/smart-contracts/) et une interface utilisateur en frontend. Notez que les contrats intelligents Ethereum sont accessibles et transparents, comme les API ouvertes, de sorte que votre DApp peut même inclure un contrat intelligent que quelqu'un d'autre a rédigé.
+Une application décentralisée (DApp) est une application construite sur un réseau décentralisé qui combine un [contrat intelligent](/developers/docs/smart-contracts/) et une interface utilisateur en frontend. Notez que les contrats intelligents Ethereum sont accessibles et transparents, comme les API ouvertes, de sorte que votre DApp peut même inclure un contrat intelligent que quelqu'un d'autre a rédigé.
 
 ## Prérequis {#prerequisites}
 
@@ -24,7 +24,7 @@ Une DApp peut comporter du code frontend et des interfaces utilisateur rédigée
 
 ### Contrats intelligents {#on-smart-contracts}
 
-Pour présenter les DApps, nous devons tout d'abord présenter les contrats intelligents (qui sont des DApp backend, à défaut d'un meilleur terme). En savoir plus sur les [contrats intelligents](/en/developers/docs/smart-contracts/).
+Pour présenter les DApps, nous devons tout d'abord présenter les contrats intelligents (qui sont des DApp backend, à défaut d'un meilleur terme). En savoir plus sur les [contrats intelligents](/developers/docs/smart-contracts/).
 
 Un contrat intelligent est un code présent sur la blockchain Ethereum qui fonctionne exactement comme programmé. Une fois déployé sur le réseau, vous ne pouvez pas le modifier. Les DApps peuvent être décentralisées car elles sont contrôlées par la logique rédigée dans le contrat, pas par un individu ni une entreprise. Cela signifie que vous devez concevoir vos contrats très soigneusement et les tester de façon approfondie.
 
@@ -82,5 +82,5 @@ _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
 ## Sujets associés {#related-topics}
 
-- [Introduction à la pile Ethereum](/en/developers/docs/ethereum-stack/)
-- [Frameworks de développement](/en/developers/docs/frameworks/)
+- [Introduction à la pile Ethereum](/developers/docs/ethereum-stack/)
+- [Frameworks de développement](/developers/docs/frameworks/)

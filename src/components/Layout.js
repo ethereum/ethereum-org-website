@@ -9,7 +9,6 @@ import "../styles/layout.css"
 import { lightTheme, darkTheme, GlobalStyle } from "../theme"
 
 import Footer from "./Footer"
-import ReleaseBanner from "./ReleaseBanner"
 import VisuallyHidden from "./VisuallyHidden"
 import Nav from "./Nav"
 import SideNav from "./SideNav"
@@ -80,9 +79,10 @@ const Layout = (props) => {
       if (localStorage.getItem("zen-mode") !== null) {
         let isMobile = false
         if (typeof window !== undefined) {
-          isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-            window.navigator.userAgent
-          )
+          isMobile =
+            /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+              window.navigator.userAgent
+            )
         }
         setIsZenMode(localStorage.getItem("zen-mode") === "true" && !isMobile)
       }

@@ -85,9 +85,12 @@ const ClearLink = styled.button`
 export const walletCardImage = graphql`
   fragment walletCardImage on File {
     childImageSharp {
-      fluid(maxWidth: 64) {
-        ...GatsbyImageSharpFluid
-      }
+      gatsbyImageData(
+        width: 64
+        layout: CONSTRAINED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
@@ -497,10 +500,7 @@ const WalletCompare = ({ location }) => {
           <ResultsContainer>
             <Emoji text=":crying_face:" size={3} mb={`2em`} mt={`2em`} />
             <h2>
-              <Translation id="page-find-wallet-not-all-features" />{" "}
-              <b>
-                <Translation id="page-find-wallet-yet" />
-              </b>
+              <Translation id="page-find-wallet-not-all-features" />
             </h2>
             <p>
               <Translation id="page-find-wallet-try-removing" />

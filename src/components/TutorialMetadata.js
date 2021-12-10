@@ -115,7 +115,7 @@ const TutorialMetadata = ({ tutorial, data }) => {
         )}
         <DataContainer>
           <Emoji size={1} mr={`0.5em`} text=":stopwatch:" />
-          {tutorial.timeToRead}{" "}
+          {Math.round(tutorial.fields.readingTime.minutes)}{" "}
           <Translation id="comp-tutorial-metadata-minute-read" />
         </DataContainer>
       </HorizontalContainer>

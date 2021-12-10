@@ -8,6 +8,9 @@ import {
   FaYoutube,
   FaDiscord,
   FaYinYang,
+  FaRedditAlien,
+  FaStackExchange,
+  FaGlobe,
 } from "react-icons/fa"
 import {
   MdAdd,
@@ -35,7 +38,15 @@ const LowerOpacityFaYinYangActive = styled(LowerOpacityFaYinYang)`
   fill: ${(props) => props.theme.colors.selectActive} !important;
 `
 
-const Icon = ({ name, size, className }) => (
+const socialColors = {
+  reddit: "#FF4301",
+  twitter: "#1DA1F2",
+  youtube: "#FF0000",
+  discord: "#7289da",
+  stackExchange: "#48a2da",
+}
+
+const Icon = ({ name, color = false, size, className }) => (
   <IconContext.Provider value={{ size: size, className: className }}>
     {name === "add" && <MdAdd />}
     {name === "chevronDown" && <MdExpandMore />}
@@ -49,15 +60,28 @@ const Icon = ({ name, size, className }) => (
     {name === "yinYangInactive" && <LowerOpacityFaYinYang />}
     {name === "yinYangActive" && <LowerOpacityFaYinYangActive />}
     {name === "menu" && <MdMenu />}
-    {name === "twitter" && <FaTwitter />}
+    {name === "twitter" && (
+      <FaTwitter color={color ? socialColors.twitter : undefined} />
+    )}
     {name === "search" && <MdSearch />}
-    {name === "youtube" && <FaYoutube />}
-    {name === "discord" && <FaDiscord />}
+    {name === "youtube" && (
+      <FaYoutube color={color ? socialColors.youtube : undefined} />
+    )}
+    {name === "discord" && (
+      <FaDiscord color={color ? socialColors.discord : undefined} />
+    )}
     {name === "glossary" && <BsQuestionSquareFill />}
     {name === "codeDownload" && <IoCodeDownload />}
     {name === "code" && <IoCodeOutline />}
     {name === "flip" && <MdFlip />}
     {name === "help" && <MdLiveHelp />}
+    {name === "reddit" && (
+      <FaRedditAlien color={color ? socialColors.reddit : undefined} />
+    )}
+    {name === "stackExchange" && (
+      <FaStackExchange color={color ? socialColors.stackExchange : undefined} />
+    )}
+    {name === "webpage" && <FaGlobe />}
   </IconContext.Provider>
 )
 
@@ -73,9 +97,10 @@ Icon.propTypes = {
 }
 
 const StyledIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.secondary};
+  fill: ${(props) =>
+    props.color ? props.color : props.theme.colors.secondary};
 
-  &:hover path {
+  &:hover svg {
     fill: ${(props) => props.theme.colors.primary};
   }
 `

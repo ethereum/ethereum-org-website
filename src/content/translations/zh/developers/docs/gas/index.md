@@ -19,7 +19,7 @@ Gas 是指在以太坊网络上执行特定操作所需的计算工作量。
 
 由于每笔以太坊交易都需要计算资源才能执行，每笔交易都需要付费。 在这个方面上，Gas 是指在以太坊成功进行交易所需的费用。
 
-![显示 EVM 操作所需 Gas 的图表](./gas.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![显示 EVM 操作所需 Gas 的图表](../../../../../developers/docs/gas/gas.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 本质上，Gas 费用是以太坊的货币以太 (ETH) 支付的。 Gas 价格以 Gwei 标明，Gwei 本身就是 ETH 的一个单位――每个 Gwei 等于 0.000000001 ETH (10<sup>-9</sup> ETH)。 例如，您可以说您的 Gas 成本为 1 Gwei，而不是说您的 Gas 成本为 0.000000001 以太。
 
@@ -33,7 +33,7 @@ Gas 是指在以太坊网络上执行特定操作所需的计算工作量。
 
 尽管交易包含限制，但交易中没有使用的任何 Gas 都将退还给用户。
 
-![未使用的 Gas 退款情况图](../transactions/gas-tx.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![未使用的 Gas 退款情况图](../../../../../developers/docs/transactions/gas-tx.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## 延伸阅读 {#further-reading}
 

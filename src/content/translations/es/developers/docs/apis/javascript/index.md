@@ -285,8 +285,8 @@ _¿Conoces algún recurso comunitario que te haya servido de ayuda? Edita esta p
 
 ## Temas relacionados {#related-topics}
 
-- [Nodos y clientes](/en/developers/docs/nodes-and-clients/)
-- [Frameworks de desarrollo](/en/developers/docs/frameworks/)
+- [Nodos y clientes](/developers/docs/nodes-and-clients/)
+- [Frameworks de desarrollo](/developers/docs/frameworks/)
 
 ## Tutoriales relacionados {#related-tutorials}
 

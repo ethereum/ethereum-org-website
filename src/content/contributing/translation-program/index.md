@@ -11,15 +11,16 @@ The Translation Program is a collaborative effort to translate ethereum.org into
 
 Our progress so far:
 
-- **2,200 +** translators
-- **37** languages live on site
-- **2.4 million** words translated in 2021
+- [**2,200 +** translators](/contributing/translation-program/acknowledgements/)
+- [**37** languages live on site](/languages/)
+- [**2.7 million** words translated in 2021](/contributing/translation-program/acknowledgements/)
 
 If you want to get involved and help us grow the global Ethereum community by translating the website into your language, follow the steps below!
 
-<InfoBanner shouldCenter emoji=":tada:">
-  Claim your POAP token! If you translated ethereum.org in 2021, there's a unique POAP waiting for you.{" "}
-  <a href="https://ethereum.org/en/contributing/#poap">More on POAPs</a>
+<InfoBanner emoji=":tada:">
+  Check out our <Link to="/contributing/translation-program/acknowledgements/">Translator Acknowledgements</Link> page, and{" "}
+  claim your POAP token! If you translated ethereum.org in 2021, there's a unique POAP waiting for you.{" "}
+  <Link to="/contributing/translation-program/acknowledgements/#poap">More on POAPs</Link>
 </InfoBanner>
 
 ## Mission and vision {#mission-and-vision}
@@ -50,7 +51,7 @@ The ethereum.org Translation Program aims to make Ethereum accessible to everyon
 2. **Open the language you want to translate and find a document to work on**  
    The website content is divided into a number of documents and language versions. You can check the progress of each document on the right – if translation progress is below 100%, please contribute!
 
-   Don't see your language listed? [Open an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
+   Don't see your language listed? [Open an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose) or ask in our [Discord](https://discord.gg/6WX7E97)
 
    ![Translated and untranslated files on Crowdin](./crowdin-files.png)
 
@@ -58,7 +59,7 @@ The ethereum.org Translation Program aims to make Ethereum accessible to everyon
 
    We encourage you to translate in this numerical order (1 → 2 → 3 → ⋯) to ensure the highest impact pages are translated first.
 
-   [Learn more about ethereum.org content versions](/en/contributing/translation-program/content-versions/)
+   [Learn more about ethereum.org content versions](/contributing/translation-program/content-versions/)
 
 3. **Translate**  
    After selecting the file you want to translate, it will open in the online editor. If you have never used Crowdin before, you can use this quick guide to go over the basics.
@@ -103,7 +104,7 @@ Thank you for your participation in the ethereum.org Translation Program!
 
 <InfoBanner shouldCenter emoji=":information_source:">
   If you're helping us with translations, you might find some useful information in our translations FAQ. 
-  {" "}<a href="/en/contributing/translation-program/translation-guide/">Translating ethereum.org FAQ</a>
+  {" "}<Link to="/en/contributing/translation-program/translation-guide/">Translating ethereum.org FAQ</Link>
 </InfoBanner>
 
 ## Resources {#resources}
@@ -121,7 +122,7 @@ Thank you for your participation in the ethereum.org Translation Program!
 
 **Communities**
 
-- [Language-specific Translation Groups](https://discord.gg/6WX7E97)
+- [Language-specific Discord translation groups](https://discord.gg/6WX7E97)
   _– an initiative to connect ethereum.org translators into Translation Groups_
 - [Chinese translators group](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)
   _– Notion page for easier coordination between Chinese translators_

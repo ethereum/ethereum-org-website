@@ -710,4 +710,4 @@ _Részben a [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook)al
 
 Kihagytunk valamit? Valami nem helyes? Segíts nekünk jobbá tenni úgy, hogy közreműködsz ehhez a szójegyzékhez a GitHub-on!
 
-[Tudj meg többet a hozzájárulásról](/en/contributing/adding-glossary-terms)
+[Tudj meg többet a hozzájárulásról](/contributing/adding-glossary-terms)

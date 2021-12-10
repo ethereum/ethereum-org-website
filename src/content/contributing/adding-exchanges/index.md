@@ -17,7 +17,7 @@ This page allows a user to input where they live and see what exchanges they can
 
 Because of this context, we need some specific information when you suggest an exchange.
 
-**NOTE:** If you want to list a decentralized exchange, take a look at our [policy for listing wallets and dapps](/en/contributing/adding-products/).
+**NOTE:** If you want to list a decentralized exchange, take a look at our [policy for listing wallets and dapps](/contributing/adding-products/).
 
 ## What we need {#what-we-need}
 

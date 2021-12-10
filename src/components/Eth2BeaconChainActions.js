@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 
@@ -57,9 +58,12 @@ const StyledButtonLink = styled(ButtonLink)`
 export const DataLogo = graphql`
   fragment DataLogo on File {
     childImageSharp {
-      fixed(width: 24) {
-        ...GatsbyImageSharpFixed
-      }
+      gatsbyImageData(
+        width: 24
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
@@ -80,13 +84,13 @@ const Eth2BeaconChainActions = () => {
   const datapoints = [
     {
       title: "beaconscan",
-      image: data.beaconscan.childImageSharp.fixed,
+      image: getImage(data.beaconscan),
       link: "https://beaconscan.com",
       description: translateMessageId("eth2-beaconscan-desc", intl),
     },
     {
       title: "beaconcha.in",
-      image: data.beaconchain.childImageSharp.fixed,
+      image: getImage(data.beaconchain),
       link: "https://beaconcha.in",
       description: translateMessageId("eth2-beaconcha-in-desc", intl),
     },

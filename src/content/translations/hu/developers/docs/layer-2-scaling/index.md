@@ -85,7 +85,7 @@ Az optimista összegzők egy mellékláncot használnak, mely a fő Ethereum lá
 
 Az optimista összegzőknél a tranzakciók calldataként vannak a fő Ethereum láncba írva, ezzel tovább optimálva a gáz költség csökkentést.
 
-Mivel a számítás az Ethereum használatának lassú és drága része, az optimista összegzők a tranzakciótól függően akár 10–100-szoros javulást is kínálnak a méretezhetőségben. Ez a szám tovább fog nőni a következő Eth2 fejlesztés bevezetésével: [shard láncok](/en/eth2/shard-chains). Ennek az az oka, hogy több adat áll majd rendelkezésre felelősségre vonási esemény során.
+Mivel a számítás az Ethereum használatának lassú és drága része, az optimista összegzők a tranzakciótól függően akár 10–100-szoros javulást is kínálnak a méretezhetőségben. Ez a szám tovább fog nőni a következő Eth2 fejlesztés bevezetésével: [shard láncok](/eth2/shard-chains). Ennek az az oka, hogy több adat áll majd rendelkezésre felelősségre vonási esemény során.
 
 #### Tranzakciók megkérdőjelezése {#disputing-transactions}
 
@@ -114,7 +114,7 @@ Tehát a csalás bizonyítása megtérül.
 
 <!-- #### The Optimism virtual machine (OVM)
 
-What makes Optimistic rollups particularly exciting is that the chain works the same as the main Ethereum chain because it's based on [the EVM](/en/developers/docs/evm/). It doesn't use Ethereum, it is Ethereum. This means if you want to use Optimistic rollups, it's just a matter of deploying it to the OVM. It looks, feels, and acts just like the Ethereum main chain–you write contracts in Solidity, and interact with the chain via the Web3 API.
+What makes Optimistic rollups particularly exciting is that the chain works the same as the main Ethereum chain because it's based on [the EVM](/developers/docs/evm/). It doesn't use Ethereum, it is Ethereum. This means if you want to use Optimistic rollups, it's just a matter of deploying it to the OVM. It looks, feels, and acts just like the Ethereum main chain–you write contracts in Solidity, and interact with the chain via the Web3 API.
 
 The OVM also has a bunch of features that allow for a really seamless experience moving code from the EVM. In fact you can move Solidity contracts onto a cheaper and faster solution with just a few lines of code.
 
