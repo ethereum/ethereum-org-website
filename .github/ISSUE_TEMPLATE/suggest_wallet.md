@@ -40,6 +40,14 @@ If it does complete the following information which we need to accurately list t
 
 <!-- Please provide a link to a report or repo. If you haven't been audited but think your wallet should be listed anyway, explain here. -->
 
+**Does the wallet support layer 2 networks?**
+
+<!-- Please list which L2 solutions the wallet supports. -->
+
+**Can the wallet be used with arbitrary Ethereum RPC endpoint?**
+
+<!-- Does wallet allow user to use the wallet with own Eth client? -->
+
 **Does the wallet have fiat on-ramps?**
 
 <!-- Does the wallet subsidise transaction fees for all or some wallet activity? -->
