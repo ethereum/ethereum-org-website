@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react"
 import { ThemeContext } from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import axios from "axios"
 
@@ -45,7 +45,7 @@ const TextNoMargin = styled.p`
   margin-bottom: 0rem;
 `
 
-const Token = styled(Img)`
+const Token = styled(GatsbyImage)`
   margin-right: 0.5rem;
 `
 
@@ -72,9 +72,12 @@ const ValueRow = styled(Row)`
 export const TokenLogo = graphql`
   fragment TokenLogo on File {
     childImageSharp {
-      fixed(height: 24) {
-        ...GatsbyImageSharpFixed
-      }
+      gatsbyImageData(
+        height: 24
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
@@ -175,11 +178,11 @@ const BugBountyPoints = () => {
             </TokenValue>
           </Row>
           <Row>
-            <Token fixed={data.dai.childImageSharp.fixed} />
+            <Token image={getImage(data.dai)} />
             <TokenValue>{pointsInDAI} DAI</TokenValue>
           </Row>
           <Row>
-            <Token fixed={ethImage.childImageSharp.fixed} />
+            <Token image={getImage(ethImage)} />
             <TokenValue>{pointsInETH} ETH</TokenValue>
           </Row>
         </ValueRow>

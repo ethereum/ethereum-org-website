@@ -205,7 +205,7 @@ To get more information about the program, learn how to use Crowdin, check on th
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `/src`                                   | Main source folder for development                                                                                                                                                                                  |
 | `/src/assets`                            | Image assets                                                                                                                                                                                                        |
-| `/src/components`                        | React components that do not function as standalone pages                                                                                                                                                          |
+| `/src/components`                        | React components that do not function as standalone pages                                                                                                                                                           |
 | `/src/content`                           | Markdown/MDX files for site content stored here. <br>For example: `ethereum.org/en/about/` is built from `src/content/about/index.md` <br>The markdown files are parsed and rendered by `src/templates/static.js`\* |
 | `/src/content/developers/docs`           | \*Markdown files in here use the Docs template: `src/templates/docs.js`                                                                                                                                             |
 | `/src/content/developers/tutorials`      | \*Markdown files in here use the Tutorial template: `src/templates/tutorial.js`                                                                                                                                     |
@@ -213,7 +213,7 @@ To get more information about the program, learn how to use Crowdin, check on th
 | `/src/hooks`                             | Custom React hooks                                                                                                                                                                                                  |
 | `/src/intl`                              | Language translation JSON files                                                                                                                                                                                     |
 | `/src/lambda`                            | Lambda function scripts for API calls                                                                                                                                                                               |
-| `/src/pages`<br>`/src/pages-conditional` | React components that function as standalone pages. <br>For example: `ethereum.org/en/wallets/find-wallet` is built from `src/pages/wallets/find-wallet.js`                                                        |
+| `/src/pages`<br>`/src/pages-conditional` | React components that function as standalone pages. <br>For example: `ethereum.org/en/wallets/find-wallet` is built from `src/pages/wallets/find-wallet.js`                                                         |
 | `/src/scripts`<br>`/src/utils`           | Custom utility scripts                                                                                                                                                                                              |
 | `/src/styles`                            | Stores `layout.css` which contains root level css styling                                                                                                                                                           |
 | `/src/templates`                         | JSX templates that define layouts of different regions of the site                                                                                                                                                  |
@@ -407,9 +407,12 @@ export const query = graphql`
   query {
     hero: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       childImageSharp {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(
+          width: 800
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
   }
@@ -1265,7 +1268,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/mariahpickett"><img src="https://avatars.githubusercontent.com/u/74935737?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mariah</b></sub></a><br /><a href="#content-mariahpickett" title="Content">🖋</a></td>
-    <td align="center"><a href="https://github.com/ascrookes"><img src="https://avatars.githubusercontent.com/u/1642035?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Amadou Crookes</b></sub></a><br /><a href="#content-ascrookes" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/ascrookes"><img src="https://avatars.githubusercontent.com/u/1642035?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Amadou Crookes</b></sub></a><br /><a href="#content-ascrookes" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=ascrookes" title="Documentation">📖</a></td>
     <td align="center"><a href="http://nathanwoodruff.dev"><img src="https://avatars.githubusercontent.com/u/46133948?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nathan Woodruff</b></sub></a><br /><a href="#ideas-nwoodr94" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://web3.career"><img src="https://avatars.githubusercontent.com/u/5325909?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andrey Azimov</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=AndreyAzimov" title="Documentation">📖</a></td>
     <td align="center"><a href="https://ddocs.co.uk"><img src="https://avatars.githubusercontent.com/u/38940580?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anita Diamond</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ddocs" title="Documentation">📖</a></td>
@@ -1275,6 +1278,19 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://matthieuscarset.com"><img src="https://avatars.githubusercontent.com/u/7369593?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matthieu SCARSET</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=MatthieuScarset" title="Documentation">📖</a></td>
     <td align="center"><a href="http://blog.luoxinxin.com.cn"><img src="https://avatars.githubusercontent.com/u/16456918?v=4?s=100" width="100px;" alt=""/><br /><sub><b>zhanxin</b></sub></a><br /><a href="#translation-luozhanxin" title="Translation">🌍</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=luozhanxin" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/geoffhull03"><img src="https://avatars.githubusercontent.com/u/24528980?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Geoff Hull</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=geoffhull03" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://austinburke.dev"><img src="https://avatars.githubusercontent.com/u/24820716?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Austin Burke</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=aburk3" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://rich1n.com"><img src="https://avatars.githubusercontent.com/u/66102911?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Richard Rodrigues</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=rich1n" title="Documentation">📖</a> <a href="#translation-rich1n" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://github.com/samnang"><img src="https://avatars.githubusercontent.com/u/131172?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Samnang Chhun</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=samnang" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://m-t-ahmed.com"><img src="https://avatars.githubusercontent.com/u/54685928?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tanvir Ahmed</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=m-t-a97" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/JorisZierold"><img src="https://avatars.githubusercontent.com/u/13258954?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joris Zierold</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=JorisZierold" title="Documentation">📖</a> <a href="#ideas-JorisZierold" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/selfwithin"><img src="https://avatars.githubusercontent.com/u/94748148?v=4?s=100" width="100px;" alt=""/><br /><sub><b>selfwithin</b></sub></a><br /><a href="#ideas-selfwithin" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=selfwithin" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/jnathnjshua"><img src="https://avatars.githubusercontent.com/u/46720446?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jonathan Joshua</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=jnathnjshua" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://twitter.com/patcito"><img src="https://avatars.githubusercontent.com/u/26435?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Patrick Aljord</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=patcito" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/decipherer2"><img src="https://avatars.githubusercontent.com/u/16278986?v=4?s=100" width="100px;" alt=""/><br /><sub><b>decifer</b></sub></a><br /><a href="#ideas-decipherer2" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/aghArdeshir"><img src="https://avatars.githubusercontent.com/u/5755214?v=4?s=100" width="100px;" alt=""/><br /><sub><b>aghArdeshir</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=aghArdeshir" title="Code">💻</a></td>
   </tr>
 </table>
 
