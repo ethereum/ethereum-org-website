@@ -5821,6 +5821,24 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "decipherer2",
+      "name": "decifer",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16278986?v=4",
+      "profile": "https://github.com/decipherer2",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "aghArdeshir",
+      "name": "aghArdeshir",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5755214?v=4",
+      "profile": "https://github.com/aghArdeshir",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
