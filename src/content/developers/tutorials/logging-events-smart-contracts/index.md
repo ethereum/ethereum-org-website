@@ -12,9 +12,11 @@ sourceUrl: https://ethereumdev.io/logging-data-with-events/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-In Solidity, [events](/developers/docs/smart-contracts/anatomy/#events-and-logs) are dispatched signals the smart contracts can fire. DApps, or anything connected to Ethereum JSON-RPC API, can listen to these events and act accordingly. Event can also be indexed, so that the event history is searchable later.
+In Solidity, [events](/developers/docs/smart-contracts/anatomy/#events-and-logs) are dispatched signals the smart contracts can fire. DApps, or anything connected to Ethereum JSON-RPC API, can listen to these events and act accordingly. An event can also be indexed so that the event history is searchable later.
 
-The most common event on the Ethereum blockchain at the time of writing this article is the Transfer event that is emitted by ERC20 tokens when someone transfer tokens.
+## Events {#events}
+
+The most common event on the Ethereum blockchain at the time of writing this article is the Transfer event that is emitted by ERC20 tokens when someone transfers tokens.
 
 ```solidity
 event Transfer(address indexed from, address indexed to, uint256 value);

@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 
 import { translateMessageId } from "../utils/translations"
@@ -70,7 +70,7 @@ const HeroContainer = styled.div`
   }
 `
 
-const Hero = styled(Img)`
+const Hero = styled(GatsbyImage)`
   position: absolute !important;
   z-index: -1;
   width: 100%;
@@ -103,7 +103,7 @@ const CardContainer = styled.div`
   }
 `
 
-const WalletImage = styled(Img)`
+const WalletImage = styled(GatsbyImage)`
   align-self: center;
   width: 50%;
   max-width: 600px;
@@ -183,7 +183,7 @@ const GetETHPage = ({ data }) => {
     {
       title: "Localcryptos.com",
       link: "https://localcryptos.com/",
-      image: data.localcryptos.childImageSharp.fixed,
+      image: getImage(data.localcryptos),
     },
   ].sort((a, b) => a.title.localeCompare(b.title))
 
@@ -191,32 +191,32 @@ const GetETHPage = ({ data }) => {
     {
       title: "1inch",
       link: "https://1inch.exchange/#/",
-      image: data.oneinch.childImageSharp.fixed,
+      image: getImage(data.oneinch),
     },
     {
       title: "Bancor",
       link: "https://www.bancor.network/",
-      image: data.bancor.childImageSharp.fixed,
+      image: getImage(data.bancor),
     },
     {
       title: "dYdX",
       link: "https://dydx.exchange/",
-      image: data.dydx.childImageSharp.fixed,
+      image: getImage(data.dydx),
     },
     {
       title: "Kyber",
       link: "https://kyberswap.com/swap/",
-      image: data.kyber.childImageSharp.fixed,
+      image: getImage(data.kyber),
     },
     {
       title: "Loopring",
       link: "https://exchange.loopring.io/",
-      image: data.loopring.childImageSharp.fixed,
+      image: getImage(data.loopring),
     },
     {
       title: "Uniswap",
       link: "https://app.uniswap.org/#/swap",
-      image: data.uniswap.childImageSharp.fixed,
+      image: getImage(data.uniswap),
     },
   ].sort((a, b) => a.title.localeCompare(b.title))
 
@@ -250,7 +250,7 @@ const GetETHPage = ({ data }) => {
 
       <HeroContainer>
         <Hero
-          fluid={data.hero.childImageSharp.fluid}
+          image={getImage(data.hero)}
           alt={translateMessageId("page-get-eth-hero-image-alt", intl)}
           loading="eager"
         />
@@ -374,7 +374,7 @@ const GetETHPage = ({ data }) => {
       </Content>
       <TwoColumnContent>
         <WalletLeftColumn>
-          <WalletImage fluid={data.wallet.childImageSharp.fluid} />
+          <WalletImage image={getImage(data.wallet)} />
           <h3>
             <Translation id="page-get-eth-community-safety" />
           </h3>
@@ -426,7 +426,7 @@ const GetETHPage = ({ data }) => {
           "page-get-eth-use-your-eth-dapps",
           intl
         )}
-        image={data.dapps.childImageSharp.fluid}
+        image={getImage(data.dapps)}
         alt={translateMessageId(
           "page-index-sections-individuals-image-alt",
           intl
@@ -448,34 +448,41 @@ export default GetETHPage
 export const listItemImage = graphql`
   fragment listItemImage on File {
     childImageSharp {
-      fixed(width: 20) {
-        ...GatsbyImageSharpFixed
-      }
+      gatsbyImageData(
+        width: 20
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
 
 export const query = graphql`
-  query {
+  {
     hero: file(relativePath: { eq: "get-eth.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1440) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
     wallet: file(relativePath: { eq: "wallet.png" }) {
       childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(
+          width: 600
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     dapps: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(
+          width: 600
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     localcryptos: file(relativePath: { eq: "exchanges/localcryptos.png" }) {

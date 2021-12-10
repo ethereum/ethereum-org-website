@@ -83,6 +83,12 @@ const Avatar = styled.img`
   }
 `
 
+const NameContainer = styled.div`
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    max-width: 100px;
+  }
+`
+
 const Width40 = styled.div`
   width: 40px;
 `
@@ -197,10 +203,15 @@ const TranslationLeaderboard = () => {
                   )}
                   <TextContainer>
                     <Avatar src={user.avatarUrl} />
-                    <div>
+                    <NameContainer>
                       {user.username}
-                      <Language>{languages[0]?.name || ""}</Language>
-                    </div>
+                      <Language>
+                        {languages
+                          .slice(0, 3)
+                          .map((language) => language.name)
+                          .join(", ")}
+                      </Language>
+                    </NameContainer>
                   </TextContainer>
                 </Flex>
                 <WordsContainer>

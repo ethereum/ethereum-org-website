@@ -29,15 +29,13 @@ Szűkséged van egy még kezdetlegesebb alapozóra? Tekintsd meg a [ethereum.org
 - [A Rust Ethereum kliens](https://wiki.parity.io/Setup)
 - [Tranzakció küldése Ethereumra Rust használatával](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
 - [Bevezetés az okos szerződésekbe a Parity Ethereum klienssel](https://wiki.parity.io/Smart-Contracts)
-- [Oasis SDK fejlesztői környezet beállítása](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [Oasis SDK fejlesztői környezet beállítása](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Útmutató arról, hogyan lehet szerződéseket írni Rust Wasm-ben Kovanra, lépésről lépésre](https://github.com/paritytech/pwasm-tutorial)
 
 ## Haladó cikkek {#intermediate-articles}
 
 - [Rust-Web3 dokumentáció](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Rust-Web3 működő példák](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Titkos szavazás készítése OASIS SDK-val](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Privát chat szerver létrehozása OASIS SDK-val](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Fejlett használati minták {#advanced-use-patterns}
 
