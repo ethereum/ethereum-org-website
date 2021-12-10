@@ -10,9 +10,9 @@ incomplete: true
 
 Az Ethereum közösség sok szabványt vezetett be, hogy a projektek (mint az [Ethereum kliensek](/developers/docs/nodes-and-clients/) és tárcák) interoperábilisek maradjanak különböző megvalósításokban, és biztosítsák, hogy az okosszerződések és a dappok összeilleszthetőek maradnak.
 
-Általában a szabványok [Ethereum Improvement Proposals-ként](/en/eips/) (EIPs) vannak bevezetve, melyeket a közösség tagjai vitatnak meg egy [szabvány folyamaton](https://eips.ethereum.org/EIPS/eip-1) keresztül.
+Általában a szabványok [Ethereum Improvement Proposals-ként](/eips/) (EIPs) vannak bevezetve, melyeket a közösség tagjai vitatnak meg egy [szabvány folyamaton](https://eips.ethereum.org/EIPS/eip-1) keresztül.
 
-- [Bevezetés az EIP-kbe](/en/eips/)
+- [Bevezetés az EIP-kbe](/eips/)
 - [EIP-k listája](https://eips.ethereum.org/)
 - [EIP github repo](https://github.com/ethereum/EIPs)
 - [EIP vita fórum](https://ethereum-magicians.org/c/eips)

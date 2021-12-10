@@ -10,9 +10,9 @@ incomplete: true
 
 La comunidad Ethereum ha adoptado muchos estándares que ayudan a mantener interoperables proyectos (como [clientes Ethereum](/developers/docs/nodes-and-clients/) y carteras) a través de implementaciones, y asegurar que los contratos inteligentes y dapps sigan siendo compuestos.
 
-Normalmente se presentan como [Propuestas de mejora de Ethereum](/en/eips/) (EIP por sus siglas en inglés), que discuten los miembros de la comunidad a través de un proceso estándar[](https://eips.ethereum.org/EIPS/eip-1).
+Normalmente se presentan como [Propuestas de mejora de Ethereum](/eips/) (EIP por sus siglas en inglés), que discuten los miembros de la comunidad a través de un proceso estándar[](https://eips.ethereum.org/EIPS/eip-1).
 
-- [Introducción a EIP](/en/eips/)
+- [Introducción a EIP](/eips/)
 - [Lista de EIP](https://eips.ethereum.org/)
 - [Repositorio de github de EIP](https://github.com/ethereum/EIPs)
 - [Tablón de discusión de EIP](https://ethereum-magicians.org/c/eips)

@@ -7,13 +7,13 @@ sidebar: true
 
 JavaScript jest jednym z najpopularniejszych języków w ekosystemie Ethereum. W rzeczywistości istnieje [zespół](https://github.com/ethereumjs), którego celem jest przeniesienie jak największej ilości Ethereum do JavaScript.
 
-Istnieją możliwości pisania JavaScript (lub czegoś bliskiego) na [na wszystkich poziomach stosu](/en/developers/docs/ethereum-stack/).
+Istnieją możliwości pisania JavaScript (lub czegoś bliskiego) na [na wszystkich poziomach stosu](/developers/docs/ethereum-stack/).
 
 ## Interakcja z Ethereum {#interact-with-ethereum}
 
 ### Biblioteki API JavaScript {#javascript-api-libraries}
 
-Jeśli chcesz napisać JavaScript do wysyłania zapytań do łańcucha bloków, wysyłania transakcji i nie tylko, najwygodniejszym sposobem na to jest użycie [biblioteki API JavaScript](/en/developers/docs/apis/javascript/). Te interfejsy API umożliwiają programistom łatwą interakcję z [węzłami w sieci Ethereum](/en/developers/docs/nodes-and-clients/).
+Jeśli chcesz napisać JavaScript do wysyłania zapytań do łańcucha bloków, wysyłania transakcji i nie tylko, najwygodniejszym sposobem na to jest użycie [biblioteki API JavaScript](/developers/docs/apis/javascript/). Te interfejsy API umożliwiają programistom łatwą interakcję z [węzłami w sieci Ethereum](/developers/docs/nodes-and-clients/).
 
 Możesz użyć tych bibliotek do interakcji z inteligentnymi kontraktami w Ethereum, dzięki czemu możliwe jest zbudowanie aplikacji dapp, w której po prostu używasz JavaScript do interakcji z wcześniej istniejącymi kontraktami.
 
@@ -26,13 +26,13 @@ Możesz użyć tych bibliotek do interakcji z inteligentnymi kontraktami w Ether
 
 Jeśli jesteś programistą JavaScript i chcesz napisać własną inteligentny kontrakt, możesz zapoznać się z [Solidity ](https://solidity.readthedocs.io). To najpopularniejszy język inteligentnych kontraktów, w dużej mierze inspirowany Javascript.
 
-Dowiedz się więcej o [inteligentnych kontraktach](/en/developers/docs/smart-contracts/).
+Dowiedz się więcej o [inteligentnych kontraktach](/developers/docs/smart-contracts/).
 
 ## Zrozumienie protokołu {#understand-the-protocol}
 
 ### Maszyna Wirtualna Ethereum {#the-ethereum-virtual-machine}
 
-Istnieje implementacja JavaScript [wirtualnej maszyny Ethereum](/en/developers/docs/evm/). Obsługuje najnowsze reguły forka. Reguły forka odnoszą się do zmian wprowadzonych do EVM w wyniku planowanych uaktualnień.
+Istnieje implementacja JavaScript [wirtualnej maszyny Ethereum](/developers/docs/evm/). Obsługuje najnowsze reguły forka. Reguły forka odnoszą się do zmian wprowadzonych do EVM w wyniku planowanych uaktualnień.
 
 Jest podzielona na różne pakiety JavaScript, które możesz sprawdzić, aby lepiej zrozumieć:
 

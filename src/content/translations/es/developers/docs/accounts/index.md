@@ -10,14 +10,14 @@ Una cuenta Ethereum cuenta con un saldo en ether (ETH), que permite realizar tra
 
 ## Requisitos previos {#prerequisites}
 
-Las cuentas son muy fáciles de manejar incluso para los principiantes. Sin embargo, para ayudarte a comprender mejor esta pagina, te recomendamos visitar nuestra [introducción a Ethereum](/en/developers/docs/intro-to-ethereum/).
+Las cuentas son muy fáciles de manejar incluso para los principiantes. Sin embargo, para ayudarte a comprender mejor esta pagina, te recomendamos visitar nuestra [introducción a Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Tipos de cuenta {#types-of-account}
 
 Ethereum tiene dos tipos de cuenta:
 
 - De propiedad externa: cualquier persona que disponga de las claves privadas puede controlarla
-- De contrato: se trata de un contrato inteligente implementado en la red, que se controla mediante código. Si deseas obtener más información, consulta [contratos inteligentes](/en/developers/docs/smart-contracts/)
+- De contrato: se trata de un contrato inteligente implementado en la red, que se controla mediante código. Si deseas obtener más información, consulta [contratos inteligentes](/developers/docs/smart-contracts/)
 
 Ambos tipos de cuenta tienen la habilidad de:
 
@@ -48,7 +48,7 @@ Las cuentas Ethereum tienen cuatro campos:
 <!--this hash refers to the code of this account on the Ethereum virtual machine (EVM). This EVM code gets executed if the account gets a message call. It cannot be changed unlike the other account fields.  -->
 - `storageRoot`: A veces conocido como hash de almacenamiento. Un hash de 256-bit del nodo raíz de un árbol Merkle Patricia que codifica el contenido almacenado en la cuenta (un mapeo entre valores enteros de 256-bits), codificado como un mapeo desde el hash de 256-bit de Keccak de las claves enteras de 256-bit a los valores enteros codificados en RLP de 256-bit. Este árbol codifica el hash del contenido de almacenamiento de esta cuenta, y está vacío por defecto.
 
-![Un diagrama que muestra la creación de una cuenta](./accounts.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Un diagrama que muestra la creación de una cuenta](../../../../../developers/docs/accounts/accounts.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Cuentas de propiedad externa y pares de claves {#externally-owned-accounts-and-key-pairs}
 
@@ -127,5 +127,5 @@ _¿Conoces algún recurso en la comunidad que te haya servido de ayuda? Edita es
 
 ## Temas relacionados {#related-topics}
 
-- [Contratos inteligentes](/en/developers/docs/smart-contracts/)
-- [Transacciones](/en/developers/docs/transactions/)
+- [Contratos inteligentes](/developers/docs/smart-contracts/)
+- [Transacciones](/developers/docs/transactions/)

@@ -119,6 +119,11 @@ const ThemeToggle = styled(NakedButton)`
   margin-left: 1rem;
   display: flex;
   align-items: center;
+  &:hover {
+    svg {
+      fill: ${(props) => props.theme.colors.primary};
+    }
+  }
 `
 
 const NavIcon = styled(Icon)`
@@ -280,12 +285,29 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       ariaLabel: "community-menu",
       items: [
         {
-          text: "ethereum-community",
+          text: "community-hub",
           to: "/community/",
+        },
+        {
+          text: "ethereum-online",
+          to: "/community/online/",
+        },
+        {
+          text: "ethereum-events",
+          to: "/community/events/",
+        },
+
+        {
+          text: "get-involved",
+          to: "/community/get-involved/",
         },
         {
           text: "grants",
           to: "/community/grants/",
+        },
+        {
+          text: "ethereum-support",
+          to: "/community/support/",
         },
       ],
     },

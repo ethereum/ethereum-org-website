@@ -158,4 +158,4 @@ Voici quelques-unes des applications d'entreprise déployées sur le réseau pri
 
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _- Paiements de factures d'électricité_
 
-Si vous souhaitez ajouter des éléments à cette liste, veuillez consulter [les instructions pour contribuer](https://ethereum.org/en/contributing/).
+Si vous souhaitez ajouter des éléments à cette liste, veuillez consulter [les instructions pour contribuer](/contributing/).

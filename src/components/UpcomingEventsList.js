@@ -1,6 +1,22 @@
+// Libraries
 import React, { useEffect, useState } from "react"
+import styled from "styled-components"
+
+// Components
+import EventCard from "../components/EventCard"
+import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
+
+// Data
 import events from "../data/community-events.json"
+
+const EventList = styled.ul`
+  margin: 0;
+`
+
+const EventListItem = styled.li`
+  list-style-type: none;
+`
 
 const UpcomingEventsList = () => {
   const [orderedUpcomingEvents, setOrderedUpcomingEvents] = useState()
@@ -35,12 +51,13 @@ const UpcomingEventsList = () => {
               event.endDate
             ).toLocaleDateString()}`
 
-      const details = `${event.sponsor ? "(" + event.sponsor + ")" : ""} - ${
+      const details = `${event.sponsor ? "(" + event.sponsor + ")" : ""} ${
         event.description
-      } (${dateRange})`
+      }`
 
       return {
         ...event,
+        date: dateRange,
         formattedDetails: details,
       }
     })
@@ -48,17 +65,36 @@ const UpcomingEventsList = () => {
     setOrderedUpcomingEvents(formattedEvents)
   }, [])
 
+  if (orderedUpcomingEvents?.length === 0) {
+    return (
+      <InfoBanner emoji=":information_source:">
+        {" "}
+        We're not aware of any upcoming events. Know of one?{" "}
+        <Link to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json">
+          Please add it to this page!
+        </Link>
+      </InfoBanner>
+    )
+  }
+
   return (
-    <ul>
-      {orderedUpcomingEvents?.map(({ title, to, formattedDetails }, idx) => {
-        return (
-          <li key={idx}>
-            <Link to={to}>{title}</Link>
-            {formattedDetails}
-          </li>
-        )
-      })}
-    </ul>
+    <EventList>
+      {orderedUpcomingEvents?.map(
+        ({ title, to, formattedDetails, date, location }, idx) => {
+          return (
+            <EventListItem key={idx}>
+              <EventCard
+                title={title}
+                to={to}
+                date={date}
+                description={formattedDetails}
+                location={location}
+              />
+            </EventListItem>
+          )
+        }
+      )}
+    </EventList>
   )
 }
 

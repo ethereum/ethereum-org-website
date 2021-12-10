@@ -14,13 +14,13 @@ Las transacciones son instrucciones firmadas criptográficamente que se emiten d
 
 ## Requisitos previos {#prerequisites}
 
-Para entender más el contenido de esta página, te recomendamos que leas primero la página sobre [Cuentas](/en/developers/docs/accounts/), así como nuestra [Introducción a Ethereum](/en/developers/docs/intro-to-ethereum/).
+Para entender más el contenido de esta página, te recomendamos que leas primero la página sobre [Cuentas](/developers/docs/accounts/), así como nuestra [Introducción a Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## ¿Qué es una transacción? {#whats-a-transaction}
 
 Una transacción de Ethereum hace referencia a una acción iniciada por una cuenta de propiedad externa, en otras palabras, una cuenta controlada por un humano, no un contrato. Por ejemplo, si Bob le envía 1 ETH a Alice, este debe debitarse de la cuenta de Bob y acreditarse en la cuenta de Alice. Esta acción modificadora del estado de la red tiene lugar en una transacción.
 
-![Diagrama que muestra cómo una transacción causa cambios de estado](./tx.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagrama que muestra cómo una transacción causa cambios de estado](../../../../../developers/docs/transactions/tx.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Las transacciones, que modifican el estado de la EVM, se deben transmitir a toda la red. Cualquier nodo puede transmitir una solicitud de una transacción que se va ejecutar en la EVM; a continuación, un minero ejecutará la transacción y propagará la modificación de estado que resulte de ello al resto de la red.
 
@@ -35,7 +35,7 @@ Una transacción enviada incluye la siguiente información:
 - `LímiteDeGas`: Cantidad máxima de unidades de gas que puede consumir la transacción. Las unidades de gas representan pasos computacionales
 - `PrecioDeGas`: La comisión que el remitente paga por unidad de gas.
 
-El gas es una referencia al trabajo computacional que se necesita para que el minero procese la transacción. Los usuarios tienen que pagar una comisión por ese trabajo computacional. El `límiteDeGas` y el `precioDeGas` determinan la comisión de gas máxima que se le paga al minero. [Mas ínformación acerca del gas](/en/developers/docs/gas/).
+El gas es una referencia al trabajo computacional que se necesita para que el minero procese la transacción. Los usuarios tienen que pagar una comisión por ese trabajo computacional. El `límiteDeGas` y el `precioDeGas` determinan la comisión de gas máxima que se le paga al minero. [Mas ínformación acerca del gas](/developers/docs/gas/).
 
 El objeto de la transacción luce de la siguiente forma:
 
@@ -124,7 +124,7 @@ El procesamiento del minero de la transacción obtendrá **+0,0042 ETH**
 
 El gas también es necesario para cualquier interacción del contrato inteligente.
 
-![Diagrama mostrando como el gas no utilizado es retornado](./gas-tx.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagrama mostrando como el gas no utilizado es retornado](../../../../../developers/docs/transactions/gas-tx.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Cualquier gas no utilizado en una transacción es reembolsado a la cuenta de usuario.
 
@@ -289,7 +289,7 @@ _¿Conoces algún recurso en la comunidad que te haya servido de ayuda? Edita es
 
 ## Temas relacionados {#related-topics}
 
-- [Cuentas](/en/developers/docs/accounts/)
-- [Máquina Virtual de Ethereum (MVE)](/en/developers/docs/evm/)
-- [Gas](/en/developers/docs/gas/)
-- [Minería](/en/developers/docs/consensus-mechanisms/pow/mining/)
+- [Cuentas](/developers/docs/accounts/)
+- [Máquina Virtual de Ethereum (MVE)](/developers/docs/evm/)
+- [Gas](/developers/docs/gas/)
+- [Minería](/developers/docs/consensus-mechanisms/pow/mining/)

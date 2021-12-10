@@ -10,7 +10,7 @@ Les explorateurs de blocs sont votre portail vers les données Ethereum. Vous po
 
 ## Prérequis {#prerequisites}
 
-Pour que les données fournies par un explorateur de blocs aient du sens, vous devez avoir compris les concepts de base d'Ethereum. Commencez par lire la page [Introduction à Ethereum](/en/developers/docs/intro-to-ethereum/).
+Pour que les données fournies par un explorateur de blocs aient du sens, vous devez avoir compris les concepts de base d'Ethereum. Commencez par lire la page [Introduction à Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Services {#services}
 
