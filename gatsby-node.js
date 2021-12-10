@@ -1,8 +1,13 @@
 // https://www.gatsbyjs.org/docs/node-apis/
 const fs = require("fs")
 const path = require(`path`)
+const util = require("util")
+const child_process = require("child_process")
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const gatsbyConfig = require(`./gatsby-config.js`)
+const redirects = require(`./redirects.json`)
+
+const exec = util.promisify(child_process.exec)
 
 const supportedLanguages = gatsbyConfig.siteMetadata.supportedLanguages
 const defaultLanguage = gatsbyConfig.siteMetadata.defaultLanguage
@@ -76,7 +81,7 @@ const checkIsMdxOutdated = (path) => {
       intlMatch += match.replace(re, (_, p1, p2) => p1 + p2)
     })
   } catch {
-    console.error("regex error")
+    console.warn(`regex error in ${englishPath}`)
     return true
   }
 
@@ -199,7 +204,16 @@ exports.onCreateNode = async ({ node, getNode, actions }) => {
 }
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
+
+  redirects.forEach((redirect) => {
+    createRedirect({
+      ...redirect,
+      isPermanent: true,
+      ignoreCase: true,
+      force: true,
+    })
+  })
 
   const result = await graphql(`
     query {
@@ -397,4 +411,17 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
   `
   createTypes(typeDefs)
+}
+
+// Build lambda functions when the build is complete and the `/public` folder exists
+exports.onPostBuild = async (gatsbyNodeHelpers) => {
+  const { reporter } = gatsbyNodeHelpers
+
+  const reportOut = (report) => {
+    const { stderr, stdout } = report
+    if (stderr) reporter.error(stderr)
+    if (stdout) reporter.info(stdout)
+  }
+
+  reportOut(await exec("npm run build:lambda && cp netlify.toml public"))
 }

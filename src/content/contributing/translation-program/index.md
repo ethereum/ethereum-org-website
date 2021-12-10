@@ -13,7 +13,7 @@ Our progress so far:
 
 - [**2,200 +** translators](/contributing/translation-program/acknowledgements/)
 - [**37** languages live on site](/languages/)
-- [**2.4 million** words translated in 2021](/contributing/translation-program/acknowledgements/)
+- [**2.7 million** words translated in 2021](/contributing/translation-program/acknowledgements/)
 
 If you want to get involved and help us grow the global Ethereum community by translating the website into your language, follow the steps below!
 

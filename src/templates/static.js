@@ -39,6 +39,8 @@ import {
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import UpcomingEventsList from "../components/UpcomingEventsList"
+import Icon from "../components/Icon"
+import SocialListItem from "../components/SocialListItem"
 
 const Page = styled.div`
   display: flex;
@@ -130,6 +132,9 @@ const components = {
   CardContainer,
   GhostCard,
   UpcomingEventsList,
+  Icon,
+  Link,
+  SocialListItem,
   MatomoOptOut,
 }
 

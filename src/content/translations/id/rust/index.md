@@ -28,15 +28,13 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/id/learn/) 
 - [Client Ethereum untuk Rust](https://wiki.parity.io/Setup)
 - [Mengirimkan transaksi Ethereum menggunakan Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
 - [Sebuah Perkenalan mengenai Smart Contract dengan Client Ethereum Parity](https://wiki.parity.io/Smart-Contracts)
-- [Mengatur SDK OASIS development environment](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [Mengatur SDK OASIS development environment](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Tutorial detail mengenai cara menulis smart contract di Rust WebAssembly untuk Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Artikel Tingkat Menengah {#intermediate-articles}
 
 - [Dokumentasi Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Contoh Rust-Web3 yang sudah berjalan](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Membuat sebuah undian rahasia menggunakan SDK OASIS](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Membuat sebuah Server Obrolan Private dengan OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Artikel Tingkat Lanjut {#advanced-use-patterns}
 

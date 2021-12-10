@@ -28,15 +28,13 @@ sidebar: true
 - [عميل إيثريوم على Rust](https://wiki.parity.io/Setup)
 - [إرسال معاملة إلى إثيريوم باستخدام Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
 - [مقدمة إلى العقود الذكية باستخدام عميل بارتي إيثريوم](https://wiki.parity.io/Smart-Contracts)
-- [إعداد بيئة Oasis SDK dev الخاصة بك](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [إعداد بيئة Oasis SDK dev الخاصة بك](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [درس خطوة بخطوة عن كيفية كتابة العقود في قعسف ًشسة لـKovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## مقالات وسيطة {#intermediate-articles}
 
 - [توثيق Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [أمثلة عمل Rust-Web3](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [إنشاء Secret Ballot باستخدام OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [إنشاء خادم دردشة خاص باستخدام OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## أنماط الاستخدام المتقدم {#advanced-use-patterns}
 
