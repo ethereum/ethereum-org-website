@@ -36,8 +36,6 @@ Szűkséged van egy még kezdetlegesebb alapozóra? Tekintsd meg a [ethereum.org
 
 - [Rust-Web3 dokumentáció](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Rust-Web3 működő példák](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Titkos szavazás készítése OASIS SDK-val](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Privát chat szerver létrehozása OASIS SDK-val](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Fejlett használati minták {#advanced-use-patterns}
 

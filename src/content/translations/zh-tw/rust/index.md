@@ -35,8 +35,6 @@ sidebar: true
 
 - [Rust-Web3 相關文檔](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Rust-Web3 工作示例](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [使用 OASIS SDK 創建秘密投票](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [使用 OASIS SDK 創建私密聊天服務器](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## 高級使用模式 {#advanced-use-patterns}
 

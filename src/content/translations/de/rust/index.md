@@ -35,8 +35,6 @@ Brauchst du zuerst einen grundsätzlichen Einstieg? Schaue dir [ethereum.org/lea
 
 - [Rust-Web3-Dokumentation](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Rust-Web3-Arbeitsbeispiele](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Erstellen eines geheimen Stimmzettels mit OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Erstellen eines privaten Chat-Servers mit OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Fortgeschrittene Verwendungsmuster {#advanced-use-patterns}
 

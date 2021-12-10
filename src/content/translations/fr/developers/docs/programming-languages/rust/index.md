@@ -34,7 +34,6 @@ Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/en
 
 - [Documentation Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Exemples de travail Rust-Web3](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Creating a Private Chat Server with OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Modèles d'utilisation avancés {#advanced-use-patterns}
 

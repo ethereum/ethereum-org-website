@@ -36,8 +36,6 @@ sidebarDepth: 1
 
 - [Rust-Web3 ドキュメント](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Rust-Web3 動作例](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [OASIS SDK を使用した Secret Ballot の作成](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [OASIS SDK を使用したプライベートチャットサーバーの作成](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## 高度な利用パターン {#advanced-use-patterns}
 

@@ -35,8 +35,6 @@ sidebar: true
 
 - [রাস্ট-ওয়েব3 ডকুমেন্টেশন](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [রাস্ট-ওয়েব3 কাজের উদাহরণ](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [ওয়েসিস SDK এর সাহায্যে একটি গোপন ব্যালট তৈরি করা](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [ওয়েসিস SDK এর সাহায্যে একটি ব্যক্তিগত চ্যাট সার্ভার তৈরি করা](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## উন্নত ইউজ প্যাটার্ন {#advanced-use-patterns}
 

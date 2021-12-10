@@ -36,8 +36,6 @@ Ti servono prima le nozioni di base? Dai un'occhiata a [ethereum.org/learn](/it/
 
 - [Documentazione Rust-Web3 (in inglese)](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Esempi di lavoro in Rust-Web3 (in inglese)](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Creare una votazione segreta con OASIS SDK (in inglese)](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Creare un server di chat privato con OASIS SDK (in inglese)](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Pattern per uso avanzato {#advanced-use-patterns}
 

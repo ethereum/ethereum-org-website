@@ -34,8 +34,6 @@ incomplete: true
 
 - [Rust-Web3 相关文档](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Rust-Web3 工作示例](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [使用 OASIS SDK 创建秘密投票](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [使用 OASIS SDK 创建私密聊天服务器](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## 面向高等程度者的使用模式 {#advanced-use-patterns}
 

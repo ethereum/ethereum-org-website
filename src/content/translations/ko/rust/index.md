@@ -36,8 +36,6 @@ sidebarDepth: 1
 
 - [Rust-Web3 개발 문서](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Rust-Web3 작업 예시](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [OASIS SDK로 무기명 투표 솔루션 만들기](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [OASIS SDK로 비공개 채팅 서버 구축하기](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## 고급 사용 패턴 {#advanced-use-patterns}
 

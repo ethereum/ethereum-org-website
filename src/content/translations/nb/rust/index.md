@@ -35,8 +35,6 @@ Trenger du en mer grunnleggende informasjon først? Sjekk ut [ethereum.org/learn
 
 - [Rust-Web3 Dokumentasjon](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Rust-Web3 Arbeidseksempler](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Opprette en hemmelig balant med OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Opprette en Privat Chat Server med OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Avansert bruksmønster {#advanced-use-patterns}
 

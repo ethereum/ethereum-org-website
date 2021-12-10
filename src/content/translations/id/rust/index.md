@@ -35,8 +35,6 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/id/learn/) 
 
 - [Dokumentasi Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Contoh Rust-Web3 yang sudah berjalan](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Membuat sebuah undian rahasia menggunakan SDK OASIS](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Membuat sebuah Server Obrolan Private dengan OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Artikel Tingkat Lanjut {#advanced-use-patterns}
 

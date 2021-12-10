@@ -36,8 +36,6 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 
 - [Documentación de Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Ejemplos de trabajo de Rust-Web3](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Crear una selección secreta con OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Crear un servidor de chat privado con OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Patrones de uso avanzado {#advanced-use-patterns}
 
