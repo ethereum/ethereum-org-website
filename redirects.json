@@ -60,6 +60,10 @@
     "toPath": "/en/wallets/"
   },
   {
+    "fromPath": "/eth2/",
+    "toPath": "/en/eth2"
+  },
+  {
     "fromPath": "/learn/",
     "toPath": "/en/learn/"
   },
