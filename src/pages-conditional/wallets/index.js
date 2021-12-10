@@ -202,17 +202,20 @@ const articles = [
   {
     title: <Translation id="page-wallets-protecting-yourself" />,
     description: "MyCrypto",
-    link: "https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds",
+    link:
+      "https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds",
   },
   {
     title: <Translation id="page-wallets-keys-to-safety" />,
     description: <Translation id="page-wallets-blog" />,
-    link: "https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf",
+    link:
+      "https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf",
   },
   {
     title: <Translation id="page-wallets-how-to-store" />,
     description: "ConsenSys",
-    link: "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
+    link:
+      "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
   },
 ]
 

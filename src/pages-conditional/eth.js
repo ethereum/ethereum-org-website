@@ -260,7 +260,8 @@ const cardListContent = [
     caption: <Translation id="page-eth-last-updated" />,
   },
   {
-    link: "https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd",
+    link:
+      "https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd",
     title: <Translation id="page-eth-how-to-buy" />,
     description: "MyCrypto",
     caption: <Translation id="page-eth-how-to-buy-caption" />,
