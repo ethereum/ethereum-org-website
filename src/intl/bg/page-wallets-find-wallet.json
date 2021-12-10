@@ -63,7 +63,7 @@
   "page-find-wallet-myetherwallet-logo-alt": "Лого на MyEtherWallet",
   "page-find-wallet-new-to-wallets": "Нови ли са портфейлите за вас? Ето накратко как да започнете.",
   "page-find-wallet-new-to-wallets-link": "Портфейли на Етереум",
-  "page-find-wallet-not-all-features": "Няма портфейли с всички тези характеристики",
+  "page-find-wallet-not-all-features": "Няма портфейли с всички тези характеристики <strong>все още</strong>",
   "page-find-wallet-not-endorsements": "Портфейлите, изброени на тази страница, не са официално препоръчани и се дават само за информация. Техните описания са дадени от самите компании за портфейли. Ние добавяме продукти в тази страница на база на критериите в нашата",
   "page-find-wallet-overwhelmed": "По-долу портфейли на Етереум. Впечатлени ли сте? Опитайте да филтрирате по характеристики.",
   "page-find-wallet-pillar-logo-alt": "Лого на Pillar",
@@ -88,7 +88,6 @@
   "page-find-wallet-we-found": "Ние открихме",
   "page-find-wallet-withdraw": "Изтегли към банка",
   "page-find-wallet-withdraw-desc": "Може да изтеглите вашите ETH направо към банковата си сметка, без да минавате през борса.",
-  "page-find-wallet-yet": "все още",
   "page-find-wallet-zengo-logo-alt": "Лого на ZenGo",
   "page-stake-eth": "Залагайте ETH"
 }
