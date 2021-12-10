@@ -97,25 +97,26 @@ module.exports = {
             }
           }
         }`,
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.nodes
-            .filter((node) => {
+        resolvePages: ({ site, allSitePage: { nodes: allPages } }) => {
+          return allPages
+            .filter((page) => {
               // Filter out 404 pages
-              return !node.path.includes("404")
+              return !page.path.includes("404")
             })
-            .map((node) => {
-              const path = node.path
-              const url = `${site.siteMetadata.siteUrl}${path}`
-              const changefreq = path.includes(`/${defaultLanguage}/`)
-                ? `weekly`
-                : `monthly`
-              const priority = path.includes(`/${defaultLanguage}/`) ? 0.7 : 0.5
-              return {
-                url,
-                changefreq,
-                priority,
-              }
-            }),
+            .map((page) => ({ ...page, siteUrl: site.siteMetadata.siteUrl }))
+        },
+        serialize: ({ path, siteUrl }) => {
+          const url = `${siteUrl}${path}`
+          const changefreq = path.includes(`/${defaultLanguage}/`)
+            ? `weekly`
+            : `monthly`
+          const priority = path.includes(`/${defaultLanguage}/`) ? 0.7 : 0.5
+          return {
+            url,
+            changefreq,
+            priority,
+          }
+        },
       },
     },
     // Ability to set custom IDs for headings (for translations)
@@ -179,8 +180,10 @@ module.exports = {
         noQueryString: true,
       },
     },
-    // Needed for `gatsby-image`
+    // Needed for `gatsby-plugin-image`
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     // CSS in JS
     `gatsby-plugin-styled-components`,
     // Source assets
@@ -217,12 +220,13 @@ module.exports = {
         include: /\.md$|\.csv/i, // Only .md & .csv files
       },
     },
-    // Needed for `gatsby-image`
-    `gatsby-transformer-sharp`,
+    // Needed for Gatsby Cloud redirect support
+    `gatsby-plugin-gatsby-cloud`,
+    // Creates `_redirects` & `_headers` build files for Netlify
+    `gatsby-plugin-netlify`,
   ],
   // https://www.gatsbyjs.com/docs/reference/release-notes/v2.28/#feature-flags-in-gatsby-configjs
   flags: {
-    PRESERVE_WEBPACK_CACHE: true,
     FAST_DEV: true, // DEV_SSR, QUERY_ON_DEMAND & LAZY_IMAGES
   },
 }

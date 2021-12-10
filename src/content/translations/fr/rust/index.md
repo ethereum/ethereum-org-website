@@ -35,7 +35,6 @@ Besoin d’une approche plus élémentaire&nbsp;? Jetez un oeil à [ethereum.org
 
 - [Documentation Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Rust-Web3 Working Examples](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Creating a Secret Ballot with OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
 - [Creating a Private Chat Server with OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Modèles d'utilisation avancés {#advanced-use-patterns}

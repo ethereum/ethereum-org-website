@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const StyledCard = styled.div`
   background: ${(props) => props.theme.colors.searchBackground};
@@ -9,7 +9,7 @@ const StyledCard = styled.div`
   padding: 1.5rem;
 `
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   & > img {
     width: 3em !important;
     height: 3em !important;
@@ -23,7 +23,7 @@ const Description = styled.p`
 
 const ImageCard = ({ image, title, description, children, className }) => (
   <StyledCard className={className}>
-    <Image fluid={image} />
+    <Image image={image} />
     <h3>{title}</h3>
     <Description>{description}</Description>
     {children}
