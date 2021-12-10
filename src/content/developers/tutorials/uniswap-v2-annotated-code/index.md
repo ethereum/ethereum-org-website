@@ -382,7 +382,7 @@ This function allows the factory (and only the factory) to specify the two ERC-2
 
 #### Internal Update Functions {#pair-update-internal}
 
-##### \_update {#\_update}
+##### \_update
 
 ```solidity
     // update reserves and, on the first call per block, price accumulators
@@ -444,7 +444,7 @@ This price calculation is the reason we need to know the old reserve sizes.
 
 Finally, update the global variables and emit a `Sync` event.
 
-##### \_mintFee {#\_mintfee}
+##### \_mintFee
 
 ```solidity
     // if fee is on, mint liquidity equivalent to 1/6th of the growth in sqrt(k)
@@ -529,7 +529,7 @@ Note that while any transaction or contract _can_ call these functions, they are
 the periphery contract. If you call them directly you won't be able to cheat the pair exchange, but you might
 lose value through a mistake.
 
-##### mint {#mint}
+##### mint
 
 ```solidity
     // this low-level function should be called from a contract which performs important safety checks
@@ -631,7 +631,7 @@ Use the `UniswapV2ERC20._mint` function to actually create the additional liquid
 
 Update the state variables (`reserve0`, `reserve1`, and if needed `kLast`) and emit the appropriate event.
 
-##### burn {#burn}
+##### burn
 
 ```solidity
     // this low-level function should be called from a contract which performs important safety checks
@@ -679,7 +679,7 @@ The liquidity provider receives equal value of both tokens. This way we don't ch
 
 The rest of the `burn` function is the mirror image of the `mint` function above.
 
-##### swap {#swap}
+##### swap
 
 ```solidity
     // this low-level function should be called from a contract which performs important safety checks
@@ -752,7 +752,7 @@ This is a sanity check to make sure we don't lose from the swap. There is no cir
 
 Update `reserve0` and `reserve1`, and if necessary the price accumulators and the timestamp and emit an event.
 
-##### Sync or Skip {#sync-or-skip}
+##### Sync or Skip
 
 It is possible for the real balances to get out of sync with the reserves that the pair exchange thinks it has.
 There is no way to withdraw tokens without the contract's consent, but deposits are a different matter. An account

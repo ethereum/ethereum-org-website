@@ -29,15 +29,13 @@ Norėtumėte pradėti nuo ko nors paprastesnio? Apsilankykite [ethereum.org/lear
 - [Rust Ethereum klientas](https://wiki.parity.io/Setup)
 - [Sandorio siuntimas į Ethereum naudojant Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
 - [Įvadas į išmaniąsias sutartis su Parity Ethereum klientu](https://wiki.parity.io/Smart-Contracts)
-- [Oasis SDK kūrimo aplinkos nustatymas](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [Oasis SDK kūrimo aplinkos nustatymas](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Nuosekli mokomoji programa apie Kovan skirtų sutarčių kūrimą su Rust Wasm](https://github.com/paritytech/pwasm-tutorial)
 
 ## Vidutinio sudėtingumo straipsniai {#intermediate-articles}
 
 - [Rust-Web3 dokumentai](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Rust-Web3 darbo pavyzdžiai](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Slapto balsavimo kūrimas su OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Privačių poklabių serverio kūrimas su OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Pažangaus naudojimo modeliai {#advanced-use-patterns}
 
