@@ -223,7 +223,7 @@ const TutorialsPage = ({ data, pageContext }) => {
     author: tutorial.frontmatter.author,
     tags: tutorial.frontmatter.tags.map((tag) => tag.toLowerCase().trim()),
     skill: tutorial.frontmatter.skill,
-    timeToRead: tutorial.timeToRead,
+    timeToRead: Math.round(tutorial.fields.readingTime.minutes),
     published: tutorial.frontmatter.published,
     lang: tutorial.frontmatter.lang || "en",
     isExternal: false,
@@ -487,6 +487,9 @@ export const query = graphql`
       nodes {
         fields {
           slug
+          readingTime {
+            minutes
+          }
         }
         frontmatter {
           title
@@ -497,7 +500,6 @@ export const query = graphql`
           published
           lang
         }
-        timeToRead
       }
     }
   }

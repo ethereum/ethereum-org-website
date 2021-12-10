@@ -40,6 +40,7 @@
     "gatsby-remark-images": "^6.0.0",
     "gatsby-source-filesystem": "^4.0.0",
     "gatsby-transformer-csv": "^4.0.0",
+    "gatsby-remark-reading-time": "^1.1.0",
     "gatsby-transformer-gitinfo": "^1.1.0",
     "gatsby-transformer-remark": "^3.0.0",
     "gatsby-transformer-sharp": "^4.0.0",
