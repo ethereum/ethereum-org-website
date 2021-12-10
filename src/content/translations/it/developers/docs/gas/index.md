@@ -19,7 +19,7 @@ Con il termine carburante ci si riferisce ad un'unità di misura che indica la q
 
 Dato che ogni transazione Ethereum necessita di risorse di calcolo per essere eseguita, richiede una commissione. Il carburante si riferisce alla commissione richiesta per far sì che una transazione su Ethereum vada a buon fine.
 
-![Diagramma che mostra dove serve il carburante nelle operazioni dell'EVM](./gas.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagramma che mostra dove serve il carburante nelle operazioni dell'EVM](../../../../../developers/docs/gas/gas.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 In sostanza, le commissioni sul carburante sono pagate nella valuta nativa di Ethereum, l'ether (ETH). I prezzi del carburante sono indicati in Gwei, che è a sua volta un taglio dell'ETH: ogni Gwei equivale a 0,000000001 ETH (10<sup>-9</sup> ETH). Per esempio, invece di dire che il carburante costa 0,000000001 Ether, puoi dire che costa 1 Gwei.
 
@@ -31,7 +31,7 @@ In breve, le commissioni sul carburante contribuiscono a mantenere la rete di Et
 
 Sebbene una transazione includa un limite, il carburante non utilizzato in una transazione viene restituito all'utente.
 
-![Diagramma che mostra come viene rimborsato il carburante inutilizzato](../transactions/gas-tx.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagramma che mostra come viene rimborsato il carburante inutilizzato](../../../../../developers/docs/transactions/gas-tx.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Letture consigliate {#further-reading}
 

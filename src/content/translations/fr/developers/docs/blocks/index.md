@@ -17,7 +17,7 @@ Les blocs sont un sujet très accessible pour les débutants. Mais pour vous aid
 
 Pour garantir que tous les participants au réseau Ethereum maintiennent un état synchronisé et s'accordent sur l'historique précis des transactions, nous regroupons les transactions en blocs. Cela signifie que des dizaines (ou des centaines) de transactions sont engagées, acceptées et synchronisées en même temps.
 
-![Diagramme montrant une transaction dans un bloc qui cause des changements d'état](./tx-block.png) _Schéma adapté à partir du document [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagramme montrant une transaction dans un bloc qui cause des changements d'état](../../../../../developers/docs/blocks/tx-block.png) _Schéma adapté à partir du document [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 En espaçant les engagements, nous donnons à tous les participants du réseau suffisamment de temps pour parvenir à un consensus : même si des demandes de transaction se produisent des dizaines de fois par seconde, sur Ethereum les blocs sont engagés environ une fois toutes les quinze secondes.
 

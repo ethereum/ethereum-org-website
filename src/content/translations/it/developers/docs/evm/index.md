@@ -19,7 +19,7 @@ Per descrivere blockchain come Bitcoin, viene spesso utilizzata l'analogia con u
 
 Mentre Ethereum ha la sua valuta nativa (Ether) che segue quasi esattamente le stesse regole intuitive, consente anche una funzione molto più potente: [gli Smart Contract](/en/developers/docs/smart-contracts/). Per questa caratteristica più complessa, è necessaria un'analogia più complessa. Invece di essere un libro mastro distribuito, Ethereum è una [macchina a stati distribuita](https://en.wikipedia.org/wiki/Finite-state_machine). Lo stato di Ethereum è una grande enorme struttura di dati che contiene non solo tutti gli account e i saldi, ma una _macchina a stati_, che puiò cambiare da blocco a blocco in base a un set predefinito di regole, e che può eseguire codice macchina arbitrario. Le regole specifiche di cambio stato da blocco a blocco sono definite dall'EVM.
 
-![Ddiagramma che mostra la composizione dell'EVM](./evm.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Ddiagramma che mostra la composizione dell'EVM](../../../../../developers/docs/evm/evm.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## La funzione di transizione di stato di Ethereum {#the-ethereum-state-transition-function}
 
@@ -56,7 +56,7 @@ I contratti, invece, contengono un albero di _memorizzazione_ di Merkle Patricia
 
 Il bytecode compilato dello Smart Contract compilato viene eseguito come numero di [opcode](https://www.ethervm.io/) dell'EVM, che eseguono operazioni stack standard come `XOR`, `AND`, `ADD`, `SUB`, ecc. L'EVM implementa anche una serie di operazioni di stack specifiche della blockchain, come `ADDRESS`, `BALANCE`, `SHA3`, `BLOCKHASH`, ecc.
 
-![Diagramma che mostra dove serve il carburante nelle operazioni dell'EVM](../gas/gas.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagramma che mostra dove serve il carburante nelle operazioni dell'EVM](../../../../../developers/docs/gas/gas.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 <!-- TODO add full list from  https://eth.wiki/concepts/evm/implementations -->
 

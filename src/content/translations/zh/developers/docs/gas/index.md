@@ -33,7 +33,7 @@ Gas 是指在以太坊网络上执行特定操作所需的计算工作量。
 
 尽管交易包含限制，但交易中没有使用的任何 Gas 都将退还给用户。
 
-![未使用的 Gas 退款情况图](../transactions/gas-tx.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![未使用的 Gas 退款情况图](../../../../../developers/docs/transactions/gas-tx.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## 延伸阅读 {#further-reading}
 

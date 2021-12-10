@@ -11,7 +11,7 @@ Le protocole Ethereum existe uniquement dans le but de maintenir le fonctionneme
 
 ## Prérequis {#prerequisites}
 
-Une certaine connaissance des termes informatiques courants, comme [octets](https://en. wikipedia. org/wiki/Byte), [mémoire](https://en. wikipedia. org/wiki/Computer*memory), et [pile](https://en. wikipedia. org/wiki/Stack*(abstract_data_type)) sont nécessaires pour comprendre l'EVM. Il est également utile d'être à l'aise avec les concepts de cryptographie/blockchain comme les [fonctions de hachage](https://en.wikipedia.org/wiki/Cryptographic_hash_function), la [preuve de travail](https://en.wikipedia.org/wiki/Proof_of_work) et l'[arbre de Merkle](https://en.wikipedia.org/wiki/Merkle_tree).
+Une certaine connaissance des termes informatiques courants, comme [octets](https://en.wikipedia.org/wiki/Byte), [mémoire](https://en. wikipedia. org/wiki/Computer*memory), et [pile](https://en. wikipedia. org/wiki/Stack*(abstract_data_type)) sont nécessaires pour comprendre l'EVM. Il est également utile d'être à l'aise avec les concepts de cryptographie/blockchain comme les [fonctions de hachage](https://en.wikipedia.org/wiki/Cryptographic_hash_function), la [preuve de travail](https://en.wikipedia.org/wiki/Proof_of_work) et l'[arbre de Merkle](https://en.wikipedia.org/wiki/Merkle_tree).
 
 ## Du registre à la machine d'état {#from-ledger-to-state-machine}
 
@@ -19,7 +19,7 @@ L'analogie avec un "registre distribué" est souvent utilisée pour décrire les
 
 Alors qu'Ethereum dispose de sa propre cryptomonnaie native (Ether) qui suit presque exactement les mêmes règles intuitives, il offre également une fonction beaucoup plus puissante : [les contrats intelligents](/en/developers/docs/smart-contracts/). Pour cette fonctionnalité plus complexe, une analogie plus sophistiquée est nécessaire. Au lieu d'un registre distribué, Ethereum est une [machine d'état distribuée](https://en.wikipedia.org/wiki/Finite-state_machine). L'état d'Ethereum est une grande structure de données qui contient non seulement tous les comptes et tous les soldes, mais aussi une _machine à état_ qui peut changer d'un bloc à l'autre selon un ensemble de règles prédéfinies, et qui peut exécuter du code machine arbitraire. Les règles spécifiques de changement d'état d'un bloc à l'autre sont définies par l'EVM.
 
-![Schéma montrant la composition d'un compte](./evm.png) _Schéma adapté à partir du document [EVM Ethereum illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Schéma montrant la composition d'un compte](../../../../../developers/docs/evm/evm.png) _Schéma adapté à partir du document [EVM Ethereum illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Fonction de transition d'état Ethereum {#the-ethereum-state-transition-function}
 
@@ -56,7 +56,7 @@ Cependant, les contrats contiennent un arbre de _stockage_ Merkle Patricia (en t
 
 Le bytecode du contract intelligent compilé s'exécute comme un certain nombre [de codes d'opérations](https://www.ethervm.io/) EVM, qui effectuent des opérations de pile standards comme `XOR`, `AND`, `ADD`, `SUB`, etc. L'EVM implémente également un certain nombre d'opérations de pile spécifiques à la blockchain, comme `ADDRESS`, `BALANCE`, `SHA3`, `BLOCKHASH`, etc.
 
-![Diagramme indiquant où le carburant est nécessaire dans les opérations de l'EVM](../gas/gas.png) _Schéma adapté à partir du document [EVM Ethereum illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagramme indiquant où le carburant est nécessaire dans les opérations de l'EVM](../../../../../developers/docs/gas/gas.png) _Schéma adapté à partir du document [EVM Ethereum illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 <!-- TODO add full list from  https://eth.wiki/concepts/evm/implementations -->
 

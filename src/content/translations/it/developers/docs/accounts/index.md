@@ -48,7 +48,7 @@ Gli account Ethereum hanno quattro campi:
 <!--this hash refers to the code of this account on the Ethereum virtual machine (EVM). This EVM code gets executed if the account gets a message call. It cannot be changed unlike the other account fields.  -->
 - `storageRoot`: detto anche hash di archiviazione. Hash a 256 bit del nodo radice di un albero di Merkle Patricia che codifica il contenuto dello spazio di archiviazione dell'account (una mappatura tra valori interi a 256 bit), codificato nel trie come mappatura tra l'hash di Keccak a 256 bit delle chiavi intere a 256 bit e i valori interi codificati in RLP a 256 bit. Questo albero codifica l'hash del contenuto dello storage di questo account ed è vuoto di default.
 
-![Diagramma che mostra la composizione di un account](./accounts.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagramma che mostra la composizione di un account](../../../../../developers/docs/accounts/accounts.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Account di proprietà esterna e coppie di chiavi {#externally-owned-accounts-and-key-pairs}
 

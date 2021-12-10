@@ -21,7 +21,7 @@ Puoi avere una panoramica in tempo reale della rete Ethereum dando un'occhiata a
 
 Molte [implementazioni dei client Ethereum](/developers/docs/nodes-and-clients/#clients) sono disponibili in una varietà di lingue. Hanno in comune il fatto di seguire una specifica ufficiale che determina come funziona la rete Ethereum e la blockchain.
 
-![Client Eth1x](./client-diagram.png) Diagramma semplificato delle caratteristiche di un client Ethereum.
+![Client Eth1x](../../../../../developers/docs/nodes-and-clients/client-diagram.png) Diagramma semplificato delle caratteristiche di un client Ethereum.
 
 ## Tipologie di nodo {#node-types}
 
@@ -59,7 +59,7 @@ Eseguire un nodo permette di utilizzare Ethereum in modo veramente privato, auto
 - Non dovrai comunicare i tuoi indirizzi e saldi a nodi casuali. Tutto può essere controllato con il proprio client.
 - La dapp che si sviluppa può essere più sicura e privata se si utilizza un nodo personale. [Metamask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) e altri portafogli possono essere facilmente impostati per puntare al nodo locale.
 
-![Come accedere a Ethereum tramite un'applicazione e i nodi](./nodes.png)
+![Come accedere a Ethereum tramite un'applicazione e i nodi](../../../../../developers/docs/nodes-and-clients/nodes.png)
 
 ### Vantaggi per la rete {#network-benefits}
 
@@ -198,9 +198,9 @@ A seconda di quale software e modalità di sincronizzazione si utilizzerà, sono
 | Nethermind   | 200 GB+                                    | 3 TB+                                |
 | Besu         | 750 GB+                                    | 4 TB+                                |
 
-![Grafico che mostra che i GB necessari per una sincronizzazione completa sono sempre di più](./full-sync.png)
+![Grafico che mostra che i GB necessari per una sincronizzazione completa sono sempre di più](../../../../../developers/docs/nodes-and-clients/full-sync.png)
 
-![Grafico che mostra che i GB necessari per una sincronizzazione archivio sono sempre di più](./archive-sync.png)
+![Grafico che mostra che i GB necessari per una sincronizzazione archivio sono sempre di più](../../../../../developers/docs/nodes-and-clients/archive-sync.png)
 
 Da questi grafici si capisce che i requisiti di archiviazione cambiano in continuazione. Per i dati più aggiornati per Geth e Parity, consulta i [dati per la sincronizzazione completa](https://etherscan.io/chartsync/chaindefault) e i [dati per la sincronizzazione archivio](https://etherscan.io/chartsync/chainarchive).
 

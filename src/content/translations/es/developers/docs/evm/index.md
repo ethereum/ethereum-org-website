@@ -19,7 +19,7 @@ La analogía del "libro de contabilidad distribuido" suele utilizarse para descr
 
 Aunque Ethereum tenga su propia criptomoneda nativa (Ether), que sigue casi exactamente las mismas reglas intuitivas, esto también permite disponer de una función mucho más poderosa: [los contratos inteligentes](/en/developers/docs/smart-contracts/). Para explicar esta característica más compleja se requiere una analogía más sofisticada. En lugar de un libro de contabilidad distribuido, Ethereum es una [máquina de estado](https://en.wikipedia.org/wiki/Finite-state_machine) distribuida. El estado de Ethereum es una gran estructura de datos, que no solo sostiene todas las cuentas y saldos, sino que también alberga el _estado de la máquina_. Este puede cambiar de bloque a bloque según un conjunto de reglas predefinidas, así como ejecutar un código de máquina arbitrario. Las reglas específicas de cambiar el estado de bloque a bloque las define la EVM.
 
-![Un diagrama que muestra la composición de la EVM.](./evm.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Un diagrama que muestra la composición de la EVM.](../../../../../developers/docs/evm/evm.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Función de transición de estado de Ethereum {#the-ethereum-state-transition-function}
 
@@ -56,7 +56,7 @@ Sin embargo, los contratos contienen un intento de Merkle Patricia trie de _alma
 
 El bytecode compilado del contrato inteligente se ejecuta como un número de la EVM: [códigos de operación](https://www.ethervm.io/), que realizan operaciones estándar de la pila como `XOR`, `AND`, `ADD`, `SUB`, etc. La EVM también implementa un número de operaciones de pila específicas de la blockchain, como `DIRECCIÓN`, `SALDO`, `SHA3`, `BLOCKHASH`, etc.
 
-![Un diagrama que muestra dónde se necesita gas para las operaciones de la EVM.](../gas/gas.png) _Diagramas adaptados de la [EVM ilustrada de Ethereum](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Un diagrama que muestra dónde se necesita gas para las operaciones de la EVM.](../../../../../developers/docs/gas/gas.png) _Diagramas adaptados de la [EVM ilustrada de Ethereum](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 <!-- TODO add full list from  https://eth.wiki/concepts/evm/implementations -->
 
