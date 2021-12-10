@@ -40,7 +40,7 @@ Le compilateur produira également l'**interface binaire-programme (ABI)** dont 
 
 L'ABI est un fichier JSON qui décrit le contrat déployé et ses fonctions de contrat intelligent. Cela aide à combler le fossé entre Web2 et Web3
 
-Une [bibliothèque cliente JavaScript](/en/developers/docs/apis/javascript/) va lire l'**ABI** afin que vous puissiez appeler votre contrat intelligent dans l'interface de votre application Web.
+Une [bibliothèque cliente JavaScript](/developers/docs/apis/javascript/) va lire l'**ABI** afin que vous puissiez appeler votre contrat intelligent dans l'interface de votre application Web.
 
 Vous trouverez ci-dessous l’ABI pour le contrat de jetons ERC-20. Un jeton ERC-20 est un jeton que vous pouvez échanger sur Ethereum.
 
@@ -275,5 +275,5 @@ Vous trouverez ci-dessous l’ABI pour le contrat de jetons ERC-20. Un jeton ERC
 
 ## Sujets connexes {#related-topics}
 
-- [Bibliothèques clientes JavaScript](/en/developers/docs/apis/javascript/)
-- [Machine virtuelle Ethereum (EVM)](/en/developers/docs/ethereum-virtual-machine/)
+- [Bibliothèques clientes JavaScript](/developers/docs/apis/javascript/)
+- [Machine virtuelle Ethereum (EVM)](/developers/docs/ethereum-virtual-machine/)

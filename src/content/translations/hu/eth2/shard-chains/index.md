@@ -14,8 +14,8 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~2022">
-    A shard láncokat nagyjából 2022 körül kellene bevezetni attól függően, hogy milyen előrelépések történnek <a href="/eth2/beacon-chain/">a Beacon Chain</a> elindítása után. Ezek a shardok az Ethereum számára nagyobb tárolási és elérési kapacitást tesznek lehetővé, de kód futtatásra nem lehet majd használni. Annak részletei még kialakulóban vannak.
+<UpgradeStatus date="2023">
+    A shard láncokat nagyjából 2023 körül kellene bevezetni attól függően, hogy milyen előrelépések történnek <a href="/eth2/beacon-chain/">a Beacon Chain</a> elindítása után. Ezek a shardok az Ethereum számára nagyobb tárolási és elérési kapacitást tesznek lehetővé, de kód futtatásra nem lehet majd használni. Annak részletei még kialakulóban vannak.
 </UpgradeStatus>
 
 ## Mi az a sharding? {#what-is-sharding}
@@ -39,7 +39,7 @@ Az alacsonyabb hardver követelményekkel a sharding megkönnyíti a [kliensek](
 <br />
 
 <InfoBanner isWarning={true}>
-  Először is egy főhálózati klienst kell futtatnod az Eth2 klienseddel egy időben. <a href="https://launchpad.ethereum.org" target="_blank">Az indítópult</a> végigvezet a hardverkövetelményeken és a folyamaton. Alternatívaként használhatsz egy <a href="/en/developers/docs/apis/backend/#available-libraries">backend API-t</a>.
+  Először is egy főhálózati klienst kell futtatnod az Eth2 klienseddel egy időben. <a href="https://launchpad.ethereum.org" target="_blank">Az indítópult</a> végigvezet a hardverkövetelményeken és a folyamaton. Alternatívaként használhatsz egy <a href="/developers/docs/apis/backend/#available-libraries">backend API-t</a>.
 </InfoBanner>
 
 ## Shard láncok verzió 1: adat elérhetőség {#data-availability}

@@ -10,7 +10,7 @@ Az Ethereum a Bitcoinhoz hasonlóan egy konszenzus protokollt használ, melyet �
 
 ## Előfeltételek {#prerequisites}
 
-Hogy jobban megértsd ezt az oldalt, javasoljuk, hogy előbb olvasd el a [tranzakciókról](/en/developers/docs/transactions/) és a [blokkokról](/en/developers/docs/blocks/) szóló oldalakat.
+Hogy jobban megértsd ezt az oldalt, javasoljuk, hogy előbb olvasd el a [tranzakciókról](/developers/docs/transactions/) és a [blokkokról](/developers/docs/blocks/) szóló oldalakat.
 
 ## Mi az a proof-of-work (PoW)? {#what-is-pow}
 

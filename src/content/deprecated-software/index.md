@@ -92,7 +92,7 @@ Ethereum Studio was developed to provide users with an IDE that had a built-in E
 
 **Alternatives**
 
-[Remix](https://remix.ethereum.org/) is an alternative web IDE for Solidity development. Additionally, the [Developer Portal](https://ethereum.org/en/developers/) has tools for web and local development, documentation, and more.
+[Remix](https://remix.ethereum.org/) is an alternative web IDE for Solidity development. Additionally, the [Developer Portal](/developers/) has tools for web and local development, documentation, and more.
 
 ### Meteor Dapp Wallet {#meteor-dapp-wallet}
 
@@ -329,26 +329,6 @@ Associated with the EthFans community, the service was launched in 2015. SparkPo
 **Alternatives**
 
 [Ethermine](https://ethermine.org/)
-
-### ConsenSys - ERC-20 Implementation
-
-Deprecated on Nov 13, 2020.
-
-**Summary**
-
-This project aimed to implement some EIP about Tokens (e.g. EIP20) as smart contract to allow developers to easily incorporate them into their Solidity applications while adhering to standards.
-
-**Archives**
-
-[GitHub repo](https://github.com/ConsenSys/Tokens/blob/master/contracts/eip20/EIP20.sol)
-
-**History**
-
-The project was discontinued in favor of the "thoroughly vetted OpenZeppelin token implementations" - as per Consensys team's own words.
-
-**Alternatives**
-
-[OpenZeppelin Contracts - Token](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token)
 
 ## Documentation and Information Sources {#documentation-and-information-sources}
 

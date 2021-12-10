@@ -14,8 +14,8 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~2022">
-    Οι shard chains θα πρέπει να ενεργοποιηθούν κάποια στιγμή το 2022, ανάλογα με το πόσο γρήγορα προχωρούν οι εργασίες μετά την έναρξη του <a href="/eth2/beacon-chain/">Beacon Chain</a>. Αυτά τα shards θα δώσουν στο Ethereum μεγαλύτερη ικανότητα αποθήκευσης και πρόσβασης δεδομένων, αλλά δεν θα χρησιμοποιηθούν για την εκτέλεση κώδικα. Οι λεπτομέρειες αυτού του θέματος εξακολουθούν να εξετάζονται.
+<UpgradeStatus date="~2023">
+    Οι shard chains θα πρέπει να ενεργοποιηθούν κάποια στιγμή το 2023, ανάλογα με το πόσο γρήγορα προχωρούν οι εργασίες μετά την έναρξη του <a href="/eth2/beacon-chain/">Beacon Chain</a>. Αυτά τα shards θα δώσουν στο Ethereum μεγαλύτερη ικανότητα αποθήκευσης και πρόσβασης δεδομένων, αλλά δεν θα χρησιμοποιηθούν για την εκτέλεση κώδικα. Οι λεπτομέρειες αυτού του θέματος εξακολουθούν να εξετάζονται.
 </UpgradeStatus>
 
 ## Τι είναι ο διαχωρισμός; (sharding) {#what-is-sharding}
@@ -39,7 +39,7 @@ summaryPoints:
 <br />
 
 <InfoBanner isWarning={true}>
-  Αρχικά, θα χρειαστεί να εκτελέσετε ένα Mainnet client ταυτόχρονα με το Eth2 client. <a href="https://launchpad.ethereum.org" target="_blank">Η πλατφόρμα εκκίνησης</a> θα σας καθοδηγήσει σχετικά με τις απαιτήσεις και τη διαδικασία υλικού. Εναλλακτικά μπορείτε να χρησιμοποιήσετε ένα <a href="/en/developers/docs/apis/backend/#available-libraries">backend API</a>.
+  Αρχικά, θα χρειαστεί να εκτελέσετε ένα Mainnet client ταυτόχρονα με το Eth2 client. <a href="https://launchpad.ethereum.org" target="_blank">Η πλατφόρμα εκκίνησης</a> θα σας καθοδηγήσει σχετικά με τις απαιτήσεις και τη διαδικασία υλικού. Εναλλακτικά μπορείτε να χρησιμοποιήσετε ένα <a href="/developers/docs/apis/backend/#available-libraries">backend API</a>.
 </InfoBanner>
 
 ## Shard chains έκδοση 1: διαθεσιμότητα δεδομένων {#data-availability}

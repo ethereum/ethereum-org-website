@@ -500,10 +500,7 @@ const WalletCompare = ({ location }) => {
           <ResultsContainer>
             <Emoji text=":crying_face:" size={3} mb={`2em`} mt={`2em`} />
             <h2>
-              <Translation id="page-find-wallet-not-all-features" />{" "}
-              <b>
-                <Translation id="page-find-wallet-yet" />
-              </b>
+              <Translation id="page-find-wallet-not-all-features" />
             </h2>
             <p>
               <Translation id="page-find-wallet-try-removing" />

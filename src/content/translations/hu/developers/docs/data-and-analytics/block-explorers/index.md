@@ -10,7 +10,7 @@ A blokkfelfedezők a portálod az Ethereum adataihoz. Használatukkal valós ide
 
 ## Előfeltételek {#prerequisites}
 
-Először meg kellene értened az Ethereum alapvető fogalmait ahhoz, hogy értelmezni tudd az adatokat, melyet egy blokkfelfedező biztosít neked. Kezdj itt: [bevezetés az Ethereumba](/en/developers/docs/intro-to-ethereum/).
+Először meg kellene értened az Ethereum alapvető fogalmait ahhoz, hogy értelmezni tudd az adatokat, melyet egy blokkfelfedező biztosít neked. Kezdj itt: [bevezetés az Ethereumba](/developers/docs/intro-to-ethereum/).
 
 ## Szolgáltatások {#services}
 

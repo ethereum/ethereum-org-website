@@ -30,7 +30,7 @@ Mamy kilka podstawowych zasad, które pomagają nam to osiągnąć.
 
 Chcemy zainteresować naszych użytkowników i odpowiedzieć na ich pytania. Dlatego nasz portal musi łączyć w sobie informacje, „magiczne momenty” oraz linki do znakomitych zasobów społeczności, które istnieją w sieci. Nasze treści mają być „portalem wdrożeniowym”, a nie substytutem istniejących już rozległych zasobów. Chcielibyśmy wspierać i integrować się z zasobami zbudowanymi przez społeczność, zwiększając ich widoczność i zwiększając ich rozpoznawalność.
 
-[Społeczność Ethereum](/en/community/) jest w centrum tego projektu: musimy nie tylko jej służyć, lecz także współdziałać z nią i uwzględniać jej feedback. Strona internetowa jest nie tylko dla naszej obecnej społeczności, ale dla społeczności, którą mamy nadzieję się stać. Musimy pamiętać, że nasza społeczność jest globalna; łączy ludzi wielu języków, regionów i kultur.
+[Społeczność Ethereum](/community/) jest w centrum tego projektu: musimy nie tylko jej służyć, lecz także współdziałać z nią i uwzględniać jej feedback. Strona internetowa jest nie tylko dla naszej obecnej społeczności, ale dla społeczności, którą mamy nadzieję się stać. Musimy pamiętać, że nasza społeczność jest globalna; łączy ludzi wielu języków, regionów i kultur.
 
 ### 2. ethereum.org ciągle ewoluuje 🛠 {#core-principles-2}
 
@@ -38,7 +38,7 @@ Ethereum i jego społeczność ciągle ewoluują, więc ethereum.org także. Dla
 
 Bazujemy na otwartości i społeczności współtwórców – także Ty możesz zaproponować zmiany lub nas wesprzeć.
 
-[Dowiedz się więcej o współtworzeniu](/en/contributing/)
+[Dowiedz się więcej o współtworzeniu](/contributing/)
 
 ### 3. ethereum.org nie jest typową stroną produktową 🦄 {#core-principles-3}
 
@@ -48,11 +48,11 @@ Co jest najlepszą stroną internetową dla platformy blokchain pozostaje pytani
 
 ## Zasady projektowania {#design-principles}
 
-Używamy zasad projektowania by kierować naszymi treściami i decyzjami projektowymi na stronie: [zasady projektowania](/en/contributing/design-principles/).
+Używamy zasad projektowania by kierować naszymi treściami i decyzjami projektowymi na stronie: [zasady projektowania](/contributing/design-principles/).
 
 Z zadowoleniem przyjmujemy opinie na ich temat. Pamiętaj, strona ethereum.org jest tworzona dla społeczności przez społeczność.
 
-Jeśli chcesz [współtworzyć stronę](/en/contributing/) upewnij się, że zapoznałeś się z zasadami.
+Jeśli chcesz [współtworzyć stronę](/contributing/) upewnij się, że zapoznałeś się z zasadami.
 
 ## Plan działania {#roadmap}
 

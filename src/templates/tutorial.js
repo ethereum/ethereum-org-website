@@ -210,6 +210,9 @@ export const query = graphql`
     pageData: mdx(fields: { relativePath: { eq: $relativePath } }) {
       fields {
         slug
+        readingTime {
+          minutes
+        }
       }
       frontmatter {
         title
@@ -228,7 +231,6 @@ export const query = graphql`
       }
       body
       tableOfContents
-      timeToRead
     }
   }
 `

@@ -3,8 +3,8 @@ import { ThemeContext } from "styled-components"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
+import { shuffle } from "lodash"
 import { getImage } from "gatsby-plugin-image"
-
 import { translateMessageId } from "../../../utils/translations"
 import Card from "../../../components/Card"
 import Leaderboard from "../../../components/Leaderboard"
@@ -174,74 +174,78 @@ const GetInvolvedPage = ({ data, location }) => {
   const [clients, setClients] = useState([])
 
   useEffect(() => {
-    const randomizedClients = [
-      {
-        name: "Prysm",
-        background: "#23292E",
-        description: <Translation id="page-eth2-get-involved-written-go" />,
-        alt: "eth2-client-prysm-logo-alt",
-        url: "https://docs.prylabs.network/docs/getting-started/",
-        image: getImage(data.prysm),
-        githubUrl: "https://github.com/prysmaticlabs/prysm",
-        isProductionReady: true,
-      },
-      {
-        name: "Lighthouse",
-        background: "",
-        description: <Translation id="page-eth2-get-involved-written-rust" />,
-        alt: "eth2-client-lighthouse-logo-alt",
-        url: "https://lighthouse-book.sigmaprime.io/",
-        image: isDarkTheme
-          ? getImage(data.lighthouseDark)
-          : getImage(data.lighthouseLight),
-        githubUrl: "https://github.com/sigp/lighthouse",
-        isProductionReady: true,
-      },
-      {
-        name: "Teku",
-        background: "#3359D5",
-        description: <Translation id="page-eth2-get-involved-written-java" />,
-        alt: "eth2-client-teku-logo-alt",
-        url: "https://pegasys.tech/teku",
-        image: isDarkTheme ? getImage(data.tekuLight) : getImage(data.tekuDark),
-        githubUrl: "https://github.com/ConsenSys/teku",
-        isProductionReady: true,
-      },
-      {
-        name: "Cortex",
-        background: "#4CAEE5",
-        description: <Translation id="page-eth2-get-involved-written-net" />,
-        alt: "eth2-client-cortex-logo-alt",
-        url: "https://nethermind.io/",
-        image: getImage(data.cortex),
-        githubUrl: "https://github.com/NethermindEth/nethermind",
-        isProductionReady: false,
-      },
-      {
-        name: "Lodestar",
-        background: "#14140B",
-        description: (
-          <Translation id="page-eth2-get-involved-written-javascript" />
-        ),
-        alt: "eth2-client-lodestar-logo-alt",
-        url: "https://lodestar.chainsafe.io/",
-        image: getImage(data.lodestar),
-        githubUrl: "https://github.com/ChainSafe/lodestar",
-        isProductionReady: false,
-      },
-      {
-        name: "Nimbus",
-        background: "#DC8600",
-        description: <Translation id="page-eth2-get-involved-written-nim" />,
-        alt: "eth2-client-nimbus-logo-alt",
-        url: "https://nimbus.team/",
-        image: getImage(data.nimbus),
-        githubUrl: "https://github.com/status-im/nimbus-eth2",
-        isProductionReady: true,
-      },
-    ].sort(() => Math.random() - 0.5)
+    const randomizedClients = shuffle(consensusClients)
     setClients(randomizedClients)
   }, [])
+
+  const consensusClients = [
+    {
+      name: "Prysm",
+      background: "#23292E",
+      description: <Translation id="page-eth2-get-involved-written-go" />,
+      alt: "eth2-client-prysm-logo-alt",
+      url: "https://docs.prylabs.network/docs/getting-started/",
+      image: data.prysm.childImageSharp.fixed,
+      githubUrl: "https://github.com/prysmaticlabs/prysm",
+      isProductionReady: true,
+    },
+    {
+      name: "Lighthouse",
+      background: "",
+      description: <Translation id="page-eth2-get-involved-written-rust" />,
+      alt: "eth2-client-lighthouse-logo-alt",
+      url: "https://lighthouse-book.sigmaprime.io/",
+      image: isDarkTheme
+        ? data.lighthouseDark.childImageSharp.fixed
+        : data.lighthouseLight.childImageSharp.fixed,
+      githubUrl: "https://github.com/sigp/lighthouse",
+      isProductionReady: true,
+    },
+    {
+      name: "Teku",
+      background: "#3359D5",
+      description: <Translation id="page-eth2-get-involved-written-java" />,
+      alt: "eth2-client-teku-logo-alt",
+      url: "https://pegasys.tech/teku",
+      image: isDarkTheme
+        ? data.tekuLight.childImageSharp.fixed
+        : data.tekuDark.childImageSharp.fixed,
+      githubUrl: "https://github.com/ConsenSys/teku",
+      isProductionReady: true,
+    },
+    {
+      name: "Cortex",
+      background: "#4CAEE5",
+      description: <Translation id="page-eth2-get-involved-written-net" />,
+      alt: "eth2-client-cortex-logo-alt",
+      url: "https://nethermind.io/",
+      image: data.cortex.childImageSharp.fixed,
+      githubUrl: "https://github.com/NethermindEth/nethermind",
+      isProductionReady: false,
+    },
+    {
+      name: "Lodestar",
+      background: "#14140B",
+      description: (
+        <Translation id="page-eth2-get-involved-written-javascript" />
+      ),
+      alt: "eth2-client-lodestar-logo-alt",
+      url: "https://lodestar.chainsafe.io/",
+      image: data.lodestar.childImageSharp.fixed,
+      githubUrl: "https://github.com/ChainSafe/lodestar",
+      isProductionReady: false,
+    },
+    {
+      name: "Nimbus",
+      background: "#DC8600",
+      description: <Translation id="page-eth2-get-involved-written-nim" />,
+      alt: "eth2-client-nimbus-logo-alt",
+      url: "https://nimbus.team/",
+      image: data.nimbus.childImageSharp.fixed,
+      githubUrl: "https://github.com/status-im/nimbus-eth2",
+      isProductionReady: true,
+    },
+  ]
 
   const ethresearch = [
     {

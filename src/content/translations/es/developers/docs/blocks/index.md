@@ -9,7 +9,7 @@ Los bloques son lotes de transacciones con un hash del bloque anterior en la cad
 
 ## Requisitos previos {#prerequisites}
 
-Los bloques son muy fáciles de manejar incluso para los principiantes. Sin embargo, para ayudarte a comprender mejor esta página, te recomendamos leer primero [Cuentas](/en/developers/docs/accounts/), [Transacciones](/en/developers/docs/transactions/) y nuestra [introduccción a Ethereum](/en/developers/docs/intro-to-ethereum/).
+Los bloques son muy fáciles de manejar incluso para los principiantes. Sin embargo, para ayudarte a comprender mejor esta página, te recomendamos leer primero [Cuentas](/developers/docs/accounts/), [Transacciones](/developers/docs/transactions/) y nuestra [introduccción a Ethereum](/developers/docs/intro-to-ethereum/).
 
 <!--The content below was provided by Brian Gu with exception of "what's in a block"-->
 
@@ -17,7 +17,7 @@ Los bloques son muy fáciles de manejar incluso para los principiantes. Sin emba
 
 Organizamos las transacciones en bloques para garantizar que todos los participantes en la red Ethereum mantienen un estado sincronizado y están de acuerdo sobre el historial preciso de las transacciones. Esto significa que decenas (o cientos) de transacciones se confirman, acuerdan y sincronizan a la vez.
 
-![Un diagrama muestra cómo la transacción en un bloque causa cambios de estado](./tx-block.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Un diagrama muestra cómo la transacción en un bloque causa cambios de estado](../../../../../developers/docs/blocks/tx-block.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Al separar los commits (formación exitosa de una cadena), damos a todos los participantes de la red el tiempo suficiente para llegar a un consenso: aunque las solicitudes de transacción ocurren docenas de veces por segundo, los bloques en Ethereum se confirman aproximadamente una vez cada 15 segundos.
 
@@ -37,7 +37,7 @@ El protocolo "Prueba de trabajo" significa lo siguiente:
 - Otros mineros que se enteran de la existencia de un nuevo bloque con un certificado válido de legitimidad deben\* aceptar el nuevo bloque como el siguiente bloque canónico en la blockchain.
 - La cantidad exacta de tiempo que necesita cualquier minero para producir este certificado es una variable aleatoria con alta variabilidad. Esto garantiza que es improbable* que dos mineros produzcan validaciones para un nuevo bloque propuesto simultáneamente; cuando un minero produce y propaga un nuevo bloque certificado, los demás pueden estar casi seguros de que el bloque será aceptado por la red como un nuevo bloque canónico en la blockchain sin conflicto* (aunque hay un protocolo para resolver los conflictos, así como en el caso de que dos blockchains certificadas se produzcan casi simultáneamente).
 
-[Más sobre minería](/en/developers/docs/consensus-mechanisms/pow/mining/)
+[Más sobre minería](/developers/docs/consensus-mechanisms/pow/mining/)
 
 ## ¿Qué hay en un bloque? {#block-anatomy}
 
@@ -60,6 +60,6 @@ _¿Conoces algún recurso en la comunidad que te haya servido de ayuda? Edita es
 
 ## Temas relacionados {#related-topics}
 
-- [Minando](/en/developers/docs/consensus-mechanisms/pow/mining/)
-- [Transacciones](/en/developers/docs/transactions/)
-- [Gas](/en/developers/docs/gas/)
+- [Minando](/developers/docs/consensus-mechanisms/pow/mining/)
+- [Transacciones](/developers/docs/transactions/)
+- [Gas](/developers/docs/gas/)

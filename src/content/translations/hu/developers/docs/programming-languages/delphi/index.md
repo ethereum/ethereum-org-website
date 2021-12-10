@@ -20,7 +20,7 @@ Fejlessz decentralizált alkalmazásokat Ethereumra, és lépj interakcióba oko
 
 **Tedd meg az első lépést, hogy integráld a Delphi-t Ethereummal**
 
-Szükséged van egy még kezdetlegesebb alapozóra? Tekintsd meg a [ethereum.org/learn](/en/learn/) oldalt vagy a [ethereum.org/developers](/en/developers/) oldalt.
+Szükséged van egy még kezdetlegesebb alapozóra? Tekintsd meg a [ethereum.org/learn](/learn/) oldalt vagy a [ethereum.org/developers](/developers/) oldalt.
 
 - [Blokklánc ismertetése](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Okosszerződések értelmezése](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -52,4 +52,4 @@ Szükséged van egy még kezdetlegesebb alapozóra? Tekintsd meg a [ethereum.org
 - [Delphi és az Ethereum Name Service (ENS)](https://medium.com/@svanas/delphi-and-ethereum-name-service-ens-4443cd278af7)
 - [QuikNode, Ethereum és Delphi](https://medium.com/@svanas/quiknode-ethereum-and-delphi-f7bfc9671c23)
 
-Még több anyagot keresel? Tekintsd meg az [ethereum.org/developers](/en/developers/) oldalt.
+Még több anyagot keresel? Tekintsd meg az [ethereum.org/developers](/developers/) oldalt.

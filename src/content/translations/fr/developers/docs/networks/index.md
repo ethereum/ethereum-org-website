@@ -11,7 +11,7 @@ Les réseaux sont différents environnements Ethereum auxquels vous pouvez accé
 
 ## Prérequis {#prerequisites}
 
-Vous devez comprendre les bases d'Ethereum avant de vous renseigner sur les différents réseaux, car les réseaux de test vous donneront une version bon marché et sûre d'Ethereum avec laquelle vous pourrez jouer. Commencez par lire la page [Introduction à Ethereum](/en/developers/docs/intro-to-ethereum/).
+Vous devez comprendre les bases d'Ethereum avant de vous renseigner sur les différents réseaux, car les réseaux de test vous donneront une version bon marché et sûre d'Ethereum avec laquelle vous pourrez jouer. Commencez par lire la page [Introduction à Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Réseaux public {#public-networks}
 

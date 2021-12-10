@@ -10,14 +10,14 @@ Un compte Ethereum est une entité avec un solde en ether (ETH) qui peut envoyer
 
 ## Prérequis {#prerequisites}
 
-Les comptes sont un sujet très accessible pour les débutants, mais pour mieux comprendre cette page, nous vous recommandons de commencer par lire cette [introduction à Ethereum](/en/developers/docs/intro-to-ethereum/).
+Les comptes sont un sujet très accessible pour les débutants, mais pour mieux comprendre cette page, nous vous recommandons de commencer par lire cette [introduction à Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Types de comptes {#types-of-account}
 
 Ethereum comprend deux types de comptes :
 
 - Les propriétés externes, contrôlées par toute personne ayant les clés correspondantes
-- Les contrats intelligents déployés sur le réseau, contrôlé par un code En savoir plus sur les [ les contrats intelligents](/en/developers/docs/smart-contracts/)
+- Les contrats intelligents déployés sur le réseau, contrôlé par un code En savoir plus sur les [ les contrats intelligents](/developers/docs/smart-contracts/)
 
 Les deux types peuvent :
 
@@ -48,7 +48,7 @@ Les comptes Ethereum comportent quatre champs :
 <!--this hash refers to the code of this account on the Ethereum virtual machine (EVM). This EVM code gets executed if the account gets a message call. It cannot be changed unlike the other account fields.  -->
 - `storageRoot` – Parfois connu sous le nom de hash de stockage. Un hash 256 bits du nœud racine d'un arbre de Merkle qui encode le contenu de stockage du compte (une correspondance entre 256 bits entiers), encodé dans un arbre préfixé comme correspondance d'un hach Keccak 256 bits des clés d'entier en 256 bits en des valeurs entières encodées en RLP. Cette arborescence encode le hachage des contenus de stockage de ce compte, et est vide par défaut.
 
-![Schéma montrant la composition d'un compte](./accounts.png) _Schéma adapté à partir du document [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Schéma montrant la composition d'un compte](../../../../../developers/docs/accounts/accounts.png) _Schéma adapté à partir du document [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Comptes externes et paires de clés {#externally-owned-accounts-and-key-pairs}
 
@@ -127,5 +127,5 @@ _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
 ## Sujets connexes {#related-topics}
 
-- [Contrats intelligents](/en/developers/docs/smart-contracts/)
-- [Transactions](/en/developers/docs/transactions/)
+- [Contrats intelligents](/developers/docs/smart-contracts/)
+- [Transactions](/developers/docs/transactions/)

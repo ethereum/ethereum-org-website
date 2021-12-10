@@ -14,13 +14,13 @@ A tranzakciók számlákból származó kriptográfiailag aláírt instrukciók.
 
 ## Előfeltételek {#prerequisites}
 
-Ennek az oldalnak a jobb megértése érdekében javasoljuk, hogy először olvasd el a [Számlák](/en/developers/docs/accounts/) és a [bevezetés az Ethereumba](/en/developers/docs/intro-to-ethereum/) című cikkeinket.
+Ennek az oldalnak a jobb megértése érdekében javasoljuk, hogy először olvasd el a [Számlák](/developers/docs/accounts/) és a [bevezetés az Ethereumba](/developers/docs/intro-to-ethereum/) című cikkeinket.
 
 ## Mi az a tranzakció? {#whats-a-transaction}
 
 Az Ethereum tranzakció egy külső tulajdonú számla által kezdeményezett tevékenységre utal, más szóval egy számla, melyet egy ember kezel, nem pedig egy szerződés. Például ha Bob elküld Alice-nek 1 ETH-et, akkor Bob számláját terhelni kell, Alice számlájára pedig jóvá kell írni az összeget. Ez az állapotot megváltoztató művelet egy tranzakción belül történik.
 
-![Egy diagram, mely egy tranzakciót ábrázol, ahogy az megváltoztatja az állapotot](./tx.png) _Diagram átvéve az [Ethereum EVM illusztrálva](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_ anyagból
+![Egy diagram, mely egy tranzakciót ábrázol, ahogy az megváltoztatja az állapotot](../../../../../developers/docs/transactions/tx.png) _Diagram átvéve az [Ethereum EVM illusztrálva](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_ anyagból
 
 A tranzakciókat, melyek megváltoztatják az EVM állapotát, a teljes hálózat számára közvetíteni kell. Bármely csomópont kérvényezheti egy tranzakció végrehajtását az EVM-en; miután ez megtörténik, egy bányász végrehajtja a tranzakciót és továbbterjeszti az eredményül kapott állapotot a hálózat többi része számára.
 
@@ -35,7 +35,7 @@ Az elküldött tranzakció a következő információkat tartalmazza:
 - `gasLimit` – a maximális gáz egység, melyet a tranzakció elfogyaszthat. A gáz egységek számítási lépéseket reprezentálnak
 - `gasPrice` – a díj, melyet a küldő fizet gáz egységenként
 
-A gáz a bányász által a tranzakció feldolgozásához szükséges számításra utal. A felhasználóknak egy díjat kell fizetniük ezért a számításért. A `gasLimit` és a `gasPrice` meghatározza a bányásznak fizetett maximális tranzakciós díjat. [Többet a gázról](/en/developers/docs/gas/).
+A gáz a bányász által a tranzakció feldolgozásához szükséges számításra utal. A felhasználóknak egy díjat kell fizetniük ezért a számításért. A `gasLimit` és a `gasPrice` meghatározza a bányásznak fizetett maximális tranzakciós díjat. [Többet a gázról](/developers/docs/gas/).
 
 A tranzakció objektum nagyjából így néz ki:
 
@@ -124,7 +124,7 @@ A bányász, aki feldolgozta a tranzakciót **+0.0042 ETH**-et fog kapni
 
 Az okosszerződés interakciók is gázt igényelnek.
 
-![Egy diagram, mely a fel nem használt gáz visszatérítését ábrázolja](./gas-tx.png) _Diagram átvéve az [Ethereum EVM illusztrálva](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_ anyagból
+![Egy diagram, mely a fel nem használt gáz visszatérítését ábrázolja](../../../../../developers/docs/transactions/gas-tx.png) _Diagram átvéve az [Ethereum EVM illusztrálva](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_ anyagból
 
 Minden fel nem használt gáz visszakerül a felhasználó számlájára.
 
@@ -289,7 +289,7 @@ _Ismersz olyan közösségi anyagot, amely segített neked? Módosítsd az oldal
 
 ## Kapcsolódó témák {#related-topics}
 
-- [Számlák](/en/developers/docs/accounts/)
-- [Ethereum virtuális gép (EVM)](/en/developers/docs/evm/)
-- [Üzemanyag](/en/developers/docs/gas/)
-- [Bányászat](/en/developers/docs/consensus-mechanisms/pow/mining/)
+- [Számlák](/developers/docs/accounts/)
+- [Ethereum virtuális gép (EVM)](/developers/docs/evm/)
+- [Üzemanyag](/developers/docs/gas/)
+- [Bányászat](/developers/docs/consensus-mechanisms/pow/mining/)

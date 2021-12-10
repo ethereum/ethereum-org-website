@@ -461,10 +461,7 @@ const BugBountiesPage = ({ data, location }) => {
               <Translation id="page-eth2-bug-bounty-quality-repro-desc" />
             </p>
             <p>
-              <b>
-                <Translation id="page-eth2-bug-bounty-quality-fix" />
-              </b>
-              <Translation id="page-eth2-bug-bounty-quality-fix-desc" />
+              <Translation id="page-eth2-bug-bounty-quality-fix" />
             </p>
           </SubmitInstructions>
           <BugBountyPoints />

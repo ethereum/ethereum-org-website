@@ -11,7 +11,7 @@ Sieci są różnymi środowiskami Ethereum, do których można uzyskać dostęp 
 
 ## Warunki wstępne {#prerequisites}
 
-Powinieneś zrozumieć podstawy Ethereum przed zapoznaniem się z różnymi sieciami, ponieważ sieci testowe zapewnią ci tanią, bezpieczną wersję Ethereum do zabawy. Zapoznaj się z naszym [wprowadzeniem do Ethereum](/en/developers/docs/intro-to-ethereum/).
+Powinieneś zrozumieć podstawy Ethereum przed zapoznaniem się z różnymi sieciami, ponieważ sieci testowe zapewnią ci tanią, bezpieczną wersję Ethereum do zabawy. Zapoznaj się z naszym [wprowadzeniem do Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Sieci publiczne {#public-networks}
 

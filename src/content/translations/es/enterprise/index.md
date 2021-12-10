@@ -158,4 +158,4 @@ A continuación se indican algunas aplicaciones empresariales que se han impleme
 
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _pagos de electricidad_
 
-Si deseas añadir información a esta lista, consulta las [instrucciones para contribuir](https://ethereum.org/en/contributing/).
+Si deseas añadir información a esta lista, consulta las [instrucciones para contribuir](/contributing/).
