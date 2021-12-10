@@ -163,11 +163,11 @@ To follow and verify current data in the network, the Ethereum client needs to s
 
 Synchronization modes represent different approaches to this process with various trade-offs. Clients also vary in their implementation of sync algorithms. Always refer to the official documentation of your chosen client for specifics on implementation.
 
-#### Overview of strategies
+#### Overview of strategies {#overview-of-strategies}
 
 General overview of synchronization approaches used in Mainnet ready clients:
 
-##### Full sync
+##### Full sync {#full-sync}
 
 Full sync downloads all blocks (including headers, transactions, and receipts) and generates the state of the blockchain incrementally by executing every block from genesis.
 

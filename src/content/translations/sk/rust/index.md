@@ -28,14 +28,13 @@ Potrebujete ďalšie základné informácie o Ethereu? Pozrite si [ethereum.org/
 - [The Rust Ethereum Client](https://wiki.parity.io/Setup)
 - [Sending Transaction to Ethereum Using Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
 - [An Introduction to Smart Contracts with Parity Ethereum Client](https://wiki.parity.io/Smart-Contracts)
-- [Setting up your Oasis SDK dev environment](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [Setting up your Oasis SDK dev environment](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [A step-by-step tutorial on how to write contracts in rust Wasm for Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Články pre mierne pokročilých {#intermediate-articles}
 
 - [Rust-Web3 Documentation](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Rust-Web3 Working Examples](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Creating a Secret Ballot with OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
 - [Creating a Private Chat Server with OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Príklady použitia pre pokročilých {#advanced-use-patterns}

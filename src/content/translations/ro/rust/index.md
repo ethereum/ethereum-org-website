@@ -28,7 +28,7 @@ Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/ro/learn/) 
 - [Clientul Rust pentru Ethereum](https://wiki.parity.io/Setup)
 - [Trimiterea tranzacțiilor în Ethereum cu Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
 - [Introducere în contracte smart cu clientul Parity pentru Ethereum](https://wiki.parity.io/Smart-Contracts)
-- [Setarea mediului de dezvoltare Oasis SDK](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [Setarea mediului de dezvoltare Oasis SDK](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Tutorial pas-cu-pas de dezvoltare a contractelor smart în Rust Wasm pentru Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Articole de nivel intermediar {#intermediate-articles}

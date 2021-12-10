@@ -29,7 +29,7 @@ Potřebujete nejdříve úplně základní informace? Podívejte se na [ethereum
 - [Ethereum klient v Rustu](https://wiki.parity.io/Setup)
 - [Odesílání transakce do sítě Ethereum s použitím Rustu](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
 - [Úvod do chytrých kontraktů s klientem Parity Ethereum](https://wiki.parity.io/Smart-Contracts)
-- [Nastavení vývojového prostředí Oasis SDK](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [Nastavení vývojového prostředí Oasis SDK](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Postupný návod, jak psát kontrakty v Rustu a Wasm pro Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Články pro mírně pokročilé {#intermediate-articles}

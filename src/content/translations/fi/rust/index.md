@@ -29,7 +29,7 @@ Tarvitsetko perusteellisempaa aloitusta? Katso [ethereum.org/fi/learn](/learn/) 
 - [Rust Ethereum -asiakasohjelma](https://wiki.parity.io/Setup)
 - [Liiketapahtuman lähettäminen Ethereumiin käyttäen Rustia](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
 - [Opastus älysopimuksiin Parity Ethereum -asiakasohjelmalla](https://wiki.parity.io/Smart-Contracts)
-- [Oman Oasis SDK-kehitysympäristön luominen](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [Oman Oasis SDK-kehitysympäristön luominen](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Vaiheittainen ohje sopimusten kirjoittamiseen Rust Wasmilla Kovaniin](https://github.com/paritytech/pwasm-tutorial)
 
 ## Keskitason artikkelit {#intermediate-articles}

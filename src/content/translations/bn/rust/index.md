@@ -28,7 +28,7 @@ sidebar: true
 - [রাস্ট ইথেরিয়াম ক্লায়েন্ট](https://wiki.parity.io/Setup)
 - [রাস্ট ব্যবহার করে ইথেরিয়ামে লেনদেন পাঠানো](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
 - [প্যারিটি ইথেরিয়াম ক্লায়েন্টের সাথে স্মার্ট কন্ট্র্যাক্টের একটি ভূমিকা](https://wiki.parity.io/Smart-Contracts)
-- [আপনার ওয়েসিস SDK ডেভ এনভায়রনমেন্ট সেট আপ করা](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [আপনার ওয়েসিস SDK ডেভ এনভায়রনমেন্ট সেট আপ করা](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [কোভান-এর জন্য রাস্ট Wasm-এ কীভাবে কন্ট্র্যাক্ট লিখতে হয় তার একটি ধাপে ধাপে নির্দেশিকা](https://github.com/paritytech/pwasm-tutorial)
 
 ## মধ্যবর্তী পর্যায়ের প্রবন্ধ {#intermediate-articles}

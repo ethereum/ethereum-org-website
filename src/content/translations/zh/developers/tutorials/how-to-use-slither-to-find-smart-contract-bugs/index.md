@@ -104,7 +104,7 @@ function safeAdd(uint a, uint b) pure internal returns(uint){
 
 相应的 AST 如图所示：
 
-![抽象语法树（AST）](./ast.png)
+![抽象语法树（AST）](../../../../../developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/ast.png)
 
 Slither 使用由 solc 工具导出的 AST。
 

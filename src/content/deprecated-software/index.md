@@ -190,7 +190,7 @@ Aleth was the third most popular client for Ethereum before being deprecated on 
 
 **Alternatives**
 
-[Geth](https://geth.ethereum.org/) is a well-known altenative Ethereum client.
+[Geth](https://geth.ethereum.org/) is a well-known alternative Ethereum client.
 
 ### Parity {#parity}
 

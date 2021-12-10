@@ -28,7 +28,7 @@ Trenger du en mer grunnleggende informasjon først? Sjekk ut [ethereum.org/learn
 - [Rust - Ethereum klient](https://wiki.parity.io/Setup)
 - [Sender transaksjonen til Ethereum ved å bruke Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
 - [En introduksjon til Smart Kontrakt med Parity Ethereum klient](https://wiki.parity.io/Smart-Contracts)
-- [Sette opp miljøet til Oasis SDK](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [Sette opp miljøet til Oasis SDK](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [En trinnvis veiledning om hvordan du skriver kontrakter i rust Wasm for Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Mellomstadie-artikler {#intermediate-articles}

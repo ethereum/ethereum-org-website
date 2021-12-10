@@ -358,7 +358,7 @@ While we wait for Eth2, products are moving to a "layer 2" technology known as r
 
 [More on rollups and layer 2 technology](/developers/docs/scaling/layer-2-rollups/)
 
-#### A more efficient NFT standard...
+#### A more efficient NFT standard... {#a-more-efficient-nft-standard}
 
 Ethereum is open source software and new standards are being figured out and agreed on all the time. The Consecutive Transfer Extension Standard (EIP-2309) plans to make the creation of NFTs more efficient. Like rollups this reduces the amount of heavy lifting done on chain, allowing you to mint one billion NFTs in a single transaction.
 
