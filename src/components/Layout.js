@@ -83,10 +83,9 @@ const Layout = (props) => {
       if (localStorage.getItem("zen-mode") !== null) {
         let isMobile = false
         if (typeof window !== undefined) {
-          isMobile =
-            /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-              window.navigator.userAgent
-            )
+          isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            window.navigator.userAgent
+          )
         }
         setIsZenMode(localStorage.getItem("zen-mode") === "true" && !isMobile)
       }
