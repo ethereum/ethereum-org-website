@@ -206,7 +206,10 @@ const TranslationLeaderboard = () => {
                     <NameContainer>
                       {user.username}
                       <Language>
-                        {languages.map((language) => language.name).join(", ")}
+                        {languages
+                          .slice(0, 3)
+                          .map((language) => language.name)
+                          .join(", ")}
                       </Language>
                     </NameContainer>
                   </TextContainer>
