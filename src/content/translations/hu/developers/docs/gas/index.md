@@ -11,7 +11,7 @@ Az gáz (Gas) nélkülözhetetlen az Ethereum hálózaton. Ez az üzemanyag, ami
 
 ## Előfeltételek {#prerequisites}
 
-Hogy jobban megértsd ezt az oldalt, javasoljuk, hogy előbb olvasd el a [tranzakciókról](/en/developers/docs/transactions/) és az [EVM-ről](/en/developers/docs/evm/) szóló oldalakat.
+Hogy jobban megértsd ezt az oldalt, javasoljuk, hogy előbb olvasd el a [tranzakciókról](/developers/docs/transactions/) és az [EVM-ről](/developers/docs/evm/) szóló oldalakat.
 
 ## Mi az a gáz? {#what-is-gas}
 
@@ -46,4 +46,4 @@ Annak ellenére, hogy a tranzakciós díjak limitálva vannak, a nem felhasznál
 
 ## Kapcsolódó témák {#related-topics}
 
-- [Bányászat](/en/developers/docs/consensus-mechanisms/pow/mining/)
+- [Bányászat](/developers/docs/consensus-mechanisms/pow/mining/)

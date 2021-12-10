@@ -20,7 +20,7 @@ Twórz zdecentralizowane aplikacje na bazie Ethereum i obsługuj inteligentne ko
 
 **Rozpocznij integrowanie Delphi z Ethereum**
 
-Potrzebujesz bardziej podstawowych informacji? Sprawdź na stronach [ethereum.org/learn](/en/learn/) lub [ethereum.org/developers](/en/developers/).
+Potrzebujesz bardziej podstawowych informacji? Sprawdź na stronach [ethereum.org/learn](/learn/) lub [ethereum.org/developers](/developers/).
 
 - [Objaśnienia dotyczące blockchainu](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Informacje o kontraktach inteligentnych](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -52,4 +52,4 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na stronach [ethereum.or
 - [Delphi oraz Ethereum Name Service (ENS)](https://medium.com/@svanas/delphi-and-ethereum-name-service-ens-4443cd278af7)
 - [QuikNode, Ethereum i Delphi](https://medium.com/@svanas/quiknode-ethereum-and-delphi-f7bfc9671c23)
 
-Szukasz więcej materiałów? Sprawdź [ethereum.org/developers](/en/developers/).
+Szukasz więcej materiałów? Sprawdź [ethereum.org/developers](/developers/).

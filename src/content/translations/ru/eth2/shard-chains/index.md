@@ -39,7 +39,7 @@ summaryPoints:
 <br />
 
 <InfoBanner isWarning={true}>
-  Во-первых, вам нужно запустить клиент основной сети в то же время, как и ваш клиент для eth2. <a href="https://launchpad.ethereum.org" target="_blank">Панель запуска</a> проведет вас через требования к оборудованию и процесс. В качестве альтернативы вы можете использовать <a href="/en/developers/docs/apis/backend/#available-libraries">внутренний API</a>.
+  Во-первых, вам нужно запустить клиент основной сети в то же время, как и ваш клиент для eth2. <a href="https://launchpad.ethereum.org" target="_blank">Панель запуска</a> проведет вас через требования к оборудованию и процесс. В качестве альтернативы вы можете использовать <a href="/developers/docs/apis/backend/#available-libraries">внутренний API</a>.
 </InfoBanner>
 
 ## Цепочки-осколки версии 1: доступность данных {#data-availability}

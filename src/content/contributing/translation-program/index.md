@@ -59,7 +59,7 @@ The ethereum.org Translation Program aims to make Ethereum accessible to everyon
 
    We encourage you to translate in this numerical order (1 → 2 → 3 → ⋯) to ensure the highest impact pages are translated first.
 
-   [Learn more about ethereum.org content versions](/en/contributing/translation-program/content-versions/)
+   [Learn more about ethereum.org content versions](/contributing/translation-program/content-versions/)
 
 3. **Translate**  
    After selecting the file you want to translate, it will open in the online editor. If you have never used Crowdin before, you can use this quick guide to go over the basics.

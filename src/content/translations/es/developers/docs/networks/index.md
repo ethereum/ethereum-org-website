@@ -11,7 +11,7 @@ Las redes son diferentes entornos de Ethereum a los que se puede acceder para de
 
 ## Requisitos previos {#prerequisites}
 
-Te recomendamos que comprendas los conceptos básicos de Ethereum antes de explorar las diferentes redes, ya que las redes de prueba te darán una versión económica y segura de Ethereum con la que comenzar a probar. Comienza con nuestra [introducción a Ethereum](/en/developers/docs/intro-to-ethereum/).
+Te recomendamos que comprendas los conceptos básicos de Ethereum antes de explorar las diferentes redes, ya que las redes de prueba te darán una versión económica y segura de Ethereum con la que comenzar a probar. Comienza con nuestra [introducción a Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Redes públicas {#public-networks}
 

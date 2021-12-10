@@ -39,7 +39,7 @@ Cu cerințe hardware mai mici, fragmentarea va facilita rularea [clienților](/d
 <br />
 
 <InfoBanner isWarning={true}>
-  La început, va trebui să rulezi un client pe rețeaua principală în același timp cu clientul tău Eth2. <a href="https://launchpad.ethereum.org" target="_blank">Launchpad-ul</a> te va ghida prin cerințele de hardware și procese. Alternativ, poți utiliza un <a href="/en/developers/docs/apis/backend/#available-libraries">API back-end</a>.
+  La început, va trebui să rulezi un client pe rețeaua principală în același timp cu clientul tău Eth2. <a href="https://launchpad.ethereum.org" target="_blank">Launchpad-ul</a> te va ghida prin cerințele de hardware și procese. Alternativ, poți utiliza un <a href="/developers/docs/apis/backend/#available-libraries">API back-end</a>.
 </InfoBanner>
 
 ## Lanțuri de fragmente versiunea 1: disponibilitatea datelor {#data-availability}

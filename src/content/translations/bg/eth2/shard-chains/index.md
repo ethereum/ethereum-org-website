@@ -39,7 +39,7 @@ summaryPoints:
 <br />
 
 <InfoBanner isWarning={true}>
-  Като начало ще трябва да активирате клиент на основната мрежа едновременно с клиента на Eth2. <a href="https://launchpad.ethereum.org" target="_blank">Платформата</a> ще ви води през изискванията към хардуера и целия процес. Възможно е и да използвате <a href="/en/developers/docs/apis/backend/#available-libraries">бекенд API</a>.
+  Като начало ще трябва да активирате клиент на основната мрежа едновременно с клиента на Eth2. <a href="https://launchpad.ethereum.org" target="_blank">Платформата</a> ще ви води през изискванията към хардуера и целия процес. Възможно е и да използвате <a href="/developers/docs/apis/backend/#available-libraries">бекенд API</a>.
 </InfoBanner>
 
 ## Вериги от компоненти версия 1: наличност на данните {#data-availability}

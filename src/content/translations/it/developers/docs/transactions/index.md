@@ -14,7 +14,7 @@ Le transazioni sono istruzioni firmate crittograficamente da account. Un account
 
 ## Prerequisiti {#prerequisites}
 
-Per comprendere meglio questa pagina, raccomandiamo di leggere la sezione [Account](/en/developers/docs/accounts/) e la nostra [introduzione ad Ethereum](/en/developers/docs/intro-to-ethereum/).
+Per comprendere meglio questa pagina, raccomandiamo di leggere la sezione [Account](/developers/docs/accounts/) e la nostra [introduzione ad Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Cos'è una transazione? {#whats-a-transaction}
 
@@ -35,7 +35,7 @@ Una transazione inviata contiene le seguenti informazioni:
 - `gasLimit` – Importo massimo di unità di carburante che possono essere consumate dalla transazione. Le unità di carburante rappresentano fasi di calcolo
 - `gasPrice` – Commissione che il mittente paga per unità di carburante
 
-Il carburante è un riferimento per il calcolo necessario perché un miner elabori la transazione. Gli utenti devono pagare una commissione per questo calcolo. Il `gasLimit` e il `gasPrice` determinano la commissione massima sulla transazione pagata al miner. [Maggiori informazioni sul carburante](/en/developers/docs/gas/).
+Il carburante è un riferimento per il calcolo necessario perché un miner elabori la transazione. Gli utenti devono pagare una commissione per questo calcolo. Il `gasLimit` e il `gasPrice` determinano la commissione massima sulla transazione pagata al miner. [Maggiori informazioni sul carburante](/developers/docs/gas/).
 
 L'oggetto della transazione sarà qualcosa del genere:
 
@@ -289,7 +289,7 @@ _Conosci una risorsa della community che ti è stata utile? Modifica questa pagi
 
 ## Argomenti correlati {#related-topics}
 
-- [Account](/en/developers/docs/accounts/)
-- [Macchina virtuale Ethereum (EVM)](/en/developers/docs/evm/)
-- [Carburante](/en/developers/docs/gas/)
-- [Mining](/en/developers/docs/consensus-mechanisms/pow/mining/)
+- [Account](/developers/docs/accounts/)
+- [Macchina virtuale Ethereum (EVM)](/developers/docs/evm/)
+- [Carburante](/developers/docs/gas/)
+- [Mining](/developers/docs/consensus-mechanisms/pow/mining/)

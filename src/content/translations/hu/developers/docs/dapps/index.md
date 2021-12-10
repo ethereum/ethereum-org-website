@@ -5,7 +5,7 @@ lang: hu
 sidebar: true
 ---
 
-Egy decentralizált applikáció (dapp) olyan applikáció, mely egy olyan decentralizált hálózatra épült, ami egyesít egy [okosszerződést](/en/developers/docs/smart-contracts/) és egy frontend felhasználói felületet. Megjegyzésül: az Ethereum okosszerződések elérhetőek és transzparensek - mint a nyílt API-ok - így a dappod tartalmazhat olyan okosszerződést, melyet másvalaki írt.
+Egy decentralizált applikáció (dapp) olyan applikáció, mely egy olyan decentralizált hálózatra épült, ami egyesít egy [okosszerződést](/developers/docs/smart-contracts/) és egy frontend felhasználói felületet. Megjegyzésül: az Ethereum okosszerződések elérhetőek és transzparensek - mint a nyílt API-ok - így a dappod tartalmazhat olyan okosszerződést, melyet másvalaki írt.
 
 ## Előfeltételek {#prerequisites}
 
@@ -24,7 +24,7 @@ Egy dappnak bármely nyelven íródott frontend kódja vagy felhasználói felü
 
 ### Az okosszerződésekről {#on-smart-contracts}
 
-Hogy bevezessük a dappokat, először be kell vezetnünk az okosszerződéseket – a dapp backendjét jobb kifejezés híján. Részletes áttekintésért keresd fel az [okosszerződések](/en/developers/docs/smart-contracts/) oldalt.
+Hogy bevezessük a dappokat, először be kell vezetnünk az okosszerződéseket – a dapp backendjét jobb kifejezés híján. Részletes áttekintésért keresd fel az [okosszerződések](/developers/docs/smart-contracts/) oldalt.
 
 Az okosszerződés olyan kód, mely az Ethereum blokkláncon fut és pontosan úgy, ahogyan programozták. Amint feltelepíted őket a hálózatra, nem tudod megváltoztatni őket. A dappok decentralizáltak lehetnek, mivel a szerződésbe írt logika irányítja őket, nem pedig egy egyén vagy egy vállalat. Ez azt is jelenti, hogy nagyon óvatosan kell megtervezned a szerződéseidet és alaposan le kell tesztelned őket.
 
@@ -82,5 +82,5 @@ _Ismersz olyan közösségi anyagot, amely segített neked? Módosítsd az oldal
 
 ## Kapcsolódó témák {#related-topics}
 
-- [Bevezetés az Ethereum stack-be](/en/developers/docs/ethereum-stack/)
-- [Fejlesztői keretrendszerek](/en/developers/docs/frameworks/)
+- [Bevezetés az Ethereum stack-be](/developers/docs/ethereum-stack/)
+- [Fejlesztői keretrendszerek](/developers/docs/frameworks/)

@@ -865,7 +865,7 @@ exchange.
 ```
 
 We want the address of the new exchange to be deterministic, so it can be calculated in advance off chain
-(this can be useful for [layer 2 transactions](https://ethereum.org/en/developers/docs/layer-2-scaling/)).
+(this can be useful for [layer 2 transactions](/developers/docs/layer-2-scaling/)).
 To do this we need to have a consistent order of the token addresses, regardless of the order in which we have
 received them, so we sort them here.
 

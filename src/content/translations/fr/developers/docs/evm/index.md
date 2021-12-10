@@ -17,7 +17,7 @@ Une certaine connaissance des termes informatiques courants, comme [octets](http
 
 L'analogie avec un "registre distribué" est souvent utilisée pour décrire les blockchains comme Bitcoin, qui permettent l'existence d'une monnaie décentralisée utilisant des outils de cryptographie fondamentaux. Une cryptomonnaie se comporte comme une "vraie" monnaie en raison des règles qui régissent ce qui est autorisé ou pas pour modifier le registre. Par exemple, une adresse Bitcoin ne peut pas dépenser plus de Bitcoin qu'elle n'en a reçu. Ces règles sont appliquées à toutes les transactions sur Bitcoin et de nombreuses autres blockchains.
 
-Alors qu'Ethereum dispose de sa propre cryptomonnaie native (Ether) qui suit presque exactement les mêmes règles intuitives, il offre également une fonction beaucoup plus puissante : [les contrats intelligents](/en/developers/docs/smart-contracts/). Pour cette fonctionnalité plus complexe, une analogie plus sophistiquée est nécessaire. Au lieu d'un registre distribué, Ethereum est une [machine d'état distribuée](https://en.wikipedia.org/wiki/Finite-state_machine). L'état d'Ethereum est une grande structure de données qui contient non seulement tous les comptes et tous les soldes, mais aussi une _machine à état_ qui peut changer d'un bloc à l'autre selon un ensemble de règles prédéfinies, et qui peut exécuter du code machine arbitraire. Les règles spécifiques de changement d'état d'un bloc à l'autre sont définies par l'EVM.
+Alors qu'Ethereum dispose de sa propre cryptomonnaie native (Ether) qui suit presque exactement les mêmes règles intuitives, il offre également une fonction beaucoup plus puissante : [les contrats intelligents](/developers/docs/smart-contracts/). Pour cette fonctionnalité plus complexe, une analogie plus sophistiquée est nécessaire. Au lieu d'un registre distribué, Ethereum est une [machine d'état distribuée](https://en.wikipedia.org/wiki/Finite-state_machine). L'état d'Ethereum est une grande structure de données qui contient non seulement tous les comptes et tous les soldes, mais aussi une _machine à état_ qui peut changer d'un bloc à l'autre selon un ensemble de règles prédéfinies, et qui peut exécuter du code machine arbitraire. Les règles spécifiques de changement d'état d'un bloc à l'autre sont définies par l'EVM.
 
 ![Schéma montrant la composition d'un compte](../../../../../developers/docs/evm/evm.png) _Schéma adapté à partir du document [EVM Ethereum illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
@@ -82,4 +82,4 @@ Tous les [clients Ethereum](/developers/docs/nodes-and-clients/#clients) incluen
 
 ## Sujets connexes {#related-topics}
 
-- [Carburant](/en/developers/docs/gas/)
+- [Carburant](/developers/docs/gas/)

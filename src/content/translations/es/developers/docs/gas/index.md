@@ -11,7 +11,7 @@ El gas es esencial para la red de Ethereum. Se trata del combustible que le perm
 
 ## Requisitos previos {#prerequisites}
 
-Para comprender mejor esta página, te recomendamos que en primer lugar leas sobre [las transacciones](/en/developers/docs/transactions/) y [la EVM](/en/developers/docs/evm/).
+Para comprender mejor esta página, te recomendamos que en primer lugar leas sobre [las transacciones](/developers/docs/transactions/) y [la EVM](/developers/docs/evm/).
 
 ## ¿Qué es el gas? {#what-is-gas}
 
@@ -46,4 +46,4 @@ Aunque una transacción incluye un límite, el gas que no se utilice en la trans
 
 ## Temas relacionados {#related-topics}
 
-- [Minando](/en/developers/docs/consensus-mechanisms/pow/mining/)
+- [Minando](/developers/docs/consensus-mechanisms/pow/mining/)

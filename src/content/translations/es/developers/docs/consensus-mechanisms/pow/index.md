@@ -10,7 +10,7 @@ Ethereum, como Bitcoin, utiliza actualmente un protocolo de consenso llamado [Pr
 
 ## Requisitos previos {#prerequisites}
 
-Para comprender mejor esta página, te recomendamos leer primero sobre [transacciones](/en/developers/docs/transactions/) y [bloques](/en/developers/docs/blocks/).
+Para comprender mejor esta página, te recomendamos leer primero sobre [transacciones](/developers/docs/transactions/) y [bloques](/developers/docs/blocks/).
 
 ## ¿Qué es la prueba de trabajo (PoW)? {#what-is-pow}
 

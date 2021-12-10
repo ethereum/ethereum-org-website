@@ -10,7 +10,7 @@ I block explorer sono il tuo portale sui dati di Ethereum. Puoi usarli per veder
 
 ## Prerequisiti {#prerequisites}
 
-È consigliabile conoscere i concetti base di Ethereum in modo da capire quali dati si possono consultare in un block explorer. Inizia con [un'introduzione a Ethereum](/en/developers/docs/intro-to-ethereum/).
+È consigliabile conoscere i concetti base di Ethereum in modo da capire quali dati si possono consultare in un block explorer. Inizia con [un'introduzione a Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Servizi {#services}
 

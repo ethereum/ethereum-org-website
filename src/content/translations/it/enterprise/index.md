@@ -158,4 +158,4 @@ Ecco alcune applicazioni aziendali che sono state distribuite alla rete principa
 
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _pagamenti elettronici_
 
-Se desideri aggiungere qualcosa a questo elenco, consulta le [istruzioni per contribuire](https://ethereum.org/en/contributing/).
+Se desideri aggiungere qualcosa a questo elenco, consulta le [istruzioni per contribuire](/contributing/).

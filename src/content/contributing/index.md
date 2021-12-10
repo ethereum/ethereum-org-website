@@ -18,23 +18,23 @@ The ethereum.org website, like Ethereum more broadly, is an open-source project.
 
 - [Work on an open issue](https://github.com/ethereum/ethereum-org-website/issues)
   _– Work we've identified that needs doing_
-- [Join the translations program](/en/contributing/translation-program/)
+- [Join the translations program](/contributing/translation-program/)
   _– Help us bring ethereum.org to new languages_
-- [Add community articles](/en/contributing/content-resources/)
+- [Add community articles](/contributing/content-resources/)
   _– Add a helpful article to a relevant page_
-- [Add a product](/en/contributing/adding-products/)
+- [Add a product](/contributing/adding-products/)
   _– Add a dapp or wallet to a relevant page_
-- [Add developer tools](/en/contributing/adding-developer-tools/)
+- [Add developer tools](/contributing/adding-developer-tools/)
   _– Add a developer tool to a relevant page_
-- [Add an exchange](/en/contributing/adding-exchanges/)
+- [Add an exchange](/contributing/adding-exchanges/)
   _– Add an exchange to our [exchange finder](/get-eth/#country-picker)_
 - [Improve our research](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c)
   _– Let us know your feedback on our research or contribute your own_
 - [Request a feature](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=)
   _– Let us know about any ideas you have for a new feature or design_
-- [Add a glossary term](/en/contributing/adding-glossary-terms)
+- [Add a glossary term](/contributing/adding-glossary-terms)
   _– Help us continue to expand the Ethereum [glossary](/glossary/)_
-- [Create/edit content](/en/contributing/#how-to-update-content)
+- [Create/edit content](/contributing/#how-to-update-content)
   _– Suggest new pages or makes tweaks to what's here already_
 
 _Any questions?_ 🤔 Reach out on our [Discord server](https://discord.gg/CetY6Y4)
@@ -53,8 +53,8 @@ You don't need permission to work on anything, but it's always best to let us kn
 Before contributing , make sure you're familiar with:
 
 - the evolving [vision of ethereum.org](/about/)
-- our [design principles](/en/contributing/design-principles/)
-- our [style guide](/en/contributing/style-guide/)
+- our [design principles](/contributing/design-principles/)
+- our [style guide](/contributing/style-guide/)
 
 ## How decisions about the site are made {#how-decisions-about-the-site-are-made}
 

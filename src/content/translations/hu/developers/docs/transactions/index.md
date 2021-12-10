@@ -14,7 +14,7 @@ A tranzakciók számlákból származó kriptográfiailag aláírt instrukciók.
 
 ## Előfeltételek {#prerequisites}
 
-Ennek az oldalnak a jobb megértése érdekében javasoljuk, hogy először olvasd el a [Számlák](/en/developers/docs/accounts/) és a [bevezetés az Ethereumba](/en/developers/docs/intro-to-ethereum/) című cikkeinket.
+Ennek az oldalnak a jobb megértése érdekében javasoljuk, hogy először olvasd el a [Számlák](/developers/docs/accounts/) és a [bevezetés az Ethereumba](/developers/docs/intro-to-ethereum/) című cikkeinket.
 
 ## Mi az a tranzakció? {#whats-a-transaction}
 
@@ -35,7 +35,7 @@ Az elküldött tranzakció a következő információkat tartalmazza:
 - `gasLimit` – a maximális gáz egység, melyet a tranzakció elfogyaszthat. A gáz egységek számítási lépéseket reprezentálnak
 - `gasPrice` – a díj, melyet a küldő fizet gáz egységenként
 
-A gáz a bányász által a tranzakció feldolgozásához szükséges számításra utal. A felhasználóknak egy díjat kell fizetniük ezért a számításért. A `gasLimit` és a `gasPrice` meghatározza a bányásznak fizetett maximális tranzakciós díjat. [Többet a gázról](/en/developers/docs/gas/).
+A gáz a bányász által a tranzakció feldolgozásához szükséges számításra utal. A felhasználóknak egy díjat kell fizetniük ezért a számításért. A `gasLimit` és a `gasPrice` meghatározza a bányásznak fizetett maximális tranzakciós díjat. [Többet a gázról](/developers/docs/gas/).
 
 A tranzakció objektum nagyjából így néz ki:
 
@@ -289,7 +289,7 @@ _Ismersz olyan közösségi anyagot, amely segített neked? Módosítsd az oldal
 
 ## Kapcsolódó témák {#related-topics}
 
-- [Számlák](/en/developers/docs/accounts/)
-- [Ethereum virtuális gép (EVM)](/en/developers/docs/evm/)
-- [Üzemanyag](/en/developers/docs/gas/)
-- [Bányászat](/en/developers/docs/consensus-mechanisms/pow/mining/)
+- [Számlák](/developers/docs/accounts/)
+- [Ethereum virtuális gép (EVM)](/developers/docs/evm/)
+- [Üzemanyag](/developers/docs/gas/)
+- [Bányászat](/developers/docs/consensus-mechanisms/pow/mining/)

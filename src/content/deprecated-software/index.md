@@ -92,7 +92,7 @@ Ethereum Studio was developed to provide users with an IDE that had a built-in E
 
 **Alternatives**
 
-[Remix](https://remix.ethereum.org/) is an alternative web IDE for Solidity development. Additionally, the [Developer Portal](https://ethereum.org/en/developers/) has tools for web and local development, documentation, and more.
+[Remix](https://remix.ethereum.org/) is an alternative web IDE for Solidity development. Additionally, the [Developer Portal](/developers/) has tools for web and local development, documentation, and more.
 
 ### Meteor Dapp Wallet {#meteor-dapp-wallet}
 

@@ -39,7 +39,7 @@ summaryPoints:
 <br />
 
 <InfoBanner isWarning={true}>
-  Для початку потрібно запустити клієнт основної мережі одночасно з клієнтом Eth2. <a href="https://launchpad.ethereum.org" target="_blank">Панель запуску</a> міститиме відомості про вимоги щодо технічного обладнання та вказівки для роботи. Крім того, ви можете використовувати <a href="/en/developers/docs/apis/backend/#available-libraries">backend API</a>.
+  Для початку потрібно запустити клієнт основної мережі одночасно з клієнтом Eth2. <a href="https://launchpad.ethereum.org" target="_blank">Панель запуску</a> міститиме відомості про вимоги щодо технічного обладнання та вказівки для роботи. Крім того, ви можете використовувати <a href="/developers/docs/apis/backend/#available-libraries">backend API</a>.
 </InfoBanner>
 
 ## Ланцюги сегментів даних (версія 1): доступність даних {#data-availability}
