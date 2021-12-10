@@ -40,4 +40,4 @@ The open source roots of Ethereum have led to the growth of an interesting new f
 
 ## Work in Ethereum {#work-in-ethereum}
 
-Not ready to start your own project? There are hundreds of companies actively looking for passionate individuals to work in and contribute to the Ethereum ecosystem. Looking for more information? [Check out Ethereum related jobs](/community/get-involved/#ethereum-jobs/)
+Not ready to start your own project? There are hundreds of companies actively looking for passionate individuals to work in and contribute to the Ethereum ecosystem. Looking for more information? [Check out Ethereum related jobs](/community/get-involved/#ethereum-jobs)
