@@ -194,10 +194,12 @@ const DocsPage = ({ data, pageContext }) => {
   const isPageIncomplete = mdx.frontmatter.incomplete
 
   const { editContentUrl } = data.siteData.siteMetadata
-  const { relativePath, slug } = pageContext
-  const absoluteEditPath = `${editContentUrl}${relativePath}`
+  let { relativePath, slug } = pageContext
+  // Current relativePath src/app/www/src/content/developers/docs/index.md
+  // Removing src/app/www from path
+  relativePath = relativePath.slice(11)
   console.error("Relative:", relativePath)
-  console.error("Absolute:", absoluteEditPath)
+  const absoluteEditPath = `${editContentUrl}${relativePath}`
 
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
