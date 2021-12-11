@@ -6,6 +6,7 @@ import styled from "styled-components"
 import Emoji from "./Emoji"
 import InfoBanner from "./InfoBanner"
 import Link from "./Link"
+import Translation from "../components/Translation"
 
 // Data
 import meetups from "../data/community-meetups.json"
@@ -120,9 +121,9 @@ const MeetupList = () => {
           ))
         ) : (
           <InfoBanner emoji=":information_source:">
-            We don't have any meetups matching this search. Know of one?{" "}
+            <Translation id="page-community-meetuplist-no-meetups" />{" "}
             <Link to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json">
-              Please add it to this page!
+              <Translation id="page-community-please-add-to-page" />
             </Link>
           </InfoBanner>
         )}
