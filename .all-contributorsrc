@@ -5839,6 +5839,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "MiConnell",
+      "name": "Michael Connell",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14168559?v=4",
+      "profile": "https://github.com/MiConnell",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
