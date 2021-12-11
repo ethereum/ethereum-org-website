@@ -26,7 +26,6 @@ import {
   translateMessageId,
   legacyHomepageLanguages,
 } from "../utils/translations"
-// import translations from "../data/translations.json"
 
 const Hero = styled(GatsbyImage)`
   width: 100%;
