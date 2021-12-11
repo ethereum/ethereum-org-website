@@ -196,6 +196,8 @@ const DocsPage = ({ data, pageContext }) => {
   const { editContentUrl } = data.siteData.siteMetadata
   const { relativePath, slug } = pageContext
   const absoluteEditPath = `${editContentUrl}${relativePath}`
+  console.error("Relative:", relativePath)
+  console.error("Absolute:", absoluteEditPath)
 
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
