@@ -46,10 +46,9 @@ description="These groups leverage Ethereum technology to facilitate organizatio
 
 >
 
-    <div>
-        <ButtonLink to="/community/get-involved/#decentralized-autonomous-organizations-daos">
-            Learn more about DAOs
-        </ButtonLink>
-    </div>
-
+  <div>
+    <ButtonLink to="/community/get-involved/#decentralized-autonomous-organizations-daos">
+      Learn more about DAOs
+    </ButtonLink>
+  </div>
 </Callout>
