@@ -22,12 +22,37 @@ import downloadGlyph from "../assets/run-a-node/download-glyph.svg"
 import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
-import { Content, Divider, Page } from "../components/SharedStyledComponents"
+import {
+  Content,
+  Divider,
+  Page,
+  CardGrid,
+} from "../components/SharedStyledComponents"
+import ExpandableCard from "../components/ExpandableCard"
 
 // Utils
 import { translateMessageId } from "../utils/translations"
 
 // Styles
+const GappedContent = styled(Content)`
+  gap: 2rem;
+`
+
+const Hero = styled(PageHero)`
+  background: linear-gradient(
+      0deg,
+      rgba(153, 157, 244, 0.1) 0%,
+      rgba(153, 157, 244, 0) 100%
+    ),
+    linear-gradient(
+      270.72deg,
+      #fdf0ff 0.62%,
+      rgba(236, 195, 195, 0.557292) 32.61%,
+      rgba(207, 189, 230, 0.296875) 49.67%,
+      rgba(196, 196, 196, 0) 72.88%
+    );
+`
+
 const TwoColumnContent = styled.div`
   display: flex;
   align-items: flex-start;
@@ -52,44 +77,43 @@ const SplitContent = styled.div`
 `
 
 const Highlight = styled(Content)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
   background: ${(props) => props.backgroundColor};
   border: 1px solid #dadada;
   box-sizing: border-box;
   border-radius: 4px;
   color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 2rem 0;
+  &:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    flex-direction: column-reverse;
+  }
 `
 
-const InfoContent = styled(Content)`
+const InfoGrid = styled(CardGrid)`
   display: grid;
-  grid-template-columns: repeat(3, auto);
-`
-
-const InfoCard = styled.div`
-  background: #f5f5f5;
-  border: 1px solid #d1d1d1;
-  box-sizing: border-box;
-  border-radius: 5px;
-  color: black;
-  width: 416px;
-  height: 520px;
-  margin-bottom: 20px;
-  padding: 0 36pt;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+  gap: 1rem 2rem;
+  div {
+    height: fit-content;
+  }
 `
 
 const Width80 = styled.div`
-  width: 80%;
-
+  flex: 4;
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     width: 100%;
   }
 `
 
 const Width20 = styled.div`
-  width: 20%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     width: 100%;
@@ -203,9 +227,9 @@ const RunANodePage = ({ data }) => {
         )}
       />
 
-      <PageHero content={heroContent} />
+      <Hero content={heroContent} />
 
-      <Content>
+      <GappedContent>
         <TwoColumnContent>
           <SplitContent>
             <h2>
@@ -225,9 +249,9 @@ const RunANodePage = ({ data }) => {
             <GatsbyImage image={getImage(data.hackathon)} />
           </SplitContent>
         </TwoColumnContent>
-      </Content>
+      </GappedContent>
 
-      <Content>
+      <GappedContent>
         <Highlight backgroundColor={"#f9e4d5"}>
           <Width80>
             <h2>
@@ -246,29 +270,31 @@ const RunANodePage = ({ data }) => {
             <GatsbyImage image={getImage(data.impact)} />
           </Width20>
         </Highlight>
-      </Content>
+      </GappedContent>
 
-      <Content>
+      <GappedContent>
         <h2>
           <Translation id="page-run-a-node-why-run-a-node-title" />
         </h2>
-        <InfoContent>
-          {whyRunANodeCards.map((card, idx) => {
-            return (
-              <InfoCard key={idx}>
-                <h3>{card.title}</h3>
-                {card.body.map((item, idx) => {
-                  return <p key={idx}>{item}</p>
-                })}
-              </InfoCard>
-            )
-          })}
-        </InfoContent>
-      </Content>
+        <InfoGrid>
+          {whyRunANodeCards.map(({ image, title, preview, body }, idx) => (
+            <ExpandableCard
+              contentPreview={preview}
+              title={title}
+              svg={image}
+              key={idx}
+            >
+              {body.map((item, idx) => (
+                <p key={idx}>{item}</p>
+              ))}
+            </ExpandableCard>
+          ))}
+        </InfoGrid>
+      </GappedContent>
 
       <Divider />
 
-      <Content>
+      <GappedContent>
         <h2>
           <Translation id="page-run-a-node-getting-started-hardware-title" />
         </h2>
@@ -327,9 +353,9 @@ const RunANodePage = ({ data }) => {
             </p>
           </Container>
         </Flex>
-      </Content>
+      </GappedContent>
 
-      <Content>
+      <GappedContent>
         <h2>
           <Translation id="page-run-a-node-getting-started-software-title" />
         </h2>
@@ -349,14 +375,14 @@ const RunANodePage = ({ data }) => {
         </Highlight>
 
         <Highlight backgroundColor={"#f9e4d5"}>
-          <Width20>
-            <img src={phonetap} />
-          </Width20>
           <Width80>
             <p>
               <Translation id="page-run-a-node-getting-started-software-section-2-1" />
             </p>
           </Width80>
+          <Width20>
+            <img src={phonetap} />
+          </Width20>
         </Highlight>
 
         <Highlight backgroundColor={"#FAE6F8"}>
@@ -369,9 +395,9 @@ const RunANodePage = ({ data }) => {
             <img src={dappnode} />
           </Width20>
         </Highlight>
-      </Content>
+      </GappedContent>
 
-      <Content>
+      <GappedContent>
         <h2>
           <Translation id="page-run-a-node-choose-your-adventure" />
         </h2>
@@ -404,7 +430,7 @@ const RunANodePage = ({ data }) => {
             </button>
           </Container>
         </Flex>
-      </Content>
+      </GappedContent>
     </Page>
   )
 }
