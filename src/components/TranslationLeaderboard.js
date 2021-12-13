@@ -1,6 +1,7 @@
 // Libraries
 import React, { useState } from "react"
 import styled from "styled-components"
+import { reverse, sortBy } from "lodash"
 
 // Components
 import Emoji from "./Emoji"
@@ -118,9 +119,13 @@ const Flex = styled.div`
 
 const TranslationLeaderboard = () => {
   const leaderboardData = {
-    monthData,
-    quarterData,
-    allTimeData,
+    monthData: reverse(sortBy(monthData.data, (user) => user.user.totalCosts)),
+    quarterData: reverse(
+      sortBy(quarterData.data, (user) => user.user.totalCosts)
+    ),
+    allTimeData: reverse(
+      sortBy(allTimeData.data, (user) => user.user.totalCosts)
+    ),
   }
   const [filterAmount, updateFilterAmount] = useState(10)
   const [dateRangeType, updateDateRangeType] = useState("monthData")
@@ -173,16 +178,21 @@ const TranslationLeaderboard = () => {
             <Translation id="page-contributing-translation-program-acknowledgements-total-words" />
           </WordsContainer>
         </Header>
-        {leaderboardData[dateRangeType].data
+        {leaderboardData[dateRangeType]
           .filter(
             (item) =>
               item.user.username !== "ethdotorg" &&
               !item.user.username.includes("LQS_") &&
-              !item.user.username.includes("REMOVED_USER")
+              !item.user.username.includes("REMOVED_USER") &&
+              !item.user.username.includes("Aco_")
           )
           .filter((item, idx) => idx < filterAmount)
           .map((item, idx) => {
-            const { user, translated, languages } = item
+            const { user, languages } = item
+            const sortedLanguages = reverse(
+              sortBy(languages, (language) => language.language.totalCosts)
+            )
+
             let emoji = null
             if (idx === 0) {
               emoji = ":trophy:"
@@ -205,18 +215,13 @@ const TranslationLeaderboard = () => {
                     <Avatar src={user.avatarUrl} />
                     <NameContainer>
                       {user.username}
-                      <Language>
-                        {languages
-                          .slice(0, 3)
-                          .map((language) => language.name)
-                          .join(", ")}
-                      </Language>
+                      <Language>{sortedLanguages[0].language.name}</Language>
                     </NameContainer>
                   </TextContainer>
                 </Flex>
                 <WordsContainer>
                   <StyledEmoji mr={"0.5rem"} size={1.5} text={":writing:"} />
-                  {translated}
+                  {user.totalCosts}
                 </WordsContainer>
               </Item>
             )
