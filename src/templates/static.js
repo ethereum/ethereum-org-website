@@ -7,6 +7,7 @@ import styled from "styled-components"
 import ButtonLink from "../components/ButtonLink"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
+import Callout from "../components/Callout"
 import Contributors from "../components/Contributors"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
@@ -136,6 +137,7 @@ const components = {
   Link,
   SocialListItem,
   MatomoOptOut,
+  Callout,
 }
 
 const StaticPage = ({ data: { siteData, pageData: mdx }, pageContext }) => {
