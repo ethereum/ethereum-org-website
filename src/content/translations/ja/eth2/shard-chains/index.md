@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     シャードチェーンは、 <a href="/eth2/beacon-chain/">ビーコンチェーン</a> が開始された後、どのように迅速に動作するかに応じて、2023年のいつか出荷されるべきです。 シャードはイーサリアムにデータを保存してアクセスする能力を与えますが、コードの実行には使用されません。 詳細はまだ解明されている途中です。
 </UpgradeStatus>
 

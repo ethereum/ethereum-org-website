@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     Οι shard chains θα πρέπει να ενεργοποιηθούν κάποια στιγμή το 2023, ανάλογα με το πόσο γρήγορα προχωρούν οι εργασίες μετά την έναρξη του <a href="/eth2/beacon-chain/">Beacon Chain</a>. Αυτά τα shards θα δώσουν στο Ethereum μεγαλύτερη ικανότητα αποθήκευσης και πρόσβασης δεδομένων, αλλά δεν θα χρησιμοποιηθούν για την εκτέλεση κώδικα. Οι λεπτομέρειες αυτού του θέματος εξακολουθούν να εξετάζονται.
 </UpgradeStatus>
 

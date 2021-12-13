@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus isShipped date="Отправленный!">
+<UpgradeStatus isShipped dateKey="page-eth2-upgrades-beacon-date">
     Beacon Chain запущена 1 декабря в полдень по UTC. Чтобы узнать больше, <a href="https://beaconscan. com/">ознакомьтесь с данными</a>. Если вы хотите помочь с проверкой цепочки, вы можете <a href="/eth2/staking/">вложить свои ETH</a>.
 </UpgradeStatus>
 

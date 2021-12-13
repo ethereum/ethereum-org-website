@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~Q1/Q2 2022">
+<UpgradeStatus dateKey="page-eth2-upgrades-merge-date">
     Це оновлення буде додано після впровадження ланцюгів сегментів даних. Таким чином <a href="/eth2/vision/">оновлення Eth2</a> буде повністю реалізовано: стейкінг у мережі стане безпечнішим і надійнішим, його можна буде масштабувати.
 </UpgradeStatus>
 

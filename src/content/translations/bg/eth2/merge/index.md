@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~Q1/Q2 2022">
+<UpgradeStatus dateKey="page-eth2-upgrades-merge-date">
     Този ъпгрейд ще последва появата на веригите от компоненти. Но това е моментът, когато <a href="/eth2/vision/">визията за Eth2</a>напълно ще се осъществи – по-голям обхват, сигурност и устойчивост чрез залагането, което поддържа цялата мрежа.
 </UpgradeStatus>
 

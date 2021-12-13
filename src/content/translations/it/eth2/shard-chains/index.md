@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     Le shard chain saranno disponibili nel corso del 2023, in base alla rapidità del lavoro in seguito al lancio della <a href="/eth2/beacon-chain/">beacon chain</a>. Queste shard garantiranno a Ethereum più capacità di archiviazione e acceso ai dati, ma non verranno usate per eseguire codice. I dettagli sono ancora da chiarire.
 </UpgradeStatus>
 
