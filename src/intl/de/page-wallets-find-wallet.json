@@ -100,7 +100,7 @@
   "page-find-wallet-myetherwallet-logo-alt": "MyEtherWallet-Logo",
   "page-find-wallet-new-to-wallets": "Sind Wallets neu für dich? Hier ist eine Übersicht für den Einstieg.",
   "page-find-wallet-new-to-wallets-link": "Ethereum-Wallets",
-  "page-find-wallet-not-all-features": "Keine Wallet hat alle diese Funktionen",
+  "page-find-wallet-not-all-features": "Keine Wallet hat alle diese Funktionen <strong>bisher</strong>",
   "page-find-wallet-not-endorsements": "Die auf dieser Seite aufgelisteten Wallets sind nicht offiziell empfohlen, sondern nur zu Informationszwecken zur Verfügung gestellt. Ihre Beschreibungen wurden von den Wallet-Unternehmen selbst bereitgestellt. Wir fügen Produkte zu dieser Seite hinzu, basierend auf Kriterien in unseren",
   "page-find-wallet-overwhelmed": "Ethereum-Wallets hierunter. Überwältigt? Versuche nach Funktionen zu filtern.",
   "page-find-wallet-opera-logo-alt": "Opera-Logo",
@@ -129,7 +129,6 @@
   "page-find-wallet-we-found": "Wir fanden",
   "page-find-wallet-withdraw": "Zur Bank abheben",
   "page-find-wallet-withdraw-desc": "Du kannst deine ETH direkt auf dein Bankkonto auszahlen, ohne durch eine Börse gehen zu müssen.",
-  "page-find-wallet-yet": "bisher",
   "page-find-wallet-zengo-logo-alt": "ZenGo-Logo",
   "page-find-wallet-walleth-logo-alt": "WallETH-Logo",
   "page-stake-eth": "Stake ETH"
