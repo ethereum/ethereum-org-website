@@ -285,8 +285,8 @@ _Conosci una risorsa della community che ti è stata utile? Modifica questa pagi
 
 ## Argomenti correlati {#related-topics}
 
-- [Nodi e client](/en/developers/docs/nodes-and-clients/)
-- [Framework di sviluppo](/en/developers/docs/frameworks/)
+- [Nodi e client](/developers/docs/nodes-and-clients/)
+- [Framework di sviluppo](/developers/docs/frameworks/)
 
 ## Tutorial correlati {#related-tutorials}
 

@@ -15,7 +15,7 @@ Blockchain jest najlepiej opisany jako publiczna baza danych, która jest aktual
 
 Każdy nowy blok i cały łańcuch muszą zostać uzgodnione przez każdy węzeł w sieci. Tak więc każdy ma te same dane. Aby to działało, łańcuchy bloków potrzebują mechanizmu konsensusu.
 
-Ethereum korzysta obecnie z mechanizmu konsensusu proof-of-work. Oznacza to, że każdy, kto chce dodać nowe bloki do łańcucha, musi rozwiązać trudną łamigłówkę, co wymaga dużo energii obliczeniowej. Rozwiązywanie łamigłówki dowodzi, że wydałeś zasoby obliczeniowe. Takie działanie jest znane jako [wydobywanie](/en/developers/docs/consensus-mechanisms/pow/mining/). Wydobywanie może odbywać się metodą prób i błędów, ale pomyślne dodanie bloku jest nagradzane w Eth. Z drugiej strony przesyłanie fałszywych bloków nie jest atrakcyjną opcją, biorąc pod uwagę środki, które wydałeś na produkcję bloku.
+Ethereum korzysta obecnie z mechanizmu konsensusu proof-of-work. Oznacza to, że każdy, kto chce dodać nowe bloki do łańcucha, musi rozwiązać trudną łamigłówkę, co wymaga dużo energii obliczeniowej. Rozwiązywanie łamigłówki dowodzi, że wydałeś zasoby obliczeniowe. Takie działanie jest znane jako [wydobywanie](/developers/docs/consensus-mechanisms/pow/mining/). Wydobywanie może odbywać się metodą prób i błędów, ale pomyślne dodanie bloku jest nagradzane w Eth. Z drugiej strony przesyłanie fałszywych bloków nie jest atrakcyjną opcją, biorąc pod uwagę środki, które wydałeś na produkcję bloku.
 
 Nowe bloki są transmitowane do węzłów w sieci, sprawdzane i weryfikowane, aktualizując stan dla wszystkich.
 
@@ -97,7 +97,7 @@ Wolumen transakcji jest bardzo wysoki, więc transakcje są „zatwierdzane” w
 
 Wycinek kodu (program) wielokrotnego użytku, który programista umieszcza w pamięci EVM. Każdy może zażądać wykonania kodu inteligentnego kontraktu, składając żądanie transakcji. Ponieważ deweloperzy mogą tworzyć dowolne aplikacje wykonywalne w EVM (gry, rynki, instrumenty finansowe, itp.) poprzez publikowanie inteligentnych kontraktów, są one często nazywane również [aplikacjami zdecentralizowanymi, dapps](/developers/docs/dapps/).
 
-[Więcej na temat inteligentnych kontraktów](/en/developers/docs/smart-contracts/)
+[Więcej na temat inteligentnych kontraktów](/developers/docs/smart-contracts/)
 
 ## Dalsza lektura {#further-reading}
 

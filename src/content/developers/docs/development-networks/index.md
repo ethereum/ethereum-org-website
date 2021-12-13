@@ -19,7 +19,7 @@ Development networks are essentially Ethereum clients (implementations of Ethere
 
 **Why not just run a standard Ethereum node locally?**
 
-You _could_ [run a node](/developers/docs/nodes-and-clients/#running-your-own-node) (like Geth, OpenEthereum, or Nethermind) but since development networks are purpose-built for development, they often come packed with convenient features like:
+You _could_ [run a node](/developers/docs/nodes-and-clients/#running-your-own-node) (like Geth, Erigon, or Nethermind) but since development networks are purpose-built for development, they often come packed with convenient features like:
 
 - Deterministically seeding your local blockchain with data (e.g. accounts with ETH balances)
 - Instantly mining blocks with each transaction it receives, in order and with no delay

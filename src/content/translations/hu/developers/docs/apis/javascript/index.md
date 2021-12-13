@@ -284,8 +284,8 @@ _Ismersz olyan közösségi anyagot, mely segített neked? Módosítsd az oldalt
 
 ## Kapcsolódó témák {#related-topics}
 
-- [Csomópontok és kliensek](/en/developers/docs/nodes-and-clients/)
-- [Fejlesztői keretrendszerek](/en/developers/docs/frameworks/)
+- [Csomópontok és kliensek](/developers/docs/nodes-and-clients/)
+- [Fejlesztői keretrendszerek](/developers/docs/frameworks/)
 
 ## Kapcsolódó útmutatók {#related-tutorials}
 

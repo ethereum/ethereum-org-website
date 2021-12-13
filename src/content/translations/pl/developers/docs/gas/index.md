@@ -11,7 +11,7 @@ Gaz ma kluczowe znaczenie dla sieci Ethereum. To jest paliwo, które pozwala mu 
 
 ## Warunki wstępne {#prerequisites}
 
-Aby lepiej zrozumieć tę stronę, zalecamy przeczytanie informacji na temat [transakcji](/en/developers/docs/transactions/) i [EVM](/en/developers/docs/evm/).
+Aby lepiej zrozumieć tę stronę, zalecamy przeczytanie informacji na temat [transakcji](/developers/docs/transactions/) i [EVM](/developers/docs/evm/).
 
 ## Co to jest gaz? {#what-is-gas}
 
@@ -46,4 +46,4 @@ Chociaż transakcja zawiera limit, każdy gaz niewykorzystany w transakcji jest 
 
 ## Tematy powiązane {#related-topics}
 
-- [Wydobywanie](/en/developers/docs/consensus-mechanisms/pow/mining/)
+- [Wydobywanie](/developers/docs/consensus-mechanisms/pow/mining/)

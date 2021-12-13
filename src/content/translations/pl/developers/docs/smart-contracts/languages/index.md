@@ -253,7 +253,7 @@ Oto kilka rzeczy do rozważenia, jeśli nie próbowałeś jeszcze żadnego z ję
 
 ### Co jest wspaniałego w Solidity? {#solidity-advantages}
 
-- Jeśli dopiero zaczynasz, jest tam wiele samouczków i narzędzi do nauki. Więcej informacji zawiera artykuł [Ucz się przez kodowanie](https://ethereum.org/en/developers/learning-tools/).
+- Jeśli dopiero zaczynasz, jest tam wiele samouczków i narzędzi do nauki. Więcej informacji zawiera artykuł [Ucz się przez kodowanie](/developers/learning-tools/).
 - Dostępne dobre narzędzia programistyczne.
 - Solidity ma dużą społeczność programistów, co oznacza, że ​​najprawdopodobniej szybko znajdziesz odpowiedzi na swoje pytania.
 

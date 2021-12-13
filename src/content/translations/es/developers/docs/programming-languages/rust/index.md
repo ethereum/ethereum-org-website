@@ -14,7 +14,7 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 
 **Da los primeros pasos para integrar Rust con Ethereum**
 
-¿Necesitas una introducción más básica para empezar? Visita [ethereum.org/learn](/en/learn/) o [ethereum.org/developers](/en/developers/).
+¿Necesitas una introducción más básica para empezar? Visita [ethereum.org/learn](/learn/) o [ethereum.org/developers](/developers/).
 
 - [Blockchain explicada](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Comprender los contratos inteligentes](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -27,15 +27,13 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 - [El cliente de Ethereum basado en Rust](https://wiki.parity.io/Setup)
 - [Enviar una transacción a Ethereum mediante Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
 - [Una introducción a los contratos inteligentes con el cliente de Parity Ethereum](https://wiki.parity.io/Smart-Contracts)
-- [Configurar un entorno de desarrollo de Oasis SDK](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [Configurar un entorno de desarrollo de Oasis SDK](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Un tutorial paso a paso sobre cómo escribir contratos en Rust Wasm para Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Artículos de nivel intermedio {#intermediate-articles}
 
 - [Documentación de Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Ejemplos de trabajo de Rust-Web3](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Crear una selección secreta con OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Crear un servidor de chat privado con OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Patrones de uso avanzado {#advanced-use-patterns}
 
@@ -57,7 +55,7 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 - [rust-web3:](https://github.com/tomusdrw/rust-web3) _Implementación en Rust de la biblioteca de Web3.js_
 - [Wavelet:](https://wavelet.perlin.net/docs/smart-contracts) _Contrato inteligente de Wavelet en Rust_
 
-¿Buscas más recursos? Echa un vistazo a [ethereum.org/developers.](/en/developers/)
+¿Buscas más recursos? Echa un vistazo a [ethereum.org/developers.](/developers/)
 
 ## Colaboradores de la comunidad de Rust {#rust-community-contributors}
 

@@ -7,7 +7,7 @@ sidebar: true
 
 # Content versions {#content-versions}
 
-As mentioned in our [Translation Program overview](/en/contributing/translation-program/), we use 'content buckets' within Crowdin to get the highest priority content released first. When you check out a language to translate, for example, [German](https://crowdin.com/project/ethereum-org/de) you'll see folders for each content bucket.
+As mentioned in our [Translation Program overview](/contributing/translation-program/), we use 'content buckets' within Crowdin to get the highest priority content released first. When you check out a language to translate, for example, [German](https://crowdin.com/project/ethereum-org/de) you'll see folders for each content bucket.
 
 Below is a breakdown of the website pages each content bucket contains.
 

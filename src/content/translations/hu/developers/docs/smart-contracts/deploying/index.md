@@ -60,4 +60,4 @@ _Ismersz olyan közösségi anyagot, amely segített neked? Módosítsd az oldal
 
 ## Kapcsolódó témák
 
-- [Fejlesztői keretrendszerek](/en/developers/docs/frameworks/)
+- [Fejlesztői keretrendszerek](/developers/docs/frameworks/)

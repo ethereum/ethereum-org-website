@@ -710,4 +710,4 @@ _Fourni en partie par [Mastering Ethereum](https://github.com/ethereumbook/ether
 
 Quelque chose manque ? Vous avez vu quelque chose d'incorrect ? Aidez-nous à améliorer cette page en contribuant à ce glossaire sur GitHub !
 
-[En savoir plus sur la façon de contribuer](/en/contributing/adding-glossary-terms)
+[En savoir plus sur la façon de contribuer](/contributing/adding-glossary-terms)

@@ -19,7 +19,7 @@ I framework sono già dotati di molte funzionalità, come:
 
 ## Prerequisiti {#prerequisites}
 
-Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra introduzione alle [dapps](/en/developers/docs/dapps/) e allo [stack Ethereum](/en/developers/docs/ethereum-stack/).
+Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra introduzione alle [dapps](/developers/docs/dapps/) e allo [stack Ethereum](/developers/docs/ethereum-stack/).
 
 ## Framework disponibili {#available-frameworks}
 
@@ -67,7 +67,7 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 **The Graph:** **_ The Graph per interrogare efficientemente i dati della blockchain_**
 
 - [Sito Web](https://thegraph.com/)
-- [Guida](/en/developers/tutorials/the-graph-fixing-web3-data-querying/)
+- [Guida](/developers/tutorials/the-graph-fixing-web3-data-querying/)
 
 **Alchemy:** **_ piattaforma di sviluppo Ethereum._**
 

@@ -11,7 +11,7 @@ Le reti sono ambienti Ethereum diversi ai quali si può accedere per sviluppare,
 
 ## Prerequisiti {#prerequisites}
 
-È consigliabile conoscere le basi di Ethereum prima di informarsi sulle diverse reti. Le reti di test rappresentano una versione semplificata e sicura di Ethereum nella quale è possibile sperimentare. Consulta la nostra [introduzione ad Ethereum](/en/developers/docs/intro-to-ethereum/).
+È consigliabile conoscere le basi di Ethereum prima di informarsi sulle diverse reti. Le reti di test rappresentano una versione semplificata e sicura di Ethereum nella quale è possibile sperimentare. Consulta la nostra [introduzione ad Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Reti pubbliche {#public-networks}
 

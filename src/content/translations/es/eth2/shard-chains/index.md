@@ -14,8 +14,8 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~2022">
-  Las cadenas de fragmentos deberían enviarse en algún momento de 2022, en función de lo rápido que progrese el trabajo después del lanzamiento de <a href="/eth2/beacon-chain/">la Cadena de Baliza</a>. Estos fragmentos le darán a Ethereum más capacidad para almacenar y acceder a datos, pero no se usarán para ejecutar código. Los detalles de eso aún se están aclarando.
+<UpgradeStatus date="~2023">
+  Las cadenas de fragmentos deberían enviarse en algún momento de 2023, en función de lo rápido que progrese el trabajo después del lanzamiento de <a href="/eth2/beacon-chain/">la Cadena de Baliza</a>. Estos fragmentos le darán a Ethereum más capacidad para almacenar y acceder a datos, pero no se usarán para ejecutar código. Los detalles de eso aún se están aclarando.
 </UpgradeStatus>
 
 ## ¿Qué es la fragmentación o "sharding"? {#what-is-sharding}
@@ -39,7 +39,7 @@ Con menores requisitos de hardware, la fragmentación facilitará la ejecución 
 <br />
 
 <InfoBanner isWarning={true}>
-  Al principio, deberás ejecutar un cliente de la red principal al mismo tiempo que tu cliente Eth2. <a href="https://launchpad.ethereum.org" target="_blank">El launchpad</a> te guiará a través de los requisitos de hardware y el proceso. Alternativamente, puedes utilizar una <a href="/en/developers/docs/apis/backend/#available-libraries">API de back-end</a>.
+  Al principio, deberás ejecutar un cliente de la red principal al mismo tiempo que tu cliente Eth2. <a href="https://launchpad.ethereum.org" target="_blank">El launchpad</a> te guiará a través de los requisitos de hardware y el proceso. Alternativamente, puedes utilizar una <a href="/developers/docs/apis/backend/#available-libraries">API de back-end</a>.
 </InfoBanner>
 
 ## Cadenas de fragmentos versión 1: disponibilidad de datos {#data-availability}

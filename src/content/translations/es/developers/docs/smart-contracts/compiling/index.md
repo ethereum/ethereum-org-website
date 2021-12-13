@@ -40,7 +40,7 @@ El compilador también producirá la **interfaz binaria de aplicación (ABI)** q
 
 La ABI es un archivo JSON que describe el contrato implementado y sus funciones de contrato inteligente. Esto ayuda a cerrar la brecha entre web2 y web3
 
-Una [biblioteca de cliente JavaScript](/en/developers/docs/apis/javascript/) leerá la **ABI** para que solicite tu contrato inteligente en la interfaz de tu aplicación web.
+Una [biblioteca de cliente JavaScript](/developers/docs/apis/javascript/) leerá la **ABI** para que solicite tu contrato inteligente en la interfaz de tu aplicación web.
 
 A continuación se muestra la ABI para el contrato de token ERC-20. Un ERC-20 es un token que puedes operar en Ethereum.
 
@@ -275,5 +275,5 @@ A continuación se muestra la ABI para el contrato de token ERC-20. Un ERC-20 es
 
 ## Temas relacionados {#related-topics}
 
-- [Bibliotecas de cliente de JavaScript](/en/developers/docs/apis/javascript/)
-- [Máquina virtual de Ehereum](/en/developers/docs/ethereum-virtual-machine/)
+- [Bibliotecas de cliente de JavaScript](/developers/docs/apis/javascript/)
+- [Máquina virtual de Ehereum](/developers/docs/ethereum-virtual-machine/)

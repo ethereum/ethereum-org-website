@@ -102,7 +102,7 @@ Reading the current status can be done via `isApprovedForAll`. As you can see, i
 
 This is intentionally designed with simplicity in mind. You can only approve everything for one address.
 
-### Recieve Hook {#recieve-hook}
+### Receive Hook {#receive-hook}
 
 ```solidity
 function onERC1155BatchReceived(
