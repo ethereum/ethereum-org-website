@@ -1,7 +1,7 @@
 // Libraries
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 
@@ -116,7 +116,7 @@ const RunANodePage = ({ data }) => {
     title: translateMessageId("page-run-a-node-title", intl),
     header: translateMessageId("page-run-a-node-hero-header", intl),
     subtitle: translateMessageId("page-run-a-node-hero-subtitle", intl),
-    image: data.doge.childImageSharp.fluid,
+    image: getImage(data.ethereumInside),
     alt: translateMessageId("page-run-a-node-hero-alt", intl),
     buttons: [
       {
@@ -215,7 +215,7 @@ const RunANodePage = ({ data }) => {
             </p>
           </SplitContent>
           <SplitContent>
-            <Img fluid={data.hackathon.childImageSharp.fluid} />
+            <GatsbyImage image={getImage(data.hackathon)} />
           </SplitContent>
         </TwoColumnContent>
       </Content>
@@ -236,7 +236,7 @@ const RunANodePage = ({ data }) => {
             </p>
           </Width80>
           <Width20>
-            <Img fluid={data.impact.childImageSharp.fluid} />
+            <GatsbyImage image={getImage(data.impact)} />
           </Width20>
         </Highlight>
       </Content>
@@ -406,26 +406,46 @@ export default RunANodePage
 
 export const query = graphql`
   query {
-    doge: file(relativePath: { eq: "doge-computer.png" }) {
+    ethereumInside: file(
+      relativePath: { eq: "run-a-node/ethereum_inside.png" }
+    ) {
       childImageSharp {
-        fluid(maxWidth: 624) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(
+          width: 624
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     hackathon: file(relativePath: { eq: "hackathon_transparent.png" }) {
       childImageSharp {
-        fluid(maxWidth: 624) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(
+          width: 624
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     impact: file(relativePath: { eq: "impact_transparent.png" }) {
       childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
-          ...GatsbyImageSharpFluidLimitPresentationSize
-        }
+        gatsbyImageData(
+          width: 300
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    community: file(relativePath: { eq: "enterprise-eth.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 624
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
   }
