@@ -5,13 +5,10 @@ lang: hr
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/core.png
-summaryPoints:
-  [
-    "Beacon Chain ne mijenja ništa o Ethereumu kojim se koristimo danas.",
-    "Koordinirat će mrežu.",
-    "On predstavlja proof-of-stake u Ethereumovom ekosustavu.",
-    "To možete prepoznati kao „Fazu 0” na tehničkom planu.",
-  ]
+summaryPoint1: Beacon Chain ne mijenja ništa o Ethereumu kojim se koristimo danas.
+summaryPoint2: Koordinirat će mrežu.
+summaryPoint3: On predstavlja proof-of-stake u Ethereumovom ekosustavu.
+summaryPoint4: To možete prepoznati kao „Fazu 0” na tehničkom planu.
 ---
 
 <UpgradeStatus isShipped date="Dostavljeno!">

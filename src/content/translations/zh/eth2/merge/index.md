@@ -5,13 +5,10 @@ lang: zh
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    "最终当前以太坊主网将“对接”其余的Eth2升级。",
-    '对接将把"Eth1"主网与Eth2信标链和分片系统合并。',
-    "这将标志着以太坊工作量证明的结束以及向权益证明的完全过渡。",
-    "您可能会在技术路线图上知道这称为“阶段1.5”。",
-  ]
+summaryPoint1: 最终当前以太坊主网将“对接”其余的Eth2升级。
+summaryPoint2: 对接将把"Eth1"主网与Eth2信标链和分片系统合并。
+summaryPoint3: 这将标志着以太坊工作量证明的结束以及向权益证明的完全过渡。
+summaryPoint4: 您可能会在技术路线图上知道这称为“阶段1.5”。
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">

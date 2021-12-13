@@ -5,13 +5,10 @@ lang: de
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    'Letztendlich wird das aktuelle Ethereum-Mainnet mit den restlichen Eth2-Upgrades "andocken".',
-    'Das Andocken stellt den Zusammenschluss des "Eth1"-Mainnet mit der Eth2-Beacon Chain und dem Sharding-System dar.',
-    "Dies markiert das Ende von proof-of-work für Ethereum und den vollständigen Übergang zu proof-of-stake.",
-    'Im technischen Entwicklungsplan ist damit die "Phase 1,5" gemeint.',
-  ]
+summaryPoint1: Letztendlich wird das aktuelle Ethereum-Mainnet mit den restlichen Eth2-Upgrades "andocken".
+summaryPoint2: Das Andocken stellt den Zusammenschluss des "Eth1"-Mainnet mit der Eth2-Beacon Chain und dem Sharding-System dar.
+summaryPoint3: Dies markiert das Ende von proof-of-work für Ethereum und den vollständigen Übergang zu proof-of-stake.
+summaryPoint4: Im technischen Entwicklungsplan ist damit die "Phase 1,5" gemeint.
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">

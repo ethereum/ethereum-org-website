@@ -5,13 +5,10 @@ lang: zh
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
-summaryPoints:
-  [
-    "分片是一个多阶段升级，以提高以太坊的可扩展性和容量。",
-    "分片链将网络负荷扩展到64个新链。",
-    "通过降低硬件需求使节点运行更加容易。",
-    "技术路线图”包括在“第一阶段”和可能的“第二阶段”中的分片链上开展的工作。",
-  ]
+summaryPoint1: 分片是一个多阶段升级，以提高以太坊的可扩展性和容量。
+summaryPoint2: 分片链将网络负荷扩展到64个新链。
+summaryPoint3: 通过降低硬件需求使节点运行更加容易。
+summaryPoint4: 技术路线图”包括在“第一阶段”和可能的“第二阶段”中的分片链上开展的工作。
 ---
 
 <UpgradeStatus date="~2023">

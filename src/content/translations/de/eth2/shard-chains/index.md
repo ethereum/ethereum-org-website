@@ -5,13 +5,10 @@ lang: de
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
-summaryPoints:
-  [
-    "Sharding ist ein mehrphasiges Update um Ethereums Skalierbarkeit und Kapazität zu erhöhen.",
-    "Shard Chains verteilen die Last des Netzwerks auf 64 neue Chains.",
-    "Sie machen es einfacher, eine Node zu betreiben, indem sie die Anforderungen an die Hardware niedrig halten.",
-    "Die technische Roadmap beinhaltet die Arbeit an Shard Chains in Phase 1 und möglicherweise Phase 2.",
-  ]
+summaryPoint1: Sharding ist ein mehrphasiges Update um Ethereums Skalierbarkeit und Kapazität zu erhöhen.
+summaryPoint2: Shard Chains verteilen die Last des Netzwerks auf 64 neue Chains.
+summaryPoint3: Sie machen es einfacher, eine Node zu betreiben, indem sie die Anforderungen an die Hardware niedrig halten.
+summaryPoint4: Die technische Roadmap beinhaltet die Arbeit an Shard Chains in Phase 1 und möglicherweise Phase 2.
 ---
 
 <UpgradeStatus date="~2023">

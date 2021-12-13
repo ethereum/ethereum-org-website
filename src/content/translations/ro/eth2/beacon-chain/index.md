@@ -5,13 +5,10 @@ lang: ro
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/core.png
-summaryPoints:
-  [
-    "Lanțul Beacon nu schimbă Ethereum-ul pe care îl folosim astăzi.",
-    "Va coordona rețeaua.",
-    "Introduce Dovada Mizei în ecosistemul Ethereum.",
-    'S-ar putea să cunoști aceasta ca "Faza 0" pe foile de parcurs tehnice.',
-  ]
+summaryPoint1: Lanțul Beacon nu schimbă Ethereum-ul pe care îl folosim astăzi.
+summaryPoint2: Va coordona rețeaua.
+summaryPoint3: Introduce Dovada Mizei în ecosistemul Ethereum.
+summaryPoint4: S-ar putea să cunoști aceasta ca "Faza 0" pe foile de parcurs tehnice.
 ---
 
 <UpgradeStatus isShipped date="Expediat!">
