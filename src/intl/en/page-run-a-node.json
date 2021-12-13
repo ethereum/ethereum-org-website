@@ -32,7 +32,7 @@
   "page-run-a-node-getting-started-software-section-2-1": "Now, more user-friendly graphical user interfaces (GUIs) exist to give users an app-like experience while managing their node. In just a few taps you can have your node up and running.",
   "page-run-a-node-getting-started-software-section-3-1": "DAppNode is free and open-source software that makes it easy for users to run full nodes, as well as dapps and other P2P networks, with no need to touch the command-link. This makes it easier for everyone to participate and create a more decentralized network.",
   "page-run-a-node-hero-alt": "Graphic of node",
-  "page-run-a-node-hero-header": "Take full control.<br /><br />Run your own node.",
+  "page-run-a-node-hero-header": "Take full control.<br />Run your own node.",
   "page-run-a-node-hero-subtitle": "Become fully sovereign while helping secure the network. Become Ethereum.",
   "page-run-a-node-highlight-title": "Running a node isn't just for miners and validators; anyone can run a node. You don't even need ETH.",
   "page-run-a-node-highlight-body": "With the ease of running an app, you can help decentralize and further secure the EThereum network. Be up and running today from your home. Improve your privacy while holding miners and validators accountable.",

@@ -35,7 +35,6 @@ import Emoji from "../components/Emoji"
 import { translateMessageId } from "../utils/translations"
 
 // Styles
-
 const GappedPage = styled(Page)`
   gap: 5rem;
 `
@@ -84,11 +83,11 @@ const Highlight = styled(Content)`
   box-sizing: border-box;
   border-radius: 4px;
   color: ${({ theme }) => theme.colors.text};
-  &:nth-of-type(odd) {
+  &:nth-of-type(even) {
     flex-direction: row-reverse;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    &:nth-of-type(odd) {
+    &:nth-of-type(even) {
       flex-direction: column-reverse;
     }
     flex-direction: column-reverse;
