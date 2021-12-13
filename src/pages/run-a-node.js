@@ -29,36 +29,35 @@ import {
   CardGrid,
 } from "../components/SharedStyledComponents"
 import ExpandableCard from "../components/ExpandableCard"
+import Emoji from "../components/Emoji"
 
 // Utils
 import { translateMessageId } from "../utils/translations"
 
 // Styles
+
+const GappedPage = styled(Page)`
+  gap: 5rem;
+`
+
 const GappedContent = styled(Content)`
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
 `
 
 const Hero = styled(PageHero)`
-  background: linear-gradient(
-      0deg,
-      rgba(153, 157, 244, 0.1) 0%,
-      rgba(153, 157, 244, 0) 100%
-    ),
-    linear-gradient(
-      270.72deg,
-      #fdf0ff 0.62%,
-      rgba(236, 195, 195, 0.557292) 32.61%,
-      rgba(207, 189, 230, 0.296875) 49.67%,
-      rgba(196, 196, 196, 0) 72.88%
-    );
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  background: ${({ theme }) => theme.colors.runNodeGradient};
 `
 
 const TwoColumnContent = styled.div`
   display: flex;
+  justify-content: space-between;
   align-items: flex-start;
-  width: 100%;
-  margin-right: 2rem;
   margin-bottom: 2rem;
+  gap: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
     align-items: flex-start;
@@ -70,7 +69,6 @@ const TwoColumnContent = styled.div`
 const SplitContent = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50%;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: 100%;
   }
@@ -81,15 +79,18 @@ const Highlight = styled(Content)`
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  background: ${(props) => props.backgroundColor};
+  background: ${({ theme, backgroundColor }) => theme.colors[backgroundColor]};
   border: 1px solid #dadada;
   box-sizing: border-box;
   border-radius: 4px;
-  color: black;
-  &:nth-child(odd) {
+  color: ${({ theme }) => theme.colors.text};
+  &:nth-of-type(odd) {
     flex-direction: row-reverse;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    &:nth-of-type(odd) {
+      flex-direction: column-reverse;
+    }
     flex-direction: column-reverse;
   }
 `
@@ -122,36 +123,38 @@ const Width20 = styled.div`
 
 const Flex = styled.div`
   display: flex;
+  gap: 2rem;
 `
 
 const Container = styled.div`
-  background: #f5f5f5;
+  background: ${({ theme }) => theme.colors.grayBackground};
   border: 1px solid #d1d1d1;
   box-sizing: border-box;
   border-radius: 5px;
-  color: black;
+  color: ${({ theme }) => theme.colors.text};
   padding: 0 36pt;
+`
+
+const StyledEmoji = styled(Emoji)`
+  margin-right: 1rem;
 `
 
 const RunANodePage = ({ data }) => {
   const intl = useIntl()
 
   const heroContent = {
-    title: translateMessageId("page-run-a-node-title", intl),
-    header: translateMessageId("page-run-a-node-hero-header", intl),
-    subtitle: translateMessageId("page-run-a-node-hero-subtitle", intl),
+    title: <Translation id="page-run-a-node-title" />,
+    header: <Translation id="page-run-a-node-hero-header" />,
+    subtitle: <Translation id="page-run-a-node-hero-subtitle" />,
     image: getImage(data.ethereumInside),
-    alt: translateMessageId("page-run-a-node-hero-alt", intl),
+    alt: <Translation id="page-run-a-node-hero-alt" />,
     buttons: [
       {
-        content: translateMessageId(
-          "page-run-a-node-button-why-run-a-node",
-          intl
-        ),
+        content: <Translation id="page-run-a-node-button-why-run-a-node" />,
         path: "#why-run-a-node",
       },
       {
-        content: translateMessageId("page-run-a-node-button-get-started", intl),
+        content: <Translation id="page-run-a-node-button-get-started" />,
         path: "#get-started",
       },
     ],
@@ -218,7 +221,7 @@ const RunANodePage = ({ data }) => {
   ]
 
   return (
-    <Page>
+    <GappedPage>
       <PageMetadata
         title={translateMessageId("page-run-a-node-title", intl)}
         description={translateMessageId(
@@ -229,7 +232,7 @@ const RunANodePage = ({ data }) => {
 
       <Hero content={heroContent} />
 
-      <GappedContent>
+      <Content>
         <TwoColumnContent>
           <SplitContent>
             <h2>
@@ -249,10 +252,10 @@ const RunANodePage = ({ data }) => {
             <GatsbyImage image={getImage(data.hackathon)} />
           </SplitContent>
         </TwoColumnContent>
-      </GappedContent>
+      </Content>
 
-      <GappedContent>
-        <Highlight backgroundColor={"#f9e4d5"}>
+      <Content>
+        <Highlight backgroundColor="homeBoxOrange">
           <Width80>
             <h2>
               <Translation id="page-run-a-node-highlight-title" />
@@ -270,9 +273,9 @@ const RunANodePage = ({ data }) => {
             <GatsbyImage image={getImage(data.impact)} />
           </Width20>
         </Highlight>
-      </GappedContent>
+      </Content>
 
-      <GappedContent>
+      <Content>
         <h2>
           <Translation id="page-run-a-node-why-run-a-node-title" />
         </h2>
@@ -290,11 +293,11 @@ const RunANodePage = ({ data }) => {
             </ExpandableCard>
           ))}
         </InfoGrid>
-      </GappedContent>
+      </Content>
 
       <Divider />
 
-      <GappedContent>
+      <Content>
         <h2>
           <Translation id="page-run-a-node-getting-started-hardware-title" />
         </h2>
@@ -305,6 +308,7 @@ const RunANodePage = ({ data }) => {
         <Flex>
           <Container>
             <h3>
+              <StyledEmoji text=":building_construction:" size={2} />
               <Translation id="page-run-a-node-build-your-own-title" />
             </h3>
             <p>
@@ -343,61 +347,63 @@ const RunANodePage = ({ data }) => {
 
           <Container>
             <h3>
+              <StyledEmoji text=":shopping_cart:" size={2} />
               <Translation id="page-run-a-node-buy-fully-loaded-title" />
             </h3>
             <p>
               <Translation id="page-run-a-node-buy-fully-loaded-1" />
             </p>
-            <p>
+            <code>
               <Translation id="page-run-a-node-buy-fully-loaded-note" />
-            </p>
+            </code>
           </Container>
         </Flex>
-      </GappedContent>
+      </Content>
 
-      <GappedContent>
+      <Content>
         <h2>
           <Translation id="page-run-a-node-getting-started-software-title" />
         </h2>
+        <GappedContent>
+          <Highlight backgroundColor="homeBoxTurquoise">
+            <Width80>
+              <p>
+                <Translation id="page-run-a-node-getting-started-software-section-1-1" />
+              </p>
+              <p>
+                <Translation id="page-run-a-node-getting-started-software-section-1-2" />
+              </p>
+            </Width80>
+            <Width20>
+              <img src={terminal} />
+            </Width20>
+          </Highlight>
 
-        <Highlight backgroundColor={"#D7FBFE"}>
-          <Width80>
-            <p>
-              <Translation id="page-run-a-node-getting-started-software-section-1-1" />
-            </p>
-            <p>
-              <Translation id="page-run-a-node-getting-started-software-section-1-2" />
-            </p>
-          </Width80>
-          <Width20>
-            <img src={terminal} />
-          </Width20>
-        </Highlight>
+          <Highlight backgroundColor="homeBoxOrange">
+            <Width80>
+              <p>
+                <Translation id="page-run-a-node-getting-started-software-section-2-1" />
+              </p>
+            </Width80>
+            <Width20>
+              <img src={phonetap} />
+            </Width20>
+          </Highlight>
 
-        <Highlight backgroundColor={"#f9e4d5"}>
-          <Width80>
-            <p>
-              <Translation id="page-run-a-node-getting-started-software-section-2-1" />
-            </p>
-          </Width80>
-          <Width20>
-            <img src={phonetap} />
-          </Width20>
-        </Highlight>
+          <Highlight backgroundColor="homeBoxPurple">
+            <Width80>
+              <p>
+                <Translation id="page-run-a-node-getting-started-software-section-3-1" />
+              </p>
+            </Width80>
+            <Width20>
+              <img src={dappnode} />
+            </Width20>
+          </Highlight>
+        </GappedContent>
+      </Content>
 
-        <Highlight backgroundColor={"#FAE6F8"}>
-          <Width80>
-            <p>
-              <Translation id="page-run-a-node-getting-started-software-section-3-1" />
-            </p>
-          </Width80>
-          <Width20>
-            <img src={dappnode} />
-          </Width20>
-        </Highlight>
-      </GappedContent>
-
-      <GappedContent>
+      <Content>
         <h2>
           <Translation id="page-run-a-node-choose-your-adventure" />
         </h2>
@@ -430,8 +436,8 @@ const RunANodePage = ({ data }) => {
             </button>
           </Container>
         </Flex>
-      </GappedContent>
-    </Page>
+      </Content>
+    </GappedPage>
   )
 }
 
@@ -440,12 +446,12 @@ export default RunANodePage
 export const query = graphql`
   query {
     ethereumInside: file(
-      relativePath: { eq: "run-a-node/ethereum_inside.png" }
+      relativePath: { eq: "run-a-node/ethereum-inside.png" }
     ) {
       childImageSharp {
         gatsbyImageData(
           width: 624
-          layout: FIXED
+          layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
         )
