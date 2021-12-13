@@ -11,6 +11,8 @@
   "page-community-contribute-button": "More on contributing",
   "page-community-contribute-description": "For many people, ethereum.org is their first step into the ecosystem. It is kept up-to-date and accurate by thousands of open-source contributors. Want to help? Read our guide on contributing, or take up an issue on our GitHub.",
   "page-community-contribute-secondary-button": "View on GitHub",
+  "page-community-daos-callout-title": "Decentralized Autonomous Organizations (DAOs)",
+  "page-community-daos-callout-description": "These groups leverage Ethereum technology to facilitate organization and collaboration. For instance, for controlling membership, voting on proposals, or managing pooled assets.",
   "page-community-explore-dapps": "Explore dapps",
   "page-community-explore-dapps-alt": "Explore dapps",
   "page-community-explore-dapps-description": "Dapps are applications built on Ethereum. Dapps are disrupting current business models and inventing new ones.",
