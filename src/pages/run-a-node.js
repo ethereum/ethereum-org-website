@@ -135,54 +135,61 @@ const RunANodePage = ({ data }) => {
 
   const whyRunANodeCards = [
     {
-      image: "",
-      title: translateMessageId("page-run-a-node-decentralized-title", intl),
+      image: sovereigntyGlyph,
+      title: <Translation id="page-run-a-node-sovereignty-title" />,
+      preview: <Translation id="page-run-a-node-sovereignty-preview" />,
       body: [
-        translateMessageId("page-run-a-node-decentralized-1", intl),
-        translateMessageId("page-run-a-node-decentralized-2", intl),
+        <Translation id="page-run-a-node-sovereignty-1" />,
+        <Translation id="page-run-a-node-sovereignty-2" />,
       ],
     },
     {
-      image: "",
-      title: translateMessageId("page-run-a-node-sovereignty-title", intl),
+      image: privacyGlyph,
+      title: <Translation id="page-run-a-node-privacy-title" />,
+      preview: <Translation id="page-run-a-node-privacy-preview" />,
       body: [
-        translateMessageId("page-run-a-node-sovereignty-1", intl),
-        translateMessageId("page-run-a-node-sovereignty-2", intl),
-        translateMessageId("page-run-a-node-sovereignty-3", intl),
+        <Translation id="page-run-a-node-privacy-1" />,
+        <Translation id="page-run-a-node-privacy-2" />,
+        <Translation id="page-run-a-node-privacy-3" />,
       ],
     },
     {
-      image: "",
-      title: translateMessageId(
-        "page-run-a-node-security-and-privacy-title",
-        intl
+      image: megaphoneGlyph,
+      title: <Translation id="page-run-a-node-censorship-resistance-title" />,
+      preview: (
+        <Translation id="page-run-a-node-censorship-resistance-preview" />
       ),
       body: [
-        translateMessageId("page-run-a-node-security-and-privacy-1", intl),
+        <Translation id="page-run-a-node-censorship-resistance-1" />,
+        <Translation id="page-run-a-node-censorship-resistance-2" />,
       ],
     },
     {
-      image: "",
-      title: translateMessageId(
-        "page-run-a-node-censorship-resistance-title",
-        intl
-      ),
+      image: decentralizationGlyph,
+      title: <Translation id="page-run-a-node-decentralized-title" />,
+      preview: <Translation id="page-run-a-node-decentralized-preview" />,
       body: [
-        translateMessageId("page-run-a-node-censorship-resistance-1", intl),
+        <Translation id="page-run-a-node-decentralized-1" />,
+        <Translation id="page-run-a-node-decentralized-2" />,
       ],
     },
     {
-      image: "",
-      title: translateMessageId(
-        "page-run-a-node-voice-your-choice-title",
-        intl
-      ),
-      body: [translateMessageId("page-run-a-node-voice-your-choice-1", intl)],
+      image: voteGlyph,
+      title: <Translation id="page-run-a-node-voice-your-choice-title" />,
+      preview: <Translation id="page-run-a-node-voice-your-choice-preview" />,
+      body: [
+        <Translation id="page-run-a-node-voice-your-choice-1" />,
+        <Translation id="page-run-a-node-voice-your-choice-2" />,
+      ],
     },
     {
-      image: "",
-      title: translateMessageId("page-run-a-node-participate-title", intl),
-      body: [translateMessageId("page-run-a-node-participate-1", intl)],
+      image: earthGlyph,
+      title: <Translation id="page-run-a-node-participate-title" />,
+      preview: <Translation id="page-run-a-node-participate-preview" />,
+      body: [
+        <Translation id="page-run-a-node-participate-1" />,
+        <Translation id="page-run-a-node-participate-2" />,
+      ],
     },
   ]
 
@@ -230,9 +237,9 @@ const RunANodePage = ({ data }) => {
               <Translation id="page-run-a-node-highlight-body" />
             </p>
             <p>
-              <b>
+              <strong>
                 <Translation id="page-run-a-node-highlight-bold" />
-              </b>
+              </strong>
             </p>
           </Width80>
           <Width20>
