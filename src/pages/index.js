@@ -25,6 +25,7 @@ import {
 import {
   translateMessageId,
   legacyHomepageLanguages,
+  isLangRightToLeft,
 } from "../utils/translations"
 
 const Hero = styled(GatsbyImage)`
@@ -73,13 +74,14 @@ const Header = styled.header`
 const ButtonRow = styled.div`
   display: flex;
   align-items: flex-start;
+  gap: 0.5rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex-direction: column;
   }
 `
 
 const StyledButtonLink = styled(ButtonLink)`
-  margin-left: 0.5rem;
+  gap: 0.5rem;
   margin-top: 0rem;
   display: flex;
   align-items: center;
@@ -359,7 +361,6 @@ const IntroLeftColumn = styled(LeftColumn)`
 
 const StyledIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.text};
-  margin-right: 0.5rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
   }
   &:hover {
@@ -409,6 +410,7 @@ const HomePage = ({ data, pageContext: { language } }) => {
   const intl = useIntl()
   const [isModalOpen, setModalOpen] = useState(false)
   const [activeCode, setActiveCode] = useState(0)
+  const dir = isLangRightToLeft(language) ? "rtl" : "ltr"
 
   if (legacyHomepageLanguages.includes(language)) return <LegacyPageHome />
 
@@ -696,7 +698,7 @@ contract SimpleDomainRegistry {
   ]
 
   return (
-    <Page>
+    <Page dir={dir}>
       <PageMetadata
         title={translateMessageId("page-index-meta-title", intl)}
         description={translateMessageId("page-index-meta-description", intl)}
