@@ -150,6 +150,8 @@ const lightColors = {
   buttonColor: white,
   eth2Gradient:
     "linear-gradient(285.24deg, #F7CBC0 0%, #F4B1AB 29.8%, #8476D9 49.78%, #85ACF9 54.14%, #1C1CE1 61.77%, #000000 69.77%)",
+  runNodeGradient:
+    "linear-gradient(0deg, rgba(153, 157, 244, 0.1) 0%, rgba(153, 157, 244, 0) 100%), linear-gradient(270.72deg, #FDF0FF 0.62%, rgba(236, 195, 195, 0.557292) 32.61%, rgba(207, 189, 230, 0.296875) 49.67%, rgba(196, 196, 196, 0) 72.88%);",
   ghostCardBackground: white,
   ghostCardGhost: white600,
   secondaryButtonBackgroundActive: white700,
@@ -230,8 +232,7 @@ const lightColors = {
   homeBoxPurple: primaryLight50,
   homeBoxPink: pink,
   codeBackground: codeBoxLight,
-  beta:
-    "radial-gradient(25.56% 133.51% at 28.36% 45.54%, rgba(28, 28, 225, 0) 0%, rgba(28, 28, 225, 0.06) 100%)",
+  beta: "radial-gradient(25.56% 133.51% at 28.36% 45.54%, rgba(28, 28, 225, 0) 0%, rgba(28, 28, 225, 0.06) 100%)",
 }
 
 // TODO replace random variables w/ baseColor variables
@@ -239,6 +240,8 @@ const darkColors = {
   buttonColor: black300,
   eth2Gradient:
     "linear-gradient(285.24deg, #F7CBC0 0%, #FBEAE3 17.81%, #F4B1AB 29.8%, #8476D9 49.78%, #8DB4FF 69.77%);",
+  runNodeGradient:
+    "linear-gradient(0deg, rgba(153, 157, 244, 0.35) 0%, rgba(153, 157, 244, 0) 100%), linear-gradient(89.24deg, rgba(253, 240, 255, 0.7) -64.3%, rgba(212, 119, 119, 0.390104) -7.43%, rgba(188, 163, 220, 0.207813) 46.66%, rgba(196, 196, 196, 0) 99.16%);",
   primaryHover: primaryDark400,
   primaryActive: primaryDark200,
   ghostCardBackground: black300,
@@ -312,8 +315,7 @@ const darkColors = {
   homeBoxPurple: purpleDark,
   homeBoxPink: pinkDark,
   codeBackground: codeBoxDark,
-  beta:
-    "background: radial-gradient(25.56% 133.51% at 28.36% 45.54%, rgba(255, 143, 80, 0.72) 0%, rgba(255, 143, 80, 0.22) 100%)",
+  beta: "background: radial-gradient(25.56% 133.51% at 28.36% 45.54%, rgba(255, 143, 80, 0.72) 0%, rgba(255, 143, 80, 0.22) 100%)",
   cardGradient:
     "linear-gradient(49.21deg, rgba(127, 127, 213, 0.2) 19.87%, rgba(134, 168, 231, 0.2) 58.46%, rgba(145, 234, 228, 0.2) 97.05% )",
 }
