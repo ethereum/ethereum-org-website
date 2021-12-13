@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~Q1/Q2 2022">
+<UpgradeStatus dateKey="page-eth2-upgrades-merge-date">
   Esta actualización seguirá a la llegada de las cadenas de fragmentos. Pero es el momento en el que <a href="/eth2/vision/">la visión de Eth2</a> se hace realidad por completo: más escalabilidad, seguridad y sostenibilidad con el apoyo de la participación a toda la red.
 </UpgradeStatus>
 

@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus isShipped date="Kiszállított!">
+<UpgradeStatus isShipped dateKey="page-eth2-upgrades-beacon-date">
     A Beacon Chain december 1.-jén központi idő szerint délben indult el. További információért <a href="https://beaconscan.com/">nézd meg az adatokat</a>. Ha szeretnél segíteni a lánc érvényesítésében, akkor <a href="/eth2/staking/">letétbe tudod helyezni az ETH-edet</a>.
 </UpgradeStatus>
 

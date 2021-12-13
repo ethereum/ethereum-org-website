@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     Parça zincirleri, <a href="/eth2/beacon-chain/">İşaret Zinciri</a> başlatıldıktan sonra işin ne kadar hızlı ilerlediğine bağlı olarak 2023'de gönderilmelidir. Bu parçalar, Ethereum'a verileri depolamak ve bunlara erişmek için daha fazla kapasite sağlayacak, ancak kod yürütmek için kullanılmayacak. Detayları hala öğrenim aşamasında.
 </UpgradeStatus>
 

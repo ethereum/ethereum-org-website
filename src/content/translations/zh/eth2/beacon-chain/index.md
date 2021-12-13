@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus isShipped date="发货了！">
+<UpgradeStatus isShipped dateKey="page-eth2-upgrades-beacon-date">
     信标链于UTC时间12月1日中午启动。 要了解更多信息，<a href="https://beaconscan.com/">浏览这里</a>。 如果您想要参与验证该信标链，您可以<a href="/eth2/staking/">质押您的 ETH</a>。
 </UpgradeStatus>
 

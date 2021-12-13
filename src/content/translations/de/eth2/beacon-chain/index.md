@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus isShipped date="Versandt!">
+<UpgradeStatus isShipped dateKey="page-eth2-upgrades-beacon-date">
     Die Beacon Chain wurde am 1. Dezember um 12:00 UTC eingeführt. Um mehr zu erfahren, schau dir die <a href="https://beaconscan.com/">Daten</a> an. Wenn Du auch beim Validieren von Transaktionen auf der Beacon Chain helfen möchtest, kannst Du <a href="/eth2/staking/">Deine ETH staken</a>.
 </UpgradeStatus>
 

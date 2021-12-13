@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     Razdrobljene verige bi lahko bile uvedene enkrat v letu 2023, odvisno od hitrosti napredka po zagonu <a href="/eth2/beacon-chain/">oddajniške verige</a>. Ti drobci bodo Ethereumu zagotovili boljšo zmogljivost za obdelavo in dostop do podatkov, vendar se ne bodo uporabljali za izvajanje kode. Podrobnosti tega bodo še določene.
 </UpgradeStatus>
 

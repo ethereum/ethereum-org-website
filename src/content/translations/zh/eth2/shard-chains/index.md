@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     分片链应该在2021年的某个时候启动，这取决于在 <a href="/eth2/beacon-chain/">信标链</a> 启动后的工作进度。 这些分片将增强以太坊存储和访问数据的能力，但不会用于执行代码。 这方面的细节仍然有待确定。
 </UpgradeStatus>
 

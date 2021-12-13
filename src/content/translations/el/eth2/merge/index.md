@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~Q1/Q2 2022">
+<UpgradeStatus dateKey="page-eth2-upgrades-merge-date">
     Με αυτή την αναβάθμιση θα ακολουθήσει η άφιξη των shard chains. Αλλά είναι η στιγμή που το <a href="/eth2/vision/">όραμα του Eth2</a> θα υλοποιηθεί πλήρως – με μεγαλύτερη επεκτασιμότητα, ασφάλεια και επιβιωσιμότητα με την υποστήριξη ολόκληρου του δικτύου.
 </UpgradeStatus>
 

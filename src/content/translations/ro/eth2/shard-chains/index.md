@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     Lanțurile de fragmente ar trebui să fie livrate în 2023, în funcție de cât de repede progresează munca după lansarea <a href="/eth2/beacon-chain/">lanțului Beacon</a>. Aceste fragmente vor oferi Ethereum mai multă capacitate de stocare și acces la date, dar nu vor fi utilizate pentru executarea de cod. Detaliile despre aceasta sunt încă în curs de analiză.
 </UpgradeStatus>
 

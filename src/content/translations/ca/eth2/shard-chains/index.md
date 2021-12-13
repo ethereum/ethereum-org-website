@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     Les cadenes de fragments haurien de sortir en algun moment del 2023, depenent de la velocitat amb què progressin les tasques després del llançament de la <a href="/eth2/beacon-chain/">Cadena de Balisa.</a>. Aquests fragments dotaran Ethereum de més capacitat d'emmagatzematge i d'accés a dades, però no s'utilitzaran per executar codi. Encara s'estan esbrinant els detalls de tot plegat.
 </UpgradeStatus>
 

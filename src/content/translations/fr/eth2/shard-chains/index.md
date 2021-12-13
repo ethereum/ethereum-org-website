@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     Les chaînes de fragments devraient être lancées courant 2023, en fonction de la rapidité avec laquelle le travail progresse après le lancement de <a href="/eth2/beacon-chain/"> la chaîne phare</a>. Ces fragments donneront à Ethereum une plus grande capacité à stocker et à accéder aux données, mais ils ne seront pas utilisés pour exécuter du code. Les détails sont encore en cours d'élaboration.
 </UpgradeStatus>
 

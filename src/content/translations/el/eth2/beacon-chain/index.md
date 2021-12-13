@@ -14,7 +14,7 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus isShipped date="Αποστολή!">
+<UpgradeStatus isShipped dateKey="page-eth2-upgrades-beacon-date">
     Η κύρια αλυσίδα ανακοινώθηκε στις 1 Δεκεμβρίου το μεσημέρι UTC. Για να μάθετε περισσότερα, <a href="https://beaconscan.com/">εξερευνήστε τα δεδομένα</a>. Αν θέλετε να βοηθήσετε στην επικύρωση της αλυσίδας "chain", μπορείτε να <a href="/eth2/staking/">δεσμεύσετε (stake) τα ETH σας</a>.
 </UpgradeStatus>
 
