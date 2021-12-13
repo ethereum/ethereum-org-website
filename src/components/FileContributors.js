@@ -228,6 +228,12 @@ const FileContributors = ({ relativePath, className, editPath }) => {
   const [isModalOpen, setModalOpen] = useState(false)
   const intl = useIntl()
 
+  console.warn("***********************")
+  console.warn("***********************")
+  console.log({ relativePath, editPath })
+  console.warn("***********************")
+  console.warn("***********************")
+
   const { loading, error, data } = useQuery(COMMIT_HISTORY, {
     variables: { relativePath },
   })
