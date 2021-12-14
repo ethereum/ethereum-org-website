@@ -5,6 +5,8 @@ lang: en
 sidebar: true
 ---
 
+# Ethereum energy consumption {#introduction}
+
 Ethereum's current energy expenditure is too high and unsustainable. Resolving energy expenditure concerns without sacrificing security and decentralization is a significant technical challenge and has been a focus of research and development for years. Let's explore why building Ethereum has had a high environmental impact and how upcoming network upgrades will dramatically change this.
 
 ## Energy secures the network {#energy-secures-the-network}
@@ -71,7 +73,7 @@ While Ethereum's energy consumption has historically been substantial, there has
 - [Ethereum Emissions: A Bottom-up Estimate](https://kylemcdonald.github.io/ethereum-emissions/) _ Kyle McDonald_
 - [Ethereum Energy Consumption Index](https://digiconomist.net/ethereum-energy-consumption/) – _Digiconomist_
 
-## Related Topics {#related-topics}
+## Related topics {#related-topics}
 
 - [Ethereum's vision](/eth2/vision/)
 - [The Beacon Chain](/eth2/beacon-chain)
