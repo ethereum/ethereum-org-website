@@ -14,7 +14,7 @@ Használj Ethereumot decentralizált alkalmazások (avagy "dappok") fejlesztés�
 
 **Tedd meg az első lépést a Java - Ethereum integrálás útján**
 
-Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg a [ethereum.org/learn](/en/learn/) oldalt vagy a [ethereum.org/developers](/en/developers/) oldalt
+Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg a [ethereum.org/learn](/learn/) oldalt vagy a [ethereum.org/developers](/developers/) oldalt
 
 - [Blokklánc ismertetése](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Okosszerződések értelmezése](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -51,7 +51,7 @@ Tanuld meg a [Web3J](https://github.com/web3j/web3j) és a Hyperledger Besu, a k
 - [Eventeum (Event Listener)](https://github.com/ConsenSys/eventeum)
 - [Mahuta (IPFS Fejlesztői Eszközök)](https://github.com/ConsenSys/mahuta)
 
-Még több anyagot keresel? Tekintsd meg az [ethereum.org/developers](/en/developers/) oldalt
+Még több anyagot keresel? Tekintsd meg az [ethereum.org/developers](/developers/) oldalt
 
 ## Java közösségi hozzájárulók {#java-community-contributors}
 

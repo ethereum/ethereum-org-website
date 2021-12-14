@@ -19,7 +19,7 @@ A keretrendszerek olyan dobozon-kívüli funkciókat kínálnak, melyekkel:
 
 ## Előfeltételek {#prerequisites}
 
-Mielőtt elmerülnél a keretrendszerekben, javasoljuk, hogy olvasd át a bevezetés a [dappokba](/en/developers/docs/dapps/) és a [Ethereum stack](/en/developers/docs/ethereum-stack/) cikkeket.
+Mielőtt elmerülnél a keretrendszerekben, javasoljuk, hogy olvasd át a bevezetés a [dappokba](/developers/docs/dapps/) és a [Ethereum stack](/developers/docs/ethereum-stack/) cikkeket.
 
 ## Elérhető keretrendszerek {#available-frameworks}
 
@@ -67,7 +67,7 @@ Mielőtt elmerülnél a keretrendszerekben, javasoljuk, hogy olvasd át a beveze
 **The Graph -** **_Blokklánc adatok hatékony lekérdezése a The Graph-fal_**
 
 - [Honlap](https://thegraph.com/)
-- [Útmutató](/en/developers/tutorials/the-graph-fixing-web3-data-querying/)
+- [Útmutató](/developers/tutorials/the-graph-fixing-web3-data-querying/)
 
 **Alchemy -** **_Ethereum Fejlesztési Platform._**
 

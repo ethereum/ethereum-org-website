@@ -7,13 +7,13 @@ sidebar: true
 
 A Javascript a legnépszerűbb nyelvek között van az Ethereum ökoszisztémában. Valójában van egy [csapat](https://github.com/ethereumjs), mely célul tűzte ki, hogy a lehető legtöbb Ethereumot vigye be a JavaScriptbe.
 
-Lehetőség van JavaScriptet írni (vagy valami hasonlót) a [stack összes szintjén](/en/developers/docs/ethereum-stack/).
+Lehetőség van JavaScriptet írni (vagy valami hasonlót) a [stack összes szintjén](/developers/docs/ethereum-stack/).
 
 ## Interakció az Ethereummal {#interact-with-ethereum}
 
 ### JavaScript API könyvtárak {#javascript-api-libraries}
 
-Ha JavaScriptet szeretnél írni a blokklánc lekérdezéséhez, tranzakció küldéshez vagy más egyébhez, akkor ennek a legkézenfekvőbb módja egy [JavaScript API könyvtár](/en/developers/docs/apis/javascript/) használata. Ezek az API-ok lehetővé teszik a fejlesztőknek, hogy interakcióba lépjenek az [Ethereum hálózat csomópontjaival](/en/developers/docs/nodes-and-clients/).
+Ha JavaScriptet szeretnél írni a blokklánc lekérdezéséhez, tranzakció küldéshez vagy más egyébhez, akkor ennek a legkézenfekvőbb módja egy [JavaScript API könyvtár](/developers/docs/apis/javascript/) használata. Ezek az API-ok lehetővé teszik a fejlesztőknek, hogy interakcióba lépjenek az [Ethereum hálózat csomópontjaival](/developers/docs/nodes-and-clients/).
 
 Ezekkel a könyvtárakkal okosszerződésekkel léphetsz kapcsolatba az Ethereumon, így létre lehet hozni egy dappot, ahol elég csak a JavaScriptet használni már létező okosszerződésekkel történő interakcióhoz.
 
@@ -26,13 +26,13 @@ Ezekkel a könyvtárakkal okosszerződésekkel léphetsz kapcsolatba az Ethereum
 
 Ha egy Javascript fejlesztő vagy és szeretnéd megírni a saját okosszerződéseidet, akkor érdemes megismerkedned a [Solidity-vel](https://solidity.readthedocs.io). Ez a legnépszerűbb okosszerződés nyelv és nagyrészt a JavaScript inspirálta.
 
-Többet az [okosszerződésekről](/en/developers/docs/smart-contracts/).
+Többet az [okosszerződésekről](/developers/docs/smart-contracts/).
 
 ## Értsd meg a protokollt {#understand-the-protocol}
 
 ### Az Ethereum virtuális gép (EVM) {#the-ethereum-virtual-machine}
 
-Van az [Ethereum virtuális gépnek](/en/developers/docs/evm/) egy JavaScript implementációja. Támogatja a legfrissebb elágazási (fork) szabályokat. Az elágazási szabályok az EVM-en végzett tervezett frissítésekből adódó szabályok.
+Van az [Ethereum virtuális gépnek](/developers/docs/evm/) egy JavaScript implementációja. Támogatja a legfrissebb elágazási (fork) szabályokat. Az elágazási szabályok az EVM-en végzett tervezett frissítésekből adódó szabályok.
 
 Különböző JavaScript csomagokra oszlik, amelyeket áttekinthetsz a jobb megértés érdekében:
 

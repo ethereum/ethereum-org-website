@@ -10,7 +10,7 @@ Ethereum, podobnie jak Bitcoin, używa obecnie protokołu konsensusu o nazwie [p
 
 ## Warunki wstępne {#prerequisites}
 
-Aby lepiej zrozumieć tę stronę, zalecamy najpierw zapoznać się z [transakcjami](/en/developers/docs/transactions/) i [blokami](/en/developers/docs/blocks/).
+Aby lepiej zrozumieć tę stronę, zalecamy najpierw zapoznać się z [transakcjami](/developers/docs/transactions/) i [blokami](/developers/docs/blocks/).
 
 ## Czym jest proof-of-work (PoW)? {#what-is-pow}
 

@@ -14,13 +14,13 @@ Le transazioni sono istruzioni firmate crittograficamente da account. Un account
 
 ## Prerequisiti {#prerequisites}
 
-Per comprendere meglio questa pagina, raccomandiamo di leggere la sezione [Account](/en/developers/docs/accounts/) e la nostra [introduzione ad Ethereum](/en/developers/docs/intro-to-ethereum/).
+Per comprendere meglio questa pagina, raccomandiamo di leggere la sezione [Account](/developers/docs/accounts/) e la nostra [introduzione ad Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Cos'è una transazione? {#whats-a-transaction}
 
 Con transazione Ethereum ci si riferisce ad un'azione iniziata da un account di proprietà esterna, in altre parole gestito dall'uomo e non da un contratto. Per esempio, se Bob manda ad Alice 1 ETH, sull'account di Bob verrà addebitato l'importo e su quello di Alice accreditato. Questa azione che modifica lo stato avviene all'interno di una transazione.
 
-![Diagramma che mostra un cambiamento di stato causato da una transazione](./tx.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagramma che mostra un cambiamento di stato causato da una transazione](../../../../../developers/docs/transactions/tx.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Le transazioni, che cambiano lo stato dell'EVM, devono essere trasmesse all'intera rete. Ogni nodo può trasmettere una richiesta di esecuzione di una transazione sull'EVM; in seguito, un miner eseguirà la transazione e propagherà il cambiamento di stato risultante al resto della rete.
 
@@ -35,7 +35,7 @@ Una transazione inviata contiene le seguenti informazioni:
 - `gasLimit` – Importo massimo di unità di carburante che possono essere consumate dalla transazione. Le unità di carburante rappresentano fasi di calcolo
 - `gasPrice` – Commissione che il mittente paga per unità di carburante
 
-Il carburante è un riferimento per il calcolo necessario perché un miner elabori la transazione. Gli utenti devono pagare una commissione per questo calcolo. Il `gasLimit` e il `gasPrice` determinano la commissione massima sulla transazione pagata al miner. [Maggiori informazioni sul carburante](/en/developers/docs/gas/).
+Il carburante è un riferimento per il calcolo necessario perché un miner elabori la transazione. Gli utenti devono pagare una commissione per questo calcolo. Il `gasLimit` e il `gasPrice` determinano la commissione massima sulla transazione pagata al miner. [Maggiori informazioni sul carburante](/developers/docs/gas/).
 
 L'oggetto della transazione sarà qualcosa del genere:
 
@@ -124,7 +124,7 @@ Il miner che elabora la transazione riceverà **+0,0042 ETH**
 
 Il carburante è richiesto anche per ogni interazione con Smart Contract.
 
-![Diagramma che mostra come viene rimborsato il carburante inutilizzato](./gas-tx.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagramma che mostra come viene rimborsato il carburante inutilizzato](../../../../../developers/docs/transactions/gas-tx.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Il carburante non utilizzato viene rimborsato sull'account dell'utente.
 
@@ -289,7 +289,7 @@ _Conosci una risorsa della community che ti è stata utile? Modifica questa pagi
 
 ## Argomenti correlati {#related-topics}
 
-- [Account](/en/developers/docs/accounts/)
-- [Macchina virtuale Ethereum (EVM)](/en/developers/docs/evm/)
-- [Carburante](/en/developers/docs/gas/)
-- [Mining](/en/developers/docs/consensus-mechanisms/pow/mining/)
+- [Account](/developers/docs/accounts/)
+- [Macchina virtuale Ethereum (EVM)](/developers/docs/evm/)
+- [Carburante](/developers/docs/gas/)
+- [Mining](/developers/docs/consensus-mechanisms/pow/mining/)

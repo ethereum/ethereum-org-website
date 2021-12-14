@@ -15,7 +15,7 @@ La mejor manera de describir una blockchain es definirla como una especie de bas
 
 Cada nodo de la red debe acordar cada nuevo bloque y la cadena como conjunto. Así, todo el mundo dispone de los mismos datos. Para que esto funcione, las cadenas de bloques necesitan disponer de un mecanismo de consenso.
 
-Actualmente Ethereum utiliza un mecanismo de consenso llamado "Prueba de trabajo". Esto significa que cualquiera que quiera añadir nuevos bloques a la cadena deberá resolver un difícil rompecabezas, para el que se precisa mucha potencia computacional. Resolver el rompecabezas "prueba" que has invertido los recursos computacionales necesarios. Este proceso se denomina [minería](/en/developers/docs/consensus-mechanisms/pow/mining/). La minería puede entenderse como un proceso de prueba y error, pero la exitosa adición de un bloque se recompensa con Eth. Por otro lado, el envío de bloques fraudulentos no es una opción atractiva considerando los recursos que se invierten en producir el bloque.
+Actualmente Ethereum utiliza un mecanismo de consenso llamado "Prueba de trabajo". Esto significa que cualquiera que quiera añadir nuevos bloques a la cadena deberá resolver un difícil rompecabezas, para el que se precisa mucha potencia computacional. Resolver el rompecabezas "prueba" que has invertido los recursos computacionales necesarios. Este proceso se denomina [minería](/developers/docs/consensus-mechanisms/pow/mining/). La minería puede entenderse como un proceso de prueba y error, pero la exitosa adición de un bloque se recompensa con Eth. Por otro lado, el envío de bloques fraudulentos no es una opción atractiva considerando los recursos que se invierten en producir el bloque.
 
 Los nuevos bloques son transmitidos a los nodos de la red, y una vez revisados y verificados, se actualiza el estado para todos.
 
@@ -97,7 +97,7 @@ El volumen de transacciones es muy alto, así las transacciones se "consensúan"
 
 Un fragmento de código reutilizable (un programa), que publica un desarrollador en la memoria de la EVM. Cualquiera que pueda solicitar que el código del contrato inteligente se ejecute al hacer una solicitud de transacción. Como los desarrolladores pueden escribir arbitrariamente aplicaciones ejecutables en la EVM (juegos, mercados, instrumentos financieros, etc.) mediante la publicación de contratos inteligentes, estos suelen denominarse [dapps o aplicaciones descentralizadas](/developers/docs/dapps/).
 
-[Más sobre Contratos Inteligentes](/en/developers/docs/smart-contracts/)
+[Más sobre Contratos Inteligentes](/developers/docs/smart-contracts/)
 
 ## Leer más {#further-reading}
 

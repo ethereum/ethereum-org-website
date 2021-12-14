@@ -19,7 +19,7 @@ Te frameworki mają wiele gotowych funkcji, takich jak:
 
 ## Warunki wstępne {#prerequisites}
 
-Przed zagłębieniem się w frameworki zalecamy przeczytanie naszego wprowadzenia do [aplikacji zdecentralizowanych](/en/developers/docs/dapps/) i [stosu Ethereum](/en/developers/docs/ethereum-stack/).
+Przed zagłębieniem się w frameworki zalecamy przeczytanie naszego wprowadzenia do [aplikacji zdecentralizowanych](/developers/docs/dapps/) i [stosu Ethereum](/developers/docs/ethereum-stack/).
 
 ## Dostępne frameworki {#available-frameworks}
 
@@ -67,7 +67,7 @@ Przed zagłębieniem się w frameworki zalecamy przeczytanie naszego wprowadzeni
 **The Graph —** **_protokół Graph do efektywnego odpytywania danych blockchainu_**
 
 - [Strona internetowa](https://thegraph.com/)
-- [Samouczek](/en/developers/tutorials/the-graph-fixing-web3-data-querying/)
+- [Samouczek](/developers/tutorials/the-graph-fixing-web3-data-querying/)
 
 **Alchemy —** **_platforma programistyczna Ethereum._**
 

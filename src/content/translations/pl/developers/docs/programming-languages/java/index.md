@@ -14,7 +14,7 @@ Użyj Ethereum do tworzenia aplikacji zdecentralizowanych (lub „dapp”), któ
 
 **Rozpocznij integrowanie Javy z Ethereum**
 
-Potrzebujesz bardziej podstawowych informacji? Sprawdź na stronach [ethereum.org/learn](/en/learn/) lub [ethereum.org/developers.](/en/developers/)
+Potrzebujesz bardziej podstawowych informacji? Sprawdź na stronach [ethereum.org/learn](/learn/) lub [ethereum.org/developers.](/developers/)
 
 - [Objaśnienia dotyczące blockchainu](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Informacje o kontraktach inteligentnych](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -51,7 +51,7 @@ Dowiedz się, jak korzystać z [Web3J](https://github.com/web3j/web3j) i Hyperle
 - [Eventeum (obserwator zdarzeń)](https://github.com/ConsenSys/eventeum)
 - [Mahuta (narzędzia deweloperskie IPFS)](https://github.com/ConsenSys/mahuta)
 
-Szukasz więcej materiałów? Sprawdź na stronie [ethereum.org/developers.](/en/developers/)
+Szukasz więcej materiałów? Sprawdź na stronie [ethereum.org/developers.](/developers/)
 
 ## Współtwórcy społeczności Java {#java-community-contributors}
 

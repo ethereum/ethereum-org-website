@@ -5,7 +5,7 @@ lang: es
 sidebar: true
 ---
 
-Una aplicación descentralizada (dapp) es una aplicación diseñada en una red descentralizada, que combina un [contrato inteligente](/en/developers/docs/smart-contracts/) y una interfaz de usuario de front-end. Nota: En Ethereum, los contratos inteligentes son accesibles y transparentes (como las API abiertas), para que tu dapp pueda incluir un contrato inteligente que haya escrito otra persona.
+Una aplicación descentralizada (dapp) es una aplicación diseñada en una red descentralizada, que combina un [contrato inteligente](/developers/docs/smart-contracts/) y una interfaz de usuario de front-end. Nota: En Ethereum, los contratos inteligentes son accesibles y transparentes (como las API abiertas), para que tu dapp pueda incluir un contrato inteligente que haya escrito otra persona.
 
 ## Requisitos previos {#prerequisites}
 
@@ -24,7 +24,7 @@ Una dapp puede tener un código frontend y una interfaz de usuario escrita en cu
 
 ### Más información sobre los contratos inteligentes {#on-smart-contracts}
 
-Para presentar las dapps, necesitamos hablar de los contratos inteligentes, un backend de una dapp, a falta de un mejor término. Si deseas obtener una descripción detallada, visita nuestra sección sobre [contratos inteligentes](/en/developers/docs/smart-contracts/).
+Para presentar las dapps, necesitamos hablar de los contratos inteligentes, un backend de una dapp, a falta de un mejor término. Si deseas obtener una descripción detallada, visita nuestra sección sobre [contratos inteligentes](/developers/docs/smart-contracts/).
 
 Un contrato inteligente es un código que reside en la blockchain de Ethereum y se ejecuta exactamente como ha sido programado. Una vez que estos se implementan por la red, ya no se pueden modificar. Las dapps pueden ser descentralizadas debido a que están controladas por la lógica escrita dentro del contrato, no por una persona o compañía. Esto también significa que necesitas diseñar tus contratos cuidadosamente y probarlos minuciosamente.
 
@@ -82,5 +82,5 @@ _¿Conoces algún recurso en la comunidad que te haya servido de ayuda? Edita es
 
 ## Temas relacionados {#related-topics}
 
-- [Introducción al bloque de Ethereum](/en/developers/docs/ethereum-stack/)
-- [Frameworks de desarrollo](/en/developers/docs/frameworks/)
+- [Introducción al bloque de Ethereum](/developers/docs/ethereum-stack/)
+- [Frameworks de desarrollo](/developers/docs/frameworks/)

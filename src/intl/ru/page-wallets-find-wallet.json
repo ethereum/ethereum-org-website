@@ -63,7 +63,7 @@
   "page-find-wallet-myetherwallet-logo-alt": "Логотип MyEtherWallet",
   "page-find-wallet-new-to-wallets": "Не разбираетесь в кошельках? Вот обзор, чтобы помочь вам начать работать с ними.",
   "page-find-wallet-new-to-wallets-link": "Кошельки Ethereum",
-  "page-find-wallet-not-all-features": "Нет кошелька со всеми этими функциями",
+  "page-find-wallet-not-all-features": "Нет кошелька со всеми этими функциями <strong>еще</strong>",
   "page-find-wallet-not-endorsements": "Список кошельков, перечисленных на этой странице, не одобрен официально и предоставляется только в информационных целях. Их описания были предоставлены самими компаниями-разработчиками кошельков. Мы добавляем продукты на эту страницу на основе критериев в нашей",
   "page-find-wallet-overwhelmed": "кошельки Ethereum ниже. Слишком много? Попробуйте отфильтровать кошельки по функциям.",
   "page-find-wallet-pillar-logo-alt": "Логотип Pillar",
@@ -88,7 +88,6 @@
   "page-find-wallet-we-found": "Мы нашли",
   "page-find-wallet-withdraw": "Вывести средства в банк",
   "page-find-wallet-withdraw-desc": "Вы можете вывести свои ETH прямо на свой банковский счет, не пользуясь услугами биржи.",
-  "page-find-wallet-yet": "еще",
   "page-find-wallet-zengo-logo-alt": "Логотип ZenGo",
   "page-stake-eth": "Вложить ETH"
 }

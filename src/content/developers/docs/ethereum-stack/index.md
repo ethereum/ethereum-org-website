@@ -57,4 +57,6 @@ Check out our guide to [set up a local development environment](/developers/loca
 
 ## Further reading {#further-reading}
 
+- [The Architecture of a Web 3.0 application](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
+
 _Know of a community resource that helped you? Edit this page and add it!_

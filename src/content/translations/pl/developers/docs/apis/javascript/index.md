@@ -262,8 +262,8 @@ _Wiesz o zasobach społecznościowych, które Ci pomogły? Wyedytuj tę stronę 
 
 ## Powiązane tematy {#related-topics}
 
-- [Węzły i klienci](/en/developers/docs/nodes-and-clients/)
-- [Ramy rozwojowe](/en/developers/docs/frameworks/)
+- [Węzły i klienci](/developers/docs/nodes-and-clients/)
+- [Ramy rozwojowe](/developers/docs/frameworks/)
 
 ## Powiązane samouczki {#related-tutorials}
 

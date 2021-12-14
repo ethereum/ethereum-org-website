@@ -9,6 +9,7 @@ import Tooltip from "./Tooltip"
 import Link from "./Link"
 import Icon from "./Icon"
 
+import { isLangRightToLeft } from "../utils/translations"
 import { getData } from "../utils/cache"
 
 const Value = styled.h3`
@@ -113,7 +114,7 @@ const Lines = styled.div`
 
 const ButtonContainer = styled.div`
   position: absolute;
-  right: 20px;
+  ${({ dir }) => (dir === "rtl" ? "left:" : "right:")} 20px;
   bottom: 20px;
   font-family: ${(props) => props.theme.fonts.monospace};
 `
@@ -145,7 +146,7 @@ const ButtonToggle = styled(Button)`
 
 const ranges = ["30d", "90d"]
 
-const GridItem = ({ metric }) => {
+const GridItem = ({ metric, dir }) => {
   const { title, description, state, buttonContainer, range } = metric
   const isLoading = !state.value
   const value = state.hasError ? (
@@ -213,7 +214,7 @@ const GridItem = ({ metric }) => {
       {!state.hasError && !isLoading && (
         <>
           <Lines>{chart}</Lines>
-          <ButtonContainer>{buttonContainer}</ButtonContainer>
+          <ButtonContainer dir={dir}>{buttonContainer}</ButtonContainer>
         </>
       )}
       <Value>{value}</Value>
@@ -348,7 +349,7 @@ const StatsBoxGrid = () => {
         const data = result
           .map(({ UTCDate, TotalNodeCount }) => ({
             timestamp: new Date(UTCDate).getTime(),
-            value: TotalNodeCount,
+            value: Number(TotalNodeCount),
           }))
           .sort((a, b) => a.timestamp - b.timestamp)
         const value = formatNodes(data[data.length - 1].value)
@@ -496,11 +497,11 @@ const StatsBoxGrid = () => {
       range: selectedRangeNodes,
     },
   ]
-
+  const dir = isLangRightToLeft(intl.locale) ? "rtl" : "ltr"
   return (
     <Grid>
       {metrics.map((metric, idx) => (
-        <GridItem key={idx} metric={metric} />
+        <GridItem key={idx} metric={metric} dir={dir} />
       ))}
     </Grid>
   )

@@ -43,7 +43,6 @@
   "page-eth2-vision-sustainability-desc-3": "Bár a stakinget a Beacon Chain vezeti be, az általunk használt Ethereum egy ideig párhuzamosan fog futni, mielőtt „összeolvadna” vagy „dokkolna” az Eth2 frissítésekkel. Az egyik rendszert ETH tartja biztonságban, a másikat számítási erő. Ez azért van, mert eleinte a shard láncok nem fogják tudni kezelni például a számláinkat vagy dappokat. Tehát nem feledkezhetünk meg a bányászatról és a főhálózatról.",
   "page-eth2-vision-sustainability-desc-8": "Amint a Beacon Chain és a sharding fejlesztések működnek, elkezdődik a főhálózat bedokkolásával kapcsolatos munka az új rendszerrel. Ez a főhálózatot egy sharddá alakítja, amit így ETH fog biztonságban tartani és kevésbé lesz energiaintenzív.",
   "page-eth2-vision-sustainability-subtitle": "Az Ethereumnak zöldebbnek kell lennie.",
-  "page-eth2-vision-The": ". The",
   "page-eth2-vision-title": "Az Eth2 vízió",
   "page-eth2-vision-title-1": "Feltorlódott hálózat",
   "page-eth2-vision-title-2": "Lemezterület",

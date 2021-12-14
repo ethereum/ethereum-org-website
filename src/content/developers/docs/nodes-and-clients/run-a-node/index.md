@@ -82,6 +82,8 @@ Executable binaries for stable Mainnet client implementations can be downloaded 
 - [Besu](https://pegasys.tech/solutions/hyperledger-besu/),
 - [Erigon](https://github.com/ledgerwatch/erigon).
 
+**Note that OpenEthereum [has been deprecated](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) and is no longer being maintained.** Use it with caution and preferably switch to another client implementation.
+
 ### Starting the client {#starting-the-client}
 
 Before starting Ethereum client software, perform a last check that your environment is ready. For example, make sure:

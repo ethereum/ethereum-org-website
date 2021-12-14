@@ -137,7 +137,7 @@ OpenEthereum is a fast, feature-rich and advanced CLI-based Ethereum client. It'
 
 OpenEthereum is developed using the cutting-edge Rust programming language and licensed under the GPLv3.
 
-**Note that OpenEthereum [has been deprecated](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) and is no longer be maintained.** Use it with caution and preferably switch to another client implementation.
+**Note that OpenEthereum [has been deprecated](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) and is no longer being maintained.** Use it with caution and preferably switch to another client implementation.
 
 #### Nethermind {#nethermind}
 
@@ -163,11 +163,11 @@ To follow and verify current data in the network, the Ethereum client needs to s
 
 Synchronization modes represent different approaches to this process with various trade-offs. Clients also vary in their implementation of sync algorithms. Always refer to the official documentation of your chosen client for specifics on implementation.
 
-#### Overview of strategies
+#### Overview of strategies {#overview-of-strategies}
 
 General overview of synchronization approaches used in Mainnet ready clients:
 
-##### Full sync
+##### Full sync {#full-sync}
 
 Full sync downloads all blocks (including headers, transactions, and receipts) and generates the state of the blockchain incrementally by executing every block from genesis.
 

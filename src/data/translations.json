@@ -1,150 +1,144 @@
 {
   "en": {
-    "version": 2.4,
     "language": "English"
   },
   "ar": {
-    "version": 1.1,
     "language": "العربية"
   },
   "bg": {
-    "version": 2.0,
     "language": "български"
   },
   "bn": {
-    "version": 1.1,
-    "language": "বাংলা"
+    "language": "বাংলা",
+    "useLegacyHomepage": true
   },
   "ca": {
-    "version": 2.0,
-    "language": "Català"
+    "language": "Català",
+    "useLegacyHomepage": true
   },
   "cs": {
-    "version": 1.1,
-    "language": "Čeština"
+    "language": "Čeština",
+    "useLegacyHomepage": true
   },
   "de": {
-    "version": 2.0,
-    "language": "Deutsch"
+    "language": "Deutsch",
+    "useLegacyHomepage": true
   },
   "el": {
-    "version": 2.0,
-    "language": "Ελληνικά"
+    "language": "Ελληνικά",
+    "useLegacyHomepage": true
   },
   "es": {
-    "version": 2.1,
-    "language": "Español"
+    "language": "Español",
+    "useLegacyHomepage": true
   },
   "fa": {
-    "version": 1.0,
-    "language": "فارسی"
+    "language": "فارسی",
+    "useLegacyHomepage": true
   },
   "fi": {
-    "version": 1.1,
-    "language": "Suomi"
+    "language": "Suomi",
+    "useLegacyHomepage": true
   },
   "fr": {
-    "version": 2.1,
-    "language": "Français"
+    "language": "Français",
+    "useLegacyHomepage": true
   },
   "hi": {
-    "version": 2.0,
-    "language": "हिन्दी"
+    "language": "हिन्दी",
+    "useLegacyHomepage": true
   },
   "hr": {
-    "version": 2.0,
-    "language": "Hrvatski"
+    "language": "Hrvatski",
+    "useLegacyHomepage": true
   },
   "hu": {
-    "version": 2.1,
     "language": "Magyar"
   },
   "id": {
-    "version": 1.1,
-    "language": "Bahasa Indonesia"
+    "language": "Bahasa Indonesia",
+    "useLegacyHomepage": true
   },
   "ig": {
-    "version": 1.0,
-    "language": "Ibo"
+    "language": "Ibo",
+    "useLegacyHomepage": true
   },
   "it": {
-    "version": 2.1,
-    "language": "Italiano"
+    "language": "Italiano",
+    "useLegacyHomepage": true
   },
   "ja": {
-    "version": 2.0,
-    "language": "日本語"
+    "language": "日本語",
+    "useLegacyHomepage": true
   },
   "ko": {
-    "version": 1.1,
-    "language": "한국어"
+    "language": "한국어",
+    "useLegacyHomepage": true
   },
   "lt": {
-    "version": 1.1,
-    "language": "Lietuvis"
+    "language": "Lietuvis",
+    "useLegacyHomepage": true
   },
   "ml": {
-    "version": 2.0,
-    "language": "മലയാളം"
+    "language": "മലയാളം",
+    "useLegacyHomepage": true
   },
   "nl": {
-    "version": 1.0,
-    "language": "Nederlands"
+    "language": "Nederlands",
+    "useLegacyHomepage": true
   },
   "nb": {
-    "version": 1.1,
-    "language": "Norsk"
+    "language": "Norsk",
+    "useLegacyHomepage": true
   },
   "pl": {
-    "version": 2.2,
-    "language": "Polski"
+    "language": "Polski",
+    "useLegacyHomepage": true
   },
   "pt": {
-    "version": 1.0,
-    "language": "Português"
+    "language": "Português",
+    "useLegacyHomepage": true
   },
   "pt-br": {
-    "version": 1.1,
-    "language": "Português"
+    "language": "Português",
+    "useLegacyHomepage": true
   },
   "ro": {
-    "version": 2.2,
-    "language": "Română"
+    "language": "Română",
+    "useLegacyHomepage": true
   },
   "ru": {
-    "version": 2.0,
     "language": "Pусский"
   },
   "se": {
-    "version": 1.1,
-    "language": "Svenska"
+    "language": "Svenska",
+    "useLegacyHomepage": true
   },
   "sk": {
-    "version": 1.1,
-    "language": "Slovenský"
+    "language": "Slovenský",
+    "useLegacyHomepage": true
   },
   "sl": {
-    "version": 2.0,
-    "language": "Slovenščina"
+    "language": "Slovenščina",
+    "useLegacyHomepage": true
   },
   "tr": {
-    "version": 2.0,
-    "language": "Türkçe"
+    "language": "Türkçe",
+    "useLegacyHomepage": true
   },
   "uk": {
-    "version": 2.0,
     "language": "Українська"
   },
   "vi": {
-    "version": 1.1,
-    "language": "Tiếng Việt"
+    "language": "Tiếng Việt",
+    "useLegacyHomepage": true
   },
   "zh": {
-    "version": 2.2,
-    "language": "简体中文"
+    "language": "简体中文",
+    "useLegacyHomepage": true
   },
   "zh-tw": {
-    "version": 1.1,
-    "language": "繁體中文"
+    "language": "繁體中文",
+    "useLegacyHomepage": true
   }
 }

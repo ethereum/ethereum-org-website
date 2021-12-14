@@ -158,4 +158,4 @@ Iată câteva dintre aplicațiile de întreprindere care au fost implementate pe
 
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _plățile de energie electrică_
 
-Dacă dorești să adaugi la această listă, consultă [instrucțiunile pentru contribuție](https://ethereum.org/en/contributing/).
+Dacă dorești să adaugi la această listă, consultă [instrucțiunile pentru contribuție](/contributing/).

@@ -43,7 +43,6 @@
   "page-eth2-vision-sustainability-desc-3": "虽然信标链即将引入权益质押，我们正在使用的以太坊将在合并Eth2更新前的一段时间内并行运作。一个系统由ETH保护，一个系统由算力保护。这是因为在一开始，分片链还无法和类似我们的账户或者去中心化应用这样的实体交互，因此我们无法直接丢弃挖矿或者主网。",
   "page-eth2-vision-sustainability-desc-8": "一旦信标链和分片链的升级上线运行，改造主网以适配新系统的工作就将启动。这会把现在的主网改造成一个由ETH保障安全的分片，因此节省大量能量开销。",
   "page-eth2-vision-sustainability-subtitle": "以太坊需要变得更加绿色环保。",
-  "page-eth2-vision-The": ". The",
   "page-eth2-vision-title": "Eth2愿景",
   "page-eth2-vision-title-1": "网络拥堵",
   "page-eth2-vision-title-2": "磁盘空间",

@@ -16,7 +16,7 @@ Forks are when major technical upgrades or changes need to be made to the networ
 
 When upgrades are needed in traditional, centrally-controlled software, the company will just publish a new version for the end-user. Blockchains work differently because there is no central ownership. [Ethereum clients](/developers/docs/nodes-and-clients/) must update their software to implement the new fork rules. Plus block creators (miners in a proof-of-work world, validators in a proof-of-stake world) and nodes must create blocks and validate against the new rules. [More on consensus mechanisms](/developers/docs/consensus-mechanisms/)
 
-These rule changes may create a temporary split in the network. New blocks could be produced according to the new rules or the old ones. Forks are usually agreed upon ahead of time so that clients adopt the changes in unison and the fork with the upgrades becomes the main chain. However in rare cases, disagreements over forks can cause the network to permanently split – most notably the creation of Ethereum Classic with the [DAO fork](#dao-fork).
+These rule changes may create a temporary split in the network. New blocks could be produced according to the new rules or the old ones. Forks are usually agreed upon ahead of time so that clients adopt the changes in unison and the fork with the upgrades becomes the main chain. However, in rare cases, disagreements over forks can cause the network to permanently split – most notably the creation of Ethereum Classic with the [DAO fork](#dao-fork).
 
 </ExpandableCard>
 
@@ -24,15 +24,16 @@ These rule changes may create a temporary split in the network. New blocks could
 
 ## 2021 {#2021}
 
-### _(In Progress)_ Arrow Glacier {#arrow-glacier}
+### Arrow Glacier {#arrow-glacier}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Estimated: Dec-08-2021</code><br />
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Dec-09-2021 07:55:23 PM +UTC</code><br />
 <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Block number: <a href="https://etherscan.io/block/13773000">13,773,000</a><br />
-<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: to be determined<br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: $4111 USD<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20211207064430/https://ethereum.org/en/">ethereum.org on waybackmachine</a>
 
 #### Summary {#arrow-glacier-summary}
 
-The Arrow Glacier network upgrade pushes back the [difficulty bomb](/glossary/#difficulty-bomb) by several months. This is the only change introduced in this upgrade, and is similar in nature to the [Muir Glacier](#muir-glacier) upgrade. Similar changes have been performed on the [Byzantium](#byzantium), [Constantinople](#constantinople) and [London](#london) network upgrades.
+The Arrow Glacier network upgrade pushed back the [difficulty bomb](/glossary/#difficulty-bomb) by several months. This is the only change introduced in this upgrade, and is similar in nature to the [Muir Glacier](#muir-glacier) upgrade. Similar changes have been performed on the [Byzantium](#byzantium), [Constantinople](#constantinople) and [London](#london) network upgrades.
 
 - [EF Blog - Arrow Glacier Upgrade Announcement](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders - Ethereum Arrow Glacier Upgrade](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
@@ -79,7 +80,7 @@ Altair was the first major network upgrade that had an exact rollout time. Every
 
 #### Summary {#london-summary}
 
-The London upgrade introduced [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), which reformed the transaction fee market, along with changes to how gas refunds are handled and the [Ice Age](https://ethereum.org/en/glossary/#ice-age) schedule.
+The London upgrade introduced [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), which reformed the transaction fee market, along with changes to how gas refunds are handled and the [Ice Age](/glossary/#ice-age) schedule.
 
 - [Are you a dApp developer? Be sure to upgrade your libraries and tooling.](https://github.com/ethereum/eth1.0-specs/blob/master/network-upgrades/ecosystem-readiness.md)
 - [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)

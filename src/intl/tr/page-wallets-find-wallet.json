@@ -63,7 +63,7 @@
   "page-find-wallet-myetherwallet-logo-alt": "MyEtherWallet logosu",
   "page-find-wallet-new-to-wallets": "Cüzdanlarda yeni misiniz? İşte başlamanıza yardımcı olacak bir genel bakış.",
   "page-find-wallet-new-to-wallets-link": "Ethereum cüzdanları",
-  "page-find-wallet-not-all-features": "Hiçbir cüzdan bu özelliklerin tümüne sahip değildir",
+  "page-find-wallet-not-all-features": "Hiçbir cüzdan bu özelliklerin tümüne sahip değildir <strong>henüz</strong>",
   "page-find-wallet-not-endorsements": "Bu sayfada listelenen cüzdanlar resmi onaylar değildir ve yalnızca bilgilendirme amaçlıdır. Açıklamaları, cüzdan şirketlerinin kendileri tarafından sağlanmıştır. Şuradaki kriterlere göre bu sayfaya ürünler ekliyoruz",
   "page-find-wallet-overwhelmed": "Aşağıdaki Ethereum cüzdanları. Bunaldınız mı? Özelliklere göre filtrelemeyi deneyin.",
   "page-find-wallet-pillar-logo-alt": "Pillar logosu",
@@ -88,7 +88,6 @@
   "page-find-wallet-we-found": "Bulduk",
   "page-find-wallet-withdraw": "Bankadan para çekme",
   "page-find-wallet-withdraw-desc": "ETH'nizi bir borsadan geçmeden doğrudan banka hesabınıza nakde çevirebilirsiniz.",
-  "page-find-wallet-yet": "henüz",
   "page-find-wallet-zengo-logo-alt": "ZenGo logosu",
   "page-stake-eth": "ETH stake etme"
 }

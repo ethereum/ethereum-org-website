@@ -127,13 +127,14 @@ export const NavLink = styled(Link)`
   }
 `
 
-export const FakeLink = styled.div`
+// Avoid DOM error for nested links
+export const FakeLink = styled.span`
   color: ${(props) => props.theme.colors.primary};
   cursor: pointer;
 `
 
 // Avoid DOM error for nested links
-export const FakeLinkExternal = styled.div`
+export const FakeLinkExternal = styled.span`
   color: ${(props) => props.theme.colors.primary};
   &:after {
     margin-left: 0.125em;
@@ -437,5 +438,54 @@ export const CardItem = styled(Link)`
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     flex: 1 1 240px;
     margin: 1rem 0;
+  }
+`
+
+// Common styled option buttons
+export const OptionContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
+    width: 100%;
+  }
+`
+
+export const Option = styled.div`
+  border-radius: 2rem;
+  border: 1px solid
+    ${(props) =>
+      props.isActive ? props.theme.colors.primary : props.theme.colors.text};
+  box-shadow: ${(props) =>
+    props.isActive ? props.theme.colors.tableBoxShadow : `none`};
+  display: flex;
+  color: ${(props) =>
+    props.isActive ? props.theme.colors.primary : props.theme.colors.text};
+  align-items: center;
+  padding: 1rem 1.5rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+    border: 1px solid ${(props) => props.theme.colors.primary};
+  }
+`
+
+export const OptionText = styled.div`
+  font-size: ${(props) => props.fontSize};
+  line-height: 100%;
+  text-align: center;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    font-size: 16px;
+    font-weight: 600;
   }
 `
