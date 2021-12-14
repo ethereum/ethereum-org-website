@@ -278,6 +278,12 @@ ethers.utils.formatEther(balance)
 - [Documentation](https://docs.alchemyapi.io/documentation/alchemy-web3)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
+
+**eth-fun -** **_Functional and state-less library for the Ethereum JSON-RPC._**
+
+- [Documentation](https://github.com/rugpullindex/eth-fun/blob/master/API.md)
+- [GitHub](https://github.com/rugpullindex/eth-fun)
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
