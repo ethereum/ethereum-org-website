@@ -179,8 +179,12 @@ exports.onCreateNode = async ({ node, getNode, actions }) => {
     }
 
     const absolutePath = node.fileAbsolutePath
-    const relativePathStart = absolutePath.lastIndexOf("src/")
-    const relativePath = absolutePath.substring(relativePathStart)
+    let relativePath = absolutePath.startsWith(__dirname)
+      ? absolutePath.slice(__dirname.length)
+      : absolutePath
+    if (relativePath.startsWith("/")) {
+      relativePath = relativePath.slice(1)
+    }
 
     // Boolean if page is outdated (most translated files are)
     createNodeField({
