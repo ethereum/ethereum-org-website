@@ -251,7 +251,7 @@ Voici quelques éléments à considérer si vous n'en avez encore essayé :
 
 ### Quels sont les avantages de Solidity ? {#solidity-advantages}
 
-- Si vous débutez, il existe de nombreux tutoriels et outils d'apprentissage. Pour plus d'infos, consultez la page [Apprendre en codant](https://ethereum.org/en/developers/learning-tools/).
+- Si vous débutez, il existe de nombreux tutoriels et outils d'apprentissage. Pour plus d'infos, consultez la page [Apprendre en codant](/developers/learning-tools/).
 - De bons outils de développement sont disponibles.
 - Solidity dispose d'une importante communauté de développeurs, ce qui signifie que vous obtiendrez probablement des réponses à vos questions très rapidement.
 

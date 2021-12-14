@@ -20,7 +20,7 @@ isOutdated: true
 
 以太坊交易是指由外部持有的帐户发起的行动，换句话说，是指由人管理而不是智能合约管理的帐户。 例如，如果 Bob 发送 Alice 1 ETH，Bob 的帐户必须减少，Alice 必须被增加。 此状态更改的操作发生在交易中。
 
-![显示交易导致状态更改的图表](./tx.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![显示交易导致状态更改的图表](../../../../../developers/docs/transactions/tx.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 改变 EVM 状态的交易需要向整个网络广播。 任何节点都可以在 EVM 上广播交易请求； 此后，矿工将执行交易并将由此产生的状态变化传播到网络的其他部分。
 
@@ -124,7 +124,7 @@ Alice 的帐户将会增加 **+1.0 ETH**
 
 任何智能合约交互也需要 Gas。
 
-![未使用的 Gas 退款情况图](./gas-tx.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![未使用的 Gas 退款情况图](../../../../../developers/docs/transactions/gas-tx.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 任何未用于交易的 gas 都退还给用户帐户。
 

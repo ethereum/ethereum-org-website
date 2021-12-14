@@ -40,7 +40,7 @@ A fordító ezenkívül létrehozza az **Application Binary Interface-t (ABI)**,
 
 Az ABI egy JSON fáj, mely leírja a telepített szerződést és az okosszerződés függvényeit. Ez segít áthidalni a szakadékot a web2 és a web3 között
 
-Egy [Javascript kliens könyvtár](/en/developers/docs/apis/javascript/) fogja az **ABI-t** olvasni, hogy meghívhasd az okosszerződésedet a web alkalmazásod felületén.
+Egy [Javascript kliens könyvtár](/developers/docs/apis/javascript/) fogja az **ABI-t** olvasni, hogy meghívhasd az okosszerződésedet a web alkalmazásod felületén.
 
 Lentebb van az ERC-20 token szerződés ABI-ja. Az ERC-20 egy token, mellyel az Ethereumon kereskedhetsz.
 
@@ -275,5 +275,5 @@ Lentebb van az ERC-20 token szerződés ABI-ja. Az ERC-20 egy token, mellyel az 
 
 ## Kapcsolódó témák {#related-topics}
 
-- [Javascript kliens könyvtárak](/en/developers/docs/apis/javascript/)
-- [Ethereum virtuális gép](/en/developers/docs/ethereum-virtual-machine/)
+- [Javascript kliens könyvtárak](/developers/docs/apis/javascript/)
+- [Ethereum virtuális gép](/developers/docs/ethereum-virtual-machine/)

@@ -10,7 +10,7 @@ Los exploradores de bloques son tu portal de acceso a los datos de Ethereum. Pue
 
 ## Requisitos previos {#prerequisites}
 
-Es necesario que comprendas los conceptos básicos de Ethereum para poder entender los datos que te ofrece un explorador de bloques. Empieza con [una introducción a Ethereum](/en/developers/docs/intro-to-ethereum/).
+Es necesario que comprendas los conceptos básicos de Ethereum para poder entender los datos que te ofrece un explorador de bloques. Empieza con [una introducción a Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Servicios {#services}
 

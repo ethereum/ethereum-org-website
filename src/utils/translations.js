@@ -2,6 +2,9 @@ const defaultStrings = require("../intl/en.json")
 const languageMetadata = require("../data/translations.json")
 
 const supportedLanguages = Object.keys(languageMetadata)
+const legacyHomepageLanguages = supportedLanguages.filter(
+  (lang) => languageMetadata[lang].useLegacyHomepage
+)
 
 const consoleError = (message) => {
   const { NODE_ENV } = process.env
@@ -53,3 +56,4 @@ module.exports.supportedLanguages = supportedLanguages
 module.exports.getDefaultMessage = getDefaultMessage
 module.exports.isLangRightToLeft = isLangRightToLeft
 module.exports.translateMessageId = translateMessageId
+module.exports.legacyHomepageLanguages = legacyHomepageLanguages

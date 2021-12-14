@@ -9,7 +9,6 @@ import "../styles/layout.css"
 import { lightTheme, darkTheme, GlobalStyle } from "../theme"
 
 import Footer from "./Footer"
-import UpgradeBannerNotification from "./UpgradeBannerNotification"
 import VisuallyHidden from "./VisuallyHidden"
 import Nav from "./Nav"
 import SideNav from "./SideNav"
@@ -60,7 +59,6 @@ const Layout = (props) => {
   const [isDarkTheme, setIsDarkTheme] = useState(false)
   const [isZenMode, setIsZenMode] = useState(false)
   const [shouldShowSideNav, setShouldShowSideNav] = useState(false)
-  const [isHomepage, setIsHomepage] = useState(false)
 
   // Exit Zen Mode on 'esc' click
   useKeyPress(`Escape`, () => handleZenModeChange(false))
@@ -75,17 +73,16 @@ const Layout = (props) => {
   }, [])
 
   useEffect(() => {
-    // Check if path matches homepage for any language (boolean for UpgradeBannerNotification)
-    setIsHomepage(/^\/[a-z]{2}\/$|^\/[a-z]{2}\-[a-z]{2}\/$/.test(props.path))
     if (props.path.includes("/docs/")) {
       setShouldShowSideNav(true)
 
       if (localStorage.getItem("zen-mode") !== null) {
         let isMobile = false
         if (typeof window !== undefined) {
-          isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-            window.navigator.userAgent
-          )
+          isMobile =
+            /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+              window.navigator.userAgent
+            )
         }
         setIsZenMode(localStorage.getItem("zen-mode") === "true" && !isMobile)
       }
@@ -166,7 +163,6 @@ const Layout = (props) => {
                   </VisuallyHidden>
                 )}
                 <MainContent>
-                  {isHomepage && <UpgradeBannerNotification />}
                   <ZenModeContext.Provider
                     value={{ isZenMode, handleZenModeChange }}
                   >

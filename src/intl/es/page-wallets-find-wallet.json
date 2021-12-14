@@ -61,7 +61,7 @@
   "page-find-wallet-myetherwallet-logo-alt": "Logo de MyEtherWallet",
   "page-find-wallet-new-to-wallets": "¿Nuevo en carteras? Aquí tienes una descripción general para empezar.",
   "page-find-wallet-new-to-wallets-link": "Carteras de Ethereum",
-  "page-find-wallet-not-all-features": "Ninguna cartera tiene todas estas características",
+  "page-find-wallet-not-all-features": "Ninguna cartera tiene todas estas características <strong>todavía</strong>",
   "page-find-wallet-not-endorsements": "Las carteras que aparecen en esta página no están homologadas de manera oficial y se proporcionan solo con fines informativos. Sus descripciones las han facilitado las propias empresas de las carteras. Añadimos productos a esta página de acuerdo con los criterios de nuestros",
   "page-find-wallet-overwhelmed": "Carteras de Ethereum abajo. ¿Estás abrumado? Intenta filtrar por características.",
   "page-find-wallet-pillar-logo-alt": "Logo de Pillar",
@@ -86,7 +86,6 @@
   "page-find-wallet-we-found": "Encontramos",
   "page-find-wallet-withdraw": "Retirar al banco",
   "page-find-wallet-withdraw-desc": "Puedes retirar tus ETH directamente a tu cuenta bancaria sin pasar por un intercambio.",
-  "page-find-wallet-yet": "todavía",
   "page-find-wallet-zengo-logo-alt": "Logo de ZenGo",
   "page-stake-eth": "Apostar ETH"
 }

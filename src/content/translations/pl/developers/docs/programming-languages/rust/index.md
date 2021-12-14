@@ -14,7 +14,7 @@ Użyj Ethereum do tworzenia zdecentralizowanych aplikacji (lub „dappów”), k
 
 **Zrób pierwsze kroki aby zintegrować Rust z Ethereum**
 
-Potrzebujesz bardziej podstawowych informacji? Sprawdź na [ethereum.org/learn](/en/learn/) lub [ethereum.org/developers](/en/developers/).
+Potrzebujesz bardziej podstawowych informacji? Sprawdź na [ethereum.org/learn](/learn/) lub [ethereum.org/developers](/developers/).
 
 - [Wprowadzenie do Blockchain](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Zrozumienie inteligentnych kontraktów](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -27,15 +27,13 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na [ethereum.org/learn](
 - [Klient Ethereum Rust](https://wiki.parity.io/Setup)
 - [Wysyłanie transakcji do Ethereum za pomocą Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
 - [Wprowadzenie do inteligentnych kontraktów z klientem Parity Ethereum](https://wiki.parity.io/Smart-Contracts)
-- [Konfigurowanie środowiska deweloperskiego Oasis SDK](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [Konfigurowanie środowiska deweloperskiego Oasis SDK](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Samouczek krok po kroku, jak pisać umowy w Rust Wasm dla Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Artykuły dla średniozaawansowanych {#intermediate-articles}
 
 - [Dokumentacja Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Przykłady działania Rust-Web3](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Tworzenie tajnej karty do głosowania za pomocą pakietu OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Tworzenie prywatnego serwera czatu za pomocą OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Przykłady zaawansowane {#advanced-use-patterns}
 
@@ -57,7 +55,7 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na [ethereum.org/learn](
 - [rust-web3](https://github.com/tomusdrw/rust-web3) - _Wdrożenie biblioteki Web3.js przez Rust_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Inteligentny kontrakt Wavelet w Rust_
 
-Szukasz więcej zasobów? Zajrzyj na [ethereum.org/developers.](/en/developers/)
+Szukasz więcej zasobów? Zajrzyj na [ethereum.org/developers.](/developers/)
 
 ## Współtwórcy społeczności Rust {#rust-community-contributors}
 

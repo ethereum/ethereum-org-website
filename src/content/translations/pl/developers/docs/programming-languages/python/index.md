@@ -14,7 +14,7 @@ Użyj Ethereum do tworzenia aplikacji zdecentralizowanych (lub „dapp”), któ
 
 **Rozpocznij integrowanie Pythona z Ethereum**
 
-Potrzebujesz bardziej podstawowych informacji? Sprawdź na stronach [ethereum.org/learn](/en/learn/) lub [ethereum.org/developers](/en/developers/).
+Potrzebujesz bardziej podstawowych informacji? Sprawdź na stronach [ethereum.org/learn](/learn/) lub [ethereum.org/developers](/developers/).
 
 - [Objaśnienia dotyczące blockchainu](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Informacje o kontraktach inteligentnych](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -54,7 +54,7 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na stronach [ethereum.or
 - [Vyper](https://github.com/ethereum/vyper/) - <em x-id="4">Język inteligentnych kontraktów oparty na Pythonie dla EVM</em>
 - [Web3.py](https://github.com/ethereum/web3.py) - _Biblioteka Python do interakcji z Ethereum_
 
-Szukasz więcej materiałów? Sprawdź na stronie [ethereum.org/developers.](/en/developers/)
+Szukasz więcej materiałów? Sprawdź na stronie [ethereum.org/developers.](/developers/)
 
 ## Współtwórcy społeczności Python {#python-community-contributors}
 

@@ -199,6 +199,6 @@ The test, if passed, will assure us that the transaction was reverted indeed. Ho
 
 You've made your first big step towards testing smart contracts with Waffle! You might be interested in other Waffle tutorials:
 
-- [Testing ERC20 with Waffle](https://ethereum.org/en/developers/tutorials/testing-erc-20-tokens-with-waffle/)
-- [Waffle: Dynamic mocking and testing contract calls](https://ethereum.org/en/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/#gatsby-focus-wrapper)
-- [Waffle say hello world tutorial with hardhat and ethers](https://ethereum.org/en/developers/tutorials/waffle-hello-world-with-buidler-tutorial/)
+- [Testing ERC20 with Waffle](/developers/tutorials/testing-erc-20-tokens-with-waffle/)
+- [Waffle: Dynamic mocking and testing contract calls](/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/#gatsby-focus-wrapper)
+- [Waffle say hello world tutorial with hardhat and ethers](/developers/tutorials/waffle-hello-world-with-buidler-tutorial/)
