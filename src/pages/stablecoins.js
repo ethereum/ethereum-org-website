@@ -457,23 +457,6 @@ const StablecoinsPage = ({ data }) => {
       alt: translateMessageId("aave-logo", intl),
       image: getImage(data.aave),
       name: "Aave",
-      /* data: [
-        {
-          logo: data.tether.childImageSharp.fixed,
-          apy: "4",
-          coin: "Tether",
-        },
-        {
-          logo: data.daitable.childImageSharp.fixed,
-          apy: "3.5",
-          coin: "Dai",
-        },
-        {
-          logo: data.usdc.childImageSharp.fixed,
-          apy: "7",
-          coin: "USDC",
-        },
-      ], */
       description: translateMessageId(
         "page-stablecoins-stablecoins-dapp-description-1",
         intl
@@ -485,23 +468,6 @@ const StablecoinsPage = ({ data }) => {
       alt: translateMessageId("compound-logo", intl),
       image: getImage(data.compound),
       name: "Compound",
-      /* data: [
-        {
-          logo: data.tether.childImageSharp.fixed,
-          apy: "4",
-          coin: "Tether",
-        },
-        {
-          logo: data.daitable.childImageSharp.fixed,
-          apy: "3.5",
-          coin: "Dai",
-        },
-        {
-          logo: data.usdc.childImageSharp.fixed,
-          apy: "7",
-          coin: "USDC",
-        },
-      ], */
       description: translateMessageId(
         "page-stablecoins-stablecoins-dapp-description-2",
         intl
@@ -513,23 +479,6 @@ const StablecoinsPage = ({ data }) => {
       alt: translateMessageId("dydx-logo", intl),
       image: getImage(data.dydx),
       name: "dYdX",
-      /* data: [
-        {
-          logo: data.tether.childImageSharp.fixed,
-          apy: "4",
-          coin: "Tether",
-        },
-        {
-          logo: data.daitable.childImageSharp.fixed,
-          apy: "3.5",
-          coin: "Dai",
-        },
-        {
-          logo: data.usdc.childImageSharp.fixed,
-          apy: "7",
-          coin: "USDC",
-        },
-      ], */
       description: translateMessageId(
         "page-stablecoins-stablecoins-dapp-description-3",
         intl
@@ -541,23 +490,6 @@ const StablecoinsPage = ({ data }) => {
       alt: translateMessageId("oasis-logo", intl),
       image: getImage(data.oasis),
       name: "Oasis",
-      /* data: [
-        {
-          logo: data.tether.childImageSharp.fixed,
-          apy: "4",
-          coin: "Tether",
-        },
-        {
-          logo: data.daitable.childImageSharp.fixed,
-          apy: "3.5",
-          coin: "Dai",
-        },
-        {
-          logo: data.usdc.childImageSharp.fixed,
-          apy: "7",
-          coin: "USDC",
-        },
-      ], */
       description: translateMessageId(
         "page-stablecoins-stablecoins-dapp-description-4",
         intl
