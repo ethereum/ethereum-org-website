@@ -5,6 +5,8 @@ lang: en
 sidebar: true
 ---
 
+# Ethereum energy consumption {#introduction}
+
 Ethereum's current energy expenditure is too high and unsustainable. Resolving energy expenditure concerns without sacrificing security and decentralization is a significant technical challenge and has been a focus of research and development for years. Let's explore why building Ethereum has had a high environmental impact and how upcoming network upgrades will dramatically change this.
 
 ## Energy secures the network {#energy-secures-the-network}
@@ -23,7 +25,7 @@ Proof-of-work is a robust way to secure the network and enforce honest changes t
 
 A greener future for Ethereum is already being built in the form of a [**proof-of-stake (PoS)** chain](/eth2/beacon-chain/). Under [proof-of-stake](/developers/docs/consensus-mechanisms/pos/), arbitrary puzzle-solving is unnecessary. Removing puzzle-solving drastically reduces the energy expenditure required to secure the network. Miners get replaced by validators who perform the same function except that instead of expending their assets up-front in the form of computational work, they stake ETH as collateral against dishonest behavior. If the validator is lazy (offline when they are supposed to fulfill some validator duty) their staked ETH can slowly leak away, while provably dishonest behavior results in the the staked assets being "slashed". This strongly incentivizes active and honest participation in securing the network.
 
-Similarly to proof-of-work, a validator would require 51% of the total ETH staked in the network in order to maintain a fraudulent blockchain. However, unlike on proof-of-work, where the potential loss of a failed attack is only the cost of generating the hash power needed to mine, on proof-of-stake, the possible loss of an attack is the entire amount of ETH used as collateral. This disincentive structure allows for network security with proof-of-stake while eliminating the need to expend energy on arbitrary computations. Detailed explanations of the network security under PoS can be found [here](/developers/docs/consensus-mechanisms/pos/) and [here](https://vitalik.ca/general/2017/12/31/pos_faq.html).
+Similarly to proof-of-work, a validator would require 51% of the total ETH staked in the network in order to maintain a fraudulent blockchain. However, unlike on proof-of-work, where the potential loss of a failed attack is only the cost of generating the hash power needed to mine, on proof-of-stake, the possible loss of an attack is the entire amount of ETH used as collateral. This disincentive structure allows for network security with proof-of-stake while eliminating the need to expend energy on arbitrary computations. Detailed explanations of the network security under proof-of-stake can be found [here](/developers/docs/consensus-mechanisms/pos/) and [here](https://vitalik.ca/general/2017/12/31/pos_faq.html).
 
 ## The merge {#the-merge}
 
@@ -71,7 +73,7 @@ While Ethereum's energy consumption has historically been substantial, there has
 - [Ethereum Emissions: A Bottom-up Estimate](https://kylemcdonald.github.io/ethereum-emissions/) _ Kyle McDonald_
 - [Ethereum Energy Consumption Index](https://digiconomist.net/ethereum-energy-consumption/) – _Digiconomist_
 
-## Related Topics {#related-topics}
+## Related topics {#related-topics}
 
 - [Ethereum's vision](/eth2/vision/)
 - [The Beacon Chain](/eth2/beacon-chain)

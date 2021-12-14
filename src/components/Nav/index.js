@@ -231,6 +231,10 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           to: "/governance/",
         },
         {
+          text: "energy-consumption",
+          to: "/energy-consumption/",
+        },
+        {
           text: "eips",
           to: "/eips/",
         },
