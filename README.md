@@ -1293,6 +1293,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/aghArdeshir"><img src="https://avatars.githubusercontent.com/u/5755214?v=4?s=100" width="100px;" alt=""/><br /><sub><b>aghArdeshir</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=aghArdeshir" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/MiConnell"><img src="https://avatars.githubusercontent.com/u/14168559?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Michael Connell</b></sub></a><br /><a href="#content-MiConnell" title="Content">🖋</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/amm98d"><img src="https://avatars.githubusercontent.com/u/39633205?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ahmed Mustafa Malik</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=amm98d" title="Code">💻</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
