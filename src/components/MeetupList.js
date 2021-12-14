@@ -1,6 +1,7 @@
 // Libraries
 import React, { useState } from "react"
 import styled from "styled-components"
+import { sortBy } from "lodash"
 
 // Components
 import Emoji from "./Emoji"
@@ -78,17 +79,20 @@ const StyledInput = styled.input`
 `
 
 const filterMeetups = (query) => {
-  if (!query) return meetups
+  if (!query) return sortedMeetups
 
   const lowercaseQuery = query.toLowerCase()
 
-  return meetups.filter((meetup) => {
+  return sortedMeetups.filter((meetup) => {
     return (
       meetup.title.toLowerCase().includes(lowercaseQuery) ||
       meetup.location.toLowerCase().includes(lowercaseQuery)
     )
   })
 }
+
+// sort meetups by country and then by city
+const sortedMeetups = sortBy(meetups, ["emoji", "location"])
 
 // TODO create generalized CardList / TableCard
 // TODO prop if ordered list or unordered
