@@ -45,10 +45,12 @@ const GappedContent = styled(Content)`
   gap: 2rem;
 `
 
+const HeroContainer = styled.div`
+  background: ${({ theme }) => theme.colors.runNodeGradient};
+`
+
 const Hero = styled(PageHero)`
   padding-bottom: 2rem;
-  margin-bottom: 2rem;
-  background: ${({ theme }) => theme.colors.runNodeGradient};
 `
 
 const TwoColumnContent = styled.div`
@@ -83,8 +85,20 @@ const Highlight = styled(Content)`
   box-sizing: border-box;
   border-radius: 4px;
   color: ${({ theme }) => theme.colors.text};
+  padding: 1.5rem 2rem;
+  position: relative;
+  p {
+    margin-bottom: 0;
+  }
   &:nth-of-type(even) {
     flex-direction: row-reverse;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    border: 1px solid red;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     &:nth-of-type(even) {
@@ -104,8 +118,9 @@ const InfoGrid = styled(CardGrid)`
 `
 
 const Width80 = styled.div`
+  box-sizing: border-box;
   flex: 4;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     width: 100%;
   }
 `
@@ -113,10 +128,30 @@ const Width80 = styled.div`
 const Width20 = styled.div`
   flex: 1;
   display: flex;
+  inset: auto;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    width: 100%;
+  }
+`
+
+const Width60 = styled.div`
+  flex: 3;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    width: 100%;
+  }
+`
+
+const Width40 = styled.div`
+  flex: 2;
+  display: flex;
   justify-content: center;
 
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     width: 100%;
+    align-self: center;
   }
 `
 
@@ -228,28 +263,38 @@ const RunANodePage = ({ data }) => {
           intl
         )}
       />
-
-      <Hero content={heroContent} />
+      <HeroContainer>
+        <Hero content={heroContent} isReverse />
+      </HeroContainer>
 
       <Content>
         <TwoColumnContent>
-          <SplitContent>
+          <Width60>
             <h2>
-              <Translation id="page-run-a-node-what-does-it-mean-title" />
+              <Translation id="page-run-a-node-what-title" />
             </h2>
+            <h3>
+              <Translation id="page-run-a-node-what-1-subtitle" />
+            </h3>
             <p>
-              <Translation id="page-run-a-node-what-does-it-mean-1" />
+              <Translation id="page-run-a-node-what-1-text" />
             </p>
+            <h3>
+              <Translation id="page-run-a-node-what-2-subtitle" />
+            </h3>
             <p>
-              <Translation id="page-run-a-node-what-does-it-mean-2" />
+              <Translation id="page-run-a-node-what-2-text" />
             </p>
+            <h3>
+              <Translation id="page-run-a-node-what-3-subtitle" />
+            </h3>
             <p>
-              <Translation id="page-run-a-node-what-does-it-mean-3" />
+              <Translation id="page-run-a-node-what-3-text" />
             </p>
-          </SplitContent>
-          <SplitContent>
+          </Width60>
+          <Width40>
             <GatsbyImage image={getImage(data.hackathon)} />
-          </SplitContent>
+          </Width40>
         </TwoColumnContent>
       </Content>
 
@@ -257,15 +302,19 @@ const RunANodePage = ({ data }) => {
         <Highlight backgroundColor="homeBoxOrange">
           <Width80>
             <h2>
-              <Translation id="page-run-a-node-highlight-title" />
+              <Translation id="page-run-a-node-who-title" />
             </h2>
+            <h3>
+              <Translation id="page-run-a-node-who-preview" />
+            </h3>
             <p>
-              <Translation id="page-run-a-node-highlight-body" />
+              <Translation id="page-run-a-node-who-copy-1" />
             </p>
             <p>
-              <strong>
-                <Translation id="page-run-a-node-highlight-bold" />
-              </strong>
+              <Translation id="page-run-a-node-who-copy-2" />
+            </p>
+            <p>
+              <Translation id="page-run-a-node-who-copy-3" />
             </p>
           </Width80>
           <Width20>
@@ -460,7 +509,7 @@ export const query = graphql`
       childImageSharp {
         gatsbyImageData(
           width: 624
-          layout: FIXED
+          layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
         )
