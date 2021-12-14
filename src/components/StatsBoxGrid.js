@@ -12,7 +12,7 @@ import Icon from "./Icon"
 import { isLangRightToLeft } from "../utils/translations"
 import { getData } from "../utils/cache"
 
-const Value = styled.h3`
+const Value = styled.span`
   position: absolute;
   bottom: 8%;
   font-size: min(4.4vw, 64px);
