@@ -49,8 +49,8 @@ const Callout = ({
   image,
   emoji,
   alt,
-  title,
-  description,
+  titleKey,
+  descriptionKey,
   children,
   className,
 }) => (
@@ -59,8 +59,8 @@ const Callout = ({
     <Content>
       <div>
         {emoji && <Emoji text={emoji} size={3} />}
-        <h3>{title}</h3>
-        <Description>{description}</Description>
+        <h3>{titleKey}</h3>
+        <Description>{descriptionKey}</Description>
       </div>
       {children}
     </Content>
