@@ -7,11 +7,11 @@ import docLinks from "../data/developer-docs-links.yaml"
 const DeveloperDocsLinks = ({ headerId }) =>
   docLinks
     .filter(({ id }) => id.includes(headerId))
-    .map(({ items }) => (
-      <ul>
+    .map(({ items, id }) => (
+      <ul key={id}>
         {items &&
           items.map(({ id, to, path, description, items }) => (
-            <ListItem>
+            <ListItem key={id}>
               {to || path ? (
                 <Link to={to || path}>
                   <Translation id={id} />
@@ -26,7 +26,7 @@ const DeveloperDocsLinks = ({ headerId }) =>
               <ul>
                 {items &&
                   items.map(({ id, to, path }) => (
-                    <ListItem>
+                    <ListItem key={id}>
                       <Link to={to || path}>
                         <Translation id={id} />
                       </Link>
