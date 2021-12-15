@@ -309,6 +309,7 @@ const StatsBoxGrid = () => {
   useEffect(() => {
     const fetchPrices = async () => {
       try {
+        throw new Error("Debug: Skip fetching prices from CoinGecko")
         const daysToFetch = 90
         const toUnixTimestamp = Math.floor(new Date().getTime() / 1000) // "Now" as unix timestamp (seconds)
         const fromUnixTimestamp = toUnixTimestamp - 60 * 60 * 24 * daysToFetch // {daysToFetch} days ago (in seconds)

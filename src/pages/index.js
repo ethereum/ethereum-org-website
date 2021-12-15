@@ -13,7 +13,7 @@ import Codeblock from "../components/Codeblock"
 import LegacyPageHome from "../components/LegacyPageHome"
 import Morpher from "../components/Morpher"
 import PageMetadata from "../components/PageMetadata"
-// import StatsBoxGrid from "../components/StatsBoxGrid"
+import StatsBoxGrid from "../components/StatsBoxGrid"
 import Translation from "../components/Translation"
 import TitleCardList from "../components/TitleCardList"
 import {
@@ -911,7 +911,7 @@ contract SimpleDomainRegistry {
             <Translation id="page-index-network-stats-subtitle" />
           </Subtitle>
         </StyledContent>
-        {/* <StatsBoxGrid /> */}
+        <StatsBoxGrid />
       </StyledGrayContainer>
       <StyledContent>
         <h2>
