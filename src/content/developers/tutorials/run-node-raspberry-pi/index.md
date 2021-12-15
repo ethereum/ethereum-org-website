@@ -236,12 +236,12 @@ The first time, you need to create manually an account by running the “validat
 
 We put a lot of work trying to setup the Raspberry Pi 4 as a full Ethereum node as we know the massive user base of this device may have a very positive impact in the network.
 
-Please, take into account that this is the first image based on Ubuntu 20.04 so there may be some bugs. If so, open an issue on [GitHub](https://github.com/diglos/pi-gen) or reach us on [Twitter](https://twitter.com/EthereumOnARM).
+Please, take into account that this is the first image based on Ubuntu 20.04 so there may be some bugs. If so, open an issue on [GitHub](https://github.com/diglos/ethereumonarm) or reach us on [Twitter](https://twitter.com/EthereumOnARM).
 
 ## References {#references}
 
 1. [geth repeatedly crashes with SIGSEGV](https://github.com/ethereum/go-ethereum/issues/20190)
-2. [https://github.com/diglos/pi-gen](https://github.com/diglos/pi-gen)
+2. [https://github.com/diglos/ethereumonarm](https://github.com/diglos/ethereumonarm)
 3. https://ubuntu.com/download/raspberry-pi
 4. https://en.wikipedia.org/wiki/Port_forwarding
 5. https://prometheus.io
