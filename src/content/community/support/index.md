@@ -25,6 +25,7 @@ Having trouble with your wallet? Most wallets have dedicated support teams that 
 
 - [MetaMask](https://metamask.zendesk.com/hc/)
 - [Argent](https://support.argent.xyz/hc/)
+- [MyEtherWallet, Inc](https://help.myetherwallet.com/en/)
 
 _This is not an exhaustive list. Need help finding support for a specific wallet? Join the [ethereum.org discord](https://discord.gg/rZz26QWfCg) and we'll try to help._
 
