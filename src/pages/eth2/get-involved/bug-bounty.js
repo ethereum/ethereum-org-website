@@ -243,23 +243,19 @@ const BugBountiesPage = ({ data, location }) => {
   const specs = [
     {
       title: <Translation id="page-eth2-bug-bounty-title-1" />,
-      link:
-        "https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/beacon-chain.md",
+      link: "https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/beacon-chain.md",
     },
     {
       title: <Translation id="page-eth2-bug-bounty-title-2" />,
-      link:
-        "https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/fork-choice.md",
+      link: "https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/fork-choice.md",
     },
     {
       title: <Translation id="page-eth2-bug-bounty-title-3" />,
-      link:
-        "https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/deposit-contract.md",
+      link: "https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/deposit-contract.md",
     },
     {
       title: <Translation id="page-eth2-bug-bounty-title-4" />,
-      link:
-        "https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/p2p-interface.md",
+      link: "https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/p2p-interface.md",
     },
   ]
   return (

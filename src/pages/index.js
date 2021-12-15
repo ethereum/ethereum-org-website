@@ -13,7 +13,7 @@ import Codeblock from "../components/Codeblock"
 import LegacyPageHome from "../components/LegacyPageHome"
 import Morpher from "../components/Morpher"
 import PageMetadata from "../components/PageMetadata"
-import StatsBoxGrid from "../components/StatsBoxGrid"
+// import StatsBoxGrid from "../components/StatsBoxGrid"
 import Translation from "../components/Translation"
 import TitleCardList from "../components/TitleCardList"
 import {
@@ -22,7 +22,11 @@ import {
   GrayContainer,
   LeftColumn,
 } from "../components/SharedStyledComponents"
-import { translateMessageId } from "../utils/translations"
+import {
+  translateMessageId,
+  legacyHomepageLanguages,
+  isLangRightToLeft,
+} from "../utils/translations"
 
 const Hero = styled(GatsbyImage)`
   width: 100%;
@@ -70,13 +74,14 @@ const Header = styled.header`
 const ButtonRow = styled.div`
   display: flex;
   align-items: flex-start;
+  gap: 0.5rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex-direction: column;
   }
 `
 
 const StyledButtonLink = styled(ButtonLink)`
-  margin-left: 0.5rem;
+  gap: 0.5rem;
   margin-top: 0rem;
   display: flex;
   align-items: center;
@@ -356,7 +361,6 @@ const IntroLeftColumn = styled(LeftColumn)`
 
 const StyledIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.text};
-  margin-right: 0.5rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
   }
   &:hover {
@@ -402,14 +406,13 @@ const StyledCalloutBanner = styled(CalloutBanner)`
   }
 `
 
-const HomePage = ({ data }) => {
+const HomePage = ({ data, pageContext: { language } }) => {
   const intl = useIntl()
   const [isModalOpen, setModalOpen] = useState(false)
   const [activeCode, setActiveCode] = useState(0)
+  const dir = isLangRightToLeft(language) ? "rtl" : "ltr"
 
-  if (intl.locale !== "en") {
-    return <LegacyPageHome />
-  }
+  if (legacyHomepageLanguages.includes(language)) return <LegacyPageHome />
 
   const toggleCodeExample = (id) => {
     setActiveCode(id)
@@ -695,7 +698,7 @@ contract SimpleDomainRegistry {
   ]
 
   return (
-    <Page>
+    <Page dir={dir}>
       <PageMetadata
         title={translateMessageId("page-index-meta-title", intl)}
         description={translateMessageId("page-index-meta-description", intl)}
@@ -899,7 +902,7 @@ contract SimpleDomainRegistry {
           </Codeblock>
         </CodeboxModal>
       </DeveloperContainer>
-      <StyledGrayContainer>
+      {/* <StyledGrayContainer>
         <StyledContent>
           <h2>
             <Translation id="page-index-network-stats-title" />
@@ -909,7 +912,7 @@ contract SimpleDomainRegistry {
           </Subtitle>
         </StyledContent>
         <StatsBoxGrid />
-      </StyledGrayContainer>
+      </StyledGrayContainer> */}
       <StyledContent>
         <h2>
           <Translation id="page-index-touts-header" />
