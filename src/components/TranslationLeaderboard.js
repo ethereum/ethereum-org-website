@@ -119,12 +119,12 @@ const Flex = styled.div`
 
 const TranslationLeaderboard = () => {
   const leaderboardData = {
-    monthData: reverse(sortBy(monthData.data, (user) => user.user.totalCosts)),
+    monthData: reverse(sortBy(monthData.data, ({ user }) => user.totalCosts)),
     quarterData: reverse(
-      sortBy(quarterData.data, (user) => user.user.totalCosts)
+      sortBy(quarterData.data, ({ user }) => user.totalCosts)
     ),
     allTimeData: reverse(
-      sortBy(allTimeData.data, (user) => user.user.totalCosts)
+      sortBy(allTimeData.data, ({ user }) => user.totalCosts)
     ),
   }
   const [filterAmount, updateFilterAmount] = useState(10)
