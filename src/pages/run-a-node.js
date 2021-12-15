@@ -316,6 +316,11 @@ const RunANodePage = ({ data }) => {
             <p>
               <Translation id="page-run-a-node-who-copy-3" />
             </p>
+            <p>
+              <strong>
+                <Translation id="page-run-a-node-who-copy-bold" />
+              </strong>
+            </p>
           </Width80>
           <Width20>
             <GatsbyImage image={getImage(data.impact)} />
