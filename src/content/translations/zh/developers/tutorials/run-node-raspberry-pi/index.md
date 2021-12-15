@@ -239,12 +239,12 @@ sudo systemctl start lighthouse && sudo systemctl enable lighthouse
 
 我们投入了大量的工作，试图将 Raspberry Pi 4 设置为一个完整的以太坊节点，因为我们知道这个设备的庞大用户群可能对网络产生非常积极的影响。
 
-请考虑到这是基于 Ubuntu 20.04 的第一个映像，所以可能会有一些错误。 如果是这样，请在[GitHub](https://github.com/diglos/pi-gen)上开立问题，或在[Twitter](https://twitter.com/EthereumOnARM)上联系我们。
+请考虑到这是基于 Ubuntu 20.04 的第一个映像，所以可能会有一些错误。 如果是这样，请在[GitHub](https://github.com/diglos/ethereumonarm)上开立问题，或在[Twitter](https://twitter.com/EthereumOnARM)上联系我们。
 
 ## 参考： {#references}
 
 1. [Geth 反复出现 SIGSEGV 崩溃](https://github.com/ethereum/go-ethereum/issues/20190)
-2. [https://github.com/diglos/pi-gen](https://github.com/diglos/pi-gen)
+2. [https://github.com/diglos/ethereumonarm](https://github.com/diglos/ethereumonarm)
 3. https://ubuntu.com/download/raspberry-pi
 4. https://en.wikipedia.org/wiki/Port_forwarding
 5. https://prometheus.io
