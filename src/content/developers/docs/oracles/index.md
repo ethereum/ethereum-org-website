@@ -176,14 +176,14 @@ contract RandomNumberConsumer is VRFConsumerBase {
 
 ### Chainlink Keepers {#chainlink-keepers}
 
-Smart contracts alone can't trigger or initiate their own functions at arbitrary times or under arbitrary conditions. State change will only occur when a transaction is initiated by another account (such as user, oracle, or contract). The [Chainlink Keeper Network](https://docs.chain.link/docs/chainlink-keepers/introduction/) provides options for smart contracts to outsource regular maintenance tasks in a trust minimized and decentralized manner.
+Smart contracts can't trigger or initiate their own functions at arbitrary times or under arbitrary conditions. State changes will only occur when another account initiates a transaction (such as a user, oracle, or contract). The [Chainlink Keeper Network](https://docs.chain.link/docs/chainlink-keepers/introduction/) provides options for smart contracts to outsource regular maintenance tasks in a trust minimized and decentralized manner.
 
-In order to use Chainlink Keepers, smart contract needs to implement [KeeperCompatibleInterface](https://docs.chain.link/docs/chainlink-keepers/compatible-contracts/) which consits of two functions:
+To use Chainlink Keepers, a smart contract must implement [KeeperCompatibleInterface](https://docs.chain.link/docs/chainlink-keepers/compatible-contracts/), which consists of two functions:
 
 - `checkUpkeep` - Checks if the contract requires work to be done.
 - `performUpkeep` - Performs the work on the contract, if instructed by checkUpkeep.
 
-The example below represents a simple counter contract. Each time performUpkeep is called, it increments its counter by one. [One can deploy the following code using Remix](https://remix.ethereum.org/#url=https://docs.chain.link/samples/Keepers/KeepersCounter.sol)
+The example below is a simple counter contract. The `counter` variable is incremented by one by every call to `performUpkeep`. [You can check out the following code using Remix](https://remix.ethereum.org/#url=https://docs.chain.link/samples/Keepers/KeepersCounter.sol)
 
 ```javascript
 // SPDX-License-Identifier: MIT
@@ -225,7 +225,7 @@ contract Counter is KeeperCompatibleInterface {
 }
 ```
 
-After one deploys a contract, it does not automatically begin to receive Upkeeps. The final step is [Upkeep Registration](https://docs.chain.link/docs/chainlink-keepers/register-upkeep/).
+After deploying a Keeper-compatible contract, you must register the contract for [Upkeep](https://docs.chain.link/docs/chainlink-keepers/register-upkeep/) and fund it with LINK, to notify the Keeper Network about your contract, so your work is performed continuously.
 
 Other Keepers projects:
 
