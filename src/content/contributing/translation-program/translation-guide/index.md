@@ -93,7 +93,7 @@ Currently, all non-English content is translated directly from the English sourc
 
 To suggest new content for ethereum.org, you can [create an issue](https://github.com/ethereum/ethereum-org-website/issues) on GitHub. If added, the content will be written in English and translated to other languages using Crowdin.
 
-We are planning on adding support for content in other languages in the future.
+We plan to add support for non-English content additions in the near future.
 
 ## Get in touch {#contact}
 
