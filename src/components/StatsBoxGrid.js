@@ -309,16 +309,57 @@ const StatsBoxGrid = () => {
   useEffect(() => {
     const fetchPrices = async () => {
       try {
-        throw new Error("Debug: Skip fetching prices from CoinGecko")
+        // throw new Error("Debug: Skip fetching prices from CoinGecko")
         const daysToFetch = 90
         const toUnixTimestamp = Math.floor(new Date().getTime() / 1000) // "Now" as unix timestamp (seconds)
         const fromUnixTimestamp = toUnixTimestamp - 60 * 60 * 24 * daysToFetch // {daysToFetch} days ago (in seconds)
         // TODO: Switch back to `getData()` to use cache before prod
-        const {
-          data: { prices },
-        } = await axios.get(
-          `https://api.coingecko.com/api/v3/coins/ethereum/market_chart/range?vs_currency=usd&from=${fromUnixTimestamp}&to=${toUnixTimestamp}`
-        )
+        // const {
+        //   data: { prices },
+        // } = await axios.get(
+        //   `https://api.coingecko.com/api/v3/coins/ethereum/market_chart/range?vs_currency=usd&from=${fromUnixTimestamp}&to=${toUnixTimestamp}`
+        // )
+
+        const { prices } = {
+          prices: [
+            [1639407830407, 3929.633738994626],
+            [1639411227619, 3817.904947548677],
+            [1639415055599, 3810.344831624288],
+            [1639418582451, 3831.5690191985314],
+            [1639422254456, 3830.1929762723826],
+            [1639425968348, 3762.646672520613],
+            [1639429418457, 3754.035253817073],
+            [1639433022496, 3774.1942722802905],
+            [1639436548109, 3806.004148743122],
+            [1639440115290, 3782.8952622347147],
+            [1639443698343, 3826.6531823195887],
+            [1639447393834, 3788.5510239453865],
+            [1639451040886, 3780.404112324499],
+            [1639454563622, 3774.25505936072],
+            [1639458170608, 3777.2237468681574],
+            [1639461850755, 3761.9649986771856],
+            [1639465383930, 3718.9566995666114],
+            [1639469039289, 3782.509569401334],
+            [1639472646781, 3823.1432733403526],
+            [1639476165843, 3777.5401922318065],
+            [1639479764046, 3815.791642389086],
+            [1639483417634, 3830.132476681905],
+            [1639487012808, 3837.276771862022],
+            [1639490668053, 3791.9246917782903],
+            [1639494221644, 3824.011155339998],
+            [1639497814956, 3787.5285974193916],
+            [1639501350627, 3790.154910467007],
+            [1639504927223, 3775.2195950146133],
+            [1639508600224, 3742.66594924193],
+            [1639512108963, 3770.62002537378],
+            [1639515891417, 3841.4464146457954],
+            [1639519405953, 3886.1117047052967],
+            [1639522926628, 3848.209144369092],
+            [1639526616096, 3865.2666087105254],
+            [1639530124747, 3865.2554479768364],
+            [1639533818518, 3841.6397304612433],
+          ],
+        }
         const data = prices
           .map(([timestamp, value]) => ({
             timestamp,
