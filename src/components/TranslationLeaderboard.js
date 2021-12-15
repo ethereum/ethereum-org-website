@@ -190,7 +190,7 @@ const TranslationLeaderboard = () => {
           .map((item, idx) => {
             const { user, languages } = item
             const sortedLanguages = reverse(
-              sortBy(languages, (language) => language.language.totalCosts)
+              sortBy(languages, ({ language }) => language.totalCosts)
             )
 
             let emoji = null
