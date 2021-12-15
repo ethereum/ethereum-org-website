@@ -248,8 +248,43 @@ const RangeSelector = ({ state, setState }) => (
 const StatsBoxGrid = () => {
   const intl = useIntl()
   const [ethPrices, setEthPrices] = useState({
-    data: [],
-    value: 0,
+    data: [ { timestamp: 1639407830407, value: 3929.633738994626 },
+  { timestamp: 1639411227619, value: 3817.904947548677 },
+  { timestamp: 1639415055599, value: 3810.344831624288 },
+  { timestamp: 1639418582451, value: 3831.5690191985314 },
+  { timestamp: 1639422254456, value: 3830.1929762723826 },
+  { timestamp: 1639425968348, value: 3762.646672520613 },
+  { timestamp: 1639429418457, value: 3754.035253817073 },
+  { timestamp: 1639433022496, value: 3774.1942722802905 },
+  { timestamp: 1639436548109, value: 3806.004148743122 },
+  { timestamp: 1639440115290, value: 3782.8952622347147 },
+  { timestamp: 1639443698343, value: 3826.6531823195887 },
+  { timestamp: 1639447393834, value: 3788.5510239453865 },
+  { timestamp: 1639451040886, value: 3780.404112324499 },
+  { timestamp: 1639454563622, value: 3774.25505936072 },
+  { timestamp: 1639458170608, value: 3777.2237468681574 },
+  { timestamp: 1639461850755, value: 3761.9649986771856 },
+  { timestamp: 1639465383930, value: 3718.9566995666114 },
+  { timestamp: 1639469039289, value: 3782.509569401334 },
+  { timestamp: 1639472646781, value: 3823.1432733403526 },
+  { timestamp: 1639476165843, value: 3777.5401922318065 },
+  { timestamp: 1639479764046, value: 3815.791642389086 },
+  { timestamp: 1639483417634, value: 3830.132476681905 },
+  { timestamp: 1639487012808, value: 3837.276771862022 },
+  { timestamp: 1639490668053, value: 3791.9246917782903 },
+  { timestamp: 1639494221644, value: 3824.011155339998 },
+  { timestamp: 1639497814956, value: 3787.5285974193916 },
+  { timestamp: 1639501350627, value: 3790.154910467007 },
+  { timestamp: 1639504927223, value: 3775.2195950146133 },
+  { timestamp: 1639508600224, value: 3742.66594924193 },
+  { timestamp: 1639512108963, value: 3770.62002537378 },
+  { timestamp: 1639515891417, value: 3841.4464146457954 },
+  { timestamp: 1639519405953, value: 3886.1117047052967 },
+  { timestamp: 1639522926628, value: 3848.209144369092 },
+  { timestamp: 1639526616096, value: 3865.2666087105254 },
+  { timestamp: 1639530124747, value: 3865.2554479768364 },
+  { timestamp: 1639533818518, value: 3841.6397304612433 } ],
+    value: '$1234',
     hasError: false,
   })
   const [valueLocked, setValueLocked] = useState({
@@ -379,7 +414,7 @@ const StatsBoxGrid = () => {
         })
       }
     }
-    fetchPrices()
+//     fetchPrices()
 
     const fetchNodes = async () => {
       try {
