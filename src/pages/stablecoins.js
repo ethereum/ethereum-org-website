@@ -249,8 +249,15 @@ const InfoIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.text};
 `
 
-const ButtonLinkRight = styled(ButtonLink)`
-  margin-left: 1rem;
+const ButtonLinkWrap = styled(ButtonLink)`
+  white-space: break-spaces;
+`
+
+const ButtonLinkContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  gap: 1em;
 `
 
 const tooltipContent = (
@@ -457,23 +464,6 @@ const StablecoinsPage = ({ data }) => {
       alt: translateMessageId("aave-logo", intl),
       image: getImage(data.aave),
       name: "Aave",
-      /* data: [
-        {
-          logo: data.tether.childImageSharp.fixed,
-          apy: "4",
-          coin: "Tether",
-        },
-        {
-          logo: data.daitable.childImageSharp.fixed,
-          apy: "3.5",
-          coin: "Dai",
-        },
-        {
-          logo: data.usdc.childImageSharp.fixed,
-          apy: "7",
-          coin: "USDC",
-        },
-      ], */
       description: translateMessageId(
         "page-stablecoins-stablecoins-dapp-description-1",
         intl
@@ -485,23 +475,6 @@ const StablecoinsPage = ({ data }) => {
       alt: translateMessageId("compound-logo", intl),
       image: getImage(data.compound),
       name: "Compound",
-      /* data: [
-        {
-          logo: data.tether.childImageSharp.fixed,
-          apy: "4",
-          coin: "Tether",
-        },
-        {
-          logo: data.daitable.childImageSharp.fixed,
-          apy: "3.5",
-          coin: "Dai",
-        },
-        {
-          logo: data.usdc.childImageSharp.fixed,
-          apy: "7",
-          coin: "USDC",
-        },
-      ], */
       description: translateMessageId(
         "page-stablecoins-stablecoins-dapp-description-2",
         intl
@@ -513,23 +486,6 @@ const StablecoinsPage = ({ data }) => {
       alt: translateMessageId("dydx-logo", intl),
       image: getImage(data.dydx),
       name: "dYdX",
-      /* data: [
-        {
-          logo: data.tether.childImageSharp.fixed,
-          apy: "4",
-          coin: "Tether",
-        },
-        {
-          logo: data.daitable.childImageSharp.fixed,
-          apy: "3.5",
-          coin: "Dai",
-        },
-        {
-          logo: data.usdc.childImageSharp.fixed,
-          apy: "7",
-          coin: "USDC",
-        },
-      ], */
       description: translateMessageId(
         "page-stablecoins-stablecoins-dapp-description-3",
         intl
@@ -541,23 +497,6 @@ const StablecoinsPage = ({ data }) => {
       alt: translateMessageId("oasis-logo", intl),
       image: getImage(data.oasis),
       name: "Oasis",
-      /* data: [
-        {
-          logo: data.tether.childImageSharp.fixed,
-          apy: "4",
-          coin: "Tether",
-        },
-        {
-          logo: data.daitable.childImageSharp.fixed,
-          apy: "3.5",
-          coin: "Dai",
-        },
-        {
-          logo: data.usdc.childImageSharp.fixed,
-          apy: "7",
-          coin: "USDC",
-        },
-      ], */
       description: translateMessageId(
         "page-stablecoins-stablecoins-dapp-description-4",
         intl
@@ -807,14 +746,14 @@ const StablecoinsPage = ({ data }) => {
             intl
           )}
         >
-          <div>
+          <ButtonLinkContainer>
             <ButtonLink to="/dapps/">
               <Translation id="page-stablecoins-explore-dapps" />
             </ButtonLink>
-            <ButtonLinkRight isSecondary to="/defi/">
+            <ButtonLinkWrap isSecondary to="/defi/">
               <Translation id="page-stablecoins-more-defi-button" />
-            </ButtonLinkRight>
-          </div>
+            </ButtonLinkWrap>
+          </ButtonLinkContainer>
         </StyledCalloutBanner>
         <h2>
           <Translation id="page-stablecoins-save-stablecoins" />

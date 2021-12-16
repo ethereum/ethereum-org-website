@@ -42,8 +42,8 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 <Callout
   emoji=":classical_building:"
   title="Decentralized Autonomous Organizations (DAOs)"
-  description="These groups leverage Ethereum technology to facilitate organization and collaboration. For instance, for controlling membership, voting on proposals, or managing pooled assets."
->
+  description="These groups leverage Ethereum technology to facilitate organization and collaboration. For instance, for controlling membership, voting on proposals, or managing pooled assets.">
+
   <div>
     <ButtonLink to="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Learn more about DAOs
