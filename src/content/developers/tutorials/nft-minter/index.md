@@ -904,7 +904,7 @@ const onMintPressed = async () => {
 };
 ```
 
-## Step 10: Deploy your NFT to a Live Website {#step-10-deploy-your-NFT-to-a-live-website}
+## Step 10: Deploy your NFT to a live website {#deploy-your-NFT}
 
 Ready to take your project live for users to interact with? Check out [this tutorial](https://docs.alchemy.com/alchemy/tutorials/nft-minter/how-do-i-deploy-nfts-online) for deploying your Minter to a live website.
 
