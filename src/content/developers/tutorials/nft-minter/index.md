@@ -260,7 +260,7 @@ To double check our balance is there, let’s make an [eth\_getBalance](https://
 
 **NOTE:** This result is in wei not eth. Wei is used as the smallest denomination of ether. The conversion from wei to eth is: 1 eth = 10¹⁸ wei. So if we convert 0xde0b6b3a7640000 to decimal we get 1\*10¹⁸ which equals 1 eth.
 
-Phew! Our fake money is all there! 🤑
+Phew! Our fake money is all there! <Emoji text=":money_mouth_face:" size={1} />
 
 ## Step 4: Connect Metamask to your UI {#step-4-connect-metamask-to-your-UI}
 
