@@ -6,6 +6,7 @@ import styled from "styled-components"
 import EventCard from "../components/EventCard"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
+import Translation from "../components/Translation"
 
 // Data
 import events from "../data/community-events.json"
@@ -68,10 +69,9 @@ const UpcomingEventsList = () => {
   if (orderedUpcomingEvents?.length === 0) {
     return (
       <InfoBanner emoji=":information_source:">
-        {" "}
-        We're not aware of any upcoming events. Know of one?{" "}
+        <Translation id="page-community-upcoming-events-no-events" />{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json">
-          Please add it to this page!
+          <Translation id="page-community-please-add-to-page" />
         </Link>
       </InfoBanner>
     )

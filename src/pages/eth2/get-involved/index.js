@@ -185,7 +185,7 @@ const GetInvolvedPage = ({ data, location }) => {
       description: <Translation id="page-eth2-get-involved-written-go" />,
       alt: "eth2-client-prysm-logo-alt",
       url: "https://docs.prylabs.network/docs/getting-started/",
-      image: data.prysm.childImageSharp.fixed,
+      image: data.prysm,
       githubUrl: "https://github.com/prysmaticlabs/prysm",
       isProductionReady: true,
     },
@@ -195,9 +195,7 @@ const GetInvolvedPage = ({ data, location }) => {
       description: <Translation id="page-eth2-get-involved-written-rust" />,
       alt: "eth2-client-lighthouse-logo-alt",
       url: "https://lighthouse-book.sigmaprime.io/",
-      image: isDarkTheme
-        ? data.lighthouseDark.childImageSharp.fixed
-        : data.lighthouseLight.childImageSharp.fixed,
+      image: isDarkTheme ? data.lighthouseDark : data.lighthouseLight,
       githubUrl: "https://github.com/sigp/lighthouse",
       isProductionReady: true,
     },
@@ -207,9 +205,7 @@ const GetInvolvedPage = ({ data, location }) => {
       description: <Translation id="page-eth2-get-involved-written-java" />,
       alt: "eth2-client-teku-logo-alt",
       url: "https://pegasys.tech/teku",
-      image: isDarkTheme
-        ? data.tekuLight.childImageSharp.fixed
-        : data.tekuDark.childImageSharp.fixed,
+      image: isDarkTheme ? data.tekuLight : data.tekuDark,
       githubUrl: "https://github.com/ConsenSys/teku",
       isProductionReady: true,
     },
@@ -219,7 +215,7 @@ const GetInvolvedPage = ({ data, location }) => {
       description: <Translation id="page-eth2-get-involved-written-net" />,
       alt: "eth2-client-cortex-logo-alt",
       url: "https://nethermind.io/",
-      image: data.cortex.childImageSharp.fixed,
+      image: data.cortex,
       githubUrl: "https://github.com/NethermindEth/nethermind",
       isProductionReady: false,
     },
@@ -231,7 +227,7 @@ const GetInvolvedPage = ({ data, location }) => {
       ),
       alt: "eth2-client-lodestar-logo-alt",
       url: "https://lodestar.chainsafe.io/",
-      image: data.lodestar.childImageSharp.fixed,
+      image: data.lodestar,
       githubUrl: "https://github.com/ChainSafe/lodestar",
       isProductionReady: false,
     },
@@ -241,7 +237,7 @@ const GetInvolvedPage = ({ data, location }) => {
       description: <Translation id="page-eth2-get-involved-written-nim" />,
       alt: "eth2-client-nimbus-logo-alt",
       url: "https://nimbus.team/",
-      image: data.nimbus.childImageSharp.fixed,
+      image: data.nimbus,
       githubUrl: "https://github.com/status-im/nimbus-eth2",
       isProductionReady: true,
     },
@@ -354,7 +350,7 @@ const GetInvolvedPage = ({ data, location }) => {
                 key={idx}
                 url={client.url}
                 background={client.background}
-                image={client.image}
+                image={getImage(client.image)}
                 name={client.name}
                 description={client.description}
                 alt={translateMessageId(client.alt, intl)}
@@ -374,7 +370,7 @@ const GetInvolvedPage = ({ data, location }) => {
                 key={idx}
                 url={client.url}
                 background={client.background}
-                image={client.image}
+                image={getImage(client.image)}
                 name={client.name}
                 description={client.description}
                 alt={translateMessageId(client.alt, intl)}

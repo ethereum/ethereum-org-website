@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Link from "./Link"
 import Emoji from "./Emoji"
 import Translation from "./Translation"
+import { isMobile } from "../utils/isMobile"
 
 const OpenTitle = styled.h3`
   font-size: 40px;
@@ -237,8 +238,7 @@ const StablecoinBoxGrid = ({ items }) => {
   // TODO generalize
   const handleSelect = (idx) => {
     setOpenIndex(idx)
-    const isMobile = document && document.documentElement.clientWidth < 1024
-    if (isMobile) {
+    if (isMobile()) {
       navigate(`/stablecoins/#type-${idx}`)
     }
   }
