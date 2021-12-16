@@ -510,7 +510,7 @@ useEffect(async () => {
 
 And voila! We've  completed programming all of our wallet functionality! Now that our wallet is set up, let's figure out how to mint our NFT!
 
-## Step 5: NFT Metadata 101 {#step-5-nft-metadata-101}
+## Step 5: NFT Metadata 101 {#nft-metadata-101}
 
 So remember the NFT metadata we just talked about in Step 0 of this tutorial—it brings an NFT to life, allowing it to have properties, such as a digital asset, name, description, and other attributes.
 
