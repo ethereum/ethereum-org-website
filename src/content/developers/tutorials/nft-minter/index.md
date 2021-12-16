@@ -1,5 +1,5 @@
 ---
-title: 📝 NFT Minter Tutorial
+title: NFT Minter Tutorial
 description: In this tutorial, you’ll build an NFT minter and learn how to create a full stack dApp by connecting your smart contract to a React frontend using Metamask and Web3 tools.
 author: "nstrike2"
 tags:
