@@ -262,7 +262,7 @@ To double check our balance is there, let’s make an [eth\_getBalance](https://
 
 Phew! Our fake money is all there! <Emoji text=":money_mouth_face:" size={1} />
 
-## Step 4: Connect Metamask to your UI {#step-4-connect-metamask-to-your-UI}
+## Step 4: Connect Metamask to your UI {#connect-metamask-to-your-UI}
 
 Now that our Metamask wallet is set up, let's connect our dApp to it!
 
