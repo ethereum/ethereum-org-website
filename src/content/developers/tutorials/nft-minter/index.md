@@ -887,7 +887,7 @@ export const mintNFT = async(url, name, description) => {
 
 That's one giant function! Now, we just need to connect our `mintNFT` function to our `Minter.js` component...
 
-## Step 9: Connect mintNFT to our Minter.js frontend {#step-9-connect-mintnft-to-our-minter.js-fronten}
+## Step 9: Connect mintNFT to our Minter.js frontend {#connect-our-frontend}
 
 Open up your `Minter.js` file and update the  `import { connectWallet, getCurrentWalletConnected } from "./utils/interact.js";` line at the top to be:
 
