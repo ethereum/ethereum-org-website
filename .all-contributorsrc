@@ -5867,6 +5867,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "kum9748ar",
+      "name": "Kumar Kalyan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67071462?v=4",
+      "profile": "https://linktr.ee/kumarkalyan",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
