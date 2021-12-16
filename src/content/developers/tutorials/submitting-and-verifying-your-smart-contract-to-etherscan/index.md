@@ -26,7 +26,6 @@ If you're more into video learning, click on the thumbnail below for a step-by-s
 
 [![](https://img.youtube.com/vi/x1a5lrW-9fo/maxresdefault.jpg)](https://www.youtube.com/watch?v=x1a5lrW-9fo)
 
-And if you haven't already, you'll definitely need an Alchemy account to complete any of these tutorials. Sign up for a free account [here](https://alchemy.com/)!
 
 ## Part 3: Publish your Smart Contract to Etherscan
 
