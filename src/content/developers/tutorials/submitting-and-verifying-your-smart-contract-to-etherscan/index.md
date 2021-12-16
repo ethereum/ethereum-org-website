@@ -35,17 +35,7 @@ You did all the hard work of bringing your smart contract to life - now it's tim
 
 By verifying your smart contract on Etherscan, anyone can view your source code and interact with your smart contract. Let's get started!
 
-## 📋 Steps to submitting and verifying your smart contract to Etherscan using Alchemy
-
-This guide assumes you already have an [Alchemy account](https://alchemy.com/?a=eth-org-etherscan), access to our [Dashboard](https://dashboard.alchemyapi.io/), have gone through our [Hello World Smart Contract](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract), and also have completed our [Interacting with a Smart Contract](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract) tutorial.
-
-**🛠 Step 1:** [Generate an API Key on your Etherscan account](./#step-1-generate-an-api-key-on-your-etherscan-account)
-
-**👷 Step 2:**  [HardHat-deployed smart contracts](./#step-2-hardhat-deployed-smart-contracts)
-
-**💻 Step 3:** [Truffle-deployed smart contracts](./#step-3-truffle-deployed-smart-contracts)
-
-**🧑‍🎨 Step 4:** [Check out your smart contract on Etherscan!](./#step-4-check-out-your-smart-contract-on-etherscan!)
+This guide assumes you already have an [Alchemy account](https://alchemy.com/?a=eth-org-etherscan), access to our [Dashboard](https://dashboard.alchemyapi.io/), have gone through our [Hello World Smart Contract](./hello-world-smart-contract-for-beginners), and also have completed our [Interacting with a Smart Contract](./executing-and-interacting-with-a-smart-contract) tutorial.
 
 ### Step 1: Generate an API Key on your Etherscan account {#step-1-generate-an-api-key-on-your-etherscan-account}
 
