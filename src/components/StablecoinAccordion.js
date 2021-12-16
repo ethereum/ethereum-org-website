@@ -21,6 +21,7 @@ import {
 } from "./SharedStyledComponents"
 
 import { translateMessageId } from "../utils/translations"
+import { isMobile } from "../utils/isMobile"
 
 const Card = styled.div`
   border-radius: 2px;
@@ -543,8 +544,7 @@ const StablecoinAccordion = () => {
     } else {
       setOpenSection(selectedSection)
     }
-    const isMobile = document && document.documentElement.clientWidth < 1024
-    if (isMobile) {
+    if (isMobile()) {
       navigate(`/stablecoins/#${selectedSection}`)
     }
   }

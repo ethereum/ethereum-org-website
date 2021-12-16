@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
+import * as utils from "../utils/isMobile"
 
 const Container = styled.div`
   position: relative;
@@ -54,13 +55,7 @@ const ModalReturn = styled.div`
 // TODO add `position` prop
 const Tooltip = ({ content, children }) => {
   const [isVisible, setIsVisible] = useState(false)
-  let isMobile = false
-
-  if (typeof window !== "undefined") {
-    isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      window.navigator.userAgent
-    )
-  }
+  const isMobile = utils.isMobile()
 
   return (
     <>
