@@ -22,9 +22,7 @@ published: 2021-10-06
 
 You should have completed part 1 [creating and deploying a smart contract](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract), and part 2 [interacting with your smart contract](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract) prior to starting part 3 below.
 
-If you're more into video learning, click on the thumbnail below for a step-by-step walkthrough! 👇
-
-[![](https://img.youtube.com/vi/x1a5lrW-9fo/maxresdefault.jpg)](https://www.youtube.com/watch?v=x1a5lrW-9fo)
+If you're more into video learning, click on [this video](https://www.youtube.com/watch?v=x1a5lrW-9fo) for a step-by-step walkthrough! 👇
 
 
 ## Part 3: Publish your Smart Contract to Etherscan
@@ -40,17 +38,11 @@ An Etherscan API Key is necessary to verify that you're the owner of the smart c
 
 If you don't have an Etherscan account, first sign up using this [link](https://etherscan.io/register). 
 
-Once logged in, press your username on the top right, and select the "My profile" button:
-
-![](https://gblobscdn.gitbook.com/assets%2F-MB17w56kk7ZnRMWdqOL%2F-MReibSVpLlOCa_Si494%2F-MRervz4tGyhJJ-YgV4r%2Fimage.png?alt=media&token=98a2efe8-3c76-445b-b4cb-3a4d6e46eed4)
+Once logged in, press your username on the top right, and select the "My profile" button.
 
 Next, navigate to the "API-KEYs" button on the left tab bar. Then press the "Add" button, name your app whatever you wish \(we chose `hello-world`\), and then select continue.
 
-![](https://gblobscdn.gitbook.com/assets%2F-MB17w56kk7ZnRMWdqOL%2F-MReibSVpLlOCa_Si494%2F-MRevC-F9ZKDI9MHc7JA%2Fimage.png?alt=media&token=0933905b-5b0a-45ad-a8a9-bd9aa75494f7)
-
 Once you've followed the steps above, you should be able to view your new API key, which we've highlighted in red below. Copy this API key to your clipboard.
-
-![](https://gblobscdn.gitbook.com/assets%2F-MB17w56kk7ZnRMWdqOL%2F-MReibSVpLlOCa_Si494%2F-MRev7O89NYNdqtZ4b5b%2Fimage.png?alt=media&token=881d1789-e6eb-40d7-ba66-8adcfcde255f)
 
 Now, let's update your `.env` file to include your Etherscan API Key. 
 
@@ -252,8 +244,6 @@ Successfully verified 1 contract(s).
 ### Step 4: Check out your smart contract on Etherscan! {#step-4-check-out-your-smart-contract-on-etherscan!}
 
 When you navigate to the link provided in your terminal, you should be able to see your smart contract code and ABI published on Etherscan!
-
-![](https://gblobscdn.gitbook.com/assets%2F-MB17w56kk7ZnRMWdqOL%2F-MReibSVpLlOCa_Si494%2F-MRewuf9NzToMPg5WIln%2Fimage.png?alt=media&token=ca99b37e-6847-4b7a-8fef-371783f2e536)
 
 **Wahooo - you did it champ! Now anyone can call or write to your smart contract! We can't wait to see what you build next!** 🎉
 
