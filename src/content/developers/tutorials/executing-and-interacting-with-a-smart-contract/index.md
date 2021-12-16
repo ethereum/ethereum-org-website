@@ -33,7 +33,7 @@ Now that we've successfully deployed a smart contract to the ropsten network, le
 
 ## 📋 Steps to execute and interact with your smart contract using Alchemy
 
-This guide assumes you already have an [Alchemy account](https://alchemy.com/?r=e68b2f77-7fc7-4ef7-8e9c-cdfea869b9b5), access to our [Dashboard](https://dashboard.alchemyapi.io/) and have gone through our [Hello World Smart Contract](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract) tutorial. 
+This guide assumes you already have an [Alchemy account](https://alchemy.com/), access to our [Dashboard](https://dashboard.alchemyapi.io/) and have gone through our [Hello World Smart Contract](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract) tutorial. 
 
 **🛠 Step 1:** [Create a interact.js file](./#step-1-create-a-interact.js-file)
 
