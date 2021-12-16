@@ -17,7 +17,7 @@ lang: en
 sidebar: true
 published: 2021-10-06
 ---
-# Executing and Interacting with a Smart Contract
+# Executing and Interacting with a Smart Contract {#executing-and-interacting-with-a-smart-contract}
 
 Before starting this tutorial on interacting with a smart contract, you should have completed part 1 — [Hello World Smart Contract](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract) (creating and deploying a smart contract). In part 3 we'll go over [submitting our contract to Etherscan](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/submitting-your-smart-contract-to-etherscan) so anyone can understand how to interact with it!
 
@@ -27,27 +27,9 @@ If you're more into video learning, click on the thumbnail below for a step-by-s
 
 And if you haven't already, you'll definitely need an Alchemy account to complete this tutorial as well as build anything on the blockchain. Sign up for a free account [here](https://alchemy.com/)!
 
-## Part 2: Interact with your Smart Contract
+## Part 2: Interact with your Smart Contract {#interact-with-your-smart-contract}
 
 Now that we've successfully deployed a smart contract to the ropsten network, let's test out our web3 skills and interact with it! We'll be using [Alchemy](https://alchemy.com/?a=interact) as our Ethereum API that lets us read and write to the blockchain.
-
-## 📋 Steps to execute and interact with your smart contract using Alchemy
-
-This guide assumes you already have an [Alchemy account](https://alchemy.com/), access to our [Dashboard](https://dashboard.alchemyapi.io/) and have gone through our [Hello World Smart Contract](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract) tutorial. 
-
-**🛠 Step 1:** [Create a interact.js file](./#step-1-create-a-interact.js-file)
-
-**🧑‍🎨 Step 2:**  [Update your .env file](./#step-2-update-your-.env-file)
-
-**🤝 Step 3:** [Grab your contract ABI](./#step-3-grab-your-contract-ABI)
-
-**💻 Step 4:** [Create an instance of your contract](./#step-4-create-an-instance-of-your-contract)
-
-**📖 Step 5:** [Read the init message](./#step-5-read-the-init-message)
-
-**🔺 Step 6:** [Update the message](./#step-6-update-the-message)
-
-**⏫ Step 7:** [Read the new message](./#step-7-read-the-new-message)
 
 ### Step 1: Create a interact.js file {#step-1-create-a-interact.js-file}
 
