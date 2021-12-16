@@ -75,7 +75,7 @@ PRIVATE_KEY = "your-private-account-address"
 ETHERSCAN_API_KEY = "your-etherscan-key" 
 ```
 
-### Step 2: HardHat-deployed smart contracts {#step-2-hardhat-deployed-smart-contracts}
+### Step 2: HardHat-deployed smart contracts {#hardhat-deployed-smart-contracts}
 
 This is where our steps diverge for HardHat and Truffle deployed smart contracts, as they require different plugins. Skip to the _Step 3: Truffle-deployed smart contracts_ section if you deployed your contract using Truffle.
 
