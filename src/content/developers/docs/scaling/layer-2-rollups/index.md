@@ -73,7 +73,9 @@ So you can see the incentives: participants get penalized for conducting fraud a
 
 Watch Finematics explain optimistic rollups:
 
-<iframe width="100%" height="315px" src="https://www.youtube.com/embed/7pWxCklcNsU?start=263&end=406" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<figure>
+  <iframe width="100%" height="315px" src="https://www.youtube.com/embed/7pWxCklcNsU?start=263&end=406" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
 
 #### Use Optimistic rollups {#use-optimistic-rollups}
 
@@ -107,7 +109,9 @@ Being on layer 2, ZK-rollups can be optimised to reduce transaction size further
 
 Watch Finematics explain ZK-rollups:
 
-<iframe width="100%" height="315px" src="https://www.youtube.com/embed/7pWxCklcNsU?start=406&end=568" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<figure>
+  <iframe width="100%" height="315px" src="https://www.youtube.com/embed/7pWxCklcNsU?start=406&end=568" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
 
 #### Use ZK-rollups {#use-zk-rollups}
 
