@@ -49,9 +49,7 @@ When you open this cloned `hello-world-part-four` repository, you'll notice that
 * `starter-files` contains the starter files \(essentially the React UI\) for this project. In this tutorial, **we will be working in this directory**, as you learn how to bring this UI to life by connecting it to your Ethereum wallet and the Hello World smart contract that you published on Etherscan in [Part 3](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/submitting-your-smart-contract-to-etherscan).
 * `completed` contains the entire completed tutorial and is there for you as a **reference** **if you get stuck.**
 
-Next, open your copy of `starter-files` to your favorite code editor \(at Alchemy, we we're big fans of [VSCode](https://code.visualstudio.com/download)\), and then navigate into your `src` folder:
-
-![](https://gblobscdn.gitbook.com/assets%2F-MB17w56kk7ZnRMWdqOL%2F-M_6IYPLS6khQ4M73-jm%2F-M_6MbPMYDNN9VDr76NE%2Fimage.png?alt=media&token=d02ed4e4-9593-4e8a-bb3f-4ee3368ab232)
+Next, open your copy of `starter-files` to your favorite code editor \(at Alchemy, we we're big fans of [VSCode](https://code.visualstudio.com/download)\), and then navigate into your `src` folder.
 
 All of the code we'll write will live under the `src` folder. We'll be editing the `HelloWorld.js` component and the `util/interact.js` javascript files to give our project Web3 functionality.
 
@@ -77,10 +75,6 @@ npm start
 ```
 
 Doing so should open [http://localhost:3000/](http://localhost:3000/) in your browser, where you'll see the frontend for our project. It should consist of one field \(a place to update the message stored in your smart contract\), a "Connect Wallet" button, and an "Update" button.
-
-### What your UI should look like
-
-![](https://gblobscdn.gitbook.com/assets%2F-MB17w56kk7ZnRMWdqOL%2F-M_JH-ZZTmXd5ksrRDvH%2F-M_JH5V151awaPbFV81L%2Fimage.png?alt=media&token=2b31071b-bc7e-44a6-8ddf-ea0ce47bd20a)
 
 If you try clicking "Connect Wallet" or "Update" buttons, you'll notice that they don't work—that's because we still need to program their functionality! :\)
 
@@ -293,8 +287,6 @@ npm install dotenv --save
 
 For our dApp, **we'll be using our Websockets API key** instead of our HTTP API key, as it will allow us to set up a listener that detects when the message stored in the smart contract changes.
 
-![](https://gblobscdn.gitbook.com/assets%2F-MB17w56kk7ZnRMWdqOL%2F-M_MkQSe1oPR3yDXshWM%2F-M_N4zn3urEJyL-znSuZ%2Fhehe.gif?alt=media&token=2832950b-3ace-4347-b366-5ff0897a1896)
-
 Once you have your API key, create a `.env` file in your root directory and add your Alchemy Websockets url to it. Afterwards, your `.env` file should look like so:
 
 ```javascript
@@ -324,15 +316,11 @@ To load your Hello World smart contract, you'll need its contract address and AB
 
 ### How to get your contract ABI from Etherscan
 
-![](https://gblobscdn.gitbook.com/assets%2F-MB17w56kk7ZnRMWdqOL%2F-M_MkQSe1oPR3yDXshWM%2F-M_NSbm-xkwI-03f84YO%2Fcontract-abi.gif?alt=media&token=163e376e-ad66-4fa3-a7fa-6799f9439ffe)
-
 ### If you skipped Part 3 of this tutorial, you can use the HelloWorld contract with address [0x6f3f635A9762B47954229Ea479b4541eAF402A6A](https://ropsten.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code). It's ABI can be found [here](https://ropsten.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code).
 
 A contract ABI is necessary for specifying which function a contract will invoke as well ensuring that the function will return data in the format you're expecting. Once we've copied our contract ABI, let's save it as a JSON file called `contract-abi.json` in your `src` directory.
 
 ### Your contract-abi.json should be stored in your src folder.
-
-![](https://gblobscdn.gitbook.com/assets%2F-MB17w56kk7ZnRMWdqOL%2F-M_MkQSe1oPR3yDXshWM%2F-M_NXpztxJ96_-IEpBXh%2Fimage.png?alt=media&token=7e64b45d-a781-4004-b93e-1ddac40cc2f7)
 
 Armed with our contract address, ABI, and Alchemy Web3 endpoint, we can use the [contract method](https://web3js.readthedocs.io/en/v1.2.0/web3-eth-contract.html?highlight=constructor#web3-eth-contract) to load an instance of our smart contract. Import your contract ABI into the `interact.js` file and add your contract address.
 
@@ -408,8 +396,6 @@ Before we dive into our listener, let's check out what we have so far! Save your
 You'll notice that the current message no longer says "No connection to the network." Instead it reflects the message stored in the smart contract. Sick!
 
 ### Your UI should now reflect the message stored in the smart contract
-
-![](https://gblobscdn.gitbook.com/assets%2F-MB17w56kk7ZnRMWdqOL%2F-M_RfxYrcfBtvUQLcN62%2F-M_Rg8dUVEHHGbyLtC2a%2Fimage.png?alt=media&token=466bbdce-b585-4851-bb0b-c423b3441788)
 
 Now speaking of that listener...
 
@@ -505,10 +491,6 @@ If you want to understand more about how transactions on Ethereum work, check ou
 ### Download Metamask
 
 You can download and create a Metamask account for free [here](https://metamask.io/download.html). When you are creating an account, or if you already have an account, make sure to switch over to the “Ropsten Test Network” in the upper right \(so that we’re not dealing with real money\).
-
-### Sample Metamask Wallet
-
-![](https://gblobscdn.gitbook.com/assets%2F-MB17w56kk7ZnRMWdqOL%2F-M_cYmajzBCLKtd3Dc8V%2F-M_cYtPokF99Bl2nNTwX%2Fimage.png?alt=media&token=73d32b10-af1c-473d-8250-e38fb5d73db9)
 
 ### Add ether from a Faucet <a id="step-4-add-ether-from-a-faucet"></a>
 
@@ -621,11 +603,7 @@ You should see that the wallet button now reflects that your address is connecte
 
 Next, try refreshing the page... this is strange. Our wallet button is prompting us to connect Metamask, even though it is already connected...
 
-### The problem on page reload
-
-![](https://gblobscdn.gitbook.com/assets%2F-MB17w56kk7ZnRMWdqOL%2F-M_Yaisvf9rPdQpNDGVR%2F-M_a0xDSpujjoxC8uKgp%2Fthe%20problem.gif?alt=media&token=9ebed49c-0f78-4f6e-abe4-6082fe366dbe)
-
-However, have no fear! We easily can address that \(get it? 😅\) by implementing `getCurrentWalletConnected`, which will check if an address is already connected to our dApp and update our UI accordingly!
+However, have no fear! We easily can address that (get it?) by implementing `getCurrentWalletConnected`, which will check if an address is already connected to our dApp and update our UI accordingly!
 
 ### The `getCurrentWalletConnected` function
 
@@ -701,8 +679,6 @@ useEffect(async () => {
 Notice, we use the response of our call to `getCurrentWalletConnected` to update our `walletAddress` and `status` state variables.
 
 Now that you've added this code, let's try refreshing our browser window.
-
-![](https://gblobscdn.gitbook.com/assets%2F-MB17w56kk7ZnRMWdqOL%2F-M_a11MonxywM75Suv6p%2F-M_aO_Ul5X4zbY67BTE6%2Fyasss.gif?alt=media&token=7331e143-de53-4791-a542-7c7afdaad0d9)
 
 Niceeeee! The button should say that you're connected, and show a preview of your connected wallet's address - even after you refresh!
 
@@ -929,11 +905,7 @@ const onUpdatePressed = async () => {
 
 It's super clean and simple. 😌And guess what...YOUR DAPP IS COMPLETE!!!
 
-Let's test out the "Update" button!
-
-### DApp "Update" button demo
-
-![](https://gblobscdn.gitbook.com/assets%2F-MB17w56kk7ZnRMWdqOL%2F-M_atu6oFuj6ASbEKZXq%2F-M_av3nfAr8x8_aYDUyN%2Ffinished.gif?alt=media&token=6e5158f3-3375-4960-9969-b563f88096c1)
+Go ahead and test out your "Update" button!
 
 ## Step 7: Make your own custom dApp 🚀
 
