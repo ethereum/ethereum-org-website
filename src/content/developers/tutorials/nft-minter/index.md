@@ -81,7 +81,7 @@ In this tutorial, we're going to focus on part 2, calling an existing NFT's smar
 
 Cool, now that we understand how making an NFT works, let's clone our starter files!
 
-## Step 1: Clone the starter files {#step-1-clone-the-starter-files}
+## Step 1: Clone the starter files {#clone-the-starter-files}
 
 First, go to the [nft-minter-tutorial](https://github.com/alchemyplatform/nft-minter-tutorial) github repository to get the starter files for this project. Clone this repository into your local environment.
 
