@@ -20,6 +20,7 @@ import { ZenModeContext } from "../contexts/ZenModeContext"
 import { useKeyPress } from "../hooks/useKeyPress"
 
 import { isLangRightToLeft } from "../utils/translations"
+import { isMobile } from "../utils/isMobile"
 
 const ContentContainer = styled.div`
   position: relative;
@@ -77,14 +78,7 @@ const Layout = (props) => {
       setShouldShowSideNav(true)
 
       if (localStorage.getItem("zen-mode") !== null) {
-        let isMobile = false
-        if (typeof window !== undefined) {
-          isMobile =
-            /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-              window.navigator.userAgent
-            )
-        }
-        setIsZenMode(localStorage.getItem("zen-mode") === "true" && !isMobile)
+        setIsZenMode(localStorage.getItem("zen-mode") === "true" && !isMobile())
       }
     } else {
       // isZenMode and shouldShowSideNav only applicable in /docs pages

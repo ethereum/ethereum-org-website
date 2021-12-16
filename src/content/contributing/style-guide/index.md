@@ -246,6 +246,22 @@ This site uses **sentence casing** for header names as a convention. Only the fi
 ### Getting Enough Ether
 ```
 
+### Article authors {#authors}
+
+When citing articles from a specific author or organization, use the article's name as a link, followed by a dash, then the author's name italicized.
+
+```md
+<--- Good --->
+
+- [A rollup-centric ethereum roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) — _Vitalik Buterin_
+- [Oracles](https://docs.ethhub.io/built-on-ethereum/oracles/what-are-oracles/) – _EthHub_
+
+<--- Bad--->
+
+- [A rollup-centric ethereum roadmap by Vitalik Buterin](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
+- [EthHub on Oracles](https://docs.ethhub.io/built-on-ethereum/oracles/what-are-oracles/) – _EthHub_
+```
+
 ## Anything else? {#anything-else}
 
 Like all content on ethereum.org, this style guide is an open-source work-in-progress with room for improvement. If there is anything you think should be added to improve this document please [suggest an edit on GitHub](https://github.com/ethereum/ethereum-org-website/blob/dev/src/content/contributing/style-guide/index.md).

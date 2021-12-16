@@ -178,7 +178,7 @@ const TranslatorAcknowledgements = ({ data, location }) => {
             "page-contributing-translation-program-acknowledgements-our-translators-cta",
             intl
           )}
-          image={data.ethereum.childImageSharp.fixed}
+          image={getImage(data.ethereum)}
         />
       </Content>
 

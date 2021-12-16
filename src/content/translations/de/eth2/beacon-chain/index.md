@@ -15,12 +15,12 @@ summaryPoints:
 ---
 
 <UpgradeStatus isShipped dateKey="page-eth2-upgrades-beacon-date">
-    Die Beacon Chain wurde am 1. Dezember um 12:00 UTC eingeführt. Um mehr zu erfahren, schau dir die <a href="https://beaconscan.com/">Daten</a> an. Wenn Du auch beim Validieren von Transaktionen auf der Beacon Chain helfen möchtest, kannst Du <a href="/eth2/staking/">Deine ETH staken</a>.
+    Die Beacon Chain wurde am 1. Dezember, 2020 gegen Mittag der koordinierten Weltzeit eingeführt. Um mehr zu erfahren, schau dir die <a href="https://beaconscan.com/">Daten</a> an. Wenn Du auch beim Validieren von Transaktionen auf der Beacon Chain helfen möchtest, kannst Du <a href="/eth2/staking/">Deine ETH staken</a>.
 </UpgradeStatus>
 
 ## Welche Funktion hat die Beacon Chain? {#what-does-the-beacon-chain-do}
 
-Die Beacon Chain übernimmt die Koordination und Verknüpfung des Netzwerks der [Shards](/eth2/shard-chains/) und [Stakers](/eth2/staking/). Sie ist allerdings nicht mit dem heutigen [Ethereum Mainnet](/glossary/#mainnet) vergleichbar, da sie keine Zustandsveränderungen von Konten oder Smart Contracts verarbeitet.
+Die Beacon Chain übernimmt die Koordination und Verknüpfung des Netzwerks der [Shards](/eth2/shard-chains/) und [Stakers](/eth2/staking/). Aber sie ist nicht vergleichbar mit dem [Ethereum Mainnet](/glossary/#mainnet) von heute, da sie keine Zustandsveränderungen von Konten oder Smart Contracts verarbeitet.
 
 Mit der Zeit können sich Aufgabe und Rolle der Beacon Chain zwar verändern, sie ist jedoch ein fundamentaler Baustein für das [sichere, nachhaltige und skalierbare Ethereum der Zukunft](/eth2/vision/).
 
@@ -36,11 +36,11 @@ Das Staking als Validator ist einfacher, als das [Mining](/developers/docs/minin
 Wenn du Interesse hast, die Beacon Chain als Validator sicherer zu machen, <a href="/eth2/staking/">kannst du hier mehr über das Staking</a> lernen.
 </InfoBanner>
 
-Staking ist auch eine ganz wesentliche Veränderung im Vorfeld des zweiten großen Eth2-Upgrades: [Shard Chains](/eth2/shard-chains/).
+Dies ist auch eine wichtige Neuerung für ein anderes Eth2-Upgrade: [Shard Chains](/eth2/shard-chains/).
 
 ### Vorbereitung für Shard Chains {#setting-up-for-shard-chains}
 
-Shard Chains werden das zweite Eth2-Upgrade sein. Durch die Erweiterung des Netzwerkes auf 64 Blockchains werden sie Netzwerkapazitäten und Verarbeitungsgeschwindigkeit erhöhen. Die Beacon Chain ist ein erster wichtiger Schritt für die Einführung von Shard Chains, da diese Staking zum sicheren Gebrauch benötigen.
+Nachdem das Mainnet mit der Beacon Chain verschmolzen ist, wird das nächste Upgrade die Shard Chains in das proof-of-stake-Netzwerk einbringen. Diese "Shards" werden die Kapazität des Netzwerks erhöhen und die Transaktionsgeschwindigkeit verbessern, indem das Netzwerk auf 64 Blockchains erweitert wird. Die Beacon Chain ist ein erster wichtiger Schritt für die Einführung von Shard Chains, da diese Staking zum sicheren Gebrauch benötigen.
 
 Letztlich wird die Beacon Chain durch ein Zufallsprinzip auch dafür sorgen, dass Staker zum Validieren der einzelnen Shard Chains zugewiesen werden. Dies ist der Schlüssel, um die unerlaubte Zusammenarbeit von Stakern zur Übernahme eines Shards zu erschweren. Um genau zu sein reduziert es die Wahrscheinlichkeit [auf 1 zu eine Billion](https://medium.com/@chihchengliang/minimum-committee-size-explained-67047111fa20).
 
@@ -50,9 +50,9 @@ Die Eth2-Upgrades sind alle miteinander verknüpft. Zusammenfassend wirkt sich d
 
 ### Mainnet und die Beacon Chain {#mainnet-and-beacon-chain}
 
-Zu Beginn wird die Beacon Chain parallel und als separate Blockchain zum heutigen Ethereum-Mainnet existieren. Letztlich werden jedoch beide verbunden sein. Der Plan ist, das Mainnet an das proof-of-stake-system "anzudocken", welches von der Beacon Chain kontrolliert und koordiniert wird.
+Die Beacon Chain wird zunächst getrennt vom Ethereum Mainnet existieren, welches wir derzeit nutzen. Letztlich werden jedoch beide verbunden sein. Der Plan ist, das Mainnet mit dem proof-of-stake-System zu "verschmelzen", das von der Beacon Chain kontrolliert und koordiniert wird.
 
-<ButtonLink to="/eth2/merge/">Das Andocken</ButtonLink>
+<ButtonLink to="/eth2/merge/">Die Fusion</ButtonLink>
 
 ### Shards und die Beacon Chain {#shards-and-beacon-chain}
 

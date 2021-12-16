@@ -14,7 +14,7 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 In this tutorial we’ll see how to call a [smart contract](/developers/docs/smart-contracts/) function from JavaScript. First is reading the state of a smart contract (e.g. the balance of an ERC20 holder), then we’ll modify the state of the blockchain by making a token transfer. You should be already be familiar with [setting up a JS environment to interact with the blockchain](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/).
 
-For this examples we’ll play with the DAI token, for testing purpose we’ll fork the blockchain using ganache-cli and unlock an address that already has a lot of DAI:
+For this example we’ll play with the DAI token, for testing purpose we’ll fork the blockchain using ganache-cli and unlock an address that already has a lot of DAI:
 
 ```bash
 ganache-cli -f https://mainnet.infura.io/v3/[YOUR INFURA KEY] -d -i 66 1 --unlock 0x4d10ae710Bd8D1C31bd7465c8CBC3add6F279E81

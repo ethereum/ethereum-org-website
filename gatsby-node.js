@@ -179,7 +179,7 @@ exports.onCreateNode = async ({ node, getNode, actions }) => {
     }
 
     const absolutePath = node.fileAbsolutePath
-    const relativePathStart = absolutePath.indexOf("src/")
+    const relativePathStart = absolutePath.lastIndexOf("src/")
     const relativePath = absolutePath.substring(relativePathStart)
 
     // Boolean if page is outdated (most translated files are)
