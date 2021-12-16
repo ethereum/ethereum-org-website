@@ -33,30 +33,6 @@ In this tutorial, we will be using [React](https://reactjs.org/) as our frontend
 
 As a prerequisite, you should have a beginner-level understanding of React—know how components, props, useState/useEffect, and basic function calling works. If you've never heard of any of those terms before, you may want to check out this [Intro to React tutorial](https://reactjs.org/tutorial/tutorial.html). For the more visual learners, we highly recommend this excellent [Full Modern React Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d) video series by Net Ninja.
 
-**🛠 Step 0:** [Making NFTs 101](./#step-0-making-nfts-101)
-
-**🧑‍🎨 Step 1:**  [Clone the starter files](./#step-1-clone-the-starter-files)
-
-**🤝 Step 2:** [Check out our starter files](./#step-2-check-out-our-starter-files)
-
-**💻 Step 3:** [Set up your Ethereum wallet](./#step-3-set-up-your-ethereum-wallet)
-
-**📖 Step 4:** [Connect Metamask to your UI](./#step-4-connect-metamask-to-your-UI)
-
-**🔺 Step 5:** [NFT Metadata 101](./#step-5-nft-metadata-101)
-
-**⏫ Step 6:** [Use Pinata to pin your metadata to IPFS](./#step-6-use-pinata-to-pin-your-metadata-to-IPFS)
-
-**🪄 Step 7:** [Load your smart contract](./#step-7-load-your-smart-contract)
-
-**✍️ Step 8:** [Implement the mintNFT function](./#step-8-implement-the-mintnft-function)
-
-**📞 Step 9:** [Connect mintNFT to our Minter.js frontend](./#step-9-connect-mintnft-to-our-minter.js-frontend)
-
-**🤖 Step 10:** [Deploy your NFT to a Live Website](./#step-10-deploy-your-NFT-to-a-live-website)
-
-**🚀 Step 11:** [Take the blockchain world by storm](./#step-11-take-the-blockchain-world-by-storm)
-
 And if you haven't already, you'll definitely need an Alchemy account to complete this tutorial as well as build anything on the blockchain. Sign up for a free account [here](https://alchemy.com/)!
 
 Without further ado, let's get started!
@@ -92,9 +68,7 @@ When you open this cloned `nft-minter-tutorial` repository, you'll notice that i
 * `minter-starter-files` contains the starter files \(essentially the React UI\) for this project. In this tutorial, **we will be working in this directory**, as you learn how to bring this UI to life by connecting it to your Ethereum wallet and an NFT smart contract.
 * `nft-minter` contains the entire completed tutorial and is there for you as a **reference** **if you get stuck.**
 
-Next open your copy of `minter-starter-files` in to your favorite code editor \(at Alchemy, we we're big fans of [VSCode](https://code.visualstudio.com/download)\), and then navigate into your `src` folder:
-
-![We will work inside the &quot;src&quot; folder](https://static.slab.com/prod/uploads/7adb25ff/posts/images/RQXRr70mP174PjsKQI_jMKuq.png)
+Next open your copy of `minter-starter-files` in to your favorite code editor \(at Alchemy, we we're big fans of [VSCode](https://code.visualstudio.com/download)\), and then navigate into your `src` folder.
 
 All of the code we'll write will live under the `src` folder. We'll be editing the `Minter.js` component and writing additional javascript files to give our project Web3 functionality.
 
@@ -120,8 +94,6 @@ npm start
 ```
 
 Doing so should open [http://localhost:3000/](http://localhost:3000/) in your browser, where you'll see the frontend for our project. It should consist of 3 fields: a place to input a link to your NFT's asset, enter the name of your NFT, and provide a description.
-
-![What your UI should look like](https://static.slab.com/prod/uploads/7adb25ff/posts/images/PNrbdLnNM6OriGE32N25TGSl.png)
 
 If you try clicking "Connect Wallet" or "Mint NFT" buttons, you'll notice they don't work—that's because we still need to program their functionality! :\)
 
@@ -243,8 +215,6 @@ For users to be able to interact with your smart contract they will need to conn
 For this tutorial, we’ll use Metamask, a virtual wallet in the browser used to manage your Ethereum account address. If you want to understand more about how transactions on Ethereum work, check out [this page](/developers/docs/transactions/) from the Ethereum foundation.
 
 You can download and create a Metamask account for free [here](https://metamask.io/download.html). When you are creating an account, or if you already have an account, make sure to switch over to the “Ropsten Test Network” in the upper right \(so that we’re not dealing with real money\).
-
-![](https://gblobscdn.gitbook.com/assets%2F-MB17w56kk7ZnRMWdqOL%2F-MYRWsdREeaazjK0K0Nf%2F-MYRZyprO-jqs19ieqv0%2Fimage.png?alt=media&token=23a30f70-d294-405a-9b5e-2e7977c98215)
 
 ### Add ether from a Faucet <a id="step-4-add-ether-from-a-faucet"></a>
 
@@ -374,8 +344,6 @@ If you have Metamask installed, you should be prompted to connect your wallet to
 You should see that the wallet button now reflects that your address is connected! Yasssss 🔥
 
 Next, try refreshing the page... this is strange. Our wallet button is prompting us to connect Metamask, even though it is already connected...
-
-![](https://gblobscdn.gitbook.com/assets%2F-MB17w56kk7ZnRMWdqOL%2F-MaRb42vuEqiCQwb3r96%2F-MaRvDORbe2ZaabCj1R1%2Ftest.gif?alt=media&token=6e9098af-ae67-4d23-b90f-1c1dbe639aca)
 
 Don't worry though! We easily can fix that by implementing a function called `getCurrentWalletConnected`, which will check if an address is already connected to our dApp and update our UI accordingly!  
 
@@ -532,11 +500,7 @@ If you don't have a [Pinata](https://pinata.cloud/) account, sign up for a free 
 
 Navigate to the [https://pinata.cloud/keys](https://pinata.cloud/keys) page, then select the "New Key" button at the top, set the Admin widget as enabled, and name your key.
 
-![Create your Pinata API key](https://static.slab.com/prod/uploads/7adb25ff/posts/images/J__0NjUkj_6BObi1Q4Q3eRe6.png)
-
 You'll then be shown a popup with your API info. Make sure to put this somewhere safe.
-
-![Make sure to save your API key and secret in a safe place](https://static.slab.com/prod/uploads/7adb25ff/posts/images/to1HORepBqC2D350oKtfQJlh.png)
 
 Now that our key is set up, let's add it to our project so we can use it.
 
@@ -650,13 +614,9 @@ Navigate to the “Create App” page in your Alchemy Dashboard by hovering over
 
 Name your app \(we chose "My First NFT!"\), offer a short description, select “Staging” for the Environment \(used for your app bookkeeping\), and choose “Ropsten” for your network.
 
-![Configure your app details](https://static.slab.com/prod/uploads/7adb25ff/posts/images/jFpUacfvT5qV052WW_aFjA00.png)
-
 Click “Create app” and that’s it! Your app should appear in the table below.
 
-Awesome so now that we've created our HTTP Alchemy API URL, copy it to your clipboard like so…
-
-![Copy your Alchemy API key](https://static.slab.com/prod/uploads/7adb25ff/posts/images/mvmYwXa2U7TlurPx9Bqh2brD.gif)
+Awesome so now that we've created our HTTP Alchemy API URL, copy it to your clipboard...
 
 …and then let's add it to our `.env` file. Altogether, your .env file should look like this:
 
