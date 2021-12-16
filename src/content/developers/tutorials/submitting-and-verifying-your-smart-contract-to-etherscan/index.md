@@ -119,7 +119,7 @@ module.exports = {
 
 #### Step 2.2 Verify your smart contract on Etherscan! {#step-2.2-verify-your-smart-contract-on-etherscan}
 
-Make sure your files are properly saved \(especially if you're in VSCode\) and your `.env` variables are properly configured.
+Make sure your files are properly saved (especially if you're in VSCode) and your `.env` variables are properly configured.
 
 Finally, run the `verify` task, passing the address of the contract, and the network where it's deployed:
 
