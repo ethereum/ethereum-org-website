@@ -59,9 +59,7 @@ Cool, now that we understand how making an NFT works, let's clone our starter fi
 
 ## Step 1: Clone the starter files {#clone-the-starter-files}
 
-First, go to the [nft-minter-tutorial GitHub repository](https://github.com/alchemyplatform/nft-minter-tutorial) to get the starter files for this project. Clone this repository into your local environment.
-
-Don't know how to clone a repository? Check out [this guide](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) from Github.
+First, go to the [nft-minter-tutorial GitHub repository](https://github.com/alchemyplatform/nft-minter-tutorial) to get the starter files for this project. Clone this repository into your local environment.=
 
 When you open this cloned `nft-minter-tutorial` repository, you'll notice that it contains two folders: `minter-starter-files` and `nft-minter`.
 
