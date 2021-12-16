@@ -910,7 +910,7 @@ Ready to take your project live for users to interact with? Check out [this tuto
 
 One last step...
 
-## Step 11: Take the blockchain world by storm {#step-11-take-the-blockchain-world-by-storm)}
+## Step 11: Take the blockchain world by storm {#take-the-blockchain-world-by-storm}
 
 JK, you made it to the end of the tutorial! To recap, by building an NFT minter, you successfully learned how to:
 
