@@ -396,13 +396,13 @@ Here you’ll see a handful of JSON-RPC calls that Hardhat/Ethers made under the
 
 That’s all for part 1 of this tutorial, in part 2 we’ll actually [interact with our smart contract](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#part-2-interact-with-your-smart-contract) by updated our initial message, and in part 3 we’ll [publish our smart contract to Etherscan](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#optional-part-3-publish-your-smart-contract-to-etherscan) so everyone will know how to interact with it.
 
-## Create and Deploy your Smart Contract using Truffle
+## Create and Deploy your Smart Contract using Truffle {#truffle}
 
 If you've already completed steps 1-5 above, **you do not** need to go through these steps. Hardhat and Truffle are alternative development environment tools. You only need to use one or the other.
 
 ### Complete steps [1-5 above](./#step-1-connect-to-the-ethereum-network).
 
-### Step 6: Download Truffle
+### Step 6: Download Truffle {#download-truffle}
 
 [Truffle](https://www.trufflesuite.com/docs/truffle/overview) is a development environment, testing network, and asset pipeline for Ethereum that we will use to build, compile, and deploy our smart contract. To [download Truffle](https://www.trufflesuite.com/docs/truffle/getting-started/installation) globally, you can install [NodeJS](https://nodejs.org/en/download/) and paste the following command in your terminal:
 
@@ -410,7 +410,7 @@ If you've already completed steps 1-5 above, **you do not** need to go through t
 npm install -g truffle
 ```
 
-### Step 7: Create a Truffle Project
+### Step 7: Create a Truffle Project {#create-a-truffle-project}
 
 Next we have to create a [Truffle project](https://www.trufflesuite.com/docs/truffle/getting-started/creating-a-project) to store our files.
 
@@ -436,7 +436,7 @@ Once this operation is completed, you'll now have a project structure with the f
   * Testing your contract is super important before you deploy to the mainnet, however, for the purposes of this guide we will not be writing tests
 * **`truffle-config.js`**: Truffle [configuration file](https://www.trufflesuite.com/docs/truffle/reference/configuration)
 
-### Step 8: Install HDWalletProvider <a href="step-7-install-hd-wallet-provider" id="step-7-install-hd-wallet-provider"></a>
+### Step 8: Install HDWalletProvider <a href="step-7-install-hd-wallet-provider" id="step-7-install-hd-wallet-provider"></a> {#install-hdwalletprovider}
 
 [Truffle HDWallet provider](https://github.com/trufflesuite/truffle-hdwallet-provider) is an easy way to configure network connection to ethereum through a provider like Alchemy. You can install it using the following command:
 
@@ -444,7 +444,7 @@ Once this operation is completed, you'll now have a project structure with the f
 npm install @truffle/hdwallet-provider
 ```
 
-### Step 9: Write our Contract
+### Step 9: Write our Contract {#write-our-contract}
 
 Open up the hello-world project in your favorite editor (we like [VSCode](https://code.visualstudio.com)). Smart contracts are written in a language called Solidity which is what we will use to write our HelloWorld.sol smart contract.
 
@@ -488,7 +488,7 @@ contract HelloWorld {
 
 This smart contract is very simple, it stores a message that is passed in when the contract is initialized and can be updated by calling the `update` function.
 
-### Step 10: Connect Metamask & Alchemy to your project
+### Step 10: Connect Metamask & Alchemy to your project {#connect-metamask-and-alchemy-to-your-project}
 
 We’ve created a Metamask wallet, Alchemy account, and written our smart contract, now it’s time to connect the three.
 
@@ -520,7 +520,7 @@ API_URL = "https://eth-ropsten.alchemyapi.io/v2/your-api-key"
 MNEMONIC = "your-metamask-seed-phrase"
 ```
 
-### Step 11: Configure our Project
+### Step 11: Configure our Project {#configure-our-project}
 
 The next step is to edit your **`truffle-config.js`** file to use **`HDWalletProvider`** and provide all the necessary configuration for deploying to ropsten.
 
@@ -551,7 +551,7 @@ module.exports = {
 };
 ```
 
-### Step 12: Compile our Smart Contract
+### Step 12: Compile our Smart Contract {#compile-our-smart-contract}
 
 To compile a Truffle project, navigate to the root of the directory where the project is located and then type the following command:
 
@@ -573,7 +573,7 @@ Compiling your contracts...
 
 You should now see a build/contracts/ directory in your project. These artifacts are integral to the inner workings of Truffle, and are important for deploying your smart contract. This includes your contract's [ABI](https://docs.alchemyapi.io/guides/eth\_getlogs#what-are-ab-is), which is something you will encounter down the line. **You should not edit these files.**
 
-### Step 12: Write our deploy script
+### Step 13: Write our deploy script {#write-our-deploy-script}
 
 Navigate to your `migrations/` folder and create a new file specifically called: `2_deploy_contracts.js`
 
@@ -590,7 +590,7 @@ module.exports = function(deployer) {
 };
 ```
 
-### Step 13: Deploy our Smart Contract
+### Step 14: Deploy our Smart Contract {#deploy-our-smart-contract}
 
 In order to deploy our smart contract to the Ethereum network, we will use truffle's migrations which are JavaScript files that help you deploy contracts to the Ethereum network.
 
