@@ -17,7 +17,7 @@ lang: en
 sidebar: true
 published: 2021-10-06
 ---
-# 💻 Executing and Interacting with a Smart Contract
+# Executing and Interacting with a Smart Contract
 
 Before starting this tutorial on interacting with a smart contract, you should have completed part 1 — [Hello World Smart Contract](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract) (creating and deploying a smart contract). In part 3 we'll go over [submitting our contract to Etherscan](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/submitting-your-smart-contract-to-etherscan) so anyone can understand how to interact with it!
 
