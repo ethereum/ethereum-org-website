@@ -134,11 +134,11 @@ Watch Austin walk you through hash functions, and key pairs.
 
 <figure>
   <iframe width="100%" height="315" src="https://www.youtube.com/embed/QJ010l-pBpE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<figure>
+</figure>
 
 <figure>
   <iframe width="100%" height="315" src="https://www.youtube.com/embed/9LtBDy67Tho" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<figure>
+</figure>
 
 ## Further reading {#further-reading}
 
