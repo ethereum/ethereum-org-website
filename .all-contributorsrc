@@ -5858,6 +5858,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "gamalielhere",
+      "name": "Gamaliel 'Yel' Padillo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16236741?v=4",
+      "profile": "https://www.gamalielpadillo.com/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
