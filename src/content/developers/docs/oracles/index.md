@@ -183,7 +183,7 @@ To use Chainlink Keepers, a smart contract must implement [KeeperCompatibleInter
 - `checkUpkeep` - Checks if the contract requires work to be done.
 - `performUpkeep` - Performs the work on the contract, if instructed by checkUpkeep.
 
-The example below is a simple counter contract. The `counter` variable is incremented by one by every call to `performUpkeep`. [You can check out the following code using Remix](https://remix.ethereum.org/#url=https://docs.chain.link/samples/Keepers/KeepersCounter.sol)
+The example below is a simple counter contract. The `counter` variable is incremented by one by every call to `performUpkeep`. You can [check out the following code using Remix](https://remix.ethereum.org/#url=https://docs.chain.link/samples/Keepers/KeepersCounter.sol)
 
 ```javascript
 // SPDX-License-Identifier: MIT
@@ -227,7 +227,7 @@ contract Counter is KeeperCompatibleInterface {
 
 After deploying a Keeper-compatible contract, you must register the contract for [Upkeep](https://docs.chain.link/docs/chainlink-keepers/register-upkeep/) and fund it with LINK, to notify the Keeper Network about your contract, so your work is performed continuously.
 
-Other Keepers projects:
+### Keepers projects {#keepers}
 
 - [Chainlink Keepers](https://keepers.chain.link/)
 - [Keep3r Network](https://docs.keep3r.network/)
