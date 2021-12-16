@@ -34,7 +34,7 @@ You did all the hard work of bringing your smart contract to life - now it's tim
 By verifying your smart contract on Etherscan, anyone can view your source code and interact with your smart contract. Let's get started!
 
 
-### Step 1: Generate an API Key on your Etherscan account {#step-1-generate-an-api-key-on-your-etherscan-account}
+### Step 1: Generate an API Key on your Etherscan account {#generate-an-api-key-on-your-etherscan-account}
 
 An Etherscan API Key is necessary to verify that you're the owner of the smart contract that you're trying to publish. 
 
