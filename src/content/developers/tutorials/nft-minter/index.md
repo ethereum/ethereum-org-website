@@ -606,9 +606,7 @@ If you don't already have an Alchemy account, [sign up for free here.](https://a
 
 Once you’ve created an Alchemy account, you can generate an API key by creating an app. This will allow us to make requests to the Ropsten test network. 
 
-Navigate to the “Create App” page in your Alchemy Dashboard by hovering over “Apps” in the nav bar and clicking “Create App”
-
-![Create a new app](https://static.slab.com/prod/uploads/7adb25ff/posts/images/avF_wnWdWxL9X9YtBm8FO8bw.png)
+Navigate to the “Create App” page in your Alchemy Dashboard by hovering over “Apps” in the nav bar and clicking “Create App”.
 
 Name your app \(we chose "My First NFT!"\), offer a short description, select “Staging” for the Environment \(used for your app bookkeeping\), and choose “Ropsten” for your network.
 
