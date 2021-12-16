@@ -216,7 +216,7 @@ You can download and create a Metamask account for free [here](https://metamask.
 
 ### Add ether from a Faucet <a id="step-4-add-ether-from-a-faucet"></a>
 
-In order to mint our NFTs \(or sign any transactions on the Ethereum blockchain\), we’ll need some fake Eth. To get Eth you can go to the [Ropsten faucet](https://faucet.ropsten.be/) and enter your Ropsten account address, then click “Send Ropsten Eth.” You should see Eth in your Metamask account soon after!
+In order to mint our NFTs (or sign any transactions on the Ethereum blockchain), we’ll need some fake Eth. To get Eth you can go to the [Ropsten faucet](https://faucet.ropsten.be/) and enter your Ropsten account address, then click “Send Ropsten Eth.” You should see Eth in your Metamask account soon after!
 
 ### Check your balance {#check-your-balance}
 
