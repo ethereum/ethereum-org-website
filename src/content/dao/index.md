@@ -78,7 +78,9 @@ The backbone of a DAO is its smart contract. The contract defines the rules of t
 
 This is possible because smart contracts are tamper-proof once they go live on Ethereum. You can't just edit the code (the DAOs rules) without people noticing because everything is public.
 
-<DocLink to="/developers/docs/smart-contracts/" title="More on smart contracts" />
+<DocLink to="/developers/docs/smart-contracts/">
+  More on smart contracts
+</DocLink>
 
 ## Ethereum and DAOs {#ethereum-and-daos}
 

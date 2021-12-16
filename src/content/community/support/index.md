@@ -13,9 +13,13 @@ Are you looking for the official Ethereum support? The first thing you should kn
 
 Understanding the decentralized nature of Ethereum is vital because anyone claiming to be official support for Ethereum is probably trying to scam you! The best protection against scammers is educating yourself and taking security seriously.
 
-<DocLink to="/security/" title="Ethereum security and scam prevention" />
+<DocLink to="/security/">
+  Ethereum security and scam prevention
+</DocLink>
 
-<DocLink to="/learn/" title="Learn Ethereum fundamentals" />
+<DocLink to="/learn/">
+  Learn Ethereum fundamentals
+</DocLink>
 
 Despite the lack of official support, many groups, communities, and projects across the Ethereum ecosystem are happy to help.
 

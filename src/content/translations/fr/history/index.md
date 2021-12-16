@@ -35,7 +35,9 @@ La [chaîne phare](/eth2/beacon-chain/) avait besoin de 16 384 dépôts de 32 E
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/eth2/beacon-chain/" title="Chaîne phare" />
+<DocLink to="/eth2/beacon-chain/">
+  Chaîne phare
+</DocLink>
 
 ---
 
@@ -49,7 +51,9 @@ Le contrat de dépôt de mise en jeu a introduit la [mise en jeu](/glossary/#sta
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/eth2/staking/" title="Miser" />
+<DocLink to="/eth2/staking/">
+  Miser
+</DocLink>
 
 ---
 
@@ -301,4 +305,6 @@ Le Livre jaune, rédigé par le Dr. Gavin Wood, est une définition technique du
 
 Document d'introduction publié en 2013 par Vitalik Buterin, le fondateur d'Ethereum, précédant le lancement du projet en 2015.
 
-<DocLink to="/whitepaper/" title="Livre blanc" />
+<DocLink to="/whitepaper/">
+  Livre blanc
+</DocLink>
