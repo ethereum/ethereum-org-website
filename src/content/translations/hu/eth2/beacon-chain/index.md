@@ -5,13 +5,10 @@ lang: hu
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/core.png
-summaryPoints:
-  [
-    "A beacon chain nem változtatja meg azt, ahogy az Ethereumot ma használjuk.",
-    "A hálózatot fogja koordinálni.",
-    "Bevezeti a proof-of-stake rendszert az Ethereum ökoszisztémába.",
-    'A technikai ütemtervekben "Fázis 0"-ként is ismerheted.',
-  ]
+summaryPoint1: A beacon chain nem változtatja meg azt, ahogy az Ethereumot ma használjuk.
+summaryPoint2: A hálózatot fogja koordinálni.
+summaryPoint3: Bevezeti a proof-of-stake rendszert az Ethereum ökoszisztémába.
+summaryPoint4: A technikai ütemtervekben "Fázis 0"-ként is ismerheted.
 ---
 
 <UpgradeStatus isShipped date="Kiszállított!">

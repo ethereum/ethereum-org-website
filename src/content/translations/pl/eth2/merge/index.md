@@ -5,13 +5,10 @@ lang: pl
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    "Ostatecznie obecna sieć główna Ethereum zostanie połączona (zadokowana) z resztą ulepszeń zawartych w Eth2.",
-    "Dokowanie połączy główną sieć „Eth1” z łańcuchem Eth2 i systemem fragmentacji łańcucha sieci.",
-    "To będzie oznaczało koniec systemu weryfikacji opartego na proof-of-work oraz pełne przejście na system oparty o proof-of-stake",
-    "Być może znasz ten etap jako „Faza 1.5” z technicznego harmonogramu.",
-  ]
+summaryPoint1: Ostatecznie obecna sieć główna Ethereum zostanie połączona (zadokowana) z resztą ulepszeń zawartych w Eth2.
+summaryPoint2: Dokowanie połączy główną sieć „Eth1” z łańcuchem Eth2 i systemem fragmentacji łańcucha sieci.
+summaryPoint3: To będzie oznaczało koniec systemu weryfikacji opartego na proof-of-work oraz pełne przejście na system oparty o proof-of-stake
+summaryPoint4: Być może znasz ten etap jako „Faza 1.5” z technicznego harmonogramu.
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">

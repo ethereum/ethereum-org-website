@@ -5,13 +5,10 @@ lang: en
 template: eth2
 sidebar: true
 image: ../../../assets/eth2/newrings.png
-summaryPoints:
-  [
-    "Sharding is a multi-phase upgrade to improve Ethereum’s scalability and capacity.",
-    "Shard chains spread the network's load across 64 new chains.",
-    "They make it easier to run a node by keeping hardware requirements low.",
-    "This upgrade is planned to follow the merge of Mainnet with the Beacon Chain.",
-  ]
+summaryPoint1: Sharding is a multi-phase upgrade to improve Ethereum’s scalability and capacity.
+summaryPoint2: Shard chains spread the network's load across 64 new chains.
+summaryPoint3: They make it easier to run a node by keeping hardware requirements low.
+summaryPoint4: This upgrade is planned to follow the merge of Mainnet with the Beacon Chain.
 ---
 
 <UpgradeStatus date="~2023">

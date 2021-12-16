@@ -5,13 +5,10 @@ lang: el
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    'Τελικά το τρέχον κεντρικό δίκτυο του Ethereum θα "ενσωματωθεί" με τις υπόλοιπες αναβαθμίσεις του Eth2.',
-    'Η ενσωμάτωση αυτή θα συγχωνεύσει το κεντρικό δίκτυο του "Eth1" με το beacon chain του Eth2 και το σύστημα διαλογής (sharding system).',
-    "Αυτό θα σηματοδοτήσει το τέλος του proof-of-work για το Ethereum και την πλήρη μετάβαση στο proof of stake.",
-    'Μπορεί να το γνωρίζετε αυτό ως "Φάση 1.5" με τεχνικούς όρους.',
-  ]
+summaryPoint1: Τελικά το τρέχον κεντρικό δίκτυο του Ethereum θα "ενσωματωθεί" με τις υπόλοιπες αναβαθμίσεις του Eth2.
+summaryPoint2: Η ενσωμάτωση αυτή θα συγχωνεύσει το κεντρικό δίκτυο του "Eth1" με το beacon chain του Eth2 και το σύστημα διαλογής (sharding system).
+summaryPoint3: Αυτό θα σηματοδοτήσει το τέλος του proof-of-work για το Ethereum και την πλήρη μετάβαση στο proof of stake.
+summaryPoint4: Μπορεί να το γνωρίζετε αυτό ως "Φάση 1.5" με τεχνικούς όρους.
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">

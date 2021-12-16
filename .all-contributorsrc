@@ -5596,7 +5596,8 @@
       "profile": "https://kevinjones.engineer",
       "contributions": [
         "code",
-        "bug"
+        "bug",
+        "content"
       ]
     },
     {
@@ -5838,6 +5839,33 @@
       "profile": "https://github.com/aghArdeshir",
       "contributions": [
         "code"
+      ]
+    },
+    {
+      "login": "MiConnell",
+      "name": "Michael Connell",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14168559?v=4",
+      "profile": "https://github.com/MiConnell",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "amm98d",
+      "name": "Ahmed Mustafa Malik",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39633205?v=4",
+      "profile": "https://github.com/amm98d",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "gamalielhere",
+      "name": "Gamaliel 'Yel' Padillo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16236741?v=4",
+      "profile": "https://www.gamalielpadillo.com/",
+      "contributions": [
+        "doc"
       ]
     }
   ],

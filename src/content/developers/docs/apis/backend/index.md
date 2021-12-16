@@ -45,6 +45,11 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 - [cloudflare-eth.com](https://cloudflare-eth.com)
 
+**DataHub by Figment -** **_Web3 API services with Ethereum Mainnet and testnets._**
+
+- [DataHub](https://www.figment.io/datahub)
+- [Documentation](https://docs.figment.io/introduction/what-is-datahub)
+
 **Nodesmith -** **_JSON-RPC API access to Ethereum Mainnet and testnets._**
 
 - [nodesmith.io](https://nodesmith.io/network/ethereum/)
