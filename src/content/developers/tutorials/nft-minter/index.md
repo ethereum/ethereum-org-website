@@ -61,7 +61,7 @@ And if you haven't already, you'll definitely need an Alchemy account to complet
 
 Without further ado, let's get started!
 
-## Step 0: Making NFTs 101 {#step-0-making-nfts-101}
+## Step 0: Making NFTs 101 {#making-nfts-101}
 
 Before we even start looking at any code, it's important to understand how making an NFT works. It involves two steps:
 
