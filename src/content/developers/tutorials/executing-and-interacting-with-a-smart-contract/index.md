@@ -123,7 +123,7 @@ You can read more about Providers, Signers, and Contracts in the [Ethers.js docu
 
 ### Step 5: Read the init message {#step-5-read-the-init-message}
 
-Remember when we deployed our contract with the`initMessage = "Hello world!"`? We are now going to read that message stored in our smart contract and print it to the console.&#x20;
+Remember when we deployed our contract with the`initMessage = "Hello world!"`? We are now going to read that message stored in our smart contract and print it to the console.
 
 In JavaScript we use asynchronous functions to interact with networks. Check out this [article](https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff) to learn more about async functions.&#x20;
 
