@@ -316,7 +316,7 @@ const StatsBoxGrid = () => {
         const {
           data: { prices },
         } = await axios.get(
-          `https://api.coingecko.com/api/v3/coins/ethereum/market_chart/range?vs_currency=usd&from=${fromUnixTimestamp}&to=${toUnixTimestamp}`
+          `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=90&interval=daily`
         )
         const data = prices
           .map(([timestamp, value]) => ({
