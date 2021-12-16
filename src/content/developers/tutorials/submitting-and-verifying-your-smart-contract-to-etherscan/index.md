@@ -143,7 +143,7 @@ https://ropsten.etherscan.io/address/<contract-address>#contracts
 
 Congrats! Your smart contract code should be on Etherescan! Check out [Step 4](#step-4-check-out-your-smart-contract-on-etherscan!) to see how to view your smart contract code!
 
-### Step 3: Truffle-deployed smart contracts {#step-3-truffle-deployed-smart-contracts}
+### Step 3: Truffle-deployed smart contracts {#truffle-deployed-smart-contracts}
 
 Skip this section if you deployed your smart contract with HardHat.
 
