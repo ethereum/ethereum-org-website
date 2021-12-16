@@ -33,7 +33,9 @@ The opposite approach, off-chain governance, is where any protocol change decisi
 
 _Whilst at the protocol level Ethereum governance is off-chain, many use cases built on top of Ethereum, such as DAOs, use on-chain governance._
 
-<ButtonLink to="/dao/">More on DAOs</ButtonLink>
+<ButtonLink to="/dao/">
+  More on DAOs
+</ButtonLink>
 
 <Divider />
 
@@ -57,7 +59,9 @@ _Note: any individual can be part of multiple of these groups (e.g. a protocol d
 
 One important process used in Ethereum governance is the proposal of **Ethereum Improvement Proposals (EIPs)**. EIPs are standards specifying potential new features or processes for Ethereum. Anyone within the Ethereum community can create an EIP. For example, none of the authors of EIP-721, the EIP that standardized NFTs, have worked directly on Ethereum's protocol development.
 
-<ButtonLink to="/eips/">More on EIPs</ButtonLink>
+<ButtonLink to="/eips/">
+  More on EIPs
+</ButtonLink>
 
 <Divider />
 
@@ -151,7 +155,9 @@ While the specification and implementations development has always been fully op
 
 When the Beacon Chain merges with the Ethereum execution layer, the governance process to propose changes will be harmonized. This process to implement the merge is [already underway](https://github.com/ethereum/EIPs/pull/3675).
 
-<ButtonLink to="/eth2/merge/">More on the merge</ButtonLink>
+<ButtonLink to="/eth2/merge/">
+  More on the merge
+</ButtonLink>
 
 <Divider />
 

@@ -89,7 +89,9 @@ The Eth2 upgrades are all somewhat interrelated. So let’s recap how the shard 
 
 The Beacon Chain contains all the logic for keeping shards secure and synced up. The Beacon Chain will coordinate the stakers in the network, assigning them to shards they need to work on. And it will also facilitate communication between shards by receiving and storing shard transaction data that is accessible by other shards. This will give shards a snapshot of Ethereum’s state to keep everything up-to-date.
 
-<ButtonLink to="/eth2/beacon-chain/">The Beacon Chain</ButtonLink>
+<ButtonLink to="/eth2/beacon-chain/">
+  The Beacon Chain
+</ButtonLink>
 
 ### Shards and the merge {#shards-and-docking}
 
@@ -97,7 +99,9 @@ By the time additional shards are added, Ethereum Mainnet will already be secure
 
 It remains to be seen whether mainnet will exist as the only “smart” shard that can handle code execution – but either way, the decision to expand shards can be revisited as needed.
 
-<ButtonLink to="/eth2/merge/">The merge</ButtonLink>
+<ButtonLink to="/eth2/merge/">
+  The merge
+</ButtonLink>
 
 <Divider />
 
