@@ -35,7 +35,7 @@ Now that we've successfully deployed a smart contract to the ropsten network, le
 
 This is the file where we'll write our interaction script. We'll be using the Ethers.js library that you previously installed in Part 1.&#x20;
 
-Inside your `scripts/`folder for the hardhat tutorial, or your home directory for the [Truffle tutorial](./#create-and-deploy-your-smart-contract-using-truffle), create a new file named `interact.js` add the following lines of code:
+Inside your `scripts/`folder for the Hardhat tutorial, or your home directory for the Truffle tutorial, create a new file named `interact.js` add the following lines of code:
 
 ```javascript
 // interact.js
