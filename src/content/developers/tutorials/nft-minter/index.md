@@ -57,7 +57,7 @@ As a prerequisite, you should have a beginner-level understanding of React—kno
 
 **🚀 Step 11:** [Take the blockchain world by storm](./#step-11-take-the-blockchain-world-by-storm)
 
-And if you haven't already, you'll definitely need an Alchemy account to complete this tutorial as well as build anything on the blockchain. Sign up for a free account [here](https://alchemy.com/?a=eth-org-nft-minter)!
+And if you haven't already, you'll definitely need an Alchemy account to complete this tutorial as well as build anything on the blockchain. Sign up for a free account [here](https://alchemy.com/)!
 
 Without further ado, let's get started!
 
