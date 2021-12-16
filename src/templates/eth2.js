@@ -393,7 +393,7 @@ const dropdownLinks = {
   ],
 }
 
-const Eth2Page = ({ data, data: { mdx } }) => {
+const Eth2Page = ({ data: { mdx } }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang)
   const tocItems = mdx.tableOfContents.items
@@ -402,6 +402,15 @@ const Eth2Page = ({ data, data: { mdx } }) => {
   const lastUpdatedDate = mdx.parent.fields
     ? mdx.parent.fields.gitLogLatestDate
     : mdx.parent.mtime
+
+  // Place summary points into an array, guarding for `undefined` values
+  let summaryPoints = []
+  for (let i = 1; i <= 4; i++) {
+    const summaryPoint = mdx.frontmatter[`summaryPoint${i}`]
+    if (summaryPoint) {
+      summaryPoints.push(summaryPoint)
+    }
+  }
 
   return (
     <Container>
@@ -412,7 +421,7 @@ const Eth2Page = ({ data, data: { mdx } }) => {
           <Title>{mdx.frontmatter.title}</Title>
           <SummaryBox>
             <ul>
-              {mdx.frontmatter.summaryPoints.map((point, idx) => (
+              {summaryPoints.map((point, idx) => (
                 <SummaryPoint key={idx}>{point}</SummaryPoint>
               ))}
             </ul>
@@ -478,7 +487,10 @@ export const eth2PageQuery = graphql`
         lang
         sidebar
         sidebarDepth
-        summaryPoints
+        summaryPoint1
+        summaryPoint2
+        summaryPoint3
+        summaryPoint4
         image {
           childImageSharp {
             gatsbyImageData(

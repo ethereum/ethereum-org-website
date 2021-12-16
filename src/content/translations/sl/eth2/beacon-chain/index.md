@@ -5,13 +5,10 @@ lang: sl
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/core.png
-summaryPoints:
-  [
-    "Oddajniška veriga ne spreminja ničesar glede Ethereuma, ki ga uporabljamo danes.",
-    "Usklajevala bo omrežje.",
-    "V ekosistem Ethereum uvaja dokaz o deležu.",
-    'Oddajniško verigo morda poznate pod imenom "faza 0", ki se uporablja v tehničnih načrtih.',
-  ]
+summaryPoint1: Oddajniška veriga ne spreminja ničesar glede Ethereuma, ki ga uporabljamo danes.
+summaryPoint2: Usklajevala bo omrežje.
+summaryPoint3: V ekosistem Ethereum uvaja dokaz o deležu.
+summaryPoint4: Oddajniško verigo morda poznate pod imenom "faza 0", ki se uporablja v tehničnih načrtih.
 ---
 
 <UpgradeStatus isShipped date="Odpremljeno!">

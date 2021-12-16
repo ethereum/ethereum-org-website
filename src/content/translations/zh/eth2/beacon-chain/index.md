@@ -5,13 +5,10 @@ lang: zh
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/core.png
-summaryPoints:
-  [
-    "信标链没有改变我们目前使用的以太坊。",
-    "它将协调整个网络。",
-    "它向以太坊生态系统中引入了权益证明共识机制（PoS）。",
-    "你可以认为这是技术路线图上的‘第0阶段’。",
-  ]
+summaryPoint1: 信标链没有改变我们目前使用的以太坊。
+summaryPoint2: 它将协调整个网络。
+summaryPoint3: 它向以太坊生态系统中引入了权益证明共识机制（PoS）。
+summaryPoint4: 你可以认为这是技术路线图上的‘第0阶段’。
 ---
 
 <UpgradeStatus isShipped date="发货了！">

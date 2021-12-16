@@ -5,13 +5,10 @@ lang: ro
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
-summaryPoints:
-  [
-    "Fragmentarea este un upgrade pe mai multe faze pentru a îmbunătăți scalabilitatea și capacitatea Ethereum.",
-    "Lanțurile de fragmente distribuie sarcina rețelei pe 64 de lanțuri noi.",
-    "Acestea facilitează rularea unui nod, menținând cerințele hardware scăzute.",
-    "Foile de parcurs tehnice includ lucrări pe lanțurile de fragmente în „Faza 1” și potențial în „Faza 2”.",
-  ]
+summaryPoint1: Fragmentarea este un upgrade pe mai multe faze pentru a îmbunătăți scalabilitatea și capacitatea Ethereum.
+summaryPoint2: Lanțurile de fragmente distribuie sarcina rețelei pe 64 de lanțuri noi.
+summaryPoint3: Acestea facilitează rularea unui nod, menținând cerințele hardware scăzute.
+summaryPoint4: Foile de parcurs tehnice includ lucrări pe lanțurile de fragmente în „Faza 1” și potențial în „Faza 2”.
 ---
 
 <UpgradeStatus date="~2023">

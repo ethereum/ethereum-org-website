@@ -5,13 +5,10 @@ lang: en
 template: eth2
 sidebar: true
 image: ../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    'Eventually the current Ethereum Mainnet will "merge" with the beacon chain proof-of-stake system.',
-    "This will mark the end of proof-of-work for Ethereum, and the full transition to proof-of-stake.",
-    "This is planned to precede the roll out of shard chains.",
-    'We formerly referred to this as "the docking."',
-  ]
+summaryPoint1: Eventually the current Ethereum Mainnet will "merge" with the beacon chain proof-of-stake system.
+summaryPoint2: This will mark the end of proof-of-work for Ethereum, and the full transition to proof-of-stake.
+summaryPoint3: This is planned to precede the roll out of shard chains.
+summaryPoint4: We formerly referred to this as "the docking."
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">

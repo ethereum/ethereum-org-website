@@ -5,13 +5,10 @@ lang: sl
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
-summaryPoints:
-  [
-    "Razdrobljene verige so nadgradnja v več fazah za izboljševanje Ethereumove razširljivosti in zmogljivosti.",
-    "Razdrobljene verige razdelijo obremenitev omrežja med 64 novih verig.",
-    "Omogočajo enostavno izvajanje vozlišča, saj so zahteve glede strojne opreme nizke.",
-    'Tehnični načrti vključujejo delo na razdrobljenih verigah v "fazi 1" in morda v "fazi 2".',
-  ]
+summaryPoint1: Razdrobljene verige so nadgradnja v več fazah za izboljševanje Ethereumove razširljivosti in zmogljivosti.
+summaryPoint2: Razdrobljene verige razdelijo obremenitev omrežja med 64 novih verig.
+summaryPoint3: Omogočajo enostavno izvajanje vozlišča, saj so zahteve glede strojne opreme nizke.
+summaryPoint4: Tehnični načrti vključujejo delo na razdrobljenih verigah v "fazi 1" in morda v "fazi 2".
 ---
 
 <UpgradeStatus date="~2023">
