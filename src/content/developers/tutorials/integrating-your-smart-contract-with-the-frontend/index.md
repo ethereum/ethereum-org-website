@@ -38,20 +38,6 @@ For this dApp, we'll be using [React](https://reactjs.org/) as our frontend fram
 
 As a prerequisite, you should have a beginner-level understanding of React—know how components, props, useState/useEffect, and basic function calling works. If you've never heard of any of those terms before, we recommend that you check out this [Intro to React tutorial](https://reactjs.org/tutorial/tutorial.html). For the more visual learners, we highly recommend this awesome Net Ninja [Full Modern React Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d) video series.
 
-What are we here for? Let's get started! 😎
-
-**🛠 Step 1:** [Clone the starter files](./#step-1-starter-files)
-
-**🧑‍🎨 Step 2:**  [Check out the starter files](./#step-2-check-out-the-starter-files)
-
-**🤝 Step 3:** [Read from your smart contract](./#step-3-read-from-your-smart-contract)
-
-**💻 Step 4:** [Set up your Ethereum wallet](./#step-4-create-an-instance-of-your-contract)
-
-**📖 Step 5:** [Connect Metamask to your UI](./#step-5-connect-metamask-to-your-UI)
-
-**🔺 Step 6:** [Implement the `updateMessage` function](./#step-6-implement-the-updateMessage-function)
-
 ## Step 1: Clone the starter files {#step-1-starter-files}
 
 First, go to the [hello-world-part-four github repository](https://github.com/alchemyplatform/hello-world-part-four-tutorial) to get the starter files for this project. Clone this repository into your local environment.
