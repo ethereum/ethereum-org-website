@@ -9,13 +9,15 @@
     "language": "български"
   },
   "bn": {
-    "language": "বাংলা"
+    "language": "বাংলা",
+    "useLegacyHomepage": true
   },
   "ca": {
     "language": "Català"
   },
   "cs": {
-    "language": "Čeština"
+    "language": "Čeština",
+    "useLegacyHomepage": true
   },
   "de": {
     "language": "Deutsch"
@@ -30,13 +32,16 @@
     "language": "فارسی"
   },
   "fi": {
-    "language": "Suomi"
+    "language": "Suomi",
+    "useLegacyHomepage": true
   },
   "fr": {
-    "language": "Français"
+    "language": "Français",
+    "useLegacyHomepage": true
   },
   "hi": {
-    "language": "हिन्दी"
+    "language": "हिन्दी",
+    "useLegacyHomepage": true
   },
   "hr": {
     "language": "Hrvatski"
@@ -48,37 +53,45 @@
     "language": "Bahasa Indonesia"
   },
   "ig": {
-    "language": "Ibo"
+    "language": "Ibo",
+    "useLegacyHomepage": true
   },
   "it": {
-    "language": "Italiano"
+    "language": "Italiano",
+    "useLegacyHomepage": true
   },
   "ja": {
     "language": "日本語"
   },
   "ko": {
-    "language": "한국어"
+    "language": "한국어",
+    "useLegacyHomepage": true
   },
   "lt": {
-    "language": "Lietuvis"
+    "language": "Lietuvis",
+    "useLegacyHomepage": true
   },
   "ml": {
-    "language": "മലയാളം"
+    "language": "മലയാളം",
+    "useLegacyHomepage": true
   },
   "nl": {
     "language": "Nederlands"
   },
   "nb": {
-    "language": "Norsk"
+    "language": "Norsk",
+    "useLegacyHomepage": true
   },
   "pl": {
-    "language": "Polski"
+    "language": "Polski",
+    "useLegacyHomepage": true
   },
   "pt": {
     "language": "Português"
   },
   "pt-br": {
-    "language": "Português"
+    "language": "Português",
+    "useLegacyHomepage": true
   },
   "ro": {
     "language": "Română"
@@ -87,7 +100,8 @@
     "language": "Pусский"
   },
   "se": {
-    "language": "Svenska"
+    "language": "Svenska",
+    "useLegacyHomepage": true
   },
   "sk": {
     "language": "Slovenský"
@@ -96,18 +110,22 @@
     "language": "Slovenščina"
   },
   "tr": {
-    "language": "Türkçe"
+    "language": "Türkçe",
+    "useLegacyHomepage": true
   },
   "uk": {
     "language": "Українська"
   },
   "vi": {
-    "language": "Tiếng Việt"
+    "language": "Tiếng Việt",
+    "useLegacyHomepage": true
   },
   "zh": {
-    "language": "简体中文"
+    "language": "简体中文",
+    "useLegacyHomepage": true
   },
   "zh-tw": {
-    "language": "繁體中文"
+    "language": "繁體中文",
+    "useLegacyHomepage": true
   }
 }

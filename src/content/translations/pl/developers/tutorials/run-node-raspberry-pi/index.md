@@ -237,12 +237,12 @@ Po raz pierwszy, musisz utworzyć ręcznie konto, uruchamiając plik binarny „
 
 Włożyliśmy dużo pracy, próbując skonfigurować Raspberry Pi 4 jako pełny węzeł Ethereum, ponieważ wiemy, że ogromna baza użytkowników tego urządzenia może mieć bardzo pozytywny wpływ na sieć.
 
-Proszę wziąć pod uwagę, że jest to pierwszy obraz oparty na Ubuntu 20.04, więc może być kilka błędów. Jeśli tak, otwórz zgłoszenie na [GitHub](https://github.com/diglos/pi-gen) lub skontaktuj się z nami na [Twitter](https://twitter.com/EthereumOnARM).
+Proszę wziąć pod uwagę, że jest to pierwszy obraz oparty na Ubuntu 20.04, więc może być kilka błędów. Jeśli tak, otwórz zgłoszenie na [GitHub](https://github.com/diglos/ethereumonarm) lub skontaktuj się z nami na [Twitter](https://twitter.com/EthereumOnARM).
 
 ## Odniesienia {#references}
 
 1. [geth repeatedly crashes with SIGSEGV](https://github.com/ethereum/go-ethereum/issues/20190)
-2. [https://github.com/diglos/pi-gen](https://github.com/diglos/pi-gen)
+2. [https://github.com/diglos/ethereumonarm](https://github.com/diglos/ethereumonarm)
 3. https://ubuntu.com/download/raspberry-pi
 4. https://en.wikipedia.org/wiki/Port_forwarding
 5. https://prometheus.io

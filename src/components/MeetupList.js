@@ -1,11 +1,13 @@
 // Libraries
 import React, { useState } from "react"
 import styled from "styled-components"
+import { sortBy } from "lodash"
 
 // Components
 import Emoji from "./Emoji"
 import InfoBanner from "./InfoBanner"
 import Link from "./Link"
+import Translation from "../components/Translation"
 
 // Data
 import meetups from "../data/community-meetups.json"
@@ -78,17 +80,20 @@ const StyledInput = styled.input`
 `
 
 const filterMeetups = (query) => {
-  if (!query) return meetups
+  if (!query) return sortedMeetups
 
   const lowercaseQuery = query.toLowerCase()
 
-  return meetups.filter((meetup) => {
+  return sortedMeetups.filter((meetup) => {
     return (
       meetup.title.toLowerCase().includes(lowercaseQuery) ||
       meetup.location.toLowerCase().includes(lowercaseQuery)
     )
   })
 }
+
+// sort meetups by country and then by city
+const sortedMeetups = sortBy(meetups, ["emoji", "location"])
 
 // TODO create generalized CardList / TableCard
 // TODO prop if ordered list or unordered
@@ -120,9 +125,9 @@ const MeetupList = () => {
           ))
         ) : (
           <InfoBanner emoji=":information_source:">
-            We don't have any meetups matching this search. Know of one?{" "}
+            <Translation id="page-community-meetuplist-no-meetups" />{" "}
             <Link to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json">
-              Please add it to this page!
+              <Translation id="page-community-please-add-to-page" />
             </Link>
           </InfoBanner>
         )}
