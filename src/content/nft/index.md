@@ -30,7 +30,7 @@ Fungible items, on the other hand, can be exchanged because their value defines 
 
 <figure>
   <iframe title="YouTube video titled What Are NFTs and How Can They Be Used in Decentralized Finance? DEFI Explained" width="100%" height="315" src="https://www.youtube.com/embed/Xdkkux6OxfM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<figure/>
+</figure>
 
 ## The internet of assets {#internet-of-assets}
 
