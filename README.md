@@ -1296,6 +1296,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/amm98d"><img src="https://avatars.githubusercontent.com/u/39633205?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ahmed Mustafa Malik</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=amm98d" title="Code">💻</a></td>
     <td align="center"><a href="https://www.gamalielpadillo.com/"><img src="https://avatars.githubusercontent.com/u/16236741?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gamaliel 'Yel' Padillo</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=gamalielhere" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://linktr.ee/kumarkalyan"><img src="https://avatars.githubusercontent.com/u/67071462?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kumar Kalyan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Akum9748ar" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
