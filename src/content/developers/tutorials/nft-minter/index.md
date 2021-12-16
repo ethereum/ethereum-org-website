@@ -626,7 +626,7 @@ Then we have our asynchronous function `pinJSONToIPFS`, which takes a `JSONBody`
 
 As with our `connectWallet`function return types, we're returning JSON objects so we can use  their parameters to update our state variables and UI.
 
-## Step 7: Load your smart contract {#step-7-load-your-smart-contract}
+## Step 7: Load your smart contract {#load-your-smart-contract}
 
 Now that we have a way to upload our NFT metadata to IPFS via our `pinJSONToIPFS` function, we're going to need a way to load an instance of our smart contract so we can call its `mintNFT` function.
 
