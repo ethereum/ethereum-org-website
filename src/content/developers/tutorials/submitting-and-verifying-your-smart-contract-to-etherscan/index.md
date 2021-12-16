@@ -19,7 +19,7 @@ sidebar: true
 published: 2021-10-06
 ---
 
-# 📩 Submitting your Smart Contract to Etherscan
+# Submitting your Smart Contract to Etherscan
 
 You should have completed part 1 [creating and deploying a smart contract](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract), and part 2 [interacting with your smart contract](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract) prior to starting part 3 below.
 
