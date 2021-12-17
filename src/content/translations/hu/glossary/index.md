@@ -542,7 +542,7 @@ Egy [proof-of-stake](#proof-of-stake) lánc, melyet a [Beacon Chain](#beacon-cha
 
 ### Sidechain (melléklánc) {#sidechain}
 
-Egy skálázási megoldás, mely egy különálló láncot használ másfajta, gyakran gyorsabb, [konszenzus szabályokkal]{#consensus-rules}. Egy áthidalás szükséges, hogy ezek a mellékláncok a [főhálózathoz](#mainnet) csatlakozzanak. Az [összegzők](#rollups) szintén mellékláncokat használnak, de ehelyett a [főhálózattal](#mainnet) együttműködve teszik ezt.
+Egy skálázási megoldás, mely egy különálló láncot használ másfajta, gyakran gyorsabb, [konszenzus szabályokkal](#consensus-rules). Egy áthidalás szükséges, hogy ezek a mellékláncok a [főhálózathoz](#mainnet) csatlakozzanak. Az [összegzők](#rollups) szintén mellékláncokat használnak, de ehelyett a [főhálózattal](#mainnet) együttműködve teszik ezt.
 
 <DocLink to="/developers/docs/layer-2-scaling/#sidechains" title="Mellékláncok" />
 
