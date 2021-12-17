@@ -304,9 +304,7 @@ Ethers
 
 Watch Austin walk you through transactions, gas, and mining.
 
-<figure>
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/er-0ihqFQB0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
+<YouTube id="er-0ihqFQB0" />
 
 ## Typed Transaction Envelope {#typed-transaction-envelope}
 

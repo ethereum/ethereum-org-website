@@ -36,6 +36,7 @@ import {
   Header4,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
+import YouTube from "../components/YouTube"
 
 const Page = styled.div`
   display: flex;
@@ -240,6 +241,7 @@ const components = {
   UpgradeStatus,
   DocLink,
   ExpandableCard,
+  YouTube,
 }
 
 const Title = styled.h1`

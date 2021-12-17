@@ -42,6 +42,7 @@ import Emoji from "../components/Emoji"
 import UpcomingEventsList from "../components/UpcomingEventsList"
 import Icon from "../components/Icon"
 import SocialListItem from "../components/SocialListItem"
+import YouTube from "../components/YouTube"
 
 const Page = styled.div`
   display: flex;
@@ -138,6 +139,7 @@ const components = {
   SocialListItem,
   MatomoOptOut,
   Callout,
+  YouTube,
 }
 
 const StaticPage = ({ data: { siteData, pageData: mdx }, pageContext }) => {

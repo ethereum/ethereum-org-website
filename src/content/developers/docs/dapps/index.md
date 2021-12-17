@@ -69,9 +69,7 @@ Tokens must be generated in order to prove the value nodes that contribute to th
 
 ## More of a visual learner? {#visual-learner}
 
-<figure>
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/F50OrwV6Uk8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
+<YouTube id="F50OrwV6Uk8" />
 
 ## Dapp tools {#dapp-tools}
 
