@@ -5,14 +5,14 @@ lang: sl
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
-summaryPoint1: Razdrobljene verige so nadgradnja v več fazah za izboljševanje Ethereumove razširljivosti in zmogljivosti.
-summaryPoint2: Razdrobljene verige razdelijo obremenitev omrežja med 64 novih verig.
-summaryPoint3: Omogočajo enostavno izvajanje vozlišča, saj so zahteve glede strojne opreme nizke.
-summaryPoint4: Tehnični načrti vključujejo delo na razdrobljenih verigah v "fazi 1" in morda v "fazi 2".
+summaryPoint1: Drobljenje je večstopenjska nadgradnja z namenom izboljšanja Ethereumove nadgradljivosti in kapacitet.
+summaryPoint2: Razdrobljene verige razdelijo obremenitev omrežja na 64 novih verig.
+summaryPoint3: Z ohranjanjem nizkih zahtev po strojni opremi lajšajo zagon vozlišč.
+summaryPoint4: Ta nadgradnja je načrtovana kot naslednji korak po spojitvi glavnega omrežja z oddajniško verigo.
 ---
 
-<UpgradeStatus date="~2023">
-    Razdrobljene verige bi lahko bile uvedene enkrat v letu 2023, odvisno od hitrosti napredka po zagonu <a href="/eth2/beacon-chain/">oddajniške verige</a>. Ti drobci bodo Ethereumu zagotovili boljšo zmogljivost za obdelavo in dostop do podatkov, vendar se ne bodo uporabljali za izvajanje kode. Podrobnosti tega bodo še določene.
+<UpgradeStatus date="~2022">
+    Razdrobljene verige bi morale biti uvedene enkrat v letu 2022, odvisno od hitrosti napredka po <a href="/eth2/merge/">spojitvi</a>. Ti drobci bodo Ethereumu zagotovili boljšo zmogljivost za obdelavo in dostop do podatkov, vendar se ne bodo uporabljali za izvajanje kode. Podrobnosti tega bodo še določene.
 </UpgradeStatus>
 
 ## Kaj je razdrobitev? {#what-is-sharding}
@@ -45,21 +45,25 @@ Pri prvi uvedbi razdrobljenih verig v omrežju bodo zagotavljale samo nekaj doda
 
 Skupne vrednosti so tehnologija na »2. plasti«, ki že obstaja. Decentraliziranim aplikacijam omogočajo, da zunaj verige blokov združijo ali ustvarijo »skupno vrednost« transakcij v posamezno transakcijo, ustvarijo kriptografski dokaz in ga pošljejo verigi. To zmanjša velikost podatkov, potrebnih za transakcijo. Če to povežemo z dodatno razpoložljivostjo podatkov, ki jih zagotavljajo razdrobljene verige, dobimo 100.000 transakcij na sekundo.
 
-[Več o skupnih vrednostih](/developers/docs/layer-2-scaling/)
+<InfoBanner isWarning={false}>
+  Nedavni napredek v raziskavah in razvoju s področja rešitev za nadgradljivosti na podlagi 2. plasti je privedel do prioritizacije spojitve pred razdrobljenimi verigami. Te bodo prišle v ospredje po prehodu glavnega omrežja na dokaz o deležu.
+
+[Več o zvitkih](/developers/docs/scaling/layer-2-rollups/)
+</InfoBanner>
 
 ## 2. različica razdrobljenih verig: izvajanje kode {#code-execution}
 
-Že od začetka načrtujemo, da bi razdrobljenim verigam dodali funkcionalnost in jih narediti bolj podobne današnjemu [glavnemu omrežju Ethereum](/glossary/#mainnet). To bi jim omogočalo shranjevanje in izvajanje pametnih pogodb ter obdelovanje računov. Toda, ali je ta nadgradnja še vedno potrebna glede na povečanje števila transakcij, ki ga zagotavlja 1. različica razdrobljenih verig? Skupnost o tem še vedno razpravlja, videti pa je, da je na voljo več možnosti.
+Že od začetka je v načrtu, da se razdrobljenim verigam doda funkcionalnosti, ki bi jih naredile bolj podobne [Glavnemu omrežju Ethereum](/glossary/#mainnet), kot ga poznamo danes. To bi jim omogočalo shranjevanje in izvajanje pametnih pogodb ter obdelovanje računov. Toda, ali je ta nadgradnja še vedno potrebna glede na povečanje števila transakcij, ki ga zagotavlja 1. različica razdrobljenih verig? Skupnost o tem še vedno razpravlja, videti pa je, da je na voljo več možnosti.
 
 ### Ali drobci potrebujejo možnost izvajanja kode? {#do-shards-need-code-execution}
 
-Vitalik Buterin je v pogovoru za poddajo Bankless predstavil 3 morebitne možnosti, o katerih je vredno razpravljati.
+Vitalik Buterin je v pogovoru za podkast Bankless predstavil 3 morebitne možnosti, o katerih je vredno razpravljati.
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
 
 #### 1. Izvajanje stanj ni potrebno {#state-execution-not-needed}
 
-To bi pomenilo, da drobcem ne zagotovimo možnosti obdelave pametnih pogodb in bodo še naprej delovale kot skladišča podatkov.
+To bi pomenilo, da drobcem ne zagotovimo možnosti obdelave pametnih pogodb, in bodo še naprej delovale kot skladišča podatkov.
 
 #### 2. Nekateri drobci imajo zmožnost izvajanja {#some-execution-shards}
 
@@ -83,15 +87,17 @@ Nadgradnje Eth2 so vse delno medsebojno povezane. Ponovimo torej, kako razdroblj
 
 ### Drobci in oddajniška veriga {#shards-and-beacon-chain}
 
-Oddajniška veriga vsebuje vso logiko za zagotavljanje varnosti in sinhronizacije drobcev. Oddajniška veriga bo usklajevala zastavljavce v omrežju in jim dodeljevala drobce, na katerih morajo delati. Prav tako bo lajšala komunikacijo med drobci s prejemanjem in shranjevanjem podatkov o transakcijah v drobcu, ki bodo dostopni drugim drobcem. To bo drobcem zagotovilo posnetek stanja Ethereuma, tako da bo vse vedno posodobljeno.
+Oddajniška veriga vsebuje vso logiko za zagotavljanje varnosti in sinhronizacije razdrobljenih verig. Usklajevala bo zastavljalce v omrežju in jim dodeljevala drobce, na katerih naj delajo. Prav tako bo lajšala komunikacijo med drobci s prejemanjem in shranjevanjem podatkov o transakcijah v drobcu, ki bodo dostopni drugim drobcem. To jim bo zagotovilo posnetek stanja Ethereuma, tako da bo vse vedno posodobljeno.
 
 <ButtonLink to="/eth2/beacon-chain/">Oddajniška veriga</ButtonLink>
 
 ### Drobci in spojitev {#shards-and-docking}
 
-Glavno omrežje Ethereum bo tudi po uvedbi drobcev obstajalo v enaki obliki kot danes. Vendar bo moralo glavno omrežje na neki točki postati drobec, da bo lahko prešlo na zastavljanje. Ali bo glavno omrežje obstajalo kot edini »pameten« drobec, ki lahko obdeluje izvajanje kode, bomo še videli – kakorkoli že, odločitev bo sprejeta ob 2. fazi razdrobitve.
+Ko bodo drobci dodani, bo glavno omrežje Ethereum že zavarovano s strani oddajniške verige, ki uporablja dokaz o deležu. To omogoča plodno glavno omrežje na katerem se lahko gradijo razdrobljene verige, ki jih poganjajo reštive na podlagi tehnologije 2. plasti za povečanje nadgradljivosti.
 
-<ButtonLink to="/eth2/docking/">Spojitev</ButtonLink>
+Bomo še videli, ali bo glavno omrežje obstajalo kot edini "pametni" drobec, ki lahko obvladuje izvajanje programske kode – v vsakem primeru pa se lahko k odločitvi o razširitvi drobcev vrnemo, če bo to potrebno.
+
+<ButtonLink to="/eth2/merge/">Spojitev</ButtonLink>
 
 <Divider />
 
