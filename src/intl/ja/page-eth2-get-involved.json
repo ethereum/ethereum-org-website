@@ -27,6 +27,8 @@
   "page-eth2-get-involved-more": "詳細",
   "page-eth2-get-involved-run-clients": "ビーコンチェーンクライアントを実行しよう",
   "page-eth2-get-involved-run-clients-desc": "イーサリアムの長期的な安全性の鍵は、クライアントの強力な分散にあります。クライアントとは、ブロックチェーンを動かすソフトウェアのことで、取引のチェックと新しいブロックの作成を行います。各クライアントはそれぞれ独自の機能を持っているので、自分にとっての使いやすさを基準にして選びましょう。",
+  "page-eth2-get-involved-run-clients-production": "リリース可能なEth2クライアント",
+  "page-eth2-get-involved-run-clients-experimental": "テスト用のEth2クライアント",
   "page-eth2-get-involved-stake": "ETHをステーキングする",
   "page-eth2-get-involved-stake-desc": "ビーコンチェーンのセキュリティを確保するために、ETHをステーキングすることができるようになりました。",
   "page-eth2-get-involved-stake-eth": "ETHをステーキングする",

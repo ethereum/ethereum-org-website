@@ -8,5 +8,6 @@
   "page-languages-translations-available": "ethereum.org は以下の言語で利用可能です。",
   "page-languages-want-more-header": "他の言語でethereum.orgを見たいですか？",
   "page-languages-want-more-link": "翻訳プログラム",
-  "page-languages-want-more-paragraph": "ethereum.orgの翻訳者は常に可能な限り多くの言語でページを翻訳しています。彼らが現在何に取り組んでいるか、またはそれらに参加するためにサインアップするには、以下を読んでください。"
+  "page-languages-want-more-paragraph": "ethereum.orgの翻訳者は常に可能な限り多くの言語でページを翻訳しています。彼らが現在何に取り組んでいるか、またはそれらに参加するためにサインアップするには、以下を読んでください。",
+  "page-languages-filter-placeholder": "フィルター"
 }
