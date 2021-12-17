@@ -70,7 +70,7 @@ Offentliga och privata Ethereum-nätverk kan behöva specifika funktioner som kr
 ### Säkerhet {#security}
 
 - [Clef](https://geth.ethereum.org/clef/Overview) _används för att signera transaktioner och data och är tänkt som ersättning för geths kontohantering_
-- [EthSigner](https://gitter.im/PegaSysEng/EthSigner) _En transaktionssigneringsapp som ska användas med en web3-leverantör_
+- [EthSigner](https://github.com/ConsenSys/ethsigner) _En transaktionssigneringsapp som ska användas med en web3-leverantör_
 
 ### Verktyg {#tooling}
 
