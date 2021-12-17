@@ -1,11 +1,17 @@
 import React from "react"
+import styled from "styled-components"
+
+const Figure = styled.figure`
+  display: block;
+  margin: 1rem 0;
+`
 
 const YouTube = ({ id, start }) => {
   const startQuery = parseInt(start) > 0 ? `?start=${start}` : ""
   const baseUrl = "https://www.youtube.com/embed/"
   const src = baseUrl + id + startQuery
   return (
-    <figure>
+    <Figure>
       <iframe
         width="100%"
         height="315"
@@ -20,7 +26,7 @@ const YouTube = ({ id, start }) => {
       picture-in-picture"
         allowfullscreen
       ></iframe>
-    </figure>
+    </Figure>
   )
 }
 
