@@ -51,12 +51,8 @@ lang: bn
 
 [ব্লকচেইনের সামনের পথ ব্যাখ্যা করছেন বেন হরোয়িটজ](https://www.youtube.com/watch?v=l9jvKWKmRfs&feature=youtu.be)
 
-<div class="iframe-container">
-  <YouTube id="l9jvKWKmRfs" />
-</div>
+<YouTube id="l9jvKWKmRfs" />
 
 [টেকক্রাঞ্চ কর্তৃক ইথেরিয়াম-এর ব্লকচেইন](https://www.youtube.com/watch?v=WfULutvxvzY)
 
-<div class="iframe-container">
-  <YouTube id="WfULutvxvzY" />
-</div>
+<YouTube id="WfULutvxvzY" />

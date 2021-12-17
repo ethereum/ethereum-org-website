@@ -57,12 +57,8 @@ lang: fa
 
 [Decentralized Everything with Vitalik Buterin](https://youtu.be/WSN5BaCzsbo)
 
-<div class="iframe-container">
-  <YouTube id="WSN5BaCzsbo" />
-</div>
+<YouTube id="WSN5BaCzsbo" />
 
 [Ethereum’s Blockchain by TechCrunch](https://www.youtube.com/watch?v=WfULutvxvzY)
 
-<div class="iframe-container">
-  <YouTube id="WfULutvxvzY" />
-</div>
+<YouTube id="WfULutvxvzY" />

@@ -47,18 +47,12 @@ Aplikasi terdesentralisasi ini (atau "dapps") mendapatkan manfaat dari cryptocur
 
 [Decentralized Everything with Vitalik Buterin](https://youtu.be/WSN5BaCzsbo)
 
-<div class="iframe-container">
-  <YouTube id="WSN5BaCzsbo" />
-</div>
+<YouTube id="WSN5BaCzsbo" />
 
 [Ben Horowitz explains the road ahead for blockchain](https://www.youtube.com/watch?v=l9jvKWKmRfs&feature=youtu.be)
 
-<div class="iframe-container">
-  <YouTube id="l9jvKWKmRfs" />
-</div>
+<YouTube id="l9jvKWKmRfs" />
 
 [Ethereum’s Blockchain oleh TechCrunch](https://www.youtube.com/watch?v=WfULutvxvzY)
 
-<div class="iframe-container">
-  <YouTube id="WfULutvxvzY" />
-</div>
+<YouTube id="WfULutvxvzY" />

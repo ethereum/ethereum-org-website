@@ -47,18 +47,12 @@ Výhodou týchto decentralizovaných aplikácií (alebo „dappiek“) je, že s
 
 [Decentralizovať všetko s Vitalikom Buterinom](https://youtu.be/WSN5BaCzsbo)
 
-<div class="iframe-container">
-  <YouTube id="WSN5BaCzsbo" />
-</div>
+<YouTube id="WSN5BaCzsbo" />
 
 [Ben Horowitz hovorí o ďalšom smerovaní technológie blockchainu](https://www.youtube.com/watch?v=l9jvKWKmRfs&feature=youtu.be)
 
-<div class="iframe-container">
-  <YouTube id="l9jvKWKmRfs" />
-</div>
+<YouTube id="l9jvKWKmRfs" />
 
 [Blockchain Ethereum v TechCrunch](https://www.youtube.com/watch?v=WfULutvxvzY)
 
-<div class="iframe-container">
-  <YouTube id="WfULutvxvzY" />
-</div>
+<YouTube id="WfULutvxvzY" />

@@ -47,18 +47,12 @@ lang: ar
 
 [نحو لامركزية كل شئ مع Vitalik Buterin](https://youtu.be/WSN5BaCzsbo)
 
-<div class="iframe-container">
-  <YouTube id="WSN5BaCzsbo" />
-</div>
+<YouTube id="WSN5BaCzsbo" />
 
 [يشرح Ben Horowitz الطريق أمام سلاسل الكتلة](https://www.youtube.com/watch?v=l9jvKWKmRfs&feature=youtu.be)
 
-<div class="iframe-container">
-  <YouTube id="l9jvKWKmRfs" />
-</div>
+<YouTube id="l9jvKWKmRfs" />
 
 [سلاسل كتلة إيثريوم ل TechCrunch](https://www.youtube.com/watch?v=WfULutvxvzY)
 
-<div class="iframe-container">
-  <YouTube id="WfULutvxvzY" />
-</div>
+<YouTube id="WfULutvxvzY" />
