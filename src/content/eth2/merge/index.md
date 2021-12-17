@@ -59,7 +59,9 @@ The Eth2 upgrades are all somewhat interrelated. So let’s recap how the merge 
 
 Once the merge happens, stakers will be assigned to validate the Ethereum Mainnet. [Mining](/developers/docs/consensus-mechanisms/pow/mining/) will no longer be required so miners will likely invest their earnings into staking in the new proof-of-stake system.
 
-<ButtonLink to="/eth2/beacon-chain/">The Beacon Chain</ButtonLink>
+<ButtonLink to="/eth2/beacon-chain/">
+  The Beacon Chain
+</ButtonLink>
 
 ### The merge and the post-merge cleanup {#merge-and-post-merge-cleanup}
 
@@ -73,4 +75,6 @@ Originally, the plan was to work on shard chains before the merge – to address
 
 This will be an ongoing assessment from the community as to the need for potentially multiple rounds of shard chains to allow for endless scalability.
 
-<ButtonLink to="/eth2/shard-chains/">Shard chains</ButtonLink>
+<ButtonLink to="/eth2/shard-chains/">
+  Shard chains
+</ButtonLink>
