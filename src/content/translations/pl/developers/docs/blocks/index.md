@@ -27,7 +27,9 @@ Aby zachować historię transakcji, bloki są ściśle uporządkowane (każdy no
 
 Gdy dany blok jest już złożony (wydobyty) przez jakiegoś górnika w sieci, jest rozprowadzany do reszty sieci; wszystkie węzły dodają ten blok na koniec swojego blockchaina, a wydobywanie trwa nadal. Dokładny proces składania (wydobywania) bloków, jak i proces zatwierdzania/konsensusu, są obecnie określone protokołem "proof-of-work" sieci Ethereum.
 
-### Demo wizualne {#a-visual-demo} <YouTube id="_160oMzblY8" />
+### Demo wizualne {#a-visual-demo}
+
+<YouTube id="_160oMzblY8" />
 
 ## Protokół proof-of-work (dowodu wykonanej pracy) {#proof-of-work-protocol}
 

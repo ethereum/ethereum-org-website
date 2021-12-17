@@ -75,7 +75,9 @@ Dowiedz się więcej o [Plasmie](/developers/docs/scaling/plasma/).
 - Nie wszystkie rozwiązania wymagają bezpośredniego wykorzystania algorytmu konsensusu Ethereum, a alternatywne rozwiązania mogą oferować korzyści, które w przeciwnym razie byłyby trudne do uzyskania.
 - Żadne pojedyncze rozwiązanie skalujące nie wystarczy do realizacji [wizji eth2](/eth2/vision/).
 
-## Jesteś raczej wzrokowcem? {#visual-learner} <YouTube id="BgCgauWVTs0" />
+## Jesteś raczej wzrokowcem? {#a-visual-demo}
+
+<YouTube id="BgCgauWVTs0" />
 
 _Zauważ, że w wyjaśnieniu w filmie termin „Warstwa 2” jest używany w odniesieniu do wszystkich rozwiązań skalowania off-chain, podczas gdy my określamy „warstwę 2” jako rozwiązanie off-chain, które uzyskuje bezpieczeństwo za pośrednictwem konsensusu sieci głównej warstwy 1._
 

@@ -27,7 +27,9 @@ Per preservare la cronologia delle transazioni, i blocchi sono ordinati in modo 
 
 Dopo essere stato realizzato (si parla di mining) da alcuni miner della rete, un blocco viene propagato al resto della rete; tutti i nodi vengono aggiunti al blocco alla fine della relativa blockchain e il processo di mining continua. Il processo esatto di costruzione dei blocchi (mining) e il processo di invio/consenso è attualmente specificato nel protocollo di Ethereum "proof-of-work".
 
-### Demo visiva {#a-visual-demo} <YouTube id="_160oMzblY8" />
+### Demo visiva {#a-visual-demo}
+
+<YouTube id="_160oMzblY8" />
 
 ## Protocollo proof-of-work {#proof-of-work-protocol}
 
