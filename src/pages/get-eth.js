@@ -210,7 +210,7 @@ const GetETHPage = ({ data }) => {
     },
     {
       title: "Loopring",
-      link: "https://exchange.loopring.io/",
+      link: "https://loopring.io/",
       image: getImage(data.loopring),
     },
     {
