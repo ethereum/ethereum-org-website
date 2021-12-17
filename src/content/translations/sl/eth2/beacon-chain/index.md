@@ -4,7 +4,7 @@ description: Preberite več o oddajniški verigi – prvi večji nadgradnji Eth2
 lang: sl
 template: eth2
 sidebar: true
-image: ../../../assets/eth2/core.png
+image: ../../../../../assets/eth2/core.png
 summaryPoint1: Oddajniška veriga ne spreminja ničesar glede Ethereuma, ki ga uporabljamo danes.
 summaryPoint2: Usklajevala bo omrežje.
 summaryPoint3: V ekosistem Ethereum uvaja dokaz o deležu.
