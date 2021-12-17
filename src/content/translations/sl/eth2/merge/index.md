@@ -8,7 +8,7 @@ image: ../../../../../assets/eth2/merge.png
 summaryPoint1: Sčasoma se bo trenutno glavno Ethereum omrežje "spojilo" s sistemom dokaza o deležu oddajniške verige.
 summaryPoint2: To bo za Ethereum pomenilo konec sistema z dokazom o delu in popoln prehod na sistem dokaza o deležu.
 summaryPoint3: Prehod je načrtovan pred uvedbo razdrobljenih verig.
-summaryPoint4: Smo jo predhodno omenjali kot "priklop."
+summaryPoint4: Predhodno smo jo omenjali kot "priklop".
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">
