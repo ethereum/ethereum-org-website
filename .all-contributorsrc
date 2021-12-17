@@ -5876,6 +5876,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "0xdie",
+      "name": "0xdie",
+      "avatar_url": "https://avatars.githubusercontent.com/u/94481845?v=4",
+      "profile": "https://github.com/0xdie",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
