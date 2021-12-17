@@ -29,7 +29,7 @@ Odată ce un bloc este asamblat (minat) de către un miner din rețea, acesta es
 
 ### O demonstrație vizuală {#a-visual-demo}
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="_160oMzblY8" />
 
 ## Protocolul „Dovada muncii” {#proof-of-work-protocol}
 

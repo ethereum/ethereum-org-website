@@ -281,7 +281,7 @@ Ethers
 
 ## Démonstration visuelle {#a-visual-demo}
 
-Regardez Austin vous guider à travers les transactions, le carburant et le minage. <iframe width="100%" height="315" src="https://www.youtube.com/embed/er-0ihqFQB0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Regardez Austin vous guider à travers les transactions, le carburant et le minage. <YouTube id="er-0ihqFQB0" />
 
 ## Complément d'information {#further-reading}
 

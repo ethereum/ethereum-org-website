@@ -29,7 +29,7 @@ sidebar: true
 
 ### 视觉演示 {#a-visual-demo}
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="_160oMzblY8" />
 
 ## 工作量证明协议（POW） {#proof-of-work-protocol}
 

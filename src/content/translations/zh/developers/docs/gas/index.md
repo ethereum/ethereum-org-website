@@ -25,7 +25,7 @@ Gas 是指在以太坊网络上执行特定操作所需的计算工作量。
 
 这个视频简要概述了 Gas 的存在及其原因：
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/AJvzNICwcwc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="AJvzNICwcwc" />
 
 ## 为什么存在 Gas 费用呢？ {#why-do-gas-fees-exist}
 

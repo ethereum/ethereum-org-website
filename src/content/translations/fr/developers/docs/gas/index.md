@@ -23,7 +23,7 @@ Comme chaque transaction Ethereum nécessite des ressources informatiques pour s
 
 Fondamentalement, les frais de carburant sont payés en ether (ETH), la monnaie native d'Ethereum. Les prix du carburant sont indiqués en gwei, qui est une dénomination de l'ETH. Chaque gwei est égal à 0,00000001 ETH (10<sup>-9</sup> ETH). Par exemple, au lieu de dire que votre carburant coûte 0,000000001 Ether, vous pouvez dire qu'il coûte 1 gwei.
 
-Cette vidéo offre une présentation concise du carburant et des raisons de son existence : <iframe width="100%" height="315" src="https://www.youtube.com/embed/AJvzNICwcwc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Cette vidéo offre une présentation concise du carburant et des raisons de son existence : <YouTube id="AJvzNICwcwc" />
 
 ## Pourquoi existe-t-il des frais de carburant ? {#why-do-gas-fees-exist}
 

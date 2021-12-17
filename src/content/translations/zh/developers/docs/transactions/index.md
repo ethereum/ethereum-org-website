@@ -283,7 +283,7 @@ Ethers
 
 观看 Austin 引导您了解交易、Gas 和挖矿。
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/er-0ihqFQB0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="er-0ihqFQB0" />
 
 ## 延伸阅读 {#further-reading}
 

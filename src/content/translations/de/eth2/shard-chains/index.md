@@ -59,7 +59,7 @@ Der Plan war immer den shards extra Funktionalität zu verleihen, um sie ähnlic
 
 Vitalik Buterin hat im Gespräch mit dem Bankless-Podcast 3 mögliche Optionen vorgestellt, die diskutiert werden sollten.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. Statusausführung nicht notwendig {#state-execution-not-needed}
 

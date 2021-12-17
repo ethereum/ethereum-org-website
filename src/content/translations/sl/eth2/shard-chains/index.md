@@ -55,7 +55,7 @@ Skupne vrednosti so tehnologija na »2. plasti«, ki že obstaja. Decentralizira
 
 Vitalik Buterin je v pogovoru za poddajo Bankless predstavil 3 morebitne možnosti, o katerih je vredno razpravljati.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. Izvajanje stanj ni potrebno {#state-execution-not-needed}
 

@@ -55,7 +55,7 @@ Planul a fost întotdeauna de a adăuga funcționalități suplimentare fragment
 
 Vitalik Buterin, când a vorbit pe podcast-ul Bankless, a prezentat 3 opțiuni potențiale care merită discutate.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. Executarea stării nu este necesară {#state-execution-not-needed}
 

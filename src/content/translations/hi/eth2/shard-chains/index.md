@@ -55,7 +55,7 @@ summaryPoint4: तकनीकी रोडमैप में "चरण 1" औ
 
 विटालिक बुटेरिन, जब बैंकलेस पॉडकास्ट से बात कर रहे थे, तो 3 संभावित विकल्प प्रस्तुत किए, जो चर्चा के लायक हैं।
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. स्थिति निष्पादन की आवश्यकता नहीं है {#state-execution-not-needed}
 

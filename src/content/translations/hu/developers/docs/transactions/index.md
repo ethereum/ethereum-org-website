@@ -281,7 +281,7 @@ Ethers
 
 ## Egy vizuális bemutató {#a-visual-demo}
 
-Nézd meg, ahogy Austin átvezet a tranzakciókon, a gázon és a bányászaton. <iframe width="100%" height="315" src="https://www.youtube.com/embed/er-0ihqFQB0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Nézd meg, ahogy Austin átvezet a tranzakciókon, a gázon és a bányászaton. <YouTube id="er-0ihqFQB0" />
 
 ## További olvasnivaló {#further-reading}
 

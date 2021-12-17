@@ -21,7 +21,7 @@ Nowe bloki są transmitowane do węzłów w sieci, sprawdzane i weryfikowane, ak
 
 Podsumowując, kiedy wysyłasz ETH do kogoś, transakcja musi zostać wykopana i uwzględniona w nowym bloku. Zaktualizowany stan jest następnie udostępniany całej sieci. Poniżej podajemy szczegóły.
 
-Zobacz, jak Austin oprowadza Cię po blockchainach: <iframe width="100%" height="315" src="https://www.youtube.com/embed/zcX7OJ-L8XQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Zobacz, jak Austin oprowadza Cię po blockchainach: <YouTube id="zcX7OJ-L8XQ" />
 
 ## Co to jest Ethereum? {#what-is-ethereum}
 

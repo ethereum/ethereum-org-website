@@ -21,7 +21,7 @@ I nuovi blocchi vengono trasmessi ai nodi della rete, controllati e verificati, 
 
 Quindi, ricapitolando, quando si inviano ETH a qualcuno, la transazione deve essere sottoposta a mining e inclusa in un nuovo blocco. Lo stato aggiornato viene quindi condiviso con l'intera rete. Più dettagli qui sotto.
 
-Lascia che Austin ti accompagni attraverso la blockchain: <iframe width="100%" height="315" src="https://www.youtube.com/embed/zcX7OJ-L8XQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Lascia che Austin ti accompagni attraverso la blockchain: <YouTube id="zcX7OJ-L8XQ" />
 
 ## Cos'è Ethereum? {#what-is-ethereum}
 

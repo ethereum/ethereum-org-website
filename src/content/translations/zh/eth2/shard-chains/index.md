@@ -55,7 +55,7 @@ Rollups 是一种现存的“layer 2”技术。 它们允许去中心化应用�
 
 Vitalik Buterin 在接受 Bankless 播客采访时提出了 3 个值得讨论的潜在选项。
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. 不需要执行状态 {#state-execution-not-needed}
 

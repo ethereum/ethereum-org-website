@@ -27,7 +27,7 @@ Para preservar el historial de transacciones, los bloques se ordenan estrictamen
 
 Una vez que un minero ensambla un bloque en la red, este se propaga al resto de la red; todos los nodos agregan este bloque al final de su blockchain y la minería continúa. El proceso exacto de ensamblaje de bloques (minería) y el proceso de compromiso/consenso se especifican actualmente mediante el protocolo denominado "Prueba de trabajo" de Ethereum.
 
-### Una demostración visual {#a-visual-demo} <iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+### Una demostración visual {#a-visual-demo} <YouTube id="_160oMzblY8" />
 
 ## El protocolo "Prueba de trabajo" {#proof-of-work-protocol}
 
