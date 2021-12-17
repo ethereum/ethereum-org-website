@@ -5885,6 +5885,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Taimoor0217",
+      "name": "Taimoor Ali",
+      "avatar_url": "https://avatars.githubusercontent.com/u/48244930?v=4",
+      "profile": "https://github.com/Taimoor0217",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
