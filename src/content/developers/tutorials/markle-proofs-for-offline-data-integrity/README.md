@@ -28,10 +28,11 @@ In this article you learn **how** to ensure data integrity without storing the d
 In theory we could just store the hash of the data on chain, and send all the data in transactions that
 require it. However, this is still too expensive. A byte of data to a transaction costs about 16 gas, 
 currently about half a cent, or about $5 per kilobyte. At $5000 per megabyte, this is still too expensive
-for most uses.
+for many uses.
 
 The solution is to repeatedly hash different subsets of the data, so for the data that you don't need to 
-send you can just send a hash.
+send you can just send a hash. You do this using a Merkle tree, a tree data structure where each node is a hash
+of the nodes below it:
 
 ![Merkle Tree](tree.png)
 
