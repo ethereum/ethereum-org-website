@@ -19,13 +19,9 @@ sidebar: true
 published: 2021-10-06
 ---
 
+🎉Woooo! You finally made it to the last part of this tutorial series: creating a full-stack decentralized application (dApp) by connecting your Hello World smart contract to a frontend project and interacting with it.
+
 You'll need to have finished part 1 [creating and deploying a smart contract](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract), part 2 [interacting with your smart contract](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract), and part 3 [submitting your smart contract to Etherscan](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/submitting-your-smart-contract-to-etherscan) before starting part 4 below.
-
-And if you haven't already, you'll definitely need an Alchemy account to complete any of these tutorials. Sign up for a free account [here](https://alchemy.com/?a=eth-org-frontend-integration)!
-
-## Part 4: Marrying Web2 & Web3: connecting your smart contract to a frontend project
-
-🎉Woooo! You finally made it to the last part of this tutorial series: creating a full stack decentralized application \(dApp\) by connecting your Hello World smart contract to a frontend project and interacting with it.
 
 By the end of this tutorial, you'll know how to:
 
