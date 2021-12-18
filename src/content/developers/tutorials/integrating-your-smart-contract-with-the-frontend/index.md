@@ -308,7 +308,7 @@ With this endpoint ready, it's time to load our smart contract!
 
 To load your Hello World smart contract, you'll need its contract address and ABI, both of which can be found on Etherscan if you completed [Part 3 of this tutorial.](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/submitting-your-smart-contract-to-etherscan)
 
-### How to get your contract ABI from Etherscan
+### How to get your contract ABI from Etherscan {#how-to-get-your-contract-abi-from-etherscan}
 
 ### If you skipped Part 3 of this tutorial, you can use the HelloWorld contract with address [0x6f3f635A9762B47954229Ea479b4541eAF402A6A](https://ropsten.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code). It's ABI can be found [here](https://ropsten.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code).
 
@@ -356,7 +356,7 @@ export const helloWorldContract = new web3.eth.Contract(
 
 Now that we have our contract loaded, we can implement our `loadCurrentMessage` function!
 
-### Implementing `loadCurrentMessage` in your `interact.js` file
+### Implementing `loadCurrentMessage` in your `interact.js` file {#implementing-`loadCurrentMessage`-in-your-`interact.js`-file}
 
 This function is super simple. Just like we do in [Part 2 of this tutorial series](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract#step-5-read-the-init-message), here we're going make a simple async web3 call to read from our contract. Our function will return the message stored in the smart contract:
 
@@ -389,7 +389,7 @@ Before we dive into our listener, let's check out what we have so far! Save your
 
 You'll notice that the current message no longer says "No connection to the network." Instead it reflects the message stored in the smart contract. Sick!
 
-### Your UI should now reflect the message stored in the smart contract
+### Your UI should now reflect the message stored in the smart contract {#your-UI-should-now-reflect-the-message-stored-in-the-smart-contract}
 
 Now speaking of that listener...
 
