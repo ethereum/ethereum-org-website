@@ -36,6 +36,10 @@ of the nodes below it:
 
 ![Merkle Tree](tree.png)
 
+The root hash is the only part that needs to be stored on chain. To prove a certain value, for example C, you
+provide all the hashes that need to be combined with it to obtain the root: `D`, `H(A-B)`, and `H(E-H)`.
+
+![Proof of the value of C](proof-c.png)
 
 
 ## Conclusion
