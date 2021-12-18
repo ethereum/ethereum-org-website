@@ -476,7 +476,7 @@ Now that we're able to read from our smart contract, it would be great to figure
 
 So, next we'll tackle setting up our Ethereum wallet \(Metamask\) and then connecting it to our dApp!
 
-## Step 4: Set up your Ethereum wallet {#step-4-create-an-instance-of-your-contract}
+## Step 4: Set up your Ethereum wallet {#create-an-instance-of-your-contract}
 
 To write anything to the Ethereum chain, users must sign transactions using their virtual wallet's private keys. For this tutorial, we’ll use [Metamask](https://metamask.io/), a virtual wallet in the browser used to manage your Ethereum account address, as it makes this transaction signing super easy for the end-user.
 
