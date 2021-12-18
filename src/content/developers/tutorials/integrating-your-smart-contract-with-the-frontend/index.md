@@ -33,7 +33,7 @@ For this dApp, we'll be using [React](https://reactjs.org/) as our frontend fram
 
 As a prerequisite, you should have a beginner-level understanding of React—know how components, props, useState/useEffect, and basic function calling works. If you've never heard of any of those terms before, we recommend that you check out this [Intro to React tutorial](https://reactjs.org/tutorial/tutorial.html). For the more visual learners, we highly recommend this awesome Net Ninja [Full Modern React Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d) video series.
 
-## Step 1: Clone the starter files {#step-1-starter-files}
+## Step 1: Clone the starter files {#starter-files}
 
 First, go to the [hello-world-part-four github repository](https://github.com/alchemyplatform/hello-world-part-four-tutorial) to get the starter files for this project. Clone this repository into your local environment.
 
