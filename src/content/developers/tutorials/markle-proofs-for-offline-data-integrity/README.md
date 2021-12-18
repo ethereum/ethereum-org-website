@@ -17,4 +17,24 @@ unauthorized manner), but storing a 32 byte word typically costs 20,000 gas. As 
 equivalent to $6.60. At 21 cents a byte this is too expensive for most uses.
 
 To solve this problem the Ethereum ecosystem developed [many alternative ways to store data in a decentralized 
-fashion](https://ethereum.org/en/developers/docs/storage/). 
+fashion](https://ethereum.org/en/developers/docs/storage/). Usually they involve a tradeoff between availability
+and price. However, integrity is usually assured.
+
+In this article you learn **how** to ensure data integrity without storing the data on the blockchain, using
+[merkle proofs](https://computersciencewiki.org/index.php/Merkle_proof). 
+
+## How does it work?
+
+In theory we could just store the hash of the data on chain, and send all the data in transactions that
+require it. However, this is still too expensive. A byte of data to a transaction costs about 16 gas, 
+currently about half a cent, or about $5 per kilobyte. At $5000 per megabyte, this is still too expensive
+for most uses.
+
+The solution is to repeatedly hash different subsets of the data, so for the data that you don't need to 
+send you can just send a hash.
+
+![Merkle Tree](tree.png)
+
+
+
+## Conclusion
