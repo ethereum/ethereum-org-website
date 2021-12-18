@@ -1,5 +1,5 @@
 ---
-title: 📱Integrating Your Smart Contract with the Frontend (Part 4/4 of Hello World dApp Series)
+title: Integrating Your Smart Contract with the Frontend (Part 4/4 of Hello World dApp Series)
 description: In this tutorial, we'll teach you how to create a full stack dApp by connecting your Hello World smart contract to a React frontend using Metamask and Web3 tools.
 author: "nstrike2"
 tags:
