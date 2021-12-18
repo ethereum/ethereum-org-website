@@ -5,13 +5,10 @@ lang: tr
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    'Sonuç olarak İşaret (Beacon) Zinciri Eth2 yükseltmelerinin kalanını "kenetleyecektir".',
-    'Kenetleme "Eth1" ana ağını Eth2 işaret (beacon) zinciri ve shard sistemiyle birleştirecektir.',
-    "Bu Ethereum için çalışma ispatının sonunu ve pay ispatına tam geçişi belirleyecektir.",
-    'Bunu teknik yol haritalarındaki "1,5 Aşaması" olarak tanıyor olabilirsiniz.',
-  ]
+summaryPoint1: Sonuç olarak İşaret (Beacon) Zinciri Eth2 yükseltmelerinin kalanını "kenetleyecektir".
+summaryPoint2: Kenetleme "Eth1" ana ağını Eth2 işaret (beacon) zinciri ve shard sistemiyle birleştirecektir.
+summaryPoint3: Bu Ethereum için çalışma ispatının sonunu ve pay ispatına tam geçişi belirleyecektir.
+summaryPoint4: Bunu teknik yol haritalarındaki "1,5 Aşaması" olarak tanıyor olabilirsiniz.
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">
@@ -42,7 +39,7 @@ These include Improvements for
 
 Plus many more.
 
-[More on Ethereum1.x](/en/learn/#eth-1x)
+[More on Ethereum1.x](/learn/#eth-1x)
 
 These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 

@@ -5,13 +5,10 @@ lang: hr
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    "Na kraju će se trenutačna glavna mreža Ethereum „spojiti” s ostatkom nadogradnji Eth2.",
-    "Spajanje će sjediniti glavnu mrežu „Eth1” s nadogradnjom Eth2 Beacon Chain i sustavom razdjeljivanja.",
-    "Ovo će označiti kraj procesa proof-of-work za Ethereum i prijelaz na proof-of-stake.",
-    "To vam može biti poznato kao „faza 1.5” na tehničkim planovima.",
-  ]
+summaryPoint1: Na kraju će se trenutačna glavna mreža Ethereum „spojiti” s ostatkom nadogradnji Eth2.
+summaryPoint2: Spajanje će sjediniti glavnu mrežu „Eth1” s nadogradnjom Eth2 Beacon Chain i sustavom razdjeljivanja.
+summaryPoint3: Ovo će označiti kraj procesa proof-of-work za Ethereum i prijelaz na proof-of-stake.
+summaryPoint4: To vam može biti poznato kao „faza 1.5” na tehničkim planovima.
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">
@@ -42,7 +39,7 @@ These include Improvements for
 
 Plus many more.
 
-[More on Ethereum1.x](/en/learn/#eth-1x)
+[More on Ethereum1.x](/learn/#eth-1x)
 
 These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 

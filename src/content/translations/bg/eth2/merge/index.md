@@ -5,13 +5,10 @@ lang: bg
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    'Впоследствие настоящата основна мрежа на Етереум ще се "свърже" с останалите ъпгрейди на Eth2.',
-    'Свързването ще слее основната "Eth1" мрежа със сигналната верига на Eth2 и със системата от компоненти.',
-    "Това ще бележи края на доказателството-за-работа при Етереум и пълното преминаване към доказателство за залог.",
-    'Това може да ви е познато като "Етап 1.5" върху техническите карти.',
-  ]
+summaryPoint1: Впоследствие настоящата основна мрежа на Етереум ще се "свърже" с останалите ъпгрейди на Eth2.
+summaryPoint2: Свързването ще слее основната "Eth1" мрежа със сигналната верига на Eth2 и със системата от компоненти.
+summaryPoint3: Това ще бележи края на доказателството-за-работа при Етереум и пълното преминаване към доказателство за залог.
+summaryPoint4: Това може да ви е познато като "Етап 1.5" върху техническите карти.
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">
@@ -42,7 +39,7 @@ These include Improvements for
 
 Plus many more.
 
-[More on Ethereum1.x](/en/learn/#eth-1x)
+[More on Ethereum1.x](/learn/#eth-1x)
 
 These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 

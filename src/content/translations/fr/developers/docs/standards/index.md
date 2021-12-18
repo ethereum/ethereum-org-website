@@ -10,9 +10,9 @@ incomplete: true
 
 La communauté Ethereum a adopté de nombreuses normes qui aident à maintenir l'interopérabilité des projets (comme les [clients Ethereum](/developers/docs/nodes-and-clients/) et les portefeuilles) entre les implémentations, et garantir que les contrats intelligents et les DApps restent composables.
 
-Ces normes sont généralement présentées via les [propositions d'amélioration d'Ethereum (EIP)](/en/eips/), qui sont discutées entre les membres de la communauté selon un [processus standard](https://eips.ethereum.org/EIPS/eip-1).
+Ces normes sont généralement présentées via les [propositions d'amélioration d'Ethereum (EIP)](/eips/), qui sont discutées entre les membres de la communauté selon un [processus standard](https://eips.ethereum.org/EIPS/eip-1).
 
-- [Introduction aux EIP](/en/eips/)
+- [Introduction aux EIP](/eips/)
 - [Liste des EIP](https://eips.ethereum.org/)
 - [Dépôt GitHub des EIP](https://github.com/ethereum/EIPs)
 - [Forum de discussions sur les EIP](https://ethereum-magicians.org/c/eips)

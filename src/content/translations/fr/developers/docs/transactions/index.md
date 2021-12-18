@@ -14,13 +14,13 @@ Les transactions sont des instructions signées cryptographiquement depuis des c
 
 ## Prérequis {#prerequisites}
 
-Pour vous aider à mieux comprendre cet article, nous vous recommandons de commencer par lire les pages [Comptes](/en/developers/docs/accounts/) et [Introduction à Ethereum](/en/developers/docs/intro-to-ethereum/).
+Pour vous aider à mieux comprendre cet article, nous vous recommandons de commencer par lire les pages [Comptes](/developers/docs/accounts/) et [Introduction à Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Qu'est-ce qu'une transaction ? {#whats-a-transaction}
 
 Une transaction Ethereum est une action initiée par un compte externe, c'est-à-dire un compte géré par un être humain et non par un contrat. Par exemple, si Marc envoie 1 ETH à Alice, le compte de Marc doit être débité et celui d'Alice doit être crédité. Cette action, qui modifie l'état, se produit dans le cadre d'une transaction.
 
-![Diagramme montrant un changement d'état de cause de la transaction](./tx.png) _Schéma adapté à partir du document [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagramme montrant un changement d'état de cause de la transaction](../../../../../developers/docs/transactions/tx.png) _Schéma adapté à partir du document [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Les transactions, qui modifient l'état de l'EVM, doivent être diffusées sur l'ensemble du réseau. N'importe quel nœud peut diffuser une demande pour qu'une transaction soit exécutée sur l'EVM. Un mineur exécutera ensuite la transaction et propagera au reste du réseau le changement d'état qui en résultera.
 
@@ -35,7 +35,7 @@ Une transaction soumise comprend les informations suivantes :
 - `gasLimit` : Quantité maximum d’unités de carburant pouvant être consommée par la transaction. Les unités de carburant représentent les étapes de calcul.
 - `gasPrice` : Les frais que l’expéditeur paye par unité de carburant
 
-Le carburant est une référence au calcul nécessaire au traitement de la transaction par un mineur. Les utilisateurs doivent payer des frais pour ce calcul. Les paramètres `gasLimit` et `gasPrice` déterminent les frais de transaction maximum payés au mineur. [Plus d'infos sur le carburant](/en/developers/docs/gas/)
+Le carburant est une référence au calcul nécessaire au traitement de la transaction par un mineur. Les utilisateurs doivent payer des frais pour ce calcul. Les paramètres `gasLimit` et `gasPrice` déterminent les frais de transaction maximum payés au mineur. [Plus d'infos sur le carburant](/developers/docs/gas/)
 
 L'objet de transaction ressemblera un peu à ceci :
 
@@ -124,7 +124,7 @@ Le mineur traitant la transaction recevra **+0,0042 ETH**.
 
 Du carburant est également requis pour toute interaction avec un contrat intelligent.
 
-![Diagramme montrant comment le carburant inutilisé est remboursé](./gas-tx.png) _Schéma adapté à partir du document [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagramme montrant comment le carburant inutilisé est remboursé](../../../../../developers/docs/transactions/gas-tx.png) _Schéma adapté à partir du document [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Tout carburant non utilisé dans une transaction est remboursé sur le compte de l'utilisateur.
 
@@ -289,7 +289,7 @@ _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
 ## Sujets connexes {#related-topics}
 
-- [Comptes](/en/developers/docs/accounts/)
-- [Machine virtuelle Ethereum (EVM)](/en/developers/docs/evm/)
-- [Carburant](/en/developers/docs/gas/)
-- [Minage](/en/developers/docs/consensus-mechanisms/pow/mining/)
+- [Comptes](/developers/docs/accounts/)
+- [Machine virtuelle Ethereum (EVM)](/developers/docs/evm/)
+- [Carburant](/developers/docs/gas/)
+- [Minage](/developers/docs/consensus-mechanisms/pow/mining/)

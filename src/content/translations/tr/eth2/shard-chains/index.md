@@ -5,17 +5,14 @@ lang: tr
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
-summaryPoints:
-  [
-    "Parçalama, Ethereum’un ölçeklenebilirliğini ve kapasitesini geliştirmek için çok aşamalı bir yükseltmedir.",
-    "Parça zincirleri, ağın yükünü 64 yeni zincire yayar",
-    "Donanım gereksinimlerini düşük tutarak, bir düğüm çalıştırmayı kolaylaştırır.",
-    'Teknik yol haritası, "1. Aşama" ve potansiyel olarak "2. Aşama" daki parça zincirleri üzerindeki çalışmaları içermektedir.',
-  ]
+summaryPoint1: Parçalama, Ethereum’un ölçeklenebilirliğini ve kapasitesini geliştirmek için çok aşamalı bir yükseltmedir.
+summaryPoint2: Parça zincirleri, ağın yükünü 64 yeni zincire yayar
+summaryPoint3: Donanım gereksinimlerini düşük tutarak, bir düğüm çalıştırmayı kolaylaştırır.
+summaryPoint4: Teknik yol haritası, "1. Aşama" ve potansiyel olarak "2. Aşama" daki parça zincirleri üzerindeki çalışmaları içermektedir.
 ---
 
-<UpgradeStatus date="~2022">
-    Parça zincirleri, <a href="/eth2/beacon-chain/">İşaret Zinciri</a> başlatıldıktan sonra işin ne kadar hızlı ilerlediğine bağlı olarak 2022'de gönderilmelidir. Bu parçalar, Ethereum'a verileri depolamak ve bunlara erişmek için daha fazla kapasite sağlayacak, ancak kod yürütmek için kullanılmayacak. Detayları hala öğrenim aşamasında.
+<UpgradeStatus date="~2023">
+    Parça zincirleri, <a href="/eth2/beacon-chain/">İşaret Zinciri</a> başlatıldıktan sonra işin ne kadar hızlı ilerlediğine bağlı olarak 2023'de gönderilmelidir. Bu parçalar, Ethereum'a verileri depolamak ve bunlara erişmek için daha fazla kapasite sağlayacak, ancak kod yürütmek için kullanılmayacak. Detayları hala öğrenim aşamasında.
 </UpgradeStatus>
 
 ## Parçalama nedir? {#what-is-sharding}
@@ -39,7 +36,7 @@ Daha düşük donanım gereksinimleri ile parçalama, herhangi bir aracı hizmet
 <br />
 
 <InfoBanner isWarning={true}>
-  İlk olarak, Eth2 istemcinizle aynı anda bir ana ağ istemcisi çalıştırmanız gerekecektir. <a href="https://launchpad.ethereum.org" target="_blank">Başlatma panosu</a>, donanım gereksinimleri ve süreç boyunca size yol gösterecektir. Alternatif olarak bir <a href="/en/developers/docs/apis/backend/#available-libraries">arka uç API'si</a> kullanabilirsiniz.
+  İlk olarak, Eth2 istemcinizle aynı anda bir ana ağ istemcisi çalıştırmanız gerekecektir. <a href="https://launchpad.ethereum.org" target="_blank">Başlatma panosu</a>, donanım gereksinimleri ve süreç boyunca size yol gösterecektir. Alternatif olarak bir <a href="/developers/docs/apis/backend/#available-libraries">arka uç API'si</a> kullanabilirsiniz.
 </InfoBanner>
 
 ## Parça zincirleri sürüm 1: veri kullanılabilirliği {#data-availability}

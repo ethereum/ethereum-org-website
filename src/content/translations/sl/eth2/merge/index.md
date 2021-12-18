@@ -5,13 +5,10 @@ lang: sl
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    'Sčasoma se bo glavno omrežje Ethereum "spojilo" s preostalimi nadgradnjami Eth2.',
-    'Spojitev bo združila glavno omrežje "Eth1" z oddajniško verigo Eth2 in sistemom razdrobljenih verig.',
-    "To bo predstavljalo konec dokaza o delu za Ethereum in popoln prehod na dokaz o deležu.",
-    'Spojitev morda poznate kot "faza 1.5", ki se uporablja v tehničnih načrtih.',
-  ]
+summaryPoint1: Sčasoma se bo glavno omrežje Ethereum "spojilo" s preostalimi nadgradnjami Eth2.
+summaryPoint2: Spojitev bo združila glavno omrežje "Eth1" z oddajniško verigo Eth2 in sistemom razdrobljenih verig.
+summaryPoint3: To bo predstavljalo konec dokaza o delu za Ethereum in popoln prehod na dokaz o deležu.
+summaryPoint4: Spojitev morda poznate kot "faza 1.5", ki se uporablja v tehničnih načrtih.
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">
@@ -42,7 +39,7 @@ These include Improvements for
 
 Plus many more.
 
-[More on Ethereum1.x](/en/learn/#eth-1x)
+[More on Ethereum1.x](/learn/#eth-1x)
 
 These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 

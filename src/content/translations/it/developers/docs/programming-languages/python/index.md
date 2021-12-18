@@ -14,7 +14,7 @@ Usa Ethereum per creare applicazioni decentralizzate (dette "dapp") che sfruttan
 
 **Operazioni di base per integrare Python con Ethereum**
 
-Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/en/learn/) o [ethereum.org/developers](/en/developers/).
+Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/learn/) o [ethereum.org/developers](/developers/).
 
 - [Blockchain Explained](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Understanding Smart Contracts](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -54,7 +54,7 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/en
 - [Vyper](https://github.com/ethereum/vyper/) - _Linguaggio Python per Smart Contract per l'EVM_
 - [Web3.py](https://github.com/ethereum/web3.py) - _Libreria Python per interagire con Ethereum_
 
-Cerchi altre risorse? Dai un'occhiata a [ethereum.org/developers.](/en/developers/)
+Cerchi altre risorse? Dai un'occhiata a [ethereum.org/developers.](/developers/)
 
 ## Collaboratori della community Python {#python-community-contributors}
 

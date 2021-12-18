@@ -77,12 +77,15 @@ Learn more about [Plasma](/developers/docs/scaling/plasma/).
 
 ## More of a visual learner? {#visual-learner}
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/BgCgauWVTs0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<figure>
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/BgCgauWVTs0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
 
 _Note the explanation in the video uses the term "Layer 2" to refer to all off-chain scaling solutions, while we differentiate "Layer 2" as an off-chain solution that derives its security through layer 1 Mainnet consensus._
 
 ## Further reading {#further-reading}
 
+- [A rollup-centric ethereum roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) _Vitalik Buterin_
 - [Up-to-date analytics on Layer 2 scaling solutions for Ethereum](https://www.l2beat.com/)
 - [Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
 - [An Incomplete Guide to Rollups](https://vitalik.ca/general/2021/01/05/rollup.html)

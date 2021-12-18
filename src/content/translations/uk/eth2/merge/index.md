@@ -5,13 +5,10 @@ lang: uk
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    "Зрештою основну мережу Ethereum буде поєднано з іншими оновленнями Eth2.",
-    "У процесі злиття основна мережа Eth1 поєднається з оновленням Beacon Chain Eth2 й системою створення сегментів даних.",
-    "У мережі Ethereum більше не використовуватимуться докази виконаної роботи. Натомість відбудеться повний перехід на докази частки.",
-    'На технічних картах це оновлення позначено як "Фаза 1,5".',
-  ]
+summaryPoint1: Зрештою основну мережу Ethereum буде поєднано з іншими оновленнями Eth2.
+summaryPoint2: У процесі злиття основна мережа Eth1 поєднається з оновленням Beacon Chain Eth2 й системою створення сегментів даних.
+summaryPoint3: У мережі Ethereum більше не використовуватимуться докази виконаної роботи. Натомість відбудеться повний перехід на докази частки.
+summaryPoint4: На технічних картах це оновлення позначено як "Фаза 1,5".
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">
@@ -42,7 +39,7 @@ These include Improvements for
 
 Plus many more.
 
-[More on Ethereum1.x](/en/learn/#eth-1x)
+[More on Ethereum1.x](/learn/#eth-1x)
 
 These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 

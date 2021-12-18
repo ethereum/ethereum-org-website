@@ -720,4 +720,4 @@ _Częściowo na podstawie książki [Mastering Ethereum](https://github.com/ethe
 
 Zapomnieliśmy o czymś? Widzisz jakieś błędy? Pomóż nam wprowadzać ulepszenia, współtworząc ten słownik na GitHub!
 
-[Dowiedz się więcej o tym, jak włączyć się do tworzenia strony](/en/contributing/adding-glossary-terms)
+[Dowiedz się więcej o tym, jak włączyć się do tworzenia strony](/contributing/adding-glossary-terms)

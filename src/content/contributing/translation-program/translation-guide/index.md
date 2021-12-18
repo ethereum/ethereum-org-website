@@ -87,6 +87,14 @@ Here is what we suggest, when you find a term that's unfamiliar to you:
 
 We recommend you leave names of brands, companies, and personnel untranslated as a translation might cause unnecessary confusion and SEO difficulties.
 
+## How do I add content in my language? {#adding-foreign-language-content}
+
+Currently, all non-English content is translated directly from the English source content, and any content that does not exist in English cannot be added to other languages.
+
+To suggest new content for ethereum.org, you can [create an issue](https://github.com/ethereum/ethereum-org-website/issues) on GitHub. If added, the content will be written in English and translated to other languages using Crowdin.
+
+We plan to add support for non-English content additions in the near future.
+
 ## Get in touch {#contact}
 
-Thank you for reading through all of these. We hope this helps you to onboard our program. Feel free to join our [Discord translation channel](https://discord.gg/TkJFaewsaM) to ask questions and collaborate with other translators!
+Thank you for reading through all of these. We hope this helps you to onboard our program. Feel free to join our [Discord translation channel](https://discord.gg/XVepFu7sqR) to ask questions and collaborate with other translators, or reach out to us at translations@ethereum.org!

@@ -5,17 +5,14 @@ lang: pl
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
-summaryPoints:
-  [
-    "Sharding jest wieloetapowym uaktualnieniem, które polega na zwiększeniu skalowalności i pojemności.",
-    "Łańcuchy odłamkowe rozkładają obciążenie sieci na 64 nowe łańcuchy.",
-    "Sprawiają że łatwiej uruchamiać węzły przez zmniejszenie wymagań sprzętowych",
-    "Techniczne wytyczne zawierają pracę nad łańcuchami szczątkowymi podczas „Fazy 1” i potencjalnie „Fazy 2”",
-  ]
+summaryPoint1: Sharding jest wieloetapowym uaktualnieniem, które polega na zwiększeniu skalowalności i pojemności.
+summaryPoint2: Łańcuchy odłamkowe rozkładają obciążenie sieci na 64 nowe łańcuchy.
+summaryPoint3: Sprawiają że łatwiej uruchamiać węzły przez zmniejszenie wymagań sprzętowych
+summaryPoint4: Techniczne wytyczne zawierają pracę nad łańcuchami szczątkowymi podczas „Fazy 1” i potencjalnie „Fazy 2”
 ---
 
-<UpgradeStatus date="~2022">
-    Łańcuchy odłamkowe powinny być dostarczone około 2022 r., w zależności od tego, jak będą postępowały prace po wdrożeniu <a href="/eth2/beacon-chain/">łańcucha śledzącego</a>. Te fragmentacje dadzą Ethereum większą pojemność przechowywania i dostępu do danych, ale nie będzie można ich używać do wykonywania kodu. Szczegóły tego są wciąż opracowywane.
+<UpgradeStatus date="~2023">
+    Łańcuchy odłamkowe powinny być dostarczone około 2023 r., w zależności od tego, jak będą postępowały prace po wdrożeniu <a href="/eth2/beacon-chain/">łańcucha śledzącego</a>. Te fragmentacje dadzą Ethereum większą pojemność przechowywania i dostępu do danych, ale nie będzie można ich używać do wykonywania kodu. Szczegóły tego są wciąż opracowywane.
 </UpgradeStatus>
 
 ## Czym jest sharding? {#what-is-sharding}
@@ -39,7 +36,7 @@ Dzięki zmniejszonym wymaganiom sprzętowym fragmentacja ułatwi samodzielne uru
 <br />
 
 <InfoBanner isWarning={true}>
-  Na początku musisz uruchomić klienta sieci głównej w tym samym czasie co klienta Eth2. <a href="https://launchpad.ethereum.org" target="_blank">Launchpad</a> poprowadzi Cię przez wymagania sprzętowe oraz proces. Jako alternatywnego rozwiązania możesz też użyć <a href="/en/developers/docs/apis/backend/#available-libraries">backendowego API</a>.
+  Na początku musisz uruchomić klienta sieci głównej w tym samym czasie co klienta Eth2. <a href="https://launchpad.ethereum.org" target="_blank">Launchpad</a> poprowadzi Cię przez wymagania sprzętowe oraz proces. Jako alternatywnego rozwiązania możesz też użyć <a href="/developers/docs/apis/backend/#available-libraries">backendowego API</a>.
 </InfoBanner>
 
 ## Wersja 1 łańcucha odłamkowego: dostępność danych {#data-availability}

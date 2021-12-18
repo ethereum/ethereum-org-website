@@ -5,17 +5,14 @@ lang: sl
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
-summaryPoints:
-  [
-    "Razdrobljene verige so nadgradnja v več fazah za izboljševanje Ethereumove razširljivosti in zmogljivosti.",
-    "Razdrobljene verige razdelijo obremenitev omrežja med 64 novih verig.",
-    "Omogočajo enostavno izvajanje vozlišča, saj so zahteve glede strojne opreme nizke.",
-    'Tehnični načrti vključujejo delo na razdrobljenih verigah v "fazi 1" in morda v "fazi 2".',
-  ]
+summaryPoint1: Razdrobljene verige so nadgradnja v več fazah za izboljševanje Ethereumove razširljivosti in zmogljivosti.
+summaryPoint2: Razdrobljene verige razdelijo obremenitev omrežja med 64 novih verig.
+summaryPoint3: Omogočajo enostavno izvajanje vozlišča, saj so zahteve glede strojne opreme nizke.
+summaryPoint4: Tehnični načrti vključujejo delo na razdrobljenih verigah v "fazi 1" in morda v "fazi 2".
 ---
 
-<UpgradeStatus date="~2022">
-    Razdrobljene verige bi lahko bile uvedene enkrat v letu 2022, odvisno od hitrosti napredka po zagonu <a href="/eth2/beacon-chain/">oddajniške verige</a>. Ti drobci bodo Ethereumu zagotovili boljšo zmogljivost za obdelavo in dostop do podatkov, vendar se ne bodo uporabljali za izvajanje kode. Podrobnosti tega bodo še določene.
+<UpgradeStatus date="~2023">
+    Razdrobljene verige bi lahko bile uvedene enkrat v letu 2023, odvisno od hitrosti napredka po zagonu <a href="/eth2/beacon-chain/">oddajniške verige</a>. Ti drobci bodo Ethereumu zagotovili boljšo zmogljivost za obdelavo in dostop do podatkov, vendar se ne bodo uporabljali za izvajanje kode. Podrobnosti tega bodo še določene.
 </UpgradeStatus>
 
 ## Kaj je razdrobitev? {#what-is-sharding}
@@ -39,7 +36,7 @@ Z manjšimi zahtevami glede strojne opreme bo razdrobitev omogočala lastno izva
 <br />
 
 <InfoBanner isWarning={true}>
-  Na začetku boste morali odjemalca za glavno omrežje izvajati skupaj z odjemalcem Eth2. <a href="https://launchpad.ethereum.org" target="_blank">Na zagonski platformi</a> boste našli opis zahtev glede strojne opreme in postopka. Namesto tega lahko uporabljate <a href="/en/developers/docs/apis/backend/#available-libraries">zaledni API</a>.
+  Na začetku boste morali odjemalca za glavno omrežje izvajati skupaj z odjemalcem Eth2. <a href="https://launchpad.ethereum.org" target="_blank">Na zagonski platformi</a> boste našli opis zahtev glede strojne opreme in postopka. Namesto tega lahko uporabljate <a href="/developers/docs/apis/backend/#available-libraries">zaledni API</a>.
 </InfoBanner>
 
 ## 1. različica razdrobljenih verig: razpoložljivost podatkov {#data-availability}

@@ -5,13 +5,10 @@ lang: ca
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    "Al final, l'actual xarxa principal d'Ehtereum s'acoblarà amb la resta de les millores d'Eth2.",
-    'L''acoblament fusionarà la xarxa principal "Eth1" amb el sistema de fragmentació i la Cadena de Balisa d''Eth2.',
-    "Això marcarà el final de la prova de treball per a Ethereum i la transició completa a la prova de participació.",
-    'Es coneix també com a "Phase1.5" a la planificació tècnica.',
-  ]
+summaryPoint1: Al final, l'actual xarxa principal d'Ehtereum s'acoblarà amb la resta de les millores d'Eth2.
+summaryPoint2: L''acoblament fusionarà la xarxa principal "Eth1" amb el sistema de fragmentació i la Cadena de Balisa d''Eth2.
+summaryPoint3: Això marcarà el final de la prova de treball per a Ethereum i la transició completa a la prova de participació.
+summaryPoint4: Es coneix també com a "Phase1.5" a la planificació tècnica.
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">
@@ -42,7 +39,7 @@ These include Improvements for
 
 Plus many more.
 
-[More on Ethereum1.x](/en/learn/#eth-1x)
+[More on Ethereum1.x](/learn/#eth-1x)
 
 These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 

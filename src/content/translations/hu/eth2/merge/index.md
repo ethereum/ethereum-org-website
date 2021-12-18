@@ -5,13 +5,10 @@ lang: hu
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    'Végül a jelenlegi Ethereum főhálózat "dokkolni" fog a többi Eth2 fejlesztéssel együtt.',
-    'A dokkolás egyesíti az "Eth1" főhálózatot a Beacon Chainnel és a sharding rendszerrel.',
-    "Ez a proof-of-work végét jeleni majd az Ethereumot tekintve, és a teljes átmenetet a proof-of-stake-be.",
-    "Úgy is ismerheted, mint a Fázis 1.5 a technikai ütemtervek szerint.",
-  ]
+summaryPoint1: Végül a jelenlegi Ethereum főhálózat "dokkolni" fog a többi Eth2 fejlesztéssel együtt.
+summaryPoint2: A dokkolás egyesíti az "Eth1" főhálózatot a Beacon Chainnel és a sharding rendszerrel.
+summaryPoint3: Ez a proof-of-work végét jeleni majd az Ethereumot tekintve, és a teljes átmenetet a proof-of-stake-be.
+summaryPoint4: Úgy is ismerheted, mint a Fázis 1.5 a technikai ütemtervek szerint.
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">
@@ -42,7 +39,7 @@ These include Improvements for
 
 Plus many more.
 
-[More on Ethereum1.x](/en/learn/#eth-1x)
+[More on Ethereum1.x](/learn/#eth-1x)
 
 These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 

@@ -14,7 +14,7 @@ Transakcje to podpisane kryptograficznie instrukcje od kont. Konto inicjuje tran
 
 ## Warunki wstępne {#prerequisites}
 
-Aby lepiej zrozumieć tę stronę, zalecamy najpierw przeczytanie rozdziału <a href="/en/developers/docs/accounts/">Konta</a> i naszego [Wprowadzenia do Ethereum](/en/developers/docs/intro-to-ethereum/).
+Aby lepiej zrozumieć tę stronę, zalecamy najpierw przeczytanie rozdziału <a href="/developers/docs/accounts/">Konta</a> i naszego [Wprowadzenia do Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Czym jest transakcja? {#whats-a-transaction}
 
@@ -35,7 +35,7 @@ Przedłożona transakcja zawiera następujące informacje:
 - `gasLimit` – maksymalna ilość jednostek gazu, które mogą zostać zużyte w trakcie transakcji. Jednostki gazu reprezentują kroki obliczeniowe
 - `gasPrice` – opłata wnoszona przez nadawcę za jednostkę gazu
 
-Gaz jest odniesieniem do obliczeń wymaganych do przetworzenia transakcji przez górnika. Użytkownicy muszą wnieść opłatę za to obliczenie. `gasLimit` i `gasPrice` określają maksymalną opłatę transakcyjną na rzecz górnika. [Więcej o gazie](/en/developers/docs/gas/).
+Gaz jest odniesieniem do obliczeń wymaganych do przetworzenia transakcji przez górnika. Użytkownicy muszą wnieść opłatę za to obliczenie. `gasLimit` i `gasPrice` określają maksymalną opłatę transakcyjną na rzecz górnika. [Więcej o gazie](/developers/docs/gas/).
 
 Obiekt transakcji będzie wyglądał mniej więcej w ten sposób:
 
@@ -289,7 +289,7 @@ _Znasz jakieś zasoby społeczności, które Ci pomogły? Wyedytuj tę stronę 
 
 ## Powiązane tematy {#related-topics}
 
-- [Konta](/en/developers/docs/accounts/)
-- [Maszyna wirtualna Ethereum (EVM)](/en/developers/docs/evm/)
-- [Paliwo](/en/developers/docs/gas/)
-- [Wydobycie](/en/developers/docs/consensus-mechanisms/pow/mining/)
+- [Konta](/developers/docs/accounts/)
+- [Maszyna wirtualna Ethereum (EVM)](/developers/docs/evm/)
+- [Paliwo](/developers/docs/gas/)
+- [Wydobycie](/developers/docs/consensus-mechanisms/pow/mining/)

@@ -10,7 +10,7 @@ Eksploratory bloków są twoim portalem do danych Ethereum. Możesz ich użyć, 
 
 ## Warunki wstępne {#prerequisites}
 
-Powinieneś zrozumieć podstawowe pojęcia Ethereum, abyś mógł zrozumieć dane, które daje Ci eksplorator bloków. Zacznij od [wprowadzenia do Ethereum](/en/developers/docs/intro-to-ethereum/).
+Powinieneś zrozumieć podstawowe pojęcia Ethereum, abyś mógł zrozumieć dane, które daje Ci eksplorator bloków. Zacznij od [wprowadzenia do Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Usługi {#services}
 

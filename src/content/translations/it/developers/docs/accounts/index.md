@@ -10,14 +10,14 @@ Un account Ethereum è un'entità con un saldo in ether (ETH) che può inviare t
 
 ## Prerequisiti {#prerequisites}
 
-Gli account sono un argomento piuttosto basico. Per capire meglio questa pagina, consigliamo tuttavia di leggere prima la nostra [introduzione a Ethereum](/en/developers/docs/intro-to-ethereum/).
+Gli account sono un argomento piuttosto basico. Per capire meglio questa pagina, consigliamo tuttavia di leggere prima la nostra [introduzione a Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Tipi di account {#types-of-account}
 
 Ethereum ha due tipi di account:
 
 - Di proprietà esterna: controllato da chiunque possieda chiavi private
-- Contratto: uno Smart Contract distribuito sulla rete, controllato da codice. Scopri di più sugli [Smart Contract](/en/developers/docs/smart-contracts/)
+- Contratto: uno Smart Contract distribuito sulla rete, controllato da codice. Scopri di più sugli [Smart Contract](/developers/docs/smart-contracts/)
 
 Entrambi i tipi di account hanno la possibilità di:
 
@@ -48,7 +48,7 @@ Gli account Ethereum hanno quattro campi:
 <!--this hash refers to the code of this account on the Ethereum virtual machine (EVM). This EVM code gets executed if the account gets a message call. It cannot be changed unlike the other account fields.  -->
 - `storageRoot`: detto anche hash di archiviazione. Hash a 256 bit del nodo radice di un albero di Merkle Patricia che codifica il contenuto dello spazio di archiviazione dell'account (una mappatura tra valori interi a 256 bit), codificato nel trie come mappatura tra l'hash di Keccak a 256 bit delle chiavi intere a 256 bit e i valori interi codificati in RLP a 256 bit. Questo albero codifica l'hash del contenuto dello storage di questo account ed è vuoto di default.
 
-![Diagramma che mostra la composizione di un account](./accounts.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagramma che mostra la composizione di un account](../../../../../developers/docs/accounts/accounts.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Account di proprietà esterna e coppie di chiavi {#externally-owned-accounts-and-key-pairs}
 
@@ -127,5 +127,5 @@ _Conosci una risorsa della community che ti è stata utile? Modifica questa pagi
 
 ## Argomenti correlati {#related-topics}
 
-- [Smart Contract](/en/developers/docs/smart-contracts/)
-- [Transazioni](/en/developers/docs/transactions/)
+- [Smart Contract](/developers/docs/smart-contracts/)
+- [Transazioni](/developers/docs/transactions/)

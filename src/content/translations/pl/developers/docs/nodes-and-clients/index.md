@@ -11,7 +11,7 @@ Aby Ethereum działało w sposób zdecentralizowany, potrzebuje rozproszonej sie
 
 ## Wymagania wstępne {#prerequisites}
 
-Powinieneś zrozumieć koncepcję zdecentralizowanej sieci, zanim zagłębisz się w nią i uruchomisz własną instancję klienta Ethereum. Spójrz na nasze [wprowadzenie do Ethereum](/en/developers/docs/intro-to-ethereum/).
+Powinieneś zrozumieć koncepcję zdecentralizowanej sieci, zanim zagłębisz się w nią i uruchomisz własną instancję klienta Ethereum. Spójrz na nasze [wprowadzenie do Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Czym są węzły i klienci? {#what-are-nodes-and-clients}
 
@@ -65,7 +65,7 @@ Prowadzenie własnego węzła umożliwia korzystanie z Ethereum w sposób napraw
 
 Różnorodny zestaw węzłów jest ważny dla zdrowia, bezpieczeństwa i odporności operacyjnej Ethereum.
 
-- Zapewniają one dostęp do danych blockchainu dla niewielkich klientów, którzy od niego zależą. W szczytowych okresach użytkowania musi być wystarczająca liczba pełnych węzłów, aby ułatwić synchronizację lekkich węzłów. Lekkie węzły nie przechowują całego łańcucha bloków, zamiast tego weryfikują dane za pomocą [głównych stanów w nagłówkach bloków](/en/developers/docs/blocks/#block-anatomy). Mogą żądać więcej informacji od bloków, jeśli ich potrzebują.
+- Zapewniają one dostęp do danych blockchainu dla niewielkich klientów, którzy od niego zależą. W szczytowych okresach użytkowania musi być wystarczająca liczba pełnych węzłów, aby ułatwić synchronizację lekkich węzłów. Lekkie węzły nie przechowują całego łańcucha bloków, zamiast tego weryfikują dane za pomocą [głównych stanów w nagłówkach bloków](/developers/docs/blocks/#block-anatomy). Mogą żądać więcej informacji od bloków, jeśli ich potrzebują.
 - Pełne węzły wymuszają reguły konsensusu proof-of-work, więc nie można ich oszukać w celu zaakceptowania bloków, które ich nie przestrzegają. Zapewnia to dodatkowe bezpieczeństwo w sieci, ponieważ jeśli wszystkie węzły były lekkimi węzłami, które nie przeprowadzają pełnej weryfikacji, górnicy mogą zaatakować sieć i na przykład tworzyć bloki z wyższymi nagrodami.
 
 Jeśli uruchomisz pełny węzeł, korzysta z niego cała sieć Ethereum.
@@ -113,7 +113,7 @@ W tabeli przedstawiono podsumowanie poszczególnych klientów. Wszystkie z nich 
 | [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, i Görli        | Szybka, pełna                  | Archive, Pruned |
 | [Trinity](https://trinity.ethereum.org/)                     | Python   | Linux, macOS          | Mainnet, Görli, Ropsten, Rinkeby i więcej | Pełna, wiązka, szybka/nagłówek | Archive         |
 
-Więcej informacji o obsługiwanych sieciach znajdziesz w rozdziale [Sieci Ethereum](/en/developers/docs/networks/).
+Więcej informacji o obsługiwanych sieciach znajdziesz w rozdziale [Sieci Ethereum](/developers/docs/networks/).
 
 ### Zalety różnych implementacji {#advantages-of-different-implementations}
 
@@ -206,7 +206,7 @@ Te wykresy pokazują, jak zawsze zmieniają się wymagania dotyczące przechowyw
 
 ### Ethereum na komputerze jednopłytowym {#ethereum-on-a-single-board-computer}
 
-Najbardziej wygodnym i tanim sposobem uruchomienia węzła Ethereum jest korzystanie z jednego komputera z architekturą ARM jak Raspberry Pi. [Ethereum na ARM](https://twitter.com/EthereumOnARM) dostarcza obrazy klientów Geth, Parity, Netherumd i Besu. Oto prosty samouczek [jak zbudować i skonfigurować klienta ARM](/en/developers/tutorials/run-node-raspberry-pi/).
+Najbardziej wygodnym i tanim sposobem uruchomienia węzła Ethereum jest korzystanie z jednego komputera z architekturą ARM jak Raspberry Pi. [Ethereum na ARM](https://twitter.com/EthereumOnARM) dostarcza obrazy klientów Geth, Parity, Netherumd i Besu. Oto prosty samouczek [jak zbudować i skonfigurować klienta ARM](/developers/tutorials/run-node-raspberry-pi/).
 
 Małe, niedrogie i wydajne urządzenia, takie jak te, są idealne do uruchomienia węzła w domu.
 
@@ -228,8 +228,8 @@ W Internecie jest wiele instrukcji i informacji o klientach Ethereum, tutaj jest
 
 ## Powiązane tematy {#related-topics}
 
-- [Bloki](/en/developers/docs/blocks/)
-- [Sieci](/en/developers/docs/networks/)
+- [Bloki](/developers/docs/blocks/)
+- [Sieci](/developers/docs/networks/)
 
 ## Powiązane samouczki {#related-tutorials}
 

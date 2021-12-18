@@ -5,16 +5,13 @@ lang: zh
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
-summaryPoints:
-  [
-    "分片是一个多阶段升级，以提高以太坊的可扩展性和容量。",
-    "分片链将网络负荷扩展到64个新链。",
-    "通过降低硬件需求使节点运行更加容易。",
-    "技术路线图”包括在“第一阶段”和可能的“第二阶段”中的分片链上开展的工作。",
-  ]
+summaryPoint1: 分片是一个多阶段升级，以提高以太坊的可扩展性和容量。
+summaryPoint2: 分片链将网络负荷扩展到64个新链。
+summaryPoint3: 通过降低硬件需求使节点运行更加容易。
+summaryPoint4: 技术路线图”包括在“第一阶段”和可能的“第二阶段”中的分片链上开展的工作。
 ---
 
-<UpgradeStatus date="~2022">
+<UpgradeStatus date="~2023">
     分片链应该在2021年的某个时候启动，这取决于在 <a href="/eth2/beacon-chain/">信标链</a> 启动后的工作进度。 这些分片将增强以太坊存储和访问数据的能力，但不会用于执行代码。 这方面的细节仍然有待确定。
 </UpgradeStatus>
 

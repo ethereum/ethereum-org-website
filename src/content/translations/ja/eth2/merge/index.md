@@ -5,13 +5,10 @@ lang: ja
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    "最終的には現在のイーサリアムメインネットはEth2のアップグレードの残りの部分と結合します。",
-    'ドッキングは、Eth2ビーコンチェーンとシャーディングシステムと"Eth1"メインネットを統合します。',
-    "これはイーサリアムのプルーフオブワークの最後を意味し、プルーフオブステークへの完全な移行を示します。",
-    "あなたはこれを技術変遷「フェーズ1.5」としてご存知かもしれません。",
-  ]
+summaryPoint1: 最終的には現在のイーサリアムメインネットはEth2のアップグレードの残りの部分と結合します。
+summaryPoint2: ドッキングは、Eth2ビーコンチェーンとシャーディングシステムと"Eth1"メインネットを統合します。
+summaryPoint3: これはイーサリアムのプルーフオブワークの最後を意味し、プルーフオブステークへの完全な移行を示します。
+summaryPoint4: あなたはこれを技術変遷「フェーズ1.5」としてご存知かもしれません。
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">
@@ -42,7 +39,7 @@ These include Improvements for
 
 Plus many more.
 
-[More on Ethereum1.x](/en/learn/#eth-1x)
+[More on Ethereum1.x](/learn/#eth-1x)
 
 These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 

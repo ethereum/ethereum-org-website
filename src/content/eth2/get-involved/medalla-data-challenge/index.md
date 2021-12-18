@@ -6,7 +6,7 @@ sidebar: true
 sidebarDepth: 2
 ---
 
-# The Eth2 Medalla Data Challenge
+# The Eth2 Medalla Data Challenge {#the-eth2-medalla-data-challenge}
 
 <InfoBanner emoji=":warning:" isWarning={true}>
   This challenge is over. <a href="https://blog.ethereum.org/2020/11/17/medalla-data-challenge-results/" target="_blank">View the results</a>
@@ -106,7 +106,7 @@ _Surprise us with your creativity! But here are some judging criteria considerat
 - [Medalla ETH 2.0 Testnet](https://github.com/goerli/medalla)
 - [The State of Eth2](https://blog.ethereum.org/2020/06/02/the-state-of-eth2-june-2020/) _– Danny Ryan_
 - [Eth2 quick update no. 14 – testnet edition](https://blog.ethereum.org/2020/08/03/eth2-quick-update-no-14/) _– Danny Ryan_
-- [Ethereum 2.0 Overview](https://ethereum.org/en/eth2/)
+- [Ethereum 2.0 Overview](/eth2/)
 - [Eth R&D](https://discord.gg/VmG7Uxc) _– Discord_
 - [ethstaker](https://invite.gg/ethstaker) _– Discord_
 

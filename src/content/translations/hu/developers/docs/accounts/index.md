@@ -10,14 +10,14 @@ Egy Ethereum számla egy olyan entitás, mely ether (ETH) egyenleggel rendelkezi
 
 ## Előfeltételek {#prerequisites}
 
-A számlák téma könnyen feldolgozható még a legkezdőbb felhasználóknak is. De ennek az oldalnak a jobb megértése érdekében javasoljuk, hogy először olvasd el a [bevezetés az Ethereumba](/en/developers/docs/intro-to-ethereum/) oldalunkat.
+A számlák téma könnyen feldolgozható még a legkezdőbb felhasználóknak is. De ennek az oldalnak a jobb megértése érdekében javasoljuk, hogy először olvasd el a [bevezetés az Ethereumba](/developers/docs/intro-to-ethereum/) oldalunkat.
 
 ## Számlatípusok {#types-of-account}
 
 Az Ethereum két számlatípust kínál:
 
 - Külső tulajdonú - bárki irányíthatja a privát kulcsokkal
-- Szerződés - egy okosszerződés, melyet a hálózatra telepítettek és kód irányítja. Tudj meg többet az [okosszerződésekről](/en/developers/docs/smart-contracts/)
+- Szerződés - egy okosszerződés, melyet a hálózatra telepítettek és kód irányítja. Tudj meg többet az [okosszerződésekről](/developers/docs/smart-contracts/)
 
 Mindkét számlatípus képes:
 
@@ -127,5 +127,5 @@ _Ismersz olyan közösségi anyagot, amely segített neked? Módosítsd az oldal
 
 ## Kapcsolódó témák {#related-topics}
 
-- [Okosszerződések](/en/developers/docs/smart-contracts/)
-- [Tranzakciók](/en/developers/docs/transactions/)
+- [Okosszerződések](/developers/docs/smart-contracts/)
+- [Tranzakciók](/developers/docs/transactions/)

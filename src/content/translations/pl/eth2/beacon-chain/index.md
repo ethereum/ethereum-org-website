@@ -5,13 +5,10 @@ lang: pl
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/core.png
-summaryPoints:
-  [
-    "Łańcuch śledzący nie zmienia nic w Ethereum, którego dziś używamy.",
-    "Będzie koordynował sieć.",
-    "Wprowadza dowód stawki do ekosystemu Ethereum.",
-    'Być może znasz to jako "etap 0" w hamonogramie technicznym',
-  ]
+summaryPoint1: Łańcuch śledzący nie zmienia nic w Ethereum, którego dziś używamy.
+summaryPoint2: Będzie koordynował sieć.
+summaryPoint3: Wprowadza dowód stawki do ekosystemu Ethereum.
+summaryPoint4: Być może znasz to jako "etap 0" w hamonogramie technicznym
 ---
 
 <UpgradeStatus isShipped date="Wysłane!">

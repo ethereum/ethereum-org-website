@@ -69,7 +69,9 @@ Tokens must be generated in order to prove the value nodes that contribute to th
 
 ## More of a visual learner? {#visual-learner}
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/F50OrwV6Uk8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<figure>
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/F50OrwV6Uk8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
 
 ## Dapp tools {#dapp-tools}
 
@@ -94,6 +96,7 @@ Tokens must be generated in order to prove the value nodes that contribute to th
 
 ## Further reading {#further-reading}
 
+- [The Architecture of a Web 3.0 application](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 - [A 2021 guide to decentralized applications](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) - _LimeChain_
 - [What Are Decentralized Apps?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) - _Gemini_
 

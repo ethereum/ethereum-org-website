@@ -9,9 +9,9 @@ lang: hu
 
 <Logo/>
 
-Az [Ethereum Alapítvány](http://ethereum.foundation/) (EA) egy non-profit szervezet, melynek célja az [Ethereum](/en/what-is-ethereum/) és a kapcsolódó technológiák támogatása.
+Az [Ethereum Alapítvány](http://ethereum.foundation/) (EA) egy non-profit szervezet, melynek célja az [Ethereum](/what-is-ethereum/) és a kapcsolódó technológiák támogatása.
 
-Az EA nem egy cég, még csak nem is hagyományos non-profit. Feladatuk nem az Ethereum irányítása vagy vezetése, és ők sem az egyetlen szervezet, amely finanszírozza az Ethereumhoz kapcsolódó fontos technológiák fejlesztését. Az EF egy sokkal nagyobb [ökoszisztémának](/en/community/) a része.
+Az EA nem egy cég, még csak nem is hagyományos non-profit. Feladatuk nem az Ethereum irányítása vagy vezetése, és ők sem az egyetlen szervezet, amely finanszírozza az Ethereumhoz kapcsolódó fontos technológiák fejlesztését. Az EF egy sokkal nagyobb [ökoszisztémának](/community/) a része.
 
 ## Ethereum Alapítvány Kezdeményezések {#ethereum-foundation-initiatives}
 

@@ -5,13 +5,10 @@ lang: it
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    "L'attuale rete principale Ethereum sarà alla fine agganciata con il resto degli aggiornamenti Eth2.",
-    'Il docking fonderà la rete principale "Eth1" con la beacon chain Eth2 e il sistema di sharding.',
-    "Questo segnerà la fine del proof of work per Ethereum e completerà la transizione al proof of stake.",
-    'Questa fase viene detta anche "Fase 1.5" nelle roadmap tecniche.',
-  ]
+summaryPoint1: L'attuale rete principale Ethereum sarà alla fine agganciata con il resto degli aggiornamenti Eth2.
+summaryPoint2: Il docking fonderà la rete principale "Eth1" con la beacon chain Eth2 e il sistema di sharding.
+summaryPoint3: Questo segnerà la fine del proof of work per Ethereum e completerà la transizione al proof of stake.
+summaryPoint4: Questa fase viene detta anche "Fase 1.5" nelle roadmap tecniche.
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">
@@ -20,7 +17,7 @@ summaryPoints:
 
 ## Che cos'è il docking? {#what-is-the-docking}
 
-È importante ricordare che inizialmente gli altri aggiornamenti Eth2 vengono rilasciati separatamente dalla [rete principale](/glossary/#rete principale), cioè la catena che usiamo oggi. Il funzionamento della rete principale Ethereum continuerà ad essere assicurato dal [proof of work](/developers/docs/consensus-mechanisms/pow/), anche mentre la [beacon chain](/eth2/beacon-chain/) e le sue [shard chain](/eth2/shard-chains/) funzioneranno in parallelo utilizzando il [proof of stake](/developers/docs/consensus-mechanisms/pos/). Per docking si intende il momento in cui questi due sistemi si fonderanno.
+È importante ricordare che inizialmente gli altri aggiornamenti Eth2 vengono rilasciati separatamente dalla [rete principale](/glossary/#mainnet), cioè la catena che usiamo oggi. Il funzionamento della rete principale Ethereum continuerà ad essere assicurato dal [proof of work](/developers/docs/consensus-mechanisms/pow/), anche mentre la [beacon chain](/eth2/beacon-chain/) e le sue [shard chain](/eth2/shard-chains/) funzioneranno in parallelo utilizzando il [proof of stake](/developers/docs/consensus-mechanisms/pos/). Per docking si intende il momento in cui questi due sistemi si fonderanno.
 
 Immagina Ethereum come una nave spaziale che non è ancora pronta per un viaggio interstellare. Con la beacon chain e le shard chain la community ha costruito un nuovo motore e uno scafo più resistente. Quando sarà il momento, l'attuale navicella aggancerà questo nuovo sistema diventando un'unica astronave, pronta a percorrere diversi anni luce e conquistare l'universo.
 
@@ -42,7 +39,7 @@ These include Improvements for
 
 Plus many more.
 
-[More on Ethereum1.x](/en/learn/#eth-1x)
+[More on Ethereum1.x](/learn/#eth-1x)
 
 These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 

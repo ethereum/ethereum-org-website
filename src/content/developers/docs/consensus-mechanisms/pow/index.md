@@ -95,11 +95,13 @@ At a high level, proof-of-stake has the same end goal as proof-of-work: to help 
 
 ## More of a visual learner? {#visual-learner}
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/3EUAcxhuoU4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<figure>
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/3EUAcxhuoU4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
 
 ## Further Reading {#further-reading}
 
-- [Majority attack](https://en.bitcoin.it/wiki/Majority_attack/)
+- [Majority attack](https://en.bitcoin.it/wiki/Majority_attack)
 - [On settlement finality](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
 
 ### Videos {#videos}

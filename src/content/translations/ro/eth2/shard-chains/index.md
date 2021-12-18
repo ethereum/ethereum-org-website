@@ -5,17 +5,14 @@ lang: ro
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
-summaryPoints:
-  [
-    "Fragmentarea este un upgrade pe mai multe faze pentru a îmbunătăți scalabilitatea și capacitatea Ethereum.",
-    "Lanțurile de fragmente distribuie sarcina rețelei pe 64 de lanțuri noi.",
-    "Acestea facilitează rularea unui nod, menținând cerințele hardware scăzute.",
-    "Foile de parcurs tehnice includ lucrări pe lanțurile de fragmente în „Faza 1” și potențial în „Faza 2”.",
-  ]
+summaryPoint1: Fragmentarea este un upgrade pe mai multe faze pentru a îmbunătăți scalabilitatea și capacitatea Ethereum.
+summaryPoint2: Lanțurile de fragmente distribuie sarcina rețelei pe 64 de lanțuri noi.
+summaryPoint3: Acestea facilitează rularea unui nod, menținând cerințele hardware scăzute.
+summaryPoint4: Foile de parcurs tehnice includ lucrări pe lanțurile de fragmente în „Faza 1” și potențial în „Faza 2”.
 ---
 
-<UpgradeStatus date="~2022">
-    Lanțurile de fragmente ar trebui să fie livrate în 2022, în funcție de cât de repede progresează munca după lansarea <a href="/eth2/beacon-chain/">lanțului Beacon</a>. Aceste fragmente vor oferi Ethereum mai multă capacitate de stocare și acces la date, dar nu vor fi utilizate pentru executarea de cod. Detaliile despre aceasta sunt încă în curs de analiză.
+<UpgradeStatus date="~2023">
+    Lanțurile de fragmente ar trebui să fie livrate în 2023, în funcție de cât de repede progresează munca după lansarea <a href="/eth2/beacon-chain/">lanțului Beacon</a>. Aceste fragmente vor oferi Ethereum mai multă capacitate de stocare și acces la date, dar nu vor fi utilizate pentru executarea de cod. Detaliile despre aceasta sunt încă în curs de analiză.
 </UpgradeStatus>
 
 ## Ce este fragmentarea? {#what-is-sharding}
@@ -39,7 +36,7 @@ Cu cerințe hardware mai mici, fragmentarea va facilita rularea [clienților](/d
 <br />
 
 <InfoBanner isWarning={true}>
-  La început, va trebui să rulezi un client pe rețeaua principală în același timp cu clientul tău Eth2. <a href="https://launchpad.ethereum.org" target="_blank">Launchpad-ul</a> te va ghida prin cerințele de hardware și procese. Alternativ, poți utiliza un <a href="/en/developers/docs/apis/backend/#available-libraries">API back-end</a>.
+  La început, va trebui să rulezi un client pe rețeaua principală în același timp cu clientul tău Eth2. <a href="https://launchpad.ethereum.org" target="_blank">Launchpad-ul</a> te va ghida prin cerințele de hardware și procese. Alternativ, poți utiliza un <a href="/developers/docs/apis/backend/#available-libraries">API back-end</a>.
 </InfoBanner>
 
 ## Lanțuri de fragmente versiunea 1: disponibilitatea datelor {#data-availability}

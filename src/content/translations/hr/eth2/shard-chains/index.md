@@ -5,17 +5,14 @@ lang: hr
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
-summaryPoints:
-  [
-    "Razdjeljivanje je nadogradnja u više faza za poboljšanje skalabilnosti i kapaciteta Ethereuma.",
-    "Lanci djelića šire opterećenje mreže na 64 nova lanca.",
-    "Olakšavaju pokretanje čvora održavajući niske hardverske zahtjeve.",
-    "Tehnički planovi uključuju rad na lancima djelića u „fazi 1” i potencijalno u „fazi 2”.",
-  ]
+summaryPoint1: Razdjeljivanje je nadogradnja u više faza za poboljšanje skalabilnosti i kapaciteta Ethereuma.
+summaryPoint2: Lanci djelića šire opterećenje mreže na 64 nova lanca.
+summaryPoint3: Olakšavaju pokretanje čvora održavajući niske hardverske zahtjeve.
+summaryPoint4: Tehnički planovi uključuju rad na lancima djelića u „fazi 1” i potencijalno u „fazi 2”.
 ---
 
-<UpgradeStatus date="~2022">
-    Lanci djelića trebali bi se isporučiti u 2022. godini, ovisno o tome koliko će brzo napredovati radovi nakon pokretanja nadogradnje <a href="/eth2/beacon-chain/"> Beacon Chain </a>. Ti će djelići Ethereumu dati veći kapacitet za pohranu i pristup podacima, ali neće se upotrebljavati za izvršavanje koda. Pojedinosti o tome još se otkrivaju.
+<UpgradeStatus date="~2023">
+    Lanci djelića trebali bi se isporučiti u 2023. godini, ovisno o tome koliko će brzo napredovati radovi nakon pokretanja nadogradnje <a href="/eth2/beacon-chain/"> Beacon Chain </a>. Ti će djelići Ethereumu dati veći kapacitet za pohranu i pristup podacima, ali neće se upotrebljavati za izvršavanje koda. Pojedinosti o tome još se otkrivaju.
 </UpgradeStatus>
 
 ## Što je razdjeljivanje? {#what-is-sharding}
@@ -39,7 +36,7 @@ S nižim hardverskim zahtjevima, razdjeljivanje će olakšati samostalno pokreta
 <br />
 
 <InfoBanner isWarning={true}>
-  Isprva ćete trebati pokretati klijent glavne mreže istovremeno sa svojim Eth2 klijentom. <a href="https://launchpad.ethereum.org" target="_blank"> Lansirna rampa </a> će vas provesti kroz hardverske zahtjeve i postupak. Možete upotrijebiti i <a href="/en/developers/docs/apis/backend/#available-libraries"> pozadinski API </a>.
+  Isprva ćete trebati pokretati klijent glavne mreže istovremeno sa svojim Eth2 klijentom. <a href="https://launchpad.ethereum.org" target="_blank"> Lansirna rampa </a> će vas provesti kroz hardverske zahtjeve i postupak. Možete upotrijebiti i <a href="/developers/docs/apis/backend/#available-libraries"> pozadinski API </a>.
 </InfoBanner>
 
 ## Lanci djelića, verzija 1: dostupnost podataka {#data-availability}

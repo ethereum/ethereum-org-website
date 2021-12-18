@@ -11,7 +11,7 @@ A hálózatok különböző Ethereum környezetek, amelyekhez hozzáférhetsz fe
 
 ## Előfeltételek {#prerequisites}
 
-Érdemes tisztában lenned az Ethereum alapjaival, mielőtt a különböző hálózatokról olvasol, mivel ezek a hálózatok az Ethereum olcsó és biztonságos verziói, amivel el játszogathatsz. Nézd meg ezt: [bevezetés az Ethereumba](/en/developers/docs/intro-to-ethereum/).
+Érdemes tisztában lenned az Ethereum alapjaival, mielőtt a különböző hálózatokról olvasol, mivel ezek a hálózatok az Ethereum olcsó és biztonságos verziói, amivel el játszogathatsz. Nézd meg ezt: [bevezetés az Ethereumba](/developers/docs/intro-to-ethereum/).
 
 ## Nyilvános hálózatok {#public-networks}
 

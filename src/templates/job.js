@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import ButtonLink from "../components/ButtonLink"
 import Link from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
@@ -12,6 +12,7 @@ import {
   Paragraph,
   Header1,
   Header4,
+  ListItem,
 } from "../components/SharedStyledComponents"
 
 const Page = styled.div`
@@ -178,7 +179,8 @@ const H2 = styled.h2`
   /* Anchor tag styles */
   a {
     position: relative;
-    display: none;
+    display: initial;
+    opacity: 0;
     margin-left: -1.5em;
     padding-right: 0.5rem;
     font-size: 1rem;
@@ -186,12 +188,14 @@ const H2 = styled.h2`
     &:hover {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
+      opacity: 1;
     }
   }
   &:hover {
     a {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
+      opacity: 1;
     }
   }
 `
@@ -205,7 +209,8 @@ const H3 = styled.h3`
   /* Anchor tag styles */
   a {
     position: relative;
-    display: none;
+    display: initial;
+    opacity: 0;
     margin-left: -1.5em;
     padding-right: 0.5rem;
     font-size: 1rem;
@@ -213,12 +218,14 @@ const H3 = styled.h3`
     &:hover {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
+      opacity: 1;
     }
   }
   &:hover {
     a {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
+      opacity: 1;
     }
   }
 `
@@ -232,6 +239,7 @@ const components = {
   h3: H3,
   h4: Header4,
   p: Paragraph,
+  li: ListItem,
   pre: Pre,
   ButtonLink,
   Emoji,
@@ -254,7 +262,7 @@ const HeroContainer = styled.div`
   }
 `
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   flex: 1 1 100%;
   max-width: 640px;
   background-size: cover;
@@ -297,13 +305,12 @@ const JobPage = ({ data: { mdx } }) => {
   return (
     <Container>
       <HeroContainer>
-        <Image fluid={mdx.frontmatter.image.childImageSharp.fluid} />
+        <Image image={getImage(mdx.frontmatter.image)} />
       </HeroContainer>
       <Page dir="ltr">
         <PageMetadata
           title={mdx.frontmatter.title}
           description={mdx.frontmatter.description}
-          image={mdx.frontmatter.image.childImageSharp.fluid.src}
         />
         <InfoColumn>
           <KeyInfo>
@@ -390,9 +397,7 @@ export const JobQuery = graphql`
         link
         image {
           childImageSharp {
-            fluid(maxHeight: 400) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(height: 400, placeholder: BLURRED, quality: 100)
           }
         }
       }

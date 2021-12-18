@@ -15,7 +15,7 @@ Une blockchain est une base de données publique qui est mise à jour et partag�
 
 Chaque nouveau bloc et la chaîne dans son ensemble doivent faire l'objet d'un accord entre tous les nœuds du réseau. Cela permet à tout le monde d'avoir les mêmes données. Pour que cela fonctionne, les blockchains ont besoin d'un mécanisme de consensus.
 
-Ethereum utilise actuellement un mécanisme de consensus appelé "preuve de travail". Cela signifie que toute personne voulant ajouter de nouveaux blocs à la chaîne doit résoudre un problème difficile, qui nécessite beaucoup de puissance de calcul informatique. Résoudre le problème "prouve" que vous avez dépensé les ressources informatiques. Cette action s'appelle le [minage](/en/developers/docs/consensus-mechanisms/pow/mining/). Le minage fonctionne par tâtonnements, mais lorsqu'un bloc est correctement ajouté, le mineur est récompensé en ETH. À l'inverse, soumettre des blocs frauduleux est une option sans intérêt compte tenu des ressources que vous avez dépensées pour produire le bloc.
+Ethereum utilise actuellement un mécanisme de consensus appelé "preuve de travail". Cela signifie que toute personne voulant ajouter de nouveaux blocs à la chaîne doit résoudre un problème difficile, qui nécessite beaucoup de puissance de calcul informatique. Résoudre le problème "prouve" que vous avez dépensé les ressources informatiques. Cette action s'appelle le [minage](/developers/docs/consensus-mechanisms/pow/mining/). Le minage fonctionne par tâtonnements, mais lorsqu'un bloc est correctement ajouté, le mineur est récompensé en ETH. À l'inverse, soumettre des blocs frauduleux est une option sans intérêt compte tenu des ressources que vous avez dépensées pour produire le bloc.
 
 Les nouveaux blocs sont diffusés aux nœuds du réseau, vérifiés et validés, ce qui met à jour l'état pour tout le monde.
 
@@ -97,7 +97,7 @@ Le volume des transactions est très élevé, les transactions sont donc "engag�
 
 Extraits de code réutilisables (un programme) qu'un développeur publie dans la mémoire de l'EVM. N'importe qui peut demander l'exécution du code d'un contrat intelligent en faisant une demande de transaction. Étant donné que les développeurs peuvent écrire des applications exécutables arbitraires dans l'EVM (jeux, places de marché, instruments financiers, etc.) en publiant des contrats intelligents, ceux-ci sont aussi souvent appelés [DApps, ou Applications décentralisées](/developers/docs/dapps/).
 
-[Plus d'infos sur les contrats intelligents](/en/developers/docs/smart-contracts/)
+[Plus d'infos sur les contrats intelligents](/developers/docs/smart-contracts/)
 
 ## Complément d'information {#further-reading}
 

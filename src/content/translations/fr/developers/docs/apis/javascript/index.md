@@ -287,8 +287,8 @@ _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
 ## Sujets connexes {#related-topics}
 
-- [Nœuds et clients](/en/developers/docs/nodes-and-clients/)
-- [Frameworks de développement](/en/developers/docs/frameworks/)
+- [Nœuds et clients](/developers/docs/nodes-and-clients/)
+- [Frameworks de développement](/developers/docs/frameworks/)
 
 ## Tutoriels connexes {#related-tutorials}
 

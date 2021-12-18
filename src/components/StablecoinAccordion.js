@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
 import { useIntl, navigate } from "gatsby-plugin-intl"
 import styled from "styled-components"
 // TODO add motion animation
@@ -20,6 +21,7 @@ import {
 } from "./SharedStyledComponents"
 
 import { translateMessageId } from "../utils/translations"
+import { isMobile } from "../utils/isMobile"
 
 const Card = styled.div`
   border-radius: 2px;
@@ -219,124 +221,175 @@ const StablecoinAccordion = () => {
   const [openSection, setOpenSection] = useState("") // default to all closed
   const intl = useIntl()
   const data = useStaticQuery(graphql`
-    query {
+    {
       uniswap: file(relativePath: { eq: "dapps/uni.png" }) {
         childImageSharp {
-          fixed(width: 24) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       compound: file(relativePath: { eq: "dapps/compound.png" }) {
         childImageSharp {
-          fixed(width: 24) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       aave: file(relativePath: { eq: "dapps/aave.png" }) {
         childImageSharp {
-          fixed(width: 24) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       oasis: file(relativePath: { eq: "dapps/stabledai.png" }) {
         childImageSharp {
-          fixed(width: 24) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       dydx: file(relativePath: { eq: "exchanges/dydx.png" }) {
         childImageSharp {
-          fixed(width: 24) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       gitcoin: file(relativePath: { eq: "dapps/gitcoin.png" }) {
         childImageSharp {
-          fixed(width: 24) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       maker: file(relativePath: { eq: "stablecoins/maker.png" }) {
         childImageSharp {
-          fixed(width: 24) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       eth: file(relativePath: { eq: "favicon.png" }) {
         childImageSharp {
-          fixed(width: 24) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       oneinch: file(relativePath: { eq: "exchanges/1inch.png" }) {
         childImageSharp {
-          fixed(width: 24) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       loopring: file(relativePath: { eq: "dapps/loopring.png" }) {
         childImageSharp {
-          fixed(width: 24) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       matcha: file(relativePath: { eq: "dapps/matcha.png" }) {
         childImageSharp {
-          fixed(width: 24) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       coinbase: file(relativePath: { eq: "exchanges/coinbase.png" }) {
         childImageSharp {
-          fixed(width: 24) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       kraken: file(relativePath: { eq: "exchanges/kraken.png" }) {
         childImageSharp {
-          fixed(width: 24) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       coinmama: file(relativePath: { eq: "exchanges/coinmama.png" }) {
         childImageSharp {
-          fixed(width: 24) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       gemini: file(relativePath: { eq: "exchanges/gemini.png" }) {
         childImageSharp {
-          fixed(width: 24) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       binance: file(relativePath: { eq: "exchanges/binance.png" }) {
         childImageSharp {
-          fixed(width: 24) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
       bittrex: file(relativePath: { eq: "exchanges/bittrex.png" }) {
         childImageSharp {
-          fixed(width: 24) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(
+            width: 24
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
     }
@@ -345,31 +398,31 @@ const StablecoinAccordion = () => {
   const dapps = [
     {
       title: "Uniswap",
-      image: data.uniswap.childImageSharp.fixed,
+      image: getImage(data.uniswap),
       link: "https://uniswap.org",
       alt: translateMessageId("uniswap-logo", intl),
     },
     {
       title: "DyDx",
-      image: data.dydx.childImageSharp.fixed,
+      image: getImage(data.dydx),
       link: "https://dydx.exchange",
       alt: translateMessageId("dydx-logo", intl),
     },
     {
       title: "Loopring",
-      image: data.loopring.childImageSharp.fixed,
+      image: getImage(data.loopring),
       link: "https://loopring.org",
       alt: translateMessageId("loopring-logo", intl),
     },
     {
       title: "1inch",
-      image: data.oneinch.childImageSharp.fixed,
+      image: getImage(data.oneinch),
       link: "https://app.1inch.io",
       alt: translateMessageId("1inch-logo", intl),
     },
     {
       title: "Matcha",
-      image: data.matcha.childImageSharp.fixed,
+      image: getImage(data.matcha),
       link: "https://matcha.xyz",
       alt: translateMessageId("matcha-logo", intl),
     },
@@ -378,25 +431,25 @@ const StablecoinAccordion = () => {
   const borrow = [
     {
       title: "Compound",
-      image: data.compound.childImageSharp.fixed,
+      image: getImage(data.compound),
       link: "https://compound.finance",
       alt: translateMessageId("compound-logo", intl),
     },
     {
       title: "DyDx",
-      image: data.dydx.childImageSharp.fixed,
+      image: getImage(data.dydx),
       link: "https://dydx.exchange",
       alt: translateMessageId("dydx-logo", intl),
     },
     {
       title: "Aave",
-      image: data.aave.childImageSharp.fixed,
+      image: getImage(data.aave),
       link: "https://aave.com",
       alt: translateMessageId("aave-logo", intl),
     },
     {
       title: "Oasis",
-      image: data.oasis.childImageSharp.fixed,
+      image: getImage(data.oasis),
       link: "https://oasis.app",
       alt: translateMessageId("oasis-logo", intl),
     },
@@ -408,7 +461,7 @@ const StablecoinAccordion = () => {
         "page-stablecoins-accordion-earn-project-bounties",
         intl
       ),
-      image: data.gitcoin.childImageSharp.fixed,
+      image: getImage(data.gitcoin),
       link: "https://gitcoin.co/explorer",
       description: translateMessageId(
         "page-stablecoins-accordion-earn-project-1-description",
@@ -421,7 +474,7 @@ const StablecoinAccordion = () => {
         "page-stablecoins-accordion-earn-project-community",
         intl
       ),
-      image: data.maker.childImageSharp.fixed,
+      image: getImage(data.maker),
       link: "https://makerdao.world/en/resources/",
       description: translateMessageId(
         "page-stablecoins-accordion-earn-project-2-description",
@@ -434,7 +487,7 @@ const StablecoinAccordion = () => {
         "page-stablecoins-accordion-earn-project-bug-bounties",
         intl
       ),
-      image: data.eth.childImageSharp.fixed,
+      image: getImage(data.eth),
       link: "/eth2/get-involved/bug-bounty/",
       description: translateMessageId(
         "page-stablecoins-accordion-earn-project-3-description",
@@ -447,37 +500,37 @@ const StablecoinAccordion = () => {
   const exchanges = [
     {
       title: "Coinbase",
-      image: data.coinbase.childImageSharp.fixed,
+      image: getImage(data.coinbase),
       link: "https://coinbase.com",
       alt: translateMessageId("coinbase-logo", intl),
     },
     {
       title: "Gemini",
-      image: data.gemini.childImageSharp.fixed,
+      image: getImage(data.gemini),
       link: "https://gemini.com",
       alt: translateMessageId("gemini-logo", intl),
     },
     {
       title: "Kraken",
-      image: data.kraken.childImageSharp.fixed,
+      image: getImage(data.kraken),
       link: "https://kraken.com",
       alt: translateMessageId("kraken-logo", intl),
     },
     {
       title: "Coinmama",
-      image: data.coinmama.childImageSharp.fixed,
+      image: getImage(data.coinmama),
       link: "https://coinmama.com",
       alt: translateMessageId("coinmama-logo", intl),
     },
     {
       title: "Bittrex",
-      image: data.bittrex.childImageSharp.fixed,
+      image: getImage(data.bittrex),
       link: "https://global.bittrex.com",
       alt: translateMessageId("bittrex-logo", intl),
     },
     {
       title: "Binance",
-      image: data.binance.childImageSharp.fixed,
+      image: getImage(data.binance),
       link: "https://binance.com",
       alt: translateMessageId("binance-logo", intl),
     },
@@ -491,8 +544,7 @@ const StablecoinAccordion = () => {
     } else {
       setOpenSection(selectedSection)
     }
-    const isMobile = document && document.documentElement.clientWidth < 1024
-    if (isMobile) {
+    if (isMobile()) {
       navigate(`/stablecoins/#${selectedSection}`)
     }
   }

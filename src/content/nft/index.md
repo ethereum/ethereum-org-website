@@ -28,7 +28,9 @@ NFT stands for non-fungible token. Non-fungible is an economic term that you cou
 
 Fungible items, on the other hand, can be exchanged because their value defines them rather than their unique properties. For example, ETH or dollars are fungible because 1 ETH / $1 USD is exchangeable for another 1 ETH / $1 USD.
 
-<iframe title="YouTube video titled What Are NFTs and How Can They Be Used in Decentralized Finance? DEFI Explained" width="100%" height="315" src="https://www.youtube.com/embed/Xdkkux6OxfM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<figure>
+  <iframe title="YouTube video titled What Are NFTs and How Can They Be Used in Decentralized Finance? DEFI Explained" width="100%" height="315" src="https://www.youtube.com/embed/Xdkkux6OxfM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
 
 ## The internet of assets {#internet-of-assets}
 
@@ -65,7 +67,7 @@ We use NFTs to give back to our contributors and we've even got our own NFT doma
 
 #### POAPs (Proof of attendance protocol) {#poaps}
 
-If you contribute to ethereum.org, you can claim a POAP NFT. These are collectibles that prove you participated in an event. Some crypto meetups have used POAPs as a form of ticket to their events. [More on contributing](/en/contributing/#poap).
+If you contribute to ethereum.org, you can claim a POAP NFT. These are collectibles that prove you participated in an event. Some crypto meetups have used POAPs as a form of ticket to their events. [More on contributing](/contributing/#poap).
 
 ![ethereum.org POAP](../../assets/use-cases/poap.png)
 
@@ -166,7 +168,9 @@ When they sell their content, funds go directly to them. If the new owner then s
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Explore, buy or create your own NFT art/collectibles...</div>
-  <ButtonLink to="/dapps/?category=collectibles">Explore NFT art</ButtonLink>
+  <ButtonLink to="/dapps/?category=collectibles">
+    Explore NFT art
+  </ButtonLink>
 </InfoBanner>
 
 #### The copy/paste problem {#nfts-copy-paste}
@@ -197,7 +201,9 @@ Decentraland, a virtual reality game, even lets you buy NFTs representing virtua
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Check out Ethereum games, powered by NFTs...</div>
-  <ButtonLink to="/dapps/?category=gaming">Explore NFT games</ButtonLink>
+  <ButtonLink to="/dapps/?category=gaming">
+    Explore NFT games
+  </ButtonLink>
 </InfoBanner>
 
 <Divider />
@@ -350,7 +356,9 @@ _It’s also important to remember that Ethereum does more than just financial t
 
 The process has already started. [The Beacon Chain](/eth2/beacon-chain/), the first upgrade, shipped in December 2020. This provides the foundation for staking by allowing stakers to join the system. The next step relevant to energy efficiency is to merge the current chain, the one secured by miners, into the Beacon Chain where mining isn't needed. Timelines can't be exact at this stage, but it's estimated that this will happen sometime in 2022. This process is known as the merge (formerly referred to as the docking). [More on the merge](/eth2/merge/).
 
-<ButtonLink to="/eth2/">More on Eth2</ButtonLink>
+<ButtonLink to="/eth2/">
+  More on Eth2
+</ButtonLink>
 
 <!-- #### Rollups in the meantime...
 
@@ -358,7 +366,7 @@ While we wait for Eth2, products are moving to a "layer 2" technology known as r
 
 [More on rollups and layer 2 technology](/developers/docs/scaling/layer-2-rollups/)
 
-#### A more efficient NFT standard...
+#### A more efficient NFT standard... {#a-more-efficient-nft-standard}
 
 Ethereum is open source software and new standards are being figured out and agreed on all the time. The Consecutive Transfer Extension Standard (EIP-2309) plans to make the creation of NFTs more efficient. Like rollups this reduces the amount of heavy lifting done on chain, allowing you to mint one billion NFTs in a single transaction.
 

@@ -89,7 +89,9 @@ For those who want to take the next step in 2FA, consider using a security key. 
 
 Watch more on the 2FA:
 
-<iframe width="100%" height="315px" src="https://www.youtube.com/embed/m8jlnZuV1i4?start=3479&end=3875" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<figure>
+  <iframe width="100%" height="315px" src="https://www.youtube.com/embed/m8jlnZuV1i4?start=3479&end=3875" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
 
 ### Uninstall browser extensions {#uninstall-browser-extensions}
 
@@ -231,6 +233,20 @@ These fraudulent brokers find their targets by using fake accounts on YouTube to
 **Do not trust internet strangers to invest on your behalf. You will lose your crypto.**
 
 ![A trading broker scam on YouTube](./brokerScam.png)
+
+### Crypto mining pool scams {#mining-pool-scams}
+
+Mining pool scams involve people contacting you unsolicited, and claiming that you can make large returns by joining an Ethereum mining pool. The scammer will make claims and stay in contact with you for however long it takes. Essentially, the scammer will try and convince you that when you join an Ethereum mining pool, your cryptocurrency will be used to create ETH and that you will be paid dividends in the form of ETH. What will end up happening is, you will notice that your cryptocurrency is making small returns. This is simply to bait you into investing more. Eventually, all of your funds will be sent to an unknown address and the scammer will either disappear or in some cases will continue to stay in touch as has happened in a recent case.
+
+Bottom line, be wary of people who contact you on social media asking for you to be part of a mining pool. Once you lose your crypto, it is gone.
+
+Some things to remember:
+
+- Be wary of anyone contacting you about ways to make money off of your crypto
+- Do your research about staking, liquidity pools, or other ways of investing your crypto
+- Rarely, if ever, are such schemes legitimate. If they were, they would probably be mainstream and you will have heard of them.
+
+[Man loses $200k in mining pool scam](https://www.reddit.com/r/CoinBase/comments/r0qe0e/scam_or_possible_incredible_payout/)
 
 <Divider />
 

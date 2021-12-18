@@ -5,17 +5,14 @@ lang: ja
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
-summaryPoints:
-  [
-    "シャーディングはイーサリアムのスケーラビリティと容量を向上させるためのマルチフェーズアップグレードです",
-    "シャードチェーンはネットワークの負荷を64個の新しいチェーンに分散します。",
-    "ハードウェア要件を低く抑えることで、ノードの実行が容易になります。",
-    "ロードマップには、”フェーズ1”および潜在的に”フェーズ2”のシャードチェーンに関する作業が含まれます。",
-  ]
+summaryPoint1: シャーディングはイーサリアムのスケーラビリティと容量を向上させるためのマルチフェーズアップグレードです
+summaryPoint2: シャードチェーンはネットワークの負荷を64個の新しいチェーンに分散します。
+summaryPoint3: ハードウェア要件を低く抑えることで、ノードの実行が容易になります。
+summaryPoint4: ロードマップには、”フェーズ1”および潜在的に”フェーズ2”のシャードチェーンに関する作業が含まれます。
 ---
 
-<UpgradeStatus date="~2022">
-    シャードチェーンは、 <a href="/eth2/beacon-chain/">ビーコンチェーン</a> が開始された後、どのように迅速に動作するかに応じて、2021年のいつか出荷されるべきです。 シャードはイーサリアムにデータを保存してアクセスする能力を与えますが、コードの実行には使用されません。 詳細はまだ解明されている途中です。
+<UpgradeStatus date="~2023">
+    シャードチェーンは、 <a href="/eth2/beacon-chain/">ビーコンチェーン</a> が開始された後、どのように迅速に動作するかに応じて、2023年のいつか出荷されるべきです。 シャードはイーサリアムにデータを保存してアクセスする能力を与えますが、コードの実行には使用されません。 詳細はまだ解明されている途中です。
 </UpgradeStatus>
 
 ## シャーディングとは? {#what-is-sharding}
@@ -39,7 +36,7 @@ summaryPoints:
 <br />
 
 <InfoBanner isWarning={true}>
-  最初は、Eth2クライアントと同時にmainnetクライアントを実行する必要があります。 <a href="https://launchpad.ethereum.org" target="_blank">launchpad</a> では、ハードウェア要件とプロセスについて説明します。 あるいは、 <a href="/en/developers/docs/apis/backend/#available-libraries">バックエンドAPI</a> を使用することもできます。
+  最初は、Eth2クライアントと同時にmainnetクライアントを実行する必要があります。 <a href="https://launchpad.ethereum.org" target="_blank">launchpad</a> では、ハードウェア要件とプロセスについて説明します。 あるいは、 <a href="/developers/docs/apis/backend/#available-libraries">バックエンドAPI</a> を使用することもできます。
 </InfoBanner>
 
 ## シャードチェーン バージョン 1：データの可用性 {#data-availability}

@@ -29,15 +29,13 @@ Cần một hướng dẫn cơ bản hơn? Tham khảo [ethereum.org/learn](/vi/
 - [Ứng dụng Rust Ethereum](https://wiki.parity.io/Setup)
 - [Gửi giao dịch tới Ethereum bằng Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
 - [Giới thiệu về Hợp đồng thông minh với ứng dụng Parity Ethereum](https://wiki.parity.io/Smart-Contracts)
-- [Thiết lập môi trường lập trình Oasis SDK của bạn](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [Thiết lập môi trường lập trình Oasis SDK của bạn](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Hướng dẫn từng bước về cách viết hợp đồng trong rust Wasm cho Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Bài viết trung gian {#intermediate-articles}
 
 - [Tài liệu tham khảo Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Ví dụ làm việc của Rust-Web3](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Tạo một lá phiếu bí mật với OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Tạo một máy chủ trò chuyện riêng tư với OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Các mẫu sử dụng nâng cao {#advanced-use-patterns}
 

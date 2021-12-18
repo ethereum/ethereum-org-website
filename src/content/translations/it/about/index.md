@@ -30,7 +30,7 @@ Per farlo ci basiamo su alcuni principi chiave.
 
 Vogliamo catturare l'interesse dei nostri utenti e rispondere alle loro domande Dunque il nostro portale deve combinare informazione, "momenti magici" e collegamenti alle preziose risorse della community. Il nostro contenuto è meramente introduttivo e non vuole sostituire risorse esaustive già esistenti. Il nostro desiderio è fornisce sostegno e integrare le informazioni con le risorse offerte dalla community, dando loro più visibilità e rendendole quindi più reperibili.
 
-Al centro di tutto ciò c'è la [community di Ethereum](/en/community/): non dobbiamo solo servirla, ma collaborarvi ed incorporarne il feedback. Il sito web non è solo per la community di oggi, ma anche per quella che speriamo di veder crescere. Ricordiamoci che la nostra community è globale, e include quindi persone di svariate lingue, regioni e culture.
+Al centro di tutto ciò c'è la [community di Ethereum](/community/): non dobbiamo solo servirla, ma collaborarvi ed incorporarne il feedback. Il sito web non è solo per la community di oggi, ma anche per quella che speriamo di veder crescere. Ricordiamoci che la nostra community è globale, e include quindi persone di svariate lingue, regioni e culture.
 
 ### 2. ehtereum.org è in continua evoluzione 🛠 {#core-principles-2}
 
@@ -38,7 +38,7 @@ Ethereum e la sua community sono in continua evoluzione. ethereum.org lo sarà d
 
 Siamo open source, con una community di collaboratori, quindi anche tu puoi proporre modifiche o aiutarci.
 
-[Come contribuire](/en/contributing/)
+[Come contribuire](/contributing/)
 
 ### 3. ethereum.org non è uno dei soliti siti che propongono prodotti 🦄 {#core-principles-3}
 
@@ -48,11 +48,11 @@ Ethereum è tanta roba: include una community, una tecnologia, una serie di idee
 
 ## Principi di progettazione {#design-principles}
 
-Usiamo principi di progettazione per guidare il nostro contenuto e le nostre decisioni che riguardano la progettazione sul sito: [principi di progettazione](/en/contributing/design-principles/).
+Usiamo principi di progettazione per guidare il nostro contenuto e le nostre decisioni che riguardano la progettazione sul sito: [principi di progettazione](/contributing/design-principles/).
 
 Ogni tipo di feedback è benvenuto. Ricorda, ethereum.org è per la community, dalla community.
 
-Leggi prima i principi se desideri [contribuire al sito](/en/contributing/).
+Leggi prima i principi se desideri [contribuire al sito](/contributing/).
 
 ## Roadmap {#roadmap}
 

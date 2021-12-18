@@ -5,17 +5,14 @@ lang: ca
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
-summaryPoints:
-  [
-    "La fragmentació es una actualització de diverses fases que millora la capacitat i l'escalabilitat d'Ethereum.",
-    "Les cadenes de fragments distribueixen la càrrega de la xarxa a través de 64 cadenes noves.",
-    "Fan més fàcil executar un node fent que els requeriments de maquinari siguin més baixos.",
-    'La planificació tècnica inclou la feina en cadenes de fragments en la "Fase 1" i potencialment en la "Fase 2".',
-  ]
+summaryPoint1: La fragmentació es una actualització de diverses fases que millora la capacitat i l'escalabilitat d'Ethereum.
+summaryPoint2: Les cadenes de fragments distribueixen la càrrega de la xarxa a través de 64 cadenes noves.
+summaryPoint3: Fan més fàcil executar un node fent que els requeriments de maquinari siguin més baixos.
+summaryPoint4: La planificació tècnica inclou la feina en cadenes de fragments en la "Fase 1" i potencialment en la "Fase 2".
 ---
 
-<UpgradeStatus date="~2022">
-    Les cadenes de fragments haurien de sortir en algun moment del 2022, depenent de la velocitat amb què progressin les tasques després del llançament de la <a href="/eth2/beacon-chain/">Cadena de Balisa.</a>. Aquests fragments dotaran Ethereum de més capacitat d'emmagatzematge i d'accés a dades, però no s'utilitzaran per executar codi. Encara s'estan esbrinant els detalls de tot plegat.
+<UpgradeStatus date="~2023">
+    Les cadenes de fragments haurien de sortir en algun moment del 2023, depenent de la velocitat amb què progressin les tasques després del llançament de la <a href="/eth2/beacon-chain/">Cadena de Balisa.</a>. Aquests fragments dotaran Ethereum de més capacitat d'emmagatzematge i d'accés a dades, però no s'utilitzaran per executar codi. Encara s'estan esbrinant els detalls de tot plegat.
 </UpgradeStatus>
 
 ## Què és la fragmentació? {#what-is-sharding}
@@ -39,7 +36,7 @@ Amb menys requeriments de hardware, la fragmentació farà més fàcil executar 
 <br />
 
 <InfoBanner isWarning={true}>
-  En primer lloc, necessitaràs executar un client de la xarxa principal alhora que el client Eth2. <a href="https://launchpad.ethereum.org" target="_blank">La plataforma de llançament</a> et guiarà a través del procés i els requeriments de hardware. Alternativament, pots utilitzar una <a href="/en/developers/docs/apis/backend/#available-libraries">API de backend</a>.
+  En primer lloc, necessitaràs executar un client de la xarxa principal alhora que el client Eth2. <a href="https://launchpad.ethereum.org" target="_blank">La plataforma de llançament</a> et guiarà a través del procés i els requeriments de hardware. Alternativament, pots utilitzar una <a href="/developers/docs/apis/backend/#available-libraries">API de backend</a>.
 </InfoBanner>
 
 ## Cadenes de fragments versió 1: disponibilitat de dades {#data-availability}

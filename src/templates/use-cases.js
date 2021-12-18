@@ -4,7 +4,7 @@ import { useIntl } from "gatsby-plugin-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown from "../components/ButtonDropdown"
 import BannerNotification from "../components/BannerNotification"
@@ -34,7 +34,6 @@ import {
   Paragraph,
   Header1,
   Header4,
-  H5,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 
@@ -133,6 +132,16 @@ const H2 = styled.h2`
   font-size: 32px;
   font-weight: 700;
   margin-top: 4rem;
+
+  /* Prevent nav overlap */
+  &:before {
+    content: "";
+    display: block;
+    height: 120px;
+    margin-top: -120px;
+    visibility: hidden;
+  }
+
   a {
     display: none;
   }
@@ -140,7 +149,8 @@ const H2 = styled.h2`
   /* Anchor tag styles */
   a {
     position: relative;
-    display: none;
+    display: initial;
+    opacity: 0;
     margin-left: -1.5em;
     padding-right: 0.5rem;
     font-size: 1rem;
@@ -148,6 +158,7 @@ const H2 = styled.h2`
     &:hover {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
+      opacity: 1;
     }
   }
 
@@ -155,6 +166,7 @@ const H2 = styled.h2`
     a {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
+      opacity: 1;
     }
   }
 `
@@ -162,6 +174,16 @@ const H2 = styled.h2`
 const H3 = styled.h3`
   font-size: 24px;
   font-weight: 700;
+
+  /* Prevent nav overlap */
+  &:before {
+    content: "";
+    display: block;
+    height: 120px;
+    margin-top: -120px;
+    visibility: hidden;
+  }
+
   a {
     display: none;
   }
@@ -169,7 +191,8 @@ const H3 = styled.h3`
   /* Anchor tag styles */
   a {
     position: relative;
-    display: none;
+    display: initial;
+    opacity: 0;
     margin-left: -1.5em;
     padding-right: 0.5rem;
     font-size: 1rem;
@@ -177,6 +200,7 @@ const H3 = styled.h3`
     &:hover {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
+      opacity: 1;
     }
   }
 
@@ -184,6 +208,7 @@ const H3 = styled.h3`
     a {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
+      opacity: 1;
     }
   }
 `
@@ -196,7 +221,6 @@ const components = {
   h2: H2,
   h3: H3,
   h4: Header4,
-  h5: H5,
   p: Paragraph,
   pre: Pre,
   table: MarkdownTable,
@@ -273,7 +297,7 @@ const HeroContainer = styled.div`
   }
 `
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   flex: 1 1 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -413,7 +437,7 @@ const UseCasePage = ({ data, pageContext }) => {
         </TitleCard>
         <Image
           useCase={useCase}
-          fluid={mdx.frontmatter.image.childImageSharp.fluid}
+          image={getImage(mdx.frontmatter.image)}
           alt={mdx.frontmatter.alt}
         />
       </HeroContainer>
@@ -471,9 +495,11 @@ export const useCasePageQuery = graphql`
         alt
         image {
           childImageSharp {
-            fluid(maxHeight: 640) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              quality: 100
+            )
           }
         }
         isOutdated

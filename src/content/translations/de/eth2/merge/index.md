@@ -1,67 +1,62 @@
 ---
-title: Andocken von Mainnet mit Eth2
-description: Lerne mehr über das Andocken - wenn das Ethereum-Mainnet mit dem durch die Beacon Chain koordinierten proof-of-stake-System verbunden wird.
+title: Die Zusammenführung
+description: Lerne mehr über die Fusion - wenn das Ethereum-Mainnet mit dem durch die Beacon Chain koordinierten proof-of-stake-System verbunden wird.
 lang: de
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    'Letztendlich wird das aktuelle Ethereum-Mainnet mit den restlichen Eth2-Upgrades "andocken".',
-    'Das Andocken stellt den Zusammenschluss des "Eth1"-Mainnet mit der Eth2-Beacon Chain und dem Sharding-System dar.',
-    "Dies markiert das Ende von proof-of-work für Ethereum und den vollständigen Übergang zu proof-of-stake.",
-    'Im technischen Entwicklungsplan ist damit die "Phase 1,5" gemeint.',
-  ]
+summaryPoint1: Letztlich wird das aktuelle Ethereum Mainnet mit dem beacon chain koordiniertem proof-of-stake system "fusioniert".
+summaryPoint2: Dies vermerkt das Ende von proof-of-work in Ethereum und zugleich den Start, zu einem vollen Übergang in proof-of-stake.
+summaryPoint3: Dies ist geplant, um der Veröffentlichung von shard chains zuvorzukommen.
+summaryPoint4: Welches wir zuvor als "die Kupplung" bezeichneten.
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">
-    Dieses Upgrade erfolgt im Anschluss an die Implementierung von Shard Chains. Es stellt den Moment dar, in dem die <a href="/eth2/vision/">Eth2-Vision</a> Realität wird – ein durch Staking außerordentlich skalierbares, sicheres und nachhaltiges Netzwerk.
+  Dieses Upgrade stellt den offiziellen Wechsel zum proof-of-stake-Konsens dar. Dadurch entfällt das energieintensive Mining, stattdessen wird das Netzwerk durch den Einsatz von Staked Ether gesichert. Ein wirklich spannender Schritt zur Verwirklichung der <a href="/eth2/vision/">Eth2-Vision</a> - mehr Skalierbarkeit, Sicherheit und Nachhaltigkeit.
 </UpgradeStatus>
 
-## Was ist mit Andocken gemeint? {#what-is-the-docking}
+## Was ist die Verkuppelung? {#what-is-the-docking}
 
-Es ist wichtig, zu verstehen, dass die Eth2-Upgrades zuerst unabhängig und separat vom heutigen [Mainnet](/glossary/#mainnet) eingeführt und umgesetzt werden. Das Ethereum-Mainnet wird unverändert mittels [proof-of-work](/developers/docs/consensus-mechanisms/pow/) gesichert, auch während die [Beacon Chain](/eth2/beacon-chain/) und ihre [Shard Chains](/eth2/shard-chains/) parallel dazu operieren und dazu [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) anwenden. Mit Andocken ist der Moment gemeint, an dem diese beiden Systeme zusammengeführt werden.
+Es ist wichtig, sich daran zu erinnern, dass die [Beacon Chain](/eth2/beacon-chain/) ursprünglich getrennt vom [Mainnet](/glossary/#mainnet) - der Chain, die wir heute verwenden - eingeführt wurde. Das Ethereum Mainnet wird weiterhin durch [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/) gesichert, auch wenn die Beacon Chain parallel dazu mit [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) läuft. Die Verkupplung ist der Moment, in dem diese beiden Systeme endlich zusammenkommen.
 
-Stelle dir Ethereum als Raumschiff vor, das noch nicht ganz für seine interstellare Reise bereit ist. Mit der Beacon Chain und Shard Chains hat die Community einen neuen Motor und einen gestählten Rumpf konstruiert. Wenn es an der Zeit ist, werden diese neuen Systeme an das Raumschiff angedockt, werden ein Teil davon; bereit, um Lichtjahre in die Zukunft zu springen.
+Stelle dir Ethereum als Raumschiff vor, das noch nicht ganz für seine interstellare Reise bereit ist. Mit der Beacon Chain hat die Community einen neuen Motor und einen gehärteten Rumpf gebaut. Wenn die Zeit reif ist, wird das aktuelle Schiff an das neue System andocken und zu einem Schiff verschmelzen, das bereit ist, einige Lichtjahre zurückzulegen und das Universum zu erobern.
 
-## Andocken ans Mainnet {#docking-mainnet}
+## Die Fusion mit dem Mainnet {#docking-mainnet}
 
-Wenn alles bereit ist, wird das Ethereum-Mainnet an die Beacon Chain "angedockt" und zu seinem eigenen Shard werden, die statt [proof-of-work](/developers/docs/consensus-mechanisms/pow/) das proof-of-stake-Verfahren anwendet.
+Wenn es soweit ist, wird das Ethereum Mainnet mit der Beacon Chain "verschmelzen" und ein eigener Shard werden, der proof-of-stake statt [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/) verwendet.
 
 Mainnet wird es sowohl ermöglichen, Smart Contracts ins proof-of-stake-System einzubringen, als auch die gesamte Geschichte und den aktuellen Zustand von Ethereum, um einen flüssigen Übergang für alle Besitzer und Nutzer von ETH zu garantieren.
 
-<!-- ### Improving Mainnet
+<!-- ### Improving Mainnet -->
 
-Before Mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
+## Nach der Verkupplung {#after-the-merge}
 
-These include Improvements for
+Dies bedeutet das Ende von Proof-of-Work für Ethereum und beginnt die neue Ära eines nachhaltigeren, umweltfreundlicheren Ethereum. An diesem Punkt wird Ethereum der in [Eth2 vision](/eth2/vision/) beschriebenen vollen Skalierung, Sicherheit und Nachhaltigkeit einen Schritt näher sein.
 
-- **End users**: like [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) which changes the way users bid for blockspace. In other words, making transaction fees more efficient for end users.
-- **Client runners**: making running clients more sustainable by capping disk space requirements.
-- **Developers**: upgrading the EVM to be more flexible.
+Es ist wichtig zu erwähnen, dass ein Ziel der Verkupplung die Unkompliziertheit ist, um den Übergang von Proof-of-Work zu proof-of-stake zu beschleunigen. Die Entwickler konzentrieren ihre Bemühungen auf diesen Übergang und verzichten zunächst auf zusätzliche Funktionen, die dieses Ziel verzögern könnten.
 
-Plus many more.
-
-[More on Ethereum1.x](/en/learn/#eth-1x)
-
-These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
-
-## Nach dem Andocken {#after-the-docking}
-
-Dies bedeutet das Ende von proof-of-work für Ethereum und beginnt die neue Ära eines nachhaltigeren, umweltfreundlicheren Ethereum. Von da an wird Ethereum gemäß der [Eth2-Vision](/eth2/vision/) skalierbarer, sicherer und nachhaltiger sein.
+**Das bedeutet, dass einige Funktionen, wie z.B. die Möglichkeit, ETH-Einsätze zurückzuziehen, noch etwas länger warten müssen, bis die Verkupplung abgeschlossen ist.** Geplant ist ein "Cleanup"-Upgrade nach dem Merge, um diese Funktionen zu verbessern, was voraussichtlich sehr bald nach Abschluss des Merges geschehen wird.
 
 ## Beziehung zwischen den Upgrades {#relationship-between-upgrades}
 
-Die Eth2-Upgrades stehen allesamt in Verbindung zueinander. Zusammenfassend steht das Andocken wie folgt in Verbindung zu den anderen Upgrades:
+Die Eth2-Upgrades sind alle miteinander verknüpft. Fassen wir also noch einmal zusammen, wie die Verkupplung mit den anderen Upgrades zusammenhängt.
 
-### Andocken und die Beacon Chain {#docking-and-beacon-chain}
+### Der Verkupplung und die Beacon Chain {#docking-and-beacon-chain}
 
-Sobald das Andocken erfolgt, werden Staker zugewiesen, um das Ethereum-Mainnet zu validieren. Genau wie bei den Shard Chains. [Mining](/developers/docs/consensus-mechanisms/pow/mining/) wird nicht mehr erforderlich sein, sodass die Miner aller Voraussicht nach ihre verdienten Ether ins Staking im Rahmen des proof-of-stake-systems einbringen werden.
+Sobald die Verkupplung erfolgt ist, werden Staker eingesetzt, um das Ethereum Mainnet zu validieren. [Mining](/developers/docs/consensus-mechanisms/pow/mining/) wird nicht mehr erforderlich sein, sodass die Miner aller Voraussicht nach ihre verdienten Ether ins Staking im Rahmen des proof-of-stake-Systems einbringen werden.
 
 <ButtonLink to="/eth2/beacon-chain/">Die Beacon Chain</ButtonLink>
 
-### Andocken und Shard Chains {#docking-and-shard-chains}
+### Die Verkupplung und die Bereinigung nach der Verkupplung {#merge-and-post-merge-cleanup}
 
-Da das Mainnet zu einem Shard werden wird, ist die erfolgreiche Implemetierung der Shard Chains für dieses Upgrade von entscheidender Bedeutung. Dieser Übergang wird vermutlich Stein des Anstoßes dafür sein, ob sich die Community dafür entscheidet, ob bzgl. des Sharding ein zweites Upgrade nötig ist. Solch ein Upgrade würde dann weitere Shards wie das Mainnet erstellen. Diese würden nicht nur weitere Daten liefern, sondern auch Transaktionen und Smart Contracts bearbeiten.
+Unmittelbar nach der Zusammenführung werden einige Funktionen wie z. B. die Auszahlung von staked ETH noch nicht direkt unterstützt. Dies soll kurz nach der Fusion mit einem separaten Upgrade folgen.
+
+Bleiben Sie auf dem Laufenden mit dem [EF Research and Development Blog](https://blog.ethereum.org/category/research-and-development/). Für Neugierige: Erfahren Sie mehr darüber, [ was nach der Verkupplung passiert](https://youtu.be/7ggwLccuN5s?t=101), präsentiert von Vitalik an der ETHGlobal Veranstaltung im April 2021.
+
+### Die Verkupplung und die Shard Chains {#docking-and-shard-chains}
+
+Ursprünglich war geplant, vor der Verkupplung an Shard Chains zu arbeiten, um die Skalierbarkeit zu verbessern. Mit dem Boom der [Layer-2-Skalierungslösungen](/developers/docs/scaling/#layer-2-scaling) hat sich die Priorität jedoch auf die Umwandlung von Proof-of-Work in proof-of-stake über die Verkupplung verlagert.
+
+Dies wird eine fortlaufende Bewertung der Gemeinschaft hinsichtlich der Notwendigkeit von möglicherweise mehreren Runden von Shard Chains sein, um eine unbegrenzte Skalierbarkeit zu ermöglichen.
 
 <ButtonLink to="/eth2/shard-chains/">Shard Chains</ButtonLink>

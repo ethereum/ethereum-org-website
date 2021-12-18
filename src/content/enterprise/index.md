@@ -28,7 +28,7 @@ Many businesses and consortia have deployed private, permissioned blockchains fo
 - Performance - Because private Enterprise Ethereum chains may use high performance nodes with special hardware requirements and different consensus algorithms such as proof-of-authority, they may achieve higher transaction throughput on the base layer (Layer 1). On Ethereum Mainnet, high throughput can be achieved with the use of [Layer 2 scaling solutions](/developers/docs/scaling/layer-2-rollups/).
 - Cost - The cost to operate a private chain is primarily reflected in labor to set up and manage the chain, and the servers to run it. While there is no cost to connect to Ethereum Mainnet, there is a gas cost for every transaction which must be paid for in ether. Transaction relayers (aka Gas Stations) are being developed in order to eliminate the need for end users and even enterprises to directly use ether in their transactions. Some [analyses](https://github.com/EYBlockchain/fundamental-cost-of-ownership/blob/master/EY%20Total%20Cost%20of%20Ownership%20for%20Blockchain%20Solutions.pdf) have shown that the total cost to operate an application may be lower on Mainnet than running a private chain.
 - Node Permissioning - Only authorized nodes can join private chains. Anybody can set up a node on Ethereum Mainnet.
-- Privacy - Access to data written to private chains can be controlled by restricting access to the network, and on a more fine grained basis with access controls and private transactions. All data written to Mainnet Layer 1 is viewable by anyone, so sensitive information should be stored and transmitted off-chain, or else encrypted. Design patterns that facilitate this are emerging (e.g. Baseline, Aztec), as well as Layer 2 solutions that can keep data compartmentalized and off of Layer 1.
+- Privacy - Access to data written to private chains can be controlled by restricting access to the network, and on a finer grained basis with access controls and private transactions. All data written to Mainnet Layer 1 is viewable by anyone, so sensitive information should be stored and transmitted off-chain, or else encrypted. Design patterns that facilitate this are emerging (e.g. Baseline, Aztec), as well as Layer 2 solutions that can keep data compartmentalized and off of Layer 1.
 
 ### Why build on Ethereum Mainnet {#why-build-on-ethereum-mainnet}
 
@@ -164,4 +164,4 @@ Here are some of the enterprise applications that have been deployed to the publ
 
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _electricity payments_
 
-If you would like to add to this list, please see [instructions for contributing](https://ethereum.org/en/contributing/).
+If you would like to add to this list, please see [instructions for contributing](/contributing/).

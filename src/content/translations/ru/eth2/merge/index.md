@@ -5,13 +5,10 @@ lang: ru
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    "В конце концов основная сеть Ethereum состыкуется с остальными обновлениями Eth2.",
-    "Стыковка объединит основную сеть Eth1 с Beacon Chain Eth2 и системой цепочек-осколков.",
-    "Это ознаменует конец доказательства работы для Ethereum и полный переход к доказательству владения.",
-    'Вы можете знать это как "Этап 1.5" на технических дорожных картах.',
-  ]
+summaryPoint1: В конце концов основная сеть Ethereum состыкуется с остальными обновлениями Eth2.
+summaryPoint2: Стыковка объединит основную сеть Eth1 с Beacon Chain Eth2 и системой цепочек-осколков.
+summaryPoint3: Это ознаменует конец доказательства работы для Ethereum и полный переход к доказательству владения.
+summaryPoint4: Вы можете знать это как "Этап 1.5" на технических дорожных картах.
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">
@@ -42,7 +39,7 @@ These include Improvements for
 
 Plus many more.
 
-[More on Ethereum1.x](/en/learn/#eth-1x)
+[More on Ethereum1.x](/learn/#eth-1x)
 
 These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 
