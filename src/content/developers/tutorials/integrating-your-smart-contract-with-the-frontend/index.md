@@ -37,7 +37,6 @@ As a prerequisite, you should have a beginner-level understanding of React—kno
 
 First, go to the [hello-world-part-four github repository](https://github.com/alchemyplatform/hello-world-part-four-tutorial) to get the starter files for this project. Clone this repository into your local environment.
 
-### Don't know how to clone a repository? Check out [this guide](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) from Github.
 
 When you open this cloned `hello-world-part-four` repository, you'll notice that it contains two folders: `starter-files` and `completed`.
 
