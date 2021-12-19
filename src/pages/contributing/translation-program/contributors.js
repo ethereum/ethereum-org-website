@@ -44,6 +44,14 @@ const HorizontalUl = styled.ul`
 
 const Contributors = ({ location }) => {
   const intl = useIntl()
+  const translatorData = allTimeData.data.filter(
+    (item) =>
+      item.user.username !== "ethdotorg" &&
+      !item.user.username.includes("LQS") &&
+      !item.user.username.includes("REMOVED_USER") &&
+      !item.user.username.includes("Aco_")
+  )
+
   return (
     <Page>
       <PageMetadata
@@ -62,6 +70,10 @@ const Contributors = ({ location }) => {
         <h1>
           <Translation id="page-contributing-translation-program-contributors-title" />
         </h1>
+        <p>
+          {translatorData.length}{" "}
+          <Translation id="page-contributing-translation-program-contributors-total-contributors" />
+        </p>
         <p>
           <Translation id="page-contributing-translation-program-contributors-our-translators-1" />
         </p>
@@ -82,13 +94,7 @@ const Contributors = ({ location }) => {
           <Translation id="page-contributing-translation-program-contributors-thank-you" />
         </h2>
         <HorizontalUl>
-          {allTimeData.data
-            .filter(
-              (item) =>
-                item.user.username !== "ethdotorg" &&
-                !item.user.username.includes("LQS") &&
-                !item.user.username.includes("REMOVED_USER")
-            )
+          {translatorData
             .map(({ user }) => user.username)
             .sort((user1, user2) =>
               user1.toLowerCase().localeCompare(user2.toLowerCase())
