@@ -221,7 +221,6 @@ Combinan las mejores partes de las tecnologías múltiples de capa 2 y pueden of
 
 ### Usos de las soluciones híbridas {#use-hybrid-solutions}
 
-- [Offchain Labs Arbitrum Rollup](https://offchainlabs.com/arbitrum.pdf)
 - [Celer](https://www.celer.network/)
 
 ## Para seguir leyendo {#further-reading}

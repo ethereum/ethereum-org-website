@@ -130,7 +130,6 @@ Hybrid solutions exist that combine the best parts of multiple layer 2 technolog
 
 ### Use hybrid solutions {#use-hybrid-solutions}
 
-- [Offchain Labs Arbitrum SCSC](https://offchainlabs.com/arbitrum.pdf)
 - [Celer](https://www.celer.network/)
 
 ## Further reading {#further-reading}
