@@ -4,7 +4,7 @@ description: Informații despre rețeaua Beacon - primul upgrade major Eth2 la E
 lang: ro
 template: eth2
 sidebar: true
-image: ../../../../../assets/eth2/core.png
+image: ../../../../assets/eth2/core.png
 summaryPoint1: Rețeaua Beacon nu schimbă Ethereum-ul pe care îl folosim astăzi.
 summaryPoint2: Va coordona rețeaua.
 summaryPoint3: Introduce Dovada Mizei (proof-of-stake) în ecosistemul Ethereum.
