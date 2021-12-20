@@ -71,7 +71,7 @@ Julkiset ja yksityiset Ethereum-verkot saattavat tarvita tiettyjä ominaisuuksia
 ### Turvallisuus {#security}
 
 - [Clef](https://geth.ethereum.org/clef/Overview) _käytetään liiketapahtumien ja datan allekirjoittamiseen ja on tarkoitettu gethin käyttäjähallinnan korvikkeeksi_
-- [EthSigner](https://gitter.im/PegaSysEng/EthSigner) _Liiketapahtumien allekirjoitussovellus, jota käytetään web3-palvelun kanssa_
+- [EthSigner](https://github.com/ConsenSys/ethsigner) _Liiketapahtumien allekirjoitussovellus, jota käytetään web3-palvelun kanssa_
 
 ### Työkalut {#tooling}
 
