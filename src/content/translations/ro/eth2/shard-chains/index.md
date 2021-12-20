@@ -11,8 +11,8 @@ summaryPoint3: Acestea facilitează rularea unui nod, menținând cerințele har
 summaryPoint4: Actualizarea este planificată să aibă loc după unirea Rețelei principale cu Rețeaua Beacon.
 ---
 
-<UpgradeStatus date="~2022">
-    Lanțurile de fragmente ar trebui să fie livrate în 2022, în funcție de cât de repede progresează munca după <a href="/eth2/merge/">unire</a>. Aceste fragmente vor oferi Ethereum mai multă capacitate de stocare și acces la date, dar nu vor fi utilizate pentru executarea de cod. Detaliile despre aceasta sunt încă în curs de analiză.
+<UpgradeStatus date="~2023">
+    Lanțurile de fragmente ar trebui să fie livrate în 2023, în funcție de cât de repede progresează munca după <a href="/eth2/merge/">unire</a>. Aceste fragmente vor oferi Ethereum mai multă capacitate de stocare și acces la date, dar nu vor fi utilizate pentru executarea de cod. Detaliile despre aceasta sunt încă în curs de analiză.
 </UpgradeStatus>
 
 ## Ce este fragmentarea? {#what-is-sharding}
