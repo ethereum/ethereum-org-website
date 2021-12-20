@@ -5906,6 +5906,15 @@
         "doc",
         "content"
       ]
+    },
+    {
+      "login": "pcaversaccio",
+      "name": "Pascal Marco Caversaccio",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25297591?v=4",
+      "profile": "http://www.daita.tech",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
