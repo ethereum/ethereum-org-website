@@ -42,4 +42,11 @@ provide all the hashes that need to be combined with it to obtain the root: `D`,
 ![Proof of the value of C](proof-c.png)
 
 
+## Creating the Merkle Root
+
+First we need a trusted source to provide the Merkle Root. Let's write it in JavaScript using [Node](https://nodejs.org/en/).
+
+
+
+
 ## Conclusion
