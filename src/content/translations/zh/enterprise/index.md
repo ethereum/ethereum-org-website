@@ -102,7 +102,6 @@ sidebar: true
   - [Skale](https://skale.network)
   - [POA Network](https://www.poa.network/)
 - 组合多个类别属性的混合解决方案
-  - [Offchain Labs Arbitrum SCSC](https://https://offchainlabs.com/arbitrum.pdf)
   - [Celer](https://celer.network)
 
 ## 以太主网上的企业级应用 {#enterprise-live-on-mainnet}

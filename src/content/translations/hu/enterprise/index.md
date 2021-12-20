@@ -102,7 +102,6 @@ Példák L2 megoldásokra, melyek produkcióra készek, vagy hamarosan készen l
   - [Skale](https://skale.network)
   - [POA Network](https://www.poa.network/)
 - Hibrid megoldások, amelyek több kategória tulajdonságait ötvözik
-  - [Offchain Labs Arbitrum SCSC](https://https://offchainlabs.com/arbitrum.pdf)
   - [Celer](https://celer.network)
 
 ## Vállalati alkalmazások a főhálózaton {#enterprise-live-on-mainnet}

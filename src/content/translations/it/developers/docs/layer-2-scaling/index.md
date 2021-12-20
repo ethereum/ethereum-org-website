@@ -221,7 +221,6 @@ Combinano le parti migliori di diverse tecnologie di livello 2 e possono offrire
 
 ### Usano soluzioni Ibride {#use-hybrid-solutions}
 
-- [Offchain Labs Arbitrum SCSC](https://offchainlabs.com/arbitrum.pdf)
 - [Celer](https://www.celer.network/)
 
 ## Letture consigliate {#further-reading}

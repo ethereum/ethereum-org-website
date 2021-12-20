@@ -221,7 +221,6 @@ Combine les meilleures parties des multiples technologies de couche 2, et peut o
 
 ### Solutions hybrides que vous pouvez utiliser {#use-hybrid-solutions}
 
-- [Offchain Labs Arbitrum SCSC](https://offchainlabs.com/arbitrum.pdf)
 - [Celer](https://www.celer.network/)
 
 ## Complément d'information {#further-reading}
