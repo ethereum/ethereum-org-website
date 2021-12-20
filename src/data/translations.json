@@ -100,7 +100,8 @@
     "language": "Pусский"
   },
   "se": {
-    "language": "Svenska"
+    "language": "Svenska",
+    "useLegacyHomepage": true
   },
   "sk": {
     "language": "Slovenský"
