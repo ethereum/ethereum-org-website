@@ -10,7 +10,7 @@
   "page-get-eth-dexs-desc": "Schimburile descentralizate sunt piețe deschise pentru ETH și alte tokenuri. Acestea conectează direct cumpărătorii și vânzătorii.",
   "page-get-eth-dexs-desc-2": "În loc să folosească o terță parte de încredere pentru a proteja fondurile în tranzacție, ei folosesc codul. ETH-ul vânzătorului va fi transferat numai atunci când plata este garantată. Acest tip de cod este cunoscut sub numele de contract inteligent.",
   "page-get-eth-dexs-desc-3": "Aceasta înseamnă că sunt mai puține restricții geografice decât în ​​cazul alternativelor centralizate. Dacă cineva vinde ceea ce dorești și acceptă o metodă de plată pe care o poți furniza, ești gata de drum. DEX-urile îți pot permite să cumperi ETH cu alte tokenuri, PayPal sau chiar livrări de numerar în persoană.",
-  "page-get-eth-do-not-copy": "EXEMPLU: NU COPIA",
+  "page-get-eth-do-not-copy": "Exemplu: Nu copia",
   "page-get-eth-exchanges-disclaimer": "Am colectat aceste informații manual. Dacă observi ceva greșit, anunță-ne la",
   "page-get-eth-exchanges-empty-state-text": "Introdu țara ta de reședință pentru a vedea o listă de portofele și schimburi pe care le poți utiliza pentru a cumpăra ETH",
   "page-get-eth-exchanges-except": "Cu excepția",
