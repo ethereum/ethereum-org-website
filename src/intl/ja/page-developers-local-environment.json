@@ -1,6 +1,8 @@
 {
   "page-local-environment-brownie-desc": "イーサリアム仮想マシンをターゲットとしたスマートコントラクトのためのPythonベースの開発とテストフレームワーク。",
   "page-local-environment-brownie-logo-alt": "Brownie ロゴ",
+  "page-local-environment-dapptools-desc": "Unixの設計思想に基づき、コンポーザビリティ、コンフィギュラビリティ、拡張性があるEthereumに特化したCLIツール。",
+  "page-local-environment-dapptools-logo-alt": "Dapptoolsロゴ",
   "page-local-environment-embark-desc": "分散型アプリケーションの構築と展開のためのオールインワン開発プラットフォーム。",
   "page-local-environment-embark-logo-alt": "Embarkロゴ",
   "page-local-environment-epirus-desc": "Java仮想マシン上でブロックチェーンアプリケーションを開発、デプロイ、監視するためのプラットフォーム",
@@ -19,7 +21,7 @@
   "page-local-environment-hardhat-logo-alt": "Hardhatロゴ",
   "page-local-environment-openZeppelin-desc": "CLIとのスマートコントラクトをコンパイル、アップグレード、デプロイ、および相互作用することで、開発時間を短縮できます。",
   "page-local-environment-openZeppelin-logo-alt": "OpenZeppelinロゴ",
-  "page-local-environment-scaffold-eth-desc": "Hardhat + Create Eth App: スマートコントラクトを搭載した分散型アプリケーションの構築を始めるためにすべての必要なもの",
+  "page-local-environment-scaffold-eth-desc": "Ethers + Hardhat + React: スマートコントラクトで実行する分散型アプリケーションの構築を始めるためにすべての必要なもの",
   "page-local-environment-scaffold-eth-logo-alt": "scaffold-eth ロゴ",
   "page-local-environment-setup-meta-desc": "イーサリウム開発用のソフトウェアスタックを選択する方法についてのガイド。",
   "page-local-environment-setup-meta-title": "イーサリアムのローカル開発のセットアップ",
