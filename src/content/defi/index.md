@@ -6,14 +6,11 @@ template: use-cases
 emoji: ":money_with_wings:"
 sidebar: true
 image: ../../assets/use-cases/defi.png
-alt: "An Eth logo made of lego bricks."
+alt: An Eth logo made of lego bricks.
 sidebarDepth: 2
-summaryPoints:
-  [
-    "A global, open alternative to the current financial system.",
-    "Products that let you borrow, save, invest, trade, and more.",
-    "Based on open-source technology that anyone can program with.",
-  ]
+summaryPoint1: A global, open alternative to the current financial system.
+summaryPoint2: Products that let you borrow, save, invest, trade, and more.
+summaryPoint3: Based on open-source technology that anyone can program with.
 ---
 
 DeFi is an open and global financial system built for the internet age – an alternative to a system that's opaque, tightly controlled, and held together by decades-old infrastructure and processes. It gives you control and visibility over your money. It gives you exposure to global markets and alternatives to your local currency or banking options. DeFi products open up financial services to anyone with an internet connection and they're largely owned and maintained by their users. So far tens of billions of dollars worth of crypto has flowed through DeFi applications and it's growing every day.

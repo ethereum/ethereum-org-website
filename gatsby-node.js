@@ -397,7 +397,10 @@ exports.createSchemaCustomization = ({ actions }) => {
       sidebarDepth: Int
       incomplete: Boolean
       template: String
-      summaryPoints: [String!]!
+      summaryPoint1: String!
+      summaryPoint2: String!
+      summaryPoint3: String!
+      summaryPoint4: String!
       position: String
       compensation: String
       location: String
