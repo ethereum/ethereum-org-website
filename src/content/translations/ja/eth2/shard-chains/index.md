@@ -11,8 +11,8 @@ summaryPoint3: ハードウェア要件を低く抑えることで、ノード�
 summaryPoint4: このアップグレードは、メインネットとビーコンチェーンの統合の後に行われる予定です。
 ---
 
-<UpgradeStatus date="~2022">
-    シャードチェーンは、 <a href="/eth2/merge/">マージ</a>後の進捗状況により、2022年のいずれかのタイミングでリリースされる予定です。 シャードはイーサリアムにデータを保存してアクセスする能力を与えますが、コードの実行には使用されません。 詳細はまだ解明されている途中です。
+<UpgradeStatus date="~2023">
+    シャードチェーンは、 <a href="/eth2/merge/">マージ</a>後の進捗状況により、2023年のいずれかのタイミングでリリースされる予定です。 シャードはイーサリアムにデータを保存してアクセスする能力を与えますが、コードの実行には使用されません。 詳細はまだ解明されている途中です。
 </UpgradeStatus>
 
 ## シャーディングとは? {#what-is-sharding}
@@ -36,7 +36,7 @@ summaryPoint4: このアップグレードは、メインネットとビーコ�
 <br />
 
 <InfoBanner isWarning={true}>
-  最初は、Eth2クライアントと同時にmainnetクライアントを実行する必要があります。 <a href="https://launchpad.ethereum.org" target="_blank">launchpad</a> では、ハードウェア要件とプロセスについて説明します。 あるいは、<a href="/en/developers/docs/apis/backend/#available-libraries">バックエンドAPI</a>を使用することもできます。
+  最初は、Eth2クライアントと同時にmainnetクライアントを実行する必要があります。 <a href="https://launchpad.ethereum.org" target="_blank">launchpad</a> では、ハードウェア要件とプロセスについて説明します。 あるいは、<a href="/developers/docs/apis/backend/#available-libraries">バックエンドAPI</a>を使用することもできます。
 </InfoBanner>
 
 ## シャードチェーン バージョン 1：データの可用性 {#data-availability}

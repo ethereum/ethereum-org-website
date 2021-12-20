@@ -11,7 +11,7 @@ summaryPoint3: Ethereumエコシステムにプルーフ・オブ・ステーク
 summaryPoint4: 技術ロードマップの「フェーズ0」としも知られています。
 ---
 
-<UpgradeStatus isShipped date="Shipped!">
+<UpgradeStatus isShipped date="発送しました！">
     ビーコンチェーンは2020年12月1日正午(UTC)にリリースされました。 詳細については、 <a href="https://beaconscan.com/">データ</a> を参照してください。 このビーコンチェーンの正当性は、 <a href="/eth2/staking/">ETHを投資</a>することで援助できます。
 </UpgradeStatus>
 
