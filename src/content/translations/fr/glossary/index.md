@@ -542,7 +542,7 @@ Chaîne de [preuve d'enjeu](#proof-of-stake) coordonnée par la [chaîne phare](
 
 ### chaînes latérales {#sidechain}
 
-Solution d'évolutivité qui utilise une chaîne séparée avec des [règles de consensus]{#consensus-rules} différentes, souvent plus rapides. Un pont est nécessaire pour connecter ces chaînes latérales au [réseau principal](#mainnet). Les [rollups](#rollups) utilisent également les chaînes latérales, mais ils fonctionnent en collaboration avec le [réseau principal](#mainnet) à la place.
+Solution d'évolutivité qui utilise une chaîne séparée avec des [règles de consensus](#consensus-rules) différentes, souvent plus rapides. Un pont est nécessaire pour connecter ces chaînes latérales au [réseau principal](#mainnet). Les [rollups](#rollups) utilisent également les chaînes latérales, mais ils fonctionnent en collaboration avec le [réseau principal](#mainnet) à la place.
 
 <DocLink to="/developers/docs/layer-2-scaling/#sidechains" title="chaînes latérales" />
 

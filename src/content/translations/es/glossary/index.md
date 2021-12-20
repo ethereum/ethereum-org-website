@@ -542,7 +542,7 @@ Una cadena de [prueba de participación](#proof-of-stake) coordinada por la [cad
 
 ### Sidechain {#sidechain}
 
-Una solución de escalado que usa una cadena separada con diferentes [reglas de consenso]{#consensus-rules}. Se precisa un puente para conectar estas sidechains a la [red principal](#mainnet). Los [Rollups](#rollups) también usan sidechains, pero trabajan en colaboración con la [red principal](#mainnet).
+Una solución de escalado que usa una cadena separada con diferentes [reglas de consenso](#consensus-rules). Se precisa un puente para conectar estas sidechains a la [red principal](#mainnet). Los [Rollups](#rollups) también usan sidechains, pero trabajan en colaboración con la [red principal](#mainnet).
 
 <DocLink to="/developers/docs/layer-2-scaling/#sidechains" title="Sidechains" />
 

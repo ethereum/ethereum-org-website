@@ -542,7 +542,7 @@ Catena [proof-of-stake](#proof-of-stake) coordinata dalla [beacon chain](#beacon
 
 ### sidechain {#sidechain}
 
-Soluzione per la scalabilità che utilizza una catena separata con [regole di consenso]{#consensus-rules} diverse e spesso più veloci. Per collegare queste sidechain alla [rete principale](#mainnet) è necessario un bridge. Anche i [rollup](#rollups) utilizzano le sidechain, ma operano in collaborazione con la [rete principale](#mainnet).
+Soluzione per la scalabilità che utilizza una catena separata con [regole di consenso](#consensus-rules) diverse e spesso più veloci. Per collegare queste sidechain alla [rete principale](#mainnet) è necessario un bridge. Anche i [rollup](#rollups) utilizzano le sidechain, ma operano in collaborazione con la [rete principale](#mainnet).
 
 <DocLink to="/developers/docs/layer-2-scaling/#sidechains" title="Sidechain" />
 

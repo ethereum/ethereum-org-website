@@ -542,7 +542,7 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 ### Sidechain 侧链 {#sidechain}
 
-一个使用不同链、常常更快的[协商一致规则]{#consensus-rules} 的扩容解决方案。 需要桥来连接这些侧链到 [mainnet](#mainnet)。 [Rollup](#rollups) 也使用侧链，但是他们可以与[主网](#mainnet)进行操作。
+一个使用不同链、常常更快的[协商一致规则](#consensus-rules) 的扩容解决方案。 需要桥来连接这些侧链到 [mainnet](#mainnet)。 [Rollup](#rollups) 也使用侧链，但是他们可以与[主网](#mainnet)进行操作。
 
 <DocLink to="/developers/docs/layer-2-scaling/#sidechains" title="侧链" />
 
