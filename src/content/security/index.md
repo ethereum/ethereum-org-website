@@ -113,9 +113,13 @@ Browser extensions like Chrome extensions or Add-ons for Firefox can augment use
 
 One of the biggest reasons people get scammed in crypto generally is a lack of understanding. For example, if you don't understand that the Ethereum network is decentralized and owned by no one, then it's easy to fall prey to someone pretending to be a customer service agent that promises to return your lost ETH in exchange for your private keys. Educating yourself on how Ethereum works is a worthwhile investment.
 
-<DocLink to="/what-is-ethereum/" title="What is Ethereum?" />
+<DocLink to="/what-is-ethereum/">
+  What is Ethereum?
+</DocLink>
 
-<DocLink to="/eth/" title="What is ether?" />
+<DocLink to="/eth/">
+  What is ether?
+</DocLink>
 <Divider />
 
 ## Wallet security {#wallet-security}
@@ -126,7 +130,9 @@ One of the biggest reasons people get scammed in crypto generally is a lack of u
 
 The private key to your wallet acts as a password to your Ethereum wallet. It is the only thing stopping someone who knows your wallet address from draining your account of all of its assets!
 
-<DocLink to="/wallets/" title="What's an Ethereum wallet?" />
+<DocLink to="/wallets/">
+  What's an Ethereum wallet?
+</DocLink>
 
 #### Don't take screenshots of your seed phrases/private keys {#screenshot-private-keys}
 

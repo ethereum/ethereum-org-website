@@ -35,7 +35,9 @@ La [cadena de baliza](/eth2/beacon-chain/) ha necesitado 16 384 depósitos de 3
 
 [Leer la declaración de la Fundación Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/eth2/beacon-chain/" title="La cadena de baliza" />
+<DocLink to="/eth2/beacon-chain/">
+  La cadena de baliza
+</DocLink>
 
 ---
 
@@ -49,7 +51,9 @@ El contrato de depósito de participación introdujo la [participación](/glossa
 
 [Leer la declaración de la Fundación Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/eth2/staking/" title="Participación" />
+<DocLink to="/eth2/staking/">
+  Participación
+</DocLink>
 
 ---
 
@@ -301,4 +305,6 @@ El Yellow Paper, escrito por el Dr. Gavin Wood, es una definición técnica del 
 
 Documento introductorio, publicado en el 2013 por Vitalik Buterin, fundador de Ethereum, antes del lanzamiento del proyecto en 2015.
 
-<DocLink to="/whitepaper/" title="Papel en blanco" />
+<DocLink to="/whitepaper/">
+  Papel en blanco
+</DocLink>
