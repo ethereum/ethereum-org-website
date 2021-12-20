@@ -1302,6 +1302,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://www.linkedin.com/in/andrejrakic/"><img src="https://avatars.githubusercontent.com/u/37881789?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andrej</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=andrejrakic" title="Documentation">📖</a> <a href="#content-andrejrakic" title="Content">🖋</a></td>
     <td align="center"><a href="http://www.daita.tech"><img src="https://avatars.githubusercontent.com/u/25297591?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pascal Marco Caversaccio</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=pcaversaccio" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://www.slip.so"><img src="https://avatars.githubusercontent.com/u/22961671?v=4?s=100" width="100px;" alt=""/><br /><sub><b>kennethcassel</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=kennethcassel" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
