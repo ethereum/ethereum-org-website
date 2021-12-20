@@ -1,5 +1,5 @@
 ---
-title: Consensus Protocols
+title: Consensus mechanisms
 description: An explanation of consensus protocols in distributed systems and the role they play in Ethereum.
 lang: en
 sidebar: true
@@ -8,7 +8,7 @@ incomplete: true
 
 Blockchains, like Ethereum, are distributed databases. The network's nodes must reach an agreement on the network's current state. Users of the blockchain all want to write to the database at the same time. It's the job of a consensus protocol to coordinate the network to agree on the same decisions and arrive at the same state. 
 
-Although consensus protocols aren't directly related to building a dapp, understanding them will illuminate concepts relevant to you and your users' experience, like gas prices and transaction times.
+Although consensus mechanisms aren't directly related to building a dapp, understanding them will illuminate concepts relevant to you and your users' experience, like gas prices and transaction times.
 
 ## Prerequisites {#prerequisites}
 
@@ -16,15 +16,15 @@ To better understand this page, we recommend you first read our [introduction to
 
 ## What is consensus? {#what-is-consensus}
 
-By consensus, we mean that a general agreement has been reached. Consider a group of five people going to the cinema. If three out of five agree on a film, a consensus is achieved — majority rules. This is a real-life version of a "voting consensus protocol" where a simple majority rules.
+By consensus, we mean that a general agreement has been reached. Consider a group of five people going to the cinema. If three out of five agree on a film, a consensus is achieved — majority rules.
 
-## What is a consensus protocol? {#what-is-a-consensus-protocol}
+## What is a consensus mechanism? {#what-is-a-consensus-mechanism}
 
-Consensus protocols (also known as consensus algorithms) allow distributed systems (networks of computers) to work together and stay secure.
+Consensus mechanisms (also known as consensus protocols or consensus algorithms) allow distributed systems (networks of computers) to work together and stay secure.
 
-For decades, these protocols have been used to establish consensus among database nodes, application servers, and other enterprise infrastructure. In recent years, new consensus protocols have been invented to allow cryptoeconomic systems, such as Ethereum, to agree on the state of the network.
+For decades, these mechanisms have been used to establish consensus among database nodes, application servers, and other enterprise infrastructure. In recent years, new consensus mechanisms have been invented to allow cryptoeconomic systems, such as Ethereum, to agree on the state of the network.
 
-A consensus protocol in a cryptoeconomic system also helps prevent certain kinds of economic attacks. In Nakamoto consensus, an attacker can compromise the database (known as a "safety violation") by controlling 51% of the network hash power. Consensus protocols are designed to make this "51% attack" unfeasible. Different protocols are engineered to solve this security problem in different ways.
+A consensus mechanism in a cryptoeconomic system also helps prevent certain kinds of economic attacks. In Nakamoto consensus, an attacker can compromise the database (known as a "safety violation") by controlling 51% of the network hash power. Consensus mechanisms are designed to make this "51% attack" unfeasible. Different protocols are engineered to solve this security problem in different ways.
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/dylgwcPH4EA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -40,7 +40,7 @@ A consensus protocol in a cryptoeconomic system also helps prevent certain kinds
 <!-- ### Fault tolerance -->
 <!-- TODO explain how protocols must be fault tolerant -->
 
-## Types of consensus protocols {#types-of-consensus-protocols}
+## Types of consensus mechanisms {#types-of-consensus-mechanisms}
 
 <!-- TODO -->
 <!-- Why do different consensus protocols exist? -->
@@ -84,7 +84,7 @@ Watch more on the different types of consensus protocols used on Ethereum:
 
 ### Sybil resistance {#sybil-chain}
 
-Have you ever seen a websit that's being spammed by a ton of fake accounts? These fake accounts are run by bots which try to sell you something. To get around that, a lot of sites employ a system called "captchas". These captchas are difficult for computers to solve but easy for humans, preventing automation from making fake identities. Another way to prevent fake accounts is to force users to pay for a service. This payment associates a cost with automation, preventing armies of bots from taking over a site.
+Have you ever seen a website that's being spammed by a ton of fake accounts? These fake accounts are run by bots which try to sell you something. To get around that, a lot of sites employ a system called "captchas". These captchas are difficult for computers to solve but easy for humans, preventing automation from making fake identities. Another way to prevent fake accounts is to force users to pay for a service. This payment associates a cost with automation, preventing armies of bots from taking over a site.
 
 Blockchains have a form of captcha of their own. This process of preventing fake identities from taking over a network is called "Sybil resistance". Like captcha or premium accounts on a website, Sybil resistance mechanisms associate some kind of work or value to participating in the blockchain. This causes an innate investment in the success of the network.
 
