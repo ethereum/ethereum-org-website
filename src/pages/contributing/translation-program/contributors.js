@@ -70,10 +70,12 @@ const Contributors = ({ location }) => {
         <h1>
           <Translation id="page-contributing-translation-program-contributors-title" />
         </h1>
-        <p>
-          {translatorData.length}{" "}
-          <Translation id="page-contributing-translation-program-contributors-total-contributors" />
-        </p>
+        <h4>
+          <strong>
+            <Translation id="page-contributing-translation-program-contributors-number-of-contributors" />{" "}
+            {translatorData.length}
+          </strong>
+        </h4>
         <p>
           <Translation id="page-contributing-translation-program-contributors-our-translators-1" />
         </p>
