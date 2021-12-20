@@ -334,6 +334,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       const markdownPath = `${__dirname}/src/content/translations/${lang}/${page}/index.md`
       const langHasOutdatedMarkdown = fs.existsSync(markdownPath)
       if (!langHasOutdatedMarkdown) {
+        // Check if json strings exists for language, if not mark `isContentEnglish` as true
+        const jsonPath = `${__dirname}/src/intl/${lang}/page-${page}.json`
+        const langHasIntlJson = fs.existsSync(jsonPath)
         createPage({
           path: `/${lang}/${page}/`,
           component: path.resolve(
@@ -352,6 +355,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               originalPath: `/${page}/`,
               redirect: false,
             },
+            isContentEnglish: !langHasIntlJson,
           },
         })
       }
