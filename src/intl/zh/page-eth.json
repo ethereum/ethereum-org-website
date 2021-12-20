@@ -81,5 +81,17 @@
   "page-eth-where-to-buy": "从哪里获取以太币",
   "page-eth-where-to-buy-desc": "您可以从交易所或钱包获取以太币，但不同的国家/地区有不同的策略。 选中以查看能让您购买以太币的服务。",
   "page-eth-yours": "这真的是您的",
-  "page-eth-yours-desc": "以太币让您成为自己的银行。您可以用您的钱包控制您自己的资金作为所有权证明——第三方没有必要。"
+  "page-eth-yours-desc": "以太币让您成为自己的银行。您可以用您的钱包控制您自己的资金作为所有权证明——第三方没有必要。",
+  "page-eth-more-on-tokens": "关于代币及其使用的更多信息",
+  "page-eth-button-buy-eth": "获取 ETH",
+  "page-eth-tokens-stablecoins": "稳定币",
+  "page-eth-tokens-defi": "去中心化金融 (DeFi)",
+  "page-eth-tokens-nft": "非同质化代币 (NFT)",
+  "page-eth-tokens-dao": "去中心化自治组织 (DAO)",
+  "page-eth-tokens-stablecoins-description": "关于以太坊代币中波动性最小代币的更多信息。",
+  "page-eth-tokens-defi-description": "以太坊代币的金融系统。",
+  "page-eth-tokens-nft-description": "代表以太坊上物品所有权的代币。",
+  "page-eth-tokens-dao-description": "互联网社区往往由代币持有人管理。",
+  "page-eth-whats-defi": "关于 DeFi 的更多信息",
+  "page-eth-whats-defi-description": "DeFi 是建立在以太坊上的去中心化金融系统。以下内容解释了您可以利用 DeFi 做什么。"
 }
