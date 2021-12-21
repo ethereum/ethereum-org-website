@@ -59,13 +59,6 @@ storedData: int128
 
 在 [Solidity 文档](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack)中了解更多关于 EVM 如何存储数据（存储、内存和栈）。
 
-<!-- TODO provide examples of when to use storage vs. memory -->
-
-<!--- ### Try it
-
-Using this Remix tutorial, [define a variable in a Solidity smart contract](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
-
 ### 环境变量 {#environment-variables}
 
 除了在自己合约上定义的变量之外，还有一些特殊的全局变量。 他们主要用于提供有关区块链或当前交易的信息。
@@ -139,11 +132,6 @@ def readName() -> string:
 7. 使用底层调用。
 8. 使用包含某些操作码的内联程序组。
 
-<!---#### Try it
-
-Using this Remix tutorial, [use a Solidity getter function to `view` data](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
-
 ### 构造函数 {#constructor-functions}
 
 `constructor` 函数只在首次部署时执行一次。 与许多基于类的编程语言中的 `constructor` 函数类似，构造函数常将状态变量初始化到指定的值。
@@ -169,26 +157,6 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionStart = block.timestamp
     self.auctionEnd = self.auctionStart + _bidding_time
 ```
-
-<!---#### Try it
-
-Using this Remix tutorial, [create a `constructor` function](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
-
-<!-- TODO add additional funciton types
-
-### Pure functions {#pure-functions}
-
-@Sam Richards are these solidity-specific?
-
-### Return variables {#return-variables}
-
-https://solidity.readthedocs.io/en/v0.7.0/contracts.html?highlight=return variables#return-variables](https://solidity.readthedocs.io/en/v0.7.0/contracts.html?highlight=return%20variables#return-variables
-
-### Payable/non-payable {#payablenon-payable}
-
-- non-payable rejects ether sent to it
-- payable can accept 0 ETH -->
 
 ### 内置函数 {#built-in-functions}
 
@@ -235,59 +203,9 @@ contract ExampleDapp {
 
 ## 事件和日志 {#events-and-logs}
 
-事件可以让您通过前端或其它订阅程序与您的智能合约通信。 当交易被挖矿执行时，智能合约可以触发事件并且将日志写入区块链，然后前端可以处理。<!-- TODO add event examples
+事件可以让您通过前端或其它订阅程序与您的智能合约通信。 当交易被挖矿执行时，智能合约可以触发事件并且将日志写入区块链，然后前端可以处理。
 
-They are used in a few different ways:
-
-1. smart contract return values for the user interface
-
-```solidity
-contract ExampleContract {
-  event ReturnValue(address indexed _from, int256 _value);
-```
-
-```js
-var exampleEvent = exampleContract.ReturnValue({ _from: web3.eth.coinbase })
-exampleEvent.watch(function (err, result) {
-  if (err) {
-    console.log(err)
-    return
-  }
-  console.log(result.args._value)
-  // check that result.args._from is web3.eth.coinbase then
-  // display result.args._value in the UI and call
-  // exampleEvent.stopWatching()
-})
-exampleContract.foo.sendTransaction(2, { from: web3.eth.coinbase })
-```
-
-2. asynchronous triggers with data
-
-```solidity
-contract CryptoExchange {
-  event Deposit(uint256 indexed _market, address indexed _sender, uint256 _amount, uint256 _time);
-  function deposit(uint256 _amount, uint256 _market) returns (int256) {
-      // perform deposit, update user’s balance, etc
-      Deposit(_market, msg.sender, _amount, now);
-  }
-```
-
-```js
-var depositEvent = cryptoExContract.Deposit({ _sender: userAddress })
-depositEvent.watch(function (err, result) {
-  if (err) {
-    console.log(err)
-    return
-  }
-  // append details of result.args to UI
-})
-```
-
-3. a cheaper form of storage
-
-Need your help explaining events/showing examples
-
-_Examples provided by Joseph Chow and ConsenSys_ -->## 附带说明的例子 {#annotated-examples}
+## 附带说明的例子 {#annotated-examples}
 
 这是一些用 Solidity 写的例子。 如果希望运行这些代码，您可以在 [Remix](http://remix.ethereum.org) 中调试。
 

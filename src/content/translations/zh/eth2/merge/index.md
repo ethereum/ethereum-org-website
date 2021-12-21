@@ -27,22 +27,6 @@ summaryPoint4: 我们以前将此称为“对接”。
 
 主网将把运行智能合约的能力带入工作量证明系统。加上以太坊的完整历史和现状，以确保所有 ETH 持有人和使用者都能顺利过渡。
 
-<!-- ### Improving Mainnet
-
-Before Mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
-
-These include Improvements for
-
-- **End users**: like [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) which changes the way users bid for blockspace. In other words, making transaction fees more efficient for end users.
-- **Client runners**: making running clients more sustainable by capping disk space requirements.
-- **Developers**: upgrading the EVM to be more flexible.
-
-Plus many more.
-
-[More on Ethereum1.x](/learn/#eth-1x)
-
-These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the merge. -->
-
 ## 合并后 {#after-the-merge}
 
 这将标志着以太坊工作量证明的消失，从此开始一个更可持续性更强、更加环保的以太坊时代。 现在，以太坊将朝着 [Eth2 愿景](/eth2/vision/)中概述的全面规模、安全性和可持续性更进一步。

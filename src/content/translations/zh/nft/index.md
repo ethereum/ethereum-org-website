@@ -366,8 +366,6 @@ _同样重要的是要记住，以太坊做的不仅仅是金融交易，它是�
 
 ### 脚注和来源 {#footnotes-and-sources}
 
-<!-- TODO: after shipping this can form the basis of an energy efficiency page. I suspect this could also live under learn and just do some general mythbusting and supply stats about eth2 energy usage-->
-
 这解释了我们如何得出上述能源估算。 这些估算值适用于整个网络，而不仅仅是保留给创建、购买或出售 NFT 的流程。
 
 #### 1. 降低 99.95% 的采矿能源 {#fn-1}

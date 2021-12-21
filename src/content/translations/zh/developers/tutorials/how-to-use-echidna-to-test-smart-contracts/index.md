@@ -16,8 +16,6 @@ source: 构建安全的合约
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 
-<!-- Probably turn into a serialised tutorial -->
-
 ## 安装 {#installation}
 
 Echidna 可以通过 docker 或使用预编译的二进制程序安装。

@@ -9,8 +9,6 @@ sidebar: true
 
 以太坊及其社区拥抱开源。 您可以找到各种语言的社区项目 - 客户端实现、API、开发框架、测试工具。
 
-<!-- Often certain languages have an certain advantage depending on the use case -->
-
 ## 选择您的语言 {#data}
 
 根据您的语言选择项目资源和虚拟社区：

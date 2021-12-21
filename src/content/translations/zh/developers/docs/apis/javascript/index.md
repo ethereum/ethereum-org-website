@@ -69,11 +69,6 @@ var web3 = new Web3(
 - 网络 ID
 - 以及更多...
 
-<!--- #### Try it
-
-This remix tutorial will show you [how to query the blockchain using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
-
 ### 钱包功能 {#wallet-functionality}
 
 这些库给予开发者创建钱包的功能，用于管理密匙和对交易进行签署。
@@ -215,11 +210,6 @@ contract Test {
 - 调用方法去评估对 gas 的需求量。这个方法的执行是在以太坊虚拟机中执行的。
 - 部署一个合约
 - 以及更多...
-
-<!--- #### Try it
-
-This remix tutorial will show you [how to query a contract using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
 
 ### 实用功能 {#utility-functions}
 
