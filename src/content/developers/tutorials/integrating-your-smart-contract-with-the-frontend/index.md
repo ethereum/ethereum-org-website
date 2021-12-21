@@ -260,7 +260,7 @@ To read from your smart contract, you'll need to successfully set up:
 
 This may sounds like a lot of steps, but don't worry! We'll walk you through how to do each of them step-by-step! :\)
 
-### Establish an API connection to the Ethereum chain
+### Establish an API connection to the Ethereum chain {#connect-to-ethereum}
 
 So remember how in Part 2 of this tutorial, we used our [Alchemy Web3 key to read from our smart contract](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract#step-1-install-web3-library)? You'll also need an Alchemy Web3 key in your dApp to read from the chain.
 
