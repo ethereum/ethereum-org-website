@@ -64,7 +64,7 @@ sidebar: true
 
 要开发以太坊应用程序，你需要在专用网络上运行它，以便在部署它之前了解它的工作方式。 与在计算机上创建用于 web 开发的本地服务器类似，你可以创建本地区块链实例来测试你的 dapp。 这允许比公共测试网更快的迭代。
 
-有一些项目和工具专门协助这方面的工作。 进一步了解<a href=“/developers/docs/development networks/”>开发网络</a>。
+有一些项目和工具专门协助这方面的工作。 进一步了解 <a href=“/developers/docs/development networks/”>开发网络</a>。
 
 ### 联盟网络 {#consortium-networks}
 
