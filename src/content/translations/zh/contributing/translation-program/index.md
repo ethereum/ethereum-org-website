@@ -18,8 +18,7 @@ sidebar: true
 如果您想参与其中并帮助我们通过将网站翻译成您的语言来发展全球以太坊社区，请遵循下面的步骤！
 
 <InfoBanner shouldCenter emoji=":tada:">
-  领取您的 POAP 代币！ 如果您在 2021 年参与了 etherum.org 翻译计划，则会为您准备独特 POAP。{"
-  <a href="https://ethereum.org/en/contributing/#poap">关于 POAP 的更多信息</a>
+  领取您的 POAP 代币！ 如果您在 2021 年参与了 etherum.org 翻译计划，则会为您准备独特 POAP。 <a href="https://ethereum.org/en/contributing/#poap">关于 POAP 的更多信息</a>
 </InfoBanner>
 
 ## 使命和愿景 {#mission-and-vision}
