@@ -43,7 +43,7 @@ When you open this cloned `hello-world-part-four` repository, you'll notice that
 * `starter-files` contains the starter files \(essentially the React UI\) for this project. In this tutorial, **we will be working in this directory**, as you learn how to bring this UI to life by connecting it to your Ethereum wallet and the Hello World smart contract that you published on Etherscan in [Part 3](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/submitting-your-smart-contract-to-etherscan).
 * `completed` contains the entire completed tutorial and is there for you as a **reference** **if you get stuck.**
 
-Next, open your copy of `starter-files` to your favorite code editor \(at Alchemy, we we're big fans of [VSCode](https://code.visualstudio.com/download)\), and then navigate into your `src` folder.
+Next, open your copy of `starter-files` to your favorite code editor, and then navigate into your `src` folder.
 
 All of the code we'll write will live under the `src` folder. We'll be editing the `HelloWorld.js` component and the `util/interact.js` javascript files to give our project Web3 functionality.
 
