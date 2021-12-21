@@ -47,7 +47,7 @@ Next, open your copy of `starter-files` to your favorite code editor \(at Alchem
 
 All of the code we'll write will live under the `src` folder. We'll be editing the `HelloWorld.js` component and the `util/interact.js` javascript files to give our project Web3 functionality.
 
-## Step 2: Check out the starter files {#step-2-check-out-the-starter-files}
+## Step 2: Check out the starter files {#check-out-the-starter-files}
 
 Before we start coding, it's super important that we figure out what's already provided for us in the starter files.
 
