@@ -900,7 +900,7 @@ It's super clean and simple. 😌And guess what...YOUR DAPP IS COMPLETE!!!
 
 Go ahead and test out your "Update" button!
 
-## Step 7: Make your own custom dApp 🚀
+## Step 7: Make your own custom dApp 🚀 {#step-7-make-your-own-custom-dapp}
 
 Wooooo, you made it to the end of the tutorial! To recap, you learned how to:
 
