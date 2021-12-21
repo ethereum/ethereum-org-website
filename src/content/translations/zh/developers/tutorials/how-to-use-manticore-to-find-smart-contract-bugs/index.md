@@ -342,7 +342,7 @@ contract Simple {
 执行的每个路径都有其区块链的状态。 此状态要么是准备就绪，要么是被终止了，也就是说，它达到了 THROW 或 REVERT 指令状态。
 
 - [m.ready_states](https://manticore.readthedocs.io/en/latest/states.html#accessing): 已准备就绪状态列表（他们没有执行 REVERT/INVALID）
-- [m.killed_states](https://manticore.readthedocs.io/en/latest/states.html#accessings)：已准备就绪状态列表（他们没有执行 REVERT/INVALID）
+- [m.killed_states](https://manticore.readthedocs.io/en/latest/states.html#accessings)：终止状态列表
 - [m.all_states](https://manticore.readthedocs.io/en/latest/states.html#accessings)：所有状态
 
 ```python
