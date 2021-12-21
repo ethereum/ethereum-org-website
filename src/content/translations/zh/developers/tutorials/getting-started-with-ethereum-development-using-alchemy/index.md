@@ -45,7 +45,7 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 ![显示用户如何获取API密钥的GIF图](./pull-api-keys.gif)
 
-## 3\. 在命令行中发送请求 {#make-a-request-from-the-command-line}
+## 3. 在命令行中发送请求 {#make-a-request-from-the-command-line}
 
 使用 JSON-RPC 和 curl 通过 Alchemy 与以太坊区块链交互。
 
@@ -108,7 +108,7 @@ const web3 = createAlchemyWeb3(
 
 现在用一个小的 web3 编程来练习，我们将编写一个简单的脚本，用于打印出以太坊主网中最新的区块高度。
 
-1.  **在终端中创建一个新的项目目录并通过 cd 命令进入该目录（如果尚未这样做）：**
+**1. 在终端中创建一个新的项目目录并通过 cd 命令进入该目录（如果尚未这样做）：**
 
 ```
 mkdir web3-example
@@ -121,7 +121,7 @@ cd web3-example
 npm install @alch/alchemy-web3
 ```
 
-**‌3. 创建一个名为`index.js` **的文件并添加以下内容：</p>
+**3. 创建一个名为`index.js`的文件并添加以下内容：**
 
 > 最终应将`demo`替换为您的 Alchemy HTTP API 密钥 。
 
@@ -143,14 +143,14 @@ main()
 node index.js
 ```
 
-**‌5. 现在应该会在控制台中看到最新的区块数量输出结果！**
+**5. 现在应该会在控制台中看到最新的区块数量输出结果！**
 
 ```
 The latest block number is 11043912
 ```
 
-‌**哇！ 恭喜！ 您刚刚使用 Alchemy 编写了您的第一个 web3 脚本 🎉 **
+**哇！ 恭喜！ 您刚刚使用 Alchemy 编写了您的第一个 web3 脚本 🎉**
 
-不知道下一步怎么办？ 尝试部署您的第一个智能合约，并在我们的 [\_Hello World 智能合约指南](https://docs.alchemyapi.io/tutorials/hello-world-smart-contract)中用 solidity 编程，或者用 [_Dashboard Demo App_](https://docs.alchemyapi.io/tutorials/demo-app) 测试您的仪表盘知识！
+不知道下一步怎么办？ 尝试部署您的第一个智能合约，并在我们的 [Hello World 智能合约指南](https://docs.alchemyapi.io/tutorials/hello-world-smart-contract)中用 solidity 编程，或者用 [Dashboard Demo App](https://docs.alchemyapi.io/tutorials/demo-app) 测试您的仪表盘知识！
 
 [免费注册 Alchemy](https://dashboard.alchemyapi.io/signup/)，查看我们的[文档](https://docs.alchemyapi.io/)，关注我们的[Twitter](https://twitter.com/AlchemyPlatform)获取最新消息。
