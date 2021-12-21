@@ -72,7 +72,7 @@ Doing so should open [http://localhost:3000/](http://localhost:3000/) in your br
 
 If you try clicking "Connect Wallet" or "Update" buttons, you'll notice that they don't work—that's because we still need to program their functionality! :\)
 
-## The `HelloWorld.js` component
+### The `HelloWorld.js` component
 
 **NOTE:** Make sure you're in the `starter-files` folder and not the `completed` folder!
 
