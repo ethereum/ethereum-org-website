@@ -110,7 +110,6 @@ const [message, setMessage] = useState("No connection to the network.");
 const [newMessage, setNewMessage] = useState("");
 ```
 
-### Never heard of React state variables or state hooks? Check out [these](https://reactjs.org/docs/hooks-state.html) docs.
 
 Here's what each of the variables represents:
 
