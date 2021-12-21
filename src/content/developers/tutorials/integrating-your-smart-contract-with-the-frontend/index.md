@@ -78,7 +78,7 @@ If you try clicking "Connect Wallet" or "Update" buttons, you'll notice that the
 
 Let's go back into the `src` folder in our editor and open the `HelloWorld.js` file. It's super important that we understand everything in this file, as it is the primary React component we will be working on.
 
-At the top of this file, you'll notice we have several import statements that are necessary to get our project running, including the React library, useEffect and useState hooks, some items from the `./util/interact.js` \(we'll describe them in more details soon!\), and the Alchemy logo. 🧙‍♂️
+At the top of this file, you'll notice we have several import statements that are necessary to get our project running, including the React library, useEffect and useState hooks, some items from the `./util/interact.js` (we'll describe them in more details soon!), and the Alchemy logo <Emoji text="🧙‍♂️" size={1} />
 
 
 ```javascript
