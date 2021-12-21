@@ -598,7 +598,7 @@ Next, try refreshing the page... this is strange. Our wallet button is prompting
 
 However, have no fear! We easily can address that (get it?) by implementing `getCurrentWalletConnected`, which will check if an address is already connected to our dApp and update our UI accordingly!
 
-### The `getCurrentWalletConnected` function
+### The `getCurrentWalletConnected` function {#the-getcurrentwalletconnected-function}
 
 Update your `getCurrentWalletConnected` function in the `interact.js` file to the following:
 
