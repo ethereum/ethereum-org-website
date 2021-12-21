@@ -7,7 +7,7 @@ sidebar: true
 
 # 企业级私有以太坊 {#private-ethereum-for-enterprise}
 
-企业级的区块链应用可以建立在以太坊主网或基于以太坊技术的私有链上。 有关在公共以太坊主网上构建的更多信息，请参见[企业级以太坊主网应用](terprise/)
+企业级的区块链应用可以建立在以太坊主网或基于以太坊技术的私有链上。 有关在公共以太坊主网上构建的更多信息，请参见[企业级以太坊主网应用](/enterprise/)
 
 ## 企业级私有以太坊开发者资源 {#developer-resources-private-enterprise-ethereum}
 
