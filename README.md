@@ -1304,6 +1304,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://www.slip.so"><img src="https://avatars.githubusercontent.com/u/22961671?v=4?s=100" width="100px;" alt=""/><br /><sub><b>kennethcassel</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=kennethcassel" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/BrysonXiao"><img src="https://avatars.githubusercontent.com/u/40129652?v=4?s=100" width="100px;" alt=""/><br /><sub><b>BrysonXiao</b></sub></a><br /><a href="#content-BrysonXiao" title="Content">🖋</a></td>
   </tr>
 </table>
 
