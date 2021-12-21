@@ -392,7 +392,7 @@ You'll notice that the current message no longer says "No connection to the netw
 
 Now speaking of that listener...
 
-### Implement `addSmartContractListener`
+### Implement `addSmartContractListener` {#implement-addsmartcontractlistener}
 
 If you think back to the `HelloWorld.sol` file we wrote in [Part 1 of this tutorial series](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract#step-10-write-our-contract), you'll recall that there is a smart contract event called `UpdatedMessages` that is emitted after our smart contract's `update` function is invoked \(see lines 9 and 27\):
 
