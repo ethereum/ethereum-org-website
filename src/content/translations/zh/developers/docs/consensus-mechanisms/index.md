@@ -26,25 +26,11 @@ incomplete: true
 
 几十年来，我们一直采用这些机制在数据库节点、应用程序服务器和其他企业基础设施之间建立共识。 近年来，有人发明了新的共识机制，使以太坊等加密经济系统能够就网络状态达成一致。
 
-在加密经济体系中建立共识机制也有助于防止某些类型的经济攻击。 从理论上讲，攻击者可以通过控制 51% 的网络而破坏共识。 共识机制旨在使这种“51% 攻击”不可行。 人们设计、实现了不同的机制，以不同的方式解决这个问题。 <iframe width="100%" height="315" src="https://www.youtube.com/embed/dylgwcPH4EA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+在加密经济体系中建立共识机制也有助于防止某些类型的经济攻击。 从理论上讲，攻击者可以通过控制 51% 的网络而破坏共识。 共识机制旨在使这种“51% 攻击”不可行。 人们设计、实现了不同的机制，以不同的方式解决这个问题。
 
-<!-- ### Consensus -->
-
-<!-- Formal requirements for a consensus protocol may include: -->
-
-<!-- - Agreement: All correct processes must agree on the same value. -->
-<!-- - Weak validity: For each correct process, its output must be the input of some correct process. -->
-<!-- - Strong validity: If all correct processes receive the same input value, then they must all output that value. -->
-<!-- - Termination: All processes must eventually decide on an output value -->
-
-<!-- ### Fault tolerance -->
-<!-- TODO explain how protocols must be fault tolerant -->
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/dylgwcPH4EA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
 
 ## 共识机制类型 {#types-of-consensus-mechanisms}
-
-<!-- TODO -->
-<!-- Why do different consensus protocols exist? -->
-<!-- What are the tradeoffs of each? -->
 
 ### 工作量证明 {#proof-of-work}
 
@@ -76,7 +62,9 @@ incomplete: true
 
 ### 直观指南 {#types-of-consensus-video}
 
-观看有关以太坊上使用的不同类型共识机制的更多信息。 <iframe width="100%" height="315" src="https://www.youtube.com/embed/ojxfbN78WFQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+观看有关以太坊上使用的不同类型共识机制的更多信息。
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/ojxfbN78WFQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
 
 ### Sybil 抗性和链选择 {#sybil-chain}
 

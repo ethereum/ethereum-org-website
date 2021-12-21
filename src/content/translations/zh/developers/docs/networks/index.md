@@ -64,27 +64,13 @@ sidebar: true
 
 要开发以太坊应用程序，你需要在专用网络上运行它，以便在部署它之前了解它的工作方式。 与在计算机上创建用于 web 开发的本地服务器类似，你可以创建本地区块链实例来测试你的 dapp。 这允许比公共测试网更快的迭代。
 
-有一些项目和工具专门协助这方面的工作。 进一步了解<a href=“/developers/docs/development networks/”>开发网络</a>。
+有一些项目和工具专门协助这方面的工作。 进一步了解[开发网络](/developers/docs/development-networks/)。
 
 ### 联盟网络 {#consortium-networks}
 
 共识过程由一组预定义的受信任节点控制。 例如，一个由已知学术机构组成的私有网络，每个学术机构管理一个节点，并且块由网络中的签名者的阈值进行验证。
 
 如果公共以太坊网络类似于公共互联网，那么你可以将联合体网络视为专用内部网。
-
-<!-- TODO
-
-## Interacting with testnets
-
-### Your own local network {#your-own-local-network}
-
-`geth -—networkid="12345" console`
-
-### Testnets {#testnets-1}
-
-Wallets like MetaMask or MyEtherWallet will allow you to switch networks so you can test your apps using your test ETH.
-
--->
 
 ## 延伸阅读 {#further-reading}
 

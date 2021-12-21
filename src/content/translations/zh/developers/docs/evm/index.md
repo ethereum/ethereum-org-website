@@ -53,8 +53,6 @@ EVM 作为一个[堆栈机](https://en. wikipedia. org/wiki/Stack_machine)运行
 
 ![表明 EVM 操作需要 Gas 的图表](../../../../../developers/docs/gas/gas.png) _图表改编自[以太坊 EVM 说明](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-<!-- TODO add full list from  https://eth.wiki/concepts/evm/implementations -->
-
 ## EVM 实现 {#evm-implementations}
 
 EVM 的所有实现都必须遵守以太坊黄皮书中描述的规范。

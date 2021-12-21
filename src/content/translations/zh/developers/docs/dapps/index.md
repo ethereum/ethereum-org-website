@@ -28,8 +28,6 @@ dapp 可以用任何语言编写（就像是一个 app）。它有前端代码�
 
 智能合约是一种在以太坊网络上的计算机程序，它严格按照事先编写的代码来运行。 智能合约一旦部署到以太坊网络中，就无法更改。 Dapps 可以是去中心化的，就是由于它们受智能合约的既定逻辑控制，而不是个人或公司。 这也意味着你需要非常仔细地设计合约，并进行全面测试。
 
-<!--Benefits and implications provided by Brian Gu)-->
-
 ## Dapp 开发的好处 {#benefits-of-dapp-development}
 
 - **零停机时间** – 一旦将某 dapp 的智能合约部署到区块链上，整个网络都能为那些希望与合约互动的客户提供服务。 因此，恶意参与者无法针对单个 dapp 发起 DoS 攻击。
@@ -40,48 +38,33 @@ dapp 可以用任何语言编写（就像是一个 app）。它有前端代码�
 
 ## Dapp 开发的缺陷 {#drawbacks-of-dapp-development}
 
-<!-- - Transparency – transactions that trigger dapp functionality are public
-- Open source
-- Cost of storage – contracts are often only small percentages of the dapp. They are stored on-chain and this storage needs to be paid for, so it can be expensive.
- -->
-
 - **维护** – dapp 可能更难维护，因为发布到区块链的代码和数据更难修改。 一旦部署了 dapp（或 dapp 存储的底层数据），开发者就很难对其进行更新——即使在旧版本中发现了 bug 或安全风险。
 - **性能开销** – 巨大的性能开销，而且难以扩展更多性能。 为了达到以太坊所追求的安全、完整、透明和可靠的水平，每个节点都会运行和存储每一笔交易。 除此之外，工作量证明也需要时间。 粗略计算，开销会达到目前标准计算的 1,000,000 倍左右。
 - **网络拥塞** – 至少在当前模型中，如果一个 dapp 使用了太多的计算资源，整个网络都会承担影响。 目前，该网络每秒只能处理约 10 笔交易；如果交易发送的速度超过这个速度，未确认的交易池会迅速膨胀。
 - **用户体验** – 设计用户友好的体验可能更难。普通终端用户可能会发现，很难以真正安全的方式设置与区块链互动所需的工具堆栈。
-- **集中化** — 无论如何，建立在以太坊基础层之上的用户友好型和开发人员友好型解决方案最终看起来都像集中式服务。 例如，这种服务可以在服务器端存储密钥或其他敏感信息，使用中心化服务器为前端服务，或在写到区块链之前在中心化服务器上运行重要的业务逻辑。 这消除了区块链与传统模式相比的许多（并不是全部）优势。<!-- ## Types of dapp
+- **集中化** — 无论如何，建立在以太坊基础层之上的用户友好型和开发人员友好型解决方案最终看起来都像集中式服务。 例如，这种服务可以在服务器端存储密钥或其他敏感信息，使用中心化服务器为前端服务，或在写到区块链之前在中心化服务器上运行重要的业务逻辑。 这消除了区块链与传统模式相比的许多（并不是全部）优势。
 
-- Involving money
-- Involving money and something else
-- Other, including decentralized autonomous organizations
+## 更偏向视频学习者？ {#visual-learner}
 
----==crwdHRulesLBB_2_BBsuleRHdwrc==
-
-The application has to be open-source, operate autonomously, and can not be controlled by any one entity.
-All data and record must be cryptographically stored in a public, decentralized blockchain.
-The app must use a cryptographic token, also referred to as an App Coin, to access the application.
-Tokens must be generated in order to prove the value nodes that contribute to the application.
-
----==crwdHRulesLBB_2_BBsuleRHdwrc==
--->## 更偏向视频学习者？ {#visual-learner} <iframe width="100%" height="315" src="https://www.youtube.com/embed/F50OrwV6Uk8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/F50OrwV6Uk8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
 
 ## Dapp 工具 {#dapp-tools}
 
-**Scaffold-ETH _ - 使用适应智能合约的前端，快速尝试使用 Solidity_**
+**Scaffold-ETH - _使用适应智能合约的前端，快速尝试使用 Solidity_**
 
 - [GitHub](https://github.com/austintgriffith/scaffold-eth)
 - [示例 dapp](https://punkwallet.io/)
 
-\*\*创建 ETH App -</em>使用一个命令创建以太坊驱动的应用程序。\_</strong></p>
+**创建 ETH App - _使用一个命令创建以太坊驱动的应用程序。_**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 
-**单击 Dapp _ - 免费和开放源代码软件工具，用于从 [ABI](/glossary/#abi) 生成 dapp 前端。_**
+**单击 Dapp - _免费和开放源代码软件工具，用于从 [ABI](/glossary/#abi) 生成 dapp 前端。_**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/One-Click-Dapp/one-click-dApp)
 
-**Etherflow _ - 供以太坊开发者测试节点的免费和开放源代码软件工具，并从浏览器中编写并调试 RPC 调用。_**
+**Etherflow - _供以太坊开发者测试节点的免费和开放源代码软件工具，并从浏览器中编写并调试 RPC 调用。_**
 
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)

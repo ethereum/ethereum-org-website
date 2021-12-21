@@ -86,19 +86,6 @@ Repeat passphrase:
 
 您需要一个私钥来签署消息和交易并输出签名。 然后其他人可以使用签名获取您的公钥，证明信息的作者。 在您的应用程序中，您可以使用 javascript 库向网络发送交易。
 
-<!-- **WEB3JS example**
-
-```jsx
-web3.eth.accounts.recoverTransaction('0xf86180808401ef364594f0109fc8df283027b6285cc889f5aa624eac1f5580801ca031573280d608f75137e33fc14655f097867d691d5c4c44ebe5ae186070ac3d5ea0524410802cdc025034daefcdfa08e7d2ee3f0b9d9ae184b2001fe0aff07603d9');
-> "0xF0109fC8DF283027b6285cc889F5aA624EaC1F55"
-```
-
-[Web3js documentation](https://web3js.readthedocs.io/)
-
-[code for creating an account in JS?] + links to how to do it in other languages maybe?
-
-`$ geth account new` -->
-
 ## 合约帐户 {#contract-accounts}
 
 合约帐户也有一个 42 个字符组成的十六进制地址：
@@ -108,20 +95,6 @@ web3.eth.accounts.recoverTransaction('0xf86180808401ef364594f0109fc8df283027b628
 `0x06012c8cf97bead5deae237070f9587f8e7a266d`
 
 合约地址是在将合约部署到 Ethereum 区块链时给出的。 地址产生自创建者的地址和从创建者地址发送的交易数量（“nonce”字段）。
-
-<!-- @Sam Richards is there a line of code you can use to return your contract's address – in the same way that we have personal.newAccount() above? – Don't know if what I found below is helpful?
-
-```jsx
-ethers.utils.getContractAddress( transaction ) ⇒ string< Address >
-```
-
-TODO: add a contract address example-->
-
-<!-- ## Managing an account
-
-Most users will want to interact with their account via a wallet. Note that an account is not a wallet. A wallet is the keypair associated with a user-owned account, which allow a user to make transactions from or manage the account
-
-For dapp development, you'll want access to dummy accounts with test ETH so you can experiment. When you create a local chain, you'll get test accounts with fake ETH which you can then import using MetaMask and use on your dapp's frontend. -->
 
 ## 关于钱包的说明 {#a-note-on-wallets}
 

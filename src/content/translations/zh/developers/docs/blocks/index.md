@@ -11,8 +11,6 @@ sidebar: true
 
 区块是一个对初学者非常友好的主题。 为了帮助您更好地理解这个页面，我们建议您先阅读[帐户](/developers/docs/accounts/)、[交易](/developers/docs/transactions/)和我们的[以太坊简介](/developers/docs/intro-to-ethereum/)。
 
-<!--The content below was provided by Brian Gu with exception of "what's in a block"-->
-
 ## 为什么要有区块？ {#why-blocks}
 
 为了确保以太坊网络上的所有参与者保持同步状态并就交易的确切历史达成共识，我们将交易分为多个区块。 这意味着一次提交、商定和同步数十个（或数百个）交易。
