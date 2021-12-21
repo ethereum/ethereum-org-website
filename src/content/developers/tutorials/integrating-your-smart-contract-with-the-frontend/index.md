@@ -485,11 +485,11 @@ If you want to understand more about how transactions on Ethereum work, check ou
 
 You can download and create a Metamask account for free [here](https://metamask.io/download.html). When you are creating an account, or if you already have an account, make sure to switch over to the “Ropsten Test Network” in the upper right \(so that we’re not dealing with real money\).
 
-### Add ether from a Faucet <a id="step-4-add-ether-from-a-faucet"></a>
+### Add ether from a Faucet {#add-ether-from-a-faucet}
 
 To sign a transaction on the Ethereum blockchain, we’ll need some fake Eth. To get Eth you can go to the [Ropsten faucet](https://faucet.ropsten.be/) and enter your Ropsten account address, then click “Send Ropsten Eth.” You should see Eth in your Metamask account soon after!
 
-### Check your Balance <a id="step-5-check-your-balance"></a>
+### Check your Balance {#check-your-balance}
 
 To double check our balance is there, let’s make an [eth\_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) request using [Alchemy’s composer tool](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). This will return the amount of Eth in our wallet. After you input your Metamask account address and click “Send Request”, you should see a response like this:
 
