@@ -313,7 +313,7 @@ If you skipped Part 3 of this tutorial, you can use the HelloWorld contract with
 
 A contract ABI is necessary for specifying which function a contract will invoke as well ensuring that the function will return data in the format you're expecting. Once we've copied our contract ABI, let's save it as a JSON file called `contract-abi.json` in your `src` directory.
 
-### Your contract-abi.json should be stored in your src folder.
+Your contract-abi.json should be stored in your src folder.
 
 Armed with our contract address, ABI, and Alchemy Web3 endpoint, we can use the [contract method](https://web3js.readthedocs.io/en/v1.2.0/web3-eth-contract.html?highlight=constructor#web3-eth-contract) to load an instance of our smart contract. Import your contract ABI into the `interact.js` file and add your contract address.
 
