@@ -505,7 +505,7 @@ Phew! Our fake money is all there! 🤑
 
 Now that our Metamask wallet is set up, let's connect our dApp to it!
 
-### The `connectWallet` function {#the-`connectWallet`-function}
+### The `connectWallet` function {#the-connectWallet-function}
 
 In our `interact.js`file, let's implement the `connectWallet` function, which we can then call in our `HelloWorld.js` component.
 
@@ -568,7 +568,7 @@ Using a try/catch loop, we'll try to connect to Metamask by calling[`window.ethe
 
 Now that we've written this `connectWallet` function, the next step is to call it to our `HelloWorld.js`component.
 
-### Add the `connectWallet` function to your `HelloWorld.js` UI Component <a id="import-connect-wallet-pressed-into-minter-jss-connect-wallet-function"></a>
+### Add the `connectWallet` function to your `HelloWorld.js` UI Component {#add-the-connectWallet-function-to-your-HelloWorld.js-ui-component}
 
 Navigate to the `connectWalletPressed` function in `HelloWorld.js`, and update it to the following:
 
