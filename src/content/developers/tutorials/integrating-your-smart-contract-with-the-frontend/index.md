@@ -249,7 +249,7 @@ The four unimplemented functions after our `helloWorldContract` object do the fo
 
 Now that we understand what we're working with, let's figure out how to read from our smart contract!
 
-## Step 3: Read from your smart contract {#step-3-read-from-your-smart-contract}
+## Step 3: Read from your smart contract {#read-from-your-smart-contract}
 
 To read from your smart contract, you'll need to successfully set up:
 
