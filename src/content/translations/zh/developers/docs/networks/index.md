@@ -11,7 +11,7 @@ sidebar: true
 
 ## 前置要求 {#prerequisites}
 
-你需要在浏览不同的网络之前了解以太坊的基础知识，因为测试网络将会提供一个便捷且安全的以太坊版本供你使用。 尝试访问[以太坊介绍](/developers/docs/intro-to-ethereum/)。
+你需要在浏览不同的网络之前了解以太坊的基础知识，因为测试网络将会提供一个便捷且安全的以太坊版本供你使用。 尝试访问[以太坊简介](/developers/docs/intro-to-ethereum/)。
 
 ## 公共网络 {#public-networks}
 
@@ -58,13 +58,13 @@ sidebar: true
 
 ## 私有网络 {#private-networks}
 
-如果以太坊网络的节点未连接到公共网络（即主网或测试网），则以太坊网络是专用网络。 在这种情况下，私有仅指保留或隔离，而不是保护或安全。
+如果以太坊网络的节点未连接到公共网络（即 主网或测试网），则以太坊网络是专用网络。 在这种情况下，专用仅指保留或隔离，而不是保护或安全。
 
 ### 开发网络 {#development-networks}
 
 要开发以太坊应用程序，你需要在专用网络上运行它，以便在部署它之前了解它的工作方式。 与在计算机上创建用于 web 开发的本地服务器类似，你可以创建本地区块链实例来测试你的 dapp。 这允许比公共测试网更快的迭代。
 
-有一些项目和工具专门协助这方面的工作。 进一步了解[开发网络](/developers/docs/development-networks/)。
+有一些项目和工具专门协助这方面的工作。 进一步了解<a href=“/developers/docs/development networks/”>开发网络</a>。
 
 ### 联盟网络 {#consortium-networks}
 
