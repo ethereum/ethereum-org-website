@@ -303,7 +303,7 @@ Above, we first imported the Alchemy key from our `.env` file and then passed ou
 
 With this endpoint ready, it's time to load our smart contract!
 
-### Loading your Hello World smart contract
+### Loading your Hello World smart contract {#loading-your-hello-world-smart-contract}
 
 To load your Hello World smart contract, you'll need its contract address and ABI, both of which can be found on Etherscan if you completed [Part 3 of this tutorial.](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/submitting-your-smart-contract-to-etherscan)
 
