@@ -773,7 +773,7 @@ export const updateMessage = async (address, message) => {
 
 Now that it have proper input error handling, it's time to sign the transaction via Metamask!
 
-### Signing our transaction
+### Signing our transaction {#signing-our-transaction}
 
 If you're already comfortable with traditional web3 Ethereum transactions, the code we write next will be very familiar. Below your input error handling code, add the following to `updateMessage`:
 
