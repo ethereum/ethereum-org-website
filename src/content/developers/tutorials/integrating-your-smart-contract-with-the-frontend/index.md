@@ -505,7 +505,7 @@ Phew! Our fake money is all there! 🤑
 
 Now that our Metamask wallet is set up, let's connect our dApp to it!
 
-### The `connectWallet` function
+### The `connectWallet` function {#the-`connectWallet`-function}
 
 In our `interact.js`file, let's implement the `connectWallet` function, which we can then call in our `HelloWorld.js` component.
 
