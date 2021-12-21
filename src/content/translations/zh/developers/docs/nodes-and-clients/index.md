@@ -80,7 +80,7 @@ isOutdated: true
 
 - [GitHub](https://github.com/vrde/ethnode)
 
-** DAppNode-\*\***_在专用服务器上运行 Web3 节点（包括以太坊）的操作系统机器。_\*\*
+**DAppNode - _在专用服务器上运行 Web3 节点（包括以太坊）的操作系统机器。_**
 
 - [dappnode.io](https://dappnode.io)
 
