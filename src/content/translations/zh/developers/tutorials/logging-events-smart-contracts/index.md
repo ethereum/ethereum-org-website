@@ -18,8 +18,6 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 在 solidity 中，[事件](/developers/docs/smart-contracts/anatomy/#events-and-logs)是智能合约可触发的调度信号。 去中心化应用或其他任何连接到以太坊 JSON-PRC API 的程序，都可以监听这些事件，并执行相应操作。 可以建立事件的索引，以便稍后可以搜索到事件历史记录。
 
-## 事件 {#events}
-
 在撰写这篇文章之时，以太坊区块链上最常见的事件是由 ERC20 代币转账时触发的 Transfer 事件。
 
 ```solidity
@@ -62,6 +60,6 @@ contract Counter {
 
 如果我们现在部署合约并调用 increment 函数，如果您在名为 logs 的数组内单击新交易，我们将看到 Remix 会自动显示它。
 
-![Remix截屏](../../../../../developers/tutorials/logging-events-smart-contracts/remix-screenshot.png)
+![Remix截屏](../../../../developers/tutorials/logging-events-smart-contracts/remix-screenshot.png)
 
 日志在调试智能合约时非常有用，另一方面，如果您构建一个不同人使用的应用，并且使分析更容易跟踪和了解您的智能合约的使用情况，那么日志也是非常重要的手段。 交易生成的日志会显示常见的区块浏览器中，并且，举例来说，您也可以使用它们来创建链外脚本，用于侦听特定的事件，并且这些事件发生时采取相应操作。
