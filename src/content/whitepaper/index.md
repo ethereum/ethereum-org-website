@@ -30,21 +30,15 @@ The mechanism behind proof-of-work was a breakthrough in the space because it si
 
 From a technical standpoint, the ledger of a cryptocurrency such as Bitcoin can be thought of as a state transition system, where there is a "state" consisting of the ownership status of all existing bitcoins and a "state transition function" that takes a state and a transaction and outputs a new state which is the result. In a standard banking system, for example, the state is a balance sheet, a transaction is a request to move $X from A to B, and the state transition function reduces the value in A's account by $X and increases the value in B's account by $X. If A's account has less than $X in the first place, the state transition function returns an error. Hence, one can formally define:
 
-<pre>
     APPLY(S,TX) -> S' or ERROR
-</pre>
 
 In the banking system defined above:
 
-<pre>
     APPLY({ Alice: $50, Bob: $50 },"send $20 from Alice to Bob") = { Alice: $30, Bob: $70 }
-</pre>
 
 But:
 
-<pre>
     APPLY({ Alice: $50, Bob: $50 },"send $70 from Alice to Bob") = ERROR
-</pre>
 
 The "state" in Bitcoin is the collection of all coins (technically, "unspent transaction outputs" or UTXO) that have been minted and not yet spent, with each UTXO having a denomination and an owner (defined by a 20-byte address which is essentially a cryptographic public key<sup>[fn. 1](#notes)</sup>). A transaction contains one or more inputs, with each input containing a reference to an existing UTXO and a cryptographic signature produced by the private key associated with the owner's address, and one or more outputs, with each output containing a new UTXO to be added to the state.
 
