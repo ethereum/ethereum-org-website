@@ -17,7 +17,7 @@ EVM 的物理实例不能像指向云端或海浪那样描述，但它确实作�
 
 通常使用“分布式账簿”的类比来描述像比特币这样的区块链，它使用密码学的基本工具来实现去中心化的货币。 加密货币的行为类似于“正常”货币，这是因为有规则支配着人们可以做什么和不可以做什么来修改账簿。 例如，比特币地址不能花费比之前收到的更多的比特币。 这些规则是比特币和许多其他区块链上所有交易的基础。
 
-虽然以太坊有自己的本机加密货币（Ether），遵循几乎完全相同的直观规则，但它也支持更强大的功能：[智能合约](/developers/docs/smart-contracts/)。 对于此更复杂的功能，需要一个更复杂的类比。 以太坊不是分布式账本，而是分布式[状态机](https://en.wikipedia.org/wiki/Finite-state_machine)。 以太坊的状态是一个大型数据结构，它不仅保存所有帐户和余额，而且还保存一个*机器状态*，它可以根据预定义的一组规则在不同的区块之间进行更改，并且可以执行任意的机器代码。 在区块中更改状态的具体规则由 EVM 定义。
+虽然以太坊有自己的本机加密货币 (ETH)，遵循几乎完全相同的直观规则，但它也支持更强大的功能：[智能合约](/developers/docs/smart-contracts/)。 对于此更复杂的功能，需要一个更复杂的类比。 以太坊不是分布式账本，而是分布式[状态机](https://en.wikipedia.org/wiki/Finite-state_machine)。 以太坊的状态是一个大型数据结构，它不仅保存所有帐户和余额，而且还保存一个*机器状态*，它可以根据预定义的一组规则在不同的区块之间进行更改，并且可以执行任意的机器代码。 在区块中更改状态的具体规则由 EVM 定义。
 
 ![EVM 组成结构图](../../../../../developers/docs/evm/evm.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
@@ -43,20 +43,15 @@ Y(S, T)= S'
 
 ## EVM 说明 {#evm-instructions}
 
-EVM 作为一个[堆栈机](https://en.wikipedia.org/wiki/Stack_machine)运行，其栈的深度为 1024 个项。 每一项都是 256 比特的 word，选择如此是为了与 SHA-3-256 哈希方案最大限度地兼容。
+EVM 作为一个[堆栈机](https://en. wikipedia. org/wiki/Stack_machine)运行，其栈的深度为 1024 个项。 每个项目都是 256 位字，为了便于使用，选择了 256 位加密技术（如 Keccak-256 哈希或 secp256k1 签名）。
 
-<!-- ![A diagram showing the make up of the stack](./evm-stack.png)
-_Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+在执行期间，EVM 会维护一个瞬态*内存*（作为字可寻址的字节数组），该内存不会在交易之间持久存在。
 
-Removed as we should probably show memory and account storage too if showing stack-->
+然而，合约确实包含一个 Merkle Patricia _存储_ trie（作为可字寻址的字数组），该 trie 与帐户和部分全局状态关联。
 
-在执行期间，EVM 会维护一个临时的*内存*（作为 word 寻址的字节数组），该内存不会在交易之间持久存在。
+已编译的智能合约字节码作为许多 EVM [ opcodes ](/developers/docs/evm/opcodes)执行，它们执行标准的堆栈操作，例如 ` XOR`、` AND`、` ADD`、`SUB`等。 EVM 还实现了一些区块链特定的堆栈操作，如 `ADDRESS`、`BALANCE`、`BLOCKHASH` 等。
 
-然而，合约确实包含一个 Merkle Patricia _storage_ trie（作为按 word 编址的 word 数组），该 trie 与帐户和部分全局状态相关联。
-
-已编译的智能合约字节码作为许多 EVM [ opcodes ](https://www.ethervm.io/)执行，它们执行标准的堆栈操作，例如 ` XOR`、` AND`、` ADD`、`SUB`等。 EVM 还实现了一些区块链特定的堆栈操作，如 `ADDRESS`、`BALANCE`、`SHA3`、`BLOCKHASH`，等等。
-
-![EVM 操作需要 Gas](../../../../../developers/docs/gas/gas.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![表明 EVM 操作需要 Gas 的图表](../../../../../developers/docs/gas/gas.png) _图表改编自[以太坊 EVM 说明](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 <!-- TODO add full list from  https://eth.wiki/concepts/evm/implementations -->
 
@@ -73,12 +68,15 @@ EVM 的所有实现都必须遵守以太坊黄皮书中描述的规范。
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
 - [eEVM](https://github.com/microsoft/eevm) - _C++_
 - [Hyperledger Burrow](https://github.com/hyperledger/burrow) - _Go_
+- [hevm](https://github.com/dapphub/dapptools/tree/master/src/hevm) - _Haskell_
 
 ## 延伸阅读 {#further-reading}
 
-- [Ethereum Yellowpaper](https://ethereum.github.io/yellowpaper/paper.pdf)
+- [以太坊黄皮书](https://ethereum.github.io/yellowpaper/paper.pdf)
+- [Jellopaper aka KEVM：K 中的 EVM 语法](https://jellopaper.org/)
 - [The Beigepaper](https://github.com/chronaeon/beigepaper)
-- [Ethereum Virtual Machine Opcodes](https://www.ethervm.io/)
+- [以太坊虚拟机操作码](https://www.ethervm.io/)
+- [Solidity 文档的简短介绍](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
 
 ## 相关主题 {#related-topics}
 

@@ -36,8 +36,6 @@ Web3 现在有一些局限：
 
 ## 中心化与去中心化 {#centralization-vs-decentralization}
 
-<!--Content below provided by Brian Gu-->
-
 在下表中，我们粗略列举了中心化和去中心化数字网络的优缺点。
 
 | 中心化系统                                                                                                  | 去中心化系统                                                                                                                              |
