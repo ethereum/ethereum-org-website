@@ -883,7 +883,7 @@ export const updateMessage = async (address, message) => {
 
 Last but not least, we need to connect our `updateMessage` function to our `HelloWorld.js` component.
 
-### Connect `updateMessage` to the `HelloWorld.js` frontend
+### Connect `updateMessage` to the `HelloWorld.js` frontend {#connect-updatemessage-to-the-helloworld.js-frontend}
 
 Our `onUpdatePressed` function should make an await call to the imported `updateMessage` function and modify the `status` state variable to reflect whether our transaction succeeded or failed:
 
