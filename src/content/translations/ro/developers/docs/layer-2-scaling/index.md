@@ -221,7 +221,6 @@ Combină cele mai bune părți ale mai multor tehnologii de nivel 2 și pot ofer
 
 ### Folosește soluții Hybrid {#use-hybrid-solutions}
 
-- [Offchain Labs Arbitrum SCSC](https://offchainlabs.com/arbitrum.pdf)
 - [Celer](https://www.celer.network/)
 
 ## Referințe suplimentare {#further-reading}

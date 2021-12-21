@@ -53,5 +53,17 @@
   "page-what-is-ethereum-wallets": "Гаманці",
   "page-what-is-ethereum-wallets-desc": "Спосіб керування валютою ETH і акаунтом Ethereum. Для початку роботи потрібен буде гаманець. Ми допоможемо вам вибрати потрібний.",
   "page-what-is-ethereum-welcome": "Ласкаво просимо до Ethereum",
-  "page-what-is-ethereum-welcome-2": "Ми сподіваємося, що ви залишитеся."
+  "page-what-is-ethereum-welcome-2": "Ми сподіваємося, що ви залишитеся.",
+  "page-what-is-ethereum-defi-title": "Децентралізовані фінанси (DeFi)",
+  "page-what-is-ethereum-defi-description": "Відкритіша фінансова система, яка дає вам більше контролю над вашими грошима та відкриває нові можливості.",
+  "page-what-is-ethereum-defi-alt": "Логотип Eth, зроблений із блоків Lego.",
+  "page-what-is-ethereum-nft-title": "Невзаємозамінні токени (NFT)",
+  "page-what-is-ethereum-nft-description": "Спосіб представлення унікальних елементів як активів Ethereum, якими можна торгувати та які можна використовувати як доказ права власності, а також створення нових можливостей для розробників.",
+  "page-what-is-ethereum-nft-alt": "Логотип Eth, що відображається як голограма.",
+  "page-what-is-ethereum-dao-title": "Децентралізовані автономні організації (DAO)",
+  "page-what-is-ethereum-dao-description": "Новий спосіб співпраці та створення онлайн-спільнот зі спільними цілями та спільними коштами.",
+  "page-what-is-ethereum-dao-alt": "Представлення голосування організації DAO щодо пропозиції.",
+  "page-what-is-ethereum-use-cases-title": "Відкрийте для себе шляхи використання Ethereum",
+  "page-what-is-ethereum-use-cases-subtitle": "Технологія Ethereum призвела до створення нових продуктів і сервісів, які можуть покращити різні сфери нашого життя.",
+  "page-what-is-ethereum-use-cases-subtitle-two": "Ми все ще на ранніх стадіях, але вже маємо багато досягнень, якими можна захоплюватися."
 }

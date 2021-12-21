@@ -939,7 +939,7 @@ I will only explain the part that is different, the `permit` functionality.
 
 Transactions on Ethereum cost ether (ETH), which is equivalent to real money. If you have ERC-20 tokens but not ETH, you can't send
 transactions, so you can't do anything with them. One solution to avoid this problem is
-[meta-transactions](https://uniswap.org/docs/v2/smart-contract-integration/supporting-meta-transactions/).
+[meta-transactions](https://docs.uniswap.org/protocol/V2/guides/smart-contract-integration/supporting-meta-transactions/).
 The owner of the tokens signs a transaction that allows somebody else to withdraw tokens off chain and sends it using the Internet to
 the recipient. The recipient, which does have ETH, then submits the permit on behalf of the owner.
 
@@ -1973,7 +1973,7 @@ library UQ112x112 {
     }
 ```
 
-Because y is `uint112`, the most if can be is 2^113-1. That number can still be encoded as a `UQ112x112`.
+Because y is `uint112`, the most if can be is 2^112-1. That number can still be encoded as a `UQ112x112`.
 
 ```solidity
     // divide a UQ112x112 by a uint112, returning a UQ112x112

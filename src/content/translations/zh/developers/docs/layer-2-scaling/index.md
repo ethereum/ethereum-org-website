@@ -221,7 +221,6 @@ Plasma 是一条独立的区块链。它锚定在以太坊主链上，并使用�
 
 ### 使用混合解决方案 {#use-hybrid-solutions}
 
-- [Offchain Labs Arbitrum SCSC](https://offchainlabs.com/arbitrum.pdf)
 - [Celer](https://www.celer.network/)
 
 ## 延伸阅读 {#further-reading}

@@ -126,15 +126,19 @@ For dapp development, you'll want access to dummy accounts with test ETH so you 
 
 ## A note on wallets {#a-note-on-wallets}
 
-An account is not a wallet. A wallet is the keypair associated with a user-owned account, which allows a user to make transactions from or manage the account.
+An account is not a wallet. An account is the keypair for a user-owned Ethereum account. A wallet is an interface or application that lets you interact with your Ethereum account.
 
 ## A visual demo {#a-visual-demo}
 
 Watch Austin walk you through hash functions, and key pairs.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/QJ010l-pBpE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<figure>
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/QJ010l-pBpE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/9LtBDy67Tho" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<figure>
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/9LtBDy67Tho" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
 
 ## Further reading {#further-reading}
 

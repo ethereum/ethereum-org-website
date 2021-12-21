@@ -22,7 +22,9 @@ sidebarDepth: 2
 
 帐户是一个对象，它包含[地址](#address)、余额、[nonce](#nonce)，并且存储了状态和代码（皆可为空）。 一个帐户可以是[合约帐户](#contract-account)，也可以是[外部帐户（EOA）](#eoa)。
 
-<DocLink to="/developers/docs/accounts" title="以太坊帐户" />
+<DocLink to="/developers/docs/accounts">
+  以太坊帐户
+</DocLink>
 
 ### address 地址 {#address}
 
@@ -32,7 +34,9 @@ sidebarDepth: 2
 
 在 [Solidity 语言里](#solidity)，`assert(false)` 会被编译成 `0xfe`，这是一个无效的操作码，它会消耗完剩下的 [gas](#gas) 并复原所有的变更。 当一个 `assert()` 语句失效，表明出现了非常严重和没有预期的问题，你将需要修复你的代码。 你应该使用 `assert()` 以避免永远不应该发生的情况。
 
-<DocLink to="/developers/docs/smart-contracts/security/" title="安全性" />
+<DocLink to="/developers/docs/smart-contracts/security/">
+  安全性
+</DocLink>
 
 ### attestation 证明 {#attestation}
 
@@ -46,7 +50,9 @@ sidebarDepth: 2
 
 Eth2 升级的一部分，它将成为以太坊网络的协调者。 它会给以太坊引入[权益证明](#proof-of-stake)和[验证者](#validator) 。 它最终将并入[主网](#mainnet)。
 
-<DocLink to="/eth2/beacon-chain/" title="信标链" />
+<DocLink to="/eth2/beacon-chain/">
+  信标链
+</DocLink>
 
 ### big-endian 大端模式 {#big-endian}
 
@@ -56,13 +62,17 @@ Eth2 升级的一部分，它将成为以太坊网络的协调者。 它会给�
 
 一个关于其所包含[交易](#transaction)的所需信息（区块头）的集合，以及称为 [ommer（叔块）](#ommer)的一组其他区块头。 区块由以太坊网络中的[矿工](#miner)添加上链。
 
-<DocLink to="/developers/docs/blocks/" title="区块" />
+<DocLink to="/developers/docs/blocks/">
+  区块
+</DocLink>
 
 ### blockchain 区块链 {#blockchain}
 
 以太坊网络中由[工作量证明](#pow)验证的[区块](#block)序列，每个区块与其父块相连，可一直追溯到[创世纪块](#genesis-block)。 它没有区块大小限制，而使用 [ gas 上限](#gas-limit)来调整区块大小。
 
-<DocLink to="/developers/docs/intro-to-ethereum#what-is-a-blockchain" title="什么是区块链？" />
+<DocLink to="/developers/docs/intro-to-ethereum#what-is-a-blockchain">
+  什么是区块链？
+</DocLink>
 
 ### bytecode 字节码 {#bytecode}
 
@@ -80,7 +90,9 @@ Eth2 升级的一部分，它将成为以太坊网络的协调者。 它会给�
 
 把用高级编程语言 (例如，[Solidity](#solidity)) 写的代码转换为低级语言 (例如，EVM [“字节码”](#bytecode))。
 
-<DocLink to="/developers/docs/smart-contracts/compiling/" title="编译智能合约" />
+<DocLink to="/developers/docs/smart-contracts/compiling/">
+  编译智能合约
+</DocLink>
 
 ### committee 委员会 {#committee}
 
@@ -110,7 +122,9 @@ Eth2 升级的一部分，它将成为以太坊网络的协调者。 它会给�
 
 交叉链接提供一个分片状态的总结。 这是在实现分片的[权益证明系统](#proof-of-stake)里[分片](#shard)链通过[信标链](#beacon-chain)互相通信的方式。
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work" title="权益证明" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
+  权益证明
+</DocLink>
 
 <Divider />
 
@@ -120,19 +134,25 @@ Eth2 升级的一部分，它将成为以太坊网络的协调者。 它会给�
 
 不以等级体系管理来运作的公司或其他组织。 DAO 可能还指一份名为 "The DAO" 的合约，在 2016 年 4 月 30 日发布，它后来在 2016 年 6 月被攻击了；这件事最终引发了一次[硬分叉](#hard-fork)（代码名称为 DAO），分叉的区块高度是 1,192,000，这次分叉回滚了被攻击的 DAO 合约，并导致产生了以太坊和以太坊经典两个分开的、互相竞争的系统。
 
-<DocLink to="/community/#decentralized-autonomous-organizations-daos" title="Decentralized Autonomous Organization (DAO) 去中心化自治组织" />
+<DocLink to="/community/#decentralized-autonomous-organizations-daos">
+  Decentralized Autonomous Organization (DAO) 去中心化自治组织
+</DocLink>
 
 ### DApp 去中心化应用 {#dapp}
 
 去中心化应用。 最基本的定义是，它是一个[智能合约](#smart-contract)和一个网络用户界面。 从更广义来说，Dapp 是一个建在开放、去中心化、点对点的基础设施服务上的网络应用。 此外，很多 Dapp 还包括去中心化存储和/或一个通信协议以及平台。
 
-<DocLink to="/developers/docs/dapps/" title="Dapp 介绍" />
+<DocLink to="/developers/docs/dapps/">
+  Dapp 介绍
+</DocLink>
 
 ### decentralized exchange (DEX) 去中心化交易所 {#dex}
 
 是 [dapp](#dapp) 的一种类型，让人们可以在网络上与对等点交换代币。 你需要有 [ Eth](#ether) 才可以使用 Dex（以支付[交易费](#transaction-fee)），但它们不像中心化交易所那样受地理限制——任何人都可以参与。
 
-<DocLink to="/get-eth/#dex" title="去中心化交易所" />
+<DocLink to="/get-eth/#dex">
+  去中心化交易所
+</DocLink>
 
 ### deed {#deed}
 
@@ -142,7 +162,9 @@ Eth2 升级的一部分，它将成为以太坊网络的协调者。 它会给�
 
 去中心化金融的缩写，旨在通过区块链提供金融服务的一类[去中心化应用](#dapp)，无需中介，任何连接互联网的人都可以参与。
 
-<DocLink to="/dapps/#explore" title="Defi dapps" />
+<DocLink to="/dapps/#explore">
+  Defi dapps
+</DocLink>
 
 ### difficulty 挖矿难度 {#difficulty}
 
@@ -168,13 +190,17 @@ Eth2 升级的一部分，它将成为以太坊网络的协调者。 它会给�
 
 在[信标链](#beacon-chain)协作系统里，每 32 个[slot](#slot)（6.4 分钟）组成的时间间隔称作为一个 epoch。 为了确保安全，每个 epoch 对会对[验证者](#validator)[委员会](#committee)进行混洗。 每个 epoch 里都有为链做[最终确定](#finality)的一次机会。
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work" title="权益证明（PoS)" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
+  权益证明（PoS)
+</DocLink>
 
 ### Ethereum Improvement Proposal (EIP) 以太坊改进提案 (EIP) {#eip}
 
 为以太坊社区提供信息的一种设计文档，说明一个提议的新功能或它的流程或环境（请参阅 [ERC](#erc)）。
 
-<DocLink to="/eips/" title="EIP 简介" />
+<DocLink to="/eips/">
+  EIP 简介
+</DocLink>
 
 ### Ethereum Name Service (ENS) 以太坊域名服务 (ENS) {#ens}
 
@@ -194,7 +220,9 @@ ENS 注册表是一个单一总[合约](#smart-contract)，如 [EIP](#eip) 137 �
 
 ERC 是部分试图定义以太坊具体使用标准的[ EIP ](#eip)贴上的标签。
 
-<DocLink to="/eips/" title="EIP 简介" />
+<DocLink to="/eips/">
+  EIP 简介
+</DocLink>
 
 ### Ethash {#ethash}
 
@@ -206,19 +234,25 @@ ERC 是部分试图定义以太坊具体使用标准的[ EIP ](#eip)贴上的标
 
 以太坊生态系统中使用的原生加密货币，用来支付执行事务时的[ gas ](#gas)开销。 也被写作 ETH 或符号形式 Ξ，这是希腊字母 Xi 的大写。
 
-<DocLink to="/eth/" title="我们数字未来的货币" />
+<DocLink to="/eth/">
+  我们数字未来的货币
+</DocLink>
 
 ### events 事件 {#events}
 
 [EVM](#evm) 使用的日志工具。 [Dapps](#dapp) 可以监听事件，并在用户界面使用它们来触发 JavaScript 回调。
 
-<DocLink to="/developers/docs/smart-contracts/anatomy/#events-and-logs" title="事件（Events）和日志（Logs）" />
+<DocLink to="/developers/docs/smart-contracts/anatomy/#events-and-logs">
+  事件（Events）和日志（Logs）
+</DocLink>
 
 ### Ethereum Virtual Machine (EVM) 以太坊虚拟机 {#evm}
 
 可执行[字节码](#bytecode)的基于堆栈的虚拟机。 在以太坊，执行模型指定了在给定一系列字节码指令和一小组环境数据的情况下如何改变系统状态。 这是通过虚拟状态机的正式模型指定的。
 
-<DocLink to="/developers/docs/evm/" title="以太坊虚拟机（Evm）" />
+<DocLink to="/developers/docs/evm/">
+  以太坊虚拟机（Evm）
+</DocLink>
 
 ### EVM assembly language EVM 汇编语言 {#evm-assembly-language}
 
@@ -236,13 +270,19 @@ ERC 是部分试图定义以太坊具体使用标准的[ EIP ](#eip)贴上的标
 
 通过[智能合约](#smart-contract)，免费提供测试网可用的测试以太币的服务
 
-<DocLink to="/developers/docs/networks/#testnet-faucets" title="测试网水龙头" />
+<DocLink to="/developers/docs/networks/#testnet-faucets">
+  测试网水龙头
+</DocLink>
 
 ### finality 终局性 {#finality}
 
 终局性是保证在指定时间之前的一组交易不会被改变且无法撤销。
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/#finality" title="工作量证明的终局性" /> <DocLink to="/developers/docs/consensus-mechanisms/pos/#finality" title="权益证明的终局性" />
+<DocLink to="/developers/docs/consensus-mechanisms/pow/#finality">
+  工作量证明的终局性
+</DocLink> <DocLink to="/developers/docs/consensus-mechanisms/pos/#finality">
+  权益证明的终局性
+</DocLink>
 
 ### finney {#finney}
 
@@ -256,7 +296,9 @@ ERC 是部分试图定义以太坊具体使用标准的[ EIP ](#eip)贴上的标
 
 [二层](#layer-2)解决方案的安全模型，为了提高交易速度，交易 [合并](#rollups) 在单笔交易中提交到以太坊中。 交易默认假定为是有效的，但如果怀疑有欺诈行为，可以对它们提出质疑。 然后，对交易进行欺诈证明，以确定是否发生欺诈。 这种方法提升了交易量，同时保证安全性。 一些 [rollup](#rollups) 使用的是 [欺诈证明](#validity-proof)。
 
-<DocLink to="/developers/docs/layer-2-scaling/#optimistic-rollups" title="Optimistic Rollup" />
+<DocLink to="/developers/docs/layer-2-scaling/#optimistic-rollups">
+  Optimistic Rollup
+</DocLink>
 
 ### frontier {#frontier}
 
@@ -270,7 +312,9 @@ ERC 是部分试图定义以太坊具体使用标准的[ EIP ](#eip)贴上的标
 
 以太坊网络中为执行智能合约所消耗的虚拟 “燃油”。 以太坊[虚拟机](#evm)使用一种记账方法来衡量 gas 用量，以限制算力资源（参见[图灵完备](#turing-complete)）的消耗。
 
-<DocLink to="/developers/docs/gas/" title="Gas 和费用" />
+<DocLink to="/developers/docs/gas/">
+  Gas 和费用
+</DocLink>
 
 ### gas limit gas 上限 {#gas-limit}
 
@@ -332,13 +376,17 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 将代码编辑器、编译器、运行时和调试器合并的用户界面。
 
-<DocLink to="/developers/docs/ides/" title="集成开发环境 (IDE）" />
+<DocLink to="/developers/docs/ides/">
+  集成开发环境 (IDE）
+</DocLink>
 
 ### immutable deployed code problem 已部署代码不可变的问题 {#immutable-deployed-code-problem}
 
 [合约](#smart-contract)（或[库](#library)）的代码一旦部署，它就不可变更了。 传统标准软件开发习惯于能够修复可能的缺陷并增加新的功能，但这是对智能合约的开发是一个挑战。
 
-<DocLink to="/developers/docs/smart-contracts/deploying/" title="部署智能合约" />
+<DocLink to="/developers/docs/smart-contracts/deploying/">
+  部署智能合约
+</DocLink>
 
 ### internal transaction 内部交易 {#internal-transaction}
 
@@ -352,7 +400,9 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 也称为密钥延伸算法，通过[密钥库](#keystore-file)文件格式来防止暴力破解，防止攻击者预先计算派生密钥的字典或 “彩虹表”，通过重复计算密令的哈希来实现。
 
-<DocLink to="/developers/docs/smart-contracts/security/" title="安全性" />
+<DocLink to="/developers/docs/smart-contracts/security/">
+  安全性
+</DocLink>
 
 ### keccak-256 {#keccak-256}
 
@@ -370,7 +420,9 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 在以太坊协议之上的聚焦与分层优化的开发实现。 这些改进关系到 [交易](#transaction) 速度、更便宜的 [交易费](#transaction-fee)以及交易隐私。
 
-<DocLink to="/developers/docs/layer-2-scaling/" title="二层" />
+<DocLink to="/developers/docs/layer-2-scaling/">
+  二层
+</DocLink>
 
 ### LevelDB {#level-db}
 
@@ -380,7 +432,9 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 特殊类型的[合约](#smart-contract)， 没有 payable 函数，没有 fallback 函数，也没有数据存储。 因此，它不能接收或持有以太坊，也不能储存数据。 一个存储库代表以前部署的代码，其他合约只能进行只读调用。
 
-<DocLink to="/developers/docs/smart-contracts/libraries/" title="智能合约库" />
+<DocLink to="/developers/docs/smart-contracts/libraries/">
+  智能合约库
+</DocLink>
 
 ### lightweight client 轻量级客户端 {#lightweight-client}
 
@@ -414,7 +468,9 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 通过不断做哈希运算，找到新区块的有效[工作量证明](#pow)的网络节点。
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/mining/" title="采矿" />
+<DocLink to="/developers/docs/consensus-mechanisms/pow/mining/">
+  采矿
+</DocLink>
 
 <Divider />
 
@@ -424,21 +480,29 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 指以太坊网络，一个对等网络向每个以太坊节点（网络参与者）推广交易和块。
 
-<DocLink to="/developers/docs/networks/" title="Networks 网络" />
+<DocLink to="/developers/docs/networks/">
+  Networks 网络
+</DocLink>
 
 ### non-fungible token (NFT) 非同质化代币 {#nft}
 
 也叫 “所有权证书” 或 “权证”，是由 ERC721 议案提出的代币标准。 NFT 能够被追溯也可以交易，每个代币是唯一且独一无二的，不像 ERC20 代币，每个 NFT 都是无法互换的。 NFT 能够代表数字或物理资产的所有权。
 
-<DocLink to="/developers/docs/standards/tokens/erc-721/" title="ERC-721 非同质化代币标准" />
+<DocLink to="/developers/docs/standards/tokens/erc-721/">
+  ERC-721 非同质化代币标准
+</DocLink>
 
 ### node 节点 {#node}
 
 参与点对点网络的软件客户端。
 
-<DocLink to="/developers/docs/nodes-and-clients/" title="节点和客户端" />
+<DocLink to="/developers/docs/nodes-and-clients/">
+  节点和客户端
+</DocLink>
 
-<DocLink to="/developers/docs/nodes-and-clients/" title="节点和客户端" />
+<DocLink to="/developers/docs/nodes-and-clients/">
+  节点和客户端
+</DocLink>
 
 ### nonce {#nonce}
 
@@ -456,7 +520,9 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 [Rollup](#rollups) 交易使用 [欺诈证明](#fraud-proof) 提供增加[二层](#layer-2)的交易吞吐量，同时使用[主网](#mainnet)（一层）提供的安全保障。 与 [Plasma](#plasma)（一个类似的二层的解决方案）不同， Optimistic rollup 可以处理更复杂的交易类型 -- [EVM](#evm) 中任何可能的事情。 与 [Zk Rollup](#zk-rollups) 相比，他们确实有延迟问题，因为交易可以通过欺诈证据被质疑。
 
-<DocLink to="/developers/docs/layer-2-scaling/#optimistic-rollups" title="Optimistic Rollup" />
+<DocLink to="/developers/docs/layer-2-scaling/#optimistic-rollups">
+  Optimistic Rollup
+</DocLink>
 
 <Divider />
 
@@ -470,7 +536,9 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 [二层](#layer-2)使用[欺诈校验](#fraud-proof)的扩容解决方案，例如 [Optimistic rollup](#optimistic-rollups)。 Plasma 仅限于简单的交易，例如基本令牌传输和交换。
 
-<DocLink to="/developers/docs/layer-2-scaling/#Plasma" title="以太坊 Plasma 扩容解决方案" />
+<DocLink to="/developers/docs/layer-2-scaling/#Plasma">
+  以太坊 Plasma 扩容解决方案
+</DocLink>
 
 ### private key (secret key) 私钥（密钥） {#private-key}
 
@@ -480,13 +548,17 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 在区块链中实现分布式[共识](#consensus)的方法。 PoS 要求用户证明自己拥有一定数量的加密货币（在网络中“质押”），以便能够参与交易的验证。
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/" title="权益证明（PoS）" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos/">
+  权益证明（PoS）
+</DocLink>
 
 ### proof of work (PoW) 工作量证明 {#pow}
 
 需要大量计算才能得出的数据（证明）。 在以太坊中， [矿工](#miner) 必须找到符合整个网络范围的 [算力难度](#difficulty) 目标的 [Ethash](#ethash) 算法的数值。
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/" title="工作量证明（PoW)" />
+<DocLink to="/developers/docs/consensus-mechanisms/pow/">
+  工作量证明（PoW)
+</DocLink>
 
 ### public key 公钥 {#public-key}
 
@@ -504,7 +576,9 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 攻击者合约调用受害者合约函数，使得在调用执行过程中受害者合约会循环调用攻击者合约。 这可能导致通过跳过受害者合约的余额更新或提款金额计算的部分来盗窃资金。
 
-<DocLink to="/developers/docs/smart-contracts/security/#re-entrancy" title="重入攻击" />
+<DocLink to="/developers/docs/smart-contracts/security/#re-entrancy">
+  重入攻击
+</DocLink>
 
 ### reward 区块奖励 {#reward}
 
@@ -518,7 +592,9 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 一种[二层](#layer-2)扩容解决方案，将多笔交易分批提交到[以太坊主链](#mainnet)的单笔交易中。 这就可以降低 [gas](#gas) 成本，增加[交易](#transaction)吞吐量。 有些 Optimistic 和 ZK Rollup 使用两种不同的安全方法来提供扩容能力。
 
-<DocLink to="/developers/docs/layer-2-scaling/#rollups" title="Rollup" />
+<DocLink to="/developers/docs/layer-2-scaling/#rollups">
+  Rollup
+</DocLink>
 
 <Divider />
 
@@ -528,7 +604,9 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 以太坊第四个也是最后一个开发阶段。
 
-<DocLink to="/eth2/" title="以太坊 2.0（Eth2）" />
+<DocLink to="/eth2/">
+  以太坊 2.0（Eth2）
+</DocLink>
 
 ### Secure Hash Algorithm (SHA) 安全哈希算法 {#sha}
 
@@ -538,13 +616,17 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 由[信标链](#beacon-chain)管理并由[验证者](#validator)保护的[权益证明](#proof-of-stake)链。 作为 Eth2 分片链升级的一部分，将有 64 个加入该网络。 分片链为[二层](#layer-2)解决方案提供额外数据，例如为 [optimistic rollup](#optimistic-rollups) 和 [ZK rollup](#zk-rollups) 提供额外的交易吞吐量。
 
-<DocLink to="/eth2/shard-chains" title="分片链" />
+<DocLink to="/eth2/shard-chains">
+  分片链
+</DocLink>
 
 ### Sidechain 侧链 {#sidechain}
 
-一个使用不同链、常常更快的[协商一致规则]{#consensus-rules} 的扩容解决方案。 需要桥来连接这些侧链到 [mainnet](#mainnet)。 [Rollup](#rollups) 也使用侧链，但是他们可以与[主网](#mainnet)进行操作。
+一个使用不同链、常常更快的[协商一致规则](#consensus-rules) 的扩容解决方案。 需要桥来连接这些侧链到 [mainnet](#mainnet)。 [Rollup](#rollups) 也使用侧链，但是他们可以与[主网](#mainnet)进行操作。
 
-<DocLink to="/developers/docs/layer-2-scaling/#sidechains" title="侧链" />
+<DocLink to="/developers/docs/layer-2-scaling/#sidechains">
+  侧链
+</DocLink>
 
 ### singleton 单例 {#singleton}
 
@@ -554,19 +636,25 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 一个时间段（12 秒），在这个时间段内，[验证者](#validator)可以在[权益证明](#proof-of-stake)系统中提出一个新的[信标链](#beacon-chain)和[分片](#shard)链区块。 一个插槽有可能是空的。 32 个插槽构成一个 [epoch](#epoch)。
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work" title="权益证明" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
+  权益证明
+</DocLink>
 
 ### smart contract 智能合约 {#smart-contract}
 
 在以太坊计算基础框架上执行的程序。
 
-<DocLink to="/developers/docs/smart-contracts/" title="智能合约简介" />
+<DocLink to="/developers/docs/smart-contracts/">
+  智能合约简介
+</DocLink>
 
 ### Solidity {#solidity}
 
 一种语法类似 JavaScript、C++ 或 Java 的程序化（命令式）编程语言， 是用于编写以太坊[智能合约](#smart-contract)的最流行也最常用的编程语言。 由 Gavin Wood 博士创建。
 
-<DocLink to="/developers/docs/smart-contracts/languages/#solidity" title="Solidity" />
+<DocLink to="/developers/docs/smart-contracts/languages/#solidity">
+  Solidity
+</DocLink>
 
 ### Solidity 内联汇编 {#solidity-inline-assembly}
 
@@ -580,19 +668,25 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 一种 [ERC-20 代币](#token-standard)，其价值与另一种资产的价值锚定。 稳定币的锚定资产包括法币（如美元），贵金属（如黄金）以及其他加密货币（如比特币）。
 
-<DocLink to="/eth/#tokens" title="ETH 不是以太坊上唯一的加密货币" />
+<DocLink to="/eth/#tokens">
+  ETH 不是以太坊上唯一的加密货币
+</DocLink>
 
 ### staking 权益质押 {#staking}
 
 存入一定量的 [ether](#ether)（质押金）成为验证者并参与维护[以太坊网络](#network)。 验证者在 [proof-of-stake（权益证明）](#pos) 共识模型中检查 [交易](#transaction) 并且提议 [区块](#block)。 质押能够为符合网络利益的行为提供经济激励。 你将会因为履行[验证者](#validator)义务而获得奖励，反之将损失一定量的 ETH。
 
-<DocLink to="/eth2/staking/" title="质押您的 ETH 并成为以太坊验证者" />
+<DocLink to="/eth2/staking/">
+  质押您的 ETH 并成为以太坊验证者
+</DocLink>
 
 ### state channels 状态通道 {#state-channels}
 
 一种[二层](#layer-2)解决方案，在参与者之间设置一个通道，他们可以在通道中自由交易且成本低廉。 只有开设和关闭通道的[交易](#transaction)被提交到 [主网](#mainnet)。 这使得交易吞吐量大幅提升，但依赖于已知的参与人数和锁定资金。
 
-<DocLink to="/developers/docs/layer-2-scaling/#state-channels" title="状态通道" />
+<DocLink to="/developers/docs/layer-2-scaling/#state-channels">
+  状态通道
+</DocLink>
 
 ### szabo {#szabo}
 
@@ -610,19 +704,25 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 "测试网络"的简称，用于模拟以太坊主网行为的网络（参阅 [mainnet 主网](#mainnet)）。
 
-<DocLink to="/developers/docs/networks/#testnets" title="测试网" />
+<DocLink to="/developers/docs/networks/#testnets">
+  测试网
+</DocLink>
 
 ### token standard 代币标准 {#token-standard}
 
 由 ERC-20 提案引入，为同质化代币（fungible tokens）提供了标准化的 [智能合约](#smart-contract) 结构。 不同于 [NFT（非同质化代币）](#nft)，同一合约中的代币可以被追踪、交易及置换。
 
-<DocLink to="/developers/docs/standards/tokens/erc-20/" title="ERC-20 代币标准" />
+<DocLink to="/developers/docs/standards/tokens/erc-20/">
+  ERC-20 代币标准
+</DocLink>
 
 ### transaction 交易 {#transaction}
 
 由一个原始[帐户](#account)签署并以一个特定地址为目标的提交到以太坊区块链上的数据， 该交易包含交易[ gas 上限](#gas-limit)等元数据。
 
-<DocLink to="/developers/docs/transactions/" title="交易" />
+<DocLink to="/developers/docs/transactions/">
+  交易
+</DocLink>
 
 ### transaction fee 交易费 {#transaction-fee}
 
@@ -644,25 +744,35 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 [权益证明](#proof-of-stake)系统中的[节点](#node)，负责存储数据、处理交易并且在区块链中添加新区块。 要激活一名验证者，需要[质押](#staking) 32 ETH。
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos" title="权益证明" /> <DocLink to="/eth2/staking/" title="质押" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos">
+  权益证明
+</DocLink> <DocLink to="/eth2/staking/">
+  质押
+</DocLink>
 
 ### Validity proof 有效性证明 {#validity-proof}
 
 某些[二层](#layer-2)解决方案的安全模型，以提高速度，交易 [合并](/#rollups)为交易批并在单次交易中提交到以太坊。 交易计算在链下进行，然后提交给主链，并附带有效性证明。 这种方法提升了交易量，同时保证安全性。 一些 [rollup](#rollups) 使用的是[欺诈证明](#fraud-proof)。
 
-<DocLink to="/developers/docs/layer-2-scaling/#zk-rollups" title="ZK Rollup" />
+<DocLink to="/developers/docs/layer-2-scaling/#zk-rollups">
+  ZK Rollup
+</DocLink>
 
 ### Validium {#validium}
 
 [二层](#layer-2)解决方案，使用[有效性证明](#validity-proof)来提高交易吞吐量。 与[ZK Rollup](#zk-rollup)不同，Validium 的数据没有存储在一层[主网](#mainnet)中。
 
-<DocLink to="/developers/docs/layer-2-scaling/#validium" title="Validium" />
+<DocLink to="/developers/docs/layer-2-scaling/#validium">
+  Validium
+</DocLink>
 
 ### Vyper {#vyper}
 
 高层次的编程语言与，语法与 Python 类似。 旨在更接近纯函数式语言。 由 Vitalik Buterin 创造。
 
-<DocLink to="/developers/docs/smart-contracts/languages/#vyper" title="Vyper" />
+<DocLink to="/developers/docs/smart-contracts/languages/#vyper">
+  Vyper
+</DocLink>
 
 <Divider />
 
@@ -672,13 +782,17 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 保存用户[密钥](#private-key)的软件， 可以用来访问并管理你的以太坊[帐户](#account)并与[智能合约](#smart-contract)交互。 密钥不一定要存储在钱包中，为了提高安全性，可以离线存储（如写在一张记忆卡或者纸上）。 虽然称其为 “钱包”，但它并不存储代币本身。
 
-<DocLink to="/wallets/" title="以太坊钱包" />
+<DocLink to="/wallets/">
+  以太坊钱包
+</DocLink>
 
 ### Web3 {#web3}
 
 万维网的第三个版本。 由 Gavin Wood 博士首次提议，代表了对网络应用的新愿景与新焦点：从中心化所有并管理的应用转移到在[去中心化协议](#dapp))上构建的应用。
 
-<DocLink to="/developers/docs/web2-vs-web3/" title="Web2 与 Web3 对比" />
+<DocLink to="/developers/docs/web2-vs-web3/">
+  Web2 与 Web3 对比
+</DocLink>
 
 ### wei {#wei}
 
@@ -696,7 +810,9 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 使用[有效性证明的交易[rollup](#rollups)](#validity-proof)以在使用[主网](#mainnet)（一层）安全性的同时提高[二层](#layer-2)交易吞吐量。 虽然他们无法处理复杂的交易类型，如 [Optimistic rollup](#optimistic-rollups)，但没有延迟问题，因为提交交易时可以证明有效。
 
-<DocLink to="/developers/docs/layer-2-scaling/#zk-rollups" title="ZK Rollup" />
+<DocLink to="/developers/docs/layer-2-scaling/#zk-rollups">
+  ZK Rollup
+</DocLink>
 
 <Divider />
 

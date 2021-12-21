@@ -5,13 +5,10 @@ lang: fr
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
-summaryPoints:
-  [
-    "La fragmentation (ou sharding) est une mise à niveau en plusieurs phases qui améliorera l'évolutivité et la capacité d'Ethereum.",
-    "Les chaînes de fragments répartissent la charge du réseau sur 64 nouvelles chaînes.",
-    "Elles facilitent l'exécution d'un nœud en maintenant les exigences matérielles à un niveau faible.",
-    'Les feuilles de route techniques incluent des travaux sur les chaînes de fragments dans la "Phase 1" et potentiellement la "Phase 2".',
-  ]
+summaryPoint1: La fragmentation (ou sharding) est une mise à niveau en plusieurs phases qui améliorera l'évolutivité et la capacité d'Ethereum.
+summaryPoint2: Les chaînes de fragments répartissent la charge du réseau sur 64 nouvelles chaînes.
+summaryPoint3: Elles facilitent l'exécution d'un nœud en maintenant les exigences matérielles à un niveau faible.
+summaryPoint4: Les feuilles de route techniques incluent des travaux sur les chaînes de fragments dans la "Phase 1" et potentiellement la "Phase 2".
 ---
 
 <UpgradeStatus date="~2023">

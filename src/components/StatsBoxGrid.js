@@ -309,14 +309,10 @@ const StatsBoxGrid = () => {
   useEffect(() => {
     const fetchPrices = async () => {
       try {
-        const daysToFetch = 90
-        const toUnixTimestamp = Math.floor(new Date().getTime() / 1000) // "Now" as unix timestamp (seconds)
-        const fromUnixTimestamp = toUnixTimestamp - 60 * 60 * 24 * daysToFetch // {daysToFetch} days ago (in seconds)
-        // TODO: Switch back to `getData()` to use cache before prod
         const {
           data: { prices },
         } = await axios.get(
-          `https://api.coingecko.com/api/v3/coins/ethereum/market_chart/range?vs_currency=usd&from=${fromUnixTimestamp}&to=${toUnixTimestamp}`
+          `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=90&interval=daily`
         )
         const data = prices
           .map(([timestamp, value]) => ({

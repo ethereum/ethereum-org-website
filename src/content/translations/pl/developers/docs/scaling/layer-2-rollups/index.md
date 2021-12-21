@@ -114,7 +114,6 @@ Istnieją rozwiązania hybrydowe, które łączą w sobie najlepsze elementy wie
 
 ### Używanie rozwiązań hybrydowych {#use-hybrid-solutions}
 
-- [Offchain Labs Arbitrum SCSC](https://offchainlabs.com/arbitrum.pdf)
 - [Celer](https://www.celer.network/)
 
 ## Dalsza lektura {#further-reading}

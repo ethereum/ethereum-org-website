@@ -102,7 +102,6 @@ Voici quelques exemples de solutions L2 prêtes pour la production ou qui le ser
   - [Skale](https://skale.network)
   - [POA Network](https://www.poa.network/)
 - Solutions hybrides qui combinent les propriétés de plusieurs catégories
-  - [Offchain Labs Arbitrum SCSC](https://https://offchainlabs.com/arbitrum.pdf)
   - [Celer](https://celer.network)
 
 ## Applications d'entreprise live sur le réseau principal {#enterprise-live-on-mainnet}

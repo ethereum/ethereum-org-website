@@ -13,73 +13,59 @@
     "useLegacyHomepage": true
   },
   "ca": {
-    "language": "Català",
-    "useLegacyHomepage": true
+    "language": "Català"
   },
   "cs": {
-    "language": "Čeština",
-    "useLegacyHomepage": true
+    "language": "Čeština"
   },
   "de": {
     "language": "Deutsch"
   },
   "el": {
-    "language": "Ελληνικά",
-    "useLegacyHomepage": true
+    "language": "Ελληνικά"
   },
   "es": {
-    "language": "Español",
-    "useLegacyHomepage": true
+    "language": "Español"
   },
   "fa": {
     "language": "فارسی"
   },
   "fi": {
-    "language": "Suomi",
-    "useLegacyHomepage": true
+    "language": "Suomi"
   },
   "fr": {
-    "language": "Français",
-    "useLegacyHomepage": true
+    "language": "Français"
   },
   "hi": {
-    "language": "हिन्दी",
-    "useLegacyHomepage": true
+    "language": "हिन्दी"
   },
   "hr": {
-    "language": "Hrvatski",
-    "useLegacyHomepage": true
+    "language": "Hrvatski"
   },
   "hu": {
     "language": "Magyar"
   },
   "id": {
-    "language": "Bahasa Indonesia",
-    "useLegacyHomepage": true
+    "language": "Bahasa Indonesia"
   },
   "ig": {
-    "language": "Ibo",
-    "useLegacyHomepage": true
+    "language": "Ibo"
   },
   "it": {
-    "language": "Italiano",
-    "useLegacyHomepage": true
+    "language": "Italiano"
   },
   "ja": {
-    "language": "日本語",
-    "useLegacyHomepage": true
+    "language": "日本語"
   },
   "ko": {
-    "language": "한국어",
-    "useLegacyHomepage": true
+    "language": "한국어"
   },
   "lt": {
     "language": "Lietuvis",
     "useLegacyHomepage": true
   },
   "ml": {
-    "language": "മലയാളം",
-    "useLegacyHomepage": true
+    "language": "മലയാളം"
   },
   "ms": {
     "language": "Melayu"
@@ -88,43 +74,38 @@
     "language": "Nederlands"
   },
   "nb": {
-    "language": "Norsk",
-    "useLegacyHomepage": true
+    "language": "Norsk"
   },
   "pl": {
-    "language": "Polski",
-    "useLegacyHomepage": true
+    "language": "Polski"
   },
   "pt": {
-    "language": "Português",
-    "useLegacyHomepage": true
+    "language": "Português"
   },
   "pt-br": {
     "language": "Português",
     "useLegacyHomepage": true
   },
   "ro": {
-    "language": "Română",
-    "useLegacyHomepage": true
+    "language": "Română"
   },
   "ru": {
     "language": "Pусский"
   },
   "se": {
-    "language": "Svenska",
-    "useLegacyHomepage": true
+    "language": "Svenska"
   },
   "sk": {
-    "language": "Slovenský",
-    "useLegacyHomepage": true
+    "language": "Slovenský"
   },
   "sl": {
-    "language": "Slovenščina",
-    "useLegacyHomepage": true
+    "language": "Slovenščina"
+  },
+  "sw": {
+    "language": "Kiswahili"
   },
   "tr": {
-    "language": "Türkçe",
-    "useLegacyHomepage": true
+    "language": "Türkçe"
   },
   "uk": {
     "language": "Українська"

@@ -6,14 +6,11 @@ template: use-cases
 emoji: ":money_with_wings:"
 sidebar: true
 image: ../../assets/use-cases/defi.png
-alt: "An Eth logo made of lego bricks."
+alt: An Eth logo made of lego bricks.
 sidebarDepth: 2
-summaryPoints:
-  [
-    "A global, open alternative to the current financial system.",
-    "Products that let you borrow, save, invest, trade, and more.",
-    "Based on open-source technology that anyone can program with.",
-  ]
+summaryPoint1: A global, open alternative to the current financial system.
+summaryPoint2: Products that let you borrow, save, invest, trade, and more.
+summaryPoint3: Based on open-source technology that anyone can program with.
 ---
 
 DeFi is an open and global financial system built for the internet age – an alternative to a system that's opaque, tightly controlled, and held together by decades-old infrastructure and processes. It gives you control and visibility over your money. It gives you exposure to global markets and alternatives to your local currency or banking options. DeFi products open up financial services to anyone with an internet connection and they're largely owned and maintained by their users. So far tens of billions of dollars worth of crypto has flowed through DeFi applications and it's growing every day.
@@ -24,7 +21,9 @@ DeFi is a collective term for financial products and services that are accessibl
 
 There's a booming crypto economy out there, where you can lend, borrow, long/short, earn interest, and more. Crypto-savvy Argentinians have used DeFi to escape crippling inflation. Companies have started streaming their employees their wages in real time. Some folks have even taken out and paid off loans worth millions of dollars without the need for any personal identification.
 
-<iframe width="100%" height="315px" src="https://www.youtube.com/embed/H-O3r2YMWJ4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<figure>
+  <iframe width="100%" height="315px" src="https://www.youtube.com/embed/H-O3r2YMWJ4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
 
 ## DeFi vs traditional finance {#defi-vs-tradfi}
 
@@ -51,7 +50,9 @@ One of the best ways to see the potential of DeFi is to understand the problems 
 | The markets are always open.                                                                       | Markets close because employees need breaks.                                                                                   |
 | It's built on transparency – anyone can look at a product's data and inspect how the system works. | Financial institutions are closed books: you can't ask to see their loan history, a record of their managed assets, and so on. |
 
-<ButtonLink to="/dapps/?category=finance">Explore DeFi apps</ButtonLink>
+<ButtonLink to="/dapps/?category=finance">
+  Explore DeFi apps
+</ButtonLink>
 
 ## It started with Bitcoin... {#bitcoin}
 
@@ -59,7 +60,9 @@ Bitcoin in many ways was the first DeFi application. Bitcoin lets you really own
 
 Ethereum builds on this. Like Bitcoin, the rules can't change on you and everyone has access. But it also makes this digital money programmable, using [smart contracts](/glossary#smart-contract), so you can go beyond storing and sending value.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/qFBYB4W2tqU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<figure>
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/qFBYB4W2tqU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
 
 ## Programmable money {#programmable-money}
 
@@ -67,7 +70,9 @@ This sounds odd... "why would I want to program my money"? However, this is more
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Explore our suggestions for DeFi applications to try out if you're new to Ethereum.</div>
-  <ButtonLink to="/dapps/?category=finance">Explore DeFi apps</ButtonLink>
+  <ButtonLink to="/dapps/?category=finance">
+    Explore DeFi apps
+  </ButtonLink>
 </InfoBanner>
 
 ## What can you do with DeFi? {#defi-use-cases}
@@ -92,7 +97,9 @@ There's a decentralized alternative to most financial services. But Ethereum als
 
 As a blockchain, Ethereum is designed for sending transactions in a secure and global way. Like Bitcoin, Ethereum makes sending money around the world as easy as sending an email. Just enter your recipient's [ENS name](/nft/#nft-domains) (like bob.eth) or their account address from your wallet and your payment will go directly to them in minutes (usually). To send or receive payments, you will need a [wallet](/wallets/).
 
-<ButtonLink to="/dapps/?category=finance">See payment dapps</ButtonLink>
+<ButtonLink to="/dapps/?category=finance">
+  See payment dapps
+</ButtonLink>
 
 #### Stream money around the globe... {#stream-money}
 
@@ -108,7 +115,9 @@ Cryptocurrency volatility is a problem for lots of financial products and genera
 
 Coins like Dai or USDC have a value that stays within a few cents of a dollar. This makes them perfect for earning or retail. Many people in Latin America have used stablecoins as a way of protecting their savings in a time of great uncertainty with their government-issued currencies.
 
-<ButtonLink to="/stablecoins/">More on stablecoins</ButtonLink>
+<ButtonLink to="/stablecoins/">
+  More on stablecoins
+</ButtonLink>
 
 <Divider />
 
@@ -119,7 +128,9 @@ Borrowing money from decentralized providers comes in two main varieties.
 - Peer-to-peer, meaning a borrower will borrow directly from a specific lender.
 - Pool-based where lenders provide funds (liquidity) to a pool that borrowers can borrow from.
 
-<ButtonLink to="/dapps/?category=finance">See borrowing dapps</ButtonLink>
+<ButtonLink to="/dapps/?category=finance">
+  See borrowing dapps
+</ButtonLink>
 
 There are many advantages to using a decentralized lender...
 
@@ -177,7 +188,9 @@ You can earn interest on your crypto by lending it and see your funds grow in re
 - Your aDai will increase based on the interest rates and you can see your balance growing in your wallet. Dependent on the APR, your wallet balance will read something like 100.1234 after a few days or even hours!
 - You can withdraw an amount of regular Dai that's equal to your aDai balance at any time.
 
-<ButtonLink to="/dapps/?category=finance">See lending dapps</ButtonLink>
+<ButtonLink to="/dapps/?category=finance">
+  See lending dapps
+</ButtonLink>
 
 #### No-loss lotteries {#no-loss-lotteries}
 
@@ -191,7 +204,9 @@ No-loss lotteries like PoolTogether are a fun and innovative new way to save mon
 
 The prize pool is generated by all the interest generated by lending the ticket deposits like in the lending example above.
 
-<ButtonLink isSecondary to="https://pooltogether.com">Try PoolTogether</ButtonLink>
+<ButtonLink isSecondary to="https://pooltogether.com">
+  Try PoolTogether
+</ButtonLink>
 
 <Divider />
 
@@ -201,7 +216,9 @@ There are thousands of tokens on Ethereum. Decentralized exchanges (DEXs) let yo
 
 For example, if you want to use the no-loss lottery PoolTogether (described above), you'll need a token like Dai or USDC. These DEXs allow you to swap your ETH for those tokens and back again when you're finished.
 
-<ButtonLink to="/dapps/?category=finance">See token exchanges</ButtonLink>
+<ButtonLink to="/dapps/?category=finance">
+  See token exchanges
+</ButtonLink>
 
 <Divider />
 
@@ -211,7 +228,9 @@ There are more advanced options for traders who like a little more control. Limi
 
 When you use a centralized exchange you have to deposit your assets before the trade and trust them to look after them. While your assets are deposited, they're at risk as centralized exchanges are attractive targets for hackers.
 
-<ButtonLink to="/dapps/?category=finance">See trading dapps</ButtonLink>
+<ButtonLink to="/dapps/?category=finance">
+  See trading dapps
+</ButtonLink>
 
 <Divider />
 
@@ -221,7 +240,9 @@ There are fund management products on Ethereum that will try to grow your portfo
 
 A good example is the [DeFi Pulse Index fund (DPI)](https://defipulse.com/blog/defi-pulse-index/). This is a fund that rebalances automatically to ensure your portfolio always includes [the top DeFi tokens by market capitalisation](https://www.coingecko.com/en/defi). You never have to manage any of the details and you can withdraw from the fund whenever you like.
 
-<ButtonLink to="/dapps/?category=finance">See investment dapps</ButtonLink>
+<ButtonLink to="/dapps/?category=finance">
+  See investment dapps
+</ButtonLink>
 
 <Divider />
 
@@ -233,7 +254,9 @@ Ethereum is an ideal platform for crowdfunding:
 - It's transparent so fundraisers can prove how much money has been raised. You can even trace how funds are being spent later down the line.
 - Fundraisers can set up automatic refunds if, for example, there is a specific deadline and minimum amount that isn't met.
 
-<ButtonLink to="/dapps/?category=finance">See crowdfunding dapps</ButtonLink>
+<ButtonLink to="/dapps/?category=finance">
+  See crowdfunding dapps
+</ButtonLink>
 
 #### Quadratic funding {#quadratic-funding}
 
@@ -258,7 +281,9 @@ Decentralized insurance aims to make insurance cheaper, faster to pay out, and m
 
 Ethereum products, like any software, can suffer from bugs and exploits. So right now a lot of insurance products in the space focus on protecting their users against loss of funds. However there are projects starting to build out coverage for everything life can throw at us. A good example of this is Etherisc's Crop cover which aims to [protect smallholder farmers in Kenya against droughts and flooding](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Decentralized insurance can provide cheaper cover for farmers who are often priced out of traditional insurance.
 
-<ButtonLink to="/dapps/?category=finance">See insurance dapps</ButtonLink>
+<ButtonLink to="/dapps/?category=finance">
+  See insurance dapps
+</ButtonLink>
 
 <Divider />
 
@@ -266,7 +291,9 @@ Ethereum products, like any software, can suffer from bugs and exploits. So righ
 
 With so much going on, you'll need a way to keep track of all your investments, loans, and trades. There are a host of products that let you coordinate all your DeFi activity from one place. This is the beauty of DeFi's open architecture. Teams can build out interfaces where you can't just see your balances across products, you can use their features too. You might find this useful as you explore more of DeFi.
 
-<ButtonLink to="/dapps/?category=finance">See portfolio dapps</ButtonLink>
+<ButtonLink to="/dapps/?category=finance">
+  See portfolio dapps
+</ButtonLink>
 
 <Divider />
 
@@ -302,7 +329,9 @@ You can think of DeFi in layers:
 
 DeFi is an open-source movement. The DeFi protocols and applications are all open for you to inspect, fork, and innovate on. Because of this layered stack (they all share the same base blockchain and assets), protocols can be mixed and matched to unlock unique combo opportunities.
 
-<ButtonLink to="/developers/docs/dapps/">More on building dapps</ButtonLink>
+<ButtonLink to="/developers/docs/dapps/">
+  More on building dapps
+</ButtonLink>
 
 <!-- TODO: Write a build DeFi dapp intro page in developers section -->
 

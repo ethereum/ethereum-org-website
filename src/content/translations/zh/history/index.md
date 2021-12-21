@@ -35,7 +35,9 @@ isOutdated: true
 
 [请阅读以太坊基金会公告](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/eth2/beacon-chain/" title="信标链" />
+<DocLink to="/eth2/beacon-chain/">
+  信标链
+</DocLink>
 
 ---
 
@@ -49,7 +51,9 @@ isOutdated: true
 
 [请阅读以太坊基金会公告](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/eth2/staking/" title="权益质押" />
+<DocLink to="/eth2/staking/">
+  权益质押
+</DocLink>
 
 ---
 
@@ -308,4 +312,6 @@ Gavin Wood 博士撰写的黄皮书，是关于以太坊协议的技术定义。
 
 该项目在 2015 年启动。但早在 2013 年，以太坊的创始人 Vitalik Buterin 就发表了介绍性文章。
 
-<DocLink to="/whitepaper/" title="白皮书" />
+<DocLink to="/whitepaper/">
+  白皮书
+</DocLink>

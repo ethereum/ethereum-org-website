@@ -5,13 +5,10 @@ lang: en
 template: eth2
 sidebar: true
 image: ../../../assets/eth2/core.png
-summaryPoints:
-  [
-    "The beacon chain doesn't change anything about the Ethereum we use today.",
-    "It will coordinate the network.",
-    "It introduces proof-of-stake to the Ethereum ecosystem.",
-    'You might know this as "Phase 0" on technical roadmaps.',
-  ]
+summaryPoint1: The beacon chain doesn't change anything about the Ethereum we use today.
+summaryPoint2: It will coordinate the network.
+summaryPoint3: It introduces proof-of-stake to the Ethereum ecosystem.
+summaryPoint4: You might know this as "Phase 0" on technical roadmaps.
 ---
 
 <UpgradeStatus isShipped date="Shipped!">
@@ -52,13 +49,17 @@ The Eth2 upgrades are all somewhat interrelated. So let’s recap how the Beacon
 
 The Beacon Chain, at first, will exist separately to the Ethereum Mainnet we use today. But eventually they will be connected. The plan is to "merge" Mainnet into the proof-of-stake system that's controlled and coordinated by the Beacon Chain.
 
-<ButtonLink to="/eth2/merge/">The merge</ButtonLink>
+<ButtonLink to="/eth2/merge/">
+    The merge
+</ButtonLink>
 
 ### Shards and the Beacon Chain {#shards-and-beacon-chain}
 
 Shard chains can only safely enter the Ethereum ecosystem with a proof-of-stake consensus mechanism in place. The Beacon Chain will introduce staking, paving the way for the shard chain upgrade to follow.
 
-<ButtonLink to="/eth2/shard-chains/">Shard chains</ButtonLink>
+<ButtonLink to="/eth2/shard-chains/">
+    Shard chains
+</ButtonLink>
 
 <Divider />
 

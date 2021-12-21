@@ -35,7 +35,9 @@ La [beacon chain](/eth2/beacon-chain/) necessitava di 16384 depositi di 32 ETH i
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/eth2/beacon-chain/" title="La beacon chain" />
+<DocLink to="/eth2/beacon-chain/">
+  La beacon chain
+</DocLink>
 
 ---
 
@@ -49,7 +51,9 @@ Il contratto di deposito in staking ha introdotto lo [staking](/glossary/#stakin
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/eth2/staking/" title="Staking" />
+<DocLink to="/eth2/staking/">
+  Staking
+</DocLink>
 
 ---
 
@@ -301,4 +305,6 @@ Lo yellowpaper, redatto dal dott. Gavin Wood, è una definizione tecnica del pro
 
 Documento introduttivo, pubblicato nel 2013 da Vitalik Buterin, il fondatore di Ethereum, prima del lancio del progetto nel 2015.
 
-<DocLink to="/whitepaper/" title="Whitepaper" />
+<DocLink to="/whitepaper/">
+  Whitepaper
+</DocLink>

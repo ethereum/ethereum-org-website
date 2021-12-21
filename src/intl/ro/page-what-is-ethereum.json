@@ -53,5 +53,17 @@
   "page-what-is-ethereum-wallets": "Portofele",
   "page-what-is-ethereum-wallets-desc": "Cum îți gestionezi ETH-ul și contul Ethereum. Vei avea nevoie de un portofel pentru a începe – te vom ajuta să alegi unul.",
   "page-what-is-ethereum-welcome": "Bun venit în Ethereum",
-  "page-what-is-ethereum-welcome-2": "Sperăm să rămâi."
+  "page-what-is-ethereum-welcome-2": "Sperăm să rămâi.",
+  "page-what-is-ethereum-defi-title": "Finanțe descentralizate (DeFi)",
+  "page-what-is-ethereum-defi-description": "Un sistem financiar mai deschis, care îți oferă mai mult control asupra banilor tăi și deblochează noi posibilități.",
+  "page-what-is-ethereum-defi-alt": "Logotip Eth, alcătuit din piese lego.",
+  "page-what-is-ethereum-nft-title": "Token-uri non-fungibile (NFT-uri)",
+  "page-what-is-ethereum-nft-description": "Un mod de a reprezenta articolele unice ca active Ethereum care pot fi tranzacționate, folosite ca dovadă de proprietate și pentru a crea noi oportunități pentru creatori.",
+  "page-what-is-ethereum-nft-alt": "Logotip Eth afișat printr-o hologramă.",
+  "page-what-is-ethereum-dao-title": "Organizații autonome descentralizate (DAOs)",
+  "page-what-is-ethereum-dao-description": "O nouă modalitate de a colabora și de a înființa comunități online cu obiective și fonduri comune.",
+  "page-what-is-ethereum-dao-alt": "O reprezentare a votului unui DAO în favoarea unei propuneri.",
+  "page-what-is-ethereum-use-cases-title": "Descoperă unde se poate folosi Ethereum",
+  "page-what-is-ethereum-use-cases-subtitle": "Ethereum a condus la crearea de noi produse și servicii care pot îmbunătăți diferite domenii ale vieții noastre.",
+  "page-what-is-ethereum-use-cases-subtitle-two": "Suntem încă în stadiile incipiente, dar sunt multe lucruri de care trebuie să fim entuziasmați."
 }

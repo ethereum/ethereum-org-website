@@ -7,13 +7,10 @@ emoji: ":frame_with_picture:"
 sidebar: true
 sidebarDepth: 2
 image: ../../assets/infrastructure_transparent.png
-alt: "An Eth logo being displayed via hologram."
-summaryPoints:
-  [
-    "A way to represent anything unique as an Ethereum-based asset.",
-    "NFTs are giving more power to content creators than ever before.",
-    "Powered by smart contracts on the Ethereum blockchain.",
-  ]
+alt: An Eth logo being displayed via hologram.
+summaryPoint1: A way to represent anything unique as an Ethereum-based asset.
+summaryPoint2: NFTs are giving more power to content creators than ever before.
+summaryPoint3: Powered by smart contracts on the Ethereum blockchain.
 ---
 
 NFTs are currently taking the digital art and collectibles world by storm. Digital artists are seeing their lives change thanks to huge sales to a new crypto-audience. And celebrities are joining in as they spot a new opportunity to connect with fans. But digital art is only one way to use NFTs. Really they can be used to represent ownership of any unique asset, like a deed for an item in the digital or physical realm.
@@ -28,7 +25,9 @@ NFT stands for non-fungible token. Non-fungible is an economic term that you cou
 
 Fungible items, on the other hand, can be exchanged because their value defines them rather than their unique properties. For example, ETH or dollars are fungible because 1 ETH / $1 USD is exchangeable for another 1 ETH / $1 USD.
 
-<iframe title="YouTube video titled What Are NFTs and How Can They Be Used in Decentralized Finance? DEFI Explained" width="100%" height="315" src="https://www.youtube.com/embed/Xdkkux6OxfM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<figure>
+  <iframe title="YouTube video titled What Are NFTs and How Can They Be Used in Decentralized Finance? DEFI Explained" width="100%" height="315" src="https://www.youtube.com/embed/Xdkkux6OxfM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
 
 ## The internet of assets {#internet-of-assets}
 
@@ -166,7 +165,9 @@ When they sell their content, funds go directly to them. If the new owner then s
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Explore, buy or create your own NFT art/collectibles...</div>
-  <ButtonLink to="/dapps/?category=collectibles">Explore NFT art</ButtonLink>
+  <ButtonLink to="/dapps/?category=collectibles">
+    Explore NFT art
+  </ButtonLink>
 </InfoBanner>
 
 #### The copy/paste problem {#nfts-copy-paste}
@@ -197,7 +198,9 @@ Decentraland, a virtual reality game, even lets you buy NFTs representing virtua
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Check out Ethereum games, powered by NFTs...</div>
-  <ButtonLink to="/dapps/?category=gaming">Explore NFT games</ButtonLink>
+  <ButtonLink to="/dapps/?category=gaming">
+    Explore NFT games
+  </ButtonLink>
 </InfoBanner>
 
 <Divider />
@@ -350,7 +353,9 @@ _It’s also important to remember that Ethereum does more than just financial t
 
 The process has already started. [The Beacon Chain](/eth2/beacon-chain/), the first upgrade, shipped in December 2020. This provides the foundation for staking by allowing stakers to join the system. The next step relevant to energy efficiency is to merge the current chain, the one secured by miners, into the Beacon Chain where mining isn't needed. Timelines can't be exact at this stage, but it's estimated that this will happen sometime in 2022. This process is known as the merge (formerly referred to as the docking). [More on the merge](/eth2/merge/).
 
-<ButtonLink to="/eth2/">More on Eth2</ButtonLink>
+<ButtonLink to="/eth2/">
+  More on Eth2
+</ButtonLink>
 
 <!-- #### Rollups in the meantime...
 

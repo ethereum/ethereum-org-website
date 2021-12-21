@@ -221,7 +221,6 @@ Kombinálja a többrétegű technológiák legjobb tulajdonságait, és konfigur
 
 ### Hibrid megoldások használata {#use-hybrid-solutions}
 
-- [Offchain Labs Arbitrum SCSC](https://offchainlabs.com/arbitrum.pdf)
 - [Celer](https://www.celer.network/)
 
 ## További olvasnivaló {#further-reading}

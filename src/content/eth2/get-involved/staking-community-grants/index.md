@@ -302,7 +302,15 @@ title="How can I get more involved in Eth2?">
 ## More on Staking and Eth2 {#more-on-staking-and-eth2}
 
 <CardContainer>
-   <Card title="Staking" description="Learn more about staking. Where you can do it, what you need, and the potential risks and rewards." emoji=":money_bag:"><ButtonLink to="/eth2/staking/">More on staking</ButtonLink></Card>
+   <Card title="Staking" description="Learn more about staking. Where you can do it, what you need, and the potential risks and rewards." emoji=":money_bag:">
+      <ButtonLink to="/eth2/staking/">
+         More on staking
+      </ButtonLink>
+   </Card>
    <br />
-   <Card title="The Beacon Chain" description="The Beacon Chain introduces staking and proof-of-stake to the Ethereum network. Learn more about this new piece of the ecosystem." emoji=":police_car_light:"><ButtonLink to="/eth2/beacon-chain/">More on the Beacon Chain</ButtonLink></Card>
+   <Card title="The Beacon Chain" description="The Beacon Chain introduces staking and proof-of-stake to the Ethereum network. Learn more about this new piece of the ecosystem." emoji=":police_car_light:">
+      <ButtonLink to="/eth2/beacon-chain/">
+         More on the Beacon Chain
+      </ButtonLink>
+   </Card>
 </CardContainer>

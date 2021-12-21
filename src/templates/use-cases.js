@@ -29,6 +29,7 @@ import TranslationsInProgress from "../components/TranslationsInProgress"
 import Translation from "../components/Translation"
 import SectionNav from "../components/SectionNav"
 import { isLangRightToLeft } from "../utils/translations"
+import { getSummaryPoints } from "../utils/getSummaryPoints"
 import {
   Divider,
   Paragraph,
@@ -375,6 +376,7 @@ const UseCasePage = ({ data, pageContext }) => {
   const mdx = data.pageData
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang)
   const tocItems = mdx.tableOfContents.items
+  const summaryPoints = getSummaryPoints(mdx.frontmatter)
 
   const { editContentUrl } = data.siteData.siteMetadata
   const { relativePath } = pageContext
@@ -424,7 +426,7 @@ const UseCasePage = ({ data, pageContext }) => {
           <Title>{mdx.frontmatter.title}</Title>
           <SummaryBox>
             <ul>
-              {mdx.frontmatter.summaryPoints.map((point, idx) => (
+              {summaryPoints.map((point, idx) => (
                 <SummaryPoint key={idx}>{point}</SummaryPoint>
               ))}
             </ul>
@@ -491,7 +493,9 @@ export const useCasePageQuery = graphql`
         sidebar
         emoji
         sidebarDepth
-        summaryPoints
+        summaryPoint1
+        summaryPoint2
+        summaryPoint3
         alt
         image {
           childImageSharp {

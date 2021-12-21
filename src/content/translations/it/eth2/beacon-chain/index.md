@@ -5,13 +5,10 @@ lang: it
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/core.png
-summaryPoints:
-  [
-    "La beacon chain non modifica nulla della rete Ethereum che usiamo oggi.",
-    "Coordinerà la rete.",
-    "Introduce la proof of stake nell'ecosistema Ethereum.",
-    'Potreste averne sentito parlare come "Fase 0" nelle roadmap tecniche.',
-  ]
+summaryPoint1: La beacon chain non modifica nulla della rete Ethereum che usiamo oggi.
+summaryPoint2: Coordinerà la rete.
+summaryPoint3: Introduce la proof of stake nell'ecosistema Ethereum.
+summaryPoint4: Potreste averne sentito parlare come "Fase 0" nelle roadmap tecniche.
 ---
 
 <UpgradeStatus isShipped date="Spedito!">
