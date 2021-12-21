@@ -38,6 +38,22 @@ sidebar: true
 - [GitHub](https://github.com/atom)
 - [以太坊包](https://atom.io/packages/search?utf8=%E2%9C%93&q=keyword%3Aethereum&commit=Search)
 
+**JetBrains IDE（IntelliJ IDEA 等） -** **_软件开发者和团队的基本工具_**
+
+- [JetBrains](https://www.jetbrains.com/)
+- [GitHub](https://github.com/JetBrains)
+- [IntelliJ Solidity](https://github.com/intellij-solidity/intellij-solidity/)
+
+**Remix Desktop -** **_在本地计算机体验 Remix IDE_**
+
+- [下载](https://github.com/ethereum/remix-desktop/releases)
+- [GitHub](https://github.com/ethereum/remix-desktop)
+
+## 插件与扩展 {#plugins-extensions}
+
+- [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - 以太坊中的 Visual Studio Code Solidity 语言
+- [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - 使用 prettier 的代码格式化工具
+
 ## 延伸阅读 {#further-reading}
 
-_你知道有什么社区资源帮助过你吗？ 编辑并添加本页面！_
+_还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_
