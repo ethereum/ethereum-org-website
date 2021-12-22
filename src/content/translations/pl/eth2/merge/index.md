@@ -43,7 +43,7 @@ Plus many more.
 
 These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 
-## Po dokowaniu {#after-the-docking}
+## Po dokowaniu {#after-the-merge}
 
 To będzie sygnał końca Ethereum proof-of-work i początek nowej ery bardziej zrównoważonego, przyjaznego ekologii Ethereum. W tym punkcie Ethereum będzie miało skalę, zabezpieczenia i zrównoważenie opisane w tej [wizji Eth2](/eth2/vision/).
 

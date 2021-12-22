@@ -43,7 +43,7 @@ Plus many more.
 
 These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 
-## Μετά την ενσωμάτωση {#after-the-docking}
+## Μετά την ενσωμάτωση {#after-the-merge}
 
 Αυτό θα σηματοδοτήσει το τέλος του proof-of-work για το Ethereum και θα ξεκινήσει την εποχή ενός πιο βιώσιμου, φιλικού προς το περιβάλλον Ethereum. Σε αυτό το σημείο το Ethereum θα έχει την κλίμακα, την ασφάλεια και τη βιωσιμότητα που περιγράφεται στο [όραμα Eth2](/eth2/vision/).
 

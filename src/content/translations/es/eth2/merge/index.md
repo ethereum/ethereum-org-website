@@ -43,7 +43,7 @@ Plus many more.
 
 These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 
-## Después del acoplamiento {#after-the-docking}
+## Después del acoplamiento {#after-the-merge}
 
 Esto marcará el fin de la prueba de trabajo para Ethereum e iniciará la era de un Ethereum más sostenible y respetuoso con el medio ambiente. En este punto, Ethereum tendrá la escala, la seguridad y la sostenibilidad descritas en la [visión de Eth2](/eth2/vision/).
 

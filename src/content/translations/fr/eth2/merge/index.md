@@ -43,7 +43,7 @@ Plus many more.
 
 These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 
-## Après l'arrimage {#after-the-docking}
+## Après l'arrimage {#after-the-merge}
 
 Ce sera la fin de la preuve de travail pour Ethereum, et commencera alors l'ère d'un Ethereum plus durable et plus écologique. À ce stade, Ethereum aura l'échelle, la sécurité et la durabilité décrites dans sa [vision Eth2](/eth2/vision/).
 

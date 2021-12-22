@@ -43,7 +43,7 @@ Plus many more.
 
 These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 
-## После стыковки {#after-the-docking}
+## После стыковки {#after-the-merge}
 
 Это будет означать конец доказательства работы для Ethereum и начало эры более устойчивого, экологически чистого Ethereum. На этом этапе Ethereum будет иметь масштаб, безопасность и устойчивость, описанные в его [видении Eth2](/eth2/vision/).
 

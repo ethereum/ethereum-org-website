@@ -43,7 +43,7 @@ Plus many more.
 
 These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 
-## डॉकिंग के बाद {#after-the-docking}
+## डॉकिंग के बाद {#after-the-merge}
 
 यह इथेरियम के लिए कार्य-के-प्रमाण के अंत का संकेत देगा और अधिक टिकाऊ, पर्यावरण-अनुकूल इथेरियम के युग की शुरुआत करेगा। इस बिंदु पर इथेरियम का [Eth2 दृष्टिकोण](/eth2/vision/) में उल्लिखित स्केल, सुरक्षा और स्थिरता होगी।
 

@@ -43,7 +43,7 @@ Plus many more.
 
 These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 
-## A dokkolás után {#after-the-docking}
+## A dokkolás után {#after-the-merge}
 
 Ez a proof-of-work végét és egy fenntarthatóbb, környezetbarátabb korszak kezdetét fogja jelenteni az Ethereum számára. Ettől a ponttól kezdve az Ethereum skálázható, biztonságos és fenntartható lesz, ahogy az az [Eth2 vízió](/eth2/vision/) szerint körvonalazódott.
 

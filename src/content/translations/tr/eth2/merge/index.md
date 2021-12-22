@@ -43,7 +43,7 @@ Plus many more.
 
 These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 
-## Kenetlenmeden sonra {#after-the-docking}
+## Kenetlenmeden sonra {#after-the-merge}
 
 Bu, Ethereum için çalışma ispatının sona erdiğini işaret edecek ve daha sürdürülebilir, çevre dostu bir Ethereum çağını başlatacaktır. Bu noktada Ethereum, Eth2 vizyonunda belirtilen ölçeğe, güvenliğe ve sürdürülebilirliğe sahip olacaktır.
 

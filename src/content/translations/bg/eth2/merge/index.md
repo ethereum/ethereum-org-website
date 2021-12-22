@@ -43,7 +43,7 @@ Plus many more.
 
 These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 
-## След свързването {#after-the-docking}
+## След свързването {#after-the-merge}
 
 Това ще бъде знак за края на доказателство-за-работа при Етереум и началото на една ера от по-устойчив и природосъобразен Етереум. В този момент Етереум ще има мащаба, сигурността и устойчивостта, описани във [визията на Eth2](/eth2/vision/).
 

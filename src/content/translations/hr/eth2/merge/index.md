@@ -43,7 +43,7 @@ Plus many more.
 
 These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 
-## Nakon spajanja {#after-the-docking}
+## Nakon spajanja {#after-the-merge}
 
 To će označiti kraj mehanizma Proof of Work za Ethereum i početak održivijeg, ekološki prihvatljivijeg Ethereuma. U tom će trenutku Ethereum imati opseg, sigurnost i održivost koju istiće u svojoj [ viziji Eth2 ](/eth2/vision/).
 

@@ -43,7 +43,7 @@ Plus many more.
 
 These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 
-## ഡോക്കിംഗിന് ശേഷം {#after-the-docking}
+## ഡോക്കിംഗിന് ശേഷം {#after-the-merge}
 
 ഇത് Ethereumനുള്ള പ്രൂഫ് ഓഫ് വർക്കിന്റെ അവസാനത്തെ സൂചിപ്പിക്കുകയും, കൂടുതൽ സുസ്ഥിരവും പരിസ്ഥിതി സൗഹൃദവുമായ Ethereumത്തിനുള്ള യുഗം ആരംഭിക്കുകയും ചെയ്യും. ഈ ഘട്ടത്തിൽ Ethereumന് അതിന്റെ [Eth2 ദർശനത്തിൽ ](/eth2/vision/). വിവരിച്ചിരിക്കുന്ന സ്കെയിലും സുരക്ഷയും സുസ്ഥിരതയും ഉണ്ടായിരിക്കും.
 
