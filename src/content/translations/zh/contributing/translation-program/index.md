@@ -52,7 +52,7 @@ Ethereum.org 翻译计划旨在通过将 Ethereum.org 和其他以太坊内容�
 
    找不到您的语言列表？ [提出问题](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
 
-   ![Crowdin 上已翻译和未翻译的文件](./crowdin-files.png)
+   ![Crowdin 上已翻译和未翻译的文件](../../../../contributing/translation-program/crowdin-files.png)
 
    关于内容版本的说明：我们使用 Crowdin 版本管理来避免已添加内容的翻译延误。 当您查看一种语言时（例如[菲律宾语](https://crowdin.com/project/ethereum-org/fil#)），您会看到每个网站版本（“v2.0”、“v2.1”等）的文件夹。
 
@@ -63,7 +63,7 @@ Ethereum.org 翻译计划旨在通过将 Ethereum.org 和其他以太坊内容�
 3. **翻译**  
    选择您要翻译的文件后，随即在线编辑器中打开。 如果您从未使用过 Crowdin，您可以通过这个快速指南来了解基础知识。
 
-   ![Crowdin 在线编辑器](./online-editor.png)
+   ![Crowdin 在线编辑器](../../../../contributing/translation-program/online-editor.png)
 
    **_1 - 左侧边栏_**
 
