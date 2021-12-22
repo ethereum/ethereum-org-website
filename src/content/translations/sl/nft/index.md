@@ -143,11 +143,11 @@ To se dogaja povsem samodejno, tako da ustvarjalci lahko le sedijo in služijo l
 
 Tukaj je nekaj bolj razvitih primerov uporabe v praksi in vizij za NFT-je na Ethereumu.
 
-- [Digitalna vsebina](#nfts-za-ustvarjalce)
-- [Igričarski predmeti](#nft-igranje)
-- [Imena domen](#nft-domene)
-- [Fizični predmeti](#nft-fizični-predmeti)
-- [Naložbe in zavarovanja](#nfts-in-defi)
+- [Digitalna vsebina](#nfts-for-creators)
+- [Igričarski predmeti](#nft-gaming)
+- [Imena domen](#nft-domains)
+- [Fizični predmeti](#nft-physical-items)
+- [Naložbe in zavarovanja](#nfts-and-defi)
 
 <Divider />
 
