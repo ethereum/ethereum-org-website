@@ -31,6 +31,7 @@ import TranslationsInProgress from "../components/TranslationsInProgress"
 import SectionNav from "../components/SectionNav"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
+import { getSummaryPoints } from "../utils/getSummaryPoints"
 import {
   Divider,
   Paragraph,
@@ -405,14 +406,7 @@ const Eth2Page = ({ data: { mdx } }) => {
     ? mdx.parent.fields.gitLogLatestDate
     : mdx.parent.mtime
 
-  // Place summary points into an array, guarding for `undefined` values
-  let summaryPoints = []
-  for (let i = 1; i <= 4; i++) {
-    const summaryPoint = mdx.frontmatter[`summaryPoint${i}`]
-    if (summaryPoint) {
-      summaryPoints.push(summaryPoint)
-    }
-  }
+  const summaryPoints = getSummaryPoints(mdx.frontmatter)
 
   return (
     <Container>

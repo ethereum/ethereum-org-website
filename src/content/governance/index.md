@@ -91,7 +91,7 @@ This flow, while very simplified, gives an overview of the significant stages fo
 
 ### Understanding prior work {#prior-work}
 
-EIP Champions should familiarise themselves with prior work and proposals before creating an EIP which can be seriously considered for deployment on the Ethereum Mainnet. This way, the EIP hopefully brings something new which hasn't been rejected before. The three main places to research this are the [EIP repository](https://github.com/ethereum/eips), [Ethereum Magicians](https://www.ethereum-magicians.org/) and [ethresear.ch](https://www.ethresear.ch/).
+EIP Champions should familiarise themselves with prior work and proposals before creating an EIP which can be seriously considered for deployment on the Ethereum Mainnet. This way, the EIP hopefully brings something new which hasn't been rejected before. The three main places to research this are the [EIP repository](https://github.com/ethereum/eips), [Ethereum Magicians](https://ethereum-magicians.org/) and [ethresear.ch](https://ethresear.ch/).
 
 ### Working groups {#working-groups}
 
@@ -175,7 +175,10 @@ When the Beacon Chain merges with the Ethereum execution layer, the governance p
 
 Governance in Ethereum isn’t rigidly defined. Various community participants have diverse perspectives on it. Here are a few of them:
 
+- [Notes on Blockchain Governance](https://vitalik.ca/general/2017/12/17/voting.html) - _Vitalik Buterin_
 - [Governance on Ethereum](https://docs.ethhub.io/ethereum-basics/governance/) – _ETHHub_
 - [How does Ethereum Governance work?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [How Ethereum governance works](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [What is an Ethereum core developer?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
+- [Governance, Part 2: Plutocracy Is Still Bad](https://vitalik.ca/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
+- [Moving beyond coin voting governance](https://vitalik.ca/general/2021/08/16/voting3.html) - _Vitalik Buterin_

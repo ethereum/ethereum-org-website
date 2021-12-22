@@ -14,7 +14,7 @@
   "page-stablecoins-accordion-borrow-risks-copy": "Če uporabite ETH kot varščino in njegova cena pade, varščina ne bo krila stabilnih kovancev, ki ste jih generirali. Zaradi tega bo vaš ETH likvidiran in morda boste morali plačati kazen. Če si izposojate stabilne kovance, boste morali biti torej pozorni na ceno ETH.",
   "page-stablecoins-accordion-borrow-risks-link": "Zadnja cena ETH",
   "page-stablecoins-accordion-borrow-risks-title": "Tveganja",
-  "page-stablecoins-accordion-borrow-text-preview": "Izposodite si lahko nekaj stabilnih kovancev z uporabo kriptovalut kot varščine, ki jo morate nato vrniti.",
+  "page-stablecoins-accordion-borrow-text-preview": "Izposodite si lahko nekaj stabilnih kovancev z uporabo kriptovalut kot varščino, ki jo morate nato vrniti.",
   "page-stablecoins-accordion-borrow-title": "Izposoja",
   "page-stablecoins-accordion-buy-exchanges-title": "Priljubljene borze",
   "page-stablecoins-accordion-buy-requirement-1": "Kriptoborze in denarnice",
@@ -141,5 +141,6 @@
   "page-stablecoins-usdc-logo": "Logotip USDC",
   "page-stablecoins-why-stablecoins": "Zakaj stabilni kovanci?",
   "page-stablecoins-how-they-work-button": "Kako delujejo",
-  "page-stablecoins-why-stablecoins-body": "Ker gre za novi tehnologiji, je cena ETH nestabilna podobno kot pri bitcoinu. Zato ga morda ne želite redno zapravljati. Stabilni kovanci odražajo vrednost tradicionalnih valut, da vam omogočijo dostop do stabilnega denarja, ki ga lahko uporabljate na Ethereumu."
+  "page-stablecoins-why-stablecoins-body": "Ker gre za novi tehnologiji, je cena ETH nestabilna podobno kot pri bitcoinu. Zato ga morda ne želite redno zapravljati. Stabilni kovanci odražajo vrednost tradicionalnih valut, da vam omogočijo dostop do stabilnega denarja, ki ga lahko uporabljate na Ethereumu.",
+  "page-stablecoins-more-defi-button": "Več o decentraliziranih financah (DeFi)"
 }

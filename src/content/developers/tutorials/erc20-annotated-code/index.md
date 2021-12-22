@@ -315,7 +315,7 @@ secrets on the blockchain_, the software on every node has the state of every co
 at every block. By convention, state variables are named `_<something>`.
 
 The first two variables are [mappings](https://www.tutorialspoint.com/solidity/solidity_mappings.htm),
-meaning they behave roughly the same as [associative arrays](https://en.wikipedia.org/wiki/Associative_array),
+meaning they behave roughly the same as [associative arrays](https://wikipedia.org/wiki/Associative_array),
 except that the keys are numeric values. Storage is only allocated for entries that have values different
 from the default (zero).
 
@@ -734,7 +734,7 @@ it is clear what are the functions you modify, and to trust your contract people
 
 It is often useful to perform a function each time tokens change hands. However,`_transfer` is a very important function and it is
 possible to write it insecurely (see below), so it is best not to override it. The solution is `_beforeTokenTransfer`, a
-[hook function](https://en.wikipedia.org/wiki/Hooking). You can override this function, and it will be called on each transfer.
+[hook function](https://wikipedia.org/wiki/Hooking). You can override this function, and it will be called on each transfer.
 
 &nbsp;
 

@@ -81,5 +81,17 @@
   "page-eth-where-to-buy": "ETHの取得先",
   "page-eth-where-to-buy-desc": "取引所やウォレットからETHを取得することができますが、異なる国には異なるポリシーがあります。 ETHを購入できるようにするサービスを確認してください。",
   "page-eth-yours": "本当にあなたのものです",
-  "page-eth-yours-desc": "ETHはあなた自身の銀行になることができます。あなたは所有権の証明として自分のウォレットで自分の資金を管理することができます 。第三者は必要ありません。"
+  "page-eth-yours-desc": "ETHはあなた自身の銀行になることができます。あなたは所有権の証明として自分のウォレットで自分の資金を管理することができます 。第三者は必要ありません。",
+  "page-eth-more-on-tokens": "トークンとその使用方法の詳細",
+  "page-eth-button-buy-eth": "ETHを入手",
+  "page-eth-tokens-stablecoins": "ステーブルコイン",
+  "page-eth-tokens-defi": "分散型金融（DeFi）",
+  "page-eth-tokens-nft": "非代替性トークン（NFT）",
+  "page-eth-tokens-dao": "自律分散型組織（DAO）",
+  "page-eth-tokens-stablecoins-description": "イーサリアムトークンの中で最も安定したものの詳細。",
+  "page-eth-tokens-defi-description": "イーサリアムトークンの金融システム。",
+  "page-eth-tokens-nft-description": "イーサリアム上のアイテムの所有権を表すトークン。",
+  "page-eth-tokens-dao-description": "多くの場合トークン保有者によって管理されるインターネットコミュニティ。",
+  "page-eth-whats-defi": "DeFiの詳細",
+  "page-eth-whats-defi-description": "DeFiはイーサリアム上に構築された分散型金融システムです。 この概要で何ができるかを説明します。"
 }

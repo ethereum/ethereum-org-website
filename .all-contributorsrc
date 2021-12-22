@@ -5847,7 +5847,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/14168559?v=4",
       "profile": "https://github.com/MiConnell",
       "contributions": [
-        "content"
+        "content",
+        "code"
       ]
     },
     {
@@ -5875,6 +5876,71 @@
       "profile": "https://linktr.ee/kumarkalyan",
       "contributions": [
         "bug"
+      ]
+    },
+    {
+      "login": "0xdie",
+      "name": "0xdie",
+      "avatar_url": "https://avatars.githubusercontent.com/u/94481845?v=4",
+      "profile": "https://github.com/0xdie",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Taimoor0217",
+      "name": "Taimoor Ali",
+      "avatar_url": "https://avatars.githubusercontent.com/u/48244930?v=4",
+      "profile": "https://github.com/Taimoor0217",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
+    },
+    {
+      "login": "andrejrakic",
+      "name": "Andrej",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37881789?v=4",
+      "profile": "https://www.linkedin.com/in/andrejrakic/",
+      "contributions": [
+        "doc",
+        "content"
+      ]
+    },
+    {
+      "login": "pcaversaccio",
+      "name": "Pascal Marco Caversaccio",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25297591?v=4",
+      "profile": "http://www.daita.tech",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "kennethcassel",
+      "name": "kennethcassel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22961671?v=4",
+      "profile": "https://www.slip.so",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "BrysonXiao",
+      "name": "BrysonXiao",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40129652?v=4",
+      "profile": "https://github.com/BrysonXiao",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "cdomashn",
+      "name": "Discord #8528",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58366873?v=4",
+      "profile": "https://github.com/cdomashn",
+      "contributions": [
+        "content"
       ]
     }
   ],

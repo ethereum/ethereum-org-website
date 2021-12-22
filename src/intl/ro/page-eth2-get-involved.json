@@ -27,6 +27,8 @@
   "page-eth2-get-involved-more": "Mai multe detalii",
   "page-eth2-get-involved-run-clients": "Rularea clienților lanțului Beacon",
   "page-eth2-get-involved-run-clients-desc": "Cheia securității pe termen lung a Ethereum este o distribuție puternică a clienților. Un client este un software care rulează blockchain-ul, verificând tranzacțiile și crearea de blocuri noi. Fiecare client are propriile sale caracteristici, așa că alege unul cu care te simți mai confortabil.",
+  "page-eth2-get-involved-run-clients-production": "Clienți Eth2 gata pentru producție",
+  "page-eth2-get-involved-run-clients-experimental": "Clienți Eth2 experimentali",
   "page-eth2-get-involved-stake": "Mizează propriul ETH",
   "page-eth2-get-involved-stake-desc": "Acum poți să mizezi ETH pentru a ajuta la securizarea lanțului Beacon.",
   "page-eth2-get-involved-stake-eth": "Mizează ETH",

@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-When it comes to setting up an [integrated development environment (IDE)](https://en.wikipedia.org/wiki/Integrated_development_environment), building with Ethereum is similar to any other software project. There's many options to choose from, so at the end of the day, pick the one that best suits your preferences.
+When it comes to setting up an [integrated development environment (IDE)](https://wikipedia.org/wiki/Integrated_development_environment), building with Ethereum is similar to any other software project. There's many options to choose from, so at the end of the day, pick the one that best suits your preferences.
 
 ## Web-based IDEs {#web-based-ides}
 
