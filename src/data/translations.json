@@ -67,6 +67,9 @@
   "ml": {
     "language": "മലയാളം"
   },
+  "ms": {
+    "language": "Melayu"
+  },
   "nl": {
     "language": "Nederlands"
   },
@@ -112,8 +115,7 @@
     "useLegacyHomepage": true
   },
   "zh": {
-    "language": "简体中文",
-    "useLegacyHomepage": true
+    "language": "简体中文"
   },
   "zh-tw": {
     "language": "繁體中文",
