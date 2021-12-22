@@ -16,7 +16,7 @@ sidebarDepth: 3
 
 - [Etherscan](https://etherscan.io/) – _中文、韩文、俄文和日文_
 - [Etherchain](https://www.etherchain.org/)
-- [Ethplorer](https://ethplorer. io/) -_ 支持中文、西班牙语、法语、土耳其语和俄语_
+- [Ethplorer](https://ethplorer.io/) -_ 支持中文、西班牙语、法语、土耳其语和俄语_
 - [Blockchair](https://blockchair.com/ethereum) --_也有西班牙文、法文、意大利文、荷兰文、葡萄牙文、俄文、中文和波斯文_
 - [Blockscout--区块链浏览器](https://blockscout.com/)
 - [OKLink](https://www.oklink.com/eth)
