@@ -71,17 +71,17 @@ To zveni čudno... "zakaj bi želel programirati svoj denar"? Kakorkoli, to je v
 
 Obstaja decentralizirana alternativa za večino finančnih storitev. Toda Ethereum prav tako ustvarja priložnosti za ustvarjanje finančnih produktov, ki so povsem novi. Ta seznam nenehno raste.
 
-- [Pošiljajte denar po vsem svetu](#pošlji-denar)
-- [Ustvarjajte denarne tokove po vsem svetu](#pretakaj-denar)
-- [Dostopajte do stabilnih valut](#stabilni kovanci)
-- [Sposodite si sredstva z zavarovanjem](#posojanje)
-- [Sposodite si sredstva brez zavarovanja](#flash-posojila)
-- [Začnite s kripto varčevanjem](#prihranki)
-- [Trgujte z žetoni](#zamenjave)
-- [Povečajte svoj portfelj](#investiranje)
-- [Financirajte svoje ideje](#množično financiranje)
-- [Kupite zavarovanje](#zavarovanje)
-- [Upravljajte svoj portfelj](#agregatorji)
+- [Pošiljajte denar po vsem svetu](#send-money)
+- [Ustvarjajte denarne tokove po vsem svetu](#stream-money)
+- [Dostopajte do stabilnih valut](#stablecoins)
+- [Sposodite si sredstva z zavarovanjem](#lending)
+- [Sposodite si sredstva brez zavarovanja](#flash-loans)
+- [Začnite s kripto varčevanjem](#saving)
+- [Trgujte z žetoni](#swaps)
+- [Povečajte svoj portfelj](#investing)
+- [Financirajte svoje ideje](#crowdfunding)
+- [Kupite zavarovanje](#insurance)
+- [Upravljajte svoj portfelj](#aggregators)
 
 <Divider />
 
@@ -230,7 +230,9 @@ Ethereum je idealna platforma za množično financiranje:
 - Je transparenten, tako da zbiralci sredstev lahko dokažejo, koliko sredstev je bilo zbranih. Lahko celo sledite, kako so sredstva porabljena v nadaljevanju.
 - Zbiralci sredstev lahko nastavijo samodejna vračila, če na primer obstaja določen rok ali minimalen znesek, ki ni dosežen.
 
-<ButtonLink to="/dapps/?category=finance">Oglejte si dappe za množično financiranje</ButtonLink>
+<ButtonLink to="/dapps/?category=finance">
+  Oglejte si dappe za množično financiranje
+</ButtonLink>
 
 #### Kvadratično financiranje {#quadratic-funding}
 
