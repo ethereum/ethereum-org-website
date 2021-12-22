@@ -330,13 +330,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // we can remove this logic and the `/pages-conditional/` directory.
   const outdatedMarkdown = [`eth`, `dapps`, `wallets`, `what-is-ethereum`]
   outdatedMarkdown.forEach((page) => {
-    supportedLanguages.forEach((lang) => {
+    supportedLanguages.forEach(async (lang) => {
       const markdownPath = `${__dirname}/src/content/translations/${lang}/${page}/index.md`
       const langHasOutdatedMarkdown = fs.existsSync(markdownPath)
       if (!langHasOutdatedMarkdown) {
         // Check if json strings exists for language, if not mark `isContentEnglish` as true
-        const jsonPath = `${__dirname}/src/intl/${lang}/page-${page}.json`
-        const langHasIntlJson = fs.existsSync(jsonPath)
+        const { isOutdated, isContentEnglish } = await checkIsPageOutdated(
+          page,
+          lang
+        )
         createPage({
           path: `/${lang}/${page}/`,
           component: path.resolve(
@@ -355,7 +357,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               originalPath: `/${page}/`,
               redirect: false,
             },
-            isContentEnglish: !langHasIntlJson,
+            isContentEnglish,
+            isOutdated,
           },
         })
       }
