@@ -93,7 +93,7 @@ contract VendingMachine {
 
 ## 智能合约资源 {#smart-contract-resources}
 
-**OpenZeppelin 合约 - _安全智能合约开发库。_**
+**OpenZeppelin 合约 - _安全智能合约开发的库。_**
 
 - [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
