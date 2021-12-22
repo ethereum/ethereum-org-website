@@ -9,8 +9,6 @@ O concepție greșită obișnuită este că programatorii trebuie să scrie cont
 
 Ethereum și comunitatea sa îmbrățișează open source. Poți găsi proiecte comunitare - implementări pentru clienți, API-uri, cadre de dezvoltare, instrumente de testare - într-o mare varietate de limbaje.
 
-<!-- Often certain languages have an certain advantage depending on the use case -->
-
 ## Alege-ți limbajul {#data}
 
 Selectează limbajul preferat pentru a găsi proiecte, resurse și comunități virtuale:

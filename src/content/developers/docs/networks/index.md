@@ -72,20 +72,6 @@ The consensus process is controlled by a pre-defined set of nodes that are trust
 
 If a public Ethereum network is like the public internet, you can think of a consortium network as a private intranet.
 
-<!-- TODO
-
-## Interacting with testnets {#interactihg-with-tesetnets}
-
-### Your own local network {#your-own-local-network}
-
-`geth -—networkid="12345" console`
-
-### Testnets {#testnets-1}
-
-Wallets like MetaMask or MyEtherWallet will allow you to switch networks so you can test your apps using your test ETH.
-
--->
-
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_

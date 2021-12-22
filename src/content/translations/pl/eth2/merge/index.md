@@ -27,23 +27,7 @@ Kiedy sieć główna Ethereum będzie gotowa, zostanie „zadokowana” z łańc
 
 Główna sieć stworzy możliwość włączenia inteligentnych kontraktów do systemów proof-of-stake oraz pełnej historii i obecnego stanu Ethereum, aby zapewnić, że przejście jest płynne w przypadku wszystkich posiadaczy i użytkowników ETH.
 
-<!-- ### Improving mainnet
-
-Before mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
-
-These include Improvements for
-
-- **End users**: like [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) which changes the way users bid for blockspace. In other words, making transaction fees more efficient for end users.
-- **Client runners**: making running clients more sustainable by capping disk space requirements.
-- **Developers**: upgrading the EVM to be more flexible.
-
-Plus many more.
-
-[More on Ethereum1.x](/learn/#eth-1x)
-
-These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
-
-## Po dokowaniu {#after-the-merge}
+## Po dokowaniu {#after-the-docking}
 
 To będzie sygnał końca Ethereum proof-of-work i początek nowej ery bardziej zrównoważonego, przyjaznego ekologii Ethereum. W tym punkcie Ethereum będzie miało skalę, zabezpieczenia i zrównoważenie opisane w tej [wizji Eth2](/eth2/vision/).
 

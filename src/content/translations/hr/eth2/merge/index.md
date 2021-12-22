@@ -27,23 +27,7 @@ Kad bude spremna, glavna mreža Ethereum spojit će se s nadogradnjom Beacon Cha
 
 Glavna mreža omogućit će pokretanje pametnih ugovora u sustav proof-of-stake, i cijelu povijest i trenutačno stanje mreže Ethereum, kako bi se osigurao prijelaz bez problema za sve vlasnike i korisnike ETH-a.
 
-<!-- ### Improving Mainnet
-
-Before Mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
-
-These include Improvements for
-
-- **End users**: like [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) which changes the way users bid for blockspace. In other words, making transaction fees more efficient for end users.
-- **Client runners**: making running clients more sustainable by capping disk space requirements.
-- **Developers**: upgrading the EVM to be more flexible.
-
-Plus many more.
-
-[More on Ethereum1.x](/learn/#eth-1x)
-
-These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
-
-## Nakon spajanja {#after-the-merge}
+## Nakon spajanja {#after-the-docking}
 
 To će označiti kraj mehanizma Proof of Work za Ethereum i početak održivijeg, ekološki prihvatljivijeg Ethereuma. U tom će trenutku Ethereum imati opseg, sigurnost i održivost koju istiće u svojoj [ viziji Eth2 ](/eth2/vision/).
 

@@ -27,23 +27,7 @@ summaryPoint4: Вы можете знать это как "Этап 1.5" на т
 
 Основная сеть привнесет возможность запуска смарт-контрактов в систему доказательства владения, а также полную историю и текущее состояние Ethereum, чтобы обеспечить плавный переход для всех держателей и пользователей ETH.
 
-<!-- ### Improving mainnet
-
-Before mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
-
-These include Improvements for
-
-- **End users**: like [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) which changes the way users bid for blockspace. In other words, making transaction fees more efficient for end users.
-- **Client runners**: making running clients more sustainable by capping disk space requirements.
-- **Developers**: upgrading the EVM to be more flexible.
-
-Plus many more.
-
-[More on Ethereum1.x](/learn/#eth-1x)
-
-These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
-
-## После стыковки {#after-the-merge}
+## После стыковки {#after-the-docking}
 
 Это будет означать конец доказательства работы для Ethereum и начало эры более устойчивого, экологически чистого Ethereum. На этом этапе Ethereum будет иметь масштаб, безопасность и устойчивость, описанные в его [видении Eth2](/eth2/vision/).
 

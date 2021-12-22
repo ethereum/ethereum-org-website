@@ -27,23 +27,7 @@ summaryPoint4: Това може да ви е познато като "Етап 
 
 Основната мрежа ще донесе възможността да заработят умните договори в системата на доказателство-за-залог заедно с цялата история и настоящо състояние на Етереум, за да се подсигури, че преходът е плавен за всички собственици и потребители на ETH.
 
-<!-- ### Improving mainnet
-
-Before mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
-
-These include Improvements for
-
-- **End users**: like [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) which changes the way users bid for blockspace. In other words, making transaction fees more efficient for end users.
-- **Client runners**: making running clients more sustainable by capping disk space requirements.
-- **Developers**: upgrading the EVM to be more flexible.
-
-Plus many more.
-
-[More on Ethereum1.x](/learn/#eth-1x)
-
-These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
-
-## След свързването {#after-the-merge}
+## След свързването {#after-the-docking}
 
 Това ще бъде знак за края на доказателство-за-работа при Етереум и началото на една ера от по-устойчив и природосъобразен Етереум. В този момент Етереум ще има мащаба, сигурността и устойчивостта, описани във [визията на Eth2](/eth2/vision/).
 

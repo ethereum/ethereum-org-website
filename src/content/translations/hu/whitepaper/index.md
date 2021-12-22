@@ -464,8 +464,6 @@ Az Ethereum protokollban implementált tetszőleges állapot átmenet függvény
 
 ## Jegyzetek és további olvasnivaló {#notes-and-further-reading}
 
-<!--Invisible HTML comment used for navigation with CTRL+F footnote or fn.-->
-
 ### Jegyzetek {#notes}
 
 1.  A kifinomult olvasó észreveheti, hogy gyakorlatilag egy Bitcoin cím az elliptikus görbe nyilvános kulcs hash-e, és nem a nyilvános kulcs maga. Azonban gyakorlatilag teljesen legitim kriptográfiai terminológia a pubkey hash nyilvános kulcsként történő hivatkozása. Ez azért van, mert a Bitcoin kriptográfiáját tekinthetjük egy egyedi digitális aláírás algoritmusnak, ahol a nyilvános kulcs az ECC pubkey hashjéből áll, az aláírás az ECC pubkey és az ECC aláírás együttesen, a hitelesítő algoritmusban pedig az aláírásban lévő ECC pubkey-t a nyilvános kulcsként rendelkezésre bocsátott ECC pubkey hashhel vetik összes, majd az ECC aláírást az ECC pubkey értékével hitelesítik.

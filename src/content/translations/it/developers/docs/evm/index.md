@@ -45,11 +45,6 @@ La creazione di contratti porta alla creazione di nuovo account contratto conten
 
 L'EVM viene eseguita come una [macchina a stack](https://wikipedia.org/wiki/Stack_machine) con una profondità di 1024 elementi. Ogni elemento è una parola a 256 bit, scelta per avere la massima compatibilità con lo schema di hash SHA-3-256.
 
-<!-- ![A diagram showing the make up of the stack](./evm-stack.png)
-_Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
-
-Removed as we should probably show memory and account storage too if showing stack-->
-
 Durante l'esecuzione, l' EVM mantiene una _memoria_ transitoria (sotto forma di array di byte con indirizzamento a parola), che non rimane persistente tra le transazioni.
 
 I contratti, invece, contengono un albero di _memorizzazione_ di Merkle Patricia (sotto forma di array di parole con indirizzamento a parola), associato all'account in questione e parte dello stato globale.
@@ -57,8 +52,6 @@ I contratti, invece, contengono un albero di _memorizzazione_ di Merkle Patricia
 Il bytecode compilato dello Smart Contract compilato viene eseguito come numero di [opcode](https://www.ethervm.io/) dell'EVM, che eseguono operazioni stack standard come `XOR`, `AND`, `ADD`, `SUB`, ecc. L'EVM implementa anche una serie di operazioni di stack specifiche della blockchain, come `ADDRESS`, `BALANCE`, `SHA3`, `BLOCKHASH`, ecc.
 
 ![Diagramma che mostra dove serve il carburante nelle operazioni dell'EVM](../../../../../developers/docs/gas/gas.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
-
-<!-- TODO add full list from  https://eth.wiki/concepts/evm/implementations -->
 
 ## Implementazioni dell'EVM {#evm-implementations}
 

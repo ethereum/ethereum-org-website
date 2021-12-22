@@ -15,9 +15,6 @@ Los contratos inteligentes son un tipo de [cuenta de Ethereum](/developers/docs/
 
 Asegúrate de haber leído sobre las [cuentas](/developers/docs/accounts/), [transacciones](/developers/docs/transactions/) y la [máquina virtual de Ethereum](/developers/docs/evm/) antes de entrar en el mundo de los contratos inteligentes.
 
-<!-- TODO simpler example... scheduling payments in Ethereum is actually difficult -->
-<!-- TODO show an example smart contract, e.g. an implementation of a vending machine -->
-
 ## Una máquina expendedora digital {#a-digital-vending-machine}
 
 Tal vez la mejor metáfora para el contrato inteligente sea la de la máquina expendedora, según lo descrito por Nick Szabo. Con las entradas adecuadas, una cierta producción está garantizada.
