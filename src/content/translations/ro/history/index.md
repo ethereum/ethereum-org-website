@@ -35,7 +35,9 @@ Aceste modificări de regulă pot crea o divizare temporară în rețea. Blocuri
 
 [Citește anunțul Fundației Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/eth2/beacon-chain/" title="Lanțul Beacon" />
+<DocLink to="/eth2/beacon-chain/">
+  Lanțul Beacon
+</DocLink>
 
 ---
 
@@ -49,7 +51,9 @@ Contractul de depozit de miză a introdus [miza](/glossary/#staking) în ecosist
 
 [Citește anunțul Fundației Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/eth2/staking/" title="Mizare" />
+<DocLink to="/eth2/staking/">
+  Mizare
+</DocLink>
 
 ---
 
@@ -301,4 +305,6 @@ Yellow Paper, scris de Dr. Gavin Wood, este o definiție tehnică a protocolului
 
 Lucrarea introductivă, publicată în 2013 de Vitalik Buterin, fondatorul Ethereum, înainte de lansarea proiectului în 2015.
 
-<DocLink to="/whitepaper/" title="Whitepaper" />
+<DocLink to="/whitepaper/">
+  Whitepaper
+</DocLink>

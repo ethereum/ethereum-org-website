@@ -5,13 +5,10 @@ lang: ml
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    'ക്രമേണ നിലവിലെ Ethereum മെയിൻനെറ്റ് ബാക്കി Eth2 അപ്‌ഗ്രേഡുകളുമായി "ഡോക്ക്" ചെയ്യും.',
-    'ഈ ഡോക്കിംഗ് "Eth1" മെയിൻനെറ്റിനെ Eth2 ബീക്കൺ ചെയിനും ഷാർഡിംഗ് സിസ്റ്റവുമായി ലയിപ്പിക്കും.',
-    "ഇത് Ethereum- നുള്ള പ്രൂഫ്-ഓഫ് വർക്കിന്റെ അവസാനവും പ്രൂഫ് ഓഫ് സ്റ്റേക്കിലേക്കുള്ള പൂർണ്ണമായ പരിവർത്തനവും അടയാളപ്പെടുത്തും.",
-    'ഇത് സാങ്കേതിക റോഡ്മാപ്പുകളിലെ "ഘട്ടം 1.5" ആയി നിങ്ങൾക്ക് അറിയാമായിരിക്കും.',
-  ]
+summaryPoint1: ക്രമേണ നിലവിലെ Ethereum മെയിൻനെറ്റ് ബാക്കി Eth2 അപ്‌ഗ്രേഡുകളുമായി "ഡോക്ക്" ചെയ്യും.
+summaryPoint2: ഈ ഡോക്കിംഗ് "Eth1" മെയിൻനെറ്റിനെ Eth2 ബീക്കൺ ചെയിനും ഷാർഡിംഗ് സിസ്റ്റവുമായി ലയിപ്പിക്കും.
+summaryPoint3: ഇത് Ethereum- നുള്ള പ്രൂഫ്-ഓഫ് വർക്കിന്റെ അവസാനവും പ്രൂഫ് ഓഫ് സ്റ്റേക്കിലേക്കുള്ള പൂർണ്ണമായ പരിവർത്തനവും അടയാളപ്പെടുത്തും.
+summaryPoint4: ഇത് സാങ്കേതിക റോഡ്മാപ്പുകളിലെ "ഘട്ടം 1.5" ആയി നിങ്ങൾക്ക് അറിയാമായിരിക്കും.
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">
@@ -29,22 +26,6 @@ summaryPoints:
 തയ്യാറാകുമ്പോൾ, [പ്രൂഫ് ഓഫ് വർക്കിനു](/developers/docs/consensus-mechanisms/pow/) പകരം പ്രൂഫ് ഓഫ് സ്റ്റേക്ക് ഉപയോഗിച്ചുകൊണ്ട് Ethereum മെയിൻനെറ്റ് അതിന്‍റെ തന്നെ ഷാര്‍ഡായിത്തീര്‍ന്ന് ബീക്കൺ ചെയിനുമായി "ഡോക്ക്" ചെയ്യും.
 
 എല്ലാ ETH ഉടമകൾക്കും ഉപയോക്താക്കൾക്കും പരിവർത്തനം സുഗമമാണെന്ന് ഉറപ്പുവരുത്തുന്നതിനായി സ്മാർട്ട് കരാറുകൾ പ്രൂഫ് ഓഫ് സ്റ്റേക്ക് സിസ്റ്റത്തിലേക്ക് പ്രവർത്തിപ്പിക്കാനുള്ള കഴിവും, കൂടാതെ മുഴുവൻ ചരിത്രവും നിലവിലെ Ethereumന്റെ അവസ്ഥയും മെയിൻനെറ്റ് കൊണ്ടുവരും.
-
-<!-- ### Improving mainnet
-
-Before mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
-
-These include Improvements for
-
-- **End users**: like [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) which changes the way users bid for blockspace. In other words, making transaction fees more efficient for end users.
-- **Client runners**: making running clients more sustainable by capping disk space requirements.
-- **Developers**: upgrading the EVM to be more flexible.
-
-Plus many more.
-
-[More on Ethereum1.x](/learn/#eth-1x)
-
-These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 
 ## ഡോക്കിംഗിന് ശേഷം {#after-the-docking}
 

@@ -5,13 +5,10 @@ lang: de
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    'Letztlich wird das aktuelle Ethereum Mainnet mit dem beacon chain koordiniertem proof-of-stake system "fusioniert".',
-    "Dies vermerkt das Ende von proof-of-work in Ethereum und zugleich den Start, zu einem vollen Übergang in proof-of-stake.",
-    "Dies ist geplant, um der Veröffentlichung von shard chains zuvorzukommen.",
-    'Welches wir zuvor als "die Kupplung" bezeichneten.',
-  ]
+summaryPoint1: Letztlich wird das aktuelle Ethereum Mainnet mit dem beacon chain koordiniertem proof-of-stake system "fusioniert".
+summaryPoint2: Dies vermerkt das Ende von proof-of-work in Ethereum und zugleich den Start, zu einem vollen Übergang in proof-of-stake.
+summaryPoint3: Dies ist geplant, um der Veröffentlichung von shard chains zuvorzukommen.
+summaryPoint4: Welches wir zuvor als "die Kupplung" bezeichneten.
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">
@@ -29,8 +26,6 @@ Stelle dir Ethereum als Raumschiff vor, das noch nicht ganz für seine interstel
 Wenn es soweit ist, wird das Ethereum Mainnet mit der Beacon Chain "verschmelzen" und ein eigener Shard werden, der proof-of-stake statt [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/) verwendet.
 
 Mainnet wird es sowohl ermöglichen, Smart Contracts ins proof-of-stake-System einzubringen, als auch die gesamte Geschichte und den aktuellen Zustand von Ethereum, um einen flüssigen Übergang für alle Besitzer und Nutzer von ETH zu garantieren.
-
-<!-- ### Improving Mainnet -->
 
 ## Nach der Verkupplung {#after-the-merge}
 

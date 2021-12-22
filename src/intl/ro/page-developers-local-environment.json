@@ -1,6 +1,8 @@
 {
   "page-local-environment-brownie-desc": "Un cadru de dezvoltare și testare bazat pe Python pentru contracte inteligente care vizează mașina virtuală Ethereum.",
   "page-local-environment-brownie-logo-alt": "Logo Brownie",
+  "page-local-environment-dapptools-desc": "O suită de instrumente CLI axate pe Ethereum folosind filozofia de design Unix, favorizând combinabilitatea, configurabilitatea și extensibilitatea.",
+  "page-local-environment-dapptools-logo-alt": "Logo-ul Dapptools",
   "page-local-environment-embark-desc": "O platformă all-in-one pentru programatori pentru construirea și implementarea aplicațiilor descentralizate.",
   "page-local-environment-embark-logo-alt": "Logo Embark",
   "page-local-environment-epirus-desc": "O platformă pentru dezvoltarea, implementarea și monitorizarea aplicațiilor blockchain pe mașina virtuală Java",
@@ -19,7 +21,7 @@
   "page-local-environment-hardhat-logo-alt": "Logo Hardhat",
   "page-local-environment-openZeppelin-desc": "Economisește ore de dezvoltare compilând, făcând upgrade, implementând și interacționând cu contracte inteligente cu CLI-ul nostru.",
   "page-local-environment-openZeppelin-logo-alt": "Logo OpenZeppelin",
-  "page-local-environment-scaffold-eth-desc": "Hardhat + Creează aplicații Eth: tot ce ai nevoie pentru a începe să creezi aplicații descentralizate alimentate de contracte inteligente",
+  "page-local-environment-scaffold-eth-desc": "Ethers + Hardhat + React: tot de ai nevoie pentru a începe să creezi aplicații descentralizate alimentate de contracte inteligente",
   "page-local-environment-scaffold-eth-logo-alt": "Logo scaffold-eth",
   "page-local-environment-setup-meta-desc": "Ghid despre cum să alegi stiva de software pentru dezvoltarea Ethereum.",
   "page-local-environment-setup-meta-title": "Configurare de dezvoltare locală Ethereum",

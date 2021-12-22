@@ -89,7 +89,7 @@ We recommend you leave names of brands, companies, and personnel untranslated as
 
 ## How do I add content in my language? {#adding-foreign-language-content}
 
-Currently, all non-English content is translated directly from the English source content, and any content that does not exist in English cannot be added to other languages. 
+Currently, all non-English content is translated directly from the English source content, and any content that does not exist in English cannot be added to other languages.
 
 To suggest new content for ethereum.org, you can [create an issue](https://github.com/ethereum/ethereum-org-website/issues) on GitHub. If added, the content will be written in English and translated to other languages using Crowdin.
 

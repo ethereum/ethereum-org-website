@@ -5,17 +5,14 @@ lang: ro
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
-summaryPoints:
-  [
-    "Fragmentarea este un upgrade pe mai multe faze pentru a îmbunătăți scalabilitatea și capacitatea Ethereum.",
-    "Lanțurile de fragmente distribuie sarcina rețelei pe 64 de lanțuri noi.",
-    "Acestea facilitează rularea unui nod, menținând cerințele hardware scăzute.",
-    "Foile de parcurs tehnice includ lucrări pe lanțurile de fragmente în „Faza 1” și potențial în „Faza 2”.",
-  ]
+summaryPoint1: Fragmentarea este o actualizare în mai multe faze pentru a îmbunătăți scalabilitea și capacitatea Ethereum.
+summaryPoint2: Lanțurile de fragmente distribuie sarcina rețelei pe 64 de lanțuri noi.
+summaryPoint3: Acestea facilitează rularea unui nod, menținând cerințele hardware scăzute.
+summaryPoint4: Actualizarea este planificată să aibă loc după unirea Rețelei principale cu Rețeaua Beacon.
 ---
 
 <UpgradeStatus date="~2023">
-    Lanțurile de fragmente ar trebui să fie livrate în 2023, în funcție de cât de repede progresează munca după lansarea <a href="/eth2/beacon-chain/">lanțului Beacon</a>. Aceste fragmente vor oferi Ethereum mai multă capacitate de stocare și acces la date, dar nu vor fi utilizate pentru executarea de cod. Detaliile despre aceasta sunt încă în curs de analiză.
+    Lanțurile de fragmente ar trebui să fie livrate în 2023, în funcție de cât de repede progresează munca după <a href="/eth2/merge/">unire</a>. Aceste fragmente vor oferi Ethereum mai multă capacitate de stocare și acces la date, dar nu vor fi utilizate pentru executarea de cod. Detaliile despre aceasta sunt încă în curs de analiză.
 </UpgradeStatus>
 
 ## Ce este fragmentarea? {#what-is-sharding}
@@ -48,11 +45,15 @@ Când vor fi livrate primele lanțuri de fragmente, acestea vor furniza doar dat
 
 Rollup-urile sunt o tehnologie de „nivel 2” care există astăzi. Acestea permit aplicațiilor descentralizate (dapps) să grupeze („roll up”) tranzacții într-o singură tranzacție în afara lanțului, să genereze o dovadă criptografică și apoi să o trimită lanțului. Acest lucru reduce datele necesare executării unei tranzacții. Combină acest lucru cu disponibilitatea tuturor datelor suplimentare oferită de fragmente și obții 100.000 de tranzacții pe secundă.
 
+<InfoBanner isWarning={false}>
+  Având în vedere progresul recent în cercetarea și dezvoltarea soluțiilor de scalare de nivelul 2, acest lucru a determinat prioritizarea unirii înaintea actualizării cu lanțurile de fragmente. Acestea vor fi punctul central după tranziția rețelei principală în Dovada Mizei (proof-of-stake).
+
 [Mai multe despre rollup-uri](/developers/docs/scaling/layer-2-rollups/)
+</InfoBanner>
 
 ## Lanțuri de fragmente versiunea 2: executarea codului {#code-execution}
 
-Planul a fost întotdeauna de a adăuga funcționalități suplimentare fragmentelor, pentru a le face mai asemănătoare cu [rețeaua principală Ethereum](/glossary/#mainnet) folosită astăzi. Aceasta le-ar permite să stocheze și să execute contracte inteligente și să gestioneze conturi. Dar, având în vedere creșterea numărului de tranzacții pe secundă creată de fragmentele din versiunea 1, mai trebuie să se întâmple acest lucru? Acest lucru este încă în dezbatere în comunitate și se pare că există câteva opțiuni.
+Planul a fost întotdeauna de a adăuga funcționalități suplimentare fragmentelor, pentru a le face mai asemănătoare cu [Rețeaua principală Ethereum](/glossary/#mainnet) folosită în prezent. Acestea le-ar permite să stocheze și să execute contracte inteligente și să gestioneze conturi. Dar, având în vedere creșterea numărului de tranzacții pe secundă creată de fragmentele din versiunea 1, mai trebuie să se întâmple acest lucru? Acest aspect este încă în dezbatere în comunitate și se pare că există câteva opțiuni.
 
 ### Fragmentele trebuie să execute cod? {#do-shards-need-code-execution}
 
@@ -66,7 +67,7 @@ Acest lucru ar însemna că nu oferim fragmentelor capacitatea de a gestiona con
 
 #### 2. Au numai câteva fragmente executabile {#some-execution-shards}
 
-Probabil am putea ajunge la un compromis în care nu avem nevoie ca toate fragmentele (chiar acum sunt planificate 64) să fie inteligente. Am putea adăuga această funcționalitate doar la câteva și lăsa restul. Acest lucru ar putea accelera livrarea.
+Probabil am putea ajunge la un compromis în care nu avem nevoie ca toate fragmentele (chiar acum sunt planificate 64) să fie inteligente. Am putea adăuga această funcționalitate doar la câteva și lăsa restul așa cum sunt. Acest lucru ar putea accelera livrarea.
 
 #### 3. Să așteptăm până când vom putea produce dovezi SNARK Zero Knowledge (ZK) (nu revelează sursa) {#wait-for-zk-snarks}
 
@@ -74,7 +75,7 @@ Probabil am putea ajunge la un compromis în care nu avem nevoie ca toate fragme
 
 #### Alte surse {#other-sources}
 
-Iată mai multe gânduri despre aceste abordări:
+Iată mai multe idei despre aceste abordări:
 
 - [Etapa Unu și Gata: Et2 ca motor de disponibilitate a datelor](https://ethresear.ch/t/phase-one-and-done-eth2-as-a-data-availability-engine/5269/8) – _cdetrio, ethresear.ch_
 
@@ -82,19 +83,21 @@ Acesta este încă un punct activ de discuție. Vom actualiza aceste pagini dup�
 
 ## Relația dintre upgrade-uri {#relationship-between-upgrades}
 
-Actualizările Eth2 sunt oarecum interdependente. Să recapitulăm legătura dintre lanțurile de fragmente și celelalte upgrade-uri.
+Toate actualizările Eth2 sunt oarecum interdependente. Să recapitulăm legătura dintre lanțurile de fragmente și celelalte actualizări.
 
 ### Fragmentele și lanțul Beacon {#shards-and-beacon-chain}
 
-Lanțul Beacon conține toată logica pentru păstrarea fragmentelor în siguranță și sincronizate. Lanțul Beacon va coordona stakerii din rețea, atribuindu-le fragmente la care trebuie să lucreze. Și va facilita, de asemenea, comunicarea între fragmente prin primirea și stocarea datelor de tranzacție a fragmentelor la care pot avea acces alte fragmente. Aceasta va oferi fragmentelor un instantaneu al stării Ethereum pentru a menține totul la zi.
+Rețeaua Beacon conține toată logica pentru păstrarea fragmentelor în siguranță și sincronizate. Rețeaua Beason va coordona stakerii din rețea, atribuindu-le fragmente la care trebuie să lucreze. Și va facilita, de asemenea, comunicarea între fragmente prin primirea și stocarea datelor de tranzacție a fragmentelor la care pot avea acces alte fragmente. Acest lucru va oferi fragmentelor un instantaneu al stării Ethereum pentru a menține totul la zi.
 
 <ButtonLink to="/eth2/beacon-chain/">Lanțul Beacon</ButtonLink>
 
-### Fragmentele și andocarea {#shards-and-docking}
+### Fragmentele și unirea {#shards-and-docking}
 
-Rețeaua principală Ethereum va exista așa cum există astăzi chiar și după introducerea fragmentelor. Cu toate acestea, la un moment dat, rețeaua principală va trebui să devină un fragment, astfel încât să poată face tranziția la mizare. Rămâne de văzut dacă rețeaua principală va exista ca singurul fragment „inteligent” care poate gestiona executarea de cod - dar în orice caz, în faza 2 a fragmentării, va trebui să se ia o decizie cu privire la aceasta.
+Până la adugarea fragmentelor suplimentare, rețeaua principală Ethereum va fi deja securizată de rețeaua Beacon prin Dovada Mizei (proof-of-stake). Acest lucru permite unei rețelei principale fertile să construiască lanțuri de fragmente, fiind alimentate de soluțiile din nivelul 2 care supraalimentează scalabilitatea.
 
-<ButtonLink to="/eth2/merge/">Andocarea</ButtonLink>
+Rămâne de văzut dacă Rețeaua principală va exista ca singurul fragment „inteligent” care poate gestiona executarea de cod – în orice caz, decizia de a extinde fragmentele poate fi reexaminată după necesități.
+
+<ButtonLink to="/eth2/merge/">Unirea</ButtonLink>
 
 <Divider />
 

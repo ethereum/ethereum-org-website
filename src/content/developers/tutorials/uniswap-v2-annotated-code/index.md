@@ -939,7 +939,7 @@ I will only explain the part that is different, the `permit` functionality.
 
 Transactions on Ethereum cost ether (ETH), which is equivalent to real money. If you have ERC-20 tokens but not ETH, you can't send
 transactions, so you can't do anything with them. One solution to avoid this problem is
-[meta-transactions](https://uniswap.org/docs/v2/smart-contract-integration/supporting-meta-transactions/).
+[meta-transactions](https://docs.uniswap.org/protocol/V2/guides/smart-contract-integration/supporting-meta-transactions/).
 The owner of the tokens signs a transaction that allows somebody else to withdraw tokens off chain and sends it using the Internet to
 the recipient. The recipient, which does have ETH, then submits the permit on behalf of the owner.
 
@@ -957,8 +957,8 @@ one we support here is `Permit` with these parameters.
 ```
 
 It is not feasible for a recipient to fake a digital signature. However, it is trivial to send the same transaction twice
-(this is a form of [replay attack](https://en.wikipedia.org/wiki/Replay_attack)). To prevent this, we use
-a [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce). If the nonce of a new `Permit` is not one more than the last one
+(this is a form of [replay attack](https://wikipedia.org/wiki/Replay_attack)). To prevent this, we use
+a [nonce](https://wikipedia.org/wiki/Cryptographic_nonce). If the nonce of a new `Permit` is not one more than the last one
 used, we assume it is invalid.
 
 ```solidity
@@ -1232,7 +1232,7 @@ thousand B tokens (red line). The x axis is the exchange rate, A/B. If x=1, they
 a thousand of each. If x=2, A is twice the value of B (you get two B tokens for each A token) so you deposit a thousand
 B tokens, but only 500 A tokens. If x=0.5, the situation is reversed, a thousand A tokens and five hundred B tokens.
 
-![Graph](liquidityProviderDeposit.png "Tokens to deposit at different exchange rates")
+![Graph](liquidityProviderDeposit.png)
 
 ```solidity
             }
@@ -1913,7 +1913,7 @@ library Math {
         z = x < y ? x : y;
     }
 
-    // babylonian method (https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method)
+    // babylonian method (https://wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method)
     function sqrt(uint y) internal pure returns (uint z) {
         if (y > 3) {
             z = y;
@@ -1930,7 +1930,7 @@ Start with x as an estimate that is higher than the square root (that is the rea
 
 Get a closer estimate, the average of the previous estimate and the number whose square root we're trying to find divided by
 the previous estimate. Repeat until the new estimate isn't lower than the existing one. For more details,
-[see here](https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method).
+[see here](https://wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method).
 
 ```solidity
             }
@@ -1955,7 +1955,7 @@ as _x\*2^112_. This lets us use the original addition and subtraction opcodes wi
 ```solidity
 pragma solidity =0.5.16;
 
-// a library for handling binary fixed point numbers (https://en.wikipedia.org/wiki/Q_(number_format))
+// a library for handling binary fixed point numbers (https://wikipedia.org/wiki/Q_(number_format))
 
 // range: [0, 2**112 - 1]
 // resolution: 1 / 2**112
@@ -1973,7 +1973,7 @@ library UQ112x112 {
     }
 ```
 
-Because y is `uint112`, the most if can be is 2^113-1. That number can still be encoded as a `UQ112x112`.
+Because y is `uint112`, the most if can be is 2^112-1. That number can still be encoded as a `UQ112x112`.
 
 ```solidity
     // divide a UQ112x112 by a uint112, returning a UQ112x112

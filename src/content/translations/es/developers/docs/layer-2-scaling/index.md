@@ -112,14 +112,6 @@ Entonces se te reembolsa por haber demostrado el fraude.
 - [Offchain Labs Arbitrum Rollup](https://offchainlabs.com/)
 - [Red de combustible](https://fuel.sh/)
 
-<!-- #### The Optimism virtual machine (OVM)
-
-What makes Optimistic rollups particularly exciting is that the chain works the same as the main Ethereum chain because it's based on [the EVM](/developers/docs/evm/). It doesn't use Ethereum, it is Ethereum. This means if you want to use Optimistic rollups, it's just a matter of deploying it to the OVM. It looks, feels, and acts just like the Ethereum main chain–you write contracts in Solidity, and interact with the chain via the Web3 API.
-
-The OVM also has a bunch of features that allow for a really seamless experience moving code from the EVM. In fact you can move Solidity contracts onto a cheaper and faster solution with just a few lines of code.
-
-[Check out the OVM documentation](http://docs.optimism.io/) -->
-
 ## Canales {#channels}
 
 Los canales permiten a los participantes realizar transacciones `x` número de veces fuera de la cadena mientras solo se envían dos transacciones a la red en cadena. Esto permite disfrutar de un rendimiento de transacción extremadamente alto
@@ -202,7 +194,7 @@ Utiliza pruebas de validez como [ZK-Rollups](#zk-rollups), pero los datos no se 
 
 ## Sidechains {#sidechains}
 
-Una cadena sidechain (o lateral) es una blockchain independiente que funciona en paralelo con respecto a la red principal y opera independientemente. Tiene su propio algoritmo de consenso ([Prueba de autoridad](https://en.wikipedia.org/wiki/Proof_of_authority), [Prueba de participación delegada](https://en.bitcoinwiki.org/wiki/DPoS), [tolerancia a fallas bizantinas](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained), etc.). Está conectado a la cadena principal por un puente bidireccional.
+Una cadena sidechain (o lateral) es una blockchain independiente que funciona en paralelo con respecto a la red principal y opera independientemente. Tiene su propio algoritmo de consenso ([Prueba de autoridad](https://wikipedia.org/wiki/Proof_of_authority), [Prueba de participación delegada](https://en.bitcoinwiki.org/wiki/DPoS), [tolerancia a fallas bizantinas](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained), etc.). Está conectado a la cadena principal por un puente bidireccional.
 
 | Ventajas                                               | Desventajas                                                                                           |
 | ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
@@ -221,13 +213,12 @@ Combinan las mejores partes de las tecnologías múltiples de capa 2 y pueden of
 
 ### Usos de las soluciones híbridas {#use-hybrid-solutions}
 
-- [Offchain Labs Arbitrum Rollup](https://offchainlabs.com/arbitrum.pdf)
 - [Celer](https://www.celer.network/)
 
 ## Para seguir leyendo {#further-reading}
 
 - [Validium y la capa 2, número 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
-- \[Evaluación de soluciones de escala de la capa 2 de Ethereum: Una estructura de comparación\](https://medium.com/matter-labs/evaluating-ethereum-layer 2-scaling-solutions-a-comparison-framework-b6b2f410f955)
+- [Evaluación de soluciones de escala de la capa 2 de Ethereum: Una estructura de comparación](https://blog.matter-labs.io/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
 - [Adición del Rollup de la Prueba de participación híbrida a la plataforma de la capa 2 de Celer en Ethereum](https://medium.com/celer-network/adding-hybrid-pos-rollup-sidechain-to-celers-coherent-layer-2-platform-d1d3067fe593)
 - [Escalabilidad de la blockchain de conocimiento cero](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 

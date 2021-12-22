@@ -1,67 +1,60 @@
 ---
-title: Andocarea rețelei principale cu Eth2
-description: Informații despre andocare - când rețeaua principală Ethereum se va alătura sistemului Dovada Mizei (PoS) coordonat de lanțul Beacon.
+title: Unirea
+description: Află mai multe despre unire - atunci când rețeaua principală Ethereum se va alătura sistemului bazat pe Dovada Mizei (proof-of-stake), coordonat de rețeaua Beacon.
 lang: ro
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    'Eventual, actuala rețea principală Ethereum va "andoca" cu restul de upgrade Eth2.',
-    'Andocarea va îmbina rețeaua principală "Eth1" cu Lanțul Beacon Eth2 și cu sistemul de fragmente.',
-    "Aceasta va marca sfârșitul Dovezii Muncii (PoW) pentru Ethereum și tranziția completă la Dovada Mizei (PoS).",
-    'S-ar putea să găsești acest lucru ca "Faza 1.5" pe foile de parcurs tehnice.',
-  ]
+summaryPoint1: În cele din urmă, Rețeaua principală Ethereum se va „uni” cu sistemul bazat pe Dovada Mizei (proof-of-stake), coordonat de rețeaua Beacon.
+summaryPoint2: Această schimbare va marca sfârșitul sistemului bazat pe Dovada Muncii (proof-of-work) și tranziția totală spre Dovada Mizei (proof-of-stake).
+summaryPoint3: Acest sistem este menit să pregătească terenul pentru lansarea lanțurilor de fragmente.
+summaryPoint4: Acest proces l-am numit „andocarea”
 ---
 
-<UpgradeStatus date="~Q1/Q2 2022">
-    Acest upgrade va urma după sosirea lanțurilor de fragmente. Dar este momentul în care <a href="/eth2/vision/">viziunea Eth2</a> devine pe deplin realizată – mai multă scalabilitate, securitate și durabilitate, cu mizarea care susține întreaga rețea.
+<UpgradeStatus date="~Q2 2022">
+  Actualizarea reprezintă trecerea oficială la consensul bazat pe Dovada Mizei (proof-of-stake). Astfel, se elimină nevoia de minat folosind o cantitate mare de energie, securizând rețeaua folosind ether mizat. Un pas cu adevărat important în realizarea <a href="/eth2/vision/">Viziunii Eth2</a> – mai multă scalabilitate, securitate și sustenabilitate.
 </UpgradeStatus>
 
-## Ce este andocarea? {#what-is-the-docking}
+## Ce este unirea? {#what-is-the-docking}
 
-Este important să ne amintim că inițial, celelalte upgrade-uri ale Eth2 sunt livrate separat de [rețeaua principală](/glossary/#mainnet) - lanțul pe care îl folosim astăzi. Rețeaua principală Ethereum va continua să fie securizată prin [Dovada Muncii (PoW)](/developers/docs/consensus-mechanisms/pow/), chiar dacă [lanțul Beacon](/eth2/beacon-chain/) și [lanțurile sale de fragmente](/eth2/shard-chains/) rulează în paralel folosind [Dovada Mizei (PoS)](/developers/docs/consensus-mechanisms/pos/). Andocarea se va face atunci când aceste două sisteme vor fuziona.
+Este important să ne amintim că inițial [rețeaua Beacon](/eth2/beacon-chain/) a fost livrat separat de [rețeaua principală](/glossary/#mainnet) - rețeaua pe care o folosim în prezent. Rețeaua principală Ethereum continuă să fie securizată prin [Dovada Muncii (proof-of-work)](/developers/docs/consensus-mechanisms/pow/), chiar dacă rețeaua Beacon rulează în paralel folosind [Dovada Mizei (proof-of-stake)](/developers/docs/consensus-mechanisms/pos/). Unirea se va realiza atunci când aceste două sisteme se reunesc în cele din urmă.
 
-Imaginează-ți că Ethereum este o navă spațială care nu este chiar pregătită pentru o călătorie interstelară. Cu lanțul Beacon și lanțurile de fragmente, comunitatea a construit un nou motor și o carenă întărită. Când va veni timpul, nava actuală va andoca împreună cu acest nou sistem, astfel încât să poată deveni o singură navă, gata să călătorească câțiva ani lumină buni și să cucerească întreg universul.
+Imaginează-ți că Ethereum este o navă spațială care nu este chiar pregătită pentru o călătorie interstelară. Cu rețeaua Beacon, comunitatea a construit un nou motor și o carenă întărită. Când va veni timpul, nava actuală va andoca împreună cu acest nou sistem, devenind o singură navă gata să călătorească câțiva ani lumină buni și să cucerească întreg universul.
 
-## Andocarea rețelei principale {#docking-mainnet}
+## Unirea cu Rețeaua principală {#docking-mainnet}
 
-Când va fi gata, rețeaua principală Ethereum va „andoca” cu lanțul Beacon, devenind propriul său fragment care folosește Dovada Mizei (PoS) în loc de [Dovada Muncii (PoW)](/developers/docs/consensus-mechanisms/pow/).
+Când va fi gata, Rețeaua principală Ethereum se va „uni” cu rețeaua Beacon, devenind propriul său fragment care folosește Dovada Mizei (proof-of-stake) în loc de [Dovada Muncii (proof-of-work)](/developers/docs/consensus-mechanisms/pow/).
 
 Rețeaua principală va aduce posibilitatea de a rula contracte inteligente în sistemul de Dovadă a Mizei (PoS), plus istoricul complet și starea actuală a Ethereum, pentru a asigura tranziția lină pentru toți deținătorii și utilizatorii de ETH.
 
-<!-- ### Improving Mainnet
+## După unire {#after-the-merge}
 
-Before Mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
+Sfârșitul unirii va însemna și sfârșitul Dovezii Muncii (proof-of-work) pentru Ethereum și va începe era unui Ethereum mai sustenabil și mai ecologic. La momentul respectiv, Ethereum va fi cu un pas mai aproape de atingerea nivelului maxim de securitate și sustenabilitate subliniat în [Viziunea Eth2](/eth2/vision/).
 
-These include Improvements for
+Este important de remaracat faptul că obiectivul de implementare a unirii este pur și simplu de a livra tranziția dintre Dovada Muncii (proof-of-work) și Dovada Mizei (proof-of-stake). Dezvoltatorii își concentrează eforturile pe această tranziție și reduc la minim funcționalitățile suplimentare care ar putea întârzia acest obiectiv.
 
-- **End users**: like [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) which changes the way users bid for blockspace. In other words, making transaction fees more efficient for end users.
-- **Client runners**: making running clients more sustainable by capping disk space requirements.
-- **Developers**: upgrading the EVM to be more flexible.
+**Asta înseamnă mai puține funcționalități noi, cum ar fi abilitatea de a retrage ETH mizat care va trebui să aștepte puțin mai mult după ce unirea este completă.** Planurile includ o actualizare ulterioară pentru a aborda aceste funcționalități care vor fi implementate foarte repede după ce unirea este completă.
 
-Plus many more.
+## Relația dintre actualizări {#relationship-between-upgrades}
 
-[More on Ethereum1.x](/learn/#eth-1x)
+Toate actualizările Eth2 sunt oarecum interdependente. Să recapitulăm modul în care unirea se leagă de celelalte acutalizări.
 
-These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
+### Unirea și Rețeaua Beacon {#docking-and-beacon-chain}
 
-## După andocare {#after-the-docking}
+După ce unirea este completă, stakerii vor fi desemnați să valideze Rețeaua principală Ethereum. [Minatul](/developers/docs/consensus-mechanisms/pow/mining/) nu va mai fi necesar, astfel încât minerii își vor investi probabil câștigurile în mizarea în noul sistem bazat pe Dovada Mizei (proof-of-stake).
 
-Aceasta va însemna sfârșitul Dovezii Muncii (PoW) pentru Ethereum și va începe era unui Ethereum mai durabil și mai ecologic. La momentul respectiv, Ethereum va avea scara, securitatea și sustenabilitatea descrise în [viziunea Eth2](/eth2/vision/).
+<ButtonLink to="/eth2/beacon-chain/">Rețeaua Beacon</ButtonLink>
 
-## Relația dintre upgrade-uri {#relationship-between-upgrades}
+### Unirea și curățarea după unire {#merge-and-post-merge-cleanup}
 
-Upgrade-urile Eth2 sunt oarecum interdependente. Să recapitulăm cum se corelează andocarea cu celelalte upgrade-uri.
+Imediat după unire, unele funcționalități precum retragerea monedelor ETH mizate nu vor fi suportate încă. Aceste funcționalități sunt planificate pentru o actualizare separată care să urmeze la scurt timp după unire.
 
-### Andocarea și lanțul Beacon {#docking-and-beacon-chain}
+Rămâi la curent cu [Blog-ul pentru Cercetare și Ethereum EF](https://blog.ethereum.org/category/research-and-development/). Pentru cei curioși, află mai multe despre [Ce se întâmplă după Unire](https://youtu.be/7ggwLccuN5s?t=101), prezentat de către Vitalik la evenimentul ETHGlobal din aprilie 2021.
 
-După realizarea andocării, stakerii vor fi desemnați să valideze rețeaua principală Ethereum. La fel ca în cazul lanțurilor de fragmente. [Mineritul](/developers/docs/consensus-mechanisms/pow/mining/) nu va mai fi necesar, astfel încât minerii își vor investi probabil câștigurile în mizarea în noul sistem de Dovadă a Mizei (PoS).
+### Unirea și lanțurile de fragmente {#docking-and-shard-chains}
 
-<ButtonLink to="/eth2/beacon-chain/">Lanțul Beacon</ButtonLink>
+Inițial, planul era ca lanțurile de fragmente să fie folosite înainte de unire – pentru a aborda scalabilitatea. Cu toate acestea, odată cu avântul [nivelului 2 de scalare a soluțiilor](/developers/docs/scaling/#layer-2-scaling), prioritatea s-a mutat la schimbul Dovezii Muncii (proof-of-work) cu Dovada Mizei (proof-of-stake) prin unire.
 
-### Andocarea și lanțurile de fragmente {#docking-and-shard-chains}
-
-Având în vedere că rețeaua principală va deveni un fragment, implementarea cu succes a lanțurilor de fragmente este esențială pentru acest upgrade. Probabil că tranziția va juca un rol important în a ajuta comunitatea să decidă dacă va lansa un al doilea upgrade la fragmentare (sharding). Acest upgrade va face celelalte fragmente un fel de rețea principală: vor putea să gestioneze tranzacții și contracte inteligente nu doar să furnizeze mai multe date.
+Acest lucru va fi evaluat în continuu de către comunitate în ceea ce privește necesitatea unor potențiale runde multiple de lanțuri de fragmente pentru a permite o scalabilitate infinită.
 
 <ButtonLink to="/eth2/shard-chains/">Lanțuri de fragmente</ButtonLink>

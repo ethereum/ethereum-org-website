@@ -5,13 +5,10 @@ lang: es
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    'Eventualmente, la red principal de Ethereum actual se "acoplará" con el resto de las actualizaciones de Eth2.',
-    'El acoplamiento fusionará la red principal de "Eth1" con la Cadena de Baliza de Eth2 y el sistema de fragmentación.',
-    "Esto marcará el final de la prueba de trabajo para Ethereum y la transición completa a la prueba de participación.",
-    'Es posible que conozcas esto como "Fase 1.5" en hojas de ruta técnicas.',
-  ]
+summaryPoint1: Eventualmente, la red principal de Ethereum actual se "acoplará" con el resto de las actualizaciones de Eth2.
+summaryPoint2: El acoplamiento fusionará la red principal de "Eth1" con la Cadena de Baliza de Eth2 y el sistema de fragmentación.
+summaryPoint3: Esto marcará el final de la prueba de trabajo para Ethereum y la transición completa a la prueba de participación.
+summaryPoint4: Es posible que conozcas esto como "Fase 1.5" en hojas de ruta técnicas.
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">
@@ -29,22 +26,6 @@ Imagine que Ethereum es una nave espacial que no está lista para un viaje inter
 Cuando esté lista, la red principal de Ethereum se "acoplará" a la Cadena de Baliza y se convertirá en su propio fragmento, que utiliza la prueba de participación en lugar de la [ prueba de trabajo](/developers/docs/consensus-mechanisms/pow/).
 
 La red principal aportará la capacidad de ejecutar contratos inteligentes en el sistema de prueba de participación, además del historial completo y el estado actual de Ethereum, para garantizar que la transición sea fluida para todos los titulares y usuarios de ETH.
-
-<!-- ### Improving Mainnet
-
-Before Mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
-
-These include Improvements for
-
-- **End users**: like [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) which changes the way users bid for blockspace. In other words, making transaction fees more efficient for end users.
-- **Client runners**: making running clients more sustainable by capping disk space requirements.
-- **Developers**: upgrading the EVM to be more flexible.
-
-Plus many more.
-
-[More on Ethereum1.x](/learn/#eth-1x)
-
-These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 
 ## Después del acoplamiento {#after-the-docking}
 

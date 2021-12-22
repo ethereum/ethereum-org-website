@@ -5,13 +5,10 @@ lang: hr
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    "Na kraju će se trenutačna glavna mreža Ethereum „spojiti” s ostatkom nadogradnji Eth2.",
-    "Spajanje će sjediniti glavnu mrežu „Eth1” s nadogradnjom Eth2 Beacon Chain i sustavom razdjeljivanja.",
-    "Ovo će označiti kraj procesa proof-of-work za Ethereum i prijelaz na proof-of-stake.",
-    "To vam može biti poznato kao „faza 1.5” na tehničkim planovima.",
-  ]
+summaryPoint1: Na kraju će se trenutačna glavna mreža Ethereum „spojiti” s ostatkom nadogradnji Eth2.
+summaryPoint2: Spajanje će sjediniti glavnu mrežu „Eth1” s nadogradnjom Eth2 Beacon Chain i sustavom razdjeljivanja.
+summaryPoint3: Ovo će označiti kraj procesa proof-of-work za Ethereum i prijelaz na proof-of-stake.
+summaryPoint4: To vam može biti poznato kao „faza 1.5” na tehničkim planovima.
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">
@@ -29,22 +26,6 @@ Zamislite da je Ethereum svemirski brod koji nije baš spreman za međuzvjezdano
 Kad bude spremna, glavna mreža Ethereum spojit će se s nadogradnjom Beacon Chain, postajući vlastiti djelić koji upotrebljava proof-of-stake umjesto [ proof-of-work ](/developers/docs/consensus-mechanisms/pow/).
 
 Glavna mreža omogućit će pokretanje pametnih ugovora u sustav proof-of-stake, i cijelu povijest i trenutačno stanje mreže Ethereum, kako bi se osigurao prijelaz bez problema za sve vlasnike i korisnike ETH-a.
-
-<!-- ### Improving Mainnet
-
-Before Mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
-
-These include Improvements for
-
-- **End users**: like [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) which changes the way users bid for blockspace. In other words, making transaction fees more efficient for end users.
-- **Client runners**: making running clients more sustainable by capping disk space requirements.
-- **Developers**: upgrading the EVM to be more flexible.
-
-Plus many more.
-
-[More on Ethereum1.x](/learn/#eth-1x)
-
-These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 
 ## Nakon spajanja {#after-the-docking}
 

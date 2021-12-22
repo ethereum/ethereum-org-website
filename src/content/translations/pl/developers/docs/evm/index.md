@@ -11,7 +11,7 @@ Protokół Ethereum istnieje wyłącznie w celu utrzymania niezakłóconej ciąg
 
 ## Wymagania wstępne {#prerequisites}
 
-Do zrozumienia EVM konieczna jest znajomość podstawowej terminologii informatycznej, takiej jak [bajty](https://en.wikipedia.org/wiki/Byte), [pamięć](https://en.wikipedia.org/wiki/Computer_memory) i [stos](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>). Równie pomocne może się okazać zaznajomienie się z takimi pojęciami, jak kryptografia, blockchain [funkcja haszująca](https://pl.wikipedia.org/wiki/Funkcja_skr%C3%B3tu), [Proof-of-Work](https://www.gpwinfostrefa.pl/czym-jest-proof-of-work/), [drzewo Merkle](https://pl.wikipedia.org/wiki/Drzewo_hash).
+Do zrozumienia EVM konieczna jest znajomość podstawowej terminologii informatycznej, takiej jak [bajty](https://wikipedia.org/wiki/Byte), [pamięć](https://wikipedia.org/wiki/Computer_memory) i [stos](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>). Równie pomocne może się okazać zaznajomienie się z takimi pojęciami, jak kryptografia, blockchain [funkcja haszująca](https://pl.wikipedia.org/wiki/Funkcja_skr%C3%B3tu), [Proof-of-Work](https://www.gpwinfostrefa.pl/czym-jest-proof-of-work/), [drzewo Merkle](https://pl.wikipedia.org/wiki/Drzewo_hash).
 
 ## Od księgi głównej do maszyny stanowej {#from-ledger-to-state-machine}
 
@@ -57,8 +57,6 @@ Kontrakty jednak zawierają drzewo _pamięciowe_ Merkle Patricia (jako adresowal
 Skompilowany kod bitowy inteligentnego kontraktu wykonywany jest jako szereg [kodów operacyjnych](https://www.ethervm.io/) EVM, które przeprowadzają standardowe operacje na stosie, takie jak `XOR`, `AND`, `ADD`, `SUB` itp. EVM implementuje również szereg operacji stosu specyficznych dla blockchaina, takich jak `ADDRESS`, `BALANDCE`, `SHA3`, `BLOCKHASH` itp.
 
 ![Schemat pokazujący, gdzie potrzebny jest gaz dla operacji EVM](../../../../../developers/docs/gas/gas.png) _Schemat zaadaptowany z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
-
-<!-- TODO add full list from  https://eth.wiki/concepts/evm/implementations -->
 
 ## Implementacja EVM {#evm-implementations}
 

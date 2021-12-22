@@ -5,13 +5,10 @@ lang: en
 template: eth2
 sidebar: true
 image: ../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    'Eventually the current Ethereum Mainnet will "merge" with the beacon chain proof-of-stake system.',
-    "This will mark the end of proof-of-work for Ethereum, and the full transition to proof-of-stake.",
-    "This is planned to precede the roll out of shard chains.",
-    'We formerly referred to this as "the docking."',
-  ]
+summaryPoint1: Eventually the current Ethereum Mainnet will "merge" with the beacon chain proof-of-stake system.
+summaryPoint2: This will mark the end of proof-of-work for Ethereum, and the full transition to proof-of-stake.
+summaryPoint3: This is planned to precede the roll out of shard chains.
+summaryPoint4: We formerly referred to this as "the docking."
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">
@@ -30,22 +27,6 @@ When ready, Ethereum Mainnet will "merge" with the Beacon Chain, becoming its ow
 
 Mainnet will bring the ability to run smart contracts into the proof-of-stake system, plus the full history and current state of Ethereum, to ensure that the transition is smooth for all ETH holders and users.
 
-<!-- ### Improving Mainnet
-
-Before Mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
-
-These include Improvements for
-
-- **End users**: like [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) which changes the way users bid for blockspace. In other words, making transaction fees more efficient for end users.
-- **Client runners**: making running clients more sustainable by capping disk space requirements.
-- **Developers**: upgrading the EVM to be more flexible.
-
-Plus many more.
-
-[More on Ethereum1.x](/learn/#eth-1x)
-
-These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the merge. -->
-
 ## After the merge {#after-the-merge}
 
 This will signal the end of proof-of-work for Ethereum and start the era of a more sustainable, eco-friendly Ethereum. At this point Ethereum will be one step closer to achieving the full scale, security and sustainability outlined in its [Eth2 vision](/eth2/vision/).
@@ -62,7 +43,9 @@ The Eth2 upgrades are all somewhat interrelated. So let’s recap how the merge 
 
 Once the merge happens, stakers will be assigned to validate the Ethereum Mainnet. [Mining](/developers/docs/consensus-mechanisms/pow/mining/) will no longer be required so miners will likely invest their earnings into staking in the new proof-of-stake system.
 
-<ButtonLink to="/eth2/beacon-chain/">The Beacon Chain</ButtonLink>
+<ButtonLink to="/eth2/beacon-chain/">
+  The Beacon Chain
+</ButtonLink>
 
 ### The merge and the post-merge cleanup {#merge-and-post-merge-cleanup}
 
@@ -76,4 +59,6 @@ Originally, the plan was to work on shard chains before the merge – to address
 
 This will be an ongoing assessment from the community as to the need for potentially multiple rounds of shard chains to allow for endless scalability.
 
-<ButtonLink to="/eth2/shard-chains/">Shard chains</ButtonLink>
+<ButtonLink to="/eth2/shard-chains/">
+  Shard chains
+</ButtonLink>

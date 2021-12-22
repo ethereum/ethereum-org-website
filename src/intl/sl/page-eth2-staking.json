@@ -23,7 +23,7 @@
   "page-eth2-staking-how-to-stake": "Kako zastavljati",
   "page-eth2-staking-how-to-stake-desc": "Vse je odvisno od tega, koliko ste pripravljeni zastaviti. Če želite postati polni validator, boste potrebovali 32 ETH, vendar je mogoče zastaviti tudi manj.",
   "page-eth2-staking-join": "Pridružite se",
-  "page-eth2-staking-join-community": "Pridruži se skupnosti zastavljalcev",
+  "page-eth2-staking-join-community": "Pridružite se skupnosti zastavljalcev",
   "page-eth2-staking-join-community-desc": "r/ethstaker je skupnost, kjer lahko vsi razpravljajo o zastavljanju na Ethereumu – pridružite se za nasvete, podporo in pogovor o vsem, kar je povezano z zastavljanjem.",
   "page-eth2-staking-less-than": "Manj kot",
   "page-eth2-staking-link-1": "Prikaži zaledne API-je",
@@ -52,11 +52,11 @@
   "page-eth2-staking-upgrades-li": "Dokaz o deležu upravlja oddajniška veriga.",
   "page-eth2-staking-upgrades-li-2": "Ethereum bo imel v nadaljnji prihodnosti oddajniško verigo z dokazom o deležu in glavno omrežje z dokazom o delu. Glavno omrežje je Ethereum, ki ga uporabljamo že več let.",
   "page-eth2-staking-upgrades-li-3": "V tem času bodo zastavljavci v oddajniško verigo dodajali nove bloke, vendar ne bodo obdelovali transakcij glavnega omrežja.",
-  "page-eth2-staking-upgrades-li-4": "Ethereum bo povsem preklopil na sistem z dokazom o deležu, ko glavno omrežje Ethereum postane drobec.",
-  "page-eth2-staking-upgrades-li-5": "Svoj delež boste lahko dvignili šele takrat.",
+  "page-eth2-staking-upgrades-li-4": "Ethereum bo popolnoma prešel na sistem z dokazom o deležu, ko se bo glavno omrežje Ethereum spojilo z oddajniško verigo.",
+  "page-eth2-staking-upgrades-li-5": "Sledila bo manjša nadgradnja, ki bo omogočila dvig zastavljenih sredstev.",
   "page-eth2-staking-upgrades-title": "Dokaz o deležu in nadgradnje Eth2",
   "page-eth2-staking-validators": "Več validatorjev, večja varnost",
-  "page-eth2-staking-validators-desc": "Verigo blokov, kot je Ethereum, je mogoče okvariti, če nadziraš 51 % omrežja. Dosegli bi lahko na primer, da bi 51 % validatorjev izjavilo, da je vaše stanje 1.000.000 ETH in ne 1 ETH. Vendar je za nadzor nad 51 % validatorji potrebno lastništvo 51 % ETH v sistemu – to je zelo veliko.",
+  "page-eth2-staking-validators-desc": "V blokovni verigi kot je Ethereum je mogoče cenzurirati in preurediti transakcije v svojo korist samo, če obvladujete večino omrežja. Toda, da bi lahko obvladovali večino omrežja, potrebujete večino validatorjev in za to bi potrebovali kontrolo nad večino ETH v sistemu – to pa je zelo velika vsota! Ta količina ETH raste z vsakim vstopom novega validatorja v sistem, kar dodatno okrepi omrežje. Dokaz o delu, varnostni model, ki ga bo nadomestil dokaz o deležu, zahteva od velidatorjev (rudarjev) specializirano strojno opremo in obilo fizičnega prostora – za rudarja je vstop v sistem zahteven, zato se zaščita proti večinskim napadom ne povečuje enako. Dokaz o deležu nima takšnih zahtev, kar bi moralo pospešiti rast omrežja (in njegovo odpornost proti večinskim napadom) do velikosti, ki za dokaz o delu preprosto ni dosegljiva.",
   "page-eth2-staking-withdrawals": "Dvigi ne bodo takoj aktivni",
-  "page-eth2-staking-withdrawals-desc": "Svojega deleža ne boste mogli dvigniti do uvedbe nadaljnjih nadgradenj. Dvigi bodo na voljo, ko se bo glavno omrežje spojilo s sistemom z oddajniško verigo."
+  "page-eth2-staking-withdrawals-desc": "Svojega zastavljenega deleža ne boste mogli dvigniti do uvedbe nadaljnjih nadgradenj. Dvigi bodo na voljo z manjšo nadgradnjo, ki bo sledila spojitvi glavnega omrežja z oddajniško verigo."
 }

@@ -5,13 +5,10 @@ lang: tr
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
-summaryPoints:
-  [
-    "Parçalama, Ethereum’un ölçeklenebilirliğini ve kapasitesini geliştirmek için çok aşamalı bir yükseltmedir.",
-    "Parça zincirleri, ağın yükünü 64 yeni zincire yayar",
-    "Donanım gereksinimlerini düşük tutarak, bir düğüm çalıştırmayı kolaylaştırır.",
-    'Teknik yol haritası, "1. Aşama" ve potansiyel olarak "2. Aşama" daki parça zincirleri üzerindeki çalışmaları içermektedir.',
-  ]
+summaryPoint1: Parçalama, Ethereum’un ölçeklenebilirliğini ve kapasitesini geliştirmek için çok aşamalı bir yükseltmedir.
+summaryPoint2: Parça zincirleri, ağın yükünü 64 yeni zincire yayar
+summaryPoint3: Donanım gereksinimlerini düşük tutarak, bir düğüm çalıştırmayı kolaylaştırır.
+summaryPoint4: Teknik yol haritası, "1. Aşama" ve potansiyel olarak "2. Aşama" daki parça zincirleri üzerindeki çalışmaları içermektedir.
 ---
 
 <UpgradeStatus date="~2023">

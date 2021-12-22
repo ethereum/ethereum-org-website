@@ -1,67 +1,60 @@
 ---
-title: 使用Eth2对接主网
-description: 了解对接 - 当以太坊主网加入信标链的协调权益证明系统时。
+title: 合并
+description: 了解“合并”- 当以太坊主网加入信标链协调的的权益证明系统时。
 lang: zh
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    "最终当前以太坊主网将“对接”其余的Eth2升级。",
-    '对接将把"Eth1"主网与Eth2信标链和分片系统合并。',
-    "这将标志着以太坊工作量证明的结束以及向权益证明的完全过渡。",
-    "您可能会在技术路线图上知道这称为“阶段1.5”。",
-  ]
+summaryPoint1: 最终，当前以太坊主网将与信标链权益证明系统“合并”。
+summaryPoint2: 这将标志着以太坊工作证明的淘汰以及向权益证明的完全过渡。
+summaryPoint3: 计划在推出分片链之前进行这项工作。
+summaryPoint4: 我们以前将此称为“对接”。
 ---
 
-<UpgradeStatus date="~Q1/Q2 2022">
-    此升级将跟随分片链的到来进行。 但这是 <a href="/eth2/vision/">Eth2 愿景</a> 完全实现的时候——更多的可扩展性、安全性和可持续性，并支持整个网络。
+<UpgradeStatus date="~Q2 2022">
+  此次升级代表以太坊正式转向权益证明共识。 能源密集型挖矿工作需求将消失，网络保护机制将通过质押以太币实现。 这是实现 <a href="/eth2/vision/">Eth2 愿景</a> 过程中真正令人兴奋的一步 - 更安全，且可扩容性和可持续性更强。
 </UpgradeStatus>
 
-## 什么是对接？ {#what-is-the-docking}
+## 什么是合并？ {#what-is-the-docking}
 
-重要的是要记住，最初其他 Eth2 升级是独立于我们今天使用的[主网](/glossary/#mainnet)发布的。 以太坊主网将继续使用[工作量证明](/developers/docs/consensus-mechanisms/pow/)保证安全性，即使在[信标链](/eth2/beacon-chain/)及其[分片链](/eth2/shard-chains/)使用[权益证明](/developers/docs/consensus-mechanisms/pos/)平行运行。 对接就是当这两个系统合并在一起时的情况。
+切记，刚开始，[信标链](/eth2/beacon-chain/)与我们现在使用的[主网](/glossary/#mainnet)分开提供。 以太坊主网继续受[工作量证明](/developers/docs/consensus-mechanisms/pow/)的保护，即使信标链使用[权益证明](developers/docs/consensus-mechanisms/pos/)并行运行也同样如此。 “合并”是指两个系统最终结合在一起。
 
-想象一下，以太坊是一艘尚未做好星际航行准备的宇宙飞船。 通过信标链和分片链，社区建造了一个新的引擎和坚固的船体。 时间到了，现在的飞船将与这个新系统对接，这样它就能成为一艘飞船，准备好投入几光年的时间去探索宇宙了。
+想象一下，以太坊是一艘尚未做好星际航行准备的宇宙飞船。 社区通过信标链搭建了一个新引擎和坚固外壳。 到时候，当前的飞船将与这个新系统对接，为一艘飞船，朝着遥远的未来和宇宙蓄势待发。
 
-## 对接主网 {#docking-mainnet}
+## 与主网合并 {#docking-mainnet}
 
-准备就绪后，以太坊主网将会与信标链“对接”，成为自己的分片，使用权益证明代替 [工作量证明](/developers/docs/consensus-mechanisms/pow/)。
+准备好后，以太坊主网将与信标链“合并”，成为以太坊的分片链，使用权益证明[而非工作量证明](/developers/docs/consensus-mechanisms/pow/)。
 
 主网将把运行智能合约的能力带入工作量证明系统。加上以太坊的完整历史和现状，以确保所有 ETH 持有人和使用者都能顺利过渡。
 
-<!-- ### Improving mainnet
+## 合并后 {#after-the-merge}
 
-Before mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
+这将标志着以太坊工作量证明的消失，从此开始一个更可持续性更强、更加环保的以太坊时代。 现在，以太坊将朝着 [Eth2 愿景](/eth2/vision/)中概述的全面规模、安全性和可持续性更进一步。
 
-These include Improvements for
+值得注意的是，实施合并仅是为了加快从工作量证明到权益证明的过渡。 开发者正集中精力进行过渡，并尽量减少可能推迟过渡的附加功能。
 
-- **End users**: like [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) which changes the way users bid for blockspace. In other words, making transaction fees more efficient for end users.
-- **Client runners**: making running clients more sustainable by capping disk space requirements.
-- **Developers**: upgrading the EVM to be more flexible.
-
-Plus many more.
-
-[More on Ethereum1.x](/learn/#eth-1x)
-
-These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
-
-## 对接之后 {#after-the-docking}
-
-这将标志着以太坊工作证明的结束，并开始一个更可持续、生态友好的以太坊的时代。 此刻，以太坊将具有 [Eth2 愿景](/eth2/vision/) 所概述的规模、安全性和可持续性。
+**这意味着一些功能（例如提取质押的 ETH）将不得不在完成合并后的一段时间内才能实现。**计划包含处理这些功能的合并后“清理”升级，预计在完成合并后很快实现。
 
 ## 升级间的关系 {#relationship-between-upgrades}
 
-Eth2 升级在某种程度上是相互关联的。 所以让我们回顾对接与其他升级的关系。
+Eth2 的升级在某种程度上都相互关联。 因此，让我们回顾一下合并与其他升级事件的关系。
 
-### 对接和信标链 {#docking-and-beacon-chain}
+### 合并与信标链 {#docking-and-beacon-chain}
 
-对接发生后，质押者将被指派来验证以太坊主网。 就像与分片链一样。 [挖矿](/developers/docs/consensus-mechanisms/pow/mining/)将不再需要，因此矿工很可能将其收入投资于新的证明质押系统。
+发生合并后，将指派质押人去验证以太坊主网。 [挖矿](/developers/docs/consensus-mechanisms/pow/mining/)将不再需要，因此矿工很可能将其收入投资于新的权益证明系统。
 
 <ButtonLink to="/eth2/beacon-chain/">信标链</ButtonLink>
 
-### 对接和分片链 {#docking-and-shard-chains}
+### 合并与合并后清理 {#merge-and-post-merge-cleanup}
 
-随着主网成为分片，分片链的成功实现对于这个升级至关重要。 在帮助社区决定是否推出第二次分片升级方面，这个过渡很可能会发挥重要作用。 这次升级将使其他的分片像主网一样：他们将能够处理交易和智能合约，而不仅仅是提供更多的数据。
+一旦合并，将不再支持提取质押 ETH 等功能。 这些计划在合并后不久进行单独升级。
+
+随时了解 [EF 研发博客](https://blog.ethereum.org/category/research-and-development/)的最新信息。 如果好奇，请详细了解 [合并后会发生什么](https://youtu.be/7ggwLccuN5s?t=101)，由 Vitalik 在 2021 年 4 月的 ETHGlobal 活动中介绍。
+
+### 合并和分片链 {#docking-and-shard-chains}
+
+最初计划在合并之前处理分片链 - 以解决可扩容性问题。 然而，随着[第二层扩容解决方案](/developers/docs/scaling/#layer-2-scaling)的发展，优先事项已经转向通过合并将工作量证明转换为权益证明。
+
+这需要社区持续评估，以确定是否需要潜在的多轮分片链来实现无尽的可扩容性。
 
 <ButtonLink to="/eth2/shard-chains/">分片链</ButtonLink>
