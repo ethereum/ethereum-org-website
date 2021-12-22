@@ -185,7 +185,7 @@ XPath: /pre[3]/code
 
 在购买成功的情况下，我们应会在交易中看到两个事件：通证`Transfer`和`Bought`事件。
 
-![交易中的两个事件：Transfer和Bought](../../../../developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/transfer-and-bought-events.png)
+![交易中的两个事件：Transfer和Bought](../../../../../developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/transfer-and-bought-events.png)
 
 ## sell 函数 {#the-sell-function}
 

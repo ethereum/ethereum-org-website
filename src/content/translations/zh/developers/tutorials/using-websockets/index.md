@@ -46,7 +46,7 @@ $ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 首先，使用应用的 WebSocket URL 打开 WebSocket 您可以在[您的仪表板](https://dashboard.alchemyapi.io/)中打开应用的页面并点击“查看密钥”来找到您的应用的 WebSocket URL。 请注意，您的应用的 WebSocket URL 与其 HTTP 请求的 URL 不同，但两者都可以通过点击“查看密钥” 找到。
 
-![在您的Alchemy仪表板中的何处可找到您的WebSocket URL](../../../../developers/tutorials/using-websockets/use-websockets.gif)
+![在您的Alchemy仪表板中的何处可找到您的WebSocket URL](../../../../../developers/tutorials/using-websockets/use-websockets.gif)
 
 [Alchemy API 参考](https://docs.alchemyapi.io/documentation/alchemy-api-reference/)中列出的的任何 API 都可以通过 WebSocket 使用。 为此，请使用与 HTTP POST 请求正文相同的有效载荷，而不是通过 WebSocket 发送该有效负载。
 

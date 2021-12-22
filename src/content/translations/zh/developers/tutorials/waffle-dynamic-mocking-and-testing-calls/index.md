@@ -224,7 +224,7 @@ it("returns false if the wallet has less than 1000000 tokens", async () => {
 
 我们已经准备好启动这个家伙了：
 
-![一次测试通过](test-one.png)
+![一次测试通过](../../../../../developers/tutorials/waffle-dynamic-mocking-and-testing-calls/test-one.png)
 
 所以这个测试是有效的，但是，还是有一些改进的余地。 `balanceOf()` 函数将始终返回 99999。 我们可以通过指定一个钱包来改进它，该函数应该为它返回一些东西 -- 就像一个真正的合约。
 
@@ -250,7 +250,7 @@ it("returns true if the wallet has at least 1000001 tokens", async () => {
 
 您运行测试...
 
-![两次测试通过](test-two.png)
+![两次测试通过](../../../../../developers/tutorials/waffle-dynamic-mocking-and-testing-calls/test-two.png)
 
 ...您已经到这儿啦！ 我们的合约似乎按计划进行 :)
 
@@ -280,7 +280,7 @@ it("checks if contract called balanceOf with certain wallet on the ERC20 token",
 
 让我们检查测试是否正确：
 
-![三次测试通过](test-three.png)
+![三次测试通过](../../../../../developers/tutorials/waffle-dynamic-mocking-and-testing-calls/test-three.png)
 
 太好了，所有测试都通过了。
 

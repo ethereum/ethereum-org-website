@@ -72,7 +72,7 @@ GameContract.events.BetPlaced({
 
 现在，对于我们的简单示例来说，这在某种程度上还是不错的。 但是假设我们现在只想显示当前玩家输/赢的赌注金额。 嗯，我们运气不好，您最好部署一份新的合约来存储这些值，并将它们提取出来。 现在想象一下一个更复杂的智能合约和去中心化应用，事情可能很快就会变得一团糟。
 
-![一个不简单的查询](../../../../developers/tutorials/the-graph-fixing-web3-data-querying/one-does-not-simply-query.jpg)
+![一个不简单的查询](../../../../../developers/tutorials/the-graph-fixing-web3-data-querying/one-does-not-simply-query.jpg)
 
 您可以看到这并不是最优的：
 
@@ -80,7 +80,7 @@ GameContract.events.BetPlaced({
 - 存储这些值需要额外的 gas 成本。
 - 需要另一个调用来获取以太坊节点的数据。
 
-![是不够好的](../../../../developers/tutorials/the-graph-fixing-web3-data-querying/not-good-enough.jpg)
+![是不够好的](../../../../../developers/tutorials/the-graph-fixing-web3-data-querying/not-good-enough.jpg)
 
 现在让我们看看更好的解决方案。
 
@@ -112,7 +112,7 @@ GameContract.events.BetPlaced({
 ```yaml
 specVersion: 0.0.1
 description: Placing Bets on Ethereum
-repository: - Github link -
+repository: - GitHub link -
 schema:
   file: ./schema.graphql
 dataSources:
