@@ -204,7 +204,7 @@ function sell(uint256 amount) public {
 
 如果一切正常，您应会在交易中看到两个事件（`Transfer`和`Sold`），并且通证余额和以太坊余额已更新。
 
-![交易中的两个事件：Transfer和Sold](../../../../developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/transfer-and-sold-events.png)
+![交易中的两个事件：Transfer和Sold](../../../../../developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/transfer-and-sold-events.png)
 
 <Divider />
 

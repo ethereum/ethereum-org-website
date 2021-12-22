@@ -149,7 +149,7 @@ checks:
 
 这就完成了。 现在，您将看到一份关于您的拉取请求的 gas 成本变化的报告。
 
-![Gas 成本报告示例](../../../../developers/tutorials/solidity-and-truffle-continuous-integration-setup/gas-reports.png)
+![Gas 成本报告示例](../../../../../developers/tutorials/solidity-and-truffle-continuous-integration-setup/gas-reports.png)
 
 ## 添加 solidity-coverage 插件 {#adding-the-solidity-coverage-plugin}
 
@@ -187,7 +187,7 @@ Solidity coverage 启动了它自己的 ganache-cli，所以我们不必担心�
 - 添加 Github repo 到 Coverall
 - 创建拉取请求
 
-![Coverall 示例](../../../../developers/tutorials/solidity-and-truffle-continuous-integration-setup/coverall.png)
+![Coverall 示例](../../../../../developers/tutorials/solidity-and-truffle-continuous-integration-setup/coverall.png)
 
 ## 进一步的想法 {#further-ideas}
 

@@ -17,7 +17,7 @@ source: Medium
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
 ---
 
-![以太坊和Alchemy徽标](../../../../developers/tutorials/getting-started-with-ethereum-development-using-alchemy/ethereum-alchemy.png)
+![以太坊和Alchemy徽标](../../../../../developers/tutorials/getting-started-with-ethereum-development-using-alchemy/ethereum-alchemy.png)
 
 这是一份关于以太坊开发的初学者指南。 在本教程中，我们将使用[ Alchemy](https://alchemyapi.io/)，这是一个领先的区块链开发者平台，为 70% 的顶级区块链应用程序（包括 Maker、0x、MyEtherWallet、Dharma 和 Kyber）的数百万用户提供支持。 Alchemy 使我们能够访问以太坊链上的 API 端点，这样我们就可以读写交易。
 
@@ -35,15 +35,15 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 特别感谢[ShapeShift](https://shapeshift.com/)_让我们展示他们的仪表板！_
 
-![Alchemy仪表板](../../../../developers/tutorials/getting-started-with-ethereum-development-using-alchemy/alchemy-dashboard.png)
+![Alchemy仪表板](../../../../../developers/tutorials/getting-started-with-ethereum-development-using-alchemy/alchemy-dashboard.png)
 
 填写“Create App”下的详细信息以获取您的新密钥。 在此处还可以看到您以前创建的应用以及您的团队创建的应用。 通过点击任何应用的“View Key”来查看现有密钥。
 
-![使用Alchemy创建应用程序的截图](../../../../developers/tutorials/getting-started-with-ethereum-development-using-alchemy/create-app.png)
+![使用Alchemy创建应用程序的截图](../../../../../developers/tutorials/getting-started-with-ethereum-development-using-alchemy/create-app.png)
 
 您也可以通过将鼠标悬停在““Apps”上并选择一个来获取现有 API 密钥。 您可以在这里“查看密钥”，以及“编辑应用程序”来特定域名加入白名单、查看几个开发者工具，并查看分析。
 
-![显示用户如何获取API密钥的GIF图](../../../../developers/tutorials/getting-started-with-ethereum-development-using-alchemy/pull-api-keys.gif)
+![显示用户如何获取API密钥的GIF图](../../../../../developers/tutorials/getting-started-with-ethereum-development-using-alchemy/pull-api-keys.gif)
 
 ## 3. 在命令行中发送请求 {#make-a-request-from-the-command-line}
 

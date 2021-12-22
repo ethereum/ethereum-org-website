@@ -47,7 +47,7 @@ sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-
 
 <div class="featured">注： 以太坊广泛使用 <a href="https://en.wikipedia.org/wiki/Hash_function">哈希函数</a> 来生成固定大小的值（“哈希值”）。 哈希值在以太坊中发挥着重要作用，但您现在可以放心地将其视为是唯一的 ID 值。</div>
 
-![描述区块链的示意图，其中包括每个区块内的数据](../../../../developers/tutorials/a-developers-guide-to-ethereum-part-one/blockchain-diagram.png)
+![描述区块链的示意图，其中包括每个区块内的数据](../../../../../developers/tutorials/a-developers-guide-to-ethereum-part-one/blockchain-diagram.png)
 
 _区块链本质上是一个链表；每个区块都有一个对前一个区块的引用。_
 
@@ -65,7 +65,7 @@ _区块链本质上是一个链表；每个区块都有一个对前一个区块�
 
 [以太坊客户端](/developers/docs/nodes-and-clients/) 可以配置为通过 [IPC](https://en.wikipedia.org/wiki/Inter-process_communication)、HTTP 或 Websockets 进行访问，因此 Web3.py 也需要完成这个配置。 Web3.py 将这些连接选项称为**提供者**。 您需要从三个提供者中选择一个来连接 Web3.py 实例和您的节点。
 
-![描述 web3.py 如何使用 IPC 将应用程序连接到以太坊节点的示意图](../../../../developers/tutorials/a-developers-guide-to-ethereum-part-one/web3py-and-nodes.png)
+![描述 web3.py 如何使用 IPC 将应用程序连接到以太坊节点的示意图](../../../../../developers/tutorials/a-developers-guide-to-ethereum-part-one/web3py-and-nodes.png)
 
 _将以太坊节点和 Web3.py 配置为通过相同通信的协议（例如，本图中的 IPC）进行通信。_
 
@@ -167,7 +167,7 @@ Web3 模块上的其他实用方法包括数据格式转换器（例如 [`toHex`
 
 虽然这是一种“正式”的方式，但同步过程需要几个小时，如果您只是想要一个开发环境，则没有必要同步过程。 Web3.py 为此公开了第四个提供者，即 **EthereumTesterProvider**。 这个测试器提供者连接到一个模拟的以太坊节点，它有更宽松的权限，还有虚拟以太币可供操作。
 
-![描述将 web3.py 应用程序连接到模拟以太坊节点的 EtherumTesterProvider 的示意图](../../../../developers/tutorials/a-developers-guide-to-ethereum-part-one/ethereumtesterprovider.png)
+![描述将 web3.py 应用程序连接到模拟以太坊节点的 EtherumTesterProvider 的示意图](../../../../../developers/tutorials/a-developers-guide-to-ethereum-part-one/ethereumtesterprovider.png)
 
 _EthereumTesterProvider 连接到一个模拟节点，对于快速开发环境来说非常方便。_
 

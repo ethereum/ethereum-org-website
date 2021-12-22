@@ -143,7 +143,7 @@ node sendTx.js
 
 要在找到交易后查看交易的详细信息，请选择 tx 哈希值，您将看到这样的视图：
 
-![内存池监视器截图](../../../../developers/tutorials/sending-transactions-using-web3-and-alchemy/mempool.png)
+![内存池监视器截图](../../../../../developers/tutorials/sending-transactions-using-web3-and-alchemy/mempool.png)
 
 在视图里，您可以通过点击红色圆圈圈出的图标，在 Etherscan 上查看您的交易！
 

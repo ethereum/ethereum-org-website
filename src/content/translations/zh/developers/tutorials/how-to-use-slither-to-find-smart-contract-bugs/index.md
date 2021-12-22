@@ -104,7 +104,7 @@ function safeAdd(uint a, uint b) pure internal returns(uint){
 
 相应的 AST 如图所示：
 
-![抽象语法树（AST）](../../../../developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/ast.png)
+![抽象语法树（AST）](../../../../../developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/ast.png)
 
 Slither 使用由 solc 工具导出的 AST。
 
@@ -133,7 +133,7 @@ print(f'The expression {expression} has a addition: {visitor.result()}')
 
 第二种最常见的代码表示是控制流图（CFG）。 顾名思义，它是一种基于图的表示方法，展现了所有的代码执行路径。 每个节点包含一条或多条指令。 图中的边代表控制流操作（if/then/else，循环，等等）。 我们上一个例子的 CFG 是：
 
-![控制流图（CFG）](../../../../developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/cfg.png)
+![控制流图（CFG）](../../../../../developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/cfg.png)
 
 大多数的代码分析技术都是建立在 CFG 的基础表示之上。
 
