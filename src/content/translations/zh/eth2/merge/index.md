@@ -11,7 +11,7 @@ summaryPoint3: 计划在推出分片链之前进行这项工作。
 summaryPoint4: 我们以前将此称为“对接”。
 ---
 
-<UpgradeStatus date="~Q1/Q2 2022">
+<UpgradeStatus date="~Q2 2022">
   此次升级代表以太坊正式转向权益证明共识。 能源密集型挖矿工作需求将消失，网络保护机制将通过质押以太币实现。 这是实现 <a href="/eth2/vision/">Eth2 愿景</a> 过程中真正令人兴奋的一步 - 更安全，且可扩容性和可持续性更强。
 </UpgradeStatus>
 
