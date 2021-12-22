@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import Translation from "./Translation"
 
 const Div = styled.div`
   background-color: ${(props) => props.theme.colors.primary};
@@ -21,7 +22,9 @@ const Anchor = styled.a`
 const SkipLink = ({ hrefId }) => {
   return (
     <Div>
-      <Anchor href={hrefId}>Skip to Main Content</Anchor>
+      <Anchor href={hrefId}>
+        <Translation id="skip-to-main-content" />
+      </Anchor>
     </Div>
   )
 }
