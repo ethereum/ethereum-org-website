@@ -30,6 +30,6 @@ _你知道有什么社区资源帮助过你吗？ 编辑并添加本页面！_
 ## 相关教程 {#related-tutorials}
 
 - [代币集成清单](/developers/tutorials/token-integration-checklist/) _- 与代币互动时要考虑的事项清单。_
-- [了解 ERC20 代币智能合约](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _— — 介绍如何在以太坊测试网络上部署您的第一个智能合约。_
-- [通过 Solidity 智能合约转账和批准 ERC20 代币](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/)_ - 如何使用智能合约与使用 Solidity 语言的代币进行交互。_
+- [了解 ERC20 代币智能合约](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _- 介绍如何在以太坊测试网络上部署您的第一个智能合约。_
+- [从 Solidity 智能合约转移和批准 ERC20 代币](/developers/tutorials/transfers-and-approval-erc20-tokens-from-a-solidity-smart-contract/) _- 如何使用智能合约与代币交互。_
 - [实现 ERC721 市场[指导手册]](/developers/tutorials/how-to-implement-an-erc721-market/) _- 如何将代币化的物品放在分散的分类板上。_
