@@ -19,7 +19,7 @@ Jika Anda ingin terlibat dan membantu kami mengembangkan komunitas Ethereum glob
 
 <InfoBanner shouldCenter emoji=":tada:">
   Klaim token POAP Anda! Jika Anda menerjemahkan ethereum.org pada tahun 2021, ada POAP unik yang menunggu Anda.{" "}
-  <a href="https://ethereum.org/en/contributing/#poap">Selengkapnya tentang POAP</a>
+  <a href="https://ethereum.org/contributing/#poap">Selengkapnya tentang POAP</a>
 </InfoBanner>
 
 ## Misi dan visi {#mission-and-vision}
@@ -58,7 +58,7 @@ Program Terjemahan ethereum.org bertujuan untuk membuat Ethereum dapat diakses o
 
    Kami mendorong agar Anda menerjemahkan versi terendah terlebih dahulu dan bekerja dengan cara Anda ke versi yang lebih tinggi (v.2.0 → v.2.1 → v.2.2 → ⋯) karena versi yang lebih rendah akan diperbarui di situs terlebih dahulu.
 
-   [Pelajari selengkapnya tentang versi konten ethereum.org](/en/contributing/translation-program/content-versions/)
+   [Pelajari selengkapnya tentang versi konten ethereum.org](/contributing/translation-program/content-versions/)
 
 3. **Terjemahkan**  
    Setelah memilih file yang ingin diterjemahkan, file itu akan terbuka di editor online. Jika belum pernah menggunakan Crowdin sebelumnya, Anda dapat menggunakan panduan cepat ini untuk melihat dasar-dasarnya.
@@ -98,7 +98,7 @@ Terima kasih atas partisipasi Anda dalam Program Terjemahan ethereum.org!
 
 <InfoBanner shouldCenter emoji=":information_source:">
   Jika Anda membantu kami dengan terjemahan, Anda mungkin menemukan beberapa informasi yang berguna dalam FAQ terjemahan kami. 
-  {" "}<a href="/en/contributing/translation-program/translation-guide/">FAQ Menerjemahkan ethereum.org</a>
+  {" "}<a href="/contributing/translation-program/translation-guide/">FAQ Menerjemahkan ethereum.org</a>
 </InfoBanner>
 
 ## Sumber Daya {#resources}
