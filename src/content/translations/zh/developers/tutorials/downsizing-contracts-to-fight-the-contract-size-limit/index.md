@@ -17,7 +17,7 @@ sourceUrl: https://soliditydeveloper.com/max-contract-size
 
 ## 为什么会有限制？ {#why-is-there-a-limit}
 
-在 2016 年 [11 月 22 日](https://blog. ethereum. org/2016/11/18/hard-fork-no-4-spurious-dragon/)， Spilious Dragon 硬分叉引入了 [EIP-170](https://eips. ethereum. org/EIPS/eip-170)，增加了 24.576 kb 的智能合约大小限制。 对于作为 Solidity 开发者的您来说，这意味着当您向合约中添加越来越多的功能时，在某个时候您会达到极限，并且在部署时会看到错误：
+在 2016 年 [11 月 22 日](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)， Spilious Dragon 硬分叉引入了 [EIP-170](https://eips.ethereum.org/EIPS/eip-170)，增加了 24.576 kb 的智能合约大小限制。 对于作为 Solidity 开发者的您来说，这意味着当您向合约中添加越来越多的功能时，在某个时候您会达到极限，并且在部署时会看到错误：
 
 `警告：合约代码大小超过 24576 字节（Spurious Dragon 分叉中引入的限制）。 这个合约可能无法在主网上部署。 请考虑启用优化器（其“运行”值较低！），关闭 revert 字符串，或使用库。`
 
