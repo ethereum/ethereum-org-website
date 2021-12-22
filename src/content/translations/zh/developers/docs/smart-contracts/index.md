@@ -17,7 +17,7 @@ sidebar: true
 
 ## 数字自动售货机 {#a-digital-vending-machine}
 
-对智能合约的最佳比喻，也许是一种售货机，就像 [Nick Szabo](https://unenumerated. blogspot. com/) 所描述的那样。 有了正确的投入，就保证了某些产出。
+对智能合约的最佳比喻，也许是一种售货机，就像 [Nick Szabo](https://unenumerated.blogspot.com/) 所描述的那样。 有了正确的投入，就保证了某些产出。
 
 从售货机中获取快餐：
 
