@@ -38,7 +38,7 @@
   "page-eth2-bug-bounty-points-usd": "2美元",
   "page-eth2-bug-bounty-quality": "说明描述的质量",
   "page-eth2-bug-bounty-quality-desc": "：为组织清晰、描述清楚的提交文档支付更高的报酬。",
-  "page-eth2-bug-bounty-quality-fix": "<strong>修复质量</strong>，如果包含：将为清晰描述了如何修复问题的提交者支付更高的奖金。",
+  "page-eth2-bug-bounty-quality-fix": "<strong>修复质量如果包含：</strong>将为清晰描述了如何修复问题的提交者支付更高的奖金。",
   "page-eth2-bug-bounty-quality-repro": "可复现能力的质量",
   "page-eth2-bug-bounty-quality-repro-desc": "：请包含测试代码、脚本或者其它详细的指令。我们越容易复现并确认问题，您将获得越高的报酬。",
   "page-eth2-bug-bounty-questions": "有问题？",
