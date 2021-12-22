@@ -161,7 +161,7 @@ sidebar: true
 
 ## 延伸阅读 {#further-reading}
 
-- [什么是去中心化存储？](https://coinmarketcap. com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin)- _CoinMarketCAp_
+- [什么是去中心化存储？](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin)- _CoinMarketCAp_
 - [五个关于去中心化存储的常见错误观念](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
 
 _还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_
