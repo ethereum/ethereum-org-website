@@ -28,10 +28,6 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 - [BeInCrypto](http://www.beincrypto.com.br) - cryptocurrency news and articles, including a list of exchanges, available in Brazil
 - [Cointelegraph](http://cointelegraph.com.br/category/analysis) - Brazilian version of Cointelegraph, a major cryptocurrency news outlet
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - cryptocurrency news and reports
-- [~~Investing.com](http://br.investing.com/news/cryptocurrency-news/) - Brazilian version of Investing.com, regularly covering cryptocurrency news~~
-- [~~InfoMoney](http://www.infomoney.com.br/tudo-sobre/criptomoedas/) - portal for inverstors with a section on cryptocurrency news and articles~~
-- [~~Money Times](http://www.moneytimes.com.br/cryptotimes/) - cryptocurrency news and market tracker~~
-- [~~Exame](http://www.exame.com/noticias-sobre/criptomoedas/) - investor education and news, with a ‘Cryptocurrency news’ subpage~~
 
 **Education**
 
