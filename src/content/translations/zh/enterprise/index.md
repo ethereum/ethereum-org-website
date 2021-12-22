@@ -160,4 +160,4 @@ sidebar: true
 
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _电费支付_
 
-如果您想要向这个列表中继续添加，请参阅[贡献说明](https://ethereum. org/en/contributing/)。
+如果您想要向这个列表中继续添加，请参阅[贡献说明](/contributing/)。

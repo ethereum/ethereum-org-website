@@ -38,7 +38,7 @@ Altair 升级是[信标链](/eth2/beacon-chain)的第一次预定升级。 预�
 
 #### 概览 {#london-summary}
 
-伦敦升级版引入了 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)，对交易费市场进行了改革，同时还对 gas 费用退款的处理方式和[冰河世纪](https://ethereum.org/en/glossary/#ice-age)日程进行了修改。
+伦敦升级版引入了 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)，对交易费市场进行了改革，同时还对 gas 费用退款的处理方式和[冰河世纪](/glossary/#ice-age)日程进行了修改。
 
 - [您是去中心化应用开发者吗？ 请务必升级您的库和工具包。](https://github.com/ethereum/eth1.0-specs/blob/master/network-upgrades/ecosystem-readiness.md)
 - [请阅读以太坊基金会公告](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)

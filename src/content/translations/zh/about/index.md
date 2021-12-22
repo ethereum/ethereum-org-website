@@ -38,7 +38,7 @@ ethereum.org 是一个为以太坊社区打造的公共且开源的网站，任�
 
 我们是开源的，一个拥有众多的贡献者的社群，所以您可以提出建议或帮助我们解决问题。
 
-[了解如何贡献](/en/contributing/)
+[了解如何贡献](/contributing/)
 
 ### 3. etherum.org 不是一个卖普通商品的网站 🦄 {#core-principles-3}
 
@@ -48,15 +48,15 @@ ethereum.org 是一个为以太坊社区打造的公共且开源的网站，任�
 
 ## 设计原则 {#design-principles}
 
-我们使用一组[设计原则](/en/contributing/design-principles/)来帮助我们做关于内容和设计网站上的决定。
+我们使用一组[设计原则](/contributing/design-principles/)来帮助我们做关于内容和设计网站上的决定。
 
 ## 风格指南 {#style-guide}
 
-我们有一个[风格指南](/en/contributing/style-guide/)来规范内容，从而以使贡献过程更加容易。
+我们有一个[风格指南](/contributing/style-guide/)来规范内容，从而以使贡献过程更加容易。
 
 我们欢迎大家对设计原则和风格指南提出反馈意见。 请记住，ethereum.org 来自社区，服务社区。
 
-如果您想要[对官网做贡献](/en/contributing/)，请先阅读[我们的宗旨](/en/contributing/design-principles/) ，以及[我们的风格指南](/en/contributing/style-guide/)。
+如果您想要[对官网做贡献](/contributing/)，请先阅读[我们的宗旨](/contributing/design-principles/) ，以及[我们的风格指南](/contributing/style-guide/)。
 
 ## 愿景与计划 {#roadmap}
 

@@ -132,7 +132,7 @@ Eth2 升级的一部分，它将成为以太坊网络的协调者。 它会给�
 
 ### crosslink 交叉链接 {#crosslink}
 
-交叉链接提供一个分片状态的总结。 这是在实现分片的[权益证明系统](#proof-of-stake)里[分片](#shard)链通过[信标链](#beacon-chain)互相通信的方式。
+交叉链接提供一个分片状态的总结。 这是在实现分片的[权益证明系统](#pos)里[分片](#shard)链通过[信标链](#beacon-chain)互相通信的方式。
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
   权益证明（PoS)
@@ -846,4 +846,4 @@ _部分由位于 [Andreas M. Antonopoulos，Gavin Wood](https://ethereumbook.inf
 
 我们错过了什么吗？ 有什么不正确吗？ 在 GitHub 上为这个词汇表贡献力量以帮助我们改进！
 
-[了解更多关于如何贡献的信息](/en/contributing/adding-glossary-terms)
+[了解更多关于如何贡献的信息](/contributing/adding-glossary-terms)
