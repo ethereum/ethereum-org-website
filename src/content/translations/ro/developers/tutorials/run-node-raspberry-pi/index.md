@@ -241,7 +241,7 @@ Te rugăm să iei în considerare faptul că aceasta este prima imagine bazată 
 1. [geth se blochează în mod repetat cu SIGSEGV](https://github.com/ethereum/go-ethereum/issues/20190)
 2. [https://github.com/diglos/ethereumonarm](https://github.com/diglos/ethereumonarm)
 3. https://ubuntu.com/download/raspberry-pi
-4. https://en.wikipedia.org/wiki/Port_forwarding
+4. https://wikipedia.org/wiki/Port_forwarding
 5. https://prometheus.io
 6. https://grafana.com
 7. https://forum.armbian.com/topic/5565-zram-vs-swap/

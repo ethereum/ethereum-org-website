@@ -155,11 +155,11 @@ La diramazione di Byzantium:
 - [EIP-658](https://eips.ethereum.org/EIPS/eip-658) – campo di stato aggiunto alle ricevute delle transazioni per indicare il successo o il fallimento.\_
 - [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _aggiunge una curva ellittica e una moltiplicazione scalare per consentire [ZK-Snarks](/developers/docs/layer-2-scaling/#rollups)._
 - [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _aggiunge la curva ellittica e la moltiplicazione scalare per consentire [ZK-Snarks](/developers/docs/layer-2-scaling/#rollups)._
-- [EIP-198](https://eips. thereum.org/EIPS/eip-198) – _abilita la verifica della firma RSA._
+- [EIP-198](https://eips.ethereum.org/EIPS/eip-198) – _abilita la verifica della firma RSA._
 - [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _aggiunge supporto per i valori restituiti a lunghezza variabile._
 - [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _aggiunge l'opcode `STATICCALL`, consentendo chiamate che non modificano lo stato ad altri contratti._
 - [EIP-100](https://eips.ethereum.org/EIPS/eip-100) – _cambia la formula di modifica della difficoltà._
-- [EIP-649](https://eips. thereum.org/EIPS/eip-649) – _ritarda la [bomba di difficoltà](/glossario/#difficulty-bomb) di 1 anno e riduce la ricompensa per i blocchi da 5 a 3 ETH._
+- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _ritarda la [bomba di difficoltà](/glossario/#difficulty-bomb) di 1 anno e riduce la ricompensa per i blocchi da 5 a 3 ETH._
 
 </ExpandableCard>
 
