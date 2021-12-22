@@ -315,7 +315,7 @@ DeFi je odprtokodno gibanje. DeFi protokoli in aplikacije so vam vse odprte za p
 
 ### Videoposnetki {#videos}
 
-- [Finematics - decentralized finance education](https://finematics.com/) – _Videos on DeFi_
+- [Finematics – izobraževanje na temo decentraliziranih financ](https://finematics.com/) – _Videoposnetki o decentraliziranih financah_
 - [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) - _DeFi osnove: Vse kar morate vedeti za začetek v tem občasno zmedenem prostoru._
 - [Whiteboard Crypto](https://youtu.be/17QRFlml4pA) _Kaj je DeFi?_
 
