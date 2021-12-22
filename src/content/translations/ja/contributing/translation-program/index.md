@@ -51,7 +51,7 @@ Ethereum コミュニティはグローバルで包括的であることを目�
 
    あなたの言語が表示されてない場合は、 [問題を報告](https://github.com/ethereum/ethereum-org-website/issues/new/choose)してください
 
-   ![Crowdin上の翻訳されたファイルと未翻訳のファイル](./crowdin-files.png)
+   ![Crowdin上の翻訳されたファイルと未翻訳のファイル](../../../../contributing/translation-program/crowdin-files.png)
 
    コンテンツのバージョンについての注意点: 追加されたコンテンツの翻訳が遅れることを防ぐために、Crowdin 内でバージョン管理を行っています。 言語をチェックするとき、例えば  [フィリピン語](https://crowdin.com/project/ethereum-org/fil#)  をクリックすると、サイトのバージョンごとのフォルダ（v2.0、v2.1 など）が表示されます。
 
@@ -62,7 +62,7 @@ Ethereum コミュニティはグローバルで包括的であることを目�
 3. **翻訳**  
    翻訳したいファイルを選択すると、オンラインエディターが開きます。 Crowdin を使ったことがない方は、このクイックガイドで基本的なことを確認してください。
 
-   ![Crowdinオンラインエディター](./online-editor.png)
+   ![Crowdinオンラインエディター](../../../../contributing/translation-program/online-editor.png)
 
    **_1 - 左サイドバー_**
 
