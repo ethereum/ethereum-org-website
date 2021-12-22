@@ -77,7 +77,7 @@ DAO のバックボーンは、スマートコントラクトです。 このコ
 
 <DocLink to="/developers/docs/smart-contracts/">
   スマートコントラクトの詳細
-<DocLink/>
+</DocLink>
 
 ## Ethereum と DAO {#ethereum-and-daos}
 
