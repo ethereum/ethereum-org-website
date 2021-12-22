@@ -59,13 +59,6 @@ Values that are only stored for the lifetime of a contract function's execution 
 
 Learn more about how the EVM stores data (Storage, Memory, and the Stack) in the [Solidity docs](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
 
-<!-- TODO provide examples of when to use storage vs. memory -->
-
-<!--- ### Try it
-
-Using this Remix tutorial, [define a variable in a Solidity smart contract](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
-
 ### Environment variables {#environment-variables}
 
 In addition to the variables you define on your contract, there are some special global variables. They are primarily used to provide information about the blockchain or current transaction.
@@ -139,11 +132,6 @@ What is considered modifying state:
 7. Using low-level calls.
 8. Using inline assembly that contains certain opcodes.
 
-<!---#### Try it
-
-Using this Remix tutorial, [use a Solidity getter function to `view` data](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
-
 ### Constructor functions {#constructor-functions}
 
 `constructor` functions are only executed once when the contract is first deployed. Like `constructor` in many class-based programming languages, these functions often initialize state variables to their specified values.
@@ -170,26 +158,6 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionStart = block.timestamp
     self.auctionEnd = self.auctionStart + _bidding_time
 ```
-
-<!---#### Try it
-
-Using this Remix tutorial, [create a `constructor` function](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
-
-<!-- TODO add additional function types
-
-### Pure functions {#pure-functions}
-
-@Sam Richards are these solidity-specific?
-
-### Return variables {#return-variables}
-
-https://solidity.readthedocs.io/en/v0.7.0/contracts.html?highlight=return variables#return-variables](https://solidity.readthedocs.io/en/v0.7.0/contracts.html?highlight=return%20variables#return-variables
-
-### Payable/non-payable {#payablenon-payable}
-
-- non-payable rejects ether sent to it
-- payable can accept 0 ETH -->
 
 ### Built-in functions {#built-in-functions}
 
@@ -237,60 +205,6 @@ A complete contract might look something like this. Here the `constructor` funct
 ## Events and logs {#events-and-logs}
 
 Events let you communicate with your smart contract from your frontend or other subscribing applications. When a transaction is mined, smart contracts can emit events and write logs to the blockchain that the frontend can then process.
-
-<!-- TODO add event examples
-
-They are used in a few different ways:
-
-1. smart contract return values for the user interface
-
-```solidity
-contract ExampleContract {
-  event ReturnValue(address indexed _from, int256 _value);
-```
-
-```js
-var exampleEvent = exampleContract.ReturnValue({ _from: web3.eth.coinbase })
-exampleEvent.watch(function (err, result) {
-  if (err) {
-    console.log(err)
-    return
-  }
-  console.log(result.args._value)
-  // check that result.args._from is web3.eth.coinbase then
-  // display result.args._value in the UI and call
-  // exampleEvent.stopWatching()
-})
-exampleContract.foo.sendTransaction(2, { from: web3.eth.coinbase })
-```
-
-2. asynchronous triggers with data
-
-```solidity
-contract CryptoExchange {
-  event Deposit(uint256 indexed _market, address indexed _sender, uint256 _amount, uint256 _time);
-  function deposit(uint256 _amount, uint256 _market) returns (int256) {
-      // perform deposit, update user’s balance, etc
-      Deposit(_market, msg.sender, _amount, now);
-  }
-```
-
-```js
-var depositEvent = cryptoExContract.Deposit({ _sender: userAddress })
-depositEvent.watch(function (err, result) {
-  if (err) {
-    console.log(err)
-    return
-  }
-  // append details of result.args to UI
-})
-```
-
-3. a cheaper form of storage
-
-Need your help explaining events/showing examples
-
-_Examples provided by Joseph Chow and ConsenSys_ -->
 
 ## Annotated examples {#annotated-examples}
 

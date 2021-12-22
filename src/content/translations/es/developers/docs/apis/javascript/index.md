@@ -70,11 +70,6 @@ Una vez configurado, estarás habilitado para consultar en la blockchain:
 - id de la red
 - y más...
 
-<!--- #### Try it
-
-This remix tutorial will show you [how to query the blockchain using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
-
 ### Funcionalidad de la cartera {#wallet-functionality}
 
 Estas bibliotecas te darán la funcionalidad para crear carteras, administrar claves y firmar transacciones.
@@ -217,11 +212,6 @@ Esto significa que puedes:
 - Promover la estimación del gas que tomará un método de ejecución cuando se ejecute en la máquina virtual EVM
 - Desplegar un contrato
 - Y mucho más...
-
-<!--- #### Try it
-
-This remix tutorial will show you [how to query a contract using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
 
 ### Funciones de utilidad {#utility-functions}
 

@@ -22,23 +22,7 @@ Pendant des décennies, ces mécanismes ont été utilisés pour établir un con
 
 Un mécanisme de consensus dans un système crypto-économique aide également à prévenir certains types d'attaques économiques. En théorie, un attaquant peut compromettre le consensus en contrôlant 51 % du réseau. Les mécanismes de consensus sont conçus pour empêcher cette "attaque de 51 %". Plusieurs mécanismes sont conçus pour résoudre différemment ce problème de sécurité.
 
-<!-- ### Consensus -->
-
-<!-- Formal requirements for a consensus protocol may include: -->
-
-<!-- - Agreement: All correct processes must agree on the same value. -->
-<!-- - Weak validity: For each correct process, its output must be the input of some correct process. -->
-<!-- - Strong validity: If all correct processes receive the same input value, then they must all output that value. -->
-<!-- - Termination: All processes must eventually decide on an output value -->
-
-<!-- ### Fault tolerance -->
-<!-- TODO explain how protocols must be fault tolerant -->
-
 ## Types de mécanismes de consensus {#types-of-consensus-mechanisms}
-
-<!-- TODO -->
-<!-- Why do different consensus protocols exist? -->
-<!-- What are the tradeoffs of each? -->
 
 ### Preuve de travail {#proof-of-work}
 
@@ -69,8 +53,6 @@ Le système de preuve d'enjeu permet d'assurer la sécurité du système car vou
 En savoir plus sur la [preuve d'enjeu (PoS)](/developers/docs/consensus-mechanisms/pos/)
 
 ## Complément d'information {#further-reading}
-
-<!-- TODO -->
 
 ## Sujets connexes {#related-topics}
 

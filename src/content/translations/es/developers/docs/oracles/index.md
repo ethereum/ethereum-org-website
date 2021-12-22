@@ -23,17 +23,6 @@ En una blockchain como Ethereum, es necesario que cada nodo de la red sea capaz 
 
 Los oráculos resuelven este problema por medio de la publicación de información en la blockchain. De modo que cualquier nodo que replique la transacción usará los mismos datos inmutables que se publicaron en la red. Para ello, un oráculo típicamente constará de un contrato inteligente y algunos componentes externos a la cadena de bloques (off-chain) que consultan diversas API y posteriormente envían transacciones para actualizar los datos de los contratos inteligentes.
 
-<!-- ## Oracle architecture {#oracle-architecture}
-
-To understand how an oracle works, let's play through a scenario where your smart contract needs to know who won the superbowl. This is an example of how it could work:
-
-1. Your smart contract requests information from an oracle smart contract.
-2. The oracle smart contract emits an [event](/developers/docs/smart-contracts/anatomy/#events-and-logs).
-3. Off-chain oracle nodes listen for events and upon hearing one, they query an API.
-4. The API returns a JSON response to the nodes.
-5. The nodes call on the oracle smart contract.
-6. The oracle smart contract returns the data to your smart contract. -->
-
 ### Seguridad {#security}
 
 Un oráculo es tan seguro como las fuentes de datos que utiliza. Si una dapp utiliza Uniswap como oráculo para su fuente de precios del par ETH/DAI, es posible que un atacante altere el precio de Uniswap para manipular el entendimiento del precio actual que posee la dapp. Un ejemplo de cómo contrarrestar esta situación es [un sistema de feed](https://developer.makerdao.com/feeds/), como el utilizado por MakerDAO, que recopila información de precios proveniente de numerosos feeds de precio externos en lugar de simplemente apoyarse en una única fuente.

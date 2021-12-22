@@ -11,8 +11,6 @@ I blocchi sono un insieme di transazioni che contengono un hash del blocco prece
 
 Quello dei blocchi è un argomento piuttosto basico. Per aiutarti però a comprendere meglio questa pagina, consigliamo di leggere prima [Account](/developers/docs/accounts/), [Transazioni](/developers/docs/transactions/) e la nostra [introduzione a Ethereum](/developers/docs/intro-to-ethereum/).
 
-<!--The content below was provided by Brian Gu with exception of "what's in a block"-->
-
 ## Perché i blocchi? {#why-blocks}
 
 Per assicurare che tutti i partecipanti della rete Ethereum siano sincronizzati e concordino sulla cronologia esatta delle transazioni, raggruppiamo le transazioni in blocchi. Significa che decine (o centinaia) di transazioni vengono inviate, approvate e sincronizzate in una volta sola.

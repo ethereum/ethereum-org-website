@@ -464,8 +464,6 @@ Le concept d'une fonction de transition d'état arbitraire telle qu'implémenté
 
 ## Notes et complément d'information {#notes-and-further-reading}
 
-<!--Invisible HTML comment used for navigation with CTRL+F footnote or fn.-->
-
 ### Notes {#notes}
 
 1.  Un lecteur averti peut remarquer qu'en réalité, une adresse Bitcoin est le hachage de la clé publique à courbe elliptique, et non la clé publique elle-même. Cependant, il est parfaitement légitime, dans la terminologie cryptographique, de faire référence au hachage de la clé publique comme à la clé publique elle-même. En effet, la cryptographie du Bitcoin peut être considérée comme un algorithme de signature numérique personnalisée, où la clé publique est constituée du hachage de la clé publique ECC, la signature est constituée de la clé publique ECC concaténée avec la signature ECC, et l'algorithme de vérification consiste à vérifier la clé publique ECC dans la signature par rapport au hachage de la clé publique ECC fourni comme clé publique, puis à vérifier la signature ECC par rapport à la clé publique ECC.

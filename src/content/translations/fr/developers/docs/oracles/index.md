@@ -23,17 +23,6 @@ Avec une blockchain comme Ethereum, tous les nœuds du réseau sont nécessaires
 
 Les oracles résolvent ce problème en publiant les données sur la blockchain. Ainsi, tout nœud rejouant la transaction utilisera les mêmes données immuables qui ont été publiées pour que tout le monde puisse les voir. Pour faire cela, un oracle est comprend généralement un contrat intelligent et des composants hors chaîne qui peuvent interroger les API, puis envoyer périodiquement des transactions pour mettre à jour les données du contrat intelligent.
 
-<!-- ## Oracle architecture {#oracle-architecture}
-
-To understand how an oracle works, let's play through a scenario where your smart contract needs to know who won the superbowl. This is an example of how it could work:
-
-1. Your smart contract requests information from an oracle smart contract.
-2. The oracle smart contract emits an [event](/developers/docs/smart-contracts/anatomy/#events-and-logs).
-3. Off-chain oracle nodes listen for events and upon hearing one, they query an API.
-4. The API returns a JSON response to the nodes.
-5. The nodes call on the oracle smart contract.
-6. The oracle smart contract returns the data to your smart contract. -->
-
 ### Sécurité {#security}
 
 Un oracle n'est aussi sûr que sa ou ses sources de données. Si une DApp utilise Uniswap comme oracle pour son flux de prix ETH/DAI, il est possible pour un attaquant de déplacer le prix sur Uniswap afin de manipuler la compréhension du prix actuel par la DApps. Une façon de combattre cela est l'utilisation d'un [un système de flux](https://developer.makerdao.com/feeds/) comme celui de MakerDAO, qui rassemble les données de prix à partir d'un certain nombre de flux de prix externes au lieu de dépendre d'une seule source.

@@ -22,23 +22,7 @@ Od dziesięcioleci mechanizmy te są wykorzystywane do ustanawiania konsensusu m
 
 Mechanizm konsensusu w systemie kryptoekonomicznym pomaga również zapobiegać niektórym rodzajom ataków ekonomicznych. Teoretycznie atakujący może naruszyć konsensus, kontrolując 51% sieci. Mechanizmy konsensusu mają na celu uczynienie tego „ataku 51%” niewykonalnym. Opracowano różne mechanizmy, aby w różny sposób rozwiązać ten problem bezpieczeństwa.
 
-<!-- ### Consensus -->
-
-<!-- Formal requirements for a consensus protocol may include: -->
-
-<!-- - Agreement: All correct processes must agree on the same value. -->
-<!-- - Weak validity: For each correct process, its output must be the input of some correct process. -->
-<!-- - Strong validity: If all correct processes receive the same input value, then they must all output that value. -->
-<!-- - Termination: All processes must eventually decide on an output value -->
-
-<!-- ### Fault tolerance -->
-<!-- TODO explain how protocols must be fault tolerant -->
-
 ## Rodzaje mechanizmów konsensusu {#types-of-consensus-mechanisms}
-
-<!-- TODO -->
-<!-- Why do different consensus protocols exist? -->
-<!-- What are the tradeoffs of each? -->
 
 ### Proof-of-work {#proof-of-work}
 
@@ -69,8 +53,6 @@ System proof-of-stake jest bezpieczny dzięki temu, że do oszukania łańcucha 
 Więcej informacji o [proof-of-stake (PoS)](/developers/docs/consensus-mechanisms/pos/)
 
 ## Dalsza lektura {#further-reading}
-
-<!-- TODO -->
 
 ## Tematy powiązane {#related-topics}
 

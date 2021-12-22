@@ -88,7 +88,13 @@ GameContract.events.BetPlaced({
 
 首先我们来谈谈 GraphQL，它最初是由 Facebook 设计和实现的。 您可能熟悉传统的 Rest API 模型。 现在设想一下，您可以编写一个查询来精确查找您想要的数据：
 
-![GraphQL API与REST API](../../../../../developers/tutorials/the-graph-fixing-web3-data-querying/graphql.jpg)<!-- TODO gif embed not working: --><!-- Need additional plugin? https://github.com/gatsbyjs/gatsby/issues/7317#issuecomment-412984851 --><!-- !\[GraphQL example query GIF\](./graphql-query.gif) --><img src="" width="100%" />
+![GraphQL API与REST API](../../../../../developers/tutorials/the-graph-fixing-web3-data-querying/graphql.jpg)
+
+<img src="https://cdn0.scrvt.com/b095ee27d37b3d7b6b150adba9ac6ec8/42226f4816a77656/bc5c8b270798/graphql-querygif.gif" width="100%" />
+
+这两张图片基本上抓住了 GraphQL 的精髓。 通过右边的查询，我们可以精确地定义我们想要的数据，这样我们就可以在一个请求中得到所有的东西，而不仅仅是我们需要的东西。 GraphQL 服务器处理所有所需数据的获取，因此前端用户端使用起来非常简单。 如果您感兴趣，[这是一个很好的解释](https://www.apollographql.com/blog/graphql-explained-5844742f195e/)，说明服务器是如何处理查询的。
+
+现在有了这些知识，让我们最终进入区块链空间和 The Graph。
 
 ## 什么是 The Graph？ {#what-is-the-graph}
 

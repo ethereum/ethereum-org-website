@@ -11,8 +11,6 @@ Blocks are batches of transactions with a hash of the previous block in the chai
 
 Blocks are a very beginner-friendly topic. But to help you better understand this page, we recommend you first read [Accounts](/developers/docs/accounts/), [Transactions](/developers/docs/transactions/), and our [introduction to Ethereum](/developers/docs/intro-to-ethereum/).
 
-<!--The content below was provided by Brian Gu with exception of "what's in a block"-->
-
 ## Why blocks? {#why-blocks}
 
 To ensure that all participants on the Ethereum network maintain a synchronized state and agree on the precise history of transactions, we batch transactions into blocks. This means dozens (or hundreds) of transactions are committed, agreed on, and synchronized on all at once.
