@@ -194,7 +194,7 @@ Usa prove di validità come [ZK-rollup](#zk-rollups) ma i dati non sono archivia
 
 ## Sidechain {#sidechains}
 
-Una sidechain è una blockchain separata che viene eseguita parallelamente alla rete principale e opera indipendentemente. Ha un proprio algoritmo di consenso ([Proof of Authority](https://en.wikipedia.org/wiki/Proof_of_authority), [Delegated proof-of-stake](https://en.bitcoinwiki.org/wiki/DPoS), [Byzantine fault tolerance](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained) e così via). È collegata alla catena principale da un bridge bidirezionale.
+Una sidechain è una blockchain separata che viene eseguita parallelamente alla rete principale e opera indipendentemente. Ha un proprio algoritmo di consenso ([Proof of Authority](https://wikipedia.org/wiki/Proof_of_authority), [Delegated proof-of-stake](https://en.bitcoinwiki.org/wiki/DPoS), [Byzantine fault tolerance](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained) e così via). È collegata alla catena principale da un bridge bidirezionale.
 
 | Pro                                                    | Contro                                                                                                    |
 | ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
@@ -218,7 +218,7 @@ Combinano le parti migliori di diverse tecnologie di livello 2 e possono offrire
 ## Letture consigliate {#further-reading}
 
 - [Validium And The Layer 2 Two-By-Two — Issue No. 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
-- \[Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework\](https://medium.com/matter-labs/evaluating-ethereum-layer 2-scaling-solutions-a-comparison-framework-b6b2f410f955)
+- \[Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework\](https://blog.matter-labs.io/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
 - [Adding Hybrid PoS-Rollup Sidechain to Celer’s Coherent Layer-2 Platform on Ethereum](https://medium.com/celer-network/adding-hybrid-pos-rollup-sidechain-to-celers-coherent-layer-2-platform-d1d3067fe593)
 - [Zero-Knowledge Blockchain Scalability](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 

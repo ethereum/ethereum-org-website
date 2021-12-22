@@ -194,7 +194,7 @@ Utiliza pruebas de validez como [ZK-Rollups](#zk-rollups), pero los datos no se 
 
 ## Sidechains {#sidechains}
 
-Una cadena sidechain (o lateral) es una blockchain independiente que funciona en paralelo con respecto a la red principal y opera independientemente. Tiene su propio algoritmo de consenso ([Prueba de autoridad](https://en.wikipedia.org/wiki/Proof_of_authority), [Prueba de participación delegada](https://en.bitcoinwiki.org/wiki/DPoS), [tolerancia a fallas bizantinas](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained), etc.). Está conectado a la cadena principal por un puente bidireccional.
+Una cadena sidechain (o lateral) es una blockchain independiente que funciona en paralelo con respecto a la red principal y opera independientemente. Tiene su propio algoritmo de consenso ([Prueba de autoridad](https://wikipedia.org/wiki/Proof_of_authority), [Prueba de participación delegada](https://en.bitcoinwiki.org/wiki/DPoS), [tolerancia a fallas bizantinas](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained), etc.). Está conectado a la cadena principal por un puente bidireccional.
 
 | Ventajas                                               | Desventajas                                                                                           |
 | ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
@@ -218,7 +218,7 @@ Combinan las mejores partes de las tecnologías múltiples de capa 2 y pueden of
 ## Para seguir leyendo {#further-reading}
 
 - [Validium y la capa 2, número 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
-- \[Evaluación de soluciones de escala de la capa 2 de Ethereum: Una estructura de comparación\](https://medium.com/matter-labs/evaluating-ethereum-layer 2-scaling-solutions-a-comparison-framework-b6b2f410f955)
+- [Evaluación de soluciones de escala de la capa 2 de Ethereum: Una estructura de comparación](https://blog.matter-labs.io/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
 - [Adición del Rollup de la Prueba de participación híbrida a la plataforma de la capa 2 de Celer en Ethereum](https://medium.com/celer-network/adding-hybrid-pos-rollup-sidechain-to-celers-coherent-layer-2-platform-d1d3067fe593)
 - [Escalabilidad de la blockchain de conocimiento cero](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 
