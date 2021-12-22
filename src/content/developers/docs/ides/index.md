@@ -49,7 +49,7 @@ Most established IDEs have built plugins to enhance the Ethereum development exp
 - [Download](https://github.com/ethereum/remix-desktop/releases)
 - [GitHub](https://github.com/ethereum/remix-desktop)
 
-**Truffle Development Suite -** **_Gets developers from idea to dapp as comfortably as possible_**
+**Truffle Development Suite (Truffle, Ganache, and Drizzle) -** **_Gets developers from idea to dapp as comfortably as possible_**
 
 - [Truffle website](https://trufflesuite.com)
 - [Truffle](https://trufflesuite.com/truffle)
