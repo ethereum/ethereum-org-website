@@ -11,7 +11,7 @@ Protokół Ethereum istnieje wyłącznie w celu utrzymania niezakłóconej ciąg
 
 ## Wymagania wstępne {#prerequisites}
 
-Do zrozumienia EVM konieczna jest znajomość podstawowej terminologii informatycznej, takiej jak [bajty](https://en.wikipedia.org/wiki/Byte), [pamięć](https://en.wikipedia.org/wiki/Computer_memory) i [stos](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>). Równie pomocne może się okazać zaznajomienie się z takimi pojęciami, jak kryptografia, blockchain [funkcja haszująca](https://pl.wikipedia.org/wiki/Funkcja_skr%C3%B3tu), [Proof-of-Work](https://www.gpwinfostrefa.pl/czym-jest-proof-of-work/), [drzewo Merkle](https://pl.wikipedia.org/wiki/Drzewo_hash).
+Do zrozumienia EVM konieczna jest znajomość podstawowej terminologii informatycznej, takiej jak [bajty](https://wikipedia.org/wiki/Byte), [pamięć](https://wikipedia.org/wiki/Computer_memory) i [stos](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>). Równie pomocne może się okazać zaznajomienie się z takimi pojęciami, jak kryptografia, blockchain [funkcja haszująca](https://pl.wikipedia.org/wiki/Funkcja_skr%C3%B3tu), [Proof-of-Work](https://www.gpwinfostrefa.pl/czym-jest-proof-of-work/), [drzewo Merkle](https://pl.wikipedia.org/wiki/Drzewo_hash).
 
 ## Od księgi głównej do maszyny stanowej {#from-ledger-to-state-machine}
 

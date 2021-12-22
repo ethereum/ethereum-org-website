@@ -43,8 +43,8 @@ Ethereum-ന് മുകളിൽ വികേന്ദ്രീകൃത അ�
 
 - [ കളിസ്ഥലം ](http://playground.nethereum.com/) - Ethereum-വുമായി സംവദിച്ച് ബ്രൗസറിലൂടെ Nethereum എങ്ങനെ ഉപയോഗിക്കാമെന്ന് മനസിലാക്കുക.
   - അന്വേഷണ അക്കൗണ്ട് ബാലൻസ് [ C# ](http://playground.nethereum.com/csharp/id/1001) [ VB.NET ](http://playground.nethereum.com/vb/id/2001)
-  - ചോദ്യം ERC20 സ്മാർട്ട് കരാർ ബാലൻസ് [ C # ](http://playground.nethereum.com/csharp/id/1005) [ VB.NET](http://playground.nethereum.com/vb/id /2004)
-  - [ C# ](http://playground.nethereum.com/csharp/id/1003) [VB.NET ](http://playground.nethereum.com/vb/id /2003)
+  - ചോദ്യം ERC20 സ്മാർട്ട് കരാർ ബാലൻസ് [ C # ](http://playground.nethereum.com/csharp/id/1005) [ VB.NET](http://playground.nethereum.com/vb/id/2004)
+  - [ C# ](http://playground.nethereum.com/csharp/id/1003) [VB.NET ](http://playground.nethereum.com/vb/id/2003)
   - ... കൂടുതൽ!
 
 ## ഇന്റർമീഡിയറ്റ് ലേഖനങ്ങൾ {#intermediate-articles}
@@ -55,7 +55,7 @@ Ethereum-ന് മുകളിൽ വികേന്ദ്രീകൃത അ�
 - [യൂണിറ്റിയും Ethereum-ഉം: എന്തുകൊണ്ട്, എങ്ങനെ](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
 - [Ethereum ഡാപ്പുകൾക്കായി ASP.NET കോർ വെബ് API സൃഷ്ടിക്കുക](https://tech-mint.com/create-asp-net-core-web-api-for-ethereum-dapps/)
 - [ഒരു സപ്ലൈ ചെയിൻ ട്രാക്കിംഗ് സംവിധാനം നടപ്പിലാക്കുന്നതിന് നെതെറിയം വെബ് 3 ഉപയോഗിക്കുന്നു](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
-- [ നെതെറിയം ബ്ലോക്ക് പ്രോസസ്സിംഗ് ](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/), [ C# കളിസ്ഥലം സാമ്പിൾ ](http://playground.nethereum.com / csharp / id / 1025)
+- [ നെതെറിയം ബ്ലോക്ക് പ്രോസസ്സിംഗ് ](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/), [ C# കളിസ്ഥലം സാമ്പിൾ ](http://playground.nethereum.com/csharp/id/1025)
 - [നെതെറിയം വെബ്‌സോക്കറ്റ് സ്ട്രീമിംഗ്](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)
 - [കാലിഡോയും നെതെറിയവും](https://kaleido.io/kaleido-and-nethereum/)
 - [കോറം, നെതെറിയം എന്നിവ](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)

@@ -73,7 +73,7 @@ Różne organizacje podjęły pewne wspólne działania, aby uczynić Ethereum p
 
 [Warstwa 2](/developers/docs/layer-2-scaling/) to zestaw technologii lub systemów, które działają na wierzchu Ethereum (Warstwa 1), dziedziczą właściwości zabezpieczeń z warstwy 1 i zapewniają większą wydajność przetwarzania transakcji (przepustowość), niższe opłaty transakcyjne (koszty operacyjne) i szybsze potwierdzenia transakcji niż warstwa 1. Rozwiązania skalowania warstwy 2 są zabezpieczone przez warstwę 1, ale umożliwiają aplikacjom łańcucha bloków obsługę znacznie większej liczby użytkowników, działań lub danych, niż może pomieścić warstwa 1. Wiele z nich wykorzystuje najnowsze postępy w kryptografii i dowody zerowej wiedzy (ZK), aby zmaksymalizować wydajność i bezpieczeństwo.
 
-Zbudowanie aplikacji na bazie rozwiązania skalowalności warstwy 2 może pomóc [rozwiązuje wiele problemów, które wcześniej skłaniały firmy do budowania na prywatnych blockchainach](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on- mainnet/), zachowując jednak korzyści płynące z budowania na sieci głównej.
+Zbudowanie aplikacji na bazie rozwiązania skalowalności warstwy 2 może pomóc [rozwiązuje wiele problemów, które wcześniej skłaniały firmy do budowania na prywatnych blockchainach](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/), zachowując jednak korzyści płynące z budowania na sieci głównej.
 
 Przykłady rozwiązań L2, które są gotowe do produkcji lub wkrótce będą:
 

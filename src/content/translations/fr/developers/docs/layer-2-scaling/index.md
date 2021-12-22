@@ -202,7 +202,7 @@ Utilise les preuves de validité comme les [rollups ZK](#zk-rollups), mais les d
 
 ## Chaînes latérales {#sidechains}
 
-Une chaîne latérale est une blockchain séparée qui fonctionne en parallèle au réseau principal, de façon indépendante. Elle possède son propre algorithme de consensus ([preuve d'autorité](https://en.wikipedia.org/wiki/Proof_of_authority), [preuve d'enjeu déléguée](https://en.bitcoinwiki.org/wiki/DPoS), [tolérance aux défauts byzantins](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained), etc.). Elle est relié à la chaîne principale par un "pont" à deux sens.
+Une chaîne latérale est une blockchain séparée qui fonctionne en parallèle au réseau principal, de façon indépendante. Elle possède son propre algorithme de consensus ([preuve d'autorité](https://wikipedia.org/wiki/Proof_of_authority), [preuve d'enjeu déléguée](https://en.bitcoinwiki.org/wiki/DPoS), [tolérance aux défauts byzantins](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained), etc.). Elle est relié à la chaîne principale par un "pont" à deux sens.
 
 | Avantages                                                     | Inconvénients                                                                                                             |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
@@ -226,7 +226,7 @@ Combine les meilleures parties des multiples technologies de couche 2, et peut o
 ## Complément d'information {#further-reading}
 
 - [Validium et The Layer 2 Two-By-Two - Numéro 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
-- [Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework](https://medium.com/matter-labs/evaluating-ethereum-layer 2-scaling-solutions-a-comparison-framework-b6b2f410f955)
+- [Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework](https://blog.matter-labs.io/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
 - [Ajout de la chaîne latérale hybride PoS-Rollup à la plateforme Coherent Layer-2 de Celer sur Ethereum](https://medium.com/celer-network/adding-hybrid-pos-rollup-sidechain-to-celers-coherent-layer-2-platform-d1d3067fe593)
 - [Évolutivité de la blockchain ZK](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 

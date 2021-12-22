@@ -275,7 +275,7 @@ Dans la pratique, néanmoins, les émetteurs ne sont pas toujours fiables, et da
 
 ### Systèmes d'identité et de réputation {#identity-and-reputation-systems}
 
-La toute première cryptomonnaie alternative, [Namecoin](http://namecoin.org/), a tenté d'utiliser une blockchain similaire à celle de Bitcoin pour fournir un système d'enregistrement de noms, dans lequel les utilisateurs pouvaient enregistrer leurs noms dans une base de données publique avec d'autres données. C'est dans le cadre d'un système [DNS](https://en.wikipedia.org/wiki/Domain_Name_System), qui associe des noms de domaine comme "bitcoin.org" (ou pour Namecoin, "bitcoin.bit") à une adresse IP, qu'elle est principalement utilisée. D'autres utilisations incluent l’authentification d'e-mails, et potentiellement des systèmes de réputation plus perfectionnés. Voilà un contrat élémentaire permettant de fournir un système d'enregistrement de noms similaire à celui de Namecoin sur Ethereum :
+La toute première cryptomonnaie alternative, [Namecoin](http://namecoin.org/), a tenté d'utiliser une blockchain similaire à celle de Bitcoin pour fournir un système d'enregistrement de noms, dans lequel les utilisateurs pouvaient enregistrer leurs noms dans une base de données publique avec d'autres données. C'est dans le cadre d'un système [DNS](https://wikipedia.org/wiki/Domain_Name_System), qui associe des noms de domaine comme "bitcoin.org" (ou pour Namecoin, "bitcoin.bit") à une adresse IP, qu'elle est principalement utilisée. D'autres utilisations incluent l’authentification d'e-mails, et potentiellement des systèmes de réputation plus perfectionnés. Voilà un contrat élémentaire permettant de fournir un système d'enregistrement de noms similaire à celui de Namecoin sur Ethereum :
 
     def register(name, value):
         if !self.storage[name]:
@@ -301,7 +301,7 @@ Une description générale de la façon de coder une DAO est fournie ci-après. 
 - `[1,i]` pour enregistrer un vote en faveur de la proposition `i`
 - `[2,i]` pour finaliser la proposition `i` si suffisamment de votes ont été enregistrés
 
-Le contrat aurait alors des clauses pour chacun de ces types. Il conserverait un enregistrement de toutes les modifications de stockage ouvertes, ainsi qu'une liste de ceux qui ont voté pour. Il inclurait également une liste de tous les membres. Quand une modification de stockage atteint deux tiers de votes "pour" de la part des membres, une transaction de finalisation peut exécuter la modification. Un modèle plus sophistiqué aurait également une fonctionnalité de vote intégrée pour envoyer une transaction, ajouter ou retirer des membres, et peut-être même pour permettre une sorte de [démocratie délégative](https://en.wikipedia.org/wiki/Delegative_democracy) de vote (c.-à-d. que n'importe qui pourrait déléguer à quelqu'un son droit de vote, et l'affectation étant transitoire, si A assigne B et B assigne C alors C détermine le vote de A). Cette conception permettrait à la DAO de se développer organiquement en tant que communauté décentralisée, permettant éventuellement aux membres de déléguer la tâche de filtrer qui est membre à des spécialistes, bien que, contrairement au "système actuel", les spécialistes puissent facilement apparaître et disparaître au fil du temps, à mesure que les membres individuels de la communauté changent d'orientation.
+Le contrat aurait alors des clauses pour chacun de ces types. Il conserverait un enregistrement de toutes les modifications de stockage ouvertes, ainsi qu'une liste de ceux qui ont voté pour. Il inclurait également une liste de tous les membres. Quand une modification de stockage atteint deux tiers de votes "pour" de la part des membres, une transaction de finalisation peut exécuter la modification. Un modèle plus sophistiqué aurait également une fonctionnalité de vote intégrée pour envoyer une transaction, ajouter ou retirer des membres, et peut-être même pour permettre une sorte de [démocratie délégative](https://wikipedia.org/wiki/Delegative_democracy) de vote (c.-à-d. que n'importe qui pourrait déléguer à quelqu'un son droit de vote, et l'affectation étant transitoire, si A assigne B et B assigne C alors C détermine le vote de A). Cette conception permettrait à la DAO de se développer organiquement en tant que communauté décentralisée, permettant éventuellement aux membres de déléguer la tâche de filtrer qui est membre à des spécialistes, bien que, contrairement au "système actuel", les spécialistes puissent facilement apparaître et disparaître au fil du temps, à mesure que les membres individuels de la communauté changent d'orientation.
 
 L'entreprise décentralisée constitue un autre modèle, où n'importe quel compte peut avoir zéro ou plus d'actions, et où deux tiers des actions sont requises pour prendre une décision. Un modèle complet impliquerait une fonctionnalité de gestion d'actifs, la possibilité de faire une offre pour acheter ou vendre des actions, et la possibilité d'accepter les offres (de préférence avec un mécanisme de correspondance d'ordres à l'intérieur du contrat). Une délégation existerait également, à la manière d'une démocratie délégative, généralisant le concept de "conseil d'administration".
 
@@ -485,13 +485,13 @@ Le concept d'une fonction de transition d'état arbitraire telle qu'implémenté
 6.  [Titres de propriété sécurisés avec preuve de possession](http://szabo.best.vwh.net/securetitle.html)
 7.  [Livre blanc Bitcoin](http://bitcoin.org/bitcoin.pdf)
 8.  [Namecoin](https://namecoin.org/)
-9.  [Triangle de Zooko](https://en.wikipedia.org/wiki/Zooko's_triangle)
+9.  [Triangle de Zooko](https://wikipedia.org/wiki/Zooko's_triangle)
 10. [Livre blanc sur les pièces de couleur](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)
 11. [Livre blanc Mastercoin](https://github.com/mastercoin-MSC/spec)
 12. [Organisations autonomes décentralisées, Bitcoin Macarburantine](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/)
 13. [Vérification de paiement simplifiée](https://en.bitcoin.it/wiki/Scalability#Simplifiedpaymentverification)
-14. [Arbres de Merkle](https://en.wikipedia.org/wiki/Merkle_tree)
-15. [Arbres Patricia](https://en.wikipedia.org/wiki/Patricia_tree)
+14. [Arbres de Merkle](https://wikipedia.org/wiki/Merkle_tree)
+15. [Arbres Patricia](https://wikipedia.org/wiki/Patricia_tree)
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ et agents autonomes, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Mike Hearn, Smart Property, Turing Festival](http://www.youtube.com/watch?v=Pu4PAMFPo5Y)
