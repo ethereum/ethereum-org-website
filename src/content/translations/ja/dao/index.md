@@ -75,7 +75,9 @@ DAO のバックボーンは、スマートコントラクトです。 このコ
 
 これが可能なのは、スマートコントラクトが Ethereum 上で稼働するようになると、改ざんのおそれがないためです。 すべてが公開されているので、コード(DAO のルール)を誰にも気づかれずに、編集することはできません。
 
-<DocLink to="/developers/docs/smart-contracts/" title="スマートコントラクトの詳細" />
+<DocLink to="/developers/docs/smart-contracts/">
+  スマートコントラクトの詳細
+<DocLink/>
 
 ## Ethereum と DAO {#ethereum-and-daos}
 
