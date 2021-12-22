@@ -16,7 +16,7 @@ sidebar: true
 - タグ内のテキストは翻訳しますが、タグはそのまま残します。 `<` と `>`の間は、翻訳したり削除しないでください。
 - 間違えないようにするために、左下の[Copy Source]ボタンをクリックすることをお勧めします。 クリックすると、元の文字列がコピーされ、テキストボックスに貼り付けられます。 これで、タグがどこにあるかがよくわかり、ミスを避けることができます。
 
-![[Copy Source]ボタンがハイライトされているCrowdinインターフェイス](../../../../contributing/translation-program/translation-guide/html-tag-strings.png)
+![[Copy Source]ボタンがハイライトされているCrowdinインターフェイス](../../../../../contributing/translation-program/translation-guide/html-tag-strings.png)
 
 あなたの言語でより自然な文章になるよう、文字列内のタグの位置を移動することができますが、すべてのタグを移動するようにしてください。
 
@@ -27,9 +27,9 @@ sidebar: true
 - 詳細な情報については、「Screenshot」と「Context」を参照してください。 ソースの文字列セクションに、その文字列がどのように使われているのか、コンテクストが分かるスクリーンショット画像が表示されます。
 - それでも不明な場合は、「Comment Section」で質問してください。 [コメントを残す方法が分かりません](#comment)
 
-![文字列に対するコンテキストをスクリーンショットで提示](../../../../contributing/translation-program/translation-guide/source-string.png)
+![文字列に対するコンテキストをスクリーンショットで提示](../../../../../contributing/translation-program/translation-guide/source-string.png)
 
-![コンテキストを提供するため、スクリーンショットを追加した例](../../../../contributing/translation-program/translation-guide/source-string-2.png)
+![コンテキストを提供するため、スクリーンショットを追加した例](../../../../../contributing/translation-program/translation-guide/source-string-2.png)
 
 ## コメントや質問をするにはどうすればいいですか? 問題や誤字を指摘したいのですが… {#comment}
 
@@ -38,7 +38,7 @@ sidebar: true
 - 右上のバーの 2 番目のボタンをクリックします。 右側に非表示のタブが表示されます。 新しいコメントを記入し、下部にある[Issue]のチェックボックスをクリックしてください。 ドロップダウンメニューからオプションを選択し、問題の種別を指定できます。
 - 送信された時点で、私たちのチームに報告されます。 問題を修正してから、コメントに返信してお知らせし、問題をクローズします。
 
-![コメントと問題の作成方法を表示する](../../../../contributing/translation-program/translation-guide/comment-issue.png)
+![コメントと問題の作成方法を表示する](../../../../../contributing/translation-program/translation-guide/comment-issue.png)
 
 ## 翻訳メモリ(TM) とは何ですか? {#translation-memory}
 
@@ -47,7 +47,7 @@ sidebar: true
 - 「TM and MT Suggestions」のセクションから、他の翻訳者が同じまたは類似する文字列をどのように翻訳したかがわかります。 マッチ率の高い提案を見つけたら、その翻訳をクリックして気軽に使用してください。
 - リストに何もない場合は、一貫性を持たせるために、過去の翻訳を TM で検索し、再利用することができます。
 
-![翻訳メモリのスクリーンショット](../../../../contributing/translation-program/translation-guide/translation-memory.png)
+![翻訳メモリのスクリーンショット](../../../../../contributing/translation-program/translation-guide/translation-memory.png)
 
 ## Crowdin の用語集はどのように使用しますか? {#glossary}
 
@@ -57,15 +57,15 @@ Crowdin の用語集は、用語や定義を明確にするのに最適な場所
 
 - まず、ソースの文字列に下線が引かれている用語を見つけたら、マウスオーバーするとその用語の簡単な定義を見ることができます。
 
-![用語集の定義の例](../../../../contributing/translation-program/translation-guide/glossary-definition.png)
+![用語集の定義の例](../../../../../contributing/translation-program/translation-guide/glossary-definition.png)
 
 - 次に、知らない単語で下線が引かれていないものの場合は、Glossary タブ(右欄の 3 番目のボタン)から検索することができます。 プロジェクト内で頻繁に使用される用語の説明が表示されます。
 
-![CrowdinでGlossaryタブを見つける場所を示すスクリーンショット](../../../../contributing/translation-program/translation-guide/glossary-tab.png)
+![CrowdinでGlossaryタブを見つける場所を示すスクリーンショット](../../../../../contributing/translation-program/translation-guide/glossary-tab.png)
 
 - それでも見つからない場合は、新しい用語を追加してください。 検索エンジンで調べて、その説明を用語集に加えることをお勧めします。 他の翻訳者にとっても、その用語をより理解する上で大きな助けとなるでしょう。
 
-![Crowdinで用語を用語集に追加する方法を示すスクリーンショット](../../../../contributing/translation-program/translation-guide/add-glossary-term.png)
+![Crowdinで用語を用語集に追加する方法を示すスクリーンショット](../../../../../contributing/translation-program/translation-guide/add-glossary-term.png)
 
 ### 用語集翻訳ポリシー {#terminology}
 
