@@ -16,7 +16,7 @@ sidebar: true
 - 翻译标签内的文本，但不翻译标签本身。 不能翻译或删除 `<` and `>` 中的任何内容。
 - 为了保持语句完整，建议您点击左下方的"复制源代码"按钮。 这将复制原文语句并粘贴到文本框内。 这让您明确标签的位置，有助于避免错误。
 
-![高亮显示复制源按钮的 Crowdin 界面](./html-tag-strings.png)
+![高亮显示复制源按钮的 Crowdin 界面](../../../../../translation-program/translation-guide/html-tag-strings.png)
 
 您可以在语句中移动标签的位置，使其在句子中更加自然，但请确保移动整个标签。
 
