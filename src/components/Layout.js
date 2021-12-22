@@ -21,6 +21,7 @@ import { useKeyPress } from "../hooks/useKeyPress"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { isMobile } from "../utils/isMobile"
+import SkipLink from "./SkipLink"
 
 const ContentContainer = styled.div`
   position: relative;
@@ -135,6 +136,7 @@ const Layout = (props) => {
         <IntlContextProvider value={intl}>
           <ThemeProvider theme={theme}>
             <GlobalStyle isDarkTheme={isDarkTheme} />
+            <SkipLink hrefId="#main-content" />
             <TranslationBanner
               shouldShow={shouldShowTranslationBanner}
               isPageContentEnglish={isPageContentEnglish}
@@ -150,7 +152,7 @@ const Layout = (props) => {
                 />
                 {shouldShowSideNav && <SideNavMobile path={path} />}
               </VisuallyHidden>
-              <MainContainer>
+              <MainContainer id="main-content">
                 {shouldShowSideNav && (
                   <VisuallyHidden isHidden={isZenMode}>
                     <SideNav path={path} />
