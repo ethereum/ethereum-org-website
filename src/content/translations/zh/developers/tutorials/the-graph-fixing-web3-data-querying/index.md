@@ -92,7 +92,7 @@ GameContract.events.BetPlaced({
 
 ## 什么是 The Graph？ {#what-is-the-graph}
 
-![]()
+![The Graph](../../../../developers/tutorials/the-graph-fixing-web3-data-querying/thegraph.png)
 
 ## 如何创建子图 {#how-to-create-a-subgraph}
 
@@ -264,7 +264,7 @@ React.useEffect(() => {
 }, [loading, error, data])
 ```
 
-![]()
+![Magic](../../../../developers/tutorials/the-graph-fixing-web3-data-querying/magic.jpg)
 
 最简单的方法是使用托管服务。 按照[此处](https://thegraph.com/docs/deploy-a-subgraph)的说明来部署子图。
 
@@ -272,7 +272,7 @@ React.useEffect(() => {
 
 ### Graph Explorer：托管服务 {#graph-explorer-the-hosted-service}
 
-![]()
+![The Graph-Explorer](../../../../developers/tutorials/the-graph-fixing-web3-data-querying/thegraph-explorer.png)
 
 ### 运行您自己的节点 {#running-your-own-node}
 
