@@ -242,7 +242,7 @@ La bifurcación Homestead que miró hacia el futuro. Incluyó varios cambios de 
 <ExpandableCard title="EIP de Homestead" contentPreview="Official improvements included in this fork.">
 
 - [EIP-2](https://eips.ethereum.org/EIPS/eip-2) – _realiza ediciones al proceso de creación de contratos_
-- [EIP-7](https://eips.ethereum. rg/EIPS/eip-7) – _añade un nuevo código de operación: `DELEGATECALL`_
+- [EIP-7](https://eips.ethereum.org/EIPS/eip-7) – _añade un nuevo código de operación: `DELEGATECALL`_
 - [EIP-8](https://eips.ethereum.org/EIPS/eip-8) – _introduce los requisitos de compatibilidad con devp2p hacia delante_
 
 </ExpandableCard>

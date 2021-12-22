@@ -23,6 +23,11 @@ export const dannyArticles = [
 
 export const benArticles = [
   {
+    title: "What’s New in Eth2 – #83",
+    description: "3 December 2021",
+    link: "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_211203",
+  },
+  {
     title: "What’s New in Eth2 – #82",
     description: "19 November 2021",
     link: "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_211119",
@@ -36,10 +41,5 @@ export const benArticles = [
     title: "What’s New in Eth2 – #80",
     description: "22 October 2021",
     link: "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_211022",
-  },
-  {
-    title: "What’s New in Eth2 – #79",
-    description: "8 October 2021",
-    link: "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_211008",
   },
 ]
