@@ -62,7 +62,7 @@ NFT の世界は比較的新しいものです。 理論的には、NFT の扱�
 
 #### POAP(出席証明プロトコル) {#poaps}
 
-ethereum.org への貢献で、POAP NFT を取得できます。 これはイベントに参加したことを証明するコレクションです。 仮想通貨ミートアップの中には、POAP をイベントのチケットとして使用している場合もあります。 [貢献の詳細](/en/contributing/#poap).
+ethereum.org への貢献で、POAP NFT を取得できます。 これはイベントに参加したことを証明するコレクションです。 仮想通貨ミートアップの中には、POAP をイベントのチケットとして使用している場合もあります。 [貢献の詳細](/contributing/#poap).
 
 ![ethereum.orgのPOAP](../../../../assets/use-cases/poap.png)
 
