@@ -43,7 +43,7 @@ Y(S, T)= S'
 
 ## EVM 说明 {#evm-instructions}
 
-EVM 作为一个[堆栈机](https://en. wikipedia. org/wiki/Stack_machine)运行，其栈的深度为 1024 个项。 每个项目都是 256 位字，为了便于使用，选择了 256 位加密技术（如 Keccak-256 哈希或 secp256k1 签名）。
+EVM 作为一个[堆栈机](https://en.wikipedia.org/wiki/Stack_machine)运行，其栈的深度为 1024 个项。 每个项目都是 256 位字，为了便于使用，选择了 256 位加密技术（如 Keccak-256 哈希或 secp256k1 签名）。
 
 在执行期间，EVM 会维护一个瞬态*内存*（作为字可寻址的字节数组），该内存不会在交易之间持久存在。
 

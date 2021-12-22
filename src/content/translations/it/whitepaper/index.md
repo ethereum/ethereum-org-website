@@ -369,7 +369,7 @@ Tuttavia, nella realtà, ci sono diverse deviazioni importanti da queste ipotesi
 3.  La distribuzione di potenza di mining nella pratica può risultare non affatto equa.
 4.  Sono presenti speculatori, avversari politici e squilibrati la cui funzione di utilità include il causare danni alla rete, che possono abilmente configurare contratti con costo molto inferiore rispetto al costo pagato da altri nodi di verifica.
 
-(1) favorisce una tendenza per il miner a includere meno transazioni e (2) aumenta `NC`; di conseguenza, questi due effetti si annullano a vicenda almeno parzialmente.<sup>[Come?](https://github. om/ethereum/wiki/issues/447#issuecomment-316972260)</sup> (3) e (4) sono il problema principale; per risolverli semplicemente stabiliamo un limite fluttuante: nessun blocco può avere un numero di operazioni superiore a `BLK_LIMIT_FACTOR` volte la media mobile esponenziale a lungo termine. Nello specifico:
+(1) favorisce una tendenza per il miner a includere meno transazioni e (2) aumenta `NC`; di conseguenza, questi due effetti si annullano a vicenda almeno parzialmente.<sup>[Come?](https://github.com/ethereum/wiki/issues/447#issuecomment-316972260)</sup> (3) e (4) sono il problema principale; per risolverli semplicemente stabiliamo un limite fluttuante: nessun blocco può avere un numero di operazioni superiore a `BLK_LIMIT_FACTOR` volte la media mobile esponenziale a lungo termine. Nello specifico:
 
     blk.oplimit = floor((blk.parent.oplimit \* (EMAFACTOR - 1) +
     floor(parent.opcount \* BLK\_LIMIT\_FACTOR)) / EMA\_FACTOR)

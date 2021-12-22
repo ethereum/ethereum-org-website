@@ -369,7 +369,7 @@ Istnieje jednak kilka istotnych odstępstw od tych założeń w rzeczywistości:
 3.  Dystrybucja energii wydobywczeh może w praktyce stać się radykalnie nieegalitarna.
 4.  Spekulanci, wrogowie polityczni i maszyny, których funkcja użyteczności obejmuje wyrządzanie szkód w sieci, już istnieją, i mogą sprytnie tworzyć kontrakty, w których ich koszt jest znacznie niższy niż koszt zapłacony przez inne weryfikujące węzły.
 
-(1) daje górnikowi tendencję do uwzględniania mniejszej liczby transakcji, a (2) wzrasta `NC`; w związku z tym te dwa efekty co najmniej częściowo znoszą się nawzajem <sup>[Jak?](https://github. om/ethereum/wiki/issues/447#issuecomment-316972260)</sup> (3) i (4) są głównymi problemami; aby je rozwiązać, tworzymy zmienną pokrywę: żaden blok nie może mieć więcej operacji niż `BLK_LIMIT_FACTOR` razy długoterminowa wykładnicza średnia ruchoma. Konkretnie:
+(1) daje górnikowi tendencję do uwzględniania mniejszej liczby transakcji, a (2) wzrasta `NC`; w związku z tym te dwa efekty co najmniej częściowo znoszą się nawzajem <sup>[Jak?](https://github.com/ethereum/wiki/issues/447#issuecomment-316972260)</sup> (3) i (4) są głównymi problemami; aby je rozwiązać, tworzymy zmienną pokrywę: żaden blok nie może mieć więcej operacji niż `BLK_LIMIT_FACTOR` razy długoterminowa wykładnicza średnia ruchoma. Konkretnie:
 
     blk.oplimit = floor((blk.parent.oplimit \* (EMAFACTOR - 1) +
     floor(parent.opcount \* BLK\_LIMIT\_FACTOR)) / EMA\_FACTOR)

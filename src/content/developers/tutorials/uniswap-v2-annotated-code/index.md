@@ -1232,7 +1232,7 @@ thousand B tokens (red line). The x axis is the exchange rate, A/B. If x=1, they
 a thousand of each. If x=2, A is twice the value of B (you get two B tokens for each A token) so you deposit a thousand
 B tokens, but only 500 A tokens. If x=0.5, the situation is reversed, a thousand A tokens and five hundred B tokens.
 
-![Graph](liquidityProviderDeposit.png "Tokens to deposit at different exchange rates")
+![Graph](liquidityProviderDeposit.png)
 
 ```solidity
             }

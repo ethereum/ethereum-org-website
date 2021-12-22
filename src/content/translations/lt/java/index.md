@@ -20,7 +20,6 @@ Naudokite Ethereum norėdami sukurti decentralizuotas programas, kurias mes sutr
 
 Norėtumėte pradėti nuo ko nors paprastesnio? Apsilankykite [ethereum.org/learn](/learn/) arba [ethereum.org/developers.](/developers/)
 
-- [Apie blokų grandinę](https://kauri.io/article/d55684513211466da7f8cc03987607d5/apie blokų grandinę)
 - [Apie išmaniąsias sutartis](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
 - [Surašykite savo pirmą išmaniąją sutartį](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Išmokite sudaryti ir naudoti Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
