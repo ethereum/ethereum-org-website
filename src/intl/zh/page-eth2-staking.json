@@ -15,7 +15,7 @@
   "page-eth2-staking-desc-2": "即使您可以通过对网络做贡献而得到报酬，但恶意的行为、离线和失败的校验仍然可能会使您失去ETH。",
   "page-eth2-staking-desc-3": "您需要至少32个ETH才能加入资质抵押池。同时您将会需要运行一个‘Eth1’或者主网络链。启动台将会带您穿过进程和硬件需求。或者您可以使用后端的API。",
   "page-eth2-staking-description": "权益质押（Staking）是存入32个ETH以激活验证者软件的行为。 作为验证者，您将负责存储数据、处理交易和向区块链中添加新的块。 这将为所有人保证以太坊的安全，并在这个过程中赚取新的ETH。 这个由信标链引入的过程被称为质押权益证明。",
-  "page-eth2-staking-docked": "对接的更多信息",
+  "page-eth2-staking-docked": "关于合并的更多信息",
   "page-eth2-staking-dyor": "自行调查",
   "page-eth2-staking-dyor-desc": "列出的权益质押服务都不是官方背书的。请进行一些研究，找出哪个服务最适合您。",
   "page-eth2-staking-header-1": "质押您的以太币并成为以太坊验证者",
@@ -52,11 +52,11 @@
   "page-eth2-staking-upgrades-li": "权益质押由信标链管理。",
   "page-eth2-staking-upgrades-li-2": "在可预见的未来以太坊就会拥有一个权益证明的信标链和一个工作量证明的主网。主网即我们现在正在使用的那个以太坊网络。",
   "page-eth2-staking-upgrades-li-3": "在这段时间里，质押者将负责向信标链添加新的区块，但是并不处理主网交易。",
-  "page-eth2-staking-upgrades-li-4": "一旦主网变成一个分片，以太坊将会完整切换至权益证明的系统。",
-  "page-eth2-staking-upgrades-li-5": "只有到那时，您才能取回您的质押。",
+  "page-eth2-staking-upgrades-li-4": "一旦以太坊主网与信标链合并，以太坊将完全过渡到权益证明系统。",
+  "page-eth2-staking-upgrades-li-5": "随后将进行一次小规模的升级，以便能够取回质押资产。",
   "page-eth2-staking-upgrades-title": "权益质押和Eth2升级",
   "page-eth2-staking-validators": "越多的验证者，越安全",
-  "page-eth2-staking-validators-desc": "在以太坊这样的区块链中，如果您拥有51%的算力就可能破坏网络。例如您可以让51%的验证者都声称您的账户收到1,000,000 ETH 而非 1 ETH。 但是，想要控制51%的验证者您需要控制51%的ETH —— 那真是太多了！",
+  "page-eth2-staking-validators-desc": "在像以太坊这样的区块链中，如果您控制了大部分网络，就可以根据需求对交易进行审查和重新排序。但是，为了控制大部分网络，您需要拥有大部分验证者，为此就需要控制系统中大多数的 ETH - 这是一个庞大的数字！每当有新验证者进入系统时，ETH 的数量就会增长，从而加强网络的安全性。工作量证明（权益证明的安全模式）就会取而代之，需要验证者（矿工）拥有专业硬件和大量物理空间，很难以矿工身份进入系统，所以针对多数人攻击的安全性并不会大幅提高。权益证明没有这些要求，这将使网络（及其对大多数攻击的抵抗力）增长到工作量证明不可能达到的规模。",
   "page-eth2-staking-withdrawals": "取款功能并不会立即上线",
-  "page-eth2-staking-withdrawals-desc": "在未来部署相关升级之前，您将不能取回您的质押。一旦当主网和信标链完成对接，质押物就可以取回。"
+  "page-eth2-staking-withdrawals-desc": "在未来部署相关升级之前，您将无法取回质押。在主网与信标链合并后的小规模升级中，便可以取回质押物。"
 }

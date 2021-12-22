@@ -10,7 +10,7 @@
   "page-get-eth-dexs-desc": "去中心化交易所是用于交易ETH或者其他货币的开放的自由市场，它可以让买卖双方点对点直接交易，避免中间商赚差价。",
   "page-get-eth-dexs-desc-2": "他们通过使用一段程序代码，而不是委托第三方来保证一笔订单的资金安全。只有当这次支付被确定时，ETH才会从支付方转出。这种程序代码称为“智能合约”。",
   "page-get-eth-dexs-desc-3": "这意味着与集中式的交易方案相比，地域上的限制将会更少。如果有人卖您想要的东西，同时他接受某种您可以使用的支付方式，那你们就已经准备万全了。DEX可以让您以各种方式进行交易，不论是使用其他数字加密货币或法定货币，乃至于Paypal、支付宝，甚至线下的现金交易，都可以用来在DEX进行交易。",
-  "page-get-eth-do-not-copy": "例子：请勿拷贝",
+  "page-get-eth-do-not-copy": "示例：不要复制",
   "page-get-eth-exchanges-disclaimer": "我们是以人工来收集这些信息的，如果您发现出现错误，请发邮件给",
   "page-get-eth-exchanges-empty-state-text": "输入您所在的国家或地区以查询您可以用于交易ETH的钱包或交易所。",
   "page-get-eth-exchanges-except": "除此之外",
