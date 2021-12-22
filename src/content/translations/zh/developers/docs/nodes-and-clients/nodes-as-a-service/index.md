@@ -4,7 +4,6 @@ description: 节点服务及其利弊和主流供应商的入门级概述。
 lang: zh
 sidebar: true
 sidebarDepth: 2
-isOutdated: true
 ---
 
 ## 介绍 {#Introduction}
@@ -45,17 +44,57 @@ isOutdated: true
 
 这里列出了一些最受欢迎的以太坊节点服务提供商，如有缺失，随时添加！ 每个节点服务除了免费或付费等级外，还提供不同的福利和功能。 在做出决定之前，你应该调查哪些最符合你的需求。
 
-- [**Alchemy**](https://alchemyapi.io/)
+- [**Alchemy**](https://www.alchemy.com/)
   - [相关文档](https://docs.alchemyapi.io/)
   - 特性
     - 免费等级选项
     - 随时扩展
     - 免费归档数据
     - 分析工具
-    - 管理面板
-    - 唯一 API 终点
+    - 仪表板
+    - 唯一 API 端点
     - 网钩
     - 点对点支持
+- [**BlockDaemon**](https://blockdaemon.com/)
+  - [相关文档](https://ubiquity.docs.blockdaemon.com/)
+  - 优势
+    - 仪表板
+    - 基于每个节点
+    - 数据分析
+- [**ChainStack**](https://chainstack.com/)
+  - [相关文档](https://docs.chainstack.com/)
+  - 特性
+    - 免费共享节点
+    - 共享归档节点
+    - GraphQL 支持
+    - RPC 和 WSS 端点
+    - 专用完整归档节点
+    - 专用部署的快速同步时间
+    - 用自己的云服务
+    - 按小时计费定价
+    - 直接全天候支持
+- [**GetBlock**](https://getblock.io/)
+  - [相关文档](https://getblock.io/docs/get-started/authentication-with-api-key/)
+  - 特性
+    - 访问 40+ 区块链节点
+    - 40K 每日免费请求
+    - 无限数量 API 秘钥
+    - 1GB/秒的高连接速度
+    - 追踪 + 归档
+    - 高级分析
+    - 自动更新
+    - 技术支持
+- [**InfStones**](https://infstones.com/)
+  - 特性
+    - 免费等级选项
+    - 随时扩展
+    - 数据分析
+    - 仪表板
+    - 唯一 API 端点
+    - 专用完整节点
+    - 专用部署的快速同步时间
+    - 直接全天候支持
+    - 访问 50 + 区块链节点
 - [**Infura**](https://infura.io/)
   - [相关文档](https://infura.io/docs)
   - 特性
@@ -63,25 +102,51 @@ isOutdated: true
     - 随时扩展
     - 付费归档数据
     - 点对点支持
-    - 管理面板
+    - 仪表板
+- [**Moralis**](https://moralis.io/)
+  - [相关文档](https://docs.moralis.io/)
+  - 特性
+    - 免费共享节点
+    - 免费共享归档节点
+    - 注重隐私（无日志政策）
+    - 跨链支持
+    - 随时扩展
+    - 仪表板
+    - 独特的以太坊 SDK
+    - 唯一 API 端点
+    - 直接技术支持
+- [**Pocket Network**](https://www.pokt.network/)
+  - [相关文档](https://docs.pokt.network/home/)
+  - 特性
+    - 去中心化的远程程序调用协议和市场
+    - 每天 1 百万个免费等级请求（每个端点，最多 2 个）
+    - [公共端点](https://docs.pokt.network/home/resources/public-rpc-endpoints)
+    - Pre-Stake+ 项目（如果需要每天 1 百万次以上的请求）
+    - 支持 15+ 区块链
+    - 6400+ 节点为应用程序服务赚取 POKT
+    - 归档节点，具有追踪及测试网节点支持的归档节点
+    - 以太坊主网节点客户端多样性
+    - 无单点故障
+    - 零停机时间
+    - 具有成本效益的近零通证经济（质押 POKT 获得网络带宽）
+    - 没有每月沉没成本，将您的基础设施变成资产
+    - 协议中规定的负载平衡
+    - 每日请求数量和每小时节点数量无限变化
+    - 最私密的抗审查选项
+    - 实践型开发者支持
+    - [Pocket Portal](https://bit.ly/ETHorg_POKTportal) 仪表板和分析
 - [**QuikNode**](https://www.quiknode.io/)
   - 特性
     - 7 天免费试用
     - 差异化支持
     - 网钩
-    - 管理面板
+    - 仪表板
     - 数据分析
 - [**Rivet**](https://rivet.cloud/)
   - [相关文档](https://rivet.readthedocs.io/en/latest/)
   - 特性
     - 免费等级选项
     - 随时扩展
-- [**BlockDaemon**](https://blockdaemon.com/)
-  - [相关文档](https://ubiquity.docs.blockdaemon.com/)
-  - 优势
-    - 管理面板
-    - 基于每个节点
-    - 数据分析
 
 ## 延伸阅读 {#further-reading}
 
@@ -93,5 +158,5 @@ isOutdated: true
 
 ## 相关教程 {#related-tutorials}
 
-- [使用 Alchemy 开始以太坊开发](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
-- [使用 web3 和 Alchemy 发送交易指南](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
+- [使用 Alchemy 开始以太坊开发](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
+- [使用 web3 和 Alchemy 发送交易指南](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

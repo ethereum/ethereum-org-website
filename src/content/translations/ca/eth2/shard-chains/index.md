@@ -5,13 +5,10 @@ lang: ca
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
-summaryPoints:
-  [
-    "La fragmentació es una actualització de diverses fases que millora la capacitat i l'escalabilitat d'Ethereum.",
-    "Les cadenes de fragments distribueixen la càrrega de la xarxa a través de 64 cadenes noves.",
-    "Fan més fàcil executar un node fent que els requeriments de maquinari siguin més baixos.",
-    'La planificació tècnica inclou la feina en cadenes de fragments en la "Fase 1" i potencialment en la "Fase 2".',
-  ]
+summaryPoint1: La fragmentació es una actualització de diverses fases que millora la capacitat i l'escalabilitat d'Ethereum.
+summaryPoint2: Les cadenes de fragments distribueixen la càrrega de la xarxa a través de 64 cadenes noves.
+summaryPoint3: Fan més fàcil executar un node fent que els requeriments de maquinari siguin més baixos.
+summaryPoint4: La planificació tècnica inclou la feina en cadenes de fragments en la "Fase 1" i potencialment en la "Fase 2".
 ---
 
 <UpgradeStatus dateKey="page-eth2-upgrades-shards-date">

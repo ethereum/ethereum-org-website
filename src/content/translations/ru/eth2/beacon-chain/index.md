@@ -5,13 +5,10 @@ lang: ru
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/core.png
-summaryPoints:
-  [
-    "Beacon Chain не меняет ничего в Ethereum, который мы используем сегодня",
-    "Она будет координировать сеть.",
-    "Она вводит доказательство владения в экосистему Ethereum.",
-    'Она обозначена как "Фаза 0" на дорожных картах.',
-  ]
+summaryPoint1: Beacon Chain не меняет ничего в Ethereum, который мы используем сегодня
+summaryPoint2: Она будет координировать сеть.
+summaryPoint3: Она вводит доказательство владения в экосистему Ethereum.
+summaryPoint4: Она обозначена как "Фаза 0" на дорожных картах.
 ---
 
 <UpgradeStatus isShipped dateKey="page-eth2-upgrades-beacon-date">

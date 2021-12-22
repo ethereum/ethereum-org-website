@@ -5,13 +5,10 @@ lang: de
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
-summaryPoints:
-  [
-    "Sharding ist ein mehrstufiges Upgrade zur Verbesserung der Skalierbarkeit und Kapazität von Ethereum.",
-    "Shard Chains verteilen die Last des Netzes auf 64 neue Ketten.",
-    "Sie erleichtern den Betrieb einer Node, indem sie die Hardwareanforderungen niedrig halten.",
-    "Dieses Upgrade ist nach der Verkupplung des Mainnet mit der Beacon Chain geplant.",
-  ]
+summaryPoint1: Sharding ist ein mehrstufiges Upgrade zur Verbesserung der Skalierbarkeit und Kapazität von Ethereum.
+summaryPoint2: Shard Chains verteilen die Last des Netzes auf 64 neue Ketten.
+summaryPoint3: Sie erleichtern den Betrieb einer Node, indem sie die Hardwareanforderungen niedrig halten.
+summaryPoint4: Dieses Upgrade ist nach der Verkupplung des Mainnet mit der Beacon Chain geplant.
 ---
 
 <UpgradeStatus dateKey="page-eth2-upgrades-shards-date">

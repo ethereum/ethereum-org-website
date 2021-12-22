@@ -102,7 +102,6 @@ Przykłady rozwiązań L2, które są gotowe do produkcji lub wkrótce będą:
   - [Skale](https://skale.network)
   - [Sieć POA](https://www.poa.network/)
 - Rozwiązania hybrydowe łączące właściwości wielu kategorii
-  - [Offchain Labs Arbitrum SCSC](https://https://offchainlabs.com/arbitrum.pdf)
   - [Celer](https://celer.network)
 
 ## Aplikacje korporacyjne działają w sieci głównej {#enterprise-live-on-mainnet}

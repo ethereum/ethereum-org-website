@@ -1,5 +1,5 @@
 ---
-title: 面向 Go 开发者的以太坊资源
+title: 面向 Go 开发者的以太坊
 description: 学习如何使用基于 Go 的项目和工具参与以太坊的开发
 lang: zh
 sidebar: true
@@ -31,7 +31,7 @@ incomplete: true
 - [一步步教您测试和部署以太坊 Go 语言智能合约](https://hackernoon.com/a-step-by-step-guide-to-testing-and-deploying-ethereum-smart-contracts-in-go-9fc34b178d78)
 - [电子书：使用 Go 开发以太坊](https://goethereumbook.org/) - _使用 Go 开发以太坊应用程序_
 
-## 中级文章和文档 {#intermediate-articles-and-docs}
+## 面向中等程度用户的文章和文档 {#intermediate-articles-and-docs}
 
 - [Go 以太坊相关文档](https://geth.ethereum.org/docs/) - _官方以太坊 Golang 相关文档_
 - [Turbo-Geth 编程者指南](https://github.com/ledgerwatch/turbo-geth/blob/master/docs/programmers_guide/guide.md) - _图文指南，内容涵盖状态树、多重认证和交易处理_
@@ -43,7 +43,7 @@ incomplete: true
 - [使用 Go 对以太坊上的 Solidity 合约进行单元测试](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 - [使用 Geth 作为库的快速参考](https://medium.com/coinmonks/web3-go-part-1-31c68c68e20e)
 
-## 面向高等程度者的使用模式 {#advanced-use-patterns}
+## 面向高等程度用户的使用模式 {#advanced-use-patterns}
 
 - [使用 GETH 模拟后端搭建](https://kauri.io/article/6285c9692883411aa041b6b970405a17/v1/the-geth-simulated-backend)
 - [基于以太坊和 Quorum 的区块链即服务应用程序](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)

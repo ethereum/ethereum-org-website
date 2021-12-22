@@ -5,13 +5,10 @@ lang: de
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    'Letztlich wird das aktuelle Ethereum Mainnet mit dem beacon chain koordiniertem proof-of-stake system "fusioniert".',
-    "Dies vermerkt das Ende von proof-of-work in Ethereum und zugleich den Start, zu einem vollen Übergang in proof-of-stake.",
-    "Dies ist geplant, um der Veröffentlichung von shard chains zuvorzukommen.",
-    'Welches wir zuvor als "die Kupplung" bezeichneten.',
-  ]
+summaryPoint1: Letztlich wird das aktuelle Ethereum Mainnet mit dem beacon chain koordiniertem proof-of-stake system "fusioniert".
+summaryPoint2: Dies vermerkt das Ende von proof-of-work in Ethereum und zugleich den Start, zu einem vollen Übergang in proof-of-stake.
+summaryPoint3: Dies ist geplant, um der Veröffentlichung von shard chains zuvorzukommen.
+summaryPoint4: Welches wir zuvor als "die Kupplung" bezeichneten.
 ---
 
 <UpgradeStatus dateKey="page-eth2-upgrades-merge-date">

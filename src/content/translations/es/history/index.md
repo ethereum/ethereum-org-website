@@ -35,7 +35,9 @@ La [cadena de baliza](/eth2/beacon-chain/) ha necesitado 16 384 depósitos de 3
 
 [Leer la declaración de la Fundación Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/eth2/beacon-chain/" title="La cadena de baliza" />
+<DocLink to="/eth2/beacon-chain/">
+  La cadena de baliza
+</DocLink>
 
 ---
 
@@ -49,7 +51,9 @@ El contrato de depósito de participación introdujo la [participación](/glossa
 
 [Leer la declaración de la Fundación Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/eth2/staking/" title="Participación" />
+<DocLink to="/eth2/staking/">
+  Participación
+</DocLink>
 
 ---
 
@@ -238,7 +242,7 @@ La bifurcación Homestead que miró hacia el futuro. Incluyó varios cambios de 
 <ExpandableCard title="EIP de Homestead" contentPreview="Official improvements included in this fork.">
 
 - [EIP-2](https://eips.ethereum.org/EIPS/eip-2) – _realiza ediciones al proceso de creación de contratos_
-- [EIP-7](https://eips.ethereum. rg/EIPS/eip-7) – _añade un nuevo código de operación: `DELEGATECALL`_
+- [EIP-7](https://eips.ethereum.org/EIPS/eip-7) – _añade un nuevo código de operación: `DELEGATECALL`_
 - [EIP-8](https://eips.ethereum.org/EIPS/eip-8) – _introduce los requisitos de compatibilidad con devp2p hacia delante_
 
 </ExpandableCard>
@@ -301,4 +305,6 @@ El Yellow Paper, escrito por el Dr. Gavin Wood, es una definición técnica del 
 
 Documento introductorio, publicado en el 2013 por Vitalik Buterin, fundador de Ethereum, antes del lanzamiento del proyecto en 2015.
 
-<DocLink to="/whitepaper/" title="Papel en blanco" />
+<DocLink to="/whitepaper/">
+  Papel en blanco
+</DocLink>

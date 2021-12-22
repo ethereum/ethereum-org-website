@@ -5,13 +5,10 @@ lang: hu
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    'Végül a jelenlegi Ethereum főhálózat "dokkolni" fog a többi Eth2 fejlesztéssel együtt.',
-    'A dokkolás egyesíti az "Eth1" főhálózatot a Beacon Chainnel és a sharding rendszerrel.',
-    "Ez a proof-of-work végét jeleni majd az Ethereumot tekintve, és a teljes átmenetet a proof-of-stake-be.",
-    "Úgy is ismerheted, mint a Fázis 1.5 a technikai ütemtervek szerint.",
-  ]
+summaryPoint1: Végül a jelenlegi Ethereum főhálózat "dokkolni" fog a többi Eth2 fejlesztéssel együtt.
+summaryPoint2: A dokkolás egyesíti az "Eth1" főhálózatot a Beacon Chainnel és a sharding rendszerrel.
+summaryPoint3: Ez a proof-of-work végét jeleni majd az Ethereumot tekintve, és a teljes átmenetet a proof-of-stake-be.
+summaryPoint4: Úgy is ismerheted, mint a Fázis 1.5 a technikai ütemtervek szerint.
 ---
 
 <UpgradeStatus dateKey="page-eth2-upgrades-merge-date">

@@ -77,7 +77,9 @@ Learn more about [Plasma](/developers/docs/scaling/plasma/).
 
 ## More of a visual learner? {#visual-learner}
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/BgCgauWVTs0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<figure>
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/BgCgauWVTs0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
 
 _Note the explanation in the video uses the term "Layer 2" to refer to all off-chain scaling solutions, while we differentiate "Layer 2" as an off-chain solution that derives its security through layer 1 Mainnet consensus._
 

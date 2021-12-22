@@ -5,13 +5,10 @@ lang: de
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/core.png
-summaryPoints:
-  [
-    "Die Beacon Chain selbst ändert nichts an der heutigen Verwendung von Ethereum.",
-    "Ihre Aufgabe wird die Koordination des Eth2-Netzwerks sein.",
-    "Sie führt proof-of-stake ins Ethereum-System ein.",
-    'In den verschiedenen technischen Entwicklungsstufen ist darunter die "Phase 0" gemeint.',
-  ]
+summaryPoint1: Die Beacon Chain selbst ändert nichts an der heutigen Verwendung von Ethereum.
+summaryPoint2: Ihre Aufgabe wird die Koordination des Eth2-Netzwerks sein.
+summaryPoint3: Sie führt proof-of-stake ins Ethereum-System ein.
+summaryPoint4: In den verschiedenen technischen Entwicklungsstufen ist darunter die "Phase 0" gemeint.
 ---
 
 <UpgradeStatus isShipped dateKey="page-eth2-upgrades-beacon-date">

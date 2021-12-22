@@ -5,13 +5,10 @@ lang: hu
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
-summaryPoints:
-  [
-    "A sharding egy többfázisú fejlesztés az Ethereum skálázhatóságának és kapacitásának növelésére.",
-    "A shard láncok 64 új láncon osztják szét a hálózat terhelését.",
-    "Könnyebbé teszik a csomópont futtatását a hardver követelmény alacsonyan tartásával.",
-    'A technikai ütemtervek tartalmazzák a shard láncokhoz tartozó munkát a "Fázis 1"-ben és potenciálisan a "Fázis 2"-ben.',
-  ]
+summaryPoint1: A sharding egy többfázisú fejlesztés az Ethereum skálázhatóságának és kapacitásának növelésére.
+summaryPoint2: A shard láncok 64 új láncon osztják szét a hálózat terhelését.
+summaryPoint3: Könnyebbé teszik a csomópont futtatását a hardver követelmény alacsonyan tartásával.
+summaryPoint4: A technikai ütemtervek tartalmazzák a shard láncokhoz tartozó munkát a "Fázis 1"-ben és potenciálisan a "Fázis 2"-ben.
 ---
 
 <UpgradeStatus dateKey="page-eth2-upgrades-shards-date">

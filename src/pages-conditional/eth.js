@@ -267,7 +267,7 @@ const cardListContent = [
   },
 ]
 
-const WhatIsEthereumPage = (props) => {
+const EthPage = (props) => {
   const intl = useIntl()
   const data = props.data
   return (
@@ -514,7 +514,7 @@ const WhatIsEthereumPage = (props) => {
   )
 }
 
-export default WhatIsEthereumPage
+export default EthPage
 
 export const query = graphql`
   {

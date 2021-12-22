@@ -5,13 +5,10 @@ lang: hr
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
-summaryPoints:
-  [
-    "Razdjeljivanje je nadogradnja u više faza za poboljšanje skalabilnosti i kapaciteta Ethereuma.",
-    "Lanci djelića šire opterećenje mreže na 64 nova lanca.",
-    "Olakšavaju pokretanje čvora održavajući niske hardverske zahtjeve.",
-    "Tehnički planovi uključuju rad na lancima djelića u „fazi 1” i potencijalno u „fazi 2”.",
-  ]
+summaryPoint1: Razdjeljivanje je nadogradnja u više faza za poboljšanje skalabilnosti i kapaciteta Ethereuma.
+summaryPoint2: Lanci djelića šire opterećenje mreže na 64 nova lanca.
+summaryPoint3: Olakšavaju pokretanje čvora održavajući niske hardverske zahtjeve.
+summaryPoint4: Tehnički planovi uključuju rad na lancima djelića u „fazi 1” i potencijalno u „fazi 2”.
 ---
 
 <UpgradeStatus dateKey="page-eth2-upgrades-shards-date">

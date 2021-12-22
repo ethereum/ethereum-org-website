@@ -5,13 +5,10 @@ lang: es
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
-summaryPoints:
-  [
-    "La fragmentación es una actualización de varias fases para mejorar la escalabilidad y la capacidad de Ethereum.",
-    "Las cadenas de fragmentos distribuyen la carga de la red en 64 nuevas cadenas.",
-    "Facilitan la ejecución de un nodo manteniendo bajos los requisitos de hardware.",
-    'Las hojas de ruta técnicas incluyen el trabajo en las cadenas de fragmentos en la "Fase 1" y potencialmente en la "Fase 2".',
-  ]
+summaryPoint1: La fragmentación es una actualización de varias fases para mejorar la escalabilidad y la capacidad de Ethereum.
+summaryPoint2: Las cadenas de fragmentos distribuyen la carga de la red en 64 nuevas cadenas.
+summaryPoint3: Facilitan la ejecución de un nodo manteniendo bajos los requisitos de hardware.
+summaryPoint4: Las hojas de ruta técnicas incluyen el trabajo en las cadenas de fragmentos en la "Fase 1" y potencialmente en la "Fase 2".
 ---
 
 <UpgradeStatus dateKey="page-eth2-upgrades-shards-date">

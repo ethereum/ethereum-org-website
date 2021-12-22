@@ -5,13 +5,10 @@ lang: ca
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    "Al final, l'actual xarxa principal d'Ehtereum s'acoblarà amb la resta de les millores d'Eth2.",
-    'L''acoblament fusionarà la xarxa principal "Eth1" amb el sistema de fragmentació i la Cadena de Balisa d''Eth2.',
-    "Això marcarà el final de la prova de treball per a Ethereum i la transició completa a la prova de participació.",
-    'Es coneix també com a "Phase1.5" a la planificació tècnica.',
-  ]
+summaryPoint1: Al final, l'actual xarxa principal d'Ehtereum s'acoblarà amb la resta de les millores d'Eth2.
+summaryPoint2: L''acoblament fusionarà la xarxa principal "Eth1" amb el sistema de fragmentació i la Cadena de Balisa d''Eth2.
+summaryPoint3: Això marcarà el final de la prova de treball per a Ethereum i la transició completa a la prova de participació.
+summaryPoint4: Es coneix també com a "Phase1.5" a la planificació tècnica.
 ---
 
 <UpgradeStatus dateKey="page-eth2-upgrades-merge-date">

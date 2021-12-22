@@ -5,13 +5,10 @@ lang: fr
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    'Au final, le réseau principal Ethereum actuel "s''arrimera" au reste des mises à niveau d''Eth2.',
-    'L''arrimage fusionnera le réseau principal "Eth1" avec la chaîne phare Eth2 et le système de fragments.',
-    "Cela marquera la fin de la preuve de travail pour Ethereum, et la transition complète vers la preuve d'enjeu.",
-    'Vous en avez peut-être entendu parler comme étant la "Phase 1.5 " sur les feuilles de route techniques.',
-  ]
+summaryPoint1: Au final, le réseau principal Ethereum actuel "s''arrimera" au reste des mises à niveau d''Eth2.
+summaryPoint2: L''arrimage fusionnera le réseau principal "Eth1" avec la chaîne phare Eth2 et le système de fragments.
+summaryPoint3: Cela marquera la fin de la preuve de travail pour Ethereum, et la transition complète vers la preuve d'enjeu.
+summaryPoint4: Vous en avez peut-être entendu parler comme étant la "Phase 1.5 " sur les feuilles de route techniques.
 ---
 
 <UpgradeStatus dateKey="page-eth2-upgrades-merge-date">

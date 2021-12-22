@@ -138,7 +138,9 @@ The [Beacon Chain](/eth2/beacon-chain/) needed 16384 deposits of 32 staked ETH t
 
 [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/eth2/beacon-chain/" title="The Beacon Chain" />
+<DocLink to="/eth2/beacon-chain/">
+  The Beacon Chain
+</DocLink>
 
 ---
 
@@ -155,7 +157,9 @@ The staking deposit contract introduced [staking](/glossary/#staking) to the Eth
 
 [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/eth2/staking/" title="Staking" />
+<DocLink to="/eth2/staking/">
+  Staking
+</DocLink>
 
 ---
 
@@ -440,4 +444,6 @@ The Yellow Paper, authored by Dr. Gavin Wood, is a technical definition of the E
 
 The introductory paper, published in 2013 by Vitalik Buterin, the founder of Ethereum, before the project's launch in 2015.
 
-<DocLink to="/whitepaper/" title="Whitepaper" />
+<DocLink to="/whitepaper/">
+  Whitepaper
+</DocLink>

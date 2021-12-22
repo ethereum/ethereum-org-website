@@ -5,13 +5,10 @@ lang: pl
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
-summaryPoints:
-  [
-    "Sharding jest wieloetapowym uaktualnieniem, które polega na zwiększeniu skalowalności i pojemności.",
-    "Łańcuchy odłamkowe rozkładają obciążenie sieci na 64 nowe łańcuchy.",
-    "Sprawiają że łatwiej uruchamiać węzły przez zmniejszenie wymagań sprzętowych",
-    "Techniczne wytyczne zawierają pracę nad łańcuchami szczątkowymi podczas „Fazy 1” i potencjalnie „Fazy 2”",
-  ]
+summaryPoint1: Sharding jest wieloetapowym uaktualnieniem, które polega na zwiększeniu skalowalności i pojemności.
+summaryPoint2: Łańcuchy odłamkowe rozkładają obciążenie sieci na 64 nowe łańcuchy.
+summaryPoint3: Sprawiają że łatwiej uruchamiać węzły przez zmniejszenie wymagań sprzętowych
+summaryPoint4: Techniczne wytyczne zawierają pracę nad łańcuchami szczątkowymi podczas „Fazy 1” i potencjalnie „Fazy 2”
 ---
 
 <UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
