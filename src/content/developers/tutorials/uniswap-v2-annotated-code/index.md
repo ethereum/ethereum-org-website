@@ -957,8 +957,8 @@ one we support here is `Permit` with these parameters.
 ```
 
 It is not feasible for a recipient to fake a digital signature. However, it is trivial to send the same transaction twice
-(this is a form of [replay attack](https://en.wikipedia.org/wiki/Replay_attack)). To prevent this, we use
-a [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce). If the nonce of a new `Permit` is not one more than the last one
+(this is a form of [replay attack](https://wikipedia.org/wiki/Replay_attack)). To prevent this, we use
+a [nonce](https://wikipedia.org/wiki/Cryptographic_nonce). If the nonce of a new `Permit` is not one more than the last one
 used, we assume it is invalid.
 
 ```solidity
@@ -1913,7 +1913,7 @@ library Math {
         z = x < y ? x : y;
     }
 
-    // babylonian method (https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method)
+    // babylonian method (https://wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method)
     function sqrt(uint y) internal pure returns (uint z) {
         if (y > 3) {
             z = y;
@@ -1930,7 +1930,7 @@ Start with x as an estimate that is higher than the square root (that is the rea
 
 Get a closer estimate, the average of the previous estimate and the number whose square root we're trying to find divided by
 the previous estimate. Repeat until the new estimate isn't lower than the existing one. For more details,
-[see here](https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method).
+[see here](https://wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method).
 
 ```solidity
             }
@@ -1955,7 +1955,7 @@ as _x\*2^112_. This lets us use the original addition and subtraction opcodes wi
 ```solidity
 pragma solidity =0.5.16;
 
-// a library for handling binary fixed point numbers (https://en.wikipedia.org/wiki/Q_(number_format))
+// a library for handling binary fixed point numbers (https://wikipedia.org/wiki/Q_(number_format))
 
 // range: [0, 2**112 - 1]
 // resolution: 1 / 2**112

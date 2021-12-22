@@ -202,7 +202,7 @@ Utiliza pruebas de validez como [ZK-Rollups](#zk-rollups), pero los datos no se 
 
 ## Sidechains {#sidechains}
 
-Una cadena sidechain (o lateral) es una blockchain independiente que funciona en paralelo con respecto a la red principal y opera independientemente. Tiene su propio algoritmo de consenso ([Prueba de autoridad](https://en.wikipedia.org/wiki/Proof_of_authority), [Prueba de participación delegada](https://en.bitcoinwiki.org/wiki/DPoS), [tolerancia a fallas bizantinas](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained), etc.). Está conectado a la cadena principal por un puente bidireccional.
+Una cadena sidechain (o lateral) es una blockchain independiente que funciona en paralelo con respecto a la red principal y opera independientemente. Tiene su propio algoritmo de consenso ([Prueba de autoridad](https://wikipedia.org/wiki/Proof_of_authority), [Prueba de participación delegada](https://en.bitcoinwiki.org/wiki/DPoS), [tolerancia a fallas bizantinas](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained), etc.). Está conectado a la cadena principal por un puente bidireccional.
 
 | Ventajas                                               | Desventajas                                                                                           |
 | ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------- |

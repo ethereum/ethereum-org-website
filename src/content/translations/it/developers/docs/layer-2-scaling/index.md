@@ -202,7 +202,7 @@ Usa prove di validità come [ZK-rollup](#zk-rollups) ma i dati non sono archivia
 
 ## Sidechain {#sidechains}
 
-Una sidechain è una blockchain separata che viene eseguita parallelamente alla rete principale e opera indipendentemente. Ha un proprio algoritmo di consenso ([Proof of Authority](https://en.wikipedia.org/wiki/Proof_of_authority), [Delegated proof-of-stake](https://en.bitcoinwiki.org/wiki/DPoS), [Byzantine fault tolerance](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained) e così via). È collegata alla catena principale da un bridge bidirezionale.
+Una sidechain è una blockchain separata che viene eseguita parallelamente alla rete principale e opera indipendentemente. Ha un proprio algoritmo di consenso ([Proof of Authority](https://wikipedia.org/wiki/Proof_of_authority), [Delegated proof-of-stake](https://en.bitcoinwiki.org/wiki/DPoS), [Byzantine fault tolerance](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained) e così via). È collegata alla catena principale da un bridge bidirezionale.
 
 | Pro                                                    | Contro                                                                                                    |
 | ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- |

@@ -202,7 +202,7 @@ A plasma lánc olyan különálló blokklánc, mely hozzá van kötve a fő Ethe
 
 ## Mellékláncok {#sidechains}
 
-A melléklánc egy különálló blokklánc, mely párhuzamosan fut a főhálózattal és tőle függetlenül működik. Saját konszenzus algoritmusa van ([Proof-of-Authority](https://en.wikipedia.org/wiki/Proof_of_authority), [delegált proof-of-stake](https://en.bitcoinwiki.org/wiki/DPoS), [bizánci hibatűrés](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained), stb). Egy kétirányú összekötővel van a fő lánchoz kapcsolva.
+A melléklánc egy különálló blokklánc, mely párhuzamosan fut a főhálózattal és tőle függetlenül működik. Saját konszenzus algoritmusa van ([Proof-of-Authority](https://wikipedia.org/wiki/Proof_of_authority), [delegált proof-of-stake](https://en.bitcoinwiki.org/wiki/DPoS), [bizánci hibatűrés](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained), stb). Egy kétirányú összekötővel van a fő lánchoz kapcsolva.
 
 | Előnyök                                                | Hátrányok                                                                                                            |
 | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------- |

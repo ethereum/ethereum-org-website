@@ -202,7 +202,7 @@ Utilise les preuves de validité comme les [rollups ZK](#zk-rollups), mais les d
 
 ## Chaînes latérales {#sidechains}
 
-Une chaîne latérale est une blockchain séparée qui fonctionne en parallèle au réseau principal, de façon indépendante. Elle possède son propre algorithme de consensus ([preuve d'autorité](https://en.wikipedia.org/wiki/Proof_of_authority), [preuve d'enjeu déléguée](https://en.bitcoinwiki.org/wiki/DPoS), [tolérance aux défauts byzantins](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained), etc.). Elle est relié à la chaîne principale par un "pont" à deux sens.
+Une chaîne latérale est une blockchain séparée qui fonctionne en parallèle au réseau principal, de façon indépendante. Elle possède son propre algorithme de consensus ([preuve d'autorité](https://wikipedia.org/wiki/Proof_of_authority), [preuve d'enjeu déléguée](https://en.bitcoinwiki.org/wiki/DPoS), [tolérance aux défauts byzantins](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained), etc.). Elle est relié à la chaîne principale par un "pont" à deux sens.
 
 | Avantages                                                     | Inconvénients                                                                                                             |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |

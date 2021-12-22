@@ -11,7 +11,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts
 ---
 
-[Mock objects](https://en.wikipedia.org/wiki/Mock_object) are a common design pattern in object-oriented programming. Coming from the old French word 'mocquer' with the meaning of 'making fun of', it evolved to 'imitating something real' which is actually what we are doing in programming. Please only make fun of your smart contracts if you want to, but mock them whenever you can. It makes your life easier.
+[Mock objects](https://wikipedia.org/wiki/Mock_object) are a common design pattern in object-oriented programming. Coming from the old French word 'mocquer' with the meaning of 'making fun of', it evolved to 'imitating something real' which is actually what we are doing in programming. Please only make fun of your smart contracts if you want to, but mock them whenever you can. It makes your life easier.
 
 ## Unit-testing contracts with mocks {#unit-testing-contracts-with-mocks}
 

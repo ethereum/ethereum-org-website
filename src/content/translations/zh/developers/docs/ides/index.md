@@ -5,7 +5,7 @@ lang: zh
 sidebar: true
 ---
 
-在以太坊上建立一个[集成开发环境 (IDE)](https://en.wikipedia.org/wiki/Integrated_development_environment)，与在其他软件项目上建立是类似的。 有许多的选项可以供您选择，所以您只需要在最后选择一个最适合您的选项。
+在以太坊上建立一个[集成开发环境 (IDE)](https://wikipedia.org/wiki/Integrated_development_environment)，与在其他软件项目上建立是类似的。 有许多的选项可以供您选择，所以您只需要在最后选择一个最适合您的选项。
 
 ## 基于网络的 IDE（集成开发环境） {#web-based-ides}
 

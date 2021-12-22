@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-Ethereum, podobnie jak Bitcoin, używa obecnie protokołu konsensusu o nazwie [proof-of-work (PoW)](https://en.wikipedia.org/wiki/Proof_of_work). Pozwala to węzłom sieci Ethereum na uzgodnienie stanu wszystkich informacji zapisanych w blockchainie Ethereum i zapobiega niektórym rodzajom ataków ekonomicznych.
+Ethereum, podobnie jak Bitcoin, używa obecnie protokołu konsensusu o nazwie [proof-of-work (PoW)](https://wikipedia.org/wiki/Proof_of_work). Pozwala to węzłom sieci Ethereum na uzgodnienie stanu wszystkich informacji zapisanych w blockchainie Ethereum i zapobiega niektórym rodzajom ataków ekonomicznych.
 
 ## Warunki wstępne {#prerequisites}
 

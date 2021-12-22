@@ -296,7 +296,7 @@ While The DAO failed, the concept endured. The basic technical, social, and gove
 
 ["DAO Fork" on ethereum.org](/history/#dao-fork)
 
-[Wikipedia entry for "The DAO"](<https://en.wikipedia.org/wiki/The_DAO_(organization)>)
+[Wikipedia entry for "The DAO"](<https://wikipedia.org/wiki/The_DAO_(organization)>)
 
 **Alternatives**
 

@@ -275,7 +275,7 @@ En la práctica, sin embargo, los emisores no siempre son fiables, y en algunos 
 
 ### Sistemas de identidad y reputación {#identity-and-reputation-systems}
 
-La primera de todas las criptomonedas alternativas, [Namecoin](http://namecoin.org/), intentó usar una blockchain de tipo Bitcoin para proporcionar un sistema de registro de nombres, donde los usuarios pueden registrar sus nombres en una base de datos pública junto con otros datos. El caso de uso más citado es para un sistema [DNS](https://en.wikipedia.org/wiki/Domain_Name_System), que asigna nombres de dominio como "bitcoin.org" (o, en el caso de Namecoin, "bitcoin.bit") a una dirección IP. Otros casos de uso incluyen autenticación de correo electrónico y sistemas de reputación potencialmente más avanzados. Este es el contrato básico para proporcionar un sistema de registro de nombres similar a Namecoin en Ethereum:
+La primera de todas las criptomonedas alternativas, [Namecoin](http://namecoin.org/), intentó usar una blockchain de tipo Bitcoin para proporcionar un sistema de registro de nombres, donde los usuarios pueden registrar sus nombres en una base de datos pública junto con otros datos. El caso de uso más citado es para un sistema [DNS](https://wikipedia.org/wiki/Domain_Name_System), que asigna nombres de dominio como "bitcoin.org" (o, en el caso de Namecoin, "bitcoin.bit") a una dirección IP. Otros casos de uso incluyen autenticación de correo electrónico y sistemas de reputación potencialmente más avanzados. Este es el contrato básico para proporcionar un sistema de registro de nombres similar a Namecoin en Ethereum:
 
     def register(name, value):
         if !self.storage[name]:
@@ -485,13 +485,13 @@ El concepto de una función de transición de estado arbitraria implementada por
 6.  [Títulos de propiedad seguros con autoridad del propietario](http://szabo.best.vwh.net/securetitle.html)
 7.  [Informe oficial de Bitcoin](http://bitcoin.org/bitcoin.pdf)
 8.  [Namecoin](https://namecoin.org/)
-9.  [Triángulo de Zooko](https://en.wikipedia.org/wiki/Zooko's_triangle)
+9.  [Triángulo de Zooko](https://wikipedia.org/wiki/Zooko's_triangle)
 10. [Informe oficial de monedas coloreadas](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)
 11. [Informe oficial de Mastercoin](https://github.com/mastercoin-MSC/spec)
 12. [Corporaciones autónomas descentralizadas, Bitcoin Magazine](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/)
 13. [Verificación de pago simplificada](https://en.bitcoin.it/wiki/Scalability#Simplifiedpaymentverification)
-14. [Árboles de Merkle](https://en.wikipedia.org/wiki/Merkle_tree)
-15. [Árboles de Patricia](https://en.wikipedia.org/wiki/Patricia_tree)
+14. [Árboles de Merkle](https://wikipedia.org/wiki/Merkle_tree)
+15. [Árboles de Patricia](https://wikipedia.org/wiki/Patricia_tree)
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ y agentes autónomos, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Mike Hearn, sobre propiedad inteligente en el Turing Festival](http://www.youtube.com/watch?v=Pu4PAMFPo5Y)

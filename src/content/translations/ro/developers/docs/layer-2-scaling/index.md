@@ -202,7 +202,7 @@ Folosește dovezi de validitate, cum ar fi [rollup-ZK,](#zk-rollups) dar datele 
 
 ## Sidechain-uri {#sidechains}
 
-Un sidechain este un blockchain separat care rulează în paralel cu rețeaua principală și funcționează independent. Are propriul algoritm de consens ([Proba autorității](https://en.wikipedia.org/wiki/Proof_of_authority), [Dovada mizei delegată](https://en.bitcoinwiki.org/wiki/DPoS), [Toleranță la erori Byzantine](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained) și așa mai departe). Este conectat la lanțul principal printr-un pod bidirecțional.
+Un sidechain este un blockchain separat care rulează în paralel cu rețeaua principală și funcționează independent. Are propriul algoritm de consens ([Proba autorității](https://wikipedia.org/wiki/Proof_of_authority), [Dovada mizei delegată](https://en.bitcoinwiki.org/wiki/DPoS), [Toleranță la erori Byzantine](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained) și așa mai departe). Este conectat la lanțul principal printr-un pod bidirecțional.
 
 | Avantaje                                        | Dezavantaje                                                                                                              |
 | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
