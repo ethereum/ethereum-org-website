@@ -34,7 +34,10 @@ Altair 升级是[信标链](/eth2/beacon-chain)的第一次预定升级。 预�
 
 ### 伦敦 {#london}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>世界标准时间 2021 年 8 月 5 日下午 12 点 33 分 42 秒 </code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块号：<a href="https://etherscan.io/block/12965000">12,965,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH 价格：2621 美金<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210805124609/https://ethereum.org/en/">ethereum.org on waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>世界标准时间 2021 年 8 月 5 日下午 12 点 33 分 42 秒 </code><br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块号：<a href="https://etherscan.io/block/12965000">12,965,000</a><br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH 价格：2621 美金<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210805124609/https://ethereum.org/en/">ethereum.org on waybackmachine</a>
 
 #### 概览 {#london-summary}
 
@@ -58,7 +61,10 @@ Altair 升级是[信标链](/eth2/beacon-chain)的第一次预定升级。 预�
 
 ### 柏林升级 {#berlin}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Apr-15-2021 10:07:03 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块高度：<a href="https://etherscan.io/block/12965000">12,965,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />以太坊价格：2621 美金<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210805124609/https://ethereum.org/en/">ethereum.org on waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Apr-15-2021 10:07:03 AM +UTC</code><br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块高度：<a href="https://etherscan.io/block/12965000">12,965,000</a><br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />以太坊价格：2621 美金<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210805124609/https://ethereum.org/en/">ethereum.org on waybackmachine</a>
 
 #### 概览 {#berlin-summary}
 
@@ -82,7 +88,10 @@ Altair 升级是[信标链](/eth2/beacon-chain)的第一次预定升级。 预�
 
 ### 信标链的起源 {#beacon-chain-genesis}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Dec-01-2020 12:00:35 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 信标链区块号：<a href="https://beaconscan.com/slot/1">1</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 价格：586.23 美元<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201207184633/https://www.ethereum.org/cn/">ethereum.org</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Dec-01-2020 12:00:35 PM +UTC</code><br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 信标链区块号：<a href="https://beaconscan.com/slot/1">1</a><br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 价格：586.23 美元<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201207184633/https://www.ethereum.org/cn/">ethereum.org</a>
 
 #### 概览 {#beacon-chain-genesis-summary}
 
@@ -98,7 +107,10 @@ Altair 升级是[信标链](/eth2/beacon-chain)的第一次预定升级。 预�
 
 ### 质押合约部署 {#staking-deposit-contract}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Oct-14-2020 09:22:52 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块号：<a href="https://etherscan.io/block/11052984">11052984</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 价格：379.04 美元<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201104235727/https://ethereum.org/en/">waybackmachine 上 ethereum.org</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Oct-14-2020 09:22:52 AM +UTC</code><br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块号：<a href="https://etherscan.io/block/11052984">11052984</a><br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 价格：379.04 美元<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201104235727/https://ethereum.org/en/">waybackmachine 上 ethereum.org</a>
 
 #### 概览 {#deposit-contract-summary}
 
@@ -114,7 +126,10 @@ Altair 升级是[信标链](/eth2/beacon-chain)的第一次预定升级。 预�
 
 ### 缪尔冰川升级 {#muir-glacier}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Jan-02-2020 08:30:49 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块号：<a href="https://etherscan.io/block/9200000">9200000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 价格：127.18 美元<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20200103093618/https://ethereum.org/">waybackmachine 上 ethereum.org</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Jan-02-2020 08:30:49 AM +UTC</code><br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块号：<a href="https://etherscan.io/block/9200000">9200000</a><br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 价格：127.18 美元<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20200103093618/https://ethereum.org/">waybackmachine 上 ethereum.org</a>
 
 #### 概览 {#muir-glacier-summary}
 
@@ -135,7 +150,10 @@ Altair 升级是[信标链](/eth2/beacon-chain)的第一次预定升级。 预�
 
 ### 伊斯坦布尔升级 {#istanbul}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Dec-08-2019 12:25:09 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块号：<a href="https://etherscan.io/block/9069000">9069000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 价格：151.06 美元<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20191216101254if*/https://ethereum.org/">waybackmachine 上 ethereum.org</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Dec-08-2019 12:25:09 AM +UTC</code><br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块号：<a href="https://etherscan.io/block/9069000">9069000</a><br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 价格：151.06 美元<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20191216101254if*/https://ethereum.org/">waybackmachine 上 ethereum.org</a>
 
 #### 概览 {#istanbul-summary}
 
@@ -164,7 +182,10 @@ Altair 升级是[信标链](/eth2/beacon-chain)的第一次预定升级。 预�
 
 ### 君士坦丁堡升级 {#constantinople}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Feb-28-2019 07:52:04 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块号：<a href="https://etherscan.io/block/7280000">7280000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 价格：136.29 美元<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20190415163751/https://www.ethereum.org/">waybackmachine 上 ethereum.org</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Feb-28-2019 07:52:04 PM +UTC</code><br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块号：<a href="https://etherscan.io/block/7280000">7280000</a><br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 价格：136.29 美元<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20190415163751/https://www.ethereum.org/">waybackmachine 上 ethereum.org</a>
 
 #### 概览 {#constantinople-summary}
 
@@ -191,7 +212,10 @@ Altair 升级是[信标链](/eth2/beacon-chain)的第一次预定升级。 预�
 
 ### Byzantium {#byzantium}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Oct-16-2017 05:22:11 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块号：<a href="https://etherscan.io/block/4370000">4370000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 价格：334.23 美元<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20171017201143/https://www.ethereum.org/">waybackmachine 上 ethereum.org</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Oct-16-2017 05:22:11 AM +UTC</code><br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块号：<a href="https://etherscan.io/block/4370000">4370000</a><br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 价格：334.23 美元<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20171017201143/https://www.ethereum.org/">waybackmachine 上 ethereum.org</a>
 
 #### 概览 {#byzantium-summary}
 
@@ -224,7 +248,10 @@ Altair 升级是[信标链](/eth2/beacon-chain)的第一次预定升级。 预�
 
 ### Spurious Dragon {#spurious-dragon}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Nov-22-2016 04:15:44 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块号：<a href="https://etherscan.io/block/2675000">2675000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 价格：9.84 美元<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161127154654/https://www.ethereum.org/">waybackmachine 上 ethereum.org</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Nov-22-2016 04:15:44 PM +UTC</code><br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块号：<a href="https://etherscan.io/block/2675000">2675000</a><br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 价格：9.84 美元<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161127154654/https://www.ethereum.org/">waybackmachine 上 ethereum.org</a>
 
 #### 概览 {#spurious-dragon-summary}
 
@@ -249,7 +276,10 @@ Altair 升级是[信标链](/eth2/beacon-chain)的第一次预定升级。 预�
 
 ### Tangerine Whistle {#tangerine-whistle}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Oct-18-2016 01:19:31 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块号：<a href="https://etherscan.io/block/2463000">2463000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 价格：12.50 美元<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161030043727/https://www.ethereum.org/">waybackmachine 上 ethereum.org</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Oct-18-2016 01:19:31 PM +UTC</code><br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块号：<a href="https://etherscan.io/block/2463000">2463000</a><br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 价格：12.50 美元<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161030043727/https://www.ethereum.org/">waybackmachine 上 ethereum.org</a>
 
 #### 概览 {#tangerine-whistle-summary}
 
@@ -270,7 +300,10 @@ Tangerine Whistle 分叉是第一次对拒绝提供服务（DoS）网络攻击�
 
 ### DAO 分叉 {#dao-fork}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Jul-20-2016 01:20:40 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />区块号：<a href="https://etherscan.io/block/1920000">1920000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 价格：12.54 美元<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160803215306/https://ethereum.org/">waybackmachine 上 ethereum.org</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Jul-20-2016 01:20:40 PM +UTC</code><br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />区块号：<a href="https://etherscan.io/block/1920000">1920000</a><br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 价格：12.54 美元<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160803215306/https://ethereum.org/">waybackmachine 上 ethereum.org</a>
 
 #### 概览 {#dao-fork-summary}
 
@@ -286,7 +319,10 @@ DAO 分叉是为了解决 [2016 DAO 攻击](https://www.coindesk.com/markets/201
 
 ### Homestead {#homestead}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Mar-14-2016 06:49:53 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块号：<a href="https://etherscan.io/block/1150000">1150000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 价格：12.50 美元<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160313203843/https://www.ethereum.org/">waybackmachine 上 ethereum.org</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Mar-14-2016 06:49:53 PM +UTC</code><br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块号：<a href="https://etherscan.io/block/1150000">1150000</a><br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 价格：12.50 美元<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160313203843/https://www.ethereum.org/">waybackmachine 上 ethereum.org</a>
 
 #### 概览 {#homestead-summary}
 
@@ -308,7 +344,10 @@ DAO 分叉是为了解决 [2016 DAO 攻击](https://www.coindesk.com/markets/201
 
 ### Frontier thawing {#frontier-thawing}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Sep-07-2015 09:33:09 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块号：<a href="https://etherscan.io/block/200000">200000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 价格：1.24 美元<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150912193811/https://www.ethereum.org/">waybackmachine 上 ethereum.org</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Sep-07-2015 09:33:09 PM +UTC</code><br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块号：<a href="https://etherscan.io/block/200000">200000</a><br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 价格：1.24 美元<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150912193811/https://www.ethereum.org/">waybackmachine 上 ethereum.org</a>
 
 #### 概览 {#frontier-thawing-summary}
 
@@ -320,7 +359,10 @@ Frontier thawing 分叉取消了每个[区块](/glossary/#block) 5,000 [gas](/gl
 
 ### Frontier {#frontier}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Jul-30-2015 03:26:13 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块号：<a href="https://etherscan.io/block/0">0</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETP 价格：不适用<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150802035735/https://www.ethereum.org/">waybackmachine 上 ethereum.org</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Jul-30-2015 03:26:13 PM +UTC</code><br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块号：<a href="https://etherscan.io/block/0">0</a><br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETP 价格：不适用<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150802035735/https://www.ethereum.org/">waybackmachine 上 ethereum.org</a>
 
 #### 概览 {#frontier-summary}
 
@@ -334,7 +376,8 @@ Frontier thawing 分叉取消了每个[区块](/glossary/#block) 5,000 [gas](/gl
 
 ### 公开募资 {#ether-sale}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 2014 年 7 月 22 日 - 9 月 2 日<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140804235628/https://www.ethereum.org/">waybackmachine 上 ethereum.org</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 2014 年 7 月 22 日 - 9 月 2 日<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140804235628/https://www.ethereum.org/">waybackmachine 上 ethereum.org</a>
 
 以太币预售为期 42 天。 你可以使用比特币进行购买。
 
@@ -344,7 +387,8 @@ Frontier thawing 分叉取消了每个[区块](/glossary/#block) 5,000 [gas](/gl
 
 ### 黄皮书发布 {#yellowpaper}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 2014 年 4 月 1 日<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140509173418/https://www.ethereum.org/">waybackmachine 上 ethereum.org</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 2014 年 4 月 1 日<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140509173418/https://www.ethereum.org/">waybackmachine 上 ethereum.org</a>
 
 Gavin Wood 博士撰写的黄皮书，是关于以太坊协议的技术定义。
 
@@ -356,7 +400,8 @@ Gavin Wood 博士撰写的黄皮书，是关于以太坊协议的技术定义。
 
 ### 白皮书发布 {#whitepaper}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 2013 年 11 月 27 日<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140208030136/http://www.ethereum.org/">waybackmachine 上 ethereum.org</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 2013 年 11 月 27 日<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140208030136/http://www.ethereum.org/">waybackmachine 上 ethereum.org</a>
 
 该项目在 2015 年启动。但早在 2013 年，以太坊的创始人 Vitalik Buterin 就发表了介绍性文章。
 
