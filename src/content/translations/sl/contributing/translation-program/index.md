@@ -51,7 +51,7 @@ Ethereum.org prevajalski program želi narediti Ethereum dostopen za vse, s prev
 
    Ne najdete svojega jezika na seznamu? [Odprite težavo](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
 
-   ![Prevedene in neprevedene datoteke na Crowdinu](./crowdin-files.png)
+   ![Prevedene in neprevedene datoteke na Crowdinu](../../../../contributing/translation-program/crowdin-files.png)
 
    Opomba na vsebinske verzije: uporabljamo upravljanje verzij z Crowdinom, da se izognemo prevajalskim zamudam za dodane vsebine. Ko preverite jezik, na primer [Filipinščino](https://crowdin.com/project/ethereum-org/fil#), boste našli mape za vsako verzijo strani ("v2.0", "v2.1", etc.).
 
@@ -62,7 +62,7 @@ Ethereum.org prevajalski program želi narediti Ethereum dostopen za vse, s prev
 3. **Prevajanje**  
    Po izbiri datoteke, ki jo želite prevesti, se bo ta odprla v spletnem urejevalniku. Če niste še nikoli uporabljali Crowdina, lahko uporabite ta hitri vodnik, da pregledate osnove.
 
-   ![Crowdin spletni urejevalnik](./online-editor.png)
+   ![Crowdin spletni urejevalnik](../../../../contributing/translation-program/online-editor.png)
 
    **_1 – Leva stranska vrstica_**
 
