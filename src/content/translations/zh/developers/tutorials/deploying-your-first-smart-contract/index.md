@@ -19,7 +19,7 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 我猜您和我们一样会很兴奋在以太坊区块链上[部署](/developers/docs/smart-contracts/deploying/)[智能合约](/developers/docs/smart-contracts/)并与之交互。
 
-别担心，作为我们的第一个智能合约，我们会在[本地测试网络](/developers/docs/networks/)部署，因此它不需要任何开销就可以随意部署和运行。
+别担心，作为我们的第一个智能合约，我们会将其部署在[本地测试网络](/developers/docs/networks/)上，因此您不需要任何开销就可以随意部署和运行它。
 
 ## 编写合约 {#writing-our-contract}
 
@@ -30,19 +30,20 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 在这个新文件中，我们将粘贴如下代码：
 
 ```solidity
-pragma solidity 0.5.17;
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.5.17;
 
 contract Counter {
 
-    // 无符号整形Public变量保存计数数量
+    // Public variable of type unsigned int to keep the number of counts
     uint256 public count = 0;
 
-    // 增加计数器数量的函数
+    // Function that increments our counter
     function increment() public {
         count += 1;
     }
 
-    // 非必要的getter函数，用于获取计数值
+    // Not necessary getter to get the count value
     function getCount() public view returns (uint256) {
         return count;
     }
@@ -81,7 +82,7 @@ contract Counter {
 
 在“部署和运行交易”屏幕上，仔细检查显示的合约名称并点击“部署”。 在页面顶部可以看到，当前环境为“Javascript VM”，这意味着当前我们在本地测试区块链上部署智能合约并交互，这样测试可以更快，也不需要任何费用。
 
-![Remix solidity编译器的部署按钮](../../../../../developers/tutorials/deploying-your-first-smart-contract/remix-deploy.png)
+![Remix solidity编译器的部署按钮](../../../../../developers/tutorials/deploying-your-first-smart-contract/remix-deploy-button.png)
 
 点击“部署”按钮后，您可以看到合约在底部显示出来。 点击左侧的箭头展开，可以看到合约的内容。 这里有我们的变量`counter`、函数`increment()`和 getter `getCounter()`。
 
