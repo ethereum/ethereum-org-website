@@ -72,20 +72,6 @@ sidebar: true
 
 如果公共以太坊网络类似于公共互联网，那么你可以将联合体网络视为专用内部网。
 
-<!-- TODO
-
-## Interacting with testnets
-
-### Your own local network {#your-own-local-network}
-
-`geth -—networkid="12345" console`
-
-### Testnets {#testnets-1}
-
-Wallets like MetaMask or MyEtherWallet will allow you to switch networks so you can test your apps using your test ETH.
-
--->
-
 ## 延伸阅读 {#further-reading}
 
 _你知道有什么社区资源帮助过你吗？ 编辑并添加本页面！_

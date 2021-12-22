@@ -45,11 +45,6 @@ A szerződés létrehozás egy új szerződéses számla létrehozásával jár,
 
 Az EVM egy [verem gépként](https://en.wikipedia.org/wiki/Stack_machine) fut 1024 elemes mélységgel. Minden egyes elem egy 256 bites szó, melyek a maximális kompatibilitásért lettek kiválasztva az SHA-3-256 hash rendszerrel.
 
-<!-- ![A diagram showing the make up of the stack](./evm-stack.png)
-_Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
-
-Removed as we should probably show memory and account storage too if showing stack-->
-
 A végrehajtás alatt az EVM egy tranziens _memóriát_ tart fenn (mint egy szócímzett bájttömböt), mely nem folytatólagos a tranzakciók között.
 
 A szerződések azonban tartalmaznak egy Merkle Patricia _tárhely_ fát (mint egy szócímezhető szó tömböt), mely hozzá van rendelve a kérdéses számlához és része a globális állapotnak.
@@ -57,8 +52,6 @@ A szerződések azonban tartalmaznak egy Merkle Patricia _tárhely_ fát (mint e
 A befordított okosszerződés bájtkód EVM [opcode-ként](https://www.ethervm.io/) fut le, melyek standard stack műveletek, mint a `XOR`, `AND`, `ADD`, `SUB`, stb. Az EVM egy pár blokklánc specifikus stack műveletet is implementál, mint az `ADDRESS`, `BALANCE`, `SHA3`, `BLOCKHASH`, stb.
 
 ![Egy diagram, mely azt mutatja, hogy hol van szükség gázra az EVM műveleteknél](../../../../../developers/docs/gas/gas.png) _Diagramok átvéve az [Ethereum EVM illusztrálva](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_ anyagból
-
-<!-- TODO add full list from  https://eth.wiki/concepts/evm/implementations -->
 
 ## EVM Implementációk {#evm-implementations}
 

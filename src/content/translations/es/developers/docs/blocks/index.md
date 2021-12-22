@@ -11,8 +11,6 @@ Los bloques son lotes de transacciones con un hash del bloque anterior en la cad
 
 Los bloques son muy fáciles de manejar incluso para los principiantes. Sin embargo, para ayudarte a comprender mejor esta página, te recomendamos leer primero [Cuentas](/developers/docs/accounts/), [Transacciones](/developers/docs/transactions/) y nuestra [introduccción a Ethereum](/developers/docs/intro-to-ethereum/).
 
-<!--The content below was provided by Brian Gu with exception of "what's in a block"-->
-
 ## ¿Por qué se usan los bloques? {#why-blocks}
 
 Organizamos las transacciones en bloques para garantizar que todos los participantes en la red Ethereum mantienen un estado sincronizado y están de acuerdo sobre el historial preciso de las transacciones. Esto significa que decenas (o cientos) de transacciones se confirman, acuerdan y sincronizan a la vez.

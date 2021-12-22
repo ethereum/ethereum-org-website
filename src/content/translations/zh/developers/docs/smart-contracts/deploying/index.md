@@ -29,11 +29,6 @@ incomplete: true
 - 一个部署脚本或插件。
 - 访问一个[以太坊节点](/developers/docs/nodes-and-clients/)，或者运行自己的节点，连接到公共节点或者通过 API key 使用 Infura 或者 Alchemy 服务
 
-<!-- TODO Elaborate on options: e.g. run a node, use a node as a service etc. -->
-
-<!-- TODO! -->
-<!-- ### Steps to deploy a smart contract -->
-
 一旦部署，你的合约将有一个以太坊地址，就像其它 [帐户](/developers/docs/accounts/)一样。
 
 ## 相关工具 {#related-tools}

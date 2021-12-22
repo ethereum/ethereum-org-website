@@ -69,11 +69,6 @@ Once set up you'll be able to query the blockchain for:
 - network id
 - and more...
 
-<!--- #### Try it
-
-This remix tutorial will show you [how to query the blockchain using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
-
 ### Wallet functionality {#wallet-functionality}
 
 These libraries give you functionality to create wallets, manage keys and sign transactions.
@@ -216,11 +211,6 @@ This means you can:
 - Call to estimate the gas a method execution will take when executed in the EVM
 - Deploy a contract
 - And more...
-
-<!--- #### Try it
-
-This remix tutorial will show you [how to query a contract using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
 
 ### Utility functions {#utility-functions}
 

@@ -58,8 +58,6 @@ Skompilowany kod bitowy inteligentnego kontraktu wykonywany jest jako szereg [ko
 
 ![Schemat pokazujący, gdzie potrzebny jest gaz dla operacji EVM](../../../../../developers/docs/gas/gas.png) _Schemat zaadaptowany z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-<!-- TODO add full list from  https://eth.wiki/concepts/evm/implementations -->
-
 ## Implementacja EVM {#evm-implementations}
 
 Wszystkie implementacje EVM muszą być zgodne ze specyfikacją opisaną w Yellowpaper Ethereum.

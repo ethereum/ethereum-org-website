@@ -464,8 +464,6 @@ El concepto de una función de transición de estado arbitraria implementada por
 
 ## Notas y lecturas adicionales {#notes-and-further-reading}
 
-<!--Invisible HTML comment used for navigation with CTRL+F footnote or fn.-->
-
 ### Notas {#notes}
 
 1.  Un lector sofisticado puede haber notado que una dirección de Bitcoin es el hash de la clave pública de la curva elíptica, y no la clave pública en sí. Sin embargo, es perféctamente legítimo en terminología criptográfica el referirse al hash de la clave pública como la clave pública en sí. Esto es porque la la criptografía de Bitcoin se puede considerar un algoritmo personalizado de firma digital, donde la clave pública consiste en el hash de la clave pública CCE, la firma consiste en la clave pública CCE concatenada con la firma CCE, y el algoritmo de verificación involucra verificar la clave pública ECC en la firma contra el hash de la clave pública ECC proporcionada como clave pública y después verificar la firma ECC contra la clave pública ECC.

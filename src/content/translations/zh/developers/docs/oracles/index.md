@@ -23,17 +23,6 @@ isOutdated: true
 
 预言机通过发布数据到区块链来解决这个问题， 以便任何重放交易的节点使用所有人都能看到的、相同的、不可变的数据。 要做到这一点，预言机通常由智能合约和某些可以查询 API 的链外组件组成，然后定期发送交易以更新智能合约的数据。
 
-<!-- ## Oracle architecture {#oracle-architecture}
-
-To understand how an oracle works, let's play through a scenario where your smart contract needs to know who won the superbowl. This is an example of how it could work:
-
-1. Your smart contract requests information from an oracle smart contract.
-2. The oracle smart contract emits an [event](/developers/docs/smart-contracts/anatomy/#events-and-logs).
-3. Off-chain oracle nodes listen for events and upon hearing one, they query an API.
-4. The API returns a JSON response to the nodes.
-5. The nodes call on the oracle smart contract.
-6. The oracle smart contract returns the data to your smart contract. -->
-
 ### 安全性 {#security}
 
 预言机的安全性等同于其数据源。 如果一个 dapp 使用 Uniswap 作为其 ETH/DAI 价格的预言机，攻击者就可能在 Uniswap 上篡改价格，以操纵 dapp 对当前价格的理解。 如何对付这个隐患的一个例子是 MakerDAO 所使用的 [price feed oracles](https://developer.makerdao.com/feeds/) 。它将来自若干外部数据源的价格数据相互核对，而不是仅仅依靠单一来源。

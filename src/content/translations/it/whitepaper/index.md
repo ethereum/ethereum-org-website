@@ -464,8 +464,6 @@ Il concetto di funzione di transizione arbitraria tra stati implementato dal pro
 
 ## Note e ulteriori letture {#notes-and-further-reading}
 
-<!--Invisible HTML comment used for navigation with CTRL+F footnote or fn.-->
-
 ### Note {#notes}
 
 1.  Un lettore con esperienza potrebbe far notare che in realtà un indirizzo Bitcoin è l'hash della chiave pubblica della curva ellittica e non la chiave pubblica stessa. Tuttavia, in realtà è perfettamente legittimo dal punto di vista della terminologia della crittografia fare riferimento all'hash pubkey hash come chiave pubblica. La crittografia di Bitcoin infatti può essere considerata un algoritmo di firma digitale personalizzato, dove la chiave pubblica è costituita dall'hash della pubkey ECC, la firma è costituita dalla pubkey ECC concatenata con la firma ECC e l'algoritmo di verifica comporta il controllo della pubkey ECC nella firma rispetto all'hash della pubkey ECC fornito come chiave pubblica e quindi la verifica della firma ECC sulla base della pubkey ECC.

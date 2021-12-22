@@ -117,8 +117,6 @@ Apelarea Attacker.beginAttack() va începe un ciclu care arată ceva de genul:
 
 Apelul Attacker.beginAttack cu 1 ETH va ataca prin re-intrare Victima, retrăgând mai mult ETH decât a furnizat (luat din soldurile altor utilizatori, cauzând contractul Victimă să devină sub-garantat)
 
-<!-- TODO create a subpage related to re-entrancy & move this content there -->
-
 ### Cum să te descurci cu re-intrarea (modul greșit) {#how-to-deal-with-re-entrancy-the-wrong-way}
 
 Ai putea lua în calcul să învingi re-intrarea împiedicând orice contract inteligent să interacționeze cu codul tău. Când cauți stackoverflow, găsești acest fragment de code (snippet) cu tone de voturi pozitive:

@@ -27,22 +27,6 @@ summaryPoint4: 您可能会在技术路线图上知道这称为“阶段1.5”�
 
 主网将把运行智能合约的能力带入工作量证明系统。加上以太坊的完整历史和现状，以确保所有 ETH 持有人和使用者都能顺利过渡。
 
-<!-- ### Improving mainnet
-
-Before mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
-
-These include Improvements for
-
-- **End users**: like [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) which changes the way users bid for blockspace. In other words, making transaction fees more efficient for end users.
-- **Client runners**: making running clients more sustainable by capping disk space requirements.
-- **Developers**: upgrading the EVM to be more flexible.
-
-Plus many more.
-
-[More on Ethereum1.x](/learn/#eth-1x)
-
-These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
-
 ## 对接之后 {#after-the-docking}
 
 这将标志着以太坊工作证明的结束，并开始一个更可持续、生态友好的以太坊的时代。 此刻，以太坊将具有 [Eth2 愿景](/eth2/vision/) 所概述的规模、安全性和可持续性。

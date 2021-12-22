@@ -464,8 +464,6 @@ Koncepcja arbitralnej funkcji przejściowej państwa wdrożonej przez protokołu
 
 ## Uwagi i dalsze lektury {#notes-and-further-reading}
 
-<!--Invisible HTML comment used for navigation with CTRL+F footnote or fn.-->
-
 ### Uwagi {#notes}
 
 1.  Czytelnik może zauważyć, że w rzeczywistości adres Bitcoin jest skrótem klucza publicznego krzywej eliptycznej, a nie klucz publiczny. Jednak w rzeczywistości całkowicie uzasadniona jest terminologia kryptograficzna określająca hash pubkey jako sam klucz publiczny. , ponieważ kryptografię Bitcoina można uznać za niestandardową algorytm podpisu cyfrowego, w przypadku gdy klucz publiczny składa się z skrótu pubke'a ECC, podpis składa się z pubkey ECC połączony z podpisem ECC, i algorytm weryfikacji obejmuje sprawdzanie pubkey ECC w podpisze za pomocą skrótu pubkey ECC dostarczonego jako klucz publiczny, a następnie weryfikację podpisu ECC za pomocą pubkey ECC.

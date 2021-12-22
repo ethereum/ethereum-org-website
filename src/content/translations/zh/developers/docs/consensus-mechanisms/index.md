@@ -22,23 +22,7 @@ incomplete: true
 
 在加密经济体系中建立共识机制也有助于防止某些类型的经济攻击。 从理论上讲，攻击者可以通过控制 51% 的网络而损害共识。 共识机制旨在使这种“51% 攻击”不可行。 人们设计、实现了不同的机制，以不同的方式解决这个问题。
 
-<!-- ### Consensus -->
-
-<!-- Formal requirements for a consensus protocol may include: -->
-
-<!-- - Agreement: All correct processes must agree on the same value. -->
-<!-- - Weak validity: For each correct process, its output must be the input of some correct process. -->
-<!-- - Strong validity: If all correct processes receive the same input value, then they must all output that value. -->
-<!-- - Termination: All processes must eventually decide on an output value -->
-
-<!-- ### Fault tolerance -->
-<!-- TODO explain how protocols must be fault tolerant -->
-
 ## 共识机制常见类型 {#types-of-consensus-mechanisms}
-
-<!-- TODO -->
-<!-- Why do different consensus protocols exist? -->
-<!-- What are the tradeoffs of each? -->
 
 ### 工作量证明 {#proof-of-work}
 
@@ -69,8 +53,6 @@ incomplete: true
 更多关于[权益证明(PoS)](/developers/docs/consensus-mechanisms/pos/)
 
 ## 进一步阅读 {#further-reading}
-
-<!-- TODO -->
 
 ## 相关主题 {#related-topics}
 

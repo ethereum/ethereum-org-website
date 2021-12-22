@@ -464,8 +464,6 @@ Conceptul unei funcții de tranziție de stare arbitrară așa cum este implemen
 
 ## Note și referințe suplimentare {#notes-and-further-reading}
 
-<!--Invisible HTML comment used for navigation with CTRL+F footnote or fn.-->
-
 ### Note {#notes}
 
 1.  Un cititor sofisticat poate observa că, de fapt, o adresă Bitcoin este hash-ul cheii publice a curbei eliptice și nu cheia publică în sine. Cu toate acestea, este de fapt o terminologie criptografică perfect legitimă să se refere la hash-ul cheii publice ca la cheia publică în sine. Acest lucru se întâmplă deoarece criptografia Bitcoin poate fi considerată a fi un algoritm personalizat de semnătură digitală, în care cheia publică se compune din hash-ul cheii publice ECC, semnătura constă din cheia publică ECC concatenată cu semnătura ECC, iar algoritmul de verificare implică verificarea cheii publice ECC în semnătură împotriva hash-ului cheii publice ECC furnizat ca o cheie publică și apoi verificarea semnăturii ECC împotriva cheii publice ECC.

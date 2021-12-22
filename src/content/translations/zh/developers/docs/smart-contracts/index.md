@@ -15,9 +15,6 @@ sidebar: true
 
 确保在您已了解有关[帐户](/developers/docs/accounts/)、[交易](/developers/docs/transactions/)和[以太坊虚拟机](/developers/docs/evm/)后再进入智能合约。
 
-<!-- TODO simpler example... scheduling payments in Ethereum is actually difficult -->
-<!-- TODO show an example smart contract, e.g. an implementation of a vending machine -->
-
 ## 数字自动售货机 {#a-digital-vending-machine}
 
 智能合约的最佳比喻也许是一种售货机，如 Nick Szabo 所描述的那样。 有了正确的投入，就保证了某些产出。

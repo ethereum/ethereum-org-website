@@ -21,8 +21,6 @@ sidebar: true
 
 ## 可用的库 {#available-libraries}
 
-<!-- TODO separate APIs-as-a-service vs. connect your own -->
-
 **Alchemy -** **_以太坊开发平台_**
 
 - [alchemyapi.io](https://alchemyapi.io)

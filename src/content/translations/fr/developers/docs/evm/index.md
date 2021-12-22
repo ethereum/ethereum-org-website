@@ -45,11 +45,6 @@ La création d'un contrat entraîne la création d'un compte de contrat contenan
 
 L'EVM s'exécute comme une [machine de pile](https://en.wikipedia.org/wiki/Stack_machine) avec une profondeur de 1024 éléments. Chaque élément est un mot à 256 bits choisi pour être compatibilité avec le schéma de hachage SHA-3-256.
 
-<!-- ![A diagram showing the make up of the stack](./evm-stack.png)
-_Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
-
-Removed as we should probably show memory and account storage too if showing stack-->
-
 Lors de l'exécution, l'EVM maintient une _mémoire_ transitoire (en tant que tableau d'octets adressé à un mot) qui ne persiste pas entre les transactions.
 
 Cependant, les contrats contiennent un arbre de _stockage_ Merkle Patricia (en tant que tableau de mots adressables à un mot), associé au compte en question et faisant partie de l'état global.
@@ -57,8 +52,6 @@ Cependant, les contrats contiennent un arbre de _stockage_ Merkle Patricia (en t
 Le bytecode du contract intelligent compilé s'exécute comme un certain nombre [de codes d'opérations](https://www.ethervm.io/) EVM, qui effectuent des opérations de pile standards comme `XOR`, `AND`, `ADD`, `SUB`, etc. L'EVM implémente également un certain nombre d'opérations de pile spécifiques à la blockchain, comme `ADDRESS`, `BALANCE`, `SHA3`, `BLOCKHASH`, etc.
 
 ![Diagramme indiquant où le carburant est nécessaire dans les opérations de l'EVM](../../../../../developers/docs/gas/gas.png) _Schéma adapté à partir du document [EVM Ethereum illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
-
-<!-- TODO add full list from  https://eth.wiki/concepts/evm/implementations -->
 
 ## Implémentations de l'EVM {#evm-implementations}
 

@@ -22,23 +22,7 @@ Timp de decenii, aceste mecanisme au fost utilizate pentru a stabili consens în
 
 Un mecanism de consens într-un sistem cripto-economic ajută, de asemenea, la prevenirea anumitor tipuri de atacuri economice. În teorie, un atacator poate compromite consensul, controlând 51% din rețea. Mecanismele de consens sunt concepute pentru a face imposibil de realizat acest „atac de 51%”. Diferite mecanisme sunt concepute pentru a rezolva diferit această problemă de securitate.
 
-<!-- ### Consensus -->
-
-<!-- Formal requirements for a consensus protocol may include: -->
-
-<!-- - Agreement: All correct processes must agree on the same value. -->
-<!-- - Weak validity: For each correct process, its output must be the input of some correct process. -->
-<!-- - Strong validity: If all correct processes receive the same input value, then they must all output that value. -->
-<!-- - Termination: All processes must eventually decide on an output value -->
-
-<!-- ### Fault tolerance -->
-<!-- TODO explain how protocols must be fault tolerant -->
-
 ## Tipuri de mecanisme de consens {#types-of-consensus-mechanisms}
-
-<!-- TODO -->
-<!-- Why do different consensus protocols exist? -->
-<!-- What are the tradeoffs of each? -->
 
 ### Dovada muncii {#proof-of-work}
 
@@ -69,8 +53,6 @@ Un sistem de dovada mizei (PoS) este menținut în siguranță prin faptul că a
 Mai multe despre [dovada mizei (PoS)](/developers/docs/consensus-mechanisms/pos/)
 
 ## Referințe suplimentare {#further-reading}
-
-<!-- TODO -->
 
 ## Subiecte corelate {#related-topics}
 

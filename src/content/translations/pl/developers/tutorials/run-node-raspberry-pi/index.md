@@ -14,8 +14,6 @@ source: r/ethereum
 sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_raspberry_pi_4_images_release/
 ---
 
-<!--Content below provided by @EthereumOnArm-->
-
 **TL;DR**: Flashuj Raspberry Pi 4, podłącz kabel Ethernet, podłącz dysk SSD i włącz urządzenie, aby zmienić Raspberry Pi 4 w pełne Ethereum 1.0 węzeł lub węzeł Ethereum 2.0 (łańcuch śledzący/ walidator)
 
 [Dowiedz się więcej o Ethereum 2.0 (Eth2)](/eth2/)

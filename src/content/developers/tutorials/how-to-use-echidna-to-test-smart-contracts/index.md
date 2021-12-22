@@ -11,8 +11,6 @@ source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 
-<!-- Probably turn into a serialised tutorial -->
-
 ## Installation {#installation}
 
 Echidna can be installed through docker or using the pre-compiled binary.

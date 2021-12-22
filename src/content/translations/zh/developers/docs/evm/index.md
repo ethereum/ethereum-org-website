@@ -45,11 +45,6 @@ Y(S, T)= S'
 
 EVM 作为一个[堆栈机](https://en.wikipedia.org/wiki/Stack_machine)运行，其栈的深度为 1024 个项。 每一项都是 256 比特的 word，选择如此是为了与 SHA-3-256 哈希方案最大限度地兼容。
 
-<!-- ![A diagram showing the make up of the stack](./evm-stack.png)
-_Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
-
-Removed as we should probably show memory and account storage too if showing stack-->
-
 在执行期间，EVM 会维护一个临时的*内存*（作为 word 寻址的字节数组），该内存不会在交易之间持久存在。
 
 然而，合约确实包含一个 Merkle Patricia _storage_ trie（作为按 word 编址的 word 数组），该 trie 与帐户和部分全局状态相关联。
@@ -57,8 +52,6 @@ Removed as we should probably show memory and account storage too if showing sta
 已编译的智能合约字节码作为许多 EVM [ opcodes ](https://www.ethervm.io/)执行，它们执行标准的堆栈操作，例如 ` XOR`、` AND`、` ADD`、`SUB`等。 EVM 还实现了一些区块链特定的堆栈操作，如 `ADDRESS`、`BALANCE`、`SHA3`、`BLOCKHASH`，等等。
 
 ![EVM 操作需要 Gas](../../../../../developers/docs/gas/gas.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
-
-<!-- TODO add full list from  https://eth.wiki/concepts/evm/implementations -->
 
 ## EVM 实现 {#evm-implementations}
 

@@ -72,20 +72,6 @@ Egy konszenzus folyamatot néhány előre meghatározott megbízható csomópont
 
 Ha egy nyilvános Ethereum hálózat olyan, mint a nyilvános internet, akkor úgy gondolhatsz a konzorcium hálózatra, mint egy privát intranetre.
 
-<!-- TODO
-
-## Interacting with testnets
-
-### Your own local network {#your-own-local-network}
-
-`geth -—networkid="12345" console`
-
-### Testnets {#testnets-1}
-
-Wallets like MetaMask or MyEtherWallet will allow you to switch networks so you can test your apps using your test ETH.
-
--->
-
 ## További olvasnivaló {#further-reading}
 
 _Ismersz olyan közösségi anyagot, amely segített neked? Módosítsd az oldalt és add hozzá!_
