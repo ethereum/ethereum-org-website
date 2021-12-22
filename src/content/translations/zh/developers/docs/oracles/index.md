@@ -18,7 +18,7 @@ incomplete: true
 
 观看 Patrick 解释 Oracle：
 
-<iframe width="100%" height="315px" src="https://www.youtube.com/embed/ZJfkNzyO7-U?start=10" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="ZJfkNzyO7-U" start="10" />
 
 ## 为什么需要预言机？ {#why-are-they-needed}
 

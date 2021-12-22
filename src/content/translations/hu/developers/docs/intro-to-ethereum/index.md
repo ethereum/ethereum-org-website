@@ -21,7 +21,9 @@ Az új blokkokat közvetítik a hálózat csomópontjainak, melyek leellenőrzik
 
 Összefoglalásként, amikor ETH-et küldesz valakinek, a tranzakciót ki kell bányászni és belefoglalni egy új blokkba. A frissített állapot ezután megosztásra kerül a teljes hálózattal. Lent több részletet találsz.
 
-Nézd meg ahogy Austin végig vezet a blokkláncokon: <YouTube id="zcX7OJ-L8XQ" />
+Nézd meg ahogy Austin végig vezet a blokkláncokon:
+
+<YouTube id="zcX7OJ-L8XQ" />
 
 ## Mi az Ethereum? {#what-is-ethereum}
 

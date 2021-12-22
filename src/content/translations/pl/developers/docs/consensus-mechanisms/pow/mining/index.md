@@ -39,7 +39,9 @@ Każda transakcja jest wydobywana (zawarta w nowym bloku i po raz pierwszy propa
 
 ## Demo wizualne {#a-visual-demo}
 
-Zobacz, jak Austin poprowadzi Cię przez wydobycie i blockchain typu „proof-of-work”. <YouTube id="zcX7OJ-L8XQ" />
+Zobacz, jak Austin poprowadzi Cię przez wydobycie i blockchain typu „proof-of-work”.
+
+<YouTube id="zcX7OJ-L8XQ" />
 
 ## Dalsza lektura {#further-reading}
 

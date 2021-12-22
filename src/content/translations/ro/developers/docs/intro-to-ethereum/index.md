@@ -21,7 +21,9 @@ Blocurile noi sunt transmise către nodurile din rețea, controlate și verifica
 
 Deci, pentru a rezuma, atunci când trimiți ETH cuiva, tranzacția trebuie să fie minată și inclusă într-un bloc nou. Starea actualizată este apoi partajată cu întreaga rețea. Mai multe detalii despre aceasta mai jos.
 
-Urmărește cum Austin te conduce prin blockchain-uri: <YouTube id="zcX7OJ-L8XQ" />
+Urmărește cum Austin te conduce prin blockchain-uri:
+
+<YouTube id="zcX7OJ-L8XQ" />
 
 ## Ce este Ethereum? {#what-is-ethereum}
 

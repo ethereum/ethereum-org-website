@@ -31,7 +31,9 @@ Gas 是指在以太坊网络上执行特定操作所需的计算工作量。
 
 当 Alice 汇款时，将从 Alice 账户中扣除 1.0042 ETH。 Bob 将获得 1.0000 ETH。 矿工将得到 0.0042 ETH。
 
-这个视频简要概述了 Gas 及其存在原因： <iframe width="100%" height="315" src="https://www.youtube.com/embed/AJvzNICwcwc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+这个视频简要概述了 Gas 及其存在原因：
+
+<YouTube id="AJvzNICwcwc" />
 
 ## 伦敦升级之后 {#post-london}
 
@@ -102,7 +104,9 @@ Gas 是指在以太坊网络上执行特定操作所需的计算工作量。
 
 在伦敦升级中执行 [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) 使得交易费机制比以前的 gas 竞价招标更加复杂，但优点是提高 gas 费用的可预测性，从而使交易费市场更加有效。 用户可以在提交交易时设定 `maxFeePergas`，表示他们愿意为执行交易支付多少费用，同时清楚该数额不会超过 gas 的市场价格 (`BaseFeePergas`)，并且获得减去小费后的剩余退款。
 
-这个视频解释了 EIP-1559 及其带来的好处： <iframe width="100%" height="315" src="https://www.youtube.com/embed/MGemhK9t44Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+这个视频解释了 EIP-1559 及其带来的好处：
+
+<YouTube id="MGemhK9t44Q" />
 
 如果感兴趣，您可以阅读更确切的 [EIP-1559 规范](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md)。
 

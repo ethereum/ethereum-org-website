@@ -150,7 +150,9 @@ Alice 的帐户将会增加 **+1.0 ETH**
 
 ## 直观演示 {#a-visual-demo}
 
-跟随 Austin 了解交易、Gas 和挖矿。 <iframe width="100%" height="315" src="https://www.youtube.com/embed/er-0ihqFQB0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+跟随 Austin 了解交易、Gas 和挖矿。
+
+<YouTube id="er-0ihqFQB0" />
 
 ## Typed Transaction Envelope 交易 {#typed-transaction-envelope}
 

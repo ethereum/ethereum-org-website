@@ -21,7 +21,9 @@ sidebar: true
 
 综上所述，当你向别人发送 ETH 时，这笔交易必须被打包并包含在一个新的区块中。 然后将更新后的状态与整个网络共享。
 
-观看 Austin 带你了解区块链： <iframe width="100%" height="315" src="https://www.youtube.com/embed/zcX7OJ-L8XQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+观看 Austin 带你了解区块链：
+
+<YouTube id="zcX7OJ-L8XQ" />
 
 <YouTube id="zcX7OJ-L8XQ" />
 

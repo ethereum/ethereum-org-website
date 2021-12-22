@@ -39,7 +39,9 @@ Chaque transaction est minée (incluse dans un nouveau bloc et propagée pour la
 
 ## Démonstration visuelle {#a-visual-demo}
 
-Regardez Austin vous guider à travers le minage et la blockchain. <YouTube id="zcX7OJ-L8XQ" />
+Regardez Austin vous guider à travers le minage et la blockchain.
+
+<YouTube id="zcX7OJ-L8XQ" />
 
 ## Complément d'information {#further-reading}
 

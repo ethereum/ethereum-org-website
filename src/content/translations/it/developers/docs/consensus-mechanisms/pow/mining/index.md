@@ -39,7 +39,9 @@ Il mining di ogni transazione (cioè l'inclusione in un nuovo blocco e la prima 
 
 ## Demo visiva {#a-visual-demo}
 
-Lasciati guidare da Austin attraverso il mining e la blockchain basata sulla proof-of-work. <YouTube id="zcX7OJ-L8XQ" />
+Lasciati guidare da Austin attraverso il mining e la blockchain basata sulla proof-of-work.
+
+<YouTube id="zcX7OJ-L8XQ" />
 
 ## Letture consigliate {#further-reading}
 

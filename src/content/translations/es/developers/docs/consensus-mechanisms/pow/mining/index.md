@@ -39,7 +39,9 @@ Cada transacción se mina (es decir, se incluye en un nuevo bloque y se propaga 
 
 ## Una demostración visual {#a-visual-demo}
 
-Observa a Austin mientras te guía por el proceso de minería y la blockchain de la Prueba de trabajo. <YouTube id="zcX7OJ-L8XQ" />
+Observa a Austin mientras te guía por el proceso de minería y la blockchain de la Prueba de trabajo.
+
+<YouTube id="zcX7OJ-L8XQ" />
 
 ## Más información {#further-reading}
 

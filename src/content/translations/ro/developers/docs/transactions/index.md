@@ -286,7 +286,9 @@ Ethers
 
 ## O demonstrație vizuală {#a-visual-demo}
 
-Privește cum Austin te ghidează prin tranzacții, gaz și minerit. <YouTube id="er-0ihqFQB0" />
+Privește cum Austin te ghidează prin tranzacții, gaz și minerit.
+
+<YouTube id="er-0ihqFQB0" />
 
 ## Referințe suplimentare {#further-reading}
 

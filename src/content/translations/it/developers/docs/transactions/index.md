@@ -281,7 +281,9 @@ Ethers
 
 ## Demo visiva {#a-visual-demo}
 
-Austin ci illustra transazioni, carburante e mining. <YouTube id="er-0ihqFQB0" />
+Austin ci illustra transazioni, carburante e mining.
+
+<YouTube id="er-0ihqFQB0" />
 
 ## Letture consigliate {#further-reading}
 

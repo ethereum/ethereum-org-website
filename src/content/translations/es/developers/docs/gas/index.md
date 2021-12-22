@@ -23,7 +23,9 @@ Como cada transacción de Ethereum requiere recursos computacionales para ejecut
 
 En esencia, las comisiones de gas son pagadas en la moneda nativa de Ethereum, es decir, el ether (ETH). Los precios del gas están indicados en Gwei, que es una denominación de ETH; cada Gwei equivale a 0,000000001 ETH (10<sup>-9</sup> ETH). Por ejemplo, en lugar de decir que el gas cuesta 0,000000001 Ether, puedes decir que cuesta 1 Gwei.
 
-Este video proporciona una visión concisa de qué es el gas y por qué existe: <YouTube id="AJvzNICwcwc" />
+Este video proporciona una visión concisa de qué es el gas y por qué existe:
+
+<YouTube id="AJvzNICwcwc" />
 
 ## ¿Por qué existen tarifas de gas? {#why-do-gas-fees-exist}
 

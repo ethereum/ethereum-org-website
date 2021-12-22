@@ -39,7 +39,9 @@ Minden tranzakciót egyszer bányásznak ki (blokkba foglalják és első alkalo
 
 ## Egy vizuális bemutató {#a-visual-demo}
 
-Nézd meg ahogy Austin végig kísér a bányászaton és a proof-of-work blokkláncon. <YouTube id="zcX7OJ-L8XQ" />
+Nézd meg ahogy Austin végig kísér a bányászaton és a proof-of-work blokkláncon.
+
+<YouTube id="zcX7OJ-L8XQ" />
 
 ## További olvasnivaló {#further-reading}
 

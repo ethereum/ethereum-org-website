@@ -281,7 +281,9 @@ Ethers
 
 ## Una demostración visual {#a-visual-demo}
 
-Observa a Austin mientras te guía por las transacciones, el gas y la minería. <YouTube id="er-0ihqFQB0" />
+Observa a Austin mientras te guía por las transacciones, el gas y la minería.
+
+<YouTube id="er-0ihqFQB0" />
 
 ## Leer más {#further-reading}
 

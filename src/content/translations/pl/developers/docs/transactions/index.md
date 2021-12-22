@@ -281,7 +281,9 @@ Ethers
 
 ## Demo wizualne {#a-visual-demo}
 
-Zobacz, jak Austin przeprowadzi Cię przez transakcje, gaz i wydobycie. <YouTube id="er-0ihqFQB0" />
+Zobacz, jak Austin przeprowadzi Cię przez transakcje, gaz i wydobycie.
+
+<YouTube id="er-0ihqFQB0" />
 
 ## Dalsza lektura {#further-reading}
 

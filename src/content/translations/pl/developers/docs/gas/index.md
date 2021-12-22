@@ -23,7 +23,9 @@ Ponieważ każda transakcja Ethereum wymaga zasobów obliczeniowych do wykonania
 
 Zasadniczo opłaty za gaz są uiszczane w walucie ojczystej Ethereum, eterze (ETH). Ceny gazu są oznaczane w Gwei, który sam jest nominałem ETH — każdy Gwei jest równy 0,00000001 ETH (10<sup>-9</sup> ETH). Na przykład, zamiast mówić, że Twój gaz kosztuje 0,000000001 Ethera, możesz powiedzieć, że gaz kosztuje 1 Gwei.
 
-Film ten oferuje zwięzłe omówienie gazu i powodów jego istnienia: <YouTube id="AJvzNICwcwc" />
+Film ten oferuje zwięzłe omówienie gazu i powodów jego istnienia:
+
+<YouTube id="AJvzNICwcwc" />
 
 ## Dlaczego istnieją opłaty za gaz? {#why-do-gas-fees-exist}
 

@@ -39,7 +39,9 @@ Fiecare tranzacție este minată (inclusă într-un bloc nou și propagată pent
 
 ## O demonstrație vizuală {#a-visual-demo}
 
-Urmărește cum Austin te ghidează prin minerit și blockchain-ul de dovadă a muncii. <YouTube id="zcX7OJ-L8XQ" />
+Urmărește cum Austin te ghidează prin minerit și blockchain-ul de dovadă a muncii.
+
+<YouTube id="zcX7OJ-L8XQ" />
 
 ## Referințe suplimentare {#further-reading}
 

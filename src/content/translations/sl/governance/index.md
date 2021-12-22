@@ -131,7 +131,7 @@ Danes je Ethereum skupnost sprejela stališče o neposeganju v primeru napak v p
 
 Oglejte si več o DAO razcepu:
 
-<iframe width="100%" height="315px" src="https://www.youtube.com/embed/rNeLuBOVe8A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="rNeLuBOVe8A" />
 
 <Divider />
 
