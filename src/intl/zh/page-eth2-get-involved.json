@@ -27,6 +27,8 @@
   "page-eth2-get-involved-more": "更多信息",
   "page-eth2-get-involved-run-clients": "运行信标链客户端",
   "page-eth2-get-involved-run-clients-desc": "保证以太坊长期安全的关键是客户端去中心化的强度。客户端是运行区块链、检查交易并创造新区块的软件。每种客户端都有自己的功能列表，请按照您的需求进行选择。",
+  "page-eth2-get-involved-run-clients-production": "生产准备就绪的 Eth2 客户端",
+  "page-eth2-get-involved-run-clients-experimental": "实验性 Eth2 客户端",
   "page-eth2-get-involved-stake": "质押您的ETH",
   "page-eth2-get-involved-stake-desc": "您现在可以质押您的ETH，帮助保证信标链的安全。",
   "page-eth2-get-involved-stake-eth": "质押ETH",
