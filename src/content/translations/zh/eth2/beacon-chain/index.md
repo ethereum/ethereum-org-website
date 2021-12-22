@@ -11,7 +11,7 @@ summaryPoint3: 它为以太坊生态系统提供了利害关系证明。
 summaryPoint4: 你可能会在技术路径图上知道这是“阶段0。
 ---
 
-<UpgradeStatus isShipped date="Shipped!">
+<UpgradeStatus isShipped date="发货了！">
     信标链于 2020 年 12 月 1 日中午 (UTC) 启动。 要了解更多信息，<a href="https://beaconscan.com/">浏览这里</a>。 如果您想要参与验证该信标链，您可以<a href="/eth2/staking/">质押您的 ETH</a>。
 </UpgradeStatus>
 
