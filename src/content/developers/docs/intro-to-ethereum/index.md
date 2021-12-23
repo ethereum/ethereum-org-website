@@ -13,6 +13,8 @@ A blockchain is a public database that is updated and shared across many compute
 
 "Chain" refers to the fact that each block cryptographically references its parent. In other words, blocks get chained together. The data in a block cannot change without changing all subsequent blocks, which would require the consensus of the entire network.
 
+![Blockchain](https://mohan-chinnappan-n5.github.io/2021/blockchain/book/blockchain/book/img/blockchain-2.svg)
+
 Every computer in the network must agree upon each new block and the chain as a whole. These computers are known as "nodes". Nodes ensure everyone interacting with the blockchain has the same data. To accomplish this distributed agreement, blockchains need a consensus mechanism.
 
 Ethereum currently uses a [proof-of-work](/developers/docs/consensus-mechanisms/pow/) consensus mechanism. This means that anyone who wants to add new blocks to the chain must solve a difficult puzzle that requires a lot of computing power. Solving the puzzle "proves" that you have done the "work" by using computational resources. Doing this is known as [mining](/developers/docs/consensus-mechanisms/pow/mining/). Mining is typically brute force trial and error, but successfully adding a block is rewarded in ETH.
