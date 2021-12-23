@@ -25,7 +25,7 @@ Both account types have the ability to:
 
 ### Key differences {#key-differences}
 
-**Externally-owned**
+**Externally-owned (wallet address)**
 
 - Creating an account costs nothing
 - Can initiate transactions
