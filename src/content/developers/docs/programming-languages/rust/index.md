@@ -51,9 +51,12 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _OASIS API reference_
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _Rust Ethereum Virtual Machine Implementation_
-- [Parity](https://github.com/paritytech/parity-ethereum) - _Ethereum Rust client_
+- [Open Ethereum](https://github.com/openethereum/openethereum) - _Ethereum Rust client_
 - [rust-web3](https://github.com/tomusdrw/rust-web3) - _Rust implementation of Web3.js library_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Wavelet smart contract in Rust_
+- [Foundry](https://github.com/gakonst/foundry)- _Toolkit for Ethereum application development_
+- [Ethers_rs](https://github.com/gakonst/ethers-rs)- _Ethereum library and wallet implementation_
+- [evm_rs](https://github.com/rust-blockchain/evm)- _Ethereum virtual machine implementation in rust_
 
 Looking for more resources? Check out [ethereum.org/developers.](/developers/)
 
