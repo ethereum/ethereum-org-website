@@ -42,9 +42,11 @@ provide all the hashes that need to be combined with it to obtain the root: `D`,
 ![Proof of the value of C](proof-c.png)
 
 
-## Creating the Merkle Root
+## Off-chain code
 
-First we need a trusted source to provide the Merkle Root. Let's write it in JavaScript using [Node](https://nodejs.org/en/).
+### Creating the Merkle root
+
+First we need a trusted source to provide the Merkle root. Let's write it in JavaScript using [Node](https://nodejs.org/en/).
 
 ```javascript
 const ethers = require('ethers')
@@ -109,8 +111,12 @@ const oneLevelUp = inputArray => {
 
     return result
 }    // oneLevelUp
+```
+
+This function "climbs" one level in the Merkle tree by hashing the pairs of values at the current layer. Note that this is not the most efficient implementation, we could have avoided copying the input and just added `hashEmpty` when appropriate in the loop, but this code is optimized for readability.
 
 
+```javascript
 // Get the merkle root of a hashArray
 const getMerkleRoot = inputArray => {
     var result
@@ -122,24 +128,41 @@ const getMerkleRoot = inputArray => {
     //
     // Note that if a layer has an odd number of entries the
     // code in oneLevelUp adds an empty value, so if we have, for example,
-    // 10 leaves we'll have 5 branches in the second layer, 3
+    // 10 leaves we'll have 5 branches in the secayer, 3
     // branches in the third, 2 in the fourth and the root is the fifth       
     while(result.length > 1)
         result = oneLevelUp(result)
 
     return result[0]
 }
+```
 
-const merkleRoot = getMerkleRoot(hashArray)
-console.log(`Merkle Root: ${merkleRoot}`)
+To get the root, climb until there is only one value left. 
 
-// A merkle proof for the n'th value of an array consists of the value of n
+
+### Creating a Merkle proof
+
+A Merkle proof has three components:
+
+1. The value to prove
+1. The location of that value in the data. This value is necessary to know if the values in the proof should be before or after the computed hash on that layer
+1. The actual values to hash together with the computed values
+
+The value to prove is often available from other data, but I find it easier to put the proof in a single array with the value's location followed by the values to hash.
+
+```javascript
+// A merkle proof for the n'th value of an array consists of n
 // and a list of entries to hash with, going all the way to the top.
 //
 // We need the value of n to tell us whether the current value should be before
 // or after the value from the proof when hashed
 const getMerkleProof = (inputArray, n) => {
     var result = [n], currentLayer = [...inputArray], currentN = n
+```
+
+`currentN` is the location either of the value we want to prove or the computed hash value in the current layer (the value in the path from the value we prove to the root).
+
+```javascript
 
     // Until we reach the top
     while (currentLayer.length > 1) {
@@ -148,11 +171,16 @@ const getMerkleProof = (inputArray, n) => {
             currentLayer.push(hashEmpty)
 
         result.push(currentN % 2    
-               // If currentN is odd, add the value before it and hash
+               // If currentN is odd, add the value before it
             ? currentLayer[currentN-1] 
-               // If it is even, add the value after it and hash
+               // If it is even, add the value after it
             : currentLayer[currentN+1])
+```
 
+We has `v[0]+v[1]`, `v[2]+v[3]`, etc. So for even values we need the next one, for odd values the previous one.
+
+
+```javascript
         // Move to the next layer up
         currentN = Math.floor(currentN/2)
         currentLayer = oneLevelUp(currentLayer)
@@ -160,6 +188,10 @@ const getMerkleProof = (inputArray, n) => {
 
     return result
 }   // getMerkleProof
+```
+
+
+## On-chain code
 
 
 
