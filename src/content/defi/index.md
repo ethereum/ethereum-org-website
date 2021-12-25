@@ -160,7 +160,7 @@ It works on the basis that the loan is taken out and paid back within the same t
 
 The funds that are often used are held in liquidity pools (big pools of funds used for borrowing). If they are not being used at a given moment, this creates an opportunity for someone to borrow these funds, conduct business with them, and repay them in-full quite literally at the same time they're borrowed.
 
-This means a lot of logic must be included in a very bespoke transaction. A simple example might be someone using a flash loan to borrow as much of an asset at one price so they can sell it on a different exchange where the price is higher.
+This means a lot of logic must be included in a much bespoke transaction. A simple example might be someone using a flash loan to borrow as much of an asset at one price so they can sell it on a different exchange where the price is higher.
 
 So in a single transaction the following happens:
 
@@ -315,7 +315,7 @@ Ethereum is the perfect foundation for DeFi for a number of reasons:
 
 - No one owns Ethereum or the smart contracts that live on it – this gives everyone an opportunity to use DeFi. This also means no one can change the rules on you.
 - DeFi products all speak the same language behind the scenes: Ethereum. This means many of the products work together seamlessly. You can lend tokens on one platform and exchange the interest-bearing token in a different market on an entirely different application. This is like being able to cash loyalty points in at your bank.
-- Tokens and cryptocurrency are built into Ethereum, a shared ledger – keeping track of transactions and ownership is kinda Ethereum's thing.
+- Tokens and cryptocurrency are built into Ethereum, a shared ledger – keeping track of transactions and ownership is kind of Ethereum's thing.
 - Ethereum allows complete financial freedom – most products will never take custody of your funds, leaving you in control.
 
 You can think of DeFi in layers:
