@@ -66,44 +66,23 @@ const dataArray = [
 ]
 ```
 
-Writing this article I debated between 
+Encoding each entry into a single 256 bit integer results in less readable code than using JSON, for example. However, this means significantly less processing to retrieve the data in the contract, so much lower gas costs. [You can read JSON on chain](https://github.com/chrisdotn/jsmnSol), but your users would prefer you didn't.
 
 ```javascript
-
-/*
-// From array of <whatever> to array of strings. Not necessary here, we could
-// leave the values as integers, but it is necessary in more complex cases
-// (where the leaves are structures or lists)
-const stringsArray = dataArray.map(x => JSON.stringify(x)) 
-
-
-// Taken from https://stackoverflow.com/questions/21647928/javascript-unicode-string-to-hex
-// Required because ethers.utils.keccak256 expects a string 
-// with a hexadecimal number, not a general string
-const hexEncode = str => {
-    var hex, i;
-
-    var result = "";
-    for (i=0; i<str.length; i++) {
-        // Four bytes because of Unicode
-        hex = str.charCodeAt(i).toString(16);
-        result += ("000"+hex).slice(-4);
-    }
-
-    return result
-}    // hexEncode
-
-
-// From array of strings to array of hashes (without the 0x's)
-const hashArray = stringsArray.map(x => hash(hexEncode(x)))
-*/
 const hashArray = dataArray.map(val => val.toString(16).padStart(64, "0"))
+```
 
+The data array is an array of integers. However, to hash values we need hexadecimal strings (without the `0x` prefix for now). This code fragment converts the values into hexadecimal strings and then pads the to make sure we don't have an odd number of hexadecimal digits.
+
+```javascript
 // The hash function, which also handles adding 0x to the input and 
 // chopping it from the output
 const hash = x => ethers.utils.keccak256("0x" + x).slice(2)
+```
 
+The ethers hash function expects to get a Javascript string with a hexadecimal number, such as `0x60A7`, and responds with another string with the same structure. However, in this code it is easier to use hexadecimal strings without the `0x` prefix, because we need to [concatenate](https://en.wikipedia.org/wiki/Concatenation) values so often. This function converts between the two formats.
 
+```javascript
 /* Special hash function for debugging 
 const hash = x => {
   console.log(`hashing: ${x}`)
@@ -112,6 +91,9 @@ const hash = x => {
   return retVal
 }
 */
+```
+
+
 
 // The hash of an empty value, useful when the array size is not 2^n
 const hashEmpty = hash("")
