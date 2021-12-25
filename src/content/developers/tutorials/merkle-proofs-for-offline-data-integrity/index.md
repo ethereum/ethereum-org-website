@@ -46,7 +46,191 @@ provide all the hashes that need to be combined with it to obtain the root: `D`,
 
 First we need a trusted source to provide the Merkle Root. Let's write it in JavaScript using [Node](https://nodejs.org/en/).
 
+```javascript
+const ethers = require('ethers')
 
+// The raw data whose integrity we have to verify. This code
+// is an airdrop, with the first two bytes a one time password to identify
+// the user, and the last two bytes the amount of tokens the user
+// gets. 
+//
+// Two bytes is ridiculously low for a password, but this is sample code.
+// DO NOT USE IN PRODUCTION SYSTEMS
+//
+// Storing the data like this makes it easy for the Solidity code to
+// understand it. This saves us a lot of processing compared to the naive
+// solution of using JSON
+const dataArray = [
+    0x0BAD0010,
+    0x60A70020,
+    0xBEEF0030,
+    0xDEAD0040,
+    0xCA110050,
+    0x0E660060,
+    0xFACE0070,
+    0xBAD00080,
+    0x060D0091
+]
+
+
+// From array of <whatever> to array of strings. Not necessary here, we could
+// leave the values as integers, but it is necessary in more complex cases
+// (where the leaves are structures or lists)
+const stringsArray = dataArray.map(x => JSON.stringify(x)) 
+
+
+// Taken from https://stackoverflow.com/questions/21647928/javascript-unicode-string-to-hex
+// Required because ethers.utils.keccak256 expects a string 
+// with a hexadecimal number, not a general string
+const hexEncode = str => {
+    var hex, i;
+
+    var result = "";
+    for (i=0; i<str.length; i++) {
+        // Four bytes because of Unicode
+        hex = str.charCodeAt(i).toString(16);
+        result += ("000"+hex).slice(-4);
+    }
+
+    return result
+}    // hexEncode
+
+
+// The hash function, which also handles adding 0x to the input and 
+// chopping it from the output
+const hash = x => ethers.utils.keccak256("0x" + x).slice(2)
+
+
+/* Special hash function for debugging 
+const hash = x => {
+  console.log(`hashing: ${x}`)
+  var retVal = ethers.utils.keccak256("0x" + x).slice(2)
+  console.log(`   result: ${retVal}`)
+  return retVal
+}
+*/
+
+// From array of strings to array of hashes (without the 0x's)
+const hashArray = stringsArray.map(x => hash(hexEncode(x)))
+
+
+// The hash of an empty value, useful when the array size is not 2^n
+const hashEmpty = hash("")
+
+
+// Calculate one level up the tree of a hash array by taking the hash of 
+// each pair in sequence
+const oneLevelUp = inputArray => {
+    var result = []
+    var inp = [...inputArray]    // To avoid over writing the input
+
+    // Add an empty value if necessary (we need all the leaves to be
+    // paired)
+    if (inp.length % 2 === 1)
+        inp.push(hashEmpty)
+
+    for(var i=0; i<inp.length; i+=2)
+        result.push(hash(inp[i] + inp[i+1]))
+
+    return result
+}    // oneLevelUp
+
+
+// Get the merkle root of a hashArray
+const getMerkleRoot = inputArray => {
+    var result
+
+    result = [...inputArray]
+
+    // Climb up the tree until there is only one value, that is the
+    // root. 
+    //
+    // Note that if a layer has an odd number of entries the
+    // code in oneLevelUp adds an empty value, so if we have, for example,
+    // 10 leaves we'll have 5 branches in the second layer, 3
+    // branches in the third, 2 in the fourth and the root is the fifth       
+    while(result.length > 1)
+        result = oneLevelUp(result)
+
+    return result[0]
+}
+
+const merkleRoot = getMerkleRoot(hashArray)
+console.log(`Merkle Root: ${merkleRoot}`)
+
+// A merkle proof for the n'th value of an array consists of the value of n
+// and a list of entries to hash with, going all the way to the top.
+//
+// We need the value of n to tell us whether the current value should be before
+// or after the value from the proof when hashed
+const getMerkleProof = (inputArray, n) => {
+    var result = [n], currentLayer = [...inputArray], currentN = n
+
+    // Until we reach the top
+    while (currentLayer.length > 1) {
+        // No odd length layers
+        if (currentLayer.length % 2)
+            currentLayer.push(hashEmpty)
+
+        result.push(currentN % 2    
+               // If currentN is odd, add the value before it and hash
+            ? currentLayer[currentN-1] 
+               // If it is even, add the value after it and hash
+            : currentLayer[currentN+1])
+
+        // Move to the next layer up
+        currentN = Math.floor(currentN/2)
+        currentLayer = oneLevelUp(currentLayer)
+    }   // while currentLayer.length > 1
+
+    return result
+}   // getMerkleProof
+
+
+
+// Verify a merkle proof that the value hashes to nValueHash, for 
+// a given merkle root. This code needs to be run by the contract, so we'll 
+// translate it to Solidity. We do not need n as a separate parameter,
+// because it is part of the proof.
+const verifyMerkleProof = (root, nValueHash, proof) => {
+    var branchLoc = proof[0] // The branch's location within the current layer
+    var hashVal = nValueHash // The hash for this layer
+
+    // Tree layer
+    for(layer=1; layer<proof.length; layer++) {
+
+        // If the location is odd, hash with the previous location
+        if (branchLoc % 2)
+            // Because the first value is the item being proved, we 
+            // the proof for a layer is in proof[layer]
+            hashVal = hash(proof[layer] + hashVal)
+        else   // Hash with the next location
+            hashVal = hash(hashVal + proof[layer])
+
+        // Get ready for the next layer
+        branchLoc = Math.floor(branchLoc/2)
+    }
+
+    return root === hashVal
+}  // verifyMerkleProof
+
+
+
+
+const itemProved = 5
+const proof = getMerkleProof(hashArray, itemProved)
+console.log(`Merkle proof for item ${itemProved}: ${proof}`)
+
+
+
+console.log(`Should succeed: ${
+      verifyMerkleProof(merkleRoot, hashArray[itemProved], proof)}`)
+
+
+console.log(`Should fail: ${
+      verifyMerkleProof(merkleRoot, hashArray[itemProved % 2], proof)}`)
+
+```
 
 
 ## Conclusion
