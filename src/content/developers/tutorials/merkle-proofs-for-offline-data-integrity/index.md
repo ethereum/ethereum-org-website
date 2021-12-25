@@ -89,6 +89,8 @@ const hashEmpty = hash("")
 
 When the number of values is not an integer power of two we need to handle empty branches. The way this program does it is to put the hash of the empty value as a place holder.
 
+![Merkle tree with branches missing](merkle-empty-hash.png)
+
 
 ```javascript
 // Calculate one level up the tree of a hash array by taking the hash of 
