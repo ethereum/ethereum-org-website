@@ -72,7 +72,7 @@ Encoding each entry into a single 256 bit integer results in less readable code 
 const hashArray = dataArray.map(val => val.toString(16).padStart(64, "0"))
 ```
 
-The data array is an array of integers. However, to hash values we need hexadecimal strings (without the `0x` prefix for now). This code fragment converts the values into hexadecimal strings and then pads the to make sure we don't have an odd number of hexadecimal digits.
+The data array is an array of integers. However, to hash values we need hexadecimal strings (without the `0x` prefix for now). This code fragment converts the values into hexadecimal strings and then pads the to make sure we don't have an odd number of hexadecimal digits (which is a problem when converting the value to bytes).
 
 ```javascript
 // The hash function, which also handles adding 0x to the input and 
@@ -83,22 +83,14 @@ const hash = x => ethers.utils.keccak256("0x" + x).slice(2)
 The ethers hash function expects to get a Javascript string with a hexadecimal number, such as `0x60A7`, and responds with another string with the same structure. However, in this code it is easier to use hexadecimal strings without the `0x` prefix, because we need to [concatenate](https://en.wikipedia.org/wiki/Concatenation) values so often. This function converts between the two formats.
 
 ```javascript
-/* Special hash function for debugging 
-const hash = x => {
-  console.log(`hashing: ${x}`)
-  var retVal = ethers.utils.keccak256("0x" + x).slice(2)
-  console.log(`   result: ${retVal}`)
-  return retVal
-}
-*/
-```
-
-
-
 // The hash of an empty value, useful when the array size is not 2^n
 const hashEmpty = hash("")
+```
+
+When the number of values is not an integer power of two we need to handle empty branches. The way this program does it is to put the hash of the empty value as a place holder.
 
 
+```javascript
 // Calculate one level up the tree of a hash array by taking the hash of 
 // each pair in sequence
 const oneLevelUp = inputArray => {
