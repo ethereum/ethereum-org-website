@@ -48,7 +48,11 @@ First we need a trusted source to provide the Merkle Root. Let's write it in Jav
 
 ```javascript
 const ethers = require('ethers')
+```
 
+[We use the hash function from the ethers package](https://docs.ethers.io/v5/api/utils/hashing/#utils-keccak256).
+
+```javascript
 // The raw data whose integrity we have to verify. This code
 // is an airdrop, with the first two bytes a one time password to identify
 // the user, and the last two bytes the amount of tokens the user
@@ -56,23 +60,17 @@ const ethers = require('ethers')
 //
 // Two bytes is ridiculously low for a password, but this is sample code.
 // DO NOT USE IN PRODUCTION SYSTEMS
-//
-// Storing the data like this makes it easy for the Solidity code to
-// understand it. This saves us a lot of processing compared to the naive
-// solution of using JSON
 const dataArray = [
-    0x0BAD0010,
-    0x60A70020,
-    0xBEEF0030,
-    0xDEAD0040,
-    0xCA110050,
-    0x0E660060,
-    0xFACE0070,
-    0xBAD00080,
-    0x060D0091
+    0x0BAD0010, 0x60A70020, 0xBEEF0030, 0xDEAD0040, 0xCA110050,
+    0x0E660060, 0xFACE0070, 0xBAD00080, 0x060D0091
 ]
+```
 
+Writing this article I debated between 
 
+```javascript
+
+/*
 // From array of <whatever> to array of strings. Not necessary here, we could
 // leave the values as integers, but it is necessary in more complex cases
 // (where the leaves are structures or lists)
@@ -96,6 +94,11 @@ const hexEncode = str => {
 }    // hexEncode
 
 
+// From array of strings to array of hashes (without the 0x's)
+const hashArray = stringsArray.map(x => hash(hexEncode(x)))
+*/
+const hashArray = dataArray.map(val => val.toString(16).padStart(64, "0"))
+
 // The hash function, which also handles adding 0x to the input and 
 // chopping it from the output
 const hash = x => ethers.utils.keccak256("0x" + x).slice(2)
@@ -109,10 +112,6 @@ const hash = x => {
   return retVal
 }
 */
-
-// From array of strings to array of hashes (without the 0x's)
-const hashArray = stringsArray.map(x => hash(hexEncode(x)))
-
 
 // The hash of an empty value, useful when the array size is not 2^n
 const hashEmpty = hash("")
@@ -230,7 +229,10 @@ console.log(`Should succeed: ${
 console.log(`Should fail: ${
       verifyMerkleProof(merkleRoot, hashArray[itemProved % 2], proof)}`)
 
+
 ```
+
+
 
 
 ## Conclusion
