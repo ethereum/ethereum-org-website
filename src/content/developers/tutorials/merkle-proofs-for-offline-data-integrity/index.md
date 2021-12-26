@@ -84,6 +84,8 @@ const hash = x => ethers.utils.keccak256("0x" + x).slice(2)
 
 The ethers hash function expects to get a Javascript string with a hexadecimal number, such as `0x60A7`, and responds with another string with the same structure. However, in this code it is easier to use hexadecimal strings without the `0x` prefix, because we need to [concatenate](https://en.wikipedia.org/wiki/Concatenation) values so often. This function converts between the two formats.
 
+We can choose any hash function we want. I chose this function because it lets hash(A,B) be the same as hash(B,A). This lets us ignore the item number when checking the Merkle proof (because we don't care if we need to place the computed value first or the value provided in the proof for that layer first). Smart contracts should have to do as little work as possible to minimize gas costs.
+
 ```javascript
 // The hash of an empty value, useful when the array size is not 2^n
 const hashEmpty = hash("")
