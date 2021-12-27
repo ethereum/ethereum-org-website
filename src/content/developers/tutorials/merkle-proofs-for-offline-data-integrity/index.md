@@ -125,7 +125,7 @@ const getMerkleRoot = inputArray => {
     // Climb up the tree until there is only one value, that is the
     // root. 
     //
-    // Note that if a layer has an odd number of entries the
+    // If a layer has an odd number of entries the
     // code in oneLevelUp adds an empty value, so if we have, for example,
     // 10 leaves we'll have 5 branches in the second layer, 3
     // branches in the third, 2 in the fourth and the root is the fifth       
@@ -133,20 +133,17 @@ const getMerkleRoot = inputArray => {
         result = oneLevelUp(result)
 
     return result[0]
-}```
+}
+```
 
 To get the root, climb until there is only one value left. 
 
 
 ### Creating a Merkle proof
 
-A Merkle proof is the values to hash together with the value being proved to get back the Merkle root. The value to prove is often available from other data, so I prefer to provide it separately.
+A Merkle proof is the values to hash together with the value being proved to get back the Merkle root. The value to prove is often available from other data, so I prefer to provide it separately rather than as part of the code.
 
 ```javascript
-// A merkle proof consists of the value of the list of entries to 
-// hash with. Because we use a symmetrical hash function, we don't
-// need the item's location.
-
 // A merkle proof consists of the value of the list of entries to 
 // hash with. Because we use a symmetrical hash function, we don't
 // need the item's location to verify the proof, only to create it
@@ -166,6 +163,7 @@ const getMerkleProof = (inputArray, n) => {
             : currentLayer[currentN+1])
 
 ```
+
 We hash `(v[0],v[1])`, `(v[2],v[3])`, etc. So for even values we need the next one, for odd values the previous one.
 
 ```javascript
@@ -181,13 +179,18 @@ We hash `(v[0],v[1])`, `(v[2],v[3])`, etc. So for even values we need the next o
 
 ## On-chain code
 
+Finally we have the code that checks the proof. This is on-chain code written in Solidity, and optimization is a lot more important here.
 
 ```solidity
 //SPDX-License-Identifier: Public Domain
 pragma solidity ^0.8.0;
 
 import "hardhat/console.sol";
+```
 
+I wrote this using the [Hardhat development environment](https://hardhat.org/), which allows us to have [console output from Solidity](https://hardhat.org/tutorial/debugging-with-hardhat-network.html) while developing.
+
+```solidity
 
 contract MerkleProof {
     uint merkleRoot;
@@ -202,13 +205,21 @@ contract MerkleProof {
     function setRoot(uint _merkleRoot) external {
       merkleRoot = _merkleRoot;
     }   // setRoot
+```
 
-    
-    // Same function as in the JavaScript, just written in Solidity
+Set and get functions for the Merkle root. Letting everybody update the Merkle root is an *extremely bad idea* in a production system. I do it here for the sake of simplicity for sample code. **Don't do it on a system where data integrity actually matters**.
+
+```solidity
     function pairHash(uint _a, uint _b) internal pure returns(uint) {
       return uint(keccak256(abi.encode(_a ^ _b)));
     }
+```
 
+This function generates a pair hash. It is just the Solidity transalation of the JavaScript code for `pairHash`. 
+
+**Note:** This is another case of optimization for readability. Based on [the function definition](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm), it might be possible to store the data as a [`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays) value and avoid the conversions. 
+
+```solidity
     // Verify a Merkle proof
     function verifyProof(uint _value, uint[] calldata _proof) 
         public view returns (bool) {
@@ -223,8 +234,8 @@ contract MerkleProof {
     }
     
 }  // MarkleProof
-
 ```
+In mathematical notation Merkle proof verification looks like this: `H(proof_n
 
 
 
