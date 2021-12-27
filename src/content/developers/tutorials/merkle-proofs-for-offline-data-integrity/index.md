@@ -38,6 +38,8 @@ The root hash is the only part that needs to be stored on chain. To prove a cert
 
 ## Implementation
 
+[The sample code is provided here](https://github.com/qbzzt/merkle-proofs-for-offline-data-integrity).
+
 ### Off-chain code
 
 In this article we use JavaScript for the off-chain computations. Most decentralized applications have their off-chain component in JavaScript.
