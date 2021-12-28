@@ -23,7 +23,7 @@ The first and most important step is initializing your app to support MetaMask. 
     <img src="./initialize_img1.png" alt="Initializing MetaMask Image 1" />
 </p>
 
-Please see [https://docs.metamask.io/guide/getting-started.html](Getting Started) - MetaMask Documentation for more details.
+Please see (Getting Started)[https://docs.metamask.io/guide/getting-started.html] - MetaMask Documentation for more details.
 
 I like to use this initialization process to add *Event Listeners* to check for changes that the user is making to MetaMask. The two most important ones I like to setup are Accounts Changed (if a user switches their Account) and Chain Changed (if a user changes the chain in their MetaMask). In the below example, I am using React to set the state of the Account and Chain ID according to events in MetaMask.
 
@@ -31,9 +31,9 @@ I like to use this initialization process to add *Event Listeners* to check for 
     <img src="./initialize_img2.png" alt="Initializing MetaMask Image 2" />
 </p>
 
-As your see we are setting up 2 Event Listeners, we are listening for any changes to MetaMask the user makes with their Account and Chain ID. For a better understanding of what the Chain IDs mean and which chain they are referring to please check out: Please see [https://docs.metamask.io/guide/ethereum-provider.html#chain-ids](API Reference - Chain IDs)
+As your see we are setting up 2 Event Listeners, we are listening for any changes to MetaMask the user makes with their Account and Chain ID. For a better understanding of what the Chain IDs mean and which chain they are referring to please check out: Please see (API Reference - Chain IDs)[https://docs.metamask.io/guide/ethereum-provider.html#chain-ids].
 
-Also for more on Event Listeners please check out [https://docs.metamask.io/guide/ethereum-provider.html#events](API Reference - Events)
+Also for more on Event Listeners please check out (API Reference - Events)[https://docs.metamask.io/guide/ethereum-provider.html#events].
 
 ## Connecting MetaMask to your Application {#connecting-metamask-to-app}
 
@@ -51,4 +51,4 @@ Below is a request called `eth_request_accounts` which will trigger a user to lo
     <img src="./connecting_img1.png" alt="Connecting Image 1" />
 </p>
 
-Sometimes requests may or may not have params. A good place to check out all the request methods and details on each is the [https://metamask.github.io/api-playground/api-documentation/](API Playground).
+Sometimes requests may or may not have params. A good place to check out all the request methods and details on each is the (API Playground)[https://metamask.github.io/api-playground/api-documentation/].
