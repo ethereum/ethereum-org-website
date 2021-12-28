@@ -1,24 +1,27 @@
 ---
-title: How to View Your NFT in Your Wallet (Part 3/3 of NFT Tutorial Series)
-description: This tutorial describes how to view an existing an NFT on MetaMask!
-author: "Sumi Mudgil"
-tags:
-  ["NFTs", "ERC-721", "Alchemy", "MetaMask", "non fungible tokens", "Solidity"]
+title: A Simple Guide to Using MetaMask With Your Decentralized Application
+description: This tutorial shows you how to make different Web3 Transactions using the MetaMask provider in the browser.
+author: "Blake Wood Jr."
+tags: [
+  "MetaMask", 
+  "Getting Started",
+]
 skill: beginner
 lang: en
 sidebar: true
-published: 2021-04-22
+published: 2021-12-28
 ---
 
-This tutorial is Part 3/3 in the NFT Tutorial series, where we view our newly minted NFT. However, you can use the general tutorial for any ERC-721 token using MetaMask, including on Mainnet or any testnet. If you’d like to learn how to mint your own NFT on Ethereum, you should check out [Part 1 on How to Write & Deploy an NFT smart contract](/developers/tutorials/how-to-write-and-deploy-an-nft)!
+This tutorial will guide you step by step through some important topics on working with MetaMask to give you the basics for a good foundation. If you wish to view the open souce project I've made with React.js to transact with MetaMask, please visit [https://github.com/blakewood84/metamask-transactions](https://github.com/blakewood84/metamask-transactions)!
 
-Congrats! You’ve made it to the shortest and simplest part of our NFT tutorial series — how to view your freshly minted NFT on a virtual wallet. We’ll be using MetaMask for this example since it is what we used in the previous two parts.
+## Initializing Your Application {#initialize-your-application}
 
-As a prerequisite, you should already have MetaMask on mobile installed, and it should include the account to which you minted your NFT — you can get the app for free on [iOS](https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202) or [Android](https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&gl=US).
+The first and most important step is initializing your app to support MetaMask. To do this you must check if MetaMask exists by calling `window.ethereum` in the browser. The code below will check if MetaMask exists by seeing if `window.ethereum === 'undefined'`. If `window.ethereum` is infact undefined, then we will alert the user to please install MetaMask:
 
-## Step 1: Set your network to Ropsten {#set-network-to-ropsten}
+<p align="center">
+    <img src="./initialize_img1.png" alt="Initializing MetaMask Image 1" />
+</p>
 
-At the top of the app, press the “Wallet” button, after which you’ll be prompted to select a network. As our NFT was minted on the Ropsten network, you’ll want to select Ropsten as your network.
 
 ![How to set Ropsten as your network on MetaMask Mobile](./ropstenMetamask.gif)
 
