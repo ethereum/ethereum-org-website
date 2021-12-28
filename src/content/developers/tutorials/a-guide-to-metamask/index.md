@@ -31,9 +31,9 @@ I like to use this initialization process to add *Event Listeners* to check for 
     <img src="./initialize_img2.png" alt="Initializing MetaMask Image 2" />
 </p>
 
-As your see we are setting up 2 Event Listeners, we are listening for any changes to MetaMask the user makes with their Account and Chain ID. For a better understanding of what the Chain IDs mean and which chain they are referring to please check out: Please see (API Reference - Chain IDs)[https://docs.metamask.io/guide/ethereum-provider.html#chain-ids].
+As your see we are setting up 2 Event Listeners, we are listening for any changes to MetaMask the user makes with their Account and Chain ID. For a better understanding of what the Chain IDs mean and which chain they are referring to please check out: Please see [API Reference - Chain IDs](https://docs.metamask.io/guide/ethereum-provider.html#chain-ids).
 
-Also for more on Event Listeners please check out (API Reference - Events)[https://docs.metamask.io/guide/ethereum-provider.html#events].
+Also for more on Event Listeners please check out [API Reference - Events](https://docs.metamask.io/guide/ethereum-provider.html#events).
 
 ## Connecting MetaMask to your Application {#connecting-metamask-to-app}
 
@@ -51,4 +51,4 @@ Below is a request called `eth_request_accounts` which will trigger a user to lo
     <img src="./connecting_img1.png" alt="Connecting Image 1" />
 </p>
 
-Sometimes requests may or may not have params. A good place to check out all the request methods and details on each is the (API Playground)[https://metamask.github.io/api-playground/api-documentation/].
+Sometimes requests may or may not have params. A good place to check out all the request methods and details on each is the [API Playground](https://metamask.github.io/api-playground/api-documentation/).
