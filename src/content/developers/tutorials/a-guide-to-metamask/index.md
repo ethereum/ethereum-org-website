@@ -5,6 +5,7 @@ author: "Blake Wood Jr."
 tags: [
   "MetaMask", 
   "Getting Started",
+  "JavaScript"
 ]
 skill: beginner
 lang: en
@@ -22,17 +23,32 @@ The first and most important step is initializing your app to support MetaMask. 
     <img src="./initialize_img1.png" alt="Initializing MetaMask Image 1" />
 </p>
 
+Please see [https://docs.metamask.io/guide/getting-started.html](Getting Started) - MetaMask Documentation for more details.
 
-![How to set Ropsten as your network on MetaMask Mobile](./ropstenMetamask.gif)
+I like to use this initialization process to add *Event Listeners* to check for changes that the user is making to MetaMask. The two most important ones I like to setup are Accounts Changed (if a user switches their Account) and Chain Changed (if a user changes the chain in their MetaMask). In the below example, I am using React to set the state of the Account and Chain ID according to events in MetaMask.
 
-## Step 2: Add your collectable to MetaMask {#add-nft-to-metamask}
+<p align="center">
+    <img src="./initialize_img2.png" alt="Initializing MetaMask Image 2" />
+</p>
 
-Once you’re on the Ropsten network, select the “Collectibles” tab on the right and add the NFT smart contract address and the ERC-721 token ID of your NFT — which you should be able to find on Etherscan based on the transaction hash from your NFT deployed in Part II of our tutorial.
+As your see we are setting up 2 Event Listeners, we are listening for any changes to MetaMask the user makes with their Account and Chain ID. For a better understanding of what the Chain IDs mean and which chain they are referring to please check out: Please see [https://docs.metamask.io/guide/ethereum-provider.html#chain-ids](API Reference - Chain IDs)
 
-![How to find your transaction hash and ERC-721 token ID](./findNFTEtherscan.png)
+Also for more on Event Listeners please check out [https://docs.metamask.io/guide/ethereum-provider.html#events](API Reference - Events)
 
-You may need to refresh a couple times to view your NFT — but it will be there <Emoji text="😄" size={1} />!
+## Connecting MetaMask to your Application {#connecting-metamask-to-app}
 
-![How to upload your NFT to MetaMask](./findNFTMetamask.gif)
+For me I feel like there are a few things to know here. One is that you'll have to determine the flow of how you'll want to "connect" MetaMask to your app. MetaMask never truly connects to your application, but is more like an API giving you information when you request it. MetaMask will infact have a Connected button with a green dot to show you that MetaMask has transacted with your application successfully, but it's never truly on point. Below I have some steps that I've used to connect my application successfuly to MetaMask, how to Disconnect, and how to Reconnect and show the user an Account Request again after you've told them they've logged out.
 
-Congrats! You have successfully minted an NFT, and you can now view it! We can’t wait to see how you’ll take the NFT world by storm!
+### 1. Connecting to MetaMask for the first time: 
+
+To connect MetaMask for the first time you'll want to somehow think state of the user's account address as it pertains to your application. The best way to do this is like so: If you've grabbed the user's account # from MetaMask, then they are connected sucessfully.
+
+To make a sucessful request to MetaMask and ask for the user's account from their wallet (they choose), we call a request method: `window.ethereum.request({ method: 'method', params: [] })`
+
+Below is a request called `eth_request_accounts` which will trigger a user to login to their MetaMask wallet and connect:
+
+<p align="center">
+    <img src="./connecting_img1.png" alt="Connecting Image 1" />
+</p>
+
+Sometimes requests may or may not have params. A good place to check out all the request methods and details on each is the [https://metamask.github.io/api-playground/api-documentation/](API Playground).
