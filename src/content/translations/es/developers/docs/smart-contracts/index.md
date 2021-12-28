@@ -7,7 +7,7 @@ sidebar: true
 
 ## ¿Qué es un contrato inteligente?
 
-Un "contrato inteligente" es básicament un programa que se ejecuta en la blockchain de Ethereum. Se trata de un grupo de código (sus funciones) y datos (su estado) que existe en una dirección específica en la blockchain de Ethereum.
+Un "contrato inteligente" es básicamente un programa que se ejecuta en la blockchain de Ethereum. Se trata de un grupo de código (sus funciones) y datos (su estado) que existe en una dirección específica en la blockchain de Ethereum.
 
 Los contratos inteligentes son un tipo de [cuenta de Ethereum](/developers/docs/accounts/). Esto significa que tienen un saldo y pueden enviar transacciones por la red. Sin embargo, no están controlados por un usuario, sino que están implementados en la red y se ejecutan como se hayan programado. Las cuentas de usuario pueden interactuar con un contrato inteligente enviando transacciones que ejecuten una función definida en el contrato inteligente. Los contratos inteligentes pueden definir reglas, como un contrato normal, y automáticamente se ejecutan a través del código.
 
@@ -83,9 +83,9 @@ Los contratos inteligentes son públicos en Ethereum y se pueden considerar API 
 
 Obtén más información sobre la [composición de contratos inteligentes](/developers/docs/smart-contracts/composability/).
 
-## Limitaciónes {#limitations}
+## Limitaciones {#limitations}
 
-Los contratos inteligentes por sí solos no pueden obtener información sobre eventos "del mundo real" porque no pueden enviar solicitudes HTTP. Esto es así de manera predeterminada, ya que que confiar en información externa podría perjudicar al consenso, que es importante para la seguridad y la decentralización.
+Los contratos inteligentes por sí solos no pueden obtener información sobre eventos "del mundo real" porque no pueden enviar solicitudes HTTP. Esto es así de manera predeterminada, ya que que confiar en información externa podría perjudicar al consenso, que es importante para la seguridad y la descentralización.
 
 Hay maneras de eludir esto con ayuda de [oráculos](/developers/docs/oracles/).
 
