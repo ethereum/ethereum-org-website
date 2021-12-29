@@ -81,6 +81,15 @@ const LearningToolsPage = ({ data }) => {
 
   const sandboxes = [
     {
+      name: "Replit",
+      description: "page-learning-tools-replit-description",
+      url: "https://replit.com/@replit/Solidity-starter-beta",
+      image: getImage(data.replit),
+      alt: "page-learning-tools-replit-logo-alt",
+      background: "#11131D",
+      subjects: ["Solidity", "web3"],
+    },
+    {
       name: "Remix",
       description: "page-learning-tools-remix-description",
       url: "https://remix.ethereum.org",
