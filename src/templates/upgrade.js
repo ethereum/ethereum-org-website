@@ -394,7 +394,7 @@ const dropdownLinks = {
   ],
 }
 
-const Eth2Page = ({ data: { mdx } }) => {
+const UpgradePage = ({ data: { mdx } }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang)
   const tocItems = mdx.tableOfContents.items
@@ -469,8 +469,8 @@ const Eth2Page = ({ data: { mdx } }) => {
   )
 }
 
-export const eth2PageQuery = graphql`
-  query Eth2PageQuery($relativePath: String) {
+export const upgradePageQuery = graphql`
+  query UpgradePageQuery($relativePath: String) {
     mdx(fields: { relativePath: { eq: $relativePath } }) {
       fields {
         slug
@@ -510,4 +510,4 @@ export const eth2PageQuery = graphql`
   }
 `
 
-export default Eth2Page
+export default UpgradePage

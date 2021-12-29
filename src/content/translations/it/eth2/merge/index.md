@@ -2,7 +2,7 @@
 title: Docking della rete principale con Eth2
 description: Scopri di più sul docking, ovvero il momento in cui la rete principale Ethereum si unirà al sistema proof of stake coordinato della beacon chain.
 lang: it
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
 summaryPoint1: L'attuale rete principale Ethereum sarà alla fine agganciata con il resto degli aggiornamenti Eth2.

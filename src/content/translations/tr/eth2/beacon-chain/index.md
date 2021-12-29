@@ -2,7 +2,7 @@
 title: İşaret (Beacon) Zinciri
 description: Ethereum'un ilk önemli Eth2 yükseltmesi olan İşaret (Beacon) Zinciri hakkında bilgi alın.
 lang: tr
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/core.png
 summaryPoint1: İşaret (beacon) zinciri bugün kullanmakta olduğumuz Ethereum ile ilgili hiçbir şeyi değiştirmez.

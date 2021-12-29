@@ -2,7 +2,7 @@
 title: Spajanje glavne mreže s nadogradnjom Eth2
 description: Saznajte više o spajanju – pridruživanje glavne mreže Ethereum proof-of-stake sustavu koji koordinira Beacon Chain.
 lang: hr
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
 summaryPoint1: Na kraju će se trenutačna glavna mreža Ethereum „spojiti” s ostatkom nadogradnji Eth2.

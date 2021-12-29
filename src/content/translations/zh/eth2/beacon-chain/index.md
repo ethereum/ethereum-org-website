@@ -2,7 +2,7 @@
 title: 信标链
 description: 了解信标链——以太坊的第一次重大Eth2升级。
 lang: zh
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/core.png
 summaryPoint1: 信标链对我们今天使用的以太坊没有任何变化。

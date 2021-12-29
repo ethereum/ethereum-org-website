@@ -2,7 +2,7 @@
 title: शार्ड चेन
 description: शार्ड चेन के बारे में जानें - नेटवर्क के विभाजन, जो इथेरियम को अधिक लेनदेन क्षमता देते हैं और इसे चलाना आसान बनाते हैं।
 lang: hi
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
 summaryPoint1: शार्डिंग इथेरियम की स्केलेबिलिटी और क्षमता में सुधार करने के लिए एक बहु-चरणीय अपग्रेड है।

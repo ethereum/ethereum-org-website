@@ -2,7 +2,7 @@
 title: Eth2 के साथ डॉकिंग मेननेट
 description: डॉकिंग के बारे में जानें - जब मेननेट इथेरियम बीकन चेन से समन्वित स्टेक-के-प्रमाण सिस्टम में शामिल हो जाता है।
 lang: hi
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
 summaryPoint1: अंततः इथेरियम मेननेट अपग्रेड के बाकी हिस्सों के साथ "डॉक" करेगा।

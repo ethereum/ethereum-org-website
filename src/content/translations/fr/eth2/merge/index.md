@@ -2,7 +2,7 @@
 title: Arrimage du réseau principal avec Eth2
 description: "En savoir plus sur l'arrimage - lorsque le réseau principal Ethereum rejoint le système coordonné de preuve d'enjeu par chaîne phare."
 lang: fr
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
 summaryPoint1: Au final, le réseau principal Ethereum actuel "s''arrimera" au reste des mises à niveau d''Eth2.

@@ -2,7 +2,7 @@
 title: Acoplamiento de la red principal con Eth2
 description: "Obtén más información sobre el acoplamiento: cuando la red principal de Ethereum se une al sistema coordinado de prueba de participación de la Cadena de Baliza."
 lang: es
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
 summaryPoint1: Eventualmente, la red principal de Ethereum actual se "acoplará" con el resto de las actualizaciones de Eth2.

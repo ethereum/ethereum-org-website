@@ -2,7 +2,7 @@
 title: A Beacon Chain
 description: Tudj meg többet a beacon chainről - az Ethereum első nagy Eth2 fejlesztéséről.
 lang: hu
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/core.png
 summaryPoint1: A beacon chain nem változtatja meg azt, ahogy az Ethereumot ma használjuk.

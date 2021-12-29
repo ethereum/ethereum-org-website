@@ -2,7 +2,7 @@
 title: Razdrobljene verige
 description: Preberite več o razdrobljenih verigah – delitve omrežja, ki Ethereumu zagotavljajo boljšo zmogljivost obdelovanja transakcij in lažje izvajanje.
 lang: sl
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
 summaryPoint1: Drobljenje je večstopenjska nadgradnja z namenom izboljšanja Ethereumove nadgradljivosti in kapacitet.

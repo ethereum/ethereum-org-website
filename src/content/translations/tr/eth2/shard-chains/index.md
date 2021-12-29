@@ -2,7 +2,7 @@
 title: Parça Zincirleri  (Shard Chains)
 description: Ethereum'a daha fazla işlem kapasitesi sağlayan ve çalışmasını kolaylaştıran ağ bölümleri - parça zincirleri hakkında bilgi edinin.
 lang: tr
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
 summaryPoint1: Parçalama, Ethereum’un ölçeklenebilirliğini ve kapasitesini geliştirmek için çok aşamalı bir yükseltmedir.

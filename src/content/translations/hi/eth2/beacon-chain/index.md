@@ -2,7 +2,7 @@
 title: बीकन चेन
 description: बीकन चेन के बारे में जानें - इथेरियम में पहला प्रमुख Eth2 अपग्रेड।
 lang: hi
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/core.png
 summaryPoint1: बीकन चेन आज हमारे द्वारा उपयोग किए जाने वाले इथेरियम के बारे में कुछ भी नहीं बदलता है।

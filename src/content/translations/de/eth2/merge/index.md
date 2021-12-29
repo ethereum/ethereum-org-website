@@ -2,7 +2,7 @@
 title: Die Zusammenführung
 description: Lerne mehr über die Fusion - wenn das Ethereum-Mainnet mit dem durch die Beacon Chain koordinierten proof-of-stake-System verbunden wird.
 lang: de
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
 summaryPoint1: Letztlich wird das aktuelle Ethereum Mainnet mit dem beacon chain koordiniertem proof-of-stake system "fusioniert".

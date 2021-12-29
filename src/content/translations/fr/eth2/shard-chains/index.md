@@ -2,7 +2,7 @@
 title: Chaînes de fragments
 description: En savoir plus sur les chaînes de fragments, ces fragmentations du réseau qui donnent à Ethereum une plus grande capacité de transaction et facilitent son exécution.
 lang: fr
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
 summaryPoint1: La fragmentation (ou sharding) est une mise à niveau en plusieurs phases qui améliorera l'évolutivité et la capacité d'Ethereum.

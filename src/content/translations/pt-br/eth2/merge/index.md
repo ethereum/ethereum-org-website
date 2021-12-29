@@ -2,7 +2,7 @@
 title: A integração
 description: Saiba mais sobre a integração que ocorrerá quando a rede principal do Ethereum se unir ao sistema de prova de participação (proof-of-stake) coordenado pela Beacon Chain.
 lang: pt-br
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
 summaryPoint1: Eventualmente, a principal rede atual da Ethereum se "integrará" ao sistema de prova de participação.

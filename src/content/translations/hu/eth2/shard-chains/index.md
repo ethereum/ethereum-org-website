@@ -2,7 +2,7 @@
 title: Shard láncok
 description: Tudj meg többet shard láncokról - a hálózat partícióiról, melyek nagyobb tranzakciós kapacitást és könnyebb futást biztosítanak az Ethereumnak.
 lang: hu
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
 summaryPoint1: A sharding egy többfázisú fejlesztés az Ethereum skálázhatóságának és kapacitásának növelésére.

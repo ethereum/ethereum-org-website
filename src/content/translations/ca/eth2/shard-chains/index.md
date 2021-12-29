@@ -2,7 +2,7 @@
 title: Cadenes de fragments
 description: "Obtén informació sobre les cadenes de fragments: particions de la xarxa que proporcionen a Ethereum més capacitat de transacció i en faciliten l'execució."
 lang: ca
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
 summaryPoint1: La fragmentació es una actualització de diverses fases que millora la capacitat i l'escalabilitat d'Ethereum.

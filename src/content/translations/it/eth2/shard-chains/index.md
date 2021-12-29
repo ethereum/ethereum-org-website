@@ -2,7 +2,7 @@
 title: Shard chain
 description: "Scopri le shard chain: partizioni della rete che assicurano a Ethereum più capacità di transazione e maggior facilità di esecuzione."
 lang: it
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
 summaryPoint1: Lo sharding è un aggiornamento multi-fase che migliorerà la scalabilità e la capacità di Ethereum.

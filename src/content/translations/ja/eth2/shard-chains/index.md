@@ -2,7 +2,7 @@
 title: シャードチェーン
 description: シャードチェーンについて - イーサリアムにトランザクション容量を与え、実行を容易にするネットワークのパーティション。
 lang: ja
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
 summaryPoint1: シャーディングはEthereumのスケーラビリティと容量を向上させるための、マルチフェーズのアップグレードです。

@@ -2,7 +2,7 @@
 title: La chaîne phare
 description: "Découvrez la chaîne phare, première mise à niveau majeure Eth2 d'Ethereum."
 lang: fr
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/core.png
 summaryPoint1: La chaîne phare ne change en rien l'Ethereum que nous utilisons aujourd'hui.

@@ -2,7 +2,7 @@
 title: La Cadena de Baliza
 description: Obtén más información sobre la Cadena de Baliza, la primera actualización de Eth2 a Ethereum.
 lang: es
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/core.png
 summaryPoint1: La Cadena de Baliza no cambia nada sobre el Ethereum que usamos actualmente.

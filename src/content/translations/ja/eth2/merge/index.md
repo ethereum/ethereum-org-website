@@ -2,7 +2,7 @@
 title: マージ
 description: マージについて - メインネットのビーコンチェーンのプルーフ・オブ・ステークシステムへの参加
 lang: ja
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
 summaryPoint1: 最終的には現在のEthereumメインネットはビーコンチェーンのプルーフ・オブ・ステークシステムと"マージ"されます。

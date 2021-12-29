@@ -2,7 +2,7 @@
 title: Unirea
 description: Află mai multe despre unire - atunci când rețeaua principală Ethereum se va alătura sistemului bazat pe Dovada Mizei (proof-of-stake), coordonat de rețeaua Beacon.
 lang: ro
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
 summaryPoint1: În cele din urmă, Rețeaua principală Ethereum se va „uni” cu sistemul bazat pe Dovada Mizei (proof-of-stake), coordonat de rețeaua Beacon.

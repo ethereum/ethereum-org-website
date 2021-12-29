@@ -2,7 +2,7 @@
 title: Сигналната верига
 description: Научета какво е сигналната верига – първият голям Eth2 ъпгрейд на Етереум.
 lang: bg
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/core.png
 summaryPoint1: Сигналната верига не променя нищо от този Етереум, който ползваме днес.

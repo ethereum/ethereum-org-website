@@ -2,7 +2,7 @@
 title: Eth2 ഉപയോഗിച്ച് മെയിൻനെറ്റ് ഡോക്ക് ചെയ്യുന്നു
 description: ഡോക്കിംഗിനെക്കുറിച്ച് അറിയുക - മെയിൻനെറ്റ് Ethereum ബീക്കൺ ചെയിൻ ഏകോപിപ്പിക്കുന്ന പ്രൂഫ് ഓഫ് സ്റ്റേക്ക് സിസ്റ്റത്തിൽ ചേരുമ്പോൾ.
 lang: ml
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
 summaryPoint1: ക്രമേണ നിലവിലെ Ethereum മെയിൻനെറ്റ് ബാക്കി Eth2 അപ്‌ഗ്രേഡുകളുമായി "ഡോക്ക്" ചെയ്യും.

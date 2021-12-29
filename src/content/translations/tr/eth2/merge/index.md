@@ -2,7 +2,7 @@
 title: Ethh2 ile ana ağı kenetleme
 description: Ana ağ Ethereum, İşaret (Beacon) Zinciri koordineli pay ispatı sistemine katıldığında kenetlenme hakkında bilgi alın.
 lang: tr
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
 summaryPoint1: Sonuç olarak İşaret (Beacon) Zinciri Eth2 yükseltmelerinin kalanını "kenetleyecektir".

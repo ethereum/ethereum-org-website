@@ -2,7 +2,7 @@
 title: ビーコンチェーン
 description: ビーコンチェーンについて学ぶ - イーサリアムへの最初の主要なEth2アップグレード。
 lang: ja
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/core.png
 summaryPoint1: ビーコンチェーンは、私たちが今日使用しているEthereumを変えるものではありません。

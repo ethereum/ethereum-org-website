@@ -2,7 +2,7 @@
 title: Стыковка основной сети с Eth2
 description: Узнайте о стыковке - когда основная сеть Ethereum присоединится к системе доказательства владения, координируемой Beacon Chain.
 lang: ru
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
 summaryPoint1: В конце концов основная сеть Ethereum состыкуется с остальными обновлениями Eth2.

@@ -2,7 +2,7 @@
 title: Łańcuch śledzący
 description: Dowiedz się więcej o łańcuchu śledzącym, pierwszym większym uaktualnieniu Eth2 dla Ethereum.
 lang: pl
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/core.png
 summaryPoint1: Łańcuch śledzący nie zmienia nic w Ethereum, którego dziś używamy.

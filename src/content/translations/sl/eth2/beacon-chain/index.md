@@ -2,7 +2,7 @@
 title: Oddajniška veriga
 description: Preberite več o oddajniški verigi – prvi večji nadgradnji Eth2 za Ethereum.
 lang: sl
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/core.png
 summaryPoint1: Oddajniška veriga ne spreminja ničesar glede Ethereuma, ki ga uporabljamo danes.

@@ -2,7 +2,7 @@
 title: Acoblament de la xarxa principal amb Eth2
 description: "Obtén informació sobre l'acoblament: quan la xarxa principal d'Ethereum s'uneix al sistema coordinat de prova de participació de la Cadena de Balisa."
 lang: ca
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
 summaryPoint1: Al final, l'actual xarxa principal d'Ehtereum s'acoblarà amb la resta de les millores d'Eth2.

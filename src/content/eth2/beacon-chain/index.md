@@ -2,7 +2,7 @@
 title: The Beacon Chain
 description: Learn about the beacon chain - the first major Eth2 upgrade to Ethereum.
 lang: en
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../assets/eth2/core.png
 summaryPoint1: The beacon chain doesn't change anything about the Ethereum we use today.

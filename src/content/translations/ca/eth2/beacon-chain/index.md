@@ -2,7 +2,7 @@
 title: La Cadena de Balisa
 description: Obtén informació sobre la Cadena de Balisa, la primera actualització d'Eth2 a Ethereum.
 lang: ca
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/core.png
 summaryPoint1: La Cadena de Balisa no canvia res de l'Ethereum que fem servir a dia d'avui.

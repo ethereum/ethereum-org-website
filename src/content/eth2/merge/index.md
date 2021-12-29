@@ -2,7 +2,7 @@
 title: The merge
 description: Learn about the merge - when Mainnet Ethereum joins the Beacon Chain coordinated proof-of-stake system.
 lang: en
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../assets/eth2/merge.png
 summaryPoint1: Eventually the current Ethereum Mainnet will "merge" with the beacon chain proof-of-stake system.

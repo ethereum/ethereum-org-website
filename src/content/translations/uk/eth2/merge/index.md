@@ -2,7 +2,7 @@
 title: Об’єднання
 description: Дізнайтеся більше про об’єднання — коли основна мережа Ethereum приєднається до координованої системи доказу частки володіння Beacon Chain.
 lang: uk
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
 summaryPoint1: Врешті-решт поточна основна мережа Ethereum об’єднається із системою доказу частки володіння Beacon Chain.

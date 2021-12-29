@@ -2,7 +2,7 @@
 title: 分片链
 description: 了解链——网络的分区可以让以太坊拥有更多的交易能力并使其更容易运行。
 lang: zh
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
 summaryPoint1: 碎片是一个多阶段升级，以提高以太坊的可扩容性和容量。

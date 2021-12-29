@@ -2,7 +2,7 @@
 title: Цепочки-осколки
 description: Узнайте о цепочках-осколках - разделах сети, которые дают Ethereum большую пропускную способность транзакций и облегчают его запуск.
 lang: ru
-template: eth2
+template: upgrade
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
 summaryPoint1: Шардинг представляет собой многоэтапную модернизацию, чтобы улучшить масштабируемость и емкость Ethereum.
