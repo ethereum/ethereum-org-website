@@ -283,7 +283,7 @@ Erigon（前称 TurbohyGeth）是 Go Ethereum 的一个分叉，注重速度和�
 
 ## 以太坊 2.0 客户端 {#eth2-clients}
 
-有新客户端支持[以太坊 2.0 升级](/eth2/beacon-chain/)。 他们将运行信标链，并支持新的[权益证明](/developers/docs/consensus-mechanisms/pos/)共识机制。
+有新客户端支持[以太坊 2.0 升级](/upgrades/beacon-chain/)。 他们将运行信标链，并支持新的[权益证明](/developers/docs/consensus-mechanisms/pos/)共识机制。
 
 [查看以太坊 2.0 客户端](/eth2/get-involved/#clients)。
 

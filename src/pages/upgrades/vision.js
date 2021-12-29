@@ -101,7 +101,7 @@ const VisionPage = ({ data, location }) => {
       image: getImage(data.beaconchain),
       title: <Translation id="page-eth2-beacon-chain-title" />,
       description: <Translation id="page-eth2-beacon-chain-desc" />,
-      to: "/eth2/beacon-chain/",
+      to: "/upgrades/beacon-chain/",
       date: <Translation id="page-eth2-beacon-chain-estimate" />,
     },
     {

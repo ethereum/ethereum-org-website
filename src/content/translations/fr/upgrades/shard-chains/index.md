@@ -12,7 +12,7 @@ summaryPoint4: Les feuilles de route techniques incluent des travaux sur les cha
 ---
 
 <UpgradeStatus date="~2023">
-    Les chaînes de fragments devraient être lancées courant 2023, en fonction de la rapidité avec laquelle le travail progresse après le lancement de <a href="/eth2/beacon-chain/"> la chaîne phare</a>. Ces fragments donneront à Ethereum une plus grande capacité à stocker et à accéder aux données, mais ils ne seront pas utilisés pour exécuter du code. Les détails sont encore en cours d'élaboration.
+    Les chaînes de fragments devraient être lancées courant 2023, en fonction de la rapidité avec laquelle le travail progresse après le lancement de <a href="/upgrades/beacon-chain/"> la chaîne phare</a>. Ces fragments donneront à Ethereum une plus grande capacité à stocker et à accéder aux données, mais ils ne seront pas utilisés pour exécuter du code. Les détails sont encore en cours d'élaboration.
 </UpgradeStatus>
 
 ## Qu'est ce que la fragmentation ou "Sharding" ? {#what-is-sharding}
@@ -85,7 +85,7 @@ Les mises à niveau de l'Eth2 sont en quelque sorte liées. Récapitulons donc c
 
 La chaîne phare contient toute la logique permettant de sécuriser et de synchroniser les fragments de façon sécuritaire. La chaîne phare coordonnera les validateurs du réseau, les assignant aux fragments sur lesquels ils doivent travailler. De plus, elle facilitera la communication entre les fragments en recevant et en stockant des données sur les transactions qui sont accessibles par d'autres fragments. Cela donnera aux fragments un aperçu de l'état d'Ethereum pour garder tout à jour.
 
-<ButtonLink to="/eth2/beacon-chain/">La chaîne phare</ButtonLink>
+<ButtonLink to="/upgrades/beacon-chain/">La chaîne phare</ButtonLink>
 
 ### Fragments et arrimage {#shards-and-docking}
 

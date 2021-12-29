@@ -17,7 +17,7 @@ summaryPoint4: Vous en avez peut-être entendu parler comme étant la "Phase 1.5
 
 ## Qu'est-ce que l'arrimage ? {#what-is-the-docking}
 
-Il est important de se rappeler qu'au départ, les autres mises à niveau Eth2 sont expédiées séparément du [réseau principal](/glossary/#mainnet) - la chaîne que nous utilisons aujourd'hui. Le réseau principal Ethereum continuera d'être sécurisé par [preuve de travail](/developers/docs/consensus-mechanisms/pow/), même pendant que [la chaîne phare](/eth2/beacon-chain/) et ses [chaînes de fragments](/eth2/shard-chains/) seront exécutées en parallèle en utilisant la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/). L'arrimage, ou docking, c'est quand ces deux systèmes sont fusionnés.
+Il est important de se rappeler qu'au départ, les autres mises à niveau Eth2 sont expédiées séparément du [réseau principal](/glossary/#mainnet) - la chaîne que nous utilisons aujourd'hui. Le réseau principal Ethereum continuera d'être sécurisé par [preuve de travail](/developers/docs/consensus-mechanisms/pow/), même pendant que [la chaîne phare](/upgrades/beacon-chain/) et ses [chaînes de fragments](/eth2/shard-chains/) seront exécutées en parallèle en utilisant la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/). L'arrimage, ou docking, c'est quand ces deux systèmes sont fusionnés.
 
 Imaginez qu'Ethereum est un vaisseau spatial qui n’est pas tout à fait prêt pour un voyage interstellaire. Avec la chaîne phare et les chaînes de fragments, la communauté a construit un nouveau moteur et une coque endurcie. Le moment venu, le vaisseau actuel viendra s'arrimer à ce nouveau système pour fusionner avec, afin de passer à la vitesse de la lumière et d'arpenter tout l’univers.
 
@@ -39,7 +39,7 @@ Les mises à niveau de l'Eth2 sont en quelque sorte liées. Récapitulons donc l
 
 Une fois l'arrimage effectué, les validateurs seront affectés à la validation du Mainnet Ethereum. Tout comme avec les chaînes de fragments. [Miner](/developers/docs/consensus-mechanisms/pow/mining/) ne sera plus nécessaire, de sorte que les mineurs investiront probablement leurs gains dans la mise en jeu dans le nouveau système de preuve d'enjeu.
 
-<ButtonLink to="/eth2/beacon-chain/">La chaîne phare</ButtonLink>
+<ButtonLink to="/upgrades/beacon-chain/">La chaîne phare</ButtonLink>
 
 ### Arrimage et chaînes de fragments {#docking-and-shard-chains}
 

@@ -50,7 +50,7 @@ Un validador vota por una [cadena de faros](#beacon-chain) o [fragmento](#shard)
 
 Una actualización de Eth2 que se convertirá en el coordinador de la red Ethereum. Introduce [pruebas de apuesta](#proof-of-stake) y [validadores](#validator) en Ethereum. Posiblemente se fusionará con la [red principal](#mainnet).
 
-<DocLink to="/eth2/beacon-chain/">
+<DocLink to="/upgrades/beacon-chain/">
   Cadena de baliza
 </DocLink>
 

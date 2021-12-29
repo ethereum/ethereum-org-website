@@ -17,7 +17,7 @@ summaryPoint4: Bunu teknik yol haritalarındaki "1,5 Aşaması" olarak tanıyor 
 
 ## Kenetlenme nedir? {#what-is-the-docking}
 
-Başlangıçta diğer Eth2 yükseltmelerinin bugün kullandığımız [ana ağ](/glossary/#mainnet) zincirinden ayrı olarak gönderildiğini unutmamak gerekir. [İşaret (Beacon) Zinciri](/eth2/beacon-chain/) ve [shard zincirleri](/eth2/shard-chains/) [pay ispatı](/developers/docs/consensus-mechanisms/pos/) kullanılarak paralel çalışırken bile Ethereum ana ağı [çalışma ispatı](/developers/docs/consensus-mechanisms/pow/) ile güvence altına alınmaya devam edecektir. Kenetlenme iki sistem birleştirildiğinde gerçekleşir.
+Başlangıçta diğer Eth2 yükseltmelerinin bugün kullandığımız [ana ağ](/glossary/#mainnet) zincirinden ayrı olarak gönderildiğini unutmamak gerekir. [İşaret (Beacon) Zinciri](/upgrades/beacon-chain/) ve [shard zincirleri](/eth2/shard-chains/) [pay ispatı](/developers/docs/consensus-mechanisms/pos/) kullanılarak paralel çalışırken bile Ethereum ana ağı [çalışma ispatı](/developers/docs/consensus-mechanisms/pow/) ile güvence altına alınmaya devam edecektir. Kenetlenme iki sistem birleştirildiğinde gerçekleşir.
 
 Ethereum'un yıldızlararası bir yolculuk için pek de hazır olmayan bir uzay aracı olduğunu hayal edin. İşaret (Beacon) Zinciri ve shard zincirleriyle topluluk yeni bir motor ve sertleştirilmiş bir gövde inşa etmiş oldu. Zamanı geldiğinde, mevcut gemi bu yeni sistemle kenetlenecek ve böylece ciddi ışık yılları geçirmeye ve evreni ele geçirmeye hazır tek bir gemi haline gelebilecektir.
 
@@ -39,7 +39,7 @@ Eth2 yükseltmelerinin tümü bir şekilde birbiriyle ilişkilidir. Dolayısıyl
 
 Kenetlenme gerçekleştiğinde, staker'ler Ethereum ana ağını doğrulamak için atanacaktır. Aynı shard zincirlerinde olduğu gibi. [Madencilik](/developers/docs/consensus-mechanisms/pow/mining/) artık gerekli olmayacak, bu nedenle madenciler muhtemelen kazançlarını yeni pay ispatı sistemindeki paydaşlığa yatıracaklardır.
 
-<ButtonLink to="/eth2/beacon-chain/">İşaret (Beacon) Zinciri</ButtonLink>
+<ButtonLink to="/upgrades/beacon-chain/">İşaret (Beacon) Zinciri</ButtonLink>
 
 ### Kenetleme ve shard zincirleri {#docking-and-shard-chains}
 

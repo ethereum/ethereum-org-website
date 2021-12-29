@@ -12,7 +12,7 @@ summaryPoint4: Teknik yol haritası, "1. Aşama" ve potansiyel olarak "2. Aşama
 ---
 
 <UpgradeStatus date="~2023">
-    Parça zincirleri, <a href="/eth2/beacon-chain/">İşaret Zinciri</a> başlatıldıktan sonra işin ne kadar hızlı ilerlediğine bağlı olarak 2023'de gönderilmelidir. Bu parçalar, Ethereum'a verileri depolamak ve bunlara erişmek için daha fazla kapasite sağlayacak, ancak kod yürütmek için kullanılmayacak. Detayları hala öğrenim aşamasında.
+    Parça zincirleri, <a href="/upgrades/beacon-chain/">İşaret Zinciri</a> başlatıldıktan sonra işin ne kadar hızlı ilerlediğine bağlı olarak 2023'de gönderilmelidir. Bu parçalar, Ethereum'a verileri depolamak ve bunlara erişmek için daha fazla kapasite sağlayacak, ancak kod yürütmek için kullanılmayacak. Detayları hala öğrenim aşamasında.
 </UpgradeStatus>
 
 ## Parçalama nedir? {#what-is-sharding}
@@ -85,7 +85,7 @@ Eth2 yükseltmelerinin tamamı bir biçimde ilişkilidir. O halde, parça zincir
 
 İşaret zinciri, parçaları güvende tutmak ve senkronize etmek için tüm mantığı içerir. İşaret zinciri , ağdaki staker'ları koordine ederek onları üzerinde çalışmaları gereken parçalara atayacaktır. Ayrıca, diğer parçalar(shard) tarafından erişilebilen parça(shard)işlem verilerini alarak ve depolayarak parçalar (shard) arasındaki iletişimi kolaylaştıracaktır. Bu, her şeyi güncel tutmak için parçalara Ethereum'un durumunun bir anlık görüntüsünü verecektir.
 
-<ButtonLink to="/eth2/beacon-chain/">İşaret (Beacon) Zinciri</ButtonLink>
+<ButtonLink to="/upgrades/beacon-chain/">İşaret (Beacon) Zinciri</ButtonLink>
 
 ### Parçalar (Shard) ve kenetlenme {#shards-and-docking}
 

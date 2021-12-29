@@ -37,7 +37,7 @@ Si certificas bloques maliciosos, perderás tu apuesta.
 
 ### La cadena de baliza (blockchain) {#the-beacon-chain}
 
-Cuando en Ethereum se reemplaza la Prueba de trabajo por la Prueba de participación, se añade la complejidad de las [cadenas fragmentadas](/eth2/shard-chains/). Se trata de cadenas de valores independientes que necesitarán validadores para procesar las transacciones y crear nuevos bloques. El plan es disponer de 64 cadenas fragmentadas y todos necesitan comprender cuál es el estado de la red. Por eso, una coordinación extra es necesaria y se realizará mediante [cadena de baliza](/eth2/beacon-chain/).
+Cuando en Ethereum se reemplaza la Prueba de trabajo por la Prueba de participación, se añade la complejidad de las [cadenas fragmentadas](/eth2/shard-chains/). Se trata de cadenas de valores independientes que necesitarán validadores para procesar las transacciones y crear nuevos bloques. El plan es disponer de 64 cadenas fragmentadas y todos necesitan comprender cuál es el estado de la red. Por eso, una coordinación extra es necesaria y se realizará mediante [cadena de baliza](/upgrades/beacon-chain/).
 
 La cadena de baliza recibe la información del estado de los fragmentos y la hace disponible para otros fragmentos para que, de este modo, la red pueda permanecer sincronizada. La cadena de baliza también gestionará a los validadores, desde el registro de los depósitos de sus apuestas hasta la emisión de sus recompensas y penalizaciones.
 

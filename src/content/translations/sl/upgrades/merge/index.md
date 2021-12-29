@@ -17,7 +17,7 @@ summaryPoint4: Predhodno smo jo omenjali kot "priklop".
 
 ## Kaj je spojitev? {#what-is-the-docking}
 
-Pomembno si je zapomniti, da na začetku [oddajniška veriga](/eth2/beacon-chain/) deluje ločeno od [glavnega omrežja](/glossary/#mainnet) - verige, ki jo uporabljamo danes. Glavno omrežje Ethereum je še vedno zaščiteno z [dokazom o delu](/developers/docs/consensus-mechanisms/pow/), čeprav oddajniška veriga vzporedno deluje z uporabo [dokaza o deležu](/developers/docs/consensus-mechanisms/pos/). Spojitev predstavlja trenutek, ko se ta dva sistema končno združita.
+Pomembno si je zapomniti, da na začetku [oddajniška veriga](/upgrades/beacon-chain/) deluje ločeno od [glavnega omrežja](/glossary/#mainnet) - verige, ki jo uporabljamo danes. Glavno omrežje Ethereum je še vedno zaščiteno z [dokazom o delu](/developers/docs/consensus-mechanisms/pow/), čeprav oddajniška veriga vzporedno deluje z uporabo [dokaza o deležu](/developers/docs/consensus-mechanisms/pos/). Spojitev predstavlja trenutek, ko se ta dva sistema končno združita.
 
 Predstavljajte si, da je Ethereum vesoljska ladja, ki še ni povsem pripravljena na medzvezdno potovanje. Z oddajniško verigo je skupnost pripravila nov motor in bolj utrjen trup. Ko bo nastopil načrtovan trenutek, se bo trenutna ladja priklopila na ta nov sistem. Tako se bosta združila v eno ladjo, ki bo pripravljena, da prepotuje veliko svetlobnih let in zavzame vesolje.
 
@@ -43,7 +43,7 @@ Nadgradnje Eth2 so vse delno medsebojno povezane. Torej povzemimo, kako spojitev
 
 Ko pride do spojitve, bodo zastavljalci zadolženi za potrjevanje glavnega omrežja Ethereum. [Rudarjenje](/developers/docs/consensus-mechanisms/pow/mining/) ne bo več potrebno, tako da bodo rudarji svoje zaslužke verjetno vložili v zastavljanje v novem sistemu z dokazom o deležu.
 
-<ButtonLink to="/eth2/beacon-chain/">Oddajniška veriga</ButtonLink>
+<ButtonLink to="/upgrades/beacon-chain/">Oddajniška veriga</ButtonLink>
 
 ### Spojitev in čistka po spojitvi {#merge-and-post-merge-cleanup}
 

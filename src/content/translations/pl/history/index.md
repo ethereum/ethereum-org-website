@@ -80,11 +80,11 @@ Uaktualnienie Berlin optymalizuje koszt gazu przy pewnych działaniach EVM oraz 
 
 #### Podsumowanie {#beacon-chain-genesis-summary}
 
-[Łańcuch śledzący ](/eth2/beacon-chain/) potrzebował 16384 depozytów z 32 zestakowanymi ETH, aby zapewnić bezpieczną wysyłkę. Stało się to 27 listopada, co oznacza, że łańcuch śledzący (​​Beacon Chain) rozpoczął produkcję bloków 1 grudnia 2020 roku. To ważny pierwszy krok w realizacji [wizji Eth2](/eth2/vision/).
+[Łańcuch śledzący ](/upgrades/beacon-chain/) potrzebował 16384 depozytów z 32 zestakowanymi ETH, aby zapewnić bezpieczną wysyłkę. Stało się to 27 listopada, co oznacza, że łańcuch śledzący (​​Beacon Chain) rozpoczął produkcję bloków 1 grudnia 2020 roku. To ważny pierwszy krok w realizacji [wizji Eth2](/eth2/vision/).
 
 [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/eth2/beacon-chain/">
+<DocLink to="/upgrades/beacon-chain/">
   Łańcuch śledzący
 </DocLink>
 
@@ -96,7 +96,7 @@ Uaktualnienie Berlin optymalizuje koszt gazu przy pewnych działaniach EVM oraz 
 
 #### Podsumowanie {#deposit-contract-summary}
 
-Do ekosystemu Ethereum został wprowadzony kontrakt depozytu na staking Choć był to kontrakt [sieci głównej](/glossary/#staking), miał bezpośredni wpływ na harmonogram wprowadzania [łańcucha odłamkowego](/eth2/beacon-chain/), ważnego [ulepszenia Eth2](/eth2/).
+Do ekosystemu Ethereum został wprowadzony kontrakt depozytu na staking Choć był to kontrakt [sieci głównej](/glossary/#staking), miał bezpośredni wpływ na harmonogram wprowadzania [łańcucha odłamkowego](/upgrades/beacon-chain/), ważnego [ulepszenia Eth2](/eth2/).
 
 [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 

@@ -17,7 +17,7 @@ summaryPoint4: Es coneix també com a "Phase1.5" a la planificació tècnica.
 
 ## Què és l'acoblament? {#what-is-the-docking}
 
-És important recordar que inicialment les altres actualitzacions d'Eth2 estan essent enviades de forma separada des de la [xarxa principal](/glossary/#mainnet), la cadena que utilitzem avui en dia. La xarxa principal d'Ethereum seguirà estant protegida mitjançant la [prova de treball](/developers/docs/consensus-mechanisms/pow/), fins i tot quan [ la Cadena de Balisa ](/eth2/beacon-chain/)i les seves [ cadenes de fragments ](/eth2/shard-chains/) s'executin en paral·lel utilitzant [ prova de participació](/developers/docs/consensus-mechanisms/pos/). L'acoblament és quan aquests dos sistemes es fusionen.
+És important recordar que inicialment les altres actualitzacions d'Eth2 estan essent enviades de forma separada des de la [xarxa principal](/glossary/#mainnet), la cadena que utilitzem avui en dia. La xarxa principal d'Ethereum seguirà estant protegida mitjançant la [prova de treball](/developers/docs/consensus-mechanisms/pow/), fins i tot quan [ la Cadena de Balisa ](/upgrades/beacon-chain/)i les seves [ cadenes de fragments ](/eth2/shard-chains/) s'executin en paral·lel utilitzant [ prova de participació](/developers/docs/consensus-mechanisms/pos/). L'acoblament és quan aquests dos sistemes es fusionen.
 
 Imagina que Ethereum és una nau espacial que no està del tot preparada per a un viatge interestel·lar. Amb la Cadena de Balisa i les cadenes de fragments, la comunitat ha creat un nou motor i un habitacle més reforçat. Quan sigui el moment, la nau actual s'acoblarà a aquest nou sistema per convertir-se en una única nau, preparada per viatjar a anys llum i conquerir l'univers.
 
@@ -39,7 +39,7 @@ D'alguna manera les millores de Eth2 estan interrelacionades. Per tant, anem a v
 
 Un cop succeeix l'acoblament, s'assignaran els participants per validar la xarxa principal d'Ethereum. Igual que amb les cadenes de fragments. [La mineria](/developers/docs/consensus-mechanisms/pow/mining/) ja no farà falta, per tant, el miners probablement invertiran els seus guanys en participacions en el nou sistema de prova de participació.
 
-<ButtonLink to="/eth2/beacon-chain/">La Cadena de Balisa</ButtonLink>
+<ButtonLink to="/upgrades/beacon-chain/">La Cadena de Balisa</ButtonLink>
 
 ### L'acoblament i les cadenes de fragments {#docking-and-shard-chains}
 

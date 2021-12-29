@@ -17,7 +17,7 @@ summaryPoint4: 過去には "ドッキング"と呼ばれていました。
 
 ## マージとは {#what-is-the-docking}
 
-最初に、[ビーコンチェーン](/eth2/beacon-chain/)が、現在使われている [メインネット](/glossary/#mainnet) とは別にリリースされたことに留意することが重要です。 Ethereum メインネットは、 [プルーフ・オブ・ワーク(PoW)](/developers/docs/consensus-mechanisms/pow/)によって引き続き保護される一方、ビーコンチェーンは[プルーフ・オブ・ステーク(PoS)](/developers/docs/consensus-mechanisms/pos/) を併用し実行します。 このマージにより、この 2 つのシステムが最終的に結合されます。
+最初に、[ビーコンチェーン](/upgrades/beacon-chain/)が、現在使われている [メインネット](/glossary/#mainnet) とは別にリリースされたことに留意することが重要です。 Ethereum メインネットは、 [プルーフ・オブ・ワーク(PoW)](/developers/docs/consensus-mechanisms/pow/)によって引き続き保護される一方、ビーコンチェーンは[プルーフ・オブ・ステーク(PoS)](/developers/docs/consensus-mechanisms/pos/) を併用し実行します。 このマージにより、この 2 つのシステムが最終的に結合されます。
 
 イーサリアムは恒星間航海にはまだ準備ができていない宇宙船だと想像してください。 ビーコンチェーンで、コミュニティは新しいエンジンと強化された船体を構築しました。 適切な時期が来ると、現在の船はこの新しいシステムにドッキングして一隻の船になることができ、数光年にわたる宇宙旅行に旅立つ準備ができます。
 
@@ -43,7 +43,7 @@ Eth2 の複数のアップグレードは相互の依存関係があります。
 
 マージが完了すると、割り当てられたステーカーが Ethereum メインネットを検証します。 [マイニング](/developers/docs/consensus-mechanisms/pow/mining/) はもう必要なくなり、マイナーは新しい PoS システムに自分の利益を投資する可能性が高くなります。
 
-<ButtonLink to="/eth2/beacon-chain/">ビーコンチェーン</ButtonLink>
+<ButtonLink to="/upgrades/beacon-chain/">ビーコンチェーン</ButtonLink>
 
 ### マージとマージ後のクリーンアップ {#merge-and-post-merge-cleanup}
 

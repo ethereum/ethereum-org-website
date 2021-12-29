@@ -89,7 +89,7 @@ Nadgradnje Eth2 so vse delno medsebojno povezane. Ponovimo torej, kako razdroblj
 
 Oddajniška veriga vsebuje vso logiko za zagotavljanje varnosti in sinhronizacije razdrobljenih verig. Usklajevala bo zastavljalce v omrežju in jim dodeljevala drobce, na katerih naj delajo. Prav tako bo lajšala komunikacijo med drobci s prejemanjem in shranjevanjem podatkov o transakcijah v drobcu, ki bodo dostopni drugim drobcem. To jim bo zagotovilo posnetek stanja Ethereuma, tako da bo vse vedno posodobljeno.
 
-<ButtonLink to="/eth2/beacon-chain/">Oddajniška veriga</ButtonLink>
+<ButtonLink to="/upgrades/beacon-chain/">Oddajniška veriga</ButtonLink>
 
 ### Drobci in spojitev {#shards-and-docking}
 

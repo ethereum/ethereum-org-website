@@ -134,11 +134,11 @@ The Berlin upgrade optimized gas cost for certain EVM actions, and increases sup
 
 #### Summary {#beacon-chain-genesis-summary}
 
-The [Beacon Chain](/eth2/beacon-chain/) needed 16384 deposits of 32 staked ETH to ship securely. This happened on November 27, meaning the Beacon Chain started producing blocks on December 1, 2020. This is an important first step in achieving the [Eth2 vision](/eth2/vision/).
+The [Beacon Chain](/upgrades/beacon-chain/) needed 16384 deposits of 32 staked ETH to ship securely. This happened on November 27, meaning the Beacon Chain started producing blocks on December 1, 2020. This is an important first step in achieving the [Eth2 vision](/eth2/vision/).
 
 [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/eth2/beacon-chain/">
+<DocLink to="/upgrades/beacon-chain/">
   The Beacon Chain
 </DocLink>
 
@@ -153,7 +153,7 @@ The [Beacon Chain](/eth2/beacon-chain/) needed 16384 deposits of 32 staked ETH t
 
 #### Summary {#deposit-contract-summary}
 
-The staking deposit contract introduced [staking](/glossary/#staking) to the Ethereum ecosystem. Although a [Mainnet](/glossary/#mainnet) contract, it had a direct impact on the timeline for launching the [Beacon Chain](/eth2/beacon-chain/), an important [Eth2 upgrade](/eth2/).
+The staking deposit contract introduced [staking](/glossary/#staking) to the Ethereum ecosystem. Although a [Mainnet](/glossary/#mainnet) contract, it had a direct impact on the timeline for launching the [Beacon Chain](/upgrades/beacon-chain/), an important [Eth2 upgrade](/eth2/).
 
 [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 

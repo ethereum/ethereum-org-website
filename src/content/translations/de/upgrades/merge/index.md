@@ -17,7 +17,7 @@ summaryPoint4: Welches wir zuvor als "die Kupplung" bezeichneten.
 
 ## Was ist die Verkuppelung? {#what-is-the-docking}
 
-Es ist wichtig, sich daran zu erinnern, dass die [Beacon Chain](/eth2/beacon-chain/) ursprünglich getrennt vom [Mainnet](/glossary/#mainnet) - der Chain, die wir heute verwenden - eingeführt wurde. Das Ethereum Mainnet wird weiterhin durch [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/) gesichert, auch wenn die Beacon Chain parallel dazu mit [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) läuft. Die Verkupplung ist der Moment, in dem diese beiden Systeme endlich zusammenkommen.
+Es ist wichtig, sich daran zu erinnern, dass die [Beacon Chain](/upgrades/beacon-chain/) ursprünglich getrennt vom [Mainnet](/glossary/#mainnet) - der Chain, die wir heute verwenden - eingeführt wurde. Das Ethereum Mainnet wird weiterhin durch [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/) gesichert, auch wenn die Beacon Chain parallel dazu mit [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) läuft. Die Verkupplung ist der Moment, in dem diese beiden Systeme endlich zusammenkommen.
 
 Stelle dir Ethereum als Raumschiff vor, das noch nicht ganz für seine interstellare Reise bereit ist. Mit der Beacon Chain hat die Community einen neuen Motor und einen gehärteten Rumpf gebaut. Wenn die Zeit reif ist, wird das aktuelle Schiff an das neue System andocken und zu einem Schiff verschmelzen, das bereit ist, einige Lichtjahre zurückzulegen und das Universum zu erobern.
 
@@ -43,7 +43,7 @@ Die Eth2-Upgrades sind alle miteinander verknüpft. Fassen wir also noch einmal 
 
 Sobald die Verkupplung erfolgt ist, werden Staker eingesetzt, um das Ethereum Mainnet zu validieren. [Mining](/developers/docs/consensus-mechanisms/pow/mining/) wird nicht mehr erforderlich sein, sodass die Miner aller Voraussicht nach ihre verdienten Ether ins Staking im Rahmen des proof-of-stake-Systems einbringen werden.
 
-<ButtonLink to="/eth2/beacon-chain/">Die Beacon Chain</ButtonLink>
+<ButtonLink to="/upgrades/beacon-chain/">Die Beacon Chain</ButtonLink>
 
 ### Die Verkupplung und die Bereinigung nach der Verkupplung {#merge-and-post-merge-cleanup}
 

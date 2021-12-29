@@ -58,7 +58,7 @@ Walidator głosuje na [łańcuch śledzący](#beacon-chain) lub [blok](#block) [
 
 Ulepszenie Eth2, które stanie się koordynatorem sieci Ethereum. Wprowadza [proof of stake](#proof-of-stake) i [walidatorów](#validator) do Ethereum. Zostanie on ostatecznie połączony z [siecią główną](#mainnet).
 
-<DocLink to="/eth2/beacon-chain/">
+<DocLink to="/upgrades/beacon-chain/">
   Łańcuch śledzący
 </DocLink>
 

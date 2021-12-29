@@ -381,7 +381,7 @@ const dropdownLinks = {
   items: [
     {
       text: "page-eth2-upgrades-beacon-chain",
-      to: "/eth2/beacon-chain/",
+      to: "/upgrades/beacon-chain/",
     },
     {
       text: "page-eth2-upgrades-docking",

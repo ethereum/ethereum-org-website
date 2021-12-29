@@ -63,7 +63,7 @@ A validator vote for a [Beacon Chain](#beacon-chain) or [shard](#shard) [block](
 
 An Eth2 upgrade that will become the coordinator for the Ethereum network. It introduces [proof-of-stake](#pos) and [validators](#validator) to Ethereum. It will eventually be merged with [Mainnet](#mainnet).
 
-<DocLink to="/eth2/beacon-chain/">
+<DocLink to="/upgrades/beacon-chain/">
   Beacon Chain
 </DocLink>
 

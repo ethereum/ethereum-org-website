@@ -95,11 +95,11 @@ Altair 升级是[信标链](/eth2/beacon-chain)的第一次预定升级。 预�
 
 #### 概览 {#beacon-chain-genesis-summary}
 
-[信标链](/eth2/beacon-chain/)需要 16384 个 ETH 并且每个节点拥有 32 个 ETH，以保证网络安全。 这发生在 2020 年 11 月 27 日，意味着信标链在 2020 年 12 月 1 日开始产生区块。 这是实现 [Eth2.0 愿景](/eth2/vision/)的重要一步。
+[信标链](/upgrades/beacon-chain/)需要 16384 个 ETH 并且每个节点拥有 32 个 ETH，以保证网络安全。 这发生在 2020 年 11 月 27 日，意味着信标链在 2020 年 12 月 1 日开始产生区块。 这是实现 [Eth2.0 愿景](/eth2/vision/)的重要一步。
 
 [请阅读以太坊基金会公告](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/eth2/beacon-chain/">
+<DocLink to="/upgrades/beacon-chain/">
   信标链
 </DocLink>
 
@@ -114,7 +114,7 @@ Altair 升级是[信标链](/eth2/beacon-chain)的第一次预定升级。 预�
 
 #### 概览 {#deposit-contract-summary}
 
-质押存款合约将[质押](/glossary/#staking)引入以太坊生态系统。 虽然这只是一个[主网](/glossary/#mainnet) 合约，但它直接影响了 [信标链](/eth2/beacon-chain/)的发布，而这是[Eth2 升级](/eth2/)的重要部分。
+质押存款合约将[质押](/glossary/#staking)引入以太坊生态系统。 虽然这只是一个[主网](/glossary/#mainnet) 合约，但它直接影响了 [信标链](/upgrades/beacon-chain/)的发布，而这是[Eth2 升级](/eth2/)的重要部分。
 
 [请阅读以太坊基金会公告](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 

@@ -17,7 +17,7 @@ summaryPoint4: To vam može biti poznato kao „faza 1.5” na tehničkim planov
 
 ## Što je spajanje? {#what-is-the-docking}
 
-Važno je imati na umu da se u početku ostale nadogradnje Eth2 isporučuju odvojeno od [ glavne mreže ](/glossary/#mainnet) – lanca kojim se koristimo danas. Glavna mreža Ethereum i dalje biti osigurana pomoću mehanizma [proof-of-work](/developers/docs/consensus-mechanisms/pow/), čak i dok [Beacon Chain](/eth2/beacon-chain/) i njegovi [lanci djelića](/eth2/shard-chains/) rade paralelno pomoću mehanizma [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). Spajanje je kad se ova dva sustava sjedine.
+Važno je imati na umu da se u početku ostale nadogradnje Eth2 isporučuju odvojeno od [ glavne mreže ](/glossary/#mainnet) – lanca kojim se koristimo danas. Glavna mreža Ethereum i dalje biti osigurana pomoću mehanizma [proof-of-work](/developers/docs/consensus-mechanisms/pow/), čak i dok [Beacon Chain](/upgrades/beacon-chain/) i njegovi [lanci djelića](/eth2/shard-chains/) rade paralelno pomoću mehanizma [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). Spajanje je kad se ova dva sustava sjedine.
 
 Zamislite da je Ethereum svemirski brod koji nije baš spreman za međuzvjezdano putovanje. Zajednica je s nadogradnjom Beacon chain i lancima djelića izgradila novi motor i očvrsnuti trup. Kad dođe vrijeme, trenutačni brod pristat će uz novi sustav i oni će postati jedno, spremni za ozbiljne svjetlosne godine i zauzimanje svemira.
 
@@ -39,7 +39,7 @@ Sve su nadogradnje Eth2 donekle međusobno povezane. Pa, sagledajmo kakav odnos 
 
 Nakon spajanja, bit će dodijeljeni učesnici koji će provjeriti valjanost mreže Ethereum. Baš kao i s lancima djelića. [ Rudarenje ](/developers/docs/consensus-mechanisms/pow/mining/) više neće biti potrebno, pa će rudari svoju zaradu vjerojatno uložiti u učešća u novom sustavu proof-of-stake.
 
-<ButtonLink to="/eth2/beacon-chain/">Beacon Chain</ButtonLink>
+<ButtonLink to="/upgrades/beacon-chain/">Beacon Chain</ButtonLink>
 
 ### Spajanje i lanci djelića {#docking-and-shard-chains}
 

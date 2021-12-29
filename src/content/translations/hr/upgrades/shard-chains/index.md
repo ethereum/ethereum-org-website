@@ -12,7 +12,7 @@ summaryPoint4: Tehnički planovi uključuju rad na lancima djelića u „fazi 1�
 ---
 
 <UpgradeStatus date="~2023">
-    Lanci djelića trebali bi se isporučiti u 2023. godini, ovisno o tome koliko će brzo napredovati radovi nakon pokretanja nadogradnje <a href="/eth2/beacon-chain/"> Beacon Chain </a>. Ti će djelići Ethereumu dati veći kapacitet za pohranu i pristup podacima, ali neće se upotrebljavati za izvršavanje koda. Pojedinosti o tome još se otkrivaju.
+    Lanci djelića trebali bi se isporučiti u 2023. godini, ovisno o tome koliko će brzo napredovati radovi nakon pokretanja nadogradnje <a href="/upgrades/beacon-chain/"> Beacon Chain </a>. Ti će djelići Ethereumu dati veći kapacitet za pohranu i pristup podacima, ali neće se upotrebljavati za izvršavanje koda. Pojedinosti o tome još se otkrivaju.
 </UpgradeStatus>
 
 ## Što je razdjeljivanje? {#what-is-sharding}
@@ -85,7 +85,7 @@ Sve su nadogradnje Eth2 donekle međusobno povezane. Dakle, ponovimo ukratko kak
 
 Beacon Chain sadrži svu logiku za održavanje djelića na sigurnom i sinkroniziranim. Beacon Chain koordinirat će učesnike u mreži, dodjeljujući ih djelićima na kojima trebaju raditi. Također će olakšati komunikaciju između djelića primanjem i pohranom podataka o transakcijama djelića kojima mogu pristupiti drugi djelići. To će djelićima dati snimak stanja Ethereuma kako bi sve bilo ažurno.
 
-<ButtonLink to="/eth2/beacon-chain/">Beacon Chain</ButtonLink>
+<ButtonLink to="/upgrades/beacon-chain/">Beacon Chain</ButtonLink>
 
 ### Djelići i spajanje {#shards-and-docking}
 

@@ -12,7 +12,7 @@ summaryPoint4: A technikai ütemtervek tartalmazzák a shard láncokhoz tartozó
 ---
 
 <UpgradeStatus date="2023">
-    A shard láncokat nagyjából 2023 körül kellene bevezetni attól függően, hogy milyen előrelépések történnek <a href="/eth2/beacon-chain/">a Beacon Chain</a> elindítása után. Ezek a shardok az Ethereum számára nagyobb tárolási és elérési kapacitást tesznek lehetővé, de kód futtatásra nem lehet majd használni. Annak részletei még kialakulóban vannak.
+    A shard láncokat nagyjából 2023 körül kellene bevezetni attól függően, hogy milyen előrelépések történnek <a href="/upgrades/beacon-chain/">a Beacon Chain</a> elindítása után. Ezek a shardok az Ethereum számára nagyobb tárolási és elérési kapacitást tesznek lehetővé, de kód futtatásra nem lehet majd használni. Annak részletei még kialakulóban vannak.
 </UpgradeStatus>
 
 ## Mi az a sharding? {#what-is-sharding}
@@ -85,7 +85,7 @@ Az Eth2 fejlesztések némileg összefüggnek. Foglaljuk össze tehát, hogy a s
 
 A beacon chain tartalmazza a shardok biztonságához és szinkronizáltságához szükséges összes információt. A beacon chain fogja koordinálni a letétbe helyezőket a hálózaton úgy, hogy shardokat oszt ki nekik, amin dolgozniuk kell. És megkönnyíti a shardok közötti kommunikációt azáltal, hogy shardok tranzakciós adatait fogadja és tárolja, amelyekhez más shardok is hozzáférhetnek. Ez a shardoknak egy pillanatképet fog adni az Ethereum állapotáról, hogy minden naprakész legyen.
 
-<ButtonLink to="/eth2/beacon-chain/">A Beacon Chain</ButtonLink>
+<ButtonLink to="/upgrades/beacon-chain/">A Beacon Chain</ButtonLink>
 
 ### A shardok és a dokkolás {#shards-and-docking}
 

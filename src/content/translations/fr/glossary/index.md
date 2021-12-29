@@ -50,7 +50,7 @@ Il s'agit du vote d'un validateur pour un bloc de la [chaîne phare](#beacon-cha
 
 Une mise à niveau Eth2 qui deviendra la coordinatrice du réseau Ethereum. Elle introduit la [preuve d'enjeu](#proof-of-stake) et [les validateurs](#validator) sur Ethereum. Elle finira par être fusionnée avec le [réseau principal](#mainnet).
 
-<DocLink to="/eth2/beacon-chain/">
+<DocLink to="/upgrades/beacon-chain/">
   Chaîne phare
 </DocLink>
 

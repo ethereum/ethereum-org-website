@@ -17,7 +17,7 @@ summaryPoint4: Antes, era chamada de "atracagem".
 
 ## De que se trata a integração? {#what-is-the-docking}
 
-É importante lembrar que, inicialmente, a [Beacon Chain](/eth2/beacon-chain/) é implementada separadamente da [Rede principal](/glossary/#mainnet), a cadeia que usamos hoje. A Rede principal da Ethereum continua a ser protegida pela [proof-of-work](/developers/docs/consensus-mechanisms/pow/), mesmo enquanto a Beacon Chain funciona em paralelo usando [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). A integração é quando estes dois sistemas finalmente se unem.
+É importante lembrar que, inicialmente, a [Beacon Chain](/upgrades/beacon-chain/) é implementada separadamente da [Rede principal](/glossary/#mainnet), a cadeia que usamos hoje. A Rede principal da Ethereum continua a ser protegida pela [proof-of-work](/developers/docs/consensus-mechanisms/pow/), mesmo enquanto a Beacon Chain funciona em paralelo usando [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). A integração é quando estes dois sistemas finalmente se unem.
 
 Imagine que Ethereum é uma espaçonave que ainda não está pronta para uma viagem interestelar. Com a Beacon Chain, a comunidade desenvolveu um novo mecanismo muito mais sólido. Quando for a hora, ocorrerá a integração desses dois sistemas, dando surgimento a um novo sistema que estará totalmente preparado para o futuro.
 
@@ -43,7 +43,7 @@ Todas as melhorias da Eth2 estão de alguma forma interligadas. Então vamos rec
 
 Depois da integração, será feita a atribuição de participantes (stakers) para validar a rede principal do Ethereum. A [mineração](/developers/docs/consensus-mechanisms/pow/mining/) não será mais necessária e, portanto, os mineradores provavelmente investirão os seus ganhos para participar do novo sistema de prova de participação (proof-of-stake).
 
-<ButtonLink to="/eth2/beacon-chain/">A Beacon Chain</ButtonLink>
+<ButtonLink to="/upgrades/beacon-chain/">A Beacon Chain</ButtonLink>
 
 ### A integração e a limpeza depois da integração {#merge-and-post-merge-cleanup}
 

@@ -50,7 +50,7 @@ Il voto di un validatore per una [beacon chain](#beacon-chain) o [blocco](#block
 
 Aggiornamento a Eth2 che diventerà il coordinatore della rete Ethereum. Introduce la [proof-of-stake](#proof-of-stake) e i [validatori](#validator) in Ethereum. Alla fine sarà unita con la [rete principale](#mainnet).
 
-<DocLink to="/eth2/beacon-chain/">
+<DocLink to="/upgrades/beacon-chain/">
   Beacon chain
 </DocLink>
 

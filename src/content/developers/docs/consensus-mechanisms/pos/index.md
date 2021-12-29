@@ -37,7 +37,7 @@ If you attest to malicious blocks, you lose your stake.
 
 ### The beacon chain {#the-beacon-chain}
 
-When Ethereum replaces proof-of-work with proof-of-stake, there will be the added complexity of [shard chains](/eth2/shard-chains/). These are separate blockchains that will need validators to process transactions and create new blocks. The plan is to have 64 shard chains, with each having a shared understanding of the state of the network. As a result, extra coordination is necessary and will be done by [the beacon chain](/eth2/beacon-chain/).
+When Ethereum replaces proof-of-work with proof-of-stake, there will be the added complexity of [shard chains](/eth2/shard-chains/). These are separate blockchains that will need validators to process transactions and create new blocks. The plan is to have 64 shard chains, with each having a shared understanding of the state of the network. As a result, extra coordination is necessary and will be done by [the beacon chain](/upgrades/beacon-chain/).
 
 The beacon chain receives state information from shards and makes it available for other shards, allowing the network to stay in sync. The beacon chain will also manage the validators from registering their stake deposits to issuing their rewards and penalties.
 

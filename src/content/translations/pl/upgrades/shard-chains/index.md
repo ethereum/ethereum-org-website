@@ -12,7 +12,7 @@ summaryPoint4: Techniczne wytyczne zawierają pracę nad łańcuchami szczątkow
 ---
 
 <UpgradeStatus date="~2023">
-    Łańcuchy odłamkowe powinny być dostarczone około 2023 r., w zależności od tego, jak będą postępowały prace po wdrożeniu <a href="/eth2/beacon-chain/">łańcucha śledzącego</a>. Te fragmentacje dadzą Ethereum większą pojemność przechowywania i dostępu do danych, ale nie będzie można ich używać do wykonywania kodu. Szczegóły tego są wciąż opracowywane.
+    Łańcuchy odłamkowe powinny być dostarczone około 2023 r., w zależności od tego, jak będą postępowały prace po wdrożeniu <a href="/upgrades/beacon-chain/">łańcucha śledzącego</a>. Te fragmentacje dadzą Ethereum większą pojemność przechowywania i dostępu do danych, ale nie będzie można ich używać do wykonywania kodu. Szczegóły tego są wciąż opracowywane.
 </UpgradeStatus>
 
 ## Czym jest sharding? {#what-is-sharding}
@@ -85,7 +85,7 @@ Ulepszenia Eth2 są ze sobą w pewien sposób powiązane. Podsumujmy więc, jak 
 
 Łańcuch śledzący zawiera całą logikę zabezpieczania i synchronizacji odłamków. Łańcuch śledzący będzie koordynował pracę stakerów w sieci, przydzielając ich do odłamków, nad którymi muszą pracować. Ułatwi to również komunikację między odłamkami poprzez odbieranie i przechowywanie odłamków danych transakcyjnych, które są dostępne dla innych odłamków. To zapewni odłamkom migawkę stanu Ethereum, aby wszystko było aktualne.
 
-<ButtonLink to="/eth2/beacon-chain/">Łańcuch śledzący</ButtonLink>
+<ButtonLink to="/upgrades/beacon-chain/">Łańcuch śledzący</ButtonLink>
 
 ### Odłamki i dokowanie {#shards-and-docking}
 

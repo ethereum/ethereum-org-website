@@ -76,7 +76,7 @@ incomplete: true
 
 工作量证明机制和最长链规则结合称为“Nakamoto 共识”。
 
-Eth2（[信标链](/eth2/beacon-chain/)）使用了名为 [Casper Friendly Finality Gadget](https://arxiv.org/abs/1710.09437) 的共识机制，该机制基于权益证明 (PoS)。
+Eth2（[信标链](/upgrades/beacon-chain/)）使用了名为 [Casper Friendly Finality Gadget](https://arxiv.org/abs/1710.09437) 的共识机制，该机制基于权益证明 (PoS)。
 
 ## 延伸阅读 {#further-reading}
 

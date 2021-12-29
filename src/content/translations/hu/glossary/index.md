@@ -50,7 +50,7 @@ Egy validátor szavazata egy [Beacon Chain](#beacon-chain) vagy egy [shard](#sha
 
 Egy Eth2 fejlesztés, mely az Ethereum hálózat koordinátora lesz. Bevezeti a [letétbizonyítékot](#proof-of-stake) és a [validátorokat](#validator) az Ethereumra. Idővel össze fog olvadni a [főhálózattal](#mainnet).
 
-<DocLink to="/eth2/beacon-chain/">
+<DocLink to="/upgrades/beacon-chain/">
   Beacon Chain
 </DocLink>
 

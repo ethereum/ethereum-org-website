@@ -212,7 +212,7 @@ Dispozitive mici, accesibile și eficiente ca acestea sunt ideale pentru rularea
 
 ## Clienții Eth2 {#eth2-clients}
 
-Există clienți noi pentru a sprijini [upgrade-urile Eth2](/eth2/beacon-chain/). Aceștia vor executa lanțul Beacon și vor sprijini noul mecanism de consens al [dovezii mizei (PoS)](/developers/docs/consensus-mechanisms/pos/).
+Există clienți noi pentru a sprijini [upgrade-urile Eth2](/upgrades/beacon-chain/). Aceștia vor executa lanțul Beacon și vor sprijini noul mecanism de consens al [dovezii mizei (PoS)](/developers/docs/consensus-mechanisms/pos/).
 
 [Vezi clienții Eth2](/eth2/get-involved/#clients).
 

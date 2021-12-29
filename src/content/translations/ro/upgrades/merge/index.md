@@ -17,7 +17,7 @@ summaryPoint4: Acest proces l-am numit „andocarea”
 
 ## Ce este unirea? {#what-is-the-docking}
 
-Este important să ne amintim că inițial [rețeaua Beacon](/eth2/beacon-chain/) a fost livrat separat de [rețeaua principală](/glossary/#mainnet) - rețeaua pe care o folosim în prezent. Rețeaua principală Ethereum continuă să fie securizată prin [Dovada Muncii (proof-of-work)](/developers/docs/consensus-mechanisms/pow/), chiar dacă rețeaua Beacon rulează în paralel folosind [Dovada Mizei (proof-of-stake)](/developers/docs/consensus-mechanisms/pos/). Unirea se va realiza atunci când aceste două sisteme se reunesc în cele din urmă.
+Este important să ne amintim că inițial [rețeaua Beacon](/upgrades/beacon-chain/) a fost livrat separat de [rețeaua principală](/glossary/#mainnet) - rețeaua pe care o folosim în prezent. Rețeaua principală Ethereum continuă să fie securizată prin [Dovada Muncii (proof-of-work)](/developers/docs/consensus-mechanisms/pow/), chiar dacă rețeaua Beacon rulează în paralel folosind [Dovada Mizei (proof-of-stake)](/developers/docs/consensus-mechanisms/pos/). Unirea se va realiza atunci când aceste două sisteme se reunesc în cele din urmă.
 
 Imaginează-ți că Ethereum este o navă spațială care nu este chiar pregătită pentru o călătorie interstelară. Cu rețeaua Beacon, comunitatea a construit un nou motor și o carenă întărită. Când va veni timpul, nava actuală va andoca împreună cu acest nou sistem, devenind o singură navă gata să călătorească câțiva ani lumină buni și să cucerească întreg universul.
 
@@ -43,7 +43,7 @@ Toate actualizările Eth2 sunt oarecum interdependente. Să recapitulăm modul �
 
 După ce unirea este completă, stakerii vor fi desemnați să valideze Rețeaua principală Ethereum. [Minatul](/developers/docs/consensus-mechanisms/pow/mining/) nu va mai fi necesar, astfel încât minerii își vor investi probabil câștigurile în mizarea în noul sistem bazat pe Dovada Mizei (proof-of-stake).
 
-<ButtonLink to="/eth2/beacon-chain/">Rețeaua Beacon</ButtonLink>
+<ButtonLink to="/upgrades/beacon-chain/">Rețeaua Beacon</ButtonLink>
 
 ### Unirea și curățarea după unire {#merge-and-post-merge-cleanup}
 

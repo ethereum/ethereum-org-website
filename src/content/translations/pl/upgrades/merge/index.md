@@ -17,7 +17,7 @@ summaryPoint4: Być może znasz ten etap jako „Faza 1.5” z technicznego harm
 
 ## Czym jest dokowanie? {#what-is-the-docking}
 
-Ważne jest, by pamiętać, że początkowo inne ulepszenia Eth2 zostaną przetransportowane oddzielnie z [sieci głównej](/glossary/#mainnet) — sieci, której używamy dzisiaj. Sieć główna Ethereum będzie nadal zabezpieczona za pomocą [proof-of-work](/developers/docs/consensus-mechanisms/pow/), nawet gdy [łańcuch śledzący](/eth2/beacon-chain/) i jego [łańcuch odłamków](/eth2/shard-chains/) działają równolegle przy użyciu [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). Dokowanie jest łączeniem tych dwóch systemów.
+Ważne jest, by pamiętać, że początkowo inne ulepszenia Eth2 zostaną przetransportowane oddzielnie z [sieci głównej](/glossary/#mainnet) — sieci, której używamy dzisiaj. Sieć główna Ethereum będzie nadal zabezpieczona za pomocą [proof-of-work](/developers/docs/consensus-mechanisms/pow/), nawet gdy [łańcuch śledzący](/upgrades/beacon-chain/) i jego [łańcuch odłamków](/eth2/shard-chains/) działają równolegle przy użyciu [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). Dokowanie jest łączeniem tych dwóch systemów.
 
 Wyobraź sobie że Ethereum jest statkiem kosmicznym, który nie jest gotowy na międzygalaktyczną podróż. Dzięki łańcuchowi śledzącemu i łańcuchom odłamkowym społeczność zbuduje nowy silnik i utwardzony kadłub. Kiedy przyjdzie czas, statek zostanie zadokowany z tymi nowymi systemami, więc będzie mógł być jedną całością, gotową do podróży na odległość wielu lat świetlnych i odkrywania wszechświata.
 
@@ -39,7 +39,7 @@ Ulepszenia Eth2 są ze sobą w pewien sposób powiązane. Podsumujmy więc, jak 
 
 Kiedy nastąpi dokowanie, stakerzy zostaną przydzieleni do walidacji sieci głównej Ethereum. Tak jak to było z łańcuchami odłamkowymi. [Wydobywanie](/developers/docs/consensus-mechanisms/pow/mining/) nie będzie dłużej dostępne, więc wydobywcy z chęcią zainwestują swoje przychody w inwestycje w nowy system proof-of-stake.
 
-<ButtonLink to="/eth2/beacon-chain/">Łańcuch śledzący</ButtonLink>
+<ButtonLink to="/upgrades/beacon-chain/">Łańcuch śledzący</ButtonLink>
 
 ### Dokowanie i łańcuchy odłamkowe {#docking-and-shard-chains}
 

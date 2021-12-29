@@ -231,7 +231,7 @@ const Eth2IndexPage = ({ data }) => {
     buttons: [
       {
         content: translateMessageId("page-eth2-explore-btn", intl),
-        path: "/eth2/beacon-chain/",
+        path: "/upgrades/beacon-chain/",
       },
       {
         content: translateMessageId("page-eth2-whats-ethereum", intl),
@@ -246,7 +246,7 @@ const Eth2IndexPage = ({ data }) => {
       image: getImage(data.beaconchain),
       title: <Translation id="page-eth2-beacon-chain-title" />,
       description: <Translation id="page-eth2-beacon-chain-desc" />,
-      to: "/eth2/beacon-chain/",
+      to: "/upgrades/beacon-chain/",
       date: <Translation id="page-eth2-beacon-chain-estimate" />,
     },
     {
@@ -424,7 +424,7 @@ const Eth2IndexPage = ({ data }) => {
               )}
               title={translateMessageId("page-eth2-question-1-title", intl)}
             >
-              <Link to="/eth2/beacon-chain/">
+              <Link to="/upgrades/beacon-chain/">
                 <Translation id="page-eth2-beacon-chain-title" />
               </Link>
               <p>
@@ -455,7 +455,7 @@ const Eth2IndexPage = ({ data }) => {
             >
               <p>
                 <Translation id="page-eth2-answer-1" />{" "}
-                <Link to="/eth2/beacon-chain/">
+                <Link to="/upgrades/beacon-chain/">
                   <Translation id="page-eth2-more-on-upgrades" />
                 </Link>
               </p>
@@ -722,7 +722,7 @@ const Eth2IndexPage = ({ data }) => {
             >
               <p>
                 <Translation id="page-eth2-question-10-answer-1" />{" "}
-                <Link to="/eth2/beacon-chain/">
+                <Link to="/upgrades/beacon-chain/">
                   <Translation id="page-eth2-question-10-answer-1-link" />
                 </Link>
               </p>

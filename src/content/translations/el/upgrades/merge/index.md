@@ -17,7 +17,7 @@ summaryPoint4: Μπορεί να το γνωρίζετε αυτό ως "Φάση
 
 ## Ποια είναι η ενσωμάτωση; {#what-is-the-docking}
 
-Είναι σημαντικό να θυμόμαστε ότι αρχικά, οι υπόλοιπες αναβαθμίσεις του Eth2 αποστέλλονται ξεχωριστά από το [κεντρικό δίκτυο](/glossary/#mainnet) - την αλυσίδα (chain) που χρησιμοποιούμε σήμερα. Το κεντρικό δίκτυο του Ethereum θα συνεχίσει να ασφαλίζεται με το λεγόμενο [proof-of-work](/developers/docs/consensus-mechanisms/pow/), ακόμη και όταν [η Beacon Chain](/eth2/beacon-chain/) και οι [shard chains](/eth2/shard-chains/) θα εκτελούνται παράλληλα χρησιμοποιώντας το [proof of stake](/developers/docs/consensus-mechanisms/pos/). Η ενσωμάτωση θα πραγματοποιηθεί όταν αυτά τα δύο συστήματα θα συγχωνευτούν.
+Είναι σημαντικό να θυμόμαστε ότι αρχικά, οι υπόλοιπες αναβαθμίσεις του Eth2 αποστέλλονται ξεχωριστά από το [κεντρικό δίκτυο](/glossary/#mainnet) - την αλυσίδα (chain) που χρησιμοποιούμε σήμερα. Το κεντρικό δίκτυο του Ethereum θα συνεχίσει να ασφαλίζεται με το λεγόμενο [proof-of-work](/developers/docs/consensus-mechanisms/pow/), ακόμη και όταν [η Beacon Chain](/upgrades/beacon-chain/) και οι [shard chains](/eth2/shard-chains/) θα εκτελούνται παράλληλα χρησιμοποιώντας το [proof of stake](/developers/docs/consensus-mechanisms/pos/). Η ενσωμάτωση θα πραγματοποιηθεί όταν αυτά τα δύο συστήματα θα συγχωνευτούν.
 
 Φανταστείτε το Ethereum να είναι ένα διαστημόπλοιο που δεν είναι αρκετά έτοιμο για ένα διαστρικό ταξίδι του. Με την Beacon Chain και τις shard chains η κοινότητα έχει χτίσει ένα νέο κινητήρα και ένα ποιο ανθεκτικό κύτος. Όταν έρθει η ώρα, το διαστημόπλοιο θα προσγειωθεί με αυτό το νέο σύστημα, έτσι ώστε να μπορεί να καταστεί έτοιμο να τεθεί σε σοβαρά έτη φωτός και να επικρατήσει στο σύμπαν.
 
@@ -39,7 +39,7 @@ summaryPoint4: Μπορεί να το γνωρίζετε αυτό ως "Φάση
 
 Μόλις συμβεί η ενσωμάτωση, οι stakers θα αφοσιωθούν στην επικύρωση του κεντρικού δικτύου του Ethereum. Ακριβώς όπως και με τις shard chains. [Η εξόρυξη](/developers/docs/consensus-mechanisms/pow/mining/) δεν θα απαιτείται πλέον και έτσι οι εξορύκτες πιθανότατα να επενδύσουν τα κέρδη τους στο νέο σύστημα proof-of-stake.
 
-<ButtonLink to="/eth2/beacon-chain/">Το Beacon Chain</ButtonLink>
+<ButtonLink to="/upgrades/beacon-chain/">Το Beacon Chain</ButtonLink>
 
 ### Η ενσωμάτωση και οι shard chains {#docking-and-shard-chains}
 

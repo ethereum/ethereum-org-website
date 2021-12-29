@@ -89,7 +89,7 @@ Die Eth2-Upgrades sind alle miteinander verknüpft. Im Folgenden wollen wir eine
 
 Die Beacon Chain enthält die gesamte Logik für die Sicherheit und Synchronisierung der Shards. Die Beacon Chain koordiniert die Staker im Netzwerk und weist ihnen die Shards zu, an denen sie arbeiten müssen. Sie wird außerdem die Kommunikation zwischen den einzelnen Shards sicherstellen, indem sie Transaktionsdaten einzelner Shards empfängt und abspeichert, auf die andere Shards wiederum zugreifen können. Jeder Shard hat dadurch Zugriff auf den Status von Ethereum und kann diesen laufend aktualisieren.
 
-<ButtonLink to="/eth2/beacon-chain/">Die Beacon Chain</ButtonLink>
+<ButtonLink to="/upgrades/beacon-chain/">Die Beacon Chain</ButtonLink>
 
 ### Shards und die Verkupplung {#shards-and-docking}
 

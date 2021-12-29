@@ -12,7 +12,7 @@ summaryPoint4: La roadmap tecnica include lavoro sulle shard chain nella "Fase 1
 ---
 
 <UpgradeStatus date="~2023">
-    Le shard chain saranno disponibili nel corso del 2023, in base alla rapidità del lavoro in seguito al lancio della <a href="/eth2/beacon-chain/">beacon chain</a>. Queste shard garantiranno a Ethereum più capacità di archiviazione e acceso ai dati, ma non verranno usate per eseguire codice. I dettagli sono ancora da chiarire.
+    Le shard chain saranno disponibili nel corso del 2023, in base alla rapidità del lavoro in seguito al lancio della <a href="/upgrades/beacon-chain/">beacon chain</a>. Queste shard garantiranno a Ethereum più capacità di archiviazione e acceso ai dati, ma non verranno usate per eseguire codice. I dettagli sono ancora da chiarire.
 </UpgradeStatus>
 
 ## Cos'è lo sharding? {#what-is-sharding}
@@ -85,7 +85,7 @@ Gli aggiornamenti a Eth2 sono in qualche modo interconnessi. Quindi riassumiamo 
 
 La beacon chain contiene la logica per mantenere al sicuro e sincronizzati gli shard. La beacon chain coordinerà gli staker nella rete, assegnandoli agli shard su cui dovranno operare. Faciliterà inoltre la comunicazione tra gli shard, ricevendo e salvando i dati delle transazioni degli shard che saranno accessibili da parte degli altri shard. Gli shard avranno così un'istantanea dello stato di Ethereum per mantenere tutto aggiornato.
 
-<ButtonLink to="/eth2/beacon-chain/">La beacon chain</ButtonLink>
+<ButtonLink to="/upgrades/beacon-chain/">La beacon chain</ButtonLink>
 
 ### Gli shard e il docking {#shards-and-docking}
 

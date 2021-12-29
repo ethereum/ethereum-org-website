@@ -89,7 +89,7 @@ Toate actualizările Eth2 sunt oarecum interdependente. Să recapitulăm legătu
 
 Rețeaua Beacon conține toată logica pentru păstrarea fragmentelor în siguranță și sincronizate. Rețeaua Beason va coordona stakerii din rețea, atribuindu-le fragmente la care trebuie să lucreze. Și va facilita, de asemenea, comunicarea între fragmente prin primirea și stocarea datelor de tranzacție a fragmentelor la care pot avea acces alte fragmente. Acest lucru va oferi fragmentelor un instantaneu al stării Ethereum pentru a menține totul la zi.
 
-<ButtonLink to="/eth2/beacon-chain/">Lanțul Beacon</ButtonLink>
+<ButtonLink to="/upgrades/beacon-chain/">Lanțul Beacon</ButtonLink>
 
 ### Fragmentele și unirea {#shards-and-docking}
 

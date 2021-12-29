@@ -184,7 +184,7 @@ const StakingPage = ({ data, location }) => {
           </h2>
           <p>
             <Translation id="page-staking-description" />{" "}
-            <Link to="/eth2/beacon-chain/">
+            <Link to="/upgrades/beacon-chain/">
               <Translation id="page-staking-the-beacon-chain" />
             </Link>
           </p>

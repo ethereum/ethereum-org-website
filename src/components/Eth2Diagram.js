@@ -196,7 +196,7 @@ const ModalContent = ({ upgrade }) => {
         <p>
           <Translation id="page-eth2-diagram-p-3" />
         </p>
-        <ButtonLink to="/eth2/beacon-chain/">
+        <ButtonLink to="/upgrades/beacon-chain/">
           <Translation id="page-eth2-beacon-chain-btn" />
         </ButtonLink>
       </>

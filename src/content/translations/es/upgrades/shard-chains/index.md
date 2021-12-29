@@ -12,7 +12,7 @@ summaryPoint4: Las hojas de ruta técnicas incluyen el trabajo en las cadenas de
 ---
 
 <UpgradeStatus date="~2023">
-  Las cadenas de fragmentos deberían enviarse en algún momento de 2023, en función de lo rápido que progrese el trabajo después del lanzamiento de <a href="/eth2/beacon-chain/">la Cadena de Baliza</a>. Estos fragmentos le darán a Ethereum más capacidad para almacenar y acceder a datos, pero no se usarán para ejecutar código. Los detalles de eso aún se están aclarando.
+  Las cadenas de fragmentos deberían enviarse en algún momento de 2023, en función de lo rápido que progrese el trabajo después del lanzamiento de <a href="/upgrades/beacon-chain/">la Cadena de Baliza</a>. Estos fragmentos le darán a Ethereum más capacidad para almacenar y acceder a datos, pero no se usarán para ejecutar código. Los detalles de eso aún se están aclarando.
 </UpgradeStatus>
 
 ## ¿Qué es la fragmentación o "sharding"? {#what-is-sharding}
@@ -85,7 +85,7 @@ Las actualizaciones de Eth2 están de algún modo interrelacionadas. Así que re
 
 La Cadena de Baliza contiene toda la lógica para mantener los fragmentos seguros y sincronizados. La Cadena de Baliza coordinará a los participantes en la red y les asignará a los fragmentos en los que tienen que trabajar. Y también facilitará la comunicación entre fragmentos al recibir y almacenar datos de transacción de fragmentación accesibles por otros fragmentos. Esto dará a los fragmentos una instantánea del estado de Ethereum para mantener todo actualizado.
 
-<ButtonLink to="/eth2/beacon-chain/">La Cadena de Baliza</ButtonLink>
+<ButtonLink to="/upgrades/beacon-chain/">La Cadena de Baliza</ButtonLink>
 
 ### Los fragmentos y el acoplamiento {#shards-and-docking}
 

@@ -12,7 +12,7 @@ summaryPoint4: La planificació tècnica inclou la feina en cadenes de fragments
 ---
 
 <UpgradeStatus date="~2023">
-    Les cadenes de fragments haurien de sortir en algun moment del 2023, depenent de la velocitat amb què progressin les tasques després del llançament de la <a href="/eth2/beacon-chain/">Cadena de Balisa.</a>. Aquests fragments dotaran Ethereum de més capacitat d'emmagatzematge i d'accés a dades, però no s'utilitzaran per executar codi. Encara s'estan esbrinant els detalls de tot plegat.
+    Les cadenes de fragments haurien de sortir en algun moment del 2023, depenent de la velocitat amb què progressin les tasques després del llançament de la <a href="/upgrades/beacon-chain/">Cadena de Balisa.</a>. Aquests fragments dotaran Ethereum de més capacitat d'emmagatzematge i d'accés a dades, però no s'utilitzaran per executar codi. Encara s'estan esbrinant els detalls de tot plegat.
 </UpgradeStatus>
 
 ## Què és la fragmentació? {#what-is-sharding}
@@ -85,7 +85,7 @@ D'alguna manera, les millores d'Eth2 estan interrelacionades. Per tant, anem a v
 
 La Cadena de Balisa conté la lògica per mantenir els fragments segurs i sincronitzats. La Cadena de Balisa coordinarà els participants a la xarxa, i els assignarà als fragments que necessiten per continuar treballant. I també facilitarà la comunicació entre fragments mitjançant la recepció i l'emmagatzematge de les dades de transacció de fragments accessibles mitjançant altres fragments. Això donarà als fragments una instantània de l'estat d'Ethereum per mantenir-ho tot actualitzat.
 
-<ButtonLink to="/eth2/beacon-chain/">La Cadena de Balisa</ButtonLink>
+<ButtonLink to="/upgrades/beacon-chain/">La Cadena de Balisa</ButtonLink>
 
 ### Fragments i acoblament {#shards-and-docking}
 

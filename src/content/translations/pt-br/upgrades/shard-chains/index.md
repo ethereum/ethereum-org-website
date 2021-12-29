@@ -89,7 +89,7 @@ Todas as atualizações da Eth2 estão de alguma forma interligadas. Vamos ver c
 
 A Beacon Chain contém toda a lógica para manter os fragmentos seguros e sincronizados. A Beacon Chain coordenará os participantes na rede, atribuindo-os aos fragmentos nos quais eles precisam trabalhar. E também facilitará a comunicação entre fragmentos ao receber e armazenar dados de transações de fragmentos acessíveis por outros fragmentos. Isso dará aos fragmentos um panorama do estado de Ethereum, para manter tudo atualizado.
 
-<ButtonLink to="/eth2/beacon-chain/">
+<ButtonLink to="/upgrades/beacon-chain/">
   A Beacon Chain
 </ButtonLink>
 

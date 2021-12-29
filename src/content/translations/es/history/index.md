@@ -31,11 +31,11 @@ Estos cambios en las reglas pueden crear una división temporal de la red. Los b
 
 #### Resumen {#beacon-chain-genesis-summary}
 
-La [cadena de baliza](/eth2/beacon-chain/) ha necesitado 16 384 depósitos de 32 ETH apostados para enviarse de manera segura. Esto sucedió el 27 de noviembre, es decir, la cadena de baliza comenzó a producir bloques el 1 de diciembre de 2020. Es un primer paso importante para lograr la [visión Eth2](/eth2/vision/).
+La [cadena de baliza](/upgrades/beacon-chain/) ha necesitado 16 384 depósitos de 32 ETH apostados para enviarse de manera segura. Esto sucedió el 27 de noviembre, es decir, la cadena de baliza comenzó a producir bloques el 1 de diciembre de 2020. Es un primer paso importante para lograr la [visión Eth2](/eth2/vision/).
 
 [Leer la declaración de la Fundación Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/eth2/beacon-chain/">
+<DocLink to="/upgrades/beacon-chain/">
   La cadena de baliza
 </DocLink>
 
@@ -47,7 +47,7 @@ La [cadena de baliza](/eth2/beacon-chain/) ha necesitado 16 384 depósitos de 3
 
 #### Resumen {#deposit-contract-summary}
 
-El contrato de depósito de participación introdujo la [participación](/glossary/#staking) en el ecosistema de Ethereum. Aunque se trata de un contrato [de red principal](/glossary/#mainnet), tuvo un impacto directo en la cronología para lanzar la [cadena de baliza](/eth2/beacon-chain/), una importante [actualización de Eth2](/eth2/).
+El contrato de depósito de participación introdujo la [participación](/glossary/#staking) en el ecosistema de Ethereum. Aunque se trata de un contrato [de red principal](/glossary/#mainnet), tuvo un impacto directo en la cronología para lanzar la [cadena de baliza](/upgrades/beacon-chain/), una importante [actualización de Eth2](/eth2/).
 
 [Leer la declaración de la Fundación Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 

@@ -62,7 +62,7 @@ sidebarDepth: 2
 
 Eth2 升级的一部分，它将成为以太坊网络的协调者。 它会给以太坊引入[权益证明](#pos)和[验证者](#validator) 。 它最终将并入[主网](#mainnet)。
 
-<DocLink to="/eth2/beacon-chain/">
+<DocLink to="/upgrades/beacon-chain/">
   信标链
 </DocLink>
 
