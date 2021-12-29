@@ -57,4 +57,4 @@ No início, o plano era trabalhar em cadeias de fragmentos antes da integração
 
 Essa será uma avaliação contínua da comunidade quanto à necessidade de rodadas potencialmente múltiplas de cadeias de fragmentos para permitir dimensionamento permanente.
 
-<ButtonLink to="/eth2/shard-chains/">Cadeias de fragmentos</ButtonLink>
+<ButtonLink to="/upgrades/shard-chains/">Cadeias de fragmentos</ButtonLink>

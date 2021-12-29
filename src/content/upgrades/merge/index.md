@@ -59,6 +59,6 @@ Originally, the plan was to work on shard chains before the merge – to address
 
 This will be an ongoing assessment from the community as to the need for potentially multiple rounds of shard chains to allow for endless scalability.
 
-<ButtonLink to="/eth2/shard-chains/">
+<ButtonLink to="/upgrades/shard-chains/">
   Shard chains
 </ButtonLink>

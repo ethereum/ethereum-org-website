@@ -441,7 +441,7 @@ Eth2 により、ネットワークは 1 秒間に 25,000 ～ 100,000 件のト�
 
 [Vitalik Buterin による Eth2 のトランザクション件数の可能性について](https://twitter.com/VitalikButerin/status/1312905884549300224?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1312905886327664640%7Ctwgr%5E%7Ctwcon%5Es2_&ref_url=https%3A%2F%2Fwww.coinspeaker.com%2Fvitalik-buterin-ethereum-layer-2%2F)
 
-最低でも、Eth2 では現在の約 15 件の取引の 64 倍の取引が可能になります。 それは、シャードチェーン(データや容量の追加)が導入されている分です。 [シャードチェーンの詳細](/eth2/shard-chains/)
+最低でも、Eth2 では現在の約 15 件の取引の 64 倍の取引が可能になります。 それは、シャードチェーン(データや容量の追加)が導入されている分です。 [シャードチェーンの詳細](/upgrades/shard-chains/)
 
 上記の Visa の例と比較できるよう、100,000 件のトランザクションを処理するのにかかる時間を見積もることができます。
 

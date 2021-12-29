@@ -17,7 +17,7 @@ summaryPoint4: Potreste averne sentito parlare come "Fase 0" nelle roadmap tecni
 
 ## Cosa fa la beacon chain? {#what-does-the-beacon-chain-do}
 
-La beacon chain condurrà o coordinerà la rete ampliata di [shard](/eth2/shard-chains/) e [staker](/staking/). Ma non sarà come la [rete principale Ethereum](/glossary/#mainnet) di oggi. Non è in grado di gestire account o smart contract.
+La beacon chain condurrà o coordinerà la rete ampliata di [shard](/upgrades/shard-chains/) e [staker](/staking/). Ma non sarà come la [rete principale Ethereum](/glossary/#mainnet) di oggi. Non è in grado di gestire account o smart contract.
 
 Il ruolo della beacon chain cambierà con il passare del tempo ma è una componente fondamentale per [la sicurezza, sostenibilità e scalabilità di Etherum che stiamo cercando di raggiungere](/eth2/vision/).
 
@@ -33,7 +33,7 @@ Fare staking e diventare validatore è più facile che [fare mining](/developers
 Se ti interessa diventare validatore e vuoi contribuire a proteggere la beacon chain, <a href="/staking/">scopri di più sullo staking</a>.
 </InfoBanner>
 
-Si tratta inoltre di un importante cambiamento per il secondo aggiornamento a Eth2: [le shard chain](/eth2/shard-chains/).
+Si tratta inoltre di un importante cambiamento per il secondo aggiornamento a Eth2: [le shard chain](/upgrades/shard-chains/).
 
 ### Prepararsi alle shard chain {#setting-up-for-shard-chains}
 
@@ -55,7 +55,7 @@ La beacon chain, all'inizio, esisterà separatamente rispetto alla rete principa
 
 Le shard chain potranno entrare in modo sicuro nell'ecosistema Ethereum solo quando sarà presente un meccanismo di consenso proof of stake. La beacon chain introdurrà lo staking, aprendo la strada per l'aggiornamento alle shard chain.
 
-<ButtonLink to="/eth2/shard-chains/">Le shard chain</ButtonLink>
+<ButtonLink to="/upgrades/shard-chains/">Le shard chain</ButtonLink>
 
 <Divider />
 

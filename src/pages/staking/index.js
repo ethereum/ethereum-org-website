@@ -387,7 +387,7 @@ const StakingPage = ({ data, location }) => {
             title={translateMessageId("page-staking-sharding", intl)}
             description={translateMessageId("page-staking-sharding-desc", intl)}
           >
-            <Link to="/eth2/shard-chains/">
+            <Link to="/upgrades/shard-chains/">
               <Translation id="page-staking-more-sharding" />
             </Link>
           </StyledCard>

@@ -400,7 +400,7 @@ Diperkirakan bahwa Eth2 akan memungkinkan jaringan untuk memroses antara 25.000 
 
 [Vitalik Buterik membahas transaksi per detik yang potensial di Eth2](https://twitter.com/VitalikButerin/status/1312905884549300224?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1312905886327664640%7Ctwgr%5E%7Ctwcon%5Es2_&ref_url=https%3A%2F%2Fwww.coinspeaker.com%2Fvitalik-buterin-ethereum-layer-2%2F)
 
-Pada tingkat terendah, Eth2 akan memungkinkan 64 kali jumlah transaksi dari jumlah saat ini yang berada sekitar 15 transaksi. Itulah jumlah rantai shard (data dan kapasitas tambahan) yang akan dimasukkan. [Selengkapnya tentang rantai shard](/eth2/shard-chains/)
+Pada tingkat terendah, Eth2 akan memungkinkan 64 kali jumlah transaksi dari jumlah saat ini yang berada sekitar 15 transaksi. Itulah jumlah rantai shard (data dan kapasitas tambahan) yang akan dimasukkan. [Selengkapnya tentang rantai shard](/upgrades/shard-chains/)
 
 Itu berarti kita dapat memperkirakan berapa lama waktu yang diperlukan untuk memroses 100.000 transaksi, sehingga kita dapat membandingkannya dengan contoh Visa di atas.
 

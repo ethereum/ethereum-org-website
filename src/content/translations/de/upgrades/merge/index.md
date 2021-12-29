@@ -57,4 +57,4 @@ Ursprünglich war geplant, vor der Verkupplung an Shard Chains zu arbeiten, um d
 
 Dies wird eine fortlaufende Bewertung der Gemeinschaft hinsichtlich der Notwendigkeit von möglicherweise mehreren Runden von Shard Chains sein, um eine unbegrenzte Skalierbarkeit zu ermöglichen.
 
-<ButtonLink to="/eth2/shard-chains/">Shard Chains</ButtonLink>
+<ButtonLink to="/upgrades/shard-chains/">Shard Chains</ButtonLink>

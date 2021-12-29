@@ -17,7 +17,7 @@ summaryPoint4: Es posible que conozcas esto como "Fase 1.5" en hojas de ruta té
 
 ## ¿Qué es el acoplamiento? {#what-is-the-docking}
 
-Es importante recordar que, inicialmente, las otras actualizaciones de Eth2 se envían por separado de la [red principal](/glossary/#mainnet), la cadena que usamos hoy. La red principal de Ethereum seguirá estando protegida por la [prueba de trabajo](/developers/docs/consensus-mechanisms/pow/), incluso mientras [la Cadena de Baliza](/upgrades/beacon-chain/) y sus [cadenas de fragmentos](/eth2/shard-chains/) se ejecutan en paralelo mediante la [prueba de participación](/developers/docs/consensus-mechanisms/pos/). El acoplamiento consiste en la fusión de estos dos sistemas.
+Es importante recordar que, inicialmente, las otras actualizaciones de Eth2 se envían por separado de la [red principal](/glossary/#mainnet), la cadena que usamos hoy. La red principal de Ethereum seguirá estando protegida por la [prueba de trabajo](/developers/docs/consensus-mechanisms/pow/), incluso mientras [la Cadena de Baliza](/upgrades/beacon-chain/) y sus [cadenas de fragmentos](/upgrades/shard-chains/) se ejecutan en paralelo mediante la [prueba de participación](/developers/docs/consensus-mechanisms/pos/). El acoplamiento consiste en la fusión de estos dos sistemas.
 
 Imagine que Ethereum es una nave espacial que no está lista para un viaje interestelar. Con la Cadena de Baliza y las cadenas de fragmentos, la comunidad ha construido un nuevo motor y un casco endurecido. Cuando sea el momento, la nave actual se acoplará con este nuevo sistema para convertirse en una sola nave, lista para viajar a años luz y enfrentarse al universo.
 
@@ -45,4 +45,4 @@ Una vez que se produzca el acoplamiento, se asignarán participantes para valida
 
 Con la red principal convirtiéndose en un fragmento, la implementación exitosa de las cadenas de fragmentos es fundamental para esta actualización. Es probable que la transición desempeñe un papel importante para ayudar a la comunidad a decidir si implementa una segunda actualización a la fragmentación. Esta actualización hará que los otros fragmentos sean como la red principal: podrán manejar transacciones y contratos inteligentes y no solo proporcionar más datos.
 
-<ButtonLink to="/eth2/shard-chains/">Cadenas de fragmentos</ButtonLink>
+<ButtonLink to="/upgrades/shard-chains/">Cadenas de fragmentos</ButtonLink>

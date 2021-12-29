@@ -23,7 +23,7 @@ Proof-of-stake comes with a number of improvements to the proof-of-work system:
 - better energy efficiency – you don't need to use lots of energy mining blocks
 - lower barriers to entry, reduced hardware requirements – you don't need elite hardware to stand a chance of creating new blocks
 - stronger immunity to centralization – proof-of-stake should lead to more nodes in the network
-- stronger support for [shard chains](/eth2/shard-chains/) – a key upgrade in scaling the Ethereum network
+- stronger support for [shard chains](/upgrades/shard-chains/) – a key upgrade in scaling the Ethereum network
 
 ## Proof-of-stake, staking, and validators {#pos-staking-validators}
 
@@ -37,7 +37,7 @@ If you attest to malicious blocks, you lose your stake.
 
 ### The beacon chain {#the-beacon-chain}
 
-When Ethereum replaces proof-of-work with proof-of-stake, there will be the added complexity of [shard chains](/eth2/shard-chains/). These are separate blockchains that will need validators to process transactions and create new blocks. The plan is to have 64 shard chains, with each having a shared understanding of the state of the network. As a result, extra coordination is necessary and will be done by [the beacon chain](/upgrades/beacon-chain/).
+When Ethereum replaces proof-of-work with proof-of-stake, there will be the added complexity of [shard chains](/upgrades/shard-chains/). These are separate blockchains that will need validators to process transactions and create new blocks. The plan is to have 64 shard chains, with each having a shared understanding of the state of the network. As a result, extra coordination is necessary and will be done by [the beacon chain](/upgrades/beacon-chain/).
 
 The beacon chain receives state information from shards and makes it available for other shards, allowing the network to stay in sync. The beacon chain will also manage the validators from registering their stake deposits to issuing their rewards and penalties.
 

@@ -37,7 +37,7 @@ Dacă atești blocuri rău intenționate, vei pierde miza.
 
 ### Lanțul Beacon {#the-beacon-chain}
 
-Când Ethereum va înlocui dovada muncii (PoW) cu dovada mizei (PoS), se va adăuga o complexitate numită [lanțuri de fragmente](/eth2/shard-chains/). Acestea sunt blockchain-uri separate care vor avea nevoie de validatori pentru a procesa tranzacțiile și a crea noi blocuri. Planul este de a avea 64 de lanțuri de fragmente și toate au nevoie de o înțelegere comună a stării rețelei. Așadar, este necesară o coordonare suplimentară și acest lucru va fi realizat de [lanțul Beacon](/upgrades/beacon-chain/).
+Când Ethereum va înlocui dovada muncii (PoW) cu dovada mizei (PoS), se va adăuga o complexitate numită [lanțuri de fragmente](/upgrades/shard-chains/). Acestea sunt blockchain-uri separate care vor avea nevoie de validatori pentru a procesa tranzacțiile și a crea noi blocuri. Planul este de a avea 64 de lanțuri de fragmente și toate au nevoie de o înțelegere comună a stării rețelei. Așadar, este necesară o coordonare suplimentară și acest lucru va fi realizat de [lanțul Beacon](/upgrades/beacon-chain/).
 
 Lanțul Beacon primește informații de stare de la fragmente și le face disponibile altor fragmente, astfel încât rețeaua să poată rămâne sincronizată. Lanțul Beacon va gestiona, de asemenea, validatorii, de la înregistrarea depozitelor de miză până la emiterea recompenselor și penalităților.
 

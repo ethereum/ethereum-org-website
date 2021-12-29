@@ -57,4 +57,4 @@ Eth2 的升级在某种程度上都相互关联。 因此，让我们回顾一�
 
 这需要社区持续评估，以确定是否需要潜在的多轮分片链来实现无尽的可扩容性。
 
-<ButtonLink to="/eth2/shard-chains/">分片链</ButtonLink>
+<ButtonLink to="/upgrades/shard-chains/">分片链</ButtonLink>

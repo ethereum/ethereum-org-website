@@ -17,7 +17,7 @@ summaryPoint4: Questa fase viene detta anche "Fase 1.5" nelle roadmap tecniche.
 
 ## Che cos'è il docking? {#what-is-the-docking}
 
-È importante ricordare che inizialmente gli altri aggiornamenti Eth2 vengono rilasciati separatamente dalla [rete principale](/glossary/#mainnet), cioè la catena che usiamo oggi. Il funzionamento della rete principale Ethereum continuerà ad essere assicurato dal [proof of work](/developers/docs/consensus-mechanisms/pow/), anche mentre la [beacon chain](/upgrades/beacon-chain/) e le sue [shard chain](/eth2/shard-chains/) funzioneranno in parallelo utilizzando il [proof of stake](/developers/docs/consensus-mechanisms/pos/). Per docking si intende il momento in cui questi due sistemi si fonderanno.
+È importante ricordare che inizialmente gli altri aggiornamenti Eth2 vengono rilasciati separatamente dalla [rete principale](/glossary/#mainnet), cioè la catena che usiamo oggi. Il funzionamento della rete principale Ethereum continuerà ad essere assicurato dal [proof of work](/developers/docs/consensus-mechanisms/pow/), anche mentre la [beacon chain](/upgrades/beacon-chain/) e le sue [shard chain](/upgrades/shard-chains/) funzioneranno in parallelo utilizzando il [proof of stake](/developers/docs/consensus-mechanisms/pos/). Per docking si intende il momento in cui questi due sistemi si fonderanno.
 
 Immagina Ethereum come una nave spaziale che non è ancora pronta per un viaggio interstellare. Con la beacon chain e le shard chain la community ha costruito un nuovo motore e uno scafo più resistente. Quando sarà il momento, l'attuale navicella aggancerà questo nuovo sistema diventando un'unica astronave, pronta a percorrere diversi anni luce e conquistare l'universo.
 
@@ -45,4 +45,4 @@ Una volta avvenuto il docking, saranno assegnati utenti che fanno staking, per c
 
 Quando la rete principale diventerà uno shard, la riuscita dell'implementazione delle shard chain sarà fondamentale per questo aggiornamento. È probabile che la transizione svolgerà un ruolo importante nell'aiutare la community a decidere se distribuire un secondo aggiornamento per lo sharding. Questo aggiornamento renderà gli altri shard come la rete principale: saranno in grado di gestire transazioni e smart contract e non solo di fornire più dati.
 
-<ButtonLink to="/eth2/shard-chains/">Shard chain</ButtonLink>
+<ButtonLink to="/upgrades/shard-chains/">Shard chain</ButtonLink>

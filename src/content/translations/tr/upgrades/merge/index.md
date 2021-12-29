@@ -17,7 +17,7 @@ summaryPoint4: Bunu teknik yol haritalarındaki "1,5 Aşaması" olarak tanıyor 
 
 ## Kenetlenme nedir? {#what-is-the-docking}
 
-Başlangıçta diğer Eth2 yükseltmelerinin bugün kullandığımız [ana ağ](/glossary/#mainnet) zincirinden ayrı olarak gönderildiğini unutmamak gerekir. [İşaret (Beacon) Zinciri](/upgrades/beacon-chain/) ve [shard zincirleri](/eth2/shard-chains/) [pay ispatı](/developers/docs/consensus-mechanisms/pos/) kullanılarak paralel çalışırken bile Ethereum ana ağı [çalışma ispatı](/developers/docs/consensus-mechanisms/pow/) ile güvence altına alınmaya devam edecektir. Kenetlenme iki sistem birleştirildiğinde gerçekleşir.
+Başlangıçta diğer Eth2 yükseltmelerinin bugün kullandığımız [ana ağ](/glossary/#mainnet) zincirinden ayrı olarak gönderildiğini unutmamak gerekir. [İşaret (Beacon) Zinciri](/upgrades/beacon-chain/) ve [shard zincirleri](/upgrades/shard-chains/) [pay ispatı](/developers/docs/consensus-mechanisms/pos/) kullanılarak paralel çalışırken bile Ethereum ana ağı [çalışma ispatı](/developers/docs/consensus-mechanisms/pow/) ile güvence altına alınmaya devam edecektir. Kenetlenme iki sistem birleştirildiğinde gerçekleşir.
 
 Ethereum'un yıldızlararası bir yolculuk için pek de hazır olmayan bir uzay aracı olduğunu hayal edin. İşaret (Beacon) Zinciri ve shard zincirleriyle topluluk yeni bir motor ve sertleştirilmiş bir gövde inşa etmiş oldu. Zamanı geldiğinde, mevcut gemi bu yeni sistemle kenetlenecek ve böylece ciddi ışık yılları geçirmeye ve evreni ele geçirmeye hazır tek bir gemi haline gelebilecektir.
 
@@ -45,4 +45,4 @@ Kenetlenme gerçekleştiğinde, staker'ler Ethereum ana ağını doğrulamak iç
 
 Ana ağın bir shard haline gelmesiyle birlikte, shard zincirlerinin başarılı bir şekilde uygulanması bu yükseltme için çok önemlidir. Geçiş topluluğun ikinci bir sharding sürümüne geçip geçmemeye karar vermesine yardımcı olmada önemli rol oynayabilir. Bu yükseltme, diğer shard'ları ana ağ gibi yapacaktır: yalnızca fazla veri sağlamakla kalmayacaklar işlemleri ve akıllı sözleşmeleri idare edebileceklerdir.
 
-<ButtonLink to="/eth2/shard-chains/">Shard zincirleri</ButtonLink>
+<ButtonLink to="/upgrades/shard-chains/">Shard zincirleri</ButtonLink>

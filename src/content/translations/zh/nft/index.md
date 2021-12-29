@@ -400,7 +400,7 @@ Digiconomist 预估以太坊矿工当前每年消耗 44.94 太瓦时的总能耗
 
 [Vitalik Buterin 在 Eth2 上每秒潜在交易量](https://twitter.com/VitalikButerin/status/1312905884549300224?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1312905886327664640%7Ctwgr%5E%7Ctwcon%5Es2_&ref_url=https%3A%2F%2Fwww.coinspeaker.com%2Fvitalik-buterin-ethereum-layer-2%2F)
 
-最起码，Eth2 允许的交易量是现在的 64 倍，当前交易量大约为 15 笔交易。 这是正在引入分片链（额外数据和容量）的数量。 [关于分片链的更多信息](/eth2/shard-chains/)
+最起码，Eth2 允许的交易量是现在的 64 倍，当前交易量大约为 15 笔交易。 这是正在引入分片链（额外数据和容量）的数量。 [关于分片链的更多信息](/upgrades/shard-chains/)
 
 这意味着我们可以估算处理 100,000 笔交易需要的时间，以便我们能够将其与上述 Visa 例子对比。
 

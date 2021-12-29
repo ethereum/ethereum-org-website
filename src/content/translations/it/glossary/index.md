@@ -616,7 +616,7 @@ Famiglia di funzioni hash crittografiche pubblicata dal National Institute of St
 
 Catena [proof-of-stake](#proof-of-stake) coordinata dalla [beacon chain](#beacon-chain) e protetta dai [validatori](#validator). Ne verranno aggiunte 64 alla rete all'interno dell'upgrade alla shard chain Eth2. Le shard chain offriranno maggiori volumi di transazioni a Ethereum fornendo dati aggiuntivi alle soluzioni di [livello 2](#layer-2) come gli [Optimistic rollup](#optimistic-rollups) e i [rollup ZK](#zk-rollups).
 
-<DocLink to="/eth2/shard-chains">
+<DocLink to="/upgrades/shard-chains">
   Shard chain
 </DocLink>
 

@@ -616,7 +616,7 @@ Famille de fonctions de hachage cryptographique publiées par le National Instit
 
 Chaîne de [preuve d'enjeu](#proof-of-stake) coordonnée par la [chaîne phare](#beacon-chain) et sécurisée par les [validateurs](#validator). 64 seront ajoutés au réseau dans le cadre de la mise à niveau de la chaîne de fragments Eth2. Les chaînes de fragments offriront un débit de transaction accru pour Ethereum en fournissant des données supplémentaires aux solutions de la [couche 2](#layer-2) comme les [rollups optimisés](#optimistic-rollups) et les [rollups ZK](#zk-rollups).
 
-<DocLink to="/eth2/shard-chains">
+<DocLink to="/upgrades/shard-chains">
   chaînes de fragments
 </DocLink>
 

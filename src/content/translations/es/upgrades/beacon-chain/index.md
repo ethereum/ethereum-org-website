@@ -17,7 +17,7 @@ summaryPoint4: Quizá lo conozcas como la "Fase 0" en los mapas técnicos de la 
 
 ## ¿Qué hace la Cadena de Baliza? {#what-does-the-beacon-chain-do}
 
-La Cadena de Baliza conducirá o coordinará la expansión de la red a [fragmentos](/eth2/shard-chains/) y [apostadores](/staking/). Pero no será como [la red central de Ethereum](/glossary/#mainnet) de hoy en día. No puede manejar cuentas o contratos inteligentes.
+La Cadena de Baliza conducirá o coordinará la expansión de la red a [fragmentos](/upgrades/shard-chains/) y [apostadores](/staking/). Pero no será como [la red central de Ethereum](/glossary/#mainnet) de hoy en día. No puede manejar cuentas o contratos inteligentes.
 
 El rol de la Cadena de Baliza cambiará con el tiempo, pero es un componente fundamental para un [ Ethereum seguro, sostenible y escalable en el que estamos trabajando](/eth2/vision/).
 
@@ -33,7 +33,7 @@ Apostar y convertirse en validador es más fácil que [minar](/developers/docs/m
 Si estás interesado en convertirte en validador y ayudar a proteger la Cadena de Baliza, <a href="/staking/">obtén más información acerca del "staking"</a>.
 </InfoBanner>
 
-Esto es además un cambio importante para la segunda actualización de Eth2: [las cadenas de fragmentos](/eth2/shard-chains/).
+Esto es además un cambio importante para la segunda actualización de Eth2: [las cadenas de fragmentos](/upgrades/shard-chains/).
 
 ### Configuración para cadenas de fragmentos {#setting-up-for-shard-chains}
 
@@ -55,7 +55,7 @@ La Cadena de Baliza, en principio, existirá aparte de la red principal de Ether
 
 Las cadenas de fragmentos solo pueden ingresar en el ecosistema Ethereum de manera segura con un mecanismo de consenso de la prueba de participación establecido. La Cadena de Baliza introducirá la apuesta ("staking") y allanará el camino a la cadena de fragmentos actualizada que está por venir.
 
-<ButtonLink to="/eth2/shard-chains/">Cadenas de fragmentos</ButtonLink>
+<ButtonLink to="/upgrades/shard-chains/">Cadenas de fragmentos</ButtonLink>
 
 <Divider />
 

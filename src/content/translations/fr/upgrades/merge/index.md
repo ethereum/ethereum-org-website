@@ -17,7 +17,7 @@ summaryPoint4: Vous en avez peut-être entendu parler comme étant la "Phase 1.5
 
 ## Qu'est-ce que l'arrimage ? {#what-is-the-docking}
 
-Il est important de se rappeler qu'au départ, les autres mises à niveau Eth2 sont expédiées séparément du [réseau principal](/glossary/#mainnet) - la chaîne que nous utilisons aujourd'hui. Le réseau principal Ethereum continuera d'être sécurisé par [preuve de travail](/developers/docs/consensus-mechanisms/pow/), même pendant que [la chaîne phare](/upgrades/beacon-chain/) et ses [chaînes de fragments](/eth2/shard-chains/) seront exécutées en parallèle en utilisant la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/). L'arrimage, ou docking, c'est quand ces deux systèmes sont fusionnés.
+Il est important de se rappeler qu'au départ, les autres mises à niveau Eth2 sont expédiées séparément du [réseau principal](/glossary/#mainnet) - la chaîne que nous utilisons aujourd'hui. Le réseau principal Ethereum continuera d'être sécurisé par [preuve de travail](/developers/docs/consensus-mechanisms/pow/), même pendant que [la chaîne phare](/upgrades/beacon-chain/) et ses [chaînes de fragments](/upgrades/shard-chains/) seront exécutées en parallèle en utilisant la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/). L'arrimage, ou docking, c'est quand ces deux systèmes sont fusionnés.
 
 Imaginez qu'Ethereum est un vaisseau spatial qui n’est pas tout à fait prêt pour un voyage interstellaire. Avec la chaîne phare et les chaînes de fragments, la communauté a construit un nouveau moteur et une coque endurcie. Le moment venu, le vaisseau actuel viendra s'arrimer à ce nouveau système pour fusionner avec, afin de passer à la vitesse de la lumière et d'arpenter tout l’univers.
 
@@ -45,4 +45,4 @@ Une fois l'arrimage effectué, les validateurs seront affectés à la validation
 
 Le réseau principal étant appelé à devenir un fragment, l'implémentation réussie des chaînes de fragments est essentielle pour cette mise à niveau. Il est probable que la transition jouera un rôle important en aidant la communauté à décider si elle doit déployer une deuxième mise à niveau vers la fragmentation. Cette mise à niveau rendra les autres fragments identiques au réseau principal : ils seront en mesure de gérer les transactions et les contrats intelligents et pas seulement de fournir plus de données.
 
-<ButtonLink to="/eth2/shard-chains/">Chaines de fragments</ButtonLink>
+<ButtonLink to="/upgrades/shard-chains/">Chaines de fragments</ButtonLink>

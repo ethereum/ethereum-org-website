@@ -17,7 +17,7 @@ summaryPoint4: Bunu teknik yol haritalarındaki "0 Aşaması" olarak tanıyor ol
 
 ## İşaret (Beacon) Zinciri Ne Yapar? {#what-does-the-beacon-chain-do}
 
-İşaret (Beacon) Zinciri [shard](/eth2/shard-chains/) ve [staker](/staking/)lerden oluşan genişletilmiş ağı yönetir veya koordine eder. Ancak günümüzün [Ethereum ana ağı](/glossary/#mainnet) gibi olmayacaktır. Hesapları veya akıllı sözleşmeleri ele alamaz.
+İşaret (Beacon) Zinciri [shard](/upgrades/shard-chains/) ve [staker](/staking/)lerden oluşan genişletilmiş ağı yönetir veya koordine eder. Ancak günümüzün [Ethereum ana ağı](/glossary/#mainnet) gibi olmayacaktır. Hesapları veya akıllı sözleşmeleri ele alamaz.
 
 İşaret (Beacon) Zinciri'nin rolü zamanla değişir ancak [geliştirmeye çalıştığımız güvenli, sürdürülebilir ve ölçeklendirilebilir Ethereum](/eth2/vision/) için temel bir bileşendir.
 
@@ -33,7 +33,7 @@ Paydaşlık ve doğrulayıcı oluşturmak [madencilik](/developers/docs/mining/)
 Doğrulayıcı olmak ve İşaret (Beacon) Zincirinin güvenliğine yardımcı olmak istiyorsanız <a href="/staking/">stake etme konusunda daha fazla bilgi alın</a>.
 </InfoBanner>
 
-Bu ayrıca ikinci Eth2 yükseltmesi için de önemli bir değişikliktir: [shard zincirleri](/eth2/shard-chains/).
+Bu ayrıca ikinci Eth2 yükseltmesi için de önemli bir değişikliktir: [shard zincirleri](/upgrades/shard-chains/).
 
 ### Shard zincirleri kurulumu {#setting-up-for-shard-chains}
 
@@ -55,7 +55,7 @@ Eth2 yükseltmelerinin tamamı bir şekilde ilişkilidir. İşaret (Beacon) Zinc
 
 Shard zincirleri Ethereum ekosistemine yalnızca pay ispatı uzlaşmasıyla güvenli bir şekilde girebilir. İşaret (Beacon) Zinciri izlenmesi gereken shard zinciri yükseltmesi için imkan tanıyarak paydaşlık sunar.
 
-<ButtonLink to="/eth2/shard-chains/">Shard zincirleri</ButtonLink>
+<ButtonLink to="/upgrades/shard-chains/">Shard zincirleri</ButtonLink>
 
 <Divider />
 

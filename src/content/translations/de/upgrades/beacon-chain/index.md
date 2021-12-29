@@ -17,7 +17,7 @@ summaryPoint4: In den verschiedenen technischen Entwicklungsstufen ist darunter 
 
 ## Welche Funktion hat die Beacon Chain? {#what-does-the-beacon-chain-do}
 
-Die Beacon Chain übernimmt die Koordination und Verknüpfung des Netzwerks der [Shards](/eth2/shard-chains/) und [Stakers](/staking/). Aber sie ist nicht vergleichbar mit dem [Ethereum Mainnet](/glossary/#mainnet) von heute, da sie keine Zustandsveränderungen von Konten oder Smart Contracts verarbeitet.
+Die Beacon Chain übernimmt die Koordination und Verknüpfung des Netzwerks der [Shards](/upgrades/shard-chains/) und [Stakers](/staking/). Aber sie ist nicht vergleichbar mit dem [Ethereum Mainnet](/glossary/#mainnet) von heute, da sie keine Zustandsveränderungen von Konten oder Smart Contracts verarbeitet.
 
 Mit der Zeit können sich Aufgabe und Rolle der Beacon Chain zwar verändern, sie ist jedoch ein fundamentaler Baustein für das [sichere, nachhaltige und skalierbare Ethereum der Zukunft](/eth2/vision/).
 
@@ -33,7 +33,7 @@ Das Staking als Validator ist einfacher, als das [Mining](/developers/docs/minin
 Wenn du Interesse hast, die Beacon Chain als Validator sicherer zu machen, <a href="/staking/">kannst du hier mehr über das Staking</a> lernen.
 </InfoBanner>
 
-Dies ist auch eine wichtige Neuerung für ein anderes Eth2-Upgrade: [Shard Chains](/eth2/shard-chains/).
+Dies ist auch eine wichtige Neuerung für ein anderes Eth2-Upgrade: [Shard Chains](/upgrades/shard-chains/).
 
 ### Vorbereitung für Shard Chains {#setting-up-for-shard-chains}
 
@@ -55,7 +55,7 @@ Die Beacon Chain wird zunächst getrennt vom Ethereum Mainnet existieren, welche
 
 Shard Chains können nur dann sicher ins Ethereum-Netzwerk eingeführt werden, wenn ein funktionierender proof-of-stake-Konsensmechanismus bereits etabliert ist. Mit der Beacon Chain wird Staking eingeführt, wodurch der Weg für das Shard Chains-Upgrade geebnet wird.
 
-<ButtonLink to="/eth2/shard-chains/">Shard Chains</ButtonLink>
+<ButtonLink to="/upgrades/shard-chains/">Shard Chains</ButtonLink>
 
 <Divider />
 

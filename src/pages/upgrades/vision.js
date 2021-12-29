@@ -115,7 +115,7 @@ const VisionPage = ({ data, location }) => {
       image: getImage(data.shards),
       title: <Translation id="page-eth2-shard-title" />,
       description: <Translation id="page-eth2-shard-desc" />,
-      to: "/eth2/shard-chains/",
+      to: "/upgrades/shard-chains/",
       date: <Translation id="page-eth2-shard-estimate" />,
     },
   ]
@@ -197,7 +197,7 @@ const VisionPage = ({ data, location }) => {
           </p>
           <p>
             <Translation id="page-eth2-vision-scalability-desc-3" />{" "}
-            <Link to="/eth2/shard-chains/">
+            <Link to="/upgrades/shard-chains/">
               <Translation id="page-eth2-vision-shard-upgrade" />
             </Link>{" "}
           </p>

@@ -260,7 +260,7 @@ const Eth2IndexPage = ({ data }) => {
       image: getImage(data.shards),
       title: <Translation id="page-eth2-shard-title" />,
       description: <Translation id="page-eth2-shard-desc" />,
-      to: "/eth2/shard-chains/",
+      to: "/upgrades/shard-chains/",
       date: <Translation id="page-eth2-shard-estimate" />,
     },
   ]
@@ -439,7 +439,7 @@ const Eth2IndexPage = ({ data }) => {
                   <Translation id="page-eth2-docking-mainnet" />
                 </Link>
               </p>
-              <Link to="/eth2/shard-chains/">
+              <Link to="/upgrades/shard-chains/">
                 <Translation id="page-eth2-shard-title" />
               </Link>
               <p>
@@ -492,7 +492,7 @@ const Eth2IndexPage = ({ data }) => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/eth2/shard-chains/">
+                  <Link to="/upgrades/shard-chains/">
                     <Translation id="page-eth2-shard-lower" />
                   </Link>
                 </li>
@@ -574,7 +574,7 @@ const Eth2IndexPage = ({ data }) => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/eth2/shard-chains/">
+                  <Link to="/upgrades/shard-chains/">
                     <Translation id="page-eth2-shard-lower" />
                   </Link>
                 </li>
@@ -743,7 +743,7 @@ const Eth2IndexPage = ({ data }) => {
               </p>
               <p>
                 <Translation id="page-eth2-question-10-answer-7" />{" "}
-                <Link to="/eth2/shard-chains/#code-execution">
+                <Link to="/upgrades/shard-chains/#code-execution">
                   <Translation id="page-eth2-question-10-answer-8" />
                 </Link>
               </p>

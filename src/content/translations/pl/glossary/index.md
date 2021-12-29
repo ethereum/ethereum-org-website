@@ -630,7 +630,7 @@ Rodzina kryptograficznych funkcji skrótu opublikowanych przez Narodowy Instytut
 
 Łańcuch [proof-of-stake](#proof-of-stake) koordynowany przez [łańcuch śledzący](#beacon-chain) i zabezpieczony przez [walidatorów](#validator). Do sieci zostaną dodane 64 w ramach aktualizacji łańcucha odłamkowego Eth2. Łańcuchy odłamkowe będą oferować Ethereum zwiększoną przepustowość transakcji dzięki dostarczeniu dodatkowych danych do rozwiązań [warstwy 2](#layer-2) takich jak [optymistyczne pakiety zbiorcze](#optimistic-rollups) i [pakiety zbiorcze ZK](#zk-rollups).
 
-<DocLink to="/eth2/shard-chains">
+<DocLink to="/upgrades/shard-chains">
   Łańcuchy szczątkowe
 </DocLink>
 

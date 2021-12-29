@@ -17,7 +17,7 @@ summaryPoint4: Segurament la coneixeràs com a "Fase 0" de la planificació tèc
 
 ## Què fa la Cadena de Balisa? {#what-does-the-beacon-chain-do}
 
-La Cadena de Balisa dirigirà o coordinarà l'expansió de la xarxa de [fragments](/eth2/shard-chains/) i [participants](/staking/). Però no serà com la [xarxa principal d'Ethereum](/glossary/#mainnet) actual. No pot gestionar comptes o contractes intel·ligents.
+La Cadena de Balisa dirigirà o coordinarà l'expansió de la xarxa de [fragments](/upgrades/shard-chains/) i [participants](/staking/). Però no serà com la [xarxa principal d'Ethereum](/glossary/#mainnet) actual. No pot gestionar comptes o contractes intel·ligents.
 
 El rol de la Cadena de Balisa canviarà amb el pas del temps, però és un element fonamental de [l'Ethereum segura, sostenible i escalable per a la que treballem](/eth2/vision/).
 
@@ -33,7 +33,7 @@ Apostar i convertir-se en validador és més senzill que [minar](/developers/doc
 Si estàs interessat en ser validador i contribuir a protegir la Cadena de Balisa, <a href="/staking/">aprèn més sobre les apostes</a>.
 </InfoBanner>
 
-També és un canvi important per a la segona millora d'Eth2: les [cadenes de fragments](/eth2/shard-chains/).
+També és un canvi important per a la segona millora d'Eth2: les [cadenes de fragments](/upgrades/shard-chains/).
 
 ### Configuració de les cadenes de fragments {#setting-up-for-shard-chains}
 
@@ -55,7 +55,7 @@ Inicialment, la Cadena de Balisa estarà separada de la xarxa principal d'Ethere
 
 Les cadenes de fragments només poden entrar de forma segura a l'ecosistema Ethereum si existeix un mecanisme de consens de prova de participació. La Cadena de Balisa introduirà l'aposta i aplanarà el camí a la futura introducció de la cadena de fragments.
 
-<ButtonLink to="/eth2/shard-chains/">Cadenes de fragments</ButtonLink>
+<ButtonLink to="/upgrades/shard-chains/">Cadenes de fragments</ButtonLink>
 
 <Divider />
 

@@ -389,7 +389,7 @@ const dropdownLinks = {
     },
     {
       text: "page-eth2-upgrades-shard-chains",
-      to: "/eth2/shard-chains/",
+      to: "/upgrades/shard-chains/",
     },
   ],
 }

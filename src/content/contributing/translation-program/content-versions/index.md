@@ -31,7 +31,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Eth2 vision](/eth2/vision/)
 - [The Beacon Chain](/upgrades/beacon-chain/)
 - [The merge](/eth2/merge/)
-- [Shard chains](/eth2/shard-chains/)
+- [Shard chains](/upgrades/shard-chains/)
 - [Staking](/staking/)
 - [Eth2 get involved](/eth2/get-involved/)
 - [Eth2 bug bounty](/eth2/bug-bounty/)

@@ -17,7 +17,7 @@ summaryPoint4: 你可能会在技术路径图上知道这是“阶段0。
 
 ## 信标链是做什么的？ {#what-does-the-beacon-chain-do}
 
-信标链将处理或协调[分片](/eth2/shard-chains/)和[质押者](/staking/)的扩展网络。 但它与今天的[以太坊主网](/glossary/#mainnet)不同。 它无法处理帐户或智能合约。
+信标链将处理或协调[分片](/upgrades/shard-chains/)和[质押者](/staking/)的扩展网络。 但它与今天的[以太坊主网](/glossary/#mainnet)不同。 它无法处理帐户或智能合约。
 
 信标链的角色将随着时间的推移而改变，但它是[我们正在努力实现的安全、可持续和可扩展的以太坊的](/eth2/vision/)基础组件。
 
@@ -33,7 +33,7 @@ summaryPoint4: 你可能会在技术路径图上知道这是“阶段0。
 如果你有兴趣成为验证者并帮助保护信标链， 点击<a href="/staking/">了解更多关于质押</a>的信息。
 </InfoBanner>
 
-这也是另一次 Eth2 升级的重要变化：[分片链](/eth2/shard-chains/)。
+这也是另一次 Eth2 升级的重要变化：[分片链](/upgrades/shard-chains/)。
 
 ### 设置分片链 {#setting-up-for-shard-chains}
 
@@ -55,7 +55,7 @@ Eth2 升级的各部分相互关联。 所以我们来回顾一下信标链对�
 
 分片链只有在已建立权益证明共识机制的情况下才能安全进入以太坊生态系统。 信标链将引入权益质押，为后续的分片链升级奠定基础。
 
-<ButtonLink to="/eth2/shard-chains/">分片链</ButtonLink>
+<ButtonLink to="/upgrades/shard-chains/">分片链</ButtonLink>
 
 <Divider />
 

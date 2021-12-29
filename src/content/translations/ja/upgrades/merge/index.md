@@ -57,4 +57,4 @@ Eth2 の複数のアップグレードは相互の依存関係があります。
 
 これは、無限のスケーラビリティを可能にするためには、潜在的に複数のシャードチェーンを必要とするため、コミュニティからの継続的な評価検証が行われています。
 
-<ButtonLink to="/eth2/shard-chains/">シャードチェーン</ButtonLink>
+<ButtonLink to="/upgrades/shard-chains/">シャードチェーン</ButtonLink>

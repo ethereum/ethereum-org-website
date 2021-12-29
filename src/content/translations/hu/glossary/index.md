@@ -616,7 +616,7 @@ Kriptográfiai hash függvények egy családja, melyet a National Institute of S
 
 Egy [proof-of-stake](#proof-of-stake) lánc, melyet a [Beacon Chain](#beacon-chain) koordinált és a [validátorok](#validator) tartják biztonságban. 64 lesz hozzáadva a hálózathoz az Eth2 shard lánc fejlesztés részeként. A shard láncok megnövelt tranzakció átvitelt tesznek majd lehetővé az Ethereumon extra adat szolgáltatással az olyan [2. réteg](#layer-2) megoldások részére, mint az [optimista összegzők](#optimistic-rollups) és az [ZK összegzők](#zk-rollups).
 
-<DocLink to="/eth2/shard-chains">
+<DocLink to="/upgrades/shard-chains">
   Shard láncok
 </DocLink>
 
