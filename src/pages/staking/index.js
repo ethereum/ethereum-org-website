@@ -260,7 +260,7 @@ const StakingPage = ({ data, location }) => {
               <p>
                 <Translation id="page-staking-deposit-address-desc" />
               </p>
-              <ButtonLink mb={`2rem`} to="/eth2/deposit-contract/">
+              <ButtonLink mb={`2rem`} to="/staking/deposit-contract/">
                 <Translation id="page-staking-check-address" />
               </ButtonLink>
             </GhostCard>

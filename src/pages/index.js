@@ -467,7 +467,7 @@ const HomePage = ({ data, pageContext: { language } }) => {
       alt: translateMessageId("page-index-tout-eth2-image-alt", intl),
       title: translateMessageId("page-index-tout-eth2-title", intl),
       description: translateMessageId("page-index-tout-eth2-description", intl),
-      to: "/eth2/",
+      to: "/upgrades/",
     },
     {
       image: getImage(data.infrastructurefixed),

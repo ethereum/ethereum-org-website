@@ -35,7 +35,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Staking](/staking/)
 - [Eth2 get involved](/eth2/get-involved/)
 - [Eth2 bug bounty](/eth2/bug-bounty/)
-- [Staking deposit contract](/eth2/deposit-contract/)
+- [Staking deposit contract](/staking/deposit-contract/)
 - [Developers' Home](/developers/)
 - [Developer learning tools](/developers/learning-tools/)
 - [Developer local environment setup](/developers/local-environment/)

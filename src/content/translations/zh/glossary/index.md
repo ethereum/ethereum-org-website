@@ -622,7 +622,7 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 以太坊的第四个也是最后一个发展阶段，又称以太坊 2.0。
 
-<DocLink to="/eth2/">
+<DocLink to="/upgrades/">
   以太坊 2.0（Eth2）
 </DocLink>
 

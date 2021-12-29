@@ -604,7 +604,7 @@ Type de solution d'évolutivité de [couche 2](#layer-2) qui regroupe plusieurs 
 
 Quatrième et dernière phase de développement d'Ethereum.
 
-<DocLink to="/eth2/">
+<DocLink to="/upgrades/">
   Ethereum 2.0 (Eth2)
 </DocLink>
 

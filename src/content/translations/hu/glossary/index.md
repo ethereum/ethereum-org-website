@@ -604,7 +604,7 @@ A [2. réteg](#layer-2) skálázódásának egyik módszere, amely több tranzak
 
 Az Ethereum negyedik és végső fejlesztési fázisa.
 
-<DocLink to="/eth2/">
+<DocLink to="/upgrades/">
   Ethereum 2.0 (Eth2)
 </DocLink>
 

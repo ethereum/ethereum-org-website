@@ -389,7 +389,7 @@ const Eth2IndexPage = ({ data }) => {
             <p>
               <Translation id="page-eth2-index-staking-step-2-desc" />
             </p>
-            <ButtonLink to="/eth2/deposit-contract/">
+            <ButtonLink to="/staking/deposit-contract/">
               <Translation id="page-eth2-index-staking-step-2-btn" />
             </ButtonLink>
           </StakingLeftColumn>

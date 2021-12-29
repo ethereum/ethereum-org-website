@@ -347,7 +347,7 @@ _Prav tako je pomembno, da Ethereum omogoča več kot le finančne transakcije. 
 
 Proces se je že začel. [Oddajniška veriga](/upgrades/beacon-chain/), ki predstavlja prvo nadgradnjo, je bila dostavljena decembra 2020. To predstavlja temelj za zastavljanje s tem, da omogoči zastavljalcem, da se pridružijo sistemu. Naslednji relevanten korak za energetsko učinkovitost je združitev trenutne verige, ki jo varujejo rudarji, z oddajniško verigo, pri kateri rudarjenje ni potrebno. Časovnice na tej točki ne morejo biti natančne, vendar je ocenjeno, da se bo to zgodilo enkrat v 2022. Ta proces je znan pod imenom združitev (predhodno naslovljen kot priklopitev). [Več o združitvi](/upgrades/merge/).
 
-<ButtonLink to="/eth2/">Več o Eth2</ButtonLink>
+<ButtonLink to="/upgrades/">Več o Eth2</ButtonLink>
 
 ## Razvito z NFT-ji {#build-with-nfts}
 

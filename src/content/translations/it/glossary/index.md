@@ -604,7 +604,7 @@ Tipo di soluzione per il passaggio al [livello 2](#layer-2) che raggruppa più t
 
 Quarta e ultima fase di sviluppo di Ethereum.
 
-<DocLink to="/eth2/">
+<DocLink to="/upgrades/">
   Ethereum 2.0 (Eth2)
 </DocLink>
 

@@ -629,7 +629,7 @@ A type of [layer 2](#layer-2) scaling solution that batches multiple transaction
 
 The fourth and final development stage of Ethereum, otherwise known as Ethereum 2.0.
 
-<DocLink to="/eth2/">
+<DocLink to="/upgrades/">
   Ethereum 2.0 (Eth2)
 </DocLink>
 

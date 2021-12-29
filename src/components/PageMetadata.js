@@ -99,7 +99,7 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
         if (pathname.includes("/dapps/")) {
           ogImage = getSrc(ogImageDapps)
         }
-        if (pathname.includes("/eth2/")) {
+        if (pathname.includes("/upgrades/")) {
           ogImage = getSrc(ogImageEthtwo)
         }
         if (image) {

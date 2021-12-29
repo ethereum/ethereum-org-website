@@ -604,7 +604,7 @@ Un tipo de solución de escala de [capa 2](#layer-2) que agrupa varias transacci
 
 La cuarta y última fase de desarrollo de Ethereum.
 
-<DocLink to="/eth2/">
+<DocLink to="/upgrades/">
   Ethereum 2.0 (Eth2)
 </DocLink>
 

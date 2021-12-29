@@ -618,7 +618,7 @@ Typ rozwiązania skalowania [warstwy 2](#layer-2) który zawiera wiele transakcj
 
 Czwarty i ostatni etap rozwoju Ethereum, znany pod nazwą Ethereum 2.0.
 
-<DocLink to="/eth2/">
+<DocLink to="/upgrades/">
   Ethereum 2.0 (Eth2)
 </DocLink>
 

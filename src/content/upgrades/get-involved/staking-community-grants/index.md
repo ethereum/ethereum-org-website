@@ -18,7 +18,7 @@ _The Ethereum Foundation is sponsoring a wave of Eth2 staking community grants. 
 
 Calling all those interested in building up the Eth2 staking and validator community!
 
-Eth2 is happening! The Mainnet [deposit contract address](/eth2/deposit-contract/) is deployed. And [genesis of the Beacon Chain](https://hackmd.io/@benjaminion/genesis) is [right around the corner](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/). Which means, stakers are gearing up to stake.
+Eth2 is happening! The Mainnet [deposit contract address](/staking/deposit-contract/) is deployed. And [genesis of the Beacon Chain](https://hackmd.io/@benjaminion/genesis) is [right around the corner](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/). Which means, stakers are gearing up to stake.
 
 The Ethereum Foundation is funding the creation of tools, documentation, and resources to make for a delightful staking and validator experience. While the spirited staker ecosystem has already made great progress with respect to public good community resources, we are still in the early days and there's more work to do!
 
@@ -259,7 +259,7 @@ title="How do I start staking?">
     Once you're ready for real ETH, head on over to <a href="http://launchpad.ethereum.org/">the Eth2 launchpad</a> to set up your Eth2 validator.
    </p>
    <p>
-    Remember to check <a href="/eth2/deposit-contract/">the deposit contract</a> address before staking any ETH.
+    Remember to check <a href="/staking/deposit-contract/">the deposit contract</a> address before staking any ETH.
    </p>
 </ExpandableCard>
 
