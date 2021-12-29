@@ -12,12 +12,12 @@ summaryPoint4: Segurament la coneixeràs com a "Fase 0" de la planificació tèc
 ---
 
 <UpgradeStatus isShipped date="Enviat!">
-    La Cadena de Balisa es va posar en marxa l'1 de desembre al migdia (UTC). Per saber-ne més <a href="https://beaconscan.com/">explora les dades</a>. Si vols ajudar a validar la cadena, pots <a href="/eth2/staking/">"apostar" els teus ETH</a>.
+    La Cadena de Balisa es va posar en marxa l'1 de desembre al migdia (UTC). Per saber-ne més <a href="https://beaconscan.com/">explora les dades</a>. Si vols ajudar a validar la cadena, pots <a href="/staking/">"apostar" els teus ETH</a>.
 </UpgradeStatus>
 
 ## Què fa la Cadena de Balisa? {#what-does-the-beacon-chain-do}
 
-La Cadena de Balisa dirigirà o coordinarà l'expansió de la xarxa de [fragments](/eth2/shard-chains/) i [participants](/eth2/staking/). Però no serà com la [xarxa principal d'Ethereum](/glossary/#mainnet) actual. No pot gestionar comptes o contractes intel·ligents.
+La Cadena de Balisa dirigirà o coordinarà l'expansió de la xarxa de [fragments](/eth2/shard-chains/) i [participants](/staking/). Però no serà com la [xarxa principal d'Ethereum](/glossary/#mainnet) actual. No pot gestionar comptes o contractes intel·ligents.
 
 El rol de la Cadena de Balisa canviarà amb el pas del temps, però és un element fonamental de [l'Ethereum segura, sostenible i escalable per a la que treballem](/eth2/vision/).
 
@@ -30,7 +30,7 @@ La Cadena de Balisa introduirà la [prova de participació ](/developers/docs/co
 Apostar i convertir-se en validador és més senzill que [minar](/developers/docs/mining/) (la manera actual de mantenir la xarxa segura). I s'espera que això contribueixi a fer Ethereum més segura a llarg termini. Com més gent participi a la xarxa, més descentralitzada i segura serà davant dels atacs.
 
 <InfoBanner emoji=":money_bag:">
-Si estàs interessat en ser validador i contribuir a protegir la Cadena de Balisa, <a href="/eth2/staking/">aprèn més sobre les apostes</a>.
+Si estàs interessat en ser validador i contribuir a protegir la Cadena de Balisa, <a href="/staking/">aprèn més sobre les apostes</a>.
 </InfoBanner>
 
 També és un canvi important per a la segona millora d'Eth2: les [cadenes de fragments](/eth2/shard-chains/).

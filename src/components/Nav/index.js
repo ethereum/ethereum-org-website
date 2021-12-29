@@ -174,7 +174,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         },
         {
           text: "page-stake-eth",
-          to: "/eth2/staking/",
+          to: "/staking/",
         },
       ],
     },

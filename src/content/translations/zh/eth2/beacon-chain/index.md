@@ -12,12 +12,12 @@ summaryPoint4: 你可能会在技术路径图上知道这是“阶段0。
 ---
 
 <UpgradeStatus isShipped date="发货了！">
-    信标链于 2020 年 12 月 1 日中午 (UTC) 启动。 要了解更多信息，<a href="https://beaconscan.com/">浏览这里</a>。 如果您想要参与验证该信标链，您可以<a href="/eth2/staking/">质押您的 ETH</a>。
+    信标链于 2020 年 12 月 1 日中午 (UTC) 启动。 要了解更多信息，<a href="https://beaconscan.com/">浏览这里</a>。 如果您想要参与验证该信标链，您可以<a href="/staking/">质押您的 ETH</a>。
 </UpgradeStatus>
 
 ## 信标链是做什么的？ {#what-does-the-beacon-chain-do}
 
-信标链将处理或协调[分片](/eth2/shard-chains/)和[质押者](/eth2/staking/)的扩展网络。 但它与今天的[以太坊主网](/glossary/#mainnet)不同。 它无法处理帐户或智能合约。
+信标链将处理或协调[分片](/eth2/shard-chains/)和[质押者](/staking/)的扩展网络。 但它与今天的[以太坊主网](/glossary/#mainnet)不同。 它无法处理帐户或智能合约。
 
 信标链的角色将随着时间的推移而改变，但它是[我们正在努力实现的安全、可持续和可扩展的以太坊的](/eth2/vision/)基础组件。
 
@@ -30,7 +30,7 @@ summaryPoint4: 你可能会在技术路径图上知道这是“阶段0。
 质押和成为验证者比 [挖矿](/developers/docs/mining/) (当前以太坊网络获得保障的方式) 更容易。 从长远来看，这将有助于使以太坊更加安全。 参与网络的人更多，网络就更加去中心化，因此面临攻击时也将更安全。
 
 <InfoBanner emoji=":money_bag:">
-如果你有兴趣成为验证者并帮助保护信标链， 点击<a href="/eth2/staking/">了解更多关于质押</a>的信息。
+如果你有兴趣成为验证者并帮助保护信标链， 点击<a href="/staking/">了解更多关于质押</a>的信息。
 </InfoBanner>
 
 这也是另一次 Eth2 升级的重要变化：[分片链](/eth2/shard-chains/)。

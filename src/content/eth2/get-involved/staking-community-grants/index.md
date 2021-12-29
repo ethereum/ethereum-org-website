@@ -24,7 +24,7 @@ The Ethereum Foundation is funding the creation of tools, documentation, and res
 
 <br />
 <InfoBanner emoji=":thinking_face:">
-  Wait, how do I get started with staking? Learn <a href="/en/eth2/staking/">what staking means</a>, or try it first on the <a href="https://medalla.launchpad.ethereum.org/" target="_blank">Medalla testnet</a>
+  Wait, how do I get started with staking? Learn <a href="/en/staking/">what staking means</a>, or try it first on the <a href="https://medalla.launchpad.ethereum.org/" target="_blank">Medalla testnet</a>
 </InfoBanner>
 
 ## Submit proposal {#submit-proposal}
@@ -303,7 +303,7 @@ title="How can I get more involved in Eth2?">
 
 <CardContainer>
    <Card title="Staking" description="Learn more about staking. Where you can do it, what you need, and the potential risks and rewards." emoji=":money_bag:">
-      <ButtonLink to="/eth2/staking/">
+      <ButtonLink to="/staking/">
          More on staking
       </ButtonLink>
    </Card>

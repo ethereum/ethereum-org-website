@@ -278,7 +278,7 @@ const GetInvolvedPage = ({ data, location }) => {
       emoji: ":moneybag:",
       title: <Translation id="page-eth2-get-involved-title-2" />,
       description: <Translation id="page-eth2-get-involved-desc-2" />,
-      url: "/eth2/staking/",
+      url: "/staking/",
       button: <Translation id="page-eth2-get-involved-btn-2" />,
     },
     {
@@ -391,7 +391,7 @@ const GetInvolvedPage = ({ data, location }) => {
           )}
         >
           <div>
-            <ButtonLink to="/eth2/staking/">
+            <ButtonLink to="/staking/">
               <Translation id="page-eth2-get-involved-stake-eth" />
             </ButtonLink>
           </div>

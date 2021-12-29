@@ -12,12 +12,12 @@ summaryPoint4: Być może znasz to jako "etap 0" w hamonogramie technicznym
 ---
 
 <UpgradeStatus isShipped date="Wysłane!">
-    Łańcuch śledzący ruszył 1 grudnia w południe czasu uniwersalnego. Aby dowiedzieć się więcej, <a href="https://beaconscan.com/">przeglądaj dane</a>. Jeżeli chcesz pomóc w walidacji łańcucha, możesz <a href="/eth2/staking/">zastawić swoje ETH</a>.
+    Łańcuch śledzący ruszył 1 grudnia w południe czasu uniwersalnego. Aby dowiedzieć się więcej, <a href="https://beaconscan.com/">przeglądaj dane</a>. Jeżeli chcesz pomóc w walidacji łańcucha, możesz <a href="/staking/">zastawić swoje ETH</a>.
 </UpgradeStatus>
 
 ## Co robi łańcuch śledzący? {#what-does-the-beacon-chain-do}
 
-Łańcuch śledzący będzie prowadził lub koordynował rozszerzoną sieć [fragmentów](/eth2/shard-chains/) i [zastawiających](/eth2/staking/). Ale nie będzie jak sieć główna [Ethereum](/glossary/#mainnet) dzisiaj. Nie może on obsługiwać kont ani inteligentnych kontraktów.
+Łańcuch śledzący będzie prowadził lub koordynował rozszerzoną sieć [fragmentów](/eth2/shard-chains/) i [zastawiających](/staking/). Ale nie będzie jak sieć główna [Ethereum](/glossary/#mainnet) dzisiaj. Nie może on obsługiwać kont ani inteligentnych kontraktów.
 
 Rola łańcucha śledzącego z czasem się zmieni, ale jest to podstawowy komponent [bezpiecznego, zrównoważonego i skalowalnego Ethereum, nad którym pracujemy](/eth2/vision/).
 
@@ -30,7 +30,7 @@ Rola łańcucha śledzącego z czasem się zmieni, ale jest to podstawowy kompon
 Zastawianie i stawanie się walidatorem jest łatwiejsze niż [wydobywanie](/developers/docs/mining/) (sposób w jaki sieć jest zabezpieczana obecnie). Mechanizm ten ma szansę w dłuższej perspektywie zwiększyć bezpieczeństwo Ethereum. Im więcej osób będzie współpracować w sieci, tym bardziej stanie się zdecentralizowana i zabezpieczona przed atakiem.
 
 <InfoBanner emoji=":money_bag:">
-Jeżeli jesteś zainteresowany staniem się walidatorem i pomocą w zabezpieczaniu łańcucha śledzącego, <a href="/eth2/staking/">dowiedz się więcej o zastawianiu</a>.
+Jeżeli jesteś zainteresowany staniem się walidatorem i pomocą w zabezpieczaniu łańcucha śledzącego, <a href="/staking/">dowiedz się więcej o zastawianiu</a>.
 </InfoBanner>
 
 Jest to również ważna zmiana w stosunku do drugiej aktualizacji Eth2: [łańcuchów szczątkowych](/eth2/shard-chains/).

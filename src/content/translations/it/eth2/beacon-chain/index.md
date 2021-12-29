@@ -12,12 +12,12 @@ summaryPoint4: Potreste averne sentito parlare come "Fase 0" nelle roadmap tecni
 ---
 
 <UpgradeStatus isShipped date="Spedito!">
-    La beacon chain è stata resa disponibile il primo dicembre a mezzogiorno (UTC). Per saperne di più, <a href="https://beaconscan.com/">esplora i dati</a>. Se vuoi contribuire a convalidare la catena, puoi <a href="/eth2/staking/">fare staking con i tuoi ETH</a>.
+    La beacon chain è stata resa disponibile il primo dicembre a mezzogiorno (UTC). Per saperne di più, <a href="https://beaconscan.com/">esplora i dati</a>. Se vuoi contribuire a convalidare la catena, puoi <a href="/staking/">fare staking con i tuoi ETH</a>.
 </UpgradeStatus>
 
 ## Cosa fa la beacon chain? {#what-does-the-beacon-chain-do}
 
-La beacon chain condurrà o coordinerà la rete ampliata di [shard](/eth2/shard-chains/) e [staker](/eth2/staking/). Ma non sarà come la [rete principale Ethereum](/glossary/#mainnet) di oggi. Non è in grado di gestire account o smart contract.
+La beacon chain condurrà o coordinerà la rete ampliata di [shard](/eth2/shard-chains/) e [staker](/staking/). Ma non sarà come la [rete principale Ethereum](/glossary/#mainnet) di oggi. Non è in grado di gestire account o smart contract.
 
 Il ruolo della beacon chain cambierà con il passare del tempo ma è una componente fondamentale per [la sicurezza, sostenibilità e scalabilità di Etherum che stiamo cercando di raggiungere](/eth2/vision/).
 
@@ -30,7 +30,7 @@ La beacon chain introdurrà la [proof of stake](/developers/docs/consensus-mecha
 Fare staking e diventare validatore è più facile che [fare mining](/developers/docs/mining/) (cioè il metodo attuale di protezione della rete). E si spera che questo aiuti a rendere Ethereum più sicura a lungo termine. Più persone parteciperanno alla rete, più questa sarà decentralizzata e protetta dagli attacchi.
 
 <InfoBanner emoji=":money_bag:">
-Se ti interessa diventare validatore e vuoi contribuire a proteggere la beacon chain, <a href="/eth2/staking/">scopri di più sullo staking</a>.
+Se ti interessa diventare validatore e vuoi contribuire a proteggere la beacon chain, <a href="/staking/">scopri di più sullo staking</a>.
 </InfoBanner>
 
 Si tratta inoltre di un importante cambiamento per il secondo aggiornamento a Eth2: [le shard chain](/eth2/shard-chains/).

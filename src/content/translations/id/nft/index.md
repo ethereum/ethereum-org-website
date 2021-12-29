@@ -329,7 +329,7 @@ Visi ini sedang diwujudkan sekarang.
 
 #### Ethereum yang lebih hijau: Eth2 {#eth2}
 
-Ethereum saat ini sedang menjalani serangkaian peningkatan, yang dikenal sebagai Eth2, yang akan menggantikan penambangan dengan [penaruhan](/eth2/staking/). Ini akan menghilangkan daya komputasi sebagai mekanisme keamanan, dan mengurangi jejak karbon Ethereum sebanyak ~99,95%<sup>[^1]</sup>. Dalam dunia ini, para penaruh menyerahkan dana ketimbang daya komputasi untuk mengamankan jaringan.
+Ethereum saat ini sedang menjalani serangkaian peningkatan, yang dikenal sebagai Eth2, yang akan menggantikan penambangan dengan [penaruhan](/staking/). Ini akan menghilangkan daya komputasi sebagai mekanisme keamanan, dan mengurangi jejak karbon Ethereum sebanyak ~99,95%<sup>[^1]</sup>. Dalam dunia ini, para penaruh menyerahkan dana ketimbang daya komputasi untuk mengamankan jaringan.
 
 Pemakaian energi Ethereum akan menjadi sebesar biaya menjalankan sebuah komputer rumah yang dikalikan dengan jumlah node di jaringan. Jika ada 10.000 node di jaringan dan biaya menjalankan sebuah komputer rumah kasarnya sebesar 525kWh per tahun. Itu sama dengan 5.250.000kWh<sup>[^1]</sup> per tahun untuk seluruh jaringan.
 

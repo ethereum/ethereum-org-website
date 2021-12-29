@@ -690,7 +690,7 @@ Token [ERC-20](#token-standard) o wartości powiązanej z wartością innego zas
 
 Deponowanie ilości [etheru](#ether) (Twoja stawka) aby stać się walidatorem i zabezpieczyć [sieć](#network). Walidator sprawdza [transakcje](#transaction) i proponuje [bloki](#block) w modelu konsensusu [proof-of-stake](#pos). Staking stanowi dla Ciebie ekonomiczną zachętę do działania w najlepszym interesie sieci. Otrzymasz nagrody za wykonywanie obowiązków [walidatora](#validator), ale stracisz różne ilości ETH, jeśli tego nie zrobisz.
 
-<DocLink to="/eth2/staking/">
+<DocLink to="/staking/">
   Zestakuj swój ETH, aby zostać walidatorem Ethereum
 </DocLink>
 
@@ -760,7 +760,7 @@ Nazwa ta pochodzi od brytyjskiego matematyka i informatyka Alana Turinga. System
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos">
   Proof-of-stake
-</DocLink> <DocLink to="/eth2/staking/">
+</DocLink> <DocLink to="/staking/">
   Stakowanie w Ethereum
 </DocLink>
 

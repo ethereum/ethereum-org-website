@@ -329,7 +329,7 @@ Ta vizija se dostavlja prav zdaj.
 
 #### Bolj zelen Ethereum: Eth2 {#eth2}
 
-Ethereum je trenutno podvržen seriji nadgradenj poznanih kot Eth2, ki bodo nadomestile rudarjenje z [zastavljanjem](/eth2/staking/). To bo odstranilo računalniško moč kot varnostni mehanizem in zmanjšalo Ethereumov ogljični odtis za ~99.95%<sup>[^1]</sup>. V tem svetu za zaščito omrežja zastavljalci namesto računalniške moči namenijo sredstva.
+Ethereum je trenutno podvržen seriji nadgradenj poznanih kot Eth2, ki bodo nadomestile rudarjenje z [zastavljanjem](/staking/). To bo odstranilo računalniško moč kot varnostni mehanizem in zmanjšalo Ethereumov ogljični odtis za ~99.95%<sup>[^1]</sup>. V tem svetu za zaščito omrežja zastavljalci namesto računalniške moči namenijo sredstva.
 
 Strošek energije Ethereuma bo postal strošek uporabe domačega računalnika pomnožen s številom vozlišč v omrežju. Če je v omrežju 10.000 vozlišč in je strošek uporabe domačega računalnika približno 525 kWh na leto. To je 5.250.000 kWh<sup>[^1]</sup> na leto za celotno omrežje.
 

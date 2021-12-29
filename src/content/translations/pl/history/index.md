@@ -100,7 +100,7 @@ Do ekosystemu Ethereum został wprowadzony kontrakt depozytu na staking Choć by
 
 [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/eth2/staking/">
+<DocLink to="/staking/">
   Staking
 </DocLink>
 

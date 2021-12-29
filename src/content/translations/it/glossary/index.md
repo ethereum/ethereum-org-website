@@ -676,7 +676,7 @@ Token [ERC-20](#token-standard) con un valore ancorato al valore di un'altra ris
 
 Depositare una quantità di [ether](#ether) (lo stake) per diventare validatore e proteggere la [rete](#network). Un validatore controlla [transazioni](#transaction) e propone [blocchi](#block) secondo un modello di consenso [proof-of-stake](#pos). Lo staking dà un incentivo economico per agire nel miglior interesse della rete. Si ottengono ricompense per svolgere i compiti di [validatore](#validator), ma si perdono quantità variabili di ETH se non si svolgono tali compiti.
 
-<DocLink to="/eth2/staking/">
+<DocLink to="/staking/">
   Fai staking con i tuoi ETH per diventare validatore di Ethereum
 </DocLink>
 
@@ -746,7 +746,7 @@ Concetto che prende il nome dal matematico e informatico inglese Alan Turing. Un
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos">
   Proof-of-stake
-</DocLink> <DocLink to="/eth2/staking/">
+</DocLink> <DocLink to="/staking/">
   Staking in Ethereum
 </DocLink>
 

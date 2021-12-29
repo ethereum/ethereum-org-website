@@ -51,7 +51,7 @@ Il contratto di deposito in staking ha introdotto lo [staking](/glossary/#stakin
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/eth2/staking/">
+<DocLink to="/staking/">
   Staking
 </DocLink>
 

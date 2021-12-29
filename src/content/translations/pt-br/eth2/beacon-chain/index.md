@@ -12,12 +12,12 @@ summaryPoint4: Talvez você tenha visto isso sendo mencionado como "Fase 0" nos 
 ---
 
 <UpgradeStatus isShipped date="Shipped!">
-    A Beacon Chain foi lançada em 1 de dezembro de 2020 ao meio-dia (UTC). Para saber mais, <a href="https://beaconscan.com/">conheça os dados</a>. Se quiser ajudar a validar a cadeia, você pode <a href="/eth2/staking/">participar com seus ETH</a>.
+    A Beacon Chain foi lançada em 1 de dezembro de 2020 ao meio-dia (UTC). Para saber mais, <a href="https://beaconscan.com/">conheça os dados</a>. Se quiser ajudar a validar a cadeia, você pode <a href="/staking/">participar com seus ETH</a>.
 </UpgradeStatus>
 
 ## O que a Beacon Chain faz? {#what-does-the-beacon-chain-do}
 
-A Beacon Chain conduzirá ou coordenará a rede estendida de [shards](/eth2/shard-chains/) ("fragmentos") e [stakers](/eth2/staking/) ("participantes"). Mas não será como a [rede principal da Ethereum](/glossary/#mainnet) de hoje. Ela não será capaz de gerenciar contas ou contratos inteligentes.
+A Beacon Chain conduzirá ou coordenará a rede estendida de [shards](/eth2/shard-chains/) ("fragmentos") e [stakers](/staking/) ("participantes"). Mas não será como a [rede principal da Ethereum](/glossary/#mainnet) de hoje. Ela não será capaz de gerenciar contas ou contratos inteligentes.
 
 O papel da Beacon Chain mudará com o tempo, mas é um componente fundamental para [o Ethereum seguro, sustentável e dimensionável rumo ao qual estamos trabalhando](/eth2/vision/).
 
@@ -30,7 +30,7 @@ A Beacon Chain iniciará a "prova de participação" ([proof-of-stake](/develope
 Participar e se tornar um validador é mais fácil do que [minerar](/developers/docs/mining/) (forma como a rede é mantida segura hoje). E espera-se que isso ajude a tornar a rede Ethereum ainda mais segura em longo prazo. Quanto mais pessoas participarem da rede, mais descentralizada e segura contra ataques ela se tornará.
 
 <InfoBanner emoji=":money_bag:">
-Se você estiver interessado em se tornar um validador e ajudar a manter a Beacon Chain segura, <a href="/eth2/staking/">veja mais informações sobre como participar</a>.
+Se você estiver interessado em se tornar um validador e ajudar a manter a Beacon Chain segura, <a href="/staking/">veja mais informações sobre como participar</a>.
 </InfoBanner>
 
 Essa também é uma mudança importante para outra melhoria do Eth2: [as cadeias de fragmentos (shard chains)](/eth2/shard-chains/).

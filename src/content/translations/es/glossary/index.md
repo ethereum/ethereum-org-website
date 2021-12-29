@@ -676,7 +676,7 @@ Un [token ERC-20](#token-standard) con un valor vinculado al valor de otro activ
 
 Depositar una cantidad de [ether](#ether) (tu participación) para convertirte en un validador y asegurar la [red](#network). Un validador comprueba las [transacciones](#transaction) y propone [bloques](#block) bajo un modelo de consenso de [prueba de participación](#pos). La participación te proporciona un incentivo económico para actuar en el mejor interés de la red. Obtendrás recompensas por llevar a cabo tus tareas como [validador](#validator), pero perderás cantidades diferentes de ETH si no las llevas a cabo.
 
-<DocLink to="/eth2/staking/">
+<DocLink to="/staking/">
   Apuesta tus ETH para llegar a ser un validador de Ethereum
 </DocLink>
 
@@ -746,7 +746,7 @@ Un [nodo](#node) en un sistema de [Prueba de participación](#proof-of-stake) re
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos">
   Prueba de participación
-</DocLink> <DocLink to="/eth2/staking/">
+</DocLink> <DocLink to="/staking/">
   Participación en Ethereum
 </DocLink>
 

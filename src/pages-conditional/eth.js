@@ -364,7 +364,7 @@ const EthPage = (props) => {
             </p>
             <p>
               <Translation id="page-eth-fuels-staking" />{" "}
-              <Link to="/eth2/staking/">
+              <Link to="/staking/">
                 <Translation id="page-eth-fuels-more-staking" />
               </Link>
             </p>

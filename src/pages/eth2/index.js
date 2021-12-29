@@ -402,7 +402,7 @@ const Eth2IndexPage = ({ data }) => {
                 intl
               )}
             >
-              <ButtonLink to="/eth2/staking/">
+              <ButtonLink to="/staking/">
                 <Translation id="page-eth2-deposit-contract-staking-more-link" />
               </ButtonLink>
             </StakingCard>
@@ -531,7 +531,7 @@ const Eth2IndexPage = ({ data }) => {
               </p>
               <p>
                 <Translation id="page-eth2-question-4-answer-6" />{" "}
-                <Link to="/eth2/staking/">
+                <Link to="/staking/">
                   <Translation id="page-eth2-question-4-answer-7" />
                 </Link>
               </p>
@@ -550,7 +550,7 @@ const Eth2IndexPage = ({ data }) => {
                 <Translation id="page-eth2-question-5-answer-1" />
               </p>
               <p>
-                <Link to="/eth2/staking/">
+                <Link to="/staking/">
                   <Translation id="page-eth2-deposit-contract-staking-more-link" />
                 </Link>
               </p>
@@ -690,7 +690,7 @@ const Eth2IndexPage = ({ data }) => {
             >
               <p>
                 <Translation id="page-eth2-question-9-answer-1" />{" "}
-                <Link to="/eth2/staking/">
+                <Link to="/staking/">
                   <Translation id="page-eth2-question-9-stake-eth" />
                 </Link>
               </p>

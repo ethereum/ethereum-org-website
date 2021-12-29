@@ -12,12 +12,12 @@ summaryPoint4: Bunu teknik yol haritalarındaki "0 Aşaması" olarak tanıyor ol
 ---
 
 <UpgradeStatus isShipped date="Sevk edildi!">
-    İşaret (Beacon) Zinciri 1 Aralık saat 12:00'de (UTC) başlatılmıştır. Daha fazla bilgi için, bk. <a href="https://beaconscan.com/">verileri keşfet</a>. Zincirin doğrulanmasını isterseniz, <a href="/eth2/staking/">ETH'nizi stake edebilirsiniz</a>.
+    İşaret (Beacon) Zinciri 1 Aralık saat 12:00'de (UTC) başlatılmıştır. Daha fazla bilgi için, bk. <a href="https://beaconscan.com/">verileri keşfet</a>. Zincirin doğrulanmasını isterseniz, <a href="/staking/">ETH'nizi stake edebilirsiniz</a>.
 </UpgradeStatus>
 
 ## İşaret (Beacon) Zinciri Ne Yapar? {#what-does-the-beacon-chain-do}
 
-İşaret (Beacon) Zinciri [shard](/eth2/shard-chains/) ve [staker](/eth2/staking/)lerden oluşan genişletilmiş ağı yönetir veya koordine eder. Ancak günümüzün [Ethereum ana ağı](/glossary/#mainnet) gibi olmayacaktır. Hesapları veya akıllı sözleşmeleri ele alamaz.
+İşaret (Beacon) Zinciri [shard](/eth2/shard-chains/) ve [staker](/staking/)lerden oluşan genişletilmiş ağı yönetir veya koordine eder. Ancak günümüzün [Ethereum ana ağı](/glossary/#mainnet) gibi olmayacaktır. Hesapları veya akıllı sözleşmeleri ele alamaz.
 
 İşaret (Beacon) Zinciri'nin rolü zamanla değişir ancak [geliştirmeye çalıştığımız güvenli, sürdürülebilir ve ölçeklendirilebilir Ethereum](/eth2/vision/) için temel bir bileşendir.
 
@@ -30,7 +30,7 @@ summaryPoint4: Bunu teknik yol haritalarındaki "0 Aşaması" olarak tanıyor ol
 Paydaşlık ve doğrulayıcı oluşturmak [madencilik](/developers/docs/mining/) faaliyetinden daha kolaydır (şu anda ağ bu şekilde korunmaktadır). Ethereum'u uzun vadede daha güvenli kılmanıza yardımcı olması umulmaktadır. Ağa ne kadar kişi katılırsa o kadar merkeziyetsiz ve saldırıya karşı güvenli hale gelir.
 
 <InfoBanner emoji=":money_bag:">
-Doğrulayıcı olmak ve İşaret (Beacon) Zincirinin güvenliğine yardımcı olmak istiyorsanız <a href="/eth2/staking/">stake etme konusunda daha fazla bilgi alın</a>.
+Doğrulayıcı olmak ve İşaret (Beacon) Zincirinin güvenliğine yardımcı olmak istiyorsanız <a href="/staking/">stake etme konusunda daha fazla bilgi alın</a>.
 </InfoBanner>
 
 Bu ayrıca ikinci Eth2 yükseltmesi için de önemli bir değişikliktir: [shard zincirleri](/eth2/shard-chains/).

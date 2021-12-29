@@ -12,12 +12,12 @@ summaryPoint4: S-ar putea să-l cunoști sub numele de „Faza 0” pe foile de 
 ---
 
 <UpgradeStatus isShipped date="Expediat!">
-    Rețeaua Beacon a fost lansată pe 1 decembrie 2020 la prânz, UTC. Pentru informații suplimentare, <a href="https://beaconscan.com/">explorează datele</a>. Dacă vrei să ajuți la validarea lanțului, poți <a href="/eth2/staking/">să mizezi ETH</a>.
+    Rețeaua Beacon a fost lansată pe 1 decembrie 2020 la prânz, UTC. Pentru informații suplimentare, <a href="https://beaconscan.com/">explorează datele</a>. Dacă vrei să ajuți la validarea lanțului, poți <a href="/staking/">să mizezi ETH</a>.
 </UpgradeStatus>
 
 ## Ce face Lanțul Beacon? {#what-does-the-beacon-chain-do}
 
-Lanțul Beacon va conduce sau va coordona rețeaua extinsă de [fragmente](/eth2/shard-chains/) și [stakeri](/eth2/staking/). Dar nu va fi ca [Rețeaua principală Ethereum](/glossary/#mainnet) de astăzi. Nu poate gestiona conturi sau contracte inteligente.
+Lanțul Beacon va conduce sau va coordona rețeaua extinsă de [fragmente](/eth2/shard-chains/) și [stakeri](/staking/). Dar nu va fi ca [Rețeaua principală Ethereum](/glossary/#mainnet) de astăzi. Nu poate gestiona conturi sau contracte inteligente.
 
 Rolul rețelei Beacon se va schimba în timp, dar este o componentă fundamentală pentru [Ethereum-ul sigur, durabil și scalabil la care lucrăm](/eth2/vision/).
 
@@ -30,7 +30,7 @@ Rețeaua Beacon va introduce [Dovada de Minare](/developers/docs/consensus-mecha
 Mizarea și transformarea în validator este mai ușoară decât [minatul](/developers/docs/mining/) (modul în care rețeaua este securizată în prezent). Și sperăm că acest lucru va ajuta Ethereum să fie mai sigur pe termen lung. Cu cât vor participa mai mulți oameni la rețeaua Ethereum, cu atât va deveni mai descentralizată și mai ferită de atacuri.
 
 <InfoBanner emoji=":money_bag:">
-Dacă dorești să devii validator și să ajuți la securizarea rețelei Beacon, <a href="/eth2/staking/">află mai multe despre mizare</a>.
+Dacă dorești să devii validator și să ajuți la securizarea rețelei Beacon, <a href="/staking/">află mai multe despre mizare</a>.
 </InfoBanner>
 
 Aceasta este o altă schimbare importantă pentru următorul upgrade Eth2: [lanțurile de fragmente](/eth2/shard-chains/).

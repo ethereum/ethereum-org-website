@@ -125,7 +125,7 @@ const Eth2BeaconChainActions = () => {
           <StyledButtonLink to="https://launchpad.ethereum.org">
             <Translation id="get-started" />
           </StyledButtonLink>
-          <ButtonLink isSecondary to="/eth2/staking/">
+          <ButtonLink isSecondary to="/staking/">
             <Translation id="page-eth2-index-staking-learn" />
           </ButtonLink>
         </StyledCardLeft>

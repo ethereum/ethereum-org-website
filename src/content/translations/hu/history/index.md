@@ -51,7 +51,7 @@ A letétbe helyezési szerződés bemutatta a [letétbe helyezés](/glossary/#st
 
 [Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/eth2/staking/">
+<DocLink to="/staking/">
   Letétbe helyezés
 </DocLink>
 

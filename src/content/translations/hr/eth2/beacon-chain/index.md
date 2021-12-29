@@ -12,12 +12,12 @@ summaryPoint4: To možete prepoznati kao „Fazu 0” na tehničkom planu.
 ---
 
 <UpgradeStatus isShipped date="Dostavljeno!">
-    Beacon Chain poslan je 1. prosinca u podne (UTC). Za više informacija <a href="https://beaconscan.com/">proučite podatke</a>. Ako želite pomoći u validaciji lanca, možete <a href="/eth2/staking/"> uložiti svoj ETH </a>.
+    Beacon Chain poslan je 1. prosinca u podne (UTC). Za više informacija <a href="https://beaconscan.com/">proučite podatke</a>. Ako želite pomoći u validaciji lanca, možete <a href="/staking/"> uložiti svoj ETH </a>.
 </UpgradeStatus>
 
 ## Što radi Beacon Chain? {#what-does-the-beacon-chain-do}
 
-Beacon Chain će dirigirati ili uskladiti proširenu mrežu [ djelića](/eth2/shard-chains/) i [učesnika](/eth2/staking/). Ali neće biti kao današnja [glavna mreža Ethereum](/glossary/#mainnet). Ne podržava račune ili pametne ugovore.
+Beacon Chain će dirigirati ili uskladiti proširenu mrežu [ djelića](/eth2/shard-chains/) i [učesnika](/staking/). Ali neće biti kao današnja [glavna mreža Ethereum](/glossary/#mainnet). Ne podržava račune ili pametne ugovore.
 
 Beacon Chain će tijekom vremena mijenjati ulogu, međutim to je temeljna komponenta za [siguran, održiv i nadogradiv Ethereum na kojem radimo](/eth2/vision/).
 
@@ -30,7 +30,7 @@ Beacon Chain će predstaviti [proof-of-stake](/developers/docs/consensus-mechani
 Ulagati i postati validator, jednostavnije je od [ rudarenja ](/developers/docs/mining/) (kako je mreža trenutačno zaštićena). Postoji nada da će to dugoročno pomoći da Ethereum bude sigurniji. Što više ljudi sudjeluje u mreži, to će ona biti decentraliziranija i sigurnija od napada.
 
 <InfoBanner emoji=":money_bag:">
-Ako ste zainteresirani za validiranje i pomoć u osiguranju za Beacon Chain, <a href="/eth2/staking/"> saznajte više o sudjelovanju</a>.
+Ako ste zainteresirani za validiranje i pomoć u osiguranju za Beacon Chain, <a href="/staking/"> saznajte više o sudjelovanju</a>.
 </InfoBanner>
 
 Ovo je također važna promjena za drugu nadogradnju Eth2: [lanci djelića](/eth2/shard-chains/).

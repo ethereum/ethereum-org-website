@@ -676,7 +676,7 @@ Langage d'assemblage de l'[EVM](#evm) dans un programme [Solidity](#solidity). L
 
 Déposer une quantité d'[ether](#ether) (votre mise) pour devenir validateur et sécuriser le [réseau](#network). Un validateur vérifie les [transactions](#transaction) et propose des [blocs](#block) sous un modèle de consensus de [preuve d'enjeu](#pos). Miser vous incite économiquement à agir dans le meilleur intérêt du réseau. Vous obtiendrez des récompenses pour effectuer vos tâches de [validateur](#validator) , mais perdrez diverses quantités d'ETH dans le cas contraire.
 
-<DocLink to="/eth2/staking/">
+<DocLink to="/staking/">
   Misez votre ETH pour devenir un validateur Ethereum
 </DocLink>
 
@@ -746,7 +746,7 @@ Dans un système de [preuve d'enjeu](#proof-of-stake), [nœud](#node) responsabl
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos">
   preuve d'enjeu
-</DocLink> <DocLink to="/eth2/staking/">
+</DocLink> <DocLink to="/staking/">
   Miser sur Ethereum
 </DocLink>
 

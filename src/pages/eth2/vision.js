@@ -235,7 +235,7 @@ const VisionPage = ({ data, location }) => {
           <p>
             <Translation id="page-eth2-vision-security-validator" />
           </p>
-          <ButtonLink to="/eth2/staking/">
+          <ButtonLink to="/staking/">
             <Translation id="page-eth2-vision-security-staking" />
           </ButtonLink>
           <h3>
@@ -253,7 +253,7 @@ const VisionPage = ({ data, location }) => {
           </p>
           <p>
             <Translation id="page-eth2-vision-sustainability-desc-2" />{" "}
-            <Link to="/eth2/staking/">
+            <Link to="/staking/">
               <Translation id="page-eth2-vision-staking-lower" />
             </Link>
           </p>

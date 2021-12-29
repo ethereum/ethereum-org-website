@@ -51,7 +51,7 @@ Contractul de depozit de miză a introdus [miza](/glossary/#staking) în ecosist
 
 [Citește anunțul Fundației Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/eth2/staking/">
+<DocLink to="/staking/">
   Mizare
 </DocLink>
 

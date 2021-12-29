@@ -17,7 +17,7 @@ incomplete: true
 与比特币一样，以太坊目前使用的是[工作量证明（PoW）](/developers/docs/consensus-mechanisms/pow/)作为共识机制。 挖矿是工作量证明的本质。 以太坊矿工――运行软件的计算机，利用他们的时间和算力，处理交易和生产模块。
 
 <InfoBanner emoji=":wave:">
-   权益证明将在未来一年内取代挖矿和工作量证明。 您可以从今天开始权益质押 ETH。 <a href="/eth2/staking/">关于权益质押的更多信息</a>    
+   权益证明将在未来一年内取代挖矿和工作量证明。 您可以从今天开始权益质押 ETH。 <a href="/staking/">关于权益质押的更多信息</a>    
 </InfoBanner>
 
 ## 为什么存在矿工？ {#why-do-miners-exist}

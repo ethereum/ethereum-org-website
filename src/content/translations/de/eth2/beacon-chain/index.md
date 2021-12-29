@@ -12,12 +12,12 @@ summaryPoint4: In den verschiedenen technischen Entwicklungsstufen ist darunter 
 ---
 
 <UpgradeStatus isShipped date="Versandt!">
-    Die Beacon Chain wurde am 1. Dezember, 2020 gegen Mittag der koordinierten Weltzeit eingeführt. Um mehr zu erfahren, schau dir die <a href="https://beaconscan.com/">Daten</a> an. Wenn Du auch beim Validieren von Transaktionen auf der Beacon Chain helfen möchtest, kannst Du <a href="/eth2/staking/">Deine ETH staken</a>.
+    Die Beacon Chain wurde am 1. Dezember, 2020 gegen Mittag der koordinierten Weltzeit eingeführt. Um mehr zu erfahren, schau dir die <a href="https://beaconscan.com/">Daten</a> an. Wenn Du auch beim Validieren von Transaktionen auf der Beacon Chain helfen möchtest, kannst Du <a href="/staking/">Deine ETH staken</a>.
 </UpgradeStatus>
 
 ## Welche Funktion hat die Beacon Chain? {#what-does-the-beacon-chain-do}
 
-Die Beacon Chain übernimmt die Koordination und Verknüpfung des Netzwerks der [Shards](/eth2/shard-chains/) und [Stakers](/eth2/staking/). Aber sie ist nicht vergleichbar mit dem [Ethereum Mainnet](/glossary/#mainnet) von heute, da sie keine Zustandsveränderungen von Konten oder Smart Contracts verarbeitet.
+Die Beacon Chain übernimmt die Koordination und Verknüpfung des Netzwerks der [Shards](/eth2/shard-chains/) und [Stakers](/staking/). Aber sie ist nicht vergleichbar mit dem [Ethereum Mainnet](/glossary/#mainnet) von heute, da sie keine Zustandsveränderungen von Konten oder Smart Contracts verarbeitet.
 
 Mit der Zeit können sich Aufgabe und Rolle der Beacon Chain zwar verändern, sie ist jedoch ein fundamentaler Baustein für das [sichere, nachhaltige und skalierbare Ethereum der Zukunft](/eth2/vision/).
 
@@ -30,7 +30,7 @@ Die Beacon Chain wird [proof-of-stake](/developers/docs/consensus-mechanisms/pos
 Das Staking als Validator ist einfacher, als das [Mining](/developers/docs/mining/) (wie das Netzwerk momentan gesichert wird). Langfristig besteht die Hoffnung darin, Ethereum durch Staking noch sicherer zu machen. Je mehr Leute sich aktiv am Netzwerk beteiligen, desto dezentraler und damit robuster und sicherer ist Ethereum gegen potentielle Angriffe.
 
 <InfoBanner emoji=":money_bag:">
-Wenn du Interesse hast, die Beacon Chain als Validator sicherer zu machen, <a href="/eth2/staking/">kannst du hier mehr über das Staking</a> lernen.
+Wenn du Interesse hast, die Beacon Chain als Validator sicherer zu machen, <a href="/staking/">kannst du hier mehr über das Staking</a> lernen.
 </InfoBanner>
 
 Dies ist auch eine wichtige Neuerung für ein anderes Eth2-Upgrade: [Shard Chains](/eth2/shard-chains/).

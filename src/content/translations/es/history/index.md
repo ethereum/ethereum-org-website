@@ -51,7 +51,7 @@ El contrato de depósito de participación introdujo la [participación](/glossa
 
 [Leer la declaración de la Fundación Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/eth2/staking/">
+<DocLink to="/staking/">
   Participación
 </DocLink>
 

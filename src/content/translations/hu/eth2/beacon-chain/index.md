@@ -12,12 +12,12 @@ summaryPoint4: A technikai ütemtervekben "Fázis 0"-ként is ismerheted.
 ---
 
 <UpgradeStatus isShipped date="Kiszállított!">
-    A Beacon Chain december 1.-jén központi idő szerint délben indult el. További információért <a href="https://beaconscan.com/">nézd meg az adatokat</a>. Ha szeretnél segíteni a lánc érvényesítésében, akkor <a href="/eth2/staking/">letétbe tudod helyezni az ETH-edet</a>.
+    A Beacon Chain december 1.-jén központi idő szerint délben indult el. További információért <a href="https://beaconscan.com/">nézd meg az adatokat</a>. Ha szeretnél segíteni a lánc érvényesítésében, akkor <a href="/staking/">letétbe tudod helyezni az ETH-edet</a>.
 </UpgradeStatus>
 
 ## Mit csinál a Beacon Chain? {#what-does-the-beacon-chain-do}
 
-A Beacon Chain fogja koordinálni vagy vezetni a [shardokból](/eth2/shard-chains/) és [stakerekből](/eth2/staking/) álló kiterjesztett hálózatot. De nem olyan lesz, mint jelenleg az [Ethereum főhálózat](/glossary/#mainnet). Nem fog tudni számlákat vagy okosszerződéseket kezelni.
+A Beacon Chain fogja koordinálni vagy vezetni a [shardokból](/eth2/shard-chains/) és [stakerekből](/staking/) álló kiterjesztett hálózatot. De nem olyan lesz, mint jelenleg az [Ethereum főhálózat](/glossary/#mainnet). Nem fog tudni számlákat vagy okosszerződéseket kezelni.
 
 A Beacon Chain szerepe meg fog változni idővel, de egy olyan alapvető összetevője [ a biztonságos, fenntartható és skálázható Ethereumnak, amiért dolgozunk](/eth2/vision/).
 
@@ -30,7 +30,7 @@ A Beacon Chain bevezeti [proof-of-stake-et](/developers/docs/consensus-mechanism
 A letétbe helyezés és a validátorrá válás egyszerűbb, mint a [bányászat](/developers/docs/mining/) (ahogy jelenleg biztosítva van a hálózat). És remélhetőleg hosszútávon még biztonságosabbá teszi majd az Ethereumot. Minél több ember vesz részt a hálózatban, annál inkább decentralizáltabb és biztonságosabb lesz a támadásokkal szemben.
 
 <InfoBanner emoji=":money_bag:">
-Ha érdekel a letétbe helyezés és szeretnél segíteni a Beacon Chain biztosításában, akkor <a href="/eth2/staking/">tudj meg többet a letétbe helyezésről</a>.
+Ha érdekel a letétbe helyezés és szeretnél segíteni a Beacon Chain biztosításában, akkor <a href="/staking/">tudj meg többet a letétbe helyezésről</a>.
 </InfoBanner>
 
 Ez a második Eth2 fejlesztésnél is fontos változás: [a shard láncoknál](/eth2/shard-chains/).

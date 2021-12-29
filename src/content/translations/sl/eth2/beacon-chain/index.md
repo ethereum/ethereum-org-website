@@ -12,12 +12,12 @@ summaryPoint4: Oddajniško verigo morda poznate pod imenom "faza 0", ki se upora
 ---
 
 <UpgradeStatus isShipped date="Odpremljeno!">
-    Oddajniška veriga je začela delovati 1. decembra ob 12.00 UTC. Če želite več informacij, <a href="https://beaconscan.com/">raziščite podatke</a>. Če želite pomagati potrjevati verigo, lahko <a href="/eth2/staking/">zastavite svoj ETH</a>.
+    Oddajniška veriga je začela delovati 1. decembra ob 12.00 UTC. Če želite več informacij, <a href="https://beaconscan.com/">raziščite podatke</a>. Če želite pomagati potrjevati verigo, lahko <a href="/staking/">zastavite svoj ETH</a>.
 </UpgradeStatus>
 
 ## Kakšen je namen oddajniške verige? {#what-does-the-beacon-chain-do}
 
-Oddajniška veriga bo izvajala in usklajevala razširjeno omrežje [drobcev](/eth2/shard-chains/) in [zastavljavcev](/eth2/staking/). Vendar ne bo enaka kot [glavno Ethereum omrežje](/glossary/#mainnet) danes. Ne more obdelovati računov ali pametnih pogodb.
+Oddajniška veriga bo izvajala in usklajevala razširjeno omrežje [drobcev](/eth2/shard-chains/) in [zastavljavcev](/staking/). Vendar ne bo enaka kot [glavno Ethereum omrežje](/glossary/#mainnet) danes. Ne more obdelovati računov ali pametnih pogodb.
 
 Vloga oddajniške verige se bo sčasoma spremenila, vendar je temeljni sestavni del [varnega, trajnostnega in nadgradljivega Ethereuma, ki ga želimo razviti](/eth2/vision/).
 
@@ -30,7 +30,7 @@ Oddajniška veriga bo v Ethereum uvedla [dokaz o deležu](/developers/docs/conse
 Zastavljanje in delovanje kot validator sta lažja kot [rudarjenje](/developers/docs/mining/) (to je način, s katerim je omrežje trenutno zaščiteno). Upamo, da bo Ethereum s tem dolgoročno postal bolj varen. Več ljudi sodeluje v omrežju, bolj decentralizirano in varno pred napadi bo postalo.
 
 <InfoBanner emoji=":money_bag:">
-Če vas zanima, da bi postali validator in pomagali zaščititi oddajniško verigo, <a href="/eth2/staking/">preberite več o zastavljanju</a>.
+Če vas zanima, da bi postali validator in pomagali zaščititi oddajniško verigo, <a href="/staking/">preberite več o zastavljanju</a>.
 </InfoBanner>
 
 To je prav tako pomembna sprememba za drugo Eth2 nadgradnjo: [razdrobljene verige](/eth2/shard-chains/).

@@ -118,7 +118,7 @@ Altair 升级是[信标链](/eth2/beacon-chain)的第一次预定升级。 预�
 
 [请阅读以太坊基金会公告](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/eth2/staking/">
+<DocLink to="/staking/">
   权益质押
 </DocLink>
 

@@ -694,7 +694,7 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 存入一定量的 [ether](#ether)（质押金）成为验证者并参与维护[以太坊网络](#network)。 验证者在 [proof-of-stake（权益证明）](#pos) 共识模型中检查 [交易](#transaction) 并且提议 [区块](#block)。 质押能够为符合网络利益的行为提供经济激励。 你将会因为履行[验证者](#validator)义务而获得奖励，反之将损失一定量的 ETH。
 
-<DocLink to="/eth2/staking/">
+<DocLink to="/staking/">
   质押您的以太币并成为以太坊验证者
 </DocLink>
 
@@ -766,7 +766,7 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
   权益证明
 </DocLink>
 
-<DocLink to="/eth2/staking/">
+<DocLink to="/staking/">
   质押
 </DocLink>
 

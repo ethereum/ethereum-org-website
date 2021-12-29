@@ -12,12 +12,12 @@ summaryPoint4: You might know this as "Phase 0" on technical roadmaps.
 ---
 
 <UpgradeStatus isShipped date="Shipped!">
-    The Beacon Chain shipped on December 1, 2020 at noon UTC. To learn more, <a href="https://beaconscan.com/">explore the data</a>. If you want to help validate the chain, you can <a href="/eth2/staking/">stake your ETH</a>.
+    The Beacon Chain shipped on December 1, 2020 at noon UTC. To learn more, <a href="https://beaconscan.com/">explore the data</a>. If you want to help validate the chain, you can <a href="/staking/">stake your ETH</a>.
 </UpgradeStatus>
 
 ## What does the Beacon Chain do? {#what-does-the-beacon-chain-do}
 
-The Beacon Chain will conduct or coordinate the expanded network of [shards](/eth2/shard-chains/) and [stakers](/eth2/staking/). But it won't be like the [Ethereum Mainnet](/glossary/#mainnet) of today. It can't handle accounts or smart contracts.
+The Beacon Chain will conduct or coordinate the expanded network of [shards](/eth2/shard-chains/) and [stakers](/staking/). But it won't be like the [Ethereum Mainnet](/glossary/#mainnet) of today. It can't handle accounts or smart contracts.
 
 The Beacon Chain’s role will change over time but it’s a foundational component for [the secure, sustainable and scalable Ethereum we’re working towards](/eth2/vision/).
 
@@ -30,7 +30,7 @@ The Beacon Chain will introduce [proof-of-stake](/developers/docs/consensus-mech
 Staking and becoming a validator is easier than [mining](/developers/docs/mining/) (how the network is currently secured). And it's hoped this will help make Ethereum more secure in the long run. The more people that participate in the network, the more decentralized and safe from attack it will become.
 
 <InfoBanner emoji=":money_bag:">
-If you're interested in becoming a validator and helping secure the Beacon Chain, <a href="/eth2/staking/">learn more about staking</a>.
+If you're interested in becoming a validator and helping secure the Beacon Chain, <a href="/staking/">learn more about staking</a>.
 </InfoBanner>
 
 This is also an important change for another Eth2 upgrade: [shard chains](/eth2/shard-chains/).

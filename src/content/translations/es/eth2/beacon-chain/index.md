@@ -12,12 +12,12 @@ summaryPoint4: Quizá lo conozcas como la "Fase 0" en los mapas técnicos de la 
 ---
 
 <UpgradeStatus isShipped date="¡Enviada!">
-  La Cadena de Baliza se presentó el 1 de diciembre al mediodía (UTC). Para saber más, <a href="https://beaconscan.com/">explora los datos</a>. Si quieres ayudar a validar la cadena, puedes <a href="/eth2/staking/">apostar tu ETH</a>.
+  La Cadena de Baliza se presentó el 1 de diciembre al mediodía (UTC). Para saber más, <a href="https://beaconscan.com/">explora los datos</a>. Si quieres ayudar a validar la cadena, puedes <a href="/staking/">apostar tu ETH</a>.
 </UpgradeStatus>
 
 ## ¿Qué hace la Cadena de Baliza? {#what-does-the-beacon-chain-do}
 
-La Cadena de Baliza conducirá o coordinará la expansión de la red a [fragmentos](/eth2/shard-chains/) y [apostadores](/eth2/staking/). Pero no será como [la red central de Ethereum](/glossary/#mainnet) de hoy en día. No puede manejar cuentas o contratos inteligentes.
+La Cadena de Baliza conducirá o coordinará la expansión de la red a [fragmentos](/eth2/shard-chains/) y [apostadores](/staking/). Pero no será como [la red central de Ethereum](/glossary/#mainnet) de hoy en día. No puede manejar cuentas o contratos inteligentes.
 
 El rol de la Cadena de Baliza cambiará con el tiempo, pero es un componente fundamental para un [ Ethereum seguro, sostenible y escalable en el que estamos trabajando](/eth2/vision/).
 
@@ -30,7 +30,7 @@ La Cadena de Baliza introducirá una [prueba de participación](/developers/docs
 Apostar y convertirse en validador es más fácil que [minar](/developers/docs/mining/) (la forma actual en que Ethereum mantiene su red segura). Y se espera que esto ayude a hacer Ethereum más seguro a largo plazo. Cuanta más gente participe en la red, más descentralizada y resistente a ataques será.
 
 <InfoBanner emoji=":money_bag:">
-Si estás interesado en convertirte en validador y ayudar a proteger la Cadena de Baliza, <a href="/eth2/staking/">obtén más información acerca del "staking"</a>.
+Si estás interesado en convertirte en validador y ayudar a proteger la Cadena de Baliza, <a href="/staking/">obtén más información acerca del "staking"</a>.
 </InfoBanner>
 
 Esto es además un cambio importante para la segunda actualización de Eth2: [las cadenas de fragmentos](/eth2/shard-chains/).

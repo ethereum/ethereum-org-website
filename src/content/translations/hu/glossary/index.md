@@ -676,7 +676,7 @@ Olyan [ERC-20 token](#token-standard), amelynek értéke egy másik vagyontárgy
 
 Adott mennyiségű [ether](#ether) letétbe helyezése a validátorrá válás és a [hálózat](#network) biztosításának érdekében. A validátor ellenőrzi a [tranzakciókat](#transaction), és új [blokkokat](#block) terjeszt elő a [letétbizonyíték](#pos) konszenzus-modellje alapján. A letétbe helyezés pénzügyi motivációt ad arra, hogy a hálózat érdekét szem előtt tartva járj el. A [validátori](#validator) feladatok elvégzéséért jutalomban részesülsz, de váltzó mennyiségű ETH-t veszíthetsz el, ha nem így teszel.
 
-<DocLink to="/eth2/staking/">
+<DocLink to="/staking/">
   Helyezd letétbe az ETH-ed, hogy Ethereum validátorrá válhass
 </DocLink>
 
@@ -746,7 +746,7 @@ Egy [csomópont](#node) a [letétbizonyíték](#proof-of-stake) alapú rendszerb
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos">
   Proof-of-stake
-</DocLink> <DocLink to="/eth2/staking/">
+</DocLink> <DocLink to="/staking/">
   Letétbe helyezés az Ethereumon
 </DocLink>
 
