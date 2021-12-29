@@ -364,6 +364,9 @@ export const query = graphql`
     remix: file(relativePath: { eq: "dev-tools/remix.png" }) {
       ...learningToolImage
     }
+    replit: file(relativePath: { eq: "dev-tools/replit.png" }) {
+      ...learningToolImage
+    }
     ethdotbuild: file(relativePath: { eq: "dev-tools/eth-dot-build.png" }) {
       ...learningToolImage
     }
