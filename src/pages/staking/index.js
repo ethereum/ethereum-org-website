@@ -133,20 +133,20 @@ const StakeContainer = styled.div`
 const paths = [
   {
     emoji: ":money_with_wings:",
-    title: <Translation id="page-eth2-staking-title-1" />,
-    description: <Translation id="page-eth2-staking-desc-1" />,
+    title: <Translation id="page-staking-title-1" />,
+    description: <Translation id="page-staking-desc-1" />,
   },
   {
     emoji: ":warning:",
-    title: <Translation id="page-eth2-staking-title-2" />,
-    description: <Translation id="page-eth2-staking-desc-2" />,
+    title: <Translation id="page-staking-title-2" />,
+    description: <Translation id="page-staking-desc-2" />,
   },
   {
     emoji: ":clipboard:",
-    title: <Translation id="page-eth2-staking-title-3" />,
-    description: <Translation id="page-eth2-staking-desc-3" />,
+    title: <Translation id="page-staking-title-3" />,
+    description: <Translation id="page-staking-desc-3" />,
     url: "/developers/docs/apis/backend/#available-libraries",
-    link: <Translation id="page-eth2-staking-link-1" />,
+    link: <Translation id="page-staking-link-1" />,
   },
 ]
 
@@ -155,15 +155,15 @@ const StakingPage = ({ data, location }) => {
   const [isSoloStaking, setIsSoloStaking] = useState(true)
 
   const heroContent = {
-    title: translateMessageId("page-eth2-staking-title-4", intl),
-    header: translateMessageId("page-eth2-staking-header-1", intl),
-    subtitle: translateMessageId("page-eth2-staking-subtitle", intl),
+    title: translateMessageId("page-staking-title-4", intl),
+    header: translateMessageId("page-staking-header-1", intl),
+    subtitle: translateMessageId("page-staking-subtitle", intl),
     image: getImage(data.rhino),
-    alt: translateMessageId("page-eth2-staking-image-alt", intl),
+    alt: translateMessageId("page-staking-image-alt", intl),
     buttons: [
       {
         path: "#stake",
-        content: translateMessageId("page-eth2-staking-start", intl),
+        content: translateMessageId("page-staking-start", intl),
       },
     ],
   }
@@ -171,11 +171,8 @@ const StakingPage = ({ data, location }) => {
   return (
     <Page>
       <PageMetadata
-        title={translateMessageId("page-eth2-staking-meta-title", intl)}
-        description={translateMessageId(
-          "page-eth2-staking-meta-description",
-          intl
-        )}
+        title={translateMessageId("page-staking-meta-title", intl)}
+        description={translateMessageId("page-staking-meta-description", intl)}
       />
       <PageHero content={heroContent} />
       <Divider />
@@ -186,9 +183,9 @@ const StakingPage = ({ data, location }) => {
             <Translation id="page-eth2-just-staking" />
           </h2>
           <p>
-            <Translation id="page-eth2-staking-description" />{" "}
+            <Translation id="page-staking-description" />{" "}
             <Link to="/eth2/beacon-chain/">
-              <Translation id="page-eth2-staking-the-beacon-chain" />
+              <Translation id="page-staking-the-beacon-chain" />
             </Link>
           </p>
           <CardContainer>
@@ -209,13 +206,13 @@ const StakingPage = ({ data, location }) => {
       <Content>
         <StakeContainer>
           <h2>
-            <Translation id="page-eth2-staking-how-to-stake" />
+            <Translation id="page-staking-how-to-stake" />
           </h2>
           <p>
-            <Translation id="page-eth2-staking-how-to-stake-desc" />{" "}
+            <Translation id="page-staking-how-to-stake-desc" />{" "}
           </p>
           <h3>
-            <Translation id="page-eth2-staking-how-much" />
+            <Translation id="page-staking-how-much" />
           </h3>
           <OptionContainer>
             <Option
@@ -231,7 +228,7 @@ const StakingPage = ({ data, location }) => {
             >
               <Emoji mr={`1rem`} text=":swimmer:" />
               <OptionText>
-                <Translation id="page-eth2-staking-less-than" /> 32 ETH
+                <Translation id="page-staking-less-than" /> 32 ETH
               </OptionText>
             </Option>
           </OptionContainer>
@@ -239,54 +236,54 @@ const StakingPage = ({ data, location }) => {
             <GhostCard>
               <InfoBanner isWarning={true} mb={`2rem`}>
                 <H2>
-                  <Translation id="page-eth2-staking-withdrawals" />
+                  <Translation id="page-staking-withdrawals" />
                 </H2>
                 <div>
-                  <Translation id="page-eth2-staking-withdrawals-desc" />{" "}
+                  <Translation id="page-staking-withdrawals-desc" />{" "}
                   <Link to="/eth2/merge/">
-                    <Translation id="page-eth2-staking-docked" />
+                    <Translation id="page-staking-docked" />
                   </Link>
                 </div>
               </InfoBanner>
               <h3>
-                <Translation id="page-eth2-staking-solo" />
+                <Translation id="page-staking-solo" />
               </h3>
               <p>
-                <Translation id="page-eth2-staking-solo-desc" />
+                <Translation id="page-staking-solo-desc" />
               </p>
               <ButtonLink mb={`2rem`} to="https://launchpad.ethereum.org">
-                <Translation id="page-eth2-staking-start" />
+                <Translation id="page-staking-start" />
               </ButtonLink>
               <h3>
-                <Translation id="page-eth2-staking-deposit-address" />
+                <Translation id="page-staking-deposit-address" />
               </h3>
               <p>
-                <Translation id="page-eth2-staking-deposit-address-desc" />
+                <Translation id="page-staking-deposit-address-desc" />
               </p>
               <ButtonLink mb={`2rem`} to="/eth2/deposit-contract/">
-                <Translation id="page-eth2-staking-check-address" />
+                <Translation id="page-staking-check-address" />
               </ButtonLink>
             </GhostCard>
           )}
           {!isSoloStaking && (
             <GhostCard>
               <H3>
-                <Translation id="page-eth2-staking-pool" />
+                <Translation id="page-staking-pool" />
               </H3>
               <p>
-                <Translation id="page-eth2-staking-pool-desc" />
+                <Translation id="page-staking-pool-desc" />
               </p>
               <p>
                 <Link to="https://beaconcha.in/stakingServices">
-                  <Translation id="page-eth2-staking-services" />
+                  <Translation id="page-staking-services" />
                 </Link>
               </p>
               <InfoBanner isWarning={true}>
                 <H2>
-                  <Translation id="page-eth2-staking-dyor" />
+                  <Translation id="page-staking-dyor" />
                 </H2>
                 <div>
-                  <Translation id="page-eth2-staking-dyor-desc" />{" "}
+                  <Translation id="page-staking-dyor-desc" />{" "}
                 </div>
               </InfoBanner>
             </GhostCard>
@@ -297,15 +294,15 @@ const StakingPage = ({ data, location }) => {
       <StyledCallout
         image={getImage(data.rhino)}
         alt={translateMessageId("eth2-rhino-img-alt", intl)}
-        title={translateMessageId("page-eth2-staking-join-community", intl)}
+        title={translateMessageId("page-staking-join-community", intl)}
         description={translateMessageId(
-          "page-eth2-staking-join-community-desc",
+          "page-staking-join-community-desc",
           intl
         )}
       >
         <div>
           <ButtonLink to="https://www.reddit.com/r/ethstaker/">
-            <Translation id="page-eth2-staking-join" /> r/ethstaker
+            <Translation id="page-staking-join" /> r/ethstaker
           </ButtonLink>
         </div>
       </StyledCallout>
@@ -313,52 +310,52 @@ const StakingPage = ({ data, location }) => {
         <Row>
           <Column>
             <H2>
-              <Translation id="page-eth2-staking-pos-explained" />
+              <Translation id="page-staking-pos-explained" />
             </H2>
             <p>
-              <Translation id="page-eth2-staking-pos-explained-desc" />{" "}
+              <Translation id="page-staking-pos-explained-desc" />{" "}
               <Link to="/developers/docs/consensus-mechanisms/">
-                <Translation id="page-eth2-staking-consensus" />
+                <Translation id="page-staking-consensus" />
               </Link>
             </p>
 
             <p>
-              <Translation id="page-eth2-staking-pos-explained-desc-1" />
+              <Translation id="page-staking-pos-explained-desc-1" />
             </p>
             <h3>
-              <Translation id="page-eth2-staking-at-stake" />
+              <Translation id="page-staking-at-stake" />
             </h3>
             <p>
-              <Translation id="page-eth2-staking-at-stake-desc" />
+              <Translation id="page-staking-at-stake-desc" />
             </p>
             <h3>
-              <Translation id="page-eth2-staking-validators" />
+              <Translation id="page-staking-validators" />
             </h3>
             <p>
-              <Translation id="page-eth2-staking-validators-desc" />
+              <Translation id="page-staking-validators-desc" />
             </p>
           </Column>
           <Column>
             <Box>
               <H2>
-                <Translation id="page-eth2-staking-upgrades-title" />
+                <Translation id="page-staking-upgrades-title" />
               </H2>
               <BoxText>
                 <ul>
                   <li>
-                    <Translation id="page-eth2-staking-upgrades-li" />
+                    <Translation id="page-staking-upgrades-li" />
                   </li>
                   <li>
-                    <Translation id="page-eth2-staking-upgrades-li-2" />
+                    <Translation id="page-staking-upgrades-li-2" />
                   </li>
                   <li>
-                    <Translation id="page-eth2-staking-upgrades-li-3" />
+                    <Translation id="page-staking-upgrades-li-3" />
                   </li>
                   <li>
-                    <Translation id="page-eth2-staking-upgrades-li-4" />
+                    <Translation id="page-staking-upgrades-li-4" />
                   </li>
                   <li>
-                    <Translation id="page-eth2-staking-upgrades-li-5" />
+                    <Translation id="page-staking-upgrades-li-5" />
                   </li>
                 </ul>
               </BoxText>
@@ -366,35 +363,32 @@ const StakingPage = ({ data, location }) => {
           </Column>
         </Row>
         <H2>
-          <Translation id="page-eth2-staking-benefits" />
+          <Translation id="page-staking-benefits" />
         </H2>
         <CardContainer>
           <StyledCard
             emoji=":evergreen_tree:"
-            title={translateMessageId("page-eth2-staking-sustainability", intl)}
+            title={translateMessageId("page-staking-sustainability", intl)}
             description={translateMessageId(
-              "page-eth2-staking-sustainability-desc",
+              "page-staking-sustainability-desc",
               intl
             )}
           />
           <StyledCard
             emoji=":globe_showing_americas:"
-            title={translateMessageId("page-eth2-staking-accessibility", intl)}
+            title={translateMessageId("page-staking-accessibility", intl)}
             description={translateMessageId(
-              "page-eth2-staking-accessibility-desc",
+              "page-staking-accessibility-desc",
               intl
             )}
           />
           <StyledCard
             emoji=":old_key:"
-            title={translateMessageId("page-eth2-staking-sharding", intl)}
-            description={translateMessageId(
-              "page-eth2-staking-sharding-desc",
-              intl
-            )}
+            title={translateMessageId("page-staking-sharding", intl)}
+            description={translateMessageId("page-staking-sharding-desc", intl)}
           >
             <Link to="/eth2/shard-chains/">
-              <Translation id="page-eth2-staking-more-sharding" />
+              <Translation id="page-staking-more-sharding" />
             </Link>
           </StyledCard>
         </CardContainer>
