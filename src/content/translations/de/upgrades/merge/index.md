@@ -4,7 +4,7 @@ description: Lerne mehr über die Fusion - wenn das Ethereum-Mainnet mit dem dur
 lang: de
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/merge.png
+image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: Letztlich wird das aktuelle Ethereum Mainnet mit dem beacon chain koordiniertem proof-of-stake system "fusioniert".
 summaryPoint2: Dies vermerkt das Ende von proof-of-work in Ethereum und zugleich den Start, zu einem vollen Übergang in proof-of-stake.
 summaryPoint3: Dies ist geplant, um der Veröffentlichung von shard chains zuvorzukommen.

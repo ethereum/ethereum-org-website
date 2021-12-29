@@ -49,7 +49,7 @@ Eth2 升级的各部分相互关联。 所以我们来回顾一下信标链对�
 
 按照最初的设计，信标链与当前的以太坊主网独立运行。 但最终会相互连接。 该计划是将主网“合并”到由信标链控制和协调的权益证明系统中。
 
-<ButtonLink to="/eth2/merge/">合并</ButtonLink>
+<ButtonLink to="/upgrades/merge/">合并</ButtonLink>
 
 ### 分片和信标链 {#shards-and-beacon-chain}
 

@@ -4,7 +4,7 @@ description: Ana ağ Ethereum, İşaret (Beacon) Zinciri koordineli pay ispatı 
 lang: tr
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/merge.png
+image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: Sonuç olarak İşaret (Beacon) Zinciri Eth2 yükseltmelerinin kalanını "kenetleyecektir".
 summaryPoint2: Kenetleme "Eth1" ana ağını Eth2 işaret (beacon) zinciri ve shard sistemiyle birleştirecektir.
 summaryPoint3: Bu Ethereum için çalışma ispatının sonunu ve pay ispatına tam geçişi belirleyecektir.

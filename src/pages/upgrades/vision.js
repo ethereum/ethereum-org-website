@@ -108,7 +108,7 @@ const VisionPage = ({ data, location }) => {
       image: getImage(data.themerge),
       title: <Translation id="page-eth2-docking" />,
       description: <Translation id="page-eth2-docking-desc" />,
-      to: "/eth2/merge/",
+      to: "/upgrades/merge/",
       date: <Translation id="page-eth2-docking-estimate" />,
     },
     {

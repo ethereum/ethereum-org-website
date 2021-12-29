@@ -49,7 +49,7 @@ The Eth2 upgrades are all somewhat interrelated. So let’s recap how the Beacon
 
 The Beacon Chain, at first, will exist separately to the Ethereum Mainnet we use today. But eventually they will be connected. The plan is to "merge" Mainnet into the proof-of-stake system that's controlled and coordinated by the Beacon Chain.
 
-<ButtonLink to="/eth2/merge/">
+<ButtonLink to="/upgrades/merge/">
     The merge
 </ButtonLink>
 

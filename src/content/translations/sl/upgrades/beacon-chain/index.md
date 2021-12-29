@@ -49,7 +49,7 @@ Nadgradnje Eth2 so vse delno medsebojno povezane. Povzemimo torej, kako oddajni�
 
 Oddajniška veriga bo sprva obstajala ločeno od glavnega omrežja, ki ga uporabljamo danes. Vendar sčasoma se bosta povezala. Načrt je spojiti glavno omrežje v sistem dokaza z deležem, ki ga nadzira in koordinira oddajniška veriga.
 
-<ButtonLink to="/eth2/merge/">Spojitev</ButtonLink>
+<ButtonLink to="/upgrades/merge/">Spojitev</ButtonLink>
 
 ### Drobci in oddajniška veriga {#shards-and-beacon-chain}
 

@@ -49,7 +49,7 @@ Toate upgrade-urile Eth2 sunt oarecum interdependente. Deci, să recapitulăm mo
 
 La început, Rețeaua Beacon va exista separat de Rețeaua principală Ethereum care este folosită în prezent. Dar în cele din urmă vor fi conectate. Planul este de a „uni” Rețeaua principală în sistemul bazat pe Dovada de Minare(proof-of-stake) care este controlat și coordonat de rețeaua Beacon.
 
-<ButtonLink to="/eth2/merge/">Unirea</ButtonLink>
+<ButtonLink to="/upgrades/merge/">Unirea</ButtonLink>
 
 ### Fragmentele și lanțul Beacon {#shards-and-beacon-chain}
 

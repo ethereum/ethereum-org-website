@@ -4,7 +4,7 @@ description: "Obtén más información sobre el acoplamiento: cuando la red prin
 lang: es
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/merge.png
+image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: Eventualmente, la red principal de Ethereum actual se "acoplará" con el resto de las actualizaciones de Eth2.
 summaryPoint2: El acoplamiento fusionará la red principal de "Eth1" con la Cadena de Baliza de Eth2 y el sistema de fragmentación.
 summaryPoint3: Esto marcará el final de la prueba de trabajo para Ethereum y la transición completa a la prueba de participación.

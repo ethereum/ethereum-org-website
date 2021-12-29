@@ -345,7 +345,7 @@ _Juga penting untuk diingat bahwa Ethereum melakukan lebih dari sekadar transaks
 
 #### Linimasa {#timelines}
 
-Prosesnya telah berlangsung. [Rantai Suar](/upgrades/beacon-chain/), peningkatan pertamanya, diluncurkan pada Desember 2020. Ini menyediakan fondasi untuk penaruhan dengan memungkinkan para penaruh untuk bergabung dengan sistem. Langkah berikutnya yang relevan dengan efisiensi energi adalah menggabungkan rantai saat ini, yang diamankan oleh para penambang, ke dalam Rantai Suar di mana penambangan tidak diperlukan. Linimasanya tidak dapat dipastikan pada tahap ini, tetapi diperkirakan akan terjadi dalam suatu waktu di tahun 2021/2022. Proses ini dikenal sebagai penggabungan (yang sebelumnya disebut sebagai docking). [Selengkapnya tentang penggabungan](/eth2/merge/).
+Prosesnya telah berlangsung. [Rantai Suar](/upgrades/beacon-chain/), peningkatan pertamanya, diluncurkan pada Desember 2020. Ini menyediakan fondasi untuk penaruhan dengan memungkinkan para penaruh untuk bergabung dengan sistem. Langkah berikutnya yang relevan dengan efisiensi energi adalah menggabungkan rantai saat ini, yang diamankan oleh para penambang, ke dalam Rantai Suar di mana penambangan tidak diperlukan. Linimasanya tidak dapat dipastikan pada tahap ini, tetapi diperkirakan akan terjadi dalam suatu waktu di tahun 2021/2022. Proses ini dikenal sebagai penggabungan (yang sebelumnya disebut sebagai docking). [Selengkapnya tentang penggabungan](/upgrades/merge/).
 
 <ButtonLink to="/eth2/">Selengkapnya tentang Eth2</ButtonLink>
 

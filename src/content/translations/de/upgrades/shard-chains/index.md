@@ -12,7 +12,7 @@ summaryPoint4: Dieses Upgrade ist nach der Verkupplung des Mainnet mit der Beaco
 ---
 
 <UpgradeStatus date="~2023">
-    Shard Chains sollten irgendwann im Jahr 2023 erscheinen, je nachdem, wie schnell die Arbeit nach <a href="/eth2/merge/">der Verkupplung</a> voranschreitet. Diese Shards werden Ethereum mehr Kapazität für das Speichern und den Zugriff auf Daten geben, aber sie werden nicht für die Ausführung von Codes verwendet. Die Details hierfür werden noch ausgearbeitet.
+    Shard Chains sollten irgendwann im Jahr 2023 erscheinen, je nachdem, wie schnell die Arbeit nach <a href="/upgrades/merge/">der Verkupplung</a> voranschreitet. Diese Shards werden Ethereum mehr Kapazität für das Speichern und den Zugriff auf Daten geben, aber sie werden nicht für die Ausführung von Codes verwendet. Die Details hierfür werden noch ausgearbeitet.
 </UpgradeStatus>
 
 ## Was ist Sharding? {#what-is-sharding}
@@ -97,7 +97,7 @@ Wenn weitere Shards hinzugefügt werden, wird das Ethereum Mainnet bereits durch
 
 Es bleibt abzuwarten, ob das Mainnet als einziger "intelligenter" Shard existieren wird, der die Ausführung von Code ermöglicht - in jedem Fall aber kann die Entscheidung, die Shards zu erweitern, bei Bedarf revidiert werden.
 
-<ButtonLink to="/eth2/merge/">Die Verkupplung</ButtonLink>
+<ButtonLink to="/upgrades/merge/">Die Verkupplung</ButtonLink>
 
 <Divider />
 

@@ -49,7 +49,7 @@ Sve nadogradnje Eth2 donekle su međusobno povezane. Dakle, ponovimo ukratko kak
 
 Beacon Chain će u početku postojati odvojeno od glavne mreže Ethereum mreže kojom se koristimo danas. Ali će na kraju će biti povezani. Plan je spojiti glavnu mrežu u sustav proof-of-stake koji kontrolira i koordinira Beacon Chain.
 
-<ButtonLink to="/eth2/merge/">Spajanje</ButtonLink>
+<ButtonLink to="/upgrades/merge/">Spajanje</ButtonLink>
 
 ### Djelići i Beacon Chain {#shards-and-beacon-chain}
 

@@ -12,7 +12,7 @@ summaryPoint4: Ta nadgradnja je načrtovana kot naslednji korak po spojitvi glav
 ---
 
 <UpgradeStatus date="~2023">
-    Razdrobljene verige bi morale biti uvedene enkrat v letu 2023, odvisno od hitrosti napredka po <a href="/eth2/merge/">spojitvi</a>. Ti drobci bodo Ethereumu zagotovili boljšo zmogljivost za obdelavo in dostop do podatkov, vendar se ne bodo uporabljali za izvajanje kode. Podrobnosti tega bodo še določene.
+    Razdrobljene verige bi morale biti uvedene enkrat v letu 2023, odvisno od hitrosti napredka po <a href="/upgrades/merge/">spojitvi</a>. Ti drobci bodo Ethereumu zagotovili boljšo zmogljivost za obdelavo in dostop do podatkov, vendar se ne bodo uporabljali za izvajanje kode. Podrobnosti tega bodo še določene.
 </UpgradeStatus>
 
 ## Kaj je razdrobitev? {#what-is-sharding}
@@ -97,7 +97,7 @@ Ko bodo drobci dodani, bo glavno omrežje Ethereum že zavarovano s strani oddaj
 
 Bomo še videli, ali bo glavno omrežje obstajalo kot edini "pametni" drobec, ki lahko obvladuje izvajanje programske kode – v vsakem primeru pa se lahko k odločitvi o razširitvi drobcev vrnemo, če bo to potrebno.
 
-<ButtonLink to="/eth2/merge/">Spojitev</ButtonLink>
+<ButtonLink to="/upgrades/merge/">Spojitev</ButtonLink>
 
 <Divider />
 

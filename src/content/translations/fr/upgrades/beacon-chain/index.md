@@ -49,7 +49,7 @@ Les mises à niveau d'Eth2 sont en quelque sorte liées. Récapitulons donc comm
 
 La chaîne phare, dans un premier temps, existera séparément du réseau principal Ethereum que nous utilisons aujourd'hui. Mais elles finiront par être connectées. Le but est "d'arrimer" le réseau principal au système de preuve d'enjeu qui est contrôlé et coordonné par la chaîne phare.
 
-<ButtonLink to="/eth2/merge/">L'arrimage</ButtonLink>
+<ButtonLink to="/upgrades/merge/">L'arrimage</ButtonLink>
 
 ### Chaîne phare et chaîne de fragments {#shards-and-beacon-chain}
 

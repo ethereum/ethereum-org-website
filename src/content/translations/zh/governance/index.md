@@ -151,7 +151,7 @@ DAO 分叉是为了解决 [2016 DAO 攻击](https://www.coindesk.com/understandi
 
 当信标链与以太坊执行层合并时，提议修改的治理程序将得到协调。 实施合并的过程[已经在进行中](https://github.com/ethereum/EIPs/pull/3675)。
 
-<ButtonLink to="/eth2/merge/">关于合并的更多信息</ButtonLink>
+<ButtonLink to="/upgrades/merge/">关于合并的更多信息</ButtonLink>
 
 <Divider />
 

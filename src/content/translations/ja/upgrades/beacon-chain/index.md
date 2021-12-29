@@ -49,7 +49,7 @@ Eth2 のアップグレードはいくらか相互に関連しています。 �
 
 ビーコンチェーンは、最初は、今日使用する Ethereum メインネットとは別に存在します。 しかし、やがてそれらはつながります。 この計画は、メインネットをビーコンチェーンによって管制制御されたプルーフ・オブ・ステークシステムにマージ(統合)することです。
 
-<ButtonLink to="/eth2/merge/">マージ</ButtonLink>
+<ButtonLink to="/upgrades/merge/">マージ</ButtonLink>
 
 ### シャードとビーコンチェーン {#shards-and-beacon-chain}
 

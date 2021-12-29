@@ -4,7 +4,7 @@ description: Дізнайтеся більше про об’єднання — 
 lang: uk
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/merge.png
+image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: Врешті-решт поточна основна мережа Ethereum об’єднається із системою доказу частки володіння Beacon Chain.
 summaryPoint2: Це стане кінцем моделі доказу виконаної роботи для Ethereum і моментом повного переходу на систему доказу частки володіння.
 summaryPoint3: Це планується до розгортання ланцюгів сегментів даних.

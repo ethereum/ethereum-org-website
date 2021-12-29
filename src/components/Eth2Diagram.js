@@ -241,7 +241,7 @@ const ModalContent = ({ upgrade }) => {
             <Translation id="page-eth2-diagram-validators" />
           </Link>
         </p>
-        <ButtonLink to="/eth2/merge/">
+        <ButtonLink to="/upgrades/merge/">
           <Translation id="page-eth2-docking-btn" />
         </ButtonLink>
       </>

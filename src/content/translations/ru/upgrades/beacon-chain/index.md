@@ -49,7 +49,7 @@ Beacon Chain вводит [доказательство владения](/devel
 
 Beacon Chain, во-первых, существует отдельно от главной сети Ethereum, которая используется на текущий момент. Но в конечном счете они будут связаны. План - состыковать главную сеть и систему доказательства владения, которая контролируется и координируется Beacon Chain.
 
-<ButtonLink to="/eth2/merge/">Стыковка</ButtonLink>
+<ButtonLink to="/upgrades/merge/">Стыковка</ButtonLink>
 
 ### Осколки и Beacon Chain {#shards-and-beacon-chain}
 

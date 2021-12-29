@@ -12,7 +12,7 @@ summaryPoint4: Esta atualização está planejada para logo depois da integraç�
 ---
 
 <UpgradeStatus date="~2023">
-    As cadeias de fragmentos devem ser introduzidas em algum momento de 2022, dependendo do andamento do trabalho depois da <a href="/eth2/merge/">a integração</a>. Esses fragmentos darão a Ethereum mais capacidade de armazenamento e acesso aos dados, mas eles não serão usados para execução de código. Os detalhes disso ainda estão sendo avaliados.
+    As cadeias de fragmentos devem ser introduzidas em algum momento de 2022, dependendo do andamento do trabalho depois da <a href="/upgrades/merge/">a integração</a>. Esses fragmentos darão a Ethereum mais capacidade de armazenamento e acesso aos dados, mas eles não serão usados para execução de código. Os detalhes disso ainda estão sendo avaliados.
 </UpgradeStatus>
 
 ## O que é a fragmentação (sharding)? {#what-is-sharding}
@@ -100,7 +100,7 @@ Quando for feita a adição de fragmentos extras, a rede principal de Ethereum j
 Resta saber se a rede principal existirá como o único fragmento "inteligente" que poderá lidar com a execução de código. No entanto, a decisão de expandir fragmentos pode ser revista, se necessário.
 
 <div>
-  <ButtonLink to="/eth2/merge/">A integração</ButtonLink>
+  <ButtonLink to="/upgrades/merge/">A integração</ButtonLink>
 </div>
 
 <Divider />

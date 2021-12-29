@@ -49,7 +49,7 @@ Gli aggiornamenti a Eth2 sono tutti interconnessi in qualche modo. Quindi ricapi
 
 La beacon chain, all'inizio, esisterà separatamente rispetto alla rete principale Ethereum che usiamo oggi. Alle fine però le due realtà verranno collegate. L'intenzione è di "agganciare" (docking) la rete principale al sistema proof of stake che è controllato e coordinato dalla beacon chain.
 
-<ButtonLink to="/eth2/merge/">Il docking</ButtonLink>
+<ButtonLink to="/upgrades/merge/">Il docking</ButtonLink>
 
 ### Shard e beacon chain {#shards-and-beacon-chain}
 

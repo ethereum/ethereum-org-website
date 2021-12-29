@@ -91,7 +91,7 @@ La beacon chain contiene la logica per mantenere al sicuro e sincronizzati gli s
 
 La rete principale Ethereum esisterà come esiste oggi anche dopo l'introduzione degli shard. Però, a un certo punto, la rete principale dovrà diventare uno shard, in modo tale da poter passare allo staking. Rimane da valutare se la rete principale sarà l'unico shard "smart" in grado di gestire l'esecuzione di codice. In ogni caso la decisione verrà presa durante la fase 2 dello sharding.
 
-<ButtonLink to="/eth2/merge/">Il docking</ButtonLink>
+<ButtonLink to="/upgrades/merge/">Il docking</ButtonLink>
 
 <Divider />
 

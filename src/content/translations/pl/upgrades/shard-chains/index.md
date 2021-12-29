@@ -91,7 +91,7 @@ Ulepszenia Eth2 są ze sobą w pewien sposób powiązane. Podsumujmy więc, jak 
 
 Sieć główna Ethereum będzie istnieć tak jak obecnie, nawet po wprowadzeniu odłamków. Jednak w pewnym momencie sieć główna będzie musiała stać się odłamkiem, aby mogła przejść na stakowanie. Nie wiadomo jeszcze, czy sieć główna będzie istniała jako jedyny „inteligentny” odłamek, który może wykonywać kody — ale tak czy inaczej, trzeba będzie podjąć decyzję w sprawie fazy 2 shardingu.
 
-<ButtonLink to="/eth2/merge/">Dokowanie</ButtonLink>
+<ButtonLink to="/upgrades/merge/">Dokowanie</ButtonLink>
 
 <Divider />
 

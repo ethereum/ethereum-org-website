@@ -4,7 +4,7 @@ description: ഡോക്കിംഗിനെക്കുറിച്ച് അ
 lang: ml
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/merge.png
+image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: ക്രമേണ നിലവിലെ Ethereum മെയിൻനെറ്റ് ബാക്കി Eth2 അപ്‌ഗ്രേഡുകളുമായി "ഡോക്ക്" ചെയ്യും.
 summaryPoint2: ഈ ഡോക്കിംഗ് "Eth1" മെയിൻനെറ്റിനെ Eth2 ബീക്കൺ ചെയിനും ഷാർഡിംഗ് സിസ്റ്റവുമായി ലയിപ്പിക്കും.
 summaryPoint3: ഇത് Ethereum- നുള്ള പ്രൂഫ്-ഓഫ് വർക്കിന്റെ അവസാനവും പ്രൂഫ് ഓഫ് സ്റ്റേക്കിലേക്കുള്ള പൂർണ്ണമായ പരിവർത്തനവും അടയാളപ്പെടുത്തും.

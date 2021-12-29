@@ -4,7 +4,7 @@ description: Saznajte više o spajanju – pridruživanje glavne mreže Ethereum
 lang: hr
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/merge.png
+image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: Na kraju će se trenutačna glavna mreža Ethereum „spojiti” s ostatkom nadogradnji Eth2.
 summaryPoint2: Spajanje će sjediniti glavnu mrežu „Eth1” s nadogradnjom Eth2 Beacon Chain i sustavom razdjeljivanja.
 summaryPoint3: Ovo će označiti kraj procesa proof-of-work za Ethereum i prijelaz na proof-of-stake.

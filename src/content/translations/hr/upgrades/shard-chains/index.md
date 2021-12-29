@@ -91,7 +91,7 @@ Beacon Chain sadrži svu logiku za održavanje djelića na sigurnom i sinkronizi
 
 Glavna mreža Ethereum postojat će kao i danas čak i nakon uvođenja djelića. Međutim, u jednom će trenutku glavna mreža morati postati djelić kako bi mogla prijeći na ulaganje. Vidjet ćemo hoće li glavna mreža postojati kao jedini „pametni” djelić koji se može nositi s izvršavanjem koda – u svakom slučaju, morat će se donijeti odluka u drugoj fazi razdjeljivanja.
 
-<ButtonLink to="/eth2/merge/">Spajanje</ButtonLink>
+<ButtonLink to="/upgrades/merge/">Spajanje</ButtonLink>
 
 <Divider />
 

@@ -253,7 +253,7 @@ const Eth2IndexPage = ({ data }) => {
       image: getImage(data.themerge),
       title: <Translation id="page-eth2-docking" />,
       description: <Translation id="page-eth2-docking-desc" />,
-      to: "/eth2/merge/",
+      to: "/upgrades/merge/",
       date: <Translation id="page-eth2-docking-estimate" />,
     },
     {
@@ -430,7 +430,7 @@ const Eth2IndexPage = ({ data }) => {
               <p>
                 <Translation id="page-eth2-beacon-chain-date" />
               </p>
-              <Link to="/eth2/merge/">
+              <Link to="/upgrades/merge/">
                 <Translation id="page-eth2-docking" />
               </Link>
               <p>
@@ -487,7 +487,7 @@ const Eth2IndexPage = ({ data }) => {
               </p>
               <ul>
                 <li>
-                  <Link to="/eth2/merge/">
+                  <Link to="/upgrades/merge/">
                     <Translation id="page-eth2-just-docking" />
                   </Link>
                 </li>
@@ -519,7 +519,7 @@ const Eth2IndexPage = ({ data }) => {
               </p>
               <p>
                 <Translation id="page-eth2-question-4-answer-2" />{" "}
-                <Link to="/eth2/merge/">
+                <Link to="/upgrades/merge/">
                   <Translation id="page-eth2-just-docking" />
                 </Link>
               </p>
@@ -569,7 +569,7 @@ const Eth2IndexPage = ({ data }) => {
               </p>
               <ul>
                 <li>
-                  <Link to="/eth2/merge/">
+                  <Link to="/upgrades/merge/">
                     <Translation id="page-eth2-just-docking" />
                   </Link>
                 </li>

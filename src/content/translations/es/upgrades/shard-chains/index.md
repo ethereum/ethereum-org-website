@@ -91,7 +91,7 @@ La Cadena de Baliza contiene toda la lógica para mantener los fragmentos seguro
 
 La red principal de Ethereum existirá como lo hace hoy, incluso después de la introducción de fragmentos. Sin embargo, en algún momento, la red principal tendrá que convertirse en un fragmento para poder pasar a la apuesta. Queda por ver si la red principal existirá como el único fragmento “inteligente” que puede manejar la ejecución del código, pero, de cualquier manera, habrá que tomar una decisión sobre la fase 2 de fragmentación.
 
-<ButtonLink to="/eth2/merge/">El acoplamiento</ButtonLink>
+<ButtonLink to="/upgrades/merge/">El acoplamiento</ButtonLink>
 
 <Divider />
 

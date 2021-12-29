@@ -4,7 +4,7 @@ description: "En savoir plus sur l'arrimage - lorsque le réseau principal Ether
 lang: fr
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/merge.png
+image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: Au final, le réseau principal Ethereum actuel "s''arrimera" au reste des mises à niveau d''Eth2.
 summaryPoint2: L''arrimage fusionnera le réseau principal "Eth1" avec la chaîne phare Eth2 et le système de fragments.
 summaryPoint3: Cela marquera la fin de la preuve de travail pour Ethereum, et la transition complète vers la preuve d'enjeu.

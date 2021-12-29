@@ -49,7 +49,7 @@ Wszystkie ulepszenia Eth2 są poniekąd wzajemnie powiązane. Więc podsumujmy, 
 
 Łańcuchy szczątkowe mogą bezpiecznie wejść do ekosystemu Ethereum jedynie z istniejącym już mechanizmem konsensusu bazującym na dowodzie stawki. Łańcuch śledzący umożliwi zastawianie, torując drogę dla ulepszenia wprowadzającego łańcuchy szczątkowe.
 
-<ButtonLink to="/eth2/merge/">Łańcuchy szczątkowe</ButtonLink>
+<ButtonLink to="/upgrades/merge/">Łańcuchy szczątkowe</ButtonLink>
 
 ### Odłamki i łańcuch śledzący {#shards-and-beacon-chain}
 

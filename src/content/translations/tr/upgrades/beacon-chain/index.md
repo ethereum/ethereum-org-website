@@ -49,7 +49,7 @@ Eth2 yükseltmelerinin tamamı bir şekilde ilişkilidir. İşaret (Beacon) Zinc
 
 Öncelikle İşaret (Beacon) Zinciri bugün kullandığımız Ethereum ana ağından ayrı olarak bulunacaktır. Ancak sonuç olarak bağlanacaklardır. Plan, İşaret (Beacon) Zinciri tarafından kontrol ve koordine edilen pay ispatı sistemine ana ağı "kenetlemektir".
 
-<ButtonLink to="/eth2/merge/">Kenetleme</ButtonLink>
+<ButtonLink to="/upgrades/merge/">Kenetleme</ButtonLink>
 
 ### Shard'lar ve İşaret (Beacon) Zinciri {#shards-and-beacon-chain}
 

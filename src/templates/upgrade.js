@@ -385,7 +385,7 @@ const dropdownLinks = {
     },
     {
       text: "page-eth2-upgrades-docking",
-      to: "/eth2/merge/",
+      to: "/upgrades/merge/",
     },
     {
       text: "page-eth2-upgrades-shard-chains",

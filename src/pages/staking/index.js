@@ -240,7 +240,7 @@ const StakingPage = ({ data, location }) => {
                 </H2>
                 <div>
                   <Translation id="page-staking-withdrawals-desc" />{" "}
-                  <Link to="/eth2/merge/">
+                  <Link to="/upgrades/merge/">
                     <Translation id="page-staking-docked" />
                   </Link>
                 </div>

@@ -4,7 +4,7 @@ description: Saiba mais sobre a integração que ocorrerá quando a rede princip
 lang: pt-br
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/merge.png
+image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: Eventualmente, a principal rede atual da Ethereum se "integrará" ao sistema de prova de participação.
 summaryPoint2: Isso marcará o fim da prova de trabalho para Ethereum e a transição completa para a prova de participação.
 summaryPoint3: Essa mudança está prevista para depois da implementação das cadeias de fragmentos.

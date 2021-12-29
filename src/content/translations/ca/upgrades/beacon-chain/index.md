@@ -49,7 +49,7 @@ D'alguna manera, les millores d'Eth2 estan interrelacionades. Recapitulem com la
 
 Inicialment, la Cadena de Balisa estarà separada de la xarxa principal d'Ethereum que fem servir actualment. Però, en última instància, estaran connectades. El mètode és "acoblar" la xarxa principal en el sistema de prova de participació, que estarà controlat i coordinat per la Cadena de Balisa.
 
-<ButtonLink to="/eth2/merge/">L'acoblament</ButtonLink>
+<ButtonLink to="/upgrades/merge/">L'acoblament</ButtonLink>
 
 ### Fragments i la Cadena de Balisa {#shards-and-beacon-chain}
 

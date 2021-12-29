@@ -12,7 +12,7 @@ summaryPoint4: 此升级计划跟随主网与信标链的合并。
 ---
 
 <UpgradeStatus date="~2023">
-    链应该在 2022 年的某个时候启动，这取决于<a href="/eth2/merge/">合并</a>启动后的工作进度。 这些分片将增强以太坊存储和访问数据的能力，但不会用于执行代码。 这方面的细节仍然有待确定。
+    链应该在 2022 年的某个时候启动，这取决于<a href="/upgrades/merge/">合并</a>启动后的工作进度。 这些分片将增强以太坊存储和访问数据的能力，但不会用于执行代码。 这方面的细节仍然有待确定。
 </UpgradeStatus>
 
 ## 是什么区块分片？ {#what-is-sharding}
@@ -100,7 +100,7 @@ Eth2 升级的各部分在一定程度上相互关联。 让我们回顾一下�
 主网是否会成为唯一能够处理代码执行的“智能”分片还有待观察 - 但无论如何，都可以根据需要重新考虑扩展分片的决定。
 
 <div>
-  <ButtonLink to="/eth2/merge/">合并</ButtonLink>
+  <ButtonLink to="/upgrades/merge/">合并</ButtonLink>
 </div>
 
 <Divider />

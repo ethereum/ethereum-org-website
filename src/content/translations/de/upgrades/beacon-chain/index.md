@@ -49,7 +49,7 @@ Die Eth2-Upgrades sind alle miteinander verknüpft. Zusammenfassend wirkt sich d
 
 Die Beacon Chain wird zunächst getrennt vom Ethereum Mainnet existieren, welches wir derzeit nutzen. Letztlich werden jedoch beide verbunden sein. Der Plan ist, das Mainnet mit dem proof-of-stake-System zu "verschmelzen", das von der Beacon Chain kontrolliert und koordiniert wird.
 
-<ButtonLink to="/eth2/merge/">Die Fusion</ButtonLink>
+<ButtonLink to="/upgrades/merge/">Die Fusion</ButtonLink>
 
 ### Shards und die Beacon Chain {#shards-and-beacon-chain}
 

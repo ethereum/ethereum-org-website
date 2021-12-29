@@ -4,7 +4,7 @@ description: डॉकिंग के बारे में जानें - 
 lang: hi
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/merge.png
+image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: अंततः इथेरियम मेननेट अपग्रेड के बाकी हिस्सों के साथ "डॉक" करेगा।
 summaryPoint2: इस डॉकिंग में "Eth1" मेननेट को Eth2 बीकन चेन और शार्डिंग सिस्टम के साथ मर्ज किया जाएगा।
 summaryPoint3: यह इथेरियम के लिए कार्य-के-प्रमाण और स्टेक-के-प्रमाण के लिए पूर्ण संक्रमण के अंत को चिन्हित करेगा।

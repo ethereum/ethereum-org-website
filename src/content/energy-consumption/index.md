@@ -29,7 +29,7 @@ Similarly to proof-of-work, a validator would require 51% of the total ETH stake
 
 ## The merge {#the-merge}
 
-There is a functional proof-of-stake chain called the [Beacon Chain](/upgrades/beacon-chain/) that has been running since December 2020 that is demonstrating the viability of the proof-of-stake protocol. The merge refers to the point in time when Ethereum leaves proof-of-work behind and fully adopts proof-of-stake. The merge is expected to happen ~Q2 2022. [More on the merge](/eth2/merge/).
+There is a functional proof-of-stake chain called the [Beacon Chain](/upgrades/beacon-chain/) that has been running since December 2020 that is demonstrating the viability of the proof-of-stake protocol. The merge refers to the point in time when Ethereum leaves proof-of-work behind and fully adopts proof-of-stake. The merge is expected to happen ~Q2 2022. [More on the merge](/upgrades/merge/).
 
 ## Proof-of-stake energy expenditure {#proof-of-stake-energy}
 
@@ -77,7 +77,7 @@ While Ethereum's energy consumption has historically been substantial, there has
 
 - [Ethereum's vision](/eth2/vision/)
 - [The Beacon Chain](/eth2/beacon-chain)
-- [The merge](/eth2/merge/)
+- [The merge](/upgrades/merge/)
 - [Sharding](/upgrades/beacon-chain/)
 
 ### Footnotes and sources {#footnotes-and-sources}

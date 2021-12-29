@@ -12,7 +12,7 @@ summaryPoint4: This upgrade is planned to follow the merge of Mainnet with the B
 ---
 
 <UpgradeStatus date="~2023">
-    Shard chains should ship sometime in 2023, depending on how quickly work progresses after <a href="/eth2/merge/">the merge</a>. These shards will give Ethereum more capacity to store and access data, but they won’t be used for executing code. The details of that are still being figured out.
+    Shard chains should ship sometime in 2023, depending on how quickly work progresses after <a href="/upgrades/merge/">the merge</a>. These shards will give Ethereum more capacity to store and access data, but they won’t be used for executing code. The details of that are still being figured out.
 </UpgradeStatus>
 
 ## What is sharding? {#what-is-sharding}
@@ -101,7 +101,7 @@ By the time additional shards are added, Ethereum Mainnet will already be secure
 
 It remains to be seen whether mainnet will exist as the only “smart” shard that can handle code execution – but either way, the decision to expand shards can be revisited as needed.
 
-<ButtonLink to="/eth2/merge/">
+<ButtonLink to="/upgrades/merge/">
   The merge
 </ButtonLink>
 

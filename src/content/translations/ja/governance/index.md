@@ -149,7 +149,7 @@ Ethereum のガバナンスプロセスでは、スピードや効率性と、�
 
 Beacon Chain が Ethereum の実行レイヤーにマージされると、変更を提案するためのガバナンスプロセスは調和されることになります。 このマージを実装するためのプロセスは、[すでに進行中](https://github.com/ethereum/EIPs/pull/3675)です。
 
-<ButtonLink to="/eth2/merge/">マージの詳細</ButtonLink>
+<ButtonLink to="/upgrades/merge/">マージの詳細</ButtonLink>
 
 <Divider />
 

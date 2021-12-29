@@ -49,7 +49,7 @@ Todas as atualizações do Eth2 estão interligadas de alguma forma. Vejamos com
 
 A Beacon Chain existirá, a princípio, separada da rede principal Ethereum que utilizamos hoje. No entanto, elas serão conectadas no futuro. O plano é "integrar" a rede principal ao sistema de prova de participação (proof-of-stake) que é controlado e coordenado pela Beacon Chain.
 
-<ButtonLink to="/eth2/merge/">A integração</ButtonLink>
+<ButtonLink to="/upgrades/merge/">A integração</ButtonLink>
 
 ### Fragmentos (shards) e a Beacon Chain {#shards-and-beacon-chain}
 

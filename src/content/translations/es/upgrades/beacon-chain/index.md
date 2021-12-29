@@ -49,7 +49,7 @@ Las actualizaciones de Eth2 están de algún modo interrelacionadas. Así que, p
 
 La Cadena de Baliza, en principio, existirá aparte de la red principal de Ethereum que usamos hoy en día. Pero, en última instancia, estarán conectadas. El método es "acoplar" la red principal en el sistema de prueba de participación, que estará controlado y coordinado por la Cadena de Baliza.
 
-<ButtonLink to="/eth2/merge/">Acoplamiento</ButtonLink>
+<ButtonLink to="/upgrades/merge/">Acoplamiento</ButtonLink>
 
 ### Los fragmentos y la Cadena de Baliza {#shards-and-beacon-chain}
 

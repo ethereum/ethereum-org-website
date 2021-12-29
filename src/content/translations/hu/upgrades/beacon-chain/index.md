@@ -49,7 +49,7 @@ Az Eth2 fejlesztések némileg összefüggnek. Foglaljuk össze tehát, hogy a B
 
 A Beacon Chain eleinte különállóan fog létezni az Ethereum főhálózattól, melyet ma is használunk. De végül össze lesznek kapcsolva. A terv a főhálózat “dokkolása” a proof-of-stake rendszerhez, melyet a Beacon Chain vezérel és koordinál.
 
-<ButtonLink to="/eth2/merge/">A dokkolás</ButtonLink>
+<ButtonLink to="/upgrades/merge/">A dokkolás</ButtonLink>
 
 ### Shardok és a Beacon Chain {#shards-and-beacon-chain}
 

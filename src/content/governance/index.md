@@ -157,7 +157,7 @@ While the specification and implementations development has always been fully op
 
 When the Beacon Chain merges with the Ethereum execution layer, the governance process to propose changes will be harmonized. This process to implement the merge is [already underway](https://github.com/ethereum/EIPs/pull/3675).
 
-<ButtonLink to="/eth2/merge/">
+<ButtonLink to="/upgrades/merge/">
   More on the merge
 </ButtonLink>
 

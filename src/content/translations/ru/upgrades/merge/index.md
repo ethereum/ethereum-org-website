@@ -4,7 +4,7 @@ description: Узнайте о стыковке - когда основная с
 lang: ru
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/merge.png
+image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: В конце концов основная сеть Ethereum состыкуется с остальными обновлениями Eth2.
 summaryPoint2: Стыковка объединит основную сеть Eth1 с Beacon Chain Eth2 и системой цепочек-осколков.
 summaryPoint3: Это ознаменует конец доказательства работы для Ethereum и полный переход к доказательству владения.
