@@ -4,7 +4,7 @@ description: Узнайте о Beacon Chain - первом крупном обн
 lang: ru
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/core.png
+image: ../../../../../assets/upgrades/core.png
 summaryPoint1: Beacon Chain не меняет ничего в Ethereum, который мы используем сегодня
 summaryPoint2: Она будет координировать сеть.
 summaryPoint3: Она вводит доказательство владения в экосистему Ethereum.

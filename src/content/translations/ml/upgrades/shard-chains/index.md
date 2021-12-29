@@ -4,7 +4,7 @@ description: ഷാർഡ് ചെയിനുകളെക്കുറിച്
 lang: ml
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/newrings.png
+image: ../../../../../assets/upgrades/newrings.png
 summaryPoint1: Ethereumന്റെ സ്കേലബിളിറ്റിയും ശേഷിയും മെച്ചപ്പെടുത്തുന്നതിനുള്ള ഒരു മൾട്ടി-ഫേസ് നവീകരണമാണ് ഷാർഡിംഗ്.
 summaryPoint2: ഷാർഡ് ചെയിനുകൾ 64 പുതിയ ചെയിനുകളിലൂടെ നെറ്റ്‌വർക്കിന്റെ ലോഡ് വ്യാപിപ്പിക്കുന്നു.
 summaryPoint3: ഹാർഡ്‌വെയർ ആവശ്യകതകൾ കുറച്ചുകൊണ്ട് ഒരു നോഡ് പ്രവർത്തിപ്പിക്കുന്നത് അവ എളുപ്പമാക്കുന്നു.

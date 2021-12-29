@@ -4,7 +4,7 @@ description: シャードチェーンについて - イーサリアムにトラ�
 lang: ja
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/newrings.png
+image: ../../../../../assets/upgrades/newrings.png
 summaryPoint1: シャーディングはEthereumのスケーラビリティと容量を向上させるための、マルチフェーズのアップグレードです。
 summaryPoint2: シャードチェーンはネットワーク負荷を64個の新しいチェーンに分散します。
 summaryPoint3: ハードウェア要件を低く抑えることで、ノードの実行が容易になります。

@@ -4,7 +4,7 @@ description: Дізнайтесь про Beacon Chain – перше глоба�
 lang: uk
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/core.png
+image: ../../../../../assets/upgrades/core.png
 summaryPoint1: Beacon Chain ніяк не впливає на поточну роботу Ethereum.
 summaryPoint2: Йдеться лише про координування мережі.
 summaryPoint3: Крім того, в Ethereum з’явиться принцип доказу частки володіння.

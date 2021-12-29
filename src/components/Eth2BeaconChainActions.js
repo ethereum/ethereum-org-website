@@ -72,10 +72,10 @@ const Eth2BeaconChainActions = () => {
   const intl = useIntl()
   const data = useStaticQuery(graphql`
     query {
-      beaconscan: file(relativePath: { eq: "eth2/etherscan.png" }) {
+      beaconscan: file(relativePath: { eq: "upgrades/etherscan.png" }) {
         ...DataLogo
       }
-      beaconchain: file(relativePath: { eq: "eth2/beaconchainemoji.png" }) {
+      beaconchain: file(relativePath: { eq: "upgrades/beaconchainemoji.png" }) {
         ...DataLogo
       }
     }

@@ -4,7 +4,7 @@ description: ビーコンチェーンについて学ぶ - イーサリアムへ�
 lang: ja
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/core.png
+image: ../../../../../assets/upgrades/core.png
 summaryPoint1: ビーコンチェーンは、私たちが今日使用しているEthereumを変えるものではありません。
 summaryPoint2: これはネットワークの調整です。
 summaryPoint3: Ethereumエコシステムにプルーフ・オブ・ステークを導入するものです。

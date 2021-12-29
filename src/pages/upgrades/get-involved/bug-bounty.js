@@ -558,47 +558,49 @@ export const query = graphql`
         score
       }
     }
-    prysm: file(relativePath: { eq: "eth2/prysm.png" }) {
+    prysm: file(relativePath: { eq: "upgrades/prysm.png" }) {
       ...ClientLogos
     }
-    lighthouse: file(relativePath: { eq: "eth2/lighthouse.png" }) {
+    lighthouse: file(relativePath: { eq: "upgrades/lighthouse.png" }) {
       ...ClientLogos
     }
-    tekuDark: file(relativePath: { eq: "eth2/teku-dark.png" }) {
+    tekuDark: file(relativePath: { eq: "upgrades/teku-dark.png" }) {
       ...ClientLogos
     }
-    tekuLight: file(relativePath: { eq: "eth2/teku-light.png" }) {
+    tekuLight: file(relativePath: { eq: "upgrades/teku-light.png" }) {
       ...ClientLogos
     }
-    lighthouseLight: file(relativePath: { eq: "eth2/lighthouse-light.png" }) {
+    lighthouseLight: file(
+      relativePath: { eq: "upgrades/lighthouse-light.png" }
+    ) {
       ...ClientLogos
     }
-    lighthouseDark: file(relativePath: { eq: "eth2/lighthouse-dark.png" }) {
+    lighthouseDark: file(relativePath: { eq: "upgrades/lighthouse-dark.png" }) {
       ...ClientLogos
     }
-    prysmSmall: file(relativePath: { eq: "eth2/prysm.png" }) {
+    prysmSmall: file(relativePath: { eq: "upgrades/prysm.png" }) {
       ...ClientLogosSmall
     }
     lighthouseSmallLight: file(
-      relativePath: { eq: "eth2/lighthouse-light.png" }
+      relativePath: { eq: "upgrades/lighthouse-light.png" }
     ) {
       ...ClientLogosSmall
     }
     lighthouseSmallDark: file(
-      relativePath: { eq: "eth2/lighthouse-dark.png" }
+      relativePath: { eq: "upgrades/lighthouse-dark.png" }
     ) {
       ...ClientLogosSmall
     }
-    tekuSmallDark: file(relativePath: { eq: "eth2/teku-dark.png" }) {
+    tekuSmallDark: file(relativePath: { eq: "upgrades/teku-dark.png" }) {
       ...ClientLogosSmall
     }
-    tekuSmallLight: file(relativePath: { eq: "eth2/teku-light.png" }) {
+    tekuSmallLight: file(relativePath: { eq: "upgrades/teku-light.png" }) {
       ...ClientLogosSmall
     }
-    nimbus: file(relativePath: { eq: "eth2/nimbus-cloud.png" }) {
+    nimbus: file(relativePath: { eq: "upgrades/nimbus-cloud.png" }) {
       ...ClientLogos
     }
-    nimbusSmall: file(relativePath: { eq: "eth2/nimbus-cloud.png" }) {
+    nimbusSmall: file(relativePath: { eq: "upgrades/nimbus-cloud.png" }) {
       ...ClientLogosSmall
     }
   }

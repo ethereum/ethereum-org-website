@@ -56,7 +56,7 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
             )
           }
         }
-        ogImageEthtwo: file(relativePath: { eq: "eth2/eth2_doge.png" }) {
+        ogImageEthtwo: file(relativePath: { eq: "upgrades/eth2_doge.png" }) {
           childImageSharp {
             gatsbyImageData(
               width: 1200

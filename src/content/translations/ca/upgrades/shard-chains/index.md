@@ -4,7 +4,7 @@ description: "Obtén informació sobre les cadenes de fragments: particions de l
 lang: ca
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/newrings.png
+image: ../../../../../assets/upgrades/newrings.png
 summaryPoint1: La fragmentació es una actualització de diverses fases que millora la capacitat i l'escalabilitat d'Ethereum.
 summaryPoint2: Les cadenes de fragments distribueixen la càrrega de la xarxa a través de 64 cadenes noves.
 summaryPoint3: Fan més fàcil executar un node fent que els requeriments de maquinari siguin més baixos.

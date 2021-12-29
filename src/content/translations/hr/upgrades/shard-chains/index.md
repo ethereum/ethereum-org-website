@@ -4,7 +4,7 @@ description: Saznajte više o lancima djelića – particijama mreže koje Ether
 lang: hr
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/newrings.png
+image: ../../../../../assets/upgrades/newrings.png
 summaryPoint1: Razdjeljivanje je nadogradnja u više faza za poboljšanje skalabilnosti i kapaciteta Ethereuma.
 summaryPoint2: Lanci djelića šire opterećenje mreže na 64 nova lanca.
 summaryPoint3: Olakšavaju pokretanje čvora održavajući niske hardverske zahtjeve.

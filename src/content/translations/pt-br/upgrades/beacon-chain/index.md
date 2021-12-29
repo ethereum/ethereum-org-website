@@ -4,7 +4,7 @@ description: Aprenda sobre a Beacon Chain, a primeira grande atualização da Et
 lang: pt-br
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/core.png
+image: ../../../../../assets/upgrades/core.png
 summaryPoint1: A Beacon Chain não muda nada sobre o Ethereum que usamos hoje.
 summaryPoint2: Ela coordenará a rede.
 summaryPoint3: Introduzirá a prova de participação ao ecossistema da Ethereum.

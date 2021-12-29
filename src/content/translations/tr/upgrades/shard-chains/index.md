@@ -4,7 +4,7 @@ description: Ethereum'a daha fazla işlem kapasitesi sağlayan ve çalışmasın
 lang: tr
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/newrings.png
+image: ../../../../../assets/upgrades/newrings.png
 summaryPoint1: Parçalama, Ethereum’un ölçeklenebilirliğini ve kapasitesini geliştirmek için çok aşamalı bir yükseltmedir.
 summaryPoint2: Parça zincirleri, ağın yükünü 64 yeni zincire yayar
 summaryPoint3: Donanım gereksinimlerini düşük tutarak, bir düğüm çalıştırmayı kolaylaştırır.

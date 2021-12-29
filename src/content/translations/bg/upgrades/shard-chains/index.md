@@ -4,7 +4,7 @@ description: Научете какво са веригите от компоне
 lang: bg
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/newrings.png
+image: ../../../../../assets/upgrades/newrings.png
 summaryPoint1: Разделянето на компоненти е многофазен ъпгрейд с цел подобряване на мащаба и капацитета на Етереум.
 summaryPoint2: Веригите от компоненти разпределят обема на мрежата на 64 нови вериги.
 summaryPoint3: Те улесняват работата на един нод чрез поддържане на ниски изисквания към хардуера.

@@ -485,7 +485,7 @@ export const query = graphql`
     consensys: file(relativePath: { eq: "projects/consensys.png" }) {
       ...sourceImage
     }
-    ef: file(relativePath: { eq: "eth2-staking/ef-blog-logo.png" }) {
+    ef: file(relativePath: { eq: "staking/ef-blog-logo.png" }) {
       ...sourceImage
     }
     ethhub: file(relativePath: { eq: "projects/ethhub.png" }) {

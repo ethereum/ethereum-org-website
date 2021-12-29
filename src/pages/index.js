@@ -1073,7 +1073,7 @@ export const query = graphql`
         )
       }
     }
-    merge: file(relativePath: { eq: "eth2/merge.png" }) {
+    merge: file(relativePath: { eq: "upgrades/merge.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 320

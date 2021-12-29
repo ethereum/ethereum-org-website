@@ -4,7 +4,7 @@ description: Preberite več o razdrobljenih verigah – delitve omrežja, ki Eth
 lang: sl
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/newrings.png
+image: ../../../../../assets/upgrades/newrings.png
 summaryPoint1: Drobljenje je večstopenjska nadgradnja z namenom izboljšanja Ethereumove nadgradljivosti in kapacitet.
 summaryPoint2: Razdrobljene verige razdelijo obremenitev omrežja na 64 novih verig.
 summaryPoint3: Z ohranjanjem nizkih zahtev po strojni opremi lajšajo zagon vozlišč.

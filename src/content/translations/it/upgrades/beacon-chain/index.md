@@ -4,7 +4,7 @@ description: Scopri la beacon chain - il primo grande aggiornamento a Eth2 in Et
 lang: it
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/core.png
+image: ../../../../../assets/upgrades/core.png
 summaryPoint1: La beacon chain non modifica nulla della rete Ethereum che usiamo oggi.
 summaryPoint2: Coordinerà la rete.
 summaryPoint3: Introduce la proof of stake nell'ecosistema Ethereum.

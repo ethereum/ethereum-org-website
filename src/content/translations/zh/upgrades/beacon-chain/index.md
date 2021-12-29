@@ -4,7 +4,7 @@ description: 了解信标链——以太坊的第一次重大Eth2升级。
 lang: zh
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/core.png
+image: ../../../../../assets/upgrades/core.png
 summaryPoint1: 信标链对我们今天使用的以太坊没有任何变化。
 summaryPoint2: 它将协调网络。
 summaryPoint3: 它为以太坊生态系统提供了利害关系证明。

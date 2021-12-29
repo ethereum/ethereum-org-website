@@ -26,7 +26,7 @@ sidebarDepth: 1
 
 ### (_进行中_) 牵牛星升级 {#altair}
 
-Altair 升级是[信标链](/eth2/beacon-chain)的第一次预定升级。 预计将于 2021 年启用。 它将增加对“同步委员会”的支持，可以启用轻型客户端，并将不活动和削价的惩罚提高到其全部价值。
+Altair 升级是[信标链](/upgrades/beacon-chain)的第一次预定升级。 预计将于 2021 年启用。 它将增加对“同步委员会”的支持，可以启用轻型客户端，并将不活动和削价的惩罚提高到其全部价值。
 
 - [阅读 Altair 升级说明](https://github.com/ethereum/eth2.0-specs/tree/dev/specs/altair)
 

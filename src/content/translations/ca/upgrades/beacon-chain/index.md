@@ -4,7 +4,7 @@ description: Obtén informació sobre la Cadena de Balisa, la primera actualitza
 lang: ca
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/core.png
+image: ../../../../../assets/upgrades/core.png
 summaryPoint1: La Cadena de Balisa no canvia res de l'Ethereum que fem servir a dia d'avui.
 summaryPoint2: Coordinarà la xarxa.
 summaryPoint3: Introduirà la prova de participació a l'escosistema d'Ethereum.

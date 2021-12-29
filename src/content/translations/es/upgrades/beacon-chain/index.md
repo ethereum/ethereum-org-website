@@ -4,7 +4,7 @@ description: Obtén más información sobre la Cadena de Baliza, la primera actu
 lang: es
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/core.png
+image: ../../../../../assets/upgrades/core.png
 summaryPoint1: La Cadena de Baliza no cambia nada sobre el Ethereum que usamos actualmente.
 summaryPoint2: Coordinará la red de Ethereum.
 summaryPoint3: Introducirá la prueba de participación al ecosistema de Ethereum.

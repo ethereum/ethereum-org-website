@@ -4,7 +4,7 @@ description: Obtén más información sobre las cadenas de fragmentos, particion
 lang: es
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/newrings.png
+image: ../../../../../assets/upgrades/newrings.png
 summaryPoint1: La fragmentación es una actualización de varias fases para mejorar la escalabilidad y la capacidad de Ethereum.
 summaryPoint2: Las cadenas de fragmentos distribuyen la carga de la red en 64 nuevas cadenas.
 summaryPoint3: Facilitan la ejecución de un nodo manteniendo bajos los requisitos de hardware.

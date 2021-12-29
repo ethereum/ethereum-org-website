@@ -4,7 +4,7 @@ description: Tudj meg többet shard láncokról - a hálózat partícióiról, m
 lang: hu
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/newrings.png
+image: ../../../../../assets/upgrades/newrings.png
 summaryPoint1: A sharding egy többfázisú fejlesztés az Ethereum skálázhatóságának és kapacitásának növelésére.
 summaryPoint2: A shard láncok 64 új láncon osztják szét a hálózat terhelését.
 summaryPoint3: Könnyebbé teszik a csomópont futtatását a hardver követelmény alacsonyan tartásával.

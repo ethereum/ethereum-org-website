@@ -4,7 +4,7 @@ description: Learn about shard chains - partitions of the network that give Ethe
 lang: en
 template: upgrade
 sidebar: true
-image: ../../../assets/eth2/newrings.png
+image: ../../../assets/upgrades/newrings.png
 summaryPoint1: Sharding is a multi-phase upgrade to improve Ethereum’s scalability and capacity.
 summaryPoint2: Shard chains spread the network's load across 64 new chains.
 summaryPoint3: They make it easier to run a node by keeping hardware requirements low.

@@ -4,7 +4,7 @@ description: Dowiedz się więcej na temat łańcuchów odłamkowych – podzia�
 lang: pl
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/newrings.png
+image: ../../../../../assets/upgrades/newrings.png
 summaryPoint1: Sharding jest wieloetapowym uaktualnieniem, które polega na zwiększeniu skalowalności i pojemności.
 summaryPoint2: Łańcuchy odłamkowe rozkładają obciążenie sieci na 64 nowe łańcuchy.
 summaryPoint3: Sprawiają że łatwiej uruchamiać węzły przez zmniejszenie wymagań sprzętowych

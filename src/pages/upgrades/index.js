@@ -665,7 +665,7 @@ const Eth2IndexPage = ({ data }) => {
               </p>
               <p>
                 <Translation id="page-eth2-question-8-answer-2" />{" "}
-                <Link to="/eth2/beacon-chain">
+                <Link to="/upgrades/beacon-chain">
                   <Translation id="page-eth2-upgrades-guide" />
                 </Link>
               </p>
@@ -780,7 +780,7 @@ export default Eth2IndexPage
 
 export const query = graphql`
   {
-    oldship: file(relativePath: { eq: "eth2/oldship.png" }) {
+    oldship: file(relativePath: { eq: "upgrades/oldship.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 800
@@ -790,7 +790,7 @@ export const query = graphql`
         )
       }
     }
-    rhino: file(relativePath: { eq: "eth2/eth2_rhino.png" }) {
+    rhino: file(relativePath: { eq: "upgrades/eth2_rhino.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 320
@@ -800,12 +800,12 @@ export const query = graphql`
         )
       }
     }
-    merge: file(relativePath: { eq: "eth2/merge.png" }) {
+    merge: file(relativePath: { eq: "upgrades/merge.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
-    beaconchain: file(relativePath: { eq: "eth2/core.png" }) {
+    beaconchain: file(relativePath: { eq: "upgrades/core.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 420
@@ -815,7 +815,7 @@ export const query = graphql`
         )
       }
     }
-    shards: file(relativePath: { eq: "eth2/newrings.png" }) {
+    shards: file(relativePath: { eq: "upgrades/newrings.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 420
@@ -825,7 +825,7 @@ export const query = graphql`
         )
       }
     }
-    themerge: file(relativePath: { eq: "eth2/merge.png" }) {
+    themerge: file(relativePath: { eq: "upgrades/merge.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 420

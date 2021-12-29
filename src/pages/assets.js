@@ -628,16 +628,16 @@ export const query = graphql`
     eth: file(relativePath: { eq: "eth.png" }) {
       ...assetItem
     }
-    oldShip: file(relativePath: { eq: "eth2/oldship.png" }) {
+    oldShip: file(relativePath: { eq: "upgrades/oldship.png" }) {
       ...assetItem
     }
-    merge: file(relativePath: { eq: "eth2/merge.png" }) {
+    merge: file(relativePath: { eq: "upgrades/merge.png" }) {
       ...assetItem
     }
-    beaconChain: file(relativePath: { eq: "eth2/core.png" }) {
+    beaconChain: file(relativePath: { eq: "upgrades/core.png" }) {
       ...assetItem
     }
-    newRings: file(relativePath: { eq: "eth2/newrings.png" }) {
+    newRings: file(relativePath: { eq: "upgrades/newrings.png" }) {
       ...assetItem
     }
     defi: file(relativePath: { eq: "use-cases/defi.png" }) {

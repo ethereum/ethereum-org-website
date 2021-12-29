@@ -131,13 +131,13 @@ const BugBountyPoints = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      dai: file(relativePath: { eq: "eth2/dai.png" }) {
+      dai: file(relativePath: { eq: "upgrades/dai.png" }) {
         ...TokenLogo
       }
-      ethLight: file(relativePath: { eq: "eth2/eth-black.png" }) {
+      ethLight: file(relativePath: { eq: "upgrades/eth-black.png" }) {
         ...TokenLogo
       }
-      ethDark: file(relativePath: { eq: "eth2/eth-orange.png" }) {
+      ethDark: file(relativePath: { eq: "upgrades/eth-orange.png" }) {
         ...TokenLogo
       }
     }

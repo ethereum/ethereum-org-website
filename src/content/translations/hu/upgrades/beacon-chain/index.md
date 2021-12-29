@@ -4,7 +4,7 @@ description: Tudj meg többet a beacon chainről - az Ethereum első nagy Eth2 f
 lang: hu
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/core.png
+image: ../../../../../assets/upgrades/core.png
 summaryPoint1: A beacon chain nem változtatja meg azt, ahogy az Ethereumot ma használjuk.
 summaryPoint2: A hálózatot fogja koordinálni.
 summaryPoint3: Bevezeti a proof-of-stake rendszert az Ethereum ökoszisztémába.

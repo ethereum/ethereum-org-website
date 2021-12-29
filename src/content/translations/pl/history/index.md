@@ -27,7 +27,7 @@ Te zmiany reguł mogą spowodować tymczasowy podział w sieci. Nowe bloki możn
 
 ### (_W toku_) Altair {#altair}
 
-Uaktualnienie Altair jest pierwszym planowanym uaktualnieniem [łańcucha śledzącego](/eth2/beacon-chain). Jego wdrożenie ma nastąpić w 2021 r. Wprowadzi ono wsparcie dla „komitetów synchronizacji”, które mogą umożliwiać korzystanie z lekkich klientów, a także podniesie kary za brak aktywności i cięcia do ich pełnych wartości.
+Uaktualnienie Altair jest pierwszym planowanym uaktualnieniem [łańcucha śledzącego](/upgrades/beacon-chain). Jego wdrożenie ma nastąpić w 2021 r. Wprowadzi ono wsparcie dla „komitetów synchronizacji”, które mogą umożliwiać korzystanie z lekkich klientów, a także podniesie kary za brak aktywności i cięcia do ich pełnych wartości.
 
 - [Przeczytaj specyfikację uaktualnienia Altair](https://github.com/ethereum/eth2.0-specs/tree/dev/specs/altair)
 

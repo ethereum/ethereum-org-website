@@ -4,7 +4,7 @@ description: Dowiedz się więcej o łańcuchu śledzącym, pierwszym większym 
 lang: pl
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/core.png
+image: ../../../../../assets/upgrades/core.png
 summaryPoint1: Łańcuch śledzący nie zmienia nic w Ethereum, którego dziś używamy.
 summaryPoint2: Będzie koordynował sieć.
 summaryPoint3: Wprowadza dowód stawki do ekosystemu Ethereum.

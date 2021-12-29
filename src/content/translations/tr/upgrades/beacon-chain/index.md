@@ -4,7 +4,7 @@ description: Ethereum'un ilk önemli Eth2 yükseltmesi olan İşaret (Beacon) Zi
 lang: tr
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/core.png
+image: ../../../../../assets/upgrades/core.png
 summaryPoint1: İşaret (beacon) zinciri bugün kullanmakta olduğumuz Ethereum ile ilgili hiçbir şeyi değiştirmez.
 summaryPoint2: Ağı koordine edecektir.
 summaryPoint3: Ethereum ekosistemine pay ispatını (proof of stake) getirir.

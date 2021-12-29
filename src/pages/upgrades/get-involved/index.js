@@ -479,7 +479,7 @@ export const query = graphql`
         score
       }
     }
-    rhino: file(relativePath: { eq: "eth2/eth2_rhino.png" }) {
+    rhino: file(relativePath: { eq: "upgrades/eth2_rhino.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 800
@@ -489,28 +489,30 @@ export const query = graphql`
         )
       }
     }
-    prysm: file(relativePath: { eq: "eth2/prysm.png" }) {
+    prysm: file(relativePath: { eq: "upgrades/prysm.png" }) {
       ...Clients
     }
-    lighthouseLight: file(relativePath: { eq: "eth2/lighthouse-light.png" }) {
+    lighthouseLight: file(
+      relativePath: { eq: "upgrades/lighthouse-light.png" }
+    ) {
       ...Clients
     }
-    lighthouseDark: file(relativePath: { eq: "eth2/lighthouse-dark.png" }) {
+    lighthouseDark: file(relativePath: { eq: "upgrades/lighthouse-dark.png" }) {
       ...Clients
     }
-    tekuDark: file(relativePath: { eq: "eth2/teku-dark.png" }) {
+    tekuDark: file(relativePath: { eq: "upgrades/teku-dark.png" }) {
       ...Clients
     }
-    tekuLight: file(relativePath: { eq: "eth2/teku-light.png" }) {
+    tekuLight: file(relativePath: { eq: "upgrades/teku-light.png" }) {
       ...Clients
     }
-    cortex: file(relativePath: { eq: "eth2/cortex.png" }) {
+    cortex: file(relativePath: { eq: "upgrades/cortex.png" }) {
       ...Clients
     }
-    lodestar: file(relativePath: { eq: "eth2/lodestar.png" }) {
+    lodestar: file(relativePath: { eq: "upgrades/lodestar.png" }) {
       ...Clients
     }
-    nimbus: file(relativePath: { eq: "eth2/nimbus.png" }) {
+    nimbus: file(relativePath: { eq: "upgrades/nimbus.png" }) {
       ...Clients
     }
   }

@@ -4,7 +4,7 @@ description: Научета какво е сигналната верига – 
 lang: bg
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/core.png
+image: ../../../../../assets/upgrades/core.png
 summaryPoint1: Сигналната верига не променя нищо от този Етереум, който ползваме днес.
 summaryPoint2: Тя ще координира мрежата.
 summaryPoint3: Тя въвежда принципа proof-of-stake, доказателство-за-залог, в екосистемата на Етереум.

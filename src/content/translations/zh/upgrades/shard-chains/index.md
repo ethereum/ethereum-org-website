@@ -4,7 +4,7 @@ description: 了解链——网络的分区可以让以太坊拥有更多的交�
 lang: zh
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/newrings.png
+image: ../../../../../assets/upgrades/newrings.png
 summaryPoint1: 碎片是一个多阶段升级，以提高以太坊的可扩容性和容量。
 summaryPoint2: 碎链将网络负荷扩展到 64 个新链。
 summaryPoint3: 通过降低硬件需求使节点运行变得更加容易。

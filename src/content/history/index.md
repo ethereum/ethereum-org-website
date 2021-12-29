@@ -59,7 +59,7 @@ Be sure to upgrade your client software to the latest version before December 5,
 
 #### Summary {#altair-summary}
 
-The Altair upgrade was the first scheduled upgrade for the [Beacon Chain](/eth2/beacon-chain). It added support for "sync committees"—enabling light clients, and bringing validator inactivity and slashing penalties up to their full values.
+The Altair upgrade was the first scheduled upgrade for the [Beacon Chain](/upgrades/beacon-chain). It added support for "sync committees"—enabling light clients, and bringing validator inactivity and slashing penalties up to their full values.
 
 - [Read the Altair upgrade specification](https://github.com/ethereum/eth2.0-specs/tree/dev/specs/altair)
 

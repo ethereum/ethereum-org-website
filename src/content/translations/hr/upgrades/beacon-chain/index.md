@@ -4,7 +4,7 @@ description: Saznajte više o nadogradnji Beacon Chain – prvoj velikoj nadogra
 lang: hr
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/core.png
+image: ../../../../../assets/upgrades/core.png
 summaryPoint1: Beacon Chain ne mijenja ništa o Ethereumu kojim se koristimo danas.
 summaryPoint2: Koordinirat će mrežu.
 summaryPoint3: On predstavlja proof-of-stake u Ethereumovom ekosustavu.

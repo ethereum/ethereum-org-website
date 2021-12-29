@@ -4,7 +4,7 @@ description: Erfahre mehr über die Beacon Chain – das erste wesentliche Eth2-
 lang: de
 template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/core.png
+image: ../../../../../assets/upgrades/core.png
 summaryPoint1: Die Beacon Chain selbst ändert nichts an der heutigen Verwendung von Ethereum.
 summaryPoint2: Ihre Aufgabe wird die Koordination des Eth2-Netzwerks sein.
 summaryPoint3: Sie führt proof-of-stake ins Ethereum-System ein.
