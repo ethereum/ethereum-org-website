@@ -19,7 +19,7 @@ summaryPoint4: Segurament la coneixeràs com a "Fase 0" de la planificació tèc
 
 La Cadena de Balisa dirigirà o coordinarà l'expansió de la xarxa de [fragments](/upgrades/shard-chains/) i [participants](/staking/). Però no serà com la [xarxa principal d'Ethereum](/glossary/#mainnet) actual. No pot gestionar comptes o contractes intel·ligents.
 
-El rol de la Cadena de Balisa canviarà amb el pas del temps, però és un element fonamental de [l'Ethereum segura, sostenible i escalable per a la que treballem](/eth2/vision/).
+El rol de la Cadena de Balisa canviarà amb el pas del temps, però és un element fonamental de [l'Ethereum segura, sostenible i escalable per a la que treballem](/vision/).
 
 ## Característiques de la Cadena de Balisa {#beacon-chain-features}
 

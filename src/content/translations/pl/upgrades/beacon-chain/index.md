@@ -19,7 +19,7 @@ summaryPoint4: Być może znasz to jako "etap 0" w hamonogramie technicznym
 
 Łańcuch śledzący będzie prowadził lub koordynował rozszerzoną sieć [fragmentów](/upgrades/shard-chains/) i [zastawiających](/staking/). Ale nie będzie jak sieć główna [Ethereum](/glossary/#mainnet) dzisiaj. Nie może on obsługiwać kont ani inteligentnych kontraktów.
 
-Rola łańcucha śledzącego z czasem się zmieni, ale jest to podstawowy komponent [bezpiecznego, zrównoważonego i skalowalnego Ethereum, nad którym pracujemy](/eth2/vision/).
+Rola łańcucha śledzącego z czasem się zmieni, ale jest to podstawowy komponent [bezpiecznego, zrównoważonego i skalowalnego Ethereum, nad którym pracujemy](/vision/).
 
 ## Funkcje łańcucha śledzącego {#beacon-chain-features}
 

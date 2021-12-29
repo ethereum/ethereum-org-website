@@ -329,7 +329,7 @@ We're not here to defend the environmental footprint of mining, instead we want 
 
 ### A greener future... {#a-greener-future}
 
-For as long as Ethereum has been around, the energy-consumption of mining has been a huge focus area for developers and researchers. And the vision has always been to replace it as soon as possible. [More on Ethereum's vision](/eth2/vision/)
+For as long as Ethereum has been around, the energy-consumption of mining has been a huge focus area for developers and researchers. And the vision has always been to replace it as soon as possible. [More on Ethereum's vision](/vision/)
 
 This vision is being delivered right now.
 

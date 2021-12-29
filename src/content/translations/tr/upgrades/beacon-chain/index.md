@@ -19,7 +19,7 @@ summaryPoint4: Bunu teknik yol haritalarındaki "0 Aşaması" olarak tanıyor ol
 
 İşaret (Beacon) Zinciri [shard](/upgrades/shard-chains/) ve [staker](/staking/)lerden oluşan genişletilmiş ağı yönetir veya koordine eder. Ancak günümüzün [Ethereum ana ağı](/glossary/#mainnet) gibi olmayacaktır. Hesapları veya akıllı sözleşmeleri ele alamaz.
 
-İşaret (Beacon) Zinciri'nin rolü zamanla değişir ancak [geliştirmeye çalıştığımız güvenli, sürdürülebilir ve ölçeklendirilebilir Ethereum](/eth2/vision/) için temel bir bileşendir.
+İşaret (Beacon) Zinciri'nin rolü zamanla değişir ancak [geliştirmeye çalıştığımız güvenli, sürdürülebilir ve ölçeklendirilebilir Ethereum](/vision/) için temel bir bileşendir.
 
 ## İşaret (Beacon) Zinciri özellikleri {#beacon-chain-features}
 

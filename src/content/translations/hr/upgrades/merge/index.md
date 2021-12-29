@@ -12,7 +12,7 @@ summaryPoint4: To vam može biti poznato kao „faza 1.5” na tehničkim planov
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">
-    Ova nadogradnja uslijedit će nakon dolaska lanaca djelića. Ali to je trenutak u kojem se <a href="/eth2/vision/"> vizija nadogradnje Eth2 </a> u potpunosti ostvaruje – veća nadogradivost, sigurnost i održivost uz ulaganja koja podržavaju cijelu mrežu.
+    Ova nadogradnja uslijedit će nakon dolaska lanaca djelića. Ali to je trenutak u kojem se <a href="/vision/"> vizija nadogradnje Eth2 </a> u potpunosti ostvaruje – veća nadogradivost, sigurnost i održivost uz ulaganja koja podržavaju cijelu mrežu.
 </UpgradeStatus>
 
 ## Što je spajanje? {#what-is-the-docking}
@@ -29,7 +29,7 @@ Glavna mreža omogućit će pokretanje pametnih ugovora u sustav proof-of-stake,
 
 ## Nakon spajanja {#after-the-docking}
 
-To će označiti kraj mehanizma Proof of Work za Ethereum i početak održivijeg, ekološki prihvatljivijeg Ethereuma. U tom će trenutku Ethereum imati opseg, sigurnost i održivost koju istiće u svojoj [ viziji Eth2 ](/eth2/vision/).
+To će označiti kraj mehanizma Proof of Work za Ethereum i početak održivijeg, ekološki prihvatljivijeg Ethereuma. U tom će trenutku Ethereum imati opseg, sigurnost i održivost koju istiće u svojoj [ viziji Eth2 ](/vision/).
 
 ## Odnos između nadogradnji {#relationship-between-upgrades}
 

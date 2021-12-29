@@ -19,7 +19,7 @@ summaryPoint4: On peut la voir comme la phase 0 de la feuille de route.
 
 La chaîne phare dirigera ou coordonnera le réseau étendu de [fragments](/upgrades/shard-chains/) et de [validateurs](/staking/). Mais ce ne sera pas comme [le réseau principal d'Ethereum](/glossary/#mainnet) d'aujourd'hui. Elle ne peut gérer ni les comptes ni les contrats intelligents.
 
-Le rôle de la chaîne phare évoluera au fil du temps, mais restera un élément fondamental de l'[Ethereum sécurisé, durable et évolutif auquel nous travaillons](/eth2/vision/).
+Le rôle de la chaîne phare évoluera au fil du temps, mais restera un élément fondamental de l'[Ethereum sécurisé, durable et évolutif auquel nous travaillons](/vision/).
 
 ## Fonctionnalités de la chaîne phare {#beacon-chain-features}
 

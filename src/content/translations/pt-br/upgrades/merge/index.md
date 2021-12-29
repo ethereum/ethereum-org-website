@@ -12,7 +12,7 @@ summaryPoint4: Antes, era chamada de "atracagem".
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">
-  Essa melhoria representa a mudança oficial para o consenso da prova de participação. Ela elimina a necessidade de minerar com intenso consumo de energia e protege a rede usando o ether aplicado. Um passo verdadeiramente empolgante para concretizar a <a href="/eth2/vision/"> visão do Eth2 </a> de mais dimensionamento, segurança e sustentabilidade.
+  Essa melhoria representa a mudança oficial para o consenso da prova de participação. Ela elimina a necessidade de minerar com intenso consumo de energia e protege a rede usando o ether aplicado. Um passo verdadeiramente empolgante para concretizar a <a href="/vision/"> visão do Eth2 </a> de mais dimensionamento, segurança e sustentabilidade.
 </UpgradeStatus>
 
 ## De que se trata a integração? {#what-is-the-docking}
@@ -29,7 +29,7 @@ A rede principal trará, além da capacidade de executar contratos inteligentes 
 
 ## Depois da integração {#after-the-merge}
 
-Isto sinalizará o fim da prova de trabalho para Ethereum e iniciará a era de uma Ethereum mais sustentável e amigável com o meio ambiente. A Ethereum estará, então, a um passo de alcançar toda a escala, segurança e sustentabilidade definidas na sua visão [da Eth2](/eth2/vision/).
+Isto sinalizará o fim da prova de trabalho para Ethereum e iniciará a era de uma Ethereum mais sustentável e amigável com o meio ambiente. A Ethereum estará, então, a um passo de alcançar toda a escala, segurança e sustentabilidade definidas na sua visão [da Eth2](/vision/).
 
 É importante salientar que a simplicidade é um dos objetivos de implementação da integração, para acelerar a transição da prova de trabalho para a prova de participação. Os desenvolvedores estão focando seus esforços nesta transição e minimizando recursos adicionais que poderiam atrasar esse objetivo.
 

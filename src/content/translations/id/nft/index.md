@@ -323,7 +323,7 @@ Kami di sini bukan untuk membela jejak penambangan pada lingkungan, tetapi kami 
 
 ### Sebuah masa depan yang lebih hijau... {#a-greener-future}
 
-Selama Ethereum ada, pemakaian energi penambangan telah menjadi area fokus yang sangat besar bagi para pengembang dan peneliti. Dan visinya selalu untuk menggantinya sesegera mungkin. [Lebih lanjut tentang visi Ethereum](/eth2/vision/)
+Selama Ethereum ada, pemakaian energi penambangan telah menjadi area fokus yang sangat besar bagi para pengembang dan peneliti. Dan visinya selalu untuk menggantinya sesegera mungkin. [Lebih lanjut tentang visi Ethereum](/vision/)
 
 Visi ini sedang diwujudkan sekarang.
 

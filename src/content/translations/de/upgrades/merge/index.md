@@ -12,7 +12,7 @@ summaryPoint4: Welches wir zuvor als "die Kupplung" bezeichneten.
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">
-  Dieses Upgrade stellt den offiziellen Wechsel zum proof-of-stake-Konsens dar. Dadurch entfällt das energieintensive Mining, stattdessen wird das Netzwerk durch den Einsatz von Staked Ether gesichert. Ein wirklich spannender Schritt zur Verwirklichung der <a href="/eth2/vision/">Eth2-Vision</a> - mehr Skalierbarkeit, Sicherheit und Nachhaltigkeit.
+  Dieses Upgrade stellt den offiziellen Wechsel zum proof-of-stake-Konsens dar. Dadurch entfällt das energieintensive Mining, stattdessen wird das Netzwerk durch den Einsatz von Staked Ether gesichert. Ein wirklich spannender Schritt zur Verwirklichung der <a href="/vision/">Eth2-Vision</a> - mehr Skalierbarkeit, Sicherheit und Nachhaltigkeit.
 </UpgradeStatus>
 
 ## Was ist die Verkuppelung? {#what-is-the-docking}
@@ -29,7 +29,7 @@ Mainnet wird es sowohl ermöglichen, Smart Contracts ins proof-of-stake-System e
 
 ## Nach der Verkupplung {#after-the-merge}
 
-Dies bedeutet das Ende von Proof-of-Work für Ethereum und beginnt die neue Ära eines nachhaltigeren, umweltfreundlicheren Ethereum. An diesem Punkt wird Ethereum der in [Eth2 vision](/eth2/vision/) beschriebenen vollen Skalierung, Sicherheit und Nachhaltigkeit einen Schritt näher sein.
+Dies bedeutet das Ende von Proof-of-Work für Ethereum und beginnt die neue Ära eines nachhaltigeren, umweltfreundlicheren Ethereum. An diesem Punkt wird Ethereum der in [Eth2 vision](/vision/) beschriebenen vollen Skalierung, Sicherheit und Nachhaltigkeit einen Schritt näher sein.
 
 Es ist wichtig zu erwähnen, dass ein Ziel der Verkupplung die Unkompliziertheit ist, um den Übergang von Proof-of-Work zu proof-of-stake zu beschleunigen. Die Entwickler konzentrieren ihre Bemühungen auf diesen Übergang und verzichten zunächst auf zusätzliche Funktionen, die dieses Ziel verzögern könnten.
 

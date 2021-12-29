@@ -95,7 +95,7 @@ Altair 升级是[信标链](/upgrades/beacon-chain)的第一次预定升级。 �
 
 #### 概览 {#beacon-chain-genesis-summary}
 
-[信标链](/upgrades/beacon-chain/)需要 16384 个 ETH 并且每个节点拥有 32 个 ETH，以保证网络安全。 这发生在 2020 年 11 月 27 日，意味着信标链在 2020 年 12 月 1 日开始产生区块。 这是实现 [Eth2.0 愿景](/eth2/vision/)的重要一步。
+[信标链](/upgrades/beacon-chain/)需要 16384 个 ETH 并且每个节点拥有 32 个 ETH，以保证网络安全。 这发生在 2020 年 11 月 27 日，意味着信标链在 2020 年 12 月 1 日开始产生区块。 这是实现 [Eth2.0 愿景](/vision/)的重要一步。
 
 [请阅读以太坊基金会公告](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 

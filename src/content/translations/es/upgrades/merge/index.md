@@ -12,7 +12,7 @@ summaryPoint4: Es posible que conozcas esto como "Fase 1.5" en hojas de ruta té
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">
-  Esta actualización seguirá a la llegada de las cadenas de fragmentos. Pero es el momento en el que <a href="/eth2/vision/">la visión de Eth2</a> se hace realidad por completo: más escalabilidad, seguridad y sostenibilidad con el apoyo de la participación a toda la red.
+  Esta actualización seguirá a la llegada de las cadenas de fragmentos. Pero es el momento en el que <a href="/vision/">la visión de Eth2</a> se hace realidad por completo: más escalabilidad, seguridad y sostenibilidad con el apoyo de la participación a toda la red.
 </UpgradeStatus>
 
 ## ¿Qué es el acoplamiento? {#what-is-the-docking}
@@ -29,7 +29,7 @@ La red principal aportará la capacidad de ejecutar contratos inteligentes en el
 
 ## Después del acoplamiento {#after-the-docking}
 
-Esto marcará el fin de la prueba de trabajo para Ethereum e iniciará la era de un Ethereum más sostenible y respetuoso con el medio ambiente. En este punto, Ethereum tendrá la escala, la seguridad y la sostenibilidad descritas en la [visión de Eth2](/eth2/vision/).
+Esto marcará el fin de la prueba de trabajo para Ethereum e iniciará la era de un Ethereum más sostenible y respetuoso con el medio ambiente. En este punto, Ethereum tendrá la escala, la seguridad y la sostenibilidad descritas en la [visión de Eth2](/vision/).
 
 ## Relación entre actualizaciones {#relationship-between-upgrades}
 
