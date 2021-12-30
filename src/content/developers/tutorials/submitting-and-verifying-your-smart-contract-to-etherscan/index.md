@@ -241,7 +241,7 @@ Pass - Verified: https://ropsten.etherscan.io/address/<contract-address>#contrac
 Successfully verified 1 contract(s).
 ```
 
-### Step 4: Check out your smart contract on Etherscan! {#step-4-check-out-your-smart-contract-on-etherscan!}
+### Step 4: Check out your smart contract on Etherscan! {#check-out-your-smart-contract-on-etherscan!}
 
 When you navigate to the link provided in your terminal, you should be able to see your smart contract code and ABI published on Etherscan!
 
