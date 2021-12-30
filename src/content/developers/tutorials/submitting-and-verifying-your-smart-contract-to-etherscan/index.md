@@ -69,7 +69,7 @@ ETHERSCAN_API_KEY = "your-etherscan-key"
 
 This is where our steps diverge for HardHat and Truffle deployed smart contracts, as they require different plugins. Skip to the _Step 3: Truffle-deployed smart contracts_ section if you deployed your contract using Truffle.
 
-#### Step 2.1 Install the [`hardhat-etherscan`](https://hardhat.org/plugins/nomiclabs-hardhat-etherscan.html) plugin {#step-2.1-install-the-hardhat-etherscan-plugin}
+#### Step 2.1 Install hardhat-etherscan {#install-hardhat-etherscan}
 
 Publishing your contract to Etherscan with HardHat is super simple. To get started, you will first need to install the `hardhat-etherscan` plugin to automatically verify your smart contract's source code and ABI on Etherscan. In your `hello-world` project directory run:
 
