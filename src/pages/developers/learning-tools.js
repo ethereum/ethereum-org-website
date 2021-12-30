@@ -86,7 +86,7 @@ const LearningToolsPage = ({ data }) => {
       url: "https://replit.com/@replit/Solidity-starter-beta",
       image: getImage(data.replit),
       alt: "page-learning-tools-replit-logo-alt",
-      background: "#11131D",
+      background: "#0f1524",
       subjects: ["Solidity", "web3"],
     },
     {
