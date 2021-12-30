@@ -225,7 +225,7 @@ module.exports = {
 };
 ```
 
-#### Step 3.2 Verify your smart contract on Etherscan! {#step-3.2-verify-your-smart-contract-on-etherscan}
+#### Step 3.2 Verify your smart contract on Etherscan {#truffle-verify-your-smart-contract-on-etherscan}
 
 Last but not least, run the following command in your terminal:
 
