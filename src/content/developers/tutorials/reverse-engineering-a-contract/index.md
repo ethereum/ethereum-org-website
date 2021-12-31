@@ -61,6 +61,8 @@ This code does two things:
 1. Write 0x80 as a 32 byte value to memory locations 0x40-0x5F (0x80 is stored in 0x5F, and 0x40-0x5E are all zeroes).
 2. Read the calldata size. Normally the call data for an Ethereum contract follows [the ABI (application binary interface)](https://docs.soliditylang.org/en/v0.8.10/abi-spec.html), which at a minimum requires four bytes for the function selector. If the call data size is less than four, jump to 0x5E.
 
+![Flowchart for this portion](workflow-entry-point-00.png)
+
 ### The Handler at 0x5E (for non-ABI call data) {#the-handler-at-0x5e-for-non-abi-call-data}
 
 
@@ -158,6 +160,7 @@ If we get here (which requires the call data to be empty) we add to `Value*` the
 
 Finally, clear the stack (which isn't necessary) and signal the successful end of the transaction.
 
+To sum it all up, here's a flowchart for the initial code.
 
 ## The Handler at 0x7C {#the-handler-at-0x7c}
 
