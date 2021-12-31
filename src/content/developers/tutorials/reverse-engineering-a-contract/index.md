@@ -162,6 +162,8 @@ Finally, clear the stack (which isn't necessary) and signal the successful end o
 
 To sum it all up, here's a flowchart for the initial code.
 
+![Entry point flowchart](flowchart-entry.png)
+
 ## The Handler at 0x7C {#the-handler-at-0x7c}
 
 I purposely did not put in the heading what this handler does. The point isn't to teach you how this specific contract works, but how to reverse engineer contracts. You will learn what it does the same way I did, by following the code.
@@ -281,6 +283,8 @@ If we get here, to 0xC0, it means that the contract we called reverted. As we ar
   
 So we `REVERT` with the same buffer we used for `RETURN` earlier:  0x80 - 0x80+RETURNDATASIZE
 
+
+![Call to proxy flowchart](flowchart-proxy.png)
   
 ## ABI calls {#abi-calls}
   
