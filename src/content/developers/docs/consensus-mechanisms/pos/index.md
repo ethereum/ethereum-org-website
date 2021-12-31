@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-Ethereum is moving to a consensus mechanism called proof-of-stake (PoS) from [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/). This was always the plan as it's a key part in the community's strategy to scale Ethereum via [the Eth2 upgrades](/eth2/). However getting PoS right is a big technical challenge and not as straightforward as using PoW to reach consensus across the network.
+Ethereum is moving to a consensus mechanism called proof-of-stake (PoS) from [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/). This was [always the plan](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1/) as it's a key part in the community's strategy to scale Ethereum via [the Eth2 upgrades](/eth2/). However getting PoS right is a big technical challenge and not as straightforward as using PoW to reach consensus across the network.
 
 ## Prerequisites {#prerequisites}
 
