@@ -20,6 +20,9 @@ If you're looking to fiddle with code before you [set up a local development env
 - [ethfiddle.com](https://ethfiddle.com/)
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
 
+**ChainIDE -** **_A Cloud-Based Multi-Chain IDE_**
+- [chainide.com](https://chainide.com/)
+
 ## Desktop IDEs {#desktop-ides}
 
 Most established IDEs have built plugins to enhance the Ethereum development experience. At a minimum, they provide syntax highlighting for [smart contract languages](/developers/docs/smart-contracts/languages/).
