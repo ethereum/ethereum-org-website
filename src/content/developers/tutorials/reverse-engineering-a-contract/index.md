@@ -286,6 +286,7 @@ So we `REVERT` with the same buffer we used for `RETURN` earlier:  0x80 - 0x80+R
 
 ![Call to proxy flowchart](flowchart-proxy.png)
   
+  
 ## ABI calls {#abi-calls}
   
 If the call data size is four bytes or more this might be a valid ABI call. 
@@ -319,7 +320,9 @@ By dividing the method signature matching tests in two like this saves half the 
 
 If no match is found, the code jumps to [the proxy handler at 0x7C](#the-handler-at-0x7c), in the hope that the contract to which we are a proxy has a match.
   
-### splitter()   {#splitter}
+![ABI calls flowchart](flowchart-abi.png)  
+  
+## splitter()   {#splitter}
   
 | Offset | Opcode | Stack 
 | -: | - | - |
@@ -360,7 +363,7 @@ And 0x80 now contains the proxy address
 | 137	|	JUMP | 0xA0
   
   
-#### The E4 Code {#the-e4-code}
+### The E4 Code {#the-e4-code}
   
 This is the first time we see these lines, but they are shared with other methods (see below). So we'll call the value in the stack X, and just remember that in `splitter()` the value of this X is 0xA0.
   
@@ -381,7 +384,7 @@ So this code receives a memory pointer in the stack (X), and causes the contract
 In the case of `splitter()`, this returns the address for which we are a proxy. `RETURN` returns the buffer in 0x80-0x9F, which is where we wrote this data (offset 0x130 above).
   
   
-### currentWindow()  {#currentwindow}
+## currentWindow()  {#currentwindow}
   
 The code in offsets 0x158-0x163 is identical to what we saw in 0x103-0x10E in `splitter()` (other than the `JUMPI` destination), so we know `currentWindow()` is also not `payable`. 
   
@@ -396,7 +399,7 @@ The code in offsets 0x158-0x163 is identical to what we saw in 0x103-0x10E in `s
 | 16D	| JUMP | Storage[1] 0xDA
   
 
-#### The DA code {#the-da-code}  
+### The DA code {#the-da-code}  
 
 This code is also shared with other methods. So we'll call the value in the stack Y, and just remember that in `currentWindow()` the value of this Y is Storage[1].   
 
@@ -419,7 +422,7 @@ Write Y to 0x80-0x9F.
 And the rest is already explained [above](#the-e4-code). So jumps to 0xDA write the stack top (Y) to 0x80-0x9F, and return that value. In the case of `currentWindow()`, it returns Storage[1].
   
   
-### merkleRoot()   {#merkleroot}
+## merkleRoot()   {#merkleroot}
   
 The code in offsets 0xED-0xF8 is identical to what we saw in 0x103-0x10E in `splitter()` (other than the `JUMPI` destination), so we know `merkleRoot()` is also not `payable`. 
   
@@ -437,7 +440,7 @@ The code in offsets 0xED-0xF8 is identical to what we saw in 0x103-0x10E in `spl
 What happens after the jump [we already figured out](#the-da-code). So `merkleRoot()` returns Storage[0].
   
   
-### 0x81e580d3  {#0x81e580d3}
+## 0x81e580d3  {#0x81e580d3}
   
 The code in offsets 0x138-0x143 is identical to what we saw in 0x103-0x10E in `splitter()` (other than the `JUMPI` destination), so we know this function is also not `payable`. 
   
@@ -547,7 +550,7 @@ So there is a lookup table in storage, which starts at the SHA3 of 0x000...0004 
 We already know what [the code at offset 0xDA](#the-da-code) does, it returns the stack top value to the caller. So this function returns the value from the lookup table to the caller. 
   
   
-### 0x1f135823  {#0x1f135823}
+## 0x1f135823  {#0x1f135823}
 
 The code in offsets 0xC4-0xCF is identical to what we saw in 0x103-0x10E in `splitter()` (other than the `JUMPI` destination), so we know this function is also not `payable`.  
   
