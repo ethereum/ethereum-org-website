@@ -5942,6 +5942,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "nedrocks",
+      "name": "Ned Rockson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/537592?v=4",
+      "profile": "http://www.nedrockson.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
