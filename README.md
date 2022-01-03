@@ -1309,6 +1309,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://www.nedrockson.com"><img src="https://avatars.githubusercontent.com/u/537592?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ned Rockson</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=nedrocks" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/tommtt"><img src="https://avatars.githubusercontent.com/u/71329765?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tommaso Tosi</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=tommtt" title="Documentation">📖</a></td>
     <td align="center"><a href="http://kamilsadik.xyz"><img src="https://avatars.githubusercontent.com/u/75034988?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kamil</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Akamilsadik" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="http://www.mert.click"><img src="https://avatars.githubusercontent.com/u/88425310?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mert</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Periyot" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3APeriyot" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
