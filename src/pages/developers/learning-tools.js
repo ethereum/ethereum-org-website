@@ -1,15 +1,15 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
+import { shuffle } from "lodash"
 
 import { translateMessageId } from "../../utils/translations"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import ButtonLink from "../../components/ButtonLink"
 import ProductCard from "../../components/ProductCard"
-import InfoBanner from "../../components/InfoBanner"
 import CalloutBanner from "../../components/CalloutBanner"
 import {
   Content,
@@ -78,6 +78,12 @@ const StyledCardGrid = styled(CardGrid)`
 
 const LearningToolsPage = ({ data }) => {
   const intl = useIntl()
+  const [randomizedSandboxes, setRandomizedSandboxes] = useState([])
+
+  useEffect(() => {
+    const randomizedSandboxes = shuffle(sandboxes)
+    setRandomizedSandboxes(randomizedSandboxes)
+  }, [])
 
   const sandboxes = [
     {
@@ -227,7 +233,7 @@ const LearningToolsPage = ({ data }) => {
           <Translation id="page-learning-tools-sandbox-desc" />
         </p>
         <StyledCardGrid>
-          {sandboxes.map((sandbox, idx) => (
+          {randomizedSandboxes.map((sandbox, idx) => (
             <ProductCard
               key={idx}
               background={sandbox.background}
