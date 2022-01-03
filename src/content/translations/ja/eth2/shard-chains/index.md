@@ -59,7 +59,7 @@ summaryPoint4: このアップグレードは、メインネットとビーコ�
 
 Vitalik Buterin が Bankless(ポッドキャストの番組)にて議論すべき 3 つの潜在的な選択肢を紹介しました。
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. 状態の実行は必要ない {#state-execution-not-needed}
 

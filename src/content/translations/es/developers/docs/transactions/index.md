@@ -137,7 +137,9 @@ Una vez que la transacción ha sido enviada ocurre lo siguiente:
 
 ## Una demostración visual {#a-visual-demo}
 
-Observa a Austin mientras te guía por las transacciones, el gas y la minería. <iframe width="100%" height="315" src="https://www.youtube.com/embed/er-0ihqFQB0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Observa a Austin mientras te guía por las transacciones, el gas y la minería.
+
+<YouTube id="er-0ihqFQB0" />
 
 ## Leer más {#further-reading}
 

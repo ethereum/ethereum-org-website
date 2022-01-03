@@ -105,13 +105,9 @@ An account is not a wallet. An account is the keypair for a user-owned Ethereum 
 
 Watch Austin walk you through hash functions, and key pairs.
 
-<figure>
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/QJ010l-pBpE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
+<YouTube id="QJ010l-pBpE" />
 
-<figure>
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/9LtBDy67Tho" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
+<YouTube id="9LtBDy67Tho" />
 
 ## Further reading {#further-reading}
 

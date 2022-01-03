@@ -46,7 +46,7 @@ dapp 可以用任何语言编写（就像是一个 app）。它有前端代码�
 
 ## 更偏向视频学习者？ {#visual-learner}
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/F50OrwV6Uk8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="F50OrwV6Uk8" />
 
 ## Dapp 工具 {#dapp-tools}
 

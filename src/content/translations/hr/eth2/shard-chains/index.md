@@ -55,7 +55,7 @@ Plan je uvijek bio dodati dodatnu funkcionalnost djelićima, kako bi postali sli
 
 Vitalik Buterin, u podcastu Bankless, predstavio je 3 potencijalne opcije o kojima vrijedi razgovarati.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. Nije potrebno izvršenje stanja {#state-execution-not-needed}
 

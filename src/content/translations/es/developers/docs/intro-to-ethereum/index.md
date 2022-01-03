@@ -21,7 +21,9 @@ Los nuevos bloques son transmitidos a los nodos de la red, y una vez revisados y
 
 En resumen, cuando envías ETH a alguien, la transacción se debe minar e incluir en un bloque nuevo. A continuación, el estado actualizado se comparte con toda la red. Se incluyen más detalles a continuación.
 
-Observa cómo Austin te guía a través de la blockchain: <iframe width="100%" height="315" src="https://www.youtube.com/embed/zcX7OJ-L8XQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Observa cómo Austin te guía a través de la blockchain:
+
+<YouTube id="zcX7OJ-L8XQ" />
 
 ## ¿Qué es Ethereum? {#what-is-ethereum}
 

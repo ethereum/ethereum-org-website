@@ -29,6 +29,7 @@ import {
   ListItem,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
+import YouTube from "../components/YouTube"
 
 const Page = styled.div`
   display: flex;
@@ -146,6 +147,7 @@ const components = {
   Pill,
   CallToContribute,
   Emoji,
+  YouTube,
 }
 
 const Contributors = styled(FileContributors)`

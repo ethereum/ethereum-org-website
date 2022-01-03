@@ -23,6 +23,7 @@ import Translation from "../components/Translation"
 import Emoji from "../components/Emoji"
 import DocsNav from "../components/DocsNav"
 import DeveloperDocsLinks from "../components/DeveloperDocsLinks"
+import YouTube from "../components/YouTube"
 
 import { ZenModeContext } from "../contexts/ZenModeContext.js"
 
@@ -176,6 +177,7 @@ const components = {
   CallToContribute,
   Emoji,
   DeveloperDocsLinks,
+  YouTube,
 }
 
 const Contributors = styled(FileContributors)`
