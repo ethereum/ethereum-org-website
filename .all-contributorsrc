@@ -5969,6 +5969,16 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "Periyot",
+      "name": "Mert",
+      "avatar_url": "https://avatars.githubusercontent.com/u/88425310?v=4",
+      "profile": "http://www.mert.click",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
