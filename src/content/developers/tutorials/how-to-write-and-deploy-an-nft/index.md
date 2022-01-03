@@ -320,7 +320,7 @@ Calling deploy() on a ContractFactory will start the deployment, and return a Pr
 
 We’re finally ready to deploy our smart contract! Navigate back to the root of your project directory, and in the command line run:
 
-    npx hardhat run scripts/deploy.js
+    npx hardhat --network ropsten run scripts/deploy.js
 
 You should then see something like:
 
