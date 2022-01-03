@@ -5951,6 +5951,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "tommtt",
+      "name": "Tommaso Tosi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/71329765?v=4",
+      "profile": "https://github.com/tommtt",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

@@ -1307,6 +1307,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/BrysonXiao"><img src="https://avatars.githubusercontent.com/u/40129652?v=4?s=100" width="100px;" alt=""/><br /><sub><b>BrysonXiao</b></sub></a><br /><a href="#content-BrysonXiao" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/cdomashn"><img src="https://avatars.githubusercontent.com/u/58366873?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Discord #8528</b></sub></a><br /><a href="#content-cdomashn" title="Content">🖋</a></td>
     <td align="center"><a href="http://www.nedrockson.com"><img src="https://avatars.githubusercontent.com/u/537592?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ned Rockson</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=nedrocks" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/tommtt"><img src="https://avatars.githubusercontent.com/u/71329765?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tommaso Tosi</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=tommtt" title="Documentation">📖</a></td>
   </tr>
 </table>
 
