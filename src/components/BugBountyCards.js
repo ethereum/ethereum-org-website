@@ -114,11 +114,12 @@ const bugBountyCardsInfo = [
     h2TranslationId: "page-eth2-bug-bountycard-low",
     descriptionTranslationId: "page-eth2-bug-bountycard-label-2",
     subHeader1TranslationId: "page-eth2-bug-bountycard-subheader",
-    textLi1TranslationId: "page-eth2-bug-bountycard-li-1",
-    textLi2TranslationId: "page-eth2-bug-bountycard-li-2",
+    severityList: [
+      "page-eth2-bug-bountycard-li-1",
+      "page-eth2-bug-bountycard-li-2",
+    ],
     subHeader2TranslationId: "page-eth2-bug-bountycard-subheader-2",
     textTranslationId: "page-eth2-bug-bountycard-text",
-    styledButtonToLink: "https://forms.gle/Gnh4gzGh66Yc3V7G8",
     styledButtonTranslationId: "page-eth2-bug-bountycard-low-risk",
   },
   {
@@ -126,12 +127,13 @@ const bugBountyCardsInfo = [
     h2TranslationId: "page-eth2-bug-bountycard-h2",
     descriptionTranslationId: "page-eth2-bug-bountycard-label-4",
     subHeader1TranslationId: "page-eth2-bug-bountycard-subheader",
-    textLi1TranslationId: "page-eth2-bug-bountycard-li-3",
-    textLi2TranslationId: "page-eth2-bug-bountycard-li-4",
-    textLi3TranslationId: "page-eth2-bug-bountycard-li-5",
+    severityList: [
+      "page-eth2-bug-bountycard-li-3",
+      "page-eth2-bug-bountycard-li-4",
+      "page-eth2-bug-bountycard-li-5",
+    ],
     subHeader2TranslationId: "page-eth2-bug-bountycard-subheader-2",
     textTranslationId: "page-eth2-bug-bountycard-text-1",
-    styledButtonToLink: "https://forms.gle/Gnh4gzGh66Yc3V7G8",
     styledButtonTranslationId: "page-eth2-bug-bountycard-medium-risk",
   },
   {
@@ -139,11 +141,12 @@ const bugBountyCardsInfo = [
     h2TranslationId: "page-eth2-bug-bountycard-high",
     descriptionTranslationId: "page-eth2-bug-bountycard-label-6",
     subHeader1TranslationId: "page-eth2-bug-bountycard-subheader",
-    textLi1TranslationId: "page-eth2-bug-bountycard-li-6",
-    textLi2TranslationId: "page-eth2-bug-bountycard-li-7",
+    severityList: [
+      "page-eth2-bug-bountycard-li-6",
+      "page-eth2-bug-bountycard-li-7",
+    ],
     subHeader2TranslationId: "page-eth2-bug-bountycard-subheader-2",
     textTranslationId: "page-eth2-bug-bountycard-text-2",
-    styledButtonToLink: "https://forms.gle/Gnh4gzGh66Yc3V7G8",
     styledButtonTranslationId: "page-eth2-bug-bountycard-high-risk",
   },
   {
@@ -151,10 +154,9 @@ const bugBountyCardsInfo = [
     h2TranslationId: "page-eth2-bug-bountycard-critical",
     descriptionTranslationId: "page-eth2-bug-bountycard-label-8",
     subHeader1TranslationId: "page-eth2-bug-bountycard-subheader",
-    textLi1TranslationId: "page-eth2-bug-bountycard-li-8",
+    severityList: ["page-eth2-bug-bountycard-li-8"],
     subHeader2TranslationId: "page-eth2-bug-bountycard-subheader-2",
     textTranslationId: "page-eth2-bug-bountycard-text-3",
-    styledButtonToLink: "https://forms.gle/Gnh4gzGh66Yc3V7G8",
     styledButtonTranslationId: "page-eth2-bug-bountycard-critical-risk",
   },
 ]
@@ -195,19 +197,11 @@ const BugBountyCards = () => (
         </SubHeader>
         <Text>
           <ul>
-            <li>
-              <Translation id={card.textLi1TranslationId} />
-            </li>
-            {card.textLi2TranslationId && (
-              <li>
-                <Translation id={card.textLi2TranslationId} />
+            {card.severityList.map((listItemId) => (
+              <li key={`${listItemId}`}>
+                <Translation id={listItemId} />
               </li>
-            )}
-            {card.textLi3TranslationId && (
-              <li>
-                <Translation id={card.textLi3TranslationId} />
-              </li>
-            )}
+            ))}
           </ul>
         </Text>
         <Divider />
@@ -217,7 +211,7 @@ const BugBountyCards = () => (
         <Text>
           <Translation id={card.textTranslationId} />
         </Text>
-        <StyledButton to={card.styledButtonToLink}>
+        <StyledButton to="https://forms.gle/Gnh4gzGh66Yc3V7G8">
           <Translation id={card.styledButtonTranslationId} />
         </StyledButton>
       </Card>
