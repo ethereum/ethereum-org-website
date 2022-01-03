@@ -5989,6 +5989,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "A2be",
+      "name": "Kirk",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19943243?v=4",
+      "profile": "https://github.com/A2be",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
