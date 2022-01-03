@@ -5979,6 +5979,15 @@
         "doc",
         "bug"
       ]
+    },
+    {
+      "login": "Naman-Bhalla",
+      "name": "Naman Bhalla",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6305474?v=4",
+      "profile": "https://www.linkedin.com/in/namanbhalla/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
