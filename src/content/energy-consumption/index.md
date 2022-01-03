@@ -7,7 +7,7 @@ sidebar: true
 
 # Ethereum energy consumption {#introduction}
 
-Ethereum's current energy expenditure with [Proof of Work](/developers/docs/consensus-mechanisms/#proof-of-work) is too high and unsustainable. Resolving energy expenditure concerns without sacrificing security and decentralization is a significant technical challenge and has been a focus of research and development for years. Let's explore why building Ethereum has had a high environmental impact and how the upcoming network upgrade to [Proof of Stake](/developers/docs/consensus-mechanisms/pos/#top) will dramatically change this.
+Ethereum's current energy expenditure with [proof-of-work](/developers/docs/consensus-mechanisms/#proof-of-work) is too high and unsustainable. Resolving energy expenditure concerns without sacrificing security and decentralization is a significant technical challenge and has been a focus of research and development for years. Let's explore why building Ethereum has had a high environmental impact and how the upcoming network upgrade to [proof-of-stake](/developers/docs/consensus-mechanisms/pos) will dramatically change this.
 
 ## Energy secures the network {#energy-secures-the-network}
 
