@@ -15,7 +15,7 @@ Transactions on the Ethereum blockchain are validated by [miners](/developers/do
 
 The ability for any miner to add new blocks only works if there is a cost associated with mining and unpredictability about which specific node submits the next block. These conditions are met by imposing proof-of-work (PoW). To be eligible to submit a block of transactions, a miner must solve an arbitrary computational puzzle faster than any other miner. Solving this puzzle creates competition between miners and costs in the form of energy expenditure. To successfully defraud the blockchain, a dishonest miner would have to consistently win the proof-of-work race, which is very unlikely and prohibitively expensive.
 
-Ethereum has used proof-of-work since genesis. Migrating off of proof-of-work and to proof-of-stake has always been a fundamental goal of Ethereum. However, developing a proof-of-stake system that adheres to Ethereum's core principles of security and decentralization is not trivial and has required a lot of research and breakthroughs in cryptography, cryptoeconomics, and mechanism design (but it _is_ [possible](/#proof-of-stake)).
+Ethereum has used proof-of-work since genesis. Migrating off of proof-of-work and onto proof-of-stake has always been a fundamental goal of Ethereum. However, developing a proof-of-stake system that adheres to Ethereum's core principles of security and decentralization is not trivial. It has required a lot of research and breakthroughs in cryptography, cryptoeconomics, and mechanism design to get to a point where the transition is possible.
 
 ## Proof-of-work energy expenditure {#proof-of-work}
 
