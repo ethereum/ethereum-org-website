@@ -5998,6 +5998,16 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "juliangeissler",
+      "name": "juliangeissler",
+      "avatar_url": "https://avatars.githubusercontent.com/u/81534590?v=4",
+      "profile": "https://github.com/juliangeissler",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
