@@ -274,17 +274,3 @@ Some things to remember:
 
 - [Staying Safe: Common Scams](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [Avoiding Scams](https://bitcoin.org/en/scams) _Bitcoin.org_
-
-<!-- ## Ideas scratchpad
-
-A couple good suggestions from there that perhaps we should add:
-
-- Don't use a clipboard manager
-- Bookmark Your Crypto Sites / Do Not Trust Random URLs / Always Verify that the Site You Landed on Is Legit
-
-- Add pricing info for password managers
-
-For scams
-
-- Add details about Youtube hacks
-- Add rugpulls -->

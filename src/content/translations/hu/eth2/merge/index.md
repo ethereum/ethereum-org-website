@@ -27,22 +27,6 @@ Amikor minden készen áll, az Ethereum főhálózat "bedokkol" a Beacon Chainne
 
 A főhálózat lehetővé teszi majd az okosszerződések futtatását a proof-of-stake rendszeren, valamint magával hozza a jelenlegi Ethereum állapotot és történetet, ezzel biztosítva, hogy az összes ETH tulajdonos és felhasználó számára elakadásmentes legyen az átállás.
 
-<!-- ### Improving Mainnet
-
-Before Mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
-
-These include Improvements for
-
-- **End users**: like [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) which changes the way users bid for blockspace. In other words, making transaction fees more efficient for end users.
-- **Client runners**: making running clients more sustainable by capping disk space requirements.
-- **Developers**: upgrading the EVM to be more flexible.
-
-Plus many more.
-
-[More on Ethereum1.x](/learn/#eth-1x)
-
-These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
-
 ## A dokkolás után {#after-the-docking}
 
 Ez a proof-of-work végét és egy fenntarthatóbb, környezetbarátabb korszak kezdetét fogja jelenteni az Ethereum számára. Ettől a ponttól kezdve az Ethereum skálázható, biztonságos és fenntartható lesz, ahogy az az [Eth2 vízió](/eth2/vision/) szerint körvonalazódott.

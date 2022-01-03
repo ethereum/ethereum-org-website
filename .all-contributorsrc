@@ -4288,7 +4288,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/79124435?v=4",
       "profile": "https://ethos.dev",
       "contributions": [
-        "content"
+        "content",
+        "doc"
       ]
     },
     {
@@ -5941,6 +5942,71 @@
       "profile": "https://github.com/cdomashn",
       "contributions": [
         "content"
+      ]
+    },
+    {
+      "login": "nedrocks",
+      "name": "Ned Rockson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/537592?v=4",
+      "profile": "http://www.nedrockson.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "tommtt",
+      "name": "Tommaso Tosi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/71329765?v=4",
+      "profile": "https://github.com/tommtt",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "kamilsadik",
+      "name": "Kamil",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75034988?v=4",
+      "profile": "http://kamilsadik.xyz",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "Periyot",
+      "name": "Mert",
+      "avatar_url": "https://avatars.githubusercontent.com/u/88425310?v=4",
+      "profile": "http://www.mert.click",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
+    },
+    {
+      "login": "Naman-Bhalla",
+      "name": "Naman Bhalla",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6305474?v=4",
+      "profile": "https://www.linkedin.com/in/namanbhalla/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "A2be",
+      "name": "Kirk",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19943243?v=4",
+      "profile": "https://github.com/A2be",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "juliangeissler",
+      "name": "juliangeissler",
+      "avatar_url": "https://avatars.githubusercontent.com/u/81534590?v=4",
+      "profile": "https://github.com/juliangeissler",
+      "contributions": [
+        "doc",
+        "bug"
       ]
     }
   ],

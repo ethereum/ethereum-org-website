@@ -9,8 +9,6 @@ Spesso si crede erroneamente che gli sviluppatori debbano scrivere Smart Contrac
 
 Ethereum e la sua community adottano l'open source. È possibile trovare progetti della community, cioè implementazioni di client, API, framework di sviluppo, strumenti di test, in un'ampia gamma di linguaggi.
 
-<!-- Often certain languages have an certain advantage depending on the use case -->
-
 ## Scegli il linguaggio che preferisci {#data}
 
 Seleziona il linguaggio che preferisci per trovare progetti, risorse e community virtuali:

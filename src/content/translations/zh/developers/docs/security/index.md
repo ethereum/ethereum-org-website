@@ -116,8 +116,6 @@ contract Attacker {
 
 攻击者帐户使用 1 个 ETH 调用 Attacker.beginAttack 函数将会重复攻击受害者帐户，并将赚取远超其提供 ETH 的数量（这些额外的 ETH 会从其他用户帐户的余额中赚取，这样会造成受害者账户余额减少）
 
-<!-- TODO create a subpage related to re-entrancy & move this content there -->
-
 ### 如何解决重入攻击（一种错误的方式） {#how-to-deal-with-re-entrancy-the-wrong-way}
 
 防止重入攻击的一种简单方法便是让您的任何代码不与任何智能合约进行交互。 但当你搜索 stackoverflow 时，会发现这段被许多人使用的代码片段：

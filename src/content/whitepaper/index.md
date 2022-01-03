@@ -457,8 +457,6 @@ The concept of an arbitrary state transition function as implemented by the Ethe
 
 ## Notes and Further Reading {#notes-and-further-reading}
 
-<!--Invisible HTML comment used for navigation with CTRL+F footnote or fn.-->
-
 ### Notes {#notes}
 
 1.  A sophisticated reader may notice that in fact a Bitcoin address is

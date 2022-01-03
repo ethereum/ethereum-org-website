@@ -28,8 +28,6 @@ Hogy bevezessük a dappokat, először be kell vezetnünk az okosszerződéseket
 
 Az okosszerződés olyan kód, mely az Ethereum blokkláncon fut és pontosan úgy, ahogyan programozták. Amint feltelepíted őket a hálózatra, nem tudod megváltoztatni őket. A dappok decentralizáltak lehetnek, mivel a szerződésbe írt logika irányítja őket, nem pedig egy egyén vagy egy vállalat. Ez azt is jelenti, hogy nagyon óvatosan kell megtervezned a szerződéseidet és alaposan le kell tesztelned őket.
 
-<!--Benefits and implications provided by Brian Gu)-->
-
 ## A dapp fejlesztés előnyei {#benefits-of-dapp-development}
 
 - **Nulla állásidő** – amint az alkalmazás alapjául szolgáló okosszerződés telepítésre és a blokkláncra kerül, a hálózat egésze mindig képes lesz kiszolgálni a szerződéssel interakcióba lépő klienseket. Rosszindulatú szereplők emiatt nem tudnak szolgáltatásmegtagadási támadásokat indítani az egyes dappok ellen.
@@ -40,31 +38,13 @@ Az okosszerződés olyan kód, mely az Ethereum blokkláncon fut és pontosan ú
 
 ## A dapp fejlesztés visszáságai {#implications-of-dapp-development}
 
-<!-- - Transparency – transactions that trigger dapp functionality are public
-- Open source
-- Cost of storage – contracts are often only small percentages of the dapp. They are stored on-chain and this storage needs to be paid for, so it can be expensive.
- -->
-
 - **Karbantartás** – a dappokat nehezebb karbantartani, mivel a blokkláncra publikált kódot és az adatot nehezebb módosítani. A fejlesztők számára nehézkes frissíteni a dappjukat (vagy a dapp által tárolt mögöttes adatot), amint felkerültek a blokkláncra - még akkor is ha bugokat vagy biztonsági kockázatokat fedeztek fel a régi verzióban.
 - **Teljesítmény költség** – nagy a teljesítmény költség és a skálázás nagyon nehéz. Ahhoz, hogy azt a biztonsági, integritási, átláthatósági és megbízhatósági szintet elérjük, melyre az Ethereum törekszik, minden egyes csomópont lefuttatja és eltárolja az összes tranzakciót. Ezen felül a proof-of-work is időbe telik. Egy egyszerű számolgatás ezt a költséget körülbelül az 1,000,000 szorosára becsüli, mintha az egy általános számítás lett volna.
 - **Hálózati torlódás** – legalábbis a jelenlegi modell szerint, ha egy dapp túl sok számítási kapacitást használ fel, akkor a teljes hálózat feltorlódik. Jelenleg a hálózat körülbelül 10 tranzakciót tud feldolgozni egy másodperc alatt; ha ennél gyorsabban küldenek be tranzakciókat, akkor a feldolgozatlan tranzakciók száma gyorsan felfújódhat.
 - **Felhasználói élmény** – nehezebb felhasználóbarát élményeket megalkotni: Az átlag végfelhasználó túl nehéznek találhatja az eszközkészlet felállítását ahhoz, hogy a blokklánccal valóban biztonságos módon interakcióba léphessen.
+- **Centralizáció** – Felhasználóbarát és fejlesztőbarát megoldások, melyek az Ethereum alaprétegére épültek, végül mégis úgy nézhetnek ki, mint a centralizált szolgáltatások: például az ilyen szolgáltatások a kulcsokat és más érzékeny információkat a szerver oldalon tárolhatják, a frontendnek egy centralizált szerver szolgálhatja ki, vagy a fontos üzleti logikát egy centralizált szerver végzi, mielőtt felkerült volna a blokkláncra. Ez kizárja rengeteg (ha nem az összes) előnyét a blokkláncnak a hagyományos modellel szemben.
 
-  - **Centralizáció** – Felhasználóbarát és fejlesztőbarát megoldások, melyek az Ethereum alaprétegére épültek, végül mégis úgy nézhetnek ki, mint a centralizált szolgáltatások: például az ilyen szolgáltatások a kulcsokat és más érzékeny információkat a szerver oldalon tárolhatják, a frontendnek egy centralizált szerver szolgálhatja ki, vagy a fontos üzleti logikát egy centralizált szerver végzi, mielőtt felkerült volna a blokkláncra. Ez kizárja rengeteg (ha nem az összes) előnyét a blokkláncnak a hagyományos modellel szemben.<!-- ## Types of dapp
-
-- Involving money
-- Involving money and something else
-- Other, including decentralized autonomous organizations
-
----==crwdHRulesLBB_2_BBsuleRHdwrc==
-
-The application has to be open-source, operate autonomously, and can not be controlled by any one entity.
-All data and record must be cryptographically stored in a public, decentralized blockchain.
-The app must use a cryptographic token, also referred to as an App Coin, to access the application.
-Tokens must be generated in order to prove the value nodes that contribute to the application.
-
----==crwdHRulesLBB_2_BBsuleRHdwrc==
--->## Dapp eszközök {#dapp-tools}
+## Dapp eszközök {#dapp-tools}
 
 **One Click Dapp** **_- FOSS eszköz, mely egy dapp frontendet generál egy ABI-ból._**
 

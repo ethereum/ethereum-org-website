@@ -117,8 +117,6 @@ Al llamar a Attacker.beginAttack(), se iniciará un ciclo que se parecerá a lo 
 
 Llamar al Attacker.beginAttack con 1 ETH hará que vuelva a entrar el ataque a la Víctima, extrayendo más ETH del proporcionado (tomado de los balances de otros usuarios, causando que el contrato de la Víctima sea sub-colateralizado)
 
-<!-- TODO create a subpage related to re-entrancy & move this content there -->
-
 ### Cómo lidiar con la reentrada (la forma incorrecta) {#how-to-deal-with-re-entrancy-the-wrong-way}
 
 Uno podría considerar derrotar la reentrada simplemente impidiendo que cualquier contrato inteligente interactúe con tu código. Si buscas stackoverflow, encuentras el segmento de código con muchos votos positivos:
