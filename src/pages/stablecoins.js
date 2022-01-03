@@ -239,7 +239,7 @@ const ButtonColumn = styled.div`
   flex-direction: column;
 `
 
-const APY = styled.p`
+const Apy = styled.p`
   font-size: 64px;
   line-height: 100%;
 `
@@ -773,9 +773,9 @@ const StablecoinsPage = ({ data }) => {
           <StyledRightColumn>
             <div>
               <Emoji size={5} mb={"1rem"} text=":bank:" />
-              <APY>
+              <Apy>
                 <Translation id="page-stablecoins-bank-apy" />
-              </APY>
+              </Apy>
               <em>
                 <Translation id="page-stablecoins-bank-apy-source" />{" "}
                 <Link to="https://www.nytimes.com/2020/09/18/your-money/savings-interest-rates.html">

@@ -135,7 +135,6 @@ const components = {
   GhostCard,
   UpcomingEventsList,
   Icon,
-  Link,
   SocialListItem,
   MatomoOptOut,
   Callout,

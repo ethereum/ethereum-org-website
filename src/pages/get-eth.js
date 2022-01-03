@@ -24,17 +24,6 @@ import {
   TwoColumnContent,
 } from "../components/SharedStyledComponents"
 
-const Title = styled.h1`
-  font-weight: normal;
-  font-size: 3rem;
-  line-height: 140%;
-  text-align: center;
-  color: ${(props) => props.theme.colors.text};
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 2rem;
-  }
-`
-
 const Subtitle = styled.div`
   font-size: 20px;
   line-height: 140%;
