@@ -86,19 +86,6 @@ Dimungkinkan untuk memperoleh kunci publik baru dari kunci privat Anda tetapi An
 
 Anda memerlukan kunci privat untuk menandatangani pesan dan transaksi yang menghasilkan tanda tangan. Orang lain kemudian dapat mengambil tanda tangan untuk mendapatkan kunci publik anda, membuktikan penulis pesan tersebut. Dalam aplikasi Anda, Anda dapat menggunakan pustaka javascript untuk mengirim transaksi ke jaringan.
 
-<!-- **WEB3JS example**
-
-```jsx
-web3.eth.accounts.recoverTransaction('0xf86180808401ef364594f0109fc8df283027b6285cc889f5aa624eac1f5580801ca031573280d608f75137e33fc14655f097867d691d5c4c44ebe5ae186070ac3d5ea0524410802cdc025034daefcdfa08e7d2ee3f0b9d9ae184b2001fe0aff07603d9');
-> "0xF0109fC8DF283027b6285cc889F5aA624EaC1F55"
-```
-
-[Web3js documentation](https://web3js.readthedocs.io/)
-
-[code for creating an account in JS?] + links to how to do it in other languages maybe?
-
-`$ geth account new` -->
-
 ## Akun Kontrak {#contract-accounts}
 
 Akun kontrak juga memiliki alamat heksadesimal 42 karakter:
@@ -108,20 +95,6 @@ Contoh:
 `0x06012c8cf97bead5deae237070f9587f8e7a266d`
 
 Alamat kontrak biasanya diberikan saat kontrak diterapkan ke Blockchain Ethereum. Alamat ini berasal dari alamat kreator dan jumlah transaksi yang dikirim dari alamat tersebut (“nonce”).
-
-<!-- @Sam Richards is there a line of code you can use to return your contract's address – in the same way that we have personal.newAccount() above? – Don't know if what I found below is helpful?
-
-```jsx
-ethers.utils.getContractAddress( transaction ) ⇒ string< Address >
-```
-
-TODO: add a contract address example-->
-
-<!-- ## Managing an account
-
-Most users will want to interact with their account via a wallet. Note that an account is not a wallet. A wallet is the keypair associated with a user-owned account, which allow a user to make transactions from or manage the account
-
-For dapp development, you'll want access to dummy accounts with test ETH so you can experiment. When you create a local chain, you'll get test accounts with fake ETH which you can then import using MetaMask and use on your dapp's frontend. -->
 
 ## Catatan pada dompet {#a-note-on-wallets}
 
