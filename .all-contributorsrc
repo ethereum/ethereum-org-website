@@ -6036,6 +6036,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Factral",
+      "name": "Factral",
+      "avatar_url": "https://avatars.githubusercontent.com/u/74687828?v=4",
+      "profile": "http://factral.github.io/",
+      "contributions": [
+        "translation",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
