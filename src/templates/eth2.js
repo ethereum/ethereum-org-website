@@ -139,7 +139,6 @@ const H2 = styled.h2`
 
   /* Prevent nav overlap */
   &:before {
-    content: "";
     display: block;
     height: 120px;
     margin-top: -120px;
@@ -183,7 +182,6 @@ const H3 = styled.h3`
 
   /* Prevent nav overlap */
   &:before {
-    content: "";
     display: block;
     height: 120px;
     margin-top: -120px;
