@@ -1316,6 +1316,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/A2be"><img src="https://avatars.githubusercontent.com/u/19943243?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kirk</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AA2be" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/juliangeissler"><img src="https://avatars.githubusercontent.com/u/81534590?v=4?s=100" width="100px;" alt=""/><br /><sub><b>juliangeissler</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=juliangeissler" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ajuliangeissler" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/garricn"><img src="https://avatars.githubusercontent.com/u/13260696?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Garric G. Nahapetian</b></sub></a><br /><a href="#content-garricn" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/fishmandev"><img src="https://avatars.githubusercontent.com/u/29619660?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dmitriy Fishman</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=fishmandev" title="Documentation">📖</a></td>
   </tr>
 </table>
 
