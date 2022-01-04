@@ -1,9 +1,9 @@
 // Libraries
-import React from "react"
+import React, { useContext } from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
-import styled from "styled-components"
+import styled, { ThemeContext } from "styled-components"
 
 // Components
 import ActionCard from "../../../components/ActionCard"
@@ -63,11 +63,22 @@ const RightColumn = styled.div`
   }
 `
 
+const CertificateImageWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
 const Image = styled(GatsbyImage)`
   width: 100%;
   max-height: 500px;
   background-size: cover;
   background: no-repeat 50px;
+`
+
+const CertificateImage = styled(Image)`
+  object-position: left;
+  box-shadow: 1px 1.5px 1.5px
+    ${(props) => props.theme.colors.tableItemBoxShadow};
 `
 
 const CentralActionCard = styled(ActionCard)`
@@ -97,6 +108,11 @@ const CentralActionCard = styled(ActionCard)`
 
 const TranslatorAcknowledgements = ({ data, location }) => {
   const intl = useIntl()
+  const themeContext = useContext(ThemeContext)
+  const isDarkTheme = themeContext.isDark
+  const themedCertificateImage = isDarkTheme
+    ? data.darkThemeCertificate
+    : data.lightThemeCertificate
 
   return (
     <Page>
@@ -182,6 +198,34 @@ const TranslatorAcknowledgements = ({ data, location }) => {
         />
       </Content>
 
+      <Content id="certificate">
+        <H2>Certificates</H2>
+        <p>
+          We want to acknowledge our translators and support them on their
+          career paths. With this in mind, we have designed the ethereum.org
+          translator certificate.
+        </p>
+        <p>
+          The certificate is intended for professional and upcoming translators
+          who want to use it as a reference, prove their expertise in
+          translating technical content or simply show their dedication to
+          Ethereum.
+        </p>
+        <p>
+          If you have contributed to the Translation Program and translated over
+          5,000 words, you can request your translator certificate by writing to
+          us at translations@ethereum.org. Your message should include the link
+          to your Crowdin account and your full name, which we will add to the
+          certificate.
+        </p>
+        <CertificateImageWrapper>
+          <CertificateImage
+            image={getImage(themedCertificateImage)}
+            alt="translator certificate"
+          />
+        </CertificateImageWrapper>
+      </Content>
+
       <Content id="poap">
         <H2>
           <Translation id="page-contributing-translation-program-acknowledgements-poaps-title" />
@@ -231,6 +275,30 @@ export const query = graphql`
       childImageSharp {
         gatsbyImageData(
           width: 500
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    lightThemeCertificate: file(
+      relativePath: { eq: "certificates/light-certificate.png" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 800
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    darkThemeCertificate: file(
+      relativePath: { eq: "certificates/dark-certificate.png" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 800
           layout: FIXED
           placeholder: BLURRED
           quality: 100
