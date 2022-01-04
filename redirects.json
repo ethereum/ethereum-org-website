@@ -236,6 +236,14 @@
     "toPath": "/:splat/eth2/merge/"
   },
   {
+    "fromPath": "/*/eth2/get-involved/medalla-data-challenge",
+    "toPath": "/:splat/community/grants/medalla-data-challenge/"
+  },
+  {
+    "fromPath": "/*/eth2/get-involved/staking-community-grants",
+    "toPath": "/:splat/community/grants/staking-community-grants/"
+  },
+  {
     "fromPath": "/*/developers/docs/layer-2-scaling",
     "toPath": "/:splat/developers/docs/scaling"
   },
