@@ -6,7 +6,7 @@ sidebar: true
 sidebarDepth: 2
 ---
 
-# Eth2 Staking Community Grants {#Eth2-staking-community-grants}
+# Eth2 staking community grants {#Eth2-staking-community-grants}
 
 <InfoBanner emoji=":warning:" isWarning={true}>
   This challenge is over. <a href="https://blog.ethereum.org/2021/02/09/esp-staking-community-grantee-announcement/" target="_blank">View the results</a>
