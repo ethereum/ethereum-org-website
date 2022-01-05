@@ -70,7 +70,7 @@ Once Web3.py is properly configured, you can begin to interact with the blockcha
 
 ```python
 # read block data:
-w3.eth.get_block('latest')
+w3.eth.getBlock('latest')
 
 # send a transaction:
 w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
@@ -224,7 +224,7 @@ One million test ether — still not too shabby.
 Let’s take a peek at the state of this simulated blockchain:
 
 ```python
-In [9]: w3.eth.get_block('latest')
+In [9]: w3.eth.getBlock('latest')
 Out[9]: AttributeDict({
    'number': 0,
    'hash': HexBytes('0x9469878...'),
