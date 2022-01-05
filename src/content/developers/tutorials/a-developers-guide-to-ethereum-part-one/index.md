@@ -73,7 +73,7 @@ Once Web3.py is properly configured, you can begin to interact with the blockcha
 w3.eth.getBlock('latest')
 
 # send a transaction:
-w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
+w3.eth.sendTransaction({'from': ..., 'to': ..., 'value': ...})
 ```
 
 ## Installation {#installation}
@@ -245,7 +245,7 @@ A lot of information gets returned about a block, but just a couple things to po
 We’re stuck at block zero until there’s a transaction to mine, so let’s give it one. Send a few test ether from one account to another:
 
 ```python
-In [10]: tx_hash = w3.eth.send_transaction({
+In [10]: tx_hash = w3.eth.sendTransaction({
    'from': w3.eth.accounts[0],
    'to': w3.eth.accounts[1],
    'value': w3.toWei(3, 'ether')
@@ -255,7 +255,7 @@ In [10]: tx_hash = w3.eth.send_transaction({
 This is typically the point where you’d wait for several seconds for your transaction to get mined into a new block. The full process goes something like this:
 
 1. Submit a transaction and hold on to the transaction hash. Until it gets mined, the transaction is “pending.”
-   `tx_hash = w3.eth.send_transaction({ … })`
+   `tx_hash = w3.eth.sendTransaction({ … })`
 2. Wait for the transaction to be mined:
    `w3.eth.wait_for_transaction_receipt(tx_hash)`
 3. Continue application logic. To view the successful transaction:
@@ -276,7 +276,7 @@ Out[11]: AttributeDict({
 })
 ```
 
-You’ll see some familiar details here: the `from`, `to`, and `value` fields should match the inputs of our `send_transaction` call. The other reassuring bit is that this transaction was included as the first transaction (`'transactionIndex': 0`) within block number 1.
+You’ll see some familiar details here: the `from`, `to`, and `value` fields should match the inputs of our `sendTransaction` call. The other reassuring bit is that this transaction was included as the first transaction (`'transactionIndex': 0`) within block number 1.
 
 We can also easily verify the success of this transaction by checking the balances of the two accounts involved. Three ether should have moved from one to another.
 
