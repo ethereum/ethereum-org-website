@@ -1324,6 +1324,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/elshigori"><img src="https://avatars.githubusercontent.com/u/96995185?v=4?s=100" width="100px;" alt=""/><br /><sub><b>elshigori</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=elshigori" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/HuangRongcun"><img src="https://avatars.githubusercontent.com/u/1501342?v=4?s=100" width="100px;" alt=""/><br /><sub><b>EarthMan</b></sub></a><br /><a href="#translation-HuangRongcun" title="Translation">🌍</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=HuangRongcun" title="Documentation">📖</a></td>
     <td align="center"><a href="https://mohan-chinnappan-n.github.io/about/cv.html"><img src="https://avatars.githubusercontent.com/u/5963194?v=4?s=100" width="100px;" alt=""/><br /><sub><b>mohan-chinnappan-n</b></sub></a><br /><a href="#ideas-mohan-chinnappan-n" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/Gobljn"><img src="https://avatars.githubusercontent.com/u/44135563?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nicola Bonsi</b></sub></a><br /><a href="#ideas-Gobljn" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
