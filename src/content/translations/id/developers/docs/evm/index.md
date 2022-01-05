@@ -49,7 +49,7 @@ Saat pengoperasian, EVM mempertahankan _memori_ sementara (sebagai himpunan bita
 
 Akan tetapi, kontrak berisi pohon _penyimpanan_ Merkle Patricia (sebagai himpunan kata yang dapat dirujuk), yang terkait dengan akun yang sedang dipertanyakan dan merupakan bagian dari state global.
 
-Kode bita kontrak pintar yang dikompilasi dieksekusi sebagai nomor EVM [opcode](/developers/docs/evm/opcodes), yang melakukan operasi tumpukan standar seperti `XOR`, `AND`, `ADD`, `SUB`, dll. EVM juga menerapkan sejumlah operasi tumpukan khusus blockchain, seperti `ALAMAT`, `SALDO`, `HASH BLOK`, dll.
+Kode bita kontrak pintar yang dikompilasi dieksekusi sebagai nomor EVM [opcode](/developers/docs/evm/opcodes), yang melakukan operasi tumpukan standar seperti `XOR`, `AND`, `ADD`, `SUB`, dll. EVM juga menerapkan sejumlah operasi tumpukan khusus blockchain, seperti `ADDRESS`, `BALANCE`, `BLOCK HASH`, dll.
 
 ![Sebuah diagram menampilkan gas yang diperlukan untuk operasi EVM](../../../../../developers/docs/gas/gas.png) _Diagram diadaptasi dari [Ethereum EVM yang diilustrasikan](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
