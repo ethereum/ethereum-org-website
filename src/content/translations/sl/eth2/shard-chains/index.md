@@ -11,7 +11,7 @@ summaryPoint3: Z ohranjanjem nizkih zahtev po strojni opremi lajšajo zagon vozl
 summaryPoint4: Ta nadgradnja je načrtovana kot naslednji korak po spojitvi glavnega omrežja z oddajniško verigo.
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     Razdrobljene verige bi morale biti uvedene enkrat v letu 2023, odvisno od hitrosti napredka po <a href="/eth2/merge/">spojitvi</a>. Ti drobci bodo Ethereumu zagotovili boljšo zmogljivost za obdelavo in dostop do podatkov, vendar se ne bodo uporabljali za izvajanje kode. Podrobnosti tega bodo še določene.
 </UpgradeStatus>
 

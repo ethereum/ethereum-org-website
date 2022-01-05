@@ -11,7 +11,7 @@ summaryPoint3: Sie erleichtern den Betrieb einer Node, indem sie die Hardwareanf
 summaryPoint4: Dieses Upgrade ist nach der Verkupplung des Mainnet mit der Beacon Chain geplant.
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     Shard Chains sollten irgendwann im Jahr 2023 erscheinen, je nachdem, wie schnell die Arbeit nach <a href="/eth2/merge/">der Verkupplung</a> voranschreitet. Diese Shards werden Ethereum mehr Kapazität für das Speichern und den Zugriff auf Daten geben, aber sie werden nicht für die Ausführung von Codes verwendet. Die Details hierfür werden noch ausgearbeitet.
 </UpgradeStatus>
 

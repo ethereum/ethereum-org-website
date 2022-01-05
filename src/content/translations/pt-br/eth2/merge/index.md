@@ -11,7 +11,7 @@ summaryPoint3: Essa mudança está prevista para depois da implementação das c
 summaryPoint4: Antes, era chamada de "atracagem".
 ---
 
-<UpgradeStatus date="~Q1/Q2 2022">
+<UpgradeStatus dateKey="page-eth2-upgrades-merge-date">
   Essa melhoria representa a mudança oficial para o consenso da prova de participação. Ela elimina a necessidade de minerar com intenso consumo de energia e protege a rede usando o ether aplicado. Um passo verdadeiramente empolgante para concretizar a <a href="/eth2/vision/"> visão do Eth2 </a> de mais dimensionamento, segurança e sustentabilidade.
 </UpgradeStatus>
 

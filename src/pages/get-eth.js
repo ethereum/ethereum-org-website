@@ -407,11 +407,8 @@ const GetETHPage = ({ data }) => {
       </TwoColumnContent>
       <Divider />
       <CalloutBanner
-        title={translateMessageId("page-get-eth-use-your-eth", intl)}
-        description={translateMessageId(
-          "page-get-eth-use-your-eth-dapps",
-          intl
-        )}
+        titleKey="page-get-eth-use-your-eth"
+        descriptionKey="page-get-eth-use-your-eth-dapps"
         image={getImage(data.dapps)}
         alt={translateMessageId(
           "page-index-sections-individuals-image-alt",

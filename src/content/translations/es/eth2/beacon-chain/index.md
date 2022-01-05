@@ -11,7 +11,7 @@ summaryPoint3: Introducirá la prueba de participación al ecosistema de Ethereu
 summaryPoint4: Quizá lo conozcas como la "Fase 0" en los mapas técnicos de la ruta.
 ---
 
-<UpgradeStatus isShipped date="¡Enviada!">
+<UpgradeStatus isShipped dateKey="page-eth2-upgrades-beacon-date">
   La Cadena de Baliza se presentó el 1 de diciembre al mediodía (UTC). Para saber más, <a href="https://beaconscan.com/">explora los datos</a>. Si quieres ayudar a validar la cadena, puedes <a href="/eth2/staking/">apostar tu ETH</a>.
 </UpgradeStatus>
 

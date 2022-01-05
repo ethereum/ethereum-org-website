@@ -1634,11 +1634,8 @@ const DappsPage = ({ data, location }) => {
           </LeftColumn>
           <RightColumn>
             <StyledCallout
-              title={translateMessageId("page-dapps-learn-callout-title", intl)}
-              description={translateMessageId(
-                "page-dapps-learn-callout-description",
-                intl
-              )}
+              titleKey="page-dapps-learn-callout-title"
+              descriptionKey="page-dapps-learn-callout-description"
               image={getImage(data.developers)}
               alt={translateMessageId(
                 "page-dapps-learn-callout-image-alt",

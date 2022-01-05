@@ -11,7 +11,7 @@ summaryPoint3: Mereka memudahkan untuk menjalankan node dengan mempertahankan pe
 summaryPoint4: Peningkatan ini direncanakan setelah penggabungan Jaringan Utama dengan Rantai Suar.
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     Rantai shard seharusnya diluncurkan suatu hari pada 2023, bergantung pada seberapa cepat kemajuan pengerjaannya setelah <a href="/eth2/merge/">penggabungan</a>. Shard tersebut dapat memberikan Ethereum kapasitas yang lebih besar untuk menyimpan dan mengakses data, tetapi mereka tidak akan digunakan untuk menjalankan kode. Untuk informasi detilnya sedang dikembangkan.
 </UpgradeStatus>
 
