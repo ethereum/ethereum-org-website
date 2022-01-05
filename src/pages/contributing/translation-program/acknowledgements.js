@@ -196,24 +196,17 @@ const TranslatorAcknowledgements = ({ data, location }) => {
       </Content>
 
       <Content id="certificate">
-        <H2>Certificates</H2>
+        <H2>
+          <Translation id="page-contributing-translation-program-acknowledgements-cert-title" />
+        </H2>
         <p>
-          We want to acknowledge our translators and support them on their
-          career paths. With this in mind, we have designed the ethereum.org
-          translator certificate.
+          <Translation id="page-contributing-translation-program-acknowledgements-cert-1" />
         </p>
         <p>
-          The certificate is intended for professional and upcoming translators
-          who want to use it as a reference, prove their expertise in
-          translating technical content or simply show their dedication to
-          Ethereum.
+          <Translation id="page-contributing-translation-program-acknowledgements-cert-2" />
         </p>
         <p>
-          If you have contributed to the Translation Program and translated over
-          5,000 words, you can request your translator certificate by writing to
-          us at translations@ethereum.org. Your message should include the link
-          to your Crowdin account and your full name, which we will add to the
-          certificate.
+          <Translation id="page-contributing-translation-program-acknowledgements-cert-3" />
         </p>
         <CertificateImageWrapper>
           <Image
