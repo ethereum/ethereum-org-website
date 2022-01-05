@@ -59,7 +59,7 @@ const StyledCard = styled(ActionCard)`
   }
 `
 
-export const StyledGetInvolvedCard = styled(Card)`
+const StyledGetInvolvedCard = styled(Card)`
   margin: 1rem;
   padding: 1.5rem;
   flex: 1 0 30%;
@@ -183,15 +183,6 @@ const Subtitle = styled.div`
 
 const H2 = styled.h2`
   margin-top: 0rem;
-`
-
-const H3 = styled.h3`
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  text-align: left;
-  margin-top: 0;
-  margin-bottom: 1rem;
 `
 
 const OpenSourceContainer = styled.div`

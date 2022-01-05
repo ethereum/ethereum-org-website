@@ -55,7 +55,7 @@ summaryPoint4: Технические дорожные карты включаю
 
 Виталик Бутерин в разговоре с подкастом Bankless представил три потенциальных варианта, которые стоит обсудить.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. Исполнение состояния не требуется {#state-execution-not-needed}
 

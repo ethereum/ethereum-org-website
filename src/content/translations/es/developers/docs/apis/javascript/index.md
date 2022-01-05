@@ -9,7 +9,7 @@ Para que una aplicación web interactúe con el blockchain de Ethereum (es decir
 
 Con esta finalidad, cada cliente de Ethereum implementa la especificación de JSON-RPC (protocolo Remote Procedure Call codificado en JSON) para que haya un conjunto uniforme de puntos finales "endpoints" en los que las aplicaciones pueden confiar.
 
-Si quieres usar JavaScript para conectar con un nodo de Ethereum, puedes usar VanillaJS (Vanilla JavaScript). Sin embargo, hay varias bibliotecas de conveniencia que existen dentro del ecosistema que lo simplifican. Con estas bibliotecas, los desarrolladores pueden escribir intuitivamente métodos de una línea para iniciar requerimientos de JSON RPC (de manera oculta) que interactuán con Ethereum.
+Si quieres usar JavaScript para conectar con un nodo de Ethereum, puedes usar VanillaJS (Vanilla JavaScript). Sin embargo, hay varias bibliotecas de conveniencia que existen dentro del ecosistema que lo simplifican. Con estas bibliotecas, los desarrolladores pueden escribir intuitivamente métodos de una línea para iniciar requerimientos de JSON RPC (de manera oculta) que interactúan con Ethereum.
 
 ## Requisitos previos {#prerequisites}
 
@@ -69,11 +69,6 @@ Una vez configurado, estarás habilitado para consultar en la blockchain:
 - eventos de contrato inteligente
 - id de la red
 - y más...
-
-<!--- #### Try it
-
-This remix tutorial will show you [how to query the blockchain using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
 
 ### Funcionalidad de la cartera {#wallet-functionality}
 
@@ -153,7 +148,7 @@ Una vez configurado, podrás:
 
 - crear cuentas
 - enviar transacciones
-- firmar transaciones
+- firmar transacciones
 - y más...
 
 ### Interactuar con las funciones del contrato inteligente {#interact-with-smart-contract-functions}
@@ -217,11 +212,6 @@ Esto significa que puedes:
 - Promover la estimación del gas que tomará un método de ejecución cuando se ejecute en la máquina virtual EVM
 - Desplegar un contrato
 - Y mucho más...
-
-<!--- #### Try it
-
-This remix tutorial will show you [how to query a contract using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
 
 ### Funciones de utilidad {#utility-functions}
 

@@ -59,7 +59,7 @@ summaryPoint4: Таке оновлення за планом має відбут
 
 У розмові з авторами подкасту Bankless Віталік Бутерін розповів про 3 варіанти розвитку подій, які варті уваги.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. Застосування стану не потрібне {#state-execution-not-needed}
 

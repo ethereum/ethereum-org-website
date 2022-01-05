@@ -29,11 +29,6 @@ Acest lucru înseamnă înseamnă că va trebui să plătești o taxă de tranza
 - un script de implementare sau un plugin.
 - acces la un [nod Ethereum](/developers/docs/nodes-and-clients/), fie rulând propriul tău nod, conectându-te la un nod public sau printr-o cheie API folosind un serviciu precum Infura sau Alchemy
 
-<!-- TODO Elaborate on options: e.g. run a node, use a node as a service etc. -->
-
-<!-- TODO! -->
-<!-- ### Steps to deploy a smart contract -->
-
 Odată implementat, contractul tău va avea o adresă Ethereum ca și alte [conturi](/developers/docs/accounts/).
 
 ## Instrumente corelate {#related-tools}

@@ -59,7 +59,7 @@ O plano sempre foi adicionar funcionalidades extras aos fragmentos para torná-l
 
 Vitalik Buterin, em uma conversa no podcast Bankless, apresentou 3 opções possíveis que merecem ser discutidas.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. A execução do estado não é necessária {#state-execution-not-needed}
 

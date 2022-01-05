@@ -55,7 +55,7 @@ Plan, her zaman parçalara ekstra işlevsellik eklemek, onları bugün daha çok
 
 Vitalik Buterin, Bankless podcast ile konuşurken tartışmaya değer 3 potansiyel seçenek sundu.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. İşlem yürütmenin gerek olmadığı durum {#state-execution-not-needed}
 

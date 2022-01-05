@@ -25,9 +25,7 @@ NFT stands for non-fungible token. Non-fungible is an economic term that you cou
 
 Fungible items, on the other hand, can be exchanged because their value defines them rather than their unique properties. For example, ETH or dollars are fungible because 1 ETH / $1 USD is exchangeable for another 1 ETH / $1 USD.
 
-<figure>
-  <iframe title="YouTube video titled What Are NFTs and How Can They Be Used in Decentralized Finance? DEFI Explained" width="100%" height="315" src="https://www.youtube.com/embed/Xdkkux6OxfM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
+<YouTube id="Xdkkux6OxfM" />
 
 ## The internet of assets {#internet-of-assets}
 
@@ -357,45 +355,6 @@ The process has already started. [The Beacon Chain](/eth2/beacon-chain/), the fi
   More on Eth2
 </ButtonLink>
 
-<!-- #### Rollups in the meantime...
-
-While we wait for Eth2, products are moving to a "layer 2" technology known as rollups. Working on top of Ethereum, this technology lets you "roll up" or batch many transactions into a single one that is submitted to the chain. By moving as many things off the chain and only submitting the truly important bits (the cryptographic proofs), demand for block space will decrease. This will in turn lower the amount of computing power needed to create new blocks.
-
-[More on rollups and layer 2 technology](/developers/docs/scaling/layer-2-rollups/)
-
-#### A more efficient NFT standard... {#a-more-efficient-nft-standard}
-
-Ethereum is open source software and new standards are being figured out and agreed on all the time. The Consecutive Transfer Extension Standard (EIP-2309) plans to make the creation of NFTs more efficient. Like rollups this reduces the amount of heavy lifting done on chain, allowing you to mint one billion NFTs in a single transaction.
-
-[More on EIP-2309](https://eips.ethereum.org/EIPS/eip-2309)
-
-[to me this doesn't solve the problem if block space remains the same due to mining etc... should we include?] -->
-
-<!-- Ethereum currently used proof-of-work to achieve consensus. It is a top priority of the community to transition to a proof-of-stake system, to increase decentralization, security and scalability, while reducing energy consumption requirements imposed from proof-of-work. Several layer 2 scaling solutions, such as rollups, are being developed and implemented which also aim to improve scalability while decreasing energy usage. EIP-2309 is a proposal also aiming to improve the efficiency of layer 1 NFT transactions.
-
-Before these scaling solutions are fully implemented, it is worth noting that NFT's specifically are not necessarily _directly_ causing any increased carbon emission. The proof-of-work consensus mechanism that currently underlies the entire Ethereum blockchain is being used whether NFTs are being minted or not. If NFTs were to disappear today, there is a strong chance that block space would remain in demand for other reasons, though even if demand for block space decreased it wouldn't drastically impact energy consumption. For sake of example, imagine the demand for transacting on Ethereum falls to where the blocks are now empty. Miners would still be incentivized to produce blocks for the reward, and the hashing power required to do so would persist despite an empty block. More realistically, other transactions would take the place of NFT transactions. So again, there remains a strong and an active push to advance layer 2 solutions, and finalize Ethereum's transition to a proof-of-stake system.
-
-All this being said, let's talk more about proof-of-work. Objectively there is a significant amount of energy that must be consumed in order to achieve the security that Ethereum offers.
-Based on this, many people are quick to subjectively argue that the carbon footprint from proof-of-work blockchains is a "waste of energy."
-
-Energy consumption is not fundamentally a "good" or "bad" thing, and very much depends on where the energy is coming from, and what it is being used for.
-It is not up to any given individual to decide what is a "good" or "bad" use of energy for someone else. This same principle is used throughout Ethereum, where nobody can tell you that your transaction is not important.
-For someone not using this technology, is it fair for them to dictate that this form of energy consumption is wasteful? What about those who's lives have been changed for the better as a result?
-
-Externalities, such as carbon emissions based on choice of energy source, have not necessarily been priced in to the current system, but doing so would further encourage the use of renewable energy sources.
-In this case, miners would migrate to lower cost alternatives. Since you can't transport energy effectively over great distances (energy lost in high voltage lines), this depreciates the capital cost of building renewable energy sources in more remote places. Someone looking to utilize renewable energy sources, such as solar farms, to run a mining rig could invest in a remote location where renewable energy sources are more accessible (ie: large open plots of land or at a waterfall). This energy would have otherwise been untapped, and "wasted" by not harnessing it. These investments in infrastructure open up the ability to serve a local community, and can be paid off much faster from the economic payoff received from mining.
-
-The other side of the coin: Keep in mind that alternatives are not necessarily carbon-neutral either, such as the footprint of printing, handling, shipping and guarding fiat currencies. Annual spectacles of Christmas lights consume large amounts of energy, not to mention commercial products filling landfills, and governments engaging in war, leading to substantial levels of pollution.
-
-Oh, and the same thing was said about the internet itself. Early measures of Google's search traffic led to incorrectly extrapolating that data to the future, forming incorrect conclusions about the unmanageable "waste of energy" that would follow.
-
-### Mint NFTs {#mint-nfts}
-
-Want to turn your content into a NFT?
-
-- Foundation
-- Other platforms... -->
-
 ## Build with NFTs {#build-with-nfts}
 
 Most NFTs are built using a consistent standard known as [ERC-721](/developers/docs/standards/tokens/erc-721/). However there are other standards that you might want to look into. The [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) standard allows for semi-fungible tokens which is particularly useful in the realm of gaming. And more recently, [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) has been proposed to make minting NFTs a lot more efficient. This standard lets you mint as many as you like in one transaction!
@@ -412,8 +371,6 @@ Most NFTs are built using a consistent standard known as [ERC-721](/developers/d
 <Divider />
 
 ### Footnotes and sources {#footnotes-and-sources}
-
-<!-- TODO: after shipping this can form the basis of an energy efficiency page. I suspect this could also live under learn and just do some general myth-busting and supply stats about eth2 energy usage-->
 
 This explains how we arrived at our energy estimates above. These estimates apply to the network as a whole and are not just reserved for the process of creating, buying, or selling NFTs.
 

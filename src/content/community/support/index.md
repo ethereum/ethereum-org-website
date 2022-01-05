@@ -51,7 +51,7 @@ Does your question relate to a particular tool, project, or library? Most projec
 
 Here are some popular examples:
 
-- [Solidity](https://gitter.im/ethereum/solidity/) <!-- What is the best place to send people to here? -->
+- [Solidity](https://gitter.im/ethereum/solidity/)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
@@ -71,7 +71,7 @@ Most of the teams building Ethereum clients also have dedicated, public-facing, 
 - [Geth](https://discord.gg/FqDzupGyYf)
 - [Nethermind](https://discord.gg/YJx3pm8z5C)
 - [Besu](https://discord.gg/p8djYngzKN)
-- [Ergion](https://github.com/ledgerwatch/erigon/issues) <!-- Does Erigon have a public facing channel? -->
+- [Ergion](https://github.com/ledgerwatch/erigon/issues)
 
 ### Consensus clients {#consensus-clients}
 

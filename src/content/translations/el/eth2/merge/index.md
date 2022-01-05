@@ -27,22 +27,6 @@ summaryPoint4: Μπορεί να το γνωρίζετε αυτό ως "Φάση
 
 Το Κεντρικό δίκτυο θα φέρει τη δυνατότητα να διαχειρίζεται Smart Contract με το σύστημα proof-of-stake, συν το πλήρες ιστορικό και την τρέχουσα κατάσταση του Ethereum, για να διασφαλιστεί ότι η μετάβαση θα είναι ομαλή για όλους τους κατόχους και τους χρήστες του ETH.
 
-<!-- ### Improving Mainnet
-
-Before Mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
-
-These include Improvements for
-
-- **End users**: like [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) which changes the way users bid for blockspace. In other words, making transaction fees more efficient for end users.
-- **Client runners**: making running clients more sustainable by capping disk space requirements.
-- **Developers**: upgrading the EVM to be more flexible.
-
-Plus many more.
-
-[More on Ethereum1.x](/learn/#eth-1x)
-
-These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
-
 ## Μετά την ενσωμάτωση {#after-the-docking}
 
 Αυτό θα σηματοδοτήσει το τέλος του proof-of-work για το Ethereum και θα ξεκινήσει την εποχή ενός πιο βιώσιμου, φιλικού προς το περιβάλλον Ethereum. Σε αυτό το σημείο το Ethereum θα έχει την κλίμακα, την ασφάλεια και τη βιωσιμότητα που περιγράφεται στο [όραμα Eth2](/eth2/vision/).

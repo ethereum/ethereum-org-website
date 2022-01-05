@@ -18,24 +18,13 @@ incomplete: true
 
 观看 Patrick 解释 Oracle：
 
-<iframe width="100%" height="315px" src="https://www.youtube.com/embed/ZJfkNzyO7-U?start=10" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="ZJfkNzyO7-U" start="10" />
 
 ## 为什么需要预言机？ {#why-are-they-needed}
 
 使用以太坊这样的区块链，您需要确保：网络中每个节点都能够重放每个交易并最终产生同样的结果。 API 引入潜在的变量数据。 如果使用价格 API 根据商定的 $USD 值发送 ETH，查询将在不同日期返回不同的结果。 更不用说，API 可能会被破解或弃用。 一旦发生这种情况，网络中的节点不会接受以太坊的当前状态，从而打破[共识](/developers/docs/consensus-mechanisms/)。
 
 Oracle 通过发布数据到区块链来解决这个问题， 以便任何重放交易的节点使用所有人都能看到的相同且不变的数据。 要做到这一点，Oracle 通常由智能合约和某些可以查询 API 的链下组件组成，然后定期发送交易以更新智能合约的数据。
-
-<!-- ## Oracle architecture {#oracle-architecture}
-
-To understand how an oracle works, let's play through a scenario where your smart contract needs to know who won the superbowl. This is an example of how it could work:
-
-1. Your smart contract requests information from an oracle smart contract.
-2. The oracle smart contract emits an [event](/developers/docs/smart-contracts/anatomy/#events-and-logs).
-3. Off-chain oracle nodes listen for events and upon hearing one, they query an API.
-4. The API returns a JSON response to the nodes.
-5. The nodes call on the oracle smart contract.
-6. The oracle smart contract returns the data to your smart contract. -->
 
 ### Oracle 问题 {#oracle-problem}
 

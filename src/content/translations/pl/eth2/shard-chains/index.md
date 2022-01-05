@@ -55,7 +55,7 @@ Plan zawsze zakładał dodanie dodatkowej funkcjonalności do odłamków, aby uc
 
 Vitalik Buterin, podczas rozmowy w ramach podcastu Bankless, przedstawił 3 potencjalne opcje, które warto przedyskutować.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. Wykonywanie stanu nie jest wymagane {#state-execution-not-needed}
 

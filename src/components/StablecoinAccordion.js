@@ -141,13 +141,6 @@ const P = styled.p`
   margin-bottom: 0rem;
 `
 
-const InfoTitle = styled(StepboxTitle)`
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  text-align: left;
-  margin-top: 0rem;
-`
 // Todo create component
 const StepBoxContainer = styled.div`
   width: 100%;

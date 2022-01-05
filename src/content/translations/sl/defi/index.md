@@ -21,7 +21,7 @@ DeFi je skupni izraz za finančne produkte in storitve, ki so dostopne vsem, ki 
 
 Obstaja cvetoče kripto gospodarstvo, kjer lahko posojate, si izposojate, kupite/prodate, služite obresti in še več. Argentinci z kripto znanjem so uporabili DeFi, da so se izognili visoki inflaciji. Podjetja so začela zaposlenim "pretekati" plače v realnem času. Posamezniki so najeli in odplačali posojila v višini več milijonov dolarjev, brez da bi se morali kakorkoli identificirati.
 
-<iframe width="100%" height="315px" src="https://www.youtube.com/embed/H-O3r2YMWJ4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="H-O3r2YMWJ4" />
 
 ## DeFi v primerjavi s tradicionalnimi financami {#defi-vs-tradfi}
 
@@ -56,7 +56,7 @@ Bitcoin je bil na mnogo načinov prva DeFi aplikacija. Bitcoin vam omogoča, da 
 
 Ethereum gradi na tem. Kot pri Bitcoinu se pravila ne morejo spremeniti in prav tako je dostop prost za vse. Prav tako pa naredi ta digitalni denar programljiv z uporabo [pametnih pogodb](/glossary#smart-contract), da greste lahko še naprej od shranjevanja in pošiljanja vrednosti.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/qFBYB4W2tqU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="qFBYB4W2tqU" />
 
 ## Programirljiv denar {#programmable-money}
 

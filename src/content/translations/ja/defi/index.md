@@ -21,7 +21,7 @@ DeFi とは、Ethereum を使用するすべての人が利用できる金融商
 
 そこには、貸し借り、ロング/ショート、利息の受取りなどが可能な、活況を呈している暗号経済があります。 暗号資産技術に精通したアルゼンチン人は、深刻なインフレから逃れるために DeFi を利用しました。 企業は、従業員の賃金をリアルタイムでストリーミングするようになりました。 中には、本人確認なしで数百万ドルのローンを組み、完済した人もいます。
 
-<iframe width="100%" height="315px" src="https://www.youtube.com/embed/H-O3r2YMWJ4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="H-O3r2YMWJ4" />
 
 ## DeFi と従来の金融システムとの比較 {#defi-vs-tradfi}
 
@@ -56,7 +56,7 @@ DeFi の可能性を知るための最良の方法の一つは、現在ある問
 
 Ethereum はこの考えに基づいています。 ビットコインのように、あなたに関するルールが変えられることなく、誰もがアクセスできます。 しかし、このデジタルマネーは、[スマートコントラクト](/glossary#smart-contract)を用いてプログラム可能になっており、単に価値を保有・送信したりする以上のことができます。
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/qFBYB4W2tqU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="qFBYB4W2tqU" />
 
 ## プログラム可能な通貨 {#programmable-money}
 

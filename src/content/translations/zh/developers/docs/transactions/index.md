@@ -150,7 +150,9 @@ Alice 的帐户将会增加 **+1.0 ETH**
 
 ## 直观演示 {#a-visual-demo}
 
-跟随 Austin 了解交易、Gas 和挖矿。 <iframe width="100%" height="315" src="https://www.youtube.com/embed/er-0ihqFQB0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+跟随 Austin 了解交易、Gas 和挖矿。
+
+<YouTube id="er-0ihqFQB0" />
 
 ## Typed Transaction Envelope 交易 {#typed-transaction-envelope}
 
@@ -168,8 +170,11 @@ EIP-2718 是用于类型化交易的新通用信封。 在新的标准中，交�
 
 字段定义为：
 
-- `TransactionType` - 一个在 0 到 0x7f 之间的数字，总共为 128 种可能的交易类型。
-- `TransactionPayload` - 由交易类型定义的任意字节数组。
+## 视觉演示 {#a-visual-demo}
+
+观看 Austin 引导您了解交易、Gas 和挖矿。
+
+<YouTube id="er-0ihqFQB0" />
 
 ## 延伸阅读 {#further-reading}
 

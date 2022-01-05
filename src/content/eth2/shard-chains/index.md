@@ -59,9 +59,7 @@ The plan was always to add extra functionality to shards, to make them more like
 
 Vitalik Buterin, when talking to Bankless podcast, presented 3 potential options that are worth discussing.
 
-<figure>
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. State execution not needed {#state-execution-not-needed}
 

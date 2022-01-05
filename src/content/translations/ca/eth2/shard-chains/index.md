@@ -55,7 +55,7 @@ L'objectiu sempre ha estat afegir funcionalitats extra als fragments, perquè s'
 
 Vitalik Buterin, al podcast de Bankless, va presentar 3 opcions potencials que mereixen ésser tractades.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. No necessitar una execució d'estat {#state-execution-not-needed}
 

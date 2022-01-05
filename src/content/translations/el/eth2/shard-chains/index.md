@@ -55,7 +55,7 @@ summaryPoint4: Τεχνικοί χάρτες όδευσης περιλαμβάν
 
 Ο Vitalik Buterin, όταν μίλησε στο Bankless, παρουσίασε 3 πιθανές επιλογές που αξίζει να συζητήσουμε.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. Δεν απαιτείται κεντρική εκτέλεση {#state-execution-not-needed}
 

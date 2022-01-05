@@ -72,20 +72,6 @@ El proceso de consenso se controla mediante un conjunto predefinido de nodos de 
 
 Si una red pública de Ethereum es como la red pública de Internet, puedes entender una red de consorcio como una intranet privada.
 
-<!-- TODO
-
-## Interacting with testnets
-
-### Your own local network {#your-own-local-network}
-
-`geth -—networkid="12345" console`
-
-### Testnets {#testnets-1}
-
-Wallets like MetaMask or MyEtherWallet will allow you to switch networks so you can test your apps using your test ETH.
-
--->
-
 ## Leer más {#further-reading}
 
 _¿Conoces algún recurso en la comunidad que te haya servido de ayuda? Edita esta página y añádelo._

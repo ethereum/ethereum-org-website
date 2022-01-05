@@ -89,9 +89,7 @@ For those who want to take the next step in 2FA, consider using a security key. 
 
 Watch more on the 2FA:
 
-<figure>
-  <iframe width="100%" height="315px" src="https://www.youtube.com/embed/m8jlnZuV1i4?start=3479&end=3875" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
+<YouTube id="m8jlnZuV1i4" start="3479" />
 
 ### Uninstall browser extensions {#uninstall-browser-extensions}
 
@@ -276,17 +274,3 @@ Some things to remember:
 
 - [Staying Safe: Common Scams](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [Avoiding Scams](https://bitcoin.org/en/scams) _Bitcoin.org_
-
-<!-- ## Ideas scratchpad
-
-A couple good suggestions from there that perhaps we should add:
-
-- Don't use a clipboard manager
-- Bookmark Your Crypto Sites / Do Not Trust Random URLs / Always Verify that the Site You Landed on Is Legit
-
-- Add pricing info for password managers
-
-For scams
-
-- Add details about Youtube hacks
-- Add rugpulls -->

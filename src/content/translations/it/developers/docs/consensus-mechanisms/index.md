@@ -22,23 +22,7 @@ Da decenni questi meccanismi vengono utilizzati per stabilire il consenso tra no
 
 Un meccanismo di consenso in un sistema criptoeconomico aiuta anche a prevenire determinati tipi di attacchi economici. In teoria, un aggressore può compromettere il consenso controllando il 51% della rete. I meccanismi di consenso sono concepiti per rendere questo "attacco del 51%" irrealizzabile. Diversi meccanismi sono progettati per risolvere questo problema di sicurezza in modo diverso.
 
-<!-- ### Consensus -->
-
-<!-- Formal requirements for a consensus protocol may include: -->
-
-<!-- - Agreement: All correct processes must agree on the same value. -->
-<!-- - Weak validity: For each correct process, its output must be the input of some correct process. -->
-<!-- - Strong validity: If all correct processes receive the same input value, then they must all output that value. -->
-<!-- - Termination: All processes must eventually decide on an output value -->
-
-<!-- ### Fault tolerance -->
-<!-- TODO explain how protocols must be fault tolerant -->
-
 ## Tipi di meccanismi di consenso {#types-of-consensus-mechanisms}
-
-<!-- TODO -->
-<!-- Why do different consensus protocols exist? -->
-<!-- What are the tradeoffs of each? -->
 
 ### Proof-of-work {#proof-of-work}
 
@@ -69,8 +53,6 @@ Il sistema di proof-of-stake è mantenuto al sicuro dal fatto che sarebbe necess
 Ulteriori informazioni sulla [proof-of-stake (PoS)](/developers/docs/consensus-mechanisms/pos/)
 
 ## Letture consigliate {#further-reading}
-
-<!-- TODO -->
 
 ## Argomenti correlati {#related-topics}
 

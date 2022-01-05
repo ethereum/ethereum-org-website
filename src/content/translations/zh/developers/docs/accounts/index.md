@@ -102,7 +102,9 @@ Repeat passphrase:
 
 ## 直观演示 {#a-visual-demo}
 
-跟随 Austin 了解哈希函数和密钥对。 <iframe width="100%" height="315" src="https://www.youtube.com/embed/QJ010l-pBpE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe> <iframe width="100%" height="315" src="https://www.youtube.com/embed/9LtBDy67Tho" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+跟随 Austin 了解哈希函数和密钥对。 <YouTube id="QJ010l-pBpE" />
+
+<YouTube id="9LtBDy67Tho" />
 
 ## 延伸阅读 {#further-reading}
 

@@ -27,8 +27,6 @@ Wenn es soweit ist, wird das Ethereum Mainnet mit der Beacon Chain "verschmelzen
 
 Mainnet wird es sowohl ermöglichen, Smart Contracts ins proof-of-stake-System einzubringen, als auch die gesamte Geschichte und den aktuellen Zustand von Ethereum, um einen flüssigen Übergang für alle Besitzer und Nutzer von ETH zu garantieren.
 
-<!-- ### Improving Mainnet -->
-
 ## Nach der Verkupplung {#after-the-merge}
 
 Dies bedeutet das Ende von Proof-of-Work für Ethereum und beginnt die neue Ära eines nachhaltigeren, umweltfreundlicheren Ethereum. An diesem Punkt wird Ethereum der in [Eth2 vision](/eth2/vision/) beschriebenen vollen Skalierung, Sicherheit und Nachhaltigkeit einen Schritt näher sein.
