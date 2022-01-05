@@ -555,12 +555,9 @@ const CommunityPage = ({ data }) => {
         <CardContainer>
           <StyledCallout
             image={getImage(data.eth)}
-            title={translateMessageId("page-community-get-eth-title", intl)}
+            titleKey="page-community-get-eth-title"
             alt={translateMessageId("page-community-get-eth-alt", intl)}
-            description={translateMessageId(
-              "page-community-get-eth-description",
-              intl
-            )}
+            descriptionKey="page-community-get-eth-description"
           >
             <div>
               <ButtonLink to="/get-eth/">
@@ -570,15 +567,9 @@ const CommunityPage = ({ data }) => {
           </StyledCallout>
           <StyledCallout
             image={getImage(data.doge)}
-            title={translateMessageId(
-              "page-community-explore-dapps-title",
-              intl
-            )}
+            titleKey="page-community-explore-dapps-title"
             alt={translateMessageId("page-community-explore-dapps-alt", intl)}
-            description={translateMessageId(
-              "page-community-explore-dapps-description",
-              intl
-            )}
+            descriptionKey="page-community-explore-dapps-description"
           >
             <div>
               <ButtonLink to="/dapps/">
