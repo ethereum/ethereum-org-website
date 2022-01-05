@@ -25,7 +25,7 @@ NFT は Non fungible token(非代替性トークン)の略です。 非代替性
 
 対して、代替性の場合は、それと全く同じ価値のアイテムと交換することが可能です。なぜなら固有アイテムとしてではなく、そのアイテムの価値によって定義づけされているからです。 例えば ETH やドルは代替性です。1 ETH / 1 米ドルは、それぞれ別の 1 ETH / 1 米ドルと交換可能なためです。
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/Xdkkux6OxfM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="Xdkkux6OxfM" />
 
 ## 資産のインターネット {#internet-of-assets}
 

@@ -11,7 +11,7 @@ summaryPoint3: Крім того, в Ethereum з’явиться принцип
 summaryPoint4: Дізнатися більше про це оновлення можна з технічного плану, де воно позначено як фаза 0.
 ---
 
-<UpgradeStatus isShipped date="Відправлено!">
+<UpgradeStatus isShipped dateKey="page-eth2-upgrades-beacon-date">
     Beacon Chain запущено 1 грудня 2020 опівдні за часом UTC. Щоб дізнатися більше, перейдіть на <a href="https://beaconscan.com/">цю сторінку</a>. Якщо ви хочете допомогти підтвердити ланцюг, то можете <a href="/eth2/staking/">отримати частку ETH</a>.
 </UpgradeStatus>
 

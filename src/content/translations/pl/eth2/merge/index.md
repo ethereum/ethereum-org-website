@@ -11,7 +11,7 @@ summaryPoint3: To będzie oznaczało koniec systemu weryfikacji opartego na proo
 summaryPoint4: Być może znasz ten etap jako „Faza 1.5” z technicznego harmonogramu.
 ---
 
-<UpgradeStatus date="~Q1/Q2 2022">
+<UpgradeStatus dateKey="page-eth2-upgrades-merge-date">
     To ulepszenie nastąpi po uruchomieniu łańcuchów fragmentowych. Będzie to chwila, w której <a href="/eth2/vision/">wizja Eth2</a> zostanie w pełni zrealizowana — bardziej skalarna, bezpieczna i po równi rozwijana z inwestycją wspierającą całą sieć.
 </UpgradeStatus>
 

@@ -6,10 +6,10 @@ sidebar: true
 sidebarDepth: 2
 ---
 
-# Eth2 Staking Community Grants {#Eth2-staking-community-grants}
+# Eth2 staking community grants {#Eth2-staking-community-grants}
 
 <InfoBanner emoji=":warning:" isWarning={true}>
-  This challenge is over. Results coming soon!
+  This challenge is over. <a href="https://blog.ethereum.org/2021/02/09/esp-staking-community-grantee-announcement/" target="_blank">View the results</a>
 </InfoBanner>
 
 _The Ethereum Foundation is sponsoring a wave of Eth2 staking community grants. Proposals are due December 22, 2020. Here are all the details you need._

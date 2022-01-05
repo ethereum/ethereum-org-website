@@ -11,7 +11,7 @@ summaryPoint3: Donanım gereksinimlerini düşük tutarak, bir düğüm çalış
 summaryPoint4: Teknik yol haritası, "1. Aşama" ve potansiyel olarak "2. Aşama" daki parça zincirleri üzerindeki çalışmaları içermektedir.
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     Parça zincirleri, <a href="/eth2/beacon-chain/">İşaret Zinciri</a> başlatıldıktan sonra işin ne kadar hızlı ilerlediğine bağlı olarak 2023'de gönderilmelidir. Bu parçalar, Ethereum'a verileri depolamak ve bunlara erişmek için daha fazla kapasite sağlayacak, ancak kod yürütmek için kullanılmayacak. Detayları hala öğrenim aşamasında.
 </UpgradeStatus>
 
@@ -55,7 +55,7 @@ Plan, her zaman parçalara ekstra işlevsellik eklemek, onları bugün daha çok
 
 Vitalik Buterin, Bankless podcast ile konuşurken tartışmaya değer 3 potansiyel seçenek sundu.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. İşlem yürütmenin gerek olmadığı durum {#state-execution-not-needed}
 

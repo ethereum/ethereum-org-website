@@ -5559,7 +5559,8 @@
       "profile": "https://vluna.github.io/portfolio/",
       "contributions": [
         "code",
-        "bug"
+        "bug",
+        "content"
       ]
     },
     {
@@ -6007,6 +6008,80 @@
       "contributions": [
         "doc",
         "bug"
+      ]
+    },
+    {
+      "login": "garricn",
+      "name": "Garric G. Nahapetian",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13260696?v=4",
+      "profile": "https://github.com/garricn",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "fishmandev",
+      "name": "Dmitriy Fishman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29619660?v=4",
+      "profile": "https://github.com/fishmandev",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "neozapatista",
+      "name": "neozapatista",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44417247?v=4",
+      "profile": "https://github.com/neozapatista",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Factral",
+      "name": "Factral",
+      "avatar_url": "https://avatars.githubusercontent.com/u/74687828?v=4",
+      "profile": "http://factral.github.io/",
+      "contributions": [
+        "translation",
+        "doc"
+      ]
+    },
+    {
+      "login": "elshigori",
+      "name": "elshigori",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96995185?v=4",
+      "profile": "https://github.com/elshigori",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "HuangRongcun",
+      "name": "EarthMan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1501342?v=4",
+      "profile": "https://github.com/HuangRongcun",
+      "contributions": [
+        "translation",
+        "doc"
+      ]
+    },
+    {
+      "login": "mohan-chinnappan-n",
+      "name": "mohan-chinnappan-n",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5963194?v=4",
+      "profile": "https://mohan-chinnappan-n.github.io/about/cv.html",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "Gobljn",
+      "name": "Nicola Bonsi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44135563?v=4",
+      "profile": "https://github.com/Gobljn",
+      "contributions": [
+        "ideas"
       ]
     }
   ],

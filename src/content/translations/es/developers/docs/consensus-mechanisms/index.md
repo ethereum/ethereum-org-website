@@ -1,6 +1,6 @@
 ---
 title: Mecanismos de consenso
-description: Una explicación de los protocolos de consenso en los sistemas distribuidos y de su función en Etherum.
+description: Una explicación de los protocolos de consenso en los sistemas distribuidos y de su función en Ethereum.
 lang: es
 sidebar: true
 incomplete: true

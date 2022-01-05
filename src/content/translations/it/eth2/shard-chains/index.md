@@ -11,7 +11,7 @@ summaryPoint3: Renderanno più facile l'esecuzione di un nodo mantenendo bassi i
 summaryPoint4: La roadmap tecnica include lavoro sulle shard chain nella "Fase 1" e potenzialmente nella "Fase 2".
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     Le shard chain saranno disponibili nel corso del 2023, in base alla rapidità del lavoro in seguito al lancio della <a href="/eth2/beacon-chain/">beacon chain</a>. Queste shard garantiranno a Ethereum più capacità di archiviazione e acceso ai dati, ma non verranno usate per eseguire codice. I dettagli sono ancora da chiarire.
 </UpgradeStatus>
 
@@ -55,7 +55,7 @@ Il piano è sempre stato quello di aggiungere ulteriori funzionalità agli shard
 
 Vitalik Buterin, parlando al podcast Bankless, ha presentato 3 potenziali opzioni di cui vale la pena discutere.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. Esecuzione di stato non necessaria {#state-execution-not-needed}
 

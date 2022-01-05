@@ -11,7 +11,7 @@ summaryPoint3: They make it easier to run a node by keeping hardware requirement
 summaryPoint4: This upgrade is planned to follow the merge of Mainnet with the Beacon Chain.
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     Shard chains should ship sometime in 2023, depending on how quickly work progresses after <a href="/eth2/merge/">the merge</a>. These shards will give Ethereum more capacity to store and access data, but they won’t be used for executing code. The details of that are still being figured out.
 </UpgradeStatus>
 
@@ -59,9 +59,7 @@ The plan was always to add extra functionality to shards, to make them more like
 
 Vitalik Buterin, when talking to Bankless podcast, presented 3 potential options that are worth discussing.
 
-<figure>
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. State execution not needed {#state-execution-not-needed}
 
