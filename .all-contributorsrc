@@ -6046,6 +6046,15 @@
         "translation",
         "doc"
       ]
+    },
+    {
+      "login": "elshigori",
+      "name": "elshigori",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96995185?v=4",
+      "profile": "https://github.com/elshigori",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
