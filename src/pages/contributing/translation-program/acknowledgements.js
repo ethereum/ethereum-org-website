@@ -69,16 +69,12 @@ const CertificateImageWrapper = styled.div`
 `
 
 const Image = styled(GatsbyImage)`
-  width: 100%;
-  max-height: 500px;
-  background-size: cover;
-  background: no-repeat 50px;
-`
+  background-size: contain;
 
-const CertificateImage = styled(Image)`
-  object-position: left;
-  box-shadow: 1px 1.5px 1.5px
-    ${(props) => props.theme.colors.tableItemBoxShadow};
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    max-height: 300px;
+    max-width: 300px;
+  }
 `
 
 const CentralActionCard = styled(ActionCard)`
@@ -162,6 +158,7 @@ const TranslatorAcknowledgements = ({ data, location }) => {
                 "page-contributing-translation-program-acknowledgements-hero-image-alt",
                 intl
               )}
+              objectFit="contain"
             />
           </RightColumn>
         </TwoColumnContent>
@@ -219,9 +216,10 @@ const TranslatorAcknowledgements = ({ data, location }) => {
           certificate.
         </p>
         <CertificateImageWrapper>
-          <CertificateImage
+          <Image
             image={getImage(themedCertificateImage)}
             alt="translator certificate"
+            objectFit="contain"
           />
         </CertificateImageWrapper>
       </Content>
