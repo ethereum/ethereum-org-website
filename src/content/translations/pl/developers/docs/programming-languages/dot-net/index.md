@@ -16,7 +16,7 @@ Buduj zdecentralizowane aplikacje na bazie Ethereum i obsługuj kontrakty inteli
 
 **Rozpocznij integrowanie .NET z Ethereum**
 
-Potrzebujesz bardziej podstawowych informacji? Sprawdź na stronach [ethereum.org/learn](/en/learn/) lub [ethereum.org/developers](/en/developers/).
+Potrzebujesz bardziej podstawowych informacji? Sprawdź na stronach [ethereum.org/learn](/learn/) lub [ethereum.org/developers](/developers/).
 
 - [Objaśnienia dotyczące blockchainu](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Informacje o kontraktach inteligentnych](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -30,9 +30,9 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na stronach [ethereum.or
 - [Nethereum — rozpoczęcie pracy](https://docs.nethereum.com/en/latest/getting-started/)
 - [Instalowanie VS Code Solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
 - [Zadania dewelopera .NET w celu tworzenia i wywoływania kontraktów inteligentnych Ethereum](https://medium.com/coinmonks/a-net-developers-workflow-for-creating-and-calling-ethereum-smart-contracts-44714f191db2)
-- [Integracja kontraktów inteligentnych z Nethereum](https://kauri.io/article/b54334b0695342c1bbe161c4c4467b50/smart-contracts-integration-with-nethereum)
+- [Integracja kontraktów inteligentnych z Nethereum](https://kauri.io/#collections/getting%20started/smart-contracts-integration-with-nethereum/#smart-contracts-integration-with-nethereum)
 - <a href="https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933">Połączenie .NET i kontraktów inteligentnych blockchainu Ethereum w Nethereum</a>, także w [中文版](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1)
-- [Nethereum — biblioteka open source integracji .NET dla blockchainu](https://kauri.io/article/d15dfd4903f149cdb84b3ce666103b52/v1/nethereum-an-open-source-.net-integration-library-for-blockchain)
+- [Nethereum — biblioteka open source integracji .NET dla blockchainu](https://kauri.io/#collections/a%20hackathon%20survival%20guide/nethereum-an-open-source-.net-integration-library/)
 - [Zapisywanie transakcji Ethereum do bazy danych SQL przy użyciu Nethereum](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
 - [Zobacz, jak łatwo wdrożyć kontrakty inteligentne Ethereum za pomocą C# i VisualStudio](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c)
 
@@ -73,7 +73,7 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na stronach [ethereum.or
 - [eth-utils](https://github.com/ethereum/eth-utils/) — <em x-id="4">funkcje narzędziowe do pracy z bazami kodu powiązanymi z Ethereum</em>
 - [TestChains](https://github.com/Nethereum/TestChains) — _Wstępnie skonfigurowany łańcuch testowy .NET na potrzeby szybkiej odpowiedzi (PoA)_
 
-Szukasz więcej materiałów? Sprawdź [ethereum.org/developers](/en/developers/).
+Szukasz więcej materiałów? Sprawdź [ethereum.org/developers](/developers/).
 
 ## Współtwórcy społeczności .NET {#dot-net-community-contributors}
 

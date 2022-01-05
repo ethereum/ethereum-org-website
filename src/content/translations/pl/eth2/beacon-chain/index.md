@@ -5,16 +5,13 @@ lang: pl
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/core.png
-summaryPoints:
-  [
-    "Łańcuch śledzący nie zmienia nic w Ethereum, którego dziś używamy.",
-    "Będzie koordynował sieć.",
-    "Wprowadza dowód stawki do ekosystemu Ethereum.",
-    'Być może znasz to jako "etap 0" w hamonogramie technicznym',
-  ]
+summaryPoint1: Łańcuch śledzący nie zmienia nic w Ethereum, którego dziś używamy.
+summaryPoint2: Będzie koordynował sieć.
+summaryPoint3: Wprowadza dowód stawki do ekosystemu Ethereum.
+summaryPoint4: Być może znasz to jako "etap 0" w hamonogramie technicznym
 ---
 
-<UpgradeStatus isShipped date="Wysłane!">
+<UpgradeStatus isShipped dateKey="page-eth2-upgrades-beacon-date">
     Łańcuch śledzący ruszył 1 grudnia w południe czasu uniwersalnego. Aby dowiedzieć się więcej, <a href="https://beaconscan.com/">przeglądaj dane</a>. Jeżeli chcesz pomóc w walidacji łańcucha, możesz <a href="/eth2/staking/">zastawić swoje ETH</a>.
 </UpgradeStatus>
 

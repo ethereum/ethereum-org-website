@@ -9,12 +9,13 @@ import Tooltip from "./Tooltip"
 import Link from "./Link"
 import Icon from "./Icon"
 
+import { isLangRightToLeft } from "../utils/translations"
 import { getData } from "../utils/cache"
 
-const Value = styled.h3`
+const Value = styled.span`
   position: absolute;
   bottom: 8%;
-  font-size: min(4.4vw, 64px);
+  font-size: min(4.4vw, 4rem);
   font-weight: 600;
   margin-top: 0rem;
   margin-bottom: 1rem;
@@ -113,7 +114,7 @@ const Lines = styled.div`
 
 const ButtonContainer = styled.div`
   position: absolute;
-  right: 20px;
+  ${({ dir }) => (dir === "rtl" ? "left:" : "right:")} 20px;
   bottom: 20px;
   font-family: ${(props) => props.theme.fonts.monospace};
 `
@@ -145,7 +146,7 @@ const ButtonToggle = styled(Button)`
 
 const ranges = ["30d", "90d"]
 
-const GridItem = ({ metric }) => {
+const GridItem = ({ metric, dir }) => {
   const { title, description, state, buttonContainer, range } = metric
   const isLoading = !state.value
   const value = state.hasError ? (
@@ -196,7 +197,6 @@ const GridItem = ({ metric }) => {
           stroke="#8884d8"
           fillOpacity={0.3}
           fill="url(#colorUv)"
-          fillOpacity="0.2"
           connectNulls={true}
         />
         <XAxis dataKey="timestamp" axisLine={false} tick={false} />
@@ -213,7 +213,7 @@ const GridItem = ({ metric }) => {
       {!state.hasError && !isLoading && (
         <>
           <Lines>{chart}</Lines>
-          <ButtonContainer>{buttonContainer}</ButtonContainer>
+          <ButtonContainer dir={dir}>{buttonContainer}</ButtonContainer>
         </>
       )}
       <Value>{value}</Value>
@@ -271,51 +271,47 @@ const StatsBoxGrid = () => {
   const [selectedRangeNodes, setSelectedRangeNodes] = useState(ranges[0])
   const [selectedRangeTxs, setSelectedRangeTxs] = useState(ranges[0])
 
-  const formatPrice = (price) => {
-    return new Intl.NumberFormat(intl.locale, {
-      style: "currency",
-      currency: "USD",
-      minimumSignificantDigits: 3,
-      maximumSignificantDigits: 4,
-    }).format(price)
-  }
-
-  const formatTVL = (tvl) => {
-    return new Intl.NumberFormat(intl.locale, {
-      style: "currency",
-      currency: "USD",
-      notation: "compact",
-      minimumSignificantDigits: 3,
-      maximumSignificantDigits: 4,
-    }).format(tvl)
-  }
-
-  const formatTxs = (txs) => {
-    return new Intl.NumberFormat(intl.locale, {
-      notation: "compact",
-      minimumSignificantDigits: 3,
-      maximumSignificantDigits: 4,
-    }).format(txs)
-  }
-
-  const formatNodes = (nodes) => {
-    return new Intl.NumberFormat(intl.locale, {
-      minimumSignificantDigits: 3,
-      maximumSignificantDigits: 4,
-    }).format(nodes)
-  }
-
   useEffect(() => {
+    const formatPrice = (price) => {
+      return new Intl.NumberFormat(intl.locale, {
+        style: "currency",
+        currency: "USD",
+        minimumSignificantDigits: 3,
+        maximumSignificantDigits: 4,
+      }).format(price)
+    }
+
+    const formatTVL = (tvl) => {
+      return new Intl.NumberFormat(intl.locale, {
+        style: "currency",
+        currency: "USD",
+        notation: "compact",
+        minimumSignificantDigits: 3,
+        maximumSignificantDigits: 4,
+      }).format(tvl)
+    }
+
+    const formatTxs = (txs) => {
+      return new Intl.NumberFormat(intl.locale, {
+        notation: "compact",
+        minimumSignificantDigits: 3,
+        maximumSignificantDigits: 4,
+      }).format(txs)
+    }
+
+    const formatNodes = (nodes) => {
+      return new Intl.NumberFormat(intl.locale, {
+        minimumSignificantDigits: 3,
+        maximumSignificantDigits: 4,
+      }).format(nodes)
+    }
+
     const fetchPrices = async () => {
       try {
-        const daysToFetch = 90
-        const toUnixTimestamp = Math.floor(new Date().getTime() / 1000) // "Now" as unix timestamp (seconds)
-        const fromUnixTimestamp = toUnixTimestamp - 60 * 60 * 24 * daysToFetch // {daysToFetch} days ago (in seconds)
-        // TODO: Switch back to `getData()` to use cache before prod
         const {
           data: { prices },
         } = await axios.get(
-          `https://api.coingecko.com/api/v3/coins/ethereum/market_chart/range?vs_currency=usd&from=${fromUnixTimestamp}&to=${toUnixTimestamp}`
+          `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=90&interval=daily`
         )
         const data = prices
           .map(([timestamp, value]) => ({
@@ -330,10 +326,10 @@ const StatsBoxGrid = () => {
           hasError: false,
         })
       } catch (error) {
-        setEthPrices({
+        setEthPrices((ethPrices) => ({
           ...ethPrices,
           hasError: true,
-        })
+        }))
       }
     }
     fetchPrices()
@@ -348,7 +344,7 @@ const StatsBoxGrid = () => {
         const data = result
           .map(({ UTCDate, TotalNodeCount }) => ({
             timestamp: new Date(UTCDate).getTime(),
-            value: TotalNodeCount,
+            value: Number(TotalNodeCount),
           }))
           .sort((a, b) => a.timestamp - b.timestamp)
         const value = formatNodes(data[data.length - 1].value)
@@ -359,10 +355,10 @@ const StatsBoxGrid = () => {
         })
       } catch (error) {
         console.error(error)
-        setNodes({
+        setNodes((nodes) => ({
           ...nodes,
           hasError: true,
-        })
+        }))
       }
     }
     fetchNodes()
@@ -388,10 +384,10 @@ const StatsBoxGrid = () => {
         })
       } catch (error) {
         console.error(error)
-        setValueLocked({
+        setValueLocked((valueLocked) => ({
           ...valueLocked,
           hasError: true,
-        })
+        }))
       }
     }
     fetchTotalValueLocked()
@@ -417,14 +413,14 @@ const StatsBoxGrid = () => {
         })
       } catch (error) {
         console.error(error)
-        setTxs({
+        setTxs((txs) => ({
           ...txs,
           hasError: true,
-        })
+        }))
       }
     }
     fetchTxCount()
-  }, [])
+  }, [intl.locale])
 
   const metrics = [
     {
@@ -496,11 +492,11 @@ const StatsBoxGrid = () => {
       range: selectedRangeNodes,
     },
   ]
-
+  const dir = isLangRightToLeft(intl.locale) ? "rtl" : "ltr"
   return (
     <Grid>
       {metrics.map((metric, idx) => (
-        <GridItem key={idx} metric={metric} />
+        <GridItem key={idx} metric={metric} dir={dir} />
       ))}
     </Grid>
   )

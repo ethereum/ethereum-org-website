@@ -16,6 +16,32 @@ This list is curated by our community. If there's something missing or incorrect
 
 This section is for software for the desktop, command line, or server which has been deprecated. The main types are wallets, integrated development environments, languages, and Ethereum clients. Definitely be careful to not install deprecated software unless you are certain it is from the original source, e.g. a repo hosted under https://github.com/ethereum.
 
+### OpenEthereum {#open-ethereum}
+
+<p align="center">
+  <img width="300" height="180" 
+  	style="background-color:#fff; padding:0px 10px 0px 10px;"
+  	src="https://miro.medium.com/max/1400/1*npKIT4jX5WwlRZmcBPusig.png" />
+</p>
+
+Deprecated July 2021
+
+**Summary**
+
+OpenEthereum was the second largest Ethereum implementation by node count. OpenEthereum played an important role in being a key piece of infrastructure for some of the largest users in Ethereum like Etherscan and Gnosis Safe. Its tracing capabilities set it apart from other clients, ensuring reliable and fast synchronization for data providers.
+
+**Archives**
+
+[Archived GitHub repo](https://github.com/openethereum/openethereum)
+
+**History**
+
+OpenEthereum was built for miners, service providers, and exchanges which need fast synchronization and maximum uptime. OpenEthereum provided the core infrastructure essential for speedy and reliable services.
+
+**Alternatives**
+
+[Erigon](https://github.com/ledgerwatch/erigon) Erigon (previously called Turbo-Geth) is a next generation Ethereum client on the efficiency frontier, written in Go.
+
 ### Grid {#grid}
 
 <p align="center">
@@ -42,7 +68,7 @@ Grid could be seen as a successor to Mist, also a standalone, Javascript-based d
 
 [DappNode](https://dappnode.io/) is a platform for deploying and hosting DApps, P2P clients, and blockchain nodes.
 
-### Ethereum Studio {#grid}
+### Ethereum Studio {#ethereum-studio}
 
 <p align="center">
   <img width="500" height="350" 
@@ -66,7 +92,7 @@ Ethereum Studio was developed to provide users with an IDE that had a built-in E
 
 **Alternatives**
 
-[Remix](https://remix.ethereum.org/) is an alternative web IDE for Solidity development. Additionally, the [Developer Portal](https://ethereum.org/en/developers/) has tools for web and local development, documentation, and more.
+[Remix](https://remix.ethereum.org/) is an alternative web IDE for Solidity development. Additionally, the [Developer Portal](/developers/) has tools for web and local development, documentation, and more.
 
 ### Meteor Dapp Wallet {#meteor-dapp-wallet}
 
@@ -164,7 +190,7 @@ Aleth was the third most popular client for Ethereum before being deprecated on 
 
 **Alternatives**
 
-[Geth](https://geth.ethereum.org/) is a well-known altenative Ethereum client.
+[Geth](https://geth.ethereum.org/) is a well-known alternative Ethereum client.
 
 ### Parity {#parity}
 
@@ -190,7 +216,9 @@ As one of two major, viable clients in the early years of Ethereum (the other be
 
 **Alternatives**
 
-The successor project to Parity Ethereum client is [Open Ethereum](https://github.com/openethereum/openethereum).
+[Erigon](https://github.com/ledgerwatch/erigon) Erigon (previously called Turbo-Geth) is a next generation Ethereum client on the efficiency frontier, written in Go.
+
+**Note:** _The successor project to Parity Ethereum client was [OpenEthereum](https://github.com/openethereum/openethereum) **which has since been deprecated.**_
 
 The ["Spin up your own Ethereum node"](/developers/docs/nodes-and-clients/run-a-node/#getting-the-client) resource on ethereum.org includes a section for downloading, installing, and running an Ethereum client.
 
@@ -268,7 +296,7 @@ While The DAO failed, the concept endured. The basic technical, social, and gove
 
 ["DAO Fork" on ethereum.org](/history/#dao-fork)
 
-[Wikipedia entry for "The DAO"](<https://en.wikipedia.org/wiki/The_DAO_(organization)>)
+[Wikipedia entry for "The DAO"](<https://wikipedia.org/wiki/The_DAO_(organization)>)
 
 **Alternatives**
 

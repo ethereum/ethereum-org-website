@@ -155,7 +155,7 @@ XPath: /pre[2]/code
 
 ```
 
-就这样 DEX 创建完成，并且拥有所有可获得的通证储备。 合约有两个函数：
+所以我们现在有了我们的 DEX，它所有的代币储备都已准备好。 合约有两个函数：
 
 - `buy`：用户可以发送 ETH 并在交易所中获得通证
 - `sell`：用户可以决定发送通证换回 ETH
@@ -185,7 +185,7 @@ XPath: /pre[3]/code
 
 在购买成功的情况下，我们应会在交易中看到两个事件：通证`Transfer`和`Bought`事件。
 
-![交易中的两个事件：Transfer和Bought](./transfer-and-bought-events.png)
+![交易中的两个事件：Transfer和Bought](../../../../../developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/transfer-and-bought-events.png)
 
 ## sell 函数 {#the-sell-function}
 
@@ -204,7 +204,7 @@ function sell(uint256 amount) public {
 
 如果一切正常，您应会在交易中看到两个事件（`Transfer`和`Sold`），并且通证余额和以太坊余额已更新。
 
-![交易中的两个事件：Transfer和Sold](./transfer-and-bought-events.png)
+![交易中的两个事件：Transfer和Sold](../../../../../developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/transfer-and-sold-events.png)
 
 <Divider />
 
@@ -322,7 +322,7 @@ contract DEX {
     function buy() payable public {
         uint256 amountTobuy = msg.value;
         uint256 dexBalance = token.balanceOf(address(this));
-        require(amountTobuy > 0, "You need to send some Ether");
+        require(amountTobuy > 0, "You need to send some ether");
         require(amountTobuy <= dexBalance, "Not enough tokens in the reserve");
         token.transfer(msg.sender, amountTobuy);
         emit Bought(amountTobuy);

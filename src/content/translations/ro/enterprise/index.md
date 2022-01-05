@@ -102,7 +102,6 @@ Exemple de soluții L2 care sunt pregătite pentru producție sau care vor fi î
   - [Skale](https://skale.network)
   - [POA Network](https://www.poa.network/)
 - Soluții hibride care combină proprietăți din categorii multiple
-  - [Offchain Labs Arbitrum SCSC (SideChains/StateChannels)](https://https://offchainlabs.com/arbitrum.pdf)
   - [Celer](https://celer.network)
 
 ## Aplicațiile de întreprindere „active” pe rețeaua principală {#enterprise-live-on-mainnet}
@@ -158,4 +157,4 @@ Iată câteva dintre aplicațiile de întreprindere care au fost implementate pe
 
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _plățile de energie electrică_
 
-Dacă dorești să adaugi la această listă, consultă [instrucțiunile pentru contribuție](https://ethereum.org/en/contributing/).
+Dacă dorești să adaugi la această listă, consultă [instrucțiunile pentru contribuție](/contributing/).

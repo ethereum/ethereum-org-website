@@ -28,15 +28,13 @@ Trenger du en mer grunnleggende informasjon først? Sjekk ut [ethereum.org/learn
 - [Rust - Ethereum klient](https://wiki.parity.io/Setup)
 - [Sender transaksjonen til Ethereum ved å bruke Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
 - [En introduksjon til Smart Kontrakt med Parity Ethereum klient](https://wiki.parity.io/Smart-Contracts)
-- [Sette opp miljøet til Oasis SDK](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [Sette opp miljøet til Oasis SDK](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [En trinnvis veiledning om hvordan du skriver kontrakter i rust Wasm for Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Mellomstadie-artikler {#intermediate-articles}
 
 - [Rust-Web3 Dokumentasjon](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Rust-Web3 Arbeidseksempler](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Opprette en hemmelig balant med OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Opprette en Privat Chat Server med OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Avansert bruksmønster {#advanced-use-patterns}
 

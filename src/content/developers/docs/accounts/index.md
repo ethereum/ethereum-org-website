@@ -41,9 +41,9 @@ Both account types have the ability to:
 
 Ethereum accounts have four fields:
 
-- `nonce` – a counter that indicates the number of transactions sent from the account. This ensures transactions are only processed once. In a contract account, this number represents the number of contracts created by the account
-- `balance` – the number of wei owned by this address. Wei is a denomination of ETH and there are 1e+18 wei per ETH.
-- `codeHash` – this hash refers to the _code_ of an account on the Ethereum virtual machine (EVM). Contract accounts have code fragments programmed in that can perform different operations. This EVM code gets executed if the account gets a message call. It cannot be changed unlike the other account fields. All such code fragments are contained in the state database under their corresponding hashes for later retrieval. This hash value is known as a codeHash. For externally owned accounts, the codeHash field is the hash of an empty string.
+- `nonce` – A counter that indicates the number of transactions sent from the account. This ensures transactions are only processed once. In a contract account, this number represents the number of contracts created by the account.
+- `balance` – The number of wei owned by this address. Wei is a denomination of ETH and there are 1e+18 wei per ETH.
+- `codeHash` – This hash refers to the _code_ of an account on the Ethereum virtual machine (EVM). Contract accounts have code fragments programmed in that can perform different operations. This EVM code gets executed if the account gets a message call. It cannot be changed, unlike the other account fields. All such code fragments are contained in the state database under their corresponding hashes for later retrieval. This hash value is known as a codeHash. For externally owned accounts, the codeHash field is the hash of an empty string.
 - `storageRoot` – Sometimes known as a storage hash. A 256-bit hash of the root node of a Merkle Patricia trie that encodes the storage contents of the account (a mapping between 256-bit integer values), encoded into the trie as a mapping from the Keccak 256-bit hash of the 256-bit integer keys to the RLP-encoded 256-bit integer values. This trie encodes the hash of the storage contents of this account, and is empty by default.
 
 ![A diagram showing the make up of an account](./accounts.png)
@@ -67,7 +67,7 @@ Example:
 
 `fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd036415f`
 
-The public key is generated from the private key using the [Elliptic Curve Digital Signature Algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). You get a public address for your account by taking the last 20 bytes of the Keccak-256 hash of the public key and adding `0x` to the beginning.
+The public key is generated from the private key using the [Elliptic Curve Digital Signature Algorithm](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). You get a public address for your account by taking the last 20 bytes of the Keccak-256 hash of the public key and adding `0x` to the beginning.
 
 Here's an example of creating an account in the console using GETH's `personal_newAccount`
 
@@ -87,19 +87,6 @@ It is possible to derive new public keys from your private key but you cannot de
 
 You need a private key to sign messages and transactions which output a signature. Others can then take the signature to derive your public key, proving the author of the message. In your application, you can use a javascript library to send transactions to the network.
 
-<!-- **WEB3JS example**
-
-```jsx
-web3.eth.accounts.recoverTransaction('0xf86180808401ef364594f0109fc8df283027b6285cc889f5aa624eac1f5580801ca031573280d608f75137e33fc14655f097867d691d5c4c44ebe5ae186070ac3d5ea0524410802cdc025034daefcdfa08e7d2ee3f0b9d9ae184b2001fe0aff07603d9');
-> "0xF0109fC8DF283027b6285cc889F5aA624EaC1F55"
-```
-
-[Web3js documentation](https://web3js.readthedocs.io/)
-
-[code for creating an account in JS?] + links to how to do it in other languages maybe?
-
-`$ geth account new` -->
-
 ## Contract accounts {#contract-accounts}
 
 Contract accounts also have a 42 character hexadecimal address:
@@ -110,31 +97,17 @@ Example:
 
 The contract address is usually given when a contract is deployed to the Ethereum Blockchain. The address comes from the creator's address and the number of transactions sent from that address (the “nonce”).
 
-<!-- @Sam Richards is there a line of code you can use to return your contract's address – in the same way that we have personal.newAccount() above? – Don't know if what I found below is helpful?
-
-```jsx
-ethers.utils.getContractAddress( transaction ) ⇒ string< Address >
-```
-
-TODO: add a contract address example-->
-
-<!-- ## Managing an account
-
-Most users will want to interact with their account via a wallet. Note that an account is not a wallet. A wallet is the keypair associated with a user-owned account, which allow a user to make transactions from or manage the account
-
-For dapp development, you'll want access to dummy accounts with test ETH so you can experiment. When you create a local chain, you'll get test accounts with fake ETH which you can then import using MetaMask and use on your dapp's frontend. -->
-
 ## A note on wallets {#a-note-on-wallets}
 
-An account is not a wallet. A wallet is the keypair associated with a user-owned account, which allows a user to make transactions from or manage the account.
+An account is not a wallet. An account is the keypair for a user-owned Ethereum account. A wallet is an interface or application that lets you interact with your Ethereum account.
 
 ## A visual demo {#a-visual-demo}
 
 Watch Austin walk you through hash functions, and key pairs.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/QJ010l-pBpE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<YouTube id="QJ010l-pBpE" />
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/9LtBDy67Tho" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<YouTube id="9LtBDy67Tho" />
 
 ## Further reading {#further-reading}
 

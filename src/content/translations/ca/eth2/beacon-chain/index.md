@@ -5,16 +5,13 @@ lang: ca
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/core.png
-summaryPoints:
-  [
-    "La Cadena de Balisa no canvia res de l'Ethereum que fem servir a dia d'avui.",
-    "Coordinarà la xarxa.",
-    "Introduirà la prova de participació a l'escosistema d'Ethereum.",
-    'Segurament la coneixeràs com a "Fase 0" de la planificació tècnica.',
-  ]
+summaryPoint1: La Cadena de Balisa no canvia res de l'Ethereum que fem servir a dia d'avui.
+summaryPoint2: Coordinarà la xarxa.
+summaryPoint3: Introduirà la prova de participació a l'escosistema d'Ethereum.
+summaryPoint4: Segurament la coneixeràs com a "Fase 0" de la planificació tècnica.
 ---
 
-<UpgradeStatus isShipped date="Enviat!">
+<UpgradeStatus isShipped dateKey="page-eth2-upgrades-beacon-date">
     La Cadena de Balisa es va posar en marxa l'1 de desembre al migdia (UTC). Per saber-ne més <a href="https://beaconscan.com/">explora les dades</a>. Si vols ajudar a validar la cadena, pots <a href="/eth2/staking/">"apostar" els teus ETH</a>.
 </UpgradeStatus>
 

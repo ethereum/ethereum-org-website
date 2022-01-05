@@ -18,6 +18,8 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 W Solidity [zdarzenia](/developers/docs/smart-contracts/anatomy/#events-and-logs) to wysyłane sygnały, które mogą uruchamiać inteligentne kontrakty. Aplikacje zdecentralizowane lub wszystko, co jest połączone z interfejsem API Ethereum JSON-RPC, może nasłuchiwać tych zdarzeń i odpowiednio działać. Zdarzenie można również zindeksować, aby później można było przeszukiwać historię zdarzeń.
 
+## Zdarzeniami {#events}
+
 Najczęstszym zdarzeniem na blockchainie Ethereum w momencie pisania tego artykułu jest zdarzenie Transfer, które jest emitowane przez tokeny ERC20, gdy ktoś przenosi tokeny.
 
 ```solidity

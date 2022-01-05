@@ -21,8 +21,6 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 ## Available libraries {#available-libraries}
 
-<!-- TODO separate APIs-as-a-service vs. connect your own -->
-
 **Alchemy -** **_Ethereum Development Platform._**
 
 - [alchemy.com](https://www.alchemy.com/)
@@ -44,6 +42,11 @@ These libraries abstract away much of the complexity of interacting directly wit
 **Cloudflare Ethereum Gateway.**
 
 - [cloudflare-eth.com](https://cloudflare-eth.com)
+
+**DataHub by Figment -** **_Web3 API services with Ethereum Mainnet and testnets._**
+
+- [DataHub](https://www.figment.io/datahub)
+- [Documentation](https://docs.figment.io/introduction/what-is-datahub)
 
 **Nodesmith -** **_JSON-RPC API access to Ethereum Mainnet and testnets._**
 

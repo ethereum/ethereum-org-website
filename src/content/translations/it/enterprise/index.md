@@ -14,7 +14,7 @@ La applicazioni della blockchain aiutano le imprese nei seguenti ambiti:
 - Instaurare nuovi modelli di business e offrire opportunità per la creazione di valore
 - Creare organizzazioni a prova di futuro
 
-Le applicazioni della blockchain aziendali possono essere basate sulla [rete principale](/glossary/#rete principale) pubblica Ethereum senza permessi o sulle blockchain private basate su tecnologia Ethereum. Consulta maggiori informazioni sulle [catene Ethereum aziendali private](/enterprise/private-ethereum/).
+Le applicazioni blockchain aziendali possono essere create sulla [rete principale](/glossary/#mainnet) pubblica Ethereum senza permessi o su blockchain private basate sulla tecnologia Ethereum. Consulta maggiori informazioni sulle [catene Ethereum aziendali private](/enterprise/private-ethereum/).
 
 ## Ethereum pubblica e privata {#private-vs-public}
 
@@ -102,7 +102,6 @@ Esempi di soluzioni L2 già pronte per la produzione (o che lo saranno presto) i
   - [Skale](https://skale.network)
   - [POA Network](https://www.poa.network/)
 - Soluzioni ibride che combinano le proprietà di più categorie
-  - [Offchain Labs Arbitrum SCSC](https://https://offchainlabs.com/arbitrum.pdf)
   - [Celer](https://celer.network)
 
 ## Applicazioni aziendali attive sulla rete principale {#enterprise-live-on-mainnet}
@@ -158,4 +157,4 @@ Ecco alcune applicazioni aziendali che sono state distribuite alla rete principa
 
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _pagamenti elettronici_
 
-Se desideri aggiungere qualcosa a questo elenco, consulta le [istruzioni per contribuire](https://ethereum.org/en/contributing/).
+Se desideri aggiungere qualcosa a questo elenco, consulta le [istruzioni per contribuire](/contributing/).

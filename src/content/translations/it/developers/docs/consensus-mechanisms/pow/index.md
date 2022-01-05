@@ -6,11 +6,11 @@ sidebar: true
 incomplete: true
 ---
 
-Ethereum, come Bitcoin, attualmente utilizza un protocollo di consenso detto [proof-of-work (PoW)](https://en.wikipedia.org/wiki/Proof_of_work) che consente ai nodi della rete Ethereum di concordare sullo stato di tutte le informazioni registrate sulla blockchain Ethereum e impedisce alcuni tipi di attacchi economici.
+Ethereum, come Bitcoin, attualmente utilizza un protocollo di consenso detto [proof-of-work (PoW)](https://wikipedia.org/wiki/Proof_of_work) che consente ai nodi della rete Ethereum di concordare sullo stato di tutte le informazioni registrate sulla blockchain Ethereum e impedisce alcuni tipi di attacchi economici.
 
 ## Prerequisiti {#prerequisites}
 
-Per comprendere meglio questa pagina, consigliamo di leggere prima [transazioni](/en/developers/docs/transactions/) e [blocchi](/en/developers/docs/blocks/).
+Per comprendere meglio questa pagina, consigliamo di leggere prima [transazioni](/developers/docs/transactions/) e [blocchi](/developers/docs/blocks/).
 
 ## Cos'è la proof-of-work (PoW)? {#what-is-pow}
 

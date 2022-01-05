@@ -5,16 +5,13 @@ lang: ru
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    "В конце концов основная сеть Ethereum состыкуется с остальными обновлениями Eth2.",
-    "Стыковка объединит основную сеть Eth1 с Beacon Chain Eth2 и системой цепочек-осколков.",
-    "Это ознаменует конец доказательства работы для Ethereum и полный переход к доказательству владения.",
-    'Вы можете знать это как "Этап 1.5" на технических дорожных картах.',
-  ]
+summaryPoint1: В конце концов основная сеть Ethereum состыкуется с остальными обновлениями Eth2.
+summaryPoint2: Стыковка объединит основную сеть Eth1 с Beacon Chain Eth2 и системой цепочек-осколков.
+summaryPoint3: Это ознаменует конец доказательства работы для Ethereum и полный переход к доказательству владения.
+summaryPoint4: Вы можете знать это как "Этап 1.5" на технических дорожных картах.
 ---
 
-<UpgradeStatus date="~Q1/Q2 2022">
+<UpgradeStatus dateKey="page-eth2-upgrades-merge-date">
     Это обновление последует за появлением цепочек-осколков. Но именно в этот момент <a href="/eth2/vision/">видение Eth2</a> становится полностью реализованным – больше универсальности, безопасности и устойчивости с поддержкой вложений для всей сети.
 </UpgradeStatus>
 
@@ -29,22 +26,6 @@ summaryPoints:
 После готовности основная сеть Ethereum состыкуется с Beacon Chain, став своим собственным осколком, который использует доказательство владения вместо [доказательства работы](/developers/docs/consensus-mechanisms/pow/).
 
 Основная сеть привнесет возможность запуска смарт-контрактов в систему доказательства владения, а также полную историю и текущее состояние Ethereum, чтобы обеспечить плавный переход для всех держателей и пользователей ETH.
-
-<!-- ### Improving mainnet
-
-Before mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
-
-These include Improvements for
-
-- **End users**: like [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) which changes the way users bid for blockspace. In other words, making transaction fees more efficient for end users.
-- **Client runners**: making running clients more sustainable by capping disk space requirements.
-- **Developers**: upgrading the EVM to be more flexible.
-
-Plus many more.
-
-[More on Ethereum1.x](/en/learn/#eth-1x)
-
-These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 
 ## После стыковки {#after-the-docking}
 

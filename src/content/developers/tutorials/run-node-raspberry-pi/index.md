@@ -64,7 +64,7 @@ Both images include the same packages, the only difference between them is that 
 ### Recommended hardware and setup {#recommended-hardware-and-setup}
 
 - Raspberry 4 (model B) - 4GB
-- MicroSD Card (16 GB Class 10 minimun)
+- MicroSD Card (16 GB Class 10 minimum)
 - SSD USB 3.0 disk (see storage section)
 - Power supply
 - Ethernet cable
@@ -87,11 +87,15 @@ Keep in mind that you need to plug the disk to an USB 3.0 port (blue)
 
 ### 1. Download Eth 1.0 or Eth 2.0 images {#1-download-eth-10-or-eth-20-images}
 
-<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">Download Eth 1.0 image</ButtonLink>
+<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">
+  Download Eth 1.0 image
+</ButtonLink>
 
 sha256 7fa9370d13857dd6abcc8fde637c7a9a7e3a66b307d5c28b0c0d29a09c73c55c
 
-<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">Download Eth2 image</ButtonLink>
+<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">
+  Download Eth2 image
+</ButtonLink>
 
 sha256 74c0c15b708720e5ae5cac324f1afded6316537fb17166109326755232cd316e
 
@@ -236,19 +240,19 @@ The first time, you need to create manually an account by running the “validat
 
 We put a lot of work trying to setup the Raspberry Pi 4 as a full Ethereum node as we know the massive user base of this device may have a very positive impact in the network.
 
-Please, take into account that this is the first image based on Ubuntu 20.04 so there may be some bugs. If so, open an issue on [GitHub](https://github.com/diglos/pi-gen) or reach us on [Twitter](https://twitter.com/EthereumOnARM).
+Please, take into account that this is the first image based on Ubuntu 20.04 so there may be some bugs. If so, open an issue on [GitHub](https://github.com/diglos/ethereumonarm) or reach us on [Twitter](https://twitter.com/EthereumOnARM).
 
 ## References {#references}
 
 1. [geth repeatedly crashes with SIGSEGV](https://github.com/ethereum/go-ethereum/issues/20190)
-2. [https://github.com/diglos/pi-gen](https://github.com/diglos/pi-gen)
+2. [https://github.com/diglos/ethereumonarm](https://github.com/diglos/ethereumonarm)
 3. https://ubuntu.com/download/raspberry-pi
-4. https://en.wikipedia.org/wiki/Port_forwarding
+4. https://wikipedia.org/wiki/Port_forwarding
 5. https://prometheus.io
 6. https://grafana.com
 7. https://forum.armbian.com/topic/5565-zram-vs-swap/
 8. https://geth.ethereum.org
-9. https://github.com/openethereum/openethereum
+9. https://github.com/openethereum/openethereum \* **Note that OpenEthereum [has been deprecated](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) and is no longer being maintained.** Use it with caution and preferably switch to another client implementation.
 10. https://nethermind.io
 11. https://www.hyperledger.org/projects/besu
 12. https://github.com/prysmaticlabs/prysm

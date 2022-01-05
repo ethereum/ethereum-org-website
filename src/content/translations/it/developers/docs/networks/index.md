@@ -11,7 +11,7 @@ Le reti sono ambienti Ethereum diversi ai quali si può accedere per sviluppare,
 
 ## Prerequisiti {#prerequisites}
 
-È consigliabile conoscere le basi di Ethereum prima di informarsi sulle diverse reti. Le reti di test rappresentano una versione semplificata e sicura di Ethereum nella quale è possibile sperimentare. Consulta la nostra [introduzione ad Ethereum](/en/developers/docs/intro-to-ethereum/).
+È consigliabile conoscere le basi di Ethereum prima di informarsi sulle diverse reti. Le reti di test rappresentano una versione semplificata e sicura di Ethereum nella quale è possibile sperimentare. Consulta la nostra [introduzione ad Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Reti pubbliche {#public-networks}
 
@@ -71,20 +71,6 @@ Ci sono progetti e strumenti dedicati a questo scopo. Scopri di più sulle [reti
 Il processo di consenso è controllato da un set di nodi predefinito considerati attendibili. Un esempio può essere una rete privata di istituti accademici noti, dove ogni istituto controlla un nodo singolo e i blocchi vengono convalidati da una soglia di firmatari all'interno della rete.
 
 Se una rete Ethereum pubblica è come la rete Internet pubblica, un consorzio può essere paragonato a una Intranet privata.
-
-<!-- TODO
-
-## Interacting with testnets
-
-### Your own local network {#your-own-local-network}
-
-`geth -—networkid="12345" console`
-
-### Testnets {#testnets-1}
-
-Wallets like MetaMask or MyEtherWallet will allow you to switch networks so you can test your apps using your test ETH.
-
--->
 
 ## Letture consigliate {#further-reading}
 

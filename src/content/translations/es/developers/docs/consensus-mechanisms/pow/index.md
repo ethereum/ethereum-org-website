@@ -6,11 +6,11 @@ sidebar: true
 incomplete: true
 ---
 
-Ethereum, como Bitcoin, utiliza actualmente un protocolo de consenso llamado [Prueba de trabajo (PoW, por sus siglas en inglés)](https://en.wikipedia.org/wiki/Proof_of_work). Esto permite a la red de Ethereum ponerse de acuerdo sobre el estado de toda la información registrada en la blockchain de Ethereum y prevenir ciertos tipos de ataques económicos.
+Ethereum, como Bitcoin, utiliza actualmente un protocolo de consenso llamado [Prueba de trabajo (PoW, por sus siglas en inglés)](https://wikipedia.org/wiki/Proof_of_work). Esto permite a la red de Ethereum ponerse de acuerdo sobre el estado de toda la información registrada en la blockchain de Ethereum y prevenir ciertos tipos de ataques económicos.
 
 ## Requisitos previos {#prerequisites}
 
-Para comprender mejor esta página, te recomendamos leer primero sobre [transacciones](/en/developers/docs/transactions/) y [bloques](/en/developers/docs/blocks/).
+Para comprender mejor esta página, te recomendamos leer primero sobre [transacciones](/developers/docs/transactions/) y [bloques](/developers/docs/blocks/).
 
 ## ¿Qué es la prueba de trabajo (PoW)? {#what-is-pow}
 

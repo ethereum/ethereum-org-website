@@ -10,11 +10,11 @@ incomplete: true
 
 Usa Ethereum para crear aplicaciones descentralizadas (o "dapps"). Estas dapps pueden ser confiables, lo que significa que, una vez implementadas en Ethereum, siempre se ejecutan tal y como se programaron. Son descentralizadas, lo que significa que funcionan en una red de punto a punto, y no hay un único punto de fracaso. Ninguna entidad o persona las controla y es casi imposible censurarlas. Pueden controlar los activos digitales para crear nuevos tipos de aplicaciones.
 
-## Comenzar con los contratos inteligentes y el lenguage de Solidity {#getting-started-with-smart-contracts-and-solidity}
+## Comenzar con los contratos inteligentes y el lenguaje de Solidity {#getting-started-with-smart-contracts-and-solidity}
 
 **Da los primeros pasos para integrar Go con Ethereum**
 
-¿Necesitas una introducción más básica para empezar? Visita [ethereum.org/learn](/en/learn/) o [ethereum.org/developers](/en/developers/).
+¿Necesitas una introducción más básica para empezar? Visita [ethereum.org/learn](/learn/) o [ethereum.org/developers](/developers/).
 
 - [Blockchain explicada](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Comprender los contratos inteligentes](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -66,7 +66,7 @@ Usa Ethereum para crear aplicaciones descentralizadas (o "dapps"). Estas dapps p
 - [Multi Geth](https://github.com/multi-geth/multi-geth): _Soporte para muchos tipos de redes Ethereum_
 - [Cliente Geth Light](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client): _Implementación Geth del subprotocolo Light Ethereum_
 
-¿Buscas más recursos? Echa un vistazo a [ethereum.org/developers.](/en/developers/)
+¿Buscas más recursos? Echa un vistazo a [ethereum.org/developers.](/developers/)
 
 ## Colaboradores de la comunidad de Go {#go-community-contributors}
 

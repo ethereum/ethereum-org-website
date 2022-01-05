@@ -27,6 +27,8 @@
   "page-eth2-get-involved-more": "Докладніше",
   "page-eth2-get-involved-run-clients": "Запустіть клієнти Beacon Chain",
   "page-eth2-get-involved-run-clients-desc": "Ключовою умовою довготривалої захищеності мережі Ethereum є сильний розподіл клієнтів. Клієнт – це програмне забезпечення, на основі якого працює блокчейн. Він перевіряє транзакції та створює нові блоки. Кожен клієнт має власні функції, тому радимо вибирати ті, що вам підходять.",
+  "page-eth2-get-involved-run-clients-production": "Готові клієнти Eth2",
+  "page-eth2-get-involved-run-clients-experimental": "Експериментальні клієнти Eth2",
   "page-eth2-get-involved-stake": "Як отримати частку ETH",
   "page-eth2-get-involved-stake-desc": "Тепер ви можете отримати частку ETH і допомогти посилити захист Beacon Chain.",
   "page-eth2-get-involved-stake-eth": "Частка ETH",

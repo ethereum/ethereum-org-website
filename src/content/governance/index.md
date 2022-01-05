@@ -33,7 +33,9 @@ The opposite approach, off-chain governance, is where any protocol change decisi
 
 _Whilst at the protocol level Ethereum governance is off-chain, many use cases built on top of Ethereum, such as DAOs, use on-chain governance._
 
-<ButtonLink to="/dao/">More on DAOs</ButtonLink>
+<ButtonLink to="/dao/">
+  More on DAOs
+</ButtonLink>
 
 <Divider />
 
@@ -57,7 +59,9 @@ _Note: any individual can be part of multiple of these groups (e.g. a protocol d
 
 One important process used in Ethereum governance is the proposal of **Ethereum Improvement Proposals (EIPs)**. EIPs are standards specifying potential new features or processes for Ethereum. Anyone within the Ethereum community can create an EIP. For example, none of the authors of EIP-721, the EIP that standardized NFTs, have worked directly on Ethereum's protocol development.
 
-<ButtonLink to="/eips/">More on EIPs</ButtonLink>
+<ButtonLink to="/eips/">
+  More on EIPs
+</ButtonLink>
 
 <Divider />
 
@@ -87,7 +91,7 @@ This flow, while very simplified, gives an overview of the significant stages fo
 
 ### Understanding prior work {#prior-work}
 
-EIP Champions should familiarise themselves with prior work and proposals before creating an EIP which can be seriously considered for deployment on the Ethereum Mainnet. This way, the EIP hopefully brings something new which hasn't been rejected before. The three main places to research this are the [EIP repository](https://github.com/ethereum/eips), [Ethereum Magicians](https://www.ethereum-magicians.org/) and [ethresear.ch](https://www.ethresear.ch/).
+EIP Champions should familiarise themselves with prior work and proposals before creating an EIP which can be seriously considered for deployment on the Ethereum Mainnet. This way, the EIP hopefully brings something new which hasn't been rejected before. The three main places to research this are the [EIP repository](https://github.com/ethereum/eips), [Ethereum Magicians](https://ethereum-magicians.org/) and [ethresear.ch](https://ethresear.ch/).
 
 ### Working groups {#working-groups}
 
@@ -131,7 +135,7 @@ Today, the Ethereum community has adopted a policy of non-intervention in cases 
 
 Watch more on the DAO hack:
 
-<iframe width="100%" height="315px" src="https://www.youtube.com/embed/rNeLuBOVe8A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<YouTube id="rNeLuBOVe8A" />
 
 <Divider />
 
@@ -151,7 +155,9 @@ While the specification and implementations development has always been fully op
 
 When the Beacon Chain merges with the Ethereum execution layer, the governance process to propose changes will be harmonized. This process to implement the merge is [already underway](https://github.com/ethereum/EIPs/pull/3675).
 
-<ButtonLink to="/eth2/merge/">More on the merge</ButtonLink>
+<ButtonLink to="/eth2/merge/">
+  More on the merge
+</ButtonLink>
 
 <Divider />
 
@@ -169,7 +175,10 @@ When the Beacon Chain merges with the Ethereum execution layer, the governance p
 
 Governance in Ethereum isn’t rigidly defined. Various community participants have diverse perspectives on it. Here are a few of them:
 
+- [Notes on Blockchain Governance](https://vitalik.ca/general/2017/12/17/voting.html) - _Vitalik Buterin_
 - [Governance on Ethereum](https://docs.ethhub.io/ethereum-basics/governance/) – _ETHHub_
 - [How does Ethereum Governance work?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [How Ethereum governance works](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [What is an Ethereum core developer?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
+- [Governance, Part 2: Plutocracy Is Still Bad](https://vitalik.ca/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
+- [Moving beyond coin voting governance](https://vitalik.ca/general/2021/08/16/voting3.html) - _Vitalik Buterin_

@@ -102,7 +102,6 @@ Ejemplos de soluciones L2 (de Capa 2) que están listas para la producción o qu
   - [Skale](https://skale.network)
   - [Red POA](https://www.poa.network/)
 - Soluciones híbridas que combinan propiedades de múltiples categorías
-  - [Offchain Labs Arbitrum SCSC](https://https://offchainlabs.com/arbitrum.pdf)
   - [Celer](https://celer.network)
 
 ## Aplicaciones empresariales en vivo en la red principal {#enterprise-live-on-mainnet}
@@ -158,4 +157,4 @@ A continuación se indican algunas aplicaciones empresariales que se han impleme
 
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _pagos de electricidad_
 
-Si deseas añadir información a esta lista, consulta las [instrucciones para contribuir](https://ethereum.org/en/contributing/).
+Si deseas añadir información a esta lista, consulta las [instrucciones para contribuir](/contributing/).

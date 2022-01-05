@@ -5,16 +5,13 @@ lang: bg
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    'Впоследствие настоящата основна мрежа на Етереум ще се "свърже" с останалите ъпгрейди на Eth2.',
-    'Свързването ще слее основната "Eth1" мрежа със сигналната верига на Eth2 и със системата от компоненти.',
-    "Това ще бележи края на доказателството-за-работа при Етереум и пълното преминаване към доказателство за залог.",
-    'Това може да ви е познато като "Етап 1.5" върху техническите карти.',
-  ]
+summaryPoint1: Впоследствие настоящата основна мрежа на Етереум ще се "свърже" с останалите ъпгрейди на Eth2.
+summaryPoint2: Свързването ще слее основната "Eth1" мрежа със сигналната верига на Eth2 и със системата от компоненти.
+summaryPoint3: Това ще бележи края на доказателството-за-работа при Етереум и пълното преминаване към доказателство за залог.
+summaryPoint4: Това може да ви е познато като "Етап 1.5" върху техническите карти.
 ---
 
-<UpgradeStatus date="~Q1/Q2 2022">
+<UpgradeStatus dateKey="page-eth2-upgrades-merge-date">
     Този ъпгрейд ще последва появата на веригите от компоненти. Но това е моментът, когато <a href="/eth2/vision/">визията за Eth2</a>напълно ще се осъществи – по-голям обхват, сигурност и устойчивост чрез залагането, което поддържа цялата мрежа.
 </UpgradeStatus>
 
@@ -29,22 +26,6 @@ summaryPoints:
 Когато е готова, основната мрежа на Етереум ще се свърже със Сигналната верига и така ще стане нейн компонент, който използва доказателство-за-залог вместо[доказателство-за-работа](/developers/docs/consensus-mechanisms/pow/).
 
 Основната мрежа ще донесе възможността да заработят умните договори в системата на доказателство-за-залог заедно с цялата история и настоящо състояние на Етереум, за да се подсигури, че преходът е плавен за всички собственици и потребители на ETH.
-
-<!-- ### Improving mainnet
-
-Before mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
-
-These include Improvements for
-
-- **End users**: like [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) which changes the way users bid for blockspace. In other words, making transaction fees more efficient for end users.
-- **Client runners**: making running clients more sustainable by capping disk space requirements.
-- **Developers**: upgrading the EVM to be more flexible.
-
-Plus many more.
-
-[More on Ethereum1.x](/en/learn/#eth-1x)
-
-These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 
 ## След свързването {#after-the-docking}
 

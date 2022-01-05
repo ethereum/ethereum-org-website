@@ -53,5 +53,17 @@
   "page-what-is-ethereum-wallets": "ウォレット",
   "page-what-is-ethereum-wallets-desc": "ETHとイーサリアムアカウントをどのように管理していますか。始めるにはウォレットが必要になりますので、ウォレット選びをお手伝いします。",
   "page-what-is-ethereum-welcome": "イーサリアムへようこそ",
-  "page-what-is-ethereum-welcome-2": "長期のご利用をお待ちしております。"
+  "page-what-is-ethereum-welcome-2": "長期のご利用をお待ちしております。",
+  "page-what-is-ethereum-defi-title": "分散型金融(DeFi)",
+  "page-what-is-ethereum-defi-description": "よりオープンな金融システムにより、自分のお金をよりコントロールできるようになり、新たな可能性を引き出すことができます。",
+  "page-what-is-ethereum-defi-alt": "レゴブロックで作られたEthereumロゴ。",
+  "page-what-is-ethereum-nft-title": "非代替トークン(NFT)",
+  "page-what-is-ethereum-nft-description": "個性的なアイテムをEthereum資産にし、取引や所有権の証明として利用したり、クリエイターに新たな機会を提供することができます。",
+  "page-what-is-ethereum-nft-alt": "ホログラムを介して表示されているEthロゴ。",
+  "page-what-is-ethereum-dao-title": "分散型自律組織(DAO)",
+  "page-what-is-ethereum-dao-description": "目標を共有し、資金をプールしてオンラインコミュニティを共同で設定する新しい方法です。",
+  "page-what-is-ethereum-dao-alt": "提案に対するDAO投票",
+  "page-what-is-ethereum-use-cases-title": "Ethereumのユースケース",
+  "page-what-is-ethereum-use-cases-subtitle": "Ethereumは、さまざまな領域での生活を向上させる新製品やサービスを作りだしています。",
+  "page-what-is-ethereum-use-cases-subtitle-two": "まだ初期段階ではありますが、ワクワクできるような事がたくさんあります。"
 }

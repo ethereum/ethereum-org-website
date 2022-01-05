@@ -21,8 +21,6 @@ Queste librerie eliminano buona parte della complessità legata al dover interag
 
 ## Librerie disponibili {#available-libraries}
 
-<!-- TODO separate APIs-as-a-service vs. connect your own -->
-
 **Alchemy -** **_Piattaforma di sviluppo Ethereum_**
 
 - [alchemyapi.io](https://alchemyapi.io)

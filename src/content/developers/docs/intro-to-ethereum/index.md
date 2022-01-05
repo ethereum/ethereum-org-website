@@ -19,17 +19,17 @@ Ethereum currently uses a [proof-of-work](/developers/docs/consensus-mechanisms/
 
 New blocks are broadcast to the nodes in the network, checked and verified, thus updating the state of the blockchain for everyone.
 
-So to summarise, when you send ETH to someone, the transaction must be mined and included in a new block. The updated state is then shared with the entire network.
+So to summarize, when you send ETH to someone, the transaction must be mined and included in a new block. The updated state is then shared with the entire network.
 
 Watch Austin walk you through blockchains:
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/zcX7OJ-L8XQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<YouTube id="zcX7OJ-L8XQ" />
 
 If you want to see how blockchain hashes data and then the previous block references all the past blocks, be sure to check out [this demo](https://andersbrownworth.com/blockchain/blockchain) by Anders Brownworth and watch the accompanying video below.
 
 Watch Anders explain hashes in blockchains:
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<YouTube id="_160oMzblY8" />
 
 ## What is Ethereum? {#what-is-ethereum}
 
@@ -41,7 +41,7 @@ Cryptographic mechanisms ensure that once transactions are verified as valid and
 
 ## What is ether? {#what-is-ether}
 
-The purpose of ether, the cryptocurrency, is to allow for a market for computation. Such a market provides an economic incentive for participants to verify and execute transaction requests and provide computational resources to the network.
+**Ether (ETH)** is the native cryptocurrency of Ethereum. The purpose of ether is to allow for a market for computation. Such a market provides an economic incentive for participants to verify and execute transaction requests and provide computational resources to the network.
 
 Any participant who broadcasts a transaction request must also offer some amount of ether to the network as a bounty. This bounty will be awarded to whoever eventually does the work of verifying the transaction, executing it, committing it to the blockchain, and broadcasting it to the network.
 

@@ -11,7 +11,7 @@ sidebar: true
 
 ## 前置要求 {#prerequisites}
 
-你需要在浏览不同的网络之前了解以太坊的基础知识，因为测试网络将会提供一个便捷且安全的以太坊版本供你使用。 尝试访问[以太坊介绍](/developers/docs/intro-to-ethereum/)。
+你需要在浏览不同的网络之前了解以太坊的基础知识，因为测试网络将会提供一个便捷且安全的以太坊版本供你使用。 尝试访问[以太坊简介](/developers/docs/intro-to-ethereum/)。
 
 ## 公共网络 {#public-networks}
 
@@ -58,7 +58,7 @@ sidebar: true
 
 ## 私有网络 {#private-networks}
 
-如果以太坊网络的节点未连接到公共网络（即主网或测试网），则以太坊网络是专用网络。 在这种情况下，私有仅指保留或隔离，而不是保护或安全。
+如果以太坊网络的节点未连接到公共网络（即 主网或测试网），则以太坊网络是专用网络。 在这种情况下，专用仅指保留或隔离，而不是保护或安全。
 
 ### 开发网络 {#development-networks}
 
@@ -71,20 +71,6 @@ sidebar: true
 共识过程由一组预定义的受信任节点控制。 例如，一个由已知学术机构组成的私有网络，每个学术机构管理一个节点，并且块由网络中的签名者的阈值进行验证。
 
 如果公共以太坊网络类似于公共互联网，那么你可以将联合体网络视为专用内部网。
-
-<!-- TODO
-
-## Interacting with testnets
-
-### Your own local network {#your-own-local-network}
-
-`geth -—networkid="12345" console`
-
-### Testnets {#testnets-1}
-
-Wallets like MetaMask or MyEtherWallet will allow you to switch networks so you can test your apps using your test ETH.
-
--->
 
 ## 延伸阅读 {#further-reading}
 

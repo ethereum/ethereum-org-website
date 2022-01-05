@@ -8,7 +8,7 @@ incomplete: true
 
 ## Prerequisiti {#prerequisites}
 
-Per comprendere meglio questa pagina, consigliamo di leggere [transazioni](/en/developers/docs/transactions/), [blocchi](/en/developers/docs/blocks/) e [proof-of-work](/developers/docs/consensus-mechanisms/pow/).
+Per comprendere meglio questa pagina, consigliamo di leggere [transazioni](/developers/docs/transactions/), [blocchi](/developers/docs/blocks/) e [proof-of-work](/developers/docs/consensus-mechanisms/pow/).
 
 ## Cos'è il mining in Ethereum? {#what-is-ethereum-mining}
 
@@ -24,10 +24,10 @@ Nei sistemi decentralizzati come Ethereum dobbiamo assicurarci che tutti siano d
 
 ## Come avviene il mining delle transazioni Ethereum {#how-ethereum-transactions-are-mined}
 
-1. Un utente scrive e firma una richiesta di [transazione](/en/developers/docs/transactions/) con la chiave privata di un [account](/en/developers/docs/accounts/).
-2. L'utente trasmette la richiesta di transazione all'intera rete Ethereum attraverso un [nodo](/en/developers/docs/nodes-and-clients/).
+1. Un utente scrive e firma una richiesta di [transazione](/developers/docs/transactions/) con la chiave privata di un [account](/developers/docs/accounts/).
+2. L'utente trasmette la richiesta di transazione all'intera rete Ethereum attraverso un [nodo](/developers/docs/nodes-and-clients/).
 3. Dopo aver recepito la richiesta della nuova transazione, ogni nodo nella rete Ethereum aggiunge la richiesta alla propria mempool locale, un elenco di tutte le richieste di transazioni delle quali è venuto a conoscenza e che non sono ancora state inviate alla blockchain in un blocco.
-4. A un certo punto, un nodo di mining aggrega diverse decine o centinaia di richieste di transazioni in un [blocco](/en/developers/docs/blocks/) potenziale, in modo da massimizzare le [commissioni sulle transazioni](/en/developers/docs/gas/) che verranno guadagnate, rimanendo comunque sotto il limite di carburante per blocco. A questo punto, il nodo di mining:
+4. A un certo punto, un nodo di mining aggrega diverse decine o centinaia di richieste di transazioni in un [blocco](/developers/docs/blocks/) potenziale, in modo da massimizzare le [commissioni sulle transazioni](/developers/docs/gas/) che verranno guadagnate, rimanendo comunque sotto il limite di carburante per blocco. A questo punto, il nodo di mining:
    1. Verifica la validità di ogni richiesta di transazione (ad esempio che nessuno stia provando a trasferire ether da un account senza firma, che una richiesta non abbia un formato scorretto ecc.), dopodiché esegue il codice della richiesta, cambiando lo stato della propria copia locale dell'EVM. Il miner assegna la commissione sulle transazioni per ogni richiesta di transazione al proprio account.
    2. Inizia il processo di produzione del "certificato di legittimità" proof-of-work per il blocco potenziale, una volta che tutte le richieste di transazione nel blocco sono state verificate ed eseguite nella copia dell'EVM locale.
 5. Infine un miner concluderà la produzione di un certificato per un blocco che include la nostra richiesta di transazione specifica. Il miner trasmetterà quindi il blocco completato, che include il certificato e una checksum del nuovo stato dell'EVM dichiarato.
@@ -39,7 +39,9 @@ Il mining di ogni transazione (cioè l'inclusione in un nuovo blocco e la prima 
 
 ## Demo visiva {#a-visual-demo}
 
-Lasciati guidare da Austin attraverso il mining e la blockchain basata sulla proof-of-work. <iframe width="100%" height="315" src="https://www.youtube.com/embed/zcX7OJ-L8XQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Lasciati guidare da Austin attraverso il mining e la blockchain basata sulla proof-of-work.
+
+<YouTube id="zcX7OJ-L8XQ" />
 
 ## Letture consigliate {#further-reading}
 

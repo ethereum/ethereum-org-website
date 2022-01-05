@@ -5,16 +5,13 @@ lang: tr
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    'Sonuç olarak İşaret (Beacon) Zinciri Eth2 yükseltmelerinin kalanını "kenetleyecektir".',
-    'Kenetleme "Eth1" ana ağını Eth2 işaret (beacon) zinciri ve shard sistemiyle birleştirecektir.',
-    "Bu Ethereum için çalışma ispatının sonunu ve pay ispatına tam geçişi belirleyecektir.",
-    'Bunu teknik yol haritalarındaki "1,5 Aşaması" olarak tanıyor olabilirsiniz.',
-  ]
+summaryPoint1: Sonuç olarak İşaret (Beacon) Zinciri Eth2 yükseltmelerinin kalanını "kenetleyecektir".
+summaryPoint2: Kenetleme "Eth1" ana ağını Eth2 işaret (beacon) zinciri ve shard sistemiyle birleştirecektir.
+summaryPoint3: Bu Ethereum için çalışma ispatının sonunu ve pay ispatına tam geçişi belirleyecektir.
+summaryPoint4: Bunu teknik yol haritalarındaki "1,5 Aşaması" olarak tanıyor olabilirsiniz.
 ---
 
-<UpgradeStatus date="~Q1/Q2 2022">
+<UpgradeStatus dateKey="page-eth2-upgrades-merge-date">
     Bu yükseltme, shard zincirlerinin gelişini takip edecektir. Ancak o zaman <a href="/eth2/vision/">Eth2 vision</a> tamamen gerçekleşmiş olacaktır – daha fazla ölçeklenebilirlik, güvenlik ve sürdürülebilirlikle birlikte tüm ağı destekleyen paydaşlık.
 </UpgradeStatus>
 
@@ -29,22 +26,6 @@ Ethereum'un yıldızlararası bir yolculuk için pek de hazır olmayan bir uzay 
 Hazır olduğunda, Ethereum ana ağı [çalışma ispatı](/developers/docs/consensus-mechanisms/pow/) yerine pay ispatını kullanan kendi shard'ı haline gelerek İşaret (Beacon) Zinciriyle "kenetlenecektir".
 
 Mainnet, geçişin tüm ETH sahipleri ve kullanıcıları için sorunsuz olmasını sağlamak için akıllı sözleşmeleri pay ispatı sistemi ve ayrıca tam geçmiş ve Ethereum'un mevcut durumunda çalıştırma yeteneği geliştirecektir.
-
-<!-- ### Improving mainnet
-
-Before mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
-
-These include Improvements for
-
-- **End users**: like [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) which changes the way users bid for blockspace. In other words, making transaction fees more efficient for end users.
-- **Client runners**: making running clients more sustainable by capping disk space requirements.
-- **Developers**: upgrading the EVM to be more flexible.
-
-Plus many more.
-
-[More on Ethereum1.x](/en/learn/#eth-1x)
-
-These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 
 ## Kenetlenmeden sonra {#after-the-docking}
 

@@ -5,16 +5,13 @@ lang: ru
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/core.png
-summaryPoints:
-  [
-    "Beacon Chain не меняет ничего в Ethereum, который мы используем сегодня",
-    "Она будет координировать сеть.",
-    "Она вводит доказательство владения в экосистему Ethereum.",
-    'Она обозначена как "Фаза 0" на дорожных картах.',
-  ]
+summaryPoint1: Beacon Chain не меняет ничего в Ethereum, который мы используем сегодня
+summaryPoint2: Она будет координировать сеть.
+summaryPoint3: Она вводит доказательство владения в экосистему Ethereum.
+summaryPoint4: Она обозначена как "Фаза 0" на дорожных картах.
 ---
 
-<UpgradeStatus isShipped date="Отправленный!">
+<UpgradeStatus isShipped dateKey="page-eth2-upgrades-beacon-date">
     Beacon Chain запущена 1 декабря в полдень по UTC. Чтобы узнать больше, <a href="https://beaconscan. com/">ознакомьтесь с данными</a>. Если вы хотите помочь с проверкой цепочки, вы можете <a href="/eth2/staking/">вложить свои ETH</a>.
 </UpgradeStatus>
 

@@ -47,11 +47,6 @@ Po skonfigurowaniu łańcucha bloków będziesz mógł zapytać o:
 - id sieci
 - i więcej...
 
-<!--- #### Try it
-
-This remix tutorial will show you [how to query the blockchain using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
-
 ### Funkcjonalność portfela {#wallet-functionality}
 
 Te biblioteki zapewniają Ci funkcjonalność tworzenia portfeli, zarządzania kluczami i podpisywania transakcji.
@@ -195,11 +190,6 @@ Oznacza to, że możesz:
 - Wdrożyć kontrakt
 - I więcej...
 
-<!--- #### Try it
-
-This remix tutorial will show you [how to query a contract using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
-
 ### Funkcje użytkowe {#utility-functions}
 
 Funkcje użytkowe dają Ci praktyczne skróty, które sprawiają, że budowanie z Ethereum jest nieco łatwiejsze.
@@ -262,8 +252,8 @@ _Wiesz o zasobach społecznościowych, które Ci pomogły? Wyedytuj tę stronę 
 
 ## Powiązane tematy {#related-topics}
 
-- [Węzły i klienci](/en/developers/docs/nodes-and-clients/)
-- [Ramy rozwojowe](/en/developers/docs/frameworks/)
+- [Węzły i klienci](/developers/docs/nodes-and-clients/)
+- [Ramy rozwojowe](/developers/docs/frameworks/)
 
 ## Powiązane samouczki {#related-tutorials}
 

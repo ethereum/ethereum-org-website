@@ -69,11 +69,6 @@ Una volta eseguita la configurazione, sarà possibile interrogare la blockchain 
 - ID di rete
 - e molto altro...
 
-<!--- #### Try it
-
-This remix tutorial will show you [how to query the blockchain using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
-
 ### Funzionalità del portafoglio {#wallet-functionality}
 
 Queste librerie offrono le funzionalità per creare portafogli, gestire chiavi e firmare transazioni.
@@ -218,11 +213,6 @@ Ciò significa che è possibile:
 - Distribuire un contratto
 - E molto altro...
 
-<!--- #### Try it
-
-This remix tutorial will show you [how to query a contract using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
-
 ### Funzioni di utilità {#utility-functions}
 
 Le funzioni di utilità forniscono pratiche scorciatoie che facilitano un po' la programmazione con Ethereum.
@@ -285,8 +275,8 @@ _Conosci una risorsa della community che ti è stata utile? Modifica questa pagi
 
 ## Argomenti correlati {#related-topics}
 
-- [Nodi e client](/en/developers/docs/nodes-and-clients/)
-- [Framework di sviluppo](/en/developers/docs/frameworks/)
+- [Nodi e client](/developers/docs/nodes-and-clients/)
+- [Framework di sviluppo](/developers/docs/frameworks/)
 
 ## Tutorial correlati {#related-tutorials}
 

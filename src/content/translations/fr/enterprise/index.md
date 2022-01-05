@@ -102,7 +102,6 @@ Voici quelques exemples de solutions L2 prêtes pour la production ou qui le ser
   - [Skale](https://skale.network)
   - [POA Network](https://www.poa.network/)
 - Solutions hybrides qui combinent les propriétés de plusieurs catégories
-  - [Offchain Labs Arbitrum SCSC](https://https://offchainlabs.com/arbitrum.pdf)
   - [Celer](https://celer.network)
 
 ## Applications d'entreprise live sur le réseau principal {#enterprise-live-on-mainnet}
@@ -158,4 +157,4 @@ Voici quelques-unes des applications d'entreprise déployées sur le réseau pri
 
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _- Paiements de factures d'électricité_
 
-Si vous souhaitez ajouter des éléments à cette liste, veuillez consulter [les instructions pour contribuer](https://ethereum.org/en/contributing/).
+Si vous souhaitez ajouter des éléments à cette liste, veuillez consulter [les instructions pour contribuer](/contributing/).

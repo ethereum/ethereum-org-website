@@ -3,7 +3,8 @@ import { ThemeContext } from "styled-components"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
-
+import { shuffle } from "lodash"
+import { getImage } from "gatsby-plugin-image"
 import { translateMessageId } from "../../../utils/translations"
 import Card from "../../../components/Card"
 import Leaderboard from "../../../components/Leaderboard"
@@ -173,14 +174,14 @@ const GetInvolvedPage = ({ data, location }) => {
   const [clients, setClients] = useState([])
 
   useEffect(() => {
-    const randomizedClients = [
+    const consensusClients = [
       {
         name: "Prysm",
         background: "#23292E",
         description: <Translation id="page-eth2-get-involved-written-go" />,
         alt: "eth2-client-prysm-logo-alt",
         url: "https://docs.prylabs.network/docs/getting-started/",
-        image: data.prysm.childImageSharp.fixed,
+        image: () => data.prysm,
         githubUrl: "https://github.com/prysmaticlabs/prysm",
         isProductionReady: true,
       },
@@ -190,9 +191,8 @@ const GetInvolvedPage = ({ data, location }) => {
         description: <Translation id="page-eth2-get-involved-written-rust" />,
         alt: "eth2-client-lighthouse-logo-alt",
         url: "https://lighthouse-book.sigmaprime.io/",
-        image: isDarkTheme
-          ? data.lighthouseDark.childImageSharp.fixed
-          : data.lighthouseLight.childImageSharp.fixed,
+        image: (isDarkTheme) =>
+          isDarkTheme ? data.lighthouseDark : data.lighthouseLight,
         githubUrl: "https://github.com/sigp/lighthouse",
         isProductionReady: true,
       },
@@ -202,9 +202,7 @@ const GetInvolvedPage = ({ data, location }) => {
         description: <Translation id="page-eth2-get-involved-written-java" />,
         alt: "eth2-client-teku-logo-alt",
         url: "https://pegasys.tech/teku",
-        image: isDarkTheme
-          ? data.tekuLight.childImageSharp.fixed
-          : data.tekuDark.childImageSharp.fixed,
+        image: (isDarkTheme) => (isDarkTheme ? data.tekuLight : data.tekuDark),
         githubUrl: "https://github.com/ConsenSys/teku",
         isProductionReady: true,
       },
@@ -214,7 +212,7 @@ const GetInvolvedPage = ({ data, location }) => {
         description: <Translation id="page-eth2-get-involved-written-net" />,
         alt: "eth2-client-cortex-logo-alt",
         url: "https://nethermind.io/",
-        image: data.cortex.childImageSharp.fixed,
+        image: () => data.cortex,
         githubUrl: "https://github.com/NethermindEth/nethermind",
         isProductionReady: false,
       },
@@ -226,7 +224,7 @@ const GetInvolvedPage = ({ data, location }) => {
         ),
         alt: "eth2-client-lodestar-logo-alt",
         url: "https://lodestar.chainsafe.io/",
-        image: data.lodestar.childImageSharp.fixed,
+        image: () => data.lodestar,
         githubUrl: "https://github.com/ChainSafe/lodestar",
         isProductionReady: false,
       },
@@ -236,13 +234,15 @@ const GetInvolvedPage = ({ data, location }) => {
         description: <Translation id="page-eth2-get-involved-written-nim" />,
         alt: "eth2-client-nimbus-logo-alt",
         url: "https://nimbus.team/",
-        image: data.nimbus.childImageSharp.fixed,
+        image: () => data.nimbus,
         githubUrl: "https://github.com/status-im/nimbus-eth2",
         isProductionReady: true,
       },
-    ].sort(() => Math.random() - 0.5)
+    ]
+
+    const randomizedClients = shuffle(consensusClients)
     setClients(randomizedClients)
-  }, [])
+  }, [data])
 
   const ethresearch = [
     {
@@ -351,7 +351,7 @@ const GetInvolvedPage = ({ data, location }) => {
                 key={idx}
                 url={client.url}
                 background={client.background}
-                image={client.image}
+                image={getImage(client.image(isDarkTheme))}
                 name={client.name}
                 description={client.description}
                 alt={translateMessageId(client.alt, intl)}
@@ -371,7 +371,7 @@ const GetInvolvedPage = ({ data, location }) => {
                 key={idx}
                 url={client.url}
                 background={client.background}
-                image={client.image}
+                image={getImage(client.image(isDarkTheme))}
                 name={client.name}
                 description={client.description}
                 alt={translateMessageId(client.alt, intl)}
@@ -383,7 +383,7 @@ const GetInvolvedPage = ({ data, location }) => {
       </Content>
       <Staking>
         <StyledCalloutBanner
-          image={data.rhino.childImageSharp.fluid}
+          image={getImage(data.rhino)}
           alt={translateMessageId("eth2-rhino-img-alt", intl)}
           title={translateMessageId("page-eth2-get-involved-stake", intl)}
           description={translateMessageId(
@@ -459,15 +459,18 @@ export default GetInvolvedPage
 export const Clients = graphql`
   fragment Clients on File {
     childImageSharp {
-      fixed(width: 80) {
-        ...GatsbyImageSharpFixed
-      }
+      gatsbyImageData(
+        width: 80
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
 
 export const query = graphql`
-  query {
+  {
     bountyHunters: allEth2BountyHuntersCsv(
       sort: { order: DESC, fields: score }
     ) {
@@ -479,9 +482,12 @@ export const query = graphql`
     }
     rhino: file(relativePath: { eq: "eth2/eth2_rhino.png" }) {
       childImageSharp {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(
+          width: 800
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     prysm: file(relativePath: { eq: "eth2/prysm.png" }) {

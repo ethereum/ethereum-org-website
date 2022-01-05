@@ -10,7 +10,7 @@ Les explorateurs de blocs sont votre portail vers les données Ethereum. Vous po
 
 ## Prérequis {#prerequisites}
 
-Pour que les données fournies par un explorateur de blocs aient du sens, vous devez avoir compris les concepts de base d'Ethereum. Commencez par lire la page [Introduction à Ethereum](/en/developers/docs/intro-to-ethereum/).
+Pour que les données fournies par un explorateur de blocs aient du sens, vous devez avoir compris les concepts de base d'Ethereum. Commencez par lire la page [Introduction à Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Services {#services}
 
@@ -251,7 +251,7 @@ Les données Eth2 de haut niveau comprennent les éléments suivants :
   - POA - Chaîne latérale et réseau autonome sécurisés par un groupe de validateurs de confiance. Tous les validateurs du réseau sont des notaires américains, et leurs informations sont publiquement disponibles.
   - Réseau de test POA Sokol.
   - ARTIS - Blockchain compatible avec Ethereum.
-  - [LUKSO L14](https://blockscout. com/lukso/l14) - L14 fonctionne comme premier réseau de test pour permettre à la communauté LUKSO de construire et de tester une infrastructure commune.
+  - [LUKSO L14](https://blockscout.com/lukso/l14) - L14 fonctionne comme premier réseau de test pour permettre à la communauté LUKSO de construire et de tester une infrastructure commune.
   - qDai.
 - [Etherchain](https://www.etherchain.org/) - Explorateur de blocs pour le réseau principal Ethereum.
 - [Ethplorer](https://ethplorer.io/) - Explorateur de blocs qui se focalise sur les jetons du réseau principal Ethereum ainsi que sur le réseau de test Kovan.

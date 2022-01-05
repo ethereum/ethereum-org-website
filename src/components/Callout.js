@@ -1,6 +1,11 @@
+// Libraries
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
+import Translation from "./Translation"
+
+// Components
+import Emoji from "../components/Emoji"
 
 const StyledCard = styled.div`
   display: flex;
@@ -26,7 +31,7 @@ const Description = styled.p`
   color: ${(props) => props.theme.colors.text200};
 `
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   margin-top: -10rem;
   align-self: center;
   max-width: 263px;
@@ -41,13 +46,26 @@ const Content = styled.div`
   height: 100%;
 `
 
-const Callout = ({ image, alt, title, description, children, className }) => (
+const Callout = ({
+  image,
+  emoji,
+  alt,
+  titleKey,
+  descriptionKey,
+  children,
+  className,
+}) => (
   <StyledCard className={className}>
-    <Image fixed={image} alt={alt} />
+    {image && <Image image={image} alt={alt} />}
     <Content>
       <div>
-        <h3>{title}</h3>
-        <Description>{description}</Description>
+        {emoji && <Emoji text={emoji} size={3} />}
+        <h3>
+          <Translation id={titleKey} />
+        </h3>
+        <Description>
+          <Translation id={descriptionKey} />
+        </Description>
       </div>
       {children}
     </Content>

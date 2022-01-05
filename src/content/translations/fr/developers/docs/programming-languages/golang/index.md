@@ -14,7 +14,7 @@ Utilisez Ethereum pour créer des applications décentralisées (ou "DApps"). Ce
 
 **Commencer à intégrer Go à Ethereum**
 
-Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/en/learn/) ou [ethereum.org/developers](/en/developers/).
+Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/learn/) ou [ethereum.org/developers](/developers/).
 
 - [Blockchain Explained](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Understanding Smart Contracts](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -66,7 +66,7 @@ Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/en
 - [Multi Geth](https://github.com/multi-geth/multi-geth) - _Support pour de nombreux types de réseaux Ethereum_
 - [Geth Light Client](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _Implémentation Geth du LES (Light Client Subprotocol) Ethereum_
 
-Vous cherchez davantage de ressources ? Consultez [ethereum.org/developers](/en/developers/).
+Vous cherchez davantage de ressources ? Consultez [ethereum.org/developers](/developers/).
 
 ## Contributeurs de la communauté Go {#go-community-contributors}
 
@@ -81,4 +81,4 @@ Vous cherchez davantage de ressources ? Consultez [ethereum.org/developers](/en
 ## Autres ressources {#other-aggregated-lists}
 
 - [Awesome Ethereum](https://github.com/btomashvili/awesome-ethereum)
-- [Consensys: A Definitive List of Ethereum Developer Tools](https://media. consensys. net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [Source GitHub](https://github. com/ConsenSys/ethereum-developer-tools-list)
+- [Consensys: A Definitive List of Ethereum Developer Tools](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [Source GitHub](https://github.com/ConsenSys/ethereum-developer-tools-list)

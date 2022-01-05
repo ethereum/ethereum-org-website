@@ -28,15 +28,13 @@ Başlamadan önce daha fazla bilgiye mi ihtiyacın var? Bu adrese göz at [ether
 - [Rust Ethereum İstemcisi](https://wiki.parity.io/Setup)
 - [Rust kullanarak Ethereum'a bir alışveriş göndermek](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
 - [Parity Ethereum istemcisiyle Akıllı sözleşmelere giriş](https://wiki.parity.io/Smart-Contracts)
-- [Setting up your Oasis SDK dev environment](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [Setting up your Oasis SDK dev environment](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [A step-by-step tutorial on how to write contracts in rust Wasm for Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Orta Seviye Makaleler {#intermediate-articles}
 
 - [Rust-Web3 Documentation](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Rust-Web3 Working Examples](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Creating a Secret Ballot with OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Creating a Private Chat Server with OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## İleri Düzey Kullanım Şekilleri {#advanced-use-patterns}
 
