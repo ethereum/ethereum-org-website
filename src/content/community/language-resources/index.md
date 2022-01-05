@@ -15,7 +15,7 @@ If you prefer reading in your native language or know someone who doesn’t spea
 
 Know of an educational resource in your language? [Open an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose) to add it to the list!
 
-If you are bilingual and want to help us reach more people, you can also get involved with the [ethereum.org Translation Program](https://ethereum.org/en/contributing/translation-program/#translation-program) and help us translate the website.
+If you are bilingual and want to help us reach more people, you can also get involved with the [ethereum.org Translation Program](/contributing/translation-program/#translation-program) and help us translate the website.
 
 Hundreds of thousands of Ethereum enthusiasts gather in these online forums to share news, talk about recent developments, debate technical issues, and imagine the future.
 
