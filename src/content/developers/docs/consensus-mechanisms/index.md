@@ -16,7 +16,7 @@ To better understand this page, we recommend you first read our [introduction to
 
 ## What is consensus? {#what-is-consensus}
 
-By consensus, we mean that a general agreement has been reached. Consider a group of few people going to the cinema. If there are no principal disagreements on a film, then a consensus is achieved. Participants either get the group on their side, either side with the group. In the extreme case the group will eventually split.
+By consensus, we mean that a general agreement has been reached. Consider a group of people going to the cinema. If there is not a disagreement on a proposed choice of film, then a consensus is achieved. In the extreme case the group will eventually split.
 
 In regards to blockchain, the process is formalized, and reaching consensus means that at least 51% of the nodes on the network agree on the next global state of the network.
 
