@@ -11,7 +11,7 @@ summaryPoint3: ഇത് Ethereum ഇക്കോ സിസ്റ്റത്ത
 summaryPoint4: സാങ്കേതിക റോഡ്മാപ്പിൽ "ഫേസ് 0" എന്നപേരിൽ നിങ്ങൾ ഇത് കണ്ടിട്ടുണ്ടാവും.
 ---
 
-<UpgradeStatus isShipped date="അയച്ചു!">
+<UpgradeStatus isShipped dateKey="page-eth2-upgrades-beacon-date">
     ബീക്കൺ ചെയിൻ ഡിസംബർ 1-ആം തീയതി ഉച്ചക്ക് 1 മണിക്ക് (UTC) പുറത്തിറക്കി. കൂടുതൽ പഠിക്കാൻ, <a href="https://beaconscan.com/">വിവരങ്ങൾ നോക്കൂ</a>. നിങ്ങൾക്ക് ചെയിൻ വാലിഡേറ്റ് ചെയ്യുവാൻ സഹായിക്കണമെന്നുണ്ടെങ്കിൽ, നിങ്ങള്‍ക്ക് <a href="/eth2/staking/">നിങ്ങളുടെ ETH സ്റ്റേക്ക് ചെയ്യാം</a>.
 </UpgradeStatus>
 

@@ -39,6 +39,7 @@ import {
   Header4,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
+import YouTube from "../components/YouTube"
 
 const Page = styled.div`
   display: flex;
@@ -138,7 +139,6 @@ const H2 = styled.h2`
 
   /* Prevent nav overlap */
   &:before {
-    content: "";
     display: block;
     height: 120px;
     margin-top: -120px;
@@ -182,7 +182,6 @@ const H3 = styled.h3`
 
   /* Prevent nav overlap */
   &:before {
-    content: "";
     display: block;
     height: 120px;
     margin-top: -120px;
@@ -248,6 +247,7 @@ const components = {
   Eth2BeaconChainActions,
   Eth2ShardChainsList,
   Eth2DockingList,
+  YouTube,
 }
 
 const Title = styled.h1`

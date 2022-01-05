@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
@@ -29,6 +28,7 @@ import {
   ListItem,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
+import YouTube from "../components/YouTube"
 
 const Page = styled.div`
   display: flex;
@@ -146,6 +146,7 @@ const components = {
   Pill,
   CallToContribute,
   Emoji,
+  YouTube,
 }
 
 const Contributors = styled(FileContributors)`

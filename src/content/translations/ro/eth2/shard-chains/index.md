@@ -11,7 +11,7 @@ summaryPoint3: Acestea facilitează rularea unui nod, menținând cerințele har
 summaryPoint4: Actualizarea este planificată să aibă loc după unirea Rețelei principale cu Rețeaua Beacon.
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     Lanțurile de fragmente ar trebui să fie livrate în 2023, în funcție de cât de repede progresează munca după <a href="/eth2/merge/">unire</a>. Aceste fragmente vor oferi Ethereum mai multă capacitate de stocare și acces la date, dar nu vor fi utilizate pentru executarea de cod. Detaliile despre aceasta sunt încă în curs de analiză.
 </UpgradeStatus>
 
@@ -59,7 +59,7 @@ Planul a fost întotdeauna de a adăuga funcționalități suplimentare fragment
 
 Vitalik Buterin, când a vorbit pe podcast-ul Bankless, a prezentat 3 opțiuni potențiale care merită discutate.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. Executarea stării nu este necesară {#state-execution-not-needed}
 

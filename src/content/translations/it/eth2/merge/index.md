@@ -11,7 +11,7 @@ summaryPoint3: Questo segnerà la fine del proof of work per Ethereum e complete
 summaryPoint4: Questa fase viene detta anche "Fase 1.5" nelle roadmap tecniche.
 ---
 
-<UpgradeStatus date="~Q1/Q2 2022">
+<UpgradeStatus dateKey="page-eth2-upgrades-merge-date">
     Questo aggiornamento seguirà l'arrivo delle shard chain. Ma è il momento in cui la <a href="/eth2/vision/">vision Eth2</a> si realizza pienamente: maggiore scalabilità, sicurezza e sostenibilità con lo staking a supporto di tutta la rete.
 </UpgradeStatus>
 

@@ -9,8 +9,7 @@
     "language": "български"
   },
   "bn": {
-    "language": "বাংলা",
-    "useLegacyHomepage": true
+    "language": "বাংলা"
   },
   "ca": {
     "language": "Català"
@@ -66,6 +65,9 @@
   },
   "ml": {
     "language": "മലയാളം"
+  },
+  "mr": {
+    "language": "मराठी"
   },
   "ms": {
     "language": "Melayu"

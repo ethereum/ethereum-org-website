@@ -18,9 +18,7 @@ An oracle is a bridge between the blockchain and the real world. They act as on-
 
 Watch Patrick explain Oracles:
 
-<figure>
-  <iframe width="100%" height="315px" src="https://www.youtube.com/embed/ZJfkNzyO7-U?start=10" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
+<YouTube id="ZJfkNzyO7-U" start="10" />
 
 ## Why are they needed? {#why-are-they-needed}
 

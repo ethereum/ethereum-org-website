@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
@@ -37,6 +36,7 @@ import {
   Header4,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
+import YouTube from "../components/YouTube"
 
 const Page = styled.div`
   display: flex;
@@ -99,14 +99,6 @@ const ContentContainer = styled.article`
   }
 `
 
-const LastUpdated = styled.p`
-  color: ${(props) => props.theme.colors.text200};
-  font-style: italic;
-  padding-top: 1rem;
-  margin-bottom: 0rem;
-  border-top: 1px solid ${(props) => props.theme.colors.border};
-`
-
 const Pre = styled.pre`
   max-width: 100%;
   overflow-x: scroll;
@@ -136,7 +128,6 @@ const H2 = styled.h2`
 
   /* Prevent nav overlap */
   &:before {
-    content: "";
     display: block;
     height: 120px;
     margin-top: -120px;
@@ -178,7 +169,6 @@ const H3 = styled.h3`
 
   /* Prevent nav overlap */
   &:before {
-    content: "";
     display: block;
     height: 120px;
     margin-top: -120px;
@@ -241,6 +231,7 @@ const components = {
   UpgradeStatus,
   DocLink,
   ExpandableCard,
+  YouTube,
 }
 
 const Title = styled.h1`
