@@ -1327,6 +1327,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/Gobljn"><img src="https://avatars.githubusercontent.com/u/44135563?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nicola Bonsi</b></sub></a><br /><a href="#ideas-Gobljn" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/yelnady/"><img src="https://avatars.githubusercontent.com/u/45317481?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Yusuf Elnady</b></sub></a><br /><a href="#content-yelnady" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/aryankeluskar"><img src="https://avatars.githubusercontent.com/u/80093392?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aryan Keluskar</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=aryankeluskar" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/LingTian"><img src="https://avatars.githubusercontent.com/u/4249432?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ling</b></sub></a><br /><a href="#content-LingTian" title="Content">🖋</a></td>
   </tr>
 </table>
 
