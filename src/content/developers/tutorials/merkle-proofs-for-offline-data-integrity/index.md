@@ -2,7 +2,7 @@
 title: Merkle Proofs for Offline Data Integrity
 description: Ensuring data integrity on chain for data that is stored, mostly, off chain
 author: Ori Pomerantz
-tags: ["merke", "integrity", "storage"]
+tags: ["merkle", "integrity", "storage"]
 skill: advanced
 lang: en
 sidebar: true
@@ -13,8 +13,8 @@ published: 2021-12-30
 
 Ideally we'd like to store everything in Ethereum storage, which is stored across thousands of computers and has
 extremely high availability (the data cannot be censored) and integrity (the data cannot be modified by in an
-unauthorized manner), but storing a 32 byte word typically costs 20,000 gas. As I'm writing this, that cost is
-equivalent to $6.60. At 21 cents a byte this is too expensive for many uses.
+unauthorized manner), but storing a 32-byte word typically costs 20,000 gas. As I'm writing this, that cost is
+equivalent to $6.60. At 21 cents per byte this is too expensive for many uses.
 
 To solve this problem the Ethereum ecosystem developed [many alternative ways to store data in a decentralized 
 fashion](https://ethereum.org/en/developers/docs/storage/). Usually they involve a tradeoff between availability
@@ -64,14 +64,14 @@ const dataArray = [
 ]
 ```
 
-Encoding each entry into a single 256 bit integer results in less readable code than using JSON, for example. However, this means significantly less processing to retrieve the data in the contract, so much lower gas costs. [You can read JSON on chain](https://github.com/chrisdotn/jsmnSol), it's just a bad idea if avoidable.
+Encoding each entry into a single 256-bit integer results in less readable code than using JSON, for example. However, this means significantly less processing to retrieve the data in the contract, so much lower gas costs. [You can read JSON on chain](https://github.com/chrisdotn/jsmnSol), it's just a bad idea if avoidable.
 
 ```javascript
 // The array of hash values, as BigInts 
 const hashArray = dataArray; 
 ```
 
-In this case our data is 256 bit values to begin with, so no processing is needed. If we use a more complicated data structure, such as strings, we need to make sure we hash the data first to get an array of hashes. Note that this is also because we don't care if users know other users' information. Otherwise we would have had to hash so user 1 won't know the value for user 0, user 2 won't know the value for user 3, etc.
+In this case our data is 256-bit values to begin with, so no processing is needed. If we use a more complicated data structure, such as strings, we need to make sure we hash the data first to get an array of hashes. Note that this is also because we don't care if users know other users' information. Otherwise we would have had to hash so user 1 won't know the value for user 0, user 2 won't know the value for user 3, etc.
 
 
 ```javascript
@@ -79,7 +79,7 @@ const pairHash = (a,b) => BigInt(ethers.utils.keccak256('0x' +
        (a^b).toString(16).padStart(64,0)))
 ```
 
-The ethers hash function expects to get a Javascript string with a hexadecimal number, such as `0x60A7`, and responds with another string with the same structure. However, for the rest of the code it's easier to use `BigInt`, so we convert to a hexadecimal string and back again.
+The ethers hash function expects to get a JavaScript string with a hexadecimal number, such as `0x60A7`, and responds with another string with the same structure. However, for the rest of the code it's easier to use `BigInt`, so we convert to a hexadecimal string and back again.
 
 This function is symmetrical (hash of a [xor](https://en.wikipedia.org/wiki/Exclusive_or) b). This means that when we check the Merkle proof we don't need to worry about whether to put the value from the proof before or after the calculated value. Merkle proof checking is done on chain, so the less we need to do there the better.
 
@@ -238,16 +238,14 @@ This function generates a pair hash. It is just the Solidity transalation of the
 
 In mathematical notation Merkle proof verification looks like this: `H(proof_n, H(proof_n-1, H(proof_n-2, ... H(proof_1, H(proof_0, value))...)))`. This code implements it.
 
-
-
 ## Merkle proofs and rollups don't mix
 
 Merkle proofs don't work well with [rollups](https://ethereum.org/en/developers/docs/scaling/layer-2-rollups/). The reason is that rollups write all the transaction data on L1, but process on L2. The cost to send a Merkle proof with a transaction averages to 638 gas per layer (currently a byte in call data costs 16 gas if it isn't zero, and 4 if it is zero). If we have 1024 words of data, a Merkle proof requires ten layers, or a total of 6380 gas.
 
-Looking for example at [Optimism](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m), at writing L1 gas costs about 100 gwei and L2 gas costs 0.001 gwei (that is the normal price, it can rise with congestion). So for the cost of one L1 gas we can spend a hundred thousand gas on L2 processing. Assuming we don't overwrite storage, this means that we can write about five words to storage on L2 for the price of one L1 gas. For a single Merkle proof we can write the entire 1024 words to storage (assuming they can be calculated on chain to begin with, rather than provided in a transaction) and still have most of the gas left over.
+Looking for example at [Optimism](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m), writing L1 gas costs about 100 gwei and L2 gas costs 0.001 gwei (that is the normal price, it can rise with congestion). So for the cost of one L1 gas we can spend a hundred thousand gas on L2 processing. Assuming we don't overwrite storage, this means that we can write about five words to storage on L2 for the price of one L1 gas. For a single Merkle proof we can write the entire 1024 words to storage (assuming they can be calculated on chain to begin with, rather than provided in a transaction) and still have most of the gas left over.
 
 ## Conclusion
 
-In real life you might never implement Merkle trees on your own, there are well known and audited libraries you can use and generally speaking it is best not to implement cryptographic primitives on your own. But I hope that now you understand Merkle proofs better and can decide when they are worth using. 
+In real life you might never implement Merkle trees on your own. There are well known and audited libraries you can use and generally speaking it is best not to implement cryptographic primitives on your own. But I hope that now you understand Merkle proofs better and can decide when they are worth using. 
 
 Note that while Merkle proofs preserve *integrity*, they do not preserve *availability*. Knowing that nobody else can take your assets is small consolation if the data storage decides to disallow access and you can't construct a Merkle tree to access them either. So Merkle trees are best used with some kind of decentralized storage, such as IPFS.
