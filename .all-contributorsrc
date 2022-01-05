@@ -6055,6 +6055,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "HuangRongcun",
+      "name": "EarthMan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1501342?v=4",
+      "profile": "https://github.com/HuangRongcun",
+      "contributions": [
+        "translation",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
