@@ -92,7 +92,7 @@ Ethereum is the perfect foundation for DAOs for a number of reasons:
 
 ### Join a DAO {#join-a-dao}
 
-- [Ethereum community DAOs](/community/#decentralized-autonomous-organizations-daos/community/#decentralized-autonomous-organizations-daos)
+- [Ethereum community DAOs](/community/get-involved/#decentralized-autonomous-organizations-daos)
 - [DAOHaus's list of DAOs](https://app.daohaus.club/explore)
 
 ### Start a DAO {#start-a-dao}

@@ -46,18 +46,12 @@ Estas aplicações descentralizadas (ou "dapps") ganham os benefícios das tecno
 
 [Descentralização de tudo, com Vitalik Buterin](https://youtu.be/WSN5BaCzsbo)
 
-<div class="iframe-container">
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/WSN5BaCzsbo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<YouTube id="WSN5BaCzsbo" />
 
 [Ben Horowitz explica o futuro do blockchain](https://www.youtube.com/watch?v=l9jvKWKmRfs&feature=youtu.be)
 
-<div class="iframe-container">
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/l9jvKWKmRfs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<YouTube id="l9jvKWKmRfs" />
 
 [Blockchain do Ethereum, por TechCrunch](https://www.youtube.com/watch?v=WfULutvxvzY)
 
-<div class="iframe-container">
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/WfULutvxvzY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<YouTube id="WfULutvxvzY" />

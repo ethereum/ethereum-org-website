@@ -11,7 +11,7 @@ summaryPoint3: Könnyebbé teszik a csomópont futtatását a hardver követelm�
 summaryPoint4: A technikai ütemtervek tartalmazzák a shard láncokhoz tartozó munkát a "Fázis 1"-ben és potenciálisan a "Fázis 2"-ben.
 ---
 
-<UpgradeStatus date="2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     A shard láncokat nagyjából 2023 körül kellene bevezetni attól függően, hogy milyen előrelépések történnek <a href="/eth2/beacon-chain/">a Beacon Chain</a> elindítása után. Ezek a shardok az Ethereum számára nagyobb tárolási és elérési kapacitást tesznek lehetővé, de kód futtatásra nem lehet majd használni. Annak részletei még kialakulóban vannak.
 </UpgradeStatus>
 
@@ -55,7 +55,7 @@ Mindig is az volt a terv, hogy shardok extra funkciókat kapjanak, és minél in
 
 Amikor Vitalik Buterin a Bankless podcaston beszélt, három megvitatásra érdemes potenciális lehetőséget mutatott be.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. Állapot-futtatás nem szükséges {#state-execution-not-needed}
 

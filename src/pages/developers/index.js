@@ -295,11 +295,8 @@ const DevelopersPage = ({ data }) => {
           </IntroColumn>
           <StyledCallout
             image={getImage(data.developers)}
-            title={translateMessageId("page-developers-improve-ethereum", intl)}
-            description={translateMessageId(
-              "page-developers-improve-ethereum-desc",
-              intl
-            )}
+            titleKey="page-developers-improve-ethereum"
+            descriptionKey="page-developers-improve-ethereum-desc"
             alt={translateMessageId("alt-eth-blocks", intl)}
           >
             <div>

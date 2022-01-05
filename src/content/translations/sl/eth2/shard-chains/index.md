@@ -11,7 +11,7 @@ summaryPoint3: Z ohranjanjem nizkih zahtev po strojni opremi lajšajo zagon vozl
 summaryPoint4: Ta nadgradnja je načrtovana kot naslednji korak po spojitvi glavnega omrežja z oddajniško verigo.
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     Razdrobljene verige bi morale biti uvedene enkrat v letu 2023, odvisno od hitrosti napredka po <a href="/eth2/merge/">spojitvi</a>. Ti drobci bodo Ethereumu zagotovili boljšo zmogljivost za obdelavo in dostop do podatkov, vendar se ne bodo uporabljali za izvajanje kode. Podrobnosti tega bodo še določene.
 </UpgradeStatus>
 
@@ -59,7 +59,7 @@ Skupne vrednosti so tehnologija na »2. plasti«, ki že obstaja. Decentralizira
 
 Vitalik Buterin je v pogovoru za podkast Bankless predstavil 3 morebitne možnosti, o katerih je vredno razpravljati.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. Izvajanje stanj ni potrebno {#state-execution-not-needed}
 

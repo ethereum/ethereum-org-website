@@ -10,7 +10,7 @@ incomplete: true
 
 Usa Ethereum para crear aplicaciones descentralizadas (o "dapps"). Estas dapps pueden ser confiables, lo que significa que, una vez implementadas en Ethereum, siempre se ejecutan tal y como se programaron. Son descentralizadas, lo que significa que funcionan en una red de punto a punto, y no hay un único punto de fracaso. Ninguna entidad o persona las controla y es casi imposible censurarlas. Pueden controlar los activos digitales para crear nuevos tipos de aplicaciones.
 
-## Comenzar con los contratos inteligentes y el lenguage de Solidity {#getting-started-with-smart-contracts-and-solidity}
+## Comenzar con los contratos inteligentes y el lenguaje de Solidity {#getting-started-with-smart-contracts-and-solidity}
 
 **Da los primeros pasos para integrar Go con Ethereum**
 

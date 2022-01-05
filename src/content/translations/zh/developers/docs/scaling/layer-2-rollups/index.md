@@ -73,7 +73,7 @@ Optimistic rollup 并不实际计算交易，所以需要有一个机制来确�
 
 观看 Finematics 解释 optimistic rollup：
 
-<iframe width="100%" height="315px" src="https://www.youtube.com/embed/7pWxCklcNsU?start=263&end=406" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="7pWxCklcNsU" start="263" />
 
 #### 使用 Optimistic rollup {#use-optimistic-rollups}
 
@@ -107,7 +107,7 @@ ZK-rollup 处于第二层，可以优化以进一步减小交易的大小。 例
 
 观看 Finematics 解释 ZK-rollup：
 
-<iframe width="100%" height="315px" src="https://www.youtube.com/embed/7pWxCklcNsU?start=406&end=568" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="7pWxCklcNsU" start="406" />
 
 #### 使用 ZK-rollup {#use-zk-rollups}
 

@@ -11,7 +11,7 @@ summaryPoint3: Вони полегшують роботу вузла, знижу
 summaryPoint4: Таке оновлення за планом має відбутися після об’єднання основної мережі з Beacon Chain.
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     Ланцюги сегментів даних повинні бути запущені у 2023 році, залежно від швидкості, з якою робота просуватиметься після <a href="/eth2/merge/">об’єднання</a>. Завдяки цим ланцюгам у мереж Ethereum можна буде зберігати більше даних і отримувати до них доступ, однак вони не використовуватимуться для застосування кодів. Детальніше інформація буде доступна згодом.
 </UpgradeStatus>
 
@@ -59,7 +59,7 @@ summaryPoint4: Таке оновлення за планом має відбут
 
 У розмові з авторами подкасту Bankless Віталік Бутерін розповів про 3 варіанти розвитку подій, які варті уваги.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. Застосування стану не потрібне {#state-execution-not-needed}
 

@@ -93,7 +93,9 @@ incomplete: true
 
 [关于权益证明 (PoS) 的更多信息](/developers/docs/consensus-mechanisms/pos/)
 
-## 更偏向视频学习者？ {#visual-learner} <iframe width="100%" height="315" src="https://www.youtube.com/embed/3EUAcxhuoU4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+## 更偏向视频学习者？ {#visual-learner}
+
+<YouTube id="3EUAcxhuoU4" />
 
 ## 延伸阅读 {#further-reading}
 

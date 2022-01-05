@@ -21,7 +21,7 @@ DeFi adalah sebuah istilah kolektif untuk produk dan layanan keuangan yang dapat
 
 Ada ekonomi kripto yang sedang booming di luar sana, di mana Anda dapat memberi pinjaman, meminjam, melakukan long/short, mendapatkan bunga, dan banyak lagi. Orang-orang Argentina yang paham kripto telah menggunakan DeFi untuk menghindari inflasi yang melumpuhkan. Perusahaan telah mulai menyalurkan gaji karyawan mereka secara waktu nyata. Beberapa orang bahkan telah mengambil dan melunasi pinjaman senilai jutaan dolar tanpa perlu menunjukkan identifikasi pribadi.
 
-<iframe width="100%" height="315px" src="https://www.youtube.com/embed/H-O3r2YMWJ4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="H-O3r2YMWJ4" />
 
 ## DeFi vs keuangan tradisional {#defi-vs-tradfi}
 
@@ -56,7 +56,7 @@ Bitcoin dalam banyak hal adalah aplikasi DeFi yang pertama. Bitcoin memungkinkan
 
 Ethereum dibangun di atas ini. Seperti Bitcoin, aturannya tidak dapat berubah terhadap Anda dan siapa pun yang memiliki akses. Namun itu juga membuat uang digital ini dapat diprogram, dengan menggunakan [kontrak pintar](/glossary#smart-contract), sehingga Anda dapat lebih dari sekadar menyimpan dan mengirim nilai.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/qFBYB4W2tqU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="qFBYB4W2tqU" />
 
 ## Uang yang dapat diprogram {#programmable-money}
 
