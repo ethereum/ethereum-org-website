@@ -20,6 +20,10 @@ If you're looking to fiddle with code before you [set up a local development env
 - [ethfiddle.com](https://ethfiddle.com/)
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
 
+**Replit -** **_A customizable development environment for Ethereum with hot reloading, error checking, and first-class testnet support._**
+
+- [Solidity starter](https://replit.com/@replit/Solidity-starter-beta)
+
 ## Desktop IDEs {#desktop-ides}
 
 Most established IDEs have built plugins to enhance the Ethereum development experience. At a minimum, they provide syntax highlighting for [smart contract languages](/developers/docs/smart-contracts/languages/).
