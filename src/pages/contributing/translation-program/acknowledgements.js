@@ -213,6 +213,9 @@ const TranslatorAcknowledgements = ({ data, location }) => {
             image={getImage(themedCertificateImage)}
             alt="translator certificate"
             objectFit="contain"
+            style={{
+              boxShadow: "1px 1.5px 1.5px rgba(0, 0, 0, 0.1)",
+            }}
           />
         </CertificateImageWrapper>
       </Content>

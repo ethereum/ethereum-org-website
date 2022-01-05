@@ -184,7 +184,9 @@ const TranslationLeaderboard = () => {
               item.user.username !== "ethdotorg" &&
               !item.user.username.includes("LQS_") &&
               !item.user.username.includes("REMOVED_USER") &&
-              !item.user.username.includes("Aco_")
+              !item.user.username.includes("Aco_") &&
+              !item.user.fullName.includes("Aco_") &&
+              !item.user.fullName.includes("Acc_")
           )
           .filter((item, idx) => idx < filterAmount)
           .map((item, idx) => {
