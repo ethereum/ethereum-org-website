@@ -42,7 +42,7 @@ Kedua jenis akun tersebut memiliki kemampuan untuk:
 Akun Ethereum memiliki empat bidang:
 
 - `nonce` – penghitung yang menunjukkan jumlah transaksi yang dikirim dari akun. Ini memastikan transaksi hanya diproses sekali. Dalam akun kontrak, angka ini mewakili jumlah kontrak yang dibuat oleh akun tersebut.
-- `saldo` – Jumlah wei yang dimiliki oleh alamat ini. Wei adalah denominasi ETH dan ada 1e+18 wei per ETH.
+- `balance` – Jumlah wei yang dimiliki oleh alamat ini. Wei adalah denominasi ETH dan ada 1e+18 wei per ETH.
 - `codeHash` – Hash ini merujuk pada _kode_ sebuah akun di mesin virtual Ethereum (EVM). Akun kontrak memiliki potongan kode yang diprogramkan ke dalamnya yang dapat melakukan berbagai operasi. Kode EVM ini dieksekusi jika akun menerima pemanggilan message. Tidak dapat diubah, tidak seperti field akun lainnya. Semua potongan kode tersebut disimpan dalam basis data state di bawah hash yang sesuai untuk proses pengambilan nanti. Nilai hash ini dikenal sebagai codeHash. Untuk kepemilikan akun eksternal, bidang codeHash adalah hash dari string kosong.
 - `storageRoot` – Terkadang dikenal sebagai hash penyimpanan. Hash 256-bit dari node akar pohon Merkle Patricia yang mengkodekan konten penyimpanan akun (pemetaan di antara nilai bilangan bulat 256-bit), yang dikodekan ke dalam pohon sebagai pemetaan dari hash 256-bit Keccak dari kunci bilangan bulat 256-bit ke nilai bilangan bulat 256-bit yang dikodekan RLP. Pohon ini mengkodekan hash dari konten penyimpanan akun ini, dan bersifat kosong secara default.
 

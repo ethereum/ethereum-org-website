@@ -56,7 +56,7 @@ Gwei, kependekan dari giga-wei, sering digunakan untuk menggambarkan biaya gas d
 
 ## Mentransfer ether {#transferring-ether}
 
-Setiap transaksi di Ethereum berisi bidang `nilai`, yang menentukan jumlah ether yang akan ditransfer, dalam denominasi wei, untuk dikirim dari alamat pengirim ke alamat penerima.
+Setiap transaksi di Ethereum berisi bidang `value`, yang menentukan jumlah ether yang akan ditransfer, dalam denominasi wei, untuk dikirim dari alamat pengirim ke alamat penerima.
 
 Ketika alamat penerima merupakan [kontrak pintar](/developers/docs/smart-contracts/), ether yang ditransfer ini dapat digunakan untuk membayar gas ketika kontrak pintar menjalankan kodenya.
 
@@ -64,7 +64,7 @@ Ketika alamat penerima merupakan [kontrak pintar](/developers/docs/smart-contrac
 
 ## Membuat kueri ether {#querying-ether}
 
-Pengguna dapat membuat kueri saldo eter dari [akun](/developers/docs/accounts/) dengan memeriksa bidang `saldo` akun, yang menunjukkan kepemilikan ether dalam mata uang wei.
+Pengguna dapat membuat kueri saldo eter dari [akun](/developers/docs/accounts/) dengan memeriksa bidang `balance` akun, yang menunjukkan kepemilikan ether dalam mata uang wei.
 
 [Etherscan](https://etherscan.io) adalah sebuah peralatan populer untuk memeriksa saldo alamat melalui aplikasi berbasis web. Sebagai contoh, [halaman Etherscan ini](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae) menampilkan saldo untuk Yayasan Ethereum.
 
