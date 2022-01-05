@@ -27,6 +27,8 @@
   "page-eth2-get-involved-more": "Повече информация",
   "page-eth2-get-involved-run-clients": "Управлявайте клиенти на сигналната верига",
   "page-eth2-get-involved-run-clients-desc": "Ключът към дългосрочната сигурност в Етереум е силното разпределяне на клиентите. Клиентът представлява софтуер, който движи блокчейна, проверява трансакциите и създаването на нови блокове. Всеки клиент има собствени характеристики, така че изберете този, който е подходящ за вас.",
+  "page-eth2-get-involved-run-clients-production": "Готови за пускане в действие клиенти на Eth2",
+  "page-eth2-get-involved-run-clients-experimental": "Експериментални клиенти на Eth2",
   "page-eth2-get-involved-stake": "Залагайте вашите ETH",
   "page-eth2-get-involved-stake-desc": "Сега може да залагате вашите ETH, за да подсигурите сигналната верига.",
   "page-eth2-get-involved-stake-eth": "Залагайте ETH",
