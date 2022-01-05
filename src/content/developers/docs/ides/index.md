@@ -20,6 +20,9 @@ If you're looking to fiddle with code before you [set up a local development env
 - [ethfiddle.com](https://ethfiddle.com/)
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
 
+**ChainIDE -** **_A Cloud-Based Multi-Chain IDE_**
+- [chainide.com](https://chainide.com/)
+
 **Replit -** **_A customizable development environment for Ethereum with hot reloading, error checking, and first-class testnet support._**
 
 - [Solidity starter](https://replit.com/@replit/Solidity-starter-beta)
