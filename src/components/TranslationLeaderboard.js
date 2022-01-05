@@ -186,9 +186,9 @@ const TranslationLeaderboard = () => {
               !item.user.username.includes("LQS_") &&
               !item.user.username.includes("REMOVED_USER") &&
               !item.user.username.includes("Aco_") &&
-              !item.user.fullname.includes("Aco_") &&
+              !item.user.fullName.includes("Aco_") &&
               !item.user.username.includes("Acc_") &&
-              !item.user.fullname.includes("Acc_") &&
+              !item.user.fullName.includes("Acc_") &&
               item.user.username !== "Finnish_Sandberg" &&
               item.user.username !== "Norwegian_Sandberg" &&
               item.user.username !== "Swedish_Sandberg"
