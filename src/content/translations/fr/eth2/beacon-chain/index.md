@@ -5,16 +5,13 @@ lang: fr
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/core.png
-summaryPoints:
-  [
-    "La chaîne phare ne change en rien l'Ethereum que nous utilisons aujourd'hui.",
-    "Elle coordonnera le réseau.",
-    "Elle introduit la preuve d'enjeu dans l'écosystème Ethereum.",
-    "On peut la voir comme la phase 0 de la feuille de route.",
-  ]
+summaryPoint1: La chaîne phare ne change en rien l'Ethereum que nous utilisons aujourd'hui.
+summaryPoint2: Elle coordonnera le réseau.
+summaryPoint3: Elle introduit la preuve d'enjeu dans l'écosystème Ethereum.
+summaryPoint4: On peut la voir comme la phase 0 de la feuille de route.
 ---
 
-<UpgradeStatus isShipped date="Expédié!">
+<UpgradeStatus isShipped dateKey="page-eth2-upgrades-beacon-date">
     La chaîne phare a démarré le 1er décembre à midi UTC. Pour en savoir plus, <a href="https://beaconscan.com/">explorez les données</a>. Si vous voulez aider à valider la chaîne, vous pouvez <a href="/eth2/staking/">miser vos ETH</a>.
 </UpgradeStatus>
 

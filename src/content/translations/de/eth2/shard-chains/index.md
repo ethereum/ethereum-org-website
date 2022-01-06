@@ -5,16 +5,13 @@ lang: de
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
-summaryPoints:
-  [
-    "Sharding ist ein mehrstufiges Upgrade zur Verbesserung der Skalierbarkeit und Kapazität von Ethereum.",
-    "Shard Chains verteilen die Last des Netzes auf 64 neue Ketten.",
-    "Sie erleichtern den Betrieb einer Node, indem sie die Hardwareanforderungen niedrig halten.",
-    "Dieses Upgrade ist nach der Verkupplung des Mainnet mit der Beacon Chain geplant.",
-  ]
+summaryPoint1: Sharding ist ein mehrstufiges Upgrade zur Verbesserung der Skalierbarkeit und Kapazität von Ethereum.
+summaryPoint2: Shard Chains verteilen die Last des Netzes auf 64 neue Ketten.
+summaryPoint3: Sie erleichtern den Betrieb einer Node, indem sie die Hardwareanforderungen niedrig halten.
+summaryPoint4: Dieses Upgrade ist nach der Verkupplung des Mainnet mit der Beacon Chain geplant.
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     Shard Chains sollten irgendwann im Jahr 2023 erscheinen, je nachdem, wie schnell die Arbeit nach <a href="/eth2/merge/">der Verkupplung</a> voranschreitet. Diese Shards werden Ethereum mehr Kapazität für das Speichern und den Zugriff auf Daten geben, aber sie werden nicht für die Ausführung von Codes verwendet. Die Details hierfür werden noch ausgearbeitet.
 </UpgradeStatus>
 
@@ -62,7 +59,7 @@ Der Plan war immer den shards extra Funktionalität zu verleihen, um sie ähnlic
 
 Vitalik Buterin hat im Gespräch mit dem Bankless-Podcast 3 mögliche Optionen vorgestellt, die diskutiert werden sollten.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. Statusausführung nicht notwendig {#state-execution-not-needed}
 

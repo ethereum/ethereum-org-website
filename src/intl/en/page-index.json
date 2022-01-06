@@ -37,6 +37,7 @@
   "page-index-developers": "A new frontier for development",
   "page-index-developers-description": "Ethereum and its apps are transparent and open source. You can fork code and re-use functionality others have already built. If you don't want to learn a new language you can just interact with open-sourced code using JavaScript and other existing languages.",
   "page-index-developers-button": "Developer portal",
+  "page-index-developers-code-examples": "Code examples",
   "page-index-developers-code-example-title-0": "Your own bank",
   "page-index-developers-code-example-description-0": "You can build a bank run by logic you've programmed.",
   "page-index-developers-code-example-title-1": "Your own currency",

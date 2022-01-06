@@ -7,13 +7,10 @@ emoji: ":frame_with_picture:"
 sidebar: true
 sidebarDepth: 2
 image: ../../assets/infrastructure_transparent.png
-alt: "An Eth logo being displayed via hologram."
-summaryPoints:
-  [
-    "A way to represent anything unique as an Ethereum-based asset.",
-    "NFTs are giving more power to content creators than ever before.",
-    "Powered by smart contracts on the Ethereum blockchain.",
-  ]
+alt: An Eth logo being displayed via hologram.
+summaryPoint1: A way to represent anything unique as an Ethereum-based asset.
+summaryPoint2: NFTs are giving more power to content creators than ever before.
+summaryPoint3: Powered by smart contracts on the Ethereum blockchain.
 ---
 
 NFTs are currently taking the digital art and collectibles world by storm. Digital artists are seeing their lives change thanks to huge sales to a new crypto-audience. And celebrities are joining in as they spot a new opportunity to connect with fans. But digital art is only one way to use NFTs. Really they can be used to represent ownership of any unique asset, like a deed for an item in the digital or physical realm.
@@ -28,7 +25,7 @@ NFT stands for non-fungible token. Non-fungible is an economic term that you cou
 
 Fungible items, on the other hand, can be exchanged because their value defines them rather than their unique properties. For example, ETH or dollars are fungible because 1 ETH / $1 USD is exchangeable for another 1 ETH / $1 USD.
 
-<iframe title="YouTube video titled What Are NFTs and How Can They Be Used in Decentralized Finance? DEFI Explained" width="100%" height="315" src="https://www.youtube.com/embed/Xdkkux6OxfM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<YouTube id="Xdkkux6OxfM" />
 
 ## The internet of assets {#internet-of-assets}
 
@@ -166,7 +163,9 @@ When they sell their content, funds go directly to them. If the new owner then s
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Explore, buy or create your own NFT art/collectibles...</div>
-  <ButtonLink to="/dapps/?category=collectibles">Explore NFT art</ButtonLink>
+  <ButtonLink to="/dapps/?category=collectibles">
+    Explore NFT art
+  </ButtonLink>
 </InfoBanner>
 
 #### The copy/paste problem {#nfts-copy-paste}
@@ -197,7 +196,9 @@ Decentraland, a virtual reality game, even lets you buy NFTs representing virtua
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Check out Ethereum games, powered by NFTs...</div>
-  <ButtonLink to="/dapps/?category=gaming">Explore NFT games</ButtonLink>
+  <ButtonLink to="/dapps/?category=gaming">
+    Explore NFT games
+  </ButtonLink>
 </InfoBanner>
 
 <Divider />
@@ -350,46 +351,9 @@ _It’s also important to remember that Ethereum does more than just financial t
 
 The process has already started. [The Beacon Chain](/eth2/beacon-chain/), the first upgrade, shipped in December 2020. This provides the foundation for staking by allowing stakers to join the system. The next step relevant to energy efficiency is to merge the current chain, the one secured by miners, into the Beacon Chain where mining isn't needed. Timelines can't be exact at this stage, but it's estimated that this will happen sometime in 2022. This process is known as the merge (formerly referred to as the docking). [More on the merge](/eth2/merge/).
 
-<ButtonLink to="/eth2/">More on Eth2</ButtonLink>
-
-<!-- #### Rollups in the meantime...
-
-While we wait for Eth2, products are moving to a "layer 2" technology known as rollups. Working on top of Ethereum, this technology lets you "roll up" or batch many transactions into a single one that is submitted to the chain. By moving as many things off the chain and only submitting the truly important bits (the cryptographic proofs), demand for block space will decrease. This will in turn lower the amount of computing power needed to create new blocks.
-
-[More on rollups and layer 2 technology](/developers/docs/scaling/layer-2-rollups/)
-
-#### A more efficient NFT standard... {#a-more-efficient-nft-standard}
-
-Ethereum is open source software and new standards are being figured out and agreed on all the time. The Consecutive Transfer Extension Standard (EIP-2309) plans to make the creation of NFTs more efficient. Like rollups this reduces the amount of heavy lifting done on chain, allowing you to mint one billion NFTs in a single transaction.
-
-[More on EIP-2309](https://eips.ethereum.org/EIPS/eip-2309)
-
-[to me this doesn't solve the problem if block space remains the same due to mining etc... should we include?] -->
-
-<!-- Ethereum currently used proof-of-work to achieve consensus. It is a top priority of the community to transition to a proof-of-stake system, to increase decentralization, security and scalability, while reducing energy consumption requirements imposed from proof-of-work. Several layer 2 scaling solutions, such as rollups, are being developed and implemented which also aim to improve scalability while decreasing energy usage. EIP-2309 is a proposal also aiming to improve the efficiency of layer 1 NFT transactions.
-
-Before these scaling solutions are fully implemented, it is worth noting that NFT's specifically are not necessarily _directly_ causing any increased carbon emission. The proof-of-work consensus mechanism that currently underlies the entire Ethereum blockchain is being used whether NFTs are being minted or not. If NFTs were to disappear today, there is a strong chance that block space would remain in demand for other reasons, though even if demand for block space decreased it wouldn't drastically impact energy consumption. For sake of example, imagine the demand for transacting on Ethereum falls to where the blocks are now empty. Miners would still be incentivized to produce blocks for the reward, and the hashing power required to do so would persist despite an empty block. More realistically, other transactions would take the place of NFT transactions. So again, there remains a strong and an active push to advance layer 2 solutions, and finalize Ethereum's transition to a proof-of-stake system.
-
-All this being said, let's talk more about proof-of-work. Objectively there is a significant amount of energy that must be consumed in order to achieve the security that Ethereum offers.
-Based on this, many people are quick to subjectively argue that the carbon footprint from proof-of-work blockchains is a "waste of energy."
-
-Energy consumption is not fundamentally a "good" or "bad" thing, and very much depends on where the energy is coming from, and what it is being used for.
-It is not up to any given individual to decide what is a "good" or "bad" use of energy for someone else. This same principle is used throughout Ethereum, where nobody can tell you that your transaction is not important.
-For someone not using this technology, is it fair for them to dictate that this form of energy consumption is wasteful? What about those who's lives have been changed for the better as a result?
-
-Externalities, such as carbon emissions based on choice of energy source, have not necessarily been priced in to the current system, but doing so would further encourage the use of renewable energy sources.
-In this case, miners would migrate to lower cost alternatives. Since you can't transport energy effectively over great distances (energy lost in high voltage lines), this depreciates the capital cost of building renewable energy sources in more remote places. Someone looking to utilize renewable energy sources, such as solar farms, to run a mining rig could invest in a remote location where renewable energy sources are more accessible (ie: large open plots of land or at a waterfall). This energy would have otherwise been untapped, and "wasted" by not harnessing it. These investments in infrastructure open up the ability to serve a local community, and can be paid off much faster from the economic payoff received from mining.
-
-The other side of the coin: Keep in mind that alternatives are not necessarily carbon-neutral either, such as the footprint of printing, handling, shipping and guarding fiat currencies. Annual spectacles of Christmas lights consume large amounts of energy, not to mention commercial products filling landfills, and governments engaging in war, leading to substantial levels of pollution.
-
-Oh, and the same thing was said about the internet itself. Early measures of Google's search traffic led to incorrectly extrapolating that data to the future, forming incorrect conclusions about the unmanageable "waste of energy" that would follow.
-
-### Mint NFTs {#mint-nfts}
-
-Want to turn your content into a NFT?
-
-- Foundation
-- Other platforms... -->
+<ButtonLink to="/eth2/">
+  More on Eth2
+</ButtonLink>
 
 ## Build with NFTs {#build-with-nfts}
 
@@ -407,8 +371,6 @@ Most NFTs are built using a consistent standard known as [ERC-721](/developers/d
 <Divider />
 
 ### Footnotes and sources {#footnotes-and-sources}
-
-<!-- TODO: after shipping this can form the basis of an energy efficiency page. I suspect this could also live under learn and just do some general myth-busting and supply stats about eth2 energy usage-->
 
 This explains how we arrived at our energy estimates above. These estimates apply to the network as a whole and are not just reserved for the process of creating, buying, or selling NFTs.
 

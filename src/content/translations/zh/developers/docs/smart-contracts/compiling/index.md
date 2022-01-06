@@ -40,7 +40,7 @@ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x41 JUMPI PUSH1 0x
 
 ABI 是一份 JSON 文件，描述了部署的合约及这个智能合约的函数。 这在 web2 和 web3 之间的鸿沟上架起交流的桥梁
 
-[Javascript 客户端库](/developers/docs/apis/javascript/) 将读取 **ABI** ，以便您在您的 web 应用程序的界面中调用您的智能合约。
+[Javascript 客户端库](/developers/docs/apis/javascript/) 将读取 **ABI**，以便您在 web 应用程序的界面中调用您的智能合约。
 
 以下是 ERC-20 代币合约的 ABI。 ERC-20 是您可以在以太坊交易的代币。
 

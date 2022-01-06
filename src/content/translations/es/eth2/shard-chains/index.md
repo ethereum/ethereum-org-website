@@ -5,16 +5,13 @@ lang: es
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
-summaryPoints:
-  [
-    "La fragmentación es una actualización de varias fases para mejorar la escalabilidad y la capacidad de Ethereum.",
-    "Las cadenas de fragmentos distribuyen la carga de la red en 64 nuevas cadenas.",
-    "Facilitan la ejecución de un nodo manteniendo bajos los requisitos de hardware.",
-    'Las hojas de ruta técnicas incluyen el trabajo en las cadenas de fragmentos en la "Fase 1" y potencialmente en la "Fase 2".',
-  ]
+summaryPoint1: La fragmentación es una actualización de varias fases para mejorar la escalabilidad y la capacidad de Ethereum.
+summaryPoint2: Las cadenas de fragmentos distribuyen la carga de la red en 64 nuevas cadenas.
+summaryPoint3: Facilitan la ejecución de un nodo manteniendo bajos los requisitos de hardware.
+summaryPoint4: Las hojas de ruta técnicas incluyen el trabajo en las cadenas de fragmentos en la "Fase 1" y potencialmente en la "Fase 2".
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
   Las cadenas de fragmentos deberían enviarse en algún momento de 2023, en función de lo rápido que progrese el trabajo después del lanzamiento de <a href="/eth2/beacon-chain/">la Cadena de Baliza</a>. Estos fragmentos le darán a Ethereum más capacidad para almacenar y acceder a datos, pero no se usarán para ejecutar código. Los detalles de eso aún se están aclarando.
 </UpgradeStatus>
 
@@ -58,7 +55,7 @@ El plan siempre fue añadir funcionalidad adicional a los fragmentos, para que s
 
 Vitalik Buterin, al hablar en el podcast Bankless, presentó 3 opciones potenciales que vale la pena discutir.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. No necesitar ejecución del estado {#state-execution-not-needed}
 

@@ -5,16 +5,13 @@ lang: fr
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
-summaryPoints:
-  [
-    "La fragmentation (ou sharding) est une mise à niveau en plusieurs phases qui améliorera l'évolutivité et la capacité d'Ethereum.",
-    "Les chaînes de fragments répartissent la charge du réseau sur 64 nouvelles chaînes.",
-    "Elles facilitent l'exécution d'un nœud en maintenant les exigences matérielles à un niveau faible.",
-    'Les feuilles de route techniques incluent des travaux sur les chaînes de fragments dans la "Phase 1" et potentiellement la "Phase 2".',
-  ]
+summaryPoint1: La fragmentation (ou sharding) est une mise à niveau en plusieurs phases qui améliorera l'évolutivité et la capacité d'Ethereum.
+summaryPoint2: Les chaînes de fragments répartissent la charge du réseau sur 64 nouvelles chaînes.
+summaryPoint3: Elles facilitent l'exécution d'un nœud en maintenant les exigences matérielles à un niveau faible.
+summaryPoint4: Les feuilles de route techniques incluent des travaux sur les chaînes de fragments dans la "Phase 1" et potentiellement la "Phase 2".
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     Les chaînes de fragments devraient être lancées courant 2023, en fonction de la rapidité avec laquelle le travail progresse après le lancement de <a href="/eth2/beacon-chain/"> la chaîne phare</a>. Ces fragments donneront à Ethereum une plus grande capacité à stocker et à accéder aux données, mais ils ne seront pas utilisés pour exécuter du code. Les détails sont encore en cours d'élaboration.
 </UpgradeStatus>
 
@@ -58,7 +55,7 @@ Le plan a toujours été d'ajouter des fonctionnalités supplémentaires aux fra
 
 Vitalik Buterin, en parlant au Bankless podcast, a présenté 3 options potentielles qui valent la peine d'être discutées.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. Exécution d'état non requise {#state-execution-not-needed}
 

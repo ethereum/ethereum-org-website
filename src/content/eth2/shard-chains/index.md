@@ -5,16 +5,13 @@ lang: en
 template: eth2
 sidebar: true
 image: ../../../assets/eth2/newrings.png
-summaryPoints:
-  [
-    "Sharding is a multi-phase upgrade to improve Ethereum’s scalability and capacity.",
-    "Shard chains spread the network's load across 64 new chains.",
-    "They make it easier to run a node by keeping hardware requirements low.",
-    "This upgrade is planned to follow the merge of Mainnet with the Beacon Chain.",
-  ]
+summaryPoint1: Sharding is a multi-phase upgrade to improve Ethereum’s scalability and capacity.
+summaryPoint2: Shard chains spread the network's load across 64 new chains.
+summaryPoint3: They make it easier to run a node by keeping hardware requirements low.
+summaryPoint4: This upgrade is planned to follow the merge of Mainnet with the Beacon Chain.
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     Shard chains should ship sometime in 2023, depending on how quickly work progresses after <a href="/eth2/merge/">the merge</a>. These shards will give Ethereum more capacity to store and access data, but they won’t be used for executing code. The details of that are still being figured out.
 </UpgradeStatus>
 
@@ -62,7 +59,7 @@ The plan was always to add extra functionality to shards, to make them more like
 
 Vitalik Buterin, when talking to Bankless podcast, presented 3 potential options that are worth discussing.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. State execution not needed {#state-execution-not-needed}
 
@@ -92,7 +89,9 @@ The Eth2 upgrades are all somewhat interrelated. So let’s recap how the shard 
 
 The Beacon Chain contains all the logic for keeping shards secure and synced up. The Beacon Chain will coordinate the stakers in the network, assigning them to shards they need to work on. And it will also facilitate communication between shards by receiving and storing shard transaction data that is accessible by other shards. This will give shards a snapshot of Ethereum’s state to keep everything up-to-date.
 
-<ButtonLink to="/eth2/beacon-chain/">The Beacon Chain</ButtonLink>
+<ButtonLink to="/eth2/beacon-chain/">
+  The Beacon Chain
+</ButtonLink>
 
 ### Shards and the merge {#shards-and-docking}
 
@@ -100,7 +99,9 @@ By the time additional shards are added, Ethereum Mainnet will already be secure
 
 It remains to be seen whether mainnet will exist as the only “smart” shard that can handle code execution – but either way, the decision to expand shards can be revisited as needed.
 
-<ButtonLink to="/eth2/merge/">The merge</ButtonLink>
+<ButtonLink to="/eth2/merge/">
+  The merge
+</ButtonLink>
 
 <Divider />
 

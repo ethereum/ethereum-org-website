@@ -5,17 +5,13 @@ lang: hi
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    "अंततः इथेरियम मेननेट",
-    'Eth2 अपग्रेड के बाकी हिस्सों के साथ "डॉक" करेगा।',
-    'इस डॉकिंग में "Eth1" मेननेट को Eth2 बीकन चेन और शार्डिंग सिस्टम के साथ मर्ज किया जाएगा।',
-    "यह इथेरियम के लिए कार्य-के-प्रमाण और स्टेक-के-प्रमाण के लिए पूर्ण संक्रमण के अंत को चिन्हित करेगा।",
-    'आप इसे तकनीकी रोडमैप पर" चरण 1.5 "के रूप में जान सकते हैं।',
-  ]
+summaryPoint1: अंततः इथेरियम मेननेट अपग्रेड के बाकी हिस्सों के साथ "डॉक" करेगा।
+summaryPoint2: इस डॉकिंग में "Eth1" मेननेट को Eth2 बीकन चेन और शार्डिंग सिस्टम के साथ मर्ज किया जाएगा।
+summaryPoint3: यह इथेरियम के लिए कार्य-के-प्रमाण और स्टेक-के-प्रमाण के लिए पूर्ण संक्रमण के अंत को चिन्हित करेगा।
+summaryPoint4: आप इसे तकनीकी रोडमैप पर" चरण 1.5 "के रूप में जान सकते हैं।
 ---
 
-<UpgradeStatus date="~Q1/Q2 2022">
+<UpgradeStatus dateKey="page-eth2-upgrades-merge-date">
     यह अपग्रेड शार्ड चेन के आगमन के बाद होगा। लेकिन यही वह क्षण है, जहां <a href="/eth2/vision/">Eth2 विज़न</a> पूरी तरह से साकार हो जाते हैं - पूरे नेटवर्क का समर्थन करने के साथ अधिक स्केलेबिलिटी, सुरक्षा और स्थिरता।
 </UpgradeStatus>
 
@@ -30,22 +26,6 @@ summaryPoints:
 तैयार होने पर, इथेरियम मेननेट बीकन चेन के साथ "डॉक" करेगा, अपना खुद का शार्ड बन जाएगा, जिसके लिए [कार्य का प्रमाण](/developers/docs/consensus-mechanisms/pow/) के बजाय स्टेक-के-प्रमाण का उपयोग किया जाता है.
 
 मेननेट स्टेक-के-प्रमाण सिस्टम में स्मार्ट अनुबंध चलाने की क्षमता के साथ ही इथेरियम का पूरा इतिहास और वर्तमान स्थिति लाएगा, जिससे कि यह सुनिश्चित किया जा सके कि संक्रमण सभी ETH धारकों और उपयोगकर्ताओं के लिए सहज होता हो।
-
-<!-- ### Improving Mainnet
-
-Before Mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
-
-These include Improvements for
-
-- **End users**: like [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) which changes the way users bid for blockspace. In other words, making transaction fees more efficient for end users.
-- **Client runners**: making running clients more sustainable by capping disk space requirements.
-- **Developers**: upgrading the EVM to be more flexible.
-
-Plus many more.
-
-[More on Ethereum1.x](/learn/#eth-1x)
-
-These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 
 ## डॉकिंग के बाद {#after-the-docking}
 

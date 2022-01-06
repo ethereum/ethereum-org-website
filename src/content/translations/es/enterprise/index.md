@@ -102,7 +102,6 @@ Ejemplos de soluciones L2 (de Capa 2) que están listas para la producción o qu
   - [Skale](https://skale.network)
   - [Red POA](https://www.poa.network/)
 - Soluciones híbridas que combinan propiedades de múltiples categorías
-  - [Offchain Labs Arbitrum SCSC](https://https://offchainlabs.com/arbitrum.pdf)
   - [Celer](https://celer.network)
 
 ## Aplicaciones empresariales en vivo en la red principal {#enterprise-live-on-mainnet}

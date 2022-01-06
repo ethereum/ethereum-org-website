@@ -117,8 +117,6 @@ Chiamando Attacker.beginAttack() si avvierà un ciclo del tipo:
 
 Chiamando Attacker.beginAttack con 1 ETH si attacca Victim con codice rientrante, prelevando più ETH rispetto alla disponibilità (prendendoli dai saldi di altri utenti e rendendo il contratto Victim non collateralizzato)
 
-<!-- TODO create a subpage related to re-entrancy & move this content there -->
-
 ### Come gestire il codice rientrante (in modo sbagliato) {#how-to-deal-with-re-entrancy-the-wrong-way}
 
 Si potrebbe pensare di difendersi dal codice rientrante semplicemente impedendo a qualsiasi Smart Contract di interagire con il proprio codice. Se cerchi stackoverflow, trovi questo frammento di codice con tantissimi voti a favore:

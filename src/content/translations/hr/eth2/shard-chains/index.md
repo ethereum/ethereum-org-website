@@ -5,16 +5,13 @@ lang: hr
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
-summaryPoints:
-  [
-    "Razdjeljivanje je nadogradnja u više faza za poboljšanje skalabilnosti i kapaciteta Ethereuma.",
-    "Lanci djelića šire opterećenje mreže na 64 nova lanca.",
-    "Olakšavaju pokretanje čvora održavajući niske hardverske zahtjeve.",
-    "Tehnički planovi uključuju rad na lancima djelića u „fazi 1” i potencijalno u „fazi 2”.",
-  ]
+summaryPoint1: Razdjeljivanje je nadogradnja u više faza za poboljšanje skalabilnosti i kapaciteta Ethereuma.
+summaryPoint2: Lanci djelića šire opterećenje mreže na 64 nova lanca.
+summaryPoint3: Olakšavaju pokretanje čvora održavajući niske hardverske zahtjeve.
+summaryPoint4: Tehnički planovi uključuju rad na lancima djelića u „fazi 1” i potencijalno u „fazi 2”.
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     Lanci djelića trebali bi se isporučiti u 2023. godini, ovisno o tome koliko će brzo napredovati radovi nakon pokretanja nadogradnje <a href="/eth2/beacon-chain/"> Beacon Chain </a>. Ti će djelići Ethereumu dati veći kapacitet za pohranu i pristup podacima, ali neće se upotrebljavati za izvršavanje koda. Pojedinosti o tome još se otkrivaju.
 </UpgradeStatus>
 
@@ -58,7 +55,7 @@ Plan je uvijek bio dodati dodatnu funkcionalnost djelićima, kako bi postali sli
 
 Vitalik Buterin, u podcastu Bankless, predstavio je 3 potencijalne opcije o kojima vrijedi razgovarati.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. Nije potrebno izvršenje stanja {#state-execution-not-needed}
 

@@ -31,6 +31,7 @@ import TranslationsInProgress from "../components/TranslationsInProgress"
 import SectionNav from "../components/SectionNav"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
+import { getSummaryPoints } from "../utils/getSummaryPoints"
 import {
   Divider,
   Paragraph,
@@ -38,6 +39,7 @@ import {
   Header4,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
+import YouTube from "../components/YouTube"
 
 const Page = styled.div`
   display: flex;
@@ -137,7 +139,6 @@ const H2 = styled.h2`
 
   /* Prevent nav overlap */
   &:before {
-    content: "";
     display: block;
     height: 120px;
     margin-top: -120px;
@@ -181,7 +182,6 @@ const H3 = styled.h3`
 
   /* Prevent nav overlap */
   &:before {
-    content: "";
     display: block;
     height: 120px;
     margin-top: -120px;
@@ -247,6 +247,7 @@ const components = {
   Eth2BeaconChainActions,
   Eth2ShardChainsList,
   Eth2DockingList,
+  YouTube,
 }
 
 const Title = styled.h1`
@@ -393,7 +394,7 @@ const dropdownLinks = {
   ],
 }
 
-const Eth2Page = ({ data, data: { mdx } }) => {
+const Eth2Page = ({ data: { mdx } }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang)
   const tocItems = mdx.tableOfContents.items
@@ -402,6 +403,8 @@ const Eth2Page = ({ data, data: { mdx } }) => {
   const lastUpdatedDate = mdx.parent.fields
     ? mdx.parent.fields.gitLogLatestDate
     : mdx.parent.mtime
+
+  const summaryPoints = getSummaryPoints(mdx.frontmatter)
 
   return (
     <Container>
@@ -412,7 +415,7 @@ const Eth2Page = ({ data, data: { mdx } }) => {
           <Title>{mdx.frontmatter.title}</Title>
           <SummaryBox>
             <ul>
-              {mdx.frontmatter.summaryPoints.map((point, idx) => (
+              {summaryPoints.map((point, idx) => (
                 <SummaryPoint key={idx}>{point}</SummaryPoint>
               ))}
             </ul>
@@ -478,7 +481,10 @@ export const eth2PageQuery = graphql`
         lang
         sidebar
         sidebarDepth
-        summaryPoints
+        summaryPoint1
+        summaryPoint2
+        summaryPoint3
+        summaryPoint4
         image {
           childImageSharp {
             gatsbyImageData(

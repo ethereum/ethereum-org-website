@@ -474,12 +474,9 @@ const WhatIsEthereumPage = ({ data }) => {
         <CardContainer>
           <StyledCallout
             image={getImage(data.developers)}
-            title={translateMessageId("page-what-is-ethereum-build", intl)}
+            titleKey="page-what-is-ethereum-build"
             alt={translateMessageId("page-what-is-ethereum-alt-img-lego", intl)}
-            description={translateMessageId(
-              "page-what-is-ethereum-build-desc",
-              intl
-            )}
+            descriptionKey="page-what-is-ethereum-build-desc"
           >
             <div>
               <ButtonLink to="/developers/">
@@ -489,12 +486,9 @@ const WhatIsEthereumPage = ({ data }) => {
           </StyledCallout>
           <StyledCallout
             image={getImage(data.community)}
-            title={translateMessageId("page-what-is-ethereum-community", intl)}
+            titleKey="page-what-is-ethereum-community"
             alt={translateMessageId("page-what-is-ethereum-alt-img-comm", intl)}
-            description={translateMessageId(
-              "page-what-is-ethereum-comm-desc",
-              intl
-            )}
+            descriptionKey="page-what-is-ethereum-comm-desc"
           >
             <div>
               <ButtonLink to="/community/">

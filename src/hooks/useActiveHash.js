@@ -34,7 +34,7 @@ export const useActiveHash = (itemIds, rootMargin = `0% 0% -80% 0%`) => {
         }
       })
     }
-  }, [])
+  }, [itemIds, rootMargin])
 
   return activeHash
 }

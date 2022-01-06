@@ -59,7 +59,7 @@ const StyledCard = styled(ActionCard)`
   }
 `
 
-export const StyledGetInvolvedCard = styled(Card)`
+const StyledGetInvolvedCard = styled(Card)`
   margin: 1rem;
   padding: 1.5rem;
   flex: 1 0 30%;
@@ -183,15 +183,6 @@ const Subtitle = styled.div`
 
 const H2 = styled.h2`
   margin-top: 0rem;
-`
-
-const H3 = styled.h3`
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  text-align: left;
-  margin-top: 0;
-  margin-bottom: 1rem;
 `
 
 const OpenSourceContainer = styled.div`
@@ -564,12 +555,9 @@ const CommunityPage = ({ data }) => {
         <CardContainer>
           <StyledCallout
             image={getImage(data.eth)}
-            title={translateMessageId("page-community-get-eth-title", intl)}
+            titleKey="page-community-get-eth-title"
             alt={translateMessageId("page-community-get-eth-alt", intl)}
-            description={translateMessageId(
-              "page-community-get-eth-description",
-              intl
-            )}
+            descriptionKey="page-community-get-eth-description"
           >
             <div>
               <ButtonLink to="/get-eth/">
@@ -579,15 +567,9 @@ const CommunityPage = ({ data }) => {
           </StyledCallout>
           <StyledCallout
             image={getImage(data.doge)}
-            title={translateMessageId(
-              "page-community-explore-dapps-title",
-              intl
-            )}
+            titleKey="page-community-explore-dapps-title"
             alt={translateMessageId("page-community-explore-dapps-alt", intl)}
-            description={translateMessageId(
-              "page-community-explore-dapps-description",
-              intl
-            )}
+            descriptionKey="page-community-explore-dapps-description"
           >
             <div>
               <ButtonLink to="/dapps/">

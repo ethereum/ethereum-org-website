@@ -275,7 +275,7 @@ In pratica, però, gli emittenti non sono sempre affidabili e in alcuni casi l'i
 
 ### Identità e sistemi di reputazione {#identity-and-reputation-systems}
 
-La prima criptovaluta alternativa, [Namecoin](http://namecoin.org/), tentò di usare una blockchain in stile Bitcoin per fornire un sistema di registrazione dei nomi, dove gli utenti potevano registrare i propri nomi in un database pubblico insieme ad altri dati. Il caso d'uso principale è per un sistema [DNS](https://en.wikipedia.org/wiki/Domain_Name_System), la mappatura tra nomi di dominio come "Bitcoin.org" (o, nel caso di Namescoin, "Bitcoin.bit") e un indirizzo IP. Altri casi d'uso includono l'autenticazione email e sistemi di reputazione potenzialmente più avanzati. Questo è il contratto di base per fornire un sistema di registrazione dei nomi in stile Namecoin su Ethereum:
+La prima criptovaluta alternativa, [Namecoin](http://namecoin.org/), tentò di usare una blockchain in stile Bitcoin per fornire un sistema di registrazione dei nomi, dove gli utenti potevano registrare i propri nomi in un database pubblico insieme ad altri dati. Il caso d'uso principale è per un sistema [DNS](https://wikipedia.org/wiki/Domain_Name_System), la mappatura tra nomi di dominio come "Bitcoin.org" (o, nel caso di Namescoin, "Bitcoin.bit") e un indirizzo IP. Altri casi d'uso includono l'autenticazione email e sistemi di reputazione potenzialmente più avanzati. Questo è il contratto di base per fornire un sistema di registrazione dei nomi in stile Namecoin su Ethereum:
 
     def register(name, value):
         if !self.storage[name]:
@@ -301,7 +301,7 @@ Segue una descrizione di massima di come programmare una DAO. Il design più sem
 - `[1,i]` per registrare un voto a favore della proposta `i`
 - `[2,i]` per finalizzare la proposta `i` se sono stati dati abbastanza voti
 
-Il contratto avrebbe poi clausole per ognuno dei punti. Manterrebbe un registro di tutte le modifiche aperte nello storage, insieme a una lista di chi le ha votate. Avrebbe anche un elenco di tutti i membri. Quando un cambiamento dello storage arriva ai due terzi dei membri che lo votano, una transazione finalizzante potrebbe eseguire la modifica. Uno scheletro più sofisticato avrebbe anche una capacità di voto integrata per caratteristiche come l'invio di una transazione, l'aggiunta e la rimozione di membri e potrebbe persino assicurare la delega del voto in stile [democrazia liquida](https://en.wikipedia.org/wiki/Delegative_democracy) (cioè chiunque può delegare qualcuno a votare per conto suo, e la delega è transitiva, quindi se A delega B e B delega C, allora C determina il voto di A). Questa progettazione consentirebbe alla DAO di crescere organicamente come community decentralizzata, consentendo di delegare agli specialisti il compito di escludere i membri sebbene, a differenza di quanto avviene nel "sistema corrente", gli specialisti possono facilmente comparire e scomparire nel tempo quando i singoli membri della community cambiano i loro allineamenti.
+Il contratto avrebbe poi clausole per ognuno dei punti. Manterrebbe un registro di tutte le modifiche aperte nello storage, insieme a una lista di chi le ha votate. Avrebbe anche un elenco di tutti i membri. Quando un cambiamento dello storage arriva ai due terzi dei membri che lo votano, una transazione finalizzante potrebbe eseguire la modifica. Uno scheletro più sofisticato avrebbe anche una capacità di voto integrata per caratteristiche come l'invio di una transazione, l'aggiunta e la rimozione di membri e potrebbe persino assicurare la delega del voto in stile [democrazia liquida](https://wikipedia.org/wiki/Delegative_democracy) (cioè chiunque può delegare qualcuno a votare per conto suo, e la delega è transitiva, quindi se A delega B e B delega C, allora C determina il voto di A). Questa progettazione consentirebbe alla DAO di crescere organicamente come community decentralizzata, consentendo di delegare agli specialisti il compito di escludere i membri sebbene, a differenza di quanto avviene nel "sistema corrente", gli specialisti possono facilmente comparire e scomparire nel tempo quando i singoli membri della community cambiano i loro allineamenti.
 
 Un modello alternativo si riferirebbe a una corporazione decentralizzata, dove ogni account può avere zero o più quote e per prendere una decisione sono necessari due terzi delle quote. Uno scheletro completo coinvolgerebbe la gestione delle risorse, la possibilità di fare un'offerta di acquisto o vendita di quote, nonché di accettare offerte (preferibilmente con un meccanismo di abbinamento degli ordini all'interno del contratto). Esisterebbe anche una delega in stile democrazia liquida, generalizzando il concetto di "consiglio di amministrazione".
 
@@ -369,7 +369,7 @@ Tuttavia, nella realtà, ci sono diverse deviazioni importanti da queste ipotesi
 3.  La distribuzione di potenza di mining nella pratica può risultare non affatto equa.
 4.  Sono presenti speculatori, avversari politici e squilibrati la cui funzione di utilità include il causare danni alla rete, che possono abilmente configurare contratti con costo molto inferiore rispetto al costo pagato da altri nodi di verifica.
 
-(1) favorisce una tendenza per il miner a includere meno transazioni e (2) aumenta `NC`; di conseguenza, questi due effetti si annullano a vicenda almeno parzialmente.<sup>[Come?](https://github. om/ethereum/wiki/issues/447#issuecomment-316972260)</sup> (3) e (4) sono il problema principale; per risolverli semplicemente stabiliamo un limite fluttuante: nessun blocco può avere un numero di operazioni superiore a `BLK_LIMIT_FACTOR` volte la media mobile esponenziale a lungo termine. Nello specifico:
+(1) favorisce una tendenza per il miner a includere meno transazioni e (2) aumenta `NC`; di conseguenza, questi due effetti si annullano a vicenda almeno parzialmente.<sup>[Come?](https://github.com/ethereum/wiki/issues/447#issuecomment-316972260)</sup> (3) e (4) sono il problema principale; per risolverli semplicemente stabiliamo un limite fluttuante: nessun blocco può avere un numero di operazioni superiore a `BLK_LIMIT_FACTOR` volte la media mobile esponenziale a lungo termine. Nello specifico:
 
     blk.oplimit = floor((blk.parent.oplimit \* (EMAFACTOR - 1) +
     floor(parent.opcount \* BLK\_LIMIT\_FACTOR)) / EMA\_FACTOR)
@@ -464,8 +464,6 @@ Il concetto di funzione di transizione arbitraria tra stati implementato dal pro
 
 ## Note e ulteriori letture {#notes-and-further-reading}
 
-<!--Invisible HTML comment used for navigation with CTRL+F footnote or fn.-->
-
 ### Note {#notes}
 
 1.  Un lettore con esperienza potrebbe far notare che in realtà un indirizzo Bitcoin è l'hash della chiave pubblica della curva ellittica e non la chiave pubblica stessa. Tuttavia, in realtà è perfettamente legittimo dal punto di vista della terminologia della crittografia fare riferimento all'hash pubkey hash come chiave pubblica. La crittografia di Bitcoin infatti può essere considerata un algoritmo di firma digitale personalizzato, dove la chiave pubblica è costituita dall'hash della pubkey ECC, la firma è costituita dalla pubkey ECC concatenata con la firma ECC e l'algoritmo di verifica comporta il controllo della pubkey ECC nella firma rispetto all'hash della pubkey ECC fornito come chiave pubblica e quindi la verifica della firma ECC sulla base della pubkey ECC.
@@ -485,13 +483,13 @@ Il concetto di funzione di transizione arbitraria tra stati implementato dal pro
 6.  [Secure property titles with owner authority](http://szabo.best.vwh.net/securetitle.html)
 7.  [Bitcoin whitepaper](http://bitcoin.org/bitcoin.pdf)
 8.  [Namecoin](https://namecoin.org/)
-9.  [Zooko's triangle](https://en.wikipedia.org/wiki/Zooko's_triangle)
+9.  [Zooko's triangle](https://wikipedia.org/wiki/Zooko's_triangle)
 10. [Colored coins whitepaper](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)
 11. [Mastercoin whitepaper](https://github.com/mastercoin-MSC/spec)
 12. [Decentralized autonomous corporations, Bitcoin Magazine](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/)
 13. [Simplified payment verification](https://en.bitcoin.it/wiki/Scalability#Simplifiedpaymentverification)
-14. [Merkle trees](https://en.wikipedia.org/wiki/Merkle_tree)
-15. [Patricia trees](https://en.wikipedia.org/wiki/Patricia_tree)
+14. [Merkle trees](https://wikipedia.org/wiki/Merkle_tree)
+15. [Patricia trees](https://wikipedia.org/wiki/Patricia_tree)
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ and Autonomous Agents, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Mike Hearn on Smart Property at Turing Festival](http://www.youtube.com/watch?v=Pu4PAMFPo5Y)

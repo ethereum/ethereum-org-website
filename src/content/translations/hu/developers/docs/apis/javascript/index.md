@@ -69,11 +69,6 @@ Amint be van állítva, lekérdezéseket indíthatsz a blokkláncon a következ�
 - hálózati azonosító
 - és még sok mást...
 
-<!--- #### Try it
-
-This remix tutorial will show you [how to query the blockchain using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
-
 ### Tárca funkcionalitás {#wallet-functionality}
 
 Ezek a könyvtárak funkcionalitást adnak, hogy tárcákat hozz létre, kulcsokat kezelj és tranzakciókat írj alá.
@@ -216,11 +211,6 @@ Ez azt jelenti, hogy:
 - Megbecsülheted a gast, melyet egy metódus végrehajtás fog használni, amikor lefut az EVM-en
 - Telepíthetsz egy szerződést
 - És még sok mást...
-
-<!--- #### Try it
-
-This remix tutorial will show you [how to query a contract using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
 
 ### Használati függvények {#utility-functions}
 

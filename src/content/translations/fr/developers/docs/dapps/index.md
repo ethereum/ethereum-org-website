@@ -28,8 +28,6 @@ Pour présenter les DApps, nous devons tout d'abord présenter les contrats inte
 
 Un contrat intelligent est un code présent sur la blockchain Ethereum qui fonctionne exactement comme programmé. Une fois déployé sur le réseau, vous ne pouvez pas le modifier. Les DApps peuvent être décentralisées car elles sont contrôlées par la logique rédigée dans le contrat, pas par un individu ni une entreprise. Cela signifie que vous devez concevoir vos contrats très soigneusement et les tester de façon approfondie.
 
-<!--Benefits and implications provided by Brian Gu)-->
-
 ## Avantages du développement de DApps {#benefits-of-dapp-development}
 
 - **Zéro temps d'arrêt** : une fois que le contrat intelligent au cœur d'une application est déployé et présent sur la blockchain, le réseau dans son ensemble sera toujours en mesure de servir les clients qui cherchent à interagir avec le contrat. Les acteurs malveillants ne peuvent donc pas lancer d'attaques par déni de service ciblées sur les DApps.
@@ -40,31 +38,13 @@ Un contrat intelligent est un code présent sur la blockchain Ethereum qui fonct
 
 ## Implications du développement de DApps {#implications-of-dapp-development}
 
-<!-- - Transparency – transactions that trigger dapp functionality are public
-- Open source
-- Cost of storage – contracts are often only small percentages of the dapp. They are stored on-chain and this storage needs to be paid for, so it can be expensive.
- -->
-
 - **Maintenance** : Les DApps peuvent être plus difficiles à maintenir car les données et le code publiés sur la blockchain sont plus difficiles à modifier. Il est difficile pour les développeurs de mettre à jour leurs DApps (ou les données sous-jacentes stockées par une DApp) une fois qu'elles sont déployées , même si des bogues ou des risques de sécurité sont identifiés dans une version antérieure.
 - **Performances exigeantes et coûteuses** : Les exigences et les coûts pour atteindre les performances idéales sont très élevés et toute évolutivité est vraiment difficile. Pour atteindre le niveau de sécurité, d'intégrité, de transparence et de fiabilité auquel Ethereum aspire, chaque nœud exécute et stocke chaque transactions. En plus, la preuve de travail prend aussi du temps. Un rapide calcul permet d'estimer le surcoût à environ 1 000 000 fois celui du calcul standard actuel.
 - **Congestion du réseau** : Dans le modèle actuel, si une DApp utilise trop de ressources de calcul, l'ensemble du réseau est sauvegardé. Actuellement, le réseau ne peut traiter qu'une dizaine de transactions par seconde. Si les transactions sont envoyées plus rapidement que cela, le groupe de transactions non confirmées peut rapidement augmenter.
 - **Expérience utilisateur** : Il pourrait s'avérer plus difficile de concevoir des expériences conviviales. L'utilisateur moyen pourrait trouver trop difficile de mettre en place la pile d'outils nécessaire pour interagir avec la blockchain de façon réellement sécurisée.
+- **Centralisation** : Les solutions orientées utilisateurs et développeurs basées sur les premières couches d'Ethereum peuvent finir par ressembler à des services centralisés quoiqu'il arrive. Par exemple, ces services peuvent conserver des clés ou toutes autres données sensibles sur un serveur latéral, servir un frontend utilisant un serveur centralisé ou encore exécuter une importante logique métier sur un serveur centralisé avant de l'écrire sur la blockchain. Cela élimine de nombreux avantages de la blockchain (voire tous) par rapport au modèle traditionnel.
 
-  - **Centralisation** : Les solutions orientées utilisateurs et développeurs basées sur les premières couches d'Ethereum peuvent finir par ressembler à des services centralisés quoiqu'il arrive. Par exemple, ces services peuvent conserver des clés ou toutes autres données sensibles sur un serveur latéral, servir un frontend utilisant un serveur centralisé ou encore exécuter une importante logique métier sur un serveur centralisé avant de l'écrire sur la blockchain. Cela élimine de nombreux avantages de la blockchain (voire tous) par rapport au modèle traditionnel.<!-- ## Types of dapp
-
-- Involving money
-- Involving money and something else
-- Other, including decentralized autonomous organizations
-
----==crwdHRulesLBB_2_BBsuleRHdwrc==
-
-The application has to be open-source, operate autonomously, and can not be controlled by any one entity.
-All data and record must be cryptographically stored in a public, decentralized blockchain.
-The app must use a cryptographic token, also referred to as an App Coin, to access the application.
-Tokens must be generated in order to prove the value nodes that contribute to the application.
-
----==crwdHRulesLBB_2_BBsuleRHdwrc==
--->## Outils pour DApp {#dapp-tools}
+## Outils pour DApp {#dapp-tools}
 
 **One Click Dapp** **_- Outil FOSS pour générer des interfaces DApp à partir d'une ABI_**
 

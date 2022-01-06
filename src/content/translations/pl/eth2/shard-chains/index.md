@@ -5,16 +5,13 @@ lang: pl
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/newrings.png
-summaryPoints:
-  [
-    "Sharding jest wieloetapowym uaktualnieniem, które polega na zwiększeniu skalowalności i pojemności.",
-    "Łańcuchy odłamkowe rozkładają obciążenie sieci na 64 nowe łańcuchy.",
-    "Sprawiają że łatwiej uruchamiać węzły przez zmniejszenie wymagań sprzętowych",
-    "Techniczne wytyczne zawierają pracę nad łańcuchami szczątkowymi podczas „Fazy 1” i potencjalnie „Fazy 2”",
-  ]
+summaryPoint1: Sharding jest wieloetapowym uaktualnieniem, które polega na zwiększeniu skalowalności i pojemności.
+summaryPoint2: Łańcuchy odłamkowe rozkładają obciążenie sieci na 64 nowe łańcuchy.
+summaryPoint3: Sprawiają że łatwiej uruchamiać węzły przez zmniejszenie wymagań sprzętowych
+summaryPoint4: Techniczne wytyczne zawierają pracę nad łańcuchami szczątkowymi podczas „Fazy 1” i potencjalnie „Fazy 2”
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     Łańcuchy odłamkowe powinny być dostarczone około 2023 r., w zależności od tego, jak będą postępowały prace po wdrożeniu <a href="/eth2/beacon-chain/">łańcucha śledzącego</a>. Te fragmentacje dadzą Ethereum większą pojemność przechowywania i dostępu do danych, ale nie będzie można ich używać do wykonywania kodu. Szczegóły tego są wciąż opracowywane.
 </UpgradeStatus>
 
@@ -58,7 +55,7 @@ Plan zawsze zakładał dodanie dodatkowej funkcjonalności do odłamków, aby uc
 
 Vitalik Buterin, podczas rozmowy w ramach podcastu Bankless, przedstawił 3 potencjalne opcje, które warto przedyskutować.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. Wykonywanie stanu nie jest wymagane {#state-execution-not-needed}
 

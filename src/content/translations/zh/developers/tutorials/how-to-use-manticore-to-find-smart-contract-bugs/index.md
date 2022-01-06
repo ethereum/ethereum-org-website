@@ -69,11 +69,11 @@ python3 script.py
 为了了解 DSE 如何工作，请考虑以下示例：
 
 ```solidity
-f(uint a).
+function f(uint a){
 
-  if (aa== 65) }
-      // bug 存在
-
+  if (a == 65) {
+      // A bug is present
+  }
 
 }
 ```
@@ -92,9 +92,9 @@ Manticore 允许完全控制每个路径的所有执行情况。 因此，它允
 请考虑下面的示例：
 
 ```solidity
-function unsafe_add(uint a, uint b) returns(uint c)。
-  c = a + b；// no overflow protection
-  return c；
+function unsafe_add(uint a, uint b) returns(uint c){
+  c = a + b; // no overflow protection
+  return c;
 }
 ```
 
@@ -113,8 +113,8 @@ function unsafe_add(uint a, uint b) returns(uint c)。
 ```solidity
 function safe_add(uint a, uint b) returns(uint c){
   c = a + b;
-  require(c->=a);
-  require(c)>=b);
+  require(c>=a);
+  require(c>=b);
   return c;
 }
 ```
@@ -342,7 +342,7 @@ contract Simple {
 执行的每个路径都有其区块链的状态。 此状态要么是准备就绪，要么是被终止了，也就是说，它达到了 THROW 或 REVERT 指令状态。
 
 - [m.ready_states](https://manticore.readthedocs.io/en/latest/states.html#accessing): 已准备就绪状态列表（他们没有执行 REVERT/INVALID）
-- [m.killed_states](https://manticore.readthedocs.io/en/latest/states.html#accessings)：已准备就绪状态列表（他们没有执行 REVERT/INVALID）
+- [m.killed_states](https://manticore.readthedocs.io/en/latest/states.html#accessings)：终止状态列表
 - [m.all_states](https://manticore.readthedocs.io/en/latest/states.html#accessings)：所有状态
 
 ```python

@@ -5,16 +5,13 @@ lang: pl
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/merge.png
-summaryPoints:
-  [
-    "Ostatecznie obecna sieć główna Ethereum zostanie połączona (zadokowana) z resztą ulepszeń zawartych w Eth2.",
-    "Dokowanie połączy główną sieć „Eth1” z łańcuchem Eth2 i systemem fragmentacji łańcucha sieci.",
-    "To będzie oznaczało koniec systemu weryfikacji opartego na proof-of-work oraz pełne przejście na system oparty o proof-of-stake",
-    "Być może znasz ten etap jako „Faza 1.5” z technicznego harmonogramu.",
-  ]
+summaryPoint1: Ostatecznie obecna sieć główna Ethereum zostanie połączona (zadokowana) z resztą ulepszeń zawartych w Eth2.
+summaryPoint2: Dokowanie połączy główną sieć „Eth1” z łańcuchem Eth2 i systemem fragmentacji łańcucha sieci.
+summaryPoint3: To będzie oznaczało koniec systemu weryfikacji opartego na proof-of-work oraz pełne przejście na system oparty o proof-of-stake
+summaryPoint4: Być może znasz ten etap jako „Faza 1.5” z technicznego harmonogramu.
 ---
 
-<UpgradeStatus date="~Q1/Q2 2022">
+<UpgradeStatus dateKey="page-eth2-upgrades-merge-date">
     To ulepszenie nastąpi po uruchomieniu łańcuchów fragmentowych. Będzie to chwila, w której <a href="/eth2/vision/">wizja Eth2</a> zostanie w pełni zrealizowana — bardziej skalarna, bezpieczna i po równi rozwijana z inwestycją wspierającą całą sieć.
 </UpgradeStatus>
 
@@ -29,22 +26,6 @@ Wyobraź sobie że Ethereum jest statkiem kosmicznym, który nie jest gotowy na 
 Kiedy sieć główna Ethereum będzie gotowa, zostanie „zadokowana” z łańcuchem śledzącym, stając się jego własnym odłamkiem używającym proof-of-stake zamiast [proof of work](/developers/docs/consensus-mechanisms/pow/).
 
 Główna sieć stworzy możliwość włączenia inteligentnych kontraktów do systemów proof-of-stake oraz pełnej historii i obecnego stanu Ethereum, aby zapewnić, że przejście jest płynne w przypadku wszystkich posiadaczy i użytkowników ETH.
-
-<!-- ### Improving mainnet
-
-Before mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
-
-These include Improvements for
-
-- **End users**: like [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) which changes the way users bid for blockspace. In other words, making transaction fees more efficient for end users.
-- **Client runners**: making running clients more sustainable by capping disk space requirements.
-- **Developers**: upgrading the EVM to be more flexible.
-
-Plus many more.
-
-[More on Ethereum1.x](/learn/#eth-1x)
-
-These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 
 ## Po dokowaniu {#after-the-docking}
 

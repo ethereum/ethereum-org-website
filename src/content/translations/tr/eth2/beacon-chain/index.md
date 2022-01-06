@@ -5,15 +5,13 @@ lang: tr
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/core.png
-summaryPoints:
-  [
-    "İşaret (beacon) zinciri bugün kullanmakta olduğumuz Ethereum ile ilgili hiçbir şeyi değiştirmez.",
-    "Ağı koordine edecektir.",
-    'Ethereum ekosistemine pay ispatını (proof of stake) getirir. Bunu teknik yol haritalarındaki "0 Aşaması" olarak tanıyor olabilirsiniz.',
-  ]
+summaryPoint1: İşaret (beacon) zinciri bugün kullanmakta olduğumuz Ethereum ile ilgili hiçbir şeyi değiştirmez.
+summaryPoint2: Ağı koordine edecektir.
+summaryPoint3: Ethereum ekosistemine pay ispatını (proof of stake) getirir.
+summaryPoint4: Bunu teknik yol haritalarındaki "0 Aşaması" olarak tanıyor olabilirsiniz.
 ---
 
-<UpgradeStatus isShipped date="Sevk edildi!">
+<UpgradeStatus isShipped dateKey="page-eth2-upgrades-beacon-date">
     İşaret (Beacon) Zinciri 1 Aralık saat 12:00'de (UTC) başlatılmıştır. Daha fazla bilgi için, bk. <a href="https://beaconscan.com/">verileri keşfet</a>. Zincirin doğrulanmasını isterseniz, <a href="/eth2/staking/">ETH'nizi stake edebilirsiniz</a>.
 </UpgradeStatus>
 

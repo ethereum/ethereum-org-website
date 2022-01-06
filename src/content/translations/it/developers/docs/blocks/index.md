@@ -11,8 +11,6 @@ I blocchi sono un insieme di transazioni che contengono un hash del blocco prece
 
 Quello dei blocchi è un argomento piuttosto basico. Per aiutarti però a comprendere meglio questa pagina, consigliamo di leggere prima [Account](/developers/docs/accounts/), [Transazioni](/developers/docs/transactions/) e la nostra [introduzione a Ethereum](/developers/docs/intro-to-ethereum/).
 
-<!--The content below was provided by Brian Gu with exception of "what's in a block"-->
-
 ## Perché i blocchi? {#why-blocks}
 
 Per assicurare che tutti i partecipanti della rete Ethereum siano sincronizzati e concordino sulla cronologia esatta delle transazioni, raggruppiamo le transazioni in blocchi. Significa che decine (o centinaia) di transazioni vengono inviate, approvate e sincronizzate in una volta sola.
@@ -27,7 +25,9 @@ Per preservare la cronologia delle transazioni, i blocchi sono ordinati in modo 
 
 Dopo essere stato realizzato (si parla di mining) da alcuni miner della rete, un blocco viene propagato al resto della rete; tutti i nodi vengono aggiunti al blocco alla fine della relativa blockchain e il processo di mining continua. Il processo esatto di costruzione dei blocchi (mining) e il processo di invio/consenso è attualmente specificato nel protocollo di Ethereum "proof-of-work".
 
-### Demo visiva {#a-visual-demo} <iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+### Demo visiva {#a-visual-demo}
+
+<YouTube id="_160oMzblY8" />
 
 ## Protocollo proof-of-work {#proof-of-work-protocol}
 

@@ -117,8 +117,6 @@ Wywołanie Attacker.beginAttack() rozpocznie cykl, który wygląda następująco
 
 Wywołanie Attacker.beginAttack z 1 ETH spowoduje atak ponownego wejścia na ofiarę, wycofanie więcej ETH niż zostało dostarczone (pobrane z sald innych użytkowników, powodując, że kontrakt ofiary stanie się niewystarczająco zabezpieczony)
 
-<!-- TODO create a subpage related to re-entrancy & move this content there -->
-
 ### Jak radzić sobie z wielobieżnością (niewłaściwy sposób) {#how-to-deal-with-re-entrancy-the-wrong-way}
 
 Można rozważyć pokonanie wielobieżności po prostu uniemożliwiając jakimkolwiek inteligentnym kontraktom interakcję z Twoim kodem. Wyszukujesz stackoverflow, znajdujesz ten fragment kodu z mnóstwem głosów za:

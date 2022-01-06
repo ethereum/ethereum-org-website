@@ -11,8 +11,6 @@ Bloki są zestawami transakcji z kryptograficznym skrótem poprzedniego bloku w 
 
 Bloki to temat przyjazny dla nowicjuszy. Jednak, aby pomóc ci w lepszym zrozumieniu tej strony, zalecamy najpierw przeczytać o [kontach](/developers/docs/accounts/), [transakcjach](/developers/docs/transactions/), a także nasze [Wprowadzenie do Ethereum](/developers/docs/intro-to-ethereum/).
 
-<!--The content below was provided by Brian Gu with exception of "what's in a block"-->
-
 ## Dlaczego bloki? {#why-blocks}
 
 Aby zagwarantować, że wszyscy uczestnicy sieci Ethereum pozostają w zsynchronizowanym stanie i zgadzają się odnośnie do dokładnej historii transakcji, grupujemy transakcje w blokach. Oznacza to, że dziesiątki (lub setki) transakcji są zatwierdzane, uzgadniane i synchronizowane jednocześnie.
@@ -27,7 +25,9 @@ Aby zachować historię transakcji, bloki są ściśle uporządkowane (każdy no
 
 Gdy dany blok jest już złożony (wydobyty) przez jakiegoś górnika w sieci, jest rozprowadzany do reszty sieci; wszystkie węzły dodają ten blok na koniec swojego blockchaina, a wydobywanie trwa nadal. Dokładny proces składania (wydobywania) bloków, jak i proces zatwierdzania/konsensusu, są obecnie określone protokołem "proof-of-work" sieci Ethereum.
 
-### Demo wizualne {#a-visual-demo} <iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+### Demo wizualne {#a-visual-demo}
+
+<YouTube id="_160oMzblY8" />
 
 ## Protokół proof-of-work (dowodu wykonanej pracy) {#proof-of-work-protocol}
 

@@ -108,7 +108,6 @@ Examples of L2 solutions that are production ready or will be soon include:
   - [Skale](https://skale.network)
   - [POA Network](https://www.poa.network/)
 - Hybrid solutions that combine properties of multiple categories
-  - [Offchain Labs Arbitrum SCSC](https://offchainlabs.com/arbitrum.pdf)
   - [Celer](https://celer.network)
 
 ## Enterprise applications live on Mainnet {#enterprise-live-on-mainnet}

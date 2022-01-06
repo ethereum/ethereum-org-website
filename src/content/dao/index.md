@@ -7,32 +7,29 @@ emoji: ":handshake:"
 sidebar: true
 sidebarDepth: 2
 image: ../../assets/use-cases/dao-2.png
-alt: "A representation of a DAO voting on a proposal."
-summaryPoints:
-  [
-    "Member-owned communities without centralized leadership.",
-    "A safe way to collaborate with internet strangers.",
-    "A safe place to commit funds to a specific cause.",
-  ]
+alt: A representation of a DAO voting on a proposal.
+summaryPoint1: Member-owned communities without centralized leadership.
+summaryPoint2: A safe way to collaborate with internet strangers.
+summaryPoint3: A safe place to commit funds to a specific cause.
 ---
 
 ## What are DAOs? {#what-are-daos}
 
 DAOs are an effective and safe way to work with like-minded folks around the globe.
 
-Think of them like an internet-native business that's collectively owned and managed by its members. They have built-in treasuries that no one has the authority to access without the approval of the group. Decisions are governed by proposals and voting to ensure everyone in the organisation has a voice.
+Think of them like an internet-native business that's collectively owned and managed by its members. They have built-in treasuries that no one has the authority to access without the approval of the group. Decisions are governed by proposals and voting to ensure everyone in the organization has a voice.
 
-There's no CEO who can authorise spending based on their own whims and no chance of a dodgy CFO manipulating the books. Everything is out in the open and the rules around spending are baked into the DAO via its code.
+There's no CEO who can authorize spending based on their own whims and no chance of a dodgy CFO manipulating the books. Everything is out in the open and the rules around spending are baked into the DAO via its code.
 
 ## Why do we need DAOs? {#why-dao}
 
-Starting an organisation with someone that involves funding and money requires a lot of trust in the people you're working with. But it’s hard to trust someone you’ve only ever interacted with on the internet. With DAOs you don’t need to trust anyone else in the group, just the DAO’s code, which is 100% transparent and verifiable by anyone.
+Starting an organization with someone that involves funding and money requires a lot of trust in the people you're working with. But it’s hard to trust someone you’ve only ever interacted with on the internet. With DAOs you don’t need to trust anyone else in the group, just the DAO’s code, which is 100% transparent and verifiable by anyone.
 
 This opens up so many new opportunities for global collaboration and coordination.
 
 ### A comparison {#dao-comparison}
 
-| DAO                                                                                                                     | A traditional organisation                                                                       |
+| DAO                                                                                                                     | A traditional organization                                                                       |
 | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | Usually flat, and fully democratized.                                                                                   | Usually hierarchical.                                                                            |
 | Voting required by members for any changes to be implemented.                                                           | Depending on structure, changes can be demanded from a sole party, or voting may be offered.     |
@@ -74,11 +71,13 @@ _Typically used for more closer-knit, human-centric organizations like charities
 
 ## How do DAOs work? {#how-daos-work}
 
-The backbone of a DAO is its smart contract. The contract defines the rules of the organisation and holds the group's treasury. Once the contract is live on Ethereum, no one can change the rules except by a vote. If anyone tries to do something that's not covered by the rules and logic in the code, it will fail. And because the treasury is defined by the smart contract too that means no one can spend the money without the group's approval either. This means that DAOs don't need a central authority. Instead the group makes decisions collectively and payments are authorised automatically when votes pass.
+The backbone of a DAO is its smart contract. The contract defines the rules of the organization and holds the group's treasury. Once the contract is live on Ethereum, no one can change the rules except by a vote. If anyone tries to do something that's not covered by the rules and logic in the code, it will fail. And because the treasury is defined by the smart contract too that means no one can spend the money without the group's approval either. This means that DAOs don't need a central authority. Instead the group makes decisions collectively and payments are authorized automatically when votes pass.
 
 This is possible because smart contracts are tamper-proof once they go live on Ethereum. You can't just edit the code (the DAOs rules) without people noticing because everything is public.
 
-<DocLink to="/developers/docs/smart-contracts/" title="More on smart contracts" />
+<DocLink to="/developers/docs/smart-contracts/">
+  More on smart contracts
+</DocLink>
 
 ## Ethereum and DAOs {#ethereum-and-daos}
 
@@ -93,7 +92,7 @@ Ethereum is the perfect foundation for DAOs for a number of reasons:
 
 ### Join a DAO {#join-a-dao}
 
-- [Ethereum community DAOs](/community/#decentralized-autonomous-organizations-daos/community/#decentralized-autonomous-organizations-daos)
+- [Ethereum community DAOs](/community/get-involved/#decentralized-autonomous-organizations-daos)
 - [DAOHaus's list of DAOs](https://app.daohaus.club/explore)
 
 ### Start a DAO {#start-a-dao}

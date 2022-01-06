@@ -87,11 +87,15 @@ Keep in mind that you need to plug the disk to an USB 3.0 port (blue)
 
 ### 1. Download Eth 1.0 or Eth 2.0 images {#1-download-eth-10-or-eth-20-images}
 
-<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">Download Eth 1.0 image</ButtonLink>
+<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">
+  Download Eth 1.0 image
+</ButtonLink>
 
 sha256 7fa9370d13857dd6abcc8fde637c7a9a7e3a66b307d5c28b0c0d29a09c73c55c
 
-<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">Download Eth2 image</ButtonLink>
+<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">
+  Download Eth2 image
+</ButtonLink>
 
 sha256 74c0c15b708720e5ae5cac324f1afded6316537fb17166109326755232cd316e
 
@@ -243,7 +247,7 @@ Please, take into account that this is the first image based on Ubuntu 20.04 so 
 1. [geth repeatedly crashes with SIGSEGV](https://github.com/ethereum/go-ethereum/issues/20190)
 2. [https://github.com/diglos/ethereumonarm](https://github.com/diglos/ethereumonarm)
 3. https://ubuntu.com/download/raspberry-pi
-4. https://en.wikipedia.org/wiki/Port_forwarding
+4. https://wikipedia.org/wiki/Port_forwarding
 5. https://prometheus.io
 6. https://grafana.com
 7. https://forum.armbian.com/topic/5565-zram-vs-swap/

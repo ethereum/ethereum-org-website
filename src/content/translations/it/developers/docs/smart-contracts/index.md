@@ -15,9 +15,6 @@ Gli Smart Contract sono un tipo di [account Ethereum](/developers/docs/accounts/
 
 È importante aver letto gli argomenti su [account](/developers/docs/accounts/), [transazioni](/developers/docs/transactions/) e [macchina virtuale di Ethereum](/developers/docs/evm/) prima di entrare nel mondo degli Smart Contract.
 
-<!-- TODO simpler example... scheduling payments in Ethereum is actually difficult -->
-<!-- TODO show an example smart contract, e.g. an implementation of a vending machine -->
-
 ## Un distributore automatico digitale {#a-digital-vending-machine}
 
 Forse la migliore metafora per descrivere uno Smart Contract è paragonarlo a un distributore automatico, come ha fatto Nick Szabo. Con i giusti input, un determinato output è garantito.

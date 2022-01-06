@@ -5,16 +5,13 @@ lang: de
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/core.png
-summaryPoints:
-  [
-    "Die Beacon Chain selbst ändert nichts an der heutigen Verwendung von Ethereum.",
-    "Ihre Aufgabe wird die Koordination des Eth2-Netzwerks sein.",
-    "Sie führt proof-of-stake ins Ethereum-System ein.",
-    'In den verschiedenen technischen Entwicklungsstufen ist darunter die "Phase 0" gemeint.',
-  ]
+summaryPoint1: Die Beacon Chain selbst ändert nichts an der heutigen Verwendung von Ethereum.
+summaryPoint2: Ihre Aufgabe wird die Koordination des Eth2-Netzwerks sein.
+summaryPoint3: Sie führt proof-of-stake ins Ethereum-System ein.
+summaryPoint4: In den verschiedenen technischen Entwicklungsstufen ist darunter die "Phase 0" gemeint.
 ---
 
-<UpgradeStatus isShipped date="Versandt!">
+<UpgradeStatus isShipped dateKey="page-eth2-upgrades-beacon-date">
     Die Beacon Chain wurde am 1. Dezember, 2020 gegen Mittag der koordinierten Weltzeit eingeführt. Um mehr zu erfahren, schau dir die <a href="https://beaconscan.com/">Daten</a> an. Wenn Du auch beim Validieren von Transaktionen auf der Beacon Chain helfen möchtest, kannst Du <a href="/eth2/staking/">Deine ETH staken</a>.
 </UpgradeStatus>
 
