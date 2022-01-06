@@ -116,6 +116,13 @@ const LanguagesPage = () => {
             </Link>
             .
           </p>
+          <p>
+            <Translation id="page-languages-resources-paragraph" />{" "}
+            <Link to="/community/language-resources">
+              <Translation id="page-languages-resources-link" />
+            </Link>
+            .
+          </p>
           <h2>
             <Translation id="page-languages-translations-available" />:
           </h2>
