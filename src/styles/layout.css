@@ -240,7 +240,7 @@ h1 {
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
   line-height: 1.1;
-  scroll-margin-top: 80px;
+  scroll-margin-top: ${({ theme }) => theme.variables.navHeight};
 }
 h2 {
   margin-left: 0;
