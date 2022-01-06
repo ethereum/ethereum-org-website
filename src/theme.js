@@ -230,8 +230,7 @@ const lightColors = {
   homeBoxPurple: primaryLight50,
   homeBoxPink: pink,
   codeBackground: codeBoxLight,
-  beta:
-    "radial-gradient(25.56% 133.51% at 28.36% 45.54%, rgba(28, 28, 225, 0) 0%, rgba(28, 28, 225, 0.06) 100%)",
+  beta: "radial-gradient(25.56% 133.51% at 28.36% 45.54%, rgba(28, 28, 225, 0) 0%, rgba(28, 28, 225, 0.06) 100%)",
 }
 
 // TODO replace random variables w/ baseColor variables
@@ -312,8 +311,7 @@ const darkColors = {
   homeBoxPurple: purpleDark,
   homeBoxPink: pinkDark,
   codeBackground: codeBoxDark,
-  beta:
-    "background: radial-gradient(25.56% 133.51% at 28.36% 45.54%, rgba(255, 143, 80, 0.72) 0%, rgba(255, 143, 80, 0.22) 100%)",
+  beta: "background: radial-gradient(25.56% 133.51% at 28.36% 45.54%, rgba(255, 143, 80, 0.72) 0%, rgba(255, 143, 80, 0.22) 100%)",
   cardGradient:
     "linear-gradient(49.21deg, rgba(127, 127, 213, 0.2) 19.87%, rgba(134, 168, 231, 0.2) 58.46%, rgba(145, 234, 228, 0.2) 97.05% )",
 }
@@ -437,6 +435,7 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 1.4;
     margin: 2rem 0;
     font-weight: 700;
+    scroll-margin-top: ${theme.variables.navHeight};
     @media (max-width: ${theme.breakpoints.m}) {
       font-size: 2.5rem;
     }
@@ -448,6 +447,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 2rem 0;
     margin-top: 3rem;
     font-weight: 600;
+    scroll-margin-top: ${theme.variables.navHeight};
     @media (max-width: ${theme.breakpoints.m}) {
       font-size: 1.5rem;
     }
@@ -459,6 +459,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 2rem 0;
     margin-top: 2.5rem;
     font-weight: 600;
+    scroll-margin-top: ${theme.variables.navHeight};
     @media (max-width: ${theme.breakpoints.m}) {
       font-size: 1.25rem;
     }
@@ -469,6 +470,7 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 1.4;
     font-weight: 500;
     margin: 2rem 0;
+    scroll-margin-top: ${theme.variables.navHeight};
     @media (max-width: ${theme.breakpoints.m}) {
       font-size: 1rem;
     }
@@ -479,6 +481,7 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 1.4;
     font-weight: 450;
     margin: 2rem 0;
+    scroll-margin-top: ${theme.variables.navHeight};
   }
 
   h6 {
@@ -487,6 +490,7 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     text-transform: uppercase;
     margin: 2rem 0;
+    scroll-margin-top: ${theme.variables.navHeight};
   }
   
 `

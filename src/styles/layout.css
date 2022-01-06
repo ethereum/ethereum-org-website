@@ -240,7 +240,6 @@ h1 {
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
   line-height: 1.1;
-  scroll-margin-top: ${({ theme }) => theme.variables.navHeight};
 }
 h2 {
   margin-left: 0;
@@ -256,7 +255,6 @@ h2 {
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
   line-height: 1.1;
-  scroll-margin-top: ${({ theme }) => theme.variables.navHeight};
 }
 h3 {
   margin-left: 0;
@@ -272,7 +270,6 @@ h3 {
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
   line-height: 1.1;
-  scroll-margin-top: ${({ theme }) => theme.variables.navHeight};
 }
 h4 {
   margin-left: 0;
@@ -288,7 +285,6 @@ h4 {
   text-rendering: optimizeLegibility;
   font-size: 1.2rem;
   line-height: 1.1;
-  scroll-margin-top: ${({ theme }) => theme.variables.navHeight};
 }
 h5 {
   margin-left: 0;
@@ -304,7 +300,6 @@ h5 {
   text-rendering: optimizeLegibility;
   font-size: 1rem;
   line-height: 1.1;
-  scroll-margin-top: ${({ theme }) => theme.variables.navHeight};
 }
 h6 {
   margin-left: 0;
@@ -320,7 +315,6 @@ h6 {
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
   line-height: 1.1;
-  scroll-margin-top: ${({ theme }) => theme.variables.navHeight};
 }
 hgroup {
   margin-left: 0;
