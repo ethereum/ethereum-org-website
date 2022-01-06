@@ -4706,7 +4706,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/4008777?v=4",
       "profile": "http://ProjectAFA.org",
       "contributions": [
-        "doc"
+        "doc",
+        "content"
       ]
     },
     {
@@ -6035,6 +6036,80 @@
       "profile": "https://github.com/neozapatista",
       "contributions": [
         "doc"
+      ]
+    },
+    {
+      "login": "Factral",
+      "name": "Factral",
+      "avatar_url": "https://avatars.githubusercontent.com/u/74687828?v=4",
+      "profile": "http://factral.github.io/",
+      "contributions": [
+        "translation",
+        "doc"
+      ]
+    },
+    {
+      "login": "elshigori",
+      "name": "elshigori",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96995185?v=4",
+      "profile": "https://github.com/elshigori",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "HuangRongcun",
+      "name": "EarthMan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1501342?v=4",
+      "profile": "https://github.com/HuangRongcun",
+      "contributions": [
+        "translation",
+        "doc"
+      ]
+    },
+    {
+      "login": "mohan-chinnappan-n",
+      "name": "mohan-chinnappan-n",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5963194?v=4",
+      "profile": "https://mohan-chinnappan-n.github.io/about/cv.html",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "Gobljn",
+      "name": "Nicola Bonsi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44135563?v=4",
+      "profile": "https://github.com/Gobljn",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "yelnady",
+      "name": "Yusuf Elnady",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45317481?v=4",
+      "profile": "https://www.linkedin.com/in/yelnady/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "aryankeluskar",
+      "name": "Aryan Keluskar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/80093392?v=4",
+      "profile": "https://github.com/aryankeluskar",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "LingTian",
+      "name": "Ling",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4249432?v=4",
+      "profile": "https://github.com/LingTian",
+      "contributions": [
+        "content"
       ]
     }
   ],

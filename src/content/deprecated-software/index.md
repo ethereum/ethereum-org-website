@@ -112,7 +112,7 @@ The Mist Multisig Contract (solidity code) was also included, and Meteor Dapp Wa
 
 **Not deprecated: deployed Mist Multisigs**
 
-The Mist Multisig -- deployed as bytecode to Ethereum mainnet by thousands of users -- continues to be used to store and manage value without incident. [How to Interact with a Mist Multisig Contract](https://support.mycrypto.com/how-to/sending/how-to-interact-with-a-multisig-contract) provides a good overview for how to use these smart contracts.
+The Mist Multisig -- deployed as bytecode to Ethereum Mainnet by thousands of users -- continues to be used to store and manage value without incident. [How to Interact with a Mist Multisig Contract](https://support.mycrypto.com/how-to/sending/how-to-interact-with-a-multisig-contract) provides a good overview for how to use these smart contracts.
 
 **Archives**
 
@@ -252,7 +252,7 @@ The [EthereumJS](https://github.com/ethereumjs) project has a similar research a
 
 ## Dapps and Services {#dapps-and-services}
 
-This section is for services deployed to Ethereum mainnet and other EVM-based networks. Be aware that the dapps and services here may include DeFi applications which have been hacked or may suffer security vulnerabilities due to lack of maintenance, changes in the protocol, etc.
+This section is for services deployed to Ethereum Mainnet and other EVM-based networks. Be aware that the dapps and services here may include DeFi applications which have been hacked or may suffer security vulnerabilities due to lack of maintenance, changes in the protocol, etc.
 
 ### Cover Protocol {#cover-protocol}
 

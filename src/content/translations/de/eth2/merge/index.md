@@ -11,7 +11,7 @@ summaryPoint3: Dies ist geplant, um der Veröffentlichung von shard chains zuvor
 summaryPoint4: Welches wir zuvor als "die Kupplung" bezeichneten.
 ---
 
-<UpgradeStatus date="~Q1/Q2 2022">
+<UpgradeStatus dateKey="page-eth2-upgrades-merge-date">
   Dieses Upgrade stellt den offiziellen Wechsel zum proof-of-stake-Konsens dar. Dadurch entfällt das energieintensive Mining, stattdessen wird das Netzwerk durch den Einsatz von Staked Ether gesichert. Ein wirklich spannender Schritt zur Verwirklichung der <a href="/eth2/vision/">Eth2-Vision</a> - mehr Skalierbarkeit, Sicherheit und Nachhaltigkeit.
 </UpgradeStatus>
 

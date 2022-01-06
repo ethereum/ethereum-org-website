@@ -11,7 +11,7 @@ summaryPoint3: Prehod je načrtovan pred uvedbo razdrobljenih verig.
 summaryPoint4: Predhodno smo jo omenjali kot "priklop".
 ---
 
-<UpgradeStatus date="~Q1/Q2 2022">
+<UpgradeStatus dateKey="page-eth2-upgrades-merge-date">
   Ta nadgradnja predstavlja uraden preklop na sistem soglasja z dokazom o deležu. Tako bomo odpravili potrebo po energetsko potratnem rudarjenju. Resnično vznemirljiv korak proti realizaciji <a href="/eth2/vision/">Eth2 vizije</a> – več nadgradljivosti, varnosti in trajnosti.
 </UpgradeStatus>
 

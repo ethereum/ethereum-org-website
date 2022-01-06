@@ -11,7 +11,7 @@ summaryPoint3: 通过降低硬件需求使节点运行变得更加容易。
 summaryPoint4: 此升级计划跟随主网与信标链的合并。
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     链应该在 2022 年的某个时候启动，这取决于<a href="/eth2/merge/">合并</a>启动后的工作进度。 这些分片将增强以太坊存储和访问数据的能力，但不会用于执行代码。 这方面的细节仍然有待确定。
 </UpgradeStatus>
 

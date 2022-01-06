@@ -11,7 +11,7 @@ summaryPoint3: V ekosistem Ethereum uvaja dokaz o deležu.
 summaryPoint4: Oddajniško verigo morda poznate pod imenom "faza 0", ki se uporablja v tehničnih načrtih.
 ---
 
-<UpgradeStatus isShipped date="Odpremljeno!">
+<UpgradeStatus isShipped dateKey="page-eth2-upgrades-beacon-date">
     Oddajniška veriga je začela delovati 1. decembra ob 12.00 UTC. Če želite več informacij, <a href="https://beaconscan.com/">raziščite podatke</a>. Če želite pomagati potrjevati verigo, lahko <a href="/eth2/staking/">zastavite svoj ETH</a>.
 </UpgradeStatus>
 

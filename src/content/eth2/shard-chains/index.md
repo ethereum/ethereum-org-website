@@ -11,7 +11,7 @@ summaryPoint3: They make it easier to run a node by keeping hardware requirement
 summaryPoint4: This upgrade is planned to follow the merge of Mainnet with the Beacon Chain.
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     Shard chains should ship sometime in 2023, depending on how quickly work progresses after <a href="/eth2/merge/">the merge</a>. These shards will give Ethereum more capacity to store and access data, but they won’t be used for executing code. The details of that are still being figured out.
 </UpgradeStatus>
 

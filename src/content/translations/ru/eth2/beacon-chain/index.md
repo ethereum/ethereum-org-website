@@ -11,8 +11,8 @@ summaryPoint3: Она внедрит в экосистему Ethereum доказ
 summaryPoint4: В технических дорожных картах вы могли видеть это под названием «Фаза 0».
 ---
 
-<UpgradeStatus isShipped date="Отправленный!">
-    Запуск Beacon Chain выполнен 1 декабря 2020 года в полдень (UTC). Чтобы узнать больше, <a href="https://beaconscan. com/">ознакомьтесь с данными</a>. Если вы хотите помочь с проверкой цепочки, вы можете <a href="/eth2/staking/">вложить свои ETH</a>.
+<UpgradeStatus isShipped dateKey="page-eth2-upgrades-beacon-date">
+    Beacon Chain запущена 1 декабря в полдень по UTC. Чтобы узнать больше, <a href="https://beaconscan. com/">ознакомьтесь с данными</a>. Если вы хотите помочь с проверкой цепочки, вы можете <a href="/eth2/staking/">вложить свои ETH</a>.
 </UpgradeStatus>
 
 ## Что делает Beacon Chain? {#what-does-the-beacon-chain-do}
