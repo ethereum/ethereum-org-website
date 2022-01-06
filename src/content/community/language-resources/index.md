@@ -11,7 +11,7 @@ The Ethereum community is global and comprised of millions of non-English speake
 
 Our aim is to provide educational content in all languages and help overcome the language barriers that make onboarding people from all over the world to Ethereum a challenge.
 
-If you prefer reading in your native language or know someone who doesn’t speak English, you can find a list of useful non-English resources below.
+If you prefer reading in your native language or know someone who doesn’t speak English, you can find a list of useful non-English resources below. Ethereum.org is also natively translated into dozens of languages which are listed on our [languages page](/languages).
 
 Know of an educational resource in your language? [Open an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose) to add it to the list!
 
