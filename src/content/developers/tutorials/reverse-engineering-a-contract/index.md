@@ -197,7 +197,7 @@ These opcodes truncate the value we read from Storage[3] to 160 bits, the length
 | 9B | SWAP1 | 0x9D Storage[3]-as-address 0x00
 | 9C | JUMP  | Storage[3]-as-address 0x00
 
-This just is superflous, since we're going to the next opcode. This code isn't nearly as gas-efficient as it could be.
+This jump is superfluous, since we're going to the next opcode. This code isn't nearly as gas-efficient as it could be.
 
 | Offset | Opcode | Stack |
 | -: | - | - | 
