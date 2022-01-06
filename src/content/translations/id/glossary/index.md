@@ -10,7 +10,7 @@ sidebarDepth: 2
 
 <Divider />
 
-## {#section-numbers}
+## \# {#section-numbers}
 
 ### Serangan 51% {#51-attack}
 
