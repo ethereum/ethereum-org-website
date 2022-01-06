@@ -31,6 +31,8 @@ import {
 } from "../components/SharedStyledComponents"
 import ExpandableCard from "../components/ExpandableCard"
 import Emoji from "../components/Emoji"
+import Link from "../components/Link"
+import ButtonLink from "../components/ButtonLink"
 
 // Utils
 import { translateMessageId } from "../utils/translations"
@@ -38,6 +40,15 @@ import { translateMessageId } from "../utils/translations"
 // Styles
 const GappedPage = styled(Page)`
   gap: 5rem;
+  scroll-behavior: smooth;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    scroll-margin-top: ${({ theme }) => theme.variables.navHeight};
+  }
 `
 
 const GappedContent = styled(Content)`
@@ -57,7 +68,7 @@ const Hero = styled(PageHero)`
 const TwoColumnContent = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 2rem;
   gap: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
@@ -86,19 +97,33 @@ const Highlight = styled(Content)`
   box-sizing: border-box;
   border-radius: 4px;
   color: ${({ theme }) => theme.colors.text};
-  padding: 1.5rem 2rem;
   position: relative;
+  isolation: isolate;
   p {
     margin-bottom: 0;
   }
   &:nth-of-type(even) {
     flex-direction: row-reverse;
   }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     &:nth-of-type(even) {
       flex-direction: column-reverse;
     }
     flex-direction: column-reverse;
+  }
+`
+
+const WhyHighlight = styled(Highlight)`
+  padding: 2rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    padding: 1rem;
+  }
+`
+
+const SoftwareHighlight = styled(Highlight)`
+  padding: 1.5rem 4rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    padding: 1rem;
   }
 `
 
@@ -112,6 +137,7 @@ const InfoGrid = styled(CardGrid)`
 `
 
 const Width80 = styled.div`
+  line-height: 2;
   box-sizing: border-box;
   flex: 4;
   ul {
@@ -145,10 +171,10 @@ const Width40 = styled.div`
   flex: 2;
   display: flex;
   justify-content: center;
-  align-self: center;
+  /* align-self: center; */
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     width: 100%;
-    align-self: center;
+    /* align-self: center; */
   }
 `
 
@@ -159,13 +185,44 @@ const Flex = styled.div`
   gap: 2rem;
 `
 
+const MarginFlex = styled(Flex)`
+  margin: 3rem 0;
+`
+
 const Container = styled.div`
   background: ${({ theme }) => theme.colors.grayBackground};
   border: 1px solid #d1d1d1;
   box-sizing: border-box;
   border-radius: 5px;
   color: ${({ theme }) => theme.colors.text};
-  padding: 0 36pt;
+  padding: 0 2rem;
+`
+
+const BuildBox = styled(Container)`
+  background: ${({ theme }) => theme.colors.preBackground};
+  flex: 1;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    flex-direction: column;
+  }
+`
+
+const BuildFlex = styled(Flex)`
+  padding-bottom: 2rem;
+`
+
+const FullyLoaded = styled(Container)`
+  display: flex;
+  flex-direction: column;
+  line-height: 200%;
+  p {
+    font-size: 125%;
+  }
+  code {
+    font-weight: 600;
+    line-height: 125%;
+  }
+  button {
+  }
 `
 
 const StyledEmoji = styled(Emoji)`
@@ -290,7 +347,7 @@ const RunANodePage = ({ data }) => {
       </Content>
 
       <Content>
-        <Highlight backgroundColor="homeBoxOrange">
+        <WhyHighlight backgroundColor="homeBoxOrange">
           <Width80>
             <h2>
               <Translation id="page-run-a-node-who-title" />
@@ -311,16 +368,14 @@ const RunANodePage = ({ data }) => {
                 </li>
               </ul>
               <h3>
-                <strong>
-                  <Translation id="page-run-a-node-who-copy-bold" />
-                </strong>
+                <Translation id="page-run-a-node-who-copy-bold" />
               </h3>
             </Collapse>
           </Width80>
           <Width20>
             <GatsbyImage image={getImage(data.impact)} />
           </Width20>
-        </Highlight>
+        </WhyHighlight>
       </Content>
 
       <Content>
@@ -355,47 +410,76 @@ const RunANodePage = ({ data }) => {
         <p>
           <Translation id="page-run-a-node-getting-started-hardware-2" />
         </p>
-        <Flex>
+        <MarginFlex>
           <Container>
             <h3>
               <StyledEmoji text=":building_construction:" size={2} />
               <Translation id="page-run-a-node-build-your-own-title" />
             </h3>
-            <p>
-              <Translation id="page-run-a-node-build-your-own-minimum-specs" />
-            </p>
-            <ul>
-              <li>
-                <Translation id="page-run-a-node-build-your-own-8gb" />
-              </li>
-              <li>
-                <Translation id="page-run-a-node-build-your-own-ssd" />{" "}
-                <i>
-                  <Translation id="page-run-a-node-build-your-own-ssd-note" />
-                </i>
-              </li>
-            </ul>
-            <br />
-            <p>
-              <Translation id="page-run-a-node-build-your-own-recommended" />
-            </p>
-            <ul>
-              <li>
-                <Translation id="page-run-a-node-build-your-own-nuc" />
-              </li>
-              <li>
-                <Translation id="page-run-a-node-build-your-own-connection" />
-              </li>
-              <li>
-                <Translation id="page-run-a-node-build-your-own-peripherals" />
-              </li>
-            </ul>
-            <p>
-              <Translation id="page-run-a-node-build-your-own-raspberry-pi" />
-            </p>
+            <BuildFlex>
+              <BuildBox>
+                <h4>
+                  <Translation id="page-run-a-node-build-your-own-minimum-specs" />
+                </h4>
+                <ul>
+                  <li>
+                    4 - 8 GB RAM
+                    <p>
+                      <Link to="#plan-on-staking">See note on staking</Link>
+                    </p>
+                    <p>
+                      <Link to="#rasp-pi">See note on Raspberry Pis</Link>
+                    </p>
+                  </li>
+                  <li>
+                    2 TB SSD
+                    <p>
+                      <small>
+                        Though you can still technically get away with 1 TB, the
+                        blockchain continues to grow over time and this will
+                        soon no longer be enough.
+                      </small>
+                    </p>
+                    <p>
+                      <small>
+                        <em>SSD necessary for required write speeds.</em>
+                      </small>
+                    </p>
+                  </li>
+                </ul>
+              </BuildBox>
+              <BuildBox>
+                <h4>Recommended:</h4>
+                <ul>
+                  <li>
+                    Intel NUC, 7th gen or higher
+                    <p>
+                      <small>x86 processor</small>
+                    </p>
+                  </li>
+                  <li>
+                    Wired internet connection
+                    <p>
+                      <small>
+                        Not required, but provides easier setup and most
+                        consistent connection
+                      </small>
+                    </p>
+                  </li>
+                  <li>
+                    Display screen and keyboard
+                    <p>
+                      <small>
+                        Unless you're using DAppNode, or ssh/headless setup
+                      </small>
+                    </p>
+                  </li>
+                </ul>
+              </BuildBox>
+            </BuildFlex>
           </Container>
 
-          <Container>
+          <FullyLoaded>
             <h3>
               <StyledEmoji text=":shopping_cart:" size={2} />
               <Translation id="page-run-a-node-buy-fully-loaded-title" />
@@ -403,11 +487,61 @@ const RunANodePage = ({ data }) => {
             <p>
               <Translation id="page-run-a-node-buy-fully-loaded-1" />
             </p>
-            <code>
-              <Translation id="page-run-a-node-buy-fully-loaded-note" />
-            </code>
-          </Container>
-        </Flex>
+            <ul>
+              <li>No building.</li>
+              <li>App-like setup.</li>
+              <li>
+                <code>
+                  <Translation id="page-run-a-node-buy-fully-loaded-note" />
+                </code>
+              </li>
+            </ul>
+            <ButtonLink to="#choose-your-adventure">Shop</ButtonLink>
+          </FullyLoaded>
+        </MarginFlex>
+        <h3 id="plan-on-staking">
+          <StyledEmoji text=":cut_of_meat:" size={2} />
+          Plan on staking?
+        </h3>
+        <p>
+          To maximize the efficiency of your validator, a minimum of 16GB RAM is
+          recommended, but 32GB is better, with a CPU benchmark score of 6667+
+          on <Link to="https://cpubenchmark.net">cpubenchmark.net</Link>. It is
+          also recommended that stakers have access to unlimited high-speed
+          internet bandwidth, though this is not an absolute requirement.
+        </p>
+        <h3 id="rasp-pi">
+          <StyledEmoji text=":pie:" size={2} />A note on Rapsberry Pis (ARM
+          processor)
+        </h3>
+        <p>
+          Raspberry Pis are lightweight and affordable computers, but they have
+          limitations that may impact the performance of your node. Though not
+          currently recommended for staking, these can be an excellent and
+          inexpensive option for running a node for personal use, with as little
+          as 4 - 8 GB of RAM.
+        </p>
+        <ul>
+          <li>
+            If you plan on running DAppNode, please see instructions for{" "}
+            <Link to="https://docs.dappnode.io/get-started/installation/arm-hardware/installation">
+              DAppNode on ARM
+            </Link>
+            .
+          </li>
+          <li>
+            To learn how to set up a node via the command line on a Raspberry
+            Pi, check out{" "}
+            <Link to="https://ethereum-on-arm-documentation.readthedocs.io/en/latest">
+              Ethereum on Arm documentation
+            </Link>
+            , or following along with{" "}
+            <Link to="/developers/tutorials/run-node-raspberry-pi/">
+              this tutorial
+            </Link>
+            .
+          </li>
+        </ul>
       </Content>
 
       <Content>
@@ -415,45 +549,47 @@ const RunANodePage = ({ data }) => {
           <Translation id="page-run-a-node-getting-started-software-title" />
         </h2>
         <GappedContent>
-          <Highlight backgroundColor="homeBoxTurquoise">
+          <SoftwareHighlight backgroundColor="homeBoxTurquoise">
             <Width80>
               <p>
-                <Translation id="page-run-a-node-getting-started-software-section-1-1" />
+                <Translation id="page-run-a-node-getting-started-software-section-1" />
               </p>
               <p>
-                <Translation id="page-run-a-node-getting-started-software-section-1-2" />
+                <code>
+                  <Translation id="page-run-a-node-getting-started-software-section-1-cta" />
+                </code>
               </p>
             </Width80>
             <Width20>
               <img src={terminal} alt="Terminal glyph" />
             </Width20>
-          </Highlight>
+          </SoftwareHighlight>
 
-          <Highlight backgroundColor="homeBoxOrange">
+          <SoftwareHighlight backgroundColor="homeBoxOrange">
             <Width80>
               <p>
-                <Translation id="page-run-a-node-getting-started-software-section-2-1" />
+                <Translation id="page-run-a-node-getting-started-software-section-2" />
               </p>
             </Width80>
             <Width20>
               <img src={phonetap} alt="Phone tap glyph" />
             </Width20>
-          </Highlight>
+          </SoftwareHighlight>
 
-          <Highlight backgroundColor="homeBoxPurple">
+          <SoftwareHighlight backgroundColor="homeBoxPurple">
             <Width80>
               <p>
-                <Translation id="page-run-a-node-getting-started-software-section-3-1" />
+                <Translation id="page-run-a-node-getting-started-software-section-3" />
               </p>
             </Width80>
             <Width20>
               <img src={dappnode} alt="DAppNode glyph" />
             </Width20>
-          </Highlight>
+          </SoftwareHighlight>
         </GappedContent>
       </Content>
 
-      <Content>
+      <Content id="choose-your-adventure">
         <h2>
           <Translation id="page-run-a-node-choose-your-adventure" />
         </h2>
