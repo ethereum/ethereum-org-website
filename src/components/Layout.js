@@ -89,7 +89,9 @@ const Layout = (props) => {
 
     if (props.location.hash && !props.location.hash.includes("gatsby")) {
       const idTag = props.location.hash.split("#")
-      document.getElementById(idTag[1]).scrollIntoView(false)
+      if (document.getElementById(idTag[1]) !== null) {
+        document.getElementById(idTag[1]).scrollIntoView(false)
+      }
     }
   }, [props.path])
 
