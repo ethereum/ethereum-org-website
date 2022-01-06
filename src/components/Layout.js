@@ -86,6 +86,11 @@ const Layout = (props) => {
       setIsZenMode(false)
       setShouldShowSideNav(false)
     }
+
+    if (props.location.hash && !props.location.hash.includes("gatsby")) {
+      const idTag = props.location.hash.split("#")
+      document.getElementById(idTag[1]).scrollIntoView(false)
+    }
   }, [props.path])
 
   const handleThemeChange = () => {
