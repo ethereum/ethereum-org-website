@@ -466,16 +466,15 @@ The code in offsets 0x138-0x143 is identical to what we saw in 0x103-0x10E in `s
 | 199	| PUSH2 0x01a0 | 0x01A0 CALLDATASIZE-4>=32 0x00 0x04 CALLDATASIZE 0x0153 0xDA |
 | 19C	| JUMPI        | 0x00 0x04 CALLDATASIZE 0x0153 0xDA |
 
-It looks like this function takes at least 32 bytes (one word) of call data. If it doesn't get it:
+It looks like this function takes at least 32 bytes (one word) of call data.
 
-  
 | Offset | Opcode | Stack |
 | -: | - | - |  
 | 19D | DUP1 | 0x00 0x00 0x04 CALLDATASIZE 0x0153 0xDA | 
 | 19E	| DUP2 | 0x00 0x00 0x00 0x04 CALLDATASIZE 0x0153 0xDA |
 | 19F	| REVERT  
-  
-The transaction is reverted without any return data.
+
+If it doesn't get the call data the transaction is reverted without any return data.
 
   
 Let's see what happens if the function *does* get the call data it needs.
