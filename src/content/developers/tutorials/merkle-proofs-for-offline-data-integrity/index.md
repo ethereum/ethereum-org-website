@@ -12,12 +12,12 @@ published: 2021-12-30
 ## Introduction {#introduction}
 
 Ideally we'd like to store everything in Ethereum storage, which is stored across thousands of computers and has
-extremely high availability (the data cannot be censored) and integrity (the data cannot be modified by in an
+extremely high availability (the data cannot be censored) and integrity (the data cannot be modified in an
 unauthorized manner), but storing a 32-byte word typically costs 20,000 gas. As I'm writing this, that cost is
 equivalent to $6.60. At 21 cents per byte this is too expensive for many uses.
 
 To solve this problem the Ethereum ecosystem developed [many alternative ways to store data in a decentralized 
-fashion](https://ethereum.org/en/developers/docs/storage/). Usually they involve a tradeoff between availability
+fashion](/developers/docs/storage/). Usually they involve a tradeoff between availability
 and price. However, integrity is usually assured.
 
 In this article you learn **how** to ensure data integrity without storing the data on the blockchain, using
@@ -240,7 +240,7 @@ In mathematical notation Merkle proof verification looks like this: `H(proof_n, 
 
 ## Merkle proofs and rollups don't mix {#merkle-proofs-and-rollups}
 
-Merkle proofs don't work well with [rollups](https://ethereum.org/en/developers/docs/scaling/layer-2-rollups/). The reason is that rollups write all the transaction data on L1, but process on L2. The cost to send a Merkle proof with a transaction averages to 638 gas per layer (currently a byte in call data costs 16 gas if it isn't zero, and 4 if it is zero). If we have 1024 words of data, a Merkle proof requires ten layers, or a total of 6380 gas.
+Merkle proofs don't work well with [rollups](/developers/docs/scaling/layer-2-rollups/). The reason is that rollups write all the transaction data on L1, but process on L2. The cost to send a Merkle proof with a transaction averages to 638 gas per layer (currently a byte in call data costs 16 gas if it isn't zero, and 4 if it is zero). If we have 1024 words of data, a Merkle proof requires ten layers, or a total of 6380 gas.
 
 Looking for example at [Optimism](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m), writing L1 gas costs about 100 gwei and L2 gas costs 0.001 gwei (that is the normal price, it can rise with congestion). So for the cost of one L1 gas we can spend a hundred thousand gas on L2 processing. Assuming we don't overwrite storage, this means that we can write about five words to storage on L2 for the price of one L1 gas. For a single Merkle proof we can write the entire 1024 words to storage (assuming they can be calculated on chain to begin with, rather than provided in a transaction) and still have most of the gas left over.
 
