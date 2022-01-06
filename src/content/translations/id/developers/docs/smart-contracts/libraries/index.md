@@ -63,7 +63,7 @@ Penting untuk menyebutkan bahwa beberapa ERC tidak bisa berdiri sendiri, tapi se
 
 ## Bagaimana menambahkan pustaka {#how-to}
 
-Selalu merujuk pada dokumentasi pustaka yang Anda masukkan untuk instruksi spesifik tentang cara memasukkannya ke dalam proyek Anda. Beberapa library kontrak Solidity dikemas menggunakan `npm`, jadi cukup `npm yang menginstalnya`. Sebagian besar alat untuk [mengompilasi](/developers/docs/smart-contracts/compiling/) kontrak akan melihat `node_modules` Anda untuk pustaka kontrak pintar, sehingga Anda dapat melakukan hal berikut:
+Selalu merujuk pada dokumentasi pustaka yang Anda masukkan untuk instruksi spesifik tentang cara memasukkannya ke dalam proyek Anda. Beberapa library kontrak Solidity dikemas menggunakan `npm`, jadi cukup `npm install`. Sebagian besar alat untuk [mengompilasi](/developers/docs/smart-contracts/compiling/) kontrak akan melihat `node_modules` Anda untuk pustaka kontrak pintar, sehingga Anda dapat melakukan hal berikut:
 
 ```solidity
 // Ini akan memuat  pustaka @openzeppelin/contracts dari node_modules Anda

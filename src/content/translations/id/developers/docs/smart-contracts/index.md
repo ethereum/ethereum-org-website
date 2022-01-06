@@ -35,7 +35,7 @@ pragma solidity 0.8.7;
 contract VendingMachine {
 
     // Deklarasikan variabel state dari alamat
-    kontrak pemilik publik;
+    address public owner;
     mapping (address => uint) public cupcakeBalances;
 
     // Saat kontrak 'VendingMachine' disebarkan:
