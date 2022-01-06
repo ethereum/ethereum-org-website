@@ -116,6 +116,13 @@ const LanguagesPage = () => {
             </Link>
             .
           </p>
+          <p>
+            In addition to translating ethereum.org content, we also maintain a{" "}
+            <Link to="/community/language-resources">
+              curated list of Ethereum resources in many languages
+            </Link>
+            .
+          </p>
           <h2>
             <Translation id="page-languages-translations-available" />:
           </h2>
