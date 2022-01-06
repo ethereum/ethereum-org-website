@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
 // Assets
 import dappnode from "../assets/run-a-node/dappnode.svg"
@@ -93,13 +94,6 @@ const Highlight = styled(Content)`
   &:nth-of-type(even) {
     flex-direction: row-reverse;
   }
-  &::after {
-    content: "";
-    position: absolute;
-    left: 1rem;
-    top: 1rem;
-    border: 1px solid red;
-  }
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     &:nth-of-type(even) {
       flex-direction: column-reverse;
@@ -120,6 +114,9 @@ const InfoGrid = styled(CardGrid)`
 const Width80 = styled.div`
   box-sizing: border-box;
   flex: 4;
+  ul {
+    list-style: none;
+  }
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     width: 100%;
   }
@@ -148,12 +145,14 @@ const Width40 = styled.div`
   flex: 2;
   display: flex;
   justify-content: center;
-
+  align-self: center;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     width: 100%;
     align-self: center;
   }
 `
+
+const Collapse = styled(motion.div)``
 
 const Flex = styled.div`
   display: flex;
@@ -196,61 +195,53 @@ const RunANodePage = ({ data }) => {
 
   const whyRunANodeCards = [
     {
-      image: sovereigntyGlyph,
-      title: <Translation id="page-run-a-node-sovereignty-title" />,
-      preview: <Translation id="page-run-a-node-sovereignty-preview" />,
-      body: [
-        <Translation id="page-run-a-node-sovereignty-1" />,
-        <Translation id="page-run-a-node-sovereignty-2" />,
-      ],
-    },
-    {
       image: privacyGlyph,
-      title: <Translation id="page-run-a-node-privacy-title" />,
-      preview: <Translation id="page-run-a-node-privacy-preview" />,
+      title: "page-run-a-node-privacy-title",
+      preview: "page-run-a-node-privacy-preview",
       body: [
-        <Translation id="page-run-a-node-privacy-1" />,
-        <Translation id="page-run-a-node-privacy-2" />,
-        <Translation id="page-run-a-node-privacy-3" />,
+        "page-run-a-node-privacy-1",
+        "page-run-a-node-privacy-2",
+        "page-run-a-node-privacy-3",
       ],
     },
     {
       image: megaphoneGlyph,
-      title: <Translation id="page-run-a-node-censorship-resistance-title" />,
-      preview: (
-        <Translation id="page-run-a-node-censorship-resistance-preview" />
-      ),
+      title: "page-run-a-node-censorship-resistance-title",
+      preview: "page-run-a-node-censorship-resistance-preview",
       body: [
-        <Translation id="page-run-a-node-censorship-resistance-1" />,
-        <Translation id="page-run-a-node-censorship-resistance-2" />,
-      ],
-    },
-    {
-      image: decentralizationGlyph,
-      title: <Translation id="page-run-a-node-decentralized-title" />,
-      preview: <Translation id="page-run-a-node-decentralized-preview" />,
-      body: [
-        <Translation id="page-run-a-node-decentralized-1" />,
-        <Translation id="page-run-a-node-decentralized-2" />,
-      ],
-    },
-    {
-      image: voteGlyph,
-      title: <Translation id="page-run-a-node-voice-your-choice-title" />,
-      preview: <Translation id="page-run-a-node-voice-your-choice-preview" />,
-      body: [
-        <Translation id="page-run-a-node-voice-your-choice-1" />,
-        <Translation id="page-run-a-node-voice-your-choice-2" />,
+        "page-run-a-node-censorship-resistance-1",
+        "page-run-a-node-censorship-resistance-2",
       ],
     },
     {
       image: earthGlyph,
-      title: <Translation id="page-run-a-node-participate-title" />,
-      preview: <Translation id="page-run-a-node-participate-preview" />,
+      title: "page-run-a-node-participate-title",
+      preview: "page-run-a-node-participate-preview",
+      body: ["page-run-a-node-participate-1", "page-run-a-node-participate-2"],
+    },
+    {
+      image: decentralizationGlyph,
+      title: "page-run-a-node-decentralized-title",
+      preview: "page-run-a-node-decentralized-preview",
       body: [
-        <Translation id="page-run-a-node-participate-1" />,
-        <Translation id="page-run-a-node-participate-2" />,
+        "page-run-a-node-decentralized-1",
+        "page-run-a-node-decentralized-2",
       ],
+    },
+    {
+      image: voteGlyph,
+      title: "page-run-a-node-voice-your-choice-title",
+      preview: "page-run-a-node-voice-your-choice-preview",
+      body: [
+        "page-run-a-node-voice-your-choice-1",
+        "page-run-a-node-voice-your-choice-2",
+      ],
+    },
+    {
+      image: sovereigntyGlyph,
+      title: "page-run-a-node-sovereignty-title",
+      preview: "page-run-a-node-sovereignty-preview",
+      body: ["page-run-a-node-sovereignty-1", "page-run-a-node-sovereignty-2"],
     },
   ]
 
@@ -307,20 +298,24 @@ const RunANodePage = ({ data }) => {
             <h3>
               <Translation id="page-run-a-node-who-preview" />
             </h3>
-            <p>
-              <Translation id="page-run-a-node-who-copy-1" />
-            </p>
-            <p>
-              <Translation id="page-run-a-node-who-copy-2" />
-            </p>
-            <p>
-              <Translation id="page-run-a-node-who-copy-3" />
-            </p>
-            <p>
-              <strong>
-                <Translation id="page-run-a-node-who-copy-bold" />
-              </strong>
-            </p>
+            <Collapse>
+              <ul>
+                <li>
+                  <Translation id="page-run-a-node-who-copy-1" />
+                </li>
+                <li>
+                  <Translation id="page-run-a-node-who-copy-2" />
+                </li>
+                <li>
+                  <Translation id="page-run-a-node-who-copy-3" />
+                </li>
+              </ul>
+              <h3>
+                <strong>
+                  <Translation id="page-run-a-node-who-copy-bold" />
+                </strong>
+              </h3>
+            </Collapse>
           </Width80>
           <Width20>
             <GatsbyImage image={getImage(data.impact)} />
@@ -330,18 +325,18 @@ const RunANodePage = ({ data }) => {
 
       <Content>
         <h2>
-          <Translation id="page-run-a-node-why-run-a-node-title" />
+          <Translation id="page-run-a-node-why-title" />
         </h2>
         <InfoGrid>
           {whyRunANodeCards.map(({ image, title, preview, body }, idx) => (
             <ExpandableCard
-              contentPreview={preview}
-              title={title}
+              contentPreview={<Translation id={preview} />}
+              title={<Translation id={title} />}
               svg={image}
               key={idx}
             >
               {body.map((item, idx) => (
-                <p key={idx}>{item}</p>
+                <p key={idx}>{<Translation id={item} />}</p>
               ))}
             </ExpandableCard>
           ))}
@@ -357,7 +352,9 @@ const RunANodePage = ({ data }) => {
         <p>
           <Translation id="page-run-a-node-getting-started-hardware-1" />
         </p>
-
+        <p>
+          <Translation id="page-run-a-node-getting-started-hardware-2" />
+        </p>
         <Flex>
           <Container>
             <h3>
@@ -428,7 +425,7 @@ const RunANodePage = ({ data }) => {
               </p>
             </Width80>
             <Width20>
-              <img src={terminal} />
+              <img src={terminal} alt="Terminal glyph" />
             </Width20>
           </Highlight>
 
@@ -439,7 +436,7 @@ const RunANodePage = ({ data }) => {
               </p>
             </Width80>
             <Width20>
-              <img src={phonetap} />
+              <img src={phonetap} alt="Phone tap glyph" />
             </Width20>
           </Highlight>
 
@@ -450,7 +447,7 @@ const RunANodePage = ({ data }) => {
               </p>
             </Width80>
             <Width20>
-              <img src={dappnode} />
+              <img src={dappnode} alt="DAppNode glyph" />
             </Width20>
           </Highlight>
         </GappedContent>
