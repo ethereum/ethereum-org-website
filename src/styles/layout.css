@@ -256,7 +256,7 @@ h2 {
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
   line-height: 1.1;
-  scroll-margin-top: 80px;
+  scroll-margin-top: ${({ theme }) => theme.variables.navHeight};
 }
 h3 {
   margin-left: 0;
