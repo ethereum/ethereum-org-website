@@ -33,6 +33,7 @@ import ExpandableCard from "../components/ExpandableCard"
 import Emoji from "../components/Emoji"
 import Link from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
+import DocLink from "../components/DocLink"
 
 // Utils
 import { translateMessageId } from "../utils/translations"
@@ -40,6 +41,9 @@ import { translateMessageId } from "../utils/translations"
 // Styles
 const GappedPage = styled(Page)`
   gap: 5rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    gap: 2rem;
+  }
   scroll-behavior: smooth;
   h1,
   h2,
@@ -99,9 +103,7 @@ const Highlight = styled(Content)`
   color: ${({ theme }) => theme.colors.text};
   position: relative;
   isolation: isolate;
-  p {
-    margin-bottom: 0;
-  }
+
   &:nth-of-type(even) {
     flex-direction: row-reverse;
   }
@@ -118,12 +120,23 @@ const WhyHighlight = styled(Highlight)`
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     padding: 1rem;
   }
+  p {
+    margin-top: 0;
+  }
 `
 
 const SoftwareHighlight = styled(Highlight)`
-  padding: 1.5rem 4rem;
+  padding: 2rem 6rem;
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    padding: 1rem;
+    padding: 2rem;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: inherit;
+    filter: blur(1rem);
   }
 `
 
@@ -183,6 +196,9 @@ const Collapse = styled(motion.div)``
 const Flex = styled.div`
   display: flex;
   gap: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
+  }
 `
 
 const MarginFlex = styled(Flex)`
@@ -221,7 +237,13 @@ const FullyLoaded = styled(Container)`
     font-weight: 600;
     line-height: 125%;
   }
-  button {
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+    padding-bottom: 1rem;
+    a {
+      width: fit-content;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
   }
 `
 
@@ -556,9 +578,13 @@ const RunANodePage = ({ data }) => {
               </p>
               <p>
                 <code>
-                  <Translation id="page-run-a-node-getting-started-software-section-1-cta" />
+                  <StyledEmoji text=":warning:" size={1} />
+                  <Translation id="page-run-a-node-getting-started-software-section-1-alert" />
                 </code>
               </p>
+              <DocLink to="/developers/docs/nodes-and-clients/run-a-node/#spinning-up-node">
+                <Translation id="page-run-a-node-getting-started-software-section-1-link" />
+              </DocLink>
             </Width80>
             <Width20>
               <img src={terminal} alt="Terminal glyph" />
