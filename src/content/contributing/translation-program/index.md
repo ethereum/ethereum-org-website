@@ -107,7 +107,7 @@ Thank you for your participation in the ethereum.org Translation Program!
 We will be holding office hours for translators on the second Wednesday of every month. These will be held in the #office-hours voice channel on our Discord, where you can also find the exact times and additional details.
 
 The purpose of the office hours is to allow our translators to ask questions about the translation process, provide feedback on the program, share their ideas, or just have a chat with us.
-Participants can also learn more about the translation program, and learn how to get involved and become an ethereum.org translator.
+Participants can also learn more about the translation program, and get some information on how to become an ethereum.org translator.
 Finally, we want to use these calls to communicate recent developments in connection with the translation program, and share key tips and instructions with our contributors.
 
 If you are an ethereum.org translator, or would like to become one, feel free to join us during one of these sessions.
