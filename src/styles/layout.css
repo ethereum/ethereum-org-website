@@ -272,7 +272,7 @@ h3 {
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
   line-height: 1.1;
-  scroll-margin-top: 80px;
+  scroll-margin-top: ${({ theme }) => theme.variables.navHeight};
 }
 h4 {
   margin-left: 0;
