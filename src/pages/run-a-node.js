@@ -112,6 +112,7 @@ const ResponsiveButtonLink = styled(ButtonLink)`
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
     width: 100%;
+    justify-content: center;
   }
 `
 
@@ -271,10 +272,15 @@ const FullyLoaded = styled(Container)`
     line-height: 125%;
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    a {
+    button {
       width: fit-content;
       padding-left: 2rem;
       padding-right: 2rem;
+    }
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
+    button {
+      width: 100%;
     }
   }
   &:hover {
@@ -337,6 +343,7 @@ const StyledEmoji = styled(Emoji)`
 `
 
 const ScrollLink = styled(NakedButton)`
+  text-align: start;
   color: ${({ theme }) => theme.colors.primary};
   &.active {
     color: ${({ theme }) => theme.colors.primary};
