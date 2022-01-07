@@ -543,26 +543,30 @@ const RunANodePage = ({ data }) => {
                 </h4>
                 <ul>
                   <li>
-                    4 - 8 GB RAM
+                    <Translation id="page-run-a-node-build-your-own-min-ram" />
                     <p>
-                      <Link to="#plan-on-staking">See note on staking</Link>
+                      <Link to="#plan-on-staking">
+                        <Translation id="page-run-a-node-build-your-own-ram-note-1" />
+                      </Link>
                     </p>
                     <p>
-                      <Link to="#rasp-pi">See note on Raspberry Pis</Link>
+                      <Link to="#rasp-pi">
+                        <Translation id="page-run-a-node-build-your-own-ram-note-2" />
+                      </Link>
                     </p>
                   </li>
                   <li>
-                    2 TB SSD
+                    <Translation id="page-run-a-node-build-your-own-min-ssd" />
                     <p>
                       <small>
-                        Though you can still technically get away with 1 TB, the
-                        blockchain continues to grow over time and this will
-                        soon no longer be enough.
+                        <Translation id="page-run-a-node-build-your-own-ssd-note-1" />
                       </small>
                     </p>
                     <p>
                       <small>
-                        <em>SSD necessary for required write speeds.</em>
+                        <em>
+                          <Translation id="page-run-a-node-build-your-own-ssd-note-2" />
+                        </em>
                       </small>
                     </p>
                   </li>
@@ -570,28 +574,31 @@ const RunANodePage = ({ data }) => {
               </BuildBox>
 
               <BuildBox>
-                <h4>Recommended:</h4>
+                <h4>
+                  <Translation id="page-run-a-node-build-your-own-recommended" />
+                </h4>
                 <ul>
                   <li>
-                    Intel NUC, 7th gen or higher
-                    <p>
-                      <small>x86 processor</small>
-                    </p>
-                  </li>
-                  <li>
-                    Wired internet connection
+                    <Translation id="page-run-a-node-build-your-own-nuc" />
                     <p>
                       <small>
-                        Not required, but provides easier setup and most
-                        consistent connection
+                        <Translation id="page-run-a-node-build-your-own-nuc-small" />
                       </small>
                     </p>
                   </li>
                   <li>
-                    Display screen and keyboard
+                    <Translation id="page-run-a-node-build-your-own-connection" />
                     <p>
                       <small>
-                        Unless you're using DAppNode, or ssh/headless setup
+                        <Translation id="page-run-a-node-build-your-own-connection-small" />
+                      </small>
+                    </p>
+                  </li>
+                  <li>
+                    <Translation id="page-run-a-node-build-your-own-peripherals" />
+                    <p>
+                      <small>
+                        <Translation id="page-run-a-node-build-your-own-peripherals-small" />
                       </small>
                     </p>
                   </li>
@@ -607,63 +614,72 @@ const RunANodePage = ({ data }) => {
                 <Translation id="page-run-a-node-buy-fully-loaded-title" />
               </h3>
               <p>
-                <Translation id="page-run-a-node-buy-fully-loaded-1" />
+                <Translation id="page-run-a-node-buy-fully-loaded-description" />
               </p>
               <ul>
-                <li>No building.</li>
-                <li>App-like setup.</li>
+                <li>
+                  <Translation id="page-run-a-node-buy-fully-loaded-note-1" />
+                </li>
+                <li>
+                  <Translation id="page-run-a-node-buy-fully-loaded-note-2" />
+                </li>
                 <li>
                   <code>
-                    <Translation id="page-run-a-node-buy-fully-loaded-note" />
+                    <Translation id="page-run-a-node-buy-fully-loaded-note-3" />
                   </code>
                 </li>
               </ul>
             </div>
-            <ButtonLink to="#choose-your-adventure">Shop</ButtonLink>
+            <ButtonLink to="#choose-your-adventure">
+              <Translation id="page-run-a-node-shop" />
+            </ButtonLink>
           </FullyLoaded>
         </MarginFlex>
 
         <h3 id="plan-on-staking">
           <StyledEmoji text=":cut_of_meat:" size={2} />
-          Plan on staking?
+          <Translation id="page-run-a-node-staking-plans-title" />
         </h3>
         <p>
-          To maximize the efficiency of your validator, a minimum of 16GB RAM is
-          recommended, but 32GB is better, with a CPU benchmark score of 6667+
-          on <Link to="https://cpubenchmark.net">cpubenchmark.net</Link>. It is
-          also recommended that stakers have access to unlimited high-speed
-          internet bandwidth, though this is not an absolute requirement.
+          <Translation id="page-run-a-node-staking-plans-description" />
+        </p>
+        <p>
+          <Link to="https://cpubenchmark.net">cpubenchmark.net</Link>
         </p>
         <h3 id="rasp-pi">
-          <StyledEmoji text=":pie:" size={2} />A note on Rapsberry Pis (ARM
-          processor)
+          <StyledEmoji text=":pie:" size={2} />
+          <Translation id="page-run-a-node-rasp-pi-title" />
         </h3>
         <p>
-          Raspberry Pis are lightweight and affordable computers, but they have
-          limitations that may impact the performance of your node. Though not
-          currently recommended for staking, these can be an excellent and
-          inexpensive option for running a node for personal use, with as little
-          as 4 - 8 GB of RAM.
+          <Translation id="page-run-a-node-rasp-pi-description" />
         </p>
         <ul>
           <li>
-            If you plan on running DAppNode, please see instructions for{" "}
             <Link to="https://docs.dappnode.io/get-started/installation/arm-hardware/installation">
-              DAppNode on ARM
-            </Link>
-            .
+              <Translation id="page-run-a-node-rasp-pi-note-1-link" />
+            </Link>{" "}
+            -{" "}
+            <i>
+              <Translation id="page-run-a-node-rasp-pi-note-1-description" />
+            </i>
           </li>
           <li>
-            To learn how to set up a node via the command line on a Raspberry
-            Pi, check out{" "}
             <Link to="https://ethereum-on-arm-documentation.readthedocs.io/en/latest">
-              Ethereum on Arm documentation
-            </Link>
-            , or following along with{" "}
-            <Link to="/developers/tutorials/run-node-raspberry-pi/">
-              this tutorial
-            </Link>
-            .
+              <Translation id="page-run-a-node-rasp-pi-note-2-link" />
+            </Link>{" "}
+            -{" "}
+            <i>
+              <Translation id="page-run-a-node-rasp-pi-note-2-description" />
+            </i>
+          </li>
+          <li>
+            <Link to="/developers/tutorials/run-node-raspberry-pi">
+              <Translation id="page-run-a-node-rasp-pi-note-3-link" />
+            </Link>{" "}
+            -{" "}
+            <i>
+              <Translation id="page-run-a-node-rasp-pi-note-3-description" />
+            </i>
           </li>
         </ul>
       </Content>
@@ -689,7 +705,13 @@ const RunANodePage = ({ data }) => {
               </DocLink>
             </Width80>
             <Width20>
-              <img src={terminal} alt="Terminal glyph" />
+              <img
+                src={terminal}
+                alt={translateMessageId(
+                  "page-run-a-node-glyph-alt-terminal",
+                  intl
+                )}
+              />
             </Width20>
           </SoftwareHighlight>
 
@@ -700,7 +722,13 @@ const RunANodePage = ({ data }) => {
               </p>
             </Width80>
             <Width20>
-              <img src={phonetap} alt="Phone tap glyph" />
+              <img
+                src={phonetap}
+                alt={translateMessageId(
+                  "page-run-a-node-glyph-alt-phone",
+                  intl
+                )}
+              />
             </Width20>
           </SoftwareHighlight>
 
@@ -711,7 +739,13 @@ const RunANodePage = ({ data }) => {
               </p>
             </Width80>
             <Width20>
-              <img src={dappnode} alt="DAppNode glyph" />
+              <img
+                src={dappnode}
+                alt={translateMessageId(
+                  "page-run-a-node-glyph-alt-dappnode",
+                  intl
+                )}
+              />
             </Width20>
           </SoftwareHighlight>
         </GappedContent>
@@ -724,7 +758,10 @@ const RunANodePage = ({ data }) => {
         <Flex>
           <AdventureContainer>
             <SvgTitle>
-              <img src={plugAndPlayGlyph} alt="Plug-n-play glyph" />
+              <img
+                src={plugAndPlayGlyph}
+                alt={translateMessageId("page-run-a-node-glyph-alt-pnp", intl)}
+              />
               <h3>
                 <Translation id="page-run-a-node-plug-and-play-title" />
               </h3>
@@ -745,7 +782,13 @@ const RunANodePage = ({ data }) => {
           <AdventureContainer>
             <div>
               <SvgTitle>
-                <img src={downloadGlyph} alt="Install manually glyph" />
+                <img
+                  src={downloadGlyph}
+                  alt={translateMessageId(
+                    "page-run-a-node-glyph-alt-download",
+                    intl
+                  )}
+                />
                 <h3>
                   <Translation id="page-run-a-node-install-manually-title" />
                 </h3>
@@ -766,15 +809,16 @@ const RunANodePage = ({ data }) => {
       <Content>
         <SplitContent>
           <Column>
-            <h2>Part 3: Find some helpers</h2>
+            <h2>
+              <Translation id="page-run-a-node-community-title" />
+            </h2>
             <p>
-              Discord is home to a large number of community builders willing to
-              help you with any questions you may encounter. If you have a
-              question it's likely someone here can help you find an answer.
+              <Translation id="page-run-a-node-community-description" />
             </p>
             <ButtonContainer>
               <ResponsiveButtonLink to="https://discord.gg/c28an8dA5k">
-                <DiscordIcon name="discord" /> Join the DAppNode Discord
+                <DiscordIcon name="discord" />
+                <Translation id="page-run-a-node-community-link" />
               </ResponsiveButtonLink>
             </ButtonContainer>
           </Column>
@@ -785,24 +829,32 @@ const RunANodePage = ({ data }) => {
       </Content>
 
       <Content>
-        <h2>Further reading</h2>
+        <h2>
+          <Translation id="page-run-a-node-further-reading-title" />
+        </h2>
         <ul>
           <li>
             <Link to="https://github.com/ethereumbook/ethereumbook/blob/develop/03clients.asciidoc#should-i-run-a-full-node">
-              Mastering Ethereum - Should I Run a Full Node
+              <Translation id="page-run-a-node-further-reading-1-link" />
             </Link>{" "}
-            - <i>Andreas Antonopoulos</i>
+            -{" "}
+            <i>
+              <Translation id="page-run-a-node-further-reading-1-author" />
+            </i>
           </li>
           <li>
             <Link to="https://ethereum-on-arm-documentation.readthedocs.io/en/latest/">
-              Ethereum on Arm - Quick Start Guide
+              <Translation id="page-run-a-node-further-reading-2-link" />
             </Link>
           </li>
           <li>
             <Link to="https://vitalik.ca/general/2021/05/23/scaling.html">
-              The Limits to Blockchain Scalability
+              <Translation id="page-run-a-node-further-reading-3-link" />
             </Link>{" "}
-            - <i>Vitalik Buterin</i>
+            -{" "}
+            <i>
+              <Translation id="page-run-a-node-further-reading-3-author" />
+            </i>
           </li>
         </ul>
       </Content>
@@ -814,20 +866,23 @@ const RunANodePage = ({ data }) => {
           <Leslie image={getImage(data.leslie)} />
         </Column>
         <Column>
-          <h2>Stake your ETH</h2>
+          <h2>
+            <Translation id="page-run-a-node-staking-title" />
+          </h2>
           <p>
-            Though not required, with a node up and running you're one step
-            closer to staking your ETH to earn rewards and help secure Ethereum.
+            <Translation id="page-run-a-node-staking-description" />
           </p>
           <ButtonContainer>
             <ResponsiveButtonLink to="/eth2/staking">
-              Stake ETH
+              <Translation id="page-run-a-node-staking-link" />
             </ResponsiveButtonLink>
           </ButtonContainer>
         </Column>
       </StakingCalloutContainer>
 
-      <StyledFeedbackCard prompt="Did you find this page helpful?" />
+      <StyledFeedbackCard
+        prompt={translateMessageId("page-run-a-node-feedback-prompt", intl)}
+      />
     </GappedPage>
   )
 }
