@@ -410,11 +410,11 @@ const RunANodePage = ({ data }) => {
     buttons: [
       {
         content: <Translation id="page-run-a-node-button-why-run-a-node" />,
-        path: "#why-run-a-node",
+        pathId: "why-run-a-node",
       },
       {
         content: <Translation id="page-run-a-node-button-get-started" />,
-        path: "#get-started",
+        pathId: "getting-started",
       },
     ],
   }
@@ -575,8 +575,8 @@ const RunANodePage = ({ data }) => {
 
       <Divider />
 
-      <Content>
-        <h2 id="getting-started">
+      <Content id="getting-started">
+        <h2>
           <Translation id="page-run-a-node-getting-started-hardware-title" />
         </h2>
         <p>
