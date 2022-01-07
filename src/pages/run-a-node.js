@@ -103,6 +103,13 @@ const ResponsiveButtonLink = styled(ButtonLink)`
   align-items: center;
   gap: 1rem;
   width: fit-content;
+  &:hover {
+    svg {
+      fill: ${({ theme }) => theme.colors.buttonColor};
+      transform: scale(1.15);
+      transition: 0.1s;
+    }
+  }
   @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
     width: 100%;
   }
@@ -161,8 +168,16 @@ const InfoGrid = styled(CardGrid)`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
   gap: 1rem 2rem;
-  div {
+  & > div {
     height: fit-content;
+    &:hover {
+      transition: 0.1s;
+      transform: scale(1.01);
+      img {
+        transition: 0.1s;
+        transform: scale(1.1);
+      }
+    }
   }
 `
 
