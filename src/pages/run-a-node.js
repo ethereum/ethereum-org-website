@@ -35,6 +35,7 @@ import Link from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
 import DocLink from "../components/DocLink"
 import FeedbackCard from "../components/FeedbackCard"
+import Icon from "../components/Icon"
 
 // Utils
 import { translateMessageId } from "../utils/translations"
@@ -45,14 +46,8 @@ const GappedPage = styled(Page)`
   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     gap: 3rem;
   }
-  scroll-behavior: smooth;
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    scroll-margin-top: 5rem;
+  * {
+    scroll-margin-top: 5.5rem;
   }
 `
 
@@ -104,6 +99,9 @@ const Column = styled.div`
 `
 
 const ResponsiveButtonLink = styled(ButtonLink)`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   width: fit-content;
   @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
     width: 100%;
@@ -315,6 +313,14 @@ const StyledEmoji = styled(Emoji)`
   margin-right: 1rem;
 `
 
+const DiscordIcon = styled(Icon)`
+  fill: ${({ theme }) => theme.colors.buttonColor};
+
+  &:hover svg {
+    fill: ${({ theme }) => theme.colors.buttonColor};
+  }
+`
+
 const StakingCalloutContainer = styled(SplitContent)`
   background: linear-gradient(
     262.78deg,
@@ -492,7 +498,7 @@ const RunANodePage = ({ data }) => {
         </WhyHighlight>
       </Content>
 
-      <Content>
+      <Content id="why-run-a-node">
         <h2>
           <Translation id="page-run-a-node-why-title" />
         </h2>
@@ -562,6 +568,7 @@ const RunANodePage = ({ data }) => {
                   </li>
                 </ul>
               </BuildBox>
+
               <BuildBox>
                 <h4>Recommended:</h4>
                 <ul>
@@ -615,6 +622,7 @@ const RunANodePage = ({ data }) => {
             <ButtonLink to="#choose-your-adventure">Shop</ButtonLink>
           </FullyLoaded>
         </MarginFlex>
+
         <h3 id="plan-on-staking">
           <StyledEmoji text=":cut_of_meat:" size={2} />
           Plan on staking?
@@ -709,8 +717,8 @@ const RunANodePage = ({ data }) => {
         </GappedContent>
       </Content>
 
-      <Content>
-        <h2 id="choose-your-adventure">
+      <Content id="choose-your-adventure">
+        <h2>
           <Translation id="page-run-a-node-choose-your-adventure" />
         </h2>
         <Flex>
@@ -766,7 +774,7 @@ const RunANodePage = ({ data }) => {
             </p>
             <ButtonContainer>
               <ResponsiveButtonLink to="https://discord.gg/c28an8dA5k">
-                Join the DAppNode Discord
+                <DiscordIcon name="discord" /> Join the DAppNode Discord
               </ResponsiveButtonLink>
             </ButtonContainer>
           </Column>
