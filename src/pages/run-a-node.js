@@ -59,6 +59,9 @@ const GappedContent = styled(Content)`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    padding: 0;
+  }
 `
 
 const HeroContainer = styled.div`
@@ -229,7 +232,9 @@ const BuildFlex = styled(Flex)`
 const FullyLoaded = styled(Container)`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   line-height: 200%;
+  padding-bottom: 2rem;
   p {
     font-size: 125%;
   }
@@ -238,12 +243,50 @@ const FullyLoaded = styled(Container)`
     line-height: 125%;
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    padding-bottom: 1rem;
     a {
       width: fit-content;
       padding-left: 2rem;
       padding-right: 2rem;
     }
+  }
+`
+
+const AdventureContainer = styled(Container)`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  &:hover {
+    transition: transform 0.1s;
+    transform: scale(1.02);
+  }
+`
+
+const SvgTitle = styled.div`
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+`
+
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+`
+
+const DappNodeButtonLink = styled(ButtonLink)`
+  background-color: #30bcb2;
+  &:hover {
+    background-color: #3ec3c6;
+  }
+`
+
+const AvadoButtonLink = styled(ButtonLink)`
+  background-color: #4a9b40;
+  &:hover {
+    background-color: #5baa4a;
   }
 `
 
@@ -502,22 +545,24 @@ const RunANodePage = ({ data }) => {
           </Container>
 
           <FullyLoaded>
-            <h3>
-              <StyledEmoji text=":shopping_cart:" size={2} />
-              <Translation id="page-run-a-node-buy-fully-loaded-title" />
-            </h3>
-            <p>
-              <Translation id="page-run-a-node-buy-fully-loaded-1" />
-            </p>
-            <ul>
-              <li>No building.</li>
-              <li>App-like setup.</li>
-              <li>
-                <code>
-                  <Translation id="page-run-a-node-buy-fully-loaded-note" />
-                </code>
-              </li>
-            </ul>
+            <div>
+              <h3>
+                <StyledEmoji text=":shopping_cart:" size={2} />
+                <Translation id="page-run-a-node-buy-fully-loaded-title" />
+              </h3>
+              <p>
+                <Translation id="page-run-a-node-buy-fully-loaded-1" />
+              </p>
+              <ul>
+                <li>No building.</li>
+                <li>App-like setup.</li>
+                <li>
+                  <code>
+                    <Translation id="page-run-a-node-buy-fully-loaded-note" />
+                  </code>
+                </li>
+              </ul>
+            </div>
             <ButtonLink to="#choose-your-adventure">Shop</ButtonLink>
           </FullyLoaded>
         </MarginFlex>
@@ -621,32 +666,44 @@ const RunANodePage = ({ data }) => {
         </h2>
 
         <Flex>
-          <Container>
-            <h3>
-              <Translation id="page-run-a-node-plug-and-play-title" />
-            </h3>
+          <AdventureContainer>
+            <SvgTitle>
+              <img src={plugAndPlayGlyph} alt="Plug-n-play glyph" />
+              <h3>
+                <Translation id="page-run-a-node-plug-and-play-title" />
+              </h3>
+            </SvgTitle>
             <p>
               <Translation id="page-run-a-node-plug-and-play-1" />
             </p>
-            <button>
-              <Translation id="page-run-a-node-shop-dappnode" />
-            </button>
-            <button>
-              <Translation id="page-run-a-node-shop-avado" />
-            </button>
-          </Container>
+            <ButtonContainer>
+              <DappNodeButtonLink to="https://shop.dappnode.io/">
+                <Translation id="page-run-a-node-shop-dappnode" />
+              </DappNodeButtonLink>
+              <AvadoButtonLink to="https://ava.do/">
+                <Translation id="page-run-a-node-shop-avado" />
+              </AvadoButtonLink>
+            </ButtonContainer>
+          </AdventureContainer>
 
-          <Container>
-            <h3>
-              <Translation id="page-run-a-node-install-manually-title" />
-            </h3>
-            <p>
-              <Translation id="page-run-a-node-install-manually-1" />
-            </p>
-            <button>
-              <Translation id="page-run-a-node-dappnode-setup" />
-            </button>
-          </Container>
+          <AdventureContainer>
+            <div>
+              <SvgTitle>
+                <img src={downloadGlyph} alt="Install manually glyph" />
+                <h3>
+                  <Translation id="page-run-a-node-install-manually-title" />
+                </h3>
+              </SvgTitle>
+              <p>
+                <Translation id="page-run-a-node-install-manually-1" />
+              </p>
+            </div>
+            <ButtonContainer>
+              <DappNodeButtonLink to="https://docs.dappnode.io">
+                <Translation id="page-run-a-node-dappnode-setup" />
+              </DappNodeButtonLink>
+            </ButtonContainer>
+          </AdventureContainer>
         </Flex>
       </Content>
     </GappedPage>
