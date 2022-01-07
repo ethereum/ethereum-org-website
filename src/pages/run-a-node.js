@@ -79,7 +79,7 @@ const TwoColumnContent = styled.div`
   align-items: center;
   margin-bottom: 2rem;
   gap: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     flex-direction: column;
     align-items: flex-start;
     margin-left: 0rem;
@@ -92,7 +92,7 @@ const SplitContent = styled.div`
   align-items: center;
   gap: 2rem;
 
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     width: 100%;
     flex-direction: column;
   }
@@ -100,6 +100,13 @@ const SplitContent = styled.div`
 
 const Column = styled.div`
   flex: 1;
+`
+
+const ResponsiveButtonLink = styled(ButtonLink)`
+  width: fit-content;
+  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
+    width: 100%;
+  }
 `
 
 const Highlight = styled(Content)`
@@ -167,7 +174,7 @@ const Width80 = styled.div`
   ul {
     list-style: none;
   }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     width: 100%;
   }
 `
@@ -179,14 +186,14 @@ const Width20 = styled.div`
   justify-content: center;
   align-items: center;
   place-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     width: 100%;
   }
 `
 
 const Width60 = styled.div`
   flex: 3;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     width: 100%;
   }
 `
@@ -195,10 +202,9 @@ const Width40 = styled.div`
   flex: 2;
   display: flex;
   justify-content: center;
-  /* align-self: center; */
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+  align-self: center;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     width: 100%;
-    /* align-self: center; */
   }
 `
 
@@ -207,7 +213,7 @@ const Collapse = styled(motion.div)``
 const Flex = styled.div`
   display: flex;
   gap: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     flex-direction: column;
   }
 `
@@ -283,19 +289,21 @@ const SvgTitle = styled.div`
 
 const ButtonContainer = styled.div`
   display: flex;
-  flex-direction: column;
   gap: 1rem;
   margin-top: 2rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
+    flex-direction: column;
+  }
 `
 
-const DappNodeButtonLink = styled(ButtonLink)`
+const DappNodeButtonLink = styled(ResponsiveButtonLink)`
   background-color: #30bcb2;
   &:hover {
     background-color: #3ec3c6;
   }
 `
 
-const AvadoButtonLink = styled(ButtonLink)`
+const AvadoButtonLink = styled(ResponsiveButtonLink)`
   background-color: #4a9b40;
   &:hover {
     background-color: #5baa4a;
@@ -728,15 +736,38 @@ const RunANodePage = ({ data }) => {
               question it's likely someone here can help you find an answer.
             </p>
             <ButtonContainer>
-              <ButtonLink to="https://discord.gg/c28an8dA5k">
+              <ResponsiveButtonLink to="https://discord.gg/c28an8dA5k">
                 Join the DAppNode Discord
-              </ButtonLink>
+              </ResponsiveButtonLink>
             </ButtonContainer>
           </Column>
           <Column>
             <GatsbyImage image={getImage(data.community)} />
           </Column>
         </SplitContent>
+      </Content>
+
+      <Content>
+        <h2>Further reading</h2>
+        <ul>
+          <li>
+            <Link to="https://github.com/ethereumbook/ethereumbook/blob/develop/03clients.asciidoc#should-i-run-a-full-node">
+              Mastering Ethereum - Should I Run a Full Node
+            </Link>{" "}
+            - <i>Andreas Antonopoulos</i>
+          </li>
+          <li>
+            <Link to="https://ethereum-on-arm-documentation.readthedocs.io/en/latest/">
+              Ethereum on Arm - Quick Start Guide
+            </Link>
+          </li>
+          <li>
+            <Link to="https://vitalik.ca/general/2021/05/23/scaling.html">
+              The Limits to Blockchain Scalability
+            </Link>{" "}
+            - <i>Vitalik Buterin</i>
+          </li>
+        </ul>
       </Content>
     </GappedPage>
   )
@@ -782,7 +813,7 @@ export const query = graphql`
       childImageSharp {
         gatsbyImageData(
           width: 624
-          layout: FIXED
+          layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
         )
