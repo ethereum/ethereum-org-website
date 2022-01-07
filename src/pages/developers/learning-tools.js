@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
@@ -78,6 +78,12 @@ const StyledCardGrid = styled(CardGrid)`
 
 const LearningToolsPage = ({ data }) => {
   const intl = useIntl()
+  const [randomizedSandboxes, setRandomizedSandboxes] = useState([])
+
+  useEffect(() => {
+    const randomizedSandboxes = shuffle(sandboxes)
+    setRandomizedSandboxes(randomizedSandboxes)
+  }, [])
 
   const sandboxes = [
     {
@@ -97,6 +103,15 @@ const LearningToolsPage = ({ data }) => {
       alt: "page-learning-tools-eth-dot-build-logo-alt",
       background: "#000000",
       subjects: ["web3"],
+    },
+    {
+      name: "Replit",
+      description: "page-learning-tools-replit-description",
+      url: "https://replit.com/@replit/Solidity-starter-beta",
+      image: getImage(data.replit),
+      alt: "page-learning-tools-replit-logo-alt",
+      background: "#0f1524",
+      subjects: ["Solidity", "web3"],
     },
   ]
 
@@ -353,6 +368,9 @@ export const query = graphql`
       ...learningToolImage
     }
     remix: file(relativePath: { eq: "dev-tools/remix.png" }) {
+      ...learningToolImage
+    }
+    replit: file(relativePath: { eq: "dev-tools/replit.png" }) {
       ...learningToolImage
     }
     ethdotbuild: file(relativePath: { eq: "dev-tools/eth-dot-build.png" }) {
