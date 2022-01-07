@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
+import { shuffle } from "lodash"
 
 import { translateMessageId } from "../../utils/translations"
 import PageMetadata from "../../components/PageMetadata"
