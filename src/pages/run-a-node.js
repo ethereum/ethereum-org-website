@@ -314,6 +314,24 @@ const StyledEmoji = styled(Emoji)`
   margin-right: 1rem;
 `
 
+const StakingCalloutContainer = styled(SplitContent)`
+  background: linear-gradient(
+    262.78deg,
+    rgba(152, 186, 249, 0.25) 0%,
+    rgba(207, 177, 251, 0.25) 53.12%,
+    rgba(151, 252, 246, 0.25) 100%
+  );
+  width: 100%;
+  padding: 2rem;
+`
+
+const Leslie = styled(GatsbyImage)`
+  transform: scaleX(-1) scale(1.15) translateX(2rem);
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+    transform: scaleX(-1) translateY(-3rem);
+  }
+`
+
 const RunANodePage = ({ data }) => {
   const intl = useIntl()
 
@@ -769,6 +787,26 @@ const RunANodePage = ({ data }) => {
           </li>
         </ul>
       </Content>
+
+      <Divider />
+
+      <StakingCalloutContainer>
+        <Column>
+          <Leslie image={getImage(data.leslie)} />
+        </Column>
+        <Column>
+          <h2>Stake your ETH</h2>
+          <p>
+            Though not required, with a node up and running you're one step
+            closer to staking your ETH to earn rewards and help secure Ethereum.
+          </p>
+          <ButtonContainer>
+            <ResponsiveButtonLink to="/eth2/staking">
+              Stake ETH
+            </ResponsiveButtonLink>
+          </ButtonContainer>
+        </Column>
+      </StakingCalloutContainer>
     </GappedPage>
   )
 }
@@ -810,6 +848,16 @@ export const query = graphql`
       }
     }
     community: file(relativePath: { eq: "enterprise-eth.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 624
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    leslie: file(relativePath: { eq: "eth2/eth2_rhino.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 624
