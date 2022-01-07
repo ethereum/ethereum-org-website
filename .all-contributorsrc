@@ -6115,6 +6115,17 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "sorenrood",
+      "name": "Søren Rood",
+      "avatar_url": "https://avatars.githubusercontent.com/u/49735495?v=4",
+      "profile": "http://5oren.com",
+      "contributions": [
+        "code",
+        "doc",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
