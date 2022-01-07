@@ -11,7 +11,7 @@ summaryPoint3: Ini direncanakan mendahului peluncuran rantai shard.
 summaryPoint4: Sebelumnya kami menyebutnya sebagai "docking."
 ---
 
-<UpgradeStatus date="~Q1/Q2 2022">
+<UpgradeStatus dateKey="page-eth2-upgrades-merge-date">
   Peningkatan ini mewakilkan peralihan resmi ke konsensus bukti taruhan. Ini menghilangkan kebutuhan akan penambangan dengan energi besar, dan alih-alih mengamankan jaringan yang menggunakan ether yang ditaruhkan. Satu langkah yang sangat menyenangkan dalam mewujudkan <a href="/eth2/vision/">visi Eth2</a> – lebih banyak skalabilitas, keamanan, dan keberlanjutan.
 </UpgradeStatus>
 

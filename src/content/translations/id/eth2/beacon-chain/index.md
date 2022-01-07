@@ -11,7 +11,7 @@ summaryPoint3: Memperkenalkan bukti taruhan ke ekosistem Ethereum.
 summaryPoint4: Anda mungkin mengenalnya sebagai "Fase 0" pada roadmap teknis.
 ---
 
-<UpgradeStatus isShipped date="Shipped!">
+<UpgradeStatus isShipped dateKey="page-eth2-upgrades-beacon-date">
     Rantai Suar yang diluncurkan pada siang hari, 1 Desember 2020 waktu UTC. Untuk mempelajari lebih lanjut, <a href="https://beaconscan.com/">jelajahi data ini</a>. Jika Anda ingin membantu mengesahkan rantai, Anda dapat <a href="/eth2/staking/">menaruhkan ETH Anda</a>.
 </UpgradeStatus>
 

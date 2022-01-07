@@ -11,7 +11,7 @@ summaryPoint3: Sprawiają że łatwiej uruchamiać węzły przez zmniejszenie wy
 summaryPoint4: Techniczne wytyczne zawierają pracę nad łańcuchami szczątkowymi podczas „Fazy 1” i potencjalnie „Fazy 2”
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     Łańcuchy odłamkowe powinny być dostarczone około 2023 r., w zależności od tego, jak będą postępowały prace po wdrożeniu <a href="/eth2/beacon-chain/">łańcucha śledzącego</a>. Te fragmentacje dadzą Ethereum większą pojemność przechowywania i dostępu do danych, ale nie będzie można ich używać do wykonywania kodu. Szczegóły tego są wciąż opracowywane.
 </UpgradeStatus>
 

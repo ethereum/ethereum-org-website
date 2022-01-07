@@ -11,7 +11,7 @@ summaryPoint3: Bu Ethereum için çalışma ispatının sonunu ve pay ispatına 
 summaryPoint4: Bunu teknik yol haritalarındaki "1,5 Aşaması" olarak tanıyor olabilirsiniz.
 ---
 
-<UpgradeStatus date="~Q1/Q2 2022">
+<UpgradeStatus dateKey="page-eth2-upgrades-merge-date">
     Bu yükseltme, shard zincirlerinin gelişini takip edecektir. Ancak o zaman <a href="/eth2/vision/">Eth2 vision</a> tamamen gerçekleşmiş olacaktır – daha fazla ölçeklenebilirlik, güvenlik ve sürdürülebilirlikle birlikte tüm ağı destekleyen paydaşlık.
 </UpgradeStatus>
 

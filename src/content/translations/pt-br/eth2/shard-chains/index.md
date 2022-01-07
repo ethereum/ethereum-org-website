@@ -11,7 +11,7 @@ summaryPoint3: Elas facilitam a execução de um nó mantendo os requisitos de h
 summaryPoint4: Esta atualização está planejada para logo depois da integração da rede principal com a Beacon Chain.
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     As cadeias de fragmentos devem ser introduzidas em algum momento de 2022, dependendo do andamento do trabalho depois da <a href="/eth2/merge/">a integração</a>. Esses fragmentos darão a Ethereum mais capacidade de armazenamento e acesso aos dados, mas eles não serão usados para execução de código. Os detalhes disso ainda estão sendo avaliados.
 </UpgradeStatus>
 

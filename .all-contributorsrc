@@ -4706,7 +4706,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/4008777?v=4",
       "profile": "http://ProjectAFA.org",
       "contributions": [
-        "doc"
+        "doc",
+        "content"
       ]
     },
     {
@@ -5202,7 +5203,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/11813607?v=4",
       "profile": "https://mpj.io",
       "contributions": [
-        "content"
+        "content",
+        "doc"
       ]
     },
     {
@@ -6082,6 +6084,33 @@
       "profile": "https://github.com/Gobljn",
       "contributions": [
         "ideas"
+      ]
+    },
+    {
+      "login": "yelnady",
+      "name": "Yusuf Elnady",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45317481?v=4",
+      "profile": "https://www.linkedin.com/in/yelnady/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "aryankeluskar",
+      "name": "Aryan Keluskar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/80093392?v=4",
+      "profile": "https://github.com/aryankeluskar",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "LingTian",
+      "name": "Ling",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4249432?v=4",
+      "profile": "https://github.com/LingTian",
+      "contributions": [
+        "content"
       ]
     }
   ],
