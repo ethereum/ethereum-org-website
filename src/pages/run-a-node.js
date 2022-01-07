@@ -34,6 +34,7 @@ import Emoji from "../components/Emoji"
 import Link from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
 import DocLink from "../components/DocLink"
+import FeedbackCard from "../components/FeedbackCard"
 
 // Utils
 import { translateMessageId } from "../utils/translations"
@@ -41,8 +42,8 @@ import { translateMessageId } from "../utils/translations"
 // Styles
 const GappedPage = styled(Page)`
   gap: 5rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    gap: 2rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+    gap: 3rem;
   }
   scroll-behavior: smooth;
   h1,
@@ -323,6 +324,10 @@ const StakingCalloutContainer = styled(SplitContent)`
   );
   width: 100%;
   padding: 2rem;
+  gap: 5rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    gap: 3rem;
+  }
 `
 
 const Leslie = styled(GatsbyImage)`
@@ -330,6 +335,12 @@ const Leslie = styled(GatsbyImage)`
   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     transform: scaleX(-1) translateY(-3rem);
   }
+`
+
+const StyledFeedbackCard = styled(FeedbackCard)`
+  width: 100%;
+  max-width: 700px;
+  margin: 0 2rem;
 `
 
 const RunANodePage = ({ data }) => {
@@ -807,6 +818,8 @@ const RunANodePage = ({ data }) => {
           </ButtonContainer>
         </Column>
       </StakingCalloutContainer>
+
+      <StyledFeedbackCard prompt="Did you find this page helpful?" />
     </GappedPage>
   )
 }
