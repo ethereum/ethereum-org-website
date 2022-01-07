@@ -247,6 +247,9 @@ const LearningToolsPage = ({ data }) => {
             </ProductCard>
           ))}
         </StyledCardGrid>
+        <InfoBanner emoji=":point_up:" shouldCenter={true}>
+          <Translation id="page-learning-tools-remix-description-2" />
+        </InfoBanner>
       </StackContainer>
       <StackContainer>
         <SubtitleTwo>

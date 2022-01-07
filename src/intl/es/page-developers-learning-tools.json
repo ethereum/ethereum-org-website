@@ -20,6 +20,7 @@
   "page-learning-tools-meta-desc": "Las herramientas de codificación basadas en la Web y las experiencias de aprendizaje interactivo te ayudarán a experimentar con el desarrollo de Ethereum.",
   "page-learning-tools-meta-title": "Herramientas de aprendizaje para desarrolladores",
   "page-learning-tools-remix-description": "Desarrollar, implementar y administrar contratos inteligentes para Ethereum. Siga los tutoriales con el plugin de Learneth.",
+  "page-learning-tools-remix-description-2": "Remix no es solo un proceso aislado. Algunos desarrolladores escriben, compilan e implementan sus contratos inteligentes usando Remix.",
   "page-learning-tools-remix-logo-alt": "Logo de Remix",
   "page-learning-tools-sandbox": "Procesos aislados de código",
   "page-learning-tools-sandbox-desc": "Estos procesos aislados te darán un espacio para experimentar con contratos inteligentes escritos y entender Ethereum.",

@@ -20,6 +20,7 @@
   "page-learning-tools-meta-desc": "Web-alapú programozási eszközök és interaktív tanulási élmények, hogy segítsenek az Ethereum fejlesztéssel való kísérletezésben.",
   "page-learning-tools-meta-title": "Fejlesztői tanulási eszközök",
   "page-learning-tools-remix-description": "Fejlessz, telepítsd és kezelj okosszerződéseket Ethereumra. Kövess útmutatókat a Learneth pluginnal.",
+  "page-learning-tools-remix-description-2": "A Remix nem csak egy sandbox. Sok fejlesztő Remixet használ okosszerződések írására, fordítására és telepítésre.",
   "page-learning-tools-remix-logo-alt": "Remix logo",
   "page-learning-tools-sandbox": "Kód sandboxok",
   "page-learning-tools-sandbox-desc": "Ezek a sandboxot helyet adnak, hogy kísérletezhess az okosszerződés írással és megérthesd az Ethereumot.",
