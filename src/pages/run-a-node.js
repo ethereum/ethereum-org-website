@@ -312,15 +312,23 @@ const ButtonContainer = styled.div`
 
 const DappNodeButtonLink = styled(ResponsiveButtonLink)`
   background-color: #30bcb2;
+  span {
+    color: ${({ theme }) => theme.colors.white};
+  }
   &:hover {
     background-color: #3ec3c6;
+    box-shadow: 4px 4px 0px 0px #3ec3c677;
   }
 `
 
 const AvadoButtonLink = styled(ResponsiveButtonLink)`
   background-color: #4a9b40;
+  span {
+    color: ${({ theme }) => theme.colors.white};
+  }
   &:hover {
     background-color: #5baa4a;
+    box-shadow: 4px 4px 0px 0px #5baa4a77;
   }
 `
 
