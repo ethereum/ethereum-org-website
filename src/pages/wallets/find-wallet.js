@@ -17,16 +17,13 @@ import { Divider, Page } from "../../components/SharedStyledComponents"
 const Subtitle = styled.div`
   font-size: 20px;
   line-height: 140%;
+  max-width: 45ch;
   text-align: center;
   color: ${(props) => props.theme.colors.text200};
-`
 
-const SubtitleTwo = styled.div`
-  font-size: 20px;
-  line-height: 140%;
-  margin-bottom: 2rem;
-  text-align: center;
-  color: ${(props) => props.theme.colors.text300};
+  &:last-of-type {
+    margin-bottom: 2rem;
+  }
 `
 
 const HeroContainer = styled.div`
@@ -110,9 +107,9 @@ const FindWalletPage = ({ location, data }) => {
           <Subtitle>
             <Translation id="page-find-wallet-description" />
           </Subtitle>
-          <SubtitleTwo>
+          <Subtitle>
             <Translation id="page-find-wallet-desc-2" />
-          </SubtitleTwo>
+          </Subtitle>
         </Header>
       </HeroContainer>
       <InfoBannerContainer>
