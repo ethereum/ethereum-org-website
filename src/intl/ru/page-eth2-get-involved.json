@@ -1,5 +1,5 @@
 {
-  "page-eth2-get-involved-btn-1": "Смотреть клиенты",
+  "page-eth2-get-involved-btn-1": "Посмотреть клиентов",
   "page-eth2-get-involved-btn-2": "Подробнее о стейкинге",
   "page-eth2-get-involved-btn-3": "Найти ошибки",
   "page-eth2-get-involved-bug": "Возможные ошибки:",
@@ -27,6 +27,8 @@
   "page-eth2-get-involved-more": "Подробнее",
   "page-eth2-get-involved-run-clients": "Запуск клиентов Beacon Chain",
   "page-eth2-get-involved-run-clients-desc": "Ключ к долгосрочной безопасности Ethereum – это умное распределение клиентов. Клиент — это программное обеспечение, которое запускает блокчейн, проверяет транзакции и создает новые блоки. У каждого клиента есть свои особенности, поэтому выберите один из них на основе того, с чем вам удобно работать.",
+  "page-eth2-get-involved-run-clients-production": "Готовые клиенты Eth2",
+  "page-eth2-get-involved-run-clients-experimental": "Экспериментальные клиенты Eth2",
   "page-eth2-get-involved-stake": "Вкладывайте свои ETH",
   "page-eth2-get-involved-stake-desc": "Теперь вы можете вложить свои ETH, чтобы обеспечить безопасность Beacon Chain.",
   "page-eth2-get-involved-stake-eth": "Вложите ETH",
