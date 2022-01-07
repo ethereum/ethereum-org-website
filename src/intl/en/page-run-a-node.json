@@ -51,7 +51,7 @@
   "page-run-a-node-getting-started-software-section-1-alert": "If this is your preference, and you've got the skills, feel free to check out our technical docs.",
   "page-run-a-node-getting-started-software-section-1-link": "Spin up an Ethereum node",
   "page-run-a-node-getting-started-software-section-2": "Now, more user-friendly graphical user interfaces (GUIs) exist to give users an <strong>app-like experience</strong> while managing their node. In just a few taps you can have your node up and running.",
-  "page-run-a-node-getting-started-software-section-3": "DAppNode is <strong>free and open-source software</strong> that makes it easy for users to run full nodes, as well as dapps and other P2P networks, with no need to touch the command-link. This makes it easier for everyone to participate and create a more decentralized network.",
+  "page-run-a-node-getting-started-software-section-3": "DAppNode is <strong>free and open-source software</strong> that makes it easy for users to run full nodes, as well as dapps and other P2P networks, with no need to touch the command-line. This makes it easier for everyone to participate and create a more decentralized network.",
   "page-run-a-node-glyph-alt-terminal": "Terminal glyph",
   "page-run-a-node-glyph-alt-phone": "Phone tap glyph",
   "page-run-a-node-glyph-alt-dappnode": "DAppNode glyph",
