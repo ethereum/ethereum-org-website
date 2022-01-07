@@ -51,7 +51,7 @@ const GappedPage = styled(Page)`
   h4,
   h5,
   h6 {
-    scroll-margin-top: ${({ theme }) => theme.variables.navHeight};
+    scroll-margin-top: 5rem;
   }
 `
 
@@ -66,6 +66,7 @@ const GappedContent = styled(Content)`
 
 const HeroContainer = styled.div`
   background: ${({ theme }) => theme.colors.runNodeGradient};
+  width: 100%;
 `
 
 const Hero = styled(PageHero)`
@@ -88,10 +89,17 @@ const TwoColumnContent = styled.div`
 
 const SplitContent = styled.div`
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: 100%;
+    flex-direction: column;
   }
+`
+
+const Column = styled.div`
+  flex: 1;
 `
 
 const Highlight = styled(Content)`
@@ -248,6 +256,10 @@ const FullyLoaded = styled(Container)`
       padding-left: 2rem;
       padding-right: 2rem;
     }
+  }
+  &:hover {
+    transition: transform 0.1s;
+    transform: scale(1.02);
   }
 `
 
@@ -466,7 +478,7 @@ const RunANodePage = ({ data }) => {
       <Divider />
 
       <Content>
-        <h2>
+        <h2 id="getting-started">
           <Translation id="page-run-a-node-getting-started-hardware-title" />
         </h2>
         <p>
@@ -660,11 +672,10 @@ const RunANodePage = ({ data }) => {
         </GappedContent>
       </Content>
 
-      <Content id="choose-your-adventure">
-        <h2>
+      <Content>
+        <h2 id="choose-your-adventure">
           <Translation id="page-run-a-node-choose-your-adventure" />
         </h2>
-
         <Flex>
           <AdventureContainer>
             <SvgTitle>
@@ -705,6 +716,27 @@ const RunANodePage = ({ data }) => {
             </ButtonContainer>
           </AdventureContainer>
         </Flex>
+      </Content>
+
+      <Content>
+        <SplitContent>
+          <Column>
+            <h2>Part 3: Find some helpers</h2>
+            <p>
+              Discord is home to a large number of community builders willing to
+              help you with any questions you may encounter. If you have a
+              question it's likely someone here can help you find an answer.
+            </p>
+            <ButtonContainer>
+              <ButtonLink to="https://discord.gg/c28an8dA5k">
+                Join the DAppNode Discord
+              </ButtonLink>
+            </ButtonContainer>
+          </Column>
+          <Column>
+            <GatsbyImage image={getImage(data.community)} />
+          </Column>
+        </SplitContent>
       </Content>
     </GappedPage>
   )
