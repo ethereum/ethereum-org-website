@@ -234,7 +234,7 @@ const LearningToolsPage = ({ data }) => {
           <Translation id="page-learning-tools-sandbox-desc" />
         </p>
         <StyledCardGrid>
-          {sandboxes.map((sandbox, idx) => (
+          {randomizedSandboxes.map((sandbox, idx) => (
             <ProductCard
               key={idx}
               background={sandbox.background}
