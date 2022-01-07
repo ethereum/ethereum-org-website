@@ -75,7 +75,9 @@ Tulang punggung dari sebuah DAO adalah kontrak pintarnya. Kontrak menentukan atu
 
 Ini mungkin terjadi karena kontrak pintar bersifat tahan perubahan setelah dijalankan di Ethereum. Anda tidak bisa hanya mengedit kode (aturan DAO) tanpa diketahui orang-orang karena semua hal terbuka untuk publik.
 
-<DocLink to="/developers/docs/smart-contracts/" title="Lebih lanjut tentang kontrak pintar" />
+<DocLink to="/developers/docs/smart-contracts/">
+  Lebih lanjut tentang kontrak pintar"
+</DocLink>
 
 ## Ethereum dan DAO {#ethereum-and-daos}
 

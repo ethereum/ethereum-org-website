@@ -11,7 +11,7 @@ summaryPoint3: Тя въвежда доказателство-за-залог в
 summaryPoint4: Това може да ви познато като „Фаза 0“ в техническите пътни карти.
 ---
 
-<UpgradeStatus isShipped date="page-eth2-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-eth2-upgrades-beacon-date">
     Сигналната верига беше пусната на 1 декември 2020 г. по обяд, UTC. За да научите повече, <a href="https://beaconscan.com/">вижте данните</a>. Ако желаете да помогнете при валидирането на веригата, може да <a href="/eth2/staking/">заложите своя ETH</a>.
 </UpgradeStatus>
 
