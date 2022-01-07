@@ -15,7 +15,7 @@ import WalletCompare from "../../components/WalletCompare"
 import { Divider, Page } from "../../components/SharedStyledComponents"
 
 const Subtitle = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   max-width: 45ch;
   text-align: center;
