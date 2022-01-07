@@ -317,6 +317,10 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           text: "ethereum-support",
           to: "/community/support/",
         },
+        {
+          text: "language-resources",
+          to: "/community/language-resources/",
+        },
       ],
     },
   ]
