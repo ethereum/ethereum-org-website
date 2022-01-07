@@ -38,10 +38,10 @@ const ButtonContainer = styled.div`
   }
 `
 
-const FeedbackCard = () => {
+const FeedbackCard = ({ prompt, className }) => {
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
   const [isHelpful, setIsHelpful] = useState(false)
-
+  const feedbackPrompt = prompt || "Did this page help answer your question?"
   const title = isHelpful ? (
     <>Thanks for your feedback!</>
   ) : (
@@ -61,13 +61,9 @@ const FeedbackCard = () => {
     setFeedbackSubmitted(true)
   }
   return (
-    <Card>
+    <Card className={className}>
       <Content>
-        <Title>
-          {feedbackSubmitted
-            ? title
-            : "Did this page help answer your question?"}
-        </Title>
+        <Title>{feedbackSubmitted ? title : feedbackPrompt}</Title>
         {!feedbackSubmitted && (
           <ButtonContainer>
             <ButtonSecondary onClick={() => handleClick(true)}>
