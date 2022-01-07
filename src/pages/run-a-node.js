@@ -33,9 +33,9 @@ import ExpandableCard from "../components/ExpandableCard"
 import Emoji from "../components/Emoji"
 import Link from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
-import DocLink from "../components/DocLink"
 import FeedbackCard from "../components/FeedbackCard"
 import Icon from "../components/Icon"
+import NakedButton from "../components/NakedButton"
 
 // Utils
 import { translateMessageId } from "../utils/translations"
@@ -88,9 +88,9 @@ const SplitContent = styled.div`
   align-items: center;
   gap: 2rem;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     width: 100%;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 `
 
@@ -313,12 +313,38 @@ const StyledEmoji = styled(Emoji)`
   margin-right: 1rem;
 `
 
+const ScrollLink = styled(NakedButton)`
+  color: ${({ theme }) => theme.colors.primary};
+  &.active {
+    color: ${({ theme }) => theme.colors.primary};
+  }
+`
+
+const ScrollButtonSecondary = styled.button`
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25em;
+  text-align: center;
+
+  color: ${({ theme }) => theme.colors.text};
+  border: 1px solid ${({ theme }) => theme.colors.text};
+  background-color: transparent;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+    border: 1px solid ${({ theme }) => theme.colors.primary};
+    box-shadow: ${({ theme }) => theme.colors.cardBoxShadow};
+  }
+  &:active {
+    background-color: ${({ theme }) =>
+      theme.colors.secondaryButtonBackgroundActive};
+  }
+`
+
 const DiscordIcon = styled(Icon)`
   fill: ${({ theme }) => theme.colors.buttonColor};
-
-  &:hover svg {
-    fill: ${({ theme }) => theme.colors.buttonColor};
-  }
 `
 
 const StakingCalloutContainer = styled(SplitContent)`
@@ -332,6 +358,7 @@ const StakingCalloutContainer = styled(SplitContent)`
   padding: 2rem;
   gap: 5rem;
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    flex-direction: column;
     gap: 3rem;
   }
 `
@@ -351,7 +378,6 @@ const StyledFeedbackCard = styled(FeedbackCard)`
 
 const RunANodePage = ({ data }) => {
   const intl = useIntl()
-
   const heroContent = {
     title: <Translation id="page-run-a-node-title" />,
     header: <Translation id="page-run-a-node-hero-header" />,
@@ -421,6 +447,12 @@ const RunANodePage = ({ data }) => {
       body: ["page-run-a-node-sovereignty-1", "page-run-a-node-sovereignty-2"],
     },
   ]
+
+  const scrollToId = (id) => {
+    const element = document.getElementById(id)
+    if (!element) return
+    element.scrollIntoView({ behavior: "smooth", block: "start" })
+  }
 
   return (
     <GappedPage>
@@ -545,14 +577,14 @@ const RunANodePage = ({ data }) => {
                   <li>
                     <Translation id="page-run-a-node-build-your-own-min-ram" />
                     <p>
-                      <Link to="#plan-on-staking">
+                      <ScrollLink onClick={() => scrollToId("plan-on-staking")}>
                         <Translation id="page-run-a-node-build-your-own-ram-note-1" />
-                      </Link>
+                      </ScrollLink>
                     </p>
                     <p>
-                      <Link to="#rasp-pi">
+                      <ScrollLink onClick={() => scrollToId("rasp-pi")}>
                         <Translation id="page-run-a-node-build-your-own-ram-note-2" />
-                      </Link>
+                      </ScrollLink>
                     </p>
                   </li>
                   <li>
@@ -630,9 +662,11 @@ const RunANodePage = ({ data }) => {
                 </li>
               </ul>
             </div>
-            <ButtonLink to="#choose-your-adventure">
+            <ScrollButtonSecondary
+              onClick={() => scrollToId("choose-your-adventure")}
+            >
               <Translation id="page-run-a-node-shop" />
-            </ButtonLink>
+            </ScrollButtonSecondary>
           </FullyLoaded>
         </MarginFlex>
 
@@ -700,9 +734,9 @@ const RunANodePage = ({ data }) => {
                   <Translation id="page-run-a-node-getting-started-software-section-1-alert" />
                 </code>
               </p>
-              <DocLink to="/developers/docs/nodes-and-clients/run-a-node/#spinning-up-node">
+              <Link to="/developers/docs/nodes-and-clients/run-a-node/#spinning-up-node">
                 <Translation id="page-run-a-node-getting-started-software-section-1-link" />
-              </DocLink>
+              </Link>
             </Width80>
             <Width20>
               <img
