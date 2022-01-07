@@ -436,6 +436,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 2rem 0;
     font-weight: 700;
     scroll-margin-top: ${theme.variables.navHeight};
+    scroll-snap-margin: ${theme.variables.navHeight};
     @media (max-width: ${theme.breakpoints.m}) {
       font-size: 2.5rem;
     }
@@ -448,6 +449,7 @@ export const GlobalStyle = createGlobalStyle`
     margin-top: 3rem;
     font-weight: 600;
     scroll-margin-top: ${theme.variables.navHeight};
+    scroll-snap-margin: ${theme.variables.navHeight};
     @media (max-width: ${theme.breakpoints.m}) {
       font-size: 1.5rem;
     }
@@ -460,6 +462,7 @@ export const GlobalStyle = createGlobalStyle`
     margin-top: 2.5rem;
     font-weight: 600;
     scroll-margin-top: ${theme.variables.navHeight};
+    scroll-snap-margin: ${theme.variables.navHeight};
     @media (max-width: ${theme.breakpoints.m}) {
       font-size: 1.25rem;
     }
@@ -471,6 +474,7 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 500;
     margin: 2rem 0;
     scroll-margin-top: ${theme.variables.navHeight};
+    scroll-snap-margin: ${theme.variables.navHeight};
     @media (max-width: ${theme.breakpoints.m}) {
       font-size: 1rem;
     }
@@ -482,6 +486,7 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 450;
     margin: 2rem 0;
     scroll-margin-top: ${theme.variables.navHeight};
+    scroll-snap-margin: ${theme.variables.navHeight};
   }
 
   h6 {
@@ -491,6 +496,7 @@ export const GlobalStyle = createGlobalStyle`
     text-transform: uppercase;
     margin: 2rem 0;
     scroll-margin-top: ${theme.variables.navHeight};
+    scroll-snap-margin: ${theme.variables.navHeight};
   }
   
 `
