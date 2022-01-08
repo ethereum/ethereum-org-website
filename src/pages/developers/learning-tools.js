@@ -194,6 +194,15 @@ const LearningToolsPage = ({ data }) => {
       background: "#111F29",
       subjects: ["Solidity", "web3"],
     },
+    {
+      name: "Web3 University",
+      description: "page-learning-tools-web3university-description",
+      url: "https://www.web3.university/",
+      image: getImage(data.web3university),
+      alt: "page-learning-tools-web3university-logo-alt",
+      background: "#000000",
+      subjects: ["Solidity", "web3"],
+    },
   ]
 
   return (
@@ -359,6 +368,9 @@ export const query = graphql`
       ...learningToolImage
     }
     nftschool: file(relativePath: { eq: "dev-tools/nftschool.png" }) {
+      ...learningToolImage
+    }
+        web3university: file(relativePath: { eq: "dev-tools/web3university.png" }) {
       ...learningToolImage
     }
     learn: file(relativePath: { eq: "enterprise-eth.png" }) {
