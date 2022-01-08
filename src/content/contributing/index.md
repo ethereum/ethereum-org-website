@@ -85,6 +85,4 @@ You should only use self-custody wallets to claim POAPs. Do not use exchange acc
 
 ## Contributors {#contributors}
 
-Thanks to everyone who has contributed so far!
-
 <Contributors />
