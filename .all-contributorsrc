@@ -5358,7 +5358,10 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/46334750?v=4",
       "profile": "http://justinshaw.eth",
       "contributions": [
-        "content"
+        "content",
+        "code",
+        "doc",
+        "ideas"
       ]
     },
     {
@@ -6111,6 +6114,17 @@
       "profile": "https://github.com/LingTian",
       "contributions": [
         "content"
+      ]
+    },
+    {
+      "login": "sorenrood",
+      "name": "Søren Rood",
+      "avatar_url": "https://avatars.githubusercontent.com/u/49735495?v=4",
+      "profile": "http://5oren.com",
+      "contributions": [
+        "code",
+        "doc",
+        "ideas"
       ]
     }
   ],
