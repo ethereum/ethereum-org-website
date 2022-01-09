@@ -31,7 +31,7 @@ Razdrobitev je dober način zagotavljanja razširljivosti, če je cilj ohraniti 
 
 Razdrobitev vam bo sčasoma omogočala, da boste lahko Ethereum izvajali v osebnem prenosnem računalniku ali telefonu. Zato naj bi na razdrobljenem Ethereumu več ljudi imelo možnost sodelovanja ali izvajanja [odjemalcev](/developers/docs/nodes-and-clients/). S tem se bo izboljšala varnost, saj je pri bolj decentraliziranih omrežjih možnost za napad manjša.
 
-Z manjšimi zahtevami glede strojne opreme bo razdrobitev omogočala lastno izvajanje [odjemalcev](/developers/docs/nodes-and-clients/) brez vsakršnega zanašanja na posredniške storitve. Če lahko, razmislite o tem, da bi izvajali več odjemalcev. To lahko pomaga zdravju omrežja z dodatnim zmanjšanjem točk, ki bi lahko odpovedale. [Izvajajte odjemalca Eth2](/eth2/get-involved/)
+Z manjšimi zahtevami glede strojne opreme bo razdrobitev omogočala lastno izvajanje [odjemalcev](/developers/docs/nodes-and-clients/) brez vsakršnega zanašanja na posredniške storitve. Če lahko, razmislite o tem, da bi izvajali več odjemalcev. To lahko pomaga zdravju omrežja z dodatnim zmanjšanjem točk, ki bi lahko odpovedale. [Izvajajte odjemalca Eth2](/upgrades/get-involved/)
 
 <br />
 

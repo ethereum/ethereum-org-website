@@ -214,7 +214,7 @@ Małe, niedrogie i wydajne urządzenia, takie jak te, są idealne do uruchomieni
 
 Pojawili się nowi klienci obsługujący [aktualizacje Eth2](/upgrades/beacon-chain/). Będą obsługiwać łańcuch śledzący i wspierać nowy mechanizm konsensusu [proof-of-stake](/developers/docs/consensus-mechanisms/pos/).
 
-[Wyświetl klientów Eth2](/eth2/get-involved/#clients).
+[Wyświetl klientów Eth2](/upgrades/get-involved/#clients).
 
 ## Dalsza lektura {#further-reading}
 

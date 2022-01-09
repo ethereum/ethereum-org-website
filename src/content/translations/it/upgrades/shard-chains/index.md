@@ -31,7 +31,7 @@ Lo sharding è un buon modo per permettere l'espansione mantenendo la decentrali
 
 Lo sharding alla fine permetterà di eseguire Ethereum su un computer portatile o un cellulare. Più persone quindi dovrebbero essere in grado di partecipare o eseguire [client](/developers/docs/nodes-and-clients/). Questo migliorerà la sicurezza, perché in una rete più decentralizzata la superficie di attacco è inferiore.
 
-Con requisiti hardware minori, lo sharding faciliterà l'esecuzione dei [client](/developers/docs/nodes-and-clients/) e non sarà necessario affidarsi a intermediari. Se puoi, prendi in considerazione la possibilità di eseguire più client. Questo può aiutare la salute della rete, riducendo ulteriormente i punti di errore. [Esegui un client Eth2](/eth2/get-involved/)
+Con requisiti hardware minori, lo sharding faciliterà l'esecuzione dei [client](/developers/docs/nodes-and-clients/) e non sarà necessario affidarsi a intermediari. Se puoi, prendi in considerazione la possibilità di eseguire più client. Questo può aiutare la salute della rete, riducendo ulteriormente i punti di errore. [Esegui un client Eth2](/upgrades/get-involved/)
 
 <br />
 

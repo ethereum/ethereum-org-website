@@ -134,7 +134,7 @@ const Eth2BeaconChainActions = () => {
           title={translateMessageId("eth2-run-beacon-chain", intl)}
           description={translateMessageId("eth2-run-beacon-chain-desc", intl)}
         >
-          <ButtonLink isSecondary to="/eth2/get-involved/">
+          <ButtonLink isSecondary to="/upgrades/get-involved/">
             <Translation id="eth2-run-beacon-chain" />
           </ButtonLink>
         </StyledCardRight>

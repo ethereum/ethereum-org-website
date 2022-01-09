@@ -31,7 +31,7 @@ Sharding jest dobrym sposobem na skalowanie, jeżeli chcemy zachować decentrali
 
 Sharding pozwoli Ci w końcu uruchamiać Ethereum na osobistym laptopie bądź telefonie. Wobec tego więcej osób powinno mieć możliwość partycypacji lub uruchamiania [klientów](/developers/docs/nodes-and-clients/) w podzielonym na odłamki Ethereum. Zwiększy to bezpieczeństwo, ponieważ im bardziej sieć jest zdecentralizowana, tym mniejsza przestrzeń płaszczyzny ataku.
 
-Dzięki zmniejszonym wymaganiom sprzętowym fragmentacja ułatwi samodzielne uruchamianie [klientów](/developers/docs/nodes-and-clients/), bez polegania na usługach pośredniczących. Jeśli masz taką możliwość, rozważ uruchamianie wielu klientów. Może to pomóc poprawić pracę sieci przez zmniejszenie liczby punktów awarii. [Uruchom klienta Eth2](/eth2/get-involved/)
+Dzięki zmniejszonym wymaganiom sprzętowym fragmentacja ułatwi samodzielne uruchamianie [klientów](/developers/docs/nodes-and-clients/), bez polegania na usługach pośredniczących. Jeśli masz taką możliwość, rozważ uruchamianie wielu klientów. Może to pomóc poprawić pracę sieci przez zmniejszenie liczby punktów awarii. [Uruchom klienta Eth2](/upgrades/get-involved/)
 
 <br />
 

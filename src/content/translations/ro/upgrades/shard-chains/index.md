@@ -31,7 +31,7 @@ Fragmentarea este o modalitate bună de a crește scalabilitatea dacă dorești 
 
 Fragmentarea îți va permite în cele din urmă să rulezi Ethereum pe un laptop sau telefon personal. Deci, mai mulți oameni ar trebui să poată participa sau să ruleze [clienți](/developers/docs/nodes-and-clients/) într-un Ethereum fragmentat. Acest lucru va crește securitatea, deoarece cu cât rețeaua este mai descentralizată, cu atât suprafața de atac este mai mică.
 
-Cu cerințe hardware mai mici, fragmentarea va facilita rularea [clienților](/developers/docs/nodes-and-clients/) pe cont propriu, fără a se baza pe niciun serviciu intermediar. Și dacă poți, ia în considerare rularea mai multor clienți. Acest lucru poate ajuta sănătatea rețelei prin reducerea în continuare a punctelor de eșec. [Rulează un client Eth2](/eth2/get-involved/)
+Cu cerințe hardware mai mici, fragmentarea va facilita rularea [clienților](/developers/docs/nodes-and-clients/) pe cont propriu, fără a se baza pe niciun serviciu intermediar. Și dacă poți, ia în considerare rularea mai multor clienți. Acest lucru poate ajuta sănătatea rețelei prin reducerea în continuare a punctelor de eșec. [Rulează un client Eth2](/upgrades/get-involved/)
 
 <br />
 

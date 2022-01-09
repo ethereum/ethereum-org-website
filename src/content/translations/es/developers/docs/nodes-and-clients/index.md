@@ -214,7 +214,7 @@ Los dispositivos pequeños, económicos y eficientes como estos son ideales para
 
 Hay nuevos clientes que soportan las [actualizaciones de Eth2](/upgrades/beacon-chain/). Ellos ejecutarán la cadena de baliza y apoyarán el nuevo mecanismo de consenso [a prueba de estaturas](/developers/docs/consensus-mechanisms/pos/).
 
-[Ver clientes de Eth2](/eth2/get-involved/#clients).
+[Ver clientes de Eth2](/upgrades/get-involved/#clients).
 
 ## Más lectura {#further-reading}
 

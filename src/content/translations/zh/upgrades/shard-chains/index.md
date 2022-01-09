@@ -31,7 +31,7 @@ summaryPoint4: 此升级计划跟随主网与信标链的合并。
 
 将最终让您在个人笔记本电脑或手机上运行以太坊。 因此，更多的人应该能够在中参与或运行[客户端](/developers/docs/nodes-and-clients/)。 这将提高安全性，因为网络越分散，攻击面越小。
 
-由于硬件需求较低，区块分片将使您更容易单独运行 [客户端](/developers/docs/nodes-and-clients/) ，而根本不依赖任何中间服务。 如果您可以，请考虑运行多个客户端。 这可以通过进一步减少故障点来帮助网络健康。 [运行一个 Eth2 客户端](/eth2/get-involved/)
+由于硬件需求较低，区块分片将使您更容易单独运行 [客户端](/developers/docs/nodes-and-clients/) ，而根本不依赖任何中间服务。 如果您可以，请考虑运行多个客户端。 这可以通过进一步减少故障点来帮助网络健康。 [运行一个 Eth2 客户端](/upgrades/get-involved/)
 
 <br />
 

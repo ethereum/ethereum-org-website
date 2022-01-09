@@ -33,7 +33,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [The merge](/upgrades/merge/)
 - [Shard chains](/upgrades/shard-chains/)
 - [Staking](/staking/)
-- [Eth2 get involved](/eth2/get-involved/)
+- [Eth2 get involved](/upgrades/get-involved/)
 - [Eth2 bug bounty](/eth2/bug-bounty/)
 - [Staking deposit contract](/staking/deposit-contract/)
 - [Developers' Home](/developers/)

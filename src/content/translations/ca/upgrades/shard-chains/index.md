@@ -31,7 +31,7 @@ La fragmentació es una bona manera de dimensionar si es volen mantenir les cose
 
 La fragmentació et permetrà finalment executar Ethereum des de qualsevol mòbil o ordinador portàtil. Per tant, més persones haurien de poder participar o executar [clients](/developers/docs/nodes-and-clients/) en una Ethereum fragmentada. Això incrementaria la seguretat perquè quant més descentralitzada fos la xarxa, menor seria la superfície d'atac.
 
-Amb menys requeriments de hardware, la fragmentació farà més fàcil executar [clients](/developers/docs/nodes-and-clients/) pel teu compte, sense dependre de cap servei intermediari. I si pots, considera executar diversos clients. Això pot ajudar a la salut de la xarxa mitjançant la reducció de punts d'error. [Executar un client Eth2](/eth2/get-involved/)
+Amb menys requeriments de hardware, la fragmentació farà més fàcil executar [clients](/developers/docs/nodes-and-clients/) pel teu compte, sense dependre de cap servei intermediari. I si pots, considera executar diversos clients. Això pot ajudar a la salut de la xarxa mitjançant la reducció de punts d'error. [Executar un client Eth2](/upgrades/get-involved/)
 
 <br />
 

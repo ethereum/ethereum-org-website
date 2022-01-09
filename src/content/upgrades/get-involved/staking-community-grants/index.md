@@ -288,7 +288,7 @@ contentPreview="You can stake, run clients, and join discord communities."
 title="How can I get more involved in Eth2?">
 
    <p>
-    For client information and the latest initiatives check out how to <a href="/eth2/get-involved/">get involved in Eth2</a>.
+    For client information and the latest initiatives check out how to <a href="/upgrades/get-involved/">get involved in Eth2</a>.
    </p>
    <p>
     Join the following Discord communities:

@@ -31,7 +31,7 @@ Parçalama, işleri merkezi olmayan bir şekilde tutmak istiyorsanız ölçeklen
 
 Parçalama, sonunda Ethereum'u kişisel bir dizüstü bilgisayarda veya telefonda çalıştırmanıza izin verecektir. Yani parçalanmış bir Ethereum'a daha fazla insan katılabilmeli veya [istemcileri](/developers/docs/nodes-and-clients/) çalıştırabilmelidir. Bu, güvenliği artıracaktır çünkü ağ ne kadar merkeziyetsiz olursa, saldırı yüzey alanı o kadar küçük olur.
 
-Daha düşük donanım gereksinimleri ile parçalama, herhangi bir aracı hizmete güvenmeden [istemcileri](/developers/docs/nodes-and-clients/) kendi başınıza çalıştırmanızı kolaylaştıracaktır. Ve yapabiliyorsanız, birden fazla istemci çalıştırmayı düşünebilirsiniz. Bu, hata sayılarını daha da azaltarak ağ sağlığına yardımcı olabilir. [Bir Eth2 istemcisi çalıştırma](/eth2/get-involved/)
+Daha düşük donanım gereksinimleri ile parçalama, herhangi bir aracı hizmete güvenmeden [istemcileri](/developers/docs/nodes-and-clients/) kendi başınıza çalıştırmanızı kolaylaştıracaktır. Ve yapabiliyorsanız, birden fazla istemci çalıştırmayı düşünebilirsiniz. Bu, hata sayılarını daha da azaltarak ağ sağlığına yardımcı olabilir. [Bir Eth2 istemcisi çalıştırma](/upgrades/get-involved/)
 
 <br />
 

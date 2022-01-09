@@ -214,7 +214,7 @@ Dispositivi piccoli, convenienti ed efficienti come questi sono ideali per esegu
 
 Ci sono nuovi client per supportare gli [upgrade a Eth2](/upgrades/beacon-chain/). Eseguiranno la beacon chain e supporteranno il nuovo meccanismo di consenso [proof-of-stake](/developers/docs/consensus-mechanisms/pos/).
 
-[Visualizza i clienti Eth2](/eth2/get-involved/#clients).
+[Visualizza i clienti Eth2](/upgrades/get-involved/#clients).
 
 ## Letture consigliate {#further-reading}
 

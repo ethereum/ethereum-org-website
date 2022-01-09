@@ -31,7 +31,7 @@ Egy meglévő adatbázis méretének megnövelésével szemben a sharding egy j�
 
 A sharding végsősoron lehetővé teszi az Ethereum futtatását a saját laptopodon vagy mobilodon. Így több ember tud majd résztvenni, vagy egy [klienst](/developers/docs/nodes-and-clients/) futtatni a shardolt Ethereumban. Ez növelni fogja a biztonságot, mivel minél decentralizáltabb a hálózat, annál kisebb a támadási felület.
 
-Az alacsonyabb hardver követelményekkel a sharding megkönnyíti a [kliensek](/developers/docs/nodes-and-clients/) önálló futtatását, anélkül, hogy köztes szolgáltatásra kellene támaszkodnod. És ha van rá lehetőséged, érdemes fontolóra venni több kliens futtatását. Ez egészségesebbé teszi a hálózatot a hiba lehetőségek csökkentésével. [Eth2 kliens futtatása](/eth2/get-involved/)
+Az alacsonyabb hardver követelményekkel a sharding megkönnyíti a [kliensek](/developers/docs/nodes-and-clients/) önálló futtatását, anélkül, hogy köztes szolgáltatásra kellene támaszkodnod. És ha van rá lehetőséged, érdemes fontolóra venni több kliens futtatását. Ez egészségesebbé teszi a hálózatot a hiba lehetőségek csökkentésével. [Eth2 kliens futtatása](/upgrades/get-involved/)
 
 <br />
 

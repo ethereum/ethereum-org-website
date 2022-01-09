@@ -20,7 +20,7 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 Najpierw trochę tła. Jak wiesz, napotkaliśmy pewne problemy z pamięcią [[1]](/developers/tutorials/run-node-raspberry-pi/#references) związane z obrazem Raspberry Pi 4 ponieważ Raspbian OS jest nadal 32-bitowy [[2]](/developers/tutorials/run-node-raspberry-pi/#references) (przynajmniej w przestrzeni użytkownika). Chociaż wolimy pozostać przy oficjalnym systemie operacyjnym, doszliśmy do wniosku, że aby rozwiązać te problemy, musimy przeprowadzić migrację do natywnego 64-bitowego systemu operacyjnego
 
-Poza tym [klienty Eth 2.0](/eth2/get-involved/#eth2-clients) nie obsługują 32-bitowych plików binarnych, więc użycie Raspbian wykluczyłoby Raspberry Pi 4 z uruchamiania węzła Eth 2.0 (oraz możliwość stakingu).
+Poza tym [klienty Eth 2.0](/upgrades/get-involved/#eth2-clients) nie obsługują 32-bitowych plików binarnych, więc użycie Raspbian wykluczyłoby Raspberry Pi 4 z uruchamiania węzła Eth 2.0 (oraz możliwość stakingu).
 
 Po kilku testach wydajemy teraz 2 różne obrazy oparte na 64-bitowym Ubuntu 20.04 [[3]](/developers/tutorials/run-node-raspberry-pi/#references): Edycje Eth 1.0 i Eth 2.0.
 

@@ -31,7 +31,7 @@ Sharding ermöglicht es, Skalierbarkeit auf dezentrale Art und Weise zu gewährl
 
 Durch Sharding kannst du früher oder später Ethereum auf deinem eigenen Laptop oder Smartphone benutzen. Somit sollte es mehr Menschen möglich sein, am Netzwerk zu partizipieren oder [Clients](/developers/docs/nodes-and-clients/) in Ethereum mit Sharding zu betreiben. Dies wird die Netzwerksicherheit erhöhen. Denn je dezentralisierter das Netzwerk ist, desto geringer ist dessen Angriffsfläche.
 
-Dank Sharding werden geringere Hardwareanforderungen es vereinfachen, [Clients](/developers/docs/nodes-and-clients/) selbst zu betreiben, ohne dabei auf zwischengeschaltete Dienste zurückgreifen zu müssen. Wenn möglich, kannst du damit sogar mehrere Clients betreiben. Damit stärkst du das Netzwerk, indem potentielle Fehlerquellen zusätzlich reduziert werden. [Einen Eth2-Client betreiben](/eth2/get-involved/).
+Dank Sharding werden geringere Hardwareanforderungen es vereinfachen, [Clients](/developers/docs/nodes-and-clients/) selbst zu betreiben, ohne dabei auf zwischengeschaltete Dienste zurückgreifen zu müssen. Wenn möglich, kannst du damit sogar mehrere Clients betreiben. Damit stärkst du das Netzwerk, indem potentielle Fehlerquellen zusätzlich reduziert werden. [Einen Eth2-Client betreiben](/upgrades/get-involved/).
 
 <br />
 

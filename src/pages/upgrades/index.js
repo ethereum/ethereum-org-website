@@ -286,7 +286,7 @@ const Eth2IndexPage = ({ data }) => {
               <Translation id="page-eth2-what-to-do" />
             </H2>
             <Translation id="page-eth2-what-to-do-desc" /> <br />
-            <Link to="/eth2/get-involved/">
+            <Link to="/upgrades/get-involved/">
               <Translation id="page-eth2-get-involved" />
             </Link>
           </StyledInfoBanner>
@@ -354,7 +354,7 @@ const Eth2IndexPage = ({ data }) => {
             </H2>
             <Translation id="page-eth2-help-desc" />
           </div>
-          <ContributeButton isSecondary to="/eth2/get-involved/">
+          <ContributeButton isSecondary to="/upgrades/get-involved/">
             <Translation id="page-eth2-get-involved-2" />
           </ContributeButton>
         </ContributeCard>
@@ -696,13 +696,13 @@ const Eth2IndexPage = ({ data }) => {
               </p>
               <p>
                 <Translation id="page-eth2-question-9-answer-2" />{" "}
-                <Link to="/eth2/get-involved/">
+                <Link to="/upgrades/get-involved/">
                   <Translation id="page-eth2-clients" />
                 </Link>
               </p>
               <p>
                 <Translation id="page-eth2-question-9-answer-3" />{" "}
-                <Link to="/eth2/get-involved/bug-bounty/">
+                <Link to="/upgrades/get-involved/bug-bounty/">
                   <Translation id="page-eth2-bug-bounty" />
                 </Link>
               </p>

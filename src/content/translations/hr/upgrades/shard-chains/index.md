@@ -31,7 +31,7 @@ Razdjeljivanje je dobar način za skaliranje ako želite da stvari ne budu centr
 
 Razdjeljivanje će vam na kraju omogućiti pokretanje Ethereuma na osobnom prijenosnom računalu ili telefonu. Tako bi više ljudi trebalo biti u mogućnosti sudjelovati ili pokretati [ klijente ](/developers/docs/nodes-and-clients/) u razdijeljenom Ethereumu. To će povećati sigurnost, jer što je više mreža decentralizirana, to je manja površina napada.
 
-S nižim hardverskim zahtjevima, razdjeljivanje će olakšati samostalno pokretanje [ klijenata ](/developers/docs/nodes-and-clients/), bez oslanjanja na bilo kakve posredničke usluge. A ako možete, razmislite o pokretanju više klijenata. To može pomoći zdravlju mreže daljnjim smanjenjem točaka kvara. [ Pokretanje Eth2 klijenta](/eth2/get-involved/)
+S nižim hardverskim zahtjevima, razdjeljivanje će olakšati samostalno pokretanje [ klijenata ](/developers/docs/nodes-and-clients/), bez oslanjanja na bilo kakve posredničke usluge. A ako možete, razmislite o pokretanju više klijenata. To može pomoći zdravlju mreže daljnjim smanjenjem točaka kvara. [ Pokretanje Eth2 klijenta](/upgrades/get-involved/)
 
 <br />
 

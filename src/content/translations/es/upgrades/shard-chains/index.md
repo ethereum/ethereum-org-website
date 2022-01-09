@@ -31,7 +31,7 @@ La fragmentación es una buena manera de escalar si se quieren mantener las cosa
 
 Con el tiempo, la fragmentación te permitirá ejecutar Ethereum en un ordenador portátil o teléfono. Por lo tanto, más personas deberían poder participar o ejecutar [clientes](/developers/docs/nodes-and-clients/) en un Ethereum fragmentado. Esto aumentará la seguridad porque, cuanto más descentralizada sea la red, menor será la superficie de ataque.
 
-Con menores requisitos de hardware, la fragmentación facilitará la ejecución de [clientes](/developers/docs/nodes-and-clients/) por tu cuenta, sin depender de ningún servicio intermediario en absoluto. Y si puedes, considera ejecutar varios clientes. Esto puede ayudar a la salud de la red al reducir aún más los puntos de falla. [Ejecutar un cliente Eth2](/eth2/get-involved/)
+Con menores requisitos de hardware, la fragmentación facilitará la ejecución de [clientes](/developers/docs/nodes-and-clients/) por tu cuenta, sin depender de ningún servicio intermediario en absoluto. Y si puedes, considera ejecutar varios clientes. Esto puede ayudar a la salud de la red al reducir aún más los puntos de falla. [Ejecutar un cliente Eth2](/upgrades/get-involved/)
 
 <br />
 

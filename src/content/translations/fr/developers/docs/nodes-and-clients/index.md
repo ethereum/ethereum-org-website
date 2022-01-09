@@ -214,7 +214,7 @@ Les petits appareils abordables et efficaces de ce type sont parfaits pour exéc
 
 Il existe de nouveaux clients pour prendre en charge les [mises à niveau Eth2](/upgrades/beacon-chain/). Ils exécuteront la chaîne phare et prendront en charge le nouveau mécanisme de consensus de [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/).
 
-[Voir les clients Eth2](/eth2/get-involved/#clients)
+[Voir les clients Eth2](/upgrades/get-involved/#clients)
 
 ## Complément d'information {#further-reading}
 
