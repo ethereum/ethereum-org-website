@@ -53,7 +53,9 @@ Rollups are a "layer 2" technology that exists today. They allow dapps to bundle
 
 ## Shard chains version 2: code execution {#code-execution}
 
-The plan was always to add extra functionality to shards, to make them more like the [Ethereum Mainnet](/glossary/#mainnet) today. This would allow them to store and execute smart contracts and handle accounts. But considering the transactions per second boost that version 1 shards provide, does this still need to happen? This is still being debated in the community and it seems like there are a few options.
+The plan was always to add extra functionality to shards, to make them more like the [Ethereum Mainnet](/glossary/#mainnet) today. This would allow them to store and execute code and handle transactions, as each shard would contain its unique set of smart contracts and account balances. Cross-shard communication would allow for transactions between shards.
+
+Considering the transactions per second boost that version 1 shards provide though, does this still need to happen? This is still being debated in the community and it seems like there are a few options.
 
 ### Do shards need code execution? {#do-shards-need-code-execution}
 
