@@ -109,7 +109,7 @@ const Pre = styled.pre`
   white-space: pre-wrap;
 `
 
-const H1 = styled.h1`
+const InfoTitle = styled.h2`
   font-size: 48px;
   font-weight: 700;
   text-align: right;
@@ -428,7 +428,7 @@ const UseCasePage = ({ data, pageContext }) => {
         />
         <InfoColumn>
           <StyledButtonDropdown list={dropdownLinks} />
-          <H1>{mdx.frontmatter.title}</H1>
+          <InfoTitle>{mdx.frontmatter.title}</InfoTitle>
 
           {mdx.frontmatter.sidebar && tocItems && (
             <Eth2TableOfContents
