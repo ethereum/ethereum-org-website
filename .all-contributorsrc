@@ -6135,6 +6135,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "B-Harden",
+      "name": "Brandon Harden",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20617335?v=4",
+      "profile": "https://b-harden.github.io/Portfolio/",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
