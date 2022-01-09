@@ -370,7 +370,7 @@ export const query = graphql`
     nftschool: file(relativePath: { eq: "dev-tools/nftschool.png" }) {
       ...learningToolImage
     }
-        web3university: file(relativePath: { eq: "dev-tools/web3university.png" }) {
+    web3university: file(relativePath: { eq: "dev-tools/web3university.png" }) {
       ...learningToolImage
     }
     learn: file(relativePath: { eq: "enterprise-eth.png" }) {
