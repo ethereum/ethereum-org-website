@@ -38,7 +38,7 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 - [Turbo-Geth és az állapot nélküli Ethereum](https://youtu.be/3-Mn7OckSus?t=394) - _2020 Ethereum Közösségi Konferenica (EthCC 3)_
 - [Turbo-Geth: Ethereum kliensek optimalizálása](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _2018 Devcon 4_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [Egy dapp készítése Go-ban Geth-tel](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
+- [Egy dapp készítése Go-ban Geth-tel](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Munka Ethereum Privát Hálózaton Golang-gel és Geth-tel](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [Solidity szerződések unit test-je Ethereumon Go-val](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 - [Gyors referencia a Geth könyvtárként való használatára](https://medium.com/coinmonks/web3-go-part-1-31c68c68e20e)

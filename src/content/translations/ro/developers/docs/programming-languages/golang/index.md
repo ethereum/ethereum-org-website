@@ -38,7 +38,7 @@ Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/learn/) sau
 - [Turbo-Geth și Ethereum fără stare](https://youtu.be/3-Mn7OckSus?t=394) - _Conferința comunitară Ethereum 2020 (EthCC 3)_
 - [Turbo-Geth: optimizarea clienților Ethereum](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _2018 Devcon 4_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [Crearea unei aplicații dapp în Go cu Geth](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
+- [Crearea unei aplicații dapp în Go cu Geth](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Utilizarea unei rețele private Ethereum cu Golang și Geth](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [Testarea modulară a contractelor Solidity pe Ethereum cu Go](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 - [Referință rapidă pentru utilizarea Geth ca bibliotecă](https://medium.com/coinmonks/web3-go-part-1-31c68c68e20e)

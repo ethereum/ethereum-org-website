@@ -38,7 +38,7 @@ incomplete: true
 - [Turbo-Geth 和无状态以太坊](https://youtu.be/3-Mn7OckSus?t=394) - _2020 Ethereum Community Conference (EthCC 3)_
 - [Turbo-Geth：优化以太坊客户端](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _2018 Devcon 4_
 - [Go 以太坊 GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [在 Go 上使用 Geth 创建一个去中心化应用](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
+- [在 Go 上使用 Geth 创建一个去中心化应用](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [用 Golang 和 Geth 使用以太坊专用网络](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [使用 Go 对以太坊上的 Solidity 合约进行单元测试](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 - [使用 Geth 作为库的快速参考](https://medium.com/coinmonks/web3-go-part-1-31c68c68e20e)

@@ -38,7 +38,7 @@ Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/le
 - [Turbo-Geth and Stateless Ethereum](https://youtu.be/3-Mn7OckSus?t=394) - _Conférence de la communauté Ethereum 2020 (EthCC 3)_
 - [Turbo-Geth: optimising Ethereum clients](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _Devcon 4 - 2018 _
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [Creating a Dapp in Go with Geth](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
+- [Creating a Dapp in Go with Geth](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Work with Ethereum Private Network with Golang and Geth](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [Unit testing Solidity contracts on Ethereum with Go](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 - [Référence rapide pour utiliser Geth en tant que bibliothèque](https://medium.com/coinmonks/web3-go-part-1-31c68c68e20e)

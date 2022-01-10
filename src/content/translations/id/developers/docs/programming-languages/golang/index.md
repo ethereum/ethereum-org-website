@@ -38,7 +38,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 - [Turbo-Geth dan Ethereum Tanpa State](https://youtu.be/3-Mn7OckSus?t=394) - _Konferensi Komunitas Ethereum 2020 (EthCC 3)_
 - [Turbo-Geth: mengoptimalkan klien Ethereum](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _Devcon 4 2018_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [Membuat Dapp dalam Go dengan Geth](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
+- [Membuat Dapp dalam Go dengan Geth](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Bekerja dengan Jaringan Privat Ethereum dengan Golang dan Geth](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [Pengujian unit kontrak Solidity pada Ethereum dengan Go](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 - [Referensi cepat untuk menggunakan Geth sebagai pustaka](https://medium.com/coinmonks/web3-go-part-1-31c68c68e20e)

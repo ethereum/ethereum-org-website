@@ -39,7 +39,7 @@ Cần một hướng dẫn cơ bản hơn? Tìm hiểu [ethereum.org/learn](/vi/
 
 - [Tài liệu tham khảo về Go Ethereum](https://geth.ethereum.org/docs/) - _Tài liệu về Ethereum Golang chính thức_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [Tạo ứng dụng phi tập trung trong Go với Geth](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
+- [Tạo ứng dụng phi tập trung trong Go với Geth](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Làm việc với Mạng riêng Ethereum với Golang và Geth](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [Đơn vị thử nghiệm Hợp đồng Solidity trên Ethereum với Go](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 

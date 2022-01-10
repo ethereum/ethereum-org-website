@@ -39,7 +39,7 @@ Tarvitsetko perusteellisempaa aloitusta? Katso [ethereum.org/fi/learn](/learn/) 
 
 - [Go Ethereum -dokumentaatio](https://geth.ethereum.org/docs/) - _Ethereum Golangin virallinen dokumentaatio_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [DAppin luonti Gossa Gethillä](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
+- [DAppin luonti Gossa Gethillä](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Työskentele Ethereumin yksityisessä verkossa käyttäen Golangia ja Gethiä](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [Solidity-sopimusten yksikkötestaus Ethereumissa Golla](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 

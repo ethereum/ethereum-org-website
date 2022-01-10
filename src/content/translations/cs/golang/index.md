@@ -39,7 +39,7 @@ Potřebujete nejdříve úplně základní informace? Podívejte se na [ethereum
 
 - [Go Ethereum Documentation](https://geth.ethereum.org/docs/) - _Dokumentace pro oficiální podporu jazyka Go v projektu Ethereum_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [Vytváření DApp v jazyce Go s Geth](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
+- [Vytváření DApp v jazyce Go s Geth](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Práce s privátními Ethereum sítěmi v jazyce Go s Geth](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [Jednotkové testování chytrých kontraktů v Solidity na Ethereu s jazykem Go](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 

@@ -39,7 +39,7 @@ sidebarDepth: 1
 
 - [Документація Ethereum для Go](https://geth.ethereum.org/docs/) — _офіційна документація Ethereum для Golang_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [Створення децентралізованих програм на Go з використанням Geth](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
+- [Створення децентралізованих програм на Go з використанням Geth](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Використання приватної мережі Ethereum на Golang та Geth](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [Модульне тестування контрактів на Solidity для Ethereum з використанням Go](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 

@@ -39,7 +39,7 @@ sidebarDepth: 1
 
 - [Go Ethereum のドキュメント](https://geth.ethereum.org/docs/) - _公式のイーサリアムの Golang についてのドキュメント_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [Geth を使って Go で DApp を作成する](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
+- [Geth を使って Go で DApp を作成する](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Golang と Geth を使ったイーサリアムプライベートネットワークでの作業](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [Go を使ってイーサリアム上で Solidity コントラクトをユニットテストする](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 

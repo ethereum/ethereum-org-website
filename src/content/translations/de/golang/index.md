@@ -38,7 +38,7 @@ Brauchst du zuerst einen grundsätzlichen Einstieg? Schaue dir [ethereum.org/lea
 
 - [Gehe zur Ethereum Dokumentation](https://geth.ethereum.org/docs/) - _Die Dokumentation für die offizielle Ethereum Golang_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [Eine dApp in Go mit Geth erstellen](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
+- [Eine dApp in Go mit Geth erstellen](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Mit einem privaten Ethereum Netzwerk in Golang und Geth arbeiten](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [Unit-Testen von Solidity-Verträgen auf Ethereum mit Go](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 

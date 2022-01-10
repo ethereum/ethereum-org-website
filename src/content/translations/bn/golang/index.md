@@ -38,7 +38,7 @@ sidebar: true
 
 - [গো ইথেরিয়াম ডকুমেন্টেশন](https://geth.ethereum.org/docs/) - _আধিকারিক ইথেরিয়াম Golang এর জন্য ডকুমেন্টেশন_
 - [গো ইথেরিয়াম গোডক (GoDoc)](https://godoc.org/github.com/ethereum/go-ethereum)
-- [Geth এর সাথে গো-তে একটি ড্যাপ (DApp) তৈরি করা](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
+- [Geth এর সাথে গো-তে একটি ড্যাপ (DApp) তৈরি করা](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Golang ও Geth এর সাথে ইথেরিয়াম প্রাইভেট নেটওয়ার্কের সঙ্গে কাজ করা](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [গো-এর সাথে ইথেরিয়ামে সলিডিটি কন্ট্র্যাক্টগুলোর ইউনিট টেস্টিং](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 

@@ -39,7 +39,7 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) or [eth
 
 - [Documentação Ethereum em Go](https://geth.ethereum.org/docs/) - _A documentação da implementação oficial da Ethereum em Go_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [Criando um DApp Go com o Geth](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
+- [Criando um DApp Go com o Geth](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Trabalhe com uma rede privada Ethereum com Golang e Geth](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [Testes unitários de contratos Solidity na Ethereum com Go](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 

@@ -39,7 +39,7 @@ sidebarDepth: 1
 
 - [Go 이더리움 개발 문서](https://geth.ethereum.org/docs/) - _Go 언어를 사용한 공식 이더리움 개발 문서_
 - [Go 이더리움 GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [게스(Geth)를 사용하여 Go로 디앱 제작](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
+- [게스(Geth)를 사용하여 Go로 디앱 제작](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Go 언어 및 게스(Geth)를 사용하여 이더리움 비공개 네트워크 지원](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [Go를 사용하여 이더리움 기반 솔리디티 컨트랙트 유닛 테스트](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 
