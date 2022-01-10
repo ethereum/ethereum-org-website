@@ -12,7 +12,7 @@ summaryPoint4: Bunu teknik yol haritalarındaki "1,5 Aşaması" olarak tanıyor 
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">
-    Bu yükseltme, shard zincirlerinin gelişini takip edecektir. Ancak o zaman <a href="/vision/">Eth2 vision</a> tamamen gerçekleşmiş olacaktır – daha fazla ölçeklenebilirlik, güvenlik ve sürdürülebilirlikle birlikte tüm ağı destekleyen paydaşlık.
+    Bu yükseltme, shard zincirlerinin gelişini takip edecektir. Ancak o zaman <a href="/eth2/vision/">Eth2 vision</a> tamamen gerçekleşmiş olacaktır – daha fazla ölçeklenebilirlik, güvenlik ve sürdürülebilirlikle birlikte tüm ağı destekleyen paydaşlık.
 </UpgradeStatus>
 
 ## Kenetlenme nedir? {#what-is-the-docking}

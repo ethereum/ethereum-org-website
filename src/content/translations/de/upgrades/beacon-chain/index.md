@@ -19,7 +19,7 @@ summaryPoint4: In den verschiedenen technischen Entwicklungsstufen ist darunter 
 
 Die Beacon Chain übernimmt die Koordination und Verknüpfung des Netzwerks der [Shards](/upgrades/shard-chains/) und [Stakers](/staking/). Aber sie ist nicht vergleichbar mit dem [Ethereum Mainnet](/glossary/#mainnet) von heute, da sie keine Zustandsveränderungen von Konten oder Smart Contracts verarbeitet.
 
-Mit der Zeit können sich Aufgabe und Rolle der Beacon Chain zwar verändern, sie ist jedoch ein fundamentaler Baustein für das [sichere, nachhaltige und skalierbare Ethereum der Zukunft](/vision/).
+Mit der Zeit können sich Aufgabe und Rolle der Beacon Chain zwar verändern, sie ist jedoch ein fundamentaler Baustein für das [sichere, nachhaltige und skalierbare Ethereum der Zukunft](/eth2/vision/).
 
 ## Eigenschaften der Beacon Chain {#beacon-chain-features}
 

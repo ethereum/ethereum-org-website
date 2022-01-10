@@ -28,7 +28,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Wallets](/wallets/)
 - [Find wallets](/wallets/find-wallet/)
 - [Eth2](/eth2/)
-- [Eth2 vision](/vision/)
+- [Eth2 vision](/eth2/vision/)
 - [The Beacon Chain](/upgrades/beacon-chain/)
 - [The merge](/upgrades/merge/)
 - [Shard chains](/upgrades/shard-chains/)

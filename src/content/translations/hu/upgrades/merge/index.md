@@ -12,7 +12,7 @@ summaryPoint4: Úgy is ismerheted, mint a Fázis 1.5 a technikai ütemtervek sze
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">
-    Ezt a fejlesztést a shard láncok eljövetele fogja követni. De ez lesz az a pillanat, amikor az <a href="/vision/">Eth2 vízió</a> teljesen megvalósul – nagyobb skálázhatóság, biztonság és fenntarthatóság valamint letétbe helyezés, mely a teljes hálózatot biztosítja.
+    Ezt a fejlesztést a shard láncok eljövetele fogja követni. De ez lesz az a pillanat, amikor az <a href="/eth2/vision/">Eth2 vízió</a> teljesen megvalósul – nagyobb skálázhatóság, biztonság és fenntarthatóság valamint letétbe helyezés, mely a teljes hálózatot biztosítja.
 </UpgradeStatus>
 
 ## Mi az a dokkolás? {#what-is-the-docking}
@@ -29,7 +29,7 @@ A főhálózat lehetővé teszi majd az okosszerződések futtatását a proof-o
 
 ## A dokkolás után {#after-the-docking}
 
-Ez a proof-of-work végét és egy fenntarthatóbb, környezetbarátabb korszak kezdetét fogja jelenteni az Ethereum számára. Ettől a ponttól kezdve az Ethereum skálázható, biztonságos és fenntartható lesz, ahogy az az [Eth2 vízió](/vision/) szerint körvonalazódott.
+Ez a proof-of-work végét és egy fenntarthatóbb, környezetbarátabb korszak kezdetét fogja jelenteni az Ethereum számára. Ettől a ponttól kezdve az Ethereum skálázható, biztonságos és fenntartható lesz, ahogy az az [Eth2 vízió](/eth2/vision/) szerint körvonalazódott.
 
 ## A fejlesztések közötti kapcsolat {#relationship-between-upgrades}
 

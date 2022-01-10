@@ -19,7 +19,7 @@ summaryPoint4: You might know this as "Phase 0" on technical roadmaps.
 
 The Beacon Chain will conduct or coordinate the expanded network of [shards](/upgrades/shard-chains/) and [stakers](/staking/). But it won't be like the [Ethereum Mainnet](/glossary/#mainnet) of today. It can't handle accounts or smart contracts.
 
-The Beacon Chain’s role will change over time but it’s a foundational component for [the secure, sustainable and scalable Ethereum we’re working towards](/vision/).
+The Beacon Chain’s role will change over time but it’s a foundational component for [the secure, sustainable and scalable Ethereum we’re working towards](/eth2/vision/).
 
 ## Beacon Chain features {#beacon-chain-features}
 

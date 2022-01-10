@@ -31,7 +31,7 @@ Ces changements de règles peuvent créer une scission temporaire sur le réseau
 
 #### Résumé {#beacon-chain-genesis-summary}
 
-La [chaîne phare](/upgrades/beacon-chain/) avait besoin de 16 384 dépôts de 32 ETH mis en jeu pour être déployée en toute sécurité. Cela s'est produit le 27 novembre, ce qui signifie que la chaîne phare a commencé à produire des blocs le 1er décembre 2020. Il s'agit d'une première étape importante dans la réalisation de la [vision Eth2](/vision/).
+La [chaîne phare](/upgrades/beacon-chain/) avait besoin de 16 384 dépôts de 32 ETH mis en jeu pour être déployée en toute sécurité. Cela s'est produit le 27 novembre, ce qui signifie que la chaîne phare a commencé à produire des blocs le 1er décembre 2020. Il s'agit d'une première étape importante dans la réalisation de la [vision Eth2](/eth2/vision/).
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 

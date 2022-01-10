@@ -318,7 +318,7 @@ const Eth2IndexPage = ({ data }) => {
         description={translateMessageId("page-eth2-dive-desc", intl)}
       >
         <div>
-          <ButtonLink to="/vision/">
+          <ButtonLink to="/eth2/vision/">
             <Translation id="page-eth2-vision-btn" />
           </ButtonLink>
         </div>
@@ -496,7 +496,7 @@ const Eth2IndexPage = ({ data }) => {
               </p>
               <p>
                 <Translation id="page-eth2-answer-4" />{" "}
-                <Link to="/vision/">
+                <Link to="/eth2/vision/">
                   <Translation id="page-eth2-vision-btn" />
                 </Link>
               </p>
@@ -705,7 +705,7 @@ const Eth2IndexPage = ({ data }) => {
                 <Translation id="page-eth2-question-8-answer-4" />
               </p>
               <p>
-                <ButtonLink to="/vision/">
+                <ButtonLink to="/eth2/vision/">
                   <Translation id="page-eth2-question-8-answer-6" />
                 </ButtonLink>
               </p>

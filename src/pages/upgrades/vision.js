@@ -4,23 +4,23 @@ import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import { getImage } from "gatsby-plugin-image"
 
-import { translateMessageId } from "../utils/translations"
-import Translation from "../components/Translation"
-import Card from "../components/Card"
-import ActionCard from "../components/ActionCard"
-import Link from "../components/Link"
-import Emoji from "../components/Emoji"
-import Trilemma from "../components/Trilemma"
-import PageHero from "../components/PageHero"
-import Breadcrumbs from "../components/Breadcrumbs"
-import ButtonLink from "../components/ButtonLink"
-import PageMetadata from "../components/PageMetadata"
+import { translateMessageId } from "../../utils/translations"
+import Translation from "../../components/Translation"
+import Card from "../../components/Card"
+import ActionCard from "../../components/ActionCard"
+import Link from "../../components/Link"
+import Emoji from "../../components/Emoji"
+import Trilemma from "../../components/Trilemma"
+import PageHero from "../../components/PageHero"
+import Breadcrumbs from "../../components/Breadcrumbs"
+import ButtonLink from "../../components/ButtonLink"
+import PageMetadata from "../../components/PageMetadata"
 import {
   CardContainer,
   Content,
   Page,
   Divider,
-} from "../components/SharedStyledComponents"
+} from "../../components/SharedStyledComponents"
 
 const StyledCardContainer = styled(CardContainer)`
   margin-top: 2rem;

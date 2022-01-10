@@ -31,7 +31,7 @@ Queste modifiche alle regole possono creare una divisione temporanea nella rete.
 
 #### Riepilogo {#beacon-chain-genesis-summary}
 
-La [beacon chain](/upgrades/beacon-chain/) necessitava di 16384 depositi di 32 ETH in staking per funzionare in sicurezza. Questo è successo il 27 Novembre, quindi la beacon chain ha iniziato a produrre blocchi il 1 dicembre 2020. Si tratta di un primo passaggio importante per realizzare la [visione Eth2](/vision/).
+La [beacon chain](/upgrades/beacon-chain/) necessitava di 16384 depositi di 32 ETH in staking per funzionare in sicurezza. Questo è successo il 27 Novembre, quindi la beacon chain ha iniziato a produrre blocchi il 1 dicembre 2020. Si tratta di un primo passaggio importante per realizzare la [visione Eth2](/eth2/vision/).
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 

@@ -19,7 +19,7 @@ summaryPoint4: Potreste averne sentito parlare come "Fase 0" nelle roadmap tecni
 
 La beacon chain condurrà o coordinerà la rete ampliata di [shard](/upgrades/shard-chains/) e [staker](/staking/). Ma non sarà come la [rete principale Ethereum](/glossary/#mainnet) di oggi. Non è in grado di gestire account o smart contract.
 
-Il ruolo della beacon chain cambierà con il passare del tempo ma è una componente fondamentale per [la sicurezza, sostenibilità e scalabilità di Etherum che stiamo cercando di raggiungere](/vision/).
+Il ruolo della beacon chain cambierà con il passare del tempo ma è una componente fondamentale per [la sicurezza, sostenibilità e scalabilità di Etherum che stiamo cercando di raggiungere](/eth2/vision/).
 
 ## Caratteristiche della beacon chain {#beacon-chain-features}
 
