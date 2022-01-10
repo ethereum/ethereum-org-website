@@ -1,9 +1,11 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import { motion } from "framer-motion"
-import Icon from "./Icon"
+import { useIntl } from "gatsby-plugin-intl"
 
-import Translation from "../components/Translation"
+import { translateMessageId } from "../utils/translations"
+import Translation from "./Translation"
+import Icon from "./Icon"
 import Card from "./Card"
 
 const Container = styled.div`
@@ -173,6 +175,8 @@ const CloseIconContainer = styled.span`
 `
 
 const Trilemma = () => {
+  const intl = useIntl()
+
   const [state, setState] = useState({
     isDecentralizedAndSecure: false,
     isDecentralizedAndScalable: false,
@@ -374,16 +378,16 @@ const Trilemma = () => {
           />
         </CircleSelect>
         <Text x="400" y="540" isActive={isEth2}>
-          Eth2
+          {translateMessageId("ethereum", intl)}
         </Text>
         <Text x="460" y="150" isActive={isDecentralized}>
-          <Translation id="page-eth2-vision-trilemma-text-1" />
+          {translateMessageId("page-eth2-vision-trilemma-text-1", intl)}
         </Text>
         <Text x="-24" y="486" isActive={isSecure}>
-          <Translation id="page-eth2-vision-trilemma-text-2" />
+          {translateMessageId("page-eth2-vision-trilemma-text-2", intl)}
         </Text>
         <Text x="540" y="835" isActive={isScalable}>
-          <Translation id="page-eth2-vision-trilemma-text-3" />
+          {translateMessageId("page-eth2-vision-trilemma-text-3", intl)}
         </Text>
       </Triangle>
     </Container>
