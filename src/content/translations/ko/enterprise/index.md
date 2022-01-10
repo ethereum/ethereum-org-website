@@ -70,7 +70,7 @@ sidebarDepth: 1
 
 ### 보안 {#security}
 
-- [Clef](https://geth.ethereum.org/clef/Overview) _트랜잭션 및 데이터를 서명하는 데 사용되며 게스(Geth)의 계정 관리를 대체함_
+- [Clef](https://geth.ethereum.org/docs/clef/tutorial) _트랜잭션 및 데이터를 서명하는 데 사용되며 게스(Geth)의 계정 관리를 대체함_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _web3 공급자에서 사용할 트랜잭션 서명 애플리케이션_
 
 ### 툴링 {#tooling}
