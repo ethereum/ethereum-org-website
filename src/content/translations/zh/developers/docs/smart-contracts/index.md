@@ -101,7 +101,7 @@ contract VendingMachine {
 
 **DappSys - _安全、简单、灵活的智能合约构建模块。_**
 
-- [dapp.tools/dappsys](https://dappsys.readthedocs.io/)
+- [Dappsys](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 ## 延伸阅读 {#further-reading}

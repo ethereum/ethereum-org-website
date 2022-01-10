@@ -99,7 +99,7 @@ Az [orákulumok](/developers/docs/oracles/) használata megoldást nyújt ezen p
 
 **DappSys -** **_Biztonságos, egyszerű, flexibilis okosszerződés építőelemek._**
 
-- [dapp.tools/dappsys](https://dappsys.readthedocs.io/)
+- [Dappsys](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 ## További olvasnivaló {#further-reading}
