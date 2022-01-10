@@ -5,7 +5,6 @@
   "eth2-client-nimbus-logo-alt": "Logotipo do Nimbus",
   "eth2-client-prysm-logo-alt": "Logotipo da Prysm",
   "eth2-client-teku-logo-alt": "Logotipo da Teku",
-  "eth2-client-trinity-logo-alt": "Logotipo da Trinity",
   "eth2-rhino-img-alt": "Gráfico de rinoceronte Eth2 avançando",
   "page-eth2-answer-1": "Pense em Eth2 como um conjunto de atualizações que estão sendo adicionadas para melhorar o Ethereum que utilizamos hoje. Essas atualizações incluem a criação de uma nova cadeia chamada beacon chain e até 64 cadeias conhecidas como fragmentos (shards).",
   "page-eth2-answer-2": "Estes são separados da rede principal Ethereum que usamos hoje, mas não a substituirão. Ao contrário, a rede principal se integrará a este sistema paralelo que está sendo adicionado progressivamente.",
