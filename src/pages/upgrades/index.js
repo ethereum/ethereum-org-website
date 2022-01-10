@@ -747,6 +747,9 @@ const Eth2IndexPage = ({ data }) => {
                   <Translation id="page-eth2-question-10-answer-8" />
                 </Link>
               </p>
+              <p>
+                <Translation id="page-eth2-question-10-answer-9" />
+              </p>
             </ExpandableCard>
           </RightColumn>
         </Faq>
