@@ -44,7 +44,7 @@
   "page-run-a-node-further-reading-3-link": "The Limits to Blockchain Scalability",
   "page-run-a-node-further-reading-3-author": "Vitalik Buterin",
   "page-run-a-node-getting-started-hardware-title": "Getting started - Part 1: Hardware",
-  "page-run-a-node-getting-started-hardware-1": "You'll need some hardware to get started. Although running node software is possible on a personal computer, having a dedicated machine can greatly enhance the performance of your node, while minimizing its impact on your primary computer.",
+  "page-run-a-node-getting-started-hardware-1": "You'll need some hardware to get started. Although running node software is possible on a personal computer, having a dedicated machine can greatly enhance the performance of your node while minimizing its impact on your primary computer.",
   "page-run-a-node-getting-started-hardware-2": "When selecting hardware, take into consideration that the chain is always slowly growing, and maintenance will inevitably be needed. Increasing specs can help delay the need for node maintenance.",
   "page-run-a-node-getting-started-software-title": "Part 2: Software",
   "page-run-a-node-getting-started-software-section-1": "In the earlier days of the network, users needed to have the ability to interface with the command-line in order to operate an Ethereum node.",
