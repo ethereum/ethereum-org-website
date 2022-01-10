@@ -23,7 +23,7 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 
 ## Cikkek kezdőknek {#beginner-articles}
 
-- [Bevezetés az okosszerződésekbe Vyper-rel](https://kauri.io/article/af913a853eaf4db88627b3ff9572b770/v1/an-introduction-to-smart-contracts-with-vyper)
+- [Bevezetés az okosszerződésekbe Vyper-rel](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [Hogyan kell Ethereum szerződést fejleszteni Python Flask használatával?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Bevezetés Web3.py-ba · Ethereum Python fejlesztőknek](https://www.dappuniversity.com/articles/web3-py-intro)
 - [Hogyan kell egy okosszerződés függvényt meghívni Python és web3.py használatával](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)

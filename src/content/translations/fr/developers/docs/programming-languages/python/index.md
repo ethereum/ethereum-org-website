@@ -23,7 +23,7 @@ Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/le
 
 ## Articles pour les débutants {#beginner-articles}
 
-- [An Introduction to Smart Contracts with Vyper](https://kauri.io/article/af913a853eaf4db88627b3ff9572b770/v1/an-introduction-to-smart-contracts-with-vyper)
+- [An Introduction to Smart Contracts with Vyper](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [How to develop Ethereum contract using Python Flask?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Intro to Web3.py · Ethereum For Python Developers](https://www.dappuniversity.com/articles/web3-py-intro)
 - [How to call a Smart Contract function using Python and Web3.py](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
