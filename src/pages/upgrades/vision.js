@@ -145,6 +145,11 @@ const VisionPage = ({ data, location }) => {
           </p>
           <ul>
             <li>
+              <Link to="https://tim.mirror.xyz/CHQtTJb1NDxCK41JpULL-zAJe7YOtw-m4UDw6KDju6c">
+                <Translation id="page-eth2-vision-2021" />
+              </Link>
+            </li>
+            <li>
               <Link to="https://blog.ethereum.org/2015/03/03/ethereum-launch-process/">
                 <Translation id="page-eth2-vision-upgrade-needs-serenity" />
               </Link>
