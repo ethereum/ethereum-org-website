@@ -721,6 +721,10 @@ const Eth2IndexPage = ({ data }) => {
               title={translateMessageId("page-eth2-question-10-title", intl)}
             >
               <p>
+                <Translation id="page-eth2-question-10-answer-0" />
+              </p>
+
+              <p>
                 <Translation id="page-eth2-question-10-answer-1" />{" "}
                 <Link to="/upgrades/beacon-chain/">
                   <Translation id="page-eth2-question-10-answer-1-link" />
@@ -746,9 +750,6 @@ const Eth2IndexPage = ({ data }) => {
                 <Link to="/upgrades/shard-chains/#code-execution">
                   <Translation id="page-eth2-question-10-answer-8" />
                 </Link>
-              </p>
-              <p>
-                <Translation id="page-eth2-question-10-answer-9" />
               </p>
             </ExpandableCard>
           </RightColumn>
