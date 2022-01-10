@@ -464,7 +464,7 @@ m.transaction(caller=user_account,
 
 #### 状态约束 {#state-constraint}
 
-使用[state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/api.html?highlight=operator#manticore.core.state.StateBase.constrain)为一个特定的状态添加一个约束。它可以用来在状态检索后对其进行约束，以检查其上的某些属性。
+使用[state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/states.html?highlight=StateBase#manticore.core.state.StateBase.constrain)为一个特定的状态添加一个约束。它可以用来在状态检索后对其进行约束，以检查其上的某些属性。
 
 ### 检查约束 {#checking-constraint}
 

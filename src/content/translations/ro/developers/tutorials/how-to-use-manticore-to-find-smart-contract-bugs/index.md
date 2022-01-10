@@ -467,7 +467,7 @@ m.transaction(caller=user_account,
 
 #### Restricție de stare {#state-constraint}
 
-Utilizează [state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/api.html?highlight=operator#manticore.core.state.StateBase.constrain) pentru a adăuga o restricție unei anumită stări Aceasta poate fi folosită pentru a restrânge starea ca după explorare să verifice unele proprietăți pe ea.
+Utilizează [state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/states.html?highlight=StateBase#manticore.core.state.StateBase.constrain) pentru a adăuga o restricție unei anumită stări Aceasta poate fi folosită pentru a restrânge starea ca după explorare să verifice unele proprietăți pe ea.
 
 ### Verificarea restricțiilor {#checking-constraint}
 

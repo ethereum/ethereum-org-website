@@ -465,7 +465,7 @@ m.transaction(caller=user_account,
 
 #### Ograniczenie stanu {#state-constraint}
 
-Użyj [state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/api.html?highlight=operator#manticore.core.state.StateBase.constrain), aby dodać ograniczenie do określonego stanu Może być używany do ograniczania stanu po jego eksploracji, aby sprawdzić na nim jakąś właściwość.
+Użyj [state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/states.html?highlight=StateBase#manticore.core.state.StateBase.constrain), aby dodać ograniczenie do określonego stanu Może być używany do ograniczania stanu po jego eksploracji, aby sprawdzić na nim jakąś właściwość.
 
 ### Sprawdzanie ograniczenia {#checking-constraint}
 
