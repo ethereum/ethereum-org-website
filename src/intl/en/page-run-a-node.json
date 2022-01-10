@@ -107,7 +107,7 @@
   "page-run-a-node-what-3-subtitle": "While online.",
   "page-run-a-node-what-3-text": "Running an Ethereum node may sound complicated at first, but it's merely the act of continuously running client software on a computer while connected to the internet. While offline, your node will simply be inactive until it gets back online and catches up with the latest changes.",
   "page-run-a-node-who-title": "<i>Who</i> should run a node?",
-  "page-run-a-node-who-preview": "Nodes are not just for miners and validators. <i>Anyone</i> can run a node (you don't even need ETH).",
+  "page-run-a-node-who-preview": "Nodes are not just for miners and validators. <i>Anyone</i> can run a node—you don't even need ETH.",
   "page-run-a-node-who-copy-1": "You don't need to stake ETH or be a miner to run a home node. In fact, it's every other node on Ethereum that holds miners and validators accountable.",
   "page-run-a-node-who-copy-2": "You may not get the financial rewards that validators and miners earn, but there are many other benefits of running a home node for any Ethereum user to consider, including privacy, security, reduced reliance on third-party servers, censorship resistance and improved health and decentralization of the network.",
   "page-run-a-node-who-copy-3": "Having your own node means you don't need to trust information about the state of the network provided by a third party.",
