@@ -38,7 +38,7 @@ Behöver du en mer grundläggande introduktion först? Kolla in [ethereum.org/se
 
 ## Avancerad användning av mönster {#advanced-use-patterns}
 
-- [pwasm_ethereum externs: bibliotek för att interagera med Ethereum-liknande nätverk](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [pwasm_ethereum externs: bibliotek för att interagera med Ethereum-liknande nätverk](https://github.com/openethereum/pwasm-ethereum)
 - [Bygg en decentraliserad chatt med JavaScript och Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Bygg en decentraliserad Todo-app med hjälp av Vue.js & Rust ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Komma igång med Enigma - i Rust-programmeringsspråk](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)

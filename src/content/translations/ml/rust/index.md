@@ -38,7 +38,7 @@ sidebar: true
 
 ## നൂതന ഉപയോഗ പാറ്റേണുകൾ {#advanced-use-patterns}
 
-- [എതിരെയും പോലുള്ള നെറ്റ്‌വർക്കുമായി സംവദിക്കുന്നതിന് pwasm_ethereum ബാഹ്യ ലൈബ്രറി](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [എതിരെയും പോലുള്ള നെറ്റ്‌വർക്കുമായി സംവദിക്കുന്നതിന് pwasm_ethereum ബാഹ്യ ലൈബ്രറി](https://github.com/openethereum/pwasm-ethereum)
 - [ജാവാസ്ക്രിപ്റ്റും റസ്റ്റും ഉപയോഗിച്ച് വികേന്ദ്രീകൃത ചാറ്റ് നിർമ്മിക്കുക](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Vue.js & Rust ഉപയോഗിച്ച് വികേന്ദ്രീകൃത ടോഡോ അപ്ലിക്കേഷൻ നിർമ്മിക്കുക ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [എനിഗ്മ ഉപയോഗിച്ച് ആരംഭിക്കുക - റസ്റ്റ് പ്രോഗ്രാമിംഗ് ഭാഷയിൽ](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)

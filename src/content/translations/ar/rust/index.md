@@ -38,7 +38,7 @@ sidebar: true
 
 ## أنماط الاستخدام المتقدم {#advanced-use-patterns}
 
-- [مكتبة pwasm_ethereum الخارجية للتفاعل مع شبكة تشبه إثيريوم](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [مكتبة pwasm_ethereum الخارجية للتفاعل مع شبكة تشبه إثيريوم](https://github.com/openethereum/pwasm-ethereum)
 - [إنشاء دردشة لامركزية باستخدام JavaScript وRust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [إنشاء تطبيق Todo لامركزي باستخدام Vue.js & Rust ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [البدء بـEnigma - في لغة برمجة Rust](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)

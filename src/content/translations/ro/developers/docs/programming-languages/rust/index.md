@@ -37,7 +37,7 @@ Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/learn/) sau
 
 ## Modele avansate de utilizare {#advanced-use-patterns}
 
-- [pwasm_ethereum bibliotecă pentru interacțiuni cu rețele ca Ethereum](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [pwasm_ethereum bibliotecă pentru interacțiuni cu rețele ca Ethereum](https://github.com/openethereum/pwasm-ethereum)
 - [Creează un chat descentralizat folosind JavaScript și Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Dezvoltă o aplicație Todo descentralizată folosind Vue.js și Rust ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Noțiuni de bază cu Enigma - Limbaj de programare în Rust](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)

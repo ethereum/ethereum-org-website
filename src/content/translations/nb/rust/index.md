@@ -38,7 +38,7 @@ Trenger du en mer grunnleggende informasjon først? Sjekk ut [ethereum.org/learn
 
 ## Avansert bruksmønster {#advanced-use-patterns}
 
-- [pwasm_ethereum externs biblioteket for å interagere med Ethereum-lignende nettverk](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [pwasm_ethereum externs biblioteket for å interagere med Ethereum-lignende nettverk](https://github.com/openethereum/pwasm-ethereum)
 - [Bygg en desentralisert chat som bruker JavaScript og Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Bygg en desentralisert Todo App Using Vue.js & Rust ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Komme i gang med Enigma - I Rust Programmeringsspråk](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)

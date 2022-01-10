@@ -38,7 +38,7 @@ sidebar: true
 
 ## উন্নত ইউজ প্যাটার্ন {#advanced-use-patterns}
 
-- [pwasm_ethereum externs লাইব্রেরি ইথেরিয়াম-সদৃশ নেটওয়ার্কের সঙ্গে ইন্টারেক্ট করবে](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [pwasm_ethereum externs লাইব্রেরি ইথেরিয়াম-সদৃশ নেটওয়ার্কের সঙ্গে ইন্টারেক্ট করবে](https://github.com/openethereum/pwasm-ethereum)
 - [জাভাস্ক্রিপ্ট ও রাস্ট ব্যবহার করে একটি বিকেন্দ্রীভূত চ্যাট তৈরি করা](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Vue.js & রাস্ট ব্যবহার করে একটি বিকেন্দ্রীভূত Todo অ্যাপ তৈরি করা ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [এনিগমা দিয়ে শুরু করা- রাস্ট প্রোগ্রামিং ল্যাঙ্গুয়েজে](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)

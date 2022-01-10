@@ -39,7 +39,7 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 
 ## Padrões para uso Avançado {#advanced-use-patterns}
 
-- [pwasm_ethereum: biblioteca externa para interagir com uma rede análoga a Ethereum](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [pwasm_ethereum: biblioteca externa para interagir com uma rede análoga a Ethereum](https://github.com/openethereum/pwasm-ethereum)
 - [Construa um bate-papo descentralizado utilizando JavaScript e Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Construa um aplicativo descentralizado de tarefas utilizando Vue.js & Rust ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Introdução a Enigma - na Linguagem de Programação Rust](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)

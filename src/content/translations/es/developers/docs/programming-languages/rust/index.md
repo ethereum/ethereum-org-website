@@ -37,7 +37,7 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 
 ## Patrones de uso avanzado {#advanced-use-patterns}
 
-- [Biblioteca externa pwasm_ethereum para interactuar con redes similares a Ethereum](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [Biblioteca externa pwasm_ethereum para interactuar con redes similares a Ethereum](https://github.com/openethereum/pwasm-ethereum)
 - [Construir un chat descentralizado mediante JavaScript y Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Crear una aplicación descentralizada de tareas con Vue.js & Rust ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Introducción a Enigma: Un lenguaje de programación de Rust](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)

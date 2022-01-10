@@ -39,7 +39,7 @@ sidebarDepth: 1
 
 ## 高度な利用パターン {#advanced-use-patterns}
 
-- [pwasm_ethereum イーサリアムライクなネットワークと対話するための extern ライブラリ](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [pwasm_ethereum イーサリアムライクなネットワークと対話するための extern ライブラリ](https://github.com/openethereum/pwasm-ethereum)
 - [JavaScript と Rust を使用して分散型チャットを構築する](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Vue.js と Rust を使用して分散化 Todo アプリを構築する ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Enigma の入門 - Rust プログラミング言語で](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)

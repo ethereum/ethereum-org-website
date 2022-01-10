@@ -39,7 +39,7 @@ Norėtumėte pradėti nuo ko nors paprastesnio? Apsilankykite [ethereum.org/lear
 
 ## Pažangaus naudojimo modeliai {#advanced-use-patterns}
 
-- [pwasm_ethereum externs biblioteka, sąveikaujanti su tinklu, panašiu į Ethereum](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [pwasm_ethereum externs biblioteka, sąveikaujanti su tinklu, panašiu į Ethereum](https://github.com/openethereum/pwasm-ethereum)
 - [Sukurkite decentralizuotą pokalbį naudojant JavaScript ir Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Sukurkite decentralizuotą Todo programėlę naudojant Vue.js & Rust ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Darbo su Enigma pradžia - Rust programavimo kalba](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)

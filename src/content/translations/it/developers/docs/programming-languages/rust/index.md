@@ -37,7 +37,7 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 
 ## Modelli d'uso avanzati {#advanced-use-patterns}
 
-- [pwasm_ethereum externs library to interact with Ethereum-like network](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [pwasm_ethereum externs library to interact with Ethereum-like network](https://github.com/openethereum/pwasm-ethereum)
 - [Build A Decentralized Chat Using JavaScript and Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Build a Decentralized Todo App Using Vue.js & Rust ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Getting Started with Enigma - In Rust Programming Language](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)

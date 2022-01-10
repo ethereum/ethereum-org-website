@@ -39,7 +39,7 @@ Potřebujete nejdříve úplně základní informace? Podívejte se na [ethereum
 
 ## Pokročilé používání {#advanced-use-patterns}
 
-- [Knihovna externs pwasm_ethereum pro interakci se sítěmi založenými na Ethereu](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [Knihovna externs pwasm_ethereum pro interakci se sítěmi založenými na Ethereu](https://github.com/openethereum/pwasm-ethereum)
 - [Vytvoření decentralizovaného chatu pomocí JavaScriptu a Rustu](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Vytvořte decentralizovanou aplikaci TODO pomocí Vue.js a Rustu ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Začínáme s Enigmou - v programovacím jazyku Rust](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)

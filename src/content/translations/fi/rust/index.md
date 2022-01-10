@@ -39,7 +39,7 @@ Tarvitsetko perusteellisempaa aloitusta? Katso [ethereum.org/fi/learn](/learn/) 
 
 ## Edistyneet käyttösuunnittelumallit {#advanced-use-patterns}
 
-- [pwasm_ethereum ulkoisten muuttujien kirjasto Ethereumin kaltaisille verkoille](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [pwasm_ethereum ulkoisten muuttujien kirjasto Ethereumin kaltaisille verkoille](https://github.com/openethereum/pwasm-ethereum)
 - [Luo hajautettu chatti käyttäen JavaScriptiä ja Rustia](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Rakenna hajautettu Todo-sovellus käyttäen Vue.js:ää ja Rustia ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Enigmalla alkuun pääseminen - Rust-ohjelmointikieli](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)

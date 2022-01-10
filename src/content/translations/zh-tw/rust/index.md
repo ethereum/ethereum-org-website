@@ -38,7 +38,7 @@ sidebar: true
 
 ## 高級使用模式 {#advanced-use-patterns}
 
-- [pwasm_ethereum 外部庫與類以太坊網絡交互](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [pwasm_ethereum 外部庫與類以太坊網絡交互](https://github.com/openethereum/pwasm-ethereum)
 - [使用 JavaScript 和 Rust 搭建去中心化聊天室](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [使用 Vue.js 和 Rust 構建一個去中心化待辦事項應用程序 ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [從 Enigma 開始 - 用 Rust 編程語言](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
