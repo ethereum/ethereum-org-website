@@ -91,7 +91,7 @@ React.useEffect(() => {
 
 为您赢得利益的交易代币被称为 _aTokens_。
 
-当您选择将 Aave 与 _create-eth-app_ 集成时，您将获得[子图集成](https://docs.aave.com/developers/integrating-aave/analysing-data-from-aave/using-graphql)。 Aave 使用 [The Graph](https://medium.com/aave/decentralized-data-queries-how-aave-uses-the-graph-998a55027e1d)，并且已经在 [Ropsten](https://thegraph.com/explorer/subgraph/aave/protocol-ropsten) 和 [Mainnet](https://thegraph.com/explorer/subgraph/aave/protocol) 上以[原始](https://thegraph.com/explorer/subgraph/aave/protocol-raw)或[格式化](https://thegraph.com/explorer/subgraph/aave/protocol)的形式为您提供了几个现成的子图。
+当您选择将 Aave 与 _create-eth-app_ 集成时，您将获得[子图集成](https://docs.aave.com/developers/getting-started/using-graphql)。 Aave 使用 [The Graph](https://medium.com/aave/decentralized-data-queries-how-aave-uses-the-graph-998a55027e1d)，并且已经在 [Ropsten](https://thegraph.com/explorer/subgraph/aave/protocol-ropsten) 和 [Mainnet](https://thegraph.com/explorer/subgraph/aave/protocol) 上以[原始](https://thegraph.com/explorer/subgraph/aave/protocol-raw)或[格式化](https://thegraph.com/explorer/subgraph/aave/protocol)的形式为您提供了几个现成的子图。
 
 ![Aave 闪电贷备忘录 – “是啊，如果我的闪电贷可以保留超过 1 笔交易，那就太好了”](../../../../../developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/flashloan-meme.png)
 
