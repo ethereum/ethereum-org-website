@@ -38,7 +38,7 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 ## Fejlett használati minták {#advanced-use-patterns}
 
 - [Ethereum okosszerződések fordítása, telepítése és hívása Python használatával](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [Solidity okosszerződések elemzése Slitherrel](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
+- [Solidity okosszerződések elemzése Slitherrel](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/)
 
 ## Python projektek és eszközök {#python-projects-and-tools}
 
