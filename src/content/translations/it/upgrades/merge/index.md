@@ -12,7 +12,7 @@ summaryPoint4: Questa fase viene detta anche "Fase 1.5" nelle roadmap tecniche.
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">
-    Questo aggiornamento seguirà l'arrivo delle shard chain. Ma è il momento in cui la <a href="/eth2/vision/">vision Eth2</a> si realizza pienamente: maggiore scalabilità, sicurezza e sostenibilità con lo staking a supporto di tutta la rete.
+    Questo aggiornamento seguirà l'arrivo delle shard chain. Ma è il momento in cui la <a href="/upgrades/vision/">vision Eth2</a> si realizza pienamente: maggiore scalabilità, sicurezza e sostenibilità con lo staking a supporto di tutta la rete.
 </UpgradeStatus>
 
 ## Che cos'è il docking? {#what-is-the-docking}
@@ -29,7 +29,7 @@ La rete principale aggiungerà la capacità di eseguire smart contract nel siste
 
 ## Dopo il docking {#after-the-docking}
 
-Questo segnerà la fine del proof of work per Ethereum e inizierà l'era di una rete Ethereum più sostenibile ed ecologica. A questo punto Ethereum avrà la scalabilità, la sicurezza e la sostenibilità delineati nella [vision Eth2](/eth2/vision/).
+Questo segnerà la fine del proof of work per Ethereum e inizierà l'era di una rete Ethereum più sostenibile ed ecologica. A questo punto Ethereum avrà la scalabilità, la sicurezza e la sostenibilità delineati nella [vision Eth2](/upgrades/vision/).
 
 ## Relazione tra gli aggiornamenti {#relationship-between-upgrades}
 

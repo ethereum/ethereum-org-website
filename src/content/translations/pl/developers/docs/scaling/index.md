@@ -9,7 +9,7 @@ sidebar: true
 
 Wraz ze wzrostem liczby osób korzystających z Ethereum, blockchain osiągnął pewne ograniczenia pojemności. To spowodowało wzrost kosztów korzystania z sieci, tworząc potrzebę „rozwiązań skalujących”. Istnieje wiele badanych, testowanych i wdrażanych rozwiązań z zastosowanymi różnymi podejściami w celu osiągnięcia podobnych celów.
 
-Głównym celem skalowalności jest zwiększenie szybkości (szybsza nieodwołalność) i przepustowości transakcji (wysoka liczba transakcji na sekundę), bez poświęcania decentralizacji lub bezpieczeństwa (więcej w artykule poświęconym [wizji Eth2](/eth2/vision/)). W warstwie 1 blockchainu Ethereum wysoki popyt prowadzi do spowolnienia transakcji i nieopłacalnych cen gazu. Zwiększenie pojemności sieci pod względem szybkości i przepustowości ma fundamentalne znaczenie dla znaczącego i masowego przyjęcia Ethereum.
+Głównym celem skalowalności jest zwiększenie szybkości (szybsza nieodwołalność) i przepustowości transakcji (wysoka liczba transakcji na sekundę), bez poświęcania decentralizacji lub bezpieczeństwa (więcej w artykule poświęconym [wizji Eth2](/upgrades/vision/)). W warstwie 1 blockchainu Ethereum wysoki popyt prowadzi do spowolnienia transakcji i nieopłacalnych cen gazu. Zwiększenie pojemności sieci pod względem szybkości i przepustowości ma fundamentalne znaczenie dla znaczącego i masowego przyjęcia Ethereum.
 
 Choć szybkość i przepustowość są ważne, kluczowe znaczenie ma to, aby rozwiązania skalujące umożliwiające osiągnięcie tych celów pozostały zdecentralizowane i bezpieczne. Utrzymanie niskiej bariery wejścia dla operatorów węzłów ma kluczowe znaczenie w zapobieganiu postępowi w kierunku scentralizowanej i niezabezpieczonej mocy obliczeniowej.
 
@@ -73,7 +73,7 @@ Dowiedz się więcej o [Plasmie](/developers/docs/scaling/plasma/).
 - Wiele rozwiązań może pomóc w zmniejszeniu całkowitego przeciążenia w dowolnej części sieci, a także zapobiega występowaniu pojedynczych punktów awarii.
 - Całość jest większa niż suma jej części. Różne rozwiązania mogą istnieć i działać w harmonii, pozwalając na uzyskanie wykładniczego efektu w zakresie szybkości i przepustowości transakcji w przyszłości.
 - Nie wszystkie rozwiązania wymagają bezpośredniego wykorzystania algorytmu konsensusu Ethereum, a alternatywne rozwiązania mogą oferować korzyści, które w przeciwnym razie byłyby trudne do uzyskania.
-- Żadne pojedyncze rozwiązanie skalujące nie wystarczy do realizacji [wizji eth2](/eth2/vision/).
+- Żadne pojedyncze rozwiązanie skalujące nie wystarczy do realizacji [wizji eth2](/upgrades/vision/).
 
 ## Jesteś raczej wzrokowcem? {#visual-learner} <iframe width="100%" height="315" src="https://www.youtube.com/embed/BgCgauWVTs0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
 

@@ -31,7 +31,7 @@ Estos cambios en las reglas pueden crear una división temporal de la red. Los b
 
 #### Resumen {#beacon-chain-genesis-summary}
 
-La [cadena de baliza](/upgrades/beacon-chain/) ha necesitado 16 384 depósitos de 32 ETH apostados para enviarse de manera segura. Esto sucedió el 27 de noviembre, es decir, la cadena de baliza comenzó a producir bloques el 1 de diciembre de 2020. Es un primer paso importante para lograr la [visión Eth2](/eth2/vision/).
+La [cadena de baliza](/upgrades/beacon-chain/) ha necesitado 16 384 depósitos de 32 ETH apostados para enviarse de manera segura. Esto sucedió el 27 de noviembre, es decir, la cadena de baliza comenzó a producir bloques el 1 de diciembre de 2020. Es un primer paso importante para lograr la [visión Eth2](/upgrades/vision/).
 
 [Leer la declaración de la Fundación Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 

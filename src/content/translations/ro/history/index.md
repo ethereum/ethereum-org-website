@@ -31,7 +31,7 @@ Aceste modificări de regulă pot crea o divizare temporară în rețea. Blocuri
 
 #### Rezumat {#beacon-chain-genesis-summary}
 
-[Lanțul Beacon](/upgrades/beacon-chain/) a necesitat 16.384 de depozite de 32 de mize ETH pentru a fi expediate în siguranță. Acest lucru s-a întâmplat pe 27 noiembrie, ceea ce înseamnă că lanțul Beacon a început să producă blocuri pe 1 decembrie 2020. Acesta este un prim pas important în realizarea [viziunii Eth2](/eth2/vision/).
+[Lanțul Beacon](/upgrades/beacon-chain/) a necesitat 16.384 de depozite de 32 de mize ETH pentru a fi expediate în siguranță. Acest lucru s-a întâmplat pe 27 noiembrie, ceea ce înseamnă că lanțul Beacon a început să producă blocuri pe 1 decembrie 2020. Acesta este un prim pas important în realizarea [viziunii Eth2](/upgrades/vision/).
 
 [Citește anunțul Fundației Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 

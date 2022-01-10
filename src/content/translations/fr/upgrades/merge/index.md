@@ -12,7 +12,7 @@ summaryPoint4: Vous en avez peut-être entendu parler comme étant la "Phase 1.5
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">
-    Cette mise à niveau suivra l'arrivée des chaînes de fragments. Mais c’est le moment où la <a href="/eth2/vision/">vision Eth2</a> devient réalité : plus d’évolutivité, de sécurité et de durabilité avec la mise en jeu, qui soutient l’ensemble du réseau.
+    Cette mise à niveau suivra l'arrivée des chaînes de fragments. Mais c’est le moment où la <a href="/upgrades/vision/">vision Eth2</a> devient réalité : plus d’évolutivité, de sécurité et de durabilité avec la mise en jeu, qui soutient l’ensemble du réseau.
 </UpgradeStatus>
 
 ## Qu'est-ce que l'arrimage ? {#what-is-the-docking}
@@ -29,7 +29,7 @@ Mainnet apportera la possibilité d'exécuter des contrats intelligents dans le 
 
 ## Après l'arrimage {#after-the-docking}
 
-Ce sera la fin de la preuve de travail pour Ethereum, et commencera alors l'ère d'un Ethereum plus durable et plus écologique. À ce stade, Ethereum aura l'échelle, la sécurité et la durabilité décrites dans sa [vision Eth2](/eth2/vision/).
+Ce sera la fin de la preuve de travail pour Ethereum, et commencera alors l'ère d'un Ethereum plus durable et plus écologique. À ce stade, Ethereum aura l'échelle, la sécurité et la durabilité décrites dans sa [vision Eth2](/upgrades/vision/).
 
 ## Relation entre les mises à niveau {#relationship-between-upgrades}
 

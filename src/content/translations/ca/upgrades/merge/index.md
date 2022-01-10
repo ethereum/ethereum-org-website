@@ -12,7 +12,7 @@ summaryPoint4: Es coneix també com a "Phase1.5" a la planificació tècnica.
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">
-    Aquesta millora seguirà l'arribada de cadenes de fragments. Però és el moment en el qual la <a href="/eth2/vision/">visió d'Eth2</a> es veurà completament acomplida: més escalabilitat, seguretat i sostenibilitat amb la participació i validació de tota la xarxa.
+    Aquesta millora seguirà l'arribada de cadenes de fragments. Però és el moment en el qual la <a href="/upgrades/vision/">visió d'Eth2</a> es veurà completament acomplida: més escalabilitat, seguretat i sostenibilitat amb la participació i validació de tota la xarxa.
 </UpgradeStatus>
 
 ## Què és l'acoblament? {#what-is-the-docking}
@@ -29,7 +29,7 @@ La xarxa principal aportarà la capacitat d'executar contractes intel·ligents e
 
 ## Després de l'acoblament {#after-the-docking}
 
-Això marcarà el final de la prova de treball per Ethereum i el principi d'una nova era més sostenible i respectuosa amb el medi ambient. Arribats a aquest punt, Ethereum tindrà la mida, la seguretat i la sostenibilitat descrites a la [ visió d'Eth2](/eth2/vision/).
+Això marcarà el final de la prova de treball per Ethereum i el principi d'una nova era més sostenible i respectuosa amb el medi ambient. Arribats a aquest punt, Ethereum tindrà la mida, la seguretat i la sostenibilitat descrites a la [ visió d'Eth2](/upgrades/vision/).
 
 ## Relació entre les millores {#relationship-between-upgrades}
 

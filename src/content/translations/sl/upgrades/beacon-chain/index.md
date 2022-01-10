@@ -19,7 +19,7 @@ summaryPoint4: Oddajniško verigo morda poznate pod imenom "faza 0", ki se upora
 
 Oddajniška veriga bo izvajala in usklajevala razširjeno omrežje [drobcev](/upgrades/shard-chains/) in [zastavljavcev](/staking/). Vendar ne bo enaka kot [glavno Ethereum omrežje](/glossary/#mainnet) danes. Ne more obdelovati računov ali pametnih pogodb.
 
-Vloga oddajniške verige se bo sčasoma spremenila, vendar je temeljni sestavni del [varnega, trajnostnega in nadgradljivega Ethereuma, ki ga želimo razviti](/eth2/vision/).
+Vloga oddajniške verige se bo sčasoma spremenila, vendar je temeljni sestavni del [varnega, trajnostnega in nadgradljivega Ethereuma, ki ga želimo razviti](/upgrades/vision/).
 
 ## Lastnosti oddajniške verige {#beacon-chain-features}
 

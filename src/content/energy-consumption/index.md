@@ -75,7 +75,7 @@ While Ethereum's energy consumption has historically been substantial, there has
 
 ## Related topics {#related-topics}
 
-- [Ethereum's vision](/eth2/vision/)
+- [Ethereum's vision](/upgrades/vision/)
 - [The Beacon Chain](/upgrades/beacon-chain)
 - [The merge](/upgrades/merge/)
 - [Sharding](/upgrades/beacon-chain/)
