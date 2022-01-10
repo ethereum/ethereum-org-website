@@ -86,7 +86,7 @@ Deoarece `f()` conține două căi, un DSE va construi doi operatori de cale dif
 - Calea 1: `a == 65`
 - Calea 2: `Not (a == 65)`
 
-Fiecare operator de cale este o formulă matematică ce poate fi dată unui așa-numit [rezolvator SMT](https://github.com/trailofbits/building-secure-contracts/blob/master/program-analysis/determine-properties.md), care va încerca să rezolve ecuația. Pentru `Path 1`, rezolvatorul va spune că această cale poate fi explorată cu `a = 65`. Pentru `Path 2`, rezolvatorul îi poate da lui `a` orice altă valoare diferită de 65, de exemplu `a = 0`.
+Fiecare operator de cale este o formulă matematică ce poate fi dată unui așa-numit [rezolvator SMT](https://wikipedia.org/wiki/Satisfiability_modulo_theories), care va încerca să rezolve ecuația. Pentru `Path 1`, rezolvatorul va spune că această cale poate fi explorată cu `a = 65`. Pentru `Path 2`, rezolvatorul îi poate da lui `a` orice altă valoare diferită de 65, de exemplu `a = 0`.
 
 ### Verificarea proprietăților {#verifying-properties}
 

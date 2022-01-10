@@ -80,7 +80,7 @@ As `f()` contains two paths, a DSE will construct two differents path predicates
 - Path 1: `a == 65`
 - Path 2: `Not (a == 65)`
 
-Each path predicate is a mathematical formula that can be given to a so-called [SMT solver](https://github.com/trailofbits/building-secure-contracts/blob/master/program-analysis/determine-properties.md), which will try to solve the equation. For `Path 1`, the solver will say that the path can be explored with `a = 65`. For `Path 2`, the solver can give `a` any value other than 65, for example `a = 0`.
+Each path predicate is a mathematical formula that can be given to a so-called [SMT solver](https://wikipedia.org/wiki/Satisfiability_modulo_theories), which will try to solve the equation. For `Path 1`, the solver will say that the path can be explored with `a = 65`. For `Path 2`, the solver can give `a` any value other than 65, for example `a = 0`.
 
 ### Verifying properties {#verifying-properties}
 
