@@ -87,7 +87,7 @@ React.useEffect(() => {
 
 ### Aave {#aave}
 
-[Aave](https://aave.com/) 是一个去中心化的货币借贷市场。 存款人向市场提供流动性以赚取被动收入，而借款人则可以利用抵押物进行借贷。 Aave 的一个独特功能是那些 [闪电贷](https://docs.aave.com/developers/tutorials/performing-a-flash-loan) 允许您在没有任何抵押品的情况下借钱， 只要您在一次交易中返还贷款。 例如，这对于在套利交易中为您提供额外的现金很有用。
+[Aave](https://aave.com/) 是一个去中心化的货币借贷市场。 存款人向市场提供流动性以赚取被动收入，而借款人则可以利用抵押物进行借贷。 Aave 的一个独特功能是那些 [闪电贷](https://docs.aave.com/developers/guides/flash-loans) 允许您在没有任何抵押品的情况下借钱， 只要您在一次交易中返还贷款。 例如，这对于在套利交易中为您提供额外的现金很有用。
 
 为您赢得利益的交易代币被称为 _aTokens_。
 
