@@ -318,7 +318,7 @@ const GetETHPage = ({ data }) => {
           </p>
           <p>
             <Translation id="page-get-eth-dexs-desc-2" />{" "}
-            <Link to="/learn/#smart-contracts">
+            <Link to="/smart-contracts">
               <Translation id="page-get-eth-smart-contract-link" />
             </Link>
           </p>
