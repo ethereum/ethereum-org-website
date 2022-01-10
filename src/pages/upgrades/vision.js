@@ -156,7 +156,7 @@ const VisionPage = ({ data, location }) => {
             </li>
           </ul>
           <p>
-            <Translation id="page-eth2-vision-uprade-needs-desc-5" />
+            <Translation id="page-eth2-vision-upgrade-needs-desc-5" />
           </p>
           <p>
             <Translation id="page-eth2-vision-upgrade-needs-desc-6" />
