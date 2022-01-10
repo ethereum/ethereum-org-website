@@ -29,7 +29,6 @@ Multiple projects provide implementations of Plasma that you can integrate into 
 - [OMG Network](https://omg.network/)
 - [Polygon](https://polygon.technology/) (previously Matic Network)
 - [Gluon](https://gluon.network/)
-- [Gazelle](https://gzle.io/)
 - [LeapDAO](https://ipfs.leapdao.org/)
 
 ## Further reading {#further-reading}

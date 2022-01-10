@@ -29,7 +29,6 @@ Beberapa proyek menyediakan implementasi Plasma yang dapat Anda integrasikan ke 
 - [OMG Network](https://omg.network/)
 - [Polygon](https://polygon.technology/) (sebelumnya Matic Network)
 - [Gluon](https://gluon.network/)
-- [Gazelle](https://gzle.io/)
 - [LeapDAO](https://ipfs.leapdao.org/)
 
 ## Bacaan lebih lanjut {#further-reading}
