@@ -25,7 +25,7 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na [ethereum.org/learn](
 
 - [Wybór klienta Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Klient Ethereum Rust](https://wiki.parity.io/Setup)
-- [Wysyłanie transakcji do Ethereum za pomocą Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [Wysyłanie transakcji do Ethereum za pomocą Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Wprowadzenie do inteligentnych kontraktów z klientem Parity Ethereum](https://wiki.parity.io/Smart-Contracts)
 - [Konfigurowanie środowiska deweloperskiego Oasis SDK](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Samouczek krok po kroku, jak pisać umowy w Rust Wasm dla Kovan](https://github.com/paritytech/pwasm-tutorial)

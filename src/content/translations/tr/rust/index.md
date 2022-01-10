@@ -26,7 +26,7 @@ Başlamadan önce daha fazla bilgiye mi ihtiyacın var? Bu adrese göz at [ether
 
 - [Ethereum İstemcinizi Seçmek](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Rust Ethereum İstemcisi](https://wiki.parity.io/Setup)
-- [Rust kullanarak Ethereum'a bir alışveriş göndermek](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [Rust kullanarak Ethereum'a bir alışveriş göndermek](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Parity Ethereum istemcisiyle Akıllı sözleşmelere giriş](https://wiki.parity.io/Smart-Contracts)
 - [Setting up your Oasis SDK dev environment](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [A step-by-step tutorial on how to write contracts in rust Wasm for Kovan](https://github.com/paritytech/pwasm-tutorial)

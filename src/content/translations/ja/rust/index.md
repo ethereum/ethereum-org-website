@@ -27,7 +27,7 @@ sidebarDepth: 1
 
 - [イーサリアムクライアントの選択](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Rust イーサリアムクライアント](https://wiki.parity.io/Setup)
-- [Rust を使用してイーサリアムにトランザクションを送信する](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [Rust を使用してイーサリアムにトランザクションを送信する](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Parity イーサリアムクライアントでスマートコントラクト入門](https://wiki.parity.io/Smart-Contracts)
 - [Oasis SDK 開発環境のセットアップ](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Kovan のために Rust の Wasm でコントラクトを書く手法のステップバイステップ・チュートリアル](https://github.com/paritytech/pwasm-tutorial)

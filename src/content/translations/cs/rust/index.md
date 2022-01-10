@@ -27,7 +27,7 @@ Potřebujete nejdříve úplně základní informace? Podívejte se na [ethereum
 
 - [Výběr klienta pro Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Ethereum klient v Rustu](https://wiki.parity.io/Setup)
-- [Odesílání transakce do sítě Ethereum s použitím Rustu](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [Odesílání transakce do sítě Ethereum s použitím Rustu](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Úvod do chytrých kontraktů s klientem Parity Ethereum](https://wiki.parity.io/Smart-Contracts)
 - [Nastavení vývojového prostředí Oasis SDK](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Postupný návod, jak psát kontrakty v Rustu a Wasm pro Kovan](https://github.com/paritytech/pwasm-tutorial)

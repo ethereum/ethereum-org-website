@@ -27,7 +27,7 @@ Cần một hướng dẫn cơ bản hơn? Tham khảo [ethereum.org/learn](/vi/
 
 - [Chọn một ứng dụng Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Ứng dụng Rust Ethereum](https://wiki.parity.io/Setup)
-- [Gửi giao dịch tới Ethereum bằng Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [Gửi giao dịch tới Ethereum bằng Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Giới thiệu về Hợp đồng thông minh với ứng dụng Parity Ethereum](https://wiki.parity.io/Smart-Contracts)
 - [Thiết lập môi trường lập trình Oasis SDK của bạn](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Hướng dẫn từng bước về cách viết hợp đồng trong rust Wasm cho Kovan](https://github.com/paritytech/pwasm-tutorial)

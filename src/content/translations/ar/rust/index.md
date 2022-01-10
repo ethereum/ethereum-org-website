@@ -26,7 +26,7 @@ sidebar: true
 
 - [اختيار عميل إيثريوم](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [عميل إيثريوم على Rust](https://wiki.parity.io/Setup)
-- [إرسال معاملة إلى إثيريوم باستخدام Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [إرسال معاملة إلى إثيريوم باستخدام Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [مقدمة إلى العقود الذكية باستخدام عميل بارتي إيثريوم](https://wiki.parity.io/Smart-Contracts)
 - [إعداد بيئة Oasis SDK dev الخاصة بك](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [درس خطوة بخطوة عن كيفية كتابة العقود في قعسف ًشسة لـKovan](https://github.com/paritytech/pwasm-tutorial)

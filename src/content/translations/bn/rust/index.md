@@ -26,7 +26,7 @@ sidebar: true
 
 - [একটি ইথেরিয়াম ক্লায়েন্ট বেছে নেওয়া](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [রাস্ট ইথেরিয়াম ক্লায়েন্ট](https://wiki.parity.io/Setup)
-- [রাস্ট ব্যবহার করে ইথেরিয়ামে লেনদেন পাঠানো](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [রাস্ট ব্যবহার করে ইথেরিয়ামে লেনদেন পাঠানো](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [প্যারিটি ইথেরিয়াম ক্লায়েন্টের সাথে স্মার্ট কন্ট্র্যাক্টের একটি ভূমিকা](https://wiki.parity.io/Smart-Contracts)
 - [আপনার ওয়েসিস SDK ডেভ এনভায়রনমেন্ট সেট আপ করা](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [কোভান-এর জন্য রাস্ট Wasm-এ কীভাবে কন্ট্র্যাক্ট লিখতে হয় তার একটি ধাপে ধাপে নির্দেশিকা](https://github.com/paritytech/pwasm-tutorial)

@@ -25,7 +25,7 @@ Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/learn/) sau
 
 - [Cum să alegi un client Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Clientul Rust pentru Ethereum](https://wiki.parity.io/Setup)
-- [Trimiterea tranzacțiilor în Ethereum cu clientul Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [Trimiterea tranzacțiilor în Ethereum cu clientul Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Introducere în contracte inteligente cu clientul Parity pentru Ethereum](https://wiki.parity.io/Smart-Contracts)
 - [Setarea mediului de dezvoltare Oasis SDK](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Tutorial pas cu pas de dezvoltare a contractelor inteligente în Rust Wasm pentru Kovan](https://github.com/paritytech/pwasm-tutorial)

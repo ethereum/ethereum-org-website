@@ -27,7 +27,7 @@ sidebarDepth: 1
 
 - [Вибір клієнта Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Клієнт Ethereum на Rust](https://wiki.parity.io/Setup)
-- [Надсилання транзакції до Ethereum із використанням Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [Надсилання транзакції до Ethereum із використанням Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Введення до смарт-контрактів із використанням клієнта Parity Ethereum](https://wiki.parity.io/Smart-Contracts)
 - [Налаштування середовища розробки Oasis SDK](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Покрокове керівництво з написання контрактів на rust Wasm для Kovan](https://github.com/paritytech/pwasm-tutorial)

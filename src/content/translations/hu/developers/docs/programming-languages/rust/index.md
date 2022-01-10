@@ -25,7 +25,7 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 
 - [Ethereum kliens kiválasztása](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [A Rust Ethereum kliens](https://wiki.parity.io/Setup)
-- [Tranzakció küldése Ethereumra Rust használatával](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [Tranzakció küldése Ethereumra Rust használatával](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Bevezetés az okosszerződésekbe a Parity Ethereum klienssel](https://wiki.parity.io/Smart-Contracts)
 - [Oasis SDK fejlesztői környezet beállítása](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Útmutató arról, hogyan lehet szerződéseket írni Rust Wasm-ben Kovanra, lépésről lépésre](https://github.com/paritytech/pwasm-tutorial)

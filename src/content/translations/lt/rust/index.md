@@ -27,7 +27,7 @@ Norėtumėte pradėti nuo ko nors paprastesnio? Apsilankykite [ethereum.org/lear
 
 - [Ethereum kliento pasirinkimas](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Rust Ethereum klientas](https://wiki.parity.io/Setup)
-- [Sandorio siuntimas į Ethereum naudojant Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [Sandorio siuntimas į Ethereum naudojant Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Įvadas į išmaniąsias sutartis su Parity Ethereum klientu](https://wiki.parity.io/Smart-Contracts)
 - [Oasis SDK kūrimo aplinkos nustatymas](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Nuosekli mokomoji programa apie Kovan skirtų sutarčių kūrimą su Rust Wasm](https://github.com/paritytech/pwasm-tutorial)

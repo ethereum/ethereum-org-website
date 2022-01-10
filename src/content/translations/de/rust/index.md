@@ -26,7 +26,7 @@ Brauchst du zuerst einen grundsätzlichen Einstieg? Schaue dir [ethereum.org/lea
 
 - [Einen Ethereum-Client wählen](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Der Rust Ethereum-Client](https://wiki.parity.io/Setup)
-- [Sende Transaktion an Ethereum mit Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [Sende Transaktion an Ethereum mit Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Eine Einführung in Smart Contracts mit dem Parity Ethereum-Client](https://wiki.parity.io/Smart-Contracts)
 - [Oasis SDK-Entwicklungsumgebung einrichten](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Ein Schritt-für-Schritt-Tutorial, wie man Verträge in Rust Wasm für Kovan verfassen kann](https://github.com/paritytech/pwasm-tutorial)
