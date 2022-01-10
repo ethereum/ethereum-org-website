@@ -96,7 +96,7 @@ Totuși, folosirea bibliotecilor de contracte inteligente prezintă riscul inclu
 
 **DappSys -** **_Blocuri de construcții sigure, simple, flexibile pentru contracte inteligente._**
 
-- [Documentație](https://dapp.tools/dappsys/)
+- [Documentație](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 **HQ20 -** **_Un proiect Solidity cu contracte, biblioteci și exemple pentru a te ajuta să construiți aplicații distribuite complet-funcționale pentru lumea reală._**

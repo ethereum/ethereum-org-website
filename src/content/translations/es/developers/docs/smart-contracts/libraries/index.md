@@ -96,7 +96,7 @@ Por último, al decidir si incluir o no una biblioteca, considera su uso general
 
 **DappSys: \*\***_Bloques de creación simples, flexibles y seguros para contratos inteligentes. _\*\*
 
-- [Documentación](https://dapp.tools/dappsys/)
+- [Documentación](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 **HQ20: \*\***_Un proyecto de Solidity con contratos, bibliotecas y ejemplos para ayudarte a construir aplicaciones distribuidas con todas las características para el mundo real._\*\*

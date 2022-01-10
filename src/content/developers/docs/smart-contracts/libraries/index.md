@@ -96,7 +96,7 @@ Last, when deciding on whether to include a library, consider its overall usage.
 
 **DappSys -** **_Safe, simple, flexible building-blocks for smart-contracts._**
 
-- [Documentation](https://dapp.tools/dappsys/)
+- [Documentation](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 **HQ20 -** **_A Solidity project with contracts, libraries and examples to help you build fully-featured distributed applications for the real world._**

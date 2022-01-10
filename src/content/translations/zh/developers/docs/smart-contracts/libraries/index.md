@@ -96,7 +96,7 @@ contract MyNFT is ERC721 {
 
 **DappSys -** **_安全、简单、灵活的智能合约构建模块。_**
 
-- [相关文档](https://dapp.tools/dappsys/)
+- [相关文档](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 **HQ20 -** **_一个带有合约、库和案例的 Solidity 项目，帮助您为现实世界建立功能齐全的分布式应用。_**

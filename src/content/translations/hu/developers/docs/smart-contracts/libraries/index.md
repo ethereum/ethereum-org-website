@@ -96,7 +96,7 @@ Végül, amikor eldöntöd, hogy felveszel-e egy könyvtárat, vedd figyelembe a
 
 **DappSys -** **_Biztonságos, egyszerű, flexibilis okosszerződés építőelemek._**
 
-- [Dokumentáció](https://dapp.tools/dappsys/)
+- [Dokumentáció](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 **HQ20 -** **_Egy Solidity projekt szerződésekkel, könyvtárakkal és példákkal, melyek segítenek teljesértékű alkalmazásokat fejleszteni a külvilágnak_**

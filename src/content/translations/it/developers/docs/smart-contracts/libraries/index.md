@@ -96,7 +96,7 @@ Infine, per decidere se includere una libreria, considera l'uso generale che ne 
 
 **DappSys -** **_Blocchi di programmazione sicuri, semplici e flessibili per Smart Contract_**
 
-- [Documentazione](https://dapp.tools/dappsys/)
+- [Documentazione](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 **HQ20 -** **_Progetto in Solidity con contratti, librerie ed esempi per creare applicazioni complete distribuite per il mondo reale._**

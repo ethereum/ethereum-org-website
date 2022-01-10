@@ -96,7 +96,7 @@ Enfin, au moment où vous décidez s'inclure une bibliothèque, considérez son 
 
 **DappSys -** **_Blocs de construction sûrs, simples et flexibles pour les contrats intelligents_**
 
-- [Documentation](https://dapp.tools/dappsys/)
+- [Documentation](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 **HQ20 -** **_Projet Solidity avec des contrats, des bibliothèques et des exemples pour vous aider à construire des applications distribuées complètes pour le monde réel_**

@@ -96,7 +96,7 @@ Na koniec, podejmując decyzję o włączeniu biblioteki, weź pod uwagę jej og
 
 **DappSys —** **_bezpieczne, proste, elastyczne elementy konstrukcyjne do inteligentnych kontraktów._**
 
-- [Dokumentacja](https://dapp.tools/dappsys/)
+- [Dokumentacja](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 **HQ20 —** **_projekt Solidity z kontraktami, bibliotekami i przykładami, które pomogą Ci stworzyć w pełni wyposażone aplikacje zdecentralizowane dla świata rzeczywistego._**

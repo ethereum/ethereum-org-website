@@ -101,7 +101,7 @@ Another limitation of smart contracts is the maximum contract size. A smart cont
 
 **DappSys -** **_Safe, simple, flexible building-blocks for smart-contracts._**
 
-- [dapp.tools/dappsys](https://dapp.tools/dappsys/)
+- [dapp.tools/dappsys](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 ## Further reading {#further-reading}

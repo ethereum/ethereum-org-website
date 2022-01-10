@@ -96,7 +96,7 @@ Terakhir, saat memutuskan apakah akan memasukkan suatu pustaka, pertimbangkan pe
 
 **DappSys -** **_Blok pembangun yang aman, sederhana, dan fleksibel untuk kontrak pintar._**
 
-- [Dokumentasi](https://dapp.tools/dappsys/)
+- [Dokumentasi](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 **HQ20 -** **_Sebuah proyek Solidity dengan kontrak, pustaka, dan contoh untuk menolong Anda membangun aplikasi yang terdistribusi dengan fitur lengkap untuk dunia nyata._**

@@ -101,7 +101,7 @@ Keterbatasan lain dari kontrak pintar adalah ukuran kontrak maksimumnya. Ukuran 
 
 **DappSys -** **_Blok pembangun yang aman, sederhana, dan fleksibel untuk kontrak pintar._**
 
-- [dapp.tools/dappsys](https://dapp.tools/dappsys/)
+- [dapp.tools/dappsys](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 ## Bacaan lebih lanjut {#further-reading}

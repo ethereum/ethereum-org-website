@@ -99,7 +99,7 @@ Există modalități de a evita acest lucru folosind [oracole](/developers/docs/
 
 **DappSys -** **_Blocuri de construcții sigure, simple, flexibile pentru contracte inteligente._**
 
-- [dapp.tools/dappsys](https://dapp.tools/dappsys/)
+- [dapp.tools/dappsys](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 ## Referințe suplimentare {#further-reading}
