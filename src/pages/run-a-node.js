@@ -422,6 +422,7 @@ const RunANodePage = ({ data }) => {
       {
         content: <Translation id="page-run-a-node-button-get-started" />,
         pathId: "getting-started",
+        isSecondary: "isSecondary",
       },
     ],
   }
