@@ -31,10 +31,7 @@ const Subtitle = styled.div`
   text-align: center;
   color: ${(props) => props.theme.colors.text200};
 
-  /* Add margin-bottom to the second subtitle */
-  &:nth-last-of-type(2) {
-    margin-bottom: 2rem;
-  }
+  margin-bottom: ${(props) => props.mb || ""};
 `
 
 const HeroContainer = styled.div`
@@ -245,7 +242,7 @@ const GetETHPage = ({ data }) => {
           <Subtitle>
             <Translation id="page-get-eth-where-to-buy-desc" />
           </Subtitle>
-          <Subtitle>
+          <Subtitle mb="2rem">
             <Translation id="page-get-eth-where-to-buy-desc-2" />
           </Subtitle>
           <StyledEthPriceCard />
