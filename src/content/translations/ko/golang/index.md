@@ -45,7 +45,7 @@ sidebarDepth: 1
 
 ## 고급 사용 패턴 {#advanced-use-patterns}
 
-- [게스(GETH)로 시뮬레이션된 백엔드](https://kauri.io/article/6285c9692883411aa041b6b970405a17/v1/the-geth-simulated-backend)
+- [게스(GETH)로 시뮬레이션된 백엔드](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [이더리움 및 Quorum을 사용한 BaaS(Blockchain-as-a-Service) 앱](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
 - [이더리움 블록체인 애플리케이션의 분산 스토리지 IPFS 및 Swarm](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
 - [모바일 클라이언트: 라이브러리 및 Inproc 이더리움 노드](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)

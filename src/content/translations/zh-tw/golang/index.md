@@ -44,7 +44,7 @@ sidebar: true
 
 ## 高級使用模式 {#advanced-use-patterns}
 
-- [使用 GETH 模擬後端搭建](https://kauri.io/article/6285c9692883411aa041b6b970405a17/v1/the-geth-simulated-backend)
+- [使用 GETH 模擬後端搭建](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [基於以太坊和 Quorum 的區塊鏈即服務應用程序](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
 - [以太坊區塊鏈應用程序中的分佈式存儲 IPFS 和 Swarm](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
 - [移動客戶端：各種庫和 Inproc 以太坊節點](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)

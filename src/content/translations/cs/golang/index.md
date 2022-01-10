@@ -45,7 +45,7 @@ Potřebujete nejdříve úplně základní informace? Podívejte se na [ethereum
 
 ## Pokročilé používání {#advanced-use-patterns}
 
-- [Simulovaný backend GETH](https://kauri.io/article/6285c9692883411aa041b6b970405a17/v1/the-geth-simulated-backend)
+- [Simulovaný backend GETH](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [Blockchain jako služba pomocí Etherea a Quora](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
 - [Decentralizovaná úložiště IPFS a Swarm v blockchainových aplikacích pro Ethereum](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
 - [Mobilní klienti: knihovny a uzly pro Ethereum v rámci procesu](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)

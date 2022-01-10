@@ -45,7 +45,7 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na stronach [ethereum.or
 
 ## Przykłady zaawansowane {#advanced-use-patterns}
 
-- [Symulowany backend GETH](https://kauri.io/article/6285c9692883411aa041b6b970405a17/v1/the-geth-simulated-backend)
+- [Symulowany backend GETH](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [Aplikacje „blockchain jako usługa” wykorzystujące Ethereum i Quorum](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
 - [Pamięć rozproszona IPFS i Swarm w aplikacjach blockchainu Ethereum](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
 - [Klienci mobilni: biblioteki i węzły Inproc Ethereum](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)

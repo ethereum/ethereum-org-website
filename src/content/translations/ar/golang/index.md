@@ -44,7 +44,7 @@ sidebar: true
 
 ## أنماط الاستخدام المتقدم {#advanced-use-patterns}
 
-- [خلفية GETH المحاكاة](https://kauri.io/article/6285c9692883411aa041b6b970405a17/v1/the-geth-simulated-backend)
+- [خلفية GETH المحاكاة](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [تطبيقات سلسلة الكتل كخدمة باستخدام إيثريوم وكوارم](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
 - [IPFS التخزين الموزع وسوارم في تطبيقات سلسلة كتل إيثريوم](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
 - [العملاء المتحركين: المكتبات ونقاط اتصال إيثريوم في Inproc](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)

@@ -45,7 +45,7 @@ Cần một hướng dẫn cơ bản hơn? Tìm hiểu [ethereum.org/learn](/vi/
 
 ## Các mẫu sử dụng nâng cao {#advanced-use-patterns}
 
-- [Phần cuối mô phỏng GETH](https://kauri.io/article/6285c9692883411aa041b6b970405a17/v1/the-geth-simulated-backend)
+- [Phần cuối mô phỏng GETH](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [Các ứng dụng chuỗi khối dưới dạng dịch vụ sử dụng Ethereum và đại biểu](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
 - [Lưu trữ phân tán IPFS và Swarm trong ứng dụng chuỗi khối Ethereum](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
 - [Khách hàng Di động: Thư viện và Nút Ethereum Inproc](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)

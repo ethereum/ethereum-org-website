@@ -45,7 +45,7 @@ Norėtumėte pradėti nuo ko nors paprastesnio? Apsilankykite [ethereum.org/lear
 
 ## Pažangaus naudojimo modeliai {#advanced-use-patterns}
 
-- [The GETH Simulated Backend](https://kauri.io/article/6285c9692883411aa041b6b970405a17/v1/the-geth-simulated-backend)
+- [The GETH Simulated Backend](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [Blokų grandinės kaip paslaugos programos naudojant Ethereum ir Quorum](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
 - [Paskirstyto saugojimo IPFS ir Swarm, esantys Ethereum blokų grandinės programose](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
 - [Mobilieji klientai: bibliotekos ir Inproc Ethereum mazgai](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)

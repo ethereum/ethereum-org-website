@@ -45,7 +45,7 @@ Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/learn/) sau
 
 ## Modele avansate de utilizare {#advanced-use-patterns}
 
-- [Back-end-ul simulat Geth](https://kauri.io/article/6285c9692883411aa041b6b970405a17/v1/the-geth-simulated-backend)
+- [Back-end-ul simulat Geth](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [Aplicații blockchain-as-a-service folosind Ethereum și Quorum](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
 - [Stocarea distribuită IPFS și Swarm în aplicațiile de blockchain Ethereum](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
 - [Clienți mobili: biblioteci și noduri inproc Ethereum](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)
