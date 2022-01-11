@@ -252,12 +252,12 @@ const GetInvolvedPage = ({ data, location }) => {
     {
       title: <Translation id="page-eth2-get-involved-ethresearch-2" />,
       description: "",
-      link: "https://ethresear.ch/c/eth1-to-eth2-transition/38",
+      link: "https://ethresear.ch/c/the-merge/38",
     },
     {
       title: <Translation id="page-eth2-get-involved-ethresearch-3" />,
       description: "",
-      link: "https://ethresear.ch/c/eth2-phase-2/35",
+      link: "https://ethresear.ch/c/sharded-execution/35",
     },
     {
       title: <Translation id="page-eth2-get-involved-ethresearch-4" />,
