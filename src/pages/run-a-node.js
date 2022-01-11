@@ -629,13 +629,8 @@ const RunANodePage = ({ data }) => {
                     </p>
                     <p>
                       <small>
-                        <Translation id="page-run-a-node-build-your-own-ssd-note-1" />
-                      </small>
-                    </p>
-                    <p>
-                      <small>
                         <em>
-                          <Translation id="page-run-a-node-build-your-own-ssd-note-2" />
+                          <Translation id="page-run-a-node-build-your-own-ssd-note" />
                         </em>
                       </small>
                     </p>
