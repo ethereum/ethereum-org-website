@@ -6162,6 +6162,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "aaronisme",
+      "name": "Aaron Chen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7855886?v=4",
+      "profile": "https://aaronisme.github.io",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
