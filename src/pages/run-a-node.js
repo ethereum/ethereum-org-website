@@ -30,6 +30,7 @@ import {
   CardGrid,
 } from "../components/SharedStyledComponents"
 import ExpandableCard from "../components/ExpandableCard"
+import ExpandableInfo from "../components/ExpandableInfo"
 import Emoji from "../components/Emoji"
 import Link from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
@@ -150,6 +151,15 @@ const WhyHighlight = styled(Highlight)`
   }
 `
 
+const StyledExpandableInfo = styled(ExpandableInfo)`
+  width: 90%;
+  align-self: center;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    margin: 0;
+    width: 100%;
+  }
+`
+
 const SoftwareHighlight = styled(Highlight)`
   padding: 2rem 6rem;
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
@@ -223,7 +233,10 @@ const Width40 = styled.div`
   }
 `
 
-const Collapse = styled(motion.div)``
+const FlexContent = styled(Content)`
+  display: flex;
+  flex-direction: column;
+`
 
 const Flex = styled.div`
   display: flex;
@@ -529,37 +542,27 @@ const RunANodePage = ({ data }) => {
         </TwoColumnContent>
       </Content>
 
-      <Content>
-        <WhyHighlight backgroundColor="homeBoxOrange">
-          <Width80>
-            <h2>
-              <Translation id="page-run-a-node-who-title" />
-            </h2>
-            <h3>
-              <Translation id="page-run-a-node-who-preview" />
-            </h3>
-            <Collapse>
-              <ul>
-                <li>
-                  <Translation id="page-run-a-node-who-copy-1" />
-                </li>
-                <li>
-                  <Translation id="page-run-a-node-who-copy-2" />
-                </li>
-                <li>
-                  <Translation id="page-run-a-node-who-copy-3" />
-                </li>
-              </ul>
-              <h3>
-                <Translation id="page-run-a-node-who-copy-bold" />
-              </h3>
-            </Collapse>
-          </Width80>
-          <Width20>
-            <GatsbyImage image={getImage(data.impact)} />
-          </Width20>
-        </WhyHighlight>
-      </Content>
+      <FlexContent>
+        <StyledExpandableInfo
+          image={getImage(data.impact)}
+          title={<Translation id="page-run-a-node-who-title" />}
+          contentPreview={<Translation id="page-run-a-node-who-preview" />}
+          background="homeBoxPink"
+        >
+          <p>
+            <Translation id="page-run-a-node-who-copy-1" />
+          </p>
+          <p>
+            <Translation id="page-run-a-node-who-copy-2" />
+          </p>
+          <p>
+            <Translation id="page-run-a-node-who-copy-3" />
+          </p>
+          <h3>
+            <Translation id="page-run-a-node-who-copy-bold" />
+          </h3>
+        </StyledExpandableInfo>
+      </FlexContent>
 
       <Content id="why-run-a-node">
         <h2>
