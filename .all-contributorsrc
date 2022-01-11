@@ -6144,6 +6144,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "snigdha920",
+      "name": "Snigdha Singh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/62167899?v=4",
+      "profile": "https://snigdha920.github.io/formal-personal-site/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
