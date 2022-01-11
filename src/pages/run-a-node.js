@@ -43,7 +43,7 @@ import { translateMessageId } from "../utils/translations"
 
 // Styles
 const GappedPage = styled(Page)`
-  gap: 5rem;
+  gap: 4rem;
   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     gap: 3rem;
   }
