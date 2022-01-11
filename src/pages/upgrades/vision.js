@@ -107,9 +107,9 @@ const VisionPage = ({ data, location }) => {
     {
       image: getImage(data.themerge),
       title: <Translation id="page-upgrades-docking" />,
-      description: <Translation id="page-upgrades-docking-desc" />,
+      description: <Translation id="page-upgrades-merge-desc" />,
       to: "/upgrades/merge/",
-      date: <Translation id="page-upgrades-docking-estimate" />,
+      date: <Translation id="page-upgrades-merge-estimate" />,
     },
     {
       image: getImage(data.shards),

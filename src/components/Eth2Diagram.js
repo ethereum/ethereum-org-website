@@ -242,7 +242,7 @@ const ModalContent = ({ upgrade }) => {
           </Link>
         </p>
         <ButtonLink to="/upgrades/merge/">
-          <Translation id="page-upgrades-docking-btn" />
+          <Translation id="page-upgrades-merge-btn" />
         </ButtonLink>
       </>
     )

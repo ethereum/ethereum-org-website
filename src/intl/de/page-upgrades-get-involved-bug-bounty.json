@@ -26,7 +26,7 @@
   "page-upgrades-bug-bounty-meta-description": "Ein Überblick über das Eth2-Bug-Hunting-Programm: Wie man sich beteiligt und Informationen zu Belohnungen.",
   "page-upgrades-bug-bounty-meta-title": "Eth2-Bug-Hunting-Programm",
   "page-upgrades-bug-bounty-not-included": "Nicht enthalten",
-  "page-upgrades-bug-bounty-not-included-desc": "Der Merge und die Shard-Chain- und Docking-Upgrades sind noch in akiver Entwicklung und daher noch nicht als Teil dieses Belohnungsprogramms enthalten.",
+  "page-upgrades-bug-bounty-not-included-desc": "Der Merge und die Shard-Chain- und merge-Upgrades sind noch in akiver Entwicklung und daher noch nicht als Teil dieses Belohnungsprogramms enthalten.",
   "page-upgrades-bug-bounty-owasp": "OWASP-Methode anzeigen",
   "page-upgrades-bug-bounty-points": "Die EF wird auch Punkte vergeben, basierend auf:",
   "page-upgrades-bug-bounty-points-error": "Fehler beim Laden der Daten... bitte aktualisieren.",

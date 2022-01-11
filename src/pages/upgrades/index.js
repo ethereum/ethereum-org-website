@@ -252,9 +252,9 @@ const Eth2IndexPage = ({ data }) => {
     {
       image: getImage(data.themerge),
       title: <Translation id="page-upgrades-docking" />,
-      description: <Translation id="page-upgrades-docking-desc" />,
+      description: <Translation id="page-upgrades-merge-desc" />,
       to: "/upgrades/merge/",
-      date: <Translation id="page-upgrades-docking-estimate" />,
+      date: <Translation id="page-upgrades-merge-estimate" />,
     },
     {
       image: getImage(data.shards),
@@ -466,9 +466,9 @@ const Eth2IndexPage = ({ data }) => {
                 <Translation id="page-upgrades-docking" />
               </Link>
               <p>
-                <Translation id="page-upgrades-docking-answer-1" />{" "}
+                <Translation id="page-upgrades-merge-answer-1" />{" "}
                 <Link to="/glossary/#mainnet">
-                  <Translation id="page-upgrades-docking-mainnet" />
+                  <Translation id="page-upgrades-merge-mainnet" />
                 </Link>
               </p>
               <Link to="/upgrades/shard-chains/">
@@ -494,7 +494,7 @@ const Eth2IndexPage = ({ data }) => {
               <p>
                 <Translation id="page-upgrades-answer-2" />{" "}
                 <Link to="/glossary/#mainnet">
-                  <Translation id="page-upgrades-docking-mainnet" />
+                  <Translation id="page-upgrades-merge-mainnet" />
                 </Link>{" "}
               </p>
               <p>
