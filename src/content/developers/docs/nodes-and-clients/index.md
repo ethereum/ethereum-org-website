@@ -288,6 +288,14 @@ There are new clients to support the [consensus upgrades](/upgrades/beacon-chain
 
 [View consensus clients](/upgrades/get-involved/#clients).
 
+| Client                                                      | Language   | Operating systems     | Networks                              | Sync strategies | State pruning |
+| ----------------------------------------------------------- | ---------- | --------------------- | ------------------------------------- | --------------- | ------------- |
+| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | Beacon Chain, Prater                  | Full            |               |
+| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | Beacon Chain, Prater                  | Full            |               |
+| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | Beacon Chain, Prater, Pyrmont         | Full            |               |
+| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Beacon Chain, Prater                  | Full            |               |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Prater, Pyrmont | Full            |               |
+
 ## Further reading {#further-reading}
 
 There is a lot of information about Ethereum clients on the internet. Here are few resources that might be helpful.
