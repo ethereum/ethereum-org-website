@@ -22,7 +22,7 @@ Proof-of-work is the mechanism that allows the decentralized Ethereum network to
 
 Decentralized consensus requires two things:
 
-- A common objective: extending the chain
+- A common objective: extending the chain (motivated by economic incentives)
 - A way to measure our efforts toward the objective: proof of work
 
 Proof-of-work is the underlying algorithm that sets the difficulty and rules for the work miners do. Mining is the "work" itself. It's the act of adding valid blocks to the chain. This is important because the chain's length helps the network follow the correct Ethereum chain and understand Ethereum's current state. The more "work" done, the longer the chain, and the higher the block number, the more certain the network can be of the current state of things.
