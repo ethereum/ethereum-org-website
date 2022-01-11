@@ -55,9 +55,14 @@ const GappedPage = styled(Page)`
 const GappedContent = styled(Content)`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
+  padding: 1rem 4rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+    gap: 2rem;
+    padding: 1rem 2rem;
+  }
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    padding: 0;
+    padding: 1rem 0;
   }
 `
 
