@@ -99,7 +99,7 @@ Dacă cineva rulează un nod Ethereum cu un API public în comunitatea sa, îți
 
 Pe de altă parte, dacă rulezi un client, îl poți partaja cu prietenii tăi care ar putea avea nevoie de el.
 
-## Clienți {#clients}
+## Clienți {#execution-clients}
 
 Ethereum este conceput pentru a oferi clienți diferiți, dezvoltați de diferite echipe care utilizează diferite limbaje de programare. Acest lucru face ca rețeaua să fie mai puternică și mai diversă. Scopul ideal este de a realiza diversitatea fără ca niciun client să domine pentru a reduce punctele de eșec.
 
@@ -210,7 +210,7 @@ Cel mai convenabil și mai ieftin mod de a rula nodul Ethereum este de a utiliza
 
 Dispozitive mici, accesibile și eficiente ca acestea sunt ideale pentru rularea unui nod acasă.
 
-## Clienții Eth2 {#eth2-clients}
+## Clienții Eth2 {#consensus-clients}
 
 Există clienți noi pentru a sprijini [upgrade-urile Eth2](/upgrades/beacon-chain/). Aceștia vor executa lanțul Beacon și vor sprijini noul mecanism de consens al [dovezii mizei (PoS)](/developers/docs/consensus-mechanisms/pos/).
 

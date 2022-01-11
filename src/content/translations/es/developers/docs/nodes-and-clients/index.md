@@ -99,7 +99,7 @@ Si alguien ejecuta un nodo de Ethereum con una API pública en tu comunidad, pod
 
 Por otra parte, si administras un cliente, puedes compartirlo con tus amigos que lo necesiten.
 
-## Clientes {#clients}
+## Clientes {#execution-clients}
 
 Ethereum esta diseñado para ofrecer diferentes clientes, desarrollados por diferentes equipos que utilizan diferentes lenguajes de programación. Esto hace que la red sea mas fuerte y más diversa. El objetivo ideal es lograr la diversidad sin que ningún cliente tenga una posición dominante para reducir así los puntos de fracaso.
 
@@ -210,7 +210,7 @@ La manera más conveniente y barata de ejecutar un nodo de Ethereum es usar una 
 
 Los dispositivos pequeños, económicos y eficientes como estos son ideales para ejecutar un nodo en casa.
 
-## Clientes eth2 {#eth2-clients}
+## Clientes eth2 {#consensus-clients}
 
 Hay nuevos clientes que soportan las [actualizaciones de Eth2](/upgrades/beacon-chain/). Ellos ejecutarán la cadena de baliza y apoyarán el nuevo mecanismo de consenso [a prueba de estaturas](/developers/docs/consensus-mechanisms/pos/).
 

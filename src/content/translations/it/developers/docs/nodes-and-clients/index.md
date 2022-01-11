@@ -99,7 +99,7 @@ Se qualcuno esegue un nodo Ethereum con un'API pubblica nella tua community, puo
 
 D'altro canto, se esegui un client, puoi condividerlo con i amici che potrebbero averne bisogno.
 
-## Client {#clients}
+## Client {#execution-clients}
 
 Ethereum è progettato per offrire client diversi, sviluppati da team diversi, utilizzando linguaggi di programmazione diversi. Questo rende la rete più forte e diversificata. L'obiettivo ideale è raggiungere la diversità senza che nessun client prevalga, per ridurre eventuali punti di errore singoli.
 
@@ -210,7 +210,7 @@ Il modo più conveniente ed economico di eseguire un il nodo Ethereum è quello 
 
 Dispositivi piccoli, convenienti ed efficienti come questi sono ideali per eseguire un nodo a casa.
 
-## Client Eth2 {#eth2-clients}
+## Client Eth2 {#consensus-clients}
 
 Ci sono nuovi client per supportare gli [upgrade a Eth2](/upgrades/beacon-chain/). Eseguiranno la beacon chain e supporteranno il nuovo meccanismo di consenso [proof-of-stake](/developers/docs/consensus-mechanisms/pos/).
 
