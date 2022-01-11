@@ -6153,6 +6153,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "stefan-wuest",
+      "name": "SW",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20667579?v=4",
+      "profile": "https://github.com/stefan-wuest",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
