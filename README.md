@@ -1333,6 +1333,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://5oren.com"><img src="https://avatars.githubusercontent.com/u/49735495?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Søren Rood</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=sorenrood" title="Code">💻</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=sorenrood" title="Documentation">📖</a> <a href="#ideas-sorenrood" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="http://minimalistblogger.space"><img src="https://avatars.githubusercontent.com/u/69108887?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tanmay Nagepatil</b></sub></a><br /><a href="#ideas-braindead2408" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://b-harden.github.io/Portfolio/"><img src="https://avatars.githubusercontent.com/u/20617335?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Brandon Harden</b></sub></a><br /><a href="#content-B-Harden" title="Content">🖋</a></td>
+    <td align="center"><a href="https://snigdha920.github.io/formal-personal-site/"><img src="https://avatars.githubusercontent.com/u/62167899?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Snigdha Singh</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=snigdha920" title="Documentation">📖</a></td>
   </tr>
 </table>
 
