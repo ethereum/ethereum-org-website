@@ -6171,6 +6171,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "Qazalin",
+      "name": "Qazal Samani",
+      "avatar_url": "https://avatars.githubusercontent.com/u/77887910?v=4",
+      "profile": "https://portfolio-qazalin.vercel.app/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
