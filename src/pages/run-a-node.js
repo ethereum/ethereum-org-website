@@ -609,7 +609,9 @@ const RunANodePage = ({ data }) => {
                 </h4>
                 <ul>
                   <li>
-                    <Translation id="page-run-a-node-build-your-own-min-ram" />
+                    <p>
+                      <Translation id="page-run-a-node-build-your-own-min-ram" />
+                    </p>
                     <p>
                       <ScrollLink onClick={() => scrollToId("plan-on-staking")}>
                         <Translation id="page-run-a-node-build-your-own-ram-note-1" />
@@ -622,7 +624,9 @@ const RunANodePage = ({ data }) => {
                     </p>
                   </li>
                   <li>
-                    <Translation id="page-run-a-node-build-your-own-min-ssd" />
+                    <p>
+                      <Translation id="page-run-a-node-build-your-own-min-ssd" />
+                    </p>
                     <p>
                       <small>
                         <Translation id="page-run-a-node-build-your-own-ssd-note-1" />
