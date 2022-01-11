@@ -43,19 +43,6 @@ Read more about the [benefits of running your own node](/developers/docs/nodes-a
 ## Popular node services {#popular-node-services}
 
 Here is a list of some of the most popular Ethereum node providers, feel free to add any that are missing! Each node service offers different benefits and features in addition to free or paid tiers, you should investigate which ones best suit your needs prior to making a decision.
-- [**SettleMint**](https://console.settlemint.com/)
-  - [Docs](https://docs.settlemint.com/)
-  - Features
-    - Free trial
-    - Scale as you go
-    - GraphQL support
-    - RPC and WSS endpoints
-    - Dedicated full nodes
-    - Bring your cloud
-    - Analytics tools
-    - Dashboard
-    - Pay-per-hour pricing
-    - Direct support
 - [**Alchemy**](https://www.alchemy.com/)
   - [Docs](https://docs.alchemyapi.io/)
   - Features
@@ -171,6 +158,19 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
   - Features
     - Free tier option
     - Scale as you go
+- [**SettleMint**](https://console.settlemint.com/)
+  - [Docs](https://docs.settlemint.com/)
+  - Features
+    - Free trial
+    - Scale as you go
+    - GraphQL support
+    - RPC and WSS endpoints
+    - Dedicated full nodes
+    - Bring your cloud
+    - Analytics tools
+    - Dashboard
+    - Pay-per-hour pricing
+    - Direct support
 
 ## Further reading {#further-reading}
 
