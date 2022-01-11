@@ -230,38 +230,38 @@ const Trilemma = () => {
   const isSecure = state.isScalableAndSecure || state.isDecentralizedAndSecure
   const isEth2 = isDecentralized && isScalable && isSecure
 
-  let cardTitle = <Translation id="page-eth2-vision-trilemma-title-1" />
-  let cardText = <Translation id="page-eth2-vision-trilemma-press-button" />
+  let cardTitle = <Translation id="page-upgrades-vision-trilemma-title-1" />
+  let cardText = <Translation id="page-upgrades-vision-trilemma-press-button" />
   if (isEth2) {
-    cardTitle = <Translation id="page-eth2-vision-trilemma-title-2" />
-    cardText = <Translation id="page-eth2-vision-trilemma-cardtext-1" />
+    cardTitle = <Translation id="page-upgrades-vision-trilemma-title-2" />
+    cardText = <Translation id="page-upgrades-vision-trilemma-cardtext-1" />
   } else if (state.isDecentralizedAndSecure) {
-    cardTitle = <Translation id="page-eth2-vision-trilemma-title-3" />
-    cardText = <Translation id="page-eth2-vision-trilemma-cardtext-2" />
+    cardTitle = <Translation id="page-upgrades-vision-trilemma-title-3" />
+    cardText = <Translation id="page-upgrades-vision-trilemma-cardtext-2" />
   } else if (state.isDecentralizedAndScalable) {
-    cardTitle = <Translation id="page-eth2-vision-trilemma-title-4" />
-    cardText = <Translation id="page-eth2-vision-trilemma-cardtext-3" />
+    cardTitle = <Translation id="page-upgrades-vision-trilemma-title-4" />
+    cardText = <Translation id="page-upgrades-vision-trilemma-cardtext-3" />
   } else if (state.isScalableAndSecure) {
-    cardTitle = <Translation id="page-eth2-vision-trilemma-title-5" />
-    cardText = <Translation id="page-eth2-vision-trilemma-cardtext-4" />
+    cardTitle = <Translation id="page-upgrades-vision-trilemma-title-5" />
+    cardText = <Translation id="page-upgrades-vision-trilemma-cardtext-4" />
   }
   return (
     <Container>
       <CardContainer>
         <H2>
-          <Translation id="page-eth2-vision-trilemma-h2" />
+          <Translation id="page-upgrades-vision-trilemma-h2" />
         </H2>
         <p>
-          <Translation id="page-eth2-vision-trilemma-p" />
+          <Translation id="page-upgrades-vision-trilemma-p" />
         </p>
         <p>
-          <Translation id="page-eth2-vision-trilemma-p-1" />
+          <Translation id="page-upgrades-vision-trilemma-p-1" />
         </p>
         <p>
-          <Translation id="page-eth2-vision-trilemma-p-2" />
+          <Translation id="page-upgrades-vision-trilemma-p-2" />
         </p>
         <MobileTip>
-          <Translation id="page-eth2-vision-trilemma-modal-tip" />:
+          <Translation id="page-upgrades-vision-trilemma-modal-tip" />:
         </MobileTip>
         <ExplanationCard title={cardTitle} description={cardText} />
       </CardContainer>
@@ -381,13 +381,13 @@ const Trilemma = () => {
           {translateMessageId("ethereum", intl)}
         </Text>
         <Text x="460" y="150" isActive={isDecentralized}>
-          {translateMessageId("page-eth2-vision-trilemma-text-1", intl)}
+          {translateMessageId("page-upgrades-vision-trilemma-text-1", intl)}
         </Text>
         <Text x="-24" y="486" isActive={isSecure}>
-          {translateMessageId("page-eth2-vision-trilemma-text-2", intl)}
+          {translateMessageId("page-upgrades-vision-trilemma-text-2", intl)}
         </Text>
         <Text x="540" y="835" isActive={isScalable}>
-          {translateMessageId("page-eth2-vision-trilemma-text-3", intl)}
+          {translateMessageId("page-upgrades-vision-trilemma-text-3", intl)}
         </Text>
       </Triangle>
     </Container>

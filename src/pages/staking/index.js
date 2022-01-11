@@ -180,7 +180,7 @@ const StakingPage = ({ data, location }) => {
         <Vision>
           <Breadcrumbs slug={location.pathname} startDepth={1} />
           <h2>
-            <Translation id="page-eth2-just-staking" />
+            <Translation id="page-staking-just-staking" />
           </h2>
           <p>
             <Translation id="page-staking-description" />{" "}
@@ -293,7 +293,7 @@ const StakingPage = ({ data, location }) => {
       <Divider />
       <StyledCallout
         image={getImage(data.rhino)}
-        alt={translateMessageId("eth2-rhino-img-alt", intl)}
+        alt={translateMessageId("page-staking-image-alt", intl)}
         title={translateMessageId("page-staking-join-community", intl)}
         description={translateMessageId(
           "page-staking-join-community-desc",

@@ -147,25 +147,25 @@ const BugBountyPoints = () => {
   return (
     <PointsExchange>
       <PointsExchangeLabel>
-        <Translation id="page-eth2-bug-bounty-points-exchange" />{" "}
+        <Translation id="page-upgrades-bug-bounty-points-exchange" />{" "}
         <Tooltip content={tooltipContent}>
           <InfoIcon name="info" size="14" />
         </Tooltip>
       </PointsExchangeLabel>
       <PointsExchangeTitle>
-        <Translation id="page-eth2-bug-bounty-points-point" />
+        <Translation id="page-upgrades-bug-bounty-points-point" />
       </PointsExchangeTitle>
       {state.hasError && (
         <ValueRow>
           <TokenValue>
-            <Translation id="page-eth2-bug-bounty-points-error" />
+            <Translation id="page-upgrades-bug-bounty-points-error" />
           </TokenValue>
         </ValueRow>
       )}
       {isLoading && !state.hasError && (
         <ValueRow>
           <TokenValue>
-            <Translation id="page-eth2-bug-bounty-points-loading" />
+            <Translation id="page-upgrades-bug-bounty-points-loading" />
           </TokenValue>
         </ValueRow>
       )}
@@ -174,7 +174,7 @@ const BugBountyPoints = () => {
           <Row>
             <Emoji mr={`0.5rem`} text=":dollar:" />
             <TokenValue>
-              <Translation id="page-eth2-bug-bounty-points-usd" />
+              <Translation id="page-upgrades-bug-bounty-points-usd" />
             </TokenValue>
           </Row>
           <Row>
@@ -188,11 +188,11 @@ const BugBountyPoints = () => {
         </ValueRow>
       )}
       <p>
-        <Translation id="page-eth2-bug-bounty-points-payout-desc" />
+        <Translation id="page-upgrades-bug-bounty-points-payout-desc" />
       </p>
       <TextNoMargin>
         <em>
-          <Translation id="page-eth2-bug-bounty-points-rights-desc" />
+          <Translation id="page-upgrades-bug-bounty-points-rights-desc" />
         </em>
       </TextNoMargin>
     </PointsExchange>

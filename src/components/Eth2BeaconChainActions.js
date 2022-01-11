@@ -126,7 +126,7 @@ const Eth2BeaconChainActions = () => {
             <Translation id="get-started" />
           </StyledButtonLink>
           <ButtonLink isSecondary to="/staking/">
-            <Translation id="page-eth2-index-staking-learn" />
+            <Translation id="page-upgrades-index-staking-learn" />
           </ButtonLink>
         </StyledCardLeft>
         <StyledCardRight

@@ -182,8 +182,8 @@ const GetInvolvedPage = ({ data, location }) => {
     {
       name: "Prysm",
       background: "#23292E",
-      description: <Translation id="page-eth2-get-involved-written-go" />,
-      alt: "eth2-client-prysm-logo-alt",
+      description: <Translation id="page-upgrades-get-involved-written-go" />,
+      alt: "consensus-client-prysm-logo-alt",
       url: "https://docs.prylabs.network/docs/getting-started/",
       image: data.prysm,
       githubUrl: "https://github.com/prysmaticlabs/prysm",
@@ -192,8 +192,8 @@ const GetInvolvedPage = ({ data, location }) => {
     {
       name: "Lighthouse",
       background: "",
-      description: <Translation id="page-eth2-get-involved-written-rust" />,
-      alt: "eth2-client-lighthouse-logo-alt",
+      description: <Translation id="page-upgrades-get-involved-written-rust" />,
+      alt: "consensus-client-lighthouse-logo-alt",
       url: "https://lighthouse-book.sigmaprime.io/",
       image: isDarkTheme ? data.lighthouseDark : data.lighthouseLight,
       githubUrl: "https://github.com/sigp/lighthouse",
@@ -202,8 +202,8 @@ const GetInvolvedPage = ({ data, location }) => {
     {
       name: "Teku",
       background: "#3359D5",
-      description: <Translation id="page-eth2-get-involved-written-java" />,
-      alt: "eth2-client-teku-logo-alt",
+      description: <Translation id="page-upgrades-get-involved-written-java" />,
+      alt: "consensus-client-teku-logo-alt",
       url: "https://pegasys.tech/teku",
       image: isDarkTheme ? data.tekuLight : data.tekuDark,
       githubUrl: "https://github.com/ConsenSys/teku",
@@ -212,8 +212,8 @@ const GetInvolvedPage = ({ data, location }) => {
     {
       name: "Cortex",
       background: "#4CAEE5",
-      description: <Translation id="page-eth2-get-involved-written-net" />,
-      alt: "eth2-client-cortex-logo-alt",
+      description: <Translation id="page-upgrades-get-involved-written-net" />,
+      alt: "consensus-client-cortex-logo-alt",
       url: "https://nethermind.io/",
       image: data.cortex,
       githubUrl: "https://github.com/NethermindEth/nethermind",
@@ -223,9 +223,9 @@ const GetInvolvedPage = ({ data, location }) => {
       name: "Lodestar",
       background: "#14140B",
       description: (
-        <Translation id="page-eth2-get-involved-written-javascript" />
+        <Translation id="page-upgrades-get-involved-written-javascript" />
       ),
-      alt: "eth2-client-lodestar-logo-alt",
+      alt: "consensus-client-lodestar-logo-alt",
       url: "https://lodestar.chainsafe.io/",
       image: data.lodestar,
       githubUrl: "https://github.com/ChainSafe/lodestar",
@@ -234,8 +234,8 @@ const GetInvolvedPage = ({ data, location }) => {
     {
       name: "Nimbus",
       background: "#DC8600",
-      description: <Translation id="page-eth2-get-involved-written-nim" />,
-      alt: "eth2-client-nimbus-logo-alt",
+      description: <Translation id="page-upgrades-get-involved-written-nim" />,
+      alt: "consensus-client-nimbus-logo-alt",
       url: "https://nimbus.team/",
       image: data.nimbus,
       githubUrl: "https://github.com/status-im/nimbus-eth2",
@@ -245,22 +245,22 @@ const GetInvolvedPage = ({ data, location }) => {
 
   const ethresearch = [
     {
-      title: <Translation id="page-eth2-get-involved-ethresearch-1" />,
+      title: <Translation id="page-upgrades-get-involved-ethresearch-1" />,
       description: "",
       link: "https://ethresear.ch/c/sharding/6",
     },
     {
-      title: <Translation id="page-eth2-get-involved-ethresearch-2" />,
+      title: <Translation id="page-upgrades-get-involved-ethresearch-2" />,
       description: "",
       link: "https://ethresear.ch/c/the-merge/38",
     },
     {
-      title: <Translation id="page-eth2-get-involved-ethresearch-3" />,
+      title: <Translation id="page-upgrades-get-involved-ethresearch-3" />,
       description: "",
       link: "https://ethresear.ch/c/sharded-execution/35",
     },
     {
-      title: <Translation id="page-eth2-get-involved-ethresearch-4" />,
+      title: <Translation id="page-upgrades-get-involved-ethresearch-4" />,
       description: "",
       link: "https://ethresear.ch/",
     },
@@ -269,33 +269,33 @@ const GetInvolvedPage = ({ data, location }) => {
   const paths = [
     {
       emoji: ":computer:",
-      title: <Translation id="page-eth2-get-involved-title-1" />,
-      description: <Translation id="page-eth2-get-involved-desc-1" />,
+      title: <Translation id="page-upgrades-get-involved-title-1" />,
+      description: <Translation id="page-upgrades-get-involved-desc-1" />,
       url: "#clients",
-      button: <Translation id="page-eth2-get-involved-btn-1" />,
+      button: <Translation id="page-upgrades-get-involved-btn-1" />,
     },
     {
       emoji: ":moneybag:",
-      title: <Translation id="page-eth2-get-involved-title-2" />,
-      description: <Translation id="page-eth2-get-involved-desc-2" />,
+      title: <Translation id="page-upgrades-get-involved-title-2" />,
+      description: <Translation id="page-upgrades-get-involved-desc-2" />,
       url: "/staking/",
-      button: <Translation id="page-eth2-get-involved-btn-2" />,
+      button: <Translation id="page-upgrades-get-involved-btn-2" />,
     },
     {
       emoji: ":bug:",
-      title: <Translation id="page-eth2-get-involved-title-3" />,
-      description: <Translation id="page-eth2-get-involved-desc-3" />,
+      title: <Translation id="page-upgrades-get-involved-title-3" />,
+      description: <Translation id="page-upgrades-get-involved-desc-3" />,
       url: "/upgrades/get-involved/bug-bounty/",
-      button: <Translation id="page-eth2-get-involved-btn-3" />,
+      button: <Translation id="page-upgrades-get-involved-btn-3" />,
     },
   ]
 
   return (
     <Page>
       <PageMetadata
-        title={translateMessageId("page-eth2-get-involved", intl)}
+        title={translateMessageId("page-upgrades-get-involved", intl)}
         description={translateMessageId(
-          "page-eth2-get-involved-meta-description",
+          "page-upgrades-get-involved-meta-description",
           intl
         )}
       />
@@ -304,19 +304,19 @@ const GetInvolvedPage = ({ data, location }) => {
           <HeroContainer>
             <StyledBreadcrumbs slug={location.pathname} startDepth={1} />
             <SloganGradient>
-              <Translation id="page-eth2-get-involved" />{" "}
+              <Translation id="page-upgrades-get-involved" />{" "}
               <Emoji size={1} text=":wave:" />
             </SloganGradient>
             <Subtitle>
-              <Translation id="page-eth2-get-involved-subtitle" />
+              <Translation id="page-upgrades-get-involved-subtitle" />
             </Subtitle>
           </HeroContainer>
         </HeroCard>
         <h2>
-          <Translation id="page-eth2-get-involved-how" />
+          <Translation id="page-upgrades-get-involved-how" />
         </h2>
         <p>
-          <Translation id="page-eth2-get-involved-how-desc" />
+          <Translation id="page-upgrades-get-involved-how-desc" />
         </p>
         <StyledCardContainer>
           {paths.map((path, idx) => (
@@ -334,16 +334,16 @@ const GetInvolvedPage = ({ data, location }) => {
       <Divider id="clients" />
       <Content>
         <h2>
-          <Translation id="page-eth2-get-involved-run-clients" />
+          <Translation id="page-upgrades-get-involved-run-clients" />
         </h2>
         <p>
-          <Translation id="page-eth2-get-involved-run-clients-desc" />
+          <Translation id="page-upgrades-get-involved-run-clients-desc" />
         </p>
         <p>
-          <Translation id="page-eth2-get-involved-run-clients-desc-2" />
+          <Translation id="page-upgrades-get-involved-run-clients-desc-2" />
         </p>
         <h3>
-          <Translation id="page-eth2-get-involved-run-clients-production" />
+          <Translation id="page-upgrades-get-involved-run-clients-production" />
         </h3>
         <StyledCardGrid>
           {clients
@@ -363,7 +363,7 @@ const GetInvolvedPage = ({ data, location }) => {
             ))}
         </StyledCardGrid>
         <h3>
-          <Translation id="page-eth2-get-involved-run-clients-experimental" />
+          <Translation id="page-upgrades-get-involved-run-clients-experimental" />
         </h3>
         <StyledCardGrid>
           {clients
@@ -386,16 +386,16 @@ const GetInvolvedPage = ({ data, location }) => {
       <Staking>
         <StyledCalloutBanner
           image={getImage(data.rhino)}
-          alt={translateMessageId("eth2-rhino-img-alt", intl)}
-          title={translateMessageId("page-eth2-get-involved-stake", intl)}
+          alt={translateMessageId("page-staking-image-alt", intl)}
+          title={translateMessageId("page-upgrades-get-involved-stake", intl)}
           description={translateMessageId(
-            "page-eth2-get-involved-stake-desc",
+            "page-upgrades-get-involved-stake-desc",
             intl
           )}
         >
           <div>
             <ButtonLink to="/staking/">
-              <Translation id="page-eth2-get-involved-stake-eth" />
+              <Translation id="page-upgrades-get-involved-stake-eth" />
             </ButtonLink>
           </div>
         </StyledCalloutBanner>
@@ -405,30 +405,30 @@ const GetInvolvedPage = ({ data, location }) => {
           <Row>
             <LeftColumn>
               <h2 id="#bug-bounty">
-                <Translation id="page-eth2-get-involved-bug-hunting" />
+                <Translation id="page-upgrades-get-involved-bug-hunting" />
               </h2>
               <p>
-                <Translation id="page-eth2-get-involved-bug-hunting-desc" />
+                <Translation id="page-upgrades-get-involved-bug-hunting-desc" />
               </p>
               <p>
-                <Translation id="page-eth2-get-involved-bug" />
+                <Translation id="page-upgrades-get-involved-bug" />
               </p>
               <ul>
                 <li>
-                  <Translation id="page-eth2-get-involved-bug-li" />
+                  <Translation id="page-upgrades-get-involved-bug-li" />
                 </li>
                 <li>
-                  <Translation id="page-eth2-get-involved-bug-li-2" />
+                  <Translation id="page-upgrades-get-involved-bug-li-2" />
                 </li>
                 <li>
-                  <Translation id="page-eth2-get-involved-bug-li-3" />
+                  <Translation id="page-upgrades-get-involved-bug-li-3" />
                 </li>
                 <li>
-                  <Translation id="page-eth2-get-involved-bug-li-4" />
+                  <Translation id="page-upgrades-get-involved-bug-li-4" />
                 </li>
               </ul>
               <ButtonLink to="/upgrades/get-involved/bug-bounty/">
-                <Translation id="page-eth2-get-involved-bug-hunting" />
+                <Translation id="page-upgrades-get-involved-bug-hunting" />
               </ButtonLink>
             </LeftColumn>
             <LeaderboardContainer>
@@ -444,10 +444,10 @@ const GetInvolvedPage = ({ data, location }) => {
           </LeftColumn>
           <RightColumn>
             <h2>
-              <Translation id="page-eth2-get-involved-join" />
+              <Translation id="page-upgrades-get-involved-join" />
             </h2>
             <p>
-              <Translation id="page-eth2-get-involved-join-desc" />
+              <Translation id="page-upgrades-get-involved-join-desc" />
             </p>
           </RightColumn>
         </ReverseRow>

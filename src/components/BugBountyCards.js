@@ -113,142 +113,142 @@ const BugBountyCards = () => (
   <CardRow>
     <Card>
       <LowLabel>
-        <Translation id="page-eth2-bug-bountycard-label-1" />
+        <Translation id="page-upgrades-bug-bounty-card-label-1" />
       </LowLabel>
       <H2>
-        <Translation id="page-eth2-bug-bountycard-low" />
+        <Translation id="page-upgrades-bug-bounty-card-low" />
       </H2>
       <Description>
-        <Translation id="page-eth2-bug-bountycard-label-2" />
+        <Translation id="page-upgrades-bug-bounty-card-label-2" />
       </Description>
       <Divider />
       <SubHeader>
-        <Translation id="page-eth2-bug-bountycard-subheader" />
+        <Translation id="page-upgrades-bug-bounty-card-subheader" />
       </SubHeader>
       <Text>
         <ul>
           <li>
-            <Translation id="page-eth2-bug-bountycard-li-1" />
+            <Translation id="page-upgrades-bug-bounty-card-li-1" />
           </li>
           <li>
-            <Translation id="page-eth2-bug-bountycard-li-2" />
+            <Translation id="page-upgrades-bug-bounty-card-li-2" />
           </li>
         </ul>
       </Text>
       <Divider />
       <SubHeader>
-        <Translation id="page-eth2-bug-bountycard-subheader-2" />
+        <Translation id="page-upgrades-bug-bounty-card-subheader-2" />
       </SubHeader>
       <Text>
-        <Translation id="page-eth2-bug-bountycard-text" />
+        <Translation id="page-upgrades-bug-bounty-card-text" />
       </Text>
       <StyledButton to="https://forms.gle/Gnh4gzGh66Yc3V7G8">
-        <Translation id="page-eth2-bug-bountycard-low-risk" />
+        <Translation id="page-upgrades-bug-bounty-card-low-risk" />
       </StyledButton>
     </Card>
     <Card>
       <MediumLabel>
-        <Translation id="page-eth2-bug-bountycard-label-3" />
+        <Translation id="page-upgrades-bug-bounty-card-label-3" />
       </MediumLabel>
       <H2>
-        <Translation id="page-eth2-bug-bountycard-h2" />
+        <Translation id="page-upgrades-bug-bounty-card-h2" />
       </H2>
       <Description>
-        <Translation id="page-eth2-bug-bountycard-label-4" />
+        <Translation id="page-upgrades-bug-bounty-card-label-4" />
       </Description>
       <Divider />
       <SubHeader>
-        <Translation id="page-eth2-bug-bountycard-subheader" />
+        <Translation id="page-upgrades-bug-bounty-card-subheader" />
       </SubHeader>
       <Text>
         <ul>
           <li>
-            <Translation id="page-eth2-bug-bountycard-li-3" />
+            <Translation id="page-upgrades-bug-bounty-card-li-3" />
           </li>
           <li>
-            <Translation id="page-eth2-bug-bountycard-li-4" />
+            <Translation id="page-upgrades-bug-bounty-card-li-4" />
           </li>
           <li>
-            <Translation id="page-eth2-bug-bountycard-li-5" />
+            <Translation id="page-upgrades-bug-bounty-card-li-5" />
           </li>
         </ul>
       </Text>
       <Divider />
       <SubHeader>
-        <Translation id="page-eth2-bug-bountycard-subheader-2" />
+        <Translation id="page-upgrades-bug-bounty-card-subheader-2" />
       </SubHeader>
       <Text>
-        <Translation id="page-eth2-bug-bountycard-text-1" />
+        <Translation id="page-upgrades-bug-bounty-card-text-1" />
       </Text>
       <StyledButton to="https://forms.gle/Gnh4gzGh66Yc3V7G8">
-        <Translation id="page-eth2-bug-bountycard-medium-risk" />
+        <Translation id="page-upgrades-bug-bounty-card-medium-risk" />
       </StyledButton>
     </Card>
     <Card>
       <HighLabel>
-        <Translation id="page-eth2-bug-bountycard-label-5" />
+        <Translation id="page-upgrades-bug-bounty-card-label-5" />
       </HighLabel>
       <H2>
-        <Translation id="page-eth2-bug-bountycard-high" />
+        <Translation id="page-upgrades-bug-bounty-card-high" />
       </H2>
       <Description>
-        <Translation id="page-eth2-bug-bountycard-label-6" />
+        <Translation id="page-upgrades-bug-bounty-card-label-6" />
       </Description>
       <Divider />
       <SubHeader>
-        <Translation id="page-eth2-bug-bountycard-subheader" />
+        <Translation id="page-upgrades-bug-bounty-card-subheader" />
       </SubHeader>
       <Text>
         <ul>
           <li>
-            <Translation id="page-eth2-bug-bountycard-li-6" />
+            <Translation id="page-upgrades-bug-bounty-card-li-6" />
           </li>
           <li>
-            <Translation id="page-eth2-bug-bountycard-li-7" />
+            <Translation id="page-upgrades-bug-bounty-card-li-7" />
           </li>
         </ul>
       </Text>
       <Divider />
       <SubHeader>
-        <Translation id="page-eth2-bug-bountycard-subheader-2" />
+        <Translation id="page-upgrades-bug-bounty-card-subheader-2" />
       </SubHeader>
       <Text>
-        <Translation id="page-eth2-bug-bountycard-text-2" />
+        <Translation id="page-upgrades-bug-bounty-card-text-2" />
       </Text>
       <StyledButton to="https://forms.gle/Gnh4gzGh66Yc3V7G8">
-        <Translation id="page-eth2-bug-bountycard-high-risk" />
+        <Translation id="page-upgrades-bug-bounty-card-high-risk" />
       </StyledButton>
     </Card>
     <Card>
       <CriticalLabel>
-        <Translation id="page-eth2-bug-bountycard-label-7" />
+        <Translation id="page-upgrades-bug-bounty-card-label-7" />
       </CriticalLabel>
       <H2>
-        <Translation id="page-eth2-bug-bountycard-critical" />
+        <Translation id="page-upgrades-bug-bounty-card-critical" />
       </H2>
       <Description>
-        <Translation id="page-eth2-bug-bountycard-label-8" />
+        <Translation id="page-upgrades-bug-bounty-card-label-8" />
       </Description>
       <Divider />
       <SubHeader>
-        <Translation id="page-eth2-bug-bountycard-subheader" />
+        <Translation id="page-upgrades-bug-bounty-card-subheader" />
       </SubHeader>
       <Text>
         <ul>
           <li>
-            <Translation id="page-eth2-bug-bountycard-li-8" />
+            <Translation id="page-upgrades-bug-bounty-card-li-8" />
           </li>
         </ul>
       </Text>
       <Divider />
       <SubHeader>
-        <Translation id="page-eth2-bug-bountycard-subheader-2" />
+        <Translation id="page-upgrades-bug-bounty-card-subheader-2" />
       </SubHeader>
       <Text>
-        <Translation id="page-eth2-bug-bountycard-text-3" />
+        <Translation id="page-upgrades-bug-bounty-card-text-3" />
       </Text>
       <StyledButton to="https://forms.gle/Gnh4gzGh66Yc3V7G8">
-        <Translation id="page-eth2-bug-bountycard-critical-risk" />
+        <Translation id="page-upgrades-bug-bounty-card-critical-risk" />
       </StyledButton>
     </Card>
   </CardRow>

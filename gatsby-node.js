@@ -98,7 +98,7 @@ const checkIsMdxOutdated = (path) => {
  * @returns {{isOutdated: boolean, isContentEnglish: boolean}}
  */
 const checkIsPageOutdated = async (path, lang) => {
-  // Files that need index appended on the end. Ex page-index.json, page-developers-index.json, page-eth2-index.json
+  // Files that need index appended on the end. Ex page-index.json, page-developers-index.json, page-upgrades-index.json
   const indexFilePaths = ["", "developers", "eth2"]
   const filePath = path.split("/").filter((text) => text !== "")
 

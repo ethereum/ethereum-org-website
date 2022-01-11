@@ -70,18 +70,18 @@ const StyledBreadcrumbs = styled(Breadcrumbs)`
 const paths = [
   {
     emoji: ":vertical_traffic_light:",
-    title: <Translation id="page-eth2-vision-title-1" />,
-    description: <Translation id="page-eth2-vision-desc-1" />,
+    title: <Translation id="page-upgrades-vision-title-1" />,
+    description: <Translation id="page-upgrades-vision-desc-1" />,
   },
   {
     emoji: ":minidisc:",
-    title: <Translation id="page-eth2-vision-title-2" />,
-    description: <Translation id="page-eth2-vision-desc-2" />,
+    title: <Translation id="page-upgrades-vision-title-2" />,
+    description: <Translation id="page-upgrades-vision-desc-2" />,
   },
   {
     emoji: ":high_voltage_sign:",
-    title: <Translation id="page-eth2-vision-title-3" />,
-    description: <Translation id="page-eth2-vision-desc-3" />,
+    title: <Translation id="page-upgrades-vision-title-3" />,
+    description: <Translation id="page-upgrades-vision-desc-3" />,
   },
 ]
 
@@ -89,9 +89,9 @@ const VisionPage = ({ data, location }) => {
   const intl = useIntl()
 
   const heroContent = {
-    title: translateMessageId("page-eth2-vision-title", intl),
-    header: translateMessageId("page-eth2-vision-future", intl),
-    subtitle: translateMessageId("page-eth2-vision-subtitle", intl),
+    title: translateMessageId("page-upgrades-vision-title", intl),
+    header: translateMessageId("page-upgrades-vision-future", intl),
+    subtitle: translateMessageId("page-upgrades-vision-subtitle", intl),
     image: getImage(data.oldship),
     alt: translateMessageId("page-eth-whats-eth-hero-alt", intl),
   }
@@ -99,32 +99,32 @@ const VisionPage = ({ data, location }) => {
   const upgrades = [
     {
       image: getImage(data.beaconchain),
-      title: <Translation id="page-eth2-beacon-chain-title" />,
-      description: <Translation id="page-eth2-beacon-chain-desc" />,
+      title: <Translation id="page-upgrades-beacon-chain-title" />,
+      description: <Translation id="page-upgrades-beacon-chain-desc" />,
       to: "/upgrades/beacon-chain/",
-      date: <Translation id="page-eth2-beacon-chain-estimate" />,
+      date: <Translation id="page-upgrades-beacon-chain-estimate" />,
     },
     {
       image: getImage(data.themerge),
-      title: <Translation id="page-eth2-docking" />,
-      description: <Translation id="page-eth2-docking-desc" />,
+      title: <Translation id="page-upgrades-docking" />,
+      description: <Translation id="page-upgrades-docking-desc" />,
       to: "/upgrades/merge/",
-      date: <Translation id="page-eth2-docking-estimate" />,
+      date: <Translation id="page-upgrades-docking-estimate" />,
     },
     {
       image: getImage(data.shards),
-      title: <Translation id="page-eth2-shard-title" />,
-      description: <Translation id="page-eth2-shard-desc" />,
+      title: <Translation id="page-upgrades-shard-title" />,
+      description: <Translation id="page-upgrades-shard-desc" />,
       to: "/upgrades/shard-chains/",
-      date: <Translation id="page-eth2-shard-estimate" />,
+      date: <Translation id="page-upgrades-shard-estimate" />,
     },
   ]
 
   return (
     <Page>
       <PageMetadata
-        title={translateMessageId("page-eth2-vision-meta-title", intl)}
-        description={translateMessageId("page-eth2-vision-meta-desc", intl)}
+        title={translateMessageId("page-upgrades-vision-meta-title", intl)}
+        description={translateMessageId("page-upgrades-vision-meta-desc", intl)}
       />
       <PageHero content={heroContent} />
       <Divider />
@@ -132,46 +132,46 @@ const VisionPage = ({ data, location }) => {
         <StyledBreadcrumbs slug={location.pathname} startDepth={1} />
         <CentralContent>
           <CenterH2>
-            <Translation id="page-eth2-vision-upgrade-needs" />
+            <Translation id="page-upgrades-vision-upgrade-needs" />
           </CenterH2>
           <p>
-            <Translation id="page-eth2-vision-upgrade-needs-desc" />
+            <Translation id="page-upgrades-vision-upgrade-needs-desc" />
           </p>
           <p>
-            <Translation id="page-eth2-vision-upgrade-needs-desc-2" />
+            <Translation id="page-upgrades-vision-upgrade-needs-desc-2" />
           </p>
           <p>
-            <Translation id="page-eth2-vision-upgrade-needs-desc-3" />{" "}
+            <Translation id="page-upgrades-vision-upgrade-needs-desc-3" />{" "}
           </p>
           <ul>
             <li>
               <Link to="https://tim.mirror.xyz/CHQtTJb1NDxCK41JpULL-zAJe7YOtw-m4UDw6KDju6c">
-                <Translation id="page-eth2-vision-2021" />
+                <Translation id="page-upgrades-vision-2021" />
               </Link>
             </li>
             <li>
               <Link to="https://blog.ethereum.org/2015/03/03/ethereum-launch-process/">
-                <Translation id="page-eth2-vision-upgrade-needs-serenity" />
+                <Translation id="page-upgrades-vision-upgrade-needs-serenity" />
               </Link>
             </li>
             <li>
               <Link to="https://blog.ethereum.org/2014/01/15/slasher-a-punitive-proof-of-stake-algorithm/">
-                <Translation id="page-eth2-vision-2014" />
+                <Translation id="page-upgrades-vision-2014" />
               </Link>
             </li>
           </ul>
           <p>
-            <Translation id="page-eth2-vision-upgrade-needs-desc-5" />
+            <Translation id="page-upgrades-vision-upgrade-needs-desc-5" />
           </p>
           <p>
-            <Translation id="page-eth2-vision-upgrade-needs-desc-6" />
+            <Translation id="page-upgrades-vision-upgrade-needs-desc-6" />
           </p>
         </CentralContent>
       </Content>
       <Divider />
       <Content>
         <CenterH2>
-          <Translation id="page-eth2-vision-problems" />
+          <Translation id="page-upgrades-vision-problems" />
         </CenterH2>
         <CardContainer>
           {paths.map((path, idx) => (
@@ -191,89 +191,89 @@ const VisionPage = ({ data, location }) => {
       <Content>
         <CentralContent>
           <CenterH2>
-            <Translation id="page-eth2-vision-understanding" />
+            <Translation id="page-upgrades-vision-understanding" />
           </CenterH2>
           <h3>
-            <Translation id="page-eth2-vision-scalability" />{" "}
+            <Translation id="page-upgrades-vision-scalability" />{" "}
             <Emoji text=":rocket:" />
           </h3>
           <p>
-            <Translation id="page-eth2-vision-scalability-desc" />
+            <Translation id="page-upgrades-vision-scalability-desc" />
           </p>
           <p>
-            <Translation id="page-eth2-vision-scalability-desc-3" />{" "}
+            <Translation id="page-upgrades-vision-scalability-desc-3" />{" "}
             <Link to="/upgrades/shard-chains/">
-              <Translation id="page-eth2-vision-shard-upgrade" />
+              <Translation id="page-upgrades-vision-shard-upgrade" />
             </Link>{" "}
           </p>
           <p>
-            <Translation id="page-eth2-vision-scalability-desc-4" />
+            <Translation id="page-upgrades-vision-scalability-desc-4" />
           </p>
           <h3>
-            <Translation id="page-eth2-vision-security" />{" "}
+            <Translation id="page-upgrades-vision-security" />{" "}
             <Emoji text=":shield:" />
           </h3>
           <p>
-            <Translation id="page-eth2-vision-security-desc" />
+            <Translation id="page-upgrades-vision-security-desc" />
           </p>
           <p>
-            <Translation id="page-eth2-vision-security-desc-3" />{" "}
+            <Translation id="page-upgrades-vision-security-desc-3" />{" "}
             <Link to="/developers/docs/consensus-mechanisms/pos/">
-              <Translation id="page-eth2-proof-stake-link" />
+              <Translation id="page-upgrades-proof-stake-link" />
             </Link>{" "}
           </p>
           <p>
-            <Translation id="page-eth2-vision-security-desc-5" />{" "}
+            <Translation id="page-upgrades-vision-security-desc-5" />{" "}
             <Link to="/developers/docs/consensus-mechanisms/pow/">
-              <Translation id="page-eth2-vision-security-desc-5-link" />
+              <Translation id="page-upgrades-vision-security-desc-5-link" />
             </Link>
           </p>
           <p>
-            <Translation id="page-eth2-vision-security-desc-8" />
+            <Translation id="page-upgrades-vision-security-desc-8" />
           </p>
           <p>
-            <Translation id="page-eth2-vision-security-desc-10" />{" "}
+            <Translation id="page-upgrades-vision-security-desc-10" />{" "}
             <Link to="/developers/docs/nodes-and-clients/">
-              <Translation id="page-eth2-vision-ethereum-node" />
+              <Translation id="page-upgrades-vision-ethereum-node" />
             </Link>
           </p>
           <p>
-            <Translation id="page-eth2-vision-security-validator" />
+            <Translation id="page-upgrades-vision-security-validator" />
           </p>
           <ButtonLink to="/staking/">
-            <Translation id="page-eth2-vision-security-staking" />
+            <Translation id="page-upgrades-vision-security-staking" />
           </ButtonLink>
           <h3>
-            <Translation id="page-eth2-vision-sustainability" />{" "}
+            <Translation id="page-upgrades-vision-sustainability" />{" "}
             <Emoji text=":evergreen_tree:" />
           </h3>
           <p>
-            <Translation id="page-eth2-vision-sustainability-subtitle" />
+            <Translation id="page-upgrades-vision-sustainability-subtitle" />
           </p>
           <p>
-            <Translation id="page-eth2-vision-sustainability-desc-1" />{" "}
+            <Translation id="page-upgrades-vision-sustainability-desc-1" />{" "}
             <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
-              <Translation id="page-eth2-vision-mining" />
+              <Translation id="page-upgrades-vision-mining" />
             </Link>
           </p>
           <p>
-            <Translation id="page-eth2-vision-sustainability-desc-2" />{" "}
+            <Translation id="page-upgrades-vision-sustainability-desc-2" />{" "}
             <Link to="/staking/">
-              <Translation id="page-eth2-vision-staking-lower" />
+              <Translation id="page-upgrades-vision-staking-lower" />
             </Link>
           </p>
           <p>
-            <Translation id="page-eth2-vision-sustainability-desc-3" />{" "}
+            <Translation id="page-upgrades-vision-sustainability-desc-3" />{" "}
           </p>
           <p>
-            <Translation id="page-eth2-vision-sustainability-desc-8" />{" "}
+            <Translation id="page-upgrades-vision-sustainability-desc-8" />{" "}
           </p>
         </CentralContent>
       </Content>
       <Divider />
       <Content>
         <H2>
-          <Translation id="page-eth2-vision-explore-upgrades" />
+          <Translation id="page-upgrades-vision-explore-upgrades" />
         </H2>
         <StyledCardContainer>
           {upgrades.map((upgrade, idx) => (
