@@ -445,13 +445,16 @@ const UpgradePage = ({ data: { mdx } }) => {
               maxDepth={mdx.frontmatter.sidebarDepth}
             />
           )}
-          <DismissibleCard storageKey="dismissed-eth2-psa">
+          <DismissibleCard storageKey="dismissed-eth-upgrade-psa">
             <Emoji text=":cheering_megaphone:" size={5} />
             <h2>
-              <Translation id="eth2-service-announcement" />
+              <Translation id="eth-upgrade-what-happened" />
             </h2>
             <p>
-              <Translation id="eth2-no-action-needed" />
+              <Translation id="eth-upgrade-what-happened-description" />{" "}
+              <Link to="/upgrades/">
+                <Translation id="more-info" />.
+              </Link>
             </p>
           </DismissibleCard>
         </InfoColumn>
