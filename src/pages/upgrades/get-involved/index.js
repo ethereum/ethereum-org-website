@@ -339,6 +339,9 @@ const GetInvolvedPage = ({ data, location }) => {
         <p>
           <Translation id="page-eth2-get-involved-run-clients-desc" />
         </p>
+        <p>
+          <Translation id="page-eth2-get-involved-run-clients-desc-2" />
+        </p>
         <h3>
           <Translation id="page-eth2-get-involved-run-clients-production" />
         </h3>
