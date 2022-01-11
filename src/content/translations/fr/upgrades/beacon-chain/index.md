@@ -61,4 +61,4 @@ Les chaînes fragment ne peuvent pénétrer en toute sécurité dans l'écosyst�
 
 ## Interagir avec la chaîne phare {#interact-with-beacon-chain}
 
-<Eth2BeaconChainActions />
+<EthUpgradeBeaconChainActions />

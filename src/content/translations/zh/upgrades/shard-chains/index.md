@@ -107,4 +107,4 @@ Eth2 升级的各部分在一定程度上相互关联。 让我们回顾一下�
 
 ### 了解更多 {#read-more}
 
-<Eth2ShardChainsList />
+<EthUpgradeShardChainsList />

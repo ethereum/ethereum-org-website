@@ -107,4 +107,4 @@ Resta saber se a rede principal existirá como o único fragmento "inteligente" 
 
 ### Leia mais {#read-more}
 
-<Eth2ShardChainsList />
+<EthUpgradeShardChainsList />

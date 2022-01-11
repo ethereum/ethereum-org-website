@@ -61,4 +61,4 @@ A shard láncokat csak a proof-of-stake konszenzus mechnanizmussal lehet biztons
 
 ## Beacon Chain interakció {#interact-with-beacon-chain}
 
-<Eth2BeaconChainActions />
+<EthUpgradeBeaconChainActions />

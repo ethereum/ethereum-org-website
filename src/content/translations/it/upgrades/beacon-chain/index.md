@@ -61,4 +61,4 @@ Le shard chain potranno entrare in modo sicuro nell'ecosistema Ethereum solo qua
 
 ## Interagire con la beacon chain {#interact-with-beacon-chain}
 
-<Eth2BeaconChainActions />
+<EthUpgradeBeaconChainActions />

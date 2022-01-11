@@ -15,15 +15,14 @@ const reads = [
   {
     title: "The 1.x Files: The Stateless Ethereum Tech Tree",
     description: "Ethereum Foundation",
-    link:
-      "https://blog.ethereum.org/2020/01/28/eth1x-files-the-stateless-ethereum-tech-tree/",
+    link: "https://blog.ethereum.org/2020/01/28/eth1x-files-the-stateless-ethereum-tech-tree/",
   },
 ]
 
-const Eth2DockingList = () => (
+const EthUpgradeDockingList = () => (
   <Container>
     <CardList content={reads} />
   </Container>
 )
 
-export default Eth2DockingList
+export default EthUpgradeDockingList

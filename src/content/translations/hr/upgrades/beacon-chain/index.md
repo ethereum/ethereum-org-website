@@ -61,4 +61,4 @@ Lanci djelića mogu sigurno ući u Ethereumov ekosustav samo ako je uspostavljen
 
 ## Beacon Chain – interakcija {#interact-with-beacon-chain}
 
-<Eth2BeaconChainActions />
+<EthUpgradeBeaconChainActions />

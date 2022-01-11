@@ -61,4 +61,4 @@ Shard Chains können nur dann sicher ins Ethereum-Netzwerk eingeführt werden, w
 
 ## Interaktion mit der Beacon Chain {#interact-with-beacon-chain}
 
-<Eth2BeaconChainActions />
+<EthUpgradeBeaconChainActions />

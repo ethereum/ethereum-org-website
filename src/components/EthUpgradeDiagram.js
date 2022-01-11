@@ -251,7 +251,7 @@ const ModalContent = ({ upgrade }) => {
 }
 
 // TODO update z-indices so only the selected section of diagram is above the modal overlay
-const Eth2Diagram = () => {
+const EthUpgradeDiagram = () => {
   const [modalState, setModalState] = useState(false)
 
   // Update modal state to upgrade props, else close modal
@@ -329,4 +329,4 @@ const Eth2Diagram = () => {
   )
 }
 
-export default Eth2Diagram
+export default EthUpgradeDiagram

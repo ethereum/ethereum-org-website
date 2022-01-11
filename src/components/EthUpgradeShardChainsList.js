@@ -6,7 +6,7 @@ const Container = styled.div`
   margin-bottom: 4rem;
 `
 
-const Eth2ShardChainsList = () => {
+const EthUpgradeShardChainsList = () => {
   const reads = [
     {
       title: "Why sharding is great: demystifying the technical properties",
@@ -16,8 +16,7 @@ const Eth2ShardChainsList = () => {
     {
       title: "A rollup-centric roadmap",
       description: "Vitalik Buterin",
-      link:
-        "https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698",
+      link: "https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698",
     },
     {
       title: "The Beacon Chain Ethereum 2.0 explainer you need to read first",
@@ -38,4 +37,4 @@ const Eth2ShardChainsList = () => {
   )
 }
 
-export default Eth2ShardChainsList
+export default EthUpgradeShardChainsList

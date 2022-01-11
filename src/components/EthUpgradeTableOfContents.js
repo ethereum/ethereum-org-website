@@ -89,7 +89,7 @@ const ItemsList = ({ items, depth, maxDepth }) =>
       ))
     : null
 
-const Eth2TableOfContents = ({ items, maxDepth, className }) => {
+const EthUpgradeTableOfContents = ({ items, maxDepth, className }) => {
   if (!items) {
     return null
   }
@@ -107,4 +107,4 @@ const Eth2TableOfContents = ({ items, maxDepth, className }) => {
   )
 }
 
-export default Eth2TableOfContents
+export default EthUpgradeTableOfContents

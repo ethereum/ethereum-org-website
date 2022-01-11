@@ -109,4 +109,4 @@ It remains to be seen whether mainnet will exist as the only “smart” shard t
 
 ### Read more {#read-more}
 
-<Eth2ShardChainsList />
+<EthUpgradeShardChainsList />

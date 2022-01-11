@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { dannyArticles, benArticles } from "../data/eth2-articles"
+import { dannyArticles, benArticles } from "../data/eth-upgrade-articles"
 
 import CardList from "./CardList"
 
@@ -30,7 +30,7 @@ const RightColumn = styled.div`
   }
 `
 
-const Eth2Articles = () => (
+const EthUpgradesArticles = () => (
   <Container>
     <LeftColumn>
       <h4>Danny Ryan (Ethereum Foundation)</h4>
@@ -43,4 +43,4 @@ const Eth2Articles = () => (
   </Container>
 )
 
-export default Eth2Articles
+export default EthUpgradesArticles

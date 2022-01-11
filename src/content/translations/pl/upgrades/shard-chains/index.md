@@ -97,4 +97,4 @@ Sieć główna Ethereum będzie istnieć tak jak obecnie, nawet po wprowadzeniu 
 
 ### Czytaj więcej {#read-more}
 
-<Eth2ShardChainsList />
+<EthUpgradeShardChainsList />

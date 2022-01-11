@@ -97,4 +97,4 @@ La xarxa principal d'Ethereum existirà igual que avui en dia inclús després d
 
 ### Més informació {#read-more}
 
-<Eth2ShardChainsList />
+<EthUpgradeShardChainsList />

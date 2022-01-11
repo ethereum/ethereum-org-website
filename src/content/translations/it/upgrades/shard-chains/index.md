@@ -97,4 +97,4 @@ La rete principale Ethereum esisterà come esiste oggi anche dopo l'introduzione
 
 ### Leggi altro {#read-more}
 
-<Eth2ShardChainsList />
+<EthUpgradeShardChainsList />
