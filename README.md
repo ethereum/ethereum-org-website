@@ -1336,6 +1336,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://snigdha920.github.io/formal-personal-site/"><img src="https://avatars.githubusercontent.com/u/62167899?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Snigdha Singh</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=snigdha920" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/stefan-wuest"><img src="https://avatars.githubusercontent.com/u/20667579?v=4?s=100" width="100px;" alt=""/><br /><sub><b>SW</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=stefan-wuest" title="Documentation">📖</a></td>
     <td align="center"><a href="https://aaronisme.github.io"><img src="https://avatars.githubusercontent.com/u/7855886?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aaron Chen</b></sub></a><br /><a href="#ideas-aaronisme" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://portfolio-qazalin.vercel.app/"><img src="https://avatars.githubusercontent.com/u/77887910?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Qazal Samani</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Qazalin" title="Documentation">📖</a></td>
   </tr>
 </table>
 
