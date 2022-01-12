@@ -840,4 +840,4 @@ _Disediakan dalam bagian melalui [Mastering Ethereum](https://github.com/ethereu
 
 Apakah kami melewatkan sesuatu? Apakah ada yang salah? Bantu kami meningkatkannya dengan berkontribusi untuk glosarium ini di GitHub!
 
-[Pelajari lebih lanjut tentang cara berkontribusi](/en/contributing/adding-glossary-terms)
+[Pelajari lebih lanjut tentang cara berkontribusi](/contributing/adding-glossary-terms)

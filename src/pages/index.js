@@ -949,7 +949,7 @@ contract SimpleDomainRegistry {
           )}
         >
           <ButtonRow>
-            <ButtonLink to="/en/contributing/">
+            <ButtonLink to="/contributing/">
               <Translation id="page-index-contribution-banner-button" />
             </ButtonLink>
             <StyledButtonLink
