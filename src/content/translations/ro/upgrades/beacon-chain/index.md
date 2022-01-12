@@ -61,4 +61,4 @@ Lanțurile de fragmente nu pot intra în siguranță în ecosistemul Ethereum de
 
 ## Interacțiunea cu lanțul Beacon {#interact-with-beacon-chain}
 
-<Eth2BeaconChainActions />
+<BeaconChainActions />

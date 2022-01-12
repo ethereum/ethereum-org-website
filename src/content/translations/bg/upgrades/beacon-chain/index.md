@@ -61,4 +61,4 @@ summaryPoint4: Това може да ви е познато като "Етап 
 
 ## Взаимодействие със Сигналната верига {#interact-with-beacon-chain}
 
-<Eth2BeaconChainActions />
+<BeaconChainActions />

@@ -103,4 +103,4 @@ Es bleibt abzuwarten, ob das Mainnet als einziger "intelligenter" Shard existier
 
 ### Weiterlesen {#read-more}
 
-<Eth2ShardChainsList />
+<ShardChainsList />

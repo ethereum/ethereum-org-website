@@ -103,4 +103,4 @@ Beacon Chain містить усі потрібні алгоритми для з
 
 ### Докладніше {#read-more}
 
-<Eth2ShardChainsList />
+<ShardChainsList />

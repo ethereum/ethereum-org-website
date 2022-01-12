@@ -61,4 +61,4 @@ Wszystkie ulepszenia Eth2 są poniekąd wzajemnie powiązane. Więc podsumujmy, 
 
 ## Interakcja z łańcuchem śledzącym {#interact-with-beacon-chain}
 
-<Eth2BeaconChainActions />
+<BeaconChainActions />

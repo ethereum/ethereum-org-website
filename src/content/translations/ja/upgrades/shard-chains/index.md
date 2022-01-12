@@ -103,4 +103,4 @@ Eth2 の複数のアップグレードはそれぞれ相互に関連していま
 
 ### 続きを読む {#read-more}
 
-<Eth2ShardChainsList />
+<ShardChainsList />

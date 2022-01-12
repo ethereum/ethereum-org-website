@@ -61,4 +61,4 @@ Les cadenes de fragments només poden entrar de forma segura a l'ecosistema Ethe
 
 ## Interactuar amb la Cadena de Balisa {#interact-with-beacon-chain}
 
-<Eth2BeaconChainActions />
+<BeaconChainActions />

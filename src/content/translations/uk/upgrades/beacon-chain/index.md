@@ -61,4 +61,4 @@ Beacon Chain також відповідатиме за випадкове пр�
 
 ## Взаємодія з оновленням Beacon Chain {#interact-with-beacon-chain}
 
-<Eth2BeaconChainActions />
+<BeaconChainActions />

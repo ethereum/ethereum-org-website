@@ -103,4 +103,4 @@ Rămâne de văzut dacă Rețeaua principală va exista ca singurul fragment „
 
 ### Informații suplimentare {#read-more}
 
-<Eth2ShardChainsList />
+<ShardChainsList />
