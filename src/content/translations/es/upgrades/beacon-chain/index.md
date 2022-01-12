@@ -61,4 +61,4 @@ Las cadenas de fragmentos solo pueden ingresar en el ecosistema Ethereum de mane
 
 ## Interactuar con la Cadena de Baliza {#interact-with-beacon-chain}
 
-<Eth2BeaconChainActions />
+<BeaconChainActions />

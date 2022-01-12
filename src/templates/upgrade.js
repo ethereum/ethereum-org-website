@@ -16,16 +16,16 @@ import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
 import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
-import Eth2BeaconChainActions from "../components/Eth2BeaconChainActions"
-import Eth2ShardChainsList from "../components/Eth2ShardChainsList"
-import Eth2DockingList from "../components/Eth2DockingList"
+import BeaconChainActions from "../components/BeaconChainActions"
+import ShardChainsList from "../components/ShardChainsList"
+import MergeArticleList from "../components/MergeArticleList"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
 import Roadmap from "../components/Roadmap"
-import Eth2TableOfContents from "../components/Eth2TableOfContents"
+import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import Translation from "../components/Translation"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import SectionNav from "../components/SectionNav"
@@ -245,9 +245,9 @@ const components = {
   TranslationsInProgress,
   Emoji,
   UpgradeStatus,
-  Eth2BeaconChainActions,
-  Eth2ShardChainsList,
-  Eth2DockingList,
+  BeaconChainActions,
+  ShardChainsList,
+  MergeArticleList,
 }
 
 const Title = styled.h1`
@@ -440,18 +440,21 @@ const UpgradePage = ({ data: { mdx } }) => {
           <H1>{mdx.frontmatter.title}</H1>
 
           {mdx.frontmatter.sidebar && tocItems && (
-            <Eth2TableOfContents
+            <UpgradeTableOfContents
               items={tocItems}
               maxDepth={mdx.frontmatter.sidebarDepth}
             />
           )}
-          <DismissibleCard storageKey="dismissed-eth2-psa">
+          <DismissibleCard storageKey="dismissed-eth-upgrade-psa">
             <Emoji text=":cheering_megaphone:" size={5} />
             <h2>
-              <Translation id="eth2-service-announcement" />
+              <Translation id="eth-upgrade-what-happened" />
             </h2>
             <p>
-              <Translation id="eth2-no-action-needed" />
+              <Translation id="eth-upgrade-what-happened-description" />{" "}
+              <Link to="/upgrades/">
+                <Translation id="more-info" />.
+              </Link>
             </p>
           </DismissibleCard>
         </InfoColumn>

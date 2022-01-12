@@ -97,4 +97,4 @@ Az Ethereum főhálózat a ma ismert formában fog létezni a shardok bevezetés
 
 ### Bővebben {#read-more}
 
-<Eth2ShardChainsList />
+<ShardChainsList />

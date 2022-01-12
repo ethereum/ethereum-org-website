@@ -97,4 +97,4 @@ Glavna mreža Ethereum postojat će kao i danas čak i nakon uvođenja djelića.
 
 ### Pročitaj više {#read-more}
 
-<Eth2ShardChainsList />
+<ShardChainsList />

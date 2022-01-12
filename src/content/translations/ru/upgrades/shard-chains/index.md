@@ -97,4 +97,4 @@ Beacon Chain содержит всю логику для обеспечения 
 
 ### Подробнее {#read-more}
 
-<Eth2ShardChainsList />
+<ShardChainsList />

@@ -97,4 +97,4 @@ La red principal de Ethereum existirá como lo hace hoy, incluso después de la 
 
 ### Más información {#read-more}
 
-<Eth2ShardChainsList />
+<ShardChainsList />

@@ -61,4 +61,4 @@ Razdrobljene verige lahko v ekosistem Ethereum varno vstopijo samo, ko je vkljuÄ
 
 ## Interakcija z oddajniÅ¡ko verigo {#interact-with-beacon-chain}
 
-<Eth2BeaconChainActions />
+<BeaconChainActions />

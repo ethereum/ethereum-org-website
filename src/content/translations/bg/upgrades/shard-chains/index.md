@@ -97,4 +97,4 @@ summaryPoint4: Техническите карти включват работа
 
 ### Прочети още {#read-more}
 
-<Eth2ShardChainsList />
+<ShardChainsList />

@@ -1,13 +1,13 @@
 ---
 title: The Beacon Chain
-description: Learn about the beacon chain - the first major Eth2 upgrade to Ethereum.
+description: Learn about the Beacon Chain - the upgrade that introduced proof-of-stake Ethereum.
 lang: en
 template: upgrade
 sidebar: true
 image: ../../../assets/upgrades/core.png
-summaryPoint1: The beacon chain doesn't change anything about the Ethereum we use today.
-summaryPoint2: It will coordinate the network.
-summaryPoint3: It introduces proof-of-stake to the Ethereum ecosystem.
+summaryPoint1: The Beacon Chain doesn't change anything about the Ethereum we use today.
+summaryPoint2: It will coordinate the network, serving as the consensus layer.
+summaryPoint3: It introduced proof-of-stake to the Ethereum ecosystem.
 summaryPoint4: You might know this as "Phase 0" on technical roadmaps.
 ---
 
@@ -33,7 +33,7 @@ Staking and becoming a validator is easier than [mining](/developers/docs/mining
 If you're interested in becoming a validator and helping secure the Beacon Chain, <a href="/staking/">learn more about staking</a>.
 </InfoBanner>
 
-This is also an important change for another Eth2 upgrade: [shard chains](/upgrades/shard-chains/).
+This is also an important change for another upgrade: [shard chains](/upgrades/shard-chains/).
 
 ### Setting up for shard chains {#setting-up-for-shard-chains}
 
@@ -43,7 +43,7 @@ Eventually the Beacon Chain will also be responsible for randomly assigning stak
 
 ## Relationship between upgrades {#relationship-between-upgrades}
 
-The Eth2 upgrades are all somewhat interrelated. So let’s recap how the Beacon Chain affects the other upgrades.
+The Ethereum upgrades are all somewhat interrelated. So let’s recap how the Beacon Chain affects the other upgrades.
 
 ### Mainnet and the Beacon Chain {#mainnet-and-beacon-chain}
 
@@ -65,4 +65,4 @@ Shard chains can only safely enter the Ethereum ecosystem with a proof-of-stake 
 
 ## Interact with the Beacon Chain {#interact-with-beacon-chain}
 
-<Eth2BeaconChainActions />
+<BeaconChainActions />

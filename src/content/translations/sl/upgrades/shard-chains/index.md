@@ -103,4 +103,4 @@ Bomo še videli, ali bo glavno omrežje obstajalo kot edini "pametni" drobec, ki
 
 ### Preberite več {#read-more}
 
-<Eth2ShardChainsList />
+<ShardChainsList />

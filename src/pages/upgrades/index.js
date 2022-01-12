@@ -9,7 +9,7 @@ import Card from "../../components/Card"
 import ActionCard from "../../components/ActionCard"
 import CalloutBanner from "../../components/CalloutBanner"
 import Emoji from "../../components/Emoji"
-import Eth2Articles from "../../components/Eth2Articles"
+import UpgradeArticles from "../../components/UpgradeArticles"
 import ExpandableCard from "../../components/ExpandableCard"
 import GhostCard from "../../components/GhostCard"
 import InfoBanner from "../../components/InfoBanner"
@@ -345,7 +345,6 @@ const Eth2IndexPage = ({ data }) => {
           ))}
         </StyledCardContainer>
       </Content>
-      {/* TODO: Upgrade existing Eth2Diagram with new plan, then reinstate here */}
       <Content>
         <ContributeCard>
           <div>
@@ -798,7 +797,7 @@ const Eth2IndexPage = ({ data }) => {
         <p>
           <Translation id="page-upgrades-stay-up-to-date-desc" />
         </p>
-        <Eth2Articles />
+        <UpgradeArticles />
         <ResearchContainer>
           <H2>
             <Translation id="page-upgrades-take-part" />
@@ -829,7 +828,7 @@ export const query = graphql`
         )
       }
     }
-    rhino: file(relativePath: { eq: "upgrades/eth2_rhino.png" }) {
+    rhino: file(relativePath: { eq: "upgrades/upgrade_rhino.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 320
