@@ -308,7 +308,7 @@ export const query = graphql`
         )
       }
     }
-    rhino: file(relativePath: { eq: "upgrades/eth2_rhino.png" }) {
+    rhino: file(relativePath: { eq: "upgrades/upgrade_rhino.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 600
