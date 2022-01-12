@@ -12,7 +12,7 @@ summaryPoint4: We formerly referred to this as "the docking."
 ---
 
 <UpgradeStatus date="~Q1/Q2 2022">
-  This upgrade represents the official switch to proof-of-stake consensus. This eliminates the need for energy-intensive mining, and instead secures the network using staked ether. A truly exciting step in realizing the <a href="/upgrades/vision/">Eth2 vision</a> – more scalability, security, and sustainability.
+  This upgrade represents the official switch to proof-of-stake consensus. This eliminates the need for energy-intensive mining, and instead secures the network using staked ether. A truly exciting step in realizing the <a href="/upgrades/vision/">Ethereum vision</a> – more scalability, security, and sustainability.
 </UpgradeStatus>
 
 ## What is the merge? {#what-is-the-docking}
@@ -29,7 +29,7 @@ Mainnet will bring the ability to run smart contracts into the proof-of-stake sy
 
 ## After the merge {#after-the-merge}
 
-This will signal the end of proof-of-work for Ethereum and start the era of a more sustainable, eco-friendly Ethereum. At this point Ethereum will be one step closer to achieving the full scale, security and sustainability outlined in its [Eth2 vision](/upgrades/vision/).
+This will signal the end of proof-of-work for Ethereum and start the era of a more sustainable, eco-friendly Ethereum. At this point Ethereum will be one step closer to achieving the full scale, security and sustainability outlined in its [Ethereum vision](/upgrades/vision/).
 
 It is important to note that an implementation goal of the merge is simplicity in order to expedite the transition from proof-of-work to proof-of-stake. Developers are focusing their efforts on this transition, and minimizing additional features that could delay this goal.
 
@@ -37,7 +37,7 @@ It is important to note that an implementation goal of the merge is simplicity i
 
 ## Relationship between upgrades {#relationship-between-upgrades}
 
-The Eth2 upgrades are all somewhat interrelated. So let’s recap how the merge relates to the other upgrades.
+The Ethereum upgrades are all somewhat interrelated. So let’s recap how the merge relates to the other upgrades.
 
 ### The merge and the Beacon Chain {#docking-and-beacon-chain}
 
