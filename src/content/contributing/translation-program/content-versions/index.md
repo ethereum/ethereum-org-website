@@ -34,7 +34,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Shard chains](/eth2/shard-chains/)
 - [Staking](/eth2/staking/)
 - [Eth2 get involved](/eth2/get-involved/)
-- [Eth2 bug bounty](/eth2/bug-bounty/)
+- [Eth2 bug bounty](/eth2/get-involved/bug-bounty/)
 - [Staking deposit contract](/eth2/deposit-contract/)
 - [Developers' Home](/developers/)
 - [Developer learning tools](/developers/learning-tools/)
@@ -49,6 +49,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Translation Program](/contributing/translation-program/)
 - [Translation guide](/contributing/translation-program/translation-guide/)
 - [Ethereum grants](/community/grants/)
+- [Ethereum governance](/governance/)
 
 ## Foundational developer docs {#foundational-docs}
 
