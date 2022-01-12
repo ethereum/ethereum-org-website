@@ -42,7 +42,7 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
 
 ### Offer to take notes for community calls {#take-notes}
 
-- There are many open-source community calls, and having notetakers is a huge help. If you’re interested, join the [Ethereum Cat Herders discord](https://discord.com/invite/tzYmDmF), and introduce yourself!
+- There are many open-source community calls, and having notetakers is a huge help. If you’re interested, join the [Ethereum Cat Herders discord](https://discord.io/EthCatHerders), and introduce yourself!
 
 ### Translate Ethereum content into your native language {#translate-ethereum}
 
@@ -75,7 +75,7 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 
 ## Product Managers <Emoji text=":fountain_pen:" size={1} />‍ {#product-managers}
 
-- The Ethereum ecosystem needs your talents! Many companies are hiring for product manager roles. If you want to start by contributing to an open source project, get in touch with the [Ethereum Cat Herders](https://discord.gg/tzYmDmF) or [MetaCartel](https://www.metacartel.org/)
+- The Ethereum ecosystem needs your talents! Many companies are hiring for product manager roles. If you want to start by contributing to an open source project, get in touch with the [Ethereum Cat Herders](https://discord.io/EthCatHerders) or [MetaCartel](https://www.metacartel.org/)
 
 ## Marketing <Emoji text=":megaphone:" size={1} />‍ {#marketing}
 
