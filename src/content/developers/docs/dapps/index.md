@@ -62,7 +62,7 @@ A smart contract is code that lives on the Ethereum blockchain and runs exactly 
 **One Click Dapp _- FOSS tool for generating dapp frontends from an [ABI](/glossary/#abi)._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
-- [GitHub](https://github.com/One-Click-Dapp/one-click-dApp)
+- [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
 
 **Etherflow _- FOSS tool for Ethereum developers to test their node, and compose & debug RPC calls from the browser._**
 
