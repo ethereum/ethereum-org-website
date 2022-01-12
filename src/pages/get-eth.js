@@ -228,7 +228,7 @@ const GetETHPage = ({ data }) => {
     },
     {
       title: translateMessageId(
-        "How to store digital assets on Ethereum",
+        "page-get-eth-article-store-digital-assets",
         intl
       ),
       link: "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
