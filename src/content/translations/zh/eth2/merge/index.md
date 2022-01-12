@@ -17,7 +17,7 @@ summaryPoint4: 我们以前将此称为“对接”。
 
 ## 什么是合并？ {#what-is-the-docking}
 
-切记，刚开始，[信标链](/eth2/beacon-chain/)与我们现在使用的[主网](/glossary/#mainnet)分开提供。 以太坊主网继续受[工作量证明](/developers/docs/consensus-mechanisms/pow/)的保护，即使信标链使用[权益证明](developers/docs/consensus-mechanisms/pos/)并行运行也同样如此。 “合并”是指两个系统最终结合在一起。
+切记，刚开始，[信标链](/eth2/beacon-chain/)与我们现在使用的[主网](/glossary/#mainnet)分开提供。 以太坊主网继续受[工作量证明](/developers/docs/consensus-mechanisms/pow/)的保护，即使信标链使用[权益证明](/developers/docs/consensus-mechanisms/pos/)并行运行也同样如此。 “合并”是指两个系统最终结合在一起。
 
 想象一下，以太坊是一艘尚未做好星际航行准备的宇宙飞船。 社区通过信标链搭建了一个新引擎和坚固外壳。 到时候，当前的飞船将与这个新系统对接，为一艘飞船，朝着遥远的未来和宇宙蓄势待发。
 

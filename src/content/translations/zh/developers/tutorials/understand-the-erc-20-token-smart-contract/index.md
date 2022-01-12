@@ -13,7 +13,7 @@ lang: zh
 sidebar: true
 published: 2020-04-05
 source: EtherumDev
-sourceUrl: https://ethereumdev.io/understand-the-erc-20-token-smart-contract/
+sourceUrl: https://ethereumdev.io/understand-the-erc20-token-smart-contract/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 

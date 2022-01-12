@@ -38,13 +38,13 @@ Trenger du en mer grunnleggende informasjon først? Sjekk ut [ethereum.org/learn
 
 - [Go Ethereum Documentation](https://geth.ethereum.org/docs/) - _Dokumentasjonen for offisielle Ethereum Golang_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [Lager en DApp i Go med Geth](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
+- [Lager en DApp i Go med Geth](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Arbeid med Ethereum private nettverk med Golang og Geth](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [Enhets teste Solidity kontraker på Ethereum med Go](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 
 ## Avansert bruksmønster {#advanced-use-patterns}
 
-- [The GETH Simulated Backend](https://kauri.io/article/6285c9692883411aa041b6b970405a17/v1/the-geth-simulated-backend)
+- [The GETH Simulated Backend](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [Blockchain-as-a-Service Apps på Ethereum og Quorum](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
 - [Distribuert lagringsplass IPFS og Swarm på Ethereum Blockchain Applikasjoner](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
 - [Mobilklienter: Biblioteker og Inproc Ethereum Noder](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)

@@ -83,7 +83,7 @@ function f(uint a){
 - 路径 1： `a == 65`
 - 路径 2: `Not (a == 65)`
 
-每条路径预测都是一个数学公式，可以传递给给所谓的[SMT 求解器](https://github.com/trailofbits/building-secure-contracts/blob/master/program-analysis/determine-properties.md)，它将尝试解方程式。 对于`路径1`，求解器会说，可以用`a=65`探索路径。 对于`路径2`，求解器可以给`a`指定一个 65 以外的任何值，例如`a=0`。
+每条路径预测都是一个数学公式，可以传递给给所谓的[SMT 求解器](https://wikipedia.org/wiki/Satisfiability_modulo_theories)，它将尝试解方程式。 对于`路径1`，求解器会说，可以用`a=65`探索路径。 对于`路径2`，求解器可以给`a`指定一个 65 以外的任何值，例如`a=0`。
 
 ### 验证属性 {#verifying-properties}
 
@@ -464,7 +464,7 @@ m.transaction(caller=user_account,
 
 #### 状态约束 {#state-constraint}
 
-使用[state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/api.html?highlight=operator#manticore.core.state.StateBase.constrain)为一个特定的状态添加一个约束。它可以用来在状态检索后对其进行约束，以检查其上的某些属性。
+使用[state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/states.html?highlight=StateBase#manticore.core.state.StateBase.constrain)为一个特定的状态添加一个约束。它可以用来在状态检索后对其进行约束，以检查其上的某些属性。
 
 ### 检查约束 {#checking-constraint}
 

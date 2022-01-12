@@ -38,14 +38,14 @@ Usa Ethereum para crear aplicaciones descentralizadas (o "dapps"). Estas dapps p
 - [Turbo-Geth and Stateless Ethereum](https://youtu.be/3-Mn7OckSus?t=394): _Conferencia de la Comunidad Ethereum (EthCC 3)_
 - [Turbo-Geth: Optimizando clientes de Ethereum](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _Devcon 2018 4_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [Crear una dapp en Go con Geth](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
+- [Crear una dapp en Go con Geth](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Trabajar con la red privada Ethereum con Golang y Geth](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [Unidad de prueba de contratos de Solidity en Ethereum con Go](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 - [Referencia rápida para usar Geth como biblioteca](https://medium.com/coinmonks/web3-go-part-1-31c68c68e20e)
 
 ## Patrones de uso avanzado {#advanced-use-patterns}
 
-- [El fondo simulado de GETH](https://kauri.io/article/6285c9692883411aa041b6b970405a17/v1/the-geth-simulated-backend)
+- [El fondo simulado de GETH](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [Aplicaciones de Blockchain-as-a-Service que utilizan Ethereum y Quorum](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
 - [Almacenamiento distribuido IPFS y Swarm en aplicaciones Ethereum Blockchain](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
 - [Clientes móviles: Bibliotecas y nodos Inproc Ethereum](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)

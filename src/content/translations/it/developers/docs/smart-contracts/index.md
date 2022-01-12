@@ -99,7 +99,7 @@ Esistono modi per aggirare questa condizione, grazie agli [oracoli](/developers/
 
 **DappSys -** **_Blocchi di programmazione sicuri, semplici e flessibili per Smart Contract._**
 
-- [dapp.tools/dappsys](https://dapp.tools/dappsys/)
+- [Dappsys](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 ## Letture consigliate {#further-reading}
