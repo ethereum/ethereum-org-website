@@ -17,7 +17,7 @@ import UpgradeStatus from "../components/UpgradeStatus"
 import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
 import BeaconChainActions from "../components/BeaconChainActions"
-import EthUpgradeShardChainsList from "../components/EthUpgradeShardChainsList"
+import ShardChainsList from "../components/ShardChainsList"
 import MergeArticleList from "../components/MergeArticleList"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
@@ -246,7 +246,7 @@ const components = {
   Emoji,
   UpgradeStatus,
   BeaconChainActions,
-  EthUpgradeShardChainsList,
+  ShardChainsList,
   MergeArticleList,
 }
 

@@ -97,4 +97,4 @@ Le réseau principal d'Ethereum continuera d'exister comme il le fait aujourd'hu
 
 ### En savoir plus {#read-more}
 
-<EthUpgradeShardChainsList />
+<ShardChainsList />

@@ -97,4 +97,4 @@ summaryPoint4: Τεχνικοί χάρτες όδευσης περιλαμβάν
 
 ### Διαβάστε περισσότερα {#read-more}
 
-<EthUpgradeShardChainsList />
+<ShardChainsList />

@@ -97,4 +97,4 @@ Ethereum ana ağı, parçaların(Shards) piyasaya sürülmesinden sonra bile bug
 
 ### Daha fazla oku {#read-more}
 
-<EthUpgradeShardChainsList />
+<ShardChainsList />

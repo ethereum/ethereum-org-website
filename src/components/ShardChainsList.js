@@ -6,7 +6,7 @@ const Container = styled.div`
   margin-bottom: 4rem;
 `
 
-const EthUpgradeShardChainsList = () => {
+const ShardChainsList = () => {
   const reads = [
     {
       title: "Why sharding is great: demystifying the technical properties",
@@ -37,4 +37,4 @@ const EthUpgradeShardChainsList = () => {
   )
 }
 
-export default EthUpgradeShardChainsList
+export default ShardChainsList
