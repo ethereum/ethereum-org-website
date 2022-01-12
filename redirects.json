@@ -228,16 +228,16 @@
     "toPath": "/:splat/developers/learning-tools/"
   },
   {
-    "fromPath": "/en/eth2/beacon-chain/",
-    "toPath": "/en/upgrades/beacon-chain/"
+    "fromPath": "/*/eth2/beacon-chain/",
+    "toPath": "/:splat/upgrades/beacon-chain/"
   },
   {
-    "fromPath": "/en/eth2/the-beacon-chain/",
-    "toPath": "/en/upgrades/beacon-chain/"
+    "fromPath": "/*/eth2/the-beacon-chain/",
+    "toPath": "/:splat/upgrades/beacon-chain/"
   },
   {
-    "fromPath": "/en/upgrades/the-beacon-chain/",
-    "toPath": "/en/upgrades/beacon-chain/"
+    "fromPath": "/*/upgrades/the-beacon-chain/",
+    "toPath": "/:splat/upgrades/beacon-chain/"
   },
   {
     "fromPath": "/*/eth2/merge",
