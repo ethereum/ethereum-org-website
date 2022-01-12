@@ -3,8 +3,6 @@ import styled from "styled-components"
 import { motion } from "framer-motion"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-import { FakeLink } from "./SharedStyledComponents"
-import Translation from "./Translation"
 import Icon from "./Icon"
 
 const Card = styled.div`
@@ -14,6 +12,7 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
+  cursor: pointer;
   background: ${({ background, theme }) =>
     background ? theme.colors[background] : theme.colors.background};
   &:hover {
@@ -24,7 +23,7 @@ const Card = styled.div`
       transition: 0.1s;
     }
     background: ${({ background, theme }) =>
-      background ? theme.colors[background] + "77" : theme.colors.background};
+      background ? theme.colors[background] : theme.colors.background};
   }
 `
 
@@ -33,7 +32,6 @@ const Content = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 3rem;
-  cursor: pointer;
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     gap: 2rem;
     flex-direction: column;
@@ -43,7 +41,6 @@ const Content = styled.div`
 const TitleContent = styled.div`
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
   gap: 3rem;
   width: 100%;
 `
@@ -84,10 +81,9 @@ const Header = styled.div`
 
 const ButtonContainer = styled(motion.div)`
   margin-left: auto;
-`
-
-const StyledIcon = styled(Icon)`
-  transform: translateY(10px);
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    margin-left: 0;
+  }
 `
 
 const ExpandableInfo = ({
@@ -150,8 +146,12 @@ const ExpandableInfo = ({
     },
   }
   return (
-    <Card background={background} className={className}>
-      <Content onClick={() => setIsVisible(!isVisible)}>
+    <Card
+      background={background}
+      className={className}
+      onClick={() => setIsVisible(!isVisible)}
+    >
+      <Content>
         {image && <GatsbyImage image={image} />}
         <TitleContent>
           <Question>
@@ -160,14 +160,14 @@ const ExpandableInfo = ({
             </Header>
             <TextPreview>{contentPreview}</TextPreview>
           </Question>
-          <ButtonContainer
-            variants={chevronFlip}
-            animate={isVisible ? "expanded" : "collapsed"}
-            initial={false}
-          >
-            <StyledIcon name="chevronDown" size="36" />
-          </ButtonContainer>
         </TitleContent>
+        <ButtonContainer
+          variants={chevronFlip}
+          animate={isVisible ? "expanded" : "collapsed"}
+          initial={false}
+        >
+          <Icon name="chevronDown" size="36" />
+        </ButtonContainer>
       </Content>
       <motion.div
         variants={expandCollapse}
