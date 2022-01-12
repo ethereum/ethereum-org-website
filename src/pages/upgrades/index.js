@@ -9,7 +9,7 @@ import Card from "../../components/Card"
 import ActionCard from "../../components/ActionCard"
 import CalloutBanner from "../../components/CalloutBanner"
 import Emoji from "../../components/Emoji"
-import EthUpgradeArticles from "../../components/EthUpgradeArticles"
+import UpgradeArticles from "../../components/UpgradeArticles"
 import ExpandableCard from "../../components/ExpandableCard"
 import GhostCard from "../../components/GhostCard"
 import InfoBanner from "../../components/InfoBanner"
@@ -791,7 +791,7 @@ const Eth2IndexPage = ({ data }) => {
         <p>
           <Translation id="page-eth2-stay-up-to-date-desc" />
         </p>
-        <EthUpgradeArticles />
+        <UpgradeArticles />
         <ResearchContainer>
           <H2>
             <Translation id="page-eth2-take-part" />

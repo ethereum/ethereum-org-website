@@ -30,7 +30,7 @@ const RightColumn = styled.div`
   }
 `
 
-const EthUpgradeArticles = () => (
+const UpgradeArticles = () => (
   <Container>
     <LeftColumn>
       <h4>Danny Ryan (Ethereum Foundation)</h4>
@@ -43,4 +43,4 @@ const EthUpgradeArticles = () => (
   </Container>
 )
 
-export default EthUpgradeArticles
+export default UpgradeArticles

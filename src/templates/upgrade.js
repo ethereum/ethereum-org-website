@@ -25,7 +25,7 @@ import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
 import Roadmap from "../components/Roadmap"
-import EthUpgradeTableOfContents from "../components/EthUpgradeTableOfContents"
+import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import Translation from "../components/Translation"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import SectionNav from "../components/SectionNav"
@@ -440,7 +440,7 @@ const UpgradePage = ({ data: { mdx } }) => {
           <H1>{mdx.frontmatter.title}</H1>
 
           {mdx.frontmatter.sidebar && tocItems && (
-            <EthUpgradeTableOfContents
+            <UpgradeTableOfContents
               items={tocItems}
               maxDepth={mdx.frontmatter.sidebarDepth}
             />
