@@ -325,24 +325,24 @@ const ButtonContainer = styled.div`
 `
 
 const DappNodeButtonLink = styled(ResponsiveButtonLink)`
-  background-color: #30bcb2;
+  background-color: #187d76;
   span {
     color: ${({ theme }) => theme.colors.white};
   }
   &:hover {
-    background-color: #3ec3c6;
-    box-shadow: 4px 4px 0px 0px #3ec3c677;
+    background-color: #0f5f5f;
+    box-shadow: 4px 4px 0 0 #187d7677;
   }
 `
 
 const AvadoButtonLink = styled(ResponsiveButtonLink)`
-  background-color: #4a9b40;
+  background-color: #37822e;
   span {
     color: ${({ theme }) => theme.colors.white};
   }
   &:hover {
-    background-color: #5baa4a;
-    box-shadow: 4px 4px 0px 0px #5baa4a77;
+    background-color: #2e6d2e;
+    box-shadow: 4px 4px 0 0 #37822e77;
   }
 `
 
