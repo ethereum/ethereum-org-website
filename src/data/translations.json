@@ -125,7 +125,6 @@
     "language": "简体中文"
   },
   "zh-tw": {
-    "language": "繁體中文",
-    "useLegacyHomepage": true
+    "language": "繁體中文"
   }
 }
