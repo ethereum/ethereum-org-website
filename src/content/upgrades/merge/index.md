@@ -62,3 +62,7 @@ This will be an ongoing assessment from the community as to the need for potenti
 <ButtonLink to="/upgrades/shard-chains/">
   Shard chains
 </ButtonLink>
+
+## Read more {#read-more}
+
+<MergeArticleList />
