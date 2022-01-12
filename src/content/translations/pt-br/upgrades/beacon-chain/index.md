@@ -61,4 +61,4 @@ As cadeias de fragmentos (shard chains) somente podem ser introduzidas ao ecossi
 
 ## Interação com a Beacon Chain {#interact-with-beacon-chain}
 
-<EthUpgradeBeaconChainActions />
+<BeaconChainActions />

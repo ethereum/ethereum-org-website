@@ -16,7 +16,7 @@ import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
 import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
-import EthUpgradeBeaconChainActions from "../components/EthUpgradeBeaconChainActions"
+import BeaconChainActions from "../components/BeaconChainActions"
 import EthUpgradeShardChainsList from "../components/EthUpgradeShardChainsList"
 import MergeArticleList from "../components/MergeArticleList"
 import Logo from "../components/Logo"
@@ -245,7 +245,7 @@ const components = {
   TranslationsInProgress,
   Emoji,
   UpgradeStatus,
-  EthUpgradeBeaconChainActions,
+  BeaconChainActions,
   EthUpgradeShardChainsList,
   MergeArticleList,
 }

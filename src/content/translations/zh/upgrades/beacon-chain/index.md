@@ -61,4 +61,4 @@ Eth2 升级的各部分相互关联。 所以我们来回顾一下信标链对�
 
 ## 与信标链交互 {#interact-with-beacon-chain}
 
-<EthUpgradeBeaconChainActions />
+<BeaconChainActions />

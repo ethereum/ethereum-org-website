@@ -61,4 +61,4 @@ Eth2 のアップグレードはいくらか相互に関連しています。 �
 
 ## ビーコンチェーンとのやり取り {#interact-with-beacon-chain}
 
-<EthUpgradeBeaconChainActions />
+<BeaconChainActions />

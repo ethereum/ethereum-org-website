@@ -61,4 +61,4 @@ Shard zincirleri Ethereum ekosistemine yalnızca pay ispatı uzlaşmasıyla güv
 
 ## İşaret (Beacon) Zinciriyle Etkileşim Kurun {#interact-with-beacon-chain}
 
-<EthUpgradeBeaconChainActions />
+<BeaconChainActions />

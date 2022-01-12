@@ -61,4 +61,4 @@ summaryPoint4: Μπορεί να το γνωρίζετε αυτό ως "Φάση
 
 ## Αλληλεπίδραση με την κύρια αλυσίδα {#interact-with-beacon-chain}
 
-<EthUpgradeBeaconChainActions />
+<BeaconChainActions />

@@ -68,7 +68,7 @@ export const DataLogo = graphql`
   }
 `
 
-const EthUpgradeBeaconChainActions = () => {
+const BeaconChainActions = () => {
   const intl = useIntl()
   const data = useStaticQuery(graphql`
     query {
@@ -152,4 +152,4 @@ const EthUpgradeBeaconChainActions = () => {
   )
 }
 
-export default EthUpgradeBeaconChainActions
+export default BeaconChainActions

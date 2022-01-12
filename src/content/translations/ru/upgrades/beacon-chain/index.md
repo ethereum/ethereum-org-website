@@ -61,4 +61,4 @@ Beacon Chain, во-первых, существует отдельно от гл
 
 ## Взаимодействие с Beacon Chain {#interact-with-beacon-chain}
 
-<EthUpgradeBeaconChainActions />
+<BeaconChainActions />
