@@ -60,7 +60,7 @@
   "eth2-run-beacon-chain-desc": "Ethereum needs as many clients running as possible. Help with this Ethereum public good!",
   "eth2-what-shipping": "When's it shipping?",
   "eth-upgrade-what-happened": "What happened to \"Eth2\"?",
-  "eth-upgrade-what-happened-description": "New terminology around the merge upgrade has deprecated the term \"Eth2\" in favor of \"execution\" and \"consensus\" clients.",
+  "eth-upgrade-what-happened-description": "New terminology around the merge upgrade has deprecated the terms \"Eth1\" and \"Eth2\" in favor of \"execution layer\" and \"consensus layer,\" respectively.",
   "ethereum": "Ethereum",
   "ethereum-2-0": "Ethereum 2.0",
   "ethereum-brand-assets": "Ethereum brand assets",
