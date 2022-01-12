@@ -18,7 +18,7 @@ import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
 import EthUpgradeBeaconChainActions from "../components/EthUpgradeBeaconChainActions"
 import EthUpgradeShardChainsList from "../components/EthUpgradeShardChainsList"
-import EthUpgradeDockingList from "../components/EthUpgradeDockingList"
+import MergeArticleList from "../components/MergeArticleList"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
@@ -247,7 +247,7 @@ const components = {
   UpgradeStatus,
   EthUpgradeBeaconChainActions,
   EthUpgradeShardChainsList,
-  EthUpgradeDockingList,
+  MergeArticleList,
 }
 
 const Title = styled.h1`

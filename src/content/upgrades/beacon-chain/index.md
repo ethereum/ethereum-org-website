@@ -66,3 +66,7 @@ Shard chains can only safely enter the Ethereum ecosystem with a proof-of-stake 
 ## Interact with the Beacon Chain {#interact-with-beacon-chain}
 
 <EthUpgradeBeaconChainActions />
+
+## Read More {#read-more}
+
+<MergeArticleList />
