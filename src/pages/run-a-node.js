@@ -146,16 +146,6 @@ const Highlight = styled(Content)`
   }
 `
 
-const WhyHighlight = styled(Highlight)`
-  padding: 2rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    padding: 1rem;
-  }
-  p {
-    margin-top: 0;
-  }
-`
-
 const StyledExpandableInfo = styled(ExpandableInfo)`
   width: 90%;
   align-self: center;
