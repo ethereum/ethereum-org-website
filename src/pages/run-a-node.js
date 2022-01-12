@@ -542,7 +542,7 @@ const RunANodePage = ({ data }) => {
           image={getImage(data.impact)}
           title={<Translation id="page-run-a-node-who-title" />}
           contentPreview={<Translation id="page-run-a-node-who-preview" />}
-          background="homeBoxPink"
+          background="runNodeGradient2"
         >
           <p>
             <Translation id="page-run-a-node-who-copy-1" />
