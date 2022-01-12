@@ -376,19 +376,19 @@ const TitleCard = styled.div`
 `
 
 const dropdownLinks = {
-  text: "page-eth2-upgrades-guide",
-  ariaLabel: "page-eth2-upgrades-aria-label",
+  text: "page-upgrades-upgrades-guide",
+  ariaLabel: "page-upgrades-upgrades-aria-label",
   items: [
     {
-      text: "page-eth2-upgrades-beacon-chain",
+      text: "page-upgrades-upgrades-beacon-chain",
       to: "/upgrades/beacon-chain/",
     },
     {
-      text: "page-eth2-upgrades-docking",
+      text: "page-upgrades-upgrades-docking",
       to: "/upgrades/merge/",
     },
     {
-      text: "page-eth2-upgrades-shard-chains",
+      text: "page-upgrades-upgrades-shard-chains",
       to: "/upgrades/shard-chains/",
     },
   ],

@@ -289,8 +289,8 @@ const DepositContractPage = ({ data, location }) => {
     state.userWillCheckOtherSources
 
   const textToSpeechText = state.isSpeechActive
-    ? translateMessageId("page-eth2-deposit-contract-stop-reading", intl)
-    : translateMessageId("page-eth2-deposit-contract-read-aloud", intl)
+    ? translateMessageId("page-staking-deposit-contract-stop-reading", intl)
+    : translateMessageId("page-staking-deposit-contract-read-aloud", intl)
   const textToSpeechEmoji = state.isSpeechActive
     ? ":speaker_high_volume:"
     : ":speaker:"
@@ -298,53 +298,53 @@ const DepositContractPage = ({ data, location }) => {
     <Page>
       <PageMetadata
         title={translateMessageId(
-          "page-eth2-deposit-contract-meta-title",
+          "page-staking-deposit-contract-meta-title",
           intl
         )}
         description={translateMessageId(
-          "page-eth2-deposit-contract-meta-desc",
+          "page-staking-deposit-contract-meta-desc",
           intl
         )}
       />
       <LeftColumn>
         <Breadcrumbs slug={location.pathname} startDepth={1} />
         <Title>
-          <Translation id="page-eth2-deposit-contract-title" />
+          <Translation id="page-staking-deposit-contract-title" />
         </Title>
         <Subtitle>
-          <Translation id="page-eth2-deposit-contract-subtitle" />
+          <Translation id="page-staking-deposit-contract-subtitle" />
         </Subtitle>
         <h2>
-          <Translation id="page-eth2-deposit-contract-h2" />
+          <Translation id="page-staking-deposit-contract-h2" />
         </h2>
         <p>
-          <Translation id="page-eth2-deposit-contract-staking" />{" "}
+          <Translation id="page-staking-deposit-contract-staking" />{" "}
           <Link to="/staking/">
-            <Translation id="page-eth2-deposit-contract-staking-more-link" />
+            <Translation id="page-staking-deposit-contract-staking-more-link" />
           </Link>
         </p>
         <StyledButton to="https://launchpad.ethereum.org">
-          <Translation id="page-eth2-deposit-contract-launchpad" />
+          <Translation id="page-staking-deposit-contract-launchpad" />
         </StyledButton>
         <h2>
-          <Translation id="page-eth2-deposit-contract-staking-check" />
+          <Translation id="page-staking-deposit-contract-staking-check" />
         </h2>
         <p>
-          <Translation id="page-eth2-deposit-contract-staking-check-desc" />
+          <Translation id="page-staking-deposit-contract-staking-check-desc" />
         </p>
         <CardList content={addressSources} />
       </LeftColumn>
       <RightColumn>
         <AddressCard>
           <CardTag>
-            <Translation id="page-eth2-deposit-contract-address-check-btn" />
+            <Translation id="page-staking-deposit-contract-address-check-btn" />
           </CardTag>
           <CardContainer>
             {!state.showAddress && (
               <>
                 <Row>
                   <CardTitle>
-                    <Translation id="page-eth2-deposit-contract-confirm-address" />
+                    <Translation id="page-staking-deposit-contract-confirm-address" />
                   </CardTitle>
                 </Row>
                 <StyledCheckbox
@@ -357,7 +357,7 @@ const DepositContractPage = ({ data, location }) => {
                     })
                   }
                 >
-                  <Translation id="page-eth2-deposit-contract-checkbox1" />
+                  <Translation id="page-staking-deposit-contract-checkbox1" />
                 </StyledCheckbox>
                 <StyledCheckbox
                   size={1.5}
@@ -369,7 +369,7 @@ const DepositContractPage = ({ data, location }) => {
                     })
                   }
                 >
-                  <Translation id="page-eth2-deposit-contract-checkbox2" />
+                  <Translation id="page-staking-deposit-contract-checkbox2" />
                 </StyledCheckbox>
                 <StyledCheckbox
                   size={1.5}
@@ -382,7 +382,7 @@ const DepositContractPage = ({ data, location }) => {
                     })
                   }
                 >
-                  <Translation id="page-eth2-deposit-contract-checkbox3" />
+                  <Translation id="page-staking-deposit-contract-checkbox3" />
                 </StyledCheckbox>
                 <CopyButton
                   disabled={!isButtonEnabled}
@@ -391,7 +391,7 @@ const DepositContractPage = ({ data, location }) => {
                   }
                 >
                   <Emoji text=":eyes:" size={1} />{" "}
-                  <Translation id="page-eth2-deposit-contract-reveal-address-btn" />
+                  <Translation id="page-staking-deposit-contract-reveal-address-btn" />
                 </CopyButton>
               </>
             )}
@@ -400,10 +400,10 @@ const DepositContractPage = ({ data, location }) => {
                 <Row>
                   <TitleText>
                     <CardTitle>
-                      <Translation id="page-eth2-deposit-contract-address" />
+                      <Translation id="page-staking-deposit-contract-address" />
                     </CardTitle>
                     <Caption>
-                      <Translation id="page-eth2-deposit-contract-address-caption" />
+                      <Translation id="page-staking-deposit-contract-address-caption" />
                     </Caption>
                   </TitleText>
                   <Blockie src={blockieSrc} />
@@ -418,7 +418,7 @@ const DepositContractPage = ({ data, location }) => {
                 )}
                 <Tooltip
                   content={translateMessageId(
-                    "page-eth2-deposit-contract-warning",
+                    "page-staking-deposit-contract-warning",
                     intl
                   )}
                 >
@@ -431,12 +431,12 @@ const DepositContractPage = ({ data, location }) => {
                         {!isCopied ? (
                           <div>
                             <Emoji text=":clipboard:" size={1} />{" "}
-                            <Translation id="page-eth2-deposit-contract-copy" />
+                            <Translation id="page-staking-deposit-contract-copy" />
                           </div>
                         ) : (
                           <div>
                             <Emoji text=":white_check_mark:" size={1} />{" "}
-                            <Translation id="page-eth2-deposit-contract-copied" />
+                            <Translation id="page-staking-deposit-contract-copied" />
                           </div>
                         )}
                       </CopyButton>
@@ -445,16 +445,16 @@ const DepositContractPage = ({ data, location }) => {
                   <Link
                     to={`https://etherscan.io/address/${DEPOSIT_CONTRACT_ADDRESS}`}
                   >
-                    <Translation id="page-eth2-deposit-contract-etherscan" />
+                    <Translation id="page-staking-deposit-contract-etherscan" />
                   </Link>
                 </ButtonRow>
               </>
             )}
             <InfoBanner isWarning={true} emoji=":warning:" mt={`2rem`}>
               <div>
-                <Translation id="page-eth2-deposit-contract-warning-2" />{" "}
+                <Translation id="page-staking-deposit-contract-warning-2" />{" "}
                 <Link to="https://launchpad.ethereum.org">
-                  <Translation id="page-eth2-deposit-contract-launchpad-2" />
+                  <Translation id="page-staking-deposit-contract-launchpad-2" />
                 </Link>
               </div>
             </InfoBanner>

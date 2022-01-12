@@ -145,7 +145,7 @@ const Footer = () => {
         },
         {
           to: `/staking/`,
-          text: "page-eth2-get-involved-stake-eth",
+          text: "page-upgrades-get-involved-stake-eth",
         },
       ],
     },
