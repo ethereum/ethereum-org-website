@@ -345,7 +345,6 @@ const Eth2IndexPage = ({ data }) => {
           ))}
         </StyledCardContainer>
       </Content>
-      {/* TODO: Upgrade existing EthUpgradeDiagram with new plan, then reinstate here */}
       <Content>
         <ContributeCard>
           <div>
