@@ -37,6 +37,7 @@
   "page-index-developers": "Ένα νέο σύνορο ανάπτυξης",
   "page-index-developers-description": "Το Ethereum και οι εφαρμογές του χαρακτηρίζονται από διαφάνεια και είναι ανοιχτού κώδικα. Μπορείτε να κάνετε διακλάδωση κώδικα και να χρησιμοποιήσετε ξανά λειτουργίες που έχουν δημιουργήσει άλλοι πριν από εσάς. Έτσι, εάν δεν θέλετε να μάθετε μια νέα γλώσσα προγραμματισμού, μπορείτε απλά να αλληλεπιδράσετε με έναν ανοικτό κώδικα, χρησιμοποιώντας JavaScript και άλλες υπάρχουσες γλώσσες προγραμματισμού.",
   "page-index-developers-button": "Πύλη προγραμματιστών",
+  "page-index-developers-code-examples": "Code examples",
   "page-index-developers-code-example-title-0": "Η δική σας τράπεζα",
   "page-index-developers-code-example-description-0": "Μπορείτε να δημιουργήσετε μια τράπεζα με βάση τον δικό σας λογικό προγραμματισμό.",
   "page-index-developers-code-example-title-1": "Το δικό σας νόμισμα",

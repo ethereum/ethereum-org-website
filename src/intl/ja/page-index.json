@@ -37,6 +37,7 @@
   "page-index-developers": "開発の新境地",
   "page-index-developers-description": "Ethereumとそのアプリは透明でオープンソースです。コードをフォークして、他の人がすでに作った機能を再利用することができます。新しい言語を学びたくなければ、JavaScriptやその他の既存の言語を使って、オープンソースのコードを扱うことができます。",
   "page-index-developers-button": "開発者ポータル",
+  "page-index-developers-code-examples": "Code examples",
   "page-index-developers-code-example-title-0": "自分の銀行",
   "page-index-developers-code-example-description-0": "自分がプログラムしたロジックで動く銀行を構築することができます。",
   "page-index-developers-code-example-title-1": "自分の通貨",
