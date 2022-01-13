@@ -184,7 +184,7 @@ Slots are opportunities for block creation, the data available for each slot inc
 - Signature.
 - Randao reveal.
 - Graffiti – A block proposer can include 32 byte long message to its block proposal.
-- ETH1data.
+- Execution Data.
   - Block hash.
   - Deposit count.
   - Deposit root.
