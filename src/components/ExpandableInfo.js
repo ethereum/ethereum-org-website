@@ -6,24 +6,19 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import Icon from "./Icon"
 
 const Card = styled.div`
-  border: 1px solid ${(props) => props.theme.colors.border};
+  border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: 2px;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
-  cursor: pointer;
   background: ${({ background, theme }) =>
     background ? theme.colors[background] : theme.colors.background};
   &:hover {
-    transform: scale(1.02);
-    transition: 0.1s;
     img {
       transform: scale(1.08);
-      transition: 0.1s;
+      transition: transform 0.1s;
     }
-    background: ${({ background, theme }) =>
-      background ? theme.colors[background] : theme.colors.background};
   }
 `
 
@@ -80,9 +75,23 @@ const Header = styled.div`
 `
 
 const ButtonContainer = styled(motion.div)`
-  margin-left: auto;
+  display: flex;
+  width: 5rem;
+  justify-content: center;
+  align-items: center;
+  min-height: 10rem;
+  cursor: pointer;
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    margin-left: 0;
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  &:hover {
+    svg {
+      transform: scale(1.25);
+      transition: transform 0.1s;
+    }
   }
 `
 
@@ -146,11 +155,7 @@ const ExpandableInfo = ({
     },
   }
   return (
-    <Card
-      background={background}
-      className={className}
-      onClick={() => setIsVisible(!isVisible)}
-    >
+    <Card background={background} className={className}>
       <Content>
         {image && <GatsbyImage image={image} />}
         <TitleContent>
@@ -165,6 +170,7 @@ const ExpandableInfo = ({
           variants={chevronFlip}
           animate={isVisible ? "expanded" : "collapsed"}
           initial={false}
+          onClick={() => setIsVisible(!isVisible)}
         >
           <Icon name="chevronDown" size="36" />
         </ButtonContainer>
