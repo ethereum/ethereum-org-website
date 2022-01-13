@@ -1,8 +1,8 @@
 ---
 title: How to turn your Raspberry Pi 4 into a node just by flashing the MicroSD card
-description: Flash your Raspberry Pi 4, plug in an ethernet cable, connect the SSD disk and power up the device to turn the Raspberry Pi 4 into a full Ethereum 1.0 node or an Ethereum 2.0 node (beacon chain / validator)
+description: Flash your Raspberry Pi 4, plug in an ethernet cable, connect the SSD disk and power up the device to turn the Raspberry Pi 4 into a full Ethereum node running the execution layer, or consensus layer (Beacon Chain / validator)
 author: "EthereumOnArm"
-tags: ["clients", "eth2", "nodes"]
+tags: ["clients", "execution layer", "consensus layer", "nodes"]
 lang: en
 sidebar: true
 skill: intermediate
@@ -11,13 +11,13 @@ source: r/ethereum
 sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_raspberry_pi_4_images_release/
 ---
 
-**TL;DR**: Flash your Raspberry Pi 4, plug in an ethernet cable, connect the SSD disk and power up the device to turn the Raspberry Pi 4 into a full Ethereum 1.0 node or an Ethereum 2.0 node (beacon chain / validator)
+**TL;DR**: Flash your Raspberry Pi 4, plug in an ethernet cable, connect the SSD disk and power up the device to turn the Raspberry Pi 4 into a full Ethereum node running the execution layer, or the consensus layer (Beacon Chain / validator)
 
-[Learn about Ethereum 2.0 (Eth2)](/upgrades/)
+[Learn about Ethereum upgrades](/upgrades/)
 
 Some background first. As you know, we’ve been running into some memory issues [[1]](/developers/tutorials/run-node-raspberry-pi/#references) with the Raspberry Pi 4 image as Raspbian OS is still on 32bits [[2]](/developers/tutorials/run-node-raspberry-pi/#references) (at least the userland). While we prefer to stick with the official OS we came to the conclusion that, in order to solve these issues, we need to migrate to a native 64 bits OS
 
-Besides, [Eth 2.0 clients](/upgrades/get-involved/#eth2-clients) don’t support 32 bits binaries so using Raspbian would exclude the Raspberry Pi 4 from running an Eth 2.0 node (and the possibility of staking).
+Besides, [consensus clients](/upgrades/get-involved/#clients) don’t support 32 bits binaries so using Raspbian would exclude the Raspberry Pi 4 from running an Eth 2.0 node (and the possibility of staking).
 
 So, after several tests we are now releasing 2 different images based on Ubuntu 20.04 64bit [[3]](/developers/tutorials/run-node-raspberry-pi/#references): Eth 1.0 and Eth 2.0 editions.
 
@@ -39,14 +39,14 @@ Basically, both are the same image and include the same features of the Raspbian
 
 Both images include the same packages, the only difference between them is that Eth 1.0 runs Geth by default and Eth 2.0 runs Prysm beacon chain by default.
 
-### Ethereum 1.0 clients {#ethereum-10-clients}
+### Execution clients {#execution-clients}
 
 - Geth [[8]](/developers/tutorials/run-node-raspberry-pi/#references): 1.9.13 (official binary)
 - Parity [[9]](/developers/tutorials/run-node-raspberry-pi/#references): 2.7.2 (cross compiled)
 - Nethermind [[10]](/developers/tutorials/run-node-raspberry-pi/#references): 1.8.28 (cross compiled)
 - Hyperledger Besu [[11]](/developers/tutorials/run-node-raspberry-pi/#references): 1.4.4 (compiled)
 
-### Ethereum 2.0 clients {#ethereum-20-clients}
+### Consensus clients {#consensus-clients}
 
 - Prysm [[12]](/developers/tutorials/run-node-raspberry-pi/#references): 1.0.0-alpha6 (official binary)
 - Lighthouse [[13]](/developers/tutorials/run-node-raspberry-pi/#references): 0.1.1 (compiled)
@@ -85,23 +85,23 @@ Keep in mind that you need to plug the disk to an USB 3.0 port (blue)
 
 ## Image download and installation {#image-download-and-installation}
 
-### 1. Download Eth 1.0 or Eth 2.0 images {#1-download-eth-10-or-eth-20-images}
+### 1. Download the execution and consensus layer images {#1-download-execution-or-consensus-images}
 
 <ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">
-  Download Eth 1.0 image
+  Download execution layer image
 </ButtonLink>
 
 sha256 7fa9370d13857dd6abcc8fde637c7a9a7e3a66b307d5c28b0c0d29a09c73c55c
 
 <ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">
-  Download Eth2 image
+  Download consensus layer image
 </ButtonLink>
 
 sha256 74c0c15b708720e5ae5cac324f1afded6316537fb17166109326755232cd316e
 
 ### 2. Flash the image {#2-flash-the-image}
 
-Insert the microSD in your Desktop / Laptop and download the file (Eth 1.0, for instance):
+Insert the microSD in your Desktop / Laptop and download the file (execution layer, for instance):
 
 ```bash
 wget https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip
@@ -130,8 +130,8 @@ The Ubuntu OS will boot up in less than one minute but **you will need to wait a
 
 Depending on the image, you will be running:
 
-- Eth 1.0: Geth as the default client syncing the blockchain
-- Eth2: Prysm as default client syncing the beacon chain (Topaz testnet)
+- Execution client: Geth as the default client syncing the blockchain
+- Consensus client: Prysm as default client syncing the beacon chain (Prater testnet)
 
 ### 5. Log in {#5-log-in}
 
@@ -160,7 +160,7 @@ sudo tail -f /var/log/syslog
 
 Now you need to wait for the blockchain to be synced. In the case of Eth 1.0 This will take a few days depending on several factors but you can expect up to about 5-7 days.
 
-If you are running the Eth2 Topaz tesnet you can expect 1-2 days of Beacon chain synchronization time. Remember that you will need to setup the validator later in order to start the staking process. [How to run the Eth 2.0 validator](/developers/tutorials/run-node-raspberry-pi/#validator)
+If you are running the consensus layer Prater tesnet you can expect 1-2 days of Beacon chain synchronization time. Remember that you will need to setup the validator later in order to start the staking process. [How to run the Eth 2.0 validator](/developers/tutorials/run-node-raspberry-pi/#validator)
 
 ## Monitoring dashboards {#monitoring-dashboards}
 
@@ -176,13 +176,13 @@ Password: ethereum
 
 All clients run as a systemd service. This is important because if a problem arises the system will respawn the process automatically.
 
-Geth and Prysm beacon chain run by default (depending on what you are synchronizing, Eth 1.0 or Eth2) so, if you want to switch to other clients (from Geth to Nethermind, for instance), you need to stop and disable Geth first, and enable and start the other client:
+Geth and Prysm beacon chain run by default (depending on what you are synchronizing, execution later or consensus layer) so, if you want to switch to other clients (from Geth to Nethermind, for instance), you need to stop and disable Geth first, and enable and start the other client:
 
 ```bash
 sudo systemctl stop geth && sudo systemctl disable geth
 ```
 
-Commands to enable and start each Eth 1.0 client:
+Commands to enable and start each execution client:
 
 ```bash
 sudo systemctl enable besu && sudo systemctl start besu
@@ -190,7 +190,7 @@ sudo systemctl enable nethermind && sudo systemctl start nethermind
 sudo systemctl enable parity && sudo systemctl start parity
 ```
 
-Eth2:
+Consensus clients:
 
 ```bash
 sudo systemctl stop prysm-beacon && sudo systemctl disable prysm-beacon
@@ -207,7 +207,7 @@ Clients’ config files are located in the /etc/ethereum/ directory. You can edi
 
 Blockchain clients’ data is stored on the Ethereum home account as follows (note the dot before the directory name):
 
-### Eth 1.0 {#eth-10}
+### Execution layer {#execution-layer}
 
 ```bash
 /home/ethereum/.geth
@@ -216,7 +216,7 @@ Blockchain clients’ data is stored on the Ethereum home account as follows (no
 /home/ethereum/.nethermind
 ```
 
-### Eth2 {#eth2}
+### Consensus layer {#consensus-layer}
 
 ```bash
 /home/ethereum/.eth2
@@ -232,7 +232,7 @@ Both need further testing so feel free to play with them and report back your fe
 
 ## How to run the Eth 2.0 validator (staking) {#validator}
 
-Once the Topaz testnet beacon chain is synchronized you can run a validator in the same device. You will need to follow [these participation steps](https://prylabs.net/participate).
+Once the Prater testnet beacon chain is synchronized you can run a validator in the same device. You will need to follow [these participation steps](https://prylabs.net/participate).
 
 The first time, you need to create manually an account by running the “validator” binary and setup a password. Once you have completed this step you can add the password to `/etc/ethereum/prysm-validator.conf` and start the validator as a systemd service.
 

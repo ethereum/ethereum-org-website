@@ -42,14 +42,14 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 两个映像都包括相同的软件包，它们之间唯一的区别是 Eth 1.0 默认运行 Geth，Eth 2.0 默认运行 Prysm 信标链。
 
-### 以太坊 1.0 客户端 {#ethereum-10-clients}
+### 以太坊 1.0 客户端 {#execution-clients}
 
 - Geth[[8]](/developers/tutorials/run-node-raspberry-pi/#references)：1.9.13 (官方二进制文件)
 - Parity[[9]](/developers/tutorials/run-node-raspberry-pi/#references)：2.7.2（交叉编译）。
 - Nethermind [[10]](/developers/tutorials/run-node-raspberry-pi/#references)：1.8.28（交叉编译）。
 - Hyperledger Besu[[11]](/developers/tutorials/run-node-raspberry-pi/#references)：1.4.4（已编译）。
 
-### 以太坊 2.0 客户端 {#ethereum-20-clients}
+### 以太坊 2.0 客户端 {#consensus-clients}
 
 - Prysm[[12]](/developers/tutorials/run-node-raspberry-pi/#references)：1.0.0-alpha6（官方二进制文件）。
 - Lighthouse[[13]](/developers/tutorials/run-node-raspberry-pi/#references)：0.1.1（已编译）。
@@ -88,7 +88,7 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 ## 映像下载和安装 {#image-download-and-installation}
 
-### 1. 下载 Eth 1.0 或 Eth 2.0 映像 {#1-download-eth-10-or-eth-20-images}<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">下载 Eth 1.0 映像</ButtonLink>
+### 1. 下载 Eth 1.0 或 Eth 2.0 映像 {#1-download-execution-or-consensus-images}<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">下载 Eth 1.0 映像</ButtonLink>
 
 ssha256 7fa9370d13857dd6abcc8fde637c7a9a7e3a66b307d5c28b0c0d29a09c73c55c<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">下载 Eth2 映像</ButtonLink>
 
@@ -202,7 +202,7 @@ sudo systemctl start lighthouse && sudo systemctl enable lighthouse
 
 区块链客户端的数据存储在以太坊主帐户上，如下所示（注意目录名称前的点）。
 
-### Eth 1.0 {#eth-10}
+### Eth 1.0 {#execution-layer}
 
 ```bash
 /home/ethereum/.geth
@@ -211,7 +211,7 @@ sudo systemctl start lighthouse && sudo systemctl enable lighthouse
 /home/ethereum/.nethermind
 ```
 
-### Eth2 {#eth2}
+### Eth2 {#consensus-layer}
 
 ```bash
 /home/ethereum/.eth2
