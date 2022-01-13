@@ -152,7 +152,7 @@ Bien sûr, certaines données parlent de la santé du réseau. Elle sont très s
 
 Les mises à niveau Eth2 sont toujours en cours de développement, mais il est intéressant de parler des points de données que les explorateurs seront capables de vous fournir. En fait, toutes ces données sont déjà disponibles pour les réseaux de test.
 
-Si vous n'êtes pas familiarisé avec Eth2, lisez cette [présentation des mises à niveau Eth2](/eth2/).
+Si vous n'êtes pas familiarisé avec Eth2, lisez cette [présentation des mises à niveau Eth2](/upgrades/).
 
 ### Période {#epoch}
 

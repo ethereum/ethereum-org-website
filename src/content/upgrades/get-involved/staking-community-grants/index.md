@@ -237,7 +237,7 @@ title="How can I learn more about Eth2?">
     Here are some helpful resources:
    </p>
 
-- [Eth2 Overview](/eth2/) – _ethereum.org_
+- [Eth2 Overview](/upgrades/) – _ethereum.org_
 - [The beacon chain](/upgrades/beacon-chain/) – _ethereum.org_
 - The Genesis of a Beacon Chain — Ben Edgington [https://hackmd.io/@benjaminion/genesis](https://hackmd.io/@benjaminion/genesis)
 - The Beacon Chain Ethereum 2.0 explainer — [https://ethos.dev/beacon-chain/](https://ethos.dev/beacon-chain/)

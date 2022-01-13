@@ -152,7 +152,7 @@ Of course there's some data that speaks to the health of the network. These are 
 
 The Eth2 upgrades are still in development but it's worth talking about some of the data points that explorers will be able to provide you. In fact, all of this data is available right now for the testnets.
 
-If you're not familiar with Eth2 check out [our overview of the Eth2 upgrades](/eth2/).
+If you're not familiar with Eth2 check out [our overview of the Eth2 upgrades](/upgrades/).
 
 ### Epoch {#epoch}
 

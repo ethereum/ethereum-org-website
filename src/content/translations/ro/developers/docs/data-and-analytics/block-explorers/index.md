@@ -152,7 +152,7 @@ Desigur, există unele date care vorbesc despre sănătatea rețelei. Acestea su
 
 Upgrade-urile Eth2 sunt încă în dezvoltare, dar merită să vorbim despre unele din punctele de date pe care exploratorii le vor putea oferi. De fapt, toate aceste date sunt disponibile chiar acum pentru rețelele de testare.
 
-Dacă nu ești familiarizat cu Eth2 verifică [prezentarea noastră de ansamblu a upgrade-urilor Eth2](/eth2/).
+Dacă nu ești familiarizat cu Eth2 verifică [prezentarea noastră de ansamblu a upgrade-urilor Eth2](/upgrades/).
 
 ### Epocă {#epoch}
 

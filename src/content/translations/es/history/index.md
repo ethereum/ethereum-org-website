@@ -47,7 +47,7 @@ La [cadena de baliza](/upgrades/beacon-chain/) ha necesitado 16 384 depósitos 
 
 #### Resumen {#deposit-contract-summary}
 
-El contrato de depósito de participación introdujo la [participación](/glossary/#staking) en el ecosistema de Ethereum. Aunque se trata de un contrato [de red principal](/glossary/#mainnet), tuvo un impacto directo en la cronología para lanzar la [cadena de baliza](/upgrades/beacon-chain/), una importante [actualización de Eth2](/eth2/).
+El contrato de depósito de participación introdujo la [participación](/glossary/#staking) en el ecosistema de Ethereum. Aunque se trata de un contrato [de red principal](/glossary/#mainnet), tuvo un impacto directo en la cronología para lanzar la [cadena de baliza](/upgrades/beacon-chain/), una importante [actualización de Eth2](/upgrades/).
 
 [Leer la declaración de la Fundación Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 

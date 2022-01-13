@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-Ethereum sta passando dal [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/) a un meccanismo di consenso detto proof-of-stake (PoS). Questa transizione è sempre stata nei piani perché scalare Ethereum [attraverso gli aggiornamenti Eth2](/eth2/) è uno dei punti chiave della strategia della community. Tuttavia, arrivare alla PoS è un'ardua sfida tecnica e non è semplice come utilizzare la PoW per ottenere consenso in tutta la rete.
+Ethereum sta passando dal [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/) a un meccanismo di consenso detto proof-of-stake (PoS). Questa transizione è sempre stata nei piani perché scalare Ethereum [attraverso gli aggiornamenti Eth2](/upgrades/) è uno dei punti chiave della strategia della community. Tuttavia, arrivare alla PoS è un'ardua sfida tecnica e non è semplice come utilizzare la PoW per ottenere consenso in tutta la rete.
 
 ## Prerequisiti {#prerequisites}
 

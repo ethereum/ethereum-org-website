@@ -13,11 +13,11 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 **TL;DR**: Flash Raspberry PI 4, conectează un cablu ethernet, conectează discul SSD și pornește dispozitivul pentru a transforma Raspberry PI 4 într-un nod Ethereum 1.0 sau un nod Ethereum 2.0 (lanț Beacon / validator)
 
-[Află mai multe despre Ethereum 2.0 (Eth2)](/eth2/)
+[Află mai multe despre Ethereum 2.0 (Eth2)](/upgrades/)
 
 Mai întâi câteva noțiuni de bază. După cum știi, am întâmpinat unele probleme de memorie [[1]](/developers/tutorials/run-node-raspberry-pi/#references) cu imaginea Raspberry PI 4 ca sistem de operare, Raspbian este încă pe 32 de biți [[2]](/developers/tutorials/run-node-raspberry-pi/#references) (cel puțin cu aplicația „userland”). Chiar dacă preferăm să rămânem cu sistemul de operare oficial am ajuns la concluzia că, pentru a rezolva aceste probleme, trebuie să migrăm la un sistem de operare nativ de 64 de biți
 
-În plus, [Clienții Eth 2.0](/eth2/get-infered/#eth2-clients) nu suportă aplicațiile 32 de biți binare, astfel încât utilizarea Raspbian ar exclude Raspberry Pi 4 de la rularea unui nod Eth 2.0 (și posibilitatea de a miza).
+În plus, [Clienții Eth 2.0](/upgrades/get-involved/#eth2-clients) nu suportă aplicațiile 32 de biți binare, astfel încât utilizarea Raspbian ar exclude Raspberry Pi 4 de la rularea unui nod Eth 2.0 (și posibilitatea de a miza).
 
 Deci, după mai multe teste, acum eliberăm 2 imagini diferite bazate pe Ubuntu 20.04 pe 64 biți [[3]](/developers/tutorials/run-node-raspberry-pi/#references): edițiile Eth 1.0 și Eth 2.0.
 

@@ -153,7 +153,7 @@ The [Beacon Chain](/upgrades/beacon-chain/) needed 16384 deposits of 32 staked E
 
 #### Summary {#deposit-contract-summary}
 
-The staking deposit contract introduced [staking](/glossary/#staking) to the Ethereum ecosystem. Although a [Mainnet](/glossary/#mainnet) contract, it had a direct impact on the timeline for launching the [Beacon Chain](/upgrades/beacon-chain/), an important [Eth2 upgrade](/eth2/).
+The staking deposit contract introduced [staking](/glossary/#staking) to the Ethereum ecosystem. Although a [Mainnet](/glossary/#mainnet) contract, it had a direct impact on the timeline for launching the [Beacon Chain](/upgrades/beacon-chain/), an important [Eth2 upgrade](/upgrades/).
 
 [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 

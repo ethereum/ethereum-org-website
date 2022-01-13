@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-Ethereum se trece de la [dovada muncii (PoW)](/developers/docs/consensus-mechanisms/pow/) la un mecanism de consens numit dovada mizei (PoS). Acesta a fost întotdeauna planul, deoarece este un element cheie în strategia comunității de a scala Ethereum prin [upgrade-urile Eth2](/eth2/). Cu toate acestea, realizarea corectă a PoS este o mare provocare tehnică și nu la fel de simplă ca utilizarea PoW pentru a ajunge la un consens în întreaga rețea.
+Ethereum se trece de la [dovada muncii (PoW)](/developers/docs/consensus-mechanisms/pow/) la un mecanism de consens numit dovada mizei (PoS). Acesta a fost întotdeauna planul, deoarece este un element cheie în strategia comunității de a scala Ethereum prin [upgrade-urile Eth2](/upgrades/). Cu toate acestea, realizarea corectă a PoS este o mare provocare tehnică și nu la fel de simplă ca utilizarea PoW pentru a ajunge la un consens în întreaga rețea.
 
 ## Condiții prealabile {#prerequisites}
 

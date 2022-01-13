@@ -152,7 +152,7 @@ Naturalmente ci sono alcuni dati che indicano la salute della rete. Sono abbasta
 
 Gli upgrade a Eth2 sono ancora in fase di sviluppo ma vale la pena parlare di alcuni dati che gli explorer saranno in grado di fornire. Di fatto, tutti questi dati sono già disponibili per le reti di prova.
 
-Se non hai familiarità con Eth2, consulta la [nostra panoramica sugli aggiornamenti a Eth2](/eth2/).
+Se non hai familiarità con Eth2, consulta la [nostra panoramica sugli aggiornamenti a Eth2](/upgrades/).
 
 ### Epoch {#epoch}
 

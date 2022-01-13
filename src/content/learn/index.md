@@ -87,7 +87,7 @@ There are many efforts underway to make Ethereum more “scalable” by improvin
 
 Eth2 (also known as “Serenity”) refers to the next major upgrade of the core Ethereum protocol. It combines several improvements to Ethereum’s core protocol, or “Layer 1”.
 
-[Learn everything you need to know about Eth2](/eth2/).
+[Learn everything you need to know about Eth2](/upgrades/).
 
 ## ETH 1.x {#eth-1x}
 

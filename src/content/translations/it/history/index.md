@@ -47,7 +47,7 @@ La [beacon chain](/upgrades/beacon-chain/) necessitava di 16384 depositi di 32 E
 
 #### Riepilogo {#deposit-contract-summary}
 
-Il contratto di deposito in staking ha introdotto lo [staking](/glossary/#staking) nell'ecosistema di Ethereum. Nonostante fosse un contratto della [rete principale](/glossary/#mainnet), ha avuto un impatto diretto sulla linea temporale per il lancio della [beacon chain](/upgrades/beacon-chain/), un importante [upgrade a Eth2](/eth2/).
+Il contratto di deposito in staking ha introdotto lo [staking](/glossary/#staking) nell'ecosistema di Ethereum. Nonostante fosse un contratto della [rete principale](/glossary/#mainnet), ha avuto un impatto diretto sulla linea temporale per il lancio della [beacon chain](/upgrades/beacon-chain/), un importante [upgrade a Eth2](/upgrades/).
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
