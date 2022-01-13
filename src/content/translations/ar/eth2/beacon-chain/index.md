@@ -1,7 +1,7 @@
 ---
 title: السلسلة المُنارة
 description: تعرّف على سلسلة المنارة - أول ترقية Eth2 رئيسية لإثيريوم.
-lang: الانجليزية
+lang: ar
 template: eth2
 sidebar: true
 image: ../../../../../assets/eth2/core.png
