@@ -5,7 +5,6 @@
   "eth2-client-nimbus-logo-alt": "Logo de Nimbus",
   "eth2-client-prysm-logo-alt": "Logo de Prysm",
   "eth2-client-teku-logo-alt": "Logo de Teku",
-  "eth2-client-trinity-logo-alt": "Logo de Trinity",
   "eth2-rhino-img-alt": "Graphique de Rhino Eth 2 chargeant en avant",
   "page-eth2-answer-1": "Pensez à Eth2 comme un ensemble de mises à niveau qui sont ajoutées pour améliorer l'Ethereum que nous utilisons aujourd'hui. Ces améliorations incluent la création d'une nouvelle chaîne appelée chaîne phare ainsi que jusqu'à 64 chaînes connues sous le nom de fragments.",
   "page-eth2-answer-2": "Ceux-ci sont séparés du réseau principal Ethereum que nous utilisons aujourd'hui, mais ne le remplaceront pas. Au lieu de cela, le réseau principal va s’arrimer ou \"fusionner\" avec ce système parallèle qui est ajouté au fil du temps.",
