@@ -12,7 +12,7 @@ summaryPoint4: Les feuilles de route techniques incluent des travaux sur les cha
 ---
 
 <UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
-    Les chaînes de fragments devraient être lancées courant 2023, en fonction de la rapidité avec laquelle le travail progresse après le lancement de <a href="/eth2/beacon-chain/"> la chaîne phare</a>. Ces fragments donneront à Ethereum une plus grande capacité à stocker et à accéder aux données, mais ils ne seront pas utilisés pour exécuter du code. Les détails sont encore en cours d'élaboration.
+    Les chaînes de fragments devraient être lancées courant 2023, en fonction de la rapidité avec laquelle le travail progresse après le lancement de <a href="/eth2/merge/">la fusion</a>. Ces fragments donneront à Ethereum une plus grande capacité à stocker et à accéder aux données, mais ils ne seront pas utilisés pour exécuter du code. Les détails sont encore en cours d'élaboration.
 </UpgradeStatus>
 
 ## Qu'est ce que la fragmentation ou "Sharding" ? {#what-is-sharding}
@@ -45,11 +45,15 @@ Lorsque les premières chaînes de fragments seront expédiées, elles ne fourni
 
 Les Rollups sont une technologie de "layer 2" qui existe aujourd'hui. Ils permettent aux DApps de regrouper ou de "lancer" des transactions en une seule transaction hors chaîne, de générer une preuve cryptographique et de la soumettre ensuite à la chaîne. Cela réduit les données nécessaires pour une transaction. Combinez ceci avec toutes les données supplémentaires fournies par les fragments et vous obtenez 100 000 transactions par seconde.
 
-[Plus d'infos sur les rollups](/developers/docs/layer-2-scaling/)
+<InfoBanner isWarning={false}>
+  Etant donné les progrès récents dans la recherche et le développement de solutions de mise à l'échelle de la couche 2, cela a incité la priorisation de la mise à jour de la fusion avant les chaînes de fragments (shard chains). Celles-ci seront au centre des préoccupations à la suite de la transition du réseau principal aux preuves de ses enjeu.
+
+[En savoir plus sur les rollups](/developers/docs/scaling/layer-2-rollups/)
+</InfoBanner>
 
 ## Chaînes de fragments version 2 : exécution de code {#code-execution}
 
-Le plan a toujours été d'ajouter des fonctionnalités supplémentaires aux fragments, pour les rendre plus semblables au réseau principal [Ethereum](/glossary/#mainnet) d'aujourd'hui. Cela leur permettrait de stocker et d'exécuter des contrats intelligents et de gérer des comptes. Mais compte tenu de l'augmentation des transactions par seconde que la version 1 des fragments apporte, cela est-il encore nécessaire ? Cette question est toujours débattue au sein de la communauté et il semble qu'il y ait quelques options.
+Le plan a toujours été d'ajouter des fonctionnalités supplémentaires aux fragments (shards), pour les rendre plus similaires au réseau principal [Ethereum](/glossary/#mainnet) actuel. Cela leur permettrait de stocker et d'exécuter des contrats intelligents et de gérer des comptes. Mais compte tenu de l'augmentation des transactions par seconde que la version 1 des fragments apporte, cela est-il encore nécessaire ? Cette question est toujours débattue au sein de la communauté et il semble qu'il y ait quelques options.
 
 ### Les fragments doivent-ils être exécutés ? {#do-shards-need-code-execution}
 
@@ -79,19 +83,25 @@ Ce point de discussion reste actif. Nous mettrons à jour ces pages dès que nou
 
 ## Relations entre les mises à niveau {#relationship-between-upgrades}
 
-Les mises à niveau de l'Eth2 sont en quelque sorte liées. Récapitulons donc comment les chaînes de fragments sont liées aux autres mises à niveau.
+Les mises à niveau d'Eth2 sont en quelque sorte liées. Récapitulons donc comment les chaînes de fragments sont liées aux autres mises à niveau.
 
 ### Fragments et chaîne phare {#shards-and-beacon-chain}
 
-La chaîne phare contient toute la logique permettant de sécuriser et de synchroniser les fragments de façon sécuritaire. La chaîne phare coordonnera les validateurs du réseau, les assignant aux fragments sur lesquels ils doivent travailler. De plus, elle facilitera la communication entre les fragments en recevant et en stockant des données sur les transactions qui sont accessibles par d'autres fragments. Cela donnera aux fragments un aperçu de l'état d'Ethereum pour garder tout à jour.
+La chaîne phare contient toute la logique permettant de sécuriser et de synchroniser les fragments de façon sécurisée. La chaîne phare coordinera les stakers dans le réseau, en les assignant à des fragments sur lesquels ils doivent travailler. De plus, elle facilitera la communication entre les fragments en recevant et en stockant des données sur les transactions qui sont accessibles par d'autres fragments. Cela donnera aux fragments un aperçu de l'état d'Ethereum pour garder tout à jour.
 
-<ButtonLink to="/eth2/beacon-chain/">La chaîne phare</ButtonLink>
+<ButtonLink to="/eth2/beacon-chain/">
+  La chaîne phare
+</ButtonLink>
 
-### Fragments et arrimage {#shards-and-docking}
+### Les fragments (shards) et la fusion {#shards-and-docking}
 
-Le réseau principal d'Ethereum continuera d'exister comme il le fait aujourd'hui même après l'introduction des fragments. Cependant, à un moment donné, le mainnet devra devenir un fragment pour qu'il puisse passer à la mise en jeu. Reste à savoir si le réseau principal existera en tant que seul fragment "intelligent" capable de gérer l'exécution de code – mais autrement, une décision devra être prise au sujet de la phase 2 de la fragmentation.
+Au même moment où des fragments supplémentaires sont ajoutés, le réseau principal d'Ethereum sera déjà sécurisé par la chaîne phare à l'aide d'une preuve d'enjeu. Cela autorise un réseau principal (mainnet) ouvert pour créer des chaînes de fragments (shards chains), alimentées par les solutions de la couche 2 (layer 2) qui renforcent l'évolutivité.
 
-<ButtonLink to="/eth2/docking/">L'arrimage</ButtonLink>
+Reste à voir si le réseau principal existera en tant que seul fragment "intelligent" capable de gérer l'exécution de code – mais autrement, une décision pour étendre les fragments pourra être envisagée si besoin.
+
+<ButtonLink to="/eth2/merge/">
+  La fusion
+</ButtonLink>
 
 <Divider />
 
