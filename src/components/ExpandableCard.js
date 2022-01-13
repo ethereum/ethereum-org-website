@@ -12,7 +12,6 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
-  cursor: pointer;
   &:hover {
     background-color: ${(props) => props.theme.colors.ednBackground};
   }
@@ -104,7 +103,7 @@ const ExpandableCard = ({ children, contentPreview, title, svg }) => {
     },
   }
   return (
-    <Card onClick={() => setIsVisible(!isVisible)}>
+    <Card>
       <Content>
         <Question>
           <Header>
@@ -113,7 +112,7 @@ const ExpandableCard = ({ children, contentPreview, title, svg }) => {
           </Header>
           <TextPreview>{contentPreview}</TextPreview>
         </Question>
-        <ButtonContainer>
+        <ButtonContainer onClick={() => setIsVisible(!isVisible)}>
           {!isVisible && (
             <FakeLink>
               <Translation id="more" />
