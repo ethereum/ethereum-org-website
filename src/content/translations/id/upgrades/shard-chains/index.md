@@ -2,17 +2,17 @@
 title: Rantai shard
 description: Pelajari tentang rantai shard - partisi jaringan yang memberi Ethereum lebih banyak kapasitas transaksi dan membuatnya lebih mudah dijalankan.
 lang: id
-template: eth2
+template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/newrings.png
+image: ../../../../../assets/upgrades/newrings.png
 summaryPoint1: Sharding adalah peningkatan multi-fase untuk meningkatkan skalabilitas dan kapasitas Ethereum.
 summaryPoint2: Rantai shard menyebarkan muatan jaringan ke 64 rantai baru.
 summaryPoint3: Mereka memudahkan untuk menjalankan node dengan mempertahankan persyaratan perangkat keras tetap rendah.
 summaryPoint4: Peningkatan ini direncanakan setelah penggabungan Jaringan Utama dengan Rantai Suar.
 ---
 
-<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
-    Rantai shard seharusnya diluncurkan suatu hari pada 2023, bergantung pada seberapa cepat kemajuan pengerjaannya setelah <a href="/eth2/merge/">penggabungan</a>. Shard tersebut dapat memberikan Ethereum kapasitas yang lebih besar untuk menyimpan dan mengakses data, tetapi mereka tidak akan digunakan untuk menjalankan kode. Untuk informasi detilnya sedang dikembangkan.
+<UpgradeStatus dateKey="page-upgrades-shards-date">
+    Rantai shard seharusnya diluncurkan suatu hari pada 2023, bergantung pada seberapa cepat kemajuan pengerjaannya setelah <a href="/upgrades/merge/">penggabungan</a>. Shard tersebut dapat memberikan Ethereum kapasitas yang lebih besar untuk menyimpan dan mengakses data, tetapi mereka tidak akan digunakan untuk menjalankan kode. Untuk informasi detilnya sedang dikembangkan.
 </UpgradeStatus>
 
 ## Apa itu sharding? {#what-is-sharding}
@@ -31,7 +31,7 @@ Sharding adalah cara yang baik untuk mengubah ukuran apabila Anda ingin tetap me
 
 Sharding pada akhirnya akan memampukan Anda menjalankan Ethereum di laptop atau ponsel pribadi. Jadi semakin banyak orang seharusnya berpartisipasi, atau menjalankan [klien](/developers/docs/nodes-and-clients/), dengan Ethereum yang memiliki shard. Ini akan meningkatkan keamanan karena semakin jaringan terdesentralisasi, semakin kecil pula daerah serangan.
 
-Dengan persyaratan spesifikasi perangkat keras yang rendah, sharding akan mempermudah menjalankan [klien](/developers/docs/nodes-and-clients/) Anda secara mandiri tanpa harus bergantung pada jasa perantara. Dan jika memungkinkan, pertimbangkan untuk menjalankan beberapa klien. Ini bisa mendukung kesehatan jaringan dengan semakin mengurangi titik kegagalan. [Jalankan klien Eth2](/eth2/get-involved/)
+Dengan persyaratan spesifikasi perangkat keras yang rendah, sharding akan mempermudah menjalankan [klien](/developers/docs/nodes-and-clients/) Anda secara mandiri tanpa harus bergantung pada jasa perantara. Dan jika memungkinkan, pertimbangkan untuk menjalankan beberapa klien. Ini bisa mendukung kesehatan jaringan dengan semakin mengurangi titik kegagalan. [Jalankan klien Eth2](/upgrades/get-involved/)
 
 <br />
 
@@ -90,7 +90,7 @@ Semua peningkatan Eth2 saling terkait. Jadi mari kita rekap bagaimana rantai sha
 
 Rantai Suar berisi semua logika untuk menjaga shard tetap aman dan tersinkronisasi. Rantai Suar akan mengoordinasikan para penaruh di jaringan, menugaskan mereka pada shard yang harus mereka kerjakan. Dan ini juga akan memfasilitasi komunikasi antar shard melalui penerimaan dan penyimpanan data transaksi shard yang dapat diakses oleh shard lain. Ini akan memberikan shard sebuah gambaran singkat mengenai kondisi Ethereum untuk menjaga semuanya tetap mutakhir.
 
-<ButtonLink to="/eth2/beacon-chain/">
+<ButtonLink to="/upgrades/beacon-chain/">
   Rantai Suar
 </ButtonLink>
 
@@ -101,11 +101,11 @@ Pada waktu shard tambahan ditambahkan, Jaringan Utama Ethereum sudah diamankan o
 Masih harus dilihat apakah jaringan utama akan hadir sebagai shard “pintar” satu-satunya yang bisa menangani eksekusi kode – tapi bagaimanapun juga, keputusan untuk memperluas shard bisa ditinjau ulang sesuai kebutuhan.
 
 <div>
-  <ButtonLink to="/eth2/merge/">Penggabungan</ButtonLink>
+  <ButtonLink to="/upgrades/merge/">Penggabungan</ButtonLink>
 </div>
 
 <Divider />
 
 ### Baca lebih lanjut {#read-more}
 
-<Eth2ShardChainsList />
+<ShardChainsList />

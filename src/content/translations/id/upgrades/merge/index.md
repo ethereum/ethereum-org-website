@@ -2,22 +2,22 @@
 title: Penggabungan
 description: Pelajari tentang penggabungan - ketika Jaringan Utama Ethereum bergabung dengan Rantai Suar yang dikoordinasikan sistem bukti penaruhan.
 lang: id
-template: eth2
+template: upgrade
 sidebar: true
-image: ../../../../../assets/eth2/merge.png
+image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: Pada akhirnya, Jaringan Utama Ethereum saat ini akan "bergabung" dengan sistem bukti taruhan rantai suar.
 summaryPoint2: Ini akan menandai akhir bukti kerja untuk Ethereum, dan transisi penuh ke bukti taruhan.
 summaryPoint3: Ini direncanakan mendahului peluncuran rantai shard.
 summaryPoint4: Sebelumnya kami menyebutnya sebagai "docking."
 ---
 
-<UpgradeStatus dateKey="page-eth2-upgrades-merge-date">
-  Peningkatan ini mewakilkan peralihan resmi ke konsensus bukti taruhan. Ini menghilangkan kebutuhan akan penambangan dengan energi besar, dan alih-alih mengamankan jaringan yang menggunakan ether yang ditaruhkan. Satu langkah yang sangat menyenangkan dalam mewujudkan <a href="/eth2/vision/">visi Eth2</a> – lebih banyak skalabilitas, keamanan, dan keberlanjutan.
+<UpgradeStatus dateKey="page-upgrades-merge-date">
+  Peningkatan ini mewakilkan peralihan resmi ke konsensus bukti taruhan. Ini menghilangkan kebutuhan akan penambangan dengan energi besar, dan alih-alih mengamankan jaringan yang menggunakan ether yang ditaruhkan. Satu langkah yang sangat menyenangkan dalam mewujudkan <a href="/upgrades/vision/">visi Eth2</a> – lebih banyak skalabilitas, keamanan, dan keberlanjutan.
 </UpgradeStatus>
 
 ## Apa itu penggabungan? {#what-is-the-docking}
 
-Penting untuk diingat bahwa pada awalnya [Rantai Suar](/eth2/beacon-chain/) diluncurkan terpisah dari [Jaringan Utama](/glossary/#mainnet) - sistem rantai yang kita pakai saat ini. Jaringan Utama Ethereum terus diamankan oleh [bukti kerja](/developers/docs/consensus-mechanisms/pow/), sekalipun Rantai Suar beroperasi secara paralel menggunakan [bukti taruhan](/developers/docs/consensus-mechanisms/pos/). Penggabungan terjadi ketika dua sistem ini pada akhirnya menjadi satu.
+Penting untuk diingat bahwa pada awalnya [Rantai Suar](/upgrades/beacon-chain/) diluncurkan terpisah dari [Jaringan Utama](/glossary/#mainnet) - sistem rantai yang kita pakai saat ini. Jaringan Utama Ethereum terus diamankan oleh [bukti kerja](/developers/docs/consensus-mechanisms/pow/), sekalipun Rantai Suar beroperasi secara paralel menggunakan [bukti taruhan](/developers/docs/consensus-mechanisms/pos/). Penggabungan terjadi ketika dua sistem ini pada akhirnya menjadi satu.
 
 Bayangkan Ethereum adalah sebuah kapal luar angkasa yang belum cukup siap untuk perjalanan antar bintang. Dengan Rantai Suar, komunitas telah membangun sebuah mesin baru dan lambung kapal yang lebih kuat. Ketika sudah saatnya, kapal yang ada saat ini akan bergabung dengan sistem baru, menjadi satu kapal, siap untuk melakukan perjalanan tahun cahaya yang intens, dan mengarungi alam semesta.
 
@@ -29,7 +29,7 @@ Jaringan Utama akan memampukan pengoperasian kontrak pintar menjadi sistem bukti
 
 ## Setelah penggabungan {#after-the-merge}
 
-Ini akan menandakan akhir dari bukti kerja untuk Ethereum dan memulai era Ethereum yang lebih berkelanjutan dan ramah lingkungan. Pada titik ini Ethereum akan satu langkah lebih dekat pada pencapaian penskalaan, keamanan, dan keberlanjutan penuh yang digariskan dalam [visi Eth2](/eth2/vision/).
+Ini akan menandakan akhir dari bukti kerja untuk Ethereum dan memulai era Ethereum yang lebih berkelanjutan dan ramah lingkungan. Pada titik ini Ethereum akan satu langkah lebih dekat pada pencapaian penskalaan, keamanan, dan keberlanjutan penuh yang digariskan dalam [visi Eth2](/upgrades/vision/).
 
 Penting untuk dicatat bahwa satu tujuan implementasi dari penggabungan adalah kemudahan untuk mempercepat transisi dari sistem bukti kerja ke bukti taruhan. Pengembang sedang memusatkan usaha mereka pada transisi ini, dan mengurangi fitur tambahan yang bisa menunda pencapaian tujuan ini.
 
@@ -43,7 +43,7 @@ Semua peningkatan Eth2 saling terkait. Jadi mari kita ringkas bagaimana penggabu
 
 Saat penggabungan terjadi, penaruh akan ditugaskan untuk memvalidasi Jaringan Utama Ethereum. [Penambangan](/developers/docs/consensus-mechanisms/pow/mining/) tidak lagi diperlukan sehingga penambang kemungkinan akan menginvestasikan penghasilan mereka ke dalam penaruhan pada sistem bukti taruhan yang baru.
 
-<ButtonLink to="/eth2/beacon-chain/">Rantai Suar</ButtonLink>
+<ButtonLink to="/upgrades/beacon-chain/">Rantai Suar</ButtonLink>
 
 ### Penggabungan dan pembersihan pasca penggabungan {#merge-and-post-merge-cleanup}
 
@@ -57,4 +57,4 @@ Pada awalnya, rencananya adalah melanjutkan pengembangan rantai shard sebelum pe
 
 Ini akan menjadi penilaian berkelanjutan dari komunitas seiring dengan kebutuhan akan potensi beberapa putaran rantai shard untuk memungkinkan skalabilitas yang tak terbatas.
 
-<ButtonLink to="/eth2/shard-chains/">Rantai shard</ButtonLink>
+<ButtonLink to="/upgrades/shard-chains/">Rantai shard</ButtonLink>
