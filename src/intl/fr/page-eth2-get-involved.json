@@ -27,6 +27,8 @@
   "page-eth2-get-involved-more": "Plus d'infos",
   "page-eth2-get-involved-run-clients": "Opérez des logiciels clients de la chaîne phare",
   "page-eth2-get-involved-run-clients-desc": "La clé de la sécurité à long terme d'Ethereum est une distribution solide des logiciels clients. Un logiciel client est un logiciel qui opère la blockchain, vérifie les transactions et crée de nouveaux blocs. Chaque client a ses propres caractéristiques, alors choisissez en fonction de ce qui vous convient le mieux.",
+  "page-eth2-get-involved-run-clients-production": "Clients Eth2 prêts à la production",
+  "page-eth2-get-involved-run-clients-experimental": "Clients experimentaux Eth2",
   "page-eth2-get-involved-stake": "Mettre en jeu vos ETH",
   "page-eth2-get-involved-stake-desc": "Vous pouvez dès à présent miser vos ETH pour contribuer à la sécurisation de la chaîne phare.",
   "page-eth2-get-involved-stake-eth": "Mettre en jeu de l'ETH",
