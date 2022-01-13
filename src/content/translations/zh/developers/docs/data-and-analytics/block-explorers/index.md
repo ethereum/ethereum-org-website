@@ -148,7 +148,7 @@ sidebarDepth: 3
 - 以太坊总供应量 – 流通中的以太坊数量 – 请记住，以区块奖励的形式创建每个区块都会创建新的 ETH。
 - 市值 – 以价格\*供应量计算。
 
-## Eth2 数据 {#eth2-data}
+## Eth2 数据 {#consensus-layer-data}
 
 Eth2 升级仍在开发中，但值得探讨区块浏览器能够为您提供的一些数据点。 事实上，所有这些数据现在都可用于测试网。
 
@@ -257,7 +257,7 @@ Eth2 顶级数据包括以下内容：
 - [Ethplorer](https://ethplorer.io/) - 一个专注于以太坊主网和 Kovan 测试网上代币信息的区块浏览器。
 - [Blockchair](https://blockchair.com/ethereum) - 最具隐私保护的以太坊浏览器。 也用于排序和过滤（内存池）数据。
 
-## Eth2 区块浏览器 {#eth2-block-explorers}
+## Eth2 区块浏览器 {#beacon-chain-block-explorers}
 
 - [https://beaconcha.in/](https://beaconcha.in/)
 - [https://beaconscan.com/](https://beaconscan.com/)

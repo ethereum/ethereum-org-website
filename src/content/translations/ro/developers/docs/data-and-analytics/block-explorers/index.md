@@ -148,7 +148,7 @@ Desigur, există unele date care vorbesc despre sănătatea rețelei. Acestea su
 - Aprovizionare totală în ETH – Numărul de ETH în circulație – amintește-ți că ETH nou este creat odată cu crearea fiecărui bloc, sub formă de recompense de bloc.
 - Plafon de piață – Calcularea prețului\*ofertei.
 
-## Date Eth2 {#eth2-data}
+## Date Eth2 {#consensus-layer-data}
 
 Upgrade-urile Eth2 sunt încă în dezvoltare, dar merită să vorbim despre unele din punctele de date pe care exploratorii le vor putea oferi. De fapt, toate aceste date sunt disponibile chiar acum pentru rețelele de testare.
 
@@ -257,7 +257,7 @@ Datele de nivel superior Eth2 includ următoarele:
 - [Ethplorer](https://ethplorer.io/) – un explorator de bloc cu accent pe tokenuri pentru rețeaua principală Ethereum și rețeaua de testare Kovan.
 - [Blocchair](https://blockchair.com/ethereum) – cel mai privat explorator Ethereum. De asemenea, pentru sortare și filtrare a datelor (mempool).
 
-## Exploratori de blocuri Eth2 {#eth2-block-explorers}
+## Exploratori de blocuri Eth2 {#beacon-chain-block-explorers}
 
 - [https://beaconcha.in/](https://beaconcha.in/)
 - [https://beaconscan.com/](https://beaconscan.com/)
