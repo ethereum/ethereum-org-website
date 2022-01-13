@@ -126,39 +126,35 @@ const Highlight = styled(Content)`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
   background: ${({ theme, backgroundColor }) => theme.colors[backgroundColor]};
   border: 1px solid #dadada;
   box-sizing: border-box;
   border-radius: 4px;
+  padding: 2rem 6rem;
   color: ${({ theme }) => theme.colors.text};
   position: relative;
   isolation: isolate;
-
+  img {
+    margin: 0 0 0 2rem;
+  }
   &:nth-of-type(even) {
     flex-direction: row-reverse;
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    &:nth-of-type(even) {
-      flex-direction: column-reverse;
+    img {
+      margin: 0 2rem 0 0;
     }
-    flex-direction: column-reverse;
   }
-`
-
-const StyledExpandableInfo = styled(ExpandableInfo)`
-  width: 90%;
-  align-self: center;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    margin: 0;
-    width: 100%;
-  }
-`
-
-const SoftwareHighlight = styled(Highlight)`
-  padding: 2rem 6rem;
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     padding: 2rem;
+    flex-direction: column-reverse;
+    &:nth-of-type(even) {
+      flex-direction: column-reverse;
+      img {
+        margin: 0 0 2rem;
+      }
+    }
+    img {
+      margin: 0 0 2rem;
+    }
   }
   &::after {
     content: "";
@@ -167,6 +163,17 @@ const SoftwareHighlight = styled(Highlight)`
     z-index: -1;
     background: inherit;
     filter: blur(1rem);
+  }
+`
+
+const SoftwareHighlight = styled(Highlight)``
+
+const StyledExpandableInfo = styled(ExpandableInfo)`
+  width: 90%;
+  align-self: center;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    margin: 0;
+    width: 100%;
   }
 `
 
@@ -187,10 +194,10 @@ const InfoGrid = styled(CardGrid)`
   }
 `
 
-const Width80 = styled.div`
+const ColumnFill = styled.div`
   line-height: 2;
   box-sizing: border-box;
-  flex: 4;
+  flex: 1;
   ul {
     list-style: none;
   }
@@ -199,13 +206,12 @@ const Width80 = styled.div`
   }
 `
 
-const Width20 = styled.div`
-  flex: 1;
+const ColumnNarrow = styled.div`
+  box-sizing: border-box;
   display: flex;
   inset: auto;
   justify-content: center;
   align-items: center;
-  place-items: center;
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     width: 100%;
   }
@@ -752,7 +758,7 @@ const RunANodePage = ({ data }) => {
         </h2>
         <GappedContent>
           <SoftwareHighlight backgroundColor="homeBoxTurquoise">
-            <Width80>
+            <ColumnFill>
               <p>
                 <Translation id="page-run-a-node-getting-started-software-section-1" />
               </p>
@@ -765,8 +771,8 @@ const RunANodePage = ({ data }) => {
               <Link to="/developers/docs/nodes-and-clients/run-a-node/#spinning-up-node">
                 <Translation id="page-run-a-node-getting-started-software-section-1-link" />
               </Link>
-            </Width80>
-            <Width20>
+            </ColumnFill>
+            <ColumnNarrow>
               <img
                 src={terminal}
                 alt={translateMessageId(
@@ -774,16 +780,16 @@ const RunANodePage = ({ data }) => {
                   intl
                 )}
               />
-            </Width20>
+            </ColumnNarrow>
           </SoftwareHighlight>
 
           <SoftwareHighlight backgroundColor="homeBoxOrange">
-            <Width80>
+            <ColumnFill>
               <p>
                 <Translation id="page-run-a-node-getting-started-software-section-2" />
               </p>
-            </Width80>
-            <Width20>
+            </ColumnFill>
+            <ColumnNarrow>
               <img
                 src={phonetap}
                 alt={translateMessageId(
@@ -791,16 +797,16 @@ const RunANodePage = ({ data }) => {
                   intl
                 )}
               />
-            </Width20>
+            </ColumnNarrow>
           </SoftwareHighlight>
 
           <SoftwareHighlight backgroundColor="homeBoxPurple">
-            <Width80>
+            <ColumnFill>
               <p>
                 <Translation id="page-run-a-node-getting-started-software-section-3" />
               </p>
-            </Width80>
-            <Width20>
+            </ColumnFill>
+            <ColumnNarrow>
               <img
                 src={dappnode}
                 alt={translateMessageId(
@@ -808,7 +814,7 @@ const RunANodePage = ({ data }) => {
                   intl
                 )}
               />
-            </Width20>
+            </ColumnNarrow>
           </SoftwareHighlight>
         </GappedContent>
       </Content>
