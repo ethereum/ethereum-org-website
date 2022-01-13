@@ -13,7 +13,7 @@ With NFTs bringing blockchain into the public eye, now is an excellent opportuni
 
 Alchemy is extremely proud to be powering the biggest names in the NFT space, including Makersplace (recently set a record digital artwork sale at Christie’s for $69 Million), Dapper Labs (creators of NBA Top Shot & Crypto Kitties), OpenSea (the world’s largest NFT marketplace), Zora, Super Rare, NFTfi, Foundation, Enjin, Origin Protocol, Immutable, and more.
 
-In this tutorial, we will walk through creating and deploying an ERC-721 smart contract on the Ropsten test network using [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), [Pinata](https://pinata.cloud/) and [Alchemy](https://dashboard.alchemyapi.io/signup?referral=affiliate:aab0c546-cc29-4180-8d31-fbce31367277) (don’t fret if you don’t understand what any of this means yet — we will explain it!).
+In this tutorial, we will walk through creating and deploying an ERC-721 smart contract on the Ropsten test network using [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), [Pinata](https://pinata.cloud/) and [Alchemy](https://dashboard.alchemyapi.io/signup) (don’t fret if you don’t understand what any of this means yet — we will explain it!).
 
 In Part 2 of this tutorial we’ll go through how we can use our smart contract to mint an NFT, and in Part 3 we’ll explain how to view your NFT on MetaMask.
 
@@ -21,7 +21,7 @@ And of course, if you have questions at any point, don’t hesitate to reach out
 
 ## Step 1: Connect to the Ethereum network {#connect-to-ethereum}
 
-There are a bunch of ways to make requests to the Ethereum blockchain, but to make things easy, we’ll use a free account on [Alchemy](https://dashboard.alchemyapi.io/signup?referral=affiliate:3bda2c8a-2393-4923-a7d9-f98c7c2f4520), a blockchain developer platform and API that allows us to communicate with the Ethereum chain without having to run our own nodes.
+There are a bunch of ways to make requests to the Ethereum blockchain, but to make things easy, we’ll use a free account on [Alchemy](https://dashboard.alchemyapi.io/signup), a blockchain developer platform and API that allows us to communicate with the Ethereum chain without having to run our own nodes.
 
 In this tutorial, we’ll also take advantage of Alchemy’s developer tools for monitoring and analytics to understand what’s going on under the hood in our smart contract deployment. If you don’t already have an Alchemy account, you can sign up for free [here](https://dashboard.alchemyapi.io/signup).
 
@@ -215,7 +215,7 @@ Now that we’ve created a MetaMask wallet, Alchemy account, and written our sma
 
 Every transaction sent from your virtual wallet requires a signature using your unique private key. To provide our program with this permission, we can safely store our private key (and Alchemy API key) in an environment file.
 
-To learn more about sending transactions, check out [this tutorial](https://docs.alchemyapi.io/alchemy/tutorials/sending-transactions-using-web3-and-alchemy) on sending transactions using web3.
+To learn more about sending transactions, check out [this tutorial](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) on sending transactions using web3.
 
 First, install the dotenv package in your project directory:
 
@@ -294,6 +294,7 @@ async function main() {
 
   // Start deployment, returning a promise that resolves to a contract object
   const myNFT = await MyNFT.deploy()
+  await myNFT.deployed()
   console.log("Contract deployed to address:", myNFT.address)
 }
 
@@ -319,7 +320,7 @@ Calling deploy() on a ContractFactory will start the deployment, and return a Pr
 
 We’re finally ready to deploy our smart contract! Navigate back to the root of your project directory, and in the command line run:
 
-    npx hardhat run scripts/deploy.js --network ropsten
+    npx hardhat --network ropsten run scripts/deploy.js
 
 You should then see something like:
 
@@ -339,6 +340,6 @@ To understand what’s going on under the hood, let’s navigate to the Explorer
 
 ![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer.png)
 
-Here you’ll see a handful of JSON-RPC calls that Hardhat/Ethers made under the hood for us when we called the .deploy() function. Two important ones to call out here are [eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth_sendrawtransaction), which is the request to actually write our smart contract onto the Ropsten chain, and [eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash) which is a request to read information about our transaction given the hash (a typical pattern when sending transactions). To learn more about sending transactions, check out this tutorial on [sending transactions using Web3](https://docs.alchemyapi.io/alchemy/tutorials/sending-transactions-using-web3-and-alchemy).
+Here you’ll see a handful of JSON-RPC calls that Hardhat/Ethers made under the hood for us when we called the .deploy() function. Two important ones to call out here are [eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth_sendrawtransaction), which is the request to actually write our smart contract onto the Ropsten chain, and [eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash) which is a request to read information about our transaction given the hash (a typical pattern when sending transactions). To learn more about sending transactions, check out this tutorial on [sending transactions using Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
 
 That’s all for Part 1 of this tutorial. In [Part 2, we’ll actually interact with our smart contract by minting an NFT](/developers/tutorials/how-to-mint-an-nft/), and in [Part 3 we’ll show you how to view your NFT in your Ethereum wallet](/developers/tutorials/how-to-view-nft-in-metamask/)!

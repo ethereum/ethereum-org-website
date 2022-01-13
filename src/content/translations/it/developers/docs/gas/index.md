@@ -23,7 +23,9 @@ Dato che ogni transazione Ethereum necessita di risorse di calcolo per essere es
 
 In sostanza, le commissioni sul carburante sono pagate nella valuta nativa di Ethereum, l'ether (ETH). I prezzi del carburante sono indicati in Gwei, che è a sua volta un taglio dell'ETH: ogni Gwei equivale a 0,000000001 ETH (10<sup>-9</sup> ETH). Per esempio, invece di dire che il carburante costa 0,000000001 Ether, puoi dire che costa 1 Gwei.
 
-Questo video offre una panoramica concisa del carburante, con i motivi della sua esistenza: <iframe width="100%" height="315" src="https://www.youtube.com/embed/AJvzNICwcwc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Questo video offre una panoramica concisa del carburante, con i motivi della sua esistenza:
+
+<YouTube id="AJvzNICwcwc" />
 
 ## Perché esistono le commissioni sul carburante? {#why-do-gas-fees-exist}
 

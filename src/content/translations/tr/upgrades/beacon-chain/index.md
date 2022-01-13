@@ -5,14 +5,14 @@ lang: tr
 template: upgrade
 sidebar: true
 image: ../../../../../assets/upgrades/core.png
-summaryPoint1: İşaret (beacon) zinciri bugün kullanmakta olduğumuz Ethereum ile ilgili hiçbir şeyi değiştirmez.
+summaryPoint1: İşaret zinciri hali hazırda kullandığımız Ethereum ile ilgili hiçbir şeyi değiştirmez.
 summaryPoint2: Ağı koordine edecektir.
-summaryPoint3: Ethereum ekosistemine pay ispatını (proof of stake) getirir.
-summaryPoint4: Bunu teknik yol haritalarındaki "0 Aşaması" olarak tanıyor olabilirsiniz.
+summaryPoint3: Hisse kanıtını Ethereum ekosisteminde uygulamaya koyar.
+summaryPoint4: Bunu teknik yol haritalarından "Aşama 0" olarak biliyor olabilirsiniz.
 ---
 
-<UpgradeStatus isShipped date="Sevk edildi!">
-    İşaret (Beacon) Zinciri 1 Aralık saat 12:00'de (UTC) başlatılmıştır. Daha fazla bilgi için, bk. <a href="https://beaconscan.com/">verileri keşfet</a>. Zincirin doğrulanmasını isterseniz, <a href="/staking/">ETH'nizi stake edebilirsiniz</a>.
+<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+    İşaret (Beacon) Zinciri 1 Aralık saat 12:00'de (UTC) başlatılmıştır. Daha fazla bilgi için, bk. <a href="https://beaconscan.com/">verileri keşfet</a>. Zincirin doğrulanmasını isterseniz, <a href="/upgrades/staking/">ETH'nizi stake edebilirsiniz</a>.
 </UpgradeStatus>
 
 ## İşaret (Beacon) Zinciri Ne Yapar? {#what-does-the-beacon-chain-do}
@@ -37,7 +37,7 @@ Bu ayrıca ikinci Eth2 yükseltmesi için de önemli bir değişikliktir: [shard
 
 ### Shard zincirleri kurulumu {#setting-up-for-shard-chains}
 
-Shard zincirleri ikinci Eth2 yükseltmesi olacaktır. Ağın kapasitesini artıracak ve ağı 64 blok zincirine genişleterek işlem hızını geliştirecektir. İşaret (Beacon) Zinciri shard zincirlerinin sunulmasındaki önemli ilk adımdır, zira güvenli çalışmaları için paydaşlık gerektirir.
+Mainnet, İşaret (Beacon) Zinciri ile birleştikten sonra, bir sonraki yükseltme, Proof-of-Stake ağına shard zincirlerini tanıtacak. Ağın kapasitesini artıracak ve ağı 64 blok zincirine genişleterek işlem hızını geliştirecektir. İşaret (Beacon) Zinciri shard zincirlerinin sunulmasındaki önemli ilk adımdır, zira güvenli çalışmaları için paydaşlık gerektirir.
 
 Sonuç olarak İşaret (Beacon) Zinciri shard zincirlerini doğrulamak üzere rasgele staker'lar atanmasından da sorumlu olacaktır. Staker'lar için işbirliği yapmayı ve shard'ı devralmayı zorlaştırmanın anahtarı da budur. Başka deyişle bu [trilyon şansta 1'den az](https://medium.com/@chihchengliang/minimum-committee-size-explained-67047111fa20) anlamına gelir.
 
@@ -47,9 +47,11 @@ Eth2 yükseltmelerinin tamamı bir şekilde ilişkilidir. İşaret (Beacon) Zinc
 
 ### Ana ağ ve İşaret (Beacon) Zinciri {#mainnet-and-beacon-chain}
 
-Öncelikle İşaret (Beacon) Zinciri bugün kullandığımız Ethereum ana ağından ayrı olarak bulunacaktır. Ancak sonuç olarak bağlanacaklardır. Plan, İşaret (Beacon) Zinciri tarafından kontrol ve koordine edilen pay ispatı sistemine ana ağı "kenetlemektir".
+Öncelikle İşaret (Beacon) Zinciri bugün kullandığımız Ethereum ana ağından ayrı olarak kullanılacaktır. Ancak sonuç olarak bağlanacaklardır. Plan, İşaret (Beacon) Zinciri tarafından kontrol ve koordine edilen pay ispatı sistemine ana ağı "kenetlemektir".
 
-<ButtonLink to="/upgrades/merge/">Kenetleme</ButtonLink>
+<ButtonLink to="/upgrades/merge/">
+    Birleştirme
+</ButtonLink>
 
 ### Shard'lar ve İşaret (Beacon) Zinciri {#shards-and-beacon-chain}
 

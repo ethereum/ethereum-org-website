@@ -99,7 +99,7 @@ Il existe des moyens de contourner ce problème en utilisant les [oracles](/deve
 
 **DappSys -** **_Blocs de construction sûrs, simples et flexibles pour les contrats intelligents_**
 
-- [dapp.tools/dappsys](https://dapp.tools/dappsys/)
+- [Dappsys](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 ## Complément d'information {#further-reading}

@@ -11,8 +11,8 @@ summaryPoint3: Θα προσθέσει τα αποδεικτικά επεξερ�
 summaryPoint4: Μπορεί να το γνωρίζετε αυτό ως "Φάση 0" σε τεχνικούς όρους
 ---
 
-<UpgradeStatus isShipped date="Αποστολή!">
-    Η κύρια αλυσίδα ανακοινώθηκε στις 1 Δεκεμβρίου το μεσημέρι UTC. Για να μάθετε περισσότερα, <a href="https://beaconscan.com/">εξερευνήστε τα δεδομένα</a>. Αν θέλετε να βοηθήσετε στην επικύρωση της αλυσίδας "chain", μπορείτε να <a href="/staking/">δεσμεύσετε (stake) τα ETH σας</a>.
+<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+    Η κύρια αλυσίδα ανακοινώθηκε στις 1 Δεκεμβρίου το μεσημέρι UTC. Για να μάθετε περισσότερα, <a href="https://beaconscan.com/">εξερευνήστε τα δεδομένα</a>. Αν θέλετε να βοηθήσετε στην επικύρωση της αλυσίδας "chain", μπορείτε να <a href="/upgrades/staking/">δεσμεύσετε (stake) τα ETH σας</a>.
 </UpgradeStatus>
 
 ## Τι ακριβώς κάνει η κύρια αλυσίδα; {#what-does-the-beacon-chain-do}

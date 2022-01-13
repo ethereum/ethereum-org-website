@@ -69,7 +69,7 @@ sidebar: true
 
 ### الأمان {#security}
 
-- [Clef](https://geth.ethereum.org/clef/Overview) _يُستخدم لتوقيع المعاملات والبيانات والمقصود منه هو أن يكون بديلاً لإدارة حساب geth_
+- [Clef](https://geth.ethereum.org/docs/clef/tutorial) _يُستخدم لتوقيع المعاملات والبيانات والمقصود منه هو أن يكون بديلاً لإدارة حساب geth_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _تطبيق لتوقيع المعاملات ليُستخدم مع موفر web3_
 
 ### الأدوات {#tooling}

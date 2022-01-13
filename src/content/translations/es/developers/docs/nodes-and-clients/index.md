@@ -25,7 +25,7 @@ Varias [implementaciones de clientes de Ethereum](/developers/docs/nodes-and-cli
 
 ## Tipos de nodos {#node-types}
 
-Si deseas ejecutar tu propio nodo, primero debes saber que hay diferentes tipos de nodos que consumen datos de forma diferente. De hecho, los clientes pueden ejecutar 3 diferentes tipos de nodos: ligero, completo y de almacenamiento. Además, hay opciones de diferentes estrategias de sincronización que permiten un tiempo de sincronización más rápido. La sincronización se refiere a la rapidez con que puede obtener la información más actualizada sobre el estado de Ethereum.
+    Si deseas ejecutar tu propio nodo, primero debes saber que hay diferentes tipos de nodos que consumen datos de forma diferente. De hecho, los clientes pueden ejecutar 3 diferentes tipos de nodos: ligero, completo y de almacenamiento. Además, hay opciones de diferentes estrategias de sincronización que permiten un tiempo de sincronización más rápido. La sincronización se refiere a la rapidez con que puede obtener la información más actualizada sobre el estado de Ethereum.
 
 ### Nodo completo {#full-node}
 
@@ -65,7 +65,7 @@ Ejecutar tu propio nodo te permite utilizar Ethereum de una manera realmente pri
 
 Un conjunto diverso de nodos es importante para la salud, seguridad y resiliencia operativa de Ethereum.
 
-- Proporcionan acceso a los datos de blockchain para clientes ligeros que dependen de ello. En picos de alto uso, es necesario que hayan suficientes nodos completos para ayudar a los nodos lgeros a sincronizarse. Los nodos ligeros no almacenan la blockchain completa, sino que verifican los datos usando [ los estados raíz en las cabeceras de los bloques](/developers/docs/blocks/#block-anatomy). Ellos pueden solicitar más información de los bloques si lo necesitan.
+- Proporcionan acceso a los datos de blockchain para clientes ligeros que dependen de ello. En picos de alto uso, es necesario que hayan suficientes nodos completos para ayudar a los nodos ligeros a sincronizarse. Los nodos ligeros no almacenan la blockchain completa, sino que verifican los datos usando [ los estados raíz en las cabeceras de los bloques](/developers/docs/blocks/#block-anatomy). Ellos pueden solicitar más información de los bloques si lo necesitan.
 - Los nodos completos hacen cumplir las reglas de consenso de prueba de trabajo, de modo que no se les puede engañar para que acepten bloques que no siguen dichas reglas. Esto proporciona seguridad extra a la red porque, si todos los nodos fueran nodos ligeros y no realizaran la verificación completa, los mineros podrían atacar la red, y por ejemplo, crear bloques con mayores recompensas.
 
 Si ejecuta un nodo completo, toda la red Ethereum se beneficia de él.
@@ -184,7 +184,7 @@ Antes de instalar un cliente, asegúrate de que tu equipo tiene suficientes recu
 
 #### Especificaciones recomendadas {#recommended-specifications}
 
-- CPU rapido con 4 o más núcleos
+- CPU rápido con 4 o más núcleos
 - 16 GB o más de RAM
 - SSD rápido con al menos 500 GB de espacio libre
 - 25 o más MBit/s de banda ancha

@@ -11,7 +11,7 @@ summaryPoint3: Ovo će označiti kraj procesa proof-of-work za Ethereum i prijel
 summaryPoint4: To vam može biti poznato kao „faza 1.5” na tehničkim planovima.
 ---
 
-<UpgradeStatus date="~Q1/Q2 2022">
+<UpgradeStatus dateKey="page-upgrades-merge-date">
     Ova nadogradnja uslijedit će nakon dolaska lanaca djelića. Ali to je trenutak u kojem se <a href="/upgrades/vision/"> vizija nadogradnje Eth2 </a> u potpunosti ostvaruje – veća nadogradivost, sigurnost i održivost uz ulaganja koja podržavaju cijelu mrežu.
 </UpgradeStatus>
 

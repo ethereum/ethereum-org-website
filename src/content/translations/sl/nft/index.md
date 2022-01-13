@@ -25,7 +25,7 @@ NFT je okrajšava za nezamenljiv žeton. Nezamenljiv je ekonomski izraz, s kater
 
 Zamenljivi predmeti na drugi strani so lahko zamenjani, saj jih bolj kot edinstvene značilnosti opredeljuje njihova vrednost. Na primer, ETH ali dolarji so zamenljivi, saj je en 1 ETH / $1 USD zamenljiv za drug 1 ETH / $1 USD.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/Xdkkux6OxfM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="Xdkkux6OxfM" />
 
 ## Internet sredstev {#internet-of-assets}
 

@@ -80,7 +80,7 @@ As `f()` contains two paths, a DSE will construct two differents path predicates
 - Path 1: `a == 65`
 - Path 2: `Not (a == 65)`
 
-Each path predicate is a mathematical formula that can be given to a so-called [SMT solver](https://github.com/trailofbits/building-secure-contracts/blob/master/program-analysis/determine-properties.md), which will try to solve the equation. For `Path 1`, the solver will say that the path can be explored with `a = 65`. For `Path 2`, the solver can give `a` any value other than 65, for example `a = 0`.
+Each path predicate is a mathematical formula that can be given to a so-called [SMT solver](https://wikipedia.org/wiki/Satisfiability_modulo_theories), which will try to solve the equation. For `Path 1`, the solver will say that the path can be explored with `a = 65`. For `Path 2`, the solver can give `a` any value other than 65, for example `a = 0`.
 
 ### Verifying properties {#verifying-properties}
 
@@ -465,7 +465,7 @@ m.transaction(caller=user_account,
 
 #### State constraint {#state-constraint}
 
-Use [state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/api.html?highlight=operator#manticore.core.state.StateBase.constrain) to add a constraint to a specific state
+Use [state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/states.html?highlight=StateBase#manticore.core.state.StateBase.constrain) to add a constraint to a specific state
 It can be used to constrain the state after its exploration to check some property on it.
 
 ### Checking Constraint {#checking-constraint}

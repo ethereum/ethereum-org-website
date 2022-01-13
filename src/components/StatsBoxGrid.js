@@ -197,7 +197,6 @@ const GridItem = ({ metric, dir }) => {
           stroke="#8884d8"
           fillOpacity={0.3}
           fill="url(#colorUv)"
-          fillOpacity="0.2"
           connectNulls={true}
         />
         <XAxis dataKey="timestamp" axisLine={false} tick={false} />
@@ -272,41 +271,41 @@ const StatsBoxGrid = () => {
   const [selectedRangeNodes, setSelectedRangeNodes] = useState(ranges[0])
   const [selectedRangeTxs, setSelectedRangeTxs] = useState(ranges[0])
 
-  const formatPrice = (price) => {
-    return new Intl.NumberFormat(intl.locale, {
-      style: "currency",
-      currency: "USD",
-      minimumSignificantDigits: 3,
-      maximumSignificantDigits: 4,
-    }).format(price)
-  }
-
-  const formatTVL = (tvl) => {
-    return new Intl.NumberFormat(intl.locale, {
-      style: "currency",
-      currency: "USD",
-      notation: "compact",
-      minimumSignificantDigits: 3,
-      maximumSignificantDigits: 4,
-    }).format(tvl)
-  }
-
-  const formatTxs = (txs) => {
-    return new Intl.NumberFormat(intl.locale, {
-      notation: "compact",
-      minimumSignificantDigits: 3,
-      maximumSignificantDigits: 4,
-    }).format(txs)
-  }
-
-  const formatNodes = (nodes) => {
-    return new Intl.NumberFormat(intl.locale, {
-      minimumSignificantDigits: 3,
-      maximumSignificantDigits: 4,
-    }).format(nodes)
-  }
-
   useEffect(() => {
+    const formatPrice = (price) => {
+      return new Intl.NumberFormat(intl.locale, {
+        style: "currency",
+        currency: "USD",
+        minimumSignificantDigits: 3,
+        maximumSignificantDigits: 4,
+      }).format(price)
+    }
+
+    const formatTVL = (tvl) => {
+      return new Intl.NumberFormat(intl.locale, {
+        style: "currency",
+        currency: "USD",
+        notation: "compact",
+        minimumSignificantDigits: 3,
+        maximumSignificantDigits: 4,
+      }).format(tvl)
+    }
+
+    const formatTxs = (txs) => {
+      return new Intl.NumberFormat(intl.locale, {
+        notation: "compact",
+        minimumSignificantDigits: 3,
+        maximumSignificantDigits: 4,
+      }).format(txs)
+    }
+
+    const formatNodes = (nodes) => {
+      return new Intl.NumberFormat(intl.locale, {
+        minimumSignificantDigits: 3,
+        maximumSignificantDigits: 4,
+      }).format(nodes)
+    }
+
     const fetchPrices = async () => {
       try {
         const {
@@ -327,10 +326,10 @@ const StatsBoxGrid = () => {
           hasError: false,
         })
       } catch (error) {
-        setEthPrices({
+        setEthPrices((ethPrices) => ({
           ...ethPrices,
           hasError: true,
-        })
+        }))
       }
     }
     fetchPrices()
@@ -356,10 +355,10 @@ const StatsBoxGrid = () => {
         })
       } catch (error) {
         console.error(error)
-        setNodes({
+        setNodes((nodes) => ({
           ...nodes,
           hasError: true,
-        })
+        }))
       }
     }
     fetchNodes()
@@ -385,10 +384,10 @@ const StatsBoxGrid = () => {
         })
       } catch (error) {
         console.error(error)
-        setValueLocked({
+        setValueLocked((valueLocked) => ({
           ...valueLocked,
           hasError: true,
-        })
+        }))
       }
     }
     fetchTotalValueLocked()
@@ -414,14 +413,14 @@ const StatsBoxGrid = () => {
         })
       } catch (error) {
         console.error(error)
-        setTxs({
+        setTxs((txs) => ({
           ...txs,
           hasError: true,
-        })
+        }))
       }
     }
     fetchTxCount()
-  }, [])
+  }, [intl.locale])
 
   const metrics = [
     {

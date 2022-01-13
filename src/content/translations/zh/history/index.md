@@ -91,7 +91,7 @@ Altair 升级是[信标链](/upgrades/beacon-chain)的第一次预定升级。 �
 <Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Dec-01-2020 12:00:35 PM +UTC</code><br />
 <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 信标链区块号：<a href="https://beaconscan.com/slot/1">1</a><br />
 <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 价格：586.23 美元<br />
-<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201207184633/https://www.ethereum.org/cn/">ethereum.org</a>
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201207184633/https://www.ethereum.org/en/">ethereum.org</a>
 
 #### 概览 {#beacon-chain-genesis-summary}
 

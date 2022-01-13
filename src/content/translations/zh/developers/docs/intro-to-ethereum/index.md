@@ -21,11 +21,11 @@ sidebar: true
 
 综上所述，当你向别人发送 ETH 时，这笔交易必须被打包并包含在一个新的区块中。 然后将更新后的状态与整个网络共享。
 
-观看 Austin 带你了解区块链： <iframe width="100%" height="315" src="https://www.youtube.com/embed/zcX7OJ-L8XQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+观看 Austin 带你了解区块链：
 
-如果想查看区块链如何压缩数据，以及以前的区块如何引用所有过去的区块，请务必查看 Anders Brownworth 的[演示](https://andersbrownworth.com/blockchain/blockchain)并观看以下随附视频。
+<YouTube id="zcX7OJ-L8XQ" />
 
-观看 Anders 介绍区块链中的哈希： <iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="zcX7OJ-L8XQ" />
 
 ## 以太坊简介 {#what-is-ethereum}
 

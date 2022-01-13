@@ -58,9 +58,7 @@ Every transaction is mined (included in a new block and propagated for the first
 
 Watch Austin walk you through mining and the proof-of-work blockchain.
 
-<figure>
-   <iframe width="100%" height="315" src="https://www.youtube.com/embed/zcX7OJ-L8XQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
+<YouTube id="zcX7OJ-L8XQ" />
 
 ## Further reading {#further-reading}
 

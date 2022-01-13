@@ -21,7 +21,7 @@ DeFi 是金融产品和服务的统称，任何可以使用以太坊（具有互
 
 这是一个蓬勃发展的加密经济，您可以在那里放贷、借款、做多/做空、赚取利息等等。 精通加密技术的阿根廷人已经使用 DeFi 来逃避严重的通货膨胀。 公司已经开始实时向员工发放工资。 有些人甚至在不需要任何个人身份证明的情况下，就已经获得或偿还了价值数百万美元的贷款。
 
-<iframe width="100%" height="315px" src="https://www.youtube.com/embed/H-O3r2YMWJ4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="H-O3r2YMWJ4" />
 
 ## DeFi 与传统金融 {#defi-vs-tradfi}
 
@@ -56,7 +56,7 @@ DeFi 是金融产品和服务的统称，任何可以使用以太坊（具有互
 
 以太坊以此为基础。 就像比特币一样，规则不会因您而改变，每个人都可以访问。 它也使这种数字货币可以程序化，使用[智能合约](/glossary#smart-contract)技术，让它的价值不仅限于储蓄与交易。
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/qFBYB4W2tqU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="qFBYB4W2tqU" />
 
 ## 可编程货币 {#programmable-money}
 

@@ -11,7 +11,7 @@ summaryPoint3: This is planned to precede the roll out of shard chains.
 summaryPoint4: We formerly referred to this as "the docking."
 ---
 
-<UpgradeStatus date="~Q1/Q2 2022">
+<UpgradeStatus dateKey="page-upgrades-merge-date">
   This upgrade represents the official switch to proof-of-stake consensus. This eliminates the need for energy-intensive mining, and instead secures the network using staked ether. A truly exciting step in realizing the <a href="/upgrades/vision/">Ethereum vision</a> – more scalability, security, and sustainability.
 </UpgradeStatus>
 

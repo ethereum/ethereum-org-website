@@ -173,7 +173,6 @@ Une chaîne plasma est une blockchain séparée qui est ancrée à la chaîne Et
 - [OMG Network](https://omg.network/)
 - [Matic Network](https://matic.network/)
 - [Gluon](https://gluon.network/)
-- [Gazelle](https://gzle.io/)
 - [LeapDAO](https://ipfs.leapdao.org/)
 
 ## Validium {#validium}

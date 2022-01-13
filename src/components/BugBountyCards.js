@@ -108,149 +108,114 @@ const Text = styled.div`
   margin-top: 0.5rem;
 `
 
-// TODO move data into array & loop through
+const bugBountyCardsInfo = [
+  {
+    lowLabelTranslationId: "page-upgrades-bug-bountycard-label-1",
+    h2TranslationId: "page-upgrades-bug-bountycard-low",
+    descriptionTranslationId: "page-upgrades-bug-bountycard-label-2",
+    subHeader1TranslationId: "page-upgrades-bug-bountycard-subheader",
+    severityList: [
+      "page-upgrades-bug-bountycard-li-1",
+      "page-upgrades-bug-bountycard-li-2",
+    ],
+    subHeader2TranslationId: "page-upgrades-bug-bountycard-subheader-2",
+    textTranslationId: "page-upgrades-bug-bountycard-text",
+    styledButtonTranslationId: "page-upgrades-bug-bountycard-low-risk",
+  },
+  {
+    mediumLabelTranslationId: "page-upgrades-bug-bountycard-label-3",
+    h2TranslationId: "page-upgrades-bug-bountycard-h2",
+    descriptionTranslationId: "page-upgrades-bug-bountycard-label-4",
+    subHeader1TranslationId: "page-upgrades-bug-bountycard-subheader",
+    severityList: [
+      "page-upgrades-bug-bountycard-li-3",
+      "page-upgrades-bug-bountycard-li-4",
+      "page-upgrades-bug-bountycard-li-5",
+    ],
+    subHeader2TranslationId: "page-upgrades-bug-bountycard-subheader-2",
+    textTranslationId: "page-upgrades-bug-bountycard-text-1",
+    styledButtonTranslationId: "page-upgrades-bug-bountycard-medium-risk",
+  },
+  {
+    highLabelTranslationId: "page-upgrades-bug-bountycard-label-5",
+    h2TranslationId: "page-upgrades-bug-bountycard-high",
+    descriptionTranslationId: "page-upgrades-bug-bountycard-label-6",
+    subHeader1TranslationId: "page-upgrades-bug-bountycard-subheader",
+    severityList: [
+      "page-upgrades-bug-bountycard-li-6",
+      "page-upgrades-bug-bountycard-li-7",
+    ],
+    subHeader2TranslationId: "page-upgrades-bug-bountycard-subheader-2",
+    textTranslationId: "page-upgrades-bug-bountycard-text-2",
+    styledButtonTranslationId: "page-upgrades-bug-bountycard-high-risk",
+  },
+  {
+    criticalLabelTranslationId: "page-upgrades-bug-bountycard-label-7",
+    h2TranslationId: "page-upgrades-bug-bountycard-critical",
+    descriptionTranslationId: "page-upgrades-bug-bountycard-label-8",
+    subHeader1TranslationId: "page-upgrades-bug-bountycard-subheader",
+    severityList: ["page-upgrades-bug-bountycard-li-8"],
+    subHeader2TranslationId: "page-upgrades-bug-bountycard-subheader-2",
+    textTranslationId: "page-upgrades-bug-bountycard-text-3",
+    styledButtonTranslationId: "page-upgrades-bug-bountycard-critical-risk",
+  },
+]
+
 const BugBountyCards = () => (
   <CardRow>
-    <Card>
-      <LowLabel>
-        <Translation id="page-upgrades-bug-bounty-card-label-1" />
-      </LowLabel>
-      <H2>
-        <Translation id="page-upgrades-bug-bounty-card-low" />
-      </H2>
-      <Description>
-        <Translation id="page-upgrades-bug-bounty-card-label-2" />
-      </Description>
-      <Divider />
-      <SubHeader>
-        <Translation id="page-upgrades-bug-bounty-card-subheader" />
-      </SubHeader>
-      <Text>
-        <ul>
-          <li>
-            <Translation id="page-upgrades-bug-bounty-card-li-1" />
-          </li>
-          <li>
-            <Translation id="page-upgrades-bug-bounty-card-li-2" />
-          </li>
-        </ul>
-      </Text>
-      <Divider />
-      <SubHeader>
-        <Translation id="page-upgrades-bug-bounty-card-subheader-2" />
-      </SubHeader>
-      <Text>
-        <Translation id="page-upgrades-bug-bounty-card-text" />
-      </Text>
-      <StyledButton to="https://forms.gle/Gnh4gzGh66Yc3V7G8">
-        <Translation id="page-upgrades-bug-bounty-card-low-risk" />
-      </StyledButton>
-    </Card>
-    <Card>
-      <MediumLabel>
-        <Translation id="page-upgrades-bug-bounty-card-label-3" />
-      </MediumLabel>
-      <H2>
-        <Translation id="page-upgrades-bug-bounty-card-h2" />
-      </H2>
-      <Description>
-        <Translation id="page-upgrades-bug-bounty-card-label-4" />
-      </Description>
-      <Divider />
-      <SubHeader>
-        <Translation id="page-upgrades-bug-bounty-card-subheader" />
-      </SubHeader>
-      <Text>
-        <ul>
-          <li>
-            <Translation id="page-upgrades-bug-bounty-card-li-3" />
-          </li>
-          <li>
-            <Translation id="page-upgrades-bug-bounty-card-li-4" />
-          </li>
-          <li>
-            <Translation id="page-upgrades-bug-bounty-card-li-5" />
-          </li>
-        </ul>
-      </Text>
-      <Divider />
-      <SubHeader>
-        <Translation id="page-upgrades-bug-bounty-card-subheader-2" />
-      </SubHeader>
-      <Text>
-        <Translation id="page-upgrades-bug-bounty-card-text-1" />
-      </Text>
-      <StyledButton to="https://forms.gle/Gnh4gzGh66Yc3V7G8">
-        <Translation id="page-upgrades-bug-bounty-card-medium-risk" />
-      </StyledButton>
-    </Card>
-    <Card>
-      <HighLabel>
-        <Translation id="page-upgrades-bug-bounty-card-label-5" />
-      </HighLabel>
-      <H2>
-        <Translation id="page-upgrades-bug-bounty-card-high" />
-      </H2>
-      <Description>
-        <Translation id="page-upgrades-bug-bounty-card-label-6" />
-      </Description>
-      <Divider />
-      <SubHeader>
-        <Translation id="page-upgrades-bug-bounty-card-subheader" />
-      </SubHeader>
-      <Text>
-        <ul>
-          <li>
-            <Translation id="page-upgrades-bug-bounty-card-li-6" />
-          </li>
-          <li>
-            <Translation id="page-upgrades-bug-bounty-card-li-7" />
-          </li>
-        </ul>
-      </Text>
-      <Divider />
-      <SubHeader>
-        <Translation id="page-upgrades-bug-bounty-card-subheader-2" />
-      </SubHeader>
-      <Text>
-        <Translation id="page-upgrades-bug-bounty-card-text-2" />
-      </Text>
-      <StyledButton to="https://forms.gle/Gnh4gzGh66Yc3V7G8">
-        <Translation id="page-upgrades-bug-bounty-card-high-risk" />
-      </StyledButton>
-    </Card>
-    <Card>
-      <CriticalLabel>
-        <Translation id="page-upgrades-bug-bounty-card-label-7" />
-      </CriticalLabel>
-      <H2>
-        <Translation id="page-upgrades-bug-bounty-card-critical" />
-      </H2>
-      <Description>
-        <Translation id="page-upgrades-bug-bounty-card-label-8" />
-      </Description>
-      <Divider />
-      <SubHeader>
-        <Translation id="page-upgrades-bug-bounty-card-subheader" />
-      </SubHeader>
-      <Text>
-        <ul>
-          <li>
-            <Translation id="page-upgrades-bug-bounty-card-li-8" />
-          </li>
-        </ul>
-      </Text>
-      <Divider />
-      <SubHeader>
-        <Translation id="page-upgrades-bug-bounty-card-subheader-2" />
-      </SubHeader>
-      <Text>
-        <Translation id="page-upgrades-bug-bounty-card-text-3" />
-      </Text>
-      <StyledButton to="https://forms.gle/Gnh4gzGh66Yc3V7G8">
-        <Translation id="page-upgrades-bug-bounty-card-critical-risk" />
-      </StyledButton>
-    </Card>
+    {bugBountyCardsInfo.map((card, idx) => (
+      <Card key={`bug-bountycard-${idx}`}>
+        {card.lowLabelTranslationId && (
+          <LowLabel>
+            <Translation id={card.lowLabelTranslationId} />
+          </LowLabel>
+        )}
+        {card.mediumLabelTranslationId && (
+          <MediumLabel>
+            <Translation id={card.mediumLabelTranslationId} />
+          </MediumLabel>
+        )}
+        {card.highLabelTranslationId && (
+          <HighLabel>
+            <Translation id={card.highLabelTranslationId} />
+          </HighLabel>
+        )}
+        {card.criticalLabelTranslationId && (
+          <CriticalLabel>
+            <Translation id={card.criticalLabelTranslationId} />
+          </CriticalLabel>
+        )}
+        <H2>
+          <Translation id={card.h2TranslationId} />
+        </H2>
+        <Description>
+          <Translation id={card.descriptionTranslationId} />
+        </Description>
+        <Divider />
+        <SubHeader>
+          <Translation id={card.subHeader1TranslationId} />
+        </SubHeader>
+        <Text>
+          <ul>
+            {card.severityList.map((listItemId) => (
+              <li key={`${listItemId}`}>
+                <Translation id={listItemId} />
+              </li>
+            ))}
+          </ul>
+        </Text>
+        <Divider />
+        <SubHeader>
+          <Translation id={card.subHeader2TranslationId} />
+        </SubHeader>
+        <Text>
+          <Translation id={card.textTranslationId} />
+        </Text>
+        <StyledButton to="https://forms.gle/Gnh4gzGh66Yc3V7G8">
+          <Translation id={card.styledButtonTranslationId} />
+        </StyledButton>
+      </Card>
+    ))}
   </CardRow>
 )
 

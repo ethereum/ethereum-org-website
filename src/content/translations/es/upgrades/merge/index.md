@@ -11,7 +11,7 @@ summaryPoint3: Esto marcará el final de la prueba de trabajo para Ethereum y la
 summaryPoint4: Es posible que conozcas esto como "Fase 1.5" en hojas de ruta técnicas.
 ---
 
-<UpgradeStatus date="~Q1/Q2 2022">
+<UpgradeStatus dateKey="page-upgrades-merge-date">
   Esta actualización seguirá a la llegada de las cadenas de fragmentos. Pero es el momento en el que <a href="/upgrades/vision/">la visión de Eth2</a> se hace realidad por completo: más escalabilidad, seguridad y sostenibilidad con el apoyo de la participación a toda la red.
 </UpgradeStatus>
 

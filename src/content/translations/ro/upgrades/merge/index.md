@@ -11,7 +11,7 @@ summaryPoint3: Acest sistem este menit să pregătească terenul pentru lansarea
 summaryPoint4: Acest proces l-am numit „andocarea”
 ---
 
-<UpgradeStatus date="~Q2 2022">
+<UpgradeStatus dateKey="page-upgrades-merge-date">
   Actualizarea reprezintă trecerea oficială la consensul bazat pe Dovada Mizei (proof-of-stake). Astfel, se elimină nevoia de minat folosind o cantitate mare de energie, securizând rețeaua folosind ether mizat. Un pas cu adevărat important în realizarea <a href="/upgrades/vision/">Viziunii Eth2</a> – mai multă scalabilitate, securitate și sustenabilitate.
 </UpgradeStatus>
 

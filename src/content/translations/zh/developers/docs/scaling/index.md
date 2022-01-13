@@ -77,7 +77,7 @@ Plasma 是一条独立的区块链，锚定至以太坊主链，并使用欺诈�
 
 ## 更愿意通过视频学习？ {#visual-learner}
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/BgCgauWVTs0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="BgCgauWVTs0" />
 
 _请注意，视频中使用“第二层”这一术语指代所有链下扩容解决方案。 而我们通常所说的“第二层”是指通过第一层主网共识获得安全性的链下解决方案。_
 

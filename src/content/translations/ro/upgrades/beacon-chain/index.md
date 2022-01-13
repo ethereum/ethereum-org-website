@@ -11,8 +11,8 @@ summaryPoint3: Introduce Dovada Mizei (proof-of-stake) în ecosistemul Ethereum.
 summaryPoint4: S-ar putea să-l cunoști sub numele de „Faza 0” pe foile de parcurs tehnice.
 ---
 
-<UpgradeStatus isShipped date="Expediat!">
-    Rețeaua Beacon a fost lansată pe 1 decembrie 2020 la prânz, UTC. Pentru informații suplimentare, <a href="https://beaconscan.com/">explorează datele</a>. Dacă vrei să ajuți la validarea lanțului, poți <a href="/staking/">să mizezi ETH</a>.
+<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+    Rețeaua Beacon a fost lansată pe 1 decembrie 2020 la prânz, UTC. Pentru informații suplimentare, <a href="https://beaconscan.com/">explorează datele</a>. Dacă vrei să ajuți la validarea lanțului, poți <a href="/upgrades/staking/">să mizezi ETH</a>.
 </UpgradeStatus>
 
 ## Ce face Lanțul Beacon? {#what-does-the-beacon-chain-do}

@@ -95,7 +95,7 @@ In the next part we’ll call the `balanceOf` function to retrieve the current a
 
 ## Call: Reading value from a smart contract {#call-reading-value-from-a-smart-contract}
 
-The first example will call a “constant” method and execute its smart contract method in the EVM without sending any transaction. For this we’ll read the ERC20 balance of an address. [Read our article about ERC20 tokens](/developers/tutorials/understand-the-erc20-token-smart-contract/).
+The first example will call a “constant” method and execute its smart contract method in the EVM without sending any transaction. For this we’ll read the ERC20 balance of an address. [Read our article about ERC20 tokens](/developers/tutorials/understand-the-erc-20-token-smart-contract/).
 
 You can access an instantiated smart contract methods that you provided the ABI for as follows: `yourContract.methods.methodname`. By using the `call` function you’ll receive the result of executing the function.
 

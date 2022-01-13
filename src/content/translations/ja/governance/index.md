@@ -129,7 +129,9 @@ The DAO フォークは、周到に脆弱性を突いた[2016 年の DAO 攻撃]
 
 現在、Ethereum のコミュニティでは、システムの信頼できる中立性を維持するために、コントラクトのバグや資金の損失の場合には介入しないという方針を採用しています。
 
-DAO ハッキング事件をもっと見る <iframe width="100%" height="315px" src="https://www.youtube.com/embed/rNeLuBOVe8A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+DAO ハッキング事件をもっと見る
+
+<YouTube id="rNeLuBOVe8A" />
 
 <Divider />
 

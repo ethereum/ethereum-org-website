@@ -11,7 +11,7 @@ summaryPoint3: वे हार्डवेयर आवश्यकताओं
 summaryPoint4: तकनीकी रोडमैप में "चरण 1" और संभावित रूप से "चरण 2" में शार्ड चेन पर काम शामिल है"।
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-upgrades-shards-date">
     <a href="/upgrades/beacon-chain/">बीकन चेन</a> लॉन्च होने के बाद कितनी तेजी से काम बढ़ता है, इस पर निर्भर करते हुए, 2023 में किसी भी समय शार्ड चेन शिप हो जाना चाहिए। ये शार्ड इथेरियम को डेटा स्टोर करने और एक्सेस करने की अधिक क्षमता प्रदान करेंगे, लेकिन उन्हें कोड निष्पादित करने के लिए उपयोग नहीं किया जाएगा। इसका विवरण अभी पता लगाया जा रहा है।
 </UpgradeStatus>
 
@@ -55,7 +55,7 @@ summaryPoint4: तकनीकी रोडमैप में "चरण 1" औ
 
 विटालिक बुटेरिन, जब बैंकलेस पॉडकास्ट से बात कर रहे थे, तो 3 संभावित विकल्प प्रस्तुत किए, जो चर्चा के लायक हैं।
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. स्थिति निष्पादन की आवश्यकता नहीं है {#state-execution-not-needed}
 

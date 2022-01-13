@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Icon from "./Icon"
 import Link from "./Link"
+import Translation from "./Translation"
 
 const Table = styled.div`
   background-color: ${(props) => props.theme.colors.background};
@@ -126,14 +127,14 @@ const TitleCardList = ({
   content,
   className,
   clickHandler,
-  header,
+  headerKey,
   icon,
   isCode,
 }) => (
   <Table isCode={isCode} className={className}>
     <TableHeader>
       {icon && <StyledIcon name={icon} />}
-      {header}
+      <Translation id={headerKey} />
       {isCode && (
         <CodeBoxHeader>
           <Red />

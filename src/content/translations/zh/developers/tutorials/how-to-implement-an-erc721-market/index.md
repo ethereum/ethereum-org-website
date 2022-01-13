@@ -139,7 +139,7 @@ function cancelTrade(uint256 _trade)
 }
 ```
 
-就是这样。 您已经浏览到了该代码实现的末尾。 令人惊讶的是，一些业务概念在用代码表达时是多么紧凑，这就是其中一个例子。 您可以在[我们的代码库中](https://github.com/HQ20/contracts/blob/dev/contracts/classifieds/Classifieds.sol?ref=hackernoon.com)查看完整的合约代码。
+就是这样。 您已经浏览到了该代码实现的末尾。 令人惊讶的是，一些业务概念在用代码表达时是多么紧凑，这就是其中一个例子。 您可以在[我们的代码库中](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol)查看完整的合约代码。
 
 ## 结论 {#conclusion}
 

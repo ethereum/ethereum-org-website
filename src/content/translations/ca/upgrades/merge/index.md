@@ -11,7 +11,7 @@ summaryPoint3: Això marcarà el final de la prova de treball per a Ethereum i l
 summaryPoint4: Es coneix també com a "Phase1.5" a la planificació tècnica.
 ---
 
-<UpgradeStatus date="~Q1/Q2 2022">
+<UpgradeStatus dateKey="page-upgrades-merge-date">
     Aquesta millora seguirà l'arribada de cadenes de fragments. Però és el moment en el qual la <a href="/upgrades/vision/">visió d'Eth2</a> es veurà completament acomplida: més escalabilitat, seguretat i sostenibilitat amb la participació i validació de tota la xarxa.
 </UpgradeStatus>
 
