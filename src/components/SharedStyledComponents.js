@@ -100,7 +100,7 @@ export const SloganGradient = styled.div`
   max-width: 720px;
   margin-top: 1rem;
   background-clip: text;
-  background-image: ${(props) => props.theme.colors.eth2Gradient};
+  background-image: ${(props) => props.theme.colors.upgradesGradient};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 0rem;
@@ -245,7 +245,7 @@ export const Eth2Header = styled.h2`
 
 export const Eth2HeaderGradient = styled.span`
   background-clip: text;
-  background-image: ${(props) => props.theme.colors.eth2Gradient};
+  background-image: ${(props) => props.theme.colors.upgradesGradient};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
