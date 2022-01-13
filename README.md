@@ -1338,6 +1338,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://aaronisme.github.io"><img src="https://avatars.githubusercontent.com/u/7855886?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aaron Chen</b></sub></a><br /><a href="#ideas-aaronisme" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://portfolio-qazalin.vercel.app/"><img src="https://avatars.githubusercontent.com/u/77887910?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Qazal Samani</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Qazalin" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://www.yashkarthik.xyz/"><img src="https://avatars.githubusercontent.com/u/52369876?v=4?s=100" width="100px;" alt=""/><br /><sub><b>yash</b></sub></a><br /><a href="#ideas-YashKarthik" title="Ideas, Planning, & Feedback">🤔</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
