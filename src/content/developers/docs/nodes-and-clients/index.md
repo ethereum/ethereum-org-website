@@ -12,6 +12,8 @@ Ethereum is a distributed network of computers running software (known as nodes)
 
 You should understand the concept of a peer-to-peer network and the [basics of the EVM](/developers/docs/evm/) before diving deeper and running your own instance of an Ethereum client. Take a look at our [introduction to Ethereum](/developers/docs/intro-to-ethereum/).
 
+If you're new to the topic of nodes, we recommend first checking out our user-friendly introduction on [running an Ethereum node](/run-a-node).
+
 ## What are nodes and clients? {#what-are-nodes-and-clients}
 
 "Node" refers to a running piece of client software. A client is an implementation of Ethereum that verifies all transactions in each block, keeping the network secure and the data accurate.
@@ -74,7 +76,11 @@ If you run a full node, the whole Ethereum network benefits from it.
 
 ## Running your own node {#running-your-own-node}
 
-Interested in running your own Ethereum client? Learn how to [spin up your own node](/developers/docs/nodes-and-clients/run-a-node/)!
+Interested in running your own Ethereum client?
+
+For a beginner-friendly introduction visit our [run a node](/run-a-node) page to learn more.
+
+If you're more of a technical user, learn how to [spin up your own node](/developers/docs/nodes-and-clients/run-a-node/) with the command line!
 
 ### Projects {#projects}
 
