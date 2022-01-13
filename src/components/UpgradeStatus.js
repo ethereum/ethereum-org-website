@@ -45,7 +45,7 @@ const Content = styled.p`
 const UpgradeStatus = ({ date, children, isShipped = false }) => (
   <Container isShipped={isShipped}>
     <Label>
-      <Translation id="eth2-what-shipping" />
+      <Translation id="consensus-when-shipping" />
     </Label>
     <Date>{date}</Date>
     <Content>{children}</Content>

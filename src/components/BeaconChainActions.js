@@ -86,13 +86,13 @@ const BeaconChainActions = () => {
       title: "beaconscan",
       image: getImage(data.beaconscan),
       link: "https://beaconscan.com",
-      description: translateMessageId("eth2-beaconscan-desc", intl),
+      description: translateMessageId("consensus-beaconscan-desc", intl),
     },
     {
       title: "beaconcha.in",
       image: getImage(data.beaconchain),
       link: "https://beaconcha.in",
-      description: translateMessageId("eth2-beaconcha-in-desc", intl),
+      description: translateMessageId("consensus-beaconcha-in-desc", intl),
     },
   ]
 
@@ -119,8 +119,8 @@ const BeaconChainActions = () => {
       <StyledCardContainer>
         <StyledCardLeft
           emoji=":money_with_wings:"
-          title={translateMessageId("eth2-become-staker", intl)}
-          description={translateMessageId("eth2-become-staker-desc", intl)}
+          title={translateMessageId("consensus-become-staker", intl)}
+          description={translateMessageId("consensus-become-staker-desc", intl)}
         >
           <StyledButtonLink to="https://launchpad.ethereum.org">
             <Translation id="get-started" />
@@ -131,16 +131,19 @@ const BeaconChainActions = () => {
         </StyledCardLeft>
         <StyledCardRight
           emoji=":computer:"
-          title={translateMessageId("eth2-run-beacon-chain", intl)}
-          description={translateMessageId("eth2-run-beacon-chain-desc", intl)}
+          title={translateMessageId("consensus-run-beacon-chain", intl)}
+          description={translateMessageId(
+            "consensus-run-beacon-chain-desc",
+            intl
+          )}
         >
           <ButtonLink isSecondary to="/upgrades/get-involved/">
-            <Translation id="eth2-run-beacon-chain" />
+            <Translation id="consensus-run-beacon-chain" />
           </ButtonLink>
         </StyledCardRight>
       </StyledCardContainer>
       <H3>
-        <Translation id="eth2-explore" />
+        <Translation id="consensus-explore" />
       </H3>
 
       <CardList content={datapoints} />
