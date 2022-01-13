@@ -252,6 +252,15 @@ Some things to remember:
 
 [Man loses $200k in mining pool scam](https://www.reddit.com/r/CoinBase/comments/r0qe0e/scam_or_possible_incredible_payout/)
 
+### Airdrop scams {#airdrop-scams}
+
+Airdrop scams involve a scam project airdropping an asset (NFT, token) into a users wallet, and sending the user to a scam website to claim the airdropped asset. When going to claim this asset, the user will be prompted to sign in with their Ethereum wallet and "approve" a transaction. This transaction then sends over your wallets information (private and public keys), which leads to your wallet being compromised. Other forms of this may have the user to a send transaction where the user just sends funds to the scammers account.
+
+**An example of a scam airdrop on etherscan.io**
+![An example of a scam airdrop on etherscan.io](./airdropScam.png)
+
+[More on airdrop scams](https://www.youtube.com/watch?v=LLL_nQp1lGk)
+
 <Divider />
 
 ## Further reading {#further-reading}
