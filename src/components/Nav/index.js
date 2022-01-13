@@ -219,7 +219,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           to: "/whitepaper/",
         },
         {
-          text: "ethereum-2-0",
+          text: "ethereum-upgrades",
           to: "/upgrades/",
         },
         {
