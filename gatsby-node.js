@@ -414,7 +414,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       type: String
       link: String
     }
-    type Eth2BountyHuntersCsv implements Node {
+    type ConsensusBountyHuntersCsv implements Node {
       username: String,
       name: String,
       score: Int
