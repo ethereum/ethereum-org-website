@@ -49,7 +49,7 @@
   "page-eth2-bug-bounty-specs-docs": "Documents de spécification",
   "page-eth2-bug-bounty-submit": "Soumettre un bogue",
   "page-eth2-bug-bounty-submit-desc": "Pour chaque bogue que vous trouverez vous recevrez des points. Les points que vous gagnez dépendent de la gravité du bogue. L'Ethereum Foundation (EF) détermine la sévérité à l'aide de la méthodologie OWASP.",
-  "page-eth2-bug-bounty-subtitle": "Earn up to $50,000 USD and a place on the leaderboard by finding Eth2 protocol and client bugs. In order to get more eyes on the Altair upgrade, all bounties for vulnerabilities related to the Altair upgrade have been doubled between now and four weeks after the launch (Nov 27). Critical Altair bugs in both clients and specs are now worth up to $100k.",
+  "page-eth2-bug-bounty-subtitle": "Gagnez jusqu'à 50 000 $ US et une place dans le classement en trouvant des bogues du protocole Eth2 et du client.",
   "page-eth2-bug-bounty-title": "Ouvert pour soumissions",
   "page-eth2-bug-bounty-title-1": "Chaîne phare",
   "page-eth2-bug-bounty-title-2": "Choix de bifurcation",
