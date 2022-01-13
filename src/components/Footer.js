@@ -173,7 +173,7 @@ const Footer = () => {
           text: "ethereum-whitepaper",
         },
         {
-          text: "ethereum-2-0",
+          text: "ethereum-upgrades",
           to: "/upgrades/",
         },
         {
