@@ -28,7 +28,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> <i>- Ethereum development focused Discord community</i></SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.io/ethstaker">EthStaker Discord</Link> <i>- community oriented around offering project management support to Ethereum development</i></SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/CetY6Y4">Ethereum.org website team</Link> <i>- stop by and chat ethereum.org web development and design with the team and folks from the community</i></SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://discord.gg/ZH5aXDgWEU">web3.university website team</Link> <i>- community focused on learning Web3 development </i></SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://discord.gg/ZH5aXDgWEU">Web3 University</Link> <i>- community focused on learning web3 development </i></SocialListItem>
 
 ## YouTube and Twitter {#youtube-and-twitter}
 
