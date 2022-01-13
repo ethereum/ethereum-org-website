@@ -17,11 +17,11 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 Some background first. As you know, we’ve been running into some memory issues [[1]](/developers/tutorials/run-node-raspberry-pi/#references) with the Raspberry Pi 4 image as Raspbian OS is still on 32bits [[2]](/developers/tutorials/run-node-raspberry-pi/#references) (at least the userland). While we prefer to stick with the official OS we came to the conclusion that, in order to solve these issues, we need to migrate to a native 64 bits OS
 
-Besides, [consensus clients](/upgrades/get-involved/#clients) don’t support 32 bits binaries so using Raspbian would exclude the Raspberry Pi 4 from running an Eth 2.0 node (and the possibility of staking).
+Besides, [consensus clients](/upgrades/get-involved/#clients) don’t support 32 bits binaries so using Raspbian would exclude the Raspberry Pi 4 from running a consensus layer node (and the possibility of staking).
 
-So, after several tests we are now releasing 2 different images based on Ubuntu 20.04 64bit [[3]](/developers/tutorials/run-node-raspberry-pi/#references): Eth 1.0 and Eth 2.0 editions.
+So, after several tests we are now releasing 2 different images based on Ubuntu 20.04 64bit [[3]](/developers/tutorials/run-node-raspberry-pi/#references): execution layer and consensus layer editions.
 
-Basically, both are the same image and include the same features of the Raspbian based images. But they are setup for running Eth 1.0 or Eth 2.0 software by default.
+Basically, both are the same image and include the same features of the Raspbian based images. But they are setup for running execution layer or consensus layer software by default.
 
 **Images take care of all the necessary steps**, from setting up the environment and formatting the SSD disk to installing and running the Ethereum software as well as starting the blockchain synchronization.
 
@@ -37,7 +37,7 @@ Basically, both are the same image and include the same features of the Raspbian
 
 ## Software included {#software-included}
 
-Both images include the same packages, the only difference between them is that Eth 1.0 runs Geth by default and Eth 2.0 runs Prysm beacon chain by default.
+Both images include the same packages, the only difference between them is that the execution version runs Geth by default and the consensus version runs Prysm beacon chain by default.
 
 ### Execution clients {#execution-clients}
 
@@ -68,7 +68,7 @@ Both images include the same packages, the only difference between them is that 
 - SSD USB 3.0 disk (see storage section)
 - Power supply
 - Ethernet cable
-- 30303 Port forwarding (Eth 1.0) and 13000 port forwarding (Eth 2.0) [[4]](/developers/tutorials/run-node-raspberry-pi/#references)
+- 30303 Port forwarding (execution layer) and 13000 port forwarding (consensus layer) [[4]](/developers/tutorials/run-node-raspberry-pi/#references)
 - A case with heatsink and fan (optional but strongly recommended)
 - USB keyboard, Monitor and HDMI cable (micro-HDMI) (optional)
 
@@ -158,9 +158,9 @@ sudo tail -f /var/log/syslog
 
 ## Syncing the Blockchain {#syncing-the-blockchain}
 
-Now you need to wait for the blockchain to be synced. In the case of Eth 1.0 This will take a few days depending on several factors but you can expect up to about 5-7 days.
+Now you need to wait for the blockchain to be synced. In the case of the execution layer this will take a few days depending on several factors but you can expect up to about 5-7 days.
 
-If you are running the consensus layer Prater tesnet you can expect 1-2 days of Beacon chain synchronization time. Remember that you will need to setup the validator later in order to start the staking process. [How to run the Eth 2.0 validator](/developers/tutorials/run-node-raspberry-pi/#validator)
+If you are running the consensus layer Prater testnet you can expect 1-2 days of Beacon chain synchronization time. Remember that you will need to setup the validator later in order to start the staking process. [How to run the consensus layer validator](/developers/tutorials/run-node-raspberry-pi/#validator)
 
 ## Monitoring dashboards {#monitoring-dashboards}
 
@@ -226,11 +226,11 @@ Blockchain clients’ data is stored on the Ethereum home account as follows (no
 
 ## Nethermind and Hyperledger Besu {#nethermind-and-hyperledger-besu}
 
-These 2 great Eth 1.0 clients have become a great alternative to Geth and Parity. The more diversity in the network, the better, so you may give them a try and contribute to the network health.
+These 2 great execution clients have become a great alternative to Geth and Parity. The more diversity in the network, the better, so you may give them a try and contribute to the network health.
 
 Both need further testing so feel free to play with them and report back your feedback.
 
-## How to run the Eth 2.0 validator (staking) {#validator}
+## How to run the consensus validator (staking) {#validator}
 
 Once the Prater testnet beacon chain is synchronized you can run a validator in the same device. You will need to follow [these participation steps](https://prylabs.net/participate).
 
