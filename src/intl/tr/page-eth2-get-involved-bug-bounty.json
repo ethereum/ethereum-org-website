@@ -37,7 +37,7 @@
   "page-eth2-bug-bounty-points-rights-desc": "Ethereum Vakfı bunu önceden haber vermeksizin değiştirme hakkını saklı tutar.",
   "page-eth2-bug-bounty-points-usd": "2 USD",
   "page-eth2-bug-bounty-quality": "Açıklama kalitesi",
-  "page-eth2-bug-bounty-quality-desc": "Açık, iyi yazılmış gönderimler için daha yüksek ödüller ödenir.",
+  "page-eth2-bug-bounty-quality-desc": ": Açık, iyi yazılmış gönderimler için daha yüksek ödüller ödenir.",
   "page-eth2-bug-bounty-quality-fix": "<strong>Çözümün kalitesi</strong>, dahilse: Sorunun nasıl çözüleceğine dair net bir açıklama içeren gönderimler için daha yüksek ödüller ödenir.",
   "page-eth2-bug-bounty-quality-repro": "Tekrarlanabilirlik kalitesi",
   "page-eth2-bug-bounty-quality-repro-desc": ": Lütfen test kodunu, komut dosyalarını ve ayrıntılı talimatları ekleyin. Güvenlik açığını yeniden üretmek ve doğrulamak bizim için ne kadar kolay olursa, ödül o kadar yüksek olur.",
