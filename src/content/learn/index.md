@@ -27,7 +27,7 @@ In addition to the information on this page, there are many community-built reso
 - [What’s new in ETH 2.0](https://eth2.news) _A regular newsletter about Eth2 development_
 - [ethresear.ch forum](https://ethresear.ch/) _Deeper technical discussions on Ethereum for Eth2 and beyond_
 - [ETHGlobal](https://ethglobal.co) _An Ethereum hackathon series - attend one near you!_
-- [Web3 University](https://www.web3.university) _A community driven online resource foused on teaching and learning Web3 development_
+- [Web3 University](https://www.web3.university) _A community-driven online resource focused on web3 development_
 
 ## How Ethereum works {#how-ethereum-works}
 
