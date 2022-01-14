@@ -348,30 +348,31 @@ const Eth2IndexPage = ({ data }) => {
       <Content>
         <ContributeCard>
           <div>
-            <H2>What happened to Eth2? </H2>
+            <H2>
+              <Translation id="page-upgrades-what-happened-to-eth2-title" />
+            </H2>
             <p>
-              The term 'Eth2' is being phased out in preparation for{" "}
-              <Link to="/upgrades/merge">the merge</Link>.
+              <Translation id="page-upgrades-what-happened-to-eth2-1" />
+              <Link to="/upgrades/merge">
+                <Translation id="page-upgrades-what-happened-to-eth2-1-more" />
+              </Link>
             </p>
             <p>
-              After merging Eth1 and Eth2 into a single chain, there will no
-              longer be two distinct Ethereum networks; there will only be
-              Ethereum.
+              <Translation id="page-upgrades-what-happened-to-eth2-2" />
             </p>
-            <p>To limit confusion, these terms are being rebranded:</p>
+            <p>
+              <Translation id="page-upgrades-what-happened-to-eth2-3" />
+            </p>
             <ul>
               <li>
-                Eth1 is now the 'execution layer', which handles transactions
-                and data.
+                <Translation id="page-upgrades-what-happened-to-eth2-3-1" />
               </li>
               <li>
-                Eth2 is now the 'consensus layer', which handles proof-of-stake
-                consensus.
+                <Translation id="page-upgrades-what-happened-to-eth2-3-2" />
               </li>
             </ul>
             <p>
-              The Eth2 rebrand changes naming convention only; it does not alter
-              Ethereum's goals or roadmap.
+              <Translation id="page-upgrades-what-happened-to-eth2-4" />
             </p>
           </div>
         </ContributeCard>
