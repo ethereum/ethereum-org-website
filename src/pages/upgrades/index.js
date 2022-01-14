@@ -350,7 +350,7 @@ const Eth2IndexPage = ({ data }) => {
           <div>
             <H2>What happened to Eth2? </H2>
             <p>
-              The term "Eth2" is being phased out in preparation for{" "}
+              The term 'Eth2' is being phased out in preparation for{" "}
               <Link to="/upgrades/merge">the merge</Link>.
             </p>
             <p>
@@ -361,11 +361,11 @@ const Eth2IndexPage = ({ data }) => {
             <p>To limit confusion, these terms are being rebranded:</p>
             <ul>
               <li>
-                Eth1 is now the "execution layer", which handles transactions
+                Eth1 is now the 'execution layer', which handles transactions
                 and data.
               </li>
               <li>
-                Eth2 is now the "consensus layer", which handles proof-of-stake
+                Eth2 is now the 'consensus layer', which handles proof-of-stake
                 consensus.
               </li>
             </ul>
