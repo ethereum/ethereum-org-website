@@ -47,7 +47,7 @@ La [chaîne phare](/upgrades/beacon-chain/) avait besoin de 16 384 dépôts de 
 
 #### Résumé {#deposit-contract-summary}
 
-Le contrat de dépôt de mise en jeu a introduit la [mise en jeu](/glossary/#staking) dans l'écosystème Ethereum. Bien qu'il s'agisse d'un contrat du [réseau principal](/glossary/#mainnet), il a eu un impact direct sur la chronologie de lancement de la [chaîne phare](/upgrades/beacon-chain/), une mise à niveau [Eth2](/eth2/) importante.
+Le contrat de dépôt de mise en jeu a introduit la [mise en jeu](/glossary/#staking) dans l'écosystème Ethereum. Bien qu'il s'agisse d'un contrat du [réseau principal](/glossary/#mainnet), il a eu un impact direct sur la chronologie de lancement de la [chaîne phare](/upgrades/beacon-chain/), une mise à niveau [Eth2](/upgrades/) importante.
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 

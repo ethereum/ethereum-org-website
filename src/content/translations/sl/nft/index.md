@@ -327,7 +327,7 @@ Od kar Ethereum obstaja, je bila za razvijalce in raziskovalce poraba energije z
 
 Ta vizija se dostavlja prav zdaj.
 
-#### Bolj zelen Ethereum: Eth2 {#eth2}
+#### Bolj zelen Ethereum: Eth2 {#greener-ethereum}
 
 Ethereum je trenutno podvržen seriji nadgradenj poznanih kot Eth2, ki bodo nadomestile rudarjenje z [zastavljanjem](/staking/). To bo odstranilo računalniško moč kot varnostni mehanizem in zmanjšalo Ethereumov ogljični odtis za ~99.95%<sup>[^1]</sup>. V tem svetu za zaščito omrežja zastavljalci namesto računalniške moči namenijo sredstva.
 

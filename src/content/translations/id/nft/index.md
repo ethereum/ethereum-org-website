@@ -327,7 +327,7 @@ Selama Ethereum ada, pemakaian energi penambangan telah menjadi area fokus yang 
 
 Visi ini sedang diwujudkan sekarang.
 
-#### Ethereum yang lebih hijau: Eth2 {#eth2}
+#### Ethereum yang lebih hijau: Eth2 {#greener-ethereum}
 
 Ethereum saat ini sedang menjalani serangkaian peningkatan, yang dikenal sebagai Eth2, yang akan menggantikan penambangan dengan [penaruhan](/staking/). Ini akan menghilangkan daya komputasi sebagai mekanisme keamanan, dan mengurangi jejak karbon Ethereum sebanyak ~99,95%<sup>[^1]</sup>. Dalam dunia ini, para penaruh menyerahkan dana ketimbang daya komputasi untuk mengamankan jaringan.
 

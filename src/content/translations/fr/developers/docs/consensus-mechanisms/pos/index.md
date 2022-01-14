@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-Ethereum passe de [la preuve de travail (PoW)](/developers/docs/consensus-mechanisms/pow/) à un mécanisme de consensus appelé "preuve d'enjeu" (PoS) . Cela a toujours été prévu, car il s'agit d'un élément clé de la stratégie de la communauté pour faire évoluer Ethereum via [les mises à niveau Eth2](/eth2/). Toutefois, instituer la preuve d'enjeu constitue un grand défi technique et ce procédé n'est pas aussi simple que l'utilisation de la preuve de travail pour parvenir à un consensus sur l'ensemble du réseau.
+Ethereum passe de [la preuve de travail (PoW)](/developers/docs/consensus-mechanisms/pow/) à un mécanisme de consensus appelé "preuve d'enjeu" (PoS) . Cela a toujours été prévu, car il s'agit d'un élément clé de la stratégie de la communauté pour faire évoluer Ethereum via [les mises à niveau Eth2](/upgrades/). Toutefois, instituer la preuve d'enjeu constitue un grand défi technique et ce procédé n'est pas aussi simple que l'utilisation de la preuve de travail pour parvenir à un consensus sur l'ensemble du réseau.
 
 ## Prérequis {#prerequisites}
 

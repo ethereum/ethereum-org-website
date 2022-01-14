@@ -47,7 +47,7 @@ A [Beacon Chain](/upgrades/beacon-chain/) biztonságos elindításához 16384 da
 
 #### Összefoglaló {#deposit-contract-summary}
 
-A letétbe helyezési szerződés bemutatta a [letétbe helyezés](/glossary/#staking) rendszerét az Ethereum ökoszisztémában. Bár [főhálózati](/glossary/#mainnet) szerződés, közvetlenül befolyásolta egy fontos [Eth2 frissítés](/eth2/), a [Beacon Chain](/upgrades/beacon-chain/) indításának ütemezését.
+A letétbe helyezési szerződés bemutatta a [letétbe helyezés](/glossary/#staking) rendszerét az Ethereum ökoszisztémában. Bár [főhálózati](/glossary/#mainnet) szerződés, közvetlenül befolyásolta egy fontos [Eth2 frissítés](/upgrades/), a [Beacon Chain](/upgrades/beacon-chain/) indításának ütemezését.
 
 [Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 

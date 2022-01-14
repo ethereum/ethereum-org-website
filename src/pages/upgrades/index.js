@@ -277,9 +277,9 @@ const Eth2IndexPage = ({ data }) => {
         <Row>
           <GhostCard>
             <H2>
-              <Translation id="page-upgrades-whats-eth2" />
+              <Translation id="page-upgrades-whats-next" />
             </H2>
-            <Translation id="page-upgrades-whats-eth2-desc" />
+            <Translation id="page-upgrades-whats-next-desc" />
           </GhostCard>
           <StyledInfoBanner isWarning={true}>
             <H2>

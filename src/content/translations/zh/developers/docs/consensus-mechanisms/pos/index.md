@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-以太坊正在将其共识机制从[工作量证明(PoW)](/developers/docs/consensus-mechanisms/pow/)转变为权益证明(PoS)。 这一直在计划之中，因为这是社区策略中通过 [Eth2 升级](/eth2/)扩展以太坊的关键部分。 然而正确实现 PoS 是一项巨大的技术挑战,，并不像使用 PoW 在整个网络中达成共识那样简单。
+以太坊正在将其共识机制从[工作量证明(PoW)](/developers/docs/consensus-mechanisms/pow/)转变为权益证明(PoS)。 这一直在计划之中，因为这是社区策略中通过 [Eth2 升级](/upgrades/)扩展以太坊的关键部分。 然而正确实现 PoS 是一项巨大的技术挑战,，并不像使用 PoW 在整个网络中达成共识那样简单。
 
 ## 前置要求 {#prerequisites}
 

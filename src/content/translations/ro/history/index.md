@@ -47,7 +47,7 @@ Aceste modificări de regulă pot crea o divizare temporară în rețea. Blocuri
 
 #### Rezumat {#deposit-contract-summary}
 
-Contractul de depozit de miză a introdus [miza](/glossary/#staking) în ecosistemul Ethereum. Deși este un contract [Mainnet](/glossary/#mainnet) (rețea principală), acesta a avut un impact direct asupra cronologiei lansării [lanțului Beacon](/upgrades/beacon-chain/), un important [upgrade Eth2](/eth2/).
+Contractul de depozit de miză a introdus [miza](/glossary/#staking) în ecosistemul Ethereum. Deși este un contract [Mainnet](/glossary/#mainnet) (rețea principală), acesta a avut un impact direct asupra cronologiei lansării [lanțului Beacon](/upgrades/beacon-chain/), un important [upgrade Eth2](/upgrades/).
 
 [Citește anunțul Fundației Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 

@@ -96,7 +96,7 @@ Uaktualnienie Berlin optymalizuje koszt gazu przy pewnych działaniach EVM oraz 
 
 #### Podsumowanie {#deposit-contract-summary}
 
-Do ekosystemu Ethereum został wprowadzony kontrakt depozytu na staking Choć był to kontrakt [sieci głównej](/glossary/#staking), miał bezpośredni wpływ na harmonogram wprowadzania [łańcucha odłamkowego](/upgrades/beacon-chain/), ważnego [ulepszenia Eth2](/eth2/).
+Do ekosystemu Ethereum został wprowadzony kontrakt depozytu na staking Choć był to kontrakt [sieci głównej](/glossary/#staking), miał bezpośredni wpływ na harmonogram wprowadzania [łańcucha odłamkowego](/upgrades/beacon-chain/), ważnego [ulepszenia Eth2](/upgrades/).
 
 [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
