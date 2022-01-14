@@ -641,12 +641,6 @@ const Eth2IndexPage = ({ data }) => {
               </p>
               <ul>
                 <li>
-                  <Link to="https://trinity.ethereum.org/">
-                    <Translation id="page-upgrades-question-7-trinity" />
-                  </Link>{" "}
-                  <Translation id="page-upgrades-question-7-trinity-lang" />
-                </li>
-                <li>
                   <Link to="https://sigmaprime.io/">
                     <Translation id="page-upgrades-question-7-lighthouse" />
                   </Link>{" "}

@@ -112,8 +112,6 @@
   "page-upgrades-question-7-teku": "Teku",
   "page-upgrades-question-7-teku-lang": "(izvedba Java)",
   "page-upgrades-question-7-title": "Kdo razvija Eth2?",
-  "page-upgrades-question-7-trinity": "Trinity",
-  "page-upgrades-question-7-trinity-lang": "(izvedba Python)",
   "page-upgrades-question-8-answer-1": "Nadgradnje Eth2 bodo pomagale pri razširljivost Ethereuma na decentraliziran način, ohranjale varnost in povečale trajnost.",
   "page-upgrades-question-8-answer-2": "Najbolj očitna težava je najbrž dejstvo, da mora biti Ethereum sposoben obdelati več kot 15–45 transakcij na sekundo. Vendar bodo nadgradnje Eth2 odpravile tudi nekaj težav z današnjim Ethereumom.",
   "page-upgrades-question-8-answer-3": "Povpraševanje po omrežju je tako visoko, da je uporaba Ethereuma zaradi tega draga. Vozlišča v omrežju imajo težave z velikostjo Ethereuma in količino podatkov, ki jih morajo njihovi računalniki obdelati. Osnovni algoritem, ki zagotavlja varnost in decentralizacijo Ethereuma, pa je energijsko potraten in mora postati bolj ekološko sprejemljiv.",

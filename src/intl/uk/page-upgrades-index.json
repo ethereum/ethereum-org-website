@@ -112,8 +112,6 @@
   "page-upgrades-question-7-teku": "Teku",
   "page-upgrades-question-7-teku-lang": "(Java)",
   "page-upgrades-question-7-title": "Хто розробляє оновлення Eth2?",
-  "page-upgrades-question-7-trinity": "Trinity",
-  "page-upgrades-question-7-trinity-lang": "(Python)",
   "page-upgrades-question-8-answer-1": "Оновлення Eth2 допоможуть масштабувати мережу Ethereum шляхом децентралізації, забезпечуючи її безпеку й надійність.",
   "page-upgrades-question-8-answer-2": "Найбільш очевидною проблемою, імовірно, є те, що мережа Ethereum повинна обробляти 15–45 транзакцій за секунду. Однак оновлення Eth2 також націлені на вирішення інших проблем, що зараз наявні в мережі Ethereum.",
   "page-upgrades-question-8-answer-3": "Мережа Ethereum настільки популярна, що користуватися нею стало дорого. Вузли в мережі потерпають від розмірів Ethereum і обсягу даних, які повинні обробляти комп’ютери. Крім того, внутрішній алгоритм захисту й децентралізації Ethereum став надто енергоємним.",

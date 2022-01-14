@@ -112,8 +112,6 @@
   "page-upgrades-question-7-teku": "Teku",
   "page-upgrades-question-7-teku-lang": "(Java-Implementierung)",
   "page-upgrades-question-7-title": "Wer entwickelt Eth2?",
-  "page-upgrades-question-7-trinity": "Trinity",
-  "page-upgrades-question-7-trinity-lang": "(Python-Implementierung)",
   "page-upgrades-question-8-answer-1": "Die Eth2-Upgrades werden helfen, Ethereum dezentral zu skalieren, dabei gleichzeitig Sicherheit zu erhalten und die Nachhaltigkeit auszubauen.",
   "page-upgrades-question-8-answer-2": "Das vielleicht offensichtlichste Problem ist, dass Ethereum in der Lage sein muss, mehr als 15 bis 45 Transaktionen pro Sekunde zu verarbeiten. Aber die Eth2-Upgrades gehen auch ein paar andere Probleme mit dem heutigen Ethereum an.",
   "page-upgrades-question-8-answer-3": "Das Netzwerk erfährt eine so hohe Nachfrage, dass es das Nutzen von Ethereum teuer macht. Nodes im Netzwerk haben unter der Größe von Ethereum und der Datenmenge, die ihre Computer verarbeiten müssen, stark zu kämpfen. Und der zugrunde liegende Algorithmus, der Ethereum sicher und dezentral hält, ist energieintensiv und muss umweltfreundlicher werden.",

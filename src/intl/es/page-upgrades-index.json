@@ -112,8 +112,6 @@
   "page-upgrades-question-7-teku": "Teku",
   "page-upgrades-question-7-teku-lang": "(implementación de Java)",
   "page-upgrades-question-7-title": "¿Quién está construyendo Eth2?",
-  "page-upgrades-question-7-trinity": "Trinity",
-  "page-upgrades-question-7-trinity-lang": "(Implementación de Python)",
   "page-upgrades-question-8-answer-1": "Las actualizaciones de Eth2 ayudarán a escalar Ethereum de una manera descentralizada, al tiempo que mantienen la seguridad e incrementan la sostenibilidad.",
   "page-upgrades-question-8-answer-2": "Posiblemente el problema más obvio es que Ethereum tiene que poder realizar más de entre 15 y 45 transacciones por segundo. Pero las actualizaciones de Eth2 también abordan otros problemas con Ethereum hoy en día.",
   "page-upgrades-question-8-answer-3": "La red tiene una alta demanda y esto hace que Ethereum sea costoso de usar. Los nodos en la red luchan bajo el tamaño de Ethereum y la cantidad de información que sus ordenadores tienen que procesar y el algoritmo subyacente que mantiene a Ethereum seguro y descentralizado requiere mucha energía y necesita ser más ecológico.",

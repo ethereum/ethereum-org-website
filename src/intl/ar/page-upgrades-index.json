@@ -113,8 +113,6 @@
   "page-upgrades-question-7-teku": "Teku",
   "page-upgrades-question-7-teku-lang": "(تنفيذ Java)",
   "page-upgrades-question-7-title": "من يقوم ببناء upgrades؟",
-  "page-upgrades-question-7-trinity": "Trinity",
-  "page-upgrades-question-7-trinity-lang": "(تنفيذ Python)",
   "page-upgrades-question-8-answer-1": "ستساعد ترقيات upgrades على توسيع إثيريوم بطريقة لامركزية، مع الحفاظ على الأمن وزيادة الاستدامة.",
   "page-upgrades-question-8-answer-2": "ربما تكون المشكلة الأكثر وضوحًا هي أنه يلزم أن يتمكن إثيريوم من التعامل مع أكثر من 15-45 معاملة في الثانية. لكن ترقيات upgrades تعالج أيضًا بعض المشكلات الأخرى مع إثيريوم اليوم.",
   "page-upgrades-question-8-answer-3": "هناك طلب كبير على الشبكة مما يجعل استخدام إثيريوم مكلفًا. يصعُب على العُقد في الشبكة التعامل مع حجم إثيريوم وكمية البيانات التي يتعين على أجهزة الكمبيوتر الخاصة بها معالجتها. والخوارزمية الأساسية التي تبقي إثيريوم آمنًا وغير مركزي تستنزف الطاقة وتحتاج إلى تكون صديقة للبيئة بشكل أكبر.",

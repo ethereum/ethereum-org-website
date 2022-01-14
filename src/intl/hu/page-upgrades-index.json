@@ -112,8 +112,6 @@
   "page-upgrades-question-7-teku": "Teku",
   "page-upgrades-question-7-teku-lang": "(Java implementáció)",
   "page-upgrades-question-7-title": "Ki építi az Eth2-t?",
-  "page-upgrades-question-7-trinity": "Trinity",
-  "page-upgrades-question-7-trinity-lang": "(Python implementáció)",
   "page-upgrades-question-8-answer-1": "Az Eth2 fejlesztések az Ethereum decentralizált módon történő skálázhatóságában fognak segíteni a biztonság fenntartásával és a fenntarthatóság növelésével.",
   "page-upgrades-question-8-answer-2": "Valószínűleg a legnyilvánvalóbb probléma az az, hogy az Ethereumnak 15-45 tranzakciónál többet kell tudnia kezelni másodpercenként. De az Eth2 fejlesztés az Ethereum más jelenlegi problémáját is orvosolja.",
   "page-upgrades-question-8-answer-3": "A hálózat használatára nagy a kereslet, mely az Ethereum használatát megdrágítja. A hálózati csomópontok küszködnek az Ethereum mérete és az adatmennyiség miatt, melyet a számítógépeknek fel kell dolgozniuk. És a mögöttes algoritmus, mely biztonságossá és decentralizálttá teszi az Ethereumot, energiaintenzív és zöldebbnek kell lennie.",
