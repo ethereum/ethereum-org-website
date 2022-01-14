@@ -26,6 +26,7 @@ const YouTube = ({ id, start }) => {
         height="315"
         src={src}
         frameborder="0"
+        title="YouTube"
         allow="
       accelerometer;
       autoplay;
