@@ -40,10 +40,6 @@
     "toPath": "/en/what-is-ethereum/"
   },
   {
-    "fromPath": "/",
-    "toPath": "/en/"
-  },
-  {
     "fromPath": "/what-is-ethereum/",
     "toPath": "/en/what-is-ethereum/"
   },
@@ -60,24 +56,12 @@
     "toPath": "/en/wallets/"
   },
   {
-    "fromPath": "/eth2/",
-    "toPath": "/en/eth2"
-  },
-  {
     "fromPath": "/learn/",
     "toPath": "/en/learn/"
   },
   {
-    "fromPath": "/community/",
-    "toPath": "/en/community/"
-  },
-  {
     "fromPath": "/build/",
     "toPath": "/en/developers/learning-tools/"
-  },
-  {
-    "fromPath": "/developers/",
-    "toPath": "/en/developers/"
   },
   {
     "fromPath": "/enterprise/",
@@ -110,10 +94,6 @@
   {
     "fromPath": "/cookie-policy/",
     "toPath": "/en/cookie-policy/"
-  },
-  {
-    "fromPath": "/languages/",
-    "toPath": "/en/languages/"
   },
   {
     "fromPath": "/enterprise/",
