@@ -93,7 +93,7 @@ A set of upgrades (originally known as "Serenity" or "Eth2") that aim to upgrade
 
 Execution layer upgrades are a separate area of research from the consensus layer. The goal is to continue to improve and maintain the execution layer of Ethereum while the consensus layer is developed and implemented.
 
-For more information, see [EthHub’s explainer page about Ethereum 1.x](https://docs.ethhub.io/ethereum-roadmap/ethereum-1.x/)
+For more information, see [EthHub’s explainer page about Ethereum's execution layer](https://docs.ethhub.io/ethereum-roadmap/ethereum-1.x/)
 
 ## Cryptoeconomics {#cryptoeconomics}
 
