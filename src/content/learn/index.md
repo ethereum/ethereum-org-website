@@ -24,7 +24,7 @@ In addition to the information on this page, there are many community-built reso
 - [Ethereum.wiki](https://eth.wiki) _A community-built wiki about Ethereum’s technology_
 - [Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Videos and talks about Ethereum_
 - [Week in Ethereum News](https://weekinethereumnews.com/) _A weekly newsletter covering key developments across the ecosystem_
-- [What’s new with Ethereum upgrades](https://eth2.news) _A regular newsletter about Ethereum development_
+- [What’s new in Eth2](https://eth2.news) _A regular newsletter about Ethereum development_
 - [ethresear.ch forum](https://ethresear.ch/) _Deeper technical discussions on Ethereum for scaling and beyond_
 - [ETHGlobal](https://ethglobal.co) _An Ethereum hackathon series - attend one near you!_
 
