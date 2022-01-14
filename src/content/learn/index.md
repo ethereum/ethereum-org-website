@@ -85,7 +85,7 @@ There are many efforts underway to make Ethereum more “scalable” by improvin
 
 ## Consensus layer upgrades {#consensus-layer-upgrades}
 
-A set of upgrades originally known as "Serenity" or "Eth2" aim to upgrade the core of the Ethereum protocol for a more scalable, sustainable future, utilizing a proof-of-stake consensus layer.
+A set of upgrades (originally known as "Serenity" or "Eth2") that aim to upgrade the Ethereum protocol's core for a more scalable, sustainable future, utilizing a proof-of-stake consensus layer.
 
 [Learn everything you need to know about Ethereum upgrades](/upgrades/).
 
