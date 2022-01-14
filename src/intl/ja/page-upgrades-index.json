@@ -112,8 +112,6 @@
   "page-upgrades-question-7-teku": "Teku",
   "page-upgrades-question-7-teku-lang": "(Java 実装)",
   "page-upgrades-question-7-title": "誰が Eth2 を構築しているのですか？",
-  "page-upgrades-question-7-trinity": "Trinity",
-  "page-upgrades-question-7-trinity-lang": "(Python 実装)",
   "page-upgrades-question-8-answer-1": "Eth2のアップグレードは、セキュリティを維持し、持続可能性を向上させながら、分散化した方法でイーサリアムがスケーリングするのに役立ちます。",
   "page-upgrades-question-8-answer-2": "おそらく最も明白な問題は、イーサリウムが1秒間に15～45件以上のトランザクションを処理できるようにする必要があるということです。しかし、Eth2のアップグレードは、今日のイーサリウムの他のいくつかの問題にも対処します。",
   "page-upgrades-question-8-answer-3": "ネットワークの需要は非常に高く、イーサリウムの使用は高価なものになっています。ネットワークのノードは、イーサリウムのサイズとコンピュータが処理しなければならないデータの量に苦労しています。そして、イーサリウムのセキュリティと分散化を維持する基盤となるアルゴリズムは、エネルギー集約型であり、より環境に優しいものにする必要があります。",

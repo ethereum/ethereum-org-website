@@ -112,8 +112,6 @@
   "page-upgrades-question-7-teku": "Teku",
   "page-upgrades-question-7-teku-lang": "(Java uygulaması)",
   "page-upgrades-question-7-title": "Eth2'yi kim inşa ediyor?",
-  "page-upgrades-question-7-trinity": "Trinity",
-  "page-upgrades-question-7-trinity-lang": "(Python uygulaması)",
   "page-upgrades-question-8-answer-1": "Eth2 yükseltmeleri, güvenliği korurken ve sürdürülebilirliği artırırken Ethereum'un merkezi olmayan bir şekilde ölçeklenmesine yardımcı olur.",
   "page-upgrades-question-8-answer-2": "Muhtemelen en belirgin sorun, Ethereum'un saniyede 15-45'ten fazla işlemi gerçekleştirebilmesi gerektiğidir. Ancak Eth2 yükseltmeleri, bugün Ethereum ile ilgili diğer bazı sorunları da ele alıyor.",
   "page-upgrades-question-8-answer-3": "Ağ o kadar yüksek talep görüyor ki, bu durum Ethereum'u kullanmayı pahalı hale getiriyor. Ağdaki düğümler, Ethereum'un boyutu ve bilgisayarlarının işlemek zorunda olduğu veri miktarı altında zorlanıyor. Üstelik Ethereum'u güvenli ve merkezi olmayan tutan temeldeki algoritma, enerji olarak yoğundur ve daha çevreci olması gerekir.",

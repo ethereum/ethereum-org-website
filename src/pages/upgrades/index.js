@@ -348,30 +348,30 @@ const Eth2IndexPage = ({ data }) => {
       <Content>
         <ContributeCard>
           <div>
-            <H2>What happened to "Eth2?" </H2>
+            <H2>What happened to Eth2? </H2>
             <p>
-              In preparation for <Link to="/upgrades/merge">the merge</Link>,
-              the term "Eth2" is being phased out.
+              The term 'Eth2' is being phased out in preparation for{" "}
+              <Link to="/upgrades/merge">the merge</Link>.
             </p>
             <p>
-              Once "Eth1" and "Eth2" are merged, there will no longer be two
-              distinct Ethereum networks or concepts of "Eth1" and "Eth2" -
-              there will just be the Ethereum network we all know and love.
+              After merging Eth1 and Eth2 into a single chain, there will no
+              longer be two distinct Ethereum networks; there will only be
+              Ethereum.
             </p>
             <p>To limit confusion, these terms are being rebranded:</p>
             <ul>
               <li>
-                The "Eth1" chain is now known as the "execution layer," which
-                handles transactions and data.
+                Eth1 is now the 'execution layer', which handles transactions
+                and data.
               </li>
               <li>
-                The "Eth2" chain is now the "consensus layer," which handles
-                proof-of-stake consensus.
+                Eth2 is now the 'consensus layer', which handles proof-of-stake
+                consensus.
               </li>
             </ul>
             <p>
-              This is a change in naming convention only, and does not represent
-              alteration to underlying roadmap and goals.
+              The Eth2 rebrand changes naming convention only; it does not alter
+              Ethereum's goals or roadmap.
             </p>
           </div>
         </ContributeCard>
@@ -640,12 +640,6 @@ const Eth2IndexPage = ({ data }) => {
                 <Translation id="page-upgrades-question-7-teams" />
               </p>
               <ul>
-                <li>
-                  <Link to="https://trinity.ethereum.org/">
-                    <Translation id="page-upgrades-question-7-trinity" />
-                  </Link>{" "}
-                  <Translation id="page-upgrades-question-7-trinity-lang" />
-                </li>
                 <li>
                   <Link to="https://sigmaprime.io/">
                     <Translation id="page-upgrades-question-7-lighthouse" />

@@ -112,8 +112,6 @@
   "page-upgrades-question-7-teku": "Teku",
   "page-upgrades-question-7-teku-lang": "(реализация на Java)",
   "page-upgrades-question-7-title": "Кто создает Eth2?",
-  "page-upgrades-question-7-trinity": "Trinity",
-  "page-upgrades-question-7-trinity-lang": "(реализация на Python)",
   "page-upgrades-question-8-answer-1": "Обновления Eth2 помогут Ethereum масштабироваться децентрализованно, сохраняя при этом безопасность и повышая устойчивость.",
   "page-upgrades-question-8-answer-2": "Возможно, наиболее очевидная проблема заключается в том, что Ethereum должен обрабатывать более 15-45 транзакций в секунду. Но обновления Eth2 также решают некоторые другие проблемы с Ethereum сегодня.",
   "page-upgrades-question-8-answer-3": "Сеть пользуется таким высоким спросом, что делает использование Ethereum дорогим. Узлы в сети испытывают трудности с размером Ethereum и объемом данных, которые их компьютеры должны обрабатывать. А базовый алгоритм, обеспечивающий безопасность и децентрализацию Ethereum, энергоемок и должен быть более экологичным.",

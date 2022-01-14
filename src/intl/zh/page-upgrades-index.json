@@ -112,8 +112,6 @@
   "page-upgrades-question-7-teku": "Teku",
   "page-upgrades-question-7-teku-lang": "（Java语言实现）",
   "page-upgrades-question-7-title": "谁在构建Eth2？",
-  "page-upgrades-question-7-trinity": "Trinity",
-  "page-upgrades-question-7-trinity-lang": "（Python语言实现）",
   "page-upgrades-question-8-answer-1": "Eth2升级将帮助以太坊以去中心化的方式进行扩展，同时保证安全性并提升可持续发展的能力。",
   "page-upgrades-question-8-answer-2": "可能最显著的问题是以太坊需要处理超过每秒15-45笔交易的能力。但是Eth2升级同时还解决很多当前以太坊面临的其它问题。",
   "page-upgrades-question-8-answer-3": "网络的使用需求激增使得以太坊变得昂贵。网络中的节点正在以太坊网络的扩张和自身需要处理的数据量之间的矛盾中挣扎。另外保证以太坊底层安全和去中心化的算法也需要改进以使其变得更加节能。",

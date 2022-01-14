@@ -112,8 +112,6 @@
   "page-upgrades-question-7-teku": "Teku",
   "page-upgrades-question-7-teku-lang": "(Implementare Java)",
   "page-upgrades-question-7-title": "Cine construiește Eth2?",
-  "page-upgrades-question-7-trinity": "Trinity",
-  "page-upgrades-question-7-trinity-lang": "(Implementare Python)",
   "page-upgrades-question-8-answer-1": "Upgrade-urile Eth2 vor ajuta Ethereum să se extindă într-un mod descentralizat, menținând în același timp securitatea și sporind durabilitatea.",
   "page-upgrades-question-8-answer-2": "Poate că cea mai evidentă problemă este că Ethereum trebuie să poată gestiona mai mult de 15-45 de tranzacții pe secundă. Dar upgrade-urile Eth2 abordează și alte probleme cu Ethereum de astăzi.",
   "page-upgrades-question-8-answer-3": "Rețeaua are o cerere atât de mare încât face Ethereum scump de utilizat. Nodurile din rețea se luptă sub dimensiunea redusă a Ethereum-ului și cantitatea mare de date pe care computerele lor trebuie să le proceseze. În plus, algoritmul de bază care menține Ethereum în siguranță și descentralizat, consumă multă energie și trebuie să fie mai ecologic.",

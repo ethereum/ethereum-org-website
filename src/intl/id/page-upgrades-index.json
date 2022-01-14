@@ -113,8 +113,6 @@
   "page-upgrades-question-7-teku": "Teku",
   "page-upgrades-question-7-teku-lang": "(implementasi Java)",
   "page-upgrades-question-7-title": "Siapa yang membangun Eth2?",
-  "page-upgrades-question-7-trinity": "Trinity",
-  "page-upgrades-question-7-trinity-lang": "(implementasi Python)",
   "page-upgrades-question-8-answer-1": "Peningkatan Eth2 akan membantu skala Ethereum secara terdesentralisasi, dengan tetap menjaga keamanan, dan meningkatkan keberlanjutan.",
   "page-upgrades-question-8-answer-2": "Mungkin, masalah yang paling jelas adalah Ethereum harus mampu menangani lebih dari 15-45 transaksi per detik. Tetapi peningkatan Eth2 juga menangani beberapa permasalahan di Ethereum hari ini.",
   "page-upgrades-question-8-answer-3": "Jaringan ini sangat diminati sehingga membuat Ethereum menjadi mahal untuk digunakan. Node di jaringan bekerja keras memroses jumlah data yang banyak di Ethereum dan komputer pribadi. Dan algoritma yang mendasari yang membuat Ethereum aman dan terdesentralisasi adalah energi intensif dan perlu lebih ramah lingkungan.",

@@ -112,8 +112,6 @@
   "page-upgrades-question-7-teku": "Teku",
   "page-upgrades-question-7-teku-lang": "(Java implementacija)",
   "page-upgrades-question-7-title": "Tko gradi Eth2?",
-  "page-upgrades-question-7-trinity": "Trinity",
-  "page-upgrades-question-7-trinity-lang": "(Python implementacija)",
   "page-upgrades-question-8-answer-1": "Nadogradnje Eth2 pomoći će Ethereumu da se skalira na decentraliziran način, uz održavanje sigurnosti i povećanje održivosti.",
   "page-upgrades-question-8-answer-2": "Možda je najočitiji problem taj što Ethereum mora biti u mogućnosti obrađivati više od 15 – 45 transakcija u sekundi. No, nadogradnje Eth2 također rješavaju neke druge probleme s Ethereumom danas.",
   "page-upgrades-question-8-answer-3": "Mreža je toliko tražena da Ethereum postaje skup za upotrebu. Čvorovi u mreži bore se s veličinom Ethereuma i količinom podataka koja njihova računala moraju obraditi. A osnovni algoritam koji Ethereum održava sigurnim i decentraliziranim je energetski intenzivan i mora biti zeleniji.",

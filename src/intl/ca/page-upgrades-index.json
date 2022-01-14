@@ -112,8 +112,6 @@
   "page-upgrades-question-7-teku": "Teku",
   "page-upgrades-question-7-teku-lang": "(Implementació del Java)",
   "page-upgrades-question-7-title": "Qui construeix Eth2?",
-  "page-upgrades-question-7-trinity": "Trinity",
-  "page-upgrades-question-7-trinity-lang": "(Implementació del Python)",
   "page-upgrades-question-8-answer-1": "Les millores d'Eth2 ajudaran al creixement d'Ethereum d'un mode descentralitzat, mentre es manté la seguretat i s'incrementa la sostenibilitat.",
   "page-upgrades-question-8-answer-2": "Potser el problema més obvi és que Ethereum necessita poder gestionar més de 15-45 transaccions per segon. Però les millores d'Eth2 també solucionen alguns altres problemes amb l'Ethereum actual.",
   "page-upgrades-question-8-answer-3": "La xarxa té tanta demanda que fa que Ethereum sigui car d'utilitzar. Els nodes a la xarxa estan tenint problemes amb la mida d'Ethereum i la quantitat de dades que els ordinadors han de processar. I l'algoritme subjacent que manté Ethereum segur i descentralitzat consumeix molta energia i necessita ser més ecològic.",

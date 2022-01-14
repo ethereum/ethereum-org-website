@@ -59,7 +59,7 @@
   "consensus-run-beacon-chain-desc": "Ethereum needs as many clients running as possible. Help with this Ethereum public good!",
   "consensus-when-shipping": "When's it shipping?",
   "eth-upgrade-what-happened": "What happened to \"Eth2\"?",
-  "eth-upgrade-what-happened-description": "New terminology around the merge upgrade has deprecated the terms \"Eth1\" and \"Eth2\" in favor of \"execution layer\" and \"consensus layer,\" respectively.",
+  "eth-upgrade-what-happened-description": "The term 'Eth2' has been deprecated as we approach the merge. The 'consensus layer' encapsulates what was formerly known as Eth2.",
   "ethereum": "Ethereum",
   "ethereum-upgrades": "Ethereum upgrades",
   "ethereum-brand-assets": "Ethereum brand assets",
