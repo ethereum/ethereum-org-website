@@ -27,8 +27,6 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Staking](/eth2/staking/)
 - [Wallets](/wallets/)
 - [Find wallets](/wallets/find-wallet/)
-
-- [Staking deposit contract](/eth2/deposit-contract/)
 - [Developers' Home](/developers/)
 - [Developer learning tools](/developers/learning-tools/)
 - [Developer local environment setup](/developers/local-environment/)
@@ -39,6 +37,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Decentralized autonomous organizations (DAOs)](/dao/)
 - [Decentralized finance (DeFi)](/defi/)
 - [Non-fungible tokens (NFT)](/nft/)
+- [Ethereum energy consumption](/energy-consumption/)
 - [Ethereum governance](/governance/)
 - [Security and scam prevention](/security/)
 
@@ -50,6 +49,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Ethereum events](/community/events/)
 - [Ethereum support](/community/support/)
 - [Ethereum grants](/community/grants/)
+- [Language resources](/community/language-resources/)
 - [Translation Program](/contributing/translation-program/)
 - [Translation guide](/contributing/translation-program/translation-guide/)
 - [Translator acknowledgements](/contributing/translation-program/)
@@ -63,6 +63,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [The merge](/eth2/merge/)
 - [Shard chains](/eth2/shard-chains/)
 - [Staking](/eth2/staking/)
+- [Staking deposit contract](/eth2/deposit-contract/)
 - [Eth2 get involved](/eth2/get-involved/)
 - [Eth2 bug bounty](/eth2/get-involved/bug-bounty/)
 - [Ethereum Improvement Proposals (EIPs)](/eips/)
