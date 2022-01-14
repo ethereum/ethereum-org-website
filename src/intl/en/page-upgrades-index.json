@@ -160,7 +160,7 @@
   "page-upgrades-the-upgrades-desc": "Ethereum consists of a set of upgrades that improve the scalability, security, and sustainability of the network. Although each is being worked on in parallel, they have certain dependencies that determine when they will be deployed.",
   "page-upgrades-unofficial-roadmap": "This is not the official roadmap. This is how we view what's happening based on the information out there. But this is technology, things can change in an instant. So please don't read this as a commitment.",
   "page-upgrades-upgrade-desc": "The Ethereum we know and love, just more scalable, more secure, and more sustainable...",
-  "page-upgrades-upgrades": "Ethereum upgrades",
+  "page-upgrades-upgrades": "The Ethereum upgrades (Eth2)",
   "page-upgrades-upgrades-aria-label": "Ethereum upgrades menu",
   "page-upgrades-upgrades-beacon-chain": "The Beacon Chain",
   "page-upgrades-upgrades-docking": "The merge",
