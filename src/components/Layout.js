@@ -93,7 +93,7 @@ const Layout = (props) => {
         document.getElementById(idTag[1]).scrollIntoView(false)
       }
     }
-  }, [props.path])
+  }, [props.path, props.location])
 
   const handleThemeChange = () => {
     setIsDarkTheme(!isDarkTheme)
