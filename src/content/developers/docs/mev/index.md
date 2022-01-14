@@ -15,7 +15,7 @@ Make sure you're familiar with [transactions](/developers/docs/transactions/), [
 
 ## MEV extraction {#mev-extraction}
 
-In theory MEV accrues entirely to miners because miners are the only party that can guarantee the execution of a profitable MEV opportunity (at least on our current proof-of-work chain — this will change after [the merge](/upgrades/merge/)). In practice, however, a large portion of MEV is extracted by independent network participants referred to as "searchers." Searchers run complex algorithms on blockchain data to detect profitable MEV opportunities and have bots to automatically submit those profitable transactions to the network.
+In theory MEV accrues entirely to miners because miners are the only party that can guarantee the execution of a profitable MEV opportunity (at least on the current proof-of-work chain — this will change after [the merge](/upgrades/merge/)). In practice, however, a large portion of MEV is extracted by independent network participants referred to as "searchers." Searchers run complex algorithms on blockchain data to detect profitable MEV opportunities and have bots to automatically submit those profitable transactions to the network.
 
 Miners do get a portion of the full MEV amount anyway because searchers are willing to pay high gas fees (which go to the miner) in exchange for higher likelihood of inclusion of their profitable transactions in a block. Assuming searchers are economically rational, the gas fee that a searcher is willing to pay will be an amount up to 100% of the searcher's MEV (because if the gas fee was higher, the searcher would lose money).
 
