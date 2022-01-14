@@ -539,7 +539,7 @@ export const Clients = graphql`
 
 export const query = graphql`
   {
-    bountyHunters: allEth2BountyHuntersCsv(
+    bountyHunters: allConsensusBountyHuntersCsv(
       sort: { order: DESC, fields: score }
     ) {
       nodes {

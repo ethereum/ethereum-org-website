@@ -100,7 +100,7 @@ export const SloganGradient = styled.div`
   max-width: 720px;
   margin-top: 1rem;
   background-clip: text;
-  background-image: ${(props) => props.theme.colors.eth2Gradient};
+  background-image: ${(props) => props.theme.colors.upgradesGradient};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 0rem;
@@ -226,31 +226,6 @@ export const ButtonSecondary = styled(Button)`
   &:active {
     background-color: ${(props) =>
       props.theme.colors.secondaryButtonBackgroundActive};
-  }
-`
-
-export const Eth2Header = styled.h2`
-  font-style: normal;
-  font-weight: normal;
-  font-weight: 800;
-  font-size: 48px;
-  line-height: 120%;
-  max-width: 640px; // TODO refactor to remove this
-  margin-bottom: 0rem;
-  color: ${(props) => props.theme.colors.text00};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 40px;
-  }
-`
-
-export const Eth2HeaderGradient = styled.span`
-  background-clip: text;
-  background-image: ${(props) => props.theme.colors.eth2Gradient};
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    /* Avoid cutoff on mobile */
-    display: inline-block;
   }
 `
 

@@ -148,11 +148,11 @@ Bien sûr, certaines données parlent de la santé du réseau. Elle sont très s
 - Offre totale d'ETH - Nombre d'ETH en circulation. Rappelez-vous que des ETH sont créés avec chaque nouveau bloc sous la forme de récompenses.
 - Valorisation au prix du marché - Prix d'un ETH x l'offre totale.
 
-## Données Eth2 {#eth2-data}
+## Données Eth2 {#consensus-layer-data}
 
 Les mises à niveau Eth2 sont toujours en cours de développement, mais il est intéressant de parler des points de données que les explorateurs seront capables de vous fournir. En fait, toutes ces données sont déjà disponibles pour les réseaux de test.
 
-Si vous n'êtes pas familiarisé avec Eth2, lisez cette [présentation des mises à niveau Eth2](/eth2/).
+Si vous n'êtes pas familiarisé avec Eth2, lisez cette [présentation des mises à niveau Eth2](/upgrades/).
 
 ### Période {#epoch}
 
@@ -257,7 +257,7 @@ Les données Eth2 de haut niveau comprennent les éléments suivants :
 - [Ethplorer](https://ethplorer.io/) - Explorateur de blocs qui se focalise sur les jetons du réseau principal Ethereum ainsi que sur le réseau de test Kovan.
 - [Blockchair](https://blockchair.com/ethereum) - L'explorateur Ethereum le plus privé. Aussi pour le tri et le filtrage des données (mempool).
 
-## Explorateurs de blocs Eth2 {#eth2-block-explorers}
+## Explorateurs de blocs Eth2 {#beacon-chain-block-explorers}
 
 - [https://beaconcha.in/](https://beaconcha.in/)
 - [https://beaconscan.com/](https://beaconscan.com/)

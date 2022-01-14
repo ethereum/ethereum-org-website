@@ -76,7 +76,7 @@ const CircleSelect = styled.g`
 const FillCircle = styled.circle`
   fill: ${(props) =>
     props.isActive
-      ? props.isEth2
+      ? props.isEthereum
         ? props.theme.colors.primary300
         : props.theme.colors.primary
       : props.theme.colors.background};
@@ -185,7 +185,7 @@ const Trilemma = () => {
   })
 
   const handleClick = (selection) => {
-    if (selection === "isEth2") {
+    if (selection === "isEthereum") {
       setState({
         isDecentralizedAndSecure: true,
         isDecentralizedAndScalable: true,
@@ -228,11 +228,11 @@ const Trilemma = () => {
   const isScalable =
     state.isDecentralizedAndScalable || state.isScalableAndSecure
   const isSecure = state.isScalableAndSecure || state.isDecentralizedAndSecure
-  const isEth2 = isDecentralized && isScalable && isSecure
+  const isEthereum = isDecentralized && isScalable && isSecure
 
   let cardTitle = <Translation id="page-upgrades-vision-trilemma-title-1" />
   let cardText = <Translation id="page-upgrades-vision-trilemma-press-button" />
-  if (isEth2) {
+  if (isEthereum) {
     cardTitle = <Translation id="page-upgrades-vision-trilemma-title-2" />
     cardText = <Translation id="page-upgrades-vision-trilemma-cardtext-1" />
   } else if (state.isDecentralizedAndSecure) {
@@ -315,13 +315,13 @@ const Trilemma = () => {
             cx="337.5"
             cy="326.5"
             r="21"
-            isEth2={isEth2}
+            isEthereum={isEthereum}
             isActive={state.isDecentralizedAndSecure}
             stroke="black"
             strokeOpacity="0.12"
           />
         </CircleSelect>
-        <CircleSelect onClick={() => handleClick("isEth2")}>
+        <CircleSelect onClick={() => handleClick("isEthereum")}>
           <circle
             cx="400"
             cy="480"
@@ -334,7 +334,7 @@ const Trilemma = () => {
             cx="400"
             cy="480"
             r="21"
-            isActive={isEth2}
+            isActive={isEthereum}
             stroke="black"
             strokeOpacity="0.12"
           />
@@ -352,7 +352,7 @@ const Trilemma = () => {
             cx="321.5"
             cy="611.501"
             r="21"
-            isEth2={isEth2}
+            isEthereum={isEthereum}
             isActive={state.isScalableAndSecure}
             stroke="black"
             strokeOpacity="0.12"
@@ -371,13 +371,13 @@ const Trilemma = () => {
             cx="582.5"
             cy="460.5"
             r="21"
-            isEth2={isEth2}
+            isEthereum={isEthereum}
             isActive={state.isDecentralizedAndScalable}
             stroke="black"
             strokeOpacity="0.12"
           />
         </CircleSelect>
-        <Text x="400" y="540" isActive={isEth2}>
+        <Text x="400" y="540" isActive={isEthereum}>
           {translateMessageId("ethereum", intl)}
         </Text>
         <Text x="460" y="150" isActive={isDecentralized}>

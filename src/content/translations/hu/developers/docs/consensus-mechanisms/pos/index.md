@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-Az Ethereum átmegy a [proof-of-work-ről (PoW)](/developers/docs/consensus-mechanisms/pow/) egy másik konszenzus mechanizmusba, melyet proof-of-stake-nek hívunk. Mindig is ez volt a terv, mivel ez egy kulcs eleme a közösség stratégiájának az Ethereum skálázására vonatkozóan [az Eth2 fejlesztések](/eth2/) által. Azonban a PoS megfelelő bevezetése egy nagy technikai kihívás és nem annyira egyértelmű, mint a PoW használata, hogy elérjük a konszenzust a teljes hálózaton.
+Az Ethereum átmegy a [proof-of-work-ről (PoW)](/developers/docs/consensus-mechanisms/pow/) egy másik konszenzus mechanizmusba, melyet proof-of-stake-nek hívunk. Mindig is ez volt a terv, mivel ez egy kulcs eleme a közösség stratégiájának az Ethereum skálázására vonatkozóan [az Eth2 fejlesztések](/upgrades/) által. Azonban a PoS megfelelő bevezetése egy nagy technikai kihívás és nem annyira egyértelmű, mint a PoW használata, hogy elérjük a konszenzust a teljes hálózaton.
 
 ## Előfeltételek {#prerequisites}
 

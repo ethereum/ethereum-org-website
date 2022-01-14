@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-Ethereum przechodzi na mechanizm konsensusu zwany dowodem stawki (ang. proof-of-stake, skr. PoS) z poprzednio wykorzystywanego [dowodu wykonanej pracy](/developers/docs/consensus-mechanisms/pow/) (ang. proof-of-work, skr. PoW). Taki plan istniał od zawsze, ponieważ skalowanie Ethereum przez uaktualnienia do [Eth2](/eth2/) jest kluczowym elementem strategii obranej przez społeczność. Właściwe opracowanie PoS jest jednak dużym wyzwaniem technicznym i nie tak oczywistym jak wykorzystanie PoW do uzyskiwania konsensusu w obrębie sieci.
+Ethereum przechodzi na mechanizm konsensusu zwany dowodem stawki (ang. proof-of-stake, skr. PoS) z poprzednio wykorzystywanego [dowodu wykonanej pracy](/developers/docs/consensus-mechanisms/pow/) (ang. proof-of-work, skr. PoW). Taki plan istniał od zawsze, ponieważ skalowanie Ethereum przez uaktualnienia do [Eth2](/upgrades/) jest kluczowym elementem strategii obranej przez społeczność. Właściwe opracowanie PoS jest jednak dużym wyzwaniem technicznym i nie tak oczywistym jak wykorzystanie PoW do uzyskiwania konsensusu w obrębie sieci.
 
 ## Wymagania wstępne {#prerequisites}
 

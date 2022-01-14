@@ -99,7 +99,7 @@ const checkIsMdxOutdated = (path) => {
  */
 const checkIsPageOutdated = async (path, lang) => {
   // Files that need index appended on the end. Ex page-index.json, page-developers-index.json, page-upgrades-index.json
-  const indexFilePaths = ["", "developers", "eth2"]
+  const indexFilePaths = ["", "developers", "upgrades"]
   const filePath = path.split("/").filter((text) => text !== "")
 
   if (
@@ -414,7 +414,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       type: String
       link: String
     }
-    type Eth2BountyHuntersCsv implements Node {
+    type ConsensusBountyHuntersCsv implements Node {
       username: String,
       name: String,
       score: Int
