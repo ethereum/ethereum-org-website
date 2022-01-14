@@ -11,7 +11,7 @@ summaryPoint3: Ez a proof-of-work végét jeleni majd az Ethereumot tekintve, é
 summaryPoint4: Úgy is ismerheted, mint a Fázis 1.5 a technikai ütemtervek szerint.
 ---
 
-<UpgradeStatus date="~Q1/Q2 2022">
+<UpgradeStatus dateKey="page-upgrades-merge-date">
     Ezt a fejlesztést a shard láncok eljövetele fogja követni. De ez lesz az a pillanat, amikor az <a href="/upgrades/vision/">Eth2 vízió</a> teljesen megvalósul – nagyobb skálázhatóság, biztonság és fenntarthatóság valamint letétbe helyezés, mely a teljes hálózatot biztosítja.
 </UpgradeStatus>
 

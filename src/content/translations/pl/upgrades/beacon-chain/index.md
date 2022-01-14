@@ -11,8 +11,8 @@ summaryPoint3: Wprowadza dowód stawki do ekosystemu Ethereum.
 summaryPoint4: Być może znasz to jako "etap 0" w hamonogramie technicznym
 ---
 
-<UpgradeStatus isShipped date="Wysłane!">
-    Łańcuch śledzący ruszył 1 grudnia w południe czasu uniwersalnego. Aby dowiedzieć się więcej, <a href="https://beaconscan.com/">przeglądaj dane</a>. Jeżeli chcesz pomóc w walidacji łańcucha, możesz <a href="/staking/">zastawić swoje ETH</a>.
+<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+    Łańcuch śledzący ruszył 1 grudnia w południe czasu uniwersalnego. Aby dowiedzieć się więcej, <a href="https://beaconscan.com/">przeglądaj dane</a>. Jeżeli chcesz pomóc w walidacji łańcucha, możesz <a href="/upgrades/staking/">zastawić swoje ETH</a>.
 </UpgradeStatus>
 
 ## Co robi łańcuch śledzący? {#what-does-the-beacon-chain-do}

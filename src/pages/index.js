@@ -871,7 +871,7 @@ contract SimpleDomainRegistry {
             content={codeExamples}
             limit={5}
             clickHandler={toggleCodeExample}
-            header="Code examples"
+            headerKey="page-index-developers-code-examples"
             icon="code"
             isCode
           />

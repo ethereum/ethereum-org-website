@@ -497,6 +497,6 @@ Koncepcja arbitralnej funkcji przejściowej państwa wdrożonej przez protokołu
 20. [Drzewa Patricia Merkle w Ethereum](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
 21. [Peter Todd na temat sumy drzew Merkle](http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_Historia białej księgi znajduje się na stronie https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-wiki-zamiast/old-whitepaper-for-historical-reference.md_
+_Historia białej księgi znajduje się na stronie https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md_
 
 _Warto zauważyć, że Ethereum, podobnie jak wiele projektów oprogramowania opartych na społecznościach, rozwija się od czasu jego początkowego powstania. Aby dowiedzieć się o najnowszych zmianach w Ethereum i jak wprowadzone są zmiany w protokole, zalecamy [ten przewodnik](/learn/)._

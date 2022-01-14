@@ -11,8 +11,8 @@ summaryPoint3: On predstavlja proof-of-stake u Ethereumovom ekosustavu.
 summaryPoint4: To možete prepoznati kao „Fazu 0” na tehničkom planu.
 ---
 
-<UpgradeStatus isShipped date="Dostavljeno!">
-    Beacon Chain poslan je 1. prosinca u podne (UTC). Za više informacija <a href="https://beaconscan.com/">proučite podatke</a>. Ako želite pomoći u validaciji lanca, možete <a href="/staking/"> uložiti svoj ETH </a>.
+<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+    Beacon Chain poslan je 1. prosinca u podne (UTC). Za više informacija <a href="https://beaconscan.com/">proučite podatke</a>. Ako želite pomoći u validaciji lanca, možete <a href="/upgrades/staking/"> uložiti svoj ETH </a>.
 </UpgradeStatus>
 
 ## Što radi Beacon Chain? {#what-does-the-beacon-chain-do}

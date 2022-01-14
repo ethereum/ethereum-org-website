@@ -11,8 +11,8 @@ summaryPoint3: Bevezeti a proof-of-stake rendszert az Ethereum ökoszisztémába
 summaryPoint4: A technikai ütemtervekben "Fázis 0"-ként is ismerheted.
 ---
 
-<UpgradeStatus isShipped date="Kiszállított!">
-    A Beacon Chain december 1.-jén központi idő szerint délben indult el. További információért <a href="https://beaconscan.com/">nézd meg az adatokat</a>. Ha szeretnél segíteni a lánc érvényesítésében, akkor <a href="/staking/">letétbe tudod helyezni az ETH-edet</a>.
+<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+    A Beacon Chain december 1.-jén központi idő szerint délben indult el. További információért <a href="https://beaconscan.com/">nézd meg az adatokat</a>. Ha szeretnél segíteni a lánc érvényesítésében, akkor <a href="/upgrades/staking/">letétbe tudod helyezni az ETH-edet</a>.
 </UpgradeStatus>
 
 ## Mit csinál a Beacon Chain? {#what-does-the-beacon-chain-do}

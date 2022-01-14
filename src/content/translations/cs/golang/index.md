@@ -39,13 +39,13 @@ Potřebujete nejdříve úplně základní informace? Podívejte se na [ethereum
 
 - [Go Ethereum Documentation](https://geth.ethereum.org/docs/) - _Dokumentace pro oficiální podporu jazyka Go v projektu Ethereum_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [Vytváření DApp v jazyce Go s Geth](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
+- [Vytváření DApp v jazyce Go s Geth](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Práce s privátními Ethereum sítěmi v jazyce Go s Geth](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [Jednotkové testování chytrých kontraktů v Solidity na Ethereu s jazykem Go](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 
 ## Pokročilé používání {#advanced-use-patterns}
 
-- [Simulovaný backend GETH](https://kauri.io/article/6285c9692883411aa041b6b970405a17/v1/the-geth-simulated-backend)
+- [Simulovaný backend GETH](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [Blockchain jako služba pomocí Etherea a Quora](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
 - [Decentralizovaná úložiště IPFS a Swarm v blockchainových aplikacích pro Ethereum](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
 - [Mobilní klienti: knihovny a uzly pro Ethereum v rámci procesu](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)

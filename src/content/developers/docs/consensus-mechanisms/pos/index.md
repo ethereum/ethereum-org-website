@@ -6,6 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
+
 Ethereum is moving to a consensus mechanism called proof-of-stake (PoS) from [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/). This was always the plan as it's a key part in the community's strategy to scale Ethereum via [upgrades](/upgrades/). However getting PoS right is a big technical challenge and not as straightforward as using PoW to reach consensus across the network.
 
 ## Prerequisites {#prerequisites}
@@ -89,6 +90,9 @@ Stake slashings, ejections, and other penalties, coordinated by the beacon chain
 - [What is Proof of Stake](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
 - [What Proof of Stake Is And Why It Matters](https://bitcoinmagazine.com/culture/what-proof-of-stake-is-and-why-it-matters-1377531463) _Vitalik Buterin_
 - [The Beacon Chain Ethereum 2.0 explainer you need to read first](https://ethos.dev/beacon-chain/) _Ethos.dev_
+- [Why Proof of Stake (Nov 2020)](https://vitalik.ca/general/2020/11/06/pos2020.html) _Vitalik Buterin_
+- [Proof of Stake: How I Learned to Love Weak Subjectivity](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) _Vitalik Buterin_
+- [A Proof of Stake Design Philosophy](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _Vitalik Buterin_
 
 ## Related topics {#related-topics}
 

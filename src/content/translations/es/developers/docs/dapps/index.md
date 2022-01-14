@@ -17,8 +17,8 @@ Una dapp dispone de un código backend ejecutándose en una red descentralizada 
 
 Una dapp puede tener un código frontend y una interfaz de usuario escrita en cualquier lenguaje (al igual que una aplicación), que puede hacer llamadas a su backend. Además, su frontend se puede alojar en un almacenamiento descentralizado como [IPFS](https://ipfs.io/).
 
-- **Decentralizadas**, es decir, son independientes y nadie las controla.
-- **Dterministas**, es decir, realizan la misma función independientemente del entorno en el que se ejecuten.
+- **Descentralizadas**, es decir, son independientes y nadie las controla.
+- **Deterministas**, es decir, realizan la misma función independientemente del entorno en el que se ejecuten.
 - **Compatibles con Turing**, es decir, que dados los recursos requeridos, la dapp puede realizar cualquier acción.
 - **Aisladas**, lo que significa que se ejecutan en un entorno virtual conocido como Máquina Virtual de Ethereum; por tanto, si ocurre que el contrato inteligente contiene un gran error, este no obstaculizará el funcionamiento normal de la red blockchain.
 

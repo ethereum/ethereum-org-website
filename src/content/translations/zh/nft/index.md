@@ -25,7 +25,7 @@ NFT 代表非同质化代币。 非同质化是一个经济术语，您可以用
 
 另一方面，同质化物品可以互换，这取决于它们的价值而非独特属性。 例如，ETH 或美元具有同质化属性，因为 1 ETH/1 USD 可以兑换成另外的 1 ETH/1 USD。
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/Xdkkux6OxfM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="Xdkkux6OxfM" />
 
 ## 资产互联网 {#internet-of-assets}
 

@@ -11,8 +11,8 @@ summaryPoint3: Sie führt proof-of-stake ins Ethereum-System ein.
 summaryPoint4: In den verschiedenen technischen Entwicklungsstufen ist darunter die "Phase 0" gemeint.
 ---
 
-<UpgradeStatus isShipped date="Versandt!">
-    Die Beacon Chain wurde am 1. Dezember, 2020 gegen Mittag der koordinierten Weltzeit eingeführt. Um mehr zu erfahren, schau dir die <a href="https://beaconscan.com/">Daten</a> an. Wenn Du auch beim Validieren von Transaktionen auf der Beacon Chain helfen möchtest, kannst Du <a href="/staking/">Deine ETH staken</a>.
+<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+    Die Beacon Chain wurde am 1. Dezember, 2020 gegen Mittag der koordinierten Weltzeit eingeführt. Um mehr zu erfahren, schau dir die <a href="https://beaconscan.com/">Daten</a> an. Wenn Du auch beim Validieren von Transaktionen auf der Beacon Chain helfen möchtest, kannst Du <a href="/upgrades/staking/">Deine ETH staken</a>.
 </UpgradeStatus>
 
 ## Welche Funktion hat die Beacon Chain? {#what-does-the-beacon-chain-do}

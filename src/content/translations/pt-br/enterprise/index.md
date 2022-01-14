@@ -70,7 +70,7 @@ As redes Ethereum públicas e privadas podem precisar de recursos específicos e
 
 ### Segurança {#security}
 
-- [Clef](https://geth.ethereum.org/clef/Overview) _usado para assinar transações e dados e tem como objetivo substituir o gerenciamento de contas de geth_
+- [Clef](https://geth.ethereum.org/docs/clef/tutorial) _usado para assinar transações e dados e tem como objetivo substituir o gerenciamento de contas de geth_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _Um aplicativo de assinatura de transações para ser usado com um provedor web3_
 
 ### Ferramentas {#tooling}

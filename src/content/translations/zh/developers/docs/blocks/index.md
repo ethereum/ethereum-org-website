@@ -25,7 +25,9 @@ sidebar: true
 
 一旦某个区块被网络上的某个矿工放在一起（挖矿），它就会传播到网络的其余部分； 所有节点都将此块添加到其区块链的末尾，并且继续挖掘。 目前，以太坊的“工作量证明”协议指定了确切的块组装（挖矿）过程和提交/共识过程。
 
-### 视觉演示 {#a-visual-demo} <iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+### 视觉演示 {#a-visual-demo}
+
+<YouTube id="_160oMzblY8" />
 
 ## 工作量证明协议（POW） {#proof-of-work-protocol}
 

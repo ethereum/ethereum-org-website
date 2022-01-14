@@ -31,7 +31,7 @@ Una transacción enviada incluye la siguiente información:
 - `LímiteDeGas`: Cantidad máxima de unidades de gas que puede consumir la transacción. Las unidades de gas representan pasos computacionales
 - `PrecioDeGas`: La comisión que el remitente paga por unidad de gas.
 
-El gas es una referencia al trabajo computacional que se necesita para que el minero procese la transacción. Los usuarios tienen que pagar una comisión por ese trabajo computacional. El `límiteDeGas` y el `precioDeGas` determinan la comisión de gas máxima que se le paga al minero. [Mas ínformación acerca del gas](/developers/docs/gas/).
+El gas es una referencia al trabajo computacional que se necesita para que el minero procese la transacción. Los usuarios tienen que pagar una comisión por ese trabajo computacional. El `límiteDeGas` y el `precioDeGas` determinan la comisión de gas máxima que se le paga al minero. [Mas información acerca del gas](/developers/docs/gas/).
 
 El objeto de la transacción luce de la siguiente forma:
 
@@ -137,7 +137,9 @@ Una vez que la transacción ha sido enviada ocurre lo siguiente:
 
 ## Una demostración visual {#a-visual-demo}
 
-Observa a Austin mientras te guía por las transacciones, el gas y la minería. <iframe width="100%" height="315" src="https://www.youtube.com/embed/er-0ihqFQB0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Observa a Austin mientras te guía por las transacciones, el gas y la minería.
+
+<YouTube id="er-0ihqFQB0" />
 
 ## Leer más {#further-reading}
 

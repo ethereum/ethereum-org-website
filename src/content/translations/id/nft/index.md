@@ -25,7 +25,7 @@ NFT adalah singkatan dari non-fungible token. Non-fungible adalah istilah ekonom
 
 Barang-barang yang dapat dipertukarkan, di sisi lain, dapat ditukar karena nilainya yang menentukan esensinya bukan properti uniknya. Misalkan, ETH atau dolar dapat dipertukarkan karena 1 ETH / $1 USD dapat ditukar dengan 1 ETH / $1 USD lainnya.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/Xdkkux6OxfM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="Xdkkux6OxfM" />
 
 ## Internet aset {#internet-of-assets}
 

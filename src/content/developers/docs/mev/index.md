@@ -33,7 +33,7 @@ Rather than programming complex algorithms to detect profitable MEV opportunitie
 
 ### Flashbots {#mev-extraction-flashbots}
 
-Flashbots is a independent project which extends the go-ethereum client with a service that allows searchers to submit MEV transactions to miners without revealing them to the public mempool. This prevents transactions from being frontrun by generalized frontrunners.
+Flashbots is an independent project which extends the go-ethereum client with a service that allows searchers to submit MEV transactions to miners without revealing them to the public mempool. This prevents transactions from being frontrun by generalized frontrunners.
 
 As of this writing, a significant portion of MEV transactions is routed through Flashbots, meaning generalized frontrunners aren't as effective as they used to be.
 

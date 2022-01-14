@@ -11,7 +11,7 @@ summaryPoint3: Fan més fàcil executar un node fent que els requeriments de maq
 summaryPoint4: La planificació tècnica inclou la feina en cadenes de fragments en la "Fase 1" i potencialment en la "Fase 2".
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-upgrades-shards-date">
     Les cadenes de fragments haurien de sortir en algun moment del 2023, depenent de la velocitat amb què progressin les tasques després del llançament de la <a href="/upgrades/beacon-chain/">Cadena de Balisa.</a>. Aquests fragments dotaran Ethereum de més capacitat d'emmagatzematge i d'accés a dades, però no s'utilitzaran per executar codi. Encara s'estan esbrinant els detalls de tot plegat.
 </UpgradeStatus>
 
@@ -55,7 +55,7 @@ L'objectiu sempre ha estat afegir funcionalitats extra als fragments, perquè s'
 
 Vitalik Buterin, al podcast de Bankless, va presentar 3 opcions potencials que mereixen ésser tractades.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. No necessitar una execució d'estat {#state-execution-not-needed}
 
@@ -91,7 +91,7 @@ La Cadena de Balisa conté la lògica per mantenir els fragments segurs i sincro
 
 La xarxa principal d'Ethereum existirà igual que avui en dia inclús després de la introducció dels fragments. Però en algun moment, la xarxa principal necessitarà transformar-se en un fragment per tal de poder passar a ser una aposta. Falta veure si la xarxa principal romandrà com a únic fragment "intel·ligent" que pugui gestionar execució de codi - però sigui com sigui, s'haurà de prendre una decisió a la fase 2 de fragmentació.
 
-<ButtonLink to="/eth2/docking/">L'acoblament</ButtonLink>
+<ButtonLink to="/upgrades/docking/">L'acoblament</ButtonLink>
 
 <Divider />
 

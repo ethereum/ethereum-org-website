@@ -11,7 +11,7 @@ summaryPoint3: これはシャードチェーンのロールアウト前に実�
 summaryPoint4: 過去には "ドッキング"と呼ばれていました。
 ---
 
-<UpgradeStatus date="~Q2 2022">
+<UpgradeStatus dateKey="page-upgrades-merge-date">
   このアップグレードは、プルーフ・オブ・ステークのコンセンサス形成への公式な移行です。 これにより、エネルギー集約的なマイニングが不要になり、代わりにステークされたイーサを使用してネットワークを運用します。 <a href="/upgrades/vision/">Eth2のビジョン</a>であるスケーラビリティ、セキュリティ、および持続可能性を実現する上での本当にエキサイティングなステップです。
 </UpgradeStatus>
 

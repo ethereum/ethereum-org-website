@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
@@ -37,6 +36,7 @@ import {
   Header4,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
+import YouTube from "../components/YouTube"
 
 const Page = styled.div`
   display: flex;
@@ -99,14 +99,6 @@ const ContentContainer = styled.article`
   }
 `
 
-const LastUpdated = styled.p`
-  color: ${(props) => props.theme.colors.text200};
-  font-style: italic;
-  padding-top: 1rem;
-  margin-bottom: 0rem;
-  border-top: 1px solid ${(props) => props.theme.colors.border};
-`
-
 const Pre = styled.pre`
   max-width: 100%;
   overflow-x: scroll;
@@ -117,7 +109,7 @@ const Pre = styled.pre`
   white-space: pre-wrap;
 `
 
-const H1 = styled.h1`
+const InfoTitle = styled.h2`
   font-size: 48px;
   font-weight: 700;
   text-align: right;
@@ -133,15 +125,6 @@ const H2 = styled.h2`
   font-size: 32px;
   font-weight: 700;
   margin-top: 4rem;
-
-  /* Prevent nav overlap */
-  &:before {
-    content: "";
-    display: block;
-    height: 120px;
-    margin-top: -120px;
-    visibility: hidden;
-  }
 
   a {
     display: none;
@@ -175,15 +158,6 @@ const H2 = styled.h2`
 const H3 = styled.h3`
   font-size: 24px;
   font-weight: 700;
-
-  /* Prevent nav overlap */
-  &:before {
-    content: "";
-    display: block;
-    height: 120px;
-    margin-top: -120px;
-    visibility: hidden;
-  }
 
   a {
     display: none;
@@ -241,6 +215,7 @@ const components = {
   UpgradeStatus,
   DocLink,
   ExpandableCard,
+  YouTube,
 }
 
 const Title = styled.h1`
@@ -453,7 +428,7 @@ const UseCasePage = ({ data, pageContext }) => {
         />
         <InfoColumn>
           <StyledButtonDropdown list={dropdownLinks} />
-          <H1>{mdx.frontmatter.title}</H1>
+          <InfoTitle>{mdx.frontmatter.title}</InfoTitle>
 
           {mdx.frontmatter.sidebar && tocItems && (
             <UpgradeTableOfContents

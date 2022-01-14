@@ -11,7 +11,7 @@ summaryPoint3: Sie erleichtern den Betrieb einer Node, indem sie die Hardwareanf
 summaryPoint4: Dieses Upgrade ist nach der Verkupplung des Mainnet mit der Beacon Chain geplant.
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-upgrades-shards-date">
     Shard Chains sollten irgendwann im Jahr 2023 erscheinen, je nachdem, wie schnell die Arbeit nach <a href="/upgrades/merge/">der Verkupplung</a> voranschreitet. Diese Shards werden Ethereum mehr Kapazität für das Speichern und den Zugriff auf Daten geben, aber sie werden nicht für die Ausführung von Codes verwendet. Die Details hierfür werden noch ausgearbeitet.
 </UpgradeStatus>
 
@@ -59,7 +59,7 @@ Der Plan war immer den shards extra Funktionalität zu verleihen, um sie ähnlic
 
 Vitalik Buterin hat im Gespräch mit dem Bankless-Podcast 3 mögliche Optionen vorgestellt, die diskutiert werden sollten.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. Statusausführung nicht notwendig {#state-execution-not-needed}
 

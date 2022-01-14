@@ -59,7 +59,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 - [Chainstack](https://chainstack.com/) _mainnet and testnet Ethereum infrastructure hosted in public & isolated customer clouds_
 - [ConsenSys](https://consensys.net/) _provides a range of products and tools for building on Ethereum, as well as consulting and custom development services_
 - [Envision Blockchain](https://envisionblockchain.com/) _provides enterprise focused consulting and development services specializing in Ethereum Mainnet_
-- [EY OpsChain](https://blockchain.ey.com/products/procurement) _provides a procurement workflow by issuing RFQ’s, contracts, purchase orders, and invoices across your network of trusted business partners_
+- [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _provides a procurement workflow by issuing RFQ’s, contracts, purchase orders, and invoices across your network of trusted business partners_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _an enterprise focused open-source Ethereum client developed under the Apache 2.0 license and written in Java_
 - [Infura](https://infura.io/) _scalable API access to the Ethereum and IPFS networks_
 - [Provide](https://provide.services/) _infrastructure and APIs for Enterprise Web3 applications_
@@ -145,7 +145,7 @@ Here are some of the enterprise applications that have been deployed to the publ
 - [Minespider](https://www.minespider.com/) _supply chain tracking_
 - [ShipChain](https://shipchain.io) _public sidechain of Ethereum and enterprise system for supply chain visibility and trust, especially for multimodal logistics_
 - [Follow Our Fibre](https://www.followourfibre.com) _viscose supply chain traceability_
-- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/procurement) _enables companies to engage in a procurement workflow by issuing RFQ’s, contracts, purchase orders, and invoices across your network of trusted business partners_
+- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _enables companies to engage in a procurement workflow by issuing RFQ’s, contracts, purchase orders, and invoices across your network of trusted business partners_
 - [Treum](https://treum.io/) _brings transparency, traceability, and tradability to supply chains, using blockchain technology_
 
 ### Credentials and certifications {#credentials}

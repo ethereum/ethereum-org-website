@@ -11,8 +11,8 @@ summaryPoint3: Introduce la proof of stake nell'ecosistema Ethereum.
 summaryPoint4: Potreste averne sentito parlare come "Fase 0" nelle roadmap tecniche.
 ---
 
-<UpgradeStatus isShipped date="Spedito!">
-    La beacon chain è stata resa disponibile il primo dicembre a mezzogiorno (UTC). Per saperne di più, <a href="https://beaconscan.com/">esplora i dati</a>. Se vuoi contribuire a convalidare la catena, puoi <a href="/staking/">fare staking con i tuoi ETH</a>.
+<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+    La beacon chain è stata resa disponibile il primo dicembre a mezzogiorno (UTC). Per saperne di più, <a href="https://beaconscan.com/">esplora i dati</a>. Se vuoi contribuire a convalidare la catena, puoi <a href="/upgrades/staking/">fare staking con i tuoi ETH</a>.
 </UpgradeStatus>
 
 ## Cosa fa la beacon chain? {#what-does-the-beacon-chain-do}

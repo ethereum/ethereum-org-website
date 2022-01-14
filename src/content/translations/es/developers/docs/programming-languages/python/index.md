@@ -10,7 +10,7 @@ incomplete: true
 
 Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprovechan las ventajas de las criptomonedas y la tecnología de blockchain. Estas dapps pueden ser confiables, lo que significa que, una vez implementadas en Ethereum, siempre se ejecutan tal y como se programaron. Pueden controlar los activos digitales para crear nuevos tipos de aplicaciones financieras. Estas aplicaciones pueden ser descentralizadas, lo que significa que ninguna entidad o persona las controla y, por lo tanto, son prácticamente imposibles de censurar.
 
-## Comenzar con los contratos inteligentes y el lenguage de Solidity {#getting-started-with-smart-contracts-and-solidity}
+## Comenzar con los contratos inteligentes y el lenguaje de Solidity {#getting-started-with-smart-contracts-and-solidity}
 
 **Da los primeros pasos para integrar Python con Ethereum**
 
@@ -23,7 +23,7 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 
 ## Artículos para principiantes {#beginner-articles}
 
-- [Una introducción a los contratos inteligentes con Vyper](https://kauri.io/article/af913a853eaf4db88627b3ff9572b770/v1/an-introduction-to-smart-contracts-with-vyper)
+- [Una introducción a los contratos inteligentes con Vyper](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [¿Cómo desarrollar un contrato de Ethereum mediante Python Flask?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Introducción a Web3.py · Ethereum para desarrolladores de Python](https://www.dappuniversity.com/articles/web3-py-intro)
 - [Cómo llamar a una función de contrato inteligente mediante Python y web3.py](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
@@ -38,7 +38,7 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 ## Patrones de uso avanzado {#advanced-use-patterns}
 
 - [Compilar, desplegar y llamar a contratos inteligentes de Ethereum mediante Python](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [Analizar contratos inteligentes de Solifity con Slither](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
+- [Analizar contratos inteligentes de Solifity con Slither](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/)
 
 ## Proyectos y herramientas de Python {#python-projects-and-tools}
 

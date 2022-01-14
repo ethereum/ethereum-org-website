@@ -11,8 +11,8 @@ summaryPoint3: Introduzirá a prova de participação ao ecossistema da Ethereum
 summaryPoint4: Talvez você tenha visto isso sendo mencionado como "Fase 0" nos roadmaps técnicos.
 ---
 
-<UpgradeStatus isShipped date="Shipped!">
-    A Beacon Chain foi lançada em 1 de dezembro de 2020 ao meio-dia (UTC). Para saber mais, <a href="https://beaconscan.com/">conheça os dados</a>. Se quiser ajudar a validar a cadeia, você pode <a href="/staking/">participar com seus ETH</a>.
+<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+    A Beacon Chain foi lançada em 1 de dezembro de 2020 ao meio-dia (UTC). Para saber mais, <a href="https://beaconscan.com/">conheça os dados</a>. Se quiser ajudar a validar a cadeia, você pode <a href="/upgrades/staking/">participar com seus ETH</a>.
 </UpgradeStatus>
 
 ## O que a Beacon Chain faz? {#what-does-the-beacon-chain-do}

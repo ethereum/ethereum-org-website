@@ -11,7 +11,7 @@ summaryPoint3: यह इथेरियम के लिए कार्य-क
 summaryPoint4: आप इसे तकनीकी रोडमैप पर" चरण 1.5 "के रूप में जान सकते हैं।
 ---
 
-<UpgradeStatus date="~Q1/Q2 2022">
+<UpgradeStatus dateKey="page-upgrades-merge-date">
     यह अपग्रेड शार्ड चेन के आगमन के बाद होगा। लेकिन यही वह क्षण है, जहां <a href="/upgrades/vision/">Eth2 विज़न</a> पूरी तरह से साकार हो जाते हैं - पूरे नेटवर्क का समर्थन करने के साथ अधिक स्केलेबिलिटी, सुरक्षा और स्थिरता।
 </UpgradeStatus>
 

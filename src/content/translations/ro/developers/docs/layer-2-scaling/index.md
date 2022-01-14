@@ -173,7 +173,6 @@ Un lanț „plasma” este un blockchain separat care este ancorat pe lanțul pr
 - [OMG Network](https://omg.network/)
 - [Matic Network](https://matic.network/)
 - [Gluon](https://gluon.network/)
-- [Gazelle](https://gzle.io/)
 - [LeapDAO](https://ipfs.leapdao.org/)
 
 ## Validium {#validium}
