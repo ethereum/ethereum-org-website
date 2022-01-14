@@ -28,7 +28,7 @@ Perubahan-perubahan aturan ini dapat membuat pemisahan sementara di jaringan. Bl
 
 Peningkatan Altair adalah peningkatan pertama yang terjadwal untuk [Rantai Suar](/eth2/beacon-chain). Diharapkan untuk diluncurkan pada 2021. Peningkatan ini akan menambah dukungan pada "komite sinkronisasi", yang dapat memungkinkan klien ringan, dan akan membawa penalti ketidakaktifan dan pemotongan sampai nilai maksimumnya.
 
-- [Baca spesifikasi peningkatan Altair](https://github.com/ethereum/eth2.0-specs/tree/dev/specs/altair)
+- [Baca spesifikasi peningkatan Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
 ---
 
