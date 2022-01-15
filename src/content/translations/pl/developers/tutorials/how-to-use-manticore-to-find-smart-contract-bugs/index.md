@@ -84,7 +84,7 @@ Jako że `f()` zawiera dwie ścieżki, DSE będzie konstruować dwa różne pred
 - Ścieżka 1: `a == 65`
 - Ścieżka 2: `Not (== 65)`
 
-Każdy predykat ścieżki jest wzorem matematycznym, który można przypisać tak zwanemu [SMT solver](https://github.com/trailofbits/building-secure-contracts/blob/master/program-analysis/determine-properties.md), który spróbuje rozwiązać to równanie. W przypadku `Path 1` solver powie, że ścieżka może zostać zbadana za pomocą `a = 65`. Dla `Path 2` solver może dać `a` dowolną wartość inną niż 65, na przykład `a = 0`.
+Każdy predykat ścieżki jest wzorem matematycznym, który można przypisać tak zwanemu [SMT solver](https://wikipedia.org/wiki/Satisfiability_modulo_theories), który spróbuje rozwiązać to równanie. W przypadku `Path 1` solver powie, że ścieżka może zostać zbadana za pomocą `a = 65`. Dla `Path 2` solver może dać `a` dowolną wartość inną niż 65, na przykład `a = 0`.
 
 ### Weryfikacja właściwości {#verifying-properties}
 
@@ -465,7 +465,7 @@ m.transaction(caller=user_account,
 
 #### Ograniczenie stanu {#state-constraint}
 
-Użyj [state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/api.html?highlight=operator#manticore.core.state.StateBase.constrain), aby dodać ograniczenie do określonego stanu Może być używany do ograniczania stanu po jego eksploracji, aby sprawdzić na nim jakąś właściwość.
+Użyj [state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/states.html?highlight=StateBase#manticore.core.state.StateBase.constrain), aby dodać ograniczenie do określonego stanu Może być używany do ograniczania stanu po jego eksploracji, aby sprawdzić na nim jakąś właściwość.
 
 ### Sprawdzanie ograniczenia {#checking-constraint}
 

@@ -9,8 +9,6 @@ L'obligation pour les développeurs de rédiger des contrats intelligents pour c
 
 Ethereum et sa communauté ont adopté l'open source. Vous pouvez trouver des projets communautaires (implémentations de clients, API, frameworks de développement, outils de test) dans une grande variété de langages.
 
-<!-- Often certain languages have an certain advantage depending on the use case -->
-
 ## Choisissez votre langage {#data}
 
 Sélectionnez le langage qui vous intéresse pour trouver des projets, des ressources et des communautés virtuelles :

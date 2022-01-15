@@ -77,7 +77,7 @@ Para permitir a un usuario retirar ETH que ha almacenado previamente en el contr
 2. Envía la cantidad del saldo en ETH
 3. Reinicia su saldo a 0, para que no puedan retirar su saldo de nuevo.
 
-Si se llama desde una cuenta normal (como tu propia cuenta Metamask), esta función, como se esperaba, msg.sender.call.value() simplemente envía su cuenta ETH. Sin embargo, los contratos inteligentes también pueden realizar llamadas. Si un contrato malicioso es el que llama a `retiro ()`, msg.sender.call. alue() no sólo enviará una `cantidad` de ETH, sino que también llamará implícitamente al contrato para comenzar a ejecutar el código. Imaginemos este contracto malicioso:
+Si se llama desde una cuenta normal (como tu propia cuenta Metamask), esta función, como se esperaba, msg.sender.call.value() simplemente envía su cuenta ETH. Sin embargo, los contratos inteligentes también pueden realizar llamadas. Si un contrato malicioso es el que llama a `retiro ()`, msg.sender.call. alue() no sólo enviará una `cantidad` de ETH, sino que también llamará implícitamente al contrato para comenzar a ejecutar el código. Imaginemos este contrato malicioso:
 
 ```solidity
 contract Attacker {
@@ -116,8 +116,6 @@ Al llamar a Attacker.beginAttack(), se iniciará un ciclo que se parecerá a lo 
 ```
 
 Llamar al Attacker.beginAttack con 1 ETH hará que vuelva a entrar el ataque a la Víctima, extrayendo más ETH del proporcionado (tomado de los balances de otros usuarios, causando que el contrato de la Víctima sea sub-colateralizado)
-
-<!-- TODO create a subpage related to re-entrancy & move this content there -->
 
 ### Cómo lidiar con la reentrada (la forma incorrecta) {#how-to-deal-with-re-entrancy-the-wrong-way}
 

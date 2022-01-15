@@ -15,7 +15,7 @@
   "page-eth2-staking-desc-2": "Deși poți câștiga recompense pentru a face ceva care aduce beneficii rețelei, poți pierde ETH pentru acțiuni rău intenționate, deconectarea și nereușita validării.",
   "page-eth2-staking-desc-3": "Vei avea nevoie de 32 ETH pentru a deveni un validator complet sau de ceva ETH pentru a te alătura unui grup de mizare. De asemenea, va trebui să rulezi un client „Eth1” sau client rețea principală. Launchpad-ul te va ghida prin proces și cerințele hardware. Alternativ, poți utiliza un API back-end.",
   "page-eth2-staking-description": "Mizarea este actul de a depune 32 ETH pentru a activa un software de validare. În calitate de validator, vei fi responsabil pentru stocarea datelor, procesarea tranzacțiilor și adăugarea de blocuri noi în blockchain. Aceasta va menține Ethereum în siguranță pentru toată lumea și te va face să câștigi ETH nou în acest proces. Acest proces, cunoscut sub numele de dovada mizei, este introdus de lanțul Beacon.",
-  "page-eth2-staking-docked": "Mai multe despre andocare",
+  "page-eth2-staking-docked": "Mai multe despre unire",
   "page-eth2-staking-dyor": "Fă propriile tale cercetări",
   "page-eth2-staking-dyor-desc": "Niciunul dintre serviciile de mizare listate nu reprezintă o aprobare oficială. Efectuează propriile cercetări pentru a afla ce serviciu ți se potrivește cel mai bine.",
   "page-eth2-staking-header-1": "Mizează ETH pentru a deveni un validator Ethereum",
@@ -52,11 +52,11 @@
   "page-eth2-staking-upgrades-li": "Dovada mizei este gestionată de lanțul Beacon.",
   "page-eth2-staking-upgrades-li-2": "Ethereum va avea un lanț Beacon bazat pe dovada mizei și o rețea principală bazată pe dovada muncii pentru viitorul apropiat. Rețeaua principală este Ethereum-ul pe care îl folosim de mulți ani.",
   "page-eth2-staking-upgrades-li-3": "În acest timp, stakerii vor adăuga noi blocuri lanțului Beacon, dar nu vor procesa tranzacțiile din rețeaua principală.",
-  "page-eth2-staking-upgrades-li-4": "Ethereum va trece pe deplin la un sistem de dovadă a mizei odată ce rețeaua principală Ethereum devine un fragment al lanțului Beacon.",
-  "page-eth2-staking-upgrades-li-5": "Numai atunci îți vei putea retrage miza.",
+  "page-eth2-staking-upgrades-li-4": "Ethereum va trece complet la un sistem bazat pe Dovada Mizei (proof-of-stake) odată ce Rețeaua principală Ethereum se va uni cu Rețeaua Beacon.",
+  "page-eth2-staking-upgrades-li-5": "O actualizare minoră va urma pentru a permite retragerea fondurile mizate.",
   "page-eth2-staking-upgrades-title": "Upgrade-uri ale dovezii mizei și Eth2",
   "page-eth2-staking-validators": "Mai mulți validatori, mai multă securitate",
-  "page-eth2-staking-validators-desc": "Un blockchain precum Ethereum poate fi corupt când controlezi 51% din rețea. De exemplu, ai putea obține 51% din validatori care să afirme că soldul tău este 1.000.000 ETH și nu 1 ETH. Dar, pentru a controla 51% din validatori, ar trebui să deții 51% din ETH-ul din sistem – ceea ce este foarte mult!",
+  "page-eth2-staking-validators-desc": "Într-un blockchain ca Ethereum, este posibil să cenzurezi și să reordonezi tranzacțiile în favoarea ta dacă controlezi majoritatea rețelei. Dar, pentru a controla majoritatea rețelei, ai nevoie de o majoritate de validatori, iar pentru acest lucru ar trebui să controlezi majoritatea monedelor ETH din sistem – adică un număr foarte mare! Această cantitate de ETH crește de fiecare dată când un validator intră în sistem, consolidând astfel securitatea rețelei. Dovada Muncii (proof-of-work), modelul de securitate pe care Dovada Mizei (proof-of-stake) îl va înlocui, necesită validatori (mineri) care să aibă hardware specializat și mult spațiu fizic, astfel că intrarea în sistem ca și un miner este dificilă iar securitatea împotriva atacurilor majoritare nu crește atât de mult. Dovada Mizei (proof-of-stake) nu are aceste cerințe, care ar trebui să dezvolte rețeaua (și rezistența ei împotriva atacurilor majore) la dimensiuni care nu sunt posibile folosind Dovada Muncii (proof-of-work).",
   "page-eth2-staking-withdrawals": "Retragerile nu vor fi activate imediat",
-  "page-eth2-staking-withdrawals-desc": "Nu-ți vei putea retrage miza până când nu vor fi implementate viitoarele upgrade-uri. Retragerile ar trebui să fie disponibile numai după andocarea rețelei principale cu sistemul lanțului Beacon."
+  "page-eth2-staking-withdrawals-desc": "Nu îți vei putea retrage miza până când nu vor fi lansate următoarele actualizări. Retragerile vor fi disponibile într-o actualizare minoră după unirea Rețelei principale cu Lanțul Beacon."
 }

@@ -69,11 +69,6 @@ Una volta eseguita la configurazione, sarà possibile interrogare la blockchain 
 - ID di rete
 - e molto altro...
 
-<!--- #### Try it
-
-This remix tutorial will show you [how to query the blockchain using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
-
 ### Funzionalità del portafoglio {#wallet-functionality}
 
 Queste librerie offrono le funzionalità per creare portafogli, gestire chiavi e firmare transazioni.
@@ -217,11 +212,6 @@ Ciò significa che è possibile:
 - Eseguire una chiamata per stimare quanto carburante servirà per eseguire un metodo nell'EVM
 - Distribuire un contratto
 - E molto altro...
-
-<!--- #### Try it
-
-This remix tutorial will show you [how to query a contract using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
 
 ### Funzioni di utilità {#utility-functions}
 

@@ -23,17 +23,6 @@ Cu un blockchain ca Ethereum ai nevoie de fiecare nod din rețea pentru a putea 
 
 Oracolele rezolvă această problemă postând datele pe blockchain. De aceea, orice nod care redă tranzacția va utiliza aceleași date imuabile care sunt postate pentru ca toți să le vadă. Pentru a face acest lucru, un oracol este format de obicei dintr-un contract inteligent și unele componente din lanț care pot interoga API-urile, apoi trimit periodic tranzacții pentru a actualiza datele contractului inteligent.
 
-<!-- ## Oracle architecture {#oracle-architecture}
-
-To understand how an oracle works, let's play through a scenario where your smart contract needs to know who won the superbowl. This is an example of how it could work:
-
-1. Your smart contract requests information from an oracle smart contract.
-2. The oracle smart contract emits an [event](/developers/docs/smart-contracts/anatomy/#events-and-logs).
-3. Off-chain oracle nodes listen for events and upon hearing one, they query an API.
-4. The API returns a JSON response to the nodes.
-5. The nodes call on the oracle smart contract.
-6. The oracle smart contract returns the data to your smart contract. -->
-
 ### Securitate {#security}
 
 Un oracol este la fel de sigur ca sursele sale de date. Dacă o aplicație dapp folosește Uniswap ca oracol pentru fluxul său de preț ETH/DAI, un atacator ar putea să mute prețul pe Uniswap pentru a manipula înțelegerea de către dapp a prețului curent. Un exemplu al modului de combatere a acestui lucru este [un sistem de alimentare](https://developer.makerdao.com/feeds/) precum cel folosit de MakerDAO, care strânge date despre prețuri dintr-o serie de fluxuri de prețuri în loc să se bazeze doar pe o singură sursă.

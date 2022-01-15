@@ -11,8 +11,6 @@ source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 
-<!-- Probably turn into a serialised tutorial -->
-
 ## Installation {#installation}
 
 Echidna can be installed through docker or using the pre-compiled binary.
@@ -43,7 +41,7 @@ Echidna is a property-based fuzzer, we described in our previous blogposts ([1](
 
 ### Fuzzing {#fuzzing}
 
-[Fuzzing](https://en.wikipedia.org/wiki/Fuzzing) is a well-known technique in the security community. It consists to generate more or less randomly inputs to find bugs in the program. Fuzzers for traditional software (such as [AFL](http://lcamtuf.coredump.cx/afl/) or [LibFuzzer](https://llvm.org/docs/LibFuzzer.html)) are known to be efficient tools to find bugs.
+[Fuzzing](https://wikipedia.org/wiki/Fuzzing) is a well-known technique in the security community. It consists to generate more or less randomly inputs to find bugs in the program. Fuzzers for traditional software (such as [AFL](http://lcamtuf.coredump.cx/afl/) or [LibFuzzer](https://llvm.org/docs/LibFuzzer.html)) are known to be efficient tools to find bugs.
 
 Beyond the purely random generation of inputs, there are many techniques and strategies to generate good inputs, including:
 
@@ -53,7 +51,7 @@ Beyond the purely random generation of inputs, there are many techniques and str
 
 ### Property-based fuzzing {#property-based-fuzzing}
 
-Echidna belongs to a specific family of fuzzer: property-based fuzzing heavily inspired by [QuickCheck](https://en.wikipedia.org/wiki/QuickCheck). In contrast to classic fuzzer that will try to find crashes, Echidna will try to break user-defined invariants.
+Echidna belongs to a specific family of fuzzer: property-based fuzzing heavily inspired by [QuickCheck](https://wikipedia.org/wiki/QuickCheck). In contrast to classic fuzzer that will try to find crashes, Echidna will try to break user-defined invariants.
 
 In smart contracts, invariants are Solidity functions, that can represent any incorrect or invalid state that the contract can reach, including:
 

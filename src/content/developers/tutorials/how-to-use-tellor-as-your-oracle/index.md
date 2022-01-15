@@ -75,9 +75,6 @@ contract BtcPriceContract is UsingTellor {
 
 ```
 
-**Want to try a different price feed? Check out the list of supported prices here:
-[Current Data Feeds](https://docs.tellor.io/tellor/integration/data-ids/current-data-feeds)**
-
 ## Looking to do some testing first? See the list below for our active testnet addresses: {#looking-to-do-some-testing-first-see-the-list-below-for-our-active-testnet-addresses}
 
 #### Addresses: {#addresses}

@@ -44,6 +44,21 @@ const HorizontalUl = styled.ul`
 
 const Contributors = ({ location }) => {
   const intl = useIntl()
+  // TODO: Remove specific user checks once Acolad has updated their usernames
+  const translatorData = allTimeData.data.filter(
+    (item) =>
+      item.user.username !== "ethdotorg" &&
+      !item.user.username.includes("LQS_") &&
+      !item.user.username.includes("REMOVED_USER") &&
+      !item.user.username.includes("Aco_") &&
+      !item.user.fullName.includes("Aco_") &&
+      !item.user.username.includes("Acc_") &&
+      !item.user.fullName.includes("Acc_") &&
+      item.user.username !== "Finnish_Sandberg" &&
+      item.user.username !== "Norwegian_Sandberg" &&
+      item.user.username !== "Swedish_Sandberg"
+  )
+
   return (
     <Page>
       <PageMetadata
@@ -62,6 +77,12 @@ const Contributors = ({ location }) => {
         <h1>
           <Translation id="page-contributing-translation-program-contributors-title" />
         </h1>
+        <h4>
+          <strong>
+            <Translation id="page-contributing-translation-program-contributors-number-of-contributors" />{" "}
+            {translatorData.length}
+          </strong>
+        </h4>
         <p>
           <Translation id="page-contributing-translation-program-contributors-our-translators-1" />
         </p>
@@ -82,13 +103,7 @@ const Contributors = ({ location }) => {
           <Translation id="page-contributing-translation-program-contributors-thank-you" />
         </h2>
         <HorizontalUl>
-          {allTimeData.data
-            .filter(
-              (item) =>
-                item.user.username !== "ethdotorg" &&
-                !item.user.username.includes("LQS") &&
-                !item.user.username.includes("REMOVED_USER")
-            )
+          {translatorData
             .map(({ user }) => user.username)
             .sort((user1, user2) =>
               user1.toLowerCase().localeCompare(user2.toLowerCase())

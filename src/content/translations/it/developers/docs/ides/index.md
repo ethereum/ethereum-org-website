@@ -5,7 +5,7 @@ lang: it
 sidebar: true
 ---
 
-Per configurare un [ambiente di sviluppo integrato (IDE)](https://en.wikipedia.org/wiki/Integrated_development_environment), Ethereum è più o meno uguale a qualsiasi altro progetto software. Le opzioni tra cui scegliere sono molte, quindi si sceglie in base alle proprie necessità.
+Per configurare un [ambiente di sviluppo integrato (IDE)](https://wikipedia.org/wiki/Integrated_development_environment), Ethereum è più o meno uguale a qualsiasi altro progetto software. Le opzioni tra cui scegliere sono molte, quindi si sceglie in base alle proprie necessità.
 
 ## IDE basato su Web {#web-based-ides}
 

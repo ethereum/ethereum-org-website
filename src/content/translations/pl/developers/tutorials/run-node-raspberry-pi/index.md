@@ -14,8 +14,6 @@ source: r/ethereum
 sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_raspberry_pi_4_images_release/
 ---
 
-<!--Content below provided by @EthereumOnArm-->
-
 **TL;DR**: Flashuj Raspberry Pi 4, podłącz kabel Ethernet, podłącz dysk SSD i włącz urządzenie, aby zmienić Raspberry Pi 4 w pełne Ethereum 1.0 węzeł lub węzeł Ethereum 2.0 (łańcuch śledzący/ walidator)
 
 [Dowiedz się więcej o Ethereum 2.0 (Eth2)](/eth2/)
@@ -244,7 +242,7 @@ Proszę wziąć pod uwagę, że jest to pierwszy obraz oparty na Ubuntu 20.04, w
 1. [geth repeatedly crashes with SIGSEGV](https://github.com/ethereum/go-ethereum/issues/20190)
 2. [https://github.com/diglos/ethereumonarm](https://github.com/diglos/ethereumonarm)
 3. https://ubuntu.com/download/raspberry-pi
-4. https://en.wikipedia.org/wiki/Port_forwarding
+4. https://wikipedia.org/wiki/Port_forwarding
 5. https://prometheus.io
 6. https://grafana.com
 7. https://forum.armbian.com/topic/5565-zram-vs-swap/

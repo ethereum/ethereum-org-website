@@ -11,7 +11,7 @@ summaryPoint3: Questo segnerà la fine del proof of work per Ethereum e complete
 summaryPoint4: Questa fase viene detta anche "Fase 1.5" nelle roadmap tecniche.
 ---
 
-<UpgradeStatus date="~Q1/Q2 2022">
+<UpgradeStatus dateKey="page-eth2-upgrades-merge-date">
     Questo aggiornamento seguirà l'arrivo delle shard chain. Ma è il momento in cui la <a href="/eth2/vision/">vision Eth2</a> si realizza pienamente: maggiore scalabilità, sicurezza e sostenibilità con lo staking a supporto di tutta la rete.
 </UpgradeStatus>
 
@@ -26,22 +26,6 @@ Immagina Ethereum come una nave spaziale che non è ancora pronta per un viaggio
 Quando sarà pronta, la rete principale Ethereum sarà "agganciata" (docking) dalla beacon chain, diventando uno shard che utilizza proof of stake anziché [proof of work](/developers/docs/consensus-mechanisms/pow/).
 
 La rete principale aggiungerà la capacità di eseguire smart contract nel sistema di proof of stake, oltre a tutta la storia e allo stato corrente di Ethereum, per consentire consentendo una transizione senza intoppi per gli utenti e i possessori di ETH.
-
-<!-- ### Improving Mainnet
-
-Before Mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
-
-These include Improvements for
-
-- **End users**: like [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) which changes the way users bid for blockspace. In other words, making transaction fees more efficient for end users.
-- **Client runners**: making running clients more sustainable by capping disk space requirements.
-- **Developers**: upgrading the EVM to be more flexible.
-
-Plus many more.
-
-[More on Ethereum1.x](/learn/#eth-1x)
-
-These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 
 ## Dopo il docking {#after-the-docking}
 

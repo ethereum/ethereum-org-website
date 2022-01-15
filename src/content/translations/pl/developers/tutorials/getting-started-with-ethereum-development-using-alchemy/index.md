@@ -142,13 +142,13 @@ Nie znasz rozwiązań asynchronicznych? Sprawdź to [Medium post](https://medium
 node index.js
 ```
 
-**‌5. Powinieneś teraz zobaczyć najnowszy numer bloku w konsoli!**
+**5. Powinieneś teraz zobaczyć najnowszy numer bloku w konsoli!**
 
 ```
 The latest block number is 11043912
 ```
 
-‌**Woo! Gratulacje! Właśnie napisałeś swój pierwszy skrypt web3 używając Alchemy 🎉**
+**Woo! Gratulacje! Właśnie napisałeś swój pierwszy skrypt web3 używając Alchemy 🎉**
 
 Nie jesteś pewien, co zrobić dalej? Spróbuj wdrożyć pierwszy kontrakt inteligentny i popracuj, programując w Solidity [_Hello World Smart_](https://docs.alchemyapi.io/tutorials/hello-world-smart-contract) _Contract Guide, lub sprawdź, co wiesz o pulpicie nawigacyjnym za pomocą_ [_Dashboard Demo App_](https://docs.alchemyapi.io/tutorials/demo-app)_!_
 

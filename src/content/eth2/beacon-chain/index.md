@@ -11,7 +11,7 @@ summaryPoint3: It introduces proof-of-stake to the Ethereum ecosystem.
 summaryPoint4: You might know this as "Phase 0" on technical roadmaps.
 ---
 
-<UpgradeStatus isShipped date="Shipped!">
+<UpgradeStatus isShipped dateKey="page-eth2-upgrades-beacon-date">
     The Beacon Chain shipped on December 1, 2020 at noon UTC. To learn more, <a href="https://beaconscan.com/">explore the data</a>. If you want to help validate the chain, you can <a href="/eth2/staking/">stake your ETH</a>.
 </UpgradeStatus>
 

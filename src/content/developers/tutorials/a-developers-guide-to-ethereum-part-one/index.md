@@ -42,7 +42,7 @@ There are many ways to describe Ethereum, but at its heart is a blockchain. Bloc
 
 Each [block](/developers/docs/blocks/) has a reference to the block that came before it; the `parentHash` is simply the hash of the previous block.
 
-<div class="featured">Note: Ethereum makes regular use of <a href="https://en.wikipedia.org/wiki/Hash_function">hash functions</a> to produce fixed-size values (“hashes”). Hashes play an important role in Ethereum, but you can safely think of them as unique IDs for now.</div>
+<div class="featured">Note: Ethereum makes regular use of <a href="https://wikipedia.org/wiki/Hash_function">hash functions</a> to produce fixed-size values (“hashes”). Hashes play an important role in Ethereum, but you can safely think of them as unique IDs for now.</div>
 
 ![A diagram depicting a blockchain including the data inside  each block](./blockchain-diagram.png)
 
@@ -60,7 +60,7 @@ Python developers that want to interact with Ethereum are likely to reach for [W
 
 <div class="featured">Note: “Ethereum node” and “Ethereum client” are used interchangeably. In either case, it refers to the software that a participant in the Ethereum network runs. This software can read block data, receive updates when new blocks are added to the chain ("mined"), broadcast new transactions, and more.</div>
 
-[Ethereum clients](/developers/docs/nodes-and-clients/) can be configured to be reachable by [IPC](https://en.wikipedia.org/wiki/Inter-process_communication), HTTP, or Websockets, so Web3.py will need to mirror this configuration. Web3.py refers to these connection options as **providers**. You’ll want to choose one of the three providers to link the Web3.py instance with your node.
+[Ethereum clients](/developers/docs/nodes-and-clients/) can be configured to be reachable by [IPC](https://wikipedia.org/wiki/Inter-process_communication), HTTP, or Websockets, so Web3.py will need to mirror this configuration. Web3.py refers to these connection options as **providers**. You’ll want to choose one of the three providers to link the Web3.py instance with your node.
 
 ![A diagram showing how web3.py uses IPC to connect your applicaction to an Ethereum node](./web3py-and-nodes.png)
 

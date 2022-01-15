@@ -31,6 +31,7 @@ import TranslationsInProgress from "../components/TranslationsInProgress"
 import SectionNav from "../components/SectionNav"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
+import { getSummaryPoints } from "../utils/getSummaryPoints"
 import {
   Divider,
   Paragraph,
@@ -38,6 +39,7 @@ import {
   Header4,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
+import YouTube from "../components/YouTube"
 
 const Page = styled.div`
   display: flex;
@@ -135,15 +137,6 @@ const H2 = styled.h2`
   font-weight: 700;
   margin-top: 4rem;
 
-  /* Prevent nav overlap */
-  &:before {
-    content: "";
-    display: block;
-    height: 120px;
-    margin-top: -120px;
-    visibility: hidden;
-  }
-
   a {
     display: none;
   }
@@ -178,15 +171,6 @@ const H2 = styled.h2`
 const H3 = styled.h3`
   font-size: 24px;
   font-weight: 700;
-
-  /* Prevent nav overlap */
-  &:before {
-    content: "";
-    display: block;
-    height: 120px;
-    margin-top: -120px;
-    visibility: hidden;
-  }
 
   a {
     display: none;
@@ -247,6 +231,7 @@ const components = {
   Eth2BeaconChainActions,
   Eth2ShardChainsList,
   Eth2DockingList,
+  YouTube,
 }
 
 const Title = styled.h1`
@@ -403,14 +388,7 @@ const Eth2Page = ({ data: { mdx } }) => {
     ? mdx.parent.fields.gitLogLatestDate
     : mdx.parent.mtime
 
-  // Place summary points into an array, guarding for `undefined` values
-  let summaryPoints = []
-  for (let i = 1; i <= 4; i++) {
-    const summaryPoint = mdx.frontmatter[`summaryPoint${i}`]
-    if (summaryPoint) {
-      summaryPoints.push(summaryPoint)
-    }
-  }
+  const summaryPoints = getSummaryPoints(mdx.frontmatter)
 
   return (
     <Container>

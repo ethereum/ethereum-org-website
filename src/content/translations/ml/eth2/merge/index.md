@@ -11,7 +11,7 @@ summaryPoint3: ഇത് Ethereum- നുള്ള പ്രൂഫ്-ഓഫ് 
 summaryPoint4: ഇത് സാങ്കേതിക റോഡ്മാപ്പുകളിലെ "ഘട്ടം 1.5" ആയി നിങ്ങൾക്ക് അറിയാമായിരിക്കും.
 ---
 
-<UpgradeStatus date="~Q1/Q2 2022">
+<UpgradeStatus dateKey="page-eth2-upgrades-merge-date">
     ഈ നവീകരണം ഷാർഡ് ചെയിനുകളുടെ വരവിനെ പിന്തുടരും. <a href="/eth2/vision/">Eth2 ദർശനം</a> പൂർണ്ണമായി തിരിച്ചറിഞ്ഞ നിമിഷമായിരിക്കും ഇത് - മുഴുവൻ നെറ്റ്‌വർക്കിനെയും സ്റ്റെയ്ക്കിങ് പിന്തുണയ്‌ക്കുന്നതിലൂടെ കൂടുതൽ സ്കേലബിളിറ്റി, സുരക്ഷ, സുസ്ഥിരത എന്നിവ കൈവരിക്കും.
 </UpgradeStatus>
 
@@ -26,22 +26,6 @@ summaryPoint4: ഇത് സാങ്കേതിക റോഡ്മാപ്പ
 തയ്യാറാകുമ്പോൾ, [പ്രൂഫ് ഓഫ് വർക്കിനു](/developers/docs/consensus-mechanisms/pow/) പകരം പ്രൂഫ് ഓഫ് സ്റ്റേക്ക് ഉപയോഗിച്ചുകൊണ്ട് Ethereum മെയിൻനെറ്റ് അതിന്‍റെ തന്നെ ഷാര്‍ഡായിത്തീര്‍ന്ന് ബീക്കൺ ചെയിനുമായി "ഡോക്ക്" ചെയ്യും.
 
 എല്ലാ ETH ഉടമകൾക്കും ഉപയോക്താക്കൾക്കും പരിവർത്തനം സുഗമമാണെന്ന് ഉറപ്പുവരുത്തുന്നതിനായി സ്മാർട്ട് കരാറുകൾ പ്രൂഫ് ഓഫ് സ്റ്റേക്ക് സിസ്റ്റത്തിലേക്ക് പ്രവർത്തിപ്പിക്കാനുള്ള കഴിവും, കൂടാതെ മുഴുവൻ ചരിത്രവും നിലവിലെ Ethereumന്റെ അവസ്ഥയും മെയിൻനെറ്റ് കൊണ്ടുവരും.
-
-<!-- ### Improving mainnet
-
-Before mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
-
-These include Improvements for
-
-- **End users**: like [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) which changes the way users bid for blockspace. In other words, making transaction fees more efficient for end users.
-- **Client runners**: making running clients more sustainable by capping disk space requirements.
-- **Developers**: upgrading the EVM to be more flexible.
-
-Plus many more.
-
-[More on Ethereum1.x](/learn/#eth-1x)
-
-These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 
 ## ഡോക്കിംഗിന് ശേഷം {#after-the-docking}
 

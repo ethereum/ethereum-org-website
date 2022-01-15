@@ -35,7 +35,9 @@ La [chaîne phare](/eth2/beacon-chain/) avait besoin de 16 384 dépôts de 32 E
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/eth2/beacon-chain/" title="Chaîne phare" />
+<DocLink to="/eth2/beacon-chain/">
+  Chaîne phare
+</DocLink>
 
 ---
 
@@ -49,7 +51,9 @@ Le contrat de dépôt de mise en jeu a introduit la [mise en jeu](/glossary/#sta
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/eth2/staking/" title="Miser" />
+<DocLink to="/eth2/staking/">
+  Miser
+</DocLink>
 
 ---
 
@@ -202,7 +206,7 @@ La fourche Tangerine Whistle est la deuxième réponse aux attaques par déni de
 <ExpandableCard title="EIP Tangerine Whistle" contentPreview="Official improvements included in this fork.">
 
 - [EIP-150](https://eips.ethereum.org/EIPS/eip-150) - Augmente le coût en carburant des codes d'opération qui peuvent être utilisés dans les attaques par spam.
-- [EIP-158](https://eips.ethereum. rg/EIPS/eip-158) -Réduit la taille de l'état en supprimant un grand nombre de comptes vides
+- [EIP-158](https://eips.ethereum.org/EIPS/eip-158) -Réduit la taille de l'état en supprimant un grand nombre de comptes vides
   mis dans l'état à très bas prix en raison de failles dans les versions précédentes du protocole Ethereum.
 
 </ExpandableCard>
@@ -238,7 +242,7 @@ La fourche Homestead tournée vers l'avenir. Elle comprenait plusieurs changemen
 <ExpandableCard title="EIP Homestead" contentPreview="Official improvements included in this fork.">
 
 - [EIP-2](https://eips.ethereum.org/EIPS/eip-2) - Apporte des modifications au processus de création de contrats.
-- [EIP-7](https://eips.ethereum. rg/EIPS/eip-7) - Ajoute le nouveau code d'opération "DELEGATECALL".
+- [EIP-7](https://eips.ethereum.org/EIPS/eip-7) - Ajoute le nouveau code d'opération "DELEGATECALL".
 - [EIP-8](https://eips.ethereum.org/EIPS/eip-8)- Introduit des exigences de compatibilité devp2p.
 
 </ExpandableCard>
@@ -301,4 +305,6 @@ Le Livre jaune, rédigé par le Dr. Gavin Wood, est une définition technique du
 
 Document d'introduction publié en 2013 par Vitalik Buterin, le fondateur d'Ethereum, précédant le lancement du projet en 2015.
 
-<DocLink to="/whitepaper/" title="Livre blanc" />
+<DocLink to="/whitepaper/">
+  Livre blanc
+</DocLink>

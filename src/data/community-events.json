@@ -34,5 +34,86 @@
     "description": "A one-day celebration of mechanism design, coordination tech, public goods, and regen finance.",
     "startDate": "2022-02-17",
     "endDate": "2022-02-17"
+  },
+  {
+    "title": "ETHAmsterdam",
+    "to": "https://amsterdam.ethglobal.com/",
+    "sponsor": null,
+    "location": "Amsterdam, NL",
+    "description": "Strap in for three days of hacking, summits, and side events celebrating the energy in the ecosystem and setting an optimistic tone for the rest of the year.",
+    "startDate": "2022-04-22",
+    "endDate": "2022-04-24"
+  },
+  {
+    "title": "HackMoney",
+    "to": "https://defi.ethglobal.com/",
+    "sponsor": null,
+    "location": "Remote",
+    "description": "Our DeFi focused online hackathon will continue for the 3rd year.",
+    "startDate": "2022-05-01",
+    "endDate": "2022-05-31"
+  },
+  {
+    "title": "ETHNewYork",
+    "to": "https://airtable.com/shrZ89OEwQJRtXHPv/",
+    "sponsor": "",
+    "location": "New York, US",
+    "description": "Leveraging the excitement and support of the New York web3 community, we’re proud to announce that we’ll be back for more this June.",
+    "startDate": "2022-06-24",
+    "endDate": "2022-06-26"
+  },
+  {
+    "title": "HackFS",
+    "to": "https://hackfs.ethglobal.com/",
+    "sponsor": null,
+    "location": "Remote",
+    "description": "We’ll be continuing HackFS for the 3rd year in a row in partnership with Protocol Labs.",
+    "startDate": "2022-07-01",
+    "endDate": "2022-07-31"
+  },
+  {
+    "title": "ETHMexicoCity",
+    "to": "https://airtable.com/shrZ89OEwQJRtXHPv/",
+    "sponsor": null,
+    "location": "Mexico City, MX",
+    "description": "Located in the heart of the nation’s crypto scene, come prepared for a strong showing from the Mexican crypto diaspora—and a good time.",
+    "startDate": "2022-08-19",
+    "endDate": "2022-08-21"
+  },
+  {
+    "title": "ETHOnline",
+    "to": "https://online.ethglobal.com/",
+    "sponsor": null,
+    "location": "Remote",
+    "description": "Our biggest online event will happen again next September.",
+    "startDate": "2022-09-01",
+    "endDate": "2022-09-30"
+  },
+  {
+    "title": "ETHSanFrancisco",
+    "to": "https://airtable.com/shrZ89OEwQJRtXHPv/",
+    "sponsor": null,
+    "location": "San Francisco, US",
+    "description": "The energy and excitement at the first ETHSanFrancisco will be hard to top, but we have our eyes set on delivering an even more impactful experience.",
+    "startDate": "2022-11-04",
+    "endDate": "2022-11-06"
+  },
+  {
+    "title": "ETHTaipei",
+    "to": "https://airtable.com/shrZ89OEwQJRtXHPv/",
+    "sponsor": null,
+    "location": "Taipei, TW",
+    "description": "We’ve been working behind the scenes with the crypto community on the ground and are excited to share the details soon, so clear your calendar for an incredible weekend.",
+    "startDate": "2022-12-02",
+    "endDate": "2022-12-04"
+  },
+  {
+    "title": "ETHBogota",
+    "to": "https://airtable.com/shrZ89OEwQJRtXHPv/",
+    "sponsor": null,
+    "location": "Bogota, CO",
+    "description": "Whenever Devcon happens, we’ll be running ETHBogota right alongside it. Don’t miss the biggest web3 developer meetup of the year.",
+    "startDate": "2022-09-01",
+    "endDate": "2022-12-31"
   }
 ]

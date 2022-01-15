@@ -112,14 +112,6 @@ Vous êtes donc remboursé pour avoir prouvé la fraude.
 - [Offchain Labs Arbitrum Rollup](https://offchainlabs.com/)
 - [Fuel Network](https://fuel.sh/)
 
-<!-- #### The Optimism virtual machine (OVM)
-
-What makes Optimistic rollups particularly exciting is that the chain works the same as the main Ethereum chain because it's based on [the EVM](/developers/docs/evm/). It doesn't use Ethereum, it is Ethereum. This means if you want to use Optimistic rollups, it's just a matter of deploying it to the OVM. It looks, feels, and acts just like the Ethereum main chain–you write contracts in Solidity, and interact with the chain via the Web3 API.
-
-The OVM also has a bunch of features that allow for a really seamless experience moving code from the EVM. In fact you can move Solidity contracts onto a cheaper and faster solution with just a few lines of code.
-
-[Check out the OVM documentation](http://docs.optimism.io/) -->
-
 ## Canaux {#channels}
 
 Les canaux permettent aux participants d'effectuer `x` transactions hors chaîne tout en ne soumettant que deux transactions au réseau sur la chaîne. Cela permet un débit de transaction extrêmement élevé
@@ -181,7 +173,6 @@ Une chaîne plasma est une blockchain séparée qui est ancrée à la chaîne Et
 - [OMG Network](https://omg.network/)
 - [Matic Network](https://matic.network/)
 - [Gluon](https://gluon.network/)
-- [Gazelle](https://gzle.io/)
 - [LeapDAO](https://ipfs.leapdao.org/)
 
 ## Validium {#validium}
@@ -202,7 +193,7 @@ Utilise les preuves de validité comme les [rollups ZK](#zk-rollups), mais les d
 
 ## Chaînes latérales {#sidechains}
 
-Une chaîne latérale est une blockchain séparée qui fonctionne en parallèle au réseau principal, de façon indépendante. Elle possède son propre algorithme de consensus ([preuve d'autorité](https://en.wikipedia.org/wiki/Proof_of_authority), [preuve d'enjeu déléguée](https://en.bitcoinwiki.org/wiki/DPoS), [tolérance aux défauts byzantins](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained), etc.). Elle est relié à la chaîne principale par un "pont" à deux sens.
+Une chaîne latérale est une blockchain séparée qui fonctionne en parallèle au réseau principal, de façon indépendante. Elle possède son propre algorithme de consensus ([preuve d'autorité](https://wikipedia.org/wiki/Proof_of_authority), [preuve d'enjeu déléguée](https://en.bitcoinwiki.org/wiki/DPoS), [tolérance aux défauts byzantins](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained), etc.). Elle est relié à la chaîne principale par un "pont" à deux sens.
 
 | Avantages                                                     | Inconvénients                                                                                                             |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
@@ -221,13 +212,12 @@ Combine les meilleures parties des multiples technologies de couche 2, et peut o
 
 ### Solutions hybrides que vous pouvez utiliser {#use-hybrid-solutions}
 
-- [Offchain Labs Arbitrum SCSC](https://offchainlabs.com/arbitrum.pdf)
 - [Celer](https://www.celer.network/)
 
 ## Complément d'information {#further-reading}
 
 - [Validium et The Layer 2 Two-By-Two - Numéro 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
-- [Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework](https://medium.com/matter-labs/evaluating-ethereum-layer 2-scaling-solutions-a-comparison-framework-b6b2f410f955)
+- [Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework](https://blog.matter-labs.io/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
 - [Ajout de la chaîne latérale hybride PoS-Rollup à la plateforme Coherent Layer-2 de Celer sur Ethereum](https://medium.com/celer-network/adding-hybrid-pos-rollup-sidechain-to-celers-coherent-layer-2-platform-d1d3067fe593)
 - [Évolutivité de la blockchain ZK](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 

@@ -11,7 +11,7 @@ summaryPoint3: Ez a proof-of-work végét jeleni majd az Ethereumot tekintve, é
 summaryPoint4: Úgy is ismerheted, mint a Fázis 1.5 a technikai ütemtervek szerint.
 ---
 
-<UpgradeStatus date="~Q1/Q2 2022">
+<UpgradeStatus dateKey="page-eth2-upgrades-merge-date">
     Ezt a fejlesztést a shard láncok eljövetele fogja követni. De ez lesz az a pillanat, amikor az <a href="/eth2/vision/">Eth2 vízió</a> teljesen megvalósul – nagyobb skálázhatóság, biztonság és fenntarthatóság valamint letétbe helyezés, mely a teljes hálózatot biztosítja.
 </UpgradeStatus>
 
@@ -26,22 +26,6 @@ Képzeld el, hogy az Ethereum egy űrhajó, ami még nem teljesen áll készen e
 Amikor minden készen áll, az Ethereum főhálózat "bedokkol" a Beacon Chainnel, a saját shardjává válik, amely proof-of-stake-et használ [proof-of-work](/developers/docs/consensus-mechanisms/pow/) helyett.
 
 A főhálózat lehetővé teszi majd az okosszerződések futtatását a proof-of-stake rendszeren, valamint magával hozza a jelenlegi Ethereum állapotot és történetet, ezzel biztosítva, hogy az összes ETH tulajdonos és felhasználó számára elakadásmentes legyen az átállás.
-
-<!-- ### Improving Mainnet
-
-Before Mainnet docks with the new eth2 system, it’s probably worthwhile sorting some of the issues that are in flight – often referred to as Ethereum1.x.
-
-These include Improvements for
-
-- **End users**: like [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) which changes the way users bid for blockspace. In other words, making transaction fees more efficient for end users.
-- **Client runners**: making running clients more sustainable by capping disk space requirements.
-- **Developers**: upgrading the EVM to be more flexible.
-
-Plus many more.
-
-[More on Ethereum1.x](/learn/#eth-1x)
-
-These improvements all have a place in Eth2 so it’s likely that their progress may affect the timing of the docking. -->
 
 ## A dokkolás után {#after-the-docking}
 

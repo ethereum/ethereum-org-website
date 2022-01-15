@@ -69,11 +69,6 @@ După configurare, vei putea interoga blockchain-ul pentru:
 - id rețea
 - și altele...
 
-<!--- #### Try it
-
-This remix tutorial will show you [how to query the blockchain using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
-
 ### Funcționalitate de portofel {#wallet-functionality}
 
 Aceste biblioteci îți oferă funcționalități pentru crearea portofelelor, gestionarea cheilor și semnarea tranzacțiilor.
@@ -216,11 +211,6 @@ Aceasta înseamnă că poți:
 - Apela pentru estimarea gazului necesar execuției metodei atunci când va fi executat în EVM
 - Implementa un contract
 - Și altele...
-
-<!--- #### Try it
-
-This remix tutorial will show you [how to query a contract using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
 
 ### Funcții utilitare {#utility-functions}
 

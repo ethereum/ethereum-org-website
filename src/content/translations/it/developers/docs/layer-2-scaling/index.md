@@ -112,14 +112,6 @@ Quindi si viene rimborsati per aver provato la frode.
 - [Offchain Labs Arbitrum Rollup](https://offchainlabs.com/)
 - [Fuel Network](https://fuel.sh/)
 
-<!-- #### The Optimism virtual machine (OVM)
-
-What makes Optimistic rollups particularly exciting is that the chain works the same as the main Ethereum chain because it's based on [the EVM](/developers/docs/evm/). It doesn't use Ethereum, it is Ethereum. This means if you want to use Optimistic rollups, it's just a matter of deploying it to the OVM. It looks, feels, and acts just like the Ethereum main chain–you write contracts in Solidity, and interact with the chain via the Web3 API.
-
-The OVM also has a bunch of features that allow for a really seamless experience moving code from the EVM. In fact you can move Solidity contracts onto a cheaper and faster solution with just a few lines of code.
-
-[Check out the OVM documentation](http://docs.optimism.io/) -->
-
 ## Canali {#channels}
 
 I canali consentono ai partecipanti di negoziare `x` volte esternamente alla catena inviando poi solo due transazioni alla rete sulla catena. Questo consente volumi di transazioni estremamente elevati
@@ -181,7 +173,6 @@ Una catena Plasma è una blockchain separata, collegata alla catena principale E
 - [OMG Network](https://omg.network/)
 - [Matic Network](https://matic.network/)
 - [Gluon](https://gluon.network/)
-- [Gazelle](https://gzle.io/)
 - [LeapDAO](https://ipfs.leapdao.org/)
 
 ## Validium {#validium}
@@ -202,7 +193,7 @@ Usa prove di validità come [ZK-rollup](#zk-rollups) ma i dati non sono archivia
 
 ## Sidechain {#sidechains}
 
-Una sidechain è una blockchain separata che viene eseguita parallelamente alla rete principale e opera indipendentemente. Ha un proprio algoritmo di consenso ([Proof of Authority](https://en.wikipedia.org/wiki/Proof_of_authority), [Delegated proof-of-stake](https://en.bitcoinwiki.org/wiki/DPoS), [Byzantine fault tolerance](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained) e così via). È collegata alla catena principale da un bridge bidirezionale.
+Una sidechain è una blockchain separata che viene eseguita parallelamente alla rete principale e opera indipendentemente. Ha un proprio algoritmo di consenso ([Proof of Authority](https://wikipedia.org/wiki/Proof_of_authority), [Delegated proof-of-stake](https://en.bitcoinwiki.org/wiki/DPoS), [Byzantine fault tolerance](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained) e così via). È collegata alla catena principale da un bridge bidirezionale.
 
 | Pro                                                    | Contro                                                                                                    |
 | ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
@@ -221,13 +212,12 @@ Combinano le parti migliori di diverse tecnologie di livello 2 e possono offrire
 
 ### Usano soluzioni Ibride {#use-hybrid-solutions}
 
-- [Offchain Labs Arbitrum SCSC](https://offchainlabs.com/arbitrum.pdf)
 - [Celer](https://www.celer.network/)
 
 ## Letture consigliate {#further-reading}
 
 - [Validium And The Layer 2 Two-By-Two — Issue No. 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
-- \[Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework\](https://medium.com/matter-labs/evaluating-ethereum-layer 2-scaling-solutions-a-comparison-framework-b6b2f410f955)
+- \[Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework\](https://blog.matter-labs.io/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
 - [Adding Hybrid PoS-Rollup Sidechain to Celer’s Coherent Layer-2 Platform on Ethereum](https://medium.com/celer-network/adding-hybrid-pos-rollup-sidechain-to-celers-coherent-layer-2-platform-d1d3067fe593)
 - [Zero-Knowledge Blockchain Scalability](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 

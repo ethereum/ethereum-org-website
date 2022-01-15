@@ -117,8 +117,6 @@ Calling Attacker.beginAttack() will start a cycle that looks something like:
 
 Calling Attacker.beginAttack with 1 ETH will re-entrancy attack Victim, withdrawing more ETH than it provided (taken from other users' balances, causing the Victim contract to become under-collateralized)
 
-<!-- TODO create a subpage related to re-entrancy & move this content there -->
-
 ### How to deal with re-entrancy (the wrong way) {#how-to-deal-with-re-entrancy-the-wrong-way}
 
 One might consider defeating re-entrancy by simply preventing any smart contracts from interacting with your code. You search stackoverflow, you find this snippet of code with tons of upvotes:

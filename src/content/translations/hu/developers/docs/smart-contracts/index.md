@@ -15,9 +15,6 @@ Az okosszerződés egy [Ethereum számla](/developers/docs/accounts/) típus. Ez
 
 Olvasd el a [számlákról](/developers/docs/accounts/), [tranzakciókról](/developers/docs/transactions/) és az [Ethereum virtuális gépről szóló cikkeket](/developers/docs/evm/), mielőtt beleugranál az okosszerződések világába.
 
-<!-- TODO simpler example... scheduling payments in Ethereum is actually difficult -->
-<!-- TODO show an example smart contract, e.g. an implementation of a vending machine -->
-
 ## Egy digitális ételautomata {#a-digital-vending-machine}
 
 Talán a legjobb okosszerződés metafora az ételautomata, ahogy Nick Szabo fogalmazta meg. A megfelelő bemenetekkel, egy bizonyos kimenet jön létre.
@@ -102,7 +99,7 @@ Az [orákulumok](/developers/docs/oracles/) használata megoldást nyújt ezen p
 
 **DappSys -** **_Biztonságos, egyszerű, flexibilis okosszerződés építőelemek._**
 
-- [dapp.tools/dappsys](https://dapp.tools/dappsys/)
+- [Dappsys](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 ## További olvasnivaló {#further-reading}

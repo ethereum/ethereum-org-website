@@ -11,7 +11,7 @@ summaryPoint3: Γίνεται ευκολότερη η λειτουργία εν�
 summaryPoint4: Τεχνικοί χάρτες όδευσης περιλαμβάνουν εργασίες με shard chains στη "Φάση 1" και δυνητικά στη "Φάση 2".
 ---
 
-<UpgradeStatus date="~2023">
+<UpgradeStatus dateKey="page-eth2-upgrades-shards-date">
     Οι shard chains θα πρέπει να ενεργοποιηθούν κάποια στιγμή το 2023, ανάλογα με το πόσο γρήγορα προχωρούν οι εργασίες μετά την έναρξη του <a href="/eth2/beacon-chain/">Beacon Chain</a>. Αυτά τα shards θα δώσουν στο Ethereum μεγαλύτερη ικανότητα αποθήκευσης και πρόσβασης δεδομένων, αλλά δεν θα χρησιμοποιηθούν για την εκτέλεση κώδικα. Οι λεπτομέρειες αυτού του θέματος εξακολουθούν να εξετάζονται.
 </UpgradeStatus>
 
@@ -55,7 +55,7 @@ summaryPoint4: Τεχνικοί χάρτες όδευσης περιλαμβάν
 
 Ο Vitalik Buterin, όταν μίλησε στο Bankless, παρουσίασε 3 πιθανές επιλογές που αξίζει να συζητήσουμε.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/-R0j5AMUSzA?start=5841" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. Δεν απαιτείται κεντρική εκτέλεση {#state-execution-not-needed}
 
