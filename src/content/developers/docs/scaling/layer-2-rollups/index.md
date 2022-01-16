@@ -87,7 +87,7 @@ Multiple implementations of Optimistic rollups exist that you can integrate into
 
 ### Zero-knowledge rollups {#zk-rollups}
 
-**Zero-knowledge rollups (ZK-rollups)** bundle (or "roll-up") hundreds of transfers off-chain and generate a cryptographic proof, known as a SNARK (succinct non-interactive argument of knowledge). This is known as a validity proof and is posted on layer 1.
+**Zero-knowledge rollups (ZK-rollups)** bundle (or "roll-up") hundreds of transfers off-chain and generate a cryptographic proof. These proofs can come in a form of a SNARK (Succinct Non-interactive ARgument of Knowledge) or a STARK (Scalable Transparent ARgument of Knowledge). This is known as a validity proof and is posted on layer 1.
 
 The ZK-rollup smart contract maintains the state of all transfers on layer 2, and this state can only be updated with a validity proof. This means that ZK-rollups only need the validity proof instead of all transaction data. With a ZK-rollup, validating a block is quicker and cheaper because less data is included.
 
@@ -140,6 +140,7 @@ Hybrid solutions exist that combine the best parts of multiple layer 2 technolog
 
 - [What Are Zero-Knowledge Rollups?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
 - [EthHub on zk-rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
+- [STARKs vs SNARKs] (https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
 
 **Optimistic rollups**
 
