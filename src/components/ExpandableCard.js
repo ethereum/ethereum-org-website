@@ -21,6 +21,10 @@ const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    flex-direction: column;
+  }
 `
 
 const Title = styled.h3`
@@ -48,12 +52,24 @@ const Text = styled(motion.div)`
 
 const Question = styled.div`
   margin-right: 1rem;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
 `
 
 const ButtonContainer = styled.div`
   margin-left: 1rem;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin-left: 0;
+  }
 `
 
+const Link = styled(FakeLink)`
+  white-space: nowrap;
+`
 const ExpandableCard = ({ children, contentPreview, title }) => {
   const [isVisible, setIsVisible] = useState(false)
   const expandCollapse = {
@@ -101,14 +117,14 @@ const ExpandableCard = ({ children, contentPreview, title }) => {
         </Question>
         <ButtonContainer onClick={() => setIsVisible(!isVisible)}>
           {!isVisible && (
-            <FakeLink>
+            <Link>
               <Translation id="more" />
-            </FakeLink>
+            </Link>
           )}
           {isVisible && (
-            <FakeLink>
+            <Link>
               <Translation id="less" />
-            </FakeLink>
+            </Link>
           )}
         </ButtonContainer>
       </Content>
