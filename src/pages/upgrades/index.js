@@ -279,7 +279,10 @@ const Eth2IndexPage = ({ data }) => {
             <H2>
               <Translation id="page-upgrades-whats-next" />
             </H2>
-            <Translation id="page-upgrades-whats-next-desc" />
+            <Translation id="page-upgrades-whats-next-desc" /> <br />
+            <Link to="/history/">
+              <Translation id="page-upgrades-whats-next-history" />
+            </Link>
           </GhostCard>
           <StyledInfoBanner isWarning={true}>
             <H2>
@@ -512,7 +515,10 @@ const Eth2IndexPage = ({ data }) => {
               title={translateMessageId("page-upgrades-question-3-title", intl)}
             >
               <p>
-                <Translation id="page-upgrades-question3-answer-1" />
+                <Translation id="page-upgrades-question3-answer-1" />{" "}
+                <Link to="/security/">
+                  <Translation id="page-upgrades-security-link" />
+                </Link>
               </p>
               <p>
                 <Translation id="page-upgrades-question-3-answer-2" />
@@ -678,6 +684,11 @@ const Eth2IndexPage = ({ data }) => {
                   <Translation id="page-upgrades-question-7-lodestar-lang" />
                 </li>
               </ul>
+              <p>
+                <Link to="/developers/docs/nodes-and-clients/">
+                  <Translation id="page-upgrades-question-7-clients" />
+                </Link>
+              </p>
             </ExpandableCard>
             <ExpandableCard
               contentPreview={translateMessageId(
@@ -736,6 +747,11 @@ const Eth2IndexPage = ({ data }) => {
                 <Translation id="page-upgrades-question-9-answer-4" />{" "}
                 <Link to="https://ethresear.ch">
                   <Translation id="page-upgrades-question-3-answer-3-link" />
+                </Link>
+              </p>
+              <p>
+                <Link to="/community/get-involved/">
+                  <Translation id="page-upgrades-question-9-more" />
                 </Link>
               </p>
             </ExpandableCard>
