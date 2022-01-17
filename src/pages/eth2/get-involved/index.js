@@ -385,11 +385,8 @@ const GetInvolvedPage = ({ data, location }) => {
         <StyledCalloutBanner
           image={getImage(data.rhino)}
           alt={translateMessageId("eth2-rhino-img-alt", intl)}
-          title={translateMessageId("page-eth2-get-involved-stake", intl)}
-          description={translateMessageId(
-            "page-eth2-get-involved-stake-desc",
-            intl
-          )}
+          titleKey={"page-eth2-get-involved-stake"}
+          descriptionKey={"page-eth2-get-involved-stake-desc"}
         >
           <div>
             <ButtonLink to="/eth2/staking/">
