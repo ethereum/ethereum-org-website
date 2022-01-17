@@ -20,6 +20,8 @@ These rule changes may create a temporary split in the network. New blocks could
 
 </ExpandableCard>
 
+Looking for future protocol upgrades? [Learn about upcoming upgrades to Ethereum](/upgrades/).
+
 <Divider />
 
 ## 2021 {#2021}
