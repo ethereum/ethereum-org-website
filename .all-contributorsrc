@@ -6208,6 +6208,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "mradziwon",
+      "name": "mradziwon",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6785984?v=4",
+      "profile": "http://www.linkedin.com/in/mradziwon",
+      "contributions": [
+        "code",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
