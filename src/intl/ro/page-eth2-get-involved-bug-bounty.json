@@ -49,7 +49,7 @@
   "page-eth2-bug-bounty-specs-docs": "Documente de specificație",
   "page-eth2-bug-bounty-submit": "Trimite o eroare",
   "page-eth2-bug-bounty-submit-desc": "Pentru fiecare eroare găsită, vei fi recompensat cu puncte. Punctele câștigate depind de severitatea erorii. Fundația Ethereum (EF) determină severitatea utilizând metoda OWASP.",
-  "page-eth2-bug-bounty-subtitle": "Câștigă până la 50.000 USD și un loc în clasament prin identificarea erorilor protocolului și clientului Eth2. Pentru a atrage atenția asupra schimbărilor care apar în actualizarea Altair, toate recompensele pentru vulnerabilităţile legate de Altair vor fi dublate, până când aceasta va avea loc.",
+  "page-eth2-bug-bounty-subtitle": "Câștigă până la 50.000 USD și un loc în clasament prin identificarea erorilor protocolului și clientului Eth2.",
   "page-eth2-bug-bounty-title": "Deschis pentru trimiteri",
   "page-eth2-bug-bounty-title-1": "Lanțul Beacon",
   "page-eth2-bug-bounty-title-2": "Opțiunea furculiței",
