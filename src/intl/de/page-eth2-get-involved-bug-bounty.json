@@ -49,7 +49,7 @@
   "page-eth2-bug-bounty-specs-docs": "Spezifikationsdokumente",
   "page-eth2-bug-bounty-submit": "Bug melden",
   "page-eth2-bug-bounty-submit-desc": "Für jeden Bug, den du findest, wirst du Punkte bekommen. Die Punkte, die du verdienst, hängen vom Ausmaß des Bugs ab. Die Ethereum Foundation (EF) bestimmt den Schweregrad mit der OWASP-Methode.",
-  "page-eth2-bug-bounty-subtitle": "Verdiene bis zu 50.000 USD und einen Platz auf dem Leaderboard durch das Finden von Fehlern im Eth2-Protokoll und in Clients. Um weitere Blicke in die kommenden Veränderungen des Altair-Upgrades zu erhalten, werden sämtliche Prämien für auf Altair bezogene Schwachstellen bis zur Umsetzung des Updates verdoppelt.",
+  "page-eth2-bug-bounty-subtitle": "Verdiene bis zu 50.000 USD und einen Platz auf dem Leaderboard durch das Finden von Fehlern im Eth2-Protokoll und in Clients.",
   "page-eth2-bug-bounty-title": "Für Einreichungen offen",
   "page-eth2-bug-bounty-title-1": "Beacon-Chain",
   "page-eth2-bug-bounty-title-2": "Auswahl forken",

@@ -187,6 +187,11 @@ export const cardListImage = graphql`
 
 // TODO move component into get-eth.js page?
 const EthExchanges = () => {
+  const intl = useIntl()
+  const placeholderString = translateMessageId(
+    "page-get-eth-exchanges-search",
+    intl
+  )
   const data = useStaticQuery(graphql`
     query {
       exchangesByCountry: allExchangesByCountryCsv {
@@ -435,7 +440,6 @@ const EthExchanges = () => {
     },
   }
 
-  const intl = useIntl()
   const lastUpdated = getLocaleTimestamp(
     intl.locale,
     data.timestamp.parent.fields.gitLogLatestDate
@@ -558,7 +562,7 @@ const EthExchanges = () => {
         classNamePrefix="react-select"
         options={exchangesByCountry}
         onChange={handleSelectChange}
-        placeholder={"Type where you live..."}
+        placeholder={placeholderString}
       />
       {!hasSelectedCountry && (
         <EmptyStateContainer>

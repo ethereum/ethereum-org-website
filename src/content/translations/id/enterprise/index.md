@@ -55,7 +55,7 @@ Beberapa usaha kolaboratif untuk membuat Ethereum ramah bagi perusahaan telah di
 - [Chainstack](https://chainstack.com/) _infrastruktur jaringan utama dan testnet Ethereum yang dihost di cloud pelanggan publik & terisolasi_
 - [ConsenSys](https://consensys.net/) _menyediakan daftar produk dan peralatan untuk membangun di Ethereum, maupun layanan konsultasi dan pengembangan kustom_
 - [Envision Blockchain](https://envisionblockchain.com/) _menyediakan layanan konsultasi dan pengembangan yang berfokus pada perusahaan yang dikhususkan di Jaringan Utama Ethereum_
-- [EY OpsChain](https://blockchain.ey.com/products/procurement) _menyediakan alur kerja pengadaan dengan menerbitkan RFQ, kotrak, pesanan pembelian, dan faktur di keseluruhan jaringan partner bisnis terpercaya Anda_
+- [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _menyediakan alur kerja pengadaan dengan menerbitkan RFQ, kotrak, pesanan pembelian, dan faktur di keseluruhan jaringan partner bisnis terpercaya Anda_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _sebuah klien Ethereum sumber terbuka berfokus pada perusahaan yang dikembangkan di bawah lisensi Apache 2.0 dan ditulis dalam bahasa Java_
 - [Infura](https://infura.io/) _akses API yang dapat diukur untuk jaringan Ethereum dan IPFS_
 - [Provide](https://provide.services/) _infrastruktur dan API untuk aplikasi Web3 Perusahaan_
@@ -142,7 +142,7 @@ Berikut adalah beberapa aplikasi perusahaan yang telah digunakan pada Jaringan U
 - [Minespider](https://www.minespider.com/) _pelacakan rantai pasokan_
 - [ShipChain](https://shipchain.io) _sidechain Ethereum publik dan sistem perusahaan untuk visibilitas dan kepercayaan rantai pasokan, khususnya untuk logistik multimodal_
 - [Follow Our Fibre](https://www.followourfibre.com) _keterlacakan rantai pasokan viscose_
-- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/procurement) _memungkinkan perusahaan terlibat dalam sebuah alur kerja pengadaan dengan menerbitkan RFQ, kontrak, pemesanan pembelian, dan faktur di keseluruhan jaringan dari rekan bisnis terpercaya Anda_
+- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _memungkinkan perusahaan terlibat dalam sebuah alur kerja pengadaan dengan menerbitkan RFQ, kontrak, pemesanan pembelian, dan faktur di keseluruhan jaringan dari rekan bisnis terpercaya Anda_
 - [Treum](https://treum.io/) _menghadirkan transparansi, keterlacakan, dan kemampuan untuk diperdagangan pada rantai pasokan, menggunakan teknologi blockchain_
 
 ### Kredensial dan sertifikasi {#credentials}
@@ -160,4 +160,4 @@ Berikut adalah beberapa aplikasi perusahaan yang telah digunakan pada Jaringan U
 
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _pembayaran pemakaian listrik_
 
-Jika Anda ingin menambahkan daftar ini, silahkan baca [instruksi untuk berkontribusi](https://ethereum.org/en/contributing/).
+Jika Anda ingin menambahkan daftar ini, silahkan baca [instruksi untuk berkontribusi](/contributing/).

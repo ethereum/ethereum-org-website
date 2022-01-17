@@ -173,7 +173,6 @@ Una cadena de plasma es una blockchain independiente que está anclada a la cade
 - [Red OMG](https://omg.network/)
 - [Red Matic](https://matic.network/)
 - [Gluon](https://gluon.network/)
-- [Gazelle](https://gzle.io/)
 - [LeapDAO](https://ipfs.leapdao.org/)
 
 ## Validium {#validium}

@@ -37,6 +37,7 @@
   "page-index-developers": "Nova granica razvoja",
   "page-index-developers-description": "Ethereum i njegove aplikacije transparentne su i otvorenog izvora. Možete razdvojiti kod i ponovno koristiti funkcionalnost koju su drugi već izgradili. Ako ne želite učiti novi jezik, možete jednostavno komunicirati s kodom otvorenog izvora koristeći JavaScript i druge postojeće jezike.",
   "page-index-developers-button": "Portal za razvojne inženjere",
+  "page-index-developers-code-examples": "Code examples",
   "page-index-developers-code-example-title-0": "Vaša vlastita banka",
   "page-index-developers-code-example-description-0": "Možete izgraditi banku koju pokrećete logikom koju ste programirali.",
   "page-index-developers-code-example-title-1": "Vaša vlastita valuta",

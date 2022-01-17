@@ -55,7 +55,7 @@ sidebar: true
 - [Chainstack](https://chainstack.com/) _主网和测试网以太坊基础设施托管在公共& 分开的客户云中_
 - [ConsenSys](https://consensys.net/)_ 为以太坊上的开发提供了一系列的工具和产品，同时还包括了咨询和自定义开发服务_
 - [Envision Blockchain](https://envisionblockchain.com/)_ 向专注于以太坊主网的企业提供咨询和开发服务_
-- [EY OpsChain](https://blockchain.ey.com/products/procurement) _通过在您信任的商业伙伴网络中签发 RFQ、合同、订单和发票提供了一个采购流程_
+- [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _通过在您信任的商业伙伴网络中签发 RFQ、合同、订单和发票提供了一个采购流程_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _ 遵守 Apache 2.0 开源许可并用 Java 编写的开源以太坊客户端_
 - [Infura](https://infura.io/) _对以太坊和 IPFS 网络的可调用的 API 访问_
 - [Provide](https://provide.services/) _为 Enterprise Web3 应用程序提供基础架构和 API_
@@ -142,7 +142,7 @@ sidebar: true
 - [Minespider](https://www.minespider.com/) _供应链跟踪_
 - [ShipChain](https://shipchain.io) _公开的以太坊侧链，同时也是企业级的可见可信任的供应链，特别是以多式联运物流为目的_
 - [Follow Our Fibre](https://www.followourfibre.com) _直观跟踪供应链_
-- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/procurement) _通过在您信任的商业伙伴网络中签发 RFQ、合同、订单和发票提供了一个采购流程_
+- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _通过在您信任的商业伙伴网络中签发 RFQ、合同、订单和发票提供了一个采购流程_
 - [Treum](https://treum.io/) _使用区块链技术为供应链带来透明度、可追溯性和可交易性_
 
 ### 所有权与证明 {#credentials}

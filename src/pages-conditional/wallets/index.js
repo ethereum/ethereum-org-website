@@ -753,5 +753,8 @@ export const query = graphql`
     bitkeep: file(relativePath: { eq: "wallets/bitkeep.png" }) {
       ...listImage
     }
+    keystone: file(relativePath: { eq: "wallets/keystone.png" }) {
+      ...listImage
+    }
   }
 `

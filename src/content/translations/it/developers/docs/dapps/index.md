@@ -49,7 +49,7 @@ Uno Smart Contract è codice che gira sulla blockchain Ethereum e che funziona e
 **One Click Dapp** **_: strumento FOSS per generare frontend di dapp da un'ABI._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
-- [GitHub](https://github.com/One-Click-Dapp/one-click-dApp)
+- [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
 
 **Etherflow** **_: strumento FOSS per sviluppatori di Ethereum, per testare il nodo, creare chiamate RPC dal browser ed eseguirne il debug._**
 

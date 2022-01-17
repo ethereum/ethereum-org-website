@@ -27,6 +27,8 @@
   "page-eth2-get-involved-more": "Daha fazla bilgi",
   "page-eth2-get-involved-run-clients": "İşaret zinciri istemcilerini çalıştırın",
   "page-eth2-get-involved-run-clients-desc": "Ethereum'un uzun vadeli güvenliğinin anahtarı, güçlü bir istemci dağıtımıdır. İstemci, blok zincirini çalıştıran, işlemleri kontrol eden ve yeni blokların oluşturulmasını sağlayan bir yazılımdır. Her istemcinin kendi özellikleri vardır, bu yüzden içinize sinen birini seçin.",
+  "page-eth2-get-involved-run-clients-production": "Kullanıma hazır Eth2 istemcileri",
+  "page-eth2-get-involved-run-clients-experimental": "Deneysel Eth2 istemcileri",
   "page-eth2-get-involved-stake": "EHT'nizi stake edin",
   "page-eth2-get-involved-stake-desc": "İşaret zincirinin güvenliğini sağlamak için artık ETH'nizi stake edebilirsiniz.",
   "page-eth2-get-involved-stake-eth": "ETH stake etme",

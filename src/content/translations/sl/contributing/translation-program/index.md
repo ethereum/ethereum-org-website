@@ -18,7 +18,7 @@ Naš napredek do zdaj:
 Če se želite pridružiti in nam pomagati povečati globalno Ethereum skupnost s prevajanjem spletne strani v vaš jezik, sledite spodnjim korakom!
 
 <InfoBanner shouldCenter emoji=":tada:">
-  Prevzemite svoj POAP žeton! Če ste prevajali ethereum.org v letu 2021, vas čaka edinstven POAP. <a href="https://ethereum.org/en/contributing/#poap">Več o POAP-ih</a>
+  Prevzemite svoj POAP žeton! Če ste prevajali ethereum.org v letu 2021, vas čaka edinstven POAP. <a href="/contributing/#poap">Več o POAP-ih</a>
 </InfoBanner>
 
 ## Misija in vizija {#mission-and-vision}
@@ -57,7 +57,7 @@ Ethereum.org prevajalski program želi narediti Ethereum dostopen za vse, s prev
 
    Spodbujamo vas, da najprej prevajate nižjo verzijo in se prebijate proti višjim verzijam (v.2.0 → v.2.1 → v.2.2 → ⋯), saj bodo nižje verzije na strani posodobljene najprej.
 
-   [Preberite si več o ethereum.org vsebinskih verzijah](/en/contributing/translation-program/content-versions/)
+   [Preberite si več o ethereum.org vsebinskih verzijah](/contributing/translation-program/content-versions/)
 
 3. **Prevajanje**  
    Po izbiri datoteke, ki jo želite prevesti, se bo ta odprla v spletnem urejevalniku. Če niste še nikoli uporabljali Crowdina, lahko uporabite ta hitri vodnik, da pregledate osnove.
@@ -97,7 +97,7 @@ Hvala za vaše sodelovanje pri ethereum.org prevajalskem programu!
 
 <InfoBanner shouldCenter emoji=":information_source:">
   Če nam pomagate pri prevajanju, boste morda našli uporabne informacije v naši prevajalski FAQ sekciji. 
-  <a href="/en/contributing/translation-program/translation-guide/">Prevajanje ethereum.org FAQ</a>
+  <a href="/contributing/translation-program/translation-guide/">Prevajanje ethereum.org FAQ</a>
 </InfoBanner>
 
 ## Viri {#resources}

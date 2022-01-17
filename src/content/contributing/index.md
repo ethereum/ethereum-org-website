@@ -50,7 +50,7 @@ You don't need permission to work on anything, but it's always best to let us kn
 - Commenting on an issue or PR in [GitHub](https://github.com/ethereum/ethereum-org-website)
 - Messaging on our [Discord server](https://discord.gg/CetY6Y4)
 
-Before contributing , make sure you're familiar with:
+Before contributing, make sure you're familiar with:
 
 - the evolving [vision of ethereum.org](/about/)
 - our [design principles](/contributing/design-principles/)
@@ -63,6 +63,10 @@ Decisions about individual PRs, design evolution and major upgrades are made by 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
 - [Discord server](https://discord.gg/CetY6Y4)
+
+### A note on plagiarism {#plagiarism}
+
+Only use your original work or content that you have permission to use when contributing any content or artefact to ethereum.org. Many projects within the Ethereum ecosystem use open-source licensing that allows for the free sharing of information. However, if you are cannot find this information, do not attempt to add it to ethereum.org. Any pull requests deemed as plagiarism will get rejected.
 
 ## New to open-source? {#new-to-open-source}
 

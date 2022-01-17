@@ -96,20 +96,33 @@ const Eth2BeaconChainActions = () => {
     },
   ]
 
+  //TODO: we should refactor the naming here instead of using authors into the description field
   const reads = [
     {
-      title: "Two Point Oh: The Beacon Chain",
+      title: translateMessageId(
+        "page-upgrade-article-title-two-point-oh",
+        intl
+      ),
       description: "Status",
       link: "https://our.status.im/two-point-oh-the-beacon-chain/",
     },
     {
-      title: "The Beacon Chain Ethereum 2.0 explainer you need to read first",
+      title: translateMessageId(
+        "page-upgrade-article-title-beacon-chain-explainer",
+        intl
+      ),
       description: "Ethos.dev",
       link: "https://ethos.dev/beacon-chain/",
     },
     {
-      title: "Sharding consensus",
-      description: "Ethereum Foundation",
+      title: translateMessageId(
+        "page-upgrade-article-title-sharding-consensus",
+        intl
+      ),
+      description: translateMessageId(
+        "page-upgrade-article-author-ethereum-foundation",
+        intl
+      ),
       link: "https://blog.ethereum.org/2020/03/27/sharding-consensus/",
     },
   ]

@@ -25,7 +25,7 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 
 - [Seleccionar a un cliente de Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [El cliente de Ethereum basado en Rust](https://wiki.parity.io/Setup)
-- [Enviar una transacción a Ethereum mediante Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [Enviar una transacción a Ethereum mediante Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Una introducción a los contratos inteligentes con el cliente de Parity Ethereum](https://wiki.parity.io/Smart-Contracts)
 - [Configurar un entorno de desarrollo de Oasis SDK](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Un tutorial paso a paso sobre cómo escribir contratos en Rust Wasm para Kovan](https://github.com/paritytech/pwasm-tutorial)
@@ -37,7 +37,7 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 
 ## Patrones de uso avanzado {#advanced-use-patterns}
 
-- [Biblioteca externa pwasm_ethereum para interactuar con redes similares a Ethereum](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [Biblioteca externa pwasm_ethereum para interactuar con redes similares a Ethereum](https://github.com/openethereum/pwasm-ethereum)
 - [Construir un chat descentralizado mediante JavaScript y Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Crear una aplicación descentralizada de tareas con Vue.js & Rust ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Introducción a Enigma: Un lenguaje de programación de Rust](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
