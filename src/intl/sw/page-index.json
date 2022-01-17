@@ -37,6 +37,7 @@
   "page-index-developers": "Mpaka mpya wa maendeleo",
   "page-index-developers-description": "Ethereum na programu zake ni huria na zinapatikana katika vyanzo vinavyofunguka. Unaweza kutengeneza msimbo mpya na kutumia vipengele ambavyo wengine waliunda. Kama hutaki kujifunza lugha mpya unaweza kupitia msimbo huria kwa JavaScript na lugha nyingine zilizopo.",
   "page-index-developers-button": "Mlango wa msanidi",
+  "page-index-developers-code-examples": "Code examples",
   "page-index-developers-code-example-title-0": "Benki unayomiliki",
   "page-index-developers-code-example-description-0": "Unaweza kujenga benki inayoendeshwa na mantiki uliyoprogramu.",
   "page-index-developers-code-example-title-1": "Fedha unayoimiliki",

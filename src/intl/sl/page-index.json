@@ -37,6 +37,7 @@
   "page-index-developers": "Novo področje razvoja",
   "page-index-developers-description": "Ethereum in njegove aplikacije so transparentne in odprtokodne. Kodo lahko razcepite in ponovno uporabite funkcionalnosti, ki so že bile razvite. Če se ne želite naučiti novega programskega jezika, lahko za interakcijo z odprto kodo preprosto uporabite JavaScript ali druge programske jezike.",
   "page-index-developers-button": "Portal za razvijalce",
+  "page-index-developers-code-examples": "Code examples",
   "page-index-developers-code-example-title-0": "Vaša lastna banka",
   "page-index-developers-code-example-description-0": "Ustvarite lahko banko, ki jo upravlja vaša programirana logika.",
   "page-index-developers-code-example-title-1": "Vaša lastna valuta",
