@@ -345,14 +345,14 @@ const Eth2IndexPage = ({ data }) => {
           ))}
         </StyledCardContainer>
       </Content>
-      <Content>
+      <Content id="eth2">
         <ContributeCard>
           <div>
             <H2>
               <Translation id="page-upgrades-what-happened-to-eth2-title" />
             </H2>
             <p>
-              <Translation id="page-upgrades-what-happened-to-eth2-1" />
+              <Translation id="page-upgrades-what-happened-to-eth2-1" />{" "}
               <Link to="/upgrades/merge">
                 <Translation id="page-upgrades-what-happened-to-eth2-1-more" />
               </Link>
