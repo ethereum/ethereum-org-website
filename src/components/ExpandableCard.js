@@ -67,7 +67,7 @@ const ButtonContainer = styled.div`
   }
 `
 
-const Link = styled(FakeLink)`
+const StyledFakeLink = styled(FakeLink)`
   white-space: nowrap;
 `
 const ExpandableCard = ({ children, contentPreview, title }) => {
@@ -117,14 +117,14 @@ const ExpandableCard = ({ children, contentPreview, title }) => {
         </Question>
         <ButtonContainer onClick={() => setIsVisible(!isVisible)}>
           {!isVisible && (
-            <Link>
+            <StyledFakeLink>
               <Translation id="more" />
-            </Link>
+            </StyledFakeLink>
           )}
           {isVisible && (
-            <Link>
+            <StyledFakeLink>
               <Translation id="less" />
-            </Link>
+            </StyledFakeLink>
           )}
         </ButtonContainer>
       </Content>
