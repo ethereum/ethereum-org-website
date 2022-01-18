@@ -6236,6 +6236,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "garrivjo",
+      "name": "Jose Manuel Garcia Rivas",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31991694?v=4",
+      "profile": "https://github.com/garrivjo",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
