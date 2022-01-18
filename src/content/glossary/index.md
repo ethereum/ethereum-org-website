@@ -627,7 +627,7 @@ A type of [layer 2](#layer-2) scaling solution that batches multiple transaction
 
 ### Serenity {#serenity}
 
-The stage of Ethereum development that initiated a set of scaling and sustainability upgrades, previously known as "Ethereum 2.0", or "Eth2".
+The stage of Ethereum development that initiated a set of scaling and sustainability upgrades, previously known as 'Ethereum 2.0', or 'Eth2'.
 
 <DocLink to="/upgrades/">
   Ethereum upgrades

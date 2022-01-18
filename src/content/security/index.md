@@ -252,9 +252,9 @@ Some things to remember:
 
 [Man loses $200k in mining pool scam](https://www.reddit.com/r/CoinBase/comments/r0qe0e/scam_or_possible_incredible_payout/)
 
-### "Eth2" token scam {#eth2-token-scam}
+### 'Eth2' token scam {#eth2-token-scam}
 
-With [the merge](/upgrades/merge/) coming in 2022, scammers have taken advantage of the confusion around the term "Eth2" to try and get users to redeem their ETH for an "ETH2" token. There is no "ETH2" or any other new token introduced with the merge. The ETH that you own today will continue to be the same ETH after the merge, and there is no need to do any swaps of your ETH for the merge.
+With [the merge](/upgrades/merge/) coming in 2022, scammers have taken advantage of the confusion around the term 'Eth2' to try and get users to redeem their ETH for an "ETH2" token. There is no "ETH2" or any other new token introduced with the merge. The ETH that you own today will continue to be the same ETH after the merge, and there is no need to do any swaps of your ETH for the merge.
 
 Scammers may appear in the form of "support" telling you if you deposit your ETH you will receive back "ETH2". There is no [official Ethereum support](/community/support/), and there is no new token. Never share your wallet seed phrase with anyone.
 
