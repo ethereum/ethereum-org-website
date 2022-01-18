@@ -211,17 +211,26 @@ const GetETHPage = ({ data }) => {
 
   const safetyArticles = [
     {
-      title: "Protecting yourself and your funds",
+      title: translateMessageId(
+        "page-get-eth-article-protecting-yourself",
+        intl
+      ),
       link: "https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds",
       description: "MyCrypto",
     },
     {
-      title: "The keys to keeping your crypto safe",
+      title: translateMessageId(
+        "page-get-eth-article-keeping-crypto-safe",
+        intl
+      ),
       link: "https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf",
-      description: "Coinbase blog",
+      description: "Coinbase",
     },
     {
-      title: "How to store digital assets on Ethereum",
+      title: translateMessageId(
+        "page-get-eth-article-store-digital-assets",
+        intl
+      ),
       link: "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
       description: "ConsenSys",
     },

@@ -305,11 +305,8 @@ const LearningToolsPage = ({ data }) => {
             "page-index-sections-enterprise-image-alt",
             intl
           )}
-          title={translateMessageId("page-learning-tools-documentation", intl)}
-          description={translateMessageId(
-            "page-learning-tools-documentation-desc",
-            intl
-          )}
+          titleKey={"page-learning-tools-documentation"}
+          descriptionKey={"page-learning-tools-documentation-desc"}
         >
           <div>
             <ButtonLink to="/developers/docs/">

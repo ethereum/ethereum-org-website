@@ -49,7 +49,7 @@ Un contrato inteligente es un código que reside en la blockchain de Ethereum y 
 **One Click Dapp\*\***_: Herramienta FOSS para generar front-ends de dapps desde una ABI._\*\*
 
 - [oneclickdapp.com](https://oneclickdapp.com)
-- [GitHub](https://github.com/One-Click-Dapp/one-click-dApp)
+- [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
 
 **Etherflow\*\***_: Herramienta FOSS para desarrolladores de Ethereum para probar sus nodos, así como para componer y realizar llamadas RPC de solución de errores desde el navegador._\*\*
 
