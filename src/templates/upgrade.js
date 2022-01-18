@@ -436,7 +436,7 @@ const UpgradePage = ({ data: { mdx } }) => {
             </h2>
             <p>
               <Translation id="eth-upgrade-what-happened-description" />{" "}
-              <Link to="/upgrades/">
+              <Link to="/upgrades/#eth2">
                 <Translation id="more-info" />.
               </Link>
             </p>

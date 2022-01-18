@@ -81,7 +81,7 @@
   "page-upgrades-question-3-desc": "Vous n'avez rien à faire pour le moment pour vous préparer à Eth2.",
   "page-upgrades-question-3-title": "Comment me préparer à Eth2 ?",
   "page-upgrades-question-4-answer-1": "Chaque fois que vous envoyez une transaction ou utilisez une DApp aujourd'hui, vous utilisez Eth1. C'est l'Ethereum qui est sécurisé par les mineurs.",
-  "page-upgrades-question-4-answer-2": "\"Eth1\", le réseau principal ou mainnet, continuera à fonctionner normalement jusqu'à l'arrimage.",
+  "page-upgrades-question-4-answer-2": "'Eth1', le réseau principal ou mainnet, continuera à fonctionner normalement jusqu'à l'arrimage.",
   "page-upgrades-question-4-answer-3": "Après l'arrimage, les validateurs sécuriseront l'ensemble du réseau via une preuve d'enjeu.",
   "page-upgrades-question-4-answer-6": "N'importe qui peut devenir validateur en mettant en jeu son ETH.",
   "page-upgrades-question-4-answer-7": "Plus d'infos sur la mise en jeu",

@@ -508,9 +508,7 @@ const BugBountiesPage = ({ data, location }) => {
           </H2>
           <TextNoMargin>
             <Translation id="page-upgrades-bug-bounty-email-us" />{" "}
-            <Link to="mailto:eth2bounty@ethereum.org">
-              eth2bounty@ethereum.org
-            </Link>
+            <Link to="mailto:bounty@ethereum.org">bounty@ethereum.org</Link>
           </TextNoMargin>
         </div>
         <Emoji size={3} text=":email:" />

@@ -103,9 +103,9 @@ If somebody runs an Ethereum node with a public API in your community, you can p
 
 On the other hand, if you run a client, you can share it with your friends who might need it.
 
-## Execution clients (formerly Eth1 clients) {#execution-clients}
+## Execution clients (formerly 'Eth1 clients') {#execution-clients}
 
-The Ethereum community maintains multiple open-source execution clients (previously known as "Eth1 clients", or just "Ethereum clients"), developed by different teams using different programming languages. This makes the network stronger and more diverse. The ideal goal is to achieve diversity without any client dominating to reduce any single points of failure.
+The Ethereum community maintains multiple open-source execution clients (previously known as 'Eth1 clients', or just 'Ethereum clients'), developed by different teams using different programming languages. This makes the network stronger and more diverse. The ideal goal is to achieve diversity without any client dominating to reduce any single points of failure.
 
 This table summarizes the different clients. All of them pass [client tests](https://github.com/ethereum/tests) and are actively maintained to stay updated with network upgrades.
 
@@ -235,6 +235,20 @@ For further details, check out the tutorial on [running Geth light node](/develo
 
 Like any other configuration, it can be defined with the startup flag or in the config file. Another example is [Nethermind](https://docs.nethermind.io/nethermind/) which prompts you to choose a configuration during first initialization and creates a config file.
 
+## Consensus clients (formerly Eth2 clients) {#consensus-clients}
+
+There are multiple consensus clients (previously known as Eth2 clients) to support the [consensus upgrades](/upgrades/beacon-chain/). They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [The Merge](/eth2/merge/).
+
+[View consensus clients](/upgrades/get-involved/#clients).
+
+| Client                                                      | Language   | Operating systems     | Networks                              |
+| ----------------------------------------------------------- | ---------- | --------------------- | ------------------------------------- |
+| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | Beacon Chain, Prater                  |
+| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | Beacon Chain, Prater                  |
+| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | Beacon Chain, Prater, Pyrmont         |
+| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Beacon Chain, Prater                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Prater, Pyrmont |
+
 ## Hardware {#hardware}
 
 Hardware requirements differ by client but generally are not that high since the node just needs to stay synced. Don't confuse it with mining which requires much more computing power. Sync time and performance do improve with more powerful hardware however. Depending on your needs and wants, Ethereum can be run on your computer, home server, single-board computers or virtual private servers in the cloud.
@@ -281,20 +295,6 @@ These charts show how storage requirements are always changing. For the most up-
 The most convenient and cheap way of running Ethereum node is to use a single board computer with ARM architecture like Raspberry Pi. [Ethereum on ARM](https://twitter.com/EthereumOnARM) provides images of Geth, OpenEthereum, Nethermind, and Besu clients. Here's a simple tutorial on [how to build and setup an ARM client](/developers/tutorials/run-node-raspberry-pi/).
 
 Small, affordable and efficient devices like these are ideal for running a node at home.
-
-## Consensus clients (formerly Eth2 clients) {#consensus-clients}
-
-There are multiple consensus clients (previously known as Eth2 clients) to support the [consensus upgrades](/upgrades/beacon-chain/). They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [The Merge](/eth2/merge/).
-
-[View consensus clients](/upgrades/get-involved/#clients).
-
-| Client                                                      | Language   | Operating systems     | Networks                              |
-| ----------------------------------------------------------- | ---------- | --------------------- | ------------------------------------- |
-| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | Beacon Chain, Prater                  |
-| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | Beacon Chain, Prater                  |
-| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | Beacon Chain, Prater, Pyrmont         |
-| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Beacon Chain, Prater                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Prater, Pyrmont |
 
 ## Further reading {#further-reading}
 

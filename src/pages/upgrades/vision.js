@@ -145,6 +145,11 @@ const VisionPage = ({ data, location }) => {
           </p>
           <ul>
             <li>
+              <Link to="https://trent.mirror.xyz/82eyq_NXZzzqFmCNXiKJgSdayf6omCW7BgDQIneyPoA">
+                <Translation id="page-upgrades-vision-2021-updates" />
+              </Link>
+            </li>
+            <li>
               <Link to="https://tim.mirror.xyz/CHQtTJb1NDxCK41JpULL-zAJe7YOtw-m4UDw6KDju6c">
                 <Translation id="page-upgrades-vision-2021" />
               </Link>
