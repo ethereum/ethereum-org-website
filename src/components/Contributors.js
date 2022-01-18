@@ -44,7 +44,7 @@ const Contributors = () => {
     <>
       <p>
         Thanks to the {contributorsList.length} Ethereum community members who
-        has contributed so far!
+        have contributed so far!
       </p>
 
       <Container>
