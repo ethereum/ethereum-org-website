@@ -18,7 +18,7 @@ You should understand the concept of a peer-to-peer network and the [basics of t
 
 You can see a real-time view of the Ethereum network by looking at this [map of nodes](https://etherscan.io/nodetracker).
 
-Many [Ethereum clients](/developers/docs/nodes-and-clients/#clients) exist, in a variety of programming languages such as Go, Rust, JavaScript, Python, C# .NET and Java. What these implementations have in common is they all follow a formal specification (originally the [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf)). This specification dictates how the Ethereum network and blockchain functions.
+Many [Ethereum clients](/developers/docs/nodes-and-clients/#clients) exist, in a variety of programming languages such as Go, Rust, JavaScript, Typescript, Python, C# .NET, Nim and Java. What these implementations have in common is they all follow a formal specification (originally the [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf)). This specification dictates how the Ethereum network and blockchain functions.
 
 ![Execution client](./client-diagram.png)
 Simplified diagram of what Ethereum client features.
@@ -103,7 +103,7 @@ If somebody runs an Ethereum node with a public API in your community, you can p
 
 On the other hand, if you run a client, you can share it with your friends who might need it.
 
-## Execution clients {#execution-clients}
+## Execution clients (formerly Eth1 clients) {#execution-clients}
 
 The Ethereum community maintains multiple open-source execution clients (previously known as "Eth1 clients", or just "Ethereum clients"), developed by different teams using different programming languages. This makes the network stronger and more diverse. The ideal goal is to achieve diversity without any client dominating to reduce any single points of failure.
 
@@ -282,19 +282,19 @@ The most convenient and cheap way of running Ethereum node is to use a single bo
 
 Small, affordable and efficient devices like these are ideal for running a node at home.
 
-## Consensus clients {#consensus-clients}
+## Consensus clients (formerly Eth2 clients) {#consensus-clients}
 
-There are multiple consensus clients (previously known as Eth2 clients) to support the [consensus upgrades](/upgrades/beacon-chain/). They run the Beacon Chain and support the [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) consensus mechanism.
+There are multiple consensus clients (previously known as Eth2 clients) to support the [consensus upgrades](/upgrades/beacon-chain/). They are running the Beacon Chain and will provide proof of stake consensus mechanism to execution clients after [The Merge.](/eth2/merge/)
 
 [View consensus clients](/upgrades/get-involved/#clients).
 
-| Client                                                      | Language   | Operating systems     | Networks                              | Sync strategies | State pruning |
-| ----------------------------------------------------------- | ---------- | --------------------- | ------------------------------------- | --------------- | ------------- |
-| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | Beacon Chain, Prater                  | Full            |               |
-| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | Beacon Chain, Prater                  | Full            |               |
-| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | Beacon Chain, Prater, Pyrmont         | Full            |               |
-| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Beacon Chain, Prater                  | Full            |               |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Prater, Pyrmont | Full            |               |
+| Client                                                      | Language   | Operating systems     | Networks                              |
+| ----------------------------------------------------------- | ---------- | --------------------- | ------------------------------------- |
+| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | Beacon Chain, Prater                  |
+| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | Beacon Chain, Prater                  |
+| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | Beacon Chain, Prater, Pyrmont         |
+| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Beacon Chain, Prater                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Prater, Pyrmont |
 
 ## Further reading {#further-reading}
 
@@ -314,4 +314,4 @@ There is a lot of information about Ethereum clients on the internet. Here are f
 ## Related tutorials {#related-tutorials}
 
 - [Running a Node with Geth](/developers/tutorials/run-light-node-geth/) _– How to download, install and run Geth. Covering syncmodes, the Javascript console, and more._
-- [Turn your Raspberry Pi 4 into an Eth 1.0 or Eth 2.0 node just by flashing the MicroSD card – Installation guide](/developers/tutorials/run-node-raspberry-pi/) _– Flash your Raspberry Pi 4, plug in an ethernet cable, connect the SSD disk and power up the device to turn the Raspberry Pi 4 into a full Ethereum node running the execution layer (Mainnet) and / or the consensus layer (Beacon Chain / validator)._
+- [Turn your Raspberry Pi 4 into a validator node just by flashing the MicroSD card – Installation guide](/developers/tutorials/run-node-raspberry-pi/) _– Flash your Raspberry Pi 4, plug in an ethernet cable, connect the SSD disk and power up the device to turn the Raspberry Pi 4 into a full Ethereum node running the execution layer (Mainnet) and / or the consensus layer (Beacon Chain / validator)._
