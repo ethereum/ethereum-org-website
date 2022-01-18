@@ -105,7 +105,7 @@ On the other hand, if you run a client, you can share it with your friends who m
 
 ## Execution clients {#execution-clients}
 
-The Ethereum community maintains multiple open-source clients, developed by different teams using different programming languages. This makes the network stronger and more diverse. The ideal goal is to achieve diversity without any client dominating to reduce any single points of failure.
+The Ethereum community maintains multiple open-source execution clients (previously known as "Eth1 clients", or just "Ethereum clients"), developed by different teams using different programming languages. This makes the network stronger and more diverse. The ideal goal is to achieve diversity without any client dominating to reduce any single points of failure.
 
 This table summarizes the different clients. All of them pass [client tests](https://github.com/ethereum/tests) and are actively maintained to stay updated with network upgrades.
 
