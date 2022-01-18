@@ -27,15 +27,6 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Staking](/staking/)
 - [Wallets](/wallets/)
 - [Find wallets](/wallets/find-wallet/)
-- [Ethereum upgrades](/upgrades/)
-- [Ethereum vision](/upgrades/vision/)
-- [The Beacon Chain](/upgrades/beacon-chain/)
-- [The merge](/upgrades/merge/)
-- [Shard chains](/upgrades/shard-chains/)
-- [Staking](/staking/)
-- [Ethereum upgrades get involved](/upgrades/get-involved/)
-- [Consensus layer bug bounty](/upgrades/bug-bounty/)
-- [Staking deposit contract](/staking/deposit-contract/)
 - [Developers' Home](/developers/)
 - [Developer learning tools](/developers/learning-tools/)
 - [Developer local environment setup](/developers/local-environment/)
@@ -49,6 +40,21 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Translation Program](/contributing/translation-program/)
 - [Translation guide](/contributing/translation-program/translation-guide/)
 - [Ethereum grants](/community/grants/)
+- [Translator acknowledgements](/contributing/translation-program/)
+- [Our translators](/contributing/translation-program/contributors/)
+
+## Upgrades {#upgrades}
+
+- [Ethereum upgrades](/upgrades/)
+- [Ethereum vision](/upgrades/vision/)
+- [The Beacon Chain](/upgrades/beacon-chain/)
+- [The merge](/upgrades/merge/)
+- [Shard chains](/upgrades/shard-chains/)
+- [Staking](/staking/)
+- [Ethereum upgrades get involved](/upgrades/get-involved/)
+- [Consensus layer bug bounty](/upgrades/bug-bounty/)
+- [Staking deposit contract](/staking/deposit-contract/)
+- [Ethereum Improvement Proposals (EIPs)](/eips/)
 
 ## Foundational developer docs {#foundational-docs}
 
