@@ -41,23 +41,16 @@ const Contributors = () => {
   }, [])
 
   return (
-    <>
-      <p>
-        Thanks to the {contributorsList.length} Ethereum community members who
-        have contributed so far!
-      </p>
-
-      <Container>
-        {contributorsList.map((contributor, idx) => (
-          <ContributorCard
-            key={idx}
-            image={contributor.avatar_url}
-            to={contributor.profile}
-            title={contributor.name}
-          />
-        ))}
-      </Container>
-    </>
+    <Container>
+      {contributorsList.map((contributor, idx) => (
+        <ContributorCard
+          key={idx}
+          image={contributor.avatar_url}
+          to={contributor.profile}
+          title={contributor.name}
+        />
+      ))}
+    </Container>
   )
 }
 

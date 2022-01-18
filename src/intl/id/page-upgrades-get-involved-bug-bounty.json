@@ -49,7 +49,7 @@
   "page-upgrades-bug-bounty-specs-docs": "Dokumen spesifikasi",
   "page-upgrades-bug-bounty-submit": "Kirimkan bug",
   "page-upgrades-bug-bounty-submit-desc": "Untuk setiap bug yang Anda temukan, Anda akan dihadiahi poin. Poin yang Anda peroleh tergantung pada tingkat keparahan bug. Yayasan Ethereum (EF) menentukan tingkat keparahan menggunakan metode OWASP.",
-  "page-upgrades-bug-bounty-subtitle": "Dapatkan uang hingga $50.000 USD dan posisi di papan peringkat dengan menemukan bug protokol dan klien Eth2.",
+  "page-upgrades-bug-bounty-subtitle": "Dapatkan uang hingga $50.000 USD dan posisi di papan peringkat dengan menemukan bug protokol dan klien Eth2. Untuk mendapatkan lebih banyak pengawasan terhadap peningkatan Altair, semua nilai bounty untuk kerentanan terkait dengan peningkatan Altair telah digandakan dalam rentang waktu antara sekarang dan empat minggu setelah peluncurannya (27 Nov). Bug Altair yang kritikal pada klien dan spesifikasi sekarang dihargai hingga $100rb.",
   "page-upgrades-bug-bounty-title": "Pengiriman terbuka",
   "page-upgrades-bug-bounty-title-1": "Rantai Suar",
   "page-upgrades-bug-bounty-title-2": "Pilihan Fork",

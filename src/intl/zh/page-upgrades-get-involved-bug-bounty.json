@@ -49,7 +49,7 @@
   "page-upgrades-bug-bounty-specs-docs": "规范文档",
   "page-upgrades-bug-bounty-submit": "提交一个漏洞",
   "page-upgrades-bug-bounty-submit-desc": "我们为您发现的每一个漏洞奖励积分。您获得的积分多少取决于漏洞的严重程度。以太坊基金(EF)会根据OWASP方法判断漏洞的严重程度。",
-  "page-upgrades-bug-bounty-subtitle": "通过寻找 Eth2 协议和客户端的缺陷，最多可赢得 50,000 美元并在排行榜上占得一席之地。",
+  "page-upgrades-bug-bounty-subtitle": "通过寻找 Eth2 协议和客户端的缺陷，最多可赢得 50,000 美元并在排行榜上占得一席之地。为了让大家更多地关注牵牛星升级，从现在起，到发布后四周（11 月 27 日），找到与 Altair 升级相关的缺陷将获得双倍奖金。Altair 在客户端和规格方面的关键缺陷现已价值 10 万美元。",
   "page-upgrades-bug-bounty-title": "开放提交",
   "page-upgrades-bug-bounty-title-1": "信标链",
   "page-upgrades-bug-bounty-title-2": "分支选择",

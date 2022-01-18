@@ -1,7 +1,7 @@
 ---
 title: Ethereum events
 description: How to get involved in the Ethereum community.
-sidebar: true
+sidebar: false
 lang: en
 ---
 

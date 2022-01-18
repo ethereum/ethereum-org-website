@@ -37,7 +37,6 @@
   "page-index-developers": "Utviklingens nye front",
   "page-index-developers-description": "Ethereum og appene der er utviklet i åpenhet og med åpen kildekode. Du kan forgrene koden og bruke om igjen funksjonaliteter andre allerede har bygget. Hvis du ikke vil lære et nytt språk, kan du bare samhandle med åpen kildekode ved å bruke JavaScript og andre eksisterende språk.",
   "page-index-developers-button": "Utviklerportal",
-  "page-index-developers-code-examples": "Code examples",
   "page-index-developers-code-example-title-0": "Din egen bank",
   "page-index-developers-code-example-description-0": "Du kan bygge en bank drevet med logikk du har programmert.",
   "page-index-developers-code-example-title-1": "Din egen valuta",

@@ -936,8 +936,14 @@ contract SimpleDomainRegistry {
           })}
         </StyledCardContainer>
         <StyledCalloutBanner
-          titleKey={"page-index-contribution-banner-title"}
-          descriptionKey={"page-index-contribution-banner-description"}
+          title={translateMessageId(
+            "page-index-contribution-banner-title",
+            intl
+          )}
+          description={translateMessageId(
+            "page-index-contribution-banner-description",
+            intl
+          )}
           image={getImage(data.finance)}
           maxImageWidth={600}
           alt={translateMessageId(
@@ -946,7 +952,7 @@ contract SimpleDomainRegistry {
           )}
         >
           <ButtonRow>
-            <ButtonLink to="/contributing/">
+            <ButtonLink to="/en/contributing/">
               <Translation id="page-index-contribution-banner-button" />
             </ButtonLink>
             <StyledButtonLink

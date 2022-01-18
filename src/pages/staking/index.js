@@ -294,8 +294,11 @@ const StakingPage = ({ data, location }) => {
       <StyledCallout
         image={getImage(data.rhino)}
         alt={translateMessageId("page-staking-image-alt", intl)}
-        titleKey={"page-staking-join-community"}
-        descriptionKey={"page-staking-join-community-desc"}
+        title={translateMessageId("page-staking-join-community", intl)}
+        description={translateMessageId(
+          "page-staking-join-community-desc",
+          intl
+        )}
       >
         <div>
           <ButtonLink to="https://www.reddit.com/r/ethstaker/">

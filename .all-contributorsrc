@@ -6199,52 +6199,6 @@
         "doc",
         "bug"
       ]
-    },
-    {
-      "login": "chrishna1",
-      "name": "Bal Krishna Jha",
-      "avatar_url": "https://avatars.githubusercontent.com/u/26048398?v=4",
-      "profile": "https://github.com/chrishna1",
-      "contributions": [
-        "doc"
-      ]
-    },
-    {
-      "login": "mradziwon",
-      "name": "mradziwon",
-      "avatar_url": "https://avatars.githubusercontent.com/u/6785984?v=4",
-      "profile": "http://www.linkedin.com/in/mradziwon",
-      "contributions": [
-        "code",
-        "bug"
-      ]
-    },
-    {
-      "login": "mmilenkovic",
-      "name": "mmilenkovic",
-      "avatar_url": "https://avatars.githubusercontent.com/u/2448210?v=4",
-      "profile": "https://github.com/mmilenkovic",
-      "contributions": [
-        "doc"
-      ]
-    },
-    {
-      "login": "guevaraf",
-      "name": "Fernando Guevara",
-      "avatar_url": "https://avatars.githubusercontent.com/u/2633129?v=4",
-      "profile": "https://github.com/guevaraf",
-      "contributions": [
-        "doc"
-      ]
-    },
-    {
-      "login": "garrivjo",
-      "name": "Jose Manuel Garcia Rivas",
-      "avatar_url": "https://avatars.githubusercontent.com/u/31991694?v=4",
-      "profile": "https://github.com/garrivjo",
-      "contributions": [
-        "ideas"
-      ]
     }
   ],
   "contributorsPerLine": 7,

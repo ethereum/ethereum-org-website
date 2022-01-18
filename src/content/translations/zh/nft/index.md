@@ -62,7 +62,7 @@ NFT 世界相对较新。 理论上，NFT 的应用范围是任何需要证明�
 
 #### POAP（出勤证明协议） {#poaps}
 
-如果您对 ethereum.org 做了贡献，即可认领 POAP NFT。 这些是证明您参加过活动的收藏品。 一些加密货币聚会使用 POAP 作为一种活动门票形式。 [关于贡献的更多信息](/contributing/#poap)。
+如果您对 ethereum.org 做了贡献，即可认领 POAP NFT。 这些是证明您参加过活动的收藏品。 一些加密货币聚会使用 POAP 作为一种活动门票形式。 [关于贡献的更多信息](/en/contributing/#poap)。
 
 ![ethereum.org POAP](../../../../assets/use-cases/poap.png)
 
