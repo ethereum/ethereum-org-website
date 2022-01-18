@@ -62,7 +62,7 @@ Mi NFT-je uporabljamo za vračanje našim sodelavcem in imamo tudi NFT za ime sv
 
 #### POAPi (Protokol za dokaz o prisotnosti) {#poaps}
 
-Če prispevate k ethereum.org, lahko pridobite PAOP NFT. To so zbirateljski predmeti, ki dokazujejo sodelovanje na dogodku. Nekatera kripto srečanja so že uporabila POAPe, kot obliko vstopnice za njihov dogodek. [Več o prispevanju](/en/contributing/#poap).
+Če prispevate k ethereum.org, lahko pridobite PAOP NFT. To so zbirateljski predmeti, ki dokazujejo sodelovanje na dogodku. Nekatera kripto srečanja so že uporabila POAPe, kot obliko vstopnice za njihov dogodek. [Več o prispevanju](/contributing/#poap).
 
 ![ethereum.org POAP](../../../../assets/use-cases/poap.png)
 

@@ -46,9 +46,36 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Decentralized autonomous organizations (DAOs)](/dao/)
 - [Decentralized finance (DeFi)](/defi/)
 - [Non-fungible tokens (NFT)](/nft/)
+- [Ethereum energy consumption](/energy-consumption/)
+- [Ethereum governance](/governance/)
+- [Security and scam prevention](/security/)
+
+## Community pages {#community}
+
+- [Community hub](/community/)
+- [Online communities](/community/online/)
+- [Get involved](/community/get-involved/)
+- [Ethereum events](/community/events/)
+- [Ethereum support](/community/support/)
+- [Ethereum grants](/community/grants/)
+- [Language resources](/community/language-resources/)
 - [Translation Program](/contributing/translation-program/)
 - [Translation guide](/contributing/translation-program/translation-guide/)
-- [Ethereum grants](/community/grants/)
+- [Translator acknowledgements](/contributing/translation-program/)
+- [Our translators](/contributing/translation-program/contributors/)
+
+## Upgrades {#upgrades}
+
+- [Eth2](/eth2/)
+- [Eth2 vision](/eth2/vision/)
+- [The Beacon Chain](/eth2/beacon-chain/)
+- [The merge](/eth2/merge/)
+- [Shard chains](/eth2/shard-chains/)
+- [Staking](/eth2/staking/)
+- [Staking deposit contract](/eth2/deposit-contract/)
+- [Eth2 get involved](/eth2/get-involved/)
+- [Eth2 bug bounty](/eth2/get-involved/bug-bounty/)
+- [Ethereum Improvement Proposals (EIPs)](/eips/)
 
 ## Foundational developer docs {#foundational-docs}
 
@@ -63,6 +90,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Ethereum virtual machine (EVM)](/developers/docs/evm/)
 - [Gas](/developers/docs/gas/)
 - [Nodes and clients](/developers/docs/nodes-and-clients/)
+- [Run a node](/developers/docs/run-a-node/)
 - [Nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/)
 - [Networks](/developers/docs/networks/)
 - [Consensus mechanisms](/developers/docs/consensus-mechanisms/)
@@ -93,6 +121,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Storage](/developers/docs/storage/)
 - [Integrated Development Environments (IDEs)](/developers/docs/ides/)
 - [Programming languages](/developers/docs/programming-languages/)
+- [Dart](/developers/docs/programming-languages/dart/)
 - [Delphi](/developers/docs/programming-languages/delphi/)
 - [.NET](/developers/docs/programming-languages/dot-net/)
 - [Golang](/developers/docs/programming-languages/golang/)
@@ -111,7 +140,8 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Token standards](/developers/docs/standards/tokens/)
 - [ERC-20](/developers/docs/standards/tokens/erc-20/)
 - [ERC-721](/developers/docs/standards/tokens/erc-721/)
-- [ERC-777](/developers/docs/mev/)
+- [ERC-777](/developers/docs/standards/tokens/erc-777/)
+- [ERC-1155](/developers/docs/standards/tokens/erc-1155/)
 - [Miner extractable value (MEV)](/developers/docs/mev/)
 - [Orcles](/developers/docs/oracles/)
 - [Scaling](/developers/docs/scaling/)
@@ -124,7 +154,7 @@ Below is a breakdown of the website pages each content bucket contains.
 ## Additional Learn and general pages {#general-pages}
 
 - [About ethereum.org](/about/)
-- [Ethereum Improvement Proposals (EIPs)](/eips/)
+- [Ethereum Foundation](/foundation/)
 - [Enterprise Ethereum](/enterprise/)
 - [Private Ethereum](/enterprise/private-ethereum/)
 - [History](/history/)

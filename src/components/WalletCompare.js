@@ -521,7 +521,7 @@ const WalletCompare = ({ location }) => {
           <p>
             <em>
               <Translation id="page-find-wallet-not-endorsements" />{" "}
-              <Link to="/en/contributing/adding-products/">
+              <Link to="/contributing/adding-products/">
                 <Translation id="page-find-wallet-listing-policy" />
               </Link>
               <Translation id="page-find-wallet-add-wallet" />{" "}

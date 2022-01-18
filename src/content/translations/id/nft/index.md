@@ -62,7 +62,7 @@ Kami menggunakan NFT untuk membalas jasa para kontributor dan kami bahkan memili
 
 #### POAP (Proof of attendance protocol) {#poaps}
 
-Jika Anda berkontribusi ke ethereum.org, Anda dapat mengklaim NFT POAP. Ini adalah barang koleksi yang membuktikan Anda berpartisipasi dalam suatu acara. Beberapa pertemuan kripto telah menggunakan POAP sebagai bentuk tiket ke acara mereka. [Selengkapnya tentang berkontribusi](/en/contributing/#poap).
+Jika Anda berkontribusi ke ethereum.org, Anda dapat mengklaim NFT POAP. Ini adalah barang koleksi yang membuktikan Anda berpartisipasi dalam suatu acara. Beberapa pertemuan kripto telah menggunakan POAP sebagai bentuk tiket ke acara mereka. [Selengkapnya tentang berkontribusi](/contributing/#poap).
 
 ![POAP ethereum.org](../../../../assets/use-cases/poap.png)
 
