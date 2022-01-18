@@ -284,7 +284,7 @@ Small, affordable and efficient devices like these are ideal for running a node 
 
 ## Consensus clients {#consensus-clients}
 
-There are new clients to support the [consensus upgrades](/upgrades/beacon-chain/). They will run the Beacon Chain and support the new [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) consensus mechanism.
+There are multiple consensus clients (previously known as Eth2 clients) to support the [consensus upgrades](/upgrades/beacon-chain/). They run the Beacon Chain and support the [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) consensus mechanism.
 
 [View consensus clients](/upgrades/get-involved/#clients).
 
