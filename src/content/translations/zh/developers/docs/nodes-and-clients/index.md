@@ -102,7 +102,7 @@ sidebarDepth: 2
 
 另一方面，如果您运行一个客户端，则可以与可能需要它的朋友分享。
 
-## 客户端 {#clients}
+## 客户端 {#execution-clients}
 
 以太坊社区维护着多个开源客户端，这些客户端由不同团队使用不同的编程语言开发。 这使得该网络更强大、更多样化。 理想的目标是在没有任何客户端支配的情况下实现多样性，以减少任何单点故障。
 
@@ -281,7 +281,7 @@ Erigon（前称 TurbohyGeth）是 Go Ethereum 的一个分叉，注重速度和�
 
 像这样的小型、实惠和高效的设备是在家里运行节点的理想选择。
 
-## 以太坊 2.0 客户端 {#eth2-clients}
+## 以太坊 2.0 客户端 {#consensus-clients}
 
 有新客户端支持[以太坊 2.0 升级](/upgrades/beacon-chain/)。 他们将运行信标链，并支持新的[权益证明](/developers/docs/consensus-mechanisms/pos/)共识机制。
 

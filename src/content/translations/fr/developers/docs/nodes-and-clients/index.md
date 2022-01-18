@@ -99,7 +99,7 @@ Si quelqu'un exécute un nœud Ethereum avec une API publique dans votre communa
 
 D'autre part, si vous exécutez un client, vous pouvez le partager avec vos amis qui pourraient en avoir besoin.
 
-## Clients {#clients}
+## Clients {#execution-clients}
 
 Ethereum est conçu pour offrir des clients différents, développés par différentes équipes utilisant différents langages de programmation. Cela rend le réseau plus solide et plus diversifié. L'objectif idéal est de parvenir à une diversité sans qu'aucun client ne domine afin de réduire les points de défaillance uniques.
 
@@ -210,7 +210,7 @@ La façon la plus pratique et la moins chère d'exécuter un nœud Ethereum est 
 
 Les petits appareils abordables et efficaces de ce type sont parfaits pour exécuter un nœud chez soi.
 
-## Clients Eth2 {#eth2-clients}
+## Clients Eth2 {#consensus-clients}
 
 Il existe de nouveaux clients pour prendre en charge les [mises à niveau Eth2](/upgrades/beacon-chain/). Ils exécuteront la chaîne phare et prendront en charge le nouveau mécanisme de consensus de [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/).
 
