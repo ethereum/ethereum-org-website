@@ -131,7 +131,7 @@ Ethereum.org 翻译计划旨在通过将 Ethereum.org 和其他以太坊内容�
 
 我们的翻译爱好者社区也在进行 [Staking Launchpad](https://launchpad.ethereum.org/en/) 的翻译工作。 这使得任何人都可以成为以太坊验证者，并帮助保护以太坊网络。 Launchpad 目前支持 17 种语言。
 
-如果您感兴趣，[请加入 Crowdin 的 Etherum Staking Launchpad 翻译项目](https://crowdin.com/project/ethereum-staking-launchpad)。 如果 Crowdin 未提供您的语言，您可以在 GitHub 上[创建问题](https://github.com/ethereum/staking-launchpad/issues/new)，请求增加新语言。
+如果您感兴趣，[请加入 Crowdin 的 Ethereum Staking Launchpad 翻译项目](https://crowdin.com/project/ethereum-staking-launchpad)。 如果 Crowdin 未提供您的语言，您可以在 GitHub 上[创建问题](https://github.com/ethereum/staking-launchpad/issues/new)，请求增加新语言。
 
 ## 进行中的翻译 {#in-progress}
 

@@ -384,7 +384,7 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 ### 可交换客户端地址协议 (ICAP) {#icap}
 
-以太坊地址编码，与国际银行帐户编号 (IBAN) 编码部分兼容，为以太坊地址提供多用途的、可校验的和可操作的编码。 ICAP 地址使用一个新的 IBAN 伪国家代码-XE，全称是“eXended Etherum”，代表非管辖货币（如 XBT、XRP、XCP）。
+以太坊地址编码，与国际银行帐户编号 (IBAN) 编码部分兼容，为以太坊地址提供多用途的、可校验的和可操作的编码。 ICAP 地址使用一个新的 IBAN 伪国家代码-XE，全称是“eXended Ethereum”，代表非管辖货币（如 XBT、XRP、XCP）。
 
 ### 冰河世纪 {#ice-age}
 

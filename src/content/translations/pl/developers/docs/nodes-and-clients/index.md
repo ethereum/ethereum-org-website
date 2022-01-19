@@ -193,7 +193,7 @@ W zależności od tego, które oprogramowanie i tryb synchronizacji mają być u
 
 | Klient         | Rozmiar dysku (szybka synchronizacja) | Rozmiar dysku (pełne archiwum) |
 | -------------- | ------------------------------------- | ------------------------------ |
-| Klient Etherum | 400 GB+                               | 4,7 TB+                        |
+| Klient Ethereum | 400 GB+                               | 4,7 TB+                        |
 | OpenEthereum   | 280 GB+                               | 4,6 TB+                        |
 | Nethermind     | 200 GB+                               | 3 TB+                          |
 | Besu           | 750 GB+                               | 4 TB+                          |
@@ -206,7 +206,7 @@ Te wykresy pokazują, jak zawsze zmieniają się wymagania dotyczące przechowyw
 
 ### Ethereum na komputerze jednopłytowym {#ethereum-on-a-single-board-computer}
 
-Najbardziej wygodnym i tanim sposobem uruchomienia węzła Ethereum jest korzystanie z jednego komputera z architekturą ARM jak Raspberry Pi. [Ethereum na ARM](https://twitter.com/EthereumOnARM) dostarcza obrazy klientów Geth, Parity, Netherumd i Besu. Oto prosty samouczek [jak zbudować i skonfigurować klienta ARM](/developers/tutorials/run-node-raspberry-pi/).
+Najbardziej wygodnym i tanim sposobem uruchomienia węzła Ethereum jest korzystanie z jednego komputera z architekturą ARM jak Raspberry Pi. [Ethereum na ARM](https://twitter.com/EthereumOnARM) dostarcza obrazy klientów Geth, Parity, Nethereumd i Besu. Oto prosty samouczek [jak zbudować i skonfigurować klienta ARM](/developers/tutorials/run-node-raspberry-pi/).
 
 Małe, niedrogie i wydajne urządzenia, takie jak te, są idealne do uruchomienia węzła w domu.
 

@@ -140,7 +140,7 @@ INFO [11-18|14:04:49] IPC endpoint opened                      url=/Users/bgu/Li
 
 应在数据块同步开始之前记录此消息。
 
-3. 此消息指明 IPC（进程间通信）端点的路径。 复制这个路径（在上面的示例中，它是 `/Userss/bgu/Library/Etherum/testnet/geth.ipc`）。
+3. 此消息指明 IPC（进程间通信）端点的路径。 复制这个路径（在上面的示例中，它是 `/Userss/bgu/Library/Ethereum/testnet/geth.ipc`）。
 4. 打开一个新的终端窗口或标签，然后运行以下命令： `$ geth attach [您的IPC端点路径]`
 
 这应会打开 Javascript 控制台。 我们现在可以使用 web3js 与节点进行交互。

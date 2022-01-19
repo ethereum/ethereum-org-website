@@ -208,7 +208,7 @@ Decentraland 是一款虚拟现实游戏，甚至允许玩家购买代表虚拟�
 您的 ENS 名称可以：
 
 - 接收加密货币和其他 NFT。
-- 指向一个去中心化网站，例如 [etherum.eth](https://ethereum.eth.link)。 [关于网站去中心化的更多信息](https://docs.ipfs.io/how-to/websites-on-ipfs/link-a-domain/#domain-name-service-dns)
+- 指向一个去中心化网站，例如 [ethereum.eth](https://ethereum.eth.link)。 [关于网站去中心化的更多信息](https://docs.ipfs.io/how-to/websites-on-ipfs/link-a-domain/#domain-name-service-dns)
 - 存储任何信息，包括电子邮件地址和 Twitter 用户名等个人资料信息。
 
 <Divider />
