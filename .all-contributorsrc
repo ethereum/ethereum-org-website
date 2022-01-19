@@ -6265,6 +6265,15 @@
         "doc",
         "ideas"
       ]
+    },
+    {
+      "login": "mdedeu",
+      "name": "Marcos Dedeu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/62359173?v=4",
+      "profile": "https://github.com/mdedeu",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
