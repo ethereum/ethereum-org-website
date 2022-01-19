@@ -11,11 +11,35 @@ import Translation from "../components/Translation"
 // Data
 import events from "../data/community-events.json"
 
-const EventList = styled.ul`
-  margin: 0;
+const EventList = styled.div`
+  width: 100%;
+  margin: 30px auto;
+  position: relative;
+  padding: 0 10px;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+
+  &:before {
+    content: "";
+    width: 3px;
+    height: 100%;
+    background: ${(props) => props.theme.colors.primary};
+    left: 50%;
+    top: 0;
+    position: absolute;
+  }
+
+  &:after {
+    content: "";
+    clear: both;
+    display: table;
+    width: 100%;
+  }
 `
 
-const EventListItem = styled.li`
+const EventListItem = styled.div`
   list-style-type: none;
 `
 
@@ -82,15 +106,15 @@ const UpcomingEventsList = () => {
       {orderedUpcomingEvents?.map(
         ({ title, to, formattedDetails, date, location }, idx) => {
           return (
-            <EventListItem key={idx}>
-              <EventCard
-                title={title}
-                to={to}
-                date={date}
-                description={formattedDetails}
-                location={location}
-              />
-            </EventListItem>
+            <EventCard
+              key={idx}
+              title={title}
+              to={to}
+              date={date}
+              description={formattedDetails}
+              location={location}
+              idx={idx}
+            />
           )
         }
       )}
