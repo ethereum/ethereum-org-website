@@ -23,7 +23,7 @@
   "page-upgrades-bug-bounty-leaderboard-points": "points",
   "page-upgrades-bug-bounty-ledger-desc": "The Beacon Chain specification details the design rationale and proposed changes to Ethereum via the Beacon Chain upgrade.",
   "page-upgrades-bug-bounty-ledger-title": "The Beacon Chain specification bugs",
-  "page-upgrades-bug-bounty-meta-description": "An overview of the consensus layer bug hunting program: how to get involved and reward information.",
+  "page-upgrades-bug-bounty-meta-description": "An overview of the consensus layer bug bounty program: how to get involved and reward information.",
   "page-upgrades-bug-bounty-meta-title": "Consensus layer bug hunting bounty program",
   "page-upgrades-bug-bounty-not-included": "Not included",
   "page-upgrades-bug-bounty-not-included-desc": "The merge and shard chain upgrades are still in active development and so are not yet included as part of this bounty program.",
