@@ -446,7 +446,7 @@ Client di Ethereum che non memorizza una copia locale della [blockchain](#blockc
 
 ### rete principale {#mainnet}
 
-In inglese mainnet, è la [blockchain](#blockchain) Ethereum pubblica principale. ETH reali, valore reale e conseguenze reali. Viene detta livello 1 quando si parla di soluzioni per passare al [livello 2](#layer-2). (Vedi anche [rete di prova](#testnet))
+In inglese Mainnet, è la [blockchain](#blockchain) Ethereum pubblica principale. ETH reali, valore reale e conseguenze reali. Viene detta livello 1 quando si parla di soluzioni per passare al [livello 2](#layer-2). (Vedi anche [rete di prova](#testnet))
 
 ### albero di Merkle Patricia {#merkle-patricia-tree}
 
