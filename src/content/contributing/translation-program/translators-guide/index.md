@@ -61,7 +61,7 @@ These should be identical to the source and not changed or translated. If you tr
 
 The best way to handle links is to copy them directly from the source, either by clicking on them or using the ‘Copy Source’ button (Alt+C).
 
-![Example of link.png](./Example of link.png)
+![Example of link.png](./example-of-link.png)
 
 Links also appear in the source text in the form of tags (i.e. <0> </0>). If you hover over the tag, the editor will show its full content - sometimes these tags will represent links.
 
@@ -69,7 +69,7 @@ It is very important to copy the links from the source and not change their orde
 
 If the order of the tags is changed, the link they represent will be broken.
 
-![Example of links inside tags.png](./Example of links inside tags.png)
+![Example of links inside tags.png](./example-of-links-inside-tags.png)
 
 **Tags and variables**
 
@@ -85,7 +85,7 @@ Decentralized - *Translatable text*
 
 \</strong> - *Closing tag*
 
-![Example of 'strong' tags.png](./Example of 'strong' tags.png)
+![Example of 'strong' tags.png](./example-of-strong-tags.png)
 
 Code snippets should be approached slightly differently to the other tags, since they contain code that should not be translated.
 
@@ -97,13 +97,13 @@ nonce - *Non-translatable text*
 
 \</code> - *Closing tag*
 
-![Example of code snippets.png](./Example of code snippets.png)
+![Example of code snippets.png](./example-of-code-snippets.png)
 
 The source text also contains shortened tags, which only contain numbers, meaning that their function is not immediately obvious. You can hover over these tags to see exactly which function they serve.
 
 In the example below, you can see that hovering over the <0> tag shows that it represents \<code> and contains a code snippet, therefore the content inside these tags should not be translated.
 
-![Example of ambiguous tags.png](./Example of ambiguous tags.png)
+![Example of ambiguous tags.png](./example-of-ambiguous-tags.png)
 
 ### Short vs. full forms/abbreviations {#short-vs-full-forms}
 
@@ -135,7 +135,7 @@ Button text can be identified by viewing the context screenshots, connected with
 
 The translations for buttons should be as short as possible, to prevent formatting mismatches. Additionally, button translations should be imperative, i.e. present a command or request.
 
-![How to find a button.png](./How to find a button.png)
+![How to find a button.png](./how-to-find-a-button.png)
 
 ### Translating for inclusivity {#translating-for-inclusivity}
 
