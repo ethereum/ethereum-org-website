@@ -1349,6 +1349,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/PolySages"><img src="https://avatars.githubusercontent.com/u/98001681?v=4?s=100" width="100px;" alt=""/><br /><sub><b>PolySages</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3APolySages" title="Bug reports">🐛</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=PolySages" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/zainabb12345"><img src="https://avatars.githubusercontent.com/u/59745525?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Zainab Hasan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=zainabb12345" title="Documentation">📖</a> <a href="#ideas-zainabb12345" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
