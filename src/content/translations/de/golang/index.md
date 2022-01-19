@@ -38,13 +38,13 @@ Brauchst du zuerst einen grundsätzlichen Einstieg? Schaue dir [ethereum.org/lea
 
 - [Gehe zur Ethereum Dokumentation](https://geth.ethereum.org/docs/) - _Die Dokumentation für die offizielle Ethereum Golang_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [Eine dApp in Go mit Geth erstellen](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
+- [Eine dApp in Go mit Geth erstellen](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Mit einem privaten Ethereum Netzwerk in Golang und Geth arbeiten](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [Unit-Testen von Solidity-Verträgen auf Ethereum mit Go](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 
 ## Fortgeschrittene Verwendungsmuster {#advanced-use-patterns}
 
-- [Das GETH simulierte Backend](https://kauri.io/article/6285c9692883411aa041b6b970405a17/v1/the-geth-simulated-backend)
+- [Das GETH simulierte Backend](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [Blockchain-as-a-Service-Apps mit Ethereum und Quorum](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
 - [Verteilte Speicher-IPFS und Swarm in Ethereum Blockchain Anwendungen](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
 - [Mobile Clients: Bibliotheken und Inproc Ethereum Nodes](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)

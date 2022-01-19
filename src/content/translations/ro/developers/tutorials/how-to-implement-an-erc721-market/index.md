@@ -133,7 +133,7 @@ function cancelTrade(uint256 _trade)
 }
 ```
 
-Asta-i tot. Ai ajuns la sfârșitul implementării. Este destul de surprinzător cât de compacte pot fi unele concepte de afaceri atunci când sunt exprimate în cod, iar acesta este unul dintre acele cazuri. Verifică contractul complet în [depozitul nostru](https://github.com/HQ20/contracts/blob/dev/contracts/classifieds/Classifieds.sol?ref=hackernoon.com).
+Asta-i tot. Ai ajuns la sfârșitul implementării. Este destul de surprinzător cât de compacte pot fi unele concepte de afaceri atunci când sunt exprimate în cod, iar acesta este unul dintre acele cazuri. Verifică contractul complet în [depozitul nostru](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol).
 
 ## Concluzie {#conclusion}
 

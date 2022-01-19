@@ -89,20 +89,11 @@ const H1 = styled(Header1)`
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 1.75rem;
   }
-
-  &:before {
-    margin-top: -160px;
-  }
 `
 
 const H2 = styled(Header2)`
   font-family: ${(props) => props.theme.fonts.monospace};
   text-transform: uppercase;
-
-  &:before {
-    height: 160px;
-    margin-top: -160px;
-  }
 `
 
 const H3 = styled(Header3)`
@@ -110,19 +101,11 @@ const H3 = styled(Header3)`
     font-size: 1rem;
     font-weight: 600;
   }
-  &:before {
-    height: 160px;
-    margin-top: -160px;
-  }
 `
 const H4 = styled(Header4)`
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 1rem;
     font-weight: 600;
-  }
-  &:before {
-    height: 160px;
-    margin-top: -160px;
   }
 `
 

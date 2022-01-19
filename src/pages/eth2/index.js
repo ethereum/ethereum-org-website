@@ -314,8 +314,8 @@ const Eth2IndexPage = ({ data }) => {
       <StyledCallout
         image={getImage(data.oldship)}
         alt={translateMessageId("page-eth-whats-eth-hero-alt", intl)}
-        title={translateMessageId("page-eth2-dive", intl)}
-        description={translateMessageId("page-eth2-dive-desc", intl)}
+        titleKey={"page-eth2-dive"}
+        descriptionKey={"page-eth2-dive-desc"}
       >
         <div>
           <ButtonLink to="/eth2/vision/">

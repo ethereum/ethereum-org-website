@@ -51,10 +51,14 @@ A proof-of-work testnet. This means it's the best like-for-like representation o
 
 ETH on testnets has no real value; therefore, there are no markets for testnet ETH. Since you need ETH to actually interact with Ethereum, most people get testnet ETH from faucets. Most faucets are webapps where you can input an address which you request ETH to be sent to.
 
+- [FaucETH](https://fauceth.komputing.org) (Multi-Chain faucet without the need for social account)
 - [Görli faucet](https://faucet.goerli.mudit.blog/)
 - [Kovan faucet](https://faucet.kovan.network/)
 - [Rinkeby faucet](https://faucet.rinkeby.io/)
 - [Ropsten faucet](https://faucet.ropsten.be/)
+- [Komputing faucet](https://fauceth.komputing.org/)
+- [Chainlink faucet](https://faucets.chain.link/)
+- [Paradigm faucet](https://faucet.paradigm.xyz/)
 
 ## Private networks {#private-networks}
 
@@ -71,6 +75,11 @@ There are projects and tools dedicated to assist with this. Learn more about [de
 The consensus process is controlled by a pre-defined set of nodes that are trusted. For example, a private network of known academic institutions that each govern a single node, and blocks are validated by a threshold of signatories within the network.
 
 If a public Ethereum network is like the public internet, you can think of a consortium network as a private intranet.
+
+## Related tools {#related-tools}
+
+- [Chainlist](https://chainlist.org/) _list of EVM networks to connect wallets and providers to the appropriate Chain ID and Network ID_
+- [EVM-based Chains](https://github.com/ethereum-lists/chains) _GitHub repo of chain metadata that powers Chainlist_
 
 ## Further reading {#further-reading}
 

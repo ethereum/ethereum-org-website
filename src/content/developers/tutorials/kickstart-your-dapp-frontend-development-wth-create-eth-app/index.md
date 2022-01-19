@@ -89,11 +89,11 @@ On top you can choose from several different templates. So far you can use an Aa
 
 ### Aave {#aave}
 
-[Aave](https://aave.com/) is a decentralized money lending market. Depositors provide liquidity to the market to earn a passive income, while borrowers are able to borrow using collaterals. One unique feature of Aave are those [flash loans](https://docs.aave.com/developers/tutorials/performing-a-flash-loan) which allow you to borrow money without any collateral, as long as you return the loan within one transaction. This can be useful for example for giving you extra cash on arbitrage trading.
+[Aave](https://aave.com/) is a decentralized money lending market. Depositors provide liquidity to the market to earn a passive income, while borrowers are able to borrow using collaterals. One unique feature of Aave are those [flash loans](https://docs.aave.com/developers/guides/flash-loans) which allow you to borrow money without any collateral, as long as you return the loan within one transaction. This can be useful for example for giving you extra cash on arbitrage trading.
 
 Traded tokens that earn you interests are called _aTokens_.
 
-When you choose to integrate Aave with _create-eth-app_, you will get a [subgraph integration](https://docs.aave.com/developers/integrating-aave/analysing-data-from-aave/using-graphql). Aave uses [The Graph](https://medium.com/aave/decentralized-data-queries-how-aave-uses-the-graph-998a55027e1d) and already provides you with several ready-to-use subgraphs on [Ropsten](https://thegraph.com/explorer/subgraph/aave/protocol-ropsten) and [Mainnet](https://thegraph.com/explorer/subgraph/aave/protocol) in [raw](https://thegraph.com/explorer/subgraph/aave/protocol-raw) or [formatted](https://thegraph.com/explorer/subgraph/aave/protocol) form.
+When you choose to integrate Aave with _create-eth-app_, you will get a [subgraph integration](https://docs.aave.com/developers/getting-started/using-graphql). Aave uses [The Graph](https://medium.com/aave/decentralized-data-queries-how-aave-uses-the-graph-998a55027e1d) and already provides you with several ready-to-use subgraphs on [Ropsten](https://thegraph.com/explorer/subgraph/aave/protocol-ropsten) and [Mainnet](https://thegraph.com/explorer/subgraph/aave/protocol) in [raw](https://thegraph.com/explorer/subgraph/aave/protocol-raw) or [formatted](https://thegraph.com/explorer/subgraph/aave/protocol) form.
 
 ![Aave Flash Loan meme – "Yeahhh, if I could keep my flash loan longer than 1 transaction, that would be great"](./flashloan-meme.png)
 

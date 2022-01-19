@@ -109,7 +109,7 @@ const Pre = styled.pre`
   white-space: pre-wrap;
 `
 
-const H1 = styled.h1`
+const InfoTitle = styled.h2`
   font-size: 48px;
   font-weight: 700;
   text-align: right;
@@ -125,14 +125,6 @@ const H2 = styled.h2`
   font-size: 32px;
   font-weight: 700;
   margin-top: 4rem;
-
-  /* Prevent nav overlap */
-  &:before {
-    display: block;
-    height: 120px;
-    margin-top: -120px;
-    visibility: hidden;
-  }
 
   a {
     display: none;
@@ -166,14 +158,6 @@ const H2 = styled.h2`
 const H3 = styled.h3`
   font-size: 24px;
   font-weight: 700;
-
-  /* Prevent nav overlap */
-  &:before {
-    display: block;
-    height: 120px;
-    margin-top: -120px;
-    visibility: hidden;
-  }
 
   a {
     display: none;
@@ -444,7 +428,7 @@ const UseCasePage = ({ data, pageContext }) => {
         />
         <InfoColumn>
           <StyledButtonDropdown list={dropdownLinks} />
-          <H1>{mdx.frontmatter.title}</H1>
+          <InfoTitle>{mdx.frontmatter.title}</InfoTitle>
 
           {mdx.frontmatter.sidebar && tocItems && (
             <Eth2TableOfContents

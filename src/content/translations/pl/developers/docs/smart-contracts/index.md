@@ -99,7 +99,7 @@ Istnieją sposoby na obejście tego za pomocą [wyroczni](/developers/docs/oracl
 
 **DappSys –** **<em x-id="4">bezpieczne, proste, elastyczne elementy konstrukcyjne do inteligentnych kontraktów.</em>**
 
-- [dapp.tools/dappsys](https://dapp.tools/dappsys/)
+- [Dappsys](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 ## Dalsza lektura {#further-reading}

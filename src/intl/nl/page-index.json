@@ -37,6 +37,7 @@
   "page-index-developers": "Een nieuwe grens voor ontwikkeling",
   "page-index-developers-description": "Ethereum en de apps daarop zijn transparant en open source. Je kunt code forken en functionaliteit hergebruiken die anderen al hebben gebouwd. Als je geen nieuwe taal wilt leren kun je gewoon interageren met open-sourced code door middel van JavaScript en andere bestaande talen.",
   "page-index-developers-button": "Ontwikkelaarsportaal",
+  "page-index-developers-code-examples": "Code examples",
   "page-index-developers-code-example-title-0": "Je eigen bank",
   "page-index-developers-code-example-description-0": "Je kunt een bank bouwen die wordt uitgevoerd volgens logica die je hebt geprogrammeerd.",
   "page-index-developers-code-example-title-1": "Je eigen valuta",

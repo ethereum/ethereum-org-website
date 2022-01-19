@@ -71,7 +71,7 @@ Genel ve özel Ethereum ağları, ağ katılımcıları tarafından istenen öze
 
 ### Güvenlik {#security}
 
-- [anahtar](https://geth.ethereum.org/clef/Overview) _işlemleri ve verileri imzalamak için kullanılır ve geth’in hesap yönetiminin yerine geçmiştir_
+- [anahtar](https://geth.ethereum.org/docs/clef/tutorial) _işlemleri ve verileri imzalamak için kullanılır ve geth’in hesap yönetiminin yerine geçmiştir_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _Bir web3 sağlayıcı ile kullanılacak bir işlem imzalama uygulaması_
 
 ### İşleme {#tooling}

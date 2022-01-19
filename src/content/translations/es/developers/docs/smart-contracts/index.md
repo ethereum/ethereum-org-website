@@ -99,7 +99,7 @@ Hay maneras de eludir esto con ayuda de [oráculos](/developers/docs/oracles/).
 
 **DappSys:** **_Bloques de construcción seguros, flexibles y sencillos para contratos inteligentes._**
 
-- [dapp.tools/dappsys](https://dapp.tools/dappsys/)
+- [Dappsys](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 ## Más lectura {#further-reading}

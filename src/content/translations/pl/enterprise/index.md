@@ -54,7 +54,7 @@ Różne organizacje podjęły pewne wspólne działania, aby uczynić Ethereum p
 - [Blockapps](https://blockapps.net/) _implementation of the Enterprise Ethereum protocol, tooling and APIs that form the STRATO platform_
 - [ConsenSys](https://consensys.net/) _zapewnia szereg produktów i narzędzi do budowania na Ethereum, a także doradztwo i niestandardowe usługi programistyczne _
 - [Envision Blockchain](https://envisionblockchain.com/) _zapewnia usługi konsultingowe i programistyczne zorientowane na przedsiębiorstwa, specjalizujące się w sieciach głównych Ethereum_
-- [EY OpsChain](https://blockchain.ey.com/products/procurement) _zapewnia przepływ pracy poprzez wystawianie zapytań ofertowych, umów, zamówień zakupu i faktury w Twojej sieci zaufanych partnerów biznesowych_
+- [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _zapewnia przepływ pracy poprzez wystawianie zapytań ofertowych, umów, zamówień zakupu i faktury w Twojej sieci zaufanych partnerów biznesowych_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _ukierunkowany na przedsiębiorstwa klient Ethereum typu open source opracowany na licencji Apache 2.0 i napisany w Javie_
 - [Infura](https://infura.io/) _scalable API access to the Ethereum and IPFS networks_
 - [Zapewnij](https://provide.services/) _infrastrukturę i interfejsy API dla aplikacji Enterprise Web3_
@@ -139,7 +139,7 @@ Oto niektóre aplikacje dla przedsiębiorstw, które zostały wdrożone w public
 - [Minespider](https://www.minespider.com/) _śledzenie łańcucha dostaw_
 - [ShipChain](https://shipchain.io) _publiczny łańcuch boczny Ethereum i system korporacyjny zapewniający widoczność i zaufanie łańcucha dostaw, zwłaszcza w przypadku logistyki multimodalnej_
 - [Follow Our Fibre](https://www.followourfibre.com) _monitorowanie łańcucha dostaw wiskozy_
-- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/procurement) _umożliwia firmom angażowanie się w proces zamówień poprzez wystawianie zapytań ofertowych, umowy, zamówienia i faktury w Twojej sieci zaufanych partnerów biznesowych_
+- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _umożliwia firmom angażowanie się w proces zamówień poprzez wystawianie zapytań ofertowych, umowy, zamówienia i faktury w Twojej sieci zaufanych partnerów biznesowych_
 - [Treum](https://treum.io/) _zapewnia przejrzystość, identyfikowalność i możliwość handlu w łańcuchach dostaw, wykorzystując technologię blockchain_
 
 ### Poświadczenia i certyfikaty {#credentials}

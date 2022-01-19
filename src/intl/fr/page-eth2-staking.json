@@ -15,7 +15,7 @@
   "page-eth2-staking-desc-2": "Bien que vous puissiez gagner des récompenses en faisant du travail qui profite au réseau, vous pouvez perdre votre ETH pour des actions malveillantes, en vous déconnectant et en ne validant pas.",
   "page-eth2-staking-desc-3": "Vous aurez besoin de 32 ETH pour devenir validateur complet ou de quelques ETH pour rejoindre un groupe d'enjeux. Vous devrez également exécuter un client 'Eth1' ou 'mainnet'. Le launchpad vous guidera à travers les exigences du processus et du matériel. Alternativement, vous pouvez utiliser une API d'arrière-plan.",
   "page-eth2-staking-description": "La mise en jeu est l'acte de déposer 32 ETH pour activer le logiciel de validateur. En tant que validateur, vous serez responsable du stockage des données, du traitement des transactions et de l'ajout de nouveaux blocs à la blockchain. Cela permettra de sécuriser Ethereum pour tout le monde et de vous faire gagner de nouveaux ETH au cours du processus. Ce processus, connu sous le nom de preuve d'enjeu, est introduit par la chaîne phare.",
-  "page-eth2-staking-docked": "En savoir plus sur l'arrimage",
+  "page-eth2-staking-docked": "En savoir plus sur la fusion",
   "page-eth2-staking-dyor": "Faites vos propres recherches",
   "page-eth2-staking-dyor-desc": "Aucun des services de mise en jeu énumérés ne sont des endossements officiels. Assurez-vous de faire des recherches pour déterminer quel service pourrait être le meilleur pour vous.",
   "page-eth2-staking-header-1": "Mettez en jeu votre ETH pour devenir un validateur Ethereum",
@@ -52,11 +52,11 @@
   "page-eth2-staking-upgrades-li": "Le mécanisme de preuve d'enjeu est dirigé par la chaîne phare.",
   "page-eth2-staking-upgrades-li-2": "Dans un futur proche, Ethereum aura la chaîne phare à preuve d'enjeu et le réseau principal à preuve de travail. Le réseau principal est l'Ethereum que nous utilisons depuis des années.",
   "page-eth2-staking-upgrades-li-3": "Pendant ce temps, les stakers ajouteront de nouveaux blocs à la chaîne phare mais ne traiteront pas les transactions principales.",
-  "page-eth2-staking-upgrades-li-4": "Ethereum passera entièrement à un système de preuve d'enjeu une fois que le réseau principal Ethereum deviendra un fragment.",
-  "page-eth2-staking-upgrades-li-5": "Ce n'est qu'alors que vous pourrez retirer votre enjeu.",
+  "page-eth2-staking-upgrades-li-4": "Ethereum passera entièrement à un système de preuve d'enjeu une fois que le réseau principal Ethereum aura fusionné avec The Beacon Chain.",
+  "page-eth2-staking-upgrades-li-5": "Une mise à niveau mineure suivra pour activer les retraits de fonds misés.",
   "page-eth2-staking-upgrades-title": "Améliorations de la preuve d'enjeu et de Eth2",
   "page-eth2-staking-validators": "Plus de validateurs, plus de sécurité",
-  "page-eth2-staking-validators-desc": "Dans une blockchain comme Ethereum, il est possible de corrompre l'intégralité de la chaîne si vous contrôlez 51 % du réseau. Par exemple, vous pourriez obtenir 51% des validateurs pour déclarer que votre solde est de 1 000 000 ETH et non 1 ETH. Mais, pour contrôler 51% des validateurs, vous devez posséder 51% de l’ETH dans le système – ça fait beaucoup !",
+  "page-eth2-staking-validators-desc": "Dans une blockchain comme Ethereum, il est possible de censurer et de réorganiser les transactions comme bon vous convient si vous contrôlez une majorité du réseau. Mais, pour contrôler une majorité du réseau, vous avez besoin d'une majorité de validateurs, et pour cela, vous devrez contrôler la majorité des ETH dans le système – c’est beaucoup! Ce montant d'ETH augmente à chaque fois qu'un nouveau validateur entre dans le système, renforçant la sécurité du réseau. Preuve de travail, le modèle de sécurité de preuve de mise en jeu remplacera, exige que les validateurs (mineurs) aient un matériel spécialisé et beaucoup d'espace physique – entrer dans le système comme un mineur est difficile, donc la sécurité contre les attaques importantes n'augmente pas autant. La preuve de mise en jeu n'a pas ces exigences, qui devraient faire croître le réseau (et sa résistance aux attaques importantes) à des tailles qui ne sont pas possibles avec la preuve de travail.",
   "page-eth2-staking-withdrawals": "Les retraits ne seront pas activés instantanément",
-  "page-eth2-staking-withdrawals-desc": "Vous ne pourrez pas retirer votre satking tant que de futures améliorations ne seront pas déployées. Les retraits devraient être disponibles une fois le réseau principal arrimé dans le système de chaîne phare."
+  "page-eth2-staking-withdrawals-desc": "Vous ne pourrez pas retirer votre mise tant que de futures améliorations ne seront pas déployées. Les retraits seront disponibles dans une mise à jour mineure suivis d'une fusion de Mainnet avec The Beacon Chain."
 }
