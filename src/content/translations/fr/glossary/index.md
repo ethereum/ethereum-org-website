@@ -446,7 +446,7 @@ Client Ethereum qui ne stocke aucune copie locale de la [blockchain](#blockchain
 
 ### réseau principal {#mainnet}
 
-Également appelé "mainnet" (pour "main network"), il s'agit de la [blockchain](#blockchain) principale du réseau public Ethereum. De vrais ETH, une valeur et des conséquences réelles. Aussi connu sous le nom de "Couche 1" lors des discussions sur les solutions d'évolutivité de la [couche 2](#layer-2). (Voir aussi [réseau de test](#testnet))
+Également appelé "Mainnet" (pour "main network"), il s'agit de la [blockchain](#blockchain) principale du réseau public Ethereum. De vrais ETH, une valeur et des conséquences réelles. Aussi connu sous le nom de "Couche 1" lors des discussions sur les solutions d'évolutivité de la [couche 2](#layer-2). (Voir aussi [réseau de test](#testnet))
 
 ### arbre de Merkle {#merkle-patricia-tree}
 

@@ -444,7 +444,7 @@ Egy Ethereum kliens, mely nem tárolja a [blokklánc](#blockchain) lokális más
 
 ## M {#section-m}
 
-### mainnet (főhálózat) {#mainnet}
+### Mainnet (főhálózat) {#mainnet}
 
 A "main network" rövidítése, ez a fő nyilvános Ethereum [blokklánc](#blockchain). Valódi ETH, valódi érték, és valódi következmények. 1. rétegként is hivatkozunk rá, amikor a [2. rétegű](#layer-2) skálázhatósági megoldásokról beszélünk. (Ezenkívül lásd [tesztnet](#testnet))
 

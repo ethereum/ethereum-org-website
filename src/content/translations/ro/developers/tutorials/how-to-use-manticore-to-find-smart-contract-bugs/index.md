@@ -209,13 +209,13 @@ from manticore.ethereum import ManticoreEVM
 m = ManticoreEVM()
 ```
 
-Un cont non-contract este creat utilizând [m.create_account](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.create_account):
+Un cont non-contract este creat utilizând [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account):
 
 ```python
 user_account = m.create_account(balance=1000)
 ```
 
-Un contract Solidity poate fi implementat utilizând [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.solidity_create_contract):
+Un contract Solidity poate fi implementat utilizând [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract):
 
 ```solidity
 source_code = '''
@@ -234,7 +234,7 @@ contract_account = m.solidity_create_contract(source_code, owner=user_account)
 
 #### Rezumat {#summary}
 
-- Poți crea conturi de utilizator și contracte cu [m.create_account](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.create_account) și \[m.solidity_create_contract\](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.solidity_create_contract.
+- Poți crea conturi de utilizator și contracte cu [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account) și [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract).
 
 ### Executarea tranzacțiilor {#executing-transactions}
 
@@ -245,7 +245,7 @@ Manticore acceptă două tipuri de tranzacții:
 
 #### Tranzacția brută {#raw-transaction}
 
-O tranzacție brută este executată utilizând [m.transaction](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.transaction):
+O tranzacție brută este executată utilizând [m.transaction](https://manticore.readthedocs.io/en/latest/evm.html?highlight=transaction#manticore.ethereum.ManticoreEVM.transaction):
 
 ```python
 m.transaction(caller=user_account,
@@ -256,8 +256,8 @@ m.transaction(caller=user_account,
 
 Apelantul, adresa, datele sau valoarea tranzacției pot să fie concrete sau simbolice:
 
-- [m.make_symbolic_value](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.make_symbolic_value) creează o valoare simbolică.
-- [m.make_symbolic_buffer(size)](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.make_symbolic_buffer) creează o matrice simbolică de byți.
+- [m.make_symbolic_value](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_value#manticore.ethereum.ManticoreEVM.make_symbolic_value) creează o valoare simbolică.
+- [m.make_symbolic_buffer(size)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_buffer#manticore.ethereum.ManticoreEVM.make_symbolic_buffer) creează o matrice simbolică de byți.
 
 De exemplu:
 
@@ -299,7 +299,7 @@ print("Rezultatele sunt în {}".format(m.workspace))
 
 ### Terminarea explorării {#terminate-the-exploration}
 
-Pentru a opri utilizarea explorării folosește [m.finalize()](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.finalize). Nu trebuie trimise alte tranzacții odată ce această metodă este apelată și Manticore generează cazuri de testare pentru fiecare cale explorată.
+Pentru a opri utilizarea explorării folosește [m.finalize()](https://manticore.readthedocs.io/en/latest/evm.html?highlight=finalize#manticore.ethereum.ManticoreEVM.finalize). Nu trebuie trimise alte tranzacții odată ce această metodă este apelată și Manticore generează cazuri de testare pentru fiecare cale explorată.
 
 ### Rezumat: Rularea sub Manticore {#summary-running-under-manticore}
 
@@ -368,7 +368,7 @@ data = ABI.deserialize("uint", data)
 
 ### Cum să generezi un caz de test {#how-to-generate-testcase}
 
-Utilizează [m.generate_testcase(state, name)](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.generate_testcase) pentru a genera un caz de test:
+Utilizează [m.generate_testcase(state, name)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=generate_testcase#manticore.ethereum.ManticoreEVM.generate_testcase) pentru a genera un caz de test:
 
 ```python
 m.generate_testcase(state, 'BugFound')

@@ -36,7 +36,7 @@ With lower hardware requirements, sharding will make it easier to run [clients](
 <br />
 
 <InfoBanner isWarning={true}>
-  At first, you'll need to run a Mainnet client at the same time as your Beacon Chain client. <a href="https://launchpad.ethereum.org" target="_blank">The launchpad</a> will walk you through the hardware requirements and process. Alternatively you can use a <a href="/en/developers/docs/apis/backend/#available-libraries">backend API</a>.
+  At first, you'll need to run a Mainnet client at the same time as your Beacon Chain client. <a href="https://launchpad.ethereum.org" target="_blank">The launchpad</a> will walk you through the hardware requirements and process. Alternatively you can use a <a href="/developers/docs/apis/backend/#available-libraries">backend API</a>.
 </InfoBanner>
 
 ## Shard chains version 1: data availability {#data-availability}

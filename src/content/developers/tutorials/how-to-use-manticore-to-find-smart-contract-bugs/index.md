@@ -204,13 +204,13 @@ from manticore.ethereum import ManticoreEVM
 m = ManticoreEVM()
 ```
 
-A non-contract account is created using [m.create_account](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.create_account):
+A non-contract account is created using [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account):
 
 ```python
 user_account = m.create_account(balance=1000)
 ```
 
-A Solidity contract can be deployed using [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.solidity_create_contract):
+A Solidity contract can be deployed using [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract):
 
 ```solidity
 source_code = '''
@@ -229,7 +229,7 @@ contract_account = m.solidity_create_contract(source_code, owner=user_account)
 
 #### Summary {#summary}
 
-- You can create user and contract accounts with [m.create_account](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.create_account) and [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.solidity_create_contract.
+- You can create user and contract accounts with [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account) and [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract).
 
 ### Executing transactions {#executing-transactions}
 
@@ -240,7 +240,7 @@ Manticore supports two types of transaction:
 
 #### Raw transaction {#raw-transaction}
 
-A raw transaction is executed using [m.transaction](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.transaction):
+A raw transaction is executed using [m.transaction](https://manticore.readthedocs.io/en/latest/evm.html?highlight=transaction#manticore.ethereum.ManticoreEVM.transaction):
 
 ```python
 m.transaction(caller=user_account,
@@ -251,8 +251,8 @@ m.transaction(caller=user_account,
 
 The caller, the address, the data, or the value of the transaction can be either concrete or symbolic:
 
-- [m.make_symbolic_value](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.make_symbolic_value) creates a symbolic value.
-- [m.make_symbolic_buffer(size)](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.make_symbolic_buffer) creates a symbolic byte array.
+- [m.make_symbolic_value](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_value#manticore.ethereum.ManticoreEVM.make_symbolic_value) creates a symbolic value.
+- [m.make_symbolic_buffer(size)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_buffer#manticore.ethereum.ManticoreEVM.make_symbolic_buffer) creates a symbolic byte array.
 
 For example:
 
@@ -295,7 +295,7 @@ print("Results are in {}".format(m.workspace))
 
 ### Terminate the Exploration {#terminate-the-exploration}
 
-To stop the exploration use [m.finalize()](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.finalize). No further transactions should be sent once this method is called and Manticore generates test cases for each of the path explored.
+To stop the exploration use [m.finalize()](https://manticore.readthedocs.io/en/latest/evm.html?highlight=finalize#manticore.ethereum.ManticoreEVM.finalize). No further transactions should be sent once this method is called and Manticore generates test cases for each of the path explored.
 
 ### Summary: Running under Manticore {#summary-running-under-manticore}
 
@@ -364,7 +364,7 @@ data = ABI.deserialize("uint", data)
 
 ### How to generate testcase {#how-to-generate-testcase}
 
-Use [m.generate_testcase(state, name)](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.generate_testcase) to generate testcase:
+Use [m.generate_testcase(state, name)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=generate_testcase#manticore.ethereum.ManticoreEVM.generate_testcase) to generate testcase:
 
 ```python
 m.generate_testcase(state, 'BugFound')
