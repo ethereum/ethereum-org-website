@@ -24,7 +24,7 @@ Beberapa layanan menawarkan node yang didedikasikan sebagai milik Anda sendiri y
 
 Hampir semua layanan node sangat mudah untuk dintegrasikan, melibatkan sebaris perubahan dalam kode Anda untuk menukar node yang Anda host sendiri, atau bahkan beralih antar layanan itu sendiri.
 
-Sering kali layanan node akan menjalankan berbagai [klien node](/developers/docs/nodes-and-clients/#clients) dan [jenis](/developers/docs/nodes-and-clients/#node-types), memungkinkan Anda mengakses node penuh dan node arsip di samping metode khusus klien dalam satu API.
+Sering kali layanan node akan menjalankan berbagai [klien node](/developers/docs/nodes-and-clients/#execution-clients) dan [jenis](/developers/docs/nodes-and-clients/#node-types), memungkinkan Anda mengakses node penuh dan node arsip di samping metode khusus klien dalam satu API.
 
 Penting untuk dicatat bahwa layanan node tidak dan seharusnya tidak menyimpan kunci atau informasi privat Anda.
 

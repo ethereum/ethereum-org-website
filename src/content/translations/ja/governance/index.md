@@ -162,7 +162,7 @@ Beacon Chain が Ethereum の実行レイヤーにマージされると、変更
 - [R&D ディスカッションへの参加](https://ethresear.ch/)
 - [Ethereum R&D Discord への参加](https://discord.gg/mncqtgVSVw)
 - [ノードの運用](/developers/docs/nodes-and-clients/run-a-node/)
-- [クライアント開発への貢献](/developers/docs/nodes-and-clients/#clients)
+- [クライアント開発への貢献](/developers/docs/nodes-and-clients/#execution-clients)
 - [コアデベロッパー実習プログラム](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
 
 ## 参考文献 {#further-reading}

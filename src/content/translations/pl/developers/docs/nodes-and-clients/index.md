@@ -19,7 +19,7 @@ Powinieneś zrozumieć koncepcję zdecentralizowanej sieci, zanim zagłębisz si
 
 Możesz zobaczyć widok sieci Ethereum w czasie rzeczywistym, patrząc na [mapę węzłów](https://etherscan.io/nodetracker).
 
-Wiele [implementacji klientów Ethereum](/developers/docs/nodes-and-clients/#clients) istnieje w wielu językach. Cechą wspólną tych implementacji klienckich jest to, że wszystkie są zgodne z formalną specyfikacją. Ta specyfikacja określa, jak działa sieć Ethereum i blockchain.
+Wiele [implementacji klientów Ethereum](/developers/docs/nodes-and-clients/#execution-clients) istnieje w wielu językach. Cechą wspólną tych implementacji klienckich jest to, że wszystkie są zgodne z formalną specyfikacją. Ta specyfikacja określa, jak działa sieć Ethereum i blockchain.
 
 ![Klient Eth1x](../../../../../developers/docs/nodes-and-clients/client-diagram.png) Uproszczony schemat funkcji klienta Ethereum.
 

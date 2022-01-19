@@ -65,7 +65,7 @@ After [the merge](/upgrades/merge/), Ethereum will be moving to a different syst
 
 The Ethereum network is made up of many nodes, each of which runs compatible client software.
 
-You can [learn how to run a node of your own](/developers/docs/nodes-and-clients/#running-your-own-node) or find a [comprehensive list of all Ethereum clients](/developers/docs/nodes-and-clients/#clients) within our developer documentation.
+You can [learn how to run a node of your own](/developers/docs/nodes-and-clients/#running-your-own-node) or find a [comprehensive list of all Ethereum clients](/developers/docs/nodes-and-clients/#execution-clients) within our developer documentation.
 
 ## Enterprise Ethereum {#enterprise-ethereum}
 

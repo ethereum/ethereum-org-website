@@ -19,7 +19,7 @@ A "csomópont" egy szoftverre utal, melyet kliensnek hívunk. Egy kliens egy Eth
 
 Valós idejű látványt kaphatsz az Ethereum hálózatról, ha megnézed a [csomópontok térképét](https://etherscan.io/nodetracker).
 
-Valamennyi [Ethereum kliens implementáció](/developers/docs/nodes-and-clients/#clients) létezik különböző nyelveken. Ami közös van ezekben az implementációkban, hogy mindegyikük egy formális specifikációt követ. Ez a specifikáció mondja ki, hogyan működik az Ethereum hálózat és a blokklánc.
+Valamennyi [Ethereum kliens implementáció](/developers/docs/nodes-and-clients/#execution-clients) létezik különböző nyelveken. Ami közös van ezekben az implementációkban, hogy mindegyikük egy formális specifikációt követ. Ez a specifikáció mondja ki, hogyan működik az Ethereum hálózat és a blokklánc.
 
 ![Eth1x kliens](../../../../../developers/docs/nodes-and-clients/client-diagram.png) Az Ethereum kliens funkciók egyszerűsített diagramja.
 

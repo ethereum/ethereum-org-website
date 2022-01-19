@@ -162,7 +162,7 @@ Ko se bo Oddajniška veriga združila z Ethereumovo izvršilno plastjo, se bo up
 - [Vključite se v R&D razprave](https://ethresear.ch/)
 - [Pridružite se Ethereum R&D Diskordu](https://discord.gg/mncqtgVSVw)
 - [Upravljajte vozlišče](/developers/docs/nodes-and-clients/run-a-node/)
-- [Prispevajte k razvoju strank](/developers/docs/nodes-and-clients/#clients)
+- [Prispevajte k razvoju strank](/developers/docs/nodes-and-clients/#execution-clients)
 - [Pripravniški program za ključne razvijalce](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
 
 ## Dodatno branje {#further-reading}

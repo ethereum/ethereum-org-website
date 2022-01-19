@@ -19,7 +19,7 @@ Il termine "nodo" si riferisce a un software noto come client. Un client è una 
 
 Puoi avere una panoramica in tempo reale della rete Ethereum dando un'occhiata a questa [mappa dei nodi](https://etherscan.io/nodetracker).
 
-Molte [implementazioni dei client Ethereum](/developers/docs/nodes-and-clients/#clients) sono disponibili in una varietà di lingue. Hanno in comune il fatto di seguire una specifica ufficiale che determina come funziona la rete Ethereum e la blockchain.
+Molte [implementazioni dei client Ethereum](/developers/docs/nodes-and-clients/#execution-clients) sono disponibili in una varietà di lingue. Hanno in comune il fatto di seguire una specifica ufficiale che determina come funziona la rete Ethereum e la blockchain.
 
 ![Client Eth1x](../../../../../developers/docs/nodes-and-clients/client-diagram.png) Diagramma semplificato delle caratteristiche di un client Ethereum.
 

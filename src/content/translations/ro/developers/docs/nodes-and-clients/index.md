@@ -19,7 +19,7 @@ Ar trebui să înțelegi conceptul unei rețele descentralizate înainte de a co
 
 Poți vizualiza în timp real rețeaua Ethereum uitându-te la această [hartă a nodurilor](https://etherscan.io/nodetracker).
 
-Multe [implementări ale clienților Ethereum](/developers/docs/nodes-and-clients/#clients) există într-o varietate de limbaje. Ceea ce au în comun aceste implementări ale clienților este că toate respectă o specificație formală. Această specificație dictează modul în care funcționează rețeaua Ethereum și blockchain-ul.
+Multe [implementări ale clienților Ethereum](/developers/docs/nodes-and-clients/#execution-clients) există într-o varietate de limbaje. Ceea ce au în comun aceste implementări ale clienților este că toate respectă o specificație formală. Această specificație dictează modul în care funcționează rețeaua Ethereum și blockchain-ul.
 
 ![Client Eth1x](../../../../../developers/docs/nodes-and-clients/client-diagram.png) Diagramă simplificată a caracteristicilor clientului Ethereum.
 

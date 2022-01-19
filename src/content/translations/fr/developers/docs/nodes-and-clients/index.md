@@ -19,7 +19,7 @@ Vous devez comprendre le concept de réseau décentralisé avant d'approfondir l
 
 Vous pouvez voir une vue du réseau Ethereum en temps réel en consultant cette [carte des nœuds](https://etherscan.io/nodetracker).
 
-De nombreuses [implémentations de clients Ethereum](/developers/docs/nodes-and-clients/#clients) existent dans différentes langues. Ce qu'elles ont en commun, c'est qu'elles suivent toutes une spécification formelle. Cette spécification dicte le fonctionnement du réseau Ethereum et de la blockchain.
+De nombreuses [implémentations de clients Ethereum](/developers/docs/nodes-and-clients/#execution-clients) existent dans différentes langues. Ce qu'elles ont en commun, c'est qu'elles suivent toutes une spécification formelle. Cette spécification dicte le fonctionnement du réseau Ethereum et de la blockchain.
 
 ![Client Eth1x](../../../../../developers/docs/nodes-and-clients/client-diagram.png) Diagramme simplifié des fonctionnalités Ethereum Client
 

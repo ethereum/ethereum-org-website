@@ -18,7 +18,7 @@ You should understand the concept of a peer-to-peer network and the [basics of t
 
 You can see a real-time view of the Ethereum network by looking at this [map of nodes](https://etherscan.io/nodetracker).
 
-Many [Ethereum clients](/developers/docs/nodes-and-clients/#clients) exist, in a variety of programming languages such as Go, Rust, JavaScript, Typescript, Python, C# .NET, Nim and Java. What these implementations have in common is they all follow a formal specification (originally the [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf)). This specification dictates how the Ethereum network and blockchain functions.
+Many [Ethereum clients](/developers/docs/nodes-and-clients/#execution-clients) exist, in a variety of programming languages such as Go, Rust, JavaScript, Typescript, Python, C# .NET, Nim and Java. What these implementations have in common is they all follow a formal specification (originally the [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf)). This specification dictates how the Ethereum network and blockchain functions.
 
 ![Execution client](./client-diagram.png)
 Simplified diagram of what Ethereum client features.
@@ -235,9 +235,9 @@ For further details, check out the tutorial on [running Geth light node](/develo
 
 Like any other configuration, it can be defined with the startup flag or in the config file. Another example is [Nethermind](https://docs.nethermind.io/nethermind/) which prompts you to choose a configuration during first initialization and creates a config file.
 
-## Consensus clients (formerly Eth2 clients) {#consensus-clients}
+## Consensus clients (formerly 'Eth2' clients) {#consensus-clients}
 
-There are multiple consensus clients (previously known as Eth2 clients) to support the [consensus upgrades](/upgrades/beacon-chain/). They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [The Merge](/eth2/merge/).
+There are multiple consensus clients (previously known as 'Eth2' clients) to support the [consensus upgrades](/upgrades/beacon-chain/). They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [the merge](/upgrades/merge/).
 
 [View consensus clients](/upgrades/get-involved/#clients).
 
