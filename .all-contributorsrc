@@ -6255,6 +6255,16 @@
         "bug",
         "doc"
       ]
+    },
+    {
+      "login": "zainabb12345",
+      "name": "Zainab Hasan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59745525?v=4",
+      "profile": "https://github.com/zainabb12345",
+      "contributions": [
+        "doc",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
