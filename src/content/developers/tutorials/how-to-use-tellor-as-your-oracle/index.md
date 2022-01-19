@@ -74,11 +74,11 @@ contract BtcPriceContract is UsingTellor {
 **Want to try a different data feed? Check out the list of supported data feeds here:
 [Current Data Feeds](https://docs.tellor.io/tellor/integration/data-feed-ids)**
 
-#### Addresses: {#addresses}
+## Addresses: {#addresses}
 
 Mainnet: [`0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0`](https://etherscan.io/address/0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0#code)
 
-## Looking to do some testing first? See the list below for our active testnet addresses: {#looking-to-do-some-testing-first-see-the-list-below-for-our-active-testnet-addresses}
+#### Looking to do some testing first? See the list below for our active testnet addresses: {#looking-to-do-some-testing-first-see-the-list-below-for-our-active-testnet-addresses}
 
 Rinkeby: [`0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0`](https://rinkeby.etherscan.io/address/0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0#code)
 
