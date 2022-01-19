@@ -66,7 +66,7 @@ Decisions about individual PRs, design evolution and major upgrades are made by 
 
 ### A note on plagiarism {#plagiarism}
 
-Only use your original work or content that you have permission to use when contributing any content or artefact to ethereum.org. Many projects within the Ethereum ecosystem use open-source licensing that allows for the free sharing of information. However, if you are cannot find this information, do not attempt to add it to ethereum.org. Any pull requests deemed as plagiarism will get rejected.
+Only use your original work or content that you have permission to use when contributing any content or artifact to ethereum.org. Many projects within the Ethereum ecosystem use open-source licensing that allows for the free sharing of information. However, if you are cannot find this information, do not attempt to add it to ethereum.org. Any pull requests deemed as plagiarism will get rejected.
 
 ## New to open-source? {#new-to-open-source}
 
