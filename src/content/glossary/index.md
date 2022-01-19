@@ -59,6 +59,14 @@ A validator vote for a [Beacon Chain](#beacon-chain) or [shard](#shard) [block](
 
 ## B {#section-b}
 
+### Base Fee {#base-fee}
+
+Every [block](#block) has a reserve price known as the 'base fee'. It is the minimum [gas](#gas) fee a user must pay to include a transaction in the next block.
+
+<DocLink to="developers/docs/gas/">
+  Gas and fees
+</DocLink>
+
 ### Beacon Chain {#beacon-chain}
 
 An Eth2 upgrade that will become the coordinator for the Ethereum network. It introduces [proof-of-stake](#pos) and [validators](#validator) to Ethereum. It will eventually be merged with [Mainnet](#mainnet).
