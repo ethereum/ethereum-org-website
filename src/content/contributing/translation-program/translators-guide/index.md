@@ -101,7 +101,7 @@ nonce - _Non-translatable text_
 
 The source text also contains shortened tags, which only contain numbers, meaning that their function is not immediately obvious. You can hover over these tags to see exactly which function they serve.
 
-In the example below, you can see that hovering over the <0> tag shows that it represents \<code> and contains a code snippet, therefore the content inside these tags should not be translated.
+In the example below, you can see that hovering over the <0> tag shows that it represents `<code>` and contains a code snippet, therefore the content inside these tags should not be translated.
 
 ![Example of ambiguous tags.png](./example-of-ambiguous-tags.png)
 
