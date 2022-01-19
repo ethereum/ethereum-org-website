@@ -15,7 +15,7 @@ If you have any questions, suggestions or feedback, feel free to reach out to us
 
 ### Capturing the essence of the message {#capturing-the-essence}
 
-When translating ethereum.org content, avoid literal translations. 
+When translating ethereum.org content, avoid literal translations.
 
 It is important that the translations capture the essence of the message. This could mean rephrasing certain phrases, or using descriptive translations instead of translating the content word for word.
 
@@ -77,25 +77,25 @@ The source text contains many different types of tags, which should always be co
 
 Tags always contain an opening and closing tag. In most cases, the text between opening and closing tags should be translated.
 
-Example: \<strong x-id="1">Decentralized\</strong>
+Example: `<strong x-id="1">`Decentralized`</strong>`
 
-\<strong x-id="1"> - *Opening tag that makes the text bold*
+`<strong x-id="1">` - _Opening tag that makes the text bold_
 
-Decentralized - *Translatable text*
+Decentralized - _Translatable text_
 
-\</strong> - *Closing tag*
+`</strong>` - _Closing tag_
 
 ![Example of 'strong' tags.png](./example-of-strong-tags.png)
 
 Code snippets should be approached slightly differently to the other tags, since they contain code that should not be translated.
 
-Example: \<code>nonce\</code>
+Example: `<code>`nonce`</code>`
 
-\<code> - *Opening tax, which contains a code snippet*
+`<code>` - _Opening tax, which contains a code snippet_
 
-nonce - *Non-translatable text*
+nonce - _Non-translatable text_
 
-\</code> - *Closing tag*
+`</code>` - _Closing tag_
 
 ![Example of code snippets.png](./example-of-code-snippets.png)
 
@@ -115,7 +115,7 @@ Do not translate these abbreviations, since most people wouldn’t be familiar w
 
 Example of how to translate dApps:
 
-- Decentralized applications (dApps) → *Translated full form (English abbreviation in brackets)*
+- Decentralized applications (dApps) → _Translated full form (English abbreviation in brackets)_
 
 ### Terms without established translations {#terms-without-established-translations}
 
@@ -145,7 +145,7 @@ An important aspect of this is gender neutrality. This can be easily achieved by
 
 Another form of inclusivity is trying to translate for a global audience, not specific to any country, race or region.
 
-Finally, the language should be suitable for all audiences and ages. 
+Finally, the language should be suitable for all audiences and ages.
 
 ## Language-specific translations {#language-specific-translations}
 
@@ -167,10 +167,10 @@ Some examples of what to be particularly mindful of:
 
 - Orthography rules define the use of spaces for each language. Because spaces are used everywhere, these rules are some of the most distinct, and spaces are some of the most mistranslated elements.
 - Some common differences in spacing between English and other languages:
-    - Space before units of measure and currencies (e.g. USD, EUR, kB, MB)
-    - Space before degree signs (e.g. °C, ℉)
-    - Space before some punctuation marks, especially the ellipsis (…)
-    - Space before and after slashes (/)
+  - Space before units of measure and currencies (e.g. USD, EUR, kB, MB)
+  - Space before degree signs (e.g. °C, ℉)
+  - Space before some punctuation marks, especially the ellipsis (…)
+  - Space before and after slashes (/)
 
 **Lists**
 
@@ -182,12 +182,12 @@ Some examples of what to be particularly mindful of:
 
 - Languages use many different quotation marks. Simply copying the English quotation marks from the source is often incorrect.
 - Some of the most common types of quotation marks include:
-    - „example text“
-    - ‚example text’
-    - »example text«
-    - “example text”
-    - ‘example text’
-    - «example text»
+  - „example text“
+  - ‚example text’
+  - »example text«
+  - “example text”
+  - ‘example text’
+  - «example text»
 
 **Hyphens and dashes**
 
@@ -199,32 +199,32 @@ Some examples of what to be particularly mindful of:
 **Numbers**
 
 - The main difference in writing numbers in different languages is the separator used for decimals and thousands. For thousands, this can be a period, comma or space. Similarly, some languages use a decimal point, while others use a decimal comma.
-    - Some examples of large numbers:
-        - English – **1,000.50**
-        - Spanish – **1.000,50**
-        - French – **1 000,50**
+  - Some examples of large numbers:
+    - English – **1,000.50**
+    - Spanish – **1.000,50**
+    - French – **1 000,50**
 - Another important consideration when translating numbers is the percent sign. It can be written in different ways: **100%**, **100 %** or **%100**.
 - Finally, negative numbers can be displayed differently, depending on the language: -100, 100-. (100) or [100].
 
 **Dates**
 
 - When translating dates, there are a number of considerations and differences based on the language. These include the date format, separator, capitalization and leading zeros. There are also differences between full-length and numerical dates.
-    - Some examples of different date formats:
-        - English UK (mm/dd/yyyy) – 1st January, 2022
-        - English US (dd/mm/yyyy) – January 1, 2022
-        - Chinese (yyyy-mm-dd) – 2022年1月1日
-        - French (dd/mm/yyyy) – 1er janvier 2022
-        - Italian (dd/mm/yyyy) – 1º gennaio 2022
-        - German (dd/mm/yyyy) – 1. Januar 2022
+  - Some examples of different date formats:
+    - English UK (mm/dd/yyyy) – 1st January, 2022
+    - English US (dd/mm/yyyy) – January 1, 2022
+    - Chinese (yyyy-mm-dd) – 2022 年 1 月 1 日
+    - French (dd/mm/yyyy) – 1er janvier 2022
+    - Italian (dd/mm/yyyy) – 1º gennaio 2022
+    - German (dd/mm/yyyy) – 1. Januar 2022
 
 **Currencies**
 
 - Translating currencies can be challenging, due to the different formats, conventions and conversions. As a general rule, please keep currencies the same as the source. You can add your local currency and conversion in brackets, for the benefit of the reader.
 - The main differences in writing currencies in different languages include symbol placement, decimal commas vs. decimal points, spacing, and abbreviations vs. symbols.
-    - Symbol placement: $100 or 100$
-    - Decimal commas vs. decimal points: 100,50$ or 100.50$
-    - Spacing: 100$ or 100 $
-    - Abbreviations vs. symbols: 100 $ or 100 USD
+  - Symbol placement: $100 or 100$
+  - Decimal commas vs. decimal points: 100,50$ or 100.50$
+  - Spacing: 100$ or 100 $
+  - Abbreviations vs. symbols: 100 $ or 100 USD
 
 **Units of measure**
 
