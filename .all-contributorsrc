@@ -6245,6 +6245,16 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "PolySages",
+      "name": "PolySages",
+      "avatar_url": "https://avatars.githubusercontent.com/u/98001681?v=4",
+      "profile": "https://github.com/PolySages",
+      "contributions": [
+        "bug",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
