@@ -49,7 +49,7 @@ Az okosszerződés olyan kód, mely az Ethereum blokkláncon fut és pontosan ú
 **One Click Dapp** **_- FOSS eszköz, mely egy dapp frontendet generál egy ABI-ból._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
-- [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
+- [GitHub](https://github.com/One-Click-Dapp/one-click-dApp)
 
 **Etherflow** **_- FOSS leteszteljék a csomópontjukat & összeálítsanak valamint debugoljanak RPC hívásokat a böngészőből._**
 

@@ -110,61 +110,61 @@ const Text = styled.div`
 
 const bugBountyCardsInfo = [
   {
-    lowLabelTranslationId: "page-eth2-bug-bountycard-label-1",
-    h2TranslationId: "page-eth2-bug-bountycard-low",
-    descriptionTranslationId: "page-eth2-bug-bountycard-label-2",
-    subHeader1TranslationId: "page-eth2-bug-bountycard-subheader",
+    lowLabelTranslationId: "page-upgrades-bug-bounty-card-label-1",
+    h2TranslationId: "page-upgrades-bug-bounty-card-low",
+    descriptionTranslationId: "page-upgrades-bug-bounty-card-label-2",
+    subHeader1TranslationId: "page-upgrades-bug-bounty-card-subheader",
     severityList: [
-      "page-eth2-bug-bountycard-li-1",
-      "page-eth2-bug-bountycard-li-2",
+      "page-upgrades-bug-bounty-card-li-1",
+      "page-upgrades-bug-bounty-card-li-2",
     ],
-    subHeader2TranslationId: "page-eth2-bug-bountycard-subheader-2",
-    textTranslationId: "page-eth2-bug-bountycard-text",
-    styledButtonTranslationId: "page-eth2-bug-bountycard-low-risk",
+    subHeader2TranslationId: "page-upgrades-bug-bounty-card-subheader-2",
+    textTranslationId: "page-upgrades-bug-bounty-card-text",
+    styledButtonTranslationId: "page-upgrades-bug-bounty-card-low-risk",
   },
   {
-    mediumLabelTranslationId: "page-eth2-bug-bountycard-label-3",
-    h2TranslationId: "page-eth2-bug-bountycard-h2",
-    descriptionTranslationId: "page-eth2-bug-bountycard-label-4",
-    subHeader1TranslationId: "page-eth2-bug-bountycard-subheader",
+    mediumLabelTranslationId: "page-upgrades-bug-bounty-card-label-3",
+    h2TranslationId: "page-upgrades-bug-bounty-card-h2",
+    descriptionTranslationId: "page-upgrades-bug-bounty-card-label-4",
+    subHeader1TranslationId: "page-upgrades-bug-bounty-card-subheader",
     severityList: [
-      "page-eth2-bug-bountycard-li-3",
-      "page-eth2-bug-bountycard-li-4",
-      "page-eth2-bug-bountycard-li-5",
+      "page-upgrades-bug-bounty-card-li-3",
+      "page-upgrades-bug-bounty-card-li-4",
+      "page-upgrades-bug-bounty-card-li-5",
     ],
-    subHeader2TranslationId: "page-eth2-bug-bountycard-subheader-2",
-    textTranslationId: "page-eth2-bug-bountycard-text-1",
-    styledButtonTranslationId: "page-eth2-bug-bountycard-medium-risk",
+    subHeader2TranslationId: "page-upgrades-bug-bounty-card-subheader-2",
+    textTranslationId: "page-upgrades-bug-bounty-card-text-1",
+    styledButtonTranslationId: "page-upgrades-bug-bounty-card-medium-risk",
   },
   {
-    highLabelTranslationId: "page-eth2-bug-bountycard-label-5",
-    h2TranslationId: "page-eth2-bug-bountycard-high",
-    descriptionTranslationId: "page-eth2-bug-bountycard-label-6",
-    subHeader1TranslationId: "page-eth2-bug-bountycard-subheader",
+    highLabelTranslationId: "page-upgrades-bug-bounty-card-label-5",
+    h2TranslationId: "page-upgrades-bug-bounty-card-high",
+    descriptionTranslationId: "page-upgrades-bug-bounty-card-label-6",
+    subHeader1TranslationId: "page-upgrades-bug-bounty-card-subheader",
     severityList: [
-      "page-eth2-bug-bountycard-li-6",
-      "page-eth2-bug-bountycard-li-7",
+      "page-upgrades-bug-bounty-card-li-6",
+      "page-upgrades-bug-bounty-card-li-7",
     ],
-    subHeader2TranslationId: "page-eth2-bug-bountycard-subheader-2",
-    textTranslationId: "page-eth2-bug-bountycard-text-2",
-    styledButtonTranslationId: "page-eth2-bug-bountycard-high-risk",
+    subHeader2TranslationId: "page-upgrades-bug-bounty-card-subheader-2",
+    textTranslationId: "page-upgrades-bug-bounty-card-text-2",
+    styledButtonTranslationId: "page-upgrades-bug-bounty-card-high-risk",
   },
   {
-    criticalLabelTranslationId: "page-eth2-bug-bountycard-label-7",
-    h2TranslationId: "page-eth2-bug-bountycard-critical",
-    descriptionTranslationId: "page-eth2-bug-bountycard-label-8",
-    subHeader1TranslationId: "page-eth2-bug-bountycard-subheader",
-    severityList: ["page-eth2-bug-bountycard-li-8"],
-    subHeader2TranslationId: "page-eth2-bug-bountycard-subheader-2",
-    textTranslationId: "page-eth2-bug-bountycard-text-3",
-    styledButtonTranslationId: "page-eth2-bug-bountycard-critical-risk",
+    criticalLabelTranslationId: "page-upgrades-bug-bounty-card-label-7",
+    h2TranslationId: "page-upgrades-bug-bounty-card-critical",
+    descriptionTranslationId: "page-upgrades-bug-bounty-card-label-8",
+    subHeader1TranslationId: "page-upgrades-bug-bounty-card-subheader",
+    severityList: ["page-upgrades-bug-bounty-card-li-8"],
+    subHeader2TranslationId: "page-upgrades-bug-bounty-card-subheader-2",
+    textTranslationId: "page-upgrades-bug-bounty-card-text-3",
+    styledButtonTranslationId: "page-upgrades-bug-bounty-card-critical-risk",
   },
 ]
 
 const BugBountyCards = () => (
   <CardRow>
     {bugBountyCardsInfo.map((card, idx) => (
-      <Card key={`bug-bountycard-${idx}`}>
+      <Card key={`bug-bounty-card-${idx}`}>
         {card.lowLabelTranslationId && (
           <LowLabel>
             <Translation id={card.lowLabelTranslationId} />

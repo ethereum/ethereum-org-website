@@ -59,7 +59,7 @@ Join thousands of node operators in helping to further decentralize Ethereum.
 
 By staking your ETH you can earn rewards whilst helping to secure the Ethereum network.
 
-- [More on staking](/eth2/staking/)
+- [More on staking](/staking/)
 
 ### Support projects {#suport-projects}
 

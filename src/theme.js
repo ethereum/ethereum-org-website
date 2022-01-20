@@ -148,7 +148,7 @@ const baseColors = {
 // TODO replace random variables w/ baseColor variables
 const lightColors = {
   buttonColor: white,
-  eth2Gradient:
+  upgradesGradient:
     "linear-gradient(285.24deg, #F7CBC0 0%, #F4B1AB 29.8%, #8476D9 49.78%, #85ACF9 54.14%, #1C1CE1 61.77%, #000000 69.77%)",
   ghostCardBackground: white,
   ghostCardGhost: white600,
@@ -236,7 +236,7 @@ const lightColors = {
 // TODO replace random variables w/ baseColor variables
 const darkColors = {
   buttonColor: black300,
-  eth2Gradient:
+  upgradesGradient:
     "linear-gradient(285.24deg, #F7CBC0 0%, #FBEAE3 17.81%, #F4B1AB 29.8%, #8476D9 49.78%, #8DB4FF 69.77%);",
   primaryHover: primaryDark400,
   primaryActive: primaryDark200,

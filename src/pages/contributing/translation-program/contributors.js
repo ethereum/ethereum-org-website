@@ -94,7 +94,7 @@ const Contributors = ({ location }) => {
         </p>
         <p>
           <Translation id="page-languages-interested" />{" "}
-          <Link to="/contributing/translation-program/">
+          <Link to="/en/contributing/translation-program/">
             <Translation id="page-languages-learn-more" />
           </Link>
           .
@@ -114,7 +114,7 @@ const Contributors = ({ location }) => {
         </HorizontalUl>
         <p>
           <Translation id="page-languages-interested" />{" "}
-          <Link to="/contributing/translation-program/">
+          <Link to="/en/contributing/translation-program/">
             <Translation id="page-languages-learn-more" />
           </Link>
           .

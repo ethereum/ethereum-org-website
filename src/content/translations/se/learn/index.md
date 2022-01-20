@@ -63,7 +63,7 @@ Ethereum använder för närvarande ett system som kallas ”proof-of-work”. D
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Uppdateras ofta - Ethhub_
 
-I ETH 2.0 kommer Ethereum att flytta till ett annat system som kallas proof-of-stake. [Läs mer om ETH 2.0 nedan](#eth-2-0).
+I ETH 2.0 kommer Ethereum att flytta till ett annat system som kallas proof-of-stake. [Läs mer om ETH 2.0 nedan](#consensus-layer-upgrades).
 
 ## Klienter och noder {#clients-and-nodes}
 
@@ -82,7 +82,7 @@ Läs mer om [Enterprise Ethereum](/se/enterprise/).
 
 Många ansträngningar har gjorts för att göra Ethereum mer "skalbar" genom att förbättra dess hastighet och totala transaktionsgenomströmning. I allmänhet sorteras dessa i ”Skikt 1”- och “Skikt 2” -lösningar.
 
-"Skikt 1" avser förbättring av Ethereums kärnprotokoll. Det primära projektet för att förbättra Ethereums kärnprotokoll är [ETH 2.0](#eth-2-0).
+"Skikt 1" avser förbättring av Ethereums kärnprotokoll. Det primära projektet för att förbättra Ethereums kärnprotokoll är [ETH 2.0](#consensus-layer-upgrades).
 
 "Skikt 2" avser tekniker som är byggda "på toppen" av det grundläggande Ethereum-protokollet, vilket möjliggör större skalbarhet utan att äventyra säkerheten. Det finns också "off-chain" -teknologier som sidokedjor, som möjliggör större skalbarhet genom att göra en annan uppsättning säkerhetslösningar.
 
@@ -106,7 +106,7 @@ Många ansträngningar har gjorts för att göra Ethereum mer "skalbar" genom at
 - [Understanding Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) _District0x_
 - [Learn Plasma - En utbildningsresurs för Plasma-ramverket](https://www.learnplasma.org/en/)
 
-## ETH 2.0 {#eth-2-0}
+## ETH 2.0 {#consensus-layer-upgrades}
 
 ETH 2.0 (även känd som "Serenity") hänvisar till nästa stora uppgradering av Ethereum-kärnprotokollet. Den kombinerar flera förbättringar av Ethereums kärnprotokoll, eller "Skikt 1".
 
@@ -119,7 +119,7 @@ ETH 2.0 (även känd som "Serenity") hänvisar till nästa stora uppgradering av
 - [ETH 2.0 Researchers AMA Part 2](https://docs.ethhub.io/other/ethereum-2.0-ama/#part-2) _15 juli, 2019 - EthHub_
 - [9 Things You Didn't Know About Ethereum 2.0](https://our.status.im/9-things-you-didnt-know-about-ethereum-2-0/) _18 juli, 2019 - Bruno Škvorc_
 
-## ETH 1.x {#eth-1x}
+## ETH 1.x {#execution-layer-upgrades}
 
 ETH 1.x är namnet på en samling uppgraderingar till det befintliga Ethereum-protokollet. Målet är att fortsätta förbättra och underhålla Ethereum medan ETH 2.0 utvecklas och implementeras.
 
