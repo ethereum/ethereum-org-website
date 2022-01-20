@@ -1,7 +1,7 @@
 ---
-title: A guide to translating ethereum.org
+title: Translation program frequently asked questions
 lang: en
-description: How to help with ethereum.org translations
+description: Frequently asked questions about the ethereum.org translation program
 sidebar: true
 ---
 
