@@ -549,6 +549,7 @@ const RunANodePage = ({ data }) => {
           title={<Translation id="page-run-a-node-who-title" />}
           contentPreview={<Translation id="page-run-a-node-who-preview" />}
           background="runNodeGradient2"
+          forceOpen
         >
           <p>
             <Translation id="page-run-a-node-who-copy-1" />

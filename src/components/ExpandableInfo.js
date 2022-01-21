@@ -101,9 +101,10 @@ const ExpandableInfo = ({
   contentPreview,
   children,
   background,
+  forceOpen,
   className,
 }) => {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(forceOpen)
   const expandCollapse = {
     collapsed: {
       height: 0,
@@ -166,14 +167,16 @@ const ExpandableInfo = ({
             <TextPreview>{contentPreview}</TextPreview>
           </Question>
         </TitleContent>
-        <ButtonContainer
-          variants={chevronFlip}
-          animate={isVisible ? "expanded" : "collapsed"}
-          initial={false}
-          onClick={() => setIsVisible(!isVisible)}
-        >
-          <Icon name="chevronDown" size="36" />
-        </ButtonContainer>
+        {!forceOpen && (
+          <ButtonContainer
+            variants={chevronFlip}
+            animate={isVisible ? "expanded" : "collapsed"}
+            initial={false}
+            onClick={() => setIsVisible(!isVisible)}
+          >
+            <Icon name="chevronDown" size="36" />
+          </ButtonContainer>
+        )}
       </Content>
       <motion.div
         variants={expandCollapse}
