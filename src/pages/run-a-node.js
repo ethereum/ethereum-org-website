@@ -8,7 +8,7 @@ import { motion } from "framer-motion"
 
 // Assets
 import dappnode from "../assets/run-a-node/dappnode.svg"
-import phonetap from "../assets/run-a-node/phonetap.svg"
+import dapptap from "../assets/run-a-node/dapptap.svg"
 import terminal from "../assets/run-a-node/terminal.svg"
 import decentralizationGlyph from "../assets/run-a-node/decentralization-glyph.svg"
 import sovereigntyGlyph from "../assets/run-a-node/sovereignty-glyph.svg"
@@ -86,6 +86,19 @@ const TwoColumnContent = styled.div`
     align-items: flex-start;
     margin-left: 0rem;
     margin-right: 0rem;
+  }
+`
+
+const StyledTwoColumnContent = styled(TwoColumnContent)`
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+    flex-direction: row;
+    align-items: center;
+    /* margin-left: 0rem;
+    margin-right: 0rem; */
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
+    flex-direction: column;
+    align-items: center;
   }
 `
 
@@ -217,6 +230,15 @@ const ColumnNarrow = styled.div`
   }
 `
 
+const PlugIcon = styled(ColumnNarrow)`
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    width: fit-content;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
+    width: 100%;
+  }
+`
+
 const Width60 = styled.div`
   flex: 3;
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
@@ -279,7 +301,7 @@ const FullyLoaded = styled(Container)`
   line-height: 200%;
   padding-bottom: 2rem;
   p {
-    font-size: 125%;
+    font-size: 110%;
   }
   code {
     font-weight: 600;
@@ -352,6 +374,8 @@ const AvadoButtonLink = styled(ResponsiveButtonLink)`
   }
 `
 
+const BuildButtonLink = styled(ResponsiveButtonLink)``
+
 const StyledEmoji = styled(Emoji)`
   margin-right: 1rem;
 `
@@ -361,6 +385,19 @@ const ScrollLink = styled(NakedButton)`
   color: ${({ theme }) => theme.colors.primary};
   &.active {
     color: ${({ theme }) => theme.colors.primary};
+  }
+`
+
+const CenteredContainer = styled(Container)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: none;
+  * {
+    text-align: center;
+    line-height: 200%;
   }
 `
 
@@ -589,174 +626,7 @@ const RunANodePage = ({ data }) => {
       <Divider />
 
       <Content id="getting-started">
-        <h2>
-          <Translation id="page-run-a-node-getting-started-hardware-title" />
-        </h2>
-        <p>
-          <Translation id="page-run-a-node-getting-started-hardware-1" />
-        </p>
-        <p>
-          <Translation id="page-run-a-node-getting-started-hardware-2" />
-        </p>
-        <MarginFlex>
-          <Container>
-            <h3>
-              <StyledEmoji text=":building_construction:" size={2} />
-              <Translation id="page-run-a-node-build-your-own-title" />
-            </h3>
-            <BuildFlex>
-              <BuildBox>
-                <h4>
-                  <Translation id="page-run-a-node-build-your-own-minimum-specs" />
-                </h4>
-                <ul>
-                  <li>
-                    <p>
-                      <Translation id="page-run-a-node-build-your-own-min-ram" />
-                    </p>
-                    <p>
-                      <ScrollLink onClick={() => scrollToId("plan-on-staking")}>
-                        <Translation id="page-run-a-node-build-your-own-ram-note-1" />
-                      </ScrollLink>
-                    </p>
-                    <p>
-                      <ScrollLink onClick={() => scrollToId("rasp-pi")}>
-                        <Translation id="page-run-a-node-build-your-own-ram-note-2" />
-                      </ScrollLink>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <Translation id="page-run-a-node-build-your-own-min-ssd" />
-                    </p>
-                    <p>
-                      <small>
-                        <em>
-                          <Translation id="page-run-a-node-build-your-own-ssd-note" />
-                        </em>
-                      </small>
-                    </p>
-                  </li>
-                </ul>
-              </BuildBox>
-
-              <BuildBox>
-                <h4>
-                  <Translation id="page-run-a-node-build-your-own-recommended" />
-                </h4>
-                <ul>
-                  <li>
-                    <Translation id="page-run-a-node-build-your-own-nuc" />
-                    <p>
-                      <small>
-                        <Translation id="page-run-a-node-build-your-own-nuc-small" />
-                      </small>
-                    </p>
-                  </li>
-                  <li>
-                    <Translation id="page-run-a-node-build-your-own-connection" />
-                    <p>
-                      <small>
-                        <Translation id="page-run-a-node-build-your-own-connection-small" />
-                      </small>
-                    </p>
-                  </li>
-                  <li>
-                    <Translation id="page-run-a-node-build-your-own-peripherals" />
-                    <p>
-                      <small>
-                        <Translation id="page-run-a-node-build-your-own-peripherals-small" />
-                      </small>
-                    </p>
-                  </li>
-                </ul>
-              </BuildBox>
-            </BuildFlex>
-          </Container>
-
-          <FullyLoaded>
-            <div>
-              <h3>
-                <StyledEmoji text=":shopping_cart:" size={2} />
-                <Translation id="page-run-a-node-buy-fully-loaded-title" />
-              </h3>
-              <p>
-                <Translation id="page-run-a-node-buy-fully-loaded-description" />
-              </p>
-              <ul>
-                <li>
-                  <Translation id="page-run-a-node-buy-fully-loaded-note-1" />
-                </li>
-                <li>
-                  <Translation id="page-run-a-node-buy-fully-loaded-note-2" />
-                </li>
-                <li>
-                  <code>
-                    <Translation id="page-run-a-node-buy-fully-loaded-note-3" />
-                  </code>
-                </li>
-              </ul>
-            </div>
-            <ScrollButtonSecondary
-              onClick={() => scrollToId("choose-your-adventure")}
-            >
-              <Translation id="page-run-a-node-shop" />
-            </ScrollButtonSecondary>
-          </FullyLoaded>
-        </MarginFlex>
-
-        <h3 id="plan-on-staking">
-          <StyledEmoji text=":cut_of_meat:" size={2} />
-          <Translation id="page-run-a-node-staking-plans-title" />
-        </h3>
-        <p>
-          <Translation id="page-run-a-node-staking-plans-description" />
-        </p>
-        <p>
-          <Link to="https://cpubenchmark.net">cpubenchmark.net</Link>
-        </p>
-        <h3 id="rasp-pi">
-          <StyledEmoji text=":pie:" size={2} />
-          <Translation id="page-run-a-node-rasp-pi-title" />
-        </h3>
-        <p>
-          <Translation id="page-run-a-node-rasp-pi-description" />
-        </p>
-        <ul>
-          <li>
-            <Link to="https://docs.dappnode.io/get-started/installation/arm-hardware/installation">
-              <Translation id="page-run-a-node-rasp-pi-note-1-link" />
-            </Link>{" "}
-            -{" "}
-            <i>
-              <Translation id="page-run-a-node-rasp-pi-note-1-description" />
-            </i>
-          </li>
-          <li>
-            <Link to="https://ethereum-on-arm-documentation.readthedocs.io/en/latest">
-              <Translation id="page-run-a-node-rasp-pi-note-2-link" />
-            </Link>{" "}
-            -{" "}
-            <i>
-              <Translation id="page-run-a-node-rasp-pi-note-2-description" />
-            </i>
-          </li>
-          <li>
-            <Link to="/developers/tutorials/run-node-raspberry-pi">
-              <Translation id="page-run-a-node-rasp-pi-note-3-link" />
-            </Link>{" "}
-            -{" "}
-            <i>
-              <Translation id="page-run-a-node-rasp-pi-note-3-description" />
-            </i>
-          </li>
-        </ul>
-      </Content>
-
-      <Content>
-        <h2>
-          <Translation id="page-run-a-node-getting-started-software-title" />
-        </h2>
+        <h2>Getting started</h2>
         <GappedContent>
           <SoftwareHighlight backgroundColor="homeBoxTurquoise">
             <ColumnFill>
@@ -787,24 +657,9 @@ const RunANodePage = ({ data }) => {
           <SoftwareHighlight backgroundColor="homeBoxOrange">
             <ColumnFill>
               <p>
-                <Translation id="page-run-a-node-getting-started-software-section-2" />
-              </p>
-            </ColumnFill>
-            <ColumnNarrow>
-              <img
-                src={phonetap}
-                alt={translateMessageId(
-                  "page-run-a-node-glyph-alt-phone",
-                  intl
-                )}
-              />
-            </ColumnNarrow>
-          </SoftwareHighlight>
-
-          <SoftwareHighlight backgroundColor="homeBoxPurple">
-            <ColumnFill>
-              <p>
-                <Translation id="page-run-a-node-getting-started-software-section-3" />
+                Now we have DAppNode, which is{" "}
+                <b>free and open-source software</b> that gives users an{" "}
+                <b>app-like experience</b> while managing their node.
               </p>
             </ColumnFill>
             <ColumnNarrow>
@@ -817,7 +672,179 @@ const RunANodePage = ({ data }) => {
               />
             </ColumnNarrow>
           </SoftwareHighlight>
+
+          <SoftwareHighlight backgroundColor="homeBoxPurple">
+            <ColumnFill>
+              <p>In just a few taps you can have your node up and running.</p>
+              <p>
+                DAppNode makes it easy for users to run full nodes, as well as
+                dapps and other P2P networks, with no need to touch the
+                command-line. This makes it easier for everyone to participate
+                and create a more decentralized network.
+              </p>
+            </ColumnFill>
+            <ColumnNarrow>
+              <img
+                src={dapptap}
+                alt={translateMessageId(
+                  "page-run-a-node-glyph-alt-phone",
+                  intl
+                )}
+              />
+            </ColumnNarrow>
+          </SoftwareHighlight>
         </GappedContent>
+      </Content>
+
+      <Content>
+        <h2>Choose your adventure</h2>
+        <p>
+          <Translation id="page-run-a-node-getting-started-hardware-1" />
+        </p>
+        <p>
+          <Translation id="page-run-a-node-getting-started-hardware-2" />
+        </p>
+        <MarginFlex>
+          <FullyLoaded>
+            <div>
+              <h3>
+                <StyledEmoji text=":shopping_cart:" size={2} />
+                <Translation id="page-run-a-node-buy-fully-loaded-title" />
+              </h3>
+              <p>
+                <Translation id="page-run-a-node-buy-fully-loaded-description" />
+              </p>
+              <ul>
+                <li>
+                  <Translation id="page-run-a-node-buy-fully-loaded-note-1" />
+                </li>
+                <li>
+                  <Translation id="page-run-a-node-buy-fully-loaded-note-2" />
+                </li>
+                <li>
+                  <code>
+                    <Translation id="page-run-a-node-buy-fully-loaded-note-3" />
+                  </code>
+                </li>
+              </ul>
+              <StyledTwoColumnContent>
+                <PlugIcon>
+                  <img
+                    src={plugAndPlayGlyph}
+                    alt={translateMessageId(
+                      "page-run-a-node-glyph-alt-pnp",
+                      intl
+                    )}
+                  />
+                </PlugIcon>
+                <ColumnFill>
+                  <Translation id="page-run-a-node-plug-and-play-1" />
+                </ColumnFill>
+              </StyledTwoColumnContent>
+            </div>
+            <ButtonContainer>
+              <DappNodeButtonLink to="https://shop.dappnode.io/">
+                <Translation id="page-run-a-node-shop-dappnode" />
+              </DappNodeButtonLink>
+              <AvadoButtonLink to="https://ava.do/">
+                <Translation id="page-run-a-node-shop-avado" />
+              </AvadoButtonLink>
+            </ButtonContainer>
+          </FullyLoaded>
+
+          <CenteredContainer>
+            <h3>
+              <StyledEmoji text=":building_construction:" size={2} />
+              Build your own
+            </h3>
+            <p>A good (and cheaper) option for slightly more technical users</p>
+            <ScrollButtonSecondary
+              onClick={() => scrollToId("build-your-own")}
+              isSecondary
+            >
+              Start building
+            </ScrollButtonSecondary>
+          </CenteredContainer>
+        </MarginFlex>
+      </Content>
+      <Content id="build-your-own">
+        <h2>Build your own</h2>
+        <Container>
+          <BuildFlex>
+            <BuildBox>
+              <h4>
+                <Translation id="page-run-a-node-build-your-own-minimum-specs" />
+              </h4>
+              <ul>
+                <li>
+                  <p>
+                    <Translation id="page-run-a-node-build-your-own-min-ram" />
+                  </p>
+                  <p>
+                    <ScrollLink onClick={() => scrollToId("plan-on-staking")}>
+                      <Translation id="page-run-a-node-build-your-own-ram-note-1" />
+                    </ScrollLink>
+                  </p>
+                  <p>
+                    <ScrollLink onClick={() => scrollToId("rasp-pi")}>
+                      <Translation id="page-run-a-node-build-your-own-ram-note-2" />
+                    </ScrollLink>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <Translation id="page-run-a-node-build-your-own-min-ssd" />
+                  </p>
+                  <p>
+                    <small>
+                      <em>
+                        <Translation id="page-run-a-node-build-your-own-ssd-note" />
+                      </em>
+                    </small>
+                  </p>
+                </li>
+              </ul>
+            </BuildBox>
+
+            <BuildBox>
+              <h4>
+                <Translation id="page-run-a-node-build-your-own-recommended" />
+              </h4>
+              <ul>
+                <li>
+                  <Translation id="page-run-a-node-build-your-own-nuc" />
+                  <p>
+                    <small>
+                      <Translation id="page-run-a-node-build-your-own-nuc-small" />
+                    </small>
+                  </p>
+                </li>
+                <li>
+                  <Translation id="page-run-a-node-build-your-own-connection" />
+                  <p>
+                    <small>
+                      <Translation id="page-run-a-node-build-your-own-connection-small" />
+                    </small>
+                  </p>
+                </li>
+                <li>
+                  <Translation id="page-run-a-node-build-your-own-peripherals" />
+                  <p>
+                    <small>
+                      <Translation id="page-run-a-node-build-your-own-peripherals-small" />
+                    </small>
+                  </p>
+                </li>
+              </ul>
+            </BuildBox>
+          </BuildFlex>
+        </Container>
+      </Content>
+
+      <Content>
+        <h2>
+          <Translation id="page-run-a-node-getting-started-software-title" />
+        </h2>
       </Content>
 
       <Content id="choose-your-adventure">
@@ -838,14 +865,6 @@ const RunANodePage = ({ data }) => {
             <p>
               <Translation id="page-run-a-node-plug-and-play-1" />
             </p>
-            <ButtonContainer>
-              <DappNodeButtonLink to="https://shop.dappnode.io/">
-                <Translation id="page-run-a-node-shop-dappnode" />
-              </DappNodeButtonLink>
-              <AvadoButtonLink to="https://ava.do/">
-                <Translation id="page-run-a-node-shop-avado" />
-              </AvadoButtonLink>
-            </ButtonContainer>
           </AdventureContainer>
 
           <AdventureContainer>
@@ -948,7 +967,54 @@ const RunANodePage = ({ data }) => {
           </ButtonContainer>
         </Column>
       </StakingCalloutContainer>
-
+      <Content>
+        <h3 id="plan-on-staking">
+          <StyledEmoji text=":cut_of_meat:" size={2} />
+          <Translation id="page-run-a-node-staking-plans-title" />
+        </h3>
+        <p>
+          <Translation id="page-run-a-node-staking-plans-description" />
+        </p>
+        <p>
+          <Link to="https://cpubenchmark.net">cpubenchmark.net</Link>
+        </p>
+        <h3 id="rasp-pi">
+          <StyledEmoji text=":pie:" size={2} />
+          <Translation id="page-run-a-node-rasp-pi-title" />
+        </h3>
+        <p>
+          <Translation id="page-run-a-node-rasp-pi-description" />
+        </p>
+        <ul>
+          <li>
+            <Link to="https://docs.dappnode.io/get-started/installation/arm-hardware/installation">
+              <Translation id="page-run-a-node-rasp-pi-note-1-link" />
+            </Link>{" "}
+            -{" "}
+            <i>
+              <Translation id="page-run-a-node-rasp-pi-note-1-description" />
+            </i>
+          </li>
+          <li>
+            <Link to="https://ethereum-on-arm-documentation.readthedocs.io/en/latest">
+              <Translation id="page-run-a-node-rasp-pi-note-2-link" />
+            </Link>{" "}
+            -{" "}
+            <i>
+              <Translation id="page-run-a-node-rasp-pi-note-2-description" />
+            </i>
+          </li>
+          <li>
+            <Link to="/developers/tutorials/run-node-raspberry-pi">
+              <Translation id="page-run-a-node-rasp-pi-note-3-link" />
+            </Link>{" "}
+            -{" "}
+            <i>
+              <Translation id="page-run-a-node-rasp-pi-note-3-description" />
+            </i>
+          </li>
+        </ul>
+      </Content>
       <StyledFeedbackCard
         prompt={translateMessageId("page-run-a-node-feedback-prompt", intl)}
       />
