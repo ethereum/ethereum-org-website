@@ -430,11 +430,11 @@ const RunANodePage = ({ data }) => {
     alt: <Translation id="page-run-a-node-hero-alt" />,
     buttons: [
       {
-        content: <Translation id="page-run-a-node-button-why-run-a-node" />,
-        pathId: "why-run-a-node",
+        content: "Learn more",
+        pathId: "what-is-a-node",
       },
       {
-        content: <Translation id="page-run-a-node-button-get-started" />,
+        content: "Let's dive in!",
         pathId: "getting-started",
         isSecondary: "isSecondary",
       },
@@ -512,7 +512,7 @@ const RunANodePage = ({ data }) => {
         <Hero content={heroContent} isReverse />
       </HeroContainer>
 
-      <Content>
+      <Content id="what-is-a-node">
         <TwoColumnContent>
           <Width60>
             <h2>
@@ -565,7 +565,7 @@ const RunANodePage = ({ data }) => {
         </StyledExpandableInfo>
       </FlexContent>
 
-      <Content id="why-run-a-node">
+      <Content>
         <h2>
           <Translation id="page-run-a-node-why-title" />
         </h2>
