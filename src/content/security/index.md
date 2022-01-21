@@ -17,7 +17,7 @@ With interest in cryptocurrencies growing, learning best practices when using cr
 
 [Over 80% of account hacks are a result of weak or stolen passwords](https://cloudnine.com/ediscoverydaily/electronic-discovery/80-percent-hacking-related-breaches-related-password-issues-cybersecurity-trends/). A long combination of characters, numbers and symbols is best to keep your accounts secure.
 
-A common mistake individuals make is using a combination of two to three common, related dictionary words. Passwords like this are insecure because they are prone to a simple hacking technique known as a [dictionary attack](https://en.wikipedia.org/wiki/Dictionary_attack).
+A common mistake individuals make is using a combination of two to three common, related dictionary words. Passwords like this are insecure because they are prone to a simple hacking technique known as a [dictionary attack](https://wikipedia.org/wiki/Dictionary_attack).
 
 ```md
 Example of a weak password: CuteFluffyKittens!
@@ -25,7 +25,7 @@ Example of a weak password: CuteFluffyKittens!
 Example of a strong password: ymv\*azu.EAC8eyp8umf
 ```
 
-Another common mistake is using passwords that can be easily guessed or found out through [social engineering](<https://en.wikipedia.org/wiki/Social_engineering_(security)>). Including your mother's maiden name, the names of your children or pets, or dates of birth in your password is not secure and will increase the risk of your password getting hacked.
+Another common mistake is using passwords that can be easily guessed or found out through [social engineering](<https://wikipedia.org/wiki/Social_engineering_(security)>). Including your mother's maiden name, the names of your children or pets, or dates of birth in your password is not secure and will increase the risk of your password getting hacked.
 
 #### Good password practices: {#good-password-practices}
 
@@ -89,9 +89,7 @@ For those who want to take the next step in 2FA, consider using a security key. 
 
 Watch more on the 2FA:
 
-<figure>
-  <iframe width="100%" height="315px" src="https://www.youtube.com/embed/m8jlnZuV1i4?start=3479&end=3875" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
+<YouTube id="m8jlnZuV1i4" start="3479" />
 
 ### Uninstall browser extensions {#uninstall-browser-extensions}
 
@@ -113,9 +111,13 @@ Browser extensions like Chrome extensions or Add-ons for Firefox can augment use
 
 One of the biggest reasons people get scammed in crypto generally is a lack of understanding. For example, if you don't understand that the Ethereum network is decentralized and owned by no one, then it's easy to fall prey to someone pretending to be a customer service agent that promises to return your lost ETH in exchange for your private keys. Educating yourself on how Ethereum works is a worthwhile investment.
 
-<DocLink to="/what-is-ethereum/" title="What is Ethereum?" />
+<DocLink to="/what-is-ethereum/">
+  What is Ethereum?
+</DocLink>
 
-<DocLink to="/eth/" title="What is ether?" />
+<DocLink to="/eth/">
+  What is ether?
+</DocLink>
 <Divider />
 
 ## Wallet security {#wallet-security}
@@ -126,7 +128,9 @@ One of the biggest reasons people get scammed in crypto generally is a lack of u
 
 The private key to your wallet acts as a password to your Ethereum wallet. It is the only thing stopping someone who knows your wallet address from draining your account of all of its assets!
 
-<DocLink to="/wallets/" title="What's an Ethereum wallet?" />
+<DocLink to="/wallets/">
+  What's an Ethereum wallet?
+</DocLink>
 
 #### Don't take screenshots of your seed phrases/private keys {#screenshot-private-keys}
 
@@ -248,6 +252,18 @@ Some things to remember:
 
 [Man loses $200k in mining pool scam](https://www.reddit.com/r/CoinBase/comments/r0qe0e/scam_or_possible_incredible_payout/)
 
+### 'Eth2' token scam {#eth2-token-scam}
+
+With [the merge](/upgrades/merge/) coming in 2022, scammers have taken advantage of the confusion around the term 'Eth2' to try and get users to redeem their ETH for an 'ETH2' token. There is no 'ETH2' or any other new token introduced with the merge. The ETH that you own today will continue to be the same ETH after the merge, and there is no need to do any swaps of your ETH for the merge.
+
+Scammers may appear in the form of "support" telling you if you deposit your ETH you will receive back 'ETH2'. There is no [official Ethereum support](/community/support/), and there is no new token. Never share your wallet seed phrase with anyone.
+
+### Airdrop scams {#airdrop-scams}
+
+Airdrop scams involve a scam project airdropping an asset (NFT, token) into your wallet and sending you to a scam website to claim the airdropped asset. You will get prompted to sign in with your Ethereum wallet and "approve" a transaction when attempting to claim. This transaction compromises your account by sending your public and private keys to the scammer. An alternative form of this scam may have you confirm a transaction that sends funds to the scammer's account.
+
+[More on airdrop scams](https://www.youtube.com/watch?v=LLL_nQp1lGk)
+
 <Divider />
 
 ## Further reading {#further-reading}
@@ -270,17 +286,3 @@ Some things to remember:
 
 - [Staying Safe: Common Scams](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [Avoiding Scams](https://bitcoin.org/en/scams) _Bitcoin.org_
-
-<!-- ## Ideas scratchpad
-
-A couple good suggestions from there that perhaps we should add:
-
-- Don't use a clipboard manager
-- Bookmark Your Crypto Sites / Do Not Trust Random URLs / Always Verify that the Site You Landed on Is Legit
-
-- Add pricing info for password managers
-
-For scams
-
-- Add details about Youtube hacks
-- Add rugpulls -->

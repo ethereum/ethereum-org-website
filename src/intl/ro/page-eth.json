@@ -81,5 +81,17 @@
   "page-eth-where-to-buy": "De unde poți să obții ETH",
   "page-eth-where-to-buy-desc": "Poți să obții ETH printr-un schimb sau dintr-un portofel, dar diferite țări au politici diferite. Verifică pentru a vedea serviciile care îți permit să cumperi ETH.",
   "page-eth-yours": "Este cu adevărat al tău",
-  "page-eth-yours-desc": "ETH îți permite să fii propria ta bancă. Poți să-ți controlezi propriile fonduri cu portofelul, ca dovadă a proprietății – nu sunt necesare terțe părți."
+  "page-eth-yours-desc": "ETH îți permite să fii propria ta bancă. Poți să-ți controlezi propriile fonduri cu portofelul, ca dovadă a proprietății – nu sunt necesare terțe părți.",
+  "page-eth-more-on-tokens": "Mai multe despre token-uri și utilitatea lor",
+  "page-eth-button-buy-eth": "Obține ETH",
+  "page-eth-tokens-stablecoins": "Stablecoin-uri",
+  "page-eth-tokens-defi": "Finanțe descentralizate (DeFi)",
+  "page-eth-tokens-nft": "Token-uri non-fungibile (NFT-uri)",
+  "page-eth-tokens-dao": "Organizații autonome descentralizate (DAO)",
+  "page-eth-tokens-stablecoins-description": "Mai multe despre cele mai puțin volatile token-uri Ethereum.",
+  "page-eth-tokens-defi-description": "Sistemul financiar al token-urilor Ethereum.",
+  "page-eth-tokens-nft-description": "Token-uri care reflectă proprietatea obiectelor pe Ethereum.",
+  "page-eth-tokens-dao-description": "Comunități pe Internet guvernate adesea de către deținătorii de token-uri.",
+  "page-eth-whats-defi": "Mai multe despre DeFi",
+  "page-eth-whats-defi-description": "DeFi este sistemul financiar descentralizat construit pe Ethereum. Acest rezumat explică la ce te poate ajuta."
 }

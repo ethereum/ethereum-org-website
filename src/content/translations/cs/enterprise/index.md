@@ -70,8 +70,8 @@ Veřejné a soukromé Ethereum sítě mohou v závislosti na tom, kdo je použí
 
 ### Bezpečnost {#security}
 
-- [Clef](https://geth.ethereum.org/clef/Overview) _používaný pro podepisování transakcí a data je zamýšlen jako náhrada pro správu účtů v Geth_
-- [EthSigner](https://gitter.im/PegaSysEng/EthSigner) _Aplikace pro podepisování transakcí pro použití s poskytovateli web3_
+- [Clef](https://geth.ethereum.org/docs/clef/tutorial) _používaný pro podepisování transakcí a data je zamýšlen jako náhrada pro správu účtů v Geth_
+- [EthSigner](https://github.com/ConsenSys/ethsigner) _Aplikace pro podepisování transakcí pro použití s poskytovateli web3_
 
 ### Nástroje {#tooling}
 

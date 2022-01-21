@@ -9,8 +9,6 @@ Una idea errónea común es que los desarrolladores deben escribir contratos int
 
 Ethereum y su comunidad abrazan el código abierto. Puedes encontrar proyectos comunitarios (implementaciones de clientes, API, frameworks de desarrollo y herramientas de prueba) en una amplia variedad de idiomas.
 
-<!-- Often certain languages have an certain advantage depending on the use case -->
-
 ## Escoge tu lenguaje {#data}
 
 Selecciona el idioma que desees para encontrar proyectos, recursos y comunidades virtuales:

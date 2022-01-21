@@ -36,8 +36,6 @@ Web3 ma teraz pewne ograniczenia:
 
 ## Centralizacja a decentralizacja {#centralization-vs-decentralization}
 
-<!--Content below provided by Brian Gu-->
-
 W tabeli poniżej wymieniono pewne zalety i wady scentralizowanych i zdecentralizowanych sieci cyfrowych.
 
 | Systemy scentralizowane                                                                                                                                                                                                                              | Systemy zdecentralizowane                                                                                                                                                                                                                                            |

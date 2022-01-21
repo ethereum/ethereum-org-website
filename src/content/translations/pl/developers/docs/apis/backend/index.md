@@ -21,8 +21,6 @@ Biblioteki te eliminują znaczną złożoność interakcji bezpośrednio z węz�
 
 ## Dostępne biblioteki {#available-libraries}
 
-<!-- TODO separate APIs-as-a-service vs. connect your own -->
-
 **Alchemia -** **_Platforma Rozwoju Ethereum._**
 
 - [alchemyapi.io](https://alchemyapi.io)

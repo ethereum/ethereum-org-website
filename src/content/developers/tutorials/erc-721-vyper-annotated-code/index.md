@@ -40,7 +40,7 @@ implements: ERC721
 ```
 
 The ERC-721 interface is built into the Vyper language.
-[You can see the code definition here](https://github.com/vyperlang/vyper/blob/master/vyper/interfaces/ERC721.py).
+[You can see the code definition here](https://github.com/vyperlang/vyper/blob/master/vyper/builtin_interfaces/ERC721.py).
 The interface definition is written in Python, rather than Vyper, because interfaces are used not only within the
 blockchain, but also when sending the blockchain a transaction from an external client, which may be written in
 Python.
@@ -278,7 +278,7 @@ specify the circumstances in which a function can be called.
 def supportsInterface(_interfaceID: bytes32) -> bool:
 ```
 
-In contrast to Python, Vyper is a [static typed language](https://en.wikipedia.org/wiki/Type_system#Static_type_checking).
+In contrast to Python, Vyper is a [static typed language](https://wikipedia.org/wiki/Type_system#Static_type_checking).
 You can't declare a variable, or a function parameter, without identifying the [data
 type](https://vyper.readthedocs.io/en/latest/types.html). In this case the input parameter is `bytes32`, a 256-bit value
 (256 bits is the native word size of the [Ethereum Virtual Machine](/developers/docs/evm/)). The output is a boolean

@@ -13,9 +13,13 @@ Are you looking for the official Ethereum support? The first thing you should kn
 
 Understanding the decentralized nature of Ethereum is vital because anyone claiming to be official support for Ethereum is probably trying to scam you! The best protection against scammers is educating yourself and taking security seriously.
 
-<DocLink to="/security/" title="Ethereum security and scam prevention" />
+<DocLink to="/security/">
+  Ethereum security and scam prevention
+</DocLink>
 
-<DocLink to="/learn/" title="Learn Ethereum fundamentals" />
+<DocLink to="/learn/">
+  Learn Ethereum fundamentals
+</DocLink>
 
 Despite the lack of official support, many groups, communities, and projects across the Ethereum ecosystem are happy to help.
 
@@ -47,7 +51,7 @@ Does your question relate to a particular tool, project, or library? Most projec
 
 Here are some popular examples:
 
-- [Solidity](https://gitter.im/ethereum/solidity/) <!-- What is the best place to send people to here? -->
+- [Solidity](https://gitter.im/ethereum/solidity/)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
@@ -67,7 +71,7 @@ Most of the teams building Ethereum clients also have dedicated, public-facing, 
 - [Geth](https://discord.gg/FqDzupGyYf)
 - [Nethermind](https://discord.gg/YJx3pm8z5C)
 - [Besu](https://discord.gg/p8djYngzKN)
-- [Ergion](https://github.com/ledgerwatch/erigon/issues) <!-- Does Erigon have a public facing channel? -->
+- [Ergion](https://github.com/ledgerwatch/erigon/issues)
 
 ### Consensus clients {#consensus-clients}
 
@@ -101,4 +105,4 @@ Transactions on Ethereum can sometimes get stuck if you have submitted a lower t
 
 #### How do I mine Ethereum? {#mining-ethereum}
 
-We do not recommend buying mining equipment if you are not already mining Ethereum. In ~Q2 2022, [the merge](/eth2/merge/) will happen, switching Ethereum from proof-of-work to proof-of-stake. This change means mining Ethereum will no longer be possible. If you are still interested in mining Ethereum, you can seek help from mining communities, such as [/r/EtherMining](https://www.reddit.com/r/EtherMining/).
+We do not recommend buying mining equipment if you are not already mining Ethereum. In ~Q2 2022, [the merge](/upgrades/merge/) will happen, switching Ethereum from proof-of-work to proof-of-stake. This change means mining Ethereum will no longer be possible. If you are still interested in mining Ethereum, you can seek help from mining communities, such as [/r/EtherMining](https://www.reddit.com/r/EtherMining/).

@@ -48,7 +48,7 @@ Optimistic rollups sit in parallel to the main Ethereum chain on layer 2. They c
 
 With Optimistic rollups, transactions are written to the main Ethereum chain as `calldata`, optimising them further by reducing the gas cost.
 
-As computation is the slow, expensive part of using Ethereum, Optimistic rollups can offer up to 10-100x improvements in scalability dependent on the transaction. This number will increase even more with the introduction of [shard chains](/eth2/shard-chains) as more data will be available if a transaction is disputed.
+As computation is the slow, expensive part of using Ethereum, Optimistic rollups can offer up to 10-100x improvements in scalability dependent on the transaction. This number will increase even more with the introduction of [shard chains](/upgrades/shard-chains) as more data will be available if a transaction is disputed.
 
 #### Disputing transactions {#disputing-transactions}
 
@@ -73,9 +73,7 @@ So you can see the incentives: participants get penalized for conducting fraud a
 
 Watch Finematics explain optimistic rollups:
 
-<figure>
-  <iframe width="100%" height="315px" src="https://www.youtube.com/embed/7pWxCklcNsU?start=263&end=406" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
+<YouTube id="7pWxCklcNsU" start="263" />
 
 #### Use Optimistic rollups {#use-optimistic-rollups}
 
@@ -109,9 +107,7 @@ Being on layer 2, ZK-rollups can be optimised to reduce transaction size further
 
 Watch Finematics explain ZK-rollups:
 
-<figure>
-  <iframe width="100%" height="315px" src="https://www.youtube.com/embed/7pWxCklcNsU?start=406&end=568" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
+<YouTube id="7pWxCklcNsU" start="406" />
 
 #### Use ZK-rollups {#use-zk-rollups}
 
@@ -130,7 +126,6 @@ Hybrid solutions exist that combine the best parts of multiple layer 2 technolog
 
 ### Use hybrid solutions {#use-hybrid-solutions}
 
-- [Offchain Labs Arbitrum SCSC](https://offchainlabs.com/arbitrum.pdf)
 - [Celer](https://www.celer.network/)
 
 ## Further reading {#further-reading}

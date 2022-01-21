@@ -26,7 +26,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/id/learn/) 
 
 - [Memilih Client Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Client Ethereum untuk Rust](https://wiki.parity.io/Setup)
-- [Mengirimkan transaksi Ethereum menggunakan Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [Mengirimkan transaksi Ethereum menggunakan Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Sebuah Perkenalan mengenai Smart Contract dengan Client Ethereum Parity](https://wiki.parity.io/Smart-Contracts)
 - [Mengatur SDK OASIS development environment](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Tutorial detail mengenai cara menulis smart contract di Rust WebAssembly untuk Kovan](https://github.com/paritytech/pwasm-tutorial)
@@ -38,7 +38,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/id/learn/) 
 
 ## Artikel Tingkat Lanjut {#advanced-use-patterns}
 
-- [pwasm_ethereum - Library externs untuk berinteraksi dengan jaringan seperti Ethereum](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [pwasm_ethereum - Library externs untuk berinteraksi dengan jaringan seperti Ethereum](https://github.com/openethereum/pwasm-ethereum)
 - [Bangun Dapp Obrolan yang Terdesentralisi Menggunakan JavaScript dan Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Bangun Dapp To-do List menggunakan Vue.js & Rust ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Memulai dengan Enigma - Dalam Bahasa Pemrograman Rust](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)

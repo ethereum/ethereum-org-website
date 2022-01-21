@@ -141,13 +141,6 @@ const P = styled.p`
   margin-bottom: 0rem;
 `
 
-const InfoTitle = styled(StepboxTitle)`
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  text-align: left;
-  margin-top: 0rem;
-`
 // Todo create component
 const StepBoxContainer = styled.div`
   width: 100%;
@@ -488,7 +481,7 @@ const StablecoinAccordion = () => {
         intl
       ),
       image: getImage(data.eth),
-      link: "/eth2/get-involved/bug-bounty/",
+      link: "/upgrades/get-involved/bug-bounty/",
       description: translateMessageId(
         "page-stablecoins-accordion-earn-project-3-description",
         intl

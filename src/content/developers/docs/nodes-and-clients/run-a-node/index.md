@@ -22,7 +22,7 @@ See all the available [Mainnet clients](/developers/docs/nodes-and-clients/#adva
 Client implementations enable different sync modes and various other options. [Sync modes](/developers/docs/nodes-and-clients/#sync-modes) represent different methods of downloading and validating blockchain data. Before starting the node, you should decide what network and sync mode to use. The most important things to consider is the disk space and sync time client will need.
 
 All features and options can be found in the client's documentation. Various client configurations can be set by executing the client with the corresponding flags. You can get more information on flags from [EthHub](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/#client-settings) or the client documentation.
-For testing purposes, you might prefer running a client on one of testnet networks. [See overview of supported networks](/developers/docs/nodes-and-clients/#clients).
+For testing purposes, you might prefer running a client on one of testnet networks. [See overview of supported networks](/developers/docs/nodes-and-clients/#execution-clients).
 
 ### Environment and hardware {#environment-and-hardware}
 
@@ -59,7 +59,7 @@ Check the minimum and recommended [disk space requirements for each client and s
 Generally, modest computing power should be enough. The problem is usually drive speed. During initial sync, Ethereum clients perform a lot of read/write operations. Therefore SSD is strongly recommended. A client might not even [be able to sync current state on HDD](https://github.com/ethereum/go-ethereum/issues/16796#issuecomment-391649278) and get stuck a few blocks behind Mainnet.
 You can run most of the clients on a [single board computer with ARM](/developers/docs/nodes-and-clients/#ethereum-on-a-single-board-computer/). You can also use the [Ethbian](https://ethbian.org/index.html) operating system for Raspberry Pi 4. This lets you [[run a client by flashing the SD card](/developers/tutorials/run-node-raspberry-pi/).
 Based on your software and the hardware choices, the initial synchronization time and storage requirements may vary. Be sure to [check sync times and storage requirements](/developers/docs/nodes-and-clients/#recommended-specifications).
-Also make sure your internet connection is not limited by a [bandwidth cap](https://en.wikipedia.org/wiki/Data_cap). It's recommended to use an unmetered connection since initial sync and data broadcasted to the network could exceed your limit.
+Also make sure your internet connection is not limited by a [bandwidth cap](https://wikipedia.org/wiki/Data_cap). It's recommended to use an unmetered connection since initial sync and data broadcasted to the network could exceed your limit.
 
 #### Operating system {#operating-system}
 
@@ -69,7 +69,7 @@ All clients support major operating systems - Linux, MacOS, Windows. This means 
 
 ### Getting the client software {#getting-the-client}
 
-First, download your preferred [client software](/developers/docs/nodes-and-clients/#clients)
+First, download your preferred [client software](/developers/docs/nodes-and-clients/#execution-clients)
 
 You can simply download an executable application or installation package which suits your operating system and architecture. Always verify signatures and checksums of downloaded packages. Some clients also offer repositories for easier installation and updates.
 If you prefer, you can build from source. All of the clients are open source so you can build them from source code with the proper compiler.
@@ -140,7 +140,7 @@ Your node doesn't have to be online nonstop but you should keep it online as muc
 - Forced shut downs can damage the database.
 - Your client will go out of sync with the network and will need to resync when you restart it.
 
-_This doesn't apply on Eth2 validator nodes._ Taking your node offline will affect all services dependent on it. If you are running a node for _staking_ purposes you should try to minimize downtime as much as possible.
+_This doesn't apply on consensus layer validator nodes._ Taking your node offline will affect all services dependent on it. If you are running a node for _staking_ purposes you should try to minimize downtime as much as possible.
 
 #### Creating client service {#creating-client-service}
 
@@ -152,7 +152,7 @@ You need to keep your client software up-to-date with the latest security patche
 
 #### Running additional services {#running-additional-services}
 
-Running your own node lets you use services that require direct access to Ethereum client RPC. These are services built on top of Ethereum like [layer 2 solutions](/developers/docs/scaling/layer-2-rollups), [Eth2 clients](/eth2/get-involved/#clients), and other Ethereum infrastructure.
+Running your own node lets you use services that require direct access to Ethereum client RPC. These are services built on top of Ethereum like [layer 2 solutions](/developers/docs/scaling/layer-2-rollups), [consensus clients](/upgrades/get-involved/#clients), and other Ethereum infrastructure.
 
 #### Monitoring the node {#monitoring-the-node}
 

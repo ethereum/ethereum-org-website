@@ -15,9 +15,6 @@ Inteligentne kontrakty są rodzajem [konta Ethereum](/developers/docs/accounts/)
 
 Upewnij się, że zapoznałeś się z [kontami](/developers/docs/accounts/), [transakcjami](/developers/docs/transactions/) i
 
-<!-- TODO simpler example... scheduling payments in Ethereum is actually difficult -->
-<!-- TODO show an example smart contract, e.g. an implementation of a vending machine -->
-
 ## Cyfrowy automat do sprzedaży {#a-digital-vending-machine}
 
 Być może najlepszą metaforą dla inteligentnego kontraktu jest automat do sprzedaży opisany przez Nicka Szabo. Przy odpowiednich nakładach gwarantowany jest określony wynik.
@@ -102,7 +99,7 @@ Istnieją sposoby na obejście tego za pomocą [wyroczni](/developers/docs/oracl
 
 **DappSys –** **<em x-id="4">bezpieczne, proste, elastyczne elementy konstrukcyjne do inteligentnych kontraktów.</em>**
 
-- [dapp.tools/dappsys](https://dapp.tools/dappsys/)
+- [Dappsys](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 ## Dalsza lektura {#further-reading}

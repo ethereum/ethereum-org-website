@@ -27,9 +27,9 @@ Te zmiany reguł mogą spowodować tymczasowy podział w sieci. Nowe bloki możn
 
 ### (_W toku_) Altair {#altair}
 
-Uaktualnienie Altair jest pierwszym planowanym uaktualnieniem [łańcucha śledzącego](/eth2/beacon-chain). Jego wdrożenie ma nastąpić w 2021 r. Wprowadzi ono wsparcie dla „komitetów synchronizacji”, które mogą umożliwiać korzystanie z lekkich klientów, a także podniesie kary za brak aktywności i cięcia do ich pełnych wartości.
+Uaktualnienie Altair jest pierwszym planowanym uaktualnieniem [łańcucha śledzącego](/upgrades/beacon-chain). Jego wdrożenie ma nastąpić w 2021 r. Wprowadzi ono wsparcie dla „komitetów synchronizacji”, które mogą umożliwiać korzystanie z lekkich klientów, a także podniesie kary za brak aktywności i cięcia do ich pełnych wartości.
 
-- [Przeczytaj specyfikację uaktualnienia Altair](https://github.com/ethereum/eth2.0-specs/tree/dev/specs/altair)
+- [Przeczytaj specyfikację uaktualnienia Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
 ---
 
@@ -80,11 +80,13 @@ Uaktualnienie Berlin optymalizuje koszt gazu przy pewnych działaniach EVM oraz 
 
 #### Podsumowanie {#beacon-chain-genesis-summary}
 
-[Łańcuch śledzący ](/eth2/beacon-chain/) potrzebował 16384 depozytów z 32 zestakowanymi ETH, aby zapewnić bezpieczną wysyłkę. Stało się to 27 listopada, co oznacza, że łańcuch śledzący (​​Beacon Chain) rozpoczął produkcję bloków 1 grudnia 2020 roku. To ważny pierwszy krok w realizacji [wizji Eth2](/eth2/vision/).
+[Łańcuch śledzący ](/upgrades/beacon-chain/) potrzebował 16384 depozytów z 32 zestakowanymi ETH, aby zapewnić bezpieczną wysyłkę. Stało się to 27 listopada, co oznacza, że łańcuch śledzący (​​Beacon Chain) rozpoczął produkcję bloków 1 grudnia 2020 roku. To ważny pierwszy krok w realizacji [wizji Eth2](/upgrades/vision/).
 
 [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/eth2/beacon-chain/" title="Łańcuch śledzący" />
+<DocLink to="/upgrades/beacon-chain/">
+  Łańcuch śledzący
+</DocLink>
 
 ---
 
@@ -94,11 +96,13 @@ Uaktualnienie Berlin optymalizuje koszt gazu przy pewnych działaniach EVM oraz 
 
 #### Podsumowanie {#deposit-contract-summary}
 
-Do ekosystemu Ethereum został wprowadzony kontrakt depozytu na staking Choć był to kontrakt [sieci głównej](/glossary/#staking), miał bezpośredni wpływ na harmonogram wprowadzania [łańcucha odłamkowego](/eth2/beacon-chain/), ważnego [ulepszenia Eth2](/eth2/).
+Do ekosystemu Ethereum został wprowadzony kontrakt depozytu na staking Choć był to kontrakt [sieci głównej](/glossary/#staking), miał bezpośredni wpływ na harmonogram wprowadzania [łańcucha odłamkowego](/upgrades/beacon-chain/), ważnego [ulepszenia Eth2](/upgrades/).
 
 [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/eth2/staking/" title="Staking" />
+<DocLink to="/staking/">
+  Staking
+</DocLink>
 
 ---
 
@@ -334,4 +338,6 @@ Dokumentacja Yellow Paper autorstwa dr Gavina Wood, jest techniczną definicją 
 
 Artykuł wprowadzający, opublikowany w 2013 roku przez Vitalika Buterina, założyciela Ethereum, przed uruchomieniem projektu w 2015 roku.
 
-<DocLink to="/whitepaper/" title="Dokumentacja" />
+<DocLink to="/whitepaper/">
+  Dokumentacja
+</DocLink>

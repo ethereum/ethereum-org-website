@@ -267,7 +267,7 @@ const cardListContent = [
   },
 ]
 
-const WhatIsEthereumPage = (props) => {
+const EthPage = (props) => {
   const intl = useIntl()
   const data = props.data
   return (
@@ -364,7 +364,7 @@ const WhatIsEthereumPage = (props) => {
             </p>
             <p>
               <Translation id="page-eth-fuels-staking" />{" "}
-              <Link to="/eth2/staking/">
+              <Link to="/staking/">
                 <Translation id="page-eth-fuels-more-staking" />
               </Link>
             </p>
@@ -514,7 +514,7 @@ const WhatIsEthereumPage = (props) => {
   )
 }
 
-export default WhatIsEthereumPage
+export default EthPage
 
 export const query = graphql`
   {

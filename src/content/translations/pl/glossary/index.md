@@ -22,7 +22,9 @@ Rodzaj ataku na zdecentralizowaną [sieć](#network), w której grupa przejmuje 
 
 Obiekt zawierający [adres](#address), saldo, [nonce](#nonce) oraz opcjonalną pamięć i kod. Konto może być [kontem kontraktowym](#contract-account) lub [kontem należącym do podmiotu zewnętrznego (EOA)](#eoa).
 
-<DocLink to="/developers/docs/accounts" title="Konta Ethereum" />
+<DocLink to="/developers/docs/accounts">
+  Konta Ethereum
+</DocLink>
 
 ### adres {#address}
 
@@ -32,13 +34,17 @@ Najczęściej jest to [EOA](#eoa) lub [umowa](#contract-accouint), która może 
 
 Standardowy sposób pracy z [kontraktami](#contract-account) w ekosystemie Ethereum, zarówno spoza blockchainu, jak i w działaniach między kontraktami.
 
-<DocLink to="/developers/docs/smart-contracts/compiling/#web-applications" title="ABI - binarny interfejs aplikacji" />
+<DocLink to="/developers/docs/smart-contracts/compiling/#web-applications">
+  ABI - binarny interfejs aplikacji
+</DocLink>
 
 ### assert {#assert}
 
 W [Solidity](#solidity) instrukcja `assert(false)` kompiluje się do `0xfe`, nieprawidłowego kodu operacji, który zużywa całe pozostałe [paliwo](#gas) i cofa wszystkie zmiany. Gdy instrukcja `assert()` nie powiedzie się, dzieje się coś bardzo złego i nieoczekiwanego i musisz naprawić swój kod. Instrukcji `assert()` należy użyć, aby uniknąć warunków, które nigdy nie powinny wystąpić.
 
-<DocLink to="/developers/docs/smart-contracts/security/" title="Ochrona" />
+<DocLink to="/developers/docs/smart-contracts/security/">
+  Ochrona
+</DocLink>
 
 ### poświadczenie {#attestation}
 
@@ -52,7 +58,9 @@ Walidator głosuje na [łańcuch śledzący](#beacon-chain) lub [blok](#block) [
 
 Ulepszenie Eth2, które stanie się koordynatorem sieci Ethereum. Wprowadza [proof of stake](#proof-of-stake) i [walidatorów](#validator) do Ethereum. Zostanie on ostatecznie połączony z [siecią główną](#mainnet).
 
-<DocLink to="/eth2/beacon-chain/" title="Łańcuch śledzący" />
+<DocLink to="/upgrades/beacon-chain/">
+  Łańcuch śledzący
+</DocLink>
 
 ### big-endian {#big-endian}
 
@@ -62,13 +70,17 @@ Reprezentacja liczby pozycyjnej, w której najbardziej znacząca cyfra jest pier
 
 Zbiór wymaganych informacji (nagłówek bloku) o zawartych [transakcjach](#transaction) oraz zestaw innych nagłówków bloków znanych jako [ommers](#ommer). Bloki są dodawane do sieci Ethereum przez [górników](#miner).
 
-<DocLink to="/developers/docs/blocks/" title="Bloki" />
+<DocLink to="/developers/docs/blocks/">
+  Bloki
+</DocLink>
 
 ### blockchain {#blockchain}
 
 W Ethereum, sekwencja [bloków](#block) zwalidowana przez system [proof-of-work,](#pow) każdy jest powiązany ze swoim poprzednikiem w całej drodze do bloku genezy [](#genesis-block). Nie ma limitu rozmiaru bloku; zamiast tego wykorzystuje się zmienne [wartości graniczne paliwa](#gas-limit).
 
-<DocLink to="/developers/docs/intro-to-ethereum#what-is-a-blockchain" title="Czym jest blockchain?" />
+<DocLink to="/developers/docs/intro-to-ethereum#what-is-a-blockchain">
+  Czym jest blockchain?
+</DocLink>
 
 ### kod bajtowy {#bytecode}
 
@@ -86,7 +98,9 @@ Pierwszy z dwóch [hard forków](#hard-fork) na etapie rozwoju [Metropolis](#met
 
 Konwertowanie kodu napisanego w wysokopoziomowym języku programowania (np. [Solidity](#solidity)) na język niższego poziomu (np. [kod bajtowy](#bytecode) EVM).
 
-<DocLink to="/developers/docs/smart-contracts/compiling/" title="Kompilowanie inteligentnych kontraktów" />
+<DocLink to="/developers/docs/smart-contracts/compiling/">
+  Kompilowanie inteligentnych kontraktów
+</DocLink>
 
 ### komitet {#committee}
 
@@ -116,7 +130,9 @@ Specjalna transakcja [](#transaction) z [zerowym adresem](#zero-address) odbiorc
 
 Połączenie krzyżowe zawiera podsumowanie stanu odłamka. W ten sposób łańcuchy [odłamkowe](#shard) komunikują się ze sobą za pośrednictwem [łańcucha śledzącego](#beacon-chain) w podzielonym [systemie proof of stake](#proof-of-stake).
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work" title="Proof-of-stake" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
+  Proof-of-stake
+</DocLink>
 
 <Divider />
 
@@ -126,19 +142,25 @@ Połączenie krzyżowe zawiera podsumowanie stanu odłamka. W ten sposób łańc
 
 Przedsiębiorstwo lub inna organizacja działająca bez zarządzania hierarchicznego. DAO może również oznaczać kontrakt The DAO uruchomiony 30 kwietnia 2016 r. i złamany w czerwcu tego roku. Ostatecznie doprowadziło to do [hard forku](#hard-fork) (o nazwie DAO) w bloku 1 192 000, co spowodowało anulowanie złamanego kontraktu DAO i podział Ethereum i Ethereum Classic na dwa konkurencyjne systemy.
 
-<DocLink to="/dao/" title="Zdecentralizowane Organizacje Autonomiczne (DAO)" />
+<DocLink to="/dao/">
+  Zdecentralizowane Organizacje Autonomiczne (DAO)
+</DocLink>
 
 ### Dapp {#dapp}
 
 Zdecentralizowana aplikacja. W minimalnej postaci obejmuje [inteligentny kontrakt](#smart-contract) i internetowy interfejs użytkownika. Na bardziej ogólnym poziomie jest to aplikacja internetowa oparta na otwartych, zdecentralizowanych usługach infrastrukturalnych w modelu peer-to-peer. Ponadto wiele aplikacji dapp obejmuje zdecentralizowaną pamięć i/lub komunikatów oraz platformę rozwoju aplikacji.
 
-<DocLink to="/developers/docs/dapps/" title="Wprowadzenie do zdecentralizowanych aplikacji" />
+<DocLink to="/developers/docs/dapps/">
+  Wprowadzenie do zdecentralizowanych aplikacji
+</DocLink>
 
 ### giełda zdecentralizowana (DEX) {#dex}
 
 Typ [dapp](#dapp), który pozwala wymieniać tokeny z uczestnikami w sieci. Potrzebujesz [etheru](#ether), aby z niej skorzystać (aby zapłacić [opłaty za transakcje](#transaction-fee)), ale nie podlegają one ograniczeniom geograficznym, takim jak scentralizowane giełdy — każdy może uczestniczyć.
 
-<DocLink to="/get-eth/#dex" title="Giełdy scentralizowane" />
+<DocLink to="/get-eth/#dex">
+  Giełdy scentralizowane
+</DocLink>
 
 ### deed {#deed}
 
@@ -148,7 +170,9 @@ Zobacz [niewymienny token (NFT)](#nft)
 
 Skrót „zdecentralizowanych finansów”, szeroka kategoria [aplikacji zdecentralizowanych](#dapp) mająca na celu świadczenie usług finansowych zabezpieczonych przez blockchain, bez żadnych pośredników, tak aby każdy z dostępem do Internetu mógł uczestniczyć.
 
-<DocLink to="/defi/" title="Zdecentralizowane finanse (DeFi)" />
+<DocLink to="/defi/">
+  Zdecentralizowane finanse (DeFi)
+</DocLink>
 
 ### trudność {#difficulty}
 
@@ -174,13 +198,17 @@ Algorytm kryptograficzny używany przez Ethereum w celu zapewnienia, że fundusz
 
 Okres 32 [slotów](#slot) (6,4 minuty) w systemie skoordynowanym [łańcuchem śledzącym](#beacon-chain). [Komitety](#committee) [walidatorów](#validator) są losowane co epokę ze względów bezpieczeństwa. W każdej epoce jest szansa na [finalizację](#finality) łańcucha.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work" title="Proof-of-stake" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
+  Proof-of-stake
+</DocLink>
 
 ### Wniosek dotyczący usprawnienia Ethereum (EIP) {#eip}
 
 Dokument projektowy dostarczający informacji społeczności Ethereum, opisujący proponowaną nową funkcję lub jej procesy lub środowisko (patrz [ERBN](#erc)).
 
-<DocLink to="/eips/" title="Wprowadzenie do EIP" />
+<DocLink to="/eips/">
+  Wprowadzenie do EIP
+</DocLink>
 
 ### Usługa nazw Ethereum (ENS) {#ens}
 
@@ -200,7 +228,9 @@ W kontekście kryptografii brak przewidywalności lub poziom losowości. Podczas
 
 Etykieta nadana niektórym [EIP](#eip), które próbują zdefiniować określony standard użycia Ethereum.
 
-<DocLink to="/eips/" title="Wprowadzenie do EIP" />
+<DocLink to="/eips/">
+  Wprowadzenie do EIP
+</DocLink>
 
 ### Ethash {#ethash}
 
@@ -212,19 +242,25 @@ Algorytm [proof-of-work](#pow) dla Ethereum 1.0.
 
 Natywna kryptowaluta używana przez ekosystem Ethereum, który pokrywa koszty [gazu](#gas) podczas realizacji transakcji. Zapisywany również jako ETH lub symbol Ξ, grecka wielka litera Xi.
 
-<DocLink to="/eth/" title="Waluta na naszą cyfrową przyszłość" />
+<DocLink to="/eth/">
+  Waluta na naszą cyfrową przyszłość
+</DocLink>
 
 ### wydarzenia {#events}
 
 Pozwala na korzystanie z urządzeń [EVM](#evm) do rejestrowania danych. [Aplikacje zdecentralizowane](#dapp) mogą nasłuchiwać wydarzeń i używać ich do uruchamiania wywołań zwrotnych JavaScript w interfejsie użytkownika.
 
-<DocLink to="/developers/docs/smart-contracts/anatomy/#events-and-logs" title="Wydarzenia i dzienniki" />
+<DocLink to="/developers/docs/smart-contracts/anatomy/#events-and-logs">
+  Wydarzenia i dzienniki
+</DocLink>
 
 ### Maszyna Wirtualna Ethereum (EVM) {#evm}
 
 Wirtualna maszyna bazująca na stosie, która wykonuje [kod bajtowy](#bytecode). W Ethereum model wykonania określa, w jaki sposób stan systemu jest zmieniany na podstawie serii instrukcji kodu bajtowego i małej krotki danych środowiskowych. Jest to określone przez formalny model wirtualnej maszyny stanu.
 
-<DocLink to="/developers/docs/evm/" title="Maszyna Wirtualna Ethereum" />
+<DocLink to="/developers/docs/evm/">
+  Maszyna Wirtualna Ethereum
+</DocLink>
 
 ### język asemblera EVM {#evm-assembly-language}
 
@@ -242,13 +278,19 @@ Domyślna funkcja wywołana w przypadku braku danych lub zadeklarowanej nazwy fu
 
 Usługa wykonana za pośrednictwem [inteligentnego kontraktu](#smart-contract), która wypłaca środki w postaci bezpłatnego eteru testowego, który może być użyty w sieci testowej.
 
-<DocLink to="/developers/docs/networks/#testnet-faucets" title="Krany sieci testowej" />
+<DocLink to="/developers/docs/networks/#testnet-faucets">
+  Krany sieci testowej
+</DocLink>
 
 ### nieodwołalność {#finality}
 
 Nieodwołalność jest gwarancją, że zestaw transakcji przed upływem danego czasu nie zmieni się i nie będzie mógł zostać wycofany.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/#finality" title="Nieodwołalność proof-of-work" /> <DocLink to="/developers/docs/consensus-mechanisms/pos/#finality" title="Nieodwołalność proof-of-stake" />
+<DocLink to="/developers/docs/consensus-mechanisms/pow/#finality">
+  Nieodwołalność proof-of-work
+</DocLink> <DocLink to="/developers/docs/consensus-mechanisms/pos/#finality">
+  Nieodwołalność proof-of-stake
+</DocLink>
 
 ### finney {#finney}
 
@@ -262,7 +304,9 @@ Zmiana protokołu, powodująca utworzenie alternatywnego łańcucha lub czasowe 
 
 Model bezpieczeństwa dla niektórych rozwiązań [warstwy 2](#layer-2), gdzie w celu zwiększenia szybkości transakcje są [wrzucane](#rollups) do partii i przesyłane do Ethereum w jednej transakcji. Zakłada się, że są one ważne, ale można je zakwestionować, jeżeli podejrzewa się nadużycia finansowe. Dowód oszustwa przeprowadzi następnie transakcję, aby sprawdzić, czy doszło do oszustwa. Ta metoda zwiększa liczbę możliwych transakcji przy jednoczesnym zachowaniu bezpieczeństwa. Niektóre [wartości zbiorcze](#rollups) używają [dowodów ważności](#validity-proof).
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/#optimistic-rollups" title="Optymistyczne pakiety zbiorcze" />
+<DocLink to="/developers/docs/scaling/layer-2-rollups/#optimistic-rollups">
+  Optymistyczne pakiety zbiorcze
+</DocLink>
 
 ### granica {#frontier}
 
@@ -276,7 +320,9 @@ Pierwotny etap testowania Ethereum, trwający od lipca 2015 r. do marca 2016 r.
 
 Paliwo wirtualne używane w Ethereum do realizacji inteligentnych kontraktów. [EVM](#evm) wykorzystuje mechanizm księgowy do pomiaru zużycia gazu i ograniczenia zużycia zasobów obliczeniowych (patrz [Kompletność w sensie Turinga](#turing-complete)).
 
-<DocLink to="/developers/docs/gas/" title="Gaz i opłaty" />
+<DocLink to="/developers/docs/gas/">
+  Gaz i opłaty
+</DocLink>
 
 ### limit gazu {#gas-limit}
 
@@ -342,13 +388,17 @@ Kodowanie adresu Ethereum, które jest częściowo kompatybilne z kodowaniem mi�
 
 Interfejs użytkownika, który zazwyczaj łączy edytor kodu, kompilator, środowisko uruchomieniowe i debuger.
 
-<DocLink to="/developers/docs/ides/" title="Środowisko IDE" />
+<DocLink to="/developers/docs/ides/">
+  Środowisko IDE
+</DocLink>
 
 ### problem niemodyfikowalności wdrożonego kodu {#immutable-deployed-code-problem}
 
 Po wdrożeniu kod [kontraktu](#smart-contract) (lub [biblioteki](#library)) staje się niezmienny. Standardowe techniki rozwoju oprogramowania są oparte na możliwości poprawiania ewentualnych błędów i dodawania nowych funkcji, dlatego niemodyfikowalność stanowi wyzwanie dla twórców inteligentnych kontraktów.
 
-<DocLink to="/developers/docs/smart-contracts/deploying/" title="Wdrażanie inteligentnych kontraktów" />
+<DocLink to="/developers/docs/smart-contracts/deploying/">
+  Wdrażanie inteligentnych kontraktów
+</DocLink>
 
 ### transakcja wewnętrzna {#internal-transaction}
 
@@ -362,7 +412,9 @@ Po wdrożeniu kod [kontraktu](#smart-contract) (lub [biblioteki](#library)) staj
 
 Znana również jako „algorytm rozszerzania hasła”, jest używana w pliku [kestore](#keystore-file) do ochrony zaszyfrowanego hasła przed przed atakami siłowymi, atakami słownikowymi i atakami z użyciem tablic tęczowych, wielokrotnie haszując hasło.
 
-<DocLink to="/developers/docs/smart-contracts/security/" title="Ochrona" />
+<DocLink to="/developers/docs/smart-contracts/security/">
+  Ochrona
+</DocLink>
 
 ### keccak-256 {#keccak-256}
 
@@ -380,7 +432,9 @@ Plik w formacie JSON zawierający jeden (losowo wygenerowany) [klucz prywatny](#
 
 Obszar rozwoju skupiony na ulepszeniach w zakresie warstwowania w uzupełnieniu protokołu Ethereum. Te ulepszenia są związane z szybkościami [transakcji](#transaction), niższymi [opłatami transakcyjnymi](#transaction-fee) i prywatnością transakcji.
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/" title="Warstwa 2" />
+<DocLink to="/developers/docs/scaling/layer-2-rollups/">
+  Warstwa 2
+</DocLink>
 
 ### LevelDB {#level-db}
 
@@ -390,7 +444,9 @@ Przechowywany na dysku magazyn open source typu klucz-wartość, zaimplementowan
 
 [Kontrakt ](#smart-contract) specjalnego rodzaju, który nie ma funkcji do odbioru płatności, funkcji rezerwowej ani pamięci na dane. W związku z tym nie może odbierać ani przechowywać etherów, ani przechowywać danych. Biblioteka to zainstalowany kod, który może być wywoływany w trybie odczytu przez inne kontrakty na potrzeby obliczeń.
 
-<DocLink to="/developers/docs/smart-contracts/libraries/" title="Biblioteki kontraktów inteligentnych" />
+<DocLink to="/developers/docs/smart-contracts/libraries/">
+  Biblioteki kontraktów inteligentnych
+</DocLink>
 
 ### lekki klient {#lightweight-client}
 
@@ -424,7 +480,9 @@ Trzeci etap rozwoju Ethereum rozpoczęty w październiku 2017 r.
 
 [Węzeł](#node) w sieci, który za pomocą wielokrotnego obliczania skrótów znajduje prawidłowe [dowody pracy](#pow) (proof of work) dla nowych bloków (patrz [ethash](#ethash)).
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/mining/" title="Wydobycie" />
+<DocLink to="/developers/docs/consensus-mechanisms/pow/mining/">
+  Wydobycie
+</DocLink>
 
 <Divider />
 
@@ -434,21 +492,31 @@ Trzeci etap rozwoju Ethereum rozpoczęty w październiku 2017 r.
 
 Oznacza tu sieć Ethereum — sieć P2P, w której transakcje i bloki są przekazywane do wszystkich węzłów sieci Ethereum (użytkowników sieci).
 
-<DocLink to="/developers/docs/networks/" title="Sieci" />
+<DocLink to="/developers/docs/networks/">
+  Sieci
+</DocLink>
 
 ### token niezamienny (NFT) {#nft}
 
 Nazywany także deed. Jest to standardowy token wprowadzony na podstawie propozycji ERC721. Tokeny NFT można śledzić i handlować nimi, ale każdy token jest unikatowy i odmienny; nie są zamienne jak ETH i [tokeny ERC-20](#token-standard). Tokeny NFT mogą reprezentować prawo własności zasobów cyfrowych lub fizycznych.
 
-<DocLink to="/nft/" title="Tokeny niewymienne (NFT)" /> <DocLink to="/developers/docs/standards/tokens/erc-721/" title="ERC-721 – standard tokenów niewymiennych" />
+<DocLink to="/nft/">
+  Tokeny niewymienne (NFT)
+</DocLink> <DocLink to="/developers/docs/standards/tokens/erc-721/">
+  ERC-721 – standard tokenów niewymiennych
+</DocLink>
 
 ### node {#node}
 
 Klient działający w sieci.
 
-<DocLink to="/developers/docs/nodes-and-clients/" title="Węzły i klienci" />
+<DocLink to="/developers/docs/nodes-and-clients/">
+  Węzły i klienci
+</DocLink>
 
-<DocLink to="/developers/docs/nodes-and-clients/" title="Węzły i klienci" />
+<DocLink to="/developers/docs/nodes-and-clients/">
+  Węzły i klienci
+</DocLink>
 
 ### nonce {#nonce}
 
@@ -466,7 +534,9 @@ Kiedy [górnik](#miner) znajdzie poprawny [blok](#block), może się okazać, ż
 
 [Pakiet zbiorczy](#rollups) transakcji, które używają [dowodów oszustwa](#fraud-proof), aby zaoferować większą przepustowość transakcji [warstwy 2](#layer-2) przy użyciu zabezpieczeń dostarczanych przez [sieć główną](#mainnet) (warstwa 1). W przeciwieństwie do [plazmy](#plasma), podobnego rozwiązania warstwy 2, optymistyczne pakiety zbiorcze mogą obsługiwać bardziej złożone typy transakcji – wszystko co jest możliwe w [EVM](#evm). W porównaniu z [pakietami zbiorczymi o wiedzy zerowej](#zk-rollups) doświadczają opóźnień, ponieważ transakcję można zakwestionować za pomocą dowodu oszustwa.
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/#optimistic-rollups" title="Optymistyczne pakiety zbiorcze" />
+<DocLink to="/developers/docs/scaling/layer-2-rollups/#optimistic-rollups">
+  Optymistyczne pakiety zbiorcze
+</DocLink>
 
 <Divider />
 
@@ -480,7 +550,9 @@ Jest to jedna z najważniejszych implementacji oprogramowania klienckiego Ethere
 
 Rozwiązanie skalowania off-chain wykorzystujące [dowody oszustwa](#fraud-proof), na przykład [optymistyczne pakiety zbiorcze](#optimistic-rollups). Plazma jest ograniczona do prostych transakcji, takich jak podstawowe transfery i zamiany tokenów.
 
-<DocLink to="/developers/docs/scaling/plasma" title="Plazma" />
+<DocLink to="/developers/docs/scaling/plasma">
+  Plazma
+</DocLink>
 
 ### klucz prywatny (tajny klucz) {#private-key}
 
@@ -490,13 +562,17 @@ Jest to tajna liczba, która umożliwia użytkownikom w sieci Ethereum dowodzeni
 
 Jest to metoda, za pomocą której protokół blockchainu kryptowaluty umożliwia uzyskanie [konsensusu](#consensus) w środowisku rozproszonym. PoS wymaga przedstawienia dowodu własności określonej kwoty kryptowaluty (jest to „stawka”, jaką użytkownik ma w sieci), aby dana osoba mogła uczestniczyć w weryfikacji transakcji.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/" title="Proof-of-stake" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos/">
+  Proof-of-stake
+</DocLink>
 
 ### Proof-of-work (PoW) {#pow}
 
 Są do dane (dowód), których uzyskanie wymaga intensywnych obliczeń. W Ethereum [górnicy](#miner) muszą znaleźć liczbowe rozwiązanie algorytmu [Ethash](#ethash) zgodnie z poziomem [trudności](#difficulty) obowiązującym na poziomie sieci.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/" title="Proof-of-work" />
+<DocLink to="/developers/docs/consensus-mechanisms/pow/">
+  Proof-of-work
+</DocLink>
 
 ### klucz publiczny {#public-key}
 
@@ -514,7 +590,9 @@ Dane zwracane przez klienta Ethereum, reprezentujące wynik konkretnej [transakc
 
 Atak składający się z kontraktu atakującego wywołującego kontrakt ofiary w taki sposób, że podczas wykonania ofiara ponownie wywołuje kontrakt atakującego rekursywnie. Może to skutkować na przykład kradzieżą środków poprzez pominięcie tych części kontraktu ofiary, które aktualizują saldo lub liczą kwoty odstąpienia.
 
-<DocLink to="/developers/docs/smart-contracts/security/#re-entrancy" title="Wielobieżność" />
+<DocLink to="/developers/docs/smart-contracts/security/#re-entrancy">
+  Wielobieżność
+</DocLink>
 
 ### nagroda {#reward}
 
@@ -528,7 +606,9 @@ Standard kodowania zaprojektowany przez deweloperów Ethereum do kodowania i ser
 
 Typ rozwiązania skalowania [warstwy 2](#layer-2) który zawiera wiele transakcji i przesyła je do [głównego łańcucha Ethereum](#mainnet) w pojedynczej transakcji. Pozwala to na zmniejszenie kosztów [gazu](#gas) i zwiększenie przepustowości [transakcji](#transaction). Istnieją pakiety zbiorcze optymistyczne i o wiedzy zerowej, wykorzystujące różne metody zabezpieczania, aby zaoferować wymienione korzyści skalowalności.
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/" title="Pakiety zbiorcze" />
+<DocLink to="/developers/docs/scaling/layer-2-rollups/">
+  Pakiety zbiorcze
+</DocLink>
 
 <Divider />
 
@@ -538,7 +618,9 @@ Typ rozwiązania skalowania [warstwy 2](#layer-2) który zawiera wiele transakcj
 
 Czwarty i ostatni etap rozwoju Ethereum, znany pod nazwą Ethereum 2.0.
 
-<DocLink to="/eth2/" title="Ethereum 2.0 (Eth2)" />
+<DocLink to="/upgrades/">
+  Ethereum 2.0 (Eth2)
+</DocLink>
 
 ### SHA (Secure Hash Algorithm) {#sha}
 
@@ -548,13 +630,17 @@ Rodzina kryptograficznych funkcji skrótu opublikowanych przez Narodowy Instytut
 
 Łańcuch [proof-of-stake](#proof-of-stake) koordynowany przez [łańcuch śledzący](#beacon-chain) i zabezpieczony przez [walidatorów](#validator). Do sieci zostaną dodane 64 w ramach aktualizacji łańcucha odłamkowego Eth2. Łańcuchy odłamkowe będą oferować Ethereum zwiększoną przepustowość transakcji dzięki dostarczeniu dodatkowych danych do rozwiązań [warstwy 2](#layer-2) takich jak [optymistyczne pakiety zbiorcze](#optimistic-rollups) i [pakiety zbiorcze ZK](#zk-rollups).
 
-<DocLink to="/eth2/shard-chains" title="Łańcuchy szczątkowe" />
+<DocLink to="/upgrades/shard-chains">
+  Łańcuchy szczątkowe
+</DocLink>
 
 ### łańcuch boczny {#sidechain}
 
 Rozwiązanie skalujące wykorzystujące oddzielny łańcuch z innymi, często szybszymi, [regułami konsensusu](#consensus-rules). Aby podłączyć łańcuchy boczne do [sieci głównej](#mainnet), potrzebny jest mostek. [Pakiety zbiorcze](#rollups) również używają łańcuchów bocznych, ale współpracują z [siecią główną](#mainnet).
 
-<DocLink to="/developers/docs/scaling/sidechains/" title="Łańcuchy boczne" />
+<DocLink to="/developers/docs/scaling/sidechains/">
+  Łańcuchy boczne
+</DocLink>
 
 ### singleton {#singleton}
 
@@ -564,19 +650,25 @@ Pojęcie z obszaru programowania komputerów oznaczające obiekt klasy, która u
 
 Okres (12 sekund) w którym [walidator](#validator) w systemie [proof-of-stake](#proof-of-stake) może zaproponować nowy [łańcuch śledzący](#beacon-chain) i blok łańcucha [odłamków](#shard). Slot może być pusty. 32 sloty tworzą [epokę](#epoch).
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work" title="Proof-of-stake" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
+  Proof-of-stake
+</DocLink>
 
 ### inteligentny kontrakt {#smart-contract}
 
 Program działający w infrastrukturze obliczeniowej Ethereum.
 
-<DocLink to="/developers/docs/smart-contracts/" title="Wprowadzenie do inteligentnych kontraktów" />
+<DocLink to="/developers/docs/smart-contracts/">
+  Wprowadzenie do inteligentnych kontraktów
+</DocLink>
 
 ### Solidity {#solidity}
 
 Proceduralny (imperatywny) język programowania o składni podobnej do JavaScript, C++ lub Java. Najpopularniejszy i najczęściej używany język do tworzenia [inteligentnych kontraktów](#smart-contract) w Ethereum. Jego twórcą jest dr Gavin Wood.
 
-<DocLink to="/developers/docs/smart-contracts/languages/#solidity" title="Solidity" />
+<DocLink to="/developers/docs/smart-contracts/languages/#solidity">
+  Solidity
+</DocLink>
 
 ### wewnątrzwierszowy język asemblerowy dla Solidity {#solidity-inline-assembly}
 
@@ -590,19 +682,25 @@ Jest to język asemblerowy dla maszyny [EVM](#evm) używany w programach w języ
 
 Token [ERC-20](#token-standard) o wartości powiązanej z wartością innego zasobu. Istnieją sablecoiny zabezpieczone walutami fiducjarnymi, takimi jak dolary, metale szlachetne, złoto, i innymi kryptowalutami, takimi jak bitcoin.
 
-<DocLink to="/eth/#tokens" title="ETH nie jest jedyną kryptowalutą na Ethereum" />
+<DocLink to="/eth/#tokens">
+  ETH nie jest jedyną kryptowalutą na Ethereum
+</DocLink>
 
 ### układanie w stos {#staking}
 
 Deponowanie ilości [etheru](#ether) (Twoja stawka) aby stać się walidatorem i zabezpieczyć [sieć](#network). Walidator sprawdza [transakcje](#transaction) i proponuje [bloki](#block) w modelu konsensusu [proof-of-stake](#pos). Staking stanowi dla Ciebie ekonomiczną zachętę do działania w najlepszym interesie sieci. Otrzymasz nagrody za wykonywanie obowiązków [walidatora](#validator), ale stracisz różne ilości ETH, jeśli tego nie zrobisz.
 
-<DocLink to="/eth2/staking/" title="Zestakuj swój ETH, aby zostać walidatorem Ethereum" />
+<DocLink to="/staking/">
+  Zestakuj swój ETH, aby zostać walidatorem Ethereum
+</DocLink>
 
 ### kanały uzyskiwania informacyji {#state-channels}
 
 Rozwiązanie [warstwy 2](#layer-2), polegające na ustanowieniu między uczestnikami kanału, w którym mogą swobodnie i tanio przeprowadzać transakcje. Tylko [transakcja](#transaction) ustanawiająca i zamykająca kanał jest wysyłana do [sieci głównej](#mainnet). Pozwala to na bardzo wysoką przepustowość transakcji, ale opiera się na wcześniejszej znajomości liczby uczestników i blokowaniu funduszy.
 
-<DocLink to="/developers/docs/scaling/state-channels/#state-channels" title="Kanały uzyskiwania informacji" />
+<DocLink to="/developers/docs/scaling/state-channels/#state-channels">
+  Kanały uzyskiwania informacji
+</DocLink>
 
 ### szabo {#szabo}
 
@@ -620,19 +718,25 @@ Nazwa [etheru](#ether). 1 szabo = 10<sup>12</sup> [wei](#wei), 10<sup>6</sup> sz
 
 Skrót od nazwy „sieć testowa”, służy do symulowania zachowania głównej sieci Ethereum (patrz [sieć główna](#mainnet)).
 
-<DocLink to="/developers/docs/networks/#testnets" title="Sieci testowe" />
+<DocLink to="/developers/docs/networks/#testnets">
+  Sieci testowe
+</DocLink>
 
 ### standard tokenów {#token-standard}
 
 Wprowadzony we wniosku ERC-20 zapewnia znormalizowaną strukturę [kontraktów inteligentnych](#smart-contract) dla zamiennych tokenów. Tokeny z tego samego kontraktu mogą być śledzone, sprzedawane i wymieniane, w przeciwieństwie do [NFT](#nft).
 
-<DocLink to="/developers/docs/standards/tokens/erc-20/" title="Standard tokena ERC-20" />
+<DocLink to="/developers/docs/standards/tokens/erc-20/">
+  Standard tokena ERC-20
+</DocLink>
 
 ### transakcja {#transaction}
 
 Dane przeznaczone do blockchainu Ethereum, podpisane przez [konto](#account) źródłowe skierowane pod określony [adres](#address). Transakcja zawiera metadane, np. [limit gazu](#gas-limit) dla tej transakcji.
 
-<DocLink to="/developers/docs/transactions/" title="Transakcje" />
+<DocLink to="/developers/docs/transactions/">
+  Transakcje
+</DocLink>
 
 ### opłata transakcyjna {#transaction-fee}
 
@@ -654,25 +758,35 @@ Nazwa ta pochodzi od brytyjskiego matematyka i informatyka Alana Turinga. System
 
 [Węzeł](#node) w systemie [proof-of-stake](#proof-of-stake) odpowiedzialny za przechowywanie danych, przetwarzanie transakcji i dodawanie nowych bloków do blockchainu. Aby aktywować oprogramowanie walidatora, musisz mieć możliwość [stakingu](#staking) 32 ETH.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos" title="Proof-of-stake" /> <DocLink to="/eth2/staking/" title="Stakowanie w Ethereum" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos">
+  Proof-of-stake
+</DocLink> <DocLink to="/staking/">
+  Stakowanie w Ethereum
+</DocLink>
 
 ### Dowód ważności {#validity-proof}
 
 Model bezpieczeństwa dla niektórych rozwiązań [warstwy 2](#layer-2), gdzie w celu zwiększenia szybkości transakcje są [wrzucane](/#rollups) do partii i przesyłane do Ethereum w jednej transakcji. Obliczanie transakcji odbywa się poza łańcuchem, a następnie jest dostarczane do głównego łańcucha wraz z dowodem ich ważności. Ta metoda zwiększa liczbę możliwych transakcji przy jednoczesnym zachowaniu bezpieczeństwa. Niektóre [pakiety zbiorcze](#rollups) używają [dowodu oszustwa](#fraud-proof).
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups" title="Pakiety zbiorcze o wiedzy zerowej" />
+<DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups">
+  Pakiety zbiorcze o wiedzy zerowej
+</DocLink>
 
 ### Validium {#validium}
 
 Rozwiązanie, które używa [dowodów ważności](#validity-proof) w celu poprawy przepustowości transakcji. W przeciwieństwie do [pakietów zbiorczych z zerową wiedzą](#zk-rollup), dane Validium nie są przechowywane w warstwie 1 [sieci głównej](#mainnet).
 
-<DocLink to="/developers/docs/scaling/validium/" title="Validium" />
+<DocLink to="/developers/docs/scaling/validium/">
+  Validium
+</DocLink>
 
 ### Vyper {#vyper}
 
 Wysokopoziomowy jęsyk programowania wysokiego poziomu o składni zbliżonej do Pythona. Ma być językiem zbliżonym do języków czysto funkcyjnych. Utworzony przez Vitalika Buterina.
 
-<DocLink to="/developers/docs/smart-contracts/languages/#vyper" title="Vyper" />
+<DocLink to="/developers/docs/smart-contracts/languages/#vyper">
+  Vyper
+</DocLink>
 
 <Divider />
 
@@ -682,13 +796,17 @@ Wysokopoziomowy jęsyk programowania wysokiego poziomu o składni zbliżonej do 
 
 Oprogramowanie przechowujące [klucze prywatne](#private-key). Pozwala uzyskać dostęp do [kont](#account) Ethereum, kontrolować je i komunikować się z [inteligentnymi kontraktami](#smart-contract). Klucze nie muszą być przechowywane w portfelu i mogą być pobierane z magazynu offline (tj. karty pamięci lub kartki papieru) w celu poprawy bezpieczeństwa. Pomimo nazwy portfele nigdy nie przechowują pieniędzy ani tokenów.
 
-<DocLink to="/wallets/" title="Portfele Ethereum" />
+<DocLink to="/wallets/">
+  Portfele Ethereum
+</DocLink>
 
 ### Web3 {#web3}
 
 Trzecia wersja Internetu. Po raz pierwszy zaproponował ją dr Gavin Wood. Sieć Web3 reprezentuje nową wizję opartą na aplikacjach sieciowych. Ma pozwolić przejść od zarządzanych aplikacji z jednym właścicielem do aplikacji rozwijanych za pomocą decentralizowanych protokołów (patrz [Dapp](#dapp)).
 
-<DocLink to="/developers/docs/web2-vs-web3/" title="Web2 vs Web3" />
+<DocLink to="/developers/docs/web2-vs-web3/">
+  Web2 vs Web3
+</DocLink>
 
 ### wei {#wei}
 
@@ -706,7 +824,9 @@ To specjalny adres w Ethereum, obejmujący same zera. Jest on podawany jako adre
 
 [Pakiet zbiorczy](#rollups)transakcji korzystający z [ dowodów ważności](#validity-proof) w celu zwiększenia przepustowości transakcji [warstwy 2](#layer-2) przy zastosowaniu zabezpieczeń zapewnianych przez [sieć główną](#mainnet) (warstwa 1). Pakiety zbiorcze o wiedzy zerowej nie mogą obsługiwać złożonych transakcji (co mogą robić [optymistyczne pakiety zbiorcze](#optimistic-rollups)), ale nie dotyczą ich problemy z opóźnieniami, ponieważ przedłożone transakcje są ewidentnie ważne.
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups" title="Pakiety zbiorcze o wiedzy zerowej" />
+<DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups">
+  Pakiety zbiorcze o wiedzy zerowej
+</DocLink>
 
 <Divider />
 

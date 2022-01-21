@@ -26,7 +26,7 @@ sidebar: true
 
 - [একটি ইথেরিয়াম ক্লায়েন্ট বেছে নেওয়া](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [রাস্ট ইথেরিয়াম ক্লায়েন্ট](https://wiki.parity.io/Setup)
-- [রাস্ট ব্যবহার করে ইথেরিয়ামে লেনদেন পাঠানো](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [রাস্ট ব্যবহার করে ইথেরিয়ামে লেনদেন পাঠানো](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [প্যারিটি ইথেরিয়াম ক্লায়েন্টের সাথে স্মার্ট কন্ট্র্যাক্টের একটি ভূমিকা](https://wiki.parity.io/Smart-Contracts)
 - [আপনার ওয়েসিস SDK ডেভ এনভায়রনমেন্ট সেট আপ করা](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [কোভান-এর জন্য রাস্ট Wasm-এ কীভাবে কন্ট্র্যাক্ট লিখতে হয় তার একটি ধাপে ধাপে নির্দেশিকা](https://github.com/paritytech/pwasm-tutorial)
@@ -38,7 +38,7 @@ sidebar: true
 
 ## উন্নত ইউজ প্যাটার্ন {#advanced-use-patterns}
 
-- [pwasm_ethereum externs লাইব্রেরি ইথেরিয়াম-সদৃশ নেটওয়ার্কের সঙ্গে ইন্টারেক্ট করবে](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [pwasm_ethereum externs লাইব্রেরি ইথেরিয়াম-সদৃশ নেটওয়ার্কের সঙ্গে ইন্টারেক্ট করবে](https://github.com/openethereum/pwasm-ethereum)
 - [জাভাস্ক্রিপ্ট ও রাস্ট ব্যবহার করে একটি বিকেন্দ্রীভূত চ্যাট তৈরি করা](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Vue.js & রাস্ট ব্যবহার করে একটি বিকেন্দ্রীভূত Todo অ্যাপ তৈরি করা ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [এনিগমা দিয়ে শুরু করা- রাস্ট প্রোগ্রামিং ল্যাঙ্গুয়েজে](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)

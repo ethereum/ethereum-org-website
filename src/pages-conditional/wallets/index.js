@@ -501,9 +501,9 @@ const WalletsPage = ({ data }) => {
         <CalloutCardContainer>
           <StyledCallout
             image={getImage(data.eth)}
-            title={translateMessageId("page-wallets-get-some", intl)}
+            titleKey="page-wallets-get-some"
             alt={translateMessageId("page-wallets-get-some-alt", intl)}
-            description={translateMessageId("page-wallets-get-some-desc", intl)}
+            descriptionKey="page-wallets-get-some-desc"
           >
             <div>
               <ButtonLink to="/get-eth/">
@@ -513,12 +513,9 @@ const WalletsPage = ({ data }) => {
           </StyledCallout>
           <StyledCallout
             image={getImage(data.dapps)}
-            title={translateMessageId("page-wallets-try-dapps", intl)}
+            titleKey="page-wallets-try-dapps"
             alt={translateMessageId("page-wallets-try-dapps-alt", intl)}
-            description={translateMessageId(
-              "page-wallets-try-dapps-desc",
-              intl
-            )}
+            descriptionKey="page-wallets-try-dapps-desc"
           >
             <div>
               <ButtonLink to="/dapps/">
@@ -754,6 +751,9 @@ export const query = graphql`
       ...listImage
     }
     bitkeep: file(relativePath: { eq: "wallets/bitkeep.png" }) {
+      ...listImage
+    }
+    keystone: file(relativePath: { eq: "wallets/keystone.png" }) {
       ...listImage
     }
   }

@@ -23,7 +23,9 @@ Mivel minden egyes utalás az Ethereum hálózaton számítási erőforrást ig�
 
 Lényegében a gáz díjakat az Ethereum natív valutájában, Etherben (ETH) lehet kifizetni. A gáz árak Gwei-ben vannak feltüntetve, mely az ETH-nek egy egysége - minden Gwei 0.000000001 ETH-tel egyenlő (10<sup>-9</sup> ETH). Például ahelyett, hogy azt mondanánk, hogy a gáz 0.000000001 Ether-be kerül, azt mondjuk, hogy a gáz ára 1 Gwei.
 
-Az alábbi videó jó áttekintés ad, hogy miért van szükségünk a gázra: <iframe width="100%" height="315" src="https://www.youtube.com/embed/AJvzNICwcwc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Az alábbi videó jó áttekintés ad, hogy miért van szükségünk a gázra:
+
+<YouTube id="AJvzNICwcwc" />
 
 ## Miért létezik az gáz? {#why-do-gas-fees-exist}
 

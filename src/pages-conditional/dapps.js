@@ -292,8 +292,6 @@ const AddDappButton = styled(ButtonLink)`
   }
 `
 
-const StyledDocLink = styled(DocLink)``
-
 const StyledCallout = styled(Callout)`
   flex: 1 1 416px;
   min-height: 100%;
@@ -1627,22 +1625,17 @@ const DappsPage = ({ data, location }) => {
             <p>
               <Translation id="page-dapps-how-dapps-work-p3" />
             </p>
-            <StyledDocLink
-              to="/developers/docs/dapps/"
-              title="Intro to dapps"
-            />
-            <StyledDocLink
-              to="/developers/docs/smart-contracts/"
-              title="Smart contracts"
-            />
+            <DocLink to="/developers/docs/dapps/">
+              <Translation id="page-dapps-docklink-dapps" />
+            </DocLink>
+            <DocLink to="/developers/docs/smart-contracts/">
+              <Translation id="page-dapps-docklink-smart-contracts" />
+            </DocLink>
           </LeftColumn>
           <RightColumn>
             <StyledCallout
-              title={translateMessageId("page-dapps-learn-callout-title", intl)}
-              description={translateMessageId(
-                "page-dapps-learn-callout-description",
-                intl
-              )}
+              titleKey="page-dapps-learn-callout-title"
+              descriptionKey="page-dapps-learn-callout-description"
               image={getImage(data.developers)}
               alt={translateMessageId(
                 "page-dapps-learn-callout-image-alt",

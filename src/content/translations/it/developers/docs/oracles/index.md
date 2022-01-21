@@ -23,17 +23,6 @@ Con una blockchain come Ethereum è necessario che ogni nodo della rete sia in g
 
 Gli oracoli risolvono questo problema pubblicando i dati sulla blockchain. Quindi ogni nodo che riproduce la transazione utilizzerà gli stessi dati immutabili che vengono pubblicati affinché siano visibili a tutti. A questo scopo, un oracolo in genere è costituito da uno Smart Contract e da alcuni componenti esterni alla catena che possono interrogare le API e poi inviare periodicamente transazioni per aggiornare i dati dello Smart Contract.
 
-<!-- ## Oracle architecture {#oracle-architecture}
-
-To understand how an oracle works, let's play through a scenario where your smart contract needs to know who won the superbowl. This is an example of how it could work:
-
-1. Your smart contract requests information from an oracle smart contract.
-2. The oracle smart contract emits an [event](/developers/docs/smart-contracts/anatomy/#events-and-logs).
-3. Off-chain oracle nodes listen for events and upon hearing one, they query an API.
-4. The API returns a JSON response to the nodes.
-5. The nodes call on the oracle smart contract.
-6. The oracle smart contract returns the data to your smart contract. -->
-
 ### Sicurezza {#security}
 
 La sicurezza di un oracolo è pari a quella delle sue origini sue fonte(i) di dati. Se una dapp utilizza Uniswap come oracolo per il suo feed di prezzo ETH/DAI, è possibile per un aggressore spostare il prezzo su Uniswap al fine di manipolare la conoscenza della dapp del prezzo corrente. Un esempio per contrastare questa situazione ciò è [un sistema di feed](https://developer.makerdao.com/feeds/) come quello usato da MakerDAO, che raccoglie i dati sui prezzi da una serie di feed di prezzo esterni anziché fare affidamento su una sola origine.

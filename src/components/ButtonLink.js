@@ -7,7 +7,6 @@ import Link from "./Link"
 const StyledButton = styled(Link)`
   text-decoration: none;
   display: inline-block;
-  white-space: nowrap;
   padding: 0.5rem 0.75rem;
   font-size: 1rem;
   border-radius: 0.25em;

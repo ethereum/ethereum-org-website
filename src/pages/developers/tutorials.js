@@ -192,6 +192,7 @@ const ModalOption = styled.div`
   margin-bottom: 1.5rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     width: 100%;
+    margin: 0.5rem 0;
   }
 `
 

@@ -98,8 +98,8 @@ const checkIsMdxOutdated = (path) => {
  * @returns {{isOutdated: boolean, isContentEnglish: boolean}}
  */
 const checkIsPageOutdated = async (path, lang) => {
-  // Files that need index appended on the end. Ex page-index.json, page-developers-index.json, page-eth2-index.json
-  const indexFilePaths = ["", "developers", "eth2"]
+  // Files that need index appended on the end. Ex page-index.json, page-developers-index.json, page-upgrades-index.json
+  const indexFilePaths = ["", "developers", "upgrades"]
   const filePath = path.split("/").filter((text) => text !== "")
 
   if (
@@ -330,10 +330,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // we can remove this logic and the `/pages-conditional/` directory.
   const outdatedMarkdown = [`eth`, `dapps`, `wallets`, `what-is-ethereum`]
   outdatedMarkdown.forEach((page) => {
-    supportedLanguages.forEach((lang) => {
+    supportedLanguages.forEach(async (lang) => {
       const markdownPath = `${__dirname}/src/content/translations/${lang}/${page}/index.md`
       const langHasOutdatedMarkdown = fs.existsSync(markdownPath)
       if (!langHasOutdatedMarkdown) {
+        // Check if json strings exists for language, if not mark `isContentEnglish` as true
+        const { isOutdated, isContentEnglish } = await checkIsPageOutdated(
+          page,
+          lang
+        )
         createPage({
           path: `/${lang}/${page}/`,
           component: path.resolve(
@@ -352,6 +357,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               originalPath: `/${page}/`,
               redirect: false,
             },
+            isContentEnglish,
+            isOutdated,
           },
         })
       }
@@ -397,14 +404,17 @@ exports.createSchemaCustomization = ({ actions }) => {
       sidebarDepth: Int
       incomplete: Boolean
       template: String
-      summaryPoints: [String!]!
+      summaryPoint1: String!
+      summaryPoint2: String!
+      summaryPoint3: String!
+      summaryPoint4: String!
       position: String
       compensation: String
       location: String
       type: String
       link: String
     }
-    type Eth2BountyHuntersCsv implements Node {
+    type ConsensusBountyHuntersCsv implements Node {
       username: String,
       name: String,
       score: Int

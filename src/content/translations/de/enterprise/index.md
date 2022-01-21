@@ -69,8 +69,8 @@ Folgende Projekte bieten Blockchain-Dienstleistungen für Enterprise-Grade-Syste
 
 ### Sicherheit {#security}
 
-- [Clef](https://geth.ethereum.org/clef/Overview) _wird verwendet, um Transaktionen und Daten zu signieren und ist als Ersatz für die Kontoverwaltung mit geth gedacht_
-- [EthSigner](https://gitter.im/PegaSysEng/EthSigner) _Eine Transaktionssignierungsanwendung, die mit einem Web3-Anbieter verwendet werden kann_
+- [Clef](https://geth.ethereum.org/docs/clef/tutorial) _wird verwendet, um Transaktionen und Daten zu signieren und ist als Ersatz für die Kontoverwaltung mit geth gedacht_
+- [EthSigner](https://github.com/ConsenSys/ethsigner) _Eine Transaktionssignierungsanwendung, die mit einem Web3-Anbieter verwendet werden kann_
 
 ### Werkzeuge {#tooling}
 

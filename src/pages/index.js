@@ -464,10 +464,13 @@ const HomePage = ({ data, pageContext: { language } }) => {
   const touts = [
     {
       image: getImage(data.merge),
-      alt: translateMessageId("page-index-tout-eth2-image-alt", intl),
-      title: translateMessageId("page-index-tout-eth2-title", intl),
-      description: translateMessageId("page-index-tout-eth2-description", intl),
-      to: "/eth2/",
+      alt: translateMessageId("page-index-tout-upgrades-image-alt", intl),
+      title: translateMessageId("page-index-tout-upgrades-title", intl),
+      description: translateMessageId(
+        "page-index-tout-upgrades-description",
+        intl
+      ),
+      to: "/upgrades/",
     },
     {
       image: getImage(data.infrastructurefixed),
@@ -868,7 +871,7 @@ contract SimpleDomainRegistry {
             content={codeExamples}
             limit={5}
             clickHandler={toggleCodeExample}
-            header="Code examples"
+            headerKey="page-index-developers-code-examples"
             icon="code"
             isCode
           />
@@ -1073,7 +1076,7 @@ export const query = graphql`
         )
       }
     }
-    merge: file(relativePath: { eq: "eth2/merge.png" }) {
+    merge: file(relativePath: { eq: "upgrades/merge.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 320

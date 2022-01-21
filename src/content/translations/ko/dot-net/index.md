@@ -34,9 +34,9 @@ sidebarDepth: 1
 - [네더리움(Nethereum) 시작하기](https://docs.nethereum.com/en/latest/getting-started/)
 - [VS Code 솔리디티 설치하기](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
 - [.NET 개발자가 이더리움 스마트 컨트랙트를 작성하고 호출하기 위한 작업 흐름](https://medium.com/coinmonks/a-net-developers-workflow-for-creating-and-calling-ethereum-smart-contracts-44714f191db2)
-- [Nethereum과 스마트 컨트랙트의 통합](https://kauri.io/article/b54334b0695342c1bbe161c4c4467b50/smart-contracts-integration-with-nethereum)
+- [Nethereum과 스마트 컨트랙트의 통합](https://kauri.io/#collections/getting%20started/smart-contracts-integration-with-nethereum/#smart-contracts-integration-with-nethereum)
 - [.NET 및 이더리움 블록체인 스마트 컨트랙트와 Nethereum 연결하기](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933), [中文版](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1) 이용 가능
-- [Nethereum - 블록체인 개발을 위한 오픈 소스 .NET 통합 라이브러리](https://kauri.io/article/d15dfd4903f149cdb84b3ce666103b52/v1/nethereum-an-open-source-.net-integration-library-for-blockchain)
+- [Nethereum - 블록체인 개발을 위한 오픈 소스 .NET 통합 라이브러리](https://kauri.io/#collections/a%20hackathon%20survival%20guide/nethereum-an-open-source-.net-integration-library/)
 - [네더리움(Nethereum) 을 사용하여 SQL 데이터베이스에 이더리움 트랜잭션 기입하기](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
 - [C 및 비주얼 스튜디오를 사용하여 이더리움 스마트 컨트랙트를 간편하게# 배포하는 방법 알아보기](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c)
 
