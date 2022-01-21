@@ -160,4 +160,4 @@ Berikut adalah beberapa aplikasi perusahaan yang telah digunakan pada Jaringan U
 
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _pembayaran pemakaian listrik_
 
-Jika Anda ingin menambahkan daftar ini, silahkan baca [instruksi untuk berkontribusi](/contributing/).
+Jika Anda ingin menambahkan daftar ini, silahkan baca [instruksi untuk berkontribusi](https://ethereum.org/en/contributing/).

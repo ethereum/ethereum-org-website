@@ -19,7 +19,7 @@ Il termine "nodo" si riferisce a un software noto come client. Un client è una 
 
 Puoi avere una panoramica in tempo reale della rete Ethereum dando un'occhiata a questa [mappa dei nodi](https://etherscan.io/nodetracker).
 
-Molte [implementazioni dei client Ethereum](/developers/docs/nodes-and-clients/#clients) sono disponibili in una varietà di lingue. Hanno in comune il fatto di seguire una specifica ufficiale che determina come funziona la rete Ethereum e la blockchain.
+Molte [implementazioni dei client Ethereum](/developers/docs/nodes-and-clients/#execution-clients) sono disponibili in una varietà di lingue. Hanno in comune il fatto di seguire una specifica ufficiale che determina come funziona la rete Ethereum e la blockchain.
 
 ![Client Eth1x](../../../../../developers/docs/nodes-and-clients/client-diagram.png) Diagramma semplificato delle caratteristiche di un client Ethereum.
 
@@ -99,7 +99,7 @@ Se qualcuno esegue un nodo Ethereum con un'API pubblica nella tua community, puo
 
 D'altro canto, se esegui un client, puoi condividerlo con i amici che potrebbero averne bisogno.
 
-## Client {#clients}
+## Client {#execution-clients}
 
 Ethereum è progettato per offrire client diversi, sviluppati da team diversi, utilizzando linguaggi di programmazione diversi. Questo rende la rete più forte e diversificata. L'obiettivo ideale è raggiungere la diversità senza che nessun client prevalga, per ridurre eventuali punti di errore singoli.
 
@@ -210,11 +210,11 @@ Il modo più conveniente ed economico di eseguire un il nodo Ethereum è quello 
 
 Dispositivi piccoli, convenienti ed efficienti come questi sono ideali per eseguire un nodo a casa.
 
-## Client Eth2 {#eth2-clients}
+## Client Eth2 {#consensus-clients}
 
-Ci sono nuovi client per supportare gli [upgrade a Eth2](/eth2/beacon-chain/). Eseguiranno la beacon chain e supporteranno il nuovo meccanismo di consenso [proof-of-stake](/developers/docs/consensus-mechanisms/pos/).
+Ci sono nuovi client per supportare gli [upgrade a Eth2](/upgrades/beacon-chain/). Eseguiranno la beacon chain e supporteranno il nuovo meccanismo di consenso [proof-of-stake](/developers/docs/consensus-mechanisms/pos/).
 
-[Visualizza i clienti Eth2](/eth2/get-involved/#clients).
+[Visualizza i clienti Eth2](/upgrades/get-involved/#clients).
 
 ## Letture consigliate {#further-reading}
 
