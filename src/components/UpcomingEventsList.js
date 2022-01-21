@@ -39,10 +39,6 @@ const EventList = styled.div`
   }
 `
 
-const EventListItem = styled.div`
-  list-style-type: none;
-`
-
 const UpcomingEventsList = () => {
   const [orderedUpcomingEvents, setOrderedUpcomingEvents] = useState()
 
@@ -113,7 +109,7 @@ const UpcomingEventsList = () => {
               date={date}
               description={formattedDetails}
               location={location}
-              idx={idx}
+              isEven={(idx + 1) % 2 === 0}
             />
           )
         }

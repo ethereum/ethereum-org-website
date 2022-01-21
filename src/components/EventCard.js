@@ -13,6 +13,10 @@ const StyledCard = styled.div`
     width: 100%;
     clear: both;
   }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    margin-top: 30px;
+  }
 `
 
 const StyledCardReference = styled.div`
@@ -24,6 +28,10 @@ const StyledCardReference = styled.div`
   left: 50%;
   overflow: hidden;
   margin-left: -12px;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    display: none;
+  }
 `
 
 const StyledCardContent = styled.div`
@@ -42,18 +50,31 @@ const StyledCardContent = styled.div`
     height: 3px;
     border-left: 25px solid ${(props) => props.theme.colors.primary};
   }
-`
 
-const StyledCardContentRight = styled(StyledCardContent)`
-  float: right;
-  margin-top: -25%;
+  &.style-card-content-right {
+    float: right;
+    margin-top: -25%;
 
-  &:before {
-    content: "";
-    right: 45%;
-    left: inherit;
-    border-left: 0;
-    border-right: 25px solid ${(props) => props.theme.colors.primary};
+    &:before {
+      content: "";
+      right: 45%;
+      left: inherit;
+      border-left: 0;
+      border-right: 25px solid ${(props) => props.theme.colors.primary};
+    }
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    width: 100%;
+    float: right;
+
+    &.style-card-content-right {
+      margin-top: 0;
+    }
+
+    &:before {
+      display: none;
+    }
   }
 `
 
@@ -87,44 +108,24 @@ const EventCard = ({
   description,
   className,
   location,
-  idx,
-}) => {
-  const isEven = (idx + 1) % 2 === 0
-  return (
-    <StyledCard className={className}>
-      <StyledCardReference />
-      {!isEven && (
-        <StyledCardContent>
-          <Date>
-            {date}
-            <Emoji text=":spiral_calendar:" size={1} ml={`0.5em`} />
-          </Date>
-          <Location>
-            <LocationText>{location}</LocationText>
-            <Emoji text=":round_pushpin:" size={1} ml={`0.5em`} />
-          </Location>
-          <Title>{title}</Title>
-          <Description>{description}</Description>
-          <ButtonLink to={to}>View Event</ButtonLink>
-        </StyledCardContent>
-      )}
-      {isEven && (
-        <StyledCardContentRight>
-          <Date>
-            {date}
-            <Emoji text=":spiral_calendar:" size={1} ml={`0.5em`} />
-          </Date>
-          <Location>
-            <LocationText>{location}</LocationText>
-            <Emoji text=":round_pushpin:" size={1} ml={`0.5em`} />
-          </Location>
-          <Title>{title}</Title>
-          <Description>{description}</Description>
-          <ButtonLink to={to}>View Event</ButtonLink>
-        </StyledCardContentRight>
-      )}
-    </StyledCard>
-  )
-}
+  isEven,
+}) => (
+  <StyledCard className={className}>
+    <StyledCardReference />
+    <StyledCardContent className={isEven && "style-card-content-right"}>
+      <Date>
+        {date}
+        <Emoji text=":spiral_calendar:" size={1} ml={`0.5em`} />
+      </Date>
+      <Location>
+        <LocationText>{location}</LocationText>
+        <Emoji text=":round_pushpin:" size={1} ml={`0.5em`} />
+      </Location>
+      <Title>{title}</Title>
+      <Description>{description}</Description>
+      <ButtonLink to={to}>View Event</ButtonLink>
+    </StyledCardContent>
+  </StyledCard>
+)
 
 export default EventCard
