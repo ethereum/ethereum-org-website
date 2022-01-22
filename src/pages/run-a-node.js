@@ -4,7 +4,6 @@ import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
-import { motion } from "framer-motion"
 
 // Assets
 import dappnode from "../assets/run-a-node/dappnode.svg"
@@ -18,6 +17,7 @@ import voteGlyph from "../assets/run-a-node/vote-glyph.svg"
 import earthGlyph from "../assets/run-a-node/earth-glyph.svg"
 import plugAndPlayGlyph from "../assets/run-a-node/plug-and-play-glyph.svg"
 import downloadGlyph from "../assets/run-a-node/download-glyph.svg"
+import hardwareGlyph from "../assets/run-a-node/hardware-glyph.svg"
 
 // Components
 import PageHero from "../components/PageHero"
@@ -122,6 +122,9 @@ const ResponsiveButtonLink = styled(ButtonLink)`
   align-items: center;
   gap: 1rem;
   width: fit-content;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
   &:hover {
     svg {
       fill: ${({ theme }) => theme.colors.buttonColor};
@@ -290,16 +293,11 @@ const BuildBox = styled(Container)`
   }
 `
 
-const BuildFlex = styled(Flex)`
-  padding-bottom: 2rem;
-`
-
 const FullyLoaded = styled(Container)`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   line-height: 200%;
-  padding-bottom: 2rem;
+  padding: 2rem;
   p {
     font-size: 110%;
   }
@@ -325,18 +323,6 @@ const FullyLoaded = styled(Container)`
   }
 `
 
-const AdventureContainer = styled(Container)`
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 2rem;
-  &:hover {
-    transition: transform 0.1s;
-    transform: scale(1.02);
-  }
-`
-
 const SvgTitle = styled.div`
   display: flex;
   gap: 1rem;
@@ -347,7 +333,7 @@ const ButtonContainer = styled.div`
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     flex-direction: column;
   }
 `
@@ -363,6 +349,17 @@ const DappNodeButtonLink = styled(ResponsiveButtonLink)`
   }
 `
 
+const DappNodeSetupButtonContainer = styled(ButtonContainer)`
+  align-self: center;
+  margin-top: auto;
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+    align-self: flex-start;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
+    width: 100%;
+  }
+`
+
 const AvadoButtonLink = styled(ResponsiveButtonLink)`
   background-color: #37822e;
   span {
@@ -373,8 +370,6 @@ const AvadoButtonLink = styled(ResponsiveButtonLink)`
     box-shadow: 4px 4px 0 0 #37822e77;
   }
 `
-
-const BuildButtonLink = styled(ResponsiveButtonLink)``
 
 const StyledEmoji = styled(Emoji)`
   margin-right: 1rem;
@@ -401,18 +396,28 @@ const CenteredContainer = styled(Container)`
   }
 `
 
+const HardwareContainer = styled(Container)`
+  flex: 3;
+  padding: 2rem;
+`
+
+const SoftwareContainer = styled(FullyLoaded)`
+  flex: 1;
+`
+
 const ScrollButtonSecondary = styled.button`
   text-decoration: none;
   display: inline-block;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 2rem;
+  margin-top: 1rem;
   font-size: 1rem;
   border-radius: 0.25em;
   text-align: center;
+  cursor: pointer;
 
   color: ${({ theme }) => theme.colors.text};
   border: 1px solid ${({ theme }) => theme.colors.text};
   background-color: transparent;
-
   &:hover {
     color: ${({ theme }) => theme.colors.primary};
     border: 1px solid ${({ theme }) => theme.colors.primary};
@@ -421,6 +426,10 @@ const ScrollButtonSecondary = styled.button`
   &:active {
     background-color: ${({ theme }) =>
       theme.colors.secondaryButtonBackgroundActive};
+  }
+  &:hover {
+    transition: transform 0.1s;
+    transform: scale(1.05);
   }
 `
 
@@ -769,129 +778,99 @@ const RunANodePage = ({ data }) => {
       </Content>
       <Content id="build-your-own">
         <h2>Build your own</h2>
-        <Container>
-          <BuildFlex>
-            <BuildBox>
-              <h4>
-                <Translation id="page-run-a-node-build-your-own-minimum-specs" />
-              </h4>
-              <ul>
-                <li>
-                  <p>
-                    <Translation id="page-run-a-node-build-your-own-min-ram" />
-                  </p>
-                  <p>
-                    <ScrollLink onClick={() => scrollToId("plan-on-staking")}>
-                      <Translation id="page-run-a-node-build-your-own-ram-note-1" />
-                    </ScrollLink>
-                  </p>
-                  <p>
-                    <ScrollLink onClick={() => scrollToId("rasp-pi")}>
-                      <Translation id="page-run-a-node-build-your-own-ram-note-2" />
-                    </ScrollLink>
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <Translation id="page-run-a-node-build-your-own-min-ssd" />
-                  </p>
-                  <p>
-                    <small>
-                      <em>
-                        <Translation id="page-run-a-node-build-your-own-ssd-note" />
-                      </em>
-                    </small>
-                  </p>
-                </li>
-              </ul>
-            </BuildBox>
-
-            <BuildBox>
-              <h4>
-                <Translation id="page-run-a-node-build-your-own-recommended" />
-              </h4>
-              <ul>
-                <li>
-                  <Translation id="page-run-a-node-build-your-own-nuc" />
-                  <p>
-                    <small>
-                      <Translation id="page-run-a-node-build-your-own-nuc-small" />
-                    </small>
-                  </p>
-                </li>
-                <li>
-                  <Translation id="page-run-a-node-build-your-own-connection" />
-                  <p>
-                    <small>
-                      <Translation id="page-run-a-node-build-your-own-connection-small" />
-                    </small>
-                  </p>
-                </li>
-                <li>
-                  <Translation id="page-run-a-node-build-your-own-peripherals" />
-                  <p>
-                    <small>
-                      <Translation id="page-run-a-node-build-your-own-peripherals-small" />
-                    </small>
-                  </p>
-                </li>
-              </ul>
-            </BuildBox>
-          </BuildFlex>
-        </Container>
-      </Content>
-
-      <Content>
-        <h2>
-          <Translation id="page-run-a-node-getting-started-software-title" />
-        </h2>
-      </Content>
-
-      <Content id="choose-your-adventure">
-        <h2>
-          <Translation id="page-run-a-node-choose-your-adventure" />
-        </h2>
-        <Flex>
-          <AdventureContainer>
+        <MarginFlex>
+          <HardwareContainer>
             <SvgTitle>
-              <img
-                src={plugAndPlayGlyph}
-                alt={translateMessageId("page-run-a-node-glyph-alt-pnp", intl)}
-              />
-              <h3>
-                <Translation id="page-run-a-node-plug-and-play-title" />
-              </h3>
+              <img src={hardwareGlyph} alt="Hardware glyph" />
+              <h3>Hardware</h3>
+            </SvgTitle>
+
+            <Flex>
+              <BuildBox>
+                <h4>
+                  <Translation id="page-run-a-node-build-your-own-minimum-specs" />
+                </h4>
+                <ul>
+                  <li>
+                    <p>
+                      <Translation id="page-run-a-node-build-your-own-min-ram" />
+                    </p>
+                    <p>
+                      <ScrollLink onClick={() => scrollToId("plan-on-staking")}>
+                        <Translation id="page-run-a-node-build-your-own-ram-note-1" />
+                      </ScrollLink>
+                    </p>
+                    <p>
+                      <ScrollLink onClick={() => scrollToId("rasp-pi")}>
+                        <Translation id="page-run-a-node-build-your-own-ram-note-2" />
+                      </ScrollLink>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <Translation id="page-run-a-node-build-your-own-min-ssd" />
+                    </p>
+                    <p>
+                      <small>
+                        <em>
+                          <Translation id="page-run-a-node-build-your-own-ssd-note" />
+                        </em>
+                      </small>
+                    </p>
+                  </li>
+                </ul>
+              </BuildBox>
+
+              <BuildBox>
+                <h4>
+                  <Translation id="page-run-a-node-build-your-own-recommended" />
+                </h4>
+                <ul>
+                  <li>
+                    <Translation id="page-run-a-node-build-your-own-nuc" />
+                    <p>
+                      <small>
+                        <Translation id="page-run-a-node-build-your-own-nuc-small" />
+                      </small>
+                    </p>
+                  </li>
+                  <li>
+                    <Translation id="page-run-a-node-build-your-own-connection" />
+                    <p>
+                      <small>
+                        <Translation id="page-run-a-node-build-your-own-connection-small" />
+                      </small>
+                    </p>
+                  </li>
+                  <li>
+                    <Translation id="page-run-a-node-build-your-own-peripherals" />
+                    <p>
+                      <small>
+                        <Translation id="page-run-a-node-build-your-own-peripherals-small" />
+                      </small>
+                    </p>
+                  </li>
+                </ul>
+              </BuildBox>
+            </Flex>
+          </HardwareContainer>
+
+          <SoftwareContainer>
+            <SvgTitle>
+              <img src={downloadGlyph} alt="Download glyph" />
+              <h3>Software</h3>
             </SvgTitle>
             <p>
-              <Translation id="page-run-a-node-plug-and-play-1" />
+              When you're ready with your hardware, DAppNode can be downloaded
+              from any computer and installed onto a fresh SSD via a USB drive.
             </p>
-          </AdventureContainer>
-
-          <AdventureContainer>
-            <div>
-              <SvgTitle>
-                <img
-                  src={downloadGlyph}
-                  alt={translateMessageId(
-                    "page-run-a-node-glyph-alt-download",
-                    intl
-                  )}
-                />
-                <h3>
-                  <Translation id="page-run-a-node-install-manually-title" />
-                </h3>
-              </SvgTitle>
-              <p>
-                <Translation id="page-run-a-node-install-manually-1" />
-              </p>
-            </div>
-            <ButtonContainer>
+            <DappNodeSetupButtonContainer>
               <DappNodeButtonLink to="https://docs.dappnode.io">
                 <Translation id="page-run-a-node-dappnode-setup" />
               </DappNodeButtonLink>
-            </ButtonContainer>
-          </AdventureContainer>
-        </Flex>
+            </DappNodeSetupButtonContainer>
+          </SoftwareContainer>
+        </MarginFlex>
       </Content>
 
       <Content>
