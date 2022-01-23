@@ -64,7 +64,7 @@ Wszystkie implementacje EVM muszą być zgodne ze specyfikacją opisaną w Yello
 
 W ponad pięcioletniej historii Ethereum, EVM przeszło kilka gruntownych weryfikacji, w ciągu tego czasu znajdziemy również kilka implementacji EVM w różnych językach programowania.
 
-Wszyscy [klienci Ethereum](/developers/docs/nodes-and-clients/#clients) posiadają implementacje EVM. Dodatkowo jest tu kilka samodzielnych implementacji, włącznie z:
+Wszyscy [klienci Ethereum](/developers/docs/nodes-and-clients/#execution-clients) posiadają implementacje EVM. Dodatkowo jest tu kilka samodzielnych implementacji, włącznie z:
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_

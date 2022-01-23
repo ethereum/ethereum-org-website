@@ -464,10 +464,13 @@ const HomePage = ({ data, pageContext: { language } }) => {
   const touts = [
     {
       image: getImage(data.merge),
-      alt: translateMessageId("page-index-tout-eth2-image-alt", intl),
-      title: translateMessageId("page-index-tout-eth2-title", intl),
-      description: translateMessageId("page-index-tout-eth2-description", intl),
-      to: "/eth2/",
+      alt: translateMessageId("page-index-tout-upgrades-image-alt", intl),
+      title: translateMessageId("page-index-tout-upgrades-title", intl),
+      description: translateMessageId(
+        "page-index-tout-upgrades-description",
+        intl
+      ),
+      to: "/upgrades/",
     },
     {
       image: getImage(data.infrastructurefixed),
@@ -933,8 +936,14 @@ contract SimpleDomainRegistry {
           })}
         </StyledCardContainer>
         <StyledCalloutBanner
-          titleKey={"page-index-contribution-banner-title"}
-          descriptionKey={"page-index-contribution-banner-description"}
+          title={translateMessageId(
+            "page-index-contribution-banner-title",
+            intl
+          )}
+          description={translateMessageId(
+            "page-index-contribution-banner-description",
+            intl
+          )}
           image={getImage(data.finance)}
           maxImageWidth={600}
           alt={translateMessageId(
@@ -943,7 +952,7 @@ contract SimpleDomainRegistry {
           )}
         >
           <ButtonRow>
-            <ButtonLink to="/contributing/">
+            <ButtonLink to="/en/contributing/">
               <Translation id="page-index-contribution-banner-button" />
             </ButtonLink>
             <StyledButtonLink
@@ -1067,7 +1076,7 @@ export const query = graphql`
         )
       }
     }
-    merge: file(relativePath: { eq: "eth2/merge.png" }) {
+    merge: file(relativePath: { eq: "upgrades/merge.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 320

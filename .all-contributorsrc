@@ -4166,7 +4166,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/39592448?v=4",
       "profile": "https://github.com/RaynHarr",
       "contributions": [
-        "content"
+        "content",
+        "doc"
       ]
     },
     {
@@ -6235,6 +6236,53 @@
       "profile": "https://github.com/guevaraf",
       "contributions": [
         "doc"
+      ]
+    },
+    {
+      "login": "garrivjo",
+      "name": "Jose Manuel Garcia Rivas",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31991694?v=4",
+      "profile": "https://github.com/garrivjo",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "PolySages",
+      "name": "PolySages",
+      "avatar_url": "https://avatars.githubusercontent.com/u/98001681?v=4",
+      "profile": "https://github.com/PolySages",
+      "contributions": [
+        "bug",
+        "doc"
+      ]
+    },
+    {
+      "login": "zainabb12345",
+      "name": "Zainab Hasan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59745525?v=4",
+      "profile": "https://github.com/zainabb12345",
+      "contributions": [
+        "doc",
+        "ideas"
+      ]
+    },
+    {
+      "login": "mdedeu",
+      "name": "Marcos Dedeu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/62359173?v=4",
+      "profile": "https://github.com/mdedeu",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "SunitRoy2703",
+      "name": "Sunit Roy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67560900?v=4",
+      "profile": "https://bit.ly/SunitRoyYT",
+      "contributions": [
+        "bug"
       ]
     }
   ],

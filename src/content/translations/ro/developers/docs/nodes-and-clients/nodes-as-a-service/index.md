@@ -25,7 +25,7 @@ Unele servicii îți oferă propriul nod dedicat pe care îl gestionează pentru
 
 Aproape toate serviciile de noduri sunt extrem de ușor de integrat, implicând modificări ale unei linii în codul tău pentru a schimba nodul găzduit de tine sau chiar a comuta între aceste servicii.
 
-De multe ori serviciile de noduri vor rula o varietate de [clienți noduri](/developers/docs/nodes-and-clients/#clients) și [tipuri de noduri](/developers/docs/nodes-and-clients/#node-types), permițându-ți să accesezi complet și să arhivezi nodurile, în plus față de metodele specifice client într-un API.
+De multe ori serviciile de noduri vor rula o varietate de [clienți noduri](/developers/docs/nodes-and-clients/#execution-clients) și [tipuri de noduri](/developers/docs/nodes-and-clients/#node-types), permițându-ți să accesezi complet și să arhivezi nodurile, în plus față de metodele specifice client într-un API.
 
 Este important să reții că serviciile de noduri nu stochează și nu ar trebui să stocheze cheile sau informațiile tale private.
 

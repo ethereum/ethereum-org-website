@@ -59,7 +59,7 @@ Az összes EVM implementációnak meg kell felelnie az Ethereum sárgakönyvben 
 
 Az Ethereum 5 éves története alatt az EVM több revízió alatt átesett és számos EVM implementáció létezik különböző programozási nyelveken.
 
-Az összes [Ethereum kliens](/developers/docs/nodes-and-clients/#clients) tartalmaz egy EVM implementációt. Továbbá több önálló implementáció létezik, többek között:
+Az összes [Ethereum kliens](/developers/docs/nodes-and-clients/#execution-clients) tartalmaz egy EVM implementációt. Továbbá több önálló implementáció létezik, többek között:
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_

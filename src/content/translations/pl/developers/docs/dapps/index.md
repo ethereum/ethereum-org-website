@@ -49,7 +49,7 @@ Inteligentny kontrakt to kod, który znajduje się na blockchainie Ethereum i dz
 **One ​​Click Dapp** **_– narzędzie FOSS do generowania frontendów dapp z ABI._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
-- [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
+- [GitHub](https://github.com/One-Click-Dapp/one-click-dApp)
 
 **Etherflow** **_– narzędzie FOSS dla programistów Ethereum do testowania ich węzła i tworzenia oraz debugowania wywołań RPC z przeglądarki._**
 

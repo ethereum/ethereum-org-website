@@ -481,7 +481,7 @@ const StablecoinAccordion = () => {
         intl
       ),
       image: getImage(data.eth),
-      link: "/eth2/get-involved/bug-bounty/",
+      link: "/upgrades/get-involved/bug-bounty/",
       description: translateMessageId(
         "page-stablecoins-accordion-earn-project-3-description",
         intl
