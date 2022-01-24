@@ -1,5 +1,5 @@
 ---
-title: Translation program frequently asked questions
+title: Translation Program frequently asked questions (FAQ)
 lang: en
 description: Frequently asked questions about the ethereum.org translation program
 sidebar: true
