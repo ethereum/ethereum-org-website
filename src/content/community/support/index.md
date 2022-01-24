@@ -71,7 +71,7 @@ Most of the teams building Ethereum clients also have dedicated, public-facing, 
 - [Geth](https://discord.gg/FqDzupGyYf)
 - [Nethermind](https://discord.gg/YJx3pm8z5C)
 - [Besu](https://discord.gg/p8djYngzKN)
-- [Ergion](https://github.com/ledgerwatch/erigon/issues)
+- [Erigon](https://github.com/ledgerwatch/erigon/issues)
 
 ### Consensus clients {#consensus-clients}
 
