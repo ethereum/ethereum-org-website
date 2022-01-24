@@ -197,6 +197,14 @@ The ENS registry is a single central [contract](#smart-contract) that provides a
 
 In the context of cryptography, lack of predictability or level of randomness. When generating secret information, such as [private keys](#private-key), algorithms usually rely on a source of high entropy to ensure the output is unpredictable.
 
+### execution client {#execution-client}
+
+After the merge to [proof-of-stake](#pos) existing Ethereum mainnet clients will continue to host the [Ethereum Virtual Machine](#evm), validate transactions and execute state transitions but will not participate in consensus. These clients will therefore be referred to asd "execution clients".
+
+### execution layer
+
+Ethereum's execution layer is the network of [execution clients](#execution-client).
+
 ### externally owned account (EOA) {#eoa}
 
 An [account](#account) created by or for human users of the Ethereum network.
