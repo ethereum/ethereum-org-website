@@ -63,7 +63,7 @@ A validator vote for a [Beacon Chain](#beacon-chain) or [shard](#shard) [block](
 
 Every [block](#block) has a reserve price known as the 'base fee'. It is the minimum [gas](#gas) fee a user must pay to include a transaction in the next block.
 
-<DocLink to="developers/docs/gas/">
+<DocLink to="/developers/docs/gas/">
   Gas and fees
 </DocLink>
 

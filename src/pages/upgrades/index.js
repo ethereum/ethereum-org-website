@@ -377,6 +377,11 @@ const Eth2IndexPage = ({ data }) => {
             <p>
               <Translation id="page-upgrades-what-happened-to-eth2-4" />
             </p>
+            <p>
+              <Link to="https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/">
+                <Translation id="page-upgrades-what-happened-to-eth2-5" />
+              </Link>
+            </p>
           </div>
         </ContributeCard>
         <ContributeCard>

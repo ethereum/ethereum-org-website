@@ -247,9 +247,6 @@ const EthExchanges = () => {
       cryptocom: file(relativePath: { eq: "exchanges/crypto.com.png" }) {
         ...cardListImage
       }
-      dharma: file(relativePath: { eq: "wallets/dharma.png" }) {
-        ...cardListImage
-      }
       gemini: file(relativePath: { eq: "exchanges/gemini.png" }) {
         ...cardListImage
       }
@@ -377,12 +374,6 @@ const EthExchanges = () => {
           url: "https://squarelink.com/	",
           platform: "Web",
           image: data.squarelink,
-        },
-        Dharma: {
-          url: "https://www.dharma.io/	",
-          platform: "Mobile",
-          image: data.dharma,
-          isUsaOnly: true,
         },
       },
     },

@@ -221,9 +221,6 @@ const WalletCompare = ({ location }) => {
       dcent: file(relativePath: { eq: "wallets/dcent.png" }) {
         ...walletCardImage
       }
-      dharma: file(relativePath: { eq: "wallets/dharma.png" }) {
-        ...walletCardImage
-      }
       enjin: file(relativePath: { eq: "wallets/enjin.png" }) {
         ...walletCardImage
       }
@@ -318,6 +315,15 @@ const WalletCompare = ({ location }) => {
         ...walletCardImage
       }
       keystone: file(relativePath: { eq: "wallets/keystone.png" }) {
+        ...walletCardImage
+      }
+      loopring: file(relativePath: { eq: "wallets/loopring.png" }) {
+        ...walletCardImage
+      }
+      numio: file(relativePath: { eq: "wallets/numio.png" }) {
+        ...walletCardImage
+      }
+      airgap: file(relativePath: { eq: "wallets/airgap.png" }) {
         ...walletCardImage
       }
     }
