@@ -12,7 +12,7 @@ summaryPoint4: 技術ロードマップの「フェーズ0」としも知られ�
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
-    ビーコンチェーンは2020年12月1日正午(UTC)にリリースされました。 詳細については、 <a href="https://beaconscan.com/">データ</a> を参照してください。 このビーコンチェーンの正当性は、 <a href="/upgrades/staking/">ETHを投資</a>することで援助できます。
+    ビーコンチェーンは2020年12月1日正午(UTC)にリリースされました。 詳細については、 <a href="https://beaconscan.com/">データ</a> を参照してください。 このビーコンチェーンの正当性は、 <a href="/staking/">ETHを投資</a>することで援助できます。
 </UpgradeStatus>
 
 ## ビーコンチェーンとは何をするものでしょう? {#what-does-the-beacon-chain-do}

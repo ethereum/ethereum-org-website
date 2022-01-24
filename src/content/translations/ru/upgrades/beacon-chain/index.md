@@ -12,12 +12,12 @@ summaryPoint4: В технических дорожных картах вы мо
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
-    Beacon Chain запущена 1 декабря в полдень по UTC. Чтобы узнать больше, <a href="https://beaconscan. com/">ознакомьтесь с данными</a>. Если вы хотите помочь с проверкой цепочки, вы можете <a href="/upgrades/staking/">вложить свои ETH</a>.
+    Beacon Chain запущена 1 декабря в полдень по UTC. Чтобы узнать больше, <a href="https://beaconscan. com/">ознакомьтесь с данными</a>. Если вы хотите помочь с проверкой цепочки, вы можете <a href="/staking/">вложить свои ETH</a>.
 </UpgradeStatus>
 
 ## Что делает Beacon Chain? {#what-does-the-beacon-chain-do}
 
-Beacon Chain будет осуществлять или координировать расширенную сеть [осколков](/upgrades/shard-chains/) и [стейкеров](/upgrades/staking/). Но это не будет похоже на сегодняшнюю [основную сеть Ethereum](/glossary/#mainnet). Она не может работать с аккаунтами или смарт-контрактами.
+Beacon Chain будет осуществлять или координировать расширенную сеть [осколков](/upgrades/shard-chains/) и [стейкеров](/staking/). Но это не будет похоже на сегодняшнюю [основную сеть Ethereum](/glossary/#mainnet). Она не может работать с аккаунтами или смарт-контрактами.
 
 Роль Beacon Chain со временем изменится, но это основополагающий компонент для [безопасного, устойчивого и масштабируемого Ethereum, над которым мы работаем](/upgrades/vision/).
 
