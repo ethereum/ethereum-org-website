@@ -123,6 +123,14 @@ A group of at least 128 [validators](#validator) assigned to beacon and shard bl
 
 When numerous nodes (usually most nodes on the network) all have the same blocks in their locally validated best blockchain. Not to be confused with [consensus rules](#consensus-rules).
 
+### consensus client {consensus-client}
+
+After the merge to [proof-of-stake](#pos), consensus about the true head of the blockchain will be governed by a new set of clients running on the Beacon Chain. These are "consensus clients". They do not participate in validating transactions or executing state transitions, they request this to be done by [execution clients](#execution-client).
+
+### consensus layer {consensus-layer}
+
+The network of Ethereum [consensus clients](#consensus-client).
+
 ### consensus rules {#consensus-rules}
 
 The block validation rules that full nodes follow to stay in consensus with other nodes. Not to be confused with [consensus](#consensus).
