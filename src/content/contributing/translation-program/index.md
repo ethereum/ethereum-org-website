@@ -114,7 +114,7 @@ If you are an ethereum.org translator or would like to become one, feel free to 
 
 <InfoBanner shouldCenter emoji=":information_source:">
   If you're helping us with translations, you might find some useful information in our translations FAQ. 
-  {" "}<Link to="/en/contributing/translation-program/translation-guide/">Translating ethereum.org FAQ</Link>
+  {" "}<Link to="/en/contributing/translation-program/faq/">Translating ethereum.org FAQ</Link>
 </InfoBanner>
 
 ## Resources {#resources}

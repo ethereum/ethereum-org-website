@@ -38,7 +38,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Decentralized finance (DeFi)](/defi/)
 - [Non-fungible tokens (NFT)](/nft/)
 - [Translation Program](/contributing/translation-program/)
-- [Translation guide](/contributing/translation-program/translation-guide/)
+- [Translation guide](/contributing/translation-program/faq/)
 - [Ethereum grants](/community/grants/)
 - [Translator acknowledgements](/contributing/translation-program/)
 - [Our translators](/contributing/translation-program/contributors/)
