@@ -1354,6 +1354,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://bit.ly/SunitRoyYT"><img src="https://avatars.githubusercontent.com/u/67560900?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sunit Roy</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ASunitRoy2703" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://www.facebook.com/gabriel.antunes.garcia/"><img src="https://avatars.githubusercontent.com/u/15985195?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gabriel Garcia</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=astutejoe" title="Documentation">📖</a></td>
     <td align="center"><a href="https://tiagoyonamine.com"><img src="https://avatars.githubusercontent.com/u/6979032?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tiago Yonamine</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=tiagoyonamine" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://ww.erikhunter.dev"><img src="https://avatars.githubusercontent.com/u/12377787?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Erik Hunter</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Ej1seven" title="Documentation">📖</a></td>
   </tr>
 </table>
 
