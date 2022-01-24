@@ -32,7 +32,7 @@ Selengkapnya tentang [kontrak pintar](/developers/docs/smart-contracts/).
 
 ### Mesin virtual Ethereum {#the-ethereum-virtual-machine}
 
-Ada implementasi Javascript dari [mesin virtual Ethereum](/en/developers/docs/evm/). Mendukung aturan fork terbaru. Aturan-aturan fork mengacu pada perubahan yang dibuat pada EVM sebagai hasil dari peningkatan yang direncanakan.
+Ada implementasi Javascript dari [mesin virtual Ethereum](/developers/docs/evm/). Mendukung aturan fork terbaru. Aturan-aturan fork mengacu pada perubahan yang dibuat pada EVM sebagai hasil dari peningkatan yang direncanakan.
 
 Itu dibagi menjadi berbagai paket JavaScript yang dapat Anda periksa untuk lebih memahaminya:
 
