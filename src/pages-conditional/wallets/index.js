@@ -759,5 +759,8 @@ export const query = graphql`
     loopring: file(relativePath: { eq: "wallets/loopring.png" }) {
       ...listImage
     }
+    numio: file(relativePath: { eq: "wallets/numio.png" }) {
+      ...listImage
+    }
   }
 `
