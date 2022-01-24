@@ -50,7 +50,7 @@ Il voto di un validatore per una [beacon chain](#beacon-chain) o [blocco](#block
 
 Aggiornamento a Eth2 che diventerà il coordinatore della rete Ethereum. Introduce la [proof-of-stake](#proof-of-stake) e i [validatori](#validator) in Ethereum. Alla fine sarà unita con la [rete principale](#mainnet).
 
-<DocLink to="/eth2/beacon-chain/">
+<DocLink to="/upgrades/beacon-chain/">
   Beacon chain
 </DocLink>
 
@@ -446,7 +446,7 @@ Client di Ethereum che non memorizza una copia locale della [blockchain](#blockc
 
 ### rete principale {#mainnet}
 
-In inglese mainnet, è la [blockchain](#blockchain) Ethereum pubblica principale. ETH reali, valore reale e conseguenze reali. Viene detta livello 1 quando si parla di soluzioni per passare al [livello 2](#layer-2). (Vedi anche [rete di prova](#testnet))
+In inglese Mainnet, è la [blockchain](#blockchain) Ethereum pubblica principale. ETH reali, valore reale e conseguenze reali. Viene detta livello 1 quando si parla di soluzioni per passare al [livello 2](#layer-2). (Vedi anche [rete di prova](#testnet))
 
 ### albero di Merkle Patricia {#merkle-patricia-tree}
 
@@ -604,7 +604,7 @@ Tipo di soluzione per il passaggio al [livello 2](#layer-2) che raggruppa più t
 
 Quarta e ultima fase di sviluppo di Ethereum.
 
-<DocLink to="/eth2/">
+<DocLink to="/upgrades/">
   Ethereum 2.0 (Eth2)
 </DocLink>
 
@@ -616,7 +616,7 @@ Famiglia di funzioni hash crittografiche pubblicata dal National Institute of St
 
 Catena [proof-of-stake](#proof-of-stake) coordinata dalla [beacon chain](#beacon-chain) e protetta dai [validatori](#validator). Ne verranno aggiunte 64 alla rete all'interno dell'upgrade alla shard chain Eth2. Le shard chain offriranno maggiori volumi di transazioni a Ethereum fornendo dati aggiuntivi alle soluzioni di [livello 2](#layer-2) come gli [Optimistic rollup](#optimistic-rollups) e i [rollup ZK](#zk-rollups).
 
-<DocLink to="/eth2/shard-chains">
+<DocLink to="/upgrades/shard-chains">
   Shard chain
 </DocLink>
 
@@ -676,7 +676,7 @@ Token [ERC-20](#token-standard) con un valore ancorato al valore di un'altra ris
 
 Depositare una quantità di [ether](#ether) (lo stake) per diventare validatore e proteggere la [rete](#network). Un validatore controlla [transazioni](#transaction) e propone [blocchi](#block) secondo un modello di consenso [proof-of-stake](#pos). Lo staking dà un incentivo economico per agire nel miglior interesse della rete. Si ottengono ricompense per svolgere i compiti di [validatore](#validator), ma si perdono quantità variabili di ETH se non si svolgono tali compiti.
 
-<DocLink to="/eth2/staking/">
+<DocLink to="/staking/">
   Fai staking con i tuoi ETH per diventare validatore di Ethereum
 </DocLink>
 
@@ -746,7 +746,7 @@ Concetto che prende il nome dal matematico e informatico inglese Alan Turing. Un
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos">
   Proof-of-stake
-</DocLink> <DocLink to="/eth2/staking/">
+</DocLink> <DocLink to="/staking/">
   Staking in Ethereum
 </DocLink>
 

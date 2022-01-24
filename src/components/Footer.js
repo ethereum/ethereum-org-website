@@ -144,8 +144,8 @@ const Footer = () => {
           text: "page-stablecoins-title",
         },
         {
-          to: `/eth2/staking/`,
-          text: "page-eth2-get-involved-stake-eth",
+          to: `/staking/`,
+          text: "page-upgrades-get-involved-stake-eth",
         },
       ],
     },
@@ -173,8 +173,8 @@ const Footer = () => {
           text: "ethereum-whitepaper",
         },
         {
-          text: "ethereum-2-0",
-          to: "/eth2/",
+          text: "ethereum-upgrades",
+          to: "/upgrades/",
         },
         {
           text: "ethereum-security",

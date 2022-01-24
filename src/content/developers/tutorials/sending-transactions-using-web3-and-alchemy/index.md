@@ -60,7 +60,7 @@ Okay, now that we have a few of these questions out of the way, let’s move on 
 
 1.  [Create a free Alchemy account](https://dashboard.alchemyapi.io/signup/)
 2.  [Create Metamask account](https://metamask.io/) (or get an Ethereum address)
-3.  [Follow these steps to install NodeJs and NPM](https://medium.com/guides/alchemy-for-macs)
+3.  [Follow these steps to install NodeJs and NPM](https://docs.alchemy.com/alchemy/guides/alchemy-for-macs)
 
 ## Steps to Sending your Transaction {#steps-to-sending-your-transaction}
 

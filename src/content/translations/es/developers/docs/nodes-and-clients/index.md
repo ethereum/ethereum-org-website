@@ -19,7 +19,7 @@ Un "nodo" se refiere a una pieza de software conocida como cliente. Un cliente e
 
 Puedes observar la red de Ethereum en tiempo real accediendo este [mapa de nodos](https://etherscan.io/nodetracker).
 
-Varias [implementaciones de clientes de Ethereum](/developers/docs/nodes-and-clients/#clients) existen en una variedad lenguajes de programación. Lo que estas implementaciones de clientes tienen en común es que todas siguen una especificación formal. Esta especificación determina cómo funcionan la red de Ethereum y las funciones de la blockchain.
+Varias [implementaciones de clientes de Ethereum](/developers/docs/nodes-and-clients/#execution-clients) existen en una variedad lenguajes de programación. Lo que estas implementaciones de clientes tienen en común es que todas siguen una especificación formal. Esta especificación determina cómo funcionan la red de Ethereum y las funciones de la blockchain.
 
 ![Cliente de Eth1x](../../../../../developers/docs/nodes-and-clients/client-diagram.png) Diagrama simplificado de las características del cliente de Ethereum.
 
@@ -99,7 +99,7 @@ Si alguien ejecuta un nodo de Ethereum con una API pública en tu comunidad, pod
 
 Por otra parte, si administras un cliente, puedes compartirlo con tus amigos que lo necesiten.
 
-## Clientes {#clients}
+## Clientes {#execution-clients}
 
 Ethereum esta diseñado para ofrecer diferentes clientes, desarrollados por diferentes equipos que utilizan diferentes lenguajes de programación. Esto hace que la red sea mas fuerte y más diversa. El objetivo ideal es lograr la diversidad sin que ningún cliente tenga una posición dominante para reducir así los puntos de fracaso.
 
@@ -210,11 +210,11 @@ La manera más conveniente y barata de ejecutar un nodo de Ethereum es usar una 
 
 Los dispositivos pequeños, económicos y eficientes como estos son ideales para ejecutar un nodo en casa.
 
-## Clientes eth2 {#eth2-clients}
+## Clientes eth2 {#consensus-clients}
 
-Hay nuevos clientes que soportan las [actualizaciones de Eth2](/eth2/beacon-chain/). Ellos ejecutarán la cadena de baliza y apoyarán el nuevo mecanismo de consenso [a prueba de estaturas](/developers/docs/consensus-mechanisms/pos/).
+Hay nuevos clientes que soportan las [actualizaciones de Eth2](/upgrades/beacon-chain/). Ellos ejecutarán la cadena de baliza y apoyarán el nuevo mecanismo de consenso [a prueba de estaturas](/developers/docs/consensus-mechanisms/pos/).
 
-[Ver clientes de Eth2](/eth2/get-involved/#clients).
+[Ver clientes de Eth2](/upgrades/get-involved/#clients).
 
 ## Más lectura {#further-reading}
 

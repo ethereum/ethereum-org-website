@@ -123,8 +123,11 @@ const FindWalletPage = ({ location, data }) => {
       <WalletCompare location={location} />
       <Divider />
       <CalloutBanner
-        titleKey={"page-find-wallet-use-your-wallet"}
-        descriptionKey={"page-find-wallet-use-wallet-desc"}
+        title={translateMessageId("page-find-wallet-use-your-wallet", intl)}
+        description={translateMessageId(
+          "page-find-wallet-use-wallet-desc",
+          intl
+        )}
         image={getImage(data.dapps)}
         alt={translateMessageId(
           "page-index-sections-individuals-image-alt",

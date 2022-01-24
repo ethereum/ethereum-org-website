@@ -7,7 +7,7 @@ sidebar: true
 
 为了使软件应用程序能够与以太坊区块链进行交互（读取区块链数据或发送交易信息到网络），软件必须连接到以太坊节点。
 
-为此目的，每个[以太坊客户端](/developers/docs/nodes-and-clients/#clients)都执行 [JSON-RPC 规范](http://www.jsonrpc.org/specification)，所以应用程可以依赖统一的方法集。
+为此目的，每个[以太坊客户端](/developers/docs/nodes-and-clients/#execution-clients)都执行 [JSON-RPC 规范](http://www.jsonrpc.org/specification)，所以应用程可以依赖统一的方法集。
 
 JSON-RPC 是无状态、轻量级远程程序调用 (RPC) 协议。 规范主要界定了若干数据结构和围绕其处理的规则。 它与传输无关，因为这些概念可以在同一进程，通过接口、HTTP 或许多不同的消息传递环境中使用。 它使用 JSON (RFC 4627) 作为数据格式。
 
@@ -18,7 +18,7 @@ JSON-RPC 是无状态、轻量级远程程序调用 (RPC) 协议。 规范主要
 
 ## 客户端实现 {#client-implementations}
 
-每个客户端在执行 JSON-RPC 规范时可以使用不同的编程语言。 更多与特定编程语言相关的详细信息，请查阅[客户端文档](/developers/docs/nodes-and-clients/#clients)。 我们建议查看每个客户端文档以获取最新的 API 支持信息。
+每个客户端在执行 JSON-RPC 规范时可以使用不同的编程语言。 更多与特定编程语言相关的详细信息，请查阅[客户端文档](/developers/docs/nodes-and-clients/#execution-clients)。 我们建议查看每个客户端文档以获取最新的 API 支持信息。
 
 ## 便利性库 {#convenience-libraries}
 

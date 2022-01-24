@@ -50,7 +50,7 @@ Un validador vota por una [cadena de faros](#beacon-chain) o [fragmento](#shard)
 
 Una actualización de Eth2 que se convertirá en el coordinador de la red Ethereum. Introduce [pruebas de apuesta](#proof-of-stake) y [validadores](#validator) en Ethereum. Posiblemente se fusionará con la [red principal](#mainnet).
 
-<DocLink to="/eth2/beacon-chain/">
+<DocLink to="/upgrades/beacon-chain/">
   Cadena de baliza
 </DocLink>
 
@@ -604,7 +604,7 @@ Un tipo de solución de escala de [capa 2](#layer-2) que agrupa varias transacci
 
 La cuarta y última fase de desarrollo de Ethereum.
 
-<DocLink to="/eth2/">
+<DocLink to="/upgrades/">
   Ethereum 2.0 (Eth2)
 </DocLink>
 
@@ -616,7 +616,7 @@ Una familia de funciones de hash criptográficas publicadas por el NIST (siglas 
 
 Una cadena de [prueba de participación](#proof-of-stake) coordinada por la [cadena de baliza](#beacon-chain) y asegurada mediante los [validadores](#validator). Se producirán 64 adiciones a la red como parte de la actualización de la cadena de fragmentos Eth2. Las cadenas de fragmentos ofrecerán un mayor rendimiento de la transacción para Ethereum, ya que proporcionan datos adicionales a soluciones de [capa 2](#layer-2) como [Optimistic Rollups](#optimistic-rollups) y [ZK Rollups](#zk-rollups).
 
-<DocLink to="/eth2/shard-chains">
+<DocLink to="/upgrades/shard-chains">
   Cadenas de fragmentos
 </DocLink>
 
@@ -676,7 +676,7 @@ Un [token ERC-20](#token-standard) con un valor vinculado al valor de otro activ
 
 Depositar una cantidad de [ether](#ether) (tu participación) para convertirte en un validador y asegurar la [red](#network). Un validador comprueba las [transacciones](#transaction) y propone [bloques](#block) bajo un modelo de consenso de [prueba de participación](#pos). La participación te proporciona un incentivo económico para actuar en el mejor interés de la red. Obtendrás recompensas por llevar a cabo tus tareas como [validador](#validator), pero perderás cantidades diferentes de ETH si no las llevas a cabo.
 
-<DocLink to="/eth2/staking/">
+<DocLink to="/staking/">
   Apuesta tus ETH para llegar a ser un validador de Ethereum
 </DocLink>
 
@@ -746,7 +746,7 @@ Un [nodo](#node) en un sistema de [Prueba de participación](#proof-of-stake) re
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos">
   Prueba de participación
-</DocLink> <DocLink to="/eth2/staking/">
+</DocLink> <DocLink to="/staking/">
   Participación en Ethereum
 </DocLink>
 
