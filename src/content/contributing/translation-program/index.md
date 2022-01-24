@@ -126,8 +126,8 @@ If you are an ethereum.org translator or would like to become one, feel free to 
 
 ### Guides {#guides}
 
-- [Translation Style Guide](/contributing/translation-program/content-versions/) _– Instructions and tips for ethereum.org translators_
-- [Translation FAQs](/contributing/translation-program/content-versions/) _– Frequently asked questions and answers about the ethereum.org Translation Program_
+- [Translation Style Guide](/contributing/translation-program/translators-guide/) _– Instructions and tips for ethereum.org translators_
+- [Translation FAQs](/contributing/translation-program/faq/) _– Frequently asked questions and answers about the ethereum.org Translation Program_
 - [Content versions](/contributing/translation-program/content-versions/) _– which pages are included in each content version of ethereum.org_
 
 ### Tools {#tools}
