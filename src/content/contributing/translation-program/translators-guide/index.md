@@ -237,4 +237,4 @@ Translating ethereum.org is a great opportunity to learn about the different asp
 
 When translating, try not to rush. Take it easy and have fun!
 
-Thank you for being involved with the translation program and helping us make the website accessible to a wider audience. The Ethereum community is global, and we are happy you are a part of it!
+Thank you for being involved with the Translation Program and helping us make the website accessible to a wider audience. The Ethereum community is global, and we are happy you are a part of it!

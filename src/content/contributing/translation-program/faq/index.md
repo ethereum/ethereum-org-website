@@ -1,13 +1,13 @@
 ---
 title: Translation Program frequently asked questions (FAQ)
 lang: en
-description: Frequently asked questions about the ethereum.org translation program
+description: Frequently asked questions about the ethereum.org Translation Program
 sidebar: true
 ---
 
 # Translating ethereum.org guide {#translating-ethereum-guide}
 
-If you're new to the translation program and are hesitant to jump in, here are some FAQs that can help you begin. Use this guide to find answers to the most common queries.
+If you're new to the Translation Program and are hesitant to jump in, here are some FAQs that can help you begin. Use this guide to find answers to the most common queries.
 
 ## How do I translate strings with `<HTML tags>`? {#tags}
 
