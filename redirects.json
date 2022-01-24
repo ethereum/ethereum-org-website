@@ -300,6 +300,10 @@
     "toPath": "/:splat/community/grants/staking-community-grants/"
   },
   {
+    "fromPath": "/*/eth2",
+    "toPath": "/:splat/upgrades/"
+  },
+  {
     "fromPath": "/*/developers/docs/layer-2-scaling",
     "toPath": "/:splat/developers/docs/scaling"
   },
