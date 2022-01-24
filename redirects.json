@@ -318,5 +318,9 @@
   {
     "fromPath": "/*/use",
     "toPath": "/:splat/dapps/"
+  },
+  {
+    "fromPath": "/*/contributing/translation-program/translation-guide/",
+    "toPath": "/:splat/contributing/translation-program/faq/"
   }
 ]
