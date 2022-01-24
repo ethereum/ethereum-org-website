@@ -141,5 +141,6 @@
   "page-stablecoins-usdc-logo": "USDC ロゴ",
   "page-stablecoins-why-stablecoins": "なぜステーブルコインなのか？",
   "page-stablecoins-how-they-work-button": "動作の仕組み",
-  "page-stablecoins-why-stablecoins-body": "ETHはビットコインと同じく、新しい技術なので価格が変動します。そのため、頻繁に使うのは控えた方がいいかもしれません。ステーブルコインは、従来の通貨の価値を反映して、イーサリウムで使える安定したお金へのアクセスを提供します。"
+  "page-stablecoins-why-stablecoins-body": "ETHはビットコインと同じく、新しい技術なので価格が変動します。そのため、頻繁に使うのは控えた方がいいかもしれません。ステーブルコインは、従来の通貨の価値を反映して、イーサリウムで使える安定したお金へのアクセスを提供します。",
+  "page-stablecoins-more-defi-button": "分散型金融(DeFi)の詳細"
 }

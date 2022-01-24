@@ -31,11 +31,13 @@ Aceste modificări de regulă pot crea o divizare temporară în rețea. Blocuri
 
 #### Rezumat {#beacon-chain-genesis-summary}
 
-[Lanțul Beacon](/eth2/beacon-chain/) a necesitat 16.384 de depozite de 32 de mize ETH pentru a fi expediate în siguranță. Acest lucru s-a întâmplat pe 27 noiembrie, ceea ce înseamnă că lanțul Beacon a început să producă blocuri pe 1 decembrie 2020. Acesta este un prim pas important în realizarea [viziunii Eth2](/eth2/vision/).
+[Lanțul Beacon](/upgrades/beacon-chain/) a necesitat 16.384 de depozite de 32 de mize ETH pentru a fi expediate în siguranță. Acest lucru s-a întâmplat pe 27 noiembrie, ceea ce înseamnă că lanțul Beacon a început să producă blocuri pe 1 decembrie 2020. Acesta este un prim pas important în realizarea [viziunii Eth2](/upgrades/vision/).
 
 [Citește anunțul Fundației Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/eth2/beacon-chain/" title="Lanțul Beacon" />
+<DocLink to="/upgrades/beacon-chain/">
+  Lanțul Beacon
+</DocLink>
 
 ---
 
@@ -45,11 +47,13 @@ Aceste modificări de regulă pot crea o divizare temporară în rețea. Blocuri
 
 #### Rezumat {#deposit-contract-summary}
 
-Contractul de depozit de miză a introdus [miza](/glossary/#staking) în ecosistemul Ethereum. Deși este un contract [Mainnet](/glossary/#mainnet) (rețea principală), acesta a avut un impact direct asupra cronologiei lansării [lanțului Beacon](/eth2/beacon-chain/), un important [upgrade Eth2](/eth2/).
+Contractul de depozit de miză a introdus [miza](/glossary/#staking) în ecosistemul Ethereum. Deși este un contract [Mainnet](/glossary/#mainnet) (rețea principală), acesta a avut un impact direct asupra cronologiei lansării [lanțului Beacon](/upgrades/beacon-chain/), un important [upgrade Eth2](/upgrades/).
 
 [Citește anunțul Fundației Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/eth2/staking/" title="Mizare" />
+<DocLink to="/staking/">
+  Mizare
+</DocLink>
 
 ---
 
@@ -301,4 +305,6 @@ Yellow Paper, scris de Dr. Gavin Wood, este o definiție tehnică a protocolului
 
 Lucrarea introductivă, publicată în 2013 de Vitalik Buterin, fondatorul Ethereum, înainte de lansarea proiectului în 2015.
 
-<DocLink to="/whitepaper/" title="Whitepaper" />
+<DocLink to="/whitepaper/">
+  Whitepaper
+</DocLink>

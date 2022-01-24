@@ -131,7 +131,7 @@ El propósito de Ethereum es crear un protocolo alternativo para construir aplic
 
 El diseño en el que se basa Ethereum está pensado para seguir los siguientes principios:
 
-1.  **Simplicidad**: el protocolo Ethereum debe ser tan simple como sea posible, incluso a costa de cierto almacenamiento de datos o uso del tiempo ineficientes.<sup>[fn. 3](#notes)</sup> Un programador promedio debería ser idealmente capaz de entender e implementar toda la especificación,<sup>[fn. 4](#notes)</sup> con objeto de comprender totalmente el potencial democratizadr sin precedentes que la criptomoneda trae y profundizar en la visión de Ethereum como un protocolo abierto a todos. Cualquier optimización que añada complejidad no debe incluirse a menos que esa optimización proporcione un beneficio sustancial.
+1.  **Simplicidad**: el protocolo Ethereum debe ser tan simple como sea posible, incluso a costa de cierto almacenamiento de datos o uso del tiempo ineficientes.<sup>[fn. 3](#notes)</sup> Un programador promedio debería ser idealmente capaz de entender e implementar toda la especificación,<sup>[fn. 4](#notes)</sup> con objeto de comprender totalmente el potencial democratizador sin precedentes que la criptomoneda trae y profundizar en la visión de Ethereum como un protocolo abierto a todos. Cualquier optimización que añada complejidad no debe incluirse a menos que esa optimización proporcione un beneficio sustancial.
 2.  **Universalidad**: una parte fundamental de la filosofía de diseño de Ethereum es que Ethereum no tiene "funciones".<sup>[fn. 5](#notes)</sup> En su lugar, Ethereum proporciona un lenguaje interno de scripting Turing completo, que un programador puede usar para desarrollar cualquier contrato inteligente o transacción de cualquier tipo que se pueda definir matemáticamente. ¿Quieres inventar tu propio derivado financiero? Con Ethereum, puedes. ¿Quieres crear tu propia moneda? Establécela como un contrato en Ethereum. ¿Quieres configurar un Daemon o una red Skynet a gran escala? Puede que necesites tener unos cuantos miles de contratos entrelazados y asegurarte de alimentarlos generosamente para lograrlo, pero nada te lo impide con Ethereum al alcance de tu mano.
 3.  **Modularidad**: las partes del protocolo Ethereum deben diseñarse para ser tan modulares y separables como sea posible. En el transcurso del desarrollo, nuestro objetivo es crear un programa donde si uno fuera a hacer una pequeña modificación del protocolo en un solo lugar, la pila de la aplicación continuaría funcionando sin ninguna modificación adicional. Innovaciones como Ethash (consulta el [protocolo en el apéndice](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.J) o [el artículo](https://github.com/ethereum/wiki/wiki/Ethash)), los árboles de Patricia modificados ([protocolo](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.D), [wiki](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)) y RLP ([YP](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.B), [wiki](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)) deben ser y son, implementados como librerías separadas de funciones completas. Esto es así puesto que, aunque se usan en Ethereum e incluso si Ethereum no requiere ciertas funciones, estas funciones siguen siendo utilizables también en otros protocolos. El desarrollo de Ethereum debe de realizarse al máximo para beneficiar a todo el ecosistema de criptomonedas, no solo a sí mismo.
 4.  **Agilidad**: los detalles del protocolo de Ethereum no son inamovibles. Aunque seremos extremadamente prudentes a la hora de hacer modificaciones a construcciones de alto nivel, como por ejemplo la [hoja de ruta de sharding](https://ethresear.ch/t/sharding-phase-1-spec/1407/) y la ejecución abstracta, con disponibilidad de datos solo grabada en el consenso. Pruebas computacionales posteriores en el proceso de desarrollo pueden llevarnos a descubrir que ciertas modificaciones, p. ej., en la arquitectura de protocolo o en la máquina virtual de Ethereum (EVM), mejorasen sustancialmente la escalabilidad o seguridad. Si se encuentran estas oportunidades, las explotaremos.
@@ -275,7 +275,7 @@ En la práctica, sin embargo, los emisores no siempre son fiables, y en algunos 
 
 ### Sistemas de identidad y reputación {#identity-and-reputation-systems}
 
-La primera de todas las criptomonedas alternativas, [Namecoin](http://namecoin.org/), intentó usar una blockchain de tipo Bitcoin para proporcionar un sistema de registro de nombres, donde los usuarios pueden registrar sus nombres en una base de datos pública junto con otros datos. El caso de uso más citado es para un sistema [DNS](https://en.wikipedia.org/wiki/Domain_Name_System), que asigna nombres de dominio como "bitcoin.org" (o, en el caso de Namecoin, "bitcoin.bit") a una dirección IP. Otros casos de uso incluyen autenticación de correo electrónico y sistemas de reputación potencialmente más avanzados. Este es el contrato básico para proporcionar un sistema de registro de nombres similar a Namecoin en Ethereum:
+La primera de todas las criptomonedas alternativas, [Namecoin](http://namecoin.org/), intentó usar una blockchain de tipo Bitcoin para proporcionar un sistema de registro de nombres, donde los usuarios pueden registrar sus nombres en una base de datos pública junto con otros datos. El caso de uso más citado es para un sistema [DNS](https://wikipedia.org/wiki/Domain_Name_System), que asigna nombres de dominio como "bitcoin.org" (o, en el caso de Namecoin, "bitcoin.bit") a una dirección IP. Otros casos de uso incluyen autenticación de correo electrónico y sistemas de reputación potencialmente más avanzados. Este es el contrato básico para proporcionar un sistema de registro de nombres similar a Namecoin en Ethereum:
 
     def register(name, value):
         if !self.storage[name]:
@@ -369,7 +369,7 @@ Sin embargo, hay varias divergencias importantes de esas suposiciones en la real
 3.  La distribución de potencia de minado puede acabar siendo radicalmente desigualitaria en la práctica.
 4.  Los especuladores, enemigos políticos y dementes, cuya función de utilidad incluye causar daño a la red, existen y pueden establecer hábilmente contratos cuyo coste es mucho menor que el coste pagado por otros nodos de verificación.
 
-(1) proporciona una tendencia al minero a que incluya menos transacciones, e (2) incrementa `NC`; por lo tanto, estos dos efectos al menos parcialmente se cancelan entre sí.<sup>[¿Cómo?](https://github. om/ethereum/wiki/issues/447#issuecomment-316972260)</sup> (3) y (4) son el principal problema; para resolverlos, simplemente fijamos un límite reajustable: ningún bloque puede tener más operaciones que `BLK_LIMIT_FACTOR` veces el promedio de la media móvil exponencial a largo plazo. Específicamente:
+(1) proporciona una tendencia al minero a que incluya menos transacciones, e (2) incrementa `NC`; por lo tanto, estos dos efectos al menos parcialmente se cancelan entre sí.<sup>[¿Cómo?](https://github.com/ethereum/wiki/issues/447#issuecomment-316972260)</sup> (3) y (4) son el principal problema; para resolverlos, simplemente fijamos un límite reajustable: ningún bloque puede tener más operaciones que `BLK_LIMIT_FACTOR` veces el promedio de la media móvil exponencial a largo plazo. Específicamente:
 
     blk.oplimit = floor((blk.parent.oplimit \* (EMAFACTOR - 1) +
     floor(parent.opcount \* BLK\_LIMIT\_FACTOR)) / EMA\_FACTOR)
@@ -464,8 +464,6 @@ El concepto de una función de transición de estado arbitraria implementada por
 
 ## Notas y lecturas adicionales {#notes-and-further-reading}
 
-<!--Invisible HTML comment used for navigation with CTRL+F footnote or fn.-->
-
 ### Notas {#notes}
 
 1.  Un lector sofisticado puede haber notado que una dirección de Bitcoin es el hash de la clave pública de la curva elíptica, y no la clave pública en sí. Sin embargo, es perféctamente legítimo en terminología criptográfica el referirse al hash de la clave pública como la clave pública en sí. Esto es porque la la criptografía de Bitcoin se puede considerar un algoritmo personalizado de firma digital, donde la clave pública consiste en el hash de la clave pública CCE, la firma consiste en la clave pública CCE concatenada con la firma CCE, y el algoritmo de verificación involucra verificar la clave pública ECC en la firma contra el hash de la clave pública ECC proporcionada como clave pública y después verificar la firma ECC contra la clave pública ECC.
@@ -485,13 +483,13 @@ El concepto de una función de transición de estado arbitraria implementada por
 6.  [Títulos de propiedad seguros con autoridad del propietario](http://szabo.best.vwh.net/securetitle.html)
 7.  [Informe oficial de Bitcoin](http://bitcoin.org/bitcoin.pdf)
 8.  [Namecoin](https://namecoin.org/)
-9.  [Triángulo de Zooko](https://en.wikipedia.org/wiki/Zooko's_triangle)
+9.  [Triángulo de Zooko](https://wikipedia.org/wiki/Zooko's_triangle)
 10. [Informe oficial de monedas coloreadas](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)
 11. [Informe oficial de Mastercoin](https://github.com/mastercoin-MSC/spec)
 12. [Corporaciones autónomas descentralizadas, Bitcoin Magazine](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/)
 13. [Verificación de pago simplificada](https://en.bitcoin.it/wiki/Scalability#Simplifiedpaymentverification)
-14. [Árboles de Merkle](https://en.wikipedia.org/wiki/Merkle_tree)
-15. [Árboles de Patricia](https://en.wikipedia.org/wiki/Patricia_tree)
+14. [Árboles de Merkle](https://wikipedia.org/wiki/Merkle_tree)
+15. [Árboles de Patricia](https://wikipedia.org/wiki/Patricia_tree)
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ y agentes autónomos, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
 18. [Mike Hearn, sobre propiedad inteligente en el Turing Festival](http://www.youtube.com/watch?v=Pu4PAMFPo5Y)

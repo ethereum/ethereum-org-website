@@ -14,7 +14,7 @@ Użyj Ethereum do tworzenia zdecentralizowanych aplikacji (lub „dappów”), k
 
 **Zrób pierwsze kroki aby zintegrować Rust z Ethereum**
 
-Potrzebujesz bardziej podstawowych informacji? Sprawdź na [ethereum.org/learn](/en/learn/) lub [ethereum.org/developers](/en/developers/).
+Potrzebujesz bardziej podstawowych informacji? Sprawdź na [ethereum.org/learn](/learn/) lub [ethereum.org/developers](/developers/).
 
 - [Wprowadzenie do Blockchain](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Zrozumienie inteligentnych kontraktów](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -25,21 +25,19 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na [ethereum.org/learn](
 
 - [Wybór klienta Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Klient Ethereum Rust](https://wiki.parity.io/Setup)
-- [Wysyłanie transakcji do Ethereum za pomocą Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [Wysyłanie transakcji do Ethereum za pomocą Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Wprowadzenie do inteligentnych kontraktów z klientem Parity Ethereum](https://wiki.parity.io/Smart-Contracts)
-- [Konfigurowanie środowiska deweloperskiego Oasis SDK](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [Konfigurowanie środowiska deweloperskiego Oasis SDK](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Samouczek krok po kroku, jak pisać umowy w Rust Wasm dla Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Artykuły dla średniozaawansowanych {#intermediate-articles}
 
 - [Dokumentacja Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Przykłady działania Rust-Web3](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Tworzenie tajnej karty do głosowania za pomocą pakietu OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Tworzenie prywatnego serwera czatu za pomocą OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Przykłady zaawansowane {#advanced-use-patterns}
 
-- [biblioteka zewnętrzna pwasm_ethereum do interakcji z siecią podobną do Ethereum](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [biblioteka zewnętrzna pwasm_ethereum do interakcji z siecią podobną do Ethereum](https://github.com/openethereum/pwasm-ethereum)
 - [Zbuduj zdecentralizowany czat używając JavaScript i Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Zbuduj zdecentralizowaną aplikację Todo za pomocą Vue.js & Rust ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Pierwsze kroki z Enigma - w języku programowania Rust](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
@@ -57,7 +55,7 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na [ethereum.org/learn](
 - [rust-web3](https://github.com/tomusdrw/rust-web3) - _Wdrożenie biblioteki Web3.js przez Rust_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Inteligentny kontrakt Wavelet w Rust_
 
-Szukasz więcej zasobów? Zajrzyj na [ethereum.org/developers.](/en/developers/)
+Szukasz więcej zasobów? Zajrzyj na [ethereum.org/developers.](/developers/)
 
 ## Współtwórcy społeczności Rust {#rust-community-contributors}
 

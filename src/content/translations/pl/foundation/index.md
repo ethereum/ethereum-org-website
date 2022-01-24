@@ -9,9 +9,9 @@ lang: pl
 
 <Logo/>
 
-[Ethereum Foundation](http://ethereum.foundation/) (EF) jest organizacją non-profit zajmującą się wspieraniem [Ethereum](/en/what-is-ethereum/) i powiązanych technologii.
+[Ethereum Foundation](http://ethereum.foundation/) (EF) jest organizacją non-profit zajmującą się wspieraniem [Ethereum](/what-is-ethereum/) i powiązanych technologii.
 
-EF nie jest firmą, ani nawet tradycyjną organizacją non-profit. Ich rolą nie jest kontrolowanie ani kierowanie Ethereum, ani też nie są jedyną organizacją, która finansuje krytyczny rozwój technologii związanych z Ethereum. EF jest częścią znacznie większego [ekosystemu](/en/community/).
+EF nie jest firmą, ani nawet tradycyjną organizacją non-profit. Ich rolą nie jest kontrolowanie ani kierowanie Ethereum, ani też nie są jedyną organizacją, która finansuje krytyczny rozwój technologii związanych z Ethereum. EF jest częścią znacznie większego [ekosystemu](/community/).
 
 ## Inicjatywy Fundacji Ethereum {#ethereum-foundation-initiatives}
 
@@ -31,4 +31,4 @@ Dowiedz się więcej na [devcon.org](https://devcon.org/), sprawdź [Devcon Blog
 
 <br/>
 
-Aby uzyskać więcej informacji na temat Fundacji i ich pracy, odwiedź [ethereum. obwieszczenie](http://ethereum.foundation/)lub sprawdź [Ethereum Foundation Blog](https://blog.ethereum.org/) w celu uzyskania najnowszych informacji i ogłoszeń EF.
+Aby uzyskać więcej informacji na temat Fundacji i ich pracy, odwiedź [ethereum.foundation](http://ethereum.foundation/)lub sprawdź [Ethereum Foundation Blog](https://blog.ethereum.org/) w celu uzyskania najnowszych informacji i ogłoszeń EF.

@@ -10,7 +10,7 @@ A blokkfelfedezők a portálod az Ethereum adataihoz. Használatukkal valós ide
 
 ## Előfeltételek {#prerequisites}
 
-Először meg kellene értened az Ethereum alapvető fogalmait ahhoz, hogy értelmezni tudd az adatokat, melyet egy blokkfelfedező biztosít neked. Kezdj itt: [bevezetés az Ethereumba](/en/developers/docs/intro-to-ethereum/).
+Először meg kellene értened az Ethereum alapvető fogalmait ahhoz, hogy értelmezni tudd az adatokat, melyet egy blokkfelfedező biztosít neked. Kezdj itt: [bevezetés az Ethereumba](/developers/docs/intro-to-ethereum/).
 
 ## Szolgáltatások {#services}
 
@@ -148,11 +148,11 @@ Természetesen olyan adat is rendelkezésünkre áll, mely a hálózat egészsé
 - Teljes ETH készlet – Forgalomban lévő ETH mennyiség – ne feledd, hogy új ETH jön létre minden egyes blokk létrejötte után blokkjutalom formájában.
 - Piaci kapitalizáció – Az árfolyam \* készletből számolva.
 
-## Eth2 adat {#eth2-data}
+## Eth2 adat {#consensus-layer-data}
 
 Az Eth2 frissítések még fejlesztés alatt állnak, de érdemes megemlíteni az adatokat, melyet a felfedezők biztosítanak majd számodra. Valójában az összes adat elérhető a tesztneteken jelenleg.
 
-Ha nem ismered az Eth2-t, akkor tekintsd meg az [összefoglalónkat az Eth2 fejlesztésekről](/eth2/).
+Ha nem ismered az Eth2-t, akkor tekintsd meg az [összefoglalónkat az Eth2 fejlesztésekről](/upgrades/).
 
 ### Korszak {#epoch}
 
@@ -257,7 +257,7 @@ Az Eth2 felső szintű adat a következőket tartalmazza:
 - [Ethplorer](https://ethplorer.io/) – egy blokkfelfedező, mely az Ethereumon és a Kovan tesztneten található tokenekre fókuszál.
 - [Blockchair](https://blockchair.com/ethereum) - a legprivátabb Ethereum felfedező. Alkalmas (mempool) adatok szűrésére és válogatására is.
 
-## Eth2 blokk felfedezők {#eth2-block-explorers}
+## Eth2 blokk felfedezők {#beacon-chain-block-explorers}
 
 - [https://beaconcha.in/](https://beaconcha.in/)
 - [https://beaconscan.com/](https://beaconscan.com/)

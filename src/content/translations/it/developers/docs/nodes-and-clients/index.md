@@ -11,7 +11,7 @@ Affinché Ethereum funzioni in modo decentralizzato, serve una rete distribuita 
 
 ## Prerequisiti {#prerequisites}
 
-È necessario conoscere il concetto di rete decentralizzata prima di approfondire le informazioni ed eseguire un'istanza di un client Ethereum. Consulta la nostra [introduzione a Ethereum](/en/developers/docs/intro-to-ethereum/).
+È necessario conoscere il concetto di rete decentralizzata prima di approfondire le informazioni ed eseguire un'istanza di un client Ethereum. Consulta la nostra [introduzione a Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Che cosa sono i nodi e i client? {#what-are-nodes-and-clients}
 
@@ -19,9 +19,9 @@ Il termine "nodo" si riferisce a un software noto come client. Un client è una 
 
 Puoi avere una panoramica in tempo reale della rete Ethereum dando un'occhiata a questa [mappa dei nodi](https://etherscan.io/nodetracker).
 
-Molte [implementazioni dei client Ethereum](/developers/docs/nodes-and-clients/#clients) sono disponibili in una varietà di lingue. Hanno in comune il fatto di seguire una specifica ufficiale che determina come funziona la rete Ethereum e la blockchain.
+Molte [implementazioni dei client Ethereum](/developers/docs/nodes-and-clients/#execution-clients) sono disponibili in una varietà di lingue. Hanno in comune il fatto di seguire una specifica ufficiale che determina come funziona la rete Ethereum e la blockchain.
 
-![Client Eth1x](./client-diagram.png) Diagramma semplificato delle caratteristiche di un client Ethereum.
+![Client Eth1x](../../../../../developers/docs/nodes-and-clients/client-diagram.png) Diagramma semplificato delle caratteristiche di un client Ethereum.
 
 ## Tipologie di nodo {#node-types}
 
@@ -59,13 +59,13 @@ Eseguire un nodo permette di utilizzare Ethereum in modo veramente privato, auto
 - Non dovrai comunicare i tuoi indirizzi e saldi a nodi casuali. Tutto può essere controllato con il proprio client.
 - La dapp che si sviluppa può essere più sicura e privata se si utilizza un nodo personale. [Metamask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) e altri portafogli possono essere facilmente impostati per puntare al nodo locale.
 
-![Come accedere a Ethereum tramite un'applicazione e i nodi](./nodes.png)
+![Come accedere a Ethereum tramite un'applicazione e i nodi](../../../../../developers/docs/nodes-and-clients/nodes.png)
 
 ### Vantaggi per la rete {#network-benefits}
 
 Avere una serie diversificata di nodi è importante per la salute, la sicurezza e la resilienza operativa di Ethereum.
 
-- I nodi forniscono accesso ai dati della blockchain per i client leggeri che dipendono da essa. In caso di picchi di utilizzo, per agevolare la sincronizzazione dei nodi leggeri, è necessario che i nodi completi siano in quantità sufficiente. I nodi ridotti non memorizzano l'intera blockchain, ma verificano i dati attraverso le [radici di stato nelle intestazioni dei blocchi](/en/developers/docs/blocks/#block-anatomy). Se ne hanno bisogno, possono richiedere ulteriori informazioni ai blocchi.
+- I nodi forniscono accesso ai dati della blockchain per i client leggeri che dipendono da essa. In caso di picchi di utilizzo, per agevolare la sincronizzazione dei nodi leggeri, è necessario che i nodi completi siano in quantità sufficiente. I nodi ridotti non memorizzano l'intera blockchain, ma verificano i dati attraverso le [radici di stato nelle intestazioni dei blocchi](/developers/docs/blocks/#block-anatomy). Se ne hanno bisogno, possono richiedere ulteriori informazioni ai blocchi.
 - I nodi completi applicano le regole di consenso proof-of-work e quindi non possono essere ingannati ad accettare blocchi che non li seguono. Questo fornisce ulteriore sicurezza nella rete, perché se tutti i nodi fossero leggeri, cioè non effettuassero una verifica completa, i miner potrebbero attaccare la rete e, ad esempio, creare blocchi con ricompense più elevate.
 
 Se si esegue un nodo completo, l'intera rete di Ethereum ne beneficia.
@@ -99,7 +99,7 @@ Se qualcuno esegue un nodo Ethereum con un'API pubblica nella tua community, puo
 
 D'altro canto, se esegui un client, puoi condividerlo con i amici che potrebbero averne bisogno.
 
-## Client {#clients}
+## Client {#execution-clients}
 
 Ethereum è progettato per offrire client diversi, sviluppati da team diversi, utilizzando linguaggi di programmazione diversi. Questo rende la rete più forte e diversificata. L'obiettivo ideale è raggiungere la diversità senza che nessun client prevalga, per ridurre eventuali punti di errore singoli.
 
@@ -113,7 +113,7 @@ Questa tabella riassume i diversi client. Tutti sono attivi, gestiti e hanno sup
 | [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java       | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten e Görli        | Fast, Full                    | Archive, Pruned           |
 | [Trinity](https://trinity.ethereum.org/)                     | Python     | Linux, macOS          | Mainnet, Görli, Ropsten e altre          | Full, Beam, Fast/Header       | Archive                   |
 
-Per ulteriori informazioni sulle reti supportate, consulta [reti Ethereum](/en/developers/docs/networks/).
+Per ulteriori informazioni sulle reti supportate, consulta [reti Ethereum](/developers/docs/networks/).
 
 ### Vantaggi delle diverse implementazioni {#advantages-of-different-implementations}
 
@@ -198,23 +198,23 @@ A seconda di quale software e modalità di sincronizzazione si utilizzerà, sono
 | Nethermind   | 200 GB+                                    | 3 TB+                                |
 | Besu         | 750 GB+                                    | 4 TB+                                |
 
-![Grafico che mostra che i GB necessari per una sincronizzazione completa sono sempre di più](./full-sync.png)
+![Grafico che mostra che i GB necessari per una sincronizzazione completa sono sempre di più](../../../../../developers/docs/nodes-and-clients/full-sync.png)
 
-![Grafico che mostra che i GB necessari per una sincronizzazione archivio sono sempre di più](./archive-sync.png)
+![Grafico che mostra che i GB necessari per una sincronizzazione archivio sono sempre di più](../../../../../developers/docs/nodes-and-clients/archive-sync.png)
 
 Da questi grafici si capisce che i requisiti di archiviazione cambiano in continuazione. Per i dati più aggiornati per Geth e Parity, consulta i [dati per la sincronizzazione completa](https://etherscan.io/chartsync/chaindefault) e i [dati per la sincronizzazione archivio](https://etherscan.io/chartsync/chainarchive).
 
 ### Ethereum su un computer a scheda singola {#ethereum-on-a-single-board-computer}
 
-Il modo più conveniente ed economico di eseguire un il nodo Ethereum è quello di utilizzare un computer a scheda singola con architettura ARM come Raspberry Pi. [Ethereum su ARM](https://twitter.com/EthereumOnARM) fornisce immagini di client Geth, Parity, Nethermind e Besu. Ecco un semplice tutorial che spiega come [come realizzare e configurare un client ARM](/en/developers/tutorials/run-node-raspberry-pi/).
+Il modo più conveniente ed economico di eseguire un il nodo Ethereum è quello di utilizzare un computer a scheda singola con architettura ARM come Raspberry Pi. [Ethereum su ARM](https://twitter.com/EthereumOnARM) fornisce immagini di client Geth, Parity, Nethermind e Besu. Ecco un semplice tutorial che spiega come [come realizzare e configurare un client ARM](/developers/tutorials/run-node-raspberry-pi/).
 
 Dispositivi piccoli, convenienti ed efficienti come questi sono ideali per eseguire un nodo a casa.
 
-## Client Eth2 {#eth2-clients}
+## Client Eth2 {#consensus-clients}
 
-Ci sono nuovi client per supportare gli [upgrade a Eth2](/eth2/beacon-chain/). Eseguiranno la beacon chain e supporteranno il nuovo meccanismo di consenso [proof-of-stake](/developers/docs/consensus-mechanisms/pos/).
+Ci sono nuovi client per supportare gli [upgrade a Eth2](/upgrades/beacon-chain/). Eseguiranno la beacon chain e supporteranno il nuovo meccanismo di consenso [proof-of-stake](/developers/docs/consensus-mechanisms/pos/).
 
-[Visualizza i clienti Eth2](/eth2/get-involved/#clients).
+[Visualizza i clienti Eth2](/upgrades/get-involved/#clients).
 
 ## Letture consigliate {#further-reading}
 
@@ -228,8 +228,8 @@ Ci sono moltissime istruzioni e informazioni sui client Ethereum in Internet, ne
 
 ## Argomenti correlati {#related-topics}
 
-- [Blocchi](/en/developers/docs/blocks/)
-- [Reti](/en/developers/docs/networks/)
+- [Blocchi](/developers/docs/blocks/)
+- [Reti](/developers/docs/networks/)
 
 ## Tutorial correlati {#related-tutorials}
 

@@ -9,9 +9,7 @@ Bloki są zestawami transakcji z kryptograficznym skrótem poprzedniego bloku w 
 
 ## Wymagania wstępne {#prerequisites}
 
-Bloki to temat przyjazny dla nowicjuszy. Jednak, aby pomóc ci w lepszym zrozumieniu tej strony, zalecamy najpierw przeczytać o [kontach](/en/developers/docs/accounts/), [transakcjach](/en/developers/docs/transactions/), a także nasze [Wprowadzenie do Ethereum](/en/developers/docs/intro-to-ethereum/).
-
-<!--The content below was provided by Brian Gu with exception of "what's in a block"-->
+Bloki to temat przyjazny dla nowicjuszy. Jednak, aby pomóc ci w lepszym zrozumieniu tej strony, zalecamy najpierw przeczytać o [kontach](/developers/docs/accounts/), [transakcjach](/developers/docs/transactions/), a także nasze [Wprowadzenie do Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Dlaczego bloki? {#why-blocks}
 
@@ -27,7 +25,9 @@ Aby zachować historię transakcji, bloki są ściśle uporządkowane (każdy no
 
 Gdy dany blok jest już złożony (wydobyty) przez jakiegoś górnika w sieci, jest rozprowadzany do reszty sieci; wszystkie węzły dodają ten blok na koniec swojego blockchaina, a wydobywanie trwa nadal. Dokładny proces składania (wydobywania) bloków, jak i proces zatwierdzania/konsensusu, są obecnie określone protokołem "proof-of-work" sieci Ethereum.
 
-### Demo wizualne {#a-visual-demo} <iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+### Demo wizualne {#a-visual-demo}
+
+<YouTube id="_160oMzblY8" />
 
 ## Protokół proof-of-work (dowodu wykonanej pracy) {#proof-of-work-protocol}
 
@@ -37,7 +37,7 @@ Proof-of-work oznacza, że:
 - Inni górnicy, którzy dowiadują się o nowym bloku z ważnym certyfikatem legalności, muszą go zaakceptować jako kolejny, obowiązujący blok w blockchainie.
 - Dokładna ilość czasu potrzebnego każdemu górnikowi, aby wytworzył certyfikat, jest zmienną losową o dużej wariancji. Gwarantuje to, że będzie mało prawdopodobne, aby dwaj górnicy równocześnie dokonali walidacji zaproponowanych, kolejnych bloków; gdy górnik produkuje i rozprowadza nowy, certyfikowany blok, może być pewien, że zostanie on zaakceptowany przez sieć jako następny, obowiązujący blok w łańcuchu, bez konfliktu (chociaż istnieje protokół służący do radzenia sobie z konfliktami, podobnie jak z sytuacjami, gdy dwa łańcuchy certyfikowanych bloków powstaną niemal w tym samym czasie).
 
-[Więcej o wydobywaniu](/en/developers/docs/consensus-mechanisms/pow/mining/)
+[Więcej o wydobywaniu](/developers/docs/consensus-mechanisms/pow/mining/)
 
 ## Co znajduje się w bloku? {#block-anatomy}
 
@@ -60,6 +60,6 @@ _Znasz jakiś zasób społecznościowy, który ci pomógł? Wyedytuj tę stronę
 
 ## Powiązane tematy {#related-topics}
 
-- [Wydobywanie](/en/developers/docs/consensus-mechanisms/pow/mining/)
-- [Transakcje](/en/developers/docs/transactions/)
-- [Paliwo](/en/developers/docs/gas/)
+- [Wydobywanie](/developers/docs/consensus-mechanisms/pow/mining/)
+- [Transakcje](/developers/docs/transactions/)
+- [Paliwo](/developers/docs/gas/)

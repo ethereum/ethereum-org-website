@@ -14,7 +14,7 @@ Használj Ethereumot decentralizált alkalmazások (avagy "dappok") fejlesztés�
 
 **Tedd meg az első lépést, hogy integráld a Rust-ot Ethereummal**
 
-Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [ethereum.org/learn](/en/learn/) oldalt vagy a [ethereum.org/developers](/en/developers/) oldalt.
+Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [ethereum.org/learn](/learn/) oldalt vagy a [ethereum.org/developers](/developers/) oldalt.
 
 - [Blokklánc ismertetése](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Okosszerződések értelmezése](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -25,21 +25,19 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 
 - [Ethereum kliens kiválasztása](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [A Rust Ethereum kliens](https://wiki.parity.io/Setup)
-- [Tranzakció küldése Ethereumra Rust használatával](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [Tranzakció küldése Ethereumra Rust használatával](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Bevezetés az okosszerződésekbe a Parity Ethereum klienssel](https://wiki.parity.io/Smart-Contracts)
-- [Oasis SDK fejlesztői környezet beállítása](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [Oasis SDK fejlesztői környezet beállítása](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Útmutató arról, hogyan lehet szerződéseket írni Rust Wasm-ben Kovanra, lépésről lépésre](https://github.com/paritytech/pwasm-tutorial)
 
 ## Középhaladó cikkek {#intermediate-articles}
 
 - [Rust-Web3 dokumentáció](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Rust-Web3 működő példák](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Titkos szavazás készítése OASIS SDK-val](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Privát chat szerver létrehozása OASIS SDK-val](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Fejlett használati minták {#advanced-use-patterns}
 
-- [pwasm_ethereum externs library Ethereum-szerű hálózatokkal való interakciókhoz](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [pwasm_ethereum externs library Ethereum-szerű hálózatokkal való interakciókhoz](https://github.com/openethereum/pwasm-ethereum)
 - [Építs egy decentralizált chat-et JavaScript és Rust használatával](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Építs egy decentralizált To-Do alkalmazást Vue.js-szel & Rust-tal ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Enigma első lépések - Rust programozási nyelven](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
@@ -57,7 +55,7 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 - [rust-web3](https://github.com/tomusdrw/rust-web3) - _A Web3.js könyvtár Rust implementációja_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Wavelet okos szerződés Rust-ban_
 
-Még több anyagot keresel? Tekintsd meg az [ethereum.org/developers](/en/developers/) oldalt
+Még több anyagot keresel? Tekintsd meg az [ethereum.org/developers](/developers/) oldalt
 
 ## Rust közösségi hozzájárulók {#rust-community-contributors}
 

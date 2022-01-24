@@ -14,7 +14,7 @@ La applicazioni della blockchain aiutano le imprese nei seguenti ambiti:
 - Instaurare nuovi modelli di business e offrire opportunità per la creazione di valore
 - Creare organizzazioni a prova di futuro
 
-Le applicazioni della blockchain aziendali possono essere basate sulla [rete principale](/glossary/#rete principale) pubblica Ethereum senza permessi o sulle blockchain private basate su tecnologia Ethereum. Consulta maggiori informazioni sulle [catene Ethereum aziendali private](/enterprise/private-ethereum/).
+Le applicazioni blockchain aziendali possono essere create sulla [rete principale](/glossary/#mainnet) pubblica Ethereum senza permessi o su blockchain private basate sulla tecnologia Ethereum. Consulta maggiori informazioni sulle [catene Ethereum aziendali private](/enterprise/private-ethereum/).
 
 ## Ethereum pubblica e privata {#private-vs-public}
 
@@ -54,7 +54,7 @@ Alcuni sforzi collaborativi per rendere la rete Ethereum aziendale più intuitiv
 - [Blockapps](https://blockapps.net/) _implementazione del protocollo Enterprise Ethereum, strumenti e API che formano la piattaforma STRATO_
 - [ConsenSys](https://consensys.net/) _offre una gamma di prodotti e strumenti per sviluppare su Ethereum, oltre a servizi di consulenza e sviluppo personalizzato_
 - [Envision Blockchain](https://envisionblockchain.com/) _offre consulenza dedicata alle imprese e servizi di sviluppo sulla rete principale Ethereum_
-- [EY OpsChain](https://blockchain.ey.com/products/procurement) _offre un flusso di lavoro di approvvigionamento rilasciando RFQ, contratti, ordini di acquisto e fatture attraverso la rete di business partner certificati dell'azienda_
+- [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _offre un flusso di lavoro di approvvigionamento rilasciando RFQ, contratti, ordini di acquisto e fatture attraverso la rete di business partner certificati dell'azienda_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _client Ethereum open source aziendale sviluppato con licenza Apache 2.0 e scritto in Java_
 - [Infura](https://infura.io/) _Accesso API scalabile alle reti Ethereum e IPFS_
 - [Provide](https://provide.services/) _infrastruttura e API per applicazioni aziendali Web3_
@@ -102,7 +102,6 @@ Esempi di soluzioni L2 già pronte per la produzione (o che lo saranno presto) i
   - [Skale](https://skale.network)
   - [POA Network](https://www.poa.network/)
 - Soluzioni ibride che combinano le proprietà di più categorie
-  - [Offchain Labs Arbitrum SCSC](https://https://offchainlabs.com/arbitrum.pdf)
   - [Celer](https://celer.network)
 
 ## Applicazioni aziendali attive sulla rete principale {#enterprise-live-on-mainnet}
@@ -140,7 +139,7 @@ Ecco alcune applicazioni aziendali che sono state distribuite alla rete principa
 - [Minespider](https://www.minespider.com/) _monitoraggio della catena di approvvigionamento_
 - [ShipChain](https://shipchain.io) _sidechain pubblica di Ethereum e sistema aziendale per la visibilità e l'attendibilità della catena d'approvvigionamento, specialmente per la logistica multimodale_
 - [Follow Our Fibre](https://www.followourfibre.com) _tracciabilità della filiera della viscosa_
-- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/procurement) _consente alle aziende di interagire in un flusso di lavoro d'approvvigionamento emettendo richieste di preventivo, contratti, ordini d'acquisto e fatture nella rete di partner aziendali affidabili_
+- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _consente alle aziende di interagire in un flusso di lavoro d'approvvigionamento emettendo richieste di preventivo, contratti, ordini d'acquisto e fatture nella rete di partner aziendali affidabili_
 - [Treum](https://treum.io/) _assicura trasparenza, tracciabilità e commerciabilità alle catene d'approvvigionamento usando la tecnologia della blockchain_
 
 ### Credenziali e certificazioni {#credentials}
@@ -158,4 +157,4 @@ Ecco alcune applicazioni aziendali che sono state distribuite alla rete principa
 
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _pagamenti elettronici_
 
-Se desideri aggiungere qualcosa a questo elenco, consulta le [istruzioni per contribuire](https://ethereum.org/en/contributing/).
+Se desideri aggiungere qualcosa a questo elenco, consulta le [istruzioni per contribuire](/contributing/).

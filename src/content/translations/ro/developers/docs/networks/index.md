@@ -72,20 +72,6 @@ Procesul de consens este controlat de un set predefinit de noduri care sunt de �
 
 Dacă o rețea publică Ethereum este ca internetul public, te poți gândi la o rețea de consorțiu ca la un intranet privat.
 
-<!-- TODO
-
-## Interacting with testnets
-
-### Your own local network {#your-own-local-network}
-
-`geth -—networkid="12345" console`
-
-### Testnets {#testnets-1}
-
-Wallets like MetaMask or MyEtherWallet will allow you to switch networks so you can test your apps using your test ETH.
-
--->
-
 ## Referințe suplimentare {#further-reading}
 
 _Cunoști o resursă comunitară care te-a ajutat? Editează această pagină și adaug-o!_

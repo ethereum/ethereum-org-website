@@ -5,7 +5,7 @@ lang: it
 sidebar: true
 ---
 
-Un applicazione decentralizzata (dapp) è un'applicazione costruita su una rete decentralizzata che coniuga uno [Smart Contract](/en/developers/docs/smart-contracts/) con un'interfaccia utente di front end. In Ethereum gli Smart Contract sono accessibili e trasparenti (come le API aperte) quindi una dapp può anche includere Smart Contract scritto da altri.
+Un applicazione decentralizzata (dapp) è un'applicazione costruita su una rete decentralizzata che coniuga uno [Smart Contract](/developers/docs/smart-contracts/) con un'interfaccia utente di front end. In Ethereum gli Smart Contract sono accessibili e trasparenti (come le API aperte) quindi una dapp può anche includere Smart Contract scritto da altri.
 
 ## Prerequisiti {#prerequisites}
 
@@ -24,11 +24,9 @@ Una dapp può avere codice frontend e interfacce utente scritti in qualsiasi lin
 
 ### Informazioni sugli Smart Contract {#on-smart-contracts}
 
-Per presentare le dapp, dobbiamo introdurre gli Smart Contract, cioè il backend della dapp, in mancanza di una definizione migliore. Per una panoramica dettagliata, visita la sezione sugli [Smart Contract](/en/developers/docs/smart-contracts/).
+Per presentare le dapp, dobbiamo introdurre gli Smart Contract, cioè il backend della dapp, in mancanza di una definizione migliore. Per una panoramica dettagliata, visita la sezione sugli [Smart Contract](/developers/docs/smart-contracts/).
 
 Uno Smart Contract è codice che gira sulla blockchain Ethereum e che funziona esattamente come programmato. Una volta distribuito nella rete, non può più essere modificato. Le dapp possono essere decentralizzate perché sono controllate della logica scritta nel contratto, non da un individuo o da un'azienda. Questo significa anche gli Smart Contract devono essere progettati molto attentamente e testati accuratamente.
-
-<!--Benefits and implications provided by Brian Gu)-->
 
 ## Vantaggi dello sviluppo delle dapp {#benefits-of-dapp-development}
 
@@ -40,31 +38,13 @@ Uno Smart Contract è codice che gira sulla blockchain Ethereum e che funziona e
 
 ## Implicazioni dello sviluppo delle dapp {#implications-of-dapp-development}
 
-<!-- - Transparency – transactions that trigger dapp functionality are public
-- Open source
-- Cost of storage – contracts are often only small percentages of the dapp. They are stored on-chain and this storage needs to be paid for, so it can be expensive.
- -->
-
 - **Manutenzione**: le dapp possono essere impegnative da mantenere perché il codice e i dati pubblicati sulla blockchain sono più difficili da modificare. È difficile per gli sviluppatori fare aggiornamenti alle dapp (o ai dati sottostanti conservati nella dapp) in seguito al rilascio, anche se vengono identificati bug o rischi alla sicurezza in una vecchia versione.
 - **Overhead delle prestazioni**: l'overhead delle prestazioni è enorme e scalare è davvero difficile. Per raggiungere il livello di sicurezza, integrità, trasparenza e affidabilità al quale aspira Ethereum, ogni nodo esegue e memorizza ogni transazione. Oltre a questo, anche la proof-of-work richiede tempo. Un calcolo back-of-the-envelope pone l'overhead a circa 1.000.000 di volte quello del calcolo standard attuale.
 - **Congestione della rete**: almeno nel modello attuale, se una dapp utilizza troppe risorse di calcolo, l'intera rete viene sostenuta. Attualmente, la rete è in grado di elaborare circa 10 transazioni al secondo; se le transazioni vengono inviate a un ritmo più alto, l'insieme di transazioni non confermate può "gonfiarsi" e accumularsi.
 - **Esperienza utente**: potrebbe essere difficile creare esperienze intuitive. Ll'utente medio potrebbe trovare troppo difficile configurare la serie di strumenti necessaria a interagire con la blockchain in modalità veramente sicura.
+- **Centralizzazione**: soluzioni intuitive e facili da usare anche per gli sviluppatori costruite sul livello base di Ethereum potrebbero sembrare comunque servizi centralizzati: ad esempio, alcuni servizi potrebbero conservare sul server chiavi o altre informazioni sensibili, servire un frontend usando un server centralizzato o eseguire importanti logiche di business su un server centralizzato prima di scrivere sulla blockchain. Questo eliminerebbe molti (se non tutti) i vantaggi di una blockchain rispetto al modello tradizionale.
 
-  - **Centralizzazione**: soluzioni intuitive e facili da usare anche per gli sviluppatori costruite sul livello base di Ethereum potrebbero sembrare comunque servizi centralizzati: ad esempio, alcuni servizi potrebbero conservare sul server chiavi o altre informazioni sensibili, servire un frontend usando un server centralizzato o eseguire importanti logiche di business su un server centralizzato prima di scrivere sulla blockchain. Questo eliminerebbe molti (se non tutti) i vantaggi di una blockchain rispetto al modello tradizionale.<!-- ## Types of dapp
-
-- Involving money
-- Involving money and something else
-- Other, including decentralized autonomous organizations
-
----==crwdHRulesLBB_2_BBsuleRHdwrc==
-
-The application has to be open-source, operate autonomously, and can not be controlled by any one entity.
-All data and record must be cryptographically stored in a public, decentralized blockchain.
-The app must use a cryptographic token, also referred to as an App Coin, to access the application.
-Tokens must be generated in order to prove the value nodes that contribute to the application.
-
----==crwdHRulesLBB_2_BBsuleRHdwrc==
--->## Strumenti per le dapp {#dapp-tools}
+## Strumenti per le dapp {#dapp-tools}
 
 **One Click Dapp** **_: strumento FOSS per generare frontend di dapp da un'ABI._**
 
@@ -82,5 +62,5 @@ _Conosci una risorsa della community che ti è stata utile? Modifica questa pagi
 
 ## Argomenti correlati {#related-topics}
 
-- [Introduzione allo stack di Ethereum](/en/developers/docs/ethereum-stack/)
-- [Framework di sviluppo](/en/developers/docs/frameworks/)
+- [Introduzione allo stack di Ethereum](/developers/docs/ethereum-stack/)
+- [Framework di sviluppo](/developers/docs/frameworks/)

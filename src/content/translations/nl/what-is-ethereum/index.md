@@ -46,12 +46,8 @@ Deze gedecentraliseerde toepassingen (of ‘dapps’) hebben de voordelen van cr
 
 [Decentralized Everything met Vitalik Buterin](https://youtu.be/WSN5BaCzsbo)
 
-<div class="iframe-container">
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/WSN5BaCzsbo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<YouTube id="WSN5BaCzsbo" />
 
 [Ethereum's Blockchain door TechCrunch](https://www.youtube.com/watch?v=WfULutvxvzY)
 
-<div class="iframe-container">
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/WfULutvxvzY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<YouTube id="WfULutvxvzY" />

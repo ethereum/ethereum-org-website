@@ -9,7 +9,6 @@ import "../styles/layout.css"
 import { lightTheme, darkTheme, GlobalStyle } from "../theme"
 
 import Footer from "./Footer"
-import ReleaseBanner from "./ReleaseBanner"
 import VisuallyHidden from "./VisuallyHidden"
 import Nav from "./Nav"
 import SideNav from "./SideNav"
@@ -21,6 +20,8 @@ import { ZenModeContext } from "../contexts/ZenModeContext"
 import { useKeyPress } from "../hooks/useKeyPress"
 
 import { isLangRightToLeft } from "../utils/translations"
+import { isMobile } from "../utils/isMobile"
+import SkipLink from "./SkipLink"
 
 const ContentContainer = styled.div`
   position: relative;
@@ -78,18 +79,19 @@ const Layout = (props) => {
       setShouldShowSideNav(true)
 
       if (localStorage.getItem("zen-mode") !== null) {
-        let isMobile = false
-        if (typeof window !== undefined) {
-          isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-            window.navigator.userAgent
-          )
-        }
-        setIsZenMode(localStorage.getItem("zen-mode") === "true" && !isMobile)
+        setIsZenMode(localStorage.getItem("zen-mode") === "true" && !isMobile())
       }
     } else {
       // isZenMode and shouldShowSideNav only applicable in /docs pages
       setIsZenMode(false)
       setShouldShowSideNav(false)
+    }
+
+    if (props.location.hash && !props.location.hash.includes("gatsby")) {
+      const idTag = props.location.hash.split("#")
+      if (document.getElementById(idTag[1]) !== null) {
+        document.getElementById(idTag[1]).scrollIntoView(false)
+      }
     }
   }, [props.path])
 
@@ -118,7 +120,7 @@ const Layout = (props) => {
 
   const isPageLanguageEnglish = intl.language === intl.defaultLanguage
   const isPageContentEnglish = !!props.pageContext.isContentEnglish
-  const isTranslationBannerIgnored = !props.pageContext.ignoreTranslationBanner
+  const isTranslationBannerIgnored = !!props.pageContext.ignoreTranslationBanner
   const isPageTranslationOutdated =
     !!props.pageContext.isOutdated ||
     !!props.data?.pageData?.frontmatter?.isOutdated
@@ -127,7 +129,7 @@ const Layout = (props) => {
   const shouldShowTranslationBanner =
     (isPageTranslationOutdated ||
       (isPageContentEnglish && !isPageLanguageEnglish)) &&
-    isTranslationBannerIgnored
+    !isTranslationBannerIgnored
 
   const path = props.path
 
@@ -141,6 +143,7 @@ const Layout = (props) => {
         <IntlContextProvider value={intl}>
           <ThemeProvider theme={theme}>
             <GlobalStyle isDarkTheme={isDarkTheme} />
+            <SkipLink hrefId="#main-content" />
             <TranslationBanner
               shouldShow={shouldShowTranslationBanner}
               isPageContentEnglish={isPageContentEnglish}
@@ -156,7 +159,7 @@ const Layout = (props) => {
                 />
                 {shouldShowSideNav && <SideNavMobile path={path} />}
               </VisuallyHidden>
-              <MainContainer>
+              <MainContainer id="main-content">
                 {shouldShowSideNav && (
                   <VisuallyHidden isHidden={isZenMode}>
                     <SideNav path={path} />

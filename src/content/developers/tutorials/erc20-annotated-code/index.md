@@ -86,7 +86,7 @@ By convention, interface names start with `I`.
 This function is `external`, meaning [it can only be called from outside the contract](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2).
 It returns the total supply of tokens in the contract. This value is returned using the most common type in Ethereum, unsigned 256 bits (256 bits is the
 native word size of the EVM). This function is also a `view`, which means that it does not change the state, so it can be executed on a single node instead of having
-every node in the blockchain run it. This kind of function does not generate a transaction and does not cost [gas](https://ethereum.org/en/developers/docs/gas/).
+every node in the blockchain run it. This kind of function does not generate a transaction and does not cost [gas](/developers/docs/gas/).
 
 **Note:** In theory it might appear that a contract's creator could cheat by returning a smaller total supply than the real value, making each token appear
 more valuable than it actually is. However, that fear ignores the true nature of the blockchain. Everything that happens on the blockchain can be verified by
@@ -315,7 +315,7 @@ secrets on the blockchain_, the software on every node has the state of every co
 at every block. By convention, state variables are named `_<something>`.
 
 The first two variables are [mappings](https://www.tutorialspoint.com/solidity/solidity_mappings.htm),
-meaning they behave roughly the same as [associative arrays](https://en.wikipedia.org/wiki/Associative_array),
+meaning they behave roughly the same as [associative arrays](https://wikipedia.org/wiki/Associative_array),
 except that the keys are numeric values. Storage is only allocated for entries that have values different
 from the default (zero).
 
@@ -734,7 +734,7 @@ it is clear what are the functions you modify, and to trust your contract people
 
 It is often useful to perform a function each time tokens change hands. However,`_transfer` is a very important function and it is
 possible to write it insecurely (see below), so it is best not to override it. The solution is `_beforeTokenTransfer`, a
-[hook function](https://en.wikipedia.org/wiki/Hooking). You can override this function, and it will be called on each transfer.
+[hook function](https://wikipedia.org/wiki/Hooking). You can override this function, and it will be called on each transfer.
 
 &nbsp;
 

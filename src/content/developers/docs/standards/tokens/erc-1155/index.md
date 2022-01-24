@@ -102,7 +102,7 @@ Reading the current status can be done via `isApprovedForAll`. As you can see, i
 
 This is intentionally designed with simplicity in mind. You can only approve everything for one address.
 
-### Recieve Hook {#recieve-hook}
+### Receive Hook {#receive-hook}
 
 ```solidity
 function onERC1155BatchReceived(
@@ -122,7 +122,7 @@ bytes4(keccak256("onERC1155BatchReceived(address,address,uint256[],uint256[],byt
 
 When the receiving contract returns this value, it is assumed the contract accepts the transfer and knows how to handle the ERC-1155 tokens. Great, no more stuck tokens in a contract!
 
-### NFT Support {#safe-transfer-rule}
+### NFT Support {#nft-support}
 
 When the supply is just one, the token is essentially a non-fungible token (NFT). And as is standard for ERC-721, you can define a metadata URL. The URL can be read and modified by clients, see [here](https://eips.ethereum.org/EIPS/eip-1155#metadata).
 

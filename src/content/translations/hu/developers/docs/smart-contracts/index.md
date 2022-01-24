@@ -9,14 +9,11 @@ sidebar: true
 
 Az "okosszerződés" egy program, mely az Ethereum blokkláncon fut. Kód (a függvényei) és adat (az állapota) gyűjteménye, mely egy bizonyos címen létezik az Ethereum blokkláncon.
 
-Az okosszerződés egy [Ethereum számla](/en/developers/docs/accounts/) típus. Ez azt jelenti, hogy van egy egyenlegük és tranzakciókat tudnak indítani a hálózaton. Azonban nem egy felhasználó kezeli őket, ehelyett telepítve vannak a hálózatra és úgy futnak, ahogy programozták őket. A felhasználói számlák interakcióba léphetnek az okosszerződésekkel tranzakciók indításával, melyek egy függvényt hajtanak végre az okosszerződésen. Az okosszerződések szabályokat fektethetnek le, mint egy rendes szerződés, és automatikusan betartatják azokat a kód által.
+Az okosszerződés egy [Ethereum számla](/developers/docs/accounts/) típus. Ez azt jelenti, hogy van egy egyenlegük és tranzakciókat tudnak indítani a hálózaton. Azonban nem egy felhasználó kezeli őket, ehelyett telepítve vannak a hálózatra és úgy futnak, ahogy programozták őket. A felhasználói számlák interakcióba léphetnek az okosszerződésekkel tranzakciók indításával, melyek egy függvényt hajtanak végre az okosszerződésen. Az okosszerződések szabályokat fektethetnek le, mint egy rendes szerződés, és automatikusan betartatják azokat a kód által.
 
 ## Előfeltételek {#prerequisites}
 
 Olvasd el a [számlákról](/developers/docs/accounts/), [tranzakciókról](/developers/docs/transactions/) és az [Ethereum virtuális gépről szóló cikkeket](/developers/docs/evm/), mielőtt beleugranál az okosszerződések világába.
-
-<!-- TODO simpler example... scheduling payments in Ethereum is actually difficult -->
-<!-- TODO show an example smart contract, e.g. an implementation of a vending machine -->
 
 ## Egy digitális ételautomata {#a-digital-vending-machine}
 
@@ -69,16 +66,16 @@ Mint ahogy az ételautomaták szükségtelenné teszik az árusító alkalmazott
 
 ## Nem engedélyköteles {#permissionless}
 
-Bárki írhat okosszerződést és telepítheti a hálózatra. Csak meg kell tanulnod egy [okosszerződés nyelven](/en/developers/docs/smart-contracts/languages/) programoznod és elegendő ETH-tel rendelkezned, hogy telepítsd a szerződést. Egy okosszerződés telepítés lényegében egy tranzakció, így ki kell fizetned a [gázt](/en/developers/docs/gas/), ahogy kifizetnéd egy egyszerű ETH átutalás esetében is. A gáz költségek azonban sokkal magasabbak a szerződés telepítés esetében.
+Bárki írhat okosszerződést és telepítheti a hálózatra. Csak meg kell tanulnod egy [okosszerződés nyelven](/developers/docs/smart-contracts/languages/) programoznod és elegendő ETH-tel rendelkezned, hogy telepítsd a szerződést. Egy okosszerződés telepítés lényegében egy tranzakció, így ki kell fizetned a [gázt](/developers/docs/gas/), ahogy kifizetnéd egy egyszerű ETH átutalás esetében is. A gáz költségek azonban sokkal magasabbak a szerződés telepítés esetében.
 
 Az Ethereum fejlesztőbarát okosszerződés nyelvekkel rendelkezik:
 
 - Solidity
 - Vyper
 
-[Többet a nyelvekről](/en/developers/docs/smart-contracts/languages/)
+[Többet a nyelvekről](/developers/docs/smart-contracts/languages/)
 
-Azonban be kell őket fordítani telepítés előtt, hogy az Ethereum virtuális gép értelmezni és tárolni tudja majd a szerződést. [Többet a fordításról](/en/developers/docs/smart-contracts/compiling/)
+Azonban be kell őket fordítani telepítés előtt, hogy az Ethereum virtuális gép értelmezni és tárolni tudja majd a szerződést. [Többet a fordításról](/developers/docs/smart-contracts/compiling/)
 
 ## Összeilleszthetőség {#composability}
 
@@ -90,7 +87,7 @@ Tudj meg többet az [okosszerződés összeilleszthetőségről](/developers/doc
 
 Az okosszerződések önmagukban nem képesek információt lekérni a "külvilági" eseményekről, mivel nem tudnak HTTP kérvényeket küldeni. Ez a design szerinti külső információkra való támaszkodás veszélyeztetheti a biztonság és a decentralizáció szempontjából fontos konszenzust.
 
-Az [orákulumok](/en/developers/docs/oracles/) használata megoldást nyújt ezen probléma megoldására.
+Az [orákulumok](/developers/docs/oracles/) használata megoldást nyújt ezen probléma megoldására.
 
 ## Okosszerződés anyagok {#smart-contract-resources}
 
@@ -102,7 +99,7 @@ Az [orákulumok](/en/developers/docs/oracles/) használata megoldást nyújt eze
 
 **DappSys -** **_Biztonságos, egyszerű, flexibilis okosszerződés építőelemek._**
 
-- [dapp.tools/dappsys](https://dapp.tools/dappsys/)
+- [Dappsys](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 ## További olvasnivaló {#further-reading}

@@ -24,7 +24,7 @@ Some services offer you your own dedicated node that they manage for you, while 
 
 Almost all node services are extremely easy to integrate with, involving one line changes in your code to swap out your self hosted node, or even switch between the services themselves.
 
-Often times node services will run a variety of [node clients](/developers/docs/nodes-and-clients/#clients) and [types](/developers/docs/nodes-and-clients/#node-types), allowing you to access full and archive nodes in addition to client specific methods in one API.
+Often times node services will run a variety of [node clients](/developers/docs/nodes-and-clients/#execution-clients) and [types](/developers/docs/nodes-and-clients/#node-types), allowing you to access full and archive nodes in addition to client specific methods in one API.
 
 It's important to note that node services do not and should not store your private keys or information.
 
@@ -54,6 +54,18 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Dashboard
     - Unique API endpoints
     - Webhooks
+    - Direct support
+- [**Ankr**](https://www.ankr.com/)
+  - [Docs](https://docs.ankr.com/)
+  - Features
+    - Ankr Protocol - open access to Public RPC API endpoints for 8+ chains
+    - Load balancing and node health monitoring for a fast and reliable gateway to the nearest available node
+    - Premium tier enabling WSS endpoint and uncapped rate limit
+    - One-click full node and validator node deployment for 40+ chains
+    - Scale as you go
+    - Analytics tools
+    - Dashboard
+    - RPC, HTTPS and WSS endpoints
     - Direct support
 - [**BlockDaemon**](https://blockdaemon.com/)
   - [Docs](https://ubiquity.docs.blockdaemon.com/)
@@ -147,6 +159,19 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
   - Features
     - Free tier option
     - Scale as you go
+- [**SettleMint**](https://console.settlemint.com/)
+  - [Docs](https://docs.settlemint.com/)
+  - Features
+    - Free trial
+    - Scale as you go
+    - GraphQL support
+    - RPC and WSS endpoints
+    - Dedicated full nodes
+    - Bring your cloud
+    - Analytics tools
+    - Dashboard
+    - Pay-per-hour pricing
+    - Direct support
 
 ## Further reading {#further-reading}
 

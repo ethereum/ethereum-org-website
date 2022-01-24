@@ -9,14 +9,11 @@ sidebar: true
 
 Uno Smart Contract è semplicemente un programma eseguito sulla blockchain di Ethereum. È una raccolta di codice (le funzioni) e dati (lo stato) che risiede a un indirizzo specifico sulla blockchain di Ethereum.
 
-Gli Smart Contract sono un tipo di [account Ethereum](/en/developers/docs/accounts/). Significa che hanno un saldo e possono inviare transazioni in rete. Però non sono controllati da un utente, ma distribuiti in rete ed eseguiti come programmato. Gli account degli utenti possono quindi interagire con uno Smart Contract inviando transazioni che eseguono una funzione definita sul contratto. Gli Smart Contract possono definire regole, come un normale contratto, e imporle automaticamente tramite codice.
+Gli Smart Contract sono un tipo di [account Ethereum](/developers/docs/accounts/). Significa che hanno un saldo e possono inviare transazioni in rete. Però non sono controllati da un utente, ma distribuiti in rete ed eseguiti come programmato. Gli account degli utenti possono quindi interagire con uno Smart Contract inviando transazioni che eseguono una funzione definita sul contratto. Gli Smart Contract possono definire regole, come un normale contratto, e imporle automaticamente tramite codice.
 
 ## Prerequisiti {#prerequisites}
 
 È importante aver letto gli argomenti su [account](/developers/docs/accounts/), [transazioni](/developers/docs/transactions/) e [macchina virtuale di Ethereum](/developers/docs/evm/) prima di entrare nel mondo degli Smart Contract.
-
-<!-- TODO simpler example... scheduling payments in Ethereum is actually difficult -->
-<!-- TODO show an example smart contract, e.g. an implementation of a vending machine -->
 
 ## Un distributore automatico digitale {#a-digital-vending-machine}
 
@@ -69,16 +66,16 @@ Come un distributore automatico elimina la necessità di avere un addetto alla v
 
 ## Senza autorizzazioni {#permissionless}
 
-Tutti possono scrivere Smart Contract e distribuirli in rete. È sufficiente sapere programmare in un [linguaggio per Smart Contract](/en/developers/docs/smart-contracts/languages/) e avere abbastanza ETH per distribuire un contratto. Distribuire uno Smart Contract è tecnicamente una transazione, quindi devi pagare [carburante](/en/developers/docs/gas/) così come avviene per un semplice trasferimento di ETH. I costi del carburante per la distribuzione di un contratto sono però molto più elevati.
+Tutti possono scrivere Smart Contract e distribuirli in rete. È sufficiente sapere programmare in un [linguaggio per Smart Contract](/developers/docs/smart-contracts/languages/) e avere abbastanza ETH per distribuire un contratto. Distribuire uno Smart Contract è tecnicamente una transazione, quindi devi pagare [carburante](/developers/docs/gas/) così come avviene per un semplice trasferimento di ETH. I costi del carburante per la distribuzione di un contratto sono però molto più elevati.
 
 Ethereum prevede linguaggi comodi per gli sviluppatori per scrivere Smart Contract:
 
 - Solidity
 - Vyper
 
-[Ulteriori informazioni sui linguaggi](/en/developers/docs/smart-contracts/languages/)
+[Ulteriori informazioni sui linguaggi](/developers/docs/smart-contracts/languages/)
 
-I contratti devono però essere compilati prima di poter essere distribuiti affinché la macchina virtuale Ethereum possa interpretarli e memorizzarli. [Ulteriori informazioni sulla compilazione](/en/developers/docs/smart-contracts/compiling/)
+I contratti devono però essere compilati prima di poter essere distribuiti affinché la macchina virtuale Ethereum possa interpretarli e memorizzarli. [Ulteriori informazioni sulla compilazione](/developers/docs/smart-contracts/compiling/)
 
 ## Componibilità {#composability}
 
@@ -90,7 +87,7 @@ Scopri di più sulla [componibilità degli Smart Contract](/developers/docs/smar
 
 Gli Smart Contract da soli non possono ottenere informazioni sugli eventi del mondo reale perché non possono inviare richieste HTTP. Questo comportamento è voluto, perché basarsi su informazioni esterne potrebbe compromettere il consenso, che invece è importante per la sicurezza e la decentralizzazione.
 
-Esistono modi per aggirare questa condizione, grazie agli [oracoli](/en/developers/docs/oracles/).
+Esistono modi per aggirare questa condizione, grazie agli [oracoli](/developers/docs/oracles/).
 
 ## Risorse degli Smart Contract {#smart-contract-resources}
 
@@ -102,7 +99,7 @@ Esistono modi per aggirare questa condizione, grazie agli [oracoli](/en/develope
 
 **DappSys -** **_Blocchi di programmazione sicuri, semplici e flessibili per Smart Contract._**
 
-- [dapp.tools/dappsys](https://dapp.tools/dappsys/)
+- [Dappsys](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 ## Letture consigliate {#further-reading}

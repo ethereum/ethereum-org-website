@@ -12,6 +12,7 @@ import { dropdownIconContainerVariant } from "./SharedStyledComponents"
 import { ZenModeContext } from "../contexts/ZenModeContext"
 
 const customIdRegEx = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/
+const emojiRegEx = /<Emoji [^/]+\/>/g
 
 const Aside = styled.aside`
   position: sticky;
@@ -33,7 +34,7 @@ const OuterList = styled(motion.ul)`
   list-style-type: none;
   list-style-image: none;
   padding: 0;
-  margin: 0 0 3rem;
+  margin: 5rem 0 3rem 0;
   border-left: 1px solid ${(props) => props.theme.colors.dropdownBorder};
   font-size: ${(props) => props.theme.fontSizes.s};
   line-height: 1.6;
@@ -136,7 +137,7 @@ const StyledTableOfContentsLink = styled(Link)`
 `
 
 const ButtonContainer = styled(ListItem)`
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 `
 
 const ButtonContent = styled.div`
@@ -149,10 +150,12 @@ const GithubIcon = styled(Icon)`
   margin-right: 0.5rem;
 `
 
-const ZenModeContainer = styled.div`
+const ZenModeContainer = styled.li`
   margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
+  opacity: 0.8;
+  font-size: ${(props) => props.theme.fontSizes.s};
 `
 
 const ZenModeToggleContainer = styled.span`
@@ -161,7 +164,7 @@ const ZenModeToggleContainer = styled.span`
 `
 
 const ZenModeText = styled.span`
-  margin-right: 0.7rem;
+  margin-right: 0.5rem;
 `
 
 // Mobile styles
@@ -220,7 +223,11 @@ const getCustomId = (title) => {
 
 const trimmedTitle = (title) => {
   const match = customIdRegEx.exec(title)
-  return match ? title.replace(match[1], "").trim() : title
+  const trimmedTitle = match ? title.replace(match[1], "").trim() : title
+
+  // Removes Twemoji components from title
+  const emojiMatch = emojiRegEx.exec(trimmedTitle)
+  return emojiMatch ? trimmedTitle.replaceAll(emojiRegEx, "") : trimmedTitle
 }
 
 const TableOfContentsLink = ({ depth, item, activeHash }) => {
@@ -368,16 +375,6 @@ const TableOfContents = ({
   return (
     <Aside className={className}>
       <OuterList>
-        {shouldShowZenModeToggle && (
-          <ZenModeContainer>
-            <ZenModeText>
-              <Translation id="zen-mode" />
-            </ZenModeText>
-            <ZenModeToggleContainer onClick={(_e) => handleZenModeChange()}>
-              <Icon name={isZenMode ? "zenModeOn" : "zenModeOff"} size="2rem" />
-            </ZenModeToggleContainer>
-          </ZenModeContainer>
-        )}
         {shouldShowEditButtom && (
           <ButtonContainer>
             <ButtonLink to={editPath} isSecondary={true} mt={0}>
@@ -389,6 +386,19 @@ const TableOfContents = ({
               </ButtonContent>
             </ButtonLink>
           </ButtonContainer>
+        )}
+        {shouldShowZenModeToggle && (
+          <ZenModeContainer>
+            <ZenModeText>
+              <Translation id="zen-mode" />
+            </ZenModeText>
+            <ZenModeToggleContainer onClick={(_e) => handleZenModeChange()}>
+              <Icon
+                name={isZenMode ? "zenModeOn" : "zenModeOff"}
+                size="1.6rem"
+              />
+            </ZenModeToggleContainer>
+          </ZenModeContainer>
         )}
         <Header>
           <Translation id="on-this-page" />

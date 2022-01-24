@@ -9,14 +9,11 @@ sidebar: true
 
 „Inteligentny kontrakt" jest po prostu programem, który działa w blockchainie Ethereum. Jest to zbiór kodu (jego funkcje) i danych (jego stan), które znajdują się pod określonym adresem w blockchainie Ethereum.
 
-Inteligentne kontrakty są rodzajem [konta Ethereum](/en/developers/docs/accounts/). Oznacza to, że mają one saldo i mogą wysyłać transakcje przez sieć. Jednak nie są one kontrolowane przez użytkownika, zamiast tego są wdrażane do sieci i uruchamiane w sposób zaprogramowany. Konta użytkowników mogą następnie wchodzić w interakcję z inteligentnym kontraktem poprzez przesyłanie transakcji, które wykonują funkcję zdefiniowaną w inteligentnym kontrakcie. Inteligentne kontrakty mogą definiować reguły, tak jak zwykłe kontrakty, i automatycznie egzekwować je za pośrednictwem kodu.
+Inteligentne kontrakty są rodzajem [konta Ethereum](/developers/docs/accounts/). Oznacza to, że mają one saldo i mogą wysyłać transakcje przez sieć. Jednak nie są one kontrolowane przez użytkownika, zamiast tego są wdrażane do sieci i uruchamiane w sposób zaprogramowany. Konta użytkowników mogą następnie wchodzić w interakcję z inteligentnym kontraktem poprzez przesyłanie transakcji, które wykonują funkcję zdefiniowaną w inteligentnym kontrakcie. Inteligentne kontrakty mogą definiować reguły, tak jak zwykłe kontrakty, i automatycznie egzekwować je za pośrednictwem kodu.
 
 ## Warunki wstępne {#prerequisites}
 
 Upewnij się, że zapoznałeś się z [kontami](/developers/docs/accounts/), [transakcjami](/developers/docs/transactions/) i
-
-<!-- TODO simpler example... scheduling payments in Ethereum is actually difficult -->
-<!-- TODO show an example smart contract, e.g. an implementation of a vending machine -->
 
 ## Cyfrowy automat do sprzedaży {#a-digital-vending-machine}
 
@@ -69,16 +66,16 @@ Podobnie jak automat sprzedający eliminuje potrzebę zatrudniania pracownika sp
 
 ## Nie wymaga pozwolenia {#permissionless}
 
-Każdy może napisać inteligentny kontrakt i wdrożyć go do sieci. Musisz tylko nauczyć się kodowania w [języku inteligentnego kontraktu](/en/developers/docs/smart-contracts/languages/) i mieć wystarczająco dużo ETH, aby go wdrożyć. Wdrożenie inteligentnego kontraktu jest transakcją techniczną, więc musisz zapłacić Koszty gazu związane z wdrożeniem kontraktów są jednak znacznie wyższe.
+Każdy może napisać inteligentny kontrakt i wdrożyć go do sieci. Musisz tylko nauczyć się kodowania w [języku inteligentnego kontraktu](/developers/docs/smart-contracts/languages/) i mieć wystarczająco dużo ETH, aby go wdrożyć. Wdrożenie inteligentnego kontraktu jest transakcją techniczną, więc musisz zapłacić Koszty gazu związane z wdrożeniem kontraktów są jednak znacznie wyższe.
 
 Ethereum ma przyjazne dla deweloperów języki do pisania inteligentnych kontraktów:
 
 - Solidity
 - Vyper
 
-[Więcej języków](/en/developers/docs/smart-contracts/languages/)
+[Więcej języków](/developers/docs/smart-contracts/languages/)
 
-Muszą one jednak zostać skompilowane przed ich uruchomieniem, tak aby maszyna wirtualna Ethereum mogła zinterpretować i przechowywać kontrakt. [Więcej na temat kompilacji](/en/developers/docs/smart-contracts/compiling/)
+Muszą one jednak zostać skompilowane przed ich uruchomieniem, tak aby maszyna wirtualna Ethereum mogła zinterpretować i przechowywać kontrakt. [Więcej na temat kompilacji](/developers/docs/smart-contracts/compiling/)
 
 ## Kompozycyjność – o wzajemnej zależności komponentów {#composability}
 
@@ -90,7 +87,7 @@ Dowiedz się więcej o [kompozycyjności kontraktów inteligentnych](/developers
 
 Same inteligentne kontrakty nie mogą uzyskać informacji o zdarzeniach z „prawdziwego świata”, ponieważ nie mogą wysyłać żądań HTTP. Jest to celowe, ponieważ poleganie na informacjach z zewnątrz mogłoby zagrozić konsensusowi, który jest ważny dla bezpieczeństwa i decentralizacji.
 
-Istnieją sposoby na obejście tego za pomocą [wyroczni](/en/developers/docs/oracles/).
+Istnieją sposoby na obejście tego za pomocą [wyroczni](/developers/docs/oracles/).
 
 ## Zasoby inteligentnych kontraktów {#smart-contract-resources}
 
@@ -102,7 +99,7 @@ Istnieją sposoby na obejście tego za pomocą [wyroczni](/en/developers/docs/or
 
 **DappSys –** **<em x-id="4">bezpieczne, proste, elastyczne elementy konstrukcyjne do inteligentnych kontraktów.</em>**
 
-- [dapp.tools/dappsys](https://dapp.tools/dappsys/)
+- [Dappsys](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 ## Dalsza lektura {#further-reading}

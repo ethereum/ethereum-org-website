@@ -7,7 +7,7 @@ sidebar: true
 
 # Content versions {#content-versions}
 
-As mentioned in our [Translation Program overview](/en/contributing/translation-program/), we use 'content buckets' within Crowdin to get the highest priority content released first. When you check out a language to translate, for example, [German](https://crowdin.com/project/ethereum-org/de) you'll see folders for each content bucket.
+As mentioned in our [Translation Program overview](/contributing/translation-program/), we use 'content buckets' within Crowdin to get the highest priority content released first. When you check out a language to translate, for example, [German](https://crowdin.com/project/ethereum-org/de) you'll see folders for each content bucket.
 
 Below is a breakdown of the website pages each content bucket contains.
 
@@ -24,18 +24,9 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Get ETH](/get-eth/)
 - [Dapps](/dapps/)
 - [Stablecoins](/stablecoins/)
-- [Staking](/eth2/staking/)
+- [Staking](/staking/)
 - [Wallets](/wallets/)
 - [Find wallets](/wallets/find-wallet/)
-- [Eth2](/eth2/)
-- [Eth2 vision](/eth2/vision/)
-- [The Beacon Chain](/eth2/beacon-chain/)
-- [The merge](/eth2/merge/)
-- [Shard chains](/eth2/shard-chains/)
-- [Staking](/eth2/staking/)
-- [Eth2 get involved](/eth2/get-involved/)
-- [Eth2 bug bounty](/eth2/bug-bounty/)
-- [Staking deposit contract](/eth2/deposit-contract/)
 - [Developers' Home](/developers/)
 - [Developer learning tools](/developers/learning-tools/)
 - [Developer local environment setup](/developers/local-environment/)
@@ -49,6 +40,21 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Translation Program](/contributing/translation-program/)
 - [Translation guide](/contributing/translation-program/translation-guide/)
 - [Ethereum grants](/community/grants/)
+- [Translator acknowledgements](/contributing/translation-program/)
+- [Our translators](/contributing/translation-program/contributors/)
+
+## Upgrades {#upgrades}
+
+- [Ethereum upgrades](/upgrades/)
+- [Ethereum vision](/upgrades/vision/)
+- [The Beacon Chain](/upgrades/beacon-chain/)
+- [The merge](/upgrades/merge/)
+- [Shard chains](/upgrades/shard-chains/)
+- [Staking](/staking/)
+- [Ethereum upgrades get involved](/upgrades/get-involved/)
+- [Consensus layer bug bounty](/upgrades/bug-bounty/)
+- [Staking deposit contract](/staking/deposit-contract/)
+- [Ethereum Improvement Proposals (EIPs)](/eips/)
 
 ## Foundational developer docs {#foundational-docs}
 

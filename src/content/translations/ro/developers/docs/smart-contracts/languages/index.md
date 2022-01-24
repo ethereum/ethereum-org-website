@@ -251,7 +251,7 @@ Iată câteva lucruri de luat în considerare, dacă nu ai încercat încă nici
 
 ### Ce este excelent la Solidity? {#solidity-advantages}
 
-- Dacă ești începător, există multe tutoriale și instrumente de învățare. Află mai multe informații despre aceasta în secțiunea [Învață prin codificare](https://ethereum.org/en/developers/learning-tools/).
+- Dacă ești începător, există multe tutoriale și instrumente de învățare. Află mai multe informații despre aceasta în secțiunea [Învață prin codificare](/developers/learning-tools/).
 - Sunt disponibile instrumente bune pentru programatori.
 - Solidity are o comunitate mare de programatori, ceea ce înseamnă că cel mai probabil vei găsi răspunsuri la întrebările tale destul de repede.
 

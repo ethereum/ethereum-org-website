@@ -11,13 +11,13 @@ Protokół Ethereum istnieje wyłącznie w celu utrzymania niezakłóconej ciąg
 
 ## Wymagania wstępne {#prerequisites}
 
-Do zrozumienia EVM konieczna jest znajomość podstawowej terminologii informatycznej, takiej jak [bajty](https://en.wikipedia.org/wiki/Byte), [pamięć](https://en.wikipedia.org/wiki/Computer_memory) i [stos](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>). Równie pomocne może się okazać zaznajomienie się z takimi pojęciami, jak kryptografia, blockchain [funkcja haszująca](https://pl.wikipedia.org/wiki/Funkcja_skr%C3%B3tu), [Proof-of-Work](https://www.gpwinfostrefa.pl/czym-jest-proof-of-work/), [drzewo Merkle](https://pl.wikipedia.org/wiki/Drzewo_hash).
+Do zrozumienia EVM konieczna jest znajomość podstawowej terminologii informatycznej, takiej jak [bajty](https://wikipedia.org/wiki/Byte), [pamięć](https://wikipedia.org/wiki/Computer_memory) i [stos](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>). Równie pomocne może się okazać zaznajomienie się z takimi pojęciami, jak kryptografia, blockchain [funkcja haszująca](https://pl.wikipedia.org/wiki/Funkcja_skr%C3%B3tu), [Proof-of-Work](https://www.gpwinfostrefa.pl/czym-jest-proof-of-work/), [drzewo Merkle](https://pl.wikipedia.org/wiki/Drzewo_hash).
 
 ## Od księgi głównej do maszyny stanowej {#from-ledger-to-state-machine}
 
 Analogia „księgi głównej” jest często używana w celu opisania blockchainów np. takich jak Bitcoin, które umożliwiają zdecentralizowanym walutom używanie fundamentalnych narzędzi kryptograficznych. Kryptowaluta zachowuje się, jak „normalna“ waluta poprzez zasady jakimi jest zarządzana, co ktoś może, a czego nie może robić, aby zmodyfikować księgę główną. Dla przykładu, adres Bitcoina nie może wydać więcej Bitcoinów, niż wcześniej otrzymał. Zasady te są podstawą wszystkich transakcji na Bitcoinie i wielu innych blockchainach.
 
-Choć Ethereum ma swoją własną kryptowalutę (Ether), która działa niemal dokładnie według tych samych intuicyjnych zasad, pozwala również stosować znacznie bardziej rozbudowaną funkcję: [inteligentne kontrakty](/en/developers/docs/smart-contracts/). Dla tej skomplikowanej funkcji wymagana jest bardziej wyszukana analogia. W odróżnieniu od rozproszonej księgi główne, Ethereum jest rozproszoną [maszyną stanową](https://pl.wikipedia.org/wiki/Automat_sko%C5%84czony). Stany Ethereum są wielkimi strukturami danych, które przechowują nie tylko wszystkie konta i ich salda, ale też _stan maszyny_, który może zmieniać się od bloku do bloku zgodnie z predefiniowanymi zasadami, i który może wykonywać dowolny kod maszynowy. Konkretne zasady zmiany stanu od bloku do bloku są zdefiniowane przez EVM.
+Choć Ethereum ma swoją własną kryptowalutę (Ether), która działa niemal dokładnie według tych samych intuicyjnych zasad, pozwala również stosować znacznie bardziej rozbudowaną funkcję: [inteligentne kontrakty](/developers/docs/smart-contracts/). Dla tej skomplikowanej funkcji wymagana jest bardziej wyszukana analogia. W odróżnieniu od rozproszonej księgi główne, Ethereum jest rozproszoną [maszyną stanową](https://pl.wikipedia.org/wiki/Automat_sko%C5%84czony). Stany Ethereum są wielkimi strukturami danych, które przechowują nie tylko wszystkie konta i ich salda, ale też _stan maszyny_, który może zmieniać się od bloku do bloku zgodnie z predefiniowanymi zasadami, i który może wykonywać dowolny kod maszynowy. Konkretne zasady zmiany stanu od bloku do bloku są zdefiniowane przez EVM.
 
 ![Schemat przedstawiający strukturę EVM](../../../../../developers/docs/evm/evm.png) _Schemat zaadaptowany z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
@@ -56,9 +56,7 @@ Kontrakty jednak zawierają drzewo _pamięciowe_ Merkle Patricia (jako adresowal
 
 Skompilowany kod bitowy inteligentnego kontraktu wykonywany jest jako szereg [kodów operacyjnych](https://www.ethervm.io/) EVM, które przeprowadzają standardowe operacje na stosie, takie jak `XOR`, `AND`, `ADD`, `SUB` itp. EVM implementuje również szereg operacji stosu specyficznych dla blockchaina, takich jak `ADDRESS`, `BALANDCE`, `SHA3`, `BLOCKHASH` itp.
 
-![Schemat pokazujący, gdzie potrzebny jest gaz dla operacji EVM](../gas/gas.png) _Schemat zaadaptowany z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
-
-<!-- TODO add full list from  https://eth.wiki/concepts/evm/implementations -->
+![Schemat pokazujący, gdzie potrzebny jest gaz dla operacji EVM](../../../../../developers/docs/gas/gas.png) _Schemat zaadaptowany z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Implementacja EVM {#evm-implementations}
 
@@ -66,7 +64,7 @@ Wszystkie implementacje EVM muszą być zgodne ze specyfikacją opisaną w Yello
 
 W ponad pięcioletniej historii Ethereum, EVM przeszło kilka gruntownych weryfikacji, w ciągu tego czasu znajdziemy również kilka implementacji EVM w różnych językach programowania.
 
-Wszyscy [klienci Ethereum](/developers/docs/nodes-and-clients/#clients) posiadają implementacje EVM. Dodatkowo jest tu kilka samodzielnych implementacji, włącznie z:
+Wszyscy [klienci Ethereum](/developers/docs/nodes-and-clients/#execution-clients) posiadają implementacje EVM. Dodatkowo jest tu kilka samodzielnych implementacji, włącznie z:
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_
@@ -82,4 +80,4 @@ Wszyscy [klienci Ethereum](/developers/docs/nodes-and-clients/#clients) posiadaj
 
 ## Tematy powiązane {#related-topics}
 
-- [Gaz](/en/developers/docs/gas/)
+- [Gaz](/developers/docs/gas/)

@@ -15,13 +15,15 @@ Una blockchain si può descrivere come un database pubblico che viene aggiornato
 
 Ogni nuovo blocco, e la catena in generale, devono essere approvati da ogni nodo nella rete. In questo modo, ognuno ha gli stessi dati. Per fare questo, la blockchain ha bisogno di un meccanismo di consenso.
 
-Ethereum attualmente utilizza un meccanismo di consenso basato sulla proof-of-work. Questo significa che chiunque voglia aggiungere nuovi blocchi alla catena deve risolvere un enigma difficile, che richiede molta potenza di calcolo. Risolvere l'enigma offre la prova (in inglese "proof") che sono state impiegate risorse di calcolo. Questa attività è detta [mining](/en/developers/docs/consensus-mechanisms/pow/mining/). Il mining può comportare tentativi ed errori, ma l'aggiunta di un blocco comporta una ricompensa in Eth. D'altra parte, inviare blocchi fraudolenti non è un'opzione interessante, considerate le risorse che devono essere impiegate per produrre il blocco.
+Ethereum attualmente utilizza un meccanismo di consenso basato sulla proof-of-work. Questo significa che chiunque voglia aggiungere nuovi blocchi alla catena deve risolvere un enigma difficile, che richiede molta potenza di calcolo. Risolvere l'enigma offre la prova (in inglese "proof") che sono state impiegate risorse di calcolo. Questa attività è detta [mining](/developers/docs/consensus-mechanisms/pow/mining/). Il mining può comportare tentativi ed errori, ma l'aggiunta di un blocco comporta una ricompensa in Eth. D'altra parte, inviare blocchi fraudolenti non è un'opzione interessante, considerate le risorse che devono essere impiegate per produrre il blocco.
 
 I nuovi blocchi vengono trasmessi ai nodi della rete, controllati e verificati, aggiornando lo stato di tutti.
 
 Quindi, ricapitolando, quando si inviano ETH a qualcuno, la transazione deve essere sottoposta a mining e inclusa in un nuovo blocco. Lo stato aggiornato viene quindi condiviso con l'intera rete. Più dettagli qui sotto.
 
-Lascia che Austin ti accompagni attraverso la blockchain: <iframe width="100%" height="315" src="https://www.youtube.com/embed/zcX7OJ-L8XQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Lascia che Austin ti accompagni attraverso la blockchain:
+
+<YouTube id="zcX7OJ-L8XQ" />
 
 ## Cos'è Ethereum? {#what-is-ethereum}
 
@@ -97,7 +99,7 @@ Il volume delle transazioni è molto alto, così le transazioni sono salvate in 
 
 Snippet di codice riutilizzabile (programma) che uno sviluppatore pubblica nella memora dell'EVM. Chiunque può richiedere che il codice dello Smart Contract venga eseguito facendo una richiesta di transazione. Siccome gli sviluppatori possono scrivere applicazioni arbitrarie eseguibili nell'EVM (videogiochi, marketplace, strumenti finanziari, ecc) pubblicando Smart Contract, queste spesso sono chiamate [dapp o app decentralizzate](/developers/docs/dapps/).
 
-[Maggiori informazioni sugli Smart Contract](/en/developers/docs/smart-contracts/)
+[Maggiori informazioni sugli Smart Contract](/developers/docs/smart-contracts/)
 
 ## Letture consigliate {#further-reading}
 

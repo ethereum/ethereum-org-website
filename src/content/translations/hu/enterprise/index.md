@@ -54,7 +54,7 @@ Az Ethereum vállalkozásbarátabbá tételére irányuló egyes együttműköd�
 - [Blockapps](https://blockapps.net/) _az Enterprise Ethereum implementációja, eszközök, API-ok, melyek a STRATO platformot alkotják_
 - [ConsenSys](https://consensys.net/) _számos terméket és eszközt kínál az Ethereum fejlesztésére, valamint tanácsadási és egyedi fejlesztési szolgáltatásokat_
 - [Envision Blockchain](https://envisionblockchain.com/) _az Ethereum főhálózatra szakosodott, vállalati fókuszú tanácsadási és fejlesztési szolgáltatásokat nyújt_
-- [EY OpsChain](https://blockchain.ey.com/products/procurement) _egy beszerzési workflow-t biztosít RFQ-k, szerződések, rendelések és számlák kiadásával az Ön megbízható üzleti partnereiből álló hálózaton keresztül_
+- [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _egy beszerzési workflow-t biztosít RFQ-k, szerződések, rendelések és számlák kiadásával az Ön megbízható üzleti partnereiből álló hálózaton keresztül_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _egy vállalati fókuszú nyílt forráskódú Ethereum kliens Apache 2.0 licenccel fejlesztve és Java-ban írva_
 - [Infura](https://infura.io/) _skálázható Ethereum és IPFS hálozat API hozzáférés_
 - [Provide](https://provide.services/) _infrastruktúra és API-ok vállalati web3 alkalmazásoknak_
@@ -102,7 +102,6 @@ Példák L2 megoldásokra, melyek produkcióra készek, vagy hamarosan készen l
   - [Skale](https://skale.network)
   - [POA Network](https://www.poa.network/)
 - Hibrid megoldások, amelyek több kategória tulajdonságait ötvözik
-  - [Offchain Labs Arbitrum SCSC](https://https://offchainlabs.com/arbitrum.pdf)
   - [Celer](https://celer.network)
 
 ## Vállalati alkalmazások a főhálózaton {#enterprise-live-on-mainnet}
@@ -140,7 +139,7 @@ Itt egy pár vállalati alkalmazás, melyek telepítve lettek a nyilvános Ether
 - [Minespider](https://www.minespider.com/) _ellátási lánc nyomonkövetés_
 - [ShipChain](https://shipchain.io) _Ethereum nyilvános oldallánc és vállalati rendszer az ellátási lánc láthatóságáért és megbízhatóságáért különösen a kombinált logisztika esetében_
 - [Follow Our Fibre](https://www.followourfibre.com) _viszkózus ellátási lánc nyomon követhetőség_
-- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/procurement) _egy beszerzési workflow-ba történő belépést tesz lehetővé cégek számára RFQ-k, szerződések, rendelések és számlák kiadásával az Ön megbízható üzleti partnereiből álló hálózaton keresztül_
+- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _egy beszerzési workflow-ba történő belépést tesz lehetővé cégek számára RFQ-k, szerződések, rendelések és számlák kiadásával az Ön megbízható üzleti partnereiből álló hálózaton keresztül_
 - [Treum](https://treum.io/) _átláthatóságot, nyomonkövethetőséget és kereskedési lehetőséget biztosít ellátási láncoknak blokklánc technológia használatával_
 
 ### Hitelesítő adatok és tanúsítványok {#credentials}
@@ -158,4 +157,4 @@ Itt egy pár vállalati alkalmazás, melyek telepítve lettek a nyilvános Ether
 
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _elektromos fizetések_
 
-Ha szeretnél valamit hozzáadni a listához, akkor nézd meg [ a közreműködési instrukciókat](https://ethereum.org/en/contributing/).
+Ha szeretnél valamit hozzáadni a listához, akkor nézd meg [ a közreműködési instrukciókat](/contributing/).

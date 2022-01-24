@@ -17,7 +17,7 @@ This page allows a user to input where they live and see what exchanges they can
 
 Because of this context, we need some specific information when you suggest an exchange.
 
-**NOTE:** If you want to list a decentralized exchange, take a look at our [policy for listing wallets and dapps](/en/contributing/adding-products/).
+**NOTE:** If you want to list a decentralized exchange, take a look at our [policy for listing wallets and dapps](/contributing/adding-products/).
 
 ## What we need {#what-we-need}
 
@@ -36,4 +36,6 @@ And so that ethereum.org can be more confident that the exchange is a legitimate
 
 If you want to add an exchange to ethereum.org, create an issue on GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">Create an issue</ButtonLink>
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
+  Create an issue
+</ButtonLink>

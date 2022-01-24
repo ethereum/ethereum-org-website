@@ -22,7 +22,9 @@ Egy decentralizált [hálózat](#network) ellen irányuló támadás, amikor egy
 
 Egy objektum, mely egy [címet](#address), egy egyenleget, [egy nonce-t](#nonce), és opcionálisan tárhelyet és kódot tartalmazhat. Egy számla lehet [szerződéses számla](#contract-account) vagy egy [külső tulajdonú számla (EOA)](#eoa).
 
-<DocLink to="/developers/docs/accounts" title="Ethereum számlák" />
+<DocLink to="/developers/docs/accounts">
+  Ethereum számlák
+</DocLink>
 
 ### address (cím) {#address}
 
@@ -32,7 +34,9 @@ Egy objektum, mely egy [címet](#address), egy egyenleget, [egy nonce-t](#nonce)
 
 A [Solidity-ben](#solidity), az `assert(false)` a `0xfe` opkódra fordítódik, mely egy érvénytelen opkód, ami felhasználja az összes megmaradt [gázt](#gas) és visszaállítja a változásokat. Ha egy `assert()` állítás meghiúsul, akkor valami nagyon rossz és váratlan történik, és meg kell javítanod a kódot. Az `assert()` kódot, olyan feltételek elkerülésére kell használnod, melynek soha sem szabad megtörténnie.
 
-<DocLink to="/developers/docs/smart-contracts/security/" title="Biztonság" />
+<DocLink to="/developers/docs/smart-contracts/security/">
+  Biztonság
+</DocLink>
 
 ### attestation (tanúsítás) {#attestation}
 
@@ -46,7 +50,9 @@ Egy validátor szavazata egy [Beacon Chain](#beacon-chain) vagy egy [shard](#sha
 
 Egy Eth2 fejlesztés, mely az Ethereum hálózat koordinátora lesz. Bevezeti a [letétbizonyítékot](#proof-of-stake) és a [validátorokat](#validator) az Ethereumra. Idővel össze fog olvadni a [főhálózattal](#mainnet).
 
-<DocLink to="/eth2/beacon-chain/" title="Beacon Chain" />
+<DocLink to="/upgrades/beacon-chain/">
+  Beacon Chain
+</DocLink>
 
 ### big-endian {#big-endian}
 
@@ -56,13 +62,17 @@ Helyzeti számábrázolás, ahol a legfontosabb számjegy az első a memóriába
 
 A szükséges információ (egy blokk fejléc) gyűjteménye a befoglalt [tranzakciókról](#transaction), és más blokk fejlécek halmaza, melyet [ommereknek](#ommer) hívunk. A blokkokat a [bányászok](#miner) adják hozzá az Ethereum hálózathoz.
 
-<DocLink to="/developers/docs/blocks/" title="Blokkok" />
+<DocLink to="/developers/docs/blocks/">
+  Blokkok
+</DocLink>
 
 ### blokklánc {#blockchain}
 
 Az Ethereumban [blokkok](#block) sorozatát jelenti, melyeket a [proof-of-work](#pow) rendszer érvényesít, mindegyik kapcsolódik az előzőhöz egészen a [genezis blokkig](#genesis-block). Nincsen blokk méret határ, ehelyett [gáz limitet](#gas-limit) használunk.
 
-<DocLink to="/developers/docs/intro-to-ethereum#what-is-a-blockchain" title="Mi az a blokklánc?" />
+<DocLink to="/developers/docs/intro-to-ethereum#what-is-a-blockchain">
+  Mi az a blokklánc?
+</DocLink>
 
 ### bytecode {#bytecode}
 
@@ -80,7 +90,9 @@ Az első a két [hard forkból](#hard-fork) a [Metropolis](#metropolis) fejleszt
 
 Egy magas szintű nyelvben (pl.: [Solidity](#solidity)) írt kód átkonvertálása egy alacsonyabb szintű nyelvre (pl.: EVM [bájtkód](#bytecode)).
 
-<DocLink to="/developers/docs/smart-contracts/compiling/" title="Okos szerződések fordítása" />
+<DocLink to="/developers/docs/smart-contracts/compiling/">
+  Okos szerződések fordítása
+</DocLink>
 
 ### committee (bizottság) {#committee}
 
@@ -110,7 +122,9 @@ Egy speciális [tranzakció](#transaction), a [zéró címmel](#zero-address) mi
 
 A kereszt kapcsolat egy összesítést ad vissza egy shard állapotáról. Így fognak a [shard](#shard) láncok kommunikálni egymással [Beacon Chain-en](#beacon-chain) keresztül a [proof-of-stake rendszerben](#proof-of-stake).
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work" title="Proof-of-stake" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
+  Proof-of-stake
+</DocLink>
 
 <Divider />
 
@@ -120,19 +134,25 @@ A kereszt kapcsolat egy összesítést ad vissza egy shard állapotáról. Így 
 
 Egy olyan vállalat vagy szervezet, amely hierarchikus menedzsment nélkül működik. A DAO utalhat a "The DAO" nevű szerződésre, melyet 2016 április 30.-án indítottak, és 2016 júniusában meghackeltek; ez végül erősen motiválta a [hard forkot](#hard-fork) (DAO kódnév) az 1,192,000 blokkban, mely visszaállította a meghackelt DAO szerződést és az Ethereum és az Ethereum Classic szétválását okozta két rivális rendszerré.
 
-<DocLink to="/community/#decentralized-autonomous-organizations-daos" title="Decentralizált autonóm szervezetek (DAO-k)" />
+<DocLink to="/community/#decentralized-autonomous-organizations-daos">
+  Decentralizált autonóm szervezetek (DAO-k)
+</DocLink>
 
 ### Dapp {#dapp}
 
 Decentralizált alkalmazás. Legalább egy [okosszerződés](#smart-contract) és egy webes felhasználói felület. Tágabb értelemben egy dapp egy olyan web alkalmazás, mely egy decentralizált, peer-to-peer infrastruktúra szolgáltatásra épült. Továbbá sok dapp tartalmazhat decentralizált tárhelyet és/vagy egy üzenetküldő protokollt és platformot.
 
-<DocLink to="/developers/docs/dapps/" title="Bevezetés a dappokba" />
+<DocLink to="/developers/docs/dapps/">
+  Bevezetés a dappokba
+</DocLink>
 
 ### decentralizált tőzsde (DEX) {#dex}
 
 Egy [dapp](#dapp) típus, mellyel tokeneket cserélhetsz a peerekkel a hálózaton. Szükséged lesz [etherre](#ether) a használatukhoz (a [tranzakciós díjak](#transaction-fee) kifizetésére) de nincsenek kitéve a földrajzi megszorításoknak, mint a centralizált tőzsdék – bárki használhatja őket.
 
-<DocLink to="/get-eth/#dex" title="Decentralizált tőzsdék" />
+<DocLink to="/get-eth/#dex">
+  Decentralizált tőzsdék
+</DocLink>
 
 ### deed {#deed}
 
@@ -142,7 +162,9 @@ Lásd [nem felcserélhető token (NFT)](#nft)
 
 A "decentralized finance", vagyis "decentralizált pénzügy" rövidítése, amely olyan [Dappok](#dapp) széles kategóriája, melyeknek célkitűzése blokklánc alapú pénzügyi szolgáltatások létrehozása, köztes szereplők nélkül, így bárki részt vehet benne internetkapcsolattal.
 
-<DocLink to="/dapps/#explore" title="Defi dappok" />
+<DocLink to="/dapps/#explore">
+  Defi dappok
+</DocLink>
 
 ### difficulty (nehézség) {#difficulty}
 
@@ -168,13 +190,17 @@ Az Ethereum által használt kriptográfiai algoritmus, mely biztosítja, hogy a
 
 Egy 32 [slotból](#slot) álló periódus (6.4 perc) a [Beacon Chain](#beacon-chain)-által koordinált rendszerben. A [validátor](#validator) [bizottságokat](#committee) összekeverik minden korszakban biztonsági okokból. Minden korszakban esély van a lánc [véglelesítésére](#finality).
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work" title="Proof-of-stake" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
+  Proof-of-stake
+</DocLink>
 
 ### Ethereum Fejlesztési Javaslatok (EIP-k) {#eip}
 
 Tervezési dokumentum, amely információkat nyújt az Ethereum közösség számára, és ismerteti a javasolt új funkciót, annak folyamatait vagy környezetét (lásd [ERC](#erc)).
 
-<DocLink to="/eips/" title="Bevezetés az EIP-kbe" />
+<DocLink to="/eips/">
+  Bevezetés az EIP-kbe
+</DocLink>
 
 ### Ethereum Name Service (ENS) {#ens}
 
@@ -194,7 +220,9 @@ Egy emberi felhasználók által vagy számára létrehozott [számla](#account)
 
 Néhány [EIP-hez](#eip) tartozó címke, melyek specifikus Ethereum használati szabványokat definiálnak.
 
-<DocLink to="/eips/" title="Bevezetés az EIP-kbe" />
+<DocLink to="/eips/">
+  Bevezetés az EIP-kbe
+</DocLink>
 
 ### Ethash {#ethash}
 
@@ -206,19 +234,25 @@ Az Ethereum 1.0 [munkabizonyíték](#pow) algoritmusa.
 
 Az Ethereum ökoszisztéma által használt natív kriptovaluta, mely fedezi a [gáz](#gas) költségeket tranzakciók végrehajtásakor. Írásban találkozhatunk vele ETH-ként vagy a Ξ szimbólumként is, ami a nagybetűs görög kszí karakter.
 
-<DocLink to="/eth/" title="A digitális jövőnk valutája" />
+<DocLink to="/eth/">
+  A digitális jövőnk valutája
+</DocLink>
 
 ### events (események) {#events}
 
 Az [EVM](#evm) logolási lehetőségeinek használatát teszi lehetővé. A [dappok](#dapp) figyelhetik az eseményeket és a használatukkal JavaScript callback függvényeket triggerelhetnek az felhasználói felületen.
 
-<DocLink to="/developers/docs/smart-contracts/anatomy/#events-and-logs" title="Események és naplózások" />
+<DocLink to="/developers/docs/smart-contracts/anatomy/#events-and-logs">
+  Események és naplózások
+</DocLink>
 
 ### Ethereum virtuális gép (EVM) {#evm}
 
 Egy stack alapú virtuális gép, mely [bájtkódot](#bytecode) futtat. Az Ethereumban a lefutási modell előírja, hogyan fog a rendszerállapot megváltozni adott bájtkód sorozattól és a környezeti adatok egy kis sorától. Ez a virtuális állapot gép formális modelljében van előírva.
 
-<DocLink to="/developers/docs/evm/" title="Ethereum virtuális gép" />
+<DocLink to="/developers/docs/evm/">
+  Ethereum virtuális gép
+</DocLink>
 
 ### EVM assembly nyelv {#evm-assembly-language}
 
@@ -236,13 +270,19 @@ Egy alap függvény, mely adat vagy deklarált függvény név hiánya esetén h
 
 Egy [okosszerződés](#smart-contract) által működtetett szolgáltatás, mely javakat bocsájt ki ingyenes teszt ether formájában, melyet a tesztneten lehet használni.
 
-<DocLink to="/developers/docs/networks/#testnet-faucets" title="Tesztnet csapok" />
+<DocLink to="/developers/docs/networks/#testnet-faucets">
+  Tesztnet csapok
+</DocLink>
 
 ### véglegesség {#finality}
 
 A véglegesség a garancia arra, hogy az adott tranzakciók egy bizonyos idő előtt nem fognak megváltozni és nem lehet visszavonni őket.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/#finality" title="Proof-of-work véglegesség" /> <DocLink to="/developers/docs/consensus-mechanisms/pos/#finality" title="Proof-of-stake véglegesség" />
+<DocLink to="/developers/docs/consensus-mechanisms/pow/#finality">
+  Proof-of-work véglegesség
+</DocLink> <DocLink to="/developers/docs/consensus-mechanisms/pos/#finality">
+  Proof-of-stake véglegesség
+</DocLink>
 
 ### finney {#finney}
 
@@ -256,7 +296,9 @@ Egy protokoll változtatás, mely egy alternatív lánc létrejöttét vonja mag
 
 Bizonyos [2. réteg](#layer-2) megoldások biztonsági modellje, ahol a sebesség növelése érdekében a tranzakciókat csoportokba [összegzik](#rollups) és egy tranzakcióként továbbítják az Ethereumra. Érvényesnek feltételezzük őket, de meg lehet kérdőjelezni, ha csalást feltételezünk. Ekkor lefut egy csalási bizonyítás, mely ellenőrzi, hogy történt-e csalás. Ez a módszer növeli a lehetséges tranzakciók mennyiségét mialatt fenntartja a biztonságot. Néhány [összegző](#rollups) [érvényességi bizonyítást](#validity-proof) használ.
 
-<DocLink to="/developers/docs/layer-2-scaling/#optimistic-rollups" title="Optimista összegzők" />
+<DocLink to="/developers/docs/layer-2-scaling/#optimistic-rollups">
+  Optimista összegzők
+</DocLink>
 
 ### frontier {#frontier}
 
@@ -270,7 +312,9 @@ Az Ethereum kezdeti teszt fejlesztési fázisa, mely 2015 júliusától 2016 má
 
 Egy virtuális üzemanyag, melyet az Ethereumon használunk okosszerződések végrehajtására. Az [EVM](#evm) egy könyvelési mechanizmust használ, amivel méri a gázfogyasztást és behatárolja a számítási kapacitások fogyasztását (lásd [Turing teljes](#turing-complete)).
 
-<DocLink to="/developers/docs/gas/" title="Gáz és tranzakciós díjak" />
+<DocLink to="/developers/docs/gas/">
+  Gáz és tranzakciós díjak
+</DocLink>
 
 ### gas limit (gáz limit) {#gas-limit}
 
@@ -332,13 +376,17 @@ Egy Ethereum [hard fork](#hard-fork) a 200,000 blokknál, mely bevezeti az expon
 
 Egy felhasználói felület, mely általában egy kód szerkesztőt, egy fordítót, egy runtime-ot és egy debuggert egyesít.
 
-<DocLink to="/developers/docs/ides/" title="Integrált Fejlesztői Környezetek" />
+<DocLink to="/developers/docs/ides/">
+  Integrált Fejlesztői Környezetek
+</DocLink>
 
 ### immutable deployed code problem (nem megváltoztatható kód problémája) {#immutable-deployed-code-problem}
 
 Amint egy [szerződés](#smart-contract) (vagy [könyvtár](#library)) kód telepítésre került, megváltoztathatatlanná válik. A standard szoftverfejlesztési gyakorlat a lehetséges bugok javítására és új funkciók hozzáadására támaszkodik, így ez egy kihívást jelent az okosszerződés fejlesztésnél.
 
-<DocLink to="/developers/docs/smart-contracts/deploying/" title="Okosszerződések telepítése" />
+<DocLink to="/developers/docs/smart-contracts/deploying/">
+  Okosszerződések telepítése
+</DocLink>
 
 ### internal transaction (belső tranzakció) {#internal-transaction}
 
@@ -352,7 +400,9 @@ Egy [tranzakció](#transaction) egy [szerződéses számláról](#contract-accou
 
 Más néven "jelszó nyújtó algoritmus", melyet a [keystore](#keystore-file) formátumok használnak, hogy védekezzenek a brute-force, dictionary és a szivárvány tábla támadásokkal szemben a jelszó titkosításoknál a jelszó ismételt hashelésével.
 
-<DocLink to="/developers/docs/smart-contracts/security/" title="Biztonság" />
+<DocLink to="/developers/docs/smart-contracts/security/">
+  Biztonság
+</DocLink>
 
 ### keccak-256 {#keccak-256}
 
@@ -370,7 +420,9 @@ Egy JSON kódolású fájl, mely egy (véletlenszerűen generált) [privát kulc
 
 Egy fejlesztési terület, mely az Ethereum protokollra épített fejlesztési rétegekre fókuszál. Ezek a fejlesztések a [tranzakciókhoz](#transaction) sebességhez, olcsóbb[tranzakciós díjakhoz](#transaction-fee) és a privát tranzakciókhoz kapcsolódnak.
 
-<DocLink to="/developers/docs/layer-2-scaling/" title="2. réteg" />
+<DocLink to="/developers/docs/layer-2-scaling/">
+  2. réteg
+</DocLink>
 
 ### LevelDB {#level-db}
 
@@ -380,7 +432,9 @@ Egy nyílt forráskódú on-disk, kulcspár tároló, mely egy könnyű, egyedi 
 
 Egy speciális [szerződés](#smart-contract) típus, melynek nincsenek payable függvényei, fallback függvényei vagy adattárolója. Így nem tud ethert tartani vagy kapni, illetve adatot tárolni. Egy könyvtár korábban telepített kódként szolgál, melyet más szerződések meghívhatnak read-only számítás céljából.
 
-<DocLink to="/developers/docs/smart-contracts/libraries/" title="Okosszerződés könyvtárak" />
+<DocLink to="/developers/docs/smart-contracts/libraries/">
+  Okosszerződés könyvtárak
+</DocLink>
 
 ### lightweight client (könnyű kliens) {#lightweight-client}
 
@@ -390,7 +444,7 @@ Egy Ethereum kliens, mely nem tárolja a [blokklánc](#blockchain) lokális más
 
 ## M {#section-m}
 
-### mainnet (főhálózat) {#mainnet}
+### Mainnet (főhálózat) {#mainnet}
 
 A "main network" rövidítése, ez a fő nyilvános Ethereum [blokklánc](#blockchain). Valódi ETH, valódi érték, és valódi következmények. 1. rétegként is hivatkozunk rá, amikor a [2. rétegű](#layer-2) skálázhatósági megoldásokról beszélünk. (Ezenkívül lásd [tesztnet](#testnet))
 
@@ -414,7 +468,9 @@ Az Ethereum harmadik fejlesztési fázisa, mely 2017 októberében indult el.
 
 Egy hálózati [csomópont](#node), mely érvényes [munkabizonyítékokat](#pow) keres az új blokkoknak ismételt hasheléssel (lásd [Ethash](#ethash)).
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/mining/" title="Bányászat" />
+<DocLink to="/developers/docs/consensus-mechanisms/pow/mining/">
+  Bányászat
+</DocLink>
 
 <Divider />
 
@@ -424,21 +480,29 @@ Egy hálózati [csomópont](#node), mely érvényes [munkabizonyítékokat](#pow
 
 Az Ethereum hálózatra utal, mely egy peer-to-peer hálózat, mely tranzakciókat és blokkokat terjeszt az összes Ethereum csomópont (hálózati résztvevő) számára.
 
-<DocLink to="/developers/docs/networks/" title="Hálózatok" />
+<DocLink to="/developers/docs/networks/">
+  Hálózatok
+</DocLink>
 
 ### nem felcserélhető token (NFT) {#nft}
 
 Más néven "deed", ez egy token szabvány, melyet az ERC-721 javaslat vezetett be. Az NFT-ket nyomon lehet követni és kereskedni velük, de minden egyes token egyedi és különböző; nem felcserélhetőek, mint az ERC-20 tokenek. Az NFT-k tulajdonjogot reprezentálhatnak digitális vagy fizikai eszközöknél.
 
-<DocLink to="/developers/docs/standards/tokens/erc-721/" title="ERC-721 Nem Felcserélhető Token Szabvány" />
+<DocLink to="/developers/docs/standards/tokens/erc-721/">
+  ERC-721 Nem Felcserélhető Token Szabvány
+</DocLink>
 
 ### node (csomópont) {#node}
 
 Egy szoftver kliens, mely részt vesz a hálózatban.
 
-<DocLink to="/developers/docs/nodes-and-clients/" title="Csomópontok és kliensek" />
+<DocLink to="/developers/docs/nodes-and-clients/">
+  Csomópontok és kliensek
+</DocLink>
 
-<DocLink to="/developers/docs/nodes-and-clients/" title="Csomópontok és kliensek" />
+<DocLink to="/developers/docs/nodes-and-clients/">
+  Csomópontok és kliensek
+</DocLink>
 
 ### nonce {#nonce}
 
@@ -456,7 +520,9 @@ Amikor egy [bányász](#miner) talál egy érvényes [blokkot](#block), lehetsé
 
 Olyan [összevont tranzakció](#rollups), amely [csalási bizonyítást](#fraud-proof) használ annak érdekében, hogy növelje a [2. rétegen](#layer-2) végrehajtható tranzakciók számát, ugyanakkor a [főhálózat](#mainnet) (1. réteg) biztonsági protokollját használja. Ellentétben egy hasonló 2. réteges megoldással, a [Plasmával](#plasma), az Optimistic típusú összevont tranzakciók komplexebb tranzakciókat is képesek kezelni - az [EVM](#evm)-ben bármi lehetséges. Vannak azonban késleltetési problémái a [Zero-knowledge típusú összevont tranzakciókhoz](#zk-rollups) képest, mivel egy tranzakciót meg lehet kérdőjelezni egy csalási bizonyítással.
 
-<DocLink to="/developers/docs/layer-2-scaling/#optimistic-rollups" title="Optimista összegzők" />
+<DocLink to="/developers/docs/layer-2-scaling/#optimistic-rollups">
+  Optimista összegzők
+</DocLink>
 
 <Divider />
 
@@ -470,7 +536,9 @@ Az Ethereum kliens szoftver egyik legprominensebb, interoperábilis implementác
 
 Egy [2. réteges](#layer-2)skálázási megoldás, mely [csalási bizonyításokat használ](#fraud-proof), mint az [optimista összegzők](#optimistic-rollups). A Plasma csak egyszerű tranzakciókra alkalmas, mint az egyszerű token átutalás vagy cserélés.
 
-<DocLink to="/developers/docs/layer-2-scaling/#Plasma" title="Plasma" />
+<DocLink to="/developers/docs/layer-2-scaling/#Plasma">
+  Plasma
+</DocLink>
 
 ### private key (secret key) / privát kulcs (titkos kulcs) {#private-key}
 
@@ -480,13 +548,17 @@ Egy titkos szám, mely lehetővé teszi az Ethereum felhasználóknak, hogy bizo
 
 Egy metódus, mellyel egy kriptovaluta blokklánc protokoll eléri az elosztott [konszenzust](#consensus). A PoS utasítja a felhasználókat, hogy bizonyítsák a tulajdonjogukat egy bizonyos összegű kriptovaluta felett (a "letétük" a hálózatban) azért, hogy részt vehessenek a tranzakciók validálásában.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/" title="Proof-of-stake" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos/">
+  Proof-of-stake
+</DocLink>
 
 ### proof-of-work (PoW) / munkabizonyíték {#pow}
 
 Egy adatsor (a bizonyíték), melynek megtalálása jelentős mennyiségű számítást igényel. Az Ethereumban a [bányászoknak](#miner) meg kell találniuk a numerikus megoldását az [Ethash](#ethash) algoritmusnak, mely eléri a hálózati szintű [nehézségi](#difficulty) célt.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/" title="Proof-of-work" />
+<DocLink to="/developers/docs/consensus-mechanisms/pow/">
+  Proof-of-work
+</DocLink>
 
 ### public key (publikus kulcs) {#public-key}
 
@@ -504,7 +576,9 @@ Egy Ethereum kliens által visszadott adat, mely egy adott [tranzakció](#transa
 
 Egy támadás, mely során egy támadó szerződés meghívja az áldozat szerződés egyik függvényét úgy, hogy újra meghívja a függvényt lefutás közben rekurzívan. Ez például a pénz ellopását eredményezheti úgy, hogy kihagy egy pár lépést az áldozat szerződéséből, mely frissítené az egyenlegeket vagy számolná a kiutalási mennyiségeket.
 
-<DocLink to="/developers/docs/smart-contracts/security/#re-entrancy" title="Újbóli belépés (re-entrancy)" />
+<DocLink to="/developers/docs/smart-contracts/security/#re-entrancy">
+  Újbóli belépés (re-entrancy)
+</DocLink>
 
 ### reward (jutalom) {#reward}
 
@@ -518,7 +592,9 @@ Egy Ethereum fejlesztők által megtervezett kódolási szabvány tetszőlegesen
 
 A [2. réteg](#layer-2) skálázódásának egyik módszere, amely több tranzakciót gyűjt össze, és egyszerre, egyetlen tranzakcióban küldi el őket az [Ethereum főhálózatára](#mainnet). Ez lehetővé teszi a [gáz](#gas) költségének csökkentését, és növeli a feldolgozható [tranzakciók](#transaction) számát. Vannak Optimistic és Zero-knowledge típusú összevont tranzakciók, melyek különböző biztonsági módszert használnak, hogy elérjék a skálázási eredményt.
 
-<DocLink to="/developers/docs/layer-2-scaling/#rollups" title="Összegzők" />
+<DocLink to="/developers/docs/layer-2-scaling/#rollups">
+  Összegzők
+</DocLink>
 
 <Divider />
 
@@ -528,7 +604,9 @@ A [2. réteg](#layer-2) skálázódásának egyik módszere, amely több tranzak
 
 Az Ethereum negyedik és végső fejlesztési fázisa.
 
-<DocLink to="/eth2/" title="Ethereum 2.0 (Eth2)" />
+<DocLink to="/upgrades/">
+  Ethereum 2.0 (Eth2)
+</DocLink>
 
 ### Secure Hash Algorithm (SHA) {#sha}
 
@@ -538,13 +616,17 @@ Kriptográfiai hash függvények egy családja, melyet a National Institute of S
 
 Egy [proof-of-stake](#proof-of-stake) lánc, melyet a [Beacon Chain](#beacon-chain) koordinált és a [validátorok](#validator) tartják biztonságban. 64 lesz hozzáadva a hálózathoz az Eth2 shard lánc fejlesztés részeként. A shard láncok megnövelt tranzakció átvitelt tesznek majd lehetővé az Ethereumon extra adat szolgáltatással az olyan [2. réteg](#layer-2) megoldások részére, mint az [optimista összegzők](#optimistic-rollups) és az [ZK összegzők](#zk-rollups).
 
-<DocLink to="/eth2/shard-chains" title="Shard láncok" />
+<DocLink to="/upgrades/shard-chains">
+  Shard láncok
+</DocLink>
 
 ### Sidechain (melléklánc) {#sidechain}
 
-Egy skálázási megoldás, mely egy különálló láncot használ másfajta, gyakran gyorsabb, [konszenzus szabályokkal]{#consensus-rules}. Egy áthidalás szükséges, hogy ezek a mellékláncok a [főhálózathoz](#mainnet) csatlakozzanak. Az [összegzők](#rollups) szintén mellékláncokat használnak, de ehelyett a [főhálózattal](#mainnet) együttműködve teszik ezt.
+Egy skálázási megoldás, mely egy különálló láncot használ másfajta, gyakran gyorsabb, [konszenzus szabályokkal](#consensus-rules). Egy áthidalás szükséges, hogy ezek a mellékláncok a [főhálózathoz](#mainnet) csatlakozzanak. Az [összegzők](#rollups) szintén mellékláncokat használnak, de ehelyett a [főhálózattal](#mainnet) együttműködve teszik ezt.
 
-<DocLink to="/developers/docs/layer-2-scaling/#sidechains" title="Mellékláncok" />
+<DocLink to="/developers/docs/layer-2-scaling/#sidechains">
+  Mellékláncok
+</DocLink>
 
 ### singleton {#singleton}
 
@@ -554,19 +636,25 @@ Egy számítógép programozási fogalom, mely egy olyan objektumot jelent, amin
 
 Időperiódus (12 másodperc), amely alatt egy új [Beacon Chain](#beacon-chain) és [shard](#shard) lánc blokkot terjeszthet elő egy [validátor](#validator) a [letétbizonyíték](#proof-of-stake) alapú rendszerben. A slot lehet üres is. 32 slot tesz ki egy [epochát](#epoch).
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work" title="Proof-of-stake" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
+  Proof-of-stake
+</DocLink>
 
 ### smart contract (okosszerződés) {#smart-contract}
 
 Egy program, amelyet az Ethereum számítási infrastruktúráján lehet futtatni.
 
-<DocLink to="/developers/docs/smart-contracts/" title="Bevezetés az okosszerződésekbe" />
+<DocLink to="/developers/docs/smart-contracts/">
+  Bevezetés az okosszerződésekbe
+</DocLink>
 
 ### Solidity {#solidity}
 
 Egy eljárásközpontú (imperatív) programozási nyelv, amelynek szintaxisa hasonló mint a JavaScript, a C++ és a Java. Az Ethereum [okosszerződések](#smart-contract) legnépszerűbb, leggyakrabban használt programozási nyelve. Dr. Gavin Wood alkotta meg.
 
-<DocLink to="/developers/docs/smart-contracts/languages/#solidity" title="Solidity" />
+<DocLink to="/developers/docs/smart-contracts/languages/#solidity">
+  Solidity
+</DocLink>
 
 ### Solidity inline assembly {#solidity-inline-assembly}
 
@@ -580,19 +668,25 @@ Az Ethereum blokklánc [hard-forkja](#hard-fork), ami a 2.675.000 számú blokkn
 
 Olyan [ERC-20 token](#token-standard), amelynek értéke egy másik vagyontárgyéhoz van kötve. Léteznek hagyományos devizához, például dollárhoz, nemesfémekhez, például aranyhoz, és más kriptovalutákhoz, például Bitcoinhoz kötött értékű stablecoinok.
 
-<DocLink to="/eth/#tokens" title="Az ETH nem az egyedüli kripto az Ethereumon" />
+<DocLink to="/eth/#tokens">
+  Az ETH nem az egyedüli kripto az Ethereumon
+</DocLink>
 
 ### staking (letétbe helyezés) {#staking}
 
 Adott mennyiségű [ether](#ether) letétbe helyezése a validátorrá válás és a [hálózat](#network) biztosításának érdekében. A validátor ellenőrzi a [tranzakciókat](#transaction), és új [blokkokat](#block) terjeszt elő a [letétbizonyíték](#pos) konszenzus-modellje alapján. A letétbe helyezés pénzügyi motivációt ad arra, hogy a hálózat érdekét szem előtt tartva járj el. A [validátori](#validator) feladatok elvégzéséért jutalomban részesülsz, de váltzó mennyiségű ETH-t veszíthetsz el, ha nem így teszel.
 
-<DocLink to="/eth2/staking/" title="Helyezd letétbe az ETH-ed, hogy Ethereum validátorrá válhass" />
+<DocLink to="/staking/">
+  Helyezd letétbe az ETH-ed, hogy Ethereum validátorrá válhass
+</DocLink>
 
 ### state channels (állapot csatornák) {#state-channels}
 
 Egy [2. rétegű](#layer-2) megoldás, ahol egy csatorna van létrehozva a résztvevők között és ahol szabadon és kis költséggel indíthatnak tranzakciókat. Csak egy, a csatornát megnyitó és a csatornát lezáró, [tranzakció](#transaction) kerül fel a [főhálózatra](#mainnet). Ez nagyon magas tranzakció átvitelt tesz lehetővé, de a résztvevők számának előzetes ismeretére, valamint a tőke lekötésére támaszkodik.
 
-<DocLink to="/developers/docs/layer-2-scaling/#state-channels" title="Állapot csatornák" />
+<DocLink to="/developers/docs/layer-2-scaling/#state-channels">
+  Állapot csatornák
+</DocLink>
 
 ### szabo {#szabo}
 
@@ -610,19 +704,25 @@ Az Ethereum blokklánc egyik[hard-forkja](#hard-fork), mely az 2,463,000 számú
 
 A "test network", (vagyis "teszthálózat") rövidítése. A fő Ethereum hálózat (lásd: [főhálózat](#mainnet)) viselkedésének szimulálására használt hálózat.
 
-<DocLink to="/developers/docs/networks/#testnets" title="Tesztnetek" />
+<DocLink to="/developers/docs/networks/#testnets">
+  Tesztnetek
+</DocLink>
 
 ### token standard (token szabvány) {#token-standard}
 
 Az ERC-20 előterjesztéssel került be a rendszerbe ez a standardizált [okosszerződési](#smart-contract) struktúra a felcserélhető tokenek kezelésére. Az egyazon szerződésből származó tokenek követhetők, eladhatók, és az [NFT](#nft)-kkel ellentétben felcserélhetők.
 
-<DocLink to="/developers/docs/standards/tokens/erc-20/" title="ERC-20 Token Szabvány" />
+<DocLink to="/developers/docs/standards/tokens/erc-20/">
+  ERC-20 Token Szabvány
+</DocLink>
 
 ### tranzakció {#transaction}
 
 Az Ethereum Blokkláncra küldött, egy feladó [számla](#account) által aláírt, egy bizonyos [címet](#address) célzó adat. A tranzakció metaadatokat tartalmaz, mint például az adott tranzakció [gáz limitje](#gas-limit).
 
-<DocLink to="/developers/docs/transactions/" title="Tranzakciók" />
+<DocLink to="/developers/docs/transactions/">
+  Tranzakciók
+</DocLink>
 
 ### transaction fee (tranzakciós díj) {#transaction-fee}
 
@@ -644,25 +744,35 @@ Az angol matematikus és számítástechnikus Alan Turing után elnevezett fogal
 
 Egy [csomópont](#node) a [letétbizonyíték](#proof-of-stake) alapú rendszerben, amely az adattárolásért, a tranzakciók felolgozásáért, és az új blokkok blokklánchoz való hozzáadásáért felel. A validátor-szoftver aktiválásához 32 ETH-t kell [letétbe helyezned](#staking).
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos" title="Proof-of-stake" /> <DocLink to="/eth2/staking/" title="Letétbe helyezés az Ethereumon" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos">
+  Proof-of-stake
+</DocLink> <DocLink to="/staking/">
+  Letétbe helyezés az Ethereumon
+</DocLink>
 
 ### Validity proof (érvényességi bizonyíték) {#validity-proof}
 
 Egyes [2. réteges](#layer-2) megoldások biztonsági modellje, amely a feldolgozási sebesség növelésének érdekében a tranzakciókat [összevonják](/#rollups), és egyetlen tranzakció keretében küldik el az Ethereum hálózatra. A tranzakciós számítások a láncon kívül történnek, majd az érvényességük bizonyítékával együtt kerülnek fel a láncra. Ez a módszer növeli a végrehajtható tranzakciók számát, mialatt a biztonságot is fenntartja. Egyes [összesített tranzakciók](#rollups) [csalási bizonyítást](#fraud-proof) használnak.
 
-<DocLink to="/developers/docs/layer-2-scaling/#zk-rollups" title="Zero-knowledge összegzők" />
+<DocLink to="/developers/docs/layer-2-scaling/#zk-rollups">
+  Zero-knowledge összegzők
+</DocLink>
 
 ### Validium {#validium}
 
 [2. réteges](#layer-2) megoldás, amely [érvényességi bizonyítást](#validity-proof) használ a feldolgozható tranzakciók számának növelésére. A [Zero-knowledge összegzőkkel](#zk-rollup) ellentétben a Validium adat nem az 1. rétegű [főhálózaton](#mainnet) tárolódik.
 
-<DocLink to="/developers/docs/layer-2-scaling/#validium" title="Validium" />
+<DocLink to="/developers/docs/layer-2-scaling/#validium">
+  Validium
+</DocLink>
 
 ### Vyper {#vyper}
 
 Egy magas szintű programozási nyelv Python-szerű szintaxissal. Az a célja, hogy megközelítse a tiszta funkcionális nyelvet. Vitalik Buterin készítette.
 
-<DocLink to="/developers/docs/smart-contracts/languages/#vyper" title="Vyper" />
+<DocLink to="/developers/docs/smart-contracts/languages/#vyper">
+  Vyper
+</DocLink>
 
 <Divider />
 
@@ -672,13 +782,17 @@ Egy magas szintű programozási nyelv Python-szerű szintaxissal. Az a célja, h
 
 Szoftver, amely a [privát kulcsokat](#private-key) tartalmazza. Az Ethereum [számlák](#account) elérésére és kezelésére, valamint az [okosszerződésekkel](#smart-contract) való interakcióra használható. A kulcsokat nem kell a tárcában tárolni, a nagyobb biztonság érdekében lehetséges offline tárhelyen (például memóriakártyán vagy papíron) őrizni azokat. Neve ellenére a tárca soha nem tartalmazza a tényleges érméket vagy tokeneket.
 
-<DocLink to="/wallets/" title="Ethereum tárcák" />
+<DocLink to="/wallets/">
+  Ethereum tárcák
+</DocLink>
 
 ### Web3 {#web3}
 
 A világháló harmadik verziója. A Web3, amit először Dr. Gavin Wood írt le, új célt tűz ki a webes applikációknak - központilag birtokolt és menedzselt applikációk helyett decentralizált protokollokra épülő applikációk (lásd: [Dapp](#dapp)).
 
-<DocLink to="/developers/docs/web2-vs-web3/" title="Web2 vs Web3" />
+<DocLink to="/developers/docs/web2-vs-web3/">
+  Web2 vs Web3
+</DocLink>
 
 ### wei {#wei}
 
@@ -696,7 +810,9 @@ Egy speciális, kizárólag nullákat tartalmazó Ethereum cím, amely a [szerz�
 
 [Érvényességi bizonyítást](#validity-proof) használó tranzakciók [összevonása](#rollups), a [2. réteg](#layer-2) tranzakciófelolgozási kapacitásának, és a [főhálózat](#mainnet) (1. réteg) által nyújtott biztonság elérésének érdekében. Bár ezek nem képesek olyan komplex tranzakciókat kezelni, mint az [Optimistic típusú összevont tranzakciók](#optimistic-rollups), nincsenek késleltetési problémáik, mert a tranzakciók feltételezhetően érvényesek a hálózatra küldés pillanatában.
 
-<DocLink to="/developers/docs/layer-2-scaling/#zk-rollups" title="Zero-knowledge összegzők" />
+<DocLink to="/developers/docs/layer-2-scaling/#zk-rollups">
+  Zero-knowledge összegzők
+</DocLink>
 
 <Divider />
 
@@ -710,4 +826,4 @@ _Részben a [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook)al
 
 Kihagytunk valamit? Valami nem helyes? Segíts nekünk jobbá tenni úgy, hogy közreműködsz ehhez a szójegyzékhez a GitHub-on!
 
-[Tudj meg többet a hozzájárulásról](/en/contributing/adding-glossary-terms)
+[Tudj meg többet a hozzájárulásról](/contributing/adding-glossary-terms)

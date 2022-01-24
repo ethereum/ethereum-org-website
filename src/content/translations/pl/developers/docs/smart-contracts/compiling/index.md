@@ -40,7 +40,7 @@ Kompilator zwróci również **interfejs binarny aplikacji (ABI)**, którego pot
 
 ABI jest plikiem JSON, który opisuje wdrożony kontrakt i jego funkcje inteligentnego kontraktu. Pomaga to zmniejszyć różnicę pomiędzy web2 a web3
 
-[Biblioteka klienta Javascript](/en/developers/docs/apis/javascript/) odczyta **ABI** w celu wywołania inteligentnego kontraktu w interfejsie aplikacji internetowej.
+[Biblioteka klienta Javascript](/developers/docs/apis/javascript/) odczyta **ABI** w celu wywołania inteligentnego kontraktu w interfejsie aplikacji internetowej.
 
 Poniżej znajduje się ABI dla kontraktu z tokenem ERC-20. ERC-20 to token, który możesz wymieniać na Ethereum.
 
@@ -275,5 +275,5 @@ Poniżej znajduje się ABI dla kontraktu z tokenem ERC-20. ERC-20 to token, któ
 
 ## Powiązane tematy {#related-topics}
 
-- [Biblioteki Javascript](/en/developers/docs/apis/javascript/)
-- [Maszyna Wirtualna Ethereum](/en/developers/docs/ethereum-virtual-machine/)
+- [Biblioteki Javascript](/developers/docs/apis/javascript/)
+- [Maszyna Wirtualna Ethereum](/developers/docs/ethereum-virtual-machine/)

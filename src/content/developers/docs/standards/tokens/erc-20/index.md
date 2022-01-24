@@ -40,9 +40,10 @@ The ERC-20 (Ethereum Request for Comments 20), proposed by Fabian Vogelsteller i
 implements an API for tokens within Smart Contracts.
 
 Example functionalities ERC-20 provides:
+
 - transfer tokens from one account to another
 - get the current token balance of an account
-- get the total supply of the token available on the network 
+- get the total supply of the token available on the network
 - approve whether an amount of token from an account can be spent by a third-party account
 
 If a Smart Contract implements the following methods and events it can be called an ERC-20 Token Contract and, once deployed, it
@@ -153,4 +154,3 @@ print("Addr Balance:", addr_balance)
 - [EIP-20: ERC-20 Token Standard](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin - Tokens](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
 - [OpenZeppelin - ERC-20 Implementation](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
-- [ConsenSys - ERC-20 Implementation](https://github.com/ConsenSys/Tokens/blob/master/contracts/eip20/EIP20.sol)

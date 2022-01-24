@@ -9,15 +9,13 @@ I blocchi sono un insieme di transazioni che contengono un hash del blocco prece
 
 ## Prerequisiti {#prerequisites}
 
-Quello dei blocchi è un argomento piuttosto basico. Per aiutarti però a comprendere meglio questa pagina, consigliamo di leggere prima [Account](/en/developers/docs/accounts/), [Transazioni](/en/developers/docs/transactions/) e la nostra [introduzione a Ethereum](/en/developers/docs/intro-to-ethereum/).
-
-<!--The content below was provided by Brian Gu with exception of "what's in a block"-->
+Quello dei blocchi è un argomento piuttosto basico. Per aiutarti però a comprendere meglio questa pagina, consigliamo di leggere prima [Account](/developers/docs/accounts/), [Transazioni](/developers/docs/transactions/) e la nostra [introduzione a Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Perché i blocchi? {#why-blocks}
 
 Per assicurare che tutti i partecipanti della rete Ethereum siano sincronizzati e concordino sulla cronologia esatta delle transazioni, raggruppiamo le transazioni in blocchi. Significa che decine (o centinaia) di transazioni vengono inviate, approvate e sincronizzate in una volta sola.
 
-![Diagramma che mostra una transazione in un blocco che causa cambiamenti di stato](./tx-block.png) _Diagramma adattato dall' [illustrazione dell'Ethereum EVM](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagramma che mostra una transazione in un blocco che causa cambiamenti di stato](../../../../../developers/docs/blocks/tx-block.png) _Diagramma adattato dall' [illustrazione dell'Ethereum EVM](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Scaglionando gli invii, diamo a tutti i partecipanti della rete abbastanza tempo per giungere al consenso: anche se arrivano decine di richieste di transazione al secondo, i blocchi su Ethereum vengono inviati più o meno ogni quindici secondi.
 
@@ -27,7 +25,9 @@ Per preservare la cronologia delle transazioni, i blocchi sono ordinati in modo 
 
 Dopo essere stato realizzato (si parla di mining) da alcuni miner della rete, un blocco viene propagato al resto della rete; tutti i nodi vengono aggiunti al blocco alla fine della relativa blockchain e il processo di mining continua. Il processo esatto di costruzione dei blocchi (mining) e il processo di invio/consenso è attualmente specificato nel protocollo di Ethereum "proof-of-work".
 
-### Demo visiva {#a-visual-demo} <iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+### Demo visiva {#a-visual-demo}
+
+<YouTube id="_160oMzblY8" />
 
 ## Protocollo proof-of-work {#proof-of-work-protocol}
 
@@ -37,7 +37,7 @@ Proof-of-work significa:
 - Gli altri miner a cui viene inviata notifica di un nuovo blocco con un certificato di legittimità valido devono \*accettare il nuovo blocco come blocco successivo canonico della blockchain.
 - La quantità esatta di tempo richiesta da ogni miner per produrre questo certificato varia casualmente e con elevata frequenza. Questo assicura che sia improbabile* che due miner producano nello stesso momento convalide per un blocco successivo proposto; quando un miner produce e propaga un nuovo blocco certificato, c'è una relativa sicurezza che il blocco venga accettato dalla rete come blocco canonico successivo della blockchain, senza conflitto* (sebbene sia disponibile un protocollo per gestire i conflitti nel caso in cui due catene di blocchi certificati vengano prodotte praticamente simultaneamente).
 
-[Maggiori informazioni sul mining](/en/developers/docs/consensus-mechanisms/pow/mining/)
+[Maggiori informazioni sul mining](/developers/docs/consensus-mechanisms/pow/mining/)
 
 ## Cosa c'è in un blocco? {#block-anatomy}
 
@@ -60,6 +60,6 @@ _Conosci una risorsa della community che ti è stata utile? Modifica questa pagi
 
 ## Argomenti correlati {#related-topics}
 
-- [Mining](/en/developers/docs/consensus-mechanisms/pow/mining/)
-- [Transazioni](/en/developers/docs/transactions/)
-- [Carburante](/en/developers/docs/gas/)
+- [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
+- [Transazioni](/developers/docs/transactions/)
+- [Carburante](/developers/docs/gas/)

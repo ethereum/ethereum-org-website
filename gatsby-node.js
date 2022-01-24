@@ -1,9 +1,13 @@
 // https://www.gatsbyjs.org/docs/node-apis/
 const fs = require("fs")
 const path = require(`path`)
+const util = require("util")
+const child_process = require("child_process")
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const gatsbyConfig = require(`./gatsby-config.js`)
-const { getLangContentVersion } = require(`./src/utils/translations`)
+const redirects = require(`./redirects.json`)
+
+const exec = util.promisify(child_process.exec)
 
 const supportedLanguages = gatsbyConfig.siteMetadata.supportedLanguages
 const defaultLanguage = gatsbyConfig.siteMetadata.defaultLanguage
@@ -42,16 +46,121 @@ const getMessages = (path, language) => {
   }
 }
 
-const outdatedMarkdownPages = [
-  "/dapps/",
-  "/enterprise/",
-  "/eth/",
-  "/learn/",
-  "/wallets/",
-  "/what-is-ethereum/",
-]
+/**
+ * Markdown isOutdated check
+ * Parse header ids in markdown file (both translated and english) and compare their info structure.
+ * If this structure is not the same, then the file isOutdated.
+ * If there is not english file, return true
+ * @param {string} path filepath for translated mdx file
+ * @returns boolean for if file is outdated or not
+ */
+const checkIsMdxOutdated = (path) => {
+  const splitPath = path.split(__dirname)
+  const tempSplitPath = splitPath[1]
+  const tempSplit = tempSplitPath.split("/")
+  tempSplit.splice(3, 2)
+  const englishPath = `${__dirname}${tempSplit.join("/")}`
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
+  const re = /([#]+) [^\{]+\{#([^\}]+)\}/gim
+  let translatedData, englishData
+
+  try {
+    translatedData = fs.readFileSync(path, "utf-8")
+    englishData = fs.readFileSync(englishPath, "utf-8")
+  } catch {
+    return true
+  }
+
+  let englishMatch = ""
+  let intlMatch = ""
+  try {
+    englishData.match(re).forEach((match) => {
+      englishMatch += match.replace(re, (_, p1, p2) => p1 + p2)
+    })
+    translatedData.match(re).forEach((match) => {
+      intlMatch += match.replace(re, (_, p1, p2) => p1 + p2)
+    })
+  } catch {
+    console.warn(`regex error in ${englishPath}`)
+    return true
+  }
+
+  return englishMatch !== intlMatch
+}
+
+/**
+ * JSON isOutdated check
+ * Checks if translation JSON file exists.
+ * If translation file exists, checks that all translations are present (checks keys), and that all the keys are the same.
+ * If translation file exists, isContentEnglish will be false
+ * @param {*} path url path used to derive file path from
+ * @param {*} lang language abbreviation for language path
+ * @returns {{isOutdated: boolean, isContentEnglish: boolean}}
+ */
+const checkIsPageOutdated = async (path, lang) => {
+  // Files that need index appended on the end. Ex page-index.json, page-developers-index.json, page-upgrades-index.json
+  const indexFilePaths = ["", "developers", "upgrades"]
+  const filePath = path.split("/").filter((text) => text !== "")
+
+  if (
+    indexFilePaths.includes(filePath[filePath.length - 1]) ||
+    filePath.length === 0
+  ) {
+    filePath.push("index")
+  }
+
+  const joinedFilepath = filePath.join("-")
+  const srcPath = `${__dirname}/src/intl/${lang}/page-${joinedFilepath}.json`
+  const englishPath = `${__dirname}/src/intl/en/page-${joinedFilepath}.json`
+
+  // If no file exists, default to english
+  if (!fs.existsSync(srcPath)) {
+    return {
+      isOutdated: true,
+      isContentEnglish: true,
+    }
+  } else {
+    let translatedData, englishData, translatedKeys, englishKeys
+    try {
+      translatedData = JSON.parse(fs.readFileSync(srcPath))
+      englishData = JSON.parse(fs.readFileSync(englishPath))
+      translatedKeys = Object.keys(translatedData)
+      englishKeys = Object.keys(englishData)
+    } catch (err) {
+      return {
+        isOutdated: true,
+        isContentEnglish: true,
+      }
+    }
+    // Check if same amount of keys
+    if (translatedKeys.length !== englishKeys.length) {
+      return {
+        isOutdated: true,
+        isContentEnglish: false,
+      }
+    }
+
+    // Check if all the keys are the same
+    if (
+      JSON.stringify(translatedKeys.sort()) !==
+      JSON.stringify(englishKeys.sort())
+    ) {
+      return {
+        isOutdated: true,
+        isContentEnglish: false,
+      }
+    }
+
+    return {
+      isOutdated: false,
+      isContentEnglish: false,
+    }
+  }
+}
+
+// Loops through all the files dictated by Gatsby (building pages folder), as well as
+// folders flagged through the gatsby-source-filesystem plugin in gatsby-config
+exports.onCreateNode = async ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 
   // Edit markdown nodes
@@ -63,16 +172,14 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       slug = slug.replace("/translations", "")
       const split = slug.split("/")
       split.splice(1, 1)
-      const originalPath = split.join("/")
-      if (outdatedMarkdownPages.includes(originalPath)) {
-        isOutdated = true
-      }
+
+      isOutdated = await checkIsMdxOutdated(node.fileAbsolutePath)
     } else {
       slug = `/${defaultLanguage}${slug}`
     }
 
     const absolutePath = node.fileAbsolutePath
-    const relativePathStart = absolutePath.indexOf("src/")
+    const relativePathStart = absolutePath.lastIndexOf("src/")
     const relativePath = absolutePath.substring(relativePathStart)
 
     // Boolean if page is outdated (most translated files are)
@@ -97,7 +204,16 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 }
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
+
+  redirects.forEach((redirect) => {
+    createRedirect({
+      ...redirect,
+      isPermanent: true,
+      ignoreCase: true,
+      force: true,
+    })
+  })
 
   const result = await graphql(`
     query {
@@ -123,7 +239,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
   }
 
-  result.data.allMdx.edges.forEach(({ node }) => {
+  // For all markdown nodes, create a page
+  result.data.allMdx.edges.filter(({ node }) => {
     const slug = node.fields.slug
 
     // Set template of markdown files
@@ -207,85 +324,62 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   })
 
-  // Create contentVersion v2.0 pages
-  const contentV2Pages = [`eth`, `dapps`, `wallets/index`, `what-is-ethereum`]
-  const contentV2Languages = supportedLanguages.filter(
-    (lang) => getLangContentVersion(lang) >= 2.0
-  )
-  contentV2Pages.forEach((page) => {
-    const component = page
-    // Account for nested pages
-    if (page.includes("/index")) {
-      page = page.replace("/index", "")
-    }
-    contentV2Languages.forEach((lang) => {
-      createPage({
-        path: `/${lang}/${page}/`,
-        component: path.resolve(`./src/pages-conditional/${component}.js`),
-        context: {
-          slug: `/${lang}/${page}/`,
-          intl: {
-            language: lang,
-            languages: supportedLanguages,
-            defaultLanguage,
-            messages: getMessages("./src/intl/", lang),
-            routed: true,
-            originalPath: `/${page}/`,
-            redirect: false,
+  // Create `/pages-conditional/` pages for each language unless a markdown page already exists.
+  // This avoids overwriting markdown pages with a component page of the same name.
+  // Note: once all these markdown pages have been replaced with updated JSON translation files,
+  // we can remove this logic and the `/pages-conditional/` directory.
+  const outdatedMarkdown = [`eth`, `dapps`, `wallets`, `what-is-ethereum`]
+  outdatedMarkdown.forEach((page) => {
+    supportedLanguages.forEach(async (lang) => {
+      const markdownPath = `${__dirname}/src/content/translations/${lang}/${page}/index.md`
+      const langHasOutdatedMarkdown = fs.existsSync(markdownPath)
+      if (!langHasOutdatedMarkdown) {
+        // Check if json strings exists for language, if not mark `isContentEnglish` as true
+        const { isOutdated, isContentEnglish } = await checkIsPageOutdated(
+          page,
+          lang
+        )
+        createPage({
+          path: `/${lang}/${page}/`,
+          component: path.resolve(
+            page === "wallets"
+              ? `./src/pages-conditional/${page}/index.js`
+              : `./src/pages-conditional/${page}.js`
+          ),
+          context: {
+            slug: `/${lang}/${page}/`,
+            intl: {
+              language: lang,
+              languages: supportedLanguages,
+              defaultLanguage,
+              messages: getMessages("./src/intl/", lang),
+              routed: true,
+              originalPath: `/${page}/`,
+              redirect: false,
+            },
+            isContentEnglish,
+            isOutdated,
           },
-        },
-      })
-    })
-  })
-
-  // Create contentVersion v1.0 pages
-  // v1.0 doesn't have existing markdown files for these pages
-  const contentV1Pages = [`eth`, `dapps`, `wallets/index`]
-  const contentV1Languages = supportedLanguages.filter(
-    (lang) => getLangContentVersion(lang) === 1.0
-  )
-  contentV1Pages.forEach((page) => {
-    const component = page
-    // Account for nested pages
-    if (page.includes("/index")) {
-      page = page.replace("/index", "")
-    }
-    contentV1Languages.forEach((lang) => {
-      createPage({
-        path: `/${lang}/${page}/`,
-        component: path.resolve(`./src/pages-conditional/${component}.js`),
-        context: {
-          slug: `/${lang}/${page}/`,
-          isContentEnglish: true,
-          intl: {
-            language: lang,
-            languages: supportedLanguages,
-            defaultLanguage,
-            messages: getMessages("./src/intl/", lang),
-            routed: true,
-            originalPath: `/${page}/`,
-            redirect: false,
-          },
-        },
-      })
+        })
+      }
     })
   })
 }
 
 // Add additional context to translated pages
+// Only ran when creating component pages
 // https://www.gatsbyjs.com/docs/creating-and-modifying-pages/#pass-context-to-pages
-exports.onCreatePage = ({ page, actions }) => {
+exports.onCreatePage = async ({ page, actions }) => {
   const { createPage, deletePage } = actions
 
   const isTranslated = page.context.language !== defaultLanguage
   const hasNoContext = page.context.isOutdated === undefined
-  const langVersion = getLangContentVersion(page.context.language)
 
   if (isTranslated && hasNoContext) {
-    let isOutdated = false
-    if (page.component.includes("src/pages/index.js")) {
-      isOutdated = true
-    }
+    const { isOutdated, isContentEnglish } = await checkIsPageOutdated(
+      page.context.intl.originalPath,
+      page.context.language
+    )
     deletePage(page)
     createPage({
       ...page,
@@ -293,8 +387,7 @@ exports.onCreatePage = ({ page, actions }) => {
         ...page.context,
         isOutdated,
         //display TranslationBanner for translation-component pages that are still in English
-        isContentEnglish:
-          langVersion < 2 && !page.component.includes("/index.js"),
+        isContentEnglish,
       },
     })
   }
@@ -311,13 +404,34 @@ exports.createSchemaCustomization = ({ actions }) => {
       sidebarDepth: Int
       incomplete: Boolean
       template: String
-      summaryPoints: [String!]!
+      summaryPoint1: String!
+      summaryPoint2: String!
+      summaryPoint3: String!
+      summaryPoint4: String!
+      position: String
+      compensation: String
+      location: String
+      type: String
+      link: String
     }
-    type Eth2BountyHuntersCsv implements Node {
+    type ConsensusBountyHuntersCsv implements Node {
       username: String,
       name: String,
       score: Int
     }
   `
   createTypes(typeDefs)
+}
+
+// Build lambda functions when the build is complete and the `/public` folder exists
+exports.onPostBuild = async (gatsbyNodeHelpers) => {
+  const { reporter } = gatsbyNodeHelpers
+
+  const reportOut = (report) => {
+    const { stderr, stdout } = report
+    if (stderr) reporter.error(stderr)
+    if (stdout) reporter.info(stdout)
+  }
+
+  reportOut(await exec("npm run build:lambda && cp netlify.toml public"))
 }

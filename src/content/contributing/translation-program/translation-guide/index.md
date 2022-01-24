@@ -37,6 +37,7 @@ If you want to raise a flag on a particular string that needs attention, feel fr
 
 - Click the second button of the top-right bar. The hidden tab will appear on your right. Leave a new comment and click the "Issue" checkbox on the bottom. You can specify the type of issue by choosing one of the options from the drop-down menu.
 - Once submitted, it will be reported to our team. We will fix the issue and let you know by replying to your comment and closing the issue.
+- If you report an incorrect translation, the translation and your suggested alternative will be reviewed by a native speaker during the next review.
 
 ![Showing how to make comments and issues](./comment-issue.png)
 
@@ -69,7 +70,7 @@ The Crowdin glossary is the best place for clarification of terms and definition
 
 ### Terminology translation policy {#terminology}
 
-_For names (brands, companies, people) and new tech terms (Eth2, beacon chain, etc.)_
+_For names (brands, companies, people) and new tech terms (Beacon Chain, Validium, etc.)_
 
 Ethereum presents a lot of new terms that have been coined recently. Some terms will vary from translator to translator as there is no official translation in their respective language. Such inconsistencies can cause misunderstanding and decrease readability.
 
@@ -86,6 +87,14 @@ Here is what we suggest, when you find a term that's unfamiliar to you:
 
 We recommend you leave names of brands, companies, and personnel untranslated as a translation might cause unnecessary confusion and SEO difficulties.
 
+## How do I add content in my language? {#adding-foreign-language-content}
+
+Currently, all non-English content is translated directly from the English source content, and any content that does not exist in English cannot be added to other languages.
+
+To suggest new content for ethereum.org, you can [create an issue](https://github.com/ethereum/ethereum-org-website/issues) on GitHub. If added, the content will be written in English and translated to other languages using Crowdin.
+
+We plan to add support for non-English content additions in the near future.
+
 ## Get in touch {#contact}
 
-Thank you for reading through all of these. We hope this helps you to onboard our program. Feel free to join our [Discord translation channel](https://discord.gg/TkJFaewsaM) to ask questions and collaborate with other translators!
+Thank you for reading through all of these. We hope this helps you to onboard our program. Feel free to join our [Discord translation channel](https://discord.gg/XVepFu7sqR) to ask questions and collaborate with other translators, or reach out to us at translations@ethereum.org!

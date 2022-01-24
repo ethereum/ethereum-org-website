@@ -25,7 +25,7 @@ Certains services vous offrent votre propre nœud dédié qu'ils gèrent pour vo
 
 Presque tous les services de nœuds sont extrêmement faciles à intégrer, impliquant des modifications d'une ligne dans votre code pour échanger votre nœud auto-hébergé, ou même pour passer d'un service à l'autre.
 
-Souvent, les services de nœuds exécuteront une variété de [nœuds clients](/developers/docs/nodes-and-clients/#clients) et de [types](/developers/docs/nodes-and-clients/#node-types), vous permettant d'accéder aux nœuds complets et d'archives en plus des méthodes spécifiques au client dans une API.
+Souvent, les services de nœuds exécuteront une variété de [nœuds clients](/developers/docs/nodes-and-clients/#execution-clients) et de [types](/developers/docs/nodes-and-clients/#node-types), vous permettant d'accéder aux nœuds complets et d'archives en plus des méthodes spécifiques au client dans une API.
 
 Il est important de noter que les services de nœud ne stockent pas et ne doivent pas stocker vos clés ou informations privées.
 

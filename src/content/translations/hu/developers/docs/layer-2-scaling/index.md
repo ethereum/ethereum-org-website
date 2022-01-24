@@ -85,7 +85,7 @@ Az optimista összegzők egy mellékláncot használnak, mely a fő Ethereum lá
 
 Az optimista összegzőknél a tranzakciók calldataként vannak a fő Ethereum láncba írva, ezzel tovább optimálva a gáz költség csökkentést.
 
-Mivel a számítás az Ethereum használatának lassú és drága része, az optimista összegzők a tranzakciótól függően akár 10–100-szoros javulást is kínálnak a méretezhetőségben. Ez a szám tovább fog nőni a következő Eth2 fejlesztés bevezetésével: [shard láncok](/en/eth2/shard-chains). Ennek az az oka, hogy több adat áll majd rendelkezésre felelősségre vonási esemény során.
+Mivel a számítás az Ethereum használatának lassú és drága része, az optimista összegzők a tranzakciótól függően akár 10–100-szoros javulást is kínálnak a méretezhetőségben. Ez a szám tovább fog nőni a következő Eth2 fejlesztés bevezetésével: [shard láncok](/upgrades/shard-chains). Ennek az az oka, hogy több adat áll majd rendelkezésre felelősségre vonási esemény során.
 
 #### Tranzakciók megkérdőjelezése {#disputing-transactions}
 
@@ -111,14 +111,6 @@ Tehát a csalás bizonyítása megtérül.
 - [Optimism](https://optimism.io/)
 - [Offchain Labs Arbitrum Rollup](https://offchainlabs.com/)
 - [Fuel Network](https://fuel.sh/)
-
-<!-- #### The Optimism virtual machine (OVM)
-
-What makes Optimistic rollups particularly exciting is that the chain works the same as the main Ethereum chain because it's based on [the EVM](/en/developers/docs/evm/). It doesn't use Ethereum, it is Ethereum. This means if you want to use Optimistic rollups, it's just a matter of deploying it to the OVM. It looks, feels, and acts just like the Ethereum main chain–you write contracts in Solidity, and interact with the chain via the Web3 API.
-
-The OVM also has a bunch of features that allow for a really seamless experience moving code from the EVM. In fact you can move Solidity contracts onto a cheaper and faster solution with just a few lines of code.
-
-[Check out the OVM documentation](http://docs.optimism.io/) -->
 
 ## Csatornák {#channels}
 
@@ -181,7 +173,6 @@ A plasma lánc olyan különálló blokklánc, mely hozzá van kötve a fő Ethe
 - [OMG Network](https://omg.network/)
 - [Matic Network](https://matic.network/)
 - [Gluon](https://gluon.network/)
-- [Gazelle](https://gzle.io/)
 - [LeapDAO](https://ipfs.leapdao.org/)
 
 ## Validium {#validium}
@@ -202,7 +193,7 @@ A plasma lánc olyan különálló blokklánc, mely hozzá van kötve a fő Ethe
 
 ## Mellékláncok {#sidechains}
 
-A melléklánc egy különálló blokklánc, mely párhuzamosan fut a főhálózattal és tőle függetlenül működik. Saját konszenzus algoritmusa van ([Proof-of-Authority](https://en.wikipedia.org/wiki/Proof_of_authority), [delegált proof-of-stake](https://en.bitcoinwiki.org/wiki/DPoS), [bizánci hibatűrés](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained), stb). Egy kétirányú összekötővel van a fő lánchoz kapcsolva.
+A melléklánc egy különálló blokklánc, mely párhuzamosan fut a főhálózattal és tőle függetlenül működik. Saját konszenzus algoritmusa van ([Proof-of-Authority](https://wikipedia.org/wiki/Proof_of_authority), [delegált proof-of-stake](https://en.bitcoinwiki.org/wiki/DPoS), [bizánci hibatűrés](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained), stb). Egy kétirányú összekötővel van a fő lánchoz kapcsolva.
 
 | Előnyök                                                | Hátrányok                                                                                                            |
 | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------- |
@@ -221,13 +212,12 @@ Kombinálja a többrétegű technológiák legjobb tulajdonságait, és konfigur
 
 ### Hibrid megoldások használata {#use-hybrid-solutions}
 
-- [Offchain Labs Arbitrum SCSC](https://offchainlabs.com/arbitrum.pdf)
 - [Celer](https://www.celer.network/)
 
 ## További olvasnivaló {#further-reading}
 
 - [Validium And The Layer 2 Two-By-Two — Issue No. 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
-- \[Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework\](https://medium.com/matter-labs/evaluating-ethereum-layer 2-scaling-solutions-a-comparison-framework-b6b2f410f955)
+- \[Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework\](https://blog.matter-labs.io/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
 - [Adding Hybrid PoS-Rollup Sidechain to Celer’s Coherent Layer-2 Platform on Ethereum](https://medium.com/celer-network/adding-hybrid-pos-rollup-sidechain-to-celers-coherent-layer-2-platform-d1d3067fe593)
 - [Zero-Knowledge Blockchain Scalability](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 

@@ -33,4 +33,4 @@ _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
 ## Sujets connexes {#related-topics}
 
-- [Frameworks de développement](/en/developers/docs/frameworks/)
+- [Frameworks de développement](/developers/docs/frameworks/)

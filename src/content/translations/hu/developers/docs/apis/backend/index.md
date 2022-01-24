@@ -21,8 +21,6 @@ Ezek a könyvtárak elveszik a komplexitás nagy részét, mely Ethereum csomóp
 
 ## Elérhető könyvtárak {#available-libraries}
 
-<!-- TODO separate APIs-as-a-service vs. connect your own -->
-
 **Alchemy -** **_Ethereum Fejlesztési Platform._**
 
 - [alchemyapi.io](https://alchemyapi.io)

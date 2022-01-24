@@ -10,9 +10,37 @@ sidebarDepth: 2
 
 This is a list of key Ethereum-related projects and resources which have been deprecated or are no longer maintained. It is important to highlight deprecated work so that users can find viable alternatives and to prevent malicious versions from being distributed.
 
+This list is curated by our community. If there's something missing or incorrect, please edit this page!
+
 ## Software {#software}
 
 This section is for software for the desktop, command line, or server which has been deprecated. The main types are wallets, integrated development environments, languages, and Ethereum clients. Definitely be careful to not install deprecated software unless you are certain it is from the original source, e.g. a repo hosted under https://github.com/ethereum.
+
+### OpenEthereum {#open-ethereum}
+
+<p align="center">
+  <img width="300" height="180" 
+  	style="background-color:#fff; padding:0px 10px 0px 10px;"
+  	src="https://miro.medium.com/max/1400/1*npKIT4jX5WwlRZmcBPusig.png" />
+</p>
+
+Deprecated July 2021
+
+**Summary**
+
+OpenEthereum was the second largest Ethereum implementation by node count. OpenEthereum played an important role in being a key piece of infrastructure for some of the largest users in Ethereum like Etherscan and Gnosis Safe. Its tracing capabilities set it apart from other clients, ensuring reliable and fast synchronization for data providers.
+
+**Archives**
+
+[Archived GitHub repo](https://github.com/openethereum/openethereum)
+
+**History**
+
+OpenEthereum was built for miners, service providers, and exchanges which need fast synchronization and maximum uptime. OpenEthereum provided the core infrastructure essential for speedy and reliable services.
+
+**Alternatives**
+
+[Erigon](https://github.com/ledgerwatch/erigon) Erigon (previously called Turbo-Geth) is a next generation Ethereum client on the efficiency frontier, written in Go.
 
 ### Grid {#grid}
 
@@ -26,12 +54,11 @@ Deprecated on December 10, 2020
 
 **Summary**
 
-Grid was a Javascript-based desktop application that allowed you to securely access Ethereum, IPFS, and other decentralized networks. It provided a user-friendly interface to assist a less technical audience in safely interacting with dapps, which increased accessibility for everyone. 
+Grid was a Javascript-based desktop application that allowed you to securely access Ethereum, IPFS, and other decentralized networks. It provided a user-friendly interface to assist a less technical audience in safely interacting with dapps, which increased accessibility for everyone.
 
 **Archives**
 
 [Archived GitHub repo](https://github.com/ethereum/grid)
-
 
 **History**
 
@@ -41,6 +68,31 @@ Grid could be seen as a successor to Mist, also a standalone, Javascript-based d
 
 [DappNode](https://dappnode.io/) is a platform for deploying and hosting DApps, P2P clients, and blockchain nodes.
 
+### Ethereum Studio {#ethereum-studio}
+
+<p align="center">
+  <img width="500" height="350" 
+  	style="background-color:#fff; padding:0px 10px 0px 10px;"
+  	src="https://user-images.githubusercontent.com/7814134/78335917-d0f8e600-758e-11ea-91e1-2433eaaef6f4.png" />
+</p>
+
+Deprecated on December 7, 2020
+
+**Summary**
+
+Ethereum Studio was a web-based IDE which allowed users to create and test smart contracts, as well as build front-ends for them.
+
+**Archives**
+
+[Archived GitHub repo](https://github.com/SuperblocksHQ/ethereum-studio)
+
+**History**
+
+Ethereum Studio was developed to provide users with an IDE that had a built-in Ethereum blockchain and Solidity compiler. In addition to this it provided the ability to live edit code and export full DApps without the need for a terminal.
+
+**Alternatives**
+
+[Remix](https://remix.ethereum.org/) is an alternative web IDE for Solidity development. Additionally, the [Developer Portal](/developers/) has tools for web and local development, documentation, and more.
 
 ### Meteor Dapp Wallet {#meteor-dapp-wallet}
 
@@ -54,13 +106,13 @@ Deprecated on March 27, 2019
 
 **Summary**
 
-Meteor Dapp Wallet was a component of Mist, an Ethereum wallet for managing Ethereum accounts and interacting with smart contracts. For many years the Meteor Dapp Wallet web UI was hosted as a subdomain "wallet.ethereum.org". 
+Meteor Dapp Wallet was a component of Mist, an Ethereum wallet for managing Ethereum accounts and interacting with smart contracts. For many years the Meteor Dapp Wallet web UI was hosted as a subdomain "wallet.ethereum.org".
 
 The Mist Multisig Contract (solidity code) was also included, and Meteor Dapp Wallet featured a user interface for configuring and deploying it.
 
 **Not deprecated: deployed Mist Multisigs**
 
-The Mist Multisig -- deployed as bytecode to Ethereum mainnet by thousands of users -- continues to be used to store and manage value without incident. [How to Interact with a Mist Multisig Contract](https://support.mycrypto.com/how-to/sending/how-to-interact-with-a-multisig-contract) provides a good overview for how to use these smart contracts.
+The Mist Multisig -- deployed as bytecode to Ethereum Mainnet by thousands of users -- continues to be used to store and manage value without incident. [How to Interact with a Mist Multisig Contract](https://support.mycrypto.com/how-to/sending/how-to-interact-with-a-multisig-contract) provides a good overview for how to use these smart contracts.
 
 **Archives**
 
@@ -73,7 +125,6 @@ See Mist below.
 **Alternatives**
 
 See the [Ethereum Wallets](/wallets/) page on ethereum.org.
-
 
 ### Mist {#mist}
 
@@ -101,7 +152,6 @@ Mist was an important early experiment because it explored how to manage Ethereu
 
 [Metamask](https://metamask.io/) is an in-browser wallet enabling you to manage Ethereum keys and interact with dapps. It is available as an extension for Google Chrome and Firefox, and is included in [Brave Browser](https://brave.com/).
 
-
 ### Mix {#mix}
 
 Deprecated on August 11, 2016
@@ -121,6 +171,26 @@ Mix was of the earliest Ethereum-related applications. See this [presentation by
 **Alternatives**
 
 [Remix](https://remix.ethereum.org/) is a browser-hosted IDE for Solidity / smart contract development, testing, and deployment. It also has a desktop option.
+
+### Aleth {#aleth}
+
+Deprecated on October 6, 2021
+
+**Summary**
+
+Aleth was an Ethereum client written in C++.
+
+**Archives**
+
+[Archived GitHub repo](https://github.com/ethereum/aleth)
+
+**History**
+
+Aleth was the third most popular client for Ethereum before being deprecated on October 6, 2021.
+
+**Alternatives**
+
+[Geth](https://geth.ethereum.org/) is a well-known alternative Ethereum client.
 
 ### Parity {#parity}
 
@@ -146,10 +216,11 @@ As one of two major, viable clients in the early years of Ethereum (the other be
 
 **Alternatives**
 
-The successor project to Parity Ethereum client is [Open Ethereum](https://github.com/openethereum/openethereum).
+[Erigon](https://github.com/ledgerwatch/erigon) Erigon (previously called Turbo-Geth) is a next generation Ethereum client on the efficiency frontier, written in Go.
+
+**Note:** _The successor project to Parity Ethereum client was [OpenEthereum](https://github.com/openethereum/openethereum) **which has since been deprecated.**_
 
 The ["Spin up your own Ethereum node"](/developers/docs/nodes-and-clients/run-a-node/#getting-the-client) resource on ethereum.org includes a section for downloading, installing, and running an Ethereum client.
-
 
 ### Trinity {#trinity}
 
@@ -177,12 +248,11 @@ Trinity was the successor project to [pyethereum](https://github.com/ethereum/py
 
 The ["Spin up your own Ethereum node"](/developers/docs/nodes-and-clients/run-a-node/#getting-the-client) resource on ethereum.org includes a section for downloading, installing, and running an Ethereum client.
 
-The [EthereumJS](https://github.com/ethereumjs) project has a similar research and educational use-case as Trinity did. 
+The [EthereumJS](https://github.com/ethereumjs) project has a similar research and educational use-case as Trinity did.
 
 ## Dapps and Services {#dapps-and-services}
 
-This section is for services deployed to Ethereum mainnet and other EVM-based networks. Be aware that the dapps and services here may include DeFi applications which have been hacked or may suffer security vulnerabilities due to lack of maintenance, changes in the protocol, etc.
-
+This section is for services deployed to Ethereum Mainnet and other EVM-based networks. Be aware that the dapps and services here may include DeFi applications which have been hacked or may suffer security vulnerabilities due to lack of maintenance, changes in the protocol, etc.
 
 ### Cover Protocol {#cover-protocol}
 
@@ -208,7 +278,6 @@ Cover was an DeFi insurance protocol running on Ethereum and other EVM-based net
 
 [Documentation](https://wayback.archive-it.org/17679/20211004074634/https://docs.coverprotocol.com/)
 
-
 ### The DAO {#the-dao}
 
 Hacked and shut down in Summer 2016
@@ -227,7 +296,7 @@ While The DAO failed, the concept endured. The basic technical, social, and gove
 
 ["DAO Fork" on ethereum.org](/history/#dao-fork)
 
-[Wikipedia entry for "The DAO"](https://en.wikipedia.org/wiki/The_DAO_(organization))
+[Wikipedia entry for "The DAO"](<https://wikipedia.org/wiki/The_DAO_(organization)>)
 
 **Alternatives**
 
@@ -236,7 +305,6 @@ While The DAO failed, the concept endured. The basic technical, social, and gove
 [MolochDAO](https://www.molochdao.com/)
 
 [Gitcoin Grants](https://gitcoin.co/grants/)
-
 
 ### SparkPool {#sparkpool}
 
@@ -250,18 +318,17 @@ Shut down in Fall 2021
 
 **Summary**
 
-Headquartered in Hangzhou, the SparkPool service and community was one of the largest Ethereum-centered mining pools in the world.  
+Headquartered in Hangzhou, the SparkPool service and community was one of the largest Ethereum-centered mining pools in the world.
 
 **Archives**
 
 **History**
 
-Associated with the EthFans community, the service was launched in 2015. SparkPool was disbanded  in Fall, 2021 as a result of stricter legal regulations.
+Associated with the EthFans community, the service was launched in 2015. SparkPool was disbanded in Fall, 2021 as a result of stricter legal regulations.
 
 **Alternatives**
 
 [Ethermine](https://ethermine.org/)
-
 
 ## Documentation and Information Sources {#documentation-and-information-sources}
 
@@ -281,7 +348,7 @@ Legacy Wiki and eth.wiki were wikis maintained by the Ethereum Foundation for th
 
 **History**
 
-Legacy Wiki was a GitHub wiki and a very early locus of technical content (including the original Ethereum White Paper). Over time, Ethereum developers migrated their documentation, specifications, and technical description work to other platforms like [Read the Docs](https://readthedocs.org/) and GitHub-hosted content. 
+Legacy Wiki was a GitHub wiki and a very early locus of technical content (including the original Ethereum White Paper). Over time, Ethereum developers migrated their documentation, specifications, and technical description work to other platforms like [Read the Docs](https://readthedocs.org/) and GitHub-hosted content.
 
 In 2019 and 2020, eth.wiki became the successor to Legacy Wiki, but an enduring community of contributors did not materialize.
 
@@ -292,7 +359,6 @@ Community-driven content: [Ethereum.org Website](/), [EthHub Docs](https://docs.
 Ethereum software projects often host their documentation on [Read the Docs](https://readthedocs.org/)
 
 GitHub-hosted technical specifications: [EIPs](https://github.com/ethereum/eips), [Execution Specs](https://github.com/ethereum/execution-specs), [Consensus Specs](https://github.com/ethereum/consensus-specs)
-
 
 ### forum.ethereum.org {#forum-ethereum-org}
 
@@ -312,7 +378,6 @@ This Forum was an early, "official" discussion board for the Ethereum community.
 
 [/r/ethereum](https://reddit.com/r/ethereum), and a large number of DAO Forums and Discord servers.
 
-
 ## Gitter Channels {#gitter-channels}
 
 ### AllCoreDevs {#allcorewdevs-gitter}
@@ -329,7 +394,6 @@ AllCoreDevs Gitter was the main public coordination comms channel for [Ethereum 
 
 Please use the "allcoredevs" channel on the [EthR&D Discord Server](https://discord.gg/qHv7AjTDuK)
 
-
 ### EthereumJS {#ethereumjs-gitter}
 
 **Summary**
@@ -343,8 +407,3 @@ EthereumJS Gitter was the main public coordination comms channel for the [Ethere
 **Alternatives**
 
 Please use the [EthereumJS Discord Server](https://discord.gg/TNwARpR)
-
-
-
-
-

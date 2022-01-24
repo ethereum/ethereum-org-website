@@ -1,8 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import Icon from "./Icon"
 import Link from "./Link"
+import Translation from "./Translation"
 
 const Table = styled.div`
   background-color: ${(props) => props.theme.colors.background};
@@ -86,7 +87,7 @@ const RightContainer = styled.div`
   flex-wrap: wrap;
 `
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   min-width: 20px;
   margin-right: 1rem;
   margin-top: 4px;
@@ -126,14 +127,14 @@ const TitleCardList = ({
   content,
   className,
   clickHandler,
-  header,
+  headerKey,
   icon,
   isCode,
 }) => (
   <Table isCode={isCode} className={className}>
     <TableHeader>
       {icon && <StyledIcon name={icon} />}
-      {header}
+      <Translation id={headerKey} />
       {isCode && (
         <CodeBoxHeader>
           <Red />
@@ -147,7 +148,7 @@ const TitleCardList = ({
       const isLink = !!link
       return isLink ? (
         <ItemLink key={id || idx} to={link}>
-          {image && <Image fixed={image} alt={alt} />}
+          {image && <Image image={image} alt={alt} />}
           <LeftContainer>
             <ItemTitle>{title}</ItemTitle>
 
@@ -161,7 +162,7 @@ const TitleCardList = ({
         </ItemLink>
       ) : (
         <Item key={idx} onClick={() => clickHandler(idx)}>
-          {image && <Image fixed={image} alt={alt} />}
+          {image && <Image image={image} alt={alt} />}
           <LeftContainer>
             <ItemTitle>{title}</ItemTitle>
 

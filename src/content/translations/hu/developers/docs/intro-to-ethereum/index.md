@@ -15,13 +15,15 @@ A "lánc" arra a tényre utal, hogy minden egyes blokk kriptográfiailag hozzá 
 
 Minden új blokk és a teljes lánc felett egyet kell érteniük a hálózat összes csomópontjának. Így mindenki ugyanazzal az adattal rendelkezik. Ahhoz, hogy ez működjön, a blokkláncoknak kell egy konszenzus mechanizmus.
 
-Az Ethereum jelenleg a proof-of-work konszenzus mechanizmust használja. Ez azt jelenti, hogyha bárki új blokkokat szeretne hozzáadni a lánchoz, először egy nehéz puzzle-t kell megoldania, melyhez rengeteg számítási erő kell. Ennek a puzzle-nek a megoldása "bizonyítja", hogy elköltötted a számítási erőforrásaidat. Ezt a tevékenységet [bányászatnak](/en/developers/docs/consensus-mechanisms/pow/mining/) hívjuk. A bányászat próba szerencse alapon történik, de egy sikeres blokk hozzáadásért ETH jár jutalmul. Mindazonáltal csaló blokkok hozzáadása nem egy vonzó lehetőség figyelembe véve az erőforrásokat, melyek elköltöttél, hogy létrehozd a blokkot.
+Az Ethereum jelenleg a proof-of-work konszenzus mechanizmust használja. Ez azt jelenti, hogyha bárki új blokkokat szeretne hozzáadni a lánchoz, először egy nehéz puzzle-t kell megoldania, melyhez rengeteg számítási erő kell. Ennek a puzzle-nek a megoldása "bizonyítja", hogy elköltötted a számítási erőforrásaidat. Ezt a tevékenységet [bányászatnak](/developers/docs/consensus-mechanisms/pow/mining/) hívjuk. A bányászat próba szerencse alapon történik, de egy sikeres blokk hozzáadásért ETH jár jutalmul. Mindazonáltal csaló blokkok hozzáadása nem egy vonzó lehetőség figyelembe véve az erőforrásokat, melyek elköltöttél, hogy létrehozd a blokkot.
 
 Az új blokkokat közvetítik a hálózat csomópontjainak, melyek leellenőrzik és hitelesítik, majd frissítik az állapotot mindenki számára.
 
 Összefoglalásként, amikor ETH-et küldesz valakinek, a tranzakciót ki kell bányászni és belefoglalni egy új blokkba. A frissített állapot ezután megosztásra kerül a teljes hálózattal. Lent több részletet találsz.
 
-Nézd meg ahogy Austin végig vezet a blokkláncokon: <iframe width="100%" height="315" src="https://www.youtube.com/embed/zcX7OJ-L8XQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Nézd meg ahogy Austin végig vezet a blokkláncokon:
+
+<YouTube id="zcX7OJ-L8XQ" />
 
 ## Mi az Ethereum? {#what-is-ethereum}
 
@@ -97,7 +99,7 @@ A tranzakciók mennyisége nagyon magas, így a tranzakciókat adagokban vagy bl
 
 Egy újra felhasználható kódrészlet (egy program), melyet egy fejlesztő publikál az EVM memóriába. Bárki kérheti az okosszerződés kód végrehajtását egy tranzakciós kérelemmel. Mivel a fejlesztők tetszőlegesen végrehajtható alkalmazásokat írhatnak az EVM-be (játékokat, piactereket, pénzügyi eszközöket stb.) okosszerződések publikálásával, ezért gyakran hívjuk ezeket [dappoknak, vagy decentralizált alkalmazásoknak](/developers/docs/dapps/).
 
-[Többet az okos szerződésekről](/en/developers/docs/smart-contracts/)
+[Többet az okos szerződésekről](/developers/docs/smart-contracts/)
 
 ## További olvasnivaló {#further-reading}
 

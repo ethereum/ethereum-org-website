@@ -27,21 +27,19 @@ sidebarDepth: 1
 
 - [イーサリアムクライアントの選択](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Rust イーサリアムクライアント](https://wiki.parity.io/Setup)
-- [Rust を使用してイーサリアムにトランザクションを送信する](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [Rust を使用してイーサリアムにトランザクションを送信する](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Parity イーサリアムクライアントでスマートコントラクト入門](https://wiki.parity.io/Smart-Contracts)
-- [Oasis SDK 開発環境のセットアップ](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [Oasis SDK 開発環境のセットアップ](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Kovan のために Rust の Wasm でコントラクトを書く手法のステップバイステップ・チュートリアル](https://github.com/paritytech/pwasm-tutorial)
 
 ## 中級記事 {#intermediate-articles}
 
 - [Rust-Web3 ドキュメント](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Rust-Web3 動作例](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [OASIS SDK を使用した Secret Ballot の作成](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [OASIS SDK を使用したプライベートチャットサーバーの作成](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## 高度な利用パターン {#advanced-use-patterns}
 
-- [pwasm_ethereum イーサリアムライクなネットワークと対話するための extern ライブラリ](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [pwasm_ethereum イーサリアムライクなネットワークと対話するための extern ライブラリ](https://github.com/openethereum/pwasm-ethereum)
 - [JavaScript と Rust を使用して分散型チャットを構築する](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Vue.js と Rust を使用して分散化 Todo アプリを構築する ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Enigma の入門 - Rust プログラミング言語で](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
