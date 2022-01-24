@@ -740,7 +740,7 @@ called by other entities than our periphery contract).
 ```
 
 This is a sanity check to make sure we don't lose from the swap. There is no circumstance in which a swap should reduce
-`reserve0*reserve1`. This is also where we ensure a fee of 0.03% is being sent on the swap; before sanity checking the value of K, we multiply both balances by 1000 subtracted by the amounts multiplied by 3, this means 0.3% (3/1000 = 0.003 = 0.3%) is being deducted from the balance before comparing its K value with the current reserves K value.
+`reserve0*reserve1`. This is also where we ensure a fee of 0.3% is being sent on the swap; before sanity checking the value of K, we multiply both balances by 1000 subtracted by the amounts multiplied by 3, this means 0.3% (3/1000 = 0.003 = 0.3%) is being deducted from the balance before comparing its K value with the current reserves K value.
 
 ```solidity
         }
