@@ -124,7 +124,13 @@ If you are an ethereum.org translator or would like to become one, feel free to 
 
 ## Resources {#resources}
 
-**Tools**
+### Guides {#guides}
+
+- [Translation Style Guide](/contributing/translation-program/content-versions/) _– Instructions and tips for ethereum.org translators_
+- [Translation FAQs](/contributing/translation-program/content-versions/) _– Frequently asked questions and answers about the ethereum.org Translation Program_
+- [Content versions](/contributing/translation-program/content-versions/) _– which pages are included in each content version of ethereum.org_
+
+### Tools {#tools}
 
 - [Microsoft Language Portal](https://www.microsoft.com/en-us/language)
   _– useful for finding and checking the standard translations of technical terms_
@@ -135,18 +141,14 @@ If you are an ethereum.org translator or would like to become one, feel free to 
 - [Eurotermbank](https://www.eurotermbank.com/)
   _– collections of European terminology in 42 languages_
 
-**Communities**
+### Communities {#communities}
 
 - [Language-specific Discord translation groups](https://discord.gg/6WX7E97)
   _– an initiative to connect ethereum.org translators into Translation Groups_
 - [Chinese translators group](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)
   _– Notion page for easier coordination between Chinese translators_
 
-**Versions overview**
-
-- [Content versions](/contributing/translation-program/content-versions/) _– which pages are included in each content version of ethereum.org_
-
-**Latest updates**
+### Latest updates {#latest-updates}
 
 To keep up-to-date with the latest Translation Program progress, you can follow the [Ethereum Foundation blog](https://blog.ethereum.org/):
 
