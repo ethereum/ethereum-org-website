@@ -42,6 +42,7 @@ Building can be hard. Here are some development focused spaces with experienced 
 - [CryptoDevs discord](https://discord.gg/Z9TA39m8Yu)
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
+- [Web3 University](https://www.web3.university/)
 
 You can also find documentation and development guides in our [Ethereum developer resources](/developers/) section.
 
@@ -56,6 +57,7 @@ Here are some popular examples:
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
 - [Truffle](https://discord.gg/8uKcsccEYE)
+- [Alchemy](http://alchemy.com/discord)
 
 ## Running a node {#node-support}
 
