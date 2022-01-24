@@ -762,5 +762,8 @@ export const query = graphql`
     numio: file(relativePath: { eq: "wallets/numio.png" }) {
       ...listImage
     }
+    airgap: file(relativePath: { eq: "wallets/airgap.png" }) {
+      ...listImage
+    }
   }
 `

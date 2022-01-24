@@ -1,5 +1,6 @@
 {
   "page-find-wallet-add-wallet": ". If you'd like us to add a wallet,",
+  "page-find-wallet-airgap-logo-alt": "AirGap logo",
   "page-find-wallet-alpha-logo-alt": "AlphaWallet logo",
   "page-find-wallet-ambo-logo-alt": "Ambo logo",
   "page-find-wallet-argent-logo-alt": "Argent logo",
@@ -30,6 +31,7 @@
   "page-find-wallet-dcent-logo-alt": "D'CENT logo",
   "page-find-wallet-desc-2": "So choose your wallet based on the features you want.",
   "page-find-wallet-description": "Wallets have lots of optional features which you might like.",
+  "page-find-wallet-description-airgap": "Sign transactions completely offline on a device without any network connectivity using AirGap Vault. Then you can broadcast them with your every-day smartphone with the AirGap Wallet app.",
   "page-find-wallet-description-alpha": "Fully open-source Ethereum wallet that leverages the secure enclave on mobile, offers full testnet support and embraces TokenScript standard.",
   "page-find-wallet-description-ambo": "Cut straight to investing and get your first investment within minutes of downloading the app",
   "page-find-wallet-description-argent": "One tap to earn interest & invest; borrow, store and send. Own it.",
