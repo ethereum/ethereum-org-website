@@ -301,7 +301,7 @@
   },
   {
     "fromPath": "/*/eth2",
-    "toPath": "/:splat/eth2/"
+    "toPath": "/:splat/upgrades/"
   },
   {
     "fromPath": "/*/developers/docs/layer-2-scaling",
