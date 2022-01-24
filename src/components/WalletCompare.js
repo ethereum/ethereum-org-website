@@ -320,6 +320,15 @@ const WalletCompare = ({ location }) => {
       keystone: file(relativePath: { eq: "wallets/keystone.png" }) {
         ...walletCardImage
       }
+      loopring: file(relativePath: { eq: "wallets/loopring.png" }) {
+        ...walletCardImage
+      }
+      numio: file(relativePath: { eq: "wallets/numio.png" }) {
+        ...walletCardImage
+      }
+      airgap: file(relativePath: { eq: "wallets/airgap.png" }) {
+        ...walletCardImage
+      }
     }
   `)
 

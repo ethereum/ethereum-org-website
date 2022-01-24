@@ -756,5 +756,14 @@ export const query = graphql`
     keystone: file(relativePath: { eq: "wallets/keystone.png" }) {
       ...listImage
     }
+    loopring: file(relativePath: { eq: "wallets/loopring.png" }) {
+      ...listImage
+    }
+    numio: file(relativePath: { eq: "wallets/numio.png" }) {
+      ...listImage
+    }
+    airgap: file(relativePath: { eq: "wallets/airgap.png" }) {
+      ...listImage
+    }
   }
 `
