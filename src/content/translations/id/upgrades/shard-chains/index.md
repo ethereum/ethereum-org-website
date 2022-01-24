@@ -37,7 +37,7 @@ Dengan persyaratan spesifikasi perangkat keras yang rendah, sharding akan memper
 
 <InfoBanner isWarning={true}>
   Pertama, Anda perlu menjalankan klien jaringan utama bersama-sama dengan klien Eth2 Anda. <a href="https://launchpad.ethereum.org" target="_blank">Launchpad</a> akan membantu Anda dalam persyaratan spesifikasi perangkat keras dan prosesnya. 
-Sebagai alternatif, Anda juga dapat menggunakan <a href="/en/developers/docs/apis/backend/#available-libraries">API backend</a>.
+Sebagai alternatif, Anda juga dapat menggunakan <a href="/developers/docs/apis/backend/#available-libraries">API backend</a>.
 </InfoBanner>
 
 ## Rantai shard versi 1: ketersediaan data {#data-availability}
