@@ -648,9 +648,6 @@ export const query = graphql`
     dcent: file(relativePath: { eq: "wallets/dcent.png" }) {
       ...listImage
     }
-    dharma: file(relativePath: { eq: "wallets/dharma.png" }) {
-      ...listImage
-    }
     eidoo: file(relativePath: { eq: "wallets/eidoo.png" }) {
       ...listImage
     }
