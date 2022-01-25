@@ -12,7 +12,7 @@ summaryPoint4: Дізнатися більше про це оновлення м
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
-    Beacon Chain запущено 1 грудня 2020 опівдні за часом UTC. Щоб дізнатися більше, перейдіть на <a href="https://beaconscan.com/">цю сторінку</a>. Якщо ви хочете допомогти підтвердити ланцюг, то можете <a href="/upgrades/staking/">отримати частку ETH</a>.
+    Beacon Chain запущено 1 грудня 2020 опівдні за часом UTC. Щоб дізнатися більше, перейдіть на <a href="https://beaconscan.com/">цю сторінку</a>. Якщо ви хочете допомогти підтвердити ланцюг, то можете <a href="/staking/">отримати частку ETH</a>.
 </UpgradeStatus>
 
 ## Про оновлення Beacon Chain {#what-does-the-beacon-chain-do}
