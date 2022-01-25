@@ -1359,6 +1359,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://www.linkedin.com/in/lingzhong-eth/"><img src="https://avatars.githubusercontent.com/u/4011137?v=4?s=100" width="100px;" alt=""/><br /><sub><b>lingzhong</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=lingzhong" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/yashkamalchaturvedi"><img src="https://avatars.githubusercontent.com/u/69413160?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Yash Kamal Chaturvedi</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=yashkamalchaturvedi" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/EtherWorldCo"><img src="https://avatars.githubusercontent.com/u/97191248?v=4?s=100" width="100px;" alt=""/><br /><sub><b>EtherWorld</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=EtherWorldCo" title="Documentation">📖</a></td>
   </tr>
 </table>
 
