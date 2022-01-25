@@ -23,46 +23,61 @@ incomplete: true
 
 ## 初学者文章 {#beginner-articles}
 
-- [基于 Vyper 的智能合约简介](https://kauri.io/article/af913a853eaf4db88627b3ff9572b770/v1/an-introduction-to-smart-contracts-with-vyper)
+- [以太坊开发者指南 (Python)](https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/)
+- [基于 Vyper 的智能合约简介](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
+- [使用 Python 和 Brownie 部署您自己的 ERC20 令牌](https://betterprogramming.pub/python-blockchain-token-deployment-tutorial-create-an-erc20-77a5fd2e1a58)
 - [如何使用 Python Flask 开发以太坊合约？](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
-- [Web3.py 简介 · 面向 Python 开发者的以太坊资源](https://www.dappuniversity.com/articles/web3-py-intro)
+- [Web3.py 简介 ·面向 Python 开发者的以太坊](https://www.dappuniversity.com/articles/web3-py-intro)
 - [如何通过 Python 和 web3.py 调用智能合约函数？](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
 
-## 面向中等程度者的文章 {#intermediate-articles}
+## 面向中等程度用户的文章 {#intermediate-articles}
 
 - [面向 Python 程序员的去中心化应用程序开发](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
 - [创建 Python 以太坊接口：第 1 部分](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
 - [基于 Python 的以太坊智能合约开发：完整（入门）教程](https://hackernoon.com/ethereum-smart-contracts-in-python-a-comprehensive-ish-guide-771b03990988)
-- [您需要知道的关于以太坊客户端的一切](https://medium.com/@pipermerriam/everything-you-need-to-know-about-the-trinity-ethereum-client-b093c756d1de)
+- [使用 Brownie 和 Python 部署智能合约](https://dev.to/patrickalphac/using-brownie-for-to-deploy-smart-contracts-1kkp)
+- [使用 Brownie 在 OpenSea 上创建 NFT](https://www.freecodecamp.org/news/how-to-make-an-nft-and-render-on-opensea-marketplace/)
 
-## 面向高等程度者的使用模式 {#advanced-use-patterns}
+## 面向高等程度用户的使用模式 {#advanced-use-patterns}
 
-- [使用 Python 编译、部署和调用以太坊智能合约](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [使用 Slither 分析 Solidity 智能合约](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
+- [使用 Python 编译、部署和调用以太坊智能合约](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
+- [使用 Slither 分析 Solidity 智能合约](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
+- [Blockchain Fintech 教程：使用 Python 借贷和借贷](https://blog.chain.link/blockchain-fintech-defi-tutorial-lending-borrowing-python/)
 
 ## Python 项目和工具 {#python-projects-and-tools}
 
+### 活跃：
+
+- [Web3.py](https://github.com/ethereum/web3.py) - _用于与以太坊交互的 Python 库_
 - [Brownie](https://github.com/eth-brownie/brownie) - _一个用于部署、测试和与以太坊智能合约交互的 Python 框架_
+- [Vyper](https://github.com/ethereum/vyper/) - _一个具有 Python 风格的以太坊智能合约编程语言_
+- [py-evm](https://github.com/ethereum/py-evm) - _以太坊虚拟机的实现_
+- [Mamba](https://mamba.black) - _一个用 Vyper 语言编写、编译和部署智能合约的框架_
+- [eth-tester](https://github.com/ethereum/eth-tester) - _用于测试基于以太坊应用程序的工具_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _使用以太坊相关代码库的实用函数工具_
-- [py-evm](https://github.com/ethereum/py-evm) - _Python 实现的以太坊虚拟机_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _Python 封装的 solidity 0.5.x 编译器_
 - [py-wasm](https://github.com/ethereum/py-wasm) - _Web 汇编解释器的 Python 实现_
 - [pydevp2p](https://github.com/ethereum/pydevp2p) - _P2P 协议栈的 Python 实现_
 - [pymaker](https://github.com/makerdao/pymaker) - _Maker 合约的 Python API _
-- [Mamba](https://mamba.black) - _一个用 Vyper 语言编写、编译和部署智能合约的框架_
-- [Trinity](https://github.com/ethereum/trinity) - _以太坊的 Python 客户端_
-- [Vyper](https://github.com/ethereum/vyper/) - _一个具有 Python 风格的以太坊智能合约编程语言_
-- [Web3.py](https://github.com/ethereum/web3.py) - _用于与以太坊交互的 Python 库_
 
-想要获取更多的资源？ 请浏览 [ethereum.org/developers](/developers/)。
+### 已归档/不再维护：
+
+- [Trinity](https://github.com/ethereum/trinity) - _以太坊的 Python 客户端_
+
+想要获取更多的资源？ 请查看 [ethereum.org/developers](/developers/)。
+
+## 使用 Python 工具的项目
+
+以下基于以太坊的项目使用本页提到的工具。 相关的开源代码库可作为一个很好的参考，例如代码和最佳做法。
+
+- [Yearn Finance](https://yearn.finance/) 和 [Yearn Vault Contracts 库](https://github.com/yearn/yearn-vaults)
+- [Curve](https://curve.fi/) 和 [Curve 智能合约库](https://github.com/curvefi/curve-contract)
+- [BadgerDAO](https://badger.com/) 和 [使用 Brownie 工具链的智能合约](https://github.com/Badger-Finance/badger-system)
 
 ## Python 社区贡献者 {#python-community-contributors}
 
-- [Py-EVM Gitter](https://gitter.im/ethereum/py-evm)
-- [Trinity Gitter](https://gitter.im/ethereum/trinity)
-- [Vyper Gitter](https://gitter.im/ethereum/vyper)
-- [Webpy Gitter](https://gitter.im/ethereum/web3.py)
+[以太坊 Python Discord 社区](https://discord.gg/9zk7snTfWe)是一个迅速发展壮大的社区，专门用于讨论上述任何项目和相关主题的资源。
 
 ## 其他汇总列表 {#other-aggregated-lists}
 
-维基百科中关于 Vyper 的[可靠资源列表](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources) 有关 Python 相关工具的汇编来源，请查看 [py-eth.com](http://py-eth.com/)。
+维基百科中关于 Vyper 的[可靠资源列表](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources)

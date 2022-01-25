@@ -4,6 +4,7 @@ description: Az orákulumok segítségével külvilági adatokat vihetsz be az E
 lang: hu
 sidebar: true
 incomplete: true
+isOutdated: true
 ---
 
 A orákulumok olyan adatcsatornák, amelyek összekapcsolják az Ethereumot az off-chain, valós információkkal, így le tudod kérdezni az adatokat az okosszerződéseidben. Például a hírpiac dappok orákulumokat használnak, hogy az események alapján elszámolják a kifizetéseket. Egy hírpiacon lehetőséged van ETH-ben fogadni, hogy például ki lesz az Egyesül Államok elnöke. Egy orákulumot fognak használni, hogy megerősítsék a kimenetelt és kifizessék a nyerteseket.
@@ -21,17 +22,6 @@ Az orákulum egy áthidalás a blokklánc és külvilág között. On-chain API-
 Az Ethereumhoz hasonló blokkláncoknál fontos, hogy a hálózat összes csomópontja minden tranzakciót visszajátszhasson, és ugyanazzal az eredménnyel járjon, garantáltan. Az API-ok potenciálisan változó adatokat adnak. Ha valakinek egy ETH összeget küldenél egy előre leegyeztetett $USD árfolyam alapján egy árfolyam API segítségével, a lekérdezés más eredményt adna vissza különböző napokon. Nem is beszélve arról, hogy az API-t meg lehet hackelni vagy elavulttá válhat. Ha ez megtörténik, akkor a hálózat csomópontjai nem tudnának egyetérteni az Ethereum jelenlegi állapota felett, tehát lényegében szétbomlana a [konszenzus.](/developers/docs/consensus-mechanisms/).
 
 Az orákulumok megoldják ezt a problémát úgy, hogy az adatot a blokkláncra juttatják. Tehát minden, a tranzakciót visszajátszó csomópont ugyanazokat a megváltoztathatatlan adatokat fogja használni, amelyeket mindenki láthat. Ehhez az orákulum általában egy okosszerződésből és néhány olyan off-chain komponensből áll, amelyek lekérdezhetik az API-okat, majd időszakonként tranzakciókat küldenek az okosszerződés adatainak frissítésére.
-
-<!-- ## Oracle architecture {#oracle-architecture}
-
-To understand how an oracle works, let's play through a scenario where your smart contract needs to know who won the superbowl. This is an example of how it could work:
-
-1. Your smart contract requests information from an oracle smart contract.
-2. The oracle smart contract emits an [event](/developers/docs/smart-contracts/anatomy/#events-and-logs).
-3. Off-chain oracle nodes listen for events and upon hearing one, they query an API.
-4. The API returns a JSON response to the nodes.
-5. The nodes call on the oracle smart contract.
-6. The oracle smart contract returns the data to your smart contract. -->
 
 ### Biztonság {#security}
 

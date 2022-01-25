@@ -70,8 +70,8 @@ sidebar: true
 
 ### নিরাপত্তা {#security}
 
-- [Clef](https://geth.ethereum.org/clef/Overview) _লেনদেন এবং ডেটা সাইন করতে ব্যবহৃত হয় এবং এটি geth-এর অ্যাকাউন্ট পরিচালনার প্রতিস্থাপন হিসাবে ব্যবহৃত হয়_
-- [EthSigner](https://gitter.im/PegaSysEng/EthSigner) _একটি লেনদেন স্বাক্ষরকারী অ্যাপ্লিকেশন যা একটি web3 সরবরাহকারীর সাথে ব্যবহার করা হয়_
+- [Clef](https://geth.ethereum.org/docs/clef/tutorial) _লেনদেন এবং ডেটা সাইন করতে ব্যবহৃত হয় এবং এটি geth-এর অ্যাকাউন্ট পরিচালনার প্রতিস্থাপন হিসাবে ব্যবহৃত হয়_
+- [EthSigner](https://github.com/ConsenSys/ethsigner) _একটি লেনদেন স্বাক্ষরকারী অ্যাপ্লিকেশন যা একটি web3 সরবরাহকারীর সাথে ব্যবহার করা হয়_
 
 ### টুলিং {#tooling}
 

@@ -117,8 +117,6 @@ Appeler Attacker.beginAttack() démarrera un cycle qui ressemble à quelque chos
 
 Appeller Attacker.beginAttack avec 1 ETH génère une nouvelle attaque par réentrance contre la victime, retirant plus d'ETH qu'il n'en a été fourni (prélevé sur les soldes des autres utilisateurs, entraînant une sous-garantie du contrat de la victime)
 
-<!-- TODO create a subpage related to re-entrancy & move this content there -->
-
 ### Comment gérer la réentrance (de la mauvaise façon) {#how-to-deal-with-re-entrancy-the-wrong-way}
 
 On pourrait envisager de contrecarrer la réentrance en empêchant simplement les contrats intelligents d'interagir avec votre code. Vous recherchez stackoverflow, vous trouvez cet extrait de code avec des tonnes de votes positifs :
@@ -241,11 +239,6 @@ Bien qu'il n'y ait pas de substitut à la compréhension des bases de sécurité
 
 - [mythril](https://github.com/ConsenSys/mythril)
 - [Documentation](https://mythril-classic.readthedocs.io/en/master/about.html)
-
-**SmartContract.Codes -** **_Moteur de recherche pour les codes sources Solidity vérifiés_**
-
-- [smartcontract.codes (alpha)](https://smartcontract.codes/)
-- [Documentation](https://github.com/ethereum-play/smartcontract.codes/blob/master/README.md)
 
 **Manticore -** **_Interface en ligne de commande qui utilise un outil d'exécution symbolique sur les contrats intelligents et les fichiers binaires_**
 

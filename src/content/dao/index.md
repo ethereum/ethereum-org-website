@@ -1,5 +1,5 @@
 ---
-title: Decentralized autonomous organisations (DAOs)
+title: Decentralized autonomous organizations (DAOs)
 description: An overview of DAOs on Ethereum
 lang: en
 template: use-cases
@@ -7,32 +7,29 @@ emoji: ":handshake:"
 sidebar: true
 sidebarDepth: 2
 image: ../../assets/use-cases/dao-2.png
-alt: "A representation of a DAO voting on a proposal."
-summaryPoints:
-  [
-    "Member-owned communities without centralized leadership.",
-    "A safe way to collaborate with internet strangers.",
-    "A safe place to commit funds to a specific cause.",
-  ]
+alt: A representation of a DAO voting on a proposal.
+summaryPoint1: Member-owned communities without centralized leadership.
+summaryPoint2: A safe way to collaborate with internet strangers.
+summaryPoint3: A safe place to commit funds to a specific cause.
 ---
 
 ## What are DAOs? {#what-are-daos}
 
 DAOs are an effective and safe way to work with like-minded folks around the globe.
 
-Think of them like an internet-native business that's collectively owned and managed by its members. They have built-in treasuries that no one has the authority to access without the approval of the group. Decisions are governed by proposals and voting to ensure everyone in the organisation has a voice.
+Think of them like an internet-native business that's collectively owned and managed by its members. They have built-in treasuries that no one has the authority to access without the approval of the group. Decisions are governed by proposals and voting to ensure everyone in the organization has a voice.
 
-There's no CEO who can authorise spending based on their own whims and no chance of a dodgy CFO manipulating the books. Everything is out in the open and the rules around spending are baked into the DAO via its code.
+There's no CEO who can authorize spending based on their own whims and no chance of a dodgy CFO manipulating the books. Everything is out in the open and the rules around spending are baked into the DAO via its code.
 
 ## Why do we need DAOs? {#why-dao}
 
-Starting an organisation with someone that involves funding and money requires a lot of trust in the people you're working with. But it’s hard to trust someone you’ve only ever interacted with on the internet. With DAOs you don’t need to trust anyone else in the group, just the DAO’s code, which is 100% transparent and verifiable by anyone.
+Starting an organization with someone that involves funding and money requires a lot of trust in the people you're working with. But it’s hard to trust someone you’ve only ever interacted with on the internet. With DAOs you don’t need to trust anyone else in the group, just the DAO’s code, which is 100% transparent and verifiable by anyone.
 
 This opens up so many new opportunities for global collaboration and coordination.
 
 ### A comparison {#dao-comparison}
 
-| DAO                                                                                                                     | A traditional organisation                                                                       |
+| DAO                                                                                                                     | A traditional organization                                                                       |
 | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | Usually flat, and fully democratized.                                                                                   | Usually hierarchical.                                                                            |
 | Voting required by members for any changes to be implemented.                                                           | Depending on structure, changes can be demanded from a sole party, or voting may be offered.     |
@@ -44,7 +41,7 @@ This opens up so many new opportunities for global collaboration and coordinatio
 
 To help this make more sense, here's a few examples of how you could use a DAO:
 
-- A charity – you can accept membership and donations from anyone in the world and the group can decide how they to spend donations.
+- A charity – you can accept membership and donations from anyone in the world and the group can decide how they want to spend donations.
 - A freelancer network – you could create a network of contractors who pool their funds for office spaces and software subscriptions.
 - Ventures and grants – you could create a venture fund that pools investment capital and votes on ventures to back. Repaid money could later be redistributed amongst DAO-members.
 
@@ -54,7 +51,7 @@ There are different models for DAO membership. Membership can determine how voti
 
 ### Token-based membership {#token-based-membership}
 
-Usually fully permissionless, depending on the token used. Mostly these governance tokens can be traded for permissionlessly on a decentralized exchange. Others must be earned through providing liquidity or some other ‘proof of work’. Either way, simply holding the token grants access to voting.
+Usually fully permissionless, depending on the token used. Mostly these governance tokens can be traded permissionlessly on a decentralized exchange. Others must be earned through providing liquidity or some other ‘proof-of-work’. Either way, simply holding the token grants access to voting.
 
 _Typically used to govern broad decentralized protocols and/or tokens themselves._
 
@@ -74,11 +71,13 @@ _Typically used for more closer-knit, human-centric organizations like charities
 
 ## How do DAOs work? {#how-daos-work}
 
-The backbone of a DAO is its smart contract. The contract defines the rules of the organisation and holds the group's treasury. Once the contract is live on Ethereum, no one can change the rules except by a vote. If anyone tries to do something that's not covered by the rules and logic in the code, it will fail. And because the treasury is defined by the smart contract too that means no one can spend the money without the group's approval either. This means that DAOs don't need a central authority. Instead the group makes decisions collectively and payments are authorised automatically when votes pass.
+The backbone of a DAO is its smart contract. The contract defines the rules of the organization and holds the group's treasury. Once the contract is live on Ethereum, no one can change the rules except by a vote. If anyone tries to do something that's not covered by the rules and logic in the code, it will fail. And because the treasury is defined by the smart contract too that means no one can spend the money without the group's approval either. This means that DAOs don't need a central authority. Instead the group makes decisions collectively and payments are authorized automatically when votes pass.
 
 This is possible because smart contracts are tamper-proof once they go live on Ethereum. You can't just edit the code (the DAOs rules) without people noticing because everything is public.
 
-<DocLink to="/developers/docs/smart-contracts/" title="More on smart contracts" />
+<DocLink to="/developers/docs/smart-contracts/">
+  More on smart contracts
+</DocLink>
 
 ## Ethereum and DAOs {#ethereum-and-daos}
 
@@ -93,7 +92,7 @@ Ethereum is the perfect foundation for DAOs for a number of reasons:
 
 ### Join a DAO {#join-a-dao}
 
-- [Ethereum community DAOs](/community/#decentralized-autonomous-organizations-daos/community/#decentralized-autonomous-organizations-daos)
+- [Ethereum community DAOs](/community/get-involved/#decentralized-autonomous-organizations-daos)
 - [DAOHaus's list of DAOs](https://app.daohaus.club/explore)
 
 ### Start a DAO {#start-a-dao}
@@ -105,7 +104,14 @@ Ethereum is the perfect foundation for DAOs for a number of reasons:
 
 ## Further reading {#further-reading}
 
+### DAO Articles {#dao-articles}
+
 - [What's a DAO?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
 - [House of DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [What is a DAO and what is it for?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [How to Start a DAO-Powered Digital Community](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
+- [What is a DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
+
+### Videos {#videos}
+
+- [What is a DAO in crypto?](https://youtu.be/KHm0uUPqmVE)

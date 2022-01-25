@@ -11,13 +11,13 @@ Protocolul Ethereum în sine există exclusiv în scopul menținerii funcționă
 
 ## Condiții prealabile {#prerequisites}
 
-Unele familiarități de bază cu terminologia comună în informatică, cum ar fi [octeți](https://en.wikipedia.org/wiki/Byte), [memorie](https://en.wikipedia.org/wiki/Computer_memory), și o [stivă](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>) sunt necesare pentru a înțelege EVM. De asemenea, ar fi util să te simți confortabil cu conceptele de criptografie/blockchain, cum ar fi [funcțiile hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function), [Dovada muncii (PoW)](https://en.wikipedia.org/wiki/Proof_of_work) și [Arborele Merkle](https://en.wikipedia.org/wiki/Proof_of_work).
+Unele familiarități de bază cu terminologia comună în informatică, cum ar fi [octeți](https://wikipedia.org/wiki/Byte), [memorie](https://wikipedia.org/wiki/Computer_memory), și o [stivă](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) sunt necesare pentru a înțelege EVM. De asemenea, ar fi util să te simți confortabil cu conceptele de criptografie/blockchain, cum ar fi [funcțiile hash](https://wikipedia.org/wiki/Cryptographic_hash_function), [Dovada muncii (PoW)](https://wikipedia.org/wiki/Proof_of_work) și [Arborele Merkle](https://wikipedia.org/wiki/Proof_of_work).
 
 ## De la Registru la Mașina de stare {#from-ledger-to-state-machine}
 
 Analogia unui „registru distribuit” este adesea folosită pentru a descrie un blockchain precum Bitcoin, care permite o monedă descentralizată folosind instrumente fundamentale de criptografie. O criptomonedă se comportă ca o monedă „normală” din cauza regulilor care guvernează ceea ce se poate și nu se poate face pentru a modifica registrul. De exemplu, o adresă Bitcoin nu poate cheltui mai mult Bitcoin decât a primit anterior. Aceste reguli stau la baza tuturor tranzacțiilor pe Bitcoin și pe multe alte blockchain-uri.
 
-În timp ce Ethereum are propria criptomonedă nativă (Ether) care urmează aproape exact aceleași reguli intuitive, permite, de asemenea, o funcție mult mai puternică: [contracte inteligente](/developers/docs/smart-contracts/). Pentru această caracteristică mai complexă, este necesară o analogie mai sofisticată. În loc de un registru distribuit, Ethereum este o [mașină de stare](https://en.wikipedia.org/wiki/Finite-state_machine) distribuită. Starea Ethereum este o structură mare de date care deține nu numai toate conturile și soldurile, ci și o _mașină de stare_, care se poate schimba din bloc în bloc în conformitate cu un set predefinit de reguli și care poate executa aleatoriu codul mașinii. Regulile specifice de schimbare a stării de la bloc la bloc sunt definite de EVM.
+În timp ce Ethereum are propria criptomonedă nativă (Ether) care urmează aproape exact aceleași reguli intuitive, permite, de asemenea, o funcție mult mai puternică: [contracte inteligente](/developers/docs/smart-contracts/). Pentru această caracteristică mai complexă, este necesară o analogie mai sofisticată. În loc de un registru distribuit, Ethereum este o [mașină de stare](https://wikipedia.org/wiki/Finite-state_machine) distribuită. Starea Ethereum este o structură mare de date care deține nu numai toate conturile și soldurile, ci și o _mașină de stare_, care se poate schimba din bloc în bloc în conformitate cu un set predefinit de reguli și care poate executa aleatoriu codul mașinii. Regulile specifice de schimbare a stării de la bloc la bloc sunt definite de EVM.
 
 ![O diagramă care prezintă alcătuirea EVM](../../../../../developers/docs/evm/evm.png) _Diagramă adaptată după [Ethereum EVM ilustrat](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
@@ -43,7 +43,7 @@ Crearea contractului are ca rezultat crearea unui nou cont de contract care con�
 
 ## Instrucțiuni EVM {#evm-instructions}
 
-EVM execută ca o [mașină stivă](https://en.wikipedia.org/wiki/Stack_machine) cu o adâncime de 1024 elemente. Fiecare element este un cuvânt de 256 de biți, care a fost ales pentru compatibilitate maximă cu schema de hash SHA-3-256.
+EVM execută ca o [mașină stivă](https://wikipedia.org/wiki/Stack_machine) cu o adâncime de 1024 elemente. Fiecare element este un cuvânt de 256 de biți, care a fost ales pentru compatibilitate maximă cu schema de hash SHA-3-256.
 
 În timpul executării, EVM menține o _memorie_ tranzitorie (ca o matrice de octeți cu adresare pe cuvinte), care nu persistă între tranzacții.
 
@@ -53,15 +53,13 @@ Bytecode-ul compilat al contractului inteligent se execută ca un număr de [opc
 
 ![O diagramă care arată unde este necesar gaz pentru operațiunile EVM](../../../../../developers/docs/gas/gas.png) _Diagrame adaptate din[ Ethereum EVM ilustrat](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-<!-- TODO add full list from  https://eth.wiki/concepts/evm/implementations -->
-
 ## Implementări EVM {#evm-implementations}
 
 Toate implementările EVM trebuie să respecte specificațiile descrise în Ethereum Yellowpaper.
 
 De-a lungul istoriei de 5 ani a Ethereum, EVM a suferit mai multe revizuiri și există mai multe implementări ale EVM în diferite limbaje de programare.
 
-Toți [clienții Ethereum](/developers/docs/nodes-and-clients/#clients) includ o implementare EVM. În plus, există mai multe implementări independente, inclusiv:
+Toți [clienții Ethereum](/developers/docs/nodes-and-clients/#execution-clients) includ o implementare EVM. În plus, există mai multe implementări independente, inclusiv:
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_

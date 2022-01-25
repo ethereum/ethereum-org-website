@@ -15,9 +15,6 @@ Contractele inteligente sunt un tip de [cont Ethereum](/developers/docs/accounts
 
 Asigură-te că ai citit despre [conturi](/developers/docs/accounts/), [tranzacții](/developers/docs/transactions/) și [mașina virtuală Ethereum](/developers/docs/evm/) înainte de a sări în lumea contractelor inteligente.
 
-<!-- TODO simpler example... scheduling payments in Ethereum is actually difficult -->
-<!-- TODO show an example smart contract, e.g. an implementation of a vending machine -->
-
 ## Un distribuitor automat digital {#a-digital-vending-machine}
 
 Poate că cea mai bună metaforă pentru un contract inteligent este un distribuitor automat, așa cum este descris de Nick Szabo. Cu intrările potrivite, o anumită ieșire este garantată.
@@ -102,7 +99,7 @@ Există modalități de a evita acest lucru folosind [oracole](/developers/docs/
 
 **DappSys -** **_Blocuri de construcții sigure, simple, flexibile pentru contracte inteligente._**
 
-- [dapp.tools/dappsys](https://dapp.tools/dappsys/)
+- [Dappsys](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 ## Referințe suplimentare {#further-reading}

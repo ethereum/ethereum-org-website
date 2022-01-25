@@ -16,7 +16,6 @@
   "page-find-wallet-description-argent": "Un toc per guanyar interessos i invertir. Presta, emmagatzema i envia. Aconsegueix-lo.",
   "page-find-wallet-description-authereum": "Sense descàrregues, sense frases llavor. Qualsevol navegador, en qualsevol moment, amb qualsevol dispositiu mòbil o d'escriptori",
   "page-find-wallet-description-coinbase": "L'aplicació segura per emmagatzemar criptomonedes tu mateix",
-  "page-find-wallet-description-dharma": "Dharma és el teu portal a DeFi. No més frases llavor, no més extensions de Chrome.",
   "page-find-wallet-description-enjin": "Impenetrable, amb característiques precises i convenient; creat per a inversors, jugadors i desenvolupadors",
   "page-find-wallet-description-gnosis": "La plataforma més fiable per desar actius digitals a Ethereum",
   "page-find-wallet-description-imtoken": "imToken és una cartera digital fàcil i segura en la qual confien milions de persones",
@@ -35,7 +34,6 @@
   "page-find-wallet-description-trezor": "La primera i original cartera de hardware",
   "page-find-wallet-description-trust": "Trust Wallet és una criptomoneda descentralitzada de múltiples monedes. Compra criptomonedes, explora dapps, intercanvia actius, etc., i mantingues el control de les teves claus.",
   "page-find-wallet-description-zengo": "ZenGo és la primera cartera de criptomonedes sense clau. Amb ZenGo, no hi ha claus privades, contrasenyes o frases llavor per gestionar o perdre. Compra, comercia, guanya i emmagatzema amb una senzillesa i seguretat sense precedents",
-  "page-find-wallet-dharma-logo-alt": "Logotip de Dharma",
   "page-find-wallet-enjin-logo-alt": "Logotip d'Enjin",
   "page-find-wallet-Ethereum-wallets": "Carteres Ethereum",
   "page-find-wallet-explore-dapps": "Explora dapps",
@@ -63,7 +61,7 @@
   "page-find-wallet-myetherwallet-logo-alt": "Logotip de MyEtherWallet",
   "page-find-wallet-new-to-wallets": "Nou amb les carteres? Aquí tens una visió general per començar.",
   "page-find-wallet-new-to-wallets-link": "Carteres d'Ethereum",
-  "page-find-wallet-not-all-features": "Cap cartera té totes aquestes funcions",
+  "page-find-wallet-not-all-features": "Cap cartera té totes aquestes funcions encara",
   "page-find-wallet-not-endorsements": "Les carteres que apareixen en aquesta pàgina no estan homologades de manera oficial i es proporcionen només amb finalitats informatives. Les descripcions les han facilitat les pròpies empreses de les carteres. Afegim productes a aquesta pàgina d'acord amb els criteris de les nostres carteres",
   "page-find-wallet-overwhelmed": "d'Ethereum a continuació. Estàs aclaparat? Intenta filtrar per funcions.",
   "page-find-wallet-pillar-logo-alt": "Logotip de Pillar",
@@ -88,7 +86,6 @@
   "page-find-wallet-we-found": "Hem trobat",
   "page-find-wallet-withdraw": "Retira al banc",
   "page-find-wallet-withdraw-desc": "Pots retirar els teus ETH directament al teu compte bancari sense passar per un intercanvi.",
-  "page-find-wallet-yet": "encara",
   "page-find-wallet-zengo-logo-alt": "Logotip de ZenGo",
   "page-stake-eth": "Aposta ETH"
 }

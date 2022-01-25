@@ -69,11 +69,6 @@ Amint be van állítva, lekérdezéseket indíthatsz a blokkláncon a következ�
 - hálózati azonosító
 - és még sok mást...
 
-<!--- #### Try it
-
-This remix tutorial will show you [how to query the blockchain using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
-
 ### Tárca funkcionalitás {#wallet-functionality}
 
 Ezek a könyvtárak funkcionalitást adnak, hogy tárcákat hozz létre, kulcsokat kezelj és tranzakciókat írj alá.
@@ -217,11 +212,6 @@ Ez azt jelenti, hogy:
 - Telepíthetsz egy szerződést
 - És még sok mást...
 
-<!--- #### Try it
-
-This remix tutorial will show you [how to query a contract using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
---->
-
 ### Használati függvények {#utility-functions}
 
 A használati függvények praktikus könnyítéseke adnak, hogy egyszerűbb legyen az Ethereumon való építés.
@@ -284,8 +274,8 @@ _Ismersz olyan közösségi anyagot, mely segített neked? Módosítsd az oldalt
 
 ## Kapcsolódó témák {#related-topics}
 
-- [Csomópontok és kliensek](/en/developers/docs/nodes-and-clients/)
-- [Fejlesztői keretrendszerek](/en/developers/docs/frameworks/)
+- [Csomópontok és kliensek](/developers/docs/nodes-and-clients/)
+- [Fejlesztői keretrendszerek](/developers/docs/frameworks/)
 
 ## Kapcsolódó útmutatók {#related-tutorials}
 

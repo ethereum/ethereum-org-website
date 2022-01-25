@@ -21,8 +21,6 @@ Les bibliothèques suppriment une grande partie de la complexité de l'interacti
 
 ## Bibliothèques disponibles {#available-libraries}
 
-<!-- TODO separate APIs-as-a-service vs. connect your own -->
-
 **Alchemy -** **_Plateforme de développement Ethereum._**
 
 - [alchemyapi.io](https://alchemyapi.io)

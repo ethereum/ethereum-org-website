@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
@@ -69,7 +69,7 @@ const HeroCopy = styled.div`
 const H1 = styled.h1`
   font-style: normal;
   font-weight: normal;
-  font-family: "SFMono-Regular", monospace;
+  font-family: ${(props) => props.theme.fonts.monospace};
   text-transform: uppercase;
   font-weight: 500;
   font-size: 32px;
@@ -92,7 +92,7 @@ const MonoSubtitle = styled.h2`
   margin-bottom: 0rem;
 `
 
-const Hero = styled(Img)`
+const Hero = styled(GatsbyImage)`
   flex: 1 1 50%;
   max-width: 800px;
   background-size: cover;
@@ -108,7 +108,7 @@ const Hero = styled(Img)`
   }
 `
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   max-width: 400px;
   margin-top: 4rem;
 `
@@ -255,7 +255,7 @@ const DevelopersPage = ({ data }) => {
             </HeroCopy>
           </HeroCopyContainer>
           <Hero
-            fluid={data.ednHero.childImageSharp.fluid}
+            image={getImage(data.ednHero)}
             alt={translateMessageId("alt-eth-blocks", intl)}
             loading="eager"
           />
@@ -294,12 +294,9 @@ const DevelopersPage = ({ data }) => {
             </p>
           </IntroColumn>
           <StyledCallout
-            image={data.developers.childImageSharp.fixed}
-            title={translateMessageId("page-developers-improve-ethereum", intl)}
-            description={translateMessageId(
-              "page-developers-improve-ethereum-desc",
-              intl
-            )}
+            image={getImage(data.developers)}
+            titleKey="page-developers-improve-ethereum"
+            descriptionKey="page-developers-improve-ethereum-desc"
             alt={translateMessageId("alt-eth-blocks", intl)}
           >
             <div>
@@ -327,6 +324,13 @@ const DevelopersPage = ({ data }) => {
             </Link>
             <p>
               <Translation id="page-developers-into-eth-desc" />
+            </p>
+
+            <Link to="/developers/docs/intro-to-ether/">
+              <Translation id="page-developers-intro-ether-link" />
+            </Link>
+            <p>
+              <Translation id="page-developers-intro-ether-desc" />
             </p>
 
             <Link to="/developers/docs/dapps/">
@@ -357,7 +361,7 @@ const DevelopersPage = ({ data }) => {
               <Translation id="page-developers-language-desc" />
             </p>
             <ImageContainer>
-              <Image fixed={data.doge.childImageSharp.fixed} />
+              <Image image={getImage(data.doge)} />
             </ImageContainer>
           </Column>
           <Column>
@@ -459,11 +463,11 @@ const DevelopersPage = ({ data }) => {
               <Translation id="page-developers-block-explorers-desc" />
             </p>
 
-            <Link to="/developers/docs/security/">
-              <Translation id="page-developers-security-link" />
+            <Link to="/developers/docs/smart-contracts/security/">
+              <Translation id="page-developers-smart-contract-security-link" />
             </Link>
             <p>
-              <Translation id="page-developers-security-desc" />
+              <Translation id="page-developers-smart-contract-security-desc" />
             </p>
 
             <Link to="/developers/docs/storage/">
@@ -490,6 +494,13 @@ const DevelopersPage = ({ data }) => {
               <Translation id="page-developers-token-standards-desc" />
             </p>
 
+            <Link to="/developers/docs/mev/">
+              <Translation id="page-developers-mev-link" />
+            </Link>
+            <p>
+              <Translation id="page-developers-mev-desc" />
+            </p>
+
             <Link to="/developers/docs/oracles/">
               <Translation id="page-developers-oracles-link" />
             </Link>
@@ -512,33 +523,45 @@ const DevelopersPage = ({ data }) => {
 export default DevelopersPage
 
 export const query = graphql`
-  query {
+  {
     ednHero: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(
+          width: 800
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       childImageSharp {
-        fixed(height: 200) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(
+          height: 200
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     doge: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        fixed(height: 320) {
-          ...GatsbyImageSharpFixed
-        }
+        gatsbyImageData(
+          height: 320
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     ogImage: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
-        fixed(width: 1200) {
-          src
-        }
+        gatsbyImageData(
+          width: 1200
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
   }

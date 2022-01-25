@@ -11,7 +11,7 @@ sidebar: true
 
 Bruk Ethereum til å utvikle desentraliserte applikasjoner (eller "dapps") som utnytter fordelene med kryptovaluta og blokkjedeknologi. De er pålitelige. Det vil si at når de er utrullet på Ethereum, vil de alltid kjøre som programmert. Det kan styre digitale eiendeler for å skape nye typer finansielle applikasjoner. De kan være desentraliserte, det betyr at ingen enkeltenhet eller person styrer dem, og er nesten umulig å sensurere.
 
-Bygg desentraliserte applikasjoner oppå Ethereum og samhandle med smarte kontrakter ved hjelp av verktøy og språk fra Microsofts technology stack - Supporting C#, # Visual Basic . ET, F#, verktøy som for eksempel VSCode og Visual Studio, gjennom .NET Framework/.NET Core/.NET Standard. Distribuer en Ethereum-blokkjede på Azure med Microsoft Azure Blockchain på få minutter. Bring nyttigheten av .NET til Ethereum!
+Bygg desentraliserte applikasjoner oppå Ethereum og samhandle med smarte kontrakter ved hjelp av verktøy og språk fra Microsofts technology stack - Supporting C#, Visual Basic .NET, F#, verktøy som for eksempel VSCode og Visual Studio, gjennom .NET Framework/.NET Core/.NET Standard. Distribuer en Ethereum-blokkjede på Azure med Microsoft Azure Blockchain på få minutter. Bring nyttigheten av .NET til Ethereum!
 
 <img src="https://raw.githubusercontent.com/Nethereum/Nethereum/master/logos/logo192x192t.png" />
 
@@ -33,9 +33,9 @@ Trenger du en mer grunnleggende informasjon først? Sjekk ut [ethereum.org/learn
 - [Nethereum, Kom i gang](https://docs.nethereum.com/en/latest/getting-started/)
 - [Installere VS Kode Solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
 - [En .NET-utviklers Arbeidsflyt for Oppretting og oppringing av Ethereum Smart Kontrakter](https://medium.com/coinmonks/a-net-developers-workflow-for-creating-and-calling-ethereum-smart-contracts-44714f191db2)
-- [Smarte kontrakt integrering med Nethereum](https://kauri.io/article/b54334b0695342c1bbe161c4c4467b50/smart-contracts-integration-with-nethereum)
+- [Smarte kontrakt integrering med Nethereum](https://kauri.io/#collections/getting%20started/smart-contracts-integration-with-nethereum/#smart-contracts-integration-with-nethereum)
 - [Grensesnitt .NET og Ethereum Blockchain Smart Kontraker med Nethereum](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933), også i [Conoco################](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1)
-- [Nethereum - Et åpen kildekode .NET-integrasjonsbibliotek for blokkjede](https://kauri.io/article/d15dfd4903f149cdb84b3ce666103b52/v1/nethereum-an-open-source-.net-integration-library-for-blockchain)
+- [Nethereum - Et åpen kildekode .NET-integrasjonsbibliotek for blokkjede](https://kauri.io/#collections/a%20hackathon%20survival%20guide/nethereum-an-open-source-.net-integration-library/)
 - [Skrive Ethereum Overføringer til SQL Database ved hjelp av Nethereum](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
 - [Se hvordan du enkelt bruker smarte kontrakter i Ethereum ved hjelp av C# og VisualStudio](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) <br/>
 
@@ -80,9 +80,9 @@ Ser du etter flere ressurser? Sjekk ut [ethereum.org/developers.](/developers/)
 
 ## .NET Community-bidragsytere {#dot-net-community-contributors}
 
-I Nethereum, er vi for det meste på [Gitter](https://gitter.im/Nethereum/Nethereum) der alle er velkomne til å spørre/svare på spørsmål, få hjelp, eller bare slappe av. Du er velkommen til å sjekke ut eller åpne en sak på [Nethereum Github repository](https://github.com/Nethereum), eller bare se gjennom de mange sidene/eksempelprosjektene vi har.
+I Nethereum, er vi for det meste på [Gitter](https://gitter.im/Nethereum/Nethereum) der alle er velkomne til å spørre/svare på spørsmål, få hjelp, eller bare slappe av. Du er velkommen til å sjekke ut eller åpne en sak på [Nethereum GitHub repository](https://github.com/Nethereum), eller bare se gjennom de mange sidene/eksempelprosjektene vi har.
 
-I Nethermind kan vi kontaktes gjennom [Gitter](https://gitter.im/nethermindeth/nethermind). Ved problemer, sjekk ut [Nethermind Github repository](https://github.com/NethermindEth/nethermind).
+I Nethermind kan vi kontaktes gjennom [Gitter](https://gitter.im/nethermindeth/nethermind). Ved problemer, sjekk ut [Nethermind GitHub repository](https://github.com/NethermindEth/nethermind).
 
 ## Andre aggregerte lister {#other-aggregated-lists}
 

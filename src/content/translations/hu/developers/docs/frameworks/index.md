@@ -19,7 +19,7 @@ A keretrendszerek olyan dobozon-kívüli funkciókat kínálnak, melyekkel:
 
 ## Előfeltételek {#prerequisites}
 
-Mielőtt elmerülnél a keretrendszerekben, javasoljuk, hogy olvasd át a bevezetés a [dappokba](/en/developers/docs/dapps/) és a [Ethereum stack](/en/developers/docs/ethereum-stack/) cikkeket.
+Mielőtt elmerülnél a keretrendszerekben, javasoljuk, hogy olvasd át a bevezetés a [dappokba](/developers/docs/dapps/) és a [Ethereum stack](/developers/docs/ethereum-stack/) cikkeket.
 
 ## Elérhető keretrendszerek {#available-frameworks}
 
@@ -38,11 +38,6 @@ Mielőtt elmerülnél a keretrendszerekben, javasoljuk, hogy olvasd át a beveze
 - [Honlap](https://www.web3labs.com/epirus)
 - [Dokumentáció](https://docs.epirus.io)
 - [GitHub](https://github.com/epirus-io/epirus-cli)
-
-**Etherlime -** **_Ethers.js alapú keretrendszer dapp fejlesztéshez (Solidity & Vyper), telepítés, debugging, tesztelés és egyebek._**
-
-- [Dokumentáció](https://etherlime.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/LimeChain/etherlime)
 
 **Hardhat -** **_Ethereum fejlesztői környezet profiknak_**
 
@@ -72,7 +67,7 @@ Mielőtt elmerülnél a keretrendszerekben, javasoljuk, hogy olvasd át a beveze
 **The Graph -** **_Blokklánc adatok hatékony lekérdezése a The Graph-fal_**
 
 - [Honlap](https://thegraph.com/)
-- [Útmutató](/en/developers/tutorials/the-graph-fixing-web3-data-querying/)
+- [Útmutató](/developers/tutorials/the-graph-fixing-web3-data-querying/)
 
 **Alchemy -** **_Ethereum Fejlesztési Platform._**
 

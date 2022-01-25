@@ -52,7 +52,7 @@ pragma solidity >=0.6.0 <0.8.0;
 ```
 
 The Solidity language is still evolving quickly, and new versions may not be compatible with old code
-([see here](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)). Therefore, it is a goood idea to specify not just a minimum
+([see here](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)). Therefore, it is a good idea to specify not just a minimum
 version of the language, but also a maximum version, the latest with which you tested the code.
 
 &nbsp;
@@ -86,7 +86,7 @@ By convention, interface names start with `I`.
 This function is `external`, meaning [it can only be called from outside the contract](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2).
 It returns the total supply of tokens in the contract. This value is returned using the most common type in Ethereum, unsigned 256 bits (256 bits is the
 native word size of the EVM). This function is also a `view`, which means that it does not change the state, so it can be executed on a single node instead of having
-every node in the blockchain run it. This kind of function does not generate a transaction and does not cost [gas](https://ethereum.org/en/developers/docs/gas/).
+every node in the blockchain run it. This kind of function does not generate a transaction and does not cost [gas](/developers/docs/gas/).
 
 **Note:** In theory it might appear that a contract's creator could cheat by returning a smaller total supply than the real value, making each token appear
 more valuable than it actually is. However, that fear ignores the true nature of the blockchain. Everything that happens on the blockchain can be verified by
@@ -251,7 +251,7 @@ import "../../math/SafeMath.sol";
 
 - `GSN/Context.sol` is the definitions required to use [OpenGSN](https://www.opengsn.org/), a system that allows users without ether
   to use the blockchain. Note that this is an old version, if you want to integrate with OpenGSN
-  [use this tutorial](https://docs.opengsn.org/tutorials/integration.html).
+  [use this tutorial](https://docs.opengsn.org/javascript-client/tutorial.html).
 - [The SafeMath library](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/), which is used to make
   addition and subtraction without overflows. This is necessary because otherwise a person might somehow have one token, spend
   two tokens, and then have 2^256-1 tokens.
@@ -315,7 +315,7 @@ secrets on the blockchain_, the software on every node has the state of every co
 at every block. By convention, state variables are named `_<something>`.
 
 The first two variables are [mappings](https://www.tutorialspoint.com/solidity/solidity_mappings.htm),
-meaning they behave roughly the same as [associative arrays](https://en.wikipedia.org/wiki/Associative_array),
+meaning they behave roughly the same as [associative arrays](https://wikipedia.org/wiki/Associative_array),
 except that the keys are numeric values. Storage is only allocated for entries that have values different
 from the default (zero).
 
@@ -413,7 +413,7 @@ The constructor is called when the contract is first created. By convention, fun
      * be displayed to a user as `5,05` (`505 / 10 ** 2`).
      *
      * Tokens usually opt for a value of 18, imitating the relationship between
-     * Ether and Wei. This is the value {ERC20} uses, unless {_setupDecimals} is
+     * ether and wei. This is the value {ERC20} uses, unless {_setupDecimals} is
      * called.
      *
      * NOTE: This information is only used for _display_ purposes: it in
@@ -734,7 +734,7 @@ it is clear what are the functions you modify, and to trust your contract people
 
 It is often useful to perform a function each time tokens change hands. However,`_transfer` is a very important function and it is
 possible to write it insecurely (see below), so it is best not to override it. The solution is `_beforeTokenTransfer`, a
-[hook function](https://en.wikipedia.org/wiki/Hooking). You can override this function, and it will be called on each transfer.
+[hook function](https://wikipedia.org/wiki/Hooking). You can override this function, and it will be called on each transfer.
 
 &nbsp;
 
@@ -766,9 +766,8 @@ so they are only useful if you inherit from the contract and add your own
 logic to decide under what conditions to mint new tokens or burn existing
 ones.
 
-**NOTE:** Every ERC-20 token has its own business logic that dictates
-
-token management. For example, a fixed supply contract might only call `_mint`
+**NOTE:** Every ERC-20 token has its own business logic that dictates token management.
+For example, a fixed supply contract might only call `_mint`
 in the constructor and never call `_burn`. A contract that sells tokens
 will call `_mint` when it is paid, and presumably call `_burn` at some point
 to avoid runaway inflation.

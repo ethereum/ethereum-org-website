@@ -14,7 +14,7 @@ Használj Ethereumot decentralizált alkalmazások (avagy "dappok") fejlesztés�
 
 **Tedd meg az első lépést, hogy integráld a Python-t Ethereummal**
 
-Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [ethereum.org/learn](/en/learn/) oldalt vagy a [ethereum.org/developers](/en/developers/) oldalt.
+Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [ethereum.org/learn](/learn/) oldalt vagy a [ethereum.org/developers](/developers/) oldalt.
 
 - [Blokklánc ismertetése](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Okosszerződések értelmezése](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -23,7 +23,7 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 
 ## Cikkek kezdőknek {#beginner-articles}
 
-- [Bevezetés az okosszerződésekbe Vyper-rel](https://kauri.io/article/af913a853eaf4db88627b3ff9572b770/v1/an-introduction-to-smart-contracts-with-vyper)
+- [Bevezetés az okosszerződésekbe Vyper-rel](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [Hogyan kell Ethereum szerződést fejleszteni Python Flask használatával?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Bevezetés Web3.py-ba · Ethereum Python fejlesztőknek](https://www.dappuniversity.com/articles/web3-py-intro)
 - [Hogyan kell egy okosszerződés függvényt meghívni Python és web3.py használatával](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
@@ -38,7 +38,7 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 ## Fejlett használati minták {#advanced-use-patterns}
 
 - [Ethereum okosszerződések fordítása, telepítése és hívása Python használatával](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [Solidity okosszerződések elemzése Slitherrel](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
+- [Solidity okosszerződések elemzése Slitherrel](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/)
 
 ## Python projektek és eszközök {#python-projects-and-tools}
 
@@ -54,7 +54,7 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 - [Vyper](https://github.com/ethereum/vyper/) - _Pythonikus okosszerződés nyelv az EVM-re_
 - [Web3.py](https://github.com/ethereum/web3.py) - _Python library Ethereummal történő interakciókra_
 
-Még több anyagot keresel? Tekintsd meg az [ethereum.org/developers](/en/developers/) oldalt
+Még több anyagot keresel? Tekintsd meg az [ethereum.org/developers](/developers/) oldalt
 
 ## Python közösségi hozzájárulók {#python-community-contributors}
 

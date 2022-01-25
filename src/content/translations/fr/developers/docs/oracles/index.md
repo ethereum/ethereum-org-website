@@ -4,6 +4,7 @@ description: Les oracles servent à amener les données du monde réel dans votr
 lang: fr
 sidebar: true
 incomplete: true
+isOutdated: true
 ---
 
 Les oracles sont des flux de données qui connectent Ethereum aux informations hors chaîne du monde réel pour vous permettre d’interroger les données dans vos contrats intelligents. Par exemple, les DApps de marchés prédictifs utilisent les oracles pour régler des paiements en fonction des événements. Un marché prédictif peut vous demander de miser vos ETH sur le prochain président des États-Unis. Ils utiliseront un oracle pour confirmer le résultat et rémunérer les gagnants.
@@ -21,17 +22,6 @@ Un oracle est un pont entre la blockchain et le monde réel. Ils agissent sur la
 Avec une blockchain comme Ethereum, tous les nœuds du réseau sont nécessaires pour pouvoir rejouer chaque transaction et finir avec le même résultat garanti. Les API introduisent des données potentiellement variables. Si vous envoyez à quelqu'un un montant d'ETH basé sur une valeur convenue en $USD via une API de prix, la requête retournera un résultat différent d'un jour sur l'autre. Sans parler du fait que l'API pourrait être piratée ou dépréciée. Dans ce cas, les nœuds du réseau ne pourraient pas se mettre d'accord sur l'état actuel d'Ethereum, brisant ainsi le [consensus](/developers/docs/consensus-mechanisms/).
 
 Les oracles résolvent ce problème en publiant les données sur la blockchain. Ainsi, tout nœud rejouant la transaction utilisera les mêmes données immuables qui ont été publiées pour que tout le monde puisse les voir. Pour faire cela, un oracle est comprend généralement un contrat intelligent et des composants hors chaîne qui peuvent interroger les API, puis envoyer périodiquement des transactions pour mettre à jour les données du contrat intelligent.
-
-<!-- ## Oracle architecture {#oracle-architecture}
-
-To understand how an oracle works, let's play through a scenario where your smart contract needs to know who won the superbowl. This is an example of how it could work:
-
-1. Your smart contract requests information from an oracle smart contract.
-2. The oracle smart contract emits an [event](/developers/docs/smart-contracts/anatomy/#events-and-logs).
-3. Off-chain oracle nodes listen for events and upon hearing one, they query an API.
-4. The API returns a JSON response to the nodes.
-5. The nodes call on the oracle smart contract.
-6. The oracle smart contract returns the data to your smart contract. -->
 
 ### Sécurité {#security}
 

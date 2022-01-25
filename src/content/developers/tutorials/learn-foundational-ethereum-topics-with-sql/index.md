@@ -23,7 +23,7 @@ sourceUrl: https://paulapivat.com/post/query_ethereum/
 
 Many Ethereum tutorials target developers, but there’s a lack of educational resources for data analyst or for people who wish to see on-chain data without running a client or node.
 
-This tutorial helps readers understand fundamental Ethereum concepts including transactions, blocks and gas by querying on-chain data with structured query language (SQL) through an interface provided by [Dune Analytics](https://duneanalytics.com/).
+This tutorial helps readers understand fundamental Ethereum concepts including transactions, blocks and gas by querying on-chain data with structured query language (SQL) through an interface provided by [Dune Analytics](https://dune.xyz/home).
 
 On-chain data can help us understand Ethereum, the network, and as an economy for computing power and should serve as a base for understanding challenges facing Ethereum today (i.e., rising gas prices) and, more importantly, discussions around scaling solutions.
 
@@ -255,7 +255,7 @@ We can also juxtapose these two charts together to see how **demand and supply**
 
 Therefore we can understand gas prices as a function of demand for Ethereum block space, given available supply.
 
-Finally, we may want to query average daily gas prices for the Ethereum chain, however, doing so result in an especially long query time, so we’ll filter our query to the average amount of gas paid per transaction by the Ethereum Foundation.
+Finally, we may want to query average daily gas prices for the Ethereum chain, however, doing so will result in an especially long query time, so we’ll filter our query to the average amount of gas paid per transaction by the Ethereum Foundation.
 
 ![ef_daily_gas](./ef_daily_gas.png)
 

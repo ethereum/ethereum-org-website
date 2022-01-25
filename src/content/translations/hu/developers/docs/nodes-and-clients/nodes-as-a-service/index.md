@@ -4,6 +4,7 @@ description: Belépőszintű áttekintés a csomópont-szolgáltatásokról, az 
 lang: hu
 sidebar: true
 sidebarDepth: 2
+isOutdated: true
 ---
 
 ## Bevezetés {#Introduction}
@@ -24,7 +25,7 @@ Egyes szolgáltatások saját dedikált csomópontot kínálnak, amelyet a te sz
 
 Szinte az összes csomópontszolgáltatás rendkívül könnyen integrálható, egy sor változtatással jár a kódban, hogy kicseréld az önállóan üzemeltetett csomópontot, vagy akár válts maguk a szolgáltatások között.
 
-Gyakran a csomópontszolgáltatók különféle [csomópont klienseket](/developers/docs/nodes-and-clients/#clients) és [típusokat](/developers/docs/nodes-and-clients/#node-types) futtatnak, lehetővé téve ezzel, a teljes vagy archívcsomóponti hozzáférést továbbá kliens specifikus metódusokat egy API-ban.
+Gyakran a csomópontszolgáltatók különféle [csomópont klienseket](/developers/docs/nodes-and-clients/#execution-clients) és [típusokat](/developers/docs/nodes-and-clients/#node-types) futtatnak, lehetővé téve ezzel, a teljes vagy archívcsomóponti hozzáférést továbbá kliens specifikus metódusokat egy API-ban.
 
 Fontos megjegyezni, hogy a csomópontszolgáltatások nem tárolják és nem is tárolhatják a privát kulcsokat vagy információkat.
 

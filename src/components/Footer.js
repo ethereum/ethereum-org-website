@@ -144,8 +144,8 @@ const Footer = () => {
           text: "page-stablecoins-title",
         },
         {
-          to: `/eth2/staking/`,
-          text: "page-eth2-get-involved-stake-eth",
+          to: `/staking/`,
+          text: "page-upgrades-get-involved-stake-eth",
         },
       ],
     },
@@ -173,12 +173,24 @@ const Footer = () => {
           text: "ethereum-whitepaper",
         },
         {
-          text: "ethereum-2-0",
-          to: "/eth2/",
+          text: "ethereum-upgrades",
+          to: "/upgrades/",
+        },
+        {
+          text: "ethereum-security",
+          to: "/security/",
         },
         {
           to: `/glossary/`,
           text: "ethereum-glossary",
+        },
+        {
+          text: "ethereum-governance",
+          to: "/governance/",
+        },
+        {
+          text: "energy-consumption",
+          to: "/energy-consumption/",
         },
         {
           to: "/eips/",
@@ -210,10 +222,6 @@ const Footer = () => {
           to: `/developers/local-environment/`,
           text: "set-up-local-env",
         },
-        {
-          to: `/developers/`,
-          text: "developer-resources",
-        },
       ],
     },
     {
@@ -221,7 +229,7 @@ const Footer = () => {
       links: [
         {
           to: `/community/`,
-          text: "ethereum-community",
+          text: "community-hub",
         },
         {
           to: "/foundation/",
@@ -278,7 +286,7 @@ const Footer = () => {
           text: "jobs",
         },
         {
-          to: "/en/contributing/",
+          to: "/contributing/",
           text: "contributing",
         },
         {
@@ -286,15 +294,15 @@ const Footer = () => {
           text: "language-support",
         },
         {
-          to: "/en/privacy-policy/",
+          to: "/privacy-policy/",
           text: "privacy-policy",
         },
         {
-          to: "/en/terms-of-use/",
+          to: "/terms-of-use/",
           text: "terms-of-use",
         },
         {
-          to: "/en/cookie-policy/",
+          to: "/cookie-policy/",
           text: "cookie-policy",
         },
         {

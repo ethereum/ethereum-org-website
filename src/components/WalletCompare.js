@@ -85,9 +85,12 @@ const ClearLink = styled.button`
 export const walletCardImage = graphql`
   fragment walletCardImage on File {
     childImageSharp {
-      fluid(maxWidth: 64) {
-        ...GatsbyImageSharpFluid
-      }
+      gatsbyImageData(
+        width: 64
+        layout: CONSTRAINED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
@@ -218,9 +221,6 @@ const WalletCompare = ({ location }) => {
       dcent: file(relativePath: { eq: "wallets/dcent.png" }) {
         ...walletCardImage
       }
-      dharma: file(relativePath: { eq: "wallets/dharma.png" }) {
-        ...walletCardImage
-      }
       enjin: file(relativePath: { eq: "wallets/enjin.png" }) {
         ...walletCardImage
       }
@@ -300,6 +300,30 @@ const WalletCompare = ({ location }) => {
         ...walletCardImage
       }
       tokenpocket: file(relativePath: { eq: "wallets/tokenpocket.png" }) {
+        ...walletCardImage
+      }
+      safepal: file(relativePath: { eq: "wallets/safepal.png" }) {
+        ...walletCardImage
+      }
+      opera: file(relativePath: { eq: "wallets/opera.png" }) {
+        ...walletCardImage
+      }
+      coin98: file(relativePath: { eq: "wallets/coin98.png" }) {
+        ...walletCardImage
+      }
+      bitkeep: file(relativePath: { eq: "wallets/bitkeep.png" }) {
+        ...walletCardImage
+      }
+      keystone: file(relativePath: { eq: "wallets/keystone.png" }) {
+        ...walletCardImage
+      }
+      loopring: file(relativePath: { eq: "wallets/loopring.png" }) {
+        ...walletCardImage
+      }
+      numio: file(relativePath: { eq: "wallets/numio.png" }) {
+        ...walletCardImage
+      }
+      airgap: file(relativePath: { eq: "wallets/airgap.png" }) {
         ...walletCardImage
       }
     }
@@ -485,10 +509,7 @@ const WalletCompare = ({ location }) => {
           <ResultsContainer>
             <Emoji text=":crying_face:" size={3} mb={`2em`} mt={`2em`} />
             <h2>
-              <Translation id="page-find-wallet-not-all-features" />{" "}
-              <b>
-                <Translation id="page-find-wallet-yet" />
-              </b>
+              <Translation id="page-find-wallet-not-all-features" />
             </h2>
             <p>
               <Translation id="page-find-wallet-try-removing" />

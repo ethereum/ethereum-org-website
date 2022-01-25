@@ -27,21 +27,19 @@ sidebarDepth: 1
 
 - [이더리움 클라이언트 선택하기](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [러스트 이더리움 클라이언트](https://wiki.parity.io/Setup)
-- [러스트를 사용하여 이더리움에 트랜잭션 보내기](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [러스트를 사용하여 이더리움에 트랜잭션 보내기](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [패리티이더리움 클라이언트를 사용한 스마트 컨트랙트 소개](https://wiki.parity.io/Smart-Contracts)
-- [오아시스 SDK (Oasis SDK) 개발 환경 설정하기](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [오아시스 SDK (Oasis SDK) 개발 환경 설정하기](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Kovan용 Wasm의 컨트랙트를 러스트로 작성하는 방법에 대한 단계별 가이드](https://github.com/paritytech/pwasm-tutorial)
 
 ## 중급 사용자용 참고 자료 {#intermediate-articles}
 
 - [Rust-Web3 개발 문서](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Rust-Web3 작업 예시](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [OASIS SDK로 무기명 투표 솔루션 만들기](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [OASIS SDK로 비공개 채팅 서버 구축하기](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## 고급 사용 패턴 {#advanced-use-patterns}
 
-- [이더리움 네트워크와의 상호 작용을 위한 pwasm_ethereum extern 라이브러리](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [이더리움 네트워크와의 상호 작용을 위한 pwasm_ethereum extern 라이브러리](https://github.com/openethereum/pwasm-ethereum)
 - [JavaScript와 Rust를 사용하여 탈중앙화 채팅 구축하기](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Vue.js 및 Rust를 사용하여 탈중앙화 할 일 목록 앱 제작하기 ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Enigma 시작하기 - Rust 프로그래밍 언어](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)

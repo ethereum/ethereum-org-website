@@ -57,7 +57,7 @@ Autres exemples populaires : [SafeMath](https://docs.openzeppelin.com/contracts
 
 Pour faciliter la [composabilité et l'interopérabilité](/developers/docs/smart-contracts/composability/), la communauté Ethereum a défini plusieurs normes sous la forme de demandes de commentaires (**ERC**). Pour plus d'informations, lisez la page [Normes de développement Ethereum](/developers/docs/standards/).
 
-Quand vous incluez une ERC dans vos contrats, il est préférable de chercher des implémentations standards plutôt que d'essayer de déployer la vôtre. De nombreuses bibliothèques de contrats intelligents incluent des implémentations pour les ERC les plus populaires. Par exemple, la [norme de jeton fongible ERC20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) est disponible dans [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](http://dapp.tools/dappsys/ds-token.html) et [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20). De plus, certaines ERC intègrent elles-mêmes également des implémentations canoniques.
+Quand vous incluez une ERC dans vos contrats, il est préférable de chercher des implémentations standards plutôt que d'essayer de déployer la vôtre. De nombreuses bibliothèques de contrats intelligents incluent des implémentations pour les ERC les plus populaires. Par exemple, la [norme de jeton fongible ERC20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) est disponible dans [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) et [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20). De plus, certaines ERC intègrent elles-mêmes également des implémentations canoniques.
 
 Il convient de mentionner que certaines ERC ne sont pas autonomes, mais sont des ajouts à d'autres ERC. Par exemple, [ERC2612](https://eips.ethereum.org/EIPS/eip-2612) ajoute une extension à ERC20 pour améliorer son opérabilité.
 
@@ -96,7 +96,7 @@ Enfin, au moment où vous décidez s'inclure une bibliothèque, considérez son 
 
 **DappSys -** **_Blocs de construction sûrs, simples et flexibles pour les contrats intelligents_**
 
-- [Documentation](https://dapp.tools/dappsys/)
+- [Documentation](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 **HQ20 -** **_Projet Solidity avec des contrats, des bibliothèques et des exemples pour vous aider à construire des applications distribuées complètes pour le monde réel_**
@@ -105,7 +105,7 @@ Enfin, au moment où vous décidez s'inclure une bibliothèque, considérez son 
 
 ## Tutoriels connexes {#related-tutorials}
 
-- [Considérations de sécurité pour les développeurs Ethereum](/developers/docs/security/) _- Tutoriel sur les considérations de sécurité lors de la construction de contrats intelligents, y compris l'utilisation de la bibliothèque_
+- [Considérations de sécurité pour les développeurs Ethereum](/developers/docs/smart-contracts/security/) _- Tutoriel sur les considérations de sécurité lors de la construction de contrats intelligents, y compris l'utilisation de la bibliothèque_
 - [Comprendre le contrat intelligent de jeton ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _- Tutoriel sur la norme ERC20, fournie par de multiples bibliothèques_
 
 ## Complément d'information {#further-reading}

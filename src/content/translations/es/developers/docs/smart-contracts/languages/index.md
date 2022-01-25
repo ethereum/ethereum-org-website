@@ -41,39 +41,39 @@ El conocimiento previo de lenguajes de programación, especialmente de JavaScrip
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0
-Solidez pragmática >= 0.7. ;
+Solidez pragmática >= 0.7.0;
 
 contract Coin {
     // La palabra clave "public" hace variables
     // accesibles desde otros contratos
-    dirección pública minter;
-    mapeo (dirección => uint) saldos públicos;
+    address public minter;
+    mapping (address => uint) public balances;
 
     // Eventos permiten a los clientes reaccionar a cambios específicos
     // del contrato que declaras
-    event Sent(address de, dirección a, cantidad de uint);
+    event Sent(address from, address to, uint amount);
 
     // El código del instructor solo se ejecuta cuando se crea el contrato
     //
     constructor() {
-        minter = msg. ender;
+        minter = msg.sender;
     }
 
     // Envía una cantidad de monedas recién creadas a una dirección
     // Sólo puede ser llamada por el creador del contrato
-    function mint(address receiver, Cantidad de uint) public {
-        require(msg. ender == minter);
-        requerido (cantidad < 1e60);
-        saldos[receiver] += cantidad;
+    function mint(address receiver, uint amount) public {
+        require(msg.sender == minter);
+        require(amount < 1e60);
+        balances[receiver] += amount;
     }
 
     // Envía una cantidad de monedas existentes
     // desde cualquier llamada a una dirección
-    función enviada(receptor de direcciones, Cantidad de uint) public {
-        require(amount <= balances[msg.sender], "Saldo insuficiente". );
-        saldos[msg.sender] -= monto;
-        saldos[receiver] += monto;
-        emisión Sent(msg. ender, receptor, monto);
+    function send(address receiver, uint amount) public {
+        require(amount <= balances[msg.sender], "Insufficient balance.");
+        balances[msg.sender] -= amount;
+        balances[receiver] += amount;
+        emit Sent(msg.sender, receiver, amount);
     }
 }
 ```
@@ -113,7 +113,7 @@ Para obtener más información, [lee la información básica de Vyper](https://v
 
 # Params de subastas
 # Beneficiario recibe dinero de la oferta más alta
-beneficiario: public(address)
+beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
 
@@ -122,7 +122,7 @@ highestBidder: public(address)
 highestBid: public(uint256)
 
 # Establecer a verdadero al final, deshabilita cualquier cambio
-finalizado: public(bool)
+ended: public(bool)
 
 # Mantener un seguimiento de las ofertas reembolsadas para que podamos seguir el patrón de retirada
 pendingReturns: public(HashMap[address, uint256])
@@ -130,13 +130,13 @@ pendingReturns: public(HashMap[address, uint256])
 # Crea una subasta simple con `_bidding_time`
 # segundos de tiempo de oferta en nombre de la
 # dirección beneficiaria `_beneficiary`.
-@Ejemplo en Vyper
 
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
     self.auctionStart = block.timestamp
-    self.auctionEnd = self.auctionStart + _bidding_time.
+    self.auctionEnd = self.auctionStart + _bidding_time
+
 # El valor solo será reembolsado si la subasta
 # no es ganada.
 @external
@@ -145,10 +145,11 @@ def bid():
     # Comprobar si el periodo de oferta ha terminado.
     assert block.timestamp < self.auctionEnd
     # Comprobar si la oferta es suficientemente alta
-    assert msg. alue > self.highestBid
+    assert msg.value > self.highestBid
     # Registrar el reembolso de la oferta alta anterior
-    mismo. endingDevuelve[self.highestBidder] += self.highestBid
-    # Seguimiento de la nueva oferta alta. ighestBidder = msg.sender
+    self.pendingReturns[self.highestBidder] += self.highestBid
+    # Seguimiento de la nueva oferta alta.
+    self.highestBidder = msg.sender
     self.highestBid = msg.value
 
 # Retira una oferta previamente reembolsada. El patrón de retirada se
@@ -156,10 +157,10 @@ def bid():
 # enviados como parte de la oferta(), un contrato de licitación malicioso podría bloquear
 # esos reembolsos y así bloquear la entrada de nuevas ofertas más altas.
 @external
-retiro def ():
-    pending_amount: uint256 = self.pendingDevuelve[msg.sender]
-    mismo. endingDevuelve[msg.sender] = 0
-    envio(msg. ender, pending_amount)
+def withdraw():
+    pending_amount: uint256 = self.pendingReturns[msg.sender]
+    self.pendingReturns[msg.sender] = 0
+    send(msg.sender, pending_amount)
 
 # Finalizar la subasta y enviar la oferta más alta
 # al beneficiario.
@@ -180,15 +181,15 @@ def endAuction():
 
     # 1. Condiciones
     # Comprueba si se ha alcanzado el fin de la subasta
-    aserción block.timestamp >= self. uctionEnd
+    assert block.timestamp >= self.auctionEnd
     # Comprueba si esta función ya ha sido llamada
-    assert not self. ndded
+    assert not self.ended
 
     # 2. Efectos
     self.ended = True
 
     # 3. Interacción
-    enviar(self.beneficiary, self.highestBid)
+    send(self.beneficiary, self.highestBid)
 ```
 
 Este ejemplo debería darte una idea de cómo es la sintaxis de contrato de Vyper. Para ver una descripción más detallada de las funciones y variables, [consulta los documentos](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction).
@@ -200,13 +201,13 @@ Si eres nuevo en Ethereum y aún no has hecho ninguna codificación con lenguaje
 **Yul**
 
 - Lenguaje intermedio para Ethereum.
-- Es compatible con la [EVM](en/developers/docs/evm) y [eWASM](https://github.com/ewasm), un Ethereum con características de WebAssembly, y se ha diseñado para ser un denominador común útil de ambas plataformas.
+- Es compatible con la [EVM](/developers/docs/evm) y [eWASM](https://github.com/ewasm), un Ethereum con características de WebAssembly, y se ha diseñado para ser un denominador común útil de ambas plataformas.
 - Buen objetivo para las etapas de optimización de alto nivel, que puede beneficiar a las plataformas de EVM y eWASM.
 
 **Yul+**
 
 - Una extensión de bajo nivel y alta eficiencia para Yul.
-- Diseñada inicialmente para un contrato de [Optimistic Rollup](en/developers/docs/layer-2-scaling/#rollups-and-sidechains).
+- Diseñada inicialmente para un contrato de [Optimistic Rollup](/developers/docs/layer-2-scaling/#rollups-and-sidechains).
 - Yul+ se puede considerar una propuesta de actualización experimental de Yul, que le añade nuevas funciones.
 
 ### Enlaces importantes {#important-links-2}
@@ -249,7 +250,7 @@ Estas son algunas cosas que debes tener en cuenta si aún no has probado ninguno
 
 ### ¿Qué tiene de genial Solidity? {#solidity-advantages}
 
-- Si eres un principiante, encontrarás muchos tutoriales y herramientas de aprendizaje por ahí. Obtén más información al respecto en la sección [Aprender programando](https://ethereum.org/en/developers/learning-tools/).
+- Si eres un principiante, encontrarás muchos tutoriales y herramientas de aprendizaje por ahí. Obtén más información al respecto en la sección [Aprender programando](/developers/learning-tools/).
 - Buenas herramientas de desarrollador disponibles.
 - Solidity tiene una gran comunidad de desarrolladores, lo que significa que muy probablemente encontrarás rápidamente las respuestas a tus preguntas.
 

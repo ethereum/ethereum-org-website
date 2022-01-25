@@ -117,8 +117,6 @@ Az Attacker.beginAttack() meghívása egy ciklust fog beindítani, mely valahogy
 
 Az Attacker.beginAttack meghívása 1 ETH-tel egy újbóli belépés támadást fog indítani Victim ellen, ezzel több ETH-et kiutalva, mint amennyit beletesz (melyet más felhasználók egyenlegéből vont le, így a Victim szerződés alulfedezetté válik)
 
-<!-- TODO create a subpage related to re-entrancy & move this content there -->
-
 ### Hogyan kezeljük az újbóli belépést (a rosszabb mód) {#how-to-deal-with-re-entrancy-the-wrong-way}
 
 Fontolóra lehet venni az újbóli belépés kezelését azzal, hogy egyszerűen megakadályozzuk az okosszerződések interakcióját a kóddal. A stackoverflow-n az alábbi kód részletet lehet megtalálni rengeteg pozitív szavazattal:
@@ -242,11 +240,6 @@ Bár nem helyettesítheti az Ethereum biztonsági alapismereteinek megértését
 - [mythril](https://github.com/ConsenSys/mythril)
 - [Dokumentáció](https://mythril-classic.readthedocs.io/en/master/about.html)
 
-**SmartContract.Codes -** **_Ellenőrzött Solidity forráskódok keresőmotora_**
-
-- [smartcontract.codes (alpha)](https://smartcontract.codes/)
-- [Dokumentáció](https://github.com/ethereum-play/smartcontract.codes/blob/master/README.md)
-
 **Manticore -** **_Egy Cli, ami egy szimbolikus futtató eszközt használ okosszerződésekre és binary-kre._**
 
 - [GitHub](https://github.com/trailofbits/manticore)
@@ -303,7 +296,7 @@ Low level call in Victim.withdraw() (bad-contract.sol#11-16):
     - (success) = msg.sender.call.value(amount)() (bad-contract.sol#13)
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls
 INFO:Slither:bad-contract.sol analyzed (1 contracts with 46 detectors), 2 result(s) found
-INFO:Slither:Use https://crytic.io/ to get access to additional detectors and Github integration
+INFO:Slither:Use https://crytic.io/ to get access to additional detectors and GitHub integration
 ```
 
 A Slither itt azonosította az újbóli belépés lehetőségét, meghatározta azokat a kulcsfontosságú sorokat, ahol a probléma felmerülhet, és linket adott a probléma további részleteihez:

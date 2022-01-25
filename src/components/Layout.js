@@ -9,13 +9,19 @@ import "../styles/layout.css"
 import { lightTheme, darkTheme, GlobalStyle } from "../theme"
 
 import Footer from "./Footer"
-import ReleaseBanner from "./ReleaseBanner"
+import VisuallyHidden from "./VisuallyHidden"
 import Nav from "./Nav"
 import SideNav from "./SideNav"
 import SideNavMobile from "./SideNavMobile"
 import TranslationBanner from "./TranslationBanner"
 
+import { ZenModeContext } from "../contexts/ZenModeContext"
+
+import { useKeyPress } from "../hooks/useKeyPress"
+
 import { isLangRightToLeft } from "../utils/translations"
+import { isMobile } from "../utils/isMobile"
+import SkipLink from "./SkipLink"
 
 const ContentContainer = styled.div`
   position: relative;
@@ -53,7 +59,12 @@ const Main = styled.main`
 
 const Layout = (props) => {
   const [isDarkTheme, setIsDarkTheme] = useState(false)
+  const [isZenMode, setIsZenMode] = useState(false)
   const [shouldShowSideNav, setShouldShowSideNav] = useState(false)
+
+  // Exit Zen Mode on 'esc' click
+  useKeyPress(`Escape`, () => handleZenModeChange(false))
+
   // set isDarkTheme based on browser/app user preferences
   useEffect(() => {
     if (localStorage && localStorage.getItem("dark-theme") !== null) {
@@ -64,13 +75,40 @@ const Layout = (props) => {
   }, [])
 
   useEffect(() => {
-    setShouldShowSideNav(props.path.includes("/docs/"))
+    if (props.path.includes("/docs/")) {
+      setShouldShowSideNav(true)
+
+      if (localStorage.getItem("zen-mode") !== null) {
+        setIsZenMode(localStorage.getItem("zen-mode") === "true" && !isMobile())
+      }
+    } else {
+      // isZenMode and shouldShowSideNav only applicable in /docs pages
+      setIsZenMode(false)
+      setShouldShowSideNav(false)
+    }
+
+    if (props.location.hash && !props.location.hash.includes("gatsby")) {
+      const idTag = props.location.hash.split("#")
+      if (document.getElementById(idTag[1]) !== null) {
+        document.getElementById(idTag[1]).scrollIntoView(false)
+      }
+    }
   }, [props.path])
 
   const handleThemeChange = () => {
     setIsDarkTheme(!isDarkTheme)
     if (localStorage) {
       localStorage.setItem("dark-theme", !isDarkTheme)
+    }
+  }
+
+  const handleZenModeChange = (val) => {
+    // Use 'val' param if provided. Otherwise toggle
+    const newVal = val !== undefined ? val : !isZenMode
+
+    setIsZenMode(newVal)
+    if (localStorage) {
+      localStorage.setItem("zen-mode", newVal)
     }
   }
 
@@ -82,12 +120,16 @@ const Layout = (props) => {
 
   const isPageLanguageEnglish = intl.language === intl.defaultLanguage
   const isPageContentEnglish = !!props.pageContext.isContentEnglish
-  const isPageTranslationOutdated = !!props.pageContext.isOutdated
+  const isTranslationBannerIgnored = !!props.pageContext.ignoreTranslationBanner
+  const isPageTranslationOutdated =
+    !!props.pageContext.isOutdated ||
+    !!props.data?.pageData?.frontmatter?.isOutdated
   const isPageRightToLeft = isLangRightToLeft(intl.language)
 
   const shouldShowTranslationBanner =
-    isPageTranslationOutdated ||
-    (isPageContentEnglish && !isPageLanguageEnglish)
+    (isPageTranslationOutdated ||
+      (isPageContentEnglish && !isPageLanguageEnglish)) &&
+    !isTranslationBannerIgnored
 
   const path = props.path
 
@@ -101,27 +143,39 @@ const Layout = (props) => {
         <IntlContextProvider value={intl}>
           <ThemeProvider theme={theme}>
             <GlobalStyle isDarkTheme={isDarkTheme} />
+            <SkipLink hrefId="#main-content" />
             <TranslationBanner
               shouldShow={shouldShowTranslationBanner}
               isPageContentEnglish={isPageContentEnglish}
               isPageRightToLeft={isPageRightToLeft}
               originalPagePath={intl.originalPath}
             />
-            <ContentContainer>
-              <Nav
-                handleThemeChange={handleThemeChange}
-                isDarkTheme={isDarkTheme}
-                path={path}
-              />
-              {shouldShowSideNav && <SideNavMobile path={path} />}
-              <ReleaseBanner storageKey={"london-release-banner"} />
-              <MainContainer>
-                {shouldShowSideNav && <SideNav path={path} />}
+            <ContentContainer isZenMode={isZenMode}>
+              <VisuallyHidden isHidden={isZenMode}>
+                <Nav
+                  handleThemeChange={handleThemeChange}
+                  isDarkTheme={isDarkTheme}
+                  path={path}
+                />
+                {shouldShowSideNav && <SideNavMobile path={path} />}
+              </VisuallyHidden>
+              <MainContainer id="main-content">
+                {shouldShowSideNav && (
+                  <VisuallyHidden isHidden={isZenMode}>
+                    <SideNav path={path} />
+                  </VisuallyHidden>
+                )}
                 <MainContent>
-                  <Main>{props.children}</Main>
+                  <ZenModeContext.Provider
+                    value={{ isZenMode, handleZenModeChange }}
+                  >
+                    <Main>{props.children}</Main>
+                  </ZenModeContext.Provider>
                 </MainContent>
               </MainContainer>
-              <Footer />
+              <VisuallyHidden isHidden={isZenMode}>
+                <Footer />
+              </VisuallyHidden>
             </ContentContainer>
           </ThemeProvider>
         </IntlContextProvider>

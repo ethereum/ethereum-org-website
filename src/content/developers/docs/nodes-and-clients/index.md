@@ -18,9 +18,9 @@ You should understand the concept of a peer-to-peer network and the [basics of t
 
 You can see a real-time view of the Ethereum network by looking at this [map of nodes](https://etherscan.io/nodetracker).
 
-Many [Ethereum clients](/developers/docs/nodes-and-clients/#clients) exist, in a variety of programming languages such as Go, Rust, JavaScript, Python, C# .NET and Java. What these implementations have in common is they all follow a formal specification (originally the [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf)). This specification dictates how the Ethereum network and blockchain functions.
+Many [Ethereum clients](/developers/docs/nodes-and-clients/#execution-clients) exist, in a variety of programming languages such as Go, Rust, JavaScript, Typescript, Python, C# .NET, Nim and Java. What these implementations have in common is they all follow a formal specification (originally the [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf)). This specification dictates how the Ethereum network and blockchain functions.
 
-![Eth1x client](./client-diagram.png)
+![Execution client](./client-diagram.png)
 Simplified diagram of what Ethereum client features.
 
 ## Node types {#node-types}
@@ -103,19 +103,19 @@ If somebody runs an Ethereum node with a public API in your community, you can p
 
 On the other hand, if you run a client, you can share it with your friends who might need it.
 
-## Clients {#clients}
+## Execution clients (formerly 'Eth1 clients') {#execution-clients}
 
-The Ethereum community maintains multiple open-source clients, developed by different teams using different programming languages. This makes the network stronger and more diverse. The ideal goal is to achieve diversity without any client dominating to reduce any single points of failure.
+The Ethereum community maintains multiple open-source execution clients (previously known as 'Eth1 clients', or just 'Ethereum clients'), developed by different teams using different programming languages. This makes the network stronger and more diverse. The ideal goal is to achieve diversity without any client dominating to reduce any single points of failure.
 
-This table summarizes the different clients. All of them are actively worked on and pass [client tests](https://github.com/ethereum/tests).
+This table summarizes the different clients. All of them pass [client tests](https://github.com/ethereum/tests) and are actively maintained to stay updated with network upgrades.
 
-| Client                                                       | Language | Operating systems     | Networks                                   | Sync strategies         | State pruning   |
-| ------------------------------------------------------------ | -------- | --------------------- | ------------------------------------------ | ----------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)                           | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Fast, Full              | Archive, Pruned |
-| [OpenEthereum](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, macOS | Mainnet, Kovan, Ropsten, and more          | Warp, Full              | Archive, Pruned |
-| [Nethermind](http://nethermind.io/)                          | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, and more | Fast, Full              | Archive, Pruned |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, and Görli       | Fast, Full              | Archive, Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon)                           | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Fast, Full              | Archive, Pruned |
+| Client                                                       | Language | Operating systems     | Networks                                   | Sync strategies | State pruning   |
+| ------------------------------------------------------------ | -------- | --------------------- | ------------------------------------------ | --------------- | --------------- |
+| [Geth](https://geth.ethereum.org/)                           | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Fast, Full      | Archive, Pruned |
+| [OpenEthereum](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, macOS | Mainnet, Kovan, Ropsten, and more          | Warp, Full      | Archive, Pruned |
+| [Nethermind](http://nethermind.io/)                          | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, and more | Fast, Full      | Archive, Pruned |
+| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, and Görli       | Fast, Full      | Archive, Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon)              | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Fast, Full      | Archive, Pruned |
 
 For more on supported networks, read up on [Ethereum networks](/developers/docs/networks/).
 
@@ -137,6 +137,8 @@ OpenEthereum is a fast, feature-rich and advanced CLI-based Ethereum client. It'
 
 OpenEthereum is developed using the cutting-edge Rust programming language and licensed under the GPLv3.
 
+**Note that OpenEthereum [has been deprecated](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) and is no longer being maintained.** Use it with caution and preferably switch to another client implementation.
+
 #### Nethermind {#nethermind}
 
 Nethermind is an Ethereum implementation created with the C# .NET tech stack, running on all major platforms including ARM. It offers great performance with:
@@ -153,34 +155,99 @@ Hyperledger Besu is an enterprise-grade Ethereum client for public and permissio
 
 #### Erigon {#erigon}
 
-Erigon is a completely re-architected implementation of Ethereum, currently written in Go but with implementations in other languages planned. Erigon's goal is to provide a faster, more modular, and more optimized implementation of Ethereum. It can perform a full archive node sync using less than 2TB of disk space, in under 3 days.
-
-#### Erigon {#erigon}
-
 Erigon, formerly known as Turbo‐Geth, is a fork of Go Ethereum oriented toward speed and disk‐space efficiency. Erigon is a completely re-architected implementation of Ethereum, currently written in Go but with implementations in other languages planned. Erigon's goal is to provide a faster, more modular, and more optimized implementation of Ethereum. It can perform a full archive node sync using less than 2TB of disk space, in under 3 days
 
-### Sync modes {#sync-modes}
+### Synchronization modes {#sync-modes}
 
-- Full – downloads all blocks (including headers, transactions and receipts) and generates the state of the blockchain incrementally by executing every block.
-- Fast (Default) – downloads all blocks (including headers, transactions and receipts), verifies all headers, and downloads the state and verifies it against the headers.
-- Light – downloads all block headers, block data, and verifies some randomly.
-- Warp sync – Every 5,000 blocks, nodes will take a consensus-critical snapshot of that block’s state. Any node can fetch these snapshots over the network, enabling a fast sync. [More on Warp](https://openethereum.github.io/Warp-Sync-Snapshot-Format.html)
-- Beam sync – A sync mode that allows you to get going faster. It doesn't require long waits to sync, instead it back-fills data over time. [More on Beam](https://medium.com/@jason.carver/intro-to-beam-sync-a0fd168be14a)
-- Header sync – you can use a trusted checkpoint to start syncing from a more recent header and then leave it up to a background process to fill the gaps eventually
+To follow and verify current data in the network, the Ethereum client needs to sync with the latest network state. This is done by downloading data from peers, cryptographically verifying their integrity, and building a local blockchain database.
 
-You define the type of sync when you get set up, like so:
+Synchronization modes represent different approaches to this process with various trade-offs. Clients also vary in their implementation of sync algorithms. Always refer to the official documentation of your chosen client for specifics on implementation.
+
+#### Overview of strategies {#overview-of-strategies}
+
+General overview of synchronization approaches used in Mainnet ready clients:
+
+##### Full sync {#full-sync}
+
+Full sync downloads all blocks (including headers, transactions, and receipts) and generates the state of the blockchain incrementally by executing every block from genesis.
+
+- Minimizes trust and offers the highest security by verifying every transaction.
+- With an increasing number of transactions, it can take days to weeks to process all transactions.
+
+##### Fast sync
+
+Fast sync downloads all blocks (including headers, transactions, and receipts), verifies all headers, downloads the state and verifies it against the headers.
+
+- Relies on the security of the consensus mechanism.
+- Synchronization takes only a few hours.
+
+##### Light sync
+
+Light client mode downloads all block headers, block data, and verifies some randomly. Only syncs tip of the chain from the trusted checkpoint.
+
+- Gets only the latest state while relying on trust in developers and consensus mechanism.
+- Client ready to use with current network state in a few minutes.
+
+[More on Light clients](https://www.parity.io/blog/what-is-a-light-client/)
+
+##### Snap sync
+
+Implemented by Geth. Using dynamic snapshots served by peers retrieves all the account and storage data without downloading intermediate trie nodes and then reconstructs the Merkle trie locally.
+
+- Fastest sync strategy developed by Geth, currently its default
+- Saves a lot of disk usage and network bandwidth without sacrificing security.
+
+[More on Snap](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
+
+##### Warp sync
+
+Implemented by OpenEthereum. Nodes regularly generate a consensus-critical state snapshot and any peer can fetch these snapshots over the network, enabling a fast sync from this point.
+
+- Fastest and default sync mode of OpenEthereum relies on static snapshots served by peers.
+- Similar strategy as snap sync but without certain security benefits.
+
+[More on Warp](https://openethereum.github.io/Beginner-Introduction#warping---no-warp)
+
+##### Beam sync
+
+Implemented by Nethermind and Trinity. Works like fast sync but also downloads the data needed to execute latest blocks, which allows you to query the chain within the first few minutes from starting.
+
+- Syncs state first and enables you to query RPC in a few minutes.
+- Still in development and not fully reliable, background sync is slowed down and RPC responses might fail.
+
+[More on Beam](https://medium.com/@jason.carver/intro-to-beam-sync-a0fd168be14a)
+
+#### Setup in client {#client-setup}
+
+Clients offer rich configuration options to suit your needs. Pick the one that suits you best based on the level of security, available data, and cost. Apart from the synchronization algorithm, you can also set pruning of different kinds of old data. Pruning enables deleting outdated data, e.g. removing state trie nodes that are unreachable from recent blocks.
+
+Pay attention to the client's documentation or help page to find out which sync mode is the default. You can define the preferred type of sync when you get set up, like so:
 
 **Setting up light sync in [GETH](https://geth.ethereum.org/) or [ERIGON](https://github.com/ledgerwatch/erigon)**
 
 `geth --syncmode "light"`
 
-For further details check the tutorial on [running Geth light node](/developers/tutorials/run-light-node-geth/).
+For further details, check out the tutorial on [running Geth light node](/developers/tutorials/run-light-node-geth/).
 
 **Setting up full sync with archive in [Besu](https://besu.hyperledger.org/)**
 
 `besu --sync-mode=FULL`
 
-Like any other configuration, it can be defined with the startup flag or in the config file. Another example is [Nethermind](https://docs.nethermind.io/nethermind/) which prompts you to choose sync mode during first initialization and creates config.
+Like any other configuration, it can be defined with the startup flag or in the config file. Another example is [Nethermind](https://docs.nethermind.io/nethermind/) which prompts you to choose a configuration during first initialization and creates a config file.
+
+## Consensus clients (formerly 'Eth2' clients) {#consensus-clients}
+
+There are multiple consensus clients (previously known as 'Eth2' clients) to support the [consensus upgrades](/upgrades/beacon-chain/). They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [the merge](/upgrades/merge/).
+
+[View consensus clients](/upgrades/get-involved/#clients).
+
+| Client                                                      | Language   | Operating systems     | Networks                              |
+| ----------------------------------------------------------- | ---------- | --------------------- | ------------------------------------- |
+| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | Beacon Chain, Prater                  |
+| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | Beacon Chain, Prater                  |
+| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | Beacon Chain, Prater, Pyrmont         |
+| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Beacon Chain, Prater                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Prater, Pyrmont |
 
 ## Hardware {#hardware}
 
@@ -229,15 +296,9 @@ The most convenient and cheap way of running Ethereum node is to use a single bo
 
 Small, affordable and efficient devices like these are ideal for running a node at home.
 
-## Eth2 clients {#eth2-clients}
-
-There are new clients to support the [Eth2 upgrades](/eth2/beacon-chain/). They will run the Beacon Chain and support the new [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) consensus mechanism.
-
-[View Eth2 clients](/eth2/get-involved/#clients).
-
 ## Further reading {#further-reading}
 
-There is a lot of instructions and information about Ethereum clients on the internet, here are few that might be helpful.
+There is a lot of information about Ethereum clients on the internet. Here are few resources that might be helpful.
 
 - [Ethereum 101 - Part 2 - Understanding Nodes](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 13 February 2019_
 - [Running Ethereum Full Nodes: A Guide for the Barely Motivated](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 November 2019_
@@ -253,4 +314,4 @@ There is a lot of instructions and information about Ethereum clients on the int
 ## Related tutorials {#related-tutorials}
 
 - [Running a Node with Geth](/developers/tutorials/run-light-node-geth/) _– How to download, install and run Geth. Covering syncmodes, the Javascript console, and more._
-- [Turn your Raspberry Pi 4 into an Eth 1.0 or Eth 2.0 node just by flashing the MicroSD card – Installation guide](/developers/tutorials/run-node-raspberry-pi/) _– Flash your Raspberry Pi 4, plug in an ethernet cable, connect the SSD disk and power up the device to turn the Raspberry Pi 4 into a full Ethereum 1.0 node or an Ethereum 2.0 node (beacon chain / validator)._
+- [Turn your Raspberry Pi 4 into a validator node just by flashing the MicroSD card – Installation guide](/developers/tutorials/run-node-raspberry-pi/) _– Flash your Raspberry Pi 4, plug in an ethernet cable, connect the SSD disk and power up the device to turn the Raspberry Pi 4 into a full Ethereum node running the execution layer (Mainnet) and / or the consensus layer (Beacon Chain / validator)._

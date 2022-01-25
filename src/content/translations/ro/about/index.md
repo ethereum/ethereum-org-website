@@ -38,7 +38,7 @@ Ethereum și comunitatea evoluează întotdeauna, așa că și ethereum.org o va
 
 Suntem open source, cu o comunitate de colaboratori, astfel încât să poți propune modificări sau să poți să ne ajuți și pe noi.
 
-[Află mai multe despre contribuții](/en/contributing/)
+[Află mai multe despre contribuții](/contributing/)
 
 ### 3. ethereum.org nu este un site tipic pentru produse 🦄 {#core-principles-3}
 
@@ -48,11 +48,11 @@ Ethereum este un lucru important: include o comunitate, o tehnologie, un set de 
 
 ## Principii de proiectare {#design-principles}
 
-Folosim principii de proiectare pentru a ne ghida conținutul și deciziile de proiectare de pe site: [principii de proiectare](/en/contributing/design-principles/).
+Folosim principii de proiectare pentru a ne ghida conținutul și deciziile de proiectare de pe site: [principii de proiectare](/contributing/design-principles/).
 
 Salutăm feedbackul cu privire la acestea. Nu uita, ethereum.org este pentru comunitate, de către comunitate.
 
-Asigură-te că ai citit principiile dacă dorești să [contribui la site](/en/contributing/).
+Asigură-te că ai citit principiile dacă dorești să [contribui la site](/contributing/).
 
 ## Foaie de parcurs {#roadmap}
 

@@ -18,5 +18,5 @@ jobs:
         run: |
           docker run \
           -e APPLICATION_ID -e API_KEY \
-          -e CONFIG="$(cat ./.github/workflows/docsearchConfig.json)" \
+          -e CONFIG="$(node .github/workflows/docsearchConfigScript.js | cat .github/workflows/docsearchConfig.json)" \
           algolia/docsearch-scraper:v1.6.0
