@@ -125,7 +125,7 @@ When numerous nodes (usually most nodes on the network) all have the same blocks
 
 ### consensus client {consensus-client}
 
-After the merge to [proof-of-stake](#pos), consensus about the true head of the blockchain will be governed by a new set of clients running on the Beacon Chain. These are "consensus clients". They do not participate in validating transactions or executing state transitions, they request this to be done by [execution clients](#execution-client).
+After the merge to [proof-of-stake](#pos), consensus about the true head of the blockchain will be governed by a new set of clients running on the Beacon Chain known as "consensus clients". Consensus clients do not participate in validating transactions or executing state transitions. They request this to be done by [execution clients](#execution-client).
 
 ### consensus layer {consensus-layer}
 
