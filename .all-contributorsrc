@@ -6329,6 +6329,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "EtherWorldCo",
+      "name": "EtherWorld",
+      "avatar_url": "https://avatars.githubusercontent.com/u/97191248?v=4",
+      "profile": "https://github.com/EtherWorldCo",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
