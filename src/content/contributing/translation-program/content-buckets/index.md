@@ -200,4 +200,4 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Using WebSockets](/developers/tutorials/using-websockets/)
 - [Vyper ERC-721 contract walkthrough](/developers/tutorials/erc-721-vyper-annotated-code/)
 - [Waffle: Dynamic mocking and testing contract calls](/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/)
-- [Waffle say hello world tutorial with Hardhat and ethers](/developers/tutorials/waffle-hello-world-with-buidler-tutorial/)
+- [Waffle say hello world tutorial with Hardhat and ethers](/developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers/)
