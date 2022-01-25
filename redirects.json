@@ -60,14 +60,6 @@
     "toPath": "/en/upgrades/"
   },
   {
-    "fromPath": "/upgrades/",
-    "toPath": "/en/upgrades/"
-  },
-  {
-    "fromPath": "/staking/",
-    "toPath": "/en/staking/"
-  },
-  {
     "fromPath": "/learn/",
     "toPath": "/en/learn/"
   },
