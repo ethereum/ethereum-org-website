@@ -137,9 +137,9 @@ If you are an ethereum.org translator or would like to become one, feel free to 
 - [Chinese translators group](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)
   _– Notion page for easier coordination between Chinese translators_
 
-**Versions overview**
+**Content buckets overview**
 
-- [Content versions](/contributing/translation-program/content-versions/) _– which pages are included in each content version of ethereum.org_
+- [Content buckets](/contributing/translation-program/content-buckets/) _– which pages are included in each content bucket of ethereum.org_
 
 **Latest updates**
 
