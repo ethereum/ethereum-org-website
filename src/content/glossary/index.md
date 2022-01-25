@@ -683,7 +683,7 @@ A program that executes on the Ethereum computing infrastructure.
 
 ### SNARK {#snark}
 
-Succinct Non-interactive ARgument of Knowledge a type of a [zero-knowledge proof](#zk-proof).
+Short for "succinct non-interactive argument of knowledge", a SNARK is a type of [zero-knowledge proof](#zk-proof).
 
 <DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups">
   Zero-knowledge Rollups
