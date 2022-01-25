@@ -17,7 +17,7 @@ In this tutorial, we will walk through creating and deploying an ERC-721 smart c
 
 In Part 2 of this tutorial we’ll go through how we can use our smart contract to mint an NFT, and in Part 3 we’ll explain how to view your NFT on MetaMask.
 
-And of course, if you have questions at any point, don’t hesitate to reach out in the [Alchemy Discord](https://discord.gg/gWuC7zB) or visit our NFT API [docs](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api#what-chains-and-networks-are-supported)!
+And of course, if you have questions at any point, don’t hesitate to reach out in the [Alchemy Discord](https://discord.gg/gWuC7zB) or visit our [NFT API docs](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api#what-chains-and-networks-are-supported)!
 
 ## Step 1: Connect to the Ethereum network {#connect-to-ethereum}
 
