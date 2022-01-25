@@ -46,7 +46,7 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
 
 ### Translate Ethereum content into your native language {#translate-ethereum}
 
-- ethereum.org maintains a translation program that translates the website, and other resources, into many different languages
+- ethereum.org maintains a Translation Program that translates the website, and other resources, into many different languages
 - Find out how to get involved [here](/contributing/translation-program)
 
 ### Run a node {#run-a-node}

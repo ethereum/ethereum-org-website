@@ -98,7 +98,7 @@ Ethereum.org 翻译计划旨在通过将 Ethereum.org 和其他以太坊内容�
 
 <InfoBanner shouldCenter emoji=":information_source:">
   如果您在帮助我们进行翻译，您可能会在翻译常见问题中找到一些实用信息。 
-  {" "}<a href="/en/contributing/translation-program/translation-guide/">翻译 ethereum.org 常见问题</a>
+  {" "}<a href="/en/contributing/translation-program/faq/">翻译 ethereum.org 常见问题</a>
 </InfoBanner>
 
 ## 更多资源 {#resources}

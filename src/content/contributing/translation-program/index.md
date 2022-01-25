@@ -45,6 +45,11 @@ The ethereum.org Translation Program aims to make Ethereum accessible to everyon
 
 ## How to translate {#how-to-translate}
 
+<InfoBanner shouldCenter emoji=":light_bulb:">
+  We encourage you to check out the ethereum.org Translation Style Guide. It contains some of the most important guidelines, instructions, and tips for translators to help localize the website.
+  {" "}<Link to="/en/contributing/translation-program/translators-guide/">View the Translation Style Guide</Link>
+</InfoBanner>
+
 1. **[Join our project on Crowdin](https://crowdin.com/project/ethereum-org/invite)**  
    You will need to log in to your Crowdin account or sign up if you don’t already have one. All that is required to sign up is an e-mail account and password.
 
@@ -93,7 +98,7 @@ The ethereum.org Translation Program aims to make Ethereum accessible to everyon
    Once you've completed the translation (i.e. all files for a content version display 100%), our professional translation service will review (and potentially edit) the content. Once the review is complete (i.e. review progress is 100%), we will add it to the website.
 
 <InfoBanner shouldCenter emoji=":warning:">
-Please do not use machine translation to translate the project. All the translations will be reviewed before being added to the website. If your suggested translations are found to be machine translated, they will be dismissed and contributors who use machine translation often will be removed from the project.
+  Please do not use machine translation to translate the project. All the translations will be reviewed before being added to the website. If your suggested translations are found to be machine translated, they will be dismissed and contributors who use machine translation often will be removed from the project.
 </InfoBanner>
 
 Do you have any questions? Or want to collaborate with our team and other translators? Please post in the #translations channel of our [ethereum.org Discord server](https://discord.gg/6WX7E97)
@@ -107,19 +112,25 @@ Thank you for your participation in the ethereum.org Translation Program!
 We have office hours for translators on the second Wednesday of every month. These are held in the #office-hours voice channel on the [ethereum.org Discord](https://discord.gg/geKhWjtF), where you can also find the exact times and additional details.
 
 The purpose of office hours is to allow our translators to ask questions about the translation process, provide feedback on the program, share their ideas, or just have a chat with us.
-Participants can also learn more about the translation program and get some information on becoming an ethereum.org translator.
-Finally, we want to use these calls to communicate recent developments with the translation program and share key tips and instructions with our contributors.
+Participants can also learn more about the Translation Program and get some information on becoming an ethereum.org translator.
+Finally, we want to use these calls to communicate recent developments with the Translation Program and share key tips and instructions with our contributors.
 
 If you are an ethereum.org translator or would like to become one, feel free to join us during one of these sessions.
 
 <InfoBanner shouldCenter emoji=":information_source:">
-  If you're helping us with translations, you might find some useful information in our translations FAQ. 
-  {" "}<Link to="/en/contributing/translation-program/translation-guide/">Translating ethereum.org FAQ</Link>
+  If you're helping us with translations, you might find some useful information in our translations FAQ.
+  {" "}<Link to="/en/contributing/translation-program/faq/">Translating ethereum.org FAQ</Link>
 </InfoBanner>
 
 ## Resources {#resources}
 
-**Tools**
+### Guides {#guides}
+
+- [Translation Style Guide](/contributing/translation-program/translators-guide/) _– Instructions and tips for ethereum.org translators_
+- [Translation FAQs](/contributing/translation-program/faq/) _– Frequently asked questions and answers about the ethereum.org Translation Program_
+- [Content versions](/contributing/translation-program/content-versions/) _– which pages are included in each content version of ethereum.org_
+
+### Tools {#tools}
 
 - [Microsoft Language Portal](https://www.microsoft.com/en-us/language)
   _– useful for finding and checking the standard translations of technical terms_
@@ -130,18 +141,14 @@ If you are an ethereum.org translator or would like to become one, feel free to 
 - [Eurotermbank](https://www.eurotermbank.com/)
   _– collections of European terminology in 42 languages_
 
-**Communities**
+### Communities {#communities}
 
 - [Language-specific Discord translation groups](https://discord.gg/6WX7E97)
   _– an initiative to connect ethereum.org translators into Translation Groups_
 - [Chinese translators group](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)
   _– Notion page for easier coordination between Chinese translators_
 
-**Versions overview**
-
-- [Content versions](/contributing/translation-program/content-versions/) _– which pages are included in each content version of ethereum.org_
-
-**Latest updates**
+### Latest updates {#latest-updates}
 
 To keep up-to-date with the latest Translation Program progress, you can follow the [Ethereum Foundation blog](https://blog.ethereum.org/):
 
