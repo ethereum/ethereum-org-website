@@ -12,7 +12,7 @@ summaryPoint4: Quizá lo conozcas como la "Fase 0" en los mapas técnicos de la 
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
-  La Cadena de Baliza se presentó el 1 de diciembre al mediodía (UTC). Para saber más, <a href="https://beaconscan.com/">explora los datos</a>. Si quieres ayudar a validar la cadena, puedes <a href="/upgrades/staking/">apostar tu ETH</a>.
+  La Cadena de Baliza se presentó el 1 de diciembre al mediodía (UTC). Para saber más, <a href="https://beaconscan.com/">explora los datos</a>. Si quieres ayudar a validar la cadena, puedes <a href="/staking/">apostar tu ETH</a>.
 </UpgradeStatus>
 
 ## ¿Qué hace la Cadena de Baliza? {#what-does-the-beacon-chain-do}

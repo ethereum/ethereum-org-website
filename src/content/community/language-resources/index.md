@@ -37,6 +37,7 @@ If you are bilingual and want to help us reach more people, you can also get inv
 - [CriptoFacil](http://www.criptofacil.com/ultimas-noticias/) - cryptocurrency news and education, including ‘Ethereum for beginners’ and ‘DeFi’ for beginners
 - [CriptoAtivos](http://www.criptoativos.wiki.br/) - insights from the cryptocurrency space, education and blog
 - [Cointimes](http://www.cointimes.com.br/) - cryptocurrency news and education
+- [Web3 starter pack](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) - a guide answering the most frequently asked and fundamental crypto questions
 
 ### Chinese {#zh}
 

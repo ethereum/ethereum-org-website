@@ -27,7 +27,7 @@ lang: zh
 这些项目为旨在开发和实验自己技术的项目建立了自己的资助。
 
 - [TheGraph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) 生态系统_
-- [Uniswap](https://airtable.com/shrEXXxXB1humz7VS) - _[Uniswap](https://uniswap.org/) 社区_
+- [Uniswap](https://www.unigrants.org/) - _[Uniswap](https://uniswap.org/) 社区_
 - [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) - _[Balancer](https://balancer.fi/) 生态系统基金_
 - [mStable](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) 社区_
 
