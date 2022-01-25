@@ -726,7 +726,7 @@ Depositing a quantity of [ether](#ether) (your stake) to become a validator and 
 Short for "scalable transparent argument of knowledge", a STARK is a type of [zero-knowledge proof](#zk-proof).
 
 <DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups">
-  Zero-knowledge Rollups
+  Zero-knowledge rollups
 </DocLink>
 
 ### state channels {#state-channels}
