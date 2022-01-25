@@ -48,7 +48,7 @@ Optimistic rollup 与第二层的以太坊主链同步进行。 它们可以提�
 
 通过 Optimistic rollup，交易以 `calldata` 的形式写入以太坊主网，通过减少 gas 消耗进一步优化。
 
-由于计算是使用以太坊 Optimistic rollup 缓慢而昂贵的部分，Optimistic rollup 可以提供高达 10-100 倍的可扩容性，具体取决于交易。 在引入 [分片](/eth2/shard-chains) 后，这个数字将会增加，因为如果交易有争议，将会有更多的数据。
+由于计算是使用以太坊 Optimistic rollup 缓慢而昂贵的部分，Optimistic rollup 可以提供高达 10-100 倍的可扩容性，具体取决于交易。 在引入 [分片](/upgrades/shard-chains) 后，这个数字将会增加，因为如果交易有争议，将会有更多的数据。
 
 #### 对交易提出异议 {#disputing-transactions}
 

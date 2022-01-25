@@ -57,7 +57,7 @@ Ethereum gebruikt momenteel een systeem met de naam 'proof-of-work'. Hierdoor ka
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Frequent bijgewerkt - Ethhub_
 
-In ETH 2.0 zal Ethereum evolueren naar een ander systeem genaamd 'proof-of-stake'. [Lees meer over ETH 2.0 hieronder](#eth-2-0).
+In ETH 2.0 zal Ethereum evolueren naar een ander systeem genaamd 'proof-of-stake'. [Lees meer over ETH 2.0 hieronder](#consensus-layer-upgrades).
 
 ## Clients en nodes {#clients-and-nodes}
 
@@ -70,7 +70,7 @@ Het Ethereum-netwerk bestaat uit vele nodes die compatibele clientsoftware draai
 
 Er wordt veel aandacht besteed aan het beter 'schaalbaar' maken van Ethereum door de snelheid en de algemene transactiedoorvoer te verbeteren. Over het algemeen worden deze verdeeld in 'Layer 1' en 'Layer 2' oplossingen.
 
-'Layer 1' verwijst naar het verbeteren van het Ethereum-coreprotocol. Het belangrijkste project om het coreprotocol van Ethereum te verbeteren is [ETH 2.0](#eth-2-0).
+'Layer 1' verwijst naar het verbeteren van het Ethereum-coreprotocol. Het belangrijkste project om het coreprotocol van Ethereum te verbeteren is [ETH 2.0](#consensus-layer-upgrades).
 
 'Layer 2' verwijst naar technologieën die worden gebouwd 'bovenop' het Ethereum-basisprotocol, waardoor grotere schaalbaarheid mogelijk wordt zonder concessies te doen aan veiligheid. Er zijn ook 'off-chain' technologieën zoals sidechains, waarmee een ruimere schaalbaarheid mogelijk is door het anders inschatten van veiligheidsoverwegingen.
 
@@ -93,7 +93,7 @@ Er wordt veel aandacht besteed aan het beter 'schaalbaar' maken van Ethereum doo
 - [Understanding Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) _District0x_
 - [Learn Plasma - Een leerbron voor het Plasma-framework](https://www.learnplasma.org/en/)
 
-## ETH 2.0 {#eth-2-0}
+## ETH 2.0 {#consensus-layer-upgrades}
 
 ETH 2.0 (ook bekend als 'Serenity') verwijst naar de volgende grote verbetering van het Ethereum-coreprotocol. Hierin komen verschillende verbeteringen in het coreprotocol van Ethereum of ‘Layer 1’ samen.
 
@@ -103,7 +103,7 @@ ETH 2.0 (ook bekend als 'Serenity') verwijst naar de volgende grote verbetering 
 - [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) _Frequent bijgewerkt - EthHub_
 - [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(Video) November, 2018 - YouTube_
 
-## ETH 1.x {#eth-1x}
+## ETH 1.x {#execution-layer-upgrades}
 
 ETH 1.x is de naam voor een collectie upgrades van het bestaande Ethereum-protocol. Het doel is om Ethereum te blijven verbeteren en onderhouden terwijl ETH 2.0 wordt ontwikkeld en geïmplementeerd.
 

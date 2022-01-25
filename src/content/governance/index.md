@@ -155,7 +155,7 @@ While the specification and implementations development has always been fully op
 
 When the Beacon Chain merges with the Ethereum execution layer, the governance process to propose changes will be harmonized. This process to implement the merge is [already underway](https://github.com/ethereum/EIPs/pull/3675).
 
-<ButtonLink to="/eth2/merge/">
+<ButtonLink to="/upgrades/merge/">
   More on the merge
 </ButtonLink>
 
@@ -168,7 +168,7 @@ When the Beacon Chain merges with the Ethereum execution layer, the governance p
 - [Get involved in R&D discussion](https://ethresear.ch/)
 - [Join the Ethereum R&D discord](https://discord.gg/mncqtgVSVw)
 - [Run a node](/developers/docs/nodes-and-clients/run-a-node/)
-- [Contribute to client development](/developers/docs/nodes-and-clients/#clients)
+- [Contribute to client development](/developers/docs/nodes-and-clients/#execution-clients)
 - [Core Developer Apprenticeship Program](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
 
 ## Further reading {#further-reading}

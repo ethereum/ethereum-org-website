@@ -85,7 +85,7 @@ Rollup-urile Optimistic utilizează un sidechain care se află în paralel cu la
 
 Cu rollup-urile Optimistic, tranzacțiile sunt scrise în lanțul principal Ethereum ca date de apel, optimizându-le în continuare prin reducerea costului gazului.
 
-Deoarece calculul este partea lentă și costisitoare a utilizării Ethereum, rollup-urilor Optimistic pot oferi până la 10-100 de ori îmbunătățiri ale scalabilității în funcție de tranzacție. Acest număr va crește și mai mult odată cu introducerea upgrade-ului Eth2: [lanțurile de fragmente](/eth2/shard-chains). Aceasta se datorează faptului că vor exista mai multe date disponibile în cazul în care o tranzacție este contestată.
+Deoarece calculul este partea lentă și costisitoare a utilizării Ethereum, rollup-urilor Optimistic pot oferi până la 10-100 de ori îmbunătățiri ale scalabilității în funcție de tranzacție. Acest număr va crește și mai mult odată cu introducerea upgrade-ului Eth2: [lanțurile de fragmente](/upgrades/shard-chains). Aceasta se datorează faptului că vor exista mai multe date disponibile în cazul în care o tranzacție este contestată.
 
 #### Contestarea tranzacțiilor {#disputing-transactions}
 

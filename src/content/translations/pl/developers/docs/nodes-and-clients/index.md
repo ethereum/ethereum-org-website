@@ -19,7 +19,7 @@ Powinieneś zrozumieć koncepcję zdecentralizowanej sieci, zanim zagłębisz si
 
 Możesz zobaczyć widok sieci Ethereum w czasie rzeczywistym, patrząc na [mapę węzłów](https://etherscan.io/nodetracker).
 
-Wiele [implementacji klientów Ethereum](/developers/docs/nodes-and-clients/#clients) istnieje w wielu językach. Cechą wspólną tych implementacji klienckich jest to, że wszystkie są zgodne z formalną specyfikacją. Ta specyfikacja określa, jak działa sieć Ethereum i blockchain.
+Wiele [implementacji klientów Ethereum](/developers/docs/nodes-and-clients/#execution-clients) istnieje w wielu językach. Cechą wspólną tych implementacji klienckich jest to, że wszystkie są zgodne z formalną specyfikacją. Ta specyfikacja określa, jak działa sieć Ethereum i blockchain.
 
 ![Klient Eth1x](../../../../../developers/docs/nodes-and-clients/client-diagram.png) Uproszczony schemat funkcji klienta Ethereum.
 
@@ -99,7 +99,7 @@ Jeśli ktoś uruchamia węzeł Ethereum z publicznym API w Twojej społeczności
 
 Z drugiej strony, jeśli uruchamiasz klienta, możesz podzielić się nim ze znajomymi, którzy mogą tego potrzebować.
 
-## Klienci {#clients}
+## Klienci {#execution-clients}
 
 Ethereum jest zaprojektowany do oferowania różnych klientów, stworzonych przez różne zespoły przy użyciu różnych języków programowania. Dzięki temu sieć jest silniejsza i bardziej zróżnicowana. Idealnym celem jest osiągnięcie różnorodności bez zdominowania przez żadnego klienta w celu zmniejszenia pojedynczych punktów niepowodzenia.
 
@@ -210,11 +210,11 @@ Najbardziej wygodnym i tanim sposobem uruchomienia węzła Ethereum jest korzyst
 
 Małe, niedrogie i wydajne urządzenia, takie jak te, są idealne do uruchomienia węzła w domu.
 
-## Klienci Eth2 {#eth2-clients}
+## Klienci Eth2 {#consensus-clients}
 
-Pojawili się nowi klienci obsługujący [aktualizacje Eth2](/eth2/beacon-chain/). Będą obsługiwać łańcuch śledzący i wspierać nowy mechanizm konsensusu [proof-of-stake](/developers/docs/consensus-mechanisms/pos/).
+Pojawili się nowi klienci obsługujący [aktualizacje Eth2](/upgrades/beacon-chain/). Będą obsługiwać łańcuch śledzący i wspierać nowy mechanizm konsensusu [proof-of-stake](/developers/docs/consensus-mechanisms/pos/).
 
-[Wyświetl klientów Eth2](/eth2/get-involved/#clients).
+[Wyświetl klientów Eth2](/upgrades/get-involved/#clients).
 
 ## Dalsza lektura {#further-reading}
 

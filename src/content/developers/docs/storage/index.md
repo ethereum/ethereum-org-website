@@ -97,7 +97,7 @@ PoW based:
 
 PoS based:
 
-- [The Beacon Chain](/eth2/beacon-chain/)
+- [The Beacon Chain](/upgrades/beacon-chain/)
 - Filecoin
 - 0Chain
 

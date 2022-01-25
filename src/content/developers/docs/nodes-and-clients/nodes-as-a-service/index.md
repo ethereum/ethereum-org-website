@@ -24,7 +24,7 @@ Some services offer you your own dedicated node that they manage for you, while 
 
 Almost all node services are extremely easy to integrate with, involving one line changes in your code to swap out your self hosted node, or even switch between the services themselves.
 
-Often times node services will run a variety of [node clients](/developers/docs/nodes-and-clients/#clients) and [types](/developers/docs/nodes-and-clients/#node-types), allowing you to access full and archive nodes in addition to client specific methods in one API.
+Often times node services will run a variety of [node clients](/developers/docs/nodes-and-clients/#execution-clients) and [types](/developers/docs/nodes-and-clients/#node-types), allowing you to access full and archive nodes in addition to client specific methods in one API.
 
 It's important to note that node services do not and should not store your private keys or information.
 

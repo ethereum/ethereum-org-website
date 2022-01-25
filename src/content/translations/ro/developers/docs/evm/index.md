@@ -59,7 +59,7 @@ Toate implementările EVM trebuie să respecte specificațiile descrise în Ethe
 
 De-a lungul istoriei de 5 ani a Ethereum, EVM a suferit mai multe revizuiri și există mai multe implementări ale EVM în diferite limbaje de programare.
 
-Toți [clienții Ethereum](/developers/docs/nodes-and-clients/#clients) includ o implementare EVM. În plus, există mai multe implementări independente, inclusiv:
+Toți [clienții Ethereum](/developers/docs/nodes-and-clients/#execution-clients) includ o implementare EVM. În plus, există mai multe implementări independente, inclusiv:
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_

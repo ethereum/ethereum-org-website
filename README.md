@@ -15,7 +15,7 @@ This is the repo for the [ethereum.org](https://ethereum.org) website, a resourc
 
 ## Looking for the Ethereum blockchain's code?
 
-If you're looking for the Ethereum blockchain itself, there is no single repo. Instead, Ethereum has multiple implementations of the protocol written in different programming languages for security and diversity. [Check out the different implementations](https://ethereum.org/en/developers/docs/nodes-and-clients/#clients)
+If you're looking for the Ethereum blockchain itself, there is no single repo. Instead, Ethereum has multiple implementations of the protocol written in different programming languages for security and diversity. [Check out the different implementations](https://ethereum.org/en/developers/docs/nodes-and-clients/#execution-clients)
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">
 
@@ -1057,7 +1057,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://www.oliverrenwick.com"><img src="https://avatars.githubusercontent.com/u/7252642?v=4?s=100" width="100px;" alt=""/><br /><sub><b>oliver renwick</b></sub></a><br /><a href="#ideas-mapachurro" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Amapachurro" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://pplife.home.blog"><img src="https://avatars.githubusercontent.com/u/35653876?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pankaj Patil</b></sub></a><br /><a href="#content-Patil2099" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/esale"><img src="https://avatars.githubusercontent.com/u/36928404?v=4?s=100" width="100px;" alt=""/><br /><sub><b>esale</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aesale" title="Bug reports">🐛</a></td>
-    <td align="center"><a href="https://github.com/RaynHarr"><img src="https://avatars.githubusercontent.com/u/39592448?v=4?s=100" width="100px;" alt=""/><br /><sub><b>RaynHarr</b></sub></a><br /><a href="#content-RaynHarr" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/RaynHarr"><img src="https://avatars.githubusercontent.com/u/39592448?v=4?s=100" width="100px;" alt=""/><br /><sub><b>RaynHarr</b></sub></a><br /><a href="#content-RaynHarr" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=RaynHarr" title="Documentation">📖</a></td>
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/n4rsil"><img src="https://avatars.githubusercontent.com/u/85314714?v=4?s=100" width="100px;" alt=""/><br /><sub><b>n4rsil</b></sub></a><br /><a href="#content-n4rsil" title="Content">🖋</a></td>
@@ -1341,6 +1341,23 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://www.yashkarthik.xyz/"><img src="https://avatars.githubusercontent.com/u/52369876?v=4?s=100" width="100px;" alt=""/><br /><sub><b>yash</b></sub></a><br /><a href="#ideas-YashKarthik" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/ibeale"><img src="https://avatars.githubusercontent.com/u/46497763?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Isaac Beale</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ibeale" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aibeale" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/chrishna1"><img src="https://avatars.githubusercontent.com/u/26048398?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Bal Krishna Jha</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=chrishna1" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://www.linkedin.com/in/mradziwon"><img src="https://avatars.githubusercontent.com/u/6785984?v=4?s=100" width="100px;" alt=""/><br /><sub><b>mradziwon</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=mradziwon" title="Code">💻</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Amradziwon" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/mmilenkovic"><img src="https://avatars.githubusercontent.com/u/2448210?v=4?s=100" width="100px;" alt=""/><br /><sub><b>mmilenkovic</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=mmilenkovic" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/guevaraf"><img src="https://avatars.githubusercontent.com/u/2633129?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Fernando Guevara</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=guevaraf" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/garrivjo"><img src="https://avatars.githubusercontent.com/u/31991694?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jose Manuel Garcia Rivas</b></sub></a><br /><a href="#ideas-garrivjo" title="Ideas, Planning, & Feedback">🤔</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/PolySages"><img src="https://avatars.githubusercontent.com/u/98001681?v=4?s=100" width="100px;" alt=""/><br /><sub><b>PolySages</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3APolySages" title="Bug reports">🐛</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=PolySages" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/zainabb12345"><img src="https://avatars.githubusercontent.com/u/59745525?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Zainab Hasan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=zainabb12345" title="Documentation">📖</a> <a href="#ideas-zainabb12345" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/mdedeu"><img src="https://avatars.githubusercontent.com/u/62359173?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Marcos Dedeu</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=mdedeu" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://bit.ly/SunitRoyYT"><img src="https://avatars.githubusercontent.com/u/67560900?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sunit Roy</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ASunitRoy2703" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://www.facebook.com/gabriel.antunes.garcia/"><img src="https://avatars.githubusercontent.com/u/15985195?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gabriel Garcia</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=astutejoe" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://tiagoyonamine.com"><img src="https://avatars.githubusercontent.com/u/6979032?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tiago Yonamine</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=tiagoyonamine" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://ww.erikhunter.dev"><img src="https://avatars.githubusercontent.com/u/12377787?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Erik Hunter</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Ej1seven" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://www.linkedin.com/in/lingzhong-eth/"><img src="https://avatars.githubusercontent.com/u/4011137?v=4?s=100" width="100px;" alt=""/><br /><sub><b>lingzhong</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=lingzhong" title="Documentation">📖</a></td>
   </tr>
 </table>
 

@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-Ethereum sta passando dal [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/) a un meccanismo di consenso detto proof-of-stake (PoS). Questa transizione è sempre stata nei piani perché scalare Ethereum [attraverso gli aggiornamenti Eth2](/eth2/) è uno dei punti chiave della strategia della community. Tuttavia, arrivare alla PoS è un'ardua sfida tecnica e non è semplice come utilizzare la PoW per ottenere consenso in tutta la rete.
+Ethereum sta passando dal [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/) a un meccanismo di consenso detto proof-of-stake (PoS). Questa transizione è sempre stata nei piani perché scalare Ethereum [attraverso gli aggiornamenti Eth2](/upgrades/) è uno dei punti chiave della strategia della community. Tuttavia, arrivare alla PoS è un'ardua sfida tecnica e non è semplice come utilizzare la PoW per ottenere consenso in tutta la rete.
 
 ## Prerequisiti {#prerequisites}
 
@@ -37,7 +37,7 @@ Se attesti un blocco dannoso, perdi il tuo stake.
 
 ### La beacon chain {#the-beacon-chain}
 
-Dal momento in cui Ethereum sostituirà la proof-of-work con la proof-of-stake, verrà aggiunta la complessità delle [shard chain](/eth2/shard-chains/). Si tratta di blockchain separate, in cui i validatori dovranno elaborare transazioni e creare nuovi blocchi. Si prevede di avere 64 shard chain e tutte dovranno avere una comprensione condivisa dello stato della rete. Sarà quindi necessario un coordinamento extra, che verrà effettuato dalla e [the beacon chain](/eth2/beacon-chain/).
+Dal momento in cui Ethereum sostituirà la proof-of-work con la proof-of-stake, verrà aggiunta la complessità delle [shard chain](/upgrades/shard-chains/). Si tratta di blockchain separate, in cui i validatori dovranno elaborare transazioni e creare nuovi blocchi. Si prevede di avere 64 shard chain e tutte dovranno avere una comprensione condivisa dello stato della rete. Sarà quindi necessario un coordinamento extra, che verrà effettuato dalla e [the beacon chain](/upgrades/beacon-chain/).
 
 La beacon chain riceve informazioni sullo stato dagli shard e le rende disponibili ad altri shard, in modo che la rete possa rimanere sincronizzata. La beacon chain gestirà anche i validatori, dalla registrazione dei depositi di stake fino all'emissione delle ricompense o delle penalità.
 

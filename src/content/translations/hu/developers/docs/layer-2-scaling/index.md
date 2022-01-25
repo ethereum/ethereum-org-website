@@ -85,7 +85,7 @@ Az optimista összegzők egy mellékláncot használnak, mely a fő Ethereum lá
 
 Az optimista összegzőknél a tranzakciók calldataként vannak a fő Ethereum láncba írva, ezzel tovább optimálva a gáz költség csökkentést.
 
-Mivel a számítás az Ethereum használatának lassú és drága része, az optimista összegzők a tranzakciótól függően akár 10–100-szoros javulást is kínálnak a méretezhetőségben. Ez a szám tovább fog nőni a következő Eth2 fejlesztés bevezetésével: [shard láncok](/eth2/shard-chains). Ennek az az oka, hogy több adat áll majd rendelkezésre felelősségre vonási esemény során.
+Mivel a számítás az Ethereum használatának lassú és drága része, az optimista összegzők a tranzakciótól függően akár 10–100-szoros javulást is kínálnak a méretezhetőségben. Ez a szám tovább fog nőni a következő Eth2 fejlesztés bevezetésével: [shard láncok](/upgrades/shard-chains). Ennek az az oka, hogy több adat áll majd rendelkezésre felelősségre vonási esemény során.
 
 #### Tranzakciók megkérdőjelezése {#disputing-transactions}
 

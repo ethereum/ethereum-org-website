@@ -323,13 +323,13 @@ Kami di sini bukan untuk membela jejak penambangan pada lingkungan, tetapi kami 
 
 ### Sebuah masa depan yang lebih hijau... {#a-greener-future}
 
-Selama Ethereum ada, pemakaian energi penambangan telah menjadi area fokus yang sangat besar bagi para pengembang dan peneliti. Dan visinya selalu untuk menggantinya sesegera mungkin. [Lebih lanjut tentang visi Ethereum](/eth2/vision/)
+Selama Ethereum ada, pemakaian energi penambangan telah menjadi area fokus yang sangat besar bagi para pengembang dan peneliti. Dan visinya selalu untuk menggantinya sesegera mungkin. [Lebih lanjut tentang visi Ethereum](/upgrades/vision/)
 
 Visi ini sedang diwujudkan sekarang.
 
-#### Ethereum yang lebih hijau: Eth2 {#eth2}
+#### Ethereum yang lebih hijau: Eth2 {#greener-ethereum}
 
-Ethereum saat ini sedang menjalani serangkaian peningkatan, yang dikenal sebagai Eth2, yang akan menggantikan penambangan dengan [penaruhan](/eth2/staking/). Ini akan menghilangkan daya komputasi sebagai mekanisme keamanan, dan mengurangi jejak karbon Ethereum sebanyak ~99,95%<sup>[^1]</sup>. Dalam dunia ini, para penaruh menyerahkan dana ketimbang daya komputasi untuk mengamankan jaringan.
+Ethereum saat ini sedang menjalani serangkaian peningkatan, yang dikenal sebagai Eth2, yang akan menggantikan penambangan dengan [penaruhan](/staking/). Ini akan menghilangkan daya komputasi sebagai mekanisme keamanan, dan mengurangi jejak karbon Ethereum sebanyak ~99,95%<sup>[^1]</sup>. Dalam dunia ini, para penaruh menyerahkan dana ketimbang daya komputasi untuk mengamankan jaringan.
 
 Pemakaian energi Ethereum akan menjadi sebesar biaya menjalankan sebuah komputer rumah yang dikalikan dengan jumlah node di jaringan. Jika ada 10.000 node di jaringan dan biaya menjalankan sebuah komputer rumah kasarnya sebesar 525kWh per tahun. Itu sama dengan 5.250.000kWh<sup>[^1]</sup> per tahun untuk seluruh jaringan.
 
@@ -345,9 +345,9 @@ _Juga penting untuk diingat bahwa Ethereum melakukan lebih dari sekadar transaks
 
 #### Linimasa {#timelines}
 
-Prosesnya telah berlangsung. [Rantai Suar](/eth2/beacon-chain/), peningkatan pertamanya, diluncurkan pada Desember 2020. Ini menyediakan fondasi untuk penaruhan dengan memungkinkan para penaruh untuk bergabung dengan sistem. Langkah berikutnya yang relevan dengan efisiensi energi adalah menggabungkan rantai saat ini, yang diamankan oleh para penambang, ke dalam Rantai Suar di mana penambangan tidak diperlukan. Linimasanya tidak dapat dipastikan pada tahap ini, tetapi diperkirakan akan terjadi dalam suatu waktu di tahun 2021/2022. Proses ini dikenal sebagai penggabungan (yang sebelumnya disebut sebagai docking). [Selengkapnya tentang penggabungan](/eth2/merge/).
+Prosesnya telah berlangsung. [Rantai Suar](/upgrades/beacon-chain/), peningkatan pertamanya, diluncurkan pada Desember 2020. Ini menyediakan fondasi untuk penaruhan dengan memungkinkan para penaruh untuk bergabung dengan sistem. Langkah berikutnya yang relevan dengan efisiensi energi adalah menggabungkan rantai saat ini, yang diamankan oleh para penambang, ke dalam Rantai Suar di mana penambangan tidak diperlukan. Linimasanya tidak dapat dipastikan pada tahap ini, tetapi diperkirakan akan terjadi dalam suatu waktu di tahun 2021/2022. Proses ini dikenal sebagai penggabungan (yang sebelumnya disebut sebagai docking). [Selengkapnya tentang penggabungan](/upgrades/merge/).
 
-<ButtonLink to="/eth2/">Selengkapnya tentang Eth2</ButtonLink>
+<ButtonLink to="/upgrades/">Selengkapnya tentang Eth2</ButtonLink>
 
 ## Membangun dengan NFT {#build-with-nfts}
 
@@ -400,7 +400,7 @@ Diperkirakan bahwa Eth2 akan memungkinkan jaringan untuk memroses antara 25.000 
 
 [Vitalik Buterik membahas transaksi per detik yang potensial di Eth2](https://twitter.com/VitalikButerin/status/1312905884549300224?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1312905886327664640%7Ctwgr%5E%7Ctwcon%5Es2_&ref_url=https%3A%2F%2Fwww.coinspeaker.com%2Fvitalik-buterin-ethereum-layer-2%2F)
 
-Pada tingkat terendah, Eth2 akan memungkinkan 64 kali jumlah transaksi dari jumlah saat ini yang berada sekitar 15 transaksi. Itulah jumlah rantai shard (data dan kapasitas tambahan) yang akan dimasukkan. [Selengkapnya tentang rantai shard](/eth2/shard-chains/)
+Pada tingkat terendah, Eth2 akan memungkinkan 64 kali jumlah transaksi dari jumlah saat ini yang berada sekitar 15 transaksi. Itulah jumlah rantai shard (data dan kapasitas tambahan) yang akan dimasukkan. [Selengkapnya tentang rantai shard](/upgrades/shard-chains/)
 
 Itu berarti kita dapat memperkirakan berapa lama waktu yang diperlukan untuk memroses 100.000 transaksi, sehingga kita dapat membandingkannya dengan contoh Visa di atas.
 
