@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
@@ -29,6 +28,7 @@ import {
   ListItem,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
+import YouTube from "../components/YouTube"
 
 const Page = styled.div`
   display: flex;
@@ -84,25 +84,16 @@ const ContentContainer = styled.article`
 
 const H1 = styled(Header1)`
   font-size: 2.5rem;
-  font-family: "SFMono-Regular", monospace;
+  font-family: ${(props) => props.theme.fonts.monospace};
   text-transform: uppercase;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 1.75rem;
   }
-
-  &:before {
-    margin-top: -160px;
-  }
 `
 
 const H2 = styled(Header2)`
-  font-family: "SFMono-Regular", monospace;
+  font-family: ${(props) => props.theme.fonts.monospace};
   text-transform: uppercase;
-
-  &:before {
-    height: 160px;
-    margin-top: -160px;
-  }
 `
 
 const H3 = styled(Header3)`
@@ -110,19 +101,11 @@ const H3 = styled(Header3)`
     font-size: 1rem;
     font-weight: 600;
   }
-  &:before {
-    height: 160px;
-    margin-top: -160px;
-  }
 `
 const H4 = styled(Header4)`
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 1rem;
     font-weight: 600;
-  }
-  &:before {
-    height: 160px;
-    margin-top: -160px;
   }
 `
 
@@ -146,6 +129,7 @@ const components = {
   Pill,
   CallToContribute,
   Emoji,
+  YouTube,
 }
 
 const Contributors = styled(FileContributors)`
@@ -157,10 +141,9 @@ const Contributors = styled(FileContributors)`
 `
 
 const TutorialPage = ({ data, pageContext }) => {
-  const intl = useIntl()
-  const isRightToLeft = isLangRightToLeft(intl.locale)
-
   const pageData = data.pageData
+  const isRightToLeft = isLangRightToLeft(pageData.frontmatter.lang)
+
   const tocItems = pageData.tableOfContents.items
 
   const { editContentUrl } = data.siteData.siteMetadata
@@ -211,10 +194,14 @@ export const query = graphql`
     pageData: mdx(fields: { relativePath: { eq: $relativePath } }) {
       fields {
         slug
+        readingTime {
+          minutes
+        }
       }
       frontmatter {
         title
         description
+        lang
         tags
         author
         source
@@ -224,10 +211,10 @@ export const query = graphql`
         sidebar
         sidebarDepth
         address
+        isOutdated
       }
       body
       tableOfContents
-      timeToRead
     }
   }
 `

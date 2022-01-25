@@ -145,7 +145,7 @@ checks:
 ### Step 5: Create a Codechecks account {#step-5-create-a-codechecks-account}
 
 - Create an account with [Codechecks](http://codechecks.io/).
-- Add the Github repo to it.
+- Add the GitHub repo to it.
 - Copy the secret and add the `CC_SECRET=COPIED SECRET` to your CI (see here for [Travis](https://docs.travis-ci.com/user/environment-variables/), here for [CircleCi](https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-project)).
 - Now go ahead and create a pull request.
 
@@ -186,7 +186,7 @@ Solidity coverage starts its own ganache-cli, so we don't have to worry about th
 ### Step 4: Add repository to coveralls {#step-4-add-repository-to-coveralls}
 
 - Create an account with [Coveralls](https://coveralls.io/).
-- Add the Github repo to it.
+- Add the GitHub repo to it.
 - Now go ahead and create a pull request.
 
 ![Example coverall](./coverall.png)
@@ -194,7 +194,7 @@ Solidity coverage starts its own ganache-cli, so we don't have to worry about th
 ## Further ideas {#further-ideas}
 
 - [MythX](https://mythx.io/): With MythX you can automatically analyze your smart contract security. So it makes a lot of sense to [add this to your CI](https://blog.mythx.io/howto/mythx-and-continuous-integration-part-1-circleci/).
-- [Linting](https://en.wikipedia.org/wiki/Lint_%28software%29): Good code can be enforced to some degree with linting tools. [Eslint](https://eslint.org/) works great for Javascript, is [easy to setup](https://eslint.org/docs/user-guide/getting-started), while [Solhint](https://protofire.github.io/solhint/) can be used for Solidity.
+- [Linting](https://wikipedia.org/wiki/Lint_%28software%29): Good code can be enforced to some degree with linting tools. [Eslint](https://eslint.org/) works great for Javascript, is [easy to setup](https://eslint.org/docs/user-guide/getting-started), while [Solhint](https://protofire.github.io/solhint/) can be used for Solidity.
 - Long tests: Sometimes you may want to add extreme tests, e.g., testing a contracts with hundreds of users. This takes a lot of time. Instead of running those in every test run, add them to the CI.
 
 There you have it. Continuous integration is a very useful strategy for your developments. You can check out a full example at [Truffle-CI-Example](https://github.com/gorgos/Truffle-CI-Example). Just make sure to remove Circle-CI or Travis, one is enough!

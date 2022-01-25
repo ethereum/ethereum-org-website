@@ -4,6 +4,7 @@ description: Oracolele te ajută să introduci date din lumea reală în aplica�
 lang: ro
 sidebar: true
 incomplete: true
+isOutdated: true
 ---
 
 Oracolele sunt fluxuri de date care conectează Ethereum la informații din lumea reală, în afara lanțului, astfel încât să poți interoga datele în contractele tale inteligente. De exemplu, aplicațiile dapp de predicție de piață utilizează oracole pentru a deconta plăți pe baza evenimentelor. O piață de predicție îți poate cere să pariezi ETH pe următorul președinte al Statelor Unite. Vor folosi un oracol pentru a confirma rezultatul și pentru a plăti câștigătorilor.
@@ -21,17 +22,6 @@ Un oracol este o punte între blockchain și lumea reală. Acestea acționează 
 Cu un blockchain ca Ethereum ai nevoie de fiecare nod din rețea pentru a putea reda fiecare tranzacție și a termina cu același rezultat, garantat. API-urile introduc date potențial variabile. Dacă ai trimite cuiva o sumă de ETH în baza unei valori $USD convenită utilizând un API de preț, interogarea va returna un rezultat diferit de la o zi la alta. Ca să nu mai vorbim, API-ul ar putea fi piratat sau perimat. Dacă se întâmplă acest lucru, nodurile din rețea nu ar fi în măsură să se pună de acord asupra stării actuale a Ethereum, încălcând în mod efectiv [consensul](/developers/docs/consensus-mechanisms/).
 
 Oracolele rezolvă această problemă postând datele pe blockchain. De aceea, orice nod care redă tranzacția va utiliza aceleași date imuabile care sunt postate pentru ca toți să le vadă. Pentru a face acest lucru, un oracol este format de obicei dintr-un contract inteligent și unele componente din lanț care pot interoga API-urile, apoi trimit periodic tranzacții pentru a actualiza datele contractului inteligent.
-
-<!-- ## Oracle architecture {#oracle-architecture}
-
-To understand how an oracle works, let's play through a scenario where your smart contract needs to know who won the superbowl. This is an example of how it could work:
-
-1. Your smart contract requests information from an oracle smart contract.
-2. The oracle smart contract emits an [event](/developers/docs/smart-contracts/anatomy/#events-and-logs).
-3. Off-chain oracle nodes listen for events and upon hearing one, they query an API.
-4. The API returns a JSON response to the nodes.
-5. The nodes call on the oracle smart contract.
-6. The oracle smart contract returns the data to your smart contract. -->
 
 ### Securitate {#security}
 

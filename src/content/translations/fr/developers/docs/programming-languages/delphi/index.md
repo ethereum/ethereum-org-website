@@ -20,7 +20,7 @@ Créez des applications décentralisées sur Ethereum et interagissez avec des c
 
 **Commencer à intégrer Delphi à Ethereum**
 
-Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/en/learn/) ou [ethereum.org/developers](/en/developers/).
+Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/learn/) ou [ethereum.org/developers](/developers/).
 
 - [Blockchain Explained](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Understanding Smart Contracts](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -33,7 +33,7 @@ Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/en
 
 - [What is Delphereum?](https://github.com/svanas/delphereum/blob/master/README.md)
 - [Connecting Delphi to a local (in-memory) blockchain](https://medium.com/@svanas/connecting-delphi-to-a-local-in-memory-blockchain-9a1512d6c5b0)
-- [Connecting Delphi to the Ethereum main net](https://medium.com/@svanas/connecting-delphi-to-the-ethereum-main-net-5faf1feffd83)
+- [Connecting Delphi to the Ethereum Mainnet](https://medium.com/@svanas/connecting-delphi-to-the-ethereum-main-net-5faf1feffd83)
 - [Connecting Delphi to Smart Contracts](https://medium.com/@svanas/connecting-delphi-to-smart-contracts-3146b12803a1)
 
 **Vous voulez éviter toute configuration pour l'instant et accéder directement aux échantillons ?**
@@ -52,4 +52,4 @@ Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/en
 - [Delphi and Ethereum Name Service (ENS)](https://medium.com/@svanas/delphi-and-ethereum-name-service-ens-4443cd278af7)
 - [QuikNode, Ethereum and Delphi](https://medium.com/@svanas/quiknode-ethereum-and-delphi-f7bfc9671c23)
 
-Vous cherchez davantage de ressources ? Consultez [ethereum.org/developers](/en/developers/).
+Vous cherchez davantage de ressources ? Consultez [ethereum.org/developers](/developers/).

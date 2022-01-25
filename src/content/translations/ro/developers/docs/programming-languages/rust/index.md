@@ -25,21 +25,19 @@ Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/learn/) sau
 
 - [Cum să alegi un client Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Clientul Rust pentru Ethereum](https://wiki.parity.io/Setup)
-- [Trimiterea tranzacțiilor în Ethereum cu clientul Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [Trimiterea tranzacțiilor în Ethereum cu clientul Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Introducere în contracte inteligente cu clientul Parity pentru Ethereum](https://wiki.parity.io/Smart-Contracts)
-- [Setarea mediului de dezvoltare Oasis SDK](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [Setarea mediului de dezvoltare Oasis SDK](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Tutorial pas cu pas de dezvoltare a contractelor inteligente în Rust Wasm pentru Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Articole de nivel intermediar {#intermediate-articles}
 
 - [Documentația Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Exemple practice de Rust-Web3](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Cum să creezi un sistem de vot secret cu Oasis SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Cum să creezi un server privat de chat cu Oasis SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Modele avansate de utilizare {#advanced-use-patterns}
 
-- [pwasm_ethereum bibliotecă pentru interacțiuni cu rețele ca Ethereum](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [pwasm_ethereum bibliotecă pentru interacțiuni cu rețele ca Ethereum](https://github.com/openethereum/pwasm-ethereum)
 - [Creează un chat descentralizat folosind JavaScript și Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Dezvoltă o aplicație Todo descentralizată folosind Vue.js și Rust ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Noțiuni de bază cu Enigma - Limbaj de programare în Rust](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)

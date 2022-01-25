@@ -9,18 +9,16 @@ Una idea errónea común es que los desarrolladores deben escribir contratos int
 
 Ethereum y su comunidad abrazan el código abierto. Puedes encontrar proyectos comunitarios (implementaciones de clientes, API, frameworks de desarrollo y herramientas de prueba) en una amplia variedad de idiomas.
 
-<!-- Often certain languages have an certain advantage depending on the use case -->
-
 ## Escoge tu lenguaje {#data}
 
 Selecciona el idioma que desees para encontrar proyectos, recursos y comunidades virtuales:
 
-- [Ethereum para desarrolladores de Java](/en/developers/docs/programming-languages/java/)
-- [Ethereum para desarrolladores de Python](/en/developers/docs/programming-languages/python/)
-- [Ethereum para desarrolladores de JavaScript](/en/developers/docs/programming-languages/javascript/)
-- [Ethereum para desarrolladores de Go](/en/developers/docs/programming-languages/golang/)
-- [Ethereum para desarrolladores de Rust](/en/developers/docs/programming-languages/rust/)
-- [Ethereum para desarrolladores de .NET](/en/developers/docs/programming-languages/dot-net/)
-- [Ethereum para desarrolladores de Delphi](/en/developers/docs/programming-languages/delphi/)
+- [Ethereum para desarrolladores de Java](/developers/docs/programming-languages/java/)
+- [Ethereum para desarrolladores de Python](/developers/docs/programming-languages/python/)
+- [Ethereum para desarrolladores de JavaScript](/developers/docs/programming-languages/javascript/)
+- [Ethereum para desarrolladores de Go](/developers/docs/programming-languages/golang/)
+- [Ethereum para desarrolladores de Rust](/developers/docs/programming-languages/rust/)
+- [Ethereum para desarrolladores de .NET](/developers/docs/programming-languages/dot-net/)
+- [Ethereum para desarrolladores de Delphi](/developers/docs/programming-languages/delphi/)
 
 ¿Tu lenguaje no está entre estas opciones? Solicitar una nueva página [abriendo un problema](https://github.com/ethereum/ethereum-org-website/issues/new/choose)

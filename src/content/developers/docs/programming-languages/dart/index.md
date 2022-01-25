@@ -1,12 +1,12 @@
 ---
-title: Ethereum for Dart Developers
+title: Ethereum for Dart developers
 description: Learn how to develop for Ethereum using the Dart language
 lang: en
 sidebar: true
 incomplete: true
 ---
 
-## Getting Started with Smart Contracts and the Solidity Language {#getting-started-with-smart-contracts-and-solidity}
+## Getting started with smart contracts and the Solidity language {#getting-started-with-smart-contracts-and-solidity}
 
 ## Tutorials {#tutorials}
 
@@ -18,6 +18,7 @@ incomplete: true
   if you already know the basics.
 - If you prefer the learn by watching a video, you can watch [Build Your First Blockchain Flutter App](https://www.youtube.com/watch?v=3Eeh3pJ6PeA), which is about an hour long
 - If you are impatient, you might prefer [Building a Blockchain Decentralized-app with Flutter and Dart on Ethereum](https://www.youtube.com/watch?v=jaMFEOCq_1s), which is only about twenty minutes
+- [Integrating MetaMask in Flutter application](https://youtu.be/8qzVDje3IWk) - this short video takes you through the steps of integrating MetaMask into your Flutter applications.
 
 ## Working with Ethereum clients {#working-with-ethereum-clients}
 

@@ -64,7 +64,7 @@ slither project_paths
 
 In addition to detectors, Slither has code review capabilities through its [printers](https://github.com/crytic/slither#printers) and [tools](https://github.com/crytic/slither#tools).
 
-Use [crytic.io](https://crytic.io) to get access to private detectors and GitHub integration.
+Use [crytic.io](https://github.com/crytic) to get access to private detectors and GitHub integration.
 
 ## Static analysis {#static-analysis}
 

@@ -11,15 +11,15 @@ Az Ethereum protokoll létezésének kizárólagos célja, hogy ennek a speciál
 
 ## Előfeltételek {#prerequisites}
 
-Alapvető számítástudományi fogalmak ismerete, mint például a [bájtok](https://en.wikipedia.org/wiki/Byte), [memória](https://en.wikipedia.org/wiki/Computer_memory), és a [stack](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>) szükségesek, hogy megértsd az EVM-et. Érdemes tisztában lenni egy pár kriptográfiai/blokklánc fogalommal úgy, mint a [hash függvények](https://en.wikipedia.org/wiki/Cryptographic_hash_function), [Proof-of-Work](https://en.wikipedia.org/wiki/Proof_of_work) és a [Merkle Fa](https://en.wikipedia.org/wiki/Merkle_tree).
+Alapvető számítástudományi fogalmak ismerete, mint például a [bájtok](https://wikipedia.org/wiki/Byte), [memória](https://wikipedia.org/wiki/Computer_memory), és a [stack](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) szükségesek, hogy megértsd az EVM-et. Érdemes tisztában lenni egy pár kriptográfiai/blokklánc fogalommal úgy, mint a [hash függvények](https://wikipedia.org/wiki/Cryptographic_hash_function), [Proof-of-Work](https://wikipedia.org/wiki/Proof_of_work) és a [Merkle Fa](https://wikipedia.org/wiki/Merkle_tree).
 
 ## Főkönyvtől az állapot gépig {#from-ledger-to-state-machine}
 
 Az 'elosztott főkönyv' analógiáját gyakran használjuk olyan blokkláncok jellemzésére, mint a Bitcoin, mely lehetővé egy decentralizált valuta létrehozását alapvető kriptográfiai eszközök használatával. Egy kriptovaluta úgy viselkedik, mint egy 'normál' valuta a szabályok miatt, melyek meghatározzák, hogy az adott illető mit vagy mit nem tehet, hogy megváltoztassa a főkönyvet. Például egy Bitcoin cím nem költhet el több bitcoint, mint amennyit előzőleg megkapott. Ezek a szabályok támasztják alá az összes Bitcoin tranzakciót és sok más blokkláncot is.
 
-Amíg az Ethereumnak megvan a saját natív kriptovalutája (Ether), mely ugyanazokat az intuitív szabályokat követi, emellett lehetőséget ad egy másik hathatós funkciónak: [az okosszerződéseknek](/en/developers/docs/smart-contracts/). Ehhez a bonyolultabb funkcióhoz egy szofisztikáltabb analógia szükségeltetik. Egy elosztott főkönyv helyett az Ethereum egy elosztott [állapot gép](https://en.wikipedia.org/wiki/Finite-state_machine). Az Ethereum állapota egy nagy adatstruktúra, mely nem csak a számlákat és az egyenlegeket tárolja, de egy _állapot gépet_ is, mely blokkról blokkra változhat egy előre meghatározott szabályrendszer szerint és tetszőleges gépi kódot tud végrehajtani. Az állatot blokkról blokkra történő megváltozásának specifikus szabályait az EVM rögzíti.
+Amíg az Ethereumnak megvan a saját natív kriptovalutája (Ether), mely ugyanazokat az intuitív szabályokat követi, emellett lehetőséget ad egy másik hathatós funkciónak: [az okosszerződéseknek](/developers/docs/smart-contracts/). Ehhez a bonyolultabb funkcióhoz egy szofisztikáltabb analógia szükségeltetik. Egy elosztott főkönyv helyett az Ethereum egy elosztott [állapot gép](https://wikipedia.org/wiki/Finite-state_machine). Az Ethereum állapota egy nagy adatstruktúra, mely nem csak a számlákat és az egyenlegeket tárolja, de egy _állapot gépet_ is, mely blokkról blokkra változhat egy előre meghatározott szabályrendszer szerint és tetszőleges gépi kódot tud végrehajtani. Az állatot blokkról blokkra történő megváltozásának specifikus szabályait az EVM rögzíti.
 
-![Egy diagram mely az EVM felépítését mutatja be](./evm.png) _Diagram átvéve az [Ethereum EVM illusztrálva](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_ anyagból
+![Egy diagram mely az EVM felépítését mutatja be](../../../../../developers/docs/evm/evm.png) _Diagram átvéve az [Ethereum EVM illusztrálva](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_ anyagból
 
 ## Az Ethereum állapot átmeneti függvény {#the-ethereum-state-transition-function}
 
@@ -43,12 +43,7 @@ A szerződés létrehozás egy új szerződéses számla létrehozásával jár,
 
 ## EVM Utasítások {#evm-instructions}
 
-Az EVM egy [verem gépként](https://en.wikipedia.org/wiki/Stack_machine) fut 1024 elemes mélységgel. Minden egyes elem egy 256 bites szó, melyek a maximális kompatibilitásért lettek kiválasztva az SHA-3-256 hash rendszerrel.
-
-<!-- ![A diagram showing the make up of the stack](./evm-stack.png)
-_Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
-
-Removed as we should probably show memory and account storage too if showing stack-->
+Az EVM egy [verem gépként](https://wikipedia.org/wiki/Stack_machine) fut 1024 elemes mélységgel. Minden egyes elem egy 256 bites szó, melyek a maximális kompatibilitásért lettek kiválasztva az SHA-3-256 hash rendszerrel.
 
 A végrehajtás alatt az EVM egy tranziens _memóriát_ tart fenn (mint egy szócímzett bájttömböt), mely nem folytatólagos a tranzakciók között.
 
@@ -56,9 +51,7 @@ A szerződések azonban tartalmaznak egy Merkle Patricia _tárhely_ fát (mint e
 
 A befordított okosszerződés bájtkód EVM [opcode-ként](https://www.ethervm.io/) fut le, melyek standard stack műveletek, mint a `XOR`, `AND`, `ADD`, `SUB`, stb. Az EVM egy pár blokklánc specifikus stack műveletet is implementál, mint az `ADDRESS`, `BALANCE`, `SHA3`, `BLOCKHASH`, stb.
 
-![Egy diagram, mely azt mutatja, hogy hol van szükség gázra az EVM műveleteknél](../gas/gas.png) _Diagramok átvéve az [Ethereum EVM illusztrálva](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_ anyagból
-
-<!-- TODO add full list from  https://eth.wiki/concepts/evm/implementations -->
+![Egy diagram, mely azt mutatja, hogy hol van szükség gázra az EVM műveleteknél](../../../../../developers/docs/gas/gas.png) _Diagramok átvéve az [Ethereum EVM illusztrálva](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_ anyagból
 
 ## EVM Implementációk {#evm-implementations}
 
@@ -66,7 +59,7 @@ Az összes EVM implementációnak meg kell felelnie az Ethereum sárgakönyvben 
 
 Az Ethereum 5 éves története alatt az EVM több revízió alatt átesett és számos EVM implementáció létezik különböző programozási nyelveken.
 
-Az összes [Ethereum kliens](/developers/docs/nodes-and-clients/#clients) tartalmaz egy EVM implementációt. Továbbá több önálló implementáció létezik, többek között:
+Az összes [Ethereum kliens](/developers/docs/nodes-and-clients/#execution-clients) tartalmaz egy EVM implementációt. Továbbá több önálló implementáció létezik, többek között:
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_
@@ -82,4 +75,4 @@ Az összes [Ethereum kliens](/developers/docs/nodes-and-clients/#clients) tartal
 
 ## Kapcsolódó témák {#related-topics}
 
-- [Gáz](/en/developers/docs/gas/)
+- [Gáz](/developers/docs/gas/)

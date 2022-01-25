@@ -202,13 +202,13 @@ Dacă ești nou în Ethereum și încă nu ai scris cod cu limbaje de contracte 
 **Yul**
 
 - Limbaj intermediar pentru Ethereum.
-- Suportă [EVM](en/developers/docs/evm) și [eWASM](https://github.com/ewasm), un WebAssembly cu arome de Ethereum, și este conceput să fie un numitor comun utilizabil al ambelor platforme.
+- Suportă [EVM](/developers/docs/evm) și [eWASM](https://github.com/ewasm), un WebAssembly cu arome de Ethereum, și este conceput să fie un numitor comun utilizabil al ambelor platforme.
 - O țintă bună pentru etapele de optimizare la nivel înalt, cu avantaje atât pentru platformele EVM, cât și pentru platformele eWASM.
 
 **Yul+**
 
 - O extensie de nivel scăzut, extrem de eficientă pentru Yul.
-- Conceput inițial pentru un contract <a href="en/developers/docs/layer-2-scaling/#rollupss">optimistic rollup</a>.
+- Conceput inițial pentru un contract <a href="/developers/docs/layer-2-scaling/#rollupss">optimistic rollup</a>.
 - Yul + poate fi privit ca o propunere experimentală de upgrade la Yul, adăugând noi caracteristici.
 
 ### Linkuri importante {#important-links-2}
@@ -251,7 +251,7 @@ Iată câteva lucruri de luat în considerare, dacă nu ai încercat încă nici
 
 ### Ce este excelent la Solidity? {#solidity-advantages}
 
-- Dacă ești începător, există multe tutoriale și instrumente de învățare. Află mai multe informații despre aceasta în secțiunea [Învață prin codificare](https://ethereum.org/en/developers/learning-tools/).
+- Dacă ești începător, există multe tutoriale și instrumente de învățare. Află mai multe informații despre aceasta în secțiunea [Învață prin codificare](/developers/learning-tools/).
 - Sunt disponibile instrumente bune pentru programatori.
 - Solidity are o comunitate mare de programatori, ceea ce înseamnă că cel mai probabil vei găsi răspunsuri la întrebările tale destul de repede.
 

@@ -57,7 +57,7 @@ Un alt exemplu popular este [SafeMath](https://docs.openzeppelin.com/contracts/3
 
 Pentru a facilita [combinabilitatea și interoperabilitatea](/developers/docs/smart-contracts/composability/), comunitatea Ethereum a definit mai multe standarde sub formă de **ERC**-uri. Poți citi mai multe despre acestea în secțiunea [standarde](/developers/docs/standards/).
 
-Atunci când incluzi un ERC ca parte a contractelor tale, este bine să cauți implementări standard, mai degrabă decât să încerci să le lansezi pe cele proprii. Multe biblioteci de contracte inteligente includ implementări pentru cele mai populare ERC-uri. De exemplu, [tokenul fungibil standard ERC20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) omniprezent poate fi găsit în [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](http://dapp.tools/dappsys/ds-token.html) și [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20). În plus, unele ERC-uri oferă, de asemenea, implementări canonice ca parte a ERC-ului însuși.
+Atunci când incluzi un ERC ca parte a contractelor tale, este bine să cauți implementări standard, mai degrabă decât să încerci să le lansezi pe cele proprii. Multe biblioteci de contracte inteligente includ implementări pentru cele mai populare ERC-uri. De exemplu, [tokenul fungibil standard ERC20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) omniprezent poate fi găsit în [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) și [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20). În plus, unele ERC-uri oferă, de asemenea, implementări canonice ca parte a ERC-ului însuși.
 
 Merită menționat faptul că unele ERC-uri nu sunt independente, ci sunt completări la alte ERC-uri. De exemplu, [ERC2612](https://eips.ethereum.org/EIPS/eip-2612) adaugă o extensie la ERC20 pentru a-i îmbunătății posibilitate de întrebuințare.
 
@@ -96,7 +96,7 @@ Totuși, folosirea bibliotecilor de contracte inteligente prezintă riscul inclu
 
 **DappSys -** **_Blocuri de construcții sigure, simple, flexibile pentru contracte inteligente._**
 
-- [Documentație](https://dapp.tools/dappsys/)
+- [Documentație](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 **HQ20 -** **_Un proiect Solidity cu contracte, biblioteci și exemple pentru a te ajuta să construiți aplicații distribuite complet-funcționale pentru lumea reală._**
@@ -105,7 +105,7 @@ Totuși, folosirea bibliotecilor de contracte inteligente prezintă riscul inclu
 
 ## Tutoriale corelate {#related-tutorials}
 
-- [Considerații de securitate pentru programatorii Ethereum](/developers/docs/security/) _– Un tutorial privind considerațiile de securitate atunci când construiești contracte inteligente, inclusiv utilizarea de biblioteci._
+- [Considerații de securitate pentru programatorii Ethereum](/developers/docs/smart-contracts/security/) _– Un tutorial privind considerațiile de securitate atunci când construiești contracte inteligente, inclusiv utilizarea de biblioteci._
 - [Înțelege contractul inteligent token ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _-Tutorial privind standardul ERC20, oferit de mai multe biblioteci._
 
 ## Referințe suplimentare {#further-reading}

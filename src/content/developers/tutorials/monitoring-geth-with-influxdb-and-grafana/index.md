@@ -6,6 +6,7 @@ tags: ["clients", "geth", "nodes"]
 skill: intermediate
 lang: en
 sidebar: true
+published: 2021-01-13
 ---
 
 This tutorial will help you set up monitoring for your Geth node so you can better understand its performance and identify potential problems.
@@ -23,7 +24,7 @@ An Ethereum client collects lots of data which can be read in the form of a chro
 - [Prometheus](https://prometheus.io/) (pull model)
 - [InfluxDB](https://www.influxdata.com/get-influxdb/) (push model)
 - [Telegraf](https://www.influxdata.com/get-influxdb/)
-- [Grafana](https:/grafana.com/)
+- [Grafana](https://www.grafana.com/)
 - [Datadog](https://www.datadoghq.com/)
 - [Chronograf](https://www.influxdata.com/time-series-platform/chronograf/)
 

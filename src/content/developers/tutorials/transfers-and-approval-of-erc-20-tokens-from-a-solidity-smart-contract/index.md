@@ -153,7 +153,7 @@ Let’s code the buy function. We’ll first need to check the amount of ether t
 
 Note that if we call the require function in the case of an error the ether sent will directly be reverted and given back to the user.
 
-To keep things simple, we just exchange 1 token for 1 ether.
+To keep things simple, we just exchange 1 token for 1 Wei.
 
 ```solidity
 function buy() payable public {
@@ -305,7 +305,7 @@ contract DEX {
     function buy() payable public {
         uint256 amountTobuy = msg.value;
         uint256 dexBalance = token.balanceOf(address(this));
-        require(amountTobuy > 0, "You need to send some Ether");
+        require(amountTobuy > 0, "You need to send some ether");
         require(amountTobuy <= dexBalance, "Not enough tokens in the reserve");
         token.transfer(msg.sender, amountTobuy);
         emit Bought(amountTobuy);

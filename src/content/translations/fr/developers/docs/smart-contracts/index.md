@@ -9,14 +9,11 @@ sidebar: true
 
 Un "contrat intelligent" est simplement un programme exécuté sur la blockchain d'Ethereum. C'est un ensemble de code (ses fonctions) et de données (son état) qui réside à une adresse spécifique sur la blockchain Ethereum.
 
-Le contrat intelligent est un type de [compte Ethereum](/en/developers/docs/accounts/). Cela signifie qu'il dispose d'un solde et peut envoyer des transactions sur le réseau. Cependant, il n'est pas contrôlé par un utilisateur, mais est plutôt déployé et exécuté comme un programme. Les comptes des utilisateurs peuvent ensuite interagir avec un contrat intelligent en soumettant des transactions qui exécutent une fonction définie sur le contrat intelligent. Un contrat intelligent peut définir des règles, comme un contrat normal, et les appliquer automatiquement via le code.
+Le contrat intelligent est un type de [compte Ethereum](/developers/docs/accounts/). Cela signifie qu'il dispose d'un solde et peut envoyer des transactions sur le réseau. Cependant, il n'est pas contrôlé par un utilisateur, mais est plutôt déployé et exécuté comme un programme. Les comptes des utilisateurs peuvent ensuite interagir avec un contrat intelligent en soumettant des transactions qui exécutent une fonction définie sur le contrat intelligent. Un contrat intelligent peut définir des règles, comme un contrat normal, et les appliquer automatiquement via le code.
 
 ## Prérequis {#prerequisites}
 
 Assurez-vous d'avoir lu les pages [Contrats](/developers/docs/accounts/), [Transactions](/developers/docs/transactions/) et [Machine virtuelle Ethereum](/developers/docs/evm/) avant de vous intéresser aux contrats intelligents.
-
-<!-- TODO simpler example... scheduling payments in Ethereum is actually difficult -->
-<!-- TODO show an example smart contract, e.g. an implementation of a vending machine -->
 
 ## Distributeur automatique numérique {#a-digital-vending-machine}
 
@@ -69,16 +66,16 @@ Tout comme un distributeur automatique peut remplacer un employé dans une bouti
 
 ## Sans autorisation {#permissionless}
 
-N'importe qui peut rédiger un contrat intelligent et le déployer sur le réseau. Il vous suffit d'apprendre à coder dans un [langage de contrat intelligent](/en/developers/docs/smart-contracts/languages/) et de disposer de suffisamment d'ETH pour le déployer. Techniquement, déployer un contrat intelligent constitue une transaction. Vous devez donc payer pour le [carburant](/en/developers/docs/gas/), comme vous le feriez pour un simple transfert d'ETH. Le coût en carburant pour déployer un contrat est cependant beaucoup plus élevé.
+N'importe qui peut rédiger un contrat intelligent et le déployer sur le réseau. Il vous suffit d'apprendre à coder dans un [langage de contrat intelligent](/developers/docs/smart-contracts/languages/) et de disposer de suffisamment d'ETH pour le déployer. Techniquement, déployer un contrat intelligent constitue une transaction. Vous devez donc payer pour le [carburant](/developers/docs/gas/), comme vous le feriez pour un simple transfert d'ETH. Le coût en carburant pour déployer un contrat est cependant beaucoup plus élevé.
 
 Pour la rédaction des contrats intelligents, Ethereum propose aux développeurs des langages conviviaux :
 
 - Solidity
 - Vyper
 
-[Plus d'infos sur les langages](/en/developers/docs/smart-contracts/languages/)
+[Plus d'infos sur les langages](/developers/docs/smart-contracts/languages/)
 
-Toutefois, pour que la machine virtuelle Ethereum puisse interpréter et stocker un contrat, il doit être compilé avant d'être déployé. [Plus d'infos sur la compilation](/en/developers/docs/smart-contracts/compiling/)
+Toutefois, pour que la machine virtuelle Ethereum puisse interpréter et stocker un contrat, il doit être compilé avant d'être déployé. [Plus d'infos sur la compilation](/developers/docs/smart-contracts/compiling/)
 
 ## Composabilité {#composability}
 
@@ -90,7 +87,7 @@ En savoir plus sur la [composabilité des contrats](/developers/docs/smart-contr
 
 Les contrats intelligents seuls ne peuvent pas obtenir d'informations sur les événements du "monde réel", car ils ne peuvent pas envoyer de demande HTTP. Ceci est intentionnel, car le fait de s'appuyer sur des informations externes pourrait compromettre le consensus, c'est donc important pour la sécurité et la décentralisation.
 
-Il existe des moyens de contourner ce problème en utilisant les [oracles](/en/developers/docs/oracles/).
+Il existe des moyens de contourner ce problème en utilisant les [oracles](/developers/docs/oracles/).
 
 ## Ressources de contrats intelligents {#smart-contract-resources}
 
@@ -102,7 +99,7 @@ Il existe des moyens de contourner ce problème en utilisant les [oracles](/en/d
 
 **DappSys -** **_Blocs de construction sûrs, simples et flexibles pour les contrats intelligents_**
 
-- [dapp.tools/dappsys](https://dapp.tools/dappsys/)
+- [Dappsys](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 ## Complément d'information {#further-reading}

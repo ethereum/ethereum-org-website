@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-Az Ethereum átmegy a [proof-of-work-ről (PoW)](/developers/docs/consensus-mechanisms/pow/) egy másik konszenzus mechanizmusba, melyet proof-of-stake-nek hívunk. Mindig is ez volt a terv, mivel ez egy kulcs eleme a közösség stratégiájának az Ethereum skálázására vonatkozóan [az Eth2 fejlesztések](/eth2/) által. Azonban a PoS megfelelő bevezetése egy nagy technikai kihívás és nem annyira egyértelmű, mint a PoW használata, hogy elérjük a konszenzust a teljes hálózaton.
+Az Ethereum átmegy a [proof-of-work-ről (PoW)](/developers/docs/consensus-mechanisms/pow/) egy másik konszenzus mechanizmusba, melyet proof-of-stake-nek hívunk. Mindig is ez volt a terv, mivel ez egy kulcs eleme a közösség stratégiájának az Ethereum skálázására vonatkozóan [az Eth2 fejlesztések](/upgrades/) által. Azonban a PoS megfelelő bevezetése egy nagy technikai kihívás és nem annyira egyértelmű, mint a PoW használata, hogy elérjük a konszenzust a teljes hálózaton.
 
 ## Előfeltételek {#prerequisites}
 
@@ -37,7 +37,7 @@ Ha tanúsítasz egy rosszindulatú blokkot, akkor elveszted a letéted.
 
 ### A Beacon Chain {#the-beacon-chain}
 
-Amikor az Ethereum leváltja a proof-of-work-öt a proof-of-stake-kel, hozzáadott komplexitás fog életbe lépni a [shard láncok](/eth2/shard-chains/) által. Ezek különálló blokkláncok, melynek szükségük van validátorokra, hogy tranzakciókat dolgozzanak fel és új blokkokat hozzanak létre. A terv az, hogy 64 shard láncot fogunk létrehozni, melyeknek megosztottan egyet kell érteniük a hálózat állapotára vonatkozóan. Így további koordináció szükségeltetik, ezt pedig [a beacon chain](/eth2/beacon-chain/) fogja biztosítani.
+Amikor az Ethereum leváltja a proof-of-work-öt a proof-of-stake-kel, hozzáadott komplexitás fog életbe lépni a [shard láncok](/upgrades/shard-chains/) által. Ezek különálló blokkláncok, melynek szükségük van validátorokra, hogy tranzakciókat dolgozzanak fel és új blokkokat hozzanak létre. A terv az, hogy 64 shard láncot fogunk létrehozni, melyeknek megosztottan egyet kell érteniük a hálózat állapotára vonatkozóan. Így további koordináció szükségeltetik, ezt pedig [a beacon chain](/upgrades/beacon-chain/) fogja biztosítani.
 
 A Beacon Chain állapot információkat kap a shardoktól, melyet elérhetővé tesz a többi shard számára, hogy azok szinkronban tudjanak maradni. A Beacon Chain fogja kezelni a validátorokat is a letétbetételtől egészen a jutalmak és büntetések kiosztásáig.
 

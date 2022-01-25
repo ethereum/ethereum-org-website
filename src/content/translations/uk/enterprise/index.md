@@ -70,8 +70,8 @@ sidebarDepth: 1
 
 ### Безпека {#security}
 
-- [Clef](https://geth.ethereum.org/clef/Overview) _використовується для підписання транзакцій і даних та призначений для заміни керування рахунками Geth_
-- [EthSigner](https://gitter.im/PegaSysEng/EthSigner) _— програма для підписання транзакцій, яка використовується з постачальником web3_
+- [Clef](https://geth.ethereum.org/docs/clef/tutorial) _використовується для підписання транзакцій і даних та призначений для заміни керування рахунками Geth_
+- [EthSigner](https://github.com/ConsenSys/ethsigner) _— програма для підписання транзакцій, яка використовується з постачальником web3_
 
 ### Інструменти {#tooling}
 

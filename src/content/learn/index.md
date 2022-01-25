@@ -22,12 +22,13 @@ In addition to the information on this page, there are many community-built reso
 - [EthHub](https://docs.ethhub.io) _Comprehensive knowledge base for all things Ethereum_
 - [District0x](https://education.district0x.io/general-topics/understanding-ethereum/) _An educational resource about Ethereum targeted at beginners_
 - [Ethereum.wiki](https://eth.wiki) _A community-built wiki about Ethereum’s technology_
-- [Kauri](https://kauri.io) _Technical articles and tutorials for Ethereum and related projects_
 - [Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Videos and talks about Ethereum_
 - [Week in Ethereum News](https://weekinethereumnews.com/) _A weekly newsletter covering key developments across the ecosystem_
-- [What’s new in ETH 2.0](https://eth2.news) _A regular newsletter about Eth2 development_
-- [ethresear.ch forum](https://ethresear.ch/) _Deeper technical discussions on Ethereum for Eth2 and beyond_
+- [What’s new in Eth2](https://eth2.news) _A regular newsletter about Ethereum development_
+- [ethresear.ch forum](https://ethresear.ch/) _Deeper technical discussions on Ethereum for scaling and beyond_
 - [ETHGlobal](https://ethglobal.co) _An Ethereum hackathon series - attend one near you!_
+- [Web3 University](https://www.web3.university) _A community-driven online resource focused on web3 development_
+- [EtherWorld](https://etherworld.co/tag/ethereum/) _An Ethereum educational resource in the form of blogs and video guides_
 
 ## How Ethereum works {#how-ethereum-works}
 
@@ -40,7 +41,7 @@ High-level explanations of Ethereum and blockchain technology generally.
 - [Understanding Ethereum](https://allan-gulley.medium.com/understanding-ethereum-819c2096b613?sk=c89f3aa5a4fd8b5fa0dae3042a3fa011) _Apr 27, 2021 - Allan Gulley_
 - [Ethereum's original Whitepaper](/whitepaper/)
 
-## Smart Contracts {#smart-contracts}
+## Smart contracts {#smart-contracts}
 
 A “smart contract” is simply a piece of code that is running on Ethereum. It’s called a “contract” because code that runs on Ethereum can control valuable things like ETH or other digital assets.
 
@@ -52,22 +53,21 @@ A “smart contract” is simply a piece of code that is running on Ethereum. It
 
 Aspiring Ethereum developer? Check out our developer portal. It's got documentation, tutorials, and other resources for learning how to build Ethereum products. [View developer portal](/developers/learning-tools/)
 
-## Proof of Work and Mining {#proof-of-work-and-mining}
+## Proof-of-work and Mining {#proof-of-work-and-mining}
 
-Ethereum currently uses a system called "Proof of Work". This allows the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain, and prevents certain kinds of economic attacks.
+Ethereum currently uses a system called "proof-of-work". This allows the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain, and prevents certain kinds of economic attacks.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Updated often - Ethhub_
-- [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
 You can learn more about [proof of work](/developers/docs/consensus-mechanisms/pow/) and [mining](/developers/docs/consensus-mechanisms/pow/mining/) within our developer documentation.
 
-In ETH 2.0, Ethereum will be moving to a different system called "Proof of Stake". [Read more about ETH 2.0 below](#eth-2-0).
+After [the merge](/upgrades/merge/), Ethereum will be moving to a different system called "proof-of-stake". [Read more about consensus layer upgrades below](#consensus-layer-upgrades).
 
 ## Clients and Nodes {#clients-and-nodes}
 
 The Ethereum network is made up of many nodes, each of which runs compatible client software.
 
-You can [learn how to run a node of your own](/developers/docs/nodes-and-clients/#running-your-own-node) or find a [comprehensive list of all Ethereum clients](/developers/docs/nodes-and-clients/#clients) within our developer documentation.
+You can [learn how to run a node of your own](/developers/docs/nodes-and-clients/#running-your-own-node) or find a [comprehensive list of all Ethereum clients](/developers/docs/nodes-and-clients/#execution-clients) within our developer documentation.
 
 ## Enterprise Ethereum {#enterprise-ethereum}
 
@@ -75,27 +75,27 @@ Enterprise Ethereum refers to private, consortium, and hybrid implementations of
 
 Read more about [Enterprise Ethereum](/enterprise/).
 
-## Improving Ethereum’s Scalability {#improving-ethereums-scalability}
+## Improving Ethereum’s scalability {#improving-ethereums-scalability}
 
 There are many efforts underway to make Ethereum more “scalable” by improving its speed and overall transaction throughput. Generally these are sorted into “Layer 1” and “Layer 2” solutions.
 
-“Layer 1” refers to improving the core Ethereum protocol. The primary project to improve Ethereum’s core protocol is [ETH 2.0](#eth-2-0).
+“Layer 1” refers to improving the core Ethereum protocol. Ethereum has a set of upgrades planned for the continual improvement of both the [execution layer](#execution-layer-upgrades) and the [consensus layer](#consensus-layer-upgrades).
 
 “Layer 2” refers to technologies that are built “on top” of the base Ethereum protocol, enabling greater scalability without compromising on security. There are also “off-chain” technologies like side-chains, which enable greater scalability by making a different set of security tradeoffs.
 
 [More on Layer 2](/developers/docs/scaling/layer-2-rollups/)
 
-## Eth2 {#eth-2-0}
+## Consensus layer upgrades {#consensus-layer-upgrades}
 
-Eth2 (also known as “Serenity”) refers to the next major upgrade of the core Ethereum protocol. It combines several improvements to Ethereum’s core protocol, or “Layer 1”.
+A set of upgrades (originally known as 'Serenity' or 'Eth2') that aim to upgrade the Ethereum protocol's core for a more scalable, sustainable future, utilizing a proof-of-stake consensus layer.
 
-[Learn everything you need to know about Eth2](/eth2/).
+[Learn everything you need to know about Ethereum upgrades](/upgrades/).
 
-## ETH 1.x {#eth-1x}
+## Execution layer upgrades {#execution-layer-upgrades}
 
-ETH 1.x is the name for a collection of upgrades to the existing Ethereum protocol. The goal is to continue to improve and maintain Ethereum while ETH 2.0 is developed and implemented.
+Execution layer upgrades are a separate area of research from the consensus layer. The goal is to continue to improve and maintain the execution layer of Ethereum while the consensus layer is developed and implemented.
 
-For more information, see [EthHub’s explainer page about ETH 1.x](https://docs.ethhub.io/ethereum-roadmap/ethereum-1.x/)
+For more information, see [EthHub’s explainer page about Ethereum's execution layer](https://docs.ethhub.io/ethereum-roadmap/ethereum-1.x/)
 
 ## Cryptoeconomics {#cryptoeconomics}
 
@@ -134,3 +134,9 @@ Podcasts addressing Ethereum and Cryptocurrencies:
 - [Zero Knowledge](https://www.zeroknowledge.fm/) _Goes deep into the tech that will power the emerging decentralised web and the community building this_
 - [Epicenter](https://epicenter.tv/) _Explores the technical, economic, and social implications of the Crypto industry_
 - [Unchained](https://unchainedpodcast.com/) _dives deep into the people building the decentralized internet, the details of this technology that could underpin our future, and some of the thorniest topics in crypto, such as regulation, security and privacy_
+
+## Archived / No longer maintained: {#archived--no-longer-maintained}
+
+Resources about Ethereum-related projects and resources which have been deprecated or are no longer maintained.
+
+- [Deprecated Software](/deprecated-software/) _A list of deprecated software, dapps, and documentation_

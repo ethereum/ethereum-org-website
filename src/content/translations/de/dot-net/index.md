@@ -11,7 +11,7 @@ sidebar: true
 
 Verwende Ethereum, um dezentralen Anwendungen (oder „dApps“) zu erschaffen, die von den kryptografischen Begebenheiten von Kryptowährungen und der Blockchain-Technologie profitieren. Sie sind vertrauenswürdig, was bedeutet, dass dApps nach dem Hochladen auf Ethereum immer exakt wie programmiert ausgeführt werden. Sie können digitale Vermögenswerte verwalten und dadurch neuartige Finanzanwendungen erschaffen. Sie können dezentralisiert sein, was bedeutet, dass keine einzelne Einheit oder Person sie kontrollieren kann und sie so fast unmöglich zu zensieren ist.
 
-Erstelle dezentrale Anwendungen auf Ethereum und interagiere mit Smart Contracts unter Verwendung von Tools und Sprachen aus dem Microsoft-Technologie-Stack - Unterstützt C#, # Visual Basic . ET, F#, über Werkzeuge wie VSCode und Visual Studio, mit dem .NET Framework/.NET Core/.NET Standard. Starte eine Ethereum-Blockchain mit Microsoft Azure Blockchain in wenigen Minuten. Bring die Liebe von .NET zu Ethereum!
+Erstelle dezentrale Anwendungen auf Ethereum und interagiere mit Smart Contracts unter Verwendung von Tools und Sprachen aus dem Microsoft-Technologie-Stack - Unterstützt C#, Visual Basic .NET, F#, über Werkzeuge wie VSCode und Visual Studio, mit dem .NET Framework/.NET Core/.NET Standard. Starte eine Ethereum-Blockchain mit Microsoft Azure Blockchain in wenigen Minuten. Bring die Liebe von .NET zu Ethereum!
 
 <img src="https://raw.githubusercontent.com/Nethereum/Nethereum/master/logos/logo192x192t.png" />
 
@@ -33,9 +33,9 @@ Brauchst du zuerst einen grundsätzlichen Einstieg? Schaue dir [ethereum.org/lea
 - [Nethereum, Erste Schritte](https://docs.nethereum.com/en/latest/getting-started/)
 - [VS Code Solidity installieren](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
 - [Ein .NET Entwickler-Workflow zum Erstellen und Aufrufen von Ethereum Smart Contracts](https://medium.com/coinmonks/a-net-developers-workflow-for-creating-and-calling-ethereum-smart-contracts-44714f191db2)
-- [Smart Contract-Integration mit Nethereum](https://kauri.io/article/b54334b0695342c1bbe161c4c4467b50/smart-contracts-integration-with-nethereum)
+- [Smart Contract-Integration mit Nethereum](https://kauri.io/#collections/getting%20started/smart-contracts-integration-with-nethereum/#smart-contracts-integration-with-nethereum)
 - [Schnittstellen von .NET und Ethereum-Blockchain Smart Contracts mit Nethereum](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933)
-- [Nethereum - Eine Open Source .NET-Integrationsbibliothek für Blockchain](https://kauri.io/article/d15dfd4903f149cdb84b3ce666103b52/v1/nethereum-an-open-source-.net-integration-library-for-blockchain)
+- [Nethereum - Eine Open Source .NET-Integrationsbibliothek für Blockchain](https://kauri.io/#collections/a%20hackathon%20survival%20guide/nethereum-an-open-source-.net-integration-library/)
 - [Schreiben von Ethereum-Transaktionen in eine SQL-Datenbank mit Nethereum](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
 - [Lerne, wie du Smart Contracts mit C# und VisualStudio einfach implementieren kannst](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) <br/>
 
@@ -80,7 +80,7 @@ Suchst du weitere Informationen? Schau dir [ethereum.org/developers](/de/develop
 
 ## .NET-Community Mitwirkende {#dot-net-community-contributors}
 
-Bei Nethereum halten wir uns meistens bei [Gitter](https://gitter.im/Nethereum/Nethereum) auf, wo jeder gerne Fragen stellen oder beantworten, Hilfe bekommen oder einfach nur beobachten kann. Fühle dich frei, eine PR zu erstellen oder eine neue Issue im [Nethereum Github Repository](https://github.com/Nethereum) zu öffnen, oder einfach nur die vielen Seiten/Beispielprojekte zu durchstöbern, die wir haben.
+Bei Nethereum halten wir uns meistens bei [Gitter](https://gitter.im/Nethereum/Nethereum) auf, wo jeder gerne Fragen stellen oder beantworten, Hilfe bekommen oder einfach nur beobachten kann. Fühle dich frei, eine PR zu erstellen oder eine neue Issue im [Nethereum GitHub Repository](https://github.com/Nethereum) zu öffnen, oder einfach nur die vielen Seiten/Beispielprojekte zu durchstöbern, die wir haben.
 
 Bei Nethermind nutzen wir [Gitter](https://gitter.im/nethermindeth/nethermind) um in Kontakt zu treten. Für PRs oder Probleme schaue hier vorbei [Nethermind Repository](https://github.com/NethermindEth/nethermind).
 

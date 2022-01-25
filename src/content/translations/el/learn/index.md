@@ -51,14 +51,13 @@ sidebar: true
 
 - Θέλετε να μάθετε πώς να προγραμματίζετε στο Ethereum με smart contracts; [ethereum.org/el/developers](/el/developers/)
 
-## Απόδειξη της Εργασίας ("Proof of Work") και Εξόρυξη ("Mining") {#proof-of-work-and-mining}
+## Απόδειξη της Εργασίας ("proof-of-work") και Εξόρυξη ("Mining") {#proof-of-work-and-mining}
 
 Το Ethereum χρησιμοποιεί επί του παρόντος ένα σύστημα που ονομάζεται "Απόδειξη της Εργασίας". Αυτό επιτρέπει στο δίκτυο του Ethereum να συμφωνήσει για την κατάσταση όλων των πληροφοριών που καταγράφονται στο blockchain του Ethereum και ταυτόχρονα εμποδίζει οικονομικές επιθέσεις συγκεκριμένου τύπου.
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Ενημερώνεται συχνά - Ethhub_
-- [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
-Στο ETH 2.0, το Ethereum θα μετακινηθεί σε ένα διαφορετικό σύστημα που ονομάζεται " Απόδειξη του Πονταρίσματος" (“Proof of Stake”). [Διαβάστε περισσότερα για το ETH 2.0 παρακάτω](#eth-2-0).
+Στο ETH 2.0, το Ethereum θα μετακινηθεί σε ένα διαφορετικό σύστημα που ονομάζεται " Απόδειξη του Πονταρίσματος" (“proof-of-stake”). [Διαβάστε περισσότερα για το ETH 2.0 παρακάτω](#consensus-layer-upgrades).
 
 ## Πελάτες και κόμβοι {#clients-and-nodes}
 
@@ -71,7 +70,7 @@ sidebar: true
 
 Υπάρχουν πολλές προσπάθειες σε εξέλιξη για να καταστεί το Ethereum πιο "κλιμακούμενο" βελτιώνοντας την ταχύτητα και τη συνολική απόδοση συναλλαγών. Γενικά, αυτές ταξινομούνται σε λύσεις "Layer 1" και "Layer 2".
 
-Το "Layer 1" αναφέρεται στη βελτίωση του βασικού πρωτοκόλλου του Ethereum. Το κύριο έργο για τη βελτίωση του βασικού πρωτοκόλλου του Ethereum είναι το [ ETH 2.0 ](#eth-2-0).
+Το "Layer 1" αναφέρεται στη βελτίωση του βασικού πρωτοκόλλου του Ethereum. Το κύριο έργο για τη βελτίωση του βασικού πρωτοκόλλου του Ethereum είναι το [ ETH 2.0 ](#consensus-layer-upgrades).
 
 Το "Layer 2" αναφέρεται σε τεχνολογίες που χτίζονται πάνω στο βασικό πρωτόκολλο του Ethereum, επιτρέποντας μεγαλύτερη κλιμάκωση χωρίς να διακυβεύεται η ασφάλεια. Υπάρχουν επίσης τεχνολογίες εκτός αλυσίδας, όπως οι πλευρικές αλυσίδες, οι οποίες επιτρέπουν μεγαλύτερη κλιμάκωση, αποδεχόμενες όμως ένα διαφορετικό επίπεδο ασφαλείας.
 
@@ -94,7 +93,7 @@ sidebar: true
 - [Understanding Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) _District0x_
 - [Learn Plasma - A learning resource for the Plasma framework](https://www.learnplasma.org/en/)
 
-## ETH 2.0 {#eth-2-0}
+## ETH 2.0 {#consensus-layer-upgrades}
 
 Το ETH 2.0 (επίσης γνωστό και ως "Serenity") αναφέρεται στην επόμενη σημαντική αναβάθμιση του βασικού πρωτοκόλλου του Ethereum. Συνδυάζει αρκετές βελτιώσεις στο βασικό πρωτόκολλο του Ethereum ("Layer 1").
 
@@ -104,7 +103,7 @@ sidebar: true
 - [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) _Ενημερώνεται συχνά - EthHub_
 - [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(Video) November, 2018 - YouTube_
 
-## ETH 1.x {#eth-1x}
+## ETH 1.x {#execution-layer-upgrades}
 
 Το ETH 1.x είναι το όνομα ενός συνόλου αναβαθμίσεων στο υπάρχον πρωτόκολλο του Ethereum. Ο στόχος είναι να συνεχίσει να βελτιώνεται και να διατηρείται το Ethereum όσο το ETH 2.0 αναπτύσσεται και υλοποιείται.
 

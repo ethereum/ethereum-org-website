@@ -39,11 +39,6 @@ Cadrele sunt prevăzute cu numeroase funcționalități predefinite, cum ar fi:
 - [Documentație](https://docs.epirus.io)
 - [GitHub](https://github.com/epirus-io/epirus-cli)
 
-**Etherlime -** **_cadru pentru dezvoltarea, implementarea, depanarea și testarea de aplicații dapp, bazat pe Ethers.js (Solidity & Vyper)._**
-
-- [Documente](https://etherlime.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/LimeChain/etherlime)
-
 **Hardhat -** **_mediu de dezvoltare Ethereum pentru profesioniști_**
 
 - [hardhat.org](https://hardhat.org)

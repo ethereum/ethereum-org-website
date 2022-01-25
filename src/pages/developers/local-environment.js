@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import { shuffle } from "lodash"
@@ -38,7 +38,7 @@ const HeroContent = styled(Content)`
 const Slogan = styled.h1`
   font-style: normal;
   font-weight: normal;
-  font-family: "SFMono-Regular", monospace;
+  font-family: ${(props) => props.theme.fonts.monospace};
   text-transform: uppercase;
   font-weight: 600;
   font-size: 32px;
@@ -91,7 +91,7 @@ const Column = styled.div`
   width: 100%;
 `
 
-const Hero = styled(Img)`
+const Hero = styled(GatsbyImage)`
   flex: 1 1 100%;
   max-width: 800px;
   background-size: cover;
@@ -293,8 +293,9 @@ const frameworksList = [
     id: "hardhat",
     url: "https://hardhat.org/",
     githubUrl: "https://github.com/nomiclabs/hardhat",
-    background: "#2A2C32",
+    background: "#faf8fb",
     name: "Hardhat",
+    image: "https://hardhat.org/assets/img/Hardhat-logo.652a7049.svg",
     description: "page-local-environment-hardhat-desc",
     alt: "page-local-environment-hardhat-logo-alt",
   },
@@ -370,7 +371,8 @@ const ChooseStackPage = ({ data }) => {
   useEffect(() => {
     const list = shuffle(
       frameworksList.map((item) => {
-        item.image = data[item.id].childImageSharp.fixed
+        if (item.image) return item
+        item.image = getImage(data[item.id])
         return item
       })
     )
@@ -398,30 +400,6 @@ const ChooseStackPage = ({ data }) => {
           <br />
           <Translation id="page-local-environment-setup-subtitle-2" />
         </SubSlogan>
-
-        {/* <Hero
-            fluid={data.hero.childImageSharp.fluid}
-            alt="Illustration of blocks being organised like an ETH symbol"
-            loading="eager"
-          /> */}
-
-        {/* <CardGrid>
-          <StyledCard
-            emoji=":fast_forward:"
-            title="Skip setup"
-            description="Use a pre-made stack."
-          ></StyledCard>
-          <StyledCard
-            emoji=":pancakes:"
-            title="Create your own stack"
-            description="Looking to compare projects to integrate into a framework? Get an idea of the options available for different layers of the stack."
-          ></StyledCard>
-          <StyledCard
-            emoji=":woman_student:"
-            title="Learn about the stack"
-            description="If you're not ready and want to brush up on your Ethereum knowledge, check out our docs."
-          ></StyledCard>
-        </CardGrid> */}
       </HeroContent>
       <Content>
         <TwoColumnContent>
@@ -455,7 +433,7 @@ const ChooseStackPage = ({ data }) => {
           </Column>
           <Column>
             <Hero
-              fluid={data.hero.childImageSharp.fluid}
+              image={getImage(data.hero)}
               alt={translateMessageId("alt-eth-blocks", intl)}
               loading="eager"
             />
@@ -611,27 +589,36 @@ export default ChooseStackPage
 export const devtoolImage = graphql`
   fragment devtoolImage on File {
     childImageSharp {
-      fixed(height: 100) {
-        ...GatsbyImageSharpFixed
-      }
+      gatsbyImageData(
+        height: 100
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
 
 export const query = graphql`
-  query {
+  {
     hero: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       childImageSharp {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(
+          width: 800
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     ogImage: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       childImageSharp {
-        fixed(width: 1200) {
-          src
-        }
+        gatsbyImageData(
+          width: 1200
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     dapptools: file(relativePath: { eq: "dev-tools/dapptools.png" }) {
@@ -640,9 +627,7 @@ export const query = graphql`
     waffle: file(relativePath: { eq: "dev-tools/waffle.png" }) {
       ...devtoolImage
     }
-    hardhat: file(relativePath: { eq: "dev-tools/hardhat.png" }) {
-      ...devtoolImage
-    }
+
     truffle: file(relativePath: { eq: "dev-tools/truffle.png" }) {
       ...devtoolImage
     }

@@ -51,8 +51,8 @@ To effectively test and verify your code, you must identify the areas that need 
 - [Rapid Risk Assessments](https://infosec.mozilla.org/guidelines/risk/rapid_risk_assessment.html) (our preferred approach when time is short)
 - [Guide to Data-Centric System Threat Modeling](https://csrc.nist.gov/publications/detail/sp/800-154/draft) (aka NIST 800-154)
 - [Shostack thread modeling](https://www.amazon.com/Threat-Modeling-Designing-Adam-Shostack/dp/1118809998)
-- [STRIDE](<https://en.wikipedia.org/wiki/STRIDE_(security)>) / [DREAD](<https://en.wikipedia.org/wiki/DREAD_(risk_assessment_model)>)
-- [PASTA](https://en.wikipedia.org/wiki/Threat_model#P.A.S.T.A.)
+- [STRIDE](<https://wikipedia.org/wiki/STRIDE_(security)>) / [DREAD](<https://wikipedia.org/wiki/DREAD_(risk_assessment_model)>)
+- [PASTA](https://wikipedia.org/wiki/Threat_model#P.A.S.T.A.)
 - [Use of Assertions](https://blog.regehr.org/archives/1091)
 
 ### Components {#components}
@@ -65,7 +65,7 @@ The broad areas that are frequently relevant for smart contracts include:
 
   - Echidna and Manticore are the tools to favor to test state-machine specifications.
 
-- **Access controls.** If you system has privileged users (e.g. an owner, controllers, ...) you must ensure that (1) each user can only perform the authorized actions and (2) no user can block actions from a more priviledged user.
+- **Access controls.** If your system has privileged users (e.g. an owner, controllers, ...) you must ensure that (1) each user can only perform the authorized actions and (2) no user can block actions from a more privileged user.
 
   - Slither, Echidna and Manticore can check for correct access controls. For example, Slither can check that only whitelisted functions lack the onlyOwner modifier. Echidna and Manticore are useful for more complex access control, such as a permission given only if the contract reaches a given state.
 
@@ -86,14 +86,14 @@ The broad areas that are frequently relevant for smart contracts include:
 
 ### Tool selection cheatsheet {#tool-selection-cheatsheet}
 
-| Component               | Tools                       | Examples                                                                                                                                                                                                                                                                  |
-| ----------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Component               | Tools                       | Examples                                                                                                                                                                                                                                                        |
+| ----------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | State machine           | Echidna, Manticore          |
-| Access control          | Slither, Echidna, Manticore | [Slither exercise 2](https://github.com/trailofbits/building-secure-contracts/blob/master/program-analysis/slither/exercise2.md), [Echidna exercise 2](https://github.com/trailofbits/building-secure-contracts/blob/master/program-analysis/echidna/Exercise-2.md)       |
-| Arithmetic operations   | Manticore, Echidna          | [Echidna exercise 1](https://github.com/trailofbits/building-secure-contracts/blob/master/program-analysis/echidna/Exercise-1.md), [Manticore exercises 1 - 3](https://github.com/trailofbits/building-secure-contracts/tree/master/program-analysis/manticore/exercises) |
-| Inheritance correctness | Slither                     | [Slither exercise 1](https://github.com/trailofbits/building-secure-contracts/blob/master/program-analysis/slither/exercise1.md)                                                                                                                                          |
+| Access control          | Slither, Echidna, Manticore | [Slither exercise 2](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/slither/exercise2.md), [Echidna exercise 2](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/Exercise-2.md)       |
+| Arithmetic operations   | Manticore, Echidna          | [Echidna exercise 1](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/Exercise-1.md), [Manticore exercises 1 - 3](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore/exercises) |
+| Inheritance correctness | Slither                     | [Slither exercise 1](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/slither/exercise1.md)                                                                                                                                     |
 | External interactions   | Manticore, Echidna          |
-| Standard conformance    | Slither, Echidna, Manticore | [`slither-erc`](https://github.com/crytic/slither/wiki/ERC-Conformance)                                                                                                                                                                                                   |
+| Standard conformance    | Slither, Echidna, Manticore | [`slither-erc`](https://github.com/crytic/slither/wiki/ERC-Conformance)                                                                                                                                                                                         |
 
 Other areas will need to be checked depending on your goals, but these coarse-grained areas of focus are a good start for any smart contract system.
 

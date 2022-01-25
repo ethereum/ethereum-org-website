@@ -2,7 +2,7 @@
 name: Suggest a developer tool
 about: Anything a developer can use when building with Ethereum
 title: ""
-labels: "Type: Feature, Type: Content"
+labels: "feature :sparkles:, content :fountain_pen:"
 assignees: ""
 ---
 

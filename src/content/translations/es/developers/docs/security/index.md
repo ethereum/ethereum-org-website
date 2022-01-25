@@ -77,7 +77,7 @@ Para permitir a un usuario retirar ETH que ha almacenado previamente en el contr
 2. Envía la cantidad del saldo en ETH
 3. Reinicia su saldo a 0, para que no puedan retirar su saldo de nuevo.
 
-Si se llama desde una cuenta normal (como tu propia cuenta Metamask), esta función, como se esperaba, msg.sender.call.value() simplemente envía su cuenta ETH. Sin embargo, los contratos inteligentes también pueden realizar llamadas. Si un contrato malicioso es el que llama a `retiro ()`, msg.sender.call. alue() no sólo enviará una `cantidad` de ETH, sino que también llamará implícitamente al contrato para comenzar a ejecutar el código. Imaginemos este contracto malicioso:
+Si se llama desde una cuenta normal (como tu propia cuenta Metamask), esta función, como se esperaba, msg.sender.call.value() simplemente envía su cuenta ETH. Sin embargo, los contratos inteligentes también pueden realizar llamadas. Si un contrato malicioso es el que llama a `retiro ()`, msg.sender.call. alue() no sólo enviará una `cantidad` de ETH, sino que también llamará implícitamente al contrato para comenzar a ejecutar el código. Imaginemos este contrato malicioso:
 
 ```solidity
 contract Attacker {
@@ -116,8 +116,6 @@ Al llamar a Attacker.beginAttack(), se iniciará un ciclo que se parecerá a lo 
 ```
 
 Llamar al Attacker.beginAttack con 1 ETH hará que vuelva a entrar el ataque a la Víctima, extrayendo más ETH del proporcionado (tomado de los balances de otros usuarios, causando que el contrato de la Víctima sea sub-colateralizado)
-
-<!-- TODO create a subpage related to re-entrancy & move this content there -->
 
 ### Cómo lidiar con la reentrada (la forma incorrecta) {#how-to-deal-with-re-entrancy-the-wrong-way}
 
@@ -242,11 +240,6 @@ Aunque no hay sustituto para entender los conceptos básicos de seguridad de Eth
 - [mythril](https://github.com/ConsenSys/mythril)
 - [Documentación](https://mythril-classic.readthedocs.io/en/master/about.html)
 
-**SmartContract.Codes: ** **_Motor de búsqueda para códigos fuente verificados de Solidity._**
-
-- [smartcontract.codes (alpha)](https://smartcontract.codes/)
-- [Documentación](https://github.com/ethereum-play/smartcontract.codes/blob/master/README.md)
-
 **Manticore:** **_ Una interfaz de línea de comandos que utiliza una herramienta de ejecución simbólica en contratos inteligentes y binarios._**
 
 - [GitHub](https://github.com/trailofbits/manticore)
@@ -303,7 +296,7 @@ Low level call in Victim.withdraw() (bad-contract.sol#11-16):
     - (success) = msg.sender.call.value(amount)() (bad-contract.sol#13)
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls
 INFO:Slither:bad-contract.sol analyzed (1 contracts with 46 detectors), 2 result(s) found
-INFO:Slither:Use https://crytic.io/ to get access to additional detectors and Github integration
+INFO:Slither:Use https://crytic.io/ to get access to additional detectors and GitHub integration
 ```
 
 Slither ha identificado la re-entrada potencial aquí, mediante la identificación de las líneas clave donde el problema podría ocurrir y proporcionando un enlace con más información acerca del problema:

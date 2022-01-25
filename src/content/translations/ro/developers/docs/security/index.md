@@ -117,8 +117,6 @@ Apelarea Attacker.beginAttack() va începe un ciclu care arată ceva de genul:
 
 Apelul Attacker.beginAttack cu 1 ETH va ataca prin re-intrare Victima, retrăgând mai mult ETH decât a furnizat (luat din soldurile altor utilizatori, cauzând contractul Victimă să devină sub-garantat)
 
-<!-- TODO create a subpage related to re-entrancy & move this content there -->
-
 ### Cum să te descurci cu re-intrarea (modul greșit) {#how-to-deal-with-re-entrancy-the-wrong-way}
 
 Ai putea lua în calcul să învingi re-intrarea împiedicând orice contract inteligent să interacționeze cu codul tău. Când cauți stackoverflow, găsești acest fragment de code (snippet) cu tone de voturi pozitive:
@@ -242,11 +240,6 @@ Deși nu există nici un substitut pentru înțelegerea elementelor de bază ale
 - [mythril](https://github.com/ConsenSys/mythril)
 - [Documentație](https://mythril-classic.readthedocs.io/en/master/about.html)
 
-**SmartContract.Codes -** **_motor de căutare pentru coduri sursă Solidity verificate._**
-
-- [smartcontract.codes (alpha)](https://smartcontract.codes/)
-- [Documentație](https://github.com/ethereum-play/smartcontract.codes/blob/master/README.md)
-
 **Manticore -** **_o interfață tip linie de comandă care utilizează un instrument de execuție simbolică pe contracte inteligente și binare._**
 
 - [GitHub](https://github.com/trailofbits/manticore)
@@ -303,7 +296,7 @@ Low level call in Victim.withdraw() (bad-contract.sol#11-16):
     - (success) = msg.sender.call.value(amount)() (bad-contract.sol#13)
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls
 INFO:Slither:bad-contract.sol analyzed (1 contracts with 46 detectors), 2 result(s) found
-INFO:Slither:Use https://crytic.io/ to get access to additional detectors and Github integration
+INFO:Slither:Use https://crytic.io/ to get access to additional detectors and GitHub integration
 ```
 
 Slither a identificat potențialul de re-intrare aici, identificând liniile cheie în care ar putea apare problema, oferindu-ne un link pentru mai multe detalii despre problemă:

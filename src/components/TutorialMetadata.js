@@ -63,7 +63,7 @@ const AddressContainer = styled.div`
 const Code = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
-  font-family: "SFMono-Regular", monospace;
+  font-family: ${(props) => props.theme.fonts.monospace};
   background: ${(props) => props.theme.colors.ednBackground};
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -115,7 +115,7 @@ const TutorialMetadata = ({ tutorial, data }) => {
         )}
         <DataContainer>
           <Emoji size={1} mr={`0.5em`} text=":stopwatch:" />
-          {tutorial.timeToRead}{" "}
+          {Math.round(tutorial.fields.readingTime.minutes)}{" "}
           <Translation id="comp-tutorial-metadata-minute-read" />
         </DataContainer>
       </HorizontalContainer>

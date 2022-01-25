@@ -25,10 +25,10 @@ Many businesses and consortia have deployed private, permissioned blockchains fo
 ### Key differences {#key-differences}
 
 - Blockchain Security/Immutability - A blockchain’s resistance to tampering is determined by its consensus algorithm. Ethereum Mainnet is secured by the interaction of thousands of independent nodes run by individuals and miners throughout the world. Private chains typically have a small number of nodes which are controlled by one or a few organizations; those nodes can be tightly controlled, but only a few must be compromised in order to rewrite the chain or commit fraudulent transactions.
-- Performance - Because private Enterprise Ethereum chains may use high performance nodes with special hardware requirements and different consensus algorithms such as Proof of Authority, they may achieve higher transaction throughput on the base layer (Layer 1). On Ethereum Mainnet, high throughput can be achieved with the use of [Layer 2 scaling solutions](/developers/docs/scaling/layer-2-rollups/).
-- Cost - The cost to operate a private chain is primarily reflected in labor to set up and manage the chain, and the servers to run it. While there is no cost to connect to Ethereum Mainnet, there is a gas cost for every transaction which must be paid for in Ether. Transaction relayers (aka Gas Stations) are being developed in order to eliminate the need for end users and even enterprises to directly use Ether in their transactions. Some [analyses](https://github.com/EYBlockchain/fundamental-cost-of-ownership/blob/master/EY%20Total%20Cost%20of%20Ownership%20for%20Blockchain%20Solutions.pdf) have shown that the total cost to operate an application may be lower on Mainnet than running a private chain.
+- Performance - Because private Enterprise Ethereum chains may use high performance nodes with special hardware requirements and different consensus algorithms such as proof-of-authority, they may achieve higher transaction throughput on the base layer (Layer 1). On Ethereum Mainnet, high throughput can be achieved with the use of [Layer 2 scaling solutions](/developers/docs/scaling/layer-2-rollups/).
+- Cost - The cost to operate a private chain is primarily reflected in labor to set up and manage the chain, and the servers to run it. While there is no cost to connect to Ethereum Mainnet, there is a gas cost for every transaction which must be paid for in ether. Transaction relayers (aka Gas Stations) are being developed in order to eliminate the need for end users and even enterprises to directly use ether in their transactions. Some [analyses](https://github.com/EYBlockchain/fundamental-cost-of-ownership/blob/master/EY%20Total%20Cost%20of%20Ownership%20for%20Blockchain%20Solutions.pdf) have shown that the total cost to operate an application may be lower on Mainnet than running a private chain.
 - Node Permissioning - Only authorized nodes can join private chains. Anybody can set up a node on Ethereum Mainnet.
-- Privacy - Access to data written to private chains can be controlled by restricting access to the network, and on a more fine grained basis with access controls and private transactions. All data written to Mainnet Layer 1 is viewable by anyone, so sensitive information should be stored and transmitted off-chain, or else encrypted. Design patterns that facilitate this are emerging (e.g. Baseline, Aztec), as well as Layer 2 solutions that can keep data compartmentalized and off of Layer 1.
+- Privacy - Access to data written to private chains can be controlled by restricting access to the network, and on a finer grained basis with access controls and private transactions. All data written to Mainnet Layer 1 is viewable by anyone, so sensitive information should be stored and transmitted off-chain, or else encrypted. Design patterns that facilitate this are emerging (e.g. Baseline, Aztec), as well as Layer 2 solutions that can keep data compartmentalized and off of Layer 1.
 
 ### Why build on Ethereum Mainnet {#why-build-on-ethereum-mainnet}
 
@@ -54,12 +54,12 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 
 ### Products and services {#products-and-services}
 
-- [Alchemy](https://alchemyapi.io/) _provides API services and tools for building and monitoring applications on Ethereum_
+- [Alchemy](https://www.alchemy.com/) _provides API services and tools for building and monitoring applications on Ethereum_
 - [Blockapps](https://blockapps.net/) _implementation of the Enterprise Ethereum protocol, tooling and APIs that form the STRATO platform_
 - [Chainstack](https://chainstack.com/) _mainnet and testnet Ethereum infrastructure hosted in public & isolated customer clouds_
 - [ConsenSys](https://consensys.net/) _provides a range of products and tools for building on Ethereum, as well as consulting and custom development services_
 - [Envision Blockchain](https://envisionblockchain.com/) _provides enterprise focused consulting and development services specializing in Ethereum Mainnet_
-- [EY OpsChain](https://blockchain.ey.com/products/procurement) _provides a procurement workflow by issuing RFQ’s, contracts, purchase orders, and invoices across your network of trusted business partners_
+- [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _provides a procurement workflow by issuing RFQ’s, contracts, purchase orders, and invoices across your network of trusted business partners_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _an enterprise focused open-source Ethereum client developed under the Apache 2.0 license and written in Java_
 - [Infura](https://infura.io/) _scalable API access to the Ethereum and IPFS networks_
 - [Provide](https://provide.services/) _infrastructure and APIs for Enterprise Web3 applications_
@@ -108,7 +108,6 @@ Examples of L2 solutions that are production ready or will be soon include:
   - [Skale](https://skale.network)
   - [POA Network](https://www.poa.network/)
 - Hybrid solutions that combine properties of multiple categories
-  - [Offchain Labs Arbitrum SCSC](https://offchainlabs.com/arbitrum.pdf)
   - [Celer](https://celer.network)
 
 ## Enterprise applications live on Mainnet {#enterprise-live-on-mainnet}
@@ -146,7 +145,7 @@ Here are some of the enterprise applications that have been deployed to the publ
 - [Minespider](https://www.minespider.com/) _supply chain tracking_
 - [ShipChain](https://shipchain.io) _public sidechain of Ethereum and enterprise system for supply chain visibility and trust, especially for multimodal logistics_
 - [Follow Our Fibre](https://www.followourfibre.com) _viscose supply chain traceability_
-- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/procurement) _enables companies to engage in a procurement workflow by issuing RFQ’s, contracts, purchase orders, and invoices across your network of trusted business partners_
+- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _enables companies to engage in a procurement workflow by issuing RFQ’s, contracts, purchase orders, and invoices across your network of trusted business partners_
 - [Treum](https://treum.io/) _brings transparency, traceability, and tradability to supply chains, using blockchain technology_
 
 ### Credentials and certifications {#credentials}
@@ -164,4 +163,4 @@ Here are some of the enterprise applications that have been deployed to the publ
 
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _electricity payments_
 
-If you would like to add to this list, please see [instructions for contributing](https://ethereum.org/en/contributing/).
+If you would like to add to this list, please see [instructions for contributing](/contributing/).

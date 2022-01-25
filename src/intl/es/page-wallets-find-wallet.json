@@ -14,7 +14,6 @@
   "page-find-wallet-description-ambo": "Invierte directamente y obtén tu primera inversión solo unos minutos después de descargar la aplicación",
   "page-find-wallet-description-argent": "Un toque para ganar intereses e invertir. Presta, almacena y envía. Hazte con ello.",
   "page-find-wallet-description-coinbase": "La aplicación segura para almacenar criptomonedas tú mismo",
-  "page-find-wallet-description-dharma": "Dharma es tu portal a DeFi. No más frases semilla, no más extensiones de Chrome.",
   "page-find-wallet-description-enjin": "Impenetrable, con características precisas y conveniente; creado para inversores, jugadores y desarrolladores",
   "page-find-wallet-description-gnosis": "La plataforma más fiable para guardar activos digitales en Ethereum",
   "page-find-wallet-description-imtoken": "imToken es una cartera digital fácil y segura en la que confían millones de personas",
@@ -33,7 +32,6 @@
   "page-find-wallet-description-trezor": "La primera y original cartera de hardware",
   "page-find-wallet-description-trust": "Trust Wallet es una criptomoneda descentralizada de múltiples monedas. Compra criptomonedas, explora dapps, intercambia activos, etc., y mantén el control de tus claves.",
   "page-find-wallet-description-zengo": "ZenGo es la primera cartera de criptomonedas sin clave. Con ZenGo, no hay claves privadas, contraseñas o frases semilla que gestionar o perder. Compra, comercia, gana y almacena con una sencillez y seguridad sin precedentes",
-  "page-find-wallet-dharma-logo-alt": "Logo de Dharma",
   "page-find-wallet-enjin-logo-alt": "Logo de Enjin",
   "page-find-wallet-Ethereum-wallets": "Carteras de Ethereum",
   "page-find-wallet-explore-dapps": "Explorar dapps",
@@ -61,7 +59,7 @@
   "page-find-wallet-myetherwallet-logo-alt": "Logo de MyEtherWallet",
   "page-find-wallet-new-to-wallets": "¿Nuevo en carteras? Aquí tienes una descripción general para empezar.",
   "page-find-wallet-new-to-wallets-link": "Carteras de Ethereum",
-  "page-find-wallet-not-all-features": "Ninguna cartera tiene todas estas características",
+  "page-find-wallet-not-all-features": "Ninguna cartera tiene todas estas características todavía",
   "page-find-wallet-not-endorsements": "Las carteras que aparecen en esta página no están homologadas de manera oficial y se proporcionan solo con fines informativos. Sus descripciones las han facilitado las propias empresas de las carteras. Añadimos productos a esta página de acuerdo con los criterios de nuestros",
   "page-find-wallet-overwhelmed": "Carteras de Ethereum abajo. ¿Estás abrumado? Intenta filtrar por características.",
   "page-find-wallet-pillar-logo-alt": "Logo de Pillar",
@@ -86,7 +84,6 @@
   "page-find-wallet-we-found": "Encontramos",
   "page-find-wallet-withdraw": "Retirar al banco",
   "page-find-wallet-withdraw-desc": "Puedes retirar tus ETH directamente a tu cuenta bancaria sin pasar por un intercambio.",
-  "page-find-wallet-yet": "todavía",
   "page-find-wallet-zengo-logo-alt": "Logo de ZenGo",
   "page-stake-eth": "Apostar ETH"
 }

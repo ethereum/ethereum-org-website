@@ -7,16 +7,13 @@ sidebar: true
 
 ## ¿Qué es un contrato inteligente?
 
-Un "contrato inteligente" es básicament un programa que se ejecuta en la blockchain de Ethereum. Se trata de un grupo de código (sus funciones) y datos (su estado) que existe en una dirección específica en la blockchain de Ethereum.
+Un "contrato inteligente" es básicamente un programa que se ejecuta en la blockchain de Ethereum. Se trata de un grupo de código (sus funciones) y datos (su estado) que existe en una dirección específica en la blockchain de Ethereum.
 
-Los contratos inteligentes son un tipo de [cuenta de Ethereum](/en/developers/docs/accounts/). Esto significa que tienen un saldo y pueden enviar transacciones por la red. Sin embargo, no están controlados por un usuario, sino que están implementados en la red y se ejecutan como se hayan programado. Las cuentas de usuario pueden interactuar con un contrato inteligente enviando transacciones que ejecuten una función definida en el contrato inteligente. Los contratos inteligentes pueden definir reglas, como un contrato normal, y automáticamente se ejecutan a través del código.
+Los contratos inteligentes son un tipo de [cuenta de Ethereum](/developers/docs/accounts/). Esto significa que tienen un saldo y pueden enviar transacciones por la red. Sin embargo, no están controlados por un usuario, sino que están implementados en la red y se ejecutan como se hayan programado. Las cuentas de usuario pueden interactuar con un contrato inteligente enviando transacciones que ejecuten una función definida en el contrato inteligente. Los contratos inteligentes pueden definir reglas, como un contrato normal, y automáticamente se ejecutan a través del código.
 
 ## Requisitos previos {#prerequisites}
 
 Asegúrate de haber leído sobre las [cuentas](/developers/docs/accounts/), [transacciones](/developers/docs/transactions/) y la [máquina virtual de Ethereum](/developers/docs/evm/) antes de entrar en el mundo de los contratos inteligentes.
-
-<!-- TODO simpler example... scheduling payments in Ethereum is actually difficult -->
-<!-- TODO show an example smart contract, e.g. an implementation of a vending machine -->
 
 ## Una máquina expendedora digital {#a-digital-vending-machine}
 
@@ -33,9 +30,9 @@ Esta lógica está programada en la máquina expendedora.
 Un contrato inteligente, como una máquina expendedora, tiene la lógica programada en él. A continuación incluimos un ejemplo que demuestra que la máquina expendedora podría parecerse al contrato inteligente:
 
 ```solidity
-pragma solidity 0.6.11;
+pragma solidity 0.8.7;
 
-contrato VendingMachine {
+contract VendingMachine {
 
     // Declarar las variables del estado del contrato
     address public owner;
@@ -44,7 +41,7 @@ contrato VendingMachine {
     // Cuando se implementa el contrato "VendingMachine":
     // 1. configurar la dirección de implantación como el propietario del contrato
     // 2. configurar el saldo de magdalenas del contrato inteligente implementado en 100
-    constructor() public {
+    constructor() {
         owner = msg.sender;
         cupcakeBalances[address(this)] = 100;
     }
@@ -69,16 +66,16 @@ Del mismo modo que una máquina expendedora elimina la necesidad de un empleado,
 
 ## Sin permiso {#permissionless}
 
-Cualquiera puede escribir un contrato inteligente e implementarlo en la red. Solo tienes que aprender a programar en un [lenguaje de contrato inteligente](/en/developers/docs/smart-contracts/languages/) y tener una cantidad suficiente de ETH para implementar tu contrato. Implementar un contrato inteligente es técnicamente una transacción, así que necesitas pagar tu [gas](/en/developers/docs/gas/) del mismo modo que necesitas pagar gas a cambio de realizar una simple transferencia de ETH. Sin embargo, los costes de gas para la implementación de contratos son mucho mayores.
+Cualquiera puede escribir un contrato inteligente e implementarlo en la red. Solo tienes que aprender a programar en un [lenguaje de contrato inteligente](/developers/docs/smart-contracts/languages/) y tener una cantidad suficiente de ETH para implementar tu contrato. Implementar un contrato inteligente es técnicamente una transacción, así que necesitas pagar tu [gas](/developers/docs/gas/) del mismo modo que necesitas pagar gas a cambio de realizar una simple transferencia de ETH. Sin embargo, los costes de gas para la implementación de contratos son mucho mayores.
 
 Ethereum dispone de lenguajes cómodos para que los programadores puedan redactar contratos inteligentes:
 
 - Solidity
 - Vyper
 
-[Más sobre lenguajes](/en/developers/docs/smart-contracts/languages/)
+[Más sobre lenguajes](/developers/docs/smart-contracts/languages/)
 
-Sin embargo, deben compilarse antes de implementarse para que la máquina virtual de Ethereum pueda interpretar y almacenar el contrato. [Más información sobre la compilación](/en/developers/docs/smart-contracts/compiling/)
+Sin embargo, deben compilarse antes de implementarse para que la máquina virtual de Ethereum pueda interpretar y almacenar el contrato. [Más información sobre la compilación](/developers/docs/smart-contracts/compiling/)
 
 ## Capacidad de composición {#composability}
 
@@ -86,11 +83,11 @@ Los contratos inteligentes son públicos en Ethereum y se pueden considerar API 
 
 Obtén más información sobre la [composición de contratos inteligentes](/developers/docs/smart-contracts/composability/).
 
-## Limitaciónes {#limitations}
+## Limitaciones {#limitations}
 
-Los contratos inteligentes por sí solos no pueden obtener información sobre eventos "del mundo real" porque no pueden enviar solicitudes HTTP. Esto es así de manera predeterminada, ya que que confiar en información externa podría perjudicar al consenso, que es importante para la seguridad y la decentralización.
+Los contratos inteligentes por sí solos no pueden obtener información sobre eventos "del mundo real" porque no pueden enviar solicitudes HTTP. Esto es así de manera predeterminada, ya que que confiar en información externa podría perjudicar al consenso, que es importante para la seguridad y la descentralización.
 
-Hay maneras de eludir esto con ayuda de [oráculos](/en/developers/docs/oracles/).
+Hay maneras de eludir esto con ayuda de [oráculos](/developers/docs/oracles/).
 
 ## Recursos de contrato inteligente {#smart-contract-resources}
 
@@ -102,7 +99,7 @@ Hay maneras de eludir esto con ayuda de [oráculos](/en/developers/docs/oracles/
 
 **DappSys:** **_Bloques de construcción seguros, flexibles y sencillos para contratos inteligentes._**
 
-- [dapp.tools/dappsys](https://dapp.tools/dappsys/)
+- [Dappsys](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 ## Más lectura {#further-reading}

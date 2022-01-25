@@ -7,7 +7,7 @@ sidebar: true
 
 Since Ethereum is a protocol, this means there can be multiple independent "networks" conforming to this protocol that do not interact with each other.
 
-Networks are different Ethereum environments you can access for development, testing, or production use cases. Your Ethereum account will work across the different networks but your account balance and transaction history wont carry over from the main Ethereum network. For testing purposes, it's useful to know which networks are available and how to get testnet ETH so you can play around with it.
+Networks are different Ethereum environments you can access for development, testing, or production use cases. Your Ethereum account will work across the different networks but your account balance and transaction history won't carry over from the main Ethereum network. For testing purposes, it's useful to know which networks are available and how to get testnet ETH so you can play around with it.
 
 ## Prerequisites {#prerequisites}
 
@@ -27,7 +27,7 @@ When people and exchanges discuss ETH prices, they're talking about Mainnet ETH.
 
 In addition to Mainnet, there are public testnets. These are networks used by protocol developers or smart contract developers to test both protocol upgrades as well as potential smart contracts in a production-like environment before deployment to Mainnet. Think of this as an analog to production versus staging servers.
 
-It’s generally important to test any contract code you write on a testnet before deploying to the Mainnet. If you're building a dapp that integrates with existing smart contracts, most projects have copies deployed to testnests that you can interact with.
+It’s generally important to test any contract code you write on a testnet before deploying to the Mainnet. If you're building a dapp that integrates with existing smart contracts, most projects have copies deployed to testnets that you can interact with.
 
 Most testnets use a proof-of-authority consensus mechanism. This means a small number of nodes are chosen to validate transactions and create new blocks – staking their identity in the process. It's hard to incentivise mining on a proof-of-work testnet which can leave it vulnerable.
 
@@ -47,7 +47,7 @@ A proof-of-authority testnet for those running Geth client.
 
 A proof-of-work testnet. This means it's the best like-for-like representation of Ethereum.
 
-### Testnet Faucets {#testnet-faucets}
+### Testnet faucets {#testnet-faucets}
 
 ETH on testnets has no real value; therefore, there are no markets for testnet ETH. Since you need ETH to actually interact with Ethereum, most people get testnet ETH from faucets. Most faucets are webapps where you can input an address which you request ETH to be sent to.
 
@@ -72,19 +72,10 @@ The consensus process is controlled by a pre-defined set of nodes that are trust
 
 If a public Ethereum network is like the public internet, you can think of a consortium network as a private intranet.
 
-<!-- TODO
+## Related tools {#related-tools}
 
-## Interacting with testnets
-
-### Your own local network {#your-own-local-network}
-
-`geth -—networkid="12345" console`
-
-### Testnets {#testnets-1}
-
-Wallets like MetaMask or MyEtherWallet will allow you to switch networks so you can test your apps using your test ETH.
-
--->
+- [Chainlist](https://chainlist.org/) _list of EVM networks to connect wallets and providers to the appropriate Chain ID and Network ID_
+- [EVM-based Chains](https://github.com/ethereum-lists/chains) _GitHub repo of chain metadata that powers Chainlist_
 
 ## Further reading {#further-reading}
 

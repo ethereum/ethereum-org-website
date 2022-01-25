@@ -16,7 +16,6 @@
   "page-find-wallet-description-argent": "Με ένα πάτημα κερδίστε τόκους & επενδύσεις. Δανειστείτε, αποθηκεύστε και στείλτε. Κάντε το δικό σας.",
   "page-find-wallet-description-authereum": "Χωρίς λήψη, χωρίς διαμοιρασμό. Από οποιοδήποτε πρόγραμμα περιήγησης, οποιαδήποτε στιγμή, από το κινητό ή τον υπολογιστή σας",
   "page-find-wallet-description-coinbase": "Η ασφαλής εφαρμογή για να αποθηκεύσετε τα κρυπτονομίσματά σας",
-  "page-find-wallet-description-dharma": "Το Dharma είναι η πύλη πρόσβασης σε DeFi. Όχι άλλοι διαμοιρασμοί ή επεκτάσεις Chrome.",
   "page-find-wallet-description-enjin": "Αδιαπέραστο, με αρκετές λειτουργίες και κατασκευασμένο ειδικά για εμπόρους, προγραμματιστές και όσους ασχολούνται με παιχνίδια",
   "page-find-wallet-description-gnosis": "Η πιο αξιόπιστη πλατφόρμα για την αποθήκευση των Ethereum assets σας",
   "page-find-wallet-description-imtoken": "το imToken είναι ένα εύκολο και ασφαλές ψηφιακό πορτοφόλι που εμπιστεύονται εκατομμύρια χρήστες",
@@ -35,7 +34,6 @@
   "page-find-wallet-description-trezor": "Η πρώτη επίσημη συσκευή πορτοφολιού",
   "page-find-wallet-description-trust": "Το Trust Wallet, είναι ένα αποκεντρωμένο πορτοφόλι κρυπτονομισμάτων. Αγοράστε κρυπτονομίσματα, εξερευνήστε τις εφαρμογές, τα swap assets και άλλα, διατηρώντας τον έλεγχο των κλειδιών σας.",
   "page-find-wallet-description-zengo": "Το ZenGo είναι το πρώτο πορτοφόλι κρυπτονομισμάτων χωρίς κλειδί. Με το ZenGo, δεν υπάρχουν ιδιωτικά κλειδιά, κωδικοί πρόσβασης ή φράσεις για να διαχειριστείτε ή να χάσετε. Αγοράστε, ανταλλάξτε, κερδίστε και αποθηκεύστε το Ethereum με πρωτοφανή απλότητα και ασφάλεια",
-  "page-find-wallet-dharma-logo-alt": "Λογότυπο Dharma",
   "page-find-wallet-enjin-logo-alt": "Λογότυπο Enjin",
   "page-find-wallet-Ethereum-wallets": "Πορτοφόλια Ethereum",
   "page-find-wallet-explore-dapps": "Εξερευνήστε τα dapps",
@@ -63,7 +61,7 @@
   "page-find-wallet-myetherwallet-logo-alt": "Λογότυπο MyEtherWallet",
   "page-find-wallet-new-to-wallets": "Είστε καινούργιοι στα πορτοφόλια; Ενημερωθείτε παρακάτω πριν ξεκινήσετε.",
   "page-find-wallet-new-to-wallets-link": "Πορτοφόλια Ethereum",
-  "page-find-wallet-not-all-features": "Κανένα πορτοφόλι δεν διαθέτει όλα αυτά τα χαρακτηριστικά",
+  "page-find-wallet-not-all-features": "Κανένα πορτοφόλι δεν διαθέτει όλα αυτά τα χαρακτηριστικά ακόμη",
   "page-find-wallet-not-endorsements": "Τα πορτοφόλια που παρατίθενται σε αυτή τη σελίδα δεν είναι επίσημα εγκεκριμένα και παρέχονται μόνο για ενημερωτικούς σκοπούς. Οι περιγραφές έχουν παραχωρηθεί από τις αντίστοιχες εταιρείες. Προσθέτουμε προϊόντα σε αυτή τη σελίδα με βάση τα κριτήρια μας",
   "page-find-wallet-overwhelmed": "στα Ethereum πορτοφόλια παρακάτω. Πάρα πολλά; Εφαρμόστε τα παρακάτω φίλτρα.",
   "page-find-wallet-pillar-logo-alt": "Λογότυπο Pillar",
@@ -88,7 +86,6 @@
   "page-find-wallet-we-found": "Βρέθηκαν",
   "page-find-wallet-withdraw": "Ανάληψη σε τράπεζα",
   "page-find-wallet-withdraw-desc": "Μπορείτε να εξαργυρώσετε τα ETH σας κατευθείαν στον τραπεζικό σας λογαριασμό χωρίς να κάνετε ανταλλαγή.",
-  "page-find-wallet-yet": "ακόμη",
   "page-find-wallet-zengo-logo-alt": "Λογότυπο ZenGo",
   "page-stake-eth": "Αποθήκευση ΕΤΗ"
 }

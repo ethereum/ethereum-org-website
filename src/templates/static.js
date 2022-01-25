@@ -7,6 +7,7 @@ import styled from "styled-components"
 import ButtonLink from "../components/ButtonLink"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
+import Callout from "../components/Callout"
 import Contributors from "../components/Contributors"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
@@ -24,6 +25,7 @@ import TranslationsInProgress from "../components/TranslationsInProgress"
 import SectionNav from "../components/SectionNav"
 import DocLink from "../components/DocLink"
 import GhostCard from "../components/GhostCard"
+import MatomoOptOut from "../components/MatomoOptOut"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
 import {
@@ -38,6 +40,9 @@ import {
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import UpcomingEventsList from "../components/UpcomingEventsList"
+import Icon from "../components/Icon"
+import SocialListItem from "../components/SocialListItem"
+import YouTube from "../components/YouTube"
 
 const Page = styled.div`
   display: flex;
@@ -54,6 +59,7 @@ const Page = styled.div`
 // Apply styles for classes within markdown here
 const ContentContainer = styled.article`
   max-width: ${(props) => props.theme.breakpoints.m};
+  width: 100%;
 
   .featured {
     padding-left: 1rem;
@@ -112,6 +118,7 @@ const components = {
   MeetupList,
   RandomAppList,
   Roadmap,
+  Link,
   Logo,
   ButtonLink,
   Contributors,
@@ -127,11 +134,16 @@ const components = {
   CardContainer,
   GhostCard,
   UpcomingEventsList,
+  Icon,
+  SocialListItem,
+  MatomoOptOut,
+  Callout,
+  YouTube,
 }
 
-const StaticPage = ({ data: { siteData, mdx }, pageContext }) => {
+const StaticPage = ({ data: { siteData, pageData: mdx }, pageContext }) => {
   const intl = useIntl()
-  const isRightToLeft = isLangRightToLeft(intl.locale)
+  const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang)
 
   const lastUpdatedDate = mdx.parent.fields
     ? mdx.parent.fields.gitLogLatestDate
@@ -140,7 +152,9 @@ const StaticPage = ({ data: { siteData, mdx }, pageContext }) => {
   const tocItems = mdx.tableOfContents.items
   const { editContentUrl } = siteData.siteMetadata
   const { relativePath } = pageContext
-  const absoluteEditPath = `${editContentUrl}${relativePath}`
+  const absoluteEditPath = relativePath.split("/").includes("whitepaper")
+    ? ""
+    : `${editContentUrl}${relativePath}`
 
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
@@ -150,7 +164,7 @@ const StaticPage = ({ data: { siteData, mdx }, pageContext }) => {
       />
       <ContentContainer>
         <Breadcrumbs slug={mdx.fields.slug} />
-        <LastUpdated>
+        <LastUpdated dir={isLangRightToLeft(intl.locale) ? "rtl" : "ltr"}>
           <Translation id="page-last-updated" />:{" "}
           {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
         </LastUpdated>
@@ -182,15 +196,17 @@ export const staticPageQuery = graphql`
         editContentUrl
       }
     }
-    mdx: mdx(fields: { relativePath: { eq: $relativePath } }) {
+    pageData: mdx(fields: { relativePath: { eq: $relativePath } }) {
       fields {
         slug
       }
       frontmatter {
         title
         description
+        lang
         sidebar
         sidebarDepth
+        isOutdated
       }
       body
       tableOfContents

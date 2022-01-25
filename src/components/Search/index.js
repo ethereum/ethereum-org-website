@@ -154,7 +154,7 @@ const indices = [
   { name: `prod-ethereum-org`, title: `Pages`, hitComp: `PageHit` },
 ]
 
-// Validate agaisnt basic requirements of an ETH address
+// Validate against basic requirements of an ETH address
 const isValidAddress = (address) => {
   return /^(0x)?[0-9a-f]{40}$/i.test(address)
 }

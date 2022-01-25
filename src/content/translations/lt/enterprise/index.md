@@ -70,8 +70,8 @@ Viešiesiems ir privatiems Ethereum tinklams gali prireikti specifinių savybių
 
 ### Saugumas {#security}
 
-- [Clef](https://geth.ethereum.org/clef/Overview) _funkcija, naudojama pasirašant sutartis ir duomenis, sukurta pakeisti Geth paskyros valdymą_
-- [EthSigner](https://gitter.im/PegaSysEng/EthSigner) _A sandorio pasirašymo programa, taikoma web3 tiekėjui_
+- [Clef](https://geth.ethereum.org/docs/clef/tutorial) _funkcija, naudojama pasirašant sutartis ir duomenis, sukurta pakeisti Geth paskyros valdymą_
+- [EthSigner](https://github.com/ConsenSys/ethsigner) _A sandorio pasirašymo programa, taikoma web3 tiekėjui_
 
 ### Įrankinė {#tooling}
 

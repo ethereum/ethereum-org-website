@@ -33,7 +33,7 @@ State channel are perhaps best explained through an example, such as a game of t
 
 1. Create a multisig smart contract “Judge” on the Ethereum main-chain that understands the rules of tic-tac-toe, and can identify Alice and Bob as the two players in our game. This contract holds the 1ETH prize.
 
-2. Then, Alice and Bob begin playing the game, opening the state channel. Each moves creates an off-chain transaction containing a “nonce”, which simply means that we can always tell later in what order the moves happened.
+2. Then, Alice and Bob begin playing the game, opening the state channel. Each move creates an off-chain transaction containing a “nonce”, which simply means that we can always tell later in what order the moves happened.
 
 3. When there's a winner, they close the channel by submitting the final state (e.g. a list of transactions) to the Judge contract, paying only a single transaction fee. The Judge ensures that this “final state” is signed by both parties, and waits a period of time to ensure that no one can legitimately challenge the result, and then pays out the 1ETH award to Alice.
 

@@ -116,8 +116,6 @@ contract Attacker {
 
 攻击者帐户使用 1 个 ETH 调用 Attacker.beginAttack 函数将会重复攻击受害者帐户，并将赚取远超其提供 ETH 的数量（这些额外的 ETH 会从其他用户帐户的余额中赚取，这样会造成受害者账户余额减少）
 
-<!-- TODO create a subpage related to re-entrancy & move this content there -->
-
 ### 如何解决重入攻击（一种错误的方式） {#how-to-deal-with-re-entrancy-the-wrong-way}
 
 防止重入攻击的一种简单方法便是让您的任何代码不与任何智能合约进行交互。 但当你搜索 stackoverflow 时，会发现这段被许多人使用的代码片段：
@@ -241,11 +239,6 @@ contract NoLongerAVictim {
 - [mythril](https://github.com/ConsenSys/mythril)
 - [相关文档](https://mythril-classic.readthedocs.io/en/master/about.html)
 
-**SmartContract.codes -** **_用于搜索经过验证的 Solidity 源代码的搜索引擎。_**
-
-- [smartcontract.codes (alpha)](https://smartcontract.codes/)
-- [相关文档](https://github.com/ethereum-play/smartcontract.codes/blob/master/README.md)
-
 **Manticore -** **_在智能合约和二进制文件上使用符号执行工具的命令行界面。_**
 
 - [GitHub](https://github.com/trailofbits/manticore)
@@ -302,7 +295,7 @@ Low level call in Victim.withdraw() (bad-contract.sol#11-16):
     - (success) = msg.sender.call.value(amount)() (bad-contract.sol#13)
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls
 INFO:Slither:bad-contract.sol analyzed (1 contracts with 46 detectors), 2 result(s) found
-INFO:Slither:Use https://crytic.io/ to get access to additional detectors and Github integration
+INFO:Slither:Use https://crytic.io/ to get access to additional detectors and GitHub integration
 ```
 
 Slither 已经在这里确定了重新进入的可能性。 确定问题可能出现的关键行号，并为我们提供一个链接以获得有关问题的更多细节：
