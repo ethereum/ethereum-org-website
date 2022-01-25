@@ -12,7 +12,7 @@ summaryPoint4: Segurament la coneixeràs com a "Fase 0" de la planificació tèc
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
-    La Cadena de Balisa es va posar en marxa l'1 de desembre al migdia (UTC). Per saber-ne més <a href="https://beaconscan.com/">explora les dades</a>. Si vols ajudar a validar la cadena, pots <a href="/upgrades/staking/">"apostar" els teus ETH</a>.
+    La Cadena de Balisa es va posar en marxa l'1 de desembre al migdia (UTC). Per saber-ne més <a href="https://beaconscan.com/">explora les dades</a>. Si vols ajudar a validar la cadena, pots <a href="/staking/">"apostar" els teus ETH</a>.
 </UpgradeStatus>
 
 ## Què fa la Cadena de Balisa? {#what-does-the-beacon-chain-do}
