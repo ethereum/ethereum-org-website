@@ -16,7 +16,7 @@ sidebar: true
 - 翻译标签内的文本，但不翻译标签本身。 不能翻译或删除 `<` and `>` 中的任何内容。
 - 为了保持语句完整，建议您点击左下方的"复制源代码"按钮。 这将复制原文语句并粘贴到文本框内。 这让您明确标签的位置，有助于避免错误。
 
-![高亮显示复制源按钮的 Crowdin 界面](../../../../../contributing/translation-program/translation-guide/html-tag-strings.png)
+![高亮显示复制源按钮的 Crowdin 界面](../../../../../contributing/translation-program/faq/html-tag-strings.png)
 
 您可以在语句中移动标签的位置，使其在句子中更加自然，但请确保移动整个标签。
 
@@ -27,9 +27,9 @@ sidebar: true
 - 查看“屏幕截图”和“上下文”以获取更多信息。 在原文语句部分，您将看到附加的屏幕截图图像，从而了解使用该语句的上下文。
 - 如果仍然不确定，请在“评论部分”中添加标记。 [不知道如何评论？](#comment)
 
-![如何通过屏幕截图为语句提供上下文信息](../../../../../contributing/translation-program/translation-guide/source-string.png)
+![如何通过屏幕截图为语句提供上下文信息](../../../../../contributing/translation-program/faq/source-string.png)
 
-![为上下文添加一个示例截图](../../../../../contributing/translation-program/translation-guide/source-string-2.png)
+![为上下文添加一个示例截图](../../../../../contributing/translation-program/faq/source-string-2.png)
 
 ## 如何留下评论或问题？ 我想标记一个问题或错别字... {#comment}
 
@@ -38,7 +38,7 @@ sidebar: true
 - 点击右上角菜单栏的第二个按钮。 隐藏标签将出现在您的右侧。 留下新评论并点击底部的“问题”复选框。 您可以从下拉菜单选择一个选项，表明问题类型。
 - 问题一旦提交，就将报告给我们的团队。 我们将解决这个问题，并通过回复评论和关闭问题来让您知道。
 
-![如何发表评论和问题](../../../../../contributing/translation-program/translation-guide/comment-issue.png)
+![如何发表评论和问题](../../../../../contributing/translation-program/faq/comment-issue.png)
 
 ## 什么是翻译记忆库 (TM)？ {#translation-memory}
 
@@ -47,7 +47,7 @@ sidebar: true
 - 请看“TM 和 MT 建议”部分，您会看到其他翻译者如何翻译相同或类似语句。 如果发现匹配率很高的建议，可以点击以引用该翻译内容。
 - 如果列表中没有任何内容，您可以搜索 TM 中以前做过的翻译并重新使用以保持一致性。
 
-![翻译记忆库屏幕截图](../../../../../contributing/translation-program/translation-guide/translation-memory.png)
+![翻译记忆库屏幕截图](../../../../../contributing/translation-program/faq/translation-memory.png)
 
 ## 如何使用 Crowdin 词汇表？ {#glossary}
 
@@ -57,15 +57,15 @@ Crowdin 词汇表是阐明术语和定义的最佳位置。 有两种方法来�
 
 - 首先，当您在原文语句上发现带下划线的术语时，将鼠标移到上面，即可看到简要定义。
 
-![词汇表定义示例](../../../../../contributing/translation-program/translation-guide/glossary-definition.png)
+![词汇表定义示例](../../../../../contributing/translation-program/faq/glossary-definition.png)
 
 - 第二，如果看到一个不熟悉但没有下划线的术语，您可以在词汇表选项卡（右侧列第三个按钮）中搜索。 您会找到特定术语和项目中常用术语的解释。
 
-![Crowdin 中“词汇表”选项卡位置的屏幕截图](../../../../../contributing/translation-program/translation-guide/glossary-tab.png)
+![Crowdin 中“词汇表”选项卡位置的屏幕截图](../../../../../contributing/translation-program/faq/glossary-tab.png)
 
 - 如果仍然找不到，即可借此机会添加新术语！ 我们建议您在搜索引擎上进行查找，并将描述添加到词汇表中。 这将非常有助于其他翻译者更好地理解该术语。
 
-![如何向 Crowdin 添加词汇表术语的屏幕截图](../../../../../contributing/translation-program/translation-guide/add-glossary-term.png)
+![如何向 Crowdin 添加词汇表术语的屏幕截图](../../../../../contributing/translation-program/faq/add-glossary-term.png)
 
 ### 术语翻译政策 {#terminology}
 

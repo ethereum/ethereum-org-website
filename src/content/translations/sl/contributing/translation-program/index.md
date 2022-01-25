@@ -97,7 +97,7 @@ Hvala za vaše sodelovanje pri ethereum.org prevajalskem programu!
 
 <InfoBanner shouldCenter emoji=":information_source:">
   Če nam pomagate pri prevajanju, boste morda našli uporabne informacije v naši prevajalski FAQ sekciji. 
-  <a href="/en/contributing/translation-program/translation-guide/">Prevajanje ethereum.org FAQ</a>
+  <a href="/en/contributing/translation-program/faq/">Prevajanje ethereum.org FAQ</a>
 </InfoBanner>
 
 ## Viri {#resources}
