@@ -6050,7 +6050,9 @@
       "profile": "http://factral.github.io/",
       "contributions": [
         "translation",
-        "doc"
+        "doc",
+        "bug",
+        "code"
       ]
     },
     {
