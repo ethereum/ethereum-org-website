@@ -185,6 +185,7 @@
   "page-upgrades-what-happened-to-eth2-3-1": "'Eth1' is now the 'execution layer', which handles transactions and data.",
   "page-upgrades-what-happened-to-eth2-3-2": "'Eth2' is now the 'consensus layer', which handles proof-of-stake consensus.",
   "page-upgrades-what-happened-to-eth2-4": "These terminology updates only change naming conventions; this does not alter Ethereum's goals or roadmap.",
+  "page-upgrades-what-happened-to-eth2-5": "Learn more about the 'Eth2' renaming",
   "page-upgrades-what-to-do": "What do you need to do?",
   "page-upgrades-what-to-do-desc": "If you're a dapp user or ETH holder, you don't need to do anything. If you're a developer or want to start staking, there are ways you can get involved today.",
   "page-upgrades-whats-next": "What are Ethereum upgrades?",

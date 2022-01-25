@@ -12,7 +12,7 @@ summaryPoint4: Bunu teknik yol haritalarından "Aşama 0" olarak biliyor olabili
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
-    İşaret (Beacon) Zinciri 1 Aralık saat 12:00'de (UTC) başlatılmıştır. Daha fazla bilgi için, bk. <a href="https://beaconscan.com/">verileri keşfet</a>. Zincirin doğrulanmasını isterseniz, <a href="/upgrades/staking/">ETH'nizi stake edebilirsiniz</a>.
+    İşaret (Beacon) Zinciri 1 Aralık saat 12:00'de (UTC) başlatılmıştır. Daha fazla bilgi için, bk. <a href="https://beaconscan.com/">verileri keşfet</a>. Zincirin doğrulanmasını isterseniz, <a href="/staking/">ETH'nizi stake edebilirsiniz</a>.
 </UpgradeStatus>
 
 ## İşaret (Beacon) Zinciri Ne Yapar? {#what-does-the-beacon-chain-do}

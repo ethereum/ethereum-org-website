@@ -12,12 +12,12 @@ summaryPoint4: Anda mungkin mengenalnya sebagai "Fase 0" pada roadmap teknis.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
-    Rantai Suar yang diluncurkan pada siang hari, 1 Desember 2020 waktu UTC. Untuk mempelajari lebih lanjut, <a href="https://beaconscan.com/">jelajahi data ini</a>. Jika Anda ingin membantu mengesahkan rantai, Anda dapat <a href="/upgrades/staking/">menaruhkan ETH Anda</a>.
+    Rantai Suar yang diluncurkan pada siang hari, 1 Desember 2020 waktu UTC. Untuk mempelajari lebih lanjut, <a href="https://beaconscan.com/">jelajahi data ini</a>. Jika Anda ingin membantu mengesahkan rantai, Anda dapat <a href="/staking/">menaruhkan ETH Anda</a>.
 </UpgradeStatus>
 
 ## Apa yang dilakukan oleh Rantai Suar? {#what-does-the-beacon-chain-do}
 
-Beacon Chain akan mengadakan atau mengoordinasi jaringan yang sudah diperluas dari [shard](/upgrades/shard-chains/) dan [penaruh](/upgrades/staking/). Tapi itu tidak akan sama seperti [Jaringan Utama Ethereum](/glossary/#mainnet) saat ini. Rantai suar tidak bisa menangani akun ataupun kontrak pintar.
+Beacon Chain akan mengadakan atau mengoordinasi jaringan yang sudah diperluas dari [shard](/upgrades/shard-chains/) dan [penaruh](/staking/). Tapi itu tidak akan sama seperti [Jaringan Utama Ethereum](/glossary/#mainnet) saat ini. Rantai suar tidak bisa menangani akun ataupun kontrak pintar.
 
 Peran Rantai Suar akan berubah seiring berjalannya waktu, namun rantai ini merupakan komponen dasar untuk [jaringan Ethereum yang aman, berkelanjutan, dan terukur yang sedang kami kerjakan](/upgrades/vision/).
 
@@ -30,7 +30,7 @@ Rantai Suar akan memperkenalkan [bukti taruhan](/developers/docs/consensus-mecha
 Penaruhan dan menjadi validator lebih mudah daripada [menambang](/developers/docs/mining/) (itulah bagaimana saat ini jaringan aman). Ini diharapkan dapat membantu membuat Ethereum lebih aman dalam jangka panjang. Semakin banyak orang berpartisipasi dalam jaringan ini, makin terdesentralisasi dan amanlah jaringan ini dari serangan.
 
 <InfoBanner emoji=":money_bag:">
-Jika Anda tertarik untuk menjadi validator dan membantu mengamankan Rantai Suar, <a href="/upgrades/staking/">pelajari selengkapnya tentang penaruhan</a>.
+Jika Anda tertarik untuk menjadi validator dan membantu mengamankan Rantai Suar, <a href="/staking/">pelajari selengkapnya tentang penaruhan</a>.
 </InfoBanner>
 
 Ini juga adalah satu perubahan penting dari peningkatan Eth2 lainnya: [rantai shard](/upgrades/shard-chains/).

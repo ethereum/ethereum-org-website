@@ -12,12 +12,12 @@ summaryPoint4: On peut la voir comme la phase 0 de la feuille de route.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
-  La chaîne phare a démarré le 1er décembre à midi UTC. Pour en savoir plus, <a href="https://beaconscan.com/">explorez les données</a>. Si vous voulez aider à valider la chaîne, vous pouvez <a href="/upgrades/staking/">miser vos ETH</a>.
+  La chaîne phare a démarré le 1er décembre à midi UTC. Pour en savoir plus, <a href="https://beaconscan.com/">explorez les données</a>. Si vous voulez aider à valider la chaîne, vous pouvez <a href="/staking/">miser vos ETH</a>.
 </UpgradeStatus>
 
 ## Que fait la chaîne phare ? {#what-does-the-beacon-chain-do}
 
-La chaîne phare dirigera ou coordonnera le réseau étendu de [fragments](/upgrades/shard-chains/) et de [validateurs](/upgrades/staking/). Mais ce ne sera pas comme le [réseau principal Ethereum](/glossary/#mainnet) d'aujourd'hui. Elle ne peut gérer ni les comptes ni les contrats intelligents.
+La chaîne phare dirigera ou coordonnera le réseau étendu de [fragments](/upgrades/shard-chains/) et de [validateurs](/staking/). Mais ce ne sera pas comme le [réseau principal Ethereum](/glossary/#mainnet) d'aujourd'hui. Elle ne peut gérer ni les comptes ni les contrats intelligents.
 
 Le rôle de la chaîne phare évoluera au fil du temps, mais restera un élément fondamental de l'[Ethereum sécurisé, durable et évolutif auquel nous travaillons](/upgrades/vision/).
 
@@ -30,7 +30,7 @@ La chaîne phare introduira la [preuve d'enjeu](/developers/docs/consensus-mecha
 Miser des ETH et devenir validateur est plus simple que de [miner](/developers/docs/mining/) (ce qui sécurise actuellement le réseau). Et nous espérons que cela contribuera à améliorer la sécurité d'Ethereum sur le long terme. Plus le nombre de participants sera élevé sur le réseau, plus celui-ci sera décentralisé et à l'abri des attaques.
 
 <InfoBanner emoji=":money_bag:">
-  Si vous souhaitez devenir validateur et aider à sécuriser la chaîne phare, <a href="/upgrades/staking/">familiarisez-vous avec le concept de mise en jeu</a>.
+  Si vous souhaitez devenir validateur et aider à sécuriser la chaîne phare, <a href="/staking/">familiarisez-vous avec le concept de mise en jeu</a>.
 </InfoBanner>
 
 C'est également un changement important pour de prochaines mises à jours d'Eth2 : comme les [chaînes fragmentées](/upgrades/shard-chains/).
