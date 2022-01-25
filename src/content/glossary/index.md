@@ -243,7 +243,7 @@ In the context of cryptography, lack of predictability or level of randomness. W
 
 ### execution client {#execution-client}
 
-After the merge to [proof-of-stake](#pos) existing Ethereum mainnet clients will continue to host the [Ethereum Virtual Machine](#evm), validate transactions and execute state transitions but will not participate in consensus. These clients will therefore be referred to as "execution clients".
+After the merge to [proof-of-stake](#pos), existing Ethereum Mainnet clients will continue to host the [Ethereum Virtual Machine](#evm), validate transactions and execute state transitions but will not participate in consensus. These clients will therefore be referred to as "execution clients".
 
 ### execution layer
 
