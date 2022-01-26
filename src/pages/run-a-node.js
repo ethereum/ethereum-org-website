@@ -724,9 +724,7 @@ const RunANodePage = ({ data }) => {
                 <li>
                   <Translation id="page-run-a-node-buy-fully-loaded-note-1" />
                 </li>
-                <li>
-                  <Translation id="page-run-a-node-buy-fully-loaded-note-2" />
-                </li>
+                <li>App-like setup with a GUI.</li>
                 <li>
                   <code>
                     <Translation id="page-run-a-node-buy-fully-loaded-note-3" />
@@ -744,8 +742,7 @@ const RunANodePage = ({ data }) => {
                   />
                 </PlugIcon>
                 <ColumnFill>
-                  These solutions are small income fully loaded. Choose your
-                  hardware, then use the GUI to get up and running.
+                  These solutions are small in size, but come fully loaded.
                 </ColumnFill>
               </StyledTwoColumnContent>
             </div>
