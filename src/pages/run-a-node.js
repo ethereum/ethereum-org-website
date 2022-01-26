@@ -88,18 +88,6 @@ const TwoColumnContent = styled.div`
   }
 `
 
-const StyledTwoColumnContent = styled(TwoColumnContent)`
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    flex-direction: row;
-    align-items: center;
-  }
-  margin-bottom: 2rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
-    flex-direction: column;
-    align-items: center;
-  }
-`
-
 const SplitContent = styled.div`
   display: flex;
   align-items: center;
@@ -227,15 +215,6 @@ const ColumnNarrow = styled.div`
   justify-content: center;
   align-items: center;
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    width: 100%;
-  }
-`
-
-const PlugIcon = styled(ColumnNarrow)`
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    width: fit-content;
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
     width: 100%;
   }
 `
@@ -870,7 +849,9 @@ const RunANodePage = ({ data }) => {
                 intl
               )}
             />
-            <h3>Step 2 – Software</h3>
+            <h3>
+              <Translation id="page-run-a-node-build-your-own-software" />
+            </h3>
           </SvgTitle>
 
           <Flex>
