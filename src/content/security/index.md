@@ -258,6 +258,8 @@ With [the merge](/upgrades/merge/) coming in 2022, scammers have taken advantage
 
 Scammers may appear in the form of "support" telling you if you deposit your ETH you will receive back 'ETH2'. There is no [official Ethereum support](/community/support/), and there is no new token. Never share your wallet seed phrase with anyone.
 
+_Note: There are derivative tokens/tickers that may represent staked ETH (ie. stETH from Lido, rETH from Rocket Pool, ETH2 from Coinbase), but these are not something you need to "migrate to."_
+
 ### Airdrop scams {#airdrop-scams}
 
 Airdrop scams involve a scam project airdropping an asset (NFT, token) into your wallet and sending you to a scam website to claim the airdropped asset. You will get prompted to sign in with your Ethereum wallet and "approve" a transaction when attempting to claim. This transaction compromises your account by sending your public and private keys to the scammer. An alternative form of this scam may have you confirm a transaction that sends funds to the scammer's account.
