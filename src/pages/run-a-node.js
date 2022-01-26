@@ -1005,7 +1005,7 @@ const RunANodePage = ({ data }) => {
             <Translation id="page-run-a-node-staking-description" />
           </p>
           <ButtonContainer>
-            <ResponsiveButtonLink to="/eth2/staking">
+            <ResponsiveButtonLink to="/staking/">
               <Translation id="page-run-a-node-staking-link" />
             </ResponsiveButtonLink>
           </ButtonContainer>
@@ -1112,7 +1112,7 @@ export const query = graphql`
         )
       }
     }
-    leslie: file(relativePath: { eq: "eth2/eth2_rhino.png" }) {
+    leslie: file(relativePath: { eq: "upgrades/upgrade_rhino.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 624
