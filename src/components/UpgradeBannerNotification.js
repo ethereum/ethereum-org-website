@@ -18,7 +18,7 @@ const UpgradeBannerNotification = () => (
   <StyledBannerNotification shouldShow>
     <StyledEmoji text=":megaphone:" />
     <div>
-      <b>'Eth1' and 'Eth2' terms have been deprecated!</b>{" "}
+      <b>We've deprecated our use of 'Eth1' and 'Eth2' terms.</b>{" "}
       <Link to="https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/">
         More info.
       </Link>
