@@ -14,7 +14,7 @@ JSON-RPC 是无状态、轻量级远程程序调用 (RPC) 协议。 规范主要
 ## JSON-RPC 资源 {#json-rpc-resources}
 
 - [以太坊 JSON-RPC 规范](https://playground.open-rpc.org/?schemaUrl=https://raw.githubusercontent.com/ethereum/eth1.0-apis/assembled-spec/openrpc.json&uiSchema[appBar][ui:splitView]=true&uiSchema[appBar][ui:input]=false&uiSchema[appBar][ui:examplesDropdown]=false)
-- [以太坊 JSON-RPC 规范 Github repo](https://github.com/ethereum/eth1.0-apis)
+- [以太坊 JSON-RPC 规范 GitHub repo](https://github.com/ethereum/eth1.0-apis)
 
 ## 客户端实现 {#client-implementations}
 

@@ -1,13 +1,13 @@
 ---
-title: A guide to translating ethereum.org
+title: Translation Program frequently asked questions (FAQ)
 lang: en
-description: How to help with ethereum.org translations
+description: Frequently asked questions about the ethereum.org Translation Program
 sidebar: true
 ---
 
 # Translating ethereum.org guide {#translating-ethereum-guide}
 
-If you're new to the translation program and are hesitant to jump in, here are some FAQs that can help you begin. Use this guide to find answers to the most common queries.
+If you're new to the Translation Program and are hesitant to jump in, here are some FAQs that can help you begin. Use this guide to find answers to the most common queries.
 
 ## How do I translate strings with `<HTML tags>`? {#tags}
 
@@ -70,7 +70,7 @@ The Crowdin glossary is the best place for clarification of terms and definition
 
 ### Terminology translation policy {#terminology}
 
-_For names (brands, companies, people) and new tech terms (Beacon Chain, Validium, etc.)_
+_For names (brands, companies, people) and new tech terms (Eth2, beacon chain, etc.)_
 
 Ethereum presents a lot of new terms that have been coined recently. Some terms will vary from translator to translator as there is no official translation in their respective language. Such inconsistencies can cause misunderstanding and decrease readability.
 

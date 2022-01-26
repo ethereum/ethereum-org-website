@@ -97,7 +97,7 @@ ethereum.org 翻訳プログラムにご参加いただき、ありがとうご�
 
 <InfoBanner shouldCenter emoji=":information_source:">
   翻訳のお手伝いをされている方は、「翻訳に関するFAQ」に役立つ情報が掲載されていますので、ご一読ください。 
-  {" "}<a href="/contributing/translation-program/translation-guide/">ethereum.orgの翻訳に関するFAQ</a>
+  {" "}<a href="/contributing/translation-program/faq/">ethereum.orgの翻訳に関するFAQ</a>
 </InfoBanner>
 
 ## リソース {#resources}

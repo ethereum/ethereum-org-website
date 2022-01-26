@@ -30,9 +30,9 @@ Esta lógica está programada en la máquina expendedora.
 Un contrato inteligente, como una máquina expendedora, tiene la lógica programada en él. A continuación incluimos un ejemplo que demuestra que la máquina expendedora podría parecerse al contrato inteligente:
 
 ```solidity
-pragma solidity 0.6.11;
+pragma solidity 0.8.7;
 
-contrato VendingMachine {
+contract VendingMachine {
 
     // Declarar las variables del estado del contrato
     address public owner;
@@ -41,7 +41,7 @@ contrato VendingMachine {
     // Cuando se implementa el contrato "VendingMachine":
     // 1. configurar la dirección de implantación como el propietario del contrato
     // 2. configurar el saldo de magdalenas del contrato inteligente implementado en 100
-    constructor() public {
+    constructor() {
         owner = msg.sender;
         cupcakeBalances[address(this)] = 100;
     }
