@@ -109,7 +109,6 @@ Acolad is one of the largest language service providers in the world, working wi
 
 The review process is straightforward; once a certain [content bucket](/contributing/translation-program/content-buckets) is 100% translated, we order a review for that content bucket. The review process takes place directly in Crowdin. Once the review is complete, we update the website with the translated content.
 
-The review process takes place directly in Crowdin, and once it is complete, we add the translated content to the website.
 
 ## How do I add content in my language? {#adding-foreign-language-content}
 
