@@ -11,6 +11,7 @@ const buttonStyling = `
   font-size: 1rem;
   border-radius: 0.25em;
   text-align: center;
+  cursor: pointer;
   ${margin}
 `
 
@@ -53,8 +54,8 @@ const SecondaryLink = styled(StyledLinkButton)`
 `
 
 const PrimaryScrollLink = styled(StyledScrollButton)`
-  background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.buttonColor} !important;
+  background-color: ${(props) => props.theme.colors.primary};
   border: 1px solid transparent;
 
   &:hover {
