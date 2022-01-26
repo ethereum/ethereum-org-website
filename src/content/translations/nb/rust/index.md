@@ -26,21 +26,19 @@ Trenger du en mer grunnleggende informasjon først? Sjekk ut [ethereum.org/learn
 
 - [Velger du en Ethereum klient](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Rust - Ethereum klient](https://wiki.parity.io/Setup)
-- [Sender transaksjonen til Ethereum ved å bruke Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [Sender transaksjonen til Ethereum ved å bruke Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [En introduksjon til Smart Kontrakt med Parity Ethereum klient](https://wiki.parity.io/Smart-Contracts)
-- [Sette opp miljøet til Oasis SDK](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [Sette opp miljøet til Oasis SDK](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [En trinnvis veiledning om hvordan du skriver kontrakter i rust Wasm for Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Mellomstadie-artikler {#intermediate-articles}
 
 - [Rust-Web3 Dokumentasjon](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Rust-Web3 Arbeidseksempler](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Opprette en hemmelig balant med OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Opprette en Privat Chat Server med OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Avansert bruksmønster {#advanced-use-patterns}
 
-- [pwasm_ethereum externs biblioteket for å interagere med Ethereum-lignende nettverk](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [pwasm_ethereum externs biblioteket for å interagere med Ethereum-lignende nettverk](https://github.com/openethereum/pwasm-ethereum)
 - [Bygg en desentralisert chat som bruker JavaScript og Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Bygg en desentralisert Todo App Using Vue.js & Rust ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Komme i gang med Enigma - I Rust Programmeringsspråk](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)

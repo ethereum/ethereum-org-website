@@ -54,7 +54,7 @@ Différentes organisations sont à l'origine d'initiatives collaboratives afin d
 - [Blockapps](https://blockapps.net/)_ - Implémentation du protocole Ethereum pour les entreprises, outils et API constituant la plateforme STRATO_
 - [ConsenSys](https://consensys.net/) _- Fournit une gamme de produits et d'outils pour construire sur Ethereum, ainsi que des services de conseil et de développement personnalisés_
 - [Envision Blockchain](https://envisionblockchain.com/) _- Fournit des services de conseil et de développement axés sur les entreprises, et spécialisés sur le réseau principal Ethereum_
-- [EY OpsChain](https://blockchain.ey.com/products/procurement) _- Fournit un workflow d'approvisionnement en émettant des demandes de devis (RFQ), des contrats, des bons de commande et des factures à travers votre réseau de partenaires commerciaux de confiance_
+- [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _- Fournit un workflow d'approvisionnement en émettant des demandes de devis (RFQ), des contrats, des bons de commande et des factures à travers votre réseau de partenaires commerciaux de confiance_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _- Client Ethereum en open source axé sur les entreprises, développé sous la licence Apache 2.0 et rédigé en Java_
 - [Infura](https://infura.io/) _- Accès évolutif aux API des réseaux Ethereum et IPFS_
 - [Provide](https://provide.services/) _- Infrastructure et API pour les applications d'entreprise Web3_
@@ -102,7 +102,6 @@ Voici quelques exemples de solutions L2 prêtes pour la production ou qui le ser
   - [Skale](https://skale.network)
   - [POA Network](https://www.poa.network/)
 - Solutions hybrides qui combinent les propriétés de plusieurs catégories
-  - [Offchain Labs Arbitrum SCSC](https://https://offchainlabs.com/arbitrum.pdf)
   - [Celer](https://celer.network)
 
 ## Applications d'entreprise live sur le réseau principal {#enterprise-live-on-mainnet}
@@ -140,7 +139,7 @@ Voici quelques-unes des applications d'entreprise déployées sur le réseau pri
 - [Minespion](https://www.minespider.com/) _- Suivi de la chaîne logistique_
 - [ShipChain](https://shipchain.io) _- Chaîne latérale publique d'Ethereum et système d'entreprise pour la visibilité et la confiance dans la chaîne logistique, en particulier pour la logistique multimodale_
 - [Follow Our Fibre](https://www.followourfibre.com)_ - Traçabilité de la chaîne logistique de la viscose_
-- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/procurement) _- Permet aux entreprises de s'engager dans un workflow d'approvisionnement en émettant des demandes de devis (RFQ), des contrats, des bons de commande et des factures à travers votre réseau de partenaires commerciaux de confiance_
+- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _- Permet aux entreprises de s'engager dans un workflow d'approvisionnement en émettant des demandes de devis (RFQ), des contrats, des bons de commande et des factures à travers votre réseau de partenaires commerciaux de confiance_
 - [Treum](https://treum.io/) _- Apporte transparence, traçabilité et négociabilité aux chaînes logistiques, en utilisant la technologie blockchain_
 
 ### Identifications et certifications {#credentials}
@@ -158,4 +157,4 @@ Voici quelques-unes des applications d'entreprise déployées sur le réseau pri
 
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _- Paiements de factures d'électricité_
 
-Si vous souhaitez ajouter des éléments à cette liste, veuillez consulter [les instructions pour contribuer](https://ethereum.org/en/contributing/).
+Si vous souhaitez ajouter des éléments à cette liste, veuillez consulter [les instructions pour contribuer](/contributing/).

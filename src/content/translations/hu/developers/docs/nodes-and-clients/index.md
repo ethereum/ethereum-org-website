@@ -11,7 +11,7 @@ Ahhoz, hogy az Ethereum decentralziáltan tudjon működni, egy elosztott csomó
 
 ## Előfeltételek {#prerequisites}
 
-Érdemes tisztában lenned a decentralizált hálózat fogalmával, mielőtt belemélyednél és futtatnád a saját Ethereum kliens példányodat. Nézd meg a [bevezetés az Ethereumba](/en/developers/docs/intro-to-ethereum/) cikket.
+Érdemes tisztában lenned a decentralizált hálózat fogalmával, mielőtt belemélyednél és futtatnád a saját Ethereum kliens példányodat. Nézd meg a [bevezetés az Ethereumba](/developers/docs/intro-to-ethereum/) cikket.
 
 ## Mik azok a csomópontok és kliensek? {#what-are-nodes-and-clients}
 
@@ -19,9 +19,9 @@ A "csomópont" egy szoftverre utal, melyet kliensnek hívunk. Egy kliens egy Eth
 
 Valós idejű látványt kaphatsz az Ethereum hálózatról, ha megnézed a [csomópontok térképét](https://etherscan.io/nodetracker).
 
-Valamennyi [Ethereum kliens implementáció](/developers/docs/nodes-and-clients/#clients) létezik különböző nyelveken. Ami közös van ezekben az implementációkban, hogy mindegyikük egy formális specifikációt követ. Ez a specifikáció mondja ki, hogyan működik az Ethereum hálózat és a blokklánc.
+Valamennyi [Ethereum kliens implementáció](/developers/docs/nodes-and-clients/#execution-clients) létezik különböző nyelveken. Ami közös van ezekben az implementációkban, hogy mindegyikük egy formális specifikációt követ. Ez a specifikáció mondja ki, hogyan működik az Ethereum hálózat és a blokklánc.
 
-![Eth1x kliens](./client-diagram.png) Az Ethereum kliens funkciók egyszerűsített diagramja.
+![Eth1x kliens](../../../../../developers/docs/nodes-and-clients/client-diagram.png) Az Ethereum kliens funkciók egyszerűsített diagramja.
 
 ## Csomópont típusok {#node-types}
 
@@ -59,13 +59,13 @@ A saját csomópont futtatása lehetővé teszi az Ethereum valóban privát, ö
 - Nem kell a címeidet és az egyenlegeidet véletlenszerű csomópontokra szivárogtatnod. Minden ellenőrizhető a saját klienseddel.
 - A dappod biztonságosabb és privátabb lehet, ha saját csomópontot használsz. A [Metamask](https://metamask.io), a [MyEtherWallet](https://myetherwallet.com) és néhány másik tárcát egyszerűen átirányíthatsz a helyi csomópontodra.
 
-![Hogyan férhetsz hozzá az Ethereumhoz az alkalmazásoddal és a csomópontoddal](./nodes.png)
+![Hogyan férhetsz hozzá az Ethereumhoz az alkalmazásoddal és a csomópontoddal](../../../../../developers/docs/nodes-and-clients/nodes.png)
 
 ### Hálózati előnyök {#network-benefits}
 
 A csomópontok sokfélesége fontos az Ethereum egészsége, biztonsága és működési rugalmassága szempontjából.
 
-- Kis méretű csomópontok számára szolgáltatnak blokklánc adatokat, melyek tőlük függnek. Magas használati csúcsok esetén elegendő teljes csomópontnak kell lennie a kis méretű csomópontok szinkronizálásához. A kis méretű csomópontok nem tárolják az egész blokkláncot, ehelyett az adatait hitelesítik a [blokk fejlécekben lévő állapot gyökereken](/en/developers/docs/blocks/#block-anatomy) keresztül. További információkat kérhetnek a blokkokról, ha szükségük van rá.
+- Kis méretű csomópontok számára szolgáltatnak blokklánc adatokat, melyek tőlük függnek. Magas használati csúcsok esetén elegendő teljes csomópontnak kell lennie a kis méretű csomópontok szinkronizálásához. A kis méretű csomópontok nem tárolják az egész blokkláncot, ehelyett az adatait hitelesítik a [blokk fejlécekben lévő állapot gyökereken](/developers/docs/blocks/#block-anatomy) keresztül. További információkat kérhetnek a blokkokról, ha szükségük van rá.
 - A teljes csomópontok betartatják a proof-of-work konszenzus szabályait, így nem lehet őket becsapni olyan blokkok elfogadására, amelyek nem követik őket. Ez extra biztonságot nyújt a hálózatnak, mert ha az összes csomópont kis méretű csomópont lenne, amelyek nem végeznek teljes ellenőrzést, a bányászok megtámadhatnák a hálózatot, és adott esetben magasabb jutalommal rendelkező blokkokat hozhatnának létre.
 
 Ha teljes csomópontot futtatsz, az egész Ethereum hálózat profitál belőle.
@@ -99,7 +99,7 @@ Ha valaki egy Ethereum csomópontot futtat egy nyilvános API-jal a közössége
 
 Másrészt, ha klienst futtatsz, megoszthatod azokat barátaiddal, akiknek szüksége lehet rá.
 
-## Kliensek {#clients}
+## Kliensek {#execution-clients}
 
 Az Ethereumot úgy tervezték, hogy különböző kliensekkel rendelkezzen, amelyeket különféle csapatok fejlesztettek ki különböző programozási nyelvek felhasználásával. Ez erősebbé és sokszínűbbé teszi a hálózatot. Az ideális cél a sokszínűség elérése anélkül, hogy egy kliens dominálna és a hiba lehetőséget a lehető legkisebbre szűkítsük.
 
@@ -113,7 +113,7 @@ Ez a táblázat összegezi a különböző klienseket. Az összesen aktívan dol
 | [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, és Görli           | Gyors, teljes              | Archív, csökkentett |
 | [Trinity](https://trinity.ethereum.org/)                     | Python   | Linux, macOS          | Mainnet, Görli, Ropsten, és még több          | Full, Beam, Fast/Header    | Archív              |
 
-További információkért a támogatott hálózatokról olvasd el az [Ethereum hálózatok](/en/developers/docs/networks/) cikket.
+További információkért a támogatott hálózatokról olvasd el az [Ethereum hálózatok](/developers/docs/networks/) cikket.
 
 ### A különböző implementációk előnyei {#advantages-of-different-implementations}
 
@@ -198,23 +198,23 @@ Attól függően hogy melyik szoftvert és szinkronizációs módot használjuk,
 | Nethermind   | 200GB+                   | 3TB+                      |
 | Besu         | 750GB+                   | 4TB+                      |
 
-![Egy diagram, mely megmutatja, hogy a teljes szinkronizációhoz szükséges adat idővel nő](./full-sync.png)
+![Egy diagram, mely megmutatja, hogy a teljes szinkronizációhoz szükséges adat idővel nő](../../../../../developers/docs/nodes-and-clients/full-sync.png)
 
-![Egy diagram, mely megmutatja, hogy az archív szinkronizációhoz szükséges adat idővel nő](./archive-sync.png)
+![Egy diagram, mely megmutatja, hogy az archív szinkronizációhoz szükséges adat idővel nő](../../../../../developers/docs/nodes-and-clients/archive-sync.png)
 
 A fenti értékek mutatják hogy mindig változik a tárhelykövetelmény. A lehető legfrissebb adatokat a Geth-ről és a Parityről lásd itt: [Teljes szinkronizációs adat](https://etherscan.io/chartsync/chaindefault) és [Archívált szinkronizációs adat](https://etherscan.io/chartsync/chainarchive).
 
 ### Ethereum egy egykártyás számítógépen {#ethereum-on-a-single-board-computer}
 
-A lehető legkényelmesebb és legegyszerűbb módja egy Ethereum csomópont futtatásának ha egykártyás számítógépet használunk ARM architektúrával, mint mondjuk egy Raspberry Pi. [Ethereum ARM-en](https://twitter.com/EthereumOnARM) találunk képeket Geth Parity, Nethermind és Besu kliensekről. Egy egyszerű leírás arról, hogy [hogyan telepítsünk egy ARM klienst](/en/developers/tutorials/run-node-raspberry-pi/).
+A lehető legkényelmesebb és legegyszerűbb módja egy Ethereum csomópont futtatásának ha egykártyás számítógépet használunk ARM architektúrával, mint mondjuk egy Raspberry Pi. [Ethereum ARM-en](https://twitter.com/EthereumOnARM) találunk képeket Geth Parity, Nethermind és Besu kliensekről. Egy egyszerű leírás arról, hogy [hogyan telepítsünk egy ARM klienst](/developers/tutorials/run-node-raspberry-pi/).
 
 A kicsi, olcsó, és hatékony eszközök mint ezek ideálisak egy otthoni csomópont futtatására.
 
-## Eth2 kliensek {#eth2-clients}
+## Eth2 kliensek {#consensus-clients}
 
-Az [Eth2 fejlesztéseket](/eth2/beacon-chain/) új kliensek támogatják. A Beacon Chain-nen fognak futni és az új [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) konszenzus mechanizmust fogják támogatni.
+Az [Eth2 fejlesztéseket](/upgrades/beacon-chain/) új kliensek támogatják. A Beacon Chain-nen fognak futni és az új [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) konszenzus mechanizmust fogják támogatni.
 
-[Eth2 kliens megtekintése](/eth2/get-involved/#clients).
+[Eth2 kliens megtekintése](/upgrades/get-involved/#clients).
 
 ## További olvasnivaló {#further-reading}
 
@@ -228,8 +228,8 @@ Az interneten rengeteg utasítás és információ található az Ethereum klien
 
 ## Kapcsolódó témák {#related-topics}
 
-- [Blokkok](/en/developers/docs/blocks/)
-- [Hálózatok](/en/developers/docs/networks/)
+- [Blokkok](/developers/docs/blocks/)
+- [Hálózatok](/developers/docs/networks/)
 
 ## Kapcsolódó útmutatók {#related-tutorials}
 

@@ -13,11 +13,11 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 **TL;DR**: Flash Raspberry PI 4, conectează un cablu ethernet, conectează discul SSD și pornește dispozitivul pentru a transforma Raspberry PI 4 într-un nod Ethereum 1.0 sau un nod Ethereum 2.0 (lanț Beacon / validator)
 
-[Află mai multe despre Ethereum 2.0 (Eth2)](/eth2/)
+[Află mai multe despre Ethereum 2.0 (Eth2)](/upgrades/)
 
 Mai întâi câteva noțiuni de bază. După cum știi, am întâmpinat unele probleme de memorie [[1]](/developers/tutorials/run-node-raspberry-pi/#references) cu imaginea Raspberry PI 4 ca sistem de operare, Raspbian este încă pe 32 de biți [[2]](/developers/tutorials/run-node-raspberry-pi/#references) (cel puțin cu aplicația „userland”). Chiar dacă preferăm să rămânem cu sistemul de operare oficial am ajuns la concluzia că, pentru a rezolva aceste probleme, trebuie să migrăm la un sistem de operare nativ de 64 de biți
 
-În plus, [Clienții Eth 2.0](/eth2/get-infered/#eth2-clients) nu suportă aplicațiile 32 de biți binare, astfel încât utilizarea Raspbian ar exclude Raspberry Pi 4 de la rularea unui nod Eth 2.0 (și posibilitatea de a miza).
+În plus, [Clienții Eth 2.0](/upgrades/get-involved/#clients) nu suportă aplicațiile 32 de biți binare, astfel încât utilizarea Raspbian ar exclude Raspberry Pi 4 de la rularea unui nod Eth 2.0 (și posibilitatea de a miza).
 
 Deci, după mai multe teste, acum eliberăm 2 imagini diferite bazate pe Ubuntu 20.04 pe 64 biți [[3]](/developers/tutorials/run-node-raspberry-pi/#references): edițiile Eth 1.0 și Eth 2.0.
 
@@ -39,14 +39,14 @@ Practic, ambele sunt aceeași imagine și includ aceleași caracteristici ale im
 
 Ambele imagini includ aceleași pachete, singura diferență dintre ele este că Eth 1.0 rulează Geth în mod implicit, iar Eth 2.0 rulează lanțul Beacon Prysm în mod implicit.
 
-### Clienții Ethereum 1.0 {#ethereum-10-clients}
+### Clienții Ethereum 1.0 {#execution-clients}
 
 - Geth [[8]](/developers/tutorials/run-node-rasp berry-pi/#references): 1.9.13 (oficial compilat binar)
 - Parity [[9]](/developers/tutorials/run-node-raspberry-pi/#references): 2.7.2 (compilat încrucișat)
 - Nethermind [[10]](/developers/tutorials/run-node-raspberry-pi/#references): 1.8.28 (compilat încrucișat)
 - Hyperledger Besu [[11]](/developers/tutorials/run-node-raspberry-pi/#references): 1.4.4 (compilat)
 
-### Clienții Ethereum 2.0 {#ethereum-20-clients}
+### Clienții Ethereum 2.0 {#consensus-clients}
 
 - Prysm [[12]](/developers/tutorials/run-node-raspberry-pi/#references): 1.0.0-alpha6 (oficial compilat binar)
 - Lighthouse [[13]](/developers/tutorials/run-node-raspberry-pi/#references): 0.1.1 (compilat)
@@ -85,7 +85,7 @@ Reține că trebuie să conectezi discul la un port USB 3.0 (albastru)
 
 ## Descărcarea și instalarea imaginii {#image-download-and-installation}
 
-### 1. Descarcă imaginea Eth 1.0 sau Eth 2.0 {#1-download-eth-10-or-eth-20-images}
+### 1. Descarcă imaginea Eth 1.0 sau Eth 2.0 {#1-download-execution-or-consensus-images}
 
 <ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">Descarcă imaginea Eth 1.0</ButtonLink>
 
@@ -201,7 +201,7 @@ Fișierele de configurare ale clientului se află în directorul /etc/ethereum/.
 
 Datele clientului Blockchain sunt stocate în contul de domiciliu Ethereum după cum urmează (reține punctul dinaintea numelui directorului):
 
-### Eth 1.0 {#eth-10}
+### Eth 1.0 {#execution-layer}
 
 ```bash
 /home/ethereum/.geth
@@ -210,7 +210,7 @@ Datele clientului Blockchain sunt stocate în contul de domiciliu Ethereum după
 /home/ethereum/.nethermind
 ```
 
-### Eth2 {#eth2}
+### Eth2 {#consensus-layer}
 
 ```bash
 /home/ethereum/.eth2
@@ -234,14 +234,14 @@ Pentru prima dată, trebuie să creezi manual un cont executând „validatorul�
 
 Am muncit mult încercând să instalăm Raspberry Pi 4 ca un nod complet Ethereum, deoarece știm că imensa bază de utilizare a acestui dispozitiv ar putea avea un impact foarte pozitiv în rețea.
 
-Te rugăm să iei în considerare faptul că aceasta este prima imagine bazată pe Ubuntu 20.04, astfel încât ar putea exista unele erori. Dacă găsești erori, deschide un tichet pe [GitHub](https://github.com/diglos/pi-gen) sau contactează-ne pe [Twitter](https://twitter.com/EthereumOnARM).
+Te rugăm să iei în considerare faptul că aceasta este prima imagine bazată pe Ubuntu 20.04, astfel încât ar putea exista unele erori. Dacă găsești erori, deschide un tichet pe [GitHub](https://github.com/diglos/ethereumonarm) sau contactează-ne pe [Twitter](https://twitter.com/EthereumOnARM).
 
 ## Referințe {#references}
 
 1. [geth se blochează în mod repetat cu SIGSEGV](https://github.com/ethereum/go-ethereum/issues/20190)
-2. [https://github.com/diglos/pi-gen](https://github.com/diglos/pi-gen)
+2. [https://github.com/diglos/ethereumonarm](https://github.com/diglos/ethereumonarm)
 3. https://ubuntu.com/download/raspberry-pi
-4. https://en.wikipedia.org/wiki/Port_forwarding
+4. https://wikipedia.org/wiki/Port_forwarding
 5. https://prometheus.io
 6. https://grafana.com
 7. https://forum.armbian.com/topic/5565-zram-vs-swap/

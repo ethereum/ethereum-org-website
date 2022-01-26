@@ -9,15 +9,13 @@ Les blocs sont des lots de transactions avec un hachage du bloc précédent dans
 
 ## Prérequis {#prerequisites}
 
-Les blocs sont un sujet très accessible pour les débutants. Mais pour vous aider à mieux comprendre cette page, nous vous recommandons de commencer par lire les pages [Comptes](/en/developers/docs/accounts/), [Transactions](/en/developers/docs/transactions/) et [Introduction à Ethereum](/en/developers/docs/intro-to-ethereum/).
-
-<!--The content below was provided by Brian Gu with exception of "what's in a block"-->
+Les blocs sont un sujet très accessible pour les débutants. Mais pour vous aider à mieux comprendre cette page, nous vous recommandons de commencer par lire les pages [Comptes](/developers/docs/accounts/), [Transactions](/developers/docs/transactions/) et [Introduction à Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Pourquoi les blocs? {#why-blocks}
 
 Pour garantir que tous les participants au réseau Ethereum maintiennent un état synchronisé et s'accordent sur l'historique précis des transactions, nous regroupons les transactions en blocs. Cela signifie que des dizaines (ou des centaines) de transactions sont engagées, acceptées et synchronisées en même temps.
 
-![Diagramme montrant une transaction dans un bloc qui cause des changements d'état](./tx-block.png) _Schéma adapté à partir du document [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagramme montrant une transaction dans un bloc qui cause des changements d'état](../../../../../developers/docs/blocks/tx-block.png) _Schéma adapté à partir du document [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 En espaçant les engagements, nous donnons à tous les participants du réseau suffisamment de temps pour parvenir à un consensus : même si des demandes de transaction se produisent des dizaines de fois par seconde, sur Ethereum les blocs sont engagés environ une fois toutes les quinze secondes.
 
@@ -29,7 +27,7 @@ Une fois qu'un bloc est assemblé (miné) par un mineur sur le réseau, il est p
 
 ### Démonstration visuelle {#a-visual-demo}
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="_160oMzblY8" />
 
 ## Protocole de "preuve de travail" {#proof-of-work-protocol}
 
@@ -39,7 +37,7 @@ Preuve de travail signifie ceci :
 - Les autres mineurs qui entendent parler d'un nouveau bloc avec un certificat de légitimité valide doivent accepter le nouveau bloc en tant que bloc conforme suivant sur la blockchain.
 - Le délai exact nécessaire à chaque mineur pour produire ce certificat est une variable aléatoire avec d'importants écarts. Cela garantit qu'il est peu probable* que deux mineurs produisent simultanément des validations pour un bloc proposé en même temps. Lorsqu'un mineur produit et propage un nouveau bloc certifié, il peut être presque certain qu'il sera accepté par le réseau comme le bloc conforme suivant sur la blockchain, sans conflit* (bien qu'il existe également un protocole pour traiter les conflits dans le cas où deux blockchains certifiés sont produites presque simultanément).
 
-[En savoir plus sur le minage](/en/developers/docs/consensus-mechanisms/pow/mining/)
+[En savoir plus sur le minage](/developers/docs/consensus-mechanisms/pow/mining/)
 
 ## Que contient un bloc ? {#block-anatomy}
 
@@ -62,6 +60,6 @@ _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
 ## Sujets connexes {#related-topics}
 
-- [Minage](/en/developers/docs/consensus-mechanisms/pow/mining/)
-- [Transactions](/en/developers/docs/transactions/)
-- [Gas](/en/developers/docs/gas/)
+- [Minage](/developers/docs/consensus-mechanisms/pow/mining/)
+- [Transactions](/developers/docs/transactions/)
+- [Gas](/developers/docs/gas/)

@@ -27,21 +27,19 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 
 - [Escolhendo um Cliente Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Cliente Rust Ethereum](https://wiki.parity.io/Setup)
-- [Enviando uma transação para Ethereum usando Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [Enviando uma transação para Ethereum usando Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Uma Introdução a Smart Contracts com o Cliente Parity Ethereum](https://wiki.parity.io/Smart-Contracts)
-- [Configurando seu ambiente de desenvolvimento do SDK Oasis](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [Configurando seu ambiente de desenvolvimento do SDK Oasis](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Um tutorial passo a passo sobre como criar contratos em Rust Wasm para Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Artigos para Intermediários {#intermediate-articles}
 
 - [Documentação Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Exemplos Rust-Web3](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Criando um Secret Ballot com o OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Criando um servidor de bate-papo privado com o OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## Padrões para uso Avançado {#advanced-use-patterns}
 
-- [pwasm_ethereum: biblioteca externa para interagir com uma rede análoga a Ethereum](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [pwasm_ethereum: biblioteca externa para interagir com uma rede análoga a Ethereum](https://github.com/openethereum/pwasm-ethereum)
 - [Construa um bate-papo descentralizado utilizando JavaScript e Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Construa um aplicativo descentralizado de tarefas utilizando Vue.js & Rust ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Introdução a Enigma - na Linguagem de Programação Rust](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)

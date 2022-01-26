@@ -77,7 +77,7 @@ Optymistyczne pakiety zbiorcze są umieszczone równolegle do głównego łańcu
 
 W przypadku optymistycznych pakietów zbiorczych transakcje są zapisywane w łańcuchu Ethereum jako `calldata`, co optymalizuje je jeszcze bardziej dzięki ograniczeniu kosztów gazu.
 
-Ponieważ obliczanie to powolna, droga część korzystania z Ethereum, optymistyczne pakiety zbiorcze mogą przynieść nawet 10-100-krotną poprawę skalowalności zależną od transakcji. Ta liczba zwiększy się jeszcze bardziej wraz z wprowadzeniem [łańcuchów odłamkowych](/eth2/shard-chains). Wynika to z faktu, że w przypadku zakwestionowania transakcji dostępnych będzie więcej danych.
+Ponieważ obliczanie to powolna, droga część korzystania z Ethereum, optymistyczne pakiety zbiorcze mogą przynieść nawet 10-100-krotną poprawę skalowalności zależną od transakcji. Ta liczba zwiększy się jeszcze bardziej wraz z wprowadzeniem [łańcuchów odłamkowych](/upgrades/shard-chains). Wynika to z faktu, że w przypadku zakwestionowania transakcji dostępnych będzie więcej danych.
 
 #### Transakcje sporne {#disputing-transactions}
 
@@ -114,7 +114,6 @@ Istnieją rozwiązania hybrydowe, które łączą w sobie najlepsze elementy wie
 
 ### Używanie rozwiązań hybrydowych {#use-hybrid-solutions}
 
-- [Offchain Labs Arbitrum SCSC](https://offchainlabs.com/arbitrum.pdf)
 - [Celer](https://www.celer.network/)
 
 ## Dalsza lektura {#further-reading}

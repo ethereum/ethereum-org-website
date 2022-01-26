@@ -8,7 +8,7 @@ incomplete: true
 
 ## Előfeltételek {#prerequisites}
 
-Hogy jobban megértsd ezt az oldalt, javasoljuk, hogy előbb olvasd el a [tranzakciók](/en/developers/docs/transactions/), [blokkok](/en/developers/docs/blocks/) és a [proof-of-work](/developers/docs/consensus-mechanisms/pow/) oldalakat.
+Hogy jobban megértsd ezt az oldalt, javasoljuk, hogy előbb olvasd el a [tranzakciók](/developers/docs/transactions/), [blokkok](/developers/docs/blocks/) és a [proof-of-work](/developers/docs/consensus-mechanisms/pow/) oldalakat.
 
 ## Mi az az Ethereum bányászat? {#what-is-ethereum-mining}
 
@@ -24,10 +24,10 @@ Az Ethereumhoz hasonló decentralizált rendszerek esetében biztosítanunk kell
 
 ## Hogyan bányásszák ki az Ethereum tranzakciókat {#how-ethereum-transactions-are-mined}
 
-1. A felhasználó létrehoz és aláír egy [tranzakció](/en/developers/docs/transactions/) kérvényt valamely [számla](/en/developers/docs/accounts/) privát kulcsával.
-2. A felhasználó közvetíti a tranzakciós kérelmet a teljes hálózat számára valamilyen [csomópontról](/en/developers/docs/nodes-and-clients/).
+1. A felhasználó létrehoz és aláír egy [tranzakció](/developers/docs/transactions/) kérvényt valamely [számla](/developers/docs/accounts/) privát kulcsával.
+2. A felhasználó közvetíti a tranzakciós kérelmet a teljes hálózat számára valamilyen [csomópontról](/developers/docs/nodes-and-clients/).
 3. Amint tudomást szereznek a tranzakció kérvényről, az Ethereum hálózat valamennyi csomópontja hozzáadja a kérvényt a lokális mempooljához, ami azokat a tranzakciós kérvényeket tartalmazza, amikről már tudomást szereztek, de még nem adták hozzá a blokklánchoz egy blokkban.
-4. Egy bizonyos ponton egy bányász csomópont több tucat vagy több száz tranzakció kérvényt összesít egy potenciális [blokkba](/en/developers/docs/blocks/) úgy, hogy a begyűjtött [tranzakciós díj](/en/developers/docs/gas/) maximális legyen, de ne lépje túl a blokk gáz limitet. Ezután a bányász csomópont:
+4. Egy bizonyos ponton egy bányász csomópont több tucat vagy több száz tranzakció kérvényt összesít egy potenciális [blokkba](/developers/docs/blocks/) úgy, hogy a begyűjtött [tranzakciós díj](/developers/docs/gas/) maximális legyen, de ne lépje túl a blokk gáz limitet. Ezután a bányász csomópont:
    1. Ellenőrzi az egyes tranzakciós kérelmek érvényességét (azaz senki nem próbál ethert átutalni olyan számláról, amelyhez nem készített aláírást, a kérés nem hibás, stb.), majd végrehajtja a kérés kódját, megváltoztatva az EVM helyi másolatának állapotát. A bányász jutalmul megkapja a tranzakciós díjat minden ilyen tranzakciós kérvényért a saját számlájára.
    2. Elindítja a proof-of-work “megbízhatósági bizonyítvány” előállításának folyamatát a potenciális blokkra, amint az összes tranzakciós kérelmet érvényesítette és végrehajtotta a helyi EVM másolaton.
 5. Végül egy bányász befejezi a bizonyítvány elkészítését egy blokkra, mely tartalmazza a mi specifikus tranzakciós kérelmünket. A bányász ezután közvetíti a kész blokkot, mely tartalmazza a bizonyítványt és egy checksumot az új, kiállított EVM állapotról.
@@ -39,7 +39,9 @@ Minden tranzakciót egyszer bányásznak ki (blokkba foglalják és első alkalo
 
 ## Egy vizuális bemutató {#a-visual-demo}
 
-Nézd meg ahogy Austin végig kísér a bányászaton és a proof-of-work blokkláncon. <iframe width="100%" height="315" src="https://www.youtube.com/embed/zcX7OJ-L8XQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Nézd meg ahogy Austin végig kísér a bányászaton és a proof-of-work blokkláncon.
+
+<YouTube id="zcX7OJ-L8XQ" />
 
 ## További olvasnivaló {#further-reading}
 

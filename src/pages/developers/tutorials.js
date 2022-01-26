@@ -14,10 +14,13 @@ import Pill from "../../components/Pill"
 import Tag from "../../components/Tag"
 import TutorialTags from "../../components/TutorialTags"
 import Emoji from "../../components/Emoji"
-import { Page, ButtonSecondary } from "../../components/SharedStyledComponents"
+import {
+  ButtonSecondary,
+  FakeLink,
+  Page,
+} from "../../components/SharedStyledComponents"
 
 import { getLocaleTimestamp, INVALID_DATETIME } from "../../utils/time"
-import { hasTutorials } from "../../utils/translations"
 
 import foreignTutorials from "../../data/externalTutorials.json"
 
@@ -189,6 +192,7 @@ const ModalOption = styled.div`
   margin-bottom: 1.5rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     width: 100%;
+    margin: 0.5rem 0;
   }
 `
 
@@ -220,7 +224,7 @@ const TutorialsPage = ({ data, pageContext }) => {
     author: tutorial.frontmatter.author,
     tags: tutorial.frontmatter.tags.map((tag) => tag.toLowerCase().trim()),
     skill: tutorial.frontmatter.skill,
-    timeToRead: tutorial.timeToRead,
+    timeToRead: Math.round(tutorial.fields.readingTime.minutes),
     published: tutorial.frontmatter.published,
     lang: tutorial.frontmatter.lang || "en",
     isExternal: false,
@@ -239,10 +243,15 @@ const TutorialsPage = ({ data, pageContext }) => {
     isExternal: true,
   }))
 
-  const allTutorials = []
-    .concat(externalTutorials, internalTutorials)
+  const allTutorials = [].concat(externalTutorials, internalTutorials)
+
+  const hasTutorialsCheck = allTutorials.some(
+    (tutorial) => tutorial.lang === pageContext.language
+  )
+
+  const filteredTutorials = allTutorials
     .filter((tutorial) =>
-      hasTutorials(pageContext.language)
+      hasTutorialsCheck
         ? tutorial.lang === pageContext.language
         : tutorial.lang === "en"
     )
@@ -250,7 +259,7 @@ const TutorialsPage = ({ data, pageContext }) => {
 
   // Tally all subject tag counts
   const tagsConcatenated = []
-  for (const tutorial of allTutorials) {
+  for (const tutorial of filteredTutorials) {
     tagsConcatenated.push(...tutorial.tags)
   }
 
@@ -269,13 +278,13 @@ const TutorialsPage = ({ data, pageContext }) => {
 
   const [state, setState] = useState({
     activeTagNames: [],
-    filteredTutorials: allTutorials,
+    filteredTutorials: filteredTutorials,
   })
 
   const clearActiveTags = () => {
     setState({
       activeTagNames: [],
-      filteredTutorials: allTutorials,
+      filteredTutorials: filteredTutorials,
     })
   }
 
@@ -331,7 +340,7 @@ const TutorialsPage = ({ data, pageContext }) => {
         </ModalTitle>
         <p>
           <Translation id="page-tutorial-listing-policy-intro" />{" "}
-          <Link to="https://ethereum.org/en/contributing/adding-articles/">
+          <Link to="/contributing/content-resources/">
             <Translation id="page-tutorial-listing-policy" />
           </Link>
         </p>
@@ -412,10 +421,7 @@ const TutorialsPage = ({ data, pageContext }) => {
           <ResultsContainer>
             <Emoji text=":crying_face:" size={3} mb={`2em`} mt={`2em`} />
             <h2>
-              <Translation id="page-tutorial-tags-error" />{" "}
-              <b>
-                <Translation id="page-find-wallet-yet" />
-              </b>
+              <Translation id="page-tutorial-tags-error" />
             </h2>
             <p>
               <Translation id="page-find-wallet-try-removing" />
@@ -451,9 +457,9 @@ const TutorialsPage = ({ data, pageContext }) => {
                   <>
                     {" "}
                     •<Emoji text=":link:" size={1} ml={`0.5em`} mr={`0.5em`} />
-                    <Link to={tutorial.to} hideArrow>
+                    <FakeLink>
                       <Translation id="page-tutorial-external-link" />
-                    </Link>
+                    </FakeLink>
                   </>
                 )}
               </Author>
@@ -479,6 +485,9 @@ export const query = graphql`
       nodes {
         fields {
           slug
+          readingTime {
+            minutes
+          }
         }
         frontmatter {
           title
@@ -489,7 +498,6 @@ export const query = graphql`
           published
           lang
         }
-        timeToRead
       }
     }
   }

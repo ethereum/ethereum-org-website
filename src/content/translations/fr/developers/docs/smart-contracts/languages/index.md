@@ -202,13 +202,13 @@ Si vous débutez avec Ethereum et que vous n'avez pas encore jamais codé avec d
 **Yul**
 
 - Langage intermédiaire pour Ethereum
-- Prends en charge l'[EVM](en/developers/docs/evm) et l'[eWASM](https://github.com/ewasm), un assemblage Web au petit goût d'Ethereum, conçu pour être un dénominateur commun utilisable sur les deux plateformes.
+- Prends en charge l'[EVM](/developers/docs/evm) et l'[eWASM](https://github.com/ewasm), un assemblage Web au petit goût d'Ethereum, conçu pour être un dénominateur commun utilisable sur les deux plateformes.
 - Excellente cible pour les phases d'optimisation de haut niveau qui peuvent bénéficier à la fois aux plateformes EVM et eWASM.
 
 **Yul+**
 
 - Extension de Yul de bas niveau très efficace
-- Initialement conçue pour un contrat de [rollup optimisé](en/developers/docs/layer-2-scaling/#rollups-and-sidechains)
+- Initialement conçue pour un contrat de [rollup optimisé](/developers/docs/layer-2-scaling/#rollups-and-sidechains)
 - Yul+ peut être considéré comme une proposition de mise à niveau expérimentale de Yul, qui y ajoute de nouvelles fonctionnalités
 
 ### Liens importants {#important-links-2}
@@ -251,7 +251,7 @@ Voici quelques éléments à considérer si vous n'en avez encore essayé :
 
 ### Quels sont les avantages de Solidity ? {#solidity-advantages}
 
-- Si vous débutez, il existe de nombreux tutoriels et outils d'apprentissage. Pour plus d'infos, consultez la page [Apprendre en codant](https://ethereum.org/en/developers/learning-tools/).
+- Si vous débutez, il existe de nombreux tutoriels et outils d'apprentissage. Pour plus d'infos, consultez la page [Apprendre en codant](/developers/learning-tools/).
 - De bons outils de développement sont disponibles.
 - Solidity dispose d'une importante communauté de développeurs, ce qui signifie que vous obtiendrez probablement des réponses à vos questions très rapidement.
 

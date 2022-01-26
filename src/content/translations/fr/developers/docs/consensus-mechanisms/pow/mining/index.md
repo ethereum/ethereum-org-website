@@ -8,7 +8,7 @@ incomplete: true
 
 ## Prérequis {#prerequisites}
 
-Pour mieux comprendre cette page, nous vous recommandons de commencer par lire celles concernant [les transactions](/en/developers/docs/transactions/), [les blocs](/en/developers/docs/blocks/) et [la preuve de travail](/developers/docs/consensus-mechanisms/pow/).
+Pour mieux comprendre cette page, nous vous recommandons de commencer par lire celles concernant [les transactions](/developers/docs/transactions/), [les blocs](/developers/docs/blocks/) et [la preuve de travail](/developers/docs/consensus-mechanisms/pow/).
 
 ## Qu'est-ce que le minage Ethereum ? {#what-is-ethereum-mining}
 
@@ -24,10 +24,10 @@ Dans les systèmes décentralisés comme Ethereum, nous devons nous assurer que 
 
 ## Comment les transactions Ethereum sont-elles minées ? {#how-ethereum-transactions-are-mined}
 
-1. Un utilisateur rédige et signe une demande de [transaction](/en/developers/docs/transactions/) avec la clé privée d'un [compte](/en/developers/docs/accounts/).
-2. L'utilisateur diffuse la demande de transaction sur l'ensemble du réseau Ethereum à partir de certains [nœuds](/en/developers/docs/nodes-and-clients/).
+1. Un utilisateur rédige et signe une demande de [transaction](/developers/docs/transactions/) avec la clé privée d'un [compte](/developers/docs/accounts/).
+2. L'utilisateur diffuse la demande de transaction sur l'ensemble du réseau Ethereum à partir de certains [nœuds](/developers/docs/nodes-and-clients/).
 3. Dès qu'il a connaissance de la nouvelle demande de transaction, chaque nœud du réseau Ethereum l'ajoute à son "mempool", une zone d'attente de toutes les demandes de transaction dont il a connaissance et qui n'ont pas encore été engagées dans un bloc de la blockchain.
-4. À un moment donné, un nœud de minage regroupe plusieurs dizaines ou centaines de demandes de transaction dans un [bloc](/en/developers/docs/blocks/) potentiel, de façon à maximiser les [frais de transaction](/en/developers/docs/gas/) gagnés, tout en restant sous la limite de carburant du bloc. Dès lors, le nœud de minage :
+4. À un moment donné, un nœud de minage regroupe plusieurs dizaines ou centaines de demandes de transaction dans un [bloc](/developers/docs/blocks/) potentiel, de façon à maximiser les [frais de transaction](/developers/docs/gas/) gagnés, tout en restant sous la limite de carburant du bloc. Dès lors, le nœud de minage :
    1. Vérifie la validité de chaque demande de transaction (c'est-à-dire que personne n'essaie de transférer un ether depuis un compte pour lequel il n'a pas fourni de signature, que la demande n'est pas mal rédigée, etc.), puis exécute le code de la demande, modifiant l'état de sa copie locale de l'EVM, la machine virtuelle d'Ethereum. Le mineur attribue les frais de transaction pour chaque demande de transaction à son propre compte.
    2. Commence le processus de production du "certificat de légitimité de preuve de travail" pour le bloc potentiel, une fois que toutes les demandes de transaction du bloc ont été vérifiées et exécutées sur la copie locale de l'EVM.
 5. Enfin, un mineur finira de produire un certificat pour un bloc qui inclut notre demande de transaction spécifique. Le mineur diffuse ensuite le bloc terminé qui comprend le certificat et la somme de contrôle du nouvel état de l'EVM.
@@ -39,7 +39,9 @@ Chaque transaction est minée (incluse dans un nouveau bloc et propagée pour la
 
 ## Démonstration visuelle {#a-visual-demo}
 
-Regardez Austin vous guider à travers le minage et la blockchain. <iframe width="100%" height="315" src="https://www.youtube.com/embed/zcX7OJ-L8XQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Regardez Austin vous guider à travers le minage et la blockchain.
+
+<YouTube id="zcX7OJ-L8XQ" />
 
 ## Complément d'information {#further-reading}
 

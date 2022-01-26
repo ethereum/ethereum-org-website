@@ -69,11 +69,11 @@ python3 script.py
 为了了解 DSE 如何工作，请考虑以下示例：
 
 ```solidity
-f(uint a).
+function f(uint a){
 
-  if (aa== 65) }
-      // bug 存在
-
+  if (a == 65) {
+      // A bug is present
+  }
 
 }
 ```
@@ -83,7 +83,7 @@ f(uint a).
 - 路径 1： `a == 65`
 - 路径 2: `Not (a == 65)`
 
-每条路径预测都是一个数学公式，可以传递给给所谓的[SMT 求解器](https://github.com/trailofbits/building-secure-contracts/blob/master/program-analysis/determine-properties.md)，它将尝试解方程式。 对于`路径1`，求解器会说，可以用`a=65`探索路径。 对于`路径2`，求解器可以给`a`指定一个 65 以外的任何值，例如`a=0`。
+每条路径预测都是一个数学公式，可以传递给给所谓的[SMT 求解器](https://wikipedia.org/wiki/Satisfiability_modulo_theories)，它将尝试解方程式。 对于`路径1`，求解器会说，可以用`a=65`探索路径。 对于`路径2`，求解器可以给`a`指定一个 65 以外的任何值，例如`a=0`。
 
 ### 验证属性 {#verifying-properties}
 
@@ -92,9 +92,9 @@ Manticore 允许完全控制每个路径的所有执行情况。 因此，它允
 请考虑下面的示例：
 
 ```solidity
-function unsafe_add(uint a, uint b) returns(uint c)。
-  c = a + b；// no overflow protection
-  return c；
+function unsafe_add(uint a, uint b) returns(uint c){
+  c = a + b; // no overflow protection
+  return c;
 }
 ```
 
@@ -113,8 +113,8 @@ function unsafe_add(uint a, uint b) returns(uint c)。
 ```solidity
 function safe_add(uint a, uint b) returns(uint c){
   c = a + b;
-  require(c->=a);
-  require(c)>=b);
+  require(c>=a);
+  require(c>=b);
   return c;
 }
 ```
@@ -206,13 +206,13 @@ from manticore.etherum importer MantocoreEVM
 m = MantocoreEVM()
 ```
 
-使用[m.create_account](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.create_account)创建一个非合约帐户：
+使用[m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account)创建一个非合约帐户：
 
 ```python
 user_account = m.create_account(balance=1000)
 ```
 
-可以使用[m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.solidity_create_contract)来部署一个 Solidity 合约：
+可以使用[m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract)来部署一个 Solidity 合约：
 
 ```solidity
 source_code = '''
@@ -231,7 +231,7 @@ contract_account = m.solidity_create_contract(source_code, owner=user_account)
 
 #### 概览 {#summary}
 
-- 您可以通过[m.create_account](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.create_account)和\[m.solidity_create_contract\](https://manticore.readthedocs.io/enura/api.html#manticore.eferum.ManticoreEVM.solidity_create_contract)创建用户和合约帐户。
+- 您可以通过[m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account)和[m.solidity_create_contract](https://manticore.readthedocs.io/enura/api.html#manticore.eferum.ManticoreEVM.solidity_create_contract)创建用户和合约帐户。
 
 ### 执行交易 {#executing-transactions}
 
@@ -242,7 +242,7 @@ Manticore 支持两种类型的交易：
 
 #### 原始交易 {#raw-transaction}
 
-使用[m.transaction](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.transaction)执行原始交易：
+使用[m.transaction](https://manticore.readthedocs.io/en/latest/evm.html?highlight=transaction#manticore.ethereum.ManticoreEVM.transaction)执行原始交易：
 
 ```python
 m.transaction(caller=user_account,
@@ -253,8 +253,8 @@ m.transaction(caller=user_account,
 
 调用者、地址、数据或交易的值可以是具体的或抽象的：
 
-- [mmmake_symbolic_value](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.make_symbolic_value)创建一个抽象值。
-- [mmmake_symbolic_buffer(size)](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.make_symbolic_buffer)创建一个符号字节数组。
+- [mmmake_symbolic_value](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_value#manticore.ethereum.ManticoreEVM.make_symbolic_value)创建一个抽象值。
+- [mmmake_symbolic_buffer(size)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_buffer#manticore.ethereum.ManticoreEVM.make_symbolic_buffer)创建一个符号字节数组。
 
 例如
 
@@ -296,7 +296,7 @@ print("Results are in {}".format(m.workspace))
 
 ### 终止探索 {#terminate-the-exploration}
 
-要停止探索，请使用[m.finalize()](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.finalize)。 一旦这个方法被调用，就不应该再发送任何交易，而且 Manticore 会针对所探索的每一条路径生成测试案例。
+要停止探索，请使用[m.finalize()](https://manticore.readthedocs.io/en/latest/evm.html?highlight=finalize#manticore.ethereum.ManticoreEVM.finalize)。 一旦这个方法被调用，就不应该再发送任何交易，而且 Manticore 会针对所探索的每一条路径生成测试案例。
 
 ### 总结：在 Manticore 下运行 {#summary-running-under-manticore}
 
@@ -342,7 +342,7 @@ contract Simple {
 执行的每个路径都有其区块链的状态。 此状态要么是准备就绪，要么是被终止了，也就是说，它达到了 THROW 或 REVERT 指令状态。
 
 - [m.ready_states](https://manticore.readthedocs.io/en/latest/states.html#accessing): 已准备就绪状态列表（他们没有执行 REVERT/INVALID）
-- [m.killed_states](https://manticore.readthedocs.io/en/latest/states.html#accessings)：已准备就绪状态列表（他们没有执行 REVERT/INVALID）
+- [m.killed_states](https://manticore.readthedocs.io/en/latest/states.html#accessings)：终止状态列表
 - [m.all_states](https://manticore.readthedocs.io/en/latest/states.html#accessings)：所有状态
 
 ```python
@@ -365,7 +365,7 @@ data = ABI.deserialize("uint", data)
 
 ### 如何生成测试案例 {#how-to-generate-testcase}
 
-使用[m.generate_testcase(state, name)](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.generate_testcase)生成测试案例：
+使用[m.generate_testcase(state, name)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=generate_testcase#manticore.ethereum.ManticoreEVM.generate_testcase)生成测试案例：
 
 ```python
 m. generate_testcase(state, 'BugFound')
@@ -464,7 +464,7 @@ m.transaction(caller=user_account,
 
 #### 状态约束 {#state-constraint}
 
-使用[state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/api.html?highlight=operator#manticore.core.state.StateBase.constrain)为一个特定的状态添加一个约束。它可以用来在状态检索后对其进行约束，以检查其上的某些属性。
+使用[state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/states.html?highlight=StateBase#manticore.core.state.StateBase.constrain)为一个特定的状态添加一个约束。它可以用来在状态检索后对其进行约束，以检查其上的某些属性。
 
 ### 检查约束 {#checking-constraint}
 

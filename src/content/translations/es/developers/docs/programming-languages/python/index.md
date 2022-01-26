@@ -10,11 +10,11 @@ incomplete: true
 
 Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprovechan las ventajas de las criptomonedas y la tecnología de blockchain. Estas dapps pueden ser confiables, lo que significa que, una vez implementadas en Ethereum, siempre se ejecutan tal y como se programaron. Pueden controlar los activos digitales para crear nuevos tipos de aplicaciones financieras. Estas aplicaciones pueden ser descentralizadas, lo que significa que ninguna entidad o persona las controla y, por lo tanto, son prácticamente imposibles de censurar.
 
-## Comenzar con los contratos inteligentes y el lenguage de Solidity {#getting-started-with-smart-contracts-and-solidity}
+## Comenzar con los contratos inteligentes y el lenguaje de Solidity {#getting-started-with-smart-contracts-and-solidity}
 
 **Da los primeros pasos para integrar Python con Ethereum**
 
-¿Necesitas una introducción más básica para empezar? Visita [ethereum.org/learn](/en/learn/) o [ethereum.org/developers](/en/developers/).
+¿Necesitas una introducción más básica para empezar? Visita [ethereum.org/learn](/learn/) o [ethereum.org/developers](/developers/).
 
 - [Blockchain explicada](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Comprender los contratos inteligentes](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -23,7 +23,7 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 
 ## Artículos para principiantes {#beginner-articles}
 
-- [Una introducción a los contratos inteligentes con Vyper](https://kauri.io/article/af913a853eaf4db88627b3ff9572b770/v1/an-introduction-to-smart-contracts-with-vyper)
+- [Una introducción a los contratos inteligentes con Vyper](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [¿Cómo desarrollar un contrato de Ethereum mediante Python Flask?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Introducción a Web3.py · Ethereum para desarrolladores de Python](https://www.dappuniversity.com/articles/web3-py-intro)
 - [Cómo llamar a una función de contrato inteligente mediante Python y web3.py](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
@@ -38,7 +38,7 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 ## Patrones de uso avanzado {#advanced-use-patterns}
 
 - [Compilar, desplegar y llamar a contratos inteligentes de Ethereum mediante Python](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [Analizar contratos inteligentes de Solifity con Slither](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
+- [Analizar contratos inteligentes de Solifity con Slither](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/)
 
 ## Proyectos y herramientas de Python {#python-projects-and-tools}
 
@@ -54,7 +54,7 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 - [Vyper](https://github.com/ethereum/vyper/): _Contrato inteligente Pythonic para la EVM_
 - [Web3.py](https://github.com/ethereum/web3.py): _Biblioteca de Python para interactuar con Ethereum_
 
-¿Buscas más recursos? Echa un vistazo a [ethereum.org/developers.](/en/developers/)
+¿Buscas más recursos? Echa un vistazo a [ethereum.org/developers.](/developers/)
 
 ## Colaboradores de la comunidad de Python {#python-community-contributors}
 

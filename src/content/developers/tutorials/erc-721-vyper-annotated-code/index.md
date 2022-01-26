@@ -40,7 +40,7 @@ implements: ERC721
 ```
 
 The ERC-721 interface is built into the Vyper language.
-[You can see the code definition here](https://github.com/vyperlang/vyper/blob/master/vyper/interfaces/ERC721.py).
+[You can see the code definition here](https://github.com/vyperlang/vyper/blob/master/vyper/builtin_interfaces/ERC721.py).
 The interface definition is written in Python, rather than Vyper, because interfaces are used not only within the
 blockchain, but also when sending the blockchain a transaction from an external client, which may be written in
 Python.
@@ -228,7 +228,7 @@ can communicate with it, to which ERCs it conforms. In this case, the contract c
 
 ### Functions {#functions}
 
-The are the functions that actually implement ERC-721.
+These are the functions that actually implement ERC-721.
 
 #### Constructor {#constructor}
 
@@ -278,7 +278,7 @@ specify the circumstances in which a function can be called.
 def supportsInterface(_interfaceID: bytes32) -> bool:
 ```
 
-In contrast to Python, Vyper is a [static typed language](https://en.wikipedia.org/wiki/Type_system#Static_type_checking).
+In contrast to Python, Vyper is a [static typed language](https://wikipedia.org/wiki/Type_system#Static_type_checking).
 You can't declare a variable, or a function parameter, without identifying the [data
 type](https://vyper.readthedocs.io/en/latest/types.html). In this case the input parameter is `bytes32`, a 256-bit value
 (256 bits is the native word size of the [Ethereum Virtual Machine](/developers/docs/evm/)). The output is a boolean
@@ -633,7 +633,7 @@ authorized by the owner, can do that.
 def mint(_to: address, _tokenId: uint256) -> bool:
 ```
 
-This function always returns `True`, because if the the operation fails it is reverted.
+This function always returns `True`, because if the operation fails it is reverted.
 
 ```python
     """
@@ -652,7 +652,7 @@ This function always returns `True`, because if the the operation fails it is re
 Only the minter (the account that created the ERC-721 contract) can mint new tokens. This can be a
 problem in the future if we want to change the minter's identity. In
 a production contract you would probably want a function that allows the minter to transfer
-minter priviliges to somebody else.
+minter privileges to somebody else.
 
 ```python
     # Throws if `_to` is zero address
@@ -692,7 +692,7 @@ free up all the storage that was used for the token, which can reduce the gas co
 
 # Using this Contract {#using-contract}
 
-In contrast to Solidty, Vyper does not have inheritence. This is a deliberate design choice to make the
+In contrast to Solidity, Vyper does not have inheritance. This is a deliberate design choice to make the
 code clearer and therefore easier to secure. So to create your own Vyper ERC-721 contract you take [this
 contract](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy) and modify it
 to implement the business logic you want.

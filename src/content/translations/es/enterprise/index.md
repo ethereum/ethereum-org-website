@@ -54,7 +54,7 @@ Diferentes organizaciones han hecho algunos esfuerzos de colaboración para que 
 - Implementación de [blockapps](https://blockapps.net/) _del protocolo de Ethereum para empresas, herramientas y API, que forman la plataforma STRATO_
 - [ConsenSys](https://consensys.net/) _proporciona una gama de productos y herramientas para construir en Ethereum, así como servicios de asesoramiento y desarrollo personalizado_
 - [Envision Blockchain](https://envisionblockchain.com/) _proporciona servicios de consultoría y desarrollo enfocados en empresas, especializándose en la red principal de Ethereum_
-- [EY OpsChain](https://blockchain.ey.com/products/procurement) _proporciona un flujo de trabajo de compras mediante la emisión de RFQ, contratos, órdenes de compra y facturas a través de su red de socios comerciales de confianza_
+- [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _proporciona un flujo de trabajo de compras mediante la emisión de RFQ, contratos, órdenes de compra y facturas a través de su red de socios comerciales de confianza_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _ es un cliente Ethereum de fuente abierta enfocado en emprendimientos, desarrollado bajo licencia Apache 2.0 y escrito en Java_
 - [Infura:](https://infura.io/) _Acceso a API escalable a las redes de Ethereum e IPFS_
 - [Proporciona](https://provide.services/) _infraestructura y API para aplicaciones Enterprise Web3_
@@ -102,7 +102,6 @@ Ejemplos de soluciones L2 (de Capa 2) que están listas para la producción o qu
   - [Skale](https://skale.network)
   - [Red POA](https://www.poa.network/)
 - Soluciones híbridas que combinan propiedades de múltiples categorías
-  - [Offchain Labs Arbitrum SCSC](https://https://offchainlabs.com/arbitrum.pdf)
   - [Celer](https://celer.network)
 
 ## Aplicaciones empresariales en vivo en la red principal {#enterprise-live-on-mainnet}
@@ -140,7 +139,7 @@ A continuación se indican algunas aplicaciones empresariales que se han impleme
 - [Minespider](https://www.minespider.com/) _seguimiento de la cadena de suministro_
 - [ShipChain](https://shipchain.io) _sidechain pública de Ethereum y sistema empresarial para proporcionar visibilidad y confianza a la cadena de suministro, especialmente en lo relacionado con la logística multimodal_
 - [Follow Our Fibre](https://www.followourfibre.com) _trazabilidad de la cadena de suministro de viscosa_
-- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/procurement) _proporciona un flujo de trabajo de compras mediante la emisión de RFQ, contratos, órdenes de compra y facturas a través de su red de socios comerciales de confianza_
+- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _proporciona un flujo de trabajo de compras mediante la emisión de RFQ, contratos, órdenes de compra y facturas a través de su red de socios comerciales de confianza_
 - [Treum](https://treum.io/) _ofrece transparencia, trazabilidad y comerciabilidad para cadenas de suministro mediante la tecnología de blockchain_
 
 ### Credenciales y certificaciones {#credentials}
@@ -158,4 +157,4 @@ A continuación se indican algunas aplicaciones empresariales que se han impleme
 
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _pagos de electricidad_
 
-Si deseas añadir información a esta lista, consulta las [instrucciones para contribuir](https://ethereum.org/en/contributing/).
+Si deseas añadir información a esta lista, consulta las [instrucciones para contribuir](/contributing/).

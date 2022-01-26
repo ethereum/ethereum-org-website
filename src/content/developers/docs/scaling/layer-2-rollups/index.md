@@ -48,7 +48,7 @@ Optimistic rollups sit in parallel to the main Ethereum chain on layer 2. They c
 
 With Optimistic rollups, transactions are written to the main Ethereum chain as `calldata`, optimising them further by reducing the gas cost.
 
-As computation is the slow, expensive part of using Ethereum, Optimistic rollups can offer up to 10-100x improvements in scalability dependent on the transaction. This number will increase even more with the introduction of [shard chains](/eth2/shard-chains) as more data will be available if a transaction is disputed.
+As computation is the slow, expensive part of using Ethereum, Optimistic rollups can offer up to 10-100x improvements in scalability dependent on the transaction. This number will increase even more with the introduction of [shard chains](/upgrades/shard-chains) as more data will be available if a transaction is disputed.
 
 #### Disputing transactions {#disputing-transactions}
 
@@ -73,7 +73,7 @@ So you can see the incentives: participants get penalized for conducting fraud a
 
 Watch Finematics explain optimistic rollups:
 
-<iframe width="100%" height="315px" src="https://www.youtube.com/embed/7pWxCklcNsU?start=263&end=406" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<YouTube id="7pWxCklcNsU" start="263" />
 
 #### Use Optimistic rollups {#use-optimistic-rollups}
 
@@ -107,7 +107,7 @@ Being on layer 2, ZK-rollups can be optimised to reduce transaction size further
 
 Watch Finematics explain ZK-rollups:
 
-<iframe width="100%" height="315px" src="https://www.youtube.com/embed/7pWxCklcNsU?start=406&end=568" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<YouTube id="7pWxCklcNsU" start="406" />
 
 #### Use ZK-rollups {#use-zk-rollups}
 
@@ -126,7 +126,6 @@ Hybrid solutions exist that combine the best parts of multiple layer 2 technolog
 
 ### Use hybrid solutions {#use-hybrid-solutions}
 
-- [Offchain Labs Arbitrum SCSC](https://offchainlabs.com/arbitrum.pdf)
 - [Celer](https://www.celer.network/)
 
 ## Further reading {#further-reading}
@@ -134,6 +133,8 @@ Hybrid solutions exist that combine the best parts of multiple layer 2 technolog
 - [An Incomplete Guide to Rollups](https://vitalik.ca/general/2021/01/05/rollup.html)
 - [Optimistic Rollups vs ZK Rollups](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
 - [Zero-Knowledge Blockchain Scalability](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
+- [Why rollups + data shards are the only sustainable solution for high scalability](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
+- [Ethereum-powered ZK-Rollups: World Beaters](https://hackmd.io/@canti/rkUT0BD8K)
 
 **ZK-rollups**
 
@@ -151,6 +152,7 @@ Hybrid solutions exist that combine the best parts of multiple layer 2 technolog
 **Hybrid solutions**
 
 - [Adding Hybrid PoS-Rollup Sidechain to Celer’s Coherent Layer-2 Platform on Ethereum](https://medium.com/celer-network/adding-hybrid-pos-rollup-sidechain-to-celers-coherent-layer-2-platform-d1d3067fe593)
+- [Volitions: best of all worlds](https://polynya.medium.com/volitions-best-of-all-worlds-cfd313aec9a8)
 
 **Videos**
 

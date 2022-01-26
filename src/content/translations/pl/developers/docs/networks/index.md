@@ -11,7 +11,7 @@ Sieci są różnymi środowiskami Ethereum, do których można uzyskać dostęp 
 
 ## Warunki wstępne {#prerequisites}
 
-Powinieneś zrozumieć podstawy Ethereum przed zapoznaniem się z różnymi sieciami, ponieważ sieci testowe zapewnią ci tanią, bezpieczną wersję Ethereum do zabawy. Zapoznaj się z naszym [wprowadzeniem do Ethereum](/en/developers/docs/intro-to-ethereum/).
+Powinieneś zrozumieć podstawy Ethereum przed zapoznaniem się z różnymi sieciami, ponieważ sieci testowe zapewnią ci tanią, bezpieczną wersję Ethereum do zabawy. Zapoznaj się z naszym [wprowadzeniem do Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Sieci publiczne {#public-networks}
 
@@ -71,20 +71,6 @@ Istnieją projekty i narzędzia pomocne w tych działaniach. Dowiedz się więce
 Proces konsensusu jest kontrolowany przez uprzednio określony zestaw zaufanych węzłów. Na przykład prywatna sieć znanych instytucji akademickich, z których każda zarządza jednym węzłem, a bloki są zatwierdzane przez próg sygnatariuszy w ramach sieci.
 
 Jeśli publiczna sieć Ethereum jest jak publiczny Internet, możesz myśleć o sieci konsorcjum jako o prywatnym intranecie.
-
-<!-- TODO
-
-## Interacting with testnets
-
-### Your own local network {#your-own-local-network}
-
-`geth -—networkid="12345" console`
-
-### Testnets {#testnets-1}
-
-Wallets like MetaMask or MyEtherWallet will allow you to switch networks so you can test your apps using your test ETH.
-
--->
 
 ## Dalsza lektura {#further-reading}
 

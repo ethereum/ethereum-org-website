@@ -29,11 +29,6 @@ Vous devrez payer des frais de transaction, donc assurez-vous de disposer de que
 - Un script de déploiement ou un plugin.
 - L'ccès à un [nœud Ethereum](/developers/docs/nodes-and-clients/), soit en exécutant le vôtre, soit en vous connectant à un nœud public, soit avec une clé API via un service comme Infura ou Alchemy.
 
-<!-- TODO Elaborate on options: e.g. run a node, use a node as a service etc. -->
-
-<!-- TODO! -->
-<!-- ### Steps to deploy a smart contract -->
-
 Une fois déployé, votre contrat aura une adresse Ethereum comme les autres [comptes](/developers/docs/accounts/).
 
 ## Outils connexes {#related-tools}
@@ -60,4 +55,4 @@ _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
 ## Sujets connexes {#related-topics}
 
-- [Frameworks de développement](/en/developers/docs/frameworks/)
+- [Frameworks de développement](/developers/docs/frameworks/)

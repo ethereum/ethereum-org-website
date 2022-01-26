@@ -16,7 +16,6 @@
   "page-find-wallet-description-argent": "Un tocco per guadagnare interessi e investire; prendi in prestito, archivia e invia. La decisione è tua.",
   "page-find-wallet-description-authereum": "Nessun download, nessuna seed phrase. Qualsiasi browser in qualsiasi momento, su dispositivo mobile o desktop",
   "page-find-wallet-description-coinbase": "App sicura per archiviare le criptovalute",
-  "page-find-wallet-description-dharma": "Dharma è il tuo portale per DeFi. Addio seed phrase, addio estensioni Chrome.",
   "page-find-wallet-description-enjin": "Impenetrabile, ricco di funzionalità e conveniente. Pensato per trader, gamer e sviluppatori",
   "page-find-wallet-description-gnosis": "La piattaforma più affidabile per conservare risorse digitali su Ethereum",
   "page-find-wallet-description-imtoken": "imToken è un portafoglio digitale semplice e sicuro a cui si sono affidati in milioni",
@@ -35,7 +34,6 @@
   "page-find-wallet-description-trezor": "Il primo portafoglio hardware. L'originale",
   "page-find-wallet-description-trust": "Trust Wallet è un portafoglio decentralizzato per criptovaluta, multi moneta. Acquista criptovalute, esplora le dapp, scambia risorse e fai molto altro, mantenendo il controllo sulle tue chiavi.",
   "page-find-wallet-description-zengo": "ZenGo è il primo portafoglio per criptovalute senza chiavikeyless. Con ZenGo non ci sono chiavi private, password o seed phrase da gestire o a rischio smarrimento. Acquista, scambia, guadagna e deposita Ethereum con una semplicità e sicurezza senza precedenti",
-  "page-find-wallet-dharma-logo-alt": "Logo Dharma",
   "page-find-wallet-enjin-logo-alt": "Logo Enjin",
   "page-find-wallet-Ethereum-wallets": "Portafogli Ethereum",
   "page-find-wallet-explore-dapps": "Esplora le dapp",
@@ -63,7 +61,7 @@
   "page-find-wallet-myetherwallet-logo-alt": "Logo MyEtherWallet",
   "page-find-wallet-new-to-wallets": "Non conosci i portafogli? Ecco una panoramica per iniziare.",
   "page-find-wallet-new-to-wallets-link": "Portafogli di Ethereum",
-  "page-find-wallet-not-all-features": "Nessun portafoglio ha tutte queste caratteristiche",
+  "page-find-wallet-not-all-features": "Nessun portafoglio ha tutte queste caratteristiche ancora",
   "page-find-wallet-not-endorsements": "I portafogli elencati in questa pagina non sono approvazioni ufficiali e sono indicati solo a scopo informativo. Le loro descrizioni sono state fornite dalle aziende che li hanno creati. Aggiungiamo questi prodotti a questa pagina basandoci su criteri delle",
   "page-find-wallet-overwhelmed": "portafogli Ethereum. Sono troppi? Prova a filtrare per caratteristiche.",
   "page-find-wallet-pillar-logo-alt": "Logo Pillar",
@@ -88,7 +86,6 @@
   "page-find-wallet-we-found": "Abbiamo trovato",
   "page-find-wallet-withdraw": "Prelievo verso la banca",
   "page-find-wallet-withdraw-desc": "Puoi incassare i tuoi ETH direttamente sul tuo conto bancario, senza la necessità di passare attraverso un cambio valuta.",
-  "page-find-wallet-yet": "ancora",
   "page-find-wallet-zengo-logo-alt": "Logo ZenGo",
   "page-stake-eth": "Punta ETH"
 }

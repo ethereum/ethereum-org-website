@@ -15,7 +15,7 @@ Una línea de tiempo que incluye todos los principales hitos, bifurcaciones y ac
 
 Las bifurcaciones se producen cuando se precisa realizar actualizaciones técnicas importantes o cambios en la red; normalmente se basan en las propuestas de mejora de Ethererum, es decir, en las EIP (por sus siglas en inglés) y cambian las "reglas" del protocolo.
 
-Cuando se precisan actualizaciones en un software tradicional y controlado centralmente, la empresa publica una nueva versión para el usuario final. Las blockchains funcionan de manera diferente porque no hay propiedad central. [clientes de Ethereum](/desarrolladores/documentos/nodos y clientes/) deben actualizar su software para implementar las nuevas reglas de la bifurcación. Además de creadores de bloques (los mineros en el mundo de las Pruebas de trabajo y los validadores en el universo de las Pruebas de participación) y los nodos, deben crearse bloques y validarlos con respecto a las reglas nuevas. [Más información sobre los mecanismos de consenso](/desarrolladores/documentos/mecanismos de consenso/)
+Cuando se precisan actualizaciones en un software tradicional y controlado centralmente, la empresa publica una nueva versión para el usuario final. Las blockchains funcionan de manera diferente porque no hay propiedad central. [clientes de Ethereum](/developers/docs/nodes-and-clients) deben actualizar su software para implementar las nuevas reglas de la bifurcación. Además de creadores de bloques (los mineros en el mundo de las Pruebas de trabajo y los validadores en el universo de las Pruebas de participación) y los nodos, deben crearse bloques y validarlos con respecto a las reglas nuevas. [Más información sobre los mecanismos de consenso](/developers/docs/consensus-mechanisms/)
 
 Estos cambios en las reglas pueden crear una división temporal de la red. Los bloques nuevos podrían producirse de acuerdo con las reglas nuevas o con las antiguas. Normalmente las bifurcaciones se acuerdan con antelación para que los clientes adopten los cambios a la vez. Además, de este modo las bifurcaciones actualizadas se convertirán en la cadena principal. Sin embargo, en casos excepcionales, los desacuerdos con respecto a las bifurcaciones pueden provocar que la red permanezca dividida. La más notable es la creación de Ethereum Classic con la [bifurcación DAO] (#dao-fork).
 
@@ -31,11 +31,13 @@ Estos cambios en las reglas pueden crear una división temporal de la red. Los b
 
 #### Resumen {#beacon-chain-genesis-summary}
 
-La [cadena de baliza](/eth2/beacon-chain/) ha necesitado 16 384 depósitos de 32 ETH apostados para enviarse de manera segura. Esto sucedió el 27 de noviembre, es decir, la cadena de baliza comenzó a producir bloques el 1 de diciembre de 2020. Es un primer paso importante para lograr la [visión Eth2](/eth2/vision/).
+La [cadena de baliza](/upgrades/beacon-chain/) ha necesitado 16 384 depósitos de 32 ETH apostados para enviarse de manera segura. Esto sucedió el 27 de noviembre, es decir, la cadena de baliza comenzó a producir bloques el 1 de diciembre de 2020. Es un primer paso importante para lograr la [visión Eth2](/upgrades/vision/).
 
 [Leer la declaración de la Fundación Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/eth2/beacon-chain/" title="La cadena de baliza" />
+<DocLink to="/upgrades/beacon-chain/">
+  La cadena de baliza
+</DocLink>
 
 ---
 
@@ -45,11 +47,13 @@ La [cadena de baliza](/eth2/beacon-chain/) ha necesitado 16 384 depósitos de 3
 
 #### Resumen {#deposit-contract-summary}
 
-El contrato de depósito de participación introdujo la [participación](/glossary/#staking) en el ecosistema de Ethereum. Aunque se trata de un contrato [de red principal](/glossary/#mainnet), tuvo un impacto directo en la cronología para lanzar la [cadena de baliza](/eth2/beacon-chain/), una importante [actualización de Eth2](/eth2/).
+El contrato de depósito de participación introdujo la [participación](/glossary/#staking) en el ecosistema de Ethereum. Aunque se trata de un contrato [de red principal](/glossary/#mainnet), tuvo un impacto directo en la cronología para lanzar la [cadena de baliza](/upgrades/beacon-chain/), una importante [actualización de Eth2](/upgrades/).
 
 [Leer la declaración de la Fundación Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/eth2/staking/" title="Participación" />
+<DocLink to="/staking/">
+  Participación
+</DocLink>
 
 ---
 
@@ -238,7 +242,7 @@ La bifurcación Homestead que miró hacia el futuro. Incluyó varios cambios de 
 <ExpandableCard title="EIP de Homestead" contentPreview="Official improvements included in this fork.">
 
 - [EIP-2](https://eips.ethereum.org/EIPS/eip-2) – _realiza ediciones al proceso de creación de contratos_
-- [EIP-7](https://eips.ethereum. rg/EIPS/eip-7) – _añade un nuevo código de operación: `DELEGATECALL`_
+- [EIP-7](https://eips.ethereum.org/EIPS/eip-7) – _añade un nuevo código de operación: `DELEGATECALL`_
 - [EIP-8](https://eips.ethereum.org/EIPS/eip-8) – _introduce los requisitos de compatibilidad con devp2p hacia delante_
 
 </ExpandableCard>
@@ -301,4 +305,6 @@ El Yellow Paper, escrito por el Dr. Gavin Wood, es una definición técnica del 
 
 Documento introductorio, publicado en el 2013 por Vitalik Buterin, fundador de Ethereum, antes del lanzamiento del proyecto en 2015.
 
-<DocLink to="/whitepaper/" title="Papel en blanco" />
+<DocLink to="/whitepaper/">
+  Papel en blanco
+</DocLink>

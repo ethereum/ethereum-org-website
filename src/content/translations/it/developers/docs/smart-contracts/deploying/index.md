@@ -29,11 +29,6 @@ Dovrai pagare una commissione sulla transazione, quindi assicurati di avere ETH.
 - uno script o un plugin di distribuzione.
 - accesso a un [nodo Ethereum](/developers/docs/nodes-and-clients/) tramite esecuzione di un nodo personalizzato, connessione a un nodo pubblico o utilizzando una chiave API con un servizio come Infura o Alchemy
 
-<!-- TODO Elaborate on options: e.g. run a node, use a node as a service etc. -->
-
-<!-- TODO! -->
-<!-- ### Steps to deploy a smart contract -->
-
 Una volta distribuito, il contratto avrà un indirizzo Ethereum come gli altri [account](/developers/docs/accounts/).
 
 ## Strumenti correlati {#related-tools}
@@ -60,4 +55,4 @@ _Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e ag
 
 ## Argomenti correlati
 
-- [Framework di sviluppo](/en/developers/docs/frameworks/)
+- [Framework di sviluppo](/developers/docs/frameworks/)

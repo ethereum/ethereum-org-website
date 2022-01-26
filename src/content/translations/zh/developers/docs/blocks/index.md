@@ -9,15 +9,13 @@ sidebar: true
 
 ## 前置要求 {#prerequisites}
 
-区块是一个对初学者非常友好的主题。 为了帮助您更好地理解这个页面，我们建议您先阅读[帐户](/developers/docs/accounts/)和我们的[以太坊简介](/developers/docs/intro-to-ethereum/)。
-
-<!--The content below was provided by Brian Gu with exception of "what's in a block"-->
+区块是一个对初学者非常友好的主题。 为了帮助您更好地理解这个页面，我们建议您先阅读[帐户](/developers/docs/accounts/)、[交易](/developers/docs/transactions/)和我们的[以太坊简介](/developers/docs/intro-to-ethereum/)。
 
 ## 为什么要有区块？ {#why-blocks}
 
 为了确保以太坊网络上的所有参与者保持同步状态并就交易的确切历史达成共识，我们将交易分为多个区块。 这意味着一次提交、商定和同步数十个（或数百个）交易。
 
-![区块中的交易导致状态变化的图表](./tx-block.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![区块中的交易导致状态变化的图表](../../../../../developers/docs/blocks/tx-block.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 通过间隔提交，即使交易请求每秒发生数十次，我们仍能给所有网络参与者足够的时间达成共识。 以太坊上的区块大约每十五秒提交一次。
 
@@ -29,32 +27,37 @@ sidebar: true
 
 ### 视觉演示 {#a-visual-demo}
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="_160oMzblY8" />
 
 ## 工作量证明协议（POW） {#proof-of-work-protocol}
 
 工作量证明是指：
 
-- 挖矿节点必须花费可变但大量的能源、时间和计算能力，才能为试图提交给网络的区块生成“合法性证明”。 这可以帮助保护网络免受垃圾邮件/拒绝服务攻击等攻击，因为证书的生成成本很高。
+- 挖矿节点必须花费可变但大量的能源、时间和算力，才能为试图提交给网络的区块生成“合法性证明”。 这可以帮助保护网络免受垃圾邮件/拒绝服务攻击，因为证书的生成成本很高。
 - 其他矿工如果听说新区块拥有有效的合法性证书，则必须接受新区块作为区块链上的下一个规范区块。
-- 特定矿工生成此证书所需的确切时间是一个随机变量，彼此差异很大。 这确保了两个矿工不太可能同时对提议的下一个区块产生验证；当矿工产生并传播一个经认证的新区块时，他们几乎可以肯定该区块将被网络接受为区块链上规范的下一个区块，没有冲突\*（尽管在几乎同时产生两个认证块链的情况下也有处理冲突的协议）。
+- 特定矿工生成此证书所需的确切时间是一个随机变量，彼此差异很大。 这确保了两个矿工不太可能同时对提议的下一个区块产生验证；当矿工产生并广播经认证的新区块时，他们几乎可以肯定该区块将被网络接受为区块链上规范的下一个区块，没有冲突（尽管在几乎同时产生两个认证块链的情况下，也有处理冲突的协议）。
 
 [更多关于挖矿的信息](/developers/docs/consensus-mechanisms/pow/mining/)
 
 ## 区块包含什么？ {#block-anatomy}
 
-- Timestamp 时间戳 – 该区块被开采的时间。
-- Block number 区块编号 – 区块链长度（以区块数计算）。
-- Difficulty 难度 – 挖掘该区块所需的努力。
-- mixHash – 该区块的唯一标识符。
-- A parent hash 父哈希值 – 前一区块的唯一标识符（这是区块形成链的方式）。
-- Transactions list 交易列表 – 包含在区块中的交易列表。
-- State root 状态根 – 包括系统的整个状态：帐户余额、合约存储、合约代码和帐户随机数值（account nonces）。
-- Nonce – 一个哈希值，与 mixHash 结合，可以证明该方块经过了 [工作量证明](/developers/docs/consensus-mechanisms/pow/)。
+- `timestamp` – 开采区块的时间。
+- `blockNumber` – 区块链中区块的长度。
+- `baseFeePerGas` - 要将交易纳入区块，每个 gas 所需的最低费用。
+- `difficulty` – 开采所需的努力。
+- `mixHash` – 该区块的唯一标识符。
+- `parentHash` – 前一区块的唯一标识符（这是区块形成链的方式）。
+- `transactions` –包含在区块中的交易。
+- `stateRoot` –系统的整个状态：帐户余额、合约存储、合约代码和帐户随机数。
+- `nonce` – 哈希，当与 mixHash 结合使用时，可以证明该块已经通过了[工作量证明](/developers/docs/consensus-mechanisms/pow/)。
+
+## 区块时间 {#block-time}
+
+区块时间指的是开采一个新区块所需的时间。 在以太坊中，平均区块时间在 12 到 14 秒之间，并在每个区块后进行评估。 预期区块时间在协议层面被设定为一个常数，当矿工增加计算能力时，用于保护网络的安全。 平均区块时间与预期区块时间进行比较，如果平均区块时间较高，则区块头的难度会降低。 如果平均区块时间较小，则会增加区块头中的难度。
 
 ## 区块大小 {#block-size}
 
-最后一个重要的一点是，区块本身的大小是有界限的。 每个区块都有一个区块 Gas 上限，由网络和矿工集体设定：区块中所有交易所消耗的 Gas 总量必须小于区块 Gas 限制。 这很重要，因为它可以确保区块不能任意大。 如果块可以任意大， 由于空间和速度方面的要求，性能较差的完整节点将逐渐停止与网络保持联系。 区块 0 的区块 Gas 限制被初始化为 5,000；任何矿工都可以根据父区块的 Gas 限制，将新区块的 Gas 限制增加或减少约 0.1％。 截至 2018 年 11 月，Gas 限制值目前约为 8 000 000。
+最后一个重要的一点是，区块本身的大小是有界限的。 每个区块的目标大小为 1500 万 gas，但区块的大小将根据网络需求而增加或减少。最多到 3000 万 gas 的区块限制（目标区块大小的 2 倍）。 区块中所有交易所消耗的 gas 总量必须低于区块的 gas 限制。 这很重要，因为它可以确保区块不能任意大。 如果区块可以任意大，由于空间和速度方面的要求，性能较差的完整节点将逐渐无法跟上网络。
 
 ## 延伸阅读 {#further-reading}
 

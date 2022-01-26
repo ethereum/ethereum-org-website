@@ -10,8 +10,6 @@ One of the beauties of the Ethereum network and community is that you're able to
 
 Ethereum and its community embrace open source. You can find community projects - client implementations, APIs, development frameworks, testing tools - in a wide variety of languages.
 
-<!-- Often certain languages have an certain advantage depending on the use case -->
-
 ## Choose your language {#data}
 
 Select your language of choice to find projects, resources, and virtual communities:

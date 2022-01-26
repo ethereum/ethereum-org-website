@@ -14,7 +14,6 @@
   "page-find-wallet-description-ambo": "सीधे निवेश में कटौती करें और ऐप डाउनलोड करने के कुछ मिनटों के भीतर अपना पहला निवेश प्राप्त करें",
   "page-find-wallet-description-argent": "ब्याज कमाने और निवेश करने के लिए एक टैप; उधार लें, स्टोर करें और भेजें। इसे अपना बनाएँ।",
   "page-find-wallet-description-coinbase": "क्रिप्टो को अपने आप स्टोर करने के लिए सुरक्षित ऐप",
-  "page-find-wallet-description-dharma": "Dharma, DeFi के लिए आपका पोर्टल है। कोई सीड फ़्रेज़ नहीं, कोई Chrome एक्सटेंशन नहीं।",
   "page-find-wallet-description-enjin": "ट्रेडर्स, गेमर्स और डेवलपर्स के लिए निर्मित अभेद्य, सुविधा-युक्त और सुविधाजनक",
   "page-find-wallet-description-gnosis": "इथेरियम पर डिजिटल संपत्ति को स्टोर करने के लिए सबसे भरोसेमंद मंच",
   "page-find-wallet-description-imtoken": "imToken लाखों लोगों का भरोसेमंद आसान और सुरक्षित डिजिटल वॉलेट है",
@@ -33,7 +32,6 @@
   "page-find-wallet-description-trezor": "पहला और ओरिजिनल हार्डवेयर वॉलेट",
   "page-find-wallet-description-trust": "Trust वॉलेट एक विकेंद्रीकृत मल्टी-कॉइन क्रिप्टोक्यूरेंसी वॉलेट है। अपनी कुंजियों पर नियंत्रण रखते हुए क्रिप्टो खरीदें, डेप्स का अन्वेषण करें, संपत्तियों को स्वैप करें और भी बहुत कुछ।",
   "page-find-wallet-description-zengo": "ZenGo पहला कुंजीरहित क्रिप्टो वॉलेट है। ZenGo के साथ, प्रबंधित करने या खो जाने वाली कोई निजी कुंजी, पासवर्ड या सीड फ़्रेज़ नहीं हैं। अभूतपूर्व सरलता और सुरक्षा के साथ इथेरियम खरीदें, ट्रेड करें, कमाएँ और संग्रहीत करें",
-  "page-find-wallet-dharma-logo-alt": "Dharma का लोगो",
   "page-find-wallet-enjin-logo-alt": "Enjin का लोगो",
   "page-find-wallet-Ethereum-wallets": "इथेरियम वॉलेट",
   "page-find-wallet-explore-dapps": "डेप्स का अन्वेषण करें",
@@ -61,7 +59,7 @@
   "page-find-wallet-myetherwallet-logo-alt": "MyEtherWallet का लोगो",
   "page-find-wallet-new-to-wallets": "वॉलेट पर नए हैं? आरंभ करने के लिए यहां पर आपको एक अवलोकन दिया गया है।",
   "page-find-wallet-new-to-wallets-link": "इथेरियम वॉलेट",
-  "page-find-wallet-not-all-features": "किसी भी वॉलेट में ये सभी सुविधाएं नहीं हैं",
+  "page-find-wallet-not-all-features": "किसी भी वॉलेट में ये सभी सुविधाएं नहीं हैं अभी तक",
   "page-find-wallet-not-endorsements": "इस पृष्ठ पर सूचीबद्ध वॉलेट का आधिकारिक समर्थन नहीं किया गया है और केवल सूचना के प्रयोजनों के लिए प्रदान किया गया है। उनका विवरण स्वयं वॉलेट कंपनियों द्वारा प्रदान किया गया है। हम इस पृष्ठ में उन मानदंड के आधार पर उत्पादों को जोड़ते हैं, जो हमारे",
   "page-find-wallet-overwhelmed": "इथेरियम वॉलेट में नीचे दिया गया है। परेशानी है? सुविधाों द्वारा फ़िल्टर करने का प्रयास करें।",
   "page-find-wallet-pillar-logo-alt": "Pillar का लोगो",
@@ -86,7 +84,6 @@
   "page-find-wallet-we-found": "हमें मिला",
   "page-find-wallet-withdraw": "बैंक से निकासी",
   "page-find-wallet-withdraw-desc": "आप अपने ETH को सीधे एक्सचेंज के माध्यम से जाए बिना अपने बैंक खाते में कैश कर सकते हैं।",
-  "page-find-wallet-yet": "अभी तक",
   "page-find-wallet-zengo-logo-alt": "ZenGo का लोगो",
   "page-stake-eth": "स्टेक ETH"
 }

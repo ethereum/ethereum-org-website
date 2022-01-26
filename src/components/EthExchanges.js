@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
 import Select from "react-select"
 import styled from "styled-components"
@@ -174,9 +175,12 @@ const NoResultsSingle = ({ children }) => (
 export const cardListImage = graphql`
   fragment cardListImage on File {
     childImageSharp {
-      fixed(width: 20) {
-        ...GatsbyImageSharpFixed
-      }
+      gatsbyImageData(
+        width: 20
+        layout: FIXED
+        placeholder: BLURRED
+        quality: 100
+      )
     }
   }
 `
@@ -241,9 +245,6 @@ const EthExchanges = () => {
         ...cardListImage
       }
       cryptocom: file(relativePath: { eq: "exchanges/crypto.com.png" }) {
-        ...cardListImage
-      }
-      dharma: file(relativePath: { eq: "wallets/dharma.png" }) {
         ...cardListImage
       }
       gemini: file(relativePath: { eq: "exchanges/gemini.png" }) {
@@ -374,12 +375,6 @@ const EthExchanges = () => {
           platform: "Web",
           image: data.squarelink,
         },
-        Dharma: {
-          url: "https://www.dharma.io/	",
-          platform: "Mobile",
-          image: data.dharma,
-          isUsaOnly: true,
-        },
       },
     },
     moonpay: {
@@ -489,7 +484,7 @@ const EthExchanges = () => {
           title: exchanges[exchange].name,
           description,
           link: exchanges[exchange].url,
-          image: exchanges[exchange].image.childImageSharp.fixed,
+          image: getImage(exchanges[exchange].image),
         }
       })
       .sort((a, b) => a.title.localeCompare(b.title))
@@ -530,7 +525,7 @@ const EthExchanges = () => {
               title: currentWallet,
               description,
               link: walletObject.url,
-              image: walletObject.image.childImageSharp.fixed,
+              image: getImage(walletObject.image),
             })
           }, [])
         )

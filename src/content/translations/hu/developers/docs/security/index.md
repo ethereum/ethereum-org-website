@@ -117,8 +117,6 @@ Az Attacker.beginAttack() meghívása egy ciklust fog beindítani, mely valahogy
 
 Az Attacker.beginAttack meghívása 1 ETH-tel egy újbóli belépés támadást fog indítani Victim ellen, ezzel több ETH-et kiutalva, mint amennyit beletesz (melyet más felhasználók egyenlegéből vont le, így a Victim szerződés alulfedezetté válik)
 
-<!-- TODO create a subpage related to re-entrancy & move this content there -->
-
 ### Hogyan kezeljük az újbóli belépést (a rosszabb mód) {#how-to-deal-with-re-entrancy-the-wrong-way}
 
 Fontolóra lehet venni az újbóli belépés kezelését azzal, hogy egyszerűen megakadályozzuk az okosszerződések interakcióját a kóddal. A stackoverflow-n az alábbi kód részletet lehet megtalálni rengeteg pozitív szavazattal:

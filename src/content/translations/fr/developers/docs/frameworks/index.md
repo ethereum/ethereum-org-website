@@ -19,7 +19,7 @@ Ces frameworks sont livrés avec de nombreuses fonctionnalités prêtes à l'emp
 
 ## Prérequis {#prerequisites}
 
-Avant de plonger dans les frameworks, nous vous recommandons de commencer par lire notre introduction aux [DApps](/en/developers/docs/dapps/) et à la [pile Ethereum](/en/developers/docs/ethereum-stack/).
+Avant de plonger dans les frameworks, nous vous recommandons de commencer par lire notre introduction aux [DApps](/developers/docs/dapps/) et à la [pile Ethereum](/developers/docs/ethereum-stack/).
 
 ## Frameworks disponibles {#available-frameworks}
 
@@ -67,7 +67,7 @@ Avant de plonger dans les frameworks, nous vous recommandons de commencer par li
 **The Graph -** **_Utilisez The Graph pour interroger les données de la blockchain._**
 
 - [Site Web](https://thegraph.com/)
-- [Tutoriel](/en/developers/tutorials/the-graph-fixing-web3-data-querying/)
+- [Tutoriel](/developers/tutorials/the-graph-fixing-web3-data-querying/)
 
 **Alchemy -** **_Plateforme de développement Ethereum._**
 

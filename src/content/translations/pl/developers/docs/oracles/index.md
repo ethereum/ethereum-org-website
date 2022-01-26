@@ -23,17 +23,6 @@ Z blockchainem takim jak Ethereum potrzebujesz każdego węzła w sieci, aby mó
 
 Wyrocznie rozwiązują ten problem, publikując dane w blockchainie. Tak więc każdy węzeł odtwarzający transakcję wykorzysta te same niezmienne dane, które zostały opublikowane dla wszystkich. W tym celu wyrocznia składa się zazwyczaj z inteligentnego kontraktu i niektórych elementów nieobjętych łańcuchem, które mogą odpytywać API, następnie okresowo wysyłać transakcje, aby zaktualizować dane inteligentnego kontraktu.
 
-<!-- ## Oracle architecture {#oracle-architecture}
-
-To understand how an oracle works, let's play through a scenario where your smart contract needs to know who won the superbowl. This is an example of how it could work:
-
-1. Your smart contract requests information from an oracle smart contract.
-2. The oracle smart contract emits an [event](/developers/docs/smart-contracts/anatomy/#events-and-logs).
-3. Off-chain oracle nodes listen for events and upon hearing one, they query an API.
-4. The API returns a JSON response to the nodes.
-5. The nodes call on the oracle smart contract.
-6. The oracle smart contract returns the data to your smart contract. -->
-
 ### Ochrona {#security}
 
 Wyrocznia jest tak bezpieczna, jak jej źródła danych. Jeśli aplikacja dapp używa Uniswap jako wyroczni dla swojego kanału cenowego ETH/DAI, atakujący może zmienić cenę na Uniswap w celu manipulowania wiedzą aplikacji na temat bieżącej ceny. Można z tym walczyć, wykorzystując na przykład [system kanałów](https://developer.makerdao.com/feeds/) podobny do używanego przez MakerDAO, który porównuje dane cenowe z wielu zewnętrznych źródeł cen, zamiast polegać tylko na jednym.

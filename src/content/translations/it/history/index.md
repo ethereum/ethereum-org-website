@@ -31,11 +31,13 @@ Queste modifiche alle regole possono creare una divisione temporanea nella rete.
 
 #### Riepilogo {#beacon-chain-genesis-summary}
 
-La [beacon chain](/eth2/beacon-chain/) necessitava di 16384 depositi di 32 ETH in staking per funzionare in sicurezza. Questo è successo il 27 Novembre, quindi la beacon chain ha iniziato a produrre blocchi il 1 dicembre 2020. Si tratta di un primo passaggio importante per realizzare la [visione Eth2](/eth2/vision/).
+La [beacon chain](/upgrades/beacon-chain/) necessitava di 16384 depositi di 32 ETH in staking per funzionare in sicurezza. Questo è successo il 27 Novembre, quindi la beacon chain ha iniziato a produrre blocchi il 1 dicembre 2020. Si tratta di un primo passaggio importante per realizzare la [visione Eth2](/upgrades/vision/).
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/eth2/beacon-chain/" title="La beacon chain" />
+<DocLink to="/upgrades/beacon-chain/">
+  La beacon chain
+</DocLink>
 
 ---
 
@@ -45,11 +47,13 @@ La [beacon chain](/eth2/beacon-chain/) necessitava di 16384 depositi di 32 ETH i
 
 #### Riepilogo {#deposit-contract-summary}
 
-Il contratto di deposito in staking ha introdotto lo [staking](/glossary/#staking) nell'ecosistema di Ethereum. Nonostante fosse un contratto della [rete principale](/glossary/#mainnet), ha avuto un impatto diretto sulla linea temporale per il lancio della [beacon chain](/eth2/beacon-chain/), un importante [upgrade a Eth2](/eth2/).
+Il contratto di deposito in staking ha introdotto lo [staking](/glossary/#staking) nell'ecosistema di Ethereum. Nonostante fosse un contratto della [rete principale](/glossary/#mainnet), ha avuto un impatto diretto sulla linea temporale per il lancio della [beacon chain](/upgrades/beacon-chain/), un importante [upgrade a Eth2](/upgrades/).
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/eth2/staking/" title="Staking" />
+<DocLink to="/staking/">
+  Staking
+</DocLink>
 
 ---
 
@@ -148,14 +152,14 @@ La diramazione di Byzantium:
 <ExpandableCard title="EIP Byzantium" contentPreview="Official improvements included in this fork.">
 
 - [EIP-140](https://eips.ethereum.org/EIPS/eip-140) – _aggiunge l'opcode `REVERT`._
-- [EIP-658](https://eips.ethereum. rg/EIPS/eip-658) – campo di stato aggiunto alle ricevute delle transazioni per indicare il successo o il fallimento.\_
-- [EIP-196](https://eips.ethereum. rg/EIPS/eip-196) – _aggiunge una curva ellittica e una moltiplicazione scalare per consentire [ZK-Snarks](/developers/docs/layer-2-scaling/#rollups)._
-- [EIP-197](https://eips.ethereum. rg/EIPS/eip-197) – _aggiunge la curva ellittica e la moltiplicazione scalare per consentire [ZK-Snarks](/developers/docs/layer-2-scaling/#rollups)._
-- [EIP-198](https://eips. thereum.org/EIPS/eip-198) – _abilita la verifica della firma RSA._
+- [EIP-658](https://eips.ethereum.org/EIPS/eip-658) – campo di stato aggiunto alle ricevute delle transazioni per indicare il successo o il fallimento.\_
+- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _aggiunge una curva ellittica e una moltiplicazione scalare per consentire [ZK-Snarks](/developers/docs/layer-2-scaling/#rollups)._
+- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _aggiunge la curva ellittica e la moltiplicazione scalare per consentire [ZK-Snarks](/developers/docs/layer-2-scaling/#rollups)._
+- [EIP-198](https://eips.ethereum.org/EIPS/eip-198) – _abilita la verifica della firma RSA._
 - [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _aggiunge supporto per i valori restituiti a lunghezza variabile._
 - [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _aggiunge l'opcode `STATICCALL`, consentendo chiamate che non modificano lo stato ad altri contratti._
 - [EIP-100](https://eips.ethereum.org/EIPS/eip-100) – _cambia la formula di modifica della difficoltà._
-- [EIP-649](https://eips. thereum.org/EIPS/eip-649) – _ritarda la [bomba di difficoltà](/glossario/#difficulty-bomb) di 1 anno e riduce la ricompensa per i blocchi da 5 a 3 ETH._
+- [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _ritarda la [bomba di difficoltà](/glossario/#difficulty-bomb) di 1 anno e riduce la ricompensa per i blocchi da 5 a 3 ETH._
 
 </ExpandableCard>
 
@@ -179,8 +183,8 @@ La diramazione Spurious Dragon è stata la seconda risposta agli attacchi denial
 
 <ExpandableCard title="EIP Spurious Dragon" contentPreview="Official improvements included in this fork.">
 
-- [EIP-155](https://eips.ethereum. rg/EIPS/eip-155) – _impedisce che le transazioni provenienti da una catena Ethereum siano ritrasmesse su una catena alternativa, ad esempio una transazione sulla rete di test che viene eseguita nuovamente sulla catena principale Ethereum._
-- [EIP-160](https://eips.ethereum. rg/EIPS/eip-160) – _ottimizza i prezzi dell'opcode `EXP`, rende più difficile rallentare la rete attraverso operazioni sui contratti costose dal punto di vista del calcolo._
+- [EIP-155](https://eips.ethereum.org/EIPS/eip-155) – _impedisce che le transazioni provenienti da una catena Ethereum siano ritrasmesse su una catena alternativa, ad esempio una transazione sulla rete di test che viene eseguita nuovamente sulla catena principale Ethereum._
+- [EIP-160](https://eips.ethereum.org/EIPS/eip-160) – _ottimizza i prezzi dell'opcode `EXP`, rende più difficile rallentare la rete attraverso operazioni sui contratti costose dal punto di vista del calcolo._
 - [EIP-161](https://eips.ethereum.org/EIPS/eip-161) – _permette la rimozione di account vuoti aggiunti tramite attacchi DOS._
 - [EIP-170](https://eips.ethereum.org/EIPS/eip-170) – _cambia la dimensione massima del codice che può avere un contratto sulla blockchain a 24576 byte._
 
@@ -301,4 +305,6 @@ Lo yellowpaper, redatto dal dott. Gavin Wood, è una definizione tecnica del pro
 
 Documento introduttivo, pubblicato nel 2013 da Vitalik Buterin, il fondatore di Ethereum, prima del lancio del progetto nel 2015.
 
-<DocLink to="/whitepaper/" title="Whitepaper" />
+<DocLink to="/whitepaper/">
+  Whitepaper
+</DocLink>

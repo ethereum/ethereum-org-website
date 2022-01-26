@@ -26,21 +26,19 @@ sidebar: true
 
 - [選擇以太坊客戶端](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Rust 以太坊客戶端](https://wiki.parity.io/Setup)
-- [使用 Rust 向以太坊發送交易](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [使用 Rust 向以太坊發送交易](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Parity 以太坊客戶端智能合約簡介](https://wiki.parity.io/Smart-Contracts)
-- [設置 Oasis SDK 開發環境](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [設置 Oasis SDK 開發環境](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [一步步教您如何用 Rust 為 Kovan 編寫 Wasm 合約](https://github.com/paritytech/pwasm-tutorial)
 
 ## 中級文章 {#intermediate-articles}
 
 - [Rust-Web3 相關文檔](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Rust-Web3 工作示例](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [使用 OASIS SDK 創建秘密投票](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [使用 OASIS SDK 創建私密聊天服務器](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## 高級使用模式 {#advanced-use-patterns}
 
-- [pwasm_ethereum 外部庫與類以太坊網絡交互](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [pwasm_ethereum 外部庫與類以太坊網絡交互](https://github.com/openethereum/pwasm-ethereum)
 - [使用 JavaScript 和 Rust 搭建去中心化聊天室](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [使用 Vue.js 和 Rust 構建一個去中心化待辦事項應用程序 ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [從 Enigma 開始 - 用 Rust 編程語言](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)

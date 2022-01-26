@@ -31,11 +31,13 @@ Ezek a szabályváltoztatások átmeneti törést okozhatnak a hálózatban. Új
 
 #### Összefoglaló {#beacon-chain-genesis-summary}
 
-A [Beacon Chain](/eth2/beacon-chain/) biztonságos elindításához 16384 darab 32 ETH-nyi letétre volt szükség. Ez november 27.-én történt meg, vagyis a Beacon Chain a blokkok létrehozását december 1.-jén kezdte meg 2020-ban. Ez az [Eth2 vízió](/eth2/vision/) elérésének fontos első lépése.
+A [Beacon Chain](/upgrades/beacon-chain/) biztonságos elindításához 16384 darab 32 ETH-nyi letétre volt szükség. Ez november 27.-én történt meg, vagyis a Beacon Chain a blokkok létrehozását december 1.-jén kezdte meg 2020-ban. Ez az [Eth2 vízió](/upgrades/vision/) elérésének fontos első lépése.
 
 [Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/eth2/beacon-chain/" title="A Beacon Chain" />
+<DocLink to="/upgrades/beacon-chain/">
+  A Beacon Chain
+</DocLink>
 
 ---
 
@@ -45,11 +47,13 @@ A [Beacon Chain](/eth2/beacon-chain/) biztonságos elindításához 16384 darab 
 
 #### Összefoglaló {#deposit-contract-summary}
 
-A letétbe helyezési szerződés bemutatta a [letétbe helyezés](/glossary/#staking) rendszerét az Ethereum ökoszisztémában. Bár [főhálózati](/glossary/#mainnet) szerződés, közvetlenül befolyásolta egy fontos [Eth2 frissítés](/eth2/), a [Beacon Chain](/eth2/beacon-chain/) indításának ütemezését.
+A letétbe helyezési szerződés bemutatta a [letétbe helyezés](/glossary/#staking) rendszerét az Ethereum ökoszisztémában. Bár [főhálózati](/glossary/#mainnet) szerződés, közvetlenül befolyásolta egy fontos [Eth2 frissítés](/upgrades/), a [Beacon Chain](/upgrades/beacon-chain/) indításának ütemezését.
 
 [Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/eth2/staking/" title="Letétbe helyezés" />
+<DocLink to="/staking/">
+  Letétbe helyezés
+</DocLink>
 
 ---
 
@@ -301,4 +305,6 @@ A Sárga Könyv, melynek a szerzője Dr. Gavin Wood, az Ethereum protokoll műsz
 
 A bemutatkozó kiadvány, melyet Vitalik Buterin az Ethereum alapítója adott ki 2013-ban, a projekt 2015-ös indulása előtt.
 
-<DocLink to="/whitepaper/" title="Fehérkönyv" />
+<DocLink to="/whitepaper/">
+  Fehérkönyv
+</DocLink>

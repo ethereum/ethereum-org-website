@@ -11,7 +11,7 @@ Pour qu'Ethereum fonctionne de façon décentralisée, il faut un réseau distri
 
 ## Prérequis {#prerequisites}
 
-Vous devez comprendre le concept de réseau décentralisé avant d'approfondir le sujet et d'exécuter votre propre instance d'un client Ethereum. Commencez par lire la page [Introduction à Ethereum](/en/developers/docs/intro-to-ethereum/).
+Vous devez comprendre le concept de réseau décentralisé avant d'approfondir le sujet et d'exécuter votre propre instance d'un client Ethereum. Commencez par lire la page [Introduction à Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## En quoi consistent les nœuds et les clients? {#what-are-nodes-and-clients}
 
@@ -19,9 +19,9 @@ Vous devez comprendre le concept de réseau décentralisé avant d'approfondir l
 
 Vous pouvez voir une vue du réseau Ethereum en temps réel en consultant cette [carte des nœuds](https://etherscan.io/nodetracker).
 
-De nombreuses [implémentations de clients Ethereum](/developers/docs/nodes-and-clients/#clients) existent dans différentes langues. Ce qu'elles ont en commun, c'est qu'elles suivent toutes une spécification formelle. Cette spécification dicte le fonctionnement du réseau Ethereum et de la blockchain.
+De nombreuses [implémentations de clients Ethereum](/developers/docs/nodes-and-clients/#execution-clients) existent dans différentes langues. Ce qu'elles ont en commun, c'est qu'elles suivent toutes une spécification formelle. Cette spécification dicte le fonctionnement du réseau Ethereum et de la blockchain.
 
-![Client Eth1x](./client-diagram.png) Diagramme simplifié des fonctionnalités Ethereum Client
+![Client Eth1x](../../../../../developers/docs/nodes-and-clients/client-diagram.png) Diagramme simplifié des fonctionnalités Ethereum Client
 
 ## Types de nœuds {#node-types}
 
@@ -59,13 +59,13 @@ L'exécution de votre propre nœud vous permet d'utiliser Ethereum de façon vra
 - Vous n'aurez pas à divulguer vos adresses et vos soldes à des nœuds aléatoires. Tout peut être contrôlé avec votre propre client.
 - Votre DApp peut être privée et plus sécurisée si vous utilisez votre propre nœud. [Metamask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) et d'autres portefeuilles peuvent être facilement pointés vers votre propre nœud local.
 
-![Comment accéder à Ethereum via votre application et vos nœuds](./nodes.png)
+![Comment accéder à Ethereum via votre application et vos nœuds](../../../../../developers/docs/nodes-and-clients/nodes.png)
 
 ### Avantages du réseau {#network-benefits}
 
 Un ensemble de nœuds divers est important pour la santé, la sécurité et la résilience opérationnelle d’Ethereum.
 
-- Ils fournissent un accès aux données de la blockchain pour les clients légers qui en dépendent. Dans les pics d'utilisation, il faut avoir suffisamment de nœuds complets pour aider à la synchronisation des nœuds légers. Les nœuds légers ne stockent pas toute la blockchain. Au lieu de cela, ils vérifient les données via les [racines d'état des en-têtes de blocs](/en/developers/docs/blocks/#block-anatomy). Ils peuvent demander plus d'informations aux blocs si besoin est.
+- Ils fournissent un accès aux données de la blockchain pour les clients légers qui en dépendent. Dans les pics d'utilisation, il faut avoir suffisamment de nœuds complets pour aider à la synchronisation des nœuds légers. Les nœuds légers ne stockent pas toute la blockchain. Au lieu de cela, ils vérifient les données via les [racines d'état des en-têtes de blocs](/developers/docs/blocks/#block-anatomy). Ils peuvent demander plus d'informations aux blocs si besoin est.
 - Les nœuds complets appliquent les règles de consensus de preuve de travail afin qu'ils ne puissent pas être dupés et accepter des blocs qui ne les respectent pas. Ceci offre une sécurité supplémentaire au sein du réseau, car si tous les nœuds étaient des nœuds légers qui ne font pas de vérification complète, les mineurs pourraient attaquer le réseau et, par exemple, créer des blocs avec des récompenses plus élevées.
 
 Quand vous exécutez un nœud complet, l'ensemble du réseau Ethereum en bénéficie.
@@ -99,7 +99,7 @@ Si quelqu'un exécute un nœud Ethereum avec une API publique dans votre communa
 
 D'autre part, si vous exécutez un client, vous pouvez le partager avec vos amis qui pourraient en avoir besoin.
 
-## Clients {#clients}
+## Clients {#execution-clients}
 
 Ethereum est conçu pour offrir des clients différents, développés par différentes équipes utilisant différents langages de programmation. Cela rend le réseau plus solide et plus diversifié. L'objectif idéal est de parvenir à une diversité sans qu'aucun client ne domine afin de réduire les points de défaillance uniques.
 
@@ -113,7 +113,7 @@ Ce tableau présente les différents clients. Tous font l'objet d'une maintenanc
 | [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java     | Linux, Windows, macOS   | Mainnet, Rinkeby, Ropsten et Görli       | Rapide, complète              | Archive, élagué |
 | [Trinity](https://trinity.ethereum.org/)                     | Python   | Linux, macOS            | Mainnet, Görli, Ropsten et plus          | Complet, Beam, Rapide/En-tête | Archive         |
 
-Pour plus d'information sur les services, lisez la page [Réseaux Ethereum](/en/developers/docs/networks/).
+Pour plus d'information sur les services, lisez la page [Réseaux Ethereum](/developers/docs/networks/).
 
 ### Avantages des différentes implémentations {#advantages-of-different-implementations}
 
@@ -198,23 +198,23 @@ Selon le logiciel et le mode de synchronisation utilisés, des centaines de Go d
 | Nethermind   | 200 Go+                            | 3 To+                               |
 | Besu         | 750 Go+                            | 4 To+                               |
 
-![Graphique montrant que le nombre de Go nécessaires pour une synchronisation complète a tendance à augmenter](./full-sync.png)
+![Graphique montrant que le nombre de Go nécessaires pour une synchronisation complète a tendance à augmenter](../../../../../developers/docs/nodes-and-clients/full-sync.png)
 
-![Graphique montrant que le nombre de Go nécessaires pour une synchronisation d'archives a tendance à augmenter](./archive-sync.png)
+![Graphique montrant que le nombre de Go nécessaires pour une synchronisation d'archives a tendance à augmenter](../../../../../developers/docs/nodes-and-clients/archive-sync.png)
 
 Ces chiffres montrent l'évolution constante des exigences de stockage. Pour obtenir les informations Geth et Parity les plus récentes, lisez les page sur les [données de synchronisation complètes](https://etherscan.io/chartsync/chaindefault) et les [données de synchronisation d'archives](https://etherscan.io/chartsync/chainarchive).
 
 ### Ethereum sur un ordinateur monocarte {#ethereum-on-a-single-board-computer}
 
-La façon la plus pratique et la moins chère d'exécuter un nœud Ethereum est d'utiliser un ordinateur monocarte avec une architecture ARM, comme le Raspberry Pi. [Ethereum on ARM](https://twitter.com/EthereumOnARM) fournit des images de clients Geth, Parity, Nethermind et Besu. Voici un tutoriel simple sur la façon de [construire et configurer un client ARM](/en/developers/tutorials/run-node-raspberry-pi/).
+La façon la plus pratique et la moins chère d'exécuter un nœud Ethereum est d'utiliser un ordinateur monocarte avec une architecture ARM, comme le Raspberry Pi. [Ethereum on ARM](https://twitter.com/EthereumOnARM) fournit des images de clients Geth, Parity, Nethermind et Besu. Voici un tutoriel simple sur la façon de [construire et configurer un client ARM](/developers/tutorials/run-node-raspberry-pi/).
 
 Les petits appareils abordables et efficaces de ce type sont parfaits pour exécuter un nœud chez soi.
 
-## Clients Eth2 {#eth2-clients}
+## Clients Eth2 {#consensus-clients}
 
-Il existe de nouveaux clients pour prendre en charge les [mises à niveau Eth2](/eth2/beacon-chain/). Ils exécuteront la chaîne phare et prendront en charge le nouveau mécanisme de consensus de [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/).
+Il existe de nouveaux clients pour prendre en charge les [mises à niveau Eth2](/upgrades/beacon-chain/). Ils exécuteront la chaîne phare et prendront en charge le nouveau mécanisme de consensus de [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/).
 
-[Voir les clients Eth2](/eth2/get-involved/#clients)
+[Voir les clients Eth2](/upgrades/get-involved/#clients)
 
 ## Complément d'information {#further-reading}
 
@@ -228,8 +228,8 @@ Il existe nombre d'instructions et d'informations sur Internet concernant les cl
 
 ## Sujets connexes {#related-topics}
 
-- [Blocs](/en/developers/docs/blocks/)
-- [Réseaux](/en/developers/docs/networks/)
+- [Blocs](/developers/docs/blocks/)
+- [Réseaux](/developers/docs/networks/)
 
 ## Tutoriels connexes {#related-tutorials}
 

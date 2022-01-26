@@ -16,7 +16,6 @@
   "page-find-wallet-description-argent": "Jedno dotknięcie, aby zarabiać odsetki i inwestować; pożyczać, przechowywać i wysyłać. Posiadać.",
   "page-find-wallet-description-authereum": "Bez pobierania, bez fraz seedów. Dowolna przeglądarka, o każdej porze, mobilna lub stacjonarna",
   "page-find-wallet-description-coinbase": "Bezpieczna aplikacja do przechowywania kryptowalut",
-  "page-find-wallet-description-dharma": "Dharma to Twój portal do DeFi. Nigdy więcej fraz seedów, żadnych rozszerzeń Chrome.",
   "page-find-wallet-description-enjin": "Nieprzenikniony, pełen funkcji i wygodny — zbudowany dla traderów, graczy i deweloperów",
   "page-find-wallet-description-gnosis": "Najbardziej zaufana platforma do przechowywania zasobów cyfrowych w Ethereum",
   "page-find-wallet-description-imtoken": "imToken to łatwy i bezpieczny portfel cyfrowy, któremu zaufały miliony",
@@ -35,7 +34,6 @@
   "page-find-wallet-description-trezor": "Pierwszy i oryginalny portfel sprzętowy",
   "page-find-wallet-description-trust": "Trust Wallet to zdecentralizowany portfel kryptowalut na wiele monet. Kupuj kryptowaluty, eksploruj aplikacje, wymieniaj zasoby i nie tylko, zachowując kontrolę nad kluczami.",
   "page-find-wallet-description-zengo": "ZenGo to pierwszy bezkluczowy portfel kryptograficzny. W ZenGo nie ma kluczy prywatnych, haseł ani fraz początkowych, którymi można by zarządzać lub je stracić. Kupuj, handluj, zarabiaj i przechowuj Ethereum z niespotykaną prostotą i bezpieczeństwem",
-  "page-find-wallet-dharma-logo-alt": "Logo Dharma",
   "page-find-wallet-enjin-logo-alt": "Logo Enjin",
   "page-find-wallet-Ethereum-wallets": "Portfele Ethereum",
   "page-find-wallet-explore-dapps": "Przeglądaj zdecentralizowane aplikacje",
@@ -63,7 +61,7 @@
   "page-find-wallet-myetherwallet-logo-alt": "Logo MyEtherWallet",
   "page-find-wallet-new-to-wallets": "Nowy w portfelach? Oto przegląd na początek.",
   "page-find-wallet-new-to-wallets-link": "Portfele Ethereum",
-  "page-find-wallet-not-all-features": "Żaden portfel nie ma tych wszystkich funkcji",
+  "page-find-wallet-not-all-features": "Żaden portfel nie ma tych wszystkich funkcji jeszcze",
   "page-find-wallet-not-endorsements": "Portfele wymienione na tej stronie nie są oficjalnymi rekomendacjami i służą wyłącznie celom informacyjnym. Ich opisy zostały dostarczone przez same firmy zajmujące się portfelami. Dodajemy produkty do tej strony na podstawie kryteriów w naszym",
   "page-find-wallet-overwhelmed": "Portfele Ethereum poniżej. Przytłoczony? Spróbuj filtrować według funkcji.",
   "page-find-wallet-pillar-logo-alt": "Logo filaru",
@@ -88,7 +86,6 @@
   "page-find-wallet-we-found": "Znaleźliśmy",
   "page-find-wallet-withdraw": "Wypłata na konto bankowe",
   "page-find-wallet-withdraw-desc": "Możesz wypłacić swój ETH bezpośrednio na swoje konto bankowe bez przechodzenia przez giełdę.",
-  "page-find-wallet-yet": "jeszcze",
   "page-find-wallet-zengo-logo-alt": "Logo ZenGo",
   "page-stake-eth": "Stakuj ETH"
 }

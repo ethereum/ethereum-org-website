@@ -14,7 +14,7 @@ published: 2020-06-14
 
 您可能会对运行[以太坊节点](/developers/docs/nodes-and-clients/)感兴趣。 最简单的实现方式就是下载、安装和运行 Geth。 通过 Geth，我们只需数分钟便能设置并运行一个轻节点。
 
-首先，您将需要[安装 Geth](https://geth.ethereum.org/docs/install-and-build/installing-geth)。
+首先，您需要[安装 Geth](https://geth.ethereum.org/docs/install-and-build/installing-geth)。
 
 安装 Geth 之后，只需在命令行中键入
 
@@ -32,7 +32,7 @@ $ geth
 
 ## 主网和测试网 {#mainnet-and-testnet}
 
-默认情况下，Geth 会运行一个主网节点。 您可以运行`geth --testnet`，来运行一个 Ropsten 测试网完整节点。 您可以通过将`testnet`替换为`rinkeby`来在 Rinkeby 上运行节点。
+默认情况下，Geth 会运行一个主网节点。 您可以通过运行 `geth --testnet`，来运行一个 Ropsten 测试网全节点。 您可以通过将 `ropsten` 替换为 `rinkeby` 来运行 Rinkeby 上的节点。
 
 [详细了解不同的网络](/developers/docs/networks/)。
 
@@ -64,13 +64,13 @@ $ geth --syncmode "light"
 我们将运行一个轻测试网节点来熟悉如何管理节点并与之交互。 为此，只需运行
 
 ```bash
-$ geth --testnet --syncmode "light"
+$ geth --ropsten --syncmode "light"
 ```
 
 请稍等几秒钟，希望您能得到类似于以下内容的输出：
 
 ```bash
-$ geth --testnet --syncmode "light"
+$ geth --ropsten --syncmode "light"
 INFO [11-18|14:04:47] Maximum peer count                       ETH=0 LES=100 total=25
 INFO [11-18|14:04:47] Starting peer-to-peer node               instance=Geth/v1.8.11-stable/darwin-amd64/go1.10.3
 INFO [11-18|14:04:47] Allocated cache and file handles         database=/Users/bgu/Library/Ethereum/testnet/geth/lightchaindata cache=768 handles=128
@@ -164,6 +164,12 @@ eth.getBalance('0x85d918c2B7F172d033D190152AEc58709Fb6D048')
 
 ## 停止和重启节点 {#stopping-and-restarting-your-node}
 
-您可以随时停止您的节点。 如果要重启节点，Geth 将需要几秒钟或几分钟来重新同步（从上次节点停止运行时停止的位置下载区块和/或区块头）。 如果上述任何指引均不起作用，您应首先尝试重启您的节点。
+您可以随时通过按 `CTRL+C` 停止节点。 如果要重启节点，Geth 将需要几秒钟或几分钟来重新同步（从上次节点停止运行时停止的位置下载区块和/或区块头）。 如果上述任何指引均不起作用，您应首先尝试重启您的节点。
 
-如果您对运行以太坊完整节点感兴趣，通常最好是从具有良好网络连接的专用计算机上运行，而不是从个人计算机上运行。 这是一个用 AWS 运行节点的指南（这有点过时，引用的 AMIS 不再是最新的或不再可用，因此您可能必须进行一些搜索）： [如何在 AWS 上运行一个节点](https://medium.com/mercuryprotocol/how-to-run-an-ethereum-node-on-aws-a8774ed3acf6)
+```bash
+$ geth --ropsten --syncmode "light"
+```
+
+根据需要将“ropsten”替换为其他测试网的名称，或使用“主网”。
+
+如果您对运行以太坊完整节点感兴趣，通常最好是从具有良好网络连接的专用计算机上运行，而不是从个人计算机上运行。 以下是使用 AWS 运行节点的指南（这有点过时了，所引用的 AMI 不再是最新或可用的，因此您可能需要做一些搜索）：[如何在 AWS 上运行节点](https://medium.com/mercuryprotocol/how-to-run-an-ethereum-node-on-aws-a8774ed3acf6)
