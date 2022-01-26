@@ -148,11 +148,11 @@ Obviamente, existen algunos datos que hablan de la salud de la red. Estos son ba
 - Suministro total de ETH: El número de ETH en circulación; recuerda que un nuevo ETH se genera con la creación de cada bloque en forma de recompensas en bloque.
 - Capitalización de mercado: El cálculo del precio/demanda.
 
-## Datos de Eth2 {#eth2-data}
+## Datos de Eth2 {#consensus-layer-data}
 
 Las actualizaciones de Eth2 están todavía en desarrollo, pero vale la pena comentar algunos de los puntos de información que podrán proporcionarte los exploradores. De hecho, todos estos datos ya están disponibles para las redes de pruebas.
 
-Si no estás familiarizado con Eth2, revisa [nuestra visión general de las actualizaciones de Eth2](/eth2/).
+Si no estás familiarizado con Eth2, revisa [nuestra visión general de las actualizaciones de Eth2](/upgrades/).
 
 ### Epoch {#epoch}
 
@@ -257,7 +257,7 @@ Los datos de Eth2 de nivel superior incluyen los siguientes:
 - [Ethplorer](https://ethplorer.io/): Un explorador de bloques con un enfoque en tokens para la red principal de Ethereum y la red de pruebas de Kovan.
 - [Blockchair](https://blockchair.com/ethereum): El explorador de Ethereum más privado. Además, puede ordenar y filtrar datos (mempool).
 
-## Exploradores de bloques de Eth2 {#eth2-block-explorers}
+## Exploradores de bloques de Eth2 {#beacon-chain-block-explorers}
 
 - [https://beaconcha.in/](https://beaconcha.in/)
 - [https://beaconscan.com/](https://beaconscan.com/)

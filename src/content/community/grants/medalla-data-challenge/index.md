@@ -31,9 +31,9 @@ The Ethereum 2.0 [Medalla testnet](https://github.com/goerli/medalla) is live. V
 
 **Document your best Medalla data insights in the most readable blog post possible – for prizes!**
 
-The Ethereum Foundation are running this challenge because there's a lot to learn and discover from Medalla testnet activity. Your findings will give the Ethereum community —from beginners to core researchers— important insight into Medalla, the last step en route to Phase 0, the [Beacon Chain](/eth2/beacon-chain/).
+The Ethereum Foundation are running this challenge because there's a lot to learn and discover from Medalla testnet activity. Your findings will give the Ethereum community —from beginners to core researchers— important insight into Medalla, the last step en route to Phase 0, the [Beacon Chain](/upgrades/beacon-chain/).
 
-If Medalla proves stable, Mainnet launch is next! And so, this is a critical moment to get involved in the Ethereum community <Twemoji svg text=":rocket:" />
+If Medalla proves stable, Mainnet launch is next! And so, this is a critical moment to get involved in the Ethereum community <Emoji svg text=":rocket:" />
 
 ### How to submit {#how-to-submit}
 
@@ -45,19 +45,19 @@ Anyone is free to submit, here's how:
 2.  Detail out your work in a blog post
 3.  Submit!
 
-<Button to="https://ethereumfoundation.typeform.com/to/CDT2cmqd">Submit blog post</Button>
+<ButtonLink to="https://ethereumfoundation.typeform.com/to/CDT2cmqd">Submit blog post</ButtonLink>
 
 _You may submit more than one blog post! So long as each posts focuses on a different visualisation or piece of analysis_
 
 In addition to the prompt questions above, here's a [wishlist of data analysis avenues to explore](https://www.notion.so/efdn/Wishlist-Medalla-Data-Analysis-Visualization-69fe10ffe83748bc87faa0e2586ba857).
 
-A group of Ethereum community members will evaluate your submissions and awards will go to the top blog posts <Twemoji svg text=":trophy:" />
+A group of Ethereum community members will evaluate your submissions and awards will go to the top blog posts <Emoji svg text=":trophy:" />
 
-<h2>Deadline <Twemoji svg text=":alarm_clock:" /></h2>
+<h2>Deadline <Emoji svg text=":alarm_clock:" /></h2>
 
 The deadline for submissions is **Tuesday, October 20**
 
-<h2>Prizes <Twemoji svg text=":money_with_wings:" /></h2>
+<h2>Prizes <Emoji svg text=":money_with_wings:" /></h2>
 
 Up to **USD $15,000**
 

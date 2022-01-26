@@ -19,7 +19,7 @@ A "csomópont" egy szoftverre utal, melyet kliensnek hívunk. Egy kliens egy Eth
 
 Valós idejű látványt kaphatsz az Ethereum hálózatról, ha megnézed a [csomópontok térképét](https://etherscan.io/nodetracker).
 
-Valamennyi [Ethereum kliens implementáció](/developers/docs/nodes-and-clients/#clients) létezik különböző nyelveken. Ami közös van ezekben az implementációkban, hogy mindegyikük egy formális specifikációt követ. Ez a specifikáció mondja ki, hogyan működik az Ethereum hálózat és a blokklánc.
+Valamennyi [Ethereum kliens implementáció](/developers/docs/nodes-and-clients/#execution-clients) létezik különböző nyelveken. Ami közös van ezekben az implementációkban, hogy mindegyikük egy formális specifikációt követ. Ez a specifikáció mondja ki, hogyan működik az Ethereum hálózat és a blokklánc.
 
 ![Eth1x kliens](../../../../../developers/docs/nodes-and-clients/client-diagram.png) Az Ethereum kliens funkciók egyszerűsített diagramja.
 
@@ -99,7 +99,7 @@ Ha valaki egy Ethereum csomópontot futtat egy nyilvános API-jal a közössége
 
 Másrészt, ha klienst futtatsz, megoszthatod azokat barátaiddal, akiknek szüksége lehet rá.
 
-## Kliensek {#clients}
+## Kliensek {#execution-clients}
 
 Az Ethereumot úgy tervezték, hogy különböző kliensekkel rendelkezzen, amelyeket különféle csapatok fejlesztettek ki különböző programozási nyelvek felhasználásával. Ez erősebbé és sokszínűbbé teszi a hálózatot. Az ideális cél a sokszínűség elérése anélkül, hogy egy kliens dominálna és a hiba lehetőséget a lehető legkisebbre szűkítsük.
 
@@ -210,11 +210,11 @@ A lehető legkényelmesebb és legegyszerűbb módja egy Ethereum csomópont fut
 
 A kicsi, olcsó, és hatékony eszközök mint ezek ideálisak egy otthoni csomópont futtatására.
 
-## Eth2 kliensek {#eth2-clients}
+## Eth2 kliensek {#consensus-clients}
 
-Az [Eth2 fejlesztéseket](/eth2/beacon-chain/) új kliensek támogatják. A Beacon Chain-nen fognak futni és az új [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) konszenzus mechanizmust fogják támogatni.
+Az [Eth2 fejlesztéseket](/upgrades/beacon-chain/) új kliensek támogatják. A Beacon Chain-nen fognak futni és az új [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) konszenzus mechanizmust fogják támogatni.
 
-[Eth2 kliens megtekintése](/eth2/get-involved/#clients).
+[Eth2 kliens megtekintése](/upgrades/get-involved/#clients).
 
 ## További olvasnivaló {#further-reading}
 

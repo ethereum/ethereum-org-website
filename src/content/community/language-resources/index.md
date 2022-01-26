@@ -37,12 +37,13 @@ If you are bilingual and want to help us reach more people, you can also get inv
 - [CriptoFacil](http://www.criptofacil.com/ultimas-noticias/) - cryptocurrency news and education, including ‘Ethereum for beginners’ and ‘DeFi’ for beginners
 - [CriptoAtivos](http://www.criptoativos.wiki.br/) - insights from the cryptocurrency space, education and blog
 - [Cointimes](http://www.cointimes.com.br/) - cryptocurrency news and education
+- [Web3 starter pack](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) - a guide answering the most frequently asked and fundamental crypto questions
 
 ### Chinese {#zh}
 
 **General resources**
 
-- [Ethereum.cn](https://www.ethereum.cn/) - community maintained content, covering the consensus layer upgrade, all core dev meeting notes, Eth2, layer 2, etc.
+- [Ethereum.cn](https://www.ethereum.cn/) - community maintained content, covering the consensus layer upgrade, all core dev meeting notes, layer 2, etc.
 - [EthFans](https://ethfans.org/) - learn everything from the basics to advanced Ethereum topics
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - community maintained content, covering Ethereum, DeFi, NFT, Web3-related knowledge
 - [123ETH](https://123eth.org/) - a Portal to the Ethereum ecosystem
@@ -92,6 +93,9 @@ If you are bilingual and want to help us reach more people, you can also get inv
 - [Ethereum Madrid](https://ethereummadrid.com/) - blockchain, DeFi, and governance courses, events and blog
 - [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners) - Ethereum guide for beginners in Spanish
 - [Tutoriales online](https://tutoriales.online/curso/solidity) - learn Solidity and programming on Ethereum
+- [Curso Introducción a Ethereum Development](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) - Solidity basics, testing and deployment of your first smart contract
+- [Curso Introducción a Seguridad y Hacking en Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) - understand common vulnerabilities and security issues in real smart contracts
+- [Curso Introducción a DeFi Development](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - learn how DeFi smart contracts work in Solidity and create your own Automated Market Maker
 
 ### Turkish {#tr}
 
