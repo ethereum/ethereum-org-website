@@ -97,6 +97,12 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [Documentation](https://docs.tatum.io/)
 - [Discord](https://discord.gg/EDmW3kjTC9)
 
+**Watchdata -** **_Provide simple and reliable API access to Ethereum blockchain._**
+
+- [Watchdata](https://watchdata.io/)
+- [Documentation](https://docs.watchdata.io/)
+- [Discord](https://discord.com/invite/TZRJbZ6bdn)
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
