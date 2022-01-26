@@ -863,7 +863,7 @@ const RunANodePage = ({ data }) => {
           <Flex>
             <BuildBoxSpace>
               <div>
-                <h4>DAppNode</h4>
+                <h4>Option 1 – DAppNode</h4>
                 <p>
                   When you're ready with your hardware, the DAppNode operating
                   system can be downloaded using any computer and installed onto
@@ -879,7 +879,7 @@ const RunANodePage = ({ data }) => {
 
             <BuildBoxSpace>
               <div>
-                <h4>Command line</h4>
+                <h4>Option 2 – Command line</h4>
                 <p>
                   For maximum control, experienced users may prefer using the
                   command line instead.
@@ -895,7 +895,7 @@ const RunANodePage = ({ data }) => {
                   to="/developers/docs/nodes-and-clients/run-a-node/#spinning-up-node"
                   isSecondary
                 >
-                  <code>Spinning up a node</code>
+                  <code>Command-line setup</code>
                 </ResponsiveButtonLink>{" "}
               </ButtonContainer>
             </BuildBoxSpace>
