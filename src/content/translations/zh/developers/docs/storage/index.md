@@ -94,7 +94,7 @@ sidebar: true
 
 基于 PoS：
 
-- [信标链](/eth2/beacon-chain/)
+- [信标链](/upgrades/beacon-chain/)
 - Filecoin
 - 0Chain
 

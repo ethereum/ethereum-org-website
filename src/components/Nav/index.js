@@ -178,7 +178,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         },
         {
           text: "page-stake-eth",
-          to: "/eth2/staking/",
+          to: "/staking/",
         },
       ],
     },
@@ -223,8 +223,8 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           to: "/whitepaper/",
         },
         {
-          text: "ethereum-2-0",
-          to: "/eth2/",
+          text: "ethereum-upgrades",
+          to: "/upgrades/",
         },
         {
           text: "ethereum-glossary",

@@ -7,7 +7,7 @@ sidebar: true
 
 Agar aplikasi perangkat lunak dapat berinteraksi dengan blockchain Ethereum (dengan membaca data blockchain dan/atau mengirim transaksi ke jaringan), perangkat lunak harus terhubung dengan node Ethereum.
 
-Untuk keperluan ini, setiap [klien Ethereum](/developers/docs/nodes-and-clients/#clients) mengimplementasikan [spesifikasi JSON-RPC](http://www.jsonrpc.org/specification), sehingga ada serangkaian metode yang seragam yang menjadi tumpuan aplikasi.
+Untuk keperluan ini, setiap [klien Ethereum](/developers/docs/nodes-and-clients/#execution-clients) mengimplementasikan [spesifikasi JSON-RPC](http://www.jsonrpc.org/specification), sehingga ada serangkaian metode yang seragam yang menjadi tumpuan aplikasi.
 
 JSON-RPC adalah protokol pemanggilan prosedur jarak jauh (RPC) tanpa state dan berbobot ringan. Spesifikasi ini terutama menentukan beberapa struktur data dan aturan seputar pemrosesannya. Ini adalah transportasi agnostik karena konsepnya dapat digunakan dalam proses yang sama, melalui soket, melalui HTTP, atau dalam beragam lingkungan penyaluran pesan. Menggunakan JSON (RFC 4627) sebagai format data.
 
@@ -18,7 +18,7 @@ JSON-RPC adalah protokol pemanggilan prosedur jarak jauh (RPC) tanpa state dan b
 
 ## Implementasi klien {#client-implementations}
 
-Tiap klien Ethereum dapat menggunakan bahasa pemrograman berbeda ketika mengimplementasikan spesifikasi JSON-RPC. Lihat [dokumentasi klien](/developers/docs/nodes-and-clients/#clients) individual untuk detail lebih lanjut terkait bahasa pemrograman spesifik. Kami menyarankan melihat dokumentasi dari setiap klien untuk mendapatkan informasi dukungan API yang terbaru.
+Tiap klien Ethereum dapat menggunakan bahasa pemrograman berbeda ketika mengimplementasikan spesifikasi JSON-RPC. Lihat [dokumentasi klien](/developers/docs/nodes-and-clients/#execution-clients) individual untuk detail lebih lanjut terkait bahasa pemrograman spesifik. Kami menyarankan melihat dokumentasi dari setiap klien untuk mendapatkan informasi dukungan API yang terbaru.
 
 ## Pustaka Praktis {#convenience-libraries}
 

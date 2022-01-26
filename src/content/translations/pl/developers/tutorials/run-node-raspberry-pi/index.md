@@ -16,11 +16,11 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 **TL;DR**: Flashuj Raspberry Pi 4, podłącz kabel Ethernet, podłącz dysk SSD i włącz urządzenie, aby zmienić Raspberry Pi 4 w pełne Ethereum 1.0 węzeł lub węzeł Ethereum 2.0 (łańcuch śledzący/ walidator)
 
-[Dowiedz się więcej o Ethereum 2.0 (Eth2)](/eth2/)
+[Dowiedz się więcej o Ethereum 2.0 (Eth2)](/upgrades/)
 
 Najpierw trochę tła. Jak wiesz, napotkaliśmy pewne problemy z pamięcią [[1]](/developers/tutorials/run-node-raspberry-pi/#references) związane z obrazem Raspberry Pi 4 ponieważ Raspbian OS jest nadal 32-bitowy [[2]](/developers/tutorials/run-node-raspberry-pi/#references) (przynajmniej w przestrzeni użytkownika). Chociaż wolimy pozostać przy oficjalnym systemie operacyjnym, doszliśmy do wniosku, że aby rozwiązać te problemy, musimy przeprowadzić migrację do natywnego 64-bitowego systemu operacyjnego
 
-Poza tym [klienty Eth 2.0](/eth2/get-involved/#eth2-clients) nie obsługują 32-bitowych plików binarnych, więc użycie Raspbian wykluczyłoby Raspberry Pi 4 z uruchamiania węzła Eth 2.0 (oraz możliwość stakingu).
+Poza tym [klienty Eth 2.0](/upgrades/get-involved/#clients) nie obsługują 32-bitowych plików binarnych, więc użycie Raspbian wykluczyłoby Raspberry Pi 4 z uruchamiania węzła Eth 2.0 (oraz możliwość stakingu).
 
 Po kilku testach wydajemy teraz 2 różne obrazy oparte na 64-bitowym Ubuntu 20.04 [[3]](/developers/tutorials/run-node-raspberry-pi/#references): Edycje Eth 1.0 i Eth 2.0.
 
@@ -42,14 +42,14 @@ Zasadniczo oba są tym samym obrazem i zawierają te same cechy obrazów opartyc
 
 Oba obrazy zawierają te same pakiety, jedyną różnicą między nimi jest to, że Eth 1.0 domyślnie uruchamia Geth, a Eth 2.0 domyślnie uruchamia łańcuch śledzący Prysm.
 
-### Klienty Ethereum 1.0 {#ethereum-10-clients}
+### Klienty Ethereum 1.0 {#execution-clients}
 
 - Geth [[8]](/developers/tutorials/run-node-raspberry-pi/#references): 1.9.13 (oficjalny plik binarny)
 - Parity [[9]](/developers/tutorials/run-node-raspberry-pi/#references): 2.7.2 (kompilacja krzyżowa)
 - Nethermind [[10]](/developers/tutorials/run-node-raspberry-pi/#references): 1.8.28 (kompilacja krzyżowa)
 - Hyperledger Besu [[11]](/developers/tutorials/run-node-raspberry-pi/#references): 1.4.4 (skompilowane)
 
-### Klienty Ethereum 2.0 {#ethereum-20-clients}
+### Klienty Ethereum 2.0 {#consensus-clients}
 
 - Prysm [[12]](/developers/tutorials/run-node-raspberry-pi/#references): 1.0.0-alpha6 (oficjalny plik binarny)
 - Lighthouse [[13]](/developers/tutorials/run-node-raspberry-pi/#references): 0.1.1 (kompilacja)
@@ -88,7 +88,7 @@ Pamiętaj, że musisz podłączyć dysk do portu USB 3.0 (niebieski)
 
 ## Pobieranie i instalacja obrazu {#image-download-and-installation}
 
-### 1. Pobierz obrazy Eth 1.0 lub Eth 2.0 {#1-download-eth-10-or-eth-20-images}<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">Pobierz obraz Eth 1.0</ButtonLink>
+### 1. Pobierz obrazy Eth 1.0 lub Eth 2.0 {#1-download-execution-or-consensus-images}<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">Pobierz obraz Eth 1.0</ButtonLink>
 
 sha256 7fa9370d13857dd6abcc8fde637c7a9a7e3a66b307d5c28b0c0d29a09c73c55c<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">Pobierz obraz Eth2</ButtonLink>
 
@@ -202,7 +202,7 @@ Pliki konfiguracyjne klientów znajdują się w katalogu /etc/ethereum/. Możesz
 
 Dane klientów Blockchain są przechowywane na koncie domowym Ethereum w następujący sposób (zwróć uwagę na kropkę przed nazwą katalogu):
 
-### Eth 1.0 {#eth-10}
+### Eth 1.0 {#execution-layer}
 
 ```bash
 /home/ethereum/.geth
@@ -211,7 +211,7 @@ Dane klientów Blockchain są przechowywane na koncie domowym Ethereum w następ
 /home/ethereum/.nethermind
 ```
 
-### Eth2 {#eth2}
+### Eth2 {#consensus-layer}
 
 ```bash
 /home/ethereum/.eth2

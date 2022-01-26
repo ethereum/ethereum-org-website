@@ -59,7 +59,7 @@ Semua implementasi EVM harus sesuai dengan spesifikasi yang dideskripsikan dalam
 
 Dalam riwayat 5 tahun Ethereuem, EVM telah menjalani beberapa revisi, dan ada beberapa implementasi EVM dalam bahasa pemrograman yang beragam.
 
-Semua [klien Ethereum](/developers/docs/nodes-and-clients/#clients) mencakup implementasi EVM. Selain itu, ada beberapa implementasi mandiri, yang meliputi:
+Semua [klien Ethereum](/developers/docs/nodes-and-clients/#execution-clients) mencakup implementasi EVM. Selain itu, ada beberapa implementasi mandiri, yang meliputi:
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_

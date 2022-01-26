@@ -637,7 +637,7 @@ export const query = graphql`
         )
       }
     }
-    docking: file(relativePath: { eq: "eth2/core.png" }) {
+    docking: file(relativePath: { eq: "upgrades/core.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 320

@@ -16,12 +16,12 @@ extremely high availability (the data cannot be censored) and integrity (the dat
 unauthorized manner), but storing a 32-byte word typically costs 20,000 gas. As I'm writing this, that cost is
 equivalent to $6.60. At 21 cents per byte this is too expensive for many uses.
 
-To solve this problem the Ethereum ecosystem developed [many alternative ways to store data in a decentralized 
+To solve this problem the Ethereum ecosystem developed [many alternative ways to store data in a decentralized
 fashion](/developers/docs/storage/). Usually they involve a tradeoff between availability
 and price. However, integrity is usually assured.
 
 In this article you learn **how** to ensure data integrity without storing the data on the blockchain, using
-[Merkle proofs](https://computersciencewiki.org/index.php/Merkle_proof). 
+[Merkle proofs](https://computersciencewiki.org/index.php/Merkle_proof).
 
 ## How does it work? {#how-does-it-work}
 
@@ -34,7 +34,6 @@ The solution is to repeatedly hash different subsets of the data, so for the dat
 The root hash is the only part that needs to be stored on chain. To prove a certain value, you provide all the hashes that need to be combined with it to obtain the root. For example, to prove `C` you provide `D`, `H(A-B)`, and `H(E-H)`.
 
 ![Proof of the value of C](proof-c.png)
-
 
 ## Implementation {#implementation}
 
@@ -49,7 +48,7 @@ In this article we use JavaScript for the off-chain computations. Most decentral
 First we need to provide the Merkle root to the chain.
 
 ```javascript
-const ethers = require('ethers')
+const ethers = require("ethers")
 ```
 
 [We use the hash function from the ethers package](https://docs.ethers.io/v5/api/utils/hashing/#utils-keccak256).
@@ -59,24 +58,23 @@ const ethers = require('ethers')
 // are a user identifier, and the last two bytes the amount of tokens the
 // user owns at present.
 const dataArray = [
-    0x0BAD0010, 0x60A70020, 0xBEEF0030, 0xDEAD0040, 0xCA110050,
-    0x0E660060, 0xFACE0070, 0xBAD00080, 0x060D0091
+  0x0bad0010, 0x60a70020, 0xbeef0030, 0xdead0040, 0xca110050, 0x0e660060,
+  0xface0070, 0xbad00080, 0x060d0091,
 ]
 ```
 
 Encoding each entry into a single 256-bit integer results in less readable code than using JSON, for example. However, this means significantly less processing to retrieve the data in the contract, so much lower gas costs. [You can read JSON on chain](https://github.com/chrisdotn/jsmnSol), it's just a bad idea if avoidable.
 
 ```javascript
-// The array of hash values, as BigInts 
-const hashArray = dataArray; 
+// The array of hash values, as BigInts
+const hashArray = dataArray
 ```
 
 In this case our data is 256-bit values to begin with, so no processing is needed. If we use a more complicated data structure, such as strings, we need to make sure we hash the data first to get an array of hashes. Note that this is also because we don't care if users know other users' information. Otherwise we would have had to hash so user 1 won't know the value for user 0, user 2 won't know the value for user 3, etc.
 
-
 ```javascript
-const pairHash = (a,b) => BigInt(ethers.utils.keccak256('0x' + 
-       (a^b).toString(16).padStart(64,0)))
+const pairHash = (a, b) =>
+  BigInt(ethers.utils.keccak256("0x" + (a ^ b).toString(16).padStart(64, 0)))
 ```
 
 The ethers hash function expects to get a JavaScript string with a hexadecimal number, such as `0x60A7`, and responds with another string with the same structure. However, for the rest of the code it's easier to use `BigInt`, so we convert to a hexadecimal string and back again.
@@ -93,58 +91,53 @@ When the number of values is not an integer power of two we need to handle empty
 
 ![Merkle tree with branches missing](merkle-empty-hash.png)
 
-
 ```javascript
-// Calculate one level up the tree of a hash array by taking the hash of 
+// Calculate one level up the tree of a hash array by taking the hash of
 // each pair in sequence
-const oneLevelUp = inputArray => {
-    var result = []
-    var inp = [...inputArray]    // To avoid over writing the input
+const oneLevelUp = (inputArray) => {
+  var result = []
+  var inp = [...inputArray] // To avoid over writing the input
 
-    // Add an empty value if necessary (we need all the leaves to be
-    // paired)
-    if (inp.length % 2 === 1)
-        inp.push(empty)
+  // Add an empty value if necessary (we need all the leaves to be
+  // paired)
+  if (inp.length % 2 === 1) inp.push(empty)
 
-    for(var i=0; i<inp.length; i+=2)
-        result.push(pairHash(inp[i],inp[i+1]))
+  for (var i = 0; i < inp.length; i += 2)
+    result.push(pairHash(inp[i], inp[i + 1]))
 
-    return result
-}    // oneLevelUp
+  return result
+} // oneLevelUp
 ```
 
 This function "climbs" one level in the Merkle tree by hashing the pairs of values at the current layer. Note that this is not the most efficient implementation, we could have avoided copying the input and just added `hashEmpty` when appropriate in the loop, but this code is optimized for readability.
 
-
 ```javascript
-const getMerkleRoot = inputArray => {
-    var result
+const getMerkleRoot = (inputArray) => {
+  var result
 
-    result = [...inputArray]
+  result = [...inputArray]
 
-    // Climb up the tree until there is only one value, that is the
-    // root. 
-    //
-    // If a layer has an odd number of entries the
-    // code in oneLevelUp adds an empty value, so if we have, for example,
-    // 10 leaves we'll have 5 branches in the second layer, 3
-    // branches in the third, 2 in the fourth and the root is the fifth       
-    while(result.length > 1)
-        result = oneLevelUp(result)
+  // Climb up the tree until there is only one value, that is the
+  // root.
+  //
+  // If a layer has an odd number of entries the
+  // code in oneLevelUp adds an empty value, so if we have, for example,
+  // 10 leaves we'll have 5 branches in the second layer, 3
+  // branches in the third, 2 in the fourth and the root is the fifth
+  while (result.length > 1) result = oneLevelUp(result)
 
-    return result[0]
+  return result[0]
 }
 ```
 
-To get the root, climb until there is only one value left. 
-
+To get the root, climb until there is only one value left.
 
 #### Creating a Merkle proof {#creating-a-merkle-proof}
 
 A Merkle proof is the values to hash together with the value being proved to get back the Merkle root. The value to prove is often available from other data, so I prefer to provide it separately rather than as part of the code.
 
 ```javascript
-// A merkle proof consists of the value of the list of entries to 
+// A merkle proof consists of the value of the list of entries to
 // hash with. Because we use a symmetrical hash function, we don't
 // need the item's location to verify the proof, only to create it
 const getMerkleProof = (inputArray, n) => {
@@ -156,9 +149,9 @@ const getMerkleProof = (inputArray, n) => {
         if (currentLayer.length % 2)
             currentLayer.push(empty)
 
-        result.push(currentN % 2    
+        result.push(currentN % 2
                // If currentN is odd, add with the value before it to the proof
-            ? currentLayer[currentN-1] 
+            ? currentLayer[currentN-1]
                // If it is even, add the value after it
             : currentLayer[currentN+1])
 
@@ -175,7 +168,6 @@ We hash `(v[0],v[1])`, `(v[2],v[3])`, etc. So for even values we need the next o
     return result
 }   // getMerkleProof
 ```
-
 
 ### On-chain code {#off-chain-code}
 
@@ -207,7 +199,7 @@ contract MerkleProof {
     }   // setRoot
 ```
 
-Set and get functions for the Merkle root. Letting everybody update the Merkle root is an *extremely bad idea* in a production system. I do it here for the sake of simplicity for sample code. **Don't do it on a system where data integrity actually matters**.
+Set and get functions for the Merkle root. Letting everybody update the Merkle root is an _extremely bad idea_ in a production system. I do it here for the sake of simplicity for sample code. **Don't do it on a system where data integrity actually matters**.
 
 ```solidity
     function pairHash(uint _a, uint _b) internal pure returns(uint) {
@@ -215,24 +207,24 @@ Set and get functions for the Merkle root. Letting everybody update the Merkle r
     }
 ```
 
-This function generates a pair hash. It is just the Solidity transalation of the JavaScript code for `pairHash`. 
+This function generates a pair hash. It is just the Solidity transalation of the JavaScript code for `pairHash`.
 
-**Note:** This is another case of optimization for readability. Based on [the function definition](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm), it might be possible to store the data as a [`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays) value and avoid the conversions. 
+**Note:** This is another case of optimization for readability. Based on [the function definition](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm), it might be possible to store the data as a [`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays) value and avoid the conversions.
 
 ```solidity
     // Verify a Merkle proof
-    function verifyProof(uint _value, uint[] calldata _proof) 
+    function verifyProof(uint _value, uint[] calldata _proof)
         public view returns (bool) {
       uint temp = _value;
       uint i;
-  
+
       for(i=0; i<_proof.length; i++) {
         temp = pairHash(temp, _proof[i]);
       }
 
       return temp == merkleRoot;
     }
-    
+
 }  // MarkleProof
 ```
 
@@ -246,6 +238,6 @@ Looking for example at [Optimism](https://public-grafana.optimism.io/d/9hkhMxn7z
 
 ## Conclusion {#conclusion}
 
-In real life you might never implement Merkle trees on your own. There are well known and audited libraries you can use and generally speaking it is best not to implement cryptographic primitives on your own. But I hope that now you understand Merkle proofs better and can decide when they are worth using. 
+In real life you might never implement Merkle trees on your own. There are well known and audited libraries you can use and generally speaking it is best not to implement cryptographic primitives on your own. But I hope that now you understand Merkle proofs better and can decide when they are worth using.
 
-Note that while Merkle proofs preserve *integrity*, they do not preserve *availability*. Knowing that nobody else can take your assets is small consolation if the data storage decides to disallow access and you can't construct a Merkle tree to access them either. So Merkle trees are best used with some kind of decentralized storage, such as IPFS.
+Note that while Merkle proofs preserve _integrity_, they do not preserve _availability_. Knowing that nobody else can take your assets is small consolation if the data storage decides to disallow access and you can't construct a Merkle tree to access them either. So Merkle trees are best used with some kind of decentralized storage, such as IPFS.

@@ -93,7 +93,7 @@ On top you can choose from several different templates. So far you can use an Aa
 
 Traded tokens that earn you interests are called _aTokens_.
 
-When you choose to integrate Aave with _create-eth-app_, you will get a [subgraph integration](https://docs.aave.com/developers/getting-started/using-graphql). Aave uses [The Graph](https://medium.com/aave/decentralized-data-queries-how-aave-uses-the-graph-998a55027e1d) and already provides you with several ready-to-use subgraphs on [Ropsten](https://thegraph.com/explorer/subgraph/aave/protocol-ropsten) and [Mainnet](https://thegraph.com/explorer/subgraph/aave/protocol) in [raw](https://thegraph.com/explorer/subgraph/aave/protocol-raw) or [formatted](https://thegraph.com/explorer/subgraph/aave/protocol) form.
+When you choose to integrate Aave with _create-eth-app_, you will get a [subgraph integration](https://docs.aave.com/developers/getting-started/using-graphql). Aave uses The Graph and already provides you with several ready-to-use subgraphs on [Ropsten](https://thegraph.com/explorer/subgraph/aave/protocol-ropsten) and [Mainnet](https://thegraph.com/explorer/subgraph/aave/protocol) in [raw](https://thegraph.com/explorer/subgraph/aave/protocol-raw) or [formatted](https://thegraph.com/explorer/subgraph/aave/protocol) form.
 
 ![Aave Flash Loan meme – "Yeahhh, if I could keep my flash loan longer than 1 transaction, that would be great"](./flashloan-meme.png)
 

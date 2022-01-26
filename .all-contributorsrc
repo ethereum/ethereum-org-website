@@ -4166,7 +4166,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/39592448?v=4",
       "profile": "https://github.com/RaynHarr",
       "contributions": [
-        "content"
+        "content",
+        "doc"
       ]
     },
     {
@@ -6049,7 +6050,9 @@
       "profile": "http://factral.github.io/",
       "contributions": [
         "translation",
-        "doc"
+        "doc",
+        "bug",
+        "code"
       ]
     },
     {
@@ -6244,6 +6247,98 @@
       "profile": "https://github.com/garrivjo",
       "contributions": [
         "ideas"
+      ]
+    },
+    {
+      "login": "PolySages",
+      "name": "PolySages",
+      "avatar_url": "https://avatars.githubusercontent.com/u/98001681?v=4",
+      "profile": "https://github.com/PolySages",
+      "contributions": [
+        "bug",
+        "doc"
+      ]
+    },
+    {
+      "login": "zainabb12345",
+      "name": "Zainab Hasan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59745525?v=4",
+      "profile": "https://github.com/zainabb12345",
+      "contributions": [
+        "doc",
+        "ideas"
+      ]
+    },
+    {
+      "login": "mdedeu",
+      "name": "Marcos Dedeu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/62359173?v=4",
+      "profile": "https://github.com/mdedeu",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "SunitRoy2703",
+      "name": "Sunit Roy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67560900?v=4",
+      "profile": "https://bit.ly/SunitRoyYT",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "astutejoe",
+      "name": "Gabriel Garcia",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15985195?v=4",
+      "profile": "https://www.facebook.com/gabriel.antunes.garcia/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "tiagoyonamine",
+      "name": "Tiago Yonamine",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6979032?v=4",
+      "profile": "https://tiagoyonamine.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Ej1seven",
+      "name": "Erik Hunter",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12377787?v=4",
+      "profile": "http://ww.erikhunter.dev",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "lingzhong",
+      "name": "lingzhong",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4011137?v=4",
+      "profile": "https://www.linkedin.com/in/lingzhong-eth/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "yashkamalchaturvedi",
+      "name": "Yash Kamal Chaturvedi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/69413160?v=4",
+      "profile": "https://github.com/yashkamalchaturvedi",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "EtherWorldCo",
+      "name": "EtherWorld",
+      "avatar_url": "https://avatars.githubusercontent.com/u/97191248?v=4",
+      "profile": "https://github.com/EtherWorldCo",
+      "contributions": [
+        "doc"
       ]
     }
   ],

@@ -187,11 +187,6 @@ export const cardListImage = graphql`
 
 // TODO move component into get-eth.js page?
 const EthExchanges = () => {
-  const intl = useIntl()
-  const placeholderString = translateMessageId(
-    "page-get-eth-exchanges-search",
-    intl
-  )
   const data = useStaticQuery(graphql`
     query {
       exchangesByCountry: allExchangesByCountryCsv {
@@ -250,9 +245,6 @@ const EthExchanges = () => {
         ...cardListImage
       }
       cryptocom: file(relativePath: { eq: "exchanges/crypto.com.png" }) {
-        ...cardListImage
-      }
-      dharma: file(relativePath: { eq: "wallets/dharma.png" }) {
         ...cardListImage
       }
       gemini: file(relativePath: { eq: "exchanges/gemini.png" }) {
@@ -383,12 +375,6 @@ const EthExchanges = () => {
           platform: "Web",
           image: data.squarelink,
         },
-        Dharma: {
-          url: "https://www.dharma.io/	",
-          platform: "Mobile",
-          image: data.dharma,
-          isUsaOnly: true,
-        },
       },
     },
     moonpay: {
@@ -440,6 +426,7 @@ const EthExchanges = () => {
     },
   }
 
+  const intl = useIntl()
   const lastUpdated = getLocaleTimestamp(
     intl.locale,
     data.timestamp.parent.fields.gitLogLatestDate
@@ -562,7 +549,7 @@ const EthExchanges = () => {
         classNamePrefix="react-select"
         options={exchangesByCountry}
         onChange={handleSelectChange}
-        placeholder={placeholderString}
+        placeholder={"Type where you live..."}
       />
       {!hasSelectedCountry && (
         <EmptyStateContainer>

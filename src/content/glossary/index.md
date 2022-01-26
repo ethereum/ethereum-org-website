@@ -59,11 +59,19 @@ A validator vote for a [Beacon Chain](#beacon-chain) or [shard](#shard) [block](
 
 ## B {#section-b}
 
+### Base Fee {#base-fee}
+
+Every [block](#block) has a reserve price known as the 'base fee'. It is the minimum [gas](#gas) fee a user must pay to include a transaction in the next block.
+
+<DocLink to="/developers/docs/gas/">
+  Gas and fees
+</DocLink>
+
 ### Beacon Chain {#beacon-chain}
 
-An Eth2 upgrade that will become the coordinator for the Ethereum network. It introduces [proof-of-stake](#pos) and [validators](#validator) to Ethereum. It will eventually be merged with [Mainnet](#mainnet).
+A network upgrade that introduced a new consensus layer, which will become the coordinator for the entire Ethereum network. It introduces [proof-of-stake](#pos) and [validators](#validator) to Ethereum. It will eventually be merged with [Mainnet](#mainnet).
 
-<DocLink to="/eth2/beacon-chain/">
+<DocLink to="/upgrades/beacon-chain/">
   Beacon Chain
 </DocLink>
 
@@ -627,10 +635,10 @@ A type of [layer 2](#layer-2) scaling solution that batches multiple transaction
 
 ### Serenity {#serenity}
 
-The fourth and final development stage of Ethereum, otherwise known as Ethereum 2.0.
+The stage of Ethereum development that initiated a set of scaling and sustainability upgrades, previously known as 'Ethereum 2.0', or 'Eth2'.
 
-<DocLink to="/eth2/">
-  Ethereum 2.0 (Eth2)
+<DocLink to="/upgrades/">
+  Ethereum upgrades
 </DocLink>
 
 ### Secure Hash Algorithm (SHA) {#sha}
@@ -639,9 +647,9 @@ A family of cryptographic hash functions published by the National Institute of 
 
 ### shard / shard chain {#shard}
 
-A [proof-of-stake](#pos) chain that is coordinated by the [Beacon Chain](#beacon-chain) and secured by [validators](#validator). There will be 64 added to the network as part of the Eth2 shard chain upgrade. Shard chains will offer increased transaction throughput for Ethereum by providing additional data to [layer 2](#layer-2) solutions like [optimistic rollups](#optimistic-rollups) and [ZK-rollups](#zk-rollups).
+A [proof-of-stake](#pos) chain that is coordinated by the [Beacon Chain](#beacon-chain) and secured by [validators](#validator). There will be 64 added to the network as part of the shard chain upgrade. Shard chains will offer increased transaction throughput for Ethereum by providing additional data to [layer 2](#layer-2) solutions like [optimistic rollups](#optimistic-rollups) and [ZK-rollups](#zk-rollups).
 
-<DocLink to="/eth2/shard-chains">
+<DocLink to="/upgrades/shard-chains">
   Shard chains
 </DocLink>
 
@@ -701,7 +709,7 @@ An [ERC-20 token](#token-standard) with a value pegged to another asset's value.
 
 Depositing a quantity of [ether](#ether) (your stake) to become a validator and secure the [network](#network). A validator checks [transactions](#transaction) and proposes [blocks](#block) under a [proof-of-stake](#pos) consensus model. Staking gives you an economic incentive to act in the best interests of the network. You'll get rewards for carrying out your [validator](#validator) duties, but lose varying amounts of ETH if you don't.
 
-<DocLink to="/eth2/staking/">
+<DocLink to="/staking/">
   Stake your ETH to become an Ethereum validator
 </DocLink>
 
@@ -772,7 +780,7 @@ A [node](#node) in a [proof-of-stake](#pos) system responsible for storing data,
 <DocLink to="/developers/docs/consensus-mechanisms/pos">
   Proof-of-stake
 </DocLink>
-<DocLink to="/eth2/staking/">
+<DocLink to="/staking/">
   Staking in Ethereum
 </DocLink>
 
