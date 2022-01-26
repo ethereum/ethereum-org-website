@@ -107,7 +107,7 @@ To ensure a certain level of quality and consistency in our translations, we wor
 
 Acolad is one of the largest language service providers in the world, working with 20,000 professional linguists. This means that they can provide professional reviewers for every language and type of content we need.
 
-The review process is fairly straightforward - once a certain [content bucket](/contributing/translation-program/content-buckets) is 100% translated, we order a review for this specific bucket.
+The review process is straightforward; once a certain [content bucket](/contributing/translation-program/content-buckets) is 100% translated, we order a review for that content bucket. The review process takes place directly in Crowdin. Once the review is complete, we update the website with the translated content.
 
 The review process takes place directly in Crowdin, and once it is complete, we add the translated content to the website.
 
