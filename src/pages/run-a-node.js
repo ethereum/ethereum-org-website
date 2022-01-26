@@ -15,7 +15,6 @@ import privacyGlyph from "../assets/run-a-node/privacy-glyph.svg"
 import megaphoneGlyph from "../assets/run-a-node/megaphone-glyph.svg"
 import voteGlyph from "../assets/run-a-node/vote-glyph.svg"
 import earthGlyph from "../assets/run-a-node/earth-glyph.svg"
-import plugAndPlayGlyph from "../assets/run-a-node/plug-and-play-glyph.svg"
 import downloadGlyph from "../assets/run-a-node/download-glyph.svg"
 import hardwareGlyph from "../assets/run-a-node/hardware-glyph.svg"
 
@@ -301,6 +300,10 @@ const BuildBoxSpace = styled(BuildBox)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  &:hover {
+    transform: scale(1.02);
+    transition: transform 0.1s;
+  }
 `
 
 const FullyLoaded = styled(Container)`
@@ -625,7 +628,9 @@ const RunANodePage = ({ data }) => {
       <Divider />
 
       <Content id="getting-started">
-        <h2>Getting started</h2>
+        <h2>
+          <Translation id="page-run-a-node-getting-started-title" />
+        </h2>
         <GappedContent>
           <SoftwareHighlight backgroundColor="homeBoxTurquoise">
             <ColumnFill>
@@ -656,9 +661,7 @@ const RunANodePage = ({ data }) => {
           <SoftwareHighlight backgroundColor="homeBoxOrange">
             <ColumnFill>
               <p>
-                Now we have DAppNode, which is{" "}
-                <b>free and open-source software</b> that gives users an{" "}
-                <b>app-like experience</b> while managing their node.
+                <Translation id="page-run-a-node-getting-started-software-section-2" />
               </p>
             </ColumnFill>
             <ColumnNarrow>
@@ -674,12 +677,11 @@ const RunANodePage = ({ data }) => {
 
           <SoftwareHighlight backgroundColor="homeBoxPurple">
             <ColumnFill>
-              <p>In just a few taps you can have your node up and running.</p>
               <p>
-                DAppNode makes it easy for users to run full nodes, as well as
-                dapps and other P2P networks, with no need to touch the
-                command-line. This makes it easier for everyone to participate
-                and create a more decentralized network.
+                <Translation id="page-run-a-node-getting-started-software-section-3a" />
+              </p>
+              <p>
+                <Translation id="page-run-a-node-getting-started-software-section-3b" />
               </p>
             </ColumnFill>
             <ColumnNarrow>
@@ -696,12 +698,14 @@ const RunANodePage = ({ data }) => {
       </Content>
 
       <Content>
-        <h2>Choose your adventure</h2>
+        <h2>
+          <Translation id="page-run-a-node-choose-your-adventure-title" />
+        </h2>
         <p>
-          <Translation id="page-run-a-node-getting-started-hardware-1" />
+          <Translation id="page-run-a-node-choose-your-adventure-1" />
         </p>
         <p>
-          <Translation id="page-run-a-node-getting-started-hardware-2" />
+          <Translation id="page-run-a-node-choose-your-adventure-2" />
         </p>
         <MarginFlex>
           <FullyLoaded>
@@ -726,21 +730,6 @@ const RunANodePage = ({ data }) => {
                   </code>
                 </li>
               </ul>
-              <StyledTwoColumnContent>
-                <PlugIcon>
-                  <img
-                    src={plugAndPlayGlyph}
-                    alt={translateMessageId(
-                      "page-run-a-node-glyph-alt-pnp",
-                      intl
-                    )}
-                  />
-                </PlugIcon>
-                <ColumnFill>
-                  These solutions are small income fully loaded. Choose your
-                  hardware, then use the GUI to get up and running.
-                </ColumnFill>
-              </StyledTwoColumnContent>
             </div>
             <ButtonContainer>
               <DappNodeButtonLink to="https://shop.dappnode.io/">
@@ -756,35 +745,50 @@ const RunANodePage = ({ data }) => {
             <div>
               <h3>
                 <StyledEmoji text=":building_construction:" size={2} />
-                Build your own
+                <Translation id="page-run-a-node-build-your-own-title" />
               </h3>
               <p>
-                A cheaper and more customizable option for slightly more
-                technical users.
+                <Translation id="page-run-a-node-choose-your-adventure-build-1" />
               </p>
               <ul>
-                <li>Source your own parts.</li>
-                <li>Install DAppNode.</li>
-                <li>Or, choose your own OS and clients.</li>
+                <li>
+                  <Translation id="page-run-a-node-choose-your-adventure-build-bullet-1" />
+                </li>
+                <li>
+                  <Translation id="page-run-a-node-choose-your-adventure-build-bullet-2" />
+                </li>
+                <li>
+                  <Translation id="page-run-a-node-choose-your-adventure-build-bullet-3" />
+                </li>
               </ul>
             </div>
             <ScrollButtonSecondary
               onClick={() => scrollToId("build-your-own")}
               isSecondary
             >
-              Start building
+              <Translation id="page-run-a-node-choose-your-adventure-build-start" />
             </ScrollButtonSecondary>
           </FullyLoaded>
         </MarginFlex>
       </Content>
 
       <Content id="build-your-own">
-        <h2>Build your own</h2>
+        <h2>
+          <Translation id="page-run-a-node-build-your-own-title" />
+        </h2>
 
         <BuildContainer>
           <SvgTitle>
-            <img src={hardwareGlyph} alt="Hardware glyph" />
-            <h3>Step 1 – Hardware</h3>
+            <img
+              src={hardwareGlyph}
+              alt={translateMessageId(
+                "page-run-a-node-glyph-alt-hardware",
+                intl
+              )}
+            />
+            <h3>
+              <Translation id="page-run-a-node-build-your-own-hardware-title" />
+            </h3>
           </SvgTitle>
 
           <Flex>
@@ -859,37 +863,43 @@ const RunANodePage = ({ data }) => {
 
         <BuildContainer>
           <SvgTitle>
-            <img src={downloadGlyph} alt="Software glyph" />
+            <img
+              src={downloadGlyph}
+              alt={translateMessageId(
+                "page-run-a-node-glyph-alt-software",
+                intl
+              )}
+            />
             <h3>Step 2 – Software</h3>
           </SvgTitle>
 
           <Flex>
             <BuildBoxSpace>
               <div>
-                <h4>Option 1 – DAppNode</h4>
+                <h4>
+                  <Translation id="page-run-a-node-build-your-own-software-option-1-title" />
+                </h4>
                 <p>
-                  When you're ready with your hardware, the DAppNode operating
-                  system can be downloaded using any computer and installed onto
-                  a fresh SSD via a USB drive.
+                  <Translation id="page-run-a-node-build-your-own-software-option-1-description" />
                 </p>
               </div>
               <ButtonContainer>
                 <DappNodeButtonLink to="https://docs.dappnode.io">
-                  <Translation id="page-run-a-node-dappnode-setup" />
+                  <Translation id="page-run-a-node-build-your-own-software-option-1-button" />
                 </DappNodeButtonLink>
               </ButtonContainer>
             </BuildBoxSpace>
 
             <BuildBoxSpace>
               <div>
-                <h4>Option 2 – Command line</h4>
+                <h4>
+                  <Translation id="page-run-a-node-build-your-own-software-option-2-title" />
+                </h4>
                 <p>
-                  For maximum control, experienced users may prefer using the
-                  command line instead.
+                  <Translation id="page-run-a-node-build-your-own-software-option-2-description-1" />
                 </p>
                 <p>
-                  See our developer docs for more information on getting started
-                  with client selection.
+                  <Translation id="page-run-a-node-build-your-own-software-option-2-description-2" />
                 </p>
               </div>
               <ButtonContainer>
@@ -897,8 +907,10 @@ const RunANodePage = ({ data }) => {
                   to="/developers/docs/nodes-and-clients/run-a-node/#spinning-up-node"
                   isSecondary
                 >
-                  <code>Command line setup</code>
-                </ResponsiveButtonLink>{" "}
+                  <code>
+                    <Translation id="page-run-a-node-build-your-own-software-option-2-button" />
+                  </code>
+                </ResponsiveButtonLink>
               </ButtonContainer>
             </BuildBoxSpace>
           </Flex>
@@ -908,23 +920,22 @@ const RunANodePage = ({ data }) => {
       <Content>
         <SplitContent>
           <Column>
-            <h2>Find some helpers</h2>
+            <h2>
+              <Translation id="page-run-a-node-community-title" />
+            </h2>
             <p>
-              Online platforms such as Discord or Reddit are home to a large
-              number of community builders willing to help you with any
-              questions you may encounter.
+              <Translation id="page-run-a-node-community-description-1" />
             </p>
             <p>
-              Don't go at it alone. If you have a question it's likely someone
-              here can help you find an answer.
+              <Translation id="page-run-a-node-community-description-2" />
             </p>
             <ButtonContainer>
               <ResponsiveButtonLink to="https://discord.gg/c28an8dA5k">
                 <DiscordIcon name="discord" />
-                <Translation id="page-run-a-node-community-link" />
+                <Translation id="page-run-a-node-community-link-1" />
               </ResponsiveButtonLink>
               <ResponsiveButtonLink to="/community/online/" isSecondary>
-                Find online communities
+                <Translation id="page-run-a-node-community-link-2" />
               </ResponsiveButtonLink>
             </ButtonContainer>
           </Column>
@@ -979,7 +990,7 @@ const RunANodePage = ({ data }) => {
             <Translation id="page-run-a-node-staking-description" />
           </p>
           <ButtonContainer>
-            <ResponsiveButtonLink to="/eth2/staking">
+            <ResponsiveButtonLink to="/staking/">
               <Translation id="page-run-a-node-staking-link" />
             </ResponsiveButtonLink>
           </ButtonContainer>
@@ -1086,7 +1097,7 @@ export const query = graphql`
         )
       }
     }
-    leslie: file(relativePath: { eq: "eth2/eth2_rhino.png" }) {
+    leslie: file(relativePath: { eq: "upgrades/upgrade_rhino.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 624
