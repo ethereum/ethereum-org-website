@@ -63,8 +63,6 @@ const Layout = (props) => {
   const [isDarkTheme, setIsDarkTheme] = useState(false)
   const [isZenMode, setIsZenMode] = useState(false)
   const [shouldShowSideNav, setShouldShowSideNav] = useState(false)
-  // TODO: Remove Feb 9 2022
-  const [isUpgradePage, setIsUpgradePage] = useState(false)
 
   // Exit Zen Mode on 'esc' click
   useKeyPress(`Escape`, () => handleZenModeChange(false))
@@ -97,12 +95,11 @@ const Layout = (props) => {
         document.getElementById(idTag[1]).scrollIntoView(false)
       }
     }
-
-    // TODO: Remove Feb 9 2022
-    props.path.includes("/upgrades/") || props.path.includes("/staking/")
-      ? setIsUpgradePage(true)
-      : setIsUpgradePage(false)
   }, [props.path])
+
+  // TODO: Remove Feb 9 2022
+  const isUpgradePage =
+    props.path.includes("/upgrades/") || props.path.includes("/staking/")
 
   const handleThemeChange = () => {
     setIsDarkTheme(!isDarkTheme)
