@@ -95,7 +95,7 @@ const Layout = (props) => {
         document.getElementById(idTag[1]).scrollIntoView(false)
       }
     }
-  }, [props.path])
+  }, [props.path, props.location])
 
   // TODO: Remove Feb 9 2022
   const isUpgradePage =
