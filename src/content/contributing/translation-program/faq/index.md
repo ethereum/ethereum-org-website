@@ -11,7 +11,7 @@ If you're new to the Translation Program and are hesitant to jump in, here are s
 
 ## Can I get compensated for translating ethereum.org? {#compensation}
 
-Ethereum.org is an open source website, which means that anyone can get involved and contribute.
+Ethereum.org is an open-source website, which means that anyone can get involved and contribute.
 
 The ethereum.org Translation Program is an extention of that and is organized with a similar philosophy in mind.
 
