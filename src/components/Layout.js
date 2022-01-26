@@ -13,6 +13,8 @@ import VisuallyHidden from "./VisuallyHidden"
 import Nav from "./Nav"
 import SideNav from "./SideNav"
 import SideNavMobile from "./SideNavMobile"
+// TODO: Remove Feb 9 2022
+import UpgradeBannerNotification from "./UpgradeBannerNotification"
 import TranslationBanner from "./TranslationBanner"
 
 import { ZenModeContext } from "../contexts/ZenModeContext"
@@ -95,6 +97,10 @@ const Layout = (props) => {
     }
   }, [props.path])
 
+  // TODO: Remove Feb 9 2022
+  const isUpgradePage =
+    props.path.includes("/upgrades/") || props.path.includes("/staking/")
+
   const handleThemeChange = () => {
     setIsDarkTheme(!isDarkTheme)
     if (localStorage) {
@@ -169,6 +175,8 @@ const Layout = (props) => {
                   <ZenModeContext.Provider
                     value={{ isZenMode, handleZenModeChange }}
                   >
+                    {/* TODO: Remove Feb 9 2022 */}
+                    {isUpgradePage && <UpgradeBannerNotification />}
                     <Main>{props.children}</Main>
                   </ZenModeContext.Provider>
                 </MainContent>
