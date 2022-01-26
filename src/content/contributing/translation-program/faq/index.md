@@ -15,7 +15,7 @@ Ethereum.org is an open-source website, which means that anyone can get involved
 
 The ethereum.org Translation Program is an extention of that and is organized with a similar philosophy in mind.
 
-The aim of the Translation Program is to localize the website and make Ethereum content accessible to everyone, regardless of their language, but also to allow anyone who is bilingual to get involved with the Ethereum ecosystem and contribute in an accessible way.
+The goal of the Translation Program is to make Ethereum content accessible to everyone, regardless of the languages they speak. It also allows any bilingual person to get involved with the Ethereum ecosystem and contribute in an accessible way.
 
 For this reason, the Translation Program is open and voluntary, and participation is not subject to compensation. If we decided to pay translators for their work on the website, we would only be able to accept professional translators with sufficient experience, and add other restrictions to who can participate in the Translation Program. This would make the Translation Program exclusionary and prevent us from reaching the goals, outlined above, specifically to allow everyone to participate and get involved with the ecosystem.
 
