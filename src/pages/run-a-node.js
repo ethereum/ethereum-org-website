@@ -638,7 +638,7 @@ const RunANodePage = ({ data }) => {
                   <Translation id="page-run-a-node-getting-started-software-section-1-alert" />
                 </code>
               </p>
-              <Link to="/developers/docs/nodes-and-clients/run-a-node/#spinning-up-node">
+              <Link to="/developers/docs/nodes-and-clients/run-a-node/">
                 <Translation id="page-run-a-node-getting-started-software-section-1-link" />
               </Link>
             </ColumnFill>
@@ -758,7 +758,10 @@ const RunANodePage = ({ data }) => {
                 <StyledEmoji text=":building_construction:" size={2} />
                 Build your own
               </h3>
-              <p>A cheaper option for slightly more technical users.</p>
+              <p>
+                A cheaper and more customizable option for slightly more
+                technical users.
+              </p>
               <ul>
                 <li>Source your own parts.</li>
                 <li>Install DAppNode.</li>
@@ -885,9 +888,8 @@ const RunANodePage = ({ data }) => {
                   command line instead.
                 </p>
                 <p>
-                  Using your choice of hardware and operating system, see our
-                  developer docs for more information on getting started with
-                  client selection.
+                  See our developer docs for more information on getting started
+                  with client selection.
                 </p>
               </div>
               <ButtonContainer>
@@ -895,7 +897,7 @@ const RunANodePage = ({ data }) => {
                   to="/developers/docs/nodes-and-clients/run-a-node/#spinning-up-node"
                   isSecondary
                 >
-                  <code>Command-line setup</code>
+                  <code>Command line setup</code>
                 </ResponsiveButtonLink>{" "}
               </ButtonContainer>
             </BuildBoxSpace>
