@@ -13,7 +13,7 @@ If you're new to the Translation Program and are hesitant to jump in, here are s
 
 Ethereum.org is an open-source website, which means that anyone can get involved and contribute.
 
-The ethereum.org Translation Program is an extention of that and is organized with a similar philosophy in mind.
+The ethereum.org Translation Program is an extension of that and is organized with a similar philosophy in mind.
 
 The goal of the Translation Program is to make Ethereum content accessible to everyone, regardless of the languages they speak. It also allows any bilingual person to get involved with the Ethereum ecosystem and contribute in an accessible way.
 
