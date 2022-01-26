@@ -562,7 +562,10 @@ const RunANodePage = ({ data }) => {
               <Translation id="page-run-a-node-what-1-subtitle" />
             </h3>
             <p>
-              <Translation id="page-run-a-node-what-1-text" />
+              Known as a 'client,' this software downloads a copy of the
+              Ethereum blockchain and verifies the validity of every block, then
+              keeps it up-to-date with new blocks and transactions, and helps
+              others download and update their own copies.
             </p>
             <h3>
               <Translation id="page-run-a-node-what-2-subtitle" />
