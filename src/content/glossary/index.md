@@ -129,7 +129,7 @@ After the merge to [proof-of-stake](#pos), consensus about the true head of the 
 
 ### consensus layer {consensus-layer}
 
-The network of Ethereum [consensus clients](#consensus-client).
+Ethereum's consensus layer is the network of [consensus clients](#consensus-client).
 
 ### consensus rules {#consensus-rules}
 
