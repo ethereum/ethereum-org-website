@@ -15,7 +15,6 @@ import privacyGlyph from "../assets/run-a-node/privacy-glyph.svg"
 import megaphoneGlyph from "../assets/run-a-node/megaphone-glyph.svg"
 import voteGlyph from "../assets/run-a-node/vote-glyph.svg"
 import earthGlyph from "../assets/run-a-node/earth-glyph.svg"
-import plugAndPlayGlyph from "../assets/run-a-node/plug-and-play-glyph.svg"
 import downloadGlyph from "../assets/run-a-node/download-glyph.svg"
 import hardwareGlyph from "../assets/run-a-node/hardware-glyph.svg"
 
@@ -731,20 +730,6 @@ const RunANodePage = ({ data }) => {
                   </code>
                 </li>
               </ul>
-              <StyledTwoColumnContent>
-                <PlugIcon>
-                  <img
-                    src={plugAndPlayGlyph}
-                    alt={translateMessageId(
-                      "page-run-a-node-glyph-alt-pnp",
-                      intl
-                    )}
-                  />
-                </PlugIcon>
-                <ColumnFill>
-                  <Translation id="page-run-a-node-buy-fully-loaded-plug-and-play" />
-                </ColumnFill>
-              </StyledTwoColumnContent>
             </div>
             <ButtonContainer>
               <DappNodeButtonLink to="https://shop.dappnode.io/">
