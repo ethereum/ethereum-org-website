@@ -13,6 +13,8 @@ import VisuallyHidden from "./VisuallyHidden"
 import Nav from "./Nav"
 import SideNav from "./SideNav"
 import SideNavMobile from "./SideNavMobile"
+// TODO: Remove Feb 9 2022
+import UpgradeBannerNotification from "./UpgradeBannerNotification"
 import TranslationBanner from "./TranslationBanner"
 
 import { ZenModeContext } from "../contexts/ZenModeContext"
@@ -61,6 +63,8 @@ const Layout = (props) => {
   const [isDarkTheme, setIsDarkTheme] = useState(false)
   const [isZenMode, setIsZenMode] = useState(false)
   const [shouldShowSideNav, setShouldShowSideNav] = useState(false)
+  // TODO: Remove Feb 9 2022
+  const [isUpgradePage, setIsUpgradePage] = useState(false)
 
   // Exit Zen Mode on 'esc' click
   useKeyPress(`Escape`, () => handleZenModeChange(false))
@@ -93,6 +97,11 @@ const Layout = (props) => {
         document.getElementById(idTag[1]).scrollIntoView(false)
       }
     }
+
+    // TODO: Remove Feb 9 2022
+    props.path.includes("/upgrades/") || props.path.includes("/staking/")
+      ? setIsUpgradePage(true)
+      : setIsUpgradePage(false)
   }, [props.path])
 
   const handleThemeChange = () => {
@@ -169,6 +178,8 @@ const Layout = (props) => {
                   <ZenModeContext.Provider
                     value={{ isZenMode, handleZenModeChange }}
                   >
+                    {/* TODO: Remove Feb 9 2022 */}
+                    {isUpgradePage && <UpgradeBannerNotification />}
                     <Main>{props.children}</Main>
                   </ZenModeContext.Provider>
                 </MainContent>

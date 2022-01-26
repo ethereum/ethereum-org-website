@@ -215,6 +215,22 @@ A period of 32 [slots](#slot) (6.4 minutes) in the [Beacon Chain](#beacon-chain)
   Proof-of-stake
 </DocLink>
 
+### ETH1 {#eth1}
+
+ETH1 is a term that has been deprecated, and is now referred to as the execution client. [More info on this name change can be found in this blog post.](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
+
+<DocLink to="/upgrades/#eth2">
+  More on the upgrades
+</DocLink>
+
+### ETH2 {#eth2}
+
+ETH2 is a term that has been deprecated, and is now referred to as the consensus client. [More info on this name change can be found in this blog post.](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
+
+<DocLink to="/upgrades/#eth2">
+  More on the upgrades
+</DocLink>
+
 ### Ethereum Improvement Proposal (EIP) {#eip}
 
 A design document providing information to the Ethereum community, describing a proposed new feature or its processes or environment (see [ERC](#erc)).
