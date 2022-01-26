@@ -78,6 +78,9 @@
   "ethereum-whitepaper": "Ethereum Whitepaper",
   "events": "Events",
   "example-projects": "Example projects",
+  "feedback-prompt": "Did this page help answer your question?",
+  "feedback-title-helpful": "Thanks for your feedback!",
+  "feedback-title-not-helpful": "Join our public <a href=\"https://discord.gg/rZz26QWfCg\" target=\"_blank\">Discord</a> and get the answer you're looking for.",
   "find-wallet": "Find wallet",
   "foundation": "Foundation",
   "gemini-logo": "Gemini logo",
@@ -173,6 +176,7 @@
   "more-info": "More info",
   "nav-beginners": "Beginners",
   "next": "Next",
+  "no": "No",
   "oasis-logo": "Oasis logo",
   "online": "Online",
   "on-this-page": "On this page",
@@ -232,5 +236,6 @@
   "whitepaper": "Whitepaper",
   "defi-page": "Decentralized finance (DeFi)",
   "dao-page": "Decentralized autonomous organisations (DAOs)",
-  "nft-page": "Non-fungible tokens (NFTs)"
+  "nft-page": "Non-fungible tokens (NFTs)",
+  "yes": "Yes"
 }

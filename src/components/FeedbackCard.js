@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { ButtonSecondary } from "./SharedStyledComponents"
 import { trackCustomEvent } from "../utils/matomo"
-import Link from "./Link"
+import Translation from "./Translation"
 
 const Card = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.border};
@@ -41,14 +41,11 @@ const ButtonContainer = styled.div`
 const FeedbackCard = ({ prompt, className }) => {
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
   const [isHelpful, setIsHelpful] = useState(false)
-  const feedbackPrompt = prompt || "Did this page help answer your question?"
+  const feedbackPrompt = prompt || <Translation id="feedback-prompt" />
   const title = isHelpful ? (
-    <>Thanks for your feedback!</>
+    <Translation id="feedback-title-helpful" />
   ) : (
-    <>
-      Join our public <Link to="https://discord.gg/rZz26QWfCg">Discord</Link>{" "}
-      and get the answer you're looking for.
-    </>
+    <Translation id="feedback-title-not-helpful" />
   )
 
   const handleClick = (isHelpful) => {
@@ -67,10 +64,10 @@ const FeedbackCard = ({ prompt, className }) => {
         {!feedbackSubmitted && (
           <ButtonContainer>
             <ButtonSecondary onClick={() => handleClick(true)}>
-              Yes
+              <Translation id="yes" />
             </ButtonSecondary>
             <ButtonSecondary onClick={() => handleClick(false)} ml={`0.5rem`}>
-              No
+              <Translation id="no" />
             </ButtonSecondary>
           </ButtonContainer>
         )}
