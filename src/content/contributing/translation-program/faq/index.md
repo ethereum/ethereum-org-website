@@ -9,6 +9,18 @@ sidebar: true
 
 If you're new to the Translation Program and are hesitant to jump in, here are some FAQs that can help you begin. Use this guide to find answers to the most common queries.
 
+## Can I get compensated for translating ethereum.org? {#compensation}
+
+Ethereum.org is an open source website, which means that anyone can get involved and contribute.
+
+The ethereum.org Translation Program is an extention of that and is organized with a similar philosophy in mind.
+
+The aim of the Translation Program is to localize the website and make Ethereum content accessible to everyone, regardless of their language, but also to allow anyone who is bilingual to get involved with the Ethereum ecosystem and contribute in an accessible way.
+
+For this reason, the Translation Program is open and voluntary, and participation is not subject to compensation. If we decided to pay translators for their work on the website, we would only be able to accept professional translators with sufficient experience, and add other restrictions to who can participate in the Translation Program. This would make the Translation Program exclusionary and prevent us from reaching the goals, outlined above, specifically to allow everyone to participate and get involved with the ecosystem.
+
+That being said, we try to acknowledge our translators in different ways, like [offering POAPs](/contributing/translation-program/acknowledgements/#poap) and a [translator certificate](/contributing/translation-program/acknowledgements/#certificate), as well as organizing the [Translation Leaderboards](/contributing/translation-program/acknowledgements/) and [listing all of our translators on the site](/contributing/translation-program/contributors/).
+
 ## How do I translate strings with `<HTML tags>`? {#tags}
 
 Not every string is written in pure text form. There are some strings that consist of mixed scripts like HTML tags (`<0>`, `</0>`).This is usually for hyperlinks or alternative styling in the middle of a sentence.
@@ -19,6 +31,8 @@ Not every string is written in pure text form. There are some strings that consi
 ![Crowdin interface with copy source button highlighted](./html-tag-strings.png)
 
 You can move the position of the tags within the string to make it more natural in your language – just be sure to move the whole tag.
+
+For more in-depth information on dealing with tags and code snippets, please refer to the [ethereum.org Translation Style Guide](/contributing/translation-program/translators-guide/#dealing-with-tags).
 
 ## Where do the strings live? {#strings}
 
@@ -86,6 +100,16 @@ Here is what we suggest, when you find a term that's unfamiliar to you:
 - If you feel less confident to do so, leave the term untranslated. Sometimes, English terms are more than adequate in delivering accurate definitions.
 
 We recommend you leave names of brands, companies, and personnel untranslated as a translation might cause unnecessary confusion and SEO difficulties.
+
+## How does the review process work? {#review-process}
+
+To ensure a certain level of quality and consistency in our translations, we work with [Acolad](https://www.acolad.com/) as our language service provider.
+
+Acolad is one of the largest language service providers in the world, working with 20,000 professional linguists. This means that they can provide professional reviewers for every language and type of content we need.
+
+The review process is fairly straightforward - once a certain [content bucket](/contributing/translation-program/content-buckets) is 100% translated, we order a review for this specific bucket.
+
+The review process takes place directly in Crowdin, and once it is complete, we add the translated content to the website.
 
 ## How do I add content in my language? {#adding-foreign-language-content}
 
