@@ -93,9 +93,8 @@ const StyledTwoColumnContent = styled(TwoColumnContent)`
   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     flex-direction: row;
     align-items: center;
-    /* margin-left: 0rem;
-    margin-right: 0rem; */
   }
+  margin-bottom: 2rem;
   @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
     flex-direction: column;
     align-items: center;
@@ -288,16 +287,29 @@ const Container = styled.div`
 const BuildBox = styled(Container)`
   background: ${({ theme }) => theme.colors.preBackground};
   flex: 1;
+  padding: 2rem;
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     flex-direction: column;
   }
+
+  & > p:last-of-type {
+    margin-bottom: 2rem;
+  }
+`
+
+const BuildBoxSpace = styled(BuildBox)`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `
 
 const FullyLoaded = styled(Container)`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   line-height: 200%;
   padding: 2rem;
+  flex: 1;
   p {
     font-size: 110%;
   }
@@ -332,8 +344,8 @@ const SvgTitle = styled.div`
 const ButtonContainer = styled.div`
   display: flex;
   gap: 1rem;
-  margin-top: 2rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+  margin-top: auto;
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     flex-direction: column;
   }
 `
@@ -346,17 +358,6 @@ const DappNodeButtonLink = styled(ResponsiveButtonLink)`
   &:hover {
     background-color: #0f5f5f;
     box-shadow: 4px 4px 0 0 #187d7677;
-  }
-`
-
-const DappNodeSetupButtonContainer = styled(ButtonContainer)`
-  align-self: center;
-  margin-top: auto;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    align-self: flex-start;
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
-    width: 100%;
   }
 `
 
@@ -383,26 +384,15 @@ const ScrollLink = styled(NakedButton)`
   }
 `
 
-const CenteredContainer = styled(Container)`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+const BuildContainer = styled(Container)`
+  flex: 1;
+  padding: 2rem;
+  border-radius: none;
   border: none;
   background: none;
-  * {
-    text-align: center;
-    line-height: 200%;
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
+    padding: 2rem 0;
   }
-`
-
-const HardwareContainer = styled(Container)`
-  flex: 3;
-  padding: 2rem;
-`
-
-const SoftwareContainer = styled(FullyLoaded)`
-  flex: 1;
 `
 
 const ScrollButtonSecondary = styled.button`
@@ -747,7 +737,8 @@ const RunANodePage = ({ data }) => {
                   />
                 </PlugIcon>
                 <ColumnFill>
-                  <Translation id="page-run-a-node-plug-and-play-1" />
+                  These solutions are small income fully loaded. Choose your
+                  hardware, then use the GUI to get up and running.
                 </ColumnFill>
               </StyledTwoColumnContent>
             </div>
@@ -761,131 +752,177 @@ const RunANodePage = ({ data }) => {
             </ButtonContainer>
           </FullyLoaded>
 
-          <CenteredContainer>
-            <h3>
-              <StyledEmoji text=":building_construction:" size={2} />
-              Build your own
-            </h3>
-            <p>A good (and cheaper) option for slightly more technical users</p>
+          <FullyLoaded>
+            <div>
+              <h3>
+                <StyledEmoji text=":building_construction:" size={2} />
+                Build your own
+              </h3>
+              <p>A cheaper option for slightly more technical users.</p>
+              <ul>
+                <li>Source your own parts.</li>
+                <li>Install DAppNode.</li>
+                <li>Or, choose your own OS and clients.</li>
+              </ul>
+            </div>
             <ScrollButtonSecondary
               onClick={() => scrollToId("build-your-own")}
               isSecondary
             >
               Start building
             </ScrollButtonSecondary>
-          </CenteredContainer>
+          </FullyLoaded>
         </MarginFlex>
       </Content>
+
       <Content id="build-your-own">
         <h2>Build your own</h2>
-        <MarginFlex>
-          <HardwareContainer>
-            <SvgTitle>
-              <img src={hardwareGlyph} alt="Hardware glyph" />
-              <h3>Hardware</h3>
-            </SvgTitle>
 
-            <Flex>
-              <BuildBox>
-                <h4>
-                  <Translation id="page-run-a-node-build-your-own-minimum-specs" />
-                </h4>
-                <ul>
-                  <li>
-                    <p>
-                      <Translation id="page-run-a-node-build-your-own-min-ram" />
-                    </p>
-                    <p>
-                      <ScrollLink onClick={() => scrollToId("plan-on-staking")}>
-                        <Translation id="page-run-a-node-build-your-own-ram-note-1" />
-                      </ScrollLink>
-                    </p>
-                    <p>
-                      <ScrollLink onClick={() => scrollToId("rasp-pi")}>
-                        <Translation id="page-run-a-node-build-your-own-ram-note-2" />
-                      </ScrollLink>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <Translation id="page-run-a-node-build-your-own-min-ssd" />
-                    </p>
-                    <p>
-                      <small>
-                        <em>
-                          <Translation id="page-run-a-node-build-your-own-ssd-note" />
-                        </em>
-                      </small>
-                    </p>
-                  </li>
-                </ul>
-              </BuildBox>
+        <BuildContainer>
+          <SvgTitle>
+            <img src={hardwareGlyph} alt="Hardware glyph" />
+            <h3>Step 1 – Hardware</h3>
+          </SvgTitle>
 
-              <BuildBox>
-                <h4>
-                  <Translation id="page-run-a-node-build-your-own-recommended" />
-                </h4>
-                <ul>
-                  <li>
-                    <Translation id="page-run-a-node-build-your-own-nuc" />
-                    <p>
-                      <small>
-                        <Translation id="page-run-a-node-build-your-own-nuc-small" />
-                      </small>
-                    </p>
-                  </li>
-                  <li>
-                    <Translation id="page-run-a-node-build-your-own-connection" />
-                    <p>
-                      <small>
-                        <Translation id="page-run-a-node-build-your-own-connection-small" />
-                      </small>
-                    </p>
-                  </li>
-                  <li>
-                    <Translation id="page-run-a-node-build-your-own-peripherals" />
-                    <p>
-                      <small>
-                        <Translation id="page-run-a-node-build-your-own-peripherals-small" />
-                      </small>
-                    </p>
-                  </li>
-                </ul>
-              </BuildBox>
-            </Flex>
-          </HardwareContainer>
+          <Flex>
+            <BuildBox>
+              <h4>
+                <Translation id="page-run-a-node-build-your-own-minimum-specs" />
+              </h4>
+              <ul>
+                <li>
+                  <p>
+                    <Translation id="page-run-a-node-build-your-own-min-ram" />
+                  </p>
+                  <p>
+                    <ScrollLink onClick={() => scrollToId("plan-on-staking")}>
+                      <Translation id="page-run-a-node-build-your-own-ram-note-1" />
+                    </ScrollLink>
+                  </p>
+                  <p>
+                    <ScrollLink onClick={() => scrollToId("rasp-pi")}>
+                      <Translation id="page-run-a-node-build-your-own-ram-note-2" />
+                    </ScrollLink>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <Translation id="page-run-a-node-build-your-own-min-ssd" />
+                  </p>
+                  <p>
+                    <small>
+                      <em>
+                        <Translation id="page-run-a-node-build-your-own-ssd-note" />
+                      </em>
+                    </small>
+                  </p>
+                </li>
+              </ul>
+            </BuildBox>
 
-          <SoftwareContainer>
-            <SvgTitle>
-              <img src={downloadGlyph} alt="Download glyph" />
-              <h3>Software</h3>
-            </SvgTitle>
-            <p>
-              When you're ready with your hardware, DAppNode can be downloaded
-              from any computer and installed onto a fresh SSD via a USB drive.
-            </p>
-            <DappNodeSetupButtonContainer>
-              <DappNodeButtonLink to="https://docs.dappnode.io">
-                <Translation id="page-run-a-node-dappnode-setup" />
-              </DappNodeButtonLink>
-            </DappNodeSetupButtonContainer>
-          </SoftwareContainer>
-        </MarginFlex>
+            <BuildBox>
+              <h4>
+                <Translation id="page-run-a-node-build-your-own-recommended" />
+              </h4>
+              <ul>
+                <li>
+                  <Translation id="page-run-a-node-build-your-own-nuc" />
+                  <p>
+                    <small>
+                      <Translation id="page-run-a-node-build-your-own-nuc-small" />
+                    </small>
+                  </p>
+                </li>
+                <li>
+                  <Translation id="page-run-a-node-build-your-own-connection" />
+                  <p>
+                    <small>
+                      <Translation id="page-run-a-node-build-your-own-connection-small" />
+                    </small>
+                  </p>
+                </li>
+                <li>
+                  <Translation id="page-run-a-node-build-your-own-peripherals" />
+                  <p>
+                    <small>
+                      <Translation id="page-run-a-node-build-your-own-peripherals-small" />
+                    </small>
+                  </p>
+                </li>
+              </ul>
+            </BuildBox>
+          </Flex>
+        </BuildContainer>
+
+        <BuildContainer>
+          <SvgTitle>
+            <img src={downloadGlyph} alt="Software glyph" />
+            <h3>Step 2 – Software</h3>
+          </SvgTitle>
+
+          <Flex>
+            <BuildBoxSpace>
+              <div>
+                <h4>DAppNode</h4>
+                <p>
+                  When you're ready with your hardware, the DAppNode operating
+                  system can be downloaded using any computer and installed onto
+                  a fresh SSD via a USB drive.
+                </p>
+              </div>
+              <ButtonContainer>
+                <DappNodeButtonLink to="https://docs.dappnode.io">
+                  <Translation id="page-run-a-node-dappnode-setup" />
+                </DappNodeButtonLink>
+              </ButtonContainer>
+            </BuildBoxSpace>
+
+            <BuildBoxSpace>
+              <div>
+                <h4>Command line</h4>
+                <p>
+                  For maximum control, experienced users may prefer using the
+                  command line instead.
+                </p>
+                <p>
+                  Using your choice of hardware and operating system, see our
+                  developer docs for more information on getting started with
+                  client selection.
+                </p>
+              </div>
+              <ButtonContainer>
+                <ResponsiveButtonLink
+                  to="/developers/docs/nodes-and-clients/run-a-node/#spinning-up-node"
+                  isSecondary
+                >
+                  <code>Spinning up a node</code>
+                </ResponsiveButtonLink>{" "}
+              </ButtonContainer>
+            </BuildBoxSpace>
+          </Flex>
+        </BuildContainer>
       </Content>
 
       <Content>
         <SplitContent>
           <Column>
-            <h2>
-              <Translation id="page-run-a-node-community-title" />
-            </h2>
+            <h2>Find some helpers</h2>
             <p>
-              <Translation id="page-run-a-node-community-description" />
+              Online platforms such as Discord or Reddit are home to a large
+              number of community builders willing to help you with any
+              questions you may encounter.
+            </p>
+            <p>
+              Don't go at it alone. If you have a question it's likely someone
+              here can help you find an answer.
             </p>
             <ButtonContainer>
               <ResponsiveButtonLink to="https://discord.gg/c28an8dA5k">
                 <DiscordIcon name="discord" />
                 <Translation id="page-run-a-node-community-link" />
+              </ResponsiveButtonLink>
+              <ResponsiveButtonLink to="/community/online/" isSecondary>
+                Find online communities
               </ResponsiveButtonLink>
             </ButtonContainer>
           </Column>
