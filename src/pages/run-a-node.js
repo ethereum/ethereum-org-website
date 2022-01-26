@@ -301,6 +301,10 @@ const BuildBoxSpace = styled(BuildBox)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  &:hover {
+    transform: scale(1.02);
+    transition: transform 0.1s;
+  }
 `
 
 const FullyLoaded = styled(Container)`
