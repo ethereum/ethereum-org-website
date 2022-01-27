@@ -1361,6 +1361,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/yashkamalchaturvedi"><img src="https://avatars.githubusercontent.com/u/69413160?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Yash Kamal Chaturvedi</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=yashkamalchaturvedi" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/EtherWorldCo"><img src="https://avatars.githubusercontent.com/u/97191248?v=4?s=100" width="100px;" alt=""/><br /><sub><b>EtherWorld</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=EtherWorldCo" title="Documentation">📖</a></td>
     <td align="center"><a href="http://tenderly.co"><img src="https://avatars.githubusercontent.com/u/2846306?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Stefan Ignjatović</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Ignjatovic" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/ihebu"><img src="https://avatars.githubusercontent.com/u/47149194?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Iheb Haboubi</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aihebu" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
