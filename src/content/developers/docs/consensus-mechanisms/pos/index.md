@@ -6,7 +6,6 @@ sidebar: true
 incomplete: true
 ---
 
-
 Ethereum is moving to a consensus mechanism called proof-of-stake (PoS) from [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/). This was always the plan as it's a key part in the community's strategy to scale Ethereum via [upgrades](/upgrades/). However getting PoS right is a big technical challenge and not as straightforward as using PoW to reach consensus across the network.
 
 ## Prerequisites {#prerequisites}
