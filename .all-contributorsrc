@@ -6350,6 +6350,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "ihebu",
+      "name": "Iheb Haboubi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47149194?v=4",
+      "profile": "https://github.com/ihebu",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
