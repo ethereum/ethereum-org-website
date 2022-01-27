@@ -76,26 +76,26 @@ const Layout = (props) => {
     }
   }, [])
 
-  // useEffect(() => {
-  //   if (props.path.includes("/docs/")) {
-  //     setShouldShowSideNav(true)
+  useEffect(() => {
+    if (props.path.includes("/docs/")) {
+      setShouldShowSideNav(true)
 
-  //     if (localStorage.getItem("zen-mode") !== null) {
-  //       setIsZenMode(localStorage.getItem("zen-mode") === "true" && !isMobile())
-  //     }
-  //   } else {
-  //     // isZenMode and shouldShowSideNav only applicable in /docs pages
-  //     setIsZenMode(false)
-  //     setShouldShowSideNav(false)
-  //   }
+      if (localStorage.getItem("zen-mode") !== null) {
+        setIsZenMode(localStorage.getItem("zen-mode") === "true" && !isMobile())
+      }
+    } else {
+      // isZenMode and shouldShowSideNav only applicable in /docs pages
+      setIsZenMode(false)
+      setShouldShowSideNav(false)
+    }
 
-  //   if (props.location.hash && !props.location.hash.includes("gatsby")) {
-  //     const idTag = props.location.hash.split("#")
-  //     if (document.getElementById(idTag[1]) !== null) {
-  //       document.getElementById(idTag[1]).scrollIntoView(false)
-  //     }
-  //   }
-  // }, [props.path, props.location])
+    if (props.location.hash && !props.location.hash.includes("gatsby")) {
+      const idTag = props.location.hash.split("#")
+      if (document.getElementById(idTag[1]) !== null) {
+        document.getElementById(idTag[1]).scrollIntoView(false)
+      }
+    }
+  }, [props.path, props.location])
 
   // TODO: Remove Feb 9 2022
   const isUpgradePage =
