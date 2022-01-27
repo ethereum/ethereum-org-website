@@ -16,7 +16,7 @@ If you don't already have an understanding of what nodes and clients are, check 
 
 ## Current Client Diversity? {#current-client-diversity}
 
-![Diagram showing snapshot of client diversity](../client-diversity.jpg)
+![Pie chart showing client diversity](../client-diversity.jpg)
 _Diagram data from [ethernodes.org](ethernodes.org) and [Michael Sproul](https://github.com/sigp/blockprint)_
 
 The two pie charts above show snapshots of the current client diversity for the execution and consensus layers (at time of writing in January 2022). The execution layer is overwhelmingly dominated by [Geth](https://geth.ethereum.org/), with [Open Ethereum](https://openethereum.github.io/) a distant second, [Erigon](https://github.com/ledgerwatch/erigon) third and [Nethermind](https://nethermind.io/) fourth, with other clients comprising less than 1 % of the network. The most commonly used client on the consensus layer - [Prysm](https://prysmaticlabs.com/#projects) - is not as dominant as Geth but still represents over 60% of the network. [Lighthouse](https://lighthouse.sigmaprime.io/) and [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) make up ~20% and ~14% respectively, and other clients are rarely used.
