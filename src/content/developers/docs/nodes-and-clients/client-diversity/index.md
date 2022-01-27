@@ -1,5 +1,5 @@
 ---
-title: Client Diversity
+title: Client diversity
 description: A high level explanation of the importance of Ethereum client diversity.
 lang: en
 sidebar: true
