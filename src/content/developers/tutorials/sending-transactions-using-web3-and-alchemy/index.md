@@ -70,7 +70,7 @@ Navigate to your [Alchemy Dashboard](https://dashboard.alchemyapi.io/) and creat
 
 ### 2\. Request ETH from the Rinkeby faucet {#request-eth-from-rinkeby-faucet}
 
-Follow the instructions on the [Rinkeby faucet](https://www.rinkebyfaucet.com/) to receive Eth. You will have to share on social media for this specific faucet. Make sure to include your **Rinkeby** Ethereum address (from Metamask) and not another network. After following the instructions, double check that you’ve received the ETH in your wallet.
+Follow the instructions on the [Alchemy Rinkeby faucet](https://www.rinkebyfaucet.com/) to receive ETH. Make sure to include your **Rinkeby** Ethereum address (from Metamask) and not another network. After following the instructions, double-check that you’ve received the ETH in your wallet.
 
 ### 3\. Create a new project directory and `cd` into it {#create-a-new-project-direction}
 
