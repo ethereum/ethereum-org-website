@@ -26,7 +26,9 @@ Up to date client diversity data for the consensus layer is now available at htt
 
 ## Why is client diversity important? {#client-diversity-importance}
 
-Having many clients that are independently developed and maintained is important for the health of a decentralised network. There are several reasons why. First, a bug in one client is less threatening to the network as a whole if that client only represents a small proportion of the total client population. With relatively even distribution of nodes across many clients, the likelihood of a large fraction of them suffering from a shared issue is small and as a result the network is more robust.
+Having many independently developed and maintained clients is vital for the health of a decentralized network. Let's explore the reasons why.
+
+A bug in an individual client is less of a risk to the network when representing a minority of Ethereum nodes. With a roughly even distribution of nodes across many clients, the likelihood of most clients suffering from a shared issue is small, and as a result, the network is more robust.
 
 Client diversity also offers resilience to attacks. For example, an attack that [tricks a particular client](https://twitter.com/vdWijden/status/1437712249926393858) onto a particular branch of the chain is unlikely to be successful because other clients are unlikely to be exploitable in the same way and the canonical chain remains uncorrupted. Low client diversity increases the risk associated with a hack on the dominant client.
 
