@@ -40,7 +40,7 @@ At the same time, there is a human cost to single client dominance because it pu
 
 Addressing client diversity requires more than individual users to choose minority clients - it requires mining/validator pools and institutions like the major dapps and exchanges to switch clients too. However, all users can do their part in redressing the current imbalance and normalising the use of all the available Ethereum software. After the merge, all node operators will be required to run an execution client and a consensus client. Choosing combinations of the clients suggested below will help increase client diversity.
 
-### Execution Clients
+### Execution clients {#execution-clients}
 
 [Besu](https://www.hyperledger.org/use/besu)
 
