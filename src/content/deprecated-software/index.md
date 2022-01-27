@@ -40,7 +40,7 @@ OpenEthereum was built for miners, service providers, and exchanges which need f
 
 **Alternatives**
 
-[Erigon](https://github.com/ledgerwatch/erigon) Erigon (previously called Turbo-Geth) is a next generation Ethereum client on the efficiency frontier, written in Go.
+[Compare all Ethereum execution client options](/developers/docs/nodes-and-clients/#execution-clients).
 
 ### Grid {#grid}
 
