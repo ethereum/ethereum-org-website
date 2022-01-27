@@ -50,7 +50,7 @@ Addressing client diversity requires more than individual users to choose minori
 
 [CoreGeth](https://core-geth.org/)
 
-### Consensus Clients
+### Consensus clients {#consensus-clients}
 
 [Nimbus](https://nimbus.team/)
 
