@@ -14,7 +14,7 @@ The behaviour of an Ethereum node is controlled by the client software it runs. 
 
 If you don't already have an understanding of what nodes and clients are, check out [Nodes and clients](/developers/docs/nodes-and-clients/). The Beacon Chain is explained [here](/src/content/eth2/beacon-chain/index.md). Execution and consensus layers are defined in the [glossary](/src/content/glossary/index.md).
 
-## Current Client Diversity? {#current-client-diversity}
+## Current client diversity {#current-client-diversity}
 
 ![Pie chart showing client diversity](../client-diversity.jpg)
 _Diagram data from [ethernodes.org](ethernodes.org) and [Michael Sproul](https://github.com/sigp/blockprint)_
