@@ -103,7 +103,7 @@ We recommend you leave names of brands, companies, and personnel untranslated as
 
 ## How does the review process work? {#review-process}
 
-To ensure a certain level of quality and consistency in our translations, we work with [Acolad](https://www.acolad.com/) as our language service provider.
+To ensure a certain level of quality and consistency in our translations, we work with [Acolad](https://www.acolad.com/), one of the largest language service providers globally. Acolad has 20,000 professional linguists and can provide professional reviewers in any language.
 
 Acolad is one of the largest language service providers in the world, working with 20,000 professional linguists. This means that they can provide professional reviewers for every language and type of content we need.
 
