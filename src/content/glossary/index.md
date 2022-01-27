@@ -125,7 +125,7 @@ When numerous nodes (usually most nodes on the network) all have the same blocks
 
 ### consensus client {consensus-client}
 
-After the merge to [proof-of-stake](#pos), consensus about the true head of the blockchain will be governed by a new set of clients running on the Beacon Chain known as "consensus clients". Consensus clients do not participate in validating transactions or executing state transitions. They request this to be done by [execution clients](#execution-client).
+Consensus clients (such as Prysm, Teku, Nimbus, Lighthouse, Lodestar) run Ethereum's [proof-of-stake](#pos) consensus algorithm allowing the network to reach agreement about the head of the Beacon Chain. Consensus clients do not participate in validating/broadcasting transactions or executing state transitions. This is done by [execution clients](#execution-client).
 
 ### consensus layer {consensus-layer}
 
@@ -243,7 +243,7 @@ In the context of cryptography, lack of predictability or level of randomness. W
 
 ### execution client {#execution-client}
 
-After the merge to [proof-of-stake](#pos), existing Ethereum Mainnet clients will continue to host the [Ethereum Virtual Machine](#evm), validate transactions and execute state transitions but will not participate in consensus. These clients will therefore be referred to as "execution clients".
+Execution clients (f.k.a. "Eth1 clients"), such as Besu, Erigon, go-ethereum, Nethermind, are tasked with processing and broadcasting transactions, as well as with managing Ethereum's state. They run the computations for each transaction in the [Ethereum Virtual Machine](#evm) to ensure that the rules of the protocol are followed. Today, they also handle proof of work consensus. After the transition to [proof of stake](#pos), they will delegate this to consensus clients.
 
 ### execution layer
 
