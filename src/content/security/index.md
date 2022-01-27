@@ -206,7 +206,7 @@ As a general rule, staff will never communicate with you through private, unoffi
 
 - Never share your private keys, seed phrases or passwords
 - Never allow anyone remote access into your computer
-- Never communicate outside an organizations designated channels
+- Never communicate outside an organization designated channels
 
 <InfoBanner emoji=":lock:">
   <div>
@@ -242,7 +242,7 @@ These fraudulent brokers find their targets by using fake accounts on YouTube to
 
 Mining pool scams involve people contacting you unsolicited, and claiming that you can make large returns by joining an Ethereum mining pool. The scammer will make claims and stay in contact with you for however long it takes. Essentially, the scammer will try and convince you that when you join an Ethereum mining pool, your cryptocurrency will be used to create ETH and that you will be paid dividends in the form of ETH. What will end up happening is, you will notice that your cryptocurrency is making small returns. This is simply to bait you into investing more. Eventually, all of your funds will be sent to an unknown address and the scammer will either disappear or in some cases will continue to stay in touch as has happened in a recent case.
 
-Bottom line, be wary of people who contact you on social media asking for you to be part of a mining pool. Once you lose your crypto, it is gone.
+Bottom line; be wary of people who contact you on social media asking for you to be part of a mining pool. Once you lose your crypto, it is gone.
 
 Some things to remember:
 
