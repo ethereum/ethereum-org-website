@@ -1,5 +1,4 @@
 {
-  "consensus-client-cortex-logo-alt": "Cortex logosu",
   "consensus-client-lighthouse-logo-alt": "Lighthouse logosu",
   "consensus-client-lodestar-logo-alt": "Lodestar logo",
   "consensus-client-nimbus-logo-alt": "Nimbus logosu",
@@ -97,8 +96,6 @@
   "page-upgrades-question-6-answer-5": "Ayrıca ethresear.ch adresindeki Eth2 araştırma ve geliştirme tartışmasına da katılabilirsiniz.",
   "page-upgrades-question-6-desc": "Dapp'ınız yakın zamanda yapılacak herhangi bir yükseltmeden etkilenmeyecektir. Ancak gelecekteki yükseltmeler bazı değişiklikler gerektirebilir.",
   "page-upgrades-question-6-title": "Dapp'ımla ne yapmam gerekiyor?",
-  "page-upgrades-question-7-cortex": "Cortex",
-  "page-upgrades-question-7-cortex-lang": "(.NET uygulaması)",
   "page-upgrades-question-7-desc": "Topluluğun her yerinden birçok farklı ekip, çeşitli Eth2 yükseltmeleri üzerinde çalışıyor.",
   "page-upgrades-question-7-lighthouse": "Lighthouse",
   "page-upgrades-question-7-lighthouse-lang": "(Rust uygulaması)",

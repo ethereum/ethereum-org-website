@@ -1,5 +1,4 @@
 {
-  "consensus-client-cortex-logo-alt": "Cortex logo",
   "consensus-client-lighthouse-logo-alt": "Lighthouse logo",
   "consensus-client-lodestar-logo-alt": "Lodestar logo",
   "consensus-client-nimbus-logo-alt": "Nimbus logo",
@@ -97,8 +96,6 @@
   "page-upgrades-question-6-answer-5": "Csatlakozhatsz az Eth2 kutatási és fejlesztési fórumhoz az ethresear.ch oldalon.",
   "page-upgrades-question-6-desc": "A dappodra nem lesz hatással egyik közelgő frissítés sem. Azonban a jövőbeli fejlesztések szükségessé tehetnek egy pár változtatást.",
   "page-upgrades-question-6-title": "Mit kell csinálnom a dappommal?",
-  "page-upgrades-question-7-cortex": "Cortex",
-  "page-upgrades-question-7-cortex-lang": "(.NET implementáció)",
   "page-upgrades-question-7-desc": "A közösség egészéből sok különböző csapat dolgozik a különféle Eth2 frissítéseken.",
   "page-upgrades-question-7-lighthouse": "Lighthouse",
   "page-upgrades-question-7-lighthouse-lang": "(Rust implementáció)",

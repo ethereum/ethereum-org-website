@@ -1,5 +1,4 @@
 {
-  "consensus-client-cortex-logo-alt": "Cortex logo",
   "consensus-client-lighthouse-logo-alt": "Lighthouse logo",
   "consensus-client-lodestar-logo-alt": "Lodestar logo",
   "consensus-client-nimbus-logo-alt": "Nimbus logo",
@@ -97,8 +96,6 @@
   "page-upgrades-question-6-answer-5": "Također se možete pridružiti raspravi o istraživanju i razvoju Eth2 na ethresear.ch.",
   "page-upgrades-question-6-desc": "Neizbježne nadogradnje neće utjecati na vaš dapp. Međutim, buduće nadogradnje mogu zahtijevati neke promjene.",
   "page-upgrades-question-6-title": "Što trebam učiniti sa svojim dappom?",
-  "page-upgrades-question-7-cortex": "Cortex",
-  "page-upgrades-question-7-cortex-lang": "(.NET implementacija)",
   "page-upgrades-question-7-desc": "Mnogo različitih timova iz cijele zajednice rade na raznim nadogradnjama Eth2.",
   "page-upgrades-question-7-lighthouse": "Svjetionik",
   "page-upgrades-question-7-lighthouse-lang": "(Rust implementacija)",

@@ -671,12 +671,6 @@ const Eth2IndexPage = ({ data }) => {
                   <Translation id="page-upgrades-question-7-prysm-lang" />
                 </li>
                 <li>
-                  <Link to="https://nethermind.io/">
-                    <Translation id="page-upgrades-question-7-cortex" />
-                  </Link>{" "}
-                  <Translation id="page-upgrades-question-7-cortex-lang" />
-                </li>
-                <li>
                   <Link to="https://pegasys.tech/teku-ethereum-2-for-enterprise/">
                     <Translation id="page-upgrades-question-7-teku" />
                   </Link>{" "}

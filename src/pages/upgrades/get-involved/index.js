@@ -183,7 +183,6 @@ const GetInvolvedPage = ({ data, location }) => {
         url: "https://docs.prylabs.network/docs/getting-started/",
         image: () => data.prysm,
         githubUrl: "https://github.com/prysmaticlabs/prysm",
-        isProductionReady: true,
       },
       {
         name: "Lighthouse",
@@ -196,7 +195,6 @@ const GetInvolvedPage = ({ data, location }) => {
         image: (isDarkTheme) =>
           isDarkTheme ? data.lighthouseDark : data.lighthouseLight,
         githubUrl: "https://github.com/sigp/lighthouse",
-        isProductionReady: true,
       },
       {
         name: "Teku",
@@ -208,19 +206,6 @@ const GetInvolvedPage = ({ data, location }) => {
         url: "https://pegasys.tech/teku",
         image: (isDarkTheme) => (isDarkTheme ? data.tekuLight : data.tekuDark),
         githubUrl: "https://github.com/ConsenSys/teku",
-        isProductionReady: true,
-      },
-      {
-        name: "Cortex",
-        background: "#4CAEE5",
-        description: (
-          <Translation id="page-upgrades-get-involved-written-net" />
-        ),
-        alt: "eth2-client-cortex-logo-alt",
-        url: "https://nethermind.io/",
-        image: () => data.cortex,
-        githubUrl: "https://github.com/NethermindEth/nethermind",
-        isProductionReady: false,
       },
       {
         name: "Lodestar",
@@ -232,7 +217,6 @@ const GetInvolvedPage = ({ data, location }) => {
         url: "https://lodestar.chainsafe.io/",
         image: () => data.lodestar,
         githubUrl: "https://github.com/ChainSafe/lodestar",
-        isProductionReady: false,
       },
       {
         name: "Nimbus",
@@ -244,7 +228,6 @@ const GetInvolvedPage = ({ data, location }) => {
         url: "https://nimbus.team/",
         image: () => data.nimbus,
         githubUrl: "https://github.com/status-im/nimbus-eth2",
-        isProductionReady: true,
       },
     ]
 
@@ -355,41 +338,19 @@ const GetInvolvedPage = ({ data, location }) => {
           <Translation id="page-upgrades-get-involved-run-clients-production" />
         </h3>
         <StyledCardGrid>
-          {clients
-            .filter((client) => client.isProductionReady)
-            .map((client, idx) => (
-              <ProductCard
-                key={idx}
-                url={client.url}
-                background={client.background}
-                image={getImage(client.image(isDarkTheme))}
-                name={client.name}
-                description={client.description}
-                alt={translateMessageId(client.alt, intl)}
-                githubUrl={client.githubUrl}
-                hideStars={true}
-              />
-            ))}
-        </StyledCardGrid>
-        <h3>
-          <Translation id="page-upgrades-get-involved-run-clients-experimental" />
-        </h3>
-        <StyledCardGrid>
-          {clients
-            .filter((client) => !client.isProductionReady)
-            .map((client, idx) => (
-              <ProductCard
-                key={idx}
-                url={client.url}
-                background={client.background}
-                image={getImage(client.image(isDarkTheme))}
-                name={client.name}
-                description={client.description}
-                alt={translateMessageId(client.alt, intl)}
-                githubUrl={client.githubUrl}
-                hideStars={true}
-              />
-            ))}
+          {clients.map((client, idx) => (
+            <ProductCard
+              key={idx}
+              url={client.url}
+              background={client.background}
+              image={getImage(client.image(isDarkTheme))}
+              name={client.name}
+              description={client.description}
+              alt={translateMessageId(client.alt, intl)}
+              githubUrl={client.githubUrl}
+              hideStars={true}
+            />
+          ))}
         </StyledCardGrid>
       </Content>
       <Staking>
@@ -513,9 +474,6 @@ export const query = graphql`
       ...Clients
     }
     tekuLight: file(relativePath: { eq: "upgrades/teku-light.png" }) {
-      ...Clients
-    }
-    cortex: file(relativePath: { eq: "upgrades/cortex.png" }) {
       ...Clients
     }
     lodestar: file(relativePath: { eq: "upgrades/lodestar.png" }) {

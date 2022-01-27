@@ -1,5 +1,4 @@
 {
-  "consensus-client-cortex-logo-alt": "Лого на Cortex",
   "consensus-client-lighthouse-logo-alt": "Лого на Lighthouse",
   "consensus-client-lodestar-logo-alt": "Лого на Lodestar",
   "consensus-client-nimbus-logo-alt": "Лого на Nimbus",
@@ -97,8 +96,6 @@
   "page-upgrades-question-6-answer-5": "Може също така да се присъедините към дискусиите за изследванията и развитието на Eth2 в ethresear.ch.",
   "page-upgrades-question-6-desc": "Вашата дап няма да бъде засегната от предстоящите ъпгрейди. Но при бъдещите ъпгрейди може да се наложат някои промени.",
   "page-upgrades-question-6-title": "Какво трябва да правя с моята дап?",
-  "page-upgrades-question-7-cortex": "Cortex",
-  "page-upgrades-question-7-cortex-lang": "(.NET изпълнение)",
   "page-upgrades-question-7-desc": "Много различни екипи от цялата общност работят върху различните ъпгрейди на Eth2.",
   "page-upgrades-question-7-lighthouse": "Lighthouse",
   "page-upgrades-question-7-lighthouse-lang": "(Rust изпълнение)",

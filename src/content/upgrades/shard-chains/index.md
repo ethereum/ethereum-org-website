@@ -6,13 +6,13 @@ template: upgrade
 sidebar: true
 image: ../../../assets/upgrades/newrings.png
 summaryPoint1: Sharding is a multi-phase upgrade to improve Ethereum’s scalability and capacity.
-summaryPoint2: Shard chains spread the network's load across 64 new chains.
-summaryPoint3: They make it easier to run a node by keeping hardware requirements low.
+summaryPoint2: Shard chains provide extra, cheaper, storage layers for applications and rollups to store data.
+summaryPoint3: They enable layer 2 solutions to offer low transaction fees while leveraging the security of Ethereum.
 summaryPoint4: This upgrade is planned to follow the merge of Mainnet with the Beacon Chain.
 ---
 
 <UpgradeStatus dateKey="page-upgrades-shards-date">
-    Shard chains should ship sometime in 2023, depending on how quickly work progresses after <a href="/upgrades/merge/">the merge</a>. These shards will give Ethereum more capacity to store and access data, but they won’t be used for executing code. The details of that are still being figured out.
+    Shard chains should ship sometime in 2023, depending on how quickly work progresses after <a href="/upgrades/merge/">the merge</a>. These shards will give Ethereum more capacity to store and access data, but they won’t be used for executing code.
 </UpgradeStatus>
 
 ## What is sharding? {#what-is-sharding}
@@ -39,7 +39,7 @@ With lower hardware requirements, sharding will make it easier to run [clients](
   At first, you'll need to run a Mainnet client at the same time as your Beacon Chain client. <a href="https://launchpad.ethereum.org" target="_blank">The launchpad</a> will walk you through the hardware requirements and process. Alternatively you can use a <a href="/developers/docs/apis/backend/#available-libraries">backend API</a>.
 </InfoBanner>
 
-## Shard chains version 1: data availability {#data-availability}
+## Shard chains data availability {#data-availability}
 
 When the first shard chains are shipped they will just provide extra data to the network. They won’t handle transactions or smart contracts. But they’ll still offer incredible improvements to transactions per second when combined with rollups.
 
@@ -50,36 +50,6 @@ Rollups are a "layer 2" technology that exists today. They allow dapps to bundle
 
 [More on rollups](/developers/docs/scaling/layer-2-rollups/)
 </InfoBanner>
-
-## Shard chains version 2: code execution {#code-execution}
-
-The plan was always to add extra functionality to shards, to make them more like the [Ethereum Mainnet](/glossary/#mainnet) today. This would allow them to store and execute smart contracts and handle accounts. But considering the transactions per second boost that version 1 shards provide, does this still need to happen? This is still being debated in the community and it seems like there are a few options.
-
-### Do shards need code execution? {#do-shards-need-code-execution}
-
-Vitalik Buterin, when talking to Bankless podcast, presented 3 potential options that are worth discussing.
-
-<YouTube id="-R0j5AMUSzA" start="5841" />
-
-#### 1. State execution not needed {#state-execution-not-needed}
-
-This would mean we don’t give shards the capability to handle smart contracts and leave them as data depots.
-
-#### 2. Have some execution shards {#some-execution-shards}
-
-Perhaps there’s a compromise where we don’t need all shards (64 are planned right now) to be smarter. We could just add this functionality to a few and leave the rest. This could speed the delivery up.
-
-#### 3. Wait until we can do Zero Knowledge (ZK) snarks {#wait-for-zk-snarks}
-
-Finally, perhaps we should revisit this debate when ZK snarks are firmed up. This is a technology that could help bring truly private transactions to the network. It’s likely that they’ll require smarter shards, but they’re still in research and development.
-
-#### Other sources {#other-sources}
-
-Here's some more thinking along the same lines:
-
-- [Phase One and Done: Eth2 as a data availability engine](https://ethresear.ch/t/phase-one-and-done-eth2-as-a-data-availability-engine/5269/8) – _cdetrio, ethresear.ch_
-
-This is still an active discussion point. We’ll update these pages once we know more.
 
 ## Relationship between upgrades {#relationship-between-upgrades}
 

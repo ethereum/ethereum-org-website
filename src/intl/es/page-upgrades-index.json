@@ -1,5 +1,4 @@
 {
-  "consensus-client-cortex-logo-alt": "Logo de Cortex",
   "consensus-client-lighthouse-logo-alt": "Logo de Lighthouse",
   "consensus-client-lodestar-logo-alt": "Logo de Lodestar",
   "consensus-client-nimbus-logo-alt": "Logo de Nimbus",
@@ -97,8 +96,6 @@
   "page-upgrades-question-6-answer-5": "Tú también puedes unirte a los debates sobre investigación y desarrollo de Eth2 en ethresear.ch.",
   "page-upgrades-question-6-desc": "Tu dapp no se verá afectada por ninguna actualización inminente. Sin embargo, las actualizaciones futuras pueden requerir algunos cambios.",
   "page-upgrades-question-6-title": "¿Qué tengo que hacer con mi dapp?",
-  "page-upgrades-question-7-cortex": "Cortex",
-  "page-upgrades-question-7-cortex-lang": "(implementación de .NET)",
   "page-upgrades-question-7-desc": "Varios equipos diferentes de toda la comunidad están trabajando en diversas actualizaciones de Eth2.",
   "page-upgrades-question-7-lighthouse": "Lighthouse",
   "page-upgrades-question-7-lighthouse-lang": "(implementación de Rust)",
