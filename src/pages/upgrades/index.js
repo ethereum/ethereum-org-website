@@ -382,30 +382,30 @@ const Eth2IndexPage = ({ data }) => {
                 <Translation id="page-upgrades-what-happened-to-eth2-5" />
               </Link>
             </p>
-            <H2>
-              <Translation id="page-upgrades-why-cant-we-just-use-eth2-title" />
-            </H2>
             <h3>
-              <Translation id="page-upgrades-why-cant-we-just-use-eth2-mental-models-title" />
+              <Translation id="page-upgrades-why-cant-we-just-use-eth2-title" />
             </h3>
+            <h4>
+              <Translation id="page-upgrades-why-cant-we-just-use-eth2-mental-models-title" />
+            </h4>
             <p>
               <Translation id="page-upgrades-why-cant-we-just-use-eth2-mental-models-description" />
             </p>
-            <h3>
+            <h4>
               <Translation id="page-upgrades-why-cant-we-just-use-eth2-inclusivity-title" />
-            </h3>
+            </h4>
             <p>
               <Translation id="page-upgrades-why-cant-we-just-use-eth2-inclusivity-description" />
             </p>
-            <h3>
+            <h4>
               <Translation id="page-upgrades-why-cant-we-just-use-eth2-scam-prevention-title" />
-            </h3>
+            </h4>
             <p>
               <Translation id="page-upgrades-why-cant-we-just-use-eth2-scam-prevention-description" />
             </p>
-            <h3>
+            <h4>
               <Translation id="page-upgrades-why-cant-we-just-use-eth2-staking-clarity-title" />
-            </h3>
+            </h4>
             <p>
               <Translation id="page-upgrades-why-cant-we-just-use-eth2-staking-clarity-description" />
             </p>
