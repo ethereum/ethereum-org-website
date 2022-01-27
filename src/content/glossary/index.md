@@ -123,6 +123,14 @@ A group of at least 128 [validators](#validator) assigned to beacon and shard bl
 
 When numerous nodes (usually most nodes on the network) all have the same blocks in their locally validated best blockchain. Not to be confused with [consensus rules](#consensus-rules).
 
+### consensus client {consensus-client}
+
+Consensus clients (such as Prysm, Teku, Nimbus, Lighthouse, Lodestar) run Ethereum's [proof-of-stake](#pos) consensus algorithm allowing the network to reach agreement about the head of the Beacon Chain. Consensus clients do not participate in validating/broadcasting transactions or executing state transitions. This is done by [execution clients](#execution-client).
+
+### consensus layer {consensus-layer}
+
+Ethereum's consensus layer is the network of [consensus clients](#consensus-client).
+
 ### consensus rules {#consensus-rules}
 
 The block validation rules that full nodes follow to stay in consensus with other nodes. Not to be confused with [consensus](#consensus).
@@ -248,6 +256,14 @@ The ENS registry is a single central [contract](#smart-contract) that provides a
 ### entropy {#entropy}
 
 In the context of cryptography, lack of predictability or level of randomness. When generating secret information, such as [private keys](#private-key), algorithms usually rely on a source of high entropy to ensure the output is unpredictable.
+
+### execution client {#execution-client}
+
+Execution clients (f.k.a. "Eth1 clients"), such as Besu, Erigon, go-ethereum, Nethermind, are tasked with processing and broadcasting transactions, as well as with managing Ethereum's state. They run the computations for each transaction in the [Ethereum Virtual Machine](#evm) to ensure that the rules of the protocol are followed. Today, they also handle proof of work consensus. After the transition to [proof of stake](#pos), they will delegate this to consensus clients.
+
+### execution layer
+
+Ethereum's execution layer is the network of [execution clients](#execution-client).
 
 ### externally owned account (EOA) {#eoa}
 
