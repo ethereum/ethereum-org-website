@@ -62,7 +62,7 @@ Addressing client diversity requires more than individual users to choose minori
 
 and soon [Lodestar](https://github.com/ChainSafe/lodestar)
 
-Technical users can help accelerate this process by writing more tutorials and documentation for minority clients and encouraging their node-operating peers to migrate away from the dominant clients. There are guides for switching to a minority consensus client available at [clientdiversity.org](https://clientdiversity.org/).
+Technical users can help accelerate this process by writing more tutorials and documentation for minority clients and encouraging their node-operating peers to migrate away from the dominant clients. Guides for switching to a minority consensus client are available on [clientdiversity.org](https://clientdiversity.org/).
 
 ## Further reading {#further-reading}
 
