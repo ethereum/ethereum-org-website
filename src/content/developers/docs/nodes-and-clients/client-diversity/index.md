@@ -36,7 +36,7 @@ Ethereum has had 100% uptime since the network began. After the merge, the risks
 
 Although these are unlikely scenarios, the risk associated with them can be mitigated by evening out the distribution of clients across the active nodes. Ideally, no consensus client would ever have more than 33% share of the total nodes.
 
-At the same time, there is a human cost to single client dominance because it puts excess strain and responsibility on one small team of developers. The smaller the client diversity, the greater the consequences of a mistake for the developers maintaining the dominant client. Spreading this load across multiple teams is good for the health of Ethereum's network of nodes and network of people.
+There is also a human cost to having majority clients. It puts excess strain and responsibility on a small development team. The lesser the client diversity, the greater the burden of responsibility for the developers maintaining the majority client. Spreading this responsibility across multiple teams is good for both the health of Ethereum's network of nodes and its network of people.
 
 ## Use a minority client {use-minority-client}
 
