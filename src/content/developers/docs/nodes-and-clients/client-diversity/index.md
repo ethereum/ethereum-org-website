@@ -21,7 +21,7 @@ Multiple, independently developed and maintained clients exist because client di
 
 Having many independently developed and maintained clients is vital for the health of a decentralized network. Let's explore the reasons why.
 
-### 1) Bugs
+### Bugs {#bugs}
 A bug in an individual client is less of a risk to the network when representing a minority of Ethereum nodes. With a roughly even distribution of nodes across many clients, the likelihood of most clients suffering from a shared issue is small, and as a result, the network is more robust.
 
 ### 2) Resilience to attacks 
