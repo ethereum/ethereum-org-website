@@ -25,7 +25,7 @@ Algunos servicios te ofrecen tu propio nodo que ellos gestionan para ti, mientra
 
 Casi todos los servicios de nodos son extremadamente fáciles de integrar, incluyen cambios de una línea en tu código para intercambiar tu nodo autoalojado o incluso cambiar entre los mismos servicios.
 
-Muchas veces, los nodos de servicio ejecutan una serie de [nodos de cliente](/developers/docs/nodes-and-clients/#clients) y [tipos](/developers/docs/nodes-and-clients/#node-types). Esto te permite acceder a los archivos de nodo completos además de a los métodos específicos de los clientes en una API.
+Muchas veces, los nodos de servicio ejecutan una serie de [nodos de cliente](/developers/docs/nodes-and-clients/#execution-clients) y [tipos](/developers/docs/nodes-and-clients/#node-types). Esto te permite acceder a los archivos de nodo completos además de a los métodos específicos de los clientes en una API.
 
 Es importante remarcar que los servicios de nodos no almacenan ni deben almacenar sus claves o información privadas.
 

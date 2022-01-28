@@ -63,15 +63,15 @@ A validator vote for a [Beacon Chain](#beacon-chain) or [shard](#shard) [block](
 
 Every [block](#block) has a reserve price known as the 'base fee'. It is the minimum [gas](#gas) fee a user must pay to include a transaction in the next block.
 
-<DocLink to="developers/docs/gas/">
+<DocLink to="/developers/docs/gas/">
   Gas and fees
 </DocLink>
 
 ### Beacon Chain {#beacon-chain}
 
-An Eth2 upgrade that will become the coordinator for the Ethereum network. It introduces [proof-of-stake](#pos) and [validators](#validator) to Ethereum. It will eventually be merged with [Mainnet](#mainnet).
+A network upgrade that introduced a new consensus layer, which will become the coordinator for the entire Ethereum network. It introduces [proof-of-stake](#pos) and [validators](#validator) to Ethereum. It will eventually be merged with [Mainnet](#mainnet).
 
-<DocLink to="/eth2/beacon-chain/">
+<DocLink to="/upgrades/beacon-chain/">
   Beacon Chain
 </DocLink>
 
@@ -122,6 +122,14 @@ A group of at least 128 [validators](#validator) assigned to beacon and shard bl
 ### consensus {#consensus}
 
 When numerous nodes (usually most nodes on the network) all have the same blocks in their locally validated best blockchain. Not to be confused with [consensus rules](#consensus-rules).
+
+### consensus client {#consensus-client}
+
+Consensus clients (such as Prysm, Teku, Nimbus, Lighthouse, Lodestar) run Ethereum's [proof-of-stake](#pos) consensus algorithm allowing the network to reach agreement about the head of the Beacon Chain. Consensus clients do not participate in validating/broadcasting transactions or executing state transitions. This is done by [execution clients](#execution-client).
+
+### consensus layer {#consensus-layer}
+
+Ethereum's consensus layer is the network of [consensus clients](#consensus-client).
 
 ### consensus rules {#consensus-rules}
 
@@ -215,6 +223,22 @@ A period of 32 [slots](#slot) (6.4 minutes) in the [Beacon Chain](#beacon-chain)
   Proof-of-stake
 </DocLink>
 
+### Eth1 {#eth1}
+
+'Eth1' is a term that referred to Mainnet Ethereum, the existing proof-of-work blockchain. This term has since been deprecated in favor of the 'execution layer'. [Learn more about this name change](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
+
+<DocLink to="/upgrades/">
+  More on the Ethereum upgrades
+</DocLink>
+
+### Eth2 {#eth2}
+
+'Eth2' is a term that referred to a set of Ethereum protocol upgrades, including Ethereum's transition to proof-of-stake. This term has since been deprecated in favor of the 'consensus layer'. [Learn more about this name change](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
+
+<DocLink to="/upgrades/">
+  More on the Ethereum upgrades
+</DocLink>
+
 ### Ethereum Improvement Proposal (EIP) {#eip}
 
 A design document providing information to the Ethereum community, describing a proposed new feature or its processes or environment (see [ERC](#erc)).
@@ -232,6 +256,14 @@ The ENS registry is a single central [contract](#smart-contract) that provides a
 ### entropy {#entropy}
 
 In the context of cryptography, lack of predictability or level of randomness. When generating secret information, such as [private keys](#private-key), algorithms usually rely on a source of high entropy to ensure the output is unpredictable.
+
+### execution client {#execution-client}
+
+Execution clients (f.k.a. "Eth1 clients"), such as Besu, Erigon, go-ethereum, Nethermind, are tasked with processing and broadcasting transactions, as well as with managing Ethereum's state. They run the computations for each transaction in the [Ethereum Virtual Machine](#evm) to ensure that the rules of the protocol are followed. Today, they also handle proof of work consensus. After the transition to [proof of stake](#pos), they will delegate this to consensus clients.
+
+### execution layer {#execution-layer}
+
+Ethereum's execution layer is the network of [execution clients](#execution-client).
 
 ### externally owned account (EOA) {#eoa}
 
@@ -635,10 +667,10 @@ A type of [layer 2](#layer-2) scaling solution that batches multiple transaction
 
 ### Serenity {#serenity}
 
-The fourth and final development stage of Ethereum, otherwise known as Ethereum 2.0.
+The stage of Ethereum development that initiated a set of scaling and sustainability upgrades, previously known as 'Ethereum 2.0', or 'Eth2'.
 
-<DocLink to="/eth2/">
-  Ethereum 2.0 (Eth2)
+<DocLink to="/upgrades/">
+  Ethereum upgrades
 </DocLink>
 
 ### Secure Hash Algorithm (SHA) {#sha}
@@ -647,9 +679,9 @@ A family of cryptographic hash functions published by the National Institute of 
 
 ### shard / shard chain {#shard}
 
-A [proof-of-stake](#pos) chain that is coordinated by the [Beacon Chain](#beacon-chain) and secured by [validators](#validator). There will be 64 added to the network as part of the Eth2 shard chain upgrade. Shard chains will offer increased transaction throughput for Ethereum by providing additional data to [layer 2](#layer-2) solutions like [optimistic rollups](#optimistic-rollups) and [ZK-rollups](#zk-rollups).
+A [proof-of-stake](#pos) chain that is coordinated by the [Beacon Chain](#beacon-chain) and secured by [validators](#validator). There will be 64 added to the network as part of the shard chain upgrade. Shard chains will offer increased transaction throughput for Ethereum by providing additional data to [layer 2](#layer-2) solutions like [optimistic rollups](#optimistic-rollups) and [ZK-rollups](#zk-rollups).
 
-<DocLink to="/eth2/shard-chains">
+<DocLink to="/upgrades/shard-chains">
   Shard chains
 </DocLink>
 
@@ -709,7 +741,7 @@ An [ERC-20 token](#token-standard) with a value pegged to another asset's value.
 
 Depositing a quantity of [ether](#ether) (your stake) to become a validator and secure the [network](#network). A validator checks [transactions](#transaction) and proposes [blocks](#block) under a [proof-of-stake](#pos) consensus model. Staking gives you an economic incentive to act in the best interests of the network. You'll get rewards for carrying out your [validator](#validator) duties, but lose varying amounts of ETH if you don't.
 
-<DocLink to="/eth2/staking/">
+<DocLink to="/staking/">
   Stake your ETH to become an Ethereum validator
 </DocLink>
 
@@ -780,7 +812,7 @@ A [node](#node) in a [proof-of-stake](#pos) system responsible for storing data,
 <DocLink to="/developers/docs/consensus-mechanisms/pos">
   Proof-of-stake
 </DocLink>
-<DocLink to="/eth2/staking/">
+<DocLink to="/staking/">
   Staking in Ethereum
 </DocLink>
 

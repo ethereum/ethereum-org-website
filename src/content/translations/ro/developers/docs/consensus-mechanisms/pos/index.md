@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-Ethereum se trece de la [dovada muncii (PoW)](/developers/docs/consensus-mechanisms/pow/) la un mecanism de consens numit dovada mizei (PoS). Acesta a fost întotdeauna planul, deoarece este un element cheie în strategia comunității de a scala Ethereum prin [upgrade-urile Eth2](/eth2/). Cu toate acestea, realizarea corectă a PoS este o mare provocare tehnică și nu la fel de simplă ca utilizarea PoW pentru a ajunge la un consens în întreaga rețea.
+Ethereum se trece de la [dovada muncii (PoW)](/developers/docs/consensus-mechanisms/pow/) la un mecanism de consens numit dovada mizei (PoS). Acesta a fost întotdeauna planul, deoarece este un element cheie în strategia comunității de a scala Ethereum prin [upgrade-urile Eth2](/upgrades/). Cu toate acestea, realizarea corectă a PoS este o mare provocare tehnică și nu la fel de simplă ca utilizarea PoW pentru a ajunge la un consens în întreaga rețea.
 
 ## Condiții prealabile {#prerequisites}
 
@@ -37,7 +37,7 @@ Dacă atești blocuri rău intenționate, vei pierde miza.
 
 ### Lanțul Beacon {#the-beacon-chain}
 
-Când Ethereum va înlocui dovada muncii (PoW) cu dovada mizei (PoS), se va adăuga o complexitate numită [lanțuri de fragmente](/eth2/shard-chains/). Acestea sunt blockchain-uri separate care vor avea nevoie de validatori pentru a procesa tranzacțiile și a crea noi blocuri. Planul este de a avea 64 de lanțuri de fragmente și toate au nevoie de o înțelegere comună a stării rețelei. Așadar, este necesară o coordonare suplimentară și acest lucru va fi realizat de [lanțul Beacon](/eth2/beacon-chain/).
+Când Ethereum va înlocui dovada muncii (PoW) cu dovada mizei (PoS), se va adăuga o complexitate numită [lanțuri de fragmente](/upgrades/shard-chains/). Acestea sunt blockchain-uri separate care vor avea nevoie de validatori pentru a procesa tranzacțiile și a crea noi blocuri. Planul este de a avea 64 de lanțuri de fragmente și toate au nevoie de o înțelegere comună a stării rețelei. Așadar, este necesară o coordonare suplimentară și acest lucru va fi realizat de [lanțul Beacon](/upgrades/beacon-chain/).
 
 Lanțul Beacon primește informații de stare de la fragmente și le face disponibile altor fragmente, astfel încât rețeaua să poată rămâne sincronizată. Lanțul Beacon va gestiona, de asemenea, validatorii, de la înregistrarea depozitelor de miză până la emiterea recompenselor și penalităților.
 

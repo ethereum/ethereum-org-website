@@ -68,11 +68,11 @@ $ pip install web3
 ```
 
 ```python
-from Web3 import Web3
-from web3.utils.events import get_event_data
+from web3 import Web3
+from web3._utils.events import get_event_data
 
 
-w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth. om"))
+w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
 
 ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d" # Contrato de ventas de CryptoKitties
 
@@ -83,77 +83,77 @@ acc_address = "0xb1690C08E213a35Ed9bAb7B318DE14420FB57d8C" # Subasta de ventas d
 simplified_abi = [
     {
         'inputs': [{'internalType': 'address', 'name': 'owner', 'type': 'address'}],
-        'nombre': 'balanceOf',
-        'salidas': [{'internalType': 'uint256', 'name': '', 'type': 'uint256'}],
+        'name': 'balanceOf',
+        'outputs': [{'internalType': 'uint256', 'name': '', 'type': 'uint256'}],
         'payable': False, 'stateMutability': 'view', 'type': 'function', 'constant': True
     },
     {
         'inputs': [],
-        'nombre': 'nombre',
-        'salidas': [{'internalType': 'string', 'name': '', 'type': 'string'}],
-        'stateMutability': 'view', 'type': 'function', 'constant': Verdadero
+        'name': 'name',
+        'outputs': [{'internalType': 'string', 'name': '', 'type': 'string'}],
+        'stateMutability': 'view', 'type': 'function', 'constant': True
     },
     {
         'inputs': [{'internalType': 'uint256', 'name': 'tokenId', 'type': 'uint256'}],
         'name': 'ownerOf',
-        'salidas': [{'internalType': 'address', 'name': '', 'type': 'address'}],
-        'pagable': False, 'stateMutability': 'view', 'type': 'function', 'constant': True
+        'outputs': [{'internalType': 'address', 'name': '', 'type': 'address'}],
+        'payable': False, 'stateMutability': 'view', 'type': 'function', 'constant': True
     },
     {
         'inputs': [],
-        'nombre': 'símbolo',
-        'salidas': [{'internalType': 'string', 'name': '', 'type': 'string'}],
+        'name': 'symbol',
+        'outputs': [{'internalType': 'string', 'name': '', 'type': 'string'}],
         'stateMutability': 'view', 'type': 'function', 'constant': True
     },
     {
         'inputs': [],
         'name': 'totalSupply',
-        'salidas': [{'internalType': 'uint256', 'name': '', 'type': 'uint256'}],
-        'stateMutability': 'view', 'type': 'function', 'constant': Verdadero
+        'outputs': [{'internalType': 'uint256', 'name': '', 'type': 'uint256'}],
+        'stateMutability': 'view', 'type': 'function', 'constant': True
     },
 ]
 
 ck_extra_abi = [
     {
         'inputs': [],
-        'nombre': 'pregnantKitties',
-        'salidas': [{'name': '', 'type': 'uint256'}],
-        'pagable': False, 'stateMutability': 'view', 'type': 'function', 'constant': Verdadero
+        'name': 'pregnantKitties',
+        'outputs': [{'name': '', 'type': 'uint256'}],
+        'payable': False, 'stateMutability': 'view', 'type': 'function', 'constant': True
     },
     {
         'inputs': [{'name': '_kittyId', 'type': 'uint256'}],
-        'nombre': 'isPregnant',
+        'name': 'isPregnant',
         'outputs': [{'name': '', 'type': 'bool'}],
         'payable': False, 'stateMutability': 'view', 'type': 'function', 'constant': True
     }
 ]
 
-ck_contract = w3. th.contract(address=w3.toChecksumAddress(ck_token_addr), abi=simplified_abi+ck_extra_abi)
+ck_contract = w3.eth.contract(address=w3.toChecksumAddress(ck_token_addr), abi=simplified_abi+ck_extra_abi)
 name = ck_contract.functions.name().call()
 symbol = ck_contract.functions.symbol().call()
-kitties_auctions = ck_contract.functions.balanceOf(acc_address). all()
-print(f"{name} [{symbol}] NFT en subastas: {kitties_auctions}")
+kitties_auctions = ck_contract.functions.balanceOf(acc_address).call()
+print(f"{name} [{symbol}] NFTs in Auctions: {kitties_auctions}")
 
-pregnant_kitties = ck_contract.functions.pregnantKitties(). all()
+pregnant_kitties = ck_contract.functions.pregnantKitties().call()
 print(f"{name} [{symbol}] NFTs Pregnants: {pregnant_kitties}")
 
 # Utilizar el evento de transferencia ABI para obtener información sobre Kitties transferidos.
 tx_event_abi = {
-    'anónimo': False,
-    'entradas': [
+    'anonymous': False,
+    'inputs': [
         {'indexed': False, 'name': 'from', 'type': 'address'},
         {'indexed': False, 'name': 'to', 'type': 'address'},
         {'indexed': False, 'name': 'tokenId', 'type': 'uint256'}],
-    'nombre': 'Transferir',
+    'name': 'Transfer',
     'type': 'event'
 }
 
 # Necesitamos la firma del evento para filtrar los registros
-event_signature = w3. ha3(text="Transfer(address,address,uint256)").hex()
+event_signature = w3.sha3(text="Transfer(address,address,uint256)").hex()
 
 logs = w3.eth.getLogs({
-    "fromBlock": w3.eth.blocknumber - 120,
-    "address": w3. oChecksumadress(ck_token_addr),
+    "fromBlock": w3.eth.blockNumber - 120,
+    "address": w3.toChecksumAddress(ck_token_addr),
     "topics": [event_signature]
 })
 
@@ -163,11 +163,11 @@ logs = w3.eth.getLogs({
 # https://etherscan. o/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d#events
 # Haz clic para expandir los registros del evento y copiar su argumento "tokenId"
 
-recent_tx = [get_event_data(tx_event_abi, log)["args"] para logs de logs]
+recent_tx = [get_event_data(w3.codec, tx_event_abi, log)["args"] for log in logs]
 
 kitty_id = recent_tx[0]['tokenId'] # Pegue el "tokenId" aquí desde el enlace de arriba
-is_pregnant = ck_contract. unctions.isPregnant(kitty_id).call()
-print(f"{name} [{symbol}] NFTs {kitty_id} está embarazado: {is_pregnant}")
+is_pregnant = ck_contract.functions.isPregnant(kitty_id).call()
+print(f"{name} [{symbol}] NFTs {kitty_id} is pregnant: {is_pregnant}")
 ```
 
 El contrato de CryptoKitties tiene algunos eventos interesantes aparte de los estándar.
@@ -210,20 +210,20 @@ ck_event_signatures = [
 pregnant_logs = w3.eth.getLogs({
     "fromBlock": w3.eth.blockNumber - 120,
     "address": w3.toChecksumAddress(ck_token_addr),
-    "topics": [ck_extra_events_abi[0]]
+    "topics": [ck_event_signatures[0]]
 })
 
-recent_pregnants = [get_event_data(ck_extra_events_abi[0], log)["args"] for log in pregnant_logs]
+recent_pregnants = [get_event_data(w3.codec, ck_extra_events_abi[0], log)["args"] for log in pregnant_logs]
 
 # Here is a Birth Event:
 # - https://etherscan.io/tx/0x3978028e08a25bb4c44f7877eb3573b9644309c044bf087e335397f16356340a
 birth_logs = w3.eth.getLogs({
     "fromBlock": w3.eth.blockNumber - 120,
     "address": w3.toChecksumAddress(ck_token_addr),
-    "topics": [ck_extra_events_abi[1]]
+    "topics": [ck_event_signatures[1]]
 })
 
-recent_births = [get_event_data(ck_extra_events_abi[1], log)["args"] for log in birth_logs]
+recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] for log in birth_logs]
 ```
 
 ## NFT populares {#popular-nfts}

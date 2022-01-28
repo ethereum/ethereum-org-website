@@ -25,18 +25,13 @@ import {
 } from "../components/SharedStyledComponents"
 
 const Subtitle = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
+  max-width: 45ch;
   text-align: center;
   color: ${(props) => props.theme.colors.text200};
-`
 
-const SubtitleTwo = styled.div`
-  font-size: 20px;
-  line-height: 140%;
-  margin-bottom: 2rem;
-  text-align: center;
-  color: ${(props) => props.theme.colors.text300};
+  margin-bottom: ${(props) => props.mb || ""};
 `
 
 const HeroContainer = styled.div`
@@ -211,26 +206,17 @@ const GetETHPage = ({ data }) => {
 
   const safetyArticles = [
     {
-      title: translateMessageId(
-        "page-get-eth-article-protecting-yourself",
-        intl
-      ),
+      title: "Protecting yourself and your funds",
       link: "https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds",
       description: "MyCrypto",
     },
     {
-      title: translateMessageId(
-        "page-get-eth-article-keeping-crypto-safe",
-        intl
-      ),
+      title: "The keys to keeping your crypto safe",
       link: "https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf",
-      description: "Coinbase",
+      description: "Coinbase blog",
     },
     {
-      title: translateMessageId(
-        "page-get-eth-article-store-digital-assets",
-        intl
-      ),
+      title: "How to store digital assets on Ethereum",
       link: "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
       description: "ConsenSys",
     },
@@ -256,9 +242,9 @@ const GetETHPage = ({ data }) => {
           <Subtitle>
             <Translation id="page-get-eth-where-to-buy-desc" />
           </Subtitle>
-          <SubtitleTwo>
+          <Subtitle mb="2rem">
             <Translation id="page-get-eth-where-to-buy-desc-2" />
-          </SubtitleTwo>
+          </Subtitle>
           <StyledEthPriceCard />
           <ButtonLink to="#country-picker">
             <Translation id="page-get-eth-search-by-country" />

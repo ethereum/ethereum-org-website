@@ -22,7 +22,7 @@ import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
 import Roadmap from "../components/Roadmap"
-import Eth2TableOfContents from "../components/Eth2TableOfContents"
+import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import TableOfContents from "../components/TableOfContents"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import Translation from "../components/Translation"
@@ -431,7 +431,7 @@ const UseCasePage = ({ data, pageContext }) => {
           <InfoTitle>{mdx.frontmatter.title}</InfoTitle>
 
           {mdx.frontmatter.sidebar && tocItems && (
-            <Eth2TableOfContents
+            <UpgradeTableOfContents
               items={tocItems}
               maxDepth={mdx.frontmatter.sidebarDepth}
             />

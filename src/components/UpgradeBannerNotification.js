@@ -18,13 +18,9 @@ const UpgradeBannerNotification = () => (
   <StyledBannerNotification shouldShow>
     <StyledEmoji text=":megaphone:" />
     <div>
-      <b>Calling all node operators!</b> Time to upgrade your execution client
-      to support the{" "}
-      <Link to="/history/#arrow-glacier">Arrow Glacier upgrade</Link> set for
-      block 13,773,000 (~Dec 8). See communications from your client developer
-      team for further details.{" "}
-      <Link to="https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/">
-        Follow updates
+      <b>We've deprecated our use of 'Eth1' and 'Eth2' terms.</b>{" "}
+      <Link to="https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/">
+        More info.
       </Link>
     </div>
   </StyledBannerNotification>

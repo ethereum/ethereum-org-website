@@ -364,7 +364,7 @@ const EthPage = (props) => {
             </p>
             <p>
               <Translation id="page-eth-fuels-staking" />{" "}
-              <Link to="/eth2/staking/">
+              <Link to="/staking/">
                 <Translation id="page-eth-fuels-more-staking" />
               </Link>
             </p>
@@ -440,8 +440,8 @@ const EthPage = (props) => {
           <Divider />
         </CentralColumn>
         <StyledCalloutBanner
-          titleKey={"page-eth-where-to-buy"}
-          descriptionKey={"page-eth-where-to-buy-desc"}
+          title={translateMessageId("page-eth-where-to-buy", intl)}
+          description={translateMessageId("page-eth-where-to-buy-desc", intl)}
           image={getImage(data.ethCat)}
           alt={translateMessageId("page-eth-cat-img-alt", intl)}
           maxImageWidth={300}

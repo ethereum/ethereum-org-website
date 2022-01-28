@@ -58,7 +58,7 @@ const CardBack = styled(CardFace)`
   &:hover {
     cursor: pointer;
   }
-  &:hover path {
+  &:hover svg {
     fill: ${({ theme }) => theme.colors.primary};
   }
 `

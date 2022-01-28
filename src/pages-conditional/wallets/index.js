@@ -648,9 +648,6 @@ export const query = graphql`
     dcent: file(relativePath: { eq: "wallets/dcent.png" }) {
       ...listImage
     }
-    dharma: file(relativePath: { eq: "wallets/dharma.png" }) {
-      ...listImage
-    }
     eidoo: file(relativePath: { eq: "wallets/eidoo.png" }) {
       ...listImage
     }
@@ -754,6 +751,15 @@ export const query = graphql`
       ...listImage
     }
     keystone: file(relativePath: { eq: "wallets/keystone.png" }) {
+      ...listImage
+    }
+    loopring: file(relativePath: { eq: "wallets/loopring.png" }) {
+      ...listImage
+    }
+    numio: file(relativePath: { eq: "wallets/numio.png" }) {
+      ...listImage
+    }
+    airgap: file(relativePath: { eq: "wallets/airgap.png" }) {
       ...listImage
     }
   }

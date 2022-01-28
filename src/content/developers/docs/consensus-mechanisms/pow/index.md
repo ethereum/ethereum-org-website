@@ -8,7 +8,7 @@ incomplete: true
 
 Ethereum, like Bitcoin, currently uses a consensus protocol called **[Proof-of-work (PoW)](https://wikipedia.org/wiki/Proof_of_work)**. This allows the nodes of the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain and prevents certain kinds of economic attacks.
 
-Over the next year, proof-of-work will be phased out in favour of **[Proof-of-stake (PoS)](/developers/docs/consensus-mechanisms/pos)**. The transition to proof-of-stake will also phase out mining from Ethereum. For more details on timing, check the progress of the [Eth2 merge upgrade](/eth2/merge/).
+Over the next year, proof-of-work will be phased out in favour of **[Proof-of-stake (PoS)](/developers/docs/consensus-mechanisms/pos)**. The transition to proof-of-stake will also phase out mining from Ethereum. [More on the merge.](/upgrades/merge/)
 
 ## Prerequisites {#prerequisites}
 

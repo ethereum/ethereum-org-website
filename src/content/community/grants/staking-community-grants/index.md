@@ -18,13 +18,13 @@ _The Ethereum Foundation is sponsoring a wave of Eth2 staking community grants. 
 
 Calling all those interested in building up the Eth2 staking and validator community!
 
-Eth2 is happening! The Mainnet [deposit contract address](/eth2/deposit-contract/) is deployed. And [genesis of the Beacon Chain](https://hackmd.io/@benjaminion/genesis) is [right around the corner](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/). Which means, stakers are gearing up to stake.
+Eth2 is happening! The Mainnet [deposit contract address](/staking/deposit-contract/) is deployed. And [genesis of the Beacon Chain](https://hackmd.io/@benjaminion/genesis) is [right around the corner](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/). Which means, stakers are gearing up to stake.
 
 The Ethereum Foundation is funding the creation of tools, documentation, and resources to make for a delightful staking and validator experience. While the spirited staker ecosystem has already made great progress with respect to public good community resources, we are still in the early days and there's more work to do!
 
 <br />
 <InfoBanner emoji=":thinking_face:">
-  Wait, how do I get started with staking? Learn <a href="/en/eth2/staking/">what staking means</a>, or try it first on the <a href="https://medalla.launchpad.ethereum.org/" target="_blank">Medalla testnet</a>
+  Wait, how do I get started with staking? Learn <a href="/en/staking/">what staking means</a>, or try it first on the <a href="https://medalla.launchpad.ethereum.org/" target="_blank">Medalla testnet</a>
 </InfoBanner>
 
 ## Submit proposal {#submit-proposal}
@@ -238,7 +238,7 @@ title="How can I learn more about Eth2?">
    </p>
 
 - [Eth2 Overview](/eth2/) – _ethereum.org_
-- [The beacon chain](/eth2/beacon-chain/) – _ethereum.org_
+- [The beacon chain](/upgrades/beacon-chain/) – _ethereum.org_
 - The Genesis of a Beacon Chain — Ben Edgington [https://hackmd.io/@benjaminion/genesis](https://hackmd.io/@benjaminion/genesis)
 - The Beacon Chain Ethereum 2.0 explainer — [https://ethos.dev/beacon-chain/](https://ethos.dev/beacon-chain/)
 - [The State of Eth2](https://blog.ethereum.org/2020/06/02/the-state-of-eth2-june-2020/) _– Danny Ryan_
@@ -259,7 +259,7 @@ title="How do I start staking?">
     Once you're ready for real ETH, head on over to <a href="http://launchpad.ethereum.org/">the Eth2 launchpad</a> to set up your Eth2 validator.
    </p>
    <p>
-    Remember to check <a href="/eth2/deposit-contract/">the deposit contract</a> address before staking any ETH.
+    Remember to check <a href="/staking/deposit-contract/">the deposit contract</a> address before staking any ETH.
    </p>
 </ExpandableCard>
 
@@ -288,7 +288,7 @@ contentPreview="You can stake, run clients, and join discord communities."
 title="How can I get more involved in Eth2?">
 
    <p>
-    For client information and the latest initiatives check out how to <a href="/eth2/get-involved/">get involved in Eth2</a>.
+    For client information and the latest initiatives check out how to <a href="/upgrades/get-involved/">get involved in Eth2</a>.
    </p>
    <p>
     Join the following Discord communities:
@@ -303,13 +303,13 @@ title="How can I get more involved in Eth2?">
 
 <CardContainer>
    <Card title="Staking" description="Learn more about staking. Where you can do it, what you need, and the potential risks and rewards." emoji=":money_bag:">
-      <ButtonLink to="/eth2/staking/">
+      <ButtonLink to="/staking/">
          More on staking
       </ButtonLink>
    </Card>
    <br />
    <Card title="The Beacon Chain" description="The Beacon Chain introduces staking and proof-of-stake to the Ethereum network. Learn more about this new piece of the ecosystem." emoji=":police_car_light:">
-      <ButtonLink to="/eth2/beacon-chain/">
+      <ButtonLink to="/upgrades/beacon-chain/">
          More on the Beacon Chain
       </ButtonLink>
    </Card>

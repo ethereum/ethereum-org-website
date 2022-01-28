@@ -62,7 +62,7 @@ sidebarDepth: 2
 
 Eth2 升级的一部分，它将成为以太坊网络的协调者。 它会给以太坊引入[权益证明](#pos)和[验证者](#validator) 。 它最终将并入[主网](#mainnet)。
 
-<DocLink to="/eth2/beacon-chain/">
+<DocLink to="/upgrades/beacon-chain/">
   信标链
 </DocLink>
 
@@ -622,7 +622,7 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 以太坊的第四个也是最后一个发展阶段，又称以太坊 2.0。
 
-<DocLink to="/eth2/">
+<DocLink to="/upgrades/">
   以太坊 2.0（Eth2）
 </DocLink>
 
@@ -634,7 +634,7 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 由[信标链](#beacon-chain)管理并由[验证者](#validator)保护的[权益证明](#pos)链。 作为 Eth2 分片链升级的一部分，将有 64 个加入该网络。 分片链为[二层](#layer-2)解决方案提供额外数据，例如为 [optimistic rollup](#optimistic-rollups) 和 [ZK rollup](#zk-rollups) 提供额外的交易吞吐量。
 
-<DocLink to="/eth2/shard-chains">
+<DocLink to="/upgrades/shard-chains">
   分片链
 </DocLink>
 
@@ -694,7 +694,7 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 存入一定量的 [ether](#ether)（质押金）成为验证者并参与维护[以太坊网络](#network)。 验证者在 [proof-of-stake（权益证明）](#pos) 共识模型中检查 [交易](#transaction) 并且提议 [区块](#block)。 质押能够为符合网络利益的行为提供经济激励。 你将会因为履行[验证者](#validator)义务而获得奖励，反之将损失一定量的 ETH。
 
-<DocLink to="/eth2/staking/">
+<DocLink to="/staking/">
   质押您的以太币并成为以太坊验证者
 </DocLink>
 
@@ -766,7 +766,7 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
   权益证明
 </DocLink>
 
-<DocLink to="/eth2/staking/">
+<DocLink to="/staking/">
   质押
 </DocLink>
 

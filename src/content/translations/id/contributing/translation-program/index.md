@@ -98,7 +98,7 @@ Terima kasih atas partisipasi Anda dalam Program Terjemahan ethereum.org!
 
 <InfoBanner shouldCenter emoji=":information_source:">
   Jika Anda membantu kami dengan terjemahan, Anda mungkin menemukan beberapa informasi yang berguna dalam FAQ terjemahan kami. 
-  {" "}<a href="/contributing/translation-program/translation-guide/">FAQ Menerjemahkan ethereum.org</a>
+  {" "}<a href="/contributing/translation-program/faq/">FAQ Menerjemahkan ethereum.org</a>
 </InfoBanner>
 
 ## Sumber Daya {#resources}

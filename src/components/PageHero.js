@@ -105,6 +105,7 @@ const PageHero = ({ content, children, className, isReverse }) => {
                   isSecondary={button.isSecondary}
                   key={idx}
                   to={button.path}
+                  toId={button.pathId}
                 >
                   {button.content}
                 </StyledButtonLink>
