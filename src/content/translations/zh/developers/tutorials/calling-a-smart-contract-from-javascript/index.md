@@ -11,7 +11,7 @@ skill: 初学者
 lang: zh
 sidebar: true
 published: 2020-04-19
-source: EtherumDev
+source: EthereumDev
 sourceUrl: https://ethereumdev.io/calling-a-smart-contract-from-javascript/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---

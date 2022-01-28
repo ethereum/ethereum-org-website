@@ -62,8 +62,8 @@ sourceUrl: https://docs.alchemyapi.io/tutorials/sending-transactions-using-web3-
 **注：**本指南假设您已有一个 Alchemy 帐户、一个以太坊地址或 Metamask 钱包，并已安装 NodeJs 和 npm。 如果没有，按以下步骤操作：
 
 1.  [创建一个免费的 Alchemy 帐户](https://dashboard.alchemyapi.io/signup/)
-2.  [创建 Metamask 帐户](https://metamask.io/)（或获取一个 Etherum 地址）
-3.  [按照这些步骤安装 NodeJs 和 NPM](https://docs.alchemy.com/alchemy/guides/alchemy-for-macs)
+2.  [创建 Metamask 帐户](https://metamask.io/)（或获取一个 Ethereum 地址）
+3.  [按照这些步骤安装 NodeJs 和 NPM](https://medium.com/guides/alchemy-for-macs)
 
 ## 发送交易的步骤 {#steps-to-sending-your-transaction}
 
