@@ -30,7 +30,7 @@ Client diversity also offers resilience to attacks. For example, an attack that 
 ### 3) Proof-of-stake finality
 Ethereum has had 100% uptime since the network began. After the merge, the risks caused by poor client diversity become more alarming. A critical bug in a consensus client with over 33% of the Ethereum nodes could prevent the Beacon Chain from finalizing, causing Ethereum to go offline.
 
-<Emoji text="🚨" mr="1rem" /> Worse still, a critical bug in a client with a two-thirds majority could cause the chain to [incorrectly split and finalize](https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/), leading to a large set of validators getting stuck on an invalid chain. If they want to rejoin the correct chain, these validators face slashing or a slow and expensive voluntary withdrawal and reactivation. The magnitude of a slashing scales with the number of culpable nodes with a two-thirds majority slashed maximally (32 ETH).
+Worse still, a critical bug in a client with a two-thirds majority could cause the chain to [incorrectly split and finalize](https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/), leading to a large set of validators getting stuck on an invalid chain. If they want to rejoin the correct chain, these validators face slashing or a slow and expensive voluntary withdrawal and reactivation. The magnitude of a slashing scales with the number of culpable nodes with a two-thirds majority slashed maximally (32 ETH).
 
 Although these are unlikely scenarios, the Ethereum eco-system can mitigate their risk by evening out the distribution of clients across the active nodes. Ideally, no consensus client would ever have more than a 33% share of the total nodes.
 
