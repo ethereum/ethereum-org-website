@@ -6,13 +6,13 @@ template: upgrade
 sidebar: true
 image: ../../../assets/upgrades/newrings.png
 summaryPoint1: Sharding is a multi-phase upgrade to improve Ethereum’s scalability and capacity.
-summaryPoint2: Shard chains spread the network's load across 64 new chains.
-summaryPoint3: They make it easier to run a node by keeping hardware requirements low.
+summaryPoint2: Shard chains provide extra, cheaper, storage layers for applications and rollups to store data.
+summaryPoint3: They enable layer 2 solutions to offer low transaction fees while leveraging the security of Ethereum.
 summaryPoint4: This upgrade is planned to follow the merge of Mainnet with the Beacon Chain.
 ---
 
 <UpgradeStatus dateKey="page-upgrades-shards-date">
-    Shard chains should ship sometime in 2023, depending on how quickly work progresses after <a href="/upgrades/merge/">the merge</a>. These shards will give Ethereum more capacity to store and access data, but they won’t be used for executing code. The details of that are still being figured out.
+    Shard chains should ship sometime in 2023, depending on how quickly work progresses after <a href="/upgrades/merge/">the merge</a>. These shards will give Ethereum more capacity to store and access data, but they won’t be used for executing code.
 </UpgradeStatus>
 
 ## What is sharding? {#what-is-sharding}
