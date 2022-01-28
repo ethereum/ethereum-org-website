@@ -217,6 +217,8 @@ const GetInvolvedPage = ({ data, location }) => {
         url: "https://lodestar.chainsafe.io/",
         image: () => data.lodestar,
         githubUrl: "https://github.com/ChainSafe/lodestar",
+        isBeta: true,
+        children: <Translation id="consensus-client-under-review" />,
       },
       {
         name: "Nimbus",
@@ -232,7 +234,11 @@ const GetInvolvedPage = ({ data, location }) => {
     ]
 
     const randomizedClients = shuffle(consensusClients)
-    setClients(randomizedClients)
+    // Sort beta clients to the end
+    const randClientsBetaLast = randomizedClients.sort((_, { isBeta }) =>
+      isBeta ? -1 : 0
+    )
+    setClients(randClientsBetaLast)
   }, [data])
 
   const ethresearch = [
@@ -349,7 +355,9 @@ const GetInvolvedPage = ({ data, location }) => {
               alt={translateMessageId(client.alt, intl)}
               githubUrl={client.githubUrl}
               hideStars={true}
-            />
+            >
+              {client.children}
+            </ProductCard>
           ))}
         </StyledCardGrid>
       </Content>
