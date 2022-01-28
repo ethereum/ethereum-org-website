@@ -130,22 +130,25 @@ When referring to the Ethereum Mainnet (i.e. not referring to a testnet) use the
 - Main net
 - Ethereum mainnet
 
-### Proof-of-work / Proof-of-stake {#proof-of}
+### Proof of stake {#proof-of}
 
-Proof-of-work should be capitalized at the beginning of a sentence. In any other instance, all letters should be lower case. In either case, proof-of-work should be hyphenated between each word.
+Proof of stake should be hyphenated (proof-of-stake) when used as a compound modifier, i.e., when it functions as a compound adjective that modifies a noun.
+Proof of stake is capitalized at the beginning of a sentence. In any other instance, all letters should be lower case.
 
 **Correct usage:**
 
-- Proof-of-work
-- proof-of-work
+- It uses a proof-of-stake consensus mechanism.
+- The consensus mechanism is proof of stake.
+- We are entering the proof-of-stake era of Ethereum.
+- Ethereum will use proof of stake shortly.
 
 **Incorrect usage:**
 
-- Proof-of-Work
-- Proof of work
-- proof of work
+- It uses a proof of stake consensus mechanism.
+- The consensus mechanism is proof-of-stake.
+- The consensus mechanism is Proof of stake.
 
-The same rules we apply to proof-of-work are applicable to proof-of-stake, proof-of-authority, proof-of-humanity, proof-of-individuality, etc.
+The rules for proof of stake are also applicable to proof of work, proof of authority, proof of humanity, proof of individuality, etc.
 
 ### Use active voice {#use-active-voice}
 
