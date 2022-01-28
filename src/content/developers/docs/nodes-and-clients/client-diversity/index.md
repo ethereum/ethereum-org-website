@@ -13,7 +13,7 @@ The behavior of an Ethereum node is controlled by the client software it runs. T
 
 If you don't already have an understanding of what nodes and clients are, check out [nodes and clients](/developers/docs/nodes-and-clients/). The Beacon Chain is explained [here](/upgrades/beacon-chain/). [Execution](/glossary/#execution-layer) and [consensus]/glossary/#consensus-layer) layers are defined in the glossary.
 
-## Why are there multiple clients?
+## Why are there multiple clients? {#why-multiple-clients}
 
 Multiple, independently developed and maintained clients exist because client diversity makes the network more resilient to attacks and bugs. Multiple clients is a strength unique to Ethereum - other blockchains rely on the infallibility of a single client. However, it is not enough simply to have multiple, clients available, they have to be adopted by the community and the total active nodes distributed relatively evenly across them.
 
