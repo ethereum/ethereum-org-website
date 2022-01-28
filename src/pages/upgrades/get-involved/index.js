@@ -179,7 +179,7 @@ const GetInvolvedPage = ({ data, location }) => {
         name: "Prysm",
         background: "#23292E",
         description: <Translation id="page-upgrades-get-involved-written-go" />,
-        alt: "eth2-client-prysm-logo-alt",
+        alt: "consensus-client-prysm-logo-alt",
         url: "https://docs.prylabs.network/docs/getting-started/",
         image: () => data.prysm,
         githubUrl: "https://github.com/prysmaticlabs/prysm",
@@ -190,7 +190,7 @@ const GetInvolvedPage = ({ data, location }) => {
         description: (
           <Translation id="page-upgrades-get-involved-written-rust" />
         ),
-        alt: "eth2-client-lighthouse-logo-alt",
+        alt: "consensus-client-lighthouse-logo-alt",
         url: "https://lighthouse-book.sigmaprime.io/",
         image: (isDarkTheme) =>
           isDarkTheme ? data.lighthouseDark : data.lighthouseLight,
@@ -202,7 +202,7 @@ const GetInvolvedPage = ({ data, location }) => {
         description: (
           <Translation id="page-upgrades-get-involved-written-java" />
         ),
-        alt: "eth2-client-teku-logo-alt",
+        alt: "consensus-client-teku-logo-alt",
         url: "https://pegasys.tech/teku",
         image: (isDarkTheme) => (isDarkTheme ? data.tekuLight : data.tekuDark),
         githubUrl: "https://github.com/ConsenSys/teku",
@@ -213,7 +213,7 @@ const GetInvolvedPage = ({ data, location }) => {
         description: (
           <Translation id="page-upgrades-get-involved-written-javascript" />
         ),
-        alt: "eth2-client-lodestar-logo-alt",
+        alt: "consensus-client-lodestar-logo-alt",
         url: "https://lodestar.chainsafe.io/",
         image: () => data.lodestar,
         githubUrl: "https://github.com/ChainSafe/lodestar",
@@ -224,7 +224,7 @@ const GetInvolvedPage = ({ data, location }) => {
         description: (
           <Translation id="page-upgrades-get-involved-written-nim" />
         ),
-        alt: "eth2-client-nimbus-logo-alt",
+        alt: "consensus-client-nimbus-logo-alt",
         url: "https://nimbus.team/",
         image: () => data.nimbus,
         githubUrl: "https://github.com/status-im/nimbus-eth2",
