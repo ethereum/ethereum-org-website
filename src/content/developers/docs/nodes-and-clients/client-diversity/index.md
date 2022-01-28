@@ -34,7 +34,7 @@ Worse still, a critical bug in a client with a two-thirds majority could cause t
 
 Although these are unlikely scenarios, the Ethereum eco-system can mitigate their risk by evening out the distribution of clients across the active nodes. Ideally, no consensus client would ever have more than a 33% share of the total nodes.
 
-### 4) Shared responsibility
+### Shared responsibility {#responsibility}
 
 There is also a human cost to having majority clients. It puts excess strain and responsibility on a small development team. The lesser the client diversity, the greater the burden of responsibility for the developers maintaining the majority client. Spreading this responsibility across multiple teams is good for both the health of Ethereum's network of nodes and its network of people.
 
