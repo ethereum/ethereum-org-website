@@ -78,8 +78,8 @@ Technical users can help accelerate this process by writing more tutorials and d
 
 ## Further reading {#further-reading}
 
-- [List of Ethereum node services](https://ethereumnodes.com/)
 - [Importance of client diversity](https://our.status.im/the-importance-of-client-diversity/)
+- [List of Ethereum node services](https://ethereumnodes.com/)
 - ["Five Whys" of the client diversity problem](https://notes.ethereum.org/@afhGjrKfTKmksTOtqhB9RQ/BJGj7uh08)
 - [Ethereum Diversity and How to Solve For It (Youtube)](https://www.youtube.com/watch?v=1hZgCaiqwfU)
 - [clientdiversity.org](https://clientdiversity.org/)
