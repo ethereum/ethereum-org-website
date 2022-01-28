@@ -157,7 +157,7 @@
     "to": "https://airtable.com/shrZ89OEwQJRtXHPv/",
     "sponsor": null,
     "location": "San Francisco, USA",
-    "description": "",
+    "description": "The energy and excitement at the first ETHSanFrancisco will be hard to top, but we have our eyes set on delivering an even more impactful experience.",
     "startDate": "2022-06-02",
     "endDate": "2022-06-05"
   },
@@ -184,7 +184,7 @@
     "to": "http://ethmontreal.com/",
     "sponsor": null,
     "location": "Montreal, CAN",
-    "description": "",
+    "description": "Ethereum Montreal aims to help build a strong collaborative community of developers and entrepreneurs.",
     "startDate": "2022-06-14",
     "endDate": "2022-06-23"
   },
@@ -193,7 +193,7 @@
     "to": "https://www.nft.nyc/",
     "sponsor": null,
     "location": "NYC, USA",
-    "description": "",
+    "description": "Since its inaugural conference in February 2019, NFT.NYC events have hosted thousands of attendees, hundreds of leading speakers and the best projects in the Non-Fungible Token ecosystem.",
     "startDate": "2022-06-21",
     "endDate": "2022-06-23"
   },
@@ -211,7 +211,7 @@
     "to": "https://2022.ethseattle.org/",
     "sponsor": null,
     "location": "Seattle, USA",
-    "description": "",
+    "description": "ETHSeattle is a hackathon in Seattle, USA.",
     "startDate": "2022-07-08",
     "endDate": "2022-07-08"
   },
@@ -238,7 +238,7 @@
     "to": "https://www.blockchainweekparis.com/",
     "sponsor": null,
     "location": "Paris, FR",
-    "description": "",
+    "description": "Paris Blockchain Week is the biggest Blockchain & Digital Assets event in Europe. During one week in the City of Lights, numerous events will be held by the most prominent blockchain organizations.",
     "startDate": "2022-07-18",
     "endDate": "2022-07-22"
   },
@@ -256,7 +256,7 @@
     "to": "https://ethparis.com/",
     "sponsor": null,
     "location": "Paris, FR",
-    "description": "",
+    "description": "ETHParis brings together over 350 curious minds, industry experts and companies pushing the way forward in crypto space to collaborate together on decentralized applications using Ethereum.",
     "startDate": "2022-07-22",
     "endDate": "2022-07-24"
   },
@@ -280,7 +280,7 @@
   },
   {
     "title": "Stanford SBC",
-    "to": "https://www.eventbrite.com/e/sbc-2022-tickets-192873157807",
+    "to": "https://cbr.stanford.edu/sbc22/",
     "sponsor": null,
     "location": "Stanford, USA",
     "description": "The conference focuses on technical innovations in the blockchain space. It brings together researchers and practitioners in the space.",
@@ -307,10 +307,10 @@
   },
   {
     "title": "ETHKenya",
-    "to": "https://www.eventbrite.com/e/ethereum-nairobi-meet-up-tickets-167917428549#",
+    "to": "https://ethglobal.com/",
     "sponsor": null,
     "location": "Kenya",
-    "description": "",
+    "description": "ETHKenya is a hackathon in Kenya.",
     "startDate": "2022-09-01",
     "endDate": "2022-09-30"
   },
@@ -331,59 +331,5 @@
     "description": "We’ve been working behind the scenes with the crypto community on the ground and are excited to share the details soon, so clear your calendar for an incredible weekend.",
     "startDate": "2022-12-02",
     "endDate": "2022-12-04"
-  },
-  {
-    "title": "ETHWarsaw",
-    "to": "https://www.meetup.com/Ethereum-Meetup-Poland/events/past/",
-    "sponsor": null,
-    "location": "Warsaw, POL",
-    "description": "",
-    "startDate": "2022-04-01",
-    "endDate": "2022-06-30"
-  },
-  {
-    "title": "ETHKyiv",
-    "to": "https://www.meetup.com/Ethereum-Ukraine/events/past/",
-    "sponsor": null,
-    "location": "Kyiv, Ukraine",
-    "description": "",
-    "startDate": "2022-04-01",
-    "endDate": "2022-06-30"
-  },
-  {
-    "title": "Liscon",
-    "to": "https://liscon.org/",
-    "sponsor": null,
-    "location": "Lisbon, PRT",
-    "description": "LisCon is a celebration of our culture and values, a coming together of builders, thinkers and creators across the space.",
-    "startDate": "2022-07-01",
-    "endDate": "2022-12-31"
-  },
-  {
-    "title": "ETHLisbon",
-    "to": "https://www.ethlisbon.org/",
-    "sponsor": null,
-    "location": "Lisbon, PRT",
-    "description": "The Fintech House is the biggest Fintech, Insurtech, Regtech and Cybersecurity hub in Portugal. Its mission is to foster the ecosystem by bringing together startups, investors and stakeholders to be the catalyser for innovation.",
-    "startDate": "2022-07-01",
-    "endDate": "2022-12-31"
-  },
-  {
-    "title": "ETHBogota",
-    "to": "https://bogota.ethglobal.com/",
-    "sponsor": null,
-    "location": "Bogota, CO",
-    "description": "Whenever Devcon happens, we’ll be running ETHBogota right alongside it. Don’t miss the biggest web3 developer meetup of the year.",
-    "startDate": "2022-10-01",
-    "endDate": "2022-12-31"
-  },
-  {
-    "title": "DevCon",
-    "to": "https://airtable.com/shrZ89OEwQJRtXHPv/",
-    "sponsor": null,
-    "location": "Bogota, CO",
-    "description": "Whenever Devcon happens, we’ll be running ETHBogota right alongside it. Don’t miss the biggest web3 developer meetup of the year.",
-    "startDate": "2022-10-01",
-    "endDate": "2022-12-31"
   }
 ]
