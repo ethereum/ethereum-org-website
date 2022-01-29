@@ -26,7 +26,7 @@ Program-program ini mendukung ekosistem Ethereum yang luas dengan menawarkan hib
 
 Proyek-proyek ini telah menciptakan hibah sendiri untuk proyek-proyek yang bertujuan untuk mengembangkan dan bereksperimen dengan teknologi sendiri.
 
-- [TheGraph](https://airtable.com/shrdfvnFvVch3IOVm) – _ekosistem [The Graph](https://thegraph.com/)_
+- [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _ekosistem [The Graph](https://thegraph.com/)_
 - [Uniswap](https://www.unigrants.org/) – _[komunitas](https://uniswap.org/) Uniswap_
 - [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) – _Dana Ekosistem [Balancer](https://balancer.fi/)_
 - [mStable](https://docs.mstable.org/advanced/grants-program) - _[komunitas](https://mstable.org/) mStable_
