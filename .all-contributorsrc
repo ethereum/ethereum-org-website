@@ -6359,6 +6359,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "HursitTarcan",
+      "name": "Hursit Tarcan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75273616?v=4",
+      "profile": "https://github.com/HursitTarcan",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
