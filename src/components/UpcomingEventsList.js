@@ -114,7 +114,9 @@ const UpcomingEventsList = () => {
       </EventList>
       <ButtonLinkContainer>
         {isVisible && (
-          <ButtonLink onClick={loadMoreEvents}>Load More</ButtonLink>
+          <ButtonLink onClick={loadMoreEvents}>
+            <Translation id="page-community-upcoming-events-load-more" />
+          </ButtonLink>
         )}
       </ButtonLinkContainer>
     </>
