@@ -35,7 +35,7 @@ Como mínimo:
 - Solidity no emite ninguna advertencia del compilador
 - Tu código está bien documentado
 
-Hay mucho más que decir sobre el proceso de desarrollo, pero estos puntos conforman un buen punto de partida. Para obtener más artículos y explicaciones detalladas, consulta la [lista de verificación de calidad de proceso proporcionada por DeFiSafety](https://docs.defisafety.com/audit-process-documentation/process-quality-audit-process). [DefiSafety](https://defisafety.com/) es un servicio público no oficial que publica reseñas de varias dapps de Etherum grandes y públicas. Parte del sistema de calificación de DeFiSafety incluye cómo se adhiere el proyecto a esta lista de verificación de calidad de proceso. Siguiendo estos procesos:
+Hay mucho más que decir sobre el proceso de desarrollo, pero estos puntos conforman un buen punto de partida. Para obtener más artículos y explicaciones detalladas, consulta la [lista de verificación de calidad de proceso proporcionada por DeFiSafety](https://docs.defisafety.com/audit-process-documentation/process-quality-audit-process). [DefiSafety](https://defisafety.com/) es un servicio público no oficial que publica reseñas de varias dapps de Ethereum grandes y públicas. Parte del sistema de calificación de DeFiSafety incluye cómo se adhiere el proyecto a esta lista de verificación de calidad de proceso. Siguiendo estos procesos:
 
 - Producirás un código más seguro, mediante pruebas automatizadas reproducibles
 - Los clientes podrán revisar tu proyecto de forma más eficaz

@@ -29,7 +29,7 @@ sidebarDepth: 1
 
 ## 初級者向けリファレンスとリンク {#beginner-references-and-links}
 
-**Netherum ライブラリと VS Code Solidity の紹介**
+**Nethereum ライブラリと VS Code Solidity の紹介**
 
 - [Nethereum 入門](https://docs.nethereum.com/en/latest/getting-started/)
 - [VS Code に Solidity をインストール](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
@@ -65,7 +65,7 @@ sidebarDepth: 1
 
 - [Azure Key Vault と Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
-- [Ujo Netherum のバックエンドリファレンスアーキテクチャ](https://docs.nethereum.com/en/latest/nethereum-ujo-backend-sample/)
+- [Ujo Nethereum のバックエンドリファレンスアーキテクチャ](https://docs.nethereum.com/en/latest/nethereum-ujo-backend-sample/)
 
 ## .NET のプロジェクト、ツール、その他の楽しいもの{#dot-net-projects-tools-and-other-fun stiff}
 
@@ -81,7 +81,7 @@ sidebarDepth: 1
 
 ## .NET コミュニティコントリビューター {#dot-net-community-contributors}
 
-Netherum では、主に[Gitter](https://gitter.im/Nethereum/Nethereum)で議論しており、質問や回答を歓迎する他、助けを求めたり、ゆっくりしたりしてください。 [Nethereum の GitHub リポジトリ](https://github.com/Nethereum)で PR をしたり、issue を立てたりすることもできますし、私たちが持つ多くのサイドプロジェクトやサンプルプロジェクトを閲覧することもできます。
+Nethereum では、主に[Gitter](https://gitter.im/Nethereum/Nethereum)で議論しており、質問や回答を歓迎する他、助けを求めたり、ゆっくりしたりしてください。 [Nethereum の GitHub リポジトリ](https://github.com/Nethereum)で PR をしたり、issue を立てたりすることもできますし、私たちが持つ多くのサイドプロジェクトやサンプルプロジェクトを閲覧することもできます。
 
 Nethermind では、[Gitter](https://gitter.im/nethermindeth/nethermind)を通じて連絡を取り合いましょう。 PR や issue については、[Nethermind の GitHub リポジトリ](https://github.com/NethermindEth/nethermind)をチェックしてください。
 

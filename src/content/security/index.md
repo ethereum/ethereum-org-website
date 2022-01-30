@@ -206,7 +206,7 @@ As a general rule, staff will never communicate with you through private, unoffi
 
 - Never share your private keys, seed phrases or passwords
 - Never allow anyone remote access into your computer
-- Never communicate outside an organizations designated channels
+- Never communicate outside an organization's designated channels
 
 <InfoBanner emoji=":lock:">
   <div>

@@ -1,5 +1,4 @@
 {
-  "consensus-client-cortex-logo-alt": "Logo Cortex",
   "consensus-client-lighthouse-logo-alt": "Logo Lighthouse",
   "consensus-client-lodestar-logo-alt": "Logo Lodestar",
   "consensus-client-nimbus-logo-alt": "Logo Nimbus",
@@ -98,8 +97,6 @@
   "page-upgrades-question-6-answer-5": "Anda juga dapat bergabung dalam diskusi tentang penelitian dan pengembangan Eth2 di ethresear.ch.",
   "page-upgrades-question-6-desc": "Dapp Anda tidak akan terpengaruh oleh peningkatan yang akan terjadi. Namun peningkatan di masa mendatang mungkin memerlukan beberapa penyesuaiaan.",
   "page-upgrades-question-6-title": "Apa yang harus saya lakukan dengan dapp saya?",
-  "page-upgrades-question-7-cortex": "Cortex",
-  "page-upgrades-question-7-cortex-lang": "(implementasi .NET)",
   "page-upgrades-question-7-desc": "Banyak tim berbeda dari banyak komunitas sedang mengerjakan berbagai peningkatan Eth2.",
   "page-upgrades-question-7-lighthouse": "Lighthouse",
   "page-upgrades-question-7-lighthouse-lang": "(implementasi Rust)",

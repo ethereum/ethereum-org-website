@@ -1,5 +1,4 @@
 {
-  "consensus-client-cortex-logo-alt": "Cortex徽标",
   "consensus-client-lighthouse-logo-alt": "Lighthouse徽标",
   "consensus-client-lodestar-logo-alt": "Lodestar徽标",
   "consensus-client-nimbus-logo-alt": "Nimbus徽标",
@@ -97,8 +96,6 @@
   "page-upgrades-question-6-answer-5": "您也可以加入ethresear.ch参与Eth2的研究讨论和开发。",
   "page-upgrades-question-6-desc": "您的去中心化应用不会受到最近升级的任何影响。但是未来可能会需要一些更新。",
   "page-upgrades-question-6-title": "针对我的去中心化应用需要做什么？",
-  "page-upgrades-question-7-cortex": "Cortex",
-  "page-upgrades-question-7-cortex-lang": "（.Net语言实现）",
   "page-upgrades-question-7-desc": "社区中很多不同的团队都在为Eth2的升级工作。",
   "page-upgrades-question-7-lighthouse": "Lighthouse",
   "page-upgrades-question-7-lighthouse-lang": "（Rust语言实现）",

@@ -1,5 +1,4 @@
 {
-  "consensus-client-cortex-logo-alt": "شعار Cortex",
   "consensus-client-lighthouse-logo-alt": "شعار Lighthouse",
   "consensus-client-lodestar-logo-alt": "شعار Lodestar",
   "consensus-client-nimbus-logo-alt": "شعار Nimbus",
@@ -98,8 +97,6 @@
   "page-upgrades-question-6-answer-5": "يمكنك أيضًا الانضمام إلى المناقشة حول بحث وتطوير upgrades على ethresear.ch.",
   "page-upgrades-question-6-desc": "لن يتأثر تطبيقك اللامركزي بأي ترقيات وشيكة. لكن الترقيات المستقبلية قد تتطلب بعض التغييرات.",
   "page-upgrades-question-6-title": "ماذا علي أن أفعل بتطبيقي اللامركزي؟",
-  "page-upgrades-question-7-cortex": "كورتكس",
-  "page-upgrades-question-7-cortex-lang": "(تنفيذ .NET)",
   "page-upgrades-question-7-desc": "تعمل العديد من الفرق المختلفة من جميع أنحاء المجتمع على ترقيات upgrades المختلفة.",
   "page-upgrades-question-7-lighthouse": "Lighthouse",
   "page-upgrades-question-7-lighthouse-lang": "(تنفيذ Rust)",
