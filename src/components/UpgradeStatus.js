@@ -24,21 +24,21 @@ const Container = styled.div`
 
 const Label = styled.h2`
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-bottom: 1.5rem;
   font-weight: 400;
   margin-top: 0;
 `
 
 const Date = styled.p`
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 100%;
 `
 
 const Content = styled.p`
-  font-size: 20px;
+  font-size: 1.25rem;
   margin-bottom: 0rem;
 `
 

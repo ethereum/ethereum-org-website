@@ -40,7 +40,7 @@ const Card = styled.div`
 const Label = styled.div`
   display: flex;
   justify-content: center;
-  font-size: 14px;
+  font-size: 0.875rem;
   text-transform: uppercase;
   border-top-left-radius: 1px;
   border-top-right-radius: 1px;
@@ -71,7 +71,7 @@ const CriticalLabel = styled(Label)`
 `
 
 const H2 = styled.h2`
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
   line-height: 22px;
@@ -83,7 +83,7 @@ const H2 = styled.h2`
 `
 
 const Description = styled.p`
-  font-size: 20px;
+  font-size: 1.25rem;
   padding: 1rem;
   padding-top: 0rem;
   padding-bottom: 0rem;
@@ -96,7 +96,7 @@ const Divider = styled.div`
 
 const SubHeader = styled.p`
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-left: 1rem;
   margin-top: 1rem;
   margin-bottom: 0.5rem;

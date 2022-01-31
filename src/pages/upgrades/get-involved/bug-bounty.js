@@ -67,14 +67,14 @@ const LeaderboardContainer = styled.div`
 
 const Title = styled.p`
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: ${(props) => props.theme.colors.text};
   margin-bottom: 0rem;
   margin-left: 0.5rem;
 `
 
 const Subtitle = styled.div`
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
   max-width: 480px;
@@ -113,7 +113,7 @@ const StyledCardContainer = styled(CardContainer)`
 `
 
 const H2 = styled.h2`
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
   line-height: 22px;
@@ -157,7 +157,7 @@ const Client = styled(GatsbyImage)`
 
 const ClientIntro = styled.p`
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: ${(props) => props.theme.colors.text300};
   font-weight: 600;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {

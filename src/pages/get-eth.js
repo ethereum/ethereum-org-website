@@ -30,7 +30,6 @@ const Subtitle = styled.div`
   max-width: 45ch;
   text-align: center;
   color: ${(props) => props.theme.colors.text200};
-
   margin-bottom: ${(props) => props.mb || ""};
 `
 
@@ -147,7 +146,7 @@ const Code = styled.p`
 
 const CodeLabel = styled.p`
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: ${(props) => props.theme.colors.fail300};
   margin-bottom: 0rem;
   margin-right: 1rem;

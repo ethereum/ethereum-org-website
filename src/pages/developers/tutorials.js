@@ -25,7 +25,7 @@ import { getLocaleTimestamp, INVALID_DATETIME } from "../../utils/time"
 import foreignTutorials from "../../data/externalTutorials.json"
 
 const SubSlogan = styled.p`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
   margin-bottom: 1rem;
@@ -76,15 +76,16 @@ const About = styled.p`
 
 const Author = styled.p`
   color: ${(props) => props.theme.colors.text200};
-  font-size: 14px;
+  font-size: 0.875rem;
   text-transform: uppercase;
 `
 
 const Title = styled.p`
   color: ${(props) => props.theme.colors.text};
   font-weight: 600;
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-right: 6rem;
+
   &:after {
     margin-left: 0.125em;
     margin-right: 0.3em;
@@ -104,7 +105,7 @@ const PageTitle = styled.h1`
   font-family: ${(props) => props.theme.fonts.monospace};
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 140%;
   text-align: center;
   margin: 0 0 1.625rem;

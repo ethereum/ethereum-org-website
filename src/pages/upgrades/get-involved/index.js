@@ -73,7 +73,7 @@ const HeroCard = styled.div`
 `
 
 const Subtitle = styled.div`
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
   margin-top: 1rem;
