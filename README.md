@@ -1365,6 +1365,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/HursitTarcan"><img src="https://avatars.githubusercontent.com/u/75273616?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hursit Tarcan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AHursitTarcan" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/pabloped"><img src="https://avatars.githubusercontent.com/u/65499117?v=4?s=100" width="100px;" alt=""/><br /><sub><b>pabloped</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=pabloped" title="Documentation">📖</a> <a href="#translation-pabloped" title="Translation">🌍</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/ilkererkek"><img src="https://avatars.githubusercontent.com/u/69644608?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ilkererkek</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ilkererkek" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
