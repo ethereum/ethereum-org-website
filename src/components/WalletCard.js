@@ -104,7 +104,7 @@ const FlipTitle = styled.div`
 
 const TypePill = styled(Pill)`
   margin-right: 0.75rem;
-  font-size: 14px;
+  font-size: 0.875rem;
   background: ${({ theme }) => theme.colors.background};
   color: ${({ theme }) => theme.colors.text200};
   padding: 0;
@@ -130,8 +130,7 @@ const BackContent = styled(Content)`
 const Title = styled.h3`
   margin-bottom: 0rem;
   margin-top: 0rem;
-  font-size: 20px;
-`
+  font-size: 1.25rem;`
 
 const Description = styled.p`
   opacity: 0.8;

@@ -27,7 +27,7 @@ const Content = styled.div`
 
 const Title = styled.h3`
   margin-top: 0rem;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   margin-bottom: 0.5rem;
 `

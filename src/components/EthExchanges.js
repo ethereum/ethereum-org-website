@@ -126,7 +126,7 @@ const SuccessContainer = styled.div`
 
 const EmptyStateText = styled.p`
   margin: 2rem;
-  font-size: 20px;
+  font-size: 1.25rem;
   max-width: 450px;
   text-align: center;
 `
@@ -137,7 +137,7 @@ const EmptyStateTextSingle = styled.p`
 `
 
 const Intro = styled.p`
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 140%;
   margin-top: 0rem;
   margin-bottom: 2rem;

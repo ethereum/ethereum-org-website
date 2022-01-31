@@ -95,7 +95,7 @@ export const GradientContainer = styled.div`
 
 export const SloganGradient = styled.div`
   font-weight: 800;
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 140%;
   max-width: 720px;
   margin-top: 1rem;
@@ -105,7 +105,7 @@ export const SloganGradient = styled.div`
   -webkit-text-fill-color: transparent;
   margin-bottom: 0rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 40px;
+    font-size: 2.5rem
   }
 `
 
@@ -460,7 +460,7 @@ export const OptionText = styled.div`
   line-height: 100%;
   text-align: center;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
   }
 `

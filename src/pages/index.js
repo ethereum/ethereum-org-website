@@ -44,12 +44,12 @@ const StyledContent = styled(Content)`
 `
 
 const H1 = styled.h1`
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 700;
   margin: 0;
   text-align: center;
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 32px;
+    font-size: 2rem;
   }
 `
 
@@ -162,7 +162,7 @@ const Description = styled.p`
   max-width: 55ch;
   text-align: center;
   align-self: center;
-  font-size: 20px;
+  font-size: 1.25rem;
   margin-top: 1rem;
 `
 
@@ -223,10 +223,10 @@ const FeatureImage = styled(GatsbyImage)`
 
 const Subtitle = styled.div`
   margin-bottom: 2rem;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 16px;
+    font-size: 1rem;
   }
 `
 
@@ -382,7 +382,7 @@ const StyledH2 = styled.h2`
   margin-bottom: 0.5rem;
   font-family: serif;
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 `
 

@@ -19,8 +19,7 @@ const Description = styled.p`
 `
 
 const Title = styled.p`
-  font-size: 20px;
-`
+  font-size: 1.25rem;`
 
 const HorizontalCard = ({
   emoji,

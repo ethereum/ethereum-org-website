@@ -29,7 +29,7 @@ const ButtonContainer = styled.div`
 `
 
 const Subtitle = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   margin-bottom: 2rem;
   color: ${(props) => props.theme.colors.text200};

@@ -25,14 +25,14 @@ import {
 } from "../components/SharedStyledComponents"
 
 const Subtitle = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   text-align: center;
   color: ${(props) => props.theme.colors.text200};
 `
 
 const SubtitleTwo = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   margin-bottom: 2rem;
   text-align: center;
@@ -152,7 +152,7 @@ const Code = styled.p`
 
 const CodeLabel = styled.p`
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: ${(props) => props.theme.colors.fail300};
   margin-bottom: 0rem;
   margin-right: 1rem;

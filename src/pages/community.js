@@ -174,10 +174,10 @@ const FeatureImage = styled(GatsbyImage)`
 
 const Subtitle = styled.div`
   margin-bottom: 2rem;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 16px;
+    font-size: 1rem;
   }
 `
 

@@ -41,21 +41,20 @@ const Slogan = styled.h1`
   font-family: ${(props) => props.theme.fonts.monospace};
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 140%;
   text-align: center;
   margin: 0 0 1.625rem;
 `
 
 // const Subtitle = styled.div`
-//   font-size: 20px;
-//   line-height: 140%;
+//   font-size: 1.25rem;//   line-height: 140%;
 //   color: ${(props) => props.theme.colors.text200};
 //   margin-bottom: 0.5rem;
 // `
 
 const SubSlogan = styled.p`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
   margin-bottom: 0.5rem;
