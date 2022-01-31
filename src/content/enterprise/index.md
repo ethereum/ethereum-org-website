@@ -119,6 +119,7 @@ Here are some of the enterprise applications that have been deployed to the publ
 - [Brave Browser](https://basicattentiontoken.org/) _pays users for their attention to advertisements and users can pay publishers to support them, via the Basic Attention Token._
 - [hCaptcha](https://www.hcaptcha.com/) _Bot prevention CAPTCHA system which pays web site operators for the work done by users to label data for machine learning. Now deployed by Cloudflare._
 - [Audius](https://audius.co/) _a streaming service that connects music fans directly with artists, and allows artists to be paid in full by their fans, directly and instantly for every stream_
+- [EthereumAds](https://ethereumads.com/) _lets web site operators sell advertising space and get paid via Ethereum_  
 
 ### Finance {#finance}
 
@@ -129,6 +130,7 @@ Here are some of the enterprise applications that have been deployed to the publ
 - [Tinlake](https://tinlake.centrifuge.io/) _receivables financing via tokenized real-world assets such as invoices, mortgages or streaming royalties_
 - [Kratos](https://triterras.com/kratos) _commodity trading and trade finance platform that connects and enables commodity traders to trade and source capital from lenders directly online_
 - [Fasset](https://www.fasset.com/) _a platform for supporting sustainable infrastructure_
+- [Taurus](https://www.taurushq.com/) _issues tokenized securities_
 
 ### Notarization of data {#notarization-of-data}
 
@@ -137,6 +139,7 @@ Here are some of the enterprise applications that have been deployed to the publ
 - [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _Italy's largest news agency fights fake news and enables readers to verify the origin of news stories by recording them on Mainnet_
 - [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _logs press releases on Ethereum to ensure corporate accountability and trust_
 - [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _records provenance and repair history of watches on Ethereum_
+- [EthSign](https://ethsign.xyz/) _records signed electronic documents on the Ethereum blockchain_
 
 ### Supply chain {#supply-chain}
 
@@ -147,6 +150,8 @@ Here are some of the enterprise applications that have been deployed to the publ
 - [Follow Our Fibre](https://www.followourfibre.com) _viscose supply chain traceability_
 - [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _enables companies to engage in a procurement workflow by issuing RFQ’s, contracts, purchase orders, and invoices across your network of trusted business partners_
 - [Treum](https://treum.io/) _brings transparency, traceability, and tradability to supply chains, using blockchain technology_
+- [TradeTrust](https://www.tradetrust.io/)  _verifies electronic Bills of Lading (eBLs) for international shipping_
+- [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _mints NFTs for each new batch of beer, enabling greater visibility and efficiency across its supply chain_
 
 ### Credentials and certifications {#credentials}
 
