@@ -713,6 +713,14 @@ A program that executes on the Ethereum computing infrastructure.
   Introduction to Smart Contracts
 </DocLink>
 
+### SNARK {#snark}
+
+Short for "succinct non-interactive argument of knowledge", a SNARK is a type of [zero-knowledge proof](#zk-proof).
+
+<DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups">
+  Zero-knowledge rollups
+</DocLink>
+
 ### Solidity {#solidity}
 
 A procedural (imperative) programming language with syntax that is similar to JavaScript, C++, or Java. The most popular and most frequently used language for Ethereum [smart contracts](#smart-contract). Created by Dr. Gavin Wood.
@@ -743,6 +751,14 @@ Depositing a quantity of [ether](#ether) (your stake) to become a validator and 
 
 <DocLink to="/staking/">
   Stake your ETH to become an Ethereum validator
+</DocLink>
+
+### STARK {#stark}
+
+Short for "scalable transparent argument of knowledge", a STARK is a type of [zero-knowledge proof](#zk-proof).
+
+<DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups">
+  Zero-knowledge rollups
 </DocLink>
 
 ### state channels {#state-channels}
@@ -871,6 +887,14 @@ The smallest denomination of [ether](#ether). 10<sup>18</sup> wei = 1 ether.
 ### zero address {#zero-address}
 
 A special Ethereum address, composed entirely of zeros, that is specified as the destination address of a [contract creation transaction](#contract-creation-transaction).
+
+### Zero-knowledge proof {#zk-proof}
+
+A zero-knowledge proof is a cryptographic method that allows an individual to prove that a statement is true without conveying any additional information.
+
+<DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups">
+  Zero-knowledge rollups
+</DocLink>
 
 ### Zero-knowledge rollup {#zk-rollup}
 
