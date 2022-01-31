@@ -14,6 +14,7 @@ Here are some excellent starting points:
 
 - [Decentralizing Everything](https://www.youtube.com/watch?v=WSN5BaCzsbo&feature=youtu.be) _Sep 18, 2017 - Vitalik Buterin (Video)_
 - [Why Decentralization Matters](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e) _Feb 18, 2018 - Chris Dixon_
+- [The Year in Ethereum 2021](https://stark.mirror.xyz/q3OnsK7mvfGtTQ72nfoxLyEV5lfYOqUfJIoKBx7BG1I) _Jan 17, 2022 - Josh Stark and Evan Van Ness_
 - [The Year in Ethereum 2020](https://jjmstark.medium.com/the-year-in-ethereum-2020-98123e5f160d) _Jan 20, 2021 - Josh Stark and Evan Van Ness_
 - [Ethereum is game-changing technology, literally](https://medium.com/@virgilgr/ethereum-is-game-changing-technology-literally-d67e01a01cf8) _Mar 29, 2019 - Virgil Griffith_
 

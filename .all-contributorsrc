@@ -3450,7 +3450,8 @@
       "contributions": [
         "bug",
         "content",
-        "doc"
+        "doc",
+        "translation"
       ]
     },
     {
@@ -6228,7 +6229,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/2448210?v=4",
       "profile": "https://github.com/mmilenkovic",
       "contributions": [
-        "doc"
+        "doc",
+        "ideas"
       ]
     },
     {
@@ -6337,6 +6339,52 @@
       "name": "EtherWorld",
       "avatar_url": "https://avatars.githubusercontent.com/u/97191248?v=4",
       "profile": "https://github.com/EtherWorldCo",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Ignjatovic",
+      "name": "Stefan Ignjatović",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2846306?v=4",
+      "profile": "http://tenderly.co",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "ihebu",
+      "name": "Iheb Haboubi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47149194?v=4",
+      "profile": "https://github.com/ihebu",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "HursitTarcan",
+      "name": "Hursit Tarcan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75273616?v=4",
+      "profile": "https://github.com/HursitTarcan",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "pabloped",
+      "name": "pabloped",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65499117?v=4",
+      "profile": "https://github.com/pabloped",
+      "contributions": [
+        "doc",
+        "translation"
+      ]
+    },
+    {
+      "login": "ilkererkek",
+      "name": "ilkererkek",
+      "avatar_url": "https://avatars.githubusercontent.com/u/69644608?v=4",
+      "profile": "https://github.com/ilkererkek",
       "contributions": [
         "doc"
       ]

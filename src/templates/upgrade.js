@@ -436,7 +436,7 @@ const UpgradePage = ({ data: { mdx } }) => {
             </h2>
             <p>
               <Translation id="eth-upgrade-what-happened-description" />{" "}
-              <Link to="/upgrades/#eth2">
+              <Link to="https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/">
                 <Translation id="more-info" />.
               </Link>
             </p>

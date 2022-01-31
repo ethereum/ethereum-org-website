@@ -201,7 +201,7 @@ _检索摘要 f(!=65)表示使用不同于 65 的任何值调用的调用的 f�
 首先，您要通过以下命令启动一个新的区块链：
 
 ```python
-from manticore.etherum importer MantocoreEVM
+from manticore.ethereum importer MantocoreEVM
 
 m = MantocoreEVM()
 ```

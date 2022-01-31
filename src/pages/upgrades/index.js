@@ -382,6 +382,33 @@ const Eth2IndexPage = ({ data }) => {
                 <Translation id="page-upgrades-what-happened-to-eth2-5" />
               </Link>
             </p>
+            <h3>
+              <Translation id="page-upgrades-why-cant-we-just-use-eth2-title" />
+            </h3>
+            <h4>
+              <Translation id="page-upgrades-why-cant-we-just-use-eth2-mental-models-title" />
+            </h4>
+            <p>
+              <Translation id="page-upgrades-why-cant-we-just-use-eth2-mental-models-description" />
+            </p>
+            <h4>
+              <Translation id="page-upgrades-why-cant-we-just-use-eth2-inclusivity-title" />
+            </h4>
+            <p>
+              <Translation id="page-upgrades-why-cant-we-just-use-eth2-inclusivity-description" />
+            </p>
+            <h4>
+              <Translation id="page-upgrades-why-cant-we-just-use-eth2-scam-prevention-title" />
+            </h4>
+            <p>
+              <Translation id="page-upgrades-why-cant-we-just-use-eth2-scam-prevention-description" />
+            </p>
+            <h4>
+              <Translation id="page-upgrades-why-cant-we-just-use-eth2-staking-clarity-title" />
+            </h4>
+            <p>
+              <Translation id="page-upgrades-why-cant-we-just-use-eth2-staking-clarity-description" />
+            </p>
           </div>
         </ContributeCard>
         <ContributeCard>
@@ -669,12 +696,6 @@ const Eth2IndexPage = ({ data }) => {
                     <Translation id="page-upgrades-question-7-prysm" />
                   </Link>{" "}
                   <Translation id="page-upgrades-question-7-prysm-lang" />
-                </li>
-                <li>
-                  <Link to="https://nethermind.io/">
-                    <Translation id="page-upgrades-question-7-cortex" />
-                  </Link>{" "}
-                  <Translation id="page-upgrades-question-7-cortex-lang" />
                 </li>
                 <li>
                   <Link to="https://pegasys.tech/teku-ethereum-2-for-enterprise/">

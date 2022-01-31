@@ -172,6 +172,17 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Dashboard
     - Pay-per-hour pricing
     - Direct support
+- [**Watchdata**](https://watchdata.io/)
+  - [Docs](https://docs.watchdata.io/)
+  - Features 
+    - Data reliability 
+    - Uninterrupted connection with no downtime
+    - Process automation
+    - Free tariffs
+    - High limits that suit any user
+    - Support for various nodes
+    - Resource scaling
+    - High processing speeds
 
 ## Further reading {#further-reading}
 

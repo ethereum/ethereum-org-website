@@ -322,5 +322,9 @@
   {
     "fromPath": "/*/contributing/translation-program/translation-guide/",
     "toPath": "/:splat/contributing/translation-program/faq/"
+  },
+  {
+    "fromPath": "/*/contributing/translation-program/content-versions/",
+    "toPath": "/:splat/contributing/translation-program/content-buckets/"
   }
 ]

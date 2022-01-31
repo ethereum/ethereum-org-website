@@ -50,11 +50,21 @@ const Question = styled.div`
   margin-right: 1rem;
 `
 
+const Header = styled.div`
+  display: flex;
+  width: 100%;
+  margin: 1rem 0;
+  align-items: center;
+  img {
+    margin-right: 1.5rem;
+  }
+`
+
 const ButtonContainer = styled.div`
   margin-left: 1rem;
 `
 
-const ExpandableCard = ({ children, contentPreview, title }) => {
+const ExpandableCard = ({ children, contentPreview, title, svg }) => {
   const [isVisible, setIsVisible] = useState(false)
   const expandCollapse = {
     collapsed: {
@@ -96,7 +106,10 @@ const ExpandableCard = ({ children, contentPreview, title }) => {
     <Card>
       <Content>
         <Question>
-          <Title>{title}</Title>
+          <Header>
+            {svg && <img src={svg} />}
+            <Title>{title}</Title>
+          </Header>
           <TextPreview>{contentPreview}</TextPreview>
         </Question>
         <ButtonContainer onClick={() => setIsVisible(!isVisible)}>

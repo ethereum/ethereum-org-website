@@ -167,7 +167,7 @@ Web3 模块上的其他实用方法包括数据格式转换器（例如 [`toHex`
 
 虽然这是一种“正式”的方式，但同步过程需要几个小时，如果您只是想要一个开发环境，则没有必要同步过程。 Web3.py 为此公开了第四个提供者，即 **EthereumTesterProvider**。 这个测试器提供者连接到一个模拟的以太坊节点，它有更宽松的权限，还有虚拟以太币可供操作。
 
-![描述将 web3.py 应用程序连接到模拟以太坊节点的 EtherumTesterProvider 的示意图](../../../../../developers/tutorials/a-developers-guide-to-ethereum-part-one/ethereumtesterprovider.png)
+![描述将 web3.py 应用程序连接到模拟以太坊节点的 EthereumTesterProvider 的示意图](../../../../../developers/tutorials/a-developers-guide-to-ethereum-part-one/ethereumtesterprovider.png)
 
 _EthereumTesterProvider 连接到一个模拟节点，对于快速开发环境来说非常方便。_
 

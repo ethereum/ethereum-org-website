@@ -27,16 +27,10 @@ import {
 const Subtitle = styled.div`
   font-size: 1.25rem;
   line-height: 140%;
+  max-width: 45ch;
   text-align: center;
   color: ${(props) => props.theme.colors.text200};
-`
-
-const SubtitleTwo = styled.div`
-  font-size: 1.25rem;
-  line-height: 140%;
-  margin-bottom: 2rem;
-  text-align: center;
-  color: ${(props) => props.theme.colors.text300};
+  margin-bottom: ${(props) => props.mb || ""};
 `
 
 const HeroContainer = styled.div`
@@ -247,9 +241,9 @@ const GetETHPage = ({ data }) => {
           <Subtitle>
             <Translation id="page-get-eth-where-to-buy-desc" />
           </Subtitle>
-          <SubtitleTwo>
+          <Subtitle mb="2rem">
             <Translation id="page-get-eth-where-to-buy-desc-2" />
-          </SubtitleTwo>
+          </Subtitle>
           <StyledEthPriceCard />
           <ButtonLink to="#country-picker">
             <Translation id="page-get-eth-search-by-country" />
