@@ -11,7 +11,7 @@ The behavior of an Ethereum node is controlled by the client software it runs. T
 
 ## Prerequisites {#prerequisites}
 
-If you don't already have an understanding of what nodes and clients are, check out [nodes and clients](/developers/docs/nodes-and-clients/). The Beacon Chain is explained [here](/upgrades/beacon-chain/). [Execution](/glossary/#execution-layer) and [consensus]/glossary/#consensus-layer) layers are defined in the glossary.
+If you don't already have an understanding of what nodes and clients are, check out [nodes and clients](/developers/docs/nodes-and-clients/). The Beacon Chain is explained [here](/upgrades/beacon-chain/). [Execution](/glossary/#execution-layer) and [consensus](/glossary/#consensus-layer) layers are defined in the glossary.
 
 ## Why are there multiple clients? {#why-multiple-clients}
 
