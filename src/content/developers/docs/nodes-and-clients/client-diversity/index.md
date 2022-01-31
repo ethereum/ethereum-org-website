@@ -11,7 +11,7 @@ The behavior of an Ethereum node is controlled by the client software it runs. T
 
 ## Prerequisites {#prerequisites}
 
-If you don't already have an understanding of what nodes and clients are, check out [nodes and clients](/developers/docs/nodes-and-clients/). The Beacon Chain is explained [here](/upgrades/beacon-chain/). [Execution](/glossary/#execution-layer) and [consensus]/glossary/#consensus-layer) layers are defined in the glossary.
+If you don't already have an understanding of what nodes and clients are, check out [nodes and clients](/developers/docs/nodes-and-clients/). The Beacon Chain is explained [here](/upgrades/beacon-chain/). [Execution](/glossary/#execution-layer) and [consensus](/glossary/#consensus-layer) layers are defined in the glossary.
 
 ## Why are there multiple clients? {#why-multiple-clients}
 
@@ -49,7 +49,7 @@ The execution layer data were obtained from [Ethernodes](https://ethernodes.org)
 
 Up to date client diversity data for the consensus layer is now available at https://clientdiversity.org/.
 
-## Use a minority client {use-minority-client}
+## Use a minority client {#use-minority-client}
 
 Addressing client diversity requires more than individual users to choose minority clients - it requires mining/validator pools and institutions like the major dapps and exchanges to switch clients too. However, all users can do their part in redressing the current imbalance and normalizing the use of all the available Ethereum software. After the merge, all node operators will be required to run an execution client and a consensus client. Choosing combinations of the clients suggested below will help increase client diversity.
 
