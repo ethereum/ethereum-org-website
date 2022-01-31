@@ -26,12 +26,12 @@ sidebarDepth: 2
 
 如果您想 [运行自己的节点](/developers/docs/nodes-and-clients/run-a-node/)，就应该明白不同类型的节点会消耗不同数据量。 事实上，客户端可以运行三种不同类型的节点——轻量、完整和归档。 也有不同同步策略的选项，可加快同步时间。 同步是指它能以多快的速度获取有关以太坊状态的最新信息。
 
-### 完整节点 {#full-node}
+### 全节点 {#full-node}
 
 - 存储完整的区块链数据。
 - 参与区块验证，验证所有区块和状态。
-- 所有状态都可以从一个完整的节点推出。
-- 提供网络服务，并应要求提供数据。
+- 所有状态都可以从一个全节点推出。
+- 为网络提供服务，并按照请求提供数据。
 
 ### 轻节点 {#light-node}
 
@@ -41,8 +41,8 @@ sidebarDepth: 2
 
 ### 归档节点 {#archive-node}
 
-- 存储保留在完整节点中的所有内容，并建立历史状态档案。 如果您想查询区块 #4,000,000 的帐户余额等内容，或者简单可靠地[测试自己的交易集，而不使用 OpenEthereum 挖矿](https://openethereum.github.io/JSONRPC-trace-module#trace_callmany)，则需要这样做。
-- 这些数据以太字节为单位，这使存档节点对普通用户的吸引力降低，但对于诸如区块浏览器、钱包供应商和链分析之类的服务而言却很方便。
+- 存储保留在全节点中的所有内容，并建立一个历史状态的归档。 如果您想查询区块 #4,000,000 的帐户余额等内容，或者简单可靠地[使用 OpenEthereum 在不挖坑的情况下测试自己的交易集](https://openethereum.github.io/JSONRPC-trace-module#trace_callmany)，就需要这样做。
+- 这些数据的数据量会达到TB级别，这使得存档节点对普通用户的吸引力降低，但对于诸如区块浏览器、钱包供应商和链分析之类的服务而言却很方便。
 
 以存档以外的任何方式同步客户端将导致修剪的区块链数据。 这意味着，没有所有历史状态的档案，但是整个节点都可以按需构建它们。
 
@@ -66,7 +66,7 @@ sidebarDepth: 2
 
 多种节点对以太坊的健康、安全和运行弹性非常重要。
 
-- 他们为依赖它的轻量级客户端提供对区块链数据的访问。 在使用高峰期，需要有足够的完整节点来帮助轻量节点同步。 轻量节点不会存储整个区块链，而是通过[区块头中的状态根](/developers/docs/blocks/#block-anatomy)来验证数据。 如果有需要，他们可以要求区块提供更多信息
+- 他们为依赖它的轻量级客户端提供对区块链数据的访问。 在使用高峰期，需要有足够的全节点来帮助轻量节点同步。 轻量节点不会存储整个区块链，而是通过[区块头中的状态根](/developers/docs/blocks/#block-anatomy)来验证数据。 如果有需要，他们可以要求区块提供更多信息
 - 完整的节点会强制执行工作量证明的共识规则，因此它们不会被欺骗来接受不遵循规则的代码块。 这为网络中提供了额外的安全性，因为如果所有节点都是轻型节点（不进行完全验证），则矿工可能会攻击网络，例如，创建具有更高奖励的区块。
 
 如果您运行一个完整的节点，整个以太坊网络将从中受益。
@@ -89,7 +89,7 @@ sidebarDepth: 2
 
 ### 资源 {#resources}
 
-- [运行以太坊完整节点：完整指南](https://medium.com/coinmonks/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _Nov 7, 2019 - Justin Leroux_
+- [运行以太坊全节点：完整指南](https://medium.com/coinmonks/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _Nov 7, 2019 - Justin Leroux_
 - [节点配置备忘单](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _Jan 5, 2019 - Afri Schoeden_
 - [如何安装和运行一个 Geth 节点](https://www.quiknode.io/guides/infrastructure/how-to-install-and-run-a-geth-node) _October 4, 2020 - Sahil Sen_
 - [如何安装和运行一个 OpenEthereum(fka. Parity) 节点](https://www.quiknode.io/guides/infrastructure/how-to-run-a-openethereum-ex-parity-client-node) _2020 - Sahil Sen_
