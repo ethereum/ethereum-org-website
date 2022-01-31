@@ -68,11 +68,11 @@ Ethereum has plans to upgrade to a **proof-of-stake (PoS)** consensus protocol.
 
 #### Block creation {#pos-block-creation}
 
-Casper FFG is done by validators who have staked ETH to participate in the system. A validator is chosen at random to create a new block. This randomness constitutes the proposal mechanism that would otherwise be the "work" in proof-of-work for Nakamoto consensus. Once it's a validator's turn to propose a block, they share it with the network and earn rewards. Instead of needing to do intense computational work, they'd simply need to have staked their ETH in the network. This is what incentivises healthy network behaviour as the validator now has skin in the game.
+**Casper the Friendly Finality Gadget (Casper FFG)** is utilized by validators who have staked ETH to participate in the system. A validator is chosen at random to create a new block. This randomness constitutes the proposal mechanism that would otherwise be the "work" in proof-of-work for Nakamoto consensus. Once it's a validator's turn to propose a block, they share it with the network and earn rewards. Instead of needing to do intense computational work, they'd simply need to have staked their ETH in the network. This is what incentivizes healthy network behavior as the validator now has skin in the game.
 
 #### Security {#pos-security}
 
-A proof-of-stake system is kept secure by the fact that you'd need 34% of the total voting power in a committee to defraud the chain. This encouraged further in that, on Eth2, your stake is slashed for malicious behaviour.
+A proof-of-stake system is kept secure by the fact that you'd need 34% of the total voting power in a committee to defraud the chain. Malicious behavior under proof-of-stake also result in staked ETH being slashed in proportion to the size of the attack.
 
 More on [proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 
