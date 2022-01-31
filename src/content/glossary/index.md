@@ -858,7 +858,7 @@ A special Ethereum address, composed entirely of zeros, that is specified as the
 
 ### Zero-knowledge proof {#zk-proof}
 
-Zero-knowledge proof is a cryptographic method that allows an individual to prove that a statement is true without conveying any additional information.
+A zero-knowledge proof is a cryptographic method that allows an individual to prove that a statement is true without conveying any additional information.
 
 <DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups">
   Zero-knowledge rollups
