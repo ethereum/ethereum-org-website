@@ -48,7 +48,8 @@ const Slogan = styled.h1`
 `
 
 // const Subtitle = styled.div`
-//   font-size: 1.25rem;//   line-height: 140%;
+//   font-size: 1.25rem;
+//   line-height: 140%;
 //   color: ${(props) => props.theme.colors.text200};
 //   margin-bottom: 0.5rem;
 // `

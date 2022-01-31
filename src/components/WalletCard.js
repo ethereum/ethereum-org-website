@@ -130,7 +130,8 @@ const BackContent = styled(Content)`
 const Title = styled.h3`
   margin-bottom: 0rem;
   margin-top: 0rem;
-  font-size: 1.25rem;`
+  font-size: 1.25rem;
+`
 
 const Description = styled.p`
   opacity: 0.8;
