@@ -120,16 +120,15 @@ const UpcomingEventsList = () => {
           ?.slice(0, maxRange)
           .map(({ title, to, formattedDetails, date, location }, idx) => {
             return (
-              <EventListItem key={idx}>
-                <EventCard
-                  title={title}
-                  to={to}
-                  date={date}
-                  description={formattedDetails}
-                  location={location}
-                  isEven={(idx + 1) % 2 === 0}
-                />
-              </EventListItem>
+              <EventCard
+                key={idx}
+                title={title}
+                to={to}
+                date={date}
+                description={formattedDetails}
+                location={location}
+                isEven={(idx + 1) % 2 === 0}
+              />
             )
           })}
       </EventList>
