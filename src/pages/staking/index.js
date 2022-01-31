@@ -38,7 +38,7 @@ const Row = styled.div`
 `
 
 const H2 = styled.h2`
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
   line-height: 22px;
@@ -72,8 +72,7 @@ const StyledCard = styled(Card)`
 `
 
 const BoxText = styled.div`
-  font-size: 20px;
-`
+  font-size: 1.25rem;`
 
 const Box = styled.div`
   padding: 1.5rem;
@@ -114,10 +113,10 @@ const Option = styled.div`
 `
 
 const OptionText = styled.div`
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 100%;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
   }
 `

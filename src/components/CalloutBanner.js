@@ -45,7 +45,7 @@ const Content = styled.div`
 `
 
 const Description = styled.p`
-  font-size: 20px;
+  font-size: 1.25rem;
   width: 90%;
   line-height: 140%;
   margin-bottom: 2rem;

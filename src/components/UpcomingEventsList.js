@@ -12,12 +12,32 @@ import ButtonLink from "../components/ButtonLink"
 // Data
 import events from "../data/community-events.json"
 
-const EventList = styled.ul`
-  margin: 0;
-`
+const EventList = styled.div`
+  width: 100%;
+  margin: 30px auto;
+  position: relative;
+  padding: 0 10px;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 
-const EventListItem = styled.li`
-  list-style-type: none;
+  &:before {
+    content: "";
+    width: 3px;
+    height: 100%;
+    background: ${(props) => props.theme.colors.primary};
+    left: 50%;
+    top: 0;
+    position: absolute;
+  }
+
+  &:after {
+    content: "";
+    clear: both;
+    display: table;
+    width: 100%;
+  }
 `
 
 const ButtonLinkContainer = styled.div`
@@ -100,15 +120,15 @@ const UpcomingEventsList = () => {
           ?.slice(0, maxRange)
           .map(({ title, to, formattedDetails, date, location }, idx) => {
             return (
-              <EventListItem key={idx}>
-                <EventCard
-                  title={title}
-                  to={to}
-                  date={date}
-                  description={formattedDetails}
-                  location={location}
-                />
-              </EventListItem>
+              <EventCard
+                key={idx}
+                title={title}
+                to={to}
+                date={date}
+                description={formattedDetails}
+                location={location}
+                isEven={(idx + 1) % 2 === 0}
+              />
             )
           })}
       </EventList>

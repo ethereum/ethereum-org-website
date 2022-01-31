@@ -56,6 +56,7 @@
   "docs-nav-nodes-and-clients-description": "The individuals participating in the network and the software they run to verify transactions",
   "docs-nav-opcodes": "Opcodes",
   "docs-nav-run-a-node": "Run a node",
+  "docs-nav-client-diversity": "Client diversity",
   "docs-nav-nodes-as-a-service": "Nodes as a service",
   "docs-nav-oracles": "Oracles",
   "docs-nav-oracles-description": "How information is injected into the Ethereum blockchain",

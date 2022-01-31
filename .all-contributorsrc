@@ -6229,7 +6229,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/2448210?v=4",
       "profile": "https://github.com/mmilenkovic",
       "contributions": [
-        "doc"
+        "doc",
+        "ideas"
       ]
     },
     {
@@ -6367,6 +6368,34 @@
       "profile": "https://github.com/HursitTarcan",
       "contributions": [
         "bug"
+      ]
+    },
+    {
+      "login": "pabloped",
+      "name": "pabloped",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65499117?v=4",
+      "profile": "https://github.com/pabloped",
+      "contributions": [
+        "doc",
+        "translation"
+      ]
+    },
+    {
+      "login": "ilkererkek",
+      "name": "ilkererkek",
+      "avatar_url": "https://avatars.githubusercontent.com/u/69644608?v=4",
+      "profile": "https://github.com/ilkererkek",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Filoppi",
+      "name": "Filippo Tarpini",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7011366?v=4",
+      "profile": "https://github.com/Filoppi",
+      "contributions": [
+        "doc"
       ]
     }
   ],

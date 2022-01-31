@@ -46,12 +46,12 @@ const HeroImg = styled(GatsbyImage)`
 
 const Header = styled.h2`
   font-weight: 700;
-  font-size: 48px;
+  font-size: 3rem;
   max-width: 100%;
   margin-bottom: 0rem;
   color: ${(props) => props.theme.colors.text00};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 40px;
+    font-size: 2.5rem
   }
 `
 
@@ -64,13 +64,13 @@ const Title = styled.h1`
 `
 
 const Subtitle = styled.div`
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
   margin-top: 1rem;
   margin-bottom: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 `
 

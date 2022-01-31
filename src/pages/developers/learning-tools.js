@@ -209,6 +209,15 @@ const LearningToolsPage = ({ data }) => {
       background: "#111F29",
       subjects: ["Solidity", "web3"],
     },
+    {
+      name: "Pointer",
+      description: "page-learning-tools-pointer-description",
+      url: "https://pointer.gg/",
+      image: getImage(data.pointer),
+      alt: "page-learning-tools-pointer-logo-alt",
+      background: "#171717",
+      subjects: ["Solidity", "web3"],
+    },
   ]
 
   return (
@@ -379,6 +388,10 @@ export const query = graphql`
     nftschool: file(relativePath: { eq: "dev-tools/nftschool.png" }) {
       ...learningToolImage
     }
+    pointer: file(relativePath: { eq: "dev-tools/pointer.png" }) {
+      ...learningToolImage
+    }
+
     learn: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
         gatsbyImageData(

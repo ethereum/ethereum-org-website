@@ -30,12 +30,12 @@ const HeroContent = styled(Content)`
 const Slogan = styled.p`
   font-style: normal;
   font-weight: normal;
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 140%;
 `
 
 const Title = styled.h1`
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 140%;
   letter-spacing: 0.04em;
   font-weight: 500;
@@ -46,12 +46,12 @@ const Title = styled.h1`
 `
 
 const Subtitle = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
 `
 const SubtitleTwo = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text300};
 `
@@ -157,12 +157,12 @@ const BannerMessage = styled.h2`
   padding: 0.5rem;
   top: 30%;
   text-align: center;
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 140%;
   margin-top: 0;
   color: ${(props) => props.theme.colors.text};
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 32px;
+    font-size: 2rem;
     top: 35%;
   }
 `
