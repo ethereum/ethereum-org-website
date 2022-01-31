@@ -14,6 +14,7 @@ Here are some excellent starting points:
 
 - [Decentralizing Everything](https://www.youtube.com/watch?v=WSN5BaCzsbo&feature=youtu.be) _Sep 18, 2017 - Vitalik Buterin (Video)_
 - [Why Decentralization Matters](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e) _Feb 18, 2018 - Chris Dixon_
+- [The Year in Ethereum 2021](https://stark.mirror.xyz/q3OnsK7mvfGtTQ72nfoxLyEV5lfYOqUfJIoKBx7BG1I) _Jan 17, 2022 - Josh Stark and Evan Van Ness_
 - [The Year in Ethereum 2020](https://jjmstark.medium.com/the-year-in-ethereum-2020-98123e5f160d) _Jan 20, 2021 - Josh Stark and Evan Van Ness_
 - [Ethereum is game-changing technology, literally](https://medium.com/@virgilgr/ethereum-is-game-changing-technology-literally-d67e01a01cf8) _Mar 29, 2019 - Virgil Griffith_
 
@@ -27,6 +28,8 @@ In addition to the information on this page, there are many community-built reso
 - [What’s new in Eth2](https://eth2.news) _A regular newsletter about Ethereum development_
 - [ethresear.ch forum](https://ethresear.ch/) _Deeper technical discussions on Ethereum for scaling and beyond_
 - [ETHGlobal](https://ethglobal.co) _An Ethereum hackathon series - attend one near you!_
+- [Web3 University](https://www.web3.university) _A community-driven online resource focused on web3 development_
+- [EtherWorld](https://etherworld.co/tag/ethereum/) _An Ethereum educational resource in the form of blogs and video guides_
 
 ## How Ethereum works {#how-ethereum-works}
 

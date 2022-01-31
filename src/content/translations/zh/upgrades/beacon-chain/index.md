@@ -12,7 +12,7 @@ summaryPoint4: 你可能会在技术路径图上知道这是“阶段0。
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
-    信标链于 2020 年 12 月 1 日中午 (UTC) 启动。 要了解更多信息，<a href="https://beaconscan.com/">浏览这里</a>。 如果您想要参与验证该信标链，您可以<a href="/upgrades/staking/">质押您的 ETH</a>。
+    信标链于 2020 年 12 月 1 日中午 (UTC) 启动。 要了解更多信息，<a href="https://beaconscan.com/">浏览这里</a>。 如果您想要参与验证该信标链，您可以<a href="/staking/">质押您的 ETH</a>。
 </UpgradeStatus>
 
 ## 信标链是做什么的？ {#what-does-the-beacon-chain-do}

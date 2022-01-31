@@ -12,14 +12,14 @@ summaryPoint4: Potreste averne sentito parlare come "Fase 0" nelle roadmap tecni
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
-    La beacon chain è stata resa disponibile il primo dicembre a mezzogiorno (UTC). Per saperne di più, <a href="https://beaconscan.com/">esplora i dati</a>. Se vuoi contribuire a convalidare la catena, puoi <a href="/upgrades/staking/">fare staking con i tuoi ETH</a>.
+    La beacon chain è stata resa disponibile il primo dicembre a mezzogiorno (UTC). Per saperne di più, <a href="https://beaconscan.com/">esplora i dati</a>. Se vuoi contribuire a convalidare la catena, puoi <a href="/staking/">fare staking con i tuoi ETH</a>.
 </UpgradeStatus>
 
 ## Cosa fa la beacon chain? {#what-does-the-beacon-chain-do}
 
 La beacon chain condurrà o coordinerà la rete ampliata di [shard](/upgrades/shard-chains/) e [staker](/staking/). Ma non sarà come la [rete principale Ethereum](/glossary/#mainnet) di oggi. Non è in grado di gestire account o smart contract.
 
-Il ruolo della beacon chain cambierà con il passare del tempo ma è una componente fondamentale per [la sicurezza, sostenibilità e scalabilità di Etherum che stiamo cercando di raggiungere](/upgrades/vision/).
+Il ruolo della beacon chain cambierà con il passare del tempo ma è una componente fondamentale per [la sicurezza, sostenibilità e scalabilità di Ethereum che stiamo cercando di raggiungere](/upgrades/vision/).
 
 ## Caratteristiche della beacon chain {#beacon-chain-features}
 

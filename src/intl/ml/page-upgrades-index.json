@@ -1,5 +1,4 @@
 {
-  "consensus-client-cortex-logo-alt": "കോർടെക്സ് ലോഗോ",
   "consensus-client-lighthouse-logo-alt": "ലൈറ്റ്ഹൗസ് ലോഗോ",
   "consensus-client-lodestar-logo-alt": "ലോഡ്‌സ്റ്റാർ ലോഗോ",
   "consensus-client-nimbus-logo-alt": "നിംബസ് ലോഗോ",
@@ -97,8 +96,6 @@
   "page-upgrades-question-6-answer-5": "Ethresear.ch- ൽ Eth2 ഗവേഷണത്തെയും വികസനത്തെയും കുറിച്ചുള്ള ചർച്ചയിൽ നിങ്ങൾക്ക് ചേരാം.",
   "page-upgrades-question-6-desc": "ആസന്നമായ അപ്‌ഗ്രേഡുകളൊന്നും നിങ്ങളുടെ ഡാപ്പിനെ ബാധിക്കില്ല. എന്നിരുന്നാലും ഭാവിയിലെ നവീകരണത്തിന് ചില മാറ്റങ്ങൾ ആവശ്യമായി വന്നേക്കാം.",
   "page-upgrades-question-6-title": "എന്റെ ഡാപ്പുകൊണ്ട് ഞാൻ എന്തുചെയ്യണം?",
-  "page-upgrades-question-7-cortex": "കോർട്ടെക്സ്",
-  "page-upgrades-question-7-cortex-lang": "(.NET നടപ്പാക്കൽ)",
   "page-upgrades-question-7-desc": "കമ്മ്യൂണിറ്റിയിലെമ്പാടുമുള്ള വിവിധ ടീമുകൾ‌ വിവിധ Eth2 നവീകരണങ്ങളിൽ‌ പ്രവർ‌ത്തിക്കുന്നു.",
   "page-upgrades-question-7-lighthouse": "ലൈറ്റ്ഹൗസ്",
   "page-upgrades-question-7-lighthouse-lang": "( റസ്റ്റ് നടപ്പാക്കൽ)",

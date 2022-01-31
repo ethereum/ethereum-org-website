@@ -92,7 +92,7 @@ sidebarDepth: 2
 - [运行以太坊完整节点：完整指南](https://medium.com/coinmonks/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _Nov 7, 2019 - Justin Leroux_
 - [节点配置备忘单](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _Jan 5, 2019 - Afri Schoeden_
 - [如何安装和运行一个 Geth 节点](https://www.quiknode.io/guides/infrastructure/how-to-install-and-run-a-geth-node) _October 4, 2020 - Sahil Sen_
-- [如何安装和运行一个 OpenEtherum(fka. Parity) 节点](https://www.quiknode.io/guides/infrastructure/how-to-run-a-openethereum-ex-parity-client-node) _2020 - Sahil Sen_
+- [如何安装和运行一个 OpenEthereum(fka. Parity) 节点](https://www.quiknode.io/guides/infrastructure/how-to-run-a-openethereum-ex-parity-client-node) _2020 - Sahil Sen_
 
 ## 替代方法 {#alternatives}
 
@@ -108,13 +108,13 @@ sidebarDepth: 2
 
 本表概括了不同的客户端。 它们均已通过[客户端测试](https://github.com/ethereum/tests)，并积极维护以保持与网络升级同步。
 
-| 客户端                                                      | 语言     | 操作系统：            | 网络                                          | 同步策略   | 状态缓冲        |
-| ----------------------------------------------------------- | -------- | --------------------- | --------------------------------------------- | ---------- | --------------- |
-| [Geth](https://geth.ethereum.org/)                          | Go       | Linux, Windows, macOS | Mainnet、Görli、Rinkeby、Ropsten              | 快速，完整 | Archive，Pruned |
-| [OpenEtherum](https://github.com/openethereum/openethereum) | Rust     | Linux，Windows，macOS | Mainnet、Kovan、Ropsten 及更多                | Warp，完整 | Archive, Pruned |
-| [Nethermind](http://nethermind.io/)                         | C#, .NET | Linux，Windows，macOS | Mainnet、Gounderster、Ropsten、Rinkeby 及更多 | 快速，完整 | Archive, Pruned |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)    | Java     | Linux，Windows，macOS | Mainnet、Rinkeby、Ropsten 和 Görli            | 快速，完整 | Archive, Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon)             | 出发     | Linux、Windows、macOS | Mainnet、Görli、Rinkeby、Ropsten              | 快速、完整 | Archive、Pruned |
+| 客户端                                                       | 语言     | 操作系统：            | 网络                                          | 同步策略   | 状态缓冲        |
+| ------------------------------------------------------------ | -------- | --------------------- | --------------------------------------------- | ---------- | --------------- |
+| [Geth](https://geth.ethereum.org/)                           | Go       | Linux, Windows, macOS | Mainnet、Görli、Rinkeby、Ropsten              | 快速，完整 | Archive，Pruned |
+| [OpenEthereum](https://github.com/openethereum/openethereum) | Rust     | Linux，Windows，macOS | Mainnet、Kovan、Ropsten 及更多                | Warp，完整 | Archive, Pruned |
+| [Nethermind](http://nethermind.io/)                          | C#, .NET | Linux，Windows，macOS | Mainnet、Gounderster、Ropsten、Rinkeby 及更多 | 快速，完整 | Archive, Pruned |
+| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java     | Linux，Windows，macOS | Mainnet、Rinkeby、Ropsten 和 Görli            | 快速，完整 | Archive, Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon)              | 出发     | Linux、Windows、macOS | Mainnet、Görli、Rinkeby、Ropsten              | 快速、完整 | Archive、Pruned |
 
 更多关于支持网络的信息，请在[以太坊网络中查阅](/developers/docs/networks/)。
 
@@ -126,9 +126,9 @@ sidebarDepth: 2
 
 Go Ethereum（简称 Geth）是实现以太坊原始协议之一。 目前，它是使用最为广泛的客户端，拥有最大的用户群，为用户和开发者提供各种工具。 它用 Go 语言编写，完全开源，并由 GNU LGPL v3 授权许可。
 
-#### OpenEtherum {#openethereum}
+#### OpenEthereum {#openethereum}
 
-OpenEtherum 是一个快速、功能丰富、基于 CLI 的高级以太坊客户端。 它的诞生是为了给那些需要快速同步和最大运行时间的快速和可靠的服务提供必要的基础设施。 OpenEtherum 的目标是成为最快、最轻、最安全的以太坊客户端。 它提供了以下简洁的模块化代码：
+OpenEthereum 是一个快速、功能丰富、基于 CLI 的高级以太坊客户端。 它的诞生是为了给那些需要快速同步和最大运行时间的快速和可靠的服务提供必要的基础设施。 OpenEthereum 的目标是成为最快、最轻、最安全的以太坊客户端。 它提供了以下简洁的模块化代码：
 
 - 易于自定义。
 - 轻度融入服务或产品。
@@ -200,7 +200,7 @@ Erigon（前称 TurbohyGeth）是 Go Ethereum 的一个分叉，注重速度和�
 
 ##### 压缩同步
 
-由 OpenEtherum 执行。 节点定期生成一个对共识至关重要的状态快照，任何节点都可以通过网络获取这些快照，从而能够从这个节点快速同步。
+由 OpenEthereum 执行。 节点定期生成一个对共识至关重要的状态快照，任何节点都可以通过网络获取这些快照，从而能够从这个节点快速同步。
 
 - OpenEthereum 的最快和默认同步模式依赖于节点提供的静态快照。
 - 它和快照同步的策略类似，但没有确定的安全效益。
@@ -259,13 +259,13 @@ Erigon（前称 TurbohyGeth）是 Go Ethereum 的一个分叉，注重速度和�
 
 您选择的同步模式将影响空间要求，但我们估计了下面每个客户端需要的磁盘空间。
 
-| 客户端      | 磁盘大小（快速同步） | 磁盘大小（完整存档） |
-| ----------- | -------------------- | -------------------- |
-| Geth        | 400GB 以上           | 6TB+                 |
-| OpenEtherum | 280GB 以上           | 6TB+                 |
-| Nethermind  | 200GB 以上           | 5TB+                 |
-| Besu        | 750GB 以上           | 5TB+                 |
-| Erigon      | N/A                  | 1TB+                 |
+| 客户端       | 磁盘大小（快速同步） | 磁盘大小（完整存档） |
+| ------------ | -------------------- | -------------------- |
+| Geth         | 400GB 以上           | 6TB+                 |
+| OpenEthereum | 280GB 以上           | 6TB+                 |
+| Nethermind   | 200GB 以上           | 5TB+                 |
+| Besu         | 750GB 以上           | 5TB+                 |
+| Erigon       | N/A                  | 1TB+                 |
 
 - 注意：Erigon 无法快速同步，但可以完全修剪 (~500 GB)。
 

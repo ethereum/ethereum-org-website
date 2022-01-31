@@ -123,6 +123,14 @@ A group of at least 128 [validators](#validator) assigned to beacon and shard bl
 
 When numerous nodes (usually most nodes on the network) all have the same blocks in their locally validated best blockchain. Not to be confused with [consensus rules](#consensus-rules).
 
+### consensus client {#consensus-client}
+
+Consensus clients (such as Prysm, Teku, Nimbus, Lighthouse, Lodestar) run Ethereum's [proof-of-stake](#pos) consensus algorithm allowing the network to reach agreement about the head of the Beacon Chain. Consensus clients do not participate in validating/broadcasting transactions or executing state transitions. This is done by [execution clients](#execution-client).
+
+### consensus layer {#consensus-layer}
+
+Ethereum's consensus layer is the network of [consensus clients](#consensus-client).
+
 ### consensus rules {#consensus-rules}
 
 The block validation rules that full nodes follow to stay in consensus with other nodes. Not to be confused with [consensus](#consensus).
@@ -215,6 +223,22 @@ A period of 32 [slots](#slot) (6.4 minutes) in the [Beacon Chain](#beacon-chain)
   Proof-of-stake
 </DocLink>
 
+### Eth1 {#eth1}
+
+'Eth1' is a term that referred to Mainnet Ethereum, the existing proof-of-work blockchain. This term has since been deprecated in favor of the 'execution layer'. [Learn more about this name change](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
+
+<DocLink to="/upgrades/">
+  More on the Ethereum upgrades
+</DocLink>
+
+### Eth2 {#eth2}
+
+'Eth2' is a term that referred to a set of Ethereum protocol upgrades, including Ethereum's transition to proof-of-stake. This term has since been deprecated in favor of the 'consensus layer'. [Learn more about this name change](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
+
+<DocLink to="/upgrades/">
+  More on the Ethereum upgrades
+</DocLink>
+
 ### Ethereum Improvement Proposal (EIP) {#eip}
 
 A design document providing information to the Ethereum community, describing a proposed new feature or its processes or environment (see [ERC](#erc)).
@@ -232,6 +256,14 @@ The ENS registry is a single central [contract](#smart-contract) that provides a
 ### entropy {#entropy}
 
 In the context of cryptography, lack of predictability or level of randomness. When generating secret information, such as [private keys](#private-key), algorithms usually rely on a source of high entropy to ensure the output is unpredictable.
+
+### execution client {#execution-client}
+
+Execution clients (f.k.a. "Eth1 clients"), such as Besu, Erigon, go-ethereum, Nethermind, are tasked with processing and broadcasting transactions, as well as with managing Ethereum's state. They run the computations for each transaction in the [Ethereum Virtual Machine](#evm) to ensure that the rules of the protocol are followed. Today, they also handle proof of work consensus. After the transition to [proof of stake](#pos), they will delegate this to consensus clients.
+
+### execution layer {#execution-layer}
+
+Ethereum's execution layer is the network of [execution clients](#execution-client).
 
 ### externally owned account (EOA) {#eoa}
 
@@ -681,6 +713,14 @@ A program that executes on the Ethereum computing infrastructure.
   Introduction to Smart Contracts
 </DocLink>
 
+### SNARK {#snark}
+
+Short for "succinct non-interactive argument of knowledge", a SNARK is a type of [zero-knowledge proof](#zk-proof).
+
+<DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups">
+  Zero-knowledge rollups
+</DocLink>
+
 ### Solidity {#solidity}
 
 A procedural (imperative) programming language with syntax that is similar to JavaScript, C++, or Java. The most popular and most frequently used language for Ethereum [smart contracts](#smart-contract). Created by Dr. Gavin Wood.
@@ -711,6 +751,14 @@ Depositing a quantity of [ether](#ether) (your stake) to become a validator and 
 
 <DocLink to="/staking/">
   Stake your ETH to become an Ethereum validator
+</DocLink>
+
+### STARK {#stark}
+
+Short for "scalable transparent argument of knowledge", a STARK is a type of [zero-knowledge proof](#zk-proof).
+
+<DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups">
+  Zero-knowledge rollups
 </DocLink>
 
 ### state channels {#state-channels}
@@ -839,6 +887,14 @@ The smallest denomination of [ether](#ether). 10<sup>18</sup> wei = 1 ether.
 ### zero address {#zero-address}
 
 A special Ethereum address, composed entirely of zeros, that is specified as the destination address of a [contract creation transaction](#contract-creation-transaction).
+
+### Zero-knowledge proof {#zk-proof}
+
+A zero-knowledge proof is a cryptographic method that allows an individual to prove that a statement is true without conveying any additional information.
+
+<DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups">
+  Zero-knowledge rollups
+</DocLink>
 
 ### Zero-knowledge rollup {#zk-rollup}
 

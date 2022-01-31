@@ -16,7 +16,7 @@ Tidak setiap string ditulis dalam bentuk teks murni. Ada beberapa string yang te
 - Terjemahkan teks di dalam tag tetapi bukan tag itu sendiri. Apa pun di dalam `<` dan `>` tidak boleh diterjemahkan atau dihapus.
 - Untuk membuat agar string tetap aman, kami rekomendasikan untuk mengklik tombol "Salin Sumber" di kiri bawah. Ini akan menyalin string asli dalam menempelkannya ke dalam kotak teks. Ini memungkinkan Anda mengklarifikasi tempat tag berada dan membantu menghindari kesalahan.
 
-![Antarmuka Crowdin dengan tombol salin sumber disorot](../../../../../contributing/translation-program/translation-guide/html-tag-strings.png)
+![Antarmuka Crowdin dengan tombol salin sumber disorot](../../../../../contributing/translation-program/faq/html-tag-strings.png)
 
 Anda dapat memindahkan posisi tag yang ada di dalam string untuk membuatnya lebih natural dalam bahasa Anda – pastikan untuk memindahkan seluruh tag.
 
@@ -27,9 +27,9 @@ Sering kali string sumber saja mungkin tidak cukup bagi Anda untuk memberikan te
 - Lihat "tangkapan layar" dan "konteks" untuk informasi lebih lanjut. Di bagian string sumber, Anda akan melihat gambar tangkapan layar terlampir yang akan menunjukkan cara kami menggunakan string dalam konteks.
 - Jika Anda masih belum yakin, naikkan bendera di "bagian komentar". [Belum tahu cara meninggalkan komentar?](#comment)
 
-![Menampilkan cara memberikan konteks untuk string dengan tangkapan layar](../../../../../contributing/translation-program/translation-guide/source-string.png)
+![Menampilkan cara memberikan konteks untuk string dengan tangkapan layar](../../../../../contributing/translation-program/faq/source-string.png)
 
-![Contoh tangkapan layar ditambahkan untuk konteks](../../../../../contributing/translation-program/translation-guide/source-string-2.png)
+![Contoh tangkapan layar ditambahkan untuk konteks](../../../../../contributing/translation-program/faq/source-string-2.png)
 
 ## Bagaimana cara meninggalkan komentar atau mengajukan pertanyaan? Saya ingin menandai sebuah masalah atau salah ketik... {#comment}
 
@@ -38,7 +38,7 @@ Jika Anda ingin menaikkan bendera pada string tertentu yang memerlukan perhatian
 - Klik tombol kedua di bilah kanan atas. Tab tersembunyi akan muncul di sebelah kanan Anda. Tinggalkan komentar baru dan klik kotak centang "Masalah" di bagian bawah. Anda dapat menentukan jenis masalah dengan memilih salah satu opsi dari menu drop-down.
 - Setelah terkirim, akan dilaporkan ke tim kami. Kami akan memperbaiki masalah tersebut dan memberi tahu Anda dengan membalas komentar Anda dan menutup masalah tersebut.
 
-![Menampilkan cara membuat komentar dan masalah](../../../../../contributing/translation-program/translation-guide/comment-issue.png)
+![Menampilkan cara membuat komentar dan masalah](../../../../../contributing/translation-program/faq/comment-issue.png)
 
 ## Apa Itu Translation Memory (TM)? {#translation-memory}
 
@@ -47,7 +47,7 @@ Translation Memory (TM) adalah sebuah fitur Crowdin yang menyimpan semua string 
 - Lihat pada bagian "TM and MT Suggestions" dan anda akan melihat bagaimana penerjemah lain menerjemahkan string yang sama atau serupa. Jika Anda menemukan saran dengan tingkat kecocokan yang tinggi, silakan rujuk terjemahan itu dengan mengkliknya.
 - Jika tidak ada apa-apa di dalam daftar, Anda dapat mencari TM untuk melihat terjemahan yang dibuat sebelumnya dan menggunakannya kembali untuk konsistensi.
 
-![Tangkapan layar dari translation memory](../../../../../contributing/translation-program/translation-guide/translation-memory.png)
+![Tangkapan layar dari translation memory](../../../../../contributing/translation-program/faq/translation-memory.png)
 
 ## Bagaimana cara menggunakan glosarium Crowdin? {#glossary}
 
@@ -57,15 +57,15 @@ Glosarium Crowdin adalah tempat terbaik untuk klarifikasi istilah dan definisi. 
 
 - Pertama, ketika menemukan istilah yang digarisbawahi pada string sumber, Anda dapat mengarahkan mouse ke atasnya dan melihat definisi singkatnya.
 
-![Contoh definisi glosarium](../../../../../contributing/translation-program/translation-guide/glossary-definition.png)
+![Contoh definisi glosarium](../../../../../contributing/translation-program/faq/glossary-definition.png)
 
 - Kedua, jika melihat istilah yang belum pernah Anda dengar tetapi tidak digarisbawahi, Anda dapat mencari di tab glosarium (tombol ketiga di kolom kanan). Anda akan menemukan penjelasan istilah-istilah tertentu dan yang sering digunakan dalam projek.
 
-![Sebuah tangkapan layar menunjukkan tempat untuk menemukan tab glosarium di Crowdin](../../../../../contributing/translation-program/translation-guide/glossary-tab.png)
+![Sebuah tangkapan layar menunjukkan tempat untuk menemukan tab glosarium di Crowdin](../../../../../contributing/translation-program/faq/glossary-tab.png)
 
 - Jika masih belum bisa menemukannya, ini adalah kesempatan Anda untuk menambahkan istilah baru! Kami mendorong Anda untuk mencarinya di mesin pencarian dan menambahkan deskripsi ke glosarium. Ini akan sangat membantu penerjemah lain untuk lebih memahami istilah tersebut.
 
-![Sebuah tangkapan layar menunjukkan cara menambahkan istilah glosarium ke Crowdin](../../../../../contributing/translation-program/translation-guide/add-glossary-term.png)
+![Sebuah tangkapan layar menunjukkan cara menambahkan istilah glosarium ke Crowdin](../../../../../contributing/translation-program/faq/add-glossary-term.png)
 
 ### Kebijakan terjemahan terminologi {#terminology}
 

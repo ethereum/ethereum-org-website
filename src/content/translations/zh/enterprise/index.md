@@ -44,7 +44,7 @@ sidebar: true
 
 不同组织为使以太坊企业级应用合作更便利作出了一些努力：
 
-- [企业以太坊联盟（Enterprise Etherum Alliance, EEA）](https://entethalliance.org/) EEA 旨在让各组织能够在其日常业务中采用和使用以太坊技术。 它让以太坊的生态系统可以找到新的商业机会，推进工业界的采用，并让参与者之间可以相互学习与合作。 EEA 的主网工作组是在公共以太坊主机上建设的企业代表的协调中心，以及希望支持他们的以太坊社区成员。
+- [企业以太坊联盟（Enterprise Ethereum Alliance, EEA）](https://entethalliance.org/) EEA 旨在让各组织能够在其日常业务中采用和使用以太坊技术。 它让以太坊的生态系统可以找到新的商业机会，推进工业界的采用，并让参与者之间可以相互学习与合作。 EEA 的主网工作组是在公共以太坊主机上建设的企业代表的协调中心，以及希望支持他们的以太坊社区成员。
 - [以太坊 OASIS 开放项目（Ethereum OASIS Open Project）](https://github.com/ethereum-oasis/oasis-open-project) 以太坊 OASIS 开放项目是一个 OASIS 开放项目，它为不同的利益攸关方提供了一个中立的论坛，以高质量地规范以太坊长期稳定性、交互性并使其易于集成。 该项目打算制定明确、开放标准、高质量的文档和共同的测试套件，以促进以太坊协议的改进。
 - [Baseline 项目](https://www.baseline-protocol.org/) Baseline 协议是一个开放源码倡议，它结合了加密方面，发送消息和区块链的进步，通过公共以太坊主网以低成本的方式提供安全和私人的业务流程。 该协议使企业之间能够进行保密和复杂的合作，而不会在链上留下任何敏感的数据。 Baseline 项目是以太坊 OASIS 开放项目的一个次级项目，由 Baseline 技术指导委员会协调。
 
