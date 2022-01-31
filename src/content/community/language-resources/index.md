@@ -100,6 +100,7 @@ If you are bilingual and want to help us reach more people, you can also get inv
 ### Turkish {#tr}
 
 - [BTK Akademi](https://www.btkakademi.gov.tr/portal/course/blokzincir-ve-kripto-paralar-10569#!/about) - blockchain and cryptocurrency-focused course
+- [The great renaming: what happened to Eth2?](https://miningturkiye.org/konu/ethereum-madenciligi-bitiyor-mu-onemli-gelisme.655/) - Turkish translation of the great renaming blog post, explaining the move away from 'Eth2' terminology
 
 ### Vietnamese {#vi}
 
