@@ -53,7 +53,7 @@ ETH on testnets has no real value; therefore, there are no markets for testnet E
 
 - [Görli faucet](https://faucet.goerli.mudit.blog/)
 - [Kovan faucet](https://faucet.kovan.network/)
-- [Rinkeby faucet](https://faucet.rinkeby.io/)
+- [Rinkeby faucet](https://www.rinkebyfaucet.com/)
 - [Ropsten faucet](https://faucet.ropsten.be/)
 
 ## Private networks {#private-networks}
