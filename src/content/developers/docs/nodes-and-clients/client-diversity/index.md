@@ -6,7 +6,6 @@ sidebar: true
 sidebarDepth: 2
 ---
 
-
 The behavior of an Ethereum node is controlled by the client software it runs. There are several production-level Ethereum clients, each one developed and maintained in different languages by separate teams. The clients are built to a common spec that ensures the clients seamlessly communicate with each other and have the same functionality and provide an equivalent user experience. However, at the moment the distribution of clients across nodes is not equal enough to realize this network fortification to its full potential. Ideally, users divide roughly equally across the various clients to bring as much client diversity as possible to the network.
 
 ## Prerequisites {#prerequisites}
@@ -22,12 +21,15 @@ Multiple, independently developed and maintained clients exist because client di
 Having many independently developed and maintained clients is vital for the health of a decentralized network. Let's explore the reasons why.
 
 ### Bugs {#bugs}
+
 A bug in an individual client is less of a risk to the network when representing a minority of Ethereum nodes. With a roughly even distribution of nodes across many clients, the likelihood of most clients suffering from a shared issue is small, and as a result, the network is more robust.
 
-### Resilience to attacks {#resilience} 
+### Resilience to attacks {#resilience}
+
 Client diversity also offers resilience to attacks. For example, an attack that [tricks a particular client](https://twitter.com/vdWijden/status/1437712249926393858) onto a particular branch of the chain is unlikely to be successful because other clients are unlikely to be exploitable in the same way and the canonical chain remains uncorrupted. Low client diversity increases the risk associated with a hack on the dominant client. Client diversity has already proven to be an important defence against malicious attacks on the network, for example the Shanghai denial-of-service attack in 2016 was possible because attackers were able to trick the dominant client (Geth) into executing a slow disk i/o operation tens of thousands of times per block. Because alternative clients were also online which did not share the vulnerability, Ethereum was able to resist the attack and continue to operate while the vulnerability in Geth was fixed.
 
 ### Proof-of-stake finality {#finality}
+
 Ethereum has had 100% uptime since the network began. After the merge, the risks caused by poor client diversity become more alarming. A critical bug in a consensus client with over 33% of the Ethereum nodes could prevent the Beacon Chain from finalizing, causing Ethereum to go offline.
 
 <Emoji text="🚨" mr="1rem" /> Worse still, a critical bug in a client with a two-thirds majority could cause the chain to <a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/" target="_blank">incorrectly split and finalize</a>, leading to a large set of validators getting stuck on an invalid chain. If they want to rejoin the correct chain, these validators face slashing or a slow and expensive voluntary withdrawal and reactivation. The magnitude of a slashing scales with the number of culpable nodes with a two-thirds majority slashed maximally (32 ETH).
@@ -49,7 +51,7 @@ The execution layer data were obtained from [Ethernodes](https://ethernodes.org)
 
 Up to date client diversity data for the consensus layer is now available at https://clientdiversity.org/.
 
-## Use a minority client {use-minority-client}
+## Use a minority client {#use-minority-client}
 
 Addressing client diversity requires more than individual users to choose minority clients - it requires mining/validator pools and institutions like the major dapps and exchanges to switch clients too. However, all users can do their part in redressing the current imbalance and normalizing the use of all the available Ethereum software. After the merge, all node operators will be required to run an execution client and a consensus client. Choosing combinations of the clients suggested below will help increase client diversity.
 
@@ -74,7 +76,6 @@ Addressing client diversity requires more than individual users to choose minori
 [Lodestar](https://github.com/ChainSafe/lodestar) - _Under review and audit_
 
 Technical users can help accelerate this process by writing more tutorials and documentation for minority clients and encouraging their node-operating peers to migrate away from the dominant clients. Guides for switching to a minority consensus client are available on [clientdiversity.org](https://clientdiversity.org/).
-
 
 ## Further reading {#further-reading}
 
