@@ -44,6 +44,8 @@
       items:
         - id: docs-nav-run-a-node
           to: /developers/docs/nodes-and-clients/run-a-node/
+        - id: docs-nav-client-diversity
+          to: /developers/docs/nodes-and-clients/client-diversity/
         - id: docs-nav-nodes-as-a-service
           to: /developers/docs/nodes-and-clients/nodes-as-a-service/
     - id: docs-nav-networks
