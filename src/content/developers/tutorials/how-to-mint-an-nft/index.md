@@ -31,7 +31,7 @@ npm install @alch/alchemy-web3
 
 ## Step 2: Create a mint-nft.js file {#create-mintnftjs}
 
-Inside your scripts directory, create an mint-nft.js file and add the following lines of code:
+Inside your scripts directory, create a mint-nft.js file and add the following lines of code:
 
 ```js
 require("dotenv").config()
