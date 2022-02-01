@@ -245,7 +245,7 @@ Like any other configuration, it can be defined with the startup flag or in the 
 
 ## Consensus clients (formerly 'Eth2' clients) {#consensus-clients}
 
-There are multiple consensus clients (previously known as 'Eth2' clients) to support the [consensus upgrades](/upgrades/beacon-chain/). They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [the merge](/upgrades/merge/).
+There are multiple consensus clients (previously known as 'Eth2' clients) to support the [consensus upgrades](/upgrades/beacon-chain/). They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [The Merge](/upgrades/merge/).
 
 [View consensus clients](/upgrades/get-involved/#clients).
 

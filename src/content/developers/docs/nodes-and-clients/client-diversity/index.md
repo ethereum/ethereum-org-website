@@ -30,7 +30,7 @@ Client diversity also offers resilience to attacks. For example, an attack that 
 
 ### Proof-of-stake finality {#finality}
 
-Ethereum has had 100% uptime since the network began. After the merge, the risks caused by poor client diversity become more alarming. A critical bug in a consensus client with over 33% of the Ethereum nodes could prevent the Beacon Chain from finalizing, causing Ethereum to go offline.
+Ethereum has had 100% uptime since the network began. After The Merge, the risks caused by poor client diversity become more alarming. A critical bug in a consensus client with over 33% of the Ethereum nodes could prevent the Beacon Chain from finalizing, causing Ethereum to go offline.
 
 <Emoji text="🚨" mr="1rem" /> Worse still, a critical bug in a client with a two-thirds majority could cause the chain to <a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/" target="_blank">incorrectly split and finalize</a>, leading to a large set of validators getting stuck on an invalid chain. If they want to rejoin the correct chain, these validators face slashing or a slow and expensive voluntary withdrawal and reactivation. The magnitude of a slashing scales with the number of culpable nodes with a two-thirds majority slashed maximally (32 ETH).
 
@@ -53,7 +53,7 @@ Up to date client diversity data for the consensus layer is now available at htt
 
 ## Use a minority client {#use-minority-client}
 
-Addressing client diversity requires more than individual users to choose minority clients - it requires mining/validator pools and institutions like the major dapps and exchanges to switch clients too. However, all users can do their part in redressing the current imbalance and normalizing the use of all the available Ethereum software. After the merge, all node operators will be required to run an execution client and a consensus client. Choosing combinations of the clients suggested below will help increase client diversity.
+Addressing client diversity requires more than individual users to choose minority clients - it requires mining/validator pools and institutions like the major dapps and exchanges to switch clients too. However, all users can do their part in redressing the current imbalance and normalizing the use of all the available Ethereum software. After The Merge, all node operators will be required to run an execution client and a consensus client. Choosing combinations of the clients suggested below will help increase client diversity.
 
 ### Execution clients {#execution-clients}
 

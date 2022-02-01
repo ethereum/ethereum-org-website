@@ -62,7 +62,7 @@ Ethereum currently uses a system called "proof-of-work". This allows the Ethereu
 
 You can learn more about [proof of work](/developers/docs/consensus-mechanisms/pow/) and [mining](/developers/docs/consensus-mechanisms/pow/mining/) within our developer documentation.
 
-After [the merge](/upgrades/merge/), Ethereum will be moving to a different system called "proof-of-stake". [Read more about consensus layer upgrades below](#consensus-layer-upgrades).
+After [The Merge](/upgrades/merge/), Ethereum will be moving to a different system called "proof-of-stake". [Read more about consensus layer upgrades below](#consensus-layer-upgrades).
 
 ## Clients and Nodes {#clients-and-nodes}
 
