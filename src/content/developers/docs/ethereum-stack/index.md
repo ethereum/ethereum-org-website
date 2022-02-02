@@ -33,7 +33,7 @@ As a dapp developer, you'll need to write smart contracts only if you want to ad
 
 In order for an application to interact with the Ethereum blockchain, it must connect to an [Ethereum node](/developers/docs/nodes-and-clients/). Connecting to a node allows you to read blockchain data and/or send transactions to the network.
 
-Ethereum nodes are computers running software - an Ethereum client. A client is an implementation of Ethereum that verifies all transactions in each block, keeping the network secure and the data accurate. Ethereum nodes are the Ethereum blockchain. They collectively store the state of the Ethereum blockchain and reach consensus on transactions to mutate the blockchain state.
+Ethereum nodes are computers running software - an Ethereum client. A client is an implementation of Ethereum that verifies all transactions in each block, keeping the network secure and the data accurate. **Ethereum nodes are the Ethereum blockchain**. They collectively store the state of the Ethereum blockchain and reach consensus on transactions to mutate the blockchain state.
 
 By connecting your application to an Ethereum node (via the [JSON-RPC API](/developers/docs/apis/json-rpc/)), your application is able to read data from the blockchain (such as user account balances) as well as broadcast new transactions to the network (such as transferring ETH between user accounts or executing functions of smart contracts).
 
