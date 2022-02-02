@@ -148,7 +148,7 @@ const Row = styled.div`
 `
 
 const ImageContainer = styled.div`
-  background: "#F1FFFD";
+  background: "#f1fffd";
   display: flex;
   height: 100%;
   width: 100%;

@@ -89,7 +89,7 @@ const LearningToolsPage = ({ data }) => {
         url: "https://remix.ethereum.org",
         image: getImage(data.remix),
         alt: "page-learning-tools-remix-logo-alt",
-        background: "#5098D6",
+        background: "#5098d6",
         subjects: ["Solidity", "Vyper"],
       },
       {
@@ -122,7 +122,7 @@ const LearningToolsPage = ({ data }) => {
       url: "https://cryptozombies.io/en/solidity",
       image: getImage(data.cryptoZombie),
       alt: "page-learning-tools-cryptozombies-logo-alt",
-      background: "#2B2F48",
+      background: "#2b2f48",
       subjects: ["Solidity"],
     },
     {
@@ -131,7 +131,7 @@ const LearningToolsPage = ({ data }) => {
       url: "https://ethernaut.openzeppelin.com/",
       image: getImage(data.oz),
       alt: "page-learning-tools-ethernauts-logo-alt",
-      background: "#4F62DC",
+      background: "#4f62dc",
       subjects: ["Solidity"],
     },
     {
@@ -140,7 +140,7 @@ const LearningToolsPage = ({ data }) => {
       url: "https://vyper.fun",
       image: getImage(data.vyperfun),
       alt: "page-learning-tools-vyperfun-logo-alt",
-      background: "#FFFFFF",
+      background: "#ffffff",
       subjects: ["Vyper"],
     },
     {
@@ -149,7 +149,7 @@ const LearningToolsPage = ({ data }) => {
       url: "https://capturetheether.com/",
       image: getImage(data.captureTheEther),
       alt: "page-learning-tools-capture-the-ether-logo-alt",
-      background: "#1B9AAA",
+      background: "#1b9aaa",
       subjects: ["Solidity"],
     },
   ]
@@ -161,7 +161,7 @@ const LearningToolsPage = ({ data }) => {
       url: "https://www.chainshot.com",
       image: getImage(data.chainshot),
       alt: "page-learning-tools-chainshot-logo-alt",
-      background: "#111F29",
+      background: "#111f29",
       subjects: ["Solidity", "Vyper", "web3"],
     },
     {
@@ -170,7 +170,7 @@ const LearningToolsPage = ({ data }) => {
       url: "https://consensys.net/academy/bootcamp/",
       image: getImage(data.consensys),
       alt: "page-learning-tools-consensys-academy-logo-alt",
-      background: "#F6F7F9",
+      background: "#f6f7f9",
       subjects: ["Solidity", "web3"],
     },
     {
@@ -179,7 +179,7 @@ const LearningToolsPage = ({ data }) => {
       url: "https://www.bloomtech.com/courses/web3",
       image: getImage(data.bloomtech),
       alt: "page-learning-tools-bloomtech-logo-alt",
-      background: "#FFFFFF",
+      background: "#ffffff",
       subjects: ["Solidity", "web3"],
     },
     {
@@ -188,7 +188,7 @@ const LearningToolsPage = ({ data }) => {
       url: "https://buildspace.so",
       image: getImage(data.buildspace),
       alt: "page-learning-tools-buildspace-logo-alt",
-      background: "#F6F7F9",
+      background: "#f6f7f9",
       subjects: ["Solidity", "web3"],
     },
     {
@@ -206,7 +206,7 @@ const LearningToolsPage = ({ data }) => {
       url: "https://nftschool.dev/",
       image: getImage(data.nftschool),
       alt: "page-learning-tools-nftschool-logo-alt",
-      background: "#111F29",
+      background: "#111f29",
       subjects: ["Solidity", "web3"],
     },
     {

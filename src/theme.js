@@ -1,84 +1,84 @@
 import { createGlobalStyle } from "styled-components"
 
-const white = "#FFFFFF"
+const white = "#ffffff"
 const black = "#000000"
-const primaryLight = "#1C1CFF"
-const primaryDark = "#FF7324"
-const success = "#109E62"
-const fail = "#B80000"
-const turquoise = "#CCFCFF"
+const primaryLight = "#1c1cff"
+const primaryDark = "#ff7324"
+const success = "#109e62"
+const fail = "#b80000"
+const turquoise = "#ccfcff"
 const turquoiseDark = "#293233"
-const yellow = "#FFF8DF"
-const mint = "#E1FEFA"
-const mintDark = "#2D3332"
-const codeBoxDark = "#2A2734"
-const codeBoxLight = "#FAFAFA"
+const yellow = "#fff8df"
+const mint = "#e1fefa"
+const mintDark = "#2d3332"
+const codeBoxDark = "#2a2734"
+const codeBoxLight = "#fafafa"
 
 // purple and orangeDark introduced for dark mode alts for homepage boxes
 const purpleDark = "#212131"
 const orangeDark = "#332821"
-const pink = "#FFE5F9"
+const pink = "#ffe5f9"
 const pinkDark = "#332027"
-const gridYellow = "#FFE78E"
-const gridRed = "#EF7D7D"
-const gridBlue = "#A7D0F4"
-const gridPink = "#FFA1C3"
+const gridYellow = "#ffe78e"
+const gridRed = "#ef7d7d"
+const gridBlue = "#a7d0f4"
+const gridPink = "#ffa1c3"
 
 const white500 = white
-const white600 = "#F7F7F7"
-const white700 = "#E5E5E5"
-const white800 = "#CCCCCC"
-const white900 = "#B2B2B2"
+const white600 = "#f7f7f7"
+const white700 = "#e5e5e5"
+const white800 = "#cccccc"
+const white900 = "#b2b2b2"
 
-const black50 = "#7F7F7F"
+const black50 = "#7f7f7f"
 const black100 = "#666666"
-const black200 = "#4C4C4C"
+const black200 = "#4c4c4c"
 const black300 = "#333333"
 const black400 = "#191919"
 const black500 = black
 
 const primaryLight950 = "#040426"
 const primaryLight900 = "#050532"
-const primaryLight800 = "#0B0B66"
+const primaryLight800 = "#0b0b66"
 const primaryLight700 = "#101099"
-const primaryLight600 = "#1616CC"
+const primaryLight600 = "#1616cc"
 const primaryLight500 = primaryLight
-const primaryLight400 = "#4949FF"
-const primaryLight300 = "#7676FF"
-const primaryLight200 = "#A4A4FF"
-const primaryLight100 = "#D1D1FF"
-const primaryLight50 = "#E8E8FF"
+const primaryLight400 = "#4949ff"
+const primaryLight300 = "#7676ff"
+const primaryLight200 = "#a4a4ff"
+const primaryLight100 = "#d1d1ff"
+const primaryLight50 = "#e8e8ff"
 
-const primaryDark950 = "#190B03"
+const primaryDark950 = "#190b03"
 const primaryDark900 = "#321607"
-const primaryDark800 = "#662E0E"
+const primaryDark800 = "#662e0e"
 const primaryDark700 = "#994515"
-const primaryDark600 = "#CC5C1C"
+const primaryDark600 = "#cc5c1c"
 const primaryDark500 = primaryDark
-const primaryDark400 = "#FF8F4F"
-const primaryDark300 = "#FFAB7B"
-const primaryDark200 = "#FFC7A7"
-const primaryDark100 = "#FFE3D3"
+const primaryDark400 = "#ff8f4f"
+const primaryDark300 = "#ffab7b"
+const primaryDark200 = "#ffc7a7"
+const primaryDark100 = "#ffe3d3"
 
-const success900 = "#031F13"
-const success800 = "#063F27"
-const success700 = "#095E3A"
-const success600 = "#0C7E4E"
+const success900 = "#031f13"
+const success800 = "#063f27"
+const success700 = "#095e3a"
+const success600 = "#0c7e4e"
 const success500 = success
-const success400 = "#3FB181"
-const success300 = "#6FC4A0"
-const success200 = "#9FD8C0"
-const success100 = "#CFEBDF"
+const success400 = "#3fb181"
+const success300 = "#6fc4a0"
+const success200 = "#9fd8c0"
+const success100 = "#cfebdf"
 
 const fail900 = "#240000"
 const fail800 = "#490000"
-const fail700 = "#6E0000"
+const fail700 = "#6e0000"
 const fail600 = "#930000"
 const fail500 = fail
-const fail400 = "#C63333"
-const fail300 = "#D46666"
-const fail200 = "#E29999"
-const fail100 = "#F0CCCC"
+const fail400 = "#c63333"
+const fail300 = "#d46666"
+const fail200 = "#e29999"
+const fail100 = "#f0cccc"
 
 const baseColors = {
   white,
@@ -96,7 +96,7 @@ const baseColors = {
   black50,
   boxShadow: "#000000",
   boxShadowHover: "#000000",
-  secondary: "#B2B2B2", // TODO replace
+  secondary: "#b2b2b2", // TODO replace
   success900,
   success800,
   success700,
@@ -148,10 +148,10 @@ const baseColors = {
 const lightColors = {
   buttonColor: white,
   upgradesGradient:
-    "linear-gradient(285.24deg, #F7CBC0 0%, #F4B1AB 29.8%, #8476D9 49.78%, #85ACF9 54.14%, #1C1CE1 61.77%, #000000 69.77%)",
+    "linear-gradient(285.24deg, #f7cbc0 0%, #f4b1ab 29.8%, #8476d9 49.78%, #85acf9 54.14%, #1c1ce1 61.77%, #000000 69.77%)",
   runNodeGradient:
-    "linear-gradient(0deg, #999DF4 0%, #999DF4 100%), linear-gradient(270.72deg, #FDF0FF 0.62%, #ECC3C3 32.61%, #CFBDE6 49.67%, #C4C4C4 72.88%);",
-  runNodeGradient2: "linear-gradient(135deg, #4F71EB 9.8%, #E84FEB 92.84%);",
+    "linear-gradient(0deg, #999df4 0%, #999df4 100%), linear-gradient(270.72deg, #fdf0ff 0.62%, #ecc3c3 32.61%, #cfbde6 49.67%, #c4c4c4 72.88%);",
+  runNodeGradient2: "linear-gradient(135deg, #4f71eb 9.8%, #e84feb 92.84%);",
   ghostCardBackground: white,
   ghostCardGhost: white600,
   secondaryButtonBackgroundActive: white700,
@@ -166,49 +166,49 @@ const lightColors = {
   primary300: primaryLight300,
   primary200: primaryLight200,
   primary100: primaryLight100,
-  primaryHover: "#1C1CE1",
+  primaryHover: "#1c1ce1",
   primaryActive: primaryLight600,
-  lightBorder: "#ECECEC",
-  priceCardBackgroundPositive: "linear-gradient( 0, #CFECE0 0%,	#CFECE0 100%)",
+  lightBorder: "#ececec",
+  priceCardBackgroundPositive: "linear-gradient( 0, #CFECE0 0%,	#cfece0 100%)",
   priceCardBackgroundNegative:
-    "linear-gradient(180deg, #F1CCCC 0%, #F1CCCC 100%)",
-  priceCardBorder: "#ECECEC",
-  priceCardBorderNegative: "#ECECEC",
-  searchBorder: "#7F7F7F",
+    "linear-gradient(180deg, #f1cccc 0%, #f1cccc 100%)",
+  priceCardBorder: "#ececec",
+  priceCardBorderNegative: "#ececec",
+  searchBorder: "#7f7f7f",
   searchBackground: white,
-  searchBackgroundEmpty: "#F2F2F2",
-  searchResultText: "#33363D",
-  searchResultBackground: "#F1F3F5",
+  searchBackgroundEmpty: "#f2f2f2",
+  searchResultText: "#33363d",
+  searchResultBackground: "#f1f3f5",
   selectHover: primaryLight100,
   selectActive: primaryLight200,
   dropdownBackground: white,
-  dropdownBackgroundHover: "#F2F2F2",
-  dropdownBorder: "#E5E5E5",
-  markBackground: "#8FBBED",
-  markUnderline: "#8FBBED",
-  modalBackground: "#B2B2B2",
+  dropdownBackgroundHover: "#f2f2f2",
+  dropdownBorder: "#e5e5e5",
+  markBackground: "#8fbbed",
+  markUnderline: "#8fbbed",
+  modalBackground: "#b2b2b2",
   text: "#333333",
   text200: "#666666",
-  text300: "#4C4C4C",
-  textTableOfContents: "#7F7F7F",
+  text300: "#4c4c4c",
+  textTableOfContents: "#7f7f7f",
   background: white,
   ednBackground: white600,
   border: white700,
   tableBoxShadow: "0 14px 66px #000000, 0 10px 17px #000000, 0 4px 7px #000000",
   tableItemBoxShadow: "#000000",
-  tableBackgroundHover: "#F2F2F2",
-  preBackground: "#F2F2F2",
+  tableBackgroundHover: "#f2f2f2",
+  preBackground: "#f2f2f2",
   preBorder: "#000000",
-  homeDivider: "#A4A4F3",
+  homeDivider: "#a4a4f3",
   displayDark: "none",
   displayLight: "block",
-  grayBackground: "#FCFCFC",
+  grayBackground: "#fcfcfc",
   cardGradient:
-    "radial-gradient(46.28% 66.31% at 66.95% 58.35%, #E6E6F7 0%, #E7EDFA 50%, #E9FBFA 100%)",
+    "radial-gradient(46.28% 66.31% at 66.95% 58.35%, #e6e6f7 0%, #e7edfa 50%, #e9fbfa 100%)",
   upgradeStatusBackground:
-    "linear-gradient(180deg, #00F0FF 0%, #FFFFFF 100%), linear-gradient(0deg, #FFFFFF, #FFFFFF), #1C1CE1",
+    "linear-gradient(180deg, #00f0ff 0%, #ffffff 100%), linear-gradient(0deg, #ffffff, #ffffff), #1c1ce1",
   upgradeStatusShippedBackground:
-    "linear-gradient(180deg, #00F0FF 0%, #FFFFFF 100%), linear-gradient(0deg, #FFFFFF, #FFFFFF), #109E62",
+    "linear-gradient(180deg, #00f0ff 0%, #ffffff 100%), linear-gradient(0deg, #ffffff, #ffffff), #109e62",
   upgradeStatusBorder: "none",
   upgradeStatusShippedBorder: "none",
   warning: primaryDark100,
@@ -223,24 +223,24 @@ const lightColors = {
   shardBorder: black50,
   infoLink: primaryLight800,
   infoLinkHover: primaryLight900,
-  cardBoxShadow: "4px 4px 0px 0px #D2D2F9",
+  cardBoxShadow: "4px 4px 0px 0px #d2d2f9",
   homeBoxMint: mint,
   homeBoxTurquoise: turquoise,
   homeBoxOrange: primaryDark100,
   homeBoxPurple: primaryLight50,
   homeBoxPink: pink,
   codeBackground: codeBoxLight,
-  beta: "radial-gradient(25.56% 133.51% at 28.36% 45.54%, #1C1CE1 0%, #1C1CE1 100%)",
+  beta: "radial-gradient(25.56% 133.51% at 28.36% 45.54%, #1c1ce1 0%, #1c1ce1 100%)",
 }
 
 // TODO replace random variables w/ baseColor variables
 const darkColors = {
   buttonColor: black300,
   upgradesGradient:
-    "linear-gradient(285.24deg, #F7CBC0 0%, #FBEAE3 17.81%, #F4B1AB 29.8%, #8476D9 49.78%, #8DB4FF 69.77%);",
+    "linear-gradient(285.24deg, #f7cbc0 0%, #fbeae3 17.81%, #f4b1ab 29.8%, #8476d9 49.78%, #8db4ff 69.77%);",
   runNodeGradient:
-    "linear-gradient(0deg, #999DF4 0%, #999DF4 100%), linear-gradient(89.24deg, #FDF0FF -64.3%, #D47777 -7.43%, #BCA3DC 46.66%, #C4C4C4 99.16%);",
-  runNodeGradient2: "linear-gradient(135deg, #4F71EB 9.8%, #E84FEB 92.84%);",
+    "linear-gradient(0deg, #999df4 0%, #999df4 100%), linear-gradient(89.24deg, #fdf0ff -64.3%, #d47777 -7.43%, #bca3dc 46.66%, #c4c4c4 99.16%);",
+  runNodeGradient2: "linear-gradient(135deg, #4f71eb 9.8%, #e84feb 92.84%);",
   primaryHover: primaryDark400,
   primaryActive: primaryDark200,
   ghostCardBackground: black300,
@@ -261,32 +261,32 @@ const darkColors = {
   priceCardBackground: "transparent",
   priceCardBorder: success700,
   priceCardBorderNegative: fail300,
-  searchBorder: "#B2B2B2",
-  searchBackground: "#4C4C4C",
+  searchBorder: "#b2b2b2",
+  searchBackground: "#4c4c4c",
   searchBackgroundEmpty: "#333333",
-  searchResultText: "#F1F3F5",
-  searchResultBackground: "#33363D",
+  searchResultText: "#f1f3f5",
+  searchResultBackground: "#33363d",
   selectHover: primaryDark700,
   selectActive: primaryDark600,
   dropdownBackground: "#191919",
   dropdownBackgroundHover: "#000000",
   dropdownBorder: "#333333",
-  markBackground: "#FF7324",
-  markUnderline: "#FF7324",
+  markBackground: "#ff7324",
+  markUnderline: "#ff7324",
   modalBackground: "#191919",
-  text: "#F2F2F2",
-  text200: "#B2B2B2",
-  text300: "#CCCCCC",
-  textTableOfContents: "#B2B2B2",
+  text: "#f2f2f2",
+  text200: "#b2b2b2",
+  text300: "#cccccc",
+  textTableOfContents: "#b2b2b2",
   background: "#222222",
   ednBackground: black400,
   border: black300,
-  tableBoxShadow: "0 14px 66px #F5F5F5, 0 10px 17px #F5F5F5, 0 4px 7px #F5F5F5",
-  tableItemBoxShadow: "#FFFFFF",
-  tableBackgroundHover: "#FF7324",
+  tableBoxShadow: "0 14px 66px #f5f5f5, 0 10px 17px #f5f5f5, 0 4px 7px #f5f5f5",
+  tableItemBoxShadow: "#ffffff",
+  tableBackgroundHover: "#ff7324",
   preBackground: "#191919",
-  preBorder: "#FFFFFF",
-  homeDivider: "#FFC7A7",
+  preBorder: "#ffffff",
+  homeDivider: "#ffc7a7",
   displayDark: "block",
   displayLight: "none",
   grayBackground: "#272627",
@@ -306,16 +306,16 @@ const darkColors = {
   shardBorder: primaryDark500,
   infoLink: primaryLight800,
   infoLinkHover: primaryLight900,
-  cardBoxShadow: "4px 4px 0px 0px #FFAB7C",
+  cardBoxShadow: "4px 4px 0px 0px #ffab7c",
   homeBoxMint: mintDark,
   homeBoxTurquoise: turquoiseDark,
   homeBoxOrange: orangeDark,
   homeBoxPurple: purpleDark,
   homeBoxPink: pinkDark,
   codeBackground: codeBoxDark,
-  beta: "background: radial-gradient(25.56% 133.51% at 28.36% 45.54%, #FF8F50 0%, #FF8F50 100%)",
+  beta: "background: radial-gradient(25.56% 133.51% at 28.36% 45.54%, #ff8f50 0%, #ff8f50 100%)",
   cardGradient:
-    "linear-gradient(49.21deg, #7F7FD5 19.87%, #7F7FD5 58.46%, #91EAE4 97.05% )",
+    "linear-gradient(49.21deg, #7f7fd5 19.87%, #7f7fd5 58.46%, #91eae4 97.05% )",
 }
 
 const lightThemeColors = Object.assign({}, baseColors, lightColors)

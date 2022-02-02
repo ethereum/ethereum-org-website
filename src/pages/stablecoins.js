@@ -460,7 +460,7 @@ const StablecoinsPage = ({ data }) => {
 
   const dapps = [
     {
-      background: "linear-gradient(225deg, #AA589B 0%, #5CB8C4 100%)",
+      background: "linear-gradient(225deg, #aa589b 0%, #5cb8c4 100%)",
       url: "https://aave.com",
       alt: translateMessageId("aave-logo", intl),
       image: getImage(data.aave),
@@ -471,7 +471,7 @@ const StablecoinsPage = ({ data }) => {
       ),
     },
     {
-      background: "#F9FAFB",
+      background: "#f9fafb",
       url: "https://compound.finance",
       alt: translateMessageId("compound-logo", intl),
       image: getImage(data.compound),
@@ -493,7 +493,7 @@ const StablecoinsPage = ({ data }) => {
       ),
     },
     {
-      background: "linear-gradient(135deg, #C7EFE6 0%, #EEEAC7 100%)",
+      background: "linear-gradient(135deg, #c7efe6 0%, #eeeac7 100%)",
       url: "https://oasis.app",
       alt: translateMessageId("oasis-logo", intl),
       image: getImage(data.oasis),
