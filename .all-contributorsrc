@@ -6406,6 +6406,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Shpota",
+      "name": "Sasha Shpota",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5640984?v=4",
+      "profile": "http://shpota.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
