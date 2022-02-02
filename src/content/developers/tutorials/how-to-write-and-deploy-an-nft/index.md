@@ -168,7 +168,7 @@ Open up the my-nft project in your favorite editor (we like [VSCode](https://cod
        using Counters for Counters.Counter;
        Counters.Counter private _tokenIds;
 
-       constructor() public ERC721("MyNFT", "NFT") {}
+       constructor() ERC721("MyNFT", "NFT") {}
 
        function mintNFT(address recipient, string memory tokenURI)
            public onlyOwner
