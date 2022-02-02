@@ -48,7 +48,7 @@
   "page-upgrades-bug-bounty-specs": "Read the full spec",
   "page-upgrades-bug-bounty-specs-docs": "Specification documents",
   "page-upgrades-bug-bounty-submit": "Submit a bug",
-  "page-upgrades-bug-bounty-submit-desc": "For each bug you find you’ll be rewarded points. The points you earn depend on the severity of the bug. The Ethereum Foundation (EF) determine severity using the OWASP method.",
+  "page-upgrades-bug-bounty-submit-desc": "For each bug you find you’ll be rewarded points. The points you earn depend on the severity of the bug. Lodestar bugs are currently being awarded 10% of points listed below, as additional audits are under way to be completed. The Ethereum Foundation (EF) determine severity using the OWASP method.",
   "page-upgrades-bug-bounty-subtitle": "Earn up to $50,000 USD and a place on the leaderboard by finding consensus layer protocol and client bugs.",
   "page-upgrades-bug-bounty-title": "Open for submissions",
   "page-upgrades-bug-bounty-title-1": "Beacon Chain",
