@@ -102,6 +102,8 @@
   "page-run-a-node-staking-link": "Stake ETH",
   "page-run-a-node-staking-plans-title": "Plan on staking?",
   "page-run-a-node-staking-plans-description": "To maximize the efficiency of your validator, a minimum of 16 GB RAM is recommended, but 32 GB is better, with a CPU benchmark score of 6667+ on cpubenchmark.net. It is also recommended that stakers have access to unlimited high-speed internet bandwidth, though this is not an absolute requirement.",
+  "page-run-a-node-staking-plans-ethstaker-link-label": "How to shop for Ethereum validator hardware",
+  "page-run-a-node-staking-plans-ethstaker-link-description": "EthStaker goes into more detail in this hour long special",
   "page-run-a-node-sovereignty-title": "Sovereignty",
   "page-run-a-node-sovereignty-preview": "Think of running a node like the next step beyond getting your own Ethereum wallet.",
   "page-run-a-node-sovereignty-1": "An Ethereum wallet allows you to take full custody and control of your digital assets by holding the private keys to your addresses, but those keys don't tell you the current state of the blockchain, such as your wallet balance.",
