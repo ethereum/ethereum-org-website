@@ -42,7 +42,7 @@ const TutorialCard = styled(Link)`
   margin-bottom: 1px;
   padding: 2rem;
   width: 100%;
-  color: #000;
+  color: #000000;
   &:hover {
     border-radius: 4px;
     box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};

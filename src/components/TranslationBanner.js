@@ -33,7 +33,7 @@ const StyledBanner = styled.div`
   color: ${(props) => props.theme.colors.black300};
   display: flex;
   justify-content: space-between;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px 0px;
+  box-shadow: #000000 0px 2px 4px 0px;
   border-radius: 2px;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     max-width: 100%;
@@ -94,8 +94,8 @@ const SecondaryButtonLink = styled(ButtonLink)`
     margin-left: 0rem;
     margin-top: 0.5rem;
   }
-  color: #333;
-  border: 1px solid #333;
+  color: #333333;
+  border: 1px solid #333333;
   background-color: transparent;
 `
 

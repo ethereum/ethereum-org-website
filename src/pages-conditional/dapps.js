@@ -1083,7 +1083,7 @@ const DappsPage = ({ data, location }) => {
       url: "https://foundation.app",
       image: getImage(data.foundationec),
       alt: translateMessageId("page-dapps-foundation-logo-alt", intl),
-      background: "#ffffff",
+      background: "#FFFFFF",
       type: COLLECTIBLES,
       pillColor: "tagBlue",
     },

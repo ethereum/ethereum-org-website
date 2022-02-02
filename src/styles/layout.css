@@ -70,8 +70,8 @@ h1 {
   margin: 0.67em 0;
 }
 mark {
-  background-color: #ff0;
-  color: #000;
+  background-color: #ffff00;
+  color: #000000;
 }
 small {
   font-size: 80%;
@@ -397,7 +397,7 @@ pre {
   margin-bottom: 1.45rem;
   font-size: 0.85rem;
   line-height: 1.42;
-  background: hsla(0, 0%, 0%, 0.04);
+  background: #000000;
   border-radius: 3px;
   overflow: auto;
   word-wrap: normal;
@@ -477,7 +477,7 @@ hr {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 0;
-  background: hsla(0, 0%, 0%, 0.2);
+  background: #000000;
   border: none;
   height: 1px;
 }
@@ -547,15 +547,15 @@ samp {
   line-height: 1.45rem;
 }
 abbr {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  border-bottom: 1px dotted #000000;
   cursor: help;
 }
 acronym {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  border-bottom: 1px dotted #000000;
   cursor: help;
 }
 abbr[title] {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  border-bottom: 1px dotted #000000;
   cursor: help;
   text-decoration: none;
 }
@@ -565,7 +565,7 @@ thead {
 td,
 th {
   text-align: left;
-  border-bottom: 1px solid hsla(0, 13%, 72%, 0.12);
+  border-bottom: 1px solid #c1aeae;
   font-feature-settings: "tnum";
   -moz-font-feature-settings: "tnum";
   -ms-font-feature-settings: "tnum";
@@ -584,7 +584,7 @@ td:last-child {
   padding-right: 0;
 }
 tt {
-  background-color: hsla(255, 13%, 18%, 1);
+  background-color: #2b2834;
   color: #968af6;
   border-radius: 2px;
   font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
@@ -592,7 +592,7 @@ tt {
   padding: 0.2em;
 }
 code {
-  background-color: hsla(0, 0%, 0%, 0.04);
+  background-color: #000000;
   border-radius: 3px;
   font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
     "Liberation Mono", Menlo, Courier, monospace;

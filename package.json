@@ -46,7 +46,6 @@
     "lodash": "^4.17.21",
     "luxon": "^1.24.1",
     "netlify-lambda": "^2.0.3",
-    "polished": "^4.1.1",
     "prism-react-renderer": "^1.1.1",
     "prismjs": "^1.25.0",
     "react": "17.0.2",

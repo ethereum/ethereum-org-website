@@ -140,7 +140,7 @@ const LearningToolsPage = ({ data }) => {
       url: "https://vyper.fun",
       image: getImage(data.vyperfun),
       alt: "page-learning-tools-vyperfun-logo-alt",
-      background: "#ffffff",
+      background: "#FFFFFF",
       subjects: ["Vyper"],
     },
     {

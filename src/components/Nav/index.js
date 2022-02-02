@@ -29,7 +29,7 @@ const StyledNav = styled.nav`
   display: flex;
   justify-content: center;
   background-color: ${(props) => props.theme.colors.background};
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* TODO use theme variable */
+  border-bottom: 1px solid #000000; /* TODO use theme variable */
 `
 
 const SubNav = styled.nav`
