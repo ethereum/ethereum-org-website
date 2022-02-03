@@ -6,6 +6,7 @@ exports.handler = async function (event, context) {
       "https://api.github.com/repos/ethereum/ethereum-org-website/issues?per_page=100&state=all"
     const { GITHUB_TOKEN } = process.env
 
+    console.log("envs ==== ", GITHUB_TOKEN, process.env)
     const resp = await axios.get(`${baseURL}`, {
       headers: {
         Authorization: `token ${GITHUB_TOKEN}`,
