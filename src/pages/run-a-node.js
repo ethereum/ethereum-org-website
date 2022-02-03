@@ -986,6 +986,13 @@ const RunANodePage = ({ data }) => {
           <Translation id="page-run-a-node-staking-plans-description" />
         </p>
         <p>
+          <Translation id="page-run-a-node-staking-plans-ethstaker-link-description" />{" "}
+          -{" "}
+          <Link to="https://youtu.be/C2wwu1IlhDc">
+            <Translation id="page-run-a-node-staking-plans-ethstaker-link-label" />
+          </Link>
+        </p>
+        <p>
           <Link to="https://cpubenchmark.net">cpubenchmark.net</Link>
         </p>
         <h3 id="rasp-pi">
