@@ -8,7 +8,7 @@ import { useKeyPress } from "../hooks/useKeyPress"
 
 const StyledOverlay = styled(motion.div)`
   position: fixed;
-  background: #000000;
+  background: #000000b3;
   will-change: opacity;
   top: 0;
   bottom: 0;
@@ -39,7 +39,7 @@ const StyledModal = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: #000000 0px 2px 4px 0px;
+  box-shadow: #00000029 0px 2px 4px 0px;
   width: 100%;
 `
 

@@ -33,7 +33,7 @@ const StyledBanner = styled.div`
   color: ${(props) => props.theme.colors.black300};
   display: flex;
   justify-content: space-between;
-  box-shadow: #000000 0px 2px 4px 0px;
+  box-shadow: #00000029 0px 2px 4px 0px;
   border-radius: 2px;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     max-width: 100%;

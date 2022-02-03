@@ -101,9 +101,9 @@ const IntroTwoColumnContent = styled(TwoColumnContent)`
 const GradientContainer = styled(GrayContainer)`
   background: linear-gradient(
     49.21deg,
-    #7f7fd5 19.87%,
-    #86a8e7 58.46%,
-    #91eae4 97.05%
+    #7f7fd533 19.87%,
+    #86a8e733 58.46%,
+    #91eae433 97.05%
   );
   margin: 3rem 0rem;
   width: 100%;

@@ -38,7 +38,8 @@ const CardFace = styled(motion.div)`
   backface-visibility: hidden;
   width: 100%;
   color: ${({ theme }) => theme.colors.text};
-  box-shadow: 0px 14px 66px #000000, 0px 10px 17px #000000, 0px 4px 7px #000000;
+  box-shadow: 0px 14px 66px #00000012, 0px 10px 17px #00000008,
+    0px 4px 7px #0000000d;
   background: ${({ theme }) => theme.colors.background};
 `
 

@@ -107,9 +107,9 @@ const WalletLeftColumn = styled(LeftColumn)`
 const GradientContainer = styled.div`
   background: radial-gradient(
     46.28% 66.31% at 66.95% 58.35%,
-    #7f7fd5 0%,
-    #86a8e7 50%,
-    #91eae4 100%
+    #7f7fd533 0%,
+    #86a8e733 50%,
+    #91eae433 100%
   );
   width: 100%;
   display: flex;

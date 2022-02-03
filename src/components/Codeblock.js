@@ -68,7 +68,7 @@ const TopBarItem = styled.div`
     cursor: pointer;
     color: ${(props) => props.theme.colors.text100};
     transform: scale(1.04);
-    box-shadow: 1px 1px 8px 1px #000000;
+    box-shadow: 1px 1px 8px 1px #00000080;
   }
 `
 

@@ -178,7 +178,7 @@ const StyledCard = styled(Card)`
 
   &:hover {
     border-radius: 4px;
-    box-shadow: 0px 8px 17px #000000;
+    box-shadow: 0px 8px 17px #00000026;
     background: ${(props) => props.theme.colors.tableBackgroundHover};
     transition: transform 0.1s;
     transform: scale(1.02);
