@@ -530,6 +530,10 @@ A network [node](#node) that finds valid [proof-of-work](#pow) for new blocks, b
   Mining
 </DocLink>
 
+### Mint {#mint}
+
+It refers to the process of issuing new coins/tokens.
+
 <Divider />
 
 ## N {#section-n}
