@@ -359,6 +359,9 @@ The process has already started. [The Beacon Chain](/upgrades/beacon-chain/), th
 
 Most NFTs are built using a consistent standard known as [ERC-721](/developers/docs/standards/tokens/erc-721/). However there are other standards that you might want to look into. The [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) standard allows for semi-fungible tokens which is particularly useful in the realm of gaming. And more recently, [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) has been proposed to make minting NFTs a lot more efficient. This standard lets you mint as many as you like in one transaction!
 
+After building and deploying an NFT contract, interact with it on-chain or using using services like the [Alchemy NFT API](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api) to instantly find, verify, and display your NFT. Get started with Alchemy [here](https://alchemy.com/?a=a089e4c0b3
+).
+
 ## Further reading {#further-reading}
 
 - [Crypto art data](https://cryptoart.io/data) – Richard Chen, updated automatically
@@ -432,5 +435,5 @@ To put it another way, if Visa handled 140,839,000,000 transactions at a cost of
 Ethereum in a single year stands to consume 5,256,000 kWh. With a potential of 788,940,000,000 - 3,153,600,000,000 transactions processed in that time.
 
 <InfoBanner emoji=":evergreen_tree:">
-  If you think these stats are incorrect or can be made more accurate, please raise an issue or PR. These are estimates by the ethereum.org team made using publicly accessible information and the planned Ethereum design. This doesn't represent an official promise from the Ethereum Foundation. 
+  If you think these stats are incorrect or can be made more accurate, please raise an issue or PR. These are estimates by the ethereum.org team made using publicly accessible information and the planned Ethereum design. This doesn't represent an official promise from the Ethereum Foundation.
 </InfoBanner>
