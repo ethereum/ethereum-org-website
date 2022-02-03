@@ -155,6 +155,10 @@ A crosslink provides a summary of a shard's state. It's how [shard](#shard) chai
   Proof-of-stake
 </DocLink>
 
+### Custodian {#custodian}
+
+Custodian refers to the third party to have control over your assets.
+
 <Divider />
 
 ## D {#section-d}
