@@ -1370,6 +1370,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/Filoppi"><img src="https://avatars.githubusercontent.com/u/7011366?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Filippo Tarpini</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Filoppi" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/saif-11bit"><img src="https://avatars.githubusercontent.com/u/56977968?v=4?s=100" width="100px;" alt=""/><br /><sub><b>saif-11bit</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=saif-11bit" title="Documentation">📖</a></td>
     <td align="center"><a href="http://shpota.com"><img src="https://avatars.githubusercontent.com/u/5640984?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sasha Shpota</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Shpota" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://erik.bjareholt.com"><img src="https://avatars.githubusercontent.com/u/1405370?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Erik Bjäreholt</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ErikBjare" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=ErikBjare" title="Code">💻</a></td>
   </tr>
 </table>
 
