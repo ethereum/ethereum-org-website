@@ -6415,6 +6415,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "ErikBjare",
+      "name": "Erik Bjäreholt",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1405370?v=4",
+      "profile": "https://erik.bjareholt.com",
+      "contributions": [
+        "doc",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
