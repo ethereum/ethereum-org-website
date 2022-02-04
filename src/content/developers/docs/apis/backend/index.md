@@ -103,6 +103,13 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [Documentation](https://docs.watchdata.io/)
 - [Discord](https://discord.com/invite/TZRJbZ6bdn)
 
+**Zmok -** **_Speed-oriented Ethereum nodes as JSON-RPC/WebSockets API_**
+
+- [zmok.io](https://zmok.io/)
+- [GitHub](https://github.com/zmok-io)
+- [Documentation](https://docs.zmok.io/)
+- [Discord](https://discord.gg/fAHeh3ka6s)
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
