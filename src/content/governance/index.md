@@ -153,10 +153,10 @@ The Ethereum governance process often trades off speed and efficiency for openne
 
 While the specification and implementations development has always been fully open source, the formal processes used to propose updates described above weren't used. This allowed changes to be specified and agreed upon quicker by researchers and implementers.
 
-When the Beacon Chain merges with the Ethereum execution layer, the governance process to propose changes will be harmonized. This process to implement the merge is [already underway](https://github.com/ethereum/EIPs/pull/3675).
+When the Beacon Chain merges with the Ethereum execution layer, the governance process to propose changes will be harmonized. This process to implement The Merge is [already underway](https://github.com/ethereum/EIPs/pull/3675).
 
 <ButtonLink to="/upgrades/merge/">
-  More on the merge
+  More on The Merge
 </ButtonLink>
 
 <Divider />

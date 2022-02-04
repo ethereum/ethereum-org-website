@@ -49,7 +49,7 @@ Depois da integração, será feita a atribuição de participantes (stakers) pa
 
 Alguns recursos, como a retirada do ETH aplicado, ainda não serão suportados imediatamente após a integração. Estes recursos serão tratados em uma outra melhoria, que acontecerá pouco tempo depois da integração.
 
-Mantenha-se atualizado com o [Blog de pesquisa e desenvolvimento EF](https://blog.ethereum.org/category/research-and-development/). Para aqueles que querem sabe mais, assista ao vídeo [What Happens After the Merge](https://youtu.be/7ggwLccuN5s?t=101), apresentado por Vitalik no evento ETHGlobal de abril de 2021.
+Mantenha-se atualizado com o [Blog de pesquisa e desenvolvimento EF](https://blog.ethereum.org/category/research-and-development/). Para aqueles que querem sabe mais, assista ao vídeo [What Happens After The Merge](https://youtu.be/7ggwLccuN5s?t=101), apresentado por Vitalik no evento ETHGlobal de abril de 2021.
 
 ### A integração e os cadeias de fragmentos {#docking-and-shard-chains}
 

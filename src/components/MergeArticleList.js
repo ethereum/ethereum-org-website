@@ -14,7 +14,7 @@ const reads = [
   },
   {
     title:
-      "The State of the Merge: An Update on Ethereum’s Merge to Proof of Stake in 2022",
+      "The State of The Merge: An Update on Ethereum’s Merge to Proof of Stake in 2022",
     description: "Consensys",
     link: "https://consensys.net/blog/news/the-state-of-the-merge-an-update-on-ethereums-merge-to-proof-of-stake-in-2022/",
   },
