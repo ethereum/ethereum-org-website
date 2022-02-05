@@ -218,6 +218,15 @@ const LearningToolsPage = ({ data }) => {
       background: "#171717",
       subjects: ["Solidity", "web3"],
     },
+    {
+      name: "Encode Club",
+      description: "page-learning-tools-encodeclub-description",
+      url: "https://www.encode.club/",
+      image: getImage(data.encodeclub),
+      alt: "page-learning-tools-encodeclub-logo-alt",
+      background: "#111F29",
+      subjects: ["Solidity", "web3"],
+    },
   ]
 
   return (
@@ -389,6 +398,9 @@ export const query = graphql`
       ...learningToolImage
     }
     pointer: file(relativePath: { eq: "dev-tools/pointer.png" }) {
+      ...learningToolImage
+    }
+    encodeclub: file(relativePath: { eq: "dev-tools/encodeclub.png" }) {
       ...learningToolImage
     }
 
