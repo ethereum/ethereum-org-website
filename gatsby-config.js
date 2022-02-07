@@ -127,6 +127,10 @@ module.exports = {
         // See: https://www.gatsbyjs.org/docs/mdx/plugins/
         gatsbyRemarkPlugins: [
           {
+            // Local plugin to adjust the images urls of the translated md files
+            resolve: require.resolve(`./plugins/gatsby-remark-image-urls`),
+          },
+          {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
               enableCustomId: true,
