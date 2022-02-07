@@ -47,7 +47,7 @@ The ethereum.org Translation Program aims to make Ethereum accessible to everyon
 
 <InfoBanner shouldCenter emoji=":light_bulb:">
   We encourage you to check out the ethereum.org Translation Style Guide. It contains some of the most important guidelines, instructions, and tips for translators to help localize the website.
-  {" "}<Link to="/en/contributing/translation-program/translators-guide/">View the Translation Style Guide</Link>
+  {" "}<Link to="/contributing/translation-program/translators-guide/">View the Translation Style Guide</Link>
 </InfoBanner>
 
 1. **[Join our project on Crowdin](https://crowdin.com/project/ethereum-org/invite)**  
@@ -119,7 +119,7 @@ If you are an ethereum.org translator or would like to become one, feel free to 
 
 <InfoBanner shouldCenter emoji=":information_source:">
   If you're helping us with translations, you might find some useful information in our translations FAQ.
-  {" "}<Link to="/en/contributing/translation-program/faq/">Translating ethereum.org FAQ</Link>
+  {" "}<Link to="/contributing/translation-program/faq/">Translating ethereum.org FAQ</Link>
 </InfoBanner>
 
 ## Resources {#resources}

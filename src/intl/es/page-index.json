@@ -37,6 +37,7 @@
   "page-index-developers": "Una nueva frontera para el desarrollo",
   "page-index-developers-description": "Ethereum y sus aplicaciones son transparentes y de código abierto. Puedes bifurcar el código y reutilizar la funcionalidad que otros hayan creado previamente. Si no quieres aprender un nuevo lenguaje, simplemente puedes interactuar con código de fuente abierta usando JavaScript y otros lenguajes existentes.",
   "page-index-developers-button": "Portal para desarrolladores",
+  "page-index-developers-code-examples": "Code examples",
   "page-index-developers-code-example-title-0": "Tu propio banco",
   "page-index-developers-code-example-description-0": "Puedes construir un banco gestionado por la lógica que hayas programado.",
   "page-index-developers-code-example-title-1": "Tu propia moneda",

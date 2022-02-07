@@ -1332,14 +1332,8 @@ const DappsPage = ({ data, location }) => {
               </RightColumn>
             </TwoColumnContent>
             <StyledCalloutBanner
-              title={translateMessageId(
-                "page-dapps-wallet-callout-title",
-                intl
-              )}
-              description={translateMessageId(
-                "page-dapps-wallet-callout-description",
-                intl
-              )}
+              titleKey={"page-dapps-wallet-callout-title"}
+              descriptionKey={"page-dapps-wallet-callout-description"}
               image={getImage(data.wallet)}
               maxImageWidth={300}
               alt={translateMessageId(

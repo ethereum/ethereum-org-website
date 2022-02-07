@@ -19,7 +19,7 @@ sidebar: true
 
 <InfoBanner shouldCenter emoji=":tada:">
   领取您的 POAP 代币！ 如果您在 2021 年参与了 ethereum.org 翻译计划，则会为您准备独特 POAP。
-  <a href="https://ethereum.org/en/contributing/#poap">关于 POAP 的更多信息</a>
+  <a href="/en/contributing/#poap">关于 POAP 的更多信息</a>
 </InfoBanner>
 
 ## 使命和愿景 {#mission-and-vision}
@@ -58,7 +58,7 @@ Ethereum.org 翻译计划旨在通过将 Ethereum.org 和其他以太坊内容�
 
    我们建议您先翻译最低的版本，然后再逐步升级到更高的版本 (v.2.0 → v.2.1 → v.2.2 → ⋯)，因为网站上会先更新较低版本。
 
-   [了解关于 ethereum.org 版本的更多信息](/en/contributing/translation-program/content-versions/)
+   [了解关于 ethereum.org 版本的更多信息](/contributing/translation-program/content-versions/)
 
 3. **翻译**  
    选择您要翻译的文件后，随即在线编辑器中打开。 如果您从未使用过 Crowdin，您可以通过这个快速指南来了解基础知识。
@@ -98,7 +98,7 @@ Ethereum.org 翻译计划旨在通过将 Ethereum.org 和其他以太坊内容�
 
 <InfoBanner shouldCenter emoji=":information_source:">
   如果您在帮助我们进行翻译，您可能会在翻译常见问题中找到一些实用信息。 
-  {" "}<a href="/en/contributing/translation-program/faq/">翻译 ethereum.org 常见问题</a>
+  {" "}<a href="/contributing/translation-program/faq/">翻译 ethereum.org 常见问题</a>
 </InfoBanner>
 
 ## 更多资源 {#resources}

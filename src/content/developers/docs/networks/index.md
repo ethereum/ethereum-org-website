@@ -51,10 +51,14 @@ A proof-of-work testnet. This means it's the best like-for-like representation o
 
 ETH on testnets has no real value; therefore, there are no markets for testnet ETH. Since you need ETH to actually interact with Ethereum, most people get testnet ETH from faucets. Most faucets are webapps where you can input an address which you request ETH to be sent to.
 
+- [FaucETH](https://fauceth.komputing.org) (Multi-Chain faucet without the need for social account)
 - [Görli faucet](https://faucet.goerli.mudit.blog/)
 - [Kovan faucet](https://faucet.kovan.network/)
-- [Rinkeby faucet](https://www.rinkebyfaucet.com/)
+- [Rinkeby faucet](https://faucet.rinkeby.io/)
 - [Ropsten faucet](https://faucet.ropsten.be/)
+- [Komputing faucet](https://fauceth.komputing.org/)
+- [Chainlink faucet](https://faucets.chain.link/)
+- [Paradigm faucet](https://faucet.paradigm.xyz/)
 
 ## Private networks {#private-networks}
 
