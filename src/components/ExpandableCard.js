@@ -64,7 +64,7 @@ const ButtonContainer = styled.div`
   margin-left: 1rem;
 `
 
-const ExpandableCard = ({ children, contentPreview, title, svg }) => {
+const ExpandableCard = ({ children, contentPreview, title, svg, alt }) => {
   const [isVisible, setIsVisible] = useState(false)
   const expandCollapse = {
     collapsed: {
@@ -107,7 +107,7 @@ const ExpandableCard = ({ children, contentPreview, title, svg }) => {
       <Content>
         <Question>
           <Header>
-            {svg && <img src={svg} />}
+            {svg && <img src={svg} alt={alt} />}
             <Title>{title}</Title>
           </Header>
           <TextPreview>{contentPreview}</TextPreview>
