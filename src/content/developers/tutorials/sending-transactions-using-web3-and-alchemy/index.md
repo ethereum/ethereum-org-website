@@ -99,7 +99,7 @@ npm install dotenv --save
 
 ### 6\. Create the .env file {#create-the-dotenv-file}
 
-Create a .env file in your project directory and add the following (replacing “`your-api-url`" and "`your-private-key`")
+Create a `.env` file in your project directory and add the following (replacing “`your-api-url`" and "`your-private-key`")
 
 - To find your Alchemy API URL, navigate to the app details page of the app you just created on your dashboard, click “View Key” in the top right corner, and grab the HTTP URL.
 - To find your private key using Metamask, check out this [guide](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key).
@@ -108,6 +108,10 @@ Create a .env file in your project directory and add the following (replacing �
 API_URL = "your-api-url"
 PRIVATE_KEY = "your-private-key"
 ```
+
+<InfoBanner isWarning={true}>
+  Don't commit `.env`: Please make sure to never share or expose your `.env` file with anyone as you can compromise your secrets in doing so. If you are using version control, ensure that you will never commit the file to upstream.
+</InfoBanner>
 
 ### 7\. Create `sendTx.js` file {#create-sendtx-js}
 

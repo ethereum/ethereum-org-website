@@ -233,6 +233,10 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 To actually connect these to our code, we’ll reference these variables in our `hardhat.config.js` file on step 13.
 
+<InfoBanner isWarning={true}>
+  Don't commit `.env`: Please make sure to never share or expose your `.env` file with anyone as you can compromise your secrets in doing so. If you are using version control, ensure that you will never commit the file to upstream.
+</InfoBanner>
+
 ## Step 12: Install Ethers.js {#step-12-install-ethersjs}
 
 Ethers.js is a library that makes it easier to interact and make requests to Ethereum by wrapping [standard JSON-RPC methods](/developers/docs/apis/json-rpc/) with more user friendly methods.
