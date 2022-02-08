@@ -79,6 +79,7 @@ Technical users can help accelerate this process by writing more tutorials and d
 
 ## Further reading {#further-reading}
 
+- [Client diversity on Ethereum's consensus layer](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA)
 - [Importance of client diversity](https://our.status.im/the-importance-of-client-diversity/)
 - [List of Ethereum node services](https://ethereumnodes.com/)
 - ["Five Whys" of the client diversity problem](https://notes.ethereum.org/@afhGjrKfTKmksTOtqhB9RQ/BJGj7uh08)
