@@ -438,6 +438,11 @@ const StyledFeedbackCard = styled(FeedbackCard)`
   margin: 0 2rem;
 `
 
+const StrongParagraph = styled.p`
+  font-size: 150%;
+  font-weight: 600;
+`
+
 const RunANodePage = ({ data }) => {
   const intl = useIntl()
   const heroContent = {
@@ -584,9 +589,9 @@ const RunANodePage = ({ data }) => {
           <p>
             <Translation id="page-run-a-node-who-copy-3" />
           </p>
-          <h3>
+          <StrongParagraph>
             <Translation id="page-run-a-node-who-copy-bold" />
-          </h3>
+          </StrongParagraph>
         </StyledExpandableInfo>
       </FlexContent>
 
