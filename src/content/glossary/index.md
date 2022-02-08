@@ -259,7 +259,7 @@ In the context of cryptography, lack of predictability or level of randomness. W
 
 ### execution client {#execution-client}
 
-Execution clients (f.k.a. "Eth1 clients"), such as Besu, Erigon, go-ethereum, Nethermind, are tasked with processing and broadcasting transactions, as well as with managing Ethereum's state. They run the computations for each transaction in the [Ethereum Virtual Machine](#evm) to ensure that the rules of the protocol are followed. Today, they also handle proof of work consensus. After the transition to [proof of stake](#pos), they will delegate this to consensus clients.
+Execution clients (f.k.a. "Eth1 clients"), such as Besu, Erigon, go-ethereum, Nethermind, are tasked with processing and broadcasting transactions, as well as with managing Ethereum's state. They run the computations for each transaction in the [Ethereum Virtual Machine](#evm) to ensure that the rules of the protocol are followed. Today, they also handle [proof-of-work](#pow) consensus. After the transition to [proof-of-stake](#pos), they will delegate this to consensus clients.
 
 ### execution layer {#execution-layer}
 

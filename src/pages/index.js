@@ -929,6 +929,7 @@ contract SimpleDomainRegistry {
                 key={idx}
                 title={tout.title}
                 description={tout.description}
+                alt={tout.alt}
                 to={tout.to}
                 image={tout.image}
               />

@@ -15,7 +15,7 @@
   "page-staking-desc-2": "Although you can earn rewards for doing work that benefits the network, you can lose ETH for malicious actions, going offline, and failing to validate.",
   "page-staking-desc-3": "You'll need 32 ETH to become a full validator or some ETH to join a staking pool. You'll also need to run an execution client (formerly 'Eth1 client'). The launchpad will walk you through the process and hardware requirements. Alternatively, you can use a backend API.",
   "page-staking-description": "Staking is the act of depositing 32 ETH to activate validator software. As a validator you’ll be responsible for storing data, processing transactions, and adding new blocks to the blockchain. This will keep Ethereum secure for everyone and earn you new ETH in the process. This process, known as proof-of-stake, is being introduced by the Beacon Chain.",
-  "page-staking-docked": "More on the merge",
+  "page-staking-docked": "More on The Merge",
   "page-staking-dyor": "Do your own research",
   "page-staking-dyor-desc": "None of the listed staking services are official endorsements. Be sure to do some research to figure out which service might be best for you.",
   "page-staking-header-1": "Stake your ETH to become an Ethereum validator",
@@ -58,5 +58,5 @@
   "page-staking-validators": "More validators, more security",
   "page-staking-validators-desc": "In a blockchain like Ethereum it is possible to censor and reorder transactions to suit you if you control a majority of the network. But, to control a majority of the network, you need a majority of validators, and for this you’d need to control a majority of the ETH in the system – that’s a lot! This amount of ETH grows every time a new validator enters the system, bolstering the security of the network. Proof-of-work, the security model proof-of-stake will replace, requires the validators (miners) to have specialist hardware and lots of physical space – entering the system as a miner is difficult so security against majority attacks doesn't increase as much. Proof-of-stake doesn't have these requirements, which should grow the network (and its resistance to majority attacks) to sizes that aren't possible with proof-of-work.",
   "page-staking-withdrawals": "Withdrawals won't be live right away",
-  "page-staking-withdrawals-desc": "You won't be able to withdraw your stake until future upgrades are deployed. Withdrawals will be available in a minor upgrade following the merge of Mainnet with the Beacon Chain."
+  "page-staking-withdrawals-desc": "You won't be able to withdraw your stake until future upgrades are deployed. Withdrawals will be available in a minor upgrade following The Merge of Mainnet with the Beacon Chain."
 }

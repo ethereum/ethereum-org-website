@@ -230,6 +230,11 @@ const BugBountiesPage = ({ data, location }) => {
       link: "https://our.status.im/tag/nimbus/",
       image: getImage(data.nimbusSmall),
     },
+    {
+      title: "Lodestar",
+      link: "https://chainsafe.github.io/lodestar/",
+      image: getImage(data.lodestarSmall),
+    },
   ]
 
   const tekuImage = isDarkTheme
@@ -312,6 +317,7 @@ const BugBountiesPage = ({ data, location }) => {
         <Client image={lighthouseImage} />
         <Client image={tekuImage} />
         <Client image={getImage(data.nimbus)} />
+        <Client image={getImage(data.lodestar)} />
       </ClientRow>
       <StyledGrayContainer id="rules">
         <Content>
@@ -559,6 +565,9 @@ export const query = graphql`
     prysm: file(relativePath: { eq: "upgrades/prysm.png" }) {
       ...ClientLogos
     }
+    lodestar: file(relativePath: { eq: "upgrades/lodestar.png" }) {
+      ...ClientLogos
+    }
     lighthouse: file(relativePath: { eq: "upgrades/lighthouse.png" }) {
       ...ClientLogos
     }
@@ -577,6 +586,9 @@ export const query = graphql`
       ...ClientLogos
     }
     prysmSmall: file(relativePath: { eq: "upgrades/prysm.png" }) {
+      ...ClientLogosSmall
+    }
+    lodestarSmall: file(relativePath: { eq: "upgrades/lodestar.png" }) {
       ...ClientLogosSmall
     }
     lighthouseSmallLight: file(
