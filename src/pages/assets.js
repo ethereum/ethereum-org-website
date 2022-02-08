@@ -12,6 +12,7 @@ import Translation from "../components/Translation"
 import { Page, Content } from "../components/SharedStyledComponents"
 
 import { translateMessageId } from "../utils/translations"
+import ethGlyphColoredSvg from "../assets/assets/eth-glyph-colored.svg"
 
 const Image = styled(GatsbyImage)`
   align-self: center;
@@ -300,10 +301,29 @@ const AssetsPage = ({ data }) => {
             alt={translateMessageId("page-assets-eth-diamond-color", intl)}
             image={data.ethDiamondColor}
           />
+        </Row>
+        <Row>
           <AssetDownload
             title={translateMessageId("page-assets-eth-diamond-purple", intl)}
             alt={translateMessageId("page-assets-eth-diamond-purple", intl)}
             image={data.ethDiamondPurple}
+          />
+          <AssetDownload
+            title={translateMessageId("page-assets-eth-diamond-colored", intl)}
+            alt={translateMessageId("page-assets-eth-diamond-colored", intl)}
+            image={data.ethGlyphColored}
+          />
+          <AssetDownload
+            title={translateMessageId(
+              "page-assets-eth-diamond-colored-svg",
+              intl
+            )}
+            alt={translateMessageId(
+              "page-assets-eth-diamond-colored-svg",
+              intl
+            )}
+            image={ethGlyphColoredSvg}
+            isSvg
           />
         </Row>
         <Row>
@@ -625,6 +645,11 @@ export const query = graphql`
     }
     ethDiamondPurpleWhite: file(
       relativePath: { eq: "assets/eth-diamond-purple-white.jpg" }
+    ) {
+      ...assetItem
+    }
+    ethGlyphColored: file(
+      relativePath: { eq: "assets/eth-glyph-colored.png" }
     ) {
       ...assetItem
     }
