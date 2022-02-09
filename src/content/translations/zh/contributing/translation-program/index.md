@@ -19,7 +19,7 @@ sidebar: true
 
 <InfoBanner shouldCenter emoji=":tada:">
   领取您的 POAP 代币！ 如果您在 2021 年参与了 ethereum.org 翻译计划，则会为您准备独特 POAP。
-  <a href="/en/contributing/#poap">关于 POAP 的更多信息</a>
+  <a href="/contributing/#poap">关于 POAP 的更多信息</a>
 </InfoBanner>
 
 ## 使命和愿景 {#mission-and-vision}
