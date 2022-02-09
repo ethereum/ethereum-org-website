@@ -438,6 +438,11 @@ const StyledFeedbackCard = styled(FeedbackCard)`
   margin: 0 2rem;
 `
 
+const StrongParagraph = styled.p`
+  font-size: 150%;
+  font-weight: 600;
+`
+
 const RunANodePage = ({ data }) => {
   const intl = useIntl()
   const heroContent = {
@@ -469,6 +474,7 @@ const RunANodePage = ({ data }) => {
         "page-run-a-node-privacy-2",
         "page-run-a-node-privacy-3",
       ],
+      alt: "page-run-a-node-glyph-alt-privacy",
     },
     {
       image: megaphoneGlyph,
@@ -478,12 +484,14 @@ const RunANodePage = ({ data }) => {
         "page-run-a-node-censorship-resistance-1",
         "page-run-a-node-censorship-resistance-2",
       ],
+      alt: "page-run-a-node-glyph-alt-censorship-resistance",
     },
     {
       image: earthGlyph,
       title: "page-run-a-node-participate-title",
       preview: "page-run-a-node-participate-preview",
       body: ["page-run-a-node-participate-1", "page-run-a-node-participate-2"],
+      alt: "page-run-a-node-glyph-alt-earth",
     },
     {
       image: decentralizationGlyph,
@@ -493,6 +501,7 @@ const RunANodePage = ({ data }) => {
         "page-run-a-node-decentralized-1",
         "page-run-a-node-decentralized-2",
       ],
+      alt: "page-run-a-node-glyph-alt-decentralization",
     },
     {
       image: voteGlyph,
@@ -502,12 +511,14 @@ const RunANodePage = ({ data }) => {
         "page-run-a-node-voice-your-choice-1",
         "page-run-a-node-voice-your-choice-2",
       ],
+      alt: "page-run-a-node-glyph-alt-vote",
     },
     {
       image: sovereigntyGlyph,
       title: "page-run-a-node-sovereignty-title",
       preview: "page-run-a-node-sovereignty-preview",
       body: ["page-run-a-node-sovereignty-1", "page-run-a-node-sovereignty-2"],
+      alt: "page-run-a-node-glyph-alt-sovereignty",
     },
   ]
 
@@ -578,9 +589,9 @@ const RunANodePage = ({ data }) => {
           <p>
             <Translation id="page-run-a-node-who-copy-3" />
           </p>
-          <h3>
+          <StrongParagraph>
             <Translation id="page-run-a-node-who-copy-bold" />
-          </h3>
+          </StrongParagraph>
         </StyledExpandableInfo>
       </FlexContent>
 
@@ -589,11 +600,12 @@ const RunANodePage = ({ data }) => {
           <Translation id="page-run-a-node-why-title" />
         </h2>
         <InfoGrid>
-          {whyRunANodeCards.map(({ image, title, preview, body }, idx) => (
+          {whyRunANodeCards.map(({ image, title, preview, body, alt }, idx) => (
             <ExpandableCard
               contentPreview={<Translation id={preview} />}
               title={<Translation id={title} />}
               svg={image}
+              alt={<Translation id={alt} />}
               key={idx}
             >
               {body.map((item, idx) => (
