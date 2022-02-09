@@ -18,7 +18,7 @@ The ethereum.org website, like Ethereum more broadly, is an open-source project.
 
 - [Work on an open issue](https://github.com/ethereum/ethereum-org-website/issues)
   _– Work we've identified that needs doing_
-- [Join the translations program](/contributing/translation-program/)
+- [Join the translation program](/contributing/translation-program/)
   _– Help us bring ethereum.org to new languages_
 - [Add community articles](/contributing/content-resources/)
   _– Add a helpful article to a relevant page_
@@ -66,7 +66,7 @@ Decisions about individual PRs, design evolution and major upgrades are made by 
 
 ### A note on plagiarism {#plagiarism}
 
-Only use your original work or content that you have permission to use when contributing any content or artefact to ethereum.org. Many projects within the Ethereum ecosystem use open-source licensing that allows for the free sharing of information. However, if you are cannot find this information, do not attempt to add it to ethereum.org. Any pull requests deemed as plagiarism will get rejected.
+Only use your original work or content that you have permission to use when contributing any content or artifact to ethereum.org. Many projects within the Ethereum ecosystem use open-source licensing that allows for the free sharing of information. However, if you are cannot find this information, do not attempt to add it to ethereum.org. Any pull requests deemed as plagiarism will get rejected.
 
 ## New to open-source? {#new-to-open-source}
 
@@ -88,7 +88,5 @@ If your contribution gets merged into ethereum.org, we'll mint you a unique cont
 You should only use self-custody wallets to claim POAPs. Do not use exchange accounts or other accounts you do not hold the private keys to, as these will not allow you to access and manage your POAPs.
 
 ## Contributors {#contributors}
-
-Thanks to everyone who has contributed so far!
 
 <Contributors />
