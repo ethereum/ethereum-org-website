@@ -32,7 +32,7 @@ It's important to note that node services do not and should not store your priva
 
 The main benefit for using a node service is not having to spend engineering time maintaining and managing nodes yourself. This allows you to focus on building your product rather than having to worry about infrastructure maintenance.
 
-Running your own nodes can be very expensive from storage to bandwidth to valuable engineering time. Things like spinning up more nodes when scaling, upgrading nodes to the latest versions, and ensuring state consistency, can detract from building and spending resources on your desired web3 product.
+Running your own nodes can be very expensive from storage to bandwidth to valuable engineering time. Things like spinning up more nodes when scaling, upgrading nodes to the latest versions, and ensuring state consistency, can distract from building and spending resources on your desired web3 product.
 
 ## What are the cons of using a Node Service? {#cons-of-using-a-node-service}
 
@@ -174,8 +174,8 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Direct support
 - [**Watchdata**](https://watchdata.io/)
   - [Docs](https://docs.watchdata.io/)
-  - Features 
-    - Data reliability 
+  - Features
+    - Data reliability
     - Uninterrupted connection with no downtime
     - Process automation
     - Free tariffs
