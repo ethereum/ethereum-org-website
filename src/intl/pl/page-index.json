@@ -37,6 +37,7 @@
   "page-index-developers": "Nowa możliwość rozwoju",
   "page-index-developers-description": "Ethereum i jego aplikacje są przejrzyste i oparte na otwartym oprogramowaniu. Możesz forkować kod i używać ponownie funkcji stworzonych przez innych. Jeśli nie chcesz się uczyć nowego języka programowania, możesz po prostu wykorzystać otwarty kod, używając JavaScript lub innego istniejącego języka.",
   "page-index-developers-button": "Portal deweloperski",
+  "page-index-developers-code-examples": "Code examples",
   "page-index-developers-code-example-title-0": "Twój własny bank",
   "page-index-developers-code-example-description-0": "Możesz otworzyć własny, zaprogramowany przez siebie bank.",
   "page-index-developers-code-example-title-1": "Twoja własna waluta",

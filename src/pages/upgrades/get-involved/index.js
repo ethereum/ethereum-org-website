@@ -365,8 +365,11 @@ const GetInvolvedPage = ({ data, location }) => {
         <StyledCalloutBanner
           image={getImage(data.rhino)}
           alt={translateMessageId("page-staking-image-alt", intl)}
-          title={translateMessageId("page-upgrades-get-involved-stake", intl)}
-          description={translateMessageId(
+          titleKey={translateMessageId(
+            "page-upgrades-get-involved-stake",
+            intl
+          )}
+          descriptionKey={translateMessageId(
             "page-upgrades-get-involved-stake-desc",
             intl
           )}

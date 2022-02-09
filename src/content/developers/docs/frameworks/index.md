@@ -88,6 +88,12 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [Homepage](https://dapp.tools/)
 - [GitHub](https://github.com/dapphub/dapptools/)
 
+**Foundry -** **_A blazing fast, portable and modular toolkit for Ethereum application development written in Rust._**
+
+- [Documentation](https://onbjerg.github.io/foundry-book/)
+- [GitHub](https://github.com/gakonst/foundry/)
+- [Tools for Foundry](https://github.com/crisgarner/awesome-foundry)
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_

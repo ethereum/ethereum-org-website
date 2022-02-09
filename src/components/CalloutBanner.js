@@ -2,6 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 
+import Translation from "./Translation"
+
 const StyledCard = styled.div`
   display: flex;
   flex-direction: row-reverse;
@@ -71,8 +73,8 @@ const H2 = styled.h2`
 const CalloutBanner = ({
   image,
   maxImageWidth,
-  title,
-  description,
+  titleKey,
+  descriptionKey,
   alt,
   children,
   className,
@@ -80,8 +82,12 @@ const CalloutBanner = ({
   <StyledCard className={className}>
     <Image image={image} alt={alt} maxImageWidth={maxImageWidth} />
     <Content>
-      <H2>{title}</H2>
-      <Description>{description}</Description>
+      <H2>
+        <Translation id={titleKey} />
+      </H2>
+      <Description>
+        <Translation id={descriptionKey} />
+      </Description>
       {children}
     </Content>
   </StyledCard>
