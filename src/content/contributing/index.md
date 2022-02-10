@@ -18,7 +18,7 @@ The ethereum.org website, like Ethereum more broadly, is an open-source project.
 
 - [Work on an open issue](https://github.com/ethereum/ethereum-org-website/issues)
   _– Work we've identified that needs doing_
-- [Join the translations program](/contributing/translation-program/)
+- [Join the translation program](/contributing/translation-program/)
   _– Help us bring ethereum.org to new languages_
 - [Add community articles](/contributing/content-resources/)
   _– Add a helpful article to a relevant page_
@@ -50,7 +50,7 @@ You don't need permission to work on anything, but it's always best to let us kn
 - Commenting on an issue or PR in [GitHub](https://github.com/ethereum/ethereum-org-website)
 - Messaging on our [Discord server](https://discord.gg/CetY6Y4)
 
-Before contributing , make sure you're familiar with:
+Before contributing, make sure you're familiar with:
 
 - the evolving [vision of ethereum.org](/about/)
 - our [design principles](/contributing/design-principles/)

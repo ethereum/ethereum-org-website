@@ -37,6 +37,7 @@
   "page-index-developers": "Kehityksen uusi ulottuvuus",
   "page-index-developers-description": "Ethereum ja sen sovellukset pohjautuvat avoimeen lähdekoodiin. Voit muokata koodia ja hyödyntää muiden rakentamia toimintoja. Jos et halua oppia uutta kieltä, voit työskennellä avoimen koodin kanssa JavaScriptin ja muiden olemassa olevien kielten avulla.",
   "page-index-developers-button": "Kehittäjäportaali",
+  "page-index-developers-code-examples": "Code examples",
   "page-index-developers-code-example-title-0": "Oma pankkisi",
   "page-index-developers-code-example-description-0": "Voit luoda ohjelmoimasi logiikan mukaisen pankin.",
   "page-index-developers-code-example-title-1": "Oma valuuttasi",

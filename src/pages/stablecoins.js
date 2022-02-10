@@ -732,14 +732,10 @@ const StablecoinsPage = ({ data }) => {
       <Divider />
       <Content>
         <StyledCalloutBanner
-          title={translateMessageId(
-            "page-stablecoins-stablecoins-dapp-callout-title",
-            intl
-          )}
-          description={translateMessageId(
-            "page-stablecoins-stablecoins-dapp-callout-description",
-            intl
-          )}
+          titleKey={"page-stablecoins-stablecoins-dapp-callout-title"}
+          descriptionKey={
+            "page-stablecoins-stablecoins-dapp-callout-description"
+          }
           image={getImage(data.doge)}
           maxImageWidth={600}
           alt={translateMessageId(
