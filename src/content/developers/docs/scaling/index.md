@@ -37,18 +37,27 @@ Off-chain solutions are implemented separately from layer 1 Mainnet - they requi
 
 This category of off-chain solutions derives its security from Mainnet Ethereum.
 
+Layer 2 is a collective term for solutions designed to help scale your application by handling transactions off the Ethereum Mainnet (layer 1) while taking advantage of the robust decentralized security model of Mainnet. Transaction speed suffers when the network is busy, making the user experience poor for certain types of dapps. And as the network gets busier, gas prices increase as transaction senders aim to outbid each other. This can make using Ethereum very expensive.
+
 Most layer 2 solutions are centered around a server or cluster of servers, each of which may be referred to as a node, validator, operator, sequencer, block producer, or similar term. Depending on the implementation, these layer 2 nodes may be run by the individuals, businesses or entities that use them, or by a 3rd party operator, or by a large group of individuals (similar to Mainnet). Generally speaking, transactions are submitted to these layer 2 nodes instead of being submitted directly to layer 1 (Mainnet). For some solutions the layer 2 instance then batches them into groups before anchoring them to layer 1, after which they are secured by layer 1 and cannot be altered. The details of how this is done vary significantly between different layer 2 technologies and implementations.
 
 A specific layer 2 instance may be open and shared by many applications, or may be deployed by one project and dedicated to supporting only their application.
+
+#### Why is layer 2 needed? {#why-is-layer-2-needed}
+
+- Increased transactions per second greatly improves user experience, and reduces network congestion on Mainnet Ethereum.
+- Transactions are rolled up into a single transaction to Mainnet Ethereum, reducing gas fees for users making Ethereum more inclusive and accessible for people everywhere.
+- Any updates to scalability should not be at the expense of decentralization or security – layer 2 builds on top of Ethereum.
+- There are application specific layer 2 networks that bring their own set of efficiencies when working with assets at scale.
 
 #### Rollups {#rollups}
 
 Rollups perform transaction execution outside layer 1 and then the data is posted to layer 1 where consensus is reached. As transaction data is included in layer 1 blocks, this allows rollups to be secured by native Ethereum security.
 
-- [ZK-rollups](/developers/docs/scaling/layer-2-rollups/#zk-rollups)
-- [Optimistic rollups](/developers/docs/scaling/layer-2-rollups/#optimistic-rollups)
+There are two types of rollups with different security models:
 
-Learn more about [rollups](/developers/docs/scaling/layer-2-rollups/).
+- **Optimistic rollups**: assumes transactions are valid by default and only runs computation, via a [**fraud proof**](/glossary/#fraud-proof), in the event of a challenge. [More on Optimistic rollups](/developers/docs/scaling/optimistic-rollups).
+- **Zero-knowledge rollups**: runs computation off-chain and submits a [**validity proof**](/glossary/#validity-proof) to the chain. [More on Zero-knowledge rollups](/developers/docs/scaling/zk-rollups).
 
 #### State channels {#channels}
 
@@ -81,6 +90,8 @@ Learn more about [Plasma](/developers/docs/scaling/plasma/).
 
 _Note the explanation in the video uses the term "Layer 2" to refer to all off-chain scaling solutions, while we differentiate "Layer 2" as an off-chain solution that derives its security through layer 1 Mainnet consensus._
 
+<YouTube id="7pWxCklcNsU" />
+
 ## Further reading {#further-reading}
 
 - [A rollup-centric Ethereum roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) _Vitalik Buterin_
@@ -88,5 +99,8 @@ _Note the explanation in the video uses the term "Layer 2" to refer to all off-c
 - [Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
 - [An Incomplete Guide to Rollups](https://vitalik.ca/general/2021/01/05/rollup.html)
 - [Ethereum-powered ZK-Rollups: World Beaters](https://hackmd.io/@canti/rkUT0BD8K)
+- [Optimistic Rollups vs ZK Rollups](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
+- [Zero-Knowledge Blockchain Scalability](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
+- [Why rollups + data shards are the only sustainable solution for high scalability](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 
 _Know of a community resource that helped you? Edit this page and add it!_

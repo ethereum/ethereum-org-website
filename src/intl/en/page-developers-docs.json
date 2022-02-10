@@ -70,6 +70,8 @@
   "docs-nav-scaling": "Scaling",
   "docs-nav-scaling-description": "Methods for preserving decentralization and security as Ethereum grows",
   "docs-nav-scaling-layer-2": "Layer 2 Rollups",
+  "docs-nav-scaling-optimistic-rollups": "Optimistic rollups",
+  "docs-nav-scaling-zk-rollups": "Zero-knowledge rollups",
   "docs-nav-scaling-channels": "State channels",
   "docs-nav-scaling-sidechains": "Sidechains",
   "docs-nav-scaling-plasma": "Plasma",
