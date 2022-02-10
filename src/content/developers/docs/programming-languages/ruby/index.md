@@ -23,18 +23,21 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 ## Beginner articles {#beginner-articles}
 
+- [How to connect to the Ethereum network using Ruby](https://www.quicknode.com/guides/web3-sdks/how-to-connect-to-the-ethereum-network-using-ruby)
+- [How to generate a new Ethereum address in Ruby](https://www.quicknode.com/guides/web3-sdks/how-to-generate-a-new-ethereum-address-in-ruby)
+
 ## Intermediate articles {#intermediate-articles}
 
-## Advanced use patterns {#advanced-use-patterns}
+- [Use the Ruby, connected to Ethereum, to execute the Smart Contract](https://titanwolf.org/Network/Articles/Article?AID=87285822-9b25-49d5-ba2a-7ad95fff7ef9)
 
 ## Ruby projects and tools {#ruby-projects-and-tools}
 
 ### Active: {#active}
 
-
 - [eth.rb](https://github.com/q9f/eth.rb) - _Ruby library and RPC-client to handle Ethereum accounts, messages, and transactions_
 - [siwe-ruby](https://github.com/spruceid/siwe-ruby) - _Ruby implementation of Sign-In with Ethereum_
 - [keccak.rb](https://github.com/q9f/keccak.rb) - _The Keccak (SHA3) hash used by Ethereum_
+- [ethereum-on-rails](https://github.com/q9f/ethereum-on-rails) - _Ethereum on Rails template which allows to connect MetaMask to Ruby on Rails_
 
 ### Archived / No longer maintained: {#archived--no-longer-maintained}
 
@@ -44,12 +47,6 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 Looking for more resources? Check out [ethereum.org/developers](/developers/).
 
-## Projects using Ruby tooling {#projects-using-ruby-tooling}
-
-The following Ethereum-based projects use tools mentioned on this page. The related open-source repositories serve as a good reference for example code and best practices.
-
 ## Ruby Community Contributors {#ruby-community-contributors}
 
 The [Ethereum Ruby Telegram Group](https://t.me/ruby_eth) is a host to a rapidly growing community and is the dedicated resource for discussions on any of the above projects and related topics.
-
-## Other aggregated lists {#other-aggregated-lists}
