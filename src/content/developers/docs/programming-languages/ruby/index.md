@@ -28,6 +28,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 ## Intermediate articles {#intermediate-articles}
 
+- [Blockchain App with Ruby](https://www.nopio.com/blog/blockchain-app-ruby/)
 - [Use the Ruby, connected to Ethereum, to execute the Smart Contract](https://titanwolf.org/Network/Articles/Article?AID=87285822-9b25-49d5-ba2a-7ad95fff7ef9)
 
 ## Ruby projects and tools {#ruby-projects-and-tools}
