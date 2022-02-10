@@ -110,7 +110,7 @@ PRIVATE_KEY = "your-private-key"
 ```
 
 <InfoBanner isWarning={true}>
-  Don't commit `.env`: Please make sure to never share or expose your `.env` file with anyone as you can compromise your secrets in doing so. If you are using version control, ensure that you will never commit the file to upstream.
+Don't commit <pre>.env</pre>! Please make sure never to share or expose your <pre>.env</pre> file with anyone, as you are compromising your secrets in doing so. If you are using version control, add your <pre>.env</pre> to a <a href="https://git-scm.com/docs/gitignore">gitignore</a> file.
 </InfoBanner>
 
 ### 7\. Create `sendTx.js` file {#create-sendtx-js}
