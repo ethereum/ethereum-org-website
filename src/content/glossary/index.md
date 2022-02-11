@@ -721,6 +721,10 @@ A [layer 2](#layer-2) solution where a channel is set up between participants, w
   State channels
 </DocLink>
 
+### supermajority
+
+Supermajority is the term given for an amount exceeding 2/3 (66%) of the total staked ether on the [Beacon Chain](#beacon-chain). A supermajority vote is required for blocks to be [finalized](#finality) on the Beacon Chain.
+
 ### szabo {#szabo}
 
 A denomination of [ether](#ether). 1 szabo = 10<sup>12</sup> [wei](#wei), 10<sup>6</sup> szabo = 1 ether.
