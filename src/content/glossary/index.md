@@ -721,7 +721,7 @@ A [layer 2](#layer-2) solution where a channel is set up between participants, w
   State channels
 </DocLink>
 
-### supermajority
+### supermajority {#supermajority}
 
 Supermajority is the term given for an amount exceeding 2/3 (66%) of the total staked ether on the [Beacon Chain](#beacon-chain). A supermajority vote is required for blocks to be [finalized](#finality) on the Beacon Chain.
 
