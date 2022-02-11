@@ -721,6 +721,10 @@ A [layer 2](#layer-2) solution where a channel is set up between participants, w
   State channels
 </DocLink>
 
+### sync committee
+
+Sync committees are randomly selected groups of [validators](#validator) on the [Beacon Chain](#beacon-chain) that refresh about every 27 hours. Their purpose is to add their signatures to valid block headers. This allows [light clients](#lightweight-client) to keep track of the head of the blockchain without having to access the entire validator set.
+
 ### szabo {#szabo}
 
 A denomination of [ether](#ether). 1 szabo = 10<sup>12</sup> [wei](#wei), 10<sup>6</sup> szabo = 1 ether.
