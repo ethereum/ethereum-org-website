@@ -107,6 +107,10 @@ The first of two [hard forks](#hard-fork) for the [Metropolis](#metropolis) deve
 
 ## C {#section-c}
 
+### checkpoint {#checkpoint}
+
+The [Beacon Chain](#beacon-chain) has a tempo divided into slots (12 seconds) and epochs (32 slots). The first slot in each epoch is a checkpoint. When a [supermajority](#supermajority) of validators attests to the link between two checkpoints, they can be [justified](#justification) and then when another checkpoint is justified on top, they can be [finalized](#finality).
+
 ### compiling {#compiling}
 
 Converting code written in a high-level programming language (e.g., [Solidity](#solidity)) into a lower-level language (e.g., EVM [bytecode](#bytecode)).
