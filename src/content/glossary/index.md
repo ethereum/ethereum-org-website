@@ -314,7 +314,7 @@ A denomination of [ether](#ether). 1 finney = 10<sup>15</sup> [wei](#wei). 10<su
 
 A change in protocol causing the creation of an alternative chain, or a temporal divergence in two potential block paths during mining.
 
-### fork-choice algorithm
+### fork-choice algorithm {fork-choice-algorithm}
 
 The algorithm used to identify the head of the blockchain. On the execution layer the head of the chain is identified as the one with the greatest total difficulty behind it. This means the true head of the chain is the one that required the most work to mine it. On the consensus layer the algorithm observes the accumulated attestations from validators ([LMD_GHOST](#lmd-ghost)).
 
