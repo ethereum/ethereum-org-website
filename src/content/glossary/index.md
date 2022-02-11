@@ -723,7 +723,7 @@ A [layer 2](#layer-2) solution where a channel is set up between participants, w
 
 ### sync committee {#sync-committee}
 
-Sync committees are randomly selected groups of [validators](#validator) on the [Beacon Chain](#beacon-chain) that refresh about every 27 hours. Their purpose is to add their signatures to valid block headers. This allows [light clients](#lightweight-client) to keep track of the head of the blockchain without having to access the entire validator set.
+A sync committee is a randomly selected group of [validators](#validator) on the [Beacon Chain](#beacon-chain) that refresh every ~27 hours. Their purpose is to add their signatures to valid block headers. Sync committees allow [light clients](#lightweight-client) to keep track of the head of the blockchain without having to access the entire validator set.
 
 ### szabo {#szabo}
 
