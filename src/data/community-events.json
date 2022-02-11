@@ -1,23 +1,5 @@
 [
   {
-    "title": "ETHDubai",
-    "to": "https://www.ethdubaiconf.org",
-    "sponsor": null,
-    "location": "Dubai, UAE",
-    "description": "The Ethereum dev conference in Dubai on everything DeFi, NFTs, EVM scaling, Gaming and more with a focus on decentralization and community projects.",
-    "startDate": "2022-03-29",
-    "endDate": "2022-03-31"
-  },
-  {
-    "title": "ZK Hack",
-    "to": "https://www.zkhack.dev",
-    "sponsor": null,
-    "location": "Remote",
-    "description": "ZK Hack is a 7-week virtual event featuring weekly workshops and advanced puzzle solving competitions.",
-    "startDate": "2021-10-26",
-    "endDate": "2021-12-07"
-  },
-  {
     "title": "ETHDenver",
     "to": "https://www.ethdenver.com/",
     "sponsor": null,
@@ -34,5 +16,320 @@
     "description": "A one-day celebration of mechanism design, coordination tech, public goods, and regen finance.",
     "startDate": "2022-02-17",
     "endDate": "2022-02-17"
+  },
+  {
+    "title": "WeAreMillions",
+    "to": "https://www.wearemillions.online/",
+    "sponsor": null,
+    "location": "Remote",
+    "description": "Explore the transformative powers of art, gaming and crypto tech in an environment of privacy, cooperation and freedom, as we search for ways to bring what we love from Web 2.0 to Web3.",
+    "startDate": "2022-03-01",
+    "endDate": "2022-03-21"
+  },
+  {
+    "title": "ETHRio",
+    "to": "https://www.ethereum.rio/",
+    "sponsor": null,
+    "location": "Rio de Janiero, BR",
+    "description": "Ethereum Rio 2022 is a regional event with a global outlook. We are building both a creative hub for regional projects with big ambitions, and a gateway for brands to connect with LATAM blockchain communities.",
+    "startDate": "2022-03-11",
+    "endDate": "2022-03-16"
+  },
+  {
+    "title": "ETHAustin",
+    "to": "https://2022.ethaustin.org/",
+    "sponsor": null,
+    "location": "Austin, USA",
+    "description": "ETH Austin is a gathering of ETH folks from the Southwest. The goal is to bring together the local community & have fun.",
+    "startDate": "2022-03-17",
+    "endDate": "2022-03-18"
+  },
+  {
+    "title": "DeFiCon",
+    "to": "https://deficon.nyc/",
+    "sponsor": null,
+    "location": "NYC, USA",
+    "description": "DeFiCon is a nonprofit conference with a mission to elevate the ethos of peer-to-peer crypto.",
+    "startDate": "2022-03-25",
+    "endDate": "2022-03-26"
+  },
+  {
+    "title": "ETHDubai",
+    "to": "https://www.ethdubaiconf.org",
+    "sponsor": null,
+    "location": "Dubai, UAE",
+    "description": "The Ethereum dev conference in Dubai on everything DeFi, NFTs, EVM scaling, Gaming and more with a focus on decentralization and community projects.",
+    "startDate": "2022-03-29",
+    "endDate": "2022-03-31"
+  },
+  {
+    "title": "ETHBarcelona",
+    "to": "https://ethbarcelona.com/",
+    "sponsor": null,
+    "location": "Barcelona, ESP",
+    "description": "Let’s create the best blockchain event ever. Are you up for the challenge?",
+    "startDate": "2022-04-01",
+    "endDate": "2022-04-30"
+  },
+  {
+    "title": "Non Fungible Conference",
+    "to": "https://www.nonfungibleconference.com/",
+    "sponsor": null,
+    "location": "Lisbon, PRT",
+    "description": "A 2-day event filled with talks, panels, workshops and experiences that brings together artists, projects, platforms, collectors and investors from the global NFT community.",
+    "startDate": "2022-04-04",
+    "endDate": "2022-04-05"
+  },
+  {
+    "title": "ETHPortland",
+    "to": "https://2022.ethportland.com/",
+    "sponsor": null,
+    "location": "Portland, USA",
+    "description": "ETH Portland is a gathering of ETH folks from the Northwest. The goal is to bring together the local community & have fun.",
+    "startDate": "2022-04-07",
+    "endDate": "2022-04-09"
+  },
+  {
+    "title": "DevConnect",
+    "to": "https://devconnect.org/",
+    "sponsor": null,
+    "location": "Amsterdam, NL",
+    "description": "Devconnect is a week-long and in-person gathering that will feature independent Ethereum events, each with a unique focus. The goal is to focus on depth-first gatherings rather than size, and to bring the Ethereum community together in smaller groups to talk (and learn) about, or to make sincere progress on, specific subjects.",
+    "startDate": "2022-04-18",
+    "endDate": "2022-04-25"
+  },
+  {
+    "title": "ETHAmsterdam",
+    "to": "https://amsterdam.ethglobal.com/",
+    "sponsor": null,
+    "location": "Amsterdam, NL",
+    "description": "Strap in for three days of hacking, summits, and side events celebrating the energy in the ecosystem and setting an optimistic tone for the rest of the year.",
+    "startDate": "2022-04-22",
+    "endDate": "2022-04-24"
+  },
+  {
+    "title": "HackMoney",
+    "to": "https://defi.ethglobal.com/",
+    "sponsor": null,
+    "location": "Remote",
+    "description": "Our DeFi focused online hackathon will continue for the 3rd year.",
+    "startDate": "2022-05-01",
+    "endDate": "2022-05-31"
+  },
+  {
+    "title": "Spaghett.ETH",
+    "to": "https://spaghett-eth.com/",
+    "sponsor": null,
+    "location": "Milan, ITA",
+    "description": "We are welcoming developers, entrepreneurs, creatives, PAs, regulators and newbies into the first Italian Ethereum event.",
+    "startDate": "2022-05-03",
+    "endDate": "2022-05-08"
+  },
+  {
+    "title": "BlockSplit",
+    "to": "https://blocksplit.net/",
+    "sponsor": null,
+    "location": "Split, Croatia",
+    "description": "We bring together blockchain startups, developers, researchers, investors, marketeers, designers...",
+    "startDate": "2022-05-17",
+    "endDate": "2022-05-18"
+  },
+  {
+    "title": "Permissionless",
+    "to": "https://blockworks.co/events/permissionless/",
+    "sponsor": null,
+    "location": "Florida, USA",
+    "description": "At its core, Permissionless is a cultural event. Artists and creators will be at the forefront, showcasing their creations at an in-site gallery.",
+    "startDate": "2022-05-17",
+    "endDate": "2022-05-19"
+  },
+  {
+    "title": "NFT Berlin",
+    "to": "https://mirror.xyz/0x37AEe71F739FB44D9240CB14D41bE16Df767F79e/1vBwQXFYHpnCyk9R5J_dl77oOzxetRfF0Li0nE5guZA",
+    "sponsor": null,
+    "location": "Berlin, DE",
+    "description": "NFTBERLIN is the people’s platform. We see ourselves as the public good of the metaverse, accelerating the democratisation of culture through creativity and technology.",
+    "startDate": "2022-06-01",
+    "endDate": "2022-06-30"
+  },
+  {
+    "title": "ETH SF",
+    "to": "https://airtable.com/shrZ89OEwQJRtXHPv/",
+    "sponsor": null,
+    "location": "San Francisco, USA",
+    "description": "The energy and excitement at the first ETHSanFrancisco will be hard to top, but we have our eyes set on delivering an even more impactful experience.",
+    "startDate": "2022-06-02",
+    "endDate": "2022-06-05"
+  },
+  {
+    "title": "Consensus",
+    "to": "https://events.coindesk.com/consensus2022",
+    "sponsor": null,
+    "location": "Austin, TX, USA",
+    "description": "Consensus, the most influential crypto & blockchain experience of the year since 2015, will return to an in-person format and be held in Austin, Texas, for the first time ever.",
+    "startDate": "2022-06-09",
+    "endDate": "2022-06-12"
+  },
+  {
+    "title": "ETHPrague",
+    "to": "https://ethprague.com/",
+    "sponsor": null,
+    "location": "Prague, CZ",
+    "description": "ETHPrague isn't looking for the next get rich quickly scheme or a groundbreaking DeFi app, instead it aims at the future of society.",
+    "startDate": "2022-06-10",
+    "endDate": "2022-06-12"
+  },
+  {
+    "title": "ETHMontreal",
+    "to": "http://ethmontreal.com/",
+    "sponsor": null,
+    "location": "Montreal, CAN",
+    "description": "Ethereum Montreal aims to help build a strong collaborative community of developers and entrepreneurs.",
+    "startDate": "2022-06-14",
+    "endDate": "2022-06-23"
+  },
+  {
+    "title": "NFT NYC",
+    "to": "https://www.nft.nyc/",
+    "sponsor": null,
+    "location": "NYC, USA",
+    "description": "Since its inaugural conference in February 2019, NFT.NYC events have hosted thousands of attendees, hundreds of leading speakers and the best projects in the Non-Fungible Token ecosystem.",
+    "startDate": "2022-06-21",
+    "endDate": "2022-06-23"
+  },
+  {
+    "title": "ETHNewYork",
+    "to": "https://airtable.com/shrZ89OEwQJRtXHPv/",
+    "sponsor": null,
+    "location": "New York, US",
+    "description": "Leveraging the excitement and support of the New York web3 community, we’re proud to announce that we’ll be back for more this June.",
+    "startDate": "2022-06-24",
+    "endDate": "2022-06-26"
+  },
+  {
+    "title": "ETHSeattle",
+    "to": "https://2022.ethseattle.org/",
+    "sponsor": null,
+    "location": "Seattle, USA",
+    "description": "ETHSeattle is a hackathon in Seattle, USA.",
+    "startDate": "2022-07-08",
+    "endDate": "2022-07-08"
+  },
+  {
+    "title": "HackFS",
+    "to": "https://hackfs.ethglobal.com/",
+    "sponsor": null,
+    "location": "Remote",
+    "description": "We’ll be continuing HackFS for the 3rd year in a row in partnership with Protocol Labs.",
+    "startDate": "2022-07-01",
+    "endDate": "2022-07-31"
+  },
+  {
+    "title": "Metaverse Summit",
+    "to": "https://www.metaverse-summit.org/",
+    "sponsor": null,
+    "location": "Paris, FR",
+    "description": "In Metaverse Summit, we’ll discover the Next-Gen Technologies Shaping the Future of Reality.",
+    "startDate": "2022-07-16",
+    "endDate": "2022-07-17"
+  },
+  {
+    "title": "BlockchainweekFr",
+    "to": "https://www.blockchainweekparis.com/",
+    "sponsor": null,
+    "location": "Paris, FR",
+    "description": "Paris Blockchain Week is the biggest Blockchain & Digital Assets event in Europe. During one week in the City of Lights, numerous events will be held by the most prominent blockchain organizations.",
+    "startDate": "2022-07-18",
+    "endDate": "2022-07-22"
+  },
+  {
+    "title": "EthCC",
+    "to": "https://ethcc.io/",
+    "sponsor": null,
+    "location": "Paris, FR",
+    "description": "The Ethereum Community Conference (EthCC) is the largest annual European Ethereum event focused on technology and community. Three intense days of conferences, networking and learning.",
+    "startDate": "2022-07-19",
+    "endDate": "2022-07-21"
+  },
+  {
+    "title": "ETHParis",
+    "to": "https://ethparis.com/",
+    "sponsor": null,
+    "location": "Paris, FR",
+    "description": "ETHParis brings together over 350 curious minds, industry experts and companies pushing the way forward in crypto space to collaborate together on decentralized applications using Ethereum.",
+    "startDate": "2022-07-22",
+    "endDate": "2022-07-24"
+  },
+  {
+    "title": "ETHMexicoCity",
+    "to": "https://airtable.com/shrZ89OEwQJRtXHPv/",
+    "sponsor": null,
+    "location": "Mexico City, MX",
+    "description": "Located in the heart of the nation’s crypto scene, come prepared for a strong showing from the Mexican crypto diaspora—and a good time.",
+    "startDate": "2022-08-19",
+    "endDate": "2022-08-21"
+  },
+  {
+    "title": "DeFi Security Summit",
+    "to": "https://defisecuritysummit.org/",
+    "sponsor": null,
+    "location": "Stanford, USA",
+    "description": "DeFi is an emerging suite of applications for decentralized asset management over blockchain technology. ",
+    "startDate": "2022-08-27",
+    "endDate": "2022-08-28"
+  },
+  {
+    "title": "Stanford SBC",
+    "to": "https://cbr.stanford.edu/sbc22/",
+    "sponsor": null,
+    "location": "Stanford, USA",
+    "description": "The conference focuses on technical innovations in the blockchain space. It brings together researchers and practitioners in the space.",
+    "startDate": "2022-08-29",
+    "endDate": "2022-08-31"
+  },
+  {
+    "title": "MCON",
+    "to": "https://www.mcon.fun/",
+    "sponsor": null,
+    "location": "Denver, USA",
+    "description": "Bring the Meta Network together for a rare Cryptopalooza of fun, learning, and experimental growth in every direction.",
+    "startDate": "2022-09-15",
+    "endDate": "2022-09-17"
+  },
+  {
+    "title": "ETHOnline",
+    "to": "https://online.ethglobal.com/",
+    "sponsor": null,
+    "location": "Remote",
+    "description": "Our biggest online event will happen again next September.",
+    "startDate": "2022-09-01",
+    "endDate": "2022-09-30"
+  },
+  {
+    "title": "ETHKenya",
+    "to": "https://ethglobal.com/",
+    "sponsor": null,
+    "location": "Kenya",
+    "description": "ETHKenya is a hackathon in Kenya.",
+    "startDate": "2022-09-01",
+    "endDate": "2022-09-30"
+  },
+  {
+    "title": "ETHSanFrancisco",
+    "to": "https://airtable.com/shrZ89OEwQJRtXHPv/",
+    "sponsor": null,
+    "location": "San Francisco, US",
+    "description": "The energy and excitement at the first ETHSanFrancisco will be hard to top, but we have our eyes set on delivering an even more impactful experience.",
+    "startDate": "2022-11-04",
+    "endDate": "2022-11-06"
+  },
+  {
+    "title": "ETHTaipei",
+    "to": "https://airtable.com/shrZ89OEwQJRtXHPv/",
+    "sponsor": null,
+    "location": "Taipei, TW",
+    "description": "We’ve been working behind the scenes with the crypto community on the ground and are excited to share the details soon, so clear your calendar for an incredible weekend.",
+    "startDate": "2022-12-02",
+    "endDate": "2022-12-04"
   }
 ]

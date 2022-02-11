@@ -57,7 +57,7 @@ contract MyContract is Ownable {
 
 为了促进[可组合性和互操作性](/developers/docs/smart-contracts/composability/)，以太坊社区已经以 **ERC** 的形式定义了几个标准。 您可以在[标准](/developers/docs/standards/)部分阅读更多关于他们的信息。
 
-当将 ERC 作为您的合约的一部分时，更好的做法是寻找已有的标准去实现而不是试图推出您自己的方式。 许多智能合约库包含了最流行的 ERC 标准的实现。 例如，[ERC20 可互换代币标准](/developers/tutorials/understand-the-erc-20-token-smart-contract/)可在 [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md) [DappSys](http://dapp.tools/dappsys/ds-token.html) 和 [OpenZepelin](https://docs.openzeppelin.com/contracts/3.x/erc20)中找到。 此外，一些 ERC 还提供规范实现作为 ERC 本身的一部分。
+当将 ERC 作为您的合约的一部分时，更好的做法是寻找已有的标准去实现而不是试图推出您自己的方式。 许多智能合约库包含了最流行的 ERC 标准的实现。 例如，[ERC20 可互换代币标准](/developers/tutorials/understand-the-erc-20-token-smart-contract/)可在 [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md) [DappSys](https://github.com/dapphub/ds-token/) 和 [OpenZepelin](https://docs.openzeppelin.com/contracts/3.x/erc20)中找到。 此外，一些 ERC 还提供规范实现作为 ERC 本身的一部分。
 
 值得一提的是，一些 ERC 不是独立的，而是对其他 ERC 的补充。 例如， [ERC2612](https://eips.ethereum.org/EIPS/eip-2612) 为 ERC20 添加了一个扩展，以提高其可用性。
 
@@ -96,7 +96,7 @@ contract MyNFT is ERC721 {
 
 **DappSys -** **_安全、简单、灵活的智能合约构建模块。_**
 
-- [相关文档](https://dapp.tools/dappsys/)
+- [相关文档](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
 **HQ20 -** **_一个带有合约、库和案例的 Solidity 项目，帮助您为现实世界建立功能齐全的分布式应用。_**

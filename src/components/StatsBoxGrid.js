@@ -28,7 +28,7 @@ const Value = styled.span`
 `
 
 const Title = styled.p`
-  font-size: 20px;
+  font-size: 1.25rem;
   margin-bottom: 0.5rem;
   color: ${({ theme }) => theme.colors.text};
   text-transform: uppercase;
@@ -122,13 +122,14 @@ const ButtonContainer = styled.div`
 const Button = styled.button`
   background: ${(props) => props.theme.colors.background};
   font-family: ${(props) => props.theme.fonts.monospace};
-  font-size: 20px;
-  color: ${({ theme }) => theme.colors.text};
+  font-size: 1.25rem;
+  color: ${({theme}) => theme.colors.text};
   padding: 2px 15px;
   border-radius: 1px;
-  border: 1px solid ${({ theme, color }) => theme.colors[color]};
+  border: 1px solid ${({theme, color}) => theme.colors[color]};
   outline: none;
   cursor: pointer;
+
   &:disabled {
     cursor: default;
     opacity: 0.7;
@@ -197,7 +198,6 @@ const GridItem = ({ metric, dir }) => {
           stroke="#8884d8"
           fillOpacity={0.3}
           fill="url(#colorUv)"
-          fillOpacity="0.2"
           connectNulls={true}
         />
         <XAxis dataKey="timestamp" axisLine={false} tick={false} />
@@ -272,41 +272,41 @@ const StatsBoxGrid = () => {
   const [selectedRangeNodes, setSelectedRangeNodes] = useState(ranges[0])
   const [selectedRangeTxs, setSelectedRangeTxs] = useState(ranges[0])
 
-  const formatPrice = (price) => {
-    return new Intl.NumberFormat(intl.locale, {
-      style: "currency",
-      currency: "USD",
-      minimumSignificantDigits: 3,
-      maximumSignificantDigits: 4,
-    }).format(price)
-  }
-
-  const formatTVL = (tvl) => {
-    return new Intl.NumberFormat(intl.locale, {
-      style: "currency",
-      currency: "USD",
-      notation: "compact",
-      minimumSignificantDigits: 3,
-      maximumSignificantDigits: 4,
-    }).format(tvl)
-  }
-
-  const formatTxs = (txs) => {
-    return new Intl.NumberFormat(intl.locale, {
-      notation: "compact",
-      minimumSignificantDigits: 3,
-      maximumSignificantDigits: 4,
-    }).format(txs)
-  }
-
-  const formatNodes = (nodes) => {
-    return new Intl.NumberFormat(intl.locale, {
-      minimumSignificantDigits: 3,
-      maximumSignificantDigits: 4,
-    }).format(nodes)
-  }
-
   useEffect(() => {
+    const formatPrice = (price) => {
+      return new Intl.NumberFormat(intl.locale, {
+        style: "currency",
+        currency: "USD",
+        minimumSignificantDigits: 3,
+        maximumSignificantDigits: 4,
+      }).format(price)
+    }
+
+    const formatTVL = (tvl) => {
+      return new Intl.NumberFormat(intl.locale, {
+        style: "currency",
+        currency: "USD",
+        notation: "compact",
+        minimumSignificantDigits: 3,
+        maximumSignificantDigits: 4,
+      }).format(tvl)
+    }
+
+    const formatTxs = (txs) => {
+      return new Intl.NumberFormat(intl.locale, {
+        notation: "compact",
+        minimumSignificantDigits: 3,
+        maximumSignificantDigits: 4,
+      }).format(txs)
+    }
+
+    const formatNodes = (nodes) => {
+      return new Intl.NumberFormat(intl.locale, {
+        minimumSignificantDigits: 3,
+        maximumSignificantDigits: 4,
+      }).format(nodes)
+    }
+
     const fetchPrices = async () => {
       try {
         const {
@@ -327,10 +327,10 @@ const StatsBoxGrid = () => {
           hasError: false,
         })
       } catch (error) {
-        setEthPrices({
+        setEthPrices((ethPrices) => ({
           ...ethPrices,
           hasError: true,
-        })
+        }))
       }
     }
     fetchPrices()
@@ -356,10 +356,10 @@ const StatsBoxGrid = () => {
         })
       } catch (error) {
         console.error(error)
-        setNodes({
+        setNodes((nodes) => ({
           ...nodes,
           hasError: true,
-        })
+        }))
       }
     }
     fetchNodes()
@@ -385,10 +385,10 @@ const StatsBoxGrid = () => {
         })
       } catch (error) {
         console.error(error)
-        setValueLocked({
+        setValueLocked((valueLocked) => ({
           ...valueLocked,
           hasError: true,
-        })
+        }))
       }
     }
     fetchTotalValueLocked()
@@ -414,14 +414,14 @@ const StatsBoxGrid = () => {
         })
       } catch (error) {
         console.error(error)
-        setTxs({
+        setTxs((txs) => ({
           ...txs,
           hasError: true,
-        })
+        }))
       }
     }
     fetchTxCount()
-  }, [])
+  }, [intl.locale])
 
   const metrics = [
     {

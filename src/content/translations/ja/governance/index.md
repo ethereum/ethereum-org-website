@@ -129,7 +129,9 @@ The DAO フォークは、周到に脆弱性を突いた[2016 年の DAO 攻撃]
 
 現在、Ethereum のコミュニティでは、システムの信頼できる中立性を維持するために、コントラクトのバグや資金の損失の場合には介入しないという方針を採用しています。
 
-DAO ハッキング事件をもっと見る <iframe width="100%" height="315px" src="https://www.youtube.com/embed/rNeLuBOVe8A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+DAO ハッキング事件をもっと見る
+
+<YouTube id="rNeLuBOVe8A" />
 
 <Divider />
 
@@ -149,7 +151,7 @@ Ethereum のガバナンスプロセスでは、スピードや効率性と、�
 
 Beacon Chain が Ethereum の実行レイヤーにマージされると、変更を提案するためのガバナンスプロセスは調和されることになります。 このマージを実装するためのプロセスは、[すでに進行中](https://github.com/ethereum/EIPs/pull/3675)です。
 
-<ButtonLink to="/eth2/merge/">マージの詳細</ButtonLink>
+<ButtonLink to="/upgrades/merge/">マージの詳細</ButtonLink>
 
 <Divider />
 
@@ -160,7 +162,7 @@ Beacon Chain が Ethereum の実行レイヤーにマージされると、変更
 - [R&D ディスカッションへの参加](https://ethresear.ch/)
 - [Ethereum R&D Discord への参加](https://discord.gg/mncqtgVSVw)
 - [ノードの運用](/developers/docs/nodes-and-clients/run-a-node/)
-- [クライアント開発への貢献](/developers/docs/nodes-and-clients/#clients)
+- [クライアント開発への貢献](/developers/docs/nodes-and-clients/#execution-clients)
 - [コアデベロッパー実習プログラム](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
 
 ## 参考文献 {#further-reading}

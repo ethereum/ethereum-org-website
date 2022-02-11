@@ -131,7 +131,7 @@ Saat ini, komunitas Ethereum telah mengadopsi kebijakan non-intervensi dalam hal
 
 Tonton lebih banyak tentang peretasan DAO:
 
-<iframe width="100%" height="315px" src="https://www.youtube.com/embed/rNeLuBOVe8A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="rNeLuBOVe8A" />
 
 <Divider />
 
@@ -151,7 +151,7 @@ Sekalipun pengembangan spesifikasi dan implementasinya selalu sepenuhnya merupak
 
 Ketika Rantai Suar bergabung dengan lapisan eksekusi Ethereum, proses tata kelola untuk mengusulkan perubahan akan diselaraskan. Proses untuk mengimplementasikan penggabungan ini [sudah dimulai](https://github.com/ethereum/EIPs/pull/3675).
 
-<ButtonLink to="/eth2/merge/">Selengkapnya tentang penggabungan</ButtonLink>
+<ButtonLink to="/upgrades/merge/">Selengkapnya tentang penggabungan</ButtonLink>
 
 <Divider />
 
@@ -162,7 +162,7 @@ Ketika Rantai Suar bergabung dengan lapisan eksekusi Ethereum, proses tata kelol
 - [Libatkan diri dalam diskusi R&D](https://ethresear.ch/)
 - [Bergabunglah dengan discord Ethereum R&D](https://discord.gg/mncqtgVSVw)
 - [Jalankan node](/developers/docs/nodes-and-clients/run-a-node/)
-- [Berkontribusilah terhadap pengembangan klien](/developers/docs/nodes-and-clients/#clients)
+- [Berkontribusilah terhadap pengembangan klien](/developers/docs/nodes-and-clients/#execution-clients)
 - [Program Magang Pengembang Inti](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
 
 ## Bacaan lebih lanjut {#further-reading}

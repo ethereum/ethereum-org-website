@@ -131,7 +131,7 @@ DAO 分叉是为了解决 [2016 DAO 攻击](https://www.coindesk.com/understandi
 
 观看关于 DAO 黑客事件的更多信息：
 
-<iframe width="100%" height="315px" src="https://www.youtube.com/embed/rNeLuBOVe8A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="rNeLuBOVe8A" />
 
 <Divider />
 
@@ -151,7 +151,7 @@ DAO 分叉是为了解决 [2016 DAO 攻击](https://www.coindesk.com/understandi
 
 当信标链与以太坊执行层合并时，提议修改的治理程序将得到协调。 实施合并的过程[已经在进行中](https://github.com/ethereum/EIPs/pull/3675)。
 
-<ButtonLink to="/eth2/merge/">关于合并的更多信息</ButtonLink>
+<ButtonLink to="/upgrades/merge/">关于合并的更多信息</ButtonLink>
 
 <Divider />
 
@@ -162,7 +162,7 @@ DAO 分叉是为了解决 [2016 DAO 攻击](https://www.coindesk.com/understandi
 - [参与 R&D 讨论](https://ethresear.ch/)
 - [加入以太坊 R&D Discord](https://discord.gg/mncqtgVSVw)
 - [运行节点](/developers/docs/nodes-and-clients/run-a-node/)
-- [参与开发](/developers/docs/nodes-and-clients/#clients)
+- [参与开发](/developers/docs/nodes-and-clients/#execution-clients)
 - [核心开发者学徒计划](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
 
 ## 延伸阅读 {#further-reading}

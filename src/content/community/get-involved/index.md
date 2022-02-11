@@ -42,11 +42,11 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
 
 ### Offer to take notes for community calls {#take-notes}
 
-- There are many open-source community calls, and having notetakers is a huge help. If you’re interested, join the [Ethereum Cat Herders discord](https://discord.com/invite/tzYmDmF), and introduce yourself!
+- There are many open-source community calls, and having notetakers is a huge help. If you’re interested, join the [Ethereum Cat Herders discord](https://discord.com/invite/Nz6rtfJ8Cu), and introduce yourself!
 
 ### Translate Ethereum content into your native language {#translate-ethereum}
 
-- ethereum.org maintains a translation program that translates the website, and other resources, into many different languages
+- ethereum.org maintains a Translation Program that translates the website, and other resources, into many different languages
 - Find out how to get involved [here](/contributing/translation-program)
 
 ### Run a node {#run-a-node}
@@ -59,7 +59,7 @@ Join thousands of node operators in helping to further decentralize Ethereum.
 
 By staking your ETH you can earn rewards whilst helping to secure the Ethereum network.
 
-- [More on staking](/eth2/staking/)
+- [More on staking](/staking/)
 
 ### Support projects {#suport-projects}
 
@@ -75,7 +75,7 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 
 ## Product Managers <Emoji text=":fountain_pen:" size={1} />‍ {#product-managers}
 
-- The Ethereum ecosystem needs your talents! Many companies are hiring for product manager roles. If you want to start by contributing to an open source project, get in touch with the [Ethereum Cat Herders](https://discord.gg/tzYmDmF) or [MetaCartel](https://www.metacartel.org/)
+- The Ethereum ecosystem needs your talents! Many companies are hiring for product manager roles. If you want to start by contributing to an open source project, get in touch with the [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) or [MetaCartel](https://www.metacartel.org/)
 
 ## Marketing <Emoji text=":megaphone:" size={1} />‍ {#marketing}
 
@@ -94,6 +94,7 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 - [Bankless jobs board](https://pallet.xyz/list/bankless/jobs)
 - [useWeb3 Jobs](https://www.useweb3.xyz/jobs)
 - [Web3 Jobs](https://web3.career)
+- [Web3 Army](https://web3army.xyz/)
 
 ## Join a DAO {#decentralized-autonomous-organizations-daos}
 

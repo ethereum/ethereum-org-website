@@ -43,7 +43,7 @@ Ezek a könyvtárak elveszik a komplexitás nagy részét, mely Ethereum csomóp
 
 - [cloudflare-eth.com](https://cloudflare-eth.com)
 
-**Nodesmith -** **_JSON-RPC API hozzáférés az Etherum mainnet-hez és testnet-ekhez._**
+**Nodesmith -** **_JSON-RPC API hozzáférés az Ethereum mainnet-hez és testnet-ekhez._**
 
 - [nodesmith.io](https://nodesmith.io/network/ethereum/)
 - [Dokumentáció](https://nodesmith.io/docs/#/ethereum/apiRef)

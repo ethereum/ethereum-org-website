@@ -21,24 +21,28 @@ const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    flex-direction: column;
+  }
 `
 
 const Title = styled.h3`
   margin-top: 0rem;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 `
 
 const TextPreview = styled.p`
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   color: ${(props) => props.theme.colors.text200};
   margin-bottom: 0rem;
 `
 
 const Text = styled(motion.div)`
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   color: ${(props) => props.theme.colors.text};
   margin-top: 2rem;
@@ -48,13 +52,36 @@ const Text = styled(motion.div)`
 
 const Question = styled.div`
   margin-right: 1rem;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+`
+
+const Header = styled.div`
+  display: flex;
+  width: 100%;
+  margin: 1rem 0;
+  align-items: center;
+  img {
+    margin-right: 1.5rem;
+  }
 `
 
 const ButtonContainer = styled.div`
   margin-left: 1rem;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin-left: 0;
+  }
 `
 
-const ExpandableCard = ({ children, contentPreview, title }) => {
+const StyledFakeLink = styled(FakeLink)`
+  white-space: nowrap;
+`
+
+const ExpandableCard = ({ children, contentPreview, title, svg, alt }) => {
   const [isVisible, setIsVisible] = useState(false)
   const expandCollapse = {
     collapsed: {
@@ -96,19 +123,22 @@ const ExpandableCard = ({ children, contentPreview, title }) => {
     <Card>
       <Content>
         <Question>
-          <Title>{title}</Title>
+          <Header>
+            {svg && <img src={svg} alt={alt} />}
+            <Title>{title}</Title>
+          </Header>
           <TextPreview>{contentPreview}</TextPreview>
         </Question>
         <ButtonContainer onClick={() => setIsVisible(!isVisible)}>
           {!isVisible && (
-            <FakeLink>
+            <StyledFakeLink>
               <Translation id="more" />
-            </FakeLink>
+            </StyledFakeLink>
           )}
           {isVisible && (
-            <FakeLink>
+            <StyledFakeLink>
               <Translation id="less" />
-            </FakeLink>
+            </StyledFakeLink>
           )}
         </ButtonContainer>
       </Content>

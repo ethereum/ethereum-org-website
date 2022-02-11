@@ -26,8 +26,8 @@ lang: ja
 
 独自の技術の開発とテストを目的とした、プロジェクトに特化した助成金プログラムです。
 
-- [TheGraph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) エコシステム_
-- [Uniswap](https://airtable.com/shrEXXxXB1humz7VS) – _[Uniswap](https://uniswap.org/)コミュニティ_
+- [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) エコシステム_
+- [Uniswap](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/)コミュニティ_
 - [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) – _[Balancer](https://balancer.fi/)エコシステムファンド_
 - [mStable](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/)コミュニティ_
 

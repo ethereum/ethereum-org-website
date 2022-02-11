@@ -135,7 +135,7 @@ const USDCBanner = styled(DaiBanner)`
 `
 
 const DaiSubtitle = styled.p`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
 `
@@ -145,7 +145,7 @@ const H2 = styled.h2`
 `
 
 const H3 = styled.h3`
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 700;
   text-align: left;
@@ -180,10 +180,11 @@ const FullWidthContainer = styled(Page)`
 `
 
 const DaiH2 = styled.h2`
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 0.5rem;
+
   a {
     display: none;
   }
@@ -239,7 +240,7 @@ const ButtonColumn = styled.div`
   flex-direction: column;
 `
 
-const APY = styled.p`
+const Apy = styled.p`
   font-size: 64px;
   line-height: 100%;
 `
@@ -731,14 +732,10 @@ const StablecoinsPage = ({ data }) => {
       <Divider />
       <Content>
         <StyledCalloutBanner
-          title={translateMessageId(
-            "page-stablecoins-stablecoins-dapp-callout-title",
-            intl
-          )}
-          description={translateMessageId(
-            "page-stablecoins-stablecoins-dapp-callout-description",
-            intl
-          )}
+          titleKey={"page-stablecoins-stablecoins-dapp-callout-title"}
+          descriptionKey={
+            "page-stablecoins-stablecoins-dapp-callout-description"
+          }
           image={getImage(data.doge)}
           maxImageWidth={600}
           alt={translateMessageId(
@@ -773,9 +770,9 @@ const StablecoinsPage = ({ data }) => {
           <StyledRightColumn>
             <div>
               <Emoji size={5} mb={"1rem"} text=":bank:" />
-              <APY>
+              <Apy>
                 <Translation id="page-stablecoins-bank-apy" />
-              </APY>
+              </Apy>
               <em>
                 <Translation id="page-stablecoins-bank-apy-source" />{" "}
                 <Link to="https://www.nytimes.com/2020/09/18/your-money/savings-interest-rates.html">

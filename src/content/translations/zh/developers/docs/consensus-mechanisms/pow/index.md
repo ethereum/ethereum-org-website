@@ -8,7 +8,7 @@ incomplete: true
 
 类似于比特币，以太坊目前使用的共识协议被称为**[工作量证明 (PoW)](https://wikipedia.org/wiki/Proof_of_work)**。 这种机制允许以太坊网络的节点就以太坊区块链上记录的所有信息的状态达成共识，并防止某些产生经济影响的攻击。
 
-在接下来一年，工作量证明将被逐步淘汰，这有利于**[权益证明 (PoS)](/developers/docs/consensus-mechanisms/pos)** 的发展。 向权益证明 (PoS) 的过渡也将从以太坊逐步淘汰挖矿机制。 如果想了解更多时间表详情，请查看 [Eth2 合并升级](/eth2/merge/) 的进度。
+在接下来一年，工作量证明将被逐步淘汰，这有利于**[权益证明 (PoS)](/developers/docs/consensus-mechanisms/pos)** 的发展。 向权益证明 (PoS) 的过渡也将从以太坊逐步淘汰挖矿机制。 如果想了解更多时间表详情，请查看 [Eth2 合并升级](/upgrades/merge/) 的进度。
 
 ## 前置要求 {#prerequisites}
 
@@ -93,7 +93,9 @@ incomplete: true
 
 [关于权益证明 (PoS) 的更多信息](/developers/docs/consensus-mechanisms/pos/)
 
-## 更偏向视频学习者？ {#visual-learner} <iframe width="100%" height="315" src="https://www.youtube.com/embed/3EUAcxhuoU4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+## 更偏向视频学习者？ {#visual-learner}
+
+<YouTube id="3EUAcxhuoU4" />
 
 ## 延伸阅读 {#further-reading}
 

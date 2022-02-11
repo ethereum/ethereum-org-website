@@ -44,12 +44,19 @@ const HorizontalUl = styled.ul`
 
 const Contributors = ({ location }) => {
   const intl = useIntl()
+  // TODO: Remove specific user checks once Acolad has updated their usernames
   const translatorData = allTimeData.data.filter(
     (item) =>
       item.user.username !== "ethdotorg" &&
-      !item.user.username.includes("LQS") &&
+      !item.user.username.includes("LQS_") &&
       !item.user.username.includes("REMOVED_USER") &&
-      !item.user.username.includes("Aco_")
+      !item.user.username.includes("Aco_") &&
+      !item.user.fullName.includes("Aco_") &&
+      !item.user.username.includes("Acc_") &&
+      !item.user.fullName.includes("Acc_") &&
+      item.user.username !== "Finnish_Sandberg" &&
+      item.user.username !== "Norwegian_Sandberg" &&
+      item.user.username !== "Swedish_Sandberg"
   )
 
   return (
@@ -87,7 +94,7 @@ const Contributors = ({ location }) => {
         </p>
         <p>
           <Translation id="page-languages-interested" />{" "}
-          <Link to="/en/contributing/translation-program/">
+          <Link to="/contributing/translation-program/">
             <Translation id="page-languages-learn-more" />
           </Link>
           .
@@ -107,7 +114,7 @@ const Contributors = ({ location }) => {
         </HorizontalUl>
         <p>
           <Translation id="page-languages-interested" />{" "}
-          <Link to="/en/contributing/translation-program/">
+          <Link to="/contributing/translation-program/">
             <Translation id="page-languages-learn-more" />
           </Link>
           .

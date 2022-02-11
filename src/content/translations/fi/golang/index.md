@@ -39,13 +39,13 @@ Tarvitsetko perusteellisempaa aloitusta? Katso [ethereum.org/fi/learn](/learn/) 
 
 - [Go Ethereum -dokumentaatio](https://geth.ethereum.org/docs/) - _Ethereum Golangin virallinen dokumentaatio_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [DAppin luonti Gossa Gethillä](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
+- [DAppin luonti Gossa Gethillä](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Työskentele Ethereumin yksityisessä verkossa käyttäen Golangia ja Gethiä](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [Solidity-sopimusten yksikkötestaus Ethereumissa Golla](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 
 ## Edistyneet käyttösuunnittelumallit {#advanced-use-patterns}
 
-- [Solidity-sopimusten yksikkötestaus Ethereumissa Golla](https://kauri.io/article/6285c9692883411aa041b6b970405a17/v1/the-geth-simulated-backend)
+- [Solidity-sopimusten yksikkötestaus Ethereumissa Golla](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [Blockchain-as-a-Service -sovellukset käyttäen Ethereumia ja Quorumia](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
 - [Hajautettu varasto IPFS ja Swarm Ethereumin lohkoketjusovelluksissa](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
 - [Mobiiliasiakasohjelmat: Kirjastot ja Inprocit Ethereum-solmuista](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)
@@ -56,7 +56,7 @@ Tarvitsetko perusteellisempaa aloitusta? Katso [ethereum.org/fi/learn](/learn/) 
 - [Geth / Go Ethereum](https://github.com/ethereum/go-ethereum) - _Virallinen Go-toteutus Ethereum-protokollasta_
 - [Go Ethereum Code Analysis](https://github.com/ZtesoftCS/go-ethereum-code-analysis) - _Go Ethereumin lähdekoodin läpikäynti ja analyysi_
 - [Golem](https://github.com/golemfactory/golem) - _Golem luo globaalia markkinaa laskentateholle_
-- [Quorum](https://github.com/jpmorganchase/quorum) - _Hyväksytty toteutus Etherumin tuesta tietosuojaan_
+- [Quorum](https://github.com/jpmorganchase/quorum) - _Hyväksytty toteutus Ethereumin tuesta tietosuojaan_
 - [Prysm](https://github.com/prysmaticlabs/prysm) - _Ethereum 'Serenity' 2.0 Go -toteutus_
 - [Eth Tweet](https://github.com/yep/eth-tweet) - _Hajautettu Twitter: palvelu mikrobloggaukselle, joka ajetaan Ethereumin lohkoketjussa_
 - [Plasma MVP Golang](https://github.com/kyokan/plasma) — _Golang-toteutus ja laajennus Minimum Viable Plasma-määräyksestä_

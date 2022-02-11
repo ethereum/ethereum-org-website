@@ -28,9 +28,7 @@ Once a block is put together (mined) by some miner on the network, it is propaga
 
 ### A visual demo {#a-visual-demo}
 
-<figure>
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
+<YouTube id="_160oMzblY8" />
 
 ## Proof-of-work protocol {#proof-of-work-protocol}
 

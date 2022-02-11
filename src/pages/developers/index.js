@@ -72,7 +72,7 @@ const H1 = styled.h1`
   font-family: ${(props) => props.theme.fonts.monospace};
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 110%;
   background: ${(props) => props.theme.colors.ednBackground};
   padding: 0.5rem;
@@ -80,7 +80,7 @@ const H1 = styled.h1`
 `
 
 const Subtitle = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
 `
@@ -295,11 +295,8 @@ const DevelopersPage = ({ data }) => {
           </IntroColumn>
           <StyledCallout
             image={getImage(data.developers)}
-            title={translateMessageId("page-developers-improve-ethereum", intl)}
-            description={translateMessageId(
-              "page-developers-improve-ethereum-desc",
-              intl
-            )}
+            titleKey="page-developers-improve-ethereum"
+            descriptionKey="page-developers-improve-ethereum-desc"
             alt={translateMessageId("alt-eth-blocks", intl)}
           >
             <div>

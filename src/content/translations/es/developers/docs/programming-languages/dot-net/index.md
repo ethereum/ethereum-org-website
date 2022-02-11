@@ -12,7 +12,7 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 
 Construye aplicaciones descentralizadas sobre Ethereum e interactúa con contratos inteligentes usando herramientas y lenguajes del stack de tecnología de Microsoft , compatibles con C#, # Visual Basic .NET, F#, sobre herramientas como VSCode y Visual Studio, a través de .NET Framework/.NET Core/.NET Standard. Implementa una blockchain de Ethereum en Azure mediante Microsoft Azure Blockchain en tan solo unos minutos. ¡Trae el amor de .NET a Ethereum!
 
-## Comenzar con los contratos inteligentes y el lenguage de Solidity {#getting-started-with-smart-contracts-and-the-solidity-language}
+## Comenzar con los contratos inteligentes y el lenguaje de Solidity {#getting-started-with-smart-contracts-and-the-solidity-language}
 
 **Da los primeros pasos para integrar .NET con Ethereum**
 

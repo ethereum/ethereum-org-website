@@ -42,6 +42,7 @@ import Emoji from "../components/Emoji"
 import UpcomingEventsList from "../components/UpcomingEventsList"
 import Icon from "../components/Icon"
 import SocialListItem from "../components/SocialListItem"
+import YouTube from "../components/YouTube"
 
 const Page = styled.div`
   display: flex;
@@ -134,10 +135,10 @@ const components = {
   GhostCard,
   UpcomingEventsList,
   Icon,
-  Link,
   SocialListItem,
   MatomoOptOut,
   Callout,
+  YouTube,
 }
 
 const StaticPage = ({ data: { siteData, pageData: mdx }, pageContext }) => {
@@ -151,9 +152,11 @@ const StaticPage = ({ data: { siteData, pageData: mdx }, pageContext }) => {
   const tocItems = mdx.tableOfContents.items
   const { editContentUrl } = siteData.siteMetadata
   const { relativePath } = pageContext
-  const absoluteEditPath = relativePath.split("/").includes("whitepaper")
-    ? ""
-    : `${editContentUrl}${relativePath}`
+  const absoluteEditPath =
+    relativePath.split("/").includes("whitepaper") ||
+    relativePath.split("/").includes("events")
+      ? ""
+      : `${editContentUrl}${relativePath}`
 
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>

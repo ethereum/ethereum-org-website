@@ -98,7 +98,7 @@ W następnej części wywołamy funkcję `balanceOf`, aby pobrać aktualną ilo�
 
 ## Call: Odczyt wartości z inteligentnego kontraktu {#call-reading-value-from-a-smart-contract}
 
-Pierwszy przykład wywoła metodę „stałą” i wykona metodę inteligentnego kontraktu w EVM bez wysyłania żadnej transakcji. W tym celu odczytamy saldo adresu ERC20. [Przeczytaj nasz artykuł o tokenach ERC20](/developers/tutorials/understand-the-erc20-token-smart-contract/).
+Pierwszy przykład wywoła metodę „stałą” i wykona metodę inteligentnego kontraktu w EVM bez wysyłania żadnej transakcji. W tym celu odczytamy saldo adresu ERC20. [Przeczytaj nasz artykuł o tokenach ERC20](/developers/tutorials/understand-the-erc-20-token-smart-contract/).
 
 Możesz uzyskać dostęp do metod utworzonej instancji kontraktu inteligentnego, dla którego podano ABI, w następujący sposób: `yourContract.methods.methodname`. Używając funkcji `call`, otrzymasz wynik wykonania funkcji.
 

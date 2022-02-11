@@ -137,7 +137,9 @@ Una volta inviata una transazione, succede quanto segue:
 
 ## Demo visiva {#a-visual-demo}
 
-Austin ci illustra transazioni, carburante e mining. <iframe width="100%" height="315" src="https://www.youtube.com/embed/er-0ihqFQB0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Austin ci illustra transazioni, carburante e mining.
+
+<YouTube id="er-0ihqFQB0" />
 
 ## Letture consigliate {#further-reading}
 

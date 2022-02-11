@@ -169,12 +169,16 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           to: "/dapps/",
         },
         {
+          text: "run-a-node",
+          to: "/run-a-node/",
+        },
+        {
           text: "page-stablecoins-title",
           to: "/stablecoins/",
         },
         {
           text: "page-stake-eth",
-          to: "/eth2/staking/",
+          to: "/staking/",
         },
       ],
     },
@@ -219,8 +223,8 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           to: "/whitepaper/",
         },
         {
-          text: "ethereum-2-0",
-          to: "/eth2/",
+          text: "ethereum-upgrades",
+          to: "/upgrades/",
         },
         {
           text: "ethereum-glossary",
@@ -312,6 +316,10 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         {
           text: "ethereum-support",
           to: "/community/support/",
+        },
+        {
+          text: "language-resources",
+          to: "/community/language-resources/",
         },
       ],
     },

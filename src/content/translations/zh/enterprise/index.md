@@ -44,7 +44,7 @@ sidebar: true
 
 不同组织为使以太坊企业级应用合作更便利作出了一些努力：
 
-- [企业以太坊联盟（Enterprise Etherum Alliance, EEA）](https://entethalliance.org/) EEA 旨在让各组织能够在其日常业务中采用和使用以太坊技术。 它让以太坊的生态系统可以找到新的商业机会，推进工业界的采用，并让参与者之间可以相互学习与合作。 EEA 的主网工作组是在公共以太坊主机上建设的企业代表的协调中心，以及希望支持他们的以太坊社区成员。
+- [企业以太坊联盟（Enterprise Ethereum Alliance, EEA）](https://entethalliance.org/) EEA 旨在让各组织能够在其日常业务中采用和使用以太坊技术。 它让以太坊的生态系统可以找到新的商业机会，推进工业界的采用，并让参与者之间可以相互学习与合作。 EEA 的主网工作组是在公共以太坊主机上建设的企业代表的协调中心，以及希望支持他们的以太坊社区成员。
 - [以太坊 OASIS 开放项目（Ethereum OASIS Open Project）](https://github.com/ethereum-oasis/oasis-open-project) 以太坊 OASIS 开放项目是一个 OASIS 开放项目，它为不同的利益攸关方提供了一个中立的论坛，以高质量地规范以太坊长期稳定性、交互性并使其易于集成。 该项目打算制定明确、开放标准、高质量的文档和共同的测试套件，以促进以太坊协议的改进。
 - [Baseline 项目](https://www.baseline-protocol.org/) Baseline 协议是一个开放源码倡议，它结合了加密方面，发送消息和区块链的进步，通过公共以太坊主网以低成本的方式提供安全和私人的业务流程。 该协议使企业之间能够进行保密和复杂的合作，而不会在链上留下任何敏感的数据。 Baseline 项目是以太坊 OASIS 开放项目的一个次级项目，由 Baseline 技术指导委员会协调。
 
@@ -55,7 +55,7 @@ sidebar: true
 - [Chainstack](https://chainstack.com/) _主网和测试网以太坊基础设施托管在公共& 分开的客户云中_
 - [ConsenSys](https://consensys.net/)_ 为以太坊上的开发提供了一系列的工具和产品，同时还包括了咨询和自定义开发服务_
 - [Envision Blockchain](https://envisionblockchain.com/)_ 向专注于以太坊主网的企业提供咨询和开发服务_
-- [EY OpsChain](https://blockchain.ey.com/products/procurement) _通过在您信任的商业伙伴网络中签发 RFQ、合同、订单和发票提供了一个采购流程_
+- [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _通过在您信任的商业伙伴网络中签发 RFQ、合同、订单和发票提供了一个采购流程_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _ 遵守 Apache 2.0 开源许可并用 Java 编写的开源以太坊客户端_
 - [Infura](https://infura.io/) _对以太坊和 IPFS 网络的可调用的 API 访问_
 - [Provide](https://provide.services/) _为 Enterprise Web3 应用程序提供基础架构和 API_
@@ -142,7 +142,7 @@ sidebar: true
 - [Minespider](https://www.minespider.com/) _供应链跟踪_
 - [ShipChain](https://shipchain.io) _公开的以太坊侧链，同时也是企业级的可见可信任的供应链，特别是以多式联运物流为目的_
 - [Follow Our Fibre](https://www.followourfibre.com) _直观跟踪供应链_
-- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/procurement) _通过在您信任的商业伙伴网络中签发 RFQ、合同、订单和发票提供了一个采购流程_
+- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _通过在您信任的商业伙伴网络中签发 RFQ、合同、订单和发票提供了一个采购流程_
 - [Treum](https://treum.io/) _使用区块链技术为供应链带来透明度、可追溯性和可交易性_
 
 ### 所有权与证明 {#credentials}

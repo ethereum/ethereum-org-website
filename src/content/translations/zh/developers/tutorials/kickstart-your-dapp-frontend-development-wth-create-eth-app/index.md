@@ -87,11 +87,11 @@ React.useEffect(() => {
 
 ### Aave {#aave}
 
-[Aave](https://aave.com/) 是一个去中心化的货币借贷市场。 存款人向市场提供流动性以赚取被动收入，而借款人则可以利用抵押物进行借贷。 Aave 的一个独特功能是那些 [闪电贷](https://docs.aave.com/developers/tutorials/performing-a-flash-loan) 允许您在没有任何抵押品的情况下借钱， 只要您在一次交易中返还贷款。 例如，这对于在套利交易中为您提供额外的现金很有用。
+[Aave](https://aave.com/) 是一个去中心化的货币借贷市场。 存款人向市场提供流动性以赚取被动收入，而借款人则可以利用抵押物进行借贷。 Aave 的一个独特功能是那些 [闪电贷](https://docs.aave.com/developers/guides/flash-loans) 允许您在没有任何抵押品的情况下借钱， 只要您在一次交易中返还贷款。 例如，这对于在套利交易中为您提供额外的现金很有用。
 
 为您赢得利益的交易代币被称为 _aTokens_。
 
-当您选择将 Aave 与 _create-eth-app_ 集成时，您将获得[子图集成](https://docs.aave.com/developers/integrating-aave/analysing-data-from-aave/using-graphql)。 Aave 使用 [The Graph](https://medium.com/aave/decentralized-data-queries-how-aave-uses-the-graph-998a55027e1d)，并且已经在 [Ropsten](https://thegraph.com/explorer/subgraph/aave/protocol-ropsten) 和 [Mainnet](https://thegraph.com/explorer/subgraph/aave/protocol) 上以[原始](https://thegraph.com/explorer/subgraph/aave/protocol-raw)或[格式化](https://thegraph.com/explorer/subgraph/aave/protocol)的形式为您提供了几个现成的子图。
+当您选择将 Aave 与 _create-eth-app_ 集成时，您将获得[子图集成](https://docs.aave.com/developers/getting-started/using-graphql)。 Aave 使用 The Graph，并且已经在 [Ropsten](https://thegraph.com/explorer/subgraph/aave/protocol-ropsten) 和 [Mainnet](https://thegraph.com/explorer/subgraph/aave/protocol) 上以[原始](https://thegraph.com/explorer/subgraph/aave/protocol-raw)或[格式化](https://thegraph.com/explorer/subgraph/aave/protocol)的形式为您提供了几个现成的子图。
 
 ![Aave 闪电贷备忘录 – “是啊，如果我的闪电贷可以保留超过 1 笔交易，那就太好了”](../../../../../developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/flashloan-meme.png)
 

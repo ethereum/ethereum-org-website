@@ -29,7 +29,7 @@ sidebarDepth: 3
 
 - [Skale](https://skale.network/)
 - [POA 网络](https://www.poa.network/)
-- [xDai](https://www.xdaichain.com/)
+- [Gnosis Chain (formerly xDai)](https://www.xdaichain.com/)
 
 ## 延伸阅读 {#further-reading}
 

@@ -131,7 +131,7 @@ Danes je Ethereum skupnost sprejela stališče o neposeganju v primeru napak v p
 
 Oglejte si več o DAO razcepu:
 
-<iframe width="100%" height="315px" src="https://www.youtube.com/embed/rNeLuBOVe8A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="rNeLuBOVe8A" />
 
 <Divider />
 
@@ -151,7 +151,7 @@ Medtem ko je bil razvoj specifikacij in implementacij vedno povsem odprtokoden, 
 
 Ko se bo Oddajniška veriga združila z Ethereumovo izvršilno plastjo, se bo upravljavski proces za predlaganje sprememb poenotil. Proces za implementacijo združitve je [že na poti](https://github.com/ethereum/EIPs/pull/3675).
 
-<ButtonLink to="/eth2/merge/">Več o združitvi</ButtonLink>
+<ButtonLink to="/upgrades/merge/">Več o združitvi</ButtonLink>
 
 <Divider />
 
@@ -162,7 +162,7 @@ Ko se bo Oddajniška veriga združila z Ethereumovo izvršilno plastjo, se bo up
 - [Vključite se v R&D razprave](https://ethresear.ch/)
 - [Pridružite se Ethereum R&D Diskordu](https://discord.gg/mncqtgVSVw)
 - [Upravljajte vozlišče](/developers/docs/nodes-and-clients/run-a-node/)
-- [Prispevajte k razvoju strank](/developers/docs/nodes-and-clients/#clients)
+- [Prispevajte k razvoju strank](/developers/docs/nodes-and-clients/#execution-clients)
 - [Pripravniški program za ključne razvijalce](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
 
 ## Dodatno branje {#further-reading}

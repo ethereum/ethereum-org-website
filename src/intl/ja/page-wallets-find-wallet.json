@@ -38,7 +38,6 @@
   "page-find-wallet-description-coinomi": "Coinomiは、ビットコイン、アルトコイン、トークンの最も古いマルチチェーン、DeFi対応、クロスプラットフォームのウォレットです。ハッキングされたことはなく、何百万人ものユーザーがいます。",
   "page-find-wallet-description-coin98": "自己管理、マルチチェーンウォレット、DeFiゲートウェイ",
   "page-find-wallet-description-dcent": "D'CENTウォレットは、DeFi、NFT、およびさまざまなサービスに簡単にアクセスできる、DAppブラウザを内蔵した便利なマルチ暗号通貨ウォレットです。",
-  "page-find-wallet-description-dharma": "DharmaはDeFiへのポータルです。もうシードフレーズもChrome拡張機能も不要です。",
   "page-find-wallet-description-enjin": "頑強で機能満載で便利です。トレーダー、ゲーマー、開発者のために作られたものです。",
   "page-find-wallet-description-fortmatic": "電子メールまたは電話番号だけでどこからでもEthereumアプリにアクセスできます。ブラウザ拡張機能やシードフレーズは不要です。",
   "page-find-wallet-description-gnosis": "デジタル資産をイーサリアムに保存するのに最も信頼できるプラットフォーム",
@@ -67,7 +66,6 @@
   "page-find-wallet-description-zengo": "ZenGoは、最初のキーレス暗号ウォレットです。ZenGoでは、管理する必要があるか、なくしてしまうかもしれない 秘密鍵、パスワード、またはシードフレーズはありません。前例のないシンプルさと安全性で、イーサリアムを購入、取引、獲得、保管することができます。",
   "page-find-wallet-description-walleth": "100%オープンソース(GPLv3) とネイティブAndroid Ethereumウォレットの2017年以降のサービスです。 WalletConnectを介してお気に入りのdappに接続し、ハードウェアウォレットで直接使用します。",
   "page-find-wallet-description-safepal": "SafePalウォレットは、10,000以上の暗号通貨を管理できる、安全で分散型で使いやすく、無料のアプリケーションです。",
-  "page-find-wallet-dharma-logo-alt": "Dharma ロゴ",
   "page-find-wallet-enjin-logo-alt": "Enjin ロゴ",
   "page-find-wallet-Ethereum-wallets": "イーサリアムウォレット",
   "page-find-wallet-explore-dapps": "dapps を探す",
@@ -129,7 +127,6 @@
   "page-find-wallet-we-found": "見つかりました",
   "page-find-wallet-withdraw": "銀行に引き出す",
   "page-find-wallet-withdraw-desc": "取引所を経由せずに、ETHを直接銀行口座に出金できます。",
-  "page-find-wallet-yet": "まだ",
   "page-find-wallet-zengo-logo-alt": "ZenGo ロゴ",
   "page-find-wallet-walleth-logo-alt": "WallETHロゴ",
   "page-stake-eth": "ETHのステーキング"

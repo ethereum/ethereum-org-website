@@ -59,7 +59,7 @@ const StyledCard = styled(ActionCard)`
   }
 `
 
-export const StyledGetInvolvedCard = styled(Card)`
+const StyledGetInvolvedCard = styled(Card)`
   margin: 1rem;
   padding: 1.5rem;
   flex: 1 0 30%;
@@ -174,24 +174,15 @@ const FeatureImage = styled(GatsbyImage)`
 
 const Subtitle = styled.div`
   margin-bottom: 2rem;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 16px;
+    font-size: 1rem;
   }
 `
 
 const H2 = styled.h2`
   margin-top: 0rem;
-`
-
-const H3 = styled.h3`
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  text-align: left;
-  margin-top: 0;
-  margin-bottom: 1rem;
 `
 
 const OpenSourceContainer = styled.div`
@@ -564,12 +555,9 @@ const CommunityPage = ({ data }) => {
         <CardContainer>
           <StyledCallout
             image={getImage(data.eth)}
-            title={translateMessageId("page-community-get-eth-title", intl)}
+            titleKey="page-community-get-eth-title"
             alt={translateMessageId("page-community-get-eth-alt", intl)}
-            description={translateMessageId(
-              "page-community-get-eth-description",
-              intl
-            )}
+            descriptionKey="page-community-get-eth-description"
           >
             <div>
               <ButtonLink to="/get-eth/">
@@ -579,15 +567,9 @@ const CommunityPage = ({ data }) => {
           </StyledCallout>
           <StyledCallout
             image={getImage(data.doge)}
-            title={translateMessageId(
-              "page-community-explore-dapps-title",
-              intl
-            )}
+            titleKey="page-community-explore-dapps-title"
             alt={translateMessageId("page-community-explore-dapps-alt", intl)}
-            description={translateMessageId(
-              "page-community-explore-dapps-description",
-              intl
-            )}
+            descriptionKey="page-community-explore-dapps-description"
           >
             <div>
               <ButtonLink to="/dapps/">
@@ -655,7 +637,7 @@ export const query = graphql`
         )
       }
     }
-    docking: file(relativePath: { eq: "eth2/core.png" }) {
+    docking: file(relativePath: { eq: "upgrades/core.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 320

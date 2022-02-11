@@ -38,7 +38,6 @@
   "page-find-wallet-description-coinomi": "Coinomi — це найдавніший мультичейновий гаманець із підтримкою децентралізованих фінансів і кількох платформ для біткоїна, альткоїнів і токенів, який ніколи не зламували та який має мільйони користувачів.",
   "page-find-wallet-description-coin98": "Мультичейновий гаманець, який не є депозитарним рахунком, і шлюз децентралізованих фінансів",
   "page-find-wallet-description-dcent": "D'CENT Wallet — це дуже зручний гаманець для різних криптовалют із вбудованим браузером DApp для простого доступу до децентралізованих фінансів, невзаємозамінних токенів і різних послуг.",
-  "page-find-wallet-description-dharma": "Dharma – ваш портал у DeFi. Фрази-паролі й розширення Chrome більше не потрібні.",
   "page-find-wallet-description-enjin": "Захищена й зручна програма з безліччю функцій, розроблена для трейдерів, геймерів і розробників",
   "page-find-wallet-description-fortmatic": "Отримуйте доступ до програм Ethereum із будь-якого місця лише за допомогою електронної пошти або номера телефону. Більше ніяких розширень браузера та фраз-паролів.",
   "page-find-wallet-description-gnosis": "Найнадійніша платформа для зберігання цифрових об’єктів у мережі Ethereum",
@@ -67,7 +66,6 @@
   "page-find-wallet-description-zengo": "ZenGo – це перший крипто-гаманець без ключів. Завдяки ZenGo вам не потрібно зберігати й контролювати приватні ключі, паролі або фрази-паролі. Купуйте, продавайте, заробляйте й зберігайте Ethereum легко й безпечно",
   "page-find-wallet-description-walleth": "На 100 % відкритий вихідний код (GPLv3) і власний гаманець Ethereum для Android до ваших послуг із 2017 року. Підключіться до своєї улюбленої децентралізованої програми через WalletConnect і використовуйте її безпосередньо з апаратними гаманцями.",
   "page-find-wallet-description-safepal": "Гаманець SafePal — це безпечна, децентралізована, проста у використанні та безкоштовна програма для керування понад 10 000 криптовалют.",
-  "page-find-wallet-dharma-logo-alt": "Dharma logo",
   "page-find-wallet-enjin-logo-alt": "Enjin logo",
   "page-find-wallet-Ethereum-wallets": "Гаманці Ethereum",
   "page-find-wallet-explore-dapps": "Огляд децентралізованих програм",
@@ -129,7 +127,6 @@
   "page-find-wallet-we-found": "Ми знайшли",
   "page-find-wallet-withdraw": "Вивести на банківський рахунок",
   "page-find-wallet-withdraw-desc": "Ви можете виводити ETH прямо на банківський рахунок. Для цього не потрібно використовувати обмінник.",
-  "page-find-wallet-yet": "ще",
   "page-find-wallet-zengo-logo-alt": "ZenGo logo",
   "page-find-wallet-walleth-logo-alt": "Логотип WallETH",
   "page-stake-eth": "Частка ETH"

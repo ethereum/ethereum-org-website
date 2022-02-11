@@ -11,7 +11,7 @@ skill: 初学者
 lang: zh
 sidebar: true
 published: 2020-04-19
-source: EtherumDev
+source: EthereumDev
 sourceUrl: https://ethereumdev.io/calling-a-smart-contract-from-javascript/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
@@ -99,7 +99,7 @@ const receiverAddress = "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 ## 调用：从智能合约读取值 {#call-reading-value-from-a-smart-contract}
 
-第一个例子，将调用“常量（constant）”方法并且在 EVM 中执行这个智能合约方法，并不发送任何交易。 为此我们将读取一个地址的 ECR20 余额。 [阅读关于 ECR20 代币的文章](/developers/tutorials/understand-the-erc20-token-smart-contract/).
+第一个例子，将调用“常量（constant）”方法并且在 EVM 中执行这个智能合约方法，并不发送任何交易。 为此我们将读取一个地址的 ECR20 余额。 [阅读关于 ECR20 代币的文章](/developers/tutorials/understand-the-erc-20-token-smart-contract/).
 
 您可以访问为其提供 ABI 的实例化智能合约方法，如下所示：`yourContract.methods.methodname`。 通过使用`call`函数，您可以接收执行函数的结果。
 

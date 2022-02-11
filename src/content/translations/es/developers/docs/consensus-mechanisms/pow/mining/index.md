@@ -1,6 +1,6 @@
 ---
 title: Minería
-description: Una explicación sobre el funcionamiento de la minería en Etherum y sobre cómo mantiene a Etherum seguro y descentralizado.
+description: Una explicación sobre el funcionamiento de la minería en Ethereum y sobre cómo mantiene a Ethereum seguro y descentralizado.
 lang: es
 sidebar: true
 incomplete: true
@@ -39,7 +39,9 @@ Cada transacción se mina (es decir, se incluye en un nuevo bloque y se propaga 
 
 ## Una demostración visual {#a-visual-demo}
 
-Observa a Austin mientras te guía por el proceso de minería y la blockchain de la Prueba de trabajo. <iframe width="100%" height="315" src="https://www.youtube.com/embed/zcX7OJ-L8XQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+Observa a Austin mientras te guía por el proceso de minería y la blockchain de la Prueba de trabajo.
+
+<YouTube id="zcX7OJ-L8XQ" />
 
 ## Más información {#further-reading}
 

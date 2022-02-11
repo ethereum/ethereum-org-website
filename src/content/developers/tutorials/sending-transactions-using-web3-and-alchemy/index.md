@@ -8,12 +8,12 @@ lang: en
 sidebar: true
 published: 2020-11-04
 source: Alchemy docs
-sourceUrl: https://docs.alchemyapi.io/tutorials/sending-transactions-using-web3-and-alchemy
+sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
 ---
 
 This is a beginner friendly guide to sending Ethereum transactions using web3. There are three main steps in order to send a transaction to the ethereum blockchain: create, sign, and broadcast. We’ll go through all three, hopefully answering any questions you might have! In this tutorial, we'll be using [Alchemy](https://www.alchemy.com/) to send our transactions to the Ethereum chain. You can [create a free Alchemy account here](https://dashboard.alchemyapi.io/signup/).
 
-**NOTE:** This guide is for singing your transactions on the _backend_ for your app, if you want to integrate signing your transactions on the frontend, check out integrating [Web3 with a browser provider](https://docs.alchemyapi.io/documentation/alchemy-web3#with-a-browser-provider).
+**NOTE:** This guide is for signing your transactions on the _backend_ for your app, if you want to integrate signing your transactions on the frontend, check out integrating [Web3 with a browser provider](https://docs.alchemyapi.io/documentation/alchemy-web3#with-a-browser-provider).
 
 ## The Basics {#the-basics}
 
@@ -60,7 +60,7 @@ Okay, now that we have a few of these questions out of the way, let’s move on 
 
 1.  [Create a free Alchemy account](https://dashboard.alchemyapi.io/signup/)
 2.  [Create Metamask account](https://metamask.io/) (or get an Ethereum address)
-3.  [Follow these steps to install NodeJs and NPM](https://medium.com/guides/alchemy-for-macs)
+3.  [Follow these steps to install NodeJs and NPM](https://docs.alchemy.com/alchemy/guides/alchemy-for-macs)
 
 ## Steps to Sending your Transaction {#steps-to-sending-your-transaction}
 
@@ -70,7 +70,7 @@ Navigate to your [Alchemy Dashboard](https://dashboard.alchemyapi.io/) and creat
 
 ### 2\. Request ETH from the Rinkeby faucet {#request-eth-from-rinkeby-faucet}
 
-Follow the instructions on the [Rinkeby faucet](https://faucet.rinkeby.io/) to receive Eth. You will have to share on social media for this specific faucet. Make sure to include your **Rinkeby** Ethereum address (from Metamask) and not another network. After following the instructions, double check that you’ve received the ETH in your wallet.
+Follow the instructions on the [Alchemy Rinkeby faucet](https://www.rinkebyfaucet.com/) to receive ETH. Make sure to include your **Rinkeby** Ethereum address (from Metamask) and not another network. After following the instructions, double-check that you’ve received the ETH in your wallet.
 
 ### 3\. Create a new project directory and `cd` into it {#create-a-new-project-direction}
 

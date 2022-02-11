@@ -16,9 +16,9 @@ To better understand this page, we recommend you first read our [introduction to
 
 ## What is consensus? {#what-is-consensus}
 
-By consensus, we mean that a general agreement has been reached. Consider a group of five people going to the cinema. If three out of five agree on a film, a consensus is achieved — majority rules.
+By consensus, we mean that a general agreement has been reached. Consider a group of people going to the cinema. If there is not a disagreement on a proposed choice of film, then a consensus is achieved. In the extreme case the group will eventually split.
 
-In regards to blockchain, reaching consensus means that at least 51% of the nodes on the network agree on the next global state of the network.
+In regards to blockchain, the process is formalized, and reaching consensus means that at least 51% of the nodes on the network agree on the next global state of the network.
 
 ## What is a consensus mechanism? {#what-is-a-consensus-mechanism}
 
@@ -28,9 +28,7 @@ For decades, these mechanisms have been used to establish consensus among databa
 
 A consensus mechanism in a cryptoeconomic system also helps prevent certain kinds of economic attacks. In theory, an attacker can compromise consensus by controlling 51% of the network. Consensus mechanisms are designed to make this "51% attack" unfeasible. Different mechanisms are engineered to solve this security problem in different ways.
 
-<figure>
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/dylgwcPH4EA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
+<YouTube id="dylgwcPH4EA" />
 
 ## Types of consensus mechanisms {#types-of-consensus-mechanisms}
 
@@ -66,9 +64,7 @@ More on [proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 
 Watch more on the different types of consensus mechanisms used on Ethereum:
 
-<figure>
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/ojxfbN78WFQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
+<YouTube id="ojxfbN78WFQ" />
 
 ### Sybil resistance & chain selection {#sybil-chain}
 
@@ -80,7 +76,7 @@ A **chain selection rule** is used to decide which chain is the "correct" chain.
 
 The combination of proof-of-work and longest chain rule is known as "Nakamoto Consensus."
 
-Eth2 (the [beacon chain](/eth2/beacon-chain/)) uses a consensus mechanism called [Casper the Friendly Finality Gadget](https://arxiv.org/abs/1710.09437), which is proof-of-stake based.
+The [Beacon Chain](/upgrades/beacon-chain/) uses a consensus mechanism called [Casper the Friendly Finality Gadget](https://arxiv.org/abs/1710.09437), which is proof-of-stake based.
 
 ## Further reading {#further-reading}
 

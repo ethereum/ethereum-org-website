@@ -111,8 +111,15 @@ const LanguagesPage = () => {
           </p>
           <p>
             <Translation id="page-languages-interested" />{" "}
-            <Link to="/en/contributing/translation-program/">
+            <Link to="/contributing/translation-program/">
               <Translation id="page-languages-learn-more" />
+            </Link>
+            .
+          </p>
+          <p>
+            <Translation id="page-languages-resources-paragraph" />{" "}
+            <Link to="/community/language-resources">
+              <Translation id="page-languages-resources-link" />
             </Link>
             .
           </p>
@@ -144,7 +151,7 @@ const LanguagesPage = () => {
           </h2>
           <p>
             <Translation id="page-languages-want-more-paragraph" />{" "}
-            <Link to="/en/contributing/translation-program/">
+            <Link to="/contributing/translation-program/">
               <Translation id="page-languages-want-more-link" />
             </Link>
             .

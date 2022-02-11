@@ -89,9 +89,7 @@ For those who want to take the next step in 2FA, consider using a security key. 
 
 Watch more on the 2FA:
 
-<figure>
-  <iframe width="100%" height="315px" src="https://www.youtube.com/embed/m8jlnZuV1i4?start=3479&end=3875" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
+<YouTube id="m8jlnZuV1i4" start="3479" />
 
 ### Uninstall browser extensions {#uninstall-browser-extensions}
 
@@ -208,7 +206,7 @@ As a general rule, staff will never communicate with you through private, unoffi
 
 - Never share your private keys, seed phrases or passwords
 - Never allow anyone remote access into your computer
-- Never communicate outside an organizations designated channels
+- Never communicate outside an organization's designated channels
 
 <InfoBanner emoji=":lock:">
   <div>
@@ -253,6 +251,20 @@ Some things to remember:
 - Rarely, if ever, are such schemes legitimate. If they were, they would probably be mainstream and you will have heard of them.
 
 [Man loses $200k in mining pool scam](https://www.reddit.com/r/CoinBase/comments/r0qe0e/scam_or_possible_incredible_payout/)
+
+### 'Eth2' token scam {#eth2-token-scam}
+
+With [The Merge](/upgrades/merge/) coming in 2022, scammers have taken advantage of the confusion around the term 'Eth2' to try and get users to redeem their ETH for an 'ETH2' token. There is no 'ETH2' or any other new token introduced with The Merge. The ETH that you own today will continue to be the same ETH after The Merge, and there is no need to do any swaps of your ETH for The Merge.
+
+Scammers may appear in the form of "support" telling you if you deposit your ETH you will receive back 'ETH2'. There is no [official Ethereum support](/community/support/), and there is no new token. Never share your wallet seed phrase with anyone.
+
+_Note: There are derivative tokens/tickers that may represent staked ETH (ie. rETH from Rocket Pool, stETH from Lido, ETH2 from Coinbase), but these are not something you need to "migrate to."_
+
+### Airdrop scams {#airdrop-scams}
+
+Airdrop scams involve a scam project airdropping an asset (NFT, token) into your wallet and sending you to a scam website to claim the airdropped asset. You will get prompted to sign in with your Ethereum wallet and "approve" a transaction when attempting to claim. This transaction compromises your account by sending your public and private keys to the scammer. An alternative form of this scam may have you confirm a transaction that sends funds to the scammer's account.
+
+[More on airdrop scams](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 
 <Divider />
 

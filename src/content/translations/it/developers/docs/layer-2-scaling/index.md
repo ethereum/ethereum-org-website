@@ -85,7 +85,7 @@ Gli optimistic rollup usano una sidechain parallela alla catena principale di Et
 
 Con gli optimistic rollup, le transazioni sono scritte nella catena principale Ethereum come dati di chiamata, ottimizzando ulteriormente le transazioni in quanto costo del carburante risulta ridotto.
 
-Siccome il calcolo è la parte lenta e costosa di Ethereum, gli optimistic rollup possono offrire miglioramenti alla scalabilità pari a 10-100x, a seconda della transazione. Il numero aumenterà ancora di più con l'introduzione delle [shard chain](/eth2/shard-chains), con l'upgrade a Eth2. Ci saranno infatti ancora più dati disponibili nel caso di contestazione di una transazione.
+Siccome il calcolo è la parte lenta e costosa di Ethereum, gli optimistic rollup possono offrire miglioramenti alla scalabilità pari a 10-100x, a seconda della transazione. Il numero aumenterà ancora di più con l'introduzione delle [shard chain](/upgrades/shard-chains), con l'upgrade a Eth2. Ci saranno infatti ancora più dati disponibili nel caso di contestazione di una transazione.
 
 #### Disputa di transazioni {#disputing-transactions}
 
@@ -173,7 +173,6 @@ Una catena Plasma è una blockchain separata, collegata alla catena principale E
 - [OMG Network](https://omg.network/)
 - [Matic Network](https://matic.network/)
 - [Gluon](https://gluon.network/)
-- [Gazelle](https://gzle.io/)
 - [LeapDAO](https://ipfs.leapdao.org/)
 
 ## Validium {#validium}

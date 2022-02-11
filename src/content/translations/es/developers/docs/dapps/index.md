@@ -17,8 +17,8 @@ Una dapp dispone de un código backend ejecutándose en una red descentralizada 
 
 Una dapp puede tener un código frontend y una interfaz de usuario escrita en cualquier lenguaje (al igual que una aplicación), que puede hacer llamadas a su backend. Además, su frontend se puede alojar en un almacenamiento descentralizado como [IPFS](https://ipfs.io/).
 
-- **Decentralizadas**, es decir, son independientes y nadie las controla.
-- **Dterministas**, es decir, realizan la misma función independientemente del entorno en el que se ejecuten.
+- **Descentralizadas**, es decir, son independientes y nadie las controla.
+- **Deterministas**, es decir, realizan la misma función independientemente del entorno en el que se ejecuten.
 - **Compatibles con Turing**, es decir, que dados los recursos requeridos, la dapp puede realizar cualquier acción.
 - **Aisladas**, lo que significa que se ejecutan en un entorno virtual conocido como Máquina Virtual de Ethereum; por tanto, si ocurre que el contrato inteligente contiene un gran error, este no obstaculizará el funcionamiento normal de la red blockchain.
 
@@ -42,14 +42,14 @@ Un contrato inteligente es un código que reside en la blockchain de Ethereum y 
 - **Sobrecarga**: Hay una sobrecarga de funcionamiento y la escalabilidad es muy complicada. Para conseguir el nivel de seguridad, de integridad, de transparencia y de fiabilidad al que Ethereum aspira, cada nodo ejecuta y almacena cada transacción. Además de esto, la Prueba de trabajo también lleva su tiempo. Un cálculo rápido coloca la sobrecarga en algo como 1 000 000 veces, que es el estándar informático actual.
 - **Congestión de la red**: Al menos en el modelo actual, si una dapp está usando algunos recursos computacionales, la red entera se respalda. Actualmente, la red solamente es capaz de procesar alrededor de 10 transacciones por segundo; si las transacciones se están enviando con mayor velocidad, el conjunto de transacciones no confirmadas puede aumentar rápidamente.
 - **Experiencia del usuario**: Puede ser más difícil diseñar experiencias fáciles de usar; al usuario final medio le puede parecer difícil configurar un conjunto de herramientas necesario para interactuar con la blockchain de manera segura.
-- **Centralización**: Las soluciones sencillas para el usuario y le desarrollador son la base de Ethereum, y podrían terminar pareciéndose a los servicios centralizados; por ejemplo, tales servicios pueden almacenar claves u otra información sensible del lado del servidor, dar servicio a un front-end utilizando un servidor centralizado, o bien ejecutar una lógica comercial importante en un servidor centralizado antes de escribir en la blockchain. Esto elimina muchas (si es que no todas) de las ventajas de la blockchain con respecto al modelo tradicional.
+- **Centralización**: Las soluciones sencillas para el usuario y el desarrollador son la base de Ethereum, y podrían terminar pareciéndose a los servicios centralizados; por ejemplo, tales servicios pueden almacenar claves u otra información sensible del lado del servidor, dar servicio a un front-end utilizando un servidor centralizado, o bien ejecutar una lógica comercial importante en un servidor centralizado antes de escribir en la blockchain. Esto elimina muchas (si es que no todas) de las ventajas de la blockchain con respecto al modelo tradicional.
 
 ## Las herramientas de las dapps {#dapp-tools}
 
 **One Click Dapp\*\***_: Herramienta FOSS para generar front-ends de dapps desde una ABI._\*\*
 
 - [oneclickdapp.com](https://oneclickdapp.com)
-- [GitHub](https://github.com/One-Click-Dapp/one-click-dApp)
+- [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
 
 **Etherflow\*\***_: Herramienta FOSS para desarrolladores de Ethereum para probar sus nodos, así como para componer y realizar llamadas RPC de solución de errores desde el navegador._\*\*
 

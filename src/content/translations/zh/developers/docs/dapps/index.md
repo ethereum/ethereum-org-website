@@ -46,7 +46,7 @@ dapp 可以用任何语言编写（就像是一个 app）。它有前端代码�
 
 ## 更偏向视频学习者？ {#visual-learner}
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/F50OrwV6Uk8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+<YouTube id="F50OrwV6Uk8" />
 
 ## Dapp 工具 {#dapp-tools}
 
@@ -62,7 +62,7 @@ dapp 可以用任何语言编写（就像是一个 app）。它有前端代码�
 **单击 Dapp - _免费和开放源代码软件工具，用于从 [ABI](/glossary/#abi) 生成 dapp 前端。_**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
-- [GitHub](https://github.com/One-Click-Dapp/one-click-dApp)
+- [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
 
 **Etherflow - _供以太坊开发者测试节点的免费和开放源代码软件工具，并从浏览器中编写并调试 RPC 调用。_**
 

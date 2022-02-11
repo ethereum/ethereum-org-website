@@ -32,7 +32,7 @@ JavaScript 是以太坊生态中最受欢迎的语言之一。 事实上，有�
 
 ### 以太坊虚拟机 {#the-ethereum-virtual-machine}
 
-这是一个 JavaScript 的 [以太坊虚拟机](/en/developers/docs/evm/)实现。 它支持最新的分叉（fork）规则。 分叉规则是指因计划的升级而对 EVM 进行的改造。
+这是一个 JavaScript 的 [以太坊虚拟机](/developers/docs/evm/)实现。 它支持最新的分叉（fork）规则。 分叉规则是指因计划的升级而对 EVM 进行的改造。
 
 它被拆分成各种 JavaScript 软件包，以便您可以更好地了解：
 
@@ -51,7 +51,7 @@ JavaScript 是以太坊生态中最受欢迎的语言之一。 事实上，有�
 
 ### 节点和客户端 {#nodes-and-clients}
 
-Etherumjs 客户端正在开发中。 这将让您深入了解以太坊客户端如何使用您理解的语言运行。
+Ethereumjs 客户端正在开发中。 这将让您深入了解以太坊客户端如何使用您理解的语言运行。
 
 **参阅客户端**  
 [`ethereumjs-client`](https://github.com/ethereumjs/ethereumjs-client)

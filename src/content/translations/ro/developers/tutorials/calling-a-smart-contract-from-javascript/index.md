@@ -95,7 +95,7 @@ const receiverAddress = "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 ## Call: citirea valorii dintr-un contract inteligent {#call-reading-value-from-a-smart-contract}
 
-Primul exemplu va apela o metodă „constant” și va executa metoda sa de contract inteligent în EVM fără a trimite nicio tranzacție. Pentru aceasta, vom citi soldul ERC20 al unei adrese. [Citește articolul nostru despre tokenuri ERC20](/developers/tutorials/understand-the-erc20-token-smart-contract/).
+Primul exemplu va apela o metodă „constant” și va executa metoda sa de contract inteligent în EVM fără a trimite nicio tranzacție. Pentru aceasta, vom citi soldul ERC20 al unei adrese. [Citește articolul nostru despre tokenuri ERC20](/developers/tutorials/understand-the-erc-20-token-smart-contract/).
 
 Poți accesa o metodă unei instanțe de contract inteligent pentru care ai furnizat ABI-ul astfel: `yourContract.methods.methodname`. Prin utilizarea funcției `call` vei primi rezultatul executării funcției.
 

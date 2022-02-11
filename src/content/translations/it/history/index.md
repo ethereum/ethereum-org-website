@@ -31,11 +31,11 @@ Queste modifiche alle regole possono creare una divisione temporanea nella rete.
 
 #### Riepilogo {#beacon-chain-genesis-summary}
 
-La [beacon chain](/eth2/beacon-chain/) necessitava di 16384 depositi di 32 ETH in staking per funzionare in sicurezza. Questo è successo il 27 Novembre, quindi la beacon chain ha iniziato a produrre blocchi il 1 dicembre 2020. Si tratta di un primo passaggio importante per realizzare la [visione Eth2](/eth2/vision/).
+La [beacon chain](/upgrades/beacon-chain/) necessitava di 16384 depositi di 32 ETH in staking per funzionare in sicurezza. Questo è successo il 27 Novembre, quindi la beacon chain ha iniziato a produrre blocchi il 1 dicembre 2020. Si tratta di un primo passaggio importante per realizzare la [visione Eth2](/upgrades/vision/).
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/eth2/beacon-chain/">
+<DocLink to="/upgrades/beacon-chain/">
   La beacon chain
 </DocLink>
 
@@ -47,11 +47,11 @@ La [beacon chain](/eth2/beacon-chain/) necessitava di 16384 depositi di 32 ETH i
 
 #### Riepilogo {#deposit-contract-summary}
 
-Il contratto di deposito in staking ha introdotto lo [staking](/glossary/#staking) nell'ecosistema di Ethereum. Nonostante fosse un contratto della [rete principale](/glossary/#mainnet), ha avuto un impatto diretto sulla linea temporale per il lancio della [beacon chain](/eth2/beacon-chain/), un importante [upgrade a Eth2](/eth2/).
+Il contratto di deposito in staking ha introdotto lo [staking](/glossary/#staking) nell'ecosistema di Ethereum. Nonostante fosse un contratto della [rete principale](/glossary/#mainnet), ha avuto un impatto diretto sulla linea temporale per il lancio della [beacon chain](/upgrades/beacon-chain/), un importante [upgrade a Eth2](/upgrades/).
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/eth2/staking/">
+<DocLink to="/staking/">
   Staking
 </DocLink>
 

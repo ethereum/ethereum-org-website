@@ -50,7 +50,7 @@ Egy validátor szavazata egy [Beacon Chain](#beacon-chain) vagy egy [shard](#sha
 
 Egy Eth2 fejlesztés, mely az Ethereum hálózat koordinátora lesz. Bevezeti a [letétbizonyítékot](#proof-of-stake) és a [validátorokat](#validator) az Ethereumra. Idővel össze fog olvadni a [főhálózattal](#mainnet).
 
-<DocLink to="/eth2/beacon-chain/">
+<DocLink to="/upgrades/beacon-chain/">
   Beacon Chain
 </DocLink>
 
@@ -444,7 +444,7 @@ Egy Ethereum kliens, mely nem tárolja a [blokklánc](#blockchain) lokális más
 
 ## M {#section-m}
 
-### mainnet (főhálózat) {#mainnet}
+### Mainnet (főhálózat) {#mainnet}
 
 A "main network" rövidítése, ez a fő nyilvános Ethereum [blokklánc](#blockchain). Valódi ETH, valódi érték, és valódi következmények. 1. rétegként is hivatkozunk rá, amikor a [2. rétegű](#layer-2) skálázhatósági megoldásokról beszélünk. (Ezenkívül lásd [tesztnet](#testnet))
 
@@ -604,7 +604,7 @@ A [2. réteg](#layer-2) skálázódásának egyik módszere, amely több tranzak
 
 Az Ethereum negyedik és végső fejlesztési fázisa.
 
-<DocLink to="/eth2/">
+<DocLink to="/upgrades/">
   Ethereum 2.0 (Eth2)
 </DocLink>
 
@@ -616,7 +616,7 @@ Kriptográfiai hash függvények egy családja, melyet a National Institute of S
 
 Egy [proof-of-stake](#proof-of-stake) lánc, melyet a [Beacon Chain](#beacon-chain) koordinált és a [validátorok](#validator) tartják biztonságban. 64 lesz hozzáadva a hálózathoz az Eth2 shard lánc fejlesztés részeként. A shard láncok megnövelt tranzakció átvitelt tesznek majd lehetővé az Ethereumon extra adat szolgáltatással az olyan [2. réteg](#layer-2) megoldások részére, mint az [optimista összegzők](#optimistic-rollups) és az [ZK összegzők](#zk-rollups).
 
-<DocLink to="/eth2/shard-chains">
+<DocLink to="/upgrades/shard-chains">
   Shard láncok
 </DocLink>
 
@@ -676,7 +676,7 @@ Olyan [ERC-20 token](#token-standard), amelynek értéke egy másik vagyontárgy
 
 Adott mennyiségű [ether](#ether) letétbe helyezése a validátorrá válás és a [hálózat](#network) biztosításának érdekében. A validátor ellenőrzi a [tranzakciókat](#transaction), és új [blokkokat](#block) terjeszt elő a [letétbizonyíték](#pos) konszenzus-modellje alapján. A letétbe helyezés pénzügyi motivációt ad arra, hogy a hálózat érdekét szem előtt tartva járj el. A [validátori](#validator) feladatok elvégzéséért jutalomban részesülsz, de váltzó mennyiségű ETH-t veszíthetsz el, ha nem így teszel.
 
-<DocLink to="/eth2/staking/">
+<DocLink to="/staking/">
   Helyezd letétbe az ETH-ed, hogy Ethereum validátorrá válhass
 </DocLink>
 
@@ -746,7 +746,7 @@ Egy [csomópont](#node) a [letétbizonyíték](#proof-of-stake) alapú rendszerb
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos">
   Proof-of-stake
-</DocLink> <DocLink to="/eth2/staking/">
+</DocLink> <DocLink to="/staking/">
   Letétbe helyezés az Ethereumon
 </DocLink>
 

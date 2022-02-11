@@ -9,8 +9,7 @@
     "language": "български"
   },
   "bn": {
-    "language": "বাংলা",
-    "useLegacyHomepage": true
+    "language": "বাংলা"
   },
   "ca": {
     "language": "Català"
@@ -67,6 +66,9 @@
   "ml": {
     "language": "മലയാളം"
   },
+  "mr": {
+    "language": "मराठी"
+  },
   "ms": {
     "language": "Melayu"
   },
@@ -100,8 +102,14 @@
   "sl": {
     "language": "Slovenščina"
   },
+  "sr": {
+    "language": "Српски"
+  },
   "sw": {
     "language": "Kiswahili"
+  },
+  "th": {
+    "language": "ภาษาไทย"
   },
   "tr": {
     "language": "Türkçe"
@@ -110,14 +118,12 @@
     "language": "Українська"
   },
   "vi": {
-    "language": "Tiếng Việt",
-    "useLegacyHomepage": true
+    "language": "Tiếng Việt"
   },
   "zh": {
     "language": "简体中文"
   },
   "zh-tw": {
-    "language": "繁體中文",
-    "useLegacyHomepage": true
+    "language": "繁體中文"
   }
 }

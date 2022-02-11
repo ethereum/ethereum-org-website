@@ -38,9 +38,7 @@ Miner would receive 0.0042 ETH.
 
 This video offers a concise overview of gas and why it exists:
 
-<figure>
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/AJvzNICwcwc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
+<YouTube id="AJvzNICwcwc" />
 
 ## After the London upgrade {#post-london}
 
@@ -116,9 +114,7 @@ The implementation of [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EI
 
 This video explains EIP-1559 and the benefits it brings:
 
-<figure>
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/MGemhK9t44Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
+<YouTube id="MGemhK9t44Q" />
 
 If you are interested, you can read the exact
 [EIP-1559 specifications](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md).
@@ -148,7 +144,7 @@ Gas price alone does not actually determine how much we have to pay for a partic
 
 ## Initiatives to reduce gas costs {#initiatives-to-reduce-gas-costs}
 
-The new network upgrades of Ethereum 2.0 (also known as Eth2 or Serenity) should ultimately address some of the gas fee issues, which will, in turn, enable the platform to process thousands of transactions per second and scale globally.
+The Ethereum [scalability upgrades](/upgrades/) should ultimately address some of the gas fee issues, which will, in turn, enable the platform to process thousands of transactions per second and scale globally.
 
 Layer 2 scaling is a primary initiative to greatly improve gas costs, user experience and scalability. [More on layer 2 scaling](/developers/docs/scaling/layer-2-rollups/).
 

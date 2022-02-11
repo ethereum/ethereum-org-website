@@ -9,7 +9,7 @@ Los bloques son lotes de transacciones con un hash del bloque anterior en la cad
 
 ## Requisitos previos {#prerequisites}
 
-Los bloques son muy fáciles de manejar incluso para los principiantes. Sin embargo, para ayudarte a comprender mejor esta página, te recomendamos leer primero [Cuentas](/developers/docs/accounts/), [Transacciones](/developers/docs/transactions/) y nuestra [introduccción a Ethereum](/developers/docs/intro-to-ethereum/).
+Los bloques son muy fáciles de manejar incluso para los principiantes. Sin embargo, para ayudarte a comprender mejor esta página, te recomendamos leer primero [Cuentas](/developers/docs/accounts/), [Transacciones](/developers/docs/transactions/) y nuestra [introducción a Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## ¿Por qué se usan los bloques? {#why-blocks}
 
@@ -25,13 +25,15 @@ Para preservar el historial de transacciones, los bloques se ordenan estrictamen
 
 Una vez que un minero ensambla un bloque en la red, este se propaga al resto de la red; todos los nodos agregan este bloque al final de su blockchain y la minería continúa. El proceso exacto de ensamblaje de bloques (minería) y el proceso de compromiso/consenso se especifican actualmente mediante el protocolo denominado "Prueba de trabajo" de Ethereum.
 
-### Una demostración visual {#a-visual-demo} <iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen mark="crwd-mark"></iframe>
+### Una demostración visual {#a-visual-demo}
+
+<YouTube id="_160oMzblY8" />
 
 ## El protocolo "Prueba de trabajo" {#proof-of-work-protocol}
 
 El protocolo "Prueba de trabajo" significa lo siguiente:
 
-- Los nodos de minería tienen que gastar una cantidad variable y sustancial de energía, tiempo y potencia computancional para producir un "certificado de legitimidad" por un bloque que ellos proponen para la red. Esto ayuda a proteger a la red de ataques de spam/denegación de servicios, entre otras cosas\*, ya que los certificados son costosos de producir.
+- Los nodos de minería tienen que gastar una cantidad variable y sustancial de energía, tiempo y potencia computacional para producir un "certificado de legitimidad" por un bloque que ellos proponen para la red. Esto ayuda a proteger a la red de ataques de spam/denegación de servicios, entre otras cosas\*, ya que los certificados son costosos de producir.
 - Otros mineros que se enteran de la existencia de un nuevo bloque con un certificado válido de legitimidad deben\* aceptar el nuevo bloque como el siguiente bloque canónico en la blockchain.
 - La cantidad exacta de tiempo que necesita cualquier minero para producir este certificado es una variable aleatoria con alta variabilidad. Esto garantiza que es improbable* que dos mineros produzcan validaciones para un nuevo bloque propuesto simultáneamente; cuando un minero produce y propaga un nuevo bloque certificado, los demás pueden estar casi seguros de que el bloque será aceptado por la red como un nuevo bloque canónico en la blockchain sin conflicto* (aunque hay un protocolo para resolver los conflictos, así como en el caso de que dos blockchains certificadas se produzcan casi simultáneamente).
 
