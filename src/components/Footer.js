@@ -189,6 +189,10 @@ const Footer = () => {
           to: "/governance/",
         },
         {
+          text: "bridges",
+          to: "/bridges/",
+        },
+        {
           text: "energy-consumption",
           to: "/energy-consumption/",
         },
