@@ -55,6 +55,7 @@ ETH on testnets has no real value; therefore, there are no markets for testnet E
 - [Görli faucet](https://faucet.goerli.mudit.blog/)
 - [Kovan faucet](https://faucet.kovan.network/)
 - [Rinkeby faucet](https://faucet.rinkeby.io/)
+-    This faucet is currently unreliable. Check the Chainlink faucet for test ETH.
 - [Ropsten faucet](https://faucet.ropsten.be/)
 - [Alchemy faucet](https://RinkebyFaucet.com)
 - [Komputing faucet](https://fauceth.komputing.org/)
