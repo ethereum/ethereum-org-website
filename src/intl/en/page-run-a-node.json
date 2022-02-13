@@ -107,7 +107,7 @@
   "page-run-a-node-staking-description": "Though not required, with a node up and running you're one step closer to staking your ETH to earn rewards and help contribute to a different component of Ethereum security.",
   "page-run-a-node-staking-link": "Stake ETH",
   "page-run-a-node-staking-plans-title": "Plan on staking?",
-  "page-run-a-node-staking-plans-description": "To maximize the efficiency of your validator, a minimum of 16 GB RAM is recommended, but 32 GB is better, with a CPU benchmark score of 6667+ on cpubenchmark.net. It is also recommended that stakers have access to unlimited high-speed internet bandwidth, though this is not an absolute requirement.",
+  "page-run-a-node-staking-plans-description": "To maximize the efficiency of your validator, a minimum of 16 GB RAM is recommended, but 32 GB is better, with a CPU benchmark score of 6667+ on <a href=\"https://cpubenchmark.net\" target=\"_blank\">cpubenchmark.net</a>. It is also recommended that stakers have access to unlimited high-speed internet bandwidth, though this is not an absolute requirement.",
   "page-run-a-node-staking-plans-ethstaker-link-label": "How to shop for Ethereum validator hardware",
   "page-run-a-node-staking-plans-ethstaker-link-description": "EthStaker goes into more detail in this hour long special",
   "page-run-a-node-sovereignty-title": "Sovereignty",
