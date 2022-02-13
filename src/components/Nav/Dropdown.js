@@ -124,6 +124,14 @@ const NavDropdown = ({ section, hasSubNav }) => {
   const onKeyDownHandler = (e) => {
     if (e.keyCode === 13) {
       setIsOpen(!isOpen)
+    } else if (e.shiftKey && e.keyCode === 9) {
+      setIsOpen(false)
+    }
+  }
+
+  const tabInteractionHandler = (e, shouldClose) => {
+    if (shouldClose) {
+      e.keyCode === 9 && !e.shiftKey && setIsOpen(false)
     }
   }
 
@@ -152,7 +160,13 @@ const NavDropdown = ({ section, hasSubNav }) => {
           initial="closed"
         >
           {section.items.map((item, idx) => (
-            <DropdownItem key={idx} onClick={() => setIsOpen(false)}>
+            <DropdownItem
+              key={idx}
+              onClick={() => setIsOpen(false)}
+              onKeyDown={(e) =>
+                tabInteractionHandler(e, idx === section.items.length - 1)
+              }
+            >
               <NavLink to={item.to} tabIndex="-1" isPartiallyActive={false}>
                 <Translation id={item.text} />
               </NavLink>
