@@ -6445,6 +6445,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "gsans",
+      "name": "Gerard Sans",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4660316?v=4",
+      "profile": "https://medium.com/@gerard.sans",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
