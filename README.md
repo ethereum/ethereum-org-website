@@ -1376,6 +1376,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://medium.com/@gerard.sans"><img src="https://avatars.githubusercontent.com/u/4660316?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gerard Sans</b></sub></a><br /><a href="#content-gsans" title="Content">🖋</a></td>
+    <td align="center"><a href="http://blog.codefront.net/"><img src="https://avatars.githubusercontent.com/u/213?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Cheah Chu Yeow</b></sub></a><br /><a href="#content-chuyeow" title="Content">🖋</a></td>
   </tr>
 </table>
 
