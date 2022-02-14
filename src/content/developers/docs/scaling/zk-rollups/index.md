@@ -37,12 +37,7 @@ Watch Finematics explain ZK-rollups:
 
 Multiple implementations of ZK-rollups exist that you can integrate into your dapps:
 
-- [Loopring](https://loopring.org/#/)
-- [Starkware](https://starkware.co/)
-- [Matter Labs zkSync](https://zksync.io/)
-- [Aztec 2.0](https://aztec.network/)
-- [Polygon Hermez](https://hermez.io/)
-- [zkTube](https://zktube.io/)
+<RollupList rollupType="zk" />
 
 **ZK-rollups reading**
 
