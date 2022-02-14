@@ -453,11 +453,11 @@ const RunANodePage = ({ data }) => {
     alt: <Translation id="page-run-a-node-hero-alt" />,
     buttons: [
       {
-        content: "Learn more",
+        content: <Translation id="page-run-a-node-hero-cta-1" />,
         pathId: "what-is-a-node",
       },
       {
-        content: "Let's dive in!",
+        content: <Translation id="page-run-a-node-hero-cta-2" />,
         pathId: "getting-started",
         isSecondary: "isSecondary",
       },
