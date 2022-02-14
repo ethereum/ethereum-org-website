@@ -6463,6 +6463,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "nomadbitcoin",
+      "name": "Yan Luiz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39248465?v=4",
+      "profile": "https://www.linkedin.com/in/yanluiz/",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
