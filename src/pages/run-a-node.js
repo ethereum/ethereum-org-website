@@ -1004,9 +1004,6 @@ const RunANodePage = ({ data }) => {
             <Translation id="page-run-a-node-staking-plans-ethstaker-link-label" />
           </Link>
         </p>
-        <p>
-          <Link to="https://cpubenchmark.net">cpubenchmark.net</Link>
-        </p>
         <h3 id="rasp-pi">
           <StyledEmoji text=":pie:" size={2} />
           <Translation id="page-run-a-node-rasp-pi-title" />
