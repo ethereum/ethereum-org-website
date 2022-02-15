@@ -3,6 +3,7 @@ title: Scaling
 description: An introduction to the different scaling options currently being developed by the Ethereum community.
 lang: en
 sidebar: true
+sidebarDepth: 3
 ---
 
 ## Scaling overview {#scaling-overview}
