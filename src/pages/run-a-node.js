@@ -453,11 +453,11 @@ const RunANodePage = ({ data }) => {
     alt: <Translation id="page-run-a-node-hero-alt" />,
     buttons: [
       {
-        content: "Learn more",
+        content: <Translation id="page-run-a-node-hero-cta-1" />,
         pathId: "what-is-a-node",
       },
       {
-        content: "Let's dive in!",
+        content: <Translation id="page-run-a-node-hero-cta-2" />,
         pathId: "getting-started",
         isSecondary: "isSecondary",
       },
@@ -1003,9 +1003,6 @@ const RunANodePage = ({ data }) => {
           <Link to="https://youtu.be/C2wwu1IlhDc">
             <Translation id="page-run-a-node-staking-plans-ethstaker-link-label" />
           </Link>
-        </p>
-        <p>
-          <Link to="https://cpubenchmark.net">cpubenchmark.net</Link>
         </p>
         <h3 id="rasp-pi">
           <StyledEmoji text=":pie:" size={2} />

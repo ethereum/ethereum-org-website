@@ -6445,6 +6445,33 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "gsans",
+      "name": "Gerard Sans",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4660316?v=4",
+      "profile": "https://medium.com/@gerard.sans",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "chuyeow",
+      "name": "Cheah Chu Yeow",
+      "avatar_url": "https://avatars.githubusercontent.com/u/213?v=4",
+      "profile": "http://blog.codefront.net/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "nomadbitcoin",
+      "name": "Yan Luiz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39248465?v=4",
+      "profile": "https://www.linkedin.com/in/yanluiz/",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
