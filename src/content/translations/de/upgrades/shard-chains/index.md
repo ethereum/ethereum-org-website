@@ -48,7 +48,7 @@ Rollups sind eine "Layer 2"-Technologie, die heute bereits existiert. Sie erlaub
 <InfoBanner isWarning={false}>
   Angesichts der jüngsten Fortschritte bei der Erforschung und Entwicklung von Layer-2-Skalierungslösungen hat dies dazu geführt, dass das Merge-Upgrade vor den Shard Chains Priorität hat. Diese werden nach dem Übergang vom Mainnet zum Proof of Stake im Mittelpunkt stehen.
 
-[Mehr über Rollups](/developers/docs/scaling/layer-2-rollups/)
+[Mehr über Rollups](/developers/docs/scaling/#rollups)
 </InfoBanner>
 
 ## Shard Chains Version 2: Codeausführung {#code-execution}

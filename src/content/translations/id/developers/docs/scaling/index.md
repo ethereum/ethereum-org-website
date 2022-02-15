@@ -31,7 +31,7 @@ Pelajari lebih lanjut tentang [sharding](/eth2/shard-chains/).
 
 ## Penskalaan off-chain {#off-chain-scaling}
 
-Solusi off-chain diimplementasikan secara terpisah dari Jaringan Utama lapisan 1 - solusi ini tidak memerlukan perubahan pada protokol Ethereum yang telah ada. Beberapa solusi, yang dikenal sebagai solusi "lapisan 2", memperoleh keamanannya langsung dari konsensus Ethereum lapisan 1, seperti [rollup](/developers/docs/scaling/layer-2-rollups/) atau [kanal state](/developers/docs/scaling/state-channels/). Solusi lain melibatkan pembuatan rantai baru dalam berbagai bentuk yang memperoleh keamanannya secara terpisah dari Jaringan Utama, seperti: [sidechain](#sidechains) atau rantai [plasma](#plasma). Solusi ini berkomunikasi dengan Jaringan Utama, tetapi memperoleh keamanannya secara berbeda untuk mencapai berbagai tujuan.
+Solusi off-chain diimplementasikan secara terpisah dari Jaringan Utama lapisan 1 - solusi ini tidak memerlukan perubahan pada protokol Ethereum yang telah ada. Beberapa solusi, yang dikenal sebagai solusi "lapisan 2", memperoleh keamanannya langsung dari konsensus Ethereum lapisan 1, seperti [rollup](/developers/docs/scaling/#rollups) atau [kanal state](/developers/docs/scaling/state-channels/). Solusi lain melibatkan pembuatan rantai baru dalam berbagai bentuk yang memperoleh keamanannya secara terpisah dari Jaringan Utama, seperti: [sidechain](#sidechains) atau rantai [plasma](#plasma). Solusi ini berkomunikasi dengan Jaringan Utama, tetapi memperoleh keamanannya secara berbeda untuk mencapai berbagai tujuan.
 
 ### Penskalaan lapisan 2 {#layer-2-scaling}
 
@@ -45,10 +45,10 @@ Instance lapisan 2 tertentu dapat dibuka dan dibagikan oleh banyak aplikasi, ata
 
 Rollup melakukan eksekusi transaksi di luar lapisan 1 dan kemudian data diposting ke lapisan 1 di mana konsensus tercapai. Karena data transaksi termasuk dalam blok lapisan 1, ini memungkinkan rollup diamankan oleh keamanan Ethereum asli.
 
-- [Rollup ZK](/developers/docs/scaling/layer-2-rollups/#zk-rollups)
-- [Rollup optimistic](/developers/docs/scaling/layer-2-rollups/#optimistic-rollups)
+- [Rollup ZK](/developers/docs/scaling/zk-rollups/)
+- [Rollup optimistic](/developers/docs/scaling/optimistic-rollups/)
 
-Pelajari lebih lanjut tentang [rollup](/developers/docs/scaling/layer-2-rollups/).
+Pelajari lebih lanjut tentang [rollup](/developers/docs/scaling/#rollups).
 
 #### Kanal state {#channels}
 
@@ -64,7 +64,7 @@ Pelajari lebih lanjut tentang [Sidechain](/developers/docs/scaling/sidechains/).
 
 ### Plasma {#plasma}
 
-Rantai plasma adalah blockchain terpisah yang ditambatkan ke rantai Ethereum utama, dan menggunakan bukti penipuan (seperti [rollup Optimistic](/developers/docs/scaling/layer-2-rollups/#optimistic-rollups)) untuk menengahi perselisihan.
+Rantai plasma adalah blockchain terpisah yang ditambatkan ke rantai Ethereum utama, dan menggunakan bukti penipuan (seperti [rollup Optimistic](/developers/docs/scaling/optimistic-rollups/)) untuk menengahi perselisihan.
 
 Pelajari lebih lanjut tentang [Plasma](/developers/docs/scaling/plasma/).
 

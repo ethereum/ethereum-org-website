@@ -7,7 +7,7 @@ incomplete: true
 sidebarDepth: 3
 ---
 
-Plasma 是一条独立的区块链。它锚定在以太坊主链上，并使用欺诈证明（如[ Optimistic rollup ](/developers/docs/scaling/layer-2-rollups/#optimistic-rollups)）来仲裁争议。 这些链有时被称为 "子"链，因为它们本质上是父链以太坊区块链的较小复制。 Merkle 树能够创建这些链的无限堆栈，可以从父链（包括主网）上分流带宽。 它们通过 [欺诈证明](/glossary/#fraud-proof)来确保安全性，每条子链都有自己的区块验证机制。
+Plasma 是一条独立的区块链。它锚定在以太坊主链上，并使用欺诈证明（如[ Optimistic rollup ](/developers/docs/scaling/optimistic-rollups/)）来仲裁争议。 这些链有时被称为 "子"链，因为它们本质上是父链以太坊区块链的较小复制。 Merkle 树能够创建这些链的无限堆栈，可以从父链（包括主网）上分流带宽。 它们通过 [欺诈证明](/glossary/#fraud-proof)来确保安全性，每条子链都有自己的区块验证机制。
 
 ## 前提条件 {#prerequisites}
 
