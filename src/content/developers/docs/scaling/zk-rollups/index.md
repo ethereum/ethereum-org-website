@@ -1,6 +1,6 @@
 ---
 title: Zero-Knowledge Rollups
-description: Hello World
+description: Introduction to zero-knowledge rollups
 lang: en
 sidebar: true
 ---

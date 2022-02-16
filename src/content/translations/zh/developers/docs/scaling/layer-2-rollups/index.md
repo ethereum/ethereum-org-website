@@ -54,7 +54,7 @@ Optimistic rollup 与第二层的以太坊主链同步进行。 它们可以提�
 
 Optimistic rollup 并不实际计算交易，所以需要有一个机制来确保交易是合法的，而不是欺诈性的。 这就是欺诈证明的作用。 如果有人注意到有欺诈性交易，rollup 将执行防欺诈并运行交易的计算，使用可用的状态数据。 这意味着您的交易确认等待时间可能比 ZK Rollup 更长，因为它可能受到质疑。
 
-![显示以太坊中的 Optimistic rollup 中发生欺诈性交易时的图表](../../../../../developers/docs/scaling/#rollupsoptimistic-rollups.png)
+![显示以太坊中的 Optimistic rollup 中发生欺诈性交易时的图表](../../../../../developers/docs/scaling/optimistic-rollups/optimistic-rollups.png)
 
 你需要运行欺诈证明计算的 gas 甚至可以报销。 来自 Optimism 的 Ben Jones 介绍了现有的联系制度。
 
