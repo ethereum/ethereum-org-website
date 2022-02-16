@@ -48,7 +48,7 @@ Skupne vrednosti so tehnologija na »2. plasti«, ki že obstaja. Decentralizira
 <InfoBanner isWarning={false}>
   Nedavni napredek v raziskavah in razvoju s področja rešitev za nadgradljivosti na podlagi 2. plasti je privedel do prioritizacije spojitve pred razdrobljenimi verigami. Te bodo prišle v ospredje po prehodu glavnega omrežja na dokaz o deležu.
 
-[Več o zvitkih](/developers/docs/scaling/layer-2-rollups/)
+[Več o zvitkih](/developers/docs/scaling/#rollups)
 </InfoBanner>
 
 ## 2. različica razdrobljenih verig: izvajanje kode {#code-execution}

@@ -48,7 +48,7 @@ Toplamlar, bugün var olan bir "2. katman" teknolojisidir. Merkeziyetsiz uygulam
 <InfoBanner isWarning={false}>
   Katman 2 ölçekleme çözümü araştırma ve geliştirmesindeki son ilerleme göz önüne alındığında, bu durum, parça zincirlerinden önce birleştirme yükseltmesine öncelik verilmesini sağlamıştır. Bunlar, ana ağdan hisse kanıtına geçişin ardından odak noktası olacaktır.
 
-[Toplamalar hakkında daha fazla bilgi](/developers/docs/scaling/layer-2-rollups/)
+[Toplamalar hakkında daha fazla bilgi](/developers/docs/scaling/#rollups)
 </InfoBanner>
 
 ## Parça zincirleri versiyon 2: kod yürütme {#code-execution}

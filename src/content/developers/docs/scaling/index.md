@@ -3,13 +3,14 @@ title: Scaling
 description: An introduction to the different scaling options currently being developed by the Ethereum community.
 lang: en
 sidebar: true
+sidebarDepth: 3
 ---
 
 ## Scaling overview {#scaling-overview}
 
 As the number of people using Ethereum has grown, the blockchain has reached certain capacity limitations. This has driven up the cost of using the network, creating the need for "scaling solutions." There are multiple solutions being researched, tested and implemented that take different approaches to achieve similar goals.
 
-The main goal of scalability is to increase transaction speed (faster finality), and transaction throughput (high transactions per second), without sacrificing decentralization or security (more on the [Ethereum vision](/upgrades/vision/)). On the layer 1 Ethereum blockchain, high demand leads to slower transactions and nonviable gas prices. Increasing the network capacity in terms of speed and throughput is fundamental to the meaningful and mass adoption of Ethereum.
+The main goal of scalability is to increase transaction speed (faster finality), and transaction throughput (high transactions per second), without sacrificing decentralization or security (more on the [Ethereum vision](/upgrades/vision/)). On the layer 1 Ethereum blockchain, high demand leads to slower transactions and nonviable [gas prices](/developers/docs/gas/). Increasing the network capacity in terms of speed and throughput is fundamental to the meaningful and mass adoption of Ethereum.
 
 While speed and throughput are important, it is essential that scaling solutions enabling these goals remain decentralized and secure. Keeping the barrier to entry low for node operators is critical in preventing a progression towards centralized and insecure computing power.
 
@@ -31,7 +32,7 @@ Learn more about [sharding](/upgrades/shard-chains/).
 
 ## Off-chain scaling {#off-chain-scaling}
 
-Off-chain solutions are implemented separately from layer 1 Mainnet - they require no changes to the existing Ethereum protocol. Some solutions, known as "layer 2" solutions, derive their security directly from layer 1 Ethereum consensus, such as [rollups](/developers/docs/scaling/layer-2-rollups/) or [state channels](/developers/docs/scaling/state-channels/). Other solutions involve the creation of new chains in various forms that derive their security separately from Mainnet, such as [sidechains](#sidechains) or [plasma](#plasma) chains. These solutions communicate with Mainnet, but derive their security differently to obtain a variety of goals.
+Off-chain solutions are implemented separately from layer 1 Mainnet - they require no changes to the existing Ethereum protocol. Some solutions, known as "layer 2" solutions, derive their security directly from layer 1 Ethereum consensus, such as [optimistic rollups](/developers/docs/scaling/optimistic-rollups/), [zero-knowledge rollups](/developers/docs/scaling/zk-rollups/) or [state channels](/developers/docs/scaling/state-channels/). Other solutions involve the creation of new chains in various forms that derive their security separately from Mainnet, such as [sidechains](#sidechains) or [plasma](#plasma) chains. These solutions communicate with Mainnet, but derive their security differently to obtain a variety of goals.
 
 ### Layer 2 scaling {#layer-2-scaling}
 
@@ -56,8 +57,8 @@ Rollups perform transaction execution outside layer 1 and then the data is poste
 
 There are two types of rollups with different security models:
 
-- **Optimistic rollups**: assumes transactions are valid by default and only runs computation, via a [**fraud proof**](/glossary/#fraud-proof), in the event of a challenge. [More on Optimistic rollups](/developers/docs/scaling/optimistic-rollups).
-- **Zero-knowledge rollups**: runs computation off-chain and submits a [**validity proof**](/glossary/#validity-proof) to the chain. [More on Zero-knowledge rollups](/developers/docs/scaling/zk-rollups).
+- **Optimistic rollups**: assumes transactions are valid by default and only runs computation, via a [**fraud proof**](/glossary/#fraud-proof), in the event of a challenge. [More on Optimistic rollups](/developers/docs/scaling/optimistic-rollups/).
+- **Zero-knowledge rollups**: runs computation off-chain and submits a [**validity proof**](/glossary/#validity-proof) to the chain. [More on zero-knowledge rollups](/developers/docs/scaling/zk-rollups/).
 
 #### State channels {#channels}
 
@@ -73,7 +74,7 @@ Learn more about [Sidechains](/developers/docs/scaling/sidechains/).
 
 ### Plasma {#plasma}
 
-A plasma chain is a separate blockchain that is anchored to the main Ethereum chain, and uses fraud proofs (like [Optimistic rollups](/developers/docs/scaling/layer-2-rollups/#optimistic-rollups)) to arbitrate disputes.
+A plasma chain is a separate blockchain that is anchored to the main Ethereum chain, and uses fraud proofs (like [optimistic rollups](/developers/docs/scaling/optimistic-rollups/)) to arbitrate disputes.
 
 Learn more about [Plasma](/developers/docs/scaling/plasma/).
 

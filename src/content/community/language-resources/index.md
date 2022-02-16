@@ -33,6 +33,7 @@ If you are bilingual and want to help us reach more people, you can also get inv
 
 **Education**
 
+- [web3dev](https://www.web3dev.com.br/) - Content hub and Discord community for web 3 developers.
 - [Web3Brasil](https://github.com/web3brasil/web3brasil) - resources for learning Web3 and DeFi
 - [CriptoFacil](http://www.criptofacil.com/ultimas-noticias/) - cryptocurrency news and education, including ‘Ethereum for beginners’ and ‘DeFi’ for beginners
 - [CriptoAtivos](http://www.criptoativos.wiki.br/) - insights from the cryptocurrency space, education and blog

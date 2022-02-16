@@ -206,7 +206,7 @@ def endAuction():
 **Yul+**
 
 - Yul 的低级、高效扩展。
-- 最初设计用于 [ optimistic rollup ](/developers/docs/scaling/layer-2-rollups/#optimistic-rollups) 合约。
+- 最初设计用于 [ optimistic rollup ](/developers/docs/scaling/optimistic-rollups/) 合约。
 - Yul+ 可以被视为对 Yul 的实验性升级建议，为其添加新功能。
 
 ### 重要的链接 {#important-links-2}

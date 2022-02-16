@@ -31,7 +31,7 @@ Dowiedz się więcej o <a href="/upgrades/shard-chains/">shardingu</a>.
 
 ## Skalowanie off-chain {#off-chain-scaling}
 
-Rozwiązania off-chain są implementowane oddzielnie od sieci głównej warstwy 1 — nie wymagają żadnych zmian w istniejącym protokole Ethereum. Niektóre rozwiązania, określane jako rozwiązania „warstwy 2” czerpią swoje zabezpieczenia bezpośrednio z warstwy 1 konsensusu Ethereum. Są to np. [pakiety zbiorcze](/developers/docs/scaling/layer-2-rollups/) lub [kanały stanu](/developers/docs/scaling/state-channels/). Inne rozwiązania obejmują tworzenie nowych łańcuchów w różnych formach czerpiących zabezpieczenia oddzielnie z sieci głównej. Są to np. [łańcuchy boczne](#sidechains) lub łańcuchy [plazmy](#plasma). Te rozwiązania komunikują się z siecią główną, ale inaczej uzyskują zabezpieczenia, aby osiągnąć zróżnicowane cele.
+Rozwiązania off-chain są implementowane oddzielnie od sieci głównej warstwy 1 — nie wymagają żadnych zmian w istniejącym protokole Ethereum. Niektóre rozwiązania, określane jako rozwiązania „warstwy 2” czerpią swoje zabezpieczenia bezpośrednio z warstwy 1 konsensusu Ethereum. Są to np. [pakiety zbiorcze](/developers/docs/scaling/#rollups) lub [kanały stanu](/developers/docs/scaling/state-channels/). Inne rozwiązania obejmują tworzenie nowych łańcuchów w różnych formach czerpiących zabezpieczenia oddzielnie z sieci głównej. Są to np. [łańcuchy boczne](#sidechains) lub łańcuchy [plazmy](#plasma). Te rozwiązania komunikują się z siecią główną, ale inaczej uzyskują zabezpieczenia, aby osiągnąć zróżnicowane cele.
 
 ### Skalowanie warstwy 2 {#layer-2-scaling}
 
@@ -45,10 +45,10 @@ Określona instancja warstwy 2 może być otwarta i współdzielona przez wiele 
 
 Pakiety zbiorcze wykonują transakcje poza warstwą 1, a następnie dane są przesyłane do warstwy 1, gdzie osiągany jest konsensus. Ponieważ dane transakcji są zawarte w blokach warstwy 1, pozwala to na zabezpieczenie pakietów zbiorczych przez natywne zabezpieczenia Ethereum.
 
-- [Pakiety zbiorcze ZK](/developers/docs/scaling/layer-2-rollups/#zk-rollups)
-- [Optymistyczne pakiety zbiorcze](/developers/docs/scaling/layer-2-rollups/#optimistic-rollups)
+- [Pakiety zbiorcze ZK](/developers/docs/scaling/zk-rollups/)
+- [Optymistyczne pakiety zbiorcze](/developers/docs/scaling/optimistic-rollups/)
 
-Dowiedz się więcej o [pakietach zbiorczych](/developers/docs/scaling/layer-2-rollups/).
+Dowiedz się więcej o [pakietach zbiorczych](/developers/docs/scaling/#rollups).
 
 #### Kanały uzyskiwania informacji {#channels}
 
@@ -64,7 +64,7 @@ Dowiedz się więcej o [łańcuchach bocznych](/developers/docs/scaling/sidechai
 
 ### Plasma {#plasma}
 
-Łańcuch plazmowy to oddzielny blockchain, który jest zakotwiczony w głównym łańcuchu Ethereum, i używa dowodów oszustw (takich jak [optymistyczne pakiety zbiorcze](/developers/docs/scaling/layer-2-rollups/#optimistic-rollups)) do arbitrażu sporów.
+Łańcuch plazmowy to oddzielny blockchain, który jest zakotwiczony w głównym łańcuchu Ethereum, i używa dowodów oszustw (takich jak [optymistyczne pakiety zbiorcze](/developers/docs/scaling/optimistic-rollups/)) do arbitrażu sporów.
 
 Dowiedz się więcej o [Plasmie](/developers/docs/scaling/plasma/).
 
