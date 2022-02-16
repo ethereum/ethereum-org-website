@@ -5,7 +5,7 @@ import React from "react"
 import optimisticRollupList from "../data/layer-2-data-files/optimistic-rollups.json"
 import zkRollupList from "../data/layer-2-data-files/zk-rollups.json"
 
-const RollupProductListDevDocs = ({ rollupType }) => {
+const RollupProductDevDoc = ({ rollupType }) => {
   const data = {
     optimistic: optimisticRollupList,
     zk: zkRollupList,
@@ -14,4 +14,4 @@ const RollupProductListDevDocs = ({ rollupType }) => {
   return <p>Hello World</p>
 }
 
-export default RollupProductListDevDocs
+export default RollupProductDevDoc

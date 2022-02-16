@@ -46,7 +46,7 @@ Watch Finematics explain optimistic rollups:
 
 Multiple implementations of Optimistic rollups exist that you can integrate into your dapps:
 
-<RollupProductListDevDocs rollupType="optimistic" />
+<RollupProductDevDoc rollupType="optimistic" />
 
 **Optimistic rollups reading**
 
