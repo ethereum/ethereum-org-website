@@ -318,7 +318,7 @@ To avoid having to import an interface for the token function, we "manually" cre
 
 There are two ways in which an ERC-20 transfer call can report failure:
 
-1. Revert. If a call to an external contract reverts than the boolean return value is `false`
+1. Revert. If a call to an external contract reverts then the boolean return value is `false`
 2. End normally but report a failure. In that case the return value buffer has a non-zero length, and when decoded as a boolean value it is `false`
 
 If either of these conditions happen, revert.
