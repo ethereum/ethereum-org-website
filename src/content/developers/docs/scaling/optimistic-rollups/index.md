@@ -1,6 +1,6 @@
 ---
 title: Optimistic Rollups
-description: Hello World
+description: Introduction to optimistic rollups
 lang: en
 sidebar: true
 ---
