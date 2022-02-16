@@ -37,7 +37,7 @@ Watch Finematics explain ZK-rollups:
 
 Multiple implementations of ZK-rollups exist that you can integrate into your dapps:
 
-<RollupList rollupType="zk" />
+<RollupProductListDevDocs rollupType="zk" />
 
 **ZK-rollups reading**
 

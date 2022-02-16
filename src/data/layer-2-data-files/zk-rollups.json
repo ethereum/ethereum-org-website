@@ -1,0 +1,34 @@
+[
+  {
+    "logo": "",
+    "name": "dYdX",
+    "website": "https://dydx.exchange",
+    "developerDocs": "https://docs.dydx.exchange/#general",
+    "description": "dYdX aims to build a powerful and professional exchange for trading crypto assets where users can truly own their trades and, eventually, the exchange itself.",
+    "note": ""
+  },
+  {
+    "logo": "",
+    "name": "Loopring",
+    "website": "https://loopring.org/#/",
+    "developerDocs": "https://docs.loopring.io/en/",
+    "description": "Loopring's zkRollup L2 solution aims to offer the same security guarantees as Ethereum mainnet, with a big scalability boost: throughput increased by 1000x, and cost reduced to just 0.1% of L1.",
+    "note": ""
+  },
+  {
+    "logo": "",
+    "name": "zkSync",
+    "website": "https://zksync.io/",
+    "developerDocs": "https://zksync.io/dev/",
+    "description": "zkSync is a user-centric zk rollup platform from Matter Labs. It is a scaling solution for Ethereum, already live on Ethereum mainnet.",
+    "note": ""
+  },
+  {
+    "logo": "",
+    "name": "ZKSwap V2",
+    "website": "https://zks.org",
+    "developerDocs": "https://en.wiki.zks.org/",
+    "description": "ZKSwap claims to be a Layer 2 AMM decentralized transaction protocol. Based on ZK-Rollup technology, ZKSwap aims to execute the full functionality of Uniswap on Layer 2, while ensuring the core value of decentralized exchange. ZKSwap aims to increase the TPS by multiple orders of magnitude compared to Uniswap, and make transaction processing hardly consume any gas fees.",
+    "note": ""
+  }
+]
