@@ -1,5 +1,5 @@
 ---
-title: Bridges
+title: Introduction to blockchain bridges
 description: Bridges allow users to move their funds across different blockchains
 lang: en
 sidebar: true
