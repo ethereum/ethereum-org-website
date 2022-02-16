@@ -54,7 +54,7 @@ Karena komputasi adalah bagian yang lambat, mahal dari penggunaan Ethereum, roll
 
 Rollup optimistic tidak menghitung transaksi, jadi perlu ada mekanisme untuk memastikan transaksi itu sah dan tidak curang. Di sinilah bukti penipuan digunakan. Jika seseorang melihat transaksi penipuan, rollup akan mengeksekusi bukti penipuan dan menjalankan perhitungan transaksi, menggunakan data state yang tersedia. Ini berarti Anda mungkin memiliki waktu tunggu yang lebih lama untuk konfirmasi transaksi dari yang diperlukan dalam rollup ZK, karena prosesnya dapat ditentang.
 
-![Diagram yang menunjukkan apa yang terjadi ketika transaksi penipuan terjadi dalam rollup Optimistic di Ethereum](../../../../../../developers/docs/scaling/#rollupsoptimistic-rollups.png)
+![Diagram yang menunjukkan apa yang terjadi ketika transaksi penipuan terjadi dalam rollup Optimistic di Ethereum](../../../../../../developers/docs/scaling/optimistic-rollups/optimistic-rollups.png)
 
 Gas yang Anda butuhkan untuk menjalankan perhitungan bukti penipuan bahkan dibayarkan kembali. Ben Jones dari Optimism menjelaskan sistem ikatan yang ada:
 
