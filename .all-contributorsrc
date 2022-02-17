@@ -6472,6 +6472,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "chabroA",
+      "name": "Alexandre Chabrolin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9203826?v=4",
+      "profile": "https://github.com/chabroA",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

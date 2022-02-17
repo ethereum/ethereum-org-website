@@ -1378,6 +1378,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://medium.com/@gerard.sans"><img src="https://avatars.githubusercontent.com/u/4660316?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gerard Sans</b></sub></a><br /><a href="#content-gsans" title="Content">🖋</a></td>
     <td align="center"><a href="http://blog.codefront.net/"><img src="https://avatars.githubusercontent.com/u/213?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Cheah Chu Yeow</b></sub></a><br /><a href="#content-chuyeow" title="Content">🖋</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/yanluiz/"><img src="https://avatars.githubusercontent.com/u/39248465?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Yan Luiz</b></sub></a><br /><a href="#content-nomadbitcoin" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/chabroA"><img src="https://avatars.githubusercontent.com/u/9203826?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alexandre Chabrolin</b></sub></a><br /><a href="#content-chabroA" title="Content">🖋</a></td>
   </tr>
 </table>
 
