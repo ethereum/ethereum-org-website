@@ -56,6 +56,7 @@ IPFS is a distributed system for storing and accessing files, websites, applicat
 - [Pinata](https://www.pinata.cloud/) _(IPFS pinning service)_
 - [web3.storage](https://web3.storage/) _(IPFS/Filecoin pinning service)_
 - [Infura](https://infura.io/product/ipfs) _(IPFS pinning service)_
+- [Filebase](https://filebase.com) _(Decentralized cloud storage supporting Sia, Skynet, Storj, and IPFS)_
 
 ## Data retention {#data-retention}
 
