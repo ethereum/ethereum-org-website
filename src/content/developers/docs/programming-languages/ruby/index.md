@@ -23,6 +23,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 ## Beginner articles {#beginner-articles}
 
+- [Finally understanding Ethereum accounts](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
 - [How to connect to the Ethereum network using Ruby](https://www.quicknode.com/guides/web3-sdks/how-to-connect-to-the-ethereum-network-using-ruby)
 - [How to generate a new Ethereum address in Ruby](https://www.quicknode.com/guides/web3-sdks/how-to-generate-a-new-ethereum-address-in-ruby)
 
@@ -39,11 +40,14 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [siwe-ruby](https://github.com/spruceid/siwe-ruby) - _Ruby implementation of Sign-In with Ethereum_
 - [keccak.rb](https://github.com/q9f/keccak.rb) - _The Keccak (SHA3) hash used by Ethereum_
 - [ethereum-on-rails](https://github.com/q9f/ethereum-on-rails) - _Ethereum on Rails template which allows to connect MetaMask to Ruby on Rails_
+- [omniauth-nft](https://github.com/valthon/omniauth-nft) - _OmniAuth strategy for authenticating via NFT ownership._
+- [omniauth-ethereum.rb](https://github.com/q9f/omniauth-ethereum.rb) - _Implements the Ethereum provider strategy for OmniAuth._
 
 ### Archived / No longer maintained: {#archived--no-longer-maintained}
 
 - [web3-eth](https://github.com/spikewilliams/vtada-ethereum) - _Calling RPC methods of Ethereum node with Ruby_
 - [ethereum_tree](https://github.com/longhoangwkm/ethereum_tree) - _Ruby library to generate ETH addresses from a Hierarchical Deterministic wallet according to the BIP32 standard_
+- [etherlite](https://github.com/budacom/etherlite) - _Ethereum integration for Ruby on Rails._
 - [ethereum.rb](https://github.com/EthWorks/ethereum.rb) - _Ruby Ethereum client using the JSON-RPC interface for sending transactions, creating and interacting with contracts as well as usefull toolkit to work with Ethereum node._
 
 Looking for more resources? Check out [ethereum.org/developers](/developers/).
