@@ -84,7 +84,7 @@ There are many efforts underway to make Ethereum more “scalable” by improvin
 
 “Layer 2” refers to technologies that are built “on top” of the base Ethereum protocol, enabling greater scalability without compromising on security. There are also “off-chain” technologies like side-chains, which enable greater scalability by making a different set of security tradeoffs.
 
-[More on Layer 2](/developers/docs/scaling/layer-2-rollups/)
+[More on Layer 2](/developers/docs/scaling/#layer-2-scaling)
 
 ## Consensus layer upgrades {#consensus-layer-upgrades}
 

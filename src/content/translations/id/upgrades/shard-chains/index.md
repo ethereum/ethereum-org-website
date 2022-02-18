@@ -49,7 +49,7 @@ Rollup adalah teknologi "lapisan 2" yang sudah ada sekarang. Rollup memampukan d
 <InfoBanner isWarning={false}>
   Mengingat kemajuan baru-baru ini pada pengembangan dan penelitian solusi penskalaan lapisan 2, ini telah mendorong prioritas peningkatan penggabungan lebih utama dari peluncuran rantai shard. Ini akan menjadi fokus pengerjaan setelah transisi jaringan utama ke sistem bukti taruhan.
 
-[Lebih lanjut tentang rollup](/developers/docs/scaling/layer-2-rollups/)
+[Lebih lanjut tentang rollup](/developers/docs/scaling/#rollups)
 </InfoBanner>
 
 ## Rantai shard versi 2: eksekusi kode {#code-execution}

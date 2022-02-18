@@ -212,7 +212,7 @@ Jika Anda baru mengenal Ethereum dan belum pernah melakukan pengodean apa pun de
 **Yul+**
 
 - Ekstensi level rendah yang sangat efisien untuk Yul.
-- Didesain pada awalnya untuk kontrak [rollup optimistic](/developers/docs/scaling/layer-2-rollups/#optimistic-rollups).
+- Didesain pada awalnya untuk kontrak [rollup optimistic](/developers/docs/scaling/optimistic-rollups/).
 - Yul+ bisa dianggap sebagai proposal peningkatan eksperimental untuk Yul, yang menambahkan fitur baru ke dalamnya.
 
 ### Tautan penting {#important-links-2}
