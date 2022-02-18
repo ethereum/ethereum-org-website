@@ -90,6 +90,15 @@
     "endDate": "2022-04-09"
   },
   {
+    "title": "ETHMiami",
+    "to": "https://ethmiami.net/",
+    "sponsor": null,
+    "location": "Miami, FL",
+    "description": "The goal of the event is to grow the business side of the Ethereum ecosystem. It's all about knowledge sharing, networking, and having fun.",
+    "startDate": "2022-04-09",
+    "endDate": "2022-04-09"
+  },
+  {
     "title": "DevConnect",
     "to": "https://devconnect.org/",
     "sponsor": null,
