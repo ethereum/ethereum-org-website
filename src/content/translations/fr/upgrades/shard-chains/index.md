@@ -48,7 +48,7 @@ Les Rollups sont une technologie de "layer 2" qui existe aujourd'hui. Ils permet
 <InfoBanner isWarning={false}>
   Etant donné les progrès récents dans la recherche et le développement de solutions de mise à l'échelle de la couche 2, cela a incité la priorisation de la mise à jour de la fusion avant les chaînes de fragments (shard chains). Celles-ci seront au centre des préoccupations à la suite de la transition du réseau principal aux preuves de ses enjeu.
 
-[En savoir plus sur les rollups](/developers/docs/scaling/layer-2-rollups/)
+[En savoir plus sur les rollups](/developers/docs/scaling/#rollups)
 </InfoBanner>
 
 ## Chaînes de fragments version 2 : exécution de code {#code-execution}

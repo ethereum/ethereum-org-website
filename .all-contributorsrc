@@ -6445,6 +6445,60 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "gsans",
+      "name": "Gerard Sans",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4660316?v=4",
+      "profile": "https://medium.com/@gerard.sans",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "chuyeow",
+      "name": "Cheah Chu Yeow",
+      "avatar_url": "https://avatars.githubusercontent.com/u/213?v=4",
+      "profile": "http://blog.codefront.net/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "nomadbitcoin",
+      "name": "Yan Luiz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39248465?v=4",
+      "profile": "https://www.linkedin.com/in/yanluiz/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "chabroA",
+      "name": "Alexandre Chabrolin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9203826?v=4",
+      "profile": "https://github.com/chabroA",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "Sergey1997",
+      "name": "Sergey Danilovich",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22988415?v=4",
+      "profile": "https://github.com/Sergey1997",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "chelorope",
+      "name": "Marcelo Rodriguez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6799516?v=4",
+      "profile": "https://github.com/chelorope",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

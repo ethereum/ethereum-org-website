@@ -146,7 +146,7 @@ Gas price alone does not actually determine how much we have to pay for a partic
 
 The Ethereum [scalability upgrades](/upgrades/) should ultimately address some of the gas fee issues, which will, in turn, enable the platform to process thousands of transactions per second and scale globally.
 
-Layer 2 scaling is a primary initiative to greatly improve gas costs, user experience and scalability. [More on layer 2 scaling](/developers/docs/scaling/layer-2-rollups/).
+Layer 2 scaling is a primary initiative to greatly improve gas costs, user experience and scalability. [More on layer 2 scaling](/developers/docs/scaling/#layer-2-scaling).
 
 The new proof-of-stake model, introduced on the Beacon Chain, should reduce high power consumption and reliance on specialized hardware. This chain will allow the decentralized Ethereum network to agree and keep the network secure, while limiting energy consumption by instead requiring a financial commitment.
 

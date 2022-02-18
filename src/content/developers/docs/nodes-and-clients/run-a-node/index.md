@@ -154,7 +154,7 @@ You need to keep your client software up-to-date with the latest security patche
 
 #### Running additional services {#running-additional-services}
 
-Running your own node lets you use services that require direct access to Ethereum client RPC. These are services built on top of Ethereum like [layer 2 solutions](/developers/docs/scaling/layer-2-rollups), [consensus clients](/upgrades/get-involved/#clients), and other Ethereum infrastructure.
+Running your own node lets you use services that require direct access to Ethereum client RPC. These are services built on top of Ethereum like [layer 2 solutions](/developers/docs/scaling/#layer-2-scaling), [consensus clients](/upgrades/get-involved/#clients), and other Ethereum infrastructure.
 
 #### Monitoring the node {#monitoring-the-node}
 

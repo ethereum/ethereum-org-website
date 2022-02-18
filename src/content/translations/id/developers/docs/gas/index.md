@@ -136,7 +136,7 @@ Harga gas sendiri sebenarnya tidak menentukan jumlah yang harus kita bayarkan un
 
 Peningkatan jaringan baru Ethereum 2.0 (juga dikenal sebagai Eth2 atau Serenity) seharusnya akan menyelesaikan beberapa masalah biaya gas, hasilnya yang akan memungkinkan platform untuk memroses ribuan transaksi per detik dan melakukan penskalaan secara global.
 
-Penskalaan lapisan 2 adalah inisiatif utama untuk sangat meningkatkan biaya gas, pengalaman pengguna, dan skalabilitas. [Selengkapnya tentang penskalaan lapisan 2](/developers/docs/scaling/layer-2-rollups/).
+Penskalaan lapisan 2 adalah inisiatif utama untuk sangat meningkatkan biaya gas, pengalaman pengguna, dan skalabilitas. [Selengkapnya tentang penskalaan lapisan 2](/developers/docs/scaling/#rollups).
 
 Model bukti taruhan yang baru, yang diperkenalkan di Rantai Suar, seharusnya mengurangi pemakaian daya yang tinggi dan ketergantungan pada perangkat keras khusus. Rantai ini akan memungkinkan jaringan Ethereum terdesentralisasi untuk berkesesuaian dan menjaga jaringan tetap aman, sekaligus membatasi pemakaian daya dengan mengharuskan komitmen keuangan.
 

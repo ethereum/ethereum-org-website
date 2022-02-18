@@ -308,7 +308,7 @@ Perubahan dalam protokol yang menyebabkan pembuatan rantai alternatif, atau perb
 
 Model keamanan untuk solusi [lapisan 2](#layer-2) tertentu di mana, untuk meningkatkan kecepatan, transaksi di-[roll up](#rollups) ke dalam kelompok dan dikirimkan ke Ethereum dalam transaksi tunggal. Bukti penipuan ini dianggap valid tapi bisa ditentang jika ada kecurigaan penipuan. Bukti penipuan kemudian akan menjalankan transaksi untuk memeriksa apakah penipuan terjadi. Metode ini meningkatkan kemungkinan jumlah transaksi sekaligus mempertahankan keamanan. Beberapa [rollup](#rollups) menggunakan [bukti validitas](#validity-proof).
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/#optimistic-rollups">
+<DocLink to="/developers/docs/scaling/optimistic-rollups/">
   Rollup optimistic
 </DocLink>
 
@@ -436,7 +436,7 @@ File yang dikodekan dengan JSON yang berisi [kunci privat](#private-key) tunggal
 
 Area pengembangan yang berpusat pada peningkatan pembuatan lapisan di atas protokol Ethereum. Peningkatan ini terkait dengan kecepatan [transaksi](#transaction), [biaya transaksi](#transaction-fee) yang lebih murah, dan privasi transaksi.
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/">
+<DocLink to="/developers/docs/scaling/#rollups">
   Lapisan 2
 </DocLink>
 
@@ -534,7 +534,7 @@ Ketika seorang [penambang](#miner) menemukan [blok](#block) valid, penambang lai
 
 [Rollup](#rollups) transaksi yang menggunakan [bukti penipuan](#fraud-proof) untuk menawarkan throughput transaksi [lapisan 2](#layer-2) yang ditingkatkan, sekaligus menggunakan pengamanan yang disediakan oleh [Jaringan Utama](#mainnet) (lapisan 1). Tidak seperti [Plasma](#plasma), solusi lapisan 2 yang mirip dengannya, rollup Optimistic bisa menangani jenis transaksi yang lebih rumit – apa pun memungkinkan di [EVM](#evm). Rollup ini memang memiliki masalah latensi jika dibandingkan dengan [rollup Zero-knowledge](#zk-rollups) karena satu transaksi bisa ditentang lewat bukti penipuan.
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/#optimistic-rollups">
+<DocLink to="/developers/docs/scaling/optimistic-rollups/">
   Rollup Optimistic
 </DocLink>
 
@@ -606,7 +606,7 @@ Standar pengodean yang dirancang oleh pengembang Ethereum untuk mengodekan dan m
 
 Jenis solusi penskalaan [lapisan 2](#layer-2) yang mengelompokkan beberapa transaksi dan mengirimkannya ke [rantai utama Ethereum](#mainnet) dalam transaksi tunggal. Ini memungkinkan pengurangan biaya [gas](#gas) dan menambah throughput [transaksi](#transaction). Ada rollup Optimistic dan Zero-knowledge yang menggunakan metode pengamanan berbeda untuk menawarkan perolehan skalabilitas ini.
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/">
+<DocLink to="/developers/docs/scaling/#rollups">
   Rollup
 </DocLink>
 
@@ -768,7 +768,7 @@ Konsep yang dinamai dari ahli matematika dan ilmuwan komputer Inggris, Alan Turi
 
 Model keamanan untuk solusi [lapisan 2](#layer-2) tertentu di mana, untuk meningkatkan kecepatan, transaksi di-[roll up](/#rollups) ke dalam kelompok dan dikirimkan ke Ethereum dalam transaksi tunggal. Komputasi transaksi dijalankan secara off-chain dan kemudian disediakan ke dalam rantai utama dengan bukti validitasnya. Metode ini meningkatkan kemungkinan jumlah transaksi sekaligus mempertahankan keamanan. Beberapa [rollup](#rollups) menggunakan [bukti penipuan](#fraud-proof).
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups">
+<DocLink to="/developers/docs/scaling/zk-rollups/">
   Rollup zero-knowledge
 </DocLink>
 
@@ -824,7 +824,7 @@ Alamat Ethereum spesial, tidak berisi sama sekali, yang dikhususkan sebagai alam
 
 [Rollup](#rollups) transaksi yang menggunakan [bukti validitas](#validity-proof) untuk menawarkan throughput transaksi [lapisan 2](#layer-2) yang ditingkatkan, sementara menggunakan keamanan yang disediakan oleh [Jaringan Utama](#mainnet) (lapisan 1). Sekalipun rollup ini tidak bisa menangani jenis transaksi rumit, seperti [Rollup optimistic](#optimistic-rollups), rollup ini tidak memiliki masalah latensi karena transaksi terbukti valid saat dikirimkan.
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups">
+<DocLink to="/developers/docs/scaling/zk-rollups/">
   Rollup Zero-knowledge
 </DocLink>
 

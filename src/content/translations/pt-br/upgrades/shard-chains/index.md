@@ -48,7 +48,7 @@ Os rollups são uma tecnologia de "camada 2" que existe hoje. Eles permitem que 
 <InfoBanner isWarning={false}>
   Dado os avanços recentes em termos de pesquisa e desenvolvimento da solução de dimensionamento da camada 2, isso nos levou a priorizar a melhoria da integração, e não as cadeias de fragmentos. Estas serão priorizadas logo após a transição da rede principal para o sistema de prova de participação.
 
-[Mais sobre rollups](/developers/docs/scaling/layer-2-rollups/)
+[Mais sobre rollups](/developers/docs/scaling/#rollups)
 </InfoBanner>
 
 ## Cadeias de fragmentos versão 2: código de execução {#code-execution}
