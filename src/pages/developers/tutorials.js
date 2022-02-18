@@ -303,7 +303,7 @@ const TutorialsPage = ({ data, pageContext }) => {
     // If no tags are active, show all tutorials, otherwise filter by active tag
     let filteredTutorials = allTutorials
     if (activeTagNames.length > 0) {
-      filteredTutorials = state.filteredTutorials.filter((tutorial) => {
+      filteredTutorials = filteredTutorials.filter((tutorial) => {
         for (const tag of activeTagNames) {
           if (!tutorial.tags.includes(tag)) {
             return false
