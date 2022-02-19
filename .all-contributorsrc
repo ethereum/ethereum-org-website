@@ -6499,6 +6499,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "parkedtruck",
+      "name": "Anna",
+      "avatar_url": "https://avatars.githubusercontent.com/u/90351322?v=4",
+      "profile": "https://github.com/parkedtruck",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

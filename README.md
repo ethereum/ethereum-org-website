@@ -1381,6 +1381,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/chabroA"><img src="https://avatars.githubusercontent.com/u/9203826?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alexandre Chabrolin</b></sub></a><br /><a href="#content-chabroA" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/Sergey1997"><img src="https://avatars.githubusercontent.com/u/22988415?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sergey Danilovich</b></sub></a><br /><a href="#content-Sergey1997" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/chelorope"><img src="https://avatars.githubusercontent.com/u/6799516?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Marcelo Rodriguez</b></sub></a><br /><a href="#content-chelorope" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/parkedtruck"><img src="https://avatars.githubusercontent.com/u/90351322?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anna</b></sub></a><br /><a href="#content-parkedtruck" title="Content">🖋</a></td>
   </tr>
 </table>
 
