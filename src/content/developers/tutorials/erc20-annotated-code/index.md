@@ -613,7 +613,7 @@ Alice meant to authorize. This technique is called
 
 To avoid this problem, these two functions (`increaseAllowance` and `decreaseAllowance`) allow you
 to modify the allowance by a specific amount. So if Bill had already spent five tokens, he'll just
-be able to spend five more. Depending on the timing, there are two ways ways this can work, both of
+be able to spend five more. Depending on the timing, there are two ways this can work, both of
 which end with Bill only getting ten tokens:
 
 A:
