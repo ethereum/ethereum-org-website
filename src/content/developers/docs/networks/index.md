@@ -88,10 +88,10 @@ A proof-of-authority testnet for those running Geth client.
 ##### Rinkeby faucets
 
 - [FaucETH](https://fauceth.komputing.org)(Multi-Chain faucet without the need for social account)
-- [Rinkeby faucet](https://faucet.rinkeby.io/)
 - [Alchemy faucet](https://RinkebyFaucet.com)
 - [Chainlink faucet](https://faucets.chain.link/)
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
+- [Rinkeby faucet](https://faucet.rinkeby.io/)
 
 #### Ropsten {#ropsten}
 
