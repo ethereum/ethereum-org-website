@@ -1389,6 +1389,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/carboni-rob"><img src="https://avatars.githubusercontent.com/u/25662777?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Roberto Carboni</b></sub></a><br /><a href="#content-carboni-rob" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/kelcheone"><img src="https://avatars.githubusercontent.com/u/80192475?v=4?s=100" width="100px;" alt=""/><br /><sub><b>KΞVIN KΞlchΞ⟠</b></sub></a><br /><a href="#content-kelcheone" title="Content">🖋</a></td>
     <td align="center"><a href="https://www.orange-business.com"><img src="https://avatars.githubusercontent.com/u/8886540?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Saïd Ibrihen</b></sub></a><br /><a href="#content-said026" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/rojotek"><img src="https://avatars.githubusercontent.com/u/261271?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rob Dawson</b></sub></a><br /><a href="#content-rojotek" title="Content">🖋</a></td>
   </tr>
 </table>
 
