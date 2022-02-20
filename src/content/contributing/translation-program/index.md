@@ -126,8 +126,9 @@ If you are an ethereum.org translator or would like to become one, feel free to 
 
 ### Guides {#guides}
 
-- [Translation Style Guide](/contributing/translation-program/translators-guide/) _– Instructions and tips for ethereum.org translators_
-- [Translation FAQs](/contributing/translation-program/faq/) _– Frequently asked questions and answers about the ethereum.org Translation Program_
+- [Translation Style Guide](/contributing/translation-program/translators-guide/) _– instructions and tips for ethereum.org translators_
+- [Translation FAQs](/contributing/translation-program/faq/) _– frequently asked questions and answers about the ethereum.org Translation Program_
+- [Crowdin online editor guide](https://support.crowdin.com/online-editor/) _– an in-depth guide to using the Crowdin online editor and some of Crowdin's advanced features_
 - [Content buckets](/contributing/translation-program/content-buckets/) _– which pages are included in each content bucket of ethereum.org_
 
 ### Tools {#tools}
