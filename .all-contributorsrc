@@ -6581,6 +6581,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "wuzekang",
+      "name": "吴泽康",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6880274?v=4",
+      "profile": "https://www.zhihu.com/people/wu-ze-kang",
+      "contributions": [
+        "doc",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
