@@ -1395,6 +1395,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="http://blog.notdot.net/"><img src="https://avatars.githubusercontent.com/u/17865?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nick Johnson</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Arachnid" title="Documentation">📖</a></td>
     <td align="center"><a href="https://www.zhihu.com/people/wu-ze-kang"><img src="https://avatars.githubusercontent.com/u/6880274?v=4?s=100" width="100px;" alt=""/><br /><sub><b>吴泽康</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=wuzekang" title="Documentation">📖</a> <a href="#translation-wuzekang" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://github.com/nickgaski"><img src="https://avatars.githubusercontent.com/u/16326255?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nick Gaski</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=nickgaski" title="Documentation">📖</a></td>
   </tr>
 </table>
 
