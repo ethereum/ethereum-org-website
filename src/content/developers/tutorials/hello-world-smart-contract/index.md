@@ -91,7 +91,8 @@ test command:
 git repository:
 keywords:
 author:
-license: (ISC)About to write to /Users/.../.../.../hello-world/package.json:
+license: (ISC)
+About to write to /Users/.../.../.../hello-world/package.json:
 
 {
   "name": "hello-world",
