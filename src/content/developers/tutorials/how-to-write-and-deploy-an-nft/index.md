@@ -221,7 +221,7 @@ First, install the dotenv package in your project directory:
 
     npm install dotenv --save
 
-Then, create a .env file in the root directory of our project, and add your MetaMask private key and HTTP Alchemy API URL to it.
+Then, create a `.env` file in the root directory of our project, and add your MetaMask private key and HTTP Alchemy API URL to it.
 
 - Follow [these instructions](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) to export your private key from MetaMask
 
@@ -229,12 +229,16 @@ Then, create a .env file in the root directory of our project, and add your Meta
 
 ![Copy your Alchemy API URL](./copy-alchemy-api-url.gif)
 
-Your .env should now look like this:
+Your `.env` should now look like this:
 
     API_URL="https://eth-ropsten.alchemyapi.io/v2/your-api-key"
     PRIVATE_KEY="your-metamask-private-key"
 
 To actually connect these to our code, we’ll reference these variables in our hardhat.config.js file on step 13.
+
+<InfoBanner isWarning={true}>
+Don't commit <code>.env</code>! Please make sure never to share or expose your <code>.env</code> file with anyone, as you are compromising your secrets in doing so. If you are using version control, add your <code>.env</code> to a <a href="https://git-scm.com/docs/gitignore">gitignore</a> file.
+</InfoBanner>
 
 ## Step 12: Install Ethers.js {#install-ethers}
 
