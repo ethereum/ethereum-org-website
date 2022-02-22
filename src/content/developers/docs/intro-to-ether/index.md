@@ -41,6 +41,10 @@ As well as creating ether through block rewards, ether can get destroyed by a pr
 
 Ether burn occurs in every transaction on Ethereum. When users pay for their transactions, their base gas fee gets destroyed by the protocol. Depending on network demand, [some blocks](https://etherscan.io/block/12965263) burn more ether than they mint.
 
+> Ether burn is essentially a mechanism to control the supply & demand dynamics. 
+> 
+> By burning a certain amount of ether in every transaction, total amount of ether in circulation is controlled, thereby hedging it against such devils as inflation.
+
 ## Denominations of ether {#denominations}
 
 Since many transactions on Ethereum are small, ether has several denominations which may be referenced for smaller amounts. Of these denominations, Wei and gwei are particularly important.
