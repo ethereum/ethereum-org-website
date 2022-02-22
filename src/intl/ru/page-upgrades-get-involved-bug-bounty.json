@@ -49,7 +49,7 @@
   "page-upgrades-bug-bounty-specs-docs": "Документы спецификации",
   "page-upgrades-bug-bounty-submit": "Сообщить об ошибке",
   "page-upgrades-bug-bounty-submit-desc": "За каждую найденную ошибку вы будете награждены баллами. Количество баллов определяется серьезностью ошибки. Фонд Ethereum определяет серьезность ошибки с помощью метода OWASP.",
-  "page-upgrades-bug-bounty-subtitle": "Найдите ошибки в протоколе и клиенте Eth2 и заработайте до 50 000 долларов США и место в таблице лидеров.",
+  "page-upgrades-bug-bounty-subtitle": "Заработайте до 50 000 долларов США и войдите в список лидеров, найдя ошибки в клиенте и протоколе Eth2.",
   "page-upgrades-bug-bounty-title": "Открыто для публикации",
   "page-upgrades-bug-bounty-title-1": "Beacon Chain",
   "page-upgrades-bug-bounty-title-2": "Выбор ответвления",

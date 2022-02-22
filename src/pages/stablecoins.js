@@ -135,7 +135,7 @@ const USDCBanner = styled(DaiBanner)`
 `
 
 const DaiSubtitle = styled.p`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
 `
@@ -145,7 +145,7 @@ const H2 = styled.h2`
 `
 
 const H3 = styled.h3`
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 700;
   text-align: left;
@@ -180,10 +180,11 @@ const FullWidthContainer = styled(Page)`
 `
 
 const DaiH2 = styled.h2`
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 0.5rem;
+
   a {
     display: none;
   }
@@ -731,14 +732,10 @@ const StablecoinsPage = ({ data }) => {
       <Divider />
       <Content>
         <StyledCalloutBanner
-          title={translateMessageId(
-            "page-stablecoins-stablecoins-dapp-callout-title",
-            intl
-          )}
-          description={translateMessageId(
-            "page-stablecoins-stablecoins-dapp-callout-description",
-            intl
-          )}
+          titleKey={"page-stablecoins-stablecoins-dapp-callout-title"}
+          descriptionKey={
+            "page-stablecoins-stablecoins-dapp-callout-description"
+          }
           image={getImage(data.doge)}
           maxImageWidth={600}
           alt={translateMessageId(

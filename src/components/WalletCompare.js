@@ -29,7 +29,7 @@ const ButtonContainer = styled.div`
 `
 
 const Subtitle = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   margin-bottom: 2rem;
   color: ${(props) => props.theme.colors.text200};
@@ -527,7 +527,7 @@ const WalletCompare = ({ location }) => {
           <p>
             <em>
               <Translation id="page-find-wallet-not-endorsements" />{" "}
-              <Link to="/en/contributing/adding-products/">
+              <Link to="/contributing/adding-products/">
                 <Translation id="page-find-wallet-listing-policy" />
               </Link>
               <Translation id="page-find-wallet-add-wallet" />{" "}

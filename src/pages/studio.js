@@ -20,12 +20,12 @@ const H1 = styled.h1`
   letter-spacing: 0px;
   text-align: left;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 48px;
+    font-size: 3rem;
   }
 `
 
 const H2 = styled.h2`
-  font-size: 32px;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 700;
   letter-spacing: 0px;

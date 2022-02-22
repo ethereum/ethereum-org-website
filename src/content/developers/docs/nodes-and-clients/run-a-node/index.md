@@ -12,6 +12,8 @@ Running your own node provides you various benefits, opens new possibilities, an
 
 You should understand what an Ethereum node is and why you might want to run a client. This is covered in [Nodes and clients](/developers/docs/nodes-and-clients/).
 
+If you're new to the topic of running a node, or looking for a less technical path, we recommend first checking out our user-friendly introduction on [running an Ethereum node](/run-a-node).
+
 ## Choosing an approach {#choosing-approach}
 
 The first step in spinning up your node is choosing your approach. You have to choose the client (the software), the environment, and the parameters you want to start with.
@@ -152,7 +154,7 @@ You need to keep your client software up-to-date with the latest security patche
 
 #### Running additional services {#running-additional-services}
 
-Running your own node lets you use services that require direct access to Ethereum client RPC. These are services built on top of Ethereum like [layer 2 solutions](/developers/docs/scaling/layer-2-rollups), [consensus clients](/upgrades/get-involved/#clients), and other Ethereum infrastructure.
+Running your own node lets you use services that require direct access to Ethereum client RPC. These are services built on top of Ethereum like [layer 2 solutions](/developers/docs/scaling/#layer-2-scaling), [consensus clients](/upgrades/get-involved/#clients), and other Ethereum infrastructure.
 
 #### Monitoring the node {#monitoring-the-node}
 

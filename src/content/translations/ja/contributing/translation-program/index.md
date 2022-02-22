@@ -18,7 +18,7 @@ sidebar: true
 ウェブサイトを自分の言語に翻訳して、グローバルな Ethereum コミュニティの発展に貢献したいとお考えの方は、以下の手順に従ってください。
 
 <InfoBanner shouldCenter emoji=":tada:">
-  申請して、POAPトークンを受け取りましょう! 2021年にethereum.orgの翻訳をした方には、特別なPOAPが準備されています。<a href="https://ethereum.org/en/contributing/#poap"> POAPについての詳細</a>
+  申請して、POAPトークンを受け取りましょう! 2021年にethereum.orgの翻訳をした方には、特別なPOAPが準備されています。<a href="/contributing/#poap"> POAPについての詳細</a>
 </InfoBanner>
 
 ## ミッションとビジョン {#mission-and-vision}
@@ -31,7 +31,7 @@ Ethereum コミュニティはグローバルで包括的であることを目�
 
 - 世界中の訪問者が母国語で Ethereum について学べるよう、サイトの翻訳版の提供
 - グローバルな Ethereum コミュニティへのより多くのメンバーの参加の促進
-- Etherum の情報や知識を、よりアクセスしやすく、より包括的に共有
+- Ethereum の情報や知識を、よりアクセスしやすく、より包括的に共有
 - コミュニティメンバーが Ethereum に翻訳を提供し、エコシステムに足跡を残すことを実現
 - エコシステムに参加しようとしている熱心な貢献者を特定し、連絡を取り、ガイダンスの提供
 

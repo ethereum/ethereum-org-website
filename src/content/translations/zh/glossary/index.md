@@ -310,7 +310,7 @@ ERC 是部分试图定义以太坊具体使用标准的[ EIP ](#eip)贴上的标
 
 [二层](#layer-2)解决方案的安全模型，为了提高交易速度，交易 [合并](#rollups) 在单笔交易中提交到以太坊中。 交易默认假定为是有效的，但如果怀疑有欺诈行为，可以对它们提出质疑。 然后，对交易进行欺诈证明，以确定是否发生欺诈。 这种方法提升了交易量，同时保证安全性。 一些 [rollup](#rollups) 使用的是 [欺诈证明](#validity-proof)。
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/#optimistic-rollups">
+<DocLink to="/developers/docs/scaling/optimistic-rollups/">
   Optimistic rollup
 </DocLink>
 
@@ -384,7 +384,7 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 ### 可交换客户端地址协议 (ICAP) {#icap}
 
-以太坊地址编码，与国际银行帐户编号 (IBAN) 编码部分兼容，为以太坊地址提供多用途的、可校验的和可操作的编码。 ICAP 地址使用一个新的 IBAN 伪国家代码-XE，全称是“eXended Etherum”，代表非管辖货币（如 XBT、XRP、XCP）。
+以太坊地址编码，与国际银行帐户编号 (IBAN) 编码部分兼容，为以太坊地址提供多用途的、可校验的和可操作的编码。 ICAP 地址使用一个新的 IBAN 伪国家代码-XE，全称是“eXended Ethereum”，代表非管辖货币（如 XBT、XRP、XCP）。
 
 ### 冰河世纪 {#ice-age}
 
@@ -438,7 +438,7 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 在以太坊协议之上的聚焦与分层优化的开发实现。 这些改进关系到 [交易](#transaction) 速度、更便宜的 [交易费](#transaction-fee)以及交易隐私。
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/">
+<DocLink to="/developers/docs/scaling/#rollups">
   二层
 </DocLink>
 
@@ -538,7 +538,7 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 [Rollup](#rollups) 交易使用 [欺诈证明](#fraud-proof) 提供增加[二层](#layer-2)的交易吞吐量，同时使用[主网](#mainnet)（一层）提供的安全保障。 与 [Plasma](#plasma)（一个类似的二层的解决方案）不同， Optimistic rollup 可以处理更复杂的交易类型 -- [EVM](#evm) 中任何可能的事情。 与 [Zk Rollup](#zk-rollups) 相比，他们确实有延迟问题，因为交易可以通过欺诈证据被质疑。
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/#optimistic-rollups">
+<DocLink to="/developers/docs/scaling/optimistic-rollups/">
   Optimistic Rollup
 </DocLink>
 
@@ -610,7 +610,7 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 一种[二层](#layer-2)扩容解决方案，将多笔交易分批提交到[以太坊主链](#mainnet)的单笔交易中。 这就可以降低 [gas](#gas) 成本，增加[交易](#transaction)吞吐量。 有些 Optimistic 和 ZK Rollup 使用两种不同的安全方法来提供扩容能力。
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/">
+<DocLink to="/developers/docs/scaling/#rollups">
   Rollup
 </DocLink>
 
@@ -774,7 +774,7 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 某些[二层](#layer-2)解决方案的安全模型，以提高速度，交易 [合并](/#rollups)为交易批并在单次交易中提交到以太坊。 交易计算在链下进行，然后提交给主链，并附带有效性证明。 这种方法提升了交易量，同时保证安全性。 一些 [rollup](#rollups) 使用的是[欺诈证明](#fraud-proof)。
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups">
+<DocLink to="/developers/docs/scaling/zk-rollups/">
   零知识汇总
 </DocLink>
 
@@ -830,7 +830,7 @@ Gigawei 的缩写，[ether](#ether) 的一个货币单位，通常用于计算 [
 
 使用[有效性证明的[ rollup ](#rollups)](#validity-proof)交易在使用[主网](#mainnet)（一层）安全性的同时提高[二层](#layer-2)交易吞吐量。 虽然他们无法处理复杂的交易类型，如 [Optimistic rollup](#optimistic-rollups)，但没有延迟问题，因为提交交易时可以证明有效。
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups">
+<DocLink to="/developers/docs/scaling/zk-rollups/">
   零知识汇总
 </DocLink>
 

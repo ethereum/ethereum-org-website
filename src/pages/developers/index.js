@@ -72,7 +72,7 @@ const H1 = styled.h1`
   font-family: ${(props) => props.theme.fonts.monospace};
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 110%;
   background: ${(props) => props.theme.colors.ednBackground};
   padding: 0.5rem;
@@ -80,7 +80,7 @@ const H1 = styled.h1`
 `
 
 const Subtitle = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
 `

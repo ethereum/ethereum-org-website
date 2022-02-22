@@ -48,7 +48,7 @@ summaryPoint4: このアップグレードは、メインネットとビーコ�
 <InfoBanner isWarning={false}>
   最近のレイヤ2スケーリングソリューションの研究開発の進展により、マージアップグレードが優先され、シャードチェーンに先立って行われることになりました。 これらは、メインネットのPoS移行後の焦点になります。
 
-[ロールアップの詳細](/developers/docs/scaling/layer-2-rollups/)
+[ロールアップの詳細](/developers/docs/scaling/#rollups)
 </InfoBanner>
 
 ## シャードチェーン バージョン 2: コードの実行 {#code-execution}

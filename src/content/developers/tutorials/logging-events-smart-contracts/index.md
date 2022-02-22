@@ -22,9 +22,9 @@ The most common event on the Ethereum blockchain at the time of writing this art
 event Transfer(address indexed from, address indexed to, uint256 value);
 ```
 
-The event signature are declared inside of the contract code and can be emitted with the emit keyword. For example the transfer event logs who sent the transfer (_from_), to who (_to_) and how much tokens were transferred (_value_).
+The event signature is declared inside of the contract code and can be emitted with the emit keyword. For example, the transfer event logs who sent the transfer (_from_), to who (_to_) and how much tokens were transferred (_value_).
 
-If we get back to our Counter smart contract and decide to log every time the value is changed. As this contract is not meant to be deployed but serve as a base for building another contract by extending it: it’s called an abstract contract. In the case of our counter example it would look like this:
+If we get back to our Counter smart contract and decide to log every time the value is changed. As this contract is not meant to be deployed but serve as a base for building another contract by extending it: it’s called an abstract contract. In the case of our counter example, it would look like this:
 
 ```solidity
 pragma solidity 0.5.17;

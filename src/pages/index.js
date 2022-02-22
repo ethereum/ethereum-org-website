@@ -44,12 +44,12 @@ const StyledContent = styled(Content)`
 `
 
 const H1 = styled.h1`
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 700;
   margin: 0;
   text-align: center;
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 32px;
+    font-size: 2rem;
   }
 `
 
@@ -162,7 +162,7 @@ const Description = styled.p`
   max-width: 55ch;
   text-align: center;
   align-self: center;
-  font-size: 20px;
+  font-size: 1.25rem;
   margin-top: 1rem;
 `
 
@@ -223,10 +223,10 @@ const FeatureImage = styled(GatsbyImage)`
 
 const Subtitle = styled.div`
   margin-bottom: 2rem;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 16px;
+    font-size: 1rem;
   }
 `
 
@@ -382,7 +382,7 @@ const StyledH2 = styled.h2`
   margin-bottom: 0.5rem;
   font-family: serif;
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 `
 
@@ -929,6 +929,7 @@ contract SimpleDomainRegistry {
                 key={idx}
                 title={tout.title}
                 description={tout.description}
+                alt={tout.alt}
                 to={tout.to}
                 image={tout.image}
               />
@@ -936,14 +937,8 @@ contract SimpleDomainRegistry {
           })}
         </StyledCardContainer>
         <StyledCalloutBanner
-          title={translateMessageId(
-            "page-index-contribution-banner-title",
-            intl
-          )}
-          description={translateMessageId(
-            "page-index-contribution-banner-description",
-            intl
-          )}
+          titleKey={"page-index-contribution-banner-title"}
+          descriptionKey={"page-index-contribution-banner-description"}
           image={getImage(data.finance)}
           maxImageWidth={600}
           alt={translateMessageId(
@@ -952,7 +947,7 @@ contract SimpleDomainRegistry {
           )}
         >
           <ButtonRow>
-            <ButtonLink to="/en/contributing/">
+            <ButtonLink to="/contributing/">
               <Translation id="page-index-contribution-banner-button" />
             </ButtonLink>
             <StyledButtonLink

@@ -31,7 +31,7 @@ sidebar: true
 
 ## 链下扩容 {#off-chain-scaling}
 
-链下解决方案与第一层主网分开实施，无需更改现有以太坊协议。 部分解决方案称为“第二层”解决方案，直接从第一层以太坊共识中获得安全性，例如 [rollups](/developers/docs/scaling/layer-2-rollups/) 或[状态通道](/developers/docs/scaling/state-channels/)。 其他解决方案包括建立不同形式的新链，这些新链单独从主网获得安全性， 例如[侧链](#sidechains)或 [plasma](#plasma) 链。 这些解决方案与主网进行通信，但为了实现各种不同的目标，它们获得安全性的方式也有所不同。
+链下解决方案与第一层主网分开实施，无需更改现有以太坊协议。 部分解决方案称为“第二层”解决方案，直接从第一层以太坊共识中获得安全性，例如 [rollups](/developers/docs/scaling/#rollups) 或[状态通道](/developers/docs/scaling/state-channels/)。 其他解决方案包括建立不同形式的新链，这些新链单独从主网获得安全性， 例如[侧链](#sidechains)或 [plasma](#plasma) 链。 这些解决方案与主网进行通信，但为了实现各种不同的目标，它们获得安全性的方式也有所不同。
 
 ### 二层扩容 {#layer-2-scaling}
 
@@ -45,10 +45,10 @@ sidebar: true
 
 Rollup 在第一层之外执行交易执行任务，并在达成共识时，在第一层公开数据。 由于交易数据包含在第一层区块中，可以通过原生的以太坊安全性来保证 rollup 的安全性。
 
-- [ZK-rollup](/developers/docs/scaling/layer-2-rollups/#zk-rollups)
-- [Optimistic rollup](/developers/docs/scaling/layer-2-rollups/#optimistic-rollups)
+- [ZK-rollup](/developers/docs/scaling/zk-rollups/)
+- [Optimistic rollup](/developers/docs/scaling/optimistic-rollups/)
 
-进一步了解 [rollup](/developers/docs/scaling/layer-2-rollups/)。
+进一步了解 [rollup](/developers/docs/scaling/#rollups)。
 
 #### 状态通道 {#channels}
 
@@ -64,7 +64,7 @@ Rollup 在第一层之外执行交易执行任务，并在达成共识时，在�
 
 ### 以太坊 Plasma 扩容解决方案 {#plasma}
 
-Plasma 是一条独立的区块链，锚定至以太坊主链，并使用欺诈证明（如[Optimistic rollup](/developers/docs/scaling/layer-2-rollups/#optimistic-rollups)）来仲裁争议。
+Plasma 是一条独立的区块链，锚定至以太坊主链，并使用欺诈证明（如[Optimistic rollup](/developers/docs/scaling/optimistic-rollups/)）来仲裁争议。
 
 进一步了解[以太坊 Plasma 扩容解决方案](/developers/docs/scaling/plasma/)。
 

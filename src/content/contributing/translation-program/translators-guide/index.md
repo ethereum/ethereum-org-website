@@ -13,6 +13,12 @@ This document serves as a general guide and is not specific to any one language.
 
 If you have any questions, suggestions or feedback, feel free to reach out to us at translations@ethereum.org, send a message to @ethdotorg on Crowdin, or [join our Discord](https://discord.gg/XVepFu7sqR), where you can message us in the #translations channel or reach out to any of the team members.
 
+### Using Crowdin {#using-crowdin}
+
+You can find basic instructions on how to join the project in Crowdin and how to use the Crowdin online editor on the [Translation Program page](/contributing/translation-program/#how-to-translate).
+
+If you would like to learn more about Crowdin and using some of its advanced feature, the [Crowdin knowledge base](https://support.crowdin.com/online-editor/) contains a lot of in-depth guides and overviews of all Crowdin functionality.
+
 ### Capturing the essence of the message {#capturing-the-essence}
 
 When translating ethereum.org content, avoid literal translations.

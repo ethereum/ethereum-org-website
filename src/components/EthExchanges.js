@@ -126,7 +126,7 @@ const SuccessContainer = styled.div`
 
 const EmptyStateText = styled.p`
   margin: 2rem;
-  font-size: 20px;
+  font-size: 1.25rem;
   max-width: 450px;
   text-align: center;
 `
@@ -137,7 +137,7 @@ const EmptyStateTextSingle = styled.p`
 `
 
 const Intro = styled.p`
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 140%;
   margin-top: 0rem;
   margin-bottom: 2rem;
@@ -187,6 +187,11 @@ export const cardListImage = graphql`
 
 // TODO move component into get-eth.js page?
 const EthExchanges = () => {
+  const intl = useIntl()
+  const placeholderString = translateMessageId(
+    "page-get-eth-exchanges-search",
+    intl
+  )
   const data = useStaticQuery(graphql`
     query {
       exchangesByCountry: allExchangesByCountryCsv {
@@ -426,7 +431,6 @@ const EthExchanges = () => {
     },
   }
 
-  const intl = useIntl()
   const lastUpdated = getLocaleTimestamp(
     intl.locale,
     data.timestamp.parent.fields.gitLogLatestDate
@@ -549,7 +553,7 @@ const EthExchanges = () => {
         classNamePrefix="react-select"
         options={exchangesByCountry}
         onChange={handleSelectChange}
-        placeholder={"Type where you live..."}
+        placeholder={placeholderString}
       />
       {!hasSelectedCountry && (
         <EmptyStateContainer>

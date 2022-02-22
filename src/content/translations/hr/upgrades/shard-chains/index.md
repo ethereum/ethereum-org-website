@@ -45,7 +45,7 @@ Kada se isporuče prvi lanci djelića, oni će samo pružiti dodatne podatke mre
 
 Rollup je tehnologija „sloja 2” koja postoji danas. Omogućuju aplikacijama dapp da grupiraju ili skupe transakcije u jednu transakciju izvan lanca, generiraju kriptografski dokaz i zatim ga predaju lancu. To smanjuje podatke potrebne za transakciju. Kombinirajući to s dodatnom dostupnošću podataka koju pružaju djelić dobivate 100 000 transakcija u sekundi.
 
-[Više o tehnologiji rollup](/developers/docs/scaling/layer-2-rollups/#rollups)
+[Više o tehnologiji rollup](/developers/docs/scaling/#rollups)
 
 ## Lanci djelića, verzija 2: izvršavanje koda {#code-execution}
 

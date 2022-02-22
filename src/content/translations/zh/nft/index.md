@@ -62,7 +62,7 @@ NFT 世界相对较新。 理论上，NFT 的应用范围是任何需要证明�
 
 #### POAP（出勤证明协议） {#poaps}
 
-如果您对 ethereum.org 做了贡献，即可认领 POAP NFT。 这些是证明您参加过活动的收藏品。 一些加密货币聚会使用 POAP 作为一种活动门票形式。 [关于贡献的更多信息](/en/contributing/#poap)。
+如果您对 ethereum.org 做了贡献，即可认领 POAP NFT。 这些是证明您参加过活动的收藏品。 一些加密货币聚会使用 POAP 作为一种活动门票形式。 [关于贡献的更多信息](/contributing/#poap)。
 
 ![ethereum.org POAP](../../../../assets/use-cases/poap.png)
 
@@ -208,7 +208,7 @@ Decentraland 是一款虚拟现实游戏，甚至允许玩家购买代表虚拟�
 您的 ENS 名称可以：
 
 - 接收加密货币和其他 NFT。
-- 指向一个去中心化网站，例如 [etherum.eth](https://ethereum.eth.link)。 [关于网站去中心化的更多信息](https://docs.ipfs.io/how-to/websites-on-ipfs/link-a-domain/#domain-name-service-dns)
+- 指向一个去中心化网站，例如 [ethereum.eth](https://ethereum.eth.link)。 [关于网站去中心化的更多信息](https://docs.ipfs.io/how-to/websites-on-ipfs/link-a-domain/#domain-name-service-dns)
 - 存储任何信息，包括电子邮件地址和 Twitter 用户名等个人资料信息。
 
 <Divider />

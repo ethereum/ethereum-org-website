@@ -67,14 +67,14 @@ const LeaderboardContainer = styled.div`
 
 const Title = styled.p`
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: ${(props) => props.theme.colors.text};
   margin-bottom: 0rem;
   margin-left: 0.5rem;
 `
 
 const Subtitle = styled.div`
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
   max-width: 480px;
@@ -113,7 +113,7 @@ const StyledCardContainer = styled(CardContainer)`
 `
 
 const H2 = styled.h2`
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
   line-height: 22px;
@@ -157,7 +157,7 @@ const Client = styled(GatsbyImage)`
 
 const ClientIntro = styled.p`
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: ${(props) => props.theme.colors.text300};
   font-weight: 600;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
@@ -229,6 +229,11 @@ const BugBountiesPage = ({ data, location }) => {
       title: "Nimbus",
       link: "https://our.status.im/tag/nimbus/",
       image: getImage(data.nimbusSmall),
+    },
+    {
+      title: "Lodestar",
+      link: "https://chainsafe.github.io/lodestar/",
+      image: getImage(data.lodestarSmall),
     },
   ]
 
@@ -312,6 +317,7 @@ const BugBountiesPage = ({ data, location }) => {
         <Client image={lighthouseImage} />
         <Client image={tekuImage} />
         <Client image={getImage(data.nimbus)} />
+        <Client image={getImage(data.lodestar)} />
       </ClientRow>
       <StyledGrayContainer id="rules">
         <Content>
@@ -559,6 +565,9 @@ export const query = graphql`
     prysm: file(relativePath: { eq: "upgrades/prysm.png" }) {
       ...ClientLogos
     }
+    lodestar: file(relativePath: { eq: "upgrades/lodestar.png" }) {
+      ...ClientLogos
+    }
     lighthouse: file(relativePath: { eq: "upgrades/lighthouse.png" }) {
       ...ClientLogos
     }
@@ -577,6 +586,9 @@ export const query = graphql`
       ...ClientLogos
     }
     prysmSmall: file(relativePath: { eq: "upgrades/prysm.png" }) {
+      ...ClientLogosSmall
+    }
+    lodestarSmall: file(relativePath: { eq: "upgrades/lodestar.png" }) {
       ...ClientLogosSmall
     }
     lighthouseSmallLight: file(

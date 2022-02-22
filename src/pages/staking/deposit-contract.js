@@ -60,7 +60,7 @@ const Title = styled.h1`
 `
 
 const Subtitle = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
   margin-bottom: 3.5rem;
@@ -91,7 +91,7 @@ const CardTag = styled.div`
   color: ${(props) => props.theme.colors.buttonColor};
   border-radius: 3px 3px 0px 0px;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 0.875rem;
 `
 
 const AddressCard = styled.div`
@@ -157,7 +157,7 @@ const CardTitle = styled.h2`
 const Caption = styled.div`
   color: ${(props) => props.theme.colors.text200};
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     margin-bottom: 2rem;
   }
