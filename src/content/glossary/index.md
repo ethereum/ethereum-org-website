@@ -781,6 +781,10 @@ A [layer 2](#layer-2) solution where a channel is set up between participants, w
   State channels
 </DocLink>
 
+### supermajority {#supermajority}
+
+Supermajority is the term given for an amount exceeding 2/3 (66%) of the total staked ether on the [Beacon Chain](#beacon-chain). A supermajority vote is required for blocks to be [finalized](#finality) on the Beacon Chain.
+
 ### sync committee {#sync-committee}
 
 A sync committee is a randomly selected group of [validators](#validator) on the [Beacon Chain](#beacon-chain) that refresh every ~27 hours. Their purpose is to add their signatures to valid block headers. Sync committees allow [light clients](#lightweight-client) to keep track of the head of the blockchain without having to access the entire validator set.
