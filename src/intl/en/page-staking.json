@@ -32,7 +32,7 @@
   "page-staking-more-sharding": "More on sharding",
   "page-staking-pool": "Stake in a pool",
   "page-staking-pool-desc": "If you have less than 32 ETH, you will be able to add a smaller stake to staking pools. Some companies can do it all on your behalf so you won't have to worry about staying online. Here are some companies to check out.",
-  "page-staking-rocket-pool": "Rocket Pool allows users with only 16 ETH to run a node on the Ethereum network by pairing the node operator's ETH with 16 more from the protocol's deposit pool. If you'd like to participate in the protocol without running a node, you can swap ETH for their liquid token rETH with as little as 0.01 ETH. This is the only truly decentralized staking pool.",
+  "page-staking-rocket-pool": "You can stake on Rocket Pool by swapping ETH for Rocket Pool's liquid token rETH with as little as 0.01 ETH. Want to run a node? You can also run a staking node on Rocket Pool starting from 16 ETH. The remaining ETH gets assigned from the Rocket Pool protocol, using ETH users have deposited to the pool.",
   "page-staking-pos-explained": "Proof-of-stake explained",
   "page-staking-pos-explained-desc": "Staking is what you need to do to become a validator in a proof-of-stake system. This is a consensus mechanism that is going to replace the proof-of-work system currently in place. Consensus mechanisms are what keep blockchains like Ethereum secure and decentralized.",
   "page-staking-pos-explained-desc-1": "Proof-of-stake helps secure the network in a number of ways:",
