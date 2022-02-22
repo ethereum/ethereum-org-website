@@ -1392,6 +1392,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/rojotek"><img src="https://avatars.githubusercontent.com/u/261271?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rob Dawson</b></sub></a><br /><a href="#content-rojotek" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/asashour"><img src="https://avatars.githubusercontent.com/u/2410127?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ahmed Ashour</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=asashour" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="http://blog.notdot.net/"><img src="https://avatars.githubusercontent.com/u/17865?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nick Johnson</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Arachnid" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
