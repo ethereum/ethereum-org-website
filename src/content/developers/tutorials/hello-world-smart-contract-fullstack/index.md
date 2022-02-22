@@ -417,7 +417,7 @@ CONTRACT_ADDRESS = "0x<your contract address>"
 
 ### Grab your contract ABI {#grab-your-contract-ABI}
 
-Our contract [ABI (Application Binary Interface)](/glossary/#abi) is the interface to interact with our smart contract. Hardhat automatically generates an ABI and saves it in `HelloWorld.json`. To use the ABI, we'll need to parse out the contents by adding the following lines of code to our `contract-interact.js` file:
+Our contract [ABI (Application Binary Interface)](/glossary/#abi) is the interface to interact with our smart contract. Hardhat automatically generates an ABI and saves it in `HelloWorld.json`. To use the ABI, we'll need to parse out the contents by adding the following lines of code to our `interact.js` file:
 
 ```javascript
 // interact.js
