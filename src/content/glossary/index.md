@@ -470,7 +470,7 @@ An Ethereum client that does not store a local copy of the [blockchain](#blockch
 
 ### LMD_GHOST {#lmd-ghost}
 
-The [fork-choice algorithm](fork-choice-algorithm) used by Ethereum's consensus clients to identify the head of the chain. LMD-GHOST is an acronym standing for "Latest Message Driven Greediest Heaviest Observed SubTree" which means that the head of the chain is the block with the greatest accumulation of [attestations](#attestation) in its history.
+The [fork-choice algorithm](#fork-choice-algorithm) used by Ethereum's consensus clients to identify the head of the chain. LMD-GHOST is an acronym standing for "Latest Message Driven Greediest Heaviest Observed SubTree" which means that the head of the chain is the block with the greatest accumulation of [attestations](#attestation) in its history.
 
 ## M {#section-m}
 
