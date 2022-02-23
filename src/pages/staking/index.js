@@ -270,6 +270,14 @@ const StakingPage = ({ data, location }) => {
                 <Translation id="page-staking-pool" />
               </H3>
               <p>
+                <Translation id="page-staking-rocket-pool" />
+              </p>
+              <p>
+                <Link to="https://rocketpool.net">
+                  <Translation id="Learn more on their website" />
+                </Link>
+              </p>
+              <p>
                 <Translation id="page-staking-pool-desc" />
               </p>
               <p>

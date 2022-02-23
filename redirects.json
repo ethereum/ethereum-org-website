@@ -320,6 +320,10 @@
     "toPath": "/:splat/about/#open-jobs"
   },
   {
+    "fromPath": "/*/about/product-designer",
+    "toPath": "/:splat/about/#open-jobs"
+  },
+  {
     "fromPath": "/*/use",
     "toPath": "/:splat/dapps/"
   },

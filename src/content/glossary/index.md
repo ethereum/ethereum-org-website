@@ -107,6 +107,10 @@ The first of two [hard forks](#hard-fork) for the [Metropolis](#metropolis) deve
 
 ## C {#section-c}
 
+### checkpoint {#checkpoint}
+
+The [Beacon Chain](#beacon-chain) has a tempo divided into slots (12 seconds) and epochs (32 slots). The first slot in each epoch is a checkpoint. When a [supermajority](#supermajority) of validators attests to the link between two checkpoints, they can be [justified](#justification) and then when another checkpoint is justified on top, they can be [finalized](#finality).
+
 ### compiling {#compiling}
 
 Converting code written in a high-level programming language (e.g., [Solidity](#solidity)) into a lower-level language (e.g., EVM [bytecode](#bytecode)).
@@ -346,6 +350,10 @@ A denomination of [ether](#ether). 1 finney = 10<sup>15</sup> [wei](#wei). 10<su
 
 A change in protocol causing the creation of an alternative chain, or a temporal divergence in two potential block paths during mining.
 
+### fork-choice algorithm {fork-choice-algorithm}
+
+The algorithm used to identify the head of the blockchain. On the execution layer the head of the chain is identified as the one with the greatest total difficulty behind it. This means the true head of the chain is the one that required the most work to mine it. On the consensus layer the algorithm observes the accumulated attestations from validators ([LMD_GHOST](#lmd-ghost)).
+
 ### fraud proof {#fraud-proof}
 
 A security model for certain [layer 2](#layer-2) solutions where, to increase speed, transactions are [rolled up](#rollups) into batches and submitted to Ethereum in a single transaction. They are assumed valid but can be challenged if fraud is suspected. A fraud proof will then run the transaction to see if fraud took place. This method increases the amount of transactions possible while maintaining security. Some [rollups](#rollups) use [validity proofs](#validity-proof).
@@ -499,6 +507,10 @@ A special type of [contract](#smart-contract) that has no payable functions, no 
 An Ethereum client that does not store a local copy of the [blockchain](#blockchain), or validate blocks and [transactions](#transaction). It offers the functions of a [wallet](#wallet) and can create and broadcast transactions.
 
 <Divider />
+
+### LMD_GHOST {#lmd-ghost}
+
+The [fork-choice algorithm](#fork-choice-algorithm) used by Ethereum's consensus clients to identify the head of the chain. LMD-GHOST is an acronym standing for "Latest Message Driven Greediest Heaviest Observed SubTree" which means that the head of the chain is the block with the greatest accumulation of [attestations](#attestation) in its history.
 
 ## M {#section-m}
 
@@ -768,6 +780,10 @@ A [layer 2](#layer-2) solution where a channel is set up between participants, w
 <DocLink to="/developers/docs/scaling/state-channels/#state-channels">
   State channels
 </DocLink>
+
+### supermajority {#supermajority}
+
+Supermajority is the term given for an amount exceeding 2/3 (66%) of the total staked ether on the [Beacon Chain](#beacon-chain). A supermajority vote is required for blocks to be [finalized](#finality) on the Beacon Chain.
 
 ### sync committee {#sync-committee}
 

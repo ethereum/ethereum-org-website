@@ -98,7 +98,7 @@ Many bridging solutions adopt models between these two extremes with varying deg
 
 Bridges are in the early stages of development. It is likely that the optimal bridge design has not yet been discovered. Interacting with any type of bridge carries risk:
 
-- **Smart Contract Risk —** the risk of a bug in the code that can cause user funds to be
+- **Smart Contract Risk —** the risk of a bug in the code that can cause user funds to be lost
 - **Technology Risk —** software failure, buggy code, human error, spam, and malicious attacks can possibly disrupt user operations
 
 Moreover, since trusted bridges add trust assumptions, they carry additional risks such as:
@@ -122,6 +122,7 @@ Bridges are crucial to onboarding users onto Ethereum L2s, and even for users wh
 
 ## Further reading {#further-reading}
 
+- [What Are Blockchain Bridges And How Can We Classify Them?](https://blog.li.finance/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa) _Feb 18, 2021 - Arjun Chand_
 - [Blockchain Bridges: Building Networks of Cryptonetworks](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) _Sep 8, 2021 - Dmitriy Berenzon_
 - [Bridges in Crypto-Space](https://medium.com/chainsafe-systems/bridges-in-crypto-space-12e158f5fd1e) _Aug 23, 2021 - Ben Adar Hyman_
 - [The Interoperability Trilemma](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17) _Oct 1, 2021 - Arjun Bhuptani_
