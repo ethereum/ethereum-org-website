@@ -98,7 +98,7 @@ Many bridging solutions adopt models between these two extremes with varying deg
 
 Bridges are in the early stages of development. It is likely that the optimal bridge design has not yet been discovered. Interacting with any type of bridge carries risk:
 
-- **Smart Contract Risk —** the risk of a bug in the code that can cause user funds to be
+- **Smart Contract Risk —** the risk of a bug in the code that can cause user funds to be lost
 - **Technology Risk —** software failure, buggy code, human error, spam, and malicious attacks can possibly disrupt user operations
 
 Moreover, since trusted bridges add trust assumptions, they carry additional risks such as:
