@@ -1398,6 +1398,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/nickgaski"><img src="https://avatars.githubusercontent.com/u/16326255?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nick Gaski</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=nickgaski" title="Documentation">📖</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/rahul-bansal-66a9581a6/"><img src="https://avatars.githubusercontent.com/u/64414414?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rahul</b></sub></a><br /><a href="#ideas-RahulBansal123" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/frxncismor"><img src="https://avatars.githubusercontent.com/u/30633617?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Francisco J. Moreno</b></sub></a><br /><a href="#translation-frxncismor" title="Translation">🌍</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=frxncismor" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/Kansas-Guy"><img src="https://avatars.githubusercontent.com/u/87861134?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Zach</b></sub></a><br /><a href="#content-Kansas-Guy" title="Content">🖋</a></td>
   </tr>
 </table>
 
