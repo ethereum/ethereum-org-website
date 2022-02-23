@@ -32,7 +32,7 @@ If you have questions at any point, feel free to reach out in the [Alchemy Disco
 
 ### Connect to the Ethereum network {#connect-to-the-ethereum-network}
 
-There are many ways to make requests to the Ethereum chain. For simplicity, we'll use a free account on Alchemy, a blockchain developer platform and API that allows us to communicate with the Ethereum chain without running a node ourselves. Alchemy also has developer tools for monitoring and analytics; we'll take advantage of these in this tutorial to understand what's going on under the hood in our smart contract deployment. 
+There are many ways to make requests to the Ethereum chain. For simplicity, we'll use a free account on Alchemy, a blockchain developer platform and API that allows us to communicate with the Ethereum chain without running a node ourselves. Alchemy also has developer tools for monitoring and analytics; we'll take advantage of these in this tutorial to understand what's going on under the hood in our smart contract deployment.
 
 ### Create your app and API key {#create-your-app-and-api-key}
 
@@ -88,7 +88,7 @@ mkdir hello-world
 cd hello-world
 ```
 
-Now that we’re inside our project folder, we’ll use `npm init` to initialize the project. 
+Now that we’re inside our project folder, we’ll use `npm init` to initialize the project.
 
 > If you don’t have npm installed yet, follow [these instructions to install Node.js and npm](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm).
 
@@ -183,7 +183,7 @@ You might be asking yourself, when are we going to write code? It's time!
 Open up the hello-world project in your favorite editor. Smart contracts most commonly are written in Solidity, which we will use to write our smart contract.‌
 
 1. Navigate to the `contracts` folder and create a new file called `HelloWorld.sol`
-2. Below is a sample Hello World smart contract that we will be using for this tutorial. Copy the contents below into the `HelloWorld.sol` file. 
+2. Below is a sample Hello World smart contract that we will be using for this tutorial. Copy the contents below into the `HelloWorld.sol` file.
 
 _Note: Be sure to read the comments to understand what this contract does._
 
@@ -268,7 +268,6 @@ In your project directory type:
 ```bash
 npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 ```
-
 
 ### Step 13: Update hardhat.config.js {#step-13-update-hardhat.config.js}
 
@@ -382,7 +381,7 @@ Here you’ll see a handful of JSON-RPC methods that Hardhat/Ethers made under t
 
 ## Part 2: Interact with your Smart Contract {#part-2-interact-with-your-smart-contract}
 
-Now that we've successfully deployed a smart contract to the Ropsten network let's learn how to interact with it. 
+Now that we've successfully deployed a smart contract to the Ropsten network let's learn how to interact with it.
 
 ### Create a interact.js file {#create-a-interactjs-file}
 
@@ -431,7 +430,6 @@ console.log(JSON.stringify(contract.abi))
 ```
 
 To see your ABI printed to the console, navigate to your terminal and run:
-
 
 ```bash
 npx hardhat run scripts/interact.js
@@ -605,6 +603,7 @@ After adding it, your `.env`file should look like this:
 API_URL = "https://eth-ropsten.alchemyapi.io/v2/your-api-key"
 PUBLIC_KEY = "your-public-account-address"
 PRIVATE_KEY = "your-private-account-address"
+CONTRACT_ADDRESS = "your-contract-address"
 ETHERSCAN_API_KEY = "your-etherscan-key"
 ```
 
@@ -612,7 +611,7 @@ ETHERSCAN_API_KEY = "your-etherscan-key"
 
 #### Install hardhat-etherscan {#install-hardhat-etherscan}
 
-Publishing your contract to Etherscan using Hardhat is straightforward. You will first need to install the `hardhat-etherscan` plugin to get started. `Hardhat-etherscan` will automatically verify the smart contract's source code and ABI on Etherscan. To add this, in the `hello-world` directory run:
+Publishing your contract to Etherscan using Hardhat is straightforward. You will first need to install the `hardhat-etherscan` plugin to get started. `hardhat-etherscan` will automatically verify the smart contract's source code and ABI on Etherscan. To add this, in the `hello-world` directory run:
 
 ```text
 npm install --save-dev @nomiclabs/hardhat-etherscan
@@ -627,8 +626,7 @@ require("dotenv").config()
 require("@nomiclabs/hardhat-ethers")
 require("@nomiclabs/hardhat-etherscan")
 
-const { API_URL, PRIVATE_KEY } = process.env
-const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY
+const { API_URL, PRIVATE_KEY, ETHERSCAN_API_KEY } = process.env
 
 module.exports = {
   solidity: "0.7.3",
@@ -690,7 +688,7 @@ By the end of this tutorial, you'll know how to:
 
 For this dapp, we'll be using [React](https://reactjs.org/) as our frontend framework; however, it's important to note that we won't be spending much time breaking down its fundamentals, as we'll mostly be focusing on bringing Web3 functionality to our project.
 
-As a prerequisite, you should have a beginner-level understanding of React. If not, we recommend completing the official [Intro to React tutorial](https://reactjs.org/tutorial/tutorial.html). 
+As a prerequisite, you should have a beginner-level understanding of React. If not, we recommend completing the official [Intro to React tutorial](https://reactjs.org/tutorial/tutorial.html).
 
 ### Clone the starter files {#clone-the-starter-files}
 
@@ -731,7 +729,6 @@ Doing so should open [http://localhost:3000/](http://localhost:3000/) in your br
 If you try clicking either button, you'll notice that they don't work—that's because we still need to program their functionality.
 
 #### The `HelloWorld.js` component {#the-helloworld-js-component}
-
 
 Let's go back into the `src` folder in our editor and open the `HelloWorld.js` file. It's super important that we understand everything in this file, as it is the primary React component we will be working on.
 
@@ -950,7 +947,7 @@ With this endpoint ready, it's time to load our smart contract!
 
 #### Loading your Hello World smart contract {#loading-your-hello-world-smart-contract}
 
-To load your Hello World smart contract, you'll need its contract address and ABI, both of which can be found on Etherscan if you completed [Part 3 of this tutorial.](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/submitting-your-smart-contract-to-etherscan)
+To load your Hello World smart contract, you'll need its contract address and ABI, both of which can be found on Etherscan if you completed [Part 3 of this tutorial.](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)
 
 #### How to get your contract ABI from Etherscan {#how-to-get-your-contract-abi-from-etherscan}
 
