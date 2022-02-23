@@ -532,7 +532,7 @@ A network [node](#node) that finds valid [proof-of-work](#pow) for new blocks, b
 
 ### Mint {#mint}
 
-It refers to the process of issuing new coins/tokens.
+Minting is the process of creating new coins and bringing them into circulation so that they can be traded. It's a decentralised mechanism to create a new token without the involvement of the central authority.
 
 <Divider />
 
