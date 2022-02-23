@@ -6620,6 +6620,15 @@
         "translation",
         "doc"
       ]
+    },
+    {
+      "login": "Kansas-Guy",
+      "name": "Zach",
+      "avatar_url": "https://avatars.githubusercontent.com/u/87861134?v=4",
+      "profile": "https://github.com/Kansas-Guy",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
