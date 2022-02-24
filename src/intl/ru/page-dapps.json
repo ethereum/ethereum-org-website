@@ -1,5 +1,5 @@
 {
-  "page-dapps-1inch-logo-alt": "1-дюймовый логотип",
+  "page-dapps-1inch-logo-alt": "Логотип 1inch",
   "page-dapps-aave-logo-alt": "Логотип Aave",
   "page-dapps-add-button": "Предложить децентрализованное приложение",
   "page-dapps-add-title": "Добавить децентрализованное приложение",
@@ -84,6 +84,8 @@
   "page-dapps-dapp-description-token-sets": "Стратегии инвестирования, которые автоматически ребалансируют портфель.",
   "page-dapps-dapp-description-tornado-cash": "Отправляйте анонимные транзакции в Ethereum.",
   "page-dapps-dapp-description-uniswap": "Легко обменивайте токены или предоставляйте их для получения наград в процентах.",
+  "page-dapps-docklink-dapps": "О децентрализованных приложениях",
+  "page-dapps-docklink-smart-contracts": "Умные контракты",
   "page-dapps-dark-forest-logo-alt": "Логотип Dark Forest",
   "page-dapps-decentraland-logo-alt": "Логотип Decentraland",
   "page-dapps-index-coop-logo-alt": "Логотип Index Coop",
