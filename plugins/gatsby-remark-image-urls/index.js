@@ -16,7 +16,10 @@ const isRelativeUrl = require("is-relative-url")
  */
 module.exports = ({ markdownNode, markdownAST }) => {
   const fileAbsoluteDir = path.dirname(markdownNode.fileAbsolutePath)
-  const sourceAbsoluteDir = fileAbsoluteDir.replace(/translations\/\w{2}\//, "")
+  const sourceAbsoluteDir = fileAbsoluteDir.replace(
+    /translations\/\w{2}(-\w{2})?\//,
+    ""
+  )
   const relativePath = path.relative(fileAbsoluteDir, sourceAbsoluteDir)
 
   // if it is not a translated file, skip it
