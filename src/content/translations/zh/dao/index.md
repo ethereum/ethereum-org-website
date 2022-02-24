@@ -6,7 +6,7 @@ template: use-cases
 emoji: ":handshake:"
 sidebar: true
 sidebarDepth: 2
-image: ../../assets/use-cases/dao-2.png
+image: ../../../../assets/use-cases/dao-2.png
 alt: DAO 代表在对提案投票。
 summaryPoint1: 没有集中领导的成员制社区。
 summaryPoint2: 与网上陌生人合作的安全方式。
