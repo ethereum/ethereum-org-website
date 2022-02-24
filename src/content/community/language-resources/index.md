@@ -66,8 +66,8 @@ If you are bilingual and want to help us reach more people, you can also get inv
 
 **For cryptography researchers**
 
-- [SecbitLabs](https://mp.weixin.qq.com/s/69_tqBJpr_sbaKtR1sBRMw) - a WeChat acccount, explaining cryptography, security, etc.
-- [Sparkbyte](https://mp.weixin.qq.com/s/9KgKTc_jtJ7bWKdbNPoqvQ) - a WeChat acccount, explaining zk technology
+- [SecbitLabs](https://mp.weixin.qq.com/s/69_tqBJpr_sbaKtR1sBRMw) - a WeChat account, explaining cryptography, security, etc.
+- [Sparkbyte](https://mp.weixin.qq.com/s/9KgKTc_jtJ7bWKdbNPoqvQ) - a WeChat account, explaining zk technology
 
 ### French {#fr}
 
