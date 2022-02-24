@@ -118,6 +118,7 @@ Uma das maiores razões pelas quais as pessoas sofrem golpes com criptomoedas é
 <DocLink to="/eth/">
   O que é ether?
 </DocLink>
+
 <Divider />
 
 ## Segurança da carteira {#wallet-security}
