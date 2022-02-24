@@ -64,7 +64,7 @@ We use NFTs to give back to our contributors and we've even got our own NFT doma
 
 If you contribute to ethereum.org, you can claim a POAP NFT. These are collectibles that prove you participated in an event. Some crypto meetups have used POAPs as a form of ticket to their events. [More on contributing](/contributing/#poap).
 
-![ethereum.org POAP](../../assets/use-cases/poap.png)
+![ethereum.org POAP](./poap.png)
 
 #### ethereum.eth {#ethereum-dot-eth}
 

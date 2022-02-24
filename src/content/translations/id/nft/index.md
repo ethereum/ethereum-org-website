@@ -64,7 +64,7 @@ Kami menggunakan NFT untuk membalas jasa para kontributor dan kami bahkan memili
 
 Jika Anda berkontribusi ke ethereum.org, Anda dapat mengklaim NFT POAP. Ini adalah barang koleksi yang membuktikan Anda berpartisipasi dalam suatu acara. Beberapa pertemuan kripto telah menggunakan POAP sebagai bentuk tiket ke acara mereka. [Selengkapnya tentang berkontribusi](/contributing/#poap).
 
-![POAP ethereum.org](../../../../assets/use-cases/poap.png)
+![POAP ethereum.org](./poap.png)
 
 #### ethereum.eth {#ethereum-dot-eth}
 
