@@ -6,7 +6,7 @@ template: use-cases
 emoji: ":handshake:"
 sidebar: true
 sidebarDepth: 2
-image: ../../../../assets/use-cases/dao-2.png
+image: ../../assets/use-cases/dao-2.png
 alt: DAO 代表在对提案投票。
 summaryPoint1: 没有集中领导的成员制社区。
 summaryPoint2: 与网上陌生人合作的安全方式。
@@ -76,7 +76,7 @@ _通常用于联系更紧密、以人为中心的组织，例如慈善机构、�
 之所以能够做到这一点，是因为智能合约一旦在以太坊中生效，就无法被篡改。 一切都是公开的，只要修改代码（DAO 组织规则）就会被发现。
 
 <DocLink to="/developers/docs/smart-contracts/">
-  了解关于智能合约的更多信息
+  了解更多关于智能合约的信息
 </DocLink>
 
 ## 以太坊与 DAO {#ethereum-and-daos}
@@ -92,7 +92,7 @@ _通常用于联系更紧密、以人为中心的组织，例如慈善机构、�
 
 ### 加入 DAO {#join-a-dao}
 
-- [以太坊社区中的 DAO](/community/#decentralized-autonomous-organizations-daos/community/#decentralized-autonomous-organizations-daos)
+- [以太坊社区中的 DAO](/community/get-involved/#decentralized-autonomous-organizations-daos)
 - [DAOHaus 的 DAO 列表](https://app.daohaus.club/explore)
 
 ### 启动 DAO {#start-a-dao}
