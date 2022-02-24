@@ -234,7 +234,7 @@ Avec le trading centralisé, vous devez déposer vos actifs avant les échanges 
 
 Il existe des outils de gestion de fonds sur Ethereum qui vous permettront de développer votre portefeuille en vous appuyant sur la stratégie de votre choix. C'est automatique, ouvert à tous, et personne ne pourra vous demander de commission.
 
-Voilà un bon exemple [ DeFi Pulse Index fund (DPI)](https://defipulse.com/blog/defi-pulse-index/). C'est un fond qui se rééquilibre automatiquement pour garantir qu'il inclue toujours
+Voilà un bon exemple [DeFi Pulse Index fund (DPI)](https://defipulse.com/blog/defi-pulse-index/). C'est un fond qui se rééquilibre automatiquement pour garantir qu'il inclue toujours
 les meilleurs DeFi tokens par capitalisation boursière. Pas besoin de gérer les détails et vous pouvez retirer les fonds quand bon vous semble.</p>
 
 <ButtonLink to="/dapps/?category=finance">
