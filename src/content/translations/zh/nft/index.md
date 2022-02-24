@@ -6,7 +6,7 @@ template: use-cases
 emoji: ":frame_with_picture:"
 sidebar: true
 sidebarDepth: 2
-image: ../../assets/infrastructure_transparent.png
+image: ../../../../assets/infrastructure_transparent.png
 alt: 通过全息图显示的 ETH 徽标。
 summaryPoint1: 一种可以用以太坊资产表示任何独特事物的方法。
 summaryPoint2: NFT 相比较以往，更能赋予内容创作者更多的权利。

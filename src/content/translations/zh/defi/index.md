@@ -5,7 +5,7 @@ lang: zh
 template: use-cases
 emoji: ":money_with_wings:"
 sidebar: true
-image: ../../assets/use-cases/defi.png
+image: ../../../../assets/use-cases/defi.png
 alt: 由乐高积木拼成的 ETH 徽标。
 sidebarDepth: 2
 summaryPoint1: 当前金融体系的全球性、开放性替代方案。
