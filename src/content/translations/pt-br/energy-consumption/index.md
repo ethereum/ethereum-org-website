@@ -35,7 +35,7 @@ Há uma cadeia funcional com base no protocolo de prova de participação denomi
 
 Além de tornar o conceito de prova de participação mais confiável, a Beacon Chain também permitirá avaliar o uso de energia do Ethereum após a integração. Uma [estimativa recente](https://blog.ethereum.org/2021/05/18/country-power-no-more/) sugeriu que a mudança para a prova de participação poderia resultar em uma redução de 99,95% no consumo total de energia. Ou seja, a prova de participação seria 2.000 vezes mais eficiente do ponto de vista energético do que a prova de trabalho. Desta maneira, o consumo de energia do Ethereum seria aproximadamente igual ao custo de usar um computador pessoal de escritório para cada nó da rede.
 
-![imagem](energy_use_per_transaction.png)
+![imagem](./energy_use_per_transaction.png)
 
 <p style="text-align: center;"><small><i>As estimativas do consumo energético da prova de trabalho (PoW) por transação mostradas neste imagem se baseiam em <a href="https://blog.ethereum.org/2021/05/18/country-power-no-more/" target="_blank" rel="noopener noreferrer">dados de maio de 2021</a>, os quais sugerem um consumo de até <a href="https://digiconomist.net/ethereum-energy-consumption" target="_blank" rel="noopener noreferrer">175,56 kWh</a></i></small></p>
 
