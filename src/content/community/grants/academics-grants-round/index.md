@@ -9,32 +9,32 @@ sidebarDepth: 2
 # Academics Grants Round {#academics-grants-round}
 
 <InfoBanner>
-  This round is now open - apply before April 22, 2022! <a href="https://esp.ethereum.foundation/academics-grants/" target="_blank">Apply here</a>.
+  This call is now open! Apply before April 22, 2022! <a href="https://esp.ethereum.foundation/academics-grants/" target="_blank">Apply here</a>.
 </InfoBanner>
 
 _The Ethereum Foundation is sponsoring a wave of grants to support academic work related to Ethereum. This grants round has up to $750.000 in total available. Proposals are due <b>April 22, 2022</b>. Here are all the details you need._
 
 <Divider />
 
-We’re calling all those interested in creating knowledge around the Ethereum ecosystem!
+We’re calling all those interested in expanding academic knowledge throughout the Ethereum ecosystem!
 
-Over recent years, the Ethereum community has grown immensely by putting together developers, investors, artists, companies and even governments with a shared vision of impact for this technology.
+The Ethereum community has grown immensely as developers, artists, companies, and even governments work together to make a positive impact with this technology.
 
-With all the progress we’ve made so far, we still lack formal academic research on Ethereum, specifically when it comes to zero-knowledge proofs, cryptography and applied cryptography, economics, computation, cybersecurity, protocol and consensus mechanisms, formal verification, P2P networking, and hardware, just to mention a few.
+With this grants round, the Ethereum Foundation welcomes more academics to the table to push forward formal academic research in related domains. Such domains include theoretical cryptograpy and mathematics, applied cryptography, zero-knowledge proofs, cryptography and applied cryptography, economics, computation, cybersecurity, protocol and consensus mechanisms, formal verification, P2P networking, and hardware, just to mention a few.
 
-The Ethereum Foundation is therefore opening this grants round targeting academia with the goal to stimulate open–source formal research related to Ethereum.
+The Ethereum Foundation is excited to expand Ethereum’s reach across more of academia through this grants round.
 
 ## Submit proposal {#submit-proposal}
 
-Individual researchers with proven academic background, research centers, universities, think-tanks, educators and other stakeholders devoting to research on matters related to Ethereum and its ecosystem are encouraged to apply.
+Individual researchers with academic background, research centers, universities, think-tanks, educators and other stakeholders interested in research related to Ethereum and its ecosystem are encouraged to apply.
 
 Anyone is free to participate in this grants round, as an individual or with a team.
 
-Research outputs are encouraged but not limited to the following [wishlist](https://notes.ethereum.org/1yuzsI1iSY2HjXrImX5y9Q).
+Research outputs are encouraged but not limited to the following [wishlist](https://notes.ethereum.org/@djrtwo/academic-grants-2022).
 
 We welcome any stage of research, whether it’s a new research idea based on the wishlist, a follow-up of a research paper on Ethereum you already undertook, or a lab experiment.
 
-Grants will be awarded on a rolling basis and on a case-by-case. You may enter more than one proposal so long as each proposal is unique and meets the requirements.
+Grants will be awarded on a rolling basis and on a case-by-case. You may enter more than one proposal so long as each proposal is unique and meets [the requirements](#requirements).
 
 [Submit your application here](https://esp.ethereum.foundation/academics-grants/).
 
@@ -61,7 +61,7 @@ _Surprise us with your creativity! But here are a few selection criteria conside
 
 ## Wishlist {#wishlist}
 
-The Ethereum Foundation is interested in research and academic output in the following domain areas, but don’t let this restrict your creativity. Check out our [wishlist](https://notes.ethereum.org/1yuzsI1iSY2HjXrImX5y9Q).
+The Ethereum Foundation is interested in research and academic output in the following domain areas, but don’t let this restrict your creativity. Check out our [wishlist](https://notes.ethereum.org/@djrtwo/academic-grants-2022).
 
 ## Next steps and support {#next-steps-and-support}
 
@@ -106,7 +106,7 @@ title="What stage does my idea or project need to be in?">
 	contentPreview="Formal research output which is open source."
 	title="What should the output be?">
 
-   <p>We are aiming to receive academic and formal research outputs, be it a research paper, an experimental report or some sort of comprehensive research output. Whatever the output, the information should be open-sourced and available for the broader community to use. The intellectual property can still be owned by the research team, but it is key that the output is open source.</p>
+   <p>We are aiming to receive academic and formal research outputs, be it a research paper, an experimental report or some sort of comprehensive research output. Whatever the output, the information should be open-sourced and available for the broader community to use. The Intellectual Property can still be owned by the research team, but it is key that the output is open source.</p>
 
 </ExpandableCard>
 
