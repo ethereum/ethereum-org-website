@@ -248,7 +248,8 @@ We’re stuck at block zero until there’s a transaction to mine, so let’s gi
 In [10]: tx_hash = w3.eth.send_transaction({
    'from': w3.eth.accounts[0],
    'to': w3.eth.accounts[1],
-   'value': w3.toWei(3, 'ether')
+   'value': w3.toWei(3, 'ether'),
+   'gas': 21000
 })
 ```
 
