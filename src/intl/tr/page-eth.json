@@ -85,13 +85,13 @@
   "page-eth-more-on-tokens": "Tokenlar ve kullanımları hakkında daha fazla bilgi",
   "page-eth-button-buy-eth": "ETH edin",
   "page-eth-tokens-stablecoins": "Sabit coinler",
-  "page-eth-tokens-defi": "Merkezi olmayan finans (DeFi)",
+  "page-eth-tokens-defi": "Merkeziyetsiz finans (DeFi)",
   "page-eth-tokens-nft": "Değiştirilemez tokenler (NFT'ler)",
-  "page-eth-tokens-dao": "Merkezi olmayan özerk organizasyonlar (DAO'lar)",
-  "page-eth-tokens-stablecoins-description": "En az oynaklıktaki Ethereum jetonları hakkında dahası.",
+  "page-eth-tokens-dao": "Merkeziyetsiz özerk organizasyonlar (DAO'lar)",
+  "page-eth-tokens-stablecoins-description": "En az oynaklıktaki Ethereum tokenları hakkında dahası.",
   "page-eth-tokens-defi-description": "Ethereum tokenlerı için finansal sistem.",
-  "page-eth-tokens-nft-description": "Ethereum öğeleri üzerinde sahipliği temsil eden jetonlar.",
-  "page-eth-tokens-dao-description": "İnternet toplulukları sıklıkla jeton sahipleri tarafından yönetilir.",
+  "page-eth-tokens-nft-description": "Ethereum öğeleri üzerinde sahipliği temsil eden tokenlar.",
+  "page-eth-tokens-dao-description": "İnternet toplulukları, sıklıkla token sahipleri tarafından yönetilir.",
   "page-eth-whats-defi": "DeFi hakkında daha fazlası",
-  "page-eth-whats-defi-description": "DeFi, Ethereum üzerine kurulu merkezi olmayan finansal sistemdir. Bu genel bakış, neler yapabileceğinizi açıklamaktadır."
+  "page-eth-whats-defi-description": "DeFi, Ethereum üzerine kurulu merkeziyetsiz finansal sistemdir. Bu genel bakış, neler yapabileceğinizi açıklamaktadır."
 }
