@@ -64,7 +64,7 @@ Nous utilisons les NFT pour donner à nos contributeurs et nous avons même notr
 
 Si vous contribuez à ethereum.org, vous pouvez demander un POAP NFT. Ce sont des objets de collection qui prouvent que vous avez participé à un événement. Certaines réunions crypto ont utilisé des POAP comme forme de billet pour leurs événements. [Plus d'infos sur la contribution](/contributing/#poap).
 
-![POAP ethereum.org](../../assets/use-cases/poap.png)
+![POAP ethereum.org](./poap.png)
 
 #### ethereum.eth {#ethereum-dot-eth}
 

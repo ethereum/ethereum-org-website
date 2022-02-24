@@ -64,7 +64,7 @@ NFT и Ethereum являются решением для некоторых пр
 
 Внеся свой вклад в ethereum.org, вы можете запросить NFT POAP. Это коллекционные предметы, которые подтверждают участие в мероприятии. На некоторых крипто-встречах POAP уже использовали в качестве билета. [Подробнее об участии](/contributing/#poap).
 
-![POAP ethereum.org](../../assets/use-cases/poap.png)
+![POAP ethereum.org](./poap.png)
 
 #### ethereum.eth {#ethereum-dot-eth}
 
