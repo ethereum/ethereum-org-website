@@ -106,7 +106,7 @@ Moreover, since trusted bridges add trust assumptions, they carry additional ris
 - **Censorship Risk —** bridge operators can theoretically stop users from transferring their assets using the bridge
 - **Custodial Risk —** bridge operators can collude to steal the users’ funds
 
-Users fund are at risk if:
+User's funds are at risk if:
 
 - there is a bug in the smart contract
 - the user makes an error
