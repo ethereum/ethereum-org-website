@@ -101,7 +101,7 @@ Browser extensions like Chrome extensions or Add-ons for Firefox can augment use
 - Removing unused browser extensions
 - Install Chrome extensions locally to stop auto-updating (Advanced)
 
-[More on the risks of browser extentions](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
+[More on the risks of browser extensions](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
 
 <Divider />
 
@@ -180,7 +180,7 @@ These scams usually stipulate a limited time of opportunity to claim the giveawa
 
 #### Social media hacks {#social-media-hacks}
 
-A high-profile version of this occurred in July 2020, when the Twitter accounts of prominent celebrities and organizations got hacked. The hacker simultaneously posted a Bitcoin giveaway on the hacked accounts. Although the deceptive tweets were quickly noticed and deleted, the hackers still managed to get away with 11 bitcoin (or $500,000 as of September 2021)
+A high-profile version of this occurred in July 2020, when the Twitter accounts of prominent celebrities and organizations got hacked. The hacker simultaneously posted a Bitcoin giveaway on the hacked accounts. Although the deceptive tweets were quickly noticed and deleted, the hackers still managed to get away with 11 bitcoins (or $500,000 as of September 2021)
 
 ![A scam on Twitter](./appleTwitterScam.png)
 
