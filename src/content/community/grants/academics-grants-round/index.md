@@ -20,9 +20,9 @@ We’re calling all those interested in expanding academic knowledge throughout 
 
 The Ethereum community has grown immensely as developers, artists, companies, and even governments work together to make a positive impact with this technology.
 
-With this grants round, the Ethereum Foundation welcomes more academics to the table to push forward formal academic research in related domains. Such domains include theoretical cryptograpy and mathematics, applied cryptography, zero-knowledge proofs, cryptography and applied cryptography, economics, computation, cybersecurity, protocol and consensus mechanisms, formal verification, P2P networking, and hardware, just to mention a few.
+With this grants round, the Ethereum Foundation welcomes more academics to the table to push forward formal academic research in related domains. Such domains include theoretical and applied cryptography and mathematics, zero-knowledge proofs, economics, computation, cybersecurity, protocol and consensus mechanisms, formal verification, P2P networking, and hardware, just to mention a few.
 
-The Ethereum Foundation is excited to expand Ethereum’s reach across more of academia through this grants round.
+The Ethereum Foundation is excited to expand Ethereum’s reach across more Academia through this grants round.
 
 ## Submit proposal {#submit-proposal}
 
