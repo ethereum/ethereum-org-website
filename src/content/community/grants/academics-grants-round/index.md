@@ -12,7 +12,7 @@ sidebarDepth: 2
   This call is now open! Apply before April 22, 2022! <a href="https://esp.ethereum.foundation/academics-grants/" target="_blank">Apply here</a>.
 </InfoBanner>
 
-_The Ethereum Foundation is sponsoring a wave of grants to support academic work related to Ethereum. This grants round has up to $750.000 in total available. Proposals are due <b>April 22, 2022</b>. Here are all the details you need._
+_The Ethereum Foundation is sponsoring a wave of grants to support academic work related to Ethereum. This grants round has up to $750,000 in total available. Proposals are due <b>April 22, 2022</b>. Here are all the details you need._
 
 <Divider />
 
@@ -111,10 +111,10 @@ title="What stage does my idea or project need to be in?">
 </ExpandableCard>
 
 <ExpandableCard
-contentPreview="Up to $750.000 in total"
+contentPreview="Up to $750,000 in total"
 title="What is the budget available for this round?">
 
-   <p>This grants round has up to $750.000 in total, which is to be distributed among selected projects. </p>
+   <p>This grants round has up to $750,000 in total, which is to be distributed among selected projects. </p>
 
 </ExpandableCard>
 
