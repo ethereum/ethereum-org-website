@@ -330,7 +330,7 @@ You should then see something like:
 
     Contract deployed to address: 0x81c587EB0fE773404c42c1d2666b5f557C470eED
 
-If we go to the [Ropsten etherscan](https://ropsten.etherscan.io/) and search for our contract address we should able to see that it has been deployed successfully. The transaction will look something like this:
+If we go to the [Ropsten etherscan](https://ropsten.etherscan.io/) and search for our contract address we should able to see that it has been deployed successfully. If you can't see it immediately, please wait awhile as it can take some time. The transaction will look something like this:
 
 ![View your transaction address on Etherscan](./etherscan-transaction.png)
 
