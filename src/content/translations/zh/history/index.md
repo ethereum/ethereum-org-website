@@ -26,9 +26,9 @@ sidebarDepth: 1
 
 ### (_进行中_) 牵牛星升级 {#altair}
 
-Altair 升级是[信标链](/eth2/beacon-chain)的第一次预定升级。 预计将于 2021 年启用。 它将增加对“同步委员会”的支持，可以启用轻型客户端，并将不活动和削价的惩罚提高到其全部价值。
+Altair 升级是[信标链](/upgrades/beacon-chain)的第一次预定升级。 预计将于 2021 年启用。 它将增加对“同步委员会”的支持，可以启用轻型客户端，并将不活动和削价的惩罚提高到其全部价值。
 
-- [阅读 Altair 升级说明](https://github.com/ethereum/eth2.0-specs/tree/dev/specs/altair)
+- [阅读 Altair 升级说明](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
 ---
 
@@ -95,11 +95,11 @@ Altair 升级是[信标链](/eth2/beacon-chain)的第一次预定升级。 预�
 
 #### 概览 {#beacon-chain-genesis-summary}
 
-[信标链](/eth2/beacon-chain/)需要 16384 个 ETH 并且每个节点拥有 32 个 ETH，以保证网络安全。 这发生在 2020 年 11 月 27 日，意味着信标链在 2020 年 12 月 1 日开始产生区块。 这是实现 [Eth2.0 愿景](/eth2/vision/)的重要一步。
+[信标链](/upgrades/beacon-chain/)需要 16384 个 ETH 并且每个节点拥有 32 个 ETH，以保证网络安全。 这发生在 2020 年 11 月 27 日，意味着信标链在 2020 年 12 月 1 日开始产生区块。 这是实现 [Eth2.0 愿景](/upgrades/vision/)的重要一步。
 
 [请阅读以太坊基金会公告](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/eth2/beacon-chain/">
+<DocLink to="/upgrades/beacon-chain/">
   信标链
 </DocLink>
 
@@ -114,11 +114,11 @@ Altair 升级是[信标链](/eth2/beacon-chain)的第一次预定升级。 预�
 
 #### 概览 {#deposit-contract-summary}
 
-质押存款合约将[质押](/glossary/#staking)引入以太坊生态系统。 虽然这只是一个[主网](/glossary/#mainnet) 合约，但它直接影响了 [信标链](/eth2/beacon-chain/)的发布，而这是[Eth2 升级](/eth2/)的重要部分。
+质押存款合约将[质押](/glossary/#staking)引入以太坊生态系统。 虽然这只是一个[主网](/glossary/#mainnet) 合约，但它直接影响了 [信标链](/upgrades/beacon-chain/)的发布，而这是[Eth2 升级](/upgrades/)的重要部分。
 
 [请阅读以太坊基金会公告](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/eth2/staking/">
+<DocLink to="/staking/">
   权益质押
 </DocLink>
 
@@ -161,7 +161,7 @@ Altair 升级是[信标链](/eth2/beacon-chain)的第一次预定升级。 预�
 
 - 优化 [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine) 数据存储操作的 [gas](/glossary/#gas) 耗用量计量方式。
 - 提高拒绝服务（DoS）攻击的弹性。
-- 使基于 SNARK 和 STARK 的[第二层方案性能更佳](/developers/docs/scaling/layer-2-rollups/)。
+- 使基于 SNARK 和 STARK 的[第二层方案性能更佳](/developers/docs/scaling/#rollups)。
 - 使以太坊和 Zcash 能够互操作。
 - 让合约能够引入更有创造性的功能。
 
@@ -173,7 +173,7 @@ Altair 升级是[信标链](/eth2/beacon-chain)的第一次预定升级。 预�
 - [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _cheaper cryptography to improve [gas](/glossary/#gas) costs._
 - [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _protects Ethereum against replay attacks by adding `CHAINID` [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine)._
 - [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _optimising opcode gas prices based on consumption._
-- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _reduces the cost of CallData to allow more data in blocks – good for [Layer 2 scaling](/developers/docs/scaling/layer-2-rollups/)._
+- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _reduces the cost of CallData to allow more data in blocks – good for [Layer 2 scaling](/developers/docs/scaling/#rollups)._
 - [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) – _other opcode gas price alterations._
 
 </ExpandableCard>
@@ -224,7 +224,7 @@ Altair 升级是[信标链](/eth2/beacon-chain)的第一次预定升级。 预�
 - 将区块[挖矿](/developers/docs/consensus-mechanisms/pow/mining/)奖励从 5 ETH 减少到 3 ETH。
 - 将[难度炸弹](/glossary/#difficulty-bomb) 升级延迟一年。
 - 增加了调用其他合约的能力。
-- 增加了某些密码学方法，允许[2 层缩放](/developers/docs/scaling/layer-2-rollups/)。
+- 增加了某些密码学方法，允许[2 层缩放](/developers/docs/scaling/#rollups)。
 
 [请阅读以太坊基金会公告](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
@@ -232,8 +232,8 @@ Altair 升级是[信标链](/eth2/beacon-chain)的第一次预定升级。 预�
 
 - [EIP-140](https://eips.ethereum.org/EIPS/eip-140) – _adds `REVERT` opcode._
 - [EIP-658](https://eips.ethereum.org/EIPS/eip-658) – _status field added to transaction receipts to indicate success or failure._
-- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _adds elliptic curve and scalar multiplication to allow for [ZK-Snarks](/developers/docs/scaling/layer-2-rollups/#zk-rollups)._
-- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _adds elliptic curve and scalar multiplication to allow for [ZK-Snarks](/developers/docs/scaling/layer-2-rollups/#zk-rollups)._
+- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _adds elliptic curve and scalar multiplication to allow for [ZK-Snarks](/developers/docs/scaling/zk-rollups/)._
+- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _adds elliptic curve and scalar multiplication to allow for [ZK-Snarks](/developers/docs/scaling/zk-rollups/)._
 - [EIP-198](https://eips.ethereum.org/EIPS/eip-198) – _enables RSA signature verification._
 - [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _adds support for variable length return values._
 - [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _adds `STATICCALL` opcode, allowing non-state-changing calls to other contracts._

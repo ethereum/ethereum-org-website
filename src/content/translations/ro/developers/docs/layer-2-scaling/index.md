@@ -85,13 +85,13 @@ Rollup-urile Optimistic utilizează un sidechain care se află în paralel cu la
 
 Cu rollup-urile Optimistic, tranzacțiile sunt scrise în lanțul principal Ethereum ca date de apel, optimizându-le în continuare prin reducerea costului gazului.
 
-Deoarece calculul este partea lentă și costisitoare a utilizării Ethereum, rollup-urilor Optimistic pot oferi până la 10-100 de ori îmbunătățiri ale scalabilității în funcție de tranzacție. Acest număr va crește și mai mult odată cu introducerea upgrade-ului Eth2: [lanțurile de fragmente](/eth2/shard-chains). Aceasta se datorează faptului că vor exista mai multe date disponibile în cazul în care o tranzacție este contestată.
+Deoarece calculul este partea lentă și costisitoare a utilizării Ethereum, rollup-urilor Optimistic pot oferi până la 10-100 de ori îmbunătățiri ale scalabilității în funcție de tranzacție. Acest număr va crește și mai mult odată cu introducerea upgrade-ului Eth2: [lanțurile de fragmente](/upgrades/shard-chains). Aceasta se datorează faptului că vor exista mai multe date disponibile în cazul în care o tranzacție este contestată.
 
 #### Contestarea tranzacțiilor {#disputing-transactions}
 
 Rollup-urile Optimistic nu calculează de fapt tranzacția, deci trebuie să existe un mecanism care să asigure că tranzacțiile sunt legitime și nu frauduloase. Aici intervin dovezile de fraudă. Dacă cineva observă o tranzacție frauduloasă, rollup-ul va executa o dovadă de fraudă și va rula calculul tranzacției, utilizând datele de stare disponibile. Aceasta înseamnă că este posibil să ai timpi de așteptare mai lungi pentru confirmarea tranzacției decât un rollup-ZK, deoarece ar putea fi contestat.
 
-![Diagramă care arată ce se întâmplă atunci când are loc o tranzacție frauduloasă într-un rollup Optimist pe Ethereum](../../../../../developers/docs/scaling/layer-2-rollups/optimistic-rollups.png)
+![Diagramă care arată ce se întâmplă atunci când are loc o tranzacție frauduloasă într-un rollup Optimist pe Ethereum](../../../../../developers/docs/scaling/optimistic-rollups/optimistic-rollups.png)
 
 Gazul de care ai nevoie pentru a calcula dovada fraudelor este chiar rambursat. Ben Jones, de la Optimism, descrie sistemul de legături în loc:
 

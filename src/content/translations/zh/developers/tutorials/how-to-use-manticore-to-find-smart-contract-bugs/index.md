@@ -201,18 +201,18 @@ _检索摘要 f(!=65)表示使用不同于 65 的任何值调用的调用的 f�
 首先，您要通过以下命令启动一个新的区块链：
 
 ```python
-from manticore.etherum importer MantocoreEVM
+from manticore.ethereum importer MantocoreEVM
 
 m = MantocoreEVM()
 ```
 
-使用[m.create_account](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.create_account)创建一个非合约帐户：
+使用[m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account)创建一个非合约帐户：
 
 ```python
 user_account = m.create_account(balance=1000)
 ```
 
-可以使用[m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.solidity_create_contract)来部署一个 Solidity 合约：
+可以使用[m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract)来部署一个 Solidity 合约：
 
 ```solidity
 source_code = '''
@@ -231,7 +231,7 @@ contract_account = m.solidity_create_contract(source_code, owner=user_account)
 
 #### 概览 {#summary}
 
-- 您可以通过[m.create_account](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.create_account)和\[m.solidity_create_contract\](https://manticore.readthedocs.io/enura/api.html#manticore.eferum.ManticoreEVM.solidity_create_contract)创建用户和合约帐户。
+- 您可以通过[m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account)和[m.solidity_create_contract](https://manticore.readthedocs.io/enura/api.html#manticore.eferum.ManticoreEVM.solidity_create_contract)创建用户和合约帐户。
 
 ### 执行交易 {#executing-transactions}
 
@@ -242,7 +242,7 @@ Manticore 支持两种类型的交易：
 
 #### 原始交易 {#raw-transaction}
 
-使用[m.transaction](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.transaction)执行原始交易：
+使用[m.transaction](https://manticore.readthedocs.io/en/latest/evm.html?highlight=transaction#manticore.ethereum.ManticoreEVM.transaction)执行原始交易：
 
 ```python
 m.transaction(caller=user_account,
@@ -253,8 +253,8 @@ m.transaction(caller=user_account,
 
 调用者、地址、数据或交易的值可以是具体的或抽象的：
 
-- [mmmake_symbolic_value](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.make_symbolic_value)创建一个抽象值。
-- [mmmake_symbolic_buffer(size)](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.make_symbolic_buffer)创建一个符号字节数组。
+- [mmmake_symbolic_value](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_value#manticore.ethereum.ManticoreEVM.make_symbolic_value)创建一个抽象值。
+- [mmmake_symbolic_buffer(size)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=make_symbolic_buffer#manticore.ethereum.ManticoreEVM.make_symbolic_buffer)创建一个符号字节数组。
 
 例如
 
@@ -296,7 +296,7 @@ print("Results are in {}".format(m.workspace))
 
 ### 终止探索 {#terminate-the-exploration}
 
-要停止探索，请使用[m.finalize()](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.finalize)。 一旦这个方法被调用，就不应该再发送任何交易，而且 Manticore 会针对所探索的每一条路径生成测试案例。
+要停止探索，请使用[m.finalize()](https://manticore.readthedocs.io/en/latest/evm.html?highlight=finalize#manticore.ethereum.ManticoreEVM.finalize)。 一旦这个方法被调用，就不应该再发送任何交易，而且 Manticore 会针对所探索的每一条路径生成测试案例。
 
 ### 总结：在 Manticore 下运行 {#summary-running-under-manticore}
 
@@ -365,7 +365,7 @@ data = ABI.deserialize("uint", data)
 
 ### 如何生成测试案例 {#how-to-generate-testcase}
 
-使用[m.generate_testcase(state, name)](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.generate_testcase)生成测试案例：
+使用[m.generate_testcase(state, name)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=generate_testcase#manticore.ethereum.ManticoreEVM.generate_testcase)生成测试案例：
 
 ```python
 m. generate_testcase(state, 'BugFound')

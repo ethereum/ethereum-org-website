@@ -24,13 +24,13 @@ const PointsExchange = styled.div`
 
 const PointsExchangeLabel = styled.div`
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-bottom: 1rem;
 `
 
 const PointsExchangeTitle = styled.h2`
   font-family: ${(props) => props.theme.fonts.monospace};
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
   text-transform: uppercase;
   margin-top: 0rem;
@@ -50,7 +50,7 @@ const Token = styled(GatsbyImage)`
 `
 
 const TokenValue = styled.p`
-  font-size: 20px;
+  font-size: 1.25rem;
   margin: 0rem;
   margin-right: 1rem;
 `
@@ -131,13 +131,13 @@ const BugBountyPoints = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      dai: file(relativePath: { eq: "eth2/dai.png" }) {
+      dai: file(relativePath: { eq: "upgrades/dai.png" }) {
         ...TokenLogo
       }
-      ethLight: file(relativePath: { eq: "eth2/eth-black.png" }) {
+      ethLight: file(relativePath: { eq: "upgrades/eth-black.png" }) {
         ...TokenLogo
       }
-      ethDark: file(relativePath: { eq: "eth2/eth-orange.png" }) {
+      ethDark: file(relativePath: { eq: "upgrades/eth-orange.png" }) {
         ...TokenLogo
       }
     }
@@ -147,25 +147,25 @@ const BugBountyPoints = () => {
   return (
     <PointsExchange>
       <PointsExchangeLabel>
-        <Translation id="page-eth2-bug-bounty-points-exchange" />{" "}
+        <Translation id="page-upgrades-bug-bounty-points-exchange" />{" "}
         <Tooltip content={tooltipContent}>
           <InfoIcon name="info" size="14" />
         </Tooltip>
       </PointsExchangeLabel>
       <PointsExchangeTitle>
-        <Translation id="page-eth2-bug-bounty-points-point" />
+        <Translation id="page-upgrades-bug-bounty-points-point" />
       </PointsExchangeTitle>
       {state.hasError && (
         <ValueRow>
           <TokenValue>
-            <Translation id="page-eth2-bug-bounty-points-error" />
+            <Translation id="page-upgrades-bug-bounty-points-error" />
           </TokenValue>
         </ValueRow>
       )}
       {isLoading && !state.hasError && (
         <ValueRow>
           <TokenValue>
-            <Translation id="page-eth2-bug-bounty-points-loading" />
+            <Translation id="page-upgrades-bug-bounty-points-loading" />
           </TokenValue>
         </ValueRow>
       )}
@@ -174,7 +174,7 @@ const BugBountyPoints = () => {
           <Row>
             <Emoji mr={`0.5rem`} text=":dollar:" />
             <TokenValue>
-              <Translation id="page-eth2-bug-bounty-points-usd" />
+              <Translation id="page-upgrades-bug-bounty-points-usd" />
             </TokenValue>
           </Row>
           <Row>
@@ -188,11 +188,11 @@ const BugBountyPoints = () => {
         </ValueRow>
       )}
       <p>
-        <Translation id="page-eth2-bug-bounty-points-payout-desc" />
+        <Translation id="page-upgrades-bug-bounty-points-payout-desc" />
       </p>
       <TextNoMargin>
         <em>
-          <Translation id="page-eth2-bug-bounty-points-rights-desc" />
+          <Translation id="page-upgrades-bug-bounty-points-rights-desc" />
         </em>
       </TextNoMargin>
     </PointsExchange>

@@ -11,7 +11,7 @@ source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/
 ---
 
-Pop Quiz: Your protocol is just about finished, but it needs an oracle to plug in to get an active off chain data feed going...What do you do?
+Pop Quiz: Your protocol is just about finished, but it needs an oracle to get access to off chain data...What do you do?
 
 ## (Soft) Prerequisites {#soft-prerequisites}
 
@@ -27,7 +27,7 @@ Tellor is a live and open-sourced oracle ready for implementation. This beginner
 
 ## Overview {#overview}
 
-Tellor is an oracle system where parties can request the value of an off-chain data point (e.g. BTC/USD) and miners compete to add this value to an on-chain data-bank, accessible by all Ethereum smart contracts. The inputs to this data-bank are secured by a network of staked miners. Tellor utilizes cryptoeconomic incentive mechanisms, rewarding honest data submissions by miners and punishing bad actors through the issuance of Tellor’s token, Tributes (TRB) and a dispute mechanism.
+Tellor is an oracle system where parties can request the value of an off-chain data point (e.g. BTC/USD) and reporters compete to add this value to an on-chain data-bank, accessible by all Ethereum smart contracts. The inputs to this data-bank are secured by a network of staked reporters. Tellor utilizes crypto-economic incentive mechanisms, rewarding honest data submissions by reporters and punishing bad actors through the issuance of Tellor’s token, Tributes (TRB) and a dispute mechanism.
 
 In this tutorial we'll go over:
 
@@ -37,62 +37,62 @@ In this tutorial we'll go over:
 
 ## UsingTellor {#usingtellor}
 
-The first thing you'll want to do is install the basic tools necessary for using Tellor as your oracle. Use [this package](https://github.com/tellor-io/usingtellor) to install the Tellor User Contracts to test the implementation of Tellor in your contracts:
+The first thing you'll want to do is install the basic tools necessary for using Tellor as your oracle. Use [this package](https://github.com/tellor-io/usingtellor) to install the Tellor User Contracts:
 
 `npm install usingtellor`
 
 Once installed this will allow your contracts to inherit the functions from the contract 'UsingTellor'.
 
-Great! Now that you've got the tools ready, let's go through a simple exercise where we request the bitcoin price:
+Great! Now that you've got the tools ready, let's go through a simple exercise where we retrieve the bitcoin price:
 
 ### BTC/USD Example {#btcusd-example}
 
 Inherit the UsingTellor contract, passing the Tellor address as a constructor argument:
 
-Here's an example
+Here's an example:
 
 ```solidity
 import "usingtellor/contracts/UsingTellor.sol";
 
 contract BtcPriceContract is UsingTellor {
 
-  //This contract now has access to all functions in UsingTellor
+  //This Contract now has access to all functions in UsingTellor
 
-  uint256 btcPrice;
-  uint256 btcRequestId = 2;
+  bytes btcPrice;
+  bytes32 btcQueryId = 0x0000000000000000000000000000000000000000000000000000000000000002;
 
-  // Input Tellor oracle address. See below for available addresses or
-  // deploy the TellorPlayground yourself
-  constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) {}
+  constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) public {}
 
   function setBtcPrice() public {
     bool _didGet;
-    uint _timestamp;
+    uint256 _timestamp;
 
-    (_didGet, btcPrice, _timestamp) = getCurrentValue(btcRequestId);
+    (_didGet, btcPrice, _timestamp) = getCurrentValue(btcQueryId);
   }
 }
-
 ```
 
-## Looking to do some testing first? See the list below for our active testnet addresses: {#looking-to-do-some-testing-first-see-the-list-below-for-our-active-testnet-addresses}
+**Want to try a different data feed? Check out the list of supported data feeds here:
+[Current Data Feeds](https://docs.tellor.io/tellor/integration/data-feed-ids)**
 
-#### Addresses: {#addresses}
+## Addresses: {#addresses}
 
-Mainnet: [`0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0`](https://etherscan.io/address/0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0)
+Mainnet: [`0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0`](https://etherscan.io/address/0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0#code)
 
-Rinkeby: [`0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0`](https://rinkeby.etherscan.io/address/0x20374E579832859f180536A69093A126Db1c8aE9#code)
+#### Looking to do some testing first? See the list below for our active testnet addresses: {#looking-to-do-some-testing-first-see-the-list-below-for-our-active-testnet-addresses}
 
-Kovan: [`0x20374E579832859f180536A69093A126Db1c8aE9`](https://kovan.etherscan.io/address/0x20374E579832859f180536A69093A126Db1c8aE9#code)
+Rinkeby: [`0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0`](https://rinkeby.etherscan.io/address/0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0#code)
 
-Ropsten: [`0x20374E579832859f180536A69093A126Db1c8aE9`](https://ropsten.etherscan.io/address/0x20374E579832859f180536A69093A126Db1c8aE9#code)
+Kovan: [`0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7`](https://kovan.etherscan.io/address/0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7#code)
 
-Goerli: [`0x20374E579832859f180536A69093A126Db1c8aE9`](https://goerli.etherscan.io/address/0x20374E579832859f180536A69093A126Db1c8aE9#code)
+Ropsten: [`0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7`](https://ropsten.etherscan.io/address/0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7#code)
 
-#### The following networks use the ['Fellowship'](https://github.com/tellor-io/fellowship) instead of the POW miners:
+Goerli: [`0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7`](https://goerli.etherscan.io/address/0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7#code)
 
-BSC Testnet: [`0xbc2f9E092ac5CED686440E5062D11D6543202B24`](https://testnet.bscscan.com/address/0xbc2f9E092ac5CED686440E5062D11D6543202B24)
+BSC Testnet: [`0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7 `](https://testnet.bscscan.com/address/0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7#code)
 
-Polygon Mumbai Testnet: [`0xbc2f9E092ac5CED686440E5062D11D6543202B24`](https://explorer-mumbai.maticvigil.com/address/0xbc2f9E092ac5CED686440E5062D11D6543202B24/transactions)
+Polygon Mumbai Testnet: [`0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7 `](https://mumbai.polygonscan.com/address/0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7/contracts#code)
+
+Arbitrum Testnet: [`0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7 `](https://rinkeby-explorer.arbitrum.io/address/0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7)
 
 #### For a more robust implementation of the Tellor oracle, check out the full list of available functions [here.](https://github.com/tellor-io/usingtellor/blob/master/README.md) {#for-a-more-robust-implementation-of-the-tellor-oracle-check-out-the-full-list-of-available-functions-here}

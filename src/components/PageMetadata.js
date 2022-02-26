@@ -16,7 +16,7 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
     ogImageDefault,
     ogImageDevelopers,
     ogImageDapps,
-    ogImageEthtwo,
+    ogImageUpgrades,
   } = useStaticQuery(
     graphql`
       {
@@ -56,7 +56,9 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
             )
           }
         }
-        ogImageEthtwo: file(relativePath: { eq: "eth2/eth2_doge.png" }) {
+        ogImageUpgrades: file(
+          relativePath: { eq: "upgrades/upgrade_doge.png" }
+        ) {
           childImageSharp {
             gatsbyImageData(
               width: 1200
@@ -99,8 +101,8 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
         if (pathname.includes("/dapps/")) {
           ogImage = getSrc(ogImageDapps)
         }
-        if (pathname.includes("/eth2/")) {
-          ogImage = getSrc(ogImageEthtwo)
+        if (pathname.includes("/upgrades/")) {
+          ogImage = getSrc(ogImageUpgrades)
         }
         if (image) {
           ogImage = image

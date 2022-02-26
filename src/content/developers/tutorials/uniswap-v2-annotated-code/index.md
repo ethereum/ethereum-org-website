@@ -318,7 +318,7 @@ To avoid having to import an interface for the token function, we "manually" cre
 
 There are two ways in which an ERC-20 transfer call can report failure:
 
-1. Revert. If a call to an external contract reverts than the boolean return value is `false`
+1. Revert. If a call to an external contract reverts, then the boolean return value is `false`
 2. End normally but report a failure. In that case the return value buffer has a non-zero length, and when decoded as a boolean value it is `false`
 
 If either of these conditions happen, revert.
@@ -740,7 +740,7 @@ called by other entities than our periphery contract).
 ```
 
 This is a sanity check to make sure we don't lose from the swap. There is no circumstance in which a swap should reduce
-`reserve0*reserve1`.
+`reserve0*reserve1`. This is also where we ensure a fee of 0.3% is being sent on the swap; before sanity checking the value of K, we multiply both balances by 1000 subtracted by the amounts multiplied by 3, this means 0.3% (3/1000 = 0.003 = 0.3%) is being deducted from the balance before comparing its K value with the current reserves K value.
 
 ```solidity
         }

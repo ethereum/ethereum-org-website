@@ -62,6 +62,6 @@ EIP 编辑们与 [Ethereum Cat Herders](https://ethereumcatherders.com/) 和 [Et
 
 <cite class="citation">
 
-网页内容部分来自于 Hudson Jameson [Etherum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/2020-03-23-thero-protocol-development-governance-and-network-upde-coordination/)
+网页内容部分来自于 Hudson Jameson [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/2020-03-23-thero-protocol-development-governance-and-network-upde-coordination/)
 
 </cite>

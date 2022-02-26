@@ -22,7 +22,7 @@ import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
 import Roadmap from "../components/Roadmap"
-import Eth2TableOfContents from "../components/Eth2TableOfContents"
+import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import TableOfContents from "../components/TableOfContents"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import Translation from "../components/Translation"
@@ -110,19 +110,19 @@ const Pre = styled.pre`
 `
 
 const InfoTitle = styled.h2`
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 700;
   text-align: right;
   margin-top: 0rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     text-align: left;
-    font-size: 40px;
+    font-size: 2.5rem
     display: none;
   }
 `
 
 const H2 = styled.h2`
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
   margin-top: 4rem;
 
@@ -131,6 +131,7 @@ const H2 = styled.h2`
   }
 
   /* Anchor tag styles */
+
   a {
     position: relative;
     display: initial;
@@ -156,7 +157,7 @@ const H2 = styled.h2`
 `
 
 const H3 = styled.h3`
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
 
   a {
@@ -164,6 +165,7 @@ const H3 = styled.h3`
   }
 
   /* Anchor tag styles */
+
   a {
     position: relative;
     display: initial;
@@ -219,13 +221,13 @@ const components = {
 }
 
 const Title = styled.h1`
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-top: 1rem;
 `
 
 const SummaryPoint = styled.li`
-  font-size: 16px;
+  font-size: 1rem;
   color: ${(props) => props.theme.colors.text300};
   margin-bottom: 0rem;
   line-height: auto;
@@ -431,7 +433,7 @@ const UseCasePage = ({ data, pageContext }) => {
           <InfoTitle>{mdx.frontmatter.title}</InfoTitle>
 
           {mdx.frontmatter.sidebar && tocItems && (
-            <Eth2TableOfContents
+            <UpgradeTableOfContents
               items={tocItems}
               maxDepth={mdx.frontmatter.sidebarDepth}
             />

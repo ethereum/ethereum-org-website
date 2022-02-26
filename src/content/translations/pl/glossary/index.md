@@ -58,7 +58,7 @@ Walidator głosuje na [łańcuch śledzący](#beacon-chain) lub [blok](#block) [
 
 Ulepszenie Eth2, które stanie się koordynatorem sieci Ethereum. Wprowadza [proof of stake](#proof-of-stake) i [walidatorów](#validator) do Ethereum. Zostanie on ostatecznie połączony z [siecią główną](#mainnet).
 
-<DocLink to="/eth2/beacon-chain/">
+<DocLink to="/upgrades/beacon-chain/">
   Łańcuch śledzący
 </DocLink>
 
@@ -304,7 +304,7 @@ Zmiana protokołu, powodująca utworzenie alternatywnego łańcucha lub czasowe 
 
 Model bezpieczeństwa dla niektórych rozwiązań [warstwy 2](#layer-2), gdzie w celu zwiększenia szybkości transakcje są [wrzucane](#rollups) do partii i przesyłane do Ethereum w jednej transakcji. Zakłada się, że są one ważne, ale można je zakwestionować, jeżeli podejrzewa się nadużycia finansowe. Dowód oszustwa przeprowadzi następnie transakcję, aby sprawdzić, czy doszło do oszustwa. Ta metoda zwiększa liczbę możliwych transakcji przy jednoczesnym zachowaniu bezpieczeństwa. Niektóre [wartości zbiorcze](#rollups) używają [dowodów ważności](#validity-proof).
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/#optimistic-rollups">
+<DocLink to="/developers/docs/scaling/optimistic-rollups/">
   Optymistyczne pakiety zbiorcze
 </DocLink>
 
@@ -432,7 +432,7 @@ Plik w formacie JSON zawierający jeden (losowo wygenerowany) [klucz prywatny](#
 
 Obszar rozwoju skupiony na ulepszeniach w zakresie warstwowania w uzupełnieniu protokołu Ethereum. Te ulepszenia są związane z szybkościami [transakcji](#transaction), niższymi [opłatami transakcyjnymi](#transaction-fee) i prywatnością transakcji.
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/">
+<DocLink to="/developers/docs/scaling/#rollups">
   Warstwa 2
 </DocLink>
 
@@ -534,7 +534,7 @@ Kiedy [górnik](#miner) znajdzie poprawny [blok](#block), może się okazać, ż
 
 [Pakiet zbiorczy](#rollups) transakcji, które używają [dowodów oszustwa](#fraud-proof), aby zaoferować większą przepustowość transakcji [warstwy 2](#layer-2) przy użyciu zabezpieczeń dostarczanych przez [sieć główną](#mainnet) (warstwa 1). W przeciwieństwie do [plazmy](#plasma), podobnego rozwiązania warstwy 2, optymistyczne pakiety zbiorcze mogą obsługiwać bardziej złożone typy transakcji – wszystko co jest możliwe w [EVM](#evm). W porównaniu z [pakietami zbiorczymi o wiedzy zerowej](#zk-rollups) doświadczają opóźnień, ponieważ transakcję można zakwestionować za pomocą dowodu oszustwa.
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/#optimistic-rollups">
+<DocLink to="/developers/docs/scaling/optimistic-rollups/">
   Optymistyczne pakiety zbiorcze
 </DocLink>
 
@@ -606,7 +606,7 @@ Standard kodowania zaprojektowany przez deweloperów Ethereum do kodowania i ser
 
 Typ rozwiązania skalowania [warstwy 2](#layer-2) który zawiera wiele transakcji i przesyła je do [głównego łańcucha Ethereum](#mainnet) w pojedynczej transakcji. Pozwala to na zmniejszenie kosztów [gazu](#gas) i zwiększenie przepustowości [transakcji](#transaction). Istnieją pakiety zbiorcze optymistyczne i o wiedzy zerowej, wykorzystujące różne metody zabezpieczania, aby zaoferować wymienione korzyści skalowalności.
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/">
+<DocLink to="/developers/docs/scaling/#rollups">
   Pakiety zbiorcze
 </DocLink>
 
@@ -618,7 +618,7 @@ Typ rozwiązania skalowania [warstwy 2](#layer-2) który zawiera wiele transakcj
 
 Czwarty i ostatni etap rozwoju Ethereum, znany pod nazwą Ethereum 2.0.
 
-<DocLink to="/eth2/">
+<DocLink to="/upgrades/">
   Ethereum 2.0 (Eth2)
 </DocLink>
 
@@ -630,7 +630,7 @@ Rodzina kryptograficznych funkcji skrótu opublikowanych przez Narodowy Instytut
 
 Łańcuch [proof-of-stake](#proof-of-stake) koordynowany przez [łańcuch śledzący](#beacon-chain) i zabezpieczony przez [walidatorów](#validator). Do sieci zostaną dodane 64 w ramach aktualizacji łańcucha odłamkowego Eth2. Łańcuchy odłamkowe będą oferować Ethereum zwiększoną przepustowość transakcji dzięki dostarczeniu dodatkowych danych do rozwiązań [warstwy 2](#layer-2) takich jak [optymistyczne pakiety zbiorcze](#optimistic-rollups) i [pakiety zbiorcze ZK](#zk-rollups).
 
-<DocLink to="/eth2/shard-chains">
+<DocLink to="/upgrades/shard-chains">
   Łańcuchy szczątkowe
 </DocLink>
 
@@ -690,7 +690,7 @@ Token [ERC-20](#token-standard) o wartości powiązanej z wartością innego zas
 
 Deponowanie ilości [etheru](#ether) (Twoja stawka) aby stać się walidatorem i zabezpieczyć [sieć](#network). Walidator sprawdza [transakcje](#transaction) i proponuje [bloki](#block) w modelu konsensusu [proof-of-stake](#pos). Staking stanowi dla Ciebie ekonomiczną zachętę do działania w najlepszym interesie sieci. Otrzymasz nagrody za wykonywanie obowiązków [walidatora](#validator), ale stracisz różne ilości ETH, jeśli tego nie zrobisz.
 
-<DocLink to="/eth2/staking/">
+<DocLink to="/staking/">
   Zestakuj swój ETH, aby zostać walidatorem Ethereum
 </DocLink>
 
@@ -760,7 +760,7 @@ Nazwa ta pochodzi od brytyjskiego matematyka i informatyka Alana Turinga. System
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos">
   Proof-of-stake
-</DocLink> <DocLink to="/eth2/staking/">
+</DocLink> <DocLink to="/staking/">
   Stakowanie w Ethereum
 </DocLink>
 
@@ -768,7 +768,7 @@ Nazwa ta pochodzi od brytyjskiego matematyka i informatyka Alana Turinga. System
 
 Model bezpieczeństwa dla niektórych rozwiązań [warstwy 2](#layer-2), gdzie w celu zwiększenia szybkości transakcje są [wrzucane](/#rollups) do partii i przesyłane do Ethereum w jednej transakcji. Obliczanie transakcji odbywa się poza łańcuchem, a następnie jest dostarczane do głównego łańcucha wraz z dowodem ich ważności. Ta metoda zwiększa liczbę możliwych transakcji przy jednoczesnym zachowaniu bezpieczeństwa. Niektóre [pakiety zbiorcze](#rollups) używają [dowodu oszustwa](#fraud-proof).
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups">
+<DocLink to="/developers/docs/scaling/zk-rollups/">
   Pakiety zbiorcze o wiedzy zerowej
 </DocLink>
 
@@ -824,7 +824,7 @@ To specjalny adres w Ethereum, obejmujący same zera. Jest on podawany jako adre
 
 [Pakiet zbiorczy](#rollups)transakcji korzystający z [ dowodów ważności](#validity-proof) w celu zwiększenia przepustowości transakcji [warstwy 2](#layer-2) przy zastosowaniu zabezpieczeń zapewnianych przez [sieć główną](#mainnet) (warstwa 1). Pakiety zbiorcze o wiedzy zerowej nie mogą obsługiwać złożonych transakcji (co mogą robić [optymistyczne pakiety zbiorcze](#optimistic-rollups)), ale nie dotyczą ich problemy z opóźnieniami, ponieważ przedłożone transakcje są ewidentnie ważne.
 
-<DocLink to="/developers/docs/scaling/layer-2-rollups/#zk-rollups">
+<DocLink to="/developers/docs/scaling/zk-rollups/">
   Pakiety zbiorcze o wiedzy zerowej
 </DocLink>
 

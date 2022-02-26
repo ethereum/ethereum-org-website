@@ -59,7 +59,7 @@ EVM 的所有实现都必须遵守以太坊黄皮书中描述的规范。
 
 在以太坊的 5 年历史中，EVM 经历了几次修订，并且以各种编程语言完成了 EVM 的多种实现。
 
-所有[以太坊客户端](/developers/docs/nodes-and-clients/#clients)都包含一个 EVM 实现。 此外，还有多个独立的实现方法，包括：
+所有[以太坊客户端](/developers/docs/nodes-and-clients/#execution-clients)都包含一个 EVM 实现。 此外，还有多个独立的实现方法，包括：
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_

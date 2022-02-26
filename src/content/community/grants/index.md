@@ -16,6 +16,7 @@ This list is curated by our community. If there's something missing or incorrect
 These programs support the broad Ethereum ecosystem by offering grants to a wide scope of projects. These include solutions for scalability, community building, security, privacy, and more. These grants are not specific to any one Ethereum platform and are a good place to start if you're unsure.
 
 - [EF Ecosystem Support Program](https://esp.ethereum.foundation) - _Funding open source projects that benefit Ethereum, with a particular focus on universal tools, infrastructure, research and public goods_
+  - [Academics Grants Round](/community/grants/academics-grants-round/) - _The Ethereum Foundation is sponsoring a wave of grants to support academic work related to Ethereum_
 - [Ethereum RFPs](https://github.com/ethereum/requests-for-proposals) - _Requests for Proposals by the Ethereum Foundation for work and projects in the Ethereum ecosystem_
 - [MetaCartel](https://www.metacartel.org/grants/) - _Dapp development, DAO creation_  
   Grants ranging from $1K - $8K USD.
@@ -26,8 +27,8 @@ These programs support the broad Ethereum ecosystem by offering grants to a wide
 
 These projects have created their own grants for projects aimed at developing and experimenting with their own technology.
 
-- [TheGraph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) ecosystem_
-- [Uniswap](https://airtable.com/shrEXXxXB1humz7VS) – _[Uniswap](https://uniswap.org/) community_
+- [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) ecosystem_
+- [Uniswap Grants Program](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/) community_
 - [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) – _[Balancer](https://balancer.fi/) Ecosystem Fund_
 - [mStable](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) community_
 

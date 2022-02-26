@@ -14,6 +14,7 @@ Here are some excellent starting points:
 
 - [Decentralizing Everything](https://www.youtube.com/watch?v=WSN5BaCzsbo&feature=youtu.be) _Sep 18, 2017 - Vitalik Buterin (Video)_
 - [Why Decentralization Matters](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e) _Feb 18, 2018 - Chris Dixon_
+- [The Year in Ethereum 2021](https://stark.mirror.xyz/q3OnsK7mvfGtTQ72nfoxLyEV5lfYOqUfJIoKBx7BG1I) _Jan 17, 2022 - Josh Stark and Evan Van Ness_
 - [The Year in Ethereum 2020](https://jjmstark.medium.com/the-year-in-ethereum-2020-98123e5f160d) _Jan 20, 2021 - Josh Stark and Evan Van Ness_
 - [Ethereum is game-changing technology, literally](https://medium.com/@virgilgr/ethereum-is-game-changing-technology-literally-d67e01a01cf8) _Mar 29, 2019 - Virgil Griffith_
 
@@ -24,9 +25,11 @@ In addition to the information on this page, there are many community-built reso
 - [Ethereum.wiki](https://eth.wiki) _A community-built wiki about Ethereum’s technology_
 - [Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Videos and talks about Ethereum_
 - [Week in Ethereum News](https://weekinethereumnews.com/) _A weekly newsletter covering key developments across the ecosystem_
-- [What’s new in ETH 2.0](https://eth2.news) _A regular newsletter about Eth2 development_
-- [ethresear.ch forum](https://ethresear.ch/) _Deeper technical discussions on Ethereum for Eth2 and beyond_
+- [What’s new in Eth2](https://eth2.news) _A regular newsletter about Ethereum development_
+- [ethresear.ch forum](https://ethresear.ch/) _Deeper technical discussions on Ethereum for scaling and beyond_
 - [ETHGlobal](https://ethglobal.co) _An Ethereum hackathon series - attend one near you!_
+- [Web3 University](https://www.web3.university) _A community-driven online resource focused on web3 development_
+- [EtherWorld](https://etherworld.co/tag/ethereum/) _An Ethereum educational resource in the form of blogs and video guides_
 
 ## How Ethereum works {#how-ethereum-works}
 
@@ -59,13 +62,13 @@ Ethereum currently uses a system called "proof-of-work". This allows the Ethereu
 
 You can learn more about [proof of work](/developers/docs/consensus-mechanisms/pow/) and [mining](/developers/docs/consensus-mechanisms/pow/mining/) within our developer documentation.
 
-In ETH 2.0, Ethereum will be moving to a different system called "proof-of-stake". [Read more about ETH 2.0 below](#eth-2-0).
+After [The Merge](/upgrades/merge/), Ethereum will be moving to a different system called "proof-of-stake". [Read more about consensus layer upgrades below](#consensus-layer-upgrades).
 
 ## Clients and Nodes {#clients-and-nodes}
 
 The Ethereum network is made up of many nodes, each of which runs compatible client software.
 
-You can [learn how to run a node of your own](/developers/docs/nodes-and-clients/#running-your-own-node) or find a [comprehensive list of all Ethereum clients](/developers/docs/nodes-and-clients/#clients) within our developer documentation.
+You can [learn how to run a node of your own](/developers/docs/nodes-and-clients/#running-your-own-node) or find a [comprehensive list of all Ethereum clients](/developers/docs/nodes-and-clients/#execution-clients) within our developer documentation.
 
 ## Enterprise Ethereum {#enterprise-ethereum}
 
@@ -77,23 +80,23 @@ Read more about [Enterprise Ethereum](/enterprise/).
 
 There are many efforts underway to make Ethereum more “scalable” by improving its speed and overall transaction throughput. Generally these are sorted into “Layer 1” and “Layer 2” solutions.
 
-“Layer 1” refers to improving the core Ethereum protocol. The primary project to improve Ethereum’s core protocol is [ETH 2.0](#eth-2-0).
+“Layer 1” refers to improving the core Ethereum protocol. Ethereum has a set of upgrades planned for the continual improvement of both the [execution layer](#execution-layer-upgrades) and the [consensus layer](#consensus-layer-upgrades).
 
 “Layer 2” refers to technologies that are built “on top” of the base Ethereum protocol, enabling greater scalability without compromising on security. There are also “off-chain” technologies like side-chains, which enable greater scalability by making a different set of security tradeoffs.
 
-[More on Layer 2](/developers/docs/scaling/layer-2-rollups/)
+[More on Layer 2](/developers/docs/scaling/#layer-2-scaling)
 
-## Eth2 {#eth-2-0}
+## Consensus layer upgrades {#consensus-layer-upgrades}
 
-Eth2 (also known as “Serenity”) refers to the next major upgrade of the core Ethereum protocol. It combines several improvements to Ethereum’s core protocol, or “Layer 1”.
+A set of upgrades (originally known as 'Serenity' or 'Eth2') that aim to upgrade the Ethereum protocol's core for a more scalable, sustainable future, utilizing a proof-of-stake consensus layer.
 
-[Learn everything you need to know about Eth2](/eth2/).
+[Learn everything you need to know about Ethereum upgrades](/upgrades/).
 
-## ETH 1.x {#eth-1x}
+## Execution layer upgrades {#execution-layer-upgrades}
 
-ETH 1.x is the name for a collection of upgrades to the existing Ethereum protocol. The goal is to continue to improve and maintain Ethereum while ETH 2.0 is developed and implemented.
+Execution layer upgrades are a separate area of research from the consensus layer. The goal is to continue to improve and maintain the execution layer of Ethereum while the consensus layer is developed and implemented.
 
-For more information, see [EthHub’s explainer page about ETH 1.x](https://docs.ethhub.io/ethereum-roadmap/ethereum-1.x/)
+For more information, see [EthHub’s explainer page about Ethereum's execution layer](https://docs.ethhub.io/ethereum-roadmap/ethereum-1.x/)
 
 ## Cryptoeconomics {#cryptoeconomics}
 

@@ -31,11 +31,11 @@ Ces changements de règles peuvent créer une scission temporaire sur le réseau
 
 #### Résumé {#beacon-chain-genesis-summary}
 
-La [chaîne phare](/eth2/beacon-chain/) avait besoin de 16 384 dépôts de 32 ETH mis en jeu pour être déployée en toute sécurité. Cela s'est produit le 27 novembre, ce qui signifie que la chaîne phare a commencé à produire des blocs le 1er décembre 2020. Il s'agit d'une première étape importante dans la réalisation de la [vision Eth2](/eth2/vision/).
+La [chaîne phare](/upgrades/beacon-chain/) avait besoin de 16 384 dépôts de 32 ETH mis en jeu pour être déployée en toute sécurité. Cela s'est produit le 27 novembre, ce qui signifie que la chaîne phare a commencé à produire des blocs le 1er décembre 2020. Il s'agit d'une première étape importante dans la réalisation de la [vision Eth2](/upgrades/vision/).
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/eth2/beacon-chain/">
+<DocLink to="/upgrades/beacon-chain/">
   Chaîne phare
 </DocLink>
 
@@ -47,11 +47,11 @@ La [chaîne phare](/eth2/beacon-chain/) avait besoin de 16 384 dépôts de 32 E
 
 #### Résumé {#deposit-contract-summary}
 
-Le contrat de dépôt de mise en jeu a introduit la [mise en jeu](/glossary/#staking) dans l'écosystème Ethereum. Bien qu'il s'agisse d'un contrat du [réseau principal](/glossary/#mainnet), il a eu un impact direct sur la chronologie de lancement de la [chaîne phare](/eth2/beacon-chain/), une mise à niveau [Eth2](/eth2/) importante.
+Le contrat de dépôt de mise en jeu a introduit la [mise en jeu](/glossary/#staking) dans l'écosystème Ethereum. Bien qu'il s'agisse d'un contrat du [réseau principal](/glossary/#mainnet), il a eu un impact direct sur la chronologie de lancement de la [chaîne phare](/upgrades/beacon-chain/), une mise à niveau [Eth2](/upgrades/) importante.
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/eth2/staking/">
+<DocLink to="/staking/">
   Miser
 </DocLink>
 

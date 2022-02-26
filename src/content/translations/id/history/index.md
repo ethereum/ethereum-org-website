@@ -28,7 +28,7 @@ Perubahan-perubahan aturan ini dapat membuat pemisahan sementara di jaringan. Bl
 
 Peningkatan Altair adalah peningkatan pertama yang terjadwal untuk [Rantai Suar](/eth2/beacon-chain). Diharapkan untuk diluncurkan pada 2021. Peningkatan ini akan menambah dukungan pada "komite sinkronisasi", yang dapat memungkinkan klien ringan, dan akan membawa penalti ketidakaktifan dan pemotongan sampai nilai maksimumnya.
 
-- [Baca spesifikasi peningkatan Altair](https://github.com/ethereum/eth2.0-specs/tree/dev/specs/altair)
+- [Baca spesifikasi peningkatan Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
 ---
 
@@ -161,7 +161,7 @@ Fork Istanbul:
 
 - Mengoptimalkan biaya [gas](/glossary/#gas) dari aksi tertentu di [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Meningkatkan ketahanan terhadap serangan penolakan layanan.
-- Membuat solusi [penskalaan Lapisan 2](/developers/docs/scaling/layer-2-rollups/) berdasarkan SNARK dan STARK berkinerja lebih baik.
+- Membuat solusi [penskalaan Lapisan 2](/developers/docs/scaling/#rollups) berdasarkan SNARK dan STARK berkinerja lebih baik.
 - Memungkinkan Ethereum dan Zcash untuk saling bekerja sama.
 - Kontrak yang diizinkan untuk memperkenalkan lebih banyak fungsi kreatif.
 
@@ -173,7 +173,7 @@ Fork Istanbul:
 - [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _kriptografi lebih murah untuk meningkatkan biaya [gas](/glossary/#gas)._
 - [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _melidungi Ethereum terhadap serangan perulangan dengan menambahkan [opcode] `CHAINID` (/developers/docs/ethereum-stack/#ethereum-virtual-machine)._
 - [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _mengoptimalkan harga gas opcode berdasarkan jumlah pemakaian._
-- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _mengurangi biaya CallData agar lebih banyak data di blok – baik untuk [penskalaan Lapisan 2](/developers/docs/scaling/layer-2-rollups/)._
+- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _mengurangi biaya CallData agar lebih banyak data di blok – baik untuk [penskalaan Lapisan 2](/developers/docs/scaling/#rollups)._
 - [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) – _perubahan harga gas opcode lainnya._
 
 </ExpandableCard>
@@ -224,7 +224,7 @@ Fork Byzantium:
 - Mengurangi imbalan [penambangan](/developers/docs/consensus-mechanisms/pow/mining/) blok dari 5 menjadi 3 ETH.
 - Menunda [bom kesulitan](/glossary/#difficulty-bomb) selama satu tahun.
 - Menambahkan kemampuan untuk melakukan panggilan yang tidak mengubah state ke kontrak lain.
-- Menambahkan metode kriptografi tertentu untuk memungkinkan [penskalaan lapisan 2](/developers/docs/scaling/layer-2-rollups/).
+- Menambahkan metode kriptografi tertentu untuk memungkinkan [penskalaan lapisan 2](/developers/docs/scaling/#rollups).
 
 [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
@@ -232,8 +232,8 @@ Fork Byzantium:
 
 - [EIP-140](https://eips.ethereum.org/EIPS/eip-140) – _menambahkan opcode `REVERT`._
 - [EIP-658](https://eips.ethereum.org/EIPS/eip-658) – _field status ditambahkan ke kwitansi untuk menunjukkan keberhasilan atau kegagalan._
-- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _menambahkan kurva eliptik dan perkalian skalar untuk memungkinkan [ZK-Snarks](/developers/docs/scaling/layer-2-rollups/#zk-rollups)._
-- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _menambahkan kurva eliptik dan perkalian skalar untuk memungkinkan [ZK-Snarks](/developers/docs/scaling/layer-2-rollups/#zk-rollups)._
+- [EIP-196](https://eips.ethereum.org/EIPS/eip-196) – _menambahkan kurva eliptik dan perkalian skalar untuk memungkinkan [ZK-Snarks](/developers/docs/scaling/zk-rollups/)._
+- [EIP-197](https://eips.ethereum.org/EIPS/eip-197) – _menambahkan kurva eliptik dan perkalian skalar untuk memungkinkan [ZK-Snarks](/developers/docs/scaling/zk-rollups/)._
 - [EIP-198](https://eips.ethereum.org/EIPS/eip-198) – _memungkinkan verfikasi tanda tangan RSA._
 - [EIP-211](https://eips.ethereum.org/EIPS/eip-211) – _menambahkan dukungan untuk nilai pengembalian panjang variabel._
 - [EIP-214](https://eips.ethereum.org/EIPS/eip-214) – _menambahkan opcode `STATICCALL` yang memungkinkan pemanggilan yang tidak mengubah state terhadap kontrak lainnya._

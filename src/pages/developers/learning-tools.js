@@ -82,39 +82,38 @@ const LearningToolsPage = ({ data }) => {
   const [randomizedSandboxes, setRandomizedSandboxes] = useState([])
 
   useEffect(() => {
+    const sandboxes = [
+      {
+        name: "Remix",
+        description: "page-learning-tools-remix-description",
+        url: "https://remix.ethereum.org",
+        image: getImage(data.remix),
+        alt: "page-learning-tools-remix-logo-alt",
+        background: "#5098D6",
+        subjects: ["Solidity", "Vyper"],
+      },
+      {
+        name: "Eth.build",
+        description: "page-learning-tools-eth-dot-build-description",
+        url: "https://eth.build/",
+        image: getImage(data.ethdotbuild),
+        alt: "page-learning-tools-eth-dot-build-logo-alt",
+        background: "#000000",
+        subjects: ["web3"],
+      },
+      {
+        name: "Replit",
+        description: "page-learning-tools-replit-description",
+        url: "https://replit.com/@replit/Solidity-starter-beta",
+        image: getImage(data.replit),
+        alt: "page-learning-tools-replit-logo-alt",
+        background: "#0f1524",
+        subjects: ["Solidity", "web3"],
+      },
+    ]
     const randomizedSandboxes = shuffle(sandboxes)
     setRandomizedSandboxes(randomizedSandboxes)
-  }, [])
-
-  const sandboxes = [
-    {
-      name: "Remix",
-      description: "page-learning-tools-remix-description",
-      url: "https://remix.ethereum.org",
-      image: getImage(data.remix),
-      alt: "page-learning-tools-remix-logo-alt",
-      background: "#5098D6",
-      subjects: ["Solidity", "Vyper"],
-    },
-    {
-      name: "Eth.build",
-      description: "page-learning-tools-eth-dot-build-description",
-      url: "https://eth.build/",
-      image: getImage(data.ethdotbuild),
-      alt: "page-learning-tools-eth-dot-build-logo-alt",
-      background: "#000000",
-      subjects: ["web3"],
-    },
-    {
-      name: "Replit",
-      description: "page-learning-tools-replit-description",
-      url: "https://replit.com/@replit/Solidity-starter-beta",
-      image: getImage(data.replit),
-      alt: "page-learning-tools-replit-logo-alt",
-      background: "#0f1524",
-      subjects: ["Solidity", "web3"],
-    },
-  ]
+  }, [data])
 
   const games = [
     {
@@ -208,6 +207,15 @@ const LearningToolsPage = ({ data }) => {
       image: getImage(data.nftschool),
       alt: "page-learning-tools-nftschool-logo-alt",
       background: "#111F29",
+      subjects: ["Solidity", "web3"],
+    },
+    {
+      name: "Pointer",
+      description: "page-learning-tools-pointer-description",
+      url: "https://pointer.gg/",
+      image: getImage(data.pointer),
+      alt: "page-learning-tools-pointer-logo-alt",
+      background: "#171717",
       subjects: ["Solidity", "web3"],
     },
   ]
@@ -305,11 +313,8 @@ const LearningToolsPage = ({ data }) => {
             "page-index-sections-enterprise-image-alt",
             intl
           )}
-          title={translateMessageId("page-learning-tools-documentation", intl)}
-          description={translateMessageId(
-            "page-learning-tools-documentation-desc",
-            intl
-          )}
+          titleKey={"page-learning-tools-documentation"}
+          descriptionKey={"page-learning-tools-documentation-desc"}
         >
           <div>
             <ButtonLink to="/developers/docs/">
@@ -380,6 +385,10 @@ export const query = graphql`
     nftschool: file(relativePath: { eq: "dev-tools/nftschool.png" }) {
       ...learningToolImage
     }
+    pointer: file(relativePath: { eq: "dev-tools/pointer.png" }) {
+      ...learningToolImage
+    }
+
     learn: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
         gatsbyImageData(

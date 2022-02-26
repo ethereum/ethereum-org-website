@@ -28,7 +28,7 @@ const Value = styled.span`
 `
 
 const Title = styled.p`
-  font-size: 20px;
+  font-size: 1.25rem;
   margin-bottom: 0.5rem;
   color: ${({ theme }) => theme.colors.text};
   text-transform: uppercase;
@@ -122,13 +122,14 @@ const ButtonContainer = styled.div`
 const Button = styled.button`
   background: ${(props) => props.theme.colors.background};
   font-family: ${(props) => props.theme.fonts.monospace};
-  font-size: 20px;
-  color: ${({ theme }) => theme.colors.text};
+  font-size: 1.25rem;
+  color: ${({theme}) => theme.colors.text};
   padding: 2px 15px;
   border-radius: 1px;
-  border: 1px solid ${({ theme, color }) => theme.colors[color]};
+  border: 1px solid ${({theme, color}) => theme.colors[color]};
   outline: none;
   cursor: pointer;
+
   &:disabled {
     cursor: default;
     opacity: 0.7;

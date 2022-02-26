@@ -64,14 +64,14 @@ const Title = styled.h3`
 `
 
 const TextPreview = styled.p`
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   color: ${(props) => props.theme.colors.text200};
   margin-bottom: 0rem;
 `
 
 const StyledTextPreview = styled.p`
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   color: ${(props) => props.theme.colors.text200};
   margin-bottom: 0rem;
@@ -121,7 +121,7 @@ const StyledIcon = styled(Icon)`
 `
 
 const SectionTitle = styled.h4`
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 700;
   line-height: 22px;
@@ -130,14 +130,14 @@ const SectionTitle = styled.h4`
   margin-top: 0rem;
 `
 const StepboxTitle = styled.span`
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 700;
   text-align: left;
 `
 
 const P = styled.p`
-  font-size: 16px;
+  font-size: 1rem;
   margin-bottom: 0rem;
 `
 
@@ -184,7 +184,7 @@ const StyledRightColumn = styled(RightColumn)`
 `
 
 const H4 = styled.h4`
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 700;
   text-align: left;
@@ -481,7 +481,7 @@ const StablecoinAccordion = () => {
         intl
       ),
       image: getImage(data.eth),
-      link: "/eth2/get-involved/bug-bounty/",
+      link: "/upgrades/get-involved/bug-bounty/",
       description: translateMessageId(
         "page-stablecoins-accordion-earn-project-3-description",
         intl

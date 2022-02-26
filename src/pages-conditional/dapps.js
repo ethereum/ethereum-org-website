@@ -66,12 +66,12 @@ const StyledGhostCard = styled(GhostCard)`
 `
 
 const Subtitle = styled.div`
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
   margin-top: 1rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 `
 
@@ -110,7 +110,7 @@ const TwoColumnContent = styled.div`
 `
 
 const H2 = styled.h2`
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   margin-top: 0.5rem;
   font-weight: 700;
@@ -206,10 +206,11 @@ const StepBox = styled(Link)`
 `
 
 const H3 = styled.h3`
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
   margin-top: 1.5rem;
+
   a {
     display: none;
   }
@@ -1331,14 +1332,8 @@ const DappsPage = ({ data, location }) => {
               </RightColumn>
             </TwoColumnContent>
             <StyledCalloutBanner
-              title={translateMessageId(
-                "page-dapps-wallet-callout-title",
-                intl
-              )}
-              description={translateMessageId(
-                "page-dapps-wallet-callout-description",
-                intl
-              )}
+              titleKey={"page-dapps-wallet-callout-title"}
+              descriptionKey={"page-dapps-wallet-callout-description"}
               image={getImage(data.wallet)}
               maxImageWidth={300}
               alt={translateMessageId(

@@ -68,7 +68,6 @@
   "docs-nav-rust": "Rust语言",
   "docs-nav-scaling": "缩放",
   "docs-nav-scaling-description": "随着以太坊的发展，维护去中心化和安全的方法",
-  "docs-nav-scaling-layer-2": "第二层 Rollup",
   "docs-nav-scaling-channels": "状态通道",
   "docs-nav-scaling-sidechains": "侧链",
   "docs-nav-scaling-plasma": "Plasma",

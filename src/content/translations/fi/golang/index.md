@@ -56,7 +56,7 @@ Tarvitsetko perusteellisempaa aloitusta? Katso [ethereum.org/fi/learn](/learn/) 
 - [Geth / Go Ethereum](https://github.com/ethereum/go-ethereum) - _Virallinen Go-toteutus Ethereum-protokollasta_
 - [Go Ethereum Code Analysis](https://github.com/ZtesoftCS/go-ethereum-code-analysis) - _Go Ethereumin lähdekoodin läpikäynti ja analyysi_
 - [Golem](https://github.com/golemfactory/golem) - _Golem luo globaalia markkinaa laskentateholle_
-- [Quorum](https://github.com/jpmorganchase/quorum) - _Hyväksytty toteutus Etherumin tuesta tietosuojaan_
+- [Quorum](https://github.com/jpmorganchase/quorum) - _Hyväksytty toteutus Ethereumin tuesta tietosuojaan_
 - [Prysm](https://github.com/prysmaticlabs/prysm) - _Ethereum 'Serenity' 2.0 Go -toteutus_
 - [Eth Tweet](https://github.com/yep/eth-tweet) - _Hajautettu Twitter: palvelu mikrobloggaukselle, joka ajetaan Ethereumin lohkoketjussa_
 - [Plasma MVP Golang](https://github.com/kyokan/plasma) — _Golang-toteutus ja laajennus Minimum Viable Plasma-määräyksestä_

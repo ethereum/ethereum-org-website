@@ -18,7 +18,7 @@ Anda harus memahami konsep jaringan peer-to-peer dan [dasar-dasar EVM](/develope
 
 Anda bisa melihat tampilan jaringan Ethereum secara nyata dengan melihat [peta node](https://etherscan.io/nodetracker) ini.
 
-Banyak [klien Ethereum](/developers/docs/nodes-and-clients/#clients) ada, dalam berbagai bahasa pemrograman seperti Go, Rust, JavaScript, Python, C# .NET, dan Java. Persamaan dari semua implementasi ini adalah semuanya mengikuti spesifikasi formal (pada awalnya [Yellow Paper Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf)). Spesifikasi ini mengatur bagaimana jaringan Ethereum dan blockchain berfungsi.
+Banyak [klien Ethereum](/developers/docs/nodes-and-clients/#execution-clients) ada, dalam berbagai bahasa pemrograman seperti Go, Rust, JavaScript, Python, C# .NET, dan Java. Persamaan dari semua implementasi ini adalah semuanya mengikuti spesifikasi formal (pada awalnya [Yellow Paper Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf)). Spesifikasi ini mengatur bagaimana jaringan Ethereum dan blockchain berfungsi.
 
 ![Klien Eth1x](../../../../../developers/docs/nodes-and-clients/client-diagram.png) Diagram yang disederhanakan tentang apa saja fitur klien Ethereum.
 

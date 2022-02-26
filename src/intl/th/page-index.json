@@ -37,6 +37,7 @@
   "page-index-developers": "ดินแดนใหม่แห่งการพัฒนา",
   "page-index-developers-description": "อีเธอเรียมและแอปพลิเคชันที่ใช้นั้นโปร่งใสและเป็นโอเพ่นซอร์ส คุณสามารถร่วมเขียนโค้ดหรือนำโค้ดที่ผู้อื่นเขียนมาใช้งานได้ และถ้าคุณไม่ต้องการที่จะเรียนรู้โค้ดในภาษาใหม่ ก็สามารถทำงานกับโอเพ่นซอร์สโค้ดโดยใช้ JavaScript หรือ ภาษาอื่นๆ ที่มีอยู่",
   "page-index-developers-button": "พอร์ทัลนักพัฒนา",
+  "page-index-developers-code-examples": "Code examples",
   "page-index-developers-code-example-title-0": "ธนาคารของคุณ",
   "page-index-developers-code-example-description-0": "คุณสามารถสร้างธนาคารที่ดำเนินการด้วยตรรกะที่คุณโปรแกรมเองได้",
   "page-index-developers-code-example-title-1": "สกุลเงินของคุณ",

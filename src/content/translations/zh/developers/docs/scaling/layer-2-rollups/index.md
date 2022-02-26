@@ -48,13 +48,13 @@ Optimistic rollup 与第二层的以太坊主链同步进行。 它们可以提�
 
 通过 Optimistic rollup，交易以 `calldata` 的形式写入以太坊主网，通过减少 gas 消耗进一步优化。
 
-由于计算是使用以太坊 Optimistic rollup 缓慢而昂贵的部分，Optimistic rollup 可以提供高达 10-100 倍的可扩容性，具体取决于交易。 在引入 [分片](/eth2/shard-chains) 后，这个数字将会增加，因为如果交易有争议，将会有更多的数据。
+由于计算是使用以太坊 Optimistic rollup 缓慢而昂贵的部分，Optimistic rollup 可以提供高达 10-100 倍的可扩容性，具体取决于交易。 在引入 [分片](/upgrades/shard-chains) 后，这个数字将会增加，因为如果交易有争议，将会有更多的数据。
 
 #### 对交易提出异议 {#disputing-transactions}
 
 Optimistic rollup 并不实际计算交易，所以需要有一个机制来确保交易是合法的，而不是欺诈性的。 这就是欺诈证明的作用。 如果有人注意到有欺诈性交易，rollup 将执行防欺诈并运行交易的计算，使用可用的状态数据。 这意味着您的交易确认等待时间可能比 ZK Rollup 更长，因为它可能受到质疑。
 
-![显示以太坊中的 Optimistic rollup 中发生欺诈性交易时的图表](../../../../../developers/docs/scaling/layer-2-rollups/optimistic-rollups.png)
+![显示以太坊中的 Optimistic rollup 中发生欺诈性交易时的图表](../../../../../developers/docs/scaling/optimistic-rollups/optimistic-rollups.png)
 
 你需要运行欺诈证明计算的 gas 甚至可以报销。 来自 Optimism 的 Ben Jones 介绍了现有的联系制度。
 

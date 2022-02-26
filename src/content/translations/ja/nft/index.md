@@ -64,7 +64,7 @@ NFT の世界は比較的新しいものです。 理論的には、NFT の扱�
 
 ethereum.org への貢献で、POAP NFT を取得できます。 これはイベントに参加したことを証明するコレクションです。 仮想通貨ミートアップの中には、POAP をイベントのチケットとして使用している場合もあります。 [貢献の詳細](/contributing/#poap).
 
-![ethereum.orgのPOAP](../../../../assets/use-cases/poap.png)
+![ethereum.orgのPOAP](./poap.png)
 
 #### ethereum.eth {#ethereum-dot-eth}
 
@@ -323,13 +323,13 @@ NFT をミントする際には、いくつかのポイントがあります。
 
 ### より環境に優しい未来... {#a-greener-future}
 
-Ethereum の誕生以来、開発者や研究者にとって、マイニングによるエネルギー消費は大きな関心事でした。 できるだけ早く、問題を解決することを常に念頭に置いて、ビジョンにしてきました。 [Ethereum のビジョンの詳細](/eth2/vision/)
+Ethereum の誕生以来、開発者や研究者にとって、マイニングによるエネルギー消費は大きな関心事でした。 できるだけ早く、問題を解決することを常に念頭に置いて、ビジョンにしてきました。 [Ethereum のビジョンの詳細](/upgrades/vision/)
 
 このビジョンは今実現されようとしています。
 
-#### より環境に優しい Ethereum: Eth2 {#eth2}
+#### より環境に優しい Ethereum: Eth2 {#greener-ethereum}
 
-Ethereum は現在、マイニングを[ステーキング](/eth2/staking/)に置き換える、Eth2 と呼ばれる一連のアップグレードを行っています。 これにより、セキュリティメカニズムとしてのコンピューティングパワーが不要になり、Ethereum の二酸化炭素排出量が～ 99.95%<sup>[^1]</sup>削減します。 この世界では、ステーカーは、ネットワークを保護するために、コンピューティングパワーではなく、資金を投入します。
+Ethereum は現在、マイニングを[ステーキング](/staking/)に置き換える、Eth2 と呼ばれる一連のアップグレードを行っています。 これにより、セキュリティメカニズムとしてのコンピューティングパワーが不要になり、Ethereum の二酸化炭素排出量が～ 99.95%<sup>[^1]</sup>削減します。 この世界では、ステーカーは、ネットワークを保護するために、コンピューティングパワーではなく、資金を投入します。
 
 Ethereum のエネルギーコストは、家庭用コンピューターのランニングコストにネットワークのノード数を掛けたものになります。 ネットワークに 10,000 のノードがあり、家庭用コンピュータのランニングコストが年間およそ 525kWh であるとします。 これはネットワーク全体で 1 年間に 5,250,000kWh<sup>[^1]</sup>のエネルギー消費になります。
 
@@ -345,15 +345,15 @@ _また、Ethereum は金融取引だけでなく、アプリケーションの�
 
 #### タイムライン {#timelines}
 
-プロセスは既に始まっています。 [ビーコンチェーン](/eth2/beacon-chain/)は、2020 年 12 月にリリースされた最初のアップグレードです。 ステーカーがシステムに参加できる、ステーキングの基盤を提供します。 エネルギー効率に関連する次のステップは、現在のチェーン、つまりマイナーが保護しているチェーンを、マイニングが不要なビーコンチェーンに統合することです。 現段階では正確な時期は不明ですが、2021 年/2022 年のいずれかの時期に実現すると推定されます。 このプロセスをマージ(旧:ドッキング)といいます。 [マージの詳細](/eth2/merge/).
+プロセスは既に始まっています。 [ビーコンチェーン](/upgrades/beacon-chain/)は、2020 年 12 月にリリースされた最初のアップグレードです。 ステーカーがシステムに参加できる、ステーキングの基盤を提供します。 エネルギー効率に関連する次のステップは、現在のチェーン、つまりマイナーが保護しているチェーンを、マイニングが不要なビーコンチェーンに統合することです。 現段階では正確な時期は不明ですが、2021 年/2022 年のいずれかの時期に実現すると推定されます。 このプロセスをマージ(旧:ドッキング)といいます。 [マージの詳細](/upgrades/merge/).
 
-<ButtonLink to="/eth2/">ETH2 の詳細</ButtonLink>
+<ButtonLink to="/upgrades/">ETH2 の詳細</ButtonLink>
 
 <!-- #### Rollups in the meantime...
 
 While we wait for Eth2, products are moving to a "layer 2" technology known as rollups. Working on top of Ethereum, this technology lets you "roll up" or batch many transactions into a single one that is submitted to the chain. By moving as many things off the chain and only submitting the truly important bits (the cryptographic proofs), demand for block space will decrease. This will in turn lower the amount of computing power needed to create new blocks.
 
-[More on rollups and layer 2 technology](/developers/docs/scaling/layer-2-rollups/)
+[More on rollups and layer 2 technology](/developers/docs/scaling/#rollups)
 
 #### A more efficient NFT standard...
 
@@ -441,7 +441,7 @@ Eth2 により、ネットワークは 1 秒間に 25,000 ～ 100,000 件のト�
 
 [Vitalik Buterin による Eth2 のトランザクション件数の可能性について](https://twitter.com/VitalikButerin/status/1312905884549300224?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1312905886327664640%7Ctwgr%5E%7Ctwcon%5Es2_&ref_url=https%3A%2F%2Fwww.coinspeaker.com%2Fvitalik-buterin-ethereum-layer-2%2F)
 
-最低でも、Eth2 では現在の約 15 件の取引の 64 倍の取引が可能になります。 それは、シャードチェーン(データや容量の追加)が導入されている分です。 [シャードチェーンの詳細](/eth2/shard-chains/)
+最低でも、Eth2 では現在の約 15 件の取引の 64 倍の取引が可能になります。 それは、シャードチェーン(データや容量の追加)が導入されている分です。 [シャードチェーンの詳細](/upgrades/shard-chains/)
 
 上記の Visa の例と比較できるよう、100,000 件のトランザクションを処理するのにかかる時間を見積もることができます。
 

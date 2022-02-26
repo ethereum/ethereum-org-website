@@ -6,16 +6,13 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 
 import AssetDownload from "../components/AssetDownload"
-// import EthVideo from "../components/EthVideo"
 import Link from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import { Page, Content } from "../components/SharedStyledComponents"
 
 import { translateMessageId } from "../utils/translations"
-
-// import darkVideo from "../assets/ethereum-hero-dark.mp4"
-// import lightVideo from "../assets/ethereum-hero-light.mp4"
+import ethGlyphColoredSvg from "../assets/assets/eth-glyph-colored.svg"
 
 const Image = styled(GatsbyImage)`
   align-self: center;
@@ -76,11 +73,6 @@ const Header = styled.header`
     margin: 2rem;
   }
 `
-
-// const EthVideoAsset = styled(EthVideo)`
-//   max-height: 400px;
-//   max-width: 400px;
-// `
 
 const AssetsPage = ({ data }) => {
   const intl = useIntl()
@@ -285,74 +277,6 @@ const AssetsPage = ({ data }) => {
           <Translation id="page-assets-historical-artwork" />
         </H2>
 
-        {/* TODO re-add: https://www.notion.so/efdn/Buy-contract-NFT-art-for-the-website-a589591ee18a4e5b8aeafe13075a62dc */}
-        {/* <Row>
-          <AssetDownload
-            title={translateMessageId(
-              "page-assets-eth-glyph-video-light",
-              intl
-            )}
-            artistName="Lili Lashka"
-            artistUrl="https://www.impermanence.co/"
-            src={lightVideo}
-          >
-            <EthVideoAsset
-              videoSrc={lightVideo}
-              alt={translateMessageId(
-                "page-assets-eth-glyph-video-light",
-                intl
-              )}
-            />
-          </AssetDownload>
-          <AssetDownload
-            title={translateMessageId("page-assets-eth-glyph-video-dark", intl)}
-            artistName="Lili Lashka"
-            artistUrl="https://www.impermanence.co/"
-            src={darkVideo}
-          >
-            <EthVideoAsset
-              videoSrc={darkVideo}
-              alt={translateMessageId("page-assets-eth-glyph-video-dark", intl)}
-            />
-          </AssetDownload>
-        </Row>
-        <Row>
-          <AssetDownload
-            title="ETH gif (1)"
-            image={data.ethGifCat}
-          />
-          <AssetDownload
-            title="ETH gif (2)"
-            image={data.ethGifChalk}
-          />
-          <AssetDownload
-            title="ETH gif (3)"
-            image={data.ethGifSun}
-          />
-          <AssetDownload
-            title="ETH gif (4)"
-            image={data.ethGifWaves}
-          />
-        </Row> */}
-
-        {/* TODO artistUrl */}
-        {/* <Row>
-          <AssetDownload
-            title={translateMessageId("page-assets-hero-particles", intl)}
-            alt={translateMessageId("page-assets-hero-particles", intl)}
-            image={data.oldHero}
-            artistName="EthWorks & Alan Wu"
-            artistUrl=""
-          />
-          <AssetDownload
-            title={translateMessageId("page-assets-hero-particles", intl)}
-            alt={translateMessageId("page-assets-hero-particles", intl)}
-            image={data.oldHeroDark}
-            artistName="EthWorks & Alan Wu"
-            artistUrl=""
-          />
-        </Row> */}
-
         <H2 id="brand">
           <Translation id="page-assets-ethereum-brand-assets" />
         </H2>
@@ -377,10 +301,29 @@ const AssetsPage = ({ data }) => {
             alt={translateMessageId("page-assets-eth-diamond-color", intl)}
             image={data.ethDiamondColor}
           />
+        </Row>
+        <Row>
           <AssetDownload
             title={translateMessageId("page-assets-eth-diamond-purple", intl)}
             alt={translateMessageId("page-assets-eth-diamond-purple", intl)}
             image={data.ethDiamondPurple}
+          />
+          <AssetDownload
+            title={translateMessageId("page-assets-eth-diamond-colored", intl)}
+            alt={translateMessageId("page-assets-eth-diamond-colored", intl)}
+            image={data.ethGlyphColored}
+          />
+          <AssetDownload
+            title={translateMessageId(
+              "page-assets-eth-diamond-colored-svg",
+              intl
+            )}
+            alt={translateMessageId(
+              "page-assets-eth-diamond-colored-svg",
+              intl
+            )}
+            image={ethGlyphColoredSvg}
+            isSvg
           />
         </Row>
         <Row>
@@ -628,16 +571,16 @@ export const query = graphql`
     eth: file(relativePath: { eq: "eth.png" }) {
       ...assetItem
     }
-    oldShip: file(relativePath: { eq: "eth2/oldship.png" }) {
+    oldShip: file(relativePath: { eq: "upgrades/oldship.png" }) {
       ...assetItem
     }
-    merge: file(relativePath: { eq: "eth2/merge.png" }) {
+    merge: file(relativePath: { eq: "upgrades/merge.png" }) {
       ...assetItem
     }
-    beaconChain: file(relativePath: { eq: "eth2/core.png" }) {
+    beaconChain: file(relativePath: { eq: "upgrades/core.png" }) {
       ...assetItem
     }
-    newRings: file(relativePath: { eq: "eth2/newrings.png" }) {
+    newRings: file(relativePath: { eq: "upgrades/newrings.png" }) {
       ...assetItem
     }
     defi: file(relativePath: { eq: "use-cases/defi.png" }) {
@@ -702,6 +645,11 @@ export const query = graphql`
     }
     ethDiamondPurpleWhite: file(
       relativePath: { eq: "assets/eth-diamond-purple-white.jpg" }
+    ) {
+      ...assetItem
+    }
+    ethGlyphColored: file(
+      relativePath: { eq: "assets/eth-glyph-colored.png" }
     ) {
       ...assetItem
     }

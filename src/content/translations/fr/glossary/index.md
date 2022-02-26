@@ -50,7 +50,7 @@ Il s'agit du vote d'un validateur pour un bloc de la [chaîne phare](#beacon-cha
 
 Une mise à niveau Eth2 qui deviendra la coordinatrice du réseau Ethereum. Elle introduit la [preuve d'enjeu](#proof-of-stake) et [les validateurs](#validator) sur Ethereum. Elle finira par être fusionnée avec le [réseau principal](#mainnet).
 
-<DocLink to="/eth2/beacon-chain/">
+<DocLink to="/upgrades/beacon-chain/">
   Chaîne phare
 </DocLink>
 
@@ -446,7 +446,7 @@ Client Ethereum qui ne stocke aucune copie locale de la [blockchain](#blockchain
 
 ### réseau principal {#mainnet}
 
-Également appelé "mainnet" (pour "main network"), il s'agit de la [blockchain](#blockchain) principale du réseau public Ethereum. De vrais ETH, une valeur et des conséquences réelles. Aussi connu sous le nom de "Couche 1" lors des discussions sur les solutions d'évolutivité de la [couche 2](#layer-2). (Voir aussi [réseau de test](#testnet))
+Également appelé "Mainnet" (pour "main network"), il s'agit de la [blockchain](#blockchain) principale du réseau public Ethereum. De vrais ETH, une valeur et des conséquences réelles. Aussi connu sous le nom de "Couche 1" lors des discussions sur les solutions d'évolutivité de la [couche 2](#layer-2). (Voir aussi [réseau de test](#testnet))
 
 ### arbre de Merkle {#merkle-patricia-tree}
 
@@ -604,7 +604,7 @@ Type de solution d'évolutivité de [couche 2](#layer-2) qui regroupe plusieurs 
 
 Quatrième et dernière phase de développement d'Ethereum.
 
-<DocLink to="/eth2/">
+<DocLink to="/upgrades/">
   Ethereum 2.0 (Eth2)
 </DocLink>
 
@@ -616,7 +616,7 @@ Famille de fonctions de hachage cryptographique publiées par le National Instit
 
 Chaîne de [preuve d'enjeu](#proof-of-stake) coordonnée par la [chaîne phare](#beacon-chain) et sécurisée par les [validateurs](#validator). 64 seront ajoutés au réseau dans le cadre de la mise à niveau de la chaîne de fragments Eth2. Les chaînes de fragments offriront un débit de transaction accru pour Ethereum en fournissant des données supplémentaires aux solutions de la [couche 2](#layer-2) comme les [rollups optimisés](#optimistic-rollups) et les [rollups ZK](#zk-rollups).
 
-<DocLink to="/eth2/shard-chains">
+<DocLink to="/upgrades/shard-chains">
   chaînes de fragments
 </DocLink>
 
@@ -676,7 +676,7 @@ Langage d'assemblage de l'[EVM](#evm) dans un programme [Solidity](#solidity). L
 
 Déposer une quantité d'[ether](#ether) (votre mise) pour devenir validateur et sécuriser le [réseau](#network). Un validateur vérifie les [transactions](#transaction) et propose des [blocs](#block) sous un modèle de consensus de [preuve d'enjeu](#pos). Miser vous incite économiquement à agir dans le meilleur intérêt du réseau. Vous obtiendrez des récompenses pour effectuer vos tâches de [validateur](#validator) , mais perdrez diverses quantités d'ETH dans le cas contraire.
 
-<DocLink to="/eth2/staking/">
+<DocLink to="/staking/">
   Misez votre ETH pour devenir un validateur Ethereum
 </DocLink>
 
@@ -746,7 +746,7 @@ Dans un système de [preuve d'enjeu](#proof-of-stake), [nœud](#node) responsabl
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos">
   preuve d'enjeu
-</DocLink> <DocLink to="/eth2/staking/">
+</DocLink> <DocLink to="/staking/">
   Miser sur Ethereum
 </DocLink>
 

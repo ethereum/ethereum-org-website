@@ -51,7 +51,7 @@ Tarvitsetko perusteellisempaa aloitusta? Katso [ethereum.org/fi/learn](/learn/) 
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Kokoelma ulkoisia muuttujia vuorovaikuttamiseen ethereumin kaltaisten verkkojen kanssa._
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/)
 - [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _OASIS API -referenssi_
-- [eth-utils](https://github.com/ethereum/eth-utils/) - _Hyötyfunktioita Etherumiin liittyvien koodipohjien kanssa työskentelyyn_
+- [eth-utils](https://github.com/ethereum/eth-utils/) - _Hyötyfunktioita Ethereumiin liittyvien koodipohjien kanssa työskentelyyn_
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _Rust Ethereum-virtuaalikonetoteutus_
 - [Parity](https://github.com/paritytech/parity-ethereum) - _Ethereum Rust-asiakasohjelma_
