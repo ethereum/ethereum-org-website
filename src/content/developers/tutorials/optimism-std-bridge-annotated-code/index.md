@@ -199,6 +199,10 @@ Withdrawals (and other messages from L2 to L1) in Optimism are a two step proces
 ### IL1StandardBridge {#il1standardbridge}
 
 [This interface is defined here](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1StandardBridge.sol).
+The events and functions are nearly identical to those defined in `IL1ERC20Bridge` above.
+
+The bridge 
+
 
 ```solidity
 // SPDX-License-Identifier: MIT
