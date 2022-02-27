@@ -315,7 +315,12 @@ import { IL2ERC20Bridge } from "../../L2/messaging/IL2ERC20Bridge.sol";
 
 ```solidity
 import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+```
 
+[This interface](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) lets us control ERC-20 contracts. 
+[You can read more about it here](/developers/tutorials/erc20-annotated-code/#the-interface).
+
+```solidity
 /* Library Imports */
 import { CrossDomainEnabled } from "../../libraries/bridge/CrossDomainEnabled.sol";
 import { Lib_PredeployAddresses } from "../../libraries/constants/Lib_PredeployAddresses.sol";
