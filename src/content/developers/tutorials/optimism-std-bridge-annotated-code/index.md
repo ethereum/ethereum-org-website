@@ -113,6 +113,7 @@ The same bridge contract handles transfers in both directions.
 ```
 
 This function is not really needed, because on L2 it is a predeployed contract, so it is always at address `0x4200000000000000000000000000000000000010`.
+It is here for symmetry with the L2 bridge, because the address of the L1 bridge is *not* trivial to know.
 
 
 ```solidity
@@ -235,10 +236,9 @@ The same is true for the other events and the functions.
 
 ```solidity
     event ETHWithdrawalFinalized(
-        address indexed _from,
-        address indexed _to,
-        uint256 _amount,
-        bytes _data
+        .
+        .
+        .        
     );
 
     /********************
@@ -247,20 +247,17 @@ The same is true for the other events and the functions.
 
     /**
      * @dev Deposit an amount of the ETH to the caller's balance on L2.
-     * @param _l2Gas Gas limit required to complete the deposit on L2.
-     * @param _data Optional data to forward to L2. This data is provided
-     *        solely as a convenience for external contracts. Aside from enforcing a maximum
-     *        length, these contracts provide no guarantees about its content.
+            .
+            .
+            .            
      */
     function depositETH(uint32 _l2Gas, bytes calldata _data) external payable;
 
     /**
      * @dev Deposit an amount of ETH to a recipient's balance on L2.
-     * @param _to L2 address to credit the withdrawal to.
-     * @param _l2Gas Gas limit required to complete the deposit on L2.
-     * @param _data Optional data to forward to L2. This data is provided
-     *        solely as a convenience for external contracts. Aside from enforcing a maximum
-     *        length, these contracts provide no guarantees about its content.
+            .
+            .
+            .       
      */
     function depositETHTo(
         address _to,
@@ -276,12 +273,9 @@ The same is true for the other events and the functions.
      * @dev Complete a withdrawal from L2 to L1, and credit funds to the recipient's balance of the
      * L1 ETH token. Since only the xDomainMessenger can call this function, it will never be called
      * before the withdrawal is finalized.
-     * @param _from L2 address initiating the transfer.
-     * @param _to L1 address to credit the withdrawal to.
-     * @param _amount Amount of the ERC20 to deposit.
-     * @param _data Optional data to forward to L2. This data is provided
-     *        solely as a convenience for external contracts. Aside from enforcing a maximum
-     *        length, these contracts provide no guarantees about its content.
+                .
+                .
+                .
      */
     function finalizeETHWithdrawal(
         address _from,
