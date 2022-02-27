@@ -288,7 +288,148 @@ The same is true for the other events and the functions.
 
 ### CrossDomainEnabled {#crossdomainenabled}
 
-GOON GOON GOON
+[This contract](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/bridge/CrossDomainEnabled.sol) is inherited by both bridges ([L1](#the-l1-bridge-contract) and [L2](#the-l2-bridge-contract)) to send messages to the other layer.
+
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity >0.5.0 <0.9.0;
+
+/* Interface Imports */
+import { ICrossDomainMessenger } from "./ICrossDomainMessenger.sol";
+```
+
+[This interface](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/bridge/ICrossDomainMessenger.sol) tells the contract how to send messages to the other layer, using the cross domain messenger.
+This cross domain messenger is a whole other system, and deserves its own article, which I hope to write in the future.
+
+
+```solidity
+/**
+ * @title CrossDomainEnabled
+ * @dev Helper contract for contracts performing cross-domain communications
+ *
+ * Compiler used: defined by inheriting contract
+ */
+contract CrossDomainEnabled {
+    /*************
+     * Variables *
+     *************/
+
+    // Messenger contract used to send and recieve messages from the other domain.
+    address public messenger;
+
+    /***************
+     * Constructor *
+     ***************/
+
+    /**
+     * @param _messenger Address of the CrossDomainMessenger on the current layer.
+     */
+    constructor(address _messenger) {
+        messenger = _messenger;
+    }
+```
+
+The one parameter that the contract needs to know, the address of the cross domain messenger on this layer.
+This parameter is set once, in the constructor, and never changes.
+
+```solidity
+
+    /**********************
+     * Function Modifiers *
+     **********************/
+
+    /**
+     * Enforces that the modified function is only callable by a specific cross-domain account.
+     * @param _sourceDomainAccount The only account on the originating domain which is
+     *  authenticated to call this function.
+     */
+    modifier onlyFromCrossDomainAccount(address _sourceDomainAccount) {
+```
+
+The cross domain messaging is accessible by any contract on the blockchain (either Ethereum mainnet or Optimism). 
+But we need the bridge on each side to *only* trust certain messages if they come from the bridge on the other side.
+
+
+```solidity
+        require(
+            msg.sender == address(getCrossDomainMessenger()),
+            "OVM_XCHAIN: messenger contract unauthenticated"
+        );
+```
+
+Only messages from the appropriate cross domain messenger (`messenger`, as you see below) can be trusted.
+
+```solidity
+
+        require(
+            getCrossDomainMessenger().xDomainMessageSender() == _sourceDomainAccount,
+            "OVM_XCHAIN: wrong sender of cross-domain message"
+        );
+```
+
+The way the cross domain messenger provides the address that sent a message with the other layer is [the `.xDomainMessageSender()` function](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/L1CrossDomainMessenger.sol#L122-L128). 
+As long as it is called in the same transaction as the one that receives the message, it can provide this data.
+
+We need to make sure that the message we received came from the other bridge.
+
+```solidity
+
+        _;
+    }
+
+    /**********************
+     * Internal Functions *
+     **********************/
+
+    /**
+     * Gets the messenger, usually from storage. This function is exposed in case a child contract
+     * needs to override.
+     * @return The address of the cross-domain messenger contract which should be used.
+     */
+    function getCrossDomainMessenger() internal virtual returns (ICrossDomainMessenger) {
+        return ICrossDomainMessenger(messenger);
+    }
+```
+
+This function returns the cross domain messenger. 
+We use a function than the variable `messenger` to allow contracts than inherit from this one to use an algorithm to specify which cross domain messenger to use. 
+
+```solidity
+
+    /**
+     * Sends a message to an account on another domain
+     * @param _crossDomainTarget The intended recipient on the destination domain
+     * @param _message The data to send to the target (usually calldata to a function with
+     *  `onlyFromCrossDomainAccount()`)
+     * @param _gasLimit The gasLimit for the receipt of the message on the target domain.
+     */
+    function sendCrossDomainMessage(
+        address _crossDomainTarget,
+        uint32 _gasLimit,
+        bytes memory _message
+```
+
+Finally, the function that sends a message to the other layer. 
+
+```solidity
+    ) internal {
+        // slither-disable-next-line reentrancy-events, reentrancy-benign
+```
+
+[Slither](https://github.com/crytic/slither) is a static analyzer Optimism runs on every contract to look for vulnerabilities.
+In this case, the following line triggers two vulnerabilities:
+
+1. [Reentrancy events](https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3)
+1. [Benigh reentrancy](https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2)
+
+```solidity
+        getCrossDomainMessenger().sendMessage(_crossDomainTarget, _message, _gasLimit);
+    }
+}
+```
+
+In this case we are not worried about reentrancy we know `getCrossDomainMessenger()` returns a trustworthy address, even if slither has no way to know that.
 
 ### The L1 bridge contract {#the-l1-bridge-contract}
 
@@ -309,7 +450,7 @@ import { IL1StandardBridge } from "./IL1StandardBridge.sol";
 import { IL1ERC20Bridge } from "./IL1ERC20Bridge.sol";
 ```
 
-The two interfaces explained above.
+[IL1ERC20Bridge](#IL1ERC20Bridge) and [IL1StandardBridge](#IL1StandardBridge) are explained above. 
 
 ```solidity
 import { IL2ERC20Bridge } from "../../L2/messaging/IL2ERC20Bridge.sol";
@@ -327,6 +468,11 @@ import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 ```solidity
 /* Library Imports */
 import { CrossDomainEnabled } from "../../libraries/bridge/CrossDomainEnabled.sol";
+```
+
+
+
+```solidity
 import { Lib_PredeployAddresses } from "../../libraries/constants/Lib_PredeployAddresses.sol";
 import { Address } from "@openzeppelin/contracts/utils/Address.sol";
 import { SafeERC20 } from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
