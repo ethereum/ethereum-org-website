@@ -294,10 +294,20 @@ The same is true for the other events and the functions.
 ```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
+```
 
+The interfaces can be part of other contracts, so they have to support a wide range of Solidity versions.
+But the bridge itself is our contract, and we can be strict about what Solidity version it uses.
+
+```solidity
 /* Interface Imports */
 import { IL1StandardBridge } from "./IL1StandardBridge.sol";
 import { IL1ERC20Bridge } from "./IL1ERC20Bridge.sol";
+```
+
+The two interfaces explained above.
+
+```solidity
 import { IL2ERC20Bridge } from "../../L2/messaging/IL2ERC20Bridge.sol";
 import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
