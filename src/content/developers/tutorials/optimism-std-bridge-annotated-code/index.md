@@ -286,6 +286,10 @@ The same is true for the other events and the functions.
 }
 ```
 
+### CrossDomainEnabled {#crossdomainenabled}
+
+GOON GOON GOON
+
 ### The L1 bridge contract {#the-l1-bridge-contract}
 
 [The source code for this contract is here](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/L1StandardBridge.sol).
