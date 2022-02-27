@@ -282,6 +282,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             context: {
               slug: langSlug,
               ignoreTranslationBanner: isLegal,
+              isLegal: isLegal,
               isOutdated: false,
               isContentEnglish: true,
               relativePath: relativePath, // Use English path for template MDX query
