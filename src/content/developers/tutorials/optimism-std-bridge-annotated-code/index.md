@@ -70,6 +70,10 @@ In Optimism bridge terminology *deposit* means transfer from L1 to L2, and *with
 ```
 
 In most cases the address of an ERC-20 on L1 is not the same the address of the equivalent ERC-20 on L2.
+[You can see the list of token addresses here](https://static.optimism.io/optimism.tokenlist.json).
+The address with `chainId` 1 is on L1 (mainnet) and the address with `chainId` 10 is on L2 (Optimism).
+The other two `chainId` values are for the Kovan test network (42) and the Optimistic Kovan test network (69).
+
 
 ```solidity
         address indexed _from,
@@ -201,7 +205,8 @@ Withdrawals (and other messages from L2 to L1) in Optimism are a two step proces
 [This interface is defined here](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1StandardBridge.sol).
 The events and functions are nearly identical to those defined in `IL1ERC20Bridge` above.
 
-The bridge 
+The bridge interface is divided between two files because some ERC-20 tokens require custom processing and cannot be handled by the standard bridge.
+This way the custom bridge that handles such a token can implement `IL1ERC20Bridge` and not have to also bridge ETH.
 
 
 ```solidity
@@ -223,7 +228,12 @@ interface IL1StandardBridge is IL1ERC20Bridge {
         uint256 _amount,
         bytes _data
     );
+```
 
+This event is nearly identical to the ERC-20 version (`ERC20DepositInitiated`), except without the L1 and L2 token addresses. 
+The same is true for the other events and the functions.
+
+```solidity
     event ETHWithdrawalFinalized(
         address indexed _from,
         address indexed _to,
