@@ -55,6 +55,23 @@ A common misconception is that Ethereum should always be written in Latin. This 
 
 **The above doesn’t apply to languages, where proper nouns shouldn’t be translated as a rule.**
 
+### Translating page metadata {#translating-metadata}
+
+Some pages contain metadata on the page, like 'title', 'lang', 'description', 'sidebar', etc.
+
+We hide the content that should never be translated from translators when uploading new pages to Crowdin. This means that all the metadata that is visible to translators in Crowdin should be translated.
+
+Please be especially mindful when translating any strings, where the source text is 'en'. This represents the language that the page is available in, and should be translated to the two-letter code for your language. These strings should always be translated using Latin characters, not the writing script, native to the target language.
+
+If you are unsure of which language code to use, you can check the translation memory in Crowdin, or find the language code for your language in the URL of the page in the Crowdin online editor.
+
+Some examples of language codes for the most widely spoken languages:
+Arabic - ar
+Chinese Simplified - zn
+French - fr
+Hindi - hi
+Spanish - es
+
 ### Dealing with tags and code snippets {#dealing-with-tags}
 
 A lot of the source content contains tags and variables, which are highlighted in yellow in the Crowdin editor. These serve different functions and should be approached correctly.
