@@ -417,7 +417,7 @@ Finally, the function that sends a message to the other layer.
         // slither-disable-next-line reentrancy-events, reentrancy-benign
 ```
 
-[Slither](https://github.com/crytic/slither) is a static analyzer Optimism runs on every contract to look for vulnerabilities.
+[Slither](https://github.com/crytic/slither) is a static analyzer Optimism runs on every contract to look for vulnerabilities and other potential problems.
 In this case, the following line triggers two vulnerabilities:
 
 1. [Reentrancy events](https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3)
@@ -470,13 +470,37 @@ import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import { CrossDomainEnabled } from "../../libraries/bridge/CrossDomainEnabled.sol";
 ```
 
+[As explained above](#crossdomainenabled), this contract is used for interlayer messaging.
 
 
 ```solidity
 import { Lib_PredeployAddresses } from "../../libraries/constants/Lib_PredeployAddresses.sol";
-import { Address } from "@openzeppelin/contracts/utils/Address.sol";
-import { SafeERC20 } from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
+```
 
+[`Lib_PredeployAddresses`](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/constants/Lib_PredeployAddresses.sol) has the addresses for the L2 contracts that always have the same address. This includes the standard bridge on L2.
+
+```solidity
+import { Address } from "@openzeppelin/contracts/utils/Address.sol";
+```
+
+[OpenZeppelin's Address utilities](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Address.sol). It is used to distinguish between contract addresses and those belonging to externally owned accounts (EOA).
+
+Note that this isn't a perfect solution, because there is no way to distinguish between direct calls and calls made from a contract's constructor, but at least this lets us identify and prevent some common user errors.
+
+```solidity
+import { SafeERC20 } from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
+```
+
+[The ERC-20 standard](https://eips.ethereum.org/EIPS/eip-20) supports to ways for a contract to report failure:
+
+1. Revert
+1. Return `false`
+
+Handling both cases makes our code more complicated, so instead we use [OpenZeppelin's `SafeERC20`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol), which makes sure [all failures result in a revert](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol#L96).
+
+
+
+```solidity
 /**
  * @title L1StandardBridge
  * @dev The L1 ETH and ERC20 Bridge is a contract which stores deposited L1 funds and standard
@@ -486,15 +510,33 @@ import { SafeERC20 } from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.s
  */
 contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
     using SafeERC20 for IERC20;
+```
+
+This line is how we specify to use the `SafeERC20` wrapper every time we use the `IERC20` interface.
+
+```solidity
 
     /********************************
      * External Contract References *
      ********************************/
 
     address public l2TokenBridge;
+```
+
+The address of [L2StandardBridge](#the-l2-bridge-contract).
+
+```solidity
 
     // Maps L1 token to L2 token to balance of the L1 token deposited
     mapping(address => mapping(address => uint256)) public deposits;
+```
+
+A double [mapping](https://www.tutorialspoint.com/solidity/solidity_mappings.htm) like this is the way you define a [two-dimensional sparse array](https://en.wikipedia.org/wiki/Sparse_matrix).
+Values in this data structure are identified as `deposit[L1 token addr][L2 token addr]`. 
+The default value is zero.
+Only cells that are set to a different value are written to storage.
+
+```solidity
 
     /***************
      * Constructor *
@@ -502,7 +544,19 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
 
     // This contract lives behind a proxy, so the constructor parameters will go unused.
     constructor() CrossDomainEnabled(address(0)) {}
+```
 
+To be able to upgrade this contract transparently without having to modify other components that use it we use a [`Proxy`](https://docs.openzeppelin.com/contracts/3.x/api/proxy). 
+Proxies are contract that use [`delegatecall`](https://solidity-by-example.org/delegatecall/) to transfer calls to a separate contact whose address is stored by the proxy contract.
+When you use `delegatecall` the storage remains the storage of the *calling* contract, so the value of all the contract state variables is unaffected.
+This allows us to preserve all the stored values while updating the functionality.
+
+One effect of this pattern is that the storage of the contract that is the *callee* of `delegatecall` is not used and therefore the constructor values passed to it do not matter. 
+This is the reason we can provide a nonsensical value to the `CrossDomainEnabled` constructor.
+It is also the reason the initialization below is separate from the constructor.
+
+
+```solidity
     /******************
      * Initialization *
      ******************/
@@ -512,11 +566,39 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
      * @param _l2TokenBridge L2 standard bridge address.
      */
     // slither-disable-next-line external-function
+```
+
+This [Slither test](https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external) identifies functions that are not called from the contract code and could therefore be declared `external` instead of `public`. 
+The gas cost of `external` functions can be lower, because they can be provided with parameters in the calldata. 
+Functions declared `public` have to be callable from within the contract.
+Contracts cannot modify their own calldata, so the parameters have to be in memory.
+When such a function is called externally, it is necessary to copy the calldata to memory, which costs gas.
+This is case the function is only called once, so the inefficiency does not matter to us.
+
+```solidity
     function initialize(address _l1messenger, address _l2TokenBridge) public {
         require(messenger == address(0), "Contract has already been initialized.");
+```
+
+The `initialize` function should only be called once.
+If the address of either the L1 cross domain messenger or the L2 token bridge changes, we create a new proxy and a new bridge that calls it.
+This is unlikely to happen except when the entire system is upgraded, a very rare occurrence.
+
+Note that this function does not have any mechanism that restricts *who* can call it.
+This means that in theory an attacker could wait until we deploy the proxy and the first version of the bridge and then [front-run](https://solidity-by-example.org/hacks/front-running/) to get to the `initialize` function before the legitimate user does. But there are two methods to prevent this:
+
+1. If the contracts are deployed not directly by an EOA but [in a transaction that has another contract create them](https://medium.com/upstate-interactive/creating-a-contract-with-a-smart-contract-bdb67c5c8595) the entire process can be atomic, and finish before any other transaction is executed.
+1. If the legitimate call to `initialize` fails it is always possible to ignore the newly created proxy and bridge and create new ones. 
+
+```solidity
         messenger = _l1messenger;
         l2TokenBridge = _l2TokenBridge;
     }
+```
+
+These are the two parameters that the bridge needs to know.
+
+```solidity
 
     /**************
      * Depositing *
@@ -530,7 +612,11 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
         require(!Address.isContract(msg.sender), "Account not EOA");
         _;
     }
+```
 
+This is the reason we needed OpenZeppelin's `Address` utilities. 
+
+```solidity
     /**
      * @dev This function can be called with no data
      * to deposit an amount of ETH to the caller's balance on L2.
@@ -540,7 +626,14 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
     receive() external payable onlyEOA {
         _initiateETHDeposit(msg.sender, msg.sender, 200_000, bytes(""));
     }
+```
 
+This function exists for testing purposes. 
+Notice that it doesn't appear in the interface definitions - it isn't for normal use.
+
+
+
+```solidity
     /**
      * @inheritdoc IL1StandardBridge
      */
@@ -558,7 +651,12 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
     ) external payable {
         _initiateETHDeposit(msg.sender, _to, _l2Gas, _data);
     }
+```
 
+These two functions are wrappers around `_initiateETHDeposit`, the function that handles the actual ETH deposit.
+
+
+```solidity
     /**
      * @dev Performs the logic for deposits by storing the ETH and informing the L2 ETH Gateway of
      * the deposit.
@@ -577,6 +675,15 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
     ) internal {
         // Construct calldata for finalizeDeposit call
         bytes memory message = abi.encodeWithSelector(
+```
+
+The way that cross domain messages work is that the destination contract is called with the message as its calldata.
+Solidity contracts always interpret their calldata is accordance with 
+[the ABI specifications])(https://docs.soliditylang.org/en/v0.8.12/abi-spec.html).
+The Solidity function [`abi.encodeWithSelector`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#abi-encoding-and-decoding-functions) creates that calldata. 
+
+
+```solidity
             IL2ERC20Bridge.finalizeDeposit.selector,
             address(0),
             Lib_PredeployAddresses.OVM_ETH,
@@ -585,24 +692,46 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
             msg.value,
             _data
         );
+```
 
+The message here is to call [the `finalizeDeposit` function](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol#L141-L148) with these parameters:
+
+
+| Parameter | Value     | Meaning |
+| --------- | --------- | ------- |
+| _l1Token | address(0) | Special value to stand for ETH (which isn't an ERC-20 token) on L1 |
+| _l2Token | Lib_PredeployAddresses.OVM_ETH | The L2 contract that manages ETH on Optimism, `0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000` (don't call this contract) |
+| _from    | _from      | The address on L1 that sends the ETH |
+| _to      | _to        | The address on L2 that receives the ETH |
+| amount   | msg.value  | Amount of wei sent (which has already been sent to the bridge) |
+| _data    | _data      | Additional date to attach to the deposit |
+
+
+
+```solidity
         // Send calldata into L2
         // slither-disable-next-line reentrancy-events
         sendCrossDomainMessage(l2TokenBridge, _l2Gas, message);
+```
 
+Send the message through the cross domain messenger.
+
+```solidity
         // slither-disable-next-line reentrancy-events
         emit ETHDepositInitiated(_from, _to, msg.value, _data);
     }
+```
 
+Emit an event to inform any decentralized application that listens of this transfer.
+
+```solidity
     /**
      * @inheritdoc IL1ERC20Bridge
      */
     function depositERC20(
-        address _l1Token,
-        address _l2Token,
-        uint256 _amount,
-        uint32 _l2Gas,
-        bytes calldata _data
+		.
+		.
+		.
     ) external virtual onlyEOA {
         _initiateERC20Deposit(_l1Token, _l2Token, msg.sender, msg.sender, _amount, _l2Gas, _data);
     }
@@ -611,16 +740,17 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
      * @inheritdoc IL1ERC20Bridge
      */
     function depositERC20To(
-        address _l1Token,
-        address _l2Token,
-        address _to,
-        uint256 _amount,
-        uint32 _l2Gas,
-        bytes calldata _data
+		.
+		.
+		.
     ) external virtual {
         _initiateERC20Deposit(_l1Token, _l2Token, msg.sender, _to, _amount, _l2Gas, _data);
     }
+```
 
+These two functions are wrappers around `_initiateERC20Deposit`, the function that handles the actual ERC-20 deposit.
+
+```solidity
     /**
      * @dev Performs the logic for deposits by informing the L2 Deposited Token
      * contract of the deposit and calling a handler to lock the L1 funds. (e.g. transferFrom)
@@ -644,12 +774,30 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
         uint32 _l2Gas,
         bytes calldata _data
     ) internal {
+```
+
+This function is similar to `_initiateETHDeposit` above, with a few important differences.
+The first difference is that this function receives the token addresses and the amount to transfer as parameters.
+
+```solidity
         // When a deposit is initiated on L1, the L1 Bridge transfers the funds to itself for future
         // withdrawals. safeTransferFrom also checks if the contract has code, so this will fail if
         // _from is an EOA or address(0).
         // slither-disable-next-line reentrancy-events, reentrancy-benign
         IERC20(_l1Token).safeTransferFrom(_from, address(this), _amount);
+```
 
+In the case of ETH the call to the bridge already includes the transfer of asset to the bridge acount (`msg.value`).
+ERC-20 token transfers follow a different process:
+
+1. The user (`_from`) gives an allowance to the bridge to transfer the appropriate tokens.
+1. The user calls the bridge with the address of the token contract, the amount, etc.
+1. The bridge transfers the tokens (to itself) as part of the deposit process.
+
+The first step may happen in a separate transaction from the last two.
+However, front-running is not a problem because the two functions that call `_initiateERC20Deposit` (`depositERC20` and `depositERC20To`) only call this function with `msg.sender` as the `_from` parameter.
+
+```solidity
         // Construct calldata for _l2Token.finalizeDeposit(_to, _amount)
         bytes memory message = abi.encodeWithSelector(
             IL2ERC20Bridge.finalizeDeposit.selector,
@@ -667,6 +815,12 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
 
         // slither-disable-next-line reentrancy-benign
         deposits[_l1Token][_l2Token] = deposits[_l1Token][_l2Token] + _amount;
+```
+
+Add the deposited amount of tokens to the `deposits` data structure.
+In theory there could be multiple addresses on L2 that correspond to the same L1 ERC-20 token, so it is not sufficient to use the bridge's balance of the L1 ERC-20 token to keep track of deposits.
+
+```solidity
 
         // slither-disable-next-line reentrancy-events
         emit ERC20DepositInitiated(_l1Token, _l2Token, _from, _to, _amount, _data);
@@ -684,13 +838,35 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
         address _to,
         uint256 _amount,
         bytes calldata _data
+```
+
+The L2 bridge sends a message to the L2 cross domain messenger which causes the L1 cross domain messenger to call this function (once the [transaction that finalizes the message](https://community.optimism.io/docs/developers/bridge/messaging/#fees-for-l2-%E2%87%92-l1-transactions) is submitted on L1, of course).
+
+
+```solidity
     ) external onlyFromCrossDomainAccount(l2TokenBridge) {
+```
+
+Make sure that this is a *legitimate* message, coming from the cross domain messenger and originating with the L2 token bridge. 
+This function is used to withdraw ETH from the bridge, so we have to make sure it is only called by the authorized caller. 
+
+```solidity
         // slither-disable-next-line reentrancy-events
         (bool success, ) = _to.call{ value: _amount }(new bytes(0));
+```
+
+The way to transfer ETH is to call the recipient with the amount of wei in the `msg.value`.
+
+```solidity
         require(success, "TransferHelper::safeTransferETH: ETH transfer failed");
 
         // slither-disable-next-line reentrancy-events
         emit ETHWithdrawalFinalized(_from, _to, _amount, _data);
+```
+
+Emit an event about the withdrawal.
+
+```solidity
     }
 
     /**
@@ -704,7 +880,17 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
         uint256 _amount,
         bytes calldata _data
     ) external onlyFromCrossDomainAccount(l2TokenBridge) {
+```
+
+This function is similar to `finalizeETHWithdrawal` above, with the necessary changes for ERC-20 tokens.
+
+```solidity
         deposits[_l1Token][_l2Token] = deposits[_l1Token][_l2Token] - _amount;
+```
+
+Update the `deposits` data structure.
+
+```solidity
 
         // When a withdrawal is finalized on L1, the L1 Bridge transfers the funds to the withdrawer
         // slither-disable-next-line reentrancy-events
@@ -713,6 +899,7 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
         // slither-disable-next-line reentrancy-events
         emit ERC20WithdrawalFinalized(_l1Token, _l2Token, _from, _to, _amount, _data);
     }
+
 
     /*****************************
      * Temporary - Migrating ETH *
@@ -728,7 +915,15 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
 }
 ```
 
+This function lets us transfer ETH from the previous version of the bridge to this one.
+
+
+## ERC-20 Tokens on L2
+
+
 ## L2 Code {#l2-code}
+
+This is code that runs 
 
 ### The L2 bridge contract {#the-l2-bridge-contract}
 
