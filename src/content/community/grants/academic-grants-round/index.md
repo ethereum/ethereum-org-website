@@ -36,7 +36,7 @@ We welcome research at any stage, whether it’s a new idea based on the wishlis
 
 Grants will be awarded on a case-by-case and rolling basis. You may enter more than one proposal as long as each proposal is unique and meets [the requirements](#requirements).
 
-[Submit your application here](https://esp.ethereum.foundation/academics-grants/).
+[Submit your application here](https://esp.ethereum.foundation/academic-grants/).
 
 ### Deadline {#deadline}
 
