@@ -43,15 +43,17 @@ const RollupProductDevDoc = ({ rollupType }) => {
                   {rollup.name}
                   {rollup.note.length > 0 && ` (${rollup.note})`}
                 </H3>
-                <div>
-                  <Link to={rollup.website}>Website</Link>
-                </div>
-                <div>
-                  <Link to={rollup.developerDocs}>Developer docs</Link>
-                </div>
-                <div>
-                  <Link to={rollup.l2beat}>L2BEAT</Link>
-                </div>
+                <ul>
+                 <li>
+                    <Link to={rollup.website}>Website</Link>
+                  </li>
+                  <li>
+                    <Link to={rollup.developerDocs}>Developer docs</Link>
+                  </li>
+                  <li>
+                    <Link to={rollup.l2beat}>L2BEAT</Link>
+                  </li>
+                </ul>
               </div>
             </Content>
           </ProductCard>
