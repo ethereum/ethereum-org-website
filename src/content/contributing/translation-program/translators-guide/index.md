@@ -66,11 +66,12 @@ Please be especially mindful when translating any strings, where the source text
 If you are unsure of which language code to use, you can check the translation memory in Crowdin, or find the language code for your language in the URL of the page in the Crowdin online editor.
 
 Some examples of language codes for the most widely spoken languages:
-Arabic - ar
-Chinese Simplified - zn
-French - fr
-Hindi - hi
-Spanish - es
+
+- Arabic - ar
+- Chinese Simplified - zn
+- French - fr
+- Hindi - hi
+- Spanish - es
 
 ### Dealing with tags and code snippets {#dealing-with-tags}
 
