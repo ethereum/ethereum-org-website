@@ -56,7 +56,6 @@ IPFS is a distributed system for storing and accessing files, websites, applicat
 - [Pinata](https://www.pinata.cloud/) _(IPFS pinning service)_
 - [web3.storage](https://web3.storage/) _(IPFS/Filecoin pinning service)_
 - [Infura](https://infura.io/product/ipfs) _(IPFS pinning service)_
-- [Filebase](https://filebase.com) _(S3-compatible API cloud storage supporting Sia, Skynet, Storj, and IPFS)_
 
 ## Data retention {#data-retention}
 
@@ -162,6 +161,12 @@ PoS based:
 - [Ceramic.network](https://ceramic.network/)
 - [Documentation](https://developers.ceramic.network/learn/welcome/)
 - [GitHub](https://github.com/ceramicnetwork/js-ceramic/)
+
+**Filebase - _The first S3-compatible object storage platform that allows you to store data across multiple decentralized storage networks including IPFS, Sia, Skynet, and Storj._**
+
+- [Filebase.com](https://filebase.com/)
+- [Documentation](https://docs.filebase.com/)
+- [GitHub](https://github.com/filebase)
 
 ## Further reading {#further-reading}
 
