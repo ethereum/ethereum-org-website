@@ -10,7 +10,7 @@ import optimisticRollupList from "../data/layer-2-data-files/optimistic-rollups.
 import zkRollupList from "../data/layer-2-data-files/zk-rollups.json"
 
 // Styles
-const H3 = styled.h3`
+const H4 = styled.h4`
   margin-top: 0;
   margin-bottom: 1rem;
 `
