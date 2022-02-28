@@ -54,7 +54,6 @@ Az ETH-nek a tesztneteken nincs valós értéke; így nincsen piaca sem a tesztn
 - [Görli csap](https://faucet.goerli.mudit.blog/)
 - [Kovan csap](https://faucet.kovan.network/)
 - [Rinkeby csap](https://faucet.rinkeby.io/)
-- [Ropsten csap](https://faucet.ropsten.be/)
 
 ## Privát hálózatok {#private-networks}
 

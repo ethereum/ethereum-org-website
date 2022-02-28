@@ -1,5 +1,5 @@
 ---
-title: 以太机虚拟机 (EVM)
+title: 以太坊虚拟机 (EVM)
 description: 介绍以太坊虚拟机及其与状态、交易和智能合约的关系。
 lang: zh
 sidebar: true

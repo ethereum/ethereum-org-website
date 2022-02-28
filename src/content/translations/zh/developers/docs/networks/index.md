@@ -54,7 +54,6 @@ sidebar: true
 - [Görli 水龙头](https://faucet.goerli.mudit.blog/)
 - [Kovan 水龙头](https://faucet.kovan.network/)
 - [Rinkeby 水龙头](https://faucet.rinkeby.io/)
-- [Ropsten 水龙头](https://faucet.ropsten.be/)
 
 ## 私有网络 {#private-networks}
 
