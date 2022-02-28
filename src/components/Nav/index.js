@@ -169,6 +169,10 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           to: "/dapps/",
         },
         {
+          text: "layer-2",
+          to: "/layer-2/",
+        },
+        {
           text: "run-a-node",
           to: "/run-a-node/",
         },

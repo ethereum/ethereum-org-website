@@ -140,6 +140,10 @@ const Footer = () => {
           text: "decentralized-applications-dapps",
         },
         {
+          to: "/layer-2/",
+          text: "layer-2",
+        },
+        {
           to: `/stablecoins/`,
           text: "page-stablecoins-title",
         },
