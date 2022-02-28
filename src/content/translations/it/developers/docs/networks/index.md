@@ -54,7 +54,6 @@ Gli ETH sulle reti di prova non hanno valore reale, quindi non c'è un mercato p
 - [Faucet Görli](https://faucet.goerli.mudit.blog/)
 - [Faucet Kovan](https://faucet.kovan.network/)
 - [Faucet Rinkeby](https://faucet.rinkeby.io/)
-- [Faucet Ropsten](https://faucet.ropsten.be/)
 
 ## Reti private {#private-networks}
 
