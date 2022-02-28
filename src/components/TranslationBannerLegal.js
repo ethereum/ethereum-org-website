@@ -97,7 +97,8 @@ const TranslationBannerLegal = ({
   originalPagePath,
   isPageRightToLeft,
 }) => {
-  const [isOpen, setIsOpen] = useState(shouldShow)
+  // Default to isOpen being false, and let the useEffect set this.
+  const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
     if (localStorage.getItem("dont-show-translation-legal-banner") === "true") {
@@ -130,13 +131,13 @@ const TranslationBannerLegal = ({
               <Translation id="translation-banner-no-bugs-dont-show-again" />
             </ButtonPrimary>
           </ButtonRow>
-          <BannerClose
-            onClick={() => setIsOpen(false)}
-            isPageRightToLeft={isPageRightToLeft}
-          >
-            <BannerCloseIcon name="close" />
-          </BannerClose>
         </BannerContent>
+        <BannerClose
+          onClick={() => setIsOpen(false)}
+          isPageRightToLeft={isPageRightToLeft}
+        >
+          <BannerCloseIcon name="close" />
+        </BannerClose>
       </StyledBanner>
     </BannerContainer>
   )
