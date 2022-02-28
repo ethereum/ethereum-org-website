@@ -11,19 +11,18 @@ import zkRollupList from "../data/layer-2-data-files/zk-rollups.json"
 
 // Styles
 const H4 = styled.h4`
-  margin-top: 0;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 `
 
 const ProductCard = styled.div`
   margin: 1rem 0;
-  background: ${(props) => props.theme.colors.searchBackground};
+  background: ${(props) => props.theme.colors.rollupDevDocList};
   display: flex;
   flex-direction: row;
 `
 
 const Content = styled.div`
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
 `
 
 const RollupProductDevDoc = ({ rollupType }) => {
@@ -44,14 +43,14 @@ const RollupProductDevDoc = ({ rollupType }) => {
                   {rollup.note.length > 0 && ` (${rollup.note})`}
                 </H4>
                 <ul>
-                 <li>
+                  <li>
                     <Link to={rollup.website}>Website</Link>
                   </li>
                   <li>
                     <Link to={rollup.developerDocs}>Developer docs</Link>
                   </li>
                   <li>
-                    <Link to={rollup.l2beat}>L2BEAT</Link>
+                    <Link to={rollup.l2beat}>Technology and risk summary</Link>
                   </li>
                 </ul>
               </div>
