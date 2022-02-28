@@ -1,34 +1,30 @@
 [
   {
-    "logo": "",
     "name": "Arbitrum",
     "website": "https://arbitrum.io/",
     "developerDocs": "https://developer.offchainlabs.com/docs/developer_quickstart",
-    "description": "Arbitrum is an Optimistic Rollup that aims to feel exactly like interacting with Ethereum, but with transactions costing a fraction of what they do on L1.",
+    "l2beat": "https://l2beat.com/projects/arbitrum/",
     "note": ""
   },
   {
-    "logo": "",
     "name": "Metis Andromeda",
     "website": "https://metis.io",
     "developerDocs": "https://docs.metis.io/",
-    "description": "Metis is an EVM-equivalent Optimistic Rollup chain originally forked from Optimism. It provides support for multiple, interconnected rollups with main focus on supporting easy creation of DACs (Decentralized Autonomous Companies).",
-    "note": "Currently implementing Fraud Proofs (https://twitter.com/MetisDAO/status/1491516382844006401?s=20&t=H6YhDnCPJ8k3R1EFOqSK2g)"
+    "l2beat": "https://l2beat.com/projects/metis/",
+    "note": "Fraud proofs in development"
   },
   {
-    "logo": "",
     "name": "Optimism",
     "website": "https://optimism.io/",
     "developerDocs": "https://community.optimism.io/docs/developers/",
-    "description": "Optimistic Ethereum is an EVM-compatible Optimistic Rollup chain. It aims to be fast, simple, and secure. With the Nov 2021 upgrade to 'EVM equivalent' OVM 2.0 old fraud proof system has been disabled while the new fraud-proof system is being built (https://github.com/geohot/cannon).",
-    "note": "Currently implementing Fault Proofs (https://www.optimism.io/about)"
+    "l2beat": "https://l2beat.com/projects/optimism/",
+    "note": "Fault proofs in development"
   },
   {
-    "logo": "",
     "name": "Boba Network",
     "website": "https://boba.network/",
     "developerDocs": "https://docs.boba.network/",
-    "description": "Boba is an L2 Ethereum scaling & augmenting solution built by the Enya team as core contributors to the OMG Foundation. Boba is an Optimistic Rollup scaling solution that claims to reduce gas fees, improve transaction throughput, and extend the capabilities of smart contracts.",
-    "note": ""
+    "l2beat": "https://l2beat.com/projects/bobanetwork/",
+    "note": "State validation in development"
   }
 ]
