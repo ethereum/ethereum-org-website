@@ -39,10 +39,10 @@ const RollupProductDevDoc = ({ rollupType }) => {
           <ProductCard>
             <Content>
               <div>
-                <H3>
+                <H4>
                   {rollup.name}
                   {rollup.note.length > 0 && ` (${rollup.note})`}
-                </H3>
+                </H4>
                 <ul>
                  <li>
                     <Link to={rollup.website}>Website</Link>
