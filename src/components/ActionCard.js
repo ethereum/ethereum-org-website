@@ -23,7 +23,7 @@ const ImageWrapper = styled.div`
   justify-content: ${(props) => (props.isRight ? `flex-end` : `center`)};
   align-items: ${(props) => (props.isBottom ? `flex-end` : `center`)};
   background: ${(props) => props.theme.colors.cardGradient};
-  box-shadow: inset 0px -1px 0px #0000001a;
+  box-shadow: inset 0px -1px 0px rgba(#000000, 0.1);
   min-height: 260px;
 `
 
@@ -48,14 +48,14 @@ const Card = styled(Link)`
   text-decoration: none;
   flex: 1 1 372px;
   color: ${(props) => props.theme.colors.text};
-  box-shadow: 0px 14px 66px #00000012, 0px 10px 17px #00000008,
-    0px 4px 7px #0000000d;
+  box-shadow: 0px 14px 66px rgba(#000000, 0.07),
+    0px 10px 17px rgba(#000000, 0.03), 0px 4px 7px rgba(#000000, 0.05);
   margin: 1rem;
 
   &:hover,
   &:focus {
     border-radius: 4px;
-    box-shadow: 0px 8px 17px #00000026;
+    box-shadow: 0px 8px 17px rgba(#000000, 0.15);
     background: ${(props) => props.theme.colors.tableBackgroundHover};
     transition: transform 0.1s;
     transform: scale(1.02);

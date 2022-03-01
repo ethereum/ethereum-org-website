@@ -15,8 +15,8 @@ const Container = styled.div`
   border-radius: 4px;
   width: 100%;
   margin-bottom: 2rem;
-  box-shadow: 0px 4px 7px #0000000d, 0px 10px 17px #00000008,
-    0px 14px 66px #00000012;
+  box-shadow: 0px 4px 7px rgba(#000000, 0.05), 0px 10px 17px rgba(#000000, 0.03),
+    0px 14px 66px rgba(#000000, 0.07);
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-top: 2rem;
   }

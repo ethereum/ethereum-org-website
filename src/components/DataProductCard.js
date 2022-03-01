@@ -10,7 +10,7 @@ const ImageWrapper = styled.div`
   justify-content: center;
   align-items: center;
   background: ${(props) => props.background};
-  box-shadow: inset 0px -1px 0px #0000001a;
+  box-shadow: inset 0px -1px 0px rgba(#000000, 0.1);
   min-height: 200px;
 `
 

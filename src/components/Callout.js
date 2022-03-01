@@ -12,9 +12,9 @@ const StyledCard = styled.div`
   flex-direction: column;
   background: linear-gradient(
     49.21deg,
-    #7f7fd533 19.87%,
-    #86a8e733 58.46%,
-    #91eae433 97.05%
+    rgba(#7f7fd5, 0.2) 19.87%,
+    rgba(#86a8e7, 0.2) 58.46%,
+    rgba(#91eae4, 0.2) 97.05%
   );
   padding: 1.5rem;
   margin: 1rem;
