@@ -397,7 +397,7 @@ pre {
   margin-bottom: 1.45rem;
   font-size: 0.85rem;
   line-height: 1.42;
-  background: #0000000a;
+  background: rgba(0, 0, 0, 0.04);
   border-radius: 3px;
   overflow: auto;
   word-wrap: normal;
@@ -477,7 +477,7 @@ hr {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 0;
-  background: #00000033;
+  background: rgba(0, 0, 0, 0.2);
   border: none;
   height: 1px;
 }
@@ -547,15 +547,15 @@ samp {
   line-height: 1.45rem;
 }
 abbr {
-  border-bottom: 1px dotted #00000080;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.5);
   cursor: help;
 }
 acronym {
-  border-bottom: 1px dotted #00000080;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.5);
   cursor: help;
 }
 abbr[title] {
-  border-bottom: 1px dotted #00000080;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.5);
   cursor: help;
   text-decoration: none;
 }
@@ -565,7 +565,7 @@ thead {
 td,
 th {
   text-align: left;
-  border-bottom: 1px solid #c1aeae1f;
+  border-bottom: 1px solid rgba(193, 174, 174, 0.12);
   font-feature-settings: "tnum";
   -moz-font-feature-settings: "tnum";
   -ms-font-feature-settings: "tnum";
@@ -584,7 +584,7 @@ td:last-child {
   padding-right: 0;
 }
 tt {
-  background-color: #2b2834ff;
+  background-color: #2b2834;
   color: #968af6;
   border-radius: 2px;
   font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
@@ -592,7 +592,7 @@ tt {
   padding: 0.2em;
 }
 code {
-  background-color: #0000000a;
+  background-color: rgba(0, 0, 0, 0.04);
   border-radius: 3px;
   font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
     "Liberation Mono", Menlo, Courier, monospace;
