@@ -625,6 +625,19 @@ const Eth2IndexPage = ({ data }) => {
                 </Link>
               </p>
             </ExpandableCard>
+            <ExpandableCard
+              contentPreview="No. There is no Eth2 token and your ETH will not change after the merge."
+              title="Can I buy Eth2?"
+            >
+              <p>
+                One of the driving forces behind the Eth2 rebrand was the common
+                misconception that ETH holders would have to migrate their ETH
+                after 'Ethereum 2.0'. This has never been true. It is{" "}
+                <Link to="/security/#eth2-token-scam/">
+                  a common technique used scammers.
+                </Link>
+              </p>
+            </ExpandableCard>
           </LeftColumn>
           <RightColumn>
             <ExpandableCard
