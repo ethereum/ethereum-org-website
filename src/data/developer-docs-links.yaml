@@ -134,6 +134,8 @@
           to: /developers/docs/programming-languages/javascript/
         - id: docs-nav-python
           to: /developers/docs/programming-languages/python/
+        - id: docs-nav-ruby
+          to: /developers/docs/programming-languages/ruby/
         - id: docs-nav-rust
           to: /developers/docs/programming-languages/rust/
 - id: docs-nav-advanced
